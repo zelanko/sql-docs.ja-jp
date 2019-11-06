@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920923"
 ---
 # <a name="ado-methods"></a>ADO メソッド
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|更新可能なに対して新しいレコードを作成します。 **Recordset**オブジェクト。|  
 |[追加](../../../ado/reference/ado-api/append-method-ado.md)|コレクションにオブジェクトを追加します。 コレクションが場合**フィールド**、新しい**フィールド**それをコレクションに追加する前に、オブジェクトを作成することがあります。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|大きなテキストまたはバイナリ データにデータを追加します。**フィールド**、または、**パラメーター**オブジェクト。|  
-|[BeginTrans、CommitTrans、および rollbacktrans の例](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|内のトランザクション処理の管理、**接続**オブジェクトの次のようにします。<br /><br /> **BeginTrans** -新しいトランザクションを開始します。<br /><br /> **CommitTrans** : 変更を保存し、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。<br /><br /> **RollbackTrans** -すべての変更をキャンセルし、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。|  
+|[BeginTrans、CommitTrans、および rollbacktrans の例](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|内のトランザクション処理の管理、**接続**オブジェクトの次のようにします。<br /><br /> **BeginTrans** -新しいトランザクションを開始します。<br /><br /> **CommitTrans** - 変更を保存し、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。<br /><br /> **RollbackTrans** - 変更内容をキャンセルし、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。|  
 |[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|実行をキャンセルする保留中、非同期メソッド呼び出し。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|保留中のバッチ更新をキャンセルします。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|現在のまたは新しい行に加えられた変更内容をキャンセル、**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**オブジェクトを呼び出す前に、 **Update**メソッド。|  
 |[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|すべてを削除、**エラー**オブジェクトから、**エラー**コレクション。|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|複製を作成します**Recordset**既存のオブジェクト**Recordset**オブジェクト。 必要に応じて、複製が読み取り専用であることを指定します。|  
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
+|[閉じる](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|2 つのブックマークを比較し、これらの相対値を示す値を返します。|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|ファイルまたはディレクトリと、その内容を別の場所にコピーします。|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|指定した数の文字またはバイトのコピー (に応じて**型**) で、 **Stream**間**Stream**オブジェクト。|  
@@ -74,18 +74,18 @@ ms.locfileid: "47660590"
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|ストリームの末尾の位置を設定します。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|テキスト ストリームを読み取るときに、1 つの行全体をスキップします。|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|開いているストリームに関する統計情報を取得します。|  
-|[Supports](../../../ado/reference/ado-api/supports-method.md)|指定したかどうかを判断します**Recordset**オブジェクトは、特定の種類の機能をサポートしています。|  
+|[サポート](../../../ado/reference/ado-api/supports-method.md)|指定したかどうかを判断します**Recordset**オブジェクトは、特定の種類の機能をサポートしています。|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|現在の行に加えた変更を保存、**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**オブジェクト。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|すべての保留中のバッチ更新プログラムをディスクに書き込みます。|  
 |[書き込み](../../../ado/reference/ado-api/write-method.md)|バイナリ データを書き込みます、 **Stream**オブジェクト。|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|指定したテキスト文字列を書き込みます、 **Stream**オブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

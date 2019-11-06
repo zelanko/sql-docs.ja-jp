@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62822314"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>レッスン 5: 予測クエリの実行
-  このレッスンでは、使用、 [SELECT FROM \<model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式の 2 種類のデシジョン ツリーに基づく予測を作成する SELECT ステートメントをモデルで作成した[レッスン 2: アソシエーション マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 作成する予測の種類は次のとおりです。  
+  このレッスンでは、使用、 [SELECT FROM \<model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式の 2 種類のデシジョン ツリーに基づく予測を作成する SELECT ステートメントをモデルで作成した[レッスン 2:アソシエーション マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 作成する予測の種類は次のとおりです。  
   
  単一クエリ  
  予測を行う際にアドホック値を提供するには、単一クエリを使用します。 たとえば、顧客の通勤距離、市外局番、または子供の数などをクエリに入力して、1 人の顧客が自転車を購入するかどうかを判断できます。 単一クエリは、これらの入力に基づいてこの顧客が自転車を購入する可能性を示す値を返します。  
@@ -77,7 +76,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>単一予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -196,7 +195,7 @@ ORDER BY <expression> [DESC|ASC]
   
 #### <a name="to-create-a-batch-prediction-query"></a>バッチ予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   

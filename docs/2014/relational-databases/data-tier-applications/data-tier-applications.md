@@ -15,14 +15,14 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873103"
 ---
-# <a name="data-tier-applications"></a>の
+# <a name="data-tier-applications"></a>データ層アプリケーション
   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクト (ログインを含む) など、ユーザーのデータベースに関連付けられたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを定義する論理的なデータベース管理エンティティです。 DAC は、データ層の開発者とデータベース管理者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを DAC パッケージ (DACPAC とも呼ばれます) という移植可能なアーティファクトにパッケージ化できるようにする自己完結型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース配置単位です。  
   
  BACPAC は、データベース スキーマおよびデータベースに格納されているデータをカプセル化する関連アーティファクトです。  
@@ -85,20 +85,20 @@ ms.locfileid: "48214732"
 ## <a name="dac-operations"></a>DAC 操作  
  DAC では、以下のオブジェクトがサポートされています。  
   
--   **EXTRACT** : ユーザーはデータベースを DACPAC に抽出できます。  
+-   **EXTRACT**: ユーザーはデータベースを DACPAC に抽出できます。  
   
--   **DEPLOY** : ユーザーは DACPAC をホスト サーバーに配置できます。 配置が SQL Server Management Studio や Management Portal for SQL Azure などの管理ツールから行われる場合、ホスト サーバーに生成されるデータベースがデータ層アプリケーションとして暗黙的に登録されます。  
+-   **DEPLOY**: ユーザーは DACPAC をホスト サーバーに配置できます。 配置が SQL Server Management Studio や Management Portal for SQL Azure などの管理ツールから行われる場合、ホスト サーバーに生成されるデータベースがデータ層アプリケーションとして暗黙的に登録されます。  
   
 -   **REGISTER**: ユーザーはデータベースをデータ層アプリケーションとして登録できます。  
   
--   **UNREGISTER** : DAC として既に登録されているデータベースを登録解除できます。  
+-   **UNREGISTER**: DAC として既に登録されているデータベースを登録解除できます。  
   
--   **UPGRADE** : DACPAC を使用してデータベースをアップグレードできます。 アップグレードは、データ層アプリケーションとして登録されていないデータベースでもサポートされますが、アップグレードの結果として、データベースが暗黙的に登録されます。  
+-   **UPGRADE**: DACPAC を使用してデータベースをアップグレードできます。 アップグレードは、データ層アプリケーションとして登録されていないデータベースでもサポートされますが、アップグレードの結果として、データベースが暗黙的に登録されます。  
   
 ## <a name="backup-package-bacpac"></a>バックアップ パッケージ (.bacpac)  
  BACPAC は、データベース スキーマおよびデータベースに格納されているデータをカプセル化するアーティファクトです。 BACPAC は、.bacpac 拡張子を持つ Windows ファイルです。 DACPAC と同様に、BACPAC ファイル形式は公開されており、BACPAC のスキーマ コンテンツは DACPAC のスキーマ コンテンツと同じです。 データは JSON 形式で格納されます。  
   
- DACPAC と BACPAC は似ていますが、ターゲットとするシナリオは異なります。 DACPAC は、既存のデータベースのアップグレードなど、スキーマのキャプチャと配置に重点を置きます。 DACPAC の基本的なユース ケースは、詳細に定義されたスキーマを開発環境、テスト環境、さらに実稼働環境に配置すること、また、その反対に、実稼働環境のスキーマをキャプチャし、テスト環境および開発環境に適用することです。  
+ DACPAC と BACPAC は似ていますが、ターゲットとするシナリオは異なります。 DACPAC は、既存のデータベースのアップグレードなど、スキーマのキャプチャと配置に重点を置きます。 基本的なユース ケースは、DACPAC に開発、テスト、運用環境と、逆の順序に定義されたスキーマを展開する: 運用中のスキーマをキャプチャし、テストおよび開発環境に適用します。  
   
  一方、BACPAC は、スキーマおよびデータのキャプチャに重点を置きます。 BACPAC は、論理的にはデータベース バックアップに相当し、既存のデータベースのアップグレードには使用できません。 BACPAC の基本的なユース ケースは、あるサーバーから別のサーバーに、またはローカル サーバーからクラウドにデータベースを移動し、既存のデータベースをオープン フォーマットでアーカイブすることです。  
   
@@ -106,12 +106,12 @@ ms.locfileid: "48214732"
   
 -   **EXPORT**: ユーザーは、BACPAC にスキーマとデータベースのデータをエクスポートできます。  
   
--   **IMPORT** : ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
+-   **IMPORT**: ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
   
- この両方の機能が、データベース管理ツール (Server Management Studio、Management Portal for SQL Azure、および DACFx API) でサポートされます。  
+ この両方の機能が、次のデータベース管理ツールでサポートされます:Server Management Studio、Management Portal for SQL Azure、および DACFx API。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーである必要がありますが、`dbmanager`ロール割り当てまたは`CREATE DATABASE`を含む DAC パッケージを配置してデータベースを作成、データベースを作成するアクセス許可。 メンバーである必要がありますが、`dbmanager`ロール、または割り当てられている`DROP DATABASE`データベースを削除するアクセス許可。  
+ データベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、`dbmanager` ロールのメンバーであるか、`CREATE DATABASE` 権限が割り当てられている必要があります。 データベースを削除するには、`dbmanager` ロールのメンバーであるか、`DROP DATABASE` 権限が割り当てられている必要があります。  
   
 ## <a name="data-tier-application-tasks"></a>データ層アプリケーションのタスク  
   

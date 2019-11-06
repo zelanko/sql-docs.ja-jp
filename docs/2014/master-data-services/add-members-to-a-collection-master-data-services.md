@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14200dfb1156c0cd0561ff2724ab6cb4d5777fe8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b5d76c06096dd2dab13bd6dcf7ff59fbd612302
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483760"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>コレクションにメンバーを追加する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーおよび統合メンバーをコレクションに追加できます。  
@@ -57,6 +56,6 @@ ms.locfileid: "48205452"
 11. 必要に応じて、 **[重み]** 列の値をクリックして、重みの値を設定します。  
   
 ## <a name="see-also"></a>参照  
- [コレクション&#40;マスター データ サービス&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - database engine configuration
@@ -14,12 +13,12 @@ ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c9c10d013d6585208a5f30d98169d8eab71b75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095879"
 ---
 # <a name="database-engine-configuration---user-instance"></a>データベース エンジンの構成 - ユーザー インスタンス
   **[ユーザー インスタンス]** ページを使用して、管理者権限のないユーザー用に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の個別インスタンスを作成し、それらのユーザーを管理者ロールに追加します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48066672"
  [ユーザー インスタンスを有効にする]  
  既定値はオンです。 ユーザー インスタンス有効化の機能を無効にするには、このチェック ボックスをオフにします。  
   
- ユーザー インスタンスは子インスタンスまたはクライアント インスタンスとも呼ばれ、ユーザーに代わって親インスタンス ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのサービスを実行するプライマリ インスタンス) によって作成される [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のインスタンスです。 ユーザー インスタンスは、そのユーザーのセキュリティ コンテキストでのユーザーのプロセスとして実行します。 親インスタンスやコンピューター上で実行するその他のユーザー インスタンスとは分離されます。 ユーザー インスタンス機能は "通常のユーザーとして実行" (Run As Normal User : RANU) とも呼ばれます。  
+ ユーザー インスタンスは子インスタンスまたはクライアント インスタンスとも呼ばれ、ユーザーに代わって親インスタンス ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのサービスを実行するプライマリ インスタンス) によって作成される [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のインスタンスです。 ユーザー インスタンスは、そのユーザーのセキュリティ コンテキストでのユーザーのプロセスとして実行します。 親インスタンスやコンピューター上で実行するその他のユーザー インスタンスとは分離されます。 ユーザー インスタンス機能は "通常のユーザーとして実行" (Run As Normal User: RANU) とも呼ばれます。  
   
 > [!NOTE]  
 >  セットアップ中に **sysadmin** 固定サーバー ロールのメンバーとして準備されたログインは、テンプレート データベース内の管理者として準備されます。 削除されない限り、これらはユーザー インスタンスのメンバー **sysadmin** 固定サーバー ロールです。  

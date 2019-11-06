@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 67866652e7c010a00018c394677c9d1e7e1cb8d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c37ddcac8c12b6885c696bea77ef66e5eedd5d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728900"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908577"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>マージ アーティクル間の結合フィルターの定義および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47728900"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -58,15 +57,15 @@ ms.locfileid: "47728900"
   
 #### <a name="to-define-a-join-filter"></a>結合フィルターを定義するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内の既存の行フィルターまたは結合フィルターを選択します。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内の既存の行フィルターまたは結合フィルターを選択します。  
   
 2.  **[追加]** をクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
   
 3.  JOIN ステートメントを作成します。 **[ビルダーを使用してステートメントを作成する]** または **[JOIN ステートメントを手動で作成する]** を選択します。  
   
-    -   ビルダーの使用を選択した場合、グリッド内の列 (**[結合]**、 **[フィルター選択されたテーブルの列]**、 **[演算子]**、 **[結合テーブルの列]**) を使用して JOIN ステートメントを作成します。  
+    -   ビルダーの使用を選択した場合、グリッド内の列 ( **[結合]** 、 **[フィルター選択されたテーブルの列]** 、 **[演算子]** 、 **[結合テーブルの列]** ) を使用して JOIN ステートメントを作成します。  
   
-         グリッド内の各列には、ドロップダウン コンボ ボックスが含まれており、2 つの列と 1 つの演算子 (**=**、 **<>**、 **<=**、 **\<**、 **>=**、 **>**、 **[like]**) を選択できます。 結果は **[プレビュー]** テキスト領域に表示されます。 結合に列のペアを複数個含める場合は、 **[結合]** 列から結合 (AND または OR) を選択し、さらに 2 つの列と 1 つの演算子を入力します。  
+         グリッド内の各列には、ドロップダウン コンボ ボックスが含まれており、2 つの列と 1 つの演算子 ( **=** 、 **<>** 、 **<=** 、 **\<** 、 **>=** 、 **>** 、 **[like]** ) を選択できます。 結果は **[プレビュー]** テキスト領域に表示されます。 結合に列のペアを複数個含める場合は、 **[結合]** 列から結合 (AND または OR) を選択し、さらに 2 つの列と 1 つの演算子を入力します。  
   
     -   ステートメントを手動で作成する場合、 **[JOIN ステートメント]** テキスト領域に JOIN ステートメントを入力します。 **[フィルター選択されたテーブルの列]** ボックスと **[結合テーブルの列]** ボックスを使用して、 **[JOIN ステートメント]** テキスト領域に列をドラッグ アンド ドロップします。  
   
@@ -89,11 +88,11 @@ ms.locfileid: "47728900"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
-  
+6.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
+
 #### <a name="to-modify-a-join-filter"></a>結合フィルターを変更するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[編集]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[編集]** をクリックします。  
   
 2.  **[結合の編集]** ダイアログ ボックスで、フィルターを変更します。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "47728900"
   
 #### <a name="to-delete-a-join-filter"></a>結合フィルターを削除するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[削除]** をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  この手順では、親アーティクルのパラメーター化されたフィルターと、親アーティクルと子アーティクルの結合フィルターを組み合わせて使用する方法について説明します。 結合フィルターは、レプリケーションのストアド プロシージャを使用してプログラムから定義したり変更したりできます。  
@@ -116,7 +115,7 @@ ms.locfileid: "47728900"
   
 2.  パブリッシャーのパブリケーション データベースで [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行し、関連アーティクル (パブリケーションの子アーティクル) を少なくとも 1 つ定義します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行します。 **@publication** を指定し、**@filtername** にはこのフィルターの一意の名前を、**@article** には手順 2 で作成した子アーティクルの名前を、**@join_articlename** には結合対象の親アーティクルの名前を指定し、**@join_unique_key** に次のいずれかの値を指定します。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行します。 `@publication` を指定し、`@filtername` にはこのフィルターの一意の名前を、`@article` には手順 2 で作成した子アーティクルの名前を、`@join_articlename` には結合対象の親アーティクルの名前を指定し、`@join_unique_key` に次のいずれかの値を指定します。  
   
     -   **0** - 親アーティクルと子アーティクル間の多対一または多対多の結合を示します。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "47728900"
      これにより、2 つのアーティクル間の結合フィルターが定義されます。  
   
     > [!CAUTION]  
-    >  親アーティクルの基になるテーブルで、結合する列に一意性を保証する制約が割り当てられている場合にのみ、 **@join_unique_key** を **1** に設定します。 **@join_unique_key** を **1** に正しく設定しなかった場合は、データの非収束が発生する可能性があります。  
+    >  親アーティクルの基になるテーブルで、結合する列に一意性を保証する制約が割り当てられている場合にのみ、`@join_unique_key` を **1** に設定します。 `@join_unique_key` を **1** に正しく設定しなかった場合は、データの非収束が発生する可能性があります。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、マージ パブリケーションのアーティクルを定義しています。 `SalesOrderDetail` テーブルのアーティクルが、 `SalesOrderHeader` テーブルと比較されてフィルター選択されます (このテーブル自体が静的行フィルターを使ってフィルター選択されています)。 詳しくは、「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」をご覧ください。  
@@ -141,8 +140,8 @@ ms.locfileid: "47728900"
  [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [マージ アーティクル間の結合フィルターを定義および変更する方法 (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [レプリケーション システム ストアド プロシージャの概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [方法:マージ アーティクル間の結合フィルターを定義および変更する (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [マージ テーブル アーティクル間に論理レコード リレーションシップを定義する](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   

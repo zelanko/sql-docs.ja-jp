@@ -1,6 +1,7 @@
 ---
-title: 可用性レプリカでのバックアップの構成 (SQLServer) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのセカンダリ レプリカのバックアップの構成
+description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループのセカンダリ レプリカのバックアップを構成する方法を説明します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,49 +18,25 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0775eb7bd5cb87c902a6871eeebd4409dbe0cf2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2a3258dfa0fbb234cf4f888e4ae98f27c215993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988519"
 ---
-# <a name="configure-backup-on-availability-replicas-sql-server"></a>可用性レプリカでのバックアップの構成 (SQLServer)
+# <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカのバックアップの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、Always On 可用性グループのセカンダリ レプリカでバックアップを構成する方法について説明します。  
   
 > [!NOTE]  
->  セカンダリ レプリカでのバックアップの概要については、「 [アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)、または PowerShell を使用して、Always On 可用性グループのセカンダリ レプリカでバックアップを構成する方法について説明します。  
+>  セカンダリ レプリカのバックアップの概要については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
--   **作業を開始する準備:**  
-  
-     [前提条件](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **次のツールを使用してセカンダリ レプリカでバックアップを構成するには**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **補足情報:**  [セカンダリ レプリカでバックアップを構成した後](#FollowUp)  
-  
--   [バックアップ優先設定に関する情報を取得するには](#ForInfoAboutBuPref)  
-  
--   [関連コンテンツ](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
-  
-###  <a name="Prerequisites"></a> 前提条件  
+##  <a name="Prerequisites"></a> 前提条件  
  プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 |タスク|アクセス許可|  
 |----------|-----------------|  
@@ -95,7 +72,7 @@ ms.locfileid: "52531528"
      バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
     > [!IMPORTANT]  
-    >  自動バックアップ設定の適用はありません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックの「 [補足情報: セカンダリ レプリカでバックアップを構成した後](#FollowUp) 」を参照してください。  
+    >  自動バックアップ設定の適用はありません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックで後述する「[補足情報:セカンダリ レプリカでバックアップを構成した後](#FollowUp)」を参照してください。  
   
 6.  **[レプリカのバックアップの優先順位]** グリッドを使用して、可用性レプリカのバックアップの優先順位を変更します。 このグリッドには、可用性グループのレプリカをホストする各サーバー インスタンスの現在のバックアップの優先順位が表示されます。 グリッドの列は次のとおりです。  
   
@@ -132,7 +109,7 @@ ms.locfileid: "52531528"
   
 2.  必要に応じて、追加または変更する各可用性レプリカのバックアップの優先順位を構成します。 この優先順位は、プライマリ レプリカをホストするサーバー インスタンスによって使用され、可用性グループ内のデータベースで自動バックアップ要求を処理するレプリカを決定します (優先順位の高いレプリカが選択されます)。 この優先順位には、0 ～ 100 の数値を指定できます。 優先順位が 0 の場合は、レプリカがバックアップ要求を処理する対象と見なされないことを示します。  既定の設定は 50 です。  
   
-     可用性グループに可用性レプリカを追加する場合は、 **New-SqlAvailabilityReplica** コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、 **Set-SqlAvailabilityReplica** コマンドレットを使用します。 どちらの場合も **BackupPriority***n* パラメーターを使用します。*n* は 0 ～ 100 の値です。  
+     可用性グループに可用性レプリカを追加する場合は、 **New-SqlAvailabilityReplica** コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、 **Set-SqlAvailabilityReplica** コマンドレットを使用します。 どちらの場合も **BackupPriority**_n_ パラメーターを使用します。 *n* は 0 ～ 100 の値です。  
   
      たとえば、次のコマンドは、可用性レプリカ `MyReplica` のバックアップの優先順位を **60**に設定します。  
   
@@ -163,7 +140,7 @@ ms.locfileid: "52531528"
      バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
     > [!IMPORTANT]  
-    >  **AutomatedBackupPreference**は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックの「 [補足情報: セカンダリ レプリカでバックアップを構成した後](#FollowUp) 」を参照してください。  
+    >  **AutomatedBackupPreference**は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックで後述する「[補足情報:セカンダリ レプリカでバックアップを構成した後](#FollowUp)」を参照してください。  
   
      たとえば、次のコマンドは、可用性グループ **の** AutomatedBackupPreference `MyAg` プロパティを **SecondaryOnly**に設定します。 この可用性グループ内のデータベースの自動バックアップはプライマリ レプリカでは行われませんが、バックアップの優先度設定が最も高いセカンダリ レプリカにリダイレクトされます。  
   
@@ -182,7 +159,7 @@ ms.locfileid: "52531528"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> 補足情報: セカンダリ レプリカでバックアップを構成した後  
+##  <a name="FollowUp"></a> 補足情報:セカンダリ レプリカでバックアップを構成した後  
  特定の可用性グループの自動バックアップ設定を考慮に入れるには、バックアップ優先度が 0 を超える (>0) 可用性レプリカをホストする各サーバー インスタンスで、可用性グループのデータベースのバックアップ ジョブを実行するスクリプトを作成する必要があります。 現在のレプリカが優先バックアップ レプリカかどうかを確認すには、バックアップ スクリプトで [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 関数を使用します。 現在のサーバー インスタンスでホストされている可用性レプリカがバックアップ用の優先レプリカである場合、この関数は 1 を返します。 そうでない場合、関数は 0 を返します。 この関数に対してクエリを実行する各可用性レプリカを対象にしてシンプルなスクリプトを実行することによって、特定のバックアップ ジョブの実行に適したレプリカを特定できます。 たとえば、バックアップ ジョブ スクリプトの典型的なスニペットは次のようになります。  
   
 ```  
@@ -214,10 +191,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

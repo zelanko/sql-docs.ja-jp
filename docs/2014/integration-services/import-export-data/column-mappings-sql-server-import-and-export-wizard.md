@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04e2ee0d1f91ef119ca16329cd774fda6e4a83b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62893043"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
   使用して、**列マッピング**変換パラメーターを編集するためのダイアログ ボックス。  
   
 > [!NOTE]  
->  テーブルをコピーするオプションを選択する際に、テーブル内のすべての列をコピーする必要はありません。 選択**\<無視 >** で、**先**をスキップする列の場合は、このダイアログ ボックスの列。  
+>  テーブルをコピーするオプションを選択する際に、テーブル内のすべての列をコピーする必要はありません。 選択 **\<無視 >** で、**先**をスキップする列の場合は、このダイアログ ボックスの列。  
   
  このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションについては、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48074822"
  変換パラメーターを設定する各変換元列を表示します。  
   
  **変換先**  
- コピー操作中に列を無視するかどうかを指定します。 列のサブセットのみをコピーするを選択**\<無視 >** をスキップする列のこの列にします。 列をマップする前に、マップされないすべての列を無視する必要があります。  
+ コピー操作中に列を無視するかどうかを指定します。 列のサブセットのみをコピーするを選択 **\<無視 >** をスキップする列のこの列にします。 列をマップする前に、マップされないすべての列を無視する必要があります。  
   
  **型**  
  列のデータ型を選択します。  

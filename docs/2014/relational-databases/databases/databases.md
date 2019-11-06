@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
@@ -15,15 +14,15 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81efd94cf4b625a5f0584b3769d236c14b4ca3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214842"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154583"
 ---
 # <a name="databases"></a>データベース
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたは組) と列 (属性) から構成されます。 テーブル内の各列は、特定の種類の情報 (日付、名前、金額、数字など) を格納するようにデザインされています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたはタプル) と列 (属性) から構成されます。 テーブル内の各列は、特定の種類の情報 (日付、名前、金額、数字など) を格納するようにデザインされています。  
   
 ## <a name="basic-information-about-databases"></a>データベースに関する基本情報  
  コンピューターには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを 1 つまたは複数インストールできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスは、1 つまたは複数のデータベースを格納できます。  データベース内には、スキーマと呼ばれるオブジェクト所有権グループが少なくとも 1 つ存在します。 それぞれのスキーマには、テーブル、ビュー、ストアド プロシージャなどのデータベース オブジェクトが存在します。 証明書や非対称キーなど、一部のオブジェクトは、データベースに含まれていますがスキーマには含まれていません。 テーブルの作成の詳細については、「 [テーブル](../tables/tables.md)」をご覧ください。  
@@ -43,7 +42,7 @@ ms.locfileid: "48214842"
 |-|-|  
 |[システム データベース](system-databases.md)|[データまたはログ ファイルのデータベースからの削除](delete-data-or-log-files-from-a-database.md)|  
 |[包含データベース](contained-databases.md)|[データベースのデータ領域とログ領域情報の表示](display-data-and-log-space-information-for-a-database.md)|  
-|[Windows Azure 内の SQL Server データ ファイル](sql-server-data-files-in-microsoft-azure.md)|[データベースのサイズを大きくする](increase-the-size-of-a-database.md)|  
+|[Azure でのデータファイルの SQL Server](sql-server-data-files-in-microsoft-azure.md)|[データベースのサイズを大きくする](increase-the-size-of-a-database.md)|  
 |[データベース ファイルとファイル グループ](database-files-and-filegroups.md)|[データベースの名前変更](rename-a-database.md)|  
 |[データベースの状態](database-states.md)|[データベースをシングル ユーザー モードに設定する](set-a-database-to-single-user-mode.md)|  
 |[ファイルの状態](file-states.md)|[データベースの圧縮](shrink-a-database.md)|  
@@ -53,7 +52,7 @@ ms.locfileid: "48214842"
 |[データベースに対するデータ ファイルまたはログ ファイルの追加](add-data-or-log-files-to-a-database.md)|[データベースの互換性レベルの表示または変更](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[データベースの構成設定の変更](change-the-configuration-settings-for-a-database.md)|[メンテナンス プラン ウィザードの使用](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[ データベースの作成](create-a-database.md)|[ユーザー定義データ型の別名の作成](create-a-user-defined-data-type-alias.md)|  
-|[データベースの削除](delete-a-database.md)|[データベース スナップショット &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
+|[データベースの削除](delete-a-database.md)|[Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [インデックス](../indexes/indexes.md)  

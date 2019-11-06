@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5e9ac249f6fd3c6626084f254ad60889066c334
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: fe1d4272f89c962784a8716da143180ae2b12aa1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480859"
 ---
 # <a name="data-quality-projects-dqs"></a>データ品質プロジェクト (DQS)
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ品質プロジェクトは、ナレッジ ベースを使用してソース データの品質を改善する手段になります。 *データ クレンジング* アクティビティおよび *データ照合* アクティビティを実行して、その結果データを SQL Server データベースや .csv ファイルにエクスポートします。 データ品質プロジェクトをクレンジング プロジェクトまたは照合プロジェクトとして作成し、それぞれのアクティビティを実行できます。 データ クレンジングと照合のナレッジは同じナレッジ ベースに組み込むことができるため、クレンジング プロジェクトと照合プロジェクトは同じナレッジ ベースを使用して実行できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "51029812"
 |データ品質プロジェクトの管理方法 (開く、ロック解除、名前の変更、および削除) について説明します。|[管理&#40;を開く、ロック解除、名前の変更、および削除&#41;データ品質プロジェクト](../../2014/data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]で Integration Services プロジェクトを開く方法について説明します。|[Data Quality Client で Integration Services プロジェクトを開く](../../2014/data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DQS のナレッジ ベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

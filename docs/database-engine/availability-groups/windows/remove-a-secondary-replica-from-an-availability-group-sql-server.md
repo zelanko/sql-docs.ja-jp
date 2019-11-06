@@ -1,6 +1,7 @@
 ---
-title: 可用性グループからのセカンダリ レプリカの削除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループからセカンダリ レプリカを削除する
+description: 'TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループからセカンダリ レプリカを削除する手順。 '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,51 +15,28 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dd512bf8174fea192cc6448c959c308798d65868
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0b73bf44f4990b94ad44e450214099760901134
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014385"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ レプリカの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ レプリカを削除する方法について説明します。  
+ 
+   
+##  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   **作業を開始する準備:**  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [前提条件](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **セカンダリ レプリカを削除する方法:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **補足情報:**  [セカンダリ レプリカの削除後](#PostBestPractices)  
-  
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
-  
-###  <a name="Restrictions"></a> 制限事項と制約事項  
-  
--   このタスクは、プライマリ レプリカ上でのみサポートされます。  
-  
+-   このタスクは、プライマリ レプリカ上でのみサポートされます。    
 -   セカンダリ レプリカのみを可用性グループから削除できます。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+## <a name="Prerequisites"></a> 前提条件  
   
 -   可用性グループのプライマリ レプリカをホストするサーバー インスタンスに接続している。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -118,7 +96,7 @@ ms.locfileid: "47622070"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> 補足情報: セカンダリ レプリカの削除後  
+##  <a name="PostBestPractices"></a> 補足情報:セカンダリ レプリカの削除後  
  現在使用できないレプリカを指定した場合、そのレプリカがオンラインに戻ったとき、可用性グループに属していないことが検出されます。  
   
  レプリカの削除により、データの受信が停止します。 セカンダリ レプリカがグローバル ストアから削除されたことが確認されると、RECOVERING 状態でローカル サーバー インスタンスに残っている可用性グループ設定がデータベースから削除されます。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4975e2587200f5800781d455aa3fc660ba177c5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b0a9bc891fc85fd948e78119056744f4d74718ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105129"
 ---
 # <a name="sum-function-report-builder-and-ssrs"></a>Sum 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の合計を、指定されたスコープで評価して返します。  
@@ -33,19 +32,19 @@ Sum(expression, scope, recursive)
   
 #### <a name="parameters"></a>パラメーター  
  *式 (expression)*  
- (`Integer`または`Float`) 集計関数の実行対象の式。  
+ (`Integer` または `Float`) この集計関数の実行対象の式です。  
   
  *スコープ (scope)*  
- (`String`) 省略可能です。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
+ (`String`) 省略可。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- (**列挙型**) 省略可。 `Simple` (既定値) または`RdlRecursive`します。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
- 返します、`Decimal`の 10 進数の式と`Double`の他のすべての式。  
+ 10 進数型の式には `Decimal` 値が、その他すべての式には `Double` 値が返されます。  
   
 ## <a name="remarks"></a>コメント  
- 式で指定されたデータセットは、同じデータ型である必要があります。 同じデータ型に複数の数値データ型を持つデータを変換するなどの変換関数を使用して、 `CInt`、`CDbl`または`CDec`します。 詳細については、「 [データ型変換関数](http://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
+ 式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、`CInt`、`CDbl`、`CDec` などの変換関数を使用します。 詳細については、「 [データ型変換関数](https://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
   
@@ -80,9 +79,9 @@ Sum(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

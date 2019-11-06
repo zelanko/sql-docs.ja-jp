@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -17,12 +15,12 @@ ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0b19bf27cdc94e70908f81523a092ba022c41601
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195872"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>WQL を使用して構成管理の WMI プロバイダーにアクセスする
   このセクションでは、WMI Provider for Computer Management に対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] WQL (Windows Management Instrumentation Query Language) ステートメントを実行する方法について説明します。  
@@ -37,7 +35,7 @@ ms.locfileid: "48157682"
   
 3.  最初のテキスト フィールドに、WMI Provider for Computer Management の名前空間 (「root\Microsoft\SqlServer\ComputerManagement11」) を入力します。 **[接続]** をクリックします。  
   
-4.  クリックして**クエリ**します。 ローカル コンピューターで実行されている現在のサービスを返すクエリを入力:**選択\*SqlService から。** **[適用]** をクリックします。  
+4.  クリックして**クエリ**します。 ローカル コンピューターで実行されている現在のサービスを返すクエリを入力します。**選択\*SqlService から。** **[適用]** をクリックします。  
   
 5.  「`WHERE ServiceName = "MSSQLSERVER"`」を追加することで、クエリを絞り込みます。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableprop.f1
@@ -13,12 +12,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97d6731c5e85c3b37facc7172ecacbd2c7c74176
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066469"
 ---
 # <a name="table-properties-ssas-tabular"></a>Table Properties (SSAS Tabular)
   このトピックでは、テーブル モデルのテーブルのプロパティについて説明します。 ここで説明するプロパティは、ソースのどの列をインポートするかを定義する [テーブルのプロパティの編集] ダイアログ ボックスのプロパティとは異なります。  
@@ -34,7 +33,7 @@ ms.locfileid: "48169022"
   
 |プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  
-|**接続名**|\<接続名 >|テーブルのデータ ソースに対する接続の名前。<br /><br /> 接続を編集するには、ボタンをクリックします。|  
+|**接続名**|\<接続名 >|テーブルのデータ ソースへの接続の名前。<br /><br /> 接続を編集するには、ボタンをクリックします。|  
 |**[非表示]**|False|レポート クライアント フィールドの一覧で、テーブルを非表示にするかどうかを指定します。|  
 |**パーティション**||テーブルのパーティションは、 **[プロパティ]** ウィンドウに表示できません。 パーティションを表示、作成、または編集するには、ボタンをクリックしてパーティション マネージャーを開きます。|  
 |**ソース データ**||テーブルのソース データは、 **[プロパティ]** ウィンドウに表示できません。 ソース データを表示または編集するには、ボタンをクリックして [テーブルのプロパティの編集] ダイアログ ボックスを開きます。|  

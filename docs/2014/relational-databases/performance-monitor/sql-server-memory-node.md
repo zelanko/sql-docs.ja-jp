@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b2bffcd00bad148022e66e95dca9f03f70faee43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32a2296fdb68e640ce8ebfc8dd9cdb351666b337
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250577"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server、Memory Node
-  Microsoft **の** Memory Node [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、NUMA ノードのサーバー メモリの使用状況を監視するためのカウンターが用意されています。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Memory Node** オブジェクトには、NUMA ノードのサーバー メモリの使用状況を監視するためのカウンターが用意されています。  
   
 ## <a name="memory-node-counters"></a>Memory Node カウンター  
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Node** カウンターについて説明します。  
@@ -32,7 +32,7 @@ ms.locfileid: "48175192"
 |**Target Node Memory**|このノードの理想的なメモリの量を指定します。|  
 |**Total Node Memory**|サーバーがこのノードでコミットしているメモリの総容量を示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server: Buffer Manager オブジェクト](sql-server-buffer-manager-object.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  

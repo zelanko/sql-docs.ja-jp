@@ -1,22 +1,22 @@
 ---
-title: Windows で読み取りスケールの SQL Server 可用性グループを構成する | Microsoft Docs
-description: ''
+title: 可用性グループの読み取りスケールを構成する
+description: Windows で読み取りスケール ワークロードの Always On 可用性グループを構成します。
+ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.reviewer: ''
 ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 334b594e6ad83af65f6b6536dd8157d421767b52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ff0064a228cb756614dec2ff54a91f4f03d374c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991157"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-windows"></a>Windows で読み取りスケールの SQL Server 可用性グループを構成する
+# <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取りスケールを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

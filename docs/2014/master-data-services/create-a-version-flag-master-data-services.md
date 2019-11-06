@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating version flags [Master Data Services]
 - version flags [Master Data Services], creating
 - versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27fab7369730187323e937653181f742c38c8380
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d6c941283f02fd83e873d51e300add886ba5d73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479922"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>バージョン フラグを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンに割り当てるバージョン フラグを作成します。 フラグによって、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示すことができます。  
@@ -30,7 +29,7 @@ ms.locfileid: "48172632"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-create-a-version-flag"></a>バージョン フラグを作成するには  
   
@@ -52,10 +51,10 @@ ms.locfileid: "48172632"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [バージョンにフラグを割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [バージョンにフラグを割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [バージョン&#40;マスター データ サービス&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [バージョン フラグ名を変更する&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
+ [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   
+ [バージョン フラグ名を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0e1d1e31588945a12eed2d82ddf05ad2a7977e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 8fcb3e8c423e629a33a0c173e3264ee11ee178f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104182"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
   共有データセットのクエリ結果をキャッシュにコピーしておくと、複数のレポートに一貫性のあるデータを提供し、データセット クエリの応答時間を短縮できます。 レポートと同様に、初回使用時または指定されたスケジュールによってキャッシュされるように共有データセットを構成できます。  
@@ -54,10 +53,10 @@ ms.locfileid: "48183132"
   
  パラメーターの特定の組み合わせに対するクエリ結果がキャッシュ内にある間、それらのパラメーター値を持つ共有データセットを参照するレポートが起動されて処理されると、キャッシュされたデータが使用されます。  
   
- 有効期限が切れる前に、キャッシュにデータを保持する期間を指定できます。 詳細については、「[共有データセットの [キャッシュ] ページ &#40;レポート マネージャー&#41;](../caching-page-shared-datasets-report-manager.md)」を参照してください。  
+ キャッシュ内にデータを保持する有効期限が切れるまでの期間を指定できます。 詳細については、「[共有データセットの [キャッシュ] ページ &#40;レポート マネージャー&#41;](../caching-page-shared-datasets-report-manager.md)」を参照してください。  
   
 ## <a name="preloading-the-cache"></a>キャッシュを事前に読み込む  
- キャッシュ更新計画を作成することによって、キャッシュを事前に読み込むことができます。 更新計画を使用すると、アイテム固有のスケジュールまたは共有スケジュールを使用して、キャッシュを更新する頻度を指定できます。 同一アイテムに対して複数のキャッシュ エントリが作成されることを防ぐため、スケジュールでは、外部データ ソースに対するクエリ処理が実行されるのに十分な時間を指定する必要があります。 たとえば、クエリの実行に 20 分かかる場合は、更新スケジュール間隔も 20 分より長くする必要があります。 詳細については、次を参照してください。[スケジュール](../subscriptions/schedules.md)します。  
+ キャッシュ更新計画を作成することによって、キャッシュを事前に読み込むことができます。 更新計画を使用すると、アイテム固有のスケジュールまたは共有スケジュールを使用して、キャッシュを更新する頻度を指定できます。 同一アイテムに対して複数のキャッシュ エントリが作成されることを防ぐため、スケジュールでは、外部データ ソースに対するクエリ処理が実行されるのに十分な時間を指定する必要があります。 たとえば、クエリの実行に 20 分かかる場合は、更新スケジュール間隔も 20 分より長くする必要があります。 詳細については、「 [Schedules](../subscriptions/schedules.md)」を参照してください。  
   
  共有データセットに対してキャッシュ更新計画を作成する場合は、次の条件が満たされている必要があります。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying article properties
@@ -17,19 +16,19 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cdbbbedacd9f88133e0d17411f441aa5ed884a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63021315"
 ---
 # <a name="change-publication-and-article-properties"></a>パブリケーションおよびアーティクルのプロパティの変更
   パブリケーションが作成された後は、ほとんどのパブリケーションおよびアーティクルのプロパティを変更できますが、スナップショットの再生成およびサブスクリプションの再初期化、またはそのいずれかが必要になる場合もあります。 このトピックでは、変更された場合に、これらの操作のいずれかまたは両方を必要とするすべてのプロパティについて説明します。  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのパブリケーションのプロパティ  
   
-|説明|ストアド プロシージャ|[プロパティ]|要件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changepublication**|**sync_method**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -43,7 +42,7 @@ ms.locfileid: "48149402"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのアーティクルのプロパティ  
   
-|説明|ストアド プロシージャ|[プロパティ]|要件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |アーティクルを削除します。|**sp_droparticle**|すべてのパラメーター。|アーティクルは、サブスクリプションを作成する前に削除できます。 ストアド プロシージャを使用して、アーティクルに対するサブスクリプションを削除できます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、サブスクリプション全体を削除、再作成、および同期する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。|  
 |列フィルターを変更します。|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
@@ -61,7 +60,7 @@ ms.locfileid: "48149402"
   
 ## <a name="publication-properties-for-merge-replication"></a>マージ レプリケーションのパブリケーションのプロパティ  
   
-|説明|ストアド プロシージャ|[プロパティ]|要件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changemergepublication**|**sync_mode**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -80,7 +79,7 @@ ms.locfileid: "48149402"
   
 ## <a name="article-properties-for-merge-replication"></a>マージ レプリケーションのアーティクルのプロパティ  
   
-|説明|ストアド プロシージャ|[プロパティ]|要件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |アーティクルがパブリケーション内に最新のパラメーター化されたフィルターを持つ場合に、そのアーティクルを削除します。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |アーティクルが結合フィルターまたは論理レコード内で親である場合に、そのアーティクルを削除します (この操作の副作用として、結合が削除されます)。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
@@ -94,7 +93,7 @@ ms.locfileid: "48149402"
 |レプリケーション先のテーブルの所有者を変更します。|**sp_changemergearticle**|**destination_owner**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
   
 ## <a name="see-also"></a>参照  
- [管理 &#40;レプリケーション&#41;](../administration/administration-replication.md)   
+ [レプリケーション管理に関する FAQ](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [スナップショットの作成および適用](../create-and-apply-the-snapshot.md)   
  [サブスクリプションの再初期化](../reinitialize-subscriptions.md)   
  [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

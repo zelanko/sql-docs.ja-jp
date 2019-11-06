@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], publishing model
@@ -23,12 +22,12 @@ ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec6551cf9f6b514ed68ad0c6440fd4865c51a3f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71c462baf00d4129b4efaea0eb39b3a08e6c7ce6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63261882"
 ---
 # <a name="replication-publishing-model-overview"></a>レプリケーションのパブリッシング モデルの概要
   レプリケーションでは、パブリッシャー (出版社)、ディストリビューター (流通業者)、サブスクライバー (購読者)、パブリケーション (出版物)、アーティクル (記事)、サブスクリプション (定期購読物) など、レプリケーション トポロジ内のコンポーネントを出版業界にたとえて表しています。 雑誌を例にとって考えると、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを理解しやすくなります。  
@@ -56,7 +55,7 @@ ms.locfileid: "48214012"
 ## <a name="subscribers"></a>[サブスクライバー]  
  サブスクライバーは、レプリケートされたデータを受信するデータベース インスタンスです。 サブスクライバーは、複数のパブリッシャーおよびパブリケーションからデータを受信できます。 選択したレプリケーションの種類に応じて、サブスクライバーはパブリッシャーにデータの変更を戻したり、データを他のサブスクライバーに再パブリッシュしたりできます。  
   
-## <a name="article"></a>[アーティクル]  
+## <a name="article"></a>記事  
  アーティクルは、パブリケーションに含まれている 1 つのデータベース オブジェクトを表します。 パブリケーションには、テーブル、ビュー、ストアド プロシージャ、その他のオブジェクトなどさまざまな種類のアーティクルを含めることができます。 テーブルがアーティクルとしてパブリッシュされている場合は、フィルターを使用してサブスクライバーに送信するデータの列と行を制限することができます。  
   
 ## <a name="publication"></a>パブリケーション  

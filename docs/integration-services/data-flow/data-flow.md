@@ -15,17 +15,20 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503574"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293142"
 ---
 # <a name="data-flow"></a>データ フロー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
   
 > [!NOTE]  
@@ -185,7 +188,7 @@ ms.locfileid: "52503574"
  変換元と変換は、常に出力をとります。 出力には 1 つ以上の出力列が含まれており、データ フロー コンポーネントが外部列を使用するように構成されている場合、出力列は外部列を参照できます。 出力は、下流でのデータ処理に有用な情報を提供するように構成できます。 たとえば、出力を並べ替えるかどうかを指定できます。 また、出力に説明を割り当てたり、出力名を更新することもできます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで出力を構成するには、 **[詳細エディター]** ダイアログ ボックスを使用します。  
   
 ### <a name="error-outputs"></a>エラー出力  
- 変換元、変換先、および変換には、エラー出力を含めることができます。 それぞれの入力または列で、エラーに対するデータ フロー コンポーネントの応答方法を指定するには、 **[エラー出力の構成]** ダイアログ ボックスを使用します。 実行時にエラーまたはデータの切り捨てが発生したとき、データ フロー コンポーネントが行をリダイレクトするように構成されている場合、エラーが発生したデータ行はエラー出力に送信されます。 エラー出力は、追加の変換を適用する変換、または別の変換先にデータを出力する変換に連結できます。 既定では、エラー出力には出力列と、 **ErrorCode** および **ErrorColumn**の 2 つのエラー列が含まれます。 出力列には、失敗した行のデータが含まれます。また、 **ErrorCode** はエラー コードを提供し、 **ErrorColumn** は失敗した列を識別します。  
+ 変換元、変換先、および変換には、エラー出力を含めることができます。 それぞれの入力または列で、エラーに対するデータ フロー コンポーネントの応答方法を指定するには、 **[エラー出力の構成]** ダイアログ ボックスを使用します。 実行時にエラーまたはデータの切り捨てが発生したとき、データ フロー コンポーネントが行をリダイレクトするように構成されている場合、エラーが発生したデータ行はエラー出力に送信されます。 エラー出力は、追加の変換を適用する変換、または別の変換先にデータを出力する変換に連結できます。 既定では、エラー出力には出力列と、**ErrorCode** および **ErrorColumn** の 2 つのエラー列が含まれます。 出力列には、失敗した行のデータが含まれます。また、 **ErrorCode** はエラー コードを提供し、 **ErrorColumn** は失敗した列を識別します。  
   
  詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   

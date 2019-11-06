@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0e67f437cd629411230daed17f6a39f24b7103d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fee0aa76bc5b903d65461261a8eb5dbc2349581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087763"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 関数の引数
 ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、その引数の文字の文字列または SQLPOINTER へのポインターをそのまま使用するすべての関数の ANSI および Unicode の両方のバージョンをサポートします。 Unicode 関数の関数として実装されます (のサフィックスを持つ*W*) マクロではなく、します。 ANSI 関数 (サフィックスの有無を呼び出すことが*A*) は、現在の ODBC API 関数と同じです。  
@@ -65,8 +64,8 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、そ�
 |**SQLGetTranslator**|**SQLWriteDSNToINI**|  
 |**SQLInstallDriver**||  
   
-> [!NOTE]  
->  非推奨の関数には Unicode から ANSI マッピングのサポートがあるため、ODBC 3 *.x*ドライバー マネージャーは、ODBC 2 を再コンパイルをサポートしています *。x* 、UNICODE を使用したアプリケーション **#define**します。  
+> [!NOTE]
+>  非推奨の関数には Unicode から ANSI マッピングのサポートがあるため、ODBC *3.x*ドライバー マネージャーは、ODBC を再コンパイルをサポートしている*2.x* 、UNICODE を使用したアプリケーション **#define**.  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 359805d311252a6ce141b5e3654ba058b74a7d2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8de1a2053913ee0339c58a4a27ccd45772487e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118672"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: グループを開く。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。[グループを開く]  
   
- **概要**  
+ **まとめ**  
  **SQLColumns**指定したテーブルに列名の一覧を返します。 ドライバーは結果セットとして、指定したこの情報を返します*StatementHandle*します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumns(  
      SQLHSTMT       StatementHandle,  
@@ -81,7 +80,7 @@ SQLRETURN SQLColumns(
  *NameLength3*  
  [入力]文字の長さ **TableName*します。  
   
- *ColumnName*  
+ *[ColumnName]*  
  [入力]列名の文字列の検索パターン。  
   
 > [!NOTE]  
@@ -164,25 +163,25 @@ SQLRETURN SQLColumns(
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得するときなどに、他のユーザーではなく一部のテーブルのスキーマをサポートする場合 ("")、それらのテーブル スキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|NULL 以外の Varchar|テーブル名です。|  
 |COLUMN_NAME (ODBC 1.0)|4|NULL 以外の Varchar|列名 ドライバーは、名前がない列の空の文字列を返します。|  
-|DATA_TYPE (ODBC 1.0)|5|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 Datetime と間隔のデータ型は、この列は、(SQL_TYPE_DATE SQL_DATETIME または SQL_INTERVAL など nonconcise データ型ではなく、SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 に対して返されるデータ型。*x*および ODBC 2 *。x*アプリケーションが異なる場合があります。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。|  
-|TYPE_NAME (ODBC 1.0)|6|NULL 以外の Varchar|データ ソースに依存するデータ型の名前。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINAR"または「CHAR FOR BIT DATA ()」。|  
-|COLUMN_SIZE (ODBC 1.0)|7|Integer|DATA_TYPE が SQL_CHAR、SQL_VARCHAR またはの場合は、この列には、最大長列の文字にはが含まれます。 Datetime データ型の文字に変換された場合、値を表示するために必要な文字の合計数になります。 数値データ型の場合は、これは数字の合計数または合計 列で許可されているビット数のいずれかに従って NUM_PREC_RADIX 列です。 Interval データ型では、これは、文字形式のリテラルの間隔の文字数 (先頭の有効桁数の間隔によって定義されたを参照してください。 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)付録 d: データ型)。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。|  
-|BUFFER_LENGTH 列 (ODBC 1.0)|8|Integer|SQL_C_DEFAULT が指定されている場合、データの長さ (バイト単位) は、SQLGetData、SQLFetch、または SQLFetchScroll 操作で転送されます。 数値データは、このサイズは、データ ソースに格納されているデータのサイズを異なる場合があります。 この値は、COLUMN_SIZE 列の文字データに対して異なる場合があります。 長さの詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。|  
-|DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|有効桁数、小数点の右側に合計数。 SQL_TYPE_TIME と sql_type_timestamp 型の場合は、この列には、秒の小数部のコンポーネントの桁数が含まれています。 他のデータ型では、これは、データ ソースの列の 10 進数字です。 時刻部分が含まれている interval データ型のこの列には、小数点 (秒の小数部) の右側にある数字の数が含まれています。 Interval データ型を時刻部分を含まない、この列は 0 です。 10 進数字の詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。 DECIMAL_DIGITS は適用されませんデータ型の NULL を返します。|  
+|DATA_TYPE (ODBC 1.0)|5|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 Datetime と間隔のデータ型は、この列は、(SQL_TYPE_DATE SQL_DATETIME または SQL_INTERVAL など nonconcise データ型ではなく、SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 に対して返されるデータ型。*x*および ODBC 2 *。x*アプリケーションが異なる場合があります。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。|  
+|TYPE_NAME (ODBC 1.0)|6|NULL 以外の Varchar|データ ソースに依存するデータ型名です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINAR"または「CHAR FOR BIT DATA ()」。|  
+|COLUMN_SIZE (ODBC 1.0)|7|Integer|DATA_TYPE が SQL_CHAR、SQL_VARCHAR またはの場合は、この列には、最大長列の文字にはが含まれます。 Datetime データ型の文字に変換された場合、値を表示するために必要な文字の合計数になります。 数値データ型の場合は、これは数字の合計数または合計 列で許可されているビット数のいずれかに従って NUM_PREC_RADIX 列です。 Interval データ型では、これは、文字形式のリテラルの間隔の文字数 (先頭の有効桁数の間隔によって定義されたを参照してください[Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)付録 d:。データ型の場合)。 詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
+|BUFFER_LENGTH 列 (ODBC 1.0)|8|Integer|SQL_C_DEFAULT が指定されている場合、データの長さ (バイト単位) は、SQLGetData、SQLFetch、または SQLFetchScroll 操作で転送されます。 数値データは、このサイズは、データ ソースに格納されているデータのサイズを異なる場合があります。 この値は、COLUMN_SIZE 列の文字データに対して異なる場合があります。 長さの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
+|DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|有効桁数、小数点の右側に合計数。 SQL_TYPE_TIME と sql_type_timestamp 型の場合は、この列には、秒の小数部のコンポーネントの桁数が含まれています。 他のデータ型では、これは、データ ソースの列の 10 進数字です。 時刻部分が含まれている interval データ型のこの列には、小数点 (秒の小数部) の右側にある数字の数が含まれています。 Interval データ型を時刻部分を含まない、この列は 0 です。 10 進数字の詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。 DECIMAL_DIGITS は適用されませんデータ型の NULL を返します。|  
 |NUM_PREC_RADIX (ODBC 1.0)|10|Smallint|数値データ型の場合は、10、または 2 のいずれか。 10 の場合は、COLUMN_SIZE と DECIMAL_DIGITS の値は、列に格納できる 10 進数字の数を提供します。 たとえば、DECIMAL(12,5) 列は 10、12、column_size 値と 5 は、DECIMAL_DIGITS の NUM_PREC_RADIX を返しますFLOAT 列では、10、15、column_size 値と NULL の DECIMAL_DIGITS の NUM_PREC_RADIX を返すことができます。<br /><br /> 2 の場合は、COLUMN_SIZE と DECIMAL_DIGITS の値はビット列で許容数を提供します。 たとえば、FLOAT 列では、第 2 の 53、column_size 値と NULL の DECIMAL_DIGITS の基数を返すことができます。<br /><br /> NULL を返しますのデータ型 NUM_PREC_RADIX は適用されません。|  
 |NULL 許容型 (ODBC 1.0)|11|Smallint (NULL 以外)|SQL_NO_NULLS 列が含まれていない場合は NULL 値です。<br /><br /> SQL_NULLABLE 列で NULL 値許容される場合。<br /><br /> SQL_NULLABLE_UNKNOWN 列が NULL 値を受け入れるかどうかが不明である場合。<br /><br /> この列に返される値は、によって IS_NULLABLE 列に返される値によって異なります。 列が null 値を受け入れることができますが、列が null 値を受け付けないことで示すことはできませんの確実性で null 許容の列を示します。 によって IS_NULLABLE 列は、列が null 値を受け入れることはできませんが、確実性の列が null 値を受け入れることを示すことはできません、確信を示します。|  
 |「解説」(ODBC 1.0)|12|Varchar|列の説明。|  
 |COLUMN_DEF (ODBC 3.0)|13|Varchar|列の既定値です。 引用符で囲まれている場合、この列の値を文字列として解釈する必要があります。<br /><br /> 既定値として NULL が指定されている場合、この列は null の場合、引用符で囲まれていない、単語になります。 場合は切り捨てることがなく、既定値を表すことができない、単一引用符に囲まれていないが切り捨てられて、この列が含まれます。 既定値が指定されていない場合、この列は NULL を使用します。<br /><br /> COLUMN_DEF の値は、切り捨てられた値が含まれている場合を除き、新しい列定義の生成に使用できます。|  
-|SQL_DATA_TYPE (ODBC 3.0)|14|Smallint (NULL 以外)|SQL データ型、IRD の SQL_DESC_TYPE レコード フィールドに表示されます。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 この列は、datetime と間隔のデータ型を除く、DATA_TYPE 列と同じです。 この列は、datetime (SQL_TYPE_DATE SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型と interval データ型ではなく (SQL_DATETIME または SQL_INTERVAL) などの nonconcise データ型を返します。 SQL_DATETIME または SQL_INTERVAL にこの列が返される場合は、SQL_DATETIME_SUB 列から特定のデータ型を決定できます。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 に対して返されるデータ型。*x*および ODBC 2 *。x*アプリケーションが異なる場合があります。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。|  
+|SQL_DATA_TYPE (ODBC 3.0)|14|Smallint (NULL 以外)|SQL データ型、IRD の SQL_DESC_TYPE レコード フィールドに表示されます。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 この列は、datetime と間隔のデータ型を除く、DATA_TYPE 列と同じです。 この列は、datetime (SQL_TYPE_DATE SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型と interval データ型ではなく (SQL_DATETIME または SQL_INTERVAL) などの nonconcise データ型を返します。 SQL_DATETIME または SQL_INTERVAL にこの列が返される場合は、SQL_DATETIME_SUB 列から特定のデータ型を決定できます。 有効な ODBC SQL データ型の一覧は、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 に対して返されるデータ型。*x*および ODBC 2 *。x*アプリケーションが異なる場合があります。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。|  
 |SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|Datetime と間隔のデータ型のサブタイプ コード。 その他のデータ型の場合は、NULL が返されます。 Datetime と間隔サブコードの詳細についてを参照してください"SQL_DESC_DATETIME_INTERVAL_CODE" [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|16|Integer|文字またはバイナリ データの最大長 (バイト単位) は、列を入力します。 他のすべてのデータ型の場合、この列は NULL を返します。|  
 |ORDINAL_POSITION (ODBC 3.0)|17|Integer (NULL 以外)|テーブル内の列の序数位置です。 テーブルの最初の列の番号は 1 です。|  
-|によって IS_NULLABLE (ODBC 3.0)|18|Varchar|"NO"、列に null 値が含まれていない場合。<br /><br /> "YES"場合は、列が null 値を含めることができます。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> NULL 値の許容属性の検査は ISO の規則に従います。 SQL の ISO 準拠の DBMS では、空の文字列を返すことはできません。<br /><br /> この列に返される値は null 許容の列に返される値によって異なります。 (Null 許容の列の説明を参照してください)。|  
+|によって IS_NULLABLE (ODBC 3.0)|18|Varchar|"NO"、列に null 値が含まれていない場合。<br /><br /> "YES"場合は、列が null 値を含めることができます。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> NULL 値の許容属性の検査は ISO の規則に従います。 ISO SQL に準拠している DBMS では、空文字列を返すことはできません。<br /><br /> この列に返される値は null 許容の列に返される値によって異なります。 (Null 許容の列の説明を参照してください)。|  
   
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションによって返される結果セットのバッファーを宣言して**SQLColumns**します。 呼び出す**SQLColumns**を従業員テーブル内の各列を表す結果セットを返します。 呼び出して**SQLBindCol**バッファーに結果セットで列をバインドします。 アプリケーションでデータの各行をフェッチする最後に、 **SQLFetch**しそれを処理します。  
   
-```  
+```cpp  
 // SQLColumns_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

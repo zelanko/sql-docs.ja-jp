@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -23,13 +22,13 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105530"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
   レポートには、各ページの上部と下部にヘッダーとフッターを含めることができます。 ヘッダーとフッターには、静的テキスト、画像、線、四角形、罫線、背景色、背景画像、式などを含めることができます。 式には、データセットが 1 つしかないレポートでのデータセット フィールド参照と、スコープとしてデータセットを指定する集計関数呼び出しが含まれます。  
@@ -125,10 +124,10 @@ ms.locfileid: "48098442"
   
  より正確なページ数は、印刷されたページの寸法に相関する論理ページに基づいて計算されます。 Excel のページ フッターでは、論理ページ番号が自動的に使用されます。 ページ ヘッダーに論理ページ数を配置するには、単純なヘッダーを使用するようにデバイス情報設定を構成する必要があります。 単純なヘッダーを使用する場合は、ヘッダー領域で複雑なレポート レイアウトを処理する機能を削除してください。  
   
- 詳細については、「[Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)で操作できます。  
   
-## <a name="see-also"></a>参照  
- [レポートに画像を埋め込む&#40;レポート ビルダーおよび SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [四角形と線&#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>関連項目  
+ [レポートへの画像の埋め込み (レポート ビルダーおよび SSRS)](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [四角形と線 (レポート ビルダーおよび SSRS)](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

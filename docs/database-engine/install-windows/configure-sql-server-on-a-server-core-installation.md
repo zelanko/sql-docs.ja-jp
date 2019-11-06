@@ -13,13 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b7532ac16dedea90f9eac9de81b7a3c9753746ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054212"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
 
@@ -100,17 +99,17 @@ AlwaysOn 可用性グループが有効になっていることは、サーバ�
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーをリモートで使用する  
 次の手順は、Windows のクライアント エディションを実行している PC、またはサーバー グラフィック シェルがインストールされている Windows Server で実行することを意図しています。  
   
-1. **[コンピューターの管理]** を開きます。 **[コンピューターの管理]** を開くには、**[スタート]** をクリックして、`compmgmt.msc` と入力し、**[OK]** をクリックします。    
+1. **[コンピューターの管理]** を開きます。 **[コンピューターの管理]** を開くには、 **[スタート]** をクリックして、`compmgmt.msc` と入力し、 **[OK]** をクリックします。    
   
-2. コンソール ツリーで、**[コンピューターの管理]** を右クリックし、**[別のコンピューターへ接続]** をクリックします。  
+2. コンソール ツリーで、 **[コンピューターの管理]** を右クリックし、 **[別のコンピューターへ接続]** をクリックします。  
   
-3. **[コンピューターの選択]** ダイアログ ボックスで、管理する Server Core コンピューターの名前を入力するか、**[参照]** をクリックして目的のコンピューターを探し、**[OK]** をクリックします。  
+3. **[コンピューターの選択]** ダイアログ ボックスで、管理する Server Core コンピューターの名前を入力するか、 **[参照]** をクリックして目的のコンピューターを探し、 **[OK]** をクリックします。  
   
 4. コンソール ツリーで、選択した Server Core コンピューターの **[コンピューターの管理]** の下にある **[サービスとアプリケーション]** をクリックします。  
   
 5. **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー]** をダブルクリックします。  
   
-6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**で、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス]** をクリックし、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)] を右クリックして、[プロパティ] をクリックします。この場合、\<instance name> は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
+6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**で、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス]** をクリックし、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)] を右クリックして、[プロパティ] をクリックします。この場合、\<instance name> は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
   
 7. **[AlwaysOn 高可用性]** タブを選択します。  
   
@@ -120,8 +119,8 @@ AlwaysOn 可用性グループが有効になっていることは、サーバ�
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって変更内容が保存されます。 その後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを手動で再起動する必要があります。 業務上の要件に合った時間帯を選んで再起動することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが再起動されると、AlwaysOn が有効になり、IsHadrEnabled サーバー プロパティが 1 に設定されます。  
   
-> [!NOTE]  
->  -   対象となるコンピューターに接続するには、適切なユーザー権限を持っているか、そのコンピューターに対する適切な権限が委任されている必要があります。  
+> [!NOTE]
+>  -   ターゲット コンピューターに接続するには、適切なユーザー権限を持っているか、そのコンピューターに対する適切な権限が委任されている必要があります。  
 > -   管理しているコンピューターの名前は、コンソール ツリーの [コンピューターの管理] の横に、かっこで囲まれて表示されます。  
   
 ### <a name="using-powershell-cmdlets-to-enable-alwayson-availability-groups"></a>PowerShell コマンドレットを使用して AlwaysOn 可用性グループを有効にする  
@@ -152,7 +151,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ##  <a name="BKMK_ConfigureRemoteAccess"></a> Server Core で実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスの構成  
  Windows Server Core で実行している [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] インスタンスのリモート アクセスを構成するには、以下で説明する操作を実行します。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスでリモート接続を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  リモート接続を有効にするには、SQLCMD.exe をローカルで使用して、Server Core インスタンスに対して次のステートメントを実行します。  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -182,7 +181,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
   
-3.  **[新しいタスクの作成]** ダイアログ ボックスで、**[開く]** フィールドに **sqlps.exe** と入力して、**[OK]** をクリックします。 **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウが開きます。  
+3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[開く]** フィールドに **sqlps.exe** と入力して、 **[OK]** をクリックします。 **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウが開きます。  
   
 4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   

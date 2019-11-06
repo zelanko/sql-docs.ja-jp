@@ -1,5 +1,5 @@
 ---
-title: '[カスタマイズ] - ([コマンド] ページ) | Microsoft Docs'
+title: '[カスタマイズ] ([コマンド] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,19 +9,17 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
-- vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 594e97c1d5ac65eb353664471232f45f0c45e2d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2fd07b342977603f6983c4d9389ac1c6b7934629
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716720"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259424"
 ---
-# <a name="customize-commands-page"></a>[カスタマイズ] - ([コマンド] ページ)
+# <a name="customize-commands-page"></a>[カスタマイズ] \([コマンド] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスでは、ツール バーおよびメニューのコマンドを追加したり、削除したりできます。また、ツール バー ボタンやメニュー コマンドに使用されているイメージを変更できます。 **[コマンド]** ページにアクセスするには、 **[ツール]** メニューの **[カスタマイズ]** をクリックし、次に **[コマンド]** をクリックします。  
   
@@ -43,4 +41,3 @@ ms.locfileid: "47716720"
   
 ## <a name="see-also"></a>参照  
 [メニューとショートカット キーのカスタマイズ](../../ssms/customize-menus-and-shortcut-keys.md)  
-  

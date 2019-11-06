@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 26fdd13e19e2542f5020467323d9e640a4b563b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106504"
 ---
-# <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
+# <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベースに対して変更データ キャプチャを有効にします。 データベース内のテーブルの変更データ キャプチャを有効にするには、まずそのデータベースに対してこの手順を実行する必要があります。 変更データ キャプチャは、有効なテーブルに対して適用された挿入、更新、削除の各アクティビティを記録し、変更の詳細を、利用しやすいリレーショナル形式で格納します。 変更された行に対応する列情報が、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされます。その際、追跡対象となるソース テーブルの列構造はミラー化されます。  
+  現在のデータベースのデータのキャプチャの変更を有効にします。 データベース内のテーブルの変更データ キャプチャを有効にするには、まずそのデータベースに対してこの手順を実行する必要があります。 変更データ キャプチャ レコードが挿入、更新、および削除の各アクティビティは、変更の詳細を使いやすいリレーショナル形式で使用できるように、有効なテーブルに適用します。 ターゲット環境に変更を適用するために必要なメタデータと共に、変更された行の追跡対象のソース テーブルの列構造を反映した列の情報がキャプチャされます。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -61,7 +60,7 @@ sys.sp_cdc_enable_db
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、変更データ キャプチャを有効にします。  
+ 次の例では変更データ キャプチャです。  
   
 ```  
 USE AdventureWorks2012;  
@@ -70,7 +69,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b346d265c0aafc2eae9e379d813ef2f46dcd4112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104230"
 ---
 # <a name="application-domains-for-report-server-applications"></a>レポート サーバー アプリケーションのアプリケーション ドメイン
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションを含んだ単一のサービスとしてレポート サーバーが実装されます。 それぞれのアプリケーションは、単一のレポート サーバー プロセス内の独自のアプリケーション ドメインで実行されます。 ほとんどの場合、アプリケーション ドメインは内部的に作成、構成、および管理されます。 ただし、レポート サーバーのアプリケーション ドメインがどのようにリサイクルされるのかを理解しておくと、パフォーマンスまたはメモリの問題を調査したり、中断したサービスをトラブルシューティングしたりする際に、その知識を役立てることができます。  
@@ -39,9 +38,9 @@ ms.locfileid: "48059412"
   
  次の表では、これらのイベントが発生した場合、アプリケーション ドメインがどのようにリサイクルされるかを簡単に説明します。  
   
-|イベント|イベントの説明|適用対象|構成可能|リサイクル処理の説明|  
+|イベント|イベントの説明|対象|構成可能|リサイクル処理の説明|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|定期的なリサイクル処理 (決められた間隔で実行)|既定では、アプリケーション ドメインは 12 時間おきにリサイクルされます。<br /><br /> 通常、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションでは、プロセス全体の正常動作を促進するために定期的なリサイクルが行われます。|レポート サーバー Web サービス<br /><br /> レポート マネージャー<br /><br /> バックグラウンド処理アプリケーション|可能。 `RecycleTime` RSReportServer.config ファイルで構成設定は、リサイクル間隔を決定します。<br /><br /> `MaxAppDomainUnloadTime` バック グラウンド処理が完了する許可が、待機時間を設定します。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって管理されます。<br /><br /> バックグラウンド処理アプリケーションの場合、スケジュールに従って開始された新しいジョブの新しいアプリケーション ドメインがレポート サーバーによって作成されます。 既に進行中のジョブは、最大待ち時間に達しない限り、現在のアプリケーション ドメインで完了することが許可されます。|  
+|定期的なリサイクル処理 (決められた間隔で実行)|既定では、アプリケーション ドメインは 12 時間おきにリサイクルされます。<br /><br /> 通常、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションでは、プロセス全体の正常動作を促進するために定期的なリサイクルが行われます。|レポート サーバー Web サービス<br /><br /> レポート マネージャー<br /><br /> バックグラウンド処理アプリケーション|可能。 サイクル間隔は、RSReportServer.config ファイルの `RecycleTime` 構成設定によって異なります。<br /><br /> バックグラウンド処理の完了を待機する最大時間は、`MaxAppDomainUnloadTime` で設定します。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって管理されます。<br /><br /> バックグラウンド処理アプリケーションの場合、スケジュールに従って開始された新しいジョブの新しいアプリケーション ドメインがレポート サーバーによって作成されます。 既に進行中のジョブは、最大待ち時間に達しない限り、現在のアプリケーション ドメインで完了することが許可されます。|  
 |レポート サーバーの構成変更|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってアプリケーション ドメインがリサイクルされます。|レポート サーバー Web サービス<br /><br /> レポート マネージャー<br /><br /> バックグラウンド処理アプリケーション|No.|リサイクル処理を抑制することはできません。 ただし、構成の変更に呼応して発生するリサイクル処理については、定期的なリサイクル処理と同じように処理されます。 新しい要求については、新しいアプリケーション ドメインが作成され、現在の要求およびジョブについては、現在のアプリケーション ドメインで実行されます。|  
 |[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] の構成変更|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって監視されているファイル (machine.config ファイル、Web.config ファイル、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] プログラム ファイルなど) を変更すると、アプリケーション ドメインがリサイクルされます。|レポート サーバー Web サービス<br /><br /> レポート マネージャー|No.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって処理が管理されます。<br /><br /> [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって開始されたリサイクル処理は、バックグラウンド処理のアプリケーション ドメインには影響しません。|  
 |メモリ不足とメモリ割り当ての失敗|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR によって直ちにリサイクルされます。|レポート サーバー Web サービス<br /><br /> レポート マネージャー<br /><br /> バックグラウンド処理アプリケーション|No.|深刻なメモリ不足が生じた場合、レポート サーバーは、現在のアプリケーション ドメインで、新しい要求を受け付けないようにします。 サーバーが新しい要求を拒否している間は、HTTP 503 エラーが発生します。 古いアプリケーション ドメインがアンロードされるまで、新しいアプリケーション ドメインは作成されません。 したがって、サーバーで深刻なメモリ不足が生じているときに構成ファイルに変更を加えた場合、現在進行中の要求やジョブは開始されることも、完了することもありません。<br /><br /> メモリ割り当てに失敗した場合は、すべてのアプリケーション ドメインが直ちに再起動されます。 進行中の要求およびジョブは破棄されます。 これらのジョブおよび要求は手動で再起動する必要があります。|  
@@ -59,12 +58,12 @@ ms.locfileid: "48059412"
   
  レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションでは、リサイクル処理を引き起こした条件に応じて、アプリケーション ドメインのリサイクル処理がそれぞれ別個に実行される場合と、まとめて実行される場合とがあります。  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって開始されたリサイクル処理は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーション (つまり、レポート サーバー Web サービスおよびレポート マネージャー) にのみ影響します。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] は、監視対象のファイルが変更されたかどうかに基づいて、アプリケーション ドメインをリサイクルします。 通常、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって開始されたリサイクル処理は、バックグラウンド処理アプリケーションのリサイクル処理とは無関係に実行されます。  
+-   によって開始されたリサイクル処理[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]のみに影響を与える、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]アプリケーション。レポート サーバー Web サービスとレポート マネージャー。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] は、監視対象のファイルが変更されたかどうかに基づいて、アプリケーション ドメインをリサイクルします。 通常、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって開始されたリサイクル処理は、バックグラウンド処理アプリケーションのリサイクル処理とは無関係に実行されます。  
   
 -   通常、レポート サーバーによって開始されたリサイクル処理は、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションに影響します。 リサイクル処理は、構成設定の変更時やサービスの再起動時に実行されます。  
   
 ## <a name="rsreportserver-configuration-settings-for-application-domains"></a>アプリケーション ドメインに関係する RSReportServer 構成設定  
- 構成設定で指定されますで、 [RSReportServer.config ファイル](rsreportserver-config-configuration-file.md)します。 次の例は、アプリケーション ドメインの定期的なリサイクル動作に関係する既定の構成設定を示しています。  
+ 構成設定は、 [RSReportServer.config ファイル](rsreportserver-config-configuration-file.md)で指定されます。 次の例は、アプリケーション ドメインの定期的なリサイクル動作に関係する既定の構成設定を示しています。  
   
  `<RecycleTime>720</RecycleTime>`  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48059412"
   
  次の表では、これらの要素について説明します。  
   
-|要素|適用対象|定義|  
+|要素|対象|定義|  
 |-------------|----------------|----------------|  
 |`RecycleTime`|3 つの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーション ドメインすべて|アプリケーション ドメインがリサイクルされる頻度を指定します。 既定のリサイクル スケジュールは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションの標準的なドメイン リサイクル パターン (12 時間) に従います。 スケジュールされた時間になると、新規要求はすべてアプリケーション ドメインの新しいインスタンスに転送されます。 元のインスタンスで処理中の要求はそのまま継続して処理されます。 処理がすべて完了すると、元のインスタンスが削除され、新しいインスタンスだけがアクティブなアプリケーション ドメイン インスタンスとなります。<br /><br /> 既定値は 720 分です。|  
 |`MaxAppDomainUnloadTime`|バックグラウンド処理アプリケーション ドメインのみ|既定では、リサイクル中にアプリケーション ドメインがシャット ダウンに費やすことのできる時間として、30 分間の待機時間がレポート サーバーによって割り当てられます。 処理中のジョブが割り当てられた時間内に完了しない場合 (処理に必要な時間が待機時間よりも長くなる場合)、アプリケーション ドメインのインスタンスが直ちに再起動されます。 未完了のジョブはすべて終了されます。<br /><br /> レポート サーバーで実行されているジョブのステータスを表示したり取り消したりする方法の詳細については、「[Cancel Report Server Jobs &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)」([レポート サーバー ジョブのキャンセル] &#40;Management Studio&#41;) を参照してください。|  

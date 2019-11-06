@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - job steps [Analysis Services]
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b42d5ae09ef078e98f1343a4e4e7bfda7ac6566b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e27f429820039b7d804f52776e9cf5dd33bf27dd
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698190"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267279"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -33,7 +33,7 @@ ms.locfileid: "51698190"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **Analysis Services コマンドまたはクエリを使用する SQL Server ジョブ ステップを作成する方法:**  
   
@@ -51,15 +51,15 @@ ms.locfileid: "51698190"
   
 -   ジョブ ステップで Analysis Services クエリを使用する場合、クエリ ステートメントは多次元式 (MDX) クエリである必要があります。 MDX の詳細については、「 [MDX ステートメントの基礎 (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)」を参照してください。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>アクセス許可  
   
 -   Analysis Services サブシステムを使用するジョブ ステップを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーであるか、このサブシステム用に定義された有効なプロキシ アカウントへアクセスできるユーザーだけです。 さらに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントまたはプロキシは、Analysis Services 管理者であり、かつ有効な Windows ドメイン アカウントである必要があります。  
   
 -   **sysadmin** 固定サーバー ロールのメンバーのみがジョブ ステップ出力をファイルに書き込むことができます。 **msdb** データベースで **SQLAgentUserRole** データベース ロールのメンバーであるユーザーによってジョブ ステップが実行される場合、出力はテーブルのみに書き込むことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって **SQLAgentUserRole** データベースの **SQLAgentUserRole** テーブルに書き込まれます。  
   
--   詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+-   詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
@@ -129,8 +129,8 @@ ms.locfileid: "51698190"
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
-            <DataSource xmlns:xsd="https://www.w3.org/2001/XMLSchema"
-                xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2012</ID>  
                 <Name>Adventure Works 2012</Name>  

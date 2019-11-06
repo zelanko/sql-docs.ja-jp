@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - reordering output columns [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf9e5df62a61993fbfc5812715671042ae721e70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63063068"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>列の出力順の変更 (Visual Database Tools)
   選択クエリにデータ列を追加する順序によって、結果での列の表示順序が決まります。 最初にクエリに追加した列は結果の左端に表示され、次に追加した列はその右隣に表示されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48162402"
   
 2.  行セレクター ボタンにポインターを置き、行を新しい場所にドラッグします。  
   
-     - または -  
+     \- または -  
   
      [SQL ペイン](sql-pane-visual-database-tools.md)で列名の順序を編集します。  
   

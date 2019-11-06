@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -22,12 +22,12 @@ ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0799fa3db71dfdf936bb292a21ba44eff877b3c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63070882"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)
   基になるデータの行グループ全体に結果の各行が対応するようなクエリ結果を作成することができます。  

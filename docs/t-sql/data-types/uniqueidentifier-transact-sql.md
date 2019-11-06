@@ -1,7 +1,7 @@
 ---
 title: uniqueidentifier (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/1/2017
+ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce2c2ba6f1d09c56179b2afd83af2a4dbec8655e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000449"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,12 +37,12 @@ ms.locfileid: "47808700"
 -   [NEWID](../../t-sql/functions/newid-transact-sql.md) または [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 関数を使用する。    
 -   *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* の形式の文字列定数を変換する。各 *x* は 0 ～ 9 または a ～ f の 16 進数です。 たとえば、6F9619FF-8B86-D011-B42D-00C04FC964FF は有効な **uniqueidentifier** 値です。  
   
-比較演算子で使用できる **uniqueidentifier** 値。 ただし、2 つの値のビット パターンを比較することによる順序付けは行われません。 **uniqueidentifier** 型の値に対して行うことができる操作は、比較 (=、<>、\<、>、\<=、>) および NULL であるかどうかのチェック (IS NULL と IS NOT NULL) だけです。 他の算術演算子は使用できません。 **uniqueidentifier** データ型では、IDENTITY 以外のすべての列制約とプロパティを使用できます。
+比較演算子で使用できる **uniqueidentifier** 値。 しかし、2 つの値のビット パターンを比較することによって、順序付けは実装されません。 **uniqueidentifier** 型の値に対して行うことができる操作は、比較 (=、<>、\<、>、\<=、>) および NULL であるかどうかのチェック (IS NULL と IS NOT NULL) だけです。 他の算術演算子は使用できません。 **uniqueidentifier** データ型では、IDENTITY 以外のすべての列制約とプロパティを使用できます。
   
 更新サブスクリプションでのマージ レプリケーションとトランザクション レプリケーションでは、テーブルの複数のコピーの間で列を確実に一意に識別するため、**uniqueidentifier** 列が使用されます。
   
-## <a name="converting-uniqueidentifier-data"></a>uniqueidentifier データの使用  
-**uniqueidentifier** 型は、文字式からの変換のための文字型と見なされるため、文字型に変換する場合は切り捨てルールが適用されます。 つまり、文字式を異なるサイズの文字型に変換する場合、値が新しいデータ型にとって長すぎるときは、切り捨てられます。 「使用例」を参照してください。
+## <a name="converting-uniqueidentifier-data"></a>uniqueidentifier データを変換する  
+**uniqueidentifier** 型は、文字式からの変換のための文字型と見なされるため、文字型に変換する場合は切り捨てルールが適用されます。 つまり、文字式を異なるサイズの文字型に変換する場合、値が新しいデータ型に長すぎる場合は、切り捨てられます。 「使用例」セクションを参照してください。
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 

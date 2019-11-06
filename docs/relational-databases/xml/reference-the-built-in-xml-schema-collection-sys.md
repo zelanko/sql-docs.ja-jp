@@ -14,27 +14,26 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2982a8882fde670fa6a148087885116b3bfaf372
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 249b9d920a15e9eb2b3e85532df7df144b9d4c84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995283"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>組み込みの XML スキーマ コレクション (sys) の参照
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   作成したどのデータベースでも、 **sys** リレーショナル スキーマに **sys** XML スキーマ コレクションが事前に定義されています。 各データベースはこれらの事前定義されたスキーマを保持します。また、これらのスキーマは、ユーザーが作成した他の XML スキーマ コレクションからアクセスできます。 このような事前定義されたスキーマに使われているプレフィックスは、XQuery で意味があるものとして扱われます。 **xml** のみが、予約されているプレフィックスです。  
   
 ```  
-xml = https://www.w3.org/XML/1998/namespace  
-xs = https://www.w3.org/2001/XMLSchema  
-xsi = https://www.w3.org/2001/XMLSchema-instance  
-fn = https://www.w3.org/2004/07/xpath-functions  
+xml = http://www.w3.org/XML/1998/namespace  
+xs = http://www.w3.org/2001/XMLSchema  
+xsi = http://www.w3.org/2001/XMLSchema-instance  
+fn = http://www.w3.org/2004/07/xpath-functions  
 sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
-xdt = https://www.w3.org/2004/07/xpath-datatypes  
+xdt = http://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
 (no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
@@ -64,11 +63,11 @@ GO
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema   
-   xmlns="https://www.w3.org/2001/XMLSchema"   
+   xmlns="http://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
-   <import namespace="https://www.w3.org/XML/1998/namespace"/>  
+   <import namespace="http://www.w3.org/XML/1998/namespace"/>  
    <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
@@ -98,7 +97,7 @@ GO
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
-    <schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    <schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace    
         ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
@@ -123,7 +122,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+<schema xmlns="http://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
         xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     

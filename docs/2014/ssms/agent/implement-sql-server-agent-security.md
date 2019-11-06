@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -15,12 +15,12 @@ ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137524"
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server エージェントのセキュリティの実装
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、データベース管理者は、各ジョブ ステップをそのジョブ ステップの実行に必要な権限だけがあるセキュリティ コンテキスト内で実行できます。適切なセキュリティ コンテキストは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシによって決まります。 特定のジョブ ステップに対応する権限を設定するには、必要な権限のあるプロキシを作成し、そのプロキシをジョブ ステップに割り当てます。 プロキシは、複数のジョブ ステップに対して指定できます。 同じ権限を必要とするジョブ ステップに対しては、同じプロキシを使用します。  
@@ -65,13 +65,13 @@ ms.locfileid: "48210802"
   
 -   ACE は、SSDP によって所有される次の構成 DLL に依存します。理由は、これらの DLL の API は ACE によって呼び出されるためです。  
   
-    -   **SCO** : Microsoft.SqlServer.Configuration.Sco.dll。仮想アカウント用の新しい SCO 検証が含まれます。  
+    -   **SCO**: Microsoft.SqlServer.Configuration.Sco.dll。仮想アカウント用の新しい SCO 検証が含まれます。  
   
-    -   **Cluster** : Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster**: Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** : Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC**: Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** : Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extension**: Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>参照  
  [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)   

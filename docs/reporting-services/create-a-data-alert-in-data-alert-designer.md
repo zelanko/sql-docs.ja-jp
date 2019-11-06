@@ -2,19 +2,19 @@
 title: データ警告デザイナーでのデータ警告の作成 | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504107"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571575"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
 
@@ -114,7 +114,7 @@ ms.locfileid: "52504107"
   
 20. 必要に応じて、 **[件名]** ボックスで、警告メッセージの件名行を更新します。  
   
-     既定の件名は、**"\<データ警告名> に関するデータの警告"** です。  
+     既定の件名は、 **"\<データ警告名> に関するデータの警告"** です。  
   
 21. 必要に応じて、 **[説明]** ボックスに警告メッセージの説明を入力します。  
   

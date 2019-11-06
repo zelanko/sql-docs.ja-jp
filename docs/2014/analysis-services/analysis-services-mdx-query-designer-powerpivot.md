@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e96ad77f71674042b16b402f51d555b22867669
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062468"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX クエリ デザイナー (PowerPivot)
   Analysis Services 多次元式 (MDX) クエリ デザイナーには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースに対する MDX クエリの作成に役立つグラフィカル ユーザー インターフェイスが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードでもメタデータ ペインが表示されます。このペインから、選択したキューブのメンバーをドラッグすることによって、使用するデータを取得する MDX クエリを作成できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48204622"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |キューブの選択ボタン (**[...]**)|現在選択されているキューブを表示します。|  
 |メタデータ ペイン|選択されたキューブで定義されているメジャー、主要業績評価指標 (KPI)、およびディメンションの階層リストを表示します。|  
@@ -56,7 +55,7 @@ ms.locfileid: "48204622"
  ファイルからの .mdx クエリのインポートはサポートされていません。  
   
 > [!NOTE]  
->  MDX の詳細および MDX クエリ デザイナーの一般的な情報については、 [SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=98335)の「MDX クエリ エディター (Analysis Services - 多次元データ)」を参照してください。  
+>  MDX の詳細および MDX クエリ デザイナーの一般的な情報については、 [SQL Server オンライン ブック](https://go.microsoft.com/fwlink/?linkid=98335)の「MDX クエリ エディター (Analysis Services - 多次元データ)」を参照してください。  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>グラフィカル MDX クエリ デザイナーのツール バー (デザイン モード)  
  クエリ デザイナーのツール バーにある各種のボタンを使用すると、グラフィカル インターフェイスを使用して MDX クエリをデザインできます。 これらのボタンとその機能を次の表に示します。  
@@ -67,11 +66,11 @@ ms.locfileid: "48204622"
 |**[インポート]**|ファイル システムのレポート定義 (.rdl) ファイルから既存のクエリをインポートします。|  
 |![MDX クエリ ビューに変更](media/rsqdicon-commandtypemdx.gif "MDX クエリのビューへの変更")|コマンドの種類を MDX に切り替えます。|  
 |![結果データの更新](media/rsqdicon-refresh.gif "結果データの更新")|データ ソースからメタデータを更新します。|  
-|![計算されるメンバーの追加](media/rsqdicon-addcalculatedmember.gif "計算されるメンバーの追加")|**[計算されるメンバー ビルダー]** ダイアログ ボックスを表示します。|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|**[計算されるメンバー ビルダー]** ダイアログ ボックスを表示します。|  
 |![空のセルの表示の切り替え](media/rsqdicon-showemptycells.gif "空のセルの表示の切り替え")|データ ペインに空のセルを表示するかどうかを切り替えます。 これは、MDX で NON EMPTY 句を使用することに相当します。|  
 |![クエリの自動実行](media/rsqdicon-autoexecute.gif "クエリの自動実行")|クエリを自動的に実行し、変更が生じるたびに結果を表示します。 結果はデータ ペインに表示されます。|  
 |![集計ボタンの表示](media/rsqdicon-showaggregations.gif "集計ボタンの表示")|集計をデータ ペインに表示します。|  
-|![削除](media/rsqdicon-delete.gif "削除")|データ ペインで選択した列をクエリから削除します。|  
+|![[削除]](media/rsqdicon-delete.gif "[削除]")|データ ペインで選択した列をクエリから削除します。|  
 |![[クエリ パラメーター] ダイアログ ボックスのアイコン](media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")|**[クエリ パラメーター]** ダイアログ ボックスを表示します。 クエリ パラメーターの値を指定する場合、同じ名前のパラメーターが自動的に作成されます。|  
 |![[クエリの準備] ボタン](media/rsqdicon-preparequery.gif "[クエリの準備] ボタン")|クエリを準備します。|  
 |![クエリを実行する](media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、結果をデータ ペインに表示します。|  
@@ -87,7 +86,7 @@ ms.locfileid: "48204622"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |キューブの選択ボタン (**[...]**)|現在選択されているキューブを表示します。|  
 |メタデータ/関数/テンプレート ペイン|選択されたキューブで定義されているメジャー、KPI、およびディメンションの階層リストを表示します。|  
@@ -105,7 +104,7 @@ ms.locfileid: "48204622"
   
 -   **[テキストとして編集]**  
   
--   **計算されるメンバーを追加**(![計算されるメンバーの追加](media/rsqdicon-addcalculatedmember.gif "計算されるメンバーの追加"))  
+-   **[計算されるメンバーの追加]** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **空のセルを表示する** (![空のセルの表示の切り替え](media/rsqdicon-showemptycells.gif "空のセルの表示の切り替え"))  
   

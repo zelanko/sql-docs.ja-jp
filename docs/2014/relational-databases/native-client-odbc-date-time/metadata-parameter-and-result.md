@@ -12,12 +12,12 @@ ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85b784b2c8d5a123e5cf16bc014f27c68a390a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032337"
 ---
 # <a name="parameter-and-result-metadata"></a>パラメーターと結果のメタデータ
   このトピックでは、日付と時刻のデータ型に対して実装パラメーター記述子 (IPD) フィールドと実装行記述子 (IRD) フィールドに返される情報について説明します。  
@@ -81,8 +81,8 @@ ms.locfileid: "48159872"
 |SQL_DESC_DISPLAY_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|10|8,10..16|16|2|19, 21..27|26, 28..34|  
-|SQL_DESC_LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|SQL_DESC_LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|SQL_DESC_LITERAL_PREFIX|'|'|'|'|'|'|  
+|SQL_DESC_LITERAL_SUFFIX|'|'|'|'|'|'|  
 |SQL_DESC_LOCAL_TYPE_NAME|`date`|`time`|`smalldatetime`|`datetime`|`datetime2`|datetimeoffset|  
 |SQL_DESC_OCTET_LENGTH|6|12|4|8|16|20|  
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - issue element
@@ -15,12 +14,12 @@ ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54109bc479d06833aeee6af803c39e8ac7873ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63285768"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 要素 (ssbdiagnose)
   **ssbdiagnose** ユーティリティによって検出された問題を報告します。 **ssbdiagnose** の XML 出力ファイルには、報告される問題につき 1 つの Issue 要素が含まれています。  
@@ -61,7 +60,7 @@ ms.locfileid: "48195182"
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[DiagnosticInformation 要素&#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
+|**親要素**|[DiagnosticInformation 要素 &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
 |**子要素**|なし|  
   
 ## <a name="example"></a>例  

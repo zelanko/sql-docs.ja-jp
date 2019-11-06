@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.columnvisibility.f1
 - "10127"
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf9f11b8b56333dba7c0d2a5066712017ea194cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 246189cf3b49212379c5c87f5600388097a2fb11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109769"
 ---
 # <a name="column-visibility-dialog-box"></a>[列表示] ダイアログ ボックス
   **[列表示]** ダイアログ ボックスでは、選択した列をレポートの初期実行時に表示または非表示にする操作や、別のレポート アイテムを使用して列の表示を切り替える操作を行うことができます。  
@@ -37,7 +36,7 @@ ms.locfileid: "48215262"
  **表示または非表示の式を基に**  
  式を使用して初期表示を変化させます。  
   
- 評価される式を入力、`Boolean`の値`True`アイテムを非表示にして`False`アイテムを表示します。 式を編集するには、式 (*[fx]*) ボタンをクリックします。  
+ アイテムを非表示にする場合は `Boolean`、アイテムを表示する場合は `True` と評価される `False` 値の式を入力します。 式を編集するには、式 ( *[fx]* ) ボタンをクリックします。  
   
  **このレポート アイテムが表示を切り替えることができます。**  
  ユーザーが HTML レポート ビューアーでこのレポート アイテムの表示/非表示を切り替えられるようにする切り替えイメージを表示します。  
@@ -47,7 +46,7 @@ ms.locfileid: "48215262"
 ## <a name="see-also"></a>参照  
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [イメージ&#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [画像 &#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [レポート デザイナーの F1 ヘルプ](tools/report-designer-f1-help.md)  
   
   

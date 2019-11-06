@@ -3,7 +3,6 @@ title: XML データ内部のリレーショナル データのバインド | Mi
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -17,15 +16,14 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 35fb6b6485578defa05c2e54d4797d9994af4225
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051334"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.locfileid: "47713110"
   
  また、このバインドは読み取り専用です。 つまり、これらの関数を使用する列には、データを書き込めません。 たとえば、sql:variable("\@x")="*some expression*" は使用できません。  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>例 : sql:variable() を使用した複数の領域にまたがるクエリ  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>例:sql:variable() を使用した複数の領域にまたがるクエリ  
  次の例では、**sql:variable()** を使用してアプリケーションでクエリをパラメーター化できるようにする方法を示します。 ISBN は、SQL 変数 @isbn を使用して渡されます。 定数を **sql:variable()** に置き換えたことにより、ISBN が 0-7356-1588-2 の書籍だけでなく、どの ISBN でも検索できます。  
   
 ```  

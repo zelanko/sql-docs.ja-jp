@@ -2,8 +2,8 @@
 title: sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3c09c2a1771f1fad8640031ea1c1327921f8c82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e89405e04a06e8171c69b81066be743ee99d4534
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106707"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,27 +26,27 @@ ms.locfileid: "47698240"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|基になるテーブルの ID です。 これは、コンピューティング ノードで、コントロールのノード上の論理のテーブルの object_id いない物理テーブルです。 たとえば、object_id は、sys.tables の object_id と一致しません。<br /><br /> Sys.tables で参加するには、sys.pdw_index_mappings を使用します。|  
+|**object_id**|**int**|基になるテーブルの ID です。 これは、コンピューティング ノードで、コントロールのノードの論理テーブルの object_id いない物理テーブルです。 たとえば、object_id は、sys.tables の object_id は一致しません。<br /><br /> Sys.tables を参加させるのには、sys.pdw_index_mappings を使用します。|  
 |**index_id**|**int**|上のクラスター化列ストア インデックスの ID *object_id*テーブル。|  
 |**partition_number**|**int**|行グループを保持するテーブルのパーティションの ID *row_group_id*します。 使用することができます*partition_number*この DMV を sys.partitions に結合します。|  
-|**row_group_id**|**int**|この行グループの ID です。 この番号はパーティション内で一意です。|  
+|**row_group_id**|**int**|この行グループの ID です。 パーティション内で一意です。|  
 |**dellta_store_hobt_id**|**bigint**|デルタ行グループの hobt_id で、行グループの種類がデルタではない場合は NULL。 デルタ行グループとは、新しいレコードを受け入れる読み取り/書き込み行グループのことです。 デルタ行グループが、**オープン**状態。 デルタ行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。|  
-|**state**|**tinyint**|state_description に関連付けられている ID 番号。<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|行グループの永続的な状態の説明:<br /><br /> OPEN - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED - いっぱいになったが、組ムーバー プロセスによってまだ圧縮されていない行グループ。<br /><br /> COMPRESSED - いっぱいになり、圧縮された行グループ。|  
-|**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 削除された行がまだ格納されていることがあります。 1 つの行グループの最大行数は 1,048,576 (16 進数では FFFFF) です。|  
-|**deleted_rows**|**bigint**|削除対象としてマークされた行グループ内に物理的に格納されている行の数。<br /><br /> 常にデルタの場合は 0 の行グループ。|  
+|**state**|**tinyint**|State_description に関連付けられている ID 番号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state_desccription**|**nvarchar(60)**|行グループの永続的な状態の説明です。<br /><br /> 開く - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> 終了 - いっぱいされましたが、組ムーバー プロセスによってまだ圧縮行グループ。<br /><br /> 圧縮 - いっぱいになり、圧縮行グループ。|  
+|**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 いくつか削除されている可能性がありますが、保存されています。 行グループ内の行の最大数は、1,048, 576 (16 進数は FFFFF) です。|  
+|**deleted_rows**|**bigint**|削除対象としてマークされた行グループに物理的に格納されている行の数。<br /><br /> 常にデルタの場合は 0 では行グループ。|  
 |**size_in_bytes**|**int**|この行グループ内のすべてのページのバイト単位の合計サイズ。 このサイズでは、メタデータと共有辞書の格納に必要なサイズは含まれません。|  
 |**pdw_node_id**|**int**|一意の id、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|  
 |**distribution_id**|**int**|分布の一意の id。|
   
 ## <a name="remarks"></a>コメント  
- クラスター化または非クラスター化列ストア インデックスがある各テーブルの列ストア行グループごとに 1 つの行を返します。  
+ クラスター化または非クラスター化列ストア インデックスを持つ各テーブルの列ストア行グループごとに 1 つの行を返します。  
   
  使用**sys.pdw_nodes_column_store_row_groups**行グループおよび行グループのサイズに含まれる行の数を決定します。  
   
  行グループ内の削除済みの行の数が合計行数に対して占める割合が高くなると、テーブルの効率が低下します。 テーブルのサイズが小さくなるよう列ストア インデックスを再構築して、テーブルを読み取るために必要なディスク I/O を削減します。 使用して列ストア インデックスを再構築する、**リビルド**のオプション、 **ALTER INDEX**ステートメント。  
   
- 更新可能な列ストアが最初に新しいデータを挿入、**オープン**行グループは行ストア形式であり、デルタ テーブルと呼ばれるをこともできます。  Open の行グループがいっぱいの状態に変わります**CLOSED**します。 Closed 行グループが、組ムーバーによって列ストア形式に圧縮され、状態が**圧縮**します。  組ムーバーは、定期的に起動され、列ストア行グループに圧縮する準備ができている CLOSED 状態の行グループがあるかどうかを確認するバックグラウンド プロセスです。  また、組ムーバーは、すべての行が削除された行グループの割り当てを解除します。 行グループの割り当て解除のマーク**廃止**します。 組ムーバーを直ちに実行するを使用して、 **REORGANIZE**のオプション、 **ALTER INDEX**ステートメント。  
+ 更新可能な列ストアが最初に新しいデータを挿入、**オープン**行グループは行ストア形式であり、デルタ テーブルと呼ばれるをこともできます。  Open の行グループがいっぱいの状態に変わります**CLOSED**します。 Closed 行グループが、組ムーバーによって列ストア形式に圧縮され、状態が**圧縮**します。  組ムーバーは、バック グラウンド プロセスに定期的にアクティブになり、列ストア行グループに圧縮することができるすべての closed 行グループがあるかどうかを確認します。  また、組ムーバーは、すべての行が削除された行グループの割り当てを解除します。 行グループの割り当て解除のマーク**廃止**します。 組ムーバーを直ちに実行するを使用して、 **REORGANIZE**のオプション、 **ALTER INDEX**ステートメント。  
   
  列ストア行グループは、いっぱいになると圧縮され、新しい行の受け入れを停止します。 圧縮されたグループから行が削除されると、削除された行は、保持されますが、削除済みとしてマークされます。 圧縮されたグループに対する更新は、圧縮されたグループからの削除、および OPEN 状態のグループへの挿入として実装されます。  
   
@@ -105,8 +104,8 @@ GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>参照  
- [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+## <a name="see-also"></a>関連項目  
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [列ストア インデックスを作成&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  

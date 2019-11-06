@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 205471b262ae041858db72c5db8d9c603eb716b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 4a5c71344fe45df4265db72e9fd6dc41ac13bd98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108288"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>[中心とズーム] ([マップ ビューポートのプロパティ] ダイアログ ボックス)
-  **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[中心とズーム]** を選択すると、マップの中心ビューおよび拡大 (縮小) 率を設定できます。 マップのデータ ソースとレポートに含めるマップの境界を指定した後は、ビューの中心および拡大 (縮小) 率を指定して、さらにマップ表示を制御できます。 中心とズーム値の指定方法により、使用できるオプションも異なります。 **式** (*[fx]*) ボタンをクリックし、オプションの値を設定する式を編集します。  
+  **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[中心とズーム]** を選択すると、マップの中心ビューおよび拡大 (縮小) 率を設定できます。 マップのデータ ソースとレポートに含めるマップの境界を指定した後は、ビューの中心および拡大 (縮小) 率を指定して、さらにマップ表示を制御できます。 中心とズーム値の指定方法により、使用できるオプションも異なります。 **式** ( *[fx]* ) ボタンをクリックし、オプションの値を設定する式を編集します。  
   
 ## <a name="options"></a>および  
  **設定のビューの中心およびズーム レベル**  
@@ -61,7 +60,7 @@ ms.locfileid: "48072032"
   
  データ型が異なるフィールドを対応付けるには、このデータ型に評価される式を記述する必要があります。 たとえば、整数として格納されている 5 桁の郵便番号が対応フィールドである場合、郵便番号 98053 を指定するには、=98053 という式を使用する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マップ (レポート ビルダーおよび SSRS)](report-design/maps-report-builder-and-ssrs.md)  
   
   

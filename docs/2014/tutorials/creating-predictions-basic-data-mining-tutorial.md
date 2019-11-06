@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206532"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597527"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>予測の作成 (基本的なデータ マイニング チュートリアル)
   予測クエリ ビルダーを使用して予測を生成できますし、マイニング モデルの精度をテストし、結果に満足していることにしましたが後、**マイニング モデル予測**データ マイニング モデル タブデザイナー。  
@@ -97,7 +96,7 @@ ms.locfileid: "48206532"
   
      これにより、`PredictProbability` 関数の対象列を指定します。 関数の詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)します。  
   
-5.  次の空白行をクリックして、**ソース**列、および TM_Decision_Tree マイニング モデル**します。**  
+5.  次の空白行をクリックして、**ソース**列、および選択**TM_Decision_Tree**マイニング モデルです。  
   
 6.  `TM_Decision_Tree`行の**フィールド**列で、`Bike Buyer`します。  
   
@@ -157,7 +156,7 @@ ms.locfileid: "48206532"
   
         2.  クエリの結果が保存されるテーブルの名前を入力します。  
   
-        3.  オプションを使用**DSV に追加**テーブルを作成すると、既存のデータ ソース ビューに追加します。 これは、モデルのすべての関連テーブル (トレーニング データ、予測ソース データ、クエリ結果など) を同じデータ ソース ビューで保持する場合に便利です。  
+        3.  オプションを使用**DSV に追加**テーブルを作成すると、既存のデータ ソース ビューに追加します。 これは、すべての関連テーブルを保持する場合、モデルなどのトレーニング データ、予測ソース データ、およびクエリ結果で、同じデータ ソース ビューに便利です。  
   
         4.  オプションを使用**場合は上書きが存在する**、最新の結果で、既存のテーブルを更新します。  
   

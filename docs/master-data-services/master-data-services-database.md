@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 52a1f24801a33520baa7efcedc350c6ca1219d47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 159ab8c79be2cd27dba4db060b43a0e6b95290d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062739"
 ---
 # <a name="master-data-services-database"></a>マスター データ サービス データベース
 
@@ -48,9 +46,9 @@ ms.locfileid: "47786586"
   
 -   [ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービス データベースの作成](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [データベース オブジェクト セキュリティ &#40;マスター データ サービス&#41;](../master-data-services/database-object-security-master-data-services.md)   
+ [データベース オブジェクト セキュリティ (マスター データ サービス)](../master-data-services/database-object-security-master-data-services.md)   
  [データベース ログイン、ユーザー、およびロール &#40;マスター データ サービス&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

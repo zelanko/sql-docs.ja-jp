@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c396e1faf5084eb7e9e465aff5a6f2d098ca7dec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662246"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered イベント クラス
   Object:Altered イベント クラスは、ALTER INDEX、ALTER TABLE、ALTER DATABASE などのステートメントによって、オブジェクトが変更されたことを示します。 このイベント クラスは、たとえば、頻繁に一時ストアド プロシージャを作成する ODBC アプリケーションによって、オブジェクトが変更されているかどうかを判断するために使用できます。  
@@ -58,7 +57,7 @@ ms.locfileid: "48115792"
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
+|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|[はい]|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
 ## <a name="see-also"></a>参照  

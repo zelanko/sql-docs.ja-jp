@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 69f989fd4714aaafed94f1b8a9fb3ad077cc7cf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105097"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>レポート デザインに関するヒント (レポート ビルダーおよび SSRS)
   ここでは、レポートをデザインする際のヒントを紹介します。  
@@ -40,7 +39,7 @@ ms.locfileid: "48065722"
   
 -   Tablix セルまたは四角形内の入れ子になったアイテムを操作する場合、コンテナーやそこに含まれているアイテムに対して異なる背景色を設定することができます。 既定の背景色は **[色なし]** です。 特定の背景色のアイテムは、背景色が **[色なし]** に設定されたアイテムを透過して見えます。 Tablix セル上の境界線を表示するかどうかなどの表示プロパティを設定する際は、この方法を利用すると、対象となるアイテムを的確に選択することができます。  
   
- レポートを設計する際の考慮事項の詳細については、「[レポートの計画 &#40レポート ビルダー&#41;](planning-a-report-report-builder.md)」を参照してください。  
+ レポートを設計する際の考慮事項の詳細については、「[レポートの計画 &#40;レポート ビルダー&#41;](planning-a-report-report-builder.md)」を参照してください。  
   
 ##  <a name="NamingConventions"></a> レポート、データ ソース、およびデータセットの名前付け規則  
   

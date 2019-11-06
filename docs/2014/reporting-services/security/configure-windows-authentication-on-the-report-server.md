@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0ce020f0d3df8b91591daf083748f909edbb1e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102131"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、既定では、ネゴシエート認証または NTLM 認証を指定する要求を受け入れます。 これらのセキュリティ プロバイダーを使用するクライアント アプリケーションおよびブラウザーが配置に含まれている場合は、追加の構成なしで既定値を使用できます。 Windows 統合セキュリティの別のセキュリティ プロバイダーを使用する場合 (たとえば Kerberos を直接使用する場合)、または既定値を変更した後に元の設定を復元する場合は、このトピックの情報を使用して、レポート サーバーで認証設定を指定できます。  
@@ -28,10 +27,10 @@ ms.locfileid: "48116350"
   
  次の追加要件も満たす必要があります。  
   
--   RSeportServer.config ファイルが必要`AuthenticationType`設定`RSWindowsNegotiate`、 `RSWindowsKerberos`、または`RSWindowsNTLM`します。 レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合、RSReportServer.config ファイルには、既定で `RSWindowsNegotiate` 設定が含まれます。それ以外の場合は、`RSWindowsNTLM` 設定が使用されます。 Kerberos 認証のみを使用するアプリケーションがある場合は、`RSWindowsKerberos` を追加できます。  
+-   RSReportServer.config ファイルの `AuthenticationType` が、`RSWindowsNegotiate`、`RSWindowsKerberos`、または `RSWindowsNTLM` に設定されている必要があります。 レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合、RSReportServer.config ファイルには、既定で `RSWindowsNegotiate` 設定が含まれます。それ以外の場合は、`RSWindowsNTLM` 設定が使用されます。 Kerberos 認証のみを使用するアプリケーションがある場合は、`RSWindowsKerberos` を追加できます。  
   
     > [!IMPORTANT]  
-    >  使用して`RSWindowsNegotiate`場合、レポート サーバー サービスをドメイン ユーザー アカウントで実行するように構成して、アカウントのサービス プリンシパル名 (SPN) を登録できませんでした、Kerberos 認証エラーが発生します。 詳細については、このトピックの「 [レポート サーバー接続時の Kerberos 認証エラーの解決](#proxyfirewallRSWindowsNegotiate) 」を参照してください。  
+    >  レポート サーバー サービスをドメイン ユーザー アカウントで実行するように構成し、かつそのアカウントのサービス プリンシパル名 (SPN) を登録していない場合は、`RSWindowsNegotiate` を使用すると Kerberos 認証エラーが発生します。 詳細については、このトピックの「 [レポート サーバー接続時の Kerberos 認証エラーの解決](#proxyfirewallRSWindowsNegotiate) 」を参照してください。  
   
 -   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] で Windows 認証を構成する必要があります。 既定では、レポート サーバー Web サービスとレポート マネージャーの Web.config ファイルが含まれて、\<認証モード ="Windows"> 設定します。 この設定を \<authentication mode="Forms"> に変更すると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Windows 認証が失敗します。  
   
@@ -41,12 +40,12 @@ ms.locfileid: "48116350"
   
  レポート サーバーの認証設定を変更するには、RSReportServer.config ファイルの XML 要素と値を編集する必要があります。 特定の組み合わせを実装するために、このトピックの例をコピーして貼り付けることもできます。  
   
- 既定の設定は、すべてのクライアント コンピューターとサーバー コンピューターが同じドメインまたは信頼されているドメインにあり、かつレポート サーバーがイントラネット アクセス用に企業のファイアウォールの内側に配置されている場合に最も適しています。 Windows 資格情報を渡すには、ドメインが信頼されていて単一であることが必要です。 サーバーで Kerberos Version 5 プロトコルを有効にした場合は、資格情報を複数回渡すことができます。 それ以外の場合は、資格情報をその有効期限が切れる前に 1 回だけ渡すことができます。 複数のコンピューター接続の資格情報を構成する方法の詳細については、次を参照してください。[資格情報の指定とレポート データ ソースに関する接続情報](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)します。  
+ 既定の設定は、すべてのクライアント コンピューターとサーバー コンピューターが同じドメインまたは信頼されているドメインにあり、かつレポート サーバーがイントラネット アクセス用に企業のファイアウォールの内側に配置されている場合に最も適しています。 Windows 資格情報を渡すには、ドメインが信頼されていて単一であることが必要です。 サーバーで Kerberos Version 5 プロトコルを有効にした場合は、資格情報を複数回渡すことができます。 それ以外の場合は、資格情報をその有効期限が切れる前に 1 回だけ渡すことができます。 複数のコンピューター接続に対する資格情報の構成の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
  次に示す手順は、ネイティブ モードのレポート サーバーを対象としています。 レポート サーバーを SharePoint 統合モードで配置する場合は、Windows 統合セキュリティを指定する既定の認証設定を使用する必要があります。 レポート サーバーでは、既定の Windows 認証拡張機能の内部機能を使用して、SharePoint 統合モードのレポート サーバーがサポートされます。  
   
 ## <a name="extended-protection-for-authentication"></a>認証の拡張保護 (Extended Protection for Authentication)  
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]以降では、認証の拡張保護がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能により、認証の拡張保護に対するチャネル バインドとサービス バインドの使用がサポートされます。 この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能は、拡張保護がサポートされているオペレーティング システムで使用する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護に対する構成は、RSReportServer.config ファイルの設定によって決まります。 このファイルは、ファイルを編集するか WMI API を使用して更新できます。 詳細については、次を参照してください。 [Authentication with Reporting Services の拡張保護](extended-protection-for-authentication-with-reporting-services.md)します。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]以降では、認証の拡張保護がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能により、認証の拡張保護に対するチャネル バインドとサービス バインドの使用がサポートされます。 この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能は、拡張保護がサポートされているオペレーティング システムで使用する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護に対する構成は、RSReportServer.config ファイルの設定によって決まります。 このファイルは、ファイルを編集するか WMI API を使用して更新できます。 詳細については、「 [Reporting Services での認証の拡張保護](extended-protection-for-authentication-with-reporting-services.md)」をご覧ください。  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>レポート サーバーを構成して Windows 統合セキュリティを使用するには  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48116350"
   
 2.  検索 <`Authentication`>。  
   
-3.  次に示す XML 構造の中でニーズに最も合うものをコピーします。 指定できる`RSWindowsNegotiate`、 `RSWindowsNTLM`、および`RSWindowsKerberos`任意の順序で。 個々の要求ではなく接続を認証する場合は、認証の永続化を有効にする必要があります。 認証の永続化を有効にすると、接続が続いている間は、認証を必要とするすべての要求が許可されます。  
+3.  次に示す XML 構造の中でニーズに最も合うものをコピーします。 `RSWindowsNegotiate`、`RSWindowsNTLM`、および `RSWindowsKerberos` は、任意の順序で指定できます。 個々の要求ではなく接続を認証する場合は、認証の永続化を有効にする必要があります。 認証の永続化を有効にすると、接続が続いている間は、認証を必要とするすべての要求が許可されます。  
   
      1 番目の XML 構造は、レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合の既定の構成です。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "48116350"
   
 8.  レポート サーバーを再起動して、現在開いているセッションを消去します。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolving Kerberos Authentication Errors When Connecting to a Report Server  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a> レポート サーバーに接続するときに、Kerberos 認証エラーを解決します。  
  ネゴシエート認証または Kerberos 認証が構成されているレポート サーバーでは、Kerberos 認証エラーが発生すると、レポート サーバーへのクライアント接続が失敗します。 Kerberos 認証エラーは、次の場合に発生します。  
   
 -   サービス プリンシパル名 (SPN) を登録していない Windows ドメイン ユーザー アカウントでレポート サーバー サービスが実行されたとき。  
@@ -133,7 +132,7 @@ ms.locfileid: "48116350"
   
 -   ネットワーク サービスなどのビルトイン アカウントで実行されるように、サービス アカウントを変更します。 ビルトイン アカウントは、HTTP SPN を Host SPN にマップします。これは、コンピューターをネットワークに追加するときに定義されます。 詳細については、「[サービス アカウントの構成 (SSRS 構成マネージャー)](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
--   NTLM を使用します。 NTLM は一般に、Kerberos 認証が失敗した場合に機能します。 NTLM を使用するには削除`RSWindowsNegotiate`、RSReportServer.config ファイルから、だけであることを確認および`RSWindowsNTLM`を指定します。 この方法を選択すれば、SPN を定義していないドメイン ユーザー アカウントでも、引き続きレポート サーバー サービスに使用できます。  
+-   NTLM を使用します。 NTLM は一般に、Kerberos 認証が失敗した場合に機能します。 NTLM を使用するには、RSReportServer.config ファイルから `RSWindowsNegotiate` を削除し、`RSWindowsNTLM` のみが指定されていることを確認します。 この方法を選択すれば、SPN を定義していないドメイン ユーザー アカウントでも、引き続きレポート サーバー サービスに使用できます。  
   
 #### <a name="logging-information"></a>ログ情報  
  ログ情報に、Kerberos 関連の問題の解決に役立つものがいくつかあります。  
@@ -149,12 +148,12 @@ ms.locfileid: "48116350"
   
 -   10 進値を 16 進形式に変換する 1 つの方法として、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の電卓を使用することができます。 Windows の電卓では、[10 進] オプションと [16 進] オプションを表示するいくつかのモードがサポートされています。 [10 進] オプションを選択し、ログ ファイルで見つけた 10 進値を貼り付けるか入力して、[16 進] オプションを選択します。  
   
--   次に、「 [User-Account-Control 属性](http://go.microsoft.com/fwlink/?LinkId=183366) 」を参照して、サービス アカウントの属性を取得します。  
+-   次に、「 [User-Account-Control 属性](https://go.microsoft.com/fwlink/?LinkId=183366) 」を参照して、サービス アカウントの属性を取得します。  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Reporting Services サービス アカウントに対して Active Directory で構成された SPN  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスのトレース ログ ファイルに SPN が記録されるようにするために、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を一時的に有効にすることができます。  
   
--   構成ファイルを変更`rsreportserver.config`によって、次を設定します。  
+-   構成ファイル `rsreportserver.config` を次のように設定して変更します。  
   
     ```  
     <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>   
@@ -176,7 +175,7 @@ ms.locfileid: "48116350"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- 詳細については、「 [Authentication with Reporting Services の拡張保護](extended-protection-for-authentication-with-reporting-services.md)  
+ 詳細については、「 [Reporting Services での認証の拡張保護](extended-protection-for-authentication-with-reporting-services.md)」をご覧ください。  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>ネゴシエートされた Kerberos またはネゴシエートされた NTLM がブラウザーで選択されるしくみ  
  Internet Explorer を使用してレポート サーバーに接続すると、認証ヘッダーでネゴシエートされた Kerberos または NTLM が指定されます。 次の場合は、Kerberos に代わって NTLM が使用されます。  
@@ -203,13 +202,13 @@ ms.locfileid: "48116350"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   Kerberos とレポート サーバーの詳細については、 [SharePoint、Reporting Services、PerformancePoint Monitoring Server と Kerberos を使用したビジネス インテリジェンス ソリューションの展開](http://go.microsoft.com/fwlink/?LinkID=177751)に関する記事を参照してください。  
+-   Kerberos とレポート サーバーの詳細については、 [SharePoint、Reporting Services、PerformancePoint Monitoring Server と Kerberos を使用したビジネス インテリジェンス ソリューションの展開](https://go.microsoft.com/fwlink/?LinkID=177751)に関する記事を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバーでの認証](authentication-with-the-report-server.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
- [レポート サーバーで基本認証を構成します。](configure-basic-authentication-on-the-report-server.md)   
+ [レポート サーバーで基本認証を構成する](configure-basic-authentication-on-the-report-server.md)   
  [レポート サーバーでカスタム認証またはフォーム認証を構成する](configure-custom-or-forms-authentication-on-the-report-server.md)   
  [Reporting Services での認証の拡張保護](extended-protection-for-authentication-with-reporting-services.md)  
   

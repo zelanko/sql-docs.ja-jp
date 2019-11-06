@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -20,12 +19,12 @@ ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 856da25d126c93a370c7d028106df75124f5ec72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9d3dd4e9da0445f966e9e46013f0b7cd4998190
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083936"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、 *HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。  
@@ -47,25 +46,25 @@ ms.locfileid: "48094282"
 ### <a name="scoring-inputs"></a>入力のスコアリング  
  ニューラル ネットワーク モデルまたはロジスティック回帰モデルのコンテキストにおける "*スコアリング* " とは、データに存在する値を同じ尺度を使用する値のセットに変換して相互に比較できるようにするプロセスを意味します。 たとえば、Income に対する入力の範囲が 0 ～ 100,000 であるのに対し、[Number of Children] に対する入力の範囲は 0 ～ 5 であるとします。 この変換プロセスを使用する*スコア*、または値の違いに関係なく、各入力の重要性を比較します。  
   
- トレーニング セットに表示されている状態ごとに、モデルは 1 つの入力を生成します。 不連続な入力または分離された入力の場合、Missing 状態がトレーニング セットに 1 回以上表示されると、Missing 状態を表す追加の入力が作成されます。 連続する入力では、最大 2 つの入力ノードが作成されます。1 つはトレーニング データに存在する場合の Missing 値用の入力ノードで、もう 1 つはすべての既存の値 (Null 以外の値) 用の入力ノードです。 各入力は (x – μ)、z スコア正規化法を使用して数値の書式にスケーリング/StdDev します。  
+ トレーニング セットに表示されている状態ごとに、モデルは 1 つの入力を生成します。 不連続な入力または分離された入力の場合、Missing 状態がトレーニング セットに 1 回以上表示されると、Missing 状態を表す追加の入力が作成されます。 連続する入力では、最大 2 つの入力ノードが作成されます。1 つはトレーニング データに存在する場合の Missing 値用の入力ノードで、もう 1 つはすべての既存の値 (Null 以外の値) 用の入力ノードです。 各入力は (μ) x、z スコア正規化法を使用して数値の書式にスケーリング/StdDev します。  
   
  z スコア正規化中に、トレーニング セット全体の平均 (μ) と標準偏差が取得されます。  
   
  **連続値**  
   
- 値が存在する (X – μ)/σ//X はエンコードされている実際の値)。  
+ 値が存在します。 (X-μ)/σ//X はエンコードされている実際の値)  
   
  値が存在しません - μ/σ//負のミューをシグマで除算)。  
   
  **不連続値**  
   
- Μ = p – (状態の前の確率)  
+ Μ = p - (状態の前の確率)  
   
- StdDev sqrt(p(1-p)) を =  
+ StdDev  = sqrt(p(1-p))  
   
- 値が存在する (1 日 ~ μ)/σ シグマで除算 (1 つからミューを引いた)/)。  
+ 値が存在します。   (1-μ)/σ//(からミューを引いたもの) をシグマで除算)  
   
- 値が存在しない (– μ)/σ/負のミューをシグマで除算)。  
+ 値が存在しない (-μ)/σ/負のミューをシグマで除算)。  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>ロジスティック回帰係数について  
  統計学の文献にはロジスティック回帰を実行するためのさまざまな方法が記されていますが、どの方法でも重要なのはモデルの適合性を評価する部分です。 適合度統計の中でも、オッズ比と共変量パターンを扱うものについて、さまざまな提案がなされています。 モデルの適合性を測定する方法についてはこのトピックでは扱いませんが、モデルの係数の値を取得し、それらの係数を使用して独自に適合性の測定方法を設計できます。  
@@ -83,9 +82,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- このクエリは、出力値ごとに、係数と、関連の入力ノードを指す ID を返します。 また、出力と切片の値を含む行も返します。 各入力 X には独自の係数 (Ci) が含まれますが、入れ子になったテーブルには、次の式に従って計算された "空き" 係数 (Co) も含まれます。  
+ このクエリは、出力値ごとに、係数と、関連の入力ノードを指す ID を返します。 また、出力と切片の値を含む行も返します。 各入力 X が独自の係数 (Ci) が、入れ子になったテーブルには、次の式に従って計算された「空き」係数 (Co) も含まれています。  
   
- F (X) = X1 * C1 + X2\*C2 +. + Xn\*Cn + X0  
+ F (x) = X1 * C1 + X2\*C2 + + Xn\*Cn + X0  
   
  アクティブ化: exp(F(X)) / (1 + exp(F(X)) )  
   
@@ -138,11 +137,11 @@ WHERE NODE_TYPE = 23
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 2 つの状態を持つものとして扱わ列があることを示します:`Missing`と`Existing`します。 NULL は Missing 値になります。  
+ 列が、`Missing` および `Existing` の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。  
   
  マイニング モデル列に適用されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ロジスティック回帰モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
@@ -156,7 +155,7 @@ WHERE NODE_TYPE = 23
 ## <a name="see-also"></a>参照  
  [Microsoft ロジスティック回帰アルゴリズム](microsoft-logistic-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)   
- [ロジスティック回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft ニューラル ネットワーク アルゴリズム](microsoft-neural-network-algorithm.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - group collapsing [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f6b11b045e729e0f567bb4714b9a551706f7057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670485"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>行グループの集約 (Visual Database Tools)
   基になるデータの行グループ全体に結果の各行が対応するようなクエリ結果を作成することができます。 行を集約するときは、次の点に注意してください。  

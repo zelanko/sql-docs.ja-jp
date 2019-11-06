@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2544b53b1fabc94a8ab0801141349d5da7f891c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067494"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>階層の作成および管理 (SSAS テーブル)
   階層の作成と管理はダイアグラム ビューのモデル デザイナーで行うことができます。 モデル デザイナーをダイアグラム ビューに表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
@@ -42,7 +41,7 @@ ms.locfileid: "48149632"
   
 2.  階層の名前を入力します。  
   
- 追加する列を階層の親レベルにドラッグすると、列はコピーされます。 子レベルを階層内の目的の場所にドロップします。  
+ 階層の親レベル、列をコピーするには、追加の列をドラッグできます。 子レベルを階層内の目的の場所にドロップします。  
   
 > [!NOTE]  
 >  1 つ以上の列と共に 1 つのメジャーを複数選択するか、または複数のテーブルから複数の列を選択した場合、ショートカット メニューの [階層の作成] コマンドは無効になります。  
@@ -96,7 +95,7 @@ ms.locfileid: "48149632"
   
 ## <a name="see-also"></a>参照  
  [テーブル モデル デザイナー &#40;SSAS 表形式&#41;](../tabular-model-designer-ssas-tabular.md)   
- [階層&#40;SSAS 表形式&#41;](hierarchies-ssas-tabular.md)   
- [メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)  
+ [階層 &#40;SSAS テーブル&#41;](hierarchies-ssas-tabular.md)   
+ [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)  
   
   

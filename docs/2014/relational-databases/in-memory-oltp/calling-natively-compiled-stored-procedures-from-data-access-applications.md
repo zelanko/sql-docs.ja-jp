@@ -10,12 +10,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63156835"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
   このトピックでは、データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出しに関するガイダンスを示します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48143794"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で ODBC ドライバーを使用したネイティブ コンパイル ストアド プロシージャの呼び出しに関して、次の推奨事項が適用されます。  
   
- ストアド プロシージャを 1 回呼び出すを最も効率的な方法は、RPC 呼び出しを使用して直接発行する、`SQLExecDirect`と ODBC CALL 句。 使用しないでください、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`ステートメント。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。  
+ 1 回だけストアド プロシージャを呼び出すのに最も効率的な方法は、`SQLExecDirect` と ODBC CALL 句を使用して直接 RPC を呼び出す方法です。 使用しないでください、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`ステートメント。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを複数回呼び出すのに最も効率的な方法は、準備された RPC プロシージャ呼び出しを使用する方法です。 準備された RPC 呼び出しは、次のように、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーを使用して実行されます。  
   
@@ -61,7 +61,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  メモリ最適化データ ファイル グループが含まれるサンプル データベースを作成します。 メモリ最適化データ ファイルグループが含まれるデータベースを作成する方法については、「 [メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。  
   
-2.  データベースを参照する PrepExecSample という ODBC データ ソースを作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーを使用します。 また、サンプルを変更して [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)を使用できます。  
+2.  データベースを参照する PrepExecSample という ODBC データ ソースを作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーを使用します。 また、サンプルを変更して [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)を使用できます。  
   
 3.  サンプル データベースに [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプト (下記) を実行します。  
   

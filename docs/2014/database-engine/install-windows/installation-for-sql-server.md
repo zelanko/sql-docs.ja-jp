@@ -16,15 +16,15 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48bfd8ddc0a7e68bc2747543f5e079f24041c20a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: e5a7e72b429789477a9ae1245be30b18965560ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018167"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775365"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 のインストール
- ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express をダウンロードします。 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[SQL Server 2014 Express をダウンロードします。](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **よろしくお願いする[Scott Hanselman](http://www.hanselman.com/)すべてのインストーラー パッケージ リンクを 1 か所に収集するためです。**
   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの 1 つの機能ツリーから、次のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできます。  
@@ -49,7 +49,7 @@ ms.locfileid: "51018167"
  
  **お試しください:**  
   
--   Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。  
+-   Azure アカウントをすでにお持ちですか?  やがて **[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用する場合でも、コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする場合でも、セットアップ時には以下の手順を実行する必要があります。  

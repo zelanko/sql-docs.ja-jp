@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -16,12 +16,12 @@ ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68197c2fa00cd6853e719a1304be5863144ec9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068561"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63031973"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>結果の挿入クエリの作成 (Visual Database Tools)
   結果の挿入クエリを使用すると、テーブル間またはテーブル内で行をコピーできます。 たとえば、 `titles` テーブルで結果の挿入クエリを使用すると、特定の出版社のすべての書名に関する情報を別のテーブルにコピーして、その出版社に提供できます。 結果の挿入クエリは、テーブルの作成と似ていますが、既存のテーブルに行をコピーする点が異なります。  
@@ -84,7 +84,7 @@ WHERE (pub_id = '0766')
   
 6.  特定の順序で行をコピーする場合は、並べ替え順序を指定します。 詳細については、「[クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](sort-and-group-query-results-visual-database-tools.md)」を参照してください。  
   
-7.  コピーする行を指定するために、**[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)」を参照してください。  
+7.  コピーする行を指定するために、 **[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)」を参照してください。  
   
      検索条件を指定しなかった場合は、コピー元テーブルのすべての行がコピー先テーブルにコピーされます。  
   

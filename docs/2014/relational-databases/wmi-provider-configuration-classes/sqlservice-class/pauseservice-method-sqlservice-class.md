@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - PauseService Method (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3df00ce72ce30e99c5c572ebdac2d66559865a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4b9667f9d0018920885d4fdf7e5fce3b5a47311
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154953"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061840"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService メソッド (SqlService クラス)
   サービスを一時停止状態にする動作を試行します。  
@@ -49,6 +47,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

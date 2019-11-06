@@ -13,12 +13,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d83dcaf8ea6f674ae1086d2d02f9423a3bb98358
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053425"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033660"
 ---
 # <a name="update-statistics"></a>統計の更新
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のテーブルまたはインデックス付きビューについての、クエリの最適化に関する統計を更新します。 既定では、統計はクエリ プランを改善するためにクエリ オプティマイザーによって必要に応じて更新されますが、UPDATE STATISTICS またはストアド プロシージャ `sp_updatestats` を使用して既定の更新より頻繁に統計を更新することでクエリのパフォーマンスを向上させることができる場合もあります。  
@@ -37,7 +37,7 @@ ms.locfileid: "48053425"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48053425"
   
 5.  更新する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  *[統計のプロパティ - <統計名>]* ダイアログ ボックスで **[この列の統計を更新する]** チェック ボックスをオンにし、**[OK]** をクリックします。  
+6.  **統計のプロパティ -** _statistics_name_ダイアログ ボックスで、**これらの列の統計を更新**チェック ボックスをオンにして **[ok]** .  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

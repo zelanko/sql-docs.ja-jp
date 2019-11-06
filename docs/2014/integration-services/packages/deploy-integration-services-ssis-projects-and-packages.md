@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9648e78567bbddf9209c53923cfe6c12d046d1a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890255"
 ---
 # <a name="deployment-of-projects-and-packages"></a>プロジェクトとパッケージの展開
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルとパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「[Integration Services サーバーへのプロジェクトの配置](../deploy-projects-to-integration-services-server.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「 [Integration Services サーバーへのプロジェクトの配置](../deploy-projects-to-integration-services-server.md)」を参照してください。  
   
  パッケージ配置モデルの詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](legacy-package-deployment-ssis.md)します。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48200902"
 |データベース エンジンでは CLR 統合が必要です。|データベース エンジンでは CLR 統合は不要です。|  
 |環境固有のパラメーター値は、環境変数に格納されます。|環境固有の構成値は、構成ファイルに格納されます。|  
 |カタログ内のプロジェクトとパッケージは、実行前にサーバー上で検証できます。 SQL Server Management Studio、ストアド プロシージャ、またはマネージド コードを使用して検証を実行できます。|パッケージは実行の直前に検証されます。 dtExec またはマネージド コードを使用してパッケージを検証することもできます。|  
-|パッケージは、データベース エンジンで実行を開始することで実行されます。 プロジェクト識別子、明示的なパラメーター値 (オプション)、および環境参照 (オプション) は、開始前に実行に割り当てられます。<br /><br /> `dtExec` を使用してパッケージを実行することもできます。|使用してパッケージを実行、`dtExec`と`DTExecUI`ユーティリティを実行します。 適切な構成が、コマンド プロンプトの引数で指定されます (オプション)。|  
+|パッケージは、データベース エンジンで実行を開始することで実行されます。 プロジェクト識別子、明示的なパラメーター値 (オプション)、および環境参照 (オプション) は、開始前に実行に割り当てられます。<br /><br /> `dtExec` を使用してパッケージを実行することもできます。|パッケージは、`dtExec` および `DTExecUI` 実行ユーティリティを使用して実行されます。 適切な構成が、コマンド プロンプトの引数で指定されます (オプション)。|  
 |実行時に、パッケージによって生成されたイベントが自動的にキャプチャされ、カタログに保存されます。 Transact-SQL ビューを使用して、これらのイベントに対してクエリを実行できます。|実行時に、パッケージによって生成されたイベントは自動的にキャプチャされません。 イベントをキャプチャするには、パッケージにログ プロバイダーを追加する必要があります。|  
 |パッケージは、個別の Windows プロセスで実行されます。|パッケージは、個別の Windows プロセスで実行されます。|  
 |SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|  
@@ -61,7 +60,7 @@ ms.locfileid: "48200902"
 -   [Integration Services サーバーへのプロジェクトの配置](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- mattmasson.com のブログ「 [SSIS プロジェクトの分岐方法について](http://go.microsoft.com/fwlink/?LinkId=245739)」  
+ mattmasson.com のブログ「 [SSIS プロジェクトの分岐方法について](https://go.microsoft.com/fwlink/?LinkId=245739)」  
   
 ## <a name="see-also"></a>参照  
  [dtexec ユーティリティ](dtexec-utility.md)  

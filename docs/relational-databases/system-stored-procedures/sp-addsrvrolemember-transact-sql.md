@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb3c0d60d5c20651e525d573f8367f1aff4824f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022418"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @loginame **=** ] **'***ログイン***'**  
- 固定サーバー ロールに追加するログインの名前を指定します。 *ログイン*は**sysname**、既定値はありません。 *ログイン*できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
+ [ @loginame **=** ] **'** _ログイン_ **'**  
+ ログインの名前は、固定サーバー ロールに追加されているされます。 *ログイン*は**sysname**、既定値はありません。 *ログイン*できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
   
- [ @rolename **=** ] **'***ロール***'**  
- ログインを追加する固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は null の場合、値は次のいずれかを指定する必要があります。  
+ [ @rolename **=** ] **'** _ロール_ **'**  
+ ログインを追加する固定サーバー ロールの名前です。 *ロール*は**sysname**、既定値は null の場合、値は次のいずれかを指定する必要があります。  
   
 -   sysadmin  
   
@@ -72,11 +71,11 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="remarks"></a>コメント  
  ログインを固定サーバー ロールに追加すると、そのロールに関係付けられている権限がログインに与えられます。  
   
- Sa ログインのあること、およびパブリックのロールのメンバーシップを変更することはできません。  
+ パブリックにして、sa ログインのロールのメンバーシップを変更できません。  
   
- Sp_addrolemember を使用して、メンバー、固定データベース ロールまたはユーザー定義ロールを追加します。  
+ Sp_addrolemember を使用して、固定データベースまたはユーザー定義のロールにメンバーを追加します。  
   
- ログインは、ユーザー定義のトランザクション内で実行できません。  
+ sp_addsrvrolemember は、ユーザー定義のトランザクション内で実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  新しいメンバーを追加するロールのメンバーシップが必要です。  
@@ -89,7 +88,7 @@ EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

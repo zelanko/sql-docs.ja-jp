@@ -5,21 +5,20 @@ ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store object
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9da34a3bcf208e433b62a29a34b8cd87e5269cbe
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 08cc5200801b99442c8973583f4ab7caa9ea9fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140727"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, クエリ ストア オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
@@ -14,18 +13,18 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1368cc570439259b7353f074ba1ecfe2744f006d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf35412efc66e971332b97ac2a0d77725a1d0cd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090628"
 ---
 # <a name="code-outlining"></a>コードのアウトライン表示
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターのアウトライン機能を使用して、クエリの編集時にコードを選択して非表示にすることができます。 これにより、特に大きなクエリ ファイルでは、作業中のコードを見やすくすることができます。  
   
 ## <a name="outlining-overview"></a>アウトラインの概要  
- 既定では、クエリ エディター ウィンドウを開くとすべてのコードが表示されます。 コード領域は折りたたんで非表示にすることができます。 エディター ウィンドウの左端にある垂直線では負符号 (-) の付いた正方形を使用して、折りたたむことができるコード領域の先頭をそれぞれ識別します。 負符号をクリックすると、コード領域のテキストが 3 つのピリオド ( ) の付いたボックスに置き換わり、負符号が正符号 (+) に変わります。 正符号をクリックすると、折りたたまれていたコードが表示され、正符号が負符号に変わります。 ポインターを 3 つのピリオドの付いたボックス上に移動すると、折りたたまれているセクションのコードを示すツールヒントが表示されます。  
+ 既定では、クエリ エディター ウィンドウを開くとすべてのコードが表示されます。 コード領域は折りたたんで非表示にすることができます。 エディター ウィンドウの左端にある垂直線では負符号 (-) の付いた正方形を使用して、折りたたむことができるコード領域の先頭をそれぞれ識別します。 負符号をクリックすると、コード領域のテキストが 3 つのピリオド (...) の付いたボックスに置き換わり、負符号が正符号 (+) に変わります。 正符号をクリックすると、折りたたまれていたコードが表示され、正符号が負符号に変わります。 ポインターを 3 つのピリオドの付いたボックス上に移動すると、折りたたまれているセクションのコードを示すツールヒントが表示されます。  
   
 ## <a name="system-outline-regions"></a>システムのアウトライン領域  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の各エディターでは、システム定義のアウトライン領域の既定のセットが生成されます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48060812"
   
  ![内部ノードが非表示の XML コード](../../database-engine/media/editoutlinexmlinnercol.gif "XML code with inner node hidden")  
   
- ポインターを 3 つのピリオド ( ) の付いたボックス上に移動すると、次の図に示すように、折りたたまれた領域のコードがツールヒントに表示されます。  
+ ポインターを 3 つのピリオド (...) の付いたボックス上に移動すると、次の図に示すように、折りたたまれた領域のコードがツールヒントに表示されます。  
   
  ![非表示コードを示すツールヒント付きの XML コード](../../database-engine/media/editoutlinexmlmouse.gif "XML code with tooltip showing hidden code")  
   

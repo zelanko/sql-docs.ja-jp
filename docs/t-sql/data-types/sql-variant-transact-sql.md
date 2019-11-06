@@ -1,7 +1,7 @@
 ---
 title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 9/12/2017
+ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 004562a308419d2be70afd13defa617c26c0b0d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a417d8240bb3360a13367230f0017762b51d659
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000506"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,13 +86,13 @@ ODBC でサポートされていません **sql_variant**です。 クエリで�
 |**varchar**|Unicode|  
 |**char**|Unicode|  
 |**varbinary**|Binary|  
-|**[バイナリ]**|Binary|  
+|**binary**|Binary|  
 |**uniqueidentifier**|一意識別子 |  
   
 次の規則が適用 **sql_variant** 比較します。
 -   ときに **sql_variant** 異なる基本データ型の値が比較と基本データ型が、別のデータ型ファミリに、階層グラフでのデータ型ファミリがより高い値は 2 つの値の大きいと見なされます。  
 -   ときに **sql_variant** 異なる基本データ型の値が比較し基本データ型が同じデータ型ファミリには、階層グラフで基本データ型が低位の値は、その他のデータ型に暗黙的に変換、および、比較が行われます。  
--   ときに **sql_variant** の値、 **char**, 、**varchar**, 、**nchar**, 、または **nvarchar** が、データ型の比較、照合順序がまず比較されます、次の条件に基づく: LCID、LCID バージョン、比較フラグ、および並べ替え id です。 これらの基準は、ここで示した順序に従って、それぞれ整数値として比較されます。 基準がすべて等しい場合は、照合順序に従って実際の文字列値が比較されます。  
+-   **char**、**varchar**、**nchar**、**nvarchar** データ型の **sql_variant** 値が比較されるとき、LCID、LCID バージョン、比較フラグ、並べ替え ID の各基準に基づいて、値の照合順序がまず比較されます。 これらの各基準は、示された順序に従って、それぞれ整数値として比較されます。 基準がすべて等しい場合は、照合順序に従って実際の文字列値が比較されます。  
   
 ## <a name="converting-sqlvariant-data"></a>sql_variant 型データの変換  
 処理するときに、 **sql_variant** データ型の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] するには、他のデータ型のオブジェクトの暗黙的な変換をサポートしている、 **sql_variant** 型です。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からの暗黙的な変換をサポートしていない **sql_variant** 別のデータ型のオブジェクトへのデータです。
@@ -109,7 +108,9 @@ ODBC でサポートされていません **sql_variant**です。 クエリで�
 |**image**|**rowversion** (**タイムスタンプ**)|  
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
-|ユーザー定義データ型|**datetimeoffset**|  
+|ユーザー定義データ型|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> SQL Server 2012 およびそれ以降では、**datetimeoffset** を制限していません。
 
 ## <a name="examples"></a>使用例  
 

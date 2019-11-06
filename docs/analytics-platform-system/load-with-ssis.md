@@ -2,19 +2,18 @@
 title: Integration Services - Parallel Data Warehouse を使用して読み込む |Microsoft Docs
 description: SQL Server Integration Services (SSIS) パッケージを使用して並列データ ウェアハウス (PDW) にデータを読み込むための参照と展開の情報を提供します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960678"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Parallel Data Warehouse に Integration Services を使用してデータを読み込む
 SQL Server Integration Services (SSIS) パッケージを使用して SQL Server Parallel Data Warehouse にデータを読み込むための参照と展開の情報を提供します。  
@@ -218,15 +217,15 @@ id,city,lastUpdateDate,orderDate
   
 5.  ご使用のアプライアンスに固有の情報をサーバー、ユーザー、パスワード、および変換先のデータベースの情報を入力します。 (例については、以下に示します。) **[OK]** をクリックします。  
   
-    InfiniBand 接続では、**サーバー名**: < アプライアンス名 > を入力してください-SQLCTL01、17001 します。  
+    InfiniBand 接続では、**サーバー名**:< アプライアンス名 > を入力してください-SQLCTL01、17001 します。  
   
-    イーサネット接続の場合は、**サーバー名**: コントロールのノードのクラスター、コンマ、ポート 17001 の IP アドレスを入力します。 たとえば、10.192.63.134,17001 します。  
+    イーサネット接続の場合は、**サーバー名**:コントロールのノードのクラスター、コンマ、ポート 17001 の IP アドレスを入力します。 たとえば、10.192.63.134,17001 します。  
   
-    **ユーザー:**`user1`  
+    **ユーザー:** `user1`  
   
-    **パスワード:**`password1`  
+    **パスワード:** `password1`  
   
-    **転送先データベース。**`LoadExampleDB`  
+    **転送先データベース。** `LoadExampleDB`  
   
 6.  変換先テーブルを選択します:`Orders`します。  
   
@@ -254,7 +253,7 @@ id,city,lastUpdateDate,orderDate
 [はじめに (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [動的パッケージ サンプルの生成](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [SSIS パッケージのデザインの並列処理 (SQL Server ビデオ)](https://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server コミュニティの例: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
+[Microsoft SQL Server コミュニティの例:Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [変更データ キャプチャと読み込みの向上、増分](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [緩やかに変化するディメンション変換](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [一括挿入タスク](../integration-services/control-flow/bulk-insert-task.md)  

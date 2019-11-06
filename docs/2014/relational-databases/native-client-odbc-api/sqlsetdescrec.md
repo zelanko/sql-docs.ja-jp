@@ -12,12 +12,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20adc991d3d9c497b4bab1f7c665f941bd98e7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188783"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   このトピックで説明する固有の sqlsetdescrec による機能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client。  
@@ -27,7 +27,7 @@ ms.locfileid: "48088582"
   
  次の表では、パラメーターと記述子フィールド間のマッピングについて説明します。  
   
-|パラメーター|テーブル値パラメーター以外のパラメーターの型 (テーブル値パラメーター列など) の関連属性|テーブル値パラメーターに関連する属性|  
+|パラメーター|非テーブル値パラメーターの型を使用して、テーブル値パラメーターの列を含む関連する属性|テーブル値パラメーターに関連する属性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*SubType*|無視|SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合は、これに SQL_DESC_DATETIME_INTERVAL_CODE を設定します。|  
@@ -58,7 +58,7 @@ ms.locfileid: "48088582"
  `SQLSetDescRec` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe9d1338e3b64bf829eec0be1cf33bee3d8591e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789557"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>ログ配布から AlwaysOn 可用性グループへの移行の前提条件 (SQL Server)
   このトピックでは、ログ配布プライマリ データベースと 1 つまたは複数のセカンダリ データベースを、AlwaysOn プライマリ データベースとセカンダリ データベースに変換するための前提条件について説明します。  
@@ -66,7 +66,7 @@ ms.locfileid: "48161942"
   
  **詳細:**  
   
- [可用性グループへのログ配布構成の変換](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (SQL Server ブログ)  
+ [可用性グループへのログ配布構成の変換](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (SQL Server ブログ)  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **ログ配布**  
@@ -93,19 +93,19 @@ ms.locfileid: "48161942"
   
 -   **ブログ:**  
   
-     [可用性グループへのログ配布構成の変換](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [可用性グループへのログ配布構成の変換](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [AlwaysOn 可用性グループへの移行の移行ガイド: 以前の配置の結合からデータベース ミラーリングとログ配布](http://msdn.microsoft.com/library/jj635217)  
+     [移行ガイド: AlwaysOn 可用性グループへの移行前の配置の結合データベース ミラーリングとログ配布から](https://msdn.microsoft.com/library/jj635217)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   

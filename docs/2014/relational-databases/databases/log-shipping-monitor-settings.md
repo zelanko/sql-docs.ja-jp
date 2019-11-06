@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.monitor.f1
@@ -13,12 +12,12 @@ ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7508fc2e571927df7ce4ffa4ea5a1411ba526322
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 788defce7f897e4da3a3680118c573b5a73ac3b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917055"
 ---
 # <a name="log-shipping-monitor-settings"></a>[ログ配布モニターの設定]
   このページを使用すると、ログ配布監視サーバーのプロパティを構成および変更できます。  
@@ -44,7 +43,7 @@ ms.locfileid: "48168864"
  **ジョブ名**  
  バックアップまたは復元しきい値が超過したときに、警告を発行するためにログ配布によって使用される SQL Server エージェントの警告ジョブの名前を示します。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
   
- **[スケジュール]**  
+ **スケジュール**  
  SQL Server エージェントの警告ジョブの現在のスケジュールを示します。  
   
  **[編集]**  

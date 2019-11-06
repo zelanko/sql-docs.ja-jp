@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
@@ -14,12 +14,12 @@ ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c273146c35ea66dc59a5b088724b6da7b8db338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25f79dee9adb9ac6e953a802d404597508e7abba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204537"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>クエリ結果の要約 (Visual Database Tools)
   集計クエリを作成するときには、一定の論理原則が適用されます。 たとえば、サマリ クエリでは個別の行の内容は表示できません。 クエリおよびビュー デザイナーでは、 [ダイアグラム ペイン](visual-database-tools.md) および [抽出条件ペイン](criteria-pane-visual-database-tools.md) を使用してこのような原則に従い、作業を行うことができます。  

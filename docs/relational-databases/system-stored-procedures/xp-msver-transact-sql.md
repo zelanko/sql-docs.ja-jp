@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8aaa598f5f6477b13a932e8ec2849e36c97b21cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b936f00f449bd57a7a00fa825910a809a1baf225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898363"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ xp_msver [ optname ]
 |オプション/列名|説明|  
 |-------------------------|-----------------|  
 |**ProductName**|製品名。たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|**ProductVersion**|製品バージョン。|  
+|**ProductVersion**|製品バージョンです。|  
 |**言語**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
 |**プラットフォーム**|オペレーティング システム名、製造元の名前、および実行しているコンピューターのチップ ファミリ名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**コメント**|他の情報に関する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
@@ -54,7 +53,7 @@ xp_msver [ optname ]
 |**FileDescription**|オペレーティング システム。|  
 |**FileVersion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルのバージョン。|  
 |**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 内部名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; たとえば、SQLSERVR です。|  
-|**LegalCopyright**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要な著作権に関する法的情報。例: Copyright© [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
+|**LegalCopyright**|著作権に関する法的情報に必要な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]例: Copyright © [!INCLUDE[msCoName](../../includes/msconame-md.md)] corp.。1988-2005 年。|  
 |**LegalTrademarks**|商標に関する法的情報に必要な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 たとえば、[!INCLUDE[msCoName](../../includes/msconame-md.md)]の登録商標[!INCLUDE[msCoName](../../includes/msconame-md.md)]Corporation します。|  
 |**[Originalfilename]**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に実行されるファイル名。Sqlservr.exe などです。|  
 |**PrivateBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -64,7 +63,7 @@ xp_msver [ optname ]
 |**ProcessorActiveMask**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターに搭載されているプロセッサ。[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows により起動され、使用されます。|  
 |**ProcessorType**|プロセッサの種類。 ような**プラットフォーム**します。|  
 |**PhysicalMemory**|メガバイト (MB) 単位で実行しているコンピューターにインストールされている ram の量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|**製品 ID**|プロダクト ID (PID) 番号。 インストール中に指定されます。 この番号が元のステッカー上にある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CD ケースです。|  
+|**製品 ID**|プロダクト ID (PID) 番号。 これは、インストール時に指定されます。 この番号が元のステッカー上にある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CD ケースです。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  1 (成功)  
@@ -75,7 +74,7 @@ xp_msver [ optname ]
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   

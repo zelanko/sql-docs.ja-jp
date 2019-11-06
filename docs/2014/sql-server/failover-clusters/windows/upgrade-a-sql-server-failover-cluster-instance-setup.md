@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62680376"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] フェールオーバー クラスターにアップグレードするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド プロンプトを使用します。  
@@ -46,11 +45,11 @@ ms.locfileid: "48906492"
   
 -   Visual Studio コンポーネントを適切にインストールできる状態にするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は更新プログラムのインストールを要求します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは、更新プログラムが存在するかどうかを確認した後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールを続行する前に更新プログラムをダウンロードしてインストールするよう要求します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップの中断を回避するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する前に、以下の説明に従って更新プログラムをダウンロードおよびインストールします (または Windows Update に用意されている .NET 3.5 SP1 のすべての更新プログラムをインストールします)。  
   
-     インストールする場合[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]、Windows Server 2008 SP2 オペレーティング システムでコンピューターから必要な更新プログラムを取得できます[ここ](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     インストールする場合[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]、Windows Server 2008 SP2 オペレーティング システムでコンピューターから必要な更新プログラムを取得できます[ここ](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP1 または [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 オペレーティング システム搭載のコンピューターに [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] をインストールする場合は、この更新プログラムが含まれています。  
   
--   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] をインストールする際に必要になる場合があります。 詳細については、 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][リリース ノート](http://go.microsoft.com/fwlink/?LinkId=296445)をインストールするには、Windows PowerShell が必要です。  
+-   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] をインストールする際に必要になる場合があります。 詳細については、 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][リリース ノート](https://go.microsoft.com/fwlink/?LinkId=296445)をインストールするには、Windows PowerShell が必要です。  
   
 -   ローカルでのインストールの場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
   
@@ -79,9 +78,9 @@ ms.locfileid: "48906492"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] マルチサブネット フェールオーバー クラスターへのアップグレード  
  想定されるアップグレード シナリオは 2 つあります。  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターが、現在、単一のサブネット上で現在構成されている場合: 最初に、セットアップを開始してアップグレード プロセスに従って、既存のクラスターを [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] にアップグレードする必要があります。 既存のフェールオーバー クラスターのアップグレードの完了後に、AddNode 機能を使用して別のサブネット上のノードを追加します。 [クラスター ネットワークの構成] ページで、IP アドレス リソースの依存関係が OR に変更されていることを確認します。 これで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターが作成されます。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターが現在、単一のサブネットで構成されている場合:最初に、セットアップを開始してアップグレード プロセスに従って、既存のクラスターを [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] にアップグレードする必要があります。 既存のフェールオーバー クラスターのアップグレードの完了後に、AddNode 機能を使用して別のサブネット上のノードを追加します。 [クラスター ネットワークの構成] ページで、IP アドレス リソースの依存関係が OR に変更されていることを確認します。 これで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターが作成されます。  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターが、現在、拡張 V-LAN テクノロジを使用して複数のサブネット上で構成されている場合: 最初に、既存のクラスターを [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] にアップグレードする必要があります。 拡張 V-LAN テクノロジでは単一のサブネットが構成されるため、ネットワーク構成を複数のサブネットに変更し、Windows フェールオーバー クラスター管理ツールを使用して IP アドレス リソースの依存関係を OR に変更する必要があります。  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターが現在、拡張 V-LAN テクノロジを使用して複数のサブネット上で構成されている場合:最初に既存のクラスターを [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] にアップグレードする必要があります。 拡張 V-LAN テクノロジでは単一のサブネットが構成されるため、ネットワーク構成を複数のサブネットに変更し、Windows フェールオーバー クラスター管理ツールを使用して IP アドレス リソースの依存関係を OR に変更する必要があります。  
   
 ###  <a name="BestPractices"></a> ベスト プラクティスをアップグレードする前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター  
  再起動による予期しないダウンタイムを回避するには、クラスター ノードでアップグレードを実行する前に、.NET Framework 4.0 の no-reboot パッケージをすべてのフェールオーバー クラスター ノードにあらかじめインストールしておきます。 前提条件をプレインストールする次の手順をお勧めします。  
@@ -113,7 +112,7 @@ ms.locfileid: "48906492"
   
 4.  セットアップ サポート ファイルが必要な場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップによってインストールされます。 コンピューターの再起動を求めるメッセージが表示されたら、再起動してから続行します。  
   
-5.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、[!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 6.  [プロダクト キー] ページで、以前の製品バージョンのエディションに一致する新しいバージョンのエディション用の PID キーを入力します。 たとえば、エンタープライズ フェールオーバー クラスターをアップグレードするには、 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]用の PID キーを入力する必要があります。 **[次へ]** をクリックして次に進みます。 フェールオーバー クラスターのアップグレードに使用する PID キーは、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス内のすべてのフェールオーバー クラスター ノードで一貫している必要があります。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../editions-and-components-of-sql-server-2016.md)と[Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)します。  
   

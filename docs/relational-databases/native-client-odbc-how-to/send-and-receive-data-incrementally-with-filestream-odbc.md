@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1df7792f5850ad9d312baefc374bcb9f99e904c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cd8c0de5e2ba4df7f5a07800ce77fd691a1c784
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937478"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM を使用したデータのインクリメンタル式での送受信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "47618270"
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するデータベースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
+ 最初の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するデータベースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
  2 つ目のコード リストは C++ コードです。 サーバーを指定する必要があります。C++ コード リストで、"MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib、および /EHsc を使用して C++ コード リストをコンパイルします。  
   
- 3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用したデータベースを削除します。  
+ 3 番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用されるデータベースを削除します。  
   
 ```  
 USE master  

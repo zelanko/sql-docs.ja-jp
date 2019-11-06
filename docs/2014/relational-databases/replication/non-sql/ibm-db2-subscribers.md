@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022197"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server に含まれている OLE DB プロバイダーを経由した IBM DB2/AS 400、DB2/MVS、および DB2/Universal Database へのプッシュ サブスクリプションをサポートします。  
@@ -32,11 +31,11 @@ ms.locfileid: "48155362"
   
 1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 の最新バージョンをディストリビューターにインストールします。  
   
-    -   使用する場合[!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]の[SQL Server 2008 ダウンロード](http://go.microsoft.com/fwlink/?LinkId=149256)Web ページの**関連ダウンロード**セクションで、Microsoft SQL Server 2008 Feature Pack の最新バージョンへのリンクをクリックします。 **Microsoft SQL Server 2008 用 Feature Pack** の Web ページで、 **Microsoft OLE DB Provider for DB2**を検索します。  
+    -   [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]を使用している場合は、 [SQL Server 2008 ダウンロード](https://go.microsoft.com/fwlink/?LinkId=149256) Web ページの「 **関連ダウンロード** 」セクションで、Microsoft SQL Server 2008 Feature Pack の最新バージョンのリンクをクリックします。 **Microsoft SQL Server 2008 用 Feature Pack** の Web ページで、 **Microsoft OLE DB Provider for DB2**を検索します。  
   
-    -   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard を使用している場合は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) サーバーの最新バージョンをインストールしてください。この製品にプロバイダーが含まれています。  
+    -   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard を使用している場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) サーバーの最新バージョンをインストールしてください。この製品にプロバイダーが含まれています。  
   
-     プロバイダーをインストールするだけでなくお勧めしますが、次の手順で使用される、データ アクセス ツールをインストールすること (既定のダウンロードでインストールされて[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Enterprise)。 データ アクセス ツールのインストールと使用に関する詳細については、プロバイダーのドキュメントまたは HIS のドキュメントを参照してください。  
+     プロバイダーのインストールに加えて、データ アクセス ツールをインストールすることをお勧めします。データ アクセス ツールは次の手順で使用します (データ アクセス ツールは、既定では、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise のダウンロードでインストールされます)。 データ アクセス ツールのインストールと使用に関する詳細については、プロバイダーのドキュメントまたは HIS のドキュメントを参照してください。  
   
 2.  サブスクライバーの接続文字列を作成します。 この接続文字列は任意のテキスト エディターで作成できますが、データ アクセス ツールを使用することをお勧めします。 データ アクセス ツールで接続文字列を作成するには、次の手順を実行します。  
   
@@ -122,18 +121,18 @@ ms.locfileid: "48155362"
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR (0)<sup>1</sup>|  
+|`ntext`|VARCHAR(0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
 |`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|なし|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR (0)<sup>1</sup>|  
+|`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
@@ -141,8 +140,8 @@ ms.locfileid: "48155362"
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
 |`varbinary(max)`|VARCHAR (0) FOR BIT DATA<sup>1</sup>|  
-|`varchar(max)`|VARCHAR (0)<sup>1</sup>|  
-|`xml`|VARCHAR (0)<sup>1</sup>|  
+|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`xml`|VARCHAR(0)<sup>1</sup>|  
   
  <sup>1</sup> varchar (0) へのマッピングの詳細については、次のセクションを参照してください。  
   

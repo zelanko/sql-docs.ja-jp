@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], creating
@@ -12,12 +12,12 @@ ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1638c2d0696ebaac0b9bfebe7f6349080a8332ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63282113"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
   プロジェクトを作成すると、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって、そのプロジェクトを含むソリューションが作成されます。 同時に開くことのできるソリューションは 1 つだけです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、プロジェクト内にフォルダーを作成することはできません。 作業を整理するには、複数のプロジェクトを作成してください。  

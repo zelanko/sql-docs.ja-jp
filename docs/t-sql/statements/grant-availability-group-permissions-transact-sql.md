@@ -15,15 +15,14 @@ helpviewer_keywords:
 - granting permissions, [SQL Server], availability groups
 - permissions [SQL Server], availability group
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e42e9f220c270b3e014eead20380167dde4b0dae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065552"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>可用性グループの権限の許可 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  可用性グループに対して許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- 権限を許可する可用性グループを指定します。 スコープ修飾子 (**::**) が必要です。  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 権限を許可する可用性グループを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  TO \<server_principal>  
  権限を許可する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
@@ -81,7 +80,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
  可用性グループに関する情報は、[sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) カタログ ビューで表示できます。 サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。  
   
- 可用性グループは、サーバー レベルのセキュリティ保護可能なリソースです。 次の表に、可用性グループで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ 可用性グループは、サーバー レベルでセキュリティ保護可能なリソースです。 次の表に、可用性グループで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |可用性グループの権限|権限が含まれる可用性グループ権限|権限が含まれるサーバー権限|  
 |-----------------------------------|----------------------------------------------|----------------------------------|  
@@ -94,7 +93,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  すべての [!INCLUDE[ssDE](../../includes/ssde-md.md)] 権限を示した一覧表については、[データベース エンジンの権限ポスター](https://aka.ms/sql-permissions-poster)に関するページをご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
- 可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILTIY GROUP 権限が必要です。  
+ 可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILITY GROUP 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   

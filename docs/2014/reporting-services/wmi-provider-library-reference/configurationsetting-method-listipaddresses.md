@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3b8dc70cf1502363585abd7f1be5de7c72c6256a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098319"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー コンピューターの IP アドレスを一覧表示します。  
@@ -61,7 +60,7 @@ public void ListIPAddresses (out string[] IPAddress,
   
  場合*IsDhcpEnabled*は`True`、 *IPAddress*は動的です。 これは、SSL バインドには使用しないでください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

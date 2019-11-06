@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4df8b4f17c006d51bdfc5bba6e7cb13b7cc69eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106574"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
   インジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「[インジケーター (レポート ビルダーおよび SSRS)](indicators-report-builder-and-ssrs.md)」を参照してください。  
@@ -27,11 +26,11 @@ ms.locfileid: "48202972"
   
  インジケーターの値および状態は、更新することができます。 詳細については、次の各トピックを参照してください。  
   
--   [インジケーター アイコンとインジケーター セットの変更&#40;レポート ビルダーおよび SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定および構成の測定単位&#40;レポート ビルダーおよび SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [測定単位の設定および構成 (レポート ビルダーおよび SSRS)](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [同期スコープの設定&#40;レポート ビルダーおよび SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [同期スコープの設定 (レポート ビルダーおよび SSRS)](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  インジケーターは、ゲージ パネル内に配置されるため、 **[インジケーターのプロパティ]** ダイアログ ボックスまたは **プロパティ** ペインを使用してインジケーターを構成するには、パネルの代わりにインジケーターを選択する必要があります。 次の図は、ゲージ パネルで選択されたインジケーターを示します。  
   

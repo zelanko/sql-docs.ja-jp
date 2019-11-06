@@ -5,19 +5,17 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 235c64cf0920ec27bedd4ba032f742e206e6e78a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 332a212af082b082379f4b1483c3c869cb8c542e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085589"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>ユーザーのアクセス許可のテスト (マスター データ サービス)
 
@@ -27,7 +25,7 @@ ms.locfileid: "52390357"
   
 ### <a name="to-test-a-users-security"></a>ユーザーのセキュリティをテストするには  
   
-1.  Internet Explorer 7 以降で、 **[ツール]**、 **[インターネット オプション]** の順にクリックして、 **[セキュリティ]** タブをクリックします。  
+1.  Internet Explorer 7 以降で、 **[ツール]** 、 **[インターネット オプション]** の順にクリックして、 **[セキュリティ]** タブをクリックします。  
   
 2.  **[ローカル イントラネット]** をクリックして、 **[レベルのカスタマイズ]** ボタンをクリックします。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "52390357"
   
 4.  次にブラウザー ウィンドウを開くときに、ユーザー名とパスワードの入力を求められます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

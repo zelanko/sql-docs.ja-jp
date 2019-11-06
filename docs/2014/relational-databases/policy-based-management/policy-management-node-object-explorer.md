@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2a8eecf04bdc1b985863ffd2bafe3acfea4e6240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62625907"
 ---
 # <a name="policy-management-node-object-explorer"></a>[ポリシー管理] ノード (オブジェクト エクスプローラー)
   ここでは、 **のオブジェクト エクスプローラーの** PolicyManagement [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードに関する F1 ヘルプ トピックを紹介します。  

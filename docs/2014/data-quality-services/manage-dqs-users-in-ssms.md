@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 955af01d-00da-4c51-9311-f3848749df54
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d17883d39f4579f509eed894735c676f464feeeb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032187"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480352"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>SSMS による DQS ユーザーの管理
   このトピックでは、SQL Server Management Studio を使用して SQL Server インスタンスで追加のユーザーを作成し、DQS_MAIN データベースの適切な [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ロールを付与する方法について説明します。  
@@ -42,11 +42,11 @@ ms.locfileid: "51032187"
   
 5.  ユーザーの検証後、左ペインの **[ユーザー マッピング]** ページをクリックします。  
   
-6.  右ペインで、 **[DQS_MAIN]** データベースの **[マップ]** 列のチェック ボックスをオンにし、ユーザーに必要なアクセス レベルに応じて、 **[DQS_MAIN のデータベース ロール メンバーシップ]** ペインで **[dqs_administrator]**、 **[dqs_kb_editor]** 、または **[dqs_kb_operator]** チェック ボックスをオンにします。  
+6.  右側のウィンドウで、下のチェック ボックスを選択します、**マップ**の列、 **DQS_MAIN**データベースを選び、 **dqs_administrator**、 **dqs_kb_editor ロール。** 、または**dqs_kb_operator**  チェック ボックス、**データベース ロールのメンバーシップ。DQS_MAIN**ウィンドウで、ユーザーのために必要なアクセス レベルによって異なります。  
   
 7.  **[ログイン - 新規作成]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
   
     > [!NOTE]  
-    >  **[dqs_administrator]** ロールをユーザーに付与し、変更を適用してから、ユーザー権限を再びオンにすると、その他の 2 つの DQS ロールのチェック ボックス (**[dq_kb_editor]** および **[dqs_kb_operator]**) もオンになります。  
+    >  **dqs_administrator** ロールをユーザーに付与し、変更を適用してから、ユーザー権限を再びオンにすると、その他の 2 つの DQS ロールのチェック ボックス ( **[dq_kb_editor]** および **[dqs_kb_operator]** ) もオンになります。  
   
   

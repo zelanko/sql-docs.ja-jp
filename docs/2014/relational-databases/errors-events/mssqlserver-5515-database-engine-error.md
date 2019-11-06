@@ -12,12 +12,12 @@ ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: beffb1c0825b4c58c9a3bdc2bb9a57d8d049c5cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a646852b60cd1d1f59bd35da1d28769dcef3fb9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62867596"
 ---
 # <a name="mssqlserver5515"></a>MSSQLSERVER_5515
     
@@ -36,6 +36,6 @@ ms.locfileid: "48216572"
  FILESTREAM ファイルに対して指定されたコンテナー ディレクトリを開けません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- エラーの原因については、特定の Windows 状態コードを参照してください。 詳細については、次を参照してください。、[イベントとエラー メッセージ センター](http://go.microsoft.com/fwlink/?linkid=47660)します。  
+ エラーの原因については、特定の Windows 状態コードを参照してください。 詳細については、次を参照してください。、[イベントとエラー メッセージのサポート センター](https://support.microsoft.com/search?query=events%20and%20errors)します。  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099451"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)
   レポートおよび関連アイテムを SharePoint ライブラリにパブリッシュするには、レポート デザイナーなどの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作成ツールを使用してコンテンツをパブリッシュするか、SharePoint サイトのアクションを使用してコンテンツをアップロードします。  
@@ -34,7 +33,7 @@ ms.locfileid: "48157932"
   
 |オブジェクト|説明|  
 |------------|-----------------|  
-|SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには http:*//servername*などの URL を指定します。複数のサイトを指定することもできます。|  
+|SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには http: *//servername*などの URL を指定します。複数のサイトを指定することもできます。|  
 |Site|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  
 |SharePoint ライブラリ|ライブラリには、ドキュメントやフォルダーが格納されます。 レポート、レポート モデル、共有データ ソース、および外部画像を保存できるサイト オブジェクトは、ライブラリまたはライブラリ内のフォルダーのみです。|  
 |アイテム|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
@@ -45,9 +44,9 @@ ms.locfileid: "48157932"
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint サーバーの URL  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からレポート サーバーに、レポート サーバー プロジェクトまたはレポート モデル プロジェクトを配置する場合は、SharePoint サーバーの URL を使用する必要があります。  
   
- 使用するサーバーの名前を見つけるには、ブラウザーを開いて、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 プロトコル プレフィックスのすぐ後に、http:*//servername*のような形式のサーバー名が表示されます。  
+ 使用するサーバーの名前を見つけるには、ブラウザーを開いて、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 プロトコル プレフィックスのすぐ後に、http: *//servername*のような形式のサーバー名が表示されます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL プロキシ エンドポイントの使用はサポートされていません。 プロキシ エンドポイントには、http:*//servername:8080/reportserver*のようにポート番号が含まれます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL プロキシ エンドポイントの使用はサポートされていません。 プロキシ エンドポイントには、http: *//servername:8080/reportserver*のようにポート番号が含まれます。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint Server サイトまたはサブサイトの URL  
  レポートまたはレポート データ ソースを配置する場合は、SharePoint サイトおよびサブサイト (ある場合) の URL を使用する必要があります。 URL ではサーバー名のすぐ後にサイト名が示されます。たとえば、 http://*servername/site* または http://*servername/site/subsite*のようになります。  
@@ -76,7 +75,7 @@ ms.locfileid: "48157932"
  レポート定義には、外部ファイルとして保存されている画像ファイルを含めることができます。 レポート定義内に画像ファイルの参照情報として、ファイルへの完全修飾 URL を設定します。 画像ファイルは、SharePoint サイトまたはリモート コンピューターに保存できます。  
   
 > [!IMPORTANT]  
->  外部 URL が SharePoint サイト上の画像を指している場合、レポート ビルダーでレポートをプレビューすると壊れた画像アイコンが表示されます。 のみがある場合に、壊れた画像アイコンが表示されます、SharePoint サイトにレポートをアップロードし、接続モードでレポートを表示すると、`View Items`アクセス許可。  
+>  外部 URL が SharePoint サイト上の画像を指している場合、レポート ビルダーでレポートをプレビューすると壊れた画像アイコンが表示されます。 "`View Items`" 権限のみが与えられている場合に SharePoint サイトにレポートをアップロードし、接続モードでレポートを表示すると、壊れた画像アイコンが表示されます。  
   
  レポート内の外部画像ファイルへの参照は、レポート サーバーのモードに関係なく、完全修飾 URL にする必要があります。 また、外部画像ファイルを参照する場合、通常は自動レポート処理アカウントを構成する必要があります。  
   
@@ -136,7 +135,7 @@ ms.locfileid: "48157932"
  SharePoint 統合モードで実行しているレポート サーバーでは、リソースの概念は狭義になります。 この場合、レポート サーバーのリソースとは、外部画像を参照するレポートの保存場所を指します。 レポートが内部用のスナップショットまたはコピーとして保持されている場合がこれに該当します。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint ライブラリにレポートをパブリッシュします。](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint ライブラリへのレポートのパブリッシュ](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint ライブラリへの共有データ ソースのパブリッシュ](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [[プロパティ ページ] ダイアログ ボックス](project-property-pages-dialog-box.md)  
   

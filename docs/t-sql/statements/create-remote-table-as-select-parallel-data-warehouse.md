@@ -2,21 +2,20 @@
 title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: ''
-ms.prod_service: pdw
-ms.reviewer: ''
+ms.prod: sql
+ms.technology: data-warehouse
+ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f8e3992c7097167c82caf6350f571787fd71373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117316"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47795590"
   
 ```  
   
-CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name     AT ('<connection_string>')  
+CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
 [;]  
@@ -68,7 +67,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  リモート サーバー コンピューターの名前またはリモート サーバーの IPv4 アドレスです。 IPv6 アドレスはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名前付きインスタンスを、**Computer_Name\Instance_Name** または **IP_address\Instance_Name** の形式で指定することができます。 サーバーは、リモートである必要があり、(local) として指定することはできません。  
   
  TCP *port* 番号  
- 接続の TCP ポート番号。 既定のポート 1433 でリッスンしていない SQL Server のインスタンスに対して、0～65535 の TCP ポート番号を指定することができます。 例: **ServerA 1450** または **10.192.14.27,1435**  
+ 接続の TCP ポート番号。 既定のポート 1433 でリッスンしていない SQL Server のインスタンスに対して、0～65535 の TCP ポート番号を指定することができます。 例:**ServerA,1450** または **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  IP アドレスを使用してリモート サーバーに接続することをお勧めします。 ネットワーク構成によっては、コンピューター名を使用して接続するときに、正しいサーバーの名前を解決する非アプライアンス DNS サーバーを使用するために、追加の手順が必要になることがあります。 IP アドレスで接続するときには、この手順は必要ではありません。 詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「Use a DNS Forwarder to Resolve Non-Appliance DNS Names (Analytics Platform System)」(DNS フォワーダーを使用して非アプライアンス DNS 名を解決する (分析プラットフォーム システム)) を参照してください。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8e91853bba6b33ed57cc0152e266994d4e0ef528
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092911"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63273479"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>シーケンス クラスター マイニング モデル構造の作成 (中級者向けデータ マイニング チュートリアル)
   シーケンス クラスター マイニング モデルを作成する最初の手順では、データ マイニング ウィザードを使用して新しいマイニング構造を作成し、[!INCLUDE[msCoName](../includes/msconame-md.md)] シーケンス クラスター アルゴリズムに基づくマイニング モデルを作成します。  
@@ -73,7 +72,7 @@ ms.locfileid: "48092911"
     |テーブルまたは列|コンテンツの種類|データ型|  
     |---------------------|------------------|---------------|  
     |IncomeGroup|Discrete|テキスト|  
-    |OrderNumber|Key|テキスト|  
+    |OrderNumber|キー|テキスト|  
     |Region|Discrete|テキスト|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|Long|  
@@ -91,7 +90,7 @@ ms.locfileid: "48092911"
  [シーケンス クラスター モデルの処理](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング デザイナー](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Data Mining Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft シーケンス クラスタリング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   
   

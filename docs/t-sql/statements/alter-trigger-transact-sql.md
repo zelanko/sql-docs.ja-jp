@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a44415653cffdbd98f7ef7bc1a39ba58c5473a86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 144a0391926bc695d3693bf6d04294e5a8eb101d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824960"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155669"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >
 ```  
   
 ```  
--- Windows Azure SQL Database Syntax   
+-- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)   
   
 ALTER TRIGGER schema_name. trigger_name   
@@ -175,7 +174,7 @@ AS { sql_statement
  SCHEMABINDING  
  トリガーによって参照されているテーブルを削除または変更できないことを確認します。  
   
- このオプションは、メモリ最適化テーブルのトリガーに必要なは、従来のテーブルのトリガーはサポートされていません。  
+ このオプションは、メモリ最適化テーブルでのトリガーに必要であり、従来のテーブルでのトリガーにはサポートされません。  
   
  AFTER  
  トリガーをアクティブにする SQL ステートメントが正常に実行された後にのみ、そのトリガーを起動することを指定します。 このトリガーが起動される前に、すべての連鎖参照操作および制約チェックも正常に終了している必要があります。  
@@ -187,7 +186,7 @@ AS { sql_statement
  INSTEAD OF  
  SQL ステートメントを起動する代わりに DML トリガーの実行を指定します。したがって、ステートメントのトリガーの操作はオーバーライドされます。 DDL トリガーまたはログオン トリガーでは INSTEAD OF を指定できません。  
   
- テーブルまたはビューでは、INSERT、UPDATE、または DELETE の各ステートメントに定義できる INSTEAD OF トリガーは 1 つだけですが、 ビューに別のビューを作成して、各ビューに独自の INSTEAD OF トリガーを定義することは可能です。  
+ テーブルまたはビューでは、INSERT、UPDATE、または DELETE の各ステートメントに定義できる INSTEAD OF トリガーは 1 つだけですが、 個々のビューに独自の INSTEAD OF トリガーがある複数のビューに対してビューを定義することはできます。  
   
  INSTEAD OF トリガーは、WITH CHECK OPTION を使用して作成したビューでは使用できません。 WITH CHECK OPTION が指定されているビューに対して INSTEAD OF トリガーを追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが発生します。 ユーザーは、INSTEAD OF トリガーを定義する前に、ALTER VIEW を使用して WITH CHECK OPTION を削除する必要があります。  
   

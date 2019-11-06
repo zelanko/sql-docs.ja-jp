@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLSERVEROBJECTEXPLORER.DHELP
@@ -16,12 +16,12 @@ ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0469390d825761164f8222a835b913b65a8541ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999636"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用したオブジェクトの管理
   オブジェクト エクスプ ローラーを使用して、データベース、テーブル、ストアド プロシージャなどのオブジェクトを管理できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48177233"
  オブジェクト エクスプローラーで表示できるオブジェクトの個数は、最大で 65,536 個です。 表示可能なオブジェクトの最大数である 65,536 個を超えると、オブジェクト エクスプローラーのツリー ビューでその他のオブジェクトをスクロールすることはできません。 オブジェクト エクスプローラーでその他のオブジェクトを表示するには、使用していないノードを閉じるか、フィルターを適用してオブジェクトの数を絞り込む必要があります。  
   
 ## <a name="filtering-the-list-of-objects-in-object-explorer"></a>オブジェクト エクスプローラー内のオブジェクトの一覧に対するフィルター処理  
- 1 つのフォルダーに多数のオブジェクトが含まれていると、対象のオブジェクトを見つけるのが難しくなります。 そのような場合は、オブジェクト エクスプローラーのフィルター機能を使用して、一覧のサイズを小さく絞り込みます。 たとえば、数百個のオブジェクトが含まれている一覧から、特定のデータベース ユーザーや、作成日付が一番新しいテーブルなどを見つけるとします。 フィルター処理を行うフォルダーをクリックし、[フィルター] ボタンをクリックして **[フィルターの設定]** ダイアログ ボックスを開いてください。 名前、作成日付、スキーマに基づくフィルターを一覧に設定し、 **[開始番号]**、 **[次の内容を含む]**、 **[次の値の間]** などの追加のフィルター演算子を指定できます。  
+ 1 つのフォルダーに多数のオブジェクトが含まれていると、対象のオブジェクトを見つけるのが難しくなります。 そのような場合は、オブジェクト エクスプローラーのフィルター機能を使用して、一覧のサイズを小さく絞り込みます。 たとえば、数百個のオブジェクトが含まれている一覧から、特定のデータベース ユーザーや、作成日付が一番新しいテーブルなどを見つけるとします。 フィルター処理を行うフォルダーをクリックし、[フィルター] ボタンをクリックして **[フィルターの設定]** ダイアログ ボックスを開いてください。 名前、作成日付、スキーマに基づくフィルターを一覧に設定し、 **[開始番号]** 、 **[次の内容を含む]** 、 **[次の値の間]** などの追加のフィルター演算子を指定できます。  
   
 ## <a name="multi-select"></a>複数選択  
  オブジェクト エクスプローラーでは、オブジェクトを 1 つずつしか選択できません。 複数の項目を選択するには、 **F7** キーを押して **[オブジェクト エクスプローラーの詳細]** ページを開いてください。 **[オブジェクト エクスプローラーの詳細]** ページでは複数選択が可能です。  
@@ -53,7 +53,7 @@ ms.locfileid: "48177233"
 ### <a name="start-powershell"></a>PowerShell を開始する  
  PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクト エクスプ ローラー](object-explorer.md)   
  [開き、オブジェクト エクスプ ローラーを構成します。](open-and-configure-object-explorer.md)   
  [オブジェクト エクスプ ローラーからインスタンスに接続します。](connect-to-an-instance-from-object-explorer.md)   

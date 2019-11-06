@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - removing columns
@@ -15,12 +15,12 @@ ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d8d700538fec1f9662408874b6a7af7c7a5b235
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62659640"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>クエリからの列の削除 (Visual Database Tools)
   クエリで列を使用する必要がなくなった場合は、列を削除できます。 列を削除すると、選択リスト、並べ替えの指定、検索条件、 **SQL ペイン**、およびグループ化の指定での列の参照がクエリおよびビュー デザイナーから削除されます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48192432"
   
 -   **抽出条件ペイン**で、削除する列を含むグリッド行を選択し、Del キーを押します。  
   
-     - または -  
+     \- または -  
   
 -   [SQL ペイン](sql-pane-visual-database-tools.md)の列に対するすべての参照を削除します。  
   

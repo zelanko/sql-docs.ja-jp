@@ -1,54 +1,53 @@
 ---
-title: 作成、トレーニング、および R (SQL Server Machine Learning Services) でのパーティションに基づくモデルのスコア付けのチュートリアル |Microsoft Docs
-description: モデル化、トレーニング、および SQL Server machine learning のパーティション ベースのモデリング機能を使用するときに動的に作成されるパーティション分割されたデータを使用する方法について説明します。
+title: R でのパーティションベースのモデルの作成、トレーニング、およびスコア付けに関するチュートリアル
+description: SQL Server machine learning のパーティションベースのモデリング機能を使用するときに、動的に作成されるパーティション分割されたデータをモデル化、トレーニング、および使用する方法について説明します。
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/02/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
-ms.author: heidist
-author: HeidiSteen
-manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.author: davidph
+author: dphansen
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462008"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952021"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル: SQL Server での R でのパーティションに基づくモデルを作成します。
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル:SQL Server の R でパーティションベースのモデルを作成する
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server の 2019 でパーティション ベースのモデルを作成し、パーティション分割されたデータに対してモデルをトレーニングする機能があります。 地理的リージョン、日付と時間、年齢や性別 - などの特定の分類のスキームに自然に分割する層化データのスクリプトを実行全体のデータ セットに対してモデル化、トレーニング、およびそのままのパーティションでスコア付けすることができます。これらすべての操作。 
+SQL Server 2019 では、パーティションベースのモデリングは、パーティション分割されたデータに対してモデルを作成およびトレーニングする機能です。 地理的地域、日付と時刻、年齢、性別など、特定の分類法に自然に分割されている層化データの場合、データセット全体に対してスクリプトを実行できます。また、そのまま残るパーティションをモデル化、トレーニング、およびスコア付けすることもできます。すべての操作を行います。 
 
-2 つの新しいパラメーターを通じてパーティション ベースのモデルが有効になっている[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
+パーティションベースのモデリングは、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)の2つの新しいパラメーターによって有効になります。
 
-+ **input_data_1_partition_by_columns**でパーティション分割する列を指定します。
-+ **input_data_1_order_by_columns** order by 句に列を指定します。 
++ **input_data_1_partition_by_columns**。パーティション分割する列を指定します。
++ **input_data_1_order_by_columns**並べ替える列を指定します。 
 
-このチュートリアルでは、従来の NYC タクシーのサンプル データと R スクリプトを使用してパーティション ベースのモデリングをについて説明します。 パーティション列は、支払い方法です。
+このチュートリアルでは、従来の NYC タクシーサンプルデータと R スクリプトを使用したパーティションベースのモデリングについて説明します。 パーティション列は支払い方法です。
 
 > [!div class="checklist"]
-> * パーティションは、支払いの種類 (5) に基づいています。
-> * 作成し、各パーティションのモデルのトレーニングしデータベース オブジェクトに格納します。
-> * 目的のために予約されているサンプル データを使用して、各パーティション モデル経由でのヒントの結果の確率を予測します。
+> * パーティションは支払いの種類 (5) に基づいています。
+> * 各パーティションでモデルを作成およびトレーニングし、データベースにオブジェクトを格納します。
+> * 各パーティションモデルのチップの結果の確率を予測します。その目的のために予約されているサンプルデータを使用します。
 
 ## <a name="prerequisites"></a>前提条件
  
-このチュートリアルを完了するには、次の操作が必要です。
+このチュートリアルを完了するには、次のものが必要です。
 
-+ 十分なシステム リソース。 データ セットが大きいと、トレーニング操作は、リソースを消費します。 可能であれば、少なくとも 8 GB の RAM を持つシステムを使用します。 または、小さいデータ セットを使用して、リソースの制約を回避することができます。 データ セットを縮小する手順については、インラインです。 
++ 十分なシステムリソース。 データセットは大規模で、トレーニング操作はリソースを大量に消費します。 可能であれば、少なくとも 8 GB の RAM を搭載したシステムを使用してください。 または、小さいデータセットを使用して、リソースの制約を回避することもできます。 データセットを減らすための手順はインラインです。 
 
-+ T-SQL のツールなど、実行のクエリ[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。
++ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)など、t-sql クエリを実行するためのツールです。
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)、可能な[をダウンロードして復元](demo-data-nyctaxi-in-sql.md)ローカル データベース エンジンのインスタンスにします。 ファイル サイズは約 90 MB です。
++ [NYCTaxi_Sample。](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)これを[ダウンロードし](demo-data-nyctaxi-in-sql.md)て、ローカルデータベースエンジンインスタンスに復元することができます。 ファイルサイズは約 90 MB です。
 
-+ SQL Server 2019 プレビュー データベース エンジン インスタンス、Machine Learning サービスと R を統合します。
++ Machine Learning Services と R の統合を使用して、SQL Server 2019 のデータベースエンジンインスタンスをプレビューします。
 
-実行してバージョンを確認して**`SELECT @@Version`** としてクエリ ツールでの T-SQL クエリ。 出力になります。"Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x"。
+クエリツールで t-sql **`SELECT @@Version`** クエリとしてを実行してバージョンを確認します。 出力は、"Microsoft SQL Server 2019 (CTP 2.4)-15.0" になります。
 
-データベース エンジンのインスタンスに現在インストールされているすべての R パッケージの適切な形式の一覧を返すことによって、R パッケージの可用性をチェック:
+データベースエンジンインスタンスと共に現在インストールされているすべての R パッケージの適切な形式の一覧を返すことにより、R パッケージの可用性を確認します。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -62,15 +61,15 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-## <a name="connect-to-the-database"></a>データベースへの接続します。
+## <a name="connect-to-the-database"></a>データベースに接続する
 
-Management Studio を起動し、データベース エンジンのインスタンスに接続します。 オブジェクト エクスプ ローラーで確認、 [NYCTaxi_Sample データベース](demo-data-nyctaxi-in-sql.md)存在します。 
+Management Studio を起動し、データベースエンジンインスタンスに接続します。 オブジェクトエクスプローラーで、 [NYCTaxi_Sample データベース](demo-data-nyctaxi-in-sql.md)が存在することを確認します。 
 
-## <a name="create-calculatedistance"></a>CalculateDistance を作成します。
+## <a name="create-calculatedistance"></a>CalculateDistance の作成
 
-デモ データベースのテーブル値関数の計算の距離がストアド プロシージャの動作より優れたスカラー関数が付属します。 次のスクリプト作成を実行、 **CalculateDistance**で使用される関数、[トレーニング手順](#training-step)後でします。
+デモデータベースには距離を計算するためのスカラー関数が用意されていますが、ストアドプロシージャはテーブル値関数によってより適切に動作します。 次のスクリプトを実行して、後で[トレーニング手順](#training-step)で使用する**CalculateDistance**関数を作成します。
 
-関数が作成されたことを確認するには、\Programmability\Functions\Table-valued 関数を確認してください、 **NYCTaxi_Sample**オブジェクト エクスプ ローラーでデータベース。
+関数が作成されたことを確認するには、オブジェクトエクスプローラーの**NYCTaxi_Sample**データベースで \Programmability\Functions\Table-valued 関数を確認します。
 
 ```sql
 USE NYCTaxi_sample
@@ -100,15 +99,15 @@ FROM (
 GO
  ```
 
-## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>プロシージャの作成とパーティションごとのモデルのトレーニングを定義します。
+## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>パーティションごとのモデルを作成およびトレーニングする手順を定義する
 
-このチュートリアルでは、ストアド プロシージャで R スクリプトをラップします。 この手順では、R を使用して、入力データセットの作成、ヒントの結果を予測する分類モデルを構築して、データベースにモデルを保存するストアド プロシージャを作成します。
+このチュートリアルでは、ストアドプロシージャで R スクリプトをラップします。 この手順では、R を使用して入力データセットを作成し、ヒントの結果を予測する分類モデルを作成して、データベースにモデルを格納するストアドプロシージャを作成します。
 
-このスクリプトで使用されるパラメーターの入力、間が表示されます**input_data_1_partition_by_columns**と**input_data_1_order_by_columns**します。 これらのパラメーターは使用されるメカニズムは、モデリングをパーティション分割された取り消しが発生します。 入力として渡されたパラメーター [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)外部スクリプトの実行に 1 回のすべてのパーティションのパーティションの処理をします。 
+このスクリプトで使用されるパラメーター入力の中で、 **input_data_1_partition_by_columns**と**input_data_1_order_by_columns**が表示されます。 これらのパラメーターは、パーティション分割されたモデリングを実行するメカニズムであることを思い出してください。 パラメーターは[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)に入力として渡され、外部スクリプトがパーティションごとに1回実行されているパーティションを処理します。 
 
-このストアド プロシージャ、[並列処理を使用して、](#parallel)を完了するまでの時間を短縮します。
+このストアドプロシージャでは、完了までの時間を短縮するために[並列処理を使用](#parallel)します。
 
-このスクリプトを実行した後ことがわかります**train_rxLogIt_per_partition** \Programmability\Stored 手順で、 **NYCTaxi_Sample**オブジェクト エクスプ ローラーでデータベース。 モデルを格納するために使用される新しいテーブルを表示する必要があります: **dbo.nyctaxi_models**します。
+このスクリプトを実行すると、オブジェクトエクスプローラーの**NYCTaxi_Sample**データベースの \Programmability\Stored プロシージャに**train_rxLogIt_per_partition**が表示されます。 また、モデルの格納に使用される新しいテーブルである**nyctaxi_models**も表示されます。
 
 ```sql
 USE NYCTaxi_Sample
@@ -168,20 +167,18 @@ GO
 
 ### <a name="parallel-execution"></a>並列実行
 
-注意、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)入力に含まれる **@parallel= 1**、並列処理を有効にするために使用します。 SQL Server 2019、設定で、以前のリリースとは異なり **@parallel= 1**ずっと高い確率で結果を並列実行を行うクエリ オプティマイザーより強力なヒントを提供します。
+[Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)の入力には `@parallel=1` が含まれ、並列処理を有効にするために使用されることに注意してください。 以前のリリースとは異なり、SQL Server 2019 では、`@parallel=1` に設定すると、クエリオプティマイザーに対してより強力なヒントが提供されるため、並列実行ではより多くの結果が得られます。
 
-既定では、クエリ オプティマイザーは下で動作する傾向がある **@parallel= 1**場合を処理するこの明示的に設定が、256 個を超える行を持つテーブルで **@parallel= 1**これで示すようにスクリプトです。
+既定では、クエリオプティマイザーは、256行を超えるテーブルでは @no__t 0 未満で動作する傾向がありますが、このスクリプトで示すように `@parallel=1` を設定することによって明示的に処理することができます。
 
 > [!Tip]
-> トレーニングの workoads を使用することができます**@parallel**任意のトレーニング スクリプトを使用しても含め、Microsoft rx ではないアルゴリズムを使用します。 通常、RevoScaleR のアルゴリズムのみ (rx プレフィックス) では、SQL Server のトレーニングのシナリオでの並列処理を提供します。 ただし、新しいパラメーターでその機能エンジニア リングは、オープン ソース R 関数を含む関数を呼び出すスクリプトを並列化できます。 これは、パーティションが特定のスレッド アフィニティに設定するため、特定のスレッドでのパーティションごとにスクリプトで呼び出されるすべての操作を実行するために機能します。
+> トレーニング作業については、Microsoft rx 以外のアルゴリズムを使用している場合でも、任意のトレーニングスクリプトで `@parallel` を使用できます。 通常、SQL Server のトレーニングシナリオでは、RevoScaleR アルゴリズム (rx プレフィックスを持つ) のみが並列処理を提供します。 ただし、新しいパラメーターを使用すると、その機能を使用して特に設計されていないオープンソースの R 関数を含む関数を呼び出すスクリプトを並列化できます。 これは、パーティションが特定のスレッドに関係しているため、スクリプト内で呼び出されるすべての操作はパーティション単位で実行されるため、@ no__t を指定する必要があります。<a name="training-step"></a>
 
-<a name="training-step"></a>
+## <a name="run-the-procedure-and-train-the-model"></a>プロシージャを実行してモデルをトレーニングする
 
-## <a name="run-the-procedure-and-train-the-model"></a>プロシージャを実行し、モデルのトレーニング
+このセクションでは、スクリプトによって、前の手順で作成および保存したモデルをトレーニングします。 次の例は、モデルをトレーニングするための2つの方法を示しています。データセット全体を使用するか、部分的なデータを使用します。 
 
-このセクションでは、スクリプトは、作成し、前の手順で保存したモデルをトレーニングします。 次の例は、モデルのトレーニングの 2 つの方法を示します。 データ セット全体または部分的なデータを使用します。 
-
-この手順は、しばらく時間がかかるを期待してください。 トレーニングが完了する時間 (分) を取得、計算負荷ではありません。 特にメモリは、システム リソースが、負荷のための十分な場合は、データのサブセットを使用します。 2 番目の例では、構文を提供します。
+この手順には時間がかかることが予想されます。 トレーニングはかなりの時間がかかり、完了までに数分かかります。 システムリソース (特にメモリ) が負荷に対して十分でない場合は、データのサブセットを使用します。 2番目の例では、という構文を使用します。
 
 ```sql
 --Example 1: train on entire dataset
@@ -203,22 +200,22 @@ GO
 ```
 
 > [!NOTE]
-> その他のワークロードを実行している場合は、追加`OPTION(MAXDOP 2)`たった 2 個のコアにクエリの処理を制限する場合は、SELECT ステートメントにします。
+> 他のワークロードを実行している場合`OPTION(MAXDOP 2)`は、クエリ処理を2コアのみに制限する場合は、SELECT ステートメントにを追加できます。
 
-## <a name="check-results"></a>チェックの結果
+## <a name="check-results"></a>結果の確認
 
-モデルの表に、結果 5 つの支払いの種類によってセグメント化された 5 つのパーティションに基づいた、5 つの異なるモデルがあります。 モデルは、 **ml_models**データ ソース。
+モデルテーブルの結果は5つの異なるモデルで、5つの支払いの種類でセグメント化された5つのパーティションに基づいている必要があります。 モデルは、 **ml_models**データソースに含まれています。
 
 ```sql
 SELECT *
 FROM ml_models
 ```
  
-## <a name="define-a-procedure-for-predicting-outcomes"></a>結果を予測するためのプロシージャを定義します。
+## <a name="define-a-procedure-for-predicting-outcomes"></a>結果を予測するためのプロシージャを定義する
 
-スコア付けと同じパラメーターを使用できます。 次の例には、現在処理しているパーティションの適切なモデルを使用して、スコア付けする R スクリプトが含まれています。
+同じパラメーターを使用してスコアリングを行うことができます。 次のサンプルには、現在処理中のパーティションに対して正しいモデルを使用してスコア付けする R スクリプトが含まれています。
 
-同様に、R コードをラップするストアド プロシージャを作成します。
+前と同様に、R コードをラップするストアドプロシージャを作成します。
 
 ```sql
 USE NYCTaxi_Sample
@@ -293,7 +290,7 @@ END;
 GO
 ```
 
-## <a name="create-a-table-to-store-predictions"></a>予測を格納するテーブルを作成します。
+## <a name="create-a-table-to-store-predictions"></a>予測を格納するテーブルを作成する
 
 ```sql
 CREATE TABLE prediction_results (
@@ -310,7 +307,7 @@ TRUNCATE TABLE prediction_results
 GO
 ```
 
-## <a name="run-the-procedure-and-save-predictions"></a>プロシージャを実行し、予測の保存
+## <a name="run-the-procedure-and-save-predictions"></a>プロシージャを実行して予測を保存する
 
 ```sql
 INSERT INTO prediction_results (
@@ -326,9 +323,9 @@ EXECUTE [predict_per_partition]
 GO
 ```
 
-## <a name="view-predictions"></a>ビューの予測
+## <a name="view-predictions"></a>予測の表示
 
-予測が格納されるため、結果セットを返す単純なクエリを実行できます。
+予測が格納されるので、単純なクエリを実行して結果セットを返すことができます。
 
 ```sql
 SELECT *
@@ -337,10 +334,10 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは使用して[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)をパーティション分割されたデータの操作を反復処理します。 詳細のストアド プロシージャで外部のスクリプトを呼び出すことを確認し、次のチュートリアルでは、RevoScaleR 関数を使用して続行します。
+このチュートリアルでは、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)を使用して、パーティション分割されたデータに対する操作を反復処理します。 ストアドプロシージャでの外部スクリプトの呼び出しと RevoScaleR 関数の使用の詳細については、次のチュートリアルを参照してください。
 
 > [!div class="nextstepaction"]
-> [R と SQL Server チュートリアル](walkthrough-data-science-end-to-end-walkthrough.md)
+> [R と SQL Server のチュートリアル](walkthrough-data-science-end-to-end-walkthrough.md)
 
 <!--
 ## Old intro

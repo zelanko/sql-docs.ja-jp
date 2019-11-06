@@ -14,28 +14,27 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 629ff63f6fd06aaccc1f60209231f5c937f4a67d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036133"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 関数
 **準拠**  
- ODBC 3.8 にバージョンが導入されています。  
+ バージョンが導入されました。ODBC 3.8  
   
- 標準への準拠: なし  
+ 標準への準拠:なし  
   
  ほとんどの ODBC 3.8 (以降) のドライバーがこの関数を実装することが期待されます。 以外の場合、ドライバーは、呼び出しを**SQLCancelHandle**接続での処理、*処理*パラメーターには、SQLSTATE の IM001、メッセージの SQL_ERROR が返される 'ドライバーでは、この関数はサポートされていません' の呼び出し**SQLCancelHandle**ステートメントとして処理、*処理*パラメーターへの呼び出しにマップされる**SQLCancel**ドライバー マネージャーによって場合に処理できますドライバーの実装**SQLCancel**します。 アプリケーションで使用できます**SQLGetFunctions**ドライバーをサポートしているかを判断する**SQLCancelHandle**します。  
   
- **概要**  
+ **まとめ**  
  **SQLCancelHandle**接続やステートメントの処理を取り消します。 ドライバー マネージャーは、マップへの呼び出し**SQLCancelHandle**への呼び出しに**SQLCancel**とき*HandleType* sql_handle_stmt としては、します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLCancelHandle(  
       SQLSMALLINT  HandleType,  

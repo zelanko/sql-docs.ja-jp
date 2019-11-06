@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
@@ -15,22 +14,22 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9c9bd0573a3a6fa8211324066e86446b85ec0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833703"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>複数フラット ファイル接続マネージャー
   複数フラット ファイル接続マネージャーを使用すると、パッケージで複数のフラット ファイルのデータにアクセスできます。 たとえば、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、フラット ファイル ソースで複数フラット ファイル接続マネージャーを使用できます。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。  
   
  複数フラット ファイル接続マネージャーをパッケージに追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に複数のフラット ファイルの接続を解決する接続マネージャーを作成し、複数フラット ファイル接続マネージャーのプロパティを設定して、複数フラット ファイル接続マネージャーをパッケージの `Connections` コレクションに追加します。  
   
- `ConnectionManagerType`接続マネージャーのプロパティに設定されて`MULTIFLATFILE`します。  
+ 接続マネージャーの `ConnectionManagerType` プロパティは、`MULTIFLATFILE` に設定されます。  
   
  複数フラット ファイル接続マネージャーは、次の方法で構成できます。  
   
@@ -63,19 +62,19 @@ ms.locfileid: "48185664"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[複数フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)  
   
--   [[複数フラット ファイル接続マネージャー エディター&#40;列] ページ&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [[複数フラット ファイル接続マネージャー エディター] ([列] ページ)](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [[複数フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
-## <a name="see-also"></a>参照  
- [フラット ファイル ソース](../data-flow/flat-file-source.md)   
+## <a name="see-also"></a>関連項目  
+ [[フラット ファイル ソース]](../data-flow/flat-file-source.md)   
  [フラット ファイル変換先](../data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41;接続](integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) の接続](integration-services-ssis-connections.md)  
   
   

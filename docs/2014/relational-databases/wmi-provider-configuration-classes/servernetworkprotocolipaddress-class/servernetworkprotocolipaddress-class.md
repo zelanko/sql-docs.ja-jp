@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - ServerNetworkProtocolIPAddress Class
@@ -20,12 +18,12 @@ ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8b248a818366ce1bf1c4fd2214d5c08aad40374b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643378"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress クラス
   [ServerNetworkProtocolIPAddress クラス] servernetworkprotocolipaddress-class.md) は、サーバー ネットワーク プロトコルによってサポートされている IP アドレスを表します。  
@@ -40,7 +38,7 @@ ms.locfileid: "48180498"
   
 -   IP アドレスの有効化および無効化  
   
-## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>関連項目  
+ [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

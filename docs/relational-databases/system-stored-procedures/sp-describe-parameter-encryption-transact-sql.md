@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 377a1e342970e9593b37924c3739ee7a706d5264
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053033"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_describe_parameter_encryption
   
 ## <a name="arguments"></a>引数  
  [ \@tsql =] ' Transact SQL_batch'  
- 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 Nvarchar (n) または nvarchar (max)、transact SQL_batch 可能性があります。  
+ 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 Nvarchar (n) または nvarchar (max)、transact SQL_batch 可能性があります。  
   
  [ \@params =] 'N'parameters  
  *\@params* TRANSACT-SQL バッチには、sp_executesql と同様に、パラメーターの宣言文字列を提供します。 パラメーターには、nvarchar (n) または nvarchar (max) があります。  
@@ -79,8 +78,8 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|結果セット内の行の id。|  
 |**parameter_name**|**sysname**|指定されたパラメーターのいずれかの名前、  *\@params*引数。|  
-|**column_encryption_algorithm**|**tinyint**|パラメーターの列に対して構成されている暗号化アルゴリズムを示すコードに対応します。 現在サポートされている値: 2 **AEAD_AES_256_CBC_HMAC_SHA_256**します。|  
-|**column_encryption_type**|**tinyint**|パラメーターの列に対して構成されている暗号化の種類を示すコードに対応します。 サポートされている値は次のとおりです。<br /><br /> 0 – プレーン テキスト (列は暗号化されません)<br /><br /> 1 – ランダムな暗号化<br /><br /> 2 – 明確な暗号化します。|  
+|**column_encryption_algorithm**|**tinyint**|パラメーターの列に対して構成されている暗号化アルゴリズムを示すコードに対応します。 現在サポートされている値は次のとおりです。2 **AEAD_AES_256_CBC_HMAC_SHA_256**します。|  
+|**column_encryption_type**|**tinyint**|パラメーターの列に対して構成されている暗号化の種類を示すコードに対応します。 サポートされている値は次のとおりです。<br /><br /> 0 - プレーン テキスト (列は暗号化されません)<br /><br /> 1-ランダム化された暗号化<br /><br /> 2-決定論的暗号化します。|  
 |**column_encryption_key_ordinal**|**int**|最初の結果内の行のコードを設定します。 参照先の行、列に対して構成された列暗号化キーの説明、パラメーターに対応しています。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|型の正規化アルゴリズムのバージョン番号。|  
   
@@ -164,7 +163,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted &#40;クライアント開発&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

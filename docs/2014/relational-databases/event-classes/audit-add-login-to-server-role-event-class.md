@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7110f9b234644096a200b4962e80130a01424b1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f957283f2d667a9e75c30fae9d9b45401f06c499
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152433"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62867652"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role イベント クラス
   **Audit Add Login to Server Role** イベント クラスは、固定サーバー ロールにログインが追加されるたび、または固定サーバー ロールからログインが削除されるたびに発生します。 このイベント クラスは **sp_addsrvrolemember** ストアド プロシージャと **sp_dropsrvrolemember** ストアド プロシージャで使用します。  
@@ -44,21 +43,21 @@ ms.locfileid: "48152433"
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**ObjectName**|**nvarchar**|参照されているオブジェクトの名前。|34|はい|  
-|**ObjectType**|**int**|イベントに関係するオブジェクトの種類を表す値。 この値は **sys.objects** カタログ ビューの type 列に対応します。 値については、「 [ObjectType トレース イベント列](objecttype-trace-event-column.md)」を参照してください。|28|はい|  
+|**ObjectType**|**int**|イベントに関係するオブジェクトの種類を表す値。 この値は **sys.objects** カタログ ビューの type 列に対応します。 値については、「 [ObjectType トレース イベント列](objecttype-trace-event-column.md)」を参照してください。|28|[はい]|  
 |**OwnerName**|**nvarchar**|オブジェクト所有者のデータベース ユーザー名。|37|はい|  
 |**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
-|**RoleName**|**nvarchar**|メンバーシップが変更された固定サーバー ロールの名前。|38|はい|  
+|**RoleName**|**nvarchar**|メンバーシップが変更された固定サーバー ロールの名前。|38|[はい]|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|[はい]|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 たとえば、値 1 は権限チェックの成功を示し、値 0 は失敗を示します。|23|はい|  
 |**TargetLoginName**|**nvarchar**|新しいログインの追加など、ログインを対象とする操作で、対象となるログインの名前。|42|はい|  
 |**TargetLoginSid**|**image**|新しいログインの追加など、ログインを対象とする操作で、対象となるログインのセキュリティ識別番号 (SID)。|43|はい|  
-|**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
+|**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|[はい]|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)   

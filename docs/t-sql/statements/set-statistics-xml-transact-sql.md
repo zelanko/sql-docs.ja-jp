@@ -19,15 +19,14 @@ helpviewer_keywords:
 - statements [SQL Server], statistical information
 - XML [SQL Server], statement execution information
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 311212016f42367f90095bf12858210a580b4798
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004711"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ SET STATISTICS XML { ON | OFF }
   
  SET STATISTICS XML では、**sqlcmd** ユーティリティなどのアプリケーション用に、出力が **nvarchar(max)** で返されます。この XML 出力は、他のツールがクエリ プランの情報の表示や処理を行う場合に使用されます。  
   
- SET STATISTICS XML では、情報が XML ドキュメントのセットとして返されます。 SET STATISTICS XML を ON にした後に実行された各ステートメントの情報は、それぞれ 1 つの出力ドキュメントに反映されます。 それぞれのドキュメントには、ステートメントのテキストと、実行ステップの詳細が含まれます。 この出力では、コスト、アクセスしたインデックス、実行された操作の種類、結合順序、物理操作が実行された回数、それぞれの物理操作で作成された行の数など、実行時の情報が示されます。  
+ SET STATISTICS XML では、情報が XML ドキュメントのセットとして返されます。 SET STATISTICS XML ON ステートメントの後の各ステートメントは、それぞれ 1 つの出力ドキュメントに反映されます。 それぞれのドキュメントには、ステートメントのテキストと、実行ステップの詳細が含まれます。 この出力では、コスト、アクセスしたインデックス、実行された操作の種類、結合順序、物理操作が実行された回数、それぞれの物理操作で作成された行の数など、実行時の情報が示されます。  
   
  SET STATISTICS XML による XML 出力用の XML スキーマを含んだドキュメントは、セットアップ時に、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューター上のローカル ディレクトリへコピーされます。 このドキュメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール ファイルと同じドライブ上にあります。場所は次のとおりです。  
   
@@ -58,13 +57,13 @@ SET STATISTICS XML { ON | OFF }
   
  プラン表示スキーマは、[こちらの Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)にもあります。  
   
- SET STATISTICS PROFILE と SET STATISTICS XML は、同時に使用できません。 SET STATISTICS PROFILE ではテキスト形式の出力が生成され、SET STATISTICS XML では XML 形式の出力が生成されます。 将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいクエリ実行プランの情報は STATISTICS XML ステートメントでのみ表示され、SET STATISTICS PROFILE ステートメントでは表示されなくなります。  
+ SET STATISTICS PROFILE と SET STATISTICS XML は、同時に使用できません。 前者ではテキスト形式の出力が生成され、後者では XML 形式の出力が生成されます。 将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいクエリ実行プランの情報は STATISTICS XML ステートメントでのみ表示され、SET STATISTICS PROFILE ステートメントでは表示されなくなります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[実際の実行プランを含める]** を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、**[実際の実行プランを含める]** ボタンの選択を解除してください。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[実際の実行プランを含める]** を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- SET STATISTICS XML を使用して出力を表示するには、次の権限が必要です。  
+ SET STATISTICS XML を使用して出力を表示するには、ユーザーに次の権限が必要です。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限。  
   

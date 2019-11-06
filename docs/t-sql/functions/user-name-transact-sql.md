@@ -21,23 +21,22 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d897561c0514bf2c7af37e375d5b00906e8ac71e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e407ab5ac5e69c78d19a1022210ca8da5e470d64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927593"
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定した識別番号から、データベース ユーザー名を返します。  
+  指定した ID 番号から、データベース ユーザー名を返します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +46,7 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>引数  
  *id*  
- データベース ユーザーに関連付けられている識別番号を指定します。 *id* は **int** です。かっこで囲む必要があります。  
+ データベース ユーザーに関連付けられている識別番号を指定します。 *id* は **int** です。かっこが必要です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar (256)**  
@@ -162,7 +161,5 @@ User7
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
-  
-

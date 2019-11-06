@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a90c1387a609ee59dec93b67e0a48bd2af7baf77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d28d829280e205028a99afd9fec2e019bf567ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089479"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 の非推奨の SQL Server 機能
   このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨となった機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -30,9 +29,9 @@ ms.locfileid: "48129772"
 |データ プログラミング|[sys.endpoint_webmethods &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) または ASP.NET|ネイティブ XML Web サービス|23|  
   
 ### <a name="slipstream-functionality"></a>スリップストリーム機能  
- 製品の更新プログラム機能は、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1 で使用できたスリップストリーム機能に代わるものです。 したがって、スリップストリーム機能に関するコマンド ライン パラメーター /*PCUSource* および /*CUSource*は、使用できなくなりました。 これらのパラメーターは引き続き動作しますが、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップの将来のリリースでは削除される可能性があります。 /*UpdateSource* パラメーターは、スリップストリームのパラメーター /*PCUSource* および /*CUSource*の機能を結合します。  
+ 製品の更新プログラム機能は、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1 で使用できたスリップストリーム機能に代わるものです。 したがって、スリップストリーム機能に関するコマンド ライン パラメーター /*PCUSource* および /*CUSource*は、使用できなくなりました。 これらのパラメーターは引き続き動作しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップの将来のリリースでは削除される可能性があります。 /*UpdateSource* パラメーターは、スリップストリームのパラメーター /*PCUSource* および /*CUSource*の機能を結合します。  
   
- 使用できたスリップ ストリーム機能の詳細については[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1 を参照してください[SQL Server 更新プログラムをスリップ ストリーム](http://go.microsoft.com/fwlink/?LinkId=219945)(http://go.microsoft.com/fwlink/?LinkId=219945)します。  
+ 使用できたスリップ ストリーム機能の詳細については[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1 を参照してください[SQL Server 更新プログラムをスリップ ストリーム](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945) します。  
   
 ## <a name="see-also"></a>参照  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)  

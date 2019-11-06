@@ -1,6 +1,6 @@
 ---
 title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
-ms.date: 11/16/2016
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+author: VanMSFT
+ms.author: vanto
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031525"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  *inputdate* を対応する *datetimeoffset* 値に変換先のタイム ゾーンで変換します。 *inputdate* がオフセット情報なしで与えられる場合、 *inputdate* 値が変換先のタイム ゾーンで与えられるものと想定した上で、この関数はタイム ゾーンのオフセットを適用します。 *inputdate* が *datetimeoffset* 値として与えられる場合、**AT TIME ZONE** 句はタイム ゾーン変換規則を利用して変換先のタイム ゾーンにそれを変換します。  
+  *inputdate* を対応する *datetimeoffset* 値に変換先のタイム ゾーンで変換します。 *inputdate* がオフセット情報なしで提供されると、この関数は、*inputdate* が変換先のタイム ゾーン内であるものと想定して、タイム ゾーンのオフセットを適用します。 *inputdate* が *datetimeoffset* 値として与えられる場合、**AT TIME ZONE** 句はタイム ゾーン変換規則を利用して変換先のタイム ゾーンにそれを変換します。  
   
  **AT TIME ZONE** の実装は、タイム ゾーン間で **datetime** 値を変換する Windows メカニズムに依存します。  
   
@@ -43,10 +43,10 @@ inputdate AT TIME ZONE timezone
  **smalldatetime**、**datetime**、**datetime2**、**datetimeoffset** 値に解決できる式です。  
   
  *timezone*  
- 変換先のタイム ゾーンの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Windows レジストリに格納されているタイム ゾーンに依存します。 コンピューターにインストールされているタイム ゾーンはすべて、レジストリ ハイブ **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones** に格納されています。 インストールされているタイム ゾーンの一覧は [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) ビューでも閲覧できます。  
+ 変換先のタイム ゾーンの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Windows レジストリに格納されているタイム ゾーンに依存します。 コンピューターにインストールされているタイム ゾーンは、次のレジストリ ハイブに格納されています:**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**。 インストールされているタイム ゾーンの一覧は [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) ビューでも閲覧できます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **datetimeoffset** のデータ型を返します  
+ **datetimeoffset** のデータ型を返します。  
   
 ## <a name="return-value"></a>戻り値  
  変換先のタイム ゾーンの **datetimeoffset** 値。  
@@ -54,7 +54,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="remarks"></a>Remarks  
  **AT TIME ZONE** は、データ型 **smalldatetime**、**datetime**、**datetime2** の入力値が DST 変更の影響を受ける時間間隔に分類されるとき、特別な入力値変換ルールを適用します。  
   
--   時計が進んでいると、継続時間が時計調整の継続時間に依存する現地時刻に隔たりが生じます (通常は 1 時間ですが、タイム ゾーンによっては、30 分か 45 分の場合もあります)。 その場合、DST 変更の*後*で、この隔たりに属する時点がオフセットで変換されます。  
+-   時計が進んでいると、現地時刻には時計調整の継続時間と等しい隔たりが存在します。 この継続時間は通常は 1 時間ですが、タイム ゾーンによっては 30 分または 45 分の場合もあります。 DST 変更の "*後*" で、この隔たり内にある時点はオフセットで変換されます。  
   
     ```  
     /*  
@@ -124,7 +124,7 @@ inputdate AT TIME ZONE timezone
 ### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. オフセット情報なしで、変換先のタイム ゾーンのオフセットを datetime に追加する  
  元の **datetime** 値が同じタイム ゾーンで与えられることがわかっているとき、タイム ゾーン ルールに基づいてオフセットを追加するには、**AT TIME ZONE** を使用します。  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -136,21 +136,20 @@ FROM Sales.SalesOrderHeader;
 ### <a name="b-convert-values-between-different-time-zones"></a>B. 異なるタイム ゾーン間で値を変換する  
  次の例では、異なるタイム ゾーン間で値を変更します。  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
 SELECT SalesOrderID, OrderDate,   
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,  
-    OrderDate AT TIME ZONE 'Pacific Standard Time'   
-    AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
+    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
 FROM Sales.SalesOrderHeader;  
 ```  
   
 ### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. ローカル タイム ゾーンでテンポラル テーブルにクエリを実行する  
  次の例では、テンポラル テーブルからデータを選択します。  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -169,5 +168,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## <a name="see-also"></a>参照  
  [日付型と時刻型](../../t-sql/data-types/date-and-time-types.md)   
  [日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

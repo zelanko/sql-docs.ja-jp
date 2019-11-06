@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9970c01b1af46287c9438b2b731af6a1c9e1f44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce1bf24e0f76a7e6d61f2b3bdc3c43c89863d85a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030817"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>ログ配布とレプリケーション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,12 +109,12 @@ ms.locfileid: "47655950"
   
     -   パブリケーションがフィルター選択されていない場合は、最新のサブスクライバーと同期することでパブリケーション データベースを最新の状態に更新できます。  
   
-    -   パブリケーションがフィルター選択されている場合は、パブリケーションを最新の状態に更新できない場合があります。 たとえば、各サブスクリプションが 1 つの地域 (北、東、南、西のいずれか) の顧客データのみを受信できるようにパーティション分割されているテーブルがあるとします。 データの各パーティションに 1 つ以上のサブスクライバーがある場合、各パーティションのサブスクライバーと同期することにより、パブリケーション データベースを最新の状態に更新できます。 ただし、たとえば、西パーティションのデータがすべてのサブスクライバーにレプリケートされていない場合は、パブリッシャーでこのデータを最新の状態に更新することはできません。 この場合、パブリッシャーとサブスクライバーのデータが集約するように、すべてのサブスクリプションを再初期化することをお勧めします。 詳細については、「 [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
+    -   パブリケーションがフィルター選択されている場合は、パブリケーションを最新の状態に更新できない場合があります。 各サブスクリプションが 1 つの地域の顧客データのみを受信できるようにパーティション分割されているテーブルがあるとします。北、東、南、西のいずれかです。 データの各パーティションに 1 つ以上のサブスクライバーがある場合、各パーティションのサブスクライバーと同期することにより、パブリケーション データベースを最新の状態に更新できます。 ただし、たとえば、西パーティションのデータがすべてのサブスクライバーにレプリケートされていない場合は、パブリッシャーでこのデータを最新の状態に更新することはできません。 この場合、パブリッシャーとサブスクライバーのデータが集約するように、すべてのサブスクリプションを再初期化することをお勧めします。 詳細については、「 [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションはクライアント サブスクリプションまたはサーバー サブスクリプション (以前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。 詳細については、「 [データの同期](../../relational-databases/replication/synchronize-data.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション機能とタスク](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   

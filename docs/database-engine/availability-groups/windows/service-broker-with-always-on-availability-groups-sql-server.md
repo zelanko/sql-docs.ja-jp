@@ -12,24 +12,18 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7f544983e1d34073cfe681a614d7d4808b45cd3c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: af4b4279ba9b4653e01f88daca5c2895597fa2f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014123"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker と Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で Service Broker を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と共に使用できるように構成する方法について説明します。  
   
- **このトピックの内容**  
-  
--   [可用性グループのサービスでリモート メッセージを受信するための要件](#ReceiveRemoteMessages)  
-  
--   [可用性グループのリモート サービスにメッセージを送信するための要件](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> 可用性グループのサービスでリモート メッセージを受信するための要件  
   

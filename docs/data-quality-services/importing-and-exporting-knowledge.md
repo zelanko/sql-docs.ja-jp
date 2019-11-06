@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f5d961931ca85eae1eead3a51eadbecd467bfff3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: 8f7c0f8997973cf73df5afd1dbe43b5971060799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935255"
 ---
 # <a name="importing-and-exporting-knowledge"></a>ナレッジのインポートとエクスポート
 

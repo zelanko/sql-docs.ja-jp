@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067558"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>時系列予測での更新後のデータの使用 (中級者向けデータ マイニング チュートリアル)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185492"
   
     4.  数量フィールドをドラッグしてから、**マイニング モデルの**ペイン、**条件と引数**列。  
   
-    5.  **条件と引数**列で、フィールド名の後に次のテキストを入力: **5, EXTEND_MODEL_CASES**  
+    5.  **条件と引数**列で、フィールド名の後に次のテキストを入力します。**5, EXTEND_MODEL_CASES**  
   
          テキストの全文、**条件と引数**テキスト ボックスに次のようにする必要があります。 `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -103,6 +102,6 @@ ms.locfileid: "48185492"
   
 ## <a name="see-also"></a>参照  
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [タイム シリーズ モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

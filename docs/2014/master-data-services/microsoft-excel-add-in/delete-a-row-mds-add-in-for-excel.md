@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d2b4ae7bd8bfb900d401f5e5d5846900c9d60df1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482679"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>行の削除 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、ユーザーがあるデータ行 (メンバー) を使用できないようにするには、そのメンバーを MDS リポジトリから削除します。  
@@ -39,7 +38,7 @@ ms.locfileid: "48050059"
   
 3.  確認のダイアログ ボックスで **[はい]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データのパブリッシュ&#40;MDS アドインの Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

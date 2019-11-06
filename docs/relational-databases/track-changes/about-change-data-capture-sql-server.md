@@ -1,6 +1,6 @@
 ---
 title: 変更データ キャプチャについて (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fd94fae8b2e66cec1d82e8548f00c27455e4e737
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058116"
 ---
 # <a name="about-change-data-capture-sql-server"></a>変更データ キャプチャについて (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   変更データ キャプチャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに対して適用された挿入、更新、削除の各アクティビティを記録して、 変更の詳細を、利用しやすいリレーショナル形式で格納します。 変更された行に対応する列情報が、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされ、追跡対象となるソース テーブルの列構造がミラー化された変更テーブルに格納されます。 コンシューマーは、用意されているテーブル値関数を使用して、変更データに体系的にアクセスできます。  
   
  この技術の対象となるデータ コンシューマーの好例が、ETL (抽出、変換、読み込み) アプリケーションです。 ETL アプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース テーブルからデータ ウェアハウスやデータ マートに変更データをインクリメンタルに読み込みます。 ソース テーブルの変更をデータ ウェアハウス内のソース テーブルの表現に反映する必要がありますが、ソースのレプリカを更新するエンド ツー エンドのテクノロジでは不適切です。 ここで必要となるのは、対象となる異質なデータ表現に対して適用できるように構成された変更データの確実なストリームです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変更データ キャプチャはこの技術を提供します。  
@@ -37,14 +36,14 @@ ms.locfileid: "52402747"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>変更データ キャプチャとキャプチャ インスタンスについて  
  データベース内の個々のテーブルの変更を追跡するには、まずそのデータベースで変更データ キャプチャを明示的に有効にする必要があります。 これは、 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)ストアド プロシージャを使用して実行します。 データベースを有効にした後、 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)ストアド プロシージャを使用して、ソース テーブルを追跡対象テーブルとして指定できます。 テーブルに対して変更データ キャプチャを有効にすると、関連付けられたキャプチャ インスタンスが作成されます。これにより、ソース テーブルの変更データの伝播がサポートされます。 キャプチャ インスタンスは、1 つの変更テーブルと、最大 2 つのクエリ関数で構成されます。 キャプチャ インスタンスの構成の詳細を記述するメタデータは、変更データ キャプチャのメタデータ テーブル ( **cdc.change_tables**、 **cdc.index_columns**、および **cdc.captured_columns**) に保持されます。 この情報を取得するには、 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)ストアド プロシージャを使用します。  
   
- キャプチャ インスタンスに関連付けられているオブジェクトはすべて、有効にされたデータベースの変更データ キャプチャ スキーマに作成されます。 キャプチャ インスタンスの名前は、データベースのキャプチャ インスタンス間で重複しない有効なオブジェクト名である必要があります。 既定の名前は、\<*スキーマ名*_ソース テーブルの *テーブル名*> です。 関連付けられている変更テーブルの名前は、キャプチャ インスタンス名の末尾に **_CT** を付けた名前になります。 すべての変更のクエリを実行する関数の名前は、キャプチャ インスタンス名の先頭に **fn_cdc_get_all_changes_** を付けた名前になります。 キャプチャ インスタンスが **net changes** をサポートするように構成されている場合は、**net_changes** クエリ関数も作成されます。この関数の名前は、キャプチャ インスタンス名の先頭に **fn_cdc_get_net_changes\_** を付けた名前になります。  
+ キャプチャ インスタンスに関連付けられているオブジェクトはすべて、有効にされたデータベースの変更データ キャプチャ スキーマに作成されます。 キャプチャ インスタンスの名前は、データベースのキャプチャ インスタンス間で重複しない有効なオブジェクト名である必要があります。 既定の名前は、ソース テーブルの \<*スキーマ名*\_*テーブル名*> です。 関連付けられている変更テーブルの名前は、キャプチャ インスタンス名の末尾に **_CT** を付けた名前になります。 すべての変更のクエリを実行する関数の名前は、キャプチャ インスタンス名の先頭に **fn_cdc_get_all_changes_** を付けた名前になります。 キャプチャ インスタンスが **net changes** をサポートするように構成されている場合は、**net_changes** クエリ関数も作成されます。この関数の名前は、キャプチャ インスタンス名の先頭に **fn_cdc_get_net_changes\_** を付けた名前になります。  
   
 ## <a name="change-table"></a>変更テーブル  
  変更データ キャプチャの変更テーブルの最初の 5 つの列は、メタデータ列です。 これらは、記録された変更に関係する追加情報を提供します。 残りの列には、識別されたソース テーブルのキャプチャ対象列の名前 (および通常は型) が反映されます。 これらの列は、ソース テーブルから収集されたキャプチャ対象列のデータを保持します。  
   
  ソース テーブルに適用された挿入または削除の各操作は、変更テーブル内の 1 つの行として表されます。 挿入操作の結果となる行のデータ列には挿入後の列の値が含まれ、 削除操作の結果となる行のデータ列には削除前の列の値が含まれます。 更新操作では、更新前の列の値を識別する行と更新後の列の値を識別する行の 2 つの行エントリが必要になります。  
   
- 変更テーブルの各行には、変更アクティビティの解釈に使用される追加のメタデータも含まれています。 __$start_lsn 列は、変更に割り当てられたコミット ログ シーケンス番号 (LSN) を識別します。 コミット LSN では、同じトランザクション内でコミットされた変更が識別されるだけでなく、それらのトランザクションが順序付けられます。 \_\_$seqval 列は、同じトランザクション内で発生したさらに多くの変更を順序付けるために使用できる列です。 \_\_$operation 列は、変更に関連付けられている操作を記録します (1 = 削除、2 = 挿入、3 = 更新 (前イメージ)、4 = 更新 (後イメージ))。 \_\_$update_mask 列は、キャプチャ対象列ごとに 1 つのビットを定義する可変ビット マスクです。 挿入と削除のエントリでは常にすべてのビットが設定されます。 更新の行では、変更された列に対応するビットのみが設定されます。  
+ 変更テーブルの各行には、変更アクティビティの解釈に使用される追加のメタデータも含まれています。 __$start_lsn 列は、変更に割り当てられたコミット ログ シーケンス番号 (LSN) を識別します。 コミット LSN では、同じトランザクション内でコミットされた変更が識別されるだけでなく、それらのトランザクションが順序付けられます。 \_\_$seqval 列は、同じトランザクション内で発生したさらに多くの変更を順序付けるために使用できる列です。 \_\_$operation 列は、変更に関連付けられている操作を記録します(1 = 削除、2 = 挿入、3 = 更新 (前イメージ)、4 = 更新 (後イメージ))。 \_\_$update_mask 列は、キャプチャ対象列ごとに 1 つのビットを定義する可変ビット マスクです。 挿入と削除のエントリでは常にすべてのビットが設定されます。 更新の行では、変更された列に対応するビットのみが設定されます。  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>データベースの変更データ キャプチャの有効期間  
  データベースの変更データ キャプチャの有効期間とは、キャプチャ インスタンスが変更データを利用できる期間です。 この有効期間は、データベース テーブルに対して最初のキャプチャ インスタンスが作成されたときに始まり、現在まで続きます。  
@@ -119,7 +118,7 @@ ms.locfileid: "52402747"
 
 たとえば、SQL_Latin1_General_CP1_CI_AS の照合順序を使用するデータベースがある場合について、次のようなテーブルを考えます。
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
@@ -127,7 +126,7 @@ CREATE TABLE T1(
 
 列 C2 の照合順序が異なるので (Chinese_PRC_CI_AI)、この列に対するバイナリ データの CDC は失敗する可能性があります。 この問題を回避するには、NVARCHAR を使用します。
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)

@@ -11,18 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a9b4ed404af053aabee7aff256037fa6b948c932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856480"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903910"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "47856480"
 3.  このページのフィールドの詳細については、「 [リソース ガバナー プロパティ](#RGProp)」を参照してください。  
   
 4.  変更を保存するには、 **[OK]** をクリックします。  
-  
+
 ##  <a name="RGProp"></a> Resource Governor properties  
  **[分類子関数の名前]**  
  分類子関数を一覧から選択して指定します。  
@@ -71,9 +70,9 @@ ms.locfileid: "47856480"
  チェック ボックスをオンまたはオフにしてリソース ガバナーを有効または無効にします。  
   
  **[リソース プール]**  
- 提供されるグリッドを使用して、リソース プールおよび外部リソース プールの構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク (**\***) が付いている行をクリックします。  
+ 提供されるグリッドを使用して、リソース プールおよび外部リソース プールの構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **名前**  
+ **[名前]**  
  リソース プールの名前を指定します。  
   
  **[最小 CPU %]**  
@@ -91,9 +90,9 @@ ms.locfileid: "47856480"
  詳細については、「[CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)」および「[CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)」を参照してください。  
   
  **[リソース プールのワークロード グループ]**  
- 提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク (**\***) が付いている行をクリックします。  
+ 提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **名前**  
+ **[名前]**  
  ワークロード グループの名前を指定します。  
   
  **重要度**  

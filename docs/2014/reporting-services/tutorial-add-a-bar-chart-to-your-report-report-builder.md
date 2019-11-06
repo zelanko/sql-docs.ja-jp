@@ -1,24 +1,23 @@
 ---
-title: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099199"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)
   横棒グラフでは、カテゴリ データが水平方向に表示されます。 これは、次のようなことに役立ちます。  
   
 -   長いカテゴリ名を読みやすくする。  
@@ -55,11 +54,11 @@ ms.locfileid: "48106802"
 10. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データセットの作成、データ ソースの選択に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データセットの作成、およびデータ ソースの選択に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
- このチュートリアルの推定所要時間: 15 分  
+ このチュートリアルの推定所要時間:15 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="Chart"></a> 1.グラフ ウィザードからグラフ レポートを作成する  
@@ -70,7 +69,7 @@ ms.locfileid: "48106802"
   
 #### <a name="to-create-a-new-chart-report"></a>新しいグラフ レポートを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "48106802"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
+8.  (省略可) [実行] ボタン ( **!** ) をクリックして、グラフの基になるデータを確認します。  
   
 9. **[次へ]** をクリックします。  
   
@@ -122,11 +121,11 @@ ms.locfileid: "48106802"
   
 2.  **[横棒]** をクリックし、 **[次へ]** をクリックします。  
   
-     **グラフのフィールドの配置** ページで、4 つのフィールドがある、**使用可能なフィールド**ペイン: FirstName、LastName、SalesYear2009、および SalesYear2008 します。  
+     **[グラフのフィールドの配置]** ページでは、 **[使用できるフィールド]** ペインに 4 つのフィールドFirstName、LastName、SalesYear2009、および SalesYear2008 します。  
   
 3.  LastName をカテゴリ ペインにドラッグします。  
   
-4.  SalesYear2009 を値ペインにドラッグします。 SalesYear2009 は、2009 年の各販売員の売上高を表します。 各製品の集計がグラフに表示されるため、値ペインには "`[Sum(SalesYear2009)]`" と表示されます。  
+4.  SalesYear2009 を値ペインにドラッグします。 SalesYear2009 は、2009 年の各販売員の売上高を表します。 各製品の集計がグラフに表示されるため、値ペインには " `[Sum(SalesYear2009)]` " と表示されます。  
   
 5.  SalesYear2008 を、値ペインの SalesYear2009 の下にドラッグします。 SalesYear2008 は、2008 年の各販売員の売上高を表します。  
   
@@ -146,7 +145,7 @@ ms.locfileid: "48106802"
   
  2008 年と 2009 年の各販売員の売上を示す横棒グラフがレポートに表示されます。 横棒の長さは、売上総額に対応します。  
   
-##  <a name="AllValues"></a> 3.縦軸の名前の表示を変更する  
+##  <a name="AllValues"></a> 3.縦軸に表示名の表示を変更します。  
  既定では、縦軸の値の一部のみが表示されます。 すべてのカテゴリを表示するようにグラフを変更できます。  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>横棒グラフのカテゴリ軸に沿ってすべての販売員を表示するには  
@@ -194,7 +193,7 @@ ms.locfileid: "48106802"
 > [!NOTE]  
 >  縦軸に表示される販売員の名前が読みにくい場合は、グラフを縦方向に大きくするか、軸ラベルの形式オプションを変更します。  
   
-##  <a name="Sort"></a> 4.縦軸に表示される名前を並べ替える  
+##  <a name="Sort"></a> 4.縦軸に表示名の並べ替え順序を変更します。  
  グラフのデータを並べ替えると、カテゴリ軸の値の順序が変更されます。  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>横棒グラフで名前をアルファベット順に並べ替えるには  
@@ -213,7 +212,7 @@ ms.locfileid: "48106802"
   
 7.  **[OK]** をクリックします。  
   
-8.  戻り、**カテゴリ グループのプロパティ**ページで、**順序**ドロップダウン リストで、 **z から A**します。アルファベットの逆順が選択され、名前が降順に表示されます。  
+8.  戻り、**カテゴリ グループのプロパティ**ページで、**順序**ドロップダウン リストで、 **z から A**します。名前に表示されるようにの順序で上から下にアルファベットの逆順を選択します。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -246,7 +245,7 @@ ms.locfileid: "48106802"
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  単語を選択します。**グラフのタイトル**グラフ、および入力し、次のテキストの上部にある: **Sales for 2008 and 2009**します。  
+2.  単語を選択します。**グラフのタイトル**グラフ、および入力し、次のテキストの上部にあります。**Sales for 2008 and 2009**します。  
   
 3.  テキスト外の任意の場所をクリックします。  
   
@@ -279,7 +278,7 @@ ms.locfileid: "48106802"
   
  レポートの横軸に売上高が千単位の通貨で表示され、小数点以下の桁が省略されます。  
   
-##  <a name="Filter"></a> 8。フィルターを追加して上位 5 件の値を表示する  
+##  <a name="Filter"></a> 8.フィルターを追加して上位 5 件の値を表示する  
  グラフにフィルターを追加して、データセットのどのデータをグラフに含め、どのデータをグラフに含めないかを指定できます。  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>フィルターを追加して上位 5 件の値を表示するには  
@@ -294,7 +293,7 @@ ms.locfileid: "48106802"
   
 5.  **[追加]** をクリックします。 新しい空のフィルターが表示されます。  
   
-6.  **式**、型 **[Sum(SalesYear2009)]** します。 これは、基になる式を作成します。 `=Sum(Fields!SalesYear2009.Value)`、クリックする場合に表示されています、 **fx**ボタンをクリックします。  
+6.  **式**、型 **[Sum(SalesYear2009)]** します。 基になる式 `=Sum(Fields!SalesYear2009.Value)`が作成され、この式は **[fx]** ボタンをクリックすると表示できます。  
   
 7.  データ型が **Text**であることを確認します。  
   
@@ -310,7 +309,7 @@ ms.locfileid: "48106802"
   
  グラフに、2009 年の売上データから取得された上位 5 人の販売員の名前が表示されます。  
   
-##  <a name="Title"></a> 9 です。レポート タイトルを追加する  
+##  <a name="Title"></a> 9.レポート タイトルを追加する  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
   
@@ -332,7 +331,7 @@ ms.locfileid: "48106802"
   
 6.  **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Save"></a> 10。レポートを保存する  
+##  <a name="Save"></a> 10.レポートを保存する  
   
 #### <a name="to-save-the-report"></a>レポートを保存するには  
   
@@ -349,7 +348,7 @@ ms.locfileid: "48106802"
 ## <a name="next-steps"></a>次の手順  
  これで、「レポートへの横棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)   
  [SQL Server 2014 のレポート ビルダー](report-builder/report-builder-in-sql-server-2016.md)  
   

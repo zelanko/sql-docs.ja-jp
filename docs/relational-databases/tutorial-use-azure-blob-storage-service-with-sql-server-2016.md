@@ -1,7 +1,7 @@
 ---
-title: 'チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用 | Microsoft Docs'
+title: チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/07/2016
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,15 +14,15 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ea8d28fafe8b4812b3e2cfd55c03640e46cd7ab2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302845"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906965"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Microsoft Azure Blob Storage サービスでの SQL Server 2016 の使用に関するチュートリアルへようこそ。 このチュートリアルは、Microsoft Azure Blob Storage サービスを SQL Server データ ファイルや SQL Server バックアップに使用する方法を理解するのに役立ちます。  
   
@@ -30,7 +30,8 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
 
 このチュートリアルでは、複数のセクションに分けて、Microsoft Azure Blob Storage サービス上で SQL Server データ ファイルを使用する方法を説明します。 各セクションでは特定のタスクに重点を置いており、セクションは順番に完了する必要があります。 まず、格納済みアクセス ポリシーと Shared Access Signature で Blob ストレージに新しいコンテナーを作成する方法を学習します。 次に、SQL Server を Azure Blob Storage と統合するための SQL Server 資格情報を作成する方法を学習します。 さらに、Blob ストレージにデータベースをバックアップし、Azure の仮想マシンに復元します。 SQL Server 2016 のファイル スナップショットのトランザクション ログ バックアップを使用して、特定の時点、または新しいデータベースに復元することができます。 最後に、このチュートリアルでは、ファイル スナップショットのバックアップについて理解し、使用できるようにするために、メタ データ システムのストアド プロシージャと関数の使用方法を紹介します。
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisites
+
 このチュートリアルを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念と T-SQL 構文についての知識が必要です。 このチュートリアルを使用するには、Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、オンプレミスの SQL Server のインスタンスへのアクセス、SQL Server 2016 を実行している Azure 仮想マシン (VM) へのアクセス、および AdventureWorks2016 データベースが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、**alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
 
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
@@ -40,8 +41,9 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 - [AdventureWorks2016 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
 - ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
- 
+
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 格納済みアクセス ポリシーと共有アクセス ストレージを作成する
+
 このセクションでは [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) スクリプトを使用して、Azure BLOB コンテナーに格納済みアクセス ポリシーを使用した Shared Access Signature を作成します。  
   
 > [!NOTE]  
@@ -69,12 +71,12 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
   
 1.  Window PowerShell または Windows PowerShell ISE (前述のバージョン要件を参照してください) を開きます。  
   
-2.  b のスクリプトを編集してから、実行します。  
+2.  以下のスクリプトを編集してから、実行します。  
   
     ```powershell
     # Define global variables for the script  
     $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
-    $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
+    $subscriptionID = '<your subscription ID>'   # the ID  of subscription name you will use  
     $locationName = '<a data center location>'  # the data center region you will use  
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
@@ -84,35 +86,35 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
     $resourceGroupName=$prefixName + 'rg'   
   
     # Add an authenticated Azure account for use in the session   
-    Login-AzureRmAccount    
+    Connect-AzAccount    
   
     # Set the tenant, subscription and environment for use in the rest of   
-    Set-AzureRmContext -SubscriptionId $subscriptionID   
+    Set-AzContext -SubscriptionId $subscriptionID   
   
     # Create a new resource group - comment out this line to use an existing resource group  
-    New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
+    New-AzResourceGroup -Name $resourceGroupName -Location $locationName   
   
     # Create a new Azure Resource Manager storage account - comment out this line to use an existing Azure Resource Manager storage account  
-    New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+    New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
   
     # Get the access keys for the Azure Resource Manager storage account  
-    $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+    $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
-    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
+    $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
     # Creates a new container in blob storage  
-    $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+    $container = New-AzStorageContainer -Context $storageContext -Name $containerName  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+    $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
 
     # Gets the Shared Access Signature for the policy  
-    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
+    $sas = New-AzStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
     # Sets the variables for the new container you just created
-    $container = Get-AzureStorageContainer -Context $storageContext -Name $containerName
+    $container = Get-AzStorageContainer -Context $storageContext -Name $containerName
     $cbc = $container.CloudBlobContainer 
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
@@ -122,13 +124,14 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
     Write-Host $tSql 
 
     # Once you're done with the tutorial, remove the resource group to clean up the resources. 
-    # Remove-AzureRmResourceGroup -Name $resourceGroupName  
+    # Remove-AzResourceGroup -Name $resourceGroupName  
     ```  
 
 3.  スクリプトが完了すると、CREATE CREDENTIAL ステートメントがクリップボード上にあるため、次のセクションで使用できます。  
 
 
 ## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2 - Shared Access Signature を使用して SQL Server 資格情報を作成する
+
 このセクションでは、前の手順で作成した Azure コンテナーに対して読み書きを行うために SQL Server で使用するセキュリティ情報を格納するための資格情報を作成します。  
   
 SQL Server 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。 資格情報には、ストレージ コンテナーの URI パスと、このコンテナーの Shared Access Signature が格納されます。  
@@ -143,17 +146,21 @@ SQL Server 資格情報を作成するには、次の手順を実行します。
     スクリプトは、次のコードのようになります。  
   
     ```sql   
+    /* Example:
     USE master  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
-
+    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] 
+    WITH IDENTITY='SHARED ACCESS SIGNATURE'   
+    , SECRET = 'sharedaccesssignature' 
+    GO */
+    
     USE master  
-    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      -- this name must match the container path, start with https and must not contain a forward slash at the end
+    WITH IDENTITY='SHARED ACCESS SIGNATURE' 
+      -- this is a mandatory string and should not be changed   
+     , SECRET = 'sharedaccesssignature' 
+       -- this is the shared access signature key that you obtained in section 1.   
+    GO    
     ```  
   
 4.  使用可能なすべての資格情報を表示するには、インスタンスに接続されたクエリ ウィンドウで次のステートメントを実行できます。  
@@ -169,6 +176,7 @@ SQL Server 資格情報を作成するには、次の手順を実行します。
 7.  Azure コンテナーにアクセスするようにしたい SQL Server インスタンスが他にもある場合は、手順 5. と手順 6. を繰り返します。  
 
 ## <a name="3---database-backup-to-url"></a>3 - URL にデータベースをバックアップする
+
 このセクションでは、オンプレミスの SQL Server 2016 インスタンス内の AdventureWorks2016 データベースを、[セクション 1](#1---create-stored-access-policy-and-shared-access-storage) で作成した Azure コンテナーにバックアップします。
   
 > [!NOTE]  
@@ -200,6 +208,7 @@ BLOB ストレージにデータベースをバックアップするには、次
 
 
 ## <a name="4----restore-database-to-virtual-machine-from-url"></a>4 - URL から仮想マシンにデータベースを復元する
+
 このセクションでは、Azure 仮想マシン内の SQL Server 2016 インスタンスに AdventureWorks2016 データベースを復元します。
   
 > [!NOTE]  
@@ -235,7 +244,8 @@ Azure Blob Storage から Azure 仮想マシン内の SQL Server 2016 インス�
   
    ![Azure 上のコンテナー内のデータ ファイル](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-# <a name="5---backup-database-using-file-snapshot-backup"></a>5 - ファイル スナップショット バックアップを使用してデータベースをバックアップする
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5 - ファイル スナップショット バックアップを使用してデータベースをバックアップする
+
 このセクションでは、Azure のスナップショットを使用して、ファイル スナップショット バックアップによって AdventureWorks2016 データベースを Azure 仮想マシンにバックアップし、ほぼ瞬時にバックアップを行います。 ファイル スナップショット バックアップの詳細については、「 [Azure でのデータベース ファイルのスナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
 ファイル スナップショット バックアップを使用して AdventureWorks2016 データベースをバックアップするには、次の手順に従います。  
@@ -275,6 +285,7 @@ Azure Blob Storage から Azure 仮想マシン内の SQL Server 2016 インス�
     ![Azure へのスナップショット バックアップ](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
 ## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6 - アクティビティを生成し、ファイル スナップショット バックアップを使用してログをバックアップする
+
 このセクションでは、AdventureWorks2016 データベースにアクティビティを生成し、ファイル スナップショット バックアップを使用してトランザクション ログ バックアップを定期的に作成します。 ファイル スナップショット バックアップの使用の詳細については、 [「Azure でのデータベース ファイルのスナップショット バックアップ」](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)を参照してください。  
   
 AdventureWorks2016 データベースにアクティビティを生成し、ファイル スナップショット バックアップを使用してトランザクション ログ バックアップを定期的に作成するには、次の手順を実行します。  
@@ -340,6 +351,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
     ![Azure コンテナー内の複数のスナップショット](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## <a name="7---restore-a-database-to-a-point-in-time"></a>7 - 特定の時点にデータベースを復元する
+
 このセクションでは、2 つのトランザクション ログ バックアップ間の特定の時点に AdventureWorks2016 データベースを復元します。  
   
 従来のバックアップの場合、ポイント イン タイム リストアを実行するには、復元する時点までの、およびその直後の完全なデータベース バックアップ (場合によっては差分バックアップ) とすべてのトランザクション ログ ファイルを使用する必要がありました。 ファイルスナップショット バックアップの場合、復元先の時点を枠内に入れたゴール ポストを設定する 2 つの隣接するログ バックアップ ファイルを必要とするだけです。 各ログ バックアップによって各データベース ファイルのファイル スナップショット (各データ ファイルとログ ファイル) が作成されるので、ログ ファイル スナップショット バックアップ セットが 2 つ必要なだけです。  
@@ -378,6 +390,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
 ## <a name="8----restore-as-new-database-from-log-backup"></a>8 - ログ バックアップから新しいデータベースとして復元する
+
 このセクションでは、ファイル スナップショットのトランザクション ログ バックアップから、新しいデータベースとして AdventureWorks2016 データベースを復元します。  
   
 このシナリオでは、ビジネス分析やレポートのために、別の仮想マシン上の SQL Server インスタンスに復元を実行します。 別の仮想マシン上の別のインスタンスに復元することによって、この目的に合わせてサイズ調整された専用の仮想マシンにワークロードをオフロードし、トランザクション システムからリソース要件を削除することができます。  
@@ -411,6 +424,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
     ![新しいデータベースのデータとログ ファイルを表示している Azure コンテナー](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
 ## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9 - バックアップ セットとファイル スナップショット バックアップを管理する
+
 このセクションでは、[sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) システム ストアド プロシージャを使用してバックアップ セットを削除します。 このシステム ストアド プロシージャは、このバックアップ セットに関連付けられている各データベース ファイルのバックアップ ファイルおよびスナップショット ファイルを削除します。  
   
 > [!NOTE]  
@@ -440,6 +454,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
     ![2 つのファイル スナップショットが削除されたことを示す詳細ウィンドウ](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## <a name="10---remove-resources"></a>10 - リソースの削除
+
 このチュートリアルを完了したら、リソースを節約するために、このチュートリアルで作成したリソース グループを削除してください。 
 
 リソース グループを削除するには、次の powershell コードを実行します。
@@ -452,18 +467,19 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
   $resourceGroupName=$prefixName + 'rg'   
   
   # Adds an authenticated Azure account for use in the session   
-  Login-AzureRmAccount    
+  Connect-AzAccount    
   
   # Set the tenant, subscription and environment for use in the rest of   
-  Set-AzureRmContext -SubscriptionId $subscriptionID    
+  Set-AzContext -SubscriptionId $subscriptionID    
     
   # Remove the resource group
-  Remove-AzureRmResourceGroup -Name $resourceGroupName   
+  Remove-AzResourceGroup -Name $resourceGroupName   
   ```
 
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
 [Microsoft Azure 内の SQL Server データ ファイル](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 

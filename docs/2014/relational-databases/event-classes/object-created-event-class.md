@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ae6c6d63527a3d5dc817607270d4cb63dcaf315
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0588bdced4d8d11111b02eb7d6a1e1a892d1acb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023931"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created イベント クラス
   Object:Created イベント クラスは、CREATE INDEX、CREATE TABLE、CREATE DATABASE などのステートメントによって、オブジェクトが作成されたことを示します。  
@@ -41,11 +40,11 @@ ms.locfileid: "48091464"
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IndexID|`int`|イベントの影響を受けるオブジェクトに付けられたインデックス用の ID。 オブジェクトのインデックス ID を特定するには、sys.indexes カタログ ビューの index_id 列を使用します。|24|はい|  
-|IntegerData|`int`|トレースでキャプチャされたイベント クラスに依存する整数値。|25|はい|  
+|IntegerData|`int`|トレースでキャプチャされたイベント クラスに依存する整数値。|25|[はい]|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
 |LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
-|NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
+|NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|[はい]|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ObjectID|`int`|システムによって割り当てられたオブジェクト ID。|22|はい|  
 |ObjectID2|`bigint`|関連するオブジェクトまたはエンティティの ID|56|はい|  
@@ -59,7 +58,7 @@ ms.locfileid: "48091464"
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

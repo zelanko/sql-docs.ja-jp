@@ -1,9 +1,7 @@
 ---
 title: PolyBase スケールアウト グループ | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +9,16 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412639"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710470"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase スケールアウト グループ
 
@@ -46,7 +45,7 @@ PolyBase を使用するスタンドアロンの SQL Server インスタンス�
 たとえば、SQL Server の外部テーブルに月ごとに 12 のパーティションがあり、3 つのノードの PolyBase スケールアウト グループがあるとします。各ノードは、12 のそれぞれのパーティションの処理に 4 つの PolyBase リーダーを使用します。 これを次の図で示します。 
 
 > [!NOTE]
- これは Hadoop を介したスケールアウト読み取りとは異なります。 
+>  これは Hadoop を介したスケールアウト読み取りとは異なります。 
 
 ![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase スケールアウト グループ")
   

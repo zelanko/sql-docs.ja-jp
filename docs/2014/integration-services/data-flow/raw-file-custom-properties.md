@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b115edd3e8addbedc60c0c37b4ea014a3123909
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900902"
 ---
 # <a name="raw-file-custom-properties"></a>RAW ファイルのカスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -44,7 +43,7 @@ ms.locfileid: "48098224"
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|FileName プロパティにファイル名を含めるか、またはファイル名が含まれる変数名を含めるかを指定する値。 使用できるオプションは、`File name` (0) および `File name from variable` (1) です。|  
 |FileName|String|RAW ファイル変換先が書き込むファイルの名前。|  
-|WriteOption|Integer (列挙)|RAW ファイル変換先が、同じ名前の既存のファイルを削除するかどうかを指定する値。 オプションを`Create Always`(0)、 `Create Once` (1) `Truncate and Append` (3) と`Append`(2)。 このプロパティの既定値は`Create Always`(0)。|  
+|WriteOption|Integer (列挙)|RAW ファイル変換先が、同じ名前の既存のファイルを削除するかどうかを指定する値。 使用できるオプションは、`Create Always` (0)、`Create Once` (1)、`Truncate and Append` (3)、および `Append` (2) です。 このプロパティの既定値は `Create Always` (0) です。|  
   
 > [!NOTE]  
 >  追加操作では、追加するデータのメタデータが、ファイル内の既存データのメタデータと一致している必要があります。  
@@ -54,6 +53,6 @@ ms.locfileid: "48098224"
  詳細については、「 [RAW ファイル変換先](raw-file-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

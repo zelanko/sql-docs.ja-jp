@@ -16,16 +16,15 @@ helpviewer_keywords:
 - DENY statement, database scoped credentials
 - denying permissions [SQL Server], database scoped credential
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4074d587bd170351c00a71bca81f6169b1cc021f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bbcf7c136bfe9ff80b1ea9129e5c6d453aec9e01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114861"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY (データベース スコープの資格情報の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ DENY permission  [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  *permission*  
- データベース スコープの資格情報で拒否できる権限を指定します。 下の表をご覧ください。  
+ データベース スコープの資格情報で拒否できる権限を指定します。 以下に一覧を示します。  
   
- ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
+ ON DATABASE SCOPED CREDENTIAL **::** _credential_name_  
  権限を拒否するデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

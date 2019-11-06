@@ -19,16 +19,15 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0572f9ef57b5d1ba17383cf758f612b0c6eec81f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 73b7a8b42832c2d0a6c8c6d9589f953a93f39ce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005297"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>レコードの生成処理 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "51677691"
  たとえば、次の XSD スキーマ フラグメントを考えてみます。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Customer" sql:relation="Customers" >  
    <xsd:complexType>  
@@ -91,19 +90,19 @@ ms.locfileid: "51677691"
   
  XML 一括読み込みで、入力用に前の段落で説明したスキーマと XML データが指定された場合、ソース データのノード (要素と属性) は次のように処理されます。  
   
--   最初の開始タグ**\<お客様 >** 要素がスコープ内でその要素を表示します。 このノードは Customers テーブルにマップされます。 したがって、XML 一括読み込みでは Customers テーブルのレコードが生成されます。  
+-   最初の開始タグ **\<お客様 >** 要素がスコープ内でその要素を表示します。 このノードは Customers テーブルにマップされます。 したがって、XML 一括読み込みでは Customers テーブルのレコードが生成されます。  
   
 -   スキーマのすべての属性で、 **\<お客様 >** [得意先] テーブルの列を要素のマップです。 これらの属性がスコープ内に入ると、XML 一括読み込みでは、これらの値が親スコープで生成された顧客レコードにコピーされます。  
   
 -   XML 一括読み込みの終了タグに達したとき、 **\<お客様 >** 要素、要素がスコープ外です。 この時点で、XML 一括読み込みではレコードの準備が完了したと判断され、レコードが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。  
   
- XML 一括ロードごとにこのプロセスに依存してその後**\<お客様 >** 要素です。  
+ XML 一括ロードごとにこのプロセスに依存してその後 **\<お客様 >** 要素です。  
   
 > [!IMPORTANT]  
 >  このモデルでは、終了タグに達した (ノードがスコープ外に出た) ときにレコードが挿入されるため、レコードに関連付けるすべてのデータをノードのスコープ内に定義する必要があります。  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>レコードのサブセットとルールの順序付けキー  
- 使用するマッピング スキーマを指定すると **\<sql:relationship >**、サブセットという場合、リレーションシップの外部側で生成されるレコードのセットを指します。 CustOrder レコードは、外部の側では、次の例では、  **\<sql:relationship >**。  
+ 使用するマッピング スキーマを指定すると **\<sql:relationship >** 、サブセットという場合、リレーションシップの外部側で生成されるレコードのセットを指します。 CustOrder レコードは、外部の側では、次の例では、  **\<sql:relationship >** 。  
   
  たとえば、データベースに次のテーブルが含まれているとします。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "51677691"
  ここで、次の注釈付き XSD スキーマで指定される XML ビューを考えてみます。 このスキーマを使用して **\<sql:relationship >** 顧客と CustOrder テーブル間のリレーションシップを指定します。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -149,9 +148,9 @@ ms.locfileid: "51677691"
   
  サンプル XML データと、実際のサンプルを作成する手順は次のとおりです。  
   
--   **\<お客様 >** XML データ ファイル内の要素ノードがスコープ内に入る、XML 一括読み込みは、Cust テーブルのレコードを生成します。 XML 一括ロードから必要な列の値 ([得意先コード]、[得意先名]、および市区町村) にコピーし、  **\<[得意先コード] >**、  **\<[得意先名] >**、および**\<市 >** としてこれらの要素の子要素がスコープ内に入力します。  
+-   **\<お客様 >** XML データ ファイル内の要素ノードがスコープ内に入る、XML 一括読み込みは、Cust テーブルのレコードを生成します。 XML 一括ロードから必要な列の値 ([得意先コード]、[得意先名]、および市区町村) にコピーし、  **\<[得意先コード] >** 、  **\<[得意先名] >** 、および **\<市 >** としてこれらの要素の子要素がスコープ内に入力します。  
   
--   **\<注文 >** 要素ノードがスコープ内に入る、XML 一括読み込みには、CustOrder テーブルのレコードが生成されます。 XML 一括読み込みの値をコピーする、 **[受注コード]** 属性のこのレコードにします。 [得意先コード] 列から取得するために必要な値、  **\<[得意先コード] >** の子要素で、 **\<お客様 >** 要素です。 XML 一括読み込みで指定されている情報を使用して **\<sql:relationship >** しない限り、このレコードの [得意先コード] 外部キーの値を取得するのには、 **[得意先コード]** 属性が指定された、 **\<注文 >** 要素です。 一般的な規則は、子要素は、外部キー属性の値を明示的に指定する場合、XML 一括ロードその値を使用して、指定されたを使用して、親要素から値を取得できない **\<sql:relationship >**. これと**\<注文 >** 要素ノードがスコープ外に出る、XML 一括読み込みのレコードを送信する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]し、すべての後続処理と**\<注文 >** 要素ノード同様にします。  
+-   **\<注文 >** 要素ノードがスコープ内に入る、XML 一括読み込みには、CustOrder テーブルのレコードが生成されます。 XML 一括読み込みの値をコピーする、 **[受注コード]** 属性のこのレコードにします。 [得意先コード] 列から取得するために必要な値、  **\<[得意先コード] >** の子要素で、 **\<お客様 >** 要素です。 XML 一括読み込みで指定されている情報を使用して **\<sql:relationship >** しない限り、このレコードの [得意先コード] 外部キーの値を取得するのには、 **[得意先コード]** 属性が指定された、 **\<注文 >** 要素です。 一般的な規則は、子要素は、外部キー属性の値を明示的に指定する場合、XML 一括ロードその値を使用して、指定されたを使用して、親要素から値を取得できない **\<sql:relationship >** . これと **\<注文 >** 要素ノードがスコープ外に出る、XML 一括読み込みのレコードを送信する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]し、すべての後続処理と **\<注文 >** 要素ノード同様にします。  
   
 -   最後に、 **\<お客様 >** 要素ノードがスコープ外に出る。 XML 一括読み込みで顧客レコードが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。 XML 一括読み込みでは、XML データ ストリームの後続の顧客すべてについて、この処理が行われます。  
   
@@ -221,12 +220,12 @@ ms.locfileid: "51677691"
 ## <a name="exceptions-to-the-record-generation-rule"></a>レコード生成の規則の例外  
  XML 一括読み込みでは、IDREF または IDREFS 型のノードがスコープ内に入っても、ノードのレコードは生成されません。 スキーマのどこかで、レコードを完全に記述するようにしてください。 **Dt:type =「nmtokens」** IDREFS 型が無視されると同様、注釈は無視されます。  
   
- 例えば、次の XSD スキーマを記述する**\<お客様 >** と**\<注文 >** 要素です。 **\<お客様 >** 要素が含まれています、 **OrderList** IDREFS 型の属性です。 **\<Sql:relationship >** タグは、一対多の関係、顧客と注文の一覧を指定します。  
+ 例えば、次の XSD スキーマを記述する **\<お客様 >** と **\<注文 >** 要素です。 **\<お客様 >** 要素が含まれています、 **OrderList** IDREFS 型の属性です。 **\<Sql:relationship >** タグは、一対多の関係、顧客と注文の一覧を指定します。  
   
  スキーマは次のようになります。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

@@ -18,12 +18,12 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13bafcd55e2e6cf95dec92e5ad2feeda20dde8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62689064"
 ---
 # <a name="bcpinit"></a>bcp_init
   一括コピー操作を初期化します。  
@@ -60,7 +60,7 @@ eDirection
   
  場合*eDirection* DB_OUT では、 *szTable*データベース ビューの名前も指定できます。  
   
- 場合*eDirection* DB_OUT を使用して SELECT ステートメントを指定して[bcp_control](bcp-control.md)する前に[bcp_exec](bcp-exec.md)を呼び出すと、**bcp_init * * * szTable*を NULL に設定する必要があります。  
+ 場合*eDirection* DB_OUT を使用して SELECT ステートメントを指定して[bcp_control](bcp-control.md)する前に[bcp_exec](bcp-exec.md)が呼び出され、 **bcp_init** _szTable_を NULL に設定する必要があります。  
   
  *szDataFile*  
  コピー操作の対象になるユーザー ファイルの名前です。 使用して変数から直接データをコピーするはかどうか[bcp_sendrow](bcp-sendrow.md)設定*szDataFile*を NULL にします。  

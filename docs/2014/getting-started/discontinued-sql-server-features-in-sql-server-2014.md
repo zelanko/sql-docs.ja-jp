@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9aadb14004ff3e73c4678f08b8aafa3cdab53b28
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088638"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 で提供が中止された機能
   このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードした後で使用できなくなる機能について説明します。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で提供が中止された機能はありません。  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>Active Directory Helper サービスの提供中止  
  Active Directory Helper サービスおよびその関連コンポーネントは、削除されました。 次の表は、削除された関連コンポーネントの一覧を示しています。  
@@ -36,12 +35,12 @@ ms.locfileid: "48063842"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>SQL Server 2008 R2 で提供が中止された機能  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Reporting Services での 64 ビット プラットフォームのサポート  
- 以降では[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンポーネントは、Windows Server 2003 または Windows Server 2003 R2 を実行している Itanium ベースのサーバーをサポートしていません。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Itanium ベース システム用の Windows Server 2008 や Itanium ベース システム用の Windows Server 2008 R2 などの他の 64 ビット オペレーティング システムは引き続きサポートされます。 Windows Server 2003 または Windows Server 2003 R2 の Itanium ベース システム エディションにインストールされた [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] を [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] にアップグレードするには、まずオペレーティング システムをアップグレードする必要があります。  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 以降の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] コンポーネントでは、Windows Server 2003 または Windows Server 2003 R2 を実行している Itanium ベースのサーバーがサポートされなくなりました。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Itanium ベース システム用の Windows Server 2008 や Itanium ベース システム用の Windows Server 2008 R2 などの他の 64 ビット オペレーティング システムは引き続きサポートされます。 Windows Server 2003 または Windows Server 2003 R2 の Itanium ベース システム エディションにインストールされた [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] を [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] にアップグレードするには、まずオペレーティング システムをアップグレードする必要があります。  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008 で提供が中止された機能  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL Server Express で提供が中止された SQL-DMO  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の SQL-DMO が [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] から削除されました。 この機能を現在使用しているアプリケーションはできるだけ早く変更することをお勧めします。 SQL-DMO をサポートする必要がある場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]から旧バージョンとの互換性コンポーネントを Express をインストール、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack から、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=51230)します。 新しい開発作業では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の SQL-DMO が [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] から削除されました。 この機能を現在使用しているアプリケーションはできるだけ早く変更することをお勧めします。 SQL-DMO をサポートする必要がある場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]から旧バージョンとの互換性コンポーネントを Express をインストール、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack から、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=51230)します。 新しい開発作業では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用してください。  
   
 ### <a name="discontinued-option-for-web-assistant"></a>廃止された Web Assistant オプション  
  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] では、Web Assistant を有効にする `sp_configure` オプションが削除されました。 代わりに [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用することをお勧めします。  

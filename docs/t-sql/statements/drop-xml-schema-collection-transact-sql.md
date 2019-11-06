@@ -20,22 +20,21 @@ helpviewer_keywords:
 - dropping XML schema collections
 - DROP XML SCHEMA COLLECTION statement
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: c2a02ae5bc9572265cc33392a02c596cfcfec0ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072010"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML スキーマ コレクション全体とそのすべてのコンポーネントを削除します。  
+XML スキーマ コレクション全体とそのすべてのコンポーネントを削除します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,16 +44,16 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>引数  
- *relational_schema*  
- リレーショナル スキーマ名を指定します。 指定しない場合、既定のリレーショナル スキーマが使用されます。  
+*relational_schema*  
+リレーショナル スキーマ名を指定します。 指定しない場合、既定のリレーショナル スキーマが使用されます。  
   
- *sql_identifier*  
- 削除する XML スキーマ コレクションの名前を指定します。  
+*sql_identifier*  
+削除する XML スキーマ コレクションの名前。  
   
 ## <a name="remarks"></a>Remarks  
- XML スキーマ コレクションの削除は、トランザクション操作です。 つまり、トランザクション内で XML スキーマ コレクションを削除し、後でトランザクションをロールバックすると、XML スキーマ コレクションは削除されなかったことになります。  
+XML スキーマ コレクションの削除は、トランザクション操作です。 トランザクション内で XML スキーマ コレクションを削除した後にそのトランザクションをロールバックすると、その XML スキーマ コレクションは削除されなかったことになります。  
   
- XML スキーマ コレクションは、使用中は削除できません。 つまり、削除するコレクションに、次のものは指定できません。  
+使用中の XML スキーマ コレクションは削除できません。 つまり、次のいずれかの条件に該当するコレクションは削除できません。  
   
 -   いずれかに関連付けられている **xml** パラメーターまたは列を入力します。  
   
@@ -75,10 +74,10 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>アクセス許可  
- XML SCHEMA COLLECTION を削除するには、コレクションに対する DROP 権限が必要です。  
+XML SCHEMA COLLECTION を削除するには、コレクションに対する DROP 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、XML スキーマ コレクションを削除します。  
+次の例では、XML スキーマ コレクションを削除します。  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  

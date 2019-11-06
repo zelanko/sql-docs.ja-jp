@@ -12,12 +12,12 @@ ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f064e36a5412612e73f3c6d60f0461a02d417f92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 913be11caa9a76ee012571e5ee4b275826668330
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62868586"
 ---
 # <a name="mssqlserver33081"></a>MSSQLSERVER_33081
     
@@ -41,7 +41,7 @@ WHERE ring_buffer_type = 'RING_BUFFER_SECURITY_ERROR';
 ```  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 問題を調査するには、MSDN (http://msdn.microsoft.com/) で Windows エラー コードを検索します。 エラーを解決するか、詳細について [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS に問い合わせます。 CSS へのお問い合わせの際には、次の情報を収集してサポート スタッフにご提供ください。  
+ 問題を調査するには、MSDN (https://msdn.microsoft.com/) で Windows エラー コードを検索します。 エラーを解決するか、詳細について [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS に問い合わせます。 CSS へのお問い合わせの際には、次の情報を収集してサポート スタッフにご提供ください。  
   
 -   暗号化サービス プロバイダーの読み込み失敗に関するエラーを示すエラー ログ。  
   

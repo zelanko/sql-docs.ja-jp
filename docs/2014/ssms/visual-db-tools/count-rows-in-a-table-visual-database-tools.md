@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
@@ -17,12 +17,12 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbd948e79669348311fa2ff177e52496e91f173c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63217811"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>テーブルの行数のカウント (Visual Database Tools)
   テーブルの行数をカウントすることにより、次の内容を確認できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "48185382"
   
      クエリおよびビュー デザイナーにより、抽出条件ペインの **[グループ化]** 列に **[カウント]** という語句が自動的に入力され、集計する列に列の別名が割り当てられます。 クエリ出力に表示する列ヘッダーをわかりやすくするには、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」を参照してください。  
   
-4.  検索するデータ列を追加し、**[出力]** 列のチェック ボックスをオフにします。  
+4.  検索するデータ列を追加し、 **[出力]** 列のチェック ボックスをオフにします。  
   
      クエリおよびビュー デザイナーにより、グリッドの **[グループ化]** 列に **[グループ化]** という語句が自動的に入力されます。  
   

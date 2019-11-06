@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b70ca6937526c739edf0d0dd0f8d08c2c914b236
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010009"
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
   FileTable にファイルを読み込むまたは移行する方法について説明します。  
@@ -30,9 +30,9 @@ ms.locfileid: "48053262"
 |ファイルの現在の場所|移行のオプション|  
 |-------------------------------|---------------------------|  
 |ファイルは現在、ファイル システム内に格納されている。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはファイルに関する情報がありません。|FileTable は Windows ファイル システムにおいてフォルダーとして表示されるため、ファイルの移動またはコピーに使用できる任意の方法で、ファイルを新しい FileTable に簡単に読み込むことができます。 これらの方法には、Windows エクスプローラー、コマンド ライン オプション (xcopy、robocopy)、およびカスタム スクリプトまたはアプリケーションが含まれます。<br /><br /> 既存のフォルダーを FileTable に変換することはできません。|  
-|ファイルは現在、ファイル システム内に格納されている。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ファイルへのポインターが格納されたメタデータのテーブルが含まれています。|まず、前の項目で示したいずれかの方法を使用して、ファイルを移動またはコピーします。<br /><br /> 次に、ファイルの新しい場所を指すように既存のメタデータのテーブルを更新します。<br /><br /> 詳細については、このトピックの「 [例: ファイルをファイル システムから FileTable に移行する](#HowToMigrateFiles) 」を参照してください。|  
+|ファイルは現在、ファイル システム内に格納されている。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ファイルへのポインターが格納されたメタデータのテーブルが含まれています。|まず、前の項目で示したいずれかの方法を使用して、ファイルを移動またはコピーします。<br /><br /> 次に、ファイルの新しい場所を指すように既存のメタデータのテーブルを更新します。<br /><br /> 詳細については、「[例:ファイルを FileTable にファイル システムから移行](#HowToMigrateFiles)このトピックの「します。|  
   
-###  <a name="HowToLoadNew"></a> 方法: FileTable にファイルを読み込む  
+###  <a name="HowToLoadNew"></a> 方法:FileTable にファイルを読み込む  
  ファイルを FileTable に読み込むには、次の方法を使用できます。  
   
 -   Windows エクスプローラーで、基になるフォルダーから新しい FileTable フォルダーにファイルをドラッグ アンド ドロップします。  
@@ -44,17 +44,17 @@ ms.locfileid: "48053262"
 ###  <a name="HowToMigrateFiles"></a> 例: ファイルをファイル システムから FileTable に移行する  
  このシナリオでは、ファイルはファイル システムに格納されていて、このファイルへのポインターを含むメタデータのテーブルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置されています。 ここでは、ファイルを FileTable に移動した後、メタデータ内の各ファイルの元の UNC パスを FileTable の UNC パスに置き換えます。 この操作を行うには、[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 関数を使用します。  
   
- この例では、既存のデータベース テーブルがあることを想定して`PhotoMetadata`、写真に関するデータを格納します。 このテーブルには、列`UNCPath`型の`varchar`(512)、.jpg ファイルへの実際の UNC パスを含むです。  
+ この例では、既存のデータベース テーブルがあることを想定して`PhotoMetadata`、写真に関するデータを格納します。 このテーブルには、.jpg ファイルへの実際の UNC パスを含む `varchar`(512) 型の `UNCPath` 列があります。  
   
  画像ファイルをファイル システムから FileTable に移行するには、次の操作を実行する必要があります。  
   
-1.  ファイルを格納する新しい FileTable を作成します。 この例は、テーブル名を使用して`dbo.PhotoTable`テーブルを作成するコードは表示されません。  
+1.  ファイルを格納する新しい FileTable を作成します。 この例では、`dbo.PhotoTable` というテーブル名を使用しますが、テーブルを作成するコードは示されていません。  
   
 2.  xcopy または同様のツールを使用して、ディレクトリ構造を保ったまま .jpg ファイルを FileTable のルート ディレクトリにコピーします。  
   
-3.  メタデータを修正、`PhotoMetadata`次のようなコードを使用して、テーブル。  
+3.  次のようなコードを使用して、`PhotoMetadata` テーブル内のメタデータを修正します。  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   
@@ -87,7 +87,7 @@ UPDATE PhotoMetadata
   
     -   CHECK_CONSTRAINTS 句を含む BULK INSERT  
   
-    -   INSERT INTO … IGNORE_CONSTRAINTS 句を含まない SELECT * FROM OPENROWSET(BULK …)。  
+    -   INSERT INTO ... IGNORE_CONSTRAINTS 句を含まない SELECT * FROM OPENROWSET(BULK ...)。  
   
 -   FileTable のシステム定義の制約が無効化されない限り、制約が適用されない一括読み込み操作は失敗します。 このカテゴリには以下の操作が含まれます。  
   
@@ -95,9 +95,9 @@ UPDATE PhotoMetadata
   
     -   CHECK_CONSTRAINTS 句を含まない BULK INSERT  
   
-    -   INSERT INTO … IGNORE_CONSTRAINTS 句を含む INSERT INTO … SELECT * FROM OPENROWSET(BULK …)。  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) (IGNORE_CONSTRAINTS 句を含む)。  
   
-###  <a name="HowToBulkLoad"></a> 方法: FileTable へのファイルの一括読み込みを行う  
+###  <a name="HowToBulkLoad"></a>方法:FileTable へのファイルの一括読み込みを行う  
  ファイルを FileTable に一括読み込みするには、次の方法を使用できます。  
   
 -   **bcp**  
@@ -112,7 +112,7 @@ UPDATE PhotoMetadata
   
     -   FileTable 名前空間を無効にし、 **CHECK_CONSTRAINTS** 句を指定せずに呼び出します。 次に、FileTable 名前空間を再有効化します。  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ...SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   **IGNORE_CONSTRAINTS** 句を指定して呼び出します。  
   
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  FileTable 制約の無効化の詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
-###  <a name="disabling"></a> 方法: 一括読み込みのための FileTable の制約を無効化する  
+###  <a name="disabling"></a>方法:一括読み込みのための FileTable の制約を無効化する  
  システム定義の制約を一時的に無効化すると、制約の適用というオーバーヘッドなしで、FileTable へのファイルの一括読み込みを行うことができます。 詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

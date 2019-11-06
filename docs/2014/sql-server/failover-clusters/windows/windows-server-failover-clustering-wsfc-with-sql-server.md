@@ -16,12 +16,12 @@ ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 696c9d5a560e4b7fd4614a0a6575ebbeb308fdd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f39911901b6ab729382c2e08b34c3452d4ec65cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63246032"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server
   *Windows Server フェールオーバー クラスタリング* (WSFC) クラスターは、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
@@ -62,7 +62,7 @@ ms.locfileid: "48070812"
  強制されたクォーラム  
  クォーラムに必要な少数の要素のみが通信しているときでもクラスターを開始するためのプロセスです。  
   
- 詳細については、「 [フェールオーバー クラスター用語集](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)」を参照してください。  
+ 詳細については、以下をご覧ください。[フェールオーバー クラスター用語集](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Windows Server フェールオーバー クラスタリングの概要  
  Windows Server フェールオーバー クラスタリングは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] や Microsoft Exchange などのホストされるサーバー アプリケーションの高可用性とディザスター リカバリー シナリオをサポートするインフラストラクチャ機能を提供します。 クラスター ノードまたはサービスに障害が発生すると、そのノードでホストされていたサービスは自動的に、または手動で、他の可用性ノードに転送されます。このプロセスを *フェールオーバー*と呼びます。  
@@ -77,7 +77,7 @@ ms.locfileid: "48070812"
   
 -   **フェールオーバーの調整。** 各リソースはプライマリ ノードでホストされるように構成され、それぞれ自動的に、または手動で 1 つ以上のセカンダリ ノードに転送されます。 正常性ベースのフェールオーバー ポリシーによって、ノード間でのリソース所有権の自動転送が制御されます。 フェールオーバーが発生すると、適切に対応できるように、ノードおよびホストされているアプリケーションに通知されます。  
   
- 詳細については、「 [Windows Server 2008 R2 のフェールオーバー クラスター](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)」を参照してください。  
+ 詳細については、以下をご覧ください。[Windows Server 2008 R2 のフェールオーバー クラスター](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn テクノロジと WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn*は、新しい高可用性とディザスター リカバリー ソリューションの WSFC を利用します。 AlwaysOn は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
@@ -87,7 +87,7 @@ ms.locfileid: "48070812"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn テクノロジの利点を完全に活かすには、WSFC 関連のいくつかの前提条件を適用する必要があります。  
 >   
->  詳細については、「[Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
+>  詳細については、以下をご覧ください。[前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-alwayson-failover-cluster-instances"></a>AlwaysOn フェールオーバー クラスター インスタンスとインスタンス レベルの高可用性  
  AlwaysOn *フェールオーバー クラスター インスタンス* (FCI) は、WSFC クラスター内のノードにまたがってインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスです。 この種類のインスタンスには、共有ディスク ストレージ (ファイバー チャネルまたは iSCSI SAN 経由) および仮想ネットワーク名に対してリソース依存関係があります。 仮想ネットワーク名には、それぞれが異なるサブネットに存在する 1 つ以上の仮想 IP アドレスに対してリソース依存関係があります。 SQL Server サービスおよび SQL Server エージェント サービスはリソースとして登録され、どちらも仮想ネットワーク名リソースに依存します。  
@@ -97,7 +97,7 @@ ms.locfileid: "48070812"
 > [!NOTE]  
 >  AlwaysOn フェールオーバー クラスター インスタンスには、ストレージ エリア ネットワーク (SAN)、SMB ファイル共有などの対称的な共有ディスク ストレージが必要です。  共有ディスク ストレージ ボリュームは、WSFC クラスター内のすべてのフェールオーバー ノードで使用できる必要があります。  
   
- 詳細については、次を参照してください: [AlwaysOn フェールオーバー クラスター インスタンス。](always-on-failover-cluster-instances-sql-server.md)  
+ 詳細については、以下をご覧ください。[AlwaysOn フェールオーバー クラスター インスタンス](always-on-failover-cluster-instances-sql-server.md)  
   
 ### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>データベース レベルの高可用性 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  *可用性グループ* は、共にフェールオーバーするユーザー データベースのセットです。 可用性グループは、1 つのプライマリ *可用性レプリカ* と、共有ストレージを必要としないデータ保護のために SQL Server ログに基づくデータ移動を介して維持される 1 ～ 4 個のセカンダリ レプリカから構成されます。 各レプリカは、WSFC クラスターの別々のノードにある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスによってホストされます。 可用性グループとこれに対応する仮想ネットワーク名は、WSFC クラスターのリソースとして登録されます。  
@@ -113,7 +113,7 @@ ms.locfileid: "48070812"
 >   
 >  フェールオーバー クラスター インスタンス (FCI) を可用性グループと共に使用することによって、可用性レプリカの可用性を高めることができます。 ただし、WSFC クラスター内での競合状態の発生を回避するため、FCI 上でホストされる可用性レプリカとの間の可用性グループの自動フェールオーバーはサポートされていません。  
   
- 詳細については、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
+ 詳細については、以下をご覧ください。[AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> WSFC の正常性監視とフェールオーバー  
  AlwaysOn ソリューションの高可用性は、物理的および論理的 WSFC クラスター リソースのプロアクティブな正常性状態の監視と、冗長ハードウェアでの自動フェールオーバーおよび再構成によって実現します。  また、システム管理者は、可用性グループまたはノード間での *インスタンスの* 手動フェールオーバー [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を開始できます。  
@@ -123,7 +123,7 @@ ms.locfileid: "48070812"
   
  可用性グループ レプリカのフェールオーバーは、基になる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに影響しません。  FCI のフェールオーバーでは、ホストされている可用性グループ レプリカとインスタンスが移動します。  
   
- 詳細については、「 [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](failover-policy-for-failover-cluster-instances.md)」を参照してください。  
+ 詳細については、以下をご覧ください。[Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
   
 ### <a name="wsfc-resource-health-detection"></a>WSFC リソースの正常性の検出  
  WSFC クラスター ノード内の各リソースの状態と正常性は、定期的または要求時に報告されます。 リソースの障害を示す状況としては、電源障害、ディスクまたはメモリのエラー、ネットワーク通信エラー、応答しないサービスなどがあります。  
@@ -140,7 +140,7 @@ ms.locfileid: "48070812"
 > [!TIP]  
 >  WSFC クラスターのクォーラム投票の数は、常に奇数にすることをお勧めします。  クォーラム投票のために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をクラスター内のすべてのノードにインストールする必要はありません。 追加サーバーはクォーラム メンバーとして機能できます。また、リモート ファイル共有を決定機構として使用するように WSFC クォーラム モデルを構成することもできます。  
 >   
->  詳細については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。  
+>  詳細については、以下をご覧ください。[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
 ### <a name="disaster-recovery-through-forced-quorum"></a>強制されたクォーラムによる災害復旧  
  実際の運用状況と WSFC クラスター構成に応じて、自動フェールオーバーと手動フェールオーバーの両方を使用できます。これによって、堅牢でフォールト トレランスな [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn ソリューションを維持できます。 ただし、WSFC クラスター内の投票ノードのクォーラムが相互に通信できない場合、または WSFC クラスターがこれ以外の理由で正常性の検証に失敗する場合は、WSFC クラスターがオフラインになる場合があります。  
@@ -149,7 +149,7 @@ ms.locfileid: "48070812"
   
  その後、WSFC クラスターを再構成し、影響を受けたデータベース レプリカを復元し、新しいクォーラムを再構築するという一連の手順を実行する必要があります。  
   
- 詳細については、「[WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)」を参照してください。  
+ 詳細については、以下をご覧ください。[WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcRelationship"></a> SQL Server AlwaysOn コンポーネントと WSFC との関係  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn と WSFC の機能およびコンポーネント間には、いくつかのリレーションシップの層が存在します。  
@@ -181,13 +181,13 @@ ms.locfileid: "48070812"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [Windows Server テクノロジ: フェールオーバー クラスター](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server テクノロジ:フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Windows Server 2008 R2 のフェールオーバー クラスター](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
+-   [Windows Server 2008 R2 のフェールオーバー クラスター](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
--   [フェールオーバー クラスターのイベントおよびログを表示する](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](always-on-failover-cluster-instances-sql-server.md)   

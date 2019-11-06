@@ -18,15 +18,14 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[^] (wildcard - character(s) not to match)'
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: edf8419cc41d58b4ca96891037f066ca48aced8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eedf1db97477788489dd9b7c9c1789804ca064a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086090"
 ---
 # <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (ワイルドカード - 一致しない文字列) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

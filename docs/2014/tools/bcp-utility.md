@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -28,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187158"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
   **Bcp**のインスタンス間でデータをユーティリティの一括コピー [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]とユーザー指定の形式でデータ ファイル。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは **の知識は必要ありません。ただし、** queryout [!INCLUDE[tsql](../includes/tsql-md.md)]オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
@@ -89,9 +88,9 @@ ms.locfileid: "48205862"
  *database_name*  
  指定したテーブルまたはビューを含むデータベースの名前を指定します。 指定しない場合は、ユーザーの既定データベースになります。  
   
- データベース名を明示的に指定できます`d-`します。  
+ `d-` で明示的にデータベース名を指定することもできます。  
   
- **in** *data_file* | **out * * * data_file* | **queryout * * * data_file* | **nul を書式設定**  
+ **in** _data_file_ | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
  次に示すように、一括コピーの方向を指定します。  
   
 -   **in** はファイルからデータベース テーブルまたはビューへのコピーを行います。  
@@ -100,12 +99,12 @@ ms.locfileid: "48205862"
   
 -   **queryout** はクエリからのコピーを行います。データをクエリから一括コピーする場合にのみ指定する必要があります。  
   
--   **形式**、指定されたオプションに基づいてフォーマット ファイルを作成します (**-n**、 `-c`、 `-w`、または **-n**) と、テーブルまたはビューの区切り記号。 データを一括コピーするとき、 **bcp** コマンドはフォーマット ファイルを参照することができるため、フォーマット情報を対話的に再入力する必要がなくなります。 **format** オプションには **-f** オプションが必要です。XML フォーマット ファイルを作成する場合には、**-x** オプションも必要です。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。 値として **nul** を指定する必要があります (**format nul**)。  
+-   **形式**、指定されたオプションに基づいてフォーマット ファイルを作成します ( **-n**、 `-c`、 `-w`、または **-n**) と、テーブルまたはビューの区切り記号。 データを一括コピーするとき、 **bcp** コマンドはフォーマット ファイルを参照することができるため、フォーマット情報を対話的に再入力する必要がなくなります。 **format** オプションには **-f** オプションが必要です。XML フォーマット ファイルを作成する場合には、 **-x** オプションも必要です。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。 値として **nul** を指定する必要があります (**format nul**)。  
   
  *所有者*  
  テーブルまたはビューの所有者の名前を指定します。 操作を実行するユーザーが指定のテーブルまたはビューを所有している場合、*owner* は省略可能です。 *owner* が指定されず、操作を実行するユーザーが指定のテーブルまたはビューを所有していない場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からエラー メッセージが返され、操作は取り消されます。  
   
- **"** *query* **"**  
+ **"** _query_ **"**  
  結果セットを返す単一の [!INCLUDE[tsql](../includes/tsql-md.md)] クエリです。 クエリから複数の結果セットが返される場合、最初の結果セットのみがデータ ファイルにコピーされ、それ以降の結果セットは無視されます。 クエリは二重引用符で、クエリに埋め込まれたものは単一引用符で囲みます。 クエリからデータを一括コピーする場合には、**queryout** も指定する必要があります。  
   
  ストアド プロシージャ内で参照されるテーブルのすべてが bcp ステートメントの実行前に存在する場合に限り、クエリはストアド プロシージャを参照できます。 たとえば、ストアド プロシージャにより一時テーブルが生成される場合、この一時テーブルは実行時にだけ利用でき、ステートメントの実行時には利用できないため、 **bcp** ステートメントは失敗します。 このような場合、ストアド プロシージャの結果をテーブルに挿入し、 **bcp** を使用してテーブルからデータ ファイルにデータをコピーすることを検討してください。  
@@ -116,18 +115,18 @@ ms.locfileid: "48205862"
  *view_name*  
  データを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にコピーする (**in**) 場合はコピー先のビューの名前、データを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からコピーする (**out**) 場合はコピー元のビューの名前です。 すべての列が同じテーブルを参照しているビューのみが、コピー先のビューとして使用できます。 ビューにデータをコピーするときの制限の詳細については、「[挿入 &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)」をご覧ください。  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  サーバーとの間で送信されるネットワーク パケットごとのバイト数を指定します。 サーバー構成オプションは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (または **sp_configure** システム ストアド プロシージャ) を使用して設定できます。 ただし、このオプションを使用すると、サーバー構成オプションを個別にオーバーライドできます。 *packet_size* の有効値は 4,096 から 65,535 バイトです。既定値は 4,096 です。  
   
  パケット サイズを大きくすると、一括コピーのパフォーマンスを向上させることができます。 より大きなサイズのパケットを要求しても、許可されない場合、既定値が使用されます。 **bcp** ユーティリティが生成するパフォーマンス統計には、使用したパケット サイズが示されます。  
   
- **-b** *batch_size*  
+ **-b** _batch_size_  
  一括インポートするデータの行数を指定します。 コミットされる前に、各バッチはすべてのバッチをインポートする個別のトランザクションとしてインポートおよび記録されます。 既定では、データ ファイルのすべての行が 1 つのバッチとしてインポートされます。 複数のバッチに行を分散するには、データ ファイルの行数よりも少ない *batch_size* を指定します。 バッチのトランザクションが失敗すると、現在のバッチの挿入のみがロールバックされます。 コミットされたトランザクションによって既にインポートされているバッチは、それ以降の失敗による影響を受けません。  
   
- と共にこのオプションを使用しない、 **-h"** ROWS_PER_BATCH  **= *`bb`*"** オプション。  
+ と共にこのオプションを使用しない、 **-h"** ROWS_PER_BATCH  **= *`bb`* "** オプション。  
   
  `-c`  
- 文字データ型を使用して操作を実行します。 このオプションは、各フィールドを要求していません。使用して`char`を使用してプレフィックスなしのストレージ型として**\t** (タブ文字) フィールドの区切り記号としてと**\r\n** (改行文字) を行ターミネータとして。 `-c` 互換性がない`-w`します。  
+ 文字データ型を使用して操作を実行します。 このオプションは、各フィールドを要求していません。使用して`char`を使用してプレフィックスなしのストレージ型として **\t** (タブ文字) フィールドの区切り記号としてと **\r\n** (改行文字) を行ターミネータとして。 `-c` と `-w` には互換性がありません。  
   
  詳細については、「[文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   
@@ -142,12 +141,12 @@ ms.locfileid: "48205862"
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|クライアントが使用する既定のコード ページです。 **-C** が指定されていない場合に使用される既定のコード ページです。|  
 |RAW|コード ページの変換は行われません。 したがって、これは最も速いオプションです。|  
-|*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> **\*\* 重要な\* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]はコード ページ 65001 (utf-8 エンコード) をサポートしていません。|  
+|*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> **&#42;&#42;重要な&#42; &#42;**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]はコード ページ 65001 (utf-8 エンコード) をサポートしていません。|  
   
  `-d` *database_name*  
  接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 場合`-d` *database_name*と 3 つの部分名 (*database_name.schema.table*bcp.exe の最初のパラメーターとして渡される) を指定すると、指定することはできませんので、エラーが発生しますデータベース名で 2 回使用します。場合*database_name*開始ハイフン (-) またはスラッシュ (/) で追加しないの間にスペース`-d`とデータベース名。  
   
- **-e** *err_file*  
+ **-e** _err_file_  
  **bcp** ユーティリティがファイルからデータベースに転送できなかったすべての行を格納するエラー ファイルの完全パスを指定します。 **bcp** コマンドからのエラー メッセージは、ユーザーのワークステーションに送られます。 このオプションを指定しないと、エラー ファイルは作成されません。  
   
  *err_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-e** と *err_file* 値の間に空白を入れないでください。  
@@ -159,33 +158,33 @@ ms.locfileid: "48205862"
   
  **-E** オプションには、特別な権限が必要です。 詳細については、後の「解説」を参照してください。  
   
- **-f** *format_file*  
+ **-f** _format_file_  
  フォーマット ファイルの完全パスを指定します。 このオプションの意味は、オプションが使用されている環境によって次のように異なります。  
   
--   **-f** を **format** オプションと共に使用した場合、指定されたテーブルまたはビューに対して、指定された *format_file* が作成されます。 XML フォーマット ファイルを作成するには、**-x** オプションも指定します。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。  
+-   **-f** を **format** オプションと共に使用した場合、指定されたテーブルまたはビューに対して、指定された *format_file* が作成されます。 XML フォーマット ファイルを作成するには、 **-x** オプションも指定します。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。  
   
--   **in** または **out** オプションと共に使用する場合、**-f** を使うには既存のフォーマット ファイルが必要です。  
+-   **in** または **out** オプションと共に使用する場合、 **-f** を使うには既存のフォーマット ファイルが必要です。  
   
     > [!NOTE]  
     >  **in** または **out** オプションを使う場合、フォーマット ファイルは省略可能です。 ない場合、 **-f**場合は、オプション **-n**、 `-c`、 `-w`、または **-n**が指定されていない、コマンドの書式情報を要求して、保存することができます(が既定のファイル名は Bcp.fmt) フォーマット ファイルで応答します。  
   
  *format_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-f** と *format_file* 値の間に空白を入れないでください。  
   
- **-F** *first_row*  
+ **-F** _first_row_  
  テーブルからエクスポートする最初の行、またはデータ ファイルからインポートする最初の行の番号を指定します。 このパラメーターには、大なり (>) 0 値が必要ですより小さい (\<) か、または等しい (=) の合計行数。 このパラメーターがない場合、既定ではファイルの最初の行となります。  
   
- *first_row* には、2^63-1 以下の正の整数を指定できます。 **-F * * * first_row*は 1 から始まります。  
+ *first_row* には、2^63-1 以下の正の整数を指定できます。 **-F** _first_row_ は 1 から始まります。  
   
- **-h"** *hint*[ **,**... *n*] **"**  
+ **-h"** _hint_[ **,** ... *n*] **"**  
  データをテーブルまたはビューに一括インポートするときに使用するヒントを指定します。  
   
- 順序 **(* **列*[ASC |DESC] [**、**.*n*]**) * *  
- データ ファイルのデータの並べ替え順序です。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序で並べ替えられている場合、つまり、クラスター化インデックス キーの順序以外で並べ替えられている場合、またはテーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、 **bcp** はデータ ファイルの並べ替えが行われていないことを前提としています。 最適な一括インポートのため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
+ ORDER **(** _column_[ASC | DESC] [ **,** ...*n*] **)**  
+ データ ファイルのデータの並べ替え順序です。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序で並べ替えられている場合、つまり、クラスター化インデックス キーの順序以外で並べ替えられている場合、またはテーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、 **bcp** はデータ ファイルの並べ替えが行われていないことを前提としています。 最適な一括インポートのため、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
   
- ROWS_PER_BATCH **= * * * bb*  
- 各バッチあたりのデータ行数 ( *bb*) です。 **-b** を指定しない場合に使うと、データ ファイル全体が 1 つのトランザクションとしてサーバーに送られます。 サーバーは、 *bb*の値に応じて一括コピーの負荷を最適化します。 ROWS_PER_BATCH の既定値はありません。  
+ ROWS_PER_BATCH **=** _bb_  
+ 各バッチあたりのデータ行数 (*bb*) です。 **-b** を指定しない場合に使うと、データ ファイル全体が 1 つのトランザクションとしてサーバーに送られます。 サーバーは、 *bb*の値に応じて一括コピーの負荷を最適化します。 ROWS_PER_BATCH の既定値はありません。  
   
- KILOBYTES_PER_BATCH **=** *cc*  
+ KILOBYTES_PER_BATCH **=** _cc_  
  バッチごとのデータの概算キロバイト数 (KB) です (*cc*)。 KILOBYTES_PER_BATCH の既定値はありません。  
   
  TABLOCK  
@@ -205,28 +204,28 @@ ms.locfileid: "48205862"
 >  **bcp** によってデータ検証とデータ チェックが実行されるようになったため、無効なデータを含むデータ ファイルに対して実行した場合、このスクリプトは失敗する可能性があります。  
   
 > [!NOTE]  
->  **-m** *max_errors* スイッチは、制約チェックには適用されません。  
+>  **-m** _max_errors_ スイッチは、制約チェックには適用されません。  
   
  FIRE_TRIGGERS  
  **in** 引数と共に指定されている場合、一括コピーの操作時に、コピー先のテーブル上で定義されている挿入トリガーを実行します。 FIRE_TRIGGERS が指定されていない場合は、挿入トリガーは実行されません。 FIRE_TRIGGERS は、**out** 引数、**queryout** 引数、および **format** 引数では無視されます。  
   
- **-i** *input_file*  
- 対話型モードを使用して一括コピーが実行されるときに、各データ フィールドに関するコマンド プロンプトの質問への応答を含む応答ファイルの名前を指定します (**-n**、 `-c`、 `-w`、または **-N**指定されていません)。  
+ **-i** _input_file_  
+ 対話型モードを使用して一括コピーが実行されるときに、各データ フィールドに関するコマンド プロンプトの質問への応答を含む応答ファイルの名前を指定します ( **-n**、 `-c`、 `-w`、または **-N**指定されていません)。  
   
  *input_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-i** と *input_file* 値の間に空白を入れないでください。  
   
  **-k**  
  一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
   
- **-K** *application_intent*  
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は、 **ReadOnly**だけです。 **-K** を指定しない場合、bcp ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、次を参照してください。[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
+ **-K** _application_intent_  
+ アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は、 **ReadOnly**だけです。 **-K** を指定しない場合、bcp ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
   
- **-L** *last_row*  
+ **-L** _last_row_  
  テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。 このパラメーターには、大なり (>) 0 値が必要ですより小さい (\<) か、または等しい (=)、最後の行の数。 このパラメーターがない場合、既定ではファイルの最後の行となります。  
   
  *last_row* には、2^63-1 以下の正の整数を指定できます。  
   
- **-m** *max_errors*  
+ **-m** _max_errors_  
  **bcp** 操作が取り消される前に発生可能な構文エラーの最大数を指定します。 構文エラーは、対象となるデータ型へのデータの変換エラーを意味しています。 *max_errors* の合計では、制約違反など、サーバーでのみ検出できるエラーはすべて対象外となります。  
   
  **bcp** ユーティリティでコピーできない行は無視され、1 つのエラーとしてカウントされます。 このオプションが指定されない場合の既定値は 10 になります。  
@@ -246,14 +245,14 @@ ms.locfileid: "48205862"
   
  同じテーブル スキーマの bcp.exe を使用してデータをインポートするエクスポート **-n**、固定長で Unicode 以外の文字の列がある場合は、切り捨ての警告を表示する可能性があります (たとえば、 `char(10)`)。  
   
- この警告は、無視してもかまいません。 この警告を解決するには、**-N** ではなく **-n** を使用する方法があります。  
+ この警告は、無視してもかまいません。 この警告を解決するには、 **-N** ではなく **-n** を使用する方法があります。  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  コマンド プロンプトからリダイレクトされた出力を受け取るファイル名を指定します。  
   
- *output_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、**-o** と *output_file* 値の間に空白を入れないでください。  
+ *output_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-o** と *output_file* 値の間に空白を入れないでください。  
   
- **-P** *password*  
+ **-P** _password_  
  ログイン ID のパスワードを指定します。 このオプションを指定しない場合、 **bcp** コマンドによってパスワードが要求されます。 また、このオプションをコマンド プロンプトの最後にパスワードなしで使用すると、 **bcp** では既定のパスワード (NULL) が使用されます。  
   
 > [!IMPORTANT]  
@@ -272,7 +271,7 @@ ms.locfileid: "48205862"
   
  詳細については、後の「解説」を参照してください。  
   
- **-r** *row_term*  
+ **-r** _row_term_  
  行ターミネータを指定します。 既定値は **\n** (改行文字) です。 既定の行ターミネータをオーバーライドする場合、このパラメーターを使用します。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
   
  bcp.exe コマンドでは、行ターミネータを 16 進数表記で指定すると、値が 0x00 で切り捨てられます。 たとえば、0x410041 を指定した場合、使用されるのは 0x41 になります。  
@@ -282,11 +281,11 @@ ms.locfileid: "48205862"
  **-R**  
  通貨、日付、時刻のデータを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に一括コピーする場合に、クライアント コンピューターのロケール設定に定義された地域別設定が使用されます。 既定の設定では、地域別設定は無視されます。  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバーを指定しない場合、**bcp** ユーティリティは、ローカル コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続されます。 ネットワーク上のリモート コンピューターまたはローカルの名前付きインスタンスから **bcp** コマンドを実行するときは、このオプションが必要です。 サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続するには、 *server_name*のみを指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、*server_name***\\***instance_name* を指定します。  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバーを指定しない場合、**bcp** ユーティリティは、ローカル コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続されます。 ネットワーク上のリモート コンピューターまたはローカルの名前付きインスタンスから **bcp** コマンドを実行するときは、このオプションが必要です。 サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続するには、 *server_name*のみを指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスに接続するには、 *server_name ** _\\_** instance_name*を使用します。  
   
  `-t` *field_term*  
- フィールド ターミネータを指定します。 既定値は **\t** (タブ文字) です。 既定のフィールド ターミネータをオーバーライドする場合、このパラメーターを使用します。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
+ フィールド ターミネータを指定します。 既定値は **\t** (タブ文字) です。 既定のフィールド ターミネータをオーバーライドする場合、このパラメーターを使用します。 詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」をご覧ください。  
   
  bcp.exe コマンドでは、フィールド ターミネータを 16 進数表記で指定すると、値が 0x00 で切り捨てられます。 たとえば、0x410041 を指定した場合、使用されるのは 0x41 になります。  
   
@@ -295,7 +294,7 @@ ms.locfileid: "48205862"
  **-T**  
  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続することを指定します。 ネットワーク ユーザーのセキュリティ資格情報である *login_id*および *password* は必要ありません。 **-T** を指定しない場合、正常にログインするには **-U** と **-P** を指定する必要があります。  
   
- **-U** *login_id*  
+ **ｰU** _login_id_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への接続に使用されるログイン ID を指定します。  
   
 > [!IMPORTANT]  
@@ -320,12 +319,12 @@ ms.locfileid: "48205862"
  詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
   
  `-w`  
- Unicode 文字を使用して一括コピー操作を実行します。 このオプションは、各フィールドを要求していません。使用して`nchar`プレフィックスなしのストレージ型として**\t** (タブ文字) フィールドの区切り記号としてと**\n** (改行文字) を行ターミネータとして。 `-w` 互換性がない`-c`します。  
+ Unicode 文字を使用して一括コピー操作を実行します。 このオプションは、各フィールドを要求していません。使用して`nchar`プレフィックスなしのストレージ型として **\t** (タブ文字) フィールドの区切り記号としてと **\n** (改行文字) を行ターミネータとして。 `-w` と `-c` には互換性がありません。  
   
  詳細については、「 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   
  **-x**  
- 使用される、**形式**と **-f * * * format_file*オプション、既定の XML 以外のフォーマット ファイルではなく XML ベースのフォーマット ファイルが生成されます。 **-x** はデータのインポート時とエクスポート時には機能しません。 両方を指定せずに使用されている場合、エラーが生成されます**形式**と **-f * * * format_file*します。  
+ **format** および **-f**_format_file_ オプションと共に使用し、XML ではない既定のフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。 **-x** はデータのインポート時とエクスポート時には機能しません。 **format** および **-f**_format_file_ の両方を指定せずに使用すると、エラーが生成されます。  
   
 ## <a name="remarks"></a>コメント  
  **Bcp** 12.0 クライアントがインストールするときにインストールされている[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]ツール。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] と以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の両方のツールがインストールされている場合、PATH 環境変数の値によっては、**bcp** 12.0 クライアントではなく、以前の **bcp** クライアントを使用している可能性があります。 この環境変数によって Windows で実行可能ファイルを探すときに使用されるディレクトリのセットが定義されます。 使用しているバージョンを確認するには、Windows のコマンド プロンプトで **bcp /v** コマンドを実行します。 コマンド パスを PATH 環境変数で設定する方法の詳細については、Windows のヘルプを参照してください。  
@@ -344,7 +343,7 @@ ms.locfileid: "48205862"
 ## <a name="computed-columns-and-timestamp-columns"></a>計算列とタイムスタンプ列  
  計算列または `timestamp` 型列にインポートされるデータ ファイル内の値は無視され、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって自動的に値が割り当てられます。 データ ファイルにテーブル内の計算列または `timestamp` 型列の値が含まれない場合は、フォーマット ファイルを使用して、データのインポート時にテーブル内の計算列または `timestamp` 型列を無視するように指定します。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、この列に値が自動的に割り当てられます。  
   
- 計算と`timestamp`列から一括コピーは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]いつものように、データ ファイルします。  
+ 計算列と `timestamp` 型列は、通常どおり、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からデータ ファイルに一括コピーされます。  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>空白や引用符を含む識別子の指定  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子には、空白や引用符などを埋め込むことができます。 これらの識別子は次のように扱う必要があります。  
@@ -368,7 +367,7 @@ ms.locfileid: "48205862"
 ## <a name="data-validation"></a>データの検証  
  **bcp** によってデータ検証とデータ チェックが実行されるようになったため、無効なデータを含むデータ ファイルに対して実行した場合、このスクリプトは失敗する可能性があります。 たとえば、 **bcp** では次の検証が行われます。  
   
--   ネイティブな表現`float`または`real`データ型が無効です。  
+-   `float` データ型と `real` データ型のネイティブ表記が有効かどうか。  
   
 -   Unicode データが偶数バイト長かどうか。  
   
@@ -377,7 +376,7 @@ ms.locfileid: "48205862"
 ## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML ドキュメントの一括エクスポートまたは一括インポート  
  SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には次のいずれかを使用します。  
   
-|データ型|結果|  
+|データの種類|結果|  
 |---------------|------------|  
 |SQLCHAR または SQLVARYCHAR|データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます。 結果は、フォーマット ファイルを指定せずに、`-c` スイッチを指定した場合と同じです。|  
 |SQLNCHAR または SQLNVARCHAR|データは Unicode として送られます。 結果は、フォーマット ファイルを指定せずに、`-w` スイッチを指定した場合と同じです。|  
@@ -434,7 +433,7 @@ ms.locfileid: "48205862"
 -   I. フォーマット ファイルを使用した **bcp** での一括インポート  
   
 ### <a name="a-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>A. データ ファイルへのテーブル行のコピー (セキュリティ接続を使用)  
- 次の例では、`AdventureWorks2012.Sales.Currency` テーブルに対して **out** オプションを実行します。 `Currency.dat` という名前のデータ ファイルを作成し、文字形式を使用してテーブルのデータをこのデータ ファイルにコピーします。 この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  
+ 次の例では、 **テーブルに対して** out `AdventureWorks2012.Sales.Currency` オプションを実行します。 `Currency.dat` という名前のデータ ファイルを作成し、文字形式を使用してテーブルのデータをこのデータ ファイルにコピーします。 この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  
   
  コマンド プロンプトで、次のコマンドを入力します。  
   
@@ -445,7 +444,7 @@ bcp AdventureWorks2012.Sales.Currency out Currency.dat -T -c
 ### <a name="b-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>B. データ ファイルへのテーブル行のコピー (混合モード認証を使用)  
  次の例では、`AdventureWorks2012.Sales.Currency` テーブルに対して **out** オプションを実行します。 `Currency.dat` という名前のデータ ファイルを作成し、文字形式を使用してテーブルのデータをこのデータ ファイルにコピーします。  
   
- この例では、混合モード認証を使用していることを前提としているため、ログイン ID の指定に **-U** スイッチを使用する必要があります。 また、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続する以外の場合は、**-S** スイッチを使用して、システム名と、オプションでインスタンス名を指定します。  
+ この例では、混合モード認証を使用していることを前提としているため、ログイン ID の指定に **-U** スイッチを使用する必要があります。 また、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続する以外の場合は、 **-S** スイッチを使用して、システム名と、オプションでインスタンス名を指定します。  
   
 ```  
 bcp AdventureWorks2012.Sales.Currency out Currency.dat -c -U<login_id> -S<server_name\instance_name>  
@@ -515,7 +514,7 @@ bcp "SELECT FirstName, LastName FROM AdventureWorks2012.Person.Person ORDER BY L
 bcp AdventureWorks2012.Sales.Currency format nul -T -c  -f Currency.fmt  
 ```  
   
- 詳細については、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
+ 詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md)」をご覧ください。  
   
 ### <a name="h-creating-an-xml-format-file"></a>H. XML フォーマット ファイルの作成  
  次の例では、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース内の `Currency.xml` テーブルに対して `Sales.Currency` という名前の XML フォーマット ファイルを作成します。 この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  
@@ -529,10 +528,10 @@ bcp AdventureWorks2012.Sales.Currency format nul -T -c -x -f Currency.xml
 > [!NOTE]  
 >  **-x** スイッチを使用するには、**bcp** 9.0 クライアントを使用している必要があります。 **bcp** 9.0 クライアントの使用方法の詳細については、「解説」をご覧ください。  
   
- 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md)」をご覧ください。  
+ 詳細については、「[XML フォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md)」をご覧ください。  
   
 ### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>I. フォーマット ファイルを使用した bcp での一括インポート  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにデータをインポートするときに、既に作成してあるフォーマット ファイルを使用するには、 **-f** スイッチを **in** オプションと共に使用します。 たとえば、次のコマンドは、作成済みのフォーマット ファイル (`Currency.dat`) を使用して、データ ファイル (`Sales.Currency`) の内容を `Sales.Currency2` テーブルのコピー (`Currency.xml`) に一括コピーします。 この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスにデータをインポートするときに、既に作成してあるフォーマット ファイルを使用するには、 **-f** スイッチを **in** オプションと共に使用します。 たとえば、次のコマンドは、作成済みのフォーマット ファイル (`Currency.dat`) を使用して、データ ファイル (`Sales.Currency`) の内容を `Sales.Currency2` テーブルのコピー (`Currency.xml`) に一括コピーします。 この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  
   
  Windows のコマンド プロンプトで、次のように入力します。  
   
@@ -566,7 +565,7 @@ bcp AdventureWorks2012.Sales.Currency2 in Currency.dat -T -f Currency.xml
   
 -   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   

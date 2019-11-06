@@ -1,8 +1,0 @@
-- name: 概要
-  href: security-overview-integration-services.md
-- name: パッケージ内の機微なデータへのアクセス制御
-  href: access-control-for-sensitive-data-in-packages.md
-- name: デジタル署名を使用してパッケージのソースを特定する
-  href: identify-the-source-of-packages-with-digital-signatures.md
-- name: Integration Services のロール (SSIS サービス)
-  href: integration-services-roles-ssis-service.md

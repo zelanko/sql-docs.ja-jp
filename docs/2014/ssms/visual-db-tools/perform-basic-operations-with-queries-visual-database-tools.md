@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -13,12 +13,12 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b1cb510420ed224191d8eea25b6d3acc9fb0a79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280580"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>クエリに関する基本操作の実行 (Visual Database Tools)
   次の基本操作は、大部分のクエリに該当します。  

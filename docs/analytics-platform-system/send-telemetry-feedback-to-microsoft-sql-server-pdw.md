@@ -2,19 +2,18 @@
 title: テレメトリのフィードバック - Analytics Platform System |Microsoft Docs
 description: Analytics Platform System の Microsoft に製品利用統計情報のフィードバックを送信します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 347879cd468d67b3feee0c92dcd154334df4c237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960095"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform System のテレメトリのフィードバックをマイクロソフトに送信します。
 Analytics Platform System は、管理コンソールのデータを Microsoft に送信する省略可能な製品利用統計情報機能を持ちます。 
@@ -26,14 +25,14 @@ Analytics Platform System は、管理コンソールのデータを Microsoft �
 最大のプライバシーの保護を提供するには、AP は、テレメトリを有効にしなくても付属しています。 この機能を有効にするには、最初に確認、 [Microsoft Analytics Platform System のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=400902)します。 オプトインするには、以下に示す PowerShell スクリプトを実行します。  
   
 ## <a name="enable"></a>テレメトリを有効にします。  
-**DNS の転送:** DNS フォワーダーを経由してインターネットに接続する Analytics Platform System 製品利用統計情報データを Microsoft に送信する必要があります。 この機能を有効にするには、すべてのホストと Vm のワークロードに転送する DNS を有効にする必要があります。 呼び出す、`Enable-RemoteMonitoring`コマンドと、`SetupDnsForwarder`適切に DNS の転送を構成し、テレメトリを有効にするにはオプションです。 呼び出す、`Enable-RemoteMonitoring`コマンドを指定せず、 `SetupDnsForwarder` DNS の転送が既に構成されているし、ハートビート監視を有効にするオプションします。  
+**DNS の転送:** テレメトリ データを Microsoft に送信するには、DNS フォワーダーを経由してインターネットに接続する Analytics Platform System が必要です。 この機能を有効にするには、すべてのホストと Vm のワークロードに転送する DNS を有効にする必要があります。 呼び出す、`Enable-RemoteMonitoring`コマンドと、`SetupDnsForwarder`適切に DNS の転送を構成し、テレメトリを有効にするにはオプションです。 呼び出す、`Enable-RemoteMonitoring`コマンドを指定せず、 `SetupDnsForwarder` DNS の転送が既に構成されているし、ハートビート監視を有効にするオプションします。  
   
 > [!IMPORTANT]  
 > DNS の転送を有効にするには、すべてのホストとワークロード Vm のインターネット接続が表示されます。  
   
 #### <a name="to-enable-feedback"></a>フィードバックを有効にするには  
   
-1.  アプライアンスのドメイン管理者アカウントを使用してコントロールのノードに接続 (***appliance_domain *-CTL01**) し、Windows 管理者の資格情報を使用してコマンド プロンプトを開きます。  
+1.  アプライアンスのドメイン管理者アカウントを使用してコントロールのノードに接続 (<strong>*appliance_domain*-CTL01</strong>) し、Windows 管理者の資格情報を使用してコマンド プロンプトを開きます。  
   
 2.  次のディレクトリに移動します:`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`します。  
   
@@ -83,7 +82,7 @@ Analytics Platform System は、管理コンソールのデータを Microsoft �
   
 #### <a name="to-disable-telemetry"></a>テレメトリを無効にするには  
   
-1.  アプライアンスのドメイン管理者アカウントを使用してコントロールのノードに接続 (***appliance_domain *-CTL01**) と、管理者特権で PowerShell ウィンドウを開きます。  
+1.  アプライアンスのドメイン管理者アカウントを使用してコントロールのノードに接続 (<strong>*appliance_domain*-CTL01</strong>) と、管理者特権で PowerShell ウィンドウを開きます。  
   
 2.  次のディレクトリに移動します:`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`します。  
   

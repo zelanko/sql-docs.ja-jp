@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cba6c585d94615a1afa5d09ffb62a84da2177616
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046008"
 ---
 # <a name="detail-property"></a>Detail プロパティ
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** クラスの **Detail** プロパティには、次の XML 構造があります。  
@@ -48,7 +46,7 @@ ms.locfileid: "48223042"
  製品の名前です。 既定値は **Microsoft SQL Server Reporting Services** です。  
   
  **ProductVersion**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、8.00.0xxx.00 のようになります。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、次のようにする必要があります。8.00.0xxx.00 します。  
   
  **ProductLocaleId**  
  アプリケーションの INTL DLL のロケール ID または言語 ID (0x41A など)。  
@@ -71,7 +69,7 @@ ms.locfileid: "48223042"
  **Warnings**  
  レポート処理から返された警告を含む XML 文字列です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services における例外処理の概要](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException クラス](reporting-services-soapexception-class.md)   
  [Detail プロパティを使用したエラー処理](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  

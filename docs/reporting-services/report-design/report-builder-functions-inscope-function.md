@@ -1,19 +1,19 @@
 ---
 title: InScope 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.date: 03/07/2017
+ms.date: 03/08/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b8400a287f3ec2ac6e0cabb59df255336f8ef92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8b6891ec497b3100206b812fbc8da7b0463fa4d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579506"
 ---
 # <a name="report-builder-functions---inscope-function"></a>レポート ビルダー関数 - InScope 関数
   アイテムの現在のインスタンスが、指定したスコープ内にあるかどうかを示します。  

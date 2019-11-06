@@ -1,6 +1,7 @@
 ---
-title: 可用性レプリカが切断されている | Microsoft Docs
-ms.custom: ''
+title: 可用性グループで可用性レプリカの参加が解除されている
+description: Always On 可用性グループ内でレプリカの参加が解除されている理由を特定します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4d070f183fbe5b09016af950cfad9e6da60e90c6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c0fc0dbd2df2d0383e7fd63eddc941170d4b0a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988647"
 ---
-# <a name="availability-replica-is-disconnected"></a>可用性レプリカが切断されている
+# <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>Always On 可用性グループ内で可用性レプリカの参加が解除されている
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>概要  

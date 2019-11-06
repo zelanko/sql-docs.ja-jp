@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
@@ -14,12 +14,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510321"
 ---
 # <a name="save-as"></a>[名前を付けて保存]
   このダイアログ ボックスを使用すると、現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 このダイアログ ボックスを表示するには、次のようにクリックします**保存** *\<ファイル >* **として**上、**ファイル**メニュー (場所 *。\<ファイル >* は現在の項目の名前です)、または alt キーを押しながら F キーをコード エディターでキーを押します。  
@@ -31,8 +31,8 @@ ms.locfileid: "48116798"
  **[ファイル名]**  
  このオプションを使用して、現在のファイル名の表示、ファイル名の変更、表示されるファイルとフォルダーのフィルター選択を行います。 表示されるファイルとフォルダーをフィルター選択するには、フィルターの対象となるファイル名またはファイル名の一部を入力します。 ワイルドカードとしてアスタリスク (`*`) を使用できます。  
   
-> [!TIP]  
->  Web およびネットワークの場所にあるファイルを表示するには、 **[ファイル名]** ボックスに URL またはネットワーク パスを入力します。 たとえば、「 http://mywebsite 」と入力した場合は、"mywebsite" という Web の場所で利用可能なファイルが表示され、「\\\myserver\myshare」と入力した場合は、"myserver" の "myshare" という場所で利用可能なファイルが表示されます。  
+> [!TIP]
+>  Web およびネットワークの場所にあるファイルを表示するには、 **[ファイル名]** ボックスに URL またはネットワーク パスを入力します。 たとえば、「 <http://mywebsite> 」と入力した場合は、"mywebsite" という Web の場所で利用可能なファイルが表示され、「\\\myserver\myshare」と入力した場合は、"myserver" の "myshare" という場所で利用可能なファイルが表示されます。  
   
  **ファイルの種類**  
  このオプションを使用して、選択したアイテムに適用する新しいファイルの種類を選択します。 選択したアイテムに適用できるすべてのファイル タイプが表示されます。  

@@ -10,15 +10,14 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302686"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909755"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
+# <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1:データベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインストール時に一緒にインストールされるツールは、エディションとセットアップによって異なります。 このレッスンでは、主要なツールについて確認し、接続して基本機能を実行する方法について学習します。これで、さらに多くのユーザーを認証することができます。  
@@ -41,11 +40,11 @@ ms.locfileid: "52302686"
 
 ##### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio を起動するには
 - 現在のバージョンの Windows では、 **スタート** ページで「SSMS」と入力し、 **[Microsoft SQL Server Management Studio]** をクリックします。  
-- 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] の順にポイントして、 **[SQL Server Management Studio]** をクリックします。  
+- 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] の順にポイントして、 **[SQL Server Management Studio]** をクリックします。  
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを起動するには  
 - 現在のバージョンの Windows では、 **[スタート]** ページで「 **Configuration Manager**] の順にポイントして、 **[SQL Server *&lt;バージョン&gt;* Configuration Manager**から無料でダウンロードできます。   
-- 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+- 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
 
 ## <a name="connect"></a>Management Studio を使用した接続  
 - インスタンスの名前がわかり、ローカルの Administrators グループのメンバーとしてコンピューターにログインしていれば、同じコンピューターで実行されているツールから [!INCLUDE[ssDE](../includes/ssde-md.md)] に簡単に接続できます。 次の手順は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]をホストしている同じコンピューター上で実行する必要があります。  
@@ -58,7 +57,7 @@ ms.locfileid: "52302686"
 1.  Administrators グループのメンバーとして Windows にログインし、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を起動します。  
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]** をクリックします。  
 3.  [登録済みサーバー] が表示されていない場合は、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。
-4.  [登録済みサーバー] ツール バーで **[データベース エンジン]** を選択した状態で、 **[データベース エンジン]** を展開して **[ローカル サーバー グループ]** を右クリックし、 **[タスク]** をポイントして **[ローカル サーバーの登録]** をクリックします。 コンピューターにインストールされている [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのインスタンスが表示されます。 既定のインスタンスには名前がなく、コンピューター名で表示されます。 名前付きインスタンスは、コンピューター名の後に円記号 (\\)、その後にインスタンスの名前が続く形式で表示されます。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の場合は、セットアップ中に変更されない限り、インスタンス名は *<computer_name>* \sqlexpress の形式になります。  
+4.  [登録済みサーバー] ツール バーで **[データベース エンジン]** を選択した状態で、 **[データベース エンジン]** を展開して **[ローカル サーバー グループ]** を右クリックし、 **[タスク]** をポイントして **[ローカル サーバーの登録]** をクリックします。 **[ローカル サーバー グループ]** を展開し、表示されているコンピューターにインストールされている [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのインスタンスを表示します。 既定のインスタンスには名前がなく、コンピューター名で表示されます。 名前付きインスタンスは、コンピューター名の後に円記号 (\\)、その後にインスタンスの名前が続く形式で表示されます。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の場合は、セットアップ中に変更されない限り、インスタンス名は *<computer_name>* \sqlexpress の形式になります。  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>データベース エンジンが実行されていることを確認するには
 
@@ -77,7 +76,7 @@ ms.locfileid: "52302686"
 
 ![オブジェクト エクスプ ローラー](../relational-databases/media/object-explorer.png)
 
-3.  **[サーバー名]** ボックスに、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスの名前を入力します。 SQL Server の既定のインスタンスでは、サーバー名はコンピューター名です。 SQL Server の名前付きインスタンスでは、サーバー名は _\<computer_name\>_**\\**_\<instance_name\>_ となります (**ACCTG_SRVR\SQLEXPRESS** など)。 次のスクリーン ショットは、"PracticeComputer" という名前のコンピューター上の、既定の (名前のない) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]インスタンスへの接続を示しています。 Windows にログオンしているユーザーは、Contoso ドメインの Mary です。 Windows 認証を使用する場合は、ユーザー名を変更することはできません。 
+3.  **[サーバー名]** ボックスに、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスの名前を入力します。 SQL Server の既定のインスタンスでは、サーバー名はコンピューター名です。 SQL Server の名前付きインスタンスでは、サーバー名は _\<computer_name\>_ **\\** _\<instance_name\>_ となります (**ACCTG_SRVR\SQLEXPRESS** など)。 次のスクリーン ショットは、"PracticeComputer" という名前のコンピューター上の、既定の (名前のない) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]インスタンスへの接続を示しています。 Windows にログオンしているユーザーは、Contoso ドメインの Mary です。 Windows 認証を使用する場合は、ユーザー名を変更することはできません。 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
@@ -110,5 +109,5 @@ ms.locfileid: "52302686"
 > 上記は開始するための基本的な情報です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では優れたセキュリティ環境が提供されます。セキュリティはデータベース操作において明らかに重要な要素です。  
 
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2: 別のコンピューターからの接続](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[レッスン 2:別のコンピューターからの接続](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

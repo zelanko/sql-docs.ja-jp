@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying filter information
@@ -17,12 +16,12 @@ ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 912722edf3bbd8f1022e9fe0adfcd2bc7237ba6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8496eee2134d9f89163fce6b6ad3ef07ba49b1af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63276796"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>フィルター情報の表示 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してイベント クラスのデータ列のフィルターを表示する方法について説明します。  
@@ -38,7 +37,7 @@ ms.locfileid: "48119162"
 > [!NOTE]  
 >  値が割り当てられている比較演算子は太字で表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

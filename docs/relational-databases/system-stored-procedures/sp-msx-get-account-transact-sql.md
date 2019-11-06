@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 297dbbf13da14916d12fc1ef457279a1268bc991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108039"
 ---
 # <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  対象サーバーがマスター サーバーにログインする場合に使用する資格情報を一覧表示します。  
+  ターゲット サーバーがマスター サーバーにログインする場合に使用する資格情報を一覧表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +52,13 @@ sp_msx_get_account
 |msx_login_name|**nvarchar (4000)**|資格情報に関する Windows ユーザーのドメイン名とユーザー名。|  
   
 ## <a name="remarks"></a>コメント  
- 対象サーバーに対して指定された資格情報がない場合、空の結果セットを返します。 資格情報を設定するには、sp_msx_set_account を使用します。  
+ ターゲット サーバーに対して指定された資格情報がない場合、空の結果セットを返します。 資格情報を設定するには、sp_msx_set_account を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、この対象サーバーがマスター サーバーにログインする場合に使用する資格情報を一覧表示します。  
+ 次の例では、このターゲット サーバーがマスター サーバーにログインする場合に使用する資格情報を一覧表示します。  
   
 ```  
 USE msdb ;  

@@ -4,20 +4,24 @@ hide_bc: true
 title: SQL Server のビジネス継続性
 description: 高可用性、ディザスター リカバリー、また、状況に関係なく、ビジネスを継続するための、SQL Server のさまざまな機能を確認します。
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 3aa486304568d2d572b1d1946a89c8ab5ec9753a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64aee5de87297b10a7d3664f5d7f33c8b03a9af5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027240"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +31,7 @@ ms.locfileid: "51698160"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server のダウンロード</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
                                 </div>
                             </div>
                         </div>

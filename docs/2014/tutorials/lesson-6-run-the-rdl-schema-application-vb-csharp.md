@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 6: RDL スキーマ アプリケーションを実行する (VB、c#) |Microsoft Docs'
+title: 'レッスン 6: RDL スキーマ アプリケーションを実行する (VB -C#) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 09d5ad740cb692549d56b9226bc3c7ad5bb234a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63254501"
 ---
-# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>レッスン 6: RDL スキーマ アプリケーションを実行する (VB、c#)
+# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>レッスン 6: RDL スキーマ アプリケーションを実行する (VB -C#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] には、統合開発環境 (IDE) からコンソール アプリケーションをビルドおよび実行する方法が 2 とおり用意されています。  
   
 -   開始 (デバッグあり)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106630"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダー)
   レポートのフィルターは、レポート内で使用されるデータを制限するために作成したデータセット、データ領域、またはデータ領域グループの一部です。 データセット クエリを変更できない場合 (共有データセットを使用している場合など)、レポート データを制御する方法としてフィルターを使用できます。  
@@ -84,19 +83,19 @@ ms.locfileid: "48154222"
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|式と単一の値とを比較します。|  
 |**TopN、BottomN**|式と単一の `Integer` 値とを比較します。|  
-|**TopPercent、BottomPercent**|1 つに式を比較します`Integer`または`Float`値。|  
+|**TopPercent、BottomPercent**|式と単一の値 (`Integer` または `Float`) とを比較します。|  
 |**[次の値の間]**|式が 2 つの値の範囲内にあるかどうかを調べます。|  
 |**In**|式が特定の値の集合に含まれるかどうかを調べます。|  
   
 ### <a name="value"></a>値  
  [値] 式は、フィルター式の最後の部分を指定します。 レポート プロセッサは、[式] で指定されたデータにフィルターの通過を許可するかどうかを判断する際、評価対象の式を指定のデータ型に変換した後、フィルター式全体を評価します。  
   
- 標準の CLR データ型以外の型に変換するためには、特定のデータ型へと明示的に変換するように、式を修正する必要があります。 この変換には、 **[式]** ダイアログ ボックス ( **[共通の関数]** の **[変換]**) に表示される変換関数を使用できます。 たとえば、 `ListPrice` データ ソースの **money** 型として格納されたデータを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] というフィールドがあるとします。データ処理拡張機能は、このフィールドの値を <xref:System.Decimal> 型として返します。 このとき、レポートの通貨で **$50000.00** を超える値だけを使用するようにフィルターを設定するには、 `=CDec(50000.00)`という式を使って、この値を Decimal 型に変換します。  
+ 標準の CLR データ型以外の型に変換するためには、特定のデータ型へと明示的に変換するように、式を修正する必要があります。 この変換には、 **[式]** ダイアログ ボックス ( **[共通の関数]** の **[変換]** ) に表示される変換関数を使用できます。 たとえば、 `ListPrice` データ ソースの **money** 型として格納されたデータを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] というフィールドがあるとします。データ処理拡張機能は、このフィールドの値を <xref:System.Decimal> 型として返します。 このとき、レポートの通貨で **$50000.00** を超える値だけを使用するようにフィルターを設定するには、 `=CDec(50000.00)`という式を使って、この値を Decimal 型に変換します。  
   
  フィルターに使用する値をユーザーが対話形式で選択できるように、この値にパラメーター参照を含めることもできます。  
   
 ## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

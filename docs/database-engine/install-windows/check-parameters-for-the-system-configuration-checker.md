@@ -22,13 +22,12 @@ ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 869461d6054d3db263f96604c16bae39b63293a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3f6682dab001ac01ad811a4b15a989b91ef81ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052294"
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>システム構成チェッカーの検査パラメーター
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f76b8cbfa9845ac6cade36b5d7709e6a4510f24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68cf4eb253505f6ade040eb0bf0f877f4fb91d94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032394"
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information イベント クラス
   **OLEDB Provider Information** イベント クラスは、分散クエリを実行するときに発生し、プロバイダー接続に関する情報を収集します。  
@@ -60,11 +59,11 @@ ms.locfileid: "48109942"
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**ProviderName**|**nvarchar**|OLE DB プロバイダーの名前です。|46|はい|  
-|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
+|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|[はい]|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**TextData**|**ntext**|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|[はい]|  
+|**TextData**|**ntext**|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|[はい]|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
   
 ## <a name="see-also"></a>参照  

@@ -1,29 +1,26 @@
 ---
-title: 'タスク 1 (前提条件): MDS の仕入先データを削除する |Microsoft Docs'
+title: タスク 1 (前提条件):MDS の仕入先データを削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84c0acceb4953b819cb5696c4ef90c39e4376846
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481222"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>タスク 1 (前提条件): MDS の仕入先データを削除する
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>タスク 1 (前提条件):MDS の仕入先データを削除する
   ここでは、MDS に格納されている仕入先データを削除します。 使用して手動でデータをアップロードした**MDS Excel アドイン**前のレッスンでします。 このレッスンで作成する SSIS パッケージは、MDS にデータを自動的にアップロードします。 したがって、SSIS パッケージをテストする前に、MDS からの仕入先データの削除、派生階層の削除、Supplier および State エンティティの削除、データのない Supplier エンティティの作成が必要となります。  
   
-1.  起動**マスター データ マネージャー**に移動して**http://localhost/MDS**または web サイトと指定した場合にアプリケーションが MDS を構成します。 保持する場合、**マスター データ マネージャー**を開き、 **SQL Server 2012 マスター データ サービス**に切り替えるの上部にある、**ホーム ページ**します。  
+1.  起動**マスター データ マネージャー**に移動して **http://localhost/MDS** または web サイトと指定した場合にアプリケーションが MDS を構成します。 保持する場合、**マスター データ マネージャー**を開き、 **SQL Server 2012 マスター データ サービス**に切り替えるの上部にある、**ホーム ページ**します。  
   
 2.  クリックして**システム管理**で、**管理タスク**セクション。  
   
@@ -43,7 +40,7 @@ ms.locfileid: "48227702"
   
 10. 持つ Excel ウィンドウに切り替える**Cleansed and Matched Suppliers.xls**ファイルを開く。 切り替えて、 **Sheet1**下部にあるタブ。  
   
-11. のみを選択、**最初の行のヘッダーを含む**します。 他の行は選択しないでください。 Excel の列に基づいてエンティティを作成しますが、データはアップロードしません。 したがって、行見出しがある先頭行のみを選択することになります。  
+11. のみを選択、**最初の行のヘッダーを含む**します。 その他の任意の行を選択しないでください。 Excel の列に基づいてエンティティを作成しますが、すべてのデータをアップロードする必要はありません。 したがって、行見出しがある先頭行のみを選択することになります。  
   
 12. クリックして**マスター データ**メニュー バーでします。  
   
@@ -53,9 +50,9 @@ ms.locfileid: "48227702"
   
     1.  選択**新しい接続を作成**、 をクリック**新規**ボタンをクリックします。  
   
-    2.  新しい接続の追加 ダイアログ ボックスで、入力**ローカル MDS サーバー**の**説明**と**http://localhost/MDS**の**MDS サーバー アドレス**、をクリック**OK**ダイアログ ボックスを閉じます。  
+    2.  新しい接続の追加 ダイアログ ボックスで、入力**ローカル MDS サーバー**の**説明**と **http://localhost/MDS** の**MDS サーバー アドレス**、をクリック**OK**ダイアログ ボックスを閉じます。  
   
-15. **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS)、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
+15. **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS) 、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
   
 16. クリックして**Connect** MDS サーバーに接続します。  
   
@@ -86,6 +83,6 @@ ms.locfileid: "48227702"
 22. **[エクスプローラー]** をクリックします。 注意して、**業者**ですべての属性を持つエンティティが作成された**値を含まない**します。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2 &#40;(省略可能)&#41;: マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成します。](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [タスク 2&#40;省略可能な&#41;:マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成します。](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

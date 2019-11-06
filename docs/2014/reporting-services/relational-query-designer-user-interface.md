@@ -1,22 +1,21 @@
 ---
-title: リレーショナル クエリ デザイナーのユーザー インターフェイス |Microsoft Docs
+title: リレーショナルクエリデザイナーのユーザーインターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ccde5a1c4b79a5c67182789af7c54e2142156ad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160462"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891136"
 ---
 # <a name="relational-query-designer-user-interface"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のレポート デザイナーにはグラフィカル クエリ デザイナーとテキストベースのクエリ デザイナーが用意されており、レポート データセット用に [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] から取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -37,11 +36,11 @@ ms.locfileid: "48160462"
   
  次の図は、テーブルまたはビューを使用した場合のグラフィカル クエリ デザイナーです。  
   
- ![クエリのグラフィカル デザイナー](../analysis-services/media/rsqd-relational-graphical.gif "クエリのグラフィカル デザイナー")  
+ ![クエリのグラフィカル デザイナー](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "クエリのグラフィカル デザイナー")  
   
  次の図は、ストアド プロシージャまたはテーブル値関数を使用した場合のグラフィカル クエリ デザイナーです。  
   
- ![グラフィカル クエリ デザイナーのストアド プロシージャ](../analysis-services/media/rs-relational-graphical-sp.gif "グラフィカル クエリ デザイナーのストアド プロシージャ")  
+ ![グラフィカル クエリ デザイナーのストアド プロシージャ](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "グラフィカル クエリ デザイナーのストアド プロシージャ")  
   
  次の表に各ペインの機能を示します。  
   
@@ -84,9 +83,9 @@ ms.locfileid: "48160462"
   
  集計ではデータの要約が返されます。データは、要約データを提供する集計をサポートするためにグループ化されます。 クエリで集計を使用すると、そのクエリによって返される他のフィールドは自動的にグループ化され、クエリには SQL の GROUP BY 句が含まれます。 **[グループ化と集計]** ボックスの一覧では、 **[グループ化]** オプションだけを使用することによって、集計を追加せずにデータを要約できます。 多くの集計には、DISTINCT キーワードを使用するバージョンが含まれています。 DISTINCT を含めることで値の重複を排除できます。  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 使用して[!INCLUDE[tsql](../includes/tsql-md.md)]と[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]します。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]を[!INCLUDE[tsql](../includes/tsql-md.md)]使用[!INCLUDE[msCoName](../includes/msconame-md.md)]し、を[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]します。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」を参照してください。  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」を参照してください。  
   
  次の表に集計の一覧とその説明を記載します。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48160462"
 |Max|グループ内の最大値を返します。 SQL MAX 集計を実装します。|  
 |StDev|グループ内のすべての値の統計的標準偏差を返します。 SQL STDEV 集計を実装します。|  
 |StDevP|グループで指定された式のすべての値の母集団の統計的標準偏差を返します。 SQL STDEVP 集計を実装します。|  
-|SUM|グループ内のすべての値の合計を返します。 SQL SUM 集計を実装します。|  
+|Sum|グループ内のすべての値の合計を返します。 SQL SUM 集計を実装します。|  
 |Var|グループ内のすべての値の統計的変位を返します。 SQL VAR 集計を実装します。|  
 |VarP|グループ内のすべての値の母集団の統計的変位を返します。 SQL VARP 集計を実装します。|  
 |Avg Distinct|一意の平均値を返します。 AVG 集計と DISTINCT キーワードの組み合わせを実装します。|  
@@ -126,7 +125,7 @@ ms.locfileid: "48160462"
 -   **自動検出** : テーブル間のリレーションシップを自動的に作成する自動検出機能を切り替えます。 自動検出をオンにすると、クエリ デザイナーによって、テーブル内の外部キーからリレーションシップが作成されます。自動検出をオフにすると、リレーションシップを手動で作成する必要があります。 **データベース ビュー** ペインでテーブルを選択する際、自動検出によってリレーションシップが自動的に作成されます。 結合を手動で作成した後に自動検出をオンにすると、これらの結合は破棄されます。  
   
     > [!IMPORTANT]  
-    >  使用すると[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]結合を作成するために必要なメタデータが指定されていないと、リレーションシップを自動的に検出できません。 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] からデータを取得するクエリの場合は、すべてのテーブル結合を手動で作成する必要があります。  
+    >  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] で使用する場合、結合の作成に必要なメタデータは提供されず、リレーションシップを自動的に検出できません。 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]からデータを取得するクエリの場合は、すべてのテーブル結合を手動で作成する必要があります。  
   
 -   **リレーションシップの追加** : **[リレーションシップ]** ボックスの一覧にリレーションシップを追加します。  
   
@@ -150,7 +149,7 @@ ms.locfileid: "48160462"
   
 -   **左テーブル** : 結合リレーションシップの一部である最初のテーブルの名前を表示します。  
   
--   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 結合の種類に関する詳細については、「結合の基礎」を参照してください[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=141687) msdn.microsoft.com.  
+-   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 JOIN の種類の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンラインブック](https://go.microsoft.com/fwlink/?LinkId=141687) の「結合の基礎」を参照してください。  
   
 -   **右テーブル** : 結合リレーションシップの 2 番目のテーブルの名前を表示します。  
   
@@ -191,7 +190,7 @@ ms.locfileid: "48160462"
 ## <a name="text-based-query-designer"></a>テキストベースのクエリ デザイナー  
  クエリを詳細に渡って制御するには、テキスト ベースのクエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** をクリックします。 テキスト ベースのクエリ デザイナーでクエリを編集すると、リレーショナル クエリ デザイナーは使用できなくなります。 その後、クエリは常にテキスト ベースのクエリ デザイナーで開かれるようになります。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../../2014/reporting-services/text-based-query-designer-user-interface.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services クエリ デザイナー](../../2014/reporting-services/reporting-services-query-designers.md)  
   
   

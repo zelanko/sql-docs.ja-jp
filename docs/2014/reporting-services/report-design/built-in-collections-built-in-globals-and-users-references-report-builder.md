@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106439"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>組み込み Globals および Users 参照 (レポート ビルダーおよび SSRS)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す `Globals` コレクションと `User` コレクションの両方が含まれています。 `Globals` コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 `User` コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
@@ -25,7 +24,7 @@ ms.locfileid: "48166642"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Globals コレクションの使用  
- `Globals`コレクションには、レポートのグローバル変数が含まれています。 デザイン画面では、これらの変数は、`[&ReportName]` など、先頭に & (アンパサンド) が付いた状態で表示されます。 次の表のメンバー、`Globals`コレクション。  
+ `Globals` コレクションには、レポートのグローバル変数が保持されます。 デザイン画面では、これらの変数は、`[&ReportName]` など、先頭に & (アンパサンド) が付いた状態で表示されます。 次の表では、`Globals` コレクションのメンバーについて説明します。  
   
 |**Member**|**型**|**[説明]**|  
 |----------------|--------------|---------------------|  
@@ -40,7 +39,7 @@ ms.locfileid: "48166642"
 |OverallTotalPages|`Integer`|レポート全体の合計ページ数です。 この値は ResetPageNumber の影響を受けません。<br /><br /> OverallTotalPages は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
 |RenderFormat|`RenderFormat`|現在の表示要求に関する情報です。<br /><br /> 詳細については、次のセクションの「RenderFormat」を参照してください。|  
   
- メンバー、`Globals`コレクションは、バリアント型を返します。 特定のデータ型を必要とする、このコレクションのメンバーを式で使用する場合は、先に変数をキャストする必要があります。 たとえば、バリアント型の実行時間を Date 形式に変換するには、 `=CDate(Globals!ExecutionTime)`を使用します。 詳細については、次を参照してください。[式におけるデータ型&#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)します。  
+ `Globals` コレクションのメンバーからは、Variant 値が返されます。 特定のデータ型を必要とする、このコレクションのメンバーを式で使用する場合は、先に変数をキャストする必要があります。 たとえば、バリアント型の実行時間を Date 形式に変換するには、 `=CDate(Globals!ExecutionTime)`を使用します。 詳細については、「 [式で使用されるデータ型 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)など、先頭に &amp; (アンパサンド) が付いた状態で表示されます。  
   
 ### <a name="renderformat"></a>RenderFormat  
  次の表では、`RenderFormat` のメンバーについて説明します。  
@@ -69,16 +68,16 @@ ms.locfileid: "48166642"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>User コレクションの使用  
- `User`コレクションには、レポートを実行しているユーザーに関するデータが含まれています。 このコレクションを使用すると、現在のユーザーのデータのみを表示するなど、レポートに表示されるデータをフィルター選択することも、レポート タイトルなどに UserID を表示することもできます。 デザイン画面では、これらの変数は、`[&UserID]` など、先頭に & (アンパサンド) が付いた状態で表示されます。  
+ `User` コレクションには、レポートを実行しているユーザーのデータが保持されます。 このコレクションを使用すると、現在のユーザーのデータのみを表示するなど、レポートに表示されるデータをフィルター選択することも、レポート タイトルなどに UserID を表示することもできます。 デザイン画面では、これらの変数は、`[&UserID]` など、先頭に & (アンパサンド) が付いた状態で表示されます。  
   
- 次の表のメンバー、`User`コレクション。  
+ 次の表では、`User` コレクションのメンバーについて説明します。  
   
 |**Member**|**型**|**[説明]**|  
 |----------------|--------------|---------------------|  
 |`Language`|`String`|レポートを実行しているユーザーの言語です。 たとえば、`en-US` のようにします。|  
 |`UserID`|`String`|レポートを実行しているユーザーの ID です。 Windows 認証を使用している場合、この値は現在のユーザーのドメイン アカウントです。 値は、Windows 認証またはカスタム認証を使用できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能によって決まります。|  
   
- レポートにおける複数言語のサポートの詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server オンライン ブック [にある](http://go.microsoft.com/fwlink/?LinkId=120955)のマニュアルの「多言語配置やグローバル配置のソリューション設計に関する考慮事項」を参照してください。  
+ レポートにおける複数言語のサポートの詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server オンライン ブック [にある](https://go.microsoft.com/fwlink/?LinkId=120955)のマニュアルの「多言語配置やグローバル配置のソリューション設計に関する考慮事項」を参照してください。  
   
 ### <a name="using-locale-settings"></a>ロケール設定の使用  
  式を使用し、`User.Language` 値でクライアント コンピューターのロケール設定を参照して、ユーザーに対してどのようにレポートを表示するかを指定できます。 たとえば、ロケール値に基づいて異なるクエリ式を使用するレポートを作成できます。 クエリは、返された言語に応じて異なる列からローカライズされた情報を取得するように変更できます。 また、この変数を基にしてレポートまたはレポート アイテムの言語設定に式を使用することもできます。  
@@ -89,11 +88,11 @@ ms.locfileid: "48166642"
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>スナップショット レポートまたは履歴レポートの UserID の識別  
  場合によっては、 *User!UserID* 変数を含むレポートは、レポートを参照している現在のユーザー固有のレポート データを表示することができません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](../expression-dialog-box-report-builder.md)   
+ [[式] ダイアログ ボックス (レポート ビルダー)](../expression-dialog-box-report-builder.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [数値と日付の書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [数値と日付の書式設定 (レポート ビルダーおよび SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

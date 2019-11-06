@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -34,17 +33,17 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d3198f2d361726a3e17c152b259471062f6a297
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62806350"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 のエディションとコンポーネント
   インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
   
-## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>プリンシパル エディション [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のプリンシパル エディション  
  次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のプリンシパル エディションについて説明します。 詳細については、次を参照してください[SQL Server 2014 の各エディションでサポートされる機能。](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|定義|  
@@ -53,14 +52,14 @@ ms.locfileid: "48142192"
 |Business Intelligence (64 ビットおよび 32 ビット)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence Edition は、安全かつスケーラブルで管理しやすい BI ソリューションのビルドおよび配置を可能にする包括的なプラットフォームを提供します。 ブラウザー ベースのデータ探索と視覚化; など、魅力的な機能を提供します。強力なデータのマッシュ アップ機能と強化された統合管理します。|  
 |Standard (64 ビットおよび 32 ビット)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard Edition は、企業部門や小規模組織がアプリケーションを実行するための基本的なデータ管理/ビジネス インテリジェンス データベースを提供し、内部設置型およびクラウド用の一般的な開発ツールをサポートすることで、最小限の IT リソースでデータベースを効果的に管理することを可能にします。|  
   
-## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>特別エディション [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の特別エディション  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特別エディションは、ビジネス ワークロードを対象とするエディションです。 次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特別エディションについて説明します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|説明|  
 |---------------------------------------|-----------------|  
 |Web (64 ビットおよび 32 ビット)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web Edition は、大小さまざまな規模の Web 資産に対応できるスケーラビリティ、経済性、および管理性を備えた、Web ホスティング企業および Web VAP 向けの総保有コストの低いオプションです。|  
   
-## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>拡張エディション [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の拡張エディション  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の拡張エディションは、特定の顧客シナリオに合わせて設計されており、無料または非常に低い価格で提供されます。 次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の拡張エディションについて説明します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|説明|  
@@ -86,7 +85,7 @@ ms.locfileid: "48142192"
   
 |サーバー コンポーネント|説明|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 含まれています、 [!INCLUDE[ssDE](../includes/ssde-md.md)]、格納、処理、およびデータ、レプリケーション、フルテキスト検索、管理するためのリレーショナル ツールおよび XML データをセキュリティで保護するためのコア サービスと[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)](DQS) サーバー。|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、データを格納、処理、およびセキュリティで保護するための主要サービスである[!INCLUDE[ssDE](../includes/ssde-md.md)]、レプリケーション、フルテキスト検索、リレーショナル データと XML データの管理ツール、および [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) が含まれます。|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、オンライン分析処理 (OLAP) アプリケーションおよびデータ マイニング アプリケーションを作成および管理するためのツールが含まれます。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、表形式、マトリックス形式、グラフィカル形式、および自由形式のレポートを作成、管理、配置するためのサーバー コンポーネントとクライアント コンポーネントが含まれます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、レポート アプリケーション開発用の拡張可能プラットフォームとしても使用できます。|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、データを移動、コピー、変換するためのグラフィカル ツールおよびプログラミング可能なオブジェクトのセットです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 用の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) コンポーネントも含まれています。|  

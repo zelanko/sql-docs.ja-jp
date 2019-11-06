@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlazure.f1
@@ -13,12 +12,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9032249e880f11f27edd53e23d4ca54a47b920db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087148"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Azure SQL データベースへの接続 (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、[!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] に接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -26,7 +25,7 @@ ms.locfileid: "48149212"
 > [!NOTE]  
 >  Azure DataMarket データセットに接続している場合は、「[レポートまたはデータ フィードへの接続 (SSAS)](connect-to-a-report-or-data-feed-ssas.md)」を参照してください。  
   
- [!INCLUDE[ssSDS](../includes/sssds-md.md)] は、SQL Server 認証を使用して接続するホスト型のリレーショナル データベースです。 [!INCLUDE[ssSDS](../includes/sssds-md.md)]の詳細については、 [SQL データベース](http://go.microsoft.com/fwlink/?LinkID=157856)の Web サイトを参照してください。 データ ソースに接続するには、適切なプロバイダーがコンピューターにインストールされている必要があります。  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] は、SQL Server 認証を使用して接続するホスト型のリレーショナル データベースです。 [!INCLUDE[ssSDS](../includes/sssds-md.md)]の詳細については、 [SQL データベース](https://go.microsoft.com/fwlink/?LinkID=157856)の Web サイトを参照してください。 データ ソースに接続するには、適切なプロバイダーがコンピューターにインストールされている必要があります。  
   
 > [!NOTE]  
 >  このページでデータベースを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したデータベースの読み取り権限がないと、インポートは成功しません。  

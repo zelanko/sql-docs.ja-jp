@@ -2,18 +2,18 @@
 title: Min 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b566e9bda7d409e5eb9fd607d1a20ca82029101
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: d4df9f6bb3996c06ea3b6907ab0687e4e8b4a266
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030271"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577148"
 ---
 # <a name="report-builder-functions---min-function"></a>レポート ビルダー関数 - Min 関数
   指定されたスコープのコンテキストで、式で指定された NULL 以外のすべての数値の中から最小値を返します。  

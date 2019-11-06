@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -18,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63185644"
 ---
 # <a name="market-basket-dmx-tutorial"></a>マーケット バスケット DMX のチュートリアル
   このチュートリアルでは、作成、トレーニング、およびデータ マイニング拡張機能 (DMX) クエリ言語を使用してマイニング モデルを調査する方法を学びます。 その後、このマイニング モデルを使用して、同時に購入される傾向が高い製品を示す予測を作成します。  
@@ -46,7 +45,7 @@ ms.locfileid: "49461908"
   
  このチュートリアルの目標は、カスタム アプリケーションで使用する DMX クエリを設定することです。  
   
- **詳細については:** [データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **詳細:** [データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>マイニング構造とマイニング モデル  
  DMX ステートメントを作成するにあたっては、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がマイニング モデルの作成に使用する主なオブジェクトを理解しておくことが重要です。 *マイニング構造*はマイニング モデルの作成元となるデータ ドメインを定義するデータ構造です。 1 つのマイニング構造に複数含めることができます*マイニング モデル*同じドメインを共有します。 マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。  
@@ -87,19 +86,19 @@ ms.locfileid: "49461908"
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルは次のレッスンで構成されています。  
   
- [レッスン 1: Market Basket マイニング構造の作成](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [レッスン 1:Market Basket マイニング構造を作成します。](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  このレッスンでは、`CREATE` ステートメントを使用して、マイニング構造を作成する方法を学習します。  
   
- [レッスン 2: Market Basket マイニング構造へのマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [レッスン 2:Market Basket マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  このレッスンでは、`ALTER` ステートメントを使用して、マイニング モデルをマイニング構造に追加する方法を学習します。  
   
- [レッスン 3: Market Basket マイニング構造の処理](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [レッスン 3:Market Basket マイニング構造の処理](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  このレッスンでは、使用する方法について説明します、`INSERT INTO`マイニング構造とその関連マイニング モデルを処理するステートメント。  
   
- [レッスン 4: マーケット バスケット予測の実行](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [レッスン 4:マーケット バスケット予測の実行](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  このレッスンでは、`PREDICTION JOIN` ステートメントを使用して、マイニング モデルに対する予測を作成する方法を学習します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルを行う前に、次のソフトウェアがインストールされていることを確認してください。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
@@ -108,7 +107,7 @@ ms.locfileid: "49461908"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベース  
   
- セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 公式サンプル データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に移動して、 [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)または Microsoft SQL Server の製品サンプルのセクションでは Microsoft SQL Server のサンプルとコミュニティのプロジェクトのホーム ページ。 をクリックして**データベース**、 をクリックし、**リリース**タブし、データベースを選択します。  
+ セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 公式サンプル データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に移動して、 [ http://www.CodePlex.com/MSFTDBProdSamples ](https://go.microsoft.com/fwlink/?LinkId=88417)または Microsoft SQL Server の製品サンプルのセクションでは Microsoft SQL Server のサンプルとコミュニティのプロジェクトのホーム ページ。 をクリックして**データベース**、 をクリックし、**リリース**タブし、データベースを選択します。  
   
 > [!NOTE]  
 >  追加することをお勧めのチュートリアルを確認するとき**次のトピック**と**前のトピック**ドキュメント ビューアーのツールバーのボタン。  
@@ -116,6 +115,6 @@ ms.locfileid: "49461908"
 ## <a name="see-also"></a>参照  
  [Bike Buyer DMX のチュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [レッスン 3: マーケット バスケット シナリオの作成 (中級者向けデータ マイニング チュートリアル)](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 3:マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b124775b451740c03a5c15fbb1ac281328cc7717
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: fc156cfa292dd67e0e889fd28dbbf927061abdef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935105"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services の概要
 

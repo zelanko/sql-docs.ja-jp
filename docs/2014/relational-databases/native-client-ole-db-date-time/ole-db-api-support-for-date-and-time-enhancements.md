@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, date/time improvements
@@ -12,17 +12,17 @@ ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 536860699bcdbed6753724bfad7832bc9fa7705e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef6334f6fe4671f2563add857f6dd58ce67a2840
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63237847"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API による機能強化された日付と時刻のサポート
   機能強化された日付や時刻をサポートする OLE DB API を次に示します。  
   
-|機能|説明|  
+|関数|説明|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|アプリケーションで `datetime`、`datetime2`、および `smalldatetime` の各値を区別できるように、DBBINDING 構造体にフラグが用意されています。 詳細については、次を参照してください。[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)します。|  
 |IBCPSession::BCPColFmt|詳細については、次を参照してください。[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。|  

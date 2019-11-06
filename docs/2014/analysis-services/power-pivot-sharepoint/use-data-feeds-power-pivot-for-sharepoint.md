@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070906"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>データ フィードの使用 (PowerPivot for SharePoint)
   データ フィードは、オンライン データ ソースから生成され、宛先のドキュメントやアプリケーションに送信される 1 つ以上のデータ ストリームです。 PowerPivot for Excel を使用している場合、データ フィードを利用して、任意のデータ ソースにある既存の企業データやビジネス データを Excel 2010 ブック内の PowerPivot ウィンドウに取り込むことができます。 ブックにデータ フィードをインポートすると、SharePoint サーバーでスケジュールしたデータ更新操作でデータ フィードを参照できます。  
@@ -63,7 +62,7 @@ ms.locfileid: "48178132"
 ##  <a name="rsreport"></a> Reporting Services レポートからのデータ フィードの作成  
  SQL Server 2008 R2 Reporting Services を配置している場合は、新しい Atom 表示拡張機能を使用して既存のレポートからデータ フィードを生成できます。 最適な結果を得るには、PowerPivot for Excel と統合された Excel 2010 がワークステーションに必要です。 PowerPivot クライアント アプリケーションは、データ フィードのエクスポートに応答して起動します。そして、受信したテーブルと列が自動的に追加され、関連付けられます。  
   
- データ フィードをレポートからエクスポートする方法については、[レポート ビルダー ヘルプ ファイル](http://go.microsoft.com/fwlink/?LinkId=154494)の「[1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
+ データ フィードをレポートからエクスポートする方法については、[レポート ビルダー ヘルプ ファイル](https://go.microsoft.com/fwlink/?LinkId=154494)の「[1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  SharePoint ライブラリにパブリッシュされた PowerPivot ブックにレポート データを再インポートする定期的なデータ更新スケジュールを設定するには、レポート サーバーが SharePoint 統合用に構成されている必要があります。 詳細については、SharePoint と Reporting Services の併用で PowerPivot を使用して、次を参照してください。[レポート サーバーの構成と管理&#40;Reporting Services SharePoint モード&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)します。  
@@ -83,7 +82,7 @@ ms.locfileid: "48178132"
   
     1.  **[ベース URL]** は省略可能です。 データ サービス ドキュメントが複数のフィードを提供する場合はベース URL を指定してください。 ベース URL には、すべてのフィードに共通する URL の部分 (サーバー名とサイトなど) を指定します。 Reporting Services レポートにデータ サービス ドキュメントを作成している場合、ベース URL はレポート サーバーの URL とレポートになります。  
   
-    2.  **[Web サービス URL]** は必須です。 ベース URL を指定しない場合、この値のアドレスには http:// または https:// を含める必要があります。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL は http://adventure-works/inventory/today.aspx、ベース URL になります。 http://adventure-works/inventory、および Web サービスの URL は/today.aspx になります。  
+    2.  **[Web サービス URL]** は必須です。 ベース URL を指定しない場合、この値のアドレスには http:// または https:// を含める必要があります。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL は http://adventure-works/inventory/today.aspx 、ベース URL になります。 http://adventure-works/inventory 、および Web サービスの URL は/today.aspx になります。  
   
          Web サービス URL には、データのサブセットを除外または選択するパラメーターを含めることができます。 フィードを提供するアプリケーションまたはサービスは、URL に指定するパラメーターをサポートしている必要があります。  
   

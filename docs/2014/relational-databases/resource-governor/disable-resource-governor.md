@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, disabling
@@ -13,21 +12,21 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f58c39f80a1fe34314cd2043ca3a7d94e78471fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63209711"
 ---
 # <a name="disable-resource-governor"></a>リソース ガバナーを無効にしたとき
   リソース ガバナーを無効にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **リソース ガバナーの無効化に使用するもの:**  [オブジェクト エクスプローラー](#RGOffObjEx)、 [リソース ガバナーのプロパティ](#RGOffProp)、 [Transact-SQL](#RGOffTSQL)  
+-   **リソース ガバナーの無効化に使用するもの:** [オブジェクト エクスプローラー](#RGOffObjEx)、[Resource Governor のプロパティ](#RGOffProp)、[Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  リソース ガバナーを無効にすると、結果は次のようになります。  
   
 -   分類子関数は実行されません。  
@@ -80,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](resource-governor.md)   
+ [リソース ガバナー](resource-governor.md)   
  [リソース ガバナーの有効化](enable-resource-governor.md)   
  [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   

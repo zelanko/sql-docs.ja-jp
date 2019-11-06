@@ -9,19 +9,18 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fc303892fdefda350a2bb6513a71226264e50fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067670"
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World Importers OLTP データベースのインストールと構成の手順。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)します。 完全なバージョンのサンプルでは、SQL Server の評価、Developer、または Enterprise Edition を使用します。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最善の結果を得るには、2016 年 6 月リリース以降を使用してください。
@@ -76,7 +75,7 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
 
-適用対象: SQL Server
+適用対象:SQL Server
 
 SQL Server での監査を有効にするには、サーバーの構成が必要です。 WideWorldImporters サンプルの SQL Server 監査を有効にするには、データベースで、次のステートメントを実行します。
 
@@ -86,7 +85,7 @@ Azure SQL Database で監査が構成されている、 [Azure portal](https://p
 
 ### <a name="row-level-security"></a>行レベルのセキュリティ
 
-適用対象: Azure SQL Database
+適用対象:Azure SQL データベース
 
 行レベル セキュリティは、WideWorldImporters の bacpac のダウンロードで既定では無効です。 をデータベースに行レベル セキュリティを有効にするには、次のストアド プロシージャを実行します。
 

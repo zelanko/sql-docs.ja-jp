@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037771"
 ---
 # <a name="c-data-types"></a>C データ型
 ODBC C データ型は、アプリケーションでデータの格納に使用される C バッファーのデータ型を示します。  
@@ -36,19 +35,19 @@ ODBC C データ型は、アプリケーションでデータの格納に使用�
 |-----------------------|--------------------|------------|  
 |SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT [j]|SQLUSMALLINT|符号なし short int|  
-|SQL_C_SLONG [j]|SQLINTEGER|long int|  
-|SQL_C_ULONG [j]|SQLUINTEGER|符号なし long int|  
+|SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT[j]|SQLUSMALLINT|符号なし short int|  
+|SQL_C_SLONG[j]|SQLINTEGER|long int|  
+|SQL_C_ULONG[j]|SQLUINTEGER|符号なし long int|  
 |SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE、SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|unsigned char|  
-|SQL_C_STINYINT [j]|SQLSCHAR|符号付き文字|  
-|SQL_C_UTINYINT [j]|SQLCHAR|unsigned char|  
+|SQL_C_STINYINT[j]|SQLSCHAR|signed char|  
+|SQL_C_UTINYINT[j]|SQLCHAR|unsigned char|  
 |SQL_C_SBIGINT|SQLBIGINT|_ _int64 [h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|符号なし _ _int64 [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|ブックマーク|符号なし long int [d]|  
+|SQL_C_BOOKMARK[i]|ブックマーク|unsigned long int[d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |すべての C interval データ型|SQL_INTERVAL_STRUCT|参照してください、 [C Interval 構造体](../../../odbc/reference/appendixes/c-interval-structure.md)セクションで、この付録の「します。|  
   
@@ -109,7 +108,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +137,7 @@ struct tagSQLGUID {
   
  [e] A 数が格納されている、 *val*リトル エンディアン モード (最下位バイトをされている最も左にあるバイト) でのスケールを整数としての SQL_NUMERIC_STRUCT 構造体のフィールド。 たとえば、第 4 の小数点以下桁数で数値を 10.001 の底 10 で 100010 の整数にスケーリングします。 186AA を 16 進形式ではこのための SQL_NUMERIC_STRUCT での値となります"AA 86 01 00 00. です。00"、SQL_MAX_NUMERIC_LEN によって定義されたバイト数で **#define**します。  
   
- 詳細については**SQL_NUMERIC_STRUCT**を参照してください[HOWTO: SQL_NUMERIC_STRUCT で数値データの取得](retrieve-numeric-data-sql-numeric-struct-kb222831.md)します。  
+ 詳細については**SQL_NUMERIC_STRUCT**を参照してください[HOWTO:SQL_NUMERIC_STRUCT で数値データを取得する](retrieve-numeric-data-sql-numeric-struct-kb222831.md)します。  
   
  [SQL_C_NUMERIC データの f] で、有効桁数と小数点フィールドでは、アプリケーションからの入力と、アプリケーション、ドライバーからの出力が使われるを入力します。 ドライバーでは、数値の値を書き込む、SQL_NUMERIC_STRUCT に、独自ドライバー固有の既定の値として使用されます、*精度*フィールド、およびそのアプリケーションの記述子 (の SQL_DESC_SCALE フィールドに、値が使用されます既定では 0) の*スケール*フィールド。 アプリケーションは、アプリケーションの記述子の SQL_DESC_PRECISION および SQL_DESC_SCALE のフィールドを設定して、有効桁数と小数点の独自の値を指定できます。  
   
@@ -148,7 +147,7 @@ struct tagSQLGUID {
   
  [ODBC 3 _SQL_C_BOOKMARK i] が非推奨とされました *.x*します。  
   
- [j] _SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なし型: SQL_C_SSHORT、SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG と SQL_C_STINYINT SQL_C_UTINYINT します。 ODBC 3 *.x* ODBC 2 で動作するドライバー *。x*アプリケーションから呼び出されると、ドライバー マネージャーに渡すためのドライバー、SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT をサポートする必要があります。  
+ [j] _SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なし型。SQL_C_SSHORT、SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG と SQL_C_STINYINT および SQL_C_UTINYINT。 ODBC 3 *.x* ODBC 2 で動作するドライバー *。x*アプリケーションから呼び出されると、ドライバー マネージャーに渡すためのドライバー、SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT をサポートする必要があります。  
   
  [k] SQL_C_GUID SQL_CHAR または SQL_WCHAR にのみ変換できます。  
   
@@ -156,5 +155,5 @@ struct tagSQLGUID {
   
 -   [64 ビットの整数の構造](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

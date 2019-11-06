@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -20,17 +20,17 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0df572c5e939504222bd0f24884e7b00ac9b075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245792"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
-  キーボード アクセラレータでは、alt キーを押してメニュー コマンドやボタンを選択できます。*\<1 文字 >* します。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
+  キーボード アクセス キーを使用すると、Alt キーを押しながら  *\<1文字>* を押すことでメニュー コマンドやボタンを選択できます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
   
- Ctrl キーを使用したストアド プロシージャのキーボード ショートカット キーは、 **[ツール]** メニューから開く **[オプション]**/**[キーボード]** ダイアログ ボックスを使用します。  
+ Ctrl キーを使用したストアド プロシージャのキーボード ショートカット キーは、 **[ツール]** メニューから開く **[オプション]** / **[キーボード]** ダイアログ ボックスを使用します。  
   
 > [!NOTE]  
 >  このページの上部の **[すべて折りたたみ]** をクリックすると、見出しだけが表示されます。  
@@ -105,7 +105,7 @@ ms.locfileid: "48183123"
   
 4.  Tab キーを使用して **[コントロール]** 一覧に移動し、方向キーを使用して、変更するコマンドを選択します。  
   
-5.  **Alt + M** キーを押して、**[選択したボタンの編集]** を選択します。  
+5.  **Alt + M** キーを押して、 **[選択したボタンの編集]** を選択します。  
   
 6.  Tab キーを使用してショートカット メニューの **[名前]** ボックスに移動し、ツール バー ボタンの名前を入力し、キーボード アクセス キーとして使用する文字の前にアンパサンド (&) を付けます。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48183123"
   
 3.  Tab キーを使用して **[コントロール]** 一覧に移動し、方向キーを使用して、変更するコマンドを選択します。  
   
-4.  Alt + M キーを押して、**[選択したボタンの編集]** を選択します。  
+4.  Alt + M キーを押して、 **[選択したボタンの編集]** を選択します。  
   
 5.  Tab キーを使用してショートカット メニューの **[名前]** ボックスに移動し、メニュー コマンドの名前を入力し、キーボード アクセス キーとして使用する文字の前にアンパサンド (&) を付けます。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48183123"
 > [!NOTE]  
 >  関連する内容が [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で表示されている場合にしか使用できないコマンドもあります。 メニューに使用できるコマンドが存在しない場合、メニュー項目は使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Management Studio のキーボード ショートカット](sql-server-management-studio-keyboard-shortcuts.md)  
   
   

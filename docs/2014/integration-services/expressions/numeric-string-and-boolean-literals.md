@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897466"
 ---
 # <a name="literals-ssis"></a>リテラル (SSIS)
   式には、数値、文字列、およびブール値のリテラルを含めることができます。 式エバリュエーターでは、整数、10 進数、浮動小数点定数など、さまざまな数値リテラルがサポートされます。 さらに、式エバリュエーターが値を処理する方法を指定する long 型および float 型サフィックスと、数値リテラルの科学的表記法がサポートされます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48198842"
   
  次の表に、数値リテラルのサフィックスの一覧を示します。  
   
-|サフィックス|説明|  
+|Suffix|説明|  
 |------------|-----------------|  
 |L または l|long 型数値リテラル。|  
 |U または u|符号なし数値リテラル。|  
@@ -55,14 +54,14 @@ ms.locfileid: "48198842"
   
 |正規表現|説明|  
 |------------------------|-----------------|  
-|{D}+{IS}|1 個以上の数字 (D) を持つ整数の数値リテラルと、long 型または符号なし、あるいはその両方のサフィックス (IS) (オプション) です。  たとえば、457、785u、986L、7945ul などです。|  
-|{D}+{E}{FS}|1 個以上の数字 (D) を持つ非整数の数値リテラル、科学的表記法、および long 型または float 型サフィックスです。  たとえば、4E8l、13e-2f、5E+L などです。|  
-|{D}*"."{D}+{E}?{FS}|小数点を持つ非整数の数値リテラル、1 個以上の数字 (D) を持つ小数部分、指数 (E) (オプション)、および 1 個の float 型または long 型識別子 (FS) です。 数値リテラルは、DT_R4 データ型または DT_R8 データ型です。  たとえば、6.45E3f、.89E-2l、1.05E+7F などです。|  
-|{D}+"."{D}*{E}?{FS}|1 個以上の有効桁 (D) を持つ非整数の数値リテラル、小数点、指数 (E)、および 1 個の float 型または long 型識別子 (FS) です。 数値リテラルは、DT_R4 データ型または DT_R8 データ型です。  たとえば、1.E-4f、4.6E6L、8.365E+2f などです。|  
+|{D}+{IS}|1 個以上の数字 (D) を持つ整数の数値リテラルと、long 型または符号なし、あるいはその両方のサフィックス (IS) (オプション) です。  例 :457、785u、986L、7945ul。|  
+|{D}+{E}{FS}|1 個以上の数字 (D) を持つ非整数の数値リテラル、科学的表記法、および long 型または float 型サフィックスです。  例 :4E8l、13e-2f、5E+L。|  
+|{D}*"."{D}+{E}?{FS}|小数点を持つ非整数の数値リテラル、1 個以上の数字 (D) を持つ小数部分、指数 (E) (オプション)、および 1 個の float 型または long 型識別子 (FS) です。 数値リテラルは、DT_R4 データ型または DT_R8 データ型です。  例 :6.45E3f、.89E-2l、1.05E+7F。|  
+|{D}+"."{D}*{E}?{FS}|1 個以上の有効桁 (D) を持つ非整数の数値リテラル、小数点、指数 (E)、および 1 個の float 型または long 型識別子 (FS) です。 数値リテラルは、DT_R4 データ型または DT_R8 データ型です。  例 :1.E-4f、4.6E6L、8.365E+2f。|  
 |{D}*.{D}+|有効桁数と小数点以下桁数を持つ非整数の数値リテラルです。 小数点および 1 個以上の数字 (D) を持つ小数部分が含まれます。 この数値リテラルは、DT_NUMERIC データ型です。  たとえば、.9、5.8、0.346 などです。|  
-|{D}+.{D}*|有効桁数と小数点以下桁数を持つ非整数の数値リテラルです。 1 個以上の有効桁 (D) と小数点が含まれます。 この数値リテラルは、DT_NUMERIC データ型です。  たとえば、6.、0.2、8.0 などです。|  
+|{D}+.{D}*|有効桁数と小数点以下桁数を持つ非整数の数値リテラルです。 1 個以上の有効桁 (D) と小数点が含まれます。 この数値リテラルは、DT_NUMERIC データ型です。  例 :6.、0.2、8.0。|  
 |#{D}+|系列 ID です。 ポンド (#) 文字と 1 個以上の数字 (D) で構成されます。 たとえば、#123 などです。|  
-|0[xX]{H}+{uU}|16 進数形式の数値リテラルです。 0、大文字または小文字の x、1 個以上の大文字の 16 進数字 (H)、および符号なしサフィックス (オプション) が含まれます。 たとえば、0xFF0A や 0X000010000U などです。|  
+|0[xX]{H}+{uU}|16 進数形式の数値リテラルです。 0、大文字または小文字の x、1 個以上の大文字の 16 進数字 (H)、および符号なしサフィックス (オプション) が含まれます。 例 :0xFF0A、0X000010000U。|  
   
  式エバリュエーターが使用するデータ型に関する詳細については、「 [Integration Services のデータ型](../data-flow/integration-services-data-types.md)」を参照してください。  
   
@@ -118,6 +117,6 @@ ms.locfileid: "48198842"
 >  式では、ブール型リテラルをスペースで区切る必要があります。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://go.microsoft.com/fwlink/?LinkId=217683)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)」  
   
   

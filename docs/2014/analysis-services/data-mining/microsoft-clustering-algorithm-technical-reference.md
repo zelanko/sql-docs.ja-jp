@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
@@ -24,19 +23,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084031"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft クラスタリング アルゴリズム テクニカル リファレンス
   ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
   
  クラスター モデルの使用方法の詳細については、次のトピックを参照してください。  
   
--   [クラスタ リング モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [クラスタリング モデルのクエリ例](clustering-model-query-examples.md)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48089722"
   
  Microsoft による実装には、スケーラブル EM と非スケーラブル EM という 2 つのオプションがあります。 既定のスケーラブル EM では、初期スキャンのシードに最初の 50,000 レコードが使用されます。 これが成功した場合は、モデルでそのデータのみが使用されます。 50,000 個のレコードを使用して適切なモデルを作成できなかった場合は、さらに 50,000 個のレコードが読み取られます。 非スケーラブル EM では、サイズにかかわらずデータセット全体が読み取られます。 これにより、より正確なクラスターが作成される場合もありますが、必要なメモリの量が大幅に増加する可能性があります。 スケーラブル EM では、ローカル バッファーが使用されるため、データの反復処理が大幅に高速化されます。また、非スケーラブル EM よりはるかに効率的に CPU メモリ キャッシュを活用できます。 さらに、すべてのデータがメイン メモリに収まる場合でも非スケーラブル EM に比べて 3 倍高速になります。 このパフォーマンスの改善によって最終的なモデルの質が低下することもほとんどありません。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの EM の実装に関する技術的なレポートについては、「 [EM (Expectation Maximization) クラスタリングの大規模データベースへのスケーリング](http://go.microsoft.com/fwlink/?LinkId=45964)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの EM の実装に関する技術的なレポートについては、「 [EM (Expectation Maximization) クラスタリングの大規模データベースへのスケーリング](https://go.microsoft.com/fwlink/?LinkId=45964)」を参照してください。  
   
 ### <a name="k-means-clustering"></a>K-Means クラスタリング  
  K-Means クラスタリングは、クラスター内のアイテム間の相違を最小化し、クラスター間の距離を最大化することによってクラスター メンバーシップを割り当てる、よく知られている手法です。 K-Means の "Means" は、クラスターの *重心* を表します。クラスターの重心とは、任意に選択され、クラスター内のすべてのデータ ポイントの真の平均を表すようになるまで反復的に調整されるデータ ポイントです。 "K" は、クラスタリング処理のシードに使用される任意の数のポイントを表します。 K-Means アルゴリズムでは、クラスター内のデータ レコードと、クラスターの平均を表すベクトルとの間のユークリッド距離の 2 乗を計算し、その総和が最小値に達したとき、最終的な k 個のクラスターのセットに収束します。  
@@ -162,11 +161,11 @@ ms.locfileid: "48089722"
   
 |モデリング フラグ|説明|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|列が、Missing および Existing の 2 つの可能な状態を持つ列として扱われます。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
+|MODEL_EXISTENCE_ONLY|列は 2 つの状態を持つものとして扱われます。Missing および Existing。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
 |NOT NULL|列に NULL を含めることはできません。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
   
-## <a name="requirements"></a>要件  
- クラスタリング モデルは、キー列と入力列を含んでいる必要があります。 入力列は、予測可能列として定義することもできます。 列に設定`Predict Only`クラスターの作成には使用されません。 クラスター内のそれらの値の分布は、クラスターの作成後に算出されます。  
+## <a name="requirements"></a>必要条件  
+ クラスタリング モデルは、キー列と入力列を含んでいる必要があります。 入力列は、予測可能列として定義することもできます。 `Predict Only` に設定されている列は、クラスターの作成には使用されません。 クラスター内のそれらの値の分布は、クラスターの作成後に算出されます。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
@@ -180,8 +179,8 @@ ms.locfileid: "48089722"
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft クラスタ リング アルゴリズム](microsoft-clustering-algorithm.md)   
- [クラスタ リング モデルのクエリ例](clustering-model-query-examples.md)   
- [クラスタ リング モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Microsoft クラスタリング アルゴリズム](microsoft-clustering-algorithm.md)   
+ [クラスタリング モデルのクエリ例](clustering-model-query-examples.md)   
+ [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

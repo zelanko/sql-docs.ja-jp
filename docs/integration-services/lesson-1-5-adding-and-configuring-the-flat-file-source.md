@@ -1,54 +1,57 @@
 ---
-title: '手順 5: フラット ファイル ソースの追加と構成 | Microsoft Docs'
+title: 手順 5:フラット ファイルの変換元を追加し、構成する | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3417579b121d4680b18cfd896bb3ddd676eca920
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600450"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283689"
 ---
-# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>レッスン 1-5 - フラット ファイル ソースの追加と構成
-ここでは、フラット ファイル ソースをパッケージに追加し、構成します。 フラット ファイル ソースとは、フラット ファイル接続マネージャーにより定義されるメタデータを使用するデータ フロー コンポーネントです。フラット ファイル接続マネージャーは、変換処理によってフラット ファイルから取得されるデータの形式や構造を指定します。 フラット ファイル接続マネージャーに定義されているファイル形式を使用し、1 つのフラット ファイルからデータを取得するよう、フラット ファイル ソースを定義できます。  
+# <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>レッスン 1-5:フラット ファイルの変換元を追加し、構成する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+ここでは、フラット ファイル ソースをパッケージに追加し、構成します。 フラット ファイル ソースとは、フラット ファイル接続マネージャーにより定義されるメタデータを使用するデータ フロー コンポーネントです。 このメタデータは、変換処理によってフラット ファイルから取得されるデータの形式や構造を指定します。 フラット ファイル ソースは、フラット ファイル接続マネージャーの形式定義を利用し、1 つのフラット ファイルからデータを抽出します。  
   
-このチュートリアルでは、以前に作成した **Sample Flat File Source Data** 接続マネージャーを使用するように、フラット ファイル ソースを構成します。  
+この実習では、以前に作成した **Sample Flat File Source Data** 接続マネージャーを使用するように、フラット ファイル ソースを構成します。  
   
-### <a name="to-add-a-flat-file-source-component"></a>フラット ファイル ソース コンポーネントを追加するには  
+## <a name="add-a-flat-file-source-component"></a>フラット ファイル ソース コンポーネントを追加する  
   
-1.  **[Extract Sample Currency Data]** データ フローをダブルクリックするか、 **[データ フロー]** タブをクリックし、 **[データ フロー]** デザイナーを開きます。  
+1.  **[データ フロー]** デザイナーを開くには、 **[Extract Sample Currency Data]** データ フローをダブルクリックするか、 **[データ フロー]** タブを選択します。  
   
 2.  **[SSIS ツールボックス]** で **[その他の変換元]** を展開し、 **[フラット ファイル ソース]** を **[データ フロー]** タブのデザイン画面にドラッグします。  
   
-3.  **[データ フロー]** デザイン画面で、新しく追加した **[フラット ファイル ソース]** を右クリックし、 **[名前の変更]** をクリックします。名前を「 **Extract Sample Currency Data**」に変更します。  
+3.  **[データ フロー]** デザイン画面で、新しく追加した **[フラット ファイル ソース]** を右クリックし、 **[名前の変更]** を選択し、名前を「**Extract Sample Currency Data**」に変更します。  
   
-4.  このフラット ファイル ソースをダブルクリックして、[フラット ファイル ソース エディター] ダイアログ ボックスを開きます。  
+4.  このフラット ファイル ソースをダブルクリックし、 **[フラット ファイル ソース エディター]** ダイアログを開きます。  
   
-5.  **[フラット ファイル接続マネージャー]** ボックスで " **Sample Flat File Source Data**" を選択します。  
+5.  **[フラット ファイル接続マネージャー]** フィールドで **[Sample Flat File Source Data]** を選択します。  
   
-6.  **[列]** をクリックし、列名が正しいことを確認します。  
+6.  **[列]** を選択し、列名が正しいことを確認します。  
   
-7.  **[OK]** をクリックします。  
+7.  **[OK]** を選択します。  
   
-8.  [フラット ファイル ソース] を右クリックし、 **[プロパティ]** をクリックします。  
+8.  [フラット ファイル ソース] を右クリックし、 **[プロパティ]** を選択します。  
   
-9. [プロパティ] ウィンドウで、 **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
+9. **[プロパティ]** ウィンドウで、 **[LocaleID]** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
-## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 6: 参照変換の追加と構成](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+## <a name="go-to-next-task"></a>次の実習に進む
+[手順 6:参照変換を追加し、構成する](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>参照  
-[[フラット ファイル ソース]](../integration-services/data-flow/flat-file-source.md)  
-[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
+[フラット ファイル変換元](../integration-services/data-flow/flat-file-source.md)  
+[フラット ファイル接続マネージャー](../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
   

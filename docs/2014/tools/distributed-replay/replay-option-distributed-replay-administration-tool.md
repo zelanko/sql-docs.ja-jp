@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb93c31fd8071e002ec3dd63a6add6ab7bd80e52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149467"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>replay オプション (Distributed Replay 管理ツール)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理ツール、 `DReplay.exe`、分散再生コント ローラーとの通信に使用できるコマンド ライン ツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。  
@@ -55,12 +55,12 @@ ms.locfileid: "48177092"
  **-o**  
  クライアントの再生アクティビティをキャプチャし、クライアント構成ファイル `<ResultDirectory>` の `DReplayClient.xml`要素によって指定されたパスにある結果トレース ファイルに保存します。  
   
- **–o** パラメーターが指定されていない場合は、結果トレース ファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。  
+ **-o** パラメーターが指定されていない場合は、結果トレース ファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。  
   
  **-s** *target_server*  
  分散ワークロードが再生される [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の対象インスタンスを指定します。 このパラメーターは、 **server_name[\instance name]** の形式で指定します。  
   
- "`localhost`" または "`.`" を対象サーバーとして使用することはできません。  
+ "`localhost`" または "`.`" をターゲット サーバーとして使用することはできません。  
   
  再生構成ファイル **の** セクションに `<Server>` 要素が指定されている場合、 `<ReplayOptions>` -s `DReplay.exe.replay.config`パラメーターは必要ありません。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48177092"
   
 -   **-d** パラメーターは、コントローラーの中間ファイルの場所として `c:\WorkingDir`を指定しています。  
   
--   **-o** パラメーターは、指定された各クライアントが再生アクティビティをキャプチャし、それを結果トレース ファイルに保存するように指定しています。 注 : 構成ファイル内の `<ResultTrace>` 要素は、行数と結果セットが記録される場合に使用できます。  
+-   **-o** パラメーターは、指定された各クライアントが再生アクティビティをキャプチャし、それを結果トレース ファイルに保存するように指定しています。 注:構成ファイル内の `<ResultTrace>` 要素は、行数と結果セットが記録される場合に使用できます。  
   
 -   **-w** パラメーターは、 `client1` から `client4` までのコンピューターがクライアントとして分散再生に参加するように指定しています。  
   
@@ -157,10 +157,10 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 ## <a name="see-also"></a>参照  
  [トレース データの再生](replay-trace-data.md)   
  [再生結果の確認](review-the-replay-results.md)   
- [SQL Server 分散再生](sql-server-distributed-replay.md)   
- [分散再生の構成](configure-distributed-replay.md)   
- [SQL Server Distributed Replay フォーラム](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [分散再生を使用した SQL Server のロード テスト – パート 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [分散再生を使用した SQL Server のロード テスト – パート 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)   
+ [SQL Server Distributed Replay フォーラム](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [分散再生を使用した SQL Server のロード テスト – パート 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [分散再生を使用した SQL Server のロード テスト – パート 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

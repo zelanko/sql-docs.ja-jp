@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899020"
 ---
 # <a name="add-or-change-a-property-expression"></a>プロパティ式を追加または変更する
   パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、イベント ハンドラー、パッケージおよびプロジェクト レベルの接続マネージャー、およびログ プロバイダーに対してプロパティ式を作成できます。  
   
- プロパティ式を作成または変更するには、 **[プロパティ式エディター]** か **[式ビルダー]** を使用します。 **[プロパティ式エディター]** には、タスクおよびコンテナーで使用可能なカスタム エディターか、 **[プロパティ]** ウィンドウからアクセスできます。 **[式ビルダー]** には、 **[プロパティ式エディター]** 内からアクセスできます。 **[プロパティ式エディター]** または **[式ビルダー]** のいずれかで式を作成することができますが、**[式ビルダー]** には、複雑な式の作成を容易にするグラフィカル ツール セットが備わっています。  
+ プロパティ式を作成または変更するには、 **[プロパティ式エディター]** か **[式ビルダー]** を使用します。 **[プロパティ式エディター]** には、タスクおよびコンテナーで使用可能なカスタム エディターか、 **[プロパティ]** ウィンドウからアクセスできます。 **[式ビルダー]** には、 **[プロパティ式エディター]** 内からアクセスできます。 **[プロパティ式エディター]** または **[式ビルダー]** のいずれかで式を作成することができますが、 **[式ビルダー]** には、複雑な式の作成を容易にするグラフィカル ツール セットが備わっています。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供する構文、演算子、および関数の詳細については、「[ &#40;SSIS 式&#41;](operators-ssis-expression.md)」および「[ &#40;SSIS 式&#41;](functions-ssis-expression.md)」を参照してください。 各演算子または関数のトピックには、式で演算子や関数を使用する例が含まれます。 複雑な式の例については、「 [パッケージでプロパティ式を使用する](use-property-expressions-in-packages.md)」を参照してください。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48178502"
   
     -   **[式]** 列で直接プロパティ式を入力するか変更し、 **[OK]** をクリックします。  
   
-         — または —  
+         \- または -  
   
     -   プロパティの式の行の省略記号 [...] をクリックし、 **[式ビルダー]** ダイアログ ボックスを開きます。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48178502"
   
     -   システム変数およびユーザー定義変数にアクセスするには、 **[変数]** を展開します。  
   
-    -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 式言語で提供される関数、キャスト、および演算子にアクセスするには、 **[数学関数]**、 **[文字列関数]**、 **[日付/時刻関数]**、 **[NULL 関数]**、 **[型キャスト]**、および **[演算子]** を展開します。  
+    -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 式言語で提供される関数、キャスト、および演算子にアクセスするには、 **[数学関数]** 、 **[文字列関数]** 、 **[日付/時刻関数]** 、 **[NULL 関数]** 、 **[型キャスト]** 、および **[演算子]** を展開します。  
   
     -   **[式ビルダー]** で式を作成または変更するには、変数、列、関数、演算子、およびキャストを **[式]** ボックスにドラッグするか、または式をボックスに入力します。  
   
@@ -67,8 +66,8 @@ ms.locfileid: "48178502"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md)   
- [パッケージでプロパティ式を使用します。](use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41;パッケージ](../integration-services-ssis-packages.md)   
+ [パッケージでプロパティ式を使用する](use-property-expressions-in-packages.md)   
+ [Integration Services &#40;SSIS&#41; パッケージ](../integration-services-ssis-packages.md)   
  [Integration Services コンテナー](../control-flow/integration-services-containers.md)   
  [Integration Services タスク](../control-flow/integration-services-tasks.md)   
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../integration-services-ssis-event-handlers.md)   

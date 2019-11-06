@@ -9,11 +9,11 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410709"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295623"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 強力かつ柔軟性のあるページネーション付きのレポートを作成するために、式と共に一般的な関数や演算子を使用します。 
@@ -43,13 +43,13 @@ ms.locfileid: "52410709"
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
-    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、**[ファイル]** メニューで **[新規作成]** を選択します。  
+    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、 **[ファイル]** メニューで **[新規作成]** を選択します。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-4.  **[データセットの選択]** ページで、 **[データセットを作成する]** > **[次へ]** をクリックします。  
+4.  **[データセットの選択]** ページで、 **[データセットを作成する]**  >  **[次へ]** をクリックします。  
   
 6.  **[データ ソースへの接続の選択]** ページで、種類が **[SQL Server]** のデータ ソースを選択します。 一覧からデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。  
 
@@ -89,7 +89,7 @@ ms.locfileid: "52410709"
     ```  
 
   
-10. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットでは、FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、LastPurchase の各列に 23 行のデータが表示されます。  
+10. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。 結果セットでは、FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、LastPurchase の各列に 23 行のデータが表示されます。  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +147,7 @@ ms.locfileid: "52410709"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3.名のイニシャルと姓を表示する  
-このセクションでは、イニシャルと姓を含む名前に評価される式に、 **Left** 関数および **連結** (**&**) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。   
+このセクションでは、イニシャルと姓を含む名前に評価される式に、 **Left** 関数および **連結** ( **&** ) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。   
   
 1.  **[StateProvince]** 列を右クリックし、 **[列の挿入]** をポイントして、 **[左]** をクリックします。  
   
@@ -173,11 +173,11 @@ ms.locfileid: "52410709"
   
 7.  **[値]** ボックスの一覧の **[FirstName]** をダブルクリックします。  
   
-8.  「 **, 1)**」と入力します。  
+8.  「 **, 1)** 」と入力します。  
   
     この式により、 **FirstName** 値の左から数えて 1 文字が抽出されます。  
   
-9. 「**&". "&**」と入力します。  
+9. 「 **&". "&** 」と入力します。  
 
     式の後にピリオドとスペースが追加されます。
   
@@ -198,7 +198,7 @@ ms.locfileid: "52410709"
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-2.  **[Last Purchase]** 列のデータ セルを選択し、**[ホーム]** タブの **[数値]** セクションで **[日付]** を選択します。  
+2.  **[Last Purchase]** 列のデータ セルを選択し、 **[ホーム]** タブの **[数値]** セクションで **[日付]** を選択します。  
 
     ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
@@ -216,7 +216,7 @@ ms.locfileid: "52410709"
 
 1. 列ヘッダーの行を選択します。
 
-2. **[ホーム]** タブの **[段落]** セクションで、**[左]** を選択します。 
+2. **[ホーム]** タブの **[段落]** セクションで、 **[左]** を選択します。 
 
     ![report-builder-expression-tutorial-format-headings](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
@@ -257,7 +257,7 @@ ms.locfileid: "52410709"
   
 1.  **[M/F]** 列のデータ セル内の四角形を右クリックし、 **[四角形のプロパティ]** をクリックします。  
   
-2.  **[四角形のプロパティ]** ダイアログ ボックスの **[塗りつぶし]** タブで、**[塗りつぶしの色]** ボックスの横にある式 (**[fx]**) ボタンをクリックします。  
+2.  **[四角形のプロパティ]** ダイアログ ボックスの **[塗りつぶし]** タブで、 **[塗りつぶしの色]** ボックスの横にある式 ( **[fx]** ) ボタンをクリックします。  
   
 3.  **[式]** ダイアログ ボックスで、 **[共通の関数]** を展開し、 **[プログラム フロー]** をクリックします。  
   
@@ -345,7 +345,7 @@ ms.locfileid: "52410709"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. **[実行]** (**!**) をクリックしてクエリを実行します。  
+9. **[実行]** ( **!** ) をクリックしてクエリを実行します。  
   
     クエリ結果は国/地域の識別子と名前です。  
   
@@ -369,7 +369,7 @@ ms.locfileid: "52410709"
   
 6.  **[カテゴリ]** ボックスの一覧で **[フィールド (Expressions)]** をクリックし、 **[値]** ボックスの一覧で **[CountryRegionID]** をもう一度ダブルクリックします。  
   
-8.  `CountryRegionID.Value`のすぐ後にカーソルを置き、「 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**」と入力します。  
+8.  `CountryRegionID.Value`のすぐ後にカーソルを置き、「 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** 」と入力します。  
   
     完成した式は、次のようになります。 `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -394,7 +394,7 @@ ms.locfileid: "52410709"
   
 4.  **[Days Ago]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
-5.  **[式]** ダイアログ ボックスで、**[共通の関数]** を展開し、**[日付と時刻]** をクリックします。  
+5.  **[式]** ダイアログ ボックスで、 **[共通の関数]** を展開し、 **[日付と時刻]** をクリックします。  
   
 6.  **[アイテム]** ボックスの一覧の **[DateDiff]** をダブルクリックします。  
   
@@ -404,7 +404,7 @@ ms.locfileid: "52410709"
   
 11. `Fields!LastPurchase.Value`のすぐ後に「 **,** 」を入力します (コンマを入力します)。 
   
-13. **[カテゴリ]** ボックスの一覧で **[日付と時刻]** をもう一度クリックし、**[アイテム]** ボックスの一覧で **[Now]** をダブルクリックします。  
+13. **[カテゴリ]** ボックスの一覧で **[日付と時刻]** をもう一度クリックし、 **[アイテム]** ボックスの一覧で **[Now]** をダブルクリックします。  
   
     > [!WARNING]  
     > 運用環境のレポートでは、レポートのレンダリングごとに何度も評価される式に **Now** 関数を使用しないでください (レポートの詳細行内など)。 **Now** の値が行ごとに変わり、それが式の評価に影響して、微妙に一貫性に欠ける結果を招きます。 これを回避するには、 `ExecutionTime` で提供されている [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] グローバル変数を使用してください。  
@@ -422,9 +422,9 @@ ms.locfileid: "52410709"
 ## <a name="Indicator"></a>7.インジケーターを使用して売上比較を示す  
 このセクションでは、新しい列を追加し、インジケーターを使用して、個人の年度累計 (YTD) 購入額が平均 YTD 購入額を上回るか下回るかを示します。 **Round** 関数では、値から小数が除去されます。  
   
-インジケーターとその状態を構成するには、多くの手順を踏む必要があります。 必要であれば、「インジケーターを構成するには」の手順をスキップして先に進み、このチュートリアルから完成した式をコピーして、**[式]** ダイアログ ボックスに貼り付けることができます。  
+インジケーターとその状態を構成するには、多くの手順を踏む必要があります。 必要であれば、「インジケーターを構成するには」の手順をスキップして先に進み、このチュートリアルから完成した式をコピーして、 **[式]** ダイアログ ボックスに貼り付けることができます。  
   
-### <a name="to-add-the--or---avg-sales-column"></a>+ or - AVG Sales 列を追加するには  
+### <a name="to-add-the--or---avg-sales-column"></a>\+ or - AVG Sales 列を追加するには  
   
 1.  **[YTD Purchase]** 列を右クリックし、 **[列の挿入]** をポイントして、 **[右]** をクリックします。  
   
@@ -462,7 +462,7 @@ ms.locfileid: "52410709"
   
 11. **[カテゴリ]** ボックスの一覧で **[フィールド (Expressions)]** をクリックし、 **[値]** ボックスの一覧で **[YTDPurchase]** をもう一度ダブルクリックします。  
   
-13. `Fields!YTDPurchase.Value`のすぐ後に「 **, "Expressions"))**」と入力します。  
+13. `Fields!YTDPurchase.Value`のすぐ後に「 **, "Expressions"))** 」と入力します。  
   
     完成した式は `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`です。  
   
@@ -486,7 +486,7 @@ ms.locfileid: "52410709"
   
 26. **[カテゴリ]** ボックスの一覧で **[フィールド (Expressions)]** をクリックし、 **[値]** ボックスの一覧で **[YTDPurchase]** をもう一度ダブルクリックします。  
   
-28. `Fields!YTDPurchase.Value` のすぐ後に「**, "Expressions")) < 0**」と入力します。  
+28. `Fields!YTDPurchase.Value` のすぐ後に「 **, "Expressions")) < 0**」と入力します。  
   
     完成した式は、次のようになります。 `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) < 0`  
   
@@ -583,11 +583,11 @@ ms.locfileid: "52410709"
   
 8.  **[共通の関数]** で **[その他]** をクリックし、 **[アイテム]** ボックスの一覧で **[RowNumber]** をダブルクリックします。  
 
-9. **RowNumber(** のすぐ後に「 **Nothing) MOD 2,**」と入力します。
+9. **RowNumber(** のすぐ後に「 **Nothing) MOD 2,** 」と入力します。
   
 8. **[パラメーター]** をクリックし、 **[値]** ボックスの一覧の **[RowColor]** をダブルクリックします。  
   
-22. `Parameters!RowColor.Value` のすぐ後に「**, "White")**」を入力します。  
+22. `Parameters!RowColor.Value` のすぐ後に「 **, "White")** 」を入力します。  
   
     完成した式は `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`です。  
     

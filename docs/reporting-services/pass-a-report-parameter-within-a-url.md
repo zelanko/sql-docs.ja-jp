@@ -2,24 +2,27 @@
 title: URL 内でレポート パラメーターを渡す | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390485"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580835"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
   レポート パラメーターはレポート URL に含めることでレポートに渡すことができます。 このような URL パラメーターにはプレフィックスを付けません。パラメーターはレポート処理エンジンに直接渡されるためです。  
+
+> [!NOTE]
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
 > [!IMPORTANT]  
 >  SharePoint および `_vti_bin` HTTP プロキシ経由で要求をルーティングする [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] プロキシ構文を URL に含めることは重要です。 プロキシによって、HTTP 要求にいくつかのコンテキストが追加されます。これは、SharePoint モード レポート サーバーに対してレポートを適切に実行するために必要なコンテキストです。  
@@ -28,12 +31,12 @@ ms.locfileid: "52390485"
   
  すべてのクエリ パラメーターには、対応するレポート パラメーターを指定できます。 クエリ パラメーターをレポートに渡すには、対応するレポート パラメーターを渡します。 詳細については、「[リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」を参照してください。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  レポート パラメーターでは大文字と小文字が区別されます。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  レポート パラメーターでは大文字と小文字が区別され、次の特殊文字が使用されます。  
->   
+> 
 >  -   URL 文字列では、URL エンコード規格に基づいてすべての空白文字が文字列 "%20" に置き換えられます。  
 > -   URL のパラメーター部分にある空白文字はプラス記号 (+) に置き換えられます。  
 > -   文字列の任意の部分にあるセミコロンは文字列 "%3A" に置き換えられます。  

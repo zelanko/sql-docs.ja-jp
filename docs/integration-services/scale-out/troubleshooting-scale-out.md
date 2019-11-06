@@ -2,7 +2,7 @@
 title: SQL Server Integration Services (SSIS) Scale Out のトラブルシューティング | Microsoft Docs
 description: この記事では、SSIS Scale Out での一般的な問題をトラブルシューティングする方法について説明します
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -10,15 +10,18 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896153"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out のトラブルシューティング
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Out Master サービス、Scale Out Worker サービス間の通信が含まれます。 この通信は、構成の誤り、アクセス許可がない、およびその他の理由により中断する場合があります。 この記事は、Scale Out 構成に関する問題のトラブルシューティングに役立ちます。
 
@@ -36,9 +39,9 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 ### <a name="solution"></a>解決方法
 1.  Scale Out が有効になっているかどうかを確認します。
 
-    SSMS のオブジェクト エクスプローラーで **[SSISDB]** を右クリックして、**[Scale Out 機能が有効です]** を確認します。
+    SSMS のオブジェクト エクスプローラーで **[SSISDB]** を右クリックして、 **[Scale Out 機能が有効です]** を確認します。
 
-    ![Scale Out が有効になっているか](media\isenabled.PNG)
+    ![Scale Out が有効になっているか](media/isenabled.PNG)
 
     プロパティ値が False の場合は、ストアド プロシージャ `[catalog].[enable_scaleout]` を呼び出して、Scale Out を有効にします。
 
@@ -62,7 +65,7 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 
 ### <a name="symptoms"></a>現象
 
-*"System.ServiceModel.EndpointNotFoundException: メッセージを受信できる https://*[MachineName]:[Port]*/ClusterManagement/ でリッスンしているエンドポイントがありませんでした。"*
+*"System.ServiceModel.EndpointNotFoundException: メッセージを受信できる https://* [MachineName]:[Port] */ClusterManagement/ でリッスンしているエンドポイントがありませんでした。"*
 
 ### <a name="solution"></a>解決方法
 
@@ -131,21 +134,21 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    値の名前: **SendTrustedIssuerList** 
+    値の名前:**SendTrustedIssuerList** 
 
-    値の型: **REG_DWORD** 
+    値の型:**REG_DWORD** 
 
-    値のデータ: **0 (False)**
+    値のデータ:**0 (False)**
 
 4.  手順 2 の説明のように自己署名以外の証明書をすべて消去できない場合、次のレジストリ キーの値を 2 に設定します。
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    値の名前: **ClientAuthTrustMode** 
+    値の名前:**ClientAuthTrustMode** 
 
-    値の型: **REG_DWORD** 
+    値の型:**REG_DWORD** 
 
-    値データ: **2**
+    値のデータ:**2**
 
     > [!NOTE]
     > 自己署名以外の証明書がルート証明書ストアにある場合は、クライアント証明書の認証が失敗します。 詳細については、「[Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ)」(インターネット インフォメーション サービス (IIS) 8 で HTTP 403.7 エラーまたは 403.16 エラーが発生してクライアント証明書の要求が拒否される可能性がある) を参照してください。
@@ -173,7 +176,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ## <a name="cannot-open-certificate-store"></a>証明書ストアを開けない
 
 ### <a name="symptoms"></a>現象
-Scale Out Manager で Scale Out Worker を Scale Out Master に接続したときに、*"マシン上で証明書ストアを開けません"* というエラー メッセージが表示され、検証が失敗する。
+Scale Out Manager で Scale Out Worker を Scale Out Master に接続したときに、 *"マシン上で証明書ストアを開けません"* というエラー メッセージが表示され、検証が失敗する。
 
 ### <a name="solution"></a>解決方法
 
@@ -224,4 +227,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>次の手順
 詳細については、SSIS Scale Out のセットアップと構成に関する以下の記事を参照してください。
 -   [1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要](get-started-with-ssis-scale-out-onebox.md)
--   [チュートリアル: Integration Services Scale Out をセットアップする](walkthrough-set-up-integration-services-scale-out.md)
+-   [チュートリアル:Integration Services Scale Out をセットアップする](walkthrough-set-up-integration-services-scale-out.md)

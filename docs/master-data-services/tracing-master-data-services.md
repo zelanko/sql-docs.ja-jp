@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 706da94bfae2b4d00904e354f32af4237f902570
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700231"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263983"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
 
@@ -61,12 +60,12 @@ ms.locfileid: "51700231"
   
 -   ログの形式は CSV です。 次の表に、ログの形式について説明します。  
   
-    |要素|[説明]|  
+    |要素|説明|  
     |-------------|-----------------|  
     |Time|トレースのエントリが発生した時刻。|  
     |CorrelationID|要求ごとに 1 つの関連付け ID が割り当てられます。 この要求によってトリガーされるすべてのトレースは、同じ関連付け ID を共有します。<br /><br /> UI でエラーが発生すると、エラー メッセージに関連付け ID が表示されます。|  
-    |演算|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
-    |レベル|このトレース エントリのレベル。|  
+    |操作|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
+    |Level|このトレース エントリのレベル。|  
     |メッセージ|トレースのメッセージ本文。|  
   
 ## <a name="external-resources"></a>外部リソース  

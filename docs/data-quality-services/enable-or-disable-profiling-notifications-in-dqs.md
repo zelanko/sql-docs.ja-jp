@@ -12,15 +12,14 @@ helpviewer_keywords:
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 14b19a2b9174924fd941721f9a7dd1b8764e5bb5
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: 55a276a6ade36169df25e46f826420f77d57b13f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935304"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>DQS のプロファイル通知の有効化または無効化
 

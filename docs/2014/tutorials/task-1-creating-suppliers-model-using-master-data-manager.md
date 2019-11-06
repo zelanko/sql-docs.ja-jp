@@ -1,26 +1,23 @@
 ---
-title: 'タスク 1: マスター データ マネージャーを使用して Suppliers モデルを作成する |Microsoft Docs'
+title: タスク 1:マスター データ マネージャーを使用して Suppliers モデルを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71b3a98a2a5052d6da4fec3e12d81ee8d452c6f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481344"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>タスク 1: マスター データ マネージャーを使用して Suppliers モデルを作成する
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>タスク 1:マスター データ マネージャーを使用して Suppliers モデルを作成する
   このタスクでという名前のモデルを作成する**Suppliers** MDS を使用して**マスター データ マネージャー**します。  
   
 1.  移動します[ http://localhost/mds ](http://localhost/mds)を起動する**マスター データ マネージャー**します。 別の名前または別の Web サイトで Web アプリケーションを構成した場合は、URL を置き換えてください。  
@@ -44,6 +41,6 @@ ms.locfileid: "48148322"
 6.  クリックして**モデルの保存**ツールバーのボタンをクリックします。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2: Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [タスク 2: Excel 用 MDS アドインを使用して MDS に仕入先データをアップロード](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

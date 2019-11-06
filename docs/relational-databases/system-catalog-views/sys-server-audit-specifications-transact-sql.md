@@ -19,34 +19,33 @@ helpviewer_keywords:
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125005"
 ---
-# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
+# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サーバー インスタンス上の SQL Server 監査に含まれるサーバー監査仕様に関する情報を含みます。 SQL Server Audit について詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
+  サーバー インスタンス上の SQL Server 監査でサーバー監査の仕様に関する情報が含まれています。 SQL Server Audit について詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|サーバー仕様の名前。|  
+|**name**|**sysname**|サーバーの仕様の名前です。|  
 |**server_specification_id**|**Int**|ID、 **server_specification**します。|  
 |**create_date**|**DateTime**|監査サーバー仕様が作成された日付。|  
-|**modified_date**|**DateTime**|監査サーバー仕様が最後に変更された日付。|  
-|**is_state_enabled**|**tinyint**|監査仕様の状態。<br /><br /> 0 – DISABLED<br /><br /> 1 – ENABLED|  
-|**audit_GUID**|**uniqueidentifier**|この仕様を含む監査の GUID。 サーバーの起動時に、メンバー サーバー監査仕様を列挙するときに使用されます。|  
+|**modified_date**|**DateTime**|監査サーバー仕様の最終変更日。|  
+|**is_state_enabled**|**tinyint**|監査仕様の状態。<br /><br /> 0 - 無効<br /><br /> 1 - 有効になっています。|  
+|**audit_GUID**|**uniqueidentifier**|この仕様を含む監査の GUID です。 サーバーの起動時にメンバー サーバー監査の仕様を列挙するときに使用されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  持つプリンシパル、 **ALTER ANY SERVER AUDIT**または**VIEW ANY DEFINITION**このカタログ ビューにアクセス許可にアクセスします。 さらに、プリンシパル必要があります拒否されていない**VIEW ANY DEFINITION**権限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

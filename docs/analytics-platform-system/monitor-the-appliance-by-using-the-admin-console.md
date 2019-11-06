@@ -2,19 +2,18 @@
 title: 管理者コンソールの Analytics Platform System での監視 |Microsoft Docs
 description: Analytics Platform System では、アプライアンスの状態、正常性、およびパフォーマンス情報を表示する web アプリケーションは、管理コンソールです。 ユーザーは、インターネット ブラウザーを通じて管理コンソールに接続します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960488"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>管理コンソール - Analytics Platform System とアプライアンスを監視します。
 管理者コンソールは、アプライアンスの状態、正常性、およびパフォーマンス情報を表示する SQL Server PDW の web アプリケーションです。 ユーザーは、Internet explorer の管理コンソールに接続します。  
@@ -26,7 +25,7 @@ ms.locfileid: "37909852"
 ホーム (Home)  
 アプライアンスの状態の簡単な概要を提供します。  
   
-正常性  
+Health  
 アプライアンスのトポロジの各ノード内の各監視対象コンポーネントの正常性を示すインジケーターが表示されます。 個々 のノードの現在の状態とノードのコンポーネントのプロパティを表示することができます。  
   
 ハードウェアとソフトウェアのアラートが表示されます。  
@@ -50,7 +49,7 @@ PDW ユーザーのアクティブなセッションが表示されます。 こ
 バックアップと復元  
 バックアップし、復元操作の PDW のログを表示します  
   
-正常性  
+Health  
 PDW のトポロジの各ノード内の各監視対象コンポーネントの正常性を示すインジケーターが表示されます。 個々 のノードの現在の状態とノードのコンポーネントのプロパティを表示することができます。  
   
 ハードウェアとソフトウェアのアラートが表示されます。  

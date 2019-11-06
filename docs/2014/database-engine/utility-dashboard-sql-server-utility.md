@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773814"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>ユーティリティ ダッシュボード (SQL Server ユーティリティ)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードにデータを表示するには、ユーティリティ エクスプローラーのツリーで最上位ノード "Utility<UCP 名>\\(ComputerName\UCP)" を選択します。 ダッシュボードには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのマネージド インスタンス、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのすべてのデータ層アプリケーションに関する概要データと詳細データが表示されます。 ダッシュボードのデータを更新するには、ユーティリティ エクスプローラーのツリーで最上位ノードを右クリックし、 **[更新]** をクリックします。  
@@ -50,9 +50,9 @@ ms.locfileid: "48101512"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスまたはデータ層アプリケーションについてフィルターを適用したビューを作成するには、ユーティリティ ダッシュボードのスライド式インジケーターの横にある使用率カテゴリのリンクをクリックします。 たとえば、 **ユーティリティ エクスプローラーのコンテンツ** ペインで **[使用率が高いインスタンス CPU]** をクリックすると、SSMS では、現在のポリシー設定に基づいてフィルターが適用され、CPU 使用率の高い [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスについてのリスト ビューが作成されます。  
   
- 使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]**、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、**[フィルター]**、**[フィルターの削除]** の順にクリックします。  
+ 使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]** 、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]** 、 **[フィルターの削除]** の順にクリックします。  
   
- 個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)」を参照してください。  
+ 個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ &#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)」を参照してください。  
   
  ユーティリティの概要  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数と、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティによって管理されるデータ層アプリケーションの数を表示します。  
@@ -83,7 +83,7 @@ ms.locfileid: "48101512"
  各正常性パラメーターの詳細な状態は、スライド式インジケーターに一覧表示されます。 スライド式インジケーターの右側にある部分は、何個のデータ層アプリケーションが各状態カテゴリに存在するかを示します。 個々のデータ層アプリケーションの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)」を参照してください。  
   
  ユーティリティの記憶域使用率の履歴  
- 使用率の履歴は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードの下部にある時間グラフに表示されます。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+ 使用率の履歴は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードの下部にある時間グラフに表示されます。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  表示領域の左側にあるオプション ボタンを使用して、グラフ表示の対象期間を変更できます。  
   

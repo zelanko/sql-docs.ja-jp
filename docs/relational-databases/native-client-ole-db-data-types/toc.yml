@@ -1,8 +1,0 @@
-- name: データ型 (OLE DB)
-  href: data-types-ole-db.md
-- name: ITableDefinition でのデータ型のマッピング
-  href: data-type-mapping-in-itabledefinition.md
-- name: 行セットとパラメーターでのデータ型マッピング
-  href: data-type-mapping-in-rowsets-and-parameters.md
-- name: SSVARIANT 構造体
-  href: ssvariant-structure.md

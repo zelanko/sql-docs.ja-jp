@@ -19,12 +19,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13a011ab9545b9e5b9f02daf46654b0f8253a66d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200004"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのマップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC SQL データ型への SQL データ型。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "48142518"
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>ODBC での sql_variant データ型の処理  
  **Sql_variant**データ型の列は内のデータ型のいずれかを含めることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのラージ オブジェクト (Lob) を除く**テキスト**、 **ntext**、および**イメージ**します。 たとえば、列を含めたり**smallint**いくつかの行の値**float** 、他の行の値と**char または nchar**残りの部分で値。  
   
- **Sql_variant**データ型と似ています、**バリアント**Microsoft Visual Basic® でのデータ型。  
+ **Sql_variant**データ型と似ています、**バリアント**Microsoft Visual Basic でのデータ型します。  
   
 ### <a name="retrieving-data-from-the-server"></a>サーバーからのデータの取得  
  ODBC がバリアントの型の概念の使用を制限、 **sql_variant**で ODBC ドライバーのデータ型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、バインドが指定した場合、 **sql_variant**データ型は、文書化されている ODBC のデータ型のいずれかにバインドする必要があります。 **SQL_CA_SS_VARIANT_TYPE**、固有の新しい属性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、インスタンス内のデータ型を返します、 **sql_variant**列をユーザーにします。  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
@@ -13,18 +13,18 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72bc879e1c04199f5e8e8cbdc1d630cf43113520
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62718109"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付/時刻の強化に対するデータ型のサポート
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付および時刻データ型をサポートする OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) の型について説明します。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング  
- OLE DB には、新しいサーバーの種類をサポートする 2 つの新しいデータ型 (DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET) が用意されています。 次の表に、完全なサーバーの型マッピングを示します。  
+ OLE DB では、サーバーの新しい型をサポートするために 2 つの新しいデータ型を提供します。DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET します。 次の表に、完全なサーバーの型マッピングを示します。  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|値|  
 |-----------------------------------------|----------------------|-----------|  
@@ -35,7 +35,7 @@ ms.locfileid: "48157922"
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>データ形式 : 文字列とリテラル  
+## <a name="data-formats-strings-and-literals"></a>データ形式:文字列とリテラル  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|クライアントで変換した場合の文字列の形式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "48157922"
   
  空の文字列は、有効な日付リテラルまたは時間リテラルではありません。また、NULL 値を表すものでもありません。 空の文字列を日付または時刻の値に変換しようとすると、SQLState 22018 のエラーが発生し、"キャストした文字コードが正しくありません" というメッセージが表示されます。  
   
-## <a name="data-formats-data-structures"></a>データ形式 : データ構造体  
+## <a name="data-formats-data-structures"></a>データ形式:データ構造体  
  次に説明する OLE DB 固有の構造体では、OLE DB は ODBC と同じ制約に準拠しています。 これらはグレゴリオ暦から取得されます。  
   
 -   月の範囲は 1 ～ 12 です。  
@@ -170,7 +170,7 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
  Itabledefinition::createtable で使用される DBCOLUMNDESC 構造体で、次の型マッピングが使用されます。  
   
-|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|注|  
+|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|メモ|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|日付||  
 |DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  

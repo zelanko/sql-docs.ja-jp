@@ -19,16 +19,15 @@ helpviewer_keywords:
 - bottlenecks [SQL Server]
 - identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 939e0a1fb76d711a0cef8a27726cfb19c7466702
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbabafa1f5b367343f02c3a0bf3e122bc827ce66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946750"
 ---
 # <a name="identify-bottlenecks"></a>ボトルネックの特定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47685030"
 ## <a name="analyzing-bottlenecks"></a>ボトルネックの分析  
  さまざまなイベントに対して過剰な要求が行われている期間は、ボトルネックをチューニングできる指標になります。  
   
- 例 :  
+ 例:  
   
 -   他のいくつかのコンポーネントにより、このコンポーネントの負荷が低下しているため、負荷を完了するまでの時間がかかっている可能性があります。  
   

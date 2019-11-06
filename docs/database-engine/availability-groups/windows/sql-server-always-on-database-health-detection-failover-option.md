@@ -1,7 +1,7 @@
 ---
 title: データベースの正常性検出フェールオーバー オプション | Microsoft Docs
 ms.custom: ''
-ms.date: 04/28/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013963"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性グループのデータベース レベルの正常性検出フェールオーバー オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +34,8 @@ SQL Server 2016 以降、Always On 可用性グループを構成するときに
 
 たとえば、データベース レベルの正常性検出オプションが有効になっている場合、SQL Server が、いずれかのデータベースのトランザクション ログ ファイルに書き込むことができないと、データベースは障害状態に変わり、可用性グループはすぐにフェールオーバーします。データベースが再度オンラインになった時点で、アプリケーションは再接続し、最小限の中断で動作し続けることができます。
 
-<a name="enabling-database-level-health-detection"></a>データベース レベルの正常性検出の有効化
-----
+### <a name="enabling-database-level-health-detection"></a>データベース レベルの正常性検出の有効化
+
 データベースの正常性オプションは一般的に推奨されるオプションですが、以前のバージョンにおける既定の設定との下位互換性を維持するために、**既定でオフ**になっています。
 
 データベース レベルの正常性検出の設定を有効にする方法はいくつかあります。
@@ -52,7 +51,7 @@ SQL Server 2016 以降、Always On 可用性グループを構成するときに
 
 3. **CREATE AVAILABILITY GROUP** の Transact-SQL 構文。 DB_FAILOVER パラメーターには、ON または OFF を指定できます。
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -65,7 +64,7 @@ SQL Server 2016 以降、Always On 可用性グループを構成するときに
 
 4. **ALTER AVAILABILITY GROUP** の Transact-SQL 構文。 DB_FAILOVER パラメーターには、ON または OFF を指定できます。
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -89,40 +88,40 @@ SQL Server 2016 以降、Always On 可用性グループを構成するときに
 
 システム DMV sys.availability_groups には、データベース レベルの正常性検出オプションがオフ (0) かオン (1) かを示す db_failover 列があります。
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 dmv 出力の例:
 
-NAME  |  db_failover
----------|---------
-| Contoso-ag |  1  |
+|NAME  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### <a name="errorlog"></a>ErrorLog
 データベース レベルの正常性検出チェックが原因で、可用性グループがフェールオーバーした場合、SQL Server エラー ログ (または sp_readerrorlog のテキスト) にはエラー メッセージ 41653 が表示されます。
 
 たとえば、次のエラー ログの抜粋は、ディスクで問題が発生したためにトランザクション ログの書き込みが失敗し、その後、AutoHa-Sample という名前のデータベースがシャットダウンして、データベース レベルの正常性検出がトリガーされ、可用性グループをフェールオーバーしたことを示しています。
 
->2016-04-25 12:20:21.08 spid1s      エラー: 17053、重大度: 16、状態: 1。
+>2016-04-25 12:20:21.08 spid1s      エラー:17053、重大度:16、状態: 1.
 >
->2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: オペレーティング システム エラー 21 (デバイスの準備ができていません) が発生しました。
+>2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter:オペレーティング システム エラー 21 (デバイスの準備ができていません) が発生しました。
 >2016-04-25 12:20:21.08 spid1s      ログ フラッシュ中の書き込みエラー。
 >
->2016-04-25 12:20:21.08 spid79      エラー: 9001、重大度: 21、状態: 4。
+>2016-04-25 12:20:21.08 spid79      エラー:9001、重大度:21、状態:4.
 >
 >2016-04-25 12:20:21.08 spid79      データベース 'AutoHa-Sample' のログは使用できません。 イベント ログで、関連するエラー メッセージを確認してください。 エラーがある場合は解決し、データベースを再起動してください。
 >
->**2016-04-25 12:20:21.15 spid79      エラー: 41653、重大度: 21、状態: 1。**
+>**2016-04-25 12:20:21.15 spid79      エラー:41653、重大度:21、状態:1。**
 >
->**2016-04-25 12:20:21.15 spid79      データベース 'AutoHa-Sample' でエラー (エラーの種類: 2 'DB_SHUTDOWN') が発生し、可用性グループ 'Contoso-ag' が失敗しました。発生したエラーの詳細については、SQL Server エラー ログを参照してください。この問題が解決しない場合は、システム管理者に問い合わせてください。**
+>**2016-04-25 12:20:21.15 spid79      データベース 'AutoHa-Sample' でエラー (エラーの種類:2 'DB_SHUTDOWN') が発生し、可用性グループ 'Contoso-ag' が失敗しました。発生したエラーの詳細については、SQL Server エラー ログを参照してください。この問題が解決しない場合は、システム管理者に問い合わせてください。**
 >
->2016-04-25 12:20:21.17 spid79      データベース 'AutoHa-Sample' の状態情報 - 書き込まれた Lsn: '(34:664:1)'    コミット LSN: '(34:656:1)'    コミット時間: 'Apr 25 2016 12:19PM'
+>2016-04-25 12:20:21.17 spid79      データベース 'AutoHa-Sample' の状態情報 - 書き込まれた Lsn: '(34:664:1)'    コミット LSN: '(34:656:1)'    コミット時間:'Apr 25 2016 12:19PM'
 >
 >2016-04-25 12:20:21.19 spid15s     可用性レプリカ 'SQLServer-0' (レプリカ ID: {c4ad5ea4-8a99-41fa-893e-189154c24b49}) で、プライマリ データベース 'AutoHa-Sample' の、セカンダリ データベースとの Always On 可用性グループ接続が終了しました。 このメッセージは情報提供だけを目的としています。 ユーザーによる操作は不要です。
 >
->2016-04-25 12:20:21.21 spid75      Always On: 可用性グループ 'Contoso-ag' のローカル レプリカは、Windows Server フェールオーバー クラスタリング (WSFC) クラスターからの要求により、解決中のロールに遷移する準備をしています。 このメッセージは情報提供だけを目的としています。 ユーザーによる操作は不要です。
+>2016-04-25 12:20:21.21 spid75      Always On:可用性グループ 'Contoso-ag' のローカル レプリカは、Windows Server フェールオーバー クラスタリング (WSFC) クラスターからの要求により、解決中のロールに遷移する準備をしています。 このメッセージは情報提供だけを目的としています。 ユーザーによる操作は不要です。
 >
 >2016-04-25 12:20:21.21 spid75      可用性グループ 'ag' のローカル可用性レプリカの状態が 'PRIMARY_NORMAL' から 'RESOLVING_NORMAL' に変わりました。  可用性グループがオフラインに移行しているため、状態が変わりました。  関連付けられている可用性グループが削除されたか、関連付けられている可用性グループをユーザーが Windows Server フェールオーバー クラスタ リング (WSFC) 管理コンソールでオフラインにしたか、可用性グループが別の SQL Server インスタンスにフェールオーバーしているため、レプリカがオフラインに移行しています。  詳細については、SQL Server エラー ログ、Windows Server フェールオーバー クラスタリング (WSFC) 管理コンソール、または WSFC ログをご覧ください。
 
@@ -135,7 +134,8 @@ SQL Server 2016 以降、新しい拡張イベントが定義されました。�
 このイベントをキャプチャする XEvent セッションを作成する例を次に示します。 パスが指定されていないため、XEvent 出力ファイルは、SQL Server エラー ログの既定のパスに配置されます。 このスクリプトは、可用性グループのプライマリ レプリカで実行してください。
 
 拡張イベント セッション スクリプトの例
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -151,32 +151,32 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 
 フィールドの説明:
 
-|列のデータ    | [説明]
-|---------|---------
-|availability_group_id  |可用性グループの ID。
-|availability_group_name    |可用性グループの名前です。
-|availability_replica_id    |可用性レプリカの ID。
-|availability_replica_name  |可用性レプリカの名前。
-|database_name  |エラーをレポートしているデータベースの名前。
-|database_replica_id    |可用性レプリカ データベースの ID。
-|failover_ready_replicas    |同期されている自動フェールオーバー セカンダリ レプリカの数。
-|fault_type     | レポートされたエラー ID。 有効値は次のとおりです。  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown
-|is_critical    | SQL Server 2016 の XEvent では、この値は常に true を返します。
+|列のデータ | [説明]|
+|---------|---------|
+|availability_group_id |可用性グループの ID。|
+|availability_group_name |可用性グループの名前です。|
+|availability_replica_id |可用性レプリカの ID。|
+|availability_replica_name |可用性レプリカの名前。|
+|database_name |エラーをレポートしているデータベースの名前。|
+|database_replica_id |可用性レプリカ データベースの ID。|
+|failover_ready_replicas |同期されている自動フェールオーバー セカンダリ レプリカの数。|
+|fault_type  | レポートされたエラー ID。 有効値は次のとおりです。  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown|
+|is_critical | SQL Server 2016 の XEvent では、この値は常に true を返します。|
 
 
 この出力例は、AutoHa-Sample2 という名前のデータベースで "fault_type 2 シャットダウン" が発生したため、SQLSERVER-1 という名前のレプリカの、可用性グループ Contoso-ag で、重大なイベントが発生したことを示しています。
 
-|フィールド  | ReplTest1
-|---------|---------
-|availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |  Contoso-ag
-|availability_replica_id    | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |    SQLSERVER-1
-|database_name |    AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
-|fault_type |   2
-|is_critical    | True
+|フィールド  | [値]|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | True|
 
 
 ### <a name="related-references"></a>関連リファレンス

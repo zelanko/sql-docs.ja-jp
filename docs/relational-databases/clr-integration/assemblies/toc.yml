@@ -1,8 +1,0 @@
-- name: CLR 統合アセンブリの管理
-  href: managing-clr-integration-assemblies.md
-- name: アセンブリの変更
-  href: altering-an-assembly.md
-- name: アセンブリの作成
-  href: creating-an-assembly.md
-- name: アセンブリの削除
-  href: dropping-an-assembly.md

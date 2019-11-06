@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.manageschedules.f1
@@ -12,12 +12,12 @@ ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b0322dec826c7ecd45c31680320db199ae9bc32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63255072"
 ---
 # <a name="manage-schedules"></a>[スケジュールの管理]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ スケジュールのプロパティを表示および変更できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48213002"
  **名前**  
  スケジュールの名前を表示します。  
   
- **Enabled**  
+ **有効**  
  スケジュールを有効にするには、このオプションを選択します。  
   
  **[説明]**  
@@ -47,7 +47,7 @@ ms.locfileid: "48213002"
  **プロパティ**  
  選択されているスケジュールのプロパティを変更するには、このボタンをクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スケジュールの作成とジョブへのアタッチ](create-and-attach-schedules-to-jobs.md)  
   
   

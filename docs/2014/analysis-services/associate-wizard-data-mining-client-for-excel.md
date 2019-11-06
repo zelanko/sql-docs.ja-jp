@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nested tables, in association models
@@ -14,12 +13,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062309"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>アソシエーション ウィザード (Excel 用データ マイニング クライアント)
   ![データ マイニング リボンの関連付けウィザード](media/dmc-associate.gif "データ マイニング リボンのウィザードを関連付ける")  
@@ -80,7 +79,7 @@ ms.locfileid: "48179432"
   
          ドリルスルーは、特定のアイテムセットをクリックしてソース データを表示する場合などに便利です。  
   
-    -   **一時的なモデルを使用する**します。 モデルをサーバーに保存しない場合にこのチェック ボックスをオンにします。 一時的なモデルは、Excel の終了時に削除されます。  
+    -   **一時的なモデルを使用する**します。 モデルをサーバーに保存したくない場合は、このオプションを選択します。 一時的なモデルは、Excel の終了時に削除されます。  
   
 9. このウィザードは、すべての可能な組み合わせを分析し、アイテムセットとルールを含むレポートを作成します。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "48179432"
   
  アルゴリズムは、アイテムセットに関するこの情報を使用して、アソシエーションの予測や提案に使用できるルールを生成します。 たとえば、"ユーザーが Author 1 の本および Author 2 の本を購入した場合、Author 3 の本も購入する可能性がある" というルールを生成します。 それぞれの提案に対して、アソシエーションの強さに基づいて確率が割り当てられます。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  関連付けウィザードを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続する必要があります。  
   
  ソース データをトランザクション テーブルとして編成する必要があります。 ソース データは、トランザクション識別子を含む列を 1 つ含む必要があります。 この列は、アイテムの各グループを識別します。 このトランザクション列は、2 番目のアイテム ID の列と 1 対他の関係にする必要があります。アイテム ID の列には、グループ内の個別のアイテムの名前または ID 番号が格納されています。  

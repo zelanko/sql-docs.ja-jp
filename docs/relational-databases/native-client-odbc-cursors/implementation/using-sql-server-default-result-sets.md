@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0491df6a2e653a54370bbc3951b625ef9af0691c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23d2767b8ec4d82fe283666338501efdc67c708b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134037"
 ---
 # <a name="using-sql-server-default-result-sets"></a>SQL Server の既定の結果セットの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]
                 Connection is busy with results for another hstmt."  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルの実装方法](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
   

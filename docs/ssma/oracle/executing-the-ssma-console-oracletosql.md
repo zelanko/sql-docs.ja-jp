@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 84194cf92cfd4c6270697aa1c3fd4f475df956ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 5cb3ff58156d35a348a432e6d7edb7f794e59e6f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714090"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266093"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA コンソールの実行 (OracleToSQL)
 Microsoft は、ファイルのコマンドを実行し、SSMA アクティビティを制御する堅牢なスクリプトのセットを提供します。 コンソール アプリケーションは、このセクションでは、列挙型として標準的なスクリプト ファイルの特定のコマンドを使用します。  
@@ -30,7 +30,7 @@ Microsoft は、ファイルのコマンドを実行し、SSMA アクティビ�
 **Command**  
   
 create-new-project  
-                  : 新しい SSMA プロジェクトを作成します。  
+                  :新しい SSMA プロジェクトを作成します。  
   
 **[スクリプト]**  
   
@@ -63,7 +63,7 @@ create-new-project
   
 **Command**  
   
-開くプロジェクト: 既存のプロジェクトを開きます。  
+開くプロジェクト:既存のプロジェクトを開きます。  
   
 **[スクリプト]**  
   
@@ -294,7 +294,7 @@ generate-assessment-report
 ## <a name="migration-script-file-commands"></a>移行スクリプト ファイルのコマンド  
 移行コマンドでは、送信元スキーマのターゲット データベースのスキーマの変換し、ターゲット サーバーにデータを移行します。  
   
-設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力: ソース オブジェクトのツリーのルート ノードで概要のみです。  
+設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力を示します。ソース オブジェクトのツリーのルート ノードでのみの概要です。  
   
 **Command**  
   
@@ -459,7 +459,7 @@ generate-assessment-report
 ```  
   
 ## <a name="manageability-script-file-commands"></a>スクリプト コマンド ファイルの管理の容易性  
-管理コマンドは、ソース データベースとターゲットのデータベース オブジェクトを同期するのに役立ちます。 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力: ソース オブジェクトのツリーのルート ノードで概要のみです。  
+管理コマンドは、ソース データベースとターゲットのデータベース オブジェクトを同期するのに役立ちます。 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力を示します。ソース オブジェクトのツリーのルート ノードでのみの概要です。  
   
 **Command**  
   
@@ -589,7 +589,7 @@ generate-assessment-report
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>スクリプトの生成スクリプト ファイル コマンド  
-スクリプトの生成コマンドが 2 つのタスクを実行します、コンソール出力スクリプト ファイルに保存できる。コンソールまたは指定したパラメーターに基づいてファイルを T-SQL で出力を記録します。  
+スクリプトの生成コマンドでは、2 つのタスクを実行します。コンソール出力スクリプト ファイルに保存できます。コンソールまたは指定したパラメーターに基づいてファイルを T-SQL で出力を記録します。  
   
 **Command**  
   

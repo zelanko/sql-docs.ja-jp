@@ -1,27 +1,24 @@
 ---
-title: 'タスク 5: Excel からドメイン ベースの属性を作成する |Microsoft Docs'
+title: タスク 5:Excel からドメイン ベースの属性を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73d495f35e09ce893e9f8e763a7daa83851c1463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489107"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>タスク 5: Excel からドメイン ベースの属性を作成する
-  変換するこのタスクで、**状態**の属性、**サプライヤー**としてエンティティを**ドメイン ベースの属性**します。 ドメイン ベースの 1 つとして指定し、MDS、という名前の新しいエンティティに発行する State 属性を構成した後**状態**列のすべての値と共に MDS サーバーに作成されます、**状態**の属性、**Supplier**エンティティからの値が表示されます、**状態**エンティティ。 ここで、 **Suppliers**モデルには 2 つのエンティティには: **Supplier**と**状態**場所、**状態**の属性、 **サプライヤー**エンティティに依存するドメイン ベースの属性は、**状態**エンティティ。  
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>タスク 5:Excel からドメイン ベースの属性を作成する
+  変換するこのタスクで、**状態**の属性、**サプライヤー**としてエンティティを**ドメイン ベースの属性**します。 ドメイン ベースの 1 つとして指定し、MDS、という名前の新しいエンティティに発行する State 属性を構成した後**状態**列のすべての値と共に MDS サーバーに作成されます、**状態**の属性、**Supplier**エンティティからの値が表示されます、**状態**エンティティ。 ここで、 **Suppliers**モデルには 2 つのエンティティには。**サプライヤー**と**状態**場所、**状態**の属性、 **Supplier**エンティティに依存するドメイン ベースの属性は、 **の状態**エンティティ。  
   
 1.  切り替える**Excel**を持つウィンドウ**Cleansed and Matched Suppliers.xlsx**を開きます。  
   
@@ -44,6 +41,6 @@ ms.locfileid: "48146342"
      ![Excel - ドロップダウン リストの状態を持つ](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - ドロップダウン リストの状態を持つ")  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 6: マスター データ マネージャーを使用してドメイン ベースの属性が作成されていることを確認する](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [タスク 6:マスター データ マネージャーを使用してドメイン ベースの属性を作成することを確認します。](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

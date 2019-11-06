@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - converting uppercase to lowercase
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1468e205f6d7a368b9b4af2a693fd369e11af233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3f445260e7b5c4c1ed641fdf6b9f5cb509db709
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050101"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769058"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 式)
   大文字が小文字に変換された状態の文字式を返します。  
@@ -64,8 +63,8 @@ LOWER(SUBSTRING(Color, 2, 15))
 LOWER(@CityName)  
 ```  
   
-## <a name="see-also"></a>参照  
- [上限&#40;SSIS 式&#41;](upper-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+## <a name="see-also"></a>関連項目  
+ [UPPER (SSIS 式)](upper-ssis-expression.md)   
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

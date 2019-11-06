@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
@@ -12,12 +12,12 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f28df5a3091ad54b8500bd29b9873277c33b690
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195021"
 ---
 # <a name="page-setup-dialog-box"></a>[ページ設定] ダイアログ ボックス
   **[ページ設定]** ダイアログ ボックスでオプションを選択して、ページのデザインをカスタマイズできます。 インストールされている言語、および編集が有効になっている言語によっては、使用できないオプションもあります。  
@@ -46,7 +46,7 @@ ms.locfileid: "48220952"
  TOP  
  ページの上端とページの先頭行の上部との距離を設定します。  
   
- [下]  
+ Bottom  
  ページの下端とページの最終行の下部との距離を設定します。  
   
 ## <a name="other"></a>その他  

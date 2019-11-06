@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117298"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,8 +122,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  この動作が必要なのは、ユーザーが Windows グループに基づいてオブジェクトを作成および所有できるようにするためです。 ただし、スキーマおよびユーザーが誤って作成される可能性があります。 ユーザーおよびスキーマが暗黙的に作成されないように、可能な限り、明示的にデータベース プリンシパルを作成して既定のスキーマを割り当てます。 または、データベース内にオブジェクトを作成するときに、2 部または 3 部構成のオブジェクト名を使用して既存のスキーマを明示的に指定します。  
 
->  [!NOTE]
->  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーからの Azure AD ユーザーの作成では AAD でユーザーの状態を確認する必要があるので、ユーザーの作成はエラー 2760 "**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がありません**"、 およびその後のエラー 2759 "**直前のエラーにより CREATE SCHEMA に失敗しました**" で失敗します。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
+> [!NOTE]
+>  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーから Azure AD ユーザーを作成する場合、ユーザーの状態を AAD で確認する必要があるので、ユーザーの作成はエラー 2760:**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がないため失敗します。** 次いで、エラー 2759:**直前のエラーにより CREATE SCHEMA に失敗しました。** が表示されます。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
  
   
 ## <a name="deprecation-notice"></a>今後のバージョンでの使用  
@@ -187,7 +186,7 @@ GO
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.schemas (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [データベース スキーマの作成](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
   
   

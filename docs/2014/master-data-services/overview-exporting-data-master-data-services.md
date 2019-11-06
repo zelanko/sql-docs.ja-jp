@@ -1,29 +1,28 @@
 ---
-title: エクスポートのデータ (Master Data Services) |Microsoft Docs
+title: データのエクスポート (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e7a228062035772b9c394a246de0452f36239b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482840"
 ---
 # <a name="exporting-data-master-data-services"></a>データのエクスポート (Master Data Services)
-  エクスポートすることができます[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]サブスクリプション ビューを作成してサブスクライブ システムへのデータ。 これにより、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにパブリッシュされたデータを任意のサブスクライブ システムで表示できます。 ビューの詳細については、「 [ビュー](../relational-databases/views/views.md)」を参照してください。  
+  サブスクリプション ビューを作成して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データをサブスクライブ システムにエクスポートできます。 これにより、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにパブリッシュされたデータを任意のサブスクライブ システムで表示できます。 ビューの詳細については、「 [ビュー](../relational-databases/views/views.md)」を参照してください。  
   
 ## <a name="subscription-view-formats"></a>サブスクリプション ビュー形式  
  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]でビューを作成する場合は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] によって提供される一連の標準ビュー形式から選択します。 これらの形式を使用して、以下を表示するビューを作成できます。  
@@ -48,11 +47,11 @@ ms.locfileid: "48158642"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |マスター データのサブスクリプション ビューを作成する。|[サブスクリプション ビューを作成&#40;マスター データ サービス&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
-|既存のサブスクリプション ビューを削除する。|[サブスクリプション ビューを削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
+|既存のサブスクリプション ビューを削除する。|[サブスクリプション ビューを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [サブスクリプション ビュー形式&#40;マスター データ サービス&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
+-   [サブスクリプション ビュー形式 (マスター データ サービス)](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
   
 -   [ビュー](../relational-databases/views/views.md)  
   

@@ -13,12 +13,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 18eef13d999826bb54f9900feed52f41ce614ea9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675691"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266963"
 ---
 # <a name="user-interface-reference-accesstosql"></a>ユーザー インターフェイス リファレンス (AccessToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for アクセスします。  
@@ -48,7 +48,7 @@ ms.locfileid: "51675691"
 |[プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|[移行] ページを使用して、**プロジェクト設定**移行バッチ サイズ、テーブルのロック、制約チェック、挿入トリガーを起動、id および処理するには、null 値を指定する ダイアログ ボックスと日付のうちを処理する方法、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。|  
 |[プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|型マッピングのページを使用して、**プロジェクト設定**SSMA プロジェクトですべてのデータベースとデータベース オブジェクトの既定の型マッピングを指定する ダイアログ ボックス。|  
 |[プロジェクトの設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|SQL Azure のページを使用して、**プロジェクト設定** ダイアログ ボックスを指定するデータベースのサフィックスと、ハートビートのタイムアウト間隔。|  
-|[メタデータの保存&#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|**メタデータの保存**メタデータが不足しているプロジェクトを保存するときに、ダイアログ ボックスが表示されます。|  
+|[メタデータの保存&#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|**メタデータの保存**メタデータが不足しているプロジェクトを保存するときに、ダイアログ ボックスが表示されます。|  
   
 ## <a name="see-also"></a>関連項目  
 [SQL Server Migration Assistant for Access の概要&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

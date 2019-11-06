@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e560cae97a647b484bc75936db31434dc08864a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bedea60c8bc356ff18b687123799977d83f308c5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62816757"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]で導入された [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] により、エンタープライズのユーザー データベースの可用性が最大限に高まります。 *可用性グループ* は、 *可用性データベース*として知られる、ひとまとまりでフェールオーバーされる個別のユーザー データベースのセットのためのフェールオーバー環境をサポートします。 可用性グループは、読み取り/書き込みプライマリ データベースのセットをサポートし、1 ～ 8 セットの対応するセカンダリ データベースをサポートします。 必要に応じて、セカンダリ データベースで読み取り専用アクセスまたはいくつかのバックアップ操作を利用できます。  
@@ -49,9 +49,9 @@ ms.locfileid: "48177012"
   
 -   次のアクティブ セカンダリ機能の一方または両方をサポートするように指定された可用性レプリカを構成できます。  
   
-    -   セカンダリ レプリカとして動作中に、レプリカへの読み取り専用接続でそのデータベースにアクセスして読み込むことができる読み取り専用接続アクセス。 詳細については、次を参照してください。[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカです。Always On 可用性グループ](https://msdn.microsoft.com/library/ff878253.aspx))。  
+    -   セカンダリ レプリカとして動作中に、レプリカへの読み取り専用接続でそのデータベースにアクセスして読み込むことができる読み取り専用接続アクセス。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカです。Always On 可用性グループ](https://msdn.microsoft.com/library/ff878253.aspx))。  
   
-    -   セカンダリ レプリカとして動作中に、そのデータベース上でバックアップ操作を実行します。 詳細については、次を参照してください。[アクティブなセカンダリ: セカンダリ レプリカでバックアップ](https://msdn.microsoft.com/library/ff878253.aspx))。  
+    -   セカンダリ レプリカとして動作中に、そのデータベース上でバックアップ操作を実行します。 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでバックアップ](https://msdn.microsoft.com/library/ff878253.aspx))。  
   
      アクティブ セカンダリ機能を使用して、セカンダリ ハードウェアのリソース使用効率を高めることで、IT の効率性を改善し、コストを低減できます。 また、読み取りを目的としたアプリケーションやバックアップ ジョブをセカンダリ レプリカへとオフロードすることで、プライマリ レプリカのパフォーマンスを改善できます。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48177012"
   
         -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]では、可用性グループに対して手動のフェールオーバーを開始できます。 フェールオーバーのターゲットとして指定するセカンダリ レプリカの構成と状態によっては、このウィザードで計画的または強制的な手動フェールオーバーを実行することもできます。 詳細については、次を参照してください。[失敗経由で可用性グループ ウィザードを使用。SQL Server Management Studio。](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視し、AlwaysOn ポリシーの結果を評価します。 詳細については、次を参照してください[; の AlwaysOn ダッシュ ボードの使用。SQL Server Management Studio。](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視し、AlwaysOn ポリシーの結果を評価する [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 。 詳細については、次を参照してください[; の AlwaysOn ダッシュ ボードの使用。SQL Server Management Studio。](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
     -   既存の可用性グループに関する基本情報を表示する、[オブジェクト エクスプローラーの詳細] ペイン。 詳細については、次を参照してください[モニターの可用性グループにオブジェクト エクスプ ローラーの詳細を使用して、。SQL Server Management Studio。](use-object-explorer-details-to-monitor-availability-groups.md).  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48177012"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  他の機能を使用するための制限事項については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[Always On 可用性グループ: 相互運用性。SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で他の機能を使用する場合の制限事項については、「[Always On 可用性グループ: 相互運用性。SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -151,19 +151,19 @@ ms.locfileid: "48177012"
   
 -   **ブログ:**  
   
-     [SQL Server Always On チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server Always On チーム ブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コード ネーム "Denali" Always On シリーズ パート 1: 次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム "Denali" Always On シリーズ パート 1: 次世代高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server コードネーム"Denali"Alwayson シリーズ、パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server コードネーム "Denali" Always On シリーズ パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

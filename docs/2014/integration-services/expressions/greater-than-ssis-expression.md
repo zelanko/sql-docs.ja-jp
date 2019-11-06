@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96b4fda680df05da1094db32075414ace3039a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52df62d9a69d57b95c3e3f4fa9a6e75599925953
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62898024"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (より大きい) (SSIS 式)
   最初の式が 2 番目の式より大きいかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
@@ -56,7 +55,7 @@ expression1 > expression2
     > [!NOTE]  
     >  文字列の比較では、大文字と小文字、アクセント、かな、および文字幅が区別されます。  
   
--   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME のいずれかのデータ型に評価される必要があります。  
+-   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも次のいずれかのデータ型に評価される必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、DT_FILETIME。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  
@@ -101,11 +100,11 @@ ListPrice > 500
 ```  
   
 ## <a name="see-also"></a>参照  
- [&#60;&#40;未満&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)   
- [&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](greater-than-or-equal-to-ssis-expression.md)   
+ [&#60; (より小さい) (SSIS 式)](less-than-ssis-expression.md)   
+ [&#62;= (以上) (SSIS 式)](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= &#40;以下&#41; &#40;SSIS 式&#41;](less-than-or-equal-to-ssis-expression.md)   
- [= =&#40;等しい&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)   
+ [== (等しい) (SSIS 式)](equal-ssis-expression.md)   
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
- [演算子&#40;SSIS 式&#41;](operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   
   

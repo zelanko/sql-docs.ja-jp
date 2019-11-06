@@ -10,16 +10,15 @@ helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 57abfdd5679e4ab68f83959f44fce143056c2c7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048657"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51018637"
   
  ![geometry LineString インスタンスの例](../../relational-databases/spatial/media/linestring.gif "geometry LineString インスタンスの例")  
   
- この図は次のことを示しています。  
+この図は次のことを示しています。  
   
 -   図 1 は、単純な閉じていない **LineString** インスタンスです。  
   
@@ -41,69 +40,69 @@ ms.locfileid: "51018637"
 -   図 4 は、閉じている単純でない **LineString** インスタンスです。したがって、このインスタンスはリングではありません。  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- 許容される **LineString** インスタンスはジオメトリ変数に入力できますが、これらが有効な **LineString** インスタンスであるとは限りません。 **LineString** インスタンスが許容されるには、次の条件を満たす必要があります。 インスタンスは、2 つ以上の異なる点から構成されているか、または空である必要があります。 次に示す LineString instances インスタンスは許容されます。  
+許容される **LineString** インスタンスはジオメトリ変数に入力できますが、これらが有効な **LineString** インスタンスであるとは限りません。 **LineString** インスタンスが許容されるには、次の条件を満たす必要があります。 インスタンスは、2 つ以上の異なる点から構成されているか、または空である必要があります。 次に示す LineString instances インスタンスは許容されます。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` の場合、 **LineString** インスタンスは許容されますが、有効ではありません。  
+`@g3` の場合、 **LineString** インスタンスは許容されますが、有効ではありません。  
   
- 次に示す **LineString** インスタンスは許容されません。 `System.FormatException`がスローされます。  
+次に示す **LineString** インスタンスは許容されません。 `System.FormatException`がスローされます。  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- **LineString** インスタンスを有効にするためには、次の条件を満たす必要があります。  
+**LineString** インスタンスを有効にするためには、次の条件を満たす必要があります。  
   
 1.  **LineString** インスタンスが許容されていること。  
-  
 2.  **LineString** インスタンスが空でない場合は、2 つ以上の異なる点が含まれていること。  
-  
 3.  **LineString** インスタンスは、それ自体を 2 つ以上の連続する点の区間に重ねることはできない。  
   
- 次に示す **LineString** インスタンスは有効です。  
+次に示す **LineString** インスタンスは有効です。  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- 次に示す **LineString** インスタンスは無効です。  
+次に示す **LineString** インスタンスは無効です。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  **LineString** の重複の検出は浮動小数点計算に基づいて行われますが、この計算は正確ではありません。  
+> **LineString** の重複の検出は浮動小数点計算に基づいて行われますが、この計算は正確ではありません。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、3 つの点を持つ `geometry``LineString` インスタンスを作成する方法を示しています。このインスタンスの SRID は 0 です。  
+### <a name="example-a"></a>例 A。    
+次の例は、3 つの点を持つ `geometry``LineString` インスタンスを作成する方法を示しています。このインスタンスの SRID は 0 です。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- `LineString` インスタンスのそれぞれの点には、Z (昇格) 値と M (メジャー) 値を含めることができます。 次の例では、上の例で作成した `LineString` インスタンスに M 値を追加します。 M および Z は NULL 値にすることができます。  
+### <a name="example-b"></a>例 B。   
+`LineString` インスタンスのそれぞれの点には、Z (昇格) 値と M (メジャー) 値を含めることができます。 次の例では、上の例で作成した `LineString` インスタンスに M 値を追加します。 M および Z は NULL 値にすることができます。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- 次の例は、同じ 2 つの点を持つ `geometry LineString` インスタンスを作成する方法を示しています。 `IsValid` 呼び出しは、 **LineString** インスタンスが無効であることを示します。 `MakeValid` 呼び出しは、 **LineString** インスタンスを **Point**に変換します。  
+### <a name="example-c"></a>例 C。   
+次の例は、同じ 2 つの点を持つ `geometry LineString` インスタンスを作成する方法を示しています。 `IsValid` 呼び出しは、 **LineString** インスタンスが無効であることを示します。 `MakeValid` 呼び出しは、 **LineString** インスタンスを **Point**に変換します。  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,11 +117,10 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- 上のコード スニペットは、次の結果を返します。  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  

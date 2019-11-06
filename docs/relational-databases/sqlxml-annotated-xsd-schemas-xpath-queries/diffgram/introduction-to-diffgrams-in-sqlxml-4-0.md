@@ -11,22 +11,21 @@ helpviewer_keywords:
 - annotations [SQLXML]
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 567c4b6054623fad160dc17378e2a4a680fc4c8e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7b232b2a6f6458139236595b2cac29afb54c0099
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073393"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 の DiffGram の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   ここでは、DiffGram の概要を説明します。  
   
-## <a name="diffgram-format"></a>DiffGram の書式  
+## <a name="diffgram-format"></a>DiffGram 形式  
  一般的な DiffGram の書式は次のとおりです。  
   
 ```  
@@ -34,7 +33,7 @@ ms.locfileid: "51669511"
 <diffgr:diffgram   
          xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"  
          xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"  
-         xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
    <DataInstance>  
       ...  
    </DataInstance>  
@@ -60,10 +59,10 @@ ms.locfileid: "51669511"
  省略可能なブロックです。DiffGram の処理ロジックでは無視されます。  
   
 ## <a name="diffgram-annotations"></a>DiffGram の注釈  
- これらの注釈は DiffGram 名前空間で定義されている **"urn:schemas-microsoft-com:xml-diffgram-01"**:  
+ これらの注釈は DiffGram 名前空間で定義されている **"urn:schemas-microsoft-com:xml-diffgram-01"** :  
   
  **id**  
- この属性を使用して要素のペアを**\<する前に >** と **\<DataInstance >** ブロックします。  
+ この属性を使用して要素のペアを **\<する前に >** と **\<DataInstance >** ブロックします。  
   
  **hasChanges**  
  挿入または更新操作は、DiffGram は、値は、この属性を指定する必要があります**挿入**または**変更**します。 この属性が存在しない場合の対応する要素、  **\<DataInstance >** 処理では無視されますロジックや更新が実行されます。 実際のサンプルを参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)します。  
@@ -76,8 +75,8 @@ ms.locfileid: "51669511"
   
 |操作|説明|  
 |---------------|-----------------|  
-|Insert|要素が表示されたら、DiffGram は挿入操作を示します、  **\<DataInstance >** ブロックが、対応する**\<する前に >** ブロック、および、 **diffgr:hasChanges**属性が指定されて (**diffgr:hasChanges = 挿入**) 要素にします。 ここでは、DiffGram がで指定されたレコード インスタンスを挿入、  **\<DataInstance >** をデータベースにブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が指定されていない、処理ロジックで、要素は無視され、挿入は実行されません。 実際のサンプルを参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)します。|  
-|Update|内の要素がある場合に、DiffGram は更新操作を示します、\<する前に > が対応する要素が存在するブロック、  **\<DataInstance >** ブロック (つまり、両方の要素がある、 **diffgr:id**同じ値を持つ属性) と**diffgr:hasChanges**属性が値を指定**変更**内の要素に対して、 **\<DataInstance >** ブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が要素で指定されていない、  **\<DataInstance >** ブロック、処理ロジックでエラーが返されます。 実際のサンプルを参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)します。<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >** ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが更新される順序が決定されます。|  
+|Insert|要素が表示されたら、DiffGram は挿入操作を示します、 **\<DataInstance >** ブロックが、対応する **\<する前に >** ブロック、および、 **diffgr:hasChanges**属性が指定されて (**diffgr:hasChanges = 挿入**) 要素にします。 ここでは、DiffGram がで指定されたレコード インスタンスを挿入、  **\<DataInstance >** をデータベースにブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が指定されていない、処理ロジックで、要素は無視され、挿入は実行されません。 実際のサンプルを参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)します。|  
+|更新|内の要素がある場合に、DiffGram は更新操作を示します、\<する前に > が対応する要素が存在するブロック、  **\<DataInstance >** ブロック (つまり、両方の要素がある、 **diffgr:id**同じ値を持つ属性) と**diffgr:hasChanges**属性が値を指定**変更**内の要素に対して、 **\<DataInstance >** ブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が要素で指定されていない、  **\<DataInstance >** ブロック、処理ロジックでエラーが返されます。 実際のサンプルを参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)します。<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >** ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが更新される順序が決定されます。|  
 |DELETE|要素が表示されたら、DiffGram を削除操作を示します、 **\<する前に >** ブロックが、対応する **\<DataInstance >** ブロックします。 この場合、DiffGram はで指定されたレコード インスタンスを削除します。、 **\<する前に >** データベースからのブロック。 実際のサンプルを参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)します。<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >** ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが削除される順序が決定されます。|  
   
 > [!NOTE]  

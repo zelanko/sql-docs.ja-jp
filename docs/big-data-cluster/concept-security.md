@@ -1,84 +1,88 @@
 ---
-title: SQL Server のビッグ データ クラスターのセキュリティの概念 |Microsoft Docs
-description: この記事では、SQL Server 2019 ビッグ データ クラスターのセキュリティの概念について説明します。
+title: セキュリティの概念
+titleSuffix: SQL Server big data clusters
+description: この記事では、の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]セキュリティの概念について説明します。 これには、クラスター エンドポイントとクラスター認証の説明が含まれます。
 author: nelgson
 ms.author: negust
-manager: craigg
-ms.date: 10/01/2018
+ms.reviewer: mikeray
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 77ffea6b2507bde65b914c52eaf225e1fd1dbd31
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.technology: big-data-cluster
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050884"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652252"
 ---
-# <a name="security-concepts-for-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターのセキュリティの概念
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>セキュリティの概念[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-ビッグ データをセキュリティで保護されたクラスターでは、SQL Server と HDFS/Spark の両方で認証と承認のシナリオを首尾一貫したサポートを意味します。 認証は、ユーザーまたはサービスの id を確認し、それらがあると主張するユーザーはことを確認するプロセスです。 承認は、許可または要求しているユーザーの id に基づいて特定のリソースへのアクセスを拒否するを参照します。 ユーザーが認証によって特定した後は、この手順を実行します。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-ビッグ データのコンテキストでの承認は通常、特定のアクセス許可を持つユーザーの id を関連付けるアクセス制御リスト (Acl) を実行します。 HDFS では、サービスの Api、HDFS のファイルとジョブの実行へのアクセスを制限することで承認をサポートしています。
+セキュリティで保護されたビッグ データ クラスターとは、SQL Server と HDFS/Spark の両方にまたがる、認証と承認のシナリオに対する一貫性のあるわかりやすいサポートを意味します。 認証とは、ユーザーまたはサービスの身元を確認し、ユーザーまたはサービスが本物であることを確認するプロセスです。 承認とは、要求元のユーザーの ID に基づいて、特定のリソースへのアクセスを許可または拒否することを意味します。 この手順は、ユーザーが認証によって識別された後に実行されます。
 
-この記事では、ビッグ データ クラスター内のキーのセキュリティに関連する概念を説明します。
+通常、ビッグ データのコンテキストにおける承認は、ユーザー ID と特定のアクセス許可を関連付けるアクセス制御リスト (ACL) を使用して実行されます。 HDFS は、サービス API、HDFS ファイル、およびジョブ実行に対するアクセスを制限することで、承認をサポートするものです。
+
+この記事では、ビッグ データ クラスターのセキュリティに関する重要な概念について説明します。
 
 ## <a name="cluster-endpoints"></a>クラスター エンドポイント
 
-ビッグ データ クラスターに 3 つのエントリ ポイントがあります。
+ビッグ データ クラスターには 3 つのエントリ ポイントがあります。
 
-* HDFS/Spark (Knox) ゲートウェイ – これは、HTTPS ベースのエンドポイント。 その他のエンドポイントは、この経由でプロキシ処理です。 HDFS/Spark ゲートウェイは、webHDFS Livy などのサービスにアクセスするために使用されます。 Knox への参照を表示すると、任意の場所は、エンドポイントです。
+* HDFS/Spark (Knox) ゲートウェイ - これは HTTPS ベースのエンドポイントです。 その他のエンドポイントは、これを通じてプロキシ処理されます。 HDFS/Spark ゲートウェイは、webHDFS や Livy などのサービスにアクセスするために使用されます。 Knox への参照が表示されている場合は、エンドポイントです。
 
-* コント ローラー エンドポイント – クラスターを管理するための REST Api を公開するビッグ データ クラスターの管理サービスです。 管理ポータルなどのいくつかのツールは、このエンドポイントからもアクセスされます。
+* コントローラー エンドポイント - クラスターを管理するための REST API を公開しているビッグ データ クラスター管理サービスです。 一部のツールは、このエンドポイントからもアクセスできます。
 
-* マスター インスタンスのデータベース ツールと、クラスター内の SQL Server マスター インスタンスに接続するアプリケーションの TDS エンドポイント。
+* マスター インスタンス - クラスター内の SQL Server マスター インスタンスに接続するためのデータベース ツールとアプリケーションの TDS エンドポイント。
 
 ![クラスター エンドポイント](media/concept-security/cluster_endpoints.png)
 
-現時点では、外部からクラスターへのアクセスの追加のポートを開くためのオプションはありません。
+現時点では、外部からクラスターにアクセスするための追加のポートを開くオプションはありません。
 
-### <a name="how-endpoints-are-secured"></a>エンドポイントを保護する方法
+### <a name="how-endpoints-are-secured"></a>エンドポイントをセキュリティで保護する方法
 
-ビッグ データ クラスター内のエンドポイントをセキュリティで保護することができるパスワードを使用してセット/更新するか環境変数または CLI コマンドを使用します。 すべてのクラスター内部のパスワードは、Kubernetes シークレットとして格納されます。  
+ビッグ データ クラスター内のエンドポイントのセキュリティ保護は、パスワードを使用して行います。パスワードは、環境変数または CLI コマンドを使用して設定/更新できます。 すべてのクラスター内部パスワードは、Kubernetes シークレットとして格納されます。  
 
-# <a name="authentication"></a>[認証]
+## <a name="authentication"></a>認証
 
-クラスターをプロビジョニングすると、ログインの数が作成されます。
+クラスターをプロビジョニングすると、複数のログインが作成されます。
 
-これらのログインの一部は、互いと通信するサービスと他のユーザーは、クラスターにアクセスするエンドユーザー。
+これらのログインの中には、サービスの相互通信用のものや、エンドユーザーがクラスターにアクセスするためのものがあります。
 
-## <a name="end-user-authentication"></a>エンドユーザー認証
-クラスターをプロビジョニングするには、上のエンドユーザーのパスワードの数は環境変数を使用して設定する必要があります。 これらは、SQL 管理者とクラスターの管理者サービスへのアクセスに使用するパスワードです。
+### <a name="end-user-authentication"></a>エンドユーザー認証
+クラスターをプロビジョニングするとき、環境変数を使用して、複数のエンドユーザー パスワードを設定する必要があります。 これらは、SQL 管理者およびクラスター管理者がサービスにアクセスするために使用するパスワードです。
 
-コント ローラーのユーザー名:
- + CONTROLLER_USERNAME = < controller_username >
+コントローラーのユーザー名:
+ + CONTROLLER_USERNAME=<controller_username>
 
-コント ローラーのパスワード:  
- + CONTROLLER_PASSWORD = < controller_password >
+コントローラーのパスワード:  
+ + CONTROLLER_PASSWORD=<controller_password>
 
-SQL マスター SA パスワード: 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+SQL マスター SA のパスワード: 
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
-HDFS/Spark エンドポイントへのアクセスのパスワード:
- + KNOX_PASSWORD = < knox_password >
+HDFS/Spark エンドポイントにアクセスするためのパスワード:
+ + KNOX_PASSWORD=<knox_password>
 
-## <a name="intra-cluster-authentication"></a>内のクラスターの認証
+### <a name="intra-cluster-authentication"></a>クラスター内認証
 
- クラスターの展開時に、さまざまな SQL ログインが作成されます。
+クラスターを展開すると、複数の SQL ログインが作成されます。
 
-* 特別な SQL ログインは sysadmin ロールで、管理されているシステムであるコント ローラーの SQL インスタンスに作成されます。 このログインのパスワードは、K8s シークレットとしてキャプチャされます。
+* システムで管理されるコントローラー SQL インスタンス内に、sysadmin ロールを持つ特別な SQL ログインが作成されます。 このログインのパスワードは、K8s シークレットとしてキャプチャされます。
 
-* コント ローラーが所有して管理すると、クラスター内のすべての SQL インスタンスで sysadmin ログインが作成されます。 これらのインスタンスで HA のセットアップやアップグレードなどの管理タスクを実行するコント ローラーに必要になります。 これらのログインは、SQL のマスター インスタンス データ プールとの通信などの SQL インスタンスの間で、クラスター間の通信にも使用されます。
+* sysadmin ログインは、コントローラーによって所有および管理される、クラスター内のすべての SQL インスタンスに作成されます。 これらのインスタンスに対して、HA のセットアップやアップグレードなどの管理タスクがコントローラーによって実行される必要があります。 これらのログインは、データ プールと通信する SQL マスター インスタンスなど、SQL インスタンス間のクラスター内通信にも使用されます。
 
 > [!NOTE]
-> CTP2.0 で基本認証のみがサポートされています。 HDFS オブジェクト、およびビッグ データ クラスター コンピューティングとデータ プール、SQL へのきめ細かいアクセス制御は、まだ使用できません。
+> 現在のリリースでは、基本認証のみがサポートされています。 HDFS オブジェクトおよび SQL ビッグ データ クラスターのコンピューティングとデータ プールに対するきめ細かいアクセス制御はまだ使用できません。
 
-## <a name="intra-cluster-communication"></a>クラスター内通
+## <a name="intra-cluster-communication"></a>クラスター内通信
 
-証明書を使用して、Livy Spark には記憶域プールでは、Spark など、ビッグ データ クラスター内の非 SQL サービスとの通信が保護されます。 すべての SQL Server と SQL Server 間の通信は、SQL ログインを使用して保護されます。
+ビッグ データ クラスター内の SQL 以外のサービスとの通信 (Livy から Spark へ、または Spark から記憶域プールへの通信など) は、証明書を使用して保護されます。 SQL Server と SQL Server との通信はすべて、SQL ログインを使用して保護されます。
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の記事を参照してください。
+の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
-- [クイック スタート: Kubernetes 上の SQL Server のビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]概要](big-data-cluster-overview.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -2,18 +2,18 @@
 title: XML へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2756cbd4dc0a075662b47aaa81d4e4158074147
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410838"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580756"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、改ページ調整されたレポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
@@ -62,7 +62,7 @@ ms.locfileid: "52410838"
 |**Float** (または **Decimal** と任意の整数かバイト データ型)|**xsd:float**|  
 |**Double** (または **Decimal** と任意の整数かバイト データ型)|**xsd:double**|  
 |**DateTime または DateTime Offset**|**xsd:dateTime**|  
-|**Time**|**xsd:string**|  
+|**[時刻]**|**xsd:string**|  
 |**ブール値**|**xsd:boolean**|  
 |**String**、 **Char**|**xsd:string**|  
 |その他|**xsd:string**|  
@@ -76,11 +76,11 @@ ms.locfileid: "52410838"
   
  レポート要素には、XML 名前空間の定義とスキーマ参照属性も含まれます。 以下の例では、変数が太字で示されています。  
   
- <**Report** xmlns="**SchemaName**" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  それぞれの変数の値は次のとおりです。  
   
-|[オブジェクト名]|ReplTest1|  
+|[オブジェクト名]|[値]|  
 |----------|-----------|  
 |レポート|Report.DataElementName|  
 |ReportURL|サーバー上のレポートに対する絶対 URL です。URL エンコードされます。|  

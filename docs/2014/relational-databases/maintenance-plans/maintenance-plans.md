@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - SQL12.AG.MAINTPLAN.LEGACY.F1
@@ -17,12 +16,12 @@ ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff42b55ed8aa80c3e099632cdabbdfc49458982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206853"
 ---
 # <a name="maintenance-plans"></a>メンテナンス プラン
   メンテナンス プランでは、データベースを最適化したり、データベースを定期的にバックアップしたり、データベースの不整合をなくしたりするために必要なタスクのワークフローを作成します。 メンテナンス プラン ウィザードでも主要なメンテナンス プランを作成できますが、プランを手動で作成するとより柔軟性が高くなります。  
@@ -36,7 +35,7 @@ ms.locfileid: "48114352"
   
 -   概念的な階層。 各プランでは、ワークフローの作成や編集を行えます。 各プランのタスクはサブプランにグループ化できます。サブプランは、異なるタイミングで実行されるようにスケジュールを設定できます。  
   
--   マスター サーバー/対象サーバー環境で使用できるマルチサーバーのプランのサポート。  
+-   マスター サーバーやターゲット サーバーの環境で使用できるマルチサーバーのプランのサポート。  
   
 -   プランの履歴をリモート サーバーのログに記録する際のサポート。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48114352"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行します。 これにより、さまざまなアクションを実行するジョブと、それらのジョブを実行するメンテナンス プランを作成できます。  
   
- メンテナンス タスクで生成される結果は、レポートとしてテキスト ファイルに書き込むことや、`sysmaintplan_log` 内のメンテナンス プラン用のテーブルである `sysmaintplan_logdetail` や `msdb` に書き込むことができます。 ログ ファイル ビューアーで結果を参照するには、**[メンテナンス プラン]** を右クリックし、**[履歴の表示]** をクリックします。  
+ メンテナンス タスクで生成される結果は、レポートとしてテキスト ファイルに書き込むことや、`sysmaintplan_log` 内のメンテナンス プラン用のテーブルである `sysmaintplan_logdetail` や `msdb` に書き込むことができます。 ログ ファイル ビューアーで結果を参照するには、 **[メンテナンス プラン]** を右クリックし、 **[履歴の表示]** をクリックします。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  メンテナンス プランの基礎知識については、次の各トピックを参照してください。  

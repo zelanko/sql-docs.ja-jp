@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667218"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>レプリケーション モニターを使用したパフォーマンスの監視
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] &#xA0;レプリケーション モニターを使用すると、トランザクション レプリケーションとマージ レプリケーションのパフォーマンスを次の方法で監視できます。  
@@ -76,7 +75,7 @@ ms.locfileid: "48086492"
   
     |[非常に良い]|[良い]|[普通]|悪い|重大|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   マージ レプリケーションの場合、パフォーマンス品質は、しきい値とは関係ありません (行処理しきい値は、 **[パフォーマンス クリティカル]** の値を **[状態]** 列に表示するかどうかを決定します)。 パフォーマンス品質は、個々のサブスクリプション パフォーマンスを、接続の種類 (ダイヤルアップまたは LAN) が同じパブリケーションのサブスクリプションの平均的な過去のパフォーマンスと比較することで決定されます。 レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続により 5 回行われた後で、値が表示されます。 50 以上の変更に伴う同期が 5 回未満の場合、または最も最近の同期での変更が 50 未満の場合、レプリケーション モニターには値は表示されません。  
   
@@ -84,18 +83,18 @@ ms.locfileid: "48086492"
   
     |[非常に良い]|[良い]|[普通]|悪い|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
- サブスクリプション情報の表示の詳細については、「[サブスクリプションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)」を参照してください。  
+ サブスクリプション情報の表示に関する詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>トレーサー トークンによる待機時間の判断  
  トランザクション レプリケーションでは、パブリケーション データベースのトランザクション ログにトークン (少量のデータ) を挿入し、それがディストリビューターおよびサブスクライバーに到達するまでにかかった時間を記録することにより、システムの待機時間を計測できます。 このトークンを使用すると、データがディストリビューターまたはサブスクライバーに到達しているかどうかを識別することもできます。 詳細については、「 [トランザクション レプリケーションの待機時間の計測および接続の検証](measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>マージ レプリケーションの詳細な同期パフォーマンスの表示  
- マージ レプリケーションの場合、レプリケーション モニターには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報の表示の詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+ マージ レプリケーションの場合、レプリケーション モニターには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報を表示する方法について詳しくは、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>トランザクション レプリケーションのトランザクションおよび配信時間の表示  
- トランザクション レプリケーションの場合、レプリケーション モニターには、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+ トランザクション レプリケーションの場合、レプリケーション モニターには、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../monitoring-replication.md)   

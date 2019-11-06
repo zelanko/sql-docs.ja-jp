@@ -1,8 +1,0 @@
-- name: ロケーション パスの指定 (SQLXML 4.0)
-  href: specifying-a-location-path-sqlxml-4-0.md
-- name: ロケーション パスでのノード テストの指定 (SQLXML 4.0)
-  href: specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
-- name: 軸の指定 (SQLXML 4.0)
-  href: specifying-an-axis-sqlxml-4-0.md
-- name: ロケーション パスでの選択述語の指定 (SQLXML 4.0)
-  href: specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md

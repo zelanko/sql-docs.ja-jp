@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7881400c3e4696426b1999229e917630cf905d0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894927"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks のインストールと構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ AdventureWorks のダウンロード リンクとインストール手順につ�
 
 1. SQL Server Management Studio を開き、対象の SQL Server インスタンスに接続します。
 2. **データベース**ノードを右クリックし、**Restore Database** を選択します。
-3. 選択**デバイス**、省略記号ボタンをクリックします (**.**)
+3. 選択**デバイス**、省略記号ボタンをクリックします ( **.** )
 4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**サーバーのファイル システム内のデータベースのバックアップに移動して、バックアップを選択します。 **[OK]** をクリックします。
 5. 必要に応じて、データのターゲットの場所を変更し、ログ ファイルで、**ファイル**ウィンドウ。 ベスト プラクティスとしてデータを配置し、ログ ファイルを別のドライブにあるに注意してください。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了した後、AdventureWorks データベースの SQL Server インスタンスにインストールされている必要があります。
@@ -82,7 +81,7 @@ SQL Server データベースを復元する方法の詳細については、次
 2. 右クリックし、**データベース**ノード、および選択**アタッチ**します。
 3. 選択**追加**に移動します。MDF ファイルがアタッチします。 
 1. ファイルを選択し、をクリックして**OK**します。 
-    1. 選択したデータベースは、下のウィンドウで表示する必要があります。 ファイルが表示されている場合は、"not found"として省略記号を選択します (**.**) 更新プログラムの正しいパスへのパスとファイルの名前の横にあります。 
+    1. 選択したデータベースは、下のウィンドウで表示する必要があります。 ファイルが表示されている場合は、"not found"として省略記号を選択します ( **.** ) 更新プログラムの正しいパスへのパスとファイルの名前の横にあります。 
     1. データ ファイル (.mdf) とログ ファイル (.ldf) ではなくをしかない場合、下のウィンドウに、.ldf を強調表示して選択**削除**します。 これにより、新しいログ ファイルが作成されます。 
 1. 選択**OK**ファイルを添付します。 ファイルがアタッチされた後に、AdventureWorks データベースの SQL Server インスタンスにインストールされている必要があります。  
 
@@ -102,5 +101,5 @@ Azure で SQL Server をまだ必要はない場合に移動、 [Azure portal](h
 
 
 ## <a name="see-also"></a>関連項目
-[SQL Server Management Studio のチュートリアル](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+[SQL Server Management Studio のチュートリアル](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [SQL Server データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)

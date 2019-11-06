@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
@@ -26,19 +24,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62736395"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 規則
   Analysis Services スクリプト言語 (ASSL) はオブジェクトの階層を要素の型のセットとして表し、それぞれが含むことのできる子要素を定義します。  
   
  ASSL では、次の XML 規則を使用してオブジェクトの階層を表します。  
   
--   'xml:lang' などの標準の XML 属性を除き、すべてのオブジェクトとプロパティを要素として表します。  
+-   すべてのオブジェクトおよびプロパティは、'xml:lang' などの標準の XML 属性を除き、要素として表されます。  
   
 -   要素名と列挙値の両方が pascal 形式の Microsoft .NET Framework 名前付け規則に従っていないアンダー スコアで大文字小文字の区別します。  
   
@@ -51,7 +49,7 @@ ms.locfileid: "48112812"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +78,7 @@ ms.locfileid: "48112812"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +86,7 @@ ms.locfileid: "48112812"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +121,10 @@ ms.locfileid: "48112812"
  Analysis Services では、次のように XML スキーマ定義言語 (XSD) の標準的なデータ型を使用します。  
   
  `Int`  
- -231 ～ 231 - 1 の範囲の整数値。  
+ -231 ~ 231-1 の範囲の整数値。  
   
  `Long`  
- -263 ～ 263 - 1 の範囲の整数値。  
+ -263 ~ 263-1 の範囲の整数値。  
   
  `String`  
  次のグローバル ルールに従う文字列値。  

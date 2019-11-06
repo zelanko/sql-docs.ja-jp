@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
@@ -16,12 +15,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b851f631535008d1655a35c4b4af5321c8c4534
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086218"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>マイニング モデルへのフィルターの適用
   入れ子になったテーブルがマイニング構造に含まれている場合は、ケース テーブル、入れ子になったテーブル、またはその両方にフィルターを適用できます。  
@@ -47,7 +46,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     または  
+     \- または -  
   
      モデルを選択します。 次に、 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
@@ -97,7 +96,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      ケース テーブルでは入れ子になったテーブルの特定の値を含むケースのみに制限しているため、 **[モデル フィルター]** ダイアログ ボックスで入れ子になったテーブルに対して選択できる条件はこれだけです。 次の手順で入れ子になったテーブルの条件に値を設定します。  
   
-4.  **[値]** ボックスをクリックし、( **[...]** ) ボタンをクリックして式を作成します。  
+4.  をクリックして、**値**ボックスをクリックして、 **([...])** ボタン式を作成します。  
   
      **\<名 > フィルター**  ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、現在のテーブルにのみ条件を設定できます。ここでは、入れ子になったテーブルです。  
   
@@ -127,7 +126,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>参照  
- [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)   
+ [マイニング モデルのフィルター (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデルからのフィルターの削除](delete-a-filter-from-a-mining-model.md)  
   

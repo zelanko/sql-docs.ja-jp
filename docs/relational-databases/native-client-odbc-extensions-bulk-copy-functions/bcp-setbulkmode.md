@@ -10,22 +10,21 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea0f839fb1f1366827279d2a9254a88dbe0f8de6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f6dfcb6049811fa12899570b11c110b16dc400
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854650"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707472"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  bcp_setbulkmode では、1 つの関数の呼び出しですべての列属性を設定、一括コピー操作で列の形式を指定できます。  
+  bcp_setbulkmode を使用すると、一括コピー操作で列の形式を指定し、1回の関数呼び出しですべての列の属性を設定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,7 +51,7 @@ RETCODE bcp_setbulkmode (
  フィールド ターミネータ値を指すポインターです。  
   
  *cbField*  
- フィールド終端文字の値のバイト単位の長さ。  
+ フィールドターミネータ値の長さ (バイト単位)。  
   
  *pRow*  
  行ターミネータ値を指すポインターです。  
@@ -64,52 +63,52 @@ RETCODE bcp_setbulkmode (
  SUCCEED または FAIL を返します。  
   
 ## <a name="remarks"></a>コメント  
- bcp_setbulkmode は、一括コピー出力、クエリまたはテーブルのいずれかを使用できます。 Bcp_setbulkmode はクエリ ステートメントの一括コピーに使用する場合は、BCP_HINT を bcp_control を呼び出す前に呼び出す必要があります。  
+ bcp_setbulkmode を使用すると、クエリまたはテーブルから一括コピーできます。 Bcp_setbulkmode を使用してクエリステートメントを一括コピーする場合は、BCP_HINT で bcp_control を呼び出す前に、このステートメントを呼び出す必要があります。  
   
- bcp_setbulkmode が使用する代わりに[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)、のみ関数呼び出しごとに 1 つの列の形式を指定できます。  
+ bcp_setbulkmode は、 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)を使用する代わりに、関数呼び出しごとに1つの列の形式を指定できるようにするためのものです。  
   
  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLCHARACTER**します。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の – w オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**します。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の – N オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**列の型が文字列 (既定文字列でない場合) の場合。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の – n オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティが既定値に設定します。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP の-c オプションに対応しています。EXE を実行し、bcp_setcolfmt を**BCP_FMT_TYPE**プロパティを**sqlcharacter**に設定します。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応しています。**BCP_FMT_TYPE**プロパティを**sqlnchar**に設定して、EXE と bcp_setcolfmt を実行します。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の-N オプションに対応しています。列の型が文字列の場合は、EXE と bcp_setcolfmt with **BCP_FMT_TYPE**プロパティが**sqlnchar**に設定されます (文字列でない場合は既定)。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の-n オプションに対応しています。EXE と bcp_setcolfmt **BCP_FMT_TYPE**プロパティが既定値に設定されています。|  
   
- Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスでは、bcp_setbulkmode を使用しないでください。 たとえば、bcp_control(BCPTEXTFILE) と bcp_setbulkmode をしない呼び出す必要があります。  
+ Bcp_setbulkmode は、bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスと一緒に使用しないでください。 たとえば、bcp_control (BCPTEXTFILE) と bcp_setbulkmode を呼び出すことはできません。  
   
- Bcp_setbulkmode と競合しない bcp_control オプションについては、bcp_control と bcp_setbulkmode を呼び出すことができます。 たとえば、bcp_control(BCPFIRST) と bcp_setbulkmode を呼び出すことができます。  
+ Bcp_setbulkmode と競合しない bcp_control オプションでは、bcp_control と bcp_setbulkmode を呼び出すことができます。 たとえば、bcp_control (BCPFIRST) と bcp_setbulkmode を呼び出すことができます。  
   
- Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスを持つ bcp_setbulkmode を呼び出すしようとした場合、シーケンス エラーが関数呼び出しの 1 つ戻ります。 エラーを修正する場合は、すべての設定をリセットし、最初からやり直す bcp_init を呼び出します。  
+ Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスを使用して bcp_setbulkmode を呼び出そうとすると、いずれかの関数呼び出しでシーケンスエラーエラーが返されます。 エラーの修正を選択した場合は、bcp_init を呼び出してすべての設定をリセットし、最初からやり直してください。  
   
- 関数シーケンス エラーが発生する関数呼び出しの例を次に示します。  
+ 次に、関数シーケンスエラーが発生する関数呼び出しの例をいくつか示します。  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -119,18 +118,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  
@@ -286,7 +285,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

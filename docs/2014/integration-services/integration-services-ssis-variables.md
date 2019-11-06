@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62892281"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48069742"
 ## <a name="system-and-user-defined-variables"></a>システム変数とユーザー定義変数  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、ユーザー定義変数とシステム変数の、2 種類の変数がサポートされています。 ユーザー定義変数とはパッケージの開発者によって定義された変数で、システム変数とは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]によって定義された変数です。 ユーザー定義変数は、パッケージで必要な数だけ作成できますが、システム変数は追加作成できません。  
   
- 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「[SQL 実行タスク](control-flow/execute-sql-task.md)」と「[SQL 実行タスクのパラメーターとリターン コード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)」を参照してください。  
+ 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「 [SQL 実行タスク](control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)」を参照してください。  
   
 > [!NOTE]  
 >  ユーザー定義変数とシステム変数の名前では、大文字と小文字が区別されます。  
@@ -110,7 +109,7 @@ ms.locfileid: "48069742"
   
  変数は、パッケージのスコープ内、またはパッケージ内のコンテナー、タスク、またはイベント ハンドラーのスコープ内で作成されます。 パッケージ コンテナーは、コンテナー階層の最上層にあるため、パッケージ スコープを持つ変数はグローバル変数と同じように機能し、パッケージ内のすべてのコンテナーで使用できます。 同様に、For ループ コンテナーなどのコンテナーのスコープ内で定義された変数は、For ループ コンテナー内のすべてのタスクまたはコンテナーで使用できます。  
   
- パッケージでパッケージ実行タスクを使用して他のパッケージを実行する場合、呼び出し元のパッケージのスコープまたはパッケージ実行タスクで定義された変数は、構成の種類で親パッケージ変数を使用することにより、呼び出し先のパッケージで使用できます。 詳細については、「[パッケージ構成](../../2014/integration-services/package-configurations.md)」を参照してください。  
+ パッケージでパッケージ実行タスクを使用して他のパッケージを実行する場合、呼び出し元のパッケージのスコープまたはパッケージ実行タスクで定義された変数は、構成の種類で親パッケージ変数を使用することにより、呼び出し先のパッケージで使用できます。 詳細については、「 [パッケージ構成](../../2014/integration-services/package-configurations.md)」を参照してください。  
   
  [IncludeInDebugDump]  
  変数値がデバッグ ダンプ ファイルに含まれるかどうかを示します。  
@@ -130,7 +129,7 @@ ms.locfileid: "48069742"
  値  
  ユーザー定義変数の値には、リテラルまたは式を設定できます。 変数には、変数値および変数のデータ型を設定するオプションが含まれています。 この 2 つのプロパティには互換性が必要です。たとえば、文字列の値を整数データ型に使用することはできません。  
   
- 変数を式として評価するように構成した場合は、式を指定する必要があります。 式は実行時に評価され、変数は評価結果に設定されます。 たとえば、変数が式 `DATEPART("month", GETDATE())` を使用している場合、変数の値は、現在の日付の月と等しい数値になります。 式は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 式の構文文法を使用する、有効な式である必要があります。 変数に式を使用する場合、リテラルおよび式文法が提供する演算子と関数も使用できますが、パッケージ内のデータ フローの列は参照できません。 式の最大長は 4,000 文字です。 詳細については、「[Integration Services &#40;SSIS&#41; の式](expressions/integration-services-ssis-expressions.md)」を参照してください。  
+ 変数を式として評価するように構成した場合は、式を指定する必要があります。 式は実行時に評価され、変数は評価結果に設定されます。 たとえば、変数が式 `DATEPART("month", GETDATE())` を使用している場合、変数の値は、現在の日付の月と等しい数値になります。 式は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 式の構文文法を使用する、有効な式である必要があります。 変数に式を使用する場合、リテラルおよび式文法が提供する演算子と関数も使用できますが、パッケージ内のデータ フローの列は参照できません。 式の最大長は 4,000 文字です。 詳細については、「 [Integration Services (SSIS) 式](expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
  ValueType  
  > [!NOTE]  
@@ -141,9 +140,9 @@ ms.locfileid: "48069742"
 ## <a name="configuring-variables"></a>変数の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「[[変数] ウィンドウ](../../2014/integration-services/variables-window.md)」を参照してください。  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [[変数] ウィンドウ](../../2014/integration-services/variables-window.md)」を参照してください。  
   
- 詳細については、プログラムによってこれらのプロパティを設定および変数のプロパティについての詳細についてを参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.Variable>します。  
+ 変数のプロパティ、およびプログラムによるこれらのプロパティの設定方法の詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.Variable>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

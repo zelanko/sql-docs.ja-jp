@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.proxy.general.f1
@@ -12,12 +12,12 @@ ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d601f6bca0af7fe5e730b1b947bd73d462fa932
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62650203"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>[プロキシ アカウントのプロパティ] および [新しいプロキシ アカウント] ([全般] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントのプロパティを表示したり変更したりできます。  

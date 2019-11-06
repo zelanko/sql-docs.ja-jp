@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], subcubes
@@ -18,12 +17,12 @@ ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d480df54eeb0565ed685602870484deff6600d2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074716"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX でのサブキューブの作成 (MDX)
   サブキューブは、基になるデータにフィルターを適用したビューを表す、キューブのサブセットです。 キューブをサブキューブに限定することによって、クエリのパフォーマンスを向上させることができます。  
@@ -50,11 +49,11 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 -   あるレベルの各メンバーを含める場合、階層のすべてのメンバーが含まれます。 他の階層のメンバーは、そのレベルのメンバーと共に存在していない場合 (たとえば、顧客を含まない都市のような不均衡階層など)、除外されます。  
   
--   サブキューブには常にすべて`(All)`キューブからメンバー。  
+-   サブキューブには、キューブの各 `(All)` メンバーが常に含まれます。  
   
  さらに、サブキューブ内の集計値は視覚的に合計されます。 たとえば、 `USA`、 `WA`、 `OR`を含むサブキューブがあるとします。 サブキューブによって定義されている州は `USA` と `{WA,OR}` だけなので、 `WA` の集計値は `OR` の合計になります。 他の州は無視されます。  
   
- また、サブキューブの外部にあるセルへの明示的な参照を行うと、キューブ全体のコンテキストで評価されるセル値が返されます。 たとえば、今年度に限定したサブキューブを作成するとします。 この場合、 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 関数を使用して今年度を前年度と比較することができます。 前年度の値はサブキューブの外部にありますが、それでも値の差が返されます。  
+ また、サブキューブの外部にあるセルへの明示的な参照を行うと、キューブ全体のコンテキストで評価されるセル値が返されます。 たとえば、今年度に限定したサブキューブを作成するとします。 この場合、 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 関数を使用して今年度を前年度と比較することができます。 前年度の値が、サブキューブの外部にある場合でも、値の差が返されます。  
   
  さらに、元のコンテキストを上書きしない場合、サブセレクト内で評価されるセット関数は、サブセレクトのコンテキストで評価されます。 コンテキストを上書きする場合、セット関数はキューブ全体のコンテキストで評価されます。  
   
@@ -68,7 +67,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
 ## <a name="see-also"></a>参照  
- [クエリ内のキューブ コンテキストの確立&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [クエリ内のキューブ コンテキストの確立 (MDX)](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX クエリの基礎 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aaeab2123eba4cfe19c03094bef6dac5a013e418
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479034"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>データのパブリッシュ (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、他のユーザーとデータを共有するには、データを MDS リポジトリにパブリッシュします。 パブリッシュされたデータはすぐに、他のアドイン ユーザーがダウンロードできるようになります。  
   
- データをパブリッシュすると、追加または更新したすべてのデータが MDS リポジトリにパブリッシュされます。 削除したデータはパブリッシュされません。データの削除は個別に行う必要があります。 詳細については、「[行の削除 (Excel 用 MDS アドイン)](delete-a-row-mds-add-in-for-excel.md)」を参照してください。  
+ データを発行すると、追加または更新したすべてのデータが MDS リポジトリに発行されます。 削除したデータは発行されません。データの削除は個別に行う必要があります。 詳細については、「 [行の削除 (Excel 用 MDS アドイン)](delete-a-row-mds-add-in-for-excel.md)」を参照してください。  
   
 > [!NOTE]  
 >  パブリッシュは、新しいエンティティの作成には使用できません。 エンティティの作成の詳細については、「[エンティティを作成する (Excel 用 MDS アドイン)](create-an-entity-mds-add-in-for-excel.md)」を参照してください。  
@@ -46,19 +45,19 @@ ms.locfileid: "48100792"
 >  500 文字を超える注釈を入力すると、その注釈は自動的に切り捨てられます。  
   
 ## <a name="business-rule-and-other-validation"></a>ビジネス ルールとその他の検証  
- データをパブリッシュすると、MDS リポジトリへの追加前に、データが正確であることを確認する検証が実行されます。 データが指定した条件を満たしていない場合は、リポジトリにパブリッシュされません。 詳細については、「[データの検証 (Excel 用 MDS アドイン)](validating-data-mds-add-in-for-excel.md)」を参照してください。  
+ データを発行すると、MDS リポジトリへの追加前に、データが正確であることを確保する検証が実行されます。 データが指定した条件を満たしていない場合は、リポジトリにパブリッシュされません。 詳細については、「[データの検証 (Excel 用 MDS アドイン)](validating-data-mds-add-in-for-excel.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |アクティブなワークシートのデータをパブリッシュして MDS リポジトリに戻します。|[Excel からデータを MDS にパブリッシュ&#40;MDS アドインの Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|MDS リポジトリとワークシートから行を同時に削除します。|[行の削除&#40;MDS アドインの Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|MDS リポジトリとワークシートから行を同時に削除します。|[行の削除 (Excel 用 MDS アドイン)](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [データの更新 &#40;Excel 用 MDS アドイン&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [データの更新 (Excel 用 MDS アドイン)](refreshing-data-mds-add-in-for-excel.md)  
   
--   [マスター データ サービス アドイン for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Microsoft Excel 用マスター データ サービス アドイン](master-data-services-add-in-for-microsoft-excel.md)  
   
   

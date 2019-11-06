@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
@@ -13,21 +12,21 @@ ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3d6ee852f6631014a4407e09f7b41646e9f9cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63216027"
 ---
 # <a name="enable-resource-governor"></a>リソース ガバナーの有効化
   リソース ガバナーは、既定ではオフになっています。 リソース ガバナーを有効にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **リソース ガバナーの有効化に使用するもの:**  [オブジェクト エクスプローラー](#RGOnObjEx)、 [リソース ガバナーのプロパティ](#RGOnProp)、 [Transact-SQL](#RGOnTSQL)  
+-   **リソース ガバナーの有効化に使用するもの:** [オブジェクト エクスプローラー](#RGOnObjEx)、[リソース ガバナーのプロパティ](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  リソース ガバナーを有効にすると、結果は次のようになります。  
   
 -   新しい接続に対して分類子関数が実行され、それらのワークロードがワークロード グループに割り当てられます。  
@@ -72,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](resource-governor.md)   
+ [リソース ガバナー](resource-governor.md)   
  [リソース ガバナーを無効にしたとき](disable-resource-governor.md)   
  [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   

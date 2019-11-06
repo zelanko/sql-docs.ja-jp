@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910608"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|ADO を示す**接続**カタログが属するオブジェクトします。|  
 |[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)|列の特性について説明します。|  
-|[クラスター化](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
+|[クラスター化インデックス](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|ADO を指定します**コマンド**作成またはプロシージャを実行するために使用できるオブジェクト。|  
-|[カウント](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|オブジェクトの最終更新日を示します。|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|列の指定された最大サイズを示します。|  
@@ -49,6 +49,6 @@ ms.locfileid: "47637230"
 |[[一意]](../../../ado/reference/adox-api/unique-property-adox.md)|インデックス キーが一意である必要があるかどうかを示します。|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|主キーが更新されたときに実行されるアクションを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -1,22 +1,21 @@
 ---
-title: 'レッスン 6: アプリケーションに ReportViewer コントロールを追加する | Microsoft Docs'
+title: 'レッスン 6: アプリケーションに ReportViewer コントロールの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: afb73e5dc93efdadb0754072d652b7328aaa2151
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108422"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>レッスン 6: アプリケーションに ReportViewer コントロールを追加する
   レポート ウィザードを使用して子レポートを設計した後は、Web サイト アプリケーションに ReportViewer コントロールを追加します。  
@@ -33,7 +32,7 @@ ms.locfileid: "48104002"
   
 5.  **レポートの選択**ボックスで、作成した親レポートを選択します。  
   
-     レポートを選択すると、レポートで使用されているデータ ソースのインスタンスが自動的に作成されます。 それぞれの DataTable のインスタンスを作成するコードの生成 (およびその[データセット](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx)コンテナー)。 [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx)レポートで使用される各データ ソースに対応する、デザイン サーフェイスにコントロールを追加します。 このデータ ソース コントロールは自動的に構成されます。  
+     レポートを選択すると、レポートで使用されているデータ ソースのインスタンスが自動的に作成されます。 それぞれの DataTable (とその [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) コンテナーを) をインスタンス化するためのコードが生成されます。 レポートで使用されているそれぞれのデータ ソースに対応する [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) コントロールがデザイン画面に追加されます。 このデータ ソース コントロールは自動的に構成されます。  
   
      Microsoft Visual Studio 2012 を使用している場合は、完全修飾名が表示されている場合、プロジェクトの名前空間で完全修飾 DataSet1 に ObjectDataSource コントロールがバインドされていることを確認してください、 **ビジネスオブジェクトの選択**ドロップダウン リスト ボックス (たとえば、Projectnamespace.DataSet1TableAdapters.ProductTableAdapter)。 リスト ボックスにアクセスするには、ObjectDataSource を右クリックし、をクリックして**データ ソースの構成**します。  
   

@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: da99ba740e25ede21c32e1fe6147d924e528e98a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: f1f89570284ecee36ea998a82f7b9dbb966d2683
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087039"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>[条件を開く] ダイアログ ボックスの [依存ポリシー] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このダイアログ ボックスを使用すると、このポリシー ベースの管理条件を現在参照しているポリシーの一覧を表示できます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
- **名前**  
+## <a name="options"></a>オプション  
+ **[名前]**  
  この現在の条件を参照している各ポリシーの名前を一覧表示します。  
   
  **有効**  

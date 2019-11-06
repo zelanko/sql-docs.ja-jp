@@ -10,15 +10,14 @@ helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e8a1e15af0fbfd49d7f3d1e303ae5075dde6d05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912051"
 ---
 # <a name="resource-governor"></a>[リソース ガバナー]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

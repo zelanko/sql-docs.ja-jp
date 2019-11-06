@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - autohide [SQL Server Management Studio]
@@ -15,12 +15,12 @@ ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c63e159490e462a3598b3a19a4f51f900ef3485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188652"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>SQL Server Management Studio でのウィンドウの管理について
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のツール ウィンドウは、高機能で柔軟性の高い、効率的なシステムです。ツール ウィンドウでは、以下の操作を行えます。  

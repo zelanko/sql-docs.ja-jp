@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c578e5e56d575f3d324d8585f73a9891b2ad00ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: a5fa14ad158d2b937ecd8c7fa706460ec8ee1aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103600"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>パフォーマンス、スナップショット、キャッシュ (Reporting Services)
-  レポート サーバーのパフォーマンスには、ハードウェア、レポートに同時にアクセスするユーザー数、レポートのデータ量、出力形式など、さまざまな要因が絡み合って影響を与えます。 環境に固有のパフォーマンス要因を把握し、期待した結果を得るための対策を講じるには、ベースライン データを用意し、テストを実行する必要があります。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](http://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  
+  レポート サーバーのパフォーマンスには、ハードウェア、レポートに同時にアクセスするユーザー数、レポートのデータ量、出力形式など、さまざまな要因が絡み合って影響を与えます。 環境に固有のパフォーマンス要因を把握し、期待した結果を得るための対策を講じるには、ベースライン データを用意し、テストを実行する必要があります。 ツールとガイドラインの詳細については、MSDN の次の記事を参照してください。[Reporting Services のパフォーマンスの最適化](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx)と[Visual Studio 2005 を使用して、SQL Server 2005 Reporting Services レポート サーバーのロード テストを実行する](https://go.microsoft.com/fwlink/?LinkID=77519)します。  
   
  考慮する必要がある一般的な原則は次のとおりです。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48091682"
   
 -   レポート処理の所要時間など、使用状況のメトリックを調べるには、レポート サーバーの実行ログを参照します。 詳細については、次を参照してください。[レポート サーバー実行ログと ExecutionLog3 ビュー](report-server-executionlog-and-the-executionlog3-view.md)します。  
   
--   メモリ管理の構成設定をチューニングすることによってパフォーマンスの問題を軽減する方法の詳細については、次を参照してください。[レポート サーバー アプリケーションの使用可能なメモリを構成する](../report-server/configure-available-memory-for-report-server-applications.md)します。  
+-   メモリ管理構成設定をチューニングすることによってパフォーマンスの問題を緩和する方法の詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [レポート サーバーのパフォーマンスの監視](monitoring-report-server-performance.md)  
@@ -50,20 +49,20 @@ ms.locfileid: "48091682"
  [レポート サーバー アプリケーションで利用可能なメモリの構成](../report-server/configure-available-memory-for-report-server-applications.md)  
  既定のメモリ管理動作をオーバーライドする方法を説明します。  
   
- [レポートのキャッシュ&#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [レポートのキャッシュ (SSRS)](caching-reports-ssrs.md)  
  レポート サーバー上でのレポートのキャッシュの動作を説明します。  
   
- [共有データセットのキャッシュ&#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
+ [共有データセットのキャッシュ &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
  レポート サーバー上での共有データセットのキャッシュの動作を説明します。  
   
  [サイズの大きなレポートの処理](process-large-reports.md)  
  サイズの大きいレポートを構成および配布する際の推奨事項を記載しています。  
   
- [レポートおよび共有データセット処理のタイムアウト値の設定&#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [レポートおよび共有データセット処理のタイムアウト値の設定 &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  クエリとレポート処理にタイムアウトを設定する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [実行中のプロセスを管理します。](../subscriptions/manage-a-running-process.md)   
+ [Manage a Running Process](../subscriptions/manage-a-running-process.md)   
  [レポート実行の確認](verifying-a-report-run.md)  
   
   

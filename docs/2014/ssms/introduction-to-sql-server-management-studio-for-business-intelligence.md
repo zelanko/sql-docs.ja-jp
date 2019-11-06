@@ -1,10 +1,10 @@
 ---
-title: Business Intelligence for SQL Server Management Studio の概要 |Microsoft Docs
+title: ビジネスインテリジェンスの SQL Server Management Studio の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
@@ -14,12 +14,12 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 435bd85fd024ff8e302cdb91f63c8cbfa02ebb9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a914aeeae889189453b4f4e6f47ebfbcd0fc44c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152695"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892272"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>ビジネス インテリジェンスに使用される SQL Server Management Studio の概要
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のアクセス、構成、管理を行うには、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用します。 この 3 つのビジネス インテリジェンス テクノロジは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用しますが、各テクノロジに関連付けられている管理タスクは少しずつ異なります。  
@@ -32,7 +32,7 @@ ms.locfileid: "48152695"
   
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、および XML for Analysis (XMLA) で作成されるスクリプトの開発と保存を行う [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] スクリプト プロジェクトが提供されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] スクリプト プロジェクトは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで管理タスクを実行したり、データベースやキューブなどのオブジェクトを再作成したりする場合に使用します。 たとえば、既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで直接新しいオブジェクトを作成する XMLA スクリプトを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] スクリプト プロジェクトで開発することができます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] スクリプト プロジェクトは、ソリューションの一部として保存し、ソース コード コントロールに統合できます。  
   
- 使用する方法の詳細についての[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を参照してください[SQL Server Management Studio で Analysis Services スクリプト プロジェクト](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)します。  
+ の使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]方法の詳細については、「 [SQL Server Management Studio の Analysis Services Scripts プロジェクト](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)」を参照してください。  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Integration Services ソリューションの管理  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用して、パッケージの管理および実行中のパッケージの監視を行うことができます。 また [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、パッケージをフォルダーに編成できるほか、パッケージの実行、インポート、エクスポート、データ変換サービス (DTS) パッケージの移行、および [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのアップグレードを行うことができます。  
@@ -44,20 +44,20 @@ ms.locfileid: "48152695"
   
 -   [SQL Server Management Studio の Reporting Services &#40;SSRS&#41;](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
--   [レポート サーバーのデータベース管理&#40;SSRS ネイティブ モード&#41;](../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+-   [レポートサーバーデータベース&#40;の SSRS ネイティブモードの管理&#41;](../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
   
 -   [RSExecRole を作成する](../reporting-services/security/create-the-rsexecrole.md)  
   
  また、各種機能の有効化と構成、サーバーの既定値の設定、およびロールとジョブの管理を行うことで、サーバーを管理します。 これらの作業の詳細については、次のトピックを参照してください。  
   
--   [レポート サーバーのプロパティを設定&#40;Management Studio&#41;](../reporting-services/tools/set-report-server-properties-management-studio.md)  
+-   [レポート サーバーのプロパティを設定する (Management Studio)](../reporting-services/tools/set-report-server-properties-management-studio.md)  
   
--   [作成、削除、またはロールを変更&#40;Management Studio&#41;](../reporting-services/security/role-definitions-create-delete-or-modify.md)  
+-   [ロールを作成、削除、または変更する (Management Studio)](../reporting-services/security/role-definitions-create-delete-or-modify.md)  
   
 -   [Reporting Services のクライアント側印刷機能の有効化と無効化](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
-## <a name="see-also"></a>参照  
- [マルチ ディメンションを作成する SQL Server データ ツールの使用をモデル化&#40;SSDT&#41;](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Reporting Services SQL Server Data Tools の&#40;SSDT&#41;](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
+## <a name="see-also"></a>関連項目  
+ [SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)   
+ [SQL Server Data Tools &#40;SSDT の Reporting Services&#41;](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
   
   

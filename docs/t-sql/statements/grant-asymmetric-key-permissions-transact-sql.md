@@ -15,15 +15,14 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server], permissions
 - GRANT statement, asymmetric keys
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 86d21ac71916d492e058cfd3f1193b0e6b9d8979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065603"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT (非対称キーの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ GRANT { permission  [ ,...n ] }
   
 ## <a name="arguments"></a>引数  
  *permission*  
- 非対称キーに対して許可できる権限を指定します。 下の表をご覧ください。  
+ 非対称キーに対して許可できる権限を指定します。 以下に一覧を示します。  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  権限を許可する非対称キーを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

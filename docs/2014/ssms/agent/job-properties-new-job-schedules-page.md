@@ -1,10 +1,10 @@
 ---
-title: ジョブのプロパティ新しいジョブを ([スケジュール] ページ) |Microsoft Docs
+title: ジョブのプロパティ:新しいジョブ (スケジュール ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.schedules.f1
@@ -12,15 +12,15 @@ ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a49e028733d14570d527a7102925cc4ffec0aa8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62695673"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>ジョブのプロパティ: [新しいジョブ] ([スケジュール] ページ)
-  このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエージェント ジョブのスケジュールを表示したり、調整したりできます。  
+# <a name="job-properties-new-job-schedules-page"></a>[ジョブのプロパティ]:[新しいジョブ] ([スケジュール] ページ)
+  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエージェント ジョブのスケジュールを表示したり、調整したりできます。  
   
 ## <a name="options"></a>および  
  **[スケジュールの一覧]**  

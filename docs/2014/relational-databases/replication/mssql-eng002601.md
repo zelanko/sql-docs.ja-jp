@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
@@ -13,12 +12,12 @@ ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a175f7ac4d7d00b84ea44cf04f34d81fcb35ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667066"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -42,7 +41,7 @@ ms.locfileid: "48176108"
   
 -   ID 列を持つテーブルが使用されているが、列が正しく管理されていない。  
   
--   マージ レプリケーションで、システム テーブル **MSmerge_contents**への挿入を行った。この場合、"一意なインデックス 'ucl1SycContents' を含むオブジェクト 'MSmerge_contents' には重複するキー列を挿入できません。" のようにエラーが表示されます。  
+-   マージ レプリケーションでは、このエラーも発生挿入時にシステム テーブルに**MSmerge_contents**; は、エラーが発生したのと似ています。一意インデックス 'ucl1SycContents ' オブジェクト 'MSmerge_contents' に重複するキー行を挿入することはできません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  必要なアクションは、エラーが発生した原因によって異なります。  

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d02e60d22f2e3489c7cd7943f7f0ed2fa26fd89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a577a868f7b56a6677da3cb12cfb29057ea66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024524"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 関数
 **準拠**  
- バージョンが導入されています。 ODBC 3.0  
+ バージョンが導入されました。ODBC 3.0  
   
  **概要**  
  **SQLRemoveTranslator**情報を削除しますトランスレーターのシステム情報とデクリメント Odbcinst.ini セクションから、変換プログラムのコンポーネントの使用率カウントを 1 つ。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLRemoveTranslator(  
      LPCSTR    lpszTranslator,  

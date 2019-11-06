@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 27a94ac8af2a770d1e76c8e7c46966809c011f85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105901"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
-  パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義には随所に式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 (**[fx]**) ボタンが表示されるダイアログ ボックスや、**[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  
+  パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義には随所に式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 ( **[fx]** ) ボタンが表示されるダイアログ ボックスや、 **[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  
   
  式には単純式と複合式があります。 *単純式* には、1 つのデータセット フィールド、パラメーター、または組み込みフィールドへの参照が含まれます。 複合式には、複数の組み込み参照、演算子、および関数呼び出しを含めることができます。 たとえば、複合式には売上フィールドに適用される Sum 関数が含まれる場合があります。  
   
@@ -73,14 +72,14 @@ ms.locfileid: "48224672"
   
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
- [フィルター式の例&#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [フィルター式の例 (レポート ビルダーおよび SSRS)](filter-equation-examples-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [ページ ヘッダーとページ フッター&#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [テキストとプレース ホルダーの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [アイテムを非表示にする (レポート ビルダーおよび SSRS)](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

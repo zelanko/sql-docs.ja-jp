@@ -15,12 +15,12 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d02a551826912f69755e50c7dde039482595b54a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638074"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB プロパティについて
   コンシューマーは、プロパティ値を設定することで、特定のオブジェクトの動作を要求します。 たとえば、プロパティを使用して、行セットによって公開されるインターフェイスを指定します。 コンシューマーは、プロパティ値を取得して、行セット、セッション、データ ソース オブジェクトなど、オブジェクトの機能を判断します。  
@@ -47,6 +47,6 @@ ms.locfileid: "48123602"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client OLE DB プロバイダー アプリケーションの作成](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [プロパティ [OLE DB]](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [プロパティ [OLE DB]](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

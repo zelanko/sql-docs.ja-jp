@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying filter information
@@ -17,12 +16,12 @@ ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2f6a69932f4a98561f7bfa203abcc990d12e0d84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abeeac1dc2c6d06a0b1ce89f4dff35415f7189fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63285621"
 ---
 # <a name="view-filter-information-transact-sql"></a>フィルター情報の表示 (Transact-SQL)
   このトピックでは、組み込み関数を使用してトレース フィルター情報を表示する方法について説明します。  

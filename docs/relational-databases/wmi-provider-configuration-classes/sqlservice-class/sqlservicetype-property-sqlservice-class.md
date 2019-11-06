@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 12e285e4348c2fac373797d4e260ea088facaabf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b8b0d47a3778303cfcbd234add3167f6c225bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054765"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ object.SqlServiceType [= value]
 ## <a name="remarks"></a>コメント  
  戻り値は次のいずれかです。  
   
-|型|定義|  
+|種類|定義|  
 |----------|----------------|  
 |*1*|MSSQLSERVER は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスです。|  
 |*2*|SQLSERVERAGENT は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスです。|  
@@ -55,8 +54,13 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サービスです。|  
 |*6*|ReportServer は [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービスです。|  
 |*7*|SQLBrowser は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser サービスです。|  
+|*8*|NsService は、[!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)]通知サービス。|  
+|*9*|MSSQLFDLauncher は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フルテキスト フィルター デーモン ランチャー サービス。|  
+|"*10*"|SQLPBENGINE は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase エンジン サービス。|  
+|*11*|SQLPBDMS は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase Data Movement サービス。|  
+|*12*|MSSQLLaunchpad は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]スタート パッド サービス。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9ddb62344608d0fbd44376c0d6180dc973d3202a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c6104bfc97d2f66652ffa9b16e9ff0ae8f9b0550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108047"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>レポート デザインとレポート配置の計画 (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 作成とレポートの配置に関していくつかのアプローチを提供します。 このトピックは、使用するレポート作成環境とレポート サーバーの組み合わせを計画するために役立ちます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のコンポーネントでサポートされているレポート定義の概要を示します。 レポート定義は、レポート定義言語 (RDL : Report Definition Language) またはクライアント向けレポート定義言語 (RDLC : Report Definition Language for Clients) で記述された XML ファイルです。 どちらのレポート定義も、そのファイルの冒頭に指定された特定のスキーマ バージョンに準拠しています。  
@@ -38,39 +37,39 @@ ms.locfileid: "48209182"
   
 |省略形|スキーマ バージョン|  
 |------------------|--------------------|  
-|2010 RDL|http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition|  
-|2008 RDL|http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition|  
-|2005 RDL<br /><br /> 2005 RDLC|http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition|  
-|2000 RDL|http://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition|  
+|2010 RDL|https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition|  
+|2008 RDL|https://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition|  
+|2005 RDL<br /><br /> 2005 RDLC|https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition|  
+|2000 RDL|https://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition|  
   
  RDL と RDL スキーマの詳細については、次のトピックを参照してください。  
   
--   [Microsoft SQL Server XML スキーマ](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [Microsoft SQL Server XML スキーマ](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [レポート定義言語の仕様](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [レポート定義言語の仕様](https://go.microsoft.com/fwlink/?linkid=116865)  
   
--   [レポート定義言語 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
+-   [レポート定義言語 (SSRS)](reports/report-definition-language-ssrs.md)  
   
- ReportViewer コントロールの詳細については、「[ReportViewer コントロール (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)」を参照してください。  
+ ReportViewer コントロールの詳細については、「[ReportViewer コントロール (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)」を参照してください。  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> レポート サーバーと RDL スキーマのサポート  
  レポート定義ファイルは、次の方法で [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] レポート サーバーに配置できます。  
   
--   **レポート デザイナー:** [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]のレポート デザイナーからレポートを配置する。  
+-   **レポート デザイナー:** レポート デザイナーからレポートの展開[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]します。  
   
--   **レポート ビルダー:** レポート ビルダーからレポート サーバーにレポートを保存する。  
+-   **レポート ビルダー:** レポート ビルダーからレポート サーバーにレポートを保存します。  
   
--   **レポート マネージャー:** レポート マネージャーからネイティブ モード レポート サーバーにレポートをアップロードする。  
+-   **レポート マネージャー:** レポート マネージャーからネイティブ モード レポート サーバーにレポートをアップロードします。  
   
--   **SharePoint:** SharePoint モード レポート サーバーで構成された SharePoint サイトにレポートをアップロードする。  
+-   **SharePoint の場合:** SharePoint モードのレポート サーバーで構成されている SharePoint サイトにレポートをアップロードします。  
   
--   **プログラムから:** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートをパブリッシュする。 詳細については、次を参照してください。[レポート サーバー Web サービス](report-server-web-service/report-server-web-service.md)します。  
+-   **プログラムを使用します。** プログラムによってレポート サーバーに SOAP API インターフェイスを使用してレポートをパブリッシュします。 詳細については、「 [Report Server Web Service](report-server-web-service/report-server-web-service.md)」を参照してください。  
   
  次の表は、サポートされる RDL スキーマのバージョンをレポート サーバーのバージョン別に示したものです。  
   
 |レポート サーバーのバージョン|RDL スキーマのバージョン|  
 |---------------------------|------------------------|  
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> スイッチまたは<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> スイッチまたは<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> または<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> または<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]|2005 RDL<br /><br /> 2000 RDL|  
   
@@ -95,31 +94,31 @@ ms.locfileid: "48209182"
 |[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダー|2010 RDL を作成します。 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2010 RDL にアップグレード<br /><br /> 2005 RDL、2010 RDL にアップグレード<br /><br /> 2008 RDL、2010 RDL にアップグレード|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Visual Studio の RDLC レポート デザイナー|2005 RDLC|なし|なし|  
   
- [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)] の詳細については、次のトピックを参照してください。  
+ [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)]の詳細については、次のトピックを参照してください。  
   
--   [SQL Server データ ツールの配置およびバージョン サポート &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+-   [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [Microsoft SQL Server Data Tools - Business Intelligence for Visual Studio 2012](http://www.microsoft.com/download/details.aspx?id=36843)。  
+-   [Microsoft SQL Server Data Tools - Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)。  
   
 ##  <a name="bkmk_reportviewer"></a> ReportViewer コントロール  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の ReportViewer コントロールは、ローカル プレビュー モードまたはリモート モードで .rdlc レポートを表示できるほか、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでホストされている .rdl ファイルを表示できます。 次の表は、ローカル処理 (.rdlc) 用の ReportViewer コントロールでサポートされている RDL バージョンの一覧です。 サーバー側の RDL のサポートについて、 [レポート サーバーと RDL スキーマのサポート](#bkmk_report_server_rdl_schema_support)にまとめられています。  
   
 |製品の ReportViewer コントロール|ローカル プレビュー用の RDL のバージョン|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> スイッチまたは<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> スイッチまたは<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
-|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> スイッチまたは<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> または<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> または<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
+|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> または<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
  詳細については、以下を参照してください。  
   
--   [RDLC ファイルから RDL ファイルへの変換](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [RDLC ファイルから RDL ファイルへの変換](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [ReportViewer コントロール (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [ReportViewer コントロール (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [ReportViewer コントロールの追加と構成](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [ReportViewer コントロールの追加と構成](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>参照  
- [レポート、レポート パーツ、およびレポート定義&#40;レポート ビルダーおよび SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services ツール](tools/reporting-services-tools.md)   
- [レポート定義言語 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
+ [レポート定義言語 (SSRS)](reports/report-definition-language-ssrs.md)  
   
   

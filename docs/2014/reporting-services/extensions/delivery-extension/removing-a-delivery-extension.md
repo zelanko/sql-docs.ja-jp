@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - removing delivery extensions
 - deleting delivery extensions
 - delivery extensions [Reporting Services], removing
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1aa999d8ec8eaa1ef16fdaf34c52d48cb230fc47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 7c4320f46b5013b0fa2accbc81792748c2d9f384
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164018"
 ---
 # <a name="removing-a-delivery-extension"></a>配信拡張機能の削除
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能を削除する場合は、配信拡張機能の **Extension** 要素を構成ファイルから削除するだけです。 構成情報を削除した後は、配信拡張機能をレポート サーバーに使用できません。  

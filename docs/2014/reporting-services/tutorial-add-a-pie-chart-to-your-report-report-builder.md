@@ -1,24 +1,23 @@
 ---
-title: 'チュートリアル: レポートへの円グラフの追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:レポートへの円グラフの追加 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 12c567f91d526d3ac44485704f7c76fdfa345c11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099048"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)
   円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフおよびドーナツ グラフ、ピラミッド、じょうごグラフでは、図形グラフと呼ばれるグラフのグループを構成します。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。  
   
  円グラフのデータ ポイントが多すぎると、データ ポイント ラベルが過密状態になって見づらくなる場合があります。 その場合は、折れ線グラフの使用を検討してください。 円グラフは、データを少数のデータ ポイントに集計したうえで使用するようにします。  
@@ -45,11 +44,11 @@ ms.locfileid: "48202532"
 7.  [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーの参照、データ ソースの追加、およびデータセットの追加に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
- このチュートリアルの推定所要時間: 10 分  
+ このチュートリアルの推定所要時間:10 分  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="Chart"></a> 1.グラフ ウィザードから円グラフを作成する  
@@ -60,7 +59,7 @@ ms.locfileid: "48202532"
   
 #### <a name="to-create-a-new-chart-report"></a>新しいグラフ レポートを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
      [作業の開始] ダイアログ ボックスが表示されます。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48202532"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
+8.  (省略可) [実行] ボタン ( **!** ) をクリックして、グラフの基になるデータを確認します。  
   
 9. **[次へ]** をクリックします。  
   
@@ -173,7 +172,7 @@ ms.locfileid: "48202532"
   
  凡例に "その他" というカテゴリが追加されています。 この新しいスライスでは、5% 未満のすべてのスライスが 1 つにまとめられて、円グラフ全体の 6% を占めるスライスが作成されています。  
   
-##  <a name="DrawingEffect"></a> 5.描画効果をカスタマイズする  
+##  <a name="DrawingEffect"></a> 5.描画効果をカスタマイズします。  
  グラフ ウィザードの場合、円グラフの既定のスタイルは、凹型の描画効果が特徴的な [オーシャン] です。 スタイルは、ウィザードの実行後にも変更できます。  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>円グラフに描画効果を追加するには  

@@ -4,31 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.quickprofile.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 60fdc137fd1789ce9e2cccf2f4cd85de2e03a40d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62830184"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)
   **[単一テーブル クイック プロファイル フォーム]** を使用すると、既定の設定を使用して単一のテーブルまたはビューをプロファイルするように、データ プロファイル タスクをすばやく構成できます。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="options"></a>および  
- **[接続]**  
+ **Connection**  
  プロファイル対象のテーブルまたはビューを含む [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続するには、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用する既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続マネージャーを選択します。  
   
  **[テーブルまたはビュー]**  
@@ -40,7 +39,7 @@ ms.locfileid: "48165132"
 |値|説明|  
 |-----------|-----------------|  
 |**列の NULL 比プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列の NULL 比プロファイルを計算します。<br /><br /> このプロファイルは、選択した列の NULL 値の比率を報告します。 このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列の NULL 比プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)」を参照してください。|  
-|**列統計プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列統計プロファイルを計算します。<br /><br /> このプロファイルは、最小、最大、平均値、および数値の列、および最低限の標準偏差、最大などの統計を報告`datetime`列。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列統計プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)」を参照してください。|  
+|**列統計プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列統計プロファイルを計算します。<br /><br /> このプロファイルは、数値型列の最小値、最大値、平均値、標準偏差や、`datetime` 列の最小値、最大値などの統計を報告します。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列統計プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**列の値分布プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列の値分布プロファイルを計算します。<br /><br /> このプロファイルは、選択された列に含まれる値ごとに、その値と、テーブル内におけるその値の行の比率を報告します。 また、テーブル内の指定された比率を超えている行の値も報告できます。 このプロファイルを使用すると、列に含まれる個別の値の数が正しくないなどのデータの問題を特定できます。 このプロファイルの詳細については、「[[列の値分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**列長分布プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列長分布プロファイルを計算します。<br /><br /> このプロファイルは、選択された列に含まれる文字列値の長さごとに、その長さと、テーブル内におけるその長さの行の比率を報告します。 このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列長分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**列パターン プロファイル (Column Pattern Profile)**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列パターン プロファイルを計算します。<br /><br /> このプロファイルは、文字列型の列に含まれる値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。 また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 このプロファイルの設定の詳細については、「[[列パターン プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-pattern-profile-request-options-data-profiling-task.md)」を参照してください。|  
@@ -52,7 +51,7 @@ ms.locfileid: "48165132"
 > [!NOTE]  
 >  値包含プロファイル型は、 **[単一テーブル クイック プロファイル フォーム]** では使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
  [データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;](data-profiling-task-editor-profile-requests-page.md)  
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fa7e74d94fba34ebb3ae1e11ccaae308dd14e3e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685260"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262989"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (OracleToSQL)
 Oracle スキーマを SQL Server に変換した後は、SQL Server に結果のデータベース オブジェクトを読み込むことができます。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 また、SSMA には、SQL Server データベースの実際の内容で対象のメタデータを更新することができます。  
@@ -99,7 +99,7 @@ SSMA を使用して SQL Server データベース オブジェクトを作成�
   
 4.  一連のステートメントを実行するクエリ エディター ウィンドウで、ステートメントを選択し、キーを押します、 **F5**キー。  
   
-クエリ エディターを使用してスクリプトを実行する方法の詳細については、次を参照してください。"[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ"SQL Server オンライン ブックの「します。  
+クエリ エディターを使用してスクリプトを実行する方法の詳細については、次を参照してください。" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ"SQL Server オンライン ブックの「します。  
   
 使用して、コマンドラインからスクリプトを実行することも、 **sqlcmd**ユーティリティ、および SQL Server エージェントから。 詳細については**sqlcmd**、SQL Server オンライン ブックの「"sqlcmd ユーティリティ"を参照してください。 SQL Server エージェントの詳細については、「管理タスクを自動化する (SQL Server エージェント)」で SQL Server オンライン ブックを参照してください。  
   

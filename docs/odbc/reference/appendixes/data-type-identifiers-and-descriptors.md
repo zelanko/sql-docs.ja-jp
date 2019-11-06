@@ -1,7 +1,7 @@
 ---
 title: データ型識別子と記述子 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/02/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6594c2b47ed5f57f6814ac704b9d36073e0a8304
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019048"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>データ型識別子と記述子
-データの種類の一覧を[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)と[C データ型](../../../odbc/reference/appendixes/c-data-types.md)前のセクションでは「簡潔な」のデータ型: 各識別子は、1 つのデータ型を参照します。 Id とデータ型の間、一対一で対応します。 すべてのケースでは、1 つの値を使用して、データ型を識別するために、記述子がではなく行うただし。 場合によっては、"verbose"のデータ型と型サブコード使用します。 Datetime と間隔のデータ型を除くすべてのデータ型の詳細な型の識別子は、簡潔なタイプ識別子と同じと SQL_DESC_DATETIME_INTERVAL_CODE の値は 0 にします。 Datetime と間隔のデータ型のただし、(SQL_DATETIME または SQL_INTERVAL) の詳細な型に格納 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE で簡潔な型が格納されているされ SQL_DESC_DATETIME_INTERVAL_CODE に簡潔な各種のサブコードが格納されています。 これらのフィールドのいずれかを設定すると、他に影響します。 これらのフィールドの詳細については、次を参照してください。、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)関数の説明。  
+データの種類の一覧を[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)と[C データ型](../../../odbc/reference/appendixes/c-data-types.md)前のセクションでは「簡潔な」のデータ型。各識別子は、1 つのデータ型を参照します。 Id とデータ型の間、一対一で対応します。 すべてのケースでは、1 つの値を使用して、データ型を識別するために、記述子がではなく行うただし。 場合によっては、"verbose"のデータ型と型サブコード使用します。 Datetime と間隔のデータ型を除くすべてのデータ型の詳細な型の識別子は、簡潔なタイプ識別子と同じと SQL_DESC_DATETIME_INTERVAL_CODE の値は 0 にします。 Datetime と間隔のデータ型のただし、(SQL_DATETIME または SQL_INTERVAL) の詳細な型に格納 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE で簡潔な型が格納されているされ SQL_DESC_DATETIME_INTERVAL_CODE に簡潔な各種のサブコードが格納されています。 これらのフィールドのいずれかを設定すると、他に影響します。 これらのフィールドの詳細については、次を参照してください。、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)関数の説明。  
   
  一部のデータ型の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE またはフィールドを設定すると、SQL_DESC_DATETIME_INTERVAL_PRECISION、SQL_DESC_LENGTH、SQL_DESC_PRECISION、および SQL_DESC_SCALE フィールドはデータの該当する場合の既定値に自動的に設定します。入力します。 詳細については、の SQL_DESC_TYPE フィールドの説明を参照してください。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。 既定値の設定のいずれかの情報が適切でない場合、アプリケーションへの呼び出しを通じて記述子フィールドに明示的に設定する必要があります**SQLSetDescField**します。  
   
@@ -40,13 +39,13 @@ ms.locfileid: "47793000"
 |SQL_INTERVAL_MONTH|SQL_C_INTERVAL_MONTH|SQL_INTERVAL|SQL_CODE_MONTH|  
 |SQL_INTERVAL_YEAR|SQL_C_INTERVAL_YEAR|SQL_INTERVAL|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH|SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_INTERVAL|SQL_CODE_YEAR_TO_MONTH|  
-QL_INTERVAL_DAY|SQL_C_INTERVAL_DAY|SQL_INTERVAL|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY|SQL_C_INTERVAL_DAY|SQL_INTERVAL|SQL_CODE_DAY|  
 |SQL_INTERVAL_HOUR|SQL_C_INTERVAL_HOUR|SQL_INTERVAL|SQL_CODE_HOUR|  
 |SQL_INTERVAL_MINUTE|SQL_C_INTERVAL_MINUTE|SQL_INTERVAL|SQL_CODE_MINUTE|  
 |SQL_INTERVAL_SECOND|SQL_C_INTERVAL_SECOND|SQL_INTERVAL|SQL_CODE_SECOND|  
 |SQL_INTERVAL_DAY_TO_HOUR|SQL_C_INTERVAL_DAY_TO_HOUR|SQL_INTERVAL|SQL_CODE_DAY_TO_HOUR|  
 |SQL_INTERVAL_DAY_TO_MINUTE|SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_INTERVAL|SQL_CODE_DAY_TO_MINUTE|  
-QL_INTERVAL_DAY_TO_SECOND|SQL_C_INTERVAL_DAY_TO_SECOND|SQL_INTERVAL|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_DAY_TO_SECOND|SQL_C_INTERVAL_DAY_TO_SECOND|SQL_INTERVAL|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_INTERVAL|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND|SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_INTERVAL|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_INTERVAL|SQL_CODE_MINUTE_TO_SECOND|

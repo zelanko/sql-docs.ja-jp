@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 24186d0caa92b983f17b12c2f317d450af8be2bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106724"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>外部の画像の追加 (レポート ビルダーおよび SSRS)
   外部の画像は、ネイティブ モードまたは SharePoint 統合モードのレポート サーバー上にあるものも、他の Web サイトにあるものもあります。 外部の画像をレポートに含める場合、その画像が存在すること、およびその画像にアクセスする権限をレポートのリーダーが持っていることを確認する必要があります。 詳細については、「[画像 &#40;レポート ビルダーおよび SSRS& #41;](images-report-builder-and-ssrs.md)」を参照してください。  
@@ -38,16 +37,16 @@ ms.locfileid: "48081872"
   
      ネイティブ モードのレポート サーバーにある画像を指定する場合は、 **[次の画像を使用]** ボックスに画像の相対パスを入力します (例: ../images/image1.jpg)。  
   
-     SharePoint 統合モードのレポート サーバーまたはその他の Web サイトにある画像を指定する場合は、**[次の画像を使用]** ボックスに画像への完全な URL を入力します (例: http://\<SharePoint サーバー名>/\<サイト>/Documents/images/image1.jpg)。  
+     SharePoint 統合モード、またはその他の Web サイトでレポート サーバー上の画像、入力内のイメージへの完全な URL、**このイメージを使用**ボックス-たとえば、 http://\<SharePointservername >/\<サイト >/Documents/images/image1.jpg します。  
   
      詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
-6.  (省略可) 画像レポート アイテムのその他のプロパティを設定するには、 **[サイズ]**、 **[表示]**、 **[アクション]**、または **[罫線]** を選択します。  
+6.  (省略可) 画像レポート アイテムのその他のプロパティを設定するには、 **[サイズ]** 、 **[表示]** 、 **[アクション]** 、または **[罫線]** を選択します。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>参照  
- [レポートに画像を埋め込む&#40;レポート ビルダーおよび SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [レポートへの画像の埋め込み &#40;レポート ビルダーおよび SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [背景画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
  [[全般] &#40;[画像のプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダーおよび SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

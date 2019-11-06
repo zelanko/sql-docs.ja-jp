@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0aed95b084970bf4aa24bd279d8f52af7a33cfc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020992"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>影響を受けるオブジェクトの選択と構成 (SybaseToSQL)
 このページでは、テーブルを選択することができ、SSMA 前の手順で選択したオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズできます。  
@@ -42,7 +41,7 @@ SSMA のテスト担当者は、これらのオブジェクトのいずれかを
   
 -   既定  
   
--   Identity  
+-   同一。  
   
 -   [可]  
   
@@ -52,12 +51,12 @@ SQL タブには、「テーブル作成」にはが含まれています。 SQL
 ## <a name="data"></a>data  
 [データ] タブには、選択したテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更  
   
--   [オブジェクト名]  
+-   オブジェクト名  
   
 ## <a name="table-comparison-settings"></a>テーブルの比較の設定  
 上のテーブルに対して比較の規則の確立**テーブルを比較**ページ。 次の設定を行うことができます。  
@@ -118,7 +117,7 @@ SSMA テスターによって生成された SELECT ステートメントを表�
 ## <a name="next-step"></a>次の手順  
 [呼び出し順序のカスタマイズ&#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースを実行している&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

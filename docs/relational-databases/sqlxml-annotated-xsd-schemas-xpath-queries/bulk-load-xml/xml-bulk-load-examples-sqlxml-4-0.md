@@ -29,16 +29,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cefdb89d4b8c36747f8fce6824f51b8dbb11e095
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7e2b536b6f1bc22e15948dfb1a0d4df539c099f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005276"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 一括読み込みの例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +129,7 @@ End Function
 2.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleSchema.xml として保存します。 このファイルに次の XSD スキーマを追加します。  
   
     ```xml  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
        <xsd:element name="ROOT" sql:is-constant="1" >  
          <xsd:complexType>  
@@ -202,7 +201,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 複数テーブルでの XML データの一括読み込み  
- XML ドキュメントから成る、この例では、 **\<顧客 >** と**\<順序 >** 要素。  
+ XML ドキュメントから成る、この例では、 **\<顧客 >** と **\<順序 >** 要素。  
   
 ```xml  
 <ROOT>  
@@ -233,10 +232,10 @@ End Function
   
 -   CustOrder (OrderID、CustomerID)  
   
- 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップを指定します、 **\<顧客 >** と**\<順序 >** 要素。  
+ 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップを指定します、 **\<顧客 >** と **\<順序 >** 要素。  
   
 ```xml  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -338,7 +337,7 @@ End Function
  たとえば、次の XSD スキーマを考えてみます。  
   
 ```xml  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -385,7 +384,7 @@ End Function
 </xsd:schema>  
 ```  
   
- スキーマを指定します、 **\<順序 >** を持つ要素を**\<製品 >** 子要素。 **\<順序 >** 要素は、Ord テーブルにマップし、 **\<製品 >** 要素は、データベースの Product テーブルにマップされます。 指定されたチェーン リレーションシップでは、 **\<製品 >** 要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
+ スキーマを指定します、 **\<順序 >** を持つ要素を **\<製品 >** 子要素。 **\<順序 >** 要素は、Ord テーブルにマップし、 **\<製品 >** 要素は、データベースの Product テーブルにマップされます。 指定されたチェーン リレーションシップでは、 **\<製品 >** 要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
   
  このスキーマで XML ドキュメントの一括読み込みを行うと、Ord テーブル、Product テーブル、および OrderDetail テーブルにレコードが追加されます。  
   
@@ -458,7 +457,7 @@ OrderDetail (OrderID, ProductID)
   
  この場合、XML 一括読み込みでは、テーブル間の主キー/外部キーのリレーションシップが識別されます。 一括読み込みでは、主キーのあるテーブルにレコードが挿入された後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で生成された ID 値が、外部キー列のあるテーブルに格納されます。 次の XML 一括読み込みの例では、次の順序でテーブルにデータが挿入されます。  
   
-1.  Product  
+1.  製品  
   
 2.  Ord  
   
@@ -490,7 +489,7 @@ OrderDetail (OrderID, ProductID)
 2.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleSchema.xml として保存します。 このファイルには、この XSD スキーマを追加します。  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
        <xsd:appinfo>  
@@ -657,7 +656,7 @@ Set objBL = Nothing
  次の XSD マッピング スキーマでは、テーブルの作成に必要な情報が指定されます。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="ROOT" sql:is-constant="true" >  
   <xsd:complexType>  
@@ -815,7 +814,7 @@ End Sub
  この XSD スキーマを検討してください。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -847,7 +846,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各**\<顧客 >** 要素は、この列に追加されます。  
+ このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各 **\<顧客 >** 要素は、この列に追加されます。  
   
 > [!NOTE]  
 >  すべての abstract 要素 (要素の**抽象 ="true"** が指定されて)、すべての属性が禁止されています (対象の属性**禁止されています ="true"** が指定されて) XML の一括でオーバーフローと解釈ロード テストとは、指定されている場合は、オーバーフロー列に追加されます。 それ以外の場合は無視されます。  
@@ -990,7 +989,7 @@ set objBL=Nothing
 2.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleSchema.xml として保存します。 次の XSD スキーマをファイルに追加します。  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1045,7 +1044,7 @@ set objBL=Nothing
      これは、更新されたスキーマです。  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1134,7 +1133,7 @@ End Sub
 2.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleSchema.xml として保存します。 次の XSD スキーマをファイルに追加します。  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  
@@ -1251,7 +1250,7 @@ End Sub
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
            xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
@@ -1293,7 +1292,7 @@ End Sub
             <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
                   xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
                   xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
-                  xmlns:html="https://www.w3.org/1999/xhtml"   
+                  xmlns:html="http://www.w3.org/1999/xhtml"   
                   xmlns="">  
                 <p1:Summary>  
                     <html:p>Our top-of-the-line competition mountain bike.   

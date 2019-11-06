@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf836d26c67276b6780392bef44e1d4e5a470f86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 521ed3f1c817f687bfbddc497f638ee4eed4a834
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140239"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897549"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 式)
   数値式の自然対数を返します。  
@@ -63,7 +62,7 @@ LN(@Length)
 ```  
   
 ## <a name="see-also"></a>参照  
- [ログ&#40;SSIS 式&#41;](log-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [LOG (SSIS 式)](log-ssis-expression.md)   
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

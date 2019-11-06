@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534443"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661431"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +72,9 @@ ms.locfileid: "52534443"
   
 3.  ディストリビューションをミラー用に構成します。 ミラー名をパブリッシャーとして指定し、プリンシパルと同一のディストリビューターおよびスナップショット フォルダーを指定します。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、ディストリビューターで [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) を実行し、次にミラーで [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) を実行します。 **sp_adddistpublisher**の場合は、以下の手順を実行します。  
   
-    -   **@publisher** パラメーターの値にミラーのネットワーク名を設定します。  
+    -   **\@publisher** パラメーターの値にミラーのネットワーク名を設定します。  
   
-    -   **@working_directory** パラメーターの値にプリンシパルで使用するスナップショット フォルダーを設定します。  
+    -   **\@working_directory** パラメーターの値にプリンシパルで使用するスナップショット フォルダーを設定します。  
   
 4.  **-PublisherFailoverPartner** エージェント パラメーターの値にミラー名を指定します。 フェールオーバーの後、以下のエージェントでミラーを特定する場合にこのエージェント パラメーターが必要になります。  
   
@@ -135,12 +134,12 @@ ms.locfileid: "52534443"
   
 -   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して、ミラーでレプリケーションを管理する場合、パブリッシャー名を指定する際にはレプリケーションを有効にしたデータベースが使用するインスタンス名を指定する必要があります。 適切な名前を決定するには、 [publishingservername](../../t-sql/functions/replication-functions-publishingservername.md)関数を使用します。  
   
-     パブリケーション データベースをミラー化した場合、ミラー データベースに格納されるレプリケーション メタデータとプリンシパル データベースに格納されるメタデータが同一になります。 その結果、プリンシパルでレプリケーションが有効なパブリケーション データベースでは、ミラーのシステム テーブルに格納されるパブリッシャーのインスタンス名は、ミラーではなくプリンシパルの名前になります。 これにより、パブリケーション データベースでミラーへのフェールオーバーが発生した場合のレプリケーションの構成およびメンテナンスが影響を受けます。 たとえば、フェールオーバーの後、ストアド プロシージャを使用してレプリケーションを構成し、プリンシパルで有効化されたパブリケーション データベースにプル サブスクリプションを追加する場合、 **@publisher** または **sp_addmergepullsubscription** の **@publisher**」を参照してください。  
+     パブリケーション データベースをミラー化した場合、ミラー データベースに格納されるレプリケーション メタデータとプリンシパル データベースに格納されるメタデータが同一になります。 その結果、プリンシパルでレプリケーションが有効なパブリケーション データベースでは、ミラーのシステム テーブルに格納されるパブリッシャーのインスタンス名は、ミラーではなくプリンシパルの名前になります。 これにより、パブリケーション データベースでミラーへのフェールオーバーが発生した場合のレプリケーションの構成およびメンテナンスが影響を受けます。 たとえば、フェールオーバーの後、ストアド プロシージャを使用してレプリケーションを構成し、プリンシパルで有効化されたパブリケーション データベースにプル サブスクリプションを追加する場合、**sp_addpullsubscription** または **sp_addmergepullsubscription** の **\@publisher** パラメーターにミラー名ではなくプリンシパル名を指定する必要があります。  
   
-     ミラーへのフェールオーバーの後、ミラーでパブリケーション データベースを有効化する場合、システム テーブルに格納されるパブリッシャーのインスタンス名はミラー名となります。この場合、 **@publisher** パラメーターにはミラー名を指定します。  
+     ミラーへのフェールオーバーの後、ミラーでパブリケーション データベースを有効化する場合、システム テーブルに格納されるパブリッシャーのインスタンス名はミラー名となります。この場合、 **\@publisher** パラメーターにはミラー名を指定します。  
   
     > [!NOTE]  
-    >  **sp_addpublication** などを使う場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーに対してのみ **@publisher** パラメーターがサポートされます。このような場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングとは無関係になります。  
+    >  **sp_addpublication** などを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーに対してのみ **\@publisher** パラメーターがサポートされます。このような場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングとは無関係になります。  
   
 -   フェールオーバーの後、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でサブスクリプションを同期するには、サブスクライバーからプル サブスクリプションを同期し、アクティブなパブリッシャーからプッシュ サブスクリプションを同期します。  
   
@@ -163,7 +162,7 @@ ms.locfileid: "52534443"
 |自動フェールオーバーを伴わない高い安全性モード|コミット済みのすべてのトランザクションがミラーのディスクに保存されることが保証されます。 ログ リーダー エージェントはミラーで保存されたトランザクションのみをレプリケートします。 ミラーが使用できない場合、プリンシパルのデータベースが停止します。そのため、ログ リーダー エージェントがレプリケートするトランザクションがなくなります。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション機能とタスク](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)   
  [ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

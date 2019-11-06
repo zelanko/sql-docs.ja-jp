@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3200f4c83511f176c4d23af34f398a76047fe9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97fe8af6f02e9797bc14578edda09c420f8f94e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077049"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同期実行 (ポーリング メソッド)
 ODBC 3.8 と Windows 7 SDK では、前に、非同期操作は、ステートメントの関数でのみ可能でした。 詳細については、次を参照してください。、**ステートメントの操作を非同期に実行**、このトピックで後述します。  
@@ -135,9 +134,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- アプリケーションかどうかをまだ実行中に非同期に判断する関数を呼び出すときに、元のステートメント ハンドルを使用する必要があります。 これは、非同期実行は、ステートメントごとに追跡されるためです。 アプリケーションは、他の引数の有効な値も指定する必要があります: 元の引数の操作を行いますが、エラー ドライバー マネージャーでのチェックを通過します。 ただし、ドライバーは、ステートメント ハンドルをチェックし、ステートメントが非同期的に実行されているかを決定後、は、その他のすべての引数を無視します。  
+ アプリケーションかどうかをまだ実行中に非同期に判断する関数を呼び出すときに、元のステートメント ハンドルを使用する必要があります。 これは、非同期実行は、ステートメントごとに追跡されるためです。 アプリケーションは、他の引数の有効な値も指定する必要があります - エラー ドライバー マネージャーでのチェックを通過する - 元の引数が実行されます。 ただし、ドライバーは、ステートメント ハンドルをチェックし、ステートメントが非同期的に実行されているかを決定後、は、その他のすべての引数を無視します。  
   
- 関数は非同期的に実行中は、その SQL_STILL_EXECUTING が返された後と前にコードを返します異なる-アプリケーションを呼び出して取り消すことができます**SQLCancel**または**SQLCancelHandle** 、同じステートメント ハンドルを使用します。 関数の実行をキャンセルします。 これは保証されません。 たとえば、関数を既に完了がある可能性があります。 によって返される、コードのさらに、 **SQLCancel**または**SQLCancelHandle**のみから実際には、関数が取り消されるかどうかない関数をキャンセルの試行が成功すると、かどうかを示します。 関数がキャンセルされたかどうかを確認するのには、アプリケーションは、関数をもう一度呼び出します。 SQLSTATE HY008、SQL_ERROR を返しますが、関数が取り消された場合 (操作が取り消されました)。 関数が取り消されない場合は、SQL_SUCCESS、SQL_STILL_EXECUTING、または別の sqlstate SQL_ERROR などの別のコードを返します。  
+ 関数は非同期的に - 実行中には、SQL_STILL_EXECUTING が返された後、および別のコードに返す前に、アプリケーションをキャンセルできます呼び出して**SQLCancel**または**SQLCancelHandle** 、同じステートメント ハンドルを使用します。 関数の実行をキャンセルします。 これは保証されません。 たとえば、関数を既に完了がある可能性があります。 によって返される、コードのさらに、 **SQLCancel**または**SQLCancelHandle**のみから実際には、関数が取り消されるかどうかない関数をキャンセルの試行が成功すると、かどうかを示します。 関数がキャンセルされたかどうかを確認するのには、アプリケーションは、関数をもう一度呼び出します。 SQLSTATE HY008、SQL_ERROR を返しますが、関数が取り消された場合 (操作が取り消されました)。 関数が取り消されない場合は、SQL_SUCCESS、SQL_STILL_EXECUTING、または別の sqlstate SQL_ERROR などの別のコードを返します。  
   
  ドライバーは、ステートメント レベルの非同期処理、アプリケーション呼び出しをサポートしている場合は、特定のステートメントの非同期実行を無効にする**SQLSetStmtAttr** SQL_ATTR_ASYNC_ENABLE 属性し、sql _ に設定ASYNC_ENABLE_OFF します。 ドライバーは接続レベルの非同期処理をサポートする場合、アプリケーション呼び出し**SQLSetConnectAttr** SQL_ASYNC_ENABLE_OFF で、上のすべてのステートメントの非同期実行を無効にして SQL_ATTR_ASYNC_ENABLE を設定するのには接続します。  
   

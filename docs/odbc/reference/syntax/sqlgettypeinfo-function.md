@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1690e8c9f4f0e8c491bedac1a27faf65cde747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c597cd4ca51ca578ca90c4e95db584dec4bcd6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030593"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetTypeInfo**データ ソースでサポートされるデータ型に関する情報を返します。 ドライバーは、SQL の結果セットの形式で情報を返します。 データ型は、データ定義言語 (DDL) ステートメントで使用します。  
   
 > [!IMPORTANT]  
@@ -39,7 +38,7 @@ ms.locfileid: "47809921"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetTypeInfo(  
      SQLHSTMT      StatementHandle,  
@@ -51,7 +50,7 @@ SQLRETURN SQLGetTypeInfo(
  [入力]結果セットのステートメント ハンドルです。  
   
  *DataType*  
- [入力]SQL データ型です。 内の値のいずれかにあるこの必要があります、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型、またはドライバーに固有の SQL データ型のセクション。 SQL_ALL_TYPES では、すべてのデータ型に関する情報が返されることを指定します。  
+ [入力]SQL データ型です。 内の値のいずれかにあるこの必要があります、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: のセクションデータ型、またはドライバーに固有の SQL データ型。 SQL_ALL_TYPES では、すべてのデータ型に関する情報が返されることを指定します。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
@@ -62,7 +61,7 @@ SQLRETURN SQLGetTypeInfo(
 |SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01S02|オプション値が変更されました|指定したステートメント属性は、ような値が一時的に代用するための実装の動作状態のため無効でした。 (呼び出し**SQLGetStmtAttr**を一時的に置換された値を決定します)。代替値が有効、 *StatementHandle*カーソルが閉じられるまでです。 変更可能なステートメント属性は、: SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_KEYSET_SIZE、SQL_ATTR_MAX_LENGTH、SQL_ATTR_MAX_ROWS、SQL_ATTR_QUERY_TIMEOUT、および SQL_ATTR_SIMULATE_CURSOR します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
+|01S02|オプション値が変更されました|指定したステートメント属性は、ような値が一時的に代用するための実装の動作状態のため無効でした。 (呼び出し**SQLGetStmtAttr**を一時的に置換された値を決定します)。代替値が有効、 *StatementHandle*カーソルが閉じられるまでです。 変更可能なステートメント属性は次のとおりです。SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_KEYSET_SIZE、SQL_ATTR_MAX_LENGTH、SQL_ATTR_MAX_ROWS、SQL_ATTR_QUERY_TIMEOUT、および SQL_ATTR_SIMULATE_CURSOR します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
 |24000|カーソル状態が無効|カーソルが開いて、 *StatementHandle、* と**SQLFetch**または**SQLFetchScroll**が呼び出されました。 このエラーが返されますドライバー マネージャーによって**SQLFetch**または**SQLFetchScroll** 、SQL_NO_DATA が返されなかったと場合、ドライバーによって返される**SQLFetch**または**SQLFetchScroll** SQL_NO_DATA が返されます。<br /><br /> 結果セットが上で開いて、 *StatementHandle*が**SQLFetch**または**SQLFetchScroll**呼び出されていない必要があります。|  
 |40001|シリアル化エラー|トランザクションが別のトランザクションでリソース デッドロックによりロールバックされました。|  
@@ -115,24 +114,24 @@ SQLRETURN SQLGetTypeInfo(
 |列名|[列]<br /><br /> number|データ型|コメント|  
 |-----------------|-----------------------|---------------|--------------|  
 |TYPE_NAME (ODBC 2.0)|1|NULL 以外の Varchar|データ ソースに依存するデータ型名です。たとえば、"CHAR()"、"VARCHAR()"、"MONEY"、"LONG VARBINARY"、または「CHAR FOR BIT DATA ()」。 アプリケーションでは、この名前を使用する必要があります**CREATE TABLE**と**ALTER TABLE**ステートメント。|  
-|DATA_TYPE (ODBC 2.0)|2|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 Datetime または間隔のデータ型は、この列は、(SQL_TYPE_TIME SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
-|COLUMN_SIZE (ODBC 2.0)|3|Integer|このデータ型のサーバーでサポートされている列の最大サイズ。 数値データは、これは、最大有効桁数です。 文字列のデータの文字の長さになります。 Datetime データ型の長さ (秒の小数部のコンポーネントの最大有効桁数を想定) の文字列表現の文字数になります。 NULL を返しますのデータ型の列のサイズは適用されません。 Interval データ型では、これは、文字形式のリテラルの間隔の文字数 (先頭の有効桁数です。 間隔で定義されているを参照してください。 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)付録 d: データ型)。<br /><br /> 列のサイズの詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。|  
+|DATA_TYPE (ODBC 2.0)|2|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 Datetime または間隔のデータ型は、この列は、(SQL_TYPE_TIME SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
+|COLUMN_SIZE (ODBC 2.0)|3|Integer|このデータ型のサーバーでサポートされている列の最大サイズ。 数値データは、これは、最大有効桁数です。 文字列のデータの文字の長さになります。 Datetime データ型の長さ (秒の小数部のコンポーネントの最大有効桁数を想定) の文字列表現の文字数になります。 NULL を返しますのデータ型の列のサイズは適用されません。 Interval データ型では、これは、文字形式のリテラルの間隔の文字数 (先頭の有効桁数です間隔で定義されているを参照してください。 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)付録 d:。データ型の場合)。<br /><br /> 列のサイズの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|文字または文字列リテラルをプレフィックスとして使用たとえばを単一引用符 (') の文字データ型またはバイナリ データ型の 0 xNULL を返しますのデータ型リテラル プレフィックスは適用されません。|  
 |LITERAL_SUFFIX (ODBC 2.0)|5|Varchar|文字または文字列リテラルを終了するために使用たとえば、文字データ型の単一の引用符 (')NULL を返しますのデータ型のリテラル サフィックスは適用されません。|  
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|キーワード、TYPE_NAME フィールドで返される名前を使用する場合、アプリケーションがかっこ内に指定できる各パラメーターに対応する、コンマ区切りの一覧。 リストのキーワードは、次のいずれかを指定できます。 長さ、有効桁数または小数点。 構文が使用することが必要である順序で表示されます。 たとえば、CREATE_PARAMS は 10 進数には「有効桁数、小数点」;VARCHAR の CREATE_PARAMS「の長さ」になります データ型を定義します。 パラメーターがない場合、NULL が返されますたとえば、整数です。<br /><br /> ドライバーが使用されている国/地域の言語で CREATE_PARAMS テキストを提供します。|  
 |NULL 許容型 (ODBC 2.0)|7|Smallint (NULL 以外)|かどうか、データ型は NULL 値を受け取ります。<br /><br /> データ型が NULL 値を受け付けない場合 SQL_NO_NULLS します。<br /><br /> データ型が NULL 値を受け取る場合 SQL_NULLABLE します。<br /><br /> SQL_NULLABLE_UNKNOWN 列が NULL 値を受け入れるかどうかが不明である場合。|  
 |CASE_SENSITIVE (ODBC 2.0)|8|Smallint (NULL 以外)|文字データを入力するかどうかは、照合順序との比較で大文字小文字が区別は。<br /><br /> SQL_TRUE 場合は、データ型は文字データ型であり、小文字が区別されます。<br /><br /> データ型が文字データ型ではない、または小文字は区別されません sql_false になります。|  
-|検索可能な (ODBC 2.0)|9|Smallint (NULL 以外)|データ型の使用方法、**場所**句。<br /><br /> SQL_PRED_NONE で列を使用できない場合、**場所**句。 (これは ODBC 2 で SQL_UNSEARCHABLE 値と同じです。*x*)。<br /><br /> SQL_PRED_CHAR 列で使用できる場合は、**場所**句でのみ、**など**述語。 (これは ODBC 2 で SQL_LIKE_ONLY 値と同じです。*x*)。<br /><br /> SQL_PRED_BASIC 列で使用できる場合は、**場所**を除くすべての比較演算子を含む句**など**(比較、定量化された比較は、 **BETWEEN**、 **DISTINCT**、 **IN**、**一致**、および**UNIQUE**)。 (これは ODBC 2 で SQL_ALL_EXCEPT_LIKE 値と同じです。*x*)。<br /><br /> SQL_SEARCHABLE 列で使用できる場合は、**場所**任意の比較演算子を含む句。|  
+|検索可能な (ODBC 2.0)|9|Smallint (NULL 以外)|データ型の使用方法、**WHERE**句。<br /><br /> SQL_PRED_NONE で列を使用できない場合、**WHERE**句。 (これは ODBC 2.*x* の SQL_UNSEARCHABLE 値と同じです。)。<br /><br /> SQL_PRED_CHAR 列で使用できる場合は、**WHERE**句でのみ、**LIKE**述語。 (これは ODBC 2.*x* の SQL_LIKE_ONLY 値と同じです。)。<br /><br /> SQL_PRED_BASIC 列で使用できる場合は、**WHERE**を除くすべての比較演算子を含む句**など**(比較、定量化された比較は、 **BETWEEN**、 **DISTINCT**、 **IN**、**MATCH**、および**UNIQUE**)。 (これは ODBC 2.*x* の SQL_ALL_EXCEPT_LIKE 値と同じです。)。<br /><br /> SQL_SEARCHABLE 列で使用できる場合は、**WHERE**任意の比較演算子を含む句。|  
 |UNSIGNED_ATTRIBUTE (ODBC 2.0)|10|Smallint|かどうか、データ型が符号なしです。<br /><br /> データ型が署名されていない場合は SQL_TRUE にします。<br /><br /> データ型が符号付き場合は sql_false になります。<br /><br /> 属性は、データ型に適用可能でないまたはデータ型が数値でない場合は、NULL が返されます。|  
-|FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint (NULL 以外)|データ型が定義済みかどうか、有効桁数と小数点 (これは、データ ソース固有)、money データ型などが修正済み。<br /><br /> SQL_TRUE に事前定義された場合は、有効桁数と小数点を修正しました。<br /><br /> 定義済みの固定有効桁数と小数点がない場合は sql_false になります。|  
-|AUTO_UNIQUE_VALUE (ODBC 2.0)|12|Smallint|データ型が自動増分されるかどうか。<br /><br /> データ型が自動増分される場合は SQL_TRUE にします。<br /><br /> データ型でない自動増分される場合は sql_false になります。<br /><br /> 属性は、データ型に適用可能でないまたはデータ型が数値でない場合は、NULL が返されます。<br /><br /> アプリケーションは、この属性を持つ列に値を挿入することができますが、通常、列の値を更新することはできません。<br /><br /> 自動インクリメント列に挿入が行われる挿入時に、一意の値が列に挿入されます。 増分値は定義されていませんがデータ ソース固有です。 アプリケーションでは、特定の値によって、特定の時点またはインクリメントで、自動インクリメント列が開始されるは想定しないでください。|  
-|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|データ型のデータ ソース: 依存名のローカライズ版。 ローカライズされた名前がそのデータ ソースによってサポートされない場合は NULL が返されます。 この名前は表示のみ、このようなダイアログ ボックスのように対象としています。|  
-|MINIMUM_SCALE (ODBC 2.0)|14|Smallint|データ ソースでのデータ型の最小のスケール。 データ型の小数点以下桁数が固定されている場合は、MINIMUM_SCALE 列および MAXIMUM_SCALE 列の両方にこの値が入ります。 たとえば、sql_type_timestamp 型の列では、秒の小数部の固定のスケールがあります。 小数点以下桁数が適用されない場合は NULL が返されます。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。|  
-|MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|データ ソースでのデータ型の最大の小数点以下桁数。 小数点以下桁数が適用されない場合は NULL が返されます。 最大の小数点以下桁数が、データ ソースでは別に定義されず、最大有効桁数と同じであると定義されている場合、この列には、COLUMN_SIZE 列と同じ値が含まれています。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。|  
-|SQL_DATA_TYPE (ODBC 3.0)|16|smallint NOT NULL|記述子の SQL_DESC_TYPE フィールドとして、SQL データ型の値が表示されます。 この列は、間隔と datetime データ型を除く、DATA_TYPE 列と同じです。<br /><br /> 間隔および datetime データ型の SQL_INTERVAL または SQL_DATETIME、結果セットに SQL_DATA_TYPE フィールドを返すし、SQL_DATETIME_SUB フィールドには、特定の間隔または datetime データ型のサブコードが返されます。 (を参照してください[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。|  
-|SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|SQL_DATA_TYPE の値が SQL_DATETIME または SQL_INTERVAL の場合は、この列には、datetime/間隔サブコードが含まれています。 データ型 datetime と間隔以外、このフィールドは NULL です。<br /><br /> 期間または日時のデータ型の SQL_INTERVAL または SQL_DATETIME、結果セットに SQL_DATA_TYPE フィールドを返すし、SQL_DATETIME_SUB フィールドには、特定の間隔または datetime データ型のサブコードが返されます。 (を参照してください[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。|  
+|FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint (NULL 以外)|データ型が定義済みかどうか、有効桁数と小数点 (これは、データ ソースに固有)、money データ型などが修正済み。<br /><br /> SQL_TRUE に事前定義された場合は、有効桁数と小数点を修正しました。<br /><br /> 定義済みの固定有効桁数と小数点がない場合は sql_false になります。|  
+|AUTO_UNIQUE_VALUE (ODBC 2.0)|12|Smallint|データ型が自動増分されるかどうか。<br /><br /> データ型が自動増分される場合は SQL_TRUE にします。<br /><br /> データ型でない自動増分される場合は sql_false になります。<br /><br /> 属性は、データ型に適用可能でないまたはデータ型が数値でない場合は、NULL が返されます。<br /><br /> アプリケーションは、この属性を持つ列に値を挿入することができますが、通常、列の値を更新することはできません。<br /><br /> 自動インクリメント列に挿入が行われる挿入時に、一意の値が列に挿入されます。 増分値は定義されていませんがデータ ソースに固有です。 アプリケーションでは、特定の値によって、特定の時点またはインクリメントで、自動インクリメント列が開始されるは想定しないでください。|  
+|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|データ ソースに依存するデータ型のローカライズされた名前です。 ローカライズされた名前がそのデータ ソースによってサポートされない場合は NULL が返されます。 この名前は表示のみ、このようなダイアログ ボックスのように対象としています。|  
+|MINIMUM_SCALE (ODBC 2.0)|14|Smallint|データ ソースでのデータ型の最小のスケール。 データ型の小数点以下桁数が固定されている場合は、MINIMUM_SCALE 列および MAXIMUM_SCALE 列の両方にこの値が入ります。 たとえば、sql_type_timestamp 型の列では、秒の小数部の固定のスケールがあります。 小数点以下桁数が適用されない場合は NULL が返されます。 詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
+|MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|データ ソースでのデータ型の最大の小数点以下桁数。 小数点以下桁数が適用されない場合は NULL が返されます。 最大の小数点以下桁数が、データ ソースでは別に定義されず、最大有効桁数と同じであると定義されている場合、この列には、COLUMN_SIZE 列と同じ値が含まれています。 詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
+|SQL_DATA_TYPE (ODBC 3.0)|16|smallint NOT NULL|記述子の SQL_DESC_TYPE フィールドとして、SQL データ型の値が表示されます。 この列は、間隔と datetime データ型を除く、DATA_TYPE 列と同じです。<br /><br /> 間隔および datetime データ型の SQL_INTERVAL または SQL_DATETIME、結果セットに SQL_DATA_TYPE フィールドを返すし、SQL_DATETIME_SUB フィールドには、特定の間隔または datetime データ型のサブコードが返されます。 (を参照してください[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。|  
+|SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|SQL_DATA_TYPE の値が SQL_DATETIME または SQL_INTERVAL の場合は、この列には、datetime/間隔サブコードが含まれています。 データ型 datetime と間隔以外、このフィールドは NULL です。<br /><br /> 期間または日時のデータ型の SQL_INTERVAL または SQL_DATETIME、結果セットに SQL_DATA_TYPE フィールドを返すし、SQL_DATETIME_SUB フィールドには、特定の間隔または datetime データ型のサブコードが返されます。 (を参照してください[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。|  
 |NUM_PREC_RADIX (ODBC 3.0)|18|Integer|データ型が概数型の場合は、この列には、COLUMN_SIZE がビット数を指定することを示す 2 の値が含まれています。 正確な数値型では、この列には 10 COLUMN_SIZE が 10 進数を指定することを示す値が含まれます。 それ以外は、この列は NULL です。|  
-|INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|データ型が間隔のデータ型の場合は、この列は間隔の先頭有効桁数の値を格納します。 (を参照してください[Interval データ型の有効桁数](../../../odbc/reference/appendixes/interval-data-type-precision.md)付録 d: データ型にします)。それ以外は、この列は NULL です。|  
+|INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|データ型が間隔のデータ型の場合は、この列は間隔の先頭有効桁数の値を格納します。 (を参照してください[Interval データ型の有効桁数](../../../odbc/reference/appendixes/interval-data-type-precision.md)付録 d:データ型です。)それ以外は、この列は NULL です。|  
   
  属性情報は、結果セット内の特定の列またはデータ型に適用できます。 **SQLGetTypeInfo**データ型に関連付けられている属性に関する情報を返します**SQLColAttribute**結果セット内の列に関連付けられている属性に関する情報を返します。  
   

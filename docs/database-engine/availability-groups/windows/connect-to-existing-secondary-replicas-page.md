@@ -1,6 +1,7 @@
 ---
-title: 既存のセカンダリ レプリカ ページへの接続 | Microsoft Docs
-ms.custom: ''
+title: 可用性グループ用の [既存のセカンダリ レプリカへの接続] ページ
+description: SQL Server Management Studio の可用性グループ ウィザード内の [既存のセカンダリ レプリカへの接続] ページのさまざまなオプションについて説明します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,15 +13,14 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2feb2d658f6d333fbe1b1762ea8483562b79db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991143"
 ---
-# <a name="connect-to-existing-secondary-replicas-page"></a>既存のセカンダリ レプリカ ページへの接続
+# <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>[既存のセカンダリ レプリカへの接続] ページ - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このヘルプ トピックでは、 **[既存のセカンダリ レプリカへの接続]** ページのオプションについて説明します。 このトピックでは、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用します。  
   

@@ -7,18 +7,15 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e8d7fac329ef0c12566c2479459749dd74a5934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dfe3339bfe2b965c46e2abd212a09b50021814ad
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835660"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265022"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +23,7 @@ ms.locfileid: "47835660"
   
 **[選択されたフォルダー]** 一覧にフォルダーを追加するには、このフォルダー セットの名前を **[フォルダー セット名]** フィールドに入力し、 **[適用]** をクリックして保存します。 このカスタム検索スコープは、後で **[フォルダーを指定して検索]** および **[フォルダーを指定して置換]** の **[検索対象]** ドロップダウン リストから名前で選択できます。 カスタム フォルダーを **[検索対象]** の一覧から削除するには、 **[フォルダー セット名]** フィールドに名前を入力し、 **[削除]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 次のコントロールは、固有の名前の付いた検索フォルダーのセットのアセンブリ、保存、および変更に利用できます。  
   
 **[フォルダー セット名]**  
@@ -58,4 +55,3 @@ ms.locfileid: "47835660"
   
 **[適用]**  
 **[選択されたフォルダー]** の一覧に表示された検索フォルダーのセットを名前付きフォルダー セットとして保存します。 このフォルダー セットは、 **[検索と置換]** ウィンドウのすべてのタブで **[検索対象]** フィールドから選択できます。 [検索フォルダーの選択] ダイアログ ボックスを閉じます。  
-  

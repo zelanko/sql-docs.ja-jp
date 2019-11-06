@@ -16,16 +16,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fdb89ebbfebe6ea8e47857347428cb27d4d41530
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986038"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,58 +80,58 @@ tablediff
  [ **-?** ]  
  サポートされているパラメーターのリストを返します。  
   
- **-sourceserver** *source_server_name*[**\\**_instance\_name_]  
- ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの *source_server_name***\\***instance_name* を指定します。  
+ **-sourceserver** _source_server_name_[ **\\** _instance\_name_]  
+ ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 _の名前付きインスタンスの_ **\\** _source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
   
- **-sourcedatabase** *source_database*  
+ **-sourcedatabase** _source_database_  
  ソース データベース名を指定します。  
   
- **-sourcetable** *source_table_name*  
+ **-sourcetable** _source_table_name_  
  調査するソース テーブルの名前を指定します。  
   
- **-sourceschema** *source_schema_name*  
+ **-sourceschema** _source_schema_name_  
  ソース テーブルのスキーマ所有者を指定します。 既定では、テーブル所有者は dbo と見なされます。  
   
- **-sourcepassword** *source_password*  
+ **-sourcepassword** _source_password_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証でソース サーバーに接続する場合に使用するログインのパスワードを指定します。  
   
 > [!IMPORTANT]  
 >  可能である場合は、実行時にセキュリティ資格情報を指定します。 資格情報をスクリプト ファイルに格納する必要がある場合は、不正アクセスを防ぐためにファイルを保護してください。  
   
- **-sourceuser** *source_login*  
+ **-sourceuser** _source_login_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証でソース サーバーに接続する場合に使用するログインを指定します。 *source_login* を省略すると、Windows 認証がソース サーバーへの接続時に使用されます。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、ソース テーブルがロックされます。  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの *destination_server_name***\\***instance_name* を指定します。  
+ **-destinationserver** _destination_server_name_[ **\\** _instance_name_]  
+ 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 _の名前付きインスタンスの_ **\\** _destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
   
- **-destinationdatabase** *subscription_database*  
+ **-destinationdatabase** _subscription_database_  
  対象データベース名を指定します。  
   
- **-destinationtable** *destination_table*  
+ **-destinationtable** _destination_table_  
  対象テーブルの名前を指定します。  
   
- **-destinationschema** *destination_schema_name*  
+ **-destinationschema** _destination_schema_name_  
  対象テーブルのスキーマ所有者を指定します。 既定では、テーブル所有者は dbo と見なされます。  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword** _destination_password_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で対象サーバーに接続する場合に使用するログインのパスワードを指定します。  
   
 > [!IMPORTANT]  
 >  可能である場合は、実行時にセキュリティ資格情報を指定します。 資格情報をスクリプト ファイルに格納する必要がある場合は、不正アクセスを防ぐためにファイルを保護してください。  
   
- **-destinationuser** *destination_login*  
+ **-destinationuser** _destination_login_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で対象サーバーに接続する場合に使用するログインを指定します。 *destination_login* を省略すると、Windows 認証がサーバーへの接続時に使用されます。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、対象テーブルがロックされます。  
   
- **-b** *large_object_bytes*  
- ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、 **text**、 **ntext**、 **image**、 **varchar(max)**、 **nvarchar(max)** 、 **varbinary(max)** です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
+ **-b** _large_object_bytes_  
+ ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、 **text**、 **ntext**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
   
- **-bf**  *number_of_statements*  
+ **-bf**  _number_of_statements_  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] オプションを使用する場合に、現在の **スクリプト ファイルに書き込む** ステートメントの数を指定します。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数が *number_of_statements*で指定した値を超えると、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
   
  **-c**  
@@ -141,33 +140,33 @@ tablediff
  **-dt**  
  テーブルが既に存在している場合は、 *table_name*で指定された結果テーブルを削除します。  
   
- **-et** *table_name*  
+ **-et** _table_name_  
  作成する結果テーブルの名前を指定します。 このテーブルが既に存在する場合は、 **-DT** を使用する必要があります。使用しない場合、この処理は失敗します。  
   
  **-f** [ *file_name* ]  
  対象サーバーにあるテーブルを、ソース サーバーにあるテーブルと収束させる [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを生成します。 作成される [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルの名前とパスを指定できます (省略可能)。 *file_name* を指定しない場合は、ユーティリティが実行されているディレクトリに [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
   
- **-o** *output_file_name*  
+ **-o** _output_file_name_  
  出力ファイルの完全な名前およびフル パスを指定します。  
   
  **-q**  
  行数とスキーマのみを比較することによる高速比較を実行します。  
   
- **-rc** *number_of_retries*  
+ **-rc** _number_of_retries_  
  操作が失敗した場合に、ユーティリティが再試行する回数を指定します。  
   
- **-ri**  *retry_interval*  
+ **-ri**  _retry_interval_  
  再試行間隔を指定します (秒単位)。  
   
  **-strict**  
  ソース スキーマと対象スキーマを厳密に比較することを指定します。  
   
- **-t** *connection_timeouts*  
+ **-t** _connection_timeouts_  
  ソース サーバーと対象サーバーへの接続に関する接続タイムアウト時間を設定します (秒単位)。  
   
 ## <a name="return-value"></a>戻り値  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|重大なエラー|  

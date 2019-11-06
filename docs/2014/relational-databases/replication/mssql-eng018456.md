@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG018456 error
@@ -13,12 +12,12 @@ ms.assetid: 3daa8144-d81f-445a-b6c3-4bb3e9fd1526
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6db9604cab193121ef633a0a759fb1431d7aedcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff5d5a983bda1dd5efa68c282373f37ab8fda571
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163458"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63055652"
 ---
 # <a name="mssqleng018456"></a>MSSQL_ENG018456
     

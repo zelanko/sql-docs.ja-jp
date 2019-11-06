@@ -12,13 +12,12 @@ apilocation:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 86135a4d93ddb8f08318a9ce2be8a6f5c4f57f9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8a873fbc1b5031d6f26f0a3809675276c7806fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021994"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB ヘッダーとバージョン情報
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +26,9 @@ ms.locfileid: "47677570"
 ## <a name="localdb-versioning"></a>LocalDB のバージョン管理  
  LocalDB インストールでは、主要な SQL Server バージョンごとの単一のバイナリ セットを使用します。 これらの LocalDB バージョンは維持され、個別にパッチが適用されます。 つまり、ユーザーはどの LocalDB ベースライン リリース (主要な SQL Server バージョン) を使用するのかを指定する必要があるということです。 バージョンは、.NET Framework で定義されている標準的なバージョンの形式で指定される**System.Version**クラス。  
   
- *major.minor[.build[.revision]*  
+ *major.minor[.build[.revision]]*  
   
- バージョン文字列の最初の 2 つの番号 (*メジャー*と*マイナー*) は必須です。 バージョン文字列の最後の 2 つの番号 (*ビルド*と*リビジョン*) オプションで、既定で 0 に、ユーザーがいる場合。つまり、ユーザーが LocalDB バージョン番号として "12.2" だけを指定した場合、"12.2.0.0" と指定したように扱われます。  
+ バージョン文字列の最初の 2 つの番号 (*メジャー*と*マイナー*) は必須です。 バージョン文字列の最後の 2 つの番号 (*ビルド*と*リビジョン*) オプションで、既定で 0 に、ユーザーがいる場合。つまり、ある場合は、ユーザーは、LocalDB バージョン番号として「12.2」だけを指定します、処理されます、ユーザーが"12.2.0.0 と"指定した場合。  
   
  LocalDB インストールのバージョンは、SQL Server インスタンス レジストリ キーの下の MSSQLServer\CurrentVersion レジストリ キーに定義されます。次に例を示します。  
   
@@ -46,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- このキーの下に、キーのリストがあります。このコンピューターにインストールされている LocalDB のバージョンごとに 1 つのキーがあります。 これらの各キーという名前の形式で LocalDB バージョン番号を使用*\<メジャー バージョン >*.*\<マイナー バージョン >* (たとえば、キーを[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]13.0 という名前)。 各バージョン キーの下に、`InstanceAPIPath` の名前と値のペアが 1 つあります。このペアは、そのバージョンでインストールされた SQLUserInstance.dll ファイルの絶対パスを定義します。 次の例は、LocalDB バージョン 11.0 と 13.0 がインストールされているコンピューターのレジストリ エントリを示しています。  
+ このキーの下に、キーのリストがあります。このコンピューターにインストールされている LocalDB のバージョンごとに 1 つのキーがあります。 これらの各キーという名前の形式で LocalDB バージョン番号を使用 *\<メジャー バージョン >* . *\<マイナー バージョン >* (たとえば、キーを[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]13.0 という名前)。 各バージョン キーの下に、`InstanceAPIPath` の名前と値のペアが 1 つあります。このペアは、そのバージョンでインストールされた SQLUserInstance.dll ファイルの絶対パスを定義します。 次の例は、LocalDB バージョン 11.0 と 13.0 がインストールされているコンピューターのレジストリ エントリを示しています。  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  
@@ -84,15 +83,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 // The #define has to take place BEFORE the API header file (sqlncli.h) is included  
 #define LOCALDB_DEFINE_PROXY_FUNCTIONS  
 #include <sqlncli.h>  
-…  
+...  
 HRESULT hr = S_OK;  
   
 // Create LocalDB instance by calling the create API proxy function included by macro  
 if (FAILED(hr = LocalDBCreateInstance( L"12.0", L"name", 0)))  
 {  
-…  
+...  
 }  
-…  
+...  
   
 ```  
   

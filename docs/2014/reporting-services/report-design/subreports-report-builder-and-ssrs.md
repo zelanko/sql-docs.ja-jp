@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 785557e57defba45f23c7a4abb041d4e8ba04884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d454f84295d86b373c3b5462580641a719435a17
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104797"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>サブレポート (レポート ビルダーおよび SSRS)
   サブレポートは、メインのレポート本文内に別のレポートを表示するレポート アイテムです。 概念上、レポート内のサブレポートは Web ページ内のフレームとほぼ同じです。 これは、レポートをレポート内に埋め込むために使用されます。 サブレポートには、任意のレポートを使用できます。 サブレポートとして表示されるレポートは、レポート サーバー上に保存され、通常は親レポートと同じフォルダーに置かれます。 親レポートからサブレポートにパラメーターを渡すようにも設定できます。 パラメーターを使用してサブレポートの各インスタンスのデータをフィルター処理することにより、サブレポートをデータ領域内で繰り返し使用することができます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48165332"
   
  同じデータ領域内の同じデータ ソースから取得されるデータ グループを入れ子にする場合は、データ領域を使用してください。 同じデータ領域内の異なるデータ ソースから取得されるデータのグループを入れ子にしたり、複数の親レポートで同じサブレポートを再利用したり、別のレポート内にスタンドアロンのレポートを表示する場合は、サブレポートを使用してください。 たとえば、別のレポートの本文内に複数のサブレポートを配置して、"抄録ファイル" を作成することもできます。  
   
- データ領域はサブレポートと同じ機能の多くが提供され、柔軟性も同等ですが、パフォーマンスの点で優れています。 サブレポートは、それぞれのインスタンスが個別のレポートとして処理されるので、レポート サーバーのパフォーマンスに影響することがあります。 詳細については、「[入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)」 を参照してください。  
+ データ領域はサブレポートと同じ機能の多くが提供され、柔軟性も同等ですが、パフォーマンスの点で優れています。 サブレポートは、それぞれのインスタンスが個別のレポートとして処理されるので、レポート サーバーのパフォーマンスに影響することがあります。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="using-parameters-in-subreports"></a>サブレポートでのパラメーターの使用  
  親レポートからサブレポートにパラメーターを渡すには、サブレポートとして使用するレポートでレポート パラメーターを定義します。 親レポートにサブレポートを配置するときに、レポート パラメーターと、親レポートからサブレポート内のレポート パラメーターに渡す値を選択できます。  
@@ -56,6 +55,6 @@ ms.locfileid: "48165332"
  レポート ビルダーからメイン レポートのサブレポートをプレビューするには、両方のレポートが同じレポート サーバーに存在するか、サブレポートの完全なパスを指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域&#40;レポート ビルダーおよび SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

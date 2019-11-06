@@ -1,65 +1,63 @@
 ---
-title: レポートのプレビュー | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+title: レポートのプレビュー
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
+ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
-helpviewer_keywords:
-- Report Designer [Reporting Services], previewing reports
-- previewing reports [Reporting Services]
-- printing previews
-- test servers [Reporting Services]
-ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b839c8124e880cfc1837cc17a8e45e30c50bab31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105812"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412970"
 ---
-# <a name="previewing-reports"></a>レポートのプレビュー
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でレポートをプレビューする
+
   レポートをデザインするときに、そのレポートを実稼働環境にパブリッシュする前に表示することができます。 これを行うには、レポート デザイナーでプレビュー モードに切り替えるか、レポート デザイナーのプレビュー ウィンドウを使用するか、テスト環境のレポート サーバーにレポートをパブリッシュします。  
   
 > [!NOTE]  
->  レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>*.rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
+> レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>* .rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
   
-## <a name="preview-mode"></a>プレビュー モード  
+## <a name="preview-mode"></a>プレビュー モード
+
  クリックして、レポート デザイナーでレポートをプレビューできます**プレビュー**します。 この場合、レポート サーバーで提供されるものと同じレポート処理および表示機能を使用して、レポートがローカルで実行されます。 表示されるレポートは対話型のイメージです。ユーザーは、パラメーターの選択、リンクのクリック、ドキュメント マップの表示、レポートの非表示部分の展開と折りたたみなどを行うことができます。 また、インストールされている任意の表示形式にレポートをエクスポートできます。  
   
-## <a name="standalone-preview"></a>スタンドアロン プレビュー  
+## <a name="standalone-preview"></a>スタンドアロン プレビュー
+
  レポートをプレビューするもう 1 つの方法は、作成したカスタム アセンブリをデバッグする際などに、デバッグ構成でレポート プロジェクトを実行することです。 プロジェクトの実行方法には、次の 3 とおりがあります。  
   
--   クリックして**開始**上、**デバッグ**メニュー。  
+- クリックして**開始**上、**デバッグ**メニュー。  
   
--   クリックして、**開始**のボタンでは、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]標準ツールバー。  
+- クリックして、**開始**のボタンでは、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]標準ツールバー。  
   
--   F5 キーを押す。  
+- F5 キーを押す。  
   
- レポートを作成するものも配置しないプロジェクト構成で指定されているレポートを使用する場合、`StartItem`別のプレビュー ウィンドウで、現在の構成プロパティを開きます。 プレビュー ウィンドウは、プレビュー モードと同じ方法でレポートを表示し、同じ機能を提供します。  
+ レポートを作成しても配置しないプロジェクト構成を使用している場合は、現在の構成の `StartItem` プロパティで指定されたレポートが、別のプレビュー ウィンドウで開きます。 プレビュー ウィンドウは、プレビュー モードと同じ方法でレポートを表示し、同じ機能を提供します。  
   
 > [!NOTE]  
->  レポートをデバッグする前に、開始アイテムを設定する必要があります。 開始アイテムを設定するには、ソリューション エクスプ ローラーでレポート プロジェクトを右クリックし、] をクリックして**プロパティ**、し、[ `StartItem`、表示するレポートの名前を選択します。  
+> レポートをデバッグする前に、開始アイテムを設定する必要があります。 開始アイテムを設定するには、ソリューション エクスプ ローラーでレポート プロジェクトを右クリックし、] をクリックして**プロパティ**、し、[ `StartItem`、表示するレポートの名前を選択します。  
   
  プロジェクトの開始アイテムではない特定のレポートをプレビューする場合は、レポートを作成しても配置しない構成 (DebugLocal 構成など) を選択し、レポートを右クリックして、 **[実行]** をクリックします。 レポートを配置しない構成を選択する必要があります。そうしないと、レポートはローカルのプレビュー ウィンドウに表示されずに、レポート サーバーにパブリッシュされます。  
   
-## <a name="print-preview"></a>印刷プレビュー  
+## <a name="print-preview"></a>印刷プレビュー
+
  プレビュー モードまたはプレビュー ウィンドウに最初に表示されるレポートは、HTML 表示拡張機能によって生成されるレポートと似ています。 プレビューは HTML 形式ではありませんが、レポートのレイアウトおよび改ページは HTML 出力と似ています。  
   
  印刷プレビュー モードに切り替えることによって、表示を変更し、印刷されるレポートを表示できます。 プレビュー ツール バーの **[印刷プレビュー]** ボタンをクリックします。 レポートは、実際のページに近い状態で表示されます。 この表示は、画像表示拡張機能および PDF 表示拡張機能によって生成される出力と似ています。 印刷プレビューは画像または PDF ファイルではありませんが、レポートのレイアウトおよびページ割り当ては、それらの形式での出力と似ています。  
   
-## <a name="publishing-to-a-test-server"></a>テスト サーバーへのパブリッシュ  
+## <a name="publish-to-a-test-server"></a>テスト サーバーにパブリッシュする
+
  レポートのテストは、テスト サーバーにレポートをパブリッシュして行うこともできます。 テスト サーバーにレポートをパブリッシュする操作は、実稼働サーバーにレポートをパブリッシュする場合と同じです。 レポートのパブリッシュ方法の詳細については、「 [レポート サーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)   
- [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/print-a-report-report-builder-and-ssrs.md)   
- [レポートのパブリッシュ](../publish-reports.md)   
- [レポートでのカスタム アセンブリの使用](../custom-assemblies/using-custom-assemblies-with-reports.md)  
-  
-  
+## <a name="next-steps"></a>次のステップ
+
+ - [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)
+ - [レポートの印刷 (レポート ビルダーおよび SSRS)](../report-builder/print-a-report-report-builder-and-ssrs.md)
+ - [レポートのパブリッシュ](../publish-reports.md)
+ - [レポートでのカスタム アセンブリの使用](../custom-assemblies/using-custom-assemblies-with-reports.md)

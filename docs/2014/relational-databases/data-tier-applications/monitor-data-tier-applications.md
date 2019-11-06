@@ -14,12 +14,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddd797b3b2f387c1a4695c8fc831eb7db91d21e5
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918130"
 ---
 # <a name="monitor-data-tier-applications"></a>データ層アプリケーションの監視
   データ層アプリケーション (DAC) は、システム ビューおよびシステム テーブルと共に **(SSMS) で** ユーティリティ エクスプローラー **および** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から監視できます。 さらに、DAC に含まれるデータベース内のオブジェクトもすべて、データベースと [!INCLUDE[ssDE](../../includes/ssde-md.md)] の標準的な監視方法を使用して監視できます。  
@@ -73,7 +73,7 @@ ms.locfileid: "43812208"
 ## <a name="monitoring-dac-databases"></a>DAC データベースの監視  
  DAC が正常に配置されると、DAC に含まれるデータベースは、他のデータベースと同様に動作します。 データベースに関するパフォーマンス、ログ、イベント、およびリソース使用状況は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の標準的なテクニックとツールを使用して監視できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データ層アプリケーション]](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)  
   

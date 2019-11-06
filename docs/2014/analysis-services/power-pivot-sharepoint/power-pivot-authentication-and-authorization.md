@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165752"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826335"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot の認証および承認
   SharePoint 2010 ファーム内で実行される PowerPivot for SharePoint の配置では、SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 PowerPivot 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、PowerPivot 関連のすべての操作はファーム内の PowerPivot 共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは PowerPivot のコンテンツや操作にまで及ぶことになります。 PowerPivot データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
@@ -25,7 +24,7 @@ ms.locfileid: "48165752"
   
  このトピックの特定のセクションを参照するには、次のリンクをクリックしてください。  
   
- [クラシック モード サインイン要求を使用して Windows 認証](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [クラシック モード サインインを使用した Windows 認証の要件](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [ユーザーの承認を必要とする PowerPivot の操作](#UserConnections)  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48165752"
 |ファームまたはサービス管理者|サービスおよびアプリケーションをインストール、有効化、および構成します。<br /><br /> PowerPivot 管理ダッシュボードを使用し、管理レポートを表示します。|  
 |フル コントロール|サイト コレクション レベルで PowerPivot 機能統合をアクティブ化します。<br /><br /> PowerPivot ギャラリー ライブラリを作成します。<br /><br /> データ フィード ライブラリを作成します。|  
 |投稿|PowerPivot ブックを追加、編集、削除、およびダウンロードします。<br /><br /> データ更新を構成します。<br /><br /> SharePoint サイトで PowerPivot ブックに基づいて新しいブックやレポートを作成します。<br /><br /> データ フィード ライブラリにデータ サービス ドキュメントを作成します。|  
-|Read|PowerPivot ブックに外部データ ソースとしてアクセスします。ブックの URL は接続ダイアログ ボックス (たとえば、Excel のデータ接続ウィザード) で明示的に入力されます。|  
+|Read|ブックの URL は (たとえば、Excel のデータ接続ウィザード) での接続 ダイアログ ボックスで明示的に入力されている、外部データ ソースとして PowerPivot ブックにアクセスします。|  
 |表示のみ|PowerPivot ブックを表示します。<br /><br /> データ更新履歴を表示します。<br /><br /> ローカル ブックを SharePoint サイト上の PowerPivot ブックに接続し、そのデータの用途を変更します。<br /><br /> ブックのスナップショットをダウンロードします。 スナップショットは、スライサー、フィルター、式、またはデータ接続を含まない、データの静的なコピーです。 スナップショットの内容は、ブラウザー ウィンドウからのセル値のコピーに似ています。|  
   
 ##  <a name="excel"></a> Excel Services の PowerPivot ブックのセキュリティに関する考慮事項  
@@ -107,14 +106,14 @@ ms.locfileid: "48165752"
 |信頼できる場所|場所の種類|この値は、 **[Microsoft SharePoint Foundation]** に設定されている必要があります。 PowerPivot サーバーは、.xlsx ファイルのコピーを取得して、それをファーム内の Analysis Services サーバーに読み込みます。 このサーバーはコンテンツ ライブラリから .xlsx ファイルのみを取得できます。|  
 ||外部データの許可|この値は、 **[信頼できるデータ接続ライブラリと、埋め込まれている接続]** に設定されている必要があります。 PowerPivot データ接続は、ブックに埋め込まれています。 埋め込み接続を禁止した場合、ユーザーは、ピボットテーブル キャッシュは表示できますが、PowerPivot データを操作することはできなくなります。|  
 ||更新時の警告|PowerPivot ギャラリーを使用してブックやレポートを格納している場合は、この値を無効にする必要があります。 PowerPivot ギャラリーには、[開くときに更新する] と [更新時の警告] の両方がオフになっているときに最適に動作するドキュメント プレビュー機能が含まれています。|  
-|信頼できるデータ プロバイダー|MSOLAP.4<br /><br /> MSOLAP.5|既定では MSOLAP.4 が含まれますが、PowerPivot データ アクセスでは、MSOLAP.4 プロバイダーが SQL Server 2008 R2 バージョンである必要があります。<br /><br /> MSOLAP.5 は、PowerPivot for SharePoint の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンと共にインストールされます。<br /><br /> これらのプロバイダーは、信頼できるデータ プロバイダー一覧から削除しないでください。 場合によっては、ファーム内の別の SharePoint サーバーにもこのプロバイダーの追加のコピーをインストールすることが必要になることもあります。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。|  
+|信頼できるデータ プロバイダー|MSOLAP.4<br /><br /> MSOLAP.5|既定では MSOLAP.4 が含まれますが、PowerPivot データ アクセスでは、MSOLAP.4 プロバイダーが SQL Server 2008 R2 バージョンである必要があります。<br /><br /> MSOLAP.5 は、PowerPivot for SharePoint の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンと共にインストールされます。<br /><br /> これらのプロバイダーは、信頼できるデータ プロバイダー一覧から削除しないでください。 場合によっては、ファーム内の別の SharePoint サーバーにもこのプロバイダーの追加のコピーをインストールすることが必要になることもあります。 「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。|  
 |信頼できるデータ接続ライブラリ|任意。|PowerPivot ブックでは、Office データ接続 (.odc) ファイルを使用できます。 .odc ファイルを使用してローカル PowerPivot ブックに接続情報を提供する場合、同じ .odc ファイルをこのライブラリに追加できます。|  
 |ユーザー定義関数アセンブリ|該当なし。|PowerPivot for SharePoint では、Excel Services 用にビルドおよび配置するユーザー定義関数アセンブリは無視されます。 特定の動作についてユーザー定義アセンブリに依存する場合、作成したユーザー定義関数は PowerPivot クエリ処理では使用されないことに留意してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerPivot サービス アカウントを構成します。](configure-power-pivot-service-accounts.md)   
  [構成、PowerPivot 自動データ更新アカウント&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成します。](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot セキュリティ アーキテクチャ](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot セキュリティ アーキテクチャ](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

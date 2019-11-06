@@ -11,15 +11,14 @@ helpviewer_keywords:
 - starting Windows System Monitor
 - Windows System Monitor [SQL Server], starting
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2d649e01576c28729a98199ed6985741fa0fea6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 8a3de3bf8c09149c21357a6d6b8c3e1aed4f995c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113302"
 ---
 # <a name="start-system-monitor-windows"></a>システム モニターの起動 (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47706550"
   
 ## <a name="start-system-monitor-in-windows"></a>Windows のシステム モニターを起動する  
   
-**[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をポイントし、**[ファイル名を指定して実行]** ダイアログ ボックスで「**perfmon**」と入力し、**[OK]** を選択します。  
+**[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をポイントし、 **[ファイル名を指定して実行]** ダイアログ ボックスで「**perfmon**」と入力し、 **[OK]** を選択します。  
   
 ## <a name="see-also"></a>参照  
  [システム モニターの実行](../../relational-databases/performance-monitor/run-system-monitor.md)  

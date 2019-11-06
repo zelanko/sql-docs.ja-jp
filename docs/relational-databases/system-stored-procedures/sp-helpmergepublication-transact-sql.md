@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepublication
@@ -16,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26c19d33b9834d2a8cdf1ee0b05530138c3fa006
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137647"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +42,19 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication **=** ] **'***パブリケーション***'**  
- パブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は**%**、現在のデータベース内のすべてのマージ パブリケーションに関する情報が返されます。  
+ [ @publication **=** ] **'** _パブリケーション_ **'**  
+ パブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は **%** 、現在のデータベース内のすべてのマージ パブリケーションに関する情報が返されます。  
   
  [ @found **=** ] **'***見つかった***'** 出力  
  行を返すことを示すフラグ。 *見つかった*は**int**は出力パラメーター、既定値は NULL です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
   
- [ @publication_id **=**] **'***publication_id***'** 出力  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  パブリケーション識別番号です。 *publication_id*は**uniqueidentifier**は出力パラメーター、既定値は NULL です。  
   
- [ @reserved **=**] **'***予約***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *予約済み*は**nvarchar (20)**、既定値は NULL です。  
+ [ @reserved **=** ] **'***reserved***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *予約済み*は**nvarchar (20)** 、既定値は NULL です。  
   
- [ @publisher **=** ] **'***パブリッシャー***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  パブリッシャーの名前。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
  [@publisher_db **=** ] **'***publisher_db***'**  
@@ -84,7 +82,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |enabled_for_internet|**int**|パブリケーションがインターネットで使用できるかどうかを示します。 場合**1**、パブリケーションの同期ファイルが入れられます、`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`ディレクトリ。 ユーザーは、ファイル転送プロトコル (FTP) ディレクトリを作成する必要があります。 場合**0**インターネットにアクセスできるは、パブリケーションが有効になっていません。|  
 |dynamic_filter|**int**|パラメーター化された行フィルターが使用されるかどうかを示します。 **0**パラメーター化された行フィルターが使用されないことを意味します。|  
 |has_subscription|**bit**|パブリケーションにサブスクリプションがあるかどうかを示します。 **0**現在このパブリケーションに対するサブスクリプションがないことを意味します。|  
-|snapshot_in_default_folder|**bit**|スナップショット ファイルが既定のフォルダーに格納されるかどうかを示します。<br /><br /> 場合**1**、スナップショット ファイルは既定のフォルダーにあります。<br /><br /> 場合**0**、スナップショット ファイルがで指定された代替位置に格納されている**alt_snapshot_folder**します。 代替位置としては、他のサーバー、ネットワーク ドライブ、または CD-ROM やリムーバブル ディスクなどのリムーバブル メディアを指定できます。 またスナップショット ファイルを FTP サイトに保存し、後でサブスクライバーで取得することもできます。<br /><br /> 注: このパラメーターが true ができ、引き続き場所、 **alt_snapshot_folder**パラメーター。 このように指定した場合は、既定の位置と代替位置の両方に、スナップショット ファイルが格納されます。|  
+|snapshot_in_default_folder|**bit**|スナップショット ファイルが既定のフォルダーに格納されるかどうかを示します。<br /><br /> 場合**1**、スナップショット ファイルは既定のフォルダーにあります。<br /><br /> 場合**0**、スナップショット ファイルがで指定された代替位置に格納されている**alt_snapshot_folder**します。 代替位置としては、他のサーバー、ネットワーク ドライブ、または CD-ROM やリムーバブル ディスクなどのリムーバブル メディアを指定できます。 またスナップショット ファイルを FTP サイトに保存し、後でサブスクライバーで取得することもできます。<br /><br /> 注:このパラメーターが true し、もに、場所がある、 **alt_snapshot_folder**パラメーター。 このように指定した場合は、既定の位置と代替位置の両方に、スナップショット ファイルが格納されます。|  
 |alt_snapshot_folder|**nvarchar (255)**|スナップショットの代替フォルダーの場所を指定します。|  
 |pre_snapshot_script|**nvarchar (255)**|ポインターを指定します、 **.sql**サブスクライバーでスナップショットを適用するときにマージ エージェントを実行する前に、レプリケートされたオブジェクトのいずれかのファイルがスクリプトです。|  
 |post_snapshot_script|**nvarchar (255)**|ポインターを指定します、 **.sql**マージ エージェントが実行される結局のところ、その他のファイルにレプリケートされたオブジェクト スクリプトと、初期同期中にデータが適用されています。|  
@@ -94,7 +92,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar (255)**|スナップショットが FTP を使用して配布される場合に、マージ エージェントがスナップショット ファイルを取得する場所。|  
 |ftp_login|**sysname**|FTP サービスに接続するときに使用するユーザー名です。|  
 |conflict_retention|**int**|競合を保有する保有期間の日数。 指定の日数が経過すると、競合テーブルから競合行が削除されます。|  
-|keep_partition_changes|**int**|このパブリケーションの同期の最適化が行われているかどうかを指定します。 **keep_partition_changes**が既定値は**0**します。 値**0**同期は最適化されず、すべてのサブスクライバーに送信されるパーティションはパーティションにデータが変更されたときに検証されますを意味します。<br /><br /> **1**同期は最適化されていて、変更のあったパーティション内の行を保持するサブスクライバーだけが影響を受けることを意味します。<br /><br /> 注: 既定では、マージ パブリケーションを使用して、事前計算済みパーティションは、このオプションよりも高いな最適化を提供します。 詳細については、次を参照してください。 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)と[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)します。|  
+|keep_partition_changes|**int**|このパブリケーションの同期の最適化が行われているかどうかを指定します。 **keep_partition_changes**が既定値は**0**します。 値**0**同期は最適化されず、すべてのサブスクライバーに送信されるパーティションはパーティションにデータが変更されたときに検証されますを意味します。<br /><br /> **1**同期は最適化されていて、変更のあったパーティション内の行を保持するサブスクライバーだけが影響を受けることを意味します。<br /><br /> 注:既定では、マージ パブリケーションでは事前計算済みパーティションが使用され、このオプションより高いレベルの最適化が実施されます。 詳細については、次を参照してください。 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)と[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)します。|  
 |allow_subscription_copy|**int**|パブリケーションにサブスクライブするサブスクリプション データベースをコピーする機能が有効かどうかを示します。 値**0**コピーが許可されないことを意味します。|  
 |allow_synctoalternate|**int**|代替同期パートナーがこのパブリッシャーと同期できるかどうかを示します。 値**0**同期パートナーを使用できないことを意味します。|  
 |validate_subscriber_info|**nvarchar(500)**|サブスクライバー情報を取得し、サブスクライバー上でのパラメーター化された行フィルター条件を検証するときに使用される機能の一覧。 各マージで、情報に一貫性を持たせながらパーティション分割する場合に使用できます。|  

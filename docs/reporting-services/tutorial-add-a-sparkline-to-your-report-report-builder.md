@@ -9,11 +9,11 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043182"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)
 
@@ -34,13 +34,13 @@ ms.locfileid: "52711144"
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
-    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、**[ファイル]** メニューで **[新規作成]** を選択します。  
+    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、 **[ファイル]** メニューで **[新規作成]** を選択します。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-4.  **[データセットの選択]** ページで、 **[データセットを作成する]** > **[次へ]** の順に選択します。 **[データ ソースへの接続の選択]** ページが開きます。  
+4.  **[データセットの選択]** ページで、 **[データセットを作成する]**  >  **[次へ]** の順に選択します。 **[データ ソースへの接続の選択]** ページが開きます。  
   
     > [!NOTE]  
     > このチュートリアルでは、特定のデータは必要ありません。SQL Server データベースへの接続だけが必要です。 **[データ ソース接続]** の一覧に既にデータ ソース接続が表示されている場合は、データ ソース接続を選択して手順 10 に進みます。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
@@ -118,7 +118,7 @@ ms.locfileid: "52711144"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  クエリ デザイナーのツール バーで、[実行]\(**!**) をクリックします。  
+4.  クエリ デザイナーのツール バーで、[実行]\( **!** ) をクリックします。  
   
     **SalesDate**、 **Subcategory**、 **Product**、 **Sales**、および **Quantity**の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
   
@@ -169,11 +169,11 @@ ms.locfileid: "52711144"
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  **[ホーム]** タブの **[数値]** グループで、**[通貨]** をクリックします。 書式設定された通貨を表示するようにセルが変化します。  
+3.  **[ホーム]** タブの **[数値]** グループで、 **[通貨]** をクリックします。 書式設定された通貨を表示するようにセルが変化します。  
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]** の順にクリックします。  
+    地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]**  >  **[サンプルの値]** の順にクリックします。  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
@@ -182,7 +182,7 @@ ms.locfileid: "52711144"
   
 1.  `[SalesDate]`が格納されたセルをクリックします。  
   
-3.  **[ホーム]** タブで、**[数値]** グループ **[日付]** の順に選択します。  
+3.  **[ホーム]** タブで、 **[数値]** グループ **[日付]** の順に選択します。  
   
     セルに、日付の例として **[2000/1/31]** と表示されます。
      
@@ -200,7 +200,7 @@ ms.locfileid: "52711144"
 
     ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
   
-4.  新しい列の `[Product]` 行のセルを右クリックし、**[挿入]** > **[スパークライン]** の順にクリックします。  
+4.  新しい列の `[Product]` 行のセルを右クリックし、 **[挿入]**  >  **[スパークライン]** の順にクリックします。  
 
     ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   
@@ -279,7 +279,7 @@ ms.locfileid: "52711144"
   
 3.  **Product Sales**を含むテキスト ボックスを選択します。  
   
-4.  [ホーム] タブで、**[フォント]** グループ、**[色]** の順に進み、**[青緑]** を選択します。  
+4.  [ホーム] タブで、 **[フォント]** グループ、 **[色]** の順に進み、 **[青緑]** を選択します。  
   
 7.  **[太字]** を選択します。  
   
@@ -308,7 +308,7 @@ ms.locfileid: "52711144"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **[名前]** に入力されている既定の名前を「 **Product Sales**」に置き換えます。  
   

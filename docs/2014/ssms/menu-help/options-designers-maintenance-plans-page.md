@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
@@ -12,12 +12,12 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f93bf95e34c377047cb86e47dc02a82b64d5777
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63283177"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>オプション (デザイナー-メンテナンス プラン ページ)
   **[オプション]** ダイアログ ボックスを使用すると、デザイン画面に新しい図形を追加したときのデザイナーの既定の動作を指定できます。 **[ツール]** メニューの **[オプション]** をクリックします。次に **[デザイナー]** を展開し、 **[メンテナンス プラン]** を選択します。  

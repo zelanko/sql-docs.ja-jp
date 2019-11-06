@@ -1,10 +1,10 @@
 ---
-title: 対象サーバーのポーリング間隔の設定 | Microsoft Docs
+title: ターゲット サーバーのポーリング間隔の設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
@@ -14,28 +14,28 @@ ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12f35342d6303559ab41546dc9154a06f9a30eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033642"
 ---
-# <a name="set-the-polling-interval-for-target-servers"></a>対象サーバーのポーリング間隔の設定
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってマスター サーバーから対象サーバーに対して情報が更新される頻度を設定する方法について説明します。 ジョブとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行される特定の一連の処理のことです。 マルチサーバー ジョブとは、1 つ以上の対象サーバーでマスター サーバーにより実行されるジョブです。  
+# <a name="set-the-polling-interval-for-target-servers"></a>ターゲット サーバーのポーリング間隔の設定
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってマスター サーバーから対象サーバーに対して情報が更新される頻度を設定する方法について説明します。 ジョブとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行される特定の一連の処理のことです。 マルチサーバー ジョブとは、1 つ以上のターゲット サーバーでマスター サーバーにより実行されるジョブです。  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **作業を開始する準備:** [Security](#Security)  
   
--   **使用して、対象サーバーのポーリング間隔を設定する:**[SQL Server Management Studio](#SSMS)、 [TRANSACT-SQL  ](#TSQL)  
+-   **ターゲット サーバーのポーリング間隔を設定するには、次を使用します。** [SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
- 各対象サーバーは、同じジョブのインスタンスを同時に実行できます。 各対象サーバーからマスター サーバーに定期的にポーリングし、その対象サーバーに割り当てられた新しいジョブのコピーをダウンロードした後、切断します。 ダウンロードされたジョブは対象サーバーでローカルに実行され、マスター サーバーに再接続してジョブ結果状態をアップロードします。  
+##  <a name="BeforeYouBegin"></a> はじめに  
+ 各ターゲット サーバーは、同じジョブのインスタンスを同時に実行できます。 各ターゲット サーバーからマスター サーバーに定期的にポーリングし、そのターゲット サーバーに割り当てられた新しいジョブのコピーをダウンロードした後、切断します。 ダウンロードされたジョブはターゲット サーバーでローカルに実行され、マスター サーバーに再接続してジョブ結果状態をアップロードします。  
   
 > [!NOTE]  
->  対象サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
+>  ターゲット サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
   
 ###  <a name="Security"></a> セキュリティ  
- 詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 」および「 [マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
+ 詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 」および「 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
  **対象サーバーのポーリング間隔を設定するには**  
@@ -52,9 +52,9 @@ ms.locfileid: "48091332"
   
 6.  **[受信者]** で、次のいずれかの操作を行います。  
   
-    1.  すべての対象サーバーで同じポーリング間隔を共有する場合は、 **[すべての対象サーバー]** をクリックします。  
+    1.  すべてのターゲット サーバーで同じポーリング間隔を共有する場合は、 **[すべてのターゲット サーバー]** をクリックします。  
   
-    2.  すべての対象サーバーで同じポーリング間隔を共有しない場合は、 **[特定の対象サーバー]** をクリックし、このポーリング間隔を使用する対象サーバーを選択します。  
+    2.  すべてのターゲット サーバーで同じポーリング間隔を共有しない場合は、 **[特定のターゲット サーバー]** をクリックし、このポーリング間隔を使用するターゲット サーバーを選択します。  
   
 ##  <a name="TSQL"></a> Transact-SQL の使用  
  **対象サーバーのポーリング間隔を設定するには**  

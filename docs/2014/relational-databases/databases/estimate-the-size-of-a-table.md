@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - pages [SQL Server], space
@@ -26,12 +25,12 @@ ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60d9214fff9ef50ebcaf506006a68ad486d2edbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916876"
 ---
 # <a name="estimate-the-size-of-a-table"></a>テーブル サイズの見積もり
   次の手順を実行して、テーブルにデータを格納するために必要な領域を見積もることができます。  
@@ -42,7 +41,7 @@ ms.locfileid: "48094082"
   
 3.  手順 1. と手順 2. で計算した値を加算します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース サイズの見積もり](estimate-the-size-of-a-database.md)   
  [ヒープ サイズの見積もり](estimate-the-size-of-a-heap.md)   
  [クラスター化インデックスのサイズの見積もり](estimate-the-size-of-a-clustered-index.md)   

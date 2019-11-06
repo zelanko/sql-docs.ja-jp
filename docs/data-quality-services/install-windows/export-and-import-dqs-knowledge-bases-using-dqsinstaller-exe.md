@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2b76eca15b4c435230c2449d79dd892fd9bd736a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: eec1b8258d888ef520e996912683b92fb259e1aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992029"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート
 
@@ -58,7 +57,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
   
  インポートしているナレッジ ベースと同じ名前のナレッジ ベースが [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] に既に存在する場合は、インポートされたナレッジ ベースの名前の後にアンダースコア (_) と 1 から始まる整数値が付加されます。 たとえば、"CompanyName" ドメインが重複する場合、インポートされたドメイン名は "CompanyName_1" になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [.dqs ファイルへのナレッジ ベースのエクスポート](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   

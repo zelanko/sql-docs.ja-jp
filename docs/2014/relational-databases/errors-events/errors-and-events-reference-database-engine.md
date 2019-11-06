@@ -14,21 +14,19 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 798660cb396ca34f856653a7e65fda13d4d023a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62870904"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>エラーおよびイベント リファレンス (データベース エンジン)
-  [イベントとエラー メッセージ センター](http://go.microsoft.com/fwlink/?LinkId=47660)のエラー メッセージについての主要なソースは、technet[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このページでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および他のマイクロソフト製品のエラー メッセージに関する情報をすばやく検索できます。また、メッセージのフルテキスト検索が可能で、製品、バージョン、ソース、数値識別子、シンボル識別子を指定して検索結果を絞り込むこともできます。 さらに、新しいインターフェイスは複数の言語をサポートしています。 このページには、頻繁に検出されるエラーの最新トラブルシューティング情報が表示されます。  
-  
- 将来的には、「イベントおよびエラー メッセージの検索」ページは拡張されてトラブルシューティングの内容がダウンロード可能な形式で利用できるようになり、インターネットに接続していないコンピューターからでもアクセスが可能になります。  
+
+このセクションには、さらに説明が必要な選択したデータベース エンジン エラー メッセージが含まれています。
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [データベース エンジンのイベントとエラー](データベースのエンジンのイベント-と-errors.md0  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエラー メッセージの形式について説明します。また、エラー メッセージの表示方法とアプリケーションにエラー メッセージを返す方法についても説明します。  
+ [データベース エンジンのイベントとエラー](database-engine-events-and-errors.md)の形式を記述[!INCLUDE[ssDE](../../includes/ssde-md.md)]エラー メッセージし、エラー メッセージを表示し、アプリケーションにエラー メッセージを返す方法について説明します。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエラー メッセージとその原因、および問題を解決するための対策について説明します。  
   
@@ -39,8 +37,8 @@ ms.locfileid: "48093962"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[SQL Server コミュニティ](http://go.microsoft.com/fwlink/?LinkId=42455)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティが管理するニュースグループおよびフォーラムにリンクしています。 ブログや Web サイトなど、コミュニティ情報のソースも一覧表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティは、回答が得られるという保証はありませんが、問題解決に役立てることができます。|  
-|[SQL Server デベロッパー センター コミュニティ](http://go.microsoft.com/fwlink/?LinkId=42456)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の開発者にとって役立つニュースグループ、フォーラム、およびその他のコミュニティ リソースに焦点を当てています。|  
-|[Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?linkid=16419)|この Web サイトを利用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート担当者と共にケースを調査できます。|  
+|[SQL Server コミュニティ](https://go.microsoft.com/fwlink/?LinkId=42455)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティが管理するニュースグループおよびフォーラムにリンクしています。 ブログや Web サイトなど、コミュニティ情報のソースも一覧表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティは、回答が得られるという保証はありませんが、問題解決に役立てることができます。|  
+|[SQL Server デベロッパー センター コミュニティ](https://go.microsoft.com/fwlink/?LinkId=42456)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の開発者にとって役立つニュースグループ、フォーラム、およびその他のコミュニティ リソースに焦点を当てています。|  
+|[Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink/?linkid=16419)|この Web サイトを利用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート担当者と共にケースを調査できます。|  
   
   

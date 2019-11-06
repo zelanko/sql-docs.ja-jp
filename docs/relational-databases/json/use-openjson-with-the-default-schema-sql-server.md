@@ -3,7 +3,7 @@ title: 既定のスキーマを使用する OPENJSON の使用 (SQL Server) | Mi
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94671b45c1edabf3ee706aa0a6c72118eb6b6a86
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cbf15d6ce6e0993d570f882bde8fb303a66ccaec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074222"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>既定のスキーマを使用する OPENJSON の使用 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **結果**  
   
-|Key|ReplTest1|  
+|Key|[値]|  
 |---------|-----------|  
 |NAME|John|  
 |姓|Doe|  
@@ -53,12 +52,12 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **結果**  
   
-|Key|ReplTest1|  
+|Key|[値]|  
 |---------|-----------|  
 |0|en-GB|  
-|1|en 英国|  
-|2|de AT|  
-|3|es AR|  
+|1|en-UK|  
+|2|de-AT|  
+|3|es-AR|  
 |4|sr という|  
   
 ## <a name="example---convert-json-to-a-temporary-table"></a>例 - JSON を一時テーブルに変換する  
@@ -86,7 +85,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **[結果]**  
   
-|Key|ReplTest1|型|  
+|Key|[値]|型|  
 |---------|-----------|----------|  
 |型|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
@@ -105,10 +104,6 @@ CROSS APPLY OPENJSON(SalesReasons)
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  
   
-### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
-  
-具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
-
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 
 SQL Server と Azure SQL Database に組み込まれている JSON のサポートの視覚的な紹介は、次のビデオをご覧ください。

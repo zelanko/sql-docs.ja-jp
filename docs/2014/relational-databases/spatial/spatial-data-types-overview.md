@@ -11,15 +11,15 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9ae74640557f7906ed237341d147926eb3296614
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018207"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014046"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
   空間データには 2 つの型があります。 `geometry` データ型は平面 (ユークリッド (平面地球)) データをサポートしています。 `geometry` データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 および SQL MM (ISO 標準) の両方に準拠しています。  
@@ -27,7 +27,7 @@ ms.locfileid: "51018207"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではそのほかに、`geography` データ型もサポートされています。このデータ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
   
 > [!IMPORTANT]  
->  空間データ型の機能強化を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [SQL Server コードネーム "Denali" の新しい空間機能](http://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードして参照してください。  
+>  空間データ型の機能強化を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [SQL Server コードネーム "Denali" の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードして参照してください。  
   
 ##  <a name="objects"></a> 空間データ オブジェクト  
  `geometry` データ型と `geography` データ型は、16 の空間データ オブジェクト (インスタンス型) をサポートしています。 ただし、 *インスタンス化可能*なインスタンス型、つまりデータベース内でインスタンスを作成して使用することができる (インスタンス化できる) インスタンス型は、そのうちの 11 種類のみです。 これらのインスタンスとして識別される、親データ型から派生するプロパティによって`Points`、 **LineStrings, CircularStrings**、 `CompoundCurves`、 `Polygons`、`CurvePolygons`または複数のとして`geometry`または`geography`インスタンス、`GeometryCollection`します。 `Geography` 型には、`FullGlobe` という追加のインスタンス型があります。  
@@ -99,9 +99,9 @@ ms.locfileid: "51018207"
   
  OGC の仕様の詳細については、以下を参照してください。  
   
--   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC の仕様、簡易機能アクセス Part 2 – SQL オプション](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC の仕様、簡易機能アクセス Part 2 - SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
 ##  <a name="circular"></a> 円弧セグメント  
@@ -123,7 +123,7 @@ ms.locfileid: "51018207"
   
  この例は、`LineString` インスタンスと `CircularString` インスタンスの両方を使用して上の二等辺三角形を格納する方法を示しています。  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;  
 DECLARE @g2 geometry;  
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);  
@@ -139,7 +139,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
   
  次のようなコード スニペットがあるとします。  
   
-```tsql  
+```sql  
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);  
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);  
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];  
@@ -149,7 +149,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  次の図は、各型の格納方法を示します (赤い線は`LineString``@g1`を示し、青い線の表示`CircularString``@g2`)。  
@@ -161,7 +161,7 @@ LS LengthCS Length
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString と CompoundCurve の比較  
  次のコード例は、`LineString` インスタンスと `CompoundCurve` インスタンスを使用して同じ図を格納する方法を示します。  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');  
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');  
@@ -171,7 +171,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  上の例では、`LineString` インスタンスまたは `CompoundCurve` インスタンスで図を格納できます。  次の例では、`CompoundCurve` を使用して円のスライスを格納します。  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
   
@@ -180,7 +180,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString と CompoundCurve の比較  
  次のコード例は、`CircularString` インスタンスに円のスライスを格納する方法を示します。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');  
 SELECT @g.ToString(), @g.STLength();  
@@ -188,13 +188,13 @@ SELECT @g.ToString(), @g.STLength();
   
  `CircularString` インスタンスを使用して円のスライスを格納するには、各直線セグメントで 3 つの点を使用する必要があります。  中間点が不明な場合は、中間点を計算するか、次のスニペットで示すように直線セグメントの端点を二重にする必要があります。  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
  `CompoundCurve` インスタンスは `LineString` コンポーネントおよび `CircularString` コンポーネントを許可して、認識される必要がある点が、円のスライスの直線セグメントの 2 点だけになるようにします。  このコード例は、`CompoundCurve` を使用して同じ図を格納する方法を示します。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');  
 SELECT @g.ToString(), @g.STLength();  

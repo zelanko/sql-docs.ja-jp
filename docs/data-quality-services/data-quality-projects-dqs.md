@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 37ef3f8bb8f1a39a9d1af06a8ee71735bf0cccbf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: ba706c62aff34dca72db032fdb09a0d8f5dea4f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992226"
 ---
 # <a name="data-quality-projects-dqs"></a>データ品質プロジェクト (DQS)
 
@@ -63,7 +62,7 @@ ms.locfileid: "52617912"
 |データ品質プロジェクトを開く、ロック解除する、名前を変更する、および削除する方法について説明します。|[データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]で Integration Services プロジェクトを開く方法について説明します。|[Data Quality Client で Integration Services プロジェクトを開く](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

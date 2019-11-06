@@ -18,16 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938938"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (プロパティ)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -51,14 +50,14 @@ IDENTITY [ (seed , increment) ]
  テーブルに読み込まれる最初の行に使用される値です。  
   
  *increment*  
- 既に読み込まれている前の行の ID 値に加算される増分の値です。  
+ 読み込まれている前の行の ID 値に加算される増分の値です。  
   
  seed と increment の両方を指定するか、またはどちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
 ## <a name="remarks"></a>Remarks  
  ID 列はキー値の生成に使用できます。 列の ID プロパティでは、次の点が保証されます。  
   
--   新しい値はそれぞれ、現在のシードと増分値に基づいて生成されます。  
+-   新しい値はそれぞれ、現在のシードと増分に基づいて生成されます。  
   
 -   特定のトランザクションの新しい各値は、テーブルの他の同時実行トランザクションとは異なります。  
   
@@ -72,13 +71,13 @@ IDENTITY [ (seed , increment) ]
   
 -   **値の再利用**: 特定のシードと増分値が指定された特定の ID プロパティでは、ID 値がエンジンによって再利用されることはありません。 特定の挿入ステートメントが失敗した場合または挿入ステートメントがロールバックされた場合、使用した ID 値は失われ、再度生成されることはありません。 その結果、それ以降の ID 値が生成されると、連続しない場合があります。  
   
- これらの制限事項が仕様に含まれているのは、パフォーマンスを向上するため、および多くの一般的な状況で許容されるためです。 これらの制限事項が原因で ID 値を使用できない場合は、アプリケーションを使用して、現在の値を保持する別のテーブルを作成し、テーブルと番号の割り当てへのアクセスを管理します。  
+ これらの制限事項が設計に含まれているのは、パフォーマンスを向上するため、および多くの一般的な状況で許容されるためです。 これらの制限事項が原因で ID 値を使用できない場合は、アプリケーションを使用して、現在の値を保持する別のテーブルを作成し、テーブルと番号の割り当てへのアクセスを管理します。  
   
- ID 列を持つテーブルがレプリケーション用にパブリッシュされている場合、使用されているレプリケーションの種類に適した方法で、ID 列を管理する必要があります。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
+ ID 列を持つテーブルがレプリケーション用に発行されている場合、使用されているレプリケーションの種類に適した方法で、ID 列を管理する必要があります。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
   
  ID 列は 1 つのテーブルにつき 1 つだけ作成できます。  
   
- メモリ最適化テーブルで、シードと増分値を 1, 1 に設定する必要があります。 シード値または増分を次のエラー結果が 1 以外の値に設定します。、シードと増分の値を使用するその他のよりも、1 は、メモリ最適化テーブルでサポートされていません。  
+ メモリ最適化テーブルで、シードと増分を 1,1 に設定する必要があります。 シードまたは増分を 1 以外に設定すると、次のエラーが発生します。1 以外のシードと増分の使用は、メモリ最適化テーブルではサポートされません。  
   
 ## <a name="examples"></a>使用例  
   

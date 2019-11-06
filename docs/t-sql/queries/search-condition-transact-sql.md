@@ -34,16 +34,15 @@ helpviewer_keywords:
 - logical operators [SQL Server], precedence
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027649"
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -118,20 +117,20 @@ ms.locfileid: "51699800"
  \<graph_search_pattern>  
  グラフの一致パターンを指定します。 この句の引数の詳細については、「[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)」を参照してください
  
- [NOT]  
+ NOT  
  述語によって指定されたブール式を否定します。 詳細については、「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
   
- [AND]  
+ AND  
  2 つの条件を結合し、両方の条件が真の場合に TRUE と評価します。 詳細については、「[AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)」を参照してください。  
   
- スイッチまたは  
+ OR  
  2 つの条件を結合し、少なくとも片方の条件が真の場合に TRUE と評価します。 詳細については、「[OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)」を参照してください。  
   
  \< predicate >  
  TRUE、FALSE、または UNKNOWN を返す式です。  
   
  *式 (expression)*  
- 列名、定数、関数、変数、スカラー サブクエリ、または 1 つ以上の演算子やサブクエリで接続された列名、定数、および関数の組み合わせです。 expression には CASE 式が含まれる場合もあります。  
+ 列名、定数、関数、変数、スカラー サブクエリ、または 1 つ以上の演算子やサブクエリで接続された列名、定数、関数の組み合わせです。 expression には CASE 式が含まれる場合もあります。  
   
 > [!NOTE]  
 >  Unicode ではない文字列定数と変数は、データベースの既定の照合順序に対応するコード ページを使用します。 コード ページの変換は、Unicode 以外の文字データのみで作業し、Unicode ではない文字データ型 **char**、**varchar**、および **text** を参照する場合に発生する可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、コード ページがデータベースの既定照合順序に対応するコード ページと異なる場合に、Unicode 以外の文字列定数および変数を、参照される列または COLLATE を使用して指定された列の照合順序に対応するコード ページに変換します。 [最適なマッピング](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)が見つかった場合、新しいコード ページで見つからない文字はすべて類似した文字に変換されます。それ以外の場合は、既定の置換文字 "?" に変換されます。  
@@ -190,7 +189,7 @@ ms.locfileid: "51699800"
  式がリストに含まれているかどうかに基づいて、式の検索を指定します。 検索式には定数または列名を指定できます。またリストには、一般的にはサブクエリが指定されますが、一連の定数も指定できます。 値のリストはかっこで囲んでください。 詳細については、「[IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)」を参照してください。  
   
  *subquery*  
- 制限付きの SELECT ステートメントと見なすことができます。また、SELECT ステートメントの中の \<query_expresssion> に似ています。 ORDER BY 句および INTO キーワードは使用できません。 詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
+ 制限付きの SELECT ステートメントと見なすことができます。また、SELECT ステートメントの中の \<query_expression> に似ています。 ORDER BY 句および INTO キーワードは使用できません。 詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
  ALL  
  比較演算子およびサブクエリと共に使用します。 サブクエリで取得されたすべての値が比較演算子の要件を満たしている場合は、\<predicate> に TRUE を返します。また、少なくとも 1 つの値が比較要件を満たしていない場合、またはサブクエリが外側のステートメントに行を返さなかった場合は、FALSE を返します。 詳細については、「[ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)」を参照してください。  

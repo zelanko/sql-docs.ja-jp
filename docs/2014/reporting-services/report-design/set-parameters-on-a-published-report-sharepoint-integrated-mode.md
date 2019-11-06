@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
@@ -13,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 82d5cba8d77e1580f4d493ddad46abcd7e1319e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105015"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>パブリッシュ済みレポートのパラメーターの設定 (Reporting Services の SharePoint 統合モード)
   パラメーター化されたレポートとは、レポートの実行時にデータのフィルター処理に使用する入力値を受け取るレポートです。 パラメーターは、レポートの作成時に定義します。 レポート定義でレポート パラメーターがどのように定義されているかによって、単一の値、複数の値、または動的な値を受け入れることができます。動的な値は、直前の選択に応じて変化します (たとえば、製品カテゴリを選択したとき、次の選択ではそのカテゴリの特定の製品を選択するなど)。 パラメーターには既定値を指定することもできます。フィルター選択したレポートを自動的に実行する場合に既定値を使用することも、既定値を別の値に置き換えることもできます。  
@@ -66,7 +65,7 @@ ms.locfileid: "48081358"
   
     1.  レポートの作成時に定義された既定値を使用するには、 **[レポート定義で指定されている値式を使用]** を選択します。 レポート定義で既定値が指定されていない場合、このオプションは使用できません。  
   
-    2.  レポート定義の既定値を置き換える値を指定するには、**[レポートの既定値をオーバーライド]** を選択します。 NULL 値が許可されるレポート パラメーターについては、 **[Null]** チェック ボックスをオンにすることで、そのパラメーターに基づくフィルター処理を無効にすることができます。  
+    2.  レポート定義の既定値を置き換える値を指定するには、 **[レポートの既定値をオーバーライド]** を選択します。 NULL 値が許可されるレポート パラメーターについては、 **[Null]** チェック ボックスをオンにすることで、そのパラメーターに基づくフィルター処理を無効にすることができます。  
   
     3.  レポートが処理される前に各ユーザーが値を指定できるようにするには、 **[パラメーターは既定値を持たない]** を選択します。 このオプションを選択した場合、ユーザーに値の指定を求めるための表示設定を行う必要があります。  
   

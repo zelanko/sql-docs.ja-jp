@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - refreshing data
@@ -13,12 +12,12 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3f04332033a1d9ea95c7716ab42871dbabb3288
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667238"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>レプリケーション モニターのデータの更新
   レプリケーション モニターでは、メイン ウィンドウと詳細ウィンドウ (メイン ウィンドウから起動するウィンドウ) を自動または手動で最新の情報に更新できます。 ウィンドウを手動で最新の情報に更新する場合は、F5 キーを押します。 既定では、メイン ウィンドウは 5 秒ごとに自動で最新の情報に更新されます。この更新頻度は、パブリッシャーごとにカスタマイズできます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48110112"
   
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>詳細ウィンドウを自動更新するように指定するには  
   
-1.  レプリケーション モニターで詳細ウィンドウを開きます。 以下に例を示します。  
+1.  レプリケーション モニターで詳細ウィンドウを開きます。 例 :  
   
     1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48110112"
   
     3.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
-2.  **[サブスクリプション \<SubscriptionName>]** 詳細ウィンドウで、**[アクション]** をクリックし、**[自動更新]** をクリックします。 更新頻度は、 **[パブリッシャーの設定]** ダイアログ ボックスの **[更新頻度]** 設定によって決まります。  
+2.  **[サブスクリプション \<SubscriptionName>]** 詳細ウィンドウで、 **[アクション]** をクリックし、 **[自動更新]** をクリックします。 更新頻度は、 **[パブリッシャーの設定]** ダイアログ ボックスの **[更新頻度]** 設定によって決まります。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../monitoring-replication.md)  

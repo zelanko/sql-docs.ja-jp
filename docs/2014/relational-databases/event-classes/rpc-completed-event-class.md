@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac6f4fe956c63edb217467b06f5c03f0d43368b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046767"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed イベント クラス
   RPC:Completed イベント クラスは、リモート プロシージャ コールが完了したことを示します。  
@@ -48,7 +47,7 @@ ms.locfileid: "48145472"
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ObjectName|`nvarchar`|参照されているオブジェクトの名前。|34|はい|  
-|Reads|`bigint`|リモート プロシージャ コールによって実行されたページ読み取りの回数。|16|はい|  
+|Reads|`bigint`|リモート プロシージャ コールによって実行されたページ読み取りの回数。|16|[はい]|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |RowCounts|`bigint`|RPC バッチに含まれる行数。|48|はい|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26||  
@@ -56,7 +55,7 @@ ms.locfileid: "48145472"
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`ntext`|リモート プロシージャ コールのテキスト。|1|はい|  
-|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
+|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|[はい]|  
 |Writes|`bigint`|リモート プロシージャ コールによって実行されたページ書き込みの回数。|17|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   

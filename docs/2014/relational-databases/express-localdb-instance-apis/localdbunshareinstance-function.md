@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBUnshareInstance
@@ -18,12 +16,12 @@ ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f06909209df45a350c5a7f30f81e471da07691db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128670"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 関数
   指定した SQL Server Express LocalDB インスタンスの共有を停止します。  

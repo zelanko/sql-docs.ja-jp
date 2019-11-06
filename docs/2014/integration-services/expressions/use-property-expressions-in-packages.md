@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e14b518f8b644d9d1b2670e90bbf27b09faf049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768855"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
   プロパティ式とは、実行時にプロパティの動的更新を可能にするためにプロパティに割り当てられた式のことです。 たとえば、プロパティ式を使用して、変数に格納された電子メール アドレスを挿入して、メール送信タスクで使用される [宛先] 行を更新できます。  
@@ -47,16 +46,16 @@ ms.locfileid: "48085732"
 > [!NOTE]  
 >  ユーザー定義変数およびシステム変数の名前では、大文字と小文字が区別されます。  
   
- 詳細については、「[Integration Services &#40;SSIS&#41; の式](integration-services-ssis-expressions.md)」を参照してください。  
+ 詳細については、「 [Integration Services (SSIS) 式](integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
  プロパティ式の重要な使い方として、パッケージを配置するインスタンスごとに構成をカスタマイズできます。 これにより、異なる環境に合わせてパッケージのプロパティを動的に更新できます。 たとえば、接続マネージャーの接続文字列に変数を割り当てるプロパティ式を作成し、パッケージが配置されたときに変数が更新されるようにしておくと、実行時に適切な接続文字列が使用されます。 パッケージの構成は、プロパティ式が評価される前に読み込まれます。  
   
  1 つのプロパティで使用できるプロパティ式は 1 つだけであり、1 つのプロパティ式は 1 つのプロパティだけに適用できます。 ただし、同じプロパティ式を複数個作成し、それらを異なるプロパティに割り当てることができます。  
   
- プロパティによっては、列挙子の値を使用して設定するものもあります。 プロパティ式で列挙子メンバーを参照するときは、その列挙子メンバーの表示名に相当する数値を使用する必要があります。 たとえば、プロパティ式が設定されている場合、`LoggingMode`プロパティから値を使用する、`DTSLoggingMode`列挙型、プロパティ式は、フレンドリ名ではなく 0、1、または 2 を使用する必要があります`Enabled`、 `Disabled`、または`UseParentSetting`。 詳細については、「 [Enumerated Constants in Property Expressions](enumerated-constants-in-property-expressions.md)」(プロパティ式における列挙定数) を参照してください。  
+ プロパティによっては、列挙子の値を使用して設定するものもあります。 プロパティ式で列挙子メンバーを参照するときは、その列挙子メンバーの表示名に相当する数値を使用する必要があります。 たとえば、プロパティ式で `LoggingMode` 列挙からの値を使用する `DTSLoggingMode` プロパティを設定する場合、プロパティ式では表示名 `Enabled`、`Disabled`、または `UseParentSetting` ではなく 0、1、または 2 を使用する必要があります。 詳細については、「 [Enumerated Constants in Property Expressions](enumerated-constants-in-property-expressions.md)」(プロパティ式における列挙定数) を参照してください。  
   
 ## <a name="property-expression-user-interface"></a>プロパティ式のユーザー インターフェイス  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] プロパティ式を管理するためには、一連のツールを提供します。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、プロパティ式を作成および管理するためのツール セットが用意されています。  
   
 -   タスク、For ループ コンテナー、および Foreach コンテナーのカスタム エディターにある **[式]** ページ。 **[式]** ページでは、式を編集したり、タスク、Foreach ループ、または For ループで使用されるプロパティ式のリストを表示できます。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48085732"
   
  ![プロパティ式のユーザー インターフェイス](../media/ssis-propertyexpressionui.gif "プロパティ式のユーザー インターフェイス")  
   
- **[プロパティ]** ウィンドウおよび **[式]** ページでは、 **[式]** コレクション レベルの参照ボタン ( **[…]** ) をクリックして **[プロパティ式エディター]** ダイアログ ボックスを開きます。 プロパティ式エディターでは、プロパティを式にマップし、プロパティ式を入力できます。 グラフィカルな式ツールを使用して式を作成してから検証する場合は、式レベルの参照ボタン ( **[…]** ) をクリックして **[式ビルダー]** ダイアログ ボックスを開き、式を作成または変更します。その後、必要に応じて式を検証します。  
+ **[プロパティ]** ウィンドウおよび **[式]** ページでは、 **[式]** コレクション レベルの参照ボタン **[...]** をクリックして **[プロパティ式エディター]** ダイアログ ボックスを開きます。 プロパティ式エディターでは、プロパティを式にマップし、プロパティ式を入力できます。 グラフィカルな式ツールを使用して式を作成してから検証する場合は、式レベルの参照ボタン **[...]** をクリックして **[式ビルダー]** ダイアログ ボックスを開き、式を作成または変更します。その後、必要に応じて式を検証します。  
   
  **[式ビルダー]** ダイアログ ボックスは、 **[プロパティ式エディター]** ダイアログ ボックスから開くこともできます。  
   
@@ -105,9 +104,9 @@ ms.locfileid: "48085732"
 |Foreach 列挙子|構成の読み込み後<br /><br /> 検証前<br /><br /> 実行前<br /><br /> ループの各列挙前|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Foreach ループでのプロパティ式の使用  
- 多くの場合、Foreach ループ コンテナー内部で使用される接続マネージャーの `ConnectionString` プロパティ値を設定するには、プロパティ式の実装が役立ちます。 この変数の値を使用して、プロパティ式がの値を更新、列挙子は、その現在の値をループの各反復処理での変数にマップ、された後、`ConnectionString`プロパティに動的にします。  
+ 多くの場合、Foreach ループ コンテナー内部で使用される接続マネージャーの `ConnectionString` プロパティ値を設定するには、プロパティ式の実装が役立ちます。 ループの各反復処理で列挙子の現在値が変数にマップされた後、プロパティ式でこの変数の値を使用して `ConnectionString` プロパティの値を動的に更新できます。  
   
- Foreach ループで使用されるファイル、複数のファイル、フラット ファイル、および複数フラット ファイル接続マネージャーの `ConnectionString` プロパティでプロパティ式を使用する場合は、いくつかの点について考慮する必要があります。 `MaxConcurrentExecutables` プロパティを 1 より大きな値または -1 に設定することにより、複数の実行可能ファイルが同時に実行されるようにパッケージを構成できます。 値が -1 の場合は、同時に実行できる実行可能ファイルの最大数が、プロセッサの総数に 2 を加えた数と等しいことを意味します。 実行可能ファイルを並列実行することに起因する不適切な結果を回避するには、値 `MaxConcurrentExecutables` を 1 に設定することをお勧めします。 場合`MaxConcurrentExecutables`の値を 1 に設定されていない、`ConnectionString`プロパティを保証できず、結果は予測できません。  
+ Foreach ループで使用されるファイル、複数のファイル、フラット ファイル、および複数フラット ファイル接続マネージャーの `ConnectionString` プロパティでプロパティ式を使用する場合は、いくつかの点について考慮する必要があります。 `MaxConcurrentExecutables` プロパティを 1 より大きな値または -1 に設定することにより、複数の実行可能ファイルが同時に実行されるようにパッケージを構成できます。 値が -1 の場合は、同時に実行できる実行可能ファイルの最大数が、プロセッサの総数に 2 を加えた数と等しいことを意味します。 実行可能ファイルを並列実行することに起因する不適切な結果を回避するには、値 `MaxConcurrentExecutables` を 1 に設定することをお勧めします。 `MaxConcurrentExecutables` を 1 に設定しないと、`ConnectionString` プロパティの値を保証できず、結果を予測できません。  
   
  たとえば、フォルダー内のファイルを列挙し、ファイル名を取得し、SQL 実行タスクを使用してテーブルに各ファイル名を挿入する Foreach ループを考えます。 `MaxConcurrentExecutables` を 1 に設定しないと、SQL 実行タスクの 2 つのインスタンスが同時にテーブルへの書き込みを行う場合、書き込みが競合する可能性があります。  
   
@@ -137,11 +136,11 @@ ms.locfileid: "48085732"
   
  Rows Processed:  
   
- NASDAQ: 7058  
+ NASDAQ:7058  
   
- NYSE: 3528  
+ NYSE:3528  
   
- AMEX: 1102  
+ AMEX:1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>プロセス実行タスクの Executable プロパティ用のプロパティ式  
  次のプロパティ式を使用すると、プロセス実行タスクの Executable プロパティを設定できます。 この式では、文字列リテラル、演算子、および関数の組み合わせを使用しています。 この式では、DATEPART 関数、GETDATE 関数、および条件演算子を使用しています。  
@@ -168,9 +167,9 @@ ms.locfileid: "48085732"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   [式/構成マーカー (CodePlex プロジェクト)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [式/構成マーカー (CodePlex プロジェクト)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   social.technet.microsoft.com の技術記事「 [SSIS 式の例](http://go.microsoft.com/fwlink/?LinkId=220761)」  
+-   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
 ## <a name="see-also"></a>参照  
  [パッケージで変数を使用する](../use-variables-in-packages.md)  

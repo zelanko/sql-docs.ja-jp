@@ -16,18 +16,17 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], data formats
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8bca6661ce0401cf5f24398e60f263a644584b7c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 9f05aed7606429bac984fa02782a921df0287291
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530556"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148819"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
     
 ##  <a name="top"></a>

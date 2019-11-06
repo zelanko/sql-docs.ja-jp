@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+manager: kfile
+ms.openlocfilehash: 8a68a050627d431570327822cccc60dd0aaf860b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107606"
 ---
 # <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
   レポート ビルダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48905816"
   
      レポート サーバーのアイテムを表示またはパブリッシュするために、レポート関連アイテムおよび操作に適用される権限セットがロールに分類されています。 レポート サーバー管理者が 1 つ以上のロールへの割り当てを行います。 たとえば、定義済みロール "閲覧者" に割り当てられると、レポート、フォルダー、モデル、およびリソースを表示できるようになります。  
   
-     レポート サーバーに接続したりレポート サーバーを参照したりすることができない場合は、レポート サーバー管理者に問い合わせてください。 詳細については、 [のドキュメント (](../security/reporting-services-security-and-protection.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     レポート サーバーに接続したりレポート サーバーを参照したりすることができない場合は、レポート サーバー管理者に問い合わせてください。 詳細については、 [のドキュメント (](../security/reporting-services-security-and-protection.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   SharePoint 統合モードで構成されたレポート サーバー  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48905816"
   
  共有するためにパブリッシュしたアイテムを他のユーザーが参照して見つけることができるようにするには、レポート サーバー管理者と共に、ユーザーがアクセスできるフォルダー編成を設定する必要があります。 アクセスは、レポートの作成とパブリッシュされたレポートの実行に利用できる必要があります。  
   
- 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [ロールと権限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
@@ -95,7 +94,7 @@ ms.locfileid: "48905816"
   
  レポートのデザイン時は、データセット クエリの実行とレポートのプレビューに資格情報が使用されます。 実行時は、レポートの実行とクエリ結果のキャッシュに資格情報が使用されます。 共有データセット クエリ結果を個別にキャッシュすることもできます。 デザイン時の資格情報と実行時の資格情報は異なる場合があります。 詳細については、「 [レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)」を参照してください。  
   
- データのセキュリティ保護の詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ データのセキュリティ保護の詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -115,13 +114,13 @@ ms.locfileid: "48905816"
   
 -   有効な値を提供する場合を除き、クエリ パラメーターに基づいた、型が **Text** のパラメーターは使用しないでください。 使用可能な値の一覧を使用すると、ユーザーが有効な値しか選択できないようにするのに役立ちます。 使用可能な値の一覧を使用しない場合は、ユーザーが入力できる値を制限できません。  
   
--   使用しないでください、グローバルな [& UserID] プライベート データをセキュリティで保護します。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、 [のドキュメント (](../url-access-parameter-reference.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   個人データをセキュリティで保護するためにグローバルな [&UserID] を使用しないでください。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、 [のドキュメント (](../url-access-parameter-reference.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- アイテムがレポート サーバーにパブリッシュされた後に、レポート サーバー管理者は、ロールベースのセキュリティまたはフォルダーおよびアイテム レベルのセキュリティを割り当てることでアイテムをセキュリティで保護できます。 詳細については、 [のドキュメント (](../security/secure-reports-and-resources.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ アイテムがレポート サーバーにパブリッシュされた後に、レポート サーバー管理者は、ロールベースのセキュリティまたはフォルダーおよびアイテム レベルのセキュリティを割り当てることでアイテムをセキュリティで保護できます。 詳細については、 [のドキュメント (](../security/secure-reports-and-resources.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

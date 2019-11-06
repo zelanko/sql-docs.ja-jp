@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
@@ -17,12 +16,12 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072588"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>ユーザー定義階層の追加または削除
   ディメンションでのユーザー定義階層の追加と削除は、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーにある **[ディメンション構造]** タブで実行します。  
@@ -54,16 +53,16 @@ ms.locfileid: "48183982"
   
 -   **[ディメンション構造]** タブの **[階層]** ペインで、削除するユーザー定義階層をクリックします。 ツール バーの **[削除]** をクリックします。  
   
-     - または -  
+     - \- または -  
   
 -   **[階層]** ペインで、削除するユーザー定義階層を右クリックし、 **[削除]** をクリックします。  
   
-     - または -  
+     - \- または -  
   
 -   ユーザー定義階層をデザイン画面外にドラッグします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ユーザー階層](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [ユーザー定義階層を作成します。](user-defined-hierarchies-create.md)  
+ [ユーザー定義階層の作成](user-defined-hierarchies-create.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: アクティブなセカンダリ - セカンダリ レプリカでのバックアップ - AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのセカンダリ レプリカにサポートされているバックアップをオフロードする
+description: Always On 可用性グループのセカンダリ レプリカにバックアップをオフロードする場合に、サポートされているさまざまなバックアップの種類について学習します。
+ms.custom: seodec18
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7243fe3bece2241e1b6bb48e911b4952bc93c823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834460"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807429"
 ---
-# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ: セカンダリ レプリカでのバックアップ (AlwaysOn 可用性グループ)
+# <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>可用性グループのセカンダリ レプリカにサポートされているバックアップをオフロードする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、セカンダリ レプリカでのバックアップ操作の実行をサポートしています。 バックアップ操作では、(バックアップ圧縮により) I/O と CPU に大きな負荷がかかる場合があります。 同期済みまたは同期中のセカンダリ レプリカへバックアップをオフロードすることで、ワークロードが最も多いプライマリ レプリカをホストするサーバー インスタンスでリソースを使用できるようにします。  
@@ -33,17 +33,14 @@ ms.locfileid: "47834460"
 > [!NOTE]  
 >  可用性グループのプライマリ データベースとセカンダリ データベースでは、RESTORE ステートメントを使用できません。  
   
--   [サポートされるバックアップの種類](#SupportedBuTypes)  
-  
--   [バックアップ ジョブを実行する場所の構成](#WhereBuJobsRun)  
-  
--   [関連タスク](#RelatedTasks)  
-  
+ 
 ##  <a name="SupportedBuTypes"></a> セカンダリ レプリカでサポートされるバックアップの種類  
   
 -   セカンダリ レプリカで実行されたときに**BACKUP DATABASE** でサポートされるのは、データベース、ファイル、またはファイル グループのコピーのみの完全バックアップだけです。 コピーのみのバックアップはログ チェーンには影響しません。また、コピーのみのバックアップを実行しても、差分ビットマップは消去されません。  
   
--   差分バックアップは、セカンダリ レプリカではサポートされていません。  
+-   差分バックアップは、セカンダリ レプリカではサポートされていません。
+
+-   同時バックアップ (プライマリ レプリカでトランザクション ログ バックアップを実行しながら、セカンダリ レプリカでデータベースの完全バックアップを実行するなど) は、現在サポートされていません。 
   
 -   **BACKUP LOG** でサポートされるのは通常のログ バックアップだけです (セカンダリ レプリカでのログ バックアップでは、COPY_ONLY オプションはサポートされていません)。  
   
@@ -56,9 +53,9 @@ ms.locfileid: "47834460"
 ##  <a name="WhereBuJobsRun"></a> バックアップ ジョブを実行する場所の構成  
  セカンダリ レプリカでバックアップを実行してプライマリ運用サーバーからバックアップ ワークロードをオフロードすると、非常に大きな利点があります。 ただし、セカンダリ レプリカでバックアップを実行する場合は、バックアップ ジョブを実行する場所を決定するプロセスは非常に複雑です。 これに対処するには、バックアップ ジョブを実行する場所を次のように構成します。  
   
-1.  可用性グループを構成して、バックアップを優先的に実行する可用性レプリカを指定します。 詳細については、「[CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)」または「[ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)」の *AUTOMATED_BACKUP_PREFERENCE* パラメーターと *BACKUP_PRIORITY* パラメーターを参照してください。  
+1.  可用性グループを構成して、バックアップを優先的に実行する可用性レプリカを指定します。 詳細については、「 *CREATE AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;* 」または「 *ALTER AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;* 」の [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) または [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)であることが必要です。  
   
-2.  バックアップの実行の候補である可用性レプリカをホストするすべてのサーバー インスタンス上のすべての可用性データベースに対して、スクリプト化されたバックアップ ジョブを作成します。 詳細については、「 [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)であることが必要です。  
+2.  バックアップの実行の候補である可用性レプリカをホストするすべてのサーバー インスタンス上のすべての可用性データベースに対して、スクリプト化されたバックアップ ジョブを作成します。 詳細については、「[可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)」の「補足情報: セカンダリ レプリカでバックアップを構成した後」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **セカンダリ レプリカでバックアップを構成するには**  

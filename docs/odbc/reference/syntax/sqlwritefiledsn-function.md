@@ -19,34 +19,33 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b8c490da7ecfe0230eaad5f98da1c66293f99eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b1ce34074a2326d17a199537b308a9a670d8163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039431"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 関数
 **準拠**  
- バージョンが導入されています。 ODBC 3.0  
+ バージョンが導入されました。ODBC 3.0  
   
  **概要**  
  **SQLWriteFileDSN**ファイル DSN に情報を書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLWriteFileDSN(  
-     LPCSTR     lpszFileName,  
-     LPCSTR     lpszAppName,  
-     LPCSTR     lpszKeyName,  
-     LPCSTR     lpszString);  
+     LPCSTR     lpszFileName,  
+     LPCSTR     lpszAppName,  
+     LPCSTR     lpszKeyName,  
+     LPCSTR     lpszString);  
 ```  
   
 ## <a name="arguments"></a>引数  
- *場合*  
+ *lpszFileName*  
  [入力]ファイル DSN の名前へのポインター。 DSN の拡張機能は、DSN の拡張機能がまだないすべてのファイル名に追加されます。  
   
  *lpszAppName*  

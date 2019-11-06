@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Class
@@ -17,20 +16,20 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dfcef8a18d1d3fae45d8ebabe85da1bf5d3fbbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 2a7956d71bf9cf477049864c5f4eb341fd276a48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097339"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting クラス
   レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。  
   
- この種類の全メンバーの一覧は、次を参照してください。 [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)します。  
+ この種類の全メンバーの一覧については、「 [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +45,7 @@ public class MSReportServer_ConfigurationSetting
  この型の public static (**では** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
   
 ## <a name="example"></a>例  
- このコードを実行するには、\<*servername*> を実際のサーバー名に置き換えます。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、内の各プロパティを反復処理、 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)クラスは、各プロパティと、コンソールには、その値の名前を出力します。  
+ このコードを実行するには、\<*servername*> を実際のサーバー名に置き換えます。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
   
 ```vb  
 Imports System  
@@ -170,7 +169,7 @@ class Class1
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **プラットフォーム:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  

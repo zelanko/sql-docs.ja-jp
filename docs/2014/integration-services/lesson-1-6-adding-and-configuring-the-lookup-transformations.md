@@ -1,24 +1,23 @@
 ---
-title: '手順 6 : 参照変換の追加と構成 | Microsoft Docs'
+title: 手順 6:追加して、参照変換の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c2bcdfc80c056b9d9a29df4195e136d5b00d31f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891550"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6 : 参照変換の追加と構成
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6:参照変換の追加と構成
   ソース ファイルからデータを取り出すフラット ファイルを構成したら、次は、 **CurrencyKey** および **DateKey**の値を取得する際に必要な参照変換を定義します。 参照変換は、指定の入力列のデータを参照データセットの列に結合することにより、参照を実行します。 参照データセットは、既存のテーブル、既存のビュー、新しいテーブル、または SQL ステートメントの結果のいずれかになります。 このチュートリアルでは、参照変換は、OLE DB 接続マネージャーを使用して、参照データセットのソースとなるデータを含むデータベースに接続します。  
   
 > [!NOTE]  
@@ -125,16 +124,16 @@ ms.locfileid: "48206784"
   
 9. **[詳細設定]** ページで、キャッシュ オプションを確認します。  
   
-10. **[OK]** をクリックして、**[データ フロー]** デザイン画面に戻ります。  
+10. **[OK]** をクリックして、 **[データ フロー]** デザイン画面に戻ります。  
   
 11. [Lookup Date Key] 変換を右クリックし、 **[プロパティ]** をクリックします。  
   
 12. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されて**英語 (米国)** と**DefaultCodePage**プロパティに設定されて**1252**。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 7: OLE DB 変換先の追加と構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [手順 7:追加して、OLE DB 変換先の構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>参照  
- [参照変換](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>関連項目  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

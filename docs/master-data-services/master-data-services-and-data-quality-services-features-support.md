@@ -5,19 +5,17 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f35ed05e9fb305a4555061a0938ac282f7c6f912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: b5aa5a429d30a6bfa010ba2b1caa5513ffca88fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985296"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>マスター データ サービスとデータ品質サービス機能のサポート
 
@@ -25,11 +23,12 @@ ms.locfileid: "47855160"
 
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-and-data-quality-services"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] とデータ品質サービス
+
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーション|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
-|Data Quality Services|[ユーザー アカウント制御]||||||はい|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース|はい||||||はい|  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーション|はい||||||はい|  
+|Data Quality Services|はい||||||はい|  
 
 
 

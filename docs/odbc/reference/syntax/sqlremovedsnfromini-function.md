@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 396c1b8c2e7ef3b407253fd0fbde04de34065ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024532"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 関数
 **準拠**  
- ODBC のバージョンが導入されました: 1.0  
+ バージョンが導入されました。ODBC 1.0  
   
  **概要**  
  **SQLRemoveDSNFromIni**システム情報から、データ ソースを削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>引数  

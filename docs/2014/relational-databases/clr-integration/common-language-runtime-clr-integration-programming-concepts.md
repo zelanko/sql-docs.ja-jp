@@ -16,12 +16,12 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fb0616503af2cb4da30fd69a98deaf635095b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922556"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR (共通言語ランタイム) 統合のプログラミング概念
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、.NET Framework for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows の CLR (共通言語ランタイム) コンポーネントが統合されました。 つまり、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# などの .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数、ユーザー定義集計、およびストリーミング テーブル値関数を記述できるようになります。  
@@ -29,7 +29,7 @@ ms.locfileid: "48057682"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] における CLR プログラミングのためのコア機能は、Microsoft.SqlServer.Server 名前空間に存在します。 ただし、Microsoft.SqlServer.Server 名前空間については、.NET Framework SDK ドキュメントをご覧ください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックには、このドキュメントが含まれていません。  
   
 > [!IMPORTANT]  
->  既定では、.NET Framework は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と共にインストールされますが、.NET Framework SDK はインストールされません。 SDK がコンピューターにインストールされていない場合やオンライン ブックに含まれていない場合は、このセクションにある SDK のコンテンツへのリンクが機能しません。 .NET Framework SDK をインストールしてください。 インストールされると、SDK を追加、オンライン ブック コレクションと目次の指示に従って[、.NET Framework SDK をインストールする](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)します。  
+>  既定では、.NET Framework は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と共にインストールされますが、.NET Framework SDK はインストールされません。 SDK がコンピューターにインストールされていない場合やオンライン ブックに含まれていない場合は、このセクションにある SDK のコンテンツへのリンクが機能しません。 .NET Framework SDK をインストールしてください。 インストールされると、SDK を追加、オンライン ブック コレクションと目次の指示に従って[、.NET Framework SDK をインストールする](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)します。  
   
  次の表は、このセクションのトピックを一覧表示します。  
   
@@ -65,6 +65,6 @@ ms.locfileid: "48057682"
   
 ## <a name="see-also"></a>参照  
  [アセンブリ&#40;データベース エンジン&#41;](assemblies-database-engine.md)   
- [.NET Framework SDK のインストール](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [.NET Framework SDK のインストール](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

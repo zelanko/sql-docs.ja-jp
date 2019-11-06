@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_account_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_update_account_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68bd628eb791e7af102c6689e22b30ebd5bad73c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670470"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305113"
 ---
-# <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
+# <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   既存のデータベース メール アカウントの情報を変更します。  
@@ -53,55 +52,41 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@account_id** =] *account_id*  
- 更新するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 少なくとも 1 つの*account_id*または*account_name*指定する必要があります。 両方が指定されると、プロシージャによってアカウントの名前が変更されます。  
+`[ @account_id = ] account_id` 更新するアカウント ID。 *account_id*は**int**,、既定値は NULL です。 少なくとも1つの*account_id*または*account_name*を指定する必要があります。 両方が指定されている場合、プロシージャはアカウントの名前を変更します。  
   
- [ **@account_name** =] **'***account_name***'**  
- 更新するアカウントの名前を指定します。 *account_name*は**sysname**、既定値は NULL です。 少なくとも 1 つの*account_id*または*account_name*指定する必要があります。 両方が指定されると、プロシージャによってアカウントの名前が変更されます。  
+`[ @account_name = ] 'account_name'` 更新するアカウントの名前。 *account_name*は**sysname**,、既定値は NULL です。 少なくとも1つの*account_id*または*account_name*を指定する必要があります。 両方が指定されている場合、プロシージャはアカウントの名前を変更します。  
   
- [ **@email_address** =] **'***email_address***'**  
- メッセージ送信元の新しい電子メール アドレスを指定します。 このアドレスにはインターネット電子メール アドレスを指定する必要があります。 アドレスのサーバー名は、データベース メールがこのアカウントからメールを送信する場合に使用するサーバーです。 *email_address*は**nvarchar (128)**、既定値は NULL です。  
+`[ @email_address = ] 'email_address'` メッセージの送信先となる新しい電子メールアドレス。 このアドレスは、インターネット電子メールアドレスである必要があります。 アドレスのサーバー名は、このアカウントからメールを送信するためにデータベースメール使用するサーバーです。 *email_address*は**nvarchar (128)** ,、既定値は NULL です。  
   
- [ **@display_name** =] **'***display_name***'**  
- このアカウントから送信する電子メール メッセージの新しい表示名を指定します。 *display_name*は**nvarchar (128)**、既定値はありません。  
+`[ @display_name = ] 'display_name'` このアカウントからの電子メールメッセージに使用する新しい表示名。 *display_name*は**nvarchar (128)** ,、既定値はありません。  
   
- [ **@replyto_address** =] **'***replyto_address***'**  
- このアカウントから送信する電子メール メッセージの [返信先] ヘッダーで使用する新しいアドレスを指定します。 *replyto_address*は**nvarchar (128)**、既定値はありません。  
+`[ @replyto_address = ] 'replyto_address'` このアカウントからの電子メールメッセージの返信先ヘッダーで使用する新しいアドレス。 *replyto_address*は**nvarchar (128)** ,、既定値はありません。  
   
- [ **@description** =] **'***説明***'**  
- アカウントの新しい説明を指定します。 *説明*は**nvarchar (256)**、既定値は NULL です。  
+`[ @description = ] 'description'` アカウントの新しい説明です。 *説明*は**nvarchar (256)** ,、既定値は NULL です。  
   
- [ **@mailserver_name** =] **'***server_name***'**  
- このアカウントに使用する SMTP メール サーバーの新しい名前を指定します。 実行するコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解決できる必要があります、 *server_name* IP アドレス。 *server_name*は**sysname**、既定値はありません。  
+`[ @mailserver_name = ] 'server_name'` このアカウントに使用する SMTP メールサーバーの新しい名前。 @No__t-0 を実行するコンピューターは、 *server_name*を IP アドレスに解決できる必要があります。 *server_name*は**sysname**,、既定値はありません。  
   
- [ **@mailserver_type** =] **'***server_type***'**  
- メール サーバーの新しい種類を指定します。 *server_type*は**sysname**、既定値はありません。 値しか **'SMTP'** はサポートされています。  
+`[ @mailserver_type = ] 'server_type'` メールサーバーの新しい種類。 *server_type*は**sysname**,、既定値はありません。 **' SMTP '** の値のみがサポートされています。  
   
- [ **@port** =] *port_number*  
- メール サーバーの新しいポート番号を指定します。 *port_number*は**int**、既定値はありません。  
+`[ @port = ] port_number` メールサーバーの新しいポート番号。 *port_number*は**int**,、既定値はありません。  
   
- [ **@timeout** =] **'***タイムアウト***'**  
- 単一の電子メール メッセージの SmtpClient.Send のタイムアウト パラメーターを指定します。 *タイムアウト*は**int** (秒) で、既定値はありません。  
+SmtpClient の `[ @timeout = ] 'timeout'` のタイムアウトパラメーター。1つの電子メールメッセージを送信します。 *タイムアウト*は秒単位の**int**で、既定値はありません。  
   
- [ **@username** =] **'***username***'**  
- メール サーバーへのログオンに使用する新しいユーザー名を指定します。 *ユーザー名*は**sysname**、既定値はありません。  
+`[ @username = ] 'username'` メールサーバーへのログオンに使用する新しいユーザー名。 *ユーザー名*は**sysname**で、既定値はありません。  
   
- [ **@password** =] **'***パスワード***'**  
- メール サーバーへのログオンに使用する新しいパスワードを指定します。 *パスワード*は**sysname**、既定値はありません。  
+`[ @password = ] 'password'` メールサーバーへのログオンに使用する新しいパスワード。 *パスワード*は**sysname**,、既定値はありません。  
   
- [ **@use_default_credentials** =] use_default_credentials  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用してメールを SMTP サーバーに送信するかどうかを指定します。 **use_default_credentials**ビットは、既定値はありません。 データベース メールでの資格情報を使用してこのパラメーターが 1 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 データベース メールを使用してこのパラメーターが 0 の場合、 **@username**と**@password** SMTP サーバーでの認証。 場合**@username**と**@password** NULL は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。  
+`[ @use_default_credentials = ] use_default_credentials` [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールは [!INCLUDE[ssDE](../../includes/ssde-md.md)] の資格情報を使用します。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に **\@username**と **\@password**を使用します。 **@No__t-1 ユーザー名**と **\@PASSWORD**が NULL の場合、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に相談してください。  
   
- [ **@enable_ssl** =] enable_ssl  
- データベース メールで SSL (Secure Sockets Layer) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**ビットは、既定値はありません。  
+`[ @enable_ssl = ] enable_ssl` データベースメール Secure Sockets Layer (SSL) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**はビット,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- アカウント名とアカウント ID の両方を指定すると、ストアド プロシージャではアカウント情報の更新だけでなく、アカウント名の変更も行われます。 アカウント名の変更は、アカウント名のエラーを修正する場合に利用できます。  
+ アカウント名とアカウント id の両方を指定すると、アカウントの情報を更新するだけでなく、アカウント名も変更されます。 アカウント名の変更は、アカウント名のエラーを修正する場合に利用できます。  
   
- ストアド プロシージャ**sysmail_update_account_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_update_account_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
@@ -109,7 +94,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. アカウントの情報を変更する  
- 次の例は、アカウントを更新`AdventureWorks Administrator`で、 **msdb**データベース。 アカウントの情報は、指定した値に設定されます。  
+ 次の例では、 **msdb**データベースのアカウント `AdventureWorks Administrator` に更新します。 アカウントの情報は、指定された値に設定されます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  
@@ -129,7 +114,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ```  
   
 ### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. アカウントの名前とアカウントの情報を変更する  
- 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前が`Backup Mail Server`します。  
+ 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前が `Backup Mail Server` です。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  
@@ -149,9 +134,9 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベースメールアカウント   を作成し](../../relational-databases/database-mail/create-a-database-mail-account.md)ます。  
+ [ストアドプロシージャ&#40;のデータベースメール transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

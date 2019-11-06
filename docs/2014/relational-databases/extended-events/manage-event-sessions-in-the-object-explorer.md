@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705518"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
   このトピックでは、拡張イベントに影響する **オブジェクト エクスプローラー** で実行できる操作について説明します。  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>拡張イベント セッション テンプレートのインポート  
  **オブジェクト エクスプローラー**を使用して、拡張イベント セッションのテンプレートをインポートすることができます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスからエクスポートされたテンプレートからセッションを作成する場合に、この操作を行うことができます。  
   
- 拡張イベント セッションにインポートするには、必要ないる必要があります`ALTER ANY EVENT SESSION`アクセス許可。  
+ 拡張イベント セッションをインポートするには、`ALTER ANY EVENT SESSION` 権限が必要です。  
   
  テンプレート ファイルをインポートする前に、ファイルが信頼できるソースからであるかどうかを確認します。 テンプレート ファイルは、NTFS ファイル システムを使用し、その情報を表示する権限を持つユーザーのみにアクセスが制限されている場所に保存する必要があります。  
   
@@ -97,7 +96,7 @@ STATE = STOP
   
 4.  **[テンプレート]** ボックスを展開します。  
   
-5.  **[\<File From …>Open]** をクリックし、インポートするセッション (XML ファイル) を参照します。  
+5.  **[\<File From ...>Open]** をクリックし、インポートするセッション (XML ファイル) を参照します。  
   
  **[セッション]** ノードにセッションが表示されます。 既定では、セッションは開始されていません。  
   

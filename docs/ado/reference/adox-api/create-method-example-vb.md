@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7532cc78f05271b6a3b3db8f6e74040b9ac50535
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 622b2ab47793fe55d2ecf6bbe65c0b9ccf544589
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966657"
 ---
 # <a name="create-method-example-vb"></a>Create メソッドの例 (VB)
 次のコードは、新しい Microsoft Jet データベースを作成する方法を示します、[作成](../../../ado/reference/adox-api/create-method-adox.md)メソッド。  
@@ -29,7 +28,7 @@ ms.locfileid: "47601941"
 Attribute VB_Name = "Create"  
 Option Explicit  
   
-' BeginCreateDatabseVB  
+' BeginCreateDatabaseVB  
 Sub CreateDatabase()  
     On Error GoTo CreateDatabaseError  
   
@@ -50,6 +49,6 @@ End Sub
 ' EndCreateDatabaseVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create メソッド (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

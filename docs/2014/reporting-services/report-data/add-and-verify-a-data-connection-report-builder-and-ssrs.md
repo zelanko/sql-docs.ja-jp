@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107517"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>データ接続またはデータ ソースの追加および確認 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーから共有データ ソースを追加することも、レポートで使用される埋め込みデータ ソースを作成することもできます。 レポート デザイナーでは、共有データ ソースまたは埋め込みデータ ソースを作成して、レポート サーバーに配置することができます。  
@@ -32,7 +31,7 @@ ms.locfileid: "48082019"
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>共有データ ソースの参照を作成するには  
   
-1.  ツール バーのレポート データ ペインで、**[新規作成]**、**[データ ソース]** の順にクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  ツール バーのレポート データ ペインで、 **[新規作成]** 、 **[データ ソース]** の順にクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  **[名前]** ボックスに、データ ソースの名前を入力します。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48082019"
   
 ### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
   
-1.  ツール バーのレポート データ ペインで、**[新規作成]**、 **[データ ソース]** の順にクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  ツール バーのレポート データ ペインで、 **[新規作成]** 、 **[データ ソース]** の順にクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  **[名前]** ボックスにデータ ソースの名前を入力するか、既定値をそのまま使用します。  
   
@@ -59,9 +58,9 @@ ms.locfileid: "48082019"
   
     2.  次の選択肢の 1 つを使用して、接続文字列を指定します。  
   
-    -   **[接続文字列]** ボックスに接続文字列を直接入力します。 接続文字列の例の一覧は、次を参照してください。[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)します。  
+    -   **[接続文字列]** ボックスに接続文字列を直接入力します。 接続文字列の例の一覧については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
-    -   式 (**[fx]** ) ボタンをクリックして、接続文字列を評価する式を作成します。 **[式]** ダイアログ ボックスで、式ペインに式を直接入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    -   式 ( **[fx]** ) ボタンをクリックして、接続文字列を評価する式を作成します。 **[式]** ダイアログ ボックスで、式ペインに式を直接入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     -   **[構築]** をクリックして、手順 2 で選択したデータ ソースの種類の **[接続のプロパティ]** ダイアログ ボックスを開きます。  
   
@@ -81,9 +80,9 @@ ms.locfileid: "48082019"
   
 2.  **[接続テスト]** をクリックします。  
   
-3.  接続に成功すると、"接続が正常に作成されました" というメッセージが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  接続が成功した場合は、次のメッセージが表示されます。「接続が正常に作成します。」 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  接続に成功しなかった場合は、"データ ソースに接続できません。" というメッセージが表示されます。  
+4.  接続が成功しなかった場合は、次のメッセージが表示されます。「データ ソースに接続できません。」  
   
 5.  **[詳細]** をクリックし、情報に基づいて問題を修正します。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48082019"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

@@ -10,12 +10,12 @@ ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7125a7b90a8b47c3c9a71a05dd724b452170a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62778913"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャでの OR 演算子の実装
   ネイティブ コンパイル ストアド プロシージャ内のクエリ述語では、OR 演算子はサポートされません。 ネイティブ コンパイル ストアド プロシージャ内のクエリ述語では NOT 演算子もサポートされていないため、同等の論理演算子を単独で使用しても、OR 演算子の効果をシミュレートすることはできません。 ただし、OR 演算子の効果は、メモリ最適化テーブル変数を使用してシミュレートすることができます。  
@@ -46,7 +46,7 @@ ms.locfileid: "48110422"
   
 5.  メモリ最適化テーブル変数の内容をクエリの結果として使用します。  
   
- 次の例では、[!INCLUDE[hek_2](../includes/hek-2-md.md)] 用に更新された AdventureWorks2012 データベースのテーブルを使用します。 このサンプルでは、goto ファイルをダウンロードする[AdventureWorks データベース-2012、2008 r2 および 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587)します。 適用する[!INCLUDE[hek_2](../includes/hek-2-md.md)]に移動して、コード サンプルを AdventureWorks2012 [SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491)します。  
+ 次の例では、[!INCLUDE[hek_2](../includes/hek-2-md.md)] 用に更新された AdventureWorks2012 データベースのテーブルを使用します。 このサンプルでは、goto ファイルをダウンロードする[AdventureWorks データベース - 2012、2008 r2 および 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587)します。 適用する[!INCLUDE[hek_2](../includes/hek-2-md.md)]に移動して、コード サンプルを AdventureWorks2012 [SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491)します。  
   
  データベースに、次のストアド プロシージャを追加します。 ここでは、ネイティブ コンパイルを使用するように、このストアド プロシージャを変換します。  
   
@@ -161,7 +161,7 @@ GO
   
 5.  メモリ最適化テーブル変数の内容をクエリの結果として使用します。  
   
- 次の例では、[!INCLUDE[hek_2](../includes/hek-2-md.md)] 用に更新された AdventureWorks2012 データベースのテーブルを使用します。 このサンプルでは、goto ファイルをダウンロードする[AdventureWorks データベース-2012、2008 r2 および 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587)します。 適用する[!INCLUDE[hek_2](../includes/hek-2-md.md)]に移動して、コード サンプルを AdventureWorks2012 [SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491)します。  
+ 次の例では、[!INCLUDE[hek_2](../includes/hek-2-md.md)] 用に更新された AdventureWorks2012 データベースのテーブルを使用します。 このサンプルでは、goto ファイルをダウンロードする[AdventureWorks データベース - 2012、2008 r2 および 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587)します。 適用する[!INCLUDE[hek_2](../includes/hek-2-md.md)]に移動して、コード サンプルを AdventureWorks2012 [SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491)します。  
   
  データベースに、次のストアド プロシージャを追加します。 ここでは、ネイティブ コンパイルを使用するように、このストアド プロシージャを変換します。 この例では、INNER JOIN 条件を使用します。  
   
@@ -245,7 +245,7 @@ GO
 ## <a name="side-effects"></a>副作用  
  WHERE 句や JOIN 条件に複数の OR 演算子が含まれている場合は、動作をシミュレートするために実行する必要があるクエリの数は、指数関数的に増加する可能性があります。 その結果、メモリ最適化テーブル変数の使用が原因で、クエリのパフォーマンスが低下し、メモリの使用量が増加する可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   
   

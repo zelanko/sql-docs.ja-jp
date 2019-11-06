@@ -2,19 +2,18 @@
 title: Analytics Platform System のハードウェア コンポーネント |Microsoft Docs
 description: Analytics Platform System (APS) では、スケーラブルなコンポーネントを使用するので、ビジネス ニーズに合わせて処理とストレージの量を正しくを購入することができます。 APS を注文するときに、これらのコアのハードウェア コンポーネントの組み合わせを必要があります。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8cf7fd100f72e14b09ea086a1ebff5140a9068a4
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 0f7f3bd8f4d5500a59675d40ff7f50d1afd9a199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960888"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Analytics Platform System のハードウェア コンポーネント
 

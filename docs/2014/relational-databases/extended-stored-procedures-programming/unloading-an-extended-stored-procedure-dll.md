@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], unloading
@@ -15,12 +13,12 @@ ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 148a94bc0413a7fa2a7320599a612b0dcb09d5a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2772c8d6470f9ad6eb5e8b7cadb6dedd136bd48b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137583"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>拡張ストアド プロシージャ DLL のアンロード
     
@@ -33,7 +31,7 @@ ms.locfileid: "48207958"
 DBCC xp_hello(FREE)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DBCC dllname &#40;FREE&#41; &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dllname-free-transact-sql)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6def0344726c2b4427d12b548e60d3b68135369d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066509"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>テーブルと列 (SSAS テーブル)
   テーブルのインポート ウィザードを使用してモデルにテーブルとデータを追加したら、新しいデータ列の追加、テーブル間のリレーションシップの作成、データを拡張する計算の定義、テーブルを見やすくするためのデータのフィルター処理と並べ替えなどを行ってテーブルを操作できます。  
@@ -60,16 +59,16 @@ ms.locfileid: "48099712"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[テーブルに列を追加&#40;SSAS 表形式&#41;](add-columns-to-a-table-ssas-tabular.md)|テーブル定義にソース列を追加する方法について説明します。|  
-|[列の削除&#40;SSAS 表形式&#41;](delete-a-column-ssas-tabular.md)|モデル デザイナー、または [テーブルのプロパティ] ダイアログ ボックスを使用して、モデル テーブルの列を削除する方法について説明します。|  
-|[テーブル、列、または行のフィルターのマッピング変更&#40;SSAS 表形式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|[テーブルのプロパティの編集] ダイアログ ボックスのテーブルのプレビューまたは SQL クエリ エディターを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。|  
-|[日付テーブルとしてマーク タイム インテリジェンスで使用するための指定&#40;SSAS 表形式&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|[日付テーブルとしてマーク] ダイアログ ボックスを使用して、日付テーブルと一意識別子列を指定する方法について説明します。 DAX 式でタイム インテリジェンス関数を使用する場合は、日付テーブルと一意識別子の指定が必要です。|  
-|[テーブルの追加&#40;SSAS 表形式&#41;](add-a-table-ssas-tabular.md)|既存のデータ ソース接続を使用して、データ ソースからテーブルを追加する方法について説明します。|  
-|[テーブルを削除する&#40;SSAS 表形式&#41;](delete-a-table-ssas-tabular.md)|モデル ワークスペース データベース内の不要なテーブルを削除する方法について説明します。|  
-|[テーブルまたは列の名前を変更&#40;SSAS 表形式&#41;](rename-a-table-or-column-ssas-tabular.md)|モデル内で識別できるようにテーブルまたは列の名前を変更する方法について説明します。|  
-|[列のデータ型を設定&#40;SSAS 表形式&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|列のデータ型を変更する方法について説明します。 データ型は、列のデータの格納および表示方法を定義します。|  
-|[非表示にするか、列を固定&#40;SSAS 表形式&#41;](hide-or-freeze-columns-ssas-tabular.md)|表示しない列を非表示にする方法、およびモデルのある領域内の特定の列を固定 (ロック) して、その領域を表示したまま別の領域にスクロールする方法について説明します。|  
-|[計算列&#40;SSAS 表形式&#41;](ssas-calculated-columns.md)|このセクションのトピックでは、計算列を使用して集計データをモデルに追加する方法について説明します。|  
-|[フィルター処理し、データの並べ替え&#40;SSAS 表形式&#41;](../filter-and-sort-data-ssas-tabular.md)|このセクションのトピックでは、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを実行する方法について説明します。|  
+|[列のテーブルへの追加 &#40;SSAS テーブル&#41;](add-columns-to-a-table-ssas-tabular.md)|テーブル定義にソース列を追加する方法について説明します。|  
+|[列の削除 &#40;SSAS テーブル&#41;](delete-a-column-ssas-tabular.md)|モデル デザイナー、または [テーブルのプロパティ] ダイアログ ボックスを使用して、モデル テーブルの列を削除する方法について説明します。|  
+|[テーブル、列、または行のフィルターのマッピングの変更 &#40;SSAS テーブル&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|[テーブルのプロパティの編集] ダイアログ ボックスのテーブルのプレビューまたは SQL クエリ エディターを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。|  
+|[タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 &#40;SSAS テーブル&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|[日付テーブルとしてマーク] ダイアログ ボックスを使用して、日付テーブルと一意識別子列を指定する方法について説明します。 DAX 式でタイム インテリジェンス関数を使用する場合は、日付テーブルと一意識別子の指定が必要です。|  
+|[テーブルの追加 &#40;SSAS テーブル&#41;](add-a-table-ssas-tabular.md)|既存のデータ ソース接続を使用して、データ ソースからテーブルを追加する方法について説明します。|  
+|[テーブルの削除 &#40;SSAS テーブル&#41;](delete-a-table-ssas-tabular.md)|モデル ワークスペース データベース内の不要なテーブルを削除する方法について説明します。|  
+|[テーブルまたは列名の変更 &#40;SSAS テーブル&#41;](rename-a-table-or-column-ssas-tabular.md)|モデル内で識別できるようにテーブルまたは列の名前を変更する方法について説明します。|  
+|[列のデータ型の設定 &#40;SSAS テーブル&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|列のデータ型を変更する方法について説明します。 データ型は、列のデータの格納および表示方法を定義します。|  
+|[列の非表示または固定 &#40;SSAS テーブル&#41;](hide-or-freeze-columns-ssas-tabular.md)|領域の 1 つで特定の列を (ロック) 固定することによって、モデルの別の領域にスクロールするときに、モデルの領域を表示したままに表示する列を非表示にする方法について説明します。|  
+|[計算列 &#40;SSAS テーブル&#41;](ssas-calculated-columns.md)|このセクションのトピックでは、計算列を使用して集計データをモデルに追加する方法について説明します。|  
+|[データのフィルター処理と並べ替え &#40;SSAS テーブル&#41;](../filter-and-sort-data-ssas-tabular.md)|このセクションのトピックでは、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを実行する方法について説明します。|  
   
   

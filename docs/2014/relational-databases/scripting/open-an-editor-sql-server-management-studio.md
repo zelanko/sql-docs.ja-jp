@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6ba0d74b07c21234d7e0f20cb7d9664ee7157f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090302"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>エディターの表示 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター、MDX エディター、DMX エディター、または XML/A エディターを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開く方法について説明します。 エディターを開くと、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の中央のペインに、それぞれのエディター ウィンドウがタブとして表示されます。  
@@ -30,15 +29,15 @@ ms.locfileid: "48110702"
 ### <a name="permissions"></a>アクセス許可  
  コード エディター内で実行する操作には、ログインに使用した認証アカウントに付与されている権限が適用されます。 たとえば、Windows 認証を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた場合、自分の Windows ログイン アカウントでアクセスできないオブジェクトを参照する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。  
   
-## <a name="how-to-open-editors"></a>方法: エディターを開く  
+## <a name="how-to-open-editors"></a>操作方法:エディターを開く  
  このセクションでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の各種エディターを開く方法について説明します。  
   
 ### <a name="using-the-filenew-menu"></a>[ファイル] メニューの [新規作成] の使用  
  **[ファイル]** メニューの **[新規作成]** をクリックし、次のいずれかのクエリ エディター オプションを選択します。  
   
--   **[クエリを現在の接続で実行]** : 現在の接続に関連付けられている種類の新しいエディター ウィンドウを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で開きます。 現在の接続と同じ認証情報がエディター ウィンドウでも使用されます。 たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスをオブジェクト エクスプローラーで選択してから **[クエリを現在の接続で実行]** を使用した場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] に表示される [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、同じインスタンスに、同じ認証情報を使用して接続されます。  
+-   **[クエリを現在の接続で実行]** : 現在の接続に関連付けられている種類の新しいエディター ウィンドウを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で開きます。 現在の接続と同じ認証情報がエディター ウィンドウでも使用されます。 たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスをオブジェクト エクスプローラーで選択してから **[クエリを現在の接続で実行]** を使用した場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] に表示される [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、同じインスタンスに、同じ認証情報を使用して接続されます。  
   
--   **[データベース エンジン クエリ]** : 新しい [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開き、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続するために必要な情報を指定するためのダイアログが表示されます。  
+-   **[データベース エンジン クエリ]** : 新しい [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開き、[!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続するために必要な情報を指定するためのダイアログが表示されます。  
   
 -   **[Analysis Services MDX クエリ]** : 新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ エディターが開き、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続するために必要な情報を指定するためのダイアログが表示されます。  
   
@@ -54,9 +53,9 @@ ms.locfileid: "48110702"
 ### <a name="using-the-toolbar"></a>ツール バーの使用  
  **[標準]** ツール バーで、次のいずれかのボタンをクリックします。  
   
--   **[新しいクエリ]** : 現在の接続に関連付けられている種類の新しいエディター ウィンドウを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で開きます。 現在の接続と同じ認証情報がエディター ウィンドウでも使用されます。 たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスをオブジェクト エクスプローラーで選択してから **[新しいクエリ]** ボタンをクリックした場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] に表示される [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、同じインスタンスに、同じ認証情報を使用して接続されます。  
+-   **[新しいクエリ]** : 現在の接続に関連付けられている種類の新しいエディター ウィンドウを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で開きます。 現在の接続と同じ認証情報がエディター ウィンドウでも使用されます。 たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスをオブジェクト エクスプローラーで選択してから **[新しいクエリ]** ボタンをクリックした場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] に表示される [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、同じインスタンスに、同じ認証情報を使用して接続されます。  
   
--   **[データベース エンジン クエリ]** : 新しい [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開き、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続するために必要な情報を指定するためのダイアログが表示されます。  
+-   **[データベース エンジン クエリ]** : 新しい [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開き、[!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続するために必要な情報を指定するためのダイアログが表示されます。  
   
 -   **[Analysis Services MDX クエリ]** : 新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ エディターが開き、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続するために必要な情報を指定するためのダイアログが表示されます。  
   

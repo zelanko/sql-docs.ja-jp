@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - IsInitialized
@@ -16,18 +15,18 @@ topic_type:
 helpviewer_keywords:
 - IsInitialized property
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e7cc5f323e42d79d3954d3eea7009b34eddcc941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 4ee60bcfc801cb3b9e886aa11e03ed9213712bdf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097634"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー インスタンスが初期化されているかどうかを示します。 読み取り専用です。  
+  レポート サーバー インスタンスが初期化されているかどうかを示します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +44,7 @@ public Boolean DatabaseLogonName;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

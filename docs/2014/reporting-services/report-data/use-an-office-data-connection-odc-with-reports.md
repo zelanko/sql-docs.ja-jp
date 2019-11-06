@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c40f02e86f736b96398de4bb9e3d1183de2f9c6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106960"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)
   限られたシナリオでは、既存の Office データ接続 (.odc) ファイルを使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに接続情報を提供できます。 共有データ ソースの作成時には、.rsds ファイルの代わりに .odc ファイルを使用できます。 レポート サーバーでは、.rsds ファイルの場合と同様に .odc ファイルを使用して、データ ソースの種類、接続文字列、および資格情報をファイルから読み取ります。  
@@ -35,7 +34,7 @@ ms.locfileid: "48162862"
   
 -   .odc ファイルには、接続文字列を指定しておく必要があります。  
   
--   資格情報設定できる`None`、 `Stored`、または`Integrated`します。 資格情報のメソッド設定されている場合`Stored`、レポート サーバーは、ユーザーに保存された資格情報を使用する代わりに資格情報を求められます。 レポート サーバーでは、.odc ファイルに定義されている保存済みの資格情報を使用することはできません。  
+-   資格情報は、[`None`]、[`Stored`]、または [`Integrated`] に設定できます。 資格情報の使用方法が [`Stored`] に設定されている場合、レポート サーバーでは保存されている資格情報を使用せず、ユーザーに資格情報を指定するように求めます。 レポート サーバーでは、.odc ファイルに定義されている保存済みの資格情報を使用することはできません。  
   
 -   データ ソースのスキーマは、レポートの作成に使用されたスキーマと同じである必要があります。 データ構造が異なる場合は、レポートが実行されません。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48162862"
   
 10. レポートでカスタム データ ソース情報を使用する場合は、 **[共有]** をクリックします。  
   
-11. **[データ ソース リンク]** で、参照ボタン (**[...]**) をクリックします。  
+11. **[データ ソース リンク]** で、参照ボタン ( **[...]** ) をクリックします。  
   
 12. アップロードする .odc ファイルを選択します。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "48162862"
   
      [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースおよびサンプル レポートで上記の手順を行う場合、追加設定なしで .odc ファイルと連携して動作するのは Company Sales レポートのみであることに注意してください。 他のサンプル レポートには、OLE DB プロバイダーと互換性のないクエリ パラメーターや機能が含まれています。 ただし、レポート デザイナーでレポートを変更しておくことにより、レポートを OLE DB プロバイダーと連携させることもできます。  
   
-## <a name="see-also"></a>関連項目  
- [作成、変更、および共有データ ソースを削除する&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

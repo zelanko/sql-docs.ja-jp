@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6c76d14e4c3027d4b2b758755ae4dedcffad32f0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a3287220cb14702d118a1e010923898190d4f424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105061"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51668231"
   
  [の開始と停止サービス](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)クラスは、サービスに固有のプロパティを表します。 関連付けられているプロパティの一覧でこれらのプロパティは、 [SqlService クラス](https://technet.microsoft.com/library/ms186497.aspx)クラス。 [SqlServiceAdvancedProperty クラス](https://technet.microsoft.com/library/ms182447.aspx)クラスは、文字列、数値、またはブール プロパティの表記を使用できます。 このクラスを使用すると、指定したサービスに固有のプロパティを表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始、停止、および一時停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

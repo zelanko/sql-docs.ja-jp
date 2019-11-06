@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - methods [Reporting Services], batches
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - locking [Reporting Services]
 - multiple Web service methods
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 56e58bfdb36e464aa6048343350ea929971989f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 8b7ec19101b1abcb2e0fb825923cce7a237149dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63020134"
 ---
 # <a name="batching-methods"></a>メソッドのバッチ処理
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP ヘッダーを使用することによって、1 つの操作に複数の Web サービス メソッドを含めることができます。 メソッドは、1 つのデータベース トランザクションのスコープ内で、呼び出された順序で実行されます。  
@@ -101,10 +99,10 @@ class Sample
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [テクニカル リファレンス (SSRS)](../technical-reference-ssrs.md)   
+ [テクニカル リファレンス &#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [Reporting Services SOAP ヘッダーの使用](using-reporting-services-soap-headers.md)  
   
   

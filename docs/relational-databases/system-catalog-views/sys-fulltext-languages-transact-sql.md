@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,21 +17,21 @@ helpviewer_keywords:
 - languages [full-text search]
 - sys.fulltext_languages catalog view
 ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa04b9a4b90b470ca3cc6df4a8f5cf62134027c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220507"
 ---
-# <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
+# <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  このカタログ ビューには、ワード ブレーカーに登録されている言語ごとに 1 行が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 各行には、LCID と言語の名前が表示されます。 言語のワード ブレーカーを登録すると、他の言語リソース (ステミング機能、ノイズ ワード (ストップワード)、および類義語辞典ファイル) をフルテキスト インデックス/クエリ操作で使用できるようになります。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
+  このカタログ ビューには、ワード ブレーカーに登録されている言語ごとに 1 行が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 各行には、LCID と言語の名前が表示されます。 言語、その他の言語リソースのステミング機能、ノイズ ワード (ストップ ワード)、および類義語辞典のファイルになるのワード ブレーカーの登録時に、フルテキスト インデックス/クエリ操作に使用できます。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
    
 |[列]|データ型|説明|  
 |------------|---------------|-----------------|  
@@ -84,7 +83,7 @@ ms.locfileid: "47779690"
 |ロシア語|1049|  
 |セルビア語 (キリル)|3098|  
 |セルビア語 (ラテン)|2074|  
-|簡体字中国語|2052|  
+|簡体中国語|2052|  
 |スロバキア語|1051|  
 |スロベニア語|1060|  
 |スペイン語|3082|  
@@ -104,7 +103,7 @@ ms.locfileid: "47779690"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_fulltext_load_thesaurus_file &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

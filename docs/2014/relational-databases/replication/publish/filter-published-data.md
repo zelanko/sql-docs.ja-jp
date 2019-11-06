@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62989075"
 ---
 # <a name="filter-published-data"></a>パブリッシュされたデータのフィルター選択
   テーブル アーティクルをフィルター選択すると、パブリッシュされるデータのパーティションを作成できます。 パブリッシュされたデータをフィルター選択することによって、次のことができるようになります。  
@@ -53,7 +52,7 @@ ms.locfileid: "48222632"
   
 -   パラメーター化された行フィルター。マージ レプリケーションでのみ使用できます。  
   
-     パラメーター化された行フィルターを使用して、パブリッシュする行のサブセットを選択できます。 すべてのサブスクライバーに同じ行のサブセットを送信する静的フィルターと異なり、パラメーター化された行フィルターは、サブスクライバーにより提供されたデータの値を使用し、サブスクライバーにそれぞれ別の行のサブセットを送信します。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+     パラメーター化された行フィルターを使用して、パブリッシュする行のサブセットを選択できます。 すべてのサブスクライバーに同じ行のサブセットを送信する静的フィルターと異なり、パラメーター化された行フィルターは、サブスクライバーにより提供されたデータの値を使用し、サブスクライバーにそれぞれ別の行のサブセットを送信します。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 -   結合フィルター。マージ レプリケーションでのみ使用できます。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48222632"
     > [!NOTE]  
     >  トランザクション パブリケーションの行フィルターは、オーバーヘッドを大幅に増やす原因となる場合があります。パブリッシュされたテーブルのログ行ごとにアーティクルのフィルター句を評価して、ログ行をレプリケートする必要があるかどうかを判断するからです。 各レプリケーション ノードが全データの読み込みをサポートできる場合、および、データセット全体がそれほど大きくない場合には、トランザクション パブリケーションの行フィルターは避けてください。  
   
--   マージ レプリケーションでは、静的行フィルターで複数のパブリケーションを作成するのではなく、パラメーター化された行フィルターを使用します。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+-   マージ レプリケーションでは、静的行フィルターで複数のパブリケーションを作成するのではなく、パラメーター化された行フィルターを使用します。 詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
  静的行フィルターを定義または変更するには、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」を参照してください。  
   
@@ -130,9 +129,9 @@ ms.locfileid: "48222632"
   
 -   トランザクション レプリケーションでは、インデックス付きビューをビューまたはテーブルとしてレプリケートできます。 このビューをテーブルとしてレプリケートする場合、テーブルから列をフィルター選択することはできません。  
   
- 行フィルターは、データベース間で動作するようには設計されていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 実行が意図的に制限されます`sp_replcmds`(フィルターが実行される)、データベース所有者に (`dbo`)。 `dbo`データベース間の権限はありません。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] に CDC (Change Data Capture) が追加されたことで、`sp_replcmds` のロジックは、ユーザーが戻って照会できる情報を変更追跡テーブルに設定します。 セキュリティ上の理由から、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]このロジックの実行を制限できるように、悪意のある`dbo`この実行パスを乗っ取ることができません。 たとえば、悪意のある `dbo` が CDC テーブルのトリガーを追加すると、その後、`sp_replcmds` を呼び出すユーザーのコンテキスト (この場合はログ リーダー エージェント) でテーブルが実行されます。  エージェントを実行しているアカウントの権限が高い場合、悪意のある `dbo` は自身の特権を引き上げます。  
+ 行フィルターは、データベース間で動作するようには設計されていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(フィルターが実行される) `sp_replcmds` の実行が意図的にデータベース所有者 (`dbo`) に制限されています。 `dbo` には、データベース間の権限がありません。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] に CDC (Change Data Capture) が追加されたことで、`sp_replcmds` のロジックは、ユーザーが戻って照会できる情報を変更追跡テーブルに設定します。 セキュリティ上の理由から、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]このロジックの実行を制限できるように、悪意のある`dbo`この実行パスを乗っ取ることができません。 たとえば、悪意のある `dbo` が CDC テーブルのトリガーを追加すると、その後、`sp_replcmds` を呼び出すユーザーのコンテキスト (この場合はログ リーダー エージェント) でテーブルが実行されます。  エージェントを実行しているアカウントの権限が高い場合、悪意のある `dbo` は自身の特権を引き上げます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データとデータベース オブジェクトのパブリッシュ](publish-data-and-database-objects.md)  
   
   

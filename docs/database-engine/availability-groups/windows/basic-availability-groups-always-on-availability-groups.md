@@ -1,6 +1,7 @@
 ---
-title: 基本的な可用性グループ (Always On 可用性グループ) | Microsoft Docs
-ms.custom: ''
+title: 単一データベース用の基本的な可用性グループ
+description: '通常の Always On 可用性グループと基本的な Always On 可用性グループの違いと、基本的な可用性グループの構成方法ついて説明します。 '
+ms.custom: seodec18
 ms.date: 02/01/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d20e1ce1c3a951e47861b68a819844528c104cbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46630e36db03d55c8e90be64570975e42466fbba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991364"
 ---
-# <a name="basic-availability-groups-always-on-availability-groups"></a>基本的な可用性グループ (AlwaysOn 可用性グループ)
+# <a name="basic-always-on-availability-groups-for-a-single-database"></a>単一データベース用の基本的な Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  基本的な AlwaysOn 可用性グループでは、SQL Server 2016 Standard Edition および SQL Server 2017 Standard Edition 用の高可用性ソリューションが提供されます。 基本的な可用性グループでは、単一のデータベースのフェールオーバー環境がサポートされます。 Enterprise Edition での従来の (拡張) [AlwaysOn 可用性グループ &amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) の場合と同じように作成され、管理されます。 このドキュメントでは、基本的な可用性グループの違いと制限の概要を示します。  
+  基本的な AlwaysOn 可用性グループでは、SQL Server 2016 Standard Edition および SQL Server 2017 Standard Edition 用の高可用性ソリューションが提供されます。 基本的な可用性グループでは、単一のデータベースのフェールオーバー環境がサポートされます。 Enterprise Edition での従来の (拡張) [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) の場合と同じように作成され、管理されます。 このドキュメントでは、基本的な可用性グループの違いと制限の概要を示します。  
   
 ## <a name="features"></a>[機能]  
  基本的な AlwaysOn 可用性グループは、非推奨のデータベース ミラーリング機能に代わるものであり、同じようなレベルの機能サポートを提供します。 基本的な可用性グループを使用することで、プライマリ データベースは単一のレプリカを管理できます。 このレプリカでは同期コミット モードまたは非同期コミット モードを使用できます。 可用性モードの詳細については、「[可用性モード (AlwaysOn 可用性グループ)](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」をご覧ください。 セカンダリ レプリカは、フェールオーバーが必要にならない限り、非アクティブのままです。 このフェールオーバーでプライマリとセカンダリのロール割り当てが逆になり、セカンダリ レプリカがプライマリ アクティブ データベースになります。 フェールオーバーの詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)」をご覧ください。 基本的な可用性グループは、オンプレミスの環境と Microsoft Azure にまたがるハイブリッド環境で使用できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "47771430"
 ## <a name="limitations"></a>制限事項  
  基本的な可用性グループでは、SQL Server 2016 Enterprise Edition の拡張可用性グループとは異なり、機能の一部のみを使用します。 基本的な可用性グループには以下の制限があります。  
   
-- 使用できるレプリカは 2 つ (プライマリとセカンダリ) までです。  
+- 使用できるレプリカは 2 つ (プライマリとセカンダリ) までです。 SQL Server 2017 on Linux の基本的な可用性グループでは、追加の構成専用レプリカがサポートされます。
   
 - セカンダリ レプリカに対する読み取りアクセス権はありません。  
   

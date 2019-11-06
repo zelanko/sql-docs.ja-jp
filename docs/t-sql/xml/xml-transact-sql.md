@@ -3,7 +3,6 @@ title: xml (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - xml data type [SQL Server], about xml data type
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 42da8b7de65d768686151a21a146a2247786293e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: d8d863a6ca6a44a323c05f26298c68de774dfc3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948027"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="arguments"></a>引数  
  CONTENT  
- **xml** インスタンスを整形式の XML フラグメントに制限します。 XML データの最上位レベルには、0 個以上の要素を複数含めることができ、 テキスト ノードも許可されます。  
+ **xml** インスタンスを整形式の XML フラグメントに制限します。 XML データの最上位レベルには、0 個以上の要素を複数含めることができ、 最上位レベルにはテキスト ノードも許可されます。  
   
  これは既定の動作です。  
   

@@ -9,11 +9,11 @@ ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806775"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200898"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>モバイル レポートのデータを行または列によってグループ化する |Reporting Services
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]は、多数の種類のグラフのデータを列または行によって整理できます。 次の手順に従ってください。
@@ -34,7 +34,7 @@ ms.locfileid: "47806775"
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   同様に、 **[比較対象系列]** -- **Comparison1** ～ **Comparison5** が選択されます。
+   同様に、 **[比較対象系列]**  -- **Comparison1** ～ **Comparison5** が選択されます。
    
 4. **[プレビュー]** を選択します。
 

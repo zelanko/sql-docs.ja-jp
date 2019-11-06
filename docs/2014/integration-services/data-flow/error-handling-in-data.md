@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1fc46b6f7827143c3fdd523970fd5748a28aeb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827149"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
   データ フロー コンポーネントが変換を列データに適用したり、変換元のデータを抽出したり、変換先にデータを読み込んだりするときに、エラーが発生する場合があります。 エラーが発生する原因の主なものは、予期しないデータ値です。 たとえば、数字ではなく文字列が列に含まれる場合、データ変換は失敗します。また、データは日付データであるが列のデータ型は数値の場合、データベース列への挿入は失敗します。あるいは、列の値が 0 の場合に数学的演算の結果が無効となり、それが原因で式の評価が失敗します。  
@@ -79,7 +78,7 @@ ms.locfileid: "48201312"
  [データ フロー](data-flow.md)   
  [変換を使用してデータを変換する](transformations/transform-data-with-transformations.md)   
  [パスを使用してコンポーネントを連結する](../connect-components-with-paths.md)   
- [データ フロー タスク](../control-flow/data-flow-task.md)   
+ [[データ フロー タスク]](../control-flow/data-flow-task.md)   
  [データ フロー](data-flow.md)  
   
   

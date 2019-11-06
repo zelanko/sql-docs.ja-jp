@@ -10,16 +10,15 @@ helpviewer_keywords:
 - Point geometry subtype [SQL Server]
 - geometry data type [SQL Server], spatial data
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a876ec35e7cd11b8ac127606bb2e4e7c2c6e2c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 91bcaba1008ee0ca67de6562d681b81bcc5641e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048552"
 ---
 # <a name="point"></a>ポイント
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,21 +31,24 @@ ms.locfileid: "51018217"
  geometry データ型の Point 型は、 *X* が生成される Point の X 座標、 *Y* が生成される Point の Y 座標を表している 1 つの場所を表します。 *SRID* は、返される **geometry** インスタンスの空間参照 ID を表します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、点 (3, 4) を表す `geometry Point`インスタンスを作成します。このインスタンスの SRID は 0 です。  
+### <a name="example-a"></a>例 A。
+次の例では、点 (3, 4) を表す `geometry Point`インスタンスを作成します。このインスタンスの SRID は 0 です。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT (3 4)', 0);  
 ```  
   
- 次の例では、SRID が 0 (既定)、Z (昇格) 値が 7、M (メジャー) 値が 2.5 の、点 (3, 4) を表す `geometry``Point` インスタンスを作成します。  
+### <a name="example-b"></a>例 B。
+次の例では、SRID が 0 (既定)、Z (昇格) 値が 7、M (メジャー) 値が 2.5 の、点 (3, 4) を表す `geometry``Point` インスタンスを作成します。  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POINT(3 4 7 2.5)');  
 ```  
   
- 最後の例では、 `geometry``Point` インスタンスの X、Y、Z、および M の値を返します。  
+### <a name="example-c"></a>例 C。
+次の例では、`geometry``Point` インスタンスの X、Y、Z、および M の値を返します。  
   
 ```  
 SELECT @g.STX;  
@@ -55,7 +57,8 @@ SELECT @g.Z;
 SELECT @g.M;  
 ```  
   
- Z と M の値は、次の例のように明示的に NULL として指定することもできます。  
+### <a name="example-d"></a>例 D。
+Z と M の値は、次の例のように明示的に NULL として指定することもできます。  
   
 ```  
 DECLARE @g geometry;  

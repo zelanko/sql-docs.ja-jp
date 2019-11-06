@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aa27ea82c70cd1ffa65ce2b1d04376257abd8964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046330"
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +49,19 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>引数  
- **'**< relational_operator >**'** {よりも少ない最大 | よりも少ない最も大きいまたは等しい | 最小値を超える | 最小値より大きいか等しい}  
+ **'** < relational_operator > **'** {よりも少ない最大 | よりも少ない最も大きいまたは等しい | 最小値を超える | 最小値より大きいか等しい}  
  内の個別の LSN 値を識別するために使用、 **cdc.lsn_time_mapping**関連付けられているテーブル**tran_end_time**と比較するとの関係を満たす、 *tracking_time*値。  
   
  *relational_operator*は**nvarchar (30)** します。  
   
  *tracking_time*  
- 照合する日付時刻値を指定します。 *tracking_time*は**datetime**します。  
+ 照合する datetime 値です。 *tracking_time*は**datetime**します。  
   
 ## <a name="return-type"></a>戻り値の型  
  **binary(10)**  
   
 ## <a name="remarks"></a>コメント  
- 理解する方法、 **sys.fn_cdc_map_time_lsn**日付時刻範囲を LSN 範囲にマップを次のシナリオをご検討ください使用できます。 変更データを毎日抽出するとします。 つまり、特定の日の午前 0 時までに発生した変更を取得する必要があります。 時間範囲の下限は、前日の任意の時刻です (午前 0 時は含みません)。 上限は、特定の日の任意の時刻です (午前 0 時を含みます)。 次の例はどのように関数**sys.fn_cdc_map_time_to_lsn**体系的にこの時間ベースの範囲をすべて取得する、変更データ キャプチャの列挙関数に必要な LSN ベースの範囲にマップするために使用できます範囲内の変更。  
+ 理解する方法、 **sys.fn_cdc_map_time_lsn**日付時刻範囲を LSN 範囲にマップを次のシナリオをご検討ください使用できます。 変更データを毎日抽出するとします。 つまり、特定の日の午前 0 時までに発生した変更を取得する必要があります。 前の日の午前 0 時まで、時間の範囲の下限の境界となります。 指定した日の午前 0 時を含む、上限となります。 次の例はどのように関数**sys.fn_cdc_map_time_to_lsn**体系的にこの時間ベースの範囲をすべて取得する、変更データ キャプチャの列挙関数に必要な LSN ベースの範囲にマップするために使用できます範囲内の変更。  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
   
@@ -82,7 +81,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`sys.fn_cdc_map_time_lsn`内の行があるかどうかを判断する関数、 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)を持つテーブルを**tran_end_time**値が午前 0 時以上です。 このクエリを使用すると、たとえば前日の午前 0 時を超えてコミットされた変更がキャプチャ プロセスによって既に処理されているかどうかに基づいてこの日の変更データの抽出を続行するかどうかを判定できます。  
+ 次の例では、`sys.fn_cdc_map_time_lsn`内の行があるかどうかを判断する関数、 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)を持つテーブルを**tran_end_time**値が午前 0 時以上です。 このクエリは、続行できるかどうか、キャプチャ プロセスが既に処理前の日の午前 0 時からコミットされた変更の抽出は、その日のデータを変更できるように、判断に使用できます。  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  
@@ -94,7 +93,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [cdc.lsn_time_mapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [sys.fn_cdc_map_lsn_to_time &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

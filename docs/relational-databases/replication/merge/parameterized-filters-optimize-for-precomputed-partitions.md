@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9deab114f4e9185d2c652fd43021c00a6e93a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018687"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>パラメーター化されたフィルター - 事前計算済みパーティションの最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47807300"
   
  ただし、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンで実行中のパブリッシャーとサブスクライバーが事前計算済みパーティションを使用している場合は、パブリッシャーのすべての変更に対するパーティション メンバーシップは既に計算済みであり、変更が行われる時点まで有効になります。 その結果、サブスクライバーはパブリッシャーとの同期時に、パーティションに関連する変更内容のダウンロードを即座に開始できます。パーティションの評価処理が実行されることはありません。 パブリケーションに変更点、サブスクライバー、およびアーティクルが多数存在する場合は、この機能によってパフォーマンスの大幅な向上が期待できます。  
   
- 事前計算済みパーティションを使用するだけでなく、スナップショットを事前に生成するか、最初の同期時にサブスクライバーからスナップショットの生成および適用を要求できるようにしてください。 これらのオプションの両方またはどちらかを使用して、パラメーター化されたフィルターを使用するパブリケーションに対するスナップショットを提供します。 これらのオプションのどちらかを指定しないと、 **bcp** ユーティリティを使用するのではなく、一連の SELECT ステートメントおよび INSERT ステートメントを使用してサブスクリプションが初期化されます。この処理は、かなり低速で実行されます。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。  
+ 事前計算済みパーティションを使用するだけでなく、スナップショットを事前に生成するか、最初の同期時にサブスクライバーからスナップショットの生成および適用を要求できるようにしてください。 これらのオプションの両方またはどちらかを使用して、パラメーター化されたフィルターを使用するパブリケーションに対するスナップショットを提供します。 これらのオプションのどちらかを指定しないと、 **bcp** ユーティリティを使用するのではなく、一連の SELECT ステートメントおよび INSERT ステートメントを使用してサブスクリプションが初期化されます。この処理は、かなり低速で実行されます。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
   
  **事前計算済みパーティションを使用するには**  
   

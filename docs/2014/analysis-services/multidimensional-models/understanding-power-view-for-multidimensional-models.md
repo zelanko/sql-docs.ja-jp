@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 70ccd24e72671255ea0c929b19110794e1c0412a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072667"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
   この記事では、Power View では、Microsoft SQL Server 2014 では、多次元モデル機能について説明し、BI プロフェッショナルと管理者向けの多次元モデルでの Power View を実装するために重要な情報を提供します、組織。  
@@ -40,14 +39,14 @@ ms.locfileid: "50148077"
   
 -   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)します。  
   
-## <a name="features"></a>[機能]  
+## <a name="features"></a>機能  
  **Power View のネイティブ サポート**  
   
  このリリースでは、多次元モデルで、SharePoint モードの Power View を使用した分析とビジュアル化がサポートされています。 多次元モデルで特別な構成は必要ありません。 ただし、Microsoft Excel や Microsoft Performance Point など、その他のクライアント ツールと比較すると、Power View での多次元モデル オブジェクトの表示形式にはいくつか違いがあります。 このリリースでは、Excel 2013 の Power View を使用した多次元モデルの分析とビジュアル化はサポートされていません。  
   
  **DAX クエリのネイティブ サポート**  
   
- このリリースでは、多次元モデルで、従来の MDX クエリに加えて DAX クエリと DAX 関数がサポートされています。 PATH などの一部の DAX 関数は、多次元モデリングでは使用できません。 DAX の詳細、および DAX と MDX の比較については、「 [Data Analysis Expressions および MDX](http://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx)」を参照してください。  
+ このリリースでは、多次元モデルで、従来の MDX クエリに加えて DAX クエリと DAX 関数がサポートされています。 PATH などの一部の DAX 関数は、多次元モデリングでは使用できません。 DAX の詳細、および DAX と MDX の比較については、「 [Data Analysis Expressions および MDX](https://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx)」を参照してください。  
   
 ## <a name="multidimensional-to-tabular-object-mapping"></a>多次元オブジェクトと表形式オブジェクトのマッピング  
  Analysis Services には、多次元モデルの表形式モデル メタデータ表現が用意されています。 多次元モデルのオブジェクトは、Power View、および BI 注釈付きの CSDL の出力では表形式オブジェクトとして表されます。  
@@ -88,7 +87,7 @@ ms.locfileid: "50148077"
  ![Power View のフィールド リスト内のメジャー グループ](../media/daxmd-fieldlist-group.gif "Power View のフィールド リスト内のメジャー グループ")  
   
 ### <a name="measures-as-variants"></a>variant 型のメジャー  
- 多次元モデル内のメジャーは variant 型です。 つまり、メジャーは厳密に型指定されていないため、さまざまなデータ型を使用できます。 たとえば、下の画像では、Financial Reporting テーブルの Amount メジャーは既定では通貨データ型ですが、"Statistical Accounts" の小計には、文字列データ型である文字列値 "NA" も表示されています。 Power View は、特定のメジャーを variant 型として認識し、さまざまな視覚エフェクトで適切な値と書式設定を表示します。  
+ 多次元モデル内のメジャーは variant 型です。 つまり、メジャーは厳密に型指定されていないため、さまざまなデータ型を使用できます。 たとえば、下の画像の既定 Financial Reporting テーブルの Amount メジャーが通貨のデータ型がサブ文字列データ型は、"Statistical Accounts"の合計の文字列値"NA"があります。 Power View は、特定のメジャーを variant 型として認識し、さまざまな視覚エフェクトで適切な値と書式設定を表示します。  
   
  **variant 型のメジャー**  
   
@@ -98,7 +97,7 @@ ms.locfileid: "50148077"
  表形式モデルでは、ユーザーはフィールドに COUNT、SUM、AVERAGE などの *暗黙の* メジャーを作成できます。 多次元モデルの場合、ディメンション属性データの格納先は異なるため、暗黙のメジャーに対してクエリを実行すると時間がかかることがあります。 このため、暗黙のメジャーは Power View では使用できません。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>ディメンション、属性、および階層  
- キューブ ディメンションは、表形式のメタデータにテーブルとして公開されます。 Power View のフィールド リストでは、ディメンション属性が表示フォルダー内の列として表示されます。  AttributeHierarchyEnabled プロパティが false に設定されたディメンション属性 (Customer ディメンションの Birth Date 属性など)、または AttributeHierarchyVisible プロパティが false に設定されたディメンション属性は、Power View のフィールド リストに表示されません。 複数階層またはユーザー階層 (Customer ディメンションの Customer Geography など) は Power View のフィールド リストに階層として公開されます。 ディメンション属性の非表示の UnknownMember は DAX クエリおよび Power View では公開されます。  
+ キューブ ディメンションは、表形式のメタデータにテーブルとして公開されます。 Power View のフィールド リストでは、ディメンション属性が表示フォルダー内の列として表示されます。  AttributeHierarchyEnabled プロパティが false に設定されているディメンションの属性の一例を挙げてみると、Customer ディメンションの Birth Date 属性では、AttributeHierarchyVisible プロパティが false に設定されているので、Power View のフィールド リストで表示されません。 複数階層またはユーザー階層 (Customer ディメンションの Customer Geography など) は Power View のフィールド リストに階層として公開されます。 ディメンション属性の非表示の UnknownMember は DAX クエリおよび Power View では公開されます。  
   
  **SQL Server Data Tools (SSDT) と Power View のフィールド リストにおけるディメンション、属性、および階層**  
   
@@ -122,7 +121,7 @@ ms.locfileid: "50148077"
   
  ユーザー階層の計算されるメンバーは、Power View では公開されません。ただし、エンド ユーザーは、ユーザー階層に計算されるメンバーを含むキューブに引き続き接続できます。  
   
- 下の画像は、Date ディメンション内のディメンション属性 "Fiscal Date Calculations" にタイム インテリジェンスの計算されるメンバーを格納するキューブの Power View レポートを示しています。  
+ 次の図は、Date ディメンションのディメンション属性"Fiscal Date Calculations"にタイム インテリジェンス計算されるメンバーを含んでいるキューブの Power View レポートを示します。  
   
  **計算されるメンバーを含む Power View レポート**  
   
@@ -137,7 +136,7 @@ ms.locfileid: "50148077"
  多次元モデルでは、ロールを使用したディメンションおよびセル レベルのセキュリティがサポートされています。 Power View を使用してキューブに接続するユーザーは、認証され、適切な権限に対して評価されます。 ディメンションのセキュリティを適用した場合、Power View ではユーザーからそれぞれのディメンション メンバーは見えません。ただし、あるユーザーに定義されたセルのセキュリティ権限で、特定のセルが制限されている場合、そのユーザーは Power View を使用してキューブに接続することができません。 場合によっては、集計データは、一部がセキュリティで保護されたデータから計算されるときに参照できます。  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>集計可能ではない属性/階層  
- 多次元モデルでは、ディメンションの属性の IsAggregatable プロパティを false に設定できます。 つまり、モデル作成者は、データに対してクエリを実行するときにクライアント アプリケーションが階層 (属性または複数レベル) 間でデータを集計しないように指定したことになります。 Power View では、このディメンション属性は小計が利用できない列として公開されます。 下の画像に、集計可能ではない階層の例として Accounts を示しています。 Accounts 親子階層の最上位レベルは、他のレベルが集計可能であるのに対して集計可能ではありません。 Accounts 階層 (最初の 2 レベル) のマトリックス視覚エフェクトでは、Account Level 02 の小計は確認できますが、最上位レベルである Account Level 01 の小計は確認できません。  
+ 多次元モデルでは、ディメンションの属性の IsAggregatable プロパティを false に設定できます。 つまり、モデル作成者は、データに対してクエリを実行するときにクライアント アプリケーションが階層 (属性または複数レベル) 間でデータを集計しないように指定したことになります。 Power View では、このディメンション属性は小計が利用できない列として公開されます。 次の図では、集計可能ではない階層の例を確認できます。アカウント。 Accounts 親子階層の最上位レベルは、他のレベルが集計可能であるのに対して集計可能ではありません。 Accounts 階層 (最初の 2 レベル) のマトリックス視覚エフェクトでは、Account Level 02 の小計は確認できますが、最上位レベルである Account Level 01 の小計は確認できません。  
   
  **Power View での集計可能ではない階層**  
   
@@ -158,11 +157,11 @@ ms.locfileid: "50148077"
  ![親子階層](../media/daxmd-ssdt-hierarchies.gif "親子階層")  
   
 ## <a name="perspectives-and-translations"></a>パースペクティブと翻訳  
- パースペクティブとは、特定のディメンションまたはメジャー グループだけがクライアント ツールに表示されるキューブのビューです。 パースペクティブ名は、Cube 接続文字列プロパティに値として指定できます。 たとえば、次の接続文字列では、'Direct Sales' が多次元モデルのパースペクティブです。  
+ パースペクティブとは、特定のディメンションまたはメジャー グループだけがクライアント ツールに表示されるキューブのビューです。 パースペクティブ名は、Cube 接続文字列プロパティに値として指定できます。 たとえば、次の接続文字列で ' Direct Sales' では、多次元モデルのパースペクティブには。  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- キューブには、モデル内でさまざまな言語に指定されたメタデータとデータの翻訳を含めることができます。 翻訳 (データとメタデータ) を表示するには、次のように、RSDS ファイルの接続文字列に省略可能な "Locale Identifier" プロパティを追加する必要があります。  
+ キューブには、モデル内でさまざまな言語に指定されたメタデータとデータの翻訳を含めることができます。 翻訳 (データとメタデータ) を表示するには、省略可能な"Locale Identifier"プロパティを次に示すように、RSDS ファイル内の接続文字列に追加する必要があります。  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -178,7 +177,7 @@ ms.locfileid: "50148077"
  ![フィルターをピン留め](../media/daxmd-pinnedfilterinpowerview.gif "フィルターをピン留め")  
   
 ## <a name="unsupported-features"></a>サポートされていない機能  
- **Excel 2013 の Power View** – 多次元モデルのレポートへの接続および多次元モデルのレポートの作成はサポートされていません。 多次元モデルの Power View では、ブラウザー ベースの Power View クライアントのみがサポートされています。  
+ **Power View では、Excel 2013** -への接続および多次元モデルのレポートの作成はサポートされません。 多次元モデルの Power View では、ブラウザー ベースの Power View クライアントのみがサポートされています。  
   
  **アクション** - Power View レポート、または多次元モデルに対する DAX クエリではサポートされていません。  
   
@@ -187,7 +186,7 @@ ms.locfileid: "50148077"
 > [!NOTE]  
 >  アクションと名前付きセットがサポートされていなくても、ユーザーは Power View を使用して多次元モデルに接続したり多次元モデルを探索したりできます。  
   
- **セル レベルのセキュリティ** – Power View レポートではサポートされていません。  
+ **セル レベルのセキュリティ**-Power View レポートではサポートされていません。  
   
 ## <a name="csdlbi-annotations"></a>CSDLBI 注釈  
  多次元キューブ メタデータは、CSDLBI (Conceptual Schema Definition Language with Business Intelligence) 注釈によってエンティティ データ モデル (EDM) ベースの概念モデルとして公開されます。  
@@ -197,13 +196,13 @@ ms.locfileid: "50148077"
  **DISCOVER_CSDL_METADATA 要求のサンプル**  
   
 ```  
-<Envelopexmlns=”http://schemas.xmlsoap.org/soap/envelope/”>  
+<Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
    <Body>  
-      <Discoverxmlns=”urn:schemas-microsoft-com:xml-analysis”>  
+      <Discoverxmlns="urn:schemas-microsoft-com:xml-analysis">  
          <RequestType>DISCOVER_CSDL_METADATA</RequestType>  
          <Restrictions>  
             <RestrictionList>  
-              <CATALOG_NAME>”catalogname”<CATALOG_NAME>  
+              <CATALOG_NAME>"catalogname"<CATALOG_NAME>  
             </RestrictionList>  
          </Restrictions>  
          <Properties>  
@@ -226,7 +225,7 @@ ms.locfileid: "50148077"
   
  返される CSDL 出力ドキュメントは、モデルを名前空間として表し、エンティティ、アソシエーション、およびプロパティを示しています。  
   
- 表形式モデルの CSDLBI 注釈の詳細については、MSDN の「 [CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 」および「 [\[[MS-CSDLBI]\]: ビジネス インテリジェンスの概念スキーマ定義ファイル形式の注釈](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)」を参照してください。  
+ 詳細については表形式モデルの CSDLBI 注釈の詳細についてを参照してください[CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)msdn、および[ \[MS-CSDLBI\]:。概念スキーマ定義ファイル形式のビジネス インテリジェンス注釈](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)します。  
   
 ## <a name="client-help-on-officecom"></a>Office.com のクライアント ヘルプ  
  Power View での多次元モデル オブジェクトの表示およびサンプル レポートの作成方法については、Office.com で提供されている次の記事を参照してください。  

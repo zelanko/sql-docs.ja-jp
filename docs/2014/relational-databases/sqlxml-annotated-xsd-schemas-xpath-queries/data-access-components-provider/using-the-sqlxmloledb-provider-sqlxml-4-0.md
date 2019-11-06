@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SQLXML]
 - SQLXMLOLEDB Provider, samples
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9ab7301e4a4754c552b8a0b100e2b11ed031225
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67a5486816f5af652e111372c9cb492ba3cdb3c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012950"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの使用 (SQLXML 4.0)
   ここでは、SQLXMLOLEDB プロバイダー固有のプロパティの使用法を示す ADO サンプル アプリケーションを紹介します。  
@@ -60,7 +58,7 @@ ms.locfileid: "48056122"
  [XSL 変換の適用&#40;SQLXMLOLEDB プロバイダー&#41;](applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  XSL 変換の適用で ClientSideXML と xsl プロパティの使用方法を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)  
   
   

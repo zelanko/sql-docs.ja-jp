@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1f0a1a40b1f4dd31a91436ae7af80f691c2e5a7c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127304"
 ---
 # <a name="rebuild-system-databases"></a>システム データベースの再構築
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,15 +106,15 @@ ms.locfileid: "51559199"
     |/ACTION=REBUILDDATABASE|セットアップでシステム データベースを再作成することを指定します。|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前を指定します。 既定のインスタンスには「MSSQLSERVER」と入力します。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 固定サーバー ロールに追加する Windows グループまたは個々のアカウントを指定します。 複数のアカウントを指定する場合、各アカウントを空白で区切ります。 たとえば、「 **BUILTIN\Administrators MyDomain\MyUser**」と入力します。 アカウント名に空白を含むアカウントを指定する場合は、アカウントを二重引用符で囲みます。 たとえば、「 **NT AUTHORITY\SYSTEM**」と入力します。|  
-    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** アカウントのパスワードを指定します。 このパラメーターは、インスタンスが混合モード認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows 認証) を使用する場合に必要になります。<br /><br /> **\*\* セキュリティ メモ \*\***  **sa** アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 **sa** ログインには、複雑なパスワードを使用することが非常に重要です。<br /><br /> Windows 認証モードにはこのパラメーターを指定しないでください。|  
+    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** アカウントのパスワードを指定します。 このパラメーターは、インスタンスが混合モード認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows 認証) を使用する場合に必要になります。<br /><br /> **&#42;&#42; セキュリティ メモ &#42;&#42;** **sa** アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 **sa** ログインには、複雑なパスワードを使用することが非常に重要です。<br /><br /> Windows 認証モードにはこのパラメーターを指定しないでください。|  
     |[ /SQLCOLLATION=*CollationName* ]|新しいサーバー レベルの照合順序を指定します。 このパラメーターはオプションです。 これを指定しない場合は、サーバーの現在の照合順序が使用されます。<br /><br /> **\*\* 重要 \*\*** サーバー レベルの照合順序を変更しても、既存のユーザー データベースの照合順序は変更されません。 新しく作成されたすべてのユーザー データベースには、既定で新しい照合順序が使用されます。<br /><br /> 詳細については、「 [サーバーの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-server-collation.md)」を参照してください。|  
-    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb データ ファイルの数を設定します。 この値は 8 またはコアの数の、どちらか大きい方まで増やすことができます。<br /><br /> 既定値: 8 またはコアの数のうち、小さい方の値|  
-    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|各 tempdb データ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値: 8|  
-    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値：64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|tempdb ログ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値: 8<br /><br /> 許容範囲: 最小値 = 8、最大値 = 1024|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|tempdb ログ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値：64<br /><br /> 許容範囲: 最小値 = 8、最大値 = 1024|  
-    |[ /SQLTEMPDBDIR=Directories ]|tempdb のデータ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値: システム データ ディレクトリ|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値: システム データ ディレクトリ|  
+    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb データ ファイルの数を設定します。 この値は 8 またはコアの数の、どちらか大きい方まで増やすことができます。<br /><br /> 既定値:8 またはコアの数のうち、小さい方の値。|  
+    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|各 tempdb データ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:8|  
+    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:64|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|tempdb ログ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:8.<br /><br /> 許容範囲: 最小値 = 8、最大値 = 1024 です。|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|tempdb ログ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:64<br /><br /> 許容範囲: 最小値 = 8、最大値 = 1024 です。|  
+    |[ /SQLTEMPDBDIR=Directories ]|tempdb データ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値:システム データ ディレクトリ|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値:システム データ ディレクトリ|  
   
 3.  セットアップによりシステム データベースの再構築が完了すると、メッセージが表示されることなく、コマンド プロンプトに戻ります。 Summary.txt ログ ファイルを調査し、プロセスが正常に完了したことを確認します。 このファイルは C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs にあります。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "51559199"
   
      詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
-3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` というコマンドを実行します (*\<servername>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに置き換えます)。  
+3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` というコマンドを実行します ( *\<servername>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに置き換えます)。  
   
 4.  Windows エクスプローラーを使用して、 **msdb** データベースの各ファイルの名前を変更します。 これらのファイルは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの DATA サブフォルダーにあります。  
   

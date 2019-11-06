@@ -1,11 +1,10 @@
 ---
-title: 'チュートリアル: 証明書を使用したストアド プロシージャへの署名 | Microsoft Docs'
+title: チュートリアル:証明書を使用したストアド プロシージャの署名 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - signing stored procedures tutorial [SQL Server]
@@ -13,14 +12,14 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0259beabfba9334b8d7f659e4b201c0c3b8c878c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524095"
 ---
-# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル : 証明書を使用したストアド プロシージャへの署名
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル:証明書を使用したストアド プロシージャへの署名
   このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で生成された証明書を使用してストアド プロシージャに署名する方法について説明します。  
   
 > [!NOTE]  

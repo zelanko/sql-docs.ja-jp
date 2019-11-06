@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - time [SQL Server], searches
@@ -20,12 +20,12 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e3715c888e9d71d465e9b2f43302bb7e180aaea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc11acccd25dafd811379384bf9975e74e8986b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63070986"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>検索値を入力するときの規則 (Visual Database Tools)
   このトピックでは、検索条件に対して次の種類のリテラル値を入力するときに従う規則について説明します。  

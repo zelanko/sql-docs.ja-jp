@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: e3b69ae2b59b3f82025404dd575f0602ea8c02a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+manager: shamikg
+ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668221"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264679"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>SQL Server (OracleToSQL) に Oracle のデータの移行
 変換されたオブジェクトが正常に同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle からデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -59,7 +59,7 @@ ms.locfileid: "51668221"
   
 **データを移行するには**  
   
-1.  次を確認します。  
+1.  次のことを検証します。  
   
     -   Oracle プロバイダーは、SSMA を実行しているコンピューターにインストールされます。  
   
@@ -87,10 +87,10 @@ ms.locfileid: "51668221"
   
     -   実行するため**サーバー側のデータ移行**を選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定** ダイアログ ボックス。  
   
-4.  右クリック**スキーマ**Oracle メタデータ エクスプ ローラーでクリック**Migrate Data**します。 個々 のオブジェクトまたはオブジェクトのカテゴリのデータを移行することもできますオブジェクトまたはその親フォルダーを右クリック。選択、 **Migrate Data**オプション。  
+4.  右クリック**スキーマ**Oracle メタデータ エクスプ ローラーでクリック**Migrate Data**します。 個々 のオブジェクトまたはオブジェクトのカテゴリのデータを移行することもできます。オブジェクトまたはその親フォルダーを右クリックします。選択、 **Migrate Data**オプション。  
   
     > [!NOTE]  
-    > SSMA for Oracle の拡張機能パックがのインスタンスにインストールされていないかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、場合**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行する際に、次のエラーが発生しました: 'SQL Server のデータ移行の SSMA コンポーネントが見つかりません、サーバー側のデータの移行を可能にすることはできません。 拡張機能パックが正しくインストールされているかどうかを確認してください '。 クリックして**キャンセル**データ移行を終了します。  
+    > SSMA for Oracle の拡張機能パックがのインスタンスにインストールされていないかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、場合**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行する際に、次のエラーが発生しました。' SQL Server のデータ移行の SSMA コンポーネントが見つかりません、サーバー側のデータの移行を可能にすることはできません。 拡張機能パックが正しくインストールされているかどうかを確認してください '。 クリックして**キャンセル**データ移行を終了します。  
   
 5.  **Oracle への接続**ダイアログ ボックスが接続の資格情報を入力し、クリックして**Connect**します。 Oracle に接続する方法の詳細については、次を参照してください[Oracle に接続する&#40;OracleToSQL。&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   

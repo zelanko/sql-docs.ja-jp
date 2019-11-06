@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926452"
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding インターフェイス
@@ -34,7 +33,7 @@ ms.locfileid: "51350526"
 ## <a name="binding-entries"></a>バインドのエントリ
  ADO の Visual C 拡張のフィールドのマッピング、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) C と C++ の変数にオブジェクト。 フィールドと変数間のマッピングの定義が呼び出された、*エントリをバインド*です。 マクロは、数値、固定長および可変長のデータのバインド エントリを提供します。 バインディング エントリおよび C と C++ の変数が、Visual C 拡張クラスから派生したクラスで宣言されている **CADORecordBinding** です。 **CADORecordBinding** クラスは、バインディング エントリ マクロによって内部的に定義されます。
 
- ADO は内部的には、OLE DB にこれらのマクロでは、パラメーターをマップ **DBBINDING** を構造化され、OLE DB **Accessor** の移動やフィールドと変数のデータの変換を管理するオブジェクト。 OLE DB で構成されるとしてデータを定義する 3 つの部分: *buffer*データを格納すると;、*status* フィールドが、バッファーに正常に格納されているかどうか、またはに変数を復元する方法を示すフィールドです。および *length* データ。 (を参照してください[の取得と設定データ (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)詳細については、OLE DB プログラマーズ リファレンスです)。
+ ADO は内部的には、OLE DB にこれらのマクロでは、パラメーターをマップ **DBBINDING** を構造化され、OLE DB **Accessor** の移動やフィールドと変数のデータの変換を管理するオブジェクト。 OLE DB で構成されているデータを定義する 3 つの部分。A*バッファー*データを格納します場所を*状態*かどうか、フィールドは、バッファーに格納された正常にまたは; フィールドに変数を復元する方法を示す、 *の長さ。* データ。 (を参照してください[の取得と設定データ (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)詳細については、OLE DB プログラマーズ リファレンスです)。
 
 ## <a name="header-file"></a>ヘッダー ファイル
  ADO の Visual C 拡張を使用するには、アプリケーションでは、次のファイルを含めます。
@@ -58,7 +57,7 @@ ms.locfileid: "51350526"
  詳細については、次を参照してください。、 [C++ 拡張機能の例を Visual](../../../ado/guide/appendixes/visual-c-extensions-example.md)します。
 
 ## <a name="interface-methods"></a>インターフェイス メソッド
- **IADORecordBinding**インターフェイスには 3 つの方法: **BindToRecordset**、 **AddNew**、および**Update**です。 各メソッドに唯一の引数から派生したクラスのインスタンスへのポインターは、 **CADORecordBinding**です。 したがって、 **AddNew**と**Update**メソッドは、ADO メソッド namesakes のパラメーターのいずれかを指定できません。
+ **IADORecordBinding**インターフェイスが 3 つのメソッドには。**BindToRecordset**、 **AddNew**、および**Update**します。 各メソッドに唯一の引数から派生したクラスのインスタンスへのポインターは、 **CADORecordBinding**です。 したがって、 **AddNew**と**Update**メソッドは、ADO メソッド namesakes のパラメーターのいずれかを指定できません。
 
 ## <a name="syntax"></a>構文
  **BindToRecordset**メソッドに関連付け、**レコード セット**フィールド C と C++ の変数を使用します。
@@ -84,7 +83,7 @@ Update(CADORecordBinding *binding)
 
  などのマクロのファミリを固定長のデータの提供される**adDate**または**adBoolean**以外の場合は数値データなど**adTinyInt**、 **adInteger**、または**adDouble**; と可変長データなど**adChar**、**adVarChar**または**adVarBinary**です。 すべての数値型以外の**adVarNumeric**も、固定長の型。 各ファミリでは、それぞれ異なるパラメーター セットにいるため、関係のないのは、バインド情報を除外することができます。
 
- 詳細については、次を参照してください。[付録 a: データ型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)、OLE DB プログラマーズ リファレンスの。
+ 詳細については、次を参照してください[付録 a:。データ型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)、OLE DB プログラマーズ リファレンスの。
 
 ### <a name="begin-binding-entries"></a>バインディング エントリを開始します。
  **BEGIN_ADO_BINDING**(*クラス*)
@@ -129,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  データを設定するときに*Status*に設定することがあります**adFldNull**を示すために、 **Recordset**フィールドを設定する必要がありますを null にします。
 
-|定数|値|説明|
+|定数|Value|説明|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null 以外のフィールドの値が返されました。|
 |**adFldBadAccessor**|1|バインドが無効です。|
@@ -139,7 +138,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|値は署名され、変数のデータ型が符号なし。|
 |**adFldDataOverFlow**|6|値は、変数のデータ型に格納されるよりも大きいです。|
 |**adFldCantCreate**|7|不明な列の型とフィールドが既に開いています。|
-|**adFldUnavailable**|8|フィールドの値を特定できませんでした-既定値を持たない新しい、割り当てられていないフィールドでなど。|
+|**adFldUnavailable**|8|フィールドの値は、特定の例で、既定値はありません、割り当てられていない新しいフィールドでできませんでした。|
 |**adFldPermissionDenied**|9|更新する場合、データの書き込みアクセス許可がありません。|
 |**adFldIntegrityViolation**|10|更新する場合、フィールドの値列の整合性に違反します。|
 |**adFldSchemaViolation**|11|更新時に、フィールドの値が列スキーマに違反します。|

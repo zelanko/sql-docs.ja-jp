@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147018"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833708"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>OLE DB 接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する
   フル キャッシュ モードおよび OLE DB 接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
@@ -46,17 +45,17 @@ ms.locfileid: "48147018"
   
 7.  **[エントリが一致しない行の処理方法を指定する]** ボックスの一覧で、一致するエントリがない行のエラー処理オプションを選択します。  
   
-8.  [接続] ページで、 **[OLE DB 接続マネージャー]** ボックスの一覧から接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](ole-db-connection-manager.md)」をご覧ください。  
+8.  [接続] ページで、 **[OLE DB 接続マネージャー]** ボックスの一覧から接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](ole-db-connection-manager.md)」を参照してください。  
   
 9. 次のいずれかの手順を実行します。  
   
     -   **[テーブルまたはビューを使用する]** をクリックし、テーブルまたはビューを選択するか、 **[新規作成]** をクリックしてテーブルまたはビューを作成します。  
   
-         — または —  
+         \- または -  
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成するか、 **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** に用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         — または —  
+         \- または -  
   
     -   **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48147018"
   
 13. **[OK]** をクリックして参照変換への変更を保存し、パッケージを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キャッシュ接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [キャッシュなしモードまたは部分キャッシュ モードの参照を実装する](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services の変換](../data-flow/transformations/integration-services-transformations.md)  

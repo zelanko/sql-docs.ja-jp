@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
@@ -14,21 +13,21 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28de150be95c10e8c1c1ef9f4c5280d185c5bc18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63215807"
 ---
 # <a name="delete-a-workload-group"></a>ワークロード グループの削除
   ワークロード グループまたはリソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **ワークロード グループの削除に使用するもの:**  [オブジェクト エクスプローラー](#DelWGObjEx)、 [リソース ガバナーのプロパティ](#DelWGRGProp)、 [Transact-SQL](#DelWGTSQL)  
+-   **ワークロード グループの削除に使用するもの:** [オブジェクト エクスプローラー](#DelWGObjEx)、[リソース ガバナーのプロパティ](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  アクティブなセッションが含まれている場合は、ワークロード グループを削除できません。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
@@ -68,9 +67,9 @@ ms.locfileid: "48174332"
 ##  <a name="DelWGTSQL"></a> Transact-SQL を使用してワークロード グループを削除する  
  **Transact-SQL を使用してワークロード グループを削除するには**  
   
-1.  実行、`DROP WORKLOAD GROUP`ステートメントを削除するワークロード グループの名前を指定します。  
+1.  削除するワークロード グループの名前を示す `DROP WORKLOAD GROUP` ステートメントを実行します。  
   
-2.  `ALTER RESOURCE GOVERNOR RECONFIGURE` ステートメントを実行する前に、削除するワークロード グループにアクティブな要求がないことを確認します。 作業中の要求がある場合`ALTER RESOURCE GOVERNOR`は失敗します。 この問題を回避するには、次のいずれかの操作を実行します。  
+2.  `ALTER RESOURCE GOVERNOR RECONFIGURE` ステートメントを実行する前に、削除するワークロード グループにアクティブな要求がないことを確認します。 アクティブな要求があると `ALTER RESOURCE GOVERNOR` は失敗します。 この問題を回避するには、次のいずれかの操作を実行します。  
   
     -   ワークロード グループからのセッションがすべて接続解除されるまで待ちます。  
   
@@ -93,7 +92,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](resource-governor.md)   
+ [リソース ガバナー](resource-governor.md)   
  [リソース プールの作成](create-a-resource-pool.md)   
  [ワークロード グループの作成](create-a-workload-group.md)   
  [リソース プールの削除](delete-a-resource-pool.md)   

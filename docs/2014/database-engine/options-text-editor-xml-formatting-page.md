@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bc45797c7978e1b851078b1644c4a14e31d04bbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089851"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>[オプション] ([テキスト エディター]/[XML]/[書式設定] ページ)
-  このダイアログ ボックスでは、XML エディターの書式設定を指定できます。 **[ツール]** メニューから **[オプション]** ダイアログ ボックスにアクセスできます。  
+
+このダイアログ ボックスでは、XML エディターの書式設定を指定できます。 **[ツール]** メニューから **[オプション]** ダイアログ ボックスにアクセスできます。  
   
 > [!NOTE]  
->  次の設定は、**[テキスト エディター]** フォルダーを展開し、**[XML]** フォルダーを展開して、**[オプション]** ダイアログ ボックスの **[書式設定]** オプションを選択したときに利用可能になります。  
+> 次の設定は、 **[テキスト エディター]** フォルダーを展開し、 **[XML]** フォルダーを展開して、 **[オプション]** ダイアログ ボックスの **[書式設定]** オプションを選択したときに利用可能になります。  
   
 ## <a name="attributes"></a>属性  
  **手動による属性の書式設定を保持します。**  
@@ -62,9 +60,7 @@ ms.locfileid: "48154240"
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \</dir >  
+ \</dir>  
   
 ## <a name="see-also"></a>参照  
  [XML エディター &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
-  
-  

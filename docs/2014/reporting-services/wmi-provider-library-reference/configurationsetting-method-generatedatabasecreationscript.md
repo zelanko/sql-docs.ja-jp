@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - GenerateDatabaseCreationScript method
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d456e0949f38a402b4947c72a3f3f9ec029f2a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098508"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースの作成で使用する SQL スクリプトを生成します。  
@@ -53,7 +52,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  ネイティブ モードと SharePoint 統合モードのどちらでデータベースを作成するかを示します。  
   
 > [!IMPORTANT]  
->  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 *IsSharePointMode* = `True`はサポートされていません、SharePoint モードで[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は SharePoint 共有サービスで、WMI プロバイダーによって制御されていません。 常にこのパラメーターに設定する必要があります`False`します。  
+>  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 *IsSharePointMode* = `True`はサポートされていません、SharePoint モードで[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は SharePoint 共有サービスで、WMI プロバイダーによって制御されていません。 このパラメーターは常に `False` に設定してください。  
   
  *[スクリプト]*  
  [out] 生成された SQL スクリプトを含む文字列。  
@@ -75,7 +74,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
   
  生成されたスクリプトは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]をサポートします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

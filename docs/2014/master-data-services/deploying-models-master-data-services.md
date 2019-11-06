@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5e33eca3c4be7d766d85862ccb66a4ab76a9d17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b631686e9daf716bb124ce5fadaf7575420a114
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483145"
 ---
 # <a name="deploying-models-master-data-services"></a>モデルの配置 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]におけるパッケージは、配置可能なモデル構造と (必要に応じて) モデル データを含んだ XML ファイルです。 モデル パッケージを使用して、モデルのコピーを MDS 環境間で移動したり、既存の MDS 環境に新しいモデルを作成したりすることができます。  
@@ -32,7 +31,7 @@ ms.locfileid: "48066332"
   
 -   **MDSModelDeploy ツール**: モデル オブジェクトとデータを作成して配置するには、MDSModelDeploy.exe ツールを使用します。 MDS をインストールするときに、既定のパスを選択した場合は、このツールはあります*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
   
--   **モデル配置ウィザード**: モデルの構造のみのパッケージを作成して配置するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションのウィザードを使用します。 このウィザードを使用して、データを配置することはできません。  
+-   **モデル配置ウィザード**: モデルの構造のみのパッケージを作成して配置するには、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションのウィザードを使用します。 このウィザードを使用して、データを配置することはできません。  
   
 -   **モデル パッケージ エディター**: モデル パッケージを編集するには、ModelPackageEditor.exe を使用してモデル パッケージ エディター ウィザードを起動します。 このウィザードを使用して、MDSModelDeploy ツールまたはモデル配置ウィザードによって作成されたパッケージを編集します。 MDS をインストールするときに、既定のパスを選択した場合は、このツールはあります*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
   
@@ -77,6 +76,6 @@ ms.locfileid: "48066332"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [モデル配置オプション&#40;マスター データ サービス&#41;](model-deployment-options-master-data-services.md)  
+-   [モデル配置オプション (マスター データ サービス)](model-deployment-options-master-data-services.md)  
   
   

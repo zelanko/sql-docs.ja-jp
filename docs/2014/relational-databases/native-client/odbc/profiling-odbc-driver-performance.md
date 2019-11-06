@@ -19,12 +19,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8990539dcee3be8eb8101050a9f9f11d880fcd7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63143588"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC ドライバーのパフォーマンスのプロファイル
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次の 2 種類のパフォーマンス データをプロファイルできます。  
@@ -82,7 +82,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|SQL_PERF_START 以降に処理された SELECT ステートメントの数。|  
 |SQLSelectRows|SQL_PERF_START 以降に選択された行数。|  
 |トランザクション|SQL_PERF_START 以降のユーザー トランザクションの数。ロールバックの数も含まれます。 SQL_AUTOCOMMIT_ON の状態で ODBC アプリケーションが実行されている場合は、各コマンドがトランザクションと見なされます。|  
-|SQLPrepares|数[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)sql_perf_start 後呼び出し。|  
+|SQLPrepares|数[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)sql_perf_start 後呼び出し。|  
 |ExecDirects|数**SQLExecDirect** sql_perf_start 後呼び出し。|  
 |SQLExecutes|数**SQLExecute** sql_perf_start 後呼び出し。|  
 |CursorOpens|SQL_PERF_START 以降にドライバーがサーバー カーソルを開いた回数。|  
@@ -117,7 +117,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|SQL_PERF_START 以降、ドライバーが処理に要した累積時間。サーバーからの応答の待ち時間も含まれます。|  
 |msNetworkServerTime|ドライバーがサーバーからの応答待ちに要した累積時間。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
  [ODBC ドライバーのパフォーマンスに関するトピックをプロファイリング&#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

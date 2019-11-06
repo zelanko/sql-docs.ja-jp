@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192522"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891614"
 ---
 # <a name="securing-sql-server"></a>SQL Server の保護
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の保護は、プラットフォーム、認証、オブジェクト (データを含む)、およびシステムにアクセスするアプリケーションの 4 つの領域が関係する一連の手順としてとらえることができます。 以下の各トピックでは、効果的なセキュリティ計画を作成および実装する方法について、順を追って説明します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティの詳細については、 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web サイトを参照してください。 このサイトには、推奨事項やセキュリティ チェックリストが掲載されています。 このサイトには、最新のサービス パックの情報およびダウンロードも含まれています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティの詳細については、 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) Web サイトを参照してください。 このサイトには、推奨事項やセキュリティ チェックリストが掲載されています。 このサイトには、最新のサービス パックの情報およびダウンロードも含まれています。  
   
 ## <a name="platform-and-network-security"></a>プラットフォームとネットワーク セキュリティ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプラットフォームは、クライアントをデータベース サーバーに接続する物理的なハードウェアおよびネットワーク システムと、データベース要求の処理に使用するバイナリ ファイルで構成されます。  
@@ -51,7 +51,7 @@ ms.locfileid: "48192522"
 |---------------------------|---------|  
 |ファイアウォールの構成: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |ファイアウォールの構成: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[SSIS サービスにアクセスするように Windows ファイアウォールを構成する](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|ファイアウォールの構成: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|ファイアウォールの構成: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |アクセスするためにファイアウォールの特定のポートを開く: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |チャネル バインドとサービス バインドを使用して認証の拡張保護をサポートするように構成します。|[拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48192522"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プログラム ファイル|[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス パックおよびアップグレードは、強化されたセキュリティを提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用の利用可能な最新サービス パックを確認するには、 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web サイトを参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス パックおよびアップグレードは、強化されたセキュリティを提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用の利用可能な最新サービス パックを確認するには、 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) Web サイトを参照してください。  
   
  次のスクリプトを使用すると、システムにインストールされているサービス パックを確認できます。  
   

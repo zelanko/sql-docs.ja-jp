@@ -1,6 +1,7 @@
 ---
-title: 可用性レプリカ間のセッション中に発生する可能性のあるエラー (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 考えられる可用性レプリカ間の接続エラーの原因を判断する
+description: このトピックでは、Always On 可用性グループに参加しているレプリカ間の接続エラーで考えられるさまざまな原因について説明します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4117189da3979bb3e8faff3fec7b48e1a75d96e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655910"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874533"
 ---
-# <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性レプリカ間のセッション中に発生する可能性のあるエラー (SQL Server)
+# <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>考えられる可用性レプリカ間の接続エラーの原因を判断する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題により、2 つの可用性レプリカ間のセッションが失敗する場合があります。 可用性レプリカでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、通知されないその他の失敗を検出するために、独自のセッション タイムアウト メカニズムを実装しています。 セッション タイムアウト期間を秒単位で指定します。 このタイムアウト時間は、別のインスタンスからの PING メッセージを受信するために、サーバー インスタンスが待機する最大時間です。この時間を過ぎると、待機していたインスタンスは接続解除されたものと見なされます。 2 つの可用性レプリカ間でセッション タイムアウトが発生すると、可用性レプリカはエラーが発生したと想定し、 *ソフト エラー*を宣言します。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47655910"
   
 -   TCP リンクのタイムアウト、パケットの紛失または破損、不正な順序のパケットなどのネットワーク エラー。  
   
--   オペレーティング システム、サーバー、またはデータベースの停止状態。  
+-   オペレーティング システム、サーバー、またはデータベースの応答の停止。  
   
 -   Windows サーバーのタイムアウト。  
   

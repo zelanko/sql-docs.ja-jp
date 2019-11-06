@@ -2,7 +2,6 @@
 title: 自動統計 (Analytics Platform System)
 description: Analytics Platform System AU7 で導入された自動統計機能をについて説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: caed6b9d126e09bc70a61c73b5100d689f81b011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961278"
 ---
 # <a name="configure-auto-statistics"></a>統計の自動構成します。
 
@@ -32,7 +31,7 @@ ms.locfileid: "39400915"
 自動統計には、次の 3 つの設定が含まれています。 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-自動作成オプションの統計、AUTO_CREATE_STATISTICS が ON、クエリ オプティマイザーがクエリ プランのカーディナリティの推定を向上させるために、必要に応じて、クエリ述語内の個々 の列に関する統計を作成します。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
+統計の自動作成オプション AUTO_CREATE_STATISTICS が ON の場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
 統計の自動更新オプション AUTO_UPDATE_STATISTICS がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
@@ -75,5 +74,5 @@ FROM
 
 1 の設定には、戻り値が入っていて 0 は、設定がオフです。 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 クエリの実行方法を確認するを参照してください[アクティブなクエリの監視。](monitoring-active-queries.md)

@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14702941897ebfec4b8646f8015a659f370e31ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995487"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定された対象サーバー内のマルチサーバー ジョブをすべて再同期化します。  
+  指定されたターゲット サーバー内のマルチサーバー ジョブをすべて再同期します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +40,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@server_name =**] **'***server***'**  
- 再同期化するサーバーの名前を指定します。 *server* のデータ型は **sysname**で、既定値はありません。 場合**すべて**を指定すると、すべての対象サーバーが再同期します。  
+`[ @server_name = ] 'server'` 再同期化するサーバーの名前。 *server* のデータ型は **sysname**で、既定値はありません。 場合**すべて**を指定すると、すべての対象サーバーが再同期します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -57,7 +55,7 @@ sp_resync_targetserver
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、対象サーバー `SEATTLE1` を再同期化します。  
+ 次の例では、`SEATTLE1` ターゲット サーバーを再同期します。  
   
 ```  
 USE msdb ;  

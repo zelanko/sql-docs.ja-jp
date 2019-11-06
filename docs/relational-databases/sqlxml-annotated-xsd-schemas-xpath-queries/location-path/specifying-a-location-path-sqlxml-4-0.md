@@ -14,16 +14,15 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4de99ac84f9c961a75d59c2951c61bdc6256642
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 512bb34ad283339218f751f4f2a96a82bdca0a9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073341"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>ロケーション パスの指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,9 +51,9 @@ ms.locfileid: "47681270"
   
 -   **ノード テスト**  
   
-     ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、および**セルフ**) 主ノード型があります。 **属性**軸の主ノード型は**\<属性 >** します。 **親**、**子**、および**セルフ**軸の場合、主ノード型は**\<要素 >** します。  
+     ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、および**セルフ**) 主ノード型があります。 **属性**軸の主ノード型は **\<属性 >** します。 **親**、**子**、および**セルフ**軸の場合、主ノード型は **\<要素 >** します。  
   
-     たとえば、次の場所のパスを指定します**child::customer**、 **\<顧客 >** コンテキスト ノードの子要素を選択します。 **子**軸に**\<要素 >** 、主ノード型と、ノード テスト Customer 場合は、TRUE 顧客、 **\<要素 >** ノード。  
+     たとえば、次の場所のパスを指定します**child::customer**、 **\<顧客 >** コンテキスト ノードの子要素を選択します。 **子**軸に **\<要素 >** 、主ノード型と、ノード テスト Customer 場合は、TRUE 顧客、 **\<要素 >** ノード。  
   
 -   **選択述語 (0 個以上)**  
   

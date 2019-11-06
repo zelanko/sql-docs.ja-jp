@@ -1,10 +1,10 @@
 ---
-title: 対象サーバーのクロックの同期 (SQL Server Management Studio) | Microsoft Docs
+title: ターゲット サーバーのクロックの同期 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
@@ -16,15 +16,15 @@ ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fc706c6313258844dd015421e69828f996c0f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 769b2b9caba541af3a1ea38e1969d8a6422950be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188764"
 ---
-# <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>対象サーバーのクロックの同期 (SQL Server Management Studio)
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の対象サーバーのクロックとマスター サーバーのクロックの同期をとる方法について説明します。 これらのシステム クロックの同期をとると、ジョブのスケジュールを効果的に管理できます。  
+# <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>ターゲット サーバーのクロックの同期 (SQL Server Management Studio)
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のターゲット サーバーのクロックとマスター サーバーのクロックを同期する方法について説明します。 これらのシステム クロックの同期をとると、ジョブのスケジュールを効果的に管理できます。  
   
  **このトピックの内容**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48210722"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48210722"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-synchronize-target-server-clocks"></a>対象サーバーのクロックの同期をとるには  
+#### <a name="to-synchronize-target-server-clocks"></a>ターゲット サーバーのクロックを同期するには  
   
 1.  **オブジェクト エクスプローラー** で、対象サーバーのクロックとマスター サーバーのクロックの同期をとるサーバーをプラス記号をクリックして展開します。  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48210722"
   
 5.  **[受信者]** で、次のいずれかの操作を行います。  
   
-    -   すべての対象サーバーのクロックとマスター サーバーのクロックの同期をとるには、 **[すべての対象サーバー]** をクリックします。  
+    -   すべてのターゲット サーバーのクロックとマスター サーバーのクロックを同期するには、 **[すべてのターゲット サーバー]** をクリックします。  
   
-    -   特定のサーバーのクロックと同期をとるには、 **[特定の対象サーバー]** をクリックし、マスター サーバーのクロックと同期をとる対象サーバーを選択します。  
+    -   特定のサーバーのクロックを同期するには、 **[特定のターゲット サーバー]** をクリックし、マスター サーバーのクロックと同期するターゲット サーバーを選択します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-synchronize-target-server-clocks"></a>対象サーバーのクロックの同期をとるには  
+#### <a name="to-synchronize-target-server-clocks"></a>ターゲット サーバーのクロックを同期するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

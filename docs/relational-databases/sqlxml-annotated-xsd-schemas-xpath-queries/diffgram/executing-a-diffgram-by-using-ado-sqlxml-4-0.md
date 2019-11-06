@@ -1,5 +1,5 @@
 ---
-title: ADO (SQLXML 4.0) を使用した、DiffGram の実行 |マイクロソフトのドキュメント
+title: ADO を使用した DiffGram の実行 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,34 +14,33 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLOLEDB Provider
 - DiffGrams [SQLXML], ADO
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1e18de1cf07f175bb8dcf294245ffe7043cc5a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3d0b352c31c7661a92cb53f8331d2a8e062aa8a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676152"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909352"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO を使用した、DiffGram の実行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、DiffGram を実行します。 このアプリケーションでは、DiffGram と XSD スキーマは 1 つのファイルに格納されており、 ファイルを指定して DiffGram を読み込みます。 Diffgram (と関連する XSD スキーマ) のいずれかを使用することで説明されている[DiffGram の例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)します。  
+  この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、DiffGram を実行します。 このアプリケーションでは、DiffGram と XSD スキーマは 1 つのファイルに格納されており、 ファイルを指定して DiffGram を読み込みます。 [Diffgram の例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)に記載されている、すべての diffgram (および関連する XSD スキーマ) を使用できます。  
   
- これは、サンプル アプリケーションのプロセスです。  
+ サンプルアプリケーションのプロセスは次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB します。接続**) 特定のサーバーで実行中の SQL Server のインスタンスへの接続を確立します。  
+-   **Conn**オブジェクト (**ADODB接続**) 特定のサーバー上の SQL Server の実行中のインスタンスへの接続を確立します。  
   
--   **Cmd**オブジェクト (**ADODB.Command**) で確立された接続を実行します。  
+-   **Cmd**オブジェクト (**ADODB**) は、確立された接続で実行されます。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
--   DiffGram がコマンド ストリームにコピーされます (**strmIn**) ファイルから。  
+-   DiffGram は、ファイルからコマンドストリーム (**Strmin**) にコピーされます。  
   
--   設定されているコマンドの出力ストリーム、 **StrmOut**オブジェクト (**ADODB します。Stream**) が表示されるデータが返されます。  
+-   コマンドの出力ストリームは、 **Strmout**オブジェクト (ADODB) に設定され**ます。ストリーム**) が返されます。  
   
--   SQLOLEDB プロバイダーを使用する場合、既定では Sqlxmlx.dll により Microsoft SQLXML の機能が提供されます。 SQLOLEDB プロバイダーで Sqlxml4.dll を使用する、 **SQLXML Version**にプロパティを設定する必要があります**SQLXML.4.0** SQLOLEDB プロバイダーで**接続**オブジェクト。  
+-   SQLOLEDB プロバイダーを使用する場合、既定では Sqlxmlx.dll により Microsoft SQLXML の機能が提供されます。 SQLOLEDB プロバイダーで Sqlxml4.dll を使用するには、SQLOLEDB プロバイダー**接続**オブジェクトで**sqlxml Version**プロパティが**sqlxml. 4.0**に設定されている必要があります。  
   
 -   コマンド (DiffGram) が実行されます。  
   
@@ -87,7 +86,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
-1.  コンピューター上のフォルダー、するには、例では、いずれかから、Diffgram と対応する XSD スキーマのいずれかをコピー [DiffGram の例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)します。  
+1.  コンピューター上のフォルダーには、 [diffgram の例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)のいずれかの例から、いずれかの diffgram と対応する XSD スキーマをコピーします。  
   
 2.  Visual Basic を開き、標準 EXE プロジェクトを作成します。  
   
@@ -97,12 +96,11 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  ツールボックス、 **CommandButton**フォームにボタンを描画します。  
+4.  ツールボックスで、[**コマンド**ボタン] をクリックし、フォームにボタンを描画します。  
   
 5.  ボタンをダブルクリックしてコードを編集し、トピックで提供されるアプリケーション コードを追加します。  
   
 6.  コードに DiffGram と XSD ファイルの名前を指定し、 接続文字列も適宜変更します。  
   
 7.  アプリケーションを実行します。 実行結果は、実行する DiffGram によって変わります。  
-  
-  
+

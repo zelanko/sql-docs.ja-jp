@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779157"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン
   多くのシナリオでは、トランザクション分離レベルを指定する必要があります。 メモリ最適化テーブルのトランザクション分離は、ディスク ベース テーブルとは異なります。  
@@ -56,13 +56,13 @@ ms.locfileid: "48050040"
   
  SNAPSHOT 分離レベル (メモリ最適化テーブルでサポートされる分離レベルのうち、最も低いレベル) による保証には、READ COMMITTED の保証が含まれています。 トランザクションの各ステートメントでは、同一で一貫性のあるバージョンのデータベースを読み取ります。 トランザクションによって読み取られる行がいずれもデータベースにコミットされるだけでなく、すべての読み取り操作で同じトランザクションによって変更が実行されます。  
   
- **ガイドライン**: READ COMMITTED 分離の保証が必要な場合にのみ使用してスナップショット分離では、ネイティブ コンパイル ストアド プロシージャとによって、メモリ最適化テーブルにアクセスするための解釈[!INCLUDE[tsql](../includes/tsql-md.md)]します。  
+ **ガイドライン**:READ COMMITTED 分離の保証が必要な場合にのみ使用してスナップショット分離では、ネイティブ コンパイル ストアド プロシージャとによって、メモリ最適化テーブルにアクセスするための解釈[!INCLUDE[tsql](../includes/tsql-md.md)]します。  
   
  自動コミット トランザクションでは、分離レベル READ COMMITTED が暗黙的にメモリ最適化テーブルの SNAPSHOT にマッピングされています。 このため、TRANSACTION ISOLATION LEVEL セッションの設定が READ COMMITTED に設定されている場合には、メモリ最適化テーブルにアクセスするときにテーブル ヒントを使用して分離レベルを指定する必要はありません。  
   
  以下の自動コミット トランザクションの例では、アドホック バッチの一環としてメモリ最適化テーブル Customers と通常のテーブル [Order History] の間の結合を表示しています。  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,14 +73,14 @@ LEFT JOIN dbo.[Order History] AS oh
   
  以下の明示的トランザクションまたは暗黙的トランザクションの例でも同じ結合を示していますが、今回は明示的なユーザー トランザクションを使用しています。 テーブル ヒント WITH (SNAPSHOT) で示すように、メモリ最適化テーブル Customers が SNAPSHOT 分離レベルでアクセスされています。これに対して、通常のテーブル [Order History] は、READ COMMITTED 分離レベルでアクセスされています。  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
 SELECT * FROM dbo.Customers c with (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] oh   
     ON c.customer_id=oh.customer_id  
-…  
+...  
 COMMIT  
 ```  
   
@@ -105,7 +105,7 @@ COMMIT
   
  ポーリングのロジックはテーブル t1 にアクセスするうえで SNAPSHOT 分離を使用しているため、トランザクションの範囲外に置く必要があることに注意してください。 トランザクションの範囲内でポーリング ロジックを使用すると、トランザクションの実行時間が長くなり、好ましくありません。  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

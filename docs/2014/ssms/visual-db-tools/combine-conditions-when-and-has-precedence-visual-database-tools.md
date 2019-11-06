@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -16,12 +16,12 @@ ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9da1317b17f7808f95596f98c6d7a18bf9558fe3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225807"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
   AND で条件を結合するには、クエリに対して列を 2 回 (各条件について 1 回ずつ) 追加します。 OR で条件を結合するには、[フィルター] 列で最初の条件を指定し、次の条件を **[または...]** 列で指定します。  
@@ -30,7 +30,7 @@ ms.locfileid: "48169942"
   
 -   入社日が 5 年以上前で、かつ職務レベルが 100 の従業員  
   
-     - または -  
+     \- または -  
   
 -   職務レベルが 200 の従業員  
   

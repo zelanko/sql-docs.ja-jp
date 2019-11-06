@@ -9,43 +9,31 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e868788745efcc6525b985c861ae15cca6d3b752
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3152d98e44f723ed15f508e76d9828eb6dde82c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013962"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server エラー ログ (Always On 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server エラー ログでは、次のような Always On 可用性グループに影響するイベントを報告します。  
   
--   Windows Server フェールオーバー クラスタリング (WSFC) クラスターとの通信  
-  
--   可用性レプリカの状態遷移  
-  
--   可用性データベースの状態遷移  
-  
--   プライマリ レプリカとセカンダリ レプリカの間での可用性データベースの接続状態  
-  
--   可用性グループのエンドポイントの状態  
-  
--   可用性グループのリスナーの状態  
-  
--   SQL Server リソース DLL (WSFC クラスターで実行されている) と SQL Server インスタンスの間のリース ステータス (詳細については、「[How It Works: SQL Server Always On lease timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)」(動作方法: SQL Server Always On のリース タイムアウト) を参照してください)。  
-  
+-   Windows Server フェールオーバー クラスタリング (WSFC) クラスターとの通信    
+-   可用性レプリカの状態遷移    
+-   可用性データベースの状態遷移    
+-   プライマリ レプリカとセカンダリ レプリカの間での可用性データベースの接続状態    
+-   可用性グループのエンドポイントの状態    
+-   可用性グループのリスナーの状態    
+-   SQL Server リソース DLL (WSFC クラスターで実行されている) と SQL Server インスタンスの間のリース ステータス (詳細については、「[How It Works: SQL Server Always On lease timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)」 (動作方法: SQL Server Always On のリース タイムアウト) を参照してください)。    
 -   可用性グループのエラー イベント  
-
 
 次の現象は、SQL Server エラー ログで確認する必要があります。  
 
--   可用性データベースにアクセスできない  
-  
--   可用性グループの予期しないフェールオーバー  
-  
--   予期しない解決状態の可用性グループ  
-  
+-   可用性データベースにアクセスできない    
+-   可用性グループの予期しないフェールオーバー    
+-   予期しない解決状態の可用性グループ    
 -   不確定な状態の可用性グループ  
   
 詳細については、「[SQL Server エラー ログの表示 &#40;SQL Server Management Studio&#41;](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)」を参照してください。  

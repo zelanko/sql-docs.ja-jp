@@ -1,7 +1,7 @@
 ---
 title: データベース マスター キーのバックアップ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,60 +11,49 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: f74c7c94ee414597ddc9f72cd9a1a7d4d099bd91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a45b7977d19603387e51b9ed824d9e8a4d759b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997675"
 ---
 # <a name="back-up-a-database-master-key"></a>データベース マスター キーのバックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用してデータベース マスター キーをバックアップする方法について説明します。 データベース マスター キーは、データベース内の他のキーや証明書を暗号化する際に使用します。 データベース マスター キーが削除されるか破損すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、暗号化されたキーの暗号化を解除できなくなる場合があります。さらに、そのキーを使用して暗号化されたデータは事実上失われます。 このため、データベース マスター キーはバックアップして、安全な別の場所に保存しておく必要があります。  
   
- **このトピックの内容**  
+## <a name="before-you-begin"></a>はじめに  
   
--   **作業を開始する準備:**  
+### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
   
-     [制限事項と制約事項](#Restrictions)  
+- マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 マスター キーがサービス マスター キーで暗号化されている場合は、明示的に開く必要はありません。 パスワードのみで暗号化されている場合は、明示的に開く必要があります。  
   
-     [Security](#Security)  
+- マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
   
--   [Transact-SQL を使用してデータベース マスター キーをバックアップするには](#Procedure)  
+## <a name="security"></a>Security  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+### <a name="permissions"></a>アクセス許可
+データベースに対する CONTROL 権限が必要です。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+## <a name="using-sql-server-management-studio-with-transact-sql"></a>Transact-SQL を備えた SQL Server Management Studio の使用  
   
--   マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 マスター キーがサービス マスター キーで暗号化されている場合は、明示的に開く必要はありません。 パスワードのみで暗号化されている場合は、明示的に開く必要があります。  
+### <a name="to-back-up-the-database-master-key"></a>データベース マスター キーをバックアップするには  
   
--   マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
+1. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、バックアップするデータベース マスター キーが格納されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
-###  <a name="Security"></a> セキュリティ  
+2. バックアップ メディアでデータベース マスター キーの暗号化に使用するパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。  
   
-####  <a name="Permissions"></a> Permissions  
- データベースに対する CONTROL 権限が必要です。  
+3. バックアップしたキーのコピーを保存するためにリムーバブル バックアップ メディアを用意します。  
   
-##  <a name="Procedure"></a> Transact-SQL を備えた SQL Server Management Studio の使用  
+4. キーのバックアップを作成する NTFS ディレクトリを指定します。 このディレクトリは、次の手順で指定するファイルの作成先となります。 このディレクトリは、制限の厳しいアクセス制御リスト (ACL) で保護する必要があります。  
   
-#### <a name="to-back-up-the-database-master-key"></a>データベース マスター キーをバックアップするには  
+5. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、バックアップするデータベース マスター キーが格納されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
+6. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-2.  バックアップ メディアでデータベース マスター キーの暗号化に使用するパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。  
+7. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-3.  バックアップしたキーのコピーを保存するためにリムーバブル バックアップ メディアを用意します。  
-  
-4.  キーのバックアップを作成する NTFS ディレクトリを指定します。 このディレクトリは、次の手順で指定するファイルの作成先となります。 このディレクトリは、制限の厳しいアクセス制御リスト (ACL) で保護する必要があります。  
-  
-5.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
-  
-6.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
-  
-7.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
-  
-    ```  
+    ```sql
     -- Creates a backup of the "AdventureWorks2012" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
     USE AdventureWorks2012;   
     GO  
@@ -76,12 +65,10 @@ ms.locfileid: "47757890"
     ```  
   
     > [!NOTE]  
-    >  キーのファイル パスとキーのパスワード (存在する場合) は、実際は上に示したものと異なります。 両方がサーバーとキーのセットアップで固有であることをご確認ください。  
+    > キーのファイル パスとキーのパスワード (存在する場合) は、実際は上に示したものと異なります。 両方がサーバーとキーのセットアップで固有であることをご確認ください。  
   
-8.  ファイルをバックアップ メディアにコピーして、コピーしたファイルを確認します。  
+8. ファイルをバックアップ メディアにコピーして、コピーしたファイルを確認します。  
   
 9. バックアップを安全な場所に保存します。  
   
  詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md)」と「[BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md)」を参照してください。  
-  
-  

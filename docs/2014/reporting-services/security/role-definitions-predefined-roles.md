@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: f9f6eff58d5d9c536dd6c6c9f40d389bab1532e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101787"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、定義済みのロールと共にインストールされます。このロールを使用すると、レポート サーバーの操作へのアクセスを許可することができます。 定義済みの各ロールは、関連するタスクのコレクションを示しています。 定義済みのロールにグループやユーザー アカウントを割り当てることで、レポート サーバーの操作にすぐにアクセスできます。  
@@ -31,7 +30,7 @@ ms.locfileid: "48167222"
   
 2.  レポート サーバーへのアクセス権を必要とするユーザーやグループ、およびそのレベルを特定します。 **閲覧者** ロールまたは **レポート ビルダー** ロールには、大半のユーザーを割り当てる必要があります。 **パブリッシャー** ロールには、少数のユーザーしか割り当てる必要はありません。 また、 **コンテンツ マネージャー**に割り当てる必要があるのは、ごく限られたユーザーです。  
   
-3.  ユーザー アカウントおよびグループ アカウントを特定のロールに割り当てる準備ができたら、レポート マネージャーを使用します。 詳細については、「[レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)」を参照してください。  
+3.  ユーザー アカウントおよびグループ アカウントを特定のロールに割り当てる準備ができたら、レポート マネージャーを使用します。 詳細については、「 [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)に割り当てる必要があるのは、ごく限られたユーザーです。  
   
 ##  <a name="bkmk_rolelist"></a> 定義済みロールの定義  
  定義済みロールは、サポートするタスクによって定義されます。 これらのロールは、変更したりカスタム ロールに置き換えることができます。  
@@ -70,7 +69,7 @@ ms.locfileid: "48167222"
 |レポート履歴の管理|レポート履歴の作成、表示、削除、レポート履歴のプロパティの表示、およびスナップショット履歴の制限とキャッシュの動作を決定する設定の表示と変更を行います。|  
 |レポートの管理|レポートの追加と削除、レポート パラメーターの変更、レポートのプロパティの表示と変更、レポートにコンテンツを提供するデータ ソースの表示と変更、レポート定義の表示と変更、レポート レベルのセキュリティ ポリシーの設定を行います。|  
 |リソースの管理|リソースの作成、変更、削除、およびリソースのプロパティの表示および変更を行います。|  
-|アイテムごとにセキュリティを設定|レポート、リンク レポート、フォルダー、リソース、およびデータ ソースのセキュリティ ポリシーを定義します。 詳細については、次を参照してください。[セキュリティ保護可能な項目](securable-items.md)します。|  
+|アイテムごとにセキュリティを設定|レポート、リンク レポート、フォルダー、リソース、およびデータ ソースのセキュリティ ポリシーを定義します。 詳細については、「 [セキュリティ保護可能なアイテム](securable-items.md)」を参照してください。|  
 |データ ソースの表示|フォルダー階層内の共有データ ソース アイテムを表示します。|  
 |レポートの表示|レポートを実行し、レポートのプロパティを表示します。|  
 |モデルの表示|フォルダー階層のモデルを表示し、モデルをレポートのデータ ソースとして使用し、モデルに対してクエリを実行してデータを取得します。|  
@@ -189,7 +188,7 @@ ms.locfileid: "48167222"
 |タスク|説明|  
 |----------|-----------------|  
 |レポート定義の実行|レポート サーバーにパブリッシュせずにレポート定義の実行を開始します。|  
-|ジョブの管理|実行中のジョブを表示および取り消します。 詳細については、次を参照してください。[を実行しているプロセスを管理する](../subscriptions/manage-a-running-process.md)します。|  
+|ジョブの管理|実行中のジョブを表示および取り消します。 詳細については、「 [実行中の処理を管理する](../subscriptions/manage-a-running-process.md)」を参照してください。|  
 |レポート サーバーのプロパティを管理|レポート サーバーと、レポート サーバーの管理下にあるアイテムに適用されるプロパティを表示および変更します。<br /><br /> このタスクにより、レポート マネージャーの名前の変更、個人用レポートの有効化、およびレポート履歴の既定値の設定を行うことができます。|  
 |ロールの管理|ロールの定義を作成、表示、変更、および削除します。<br /><br /> **システム管理者** ロールのメンバーは [サイトの設定] ページを使用してロールを管理できます。|  
 |共有スケジュールの管理|レポートの実行や更新に使用する共有スケジュールを作成、表示、変更、および削除します。|  
@@ -212,9 +211,9 @@ ms.locfileid: "48167222"
   
 ## <a name="see-also"></a>参照  
  [ロールを作成、削除、または変更する (Management Studio)](role-definitions-create-delete-or-modify.md)   
- [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)   
+ [レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](grant-user-access-to-a-report-server.md)   
  [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](role-assignments-modify-or-delete.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [タスクと権限](tasks-and-permissions.md)  
   
   

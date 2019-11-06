@@ -2,18 +2,18 @@
 title: 式で使用されるデータ型 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030671"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892996"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
   データを効率よく格納し、処理できるように、さまざまなデータの種類を表すデータ型が用意されています。 代表的なデータ型としては、テキスト (文字列) 型、数値型 (小数点以下桁数を含む)、数値型 (小数点以下桁数を含まない)、日付/時刻型、イメージ型などがあります。 レポート内の値は、レポート定義言語 (RDL) データ型である必要があります。 値は、レポートに表示する場合に目的に応じて書式設定できます。 たとえば、通貨を表すフィールドの場合、データを浮動小数点数としてレポート定義に格納しておき、実際には、指定した書式設定プロパティに従ってさまざまな形式で表示することができます。  
@@ -29,10 +29,10 @@ ms.locfileid: "50030671"
 |RDL 型|CLR 型|  
 |--------------|---------------|  
 |String|既定値: String<br /><br /> Chart、GUID、Timespan|  
-|ブール値|既定値: Boolean|  
+|Boolean|既定値: Boolean|  
 |Integer|既定値: Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
 |DateTime|既定値: DateTime<br /><br /> DateTimeOffset|  
-|Float|既定値: Double<br /><br /> Single、Decimal|  
+|float|既定値: Double<br /><br /> Single、Decimal|  
 |Binary|既定値: Byte[]|  
 |Variant|Byte[] 以外の上記すべて|  
 |VariantArray|Variant の配列|  
@@ -106,7 +106,7 @@ ms.locfileid: "50030671"
   
  次のいずれかの方法を使用することで、このデータを 1 つまたは複数の CLR 値に変換できます。  
   
--   テキスト ボックスに、文字列の一部分を抽出する式を入力します。 例 :  
+-   テキスト ボックスに、文字列の一部分を抽出する式を入力します。 例:  
   
     -   UTC タイム ゾーン オフセットの時間部分だけを抽出し、分に変換するには、次の式を使用します。 `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -138,7 +138,7 @@ ms.locfileid: "50030671"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」と「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ型の詳細については、「[Analysis Services で使用するデータ型](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ型の詳細については、「[Analysis Services で使用するデータ型](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

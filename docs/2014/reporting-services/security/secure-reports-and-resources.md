@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aded4422e6036ae2840d9e55278034a13f03665d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101664"
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
   各レポートおよびリソースのセキュリティを設定して、これらのアイテムへのユーザーのアクセスのレベルを制御できます。 既定では、組み込みの **Administrators** グループのメンバーであるユーザーのみ、レポートの実行、リソースの表示、プロパティの変更、およびアイテムの削除を行うことができます。 他のすべてのユーザーについては、レポートまたはリソースへのアクセスを許可するロール割り当てを作成する必要があります。  
@@ -62,7 +61,7 @@ ms.locfileid: "48129492"
  レポート内のリンクによって悪意のあるスクリプトが誤って実行されるリスクを軽減するためには、信頼されたソースのデータにのみハイパーリンクをバインドします。 悪用されるおそれのあるリンクがクエリ結果のデータやデータをハイパーリンクにバインドする式によって生成されないことを確認してください。 たとえば、複数のデータセット フィールドのデータを連結する式に基づくハイパーリンクは使用しないことをお勧めします。 必要に応じてレポートを参照し、[ソースの表示] を使用して疑わしいスクリプトや URL がないかどうかを確認してください。  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>パラメーター化されたレポート内の SQL インジェクション攻撃の緩和  
- 型のパラメーターが含まれるレポートで`String`、使用可能な値の一覧 (有効な値の一覧とも呼ばれます) を使用することを確認して、レポートを実行しているすべてのユーザーがレポートにデータを表示するために必要な権限のみを持っていることを確認します。 型のパラメーターを定義するとき`String`、任意の値を使用できるテキスト ボックスで、ユーザーが表示されます。 使用可能な値の一覧を使用すると、入力できる値が制限されます。 クエリ パラメーターにレポート パラメーターが関連付けられている場合に、使用可能な値の一覧を使用しなければ、レポート ユーザーはテキスト ボックスに SQL 構文を入力できるので、レポートとサーバーが SQL インジェクション攻撃を受ける危険性が生じます。 さらに、ユーザーが新しい SQL ステートメントを実行するための十分な権限を持っている場合は、サーバーで予想外の結果が生じる可能性もあります。  
+ `String` 型のパラメーターが含まれるレポートでは、使用可能な値の一覧 (有効な値の一覧とも呼ばれています) を必ず使用してください。また、レポートを実行するすべてのユーザーに対して、レポート表示に必要な権限のみを与えてください。 `String` 型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 使用可能な値の一覧を使用すると、入力できる値が制限されます。 クエリ パラメーターにレポート パラメーターが関連付けられている場合に、使用可能な値の一覧を使用しなければ、レポート ユーザーはテキスト ボックスに SQL 構文を入力できるので、レポートとサーバーが SQL インジェクション攻撃を受ける危険性が生じます。 さらに、ユーザーが新しい SQL ステートメントを実行するための十分な権限を持っている場合は、サーバーで予想外の結果が生じる可能性もあります。  
   
  クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文または URL をパラメーター値に入力して、このレポートを Excel または HTML に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
   
@@ -72,11 +71,11 @@ ms.locfileid: "48129492"
 >  前のリリースのドキュメントでは、式として動的クエリを作成する例が記載されていました。 この種類のクエリは、SQL インジェクション攻撃への脆弱性が生じるので、推奨されていません。  
   
 ## <a name="securing-confidential-reports"></a>機密レポートの保護  
- 機密情報を含むレポートは、重要なデータにアクセスするための資格情報の入力をユーザーに要求することによって、データアクセス レベルのセキュリティで保護する必要があります。 詳細については、次を参照してください。[資格情報の指定とレポート データ ソースに関する接続情報](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)します。 また、未承認のユーザーがアクセスできないように、フォルダーをセキュリティで保護することもできます。 詳細については、「 [フォルダーをセキュリティで保護する](secure-folders.md)」をご覧ください。  
+ 機密情報を含むレポートは、重要なデータにアクセスするための資格情報の入力をユーザーに要求することによって、データアクセス レベルのセキュリティで保護する必要があります。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。 また、未承認のユーザーがアクセスできないように、フォルダーをセキュリティで保護することもできます。 詳細については、「 [フォルダーをセキュリティで保護する](secure-folders.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  (作成-と-管理-ロール-assignments.md)   
- [レポート ビルダーへのアクセスを構成します。](../report-server/configure-report-builder-access.md)   
+ [レポート ビルダーへのアクセスの構成](../report-server/configure-report-builder-access.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [共有データ ソース アイテムをセキュリティで保護する](secure-shared-data-source-items.md)   
  [Reporting Services データ ソースに資格情報を保存する](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

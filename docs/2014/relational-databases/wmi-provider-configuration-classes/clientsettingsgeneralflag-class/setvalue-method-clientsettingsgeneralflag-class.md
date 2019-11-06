@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetValue Method (ClientSettingsGeneralFlag Class)
@@ -20,12 +18,12 @@ ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 708d87e93556e05cde2f122ecf07c7982f1b4360
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e96139ac789e4ded8453e2c26d1cd436fed6d7b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63242795"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue メソッド (ClientSettingsGeneralFlag クラス)
   参照されたフラグのすべての値を設定します。  
@@ -56,7 +54,7 @@ Value
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>関連項目  
+ [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

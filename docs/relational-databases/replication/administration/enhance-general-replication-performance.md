@@ -21,21 +21,21 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539194"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768807"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックで解説するガイドラインに従うことによって、アプリケーションおよびネットワーク上にある全種類のレプリケーションの全般的なパフォーマンスを向上させることができます。  
   
 ## <a name="server-and-network"></a>サーバーおよびネットワーク  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
   
      既定では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更します。 レプリケーション作業中に使用できるメモリ容量が少なくなるのを防ぐには、 **min server memory** オプションを使用して最小メモリ容量を設定します。 オペレーティング システムによるディスクへのメモリ書き出しを防ぐために、 **max server memory** オプションを使用して最大メモリ容量を設定することもできます。 詳細については、「[サーバー メモリに関するサーバー構成オプション](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
   
@@ -78,11 +78,11 @@ ms.locfileid: "52539194"
   
     -   マージ レプリケーションの場合には、ビジネス ロジック ハンドラーを使用する方がより効率的です。 詳細については、「[マージ同期中のビジネス ロジックの実行](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)」を参照してください。  
   
-     マージ レプリケーションにパブリッシュされるテーブルの参照整合性を維持する目的でトリガーを使用する場合は、テーブルの処理順序を指定してマージ エージェントが必要とする再試行の回数を削減します。 詳細については、「[Specify the Processing Order of Merge Articles](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」 (マージ アーティクルの処理順序の指定) を参照してください。  
+     マージ レプリケーションにパブリッシュされるテーブルの参照整合性を維持する目的でトリガーを使用する場合は、テーブルの処理順序を指定してマージ エージェントが必要とする再試行の回数を削減します。 詳細については、[マージ レプリケーションのオプションの指定](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)に関するページを参照してください。  
   
 -   Large Object (LOB) データ型の使用を制限する。  
   
-     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 **text**、 **ntext**、および **image** の各データ型は非推奨とされます。 LOB が必要な場合は、 **varchar(max)**、 **nvarchar(max)**、および **varbinary(max)** の各データ型を使用することをお勧めします。  
+     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 **text**、 **ntext**、および **image** の各データ型は非推奨とされます。 LOB が必要な場合は、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** の各データ型を使用することをお勧めします。  
   
      トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル**と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳細については、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539194"
   
      大量の変更をサブスクライバーに送信する必要があるときには、サブスクライバーを新しいスナップショットで再初期化する方が、レプリケーションを使用して個々の変更を移動するよりも高速な場合があります。 詳細については、「 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
-     トランザクション レプリケーションの場合は、レプリケーション モニターの **[未配布のコマンド]** タブに、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+     トランザクション レプリケーションの場合は、レプリケーション モニターの **[未配布のコマンド]** タブに、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="snapshot-considerations"></a>スナップショットに関する注意点  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539194"
   
      代替スナップショット フォルダーに圧縮スナップショット ファイルを格納することにより、スナップショットに必要なディスク領域を節約して、スナップショット ファイルをリムーバブル メディアに容易に移動できるようになります。  
   
-     圧縮スナップショットを使用すると、ネットワーク経由でスナップショット ファイルを移動する際のパフォーマンスが向上する場合があります。 ただし、スナップショットを圧縮すると、スナップショット ファイル生成時のスナップショット エージェント、およびスナップショット ファイル適用時のディストリビューション エージェントまたはマージ エージェントで、追加の処理が必要になります。 これにより、スナップショット生成が遅くなり、スナップショットを適用するための時間が延びることもあります。 また、ネットワークに障害が発生した場合、圧縮スナップショットを復旧することはできません。したがって、信頼性の低いネットワークには向いていません。 ネットワーク経由で圧縮スナップショットを使用するときは、これらのトレードオフを慎重に検討してください。 詳細については、「 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) 」および「 [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md)」を参照してください。  
-  
+     圧縮スナップショットを使用すると、ネットワーク経由でスナップショット ファイルを移動する際のパフォーマンスが向上する場合があります。 ただし、スナップショットを圧縮すると、スナップショット ファイル生成時のスナップショット エージェント、およびスナップショット ファイル適用時のディストリビューション エージェントまたはマージ エージェントで、追加の処理が必要になります。 これにより、スナップショット生成が遅くなり、スナップショットを適用するための時間が延びることもあります。 また、ネットワークに障害が発生した場合、圧縮スナップショットを復旧することはできません。したがって、信頼性の低いネットワークには向いていません。 ネットワーク経由で圧縮スナップショットを使用するときは、これらのトレードオフを慎重に検討してください。 詳細については、[スナップショット オプションの変更](../../../relational-databases/replication/snapshot-options.md)に関する記事を参照してください。 
 -   サブスクリプションを手作業で初期化する。  
   
      巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
@@ -154,11 +153,11 @@ ms.locfileid: "52539194"
   
 -   初期テスト、監視、またはデバッグの間を除いて、レプリケーション エージェントの冗長レベルを低く設定する。  
   
-     ディストリビューション エージェントまたはマージ エージェントの **-HistoryVerboseLevel** パラメーターおよび **-OutputVerboseLevel** パラメーターを低く設定します。 これにより、エージェントの履歴および出力を追跡するために挿入される新しい行の数を減らすことができます。 代わりに、同じ状態の既存の履歴メッセージが、新しい履歴情報に更新されます。 テスト、監視、およびデバッグを行うときには、冗長レベルを高く設定して、エージェントの動作に関する情報をできるだけ多く得られるようにしてください。  
+     ディストリビューション エージェントまたはマージ エージェントの **–HistoryVerboseLevel** パラメーターおよび **–OutputVerboseLevel** パラメーターを低く設定します。 これにより、エージェントの履歴および出力を追跡するために挿入される新しい行の数を減らすことができます。 代わりに、同じ状態の既存の履歴メッセージが、新しい履歴情報に更新されます。 テスト、監視、およびデバッグを行うときには、冗長レベルを高く設定して、エージェントの動作に関する情報をできるだけ多く得られるようにしてください。  
   
--   スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの **-MaxBCPThreads** パラメーターを使用します (コンピューターのプロセッサ数を超えるスレッド数は指定できません)。 このパラメーターには、スナップショットの作成および適用時に並列実行できる一括コピーの操作数を指定します。  
+-   スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの **–MaxBCPThreads** パラメーターを使用します (コンピューターのプロセッサ数を超えるスレッド数は指定できません)。 このパラメーターには、スナップショットの作成および適用時に並列実行できる一括コピーの操作数を指定します。  
   
--   ディストリビューション エージェントおよびマージ エージェントの **-UseInprocLoader** パラメーターを使用します (パブリッシュされたテーブルに XML 列が含まれる場合、このパラメーターは使用できません)。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
+-   ディストリビューション エージェントおよびマージ エージェントの **–UseInprocLoader** パラメーターを使用します (パブリッシュされたテーブルに XML 列が含まれる場合、このパラメーターは使用できません)。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
   
  エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
   

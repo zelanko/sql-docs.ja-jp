@@ -2,26 +2,25 @@
 title: SCOM - Analytics Platform System での監視 |Microsoft Docs
 description: System Center Operations Manager (SCOM) を使用すると、Analytics Platform System (APS) アプライアンスを監視できます。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960547"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations Manager - Analytics Platform System で監視します。
 System Center Operations Manager (SCOM) を使用すると、Analytics Platform System (APS) アプライアンスを監視できます。
   
 ## <a name="before-you-begin"></a>はじめに  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
   
 1.  System Center Operations Manager 2007 R2、2012、または 2012 SP1 は、インストールして実行する必要があります。  
   
@@ -39,7 +38,7 @@ System Center Operations Manager (SCOM) を使用すると、Analytics Platform 
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>SQL Server PDW に SCOM を監視するには  
-SCOM 管理パックを構成すると、SCOM の監視 ウィンドウをクリックし、下にドリル ダウン**SQL Server アプライアンス**し**Microsoft SQL Server 並列データ ウェアハウス**します。 Microsoft SQL Server 並列データ ウェアハウス、下には、次の 4 つの選択肢があります: アラート、アプライアンス、アプライアンスの図、およびノード。  
+SCOM 管理パックを構成すると、SCOM の監視 ウィンドウをクリックし、下にドリル ダウン**SQL Server アプライアンス**し**Microsoft SQL Server 並列データ ウェアハウス**します。 Microsoft SQL Server 並列データ ウェアハウス、下には、4 つの選択肢があります。アラート、アプライアンス、アプライアンスの図、およびノード。  
   
 ### <a name="alerts"></a>オブジェクト エクスプローラーには  
 アラートは、現在のアラートを管理するを見つけることができます。  
@@ -61,7 +60,7 @@ SCOM 管理パックを構成すると、SCOM の監視 ウィンドウをクリ
   
 ![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Understanding 管理コンソールの警告&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
   

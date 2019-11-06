@@ -1,11 +1,10 @@
 ---
-title: ssbdiagnose ユーティリティ (Service Broker) |Microsoft Docs
+title: ssbdiagnose ユーティリティ (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -26,12 +25,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211004"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
   **ssbdiagnose** ユーティリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換または [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスの構成に関する問題を報告します。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。  
@@ -92,7 +91,7 @@ ms.locfileid: "48111172"
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -157,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  指定されたレベルの暗号化向けにダイアログが正しく構成されているかどうかを検証するように要求します。  
   
- **ON**: 既定の設定。 完全ダイアログ セキュリティが構成されているかどうかを検証します。 証明書がダイアログの両側に配置されていること、リモート サービス バインドが存在すること、および発信先サービスに対する GRANT SEND ステートメントで発信側ユーザーを指定していることを確認します。  
+ **ON**:既定の設定 完全ダイアログ セキュリティが構成されているかどうかを検証します。 証明書がダイアログの両側に配置されていること、リモート サービス バインドが存在すること、および発信先サービスに対する GRANT SEND ステートメントで発信側ユーザーを指定していることを確認します。  
   
- **OFF**: ダイアログ セキュリティが構成されていないかどうかを検証します。 証明書が配置されていないこと、リモート サービス バインドが作成されていないこと、および発信側サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
+ **OFF**:ダイアログ セキュリティが構成されていないかどうかを検証します。 証明書が配置されていないこと、リモート サービス バインドが作成されていないこと、および発信側サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
   
- **ANONYMOUS**: 匿名ダイアログ セキュリティが構成されているかどうかを検証します。 一方の証明書が配置されていること、リモート サービス バインドで匿名句が指定されていること、および発信先サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
+ **ANONYMOUS**:匿名ダイアログ セキュリティが構成されているかどうかを検証します。 一方の証明書が配置されていること、リモート サービス バインドで匿名句が指定されていること、および発信先サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
   
  **RUNTIME**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の実行時エラーの原因である問題に関するレポートを要求します。 **-NEW** も **-ID** も指定されていない場合、 **ssbdiagnose** では、接続オプションで指定されたすべてのデータベース内のメッセージ交換をすべて監視します。 **-NEW** または **-ID** が指定されている場合、**ssbdiagnose** では、パラメーターで指定された ID の一覧が作成されます。  
@@ -184,14 +183,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  アプリケーション内のメッセージ交換エンドポイントを識別する一意識別子です。 メッセージ交換ハンドルは、メッセージ交換の一方のエンドポイントに対して一意であり、発信側と発信先のエンドポイントのメッセージ交換ハンドルは異なります。  
   
- によって、アプリケーションにメッセージ交換ハンドルが返されます、 *@dialog_handle*のパラメーター、 **BEGIN DIALOG**ステートメントでは、および`conversation_handle`の結果の列のセットを**受信**ステートメント。  
+ によって、アプリケーションにメッセージ交換ハンドルが返されます、 *@dialog_handle* のパラメーター、 **BEGIN DIALOG**ステートメントでは、および`conversation_handle`の結果の列のセットを**受信**ステートメント。  
   
  メッセージ交換ハンドルで報告される、`conversation_handle`の列、 **sys.transmission_queue**と**sys.conversation_endpoints**カタログ ビューです。  
   
  *conversation_group_id*  
  メッセージ交換グループを識別する一意識別子です。  
   
- によって、アプリケーションにメッセージ交換グループ Id が返されます、 *@conversation_group_id*のパラメーター、 **GET CONVERSATION GROUP**ステートメントおよび`conversation_group_id`の結果セット内の列**受信**ステートメント。  
+ によって、アプリケーションにメッセージ交換グループ Id が返されます、 *@conversation_group_id* のパラメーター、 **GET CONVERSATION GROUP**ステートメントおよび`conversation_group_id`の結果セット内の列**受信**ステートメント。  
   
  メッセージ交換グループ Id が報告、`conversation_group_id`の列、 **sys.conversation_groups**と**sys.conversation_endpoints**カタログ ビューです。  
   
@@ -201,12 +200,12 @@ WHERE database_id = DB_ID();
  メッセージ交換 Id が報告、`conversation_id`の列、 **sys.conversation_endpoints**カタログ ビューです。  
   
  **-TIMEOUT** *timeout_interval*  
- **RUNTIME** レポートを実行する秒数を指定します。 **-TIMEOUT** が指定されていない場合、ランタイム レポートは無制限に実行されます。 **-TIMEOUT** は、**CONFIGURATION** レポートではなく、**RUNTIME** レポートのみで使用されます。 **-TIMEOUT** が指定されていない場合に **ssbdiagnose** を終了したり、タイムアウト間隔を経過する前にランタイム レポートを終了したりするには、Ctrl キーを押しながら C キーを押します。 *timeout_interval* は 1 から 2,147,483,647 までの数値にする必要があります。  
+ **RUNTIME** レポートを実行する秒数を指定します。 **-TIMEOUT** が指定されていない場合、ランタイム レポートは無制限に実行されます。 **-TIMEOUT** は、**CONFIGURATION** レポートではなく、**RUNTIME** レポートのみで使用されます。 **-TIMEOUT** が指定されていない場合に **ssbdiagnose** を終了したり、タイムアウト間隔を経過する前にランタイム レポ **-** トを終了したりするには、Ctrl キーを押しながら C キーを押します。 *timeout_interval* は 1 から 2,147,483,647 までの数値にする必要があります。  
   
  **\<runtimeconnectionoptions>**  
  監視対象のメッセージ交換要素に関連付けられたサービスが格納されているデータベースについての接続情報を指定します。 すべてのサービスが同じデータベースに格納されている場合は、 **CONNECT TO** 句を 1 つ指定するだけで十分です。 サービスが異なるデータベースに格納されている場合は、各データベースに対して **CONNECT TO** 句を指定する必要があります。 **runtimeconnectionoptions** が指定されていない場合、 **ssbdiagnose** では **baseconnectionoptions**の接続情報を使用します。  
   
- **–E**  
+ **-E**  
  現在の Windows アカウントをログイン ID として使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに対して Windows 認証接続を開きます。 ログインは **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
  -E オプションを使用すると、SQLCMDUSER 環境変数および SQLCMDPASSWORD 環境変数のユーザー設定とパスワード設定が無視されます。  
@@ -231,7 +230,7 @@ WHERE database_id = DB_ID();
  パスワードなしで **-P** オプションが指定されている場合、 **ssbdiagnose** では既定のパスワード (NULL) を使用します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」を参照してください。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 詳細については、「 [Strong Passwords](../../relational-databases/security/strong-passwords.md)」を参照してください。  
   
  パスワード プロンプトは、次のようにパスワード プロンプトをコンソールに出力することによって表示されます。 `Password:`  
   
@@ -250,7 +249,7 @@ WHERE database_id = DB_ID();
  分析対象の [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスが格納されているデータベースを指定します。 データベースが存在しない場合は、エラー メッセージが生成されます。 **-d** が指定されていない場合、ログインの既定のデータベースのプロパティに指定されたデータベースが既定値になります。  
   
  **-l** *login_timeout*  
- サーバーへの接続試行がタイムアウトするまでの秒数を指定します。**-l** が指定されていない場合、 **ssbdiagnose** では、SQLCMDLOGINTIMEOUT 環境変数に設定された値を使用します。 SQLCMDLOGINTIMEOUT も設定されていない場合、既定のタイムアウトは 30 秒です。 ログイン タイムアウトは、0 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **ssbdiagnose** はエラー メッセージを生成します。 この値に 0 を指定すると、タイムアウトは無制限になります。  
+ サーバーへの接続試行がタイムアウトするまでの秒数を指定します。 **-l** が指定されていない場合、 **ssbdiagnose** では、SQLCMDLOGINTIMEOUT 環境変数に設定された値を使用します。 SQLCMDLOGINTIMEOUT も設定されていない場合、既定のタイムアウトは 30 秒です。 ログイン タイムアウトは、0 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **ssbdiagnose** はエラー メッセージを生成します。 この値に 0 を指定すると、タイムアウトは無制限になります。  
   
  **-?**  
  コマンド ライン ヘルプを表示します。  
@@ -446,7 +445,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/begin-dialog-conversation-transact-sql)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-broker-priority-transact-sql)   

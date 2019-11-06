@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - transact sql scripts
@@ -13,21 +12,21 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7dd52c6fb0c5533450a7e32ad68a156406873fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a55800ff1d707ce191d373a7348bf744ce5886
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063666"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL スクリプト ファイルの実行
-  `sqlcmd` を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを実行できます。 A[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルは、テキスト ファイルの組み合わせを含むことのできる[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、`sqlcmd`コマンド、およびスクリプト変数です。  
+  `sqlcmd` を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、`sqlcmd` コマンド、およびスクリプト変数を組み合わせて記述できるテキスト ファイルです。  
   
  メモ帳を使用して簡単な [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントして、 **[メモ帳]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[アクセサリ]** の順にポイントして、 **[メモ帳]** をクリックします。  
   
-2.  コピーし、貼り付け[!INCLUDE[tsql](../../includes/tsql-md.md)]をメモ帳にコード。  
+2.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをコピーして、メモ帳に貼り付けます。  
   
     ```  
     USE AdventureWorks2012;  
@@ -50,7 +49,7 @@ ms.locfileid: "48085374"
   
 1.  コマンド プロンプト ウィンドウを開きます。  
   
-2.  コマンド プロンプト ウィンドウで次のように入力します。 `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  コマンド プロンプト ウィンドウで、「`sqlcmd -S myServer\instanceName -i C:\myScript.sql`」と入力します。  
   
 3.  Enter キーを押します。  
   
@@ -60,14 +59,14 @@ ms.locfileid: "48085374"
   
 1.  コマンド プロンプト ウィンドウを開きます。  
   
-2.  コマンド プロンプト ウィンドウで次のように入力します。 `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  コマンド プロンプト ウィンドウで、「`sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`」と入力します。  
   
 3.  Enter キーを押します。  
   
  コマンド プロンプト ウィンドウには何も出力されません。 代わりに、EmpAdds.txt ファイルに出力されます。 EmpAdds.txt を開くと、この出力を確認できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sqlcmd ユーティリティの起動](sqlcmd-start-the-utility.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)  
   
   

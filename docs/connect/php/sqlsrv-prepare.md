@@ -1,7 +1,7 @@
 ---
-title: sqlsrv_prepare |Microsoft Docs
+title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc82d2860bf5e927556103a6c508b1cd662e4b42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014987"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,17 +61,21 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |要素|[説明]|  
     |-----------|---------------|  
     |*&$value*|リテラル値または PHP の変数への参照。|  
-    |*$direction*[省略可能]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
-    |*$phpType*[省略可能]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。|  
-    |*$sqlType*[省略可能]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。|  
+    |*$direction*[オプション]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
+    |*$phpType*[オプション]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。|  
+    |*$sqlType*[オプション]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。|  
   
-*$options* (省略可能): クエリのプロパティを設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。  
-  
+*$options* (省略可能): <a name="properties">クエリのプロパティ</a>を設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。
+
 |Key|サポートされている値|[説明]|  
 |-------|--------------------|---------------|  
-|QueryTimeout|正の整数値です。|クエリのタイムアウト (秒単位) を設定します。 既定で、ドライバーは、結果を無制限に待機します。|  
-|SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|実行時にすべてのストリーム データを送信する (**true**)、またはストリーム データをチャンク単位で送信する (**false**) ように、ドライバーを構成します。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
+|ClientBufferMaxKBSize|正の整数|クライアント側カーソルの結果セットを保持するバッファーのサイズを設定します。<br /><br />既定値は 10240 KB です。 詳細については、「[Specifying a Cursor Type and Selecting Rows (カーソルの種類の指定と行の選択)](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|
+|小数点以下表示桁数|0 から 4 までの整数|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。<br /><br />負の整数値または 4 を超える値は無視されます。<br /><br />このオプションは、FormatDecimals が **true** 場合にのみ機能します。|
+|FormatDecimals|**true** または **false**<br /><br />既定値は **false**です。|該当する場合に 10 進文字列の前にゼロを追加するかどうかを指定し、通貨型を書式設定するための `DecimalPlaces` オプションを有効にします。<br /><br />詳細については、「[Formatting Decimal Strings and Money Values (SQLSRV Driver) (10 進数文字列と通貨値の書式設定 (SQLSRV ドライバー))](../../connect/php/formatting-decimals-sqlsrv-driver.md)」を参照してください。|
+|QueryTimeout|正の整数|クエリのタイムアウト (秒単位) を設定します。 既定で、ドライバーは、結果を無制限に待機します。|  
+|ReturnDatesAsStrings|**true** または **false**<br /><br />既定値は **false**です。|日付/時刻型を文字列として取得するようにステートメントを構成します (**true**)。 詳細については、「[方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」をご覧ください。
 |スクロール可能|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|  
+|SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|実行時にすべてのストリーム データを送信する (**true**)、またはストリーム データをチャンク単位で送信する (**false**) ように、ドライバーを構成します。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
   
 ## <a name="return-value"></a>戻り値  
 ステートメント リソースです。 ステートメント リソースを作成できない場合、 **false** が返されます。  
@@ -219,10 +222,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](https://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
+> 値を [10 進数列または数値列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
 
 ## <a name="example"></a>例  
-このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  
+このコード サンプルでは、入力パラメーターとして 10 進数値をバインドする方法を示しています。  
 
 ```
 <?php

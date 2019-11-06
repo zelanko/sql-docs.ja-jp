@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2a68b60a954e6cd89698d4e906f8272f08d6b11e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103232"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
 使用して、 **MySQL への接続**を移行する MySQL データベースに接続するためのダイアログ ボックス。  

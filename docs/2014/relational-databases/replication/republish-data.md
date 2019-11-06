@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - republishing data
@@ -15,12 +14,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08b24f4f2c881424c6e6bb5c1a9fb1e4217b74eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250408"
 ---
 # <a name="republish-data"></a>データの再パブリッシュ
   再パブリッシュ モデルでは、パブリッシャーがデータをサブスクライバーに送信し、このサブスクライバーがそのデータを任意の数の他のサブスクライバーに再パブリッシュします。 これは、パブリッシャーが、低速、またはコストが高い通信リンクを使用してサブスクライバーにデータを送信する必要がある場合に役立ちます。 多数のサブスクライバーがそのリンクの端末に接続されている場合には、リパブリッシャーの使用によりディストリビューションの負荷の大部分がそのリンク側に移ります。  
@@ -46,7 +45,7 @@ ms.locfileid: "48057052"
   
  ![Republishing data](media/repl-06a.gif "Republishing data")  
   
- どのサーバーも、パブリッシャーとサブスクライバーの両方として動作できます。 たとえば、以下の図では、ロンドンにあるテーブルを、シカゴ、ニューヨーク、サンディエゴ、シアトルの 4 つの米国の都市に配信する必要がある場合のパブリケーションを示しています。 この場合は、ニューヨークのサイトが以下の条件を満たしているので、ロンドンでパブリッシュされたテーブルをニューヨークにあるサーバーがサブスクライブするように選択します。  
+ どのサーバーも、パブリッシャーとサブスクライバーの両方として動作できます。 たとえば、次の図をテーブルのパブリケーションがロンドンに存在し、米国の州の 4 つのさまざまな都市に配布する必要があります。シカゴ、ニューヨーク、サンディエゴ、およびシアトルです。 この場合は、ニューヨークのサイトが以下の条件を満たしているので、ロンドンでパブリッシュされたテーブルをニューヨークにあるサーバーがサブスクライブするように選択します。  
   
 -   ロンドンとのネットワーク リンクが比較的信頼できること。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48057052"
 ## <a name="see-also"></a>参照  
  [[ディストリビューションの構成]](configure-distribution.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [パブリケーションのサブスクライブ](subscribe-to-publications.md)   
  [サブスクリプションの初期化](initialize-a-subscription.md)   
  [データの同期](synchronize-data.md)  
   

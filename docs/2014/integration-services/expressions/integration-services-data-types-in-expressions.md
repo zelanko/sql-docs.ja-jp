@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769112"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48194886"
 > [!NOTE]  
 >  ブール値は論理値であり、数値ではありません。 ブール値は一部の環境で数値として表示される場合がありますが、数値として格納されることはありません。また、.NET Framework のメソッドと同様に、さまざまなプログラミング言語でブール値が個別の数値として表されます。  
 >   
->  たとえば、Visual Basic で利用できる変換関数では `True` は -1 に変換されますが、.NET Framework の `System.Convert.ToInt32` メソッドでは `True` は +1 に変換されます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]式言語に変換します`True`を-1 にします。  
+>  たとえば、Visual Basic で利用できる変換関数では `True` は -1 に変換されますが、.NET Framework の `System.Convert.ToInt32` メソッドでは `True` は +1 に変換されます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の式言語では `True` は -1 に変換されます。  
 >   
 >  エラーや予期しない結果が発生しないように、`True` および `False` については、特定の数値を参照するようなコードは記述しないでください。 可能な限り、ブール型の変数には、仕様で定められている論理値以外の値を使用しないようにしてください。  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48194886"
   
 -   [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;未満&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)  
+-   [&#60; &#40;より小さい&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)  
   
--   [&#62;=&#40;より大きいまたは等しい&#41; &#40;SSIS 式&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;=&#40;に等しいまたはそれよりも小さい&#41; &#40;SSIS 式&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;以下&#41; &#40;SSIS 式&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  関数の引数が 1 つの場合、その関数は引数と同じデータ型の結果を返します。ただし、次の場合は除きます。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48194886"
   
 -   数学関数に渡される引数は、数値データ型に評価される必要があります。 関数または演算によっては、特定の数値データ型が必要となる場合があります。 たとえば HEX 関数では、符号付き整数または符号なし整数が必要です。  
   
--   文字列関数に渡される引数は、DT_STR または DT_WSTR の文字データ型に評価される必要があります。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
+-   文字列関数に渡される引数は、次の文字データ型に評価される必要があります。DT_STR または DT_WSTR。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
   
 -   日付と時刻の関数に渡される引数は、有効な日付に評価される必要があります。 たとえば、DAY(GETDATE()) などの場合です。 DATEADD などの一部の関数では、さらに、関数が日付に追加する日数を指定するために整数の引数が必要となります。  
   
@@ -106,8 +105,8 @@ ms.locfileid: "48194886"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://go.microsoft.com/fwlink/?LinkId=217683)」  
+-   pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3)」  
   
--   social.technet.microsoft.com の技術記事「 [SSIS 式の例](http://go.microsoft.com/fwlink/?LinkId=220761)」  
+-   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
   

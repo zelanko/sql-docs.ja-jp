@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - IdleConnectionTimeout property
@@ -39,17 +38,17 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069028"
 ---
 # <a name="general-properties"></a>全般プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 特に記載のない限り、多次元サーバー モードおよびテーブル サーバー モードが対象となります。  
+ **適用対象:** 多次元および表形式サーバー モードでは、それ以外の場合に記載されていない場合  
   
 ## <a name="non-specific-category"></a>不特定カテゴリ  
  `AdminTimeout`  
@@ -69,10 +68,10 @@ ms.locfileid: "48905762"
  `CommitTimeout`  
  サーバーがトランザクションをコミットする目的で書き込みロックの取得を待機する時間 (ミリ秒単位) を指定する整数のプロパティです。 サーバーはトランザクションをコミットする書き込みロックを取得する前に他のロックが解放されるのを待機する必要があるため、待機期間が必要になることがあります。  
   
- このプロパティの既定値は 0 であり、サーバーで無限に待機することを示します。 ロックに関連したプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ このプロパティの既定値は 0 であり、サーバーで無限に待機することを示します。 ロックに関連したプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  `CoordinatorBuildMaxThreads`  
- パーティション インデックスの作成に割り当てられるスレッドの最大数を定義する、符号付き 32 ビット整数のプロパティです。 パーティション インデックスの作成時間を短縮するには、この値を大きくしてください。ただし、メモリの使用量は増えます。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ パーティション インデックスの作成に割り当てられるスレッドの最大数を定義する、符号付き 32 ビット整数のプロパティです。 パーティション インデックスの作成時間を短縮するには、この値を大きくしてください。ただし、メモリの使用量は増えます。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  `CoordinatorCancelCount`  
  キャンセル イベントが発生したかどうかを内部反復カウントに基づいてサーバーがチェックする頻度を定義する、符号付き 32 ビット整数のプロパティです。 キャンセルのチェック頻度を多くするには、この値を小さくしてください。ただし、全体的なパフォーマンスは低下します。  
@@ -84,7 +83,7 @@ ms.locfileid: "48905762"
   
  表形式サーバー モードでは、`CoordinatorExecutionMode` は無視されます。  
   
- このプロパティの既定値は -4 であり、サーバーのプロセッサあたりの並列操作が 4 に制限されることを示します。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ このプロパティの既定値は -4 であり、サーバーのプロセッサあたりの並列操作が 4 に制限されることを示します。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  `CoordinatorQueryMaxThreads`  
  クエリ解決時のパーティション セグメントあたりの最大スレッド数を定義する、符号付き 32 ビット整数のプロパティです。 同時ユーザーの数が少なくなるほど大きい値を設定できますが、値を大きくするとメモリの使用量が増えます。 逆に、同時ユーザーが多い場合は、この値を小さくする必要があります。  
@@ -96,7 +95,7 @@ ms.locfileid: "48905762"
  データを保存するディレクトリの名前を指定する文字列プロパティです。  
   
  `DeploymentMode`  
- Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログ ボックス、メッセージ、およびドキュメントで "サーバー モード" と呼ばれます。 このプロパティは、Analysis Services のインストール時に選択したサーバー モードに基づいて、SQL Server セットアップによって構成されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
+ Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログ ボックス、メッセージ、およびドキュメントの「サーバー モード」と呼ばれます。 このプロパティは、Analysis Services のインストール時に選択したサーバー モードに基づいて、SQL Server セットアップによって構成されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
   
  このプロパティの有効値を以下に示します。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "48905762"
 > [!NOTE]  
 >  このイベントによってクエリやプロセスが取り消されると、"`Server: The operation has been cancelled`" というエラー メッセージが報告されます。  
   
- このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
 > [!IMPORTANT]  
 >  `ForceCommitTimeout` は、キューブ処理コマンドと書き戻し操作に適用されます。  

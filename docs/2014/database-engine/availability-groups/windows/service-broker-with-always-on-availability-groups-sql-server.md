@@ -13,12 +13,12 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2758227de47509e62c9f7874c70bbcf30e01d364
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788532"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker と AlwaysOn 可用性グループ (SQL Server)
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で Service Broker を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と共に使用できるように構成する方法について説明します。  
@@ -74,7 +74,7 @@ ms.locfileid: "48191092"
     > [!NOTE]  
     >  **msdb**を含む各ユーザー データベースには、既定で **AutoCreatedLocal**というルートが含まれています。 このルートは、どのサービス名および任意のブローカー インスタンスにも適用でき、現在のインスタンス内でメッセージを配信するように指定します。 **AutoCreatedLocal** の優先度は、リモート インスタンスと通信する特定のサービスを明示的に指定したルートよりも低くなります。  
   
-     ルートの作成の詳細については、「 [Service Broker のルーティングの例](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) 」( [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] バージョンのオンライン ブック) および「 [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)と共に使用できるように構成する方法について説明します。  
+     ルートの作成の詳細については、「 [Service Broker のルーティングの例](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) 」( [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] バージョンのオンライン ブック) および「 [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)と共に使用できるように構成する方法について説明します。  
   
 ##  <a name="SendRemoteMessages"></a> 可用性グループのリモート サービスにメッセージを送信するための要件  
   
@@ -116,6 +116,6 @@ ms.locfileid: "48191092"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [SQL Server Service Broker](../../configure-windows/sql-server-service-broker.md)  
+ [SQL Server Service Broker (SQL Server Service Broker)](../../configure-windows/sql-server-service-broker.md)  
   
   

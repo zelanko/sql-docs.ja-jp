@@ -26,16 +26,15 @@ helpviewer_keywords:
 - permissions [SQL Server], revoking
 - dropping permissions
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61d6ab78871c7ae0db27f4fb8cc5cfcbfe5d0979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3f9ffc068b5729a257169fe4a65052d3d1c62ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914212"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ REVOKE
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を与える許可を取り消します。 CASCADE 引数を使用する場合、この引数は必須です。  
+ 指定した権限を与える許可を取り消すことを示します。 CASCADE 引数を使用する場合、これは必須です。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -97,7 +96,7 @@ REVOKE
   
  このオプションでは、可能な権限がすべて取り消されるわけではありません。 ALL を指定すると、次の権限が取り消されます。  
   
--   セキュリティ保護可能なリソースがデータベースの場合、BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW。  
+-   セキュリティ保護可能なリソースがデータベースの場合、ALL は BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW を意味します。  
   
 -   セキュリティ保護可能なリソースがスカラー関数の場合、EXECUTE および REFERENCES。  
   
@@ -105,12 +104,12 @@ REVOKE
   
 -   セキュリティ保護可能なリソースがストアド プロシージャの場合、EXECUTE。  
   
--   セキュリティ保護可能なリソースがテーブルの場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+-   セキュリティ保護可能なリソースがテーブルの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
--   セキュリティ保護可能なリソースがビューの場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+-   セキュリティ保護可能なリソースがビューの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
 > [!NOTE]  
->  REVOKE ALL 構文は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに特定の権限を取り消してください。  
+>  REVOKE ALL 構文は非推奨です。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに特定の権限を取り消してください。  
   
  PRIVILEGES  
  ISO 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -119,7 +118,7 @@ REVOKE
  権限の名前を指定します。 セキュリティ保護可能なリソースと権限の有効な組み合わせについては、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
   
  *column*  
- 権限を取り消すテーブルの列の名前を指定します。 かっこで囲む必要があります。  
+ 権限を取り消すテーブルの列の名前を指定します。 かっこが必要です。  
   
  *class*  
  権限を取り消すセキュリティ保護可能なリソースのクラスを指定します。 スコープ修飾子 **::** が必要です。  
@@ -128,7 +127,7 @@ REVOKE
  権限を取り消すセキュリティ保護可能なリソースを指定します。  
   
  TO | FROM *principal*  
- プリンシパルの名前を指定します。 セキュリティ保護可能なリソースに対する権限を取り消すことのできるプリンシパルは、そのリソースによって異なります。 有効な組み合わせの詳細については、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
+ プリンシパルの名前です。 セキュリティ保護可能なリソースに対する権限を取り消すことのできるプリンシパルは、そのリソースによって異なります。 有効な組み合わせの詳細については、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルからも、同じ権限が取り消されることを示します。 CASCADE 引数を使用する場合は、GRANT OPTION FOR 引数も指定する必要があります。  
@@ -144,7 +143,7 @@ REVOKE
 ## <a name="remarks"></a>Remarks  
  REVOKE ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 特定のセキュリティ保護可能なリソースに対する権限を取り消すための完全な構文については、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
   
- 許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT ステートメントによってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
+ 許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT によってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
   
  権限を許可すると、指定したセキュリティ保護可能なリソースに対する権限の DENY または REVOKE は削除されます。 対象のセキュリティ保護可能なリソースの上位スコープで同じ権限が拒否されている場合は、その DENY ステートメントが優先されますが、 ただし、上位スコープで許可されている権限を取り消そうとしても、その REVOKE ステートメントは優先されません。  
   
@@ -156,12 +155,12 @@ REVOKE
  GRANT OPTION で権限が許可されたプリンシパルから権限を取り消すときに CASCADE を指定しない場合、REVOKE ステートメントは失敗します。  
   
 ## <a name="permissions"></a>アクセス許可  
- セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのリソースの権限を取り消すことができます。 オブジェクトの所有者は、所有するオブジェクトに対する権限を取り消すことができます。  
+ セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのセキュリティ保護可能なリソースの権限を取り消すことができます。 オブジェクトの所有者は、所有するオブジェクトに対する権限を取り消すことができます。  
   
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を取り消すことができます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を取り消すことができます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を取り消すことができます。  
   
 ##  <a name="securable"></a> セキュリティ保護可能なリソース別の構文  
- 次の表は、セキュリティ保護可能なリソースと、その構文について説明しているトピックの一覧です。  
+ 次の表は、セキュリティ保護可能なリソースと、セキュリティ保護可能なリソース固有の構文について説明しているトピックの一覧です。  
   
 |セキュリティ保護可能|トピック|  
 |---------------|-----------|  

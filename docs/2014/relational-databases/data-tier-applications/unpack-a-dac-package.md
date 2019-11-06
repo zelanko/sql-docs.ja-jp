@@ -15,19 +15,19 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918005"
 ---
 # <a name="unpack-a-dac-package"></a>DAC パッケージのアンパック
   [データ層アプリケーションのアンパック] ダイアログ ボックスでは、データ層アプリケーション (DAC) パッケージからスクリプトおよびファイルを解凍できます。 解凍されたスクリプトおよびファイルが配置されるフォルダーは、パッケージを使用して DAC を実稼働システムに配置する前に確認できます。 また、DAC の内容は、別のフォルダーにアンパックされた別のパッケージの内容と比較することもできます。  
   
-1.  **作業を開始する準備:**  [セキュリティ](#Security)  
+1.  **作業を開始する準備:** [セキュリティ](#Security)  
   
-2.  **DAC のアンパック:**  [[データ層アプリケーションのアンパック] ダイアログの使用](#UnpackDACDial)、 [DAC パッケージの内容の確認](#ExamDACPack)  
+2.  **DAC のアンパック:** [[データ層アプリケーションのアンパック] ダイアログの使用](#UnpackDACDial)、[DAC パッケージの内容の確認](#ExamDACPack)  
   
 ##  <a name="Security"></a> セキュリティ  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードを確認してください。  
@@ -83,7 +83,7 @@ ms.locfileid: "48125482"
  詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [データ層アプリケーション](data-tier-applications.md)   
+ [[データ層アプリケーション]](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)   
  [データ層アプリケーションのアップグレード](upgrade-a-data-tier-application.md)  
   

@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919937"
 ---
 # <a name="coding-user-defined-types"></a>ユーザー定義型のコーディング
   ユーザー定義型 (UDT) の定義をコーディングする際は、形式やシリアル化のオプションを選択するだけでなく、UDT をクラスと構造体のどちらで実装するかによって、さまざまな機能を実装する必要があります。  
@@ -138,7 +138,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>IS NULL と IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL とします。IsNull  
  Points(id int, location Point) というスキーマ (`Point` は CLR UDT) を含むテーブルと次のクエリを考えてみます。  
   
 ```  
@@ -493,7 +493,7 @@ public Int32 Y
  UDT メソッドをコーディングする際は、使用するアルゴリズムが時間の経過と共に変化する可能性があるかどうかを考慮します。 変化する可能性がある場合は、UDT で使用するメソッド用に独立したクラスを作成することを検討します。 アルゴリズムが変化したら、新しいコードになったクラスを再コンパイルし、UDT に影響を与えることなくそのアセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 多くの場合、UDT は [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントを使用して再読み込みできますが、既存のデータとの間に問題が発生する可能性があります。 たとえば、 `Currency` UDT に含まれる、 **AdventureWorks**サンプル データベースの使用、 **ConvertCurrency**は別のクラスで実装されている通貨値を変換する関数。 変換アルゴリズムが今後どう変化するかは予測できず、新しい機能が必要になる可能性もあります。 分離、 **ConvertCurrency**関数を`Currency`将来の変更を計画するときに、UDT の実装によって柔軟性が向上します。  
   
 ### <a name="example"></a>例  
- `Point`クラスには、距離を計算するための 3 つの単純なメソッドが含まれています:**距離**、 **DistanceFrom**と**DistanceFromXY**します。 各メソッドから返されるのは、`double` から 0 までの距離、指定した地点から `Point` までの距離、および指定した X 座標と Y 座標から `Point` までの距離を示す `Point` 型の値です。 **距離**と**DistanceFrom**の各呼び出し**DistanceFromXY**、メソッドごとに異なる引数を使用する方法を示します。  
+ `Point`クラスには、距離を計算するための 3 つの単純なメソッドが含まれています。**距離**、 **DistanceFrom**と**DistanceFromXY**します。 各メソッドから返されるのは、`double` から 0 までの距離、指定した地点から `Point` までの距離、および指定した X 座標と Y 座標から `Point` までの距離を示す `Point` 型の値です。 **距離**と**DistanceFrom**の各呼び出し**DistanceFromXY**、メソッドごとに異なる引数を使用する方法を示します。  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  `Microsoft.SqlServer.Server.SqlMethodAttribute` クラスにはカスタム属性が用意されています。このカスタム属性を使用して、決定性を示したり、NULL で呼び出したときの動作を指定したり、メソッドがミューテーターかどうかを指定するためにメソッド定義にマークを付けることができます。 これらのプロパティは既定値に設定されるので、既定値以外の値を設定する場合のみカスタム属性を使用します。  
   
 > [!NOTE]  
->  `SqlMethodAttribute` クラスは `SqlFunctionAttribute` クラスを継承するので、`SqlMethodAttribute` は `FillRowMethodName` フィールドと `TableDefinition` フィールドを `SqlFunctionAttribute` から継承します。 これは、一見テーブル値メソッドを記述できることを示していますが、この場合には該当しません。 メソッドをコンパイルし、アセンブリ展開すると、エラーについて、`IEnumerable`返す型は、次のメッセージの実行時に発生します:"メソッド、プロパティ、またはフィールド '\<名 >' クラスで\<クラス >' アセンブリで'\<アセンブリ >' が無効な戻り値の型"。  
+>  `SqlMethodAttribute` クラスは `SqlFunctionAttribute` クラスを継承するので、`SqlMethodAttribute` は `FillRowMethodName` フィールドと `TableDefinition` フィールドを `SqlFunctionAttribute` から継承します。 これは、一見テーブル値メソッドを記述できることを示していますが、この場合には該当しません。 メソッドをコンパイルし、アセンブリ展開すると、エラーについて、`IEnumerable`返す型は、次のメッセージの実行時に発生します。"メソッド、プロパティ、またはフィールド '\<名 >' クラスで\<クラス >' アセンブリで'\<アセンブリ >' が無効な戻り値の型"。  
   
  次の表では、UDT メソッドで使用できる `Microsoft.SqlServer.Server.SqlMethodAttribute` の関連プロパティについて説明し、それらの既定値を示します。  
   
@@ -551,16 +551,16 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  関数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスに格納されているユーザー データにアクセスする必要があるかどうかを示します。 既定値は `DataAccessKind`.`None` です。  
   
  IsDeterministic  
- 入力値とデータベースの状態が同じであれば、関数から同じ値が出力されるかどうかを示します。 既定値は`false`します。  
+ 入力値とデータベースの状態が同じであれば、関数から同じ値が出力されるかどうかを示します。 既定値は `false` です。  
   
  IsMutator  
- メソッドにより UDT インスタンスの状態が変化するかどうかを示します。 既定値は`false`します。  
+ メソッドにより UDT インスタンスの状態が変化するかどうかを示します。 既定値は `false` です。  
   
  IsPrecise  
- 浮動小数点演算など、厳密な結果が算出されない計算が関数に含まれているかどうかを示します。 既定値は`false`します。  
+ 浮動小数点演算など、厳密な結果が算出されない計算が関数に含まれているかどうかを示します。 既定値は `false` です。  
   
  OnNullCall  
- 入力引数に NULL 参照が指定されたときにメソッドが呼び出されるかどうかを示します。 既定値は`true`します。  
+ 入力引数に NULL 参照が指定されたときにメソッドが呼び出されるかどうかを示します。 既定値は `true` です。  
   
 ### <a name="example"></a>例  
  `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` プロパティを使用すると、UDT インスタンスの状態の変化を許可するようにメソッドをマークできます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] では、1 つの UPDATE ステートメントの SET 句に 2 つの UDT プロパティを設定できません。 ただし、2 つのメンバーを変更するミューテーターとしてメソッドをマークすることはできます。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
@@ -13,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75fa2640cae19ce441c467672c1b66e85bd3c169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672072"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能
   このトピックでは、次の機能と変更データ キャプチャとの連携について説明します。  
@@ -64,7 +63,7 @@ ms.locfileid: "48213624"
   
 -   データベースを別のサーバーに復元した場合、既定では変更データ キャプチャが無効になり、関連するメタデータがすべて削除されます。  
   
-     変更データ キャプチャを保持するには使用、`KEEP_CDC`データベースを復元するときのオプションします。 このオプションの詳細については、「 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
+     変更データ キャプチャを保持するには、データベースを復元する際に `KEEP_CDC` オプションを使用します。 このオプションの詳細については、「 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
 -   データベースをデタッチしてから、同じサーバーまたは別のサーバーにアタッチした場合、変更データ キャプチャは有効のままです。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48213624"
 ## <a name="change-data-capture-and-alwayson"></a>変更データ キャプチャと AlwaysON  
  AlwaysON を使用する場合、セカンダリ レプリケーションに対して変更の列挙を行うことにより、プライマリへのディスク負荷を減らす必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更データ キャプチャの管理と監視 &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

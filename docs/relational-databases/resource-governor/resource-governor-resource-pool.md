@@ -11,18 +11,17 @@ helpviewer_keywords:
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e53c61ed06282553be01d383753b8a45db56de8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942667"
 ---
 # <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーのリソース プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 リソース ガバナーを使用すると、受信するアプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 各リソース プールは、1 つまたは複数のワークロード グループを含めることができます。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたリソースを使用する必要があります。  
   
@@ -61,6 +60,7 @@ CPU またはメモリを構成する際には、すべてのプールの最小�
 |既定値 (default)|0|100|30|30|有効な最大値の計算式は、min(100,100-(20+50)) = 30 です。 共有 % の計算式は、有効な最大値 - 最小値 = 30 です。|  
 |プール 1|20|100|50|30|有効な最大値の計算式は、min(100,100-50) = 50 です。 共有 % の計算式は、有効な最大値 - 最小値 = 30 です。|  
 |プール 2|50|70|70|20|有効な最大値の計算式は、min(70,100-20) = 70 です。 共有 % の計算式は、有効な最大値 - 最小値 = 20 です。|  
+
 上のテーブルの有効な最大 % および共有 % の計算には、次の式が使用されます。  
   
 -   min(X,Y) は、X と Y の小さい方の値を意味します。  
@@ -124,7 +124,7 @@ CPU またはメモリを構成する際には、すべてのプールの最小�
 |リソース プールを削除する方法について説明します。|[リソース プールの削除](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [リソース ガバナーの分類子関数](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
  [テンプレートを使用してリソース ガバナーを構成する](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   

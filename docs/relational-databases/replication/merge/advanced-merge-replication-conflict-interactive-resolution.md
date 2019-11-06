@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c701e9fb98bbabe013632a3fd93f91d368ec2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7b8bd9d0913273457cdb9d1eacd9baad686798b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033331"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>マージ レプリケーションの競合の詳細 - インタラクティブな解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47849230"
   
  インタラクティブ競合回避モジュールを使用するには、競合回避を必要とする各アーティクルまたはサブスクリプションに対して、インタラクティブな競合回避を有効にしておく必要があります。 1 つ以上のアーティクルまたはサブスクリプションで有効にしておくと、マージ同期中に競合が検出された場合、インタラクティブ競合回避モジュールを使用できます。  
   
- インタラクティブ競合回避モジュールを使用するには、「[Specify Interactive Conflict Resolution for Merge Articles](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)」 (マージ アーティクルにインタラクティブな競合解決を指定する) と「[Synchronize a Subscription Using Windows Synchronization Manager (Windows Synchronization Manager)](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)」 (Windows 同期マネージャーを使用してサブスクリプションを同期する) を参照してください。  
+ インタラクティブ競合回避モジュールを使用するには、[マージ レプリケーションのオプションの指定](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)に関するページと、[Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー)](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md) に関するページを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [マージ レプリケーションの競合検出および解決の詳細](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  

@@ -12,12 +12,12 @@ ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64eb7b3dc6f058d5f061f4c015105ba4fc44f183
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f65c26e1c6b9588b770acf1a66409dfde8ea1072
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188680"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   Sqlsetdescfield によるは、テーブル値パラメーターおよびテーブル値パラメーター列の記述子フィールドを設定するのには使用できます。 使用可能なフィールドの詳細については、次を参照してください。[テーブル値パラメーターの記述子フィールド](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)と[テーブル値パラメーターの構成要素の列の記述子フィールド](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)します。  
@@ -45,7 +45,7 @@ ms.locfileid: "48206762"
  詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [Sqlsetdescfield による](http://go.microsoft.com/fwlink/?LinkId=80705)   
+ [Sqlsetdescfield による](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

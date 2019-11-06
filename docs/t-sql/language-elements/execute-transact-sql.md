@@ -28,16 +28,15 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 80723d2288ce628d4c39d174eefc3bf868314886
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122322"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -259,7 +258,7 @@ Execute a character string
  モジュールで定義されているパラメーターの既定値を使用します。 パラメーターに値を必要とするモジュールでパラメーターの既定値が定義されていない場合、パラメーターを指定しなかったり、DEFAULT キーワードを指定したりすると、エラーが発生します。  
   
  @*string_variable*  
- ローカル変数の名前を指定します。 @*string_variable* には、**char**、**varchar**、**nchar**、または **nvarchar** のいずれかのデータ型を指定できます。 これには、**(max)** データ型が含まれます。  
+ ローカル変数の名前を指定します。 @*string_variable* には、**char**、**varchar**、**nchar**、または **nvarchar** のいずれかのデータ型を指定できます。 これには、 **(max)** データ型が含まれます。  
   
  [N] '*tsql_string*'  
  定数文字列を指定します。 *tsql_string* には、**nvarchar** または **varchar** のいずれかのデータ型を指定できます。 N が含まれる場合、文字列は **nvarchar** データ型として解釈されます。  
@@ -302,9 +301,9 @@ Execute a character string
 |項目|定義|  
 |----------|----------------|  
 |RECOMPILE|モジュール実行後に、新しいプランを強制的にコンパイル、使用、および破棄します。 モジュールに既存のクエリ プランがある場合、このプランはキャッシュに残ります。<br /><br /> 指定するパラメーターが一定しない場合であったり、データが大きく変更されたときにこのオプションを使用してください。 このオプションは、拡張ストアド プロシージャには使用しません。 このオプションは負荷を伴うので、あまり使用しないことをお勧めします。<br /><br /> **注:** OPENDATASOURCE 構文を使用するストアド プロシージャを呼び出す場合、WITH RECOMPILE は使用できません。 4 部構成のオブジェクト名が指定されている場合、WITH RECOMPILE オプションは無視されます。<br /><br /> **注:** RECOMPILE は、ネイティブにコンパイルされるスカラー ユーザー定義関数ではサポートされていません。 再コンパイルする必要がある場合は、[sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) を使用してください。|  
-|**RESULT SETS UNDEFINED**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> このオプションを使用した場合、返される結果の種類は保証されず、定義は指定されません。 ステートメントは、何かの結果が返される場合でも、結果が返されない場合でも、問題なく実行されます。 result_sets_option を指定しない場合は、RESULT SETS UNDEFINED が既定の動作となります。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
-|RESULT SETS NONE|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 実行ステートメントによって結果が一切返されなくなります。 結果が返された場合、バッチは中断されます。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
-|*\<result_sets_definition>*|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> result_sets_definition で指定されたとおりに結果が返されるようになります。 複数の結果セットを返すステートメントの場合は、複数の *result_sets_definition* セクションを指定してください。 その際には、各 *result_sets_definition* をかっこで囲み、コンマで区切ります。 詳細については、このトピックの「\<result_sets_definition>」を参照してください。<br /><br /> このオプションは常には、ネイティブ コンパイル済みのスカラー ユーザー定義関数のエラーが発生するため、関数は、結果セットを返すことはありません。|
+|**RESULT SETS UNDEFINED**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> このオプションを使用した場合、返される結果の種類は保証されず、定義は指定されません。 ステートメントは、何かの結果が返される場合でも、結果が返されない場合でも、問題なく実行されます。 result_sets_option を指定しない場合は、RESULT SETS UNDEFINED が既定の動作となります。<br /><br /> 解釈されたスカラー ユーザー定義関数、およびネイティブ コンパイルのスカラー ユーザー定義関数の場合、関数が結果セットを返すことがないため、このオプションは機能しません。|  
+|RESULT SETS NONE|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 実行ステートメントによって結果が一切返されなくなります。 結果が返された場合、バッチは中断されます。<br /><br /> 解釈されたスカラー ユーザー定義関数、およびネイティブ コンパイルのスカラー ユーザー定義関数の場合、関数が結果セットを返すことがないため、このオプションは機能しません。|  
+|*\<result_sets_definition>*|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> result_sets_definition で指定されたとおりに結果が返されるようになります。 複数の結果セットを返すステートメントの場合は、複数の *result_sets_definition* セクションを指定してください。 その際には、各 *result_sets_definition* をかっこで囲み、コンマで区切ります。 詳細については、このトピックの「\<result_sets_definition>」を参照してください。<br /><br /> ネイティブ コンパイルのスカラー ユーザー定義関数の場合、関数が結果セットを返すことがないため、このオプションの結果は常にエラーになります。|
   
 \<result_sets_definition> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -661,7 +660,7 @@ WITH RESULT SETS
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="example-o-basic-procedure-execution"></a>例 O: 基本プロシージャの実行  
+### <a name="example-o-basic-procedure-execution"></a>例 O:基本プロシージャの実行  
  ストアド プロシージャの実行:  
   
 ```  
@@ -680,7 +679,7 @@ EXEC ('EXEC ' + @var);
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>例 P: 文字列の実行  
+### <a name="example-p-executing-strings"></a>例 P:文字列の実行  
  SQL 文字列の実行:  
   
 ```  
@@ -701,7 +700,7 @@ SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>例 Q: パラメーターを持つプロシージャ  
+### <a name="example-q-procedures-with-parameters"></a>例 Q:パラメーターを持つプロシージャ  
  次の例では、パラメーターを持つプロシージャを作成し、プロシージャを実行する 3 通りの方法を示しています。  
   
 ```  

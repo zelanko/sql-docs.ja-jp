@@ -2,7 +2,7 @@
 title: Reporting Services チュートリアル (SSRS) | Microsoft Docs
 ms.date: 11/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4fd17b54127da70a5afd37b518ccab9ced606dae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 9158caf6a1c1e39578bf49bfc3f99e3b37633baf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570877"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services チュートリアル (SSRS)
 

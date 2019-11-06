@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d4622234e579d055635594f5dbfbd097f8943339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 30e5a68dcd22b0f73f88ce6151ef46e02bbf81f1
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675980"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768310"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>サブスクリプション、[パブリッシャーからディストリビューターまでの履歴] (トランザクション サブスクリプション)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[パブリッシャーからディストリビューターまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ログ リーダー エージェントの詳細情報が表示されます。  
   
 ## <a name="options"></a>および  
@@ -64,8 +64,8 @@ ms.locfileid: "47675980"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [レプリケーション エージェントの概要](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

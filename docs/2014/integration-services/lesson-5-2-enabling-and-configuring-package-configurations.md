@@ -1,24 +1,23 @@
 ---
-title: '手順 2: パッケージ構成の有効化と構成 | Microsoft Docs'
+title: 手順 2:有効にして、パッケージの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33516b6f47a3c4f33d001c225c5a1a60a9802f7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891071"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2 : パッケージ構成の有効化と構成
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2:パッケージ構成の有効化と構成
   ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの `Directory` プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Directory プロパティにマップする新しいパッケージ レベル変数を作成するには  
@@ -40,11 +39,11 @@ ms.locfileid: "48100803"
   
 7.  **[制御フロー]** タブに戻り、 **[Foreach File in Folder]** コンテナーをダブルクリックします。  
   
-8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[Expressions]** をクリックし、参照ボタン ( **[...]**) をクリックします。  
+8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[Expressions]** をクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 9. **プロパティ式エディター**、クリックして、**プロパティ**一覧`Directory`します。  
   
-10. **[式]** ボックスで、参照ボタン (**[...]**) をクリックします。  
+10. **式**ボックスで、省略記号ボタンをクリックします **([...])。** .  
   
 11. **[式ビルダー]** で [変数] フォルダーを展開し、 **User::varFolderName** 変数を **[式]** ボックスへドラッグします。  
   
@@ -60,13 +59,13 @@ ms.locfileid: "48100803"
   
 2.  警告のメッセージで **[OK]** をクリックし、変換が完了したら、 **[パッケージ配置モデルに変換]** ダイアログで **[OK]** をクリックします。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、**[制御フロー]** タブの背景をクリックします。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、 **[制御フロー]** タブの背景をクリックします。  
   
 4.  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
   
 5.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで **[パッケージの構成を有効にする]** をクリックし、 **[追加]** をクリックします。  
   
-6.  パッケージ構成ウィザードの初期画面で、**[次へ]** をクリックします。  
+6.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
   
 7.  **[構成の種類の選択]** ページで、 **[構成の種類]** が **[XML 構成ファイル]** に設定されていることを確認します。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48100803"
   
 11. **[構成の種類の選択]** ページで **[次へ]** をクリックします。  
   
-12. **[エクスポートするプロパティの選択]** ページの **[オブジェクト]** ペインで、 **[変数]**、 **[varFolderName]**、 **[Properties]** の順に展開し、 **[Value]** チェック ボックスをオンにします。  
+12. **[エクスポートするプロパティの選択]** ページの **[オブジェクト]** ペインで、 **[変数]** 、 **[varFolderName]** 、 **[Properties]** の順に展開し、 **[Value]** チェック ボックスをオンにします。  
   
 13. **[エクスポートするプロパティの選択]** ページで **[次へ]** をクリックします。  
   
@@ -88,13 +87,13 @@ ms.locfileid: "48100803"
   
 16. **[閉じる]** をクリックします。  
   
-17. SSISTutorial.dtsConfig という名前の構成ファイルが作成されます。この構成ファイルには、変数の `alue` に対応する構成設定が含まれています。また、この変数値により、列挙子の `Directory` プロパティが設定されます。  
+17. ウィザードの構成設定を含む、SSISTutorial.dtsConfig という名前の構成ファイルを作成する、`value`順番を設定する変数の`Directory`列挙子のプロパティ。  
   
     > [!NOTE]  
     >  通常、構成ファイルにはパッケージのプロパティに関する複雑な情報が含まれていますが、このチュートリアルでは、次の構成情報のみを使用します:  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName]。[値] のプロパティ"ValueType ="String"\>  
-    >  \<ConfiguredValue >\</ConfiguredValue >  
+    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</構成 >。  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>新しいサンプル データ フォルダーを作成して、データを取り込むには  
@@ -106,6 +105,6 @@ ms.locfileid: "48100803"
 3.  `New Sample Data`フォルダーをコピーしたファイルを貼り付けます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3: Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [ステップ 3:Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

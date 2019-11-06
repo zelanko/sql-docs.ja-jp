@@ -1,5 +1,5 @@
 ---
-title: '例 : データベースの部分復元 (完全復旧モデル) | Microsoft Docs'
+title: 例:データベースの段階的な部分復元 (完全復旧モデル) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fa12f31f534d4a25c290ab4f000e2cbb2e3ce48e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67cfffa63fd56f7d514ff749f37f4f0f33610388
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675050"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278744"
 ---
-# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>例 : データベースの部分復元 (完全復旧モデル)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>例:データベースの部分復元 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   段階的な部分復元シーケンスでは、プライマリ ファイル グループとすべての読み書き可能なセカンダリ ファイル グループから順に、ファイル グループ レベルで段階的にデータベースが復元され、復旧されます。  
@@ -50,9 +49,9 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
        WITH PARTIAL, NORECOVERY  
     RESTORE DATABASE adb FILEGROUP='A' FROM backup2   
        WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup4 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup5 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup4 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup5 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
@@ -66,29 +65,29 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
     ```  
     RESTORE DATABASE adb FILEGROUP='C' FROM backup2a WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup4 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup5 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup4 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup5 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
      この時点で、プライマリ ファイル グループ、ファイル グループ `A` 、およびファイル グループ `C` はオンラインです。 ファイル グループ `B` はオフラインで、このファイル グループのファイルは復旧待ち状態のままです。 遅延トランザクションは解決され、ログの切り捨てが行われます。  
   
 3.  ファイル グループ `B`をオンライン復元します。  
+
+   3 番目の復元シーケンスでは、データベース管理者がファイル グループ `B`を復元します。 ファイル グループ `B` のバックアップは、ファイル グループ B が読み取り専用になってから行います。このため、復旧中にこのファイル グループをロールフォワードする必要はありません。  
   
-     3 番目の復元シーケンスでは、データベース管理者がファイル グループ `B`を復元します。 ファイル グループ `B` のバックアップは、ファイル グループ B が読み取り専用になってから行います。このため、復旧中にこのファイル グループをロールフォワードする必要はありません。  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
+   ```  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
-    ```  
-  
-     すべてのファイル グループがオンラインになります。  
+   すべてのファイル グループがオンラインになります。  
   
 ## <a name="additional-examples"></a>その他の例  
   
--   [例: データベースの段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   

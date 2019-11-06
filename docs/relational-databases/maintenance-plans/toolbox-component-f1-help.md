@@ -7,20 +7,17 @@ ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: reference
-f1_keywords:
-- vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a948e4a1e787756517482c5b62b46cdab625e6bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115527"
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +26,7 @@ ms.locfileid: "51667381"
  コード エディターまたは**内のデザイン ビュー画面に、** [ツールボックス] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のアイテムをドラッグしてドロップするか、コピーして貼り付けることができます。  
   
 ## <a name="how-the-toolbox-works"></a>ツールボックスのしくみ  
- [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 (**[+]**) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 (**[-]**) をクリックします。  
+ [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 ( **[+]** ) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 ( **[-]** ) をクリックします。  
   
  エディターまたはデザイナーに戻るたびに、 **[ツールボックス]** は最新のタブおよび選択されているアイテムに自動的にスクロールされます。 別のエディターまたはデザイナーにフォーカスを移すと、 **[ツールボックス]** 内の現在の選択も一緒に変わります。  
   
@@ -44,5 +41,3 @@ ms.locfileid: "51667381"
 ## <a name="see-also"></a>参照  
  [ツールボックスの使用](../../ssms/use-the-toolbox.md)   
  [[ツールボックス アイテムの選択] &#40;[メンテナンス タスク] ページ&#41;](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
-  
-  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d5cbfb6d0ec7cf057d4bf3c7edbc6d1735dbc47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023889"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started イベント クラス
   **FT:Crawl Started** イベント クラスは、フルテキスト クロール (作成) が開始されたことを示します。 このイベント クラスを使用して、クロール要求がワーカー タスクによって実際に取得されたかどうかを確認します。  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>FT:Crawl Started イベント クラスのデータ列  
+## <a name="ft-crawl-started-event-class-data-columns"></a>FT:クロールの開始イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -40,7 +39,7 @@ ms.locfileid: "48203612"
 |**TextData**|**ntext**|フルテキスト クロールの種類です。 値は、Full、Incremental、Manual、または Auto です。|1|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

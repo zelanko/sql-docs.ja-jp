@@ -15,15 +15,14 @@ helpviewer_keywords:
 - DENY statement, XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 096bc5aa18727eec1e01d1cf2da1fbd0c48834f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 811c9532486b8f9c9a910254185de69096be9c8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984335"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY (XML スキーマ コレクションの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ DENY permission  [ ,...n ] ON
  *permission*  
  XML スキーマ コレクションで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_ **.** ] *XML_schema_collection_name*  
  権限を拒否する XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
   
  TO \<database_principal>  
@@ -112,7 +111,7 @@ DENY permission  [ ,...n ] ON
  XML スキーマ コレクションに対する CONTROL 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが XML スキーマ コレクションを所有している必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、XML スキーマ コレクション `EXECUTE` の `Invoices4` 権限を、ユーザー `Wanida` に対して拒否します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
+ 次の例では、XML スキーマ コレクション `Invoices4` の `EXECUTE` 権限を、ユーザー `Wanida` に対して拒否します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
 ```  
 USE AdventureWorks2012;  

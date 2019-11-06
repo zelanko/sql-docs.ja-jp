@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,12 +14,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 53f6d2d4c902389c900f4851d0ec1973a23f5a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62736242"
 ---
 # <a name="synonyms-database-engine"></a>シノニム (データベース エンジン)
   シノニムは、次の目的で機能するデータベース オブジェクトです。  
@@ -75,7 +75,7 @@ ms.locfileid: "48188052"
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
+|UPDATE|Del|  
 |EXECUTE|副選択式|  
   
  前に示したコンテキストでシノニムを扱っているときは、ベース オブジェクトが影響を受けます。 たとえば、シノニムが参照するベース オブジェクトがテーブルの場合に、シノニムに行を挿入すると、実際に参照先のテーブルに行が挿入されます。  

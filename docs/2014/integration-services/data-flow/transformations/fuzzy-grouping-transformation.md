@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
@@ -23,21 +22,21 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f0b1fc213fb1916421b1c9b0f02bb82b5553770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900561"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
   
 > [!NOTE]  
->  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
+>  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
   
  あいまいグループ化変換では、変換アルゴリズムの処理に必要な一時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルを作成するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続が必要になります。 接続時には、データベース内にテーブルを作成する権限を持つユーザーの解決が必要です。  
   
@@ -84,11 +83,11 @@ ms.locfileid: "48123008"
   
  **[あいまいグループ化変換エディター]** ダイアログ ボックスを使用して設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [あいまいグループ化変換エディター&#40;接続マネージャー タブ&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [[あいまいグループ化変換エディター] &#40;[接続マネージャー] タブ&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [あいまいグループ化変換エディター&#40;列 タブ&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [[あいまいグループ化変換エディター] &#40;[列] タブ&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [あいまいグループ化変換エディター&#40;詳細設定 タブ&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [[あいまいグループ化変換エディター] &#40;[詳細設定] タブ&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   

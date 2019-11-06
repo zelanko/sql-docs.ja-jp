@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831770"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -57,13 +56,13 @@ ms.locfileid: "48204822"
   
  SQL ステートメントがファイルに格納されている場合、タスクはファイル接続マネージャーを使用してそのファイルに接続します。 詳しくは「 [File Connection Manager](../connection-manager/file-connection-manager.md)」をご覧ください。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、**[SQL 実行タスク エディター]** ダイアログ ボックスを使用して SQL ステートメントを入力できます。また、SQL クエリを作成するためのグラフィカル ユーザー インターフェイスである**クエリ ビルダー**を使用することもできます。 詳細については、「[SQL 実行タスク エディター &#40;[全般] タブ&#41;](../execute-sql-task-editor-general-page.md)」と「[クエリ ](../query-builder.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 **[SQL 実行タスク エディター]** ダイアログ ボックスを使用して SQL ステートメントを入力できます。また、SQL クエリを作成するためのグラフィカル ユーザー インターフェイスである**クエリ ビルダー**を使用することもできます。 詳細については、「[SQL 実行タスク エディター &#40;[全般] タブ&#41;](../execute-sql-task-editor-general-page.md)」と「[クエリ ](../query-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  有効な SQL ステートメントが SQL 実行タスクの外部に記述されている場合、SQL 実行タスクは解析に失敗することがあります。  
   
 > [!NOTE]  
->  SQL 実行タスクは `RecognizeAll` ParseMode の列挙値を使用します。 詳細については、「 [ManagedBatchParser 名前空間](http://go.microsoft.com/fwlink/?LinkId=223617)」を参照してください。  
+>  SQL 実行タスクは `RecognizeAll` ParseMode の列挙値を使用します。 詳細については、「 [ManagedBatchParser 名前空間](https://go.microsoft.com/fwlink/?LinkId=223617)」を参照してください。  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>複数のステートメントの一括送信  
  SQL 実行タスクに複数のステートメントが含まれる場合、それらをグループ化してバッチとして実行できます。 バッチの開始と終了を知らせるには、GO コマンドを使用します。 2 つの GO コマンド間にあるすべての SQL ステートメントは、OLE DB プロバイダーにバッチで送信されて実行されます。 SQL コマンドには、GO コマンドで分割された複数のバッチを含めることができます。  
@@ -81,7 +80,7 @@ ms.locfileid: "48204822"
 -   タスクでパラメーターのバインドを使用する場合、バッチ内のすべてのクエリは、同じ数と種類のパラメーターを持つ必要があります。  
   
 ## <a name="running-parameterized-sql-commands"></a>パラメーター化 SQL コマンドの実行  
- SQL ステートメントとストアド プロシージャでは多くの場合、入力パラメーター、出力パラメーター、およびリターン コードを使用します。 SQL 実行タスクでは、 `Input`、 `Output`、および`ReturnValue`パラメーターの型。 使用する、 `Input` 、入力パラメーターの型`Output`の出力パラメーター、および`ReturnValue`リターン コード。  
+ SQL ステートメントとストアド プロシージャでは多くの場合、入力パラメーター、出力パラメーター、およびリターン コードを使用します。 SQL 実行タスクでは、`Input`、`Output`、および `ReturnValue` パラメーター型がサポートされます。 入力パラメーターには `Input` 型、出力パラメーターには `Output` 型、およびリターン コードには `ReturnValue` 型を使用します。  
   
 > [!NOTE]  
 >  SQL 実行タスクでは、データ プロバイダーがサポートしている場合のみ、パラメーターを使用できます。  
@@ -96,7 +95,7 @@ ms.locfileid: "48204822"
 ## <a name="troubleshooting-the-execute-sql-task"></a>SQL 実行タスクのトラブルシューティング  
  SQL 実行タスクによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、SQL 実行タスクが実行する SQL コマンドに関するトラブルシューティングを行うことができます。 SQL 実行タスクによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「[パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
- SQL コマンドまたはストアド プロシージャから、複数の結果セットが返される場合があります。 これらの結果セットは、の結果である行セットだけでなく`SELECT`のエラーの結果である単一の値もクエリ、`RAISERROR`または`PRINT`ステートメント。 1 つ目以外の結果セット内のエラーがタスクで無視されるかどうかは、使用する接続マネージャーの種類によって異なります。  
+ SQL コマンドまたはストアド プロシージャから、複数の結果セットが返される場合があります。 このような結果セットには、`SELECT` クエリの結果である行セットだけでなく、`RAISERROR` ステートメントまたは `PRINT` ステートメントのエラーの結果である単一値も含まれています。 1 つ目以外の結果セット内のエラーがタスクで無視されるかどうかは、使用する接続マネージャーの種類によって異なります。  
   
 -   OLE DB 接続マネージャーおよび ADO 接続マネージャーを使用する場合、1 つ目の結果セット以外はすべて無視されます。 したがって、これらの接続マネージャーでは、SQL コマンドまたはストアド プロシージャから返されるエラーは、1 つ目の結果セットに含まれていない限りタスクで無視されます。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48204822"
   
 -   SQL ステートメントの準備フェーズをタスクがスキップするかどうかを指定します。  
   
--   ADO 接続の種類を使用している場合、SQL ステートメントがストアド プロシージャかどうかを指定する必要があります。 このプロパティは読み取り専用の他の接続の種類とその値は常に`false`します。  
+-   ADO 接続の種類を使用している場合、SQL ステートメントがストアド プロシージャかどうかを指定する必要があります。 その他の接続の種類では、このプロパティは読み取り専用であり、値は常に `false` です。  
   
  プロパティはプログラムによって設定するか、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。  
   
@@ -159,6 +158,6 @@ ms.locfileid: "48204822"
   
 -   [TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](/sql/t-sql/language-reference)  
   
--   mssqltips.com のブログ「 [SQL Server 2012 の新しい日付と時刻の関数](http://go.microsoft.com/fwlink/?LinkId=239783)」  
+-   mssqltips.com のブログ「 [SQL Server 2012 の新しい日付と時刻の関数](https://go.microsoft.com/fwlink/?LinkId=239783)」  
   
   

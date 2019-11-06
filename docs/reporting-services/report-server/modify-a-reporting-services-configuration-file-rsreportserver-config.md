@@ -2,25 +2,25 @@
 title: Reporting Services の構成ファイル (RSreportserver.config) の変更 | Microsoft Docs
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581128"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、一連の構成ファイルにアプリケーション設定を格納します。 構成ファイルはセットアップ時に作成され、インストールしたレポート サーバー インスタンスごとに存在します。 各ファイル内の値は、インストール中に設定されるか、ツールやアプリケーションを使用してサーバーの動作を構成したときに設定されます。 場合によっては、高度な設定を追加したり構成したりするために、ファイルを直接変更する必要があります。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。  
   
  一部の構成設定は、ツールを使ってのみ設定できます。 暗号化された値を含んだ設定は、Reporting Services 構成ツール、セットアップ プログラム、または **rsconfig** コマンド ライン ユーティリティで変更する必要があります。 これらのツールを実行するには、ローカルの Administrators グループのメンバーである必要があります。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  構成ファイルを変更する場合は注意が必要です。 内部で使用するために予約されている設定を変更すると、インストールが無効になることがあります。 一般的に、特定の問題を解決しようとしている場合を除いて、構成設定を変更することはお勧めしません。 安全に変更できる設定の詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」または「 [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。 構成ファイルの詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントを参照してください。  
   
  このトピックの内容  

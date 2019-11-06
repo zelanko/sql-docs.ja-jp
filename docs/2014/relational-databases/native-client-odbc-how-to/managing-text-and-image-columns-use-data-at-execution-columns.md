@@ -12,12 +12,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c63ff8eada8123e3bb7dfab5f8761f66ba2d2ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205619"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>実行時データ列の使用 (ODBC)
     
@@ -29,20 +29,20 @@ ms.locfileid: "48227132"
   
     -   4 番目のパラメーターとして、プログラム定義の列 ID を指定します。  
   
-2.  [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ列を処理する準備ができていることを示します。  
+2.  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ列を処理する準備ができていることを示します。  
   
 3.  実行時データの各列に対して次の操作を行います。  
   
-    -   [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、列の配列のポインターを取得します。 実行時データ列が他にもある場合は、SQL_NEED_DATA が返されます。  
+    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、列の配列のポインターを取得します。 実行時データ列が他にもある場合は、SQL_NEED_DATA が返されます。  
   
     -   [SQLPutData](../native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、列データを length の長さまで送信します。  
   
-4.  [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ列のデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
+4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ列のデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
   
 ## <a name="example"></a>例  
  このサンプルでは、SQLGetData を使用して SQL_LONG 型の可変長文字データを読み取る方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -183,7 +183,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp3')
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テキストとイメージの列の操作方法に関するトピックを管理する&#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

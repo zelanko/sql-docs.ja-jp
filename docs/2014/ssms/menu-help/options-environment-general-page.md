@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
@@ -12,12 +12,12 @@ ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80003c9bf964a094398256bf2f96a41fd2b3c579
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033029"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188503"
 ---
 # <a name="options-environment-general-page"></a>[オプション] ([環境]-[全般] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して **[全般]** をクリックします。  
@@ -48,12 +48,12 @@ ms.locfileid: "51033029"
   
 ## <a name="docked-tool-window-behavior"></a>[ドッキング ツール ウィンドウの動作]  
  **[[閉じる] ボタンを、アクティブになっているタブに対してのみ実行する]**  
- このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみを閉じることを指定します。 既定では、このチェック ボックスはオンになっています。  
+ このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみを閉じることを指定します。 既定では、このチェック ボックスはオンです。  
   
  **[[自動的に隠す] ボタンを、アクティブになっているタブに対してのみ実行する]**  
- このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみが自動的に非表示になることを指定します。 既定では、このチェック ボックスはオフに設定されます。  
+ このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみが自動的に非表示になることを指定します。 既定では、このチェック ボックスはオフです。  
   
-## <a name="display"></a>表示  
+## <a name="display"></a>ディスプレイ  
  **[最近使用したファイルの一覧: n ファイルまで表示する]**  
  **[ファイル]** メニューに表示される最新プロジェクトおよび最新ファイルの数をカスタマイズします。 1 ～ 24 の範囲の数値を入力します。 既定値は 4 です。 最近使用したスクリプト プロジェクトやファイル、その他のスクリプト プロジェクトを簡単に表示できます。  
   

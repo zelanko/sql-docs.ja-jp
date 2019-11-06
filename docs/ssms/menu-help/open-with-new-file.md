@@ -1,5 +1,5 @@
 ---
-title: '[ファイルを開くアプリケーションの選択] - ([新しいファイル]) | Microsoft Docs'
+title: '[ファイルを開くアプリケーションの選択] ([新しいファイル]) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,24 +7,21 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f489e1a1501299b0f78c037c810ef54db7117edf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675590"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252054"
 ---
-# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] - ([新しいファイル])
+# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] \([新しいファイル])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-1 つ以上のエディターでドキュメントを開くには、**[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  
+1 つ以上のエディターでドキュメントを開くには、 **[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  
   
 ## <a name="options"></a>および  
 **[このファイルを開くのに使用するプログラムを選択してください]**  
@@ -47,4 +44,3 @@ ms.locfileid: "47675590"
   
 ## <a name="see-also"></a>参照  
 [ファイル拡張子をコード エディターに関連付ける](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  

@@ -4,29 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100106"
 ---
 # <a name="preview-view"></a>[プレビュー] ビュー
   **[プレビュー]** ビューを使用すると、表示レポートを表示できます。 レポートをプレビューすると、レポート デザイナーでは、レポートがローカルで実行され、[プレビュー] ビューに表示されます。 プレビュー モードでは、レポート全体が処理されます。 レポートに複雑なクエリや大量のデータが含まれている場合、初回のプレビューは、完了するまでに数分かかることがあります。 その後の変更内容が、レポートの形式に関するのみである場合、プレビュー時にはキャッシュされたデータが使用されます。  
   
 > [!IMPORTANT]  
->  ときに[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]実行で、RemoteApp としてレポートを表示することはできません**プレビュー**で表示[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]します。 RemoteApp プログラムは、リモート デスクトップ サービスを使用してリモートでアクセスされるプログラムです。 詳細については、次を参照してください。 [TS RemoteApp Step-by-Step Guide](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx)します。  
+>  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を RemoteApp として実行すると、レポートを **の** [プレビュー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ビューに表示することはできません。 RemoteApp プログラムは、リモート デスクトップ サービスを使用してリモートでアクセスされるプログラムです。 詳細については、次を参照してください。 [TS RemoteApp Step-by-Step Guide](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx)します。  
   
 ## <a name="options"></a>および  
  ツール バーは、プレビュー機能を管理するために使用します。  

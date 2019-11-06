@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770849"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
   **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換先が使用する SAP BW 接続マネージャーを選択できます。 このページでは、SAP Netweaver BW システムにデータを読み込むためのパラメーターも選択します。  
@@ -80,7 +79,7 @@ ms.locfileid: "48125512"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- 形式で、ゲートウェイ サービスの名前を入力`sapgwNN`ここで、`NN`システム番号です。  
+ `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  
@@ -105,14 +104,14 @@ ms.locfileid: "48125512"
   
 |[オブジェクトの種類]|結果|  
 |-----------------|------------|  
-|**インフォオブジェクト**|**[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用して、新しいインフォオブジェクトを作成します。 このダイアログ ボックスの詳細については、「 [[新しいインフォオブジェクトの作成]](create-new-infoobject.md)」を参照してください。|  
+|**インフォオブジェクト**|**[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用して、新しいインフォオブジェクトを作成します。 このダイアログ ボックスの詳細については、「 [新しいインフォオブジェクトの作成](create-new-infoobject.md)」を参照してください。|  
 |**インフォキューブ**|**[トランザクション データのインフォキューブの作成]** ダイアログ ボックスを使用して、新しいインフォキューブを作成します。 このダイアログ ボックスの詳細については、「 [トランザクション データのインフォキューブの作成](create-infocube-for-transaction-data.md)」を参照してください。|  
 |**インフォソース**|**[インフォソースの作成]** ダイアログ ボックスを使用してから、 **[トランザクション データのインフォソースの作成]** または **[マスター データのインフォソースの作成]** ダイアログ ボックスを使用して、新しいインフォソースを作成します。 これらのダイアログ ボックスに関する詳細については、「 [インフォソースの作成](create-infosource.md)」、「 [トランザクション データのインフォソースの作成](create-infosource-for-transaction-data.md) 」、「 [マスター データのインフォソースの作成](create-infosource-for-master-data.md)」を参照してください。|  
 |**インフォパッケージ**|**[インフォパッケージの作成]** ダイアログ ボックスを使用して、新しいインフォパッケージを作成します。 このダイアログ ボックスの詳細については、「 [インフォパッケージの作成](create-infopackage.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [SAP BW 変換先エディター&#40;マッピング ページ&#41;](sap-bw-destination-editor-mappings-page.md)   
- [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](sap-bw-destination-editor-error-output-page.md)   
+ [SAP BW 変換先エディター ([マッピング] ページ)](sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 変換先エディター ([エラー出力] ページ)](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   

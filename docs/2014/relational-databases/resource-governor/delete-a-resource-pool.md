@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool delete
@@ -14,21 +13,21 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a84b9416371690601b79f6f429b6476ffc85675
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205835"
 ---
 # <a name="delete-a-resource-pool"></a>リソース プールの削除
   リソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **リソース プールの削除に使用するもの:** [SQL Server Management Studio](#DelRPSSMS)、 [Transact-SQL](#DelRPTSQL)  
+-   **リソース プールの削除に使用するもの:**[SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  ワークロード グループが含まれている場合は、リソース プールを削除できません。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
@@ -67,7 +66,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](resource-governor.md)   
+ [リソース ガバナー](resource-governor.md)   
  [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
  [リソース プールの作成](create-a-resource-pool.md)   
  [リソース プールの設定の変更](change-resource-pool-settings.md)   

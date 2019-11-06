@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef1336514d876d171cd9d31d8c20171e154f9a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7706d3a7dd05273b4608d49211a6eaab8927f2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118605"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 関数
 **準拠**  
- ODBC のバージョンが導入されました: 1.0  
+ バージョンが導入されました。ODBC 1.0  
   
- **概要**  
+ **まとめ**  
  **SQLConfigDataSource**追加、変更、またはデータ ソースを削除します。  
   
  機能**SQLConfigDataSource**にアクセスすることも[ODBCCONF します。EXE](../../../odbc/odbcconf-exe.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLConfigDataSource(  
      HWND     hwndParent,  
@@ -54,19 +53,19 @@ BOOL SQLConfigDataSource(
  *起こり*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
   
- ODBC_ADD_DSN: は、新しいユーザー データ ソースを追加します。  
+ ODBC_ADD_DSN:新しいユーザー データ ソースを追加します。  
   
- ODBC_CONFIG_DSN: 構成 (変更) 既存のユーザー データ ソース。  
+ ODBC_CONFIG_DSN:構成 (変更) 既存のユーザー データ ソース。  
   
- ODBC_REMOVE_DSN: は、既存のユーザー データ ソースを削除します。  
+ ODBC_REMOVE_DSN:既存のユーザー データ ソースを削除します。  
   
- ODBC_ADD_SYS_DSN: は、新しいシステム データ ソースを追加します。  
+ ODBC_ADD_SYS_DSN:新しいシステム データ ソースを追加します。  
   
- ODBC_CONFIG_SYS_DSN: は、既存のシステム データ ソースを変更します。  
+ ODBC_CONFIG_SYS_DSN:既存のシステム データ ソースを変更します。  
   
- ODBC_REMOVE_SYS_DSN: は、既存のシステム データ ソースを削除します。  
+ ODBC_REMOVE_SYS_DSN:既存のシステム データ ソースを削除します。  
   
- ODBC_REMOVE_DEFAULT_DSN: は、システム情報の既定のデータ ソースの仕様 セクションを削除します。 (これからも削除されます既定ドライバーの仕様のセクション システム情報で Odbcinst.ini エントリ。 これは、*起こり*、非推奨と同じ機能を実行します**SQLRemoveDefaultDataSource**関数です。)。このオプションを指定すると、すべての呼び出しでその他のパラメーターの**SQLConfigDataSource** Null にする必要がありますは、それらは無視されますが NULL でない場合。  
+ ODBC_REMOVE_DEFAULT_DSN:システム情報の既定のデータ ソースの仕様 セクションを削除します。 (これからも削除されます既定ドライバーの仕様のセクション システム情報で Odbcinst.ini エントリ。 これは、*起こり*、非推奨と同じ機能を実行します**SQLRemoveDefaultDataSource**関数です。)。このオプションを指定すると、すべての呼び出しでその他のパラメーターの**SQLConfigDataSource** Null にする必要がありますは、それらは無視されますが NULL でない場合。  
   
  *lpszDriver*  
  [入力]ドライバーの名前 (通常は、関連付けられている DBMS の名前)、物理ドライバー名ではなくユーザーに表示されます。  

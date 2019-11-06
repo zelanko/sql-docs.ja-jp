@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
@@ -25,15 +24,15 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100821"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバーで実行中のジョブの状態を監視します。 レポート サーバーは、一定の間隔で、実行中のジョブをスキャンし、レポート サーバー データベース (SharePoint モードの場合はサービス アプリケーション データベース) に状態情報を書き込みます。 リモートまたはローカル データベース サーバーでのクエリの実行、レポート処理、およびレポート表示のいずれかが行われている場合、ジョブは実行中です。  
@@ -76,7 +75,7 @@ ms.locfileid: "48166272"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>レポート処理またはサブスクリプションを取り消す方法  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]からレポート サーバーに接続します。 手順については、次を参照してください。 [Management Studio でのレポート サーバーへの接続](../tools/connect-to-a-report-server-in-management-studio.md)します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]からレポート サーバーに接続します。 詳細については、「 [Management Studio でレポート サーバーに接続する方法](../tools/connect-to-a-report-server-in-management-studio.md)」を参照してください。  
   
 2.  **[ジョブ]** フォルダーを開きます。  
   
@@ -86,20 +85,20 @@ ms.locfileid: "48166272"
   
 1.  テキスト エディターで RSReportServer.config ファイルを開きます。  
   
-2.  検索`IsNotificationService`します。  
+2.  `IsNotificationService` を探します。  
   
-3.  設定`False`します。  
+3.  `False` に設定します。  
   
 4.  ファイルを保存します。  
   
 5.  レポート マネージャーで、レポートの [サブスクリプション] タブまたは **[個人用サブスクリプション]** からデータ ドリブン サブスクリプションを削除します。  
   
-6.  RSReportServer.config ファイルで、サブスクリプションを削除したら`IsNotificationService`に設定し、`True`します。  
+6.  サブスクリプションを削除したら、RSReportServer.config ファイルで `IsNotificationService` を探し、`True` に設定します。  
   
 7.  ファイルを保存します。  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>ジョブ ステータスの取得間隔の設定  
- 実行中のジョブは、レポート サーバーの一時データベースに格納されます。 RSReportServer.config ファイルで構成設定を変更し、レポート サーバーによる実行中のジョブをスキャンする頻度と実行ジョブの状態を新規から実行中に変更するまでの間隔を制御できます。 `RunningRequestsDbCycle`設定では、プロセスを実行するため、レポート サーバーをスキャンする頻度を指定します。 既定では、状態情報は 60 秒ごとに記録されます。 `RunningRequestsAge`からジョブを移行する間隔を指定します。 新しい実行中にします。  
+ 実行中のジョブは、レポート サーバーの一時データベースに格納されます。 RSReportServer.config ファイルで構成設定を変更し、レポート サーバーによる実行中のジョブをスキャンする頻度と実行ジョブの状態を新規から実行中に変更するまでの間隔を制御できます。 `RunningRequestsDbCycle` 設定では、レポート サーバーによって実行中である処理のスキャンの頻度を指定します。 既定では、状態情報は 60 秒ごとに記録されます。 `RunningRequestsAge` 設定では、ジョブが新規から実行中に遷移するまでの間隔を指定します。  
   
 ##  <a name="bkmk_sharepoint"></a> ジョブの表示とキャンセル (SharePoint モード)  
  SharePoint モードでの配置のジョブの管理は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションごとに、SharePoint サーバーの全体管理を使用して行います。  
@@ -120,7 +119,7 @@ ms.locfileid: "48166272"
  ジョブは、プログラムまたはスクリプトを使用して管理できます。 詳細については、「 <xref:ReportService2010.ReportingService2010.ListJobs%2A>」と「 <xref:ReportService2010.ReportingService2010.CancelJob%2A>の両方を管理できます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー ジョブのキャンセル&#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [[レポート サーバー ジョブのキャンセル] (Management Studio)](../tools/cancel-report-server-jobs-management-studio.md)   
  [[ジョブのプロパティ] (Management Studio)](../tools/job-properties-management-studio.md)   
  [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   

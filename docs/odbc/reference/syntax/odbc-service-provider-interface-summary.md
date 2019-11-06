@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e351f08a5e72966c92a7452872532b90e4127964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a97bed3bb921b9c881a98d8d9a9031ef7630f26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111906"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC サービス プロバイダー インターフェイスの概要
 次の表では、ODBC サービス プロバイダー インターフェイスの機能について説明します。 構文とセマンティクスの各関数の詳細については、次を参照してください。 [ODBC サービス プロバイダー インターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)します。  
   
-|関数名|用途|  
+|関数名|目的|  
 |-------------------|-------------|  
 |[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|同じ[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)が接続ハンドルの代わりに、接続情報トークンの属性を設定します。|  
 |[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|接続文字列をアプリケーションの接続情報のトークンに設定[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)呼び出します。|  

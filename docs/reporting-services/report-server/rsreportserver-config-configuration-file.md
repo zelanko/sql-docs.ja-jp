@@ -2,18 +2,18 @@
 title: RsReportServer.config 構成ファイル | Microsoft Docs
 ms.date: 06/12/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 92655853880919ba29b4736404fe1637471e8f15
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500410"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -66,7 +66,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Dsn**|レポート サーバー データベースをホストするデータベース サーバーへの接続文字列を指定します。 この値は、レポート サーバー データベースの作成時に、暗号化されて構成ファイルに追加されます。 SharePoint では、SharePoint 構成データベースからデータベース接続情報が取得されます。|N、S|  
 |**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効な値は、 **Default** および **Impersonate**です。 **Default** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 **Impersonate** は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|×|  
 |**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 **LogonUser**、 **LogonDomain**、および **LogonCred** の値は、レポート サーバー接続がドメイン アカウントを使用するように構成されていると作成されます。 レポート サーバーのデータベース接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。|×|  
-|**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定では、この値は **MSRS12***\<インスタンス名>* となります。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
+|**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定値は **MSRS12** _\<インスタンス名>_ です。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|×|  
 |**SecureConnectionLevel**|Web サービス呼び出しにおける SSL (Secure Sockets Layer) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスと Web ポータルの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 SQL Server 2008 R2 で、SecureConnectionLevel はオン/オフのスイッチとして使用されます。 SQL Server 2008 R2 より前のバージョンの場合、有効な値の範囲は 0 から 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「[ConfigurationSetting メソッド - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)」、「[セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)」および「[ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|
 |**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|×|  
@@ -103,7 +103,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**アプリケーション**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションの設定を格納します。|×|  
-|**名前**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを指定します。 有効な値は ReportServerWebService または ReportManager です。|×|  
+|**[名前]**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを指定します。 有効な値は ReportServerWebService または ReportManager です。|×|  
 |**VirtualDirectory**|アプリケーションの仮想ディレクトリ名を指定します。|×|  
 |**URLs、URL**|アプリケーションの 1 つまたは複数の URL 予約を格納します。|×|  
 |**UrlString**|HTTP.SYS の有効な URL 構文を指定します。 構文の詳細については、「[URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)」を参照してください。|×|  
@@ -178,7 +178,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Web ポータルの接続先となるレポート サーバーの URL を指定します。 この値は、Web ポータルを他のインスタンス上またはリモート コンピューター上のレポート サーバーに接続する場合にのみ変更します。|N、S|  
-|**ReportBuilderTrustLevel**|この値は変更しないでください。この値を構成することはできません。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンでは、レポート ビルダーは **FullTrust**でのみ実行されます。 部分信頼モードの廃止の詳細については、「 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)」を参照してください。|N、S|  
+|**ReportBuilderTrustLevel**|この値は変更しないでください。この値を構成することはできません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンでは、レポート ビルダーは **FullTrust**でのみ実行されます。 部分信頼モードの廃止の詳細については、「 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)」を参照してください。|N、S|  
 |**PageCountMode**|Web ポータルでのみ使用されます。この設定は、レポート サーバーでページ数の値をレポートの表示前に計算するか、表示中に計算するかを指定します。 有効な値は **Estimate** (既定値) および **Actual**です。 ユーザーがレポートを閲覧している間にページ数情報を計算する場合は、 **Estimate** を使用します。 ページ数の初期値は 2 (現在のページの他にもう 1 ページ) で、ユーザーがレポートを読み進める間にページ数が調整されます。 レポートが表示される前にページ数を計算する場合は、 **Actual** を使用します。 **Actual** は旧バージョンとの互換性を維持するために用意されています。 **PageCountMode** を **Actual**に設定した場合、有効なページ数を取得する関係上、レポート全体を処理する必要があるため、レポートが表示されるまでの待ち時間が長くなる点に注意してください。|N、S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (RSReportServer.config ファイル) (ネイティブ モード)  
@@ -238,7 +238,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**、 **RenderingExtension**|ファイル共有配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="bkmk_email_extension"></a> レポート サーバーの電子メール拡張機能の構成設定  
- レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 」および「 [Reporting Services 構成ファイル](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
+ レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
 |設定|[説明]|  
 |-------------|-----------------|  
@@ -250,7 +250,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SMTPUseSSL**|ネットワークを介した SMTP メッセージの送信時に SSL (Secure Sockets Layer) を使用するよう設定できる、ブール値を指定します。 既定値は 0 (または False) です。 この設定は、 **SendUsing** 要素が 2 に設定されている場合に使用できます。|  
 |**SendUsing**|メッセージの送信に使用する方法を指定します。 有効な値は、<br /><br /> 1 = ローカル SMTP サービスのピックアップ ディレクトリからメッセージを送信します。<br /><br /> 2 = ネットワークの SMTP サービスからメッセージを送信します。|  
 |**SMTPAuthenticate**|TCP/IP 接続経由での SMTP サービスへのメッセージ送信に使用する認証の種類を示す整数値を指定します。 有効な値は、<br /><br /> 0 = 認証を行いません。<br /><br /> 1 = (サポートされていません)。<br /><br /> 2 = NTLM (NT LanMan) 認証を行います。 ネットワーク SMTP サーバーへの接続には、レポート サーバー Windows サービスのセキュリティ コンテキストが使用されます。|  
-|**From**|レポートの送信元の電子メール アドレスを、 *abc@host.xyz*」を参照してください。 アドレスは、送信する電子メール メッセージの **[差出人]** 行に表示されます。 リモート SMTP サーバーを使用している場合に、この値が必要です。 メールを送信する権限を持つ有効な電子メール アカウントを指定する必要があります。|  
+|**From**|レポートの送信元の電子メール アドレスを、 *abc@host.xyz* 」を参照してください。 アドレスは、送信する電子メール メッセージの **[差出人]** 行に表示されます。 リモート SMTP サーバーを使用している場合に、この値が必要です。 メールを送信する権限を持つ有効な電子メール アカウントを指定する必要があります。|  
 |**EmbeddedRenderFormats、RenderingExtension**|電子メール メッセージ本文内のレポートのカプセル化に使用する表示形式を指定します。 続いて、レポート内の画像がレポートに埋め込まれます。 有効な値は、MHTML および HTML4.0 です。|  
 |**PrivilegedUserRenderFormats**|"すべてのサブスクリプションを管理" タスクを使用してサブスクライブが有効になっている場合に、ユーザーがレポートのサブスクリプション用に選択できる表示形式を指定します。 この値が設定されていない場合は、意図的に除外されたものを除く、すべての表示形式を使用できます。|  
 |**ExcludedRenderFormats、RenderingExtension**|指定の配信拡張機能で適切に処理されない形式を意図的に除外します。 同じ表示拡張機能の複数のインスタンスは除外できません。 複数のインスタンスを除外すると、レポート サーバーが構成ファイルを読み取るときにエラーが発生します。 既定では、電子メール配信に対し、次の拡張機能は除外されます。<br /><br /> HTMLOWC<br /><br /> [Null]<br /><br /> RGDI|  
@@ -286,7 +286,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 -   XML  
   
--   Null  
+-   [Null]  
   
 -   CSV  
   

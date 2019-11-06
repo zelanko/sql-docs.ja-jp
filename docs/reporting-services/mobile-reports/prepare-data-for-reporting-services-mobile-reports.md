@@ -9,11 +9,11 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62499933"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用にデータを準備する
   

@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0d9006d2b1792e66c1f37faa94c9c4b3f9304f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06c158c49c0ce175204bc9738a4f4136db7fe344
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006215"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetConnectAttr**接続属性の現在の設定を返します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC 3 の詳細については *.x*アプリケーションの操作は、ODBC 2 *.x*ドライバーを参照してください[後方のマッピング置換関数アプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetConnectAttr(  
      SQLHDBC        ConnectionHandle,  
@@ -51,7 +50,7 @@ SQLRETURN SQLGetConnectAttr(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *属性*  
  [入力]取得する属性。  
@@ -75,7 +74,7 @@ SQLRETURN SQLGetConnectAttr(
 -   場合 *\*ValuePtr* 、固定長データ型を含む*BufferLength* SQL_IS_INTEGER または SQL_IS_UINTEGER のいずれかを適切なは。  
   
  *StringLengthPtr*  
- [出力](Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*します。 場合\* *ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きい場合*BufferLength* null 終了文字のデータの長さマイナス *\*ValuePtr*に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
+ [出力] (Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*します。 場合\* *ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きい場合*BufferLength* null 終了文字のデータの長さマイナス *\*ValuePtr*に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE。  

@@ -23,15 +23,14 @@ helpviewer_keywords:
 - multiple schema namespaces
 - XML schema collections [SQL Server], creating
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a4f9db5ae692a99318d89a571930f1a8bc023e8b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927725"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ N'<?xml version="1.0" encoding="UTF-16"?>
    xmlns          ="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
    elementFormDefault="qualified"   
    attributeFormDefault="unqualified"  
-   xmlns:xsd="https://www.w3.org/2001/XMLSchema" >  
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
   
     <xsd:complexType name="StepType" mixed="true" >  
         <xsd:choice  minOccurs="0" maxOccurs="unbounded" >   
@@ -163,23 +162,23 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
   
  詳細については、「 [格納されている XML スキーマ コレクションの表示](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)」を参照してください。  
   
- スキーマ コレクションを格納する、**xml** 型の列です。 この場合、XML スキーマ コレクションを作成するには、次のようにします。  
+ スキーマ コレクションを格納する、**xml** 型の列です。 この場合、XML スキーマ コレクションを作成するには、次の操作を行います。  
   
 1.  SELECT ステートメントを使用して列からスキーマ コレクションを取得し、**xml** 型または **varchar** 型の変数に割り当てます。  
   
 2.  CREATE XML SCHEMA COLLECTION ステートメントで変数名を指定します。  
   
- CREATE XML SCHEMA COLLECTION には、SQL Server で認識されるスキーマ コンポーネントだけが格納されます。XML スキーマ内のすべての要素がデータベースに格納されるわけではありません。 したがって、XML スキーマ コレクションを、提供されたときと同じ状態に戻す場合は、データベース列またはコンピューター上の他のフォルダーに XML スキーマを保存することをお勧めします。  
+ CREATE XML SCHEMA COLLECTION には、SQL Server で認識されるスキーマ コンポーネントだけが格納されます。XML スキーマ内のすべてがデータベースに格納されるわけではありません。 したがって、XML スキーマ コレクションを、提供されたときと同じ状態に戻す場合は、データベース列またはコンピューター上の他のフォルダーに XML スキーマを保存することをお勧めします。  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. スキーマ コレクションに複数のスキーマ名前空間を指定する  
- XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例 :  
+ XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例:  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
 </xsd:schema>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->  
 </xsd:schema>';  
 ```  
@@ -191,7 +190,7 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
     elementFormDefault="qualified"   
-    xmlns:xsd="https://www.w3.org/2001/XMLSchema" >  
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
     <xsd:element name="Warranty"  >  
         <xsd:complexType>  
             <xsd:sequence>  
@@ -205,7 +204,7 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
     elementFormDefault="qualified"   
     xmlns:mstns="https://tempuri.org/XMLSchema.xsd"   
-    xmlns:xs="https://www.w3.org/2001/XMLSchema"  
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"  
     xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >  
     <xs:import   
 namespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />  
@@ -219,7 +218,7 @@ namespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/Produ
         </xs:complexType>  
         <xs:complexType name="Summary" mixed="true" >  
             <xs:sequence>  
-                <xs:any processContents="skip" namespace="https://www.w3.org/1999/xhtml" minOccurs="0" maxOccurs="unbounded" />  
+                <xs:any processContents="skip" namespace="http://www.w3.org/1999/xhtml" minOccurs="0" maxOccurs="unbounded" />  
             </xs:sequence>  
         </xs:complexType>  
 </xs:schema>'  
@@ -235,7 +234,7 @@ GO
 ```  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
 <element name="e" type="dateTime"/>  
 </schema>';  
 go  
@@ -250,11 +249,11 @@ WHERE  sys.xml_schema_namespaces.name='';
 ```  
   
 ### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. XML スキーマ コレクションとバッチを使用する  
- スキーマ コレクションを作成したバッチ内で、そのスキーマ コレクションを参照することはできません。 スキーマ コレクションを、作成した同じバッチ内で参照すると、コレクションが存在しないというエラーが発生します。 次の例は動作しますが、`GO` を削除し、同じバッチ内で、`xml` 変数を入力するために XML スキーマ コレクションを参照しようとすると、エラーが返されます。  
+ スキーマ コレクションを作成した同じバッチ内で、そのスキーマ コレクションを参照することはできません。 作成した同じバッチ内でコレクションを参照しようとすると、コレクションが存在しないというエラーを受け取ります。 次の例は動作しますが、`GO` を削除し、同じバッチ内で、`xml` 変数を入力するために XML スキーマ コレクションを参照しようとすると、エラーが返されます。  
   
 ```  
 CREATE XML SCHEMA COLLECTION mySC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  
 </schema>  
 ';  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - interactive conflict resolution [SQL Server replication]
@@ -16,12 +15,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 766d2b9e556f69677d84aee12b798d371655076c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245119"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同期マネージャーでの要求時同期中に、手動で競合を解決できるインタラクティブ競合回避モジュールを利用できます。 インタラクティブ競合回避モジュールを実行時に有効化すると、グラフィカル インターフェイスに競合する各行のデータが表示されます。ここから、競合するデータを表示および編集し、個々の競合を解決できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48132272"
   
  インタラクティブ競合回避モジュールを使用するには、競合回避を必要とする各アーティクルまたはサブスクリプションに対して、インタラクティブな競合回避を有効にしておく必要があります。 1 つ以上のアーティクルまたはサブスクリプションで有効にしておくと、マージ同期中に競合が検出された場合、インタラクティブ競合回避モジュールを使用できます。  
   
- インタラクティブ競合回避モジュールを使用するには、「[Specify Interactive Conflict Resolution for Merge Articles](../publish/specify-interactive-conflict-resolution-for-merge-articles.md)」 (マージ アーティクルにインタラクティブな競合解決を指定する) と「[Synchronize a Subscription Using Windows Synchronization Manager (Windows Synchronization Manager)](../synchronize-a-subscription-using-windows-synchronization-manager.md)」 (Windows 同期マネージャーを使用してサブスクリプションを同期する) を参照してください。  
+ インタラクティブ競合回避モジュールを使用するには、「[Specify Interactive Conflict Resolution for Merge Articles](..//publish/specify-merge-replication-properties.md#interactive-conflict-resolution)」 (マージ アーティクルにインタラクティブな競合解決を指定する) と「[Synchronize a Subscription Using Windows Synchronization Manager (Windows Synchronization Manager)](../synchronize-a-subscription-using-windows-synchronization-manager.md)」 (Windows 同期マネージャーを使用してサブスクリプションを同期する) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [マージ レプリケーションの競合検出および解決の詳細](advanced-merge-replication-conflict-detection-and-resolution.md)  

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 89ac992a05c043dc22dd2ff3ef85d62284b77955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109632"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)
   SharePoint ライブラリからレポートを実行する場合は、レポート内で、またはそのレポートにリンクされている外部ファイルで、接続情報を定義できます。 レポートに埋め込む接続情報をカスタム データ ソースと呼びます。 外部ファイル内で定義する接続情報を共有データ ソースと呼びます。 外部ファイルとしては、レポート サーバー データ ソース (.rsds) ファイルまたは Office データ接続 (.odc) ファイルを使用できます。  
@@ -51,7 +50,7 @@ ms.locfileid: "48181412"
   
     -   ユーザーがレポートを実行するたびに資格情報の入力を要求する場合は、 **[資格情報を要求する]** をクリックします。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。  
   
-    -   1 組の資格情報を使用してデータにアクセスする場合は、 **[保存された資格情報]** を選択します。 資格情報は暗号化されてから保存されます。 保存されている資格情報の認証方法を指定するオプションを選択できます。 保存された資格情報が Windows ユーザー アカウントに属する場合は、[データ ソースへの接続時に Windows 資格情報として使用する] をクリックします。 データベース サーバーの実行コンテキストを設定する場合は、 **[実行コンテキストをこのアカウントに設定する]** をクリックします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースでは、このオプションは、SETUSER 関数を設定します。 詳細については、「[SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)」を参照してください。  
+    -   1 組の資格情報を使用してデータにアクセスする場合は、 **[保存された資格情報]** を選択します。 資格情報は暗号化されてから保存されます。 保存されている資格情報の認証方法を指定するオプションを選択できます。 保存された資格情報が Windows ユーザー アカウントに属する場合は、[データ ソースへの接続時に Windows 資格情報として使用する] をクリックします。 データベース サーバーの実行コンテキストを設定する場合は、 **[実行コンテキストをこのアカウントに設定する]** をクリックします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。 詳細については、「[SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)」を参照してください。  
   
     -   接続文字列で資格情報を指定する場合や、レポート サーバーで構成されている最小特権アカウントを使用してレポートを実行する場合は、 **[資格情報は必要ありません]** を選択します。 レポート サーバーでこのアカウントが構成されていない場合、ユーザーは資格情報の入力を要求され、そのレポート用に定義したスケジュール済みの操作は実行されません。  
   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8c31f2c8618a434bfd693ad32108aa8240ebded
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144111"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757960"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、ビジネス インテリジェンス注釈付き概念スキーマ定義言語 (CSDLBI) と呼ばれる XML 形式でのテーブル モデルの定義の表示をサポートします。  
@@ -73,7 +71,7 @@ ms.locfileid: "50144111"
   
 -   パースペクティブのサポート。  
   
- CSDLBI 注釈の個々 の要素の詳細については、次を参照してください。 [CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)します。 CSDL のコア仕様については、次を参照してください。、 [CSDL v3 仕様](https://msdn.microsoft.com/en-us/data/jj652004)msdn です。  
+ CSDLBI 注釈の個々 の要素の詳細については、次を参照してください。 [CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)します。 CSDL のコア仕様については、次を参照してください。、 [CSDL v3 仕様](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)します。  
   
   
 ## <a name="see-also"></a>参照  

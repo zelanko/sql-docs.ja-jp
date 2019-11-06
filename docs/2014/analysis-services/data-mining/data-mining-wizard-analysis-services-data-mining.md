@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -16,15 +15,15 @@ ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f30b9bbc04e7008a6d5be33e364ef6de7e91edf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084739"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>データ マイニング ウィザード (Analysis Services - データ マイニング)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
   
  ウィザードの最後のフェーズでは、オプションでデータをトレーニング セットとテスト セットに分けることができ、ドリルスルーなどの機能を有効にすることができます。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48223842"
   
 -   どの列または属性を予測に使用するか。 どの列または属性を分析の入力として使用するのが適しているか。  
   
--   どのアルゴリズムを使用するのがよいか。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているすべてのアルゴリズムは、それぞれに特性が異なり、生成する結果も異なります。 データの各セット用のモデルは 1 つに限られていないので、さまざまなモデルを追加して試してみることができます。  
+-   どのアルゴリズムを使用するのがよいか。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているすべてのアルゴリズムは、それぞれに特性が異なり、生成する結果も異なります。 データの各セット用のモデルは 1 つに限られていないので、さまざまなモデルを追加して試してみることができます。  
   
 -   統合されたデータ セットでモデルをテストできる必要があるか。 その場合は、テストのためにデータを確保しておくオプションの使用を検討してください。 割合を選択して、必要であれば、指定した行数で上限を設定できます。  
   
@@ -55,14 +54,14 @@ ms.locfileid: "48223842"
 ###  <a name="BKMK_Relational"></a> リレーショナル データ ソースとします。OLAP マイニング モデル  
  次の重要な選択は、リレーショナル データ ソースを使用するか、モデルのベースを多次元 (OLAP) データにするかです。  
   
- ここで、データ マイニング ウィザードは、使用するデータ ソースがリレーショナルかキューブ内にあるかに応じて、2 つのパスに分岐します。 データの選択処理以外はすべて (アルゴリズムの選択、予約データ セットを追加する機能など) 同じですが、キューブ データの選択はリレーショナル データの使用よりも少し複雑です。 また、キューブに基づくモデルを作成する場合は、最後にいくつかの追加のオプションも提示されます。  
+ ここで、データ マイニング ウィザードは、使用するデータ ソースがリレーショナルかキューブ内にあるかに応じて、2 つのパスに分岐します。 データの選択処理以外のそれ以外は同じですが、アルゴリズム、予約データ セットを追加する機能の選択、キューブのデータの選択などが、リレーショナル データを使用するよりも少し複雑です。 また、キューブに基づくモデルを作成する場合は、最後にいくつかの追加のオプションも提示されます。  
   
  各オプションの詳細のチュートリアルについては、以下のトピックを参照してください。  
   
- [リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)  
+ [Create a Relational Mining Structure](create-a-relational-mining-structure.md)  
  リレーショナル データ マイニング モデルを作成する場合の判断について説明します。  
   
- [OLAP マイニング構造の作成](create-an-olap-mining-structure.md)  
+ [Create an OLAP Mining Structure](create-an-olap-mining-structure.md)  
  OLAP キューブのデータを使用する場合の追加のオプションと選択について説明します。  
   
 > [!NOTE]  
@@ -71,7 +70,7 @@ ms.locfileid: "48223842"
 ### <a name="choosing-an-algorithm"></a>アルゴリズムの選択  
  次に、データの処理に使用するアルゴリズムを決定する必要があります。 この決定は、難しい場合があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されている各アルゴリズムは、機能が異なり、異なる結果を生成します。そのため、自分のデータとビジネスの問題にどれが最も適しているかを判断する前に、いくつかのモデルを試してみることができます。 各アルゴリズムに最適なタスクの説明については、以下のトピックを参照してください。  
   
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  前に述べたように、異なるアルゴリズムを使用して複数のモデルを作成したり、アルゴリズムのパラメーターを変更して異なるモデルを作成したりできます。 選択したアルゴリズムだけにこだわらず、同じデータで複数の異なるモデルを作成してみることをお勧めします。  
   
@@ -83,13 +82,13 @@ ms.locfileid: "48223842"
 ### <a name="additional-features"></a>追加機能  
  適切なデータの選択や正しいデータ ソースの構成を補助するために、データ マイニング ウィザードには次の追加機能が用意されています。  
   
--   **データ型の自動検出**: ウィザードは列値の一意性と分布を調べ、最適なデータ型を推奨して、データの使用法の種類を提示します。 これらの提示は、一覧から値を選択してオーバーライドできます。  
+-   **自動検出のデータ型の**:ウィザードは一意性と列の値の分布を調べとし、最適なデータ型をお勧めし、データの使用法をお勧めします。 これらの提示は、一覧から値を選択してオーバーライドできます。  
   
--   **変数の提示**: ダイアログ ボックス上でのクリック操作で、アナライザーを開始できます。アナライザーは、モデルに含まれている列全体の相関関係を計算し、これまでのモデルの構成に基づいて、いずれかの列が結果属性の予測子となり得るかを判断します。 これらの提示は、別の値を入力してオーバーライドできます。  
+-   **変数の提示**:ダイアログ ボックスをクリックし、アナライザーをモデルに含まれる列間の相関関係を計算し、すべての列がこれまで、モデルの構成に基づいて、結果の属性の可能性の高い予測子にするかどうかを開始できます。 これらの提示は、別の値を入力してオーバーライドできます。  
   
--   **機能選択**: 多くのアルゴリズムでは、適切な予測子である列が自動的に検出され、それらが優先的に使用されます。 あまりに多くの値を持つ列では、 *機能選択* が適用され、データのカーディナリティが引き下げられて、意味のあるパターンを発見できる可能性が高められます。 機能選択の動作は、モデルのパラメーターを使用して調整できます。  
+-   **機能の選択**:ほとんどのアルゴリズムでは、適切な予測子およびそれらが優先的に使用される列が自動的に検出します。 あまりに多くの値を持つ列では、 *機能選択* が適用され、データのカーディナリティが引き下げられて、意味のあるパターンを発見できる可能性が高められます。 機能選択の動作は、モデルのパラメーターを使用して調整できます。  
   
--   **自動キューブ スライス**: マイニング モデルが OLAP データ ソースに基づいている場合は、キューブ属性を使用してモデルをスライスする機能が自動的に提供されます。 これは、キューブ データのサブセットに基づくモデルの作成に便利です。  
+-   **自動キューブ スライス**:マイニング モデルが OLAP データ ソースに基づいて、キューブ属性を使用してモデルをスライスする機能は自動的に提供します。 これは、キューブ データのサブセットに基づくモデルの作成に便利です。  
   
 ### <a name="completing-the-wizard"></a>ウィザードの完了  
  ウィザードでの最後の手順として、マイニング構造と関連マイニング モデルに名前を付けます。 作成したモデルの種類に応じて、次の重要なオプションも提示される場合があります。  
@@ -105,15 +104,15 @@ ms.locfileid: "48223842"
 ## <a name="related-content"></a>関連コンテンツ  
  データ マイニング モデルの作成時に決定する必要がある事項の詳細については、次のリンクを参照してください。  
   
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
- [コンテンツの種類&#40;データ マイニング&#41;](content-types-data-mining.md)  
+ [コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)  
   
- [データ型&#40;データ マイニング&#41;](data-types-data-mining.md)  
+ [データ型 &#40;データ マイニング&#41;](data-types-data-mining.md)  
   
- [機能の選択&#40;データ マイニング&#41;](feature-selection-data-mining.md)  
+ [機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)  
   
- [欠損値&#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)  
+ [不足値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)  
   
  [マイニング モデルでのドリルスルー](drillthrough-on-mining-models.md)  
   

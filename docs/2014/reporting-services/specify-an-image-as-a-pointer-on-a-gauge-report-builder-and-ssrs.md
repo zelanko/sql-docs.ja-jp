@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2e2fbf2593ae5f85e12555d469ebe77b11539a20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101147"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)
-  ゲージには 3 つの組み込みスタイルが用意されており、これらを使用してポインターの外観をカスタマイズできます。 放射状ゲージには、針、マーカー、およびバーの 3 種類の組み込みスタイルがあります。 線形ゲージには、マーカー、バー、および温度計の 3 種類の組み込みスタイルがあります。 独自のポインターが必要な場合は、自分で作成した画像をポインターとして使用できます。  
+  ゲージには 3 つの組み込みスタイルが用意されており、これらを使用してポインターの外観をカスタマイズできます。 放射状ゲージには、組み込みのスタイルは。針、マーカー、およびバー。 線形ゲージには、マーカー、バー、および温度計の 3 種類の組み込みスタイルがあります。 独自のポインターが必要な場合は、自分で作成した画像をポインターとして使用できます。  
   
  ポインターの画像を指定する場合、その画像は次の仕様を満たしている必要があります。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48178882"
 8.  **ソース**、**埋め込み**ドロップダウン リストから。  
   
     > [!NOTE]  
-    >  画像がデータベースまたは Web に保存されている場合は、このプロパティに適切なオプションを指定できます。 詳細については、次を参照してください。[イメージのプロパティ] ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)します。  
+    >  画像がデータベースまたは Web に保存されている場合は、このプロパティに適切なオプションを指定できます。 詳細については、次を参照してください。[イメージのプロパティ ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)します。  
   
 9. **値**、ドロップダウン リストから、イメージの名前を選択します。  
   

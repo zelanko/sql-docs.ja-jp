@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2e23bf4b3c464c5483897c0a9dd3e6c9dea626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003278"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel ドライバー)
 > [!NOTE]  
@@ -27,11 +26,11 @@ ms.locfileid: "47802360"
   
  **SQLGetInfo** SQL_FILE_USAGE 情報の種類をサポートしています。 返される値は、ドライバーが直接データ ソース内のファイルを処理する方法を示す 16 ビット整数を示します。  
   
--   SQL_FILE_NOT_SUPPORTED-ドライバーは、1 階層のドライバーではありません。  
+-   SQL_FILE_NOT_SUPPORTED - ドライバーは、1 階層のドライバーではありません。  
   
--   SQL_FILE_TABLE — 1 階層のドライバーは、テーブルとしてデータ ソース内のファイルを扱います。  
+-   SQL_FILE_TABLE - 1 階層のドライバーは、テーブルとしてデータ ソース内のファイルを扱います。  
   
--   SQL_FILE_QUALIFIER — 1 階層のドライバーは、修飾子としてデータ ソース内のファイルを扱います。  
+-   SQL_FILE_QUALIFIER - 1 階層のドライバーは、修飾子としてデータ ソース内のファイルを扱います。  
   
  ODBC ドライバーは、各ファイルは、テーブルでは、マイクロソフト Exceldriver の SQL_FILE_TABLE を返します。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "47802360"
  「ブック」(Excel 5.0/7.0/97)  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
- SQL_QU_DML_STATEMENTS &AMP;#124; SQL_QU_TABLE_DEFINITION  
+ SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  
   
 ## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
  SQL_FN_TD_CURDATE &#124; です。 SQL_FN_TD_CURTIME &#124; です。 SQL_FN_TD_DAYOFMONTH &#124;です。 SQL_FN_TD_DAYOFWEEK &#124; です。SQL_FN_TD_DAYOFYEAR &#124; です。 SQL_FN_TD_HOUR &#124; です。SQL_FN_TD_MINUTE &#124;です。SQL_FN_TD_MONTH &#124;です。 SQL_FN_TD_NOW &#124; です。SQL_FN_TD_SECOND&#124;です。SQL_FN_TD_WEEK&#124;です。SQL_FN_TD_YEAR

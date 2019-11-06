@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c216b41fe7f7c4d9a8b1c5e290b07bc0fec2c3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53471adf085fbe9a046d28fa09ce10a46953eae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028169"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>ユーザー定義型の使用 - UDT データの操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +65,11 @@ FROM dbo.Points;
  これには、次の結果が生成されます。  
   
 ```  
-IDPointValue  
-----------  
-13,4  
-21,5  
-31,99  
+ID PointValue  
+-- ----------  
+ 1 3,4  
+ 2 1,5  
+ 3 1,99  
 ```  
   
  また、[!INCLUDE[tsql](../../includes/tsql-md.md)] の CAST 関数や CONVERT 関数を使用して、同じ結果を得ることもできます。  
@@ -93,11 +92,11 @@ FROM dbo.Points;
  X プロパティと Y プロパティから整数値が返され、結果セットに表示されます。  
   
 ```  
-IDxValyVal  
-----------  
-134  
-215  
-3199  
+ID xVal yVal  
+-- ---- ----  
+ 1    3    4  
+ 2    1    5  
+ 3    1   99  
 ```  
   
 ## <a name="working-with-variables"></a>変数を使用した作業  
@@ -171,11 +170,11 @@ FROM dbo.Points;
  結果が表示されます、**距離**列。  
   
 ```  
-IDXYDistance  
-------------------------  
-1345  
-2155.09901951359278  
-319999.0050503762308  
+ID X  Y  Distance  
+-- -- -- ----------------  
+ 1  3  4                5  
+ 2  1  5 5.09901951359278  
+ 3  1 99 99.0050503762308  
 ```  
   
  **DistanceFrom**メソッドの引数を受け取る**ポイント**データ型、および指定した点から PointValue までの距離が表示されます。  
@@ -189,11 +188,11 @@ FROM dbo.Points;
  結果の結果を表示する、 **DistanceFrom**テーブルの各行のメソッド。  
   
 ```  
-ID PntDistanceFromPoint  
----------------------  
-13,495.0210502993942  
-21,594  
-31,990  
+ID Pnt DistanceFromPoint  
+-- --- -----------------  
+ 1 3,4  95.0210502993942  
+ 2 1,5                94  
+ 3 1,9                90  
 ```  
   
  **DistanceFromXY**メソッドは引数として個別にポイントを取得します。  

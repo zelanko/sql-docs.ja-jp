@@ -1,160 +1,197 @@
 ---
-title: SQL Server 2017 と 2019 の Linux のリポジトリを構成する |Microsoft Docs
-description: 確認し、SQL Server 2019 と SQL Server 2017 on Linux のソース リポジトリを構成します。 ソース リポジトリでは、インストールとアップグレード中に適用されている SQL Server のバージョンに影響します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/14/2018
+title: SQL Server 2017 および 2019 用に Linux リポジトリを構成する
+description: Linux 上の SQL Server 2019 および SQL Server 2017 用にソース リポジトリの確認と構成を行います。 このソース リポジトリは、インストールおよびアップグレード中に適用される SQL Server のバージョンに影響します。
+author: VanMSFT
+ms.author: vanto
+ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
-ms.translationtype: MT
+zone_pivot_groups: ld2-linux-distribution
+ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269447"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67967524"
 ---
-# <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>インストールして、Linux 上の SQL Server のアップグレードのためのリポジトリを構成します。
+# <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux のインストールとアップグレードを行うためのリポジトリを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、Linux での SQL Server 2017 および SQL Server 2019 のインストールとアップグレードのための適切なリポジトリを構成する方法について説明します。
+::: zone pivot="ld2-rhel"
+この記事では、Linux 上で SQL Server 2017 と SQL Server 2019 のインストールとアップグレードを行うためのリポジトリを正しく構成する方法について説明します。 現在、お客様は **Red Hat (RHEL)** を選択しています (上部)。
+::: zone-end
+
+::: zone pivot="ld2-sles"
+この記事では、Linux 上で SQL Server 2017 と SQL Server 2019 のインストールとアップグレードを行うためのリポジトリを正しく構成する方法について説明します。 現在、お客様は **SUSE (SLES)** を選択しています (上部)。
+::: zone-end
+
+::: zone pivot="ld2-ubuntu"
+この記事では、Linux 上で SQL Server 2017 と SQL Server 2019 のインストールとアップグレードを行うためのリポジトリを正しく構成する方法について説明します。 現在、お客様は **Ubuntu** を選択しています (上部)。
+::: zone-end
 
 > [!TIP]
-> SQL Server 2019 プレビューの提供が開始されました。 お試しください、この記事を使用して、新しい構成**mssql-サーバー-プレビュー**リポジトリ。 」の手順に従ってをインストールし、[インストール ガイド](sql-server-linux-setup.md)します。
+> SQL Server 2019 プレビューをご利用いただけるようになりました。 お試しになる場合は、この記事を利用して新しい **mssql-server-preview** リポジトリを構成します。 その後、[インストール ガイド](sql-server-linux-setup.md)に記載されている手順に従ってインストールしてください。
 
-## <a id="repositories"></a>リポジトリ
+## <a id="repositories"></a> リポジトリ
 
-Linux 上の SQL Server をインストールするときに、Microsoft リポジトリを構成する必要があります。 このリポジトリを使用して、データベース エンジン パッケージを取得して**mssql server**、および SQL Server パッケージに関連します。 現在は、次の 3 つのメイン リポジトリがあります。
+SQL Server on Linux をインストールする場合は、Microsoft リポジトリを構成する必要があります。 このリポジトリを使って、データベース エンジンのパッケージ (**mssql-server**) と、関連する SQL Server のパッケージを入手します。 現在、3 つの主要なリポジトリがあります。
 
-| リポジトリ | 名前 | 説明 |
+| リポジトリ | [オブジェクト名] | [説明] |
 |---|---|---|
-| **プレビュー (2017)** | **mssql-server** | SQL Server 2017 ctp 版と RC リポジトリ (廃止)。 |
-| **プレビュー (2019)** | **mssql-サーバー-プレビュー** | SQL Server 2019 プレビューと rc 版のリポジトリ。 |
-| **CU** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) のリポジトリ。 |
-| **GDR** | **mssql-server-2017-gdr** | 重要な更新プログラムのみの SQL Server 2017 の GDR リポジトリ。 |
+| **Preview (2017)** | **mssql-server** | SQL Server 2017 CTP および RC リポジトリ (廃止)。 |
+| **Preview (2019)** | **mssql-server-preview** | SQL Server 2019 プレビューおよび RC リポジトリ。 |
+| **CU** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) リポジトリ。 |
+| **GDR** | **mssql-server-2017-gdr** | 重要な更新プログラム専用の SQL Server 2017 GDR リポジトリ。 |
 
-## <a id="cuversusgdr"></a> GDR ではなく、累積更新プログラム
+## <a id="cuversusgdr"></a> 累積的な更新プログラムと GDR
 
-2 つの主な種類の各ディストリビューションのリポジトリがあることに注意する必要があります。
+各ディストリビューションに対して、主に 2 種類のリポジトリがあることに注意する必要があります。
 
-- **累積的な更新プログラム (CU)**:、累積的な更新プログラム (CU) のリポジトリには、そのリリース以降ベースの SQL Server リリースとバグ修正や改善のパッケージが含まれています。 累積的更新プログラムは、SQL Server 2017 などのリリース バージョンに固有です。 これらは、一定のリズムでリリースされます。
+- **累積的な更新プログラム (CU)** :累積的な更新プログラム (CU) リポジトリには、ベースとなる SQL Server リリースのパッケージと、そのリリース以降のすべてのバグ修正や機能強化が含まれます。 累積的な更新プログラムは、リリース バージョン (SQL Server 2017 など) に固有のものです。 これらは一定の頻度でリリースされます。
 
-- **GDR**:、GDR リポジトリには、そのリリース以降、基底の SQL Server リリースとのみ重要な修正プログラムとセキュリティ更新プログラム用のパッケージが含まれています。 これらの更新プログラムは、[次へ] の CU リリースにも追加されます。
+- **GDR**:GDR リポジトリには、ベースとなる SQL Server リリースのパッケージと、そのリリース以降の重要な修正とセキュリティ更新プログラムのみが含まれます。 これらの更新プログラムは、次の CU リリースにも追加されます。
 
-各 CU と GDR のリリースには、完全な SQL Server パッケージとそのリポジトリの以前の更新プログラムが含まれています。 SQL Server 用に構成されているリポジトリを変更することで、GDR のリリースから CU リリースへの更新はサポートされています。 できます[ダウン グレード](sql-server-linux-setup.md#rollback)メジャー バージョン内の任意のリリースに (例: 2017)。
+CU および GDR の各リリースには、SQL Server の完全なパッケージと、そのリポジトリに対する以前の更新プログラムがすべて含まれています。 SQL Server 用に構成したリポジトリを変更することにより、GDR リリースから CU リリースへの更新がサポートされています。 また、お使いのメジャー バージョン内の任意のリリースに[ダウングレード](sql-server-linux-setup.md#rollback)することもできます (例:2017)。
 
 > [!NOTE]
-> CU GDR のリリースから更新することができますのリポジトリを変更することで、いつでもリリースされます。 更新 CU から GDR のリリースのリリースはサポートされていません。 
+> リポジトリを変更すれば、GDR リリースから CU リリースにいつでも更新できます。 CU リリースから GDR リリースへの更新はサポートされていません。
 
-## <a id="configure"></a> リポジトリを構成します。
+## <a name="configure-repositories"></a>リポジトリの構成
 
-次のセクションでは、ことを確認して、次のサポートされているプラットフォームのリポジトリを構成する方法について説明します。
+::: zone pivot="ld2-rhel"
+以下のセクションに記載されている手順に従って、Red Hat Enterprise Server (RHEL) 上でリポジトリを構成します。
+::: zone-end
 
-- [Red Hat Enterprise Server](#rhel)
-- [Ubuntu](#ubuntu)
-- [SUSE Linux Enterprise Server](#sles)
+::: zone pivot="ld2-sles"
+以下のセクションに記載されている手順に従って、SUSE Linux Enterprise Server (SLES) 上でリポジトリを構成します。
+::: zone-end
 
-## <a id="rhel"></a> RHEL リポジトリを構成します。
-Red Hat Enterprise Server (RHEL) のリポジトリを構成するのにには、次の手順を使用します。
+::: zone pivot="ld2-ubuntu"
+以下のセクションに記載されている手順に従って、Ubuntu 上でリポジトリを構成します。
+::: zone-end
 
-### <a name="check-for-previously-configured-repositories-rhel"></a>以前に構成されたリポジトリ (RHEL) の確認します。
-まず、SQL Server リポジトリが既に登録されているかどうかを確認します。
+## <a name="check-for-previously-configured-repositories"></a>以前に構成したリポジトリの確認
 
-1. 内のファイルを表示、 **/etc/yum.repos.d**次のコマンドでディレクトリ。
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+まず、SQL Server リポジトリを既に登録しているかどうかを確認します。
+
+1. 次のコマンドを使って、 **/etc/yum.repos.d** ディレクトリ内のファイルを表示します。
 
    ```bash
    sudo ls /etc/yum.repos.d
    ```
 
-2. など、SQL Server ディレクトリを構成するファイルを探して**mssql server.repo**します。
+2. SQL Server ディレクトリを構成しているファイルを探します (**mssql-server.repo** など)。
 
-3. ファイルの内容を出力します。
+3. そのファイルの内容を出力します。
 
    ```bash
    sudo cat /etc/yum.repos.d/mssql-server.repo
    ```
 
-4. **名前**プロパティが構成されているリポジトリです。 テーブルを識別することができます、[リポジトリ](#repositories)この記事の「します。
+4. **name** プロパティが構成されているリポジトリです。 この記事の「[リポジトリ](#repositories)」セクションにある表を使って、それを識別できます。
 
-### <a name="remove-old-repository-rhel"></a>古いリポジトリ (RHEL) の削除します。
-必要に応じて、次のコマンドを使用して古いリポジトリを削除します。
+::: zone-end
 
-```bash
-sudo rm -rf /etc/yum.repos.d/mssql-server.repo
-```
+<!--SLES-->
+::: zone pivot="ld2-sles"
+まず、SQL Server リポジトリを既に登録しているかどうかを確認します。
 
-このコマンドは、前のセクションで識別されるファイルの名前が前提としています。 **mssql server.repo**します。
-
-### <a name="configure-new-repository-rhel"></a>新しいリポジトリ (RHEL) を構成します。
-SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。 次のコマンドのいずれかを使用して、好みのリポジトリを構成します。
-
-| リポジトリ | バージョン | コマンド |
-|---|---|---|
-| **プレビュー (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-
-## <a id="sles"></a> SLES リポジトリを構成します。
-SLES でリポジトリを構成するのにには、次の手順を使用します。
-
-### <a name="check-for-previously-configured-repositories-sles"></a>以前に構成されたリポジトリ (SLES) の確認します。
-まず、SQL Server リポジトリが既に登録されているかどうかを確認します。
-
-1. 使用**zypper 情報**以前に構成された任意のリポジトリに関する情報を取得します。
+1. **zypper info** を使って、以前に構成したリポジトリに関する情報を取得します。
 
    ```bash
    sudo zypper info mssql-server
    ```
 
-2. **リポジトリ**プロパティが構成されているリポジトリです。 テーブルを識別することができます、[リポジトリ](#repositories)この記事の「します。
+2. **Repository** プロパティが構成されているリポジトリです。 この記事の「[リポジトリ](#repositories)」セクションにある表を使って、それを識別できます。
 
-### <a name="remove-old-repository-sles"></a>古いリポジトリ (SLES) の削除します。
-必要に応じて、古いリポジトリを削除します。 以前に構成されたリポジトリの種類に基づいて、次のコマンドのいずれかを使用します。
+::: zone-end
 
-| リポジトリ | 削除するコマンド |
-|---|---|
-| **プレビュー (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-| **プレビュー (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
+まず、SQL Server リポジトリを既に登録しているかどうかを確認します。
 
-### <a name="configure-new-repository-sles"></a>新しいリポジトリ (SLES) を構成します。
-SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。 次のコマンドのいずれかを使用して、好みのリポジトリを構成します。
-
-| リポジトリ | バージョン | コマンド |
-|---|---|---|
-| **プレビュー (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-
-## <a id="ubuntu"></a> Ubuntu のリポジトリを構成します。
-Ubuntu でリポジトリを構成するのにには、次の手順を使用します。
-
-### <a name="check-for-previously-configured-repositories-ubuntu"></a>以前に構成されたリポジトリ (Ubuntu) の確認します。
-まず、SQL Server リポジトリが既に登録されているかどうかを確認します。
-
-1. 内容を表示、 **/etc/apt/sources.list**ファイル。
+1. **/etc/apt/sources.list** ファイルの内容を表示します。
 
    ```bash
    sudo cat /etc/apt/sources.list
    ```
 
-2. Mssql server 用のパッケージの URL を確認します。 テーブルを識別することができます、[リポジトリ](#repositories)この記事の「します。
+2. mssql-server のパッケージ URL を確認します。 この記事の「[リポジトリ](#repositories)」セクションにある表を使って、それを識別できます。
 
-### <a name="remove-old-repository-ubuntu"></a>古いリポジトリ (Ubuntu) を削除します。
-必要に応じて、古いリポジトリを削除します。 以前に構成されたリポジトリの種類に基づいて、次のコマンドのいずれかを使用します。
+::: zone-end
+
+## <a name="remove-old-repository"></a>古いリポジトリの削除
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+必要に応じて、次のコマンドを使って古いリポジトリを削除します。
+
+```bash
+sudo rm -rf /etc/yum.repos.d/mssql-server.repo
+```
+
+このコマンドでは、前のセクションで識別されたファイルの名前が **mssql-server.repo** であることを仮定しています。
+
+::: zone-end
+
+<!--SLES-->
+::: zone pivot="ld2-sles"
+必要に応じて、古いリポジトリを削除します。 以前に構成したリポジトリの種類に基づいて、次のいずれかのコマンドを使います。
 
 | リポジトリ | 削除するコマンド |
 |---|---|
-| **プレビュー (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
-| **プレビュー (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
+| **Preview (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **Preview (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
+| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+
+::: zone-end
+
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
+必要に応じて、古いリポジトリを削除します。 以前に構成したリポジトリの種類に基づいて、次のいずれかのコマンドを使います。
+
+| リポジトリ | 削除するコマンド |
+|---|---|
+| **Preview (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+| **Preview (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
 | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
-### <a name="configure-new-repository-ubuntu"></a>新しいリポジトリ (Ubuntu) を構成します。
+::: zone-end
+
+## <a name="configure-new-repository"></a>新しいリポジトリの構成
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。 次のコマンドのいずれかを使って、任意のリポジトリを構成します。
+
+| リポジトリ | バージョン | コマンド |
+|---|---|---|
+| **Preview (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+
+::: zone-end
+
+<!--SLES-->
+::: zone pivot="ld2-sles"
+SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。 次のコマンドのいずれかを使って、任意のリポジトリを構成します。
+
+| リポジトリ | バージョン | コマンド |
+|---|---|---|
+| **Preview (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+
+::: zone-end
+
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。
 
 1. パブリック リポジトリの GPG キーをインポートします。
@@ -163,25 +200,39 @@ SQL Server のインストールとアップグレードのために使用する
    sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. 次のコマンドのいずれかを使用して、好みのリポジトリを構成します。
+2. 次のコマンドのいずれかを使って、任意のリポジトリを構成します。
 
    | リポジトリ | バージョン | コマンド |
    |---|---|---|
-   | **プレビュー (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
+   | **Preview (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
    | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
-3. 実行**apt get 更新**します。
+3. **apt-get update** を実行します。
 
    ```bash
    sudo apt-get update
    ```
 
+::: zone-end
+
 ## <a name="next-steps"></a>次の手順
 
-適切なリポジトリを構成した後に進んで[インストール](sql-server-linux-setup.md#platforms)または[更新](sql-server-linux-setup.md#upgrade)および SQL Server は、新しいリポジトリからパッケージを関連します。
+適切なリポジトリを構成したら、新しいリポジトリから、SQL Server と関連パッケージの[インストール](sql-server-linux-setup.md#platforms)や[更新](sql-server-linux-setup.md#upgrade)を始めることができます。
 
+::: zone pivot="ld2-rhel"
 > [!IMPORTANT]
-> など、インストールの記事のいずれかを使用する場合、この時点で、[クイック スタート](sql-server-linux-setup.md#platforms)ターゲットのリポジトリが既に構成されていることに注意してください。 チュートリアルでは、そのステップを繰り返さないでください。 クイック スタート CU リポジトリを使用するため、GDR リポジトリを構成する場合は特にそうです。
+> この時点で、[RHEL のクイックスタート](quickstart-install-connect-red-hat.md)を使うことにする場合は、既にターゲット リポジトリを構成してあることを忘れないでください。 チュートリアルに記載されているその手順を繰り返さないでください。 これは、GDR リポジトリを構成する場合に特に当てはまります。クイックスタートでは CU リポジトリが使われるためです。
+::: zone-end
 
-Linux 上の SQL Server 2017 をインストールする方法の詳細については、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンスについて](sql-server-linux-setup.md)します。
+::: zone pivot="ld2-sles"
+> [!IMPORTANT]
+> この時点で、[SLES のクイックスタート](quickstart-install-connect-suse.md)を使うことにする場合は、既にターゲット リポジトリを構成してあることを忘れないでください。 チュートリアルに記載されているその手順を繰り返さないでください。 これは、GDR リポジトリを構成する場合に特に当てはまります。クイックスタートでは CU リポジトリが使われるためです。
+::: zone-end
+
+::: zone pivot="ld2-ubuntu"
+> [!IMPORTANT]
+> この時点で、[Ubuntu のクイックスタート](quickstart-install-connect-ubuntu.md)を使うことにする場合は、既にターゲット リポジトリを構成してあることを忘れないでください。 チュートリアルに記載されているその手順を繰り返さないでください。 これは、GDR リポジトリを構成する場合に特に当てはまります。クイックスタートでは CU リポジトリが使われるためです。
+::: zone-end
+
+Linux 上に SQL Server 2017 をインストールする方法について詳しくは、「[Linux 上の SQL Server のインストールのガイダンスについて](sql-server-linux-setup.md)」をご覧ください。

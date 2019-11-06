@@ -25,57 +25,56 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd93fef0add8f773a1acac0635c13f59d8bd5cab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bdc1e80e6363be923d65c07b5550772c8d16f2af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121600"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 構文表記規則 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  次の表は、[!INCLUDE[tsql](../../includes/tsql-md.md)] リファレンスの構文で使用している表記規則について示しています。  
+次の表は、[!INCLUDE[tsql](../../includes/tsql-md.md)] リファレンスの構文で使用している表記規則について示しています。  
   
 |表記|使用目的|  
 |----------------|--------------|  
 |大文字|[!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードを示します。|  
-|*斜体*|ユーザーが指定する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文のパラメーターを示します。|  
-|**太字**|記載されているとおりに入力する必要があるデータベース名、テーブル名、列名、インデックス名、ストアド プロシージャ、ユーティリティ、データ型名、テキストを示します。|  
-|_underline_|下線が引かれている値を含む句がステートメントから省略されているときに適用される既定値を示します。|  
+|_斜体_|ユーザーが指定する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文のパラメーターを示します。|  
+|**太字**|データベース名、テーブル名、列名、インデックス名、ストアド プロシージャ、ユーティリティ、データ型名、およびテキストを、記載されているとおりに入力します。|  
+|下線|下線が引かれている値を含む句がステートメントから省略されているときに適用される既定値を示します。|  
 |(& a) #124 です。(縦棒)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目を示します。 中かっこは入力しません。|  
-|[**,**...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目はコンマで区切ります。|  
-|[...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目は空白で区切ります。|  
-|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの終端記号を示します。 セミコロンは、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのステートメントでは必須ではありませんが、将来のバージョンでは必須となる予定です。|  
-|\<label> ::=|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる箇所は、不等号で囲まれたラベル (\<label>) で示します。<br /><br /> セットとは、式のコレクションです (たとえば \<grouping set>)。リストとは、セットのコレクションです (たとえば \<composite element list>)。|  
+|[ **,** ..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目はコンマで区切ります。|  
+|[..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目は空白で区切ります。|  
+|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの終端記号を示します。 セミコロンは、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのステートメントでは必須ではありませんが、将来のバージョンでは必須になる予定です。|  
+|\<label> ::=|構文のブロックの名前を示します。 この表記規則を使用して、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付けます。 構文のブロックを使用できる箇所は、不等号で囲まれたラベル (\<label>) で示します。<br /><br /> セットとは、式のコレクションです (たとえば \<grouping set>)。リストとは、セットのコレクションです (たとえば \<composite element list>)。|  
   
 ## <a name="multipart-names"></a>マルチパート名  
- 特に指定のない限り、データベース オブジェクトの名前に対するすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 参照は、次のような 4 部構成の名前の形式をとります。  
+特に指定のない限り、データベース オブジェクトの名前に対するすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 参照は、次のような 4 部構成の名前の形式をとります。  
   
-*server_name* **.**[*database_name*]**.**[*schema_name*]**.**_object\_name_  
+_server\_name_.[_database\_name_].[_schema\_name_]._object\_name_  
   
- | _database\_name_**.**[_schema\_name_]**.**_object\_name_  
+| _database\_name_.[_schema\_name_]._object\_name_  
+ 
+| _schema\_name_._object\_name_  
   
- | _schema\_name_**.**_object\_name_  
-  
- | _object\_name_  
+| _object\_name_  
   
 _server\_name_  
 リンク サーバー名またはリモート サーバー名を示します。  
   
-*database_name*  
+_database\_name_  
 オブジェクトが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスに存在するときは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの名前を指定します。 オブジェクトがリンク サーバーに存在するとき、*database_name* には OLE DB カタログを指定します。  
   
-*schema_name*  
+_schema\_name_  
 オブジェクトが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに存在する場合は、そのオブジェクトを含むスキーマの名前を示します。 オブジェクトがリンク サーバーに存在するとき、*schema_name* には OLE DB スキーマ名を指定します。  
   
-*object_name*  
+_object\_name_  
 オブジェクトの名前を示します。  
   
 特定のオブジェクトを参照する場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] にオブジェクトを識別させるために、必ずしもサーバー、データベース、所有者を指定する必要はありません。 ただし、オブジェクトが見つからない場合は、エラーが返されます。  
@@ -87,14 +86,14 @@ _server\_name_
   
 |オブジェクト参照形式|[説明]|  
 |-----------------------------|-----------------|  
-|*server* **.** *database* **.** *schema* **.** *object*|4 部構成の名前です。|  
-|*server* **.** *database* **..** *object*|スキーマ名を省略しています。|  
-|*server* **..** *schema* **.** *object*|データベース名を省略しています。|  
-|*server* **...** *object*|データベースとスキーマ名を省略しています。|  
-|*database* **.** *schema* **.** *object*|サーバー名を省略しています。|  
-|*database* **..** *object*|サーバーとスキーマ名を省略しています。|  
-|*schema* **.** *object*|サーバーとデータベース名を省略しています。|  
-|*object*|サーバー、データベース、およびスキーマ名を省略しています。|  
+|_server_._database_._schema_._object_|4 部構成の名前です。|  
+|_server_._database_.._object_|スキーマ名を省略しています。|  
+|_server_.._schema_._object_|データベース名を省略しています。|  
+|_server_..._object_|データベースとスキーマ名を省略しています。|  
+|_database_._schema_._object_|サーバー名を省略しています。|  
+|_database_.._object_|サーバーとスキーマ名を省略しています。|  
+|_schema_._object_|サーバーとデータベース名を省略しています。|  
+|_object_|サーバー、データベース、およびスキーマ名を省略しています。|  
   
 ## <a name="code-example-conventions"></a>コード例の規則  
 特に断りのない限り、[!INCLUDE[tsql](../../includes/tsql-md.md)] リファレンスで提供されている例は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用し、次のオプションを既定の設定にしてテストされています。  
@@ -113,9 +112,9 @@ _server\_name_
 ## <a name="applies-to-references"></a>"適用対象" リファレンス  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] リファレンスには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、および [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] に関連する記事が含まれています。   
 
-各記事の上部近くには、記事の主題をサポートする製品を示すセクションがあります。 製品が省略されている場合は、記事で説明されている機能は、その製品では使用できません。 たとえば、可用性グループは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE AVAILABILITY GROUP** の記事には、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に適用されないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで) が適用対象と記載されています。  
+各記事の先頭近くに、記事の主題をサポートする製品を示すセクションがあります。 製品が省略されている場合、記事で説明されている機能は、その製品では使用できません。 たとえば、可用性グループは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE AVAILABILITY GROUP** の記事は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に適用されないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで) が適用対象と記載されています。  
   
-場合によっては、記事の一般的な主題は製品に使用できますが、すべての引数はサポートされていません。 たとえば、包含データベース ユーザーは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE USER** ステートメントはすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品に使用できますが、**WITH PASSWORD** 構文は以前のバージョンでは使用できません。 この場合、「**適用対象**」セクションが、トピックの本文の適切な引数の説明に挿入されます。  
+場合によっては、記事の一般的な主題を製品で使用できますが、すべての引数がサポートされるわけではありません。 たとえば、包含データベース ユーザーは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE USER** ステートメントはすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品で使用できますが、**WITH PASSWORD** 構文は以前のバージョンでは使用できません。 記事の本文の適切な引数の説明に、「**適用対象**」セクションが追加で挿入されます。  
   
 ## <a name="see-also"></a>参照  
 [TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)    

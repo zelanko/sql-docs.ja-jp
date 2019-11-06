@@ -4,32 +4,31 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103471"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>レポート サーバー実行ログと ExecutionLog3 ビュー
   レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
   
- SharePoint モード用に構成されたレポート サーバーでは、SharePoint ULS ログも利用できます。 詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。  
+ SharePoint モード用に構成されたレポート サーバーでは、SharePoint ULS ログも利用できます。 詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> ログ情報の表示  
  レポート サーバーは、レポート実行に関するデータのログを内部データベース テーブルに記録します。 このテーブルの情報は SQL Server ビューで参照できます。  
   
- レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
+ レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 より新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
   
  このトピックの内容  
   
@@ -116,7 +115,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |UserName|ユーザー識別子。|  
 |[ExecutionID]|要求に関連付けられた内部識別子。 同じユーザー セッションの要求は、同じ実行 ID を共有します。|  
 |RequestType|有効値は次のとおりです。<br />**対話型**<br />**サブスクリプション**<br /><br /> <br /><br /> RequestType=Subscription でフィルター処理したログ データを TimeStart で並べ替えて分析すると、サブスクリプションが集中している時間が見つかることがあります。この情報を基に、レポートのサブスクリプションの一部を別の時間に変更することができます。|  
-|[形式]|表示形式。|  
+|形式|表示形式。|  
 |Parameters|レポート実行に使用するパラメーター値。|  
 |ItemAction|有効値は次のとおりです。<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **実行**<br /><br /> **RenderEdit**|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
@@ -124,8 +123,8 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|データの取得にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing|レポートの処理にかかった時間 (単位はミリ秒)。|  
 |TimeRendering|レポートの表示にかかった時間 (単位はミリ秒)。|  
-|Source|レポート実行のソース。 有効値は次のとおりです。<br /><br /> **Live**<br /><br /> **キャッシュ**: キャッシュされた実行、たとえば、データセットのクエリはライブで実行しないことを示します。<br /><br /> **スナップショット**<br /><br /> **履歴**<br /><br /> **アドホック**: レポートのドリルスルーに基づくモデル動的に生成されたレポートまたはレポート サーバーの処理とレンダリングを使用するクライアントでプレビューされているレポート ビルダーのレポートのいずれかを示します。<br /><br /> **セッション**: 既に確立されたセッション内のフォロー アップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> **Rdce**: レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
-|Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
+|ソース|レポート実行のソース。 有効値は次のとおりです。<br /><br /> **Live**<br /><br /> **キャッシュ**:たとえば、データセットのクエリでライブ実行されませんが、キャッシュされた実行を示します。<br /><br /> **スナップショット**<br /><br /> **履歴**<br /><br /> **アドホック**:レポートのドリルスルーに基づくモデル動的に生成されたレポートまたはレポート サーバーの処理とレンダリングを使用するクライアントでプレビューされているレポート ビルダーのレポートのいずれかを示します。<br /><br /> **セッション**:既に確立されたセッション内のフォロー アップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> **Rdce**:レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
+|状態|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
 |AdditionalInfo|実行に関する追加情報を格納する XML プロパティ バッグ。 内容は行ごとに異なります。|  
@@ -225,11 +224,11 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  AdditionalInfo フィールドに表示されるプロパティの一部を次に示します。  
   
--   **ProcessingEngine**: 1 = SQL Server 2005、2 = 新しいオンデマンド処理エンジンです。 ほとんどのレポートでこの値が 1 になっている場合は、レポートを設計し直す方法を調べて、効率が向上した新しいオンデマンド処理エンジンを使用することをお勧めします。  
+-   **ProcessingEngine**:1 = SQL Server 2005、2 = 新しいオンデマンド処理エンジン。 ほとんどのレポートでこの値が 1 になっている場合は、レポートを設計し直す方法を調べて、効率が向上した新しいオンデマンド処理エンジンを使用することをお勧めします。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: 処理エンジンでスケール関連の操作を実行に費やされたミリ秒数。 値が 0 の場合は、スケール操作に特に時間はかからず、要求時にメモリ不足にならなかったことを示します。  
+-   **ScalabilityTime**:処理エンジンでスケール関連の操作の実行にかかった時間 (単位はミリ秒)。 値が 0 の場合は、スケール操作に特に時間はかからず、要求時にメモリ不足にならなかったことを示します。  
   
     ```  
     <ScalabilityTime>  
@@ -237,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: キロバイト単位、特定の要求中に使用して各コンポーネントでのメモリ量のピーク時の推定値です。  
+-   **EstimatedMemoryUsageKB**:特定の要求について各コンポーネントで消費される最大メモリ量の推定値 (単位は KB)。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -245,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: データ拡張機能またはレポートで使用されるデータ ソースの種類。 数値は、そのデータ ソースが使用されている回数を示します。  
+-   **DataExtension**:レポートで使用されているデータ拡張機能またはデータ ソースの種類。 数値は、そのデータ ソースが使用されている回数を示します。  
   
     ```  
     <DataExtension>  
@@ -263,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **接続**: 複数のレベルから成る構造体。 追加される[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。  
+-   **接続**:複数のレベルから成る構造体。 追加される[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。  
   
     ```  
     <Connections>  
@@ -315,15 +314,15 @@ select * from ExecutionLog2 order by TimeStart DESC
 |UserName|ユーザー識別子。|  
 |[ExecutionID]||  
 |RequestType|要求の種類 (ユーザーまたはシステム)。|  
-|Format|表示形式。|  
+|形式|表示形式。|  
 |Parameters|レポート実行に使用するパラメーター値。|  
-|ReportAction|有効値: Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring。|  
+|ReportAction|有効値は次のとおりです。Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
+|ソース|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
 |Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
@@ -346,21 +345,21 @@ select * from ExecutionLog order by TimeStart DESC
 |ReportID|レポート識別子。|  
 |UserName|ユーザー識別子。|  
 |RequestType|有効値は次のとおりです。<br /><br /> True = サブスクリプション要求<br /><br /> False = 対話型の要求|  
-|[形式]|表示形式。|  
+|形式|表示形式。|  
 |Parameters|レポート実行に使用するパラメーター値。|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
+|Source|レポート実行のソース。 有効値は次のとおりです。(1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE)。|  
 |状態|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
   
 ## <a name="see-also"></a>参照  
- [SharePoint トレース ログは、Reporting Services イベントを有効にする&#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
- [エラーおよびイベント リファレンス&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

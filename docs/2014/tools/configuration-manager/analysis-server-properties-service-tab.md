@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80f8c532bd416926a604d29946e979669b964228
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f083aafd2dc8718bb79798d43483c66b3520b0d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666746"
 ---
 # <a name="analysis-server-properties-service-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 [!INCLUDE[ssAS](../../includes/ssas-md.md)] を正しく機能させるには、このサービスを実行する必要があります。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
@@ -46,13 +45,13 @@ ms.locfileid: "48173382"
  **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   「手動」: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動：このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
+-   自動：このサービスは、このコンピューターの起動時に起動しようとします。  
   
--   \[無効]: このサービスは開始できません。  
+-   無効になっています。このサービスを開始できません。  
   
- **状態**  
+ **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  
   
   

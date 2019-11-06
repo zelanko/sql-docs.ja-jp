@@ -1,24 +1,23 @@
 ---
-title: '手順 1: 配置ユーティリティの構築 | Microsoft Docs'
+title: 手順 1:配置ユーティリティの構築 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2bbae058a0e3ecacaa4be9204a822451e1a0602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767584"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>手順 1: 配置ユーティリティの構築
+# <a name="step-1-building-the-deployment-utility"></a>手順 1:配置ユーティリティの構築
   ここでは、Deployment Tutorial プロジェクト用の配置ユーティリティを構成し、構築します。  
   
  配置ユーティリティを構築する前に、Deployment Tutorial プロジェクトのプロパティを変更する必要があります。 これらのプロパティを構成するには、 **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスでは、配置中に構成を更新する機能を有効にし、構築プロセスによる配置ユーティリティの生成を指定する必要があります。 プロパティを設定したら、プロジェクトを構成します。  
@@ -27,7 +26,7 @@ ms.locfileid: "48216012"
   
 ### <a name="to-set-the-deployment-utility-properties"></a>配置ユーティリティのプロパティを設定するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[Business Intelligence Development Studio]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[Business Intelligence Development Studio]** をクリックします。  
   
 2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48216012"
   
 4.  出力ウィンドウに、次のような情報が表示されます。  
   
-     ビルド開始:  SQL Integration Services プロジェクト: インクリメンタル...  
+     ビルド開始:SQL Integration Services プロジェクト:インクリメンタル...  
   
      配置ユーティリティを作成しています  
   
@@ -57,14 +56,14 @@ ms.locfileid: "48216012"
   
      ビルドの完了 -- エラー 0 個、警告 0 個  
   
-     ========== ビルド: 0 正常終了、0 失敗、1 更新、0 スキップ ==========  
+     ========== ビルド:0 正常終了、0 失敗、1 更新、0 スキップ ==========  
   
 5.  **[ファイル]** メニューの **[終了]** をクリックします。 Deployment Tutorial アイテムへの変更の保存を指示するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 2: 配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [手順 2:配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [配置ユーティリティを作成する](../../2014/integration-services/create-a-deployment-utility.md)  

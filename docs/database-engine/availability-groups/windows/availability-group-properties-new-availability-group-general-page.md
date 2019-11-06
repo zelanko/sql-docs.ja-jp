@@ -1,6 +1,8 @@
 ---
-title: '可用性グループのプロパティ: [新しい可用性グループ] ([全般] ページ) | Microsoft Docs'
-ms.custom: ''
+title: 可用性グループのプロパティ:新しい可用性グループ ([全般] ページ)
+titleSuffix: SQL Server
+description: SQL Server Management Studio の [新しい可用性グループ] ウィザードの [全般] ページにあるさまざまなプロパティの説明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,15 +13,14 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 098bc8bf6746acdec41aecc9533b21bc0b49e095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934878"
 ---
-# <a name="availability-group-properties-new-availability-group-general-page"></a>可用性グループのプロパティ: [新しい可用性グループ] ([全般] ページ)
+# <a name="availability-group-properties-new-availability-group-general-page"></a>可用性グループのプロパティ:新しい可用性グループ ([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックは、 **[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
   

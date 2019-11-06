@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892b00f07f9a316ba856e8be97e4159fd3889bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141892"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493931"
 ---
 # <a name="defining-a-referenced-relationship"></a>参照リレーションシップの定義
   このチュートリアルのこれまでの実習では、主キーから外部キーへのリレーションシップを使用し、メジャー グループのファクト テーブルに直接リンクしているテーブルに基づいて、各キューブ ディメンションを定義しました。 このトピックの実習では、 **Reseller** ディメンションを介し、 **Geography** ディメンションを再販業者販売のファクト テーブルにリンクさせます。このようにリンクを中継するディメンションを、 *参照ディメンション*といいます。 参照ディメンションにより、販売店の売上と地域を関連付けることができます。 詳細については、「 [参照リレーションシップと参照リレーションシップのプロパティの定義](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。  
@@ -31,7 +30,7 @@ ms.locfileid: "48141892"
   
      **Reseller Sales-Sales Amount** メジャーは、 **Regions** 階層の **Country-Region** 属性メンバーによって正しく多次元化されていないことに注意してください。 **Reseller Sales-Sales Amount** の値が、各 **Country-Region** 属性メンバーで繰り返されています。  
   
-     ![Reseller Sales-sales Amount メジャーの次元は](../../2014/tutorials/media/l5-referencedrelationship-1.gif "次元 Reseller Sales-sales Amount メジャー")  
+     ![次元再販業者の売上高メジャー](../../2014/tutorials/media/l5-referencedrelationship-1.gif "次元再販業者の売上高メジャー")  
   
 4.  データ ソース ビュー デザイナーを開き、 **Adventure Works DW 2012** データ ソース ビューを表示します。  
   
@@ -47,17 +46,17 @@ ms.locfileid: "48141892"
   
      現在、 **Geography** キューブ ディメンションには、 **Internet Sales** メジャー グループ、または **Reseller Sales** メジャー グループとのリレーションシップがありません。  
   
-8.  **Customer**ディメンションと **Internet Sales** メジャー グループが交差する位置にある **Full Name** セルで、参照ボタン ( **[...]** ) をクリックします。  
+8.  **Customer**ディメンションと**Internet Sales**メジャーグループの交差部分にある **[フルネーム]** セルで、省略記号ボタン ( **[...]** ) をクリックします。  
   
      **[リレーションシップの編集]** ダイアログ ボックスが表示されます。設定内容を確認すると、 **DimCustomer** ディメンション テーブルと **FactInternetSales** メジャー グループ テーブルの間には、これら 2 つのテーブルの **CustomerKey** 列に基づいて " **標準** " リレーションシップが定義されていることがわかります。 これまでに定義したリレーションシップは、すべて "標準" リレーションシップです。  
   
      次の図は、 **DimCustomer** ディメンション テーブルと、 **FactInternetSales** メジャー グループ テーブルの間に "標準" リレーションシップが定義されている **[リレーションシップの定義]** ダイアログ ボックスです。  
   
-     ![定義するリレーションシップ ダイアログ ボックス](../../2014/tutorials/media/l5-referencedrelationship-4.gif "リレーションシップの定義 ダイアログ ボックス")  
+     ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-referencedrelationship-4.gif "[リレーションシップの定義] ダイアログボックス")  
   
 9. **[キャンセル]** をクリックします。  
   
-10. **Geography**ディメンションと **Reseller Sales** メジャー グループが交差する位置の名称未設定セルで、参照ボタン ( **[...]** ) をクリックします。  
+10. **Geography**ディメンションと**再販業者の Sales**メジャーグループの交差部分にある名前のないセルで、省略記号ボタン ( **[...]** ) をクリックします。  
   
      **[リレーションシップの定義]** ダイアログ ボックスを確認すると、現在のところ、Geography キューブ ディメンションと Reseller Sales メジャー グループの間には、リレーションシップが何も定義されていません。 Geography ディメンションのディメンション テーブルと Reseller Sales メジャー グループのファクト テーブルの間には直接的なリレーションシップがないため、"標準" リレーションシップは定義できません。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "48141892"
   
      Reseller ディメンションの Geography Key 属性は、Geography ディメンションを Reseller Sales ファクト テーブルにリンクするためにのみ使用されます。 Geography Key 属性は表示しないため、この属性階層の表示を定義する値はありません。 また、この属性階層の並べ替えや最適化を行っても、処理パフォーマンスを低下させるだけです。 しかし、2 つのディメンション間を結ぶリンクとしてのみ機能するように、この属性を有効にする必要があります。  
   
-4.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[ディメンションの使用法]** タブをクリックします。次に、**Reseller Sales**メジャー グループと **Geography** キューブ ディメンションが交差する位置にある参照ボタン ( **[...]** ) をクリックします。  
+4.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアルキューブのキューブデザイナーに切り替え、[ディメンションの**使用法**] タブをクリックし、**再販業者の Sales**メジャーグループと**Geography**キューブディメンションの交差部分にある省略記号ボタン ([. **..** ]) をクリックします。  
   
 5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "48141892"
   
 9. **[ディメンションの使用法]** タブを開き、 **[ディメンション]** の一覧で **[Geography]** を右クリックし、 **[名前の変更]** をクリックします。  
   
-10. このキューブ ディメンションの名前を変更`Reseller Geography`します。  
+10. このキューブディメンションの名前をに`Reseller Geography`変更します。  
   
      このキューブ ディメンションを **Reseller Sales** メジャー グループにリンクしたので、以降は同キューブ ディメンションを明示的にキューブ内で使用できます。これにより、ユーザーの混乱を避けることができます。  
   
@@ -115,17 +114,17 @@ ms.locfileid: "48141892"
   
 2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]** ボタンをクリックします。  
   
-3.  メタデータ ペインで  `Reseller Geography`、右クリック**地域**、順にクリックします**を行領域に追加**します。  
+3.  メタデータペインで、[ `Reseller Geography`] を展開し、 **[地域]** を右クリックして、 **[行領域に追加]** をクリックします。  
   
      次の図を見ると、 **Reseller Sales-Sales Amount** メジャーが、 **Geographies** ユーザー定義階層の **Country-Region** 属性によって正しく多次元化されたことがわかります。  
   
-     ![定義するリレーションシップ ダイアログ ボックス](../../2014/tutorials/media/l5-referencedrelationship-5.gif "リレーションシップの定義 ダイアログ ボックス")  
+     ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-referencedrelationship-5.gif "[リレーションシップの定義] ダイアログボックス")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [ファクト リレーションシップの定義](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+ [ファクト リレーションシップの定義](lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>参照  
- [属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+## <a name="see-also"></a>関連項目  
+ [のディメンション デザイナーでは、[ディメンション構造] ビューの](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [参照リレーションシップと参照リレーションシップのプロパティの定義](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   

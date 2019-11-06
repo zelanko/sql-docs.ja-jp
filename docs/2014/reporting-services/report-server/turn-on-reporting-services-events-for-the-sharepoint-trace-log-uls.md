@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9170643f3d0a96facb68709ad59bc4c8e90dc9a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 0e28c32f0d73d5ff06927e7629cd76f56eaa65d8
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117252"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796407"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]以降では、SharePoint モードの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サーバーから SharePoint 統合ログ サービス (ULS) のトレース ログに [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] イベントを書き込むことができます。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 固有のカテゴリは、SharePoint サーバーの全体管理の [監視] ページで利用できます。  
@@ -40,11 +39,11 @@ ms.locfileid: "48117252"
 ##  <a name="bkmk_general"></a> ULS ログの一般的な推奨事項  
  次の表は、イベントのカテゴリの一覧です。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境を監視する場合の推奨されるレベルも記載されています。 イベントをログに記録した場合、各エントリには、イベントが記録された時刻、プロセス名、およびスレッド ID が記録されます。  
   
-|カテゴリ|Level|説明|  
+|カテゴリ|level|Description|  
 |--------------|-----------|-----------------|  
 |[データベース]|"詳細"|データベース アクセスに関連するイベントが記録されます。|  
 |全般|"詳細"|次の項目へのアクセスを伴うイベントが記録されます。<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の Web ページ<br /><br /> レポート ビューアーの HTTP ハンドラー<br /><br /> レポート アクセス (.rdl ファイル)<br /><br /> データ ソース (.rsds ファイル)<br /><br /> SharePoint サイト上の URL (.smdl ファイル)|  
-|Office Server 全般|例外|ログオンの失敗が記録されます。|  
+|Office Server 全般|Exception|ログオンの失敗が記録されます。|  
 |トポロジ|"詳細"|現在のユーザー情報が記録されます。|  
 |Web パーツ|"詳細"|レポート ビューアー Web パーツへのアクセスを伴うイベントが記録されます。|  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48117252"
   
  現在のファームの診断ログ設定は、すべて次の PowerShell コマンドレットで確認できます。  
   
-```  
+```powershell
 Get-SPDiagnosticConfig  
 ```  
   
@@ -89,7 +88,7 @@ Get-SPDiagnosticConfig
   
 2.  **カテゴリ:** サーバーに関連するイベントには、名前の先頭に "Report Server" という文字が付けられます。 例: "Report Server Alerting Runtime"。これらのイベントは、レポート サーバーのログ ファイルにも記録されます。  
   
-3.  **カテゴリ:** Web フロントエンド コンポーネントに関連するイベントや、Web フロントエンド コンポーネントから伝えられたイベントには、"Report Server" は付けられません。 例: "Service Application Proxy" Report Server Alerting Runtime"。 WFE エントリには CorrelationID が含まれますが、サーバー エントリには含まれません。  
+3.  **カテゴリ:** Web フロントエンド コンポーネントに関連するイベントや、Web フロントエンド コンポーネントから伝えられたイベントには、"Report Server" は付けられません。 例: "Service Application Proxy" "Report Server Alerting Runtime"。 WFE エントリには CorrelationID が含まれますが、サーバー エントリには含まれません。  
   
 ##  <a name="bkmk_list"></a> SQL Server Reporting Services イベントの一覧  
  次の表に示すのは、SQL Server Reporting Services カテゴリに含まれるイベントの一覧です。  
@@ -102,7 +101,7 @@ Get-SPDiagnosticConfig
 |ローカル モード表示||  
 |SOAP クライアント プロキシ||  
 |UI ページ||  
-|Power View|**LogClientTraceEvents** API に書き込まれたログ エントリ。 これらのエントリのソースを含む、クライアント アプリケーションは[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]の機能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]用アドイン[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。<br /><br /> LogClientTraceEvents API からのすべてのログ エントリは、"SQL Server Reporting Services" の **Category** および "Power View" の **Area** に記録されます。<br /><br /> "Power View" の Area に記録されるエントリの内容は、クライアント アプリケーションによって異なります。|  
+|Power View|**LogClientTraceEvents** API に書き込まれたログ エントリ。 これらのエントリのソースは、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Enterprise Edition 用の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] アドインの機能である [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] を含むクライアント アプリケーションです。<br /><br /> LogClientTraceEvents API からのすべてのログ エントリは、"SQL Server Reporting Services" の **Category** および "Power View" の **Area** に記録されます。<br /><br /> "Power View" の Area に記録されるエントリの内容は、クライアント アプリケーションによって異なります。|  
 |Report Server Alerting Runtime||  
 |レポート サーバー アプリケーション ドメイン マネージャー||  
 |レポート サーバー バッファー済み応答||  
@@ -110,7 +109,7 @@ Get-SPDiagnosticConfig
 |レポート サーバー カタログ||  
 |レポート サーバー チャンク||  
 |レポート サーバー クリーンアップ||  
-|レポート サーバー構成マネージャー|サンプルのエントリ:<br /><br /> MediumUsing レポート サーバーの内部 URL http://localhost:80/ReportServer。<br /><br /> UnexpectedMissing または無効な ExtendedProtectionLevel 設定です|  
+|レポート サーバー構成マネージャー|サンプルのエントリ:<br /><br /> MediumUsing レポート サーバーの内部 URL http://localhost:80/ReportServer 。<br /><br /> UnexpectedMissing または無効な ExtendedProtectionLevel 設定です|  
 |レポート サーバー Crypto||  
 |レポート サーバー データ拡張機能||  
 |レポート サーバー DB ポーリング||  
@@ -140,19 +139,17 @@ Get-SPDiagnosticConfig
 |共有サービス|サンプルのエントリ:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> コンテンツ データベースへの MediumGranting アクセス。<br /><br /> ReportingWebServiceApplication の MediumProvisioning インスタンス<br /><br /> ReportingWebServiceApplication の MediumProcessing サービス アカウントの変更<br /><br /> MediumSetting データベース権限。|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell でのログ ファイルの表示  
- ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して、ULS ログ ファイルから [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 関連イベントの一覧を返すことができます。 SharePoint 2010 管理シェルから次のコマンドを入力すると、ULS ログ ファイル UESQL11SPOINT-20110606-1530.log から、"**sql server reporting services**" を含む行のリストが返されます。  
+ ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して、ULS ログファイルから [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 関連イベントの一覧を返すことができます。 SharePoint 2010 管理シェルから次のコマンドを入力すると、ULS ログ ファイル UESQL11SPOINT-20110606-1530.log から、"**sql server reporting services**" を含む行のフィルターされたリストが返されます。  
   
-```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+```powershell
+Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | Select-String "sql server reporting services"  
 ```  
   
  ULS ログの読み取りに使用できるツールは他にも多数提供されており、ダウンロードして使用できます。 たとえば、 [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) や [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic)などがあります。 これらはいずれも、CodePlex から入手できます。  
   
- PowerShell を使用してログ データを表示する方法の詳細については、「 [診断ログを表示する (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)」を参照してください。  
+ PowerShell を使用してログ データを表示する方法の詳細については、「 [診断ログを表示する (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)」を参照してください。  
   
 ##  <a name="bkmk_trace"></a> トレース ログの場所  
  トレース ログ ファイルは通常、 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** フォルダーにありますが、SharePoint サーバーの全体管理の **[診断ログ]** ページから、パスを確認または変更することもできます。  
   
- SharePoint 2010 サーバーの全体管理で SharePoint サーバーに対する診断ログを構成する手順については、「 [診断ログ設定を構成する (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)」を参照してください。  
-  
-  
+ SharePoint 2010 サーバーの全体管理で SharePoint サーバーに対する診断ログを構成する手順については、「 [診断ログ設定を構成する (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)」を参照してください。  

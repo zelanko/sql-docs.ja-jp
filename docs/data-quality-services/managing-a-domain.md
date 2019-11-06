@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2eaa6b8aa0a739bff87cb59d6e4bdb2c04683274
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991923"
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
 

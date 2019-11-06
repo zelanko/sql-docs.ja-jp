@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.deletetable
@@ -13,12 +13,12 @@ ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4276c0b49bf2bccad0e18b0fb31544dd2c49a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316109"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>[テーブルの削除] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスを使用すると、レコードを削除するテーブルを指定できます。 クエリのタイプを DELETE クエリに変更するときに、ダイアグラム ペインに複数のテーブルが表示される場合、このダイアログ ボックスが表示されます。  

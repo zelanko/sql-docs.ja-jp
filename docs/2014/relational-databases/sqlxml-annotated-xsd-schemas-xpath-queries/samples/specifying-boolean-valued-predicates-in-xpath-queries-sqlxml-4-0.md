@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - Boolean-valued predicates
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 174aec26485f91d81c4159ac85725530fc1b0a6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012463"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath クエリでのブール値述語の指定 (SQLXML 4.0)
   以下の例では、XPath クエリにブール値述語を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
@@ -69,7 +67,7 @@ ms.locfileid: "48214792"
   
      詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
-     結果を次に示します。  
+     以下に結果を示します。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -105,7 +103,7 @@ ms.locfileid: "48214792"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 次の XPath クエリでは、述語を入れ子にして使用しています。 クエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素が含まれる**\<順序 >** に少なくとも 1 つの子要素 **\<順序 >** を持つ要素を**SalesPersonID**属性 2 の値。  
+ 次の XPath クエリでは、述語を入れ子にして使用しています。 クエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素が含まれる **\<順序 >** に少なくとも 1 つの子要素 **\<順序 >** を持つ要素を**SalesPersonID**属性 2 の値。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -168,7 +166,7 @@ ms.locfileid: "48214792"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 最上位の述語を指定する  
- 次のクエリを返します、 **\<顧客 >** を持つコンテキスト ノードの子の要素ノード**\<順序 >** 子要素。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
+ 次のクエリを返します、 **\<顧客 >** を持つコンテキスト ノードの子の要素ノード **\<順序 >** 子要素。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
   
 ```  
 /child::Customer[child::Order]  
@@ -204,7 +202,7 @@ ms.locfileid: "48214792"
   
      詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
- 結果の一部を次に示します。  
+ 次に結果の一部を示します。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

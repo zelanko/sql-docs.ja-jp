@@ -1,11 +1,10 @@
 ---
 title: インスタンスの構成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2016-05-04
+ms.date: 05/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -16,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190965"
 ---
 # <a name="instance-configuration"></a>インスタンスの構成
   **インストール ウィザードの** [インスタンスの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスまたは名前付きインスタンスのどちらを作成するのかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがまだインストールされていない場合は、名前付きインスタンスを指定しない限り、既定のインスタンスが作成されます。  
@@ -30,7 +29,7 @@ ms.locfileid: "48202312"
   
  インスタンスには、既定のインスタンスと名前付きインスタンスがあります。 既定のインスタンス名は MSSQLSERVER です。 接続時に、クライアントでインスタンス名を指定する必要はありません。 名前付きインスタンスは、ユーザーがセットアップ中に指定します。 先に既定のインスタンスをインストールしなくても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を名前付きインスタンスとしてインストールできます。 既定のインスタンスにできるのは、バージョンにかかわらず、一度に 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールだけです。  
   
- **警告!** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、**[インスタンスの構成]** ページで準備済みインスタンスを完了するときにインスタンス名を指定できます。 コンピューター上に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスがない場合は、完了しようとしている準備済みインスタンスを既存のインスタンスとして構成するように選択できます。  
+ **警告!** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、 **[インスタンスの構成]** ページで準備済みインスタンスを完了するときにインスタンス名を指定できます。 コンピューター上に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスがない場合は、完了しようとしている準備済みインスタンスを既存のインスタンスとして構成するように選択できます。  
   
 ## <a name="multiple-instances"></a>複数のインスタンス  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、1 台のサーバー (1 つのプロセッサ) 上に複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールできます。ただし、既定のインスタンスにできるのはそのうち 1 つだけです。 その他のインスタンスはすべて、名前付きインスタンスにする必要があります。 コンピューターは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを同時に実行でき、それぞれ他のインスタンスとは関係なく動作します。  
@@ -40,7 +39,7 @@ ms.locfileid: "48202312"
 ## <a name="options"></a>および  
  フェールオーバー クラスター インスタンスのみ - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 この名前は、ネットワーク上のフェールオーバー クラスター インスタンスを識別します。  
   
- 既定のインスタンスまたは名前付きインスタンス - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスと名前付きインスタンスのどちらをインストールするか決定する場合は、次の事項を考慮してください。  
+ 既定のインスタンスまたは名前付きインスタンス - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスと名前付きインスタンスのどちらをインストールするか決定する場合は、次の事項を考慮してください。  
   
 -   データベース サーバー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単独のインスタンスをインストールする場合は、そのインスタンスは既定のインスタンスであることが必要です。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48202312"
 -   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] をインストールするアプリケーションでは、名前付きインスタンスとしてインストールする必要があります。 これにより、複数のアプリケーションが同じコンピューターにインストールされた場合に競合が発生する可能性が軽減されます。  
   
  **[既定のインスタンス]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールするには、このオプションを選択します。 1 台のコンピューターでホストできる既定のインスタンスは 1 つだけです。その他すべては名前付きインスタンスにする必要があります。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールしている場合は、その同じコンピューターに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスを追加できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールするには、このオプションを選択します。 1 台のコンピューターでホストできる既定のインスタンスは 1 つだけです。その他すべては名前付きインスタンスにする必要があります。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールしている場合は、その同じコンピューターに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスを追加できます。  
   
  **[名前付きインスタンス]**  
  新しい名前付きインスタンスを作成するには、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに名前を付ける際は、次の点に注意してください。  
@@ -62,7 +61,7 @@ ms.locfileid: "48202312"
   
 -   インスタンス名として MSSQLServer を指定すると、既定のインスタンスが作成されます。  
   
--   インストール[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]は常に 'powerpivot' 名前付きインスタンスとしてインストールされます。 この機能ロール用に別のインスタンス名を指定できます。  
+-   [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] は、常に 'PowerPivot' の名前付きインスタンスとしてインストールされます。 この機能ロール用に別のインスタンス名を指定できます。  
   
 -   インスタンス名は最大 16 文字まで指定できます。  
   

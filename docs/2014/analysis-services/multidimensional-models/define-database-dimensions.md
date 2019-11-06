@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], defining
@@ -13,12 +12,12 @@ ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa283164549ba6c675632b65e40cfe636a0491eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075613"
 ---
 # <a name="define-database-dimensions"></a>データベース ディメンションの定義
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション デザイナーを使用します。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
@@ -43,7 +42,7 @@ ms.locfileid: "48177822"
   
 |タブ|説明|  
 |---------|-----------------|  
-|**[ディメンション構造]**|ディメンション構造の操作に使用します。ディメンションのデータ ソース ビュー スキーマの確認や作成、または属性の操作を行ったり、属性をユーザー定義階層にまとめることができます。|  
+|**[ディメンション構造]**|このタブにディメンションの構造と動作を確認またはディメンション、属性を使用して、ユーザー定義階層の属性を整理するには、データ ソース ビュー スキーマの作成に使用します。|  
 |**属性リレーションシップ**|ディメンションの属性リレーションシップを作成、変更、または削除するときに使用します。|  
 |**翻訳**|ディメンションのメタデータの翻訳を異なる言語で追加および編集するときに使用します。|  
 |**ブラウザー**|処理済みディメンションのメンバーを調べるときや、ディメンションのメタデータの翻訳を確認するときに使用します。|  
@@ -53,7 +52,7 @@ ms.locfileid: "48177822"
  [ディメンションの属性のプロパティの参照](dimension-attribute-properties-reference.md)  
  ディメンションの属性を定義して構成する方法を説明します。  
   
- [ユーザー定義階層を作成します。](user-defined-hierarchies-create.md)  
+ [ユーザー定義階層の作成](user-defined-hierarchies-create.md)  
  ユーザー定義階層を定義して構成する方法を説明します。  
   
  [属性リレーションシップの定義](attribute-relationships-define.md)  

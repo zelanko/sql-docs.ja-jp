@@ -1,7 +1,8 @@
 ---
-title: 前提条件、制限事項、推奨事項 - Always On 可用性グループ | Microsoft Docs
-ms.custom: ''
-ms.date: 06/05/2018
+title: 可用性グループの前提条件、制限事項、推奨事項
+description: Always On 可用性グループをデプロイするための前提条件、制限事項、推奨事項の説明。
+ms.custom: seodec18
+ms.date: 03/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54b58cefb736fd4429c54c773f2fd6c0a9e86f59
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516460"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708485"
 ---
-# <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>前提条件、制限事項、推奨事項 - Always On 可用性グループ
+# <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   この記事では、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の展開に関して、各種コンポーネント (ホスト コンピューター、Windows Server フェールオーバー クラスタリング (WSFC)、サーバー インスタンス、可用性グループ) の前提条件、制限、推奨事項などの考慮事項について説明します。 各コンポーネントのセキュリティに関する考慮事項のほか、要求される権限 (該当する場合) にも触れています。  
@@ -39,10 +39,10 @@ ms.locfileid: "52516460"
   
 ||依存機能|修正プログラム|リンク|  
 |------|-----------------------|------------|----------|  
-|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347: [Always On 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347:[Always On 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
-###  <a name="SystemRequirements"></a> チェック リスト: 要件 (Windows システム)  
+###  <a name="SystemRequirements"></a> チェック リスト:要件 (Windows システム)  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の機能を利用するには、1 つまたは複数の可用性グループに参加するすべてのコンピューターが、次の基本要件を満たしている必要があります。  
   
 ||要件|リンク|  
@@ -56,18 +56,18 @@ ms.locfileid: "52516460"
 > [!IMPORTANT]  
 >  可用性グループへの接続に必要な構成が環境に対して正しく実施されていることも確認します。 詳細については、「 [Always On クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
-###  <a name="ComputerRecommendations"></a> 可用性レプリカをホストするコンピューターに関する推奨事項 (Windows システム)  
+##  <a name="ComputerRecommendations"></a> 可用性レプリカをホストするコンピューターに関する推奨事項 (Windows システム)  
   
--   **同程度のシステム:**  可用性グループ内の可用性レプリカはすべて、ワークロードの処理能力が同程度であるシステム上で運用する必要があります。  
+-   **同程度のシステム:** 可用性グループ内の可用性レプリカはすべて、ワークロードの処理能力が同程度であるシステム上で運用する必要があります。  
   
--   **専用のネットワーク アダプター:**  最適なパフォーマンスを得るには、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に専用のネットワーク アダプター (ネットワーク インターフェイス カード) を使用します。  
+-   **専用のネットワーク アダプター:** 最良のパフォーマンスを得るには、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に専用のネットワーク アダプター (ネットワーク インターフェイス カード) を使用します。  
   
--   **十分なディスク領域:**  可用性レプリカをホストするサーバー インスタンスのあるすべてのコンピューターには、可用性グループ内のすべてのデータベースを格納できるだけのディスク領域が存在する必要があります。 プライマリ データベースが大きくなるにつれて、対応するセカンダリ データベースも同じだけ大きくなる点に注意してください。  
+-   **十分なディスク領域:** 可用性レプリカをホストするサーバー インスタンスのあるすべてのコンピューターには、可用性グループ内のすべてのデータベースを格納できるだけのディスク領域が存在する必要があります。 プライマリ データベースが大きくなるにつれて、対応するセカンダリ データベースも同じだけ大きくなる点に注意してください。  
   
 ###  <a name="PermissionsWindows"></a> 権限 (Windows システム)  
  WSFC を管理するユーザーは、すべてのクラスター ノードのシステム管理者であることが必要です。  
   
- クラスターを管理するためのアカウントの詳細については、「 [付録 A: フェールオーバー クラスターの要件](https://technet.microsoft.com/library/dd197454.aspx)」を参照してください。  
+ クラスターを管理するためのアカウントの詳細については、「[付録 A: フェールオーバー クラスターの要件](https://technet.microsoft.com/library/dd197454.aspx)」を参照してください。  
   
 ###  <a name="RelatedTasksWindows"></a> 関連タスク (Windows システム)  
   
@@ -83,11 +83,11 @@ ms.locfileid: "52516460"
   
 3.  **Get-ClusterResource** コマンドレットを使用してネットワーク名リソースを検索し、次に **Set-ClusterParameter** コマンドレットを使用して **HostRecordTTL** 値を設定します。次に例を示します。  
   
-     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      次に示す PowerShell の例では、`SQL Network Name (SQL35)` というネットワーク名リソースの HostRecordTTL を 300 秒に設定します。  
   
-    ```  
+    ```powershell
     Import-Module FailoverClusters  
   
     $nameResource = "SQL Network Name (SQL35)"  
@@ -117,7 +117,7 @@ ms.locfileid: "52516460"
   
  **このセクションの内容**  
   
--   [チェック リスト: 前提条件](#PrerequisitesSI)  
+-   [チェックリスト:前提条件](#PrerequisitesSI)  
   
 -   [可用性グループによるスレッドの使用](#ThreadUsage)  
   
@@ -127,12 +127,12 @@ ms.locfileid: "52516460"
   
 -   [関連コンテンツ](#RelatedContentSI)  
   
-###  <a name="PrerequisitesSI"></a> チェック リスト: 前提条件 (サーバー インスタンス)  
+###  <a name="PrerequisitesSI"></a> チェック リスト:前提条件 (サーバー インスタンス)  
   
 ||前提条件|リンク|  
 |-|------------------|-----------|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|このホスト コンピューターは WSFC ノードである必要があります。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、クラスターの別のノードに存在します。 別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができます。 SQL Server 2016 には分散型可用性グループが導入されています。 分散型可用性グループでは、2 つの可用性グループが別々のクラスターに存在します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分散型可用性グループ (Always On 可用性グループ)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
-|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> SQL Server サービス アカウントを変更した場合は、ドメイン管理者が SPN を手動で再登録する必要があります。|[Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> <br /><br /> 注: NTLM には、この要件はありません。|  
+|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> SQL Server サービス アカウントを変更した場合は、ドメイン管理者が SPN を手動で再登録する必要があります。|[Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> <br /><br /> 注:NTLM には、この要件はありません。|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と要件](#FciArLimitations) (この記事の後半)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|Always On 可用性グループに参加するために、各サーバー インスタンスで同じバージョンの SQL Server が実行されている必要がある。|[SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014)、[SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016)、[SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017) の各エディションとサポートされる機能|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|特定の可用性グループの可用性レプリカをホストするすべてのサーバー インスタンス間で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の照合順序を統一する必要があります。|[サーバーの照合順序の設定または変更](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
@@ -159,7 +159,7 @@ ms.locfileid: "52516460"
     -   SQL Server インスタンスは、セカンダリ レプリカの並列再実行に最大で 100 個のスレッドを使用します。 各データベースは、最大で、CPU コアの合計数の半分を使用しますが、データベースあたりのスレッド数は 16 個以下となります。 単一のインスタンスで必要なスレッド数の合計が 100 を超えている場合、SQL Server は、残りの各データベースには単一の再実行スレッドを使用します。 シリアル再実行スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。 
     
     > [!NOTE]
-    > 単一のスレッドを使用するデータベースは、各データベース ID の昇順に基づいて選択されます。 そのため、使用可能なワーカー スレッドよりも多くの可用性グループ データベースをホストする SQL Server インスタンスの場合は、データベースの作成順序を検討する必要があります。 たとえば、32 個以上の CPU コアを持つシステムでは、可用性グループに参加している 7 番目以降のデータベースはすべて、各データベースの実際の再実行ワークロードに関係なく、シリアル再実行モードになります。 並列再実行を必要とするデータベースは、最初に可用性グループに追加する必要があります。    
+    > 単一のスレッドを使用するデータベースは、各データベース ID の昇順に基づいて選択されます。 そのため、使用可能なワーカー スレッドよりも多くの可用性グループ データベースをホストする SQL Server インスタンスの場合は、データベースの作成順序を検討する必要があります。 たとえば、CPU のコア数が 32 以上のシステムでは、1 つまたは複数の可用性グループの (データベース ID 順に並べた) 最初の 6 つのデータベースは並列再実行モードを使用し、残りのデータベースは単一再実行モードを使用します。
   
 -   さらに、可用性グループでは非共有スレッドを次のように使用します。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52516460"
   
     -   セカンダリ レプリカでのバックアップでは、バックアップ操作の間、プライマリ レプリカにスレッドが保持されます。  
   
- 詳細については、「 [Always On - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) 」(CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニアのブログ) をご覧ください。  
+ 詳細については、「[Always On - HADRON 学習シリーズ: HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)」 (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニア ブログ) を参照してください。  
   
 ###  <a name="PermissionsSI"></a> 権限 (サーバー インスタンス)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "52516460"
   
 ###  <a name="RelatedContentSI"></a> 関連コンテンツ (サーバー インスタンス)  
   
--   [Always On - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学習シリーズ: HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> ネットワーク接続の推奨事項  
  WSFC ノード間の通信と、可用性レプリカ間の通信には、同じネットワーク リンクを使用することを強くお勧めします。  別々のネットワーク リンクを使用すると、一部のリンクにエラーが発生した場合に (断続的なエラーであっても)、予期しない動作が発生する可能性があります。  
@@ -201,7 +201,7 @@ ms.locfileid: "52516460"
   
 -   [制限](#RestrictionsFCI)  
   
--   [チェック リスト: 前提条件](#PrerequisitesFCI)  
+-   [チェックリスト:前提条件](#PrerequisitesFCI)  
   
 -   [関連タスク](#RelatedTasksFCIs)  
   
@@ -220,11 +220,11 @@ ms.locfileid: "52516460"
   > フェールオーバー クラスター マネージャーを使用して、可用性グループをホストしている*フェールオーバー クラスター インスタンス*を、同じ可用性グループのレプリカを "*すでに*" ホストしているノードに移動すると、可用性グループのレプリカが失われ、それによってターゲット ノード上でオンラインにできなくなる可能性があります。 フェールオーバー クラスターの 1 つのノードでは、同じ可用性グループの複数のレプリカをホストすることはできません。 これがどのように発生し、どのように回復するかの詳細については、ブログ記事の「[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)」(可用性グループでレプリカが予想外に削除される) を参照してください。 
 
   
--   **可用性グループによる自動フェールオーバーは FCI ではサポートされない:**  FCI は可用性グループによる自動フェールオーバーをサポートしないため、FCI によってホストされる可用性レプリカは手動フェールオーバー用にのみ構成できます。  
+-   **可用性グループによる自動フェールオーバーは FCI ではサポートされない:** FCI は可用性グループによる自動フェールオーバーをサポートしないため、FCI によってホストされる可用性レプリカは手動フェールオーバー用にのみ構成できます。  
   
--   **FCI ネットワーク名の変更:**  可用性レプリカがホストされている FCI のネットワーク名を変更する必要がある場合、レプリカをその可用性グループから削除してから再度、可用性グループに追加する必要があります。 プライマリ レプリカを削除することはできません。そのため、プライマリ レプリカがホストされている FCI の名前を変更するには、セカンダリ レプリカにフェールオーバーしてから、以前のプライマリ レプリカを削除し、再度追加する必要があります。 FCI の名前を変更すると、そのデータベース ミラーリング エンドポイントの URL が変わる可能性があります。 レプリカを追加する際は、必ず最新のエンドポイントの URL を指定してください。  
+-   **FCI ネットワーク名の変更:** 可用性レプリカがホストされている FCI のネットワーク名を変更する必要がある場合、レプリカをその可用性グループから削除してから再度、可用性グループに追加する必要があります。 プライマリ レプリカを削除することはできません。そのため、プライマリ レプリカがホストされている FCI の名前を変更するには、セカンダリ レプリカにフェールオーバーしてから、以前のプライマリ レプリカを削除し、再度追加する必要があります。 FCI の名前を変更すると、そのデータベース ミラーリング エンドポイントの URL が変わる可能性があります。 レプリカを追加する際は、必ず最新のエンドポイントの URL を指定してください。  
   
-###  <a name="PrerequisitesFCI"></a> チェック リスト: 前提条件 (FCI)  
+###  <a name="PrerequisitesFCI"></a> チェック リスト:前提条件 (FCI)  
   
 ||前提条件|リンク|  
 |-|------------------|----------|  
@@ -242,7 +242,7 @@ ms.locfileid: "52516460"
   
 -   [フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Always On アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性および障害復旧ソリューションの構築](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性およびディザスター リカバリー ソリューションの構築](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 可用性グループの前提条件と制限  
  **このセクションの内容**  
@@ -257,20 +257,20 @@ ms.locfileid: "52516460"
   
 ###  <a name="RestrictionsAG"></a> 制限 (可用性グループ)  
   
--   **可用性レプリカは、1 つの WSFC の別々のノードによってホストされている必要がある:**  各可用性グループで、個々の可用性レプリカは、同じ WSFC の別々のノード上で動作するサーバー インスタンスによってホストされる必要があります。 唯一の例外は、別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。  
+-   **可用性レプリカは、1 つの WSFC の別々のノードによってホストされている必要がある:** 各可用性グループで、個々の可用性レプリカは、同じ WSFC の別々のノード上で動作するサーバー インスタンスによってホストされる必要があります。 唯一の例外は、別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。  
   
     > [!NOTE]  
-    >  同じ物理コンピューター上の各仮想コンピューターは独立したコンピューターとして動作するため、同じ可用性グループの可用性レプリカをそれぞれの仮想コンピューターがホストできます。  
+    >  同じ物理コンピューター上の各仮想マシンは独立したコンピューターとして動作するため、同じ可用性グループの可用性レプリカをそれぞれの仮想マシンがホストできます。  
   
--   **一意の可用性グループ名:**  各可用性グループの名前は、WSFC 上で一意である必要があります。 可用性グループ名の最大文字数は 128 文字です。  
+-   **一意の可用性グループ名:** 各可用性グループの名前は、WSFC 上で一意である必要があります。 可用性グループ名の最大文字数は 128 文字です。  
   
--   **可用性レプリカ:**  各可用性グループは、1 つのプライマリ レプリカと最大 8 つのセカンダリ レプリカをサポートします。 すべてのレプリカを非同期コミット モードで実行することも、最大 3 つのレプリカを同期コミット モードで実行することもできます (1 つのプライマリ レプリカと 2 つの同期セカンダリ レプリカ)。  
+-   **可用性レプリカ:** 各可用性グループは、1 個のプライマリ レプリカと最大 8 個のセカンダリ レプリカをサポートします。 すべてのレプリカを非同期コミット モードで実行することも、最大 3 つのレプリカを同期コミット モードで実行することもできます (1 つのプライマリ レプリカと 2 つの同期セカンダリ レプリカ)。  
   
--   **コンピューターあたりの可用性グループおよび可用性データベースの最大数:** コンピューター (VM または物理コンピューター) に実際に配置できるデータベースおよび可用性グループの数はハードウェアとワークロードによって異なりますが、強制的な制限はありません。 マイクロソフトでは、物理コンピューターあたり 10 の AG と 100 の DB を使用して広範なテストを行いました。 過剰な負荷がかかっているシステムには、ワーカー スレッドの枯渇、可用性グループ システム ビューおよび DMV の応答の遅延、ディスパッチャー システム ダンプの一時停止などの症状があります (ただし、これだけではありません)。 アプリケーション SLA 内でピーク ワークロード容量を処理できることを確認するために、実稼働環境と同様のワークロードを使用して環境を十分にテストしてください。 SLA を検討する際は、障害条件下の負荷や期待される応答時間を考慮してください。  
+-   **コンピューターあたりの可用性グループおよび可用性データベースの最大数:** コンピューター (仮想マシンまたは物理コンピューター) に実際に配置できるデータベースおよび可用性グループの数はハードウェアとワークロードによって異なりますが、強制的な制限はありません。 Microsoft では物理マシンあたり最大 10 AG および 100 DB までをテストしていますが、これはバインドの上限ではありません。 サーバー上のハードウェア仕様とワークロードに応じて、SQL Server のインスタンス上により多くのデータベースと可用性グループを配置できます。 過剰な負荷がかかっているシステムには、ワーカー スレッドの枯渇、可用性グループ システム ビューおよび DMV の応答の遅延、ディスパッチャー システム ダンプの一時停止などの症状があります (ただし、これだけではありません)。 アプリケーション SLA 内でピーク ワークロード容量を処理できることを確認するために、実稼働環境と同様のワークロードを使用して環境を十分にテストしてください。 SLA を検討する際は、障害条件下の負荷や期待される応答時間を考慮してください。  
   
--   **フェールオーバー クラスター マネージャーを使用して可用性グループを操作しないでください。**  
+-   **可用性グループの操作のために、フェールオーバー クラスター マネージャーを使用してしないでください**。 SQL Server Failover Cluster Instance (FCI) の状態は SQL Server と Windows Failover Cluster (WSFC) の間で共有されます。SQL Server には、インスタンスに関する情報が、クラスターよりも詳細にわたって保存されます。 管理モデルは、SQL Server によるトランザクションの促進を必要とするものであり、クラスターの状態の表示を SQL Server の状態の表示に同期させたまま保持する役目を持っています。 クラスターの状態が SQL Server の外部で変更された場合、WSFC と SQL Server の間で状態が同期していないことがあり、予想外の動作が引き起こされることがあります。
   
-     例 :  
+     例:  
   
     -   可用性グループのプロパティ (たとえば、有効な所有者) を変更しないでください。  
   
@@ -331,7 +331,7 @@ ms.locfileid: "52516460"
   
 -   [関連タスク](#RelatedTasksADb)  
   
-###  <a name="RequirementsDb"></a> チェック リスト: 要件 (可用性データベース)  
+###  <a name="RequirementsDb"></a> チェック リスト:要件 (可用性データベース)  
  可用性グループに追加するデータベースは、次の条件を満たしている必要があります。  
   
 ||必要条件|リンク|  
@@ -342,7 +342,7 @@ ms.locfileid: "52516460"
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|マルチユーザー データベースであること。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**user_access** = 0)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|AUTO_CLOSE が使用されていないこと。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**is_auto_close_on** = 0)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|完全復旧モデル (完全復旧モードとも呼ばれます) を使用すること。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**recovery_model** = 1)|  
-|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|データベースの完全バックアップが少なくとも 1 つ存在すること。<br /><br /> 注: データベースを完全復旧モードに設定した後、完全復旧ログ チェーンを開始するには完全バックアップが必要です。|[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
+|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|データベースの完全バックアップが少なくとも 1 つ存在すること。<br /><br /> 注:データベースを完全復旧モードに設定した後、完全復旧ログ チェーンを開始するには完全バックアップが必要です。|[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|既存の可用性グループに属していないこと。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**group_database_id** = NULL)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|データベース ミラーリング用に構成されていないこと。|[sys.database_mirroring](../../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) (データベースがミラー化の対象となっていない場合、"mirroring_" で始まるすべての列は NULL)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|FILESTREAM を使用するデータベースを可用性グループに追加する前に、その可用性グループの可用性レプリカをホストしている (またはこれからホストする) すべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。|[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
@@ -355,11 +355,11 @@ ms.locfileid: "52516460"
   
 -   セカンダリ データベースのファイル パス (ドライブ文字を含む) が、対応するプライマリ データベースのパスと異なる場合、次の制限が適用されます。  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:**  **[完全]** オプションはサポートされません ([[最初のデータの同期を選択]](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) ページ)、  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** **[完全]** オプションはサポートされません ([[最初のデータの同期を選択]](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) ページ)、  
   
-    -   **RESTORE WITH MOVE:**  セカンダリ データベースを作成するには、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンス上で、WITH MOVE を使用してデータベース ファイルを復元する必要があります。  
+    -   **RESTORE WITH MOVE:** セカンダリ データベースを作成するには、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンス上で、WITH MOVE を使用してデータベース ファイルを復元する必要があります。  
   
-    -   **ファイルの追加操作への影響:**  後でファイルの追加操作をプライマリ レプリカで実行した場合、セカンダリ データベースでエラーが発生する可能性があります。 この操作の失敗によってセカンダリ データベースが中断する可能性があります。 セカンダリ データベースが中断すると、セカンダリ レプリカが "NOT SYNCHRONIZING" 状態になります。  
+    -   **ファイルの追加操作への影響:** 後でファイルの追加操作をプライマリ レプリカで実行した場合、セカンダリ データベースでエラーが発生する可能性があります。 この操作の失敗によってセカンダリ データベースが中断する可能性があります。 セカンダリ データベースが中断すると、セカンダリ レプリカが "NOT SYNCHRONIZING" 状態になります。  
   
         > [!NOTE]  
         >  ファイルの追加操作が失敗した場合の対処については、「[失敗したファイルの追加操作のトラブルシューティング &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)」を参照してください。  
@@ -384,9 +384,9 @@ ms.locfileid: "52516460"
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学習シリーズ: HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

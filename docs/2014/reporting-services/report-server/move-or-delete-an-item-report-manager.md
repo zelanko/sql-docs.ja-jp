@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d049c93c74ebc60b708ab9c5f1b5da37b5a6d924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103732"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
   レポート サーバーにパブリッシュしたレポートやレポート関連アイテムは、フォルダーに格納されます。 アイテムは異なるフォルダーに移動でき、それらのアイテムへの参照はレポート サーバーによって自動的に保持されます。 アイテムを削除する前に、そのアイテムに依存しているアイテムが他に存在しないか確認してください。  
@@ -38,7 +37,7 @@ ms.locfileid: "48056262"
 |![共有データ ソースのアイコン](../media/hlp-16datasource.png "共有データ ソースのアイコン")|[共有データ ソース]|  
 ||共有データセット|  
   
- 作業に使用するすべてのアイテムを移動できるわけではありません。 サブスクリプションまたはレポート履歴など、レポートに関連付けられたアイテムを移動することはできません。 これらのアイテムは、関連するレポートと共に移動します。 同様に、フォルダー階層の外部にある、共有スケジュールなどのアイテムは移動できません。 操作を行うための権限がない場合は、アイテムを移動できません。 アイテムを移動するための権限は、当該アイテムのロールの割り当てで "レポートの管理"、"モデルの管理"、"フォルダーの管理、および "データ ソースの管理" のタスクを選択した場合に許可されます。  
+ 作業に使用するすべてのアイテムを移動できるわけではありません。 サブスクリプションまたはレポート履歴など、レポートに関連付けられたアイテムを移動することはできません。 これらのアイテムは、関連するレポートと共に移動します。 同様に、フォルダー階層の外部にある、共有スケジュールなどのアイテムは移動できません。 操作を行うための権限がない場合は、アイテムを移動できません。 アイテムを移動するためのアクセス許可を伝達するは、当該アイテムのロールの割り当てで、次のタスクが選択されている場合。"管理 reports、"「管理モデル」、「フォルダーを管理」と「データ ソースの管理」。  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>[コンテンツ] ページでアイテムを移動するには  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48056262"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [コンテンツ ページ&#40;レポート マネージャー&#41;]./コンテンツ ページ レポート manager.md)   
+ [コンテンツ] ページ&#40;レポート マネージャー&#41;./コンテンツ ページ レポート manager.md)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

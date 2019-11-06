@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
@@ -14,12 +12,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62726118"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services のパーソナル化拡張機能
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] パーソナル化拡張機能は、プラグイン アーキテクチャを実装するという概念の基礎です。 プラグイン アーキテクチャでは、新しいキューブ オブジェクトや機能を動的に開発し、他の開発者と簡単に共有することができます。 そのため、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、次を実現するためにできるようにする機能を提供します。  
@@ -43,7 +41,7 @@ ms.locfileid: "48164862"
  サービスを開始するときに[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、必要なアセンブリを読み込み、どのクラスを判断します、<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>カスタム属性。  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、カスタム属性は、コードを記述して実行時の動作を指定する方法と定義されています。 詳細については、このトピックを参照してください。"[属性の概要](http://go.microsoft.com/fwlink/?LinkId=82929)、"で、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] MSDN の開発者ガイド。  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、カスタム属性は、コードを記述して実行時の動作を指定する方法と定義されています。 詳細については、このトピックを参照してください。"[属性の概要](https://go.microsoft.com/fwlink/?LinkId=82929)、"で、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] MSDN の開発者ガイド。  
   
  すべてのクラスで、<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>カスタム属性は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]既定のコンス トラクターを呼び出します。 新しいオブジェクトを構築するための一般的な場所は、起動時にすべてのコンス トラクターの呼び出しとは無関係の任意のユーザー アクティビティ。  
   
@@ -117,13 +115,13 @@ ms.locfileid: "48164862"
 #### <a name="adomdcommand-class"></a>AdomdCommand クラス  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> クラスで、次の MDX コマンドがサポートされるようになりました。  
   
--   [CREATE MEMBER ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER ステートメント (MDX)](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [UPDATE MEMBER ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET ステートメント (MDX)](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [DROP SET ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
@@ -141,10 +139,10 @@ ms.locfileid: "48164862"
  CREATE KPI コマンドと DROP KPI コマンドが MDX 構文に追加されました。 KPI は、任意の MDX スクリプトから動的に作成できます。  
   
 ### <a name="schema-rowsets-extensions"></a>スキーマ行セットの拡張  
- Mdschema_members*スコープ*列が追加されます。 スコープの値は MDMEMBER_SCOPE_GLOBAL=1 と MDMEMBER_SCOPE_SESSION=2 です。  
+ Mdschema_members*スコープ*列が追加されます。 スコープの値は次のとおりです。MDMEMBER_SCOPE_GLOBAL = 1 と MDMEMBER_SCOPE_SESSION = 2 です。  
   
- Mdschema_sets *set_evaluation_context*列が追加されます。 セットの評価コンテキストの値は MDSET_RESOLUTION_STATIC = 1 と MDSET_RESOLUTION_DYNAMIC = 2 です。  
+ Mdschema_sets *set_evaluation_context*列が追加されます。 評価コンテキストの値の設定は次のとおりです。MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- MDSCHEMA_KPIS に scope 列が追加されました。 スコープの値は MDKPI_SCOPE_GLOBAL=1 と MDKPI_SCOPE_SESSION=2 です。  
+ MDSCHEMA_KPIS に scope 列が追加されました。 スコープの値は次のとおりです。MDKPI_SCOPE_GLOBAL = 1 と MDKPI_SCOPE_SESSION = 2 です。  
   
   

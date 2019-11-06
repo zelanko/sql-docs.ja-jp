@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ListSSLCertificates method
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a83096e8b1fe3eed9e0df513931b812125955f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098331"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー コンピューター上にある証明書の一覧を返します。  
@@ -58,10 +57,10 @@ public void ListSSLCertificates(out string[] CertificateHash,
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

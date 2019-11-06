@@ -2,7 +2,7 @@
 title: オンプレミスの SQL Server または Azure Vm 上の SQL Server を Azure SQL Database を使用して移行 Data Migration Assistant |Microsoft Docs
 description: Data Migration Assistant を使用して Azure SQL Database に、オンプレミスの SQL Server を移行する方法について説明します
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,20 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: db4b48d736b46c0381749943916272e763a077c7
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 37e0065ed711c3cf550fec4bafe9aa08be8398e6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643850"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262308"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database へのオンプレミスの SQL Server または Azure Vm 上の SQL Server を移行します。
 
 Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Server オンプレミスと以降のバージョンの SQL Server へのアップグレードまたは SQL Server への移行のシームレスな評価を提供します。
 
-Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server をオンプレミスの詳細な手順を説明します。   
+Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server をオンプレミスの詳細な手順を説明します。
 
 ## <a name="create-a-new-migration-project"></a>新しい移行プロジェクトを作成します。
 
@@ -45,7 +44,7 @@ Data Migration Assistant を使用して Azure SQL Database に移行する SQL 
 2. 選択、**認証の種類**ソース SQL Server のインスタンスによってサポートされています。
 
    > [!NOTE]
-   > Recommedned を選択して、接続を暗号化することは、**接続を暗号化**下のチェック ボックス**接続 poperties**します。
+   > 選択して、接続を暗号化することをお勧め、**接続を暗号化**下のチェック ボックス**接続 poperties**します。
 
     ![移行元サーバーを選択します。](../dma/media/select-source-server.png)
 
@@ -67,7 +66,7 @@ Data Migration Assistant を使用して Azure SQL Database に移行する SQL 
 2. 選択、**認証の種類**ターゲット Azure SQL Database インスタンスによってサポートされています。
 
    > [!NOTE]
-   > Recommedned を選択して、接続を暗号化することは、**接続を暗号化**下のチェック ボックス**接続 poperties**します。
+   > 選択して、接続を暗号化することをお勧め、**接続を暗号化**下のチェック ボックス**接続 poperties**します。
 
      ![ターゲット サーバーの選択](../dma/media/select-target-server.png)
 
@@ -84,17 +83,17 @@ Data Migration Assistant を使用して Azure SQL Database に移行する SQL 
 
 ## <a name="select-schema-objects"></a>スキーマ オブジェクトを選択します。
 
-1.  Azure SQL Database に移行するソース データベースからスキーマ オブジェクトを選択します。
+1. Azure SQL Database に移行するソース データベースからスキーマ オブジェクトを選択します。
 
     ![スキーマ オブジェクトを選択します。](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
-       > いくつかのオブジェクトに変換できません-が自動修正の機会が表示されます。 左側のウィンドウでこれらのオブジェクトをクリックすると、右側のウィンドウで修正案が表示されます。 修正プログラムを確認し、適用、オブジェクトのすべての変更を無視するかを選択します。 適用することに注意してください。 または、1 つのオブジェクトのすべての変更を無視しても、他のデータベース オブジェクトへの変更は影響しません。 変換または自動的に修正できないステートメントはターゲット データベースに再現し、コメントされています。
+       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
 
     ![推奨される修正プログラム](../dma/media/suggested-fix.png)
 
 2. 選択**一般的な SQL スクリプト**します。
- 
+
 3. 生成されたスクリプトを確認します。
 
     ![生成されるスクリプト](../dma/media/generated-script.png)
@@ -104,23 +103,23 @@ Data Migration Assistant を使用して Azure SQL Database に移行する SQL 
 1. 選択**Deploy schema**します。
 
 2. スキーマの展開の結果を確認します。
- 
+
     ![スキーマのデプロイの結果](../dma/media/schema-deployment-results.png)
 
 3. 選択**データ移行**データ移行プロセスを開始します。
- 
+
 4. テーブルに移行するデータを選択します。
 
     ![移行するテーブルの選択](../dma/media/select-tables-to-migrate.png) 
 
 5. 選択**データ移行を開始**します。
- 
+
 最後の画面には、全体的な状態が表示されます。
 
    ![移行の状態](../dma/media/migration-status.png) 
 
 ## <a name="see-also"></a>関連項目
 
-- [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant: 構成の設定](../dma/dma-configurationsettings.md)
-- [Data Migration Assistant: ベスト プラクティス](../dma/dma-bestpractices.md)
+* [Data Migration Assistant (DMA)](../dma/dma-overview.md)
+* [Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)
+* [Data Migration Assistant:ベスト プラクティス](../dma/dma-bestpractices.md)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63216001"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   レプリケーション マージ エージェントは、データベース テーブルに保持された初期スナップショットをサブスクライバーに適用するユーティリティ実行可能ファイルです。 さらに、初期スナップショットの作成後にパブリッシャーで発生したデータの増分変更をマージし、ユーザーが構成したルールに従って、またはユーザーが作成したカスタム競合回避モジュールを使用して、競合を調整します。  
@@ -64,7 +63,7 @@ ms.locfileid: "50237108"
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -110,55 +109,55 @@ ms.locfileid: "50237108"
  **-?**  
  使用できるすべてのパラメーターを表示します。  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  パブリッシャー データベースの名前です。  
   
- **-Publication** *publication*  
+ **-Publication** _publication_  
  パブリケーションの名前です。 このパラメーターは、新規または再初期化されたサブスクリプションのスナップショットを常に利用できるようにパブリケーションを設定している場合にのみ有効です。  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  サブスクライバー データベースの名前です。  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  サブスクリプションの初期スナップショットが含まれるフォルダーへのパスです。  
   
  **-Continuous**  
  エージェントがレプリケートされたトランザクションの呼び出しを継続的に試みるかどうかを指定します。 このパラメーターを指定する場合、保留されているトランザクションがなくても、エージェントはポーリング間隔でレプリケートされたトランザクションをソースから呼び出します。  
   
- **-DestThreads** *number_of_destination_threads*  
+ **-DestThreads** _number_of_destination_threads_  
  マージ エージェントが変更の対象で変更を適用するために使用する対象スレッドの数を指定します。 変更の対象は、アップロード実行時はパブリッシャーであり、ダウンロード実行時はサブスクライバーです。 既定値は 4 です。  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  エージェント定義ファイルのパスです。 エージェント定義ファイルには、エージェントのコマンド プロンプト引数が含まれます。 ファイルの内容は実行可能ファイルとして解析されます。 二重引用符 (") を使用して、任意の文字を含む引数値を指定します。  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 ディストリビューター (プッシュ) ディストリビューションの場合、既定の名前は、ローカル コンピューターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンス名です。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。 ディストリビューター (プッシュ) ディストリビューションの場合、既定の名前は、ローカル コンピューターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンス名です。  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  ディストリビューターのログイン名です。  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  ディストリビューターのパスワードです。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  ディストリビューターのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
- **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
+ **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  パブリッシャーからサブスクライバーに変更をダウンロードする間に、1 つのバッチで処理される生成結果の数です。 生成結果は、アーティクルごとに変更の論理グループとして定義されます。 信頼性の高い通信リンクの既定値は 100 です。 信頼性の低い通信リンクの既定値は 10 です。  
   
- **-DownloadReadChangesPerBatch** *download_read_changes_per_batch*  
+ **-DownloadReadChangesPerBatch** _download_read_changes_per_batch_  
  パブリッシャーからサブスクライバーに変更をダウンロードする間に、1 つのバッチで読み取られる変更の数です。 既定値は、100 です。  
   
- **-DownloadWriteChangesPerBatch** *download_write_changes_per_batch*  
+ **-DownloadWriteChangesPerBatch** _download_write_changes_per_batch_  
  パブリッシャーからサブスクライバーに変更をダウンロードする間に、1 つのバッチで適用される変更の数です。 既定値は、100 です。  
   
- **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  パブリケーションでパラメーター化された行フィルターを使用する場合のフィルター選択されたデータ スナップショット ファイルの位置です。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
@@ -173,7 +172,7 @@ ms.locfileid: "50237108"
  > [!NOTE]  
  >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
   
- 詳細については、「[セキュリティの概要 &#40;レプリケーション&#41;](../security/security-overview-replication.md)」を参照してください。  
+ 詳細については、次を参照してください。 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)します。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
@@ -206,16 +205,16 @@ ms.locfileid: "50237108"
 |**1**|すべての生成結果の収束を強制します。|  
 |**2**|すべての生成結果の収束を強制し、破損した系列を修正します。 この値を指定する場合は、系列を修正する場所 (パブリッシャー、サブスクライバー、またはパブリッシャーとサブスクライバーの両方) を指定します。|  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  ディストリビューター用の FTP サービスのネットワーク アドレスです。 このパラメーターを指定しない場合、 **Distributor** が使用されます。  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  FTP サービスに接続するときに使用するユーザー パスワードです。  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  ディストリビューター用の FTP サービスのポート番号です。 このパラメーターを指定しない場合、FTP サービスの既定のポート番号 (21) が使用されます。  
   
- **-FtpUserName** *ftp_user_name*  
+ **-FtpUserName** _ftp_user_name_  
  FTP サービスに接続するときに使用するユーザー名です。 この引数を指定しない場合は、匿名が使用されます。  
   
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
@@ -228,22 +227,22 @@ ms.locfileid: "50237108"
 |**2**|既定値です。 各セッションの状態における増分セッションの詳細、およびアーティクル レベルのセッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。 エージェントの状態のメッセージもログに記録されます。|  
 |**3**|**-HistoryVerboseLevel** = **2**と同じですが、より多くのエージェント進行状況メッセージがログに記録されます。|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  ローカル コンピューターのネットワーク名です。 既定値は、ローカル コンピューターの名前になります。  
   
  **-InteractiveResolution** [**0**|**1**]  
  同期中に競合が発生した場合に、インタラクティブ競合回避を使用するかどうかを指定します。 既定値の **0**は、インタラクティブ競合回避を使用しないことを示します。  
   
- **-InternetLogin** *internet_login*  
+ **-InternetLogin** _internet_login_  
  認証を必要とする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション リスナー ISAPI DLL への接続時に使用されるログイン名を指定します。  
   
- **-InternetPassword** *internet_password*  
+ **-InternetPassword** _internet_password_  
  認証を必要とする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション リスナー ISAPI DLL への接続時に使用されるパスワードを指定します。  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
  認証を必要とする、 *internet_proxy_server*で定義されたプロキシ サーバーへの接続時に使用されるログイン名を指定します。  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  認証を必要とする、 *internet_proxy_server*で定義されたプロキシ サーバーへの接続時に使用されるパスワードを指定します。  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -252,36 +251,36 @@ ms.locfileid: "50237108"
  **-InternetSecurityMode** [**0**|**1**]  
  Web 同期時の Web サーバーとの接続に使用される IIS セキュリティ モードを指定します。 値 **0** は基本認証を示し、値 **1** は Windows 統合認証 (既定値) を指定します。  
   
- **-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** _internet_timeout_  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション リスナー ISAPI DLL がタイムアウトになるまでの秒数です。  
   
- **-InternetURL** *internet_url*  
+ **-InternetURL** _internet_url_  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション リスナー ISAPI DLL への接続に使用される URL を指定します。 このプロパティの指定は必須です。  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  既存の接続がサーバーからの応答を待機しているかどうかを、履歴スレッドがチェックするまでの秒数です。 長時間実行のときに、照合エージェントがマージ エージェントに SUSPECT のマークを付けないようにするには、この値を小さくします。 既定値は **300** 秒です。  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  ログインがタイムアウトになるまでの秒数です。既定値は **15** 秒です。  
   
- **-MakeGenerationInterval** *make_generation_interval_seconds*  
+ **-MakeGenerationInterval** _make_generation_interval_seconds_  
  クライアントにダウンロードする生成結果 (変更のバッチ) を作成する間隔 (秒) です。 既定値は **1** 秒です。  
   
  Makegeneration は、パブリッシャーの変更をサブスクライバーにダウンロードするように準備するプロセスです。また、ダウンロード中にパフォーマンスのボトルネックになる場合があります。 makegeneration プロセスが **-MakeGenerationInterval**で指定された間隔で既に実行された場合、現在の同期セッションでは、このプロセスはスキップされます。 これは、同期のコンカレンシーに役立つ場合があります。特に、サブスクライバーが変更をダウンロードしない場合に役立ちます。  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドおよび ODBC 接続の最大数は、 **MaxBcpThreads** 、またはパブリケーション データベース内のシステム テーブル **sysmergeschemachange** に表示される一括コピー要求数のいずれか少ない方の値になります。 **MaxBcpThreads** の値は、0 よりも大きくする必要がありますが、ハードコーディングされた上限はありません。 既定値は **1**です。  
   
- **-MaxDownloadChanges** *number_of_download_changes*  
+ **-MaxDownloadChanges** _number_of_download_changes_  
  パブリッシャーからサブスクライバーにダウンロードする必要のある変更済みの行の最大数を指定します。 ダウンロードする行数が、指定した最大数より多くなる場合があります。完全な生成結果が処理されること、および並列の対象スレッドが実行されて最初のパスでそれぞれ 100 以上の変更が処理されることが原因です。 既定では、ダウンロードの準備が整っている変更がすべて送信されます。  
   
- **-MaxUploadChanges** *number_of_upload_changes*  
+ **-MaxUploadChanges** _number_of_upload_changes_  
  サブスクライバーからパブリッシャーにアップロードする必要のある変更済みの行の最大数を指定します。 アップロードする行数が、指定した最大数より多くなる場合があります。完全な生成結果が処理されること、および並列の対象スレッドが実行されて最初のパスでそれぞれ 100 以上の変更が処理されることが原因です。 既定では、アップロードの準備が整っている変更がすべて送信されます。  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
  パブリケーション保有期間に基づいて、メタデータを [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)、 [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql)、 [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)、および [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) から削除するかどうかを指定します。 既定値の **1**は、クリーンアップを行う必要があることを示します。 値 **0** は、クリーンアップを自動的に実行しないことを示します。  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -293,34 +292,34 @@ ms.locfileid: "50237108"
  **-PacketSize**  
  パケット サイズをバイト単位で指定します。 既定値は 4096 (バイト) です。  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  パブリッシャーまたはサブスクライバーへのデータ変更をクエリする間隔 (秒数) を示します。 既定値は 60 秒です。  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  エージェント パラメーターに使用するエージェント プロファイルを指定します。 **ProfileName** が NULL の場合、このエージェント プロファイルは無効になります。 **ProfileName** を指定しない場合、エージェントの種類に応じた既定のプロファイルが使われます。 詳細については、「[レプリケーション エージェント プロファイル](replication-agent-profiles.md)」を参照してください。  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  パブリケーション データベースとのデータベース ミラーリング セッションに参加する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー パートナー インスタンスを指定します。 詳細については、「 [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」をご覧ください。  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  パブリッシャーのログイン名です。 **PublisherSecurityMode** が **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証) の場合、このパラメーターの指定は必須です。  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  パブリッシャーのパスワードです。 **PublisherSecurityMode** が **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証) の場合、このパラメーターの指定は必須です。  
   
  **-PublisherSecurityMode** [**0**|**1**]  
  パブリッシャーのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  クエリがタイムアウトになるまでの秒数です。既定では 300 秒です。 マージ エージェントも `QueryTimeout` の値を使用して、この値が 1800 を超える場合にパーティション スナップショットの生成をどのくらいの期間待機するかを判断します。  
   
- **-SrcThreads** *number_of_source_threads*  
+ **-SrcThreads** _number_of_source_threads_  
  マージ エージェントが変更元から変更を列挙するために使用するソース スレッドの数を指定します。 変更元は、アップロード実行時はサブスクライバーであり、ダウンロード実行時はパブリッシャーです。 既定値は **3**です。  
   
- **-StartQueueTimeout** *start_queue_timeout_seconds*  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  実行中の同時マージ処理数が **@max_concurrent_merge** の **@max_concurrent_merge**」を参照してください。 最長秒数に達したときにマージ エージェントが待機中である場合、マージ エージェントは終了します。 値 0 は、エージェントが無制限に待機することを示します。ただし、キャンセルできます。  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  **SubscriberType** が **2** の場合、Jet データベース (.mdb) ファイルへのパスを指定します。この指定では、ODBC データ ソース名 (DSN) なしで Jet データベースに接続することができます。  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
@@ -336,10 +335,10 @@ ms.locfileid: "50237108"
 > [!NOTE]  
 >  値 **2** および **3**を使用する場合は、サブスクライバーのデータベース パスを **SubscriberDatabasePath** オプションで指定する必要があります。  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  サブスクライバーのログイン名です。 **SubscriberSecurityMode** が **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード) の場合は、このパラメーターを指定しなければなりません。  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  サブスクライバーのパスワードです。 **SubscriberSecurityMode** が **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード) の場合は、このパラメーターを指定しなければなりません。  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -357,13 +356,13 @@ ms.locfileid: "50237108"
  **-SyncToAlternate** **[0|1]**  
  マージ エージェントがサブスクリプションと代替パブリッシャー間での同期を実行しているかどうかを指定します。 値 **1** は、これが代替パブリッシャーであることを示します。 既定値は **0**です。  
   
- **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
+ **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  サブスクライバーからパブリッシャーに変更をアップロードする間に、1 つのバッチで処理される生成結果の数です。 生成結果は、アーティクルごとに変更の論理グループとして定義されます。 信頼性の高い通信リンクの既定値は **100**です。 信頼性の低い通信リンクの既定値は **1**です。  
   
- **-UploadReadChangesPerBatch** *upload_read_changes_per_batch*  
+ **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
  サブスクライバーからパブリッシャーに変更をアップロードする間に、1 つのバッチで読み取られる変更の数です。 既定値は **100**です。  
   
- **-UploadWriteChangesPerBatch** *upload_write_changes_per_batch*  
+ **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
  サブスクライバーからパブリッシャーに変更をアップロードする間に、1 つのバッチで適用される変更の数です。 既定値は **100**です。  
   
  **-UseInprocLoader**  
@@ -380,9 +379,9 @@ ms.locfileid: "50237108"
 |**3**|行数とバイナリ チェックサムの検証。|  
   
 > [!NOTE]  
->  バイナリ チェックサムまたはチェックサムを使用した検証では、データ型がサブスクライバー側とパブリッシャー側とで異なる場合には、誤ってエラーを報告することがあります。 詳細については、「[レプリケートされたデータの検証](../validate-replicated-data.md)」の「データ検証に関する注意点」を参照してください。  
+>  バイナリ チェックサムまたはチェックサムを使用した検証では、データ型がサブスクライバー側とパブリッシャー側とで異なる場合には、誤ってエラーを報告することがあります。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」の「データ検証に関する注意点」を参照してください。  
   
- **-ValidateInterval** *validate_interval*  
+ **-ValidateInterval** _validate_interval_  
  サブスクリプションが継続モードで検証される間隔 (分) です。 既定値は **60** 分です。  
   
 ## <a name="remarks"></a>コメント  

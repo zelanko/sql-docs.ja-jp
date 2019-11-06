@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], deleting
@@ -15,15 +14,14 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ea5ce5a58010cedae627443a714f9dd7571779a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: cb72f41278f356704b7abedba8e9e60cb00b8e60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094371"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを削除する (マスター データ サービス)
 
@@ -34,7 +32,7 @@ ms.locfileid: "47758180"
 > [!NOTE]  
 >  別のメンバーのドメイン ベースの属性値として使用されているメンバーは削除できません。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -61,7 +59,7 @@ ms.locfileid: "47758180"
   
 5.  グリッドで、削除するメンバーまたはコレクションの行をクリックします。  
   
-6.  **[メンバーの削除]**、 **[削除]**、または **[コレクションの削除]** をクリックします。  
+6.  **[メンバーの削除]** 、 **[削除]** 、または **[コレクションの削除]** をクリックします。  
   
 7.  エンティティ管理者には、エンティティ バージョンで論理削除されたすべてのメンバーを消去 (物理削除) するメニュー オプションも表示されます。  
   

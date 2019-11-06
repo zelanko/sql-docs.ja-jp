@@ -13,20 +13,20 @@ api_location:
 helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6afb64b852ac6050a2705c1c4d7da7d2d9b52f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010482"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream による FILESTREAM データへのアクセス
-  OpenSqlFilestream API は、FILESTREAM バイナリ ラージ オブジェクト (BLOB)、ファイル システムに格納されているの Win32 互換ファイル ハンドルを取得します。 このハンドルは、Win32 API のうち [ReadFil](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)、 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)に渡すことができます。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  
+  OpenSqlFilestream API は、FILESTREAM バイナリ ラージ オブジェクト (BLOB)、ファイル システムに格納されているの Win32 互換ファイル ハンドルを取得します。 このハンドルは、次のいずれかの Win32 API に渡すことができます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  
   
- すべての FILESTREAM データ コンテナー アクセスで実行する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクション。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じトランザクションで実行することもできます。 これにより、SQL データと FILESTREAM BLOB データの一貫性が維持されます。  
+ すべての FILESTREAM データ コンテナー アクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションで実行する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じトランザクションで実行することもできます。 これにより、SQL データと FILESTREAM BLOB データの一貫性が維持されます。  
   
  Win32 を使用して FILESTREAM BLOB にアクセスするには、 [Windows 認証](../security/choose-an-authentication-mode.md) を有効にする必要があります。  
   
@@ -51,9 +51,9 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in]`nvarchar(max)`によって返されるパス、 [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)関数。 PathName は、FILESTREAM のテーブルおよび列に対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT または UPDATE の権限を持つアカウントのコンテキストから呼び出す必要があります。  
   
  *DesiredAccess*  
- [in] FILESTREAM BLOB データへのアクセスに使用するモードを設定します。 この値は [DeviceIoControl 関数](http://go.microsoft.com/fwlink/?LinkId=105527)に渡されます。  
+ [in] FILESTREAM BLOB データへのアクセスに使用するモードを設定します。 この値は [DeviceIoControl 関数](https://go.microsoft.com/fwlink/?LinkId=105527)に渡されます。  
   
-|名前|値|意味|  
+|名前|値|説明|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|ファイルからデータを読み取ることができます。|  
 |SQL_FILESTREAM_WRITE|1|ファイルにデータを書き込むことができます。|  
@@ -78,7 +78,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] [GET_FILESTREAM_TRANSACTION_CONTEXT](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) 関数から返される値です。  
   
  *FilestreamTransactionContextLength*  
- [in]内のバイト数、 `varbinary(max)` GET_FILESTREAM_TRANSACTION_CONTEXT 関数から返されるデータ。 この関数は、N バイトの配列を返します。 N は関数によって決まる、返されるバイト配列のプロパティです。  
+ [in] GET_FILESTREAM_TRANSACTION_CONTEXT 関数から返される `varbinary(max)` データのバイト数です。 この関数は、N バイトの配列を返します。 N は関数によって決まる、返されるバイト配列のプロパティです。  
   
  *AllocationSize*  
  [in] データ ファイルの初期割り当てサイズをバイト単位で指定します。 読み取りモードでは無視されます。 このパラメーターには NULL を指定できます。その場合、ファイル システムの既定の動作が使用されます。  

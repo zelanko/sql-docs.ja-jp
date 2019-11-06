@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79f6451adf3e91285f1f54beb9018d1758885f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fee7c55c95d60329ca7b3721416569d83902a6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050333"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの SQL_VARIANT の実装
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

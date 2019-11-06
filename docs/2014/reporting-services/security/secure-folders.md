@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101709"
 ---
 # <a name="secure-folders"></a>フォルダーをセキュリティで保護する
   フォルダーのセキュリティは、レポート サーバーのすべてのコンテンツをセキュリティで保護するための基盤となります。 セキュリティはフォルダー階層全体に継承されるので、フォルダー階層の大きさにかかわらず、特定のアクセス権を許可することができます。  
@@ -37,14 +36,14 @@ ms.locfileid: "48182712"
   
 |使用するタスク|与えられる権限|  
 |----------------------|---------------------------|  
-|フォルダーの表示|フォルダー階層と、フォルダーがいつ作成および変更されたかを示す読み取り専用のプロパティを表示できます。<br /><br /> ユーザーは、"レポートの表示"、"モデルの表示"、"リソースの表示"、"データ ソースの表示" の各タスクが含まれているロールに割り当てられない限り、フォルダーのアイテムを表示できません。|  
+|フォルダーの表示|フォルダー階層と、フォルダーがいつ作成および変更されたかを示す読み取り専用のプロパティを表示できます。<br /><br /> ユーザーは、次のタスクも含むロールに割り当てられている場合を除き、フォルダーにアイテムを表示することはできません。「レポートの表示」「モデルの表示」、「リソースの表示、」および「データ ソースの表示」します。|  
 |フォルダーの管理|フォルダーのプロパティの表示、名前や説明の変更、別の場所への移動を行うことができます。 このタスクでは、フォルダーの作成も許可されます。|  
 |レポートの管理|ファイル システムからフォルダーにレポートを追加したり、レポート デザイナーからレポート サーバーにレポートをパブリッシュしたりできます。|  
 |データ ソースの管理|新しい共有データ ソース アイテムをフォルダーに追加したり、既存の共有データ ソースを変更したりできます。|  
 |アイテムへのセキュリティの設定|フォルダーへのアクセスを制御するロールの割り当てを作成および変更できます。 このタスクは、"フォルダーの表示" または "フォルダーの管理" のいずれかと併用する必要があります。 それ以外の場合、ユーザーがアイテムを選択できないので効果がありません。|  
   
 ## <a name="see-also"></a>参照  
- [レポートとリソースを保護します。](secure-reports-and-resources.md)   
+ [レポートとリソースの保護](secure-reports-and-resources.md)   
  [共有データ ソース アイテムをセキュリティで保護する](secure-shared-data-source-items.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   

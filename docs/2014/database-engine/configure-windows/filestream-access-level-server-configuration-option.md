@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], access level
@@ -14,12 +13,12 @@ ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8af40c988a9b994e1760ce59394dc1867e9da4c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90b4ec97a3ab31c93e92219b96724b75d7f86425
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62782257"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level サーバー構成オプション
   この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対する FILESTREAM のアクセス レベルを変更するには、filestream_access_level オプションを使用します。  

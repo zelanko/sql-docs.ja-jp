@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
@@ -17,12 +17,12 @@ ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c837864701814ce0a1a9a45735cd8524bda1a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028358"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>結果ペイン内の行の編集 (Visual Database Tools)
   多くの場合、 [結果ペイン](visual-database-tools.md)のデータは編集できます。 データの変更の詳細については、「 [結果更新の規則 (Visual Database Tools)](rules-for-updating-results-visual-database-tools.md) 」および「 [結果ペインのデータの操作 (Visual Database Tools)](work-with-data-in-the-results-pane-visual-database-tools.md)のデータは編集できます。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab4dd37863bfea66c472f33213896927e4e39600
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b4fbb59c21c66c7b6157a1ed06ce5bf040858a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479377"
 ---
 # <a name="import-statuses-master-data-services"></a>インポート状態 (マスター データ サービス)
   **[ステージング バッチ]** ページの **[統合管理]** 機能領域に表示される状態は次のとおりです。  

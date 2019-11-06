@@ -1,12 +1,11 @@
 ---
-title: sp_update_agent_profile (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_update_agent_profile_TSQL
@@ -16,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b6a9373b9f47910bdfd45d24bb784559883c531e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 835ae5b262426fabdc657e78f4961a7aafb14224
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717350"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006105"
 ---
-# <a name="spupdateagentprofile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
+# <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   レプリケーション エージェントにより使用されるプロファイルを更新します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
@@ -39,38 +37,38 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@agent_type=**] **'***agent_type***'**  
- エージェントの種類を指定します。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+ [ **\@agent_type=** ] **'***agent_type***'**  
+ エージェントの種類を指定します。 *agent_type*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**1**|スナップショット エージェント。|  
+|**1**|スナップショットエージェント。|  
 |**2**|ログ リーダー エージェント|  
-|**3**|ディストリビューション エージェント。|  
-|**4**|マージ エージェントです。|  
+|**3**|ディストリビューションエージェント。|  
+|**4**|マージエージェント。|  
 |**9**|キュー リーダー エージェント|  
   
- [**@agent_id=**] *agent_id*  
- エージェントの ID を指定します。 *agent_id*は**int**、既定値はありません。  
+ [ **\@agent_id=** ]*agent_id*  
+ エージェントの ID を指定します。 *agent_id*は**int**,、既定値はありません。  
   
- [**@profile_id=**] *profile_id*  
- エージェントで使用する必要のあるプロファイルの ID を指定します。 *profile_id*は**int**、既定値はありません。 をエージェントごとに定義されているプロファイルの一覧を表示するには使用[sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)します。 システム プロファイルの詳細については、次を参照してください。[レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)します。  
+ [ **\@profile_id=** ]*profile_id*  
+ エージェントで使用する必要のあるプロファイルの ID を指定します。 *profile_id*は**int**,、既定値はありません。 各エージェントに対して定義されているプロファイルの一覧を表示するには、 [sp_help_agent_profile &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)を使用します。 システムプロファイルの詳細については、「[レプリケーションエージェントプロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_update_agent_profile**はあらゆる種類のレプリケーションで使用します。  
+ **sp_update_agent_profile**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_update_agent_profile**します。  
+ **Sp_update_agent_profile**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_change_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

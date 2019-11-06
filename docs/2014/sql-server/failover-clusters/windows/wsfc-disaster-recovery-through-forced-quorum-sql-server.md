@@ -14,17 +14,17 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224629"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
   クォーラム障害は、通常、システム障害、永続的な通信障害、または WSFC クラスター内の複数のノードにおける不適切な構成が原因で発生します。  クォーラム障害からの復旧には、手動による介入が必要になります。  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **開始前の準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
   
 -   **WSFC の強制クォーラムの手順による災害復旧** [WSFC の強制クォーラムの手順による災害復旧](#Main)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161884"
 > [!WARNING]  
 >  ユーザーは、Windows Server フェールオーバー クラスタリング、WSFC クォーラム モデル、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、および環境に固有の配置構成の概念および操作に関する十分な知識を持っている必要があります。  
 >   
->  詳細については、「  [Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC クォーラム モードと投票の構成 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」を参照してください。  
+>  詳細については、以下をご覧ください。[Windows Server のフェールオーバー クラスタ リング (WSFC) を SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)、 [WSFC クォーラム モードと投票の構成 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> セキュリティ  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
@@ -65,7 +65,7 @@ ms.locfileid: "48161884"
   
      このノードで、強制クォーラムの手順に従って、クラスターを手動で強制的にオンラインにします。  データ損失の可能性を最小限に抑えるには、可用性グループのプライマリ レプリカを最後にホストしていたノードを選択します。  
   
-     詳細については、「  [クォーラムを使用せずに WSFC クラスターを強制的に起動する](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)」を参照してください。  
+     詳細については、以下をご覧ください。[クォーラムを使用せずに WSFC クラスターを強制的に起動する](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  強制クォーラムの設定はクラスター全体に影響します。論理的 WSFC クラスターの投票が過半数に達し、通常のクォーラム モードの動作に自動的に切り替わるまで、クラスター全体のクォーラムのチェックがブロックされます。  
@@ -117,9 +117,9 @@ ms.locfileid: "48161884"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [フェールオーバー クラスターのイベントおよびログを表示する](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>参照  
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  

@@ -7,23 +7,18 @@ ms.prod_service: sql-tools
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.quickfind
-- vs.find
-- vs.findreplace.quickreplace
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d955b56fdb9e0da2263d0b8576fbc98b5d540304
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f8ddfadb13d2c1882b0c489f8e0567ea26dd2165
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643829"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265510"
 ---
 # <a name="find-and-replace"></a>[検索と置換]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +75,7 @@ ms.locfileid: "51643829"
  **[検索オプション]** セクションは、展開したり折りたたんだりできます。 次のオプションをオンまたはオフに設定できます。  
   
  **[大文字と小文字を区別する]**  
- このチェック ボックスをオンにすると、検索結果ウィンドウには、 **[検索する文字列]** で指定した文字列に大文字と小文字の違いを含めて完全に一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、**[大文字と小文字を区別する]** チェック ボックスをオンにした状態で " **MyObject** " を検索すると、"myobject" や "MYOBJECT" ではなく "MyObject" のみが返されます。  
+ このチェック ボックスをオンにすると、検索結果ウィンドウには、 **[検索する文字列]** で指定した文字列に大文字と小文字の違いを含めて完全に一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、 **[大文字と小文字を区別する]** チェック ボックスをオンにした状態で " **MyObject** " を検索すると、"myobject" や "MYOBJECT" ではなく "MyObject" のみが返されます。  
   
  **[単語単位]**  
  このチェック ボックスをオンにすると、 **[検索する文字列]** で指定した文字列に、単語単位で一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、「 **MyObject** 」を検索すると、"CMyObject" や "MyObjectC" ではなく "MyObject" のみが返されます。  
@@ -129,5 +124,3 @@ ms.locfileid: "51643829"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

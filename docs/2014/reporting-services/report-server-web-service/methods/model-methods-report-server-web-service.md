@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30ebf7f456a7359d1723ccacc8e14a74cd29859f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 6a1246d422b8ed88b0e9411dc5df5b398d0bfef6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63283440"
 ---
 # <a name="model-methods"></a>モデルのメソッド
   これらのメソッドを使用して、モデルを管理できます。  
@@ -38,7 +36,7 @@ ms.locfileid: "48221732"
 |<xref:ReportService2010.ReportingService2010.SetModelDrillthroughReports%2A>|一連の詳細レポートをモデルに関連付けます。|  
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|モデル アイテムにセキュリティ ポリシーを設定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [レポート サーバー Web サービス](../report-server-web-service.md)   
  [レポート サーバー Web サービス メソッド](report-server-web-service-methods.md)   

@@ -1,11 +1,11 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 10/24/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
@@ -14,21 +14,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: dphansen
+ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695460"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907259"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-格納されているモデルに基づいて予測値やスコアを生成します。  
+格納されているモデルに基づいて予測値やスコアを生成します。 詳細については、「[PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../advanced-analytics/sql-native-scoring.md)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -93,7 +92,7 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 
 ## <a name="remarks"></a>Remarks
 
-`PREDICT` 関数は、SQL Server 2017 以降のすべてのエディションでサポートされています。 このサポートには、SQL Server 2017 on Linux が含まれます。 `PREDICT` は、クラウドの Azure SQL Database でもサポートされます。 これらのサポートはすべて、他の機械学習機能が有効になっているかどうかに関係なく機能します。
+`PREDICT` 関数は、SQL Server 2017 以降のすべてのエディションで、Windows および Linux 上でサポートされています。 `PREDICT` は、クラウドの Azure SQL Database でもサポートされます。 これらのサポートはすべて、他の機械学習機能が有効になっているかどうかに関係なく機能します。
 
 `PREDICT` 関数を使用するサーバーに、R、Python、または別の機械学習言語をインストールする必要はありません。 別の環境でモデルをトレーニングし、`PREDICT` で使用するためにそれを SQL Server テーブルに保存することも、保存されたモデルがある SQL Server の別のインスタンスからモデルを呼び出すこともできます。
 
@@ -108,19 +107,6 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 ## <a name="examples"></a>使用例
 
 次の例は、`PREDICT` を呼び出す構文を示しています。
-
-### <a name="call-a-stored-model-and-use-it-for-prediction"></a>格納されているモデルを呼び出し、それを予測に使用する
-
-この例では、テーブル [models_table] に格納されている既存のロジスティック回帰モデルを呼び出します。 SELECT ステートメントを使用して、最新のトレーニング済みモデル取得してから、バイナリ モデルを PREDICT 関数に渡します。 入力値は機能を表します。出力は、モデルによって割り当てられた分類を表します。
-
-```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
-DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
-
-SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
-WITH (class string);
-```
 
 ### <a name="using-predict-in-a-from-clause"></a>FROM 句で PREDICT を使用する
 
@@ -193,3 +179,7 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
+
+## <a name="next-steps"></a>次の手順
+
+- [PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../advanced-analytics/sql-native-scoring.md)

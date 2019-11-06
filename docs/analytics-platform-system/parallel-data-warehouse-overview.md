@@ -2,19 +2,18 @@
 title: 並列データ ウェアハウスのコンポーネント - Analytics Platform System |Microsoft Docs
 description: この記事では、アプライアンスのソフトウェアと Analytics Platform System の非アプライアンス ソフトウェア コンポーネントについて説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 99d3317f25af947f042d43fdd64e4cad334ca51f
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 87525a741c1d0081b366394c0c5dd1b152ad15f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37891003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960474"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>並列データ ウェアハウスのコンポーネント - Analytics Platform System
 この記事では、アプライアンスのソフトウェアと Analytics Platform System の非アプライアンス ソフトウェア コンポーネントについて説明します。  
@@ -40,7 +39,7 @@ To learn more about Analytics Platform System, see:
   
 ![並列データ ウェアハウス ソフトウェア](media/parallel-data-warehouse-software.png "並列データ ウェアハウス ソフトウェア")  
   
-## <a name="sec1"></a>ソフトウェアのアプライアンス-クエリの処理とユーザーのデータ ストレージ  
+## <a name="sec1"></a>アプライアンス ソフトウェア - クエリの処理とユーザーのデータ ストレージ  
   
 ### <a name="control-node"></a>制御ノード  
 MPP エンジン  
@@ -66,7 +65,7 @@ MPP エンジンは、超並列処理 (MPP) システムの頭脳であります
 ### <a name="admin-console"></a>管理コンソール  
 管理者コンソールは、アプライアンスの状態、ヘルス、およびパフォーマンス情報を提供する web アプリケーションです。  
   
-### <a name="configuration-manager"></a>構成マネージャー  
+### <a name="configuration-manager"></a>Configuration Manager  
 Configuration Manager (dwconfig.exe) は、アプライアンス管理者 Analytics Platform System の構成に使用するツールです。  
   
 ### <a name="control-node-databases"></a>制御ノード データベース  
@@ -153,7 +152,7 @@ sqlcmd はトランザクションを実行するための SQL Server コマン�
   
 <!-- MISSING LINKS
 
-If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
+If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
 ### <a name="integration-services"></a>Integration Services  

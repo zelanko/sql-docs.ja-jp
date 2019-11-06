@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4bf6602e8ff631831e07d17cf9fc22515f610191
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900233"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "51673721"
   
  返される情報**sys.dm_os_child_instances** (heart_beat) ごとのユーザー インスタンスの状態を確認して、ユーザーへの接続を作成するために使用できるパイプ名 (instance_pipe_name) を取得するために使用できますインスタンスを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または SQLCmd します。 ユーザー インスタンスがクライアント アプリケーションなどの外部プロセスによって開始された場合のみ、ユーザー インスタンスに接続できます。 SQL 管理ツールではユーザー インスタンスを開始できません。  
   
-> **注:** ユーザー インスタンスは、機能の[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]のみです。  
-  
+> **注:** ユーザー インスタンスは、[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] のみの機能です。  
+> 
 > **注**これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_child_instances**します。  
   
 |[列]|データ型|説明|  

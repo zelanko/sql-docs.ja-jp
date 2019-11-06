@@ -15,18 +15,17 @@ helpviewer_keywords:
 - granting permissions [SQL Server], search property lists
 - GRANT statement, search property list permissions
 ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06e42c1acf4493019dc626f30d032b70519c346f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6bc646f9cbee6a8f7c646398fbcfa4302278f00c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050804"
 ---
-# <a name="grant-search-property-list-permissions-transact-sql"></a>許可の検索プロパティ リスト権限 (TRANSACT-SQL)
+# <a name="grant-search-property-list-permissions-transact-sql"></a>GRANT (検索プロパティ リスト権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   検索プロパティ リストに対する権限を許可します。  
@@ -48,7 +47,7 @@ GRANT permission [ ,...n ] ON
  *permission*  
  権限の名前を指定します。 権限とセキュリティ保護可能なリソースの有効な組み合わせについては、後の「解説」を参照してください。  
   
- ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  権限を許可する検索プロパティ リストを指定します。 スコープ修飾子 **::** が必要です。  
   
  **既存の検索プロパティ リストを表示するには**  
@@ -56,7 +55,7 @@ GRANT permission [ ,...n ] ON
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 プリンシパルは次のいずれかです。  
+ 権限を許可するプリンシパルを指定します。 プリンシパルには、次のいずれかを指定することができます。  
   
 -   データベース ユーザー  
   
@@ -78,7 +77,7 @@ GRANT permission [ ,...n ] ON
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
  AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 プリンシパルは次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 プリンシパルには、次のいずれかを指定することができます。  
   
 -   データベース ユーザー  
   

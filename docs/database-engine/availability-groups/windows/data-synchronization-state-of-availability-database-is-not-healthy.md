@@ -1,6 +1,7 @@
 ---
-title: 可用性データベースのデータ同期状態が正常でない | Microsoft Docs
-ms.custom: ''
+title: 可用性データベースのデータ同期状態が正常でない
+description: Always On 可用性グループのデータベースのデータ同期状態が正常でない理由の考えられる原因を特定します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 5b2e45fd29967a89bb468eae32bcb393fff07b24
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ff7b069ebde75185b0e500bc7052edc6e99fc927
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603422"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265349"
 ---
-# <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>可用性データベースのデータ同期状態が正常でない
+# <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性データベースのデータ同期状態が正常でない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>概要  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.operator.delete.f1
@@ -12,12 +12,12 @@ ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da6dc9aaf1566b269e22899efba710d6c4d2942d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666603"
 ---
 # <a name="delete-operator"></a>Delete 操作
   このページを使用すると、オペレーターを削除できます。  

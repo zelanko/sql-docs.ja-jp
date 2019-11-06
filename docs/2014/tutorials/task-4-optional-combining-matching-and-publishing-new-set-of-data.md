@@ -1,27 +1,24 @@
 ---
-title: 'タスク 4 (省略可能): 結合、照合、および新しいデータ セットの発行 |Microsoft Docs'
+title: タスク 4 (オプション):結合、照合、および新しいデータ セットの発行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489270"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>タスク 4 (オプション): 新しいデータ セットを結合、照合、およびパブリッシュする
-  後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、重複や不正確なデータを追加しないことを確認して、MDS で既に管理されているデータを新しいデータを比較に役立ちます。 Excel 用マスター データ サービス アドインを使用すると、データを MDS にパブリッシュする前に、2 つのワークシートのデータを結合し、データを比較することで重複を識別して削除できます。 MDS Excel アドインの照合機能は、データの一致を識別するための DQS 照合機能を使用します。 ここでは、MDS にパブリッシュする前に、2 つのワークシートのデータを 1 つに結合し、重複を識別して削除するための照合作業を行います。 参照してください[Excel 用 MDS アドインでのデータ品質照合](http://msdn.microsoft.com/library/hh548681.aspx)と[データの結合](http://msdn.microsoft.com/library/hh548680.aspx)詳細についてはトピック。  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>タスク 4 (オプション):新しいデータ セットを結合、照合、およびパブリッシュする
+  後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、重複や不正確なデータを追加しないことを確認して、MDS で既に管理されているデータを新しいデータを比較に役立ちます。 Excel 用マスター データ サービス アドインを使用すると、データを MDS にパブリッシュする前に、2 つのワークシートのデータを結合し、データを比較することで重複を識別して削除できます。 MDS Excel アドインの照合機能は、データの一致を識別するための DQS 照合機能を使用します。 ここでは、MDS にパブリッシュする前に、2 つのワークシートのデータを 1 つに結合し、重複を識別して削除するための照合作業を行います。 参照してください[Excel 用 MDS アドインでのデータ品質照合](https://msdn.microsoft.com/library/hh548681.aspx)と[データの結合](https://msdn.microsoft.com/library/hh548680.aspx)詳細についてはトピック。  
   
 1.  新しいインスタンスを起動**Excel**します。 をクリックして**開始**、 をポイント**実行**、型**Excel**、 をクリック**OK**します。  
   
@@ -33,7 +30,7 @@ ms.locfileid: "48061752"
   
 4.  表示する必要があります、**マスター データ エクスプ ローラー**右側のウィンドウ。 マスター データ エクスプ ローラーが表示されない場合はクリックして**エクスプ ローラーの**リボンのボタンをクリックします。  
   
-5.  **マスター データ エクスプ ローラー**ウィンドウで、 **Suppliers**のドロップダウン リストで、**モデル**します。 モデルに 1 つのエンティティを参照する必要があります: **Supplier**します。  
+5.  **マスター データ エクスプ ローラー**ウィンドウで、 **Suppliers**のドロップダウン リストで、**モデル**します。 モデルに 1 つのエンティティが表示されます。**サプライヤー**します。  
   
      ![Excel - マスター データ エクスプ ローラー ウィンドウ](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - [マスター データ エクスプ ローラー] ウィンドウ")  
   
@@ -43,7 +40,7 @@ ms.locfileid: "48061752"
   
 8.  開いている**Suppliers.xls**ファイル (元の入力ファイルは、チュートリアル ファイルに含まれている) と (3) すべての行をコピー、 **CombineAndCleanse**ワークシート**Sheet2**します。  
   
-9. 戻り、 **Supplier**シートに、 **Microsoft Excel – book1** (いない、 **Cleansed and Matched Supplier List** Excel) に接続されている**MDS**.  
+9. 戻り、 **Supplier**シートに、**書籍 1 - Microsoft Excel** (いない、 **Cleansed and Matched Supplier List** Excel) に接続されている**MDS**.  
   
 10. クリックして**マスター データ**メニュー バーでします。  
   
@@ -93,11 +90,11 @@ ms.locfileid: "48061752"
   
 25. **[OK]** をクリックします。  
   
-26. 照合プロセスは、仕入先の 1 つの重複を識別する必要があります**コード: S1**します。  
+26. 照合プロセスは、仕入先の 1 つの重複を識別する必要があります**コード。S1**します。  
   
      ![Excel - 照合結果](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - 照合結果")  
   
-27. 選択、**重複する行 (オレンジ)**、右クリックしをクリックします**削除**行を削除します。  
+27. 選択、**重複する行 (オレンジ)** 、右クリックしをクリックします**削除**行を削除します。  
   
 28. 削除、 **CLUSTER_ID**列ため、もはや必要はありません。  
   
@@ -111,9 +108,9 @@ ms.locfileid: "48061752"
   
 33. **並べ替え**によって一覧**コード**でレコードを検索および**S57**と**S66**コードとして。 使用することも、**フィルター**ツールバーの一覧で特定のレコードを検索します。  
   
-34. これで、閉じる**Microsoft Excel – Book1**ファイルを保存せずにウィンドウ。  
+34. これで、閉じる**Book1 - Microsoft Excel**ファイルを保存せずにウィンドウ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 5: Excel からドメイン ベースの属性を作成する](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [タスク 5: Excel からドメイン ベースの属性を作成します。](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

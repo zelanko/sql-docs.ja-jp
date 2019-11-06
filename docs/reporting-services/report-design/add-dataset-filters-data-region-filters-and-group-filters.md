@@ -2,18 +2,18 @@
 title: データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9435b891652c00391cd934cf739ba76ff20f4a82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779420"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582054"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加
   レポートのフィルターは、レポート内で使用されるデータを制限するために作成したデータセット、データ領域、またはデータ領域グループの一部です。 データセット クエリを変更できない場合 (共有データセットを使用している場合など)、レポート データを制御する方法としてフィルターを使用できます。  
@@ -87,10 +87,10 @@ ms.locfileid: "47779420"
 |**[次の値の間]**|式が 2 つの値の範囲内にあるかどうかを調べます。|  
 |**In**|式が特定の値の集合に含まれるかどうかを調べます。|  
   
-### <a name="value"></a>ReplTest1  
+### <a name="value"></a>[値]  
  [値] 式は、フィルター式の最後の部分を指定します。 レポート プロセッサは、[式] で指定されたデータにフィルターの通過を許可するかどうかを判断する際、評価対象の式を指定のデータ型に変換した後、フィルター式全体を評価します。  
   
- 標準の CLR データ型以外の型に変換するためには、特定のデータ型へと明示的に変換するように、式を修正する必要があります。 この変換には、 **[式]** ダイアログ ボックス ( **[共通の関数]** の **[変換]**) に表示される変換関数を使用できます。 たとえば、 `ListPrice` データ ソースの **money** 型として格納されたデータを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] というフィールドがあるとします。データ処理拡張機能は、このフィールドの値を <xref:System.Decimal> 型として返します。 このとき、レポートの通貨で **$50000.00** を超える値だけを使用するようにフィルターを設定するには、 `=CDec(50000.00)`という式を使って、この値を Decimal 型に変換します。  
+ 標準の CLR データ型以外の型に変換するためには、特定のデータ型へと明示的に変換するように、式を修正する必要があります。 この変換には、 **[式]** ダイアログ ボックス ( **[共通の関数]** の **[変換]** ) に表示される変換関数を使用できます。 たとえば、 `ListPrice` データ ソースの **money** 型として格納されたデータを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] というフィールドがあるとします。データ処理拡張機能は、このフィールドの値を <xref:System.Decimal> 型として返します。 このとき、レポートの通貨で **$50000.00** を超える値だけを使用するようにフィルターを設定するには、 `=CDec(50000.00)`という式を使って、この値を Decimal 型に変換します。  
   
  フィルターに使用する値をユーザーが対話形式で選択できるように、この値にパラメーター参照を含めることもできます。  
   

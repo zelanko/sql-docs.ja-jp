@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 964fdfbb739d03ca20c55b3d1009fcb762aa54b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482728"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>モデル権限とメンバー権限の重複 (Master Data Services)
   メンバーに割り当てられている権限は、モデル オブジェクトに割り当てられている権限と重複している可能性があります。 重複が発生すると、より制限の厳しい権限が有効になります。  
@@ -53,7 +52,7 @@ ms.locfileid: "48201844"
   
  **階層メンバー**  タブで、派生階層の Mountain Bikes サブカテゴリ ノードが割り当てられて明示的に**読み取り専用**権限。  
   
- : 結果**エクスプ ローラー**、ユーザーが**読み取り専用**Mountain Bikes ノード内のメンバーについて、Subcategory 属性値にアクセスを許可します。 その他のメンバーと属性は、すべて非表示になります。  
+ 結果:**エクスプ ローラー**、ユーザーが**読み取り専用**Mountain Bikes ノード内のメンバーについて、Subcategory 属性値にアクセスを許可します。 その他のメンバーと属性は、すべて非表示になります。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -64,12 +63,12 @@ ms.locfileid: "48201844"
   
  **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリに **更新** 権限が明示的に割り当てられています。  
   
- : 結果**エクスプ ローラー**、ユーザーが**読み取り専用**属性値にアクセスを許可します。 その他のメンバーと属性は、すべて非表示になります。  
+ 結果:**エクスプ ローラー**、ユーザーが**読み取り専用**属性値にアクセスを許可します。 その他のメンバーと属性は、すべて非表示になります。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="see-also"></a>参照  
- [権限の決定方法&#40;マスター データ サービス&#41;](how-permissions-are-determined-master-data-services.md)   
+ [権限の決定方法 (マスター データ サービス)](how-permissions-are-determined-master-data-services.md)   
  [ユーザー アクセス許可とグループ アクセス許可の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

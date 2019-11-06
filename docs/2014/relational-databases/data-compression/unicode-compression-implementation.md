@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
@@ -13,12 +13,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 498bf394cb896f12a4b246edf42b9b741a0a99b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62872980"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 圧縮の実装
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Standard Compression Scheme for Unicode (SCSU) アルゴリズムの実装を使用して、行またはページの圧縮オブジェクトに格納する Unicode 値を圧縮します。 これらの圧縮オブジェクトでは、`nchar(n)` 列および `nvarchar(n)` 列の Unicode 圧縮が自動的に行われます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ロケールに関係なく、Unicode データが 2 バイトで格納されます。 これは UCS-2 エンコードと呼ばれています。 ロケールによっては、SQL Server の SCSU 圧縮実装で保存できる最大領域がストレージ領域の 50% になる場合があります。  
@@ -27,10 +27,10 @@ ms.locfileid: "48084714"
  Unicode 圧縮では、固定長の `nchar(n)` データ型および `nvarchar(n)` データ型がサポートされます。 行外または `nvarchar(max)` 列に格納されるデータ値は圧縮されません。  
   
 > [!NOTE]  
->  Unicode 圧縮はサポートされていません`nvarchar(max)`行内に格納されている場合でもデータ。 ただし、このデータ型ではページ圧縮の利点を得ることができます。  
+>  行内に格納される場合であっても、`nvarchar(max)` データでは Unicode 圧縮がサポートされません。 ただし、このデータ型ではページ圧縮の利点を得ることができます。  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのアップグレード  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした場合、圧縮されているか圧縮されていないかにかかわらず、データベース オブジェクトに対して Unicode 圧縮に関連する変更は加えられません。 データベースのアップグレード後、オブジェクトには次のような影響があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした場合、圧縮されているか圧縮されていないかにかかわらず、データベース オブジェクトに対して Unicode 圧縮に関連する変更は加えられません。 データベースのアップグレード後、オブジェクトには次のような影響があります。  
   
 -   オブジェクトが圧縮されていない場合、何も変更は加えられず、オブジェクトは以前と同様に機能します。  
   

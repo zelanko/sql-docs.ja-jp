@@ -1,24 +1,21 @@
 ---
 title: Stretch 対応データベースのバックアップ (Stretch Database) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql
-ms.technology: backup-restore
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
-- Stretch Database, backing up
-- backups (Stretch Database)
+- Stretch Database, disabling
+- disabling Stretch Database
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 190b318de25edd79d980fb81d69bff0e2634b87a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9755cb5c732ce1d3b6cd71d1ff9a540f3a4a9639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136299"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースのバックアップ (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +28,7 @@ ms.locfileid: "47645160"
  -   Microsoft Azure では、Stretch Database が SQL Server から Azure に移行したリモート データを自動的にバックアップします。  
 
 > [!TIP]
-> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性についての詳細は、「 [高可用性ソリューション](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)」を参照してください。
+> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性についての詳細は、「 [高可用性ソリューション](../../database-engine/sql-server-business-continuity-dr.md)」を参照してください。
    
 ## <a name="back-up-your-sql-server-data"></a>SQL Server データのバックアップ  
   

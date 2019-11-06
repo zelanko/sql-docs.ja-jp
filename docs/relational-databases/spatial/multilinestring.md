@@ -10,16 +10,15 @@ helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5190e1b6fdcd83719b84142bee49dff55c824c55
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 54fe24ab5a9e07e5cc39e32462e5d412bb8f163b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018237"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907020"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,29 +46,29 @@ ms.locfileid: "51018237"
 ### <a name="accepted-instances"></a>許容されるインスタンス  
  **MultiLineString** インスタンスが許容されるためには、空であるか、許容される **LineString** インスタンスのみで構成されている必要があります。 許容される **LineString** インスタンスの詳細については、「 [LineString](../../relational-databases/spatial/linestring.md)」を参照してください。 次の例に、許容される **MultiLineString** インスタンスを示します。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 次の例では、2 番目の `System.FormatException` LineString **インスタンスが有効ではないため、** がスローされます。  
+次の例では、2 番目の `System.FormatException` LineString **インスタンスが有効ではないため、** がスローされます。  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- **MultiLineString** インスタンスを有効にするためには、次の条件を満たす必要があります。  
+**MultiLineString** インスタンスを有効にするためには、次の条件を満たす必要があります。  
   
 1.  **MultiLineString** インスタンスを構成するすべてのインスタンスが、有効な **LineString** インスタンスでなければならない。  
   
 2.  **MultiLineString** インスタンスを構成する 2 つの **LineString** インスタンスが内部で互いに重ならない。 **LineString** インスタンスは、有限数の接点のみで、互いにまたは他の **LineString** インスタンスと交差するか接することができます。  
+
+次の例に、3 つの有効な **MultiLineString** インスタンスと 1 つの無効な **MultiLineString** インスタンスを示します。  
   
- 次の例に、3 つの有効な **MultiLineString** インスタンスと 1 つの無効な **MultiLineString** インスタンスを示します。  
-  
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
@@ -77,19 +76,19 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` は、2 番目の **LineString** インスタンスが最初の **LineString** インスタンスと内部で重なっているため、有効ではありません。 有限数の接点で接しています。  
+`@g4` は、2 番目の **LineString** インスタンスが最初の **LineString** インスタンスと内部で重なっているため、有効ではありません。 有限数の接点で接しています。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、2 つの `geometry``MultiLineString` 要素を含む SRID 0 の単純な `LineString` インスタンスを作成しています。  
+次の例では、2 つの `geometry``MultiLineString` 要素を含む SRID 0 の単純な `LineString` インスタンスを作成しています。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 ```  
   
- このインスタンスを別の SRID で作成するには、 `STGeomFromText()` または `STMLineStringFromText()`を使用します。 次の例のように、 `Parse()` を使用して、その後に SRID を変更することもできます。  
+このインスタンスを別の SRID で作成するには、 `STGeomFromText()` または `STMLineStringFromText()`を使用します。 次の例のように、 `Parse()` を使用して、その後に SRID を変更することもできます。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 SET @g.STSrid = 13;  

@@ -22,15 +22,14 @@ helpviewer_keywords:
 - encryption [SQL Server], Service Master Key
 - service master key [SQL Server], modifying
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4580926a6aff40e5c2d4b7da588cf394b6bdfcda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112857"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -30,16 +30,15 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543826"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211374"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   あるサービスから別のサービスに対してダイアログを開始します。 ダイアログとは、2 つのサービスの間で順序どおりにメッセージを 1 回だけ交換する (exactly-once-in-order) メッセージ交換のことです。  
   
@@ -63,7 +62,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>引数  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  システムで生成される、新しいダイアログ用のダイアログ ハンドルを格納する変数です。この値は、BEGIN DIALOG CONVERSATION ステートメントによって返されます。 この変数は、**uniqueidentifier** 型である必要があります。  
   
  FROM SERVICE *initiator_service_name*  
@@ -108,13 +107,13 @@ WHERE database_id = DB_ID() ;
 >  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにあるサービス間で交換されるメッセージは暗号化されません。 ただし、メッセージ交換を行うサービスが異なるデータベースにある場合は、暗号化したメッセージ交換を行うために、データベースのマスター キーと暗号化の証明書が必要になります。 これらを用意しておくと、メッセージ交換中にデータベースの 1 つが別のインスタンスに移動した場合でも、メッセージ交換を続行できます。  
   
 ## <a name="remarks"></a>Remarks  
- すべてのメッセージはメッセージ交換の一部になります。 したがって、発信先サービスにメッセージを送信するには、発信側サービスで、発信先サービスとのメッセージ交換を開始する必要があります。 BEGIN DIALOG CONVERSATION ステートメントで指定する情報は、手紙の住所と同じで、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではこの情報を使って正しいサービスにメッセージを配信します。 TO SERVICE 句で指定するサービスは、メッセージの送信先アドレスです。 FROM SERVICE 句で指定するサービスは、メッセージの返信先アドレスです。  
+ すべてのメッセージはメッセージ交換の一部になります。 したがって、発信先サービスにメッセージを送信するには、発信側サービスで、発信先サービスとのメッセージ交換を開始する必要があります。 BEGIN DIALOG CONVERSATION ステートメントで指定する情報は、手紙の住所に似ています。[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではこの情報を使用して、正しいサービスにメッセージを配信します。 TO SERVICE 句で指定するサービスは、メッセージの送信先アドレスです。 FROM SERVICE 句で指定するサービスは、メッセージの返信先アドレスです。  
   
  メッセージ交換の発信先で BEGIN DIALOG CONVERSATION を呼び出す必要はありません。 発信側からメッセージ交換の最初のメッセージが届くと、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって発信先データベースにメッセージ交換が作成されます。  
   
  ダイアログを開始すると、発信側サービスのデータベースにメッセージ交換のエンドポイントは作成されますが、発信先サービスをホストしているインスタンスへのネットワーク接続は作成されません。 最初のメッセージが送信されるまでは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] でダイアログの発信先との通信は確立されません。  
   
- BEGIN DIALOG CONVERSATION ステートメントで、関連するメッセージ交換またはメッセージ交換グループを指定しなかった場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、新しいメッセージ交換用の新しいメッセージ交換グループが作成されます。  
+ BEGIN DIALOG CONVERSATION ステートメントで、関連するメッセージ交換または関連するメッセージ交換グループを指定しなかった場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、新しいメッセージ交換用の新しいメッセージ交換グループが作成されます。  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、メッセージ交換のグループ化を任意に行うことはできません。 メッセージ交換グループのすべてのメッセージ交換に対しては、FROM 句を使って、メッセージ交換の発信側または発信先のサービスを指定する必要があります。  
   
@@ -140,7 +139,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ```  
   
 ### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. 有効期間を明示してダイアログを開始する  
- 次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 `60` 秒以内に END CONVERSATION コマンドを使ってダイアログを閉じなかった場合は、ブローカーによってダイアログが終了され、エラーが返されます。  
+ 次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 `60` 秒以内に END CONVERSATION コマンドを使用してダイアログを閉じなかった場合は、ブローカーによってダイアログが終了され、エラーが返されます。  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
@@ -182,7 +181,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ```  
   
 ### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>E. 有効期間を明示してダイアログを開始し、そのダイアログと既存のメッセージ交換を関連付ける  
- 次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 新しいダイアログは、`@existing_conversation_handle` が属するメッセージ交換グループと同じメッセージ交換グループに属します。 `600` 秒以内に END CONVERSATION コマンドを使ってダイアログを閉じなかった場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってダイアログが終了され、エラーが返されます。  
+ 次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 新しいダイアログは、`@existing_conversation_handle` が属するメッセージ交換グループと同じメッセージ交換グループに属します。 `600` 秒以内に END CONVERSATION コマンドを使用してダイアログを閉じなかった場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってダイアログが終了され、エラーが返されます。  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  

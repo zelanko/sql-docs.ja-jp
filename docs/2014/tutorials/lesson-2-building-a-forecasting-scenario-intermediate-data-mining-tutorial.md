@@ -1,11 +1,10 @@
 ---
-title: 'レッスン 2: 予測シナリオ (中級者向けデータ マイニング チュートリアル) の作成 |Microsoft Docs'
+title: レッスン 2:予測シナリオ (中級者向けデータ マイニング チュートリアル) の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
@@ -14,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67e4843931587d9c627b229bc221a784237cc5d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62931530"
 ---
-# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>レッスン 2: 予測シナリオの作成 (中級者向けデータ マイニング チュートリアル)
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のセールス アナリストであるあなたは、翌年の製品売上を予測するよう依頼されました。 具体的には、さまざまな地域および製品ラインの売上予測を比較する必要があります。 さらに、各製品の売上が一年を通じてどのように変化するかも調べなければなりません。  
+# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>レッスン 2:予測シナリオ (中級者向けデータ マイニング チュートリアル) の作成
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]のセールス アナリストであるあなたは、翌年の製品売上を予測するよう依頼されました。 具体的には、さまざまな地域および製品ラインの売上予測を比較する必要があります。 さらに、各製品の売上が一年を通じてどのように変化するかも調べなければなりません。  
   
- 依頼された情報を得るため、このレッスンでは、同社の売上データを月別に集計します。また、これらの販売成績をヨーロッパ、北アメリカ、太平洋の 3 つの地域別に集計します。  
+ 要求された情報を確認するには、このレッスンでは、月単位のレベルで会社の売上データを要約しますし 3 つのリージョンでの売上集計も。ヨーロッパ、北米、および太平洋します。  
   
  このレッスンのタスクを完了すると、次の情報を取得できるようになります。  
   
@@ -41,10 +40,10 @@ ms.locfileid: "48122604"
   
 -   第 2 部では、すべての地域に基づいた汎用的なタイム シリーズ モデルを作成する方法を、順をおって説明します。 この汎用モデルを使用する*クロス予測*します。  
   
- このレッスンでは、次のとおり、タスクを完了するのには、使用、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データ ソースで作成した[レッスン 1: 中間のデータ マイニング ソリューションを作成する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ このレッスンでは、次のとおり、タスクを完了するのには、使用、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データ ソースで作成した[レッスン 1。中級者向けデータ マイニング ソリューションを作成する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)します。  
   
 > [!WARNING]  
->  日付、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]サンプル データベースは、このリリースで更新されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の以前のバージョンを使用する場合は、ここでの手順に従ってモデルを構築することはできますが、異なる結果が表示される場合があります。  
+>  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] サンプル データベース内の日付は、このリリース用に更新されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]の以前のバージョンを使用する場合は、ここでの手順に従ってモデルを構築することはできますが、異なる結果が表示される場合があります。  
   
  **単純な予測モデルの作成**  
   
@@ -76,17 +75,17 @@ ms.locfileid: "48122604"
  [モデルの時系列の要件について&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>すべてのレッスン  
- [レッスン 1: 中級者向けデータ マイニング ソリューションの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [レッスン 1:中級者向けデータ マイニング ソリューションを作成する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- レッスン 2: 予測シナリオ (中級者向けデータ マイニング チュートリアル)  
+ レッスン 2:予測シナリオ (中級者向けデータ マイニング チュートリアル)  
   
- [レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 3:マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [レッスン 4: シーケンス クラスター シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [レッスン 4:シーケンス クラスター シナリオの構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルの構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルを構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  

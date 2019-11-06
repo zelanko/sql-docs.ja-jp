@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a99b2d366368a88925344cc54470bef7ba25152a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 43b6fc40e4e116777f5caef2a3c6637c8477c86c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132756"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51671571"
 ```  
   
 <DTAXML   
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
     ...code removed here...  
 </DTAXML>  
@@ -41,7 +40,7 @@ ms.locfileid: "51671571"
   
 |属性|[説明]|  
 |---------------|-----------------|  
-|**xmlns:xsi**|必須。 XML Schema Instance 名前空間を識別します。 この名前空間の属性を使用して、データベース エンジン チューニング アドバイザーの XML ファイルの検証に使用するスキーマを参照します。<br /><br /> 必要な値: [https://www.w3.org/2001/XMLSchema-instance](https://www.w3.org/2001/XMLSchema-instance)|  
+|**xmlns:xsi**|必須。 XML Schema Instance 名前空間を識別します。 この名前空間の属性を使用して、データベース エンジン チューニング アドバイザーの XML ファイルの検証に使用するスキーマを参照します。<br /><br /> 必要な値: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|必須。 データベース エンジン チューニング アドバイザーの名前空間を識別します。<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の XML エディターを使用してデータベース エンジン チューニング アドバイザーの XML ファイルを編集する場合、F1 ヘルプとダイナミック ヘルプでは、この値を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの参照トピックを検索します。<br /><br /> 必須値 :<br /><br /> [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?LinkId=43100) の名前空間|  
   
 ## <a name="element-characteristics"></a>要素の特性  

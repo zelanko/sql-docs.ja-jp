@@ -14,12 +14,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067676"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   使用することができます`SQLColAttribute`準備または実行された ODBC ステートメントの結果セット列の属性を取得します。 呼び出す`SQLColAttribute`で準備されたステートメント原因へのラウンドト リップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、呼び出すので、ステートメントの実行の一部として結果セット列のデータを受信`SQLColAttribute`の完了後**SQLExecute**または**SQLExecDirect**はサーバーとのやり取りは関係ありません。  
@@ -107,7 +107,7 @@ ms.locfileid: "48204922"
  詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLColAttribute 関数](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [SQLColAttribute 関数](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

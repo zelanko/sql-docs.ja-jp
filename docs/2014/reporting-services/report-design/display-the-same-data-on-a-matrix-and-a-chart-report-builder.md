@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5ef8b1997685aa776eb93c17d144b6f640ea9d3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3c062c241a6949921b550460488316861e54e8b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106005"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>マトリックスとグラフでの同じデータの表示 (レポート ビルダー)
   マトリックスとグラフで同じデータを表示するには、フィルター、グループ、並べ替え、およびデータに対して同じデータセットを指定するだけでなく、同じ式も指定するプロパティを両方のデータ領域に対して設定する必要があります。  
   
- 両方のデータ領域が同じデータ先祖 (レポート データセット) を持つようになるので、対話的な並べ替えボタンをマトリックスに追加することにより、ユーザーがこのボタンをクリックしたときに、マトリックスとグラフの両方の並べ替え順序を変更できるようになります。 詳細については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)します。  
+ 両方のデータ領域が同じデータ先祖 (レポート データセット) を持つようになるので、対話的な並べ替えボタンをマトリックスに追加することにより、ユーザーがこのボタンをクリックしたときに、マトリックスとグラフの両方の並べ替え順序を変更できるようになります。 詳細については、「 [テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)」を参照してください。  
   
  マトリックスの列グループの値をグラフの凡例として使用するには、グラフ上の系列データの色を指定してから、グループ値を表示するマトリックス セル内のテキスト ボックスの背景を塗りつぶす色として、それと同じ色を使用する必要があります。 詳細については、「[複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
   
- グループ定義に関するグループ値が多すぎると、実行時にレポートが煩雑な外観になる場合があります。 このような場合は、値をフィルター選択したり、グループを組み合わせたり、グループが自動的に結合されるようにしきい値を調整したりすることが必要となります。 詳細については、次を参照してください[同じデータセットへの複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS。&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ グループ定義に関するグループ値が多すぎると、実行時にレポートが煩雑な外観になる場合があります。 このような場合は、値をフィルター選択したり、グループを組み合わせたり、グループが自動的に結合されるようにしきい値を調整したりすることが必要となります。 詳細については、「 [同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,13 +47,13 @@ ms.locfileid: "48209742"
   
      既定で、グループ値の計算には、集計関数 Sum が使用されます。 マトリックス内の集計関数を変更した場合は、グラフの集計関数も変更する必要があります。  
   
-6.  マトリックスで、データが含まれたセルを右クリックして、 **[テキスト ボックスのプロパティ]**、 **[数値]** の順にクリックします。 データセット フィールド値の適切な形式を選択します。  
+6.  マトリックスで、データが含まれたセルを右クリックして、 **[テキスト ボックスのプロパティ]** 、 **[数値]** の順にクリックします。 データセット フィールド値の適切な形式を選択します。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 8.  手順 3. で選択したのと同じデータセット フィールドをグラフの **[値]** 領域にドラッグします。  
   
-9. グラフで Y 軸を右クリックして、 **[軸のプロパティ]**、 **[数値]** の順にクリックします。 手順 4. で使用したのと同じデータ形式を選択します。  
+9. グラフで Y 軸を右クリックして、 **[軸のプロパティ]** 、 **[数値]** の順にクリックします。 手順 4. で使用したのと同じデータ形式を選択します。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,10 +95,10 @@ ms.locfileid: "48209742"
   
 25. 結果をプレビューします。 マトリックスの行グループと列グループに、グラフの系列グループとカテゴリ グループと同じデータが表示されます。  
   
-## <a name="see-also"></a>関連項目  
- [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

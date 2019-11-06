@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0037d13dd84f3db8243252717fad1d59fd380bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152961"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070316"
 ---
 # <a name="lesson-3-rename-columns"></a>レッスン 3: 列名の変更
   このレッスンでは、インポートした各テーブル内の多くの列の名前を変更します。 名前を変更することで、列がより識別しやすくなり、モデル デザイナー内でも、またクライアント アプリケーションでユーザーがフィールドを選択する際にも、移動が行いやすくなります。 詳細については、「[テーブルまたは列名の変更 (SSAS テーブル)](tabular-models/rename-a-table-or-column-ssas-tabular.md)」を参照してください。  
@@ -24,10 +23,10 @@ ms.locfileid: "48152961"
 > [!IMPORTANT]  
 >  列名の変更は、このチュートリアルを完了するために必ずしも必要ではありませんが、残りのレッスン (リレーションシップを作成するレッスンと、DAX 数式を使用して計算列とメジャーを作成するレッスン) では、このレッスンに記載されているわかりやすい列名が使用されます。 列名を変更しない場合は、レッスン 5、6、および 7 を行う際に、このレッスンで示す元のソース列名を使用するように DAX 数式を編集してください。  
   
- このレッスンの推定所要時間: **20 分**  
+ このレッスンを完了するまでに時間を推定するには。**20 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「 [レッスン 2: データの追加](lesson-2-add-data.md)」を完了している必要があります。  
+ このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 2:データを追加する](lesson-2-add-data.md)します。  
   
 ## <a name="rename-columns"></a>列名の変更  
   
@@ -40,13 +39,13 @@ ms.locfileid: "48152961"
 2.  ダブルクリックして、 **CustomerKey**列名、し、入力`Customer  Id`、し、ENTER キーを押します。  
   
     > [!TIP]  
-    >  列名は、列の **[プロパティ]** ウィンドウの **Column Name** プロパティか、またはダイアグラム ビューで変更することもできます。  
+    >  内の列の名前を変更することもできます、**列名**列のプロパティ**プロパティ**ウィンドウ、またはダイアグラム ビューで。  
   
 3.  **Customer** テーブル内の残りの列と、その他のテーブル内の列についても、ソース名を次の表示名に置き換えて名前変更します。  
   
      **Customer テーブル**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |GeographyKey|[Geography Id]|  
     |CustomerAlternateKey|Customer Alternate Id|  
@@ -70,9 +69,9 @@ ms.locfileid: "48152961"
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **日付**  
+     **Date**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |FullDateAlternateKey|date|  
     |DayNumberOfWeek|Day Number of Week|  
@@ -91,7 +90,7 @@ ms.locfileid: "48152961"
   
      **Geography**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
     |StateProvinceCode|State Province Code|  
@@ -103,7 +102,7 @@ ms.locfileid: "48152961"
   
      **Product**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |ProductKey|[Product Id]|  
     |ProductAlternateKey|Product Alternate Id|  
@@ -137,7 +136,7 @@ ms.locfileid: "48152961"
   
      **Product Subcategory**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |ProductSubcategoryKey|Product Subcategory Id|  
     |ProductSubcategoryAlternateKey|Product Subcategory Alternate Id|  
@@ -146,7 +145,7 @@ ms.locfileid: "48152961"
   
      **Internet Sales**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |ProductKey|Product Id|  
     |CustomerKey|Customer Id|  
@@ -172,6 +171,6 @@ ms.locfileid: "48152961"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>次の手順  
- このチュートリアルを続行するには、次のレッスン「 [レッスン 4: 日付テーブルとしてマーク](lesson-3-mark-as-date-table.md)」に進んでください。  
+ このチュートリアルを続行するには、次のレッスンに移動します。[レッスン 4:日付テーブルとしてマーク](lesson-3-mark-as-date-table.md)します。  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8dc02c97daa09091c2f7ca4063c32325e0a39a3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62886462"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開発する際にトラブルシューティングを実行できる機能とツールが用意されています。  
@@ -44,9 +43,9 @@ ms.locfileid: "48176692"
   
 -   **データ ソースが使用できないときは、オフラインで動作するようにすべてのパッケージとすべての接続を設定します**。 **[SSIS]** メニューの **[オフライン作業]** を有効にできます。 異なり、`DelayValidation`プロパティ、**オフライン作業**オプションは、パッケージを開く前でもに、使用できます。 また、 **[オフライン作業]** を有効にしてデザイナーでの操作を高速化し、パッケージを検証するときだけこのオプションを無効にすることもできます。  
   
--   **実行時まで無効なパッケージ要素の DelayValidation プロパティを構成する**。 デザイン時には構成が有効でないパッケージ要素の `DelayValidation` を `True` に設定すると、検証エラーが発生するのを防ぐことができます。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 `DelayValidation`プロパティは、パッケージ レベル、または個々 のタスクと、パッケージに含まれているコンテナーのレベルで有効にできます。 このプロパティ設定しておく必要があります通常`True`実行時に同じ検証エラーを防ぐために、パッケージを配置するときは、同じパッケージ要素にします。  
+-   **実行時まで無効なパッケージ要素の DelayValidation プロパティを構成する**。 デザイン時には構成が有効でないパッケージ要素の `DelayValidation` を `True` に設定すると、検証エラーが発生するのを防ぐことができます。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 `DelayValidation` プロパティはパッケージ ベル、またはパッケージに含まれている個別のタスクやコンテナーのレベルで有効にできます。 実行時に同じ検証エラーが発生するのを防ぐため、パッケーを配置するときは、同一パッケージ内の要素についてこのプロパティを `True` に設定しておく必要があります。  
   
-     `DelayValidation`プロパティを設定できるデータ フロー タスクではなく個々 のデータ フロー コンポーネント。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを `false` に設定すると、同様の効果を得ることができます。 ただし、このプロパティの値は、いつ`false`コンポーネントが外部データ ソースのメタデータへの変更に注意してください。  
+     `DelayValidation` プロパティはデータ フロー タスク上で設定できますが、個別のデータ フロー コンポーネントでは設定できません。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを `false` に設定すると、同様の効果を得ることができます。 ただし、このプロパティの値が `false` の場合、コンポーネントは外部データ ソースのメタデータに変更が加えられても認識しません。  
   
  検証の発生時に、パッケージによって使用されるデータベース オブジェクトがロックされている場合、検証プロセスが応答しなくなる可能性があります。 このような状況では、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーも応答しなくなります。 検証を再開するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内の関連するセッションを閉じます。 また、このセクションで説明した設定を使用することによって、この問題を回避することもできます。  
   
@@ -89,8 +88,8 @@ ms.locfileid: "48176692"
 ## <a name="troubleshooting-errors-without-a-description"></a>説明のないエラーのトラブルシューティング  
  パッケージ開発中、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー番号に対応する説明のないエラーが発生した場合は、その説明を「 [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)」で確認できます。 現時点では、この一覧にトラブルシューティング情報は含まれていません。  
   
-## <a name="see-also"></a>参照  
- [パッケージの実行のトラブルシューティング ツール](troubleshooting-tools-for-package-execution.md)   
+## <a name="see-also"></a>関連項目  
+ [パッケージ実行のトラブルシューティング ツール](troubleshooting-tools-for-package-execution.md)   
  [データ フロー パフォーマンス機能](../data-flow/data-flow-performance-features.md)  
   
   

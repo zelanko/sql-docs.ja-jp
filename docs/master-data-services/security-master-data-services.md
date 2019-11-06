@@ -5,19 +5,17 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 02053fed0f366945d08e0551d64aeb8a3ed6f33a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085671"
 ---
 # <a name="security-master-data-services"></a>セキュリティ (Master Data Services)
 
@@ -36,7 +34,7 @@ ms.locfileid: "47619540"
   
 -   **[エクスプローラー]** 機能領域でデータにアクセスするユーザー。  
   
--   **[エクスプローラー]** 以外の領域で管理タスクを実行できるユーザー。 これらのユーザーは、 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   **[エクスプローラー]** 以外の領域で管理タスクを実行できるユーザー。 これらのユーザーは、[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md) と呼ばれます。  
   
 ## <a name="how-to-set-security"></a>セキュリティの設定方法  
  MDS のデータまたは機能にアクセスする権限をユーザーまたはグループに付与するには、次の設定を割り当てる必要があります。  
@@ -67,7 +65,7 @@ ms.locfileid: "47619540"
 ## <a name="see-also"></a>参照  
  [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)   
  [ユーザーおよびグループ (マスター データ サービス)](../master-data-services/users-and-groups-master-data-services.md)   
- [機能領域アクセス許可 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)   
  [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
  [階層メンバーの権限 (マスター データ サービス)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)  

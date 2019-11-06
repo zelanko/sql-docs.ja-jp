@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -28,12 +27,12 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3d3850e98bce1031d285388b6f5fbe75737e37b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762421"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
   データベースのデータ ファイルおよびトランザクション ログ ファイルは、デタッチして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一または別のインスタンスに再度アタッチすることができます。 同一コンピューターの別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを変更したり、データベースを移動したりする場合、データベースをデタッチしてアタッチする操作が便利です。  
@@ -46,7 +45,7 @@ ms.locfileid: "48107342"
  ファイル アクセス許可は、データベースのデタッチやアタッチなど、さまざまなデータベース操作中に設定されます。  
   
 > [!IMPORTANT]  
->  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
+>  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働用ではないサーバーでそのデータベースに対し [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
 ##  <a name="DetachDb"></a> データベースのデタッチ  
  データベースはデタッチすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスからは削除されますが、データ ファイルおよびトランザクション ログ ファイル内ではそのまま残ります。 これらのデータ ファイルとトランザクション ログ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の任意のインスタンスにデータベースをアタッチできます。その際、そのデータベースをデタッチした元のサーバーにアタッチすることもできます。  
@@ -86,14 +85,14 @@ ms.locfileid: "48107342"
 3.  データベースをデタッチし直します。  
   
 ##  <a name="AttachDb"></a> データベースのインポート  
- コピーまたはデタッチした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースはアタッチできます。 接続するときに、[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]サーバー インスタンス、その他のデータベース ファイルと一緒にと同様の以前の場所からファイルがアタッチされているカタログ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。 詳細については、「 [SQL Server 2005 からのフルテキスト検索のアップグレード](../search/upgrade-full-text-search.md)」を参照してください。  
+ コピーまたはデタッチした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースはアタッチできます。 接続するときに、[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]サーバー インスタンス、その他のデータベース ファイルと一緒にと同様の以前の場所からファイルがアタッチされているカタログ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。 詳細については、「 [フルテキスト検索のアップグレード](../search/upgrade-full-text-search.md)」を参照してください。  
   
  データベースをアタッチするときは、すべてのデータ ファイル (MDF ファイルおよび NDF ファイル) を利用できる状態にする必要があります。 データベースを最初に作成したときか最後にアタッチしたときとデータ ファイルのパスが異なる場合、ファイルの現在のパスを指定する必要があります。  
   
 > [!NOTE]  
 >  アタッチ中のプライマリ データ ファイルが読み取り専用の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ではデータベースが読み取り専用であると想定されます。  
   
- 暗号化されたデータベースが最初のインスタンスに接続とき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベース所有者は、次のステートメントを実行して、データベースのマスター_キーを開く必要があります: OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行してマスター キーの自動暗号化解除を有効にすることをお勧めします。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
+ 暗号化されたデータベースが最初のインスタンスに接続とき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベース所有者は、次のステートメントを実行して、データベースのマスター_キーを開く必要があります。OPEN MASTER KEY 暗号化解除パスワードによって = **' *`password`* '** します。 次のステートメントを実行して、マスター _ キーの自動暗号化解除を有効にすることをお勧めします。ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
   
  次に示すように、ログ ファイルをアタッチするための要件の一部は、データベースが読み書き可能か読み取り専用かによって異なります。  
   

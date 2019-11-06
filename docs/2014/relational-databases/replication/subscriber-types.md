@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.subscribertypes.f1
@@ -13,12 +12,12 @@ ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e40209c05e42b7da8f46b5c1e40b287a79669418
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9445c7b366a43253da4accabaf98d9c5b7f8d92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62630637"
 ---
 # <a name="subscriber-types"></a>サブスクライバーの種類
   マージ レプリケーションを使用すると、パブリケーションがサポートする必要があるサブスクライバーの種類を指定することができます。 サブスクライバーの種類を選択することで、パブリケーションが使用できる機能を決定する *パブリケーションの互換性レベル*が設定されます。  
@@ -39,7 +38,6 @@ ms.locfileid: "48194022"
 ## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
- [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](view-and-modify-distributor-and-publisher-properties.md)   
- [プロパティ リファレンス &#40;レプリケーション&#41;](properties-reference-replication.md)  
-  
+ [ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)   
+
   

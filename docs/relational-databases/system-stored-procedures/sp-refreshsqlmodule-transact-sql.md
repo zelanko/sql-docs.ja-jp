@@ -25,19 +25,18 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6527d3b3ee6a0198796688bd4028bf9159406b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ed393edf79c3502bf3e054e23eb459d490ce998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075801"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  現在のデータベースを対象に、指定された非スキーマ バインドのストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、またはサーバー レベルの DDL トリガーのメタデータを更新します。 これらのオブジェクトに固有のメタデータ (パラメーターのデータ型など) は、基になるオブジェクトを変更すると、古くなる場合があります。
+  指定された非スキーマ バインド ストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、または現在のデータベース内のサーバー レベル DDL トリガーのメタデータを更新します。 、パラメーターのデータ型など、これらのオブジェクトのメタデータを永続的なは、その基になるオブジェクトが変更されたのため古くなることができます。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,11 +56,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name=** ] **'**_モジュール\_名前_**'**  
- ストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、またはサーバー レベルの DDL トリガーの名前を指定します。 *モジュール名*共通言語ランタイム (CLR) ストアド プロシージャまたは CLR 関数にすることはできません。 *モジュール名*スキーマ バインドをすることはできません。 *モジュール名*は**nvarchar**、既定値はありません。 *モジュール名*、マルチパート識別子を指定できますが、現在のデータベース内のオブジェクトに参照できるのみです。  
+`[ @name = ] 'module\_name'` ストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、またはサーバー レベル DDL トリガーの名前です。 *モジュール名*共通言語ランタイム (CLR) ストアド プロシージャまたは CLR 関数にすることはできません。 *モジュール名*スキーマ バインドをすることはできません。 *モジュール名*は**nvarchar**、既定値はありません。 *モジュール名*、マルチパート識別子を指定できますが、現在のデータベース内のオブジェクトに参照できるのみです。  
   
- [ **、** @**名前空間**=] **'** \<クラス > **'**  
- 指定されたモジュールのクラスです。 ときに*module_name* 、DDL トリガーは、\<クラス > が必要です。 *\<クラス >* は**nvarchar**(20)。 有効な入力は次のとおりです。  
+`[ , @namespace = ] ' \<class> '` 指定したモジュールのクラスです。 ときに*module_name* 、DDL トリガーは、\<クラス > が必要です。 *\<クラス >* は**nvarchar**(20)。 有効な入力値は次のとおりです。  
   
 |||  
 |-|-|  
@@ -69,26 +66,26 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 |SERVER_DDL_TRIGGER|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または 0 以外の数値 (失敗)  
+ 0 (成功) または 0 以外の値の数 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_refreshsqlmodule**その定義に影響するモジュールの基になるオブジェクトに変更されたときに実行する必要があります。 この操作を行わないと、モジュールにクエリを実行したりオブジェクトを呼び出したときに、予期しない結果が生じる可能性があります。 ビューを更新する、いずれかを使用できます**sp_refreshsqlmodule**または**sp_refreshview**結果は同じにします。  
+ **sp_refreshsqlmodule**その定義に影響するモジュールの基になるオブジェクトに変更されたときに実行する必要があります。 それ以外の場合、モジュールがクエリまたは呼び出されたときに、予期しない結果を生成可能性があります。 ビューを更新する、いずれかを使用できます**sp_refreshsqlmodule**または**sp_refreshview**結果は同じにします。  
   
  **sp_refreshsqlmodule**任意のアクセス許可、拡張プロパティ、またはオブジェクトに関連付けられているオプションの設定には影響しません。  
   
- サーバー レベルの DDL トリガーを更新するには、このストアド プロシージャをデータベースのコンテキストから実行します。  
+ サーバー レベルの DDL トリガーを更新するには、任意のデータベースのコンテキストからこのストアド プロシージャを実行します。  
   
 > [!NOTE]  
 >  実行すると、オブジェクトに関連付けられている署名は削除**sp_refreshsqlmodule**します。  
   
 ## <a name="permissions"></a>アクセス許可  
- モジュールに対する ALTER 権限、およびオブジェクトによって参照される CLR ユーザー定義型と XML スキーマ コレクションに対する REFERENCES 権限が必要です。 指定されたモジュールがデータベース レベルの DDL トリガーである場合は、現在のデータベースに対する ALTER ANY DATABASE DDL TRIGGER 権限が必要です。 指定されたモジュールがサーバー レベルの DDL トリガーである場合は、CONTROL SERVER 権限が必要です。  
+ モジュールに対する ALTER 権限、およびオブジェクトによって参照される CLR ユーザー定義型と XML スキーマ コレクションに対する REFERENCES 権限が必要です。 指定したモジュールがデータベース レベルの DDL トリガーの場合、現在のデータベース内の ALTER ANY DATABASE DDL TRIGGER 権限が必要です。 指定されたモジュールがサーバー レベルの DDL トリガー時に、CONTROL SERVER 権限が必要です。  
   
  さらに、EXECUTE AS 句で定義されているモジュールでは、指定したプリンシパルに対して IMPERSONATE 権限が必要です。 通常、オブジェクトを更新しても、モジュールが EXECUTE AS USER を指定して定義された場合を除いて、オブジェクトの EXECUTE AS のプリンシパルは変更されません。プリンシパルのユーザー名は、モジュールが作成された時点とは異なるユーザーに解決されます。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-refreshing-a-user-defined-function"></a>A. ユーザー定義関数を更新する  
+### <a name="a-refreshing-a-user-defined-function"></a>A. ユーザー定義関数を更新  
  次の例では、ユーザー定義関数を更新します。 例では、作成、別名データ型を`mytype`、およびユーザー定義関数では、`to_upper`を使用して`mytype`します。 次に、`mytype`名前に変更されます`myoldtype`、され、新しい`mytype`が作成される、別の定義を持ちます。 `dbo.to_upper`の新しい実装を参照するように関数が更新される`mytype`古いの代わりにします。  
   
 ```  
@@ -171,7 +168,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   

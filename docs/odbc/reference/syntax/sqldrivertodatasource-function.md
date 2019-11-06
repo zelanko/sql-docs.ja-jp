@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99f861c5428773cee26891684ffcfd769804bc9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d36996f49cb58fbb8812ae5fee8928fdc8bddf1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104646"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource 関数
 **SQLDriverToDataSource** ODBC ドライバーの翻訳をサポートしています。 ODBC 対応のアプリケーションではこの関数は呼び出されませんアプリケーション要求経由で翻訳**SQLSetConnectAttr**します。 関連付けられているドライバー、 *ConnectionHandle*で指定されている**SQLSetConnectAttr**データ ソースに、ドライバーから着信するすべてのデータの翻訳を実行する指定された DLL を呼び出します。 ODBC 初期化ファイルには、既定のトランスレーター DLL を指定できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLDriverToDataSource(  
      UDWORD     fOption,  
@@ -78,7 +77,7 @@ BOOL SQLDriverToDataSource(
   
  *PcbValueOut*引数が null ポインターを指定できます。  
   
- *後*  
+ *szErrorMsg*  
  [出力]エラー メッセージの記憶域へのポインター。 これは、変換が失敗しない限り、空の文字列です。  
   
  *cbErrorMsgMax*  

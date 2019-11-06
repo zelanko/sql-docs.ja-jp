@@ -1,12 +1,10 @@
 ---
-title: 作成、変更、およびデータベースの削除 |Microsoft Docs
+title: データベースの作成、変更、および削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - databases [SMO]
@@ -17,12 +15,12 @@ ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f56738b576fcbe6dc46a41a8151f3fd87f7d17a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 645ba8428dddb36de9a3edeb784d64f96b5c0603
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204232"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797040"
 ---
 # <a name="creating-altering-and-removing-databases"></a>データベースの作成、変更、および削除
   SMO では、データベースは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトで表現されます。  
@@ -30,7 +28,7 @@ ms.locfileid: "48204232"
  修正または削除のために、<xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトを作成する必要はありません。 データベースは、コレクションを使用して参照することができます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>Visual Basic でのデータベースの作成、変更、および削除  
  このコード例では、新しいデータベースを作成します。 このデータベースに対し、ファイルおよびファイル グループが自動的に作成されます。  
@@ -40,7 +38,7 @@ ms.locfileid: "48204232"
 ## <a name="creating-altering-and-removing-a-database-in-visual-c"></a>Visual C# でのデータベースの作成、変更、および削除  
  このコード例では、新しいデータベースを作成します。 このデータベースに対し、ファイルおよびファイル グループが自動的に作成されます。  
   
-```  
+```csharp
 {  
                 //Connect to the local, default instance of SQL Server.   
                 Server srv;  
@@ -61,16 +59,16 @@ ms.locfileid: "48204232"
 ## <a name="creating-altering-and-removing-a-database-in-powershell"></a>PowerShell でのデータベースの作成、変更、および削除  
  このコード例では、新しいデータベースを作成します。 このデータベースに対し、ファイルおよびファイル グループが自動的に作成されます。  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 cd \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Create a new database  
 $db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -argumentlist $srv, "Test_SMO_Database"  
 $db.Create()  
   
-#Reference the database and display the date when it was created.   
+#Reference the database and display the date when it was created.
 $db = $srv.Databases["Test_SMO_Database"]  
 $db.CreateDate  
   
@@ -78,7 +76,5 @@ $db.CreateDate
 $db.Drop()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  <xref:Microsoft.SqlServer.Management.Smo.Database>  
-  
-  

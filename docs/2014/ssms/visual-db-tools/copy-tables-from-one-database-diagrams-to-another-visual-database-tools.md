@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - copying tables
@@ -13,12 +13,12 @@ ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4af39696c40035a20bc0c099ba242930069d1e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1b0d70a5d8121963d424f25eef517af7cde4ba7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62720072"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>データベース ダイアグラム間でのテーブルのコピー (Visual Database Tools)
   データベース ダイアグラムから同じデータベースの他のデータベース ダイアグラムにテーブルをコピーできます。  

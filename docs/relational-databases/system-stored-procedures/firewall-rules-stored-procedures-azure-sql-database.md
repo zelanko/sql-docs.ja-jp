@@ -2,10 +2,8 @@
 title: ファイアウォール ルールのストアド プロシージャ (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: ''
-ms.prod_service: sql-database, sql-data-warehouse
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2c5e717dc1754853614293dd8b9abb561ce0f21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec667b6fc6c12f94d9e0a5e87f61b4acb7f98f40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942235"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>ファイアウォール ルールのストアド プロシージャ (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

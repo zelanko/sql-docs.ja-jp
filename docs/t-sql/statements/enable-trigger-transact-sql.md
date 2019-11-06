@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a92ebf725860db4537b03d4d5eb917475774201a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599440"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064549"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  DML トリガー、DDL トリガー、またはログオン トリガーを有効化します。  
+DML トリガー、DDL トリガー、またはログオン トリガーを有効化します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,43 +44,43 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *schema_name*  
- トリガーが属するスキーマの名前を指定します。 DDL トリガーまたはログオン トリガーでは *schema_name* を指定できません。  
+*schema_name*  
+トリガーが属するスキーマの名前を指定します。 *schema_name* は DDL トリガーやログオン トリガーでは指定できません。  
   
- *trigger_name*  
- 有効化するトリガーの名前です。  
+*trigger_name*  
+有効化するトリガーの名前です。  
   
- ALL  
- ON 句のスコープで定義されたすべてのトリガーを有効化することを示します。  
+ALL  
+ON 句のスコープで定義されたすべてのトリガーを有効化することを示します。  
   
- *object_name*  
- DML トリガー *trigger_name* が実行用に作成されたテーブルまたはビューの名前を指定します。  
+*object_name*  
+DML トリガー *trigger_name* が実行用に作成されたテーブルまたはビューの名前を指定します。  
   
- DATABASE  
- DDL トリガーの場合、*trigger_name* が、データベース スコープで実行するために作成または変更されたことを示します。  
+DATABASE  
+DDL トリガーの場合、*trigger_name* が、データベース スコープで実行するために作成または変更されたことを示します。  
   
- ALL SERVER  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ALL SERVER  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- DDL トリガーの場合、*trigger_name* が、サーバー スコープで実行するために作成または変更されたことを示します。 ALL SERVER はログオン トリガーにも適用されます。  
+DDL トリガーの場合、*trigger_name* が、サーバー スコープで実行するために作成または変更されたことを示します。 ALL SERVER はログオン トリガーにも適用されます。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
 ## <a name="remarks"></a>Remarks  
- トリガーを有効化しても、トリガーが再作成されるわけではありません。 無効化されたトリガーは、引き続き現在のデータベースのオブジェクトとして残りますが、起動されることはありません。 トリガーを有効化すると、そのトリガーがプログラムされている [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されたときに起動されます。 トリガーを無効化するには、[DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) を使います。 テーブルに定義された DML トリガーも、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用して無効または有効にできます。  
+トリガーを有効化しても、トリガーが再作成されるわけではありません。 無効化されたトリガーは、引き続き現在のデータベースのオブジェクトとして残りますが、起動されることはありません。 トリガーを有効にするには、もともとプログラミングされた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのいずれかが実行されたときに起動するようにします。 トリガーを無効化するには、[DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) を使います。 テーブルに定義された DML トリガーも、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用して無効または有効にできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- DML トリガーを有効化するには、少なくとも、そのトリガーが作成されたテーブルまたはビューに対する ALTER 権限が必要です。  
+DML トリガーを有効化するには、少なくとも、そのトリガーが作成されたテーブルまたはビューに対する ALTER 権限が必要です。  
   
- サーバー スコープ (ON ALL SERVER) 付きの DDL トリガーまたはログオン トリガーを有効化するには、サーバーでの CONTROL SERVER 権限が必要です。 DDL トリガーをデータベース スコープ (ON DATABASE) で有効化するには、少なくとも、現在のデータベースでの ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
+サーバー スコープ (ON ALL SERVER) 付きの DDL トリガーまたはログオン トリガーを有効化するには、サーバーに対する CONTROL SERVER 権限が必要です。 DDL トリガーをデータベース スコープ (ON DATABASE) で有効化するには、少なくとも、現在のデータベースに対する ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. テーブル上の DML トリガーを有効化する  
- 次の例では、AdventureWorks データベースのテーブル `Address` 上に作成されたトリガー `uAddress` を無効化し、次に有効化します。  
+次の例では、AdventureWorks データベースのテーブル `Address` 上に作成されたトリガー `uAddress` を無効化し、次に有効化します。  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -89,9 +88,9 @@ GO
 ```  
   
 ### <a name="b-enabling-a-ddl-trigger"></a>B. DDL トリガーを有効化する  
- 次の例では、データベース スコープの DDL トリガー `safety` を作成し、無効にします。  
+次の例では、データベース スコープの DDL トリガー `safety` を作成し、無効にします。  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -106,11 +105,11 @@ GO
 ```  
   
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. 同じスコープで定義されたすべてのトリガーを有効化する  
- 次の例では、サーバー スコープで作成されたすべての DDL トリガーを有効化します。  
+次の例では、サーバー スコープで作成されたすべての DDL トリガーを有効化します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

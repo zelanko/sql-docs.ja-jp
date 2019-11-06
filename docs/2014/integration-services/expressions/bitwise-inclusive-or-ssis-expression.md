@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e168433f7f7001037ac1d5360cf4115ff246f228
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f7a092b8ad649285417ee7961ac891b90b87674
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62898146"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (ビット演算包含的 OR) (SSIS 式)
   2 つの整数値の OR 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 いずれかのビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットはゼロ (0) に設定されます。  
@@ -94,9 +93,9 @@ ReorderPoint | SafetyStockLevel
  00000111  
   
 ## <a name="see-also"></a>参照  
- [&#124;&#124;&#40;論理 OR&#41; &#40;SSIS 式&#41;](logical-or-ssis-expression.md)   
- [^ &#40;ビット演算子排他的 OR&#41; &#40;SSIS 式&#41;](bitwise-exclusive-or-ssis-expression.md)   
+ [&#124;&#124; (論理 OR) (SSIS 式)](logical-or-ssis-expression.md)   
+ [^ (ビット演算子排他的 OR) (SSIS 式)](bitwise-exclusive-or-ssis-expression.md)   
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
- [演算子&#40;SSIS 式&#41;](operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   
   

@@ -1,29 +1,28 @@
 ---
-title: 'チュートリアル: マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098918"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル:マトリックス レポートの作成 (レポート ビルダー)
   このチュートリアルでは、サンプルの売上データに基づいて基本的なマトリックス レポートを作成する方法を説明します。 このマトリックスは、入れ子になった行グループと列グループ、および隣接する列グループで構成されます。 また、列を書式設定し、テキストを回転させる方法についても学習します。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- このチュートリアルで作成するレポートの拡張のバージョンはサンプルとして提供[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]レポート ビルダーのレポート。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=184851)します。  
+ このチュートリアルで作成するレポートの拡張のバージョンはサンプルとして提供[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]レポート ビルダーのレポート。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)します。  
   
 ##  <a name="BackToTop"></a> 学習内容  
  このチュートリアルでは、次の内容を学習します。  
@@ -48,9 +47,9 @@ ms.locfileid: "48159502"
   
 1.  [テキスト ボックスを 270 度回転させる](#RotateTextBox)  
   
- このチュートリアルの推定所要時間 : 20 分  
+ このチュートリアルの推定所要時間:20 分  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="CreateMatrix"></a> 1.テーブルまたはマトリックスの新規作成ウィザードを使用してマトリックス レポートとデータセットを作成する  
@@ -61,7 +60,7 @@ ms.locfileid: "48159502"
   
 #### <a name="to-create-a-new-matrix"></a>新しいマトリックスを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
     > [!NOTE]  
     >  **[作業の開始]** ダイアログ ボックスが表示されます。 レポート ビルダーのボタンから、開かない場合はクリックして**新規**します。  
@@ -74,7 +73,7 @@ ms.locfileid: "48159502"
   
 5.  **[次へ]** をクリックします。  
   
-6.  **データ ソースへの接続の選択**ページで既存のデータ ソースを選択します。 または、レポート サーバーを参照し、データ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースを作成する方法の詳細については、次を参照してください。[チュートリアル: 基本的な表レポートの作成&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+6.  **データ ソースへの接続の選択**ページで既存のデータ ソースを選択します。 または、レポート サーバーを参照し、データ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースを作成する方法の詳細については、次を参照してください。[チュートリアル。基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -160,7 +159,7 @@ ms.locfileid: "48159502"
   
 13. **[完了]** をクリックします。  
   
-     マトリックスがデザイン画面に追加されます。 行グループ ペインには、Territory と SalesDate の 2 つの行グループが表示されます。 列グループ ペインには、Subcategory と Product の 2 つの行グループが表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+     マトリックスがデザイン画面に追加されます。 [行グループ] ペインには 2 つの行グループが表示されます。Territory と SalesDate です。 [列グループ] ペインには 2 つの列グループが表示されます。Subcategory と Product です。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
 14. **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -325,7 +324,7 @@ ms.locfileid: "48159502"
   
  レポートのレポート ヘッダーにレポート タイトルが表示されます。  
   
-##  <a name="Save"></a> 8。レポートを保存する  
+##  <a name="Save"></a> 8.レポートを保存する  
  レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。  
   
  このチュートリアルでは、レポートをレポート サーバーに保存します。 レポート サーバーにアクセスできない場合は、レポートをコンピューターに保存してください。  
@@ -350,13 +349,13 @@ ms.locfileid: "48159502"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **[名前]** に表示されている既定の名前を「 **SalesByTerritorySubcategory**」に変更します。  
   
 4.  **[保存]** をクリックします。  
   
-##  <a name="RotateTextBox"></a> 9 です。(省略可) テキスト ボックスを 270 度回転させる  
+##  <a name="RotateTextBox"></a> 9.(省略可) テキスト ボックスを 270 度回転させる  
  マトリックスを含むレポートは、実行すると、水平方向と垂直方向に拡張されます。 テキストボックスを垂直方向に、つまり 270 度回転させると、水平方向のスペースを節約できます。 表示レポートの幅は狭くなり、Microsoft Word などの形式にエクスポートした場合は、印刷ページ内に収まる可能性が高くなります。  
   
  テキスト ボックスでも、テキストを水平方向または垂直方向 (上から下) に表示できます。 詳細については、「[テキスト ボックス (レポート ビルダーおよび SSRS)](report-design/text-boxes-report-builder-and-ssrs.md)」を参照してください。  

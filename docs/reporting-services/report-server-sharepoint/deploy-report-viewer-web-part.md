@@ -2,17 +2,17 @@
 title: SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する | Microsoft Docs
 ms.date: 11/15/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579991"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
@@ -20,7 +20,7 @@ ms.locfileid: "52502818"
 
 レポート ビューアー Web パーツは、SharePoint サイト内の SQL Server Reporting Services (ネイティブ モード) レポートを参照するために使用できるカスタム Web パーツです。 この Web パーツを使用すると、レポート サーバー上のレポートを表示、移動、印刷、およびエクスポートできます。 レポート ビューアー Web パーツは、SQL Server Reporting Services レポート サーバーまたは Power BI Report Server によって処理されるレポート定義 (.rdl) ファイルに関連付けられています。 このレポート ビューアー Web パーツは、Power BI Report Server にホストされている Power BI レポートでは使用できません。
 
-SharePoint Server 2013 または SharePoint Server 2016 環境にレポート ビューアー Web パーツを追加するソリューション パッケージを手動で配置するには、次の手順に従います。 Web パーツを構成する場合、ソリューションを配置する手順を行う必要があります。
+SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019 環境にレポート ビューアー Web パーツを追加するソリューション パッケージを手動で配置するには、次の手順に従います。 Web パーツを構成する場合、ソリューションを配置する手順を行う必要があります。
 
 **レポート ビューアー Web パーツは、スタンドアロンのソリューション パッケージで、SQL Server Reporting Services の SharePoint 統合モードとは関連していません。**
 
@@ -32,6 +32,7 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
 >
 
 **サポートされている SharePoint Server のバージョン:**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -67,7 +68,7 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 と 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
@@ -75,11 +76,11 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
 
 ## <a name="activate-feature"></a>機能のアクティブ化
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、**[サイトの設定]** を選びます。
+1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[サイトの設定]** を選びます。
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
-    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>*」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
+    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>* 」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
 
 3. **[サイト コレクションの管理]** で **[サイト コレクションの機能]** をクリックします。
 
@@ -105,7 +106,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 SharePoint サーバーの全体管理でソリューションの取り消しを実行できますが、インストールや修正プログラムの配置に関する問題のトラブルシューティングを体系的に行う場合を除いて、**ReportViewerWebPart.wsp** ファイルを取り消す必要はありません。
 
-1. SharePoint サーバーの全体管理で、**[システム設定]** の **[ファーム ソリューションの管理]** をクリックします。
+1. SharePoint サーバーの全体管理で、 **[システム設定]** の **[ファーム ソリューションの管理]** をクリックします。
 
 2. **[ReportViewerWebPart.wsp]** を選択します。
 
@@ -115,11 +116,11 @@ SharePoint サーバーの全体管理でソリューションの取り消しを
 
 ソリューションを取り消しても、SharePoint サイト内の Web パーツ一覧からレポート ビューアー Web パーツは削除されません。 レポート ビューアー Web パーツを削除するには、次を実行します。
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、**[サイトの設定]** を選びます。
+1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[サイトの設定]** を選びます。
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
-    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>*」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
+    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>* 」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
 
 2. **[Web デザイナー ギャラリー]** の **[Web パーツ]** を選択します。
 
@@ -144,7 +145,7 @@ Web パーツでサポートされている言語は以下のとおりです。
 * 韓国語 (ko)
 * ポルトガル語 (pt)
 * ロシア語 (ru)
-* 簡体字中国語 (zh-HANS および zh-CHS)
+* 簡体中国語 (zh-HANS および zh-CHS)
 * 繁体中国語 (zh-HANT および zh-CHT)
 
 ## <a name="troubleshoot"></a>[トラブルシューティング]

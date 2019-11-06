@@ -12,12 +12,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7834ce4de7b4fa788dcdfb72c9f38510a11a9fac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62875137"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master データベースの復元 (Transact-SQL)
   このトピックでは、データベースの完全バックアップから **master** データベースを復元する方法について説明します。  
@@ -26,7 +26,7 @@ ms.locfileid: "48187012"
   
 1.  サーバー インスタンスをシングル ユーザー モードで起動します。  
   
-     シングル ユーザー スタートアップ パラメーター (**-m**) の指定方法の詳細については、「[サーバーのスタートアップ オプションの構成 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)」を参照してください。  
+     シングル ユーザー スタートアップ パラメーター ( **-m**) の指定方法の詳細については、「[サーバーのスタートアップ オプションの構成 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)」を参照してください。  
   
 2.  **master**データベースの完全バックアップを復元するには、次の [RESTORE DATABASE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します:  
   
@@ -42,8 +42,8 @@ ms.locfileid: "48187012"
 ## <a name="example"></a>例  
  次の例では、既定のサーバー インスタンスで `master` データベースを復元します。 この例では、サーバー インスタンスが既にシングル ユーザー モードで実行されていることを前提としています。 この例は、 `sqlcmd` を起動し、ディスク デバイス `RESTORE DATABASE` から `master` データベースの完全バックアップを復元する `Z:\SQLServerBackups\master.bak`ステートメントを実行します。  
   
-> [!NOTE]  
->  名前付きインスタンスの場合、**sqlcmd** コマンドでは、**-S***\<ComputerName>*\\*\<InstanceName>* オプションを指定する必要があります。  
+> [!NOTE]
+>  名前付きインスタンスの場合、**sqlcmd** コマンドでは、 **-S** _\<ComputerName>_ \\ *\<InstanceName>* オプションを指定する必要があります。  
   
 ```  
   

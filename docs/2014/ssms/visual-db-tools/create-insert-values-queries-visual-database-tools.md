@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting values
@@ -19,12 +19,12 @@ ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e1f32b1a63c8deb25a9395b8e018b3b051e5a69
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 019c2fe96be00c6e86e0c94286770d30e7a54a9c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676338"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>値の挿入クエリの作成 (Visual Database Tools)
   値の挿入クエリを使用すると、現在のテーブルに新しい行を作成できます。 値の挿入クエリを作成するときは、次の項目を指定します。  

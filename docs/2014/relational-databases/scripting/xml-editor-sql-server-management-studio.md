@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editorxml.f1
@@ -18,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bf9af55c8ba7660a80dc65fa1f2eb6e322aad4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063198"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
   XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
@@ -82,10 +81,10 @@ ms.locfileid: "48166292"
 ## <a name="data-view"></a>データ ビュー  
  データ ビューでは、.xml ファイルを編集するためにデータ グリッドを使用できます。 データ ビューでは、XML ファイルの内容 (タグおよび構造体を除く) だけを編集できます。  
   
- データ ビューは、 **[データ テーブル]** 領域と **[データ]** 領域から構成されます。 **[データ テーブル]** 領域には、XML ファイルに定義されている関係の一覧がその入れ子の順 (最も外側から最も内側の順) に示されます。 **[データ]** 領域は、[データ テーブル] 領域の選択内容に基づいてデータを表示するデータ グリッドです。  
+ データ ビューには 2 つの独立した領域があります: **[データ テーブル]** と **[データ]** です。 **[データ テーブル]** 領域には、XML ファイルに定義されている関係の一覧がその入れ子の順 (最も外側から最も内側の順) に示されます。 **[データ]** 領域は、[データ テーブル] 領域の選択内容に基づいてデータを表示するデータ グリッドです。  
   
 > [!NOTE]  
->  新しく作成された XML ファイルにはデータは含まれていないので、データ ビューに表示することはできません。 また、データ ビューをまったく呼び出すことができない XML ドキュメントのインスタンスもあります。 XML は適切な形式と見なされますが、構造化データではなく、データ ビューへの切り替えが試行されている場合は、"この XML ドキュメントは正しい形式ですが、データ ビューで表示できない構造体を含んでいます。" というメッセージが表示されます。  
+>  新しく作成された XML ファイルにはデータは含まれていないので、データ ビューに表示することはできません。 また、データ ビューをまったく呼び出すことができない XML ドキュメントのインスタンスもあります。 XML は適切な形式と見なされますが、構造化データではない場合、データ ビューに切り替えようとすると次のメッセージが表示されます:「このドキュメントは正しい形式ですが、データ ビューで表示できない構造を含んでいます。」  
   
  データ ビューでは、次の操作を行うことができます。  
   

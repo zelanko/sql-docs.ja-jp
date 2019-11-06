@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94dc9ca5d83530db97607bd21e9fee4a2dc3dbf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cce3b4f08fcb55530ffd7abf6da3011c325478f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055380"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47618020"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |\<列を継承 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
-|lob_data_space_id|**int**|0 以外の値は、このテーブルのラージ オブジェクト バイナリ (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID です。 LOB データ型の例として、 **varbinary (max)**、 **varchar (max)**、 **geography**、または**xml**します。<br /><br /> 0 = テーブルには LOB データが含まれません。|  
+|lob_data_space_id|**int**|0 以外の値は、このテーブルのラージ オブジェクト バイナリ (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID です。 LOB データ型の例として、 **varbinary (max)** 、 **varchar (max)** 、 **geography**、または**xml**します。<br /><br /> 0 = テーブルには LOB データが含まれません。|  
 |filestream_data_space_id|**int**|FILESTREAM ファイル グループまたは FILESTREAM ファイル グループから成るパーティション構成のデータ領域 ID です。<br /><br /> FILESTREAM ファイル グループの名前を報告するクエリを実行`SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`します。<br /><br /> sys.tables は、filestream_data_space_id = data_space_id で次のビューに結合できます。<br /><br /> -sys.filegroups<br /><br /> -sys.partition_schemes<br /><br /> -sys.indexes<br /><br /> -sys.allocation_units<br /><br /> -sys.fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -sys.destination_data_spaces<br /><br /> -sys.master_files<br /><br /> -sys.database_files<br /><br /> -backupfilegroup (filegroup_id で結合)|  
 |max_column_id_used|**int**|このテーブルで使用される列 ID の最大値です。|  
 |lock_on_bulk_load|**bit**|テーブルは、一括読み込みにロックされます。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。|  
@@ -50,7 +49,7 @@ ms.locfileid: "47618020"
 |large_value_types_out_of_row|**bit**|1 = 大きい値の型は行外に格納されます。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。|  
 |is_tracked_by_cdc|**bit**|1 = テーブルで変更データ キャプチャが有効になっています。 詳細については、次を参照してください。 [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)します。|  
 |lock_escalation|**tinyint**|テーブルの LOCK_ESCALATION オプションの値です。<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
-|lock_escalation_desc|**nvarchar(60)**|テーブルの lock_escalation オプションについての説明テキストです。 有効値は、TABLE、AUTO、および DISABLE です。|  
+|lock_escalation_desc|**nvarchar(60)**|テーブルの lock_escalation オプションについての説明テキストです。 設定可能な値は、次のとおりです。テーブル、AUTO、および無効にします。|  
 |is_filetable|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = テーブルは FileTable です。<br /><br /> FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。|  
 |durability|**tinyint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 返される値は次のとおりです。<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 値 0 が既定値です。|  
 |durability_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用できる値を次に示します。<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> 値 SCHEMA_AND_DATA は、テーブルが持続性のあるインメモリ テーブルであることを示します。 SCHEMA_AND_DATA は、メモリ最適化テーブルの既定値です。 値 SCHEMA_ONLY は、メモリ最適化オブジェクトでは、データベースを再起動した場合にテーブル データの更新内容が保存されないことを示します。|  
@@ -61,7 +60,7 @@ ms.locfileid: "47618020"
 |is_remote_data_archive_enabled|**bit**|**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> テーブルでは、拡張が有効ながあるかどうかを示します。<br /><br /> 0 = テーブルは Stretch が許可されていません。<br /><br /> 1 = テーブルは、拡張を有効にしました。<br /><br /> 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。|  
 |is_external|**bit**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]、および[!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]します。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは、外部テーブル。| 
 |history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>History_retention_period_unit で指定された単位でテンポラル履歴保有期間を表す数値。 |  
-|history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の型を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 1 日 <br /><br />4: 週 <br /><br />5: 1 か月 <br /><br />6: 年 |  
+|history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の型を表す数値。 <br /><br />-1: 無制限 <br /><br />3:[DAY] <br /><br />4:[WEEK] <br /><br />5:[MONTH] <br /><br />6:[YEAR] |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />INFINITE <br /><br />[DAY] <br /><br />[WEEK] <br /><br />[MONTH] <br /><br />[YEAR] |  
 |is_node|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのノード テーブルです。 <br /><br />0 = これはグラフのノード テーブルではありません。 |  
 |is_edge|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのエッジ テーブルです。 <br /><br />0 = これはグラフのエッジ テーブルではありません。 |  

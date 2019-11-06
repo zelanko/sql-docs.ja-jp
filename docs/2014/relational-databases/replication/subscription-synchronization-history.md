@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.synchhistory.f1
+- sql12.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a0d9c4605b319b2f131b32f0853d173a5267685
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62629713"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>サブスクリプション、[同期の履歴] (マージ サブスクリプション、SQL Server 2005 以降)
   **[同期の履歴]** タブには、マージ エージェントの状態、アーティクル統計、履歴、情報メッセージ、エラー メッセージなど詳細情報が表示されます。  
@@ -61,13 +61,13 @@ ms.locfileid: "48157492"
  **[アーティクル]**  
  パブリケーション内の各アーティクルの名前です。パブリケーション全体に対して以下の処理フェーズがあります。  
   
--   **[初期化]**。 マージ エージェントを開始することを示しています。スナップショットの適用が行われるサブスクリプションの初期化とは同期しません。  
+-   **[初期化]** 。 マージ エージェントを開始することを示しています。スナップショットの適用が行われるサブスクリプションの初期化とは同期しません。  
   
--   **[スキーマの変更と一括挿入]**。  
+-   **[スキーマの変更と一括挿入]** 。  
   
--   **[パブリッシャーへの変更のアップロード]**。  
+-   **[パブリッシャーへの変更のアップロード]** 。  
   
--   **[サブスクライバーへの変更のダウンロード]**。  
+-   **[サブスクライバーへの変更のダウンロード]** 。  
   
  これらのフェーズを含めることにより、選択されたセッションで各フェーズにかかった時間と合計時間に対する割合をグリッドに表示できます。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48157492"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   

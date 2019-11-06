@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f5f87200afad4a7026f763cdf5eecf34160082ce
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: 83b8916072aa36b2b823306dabbcebfc0bc9c1d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992020"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>ドメインへのクレンジング プロジェクトの値のインポート
 
@@ -66,7 +65,7 @@ ms.locfileid: "52617372"
   
 7.  ドメイン内にあるすべての値を表示するには、 **[新規のみ表示]** の選択を解除します。  
   
-8.  正しい値、エラー値、または無効な値のみを選択して表示するには、 **[適切]**、 **[エラー]**、 **[無効]** を選択します。  
+8.  正しい値、エラー値、または無効な値のみを選択して表示するには、 **[適切]** 、 **[エラー]** 、 **[無効]** を選択します。  
   
 9. 特定の文字列を検索するには、 **[検索]** ボックスに文字列を入力します。 検索条件を満たす値を 1 つずつ調べるには、上矢印または下矢印をクリックします。 これらのは黄色で強調表示されます。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "52617372"
     > [!NOTE]  
     >  **[ドメイン値]** タブの値を操作する方法については、「 [Change Domain Values](../data-quality-services/change-domain-values.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: プロジェクトの値をドメインにインポートした後  
+##  <a name="FollowUp"></a>補足情報: プロジェクトの値をドメインにインポートした後  
  クレンジング プロセス中に収集したデータ品質ナレッジ ベースをドメインにインポートしたら、ドメインおよび値に対してその他のドメイン管理タスクを実行できます。 詳しくは、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」をご覧ください。  
   
 ##  <a name="Values"></a> インポートされる値  
@@ -114,7 +113,7 @@ ms.locfileid: "52617372"
   
 -   プロジェクトから値をインポートできるのは、ナレッジ ベースが作業中の状態になっていて、インポートしているユーザーがナレッジ ベースをロックしている場合だけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ クレンジング](../data-quality-services/data-cleansing.md)   
  [DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

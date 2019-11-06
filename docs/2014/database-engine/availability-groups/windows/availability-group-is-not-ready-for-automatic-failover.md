@@ -14,12 +14,12 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfa47e9df9d3d795df365249273732918878a1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791866"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性グループの自動フェールオーバーの準備ができていない
     
@@ -28,7 +28,7 @@ ms.locfileid: "48184482"
 |||  
 |-|-|  
 |**ポリシー名**|可用性グループの自動フェールオーバーの準備|  
-|**問題点**|可用性グループで自動フェールオーバーの準備ができていません。|  
+|**問題**|可用性グループで自動フェールオーバーの準備ができていません。|  
 |**カテゴリ**|**重大**|  
 |**ファセット**|可用性グループ|  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48184482"
  自動フェールオーバーの準備が整っているセカンダリ レプリカが 1 つ以上存在する場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性グループの自動フェールオーバーの準備ができていない](http://go.microsoft.com/fwlink/p/?LinkId=220851) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
+>  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性グループの自動フェールオーバーの準備ができていない](https://go.microsoft.com/fwlink/p/?LinkId=220851) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
   
 ## <a name="possible-causes"></a>考えられる原因  
  可用性グループの自動フェールオーバーの準備ができていません。 プライマリ レプリカは自動フェールオーバー用に構成されていますが、セカンダリ レプリカは自動フェールオーバーの準備ができていません。 自動フェールオーバー用に構成されているセカンダリ レプリカが使用できないか、そのデータ同期状態が現在 SYNCHRONIZED になっていない可能性があります。  

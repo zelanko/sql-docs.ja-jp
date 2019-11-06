@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], validating
@@ -19,12 +18,12 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bb84f3ba798ba8d1af4132f6553e6428365ca9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085787"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類マトリックス (Analysis Services - データ マイニング)
   *分類マトリックス*は、モデルのすべてのケースについて、予測値が実際の値と一致したかどうかを判断してカテゴリに分類します。 各カテゴリのすべてのケースがカウントされ、合計がマトリックスに表示されます。 分類マトリックスは統計モデルの評価に使用する標準のツールで、 *混同行列*とも呼ばれます。  
@@ -67,7 +66,7 @@ ms.locfileid: "48171302"
 |1|2|123|17|  
 |2|19|0|20|  
   
- 列が増えたためにレポートが複雑に見えますが、この追加の詳細が、間違った予測の累積コストを評価する際に非常に役立つ場合もあります。 対角線上のセルの合計を計算したり、さまざまな行の組み合わせの結果を比較したりする際には、 **[分類マトリックス]** タブの **[コピー]** ボタンをクリックして、レポートを Excel に貼り付けることができます。 また、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降をサポートする Excel 用データ マイニング クライアントなどのクライアントを使用して、回数と割合の両方を含む分類レポートを直接 Excel で作成することもできます。 詳細については、「 [SQL Server データ マイニング](http://go.microsoft.com/fwlink/?LinkID=77733)」を参照してください。  
+ 列が増えたためにレポートが複雑に見えますが、この追加の詳細が、間違った予測の累積コストを評価する際に非常に役立つ場合もあります。 対角線上のセルの合計を計算したり、さまざまな行の組み合わせの結果を比較したりする際には、 **[分類マトリックス]** タブの **[コピー]** ボタンをクリックして、レポートを Excel に貼り付けることができます。 また、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降をサポートする Excel 用データ マイニング クライアントなどのクライアントを使用して、回数と割合の両方を含む分類レポートを直接 Excel で作成することもできます。 詳細については、「 [SQL Server データ マイニング](https://go.microsoft.com/fwlink/?LinkID=77733)」を参照してください。  
   
 ## <a name="restrictions-on-the-classification-matrix"></a>分類マトリックスの制限  
  分類マトリックスは、不連続の予測可能な属性でのみ使用できます。  
@@ -79,12 +78,12 @@ ms.locfileid: "48171302"
   
 |トピック|リンク|  
 |------------|-----------|  
-|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|関連するグラフの種類について説明します。|[リフト チャート&#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート&#40;Analysis Services - データ マイニング&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図&#40;Analysis Services - データ マイニング&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|マイニング モデルとマイニング構造の相互検証の使用法について説明します。|[クロス検証&#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
-|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|関連するグラフの種類について説明します。|[リフト チャート (Analysis Services - データ マイニング)](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート (Analysis Services - データ マイニング)](profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 (Analysis Services - データ マイニング)](scatter-plot-analysis-services-data-mining.md)|  
+|マイニング モデルとマイニング構造の相互検証の使用法について説明します。|[相互検証 (Analysis Services - データ マイニング)](cross-validation-analysis-services-data-mining.md)|  
+|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
- [テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
   
   

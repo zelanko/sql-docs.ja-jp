@@ -13,15 +13,14 @@ helpviewer_keywords:
 - XQuery, samples
 - sample applications [XQuery]
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d715b22e6ea49675b407f569e33aa06b011d5696
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2284f499dce30462b468dc385944ba19f0dbb88e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986058"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>xml データ型に対する XQuery のその他のサンプル
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "51292778"
   
 -   [XQuery での名前空間の処理](../xquery/handling-namespaces-in-xquery.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [xml データ型に対する XQuery の演算子](../xquery/xquery-operators-against-the-xml-data-type.md)  
   

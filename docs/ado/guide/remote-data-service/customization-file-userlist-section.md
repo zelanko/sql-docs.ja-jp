@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ce5c4b0a789572e58db7068911a9abae7475fcb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922767"
 ---
 # <a name="customization-file-userlist-section"></a>カスタマイズ ファイルの UserList セクション
 **Userlist**セクションに関連する、**接続**の同じセクションとセクション*識別子*パラメーター。  
   
- このセクションに含めることができます、*ユーザー アクセス エントリ*、アクセスを指定する、指定したユーザーの権利し、よりも優先されます、*既定**エントリにアクセス*の照合**接続**セクション。  
+ このセクションに含めることができます、 *ユーザー アクセス エントリ* 、アクセスを指定する、指定したユーザーの権利し、よりも優先されます、 *既定* *エントリにアクセス* の照合 **接続** セクション。  
   
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
@@ -32,15 +31,15 @@ ms.locfileid: "51557860"
 ## <a name="syntax"></a>構文  
  形式は、ユーザーのアクセス エントリです。  
   
- *userName* **=**   
- ***accessRights***  
+ _userName_ **=**    
+ **_accessRights_**  
   
 |要素|説明|  
 |----------|-----------------|  
 |*userName*|*ユーザー名*のこの接続を使用しているユーザー。 有効なユーザー名が、IIS を用いて確立された**Service Manager**ダイアログ。|  
-|***accessRights***|次のアクセス権のいずれか:<br /><br /> -   **NoAccess** -ユーザーがデータ ソースにアクセスできません。<br />-   **読み取り専用**-ユーザーがデータ ソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーの読み取りまたはデータ ソースへの書き込みができます。|  
+|**_accessRights_**|次のアクセス権のいずれか:<br /><br /> -   **NoAccess** -ユーザーがデータ ソースにアクセスできません。<br />-   **読み取り専用**-ユーザーがデータ ソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーの読み取りまたはデータ ソースへの書き込みができます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

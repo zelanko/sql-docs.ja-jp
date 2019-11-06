@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
@@ -13,13 +12,13 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 41369eae8034fc7723d8b5517c525313c0feca72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105818"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
   データ ポイントは、グラフにおける最小単位のエンティティです。 図形以外のグラフのデータ ポイントは、そのグラフの種類に応じて表されます。 たとえば、線系列は 1 つまたは複数の連続したデータ ポイントで構成されます。 図形グラフのデータ ポイントは、個々のスライスやセグメントによって表され、これらのスライスやセグメントがグラフ全体を形成します。 たとえば、円グラフでは、それぞれのピースがデータ ポイントです。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -44,7 +43,7 @@ ms.locfileid: "48167912"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>グラフへのデータ ポイント ラベルの配置  
  すべての種類のグラフで、グラフを右クリックして **[データ ラベルの表示]** を選択すると、データ ポイント ラベルを表示できます。 データ ポイント ラベルの位置は、グラフの種類に応じて指定されます。  
   
--   横棒グラフの場合、 **BarLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 外側、左、中央、および右の 4 つの位置から選択できます。 バーのラベル スタイルが外側に設定されている場合、ラベルは、グラフ領域内に収まる範囲でバーの外側に配置されます。 バーの外側でグラフ領域内にラベルを配置できない場合、ラベルはバーの内側に配置されます。  
+-   横棒グラフの場合、 **BarLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 指定できる位置は 4 つあります。Outside、Left、Center、Right です。 バーのラベル スタイルが外側に設定されている場合、ラベルは、グラフ領域内に収まる範囲でバーの外側に配置されます。 バーの外側でグラフ領域内にラベルを配置できない場合、ラベルはバーの内側に配置されます。  
   
 -   円グラフの場合、 **PieLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 円グラフの周囲にデータ ポイント ラベルを配置する場合は、円グラフのサイズ、円グラフと対応する凡例の間の空間、ラベルのサイズなど、多くの点を考慮する必要があります。 詳細については、「 [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48167912"
 |#MAX|系列内のすべての Y 値の最大値|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|系列内のすべての Y 値の最初の値|All|`=First(Fields!MyDataField.Value)`|  
   
- キーワードを書式設定するには、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列をかっこで囲みます。 たとえば、ツールヒントでデータ ポイントの値を小数点以下 2 桁の数値として指定するには、書式設定文字列 "N2" を中かっこで囲みます。たとえば、系列の **ToolTip** プロパティで "#VALY{N2}" のようになります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列の詳細については、MSDN の「 [型の書式設定](http://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の数値を書式設定する方法については、「[数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)」を参照してください。  
+ キーワードを書式設定するには、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列をかっこで囲みます。 たとえば、ツールヒントでデータ ポイントの値を小数点以下 2 桁の数値として指定するには、書式設定文字列 "N2" を中かっこで囲みます。たとえば、系列の **ToolTip** プロパティで "#VALY{N2}" のようになります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列の詳細については、MSDN の「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の数値を書式設定する方法については、「[数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)」を参照してください。  
   
  グラフにキーワードを追加する方法の詳細については、「[系列へのツールヒントの表示 &#40;レポート ビルダーおよび SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)」、「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](chart-legend-change-item-text-report-builder.md)」を参照してください。  
   

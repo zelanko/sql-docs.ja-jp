@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: douglaslMS
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 39acf5a2fd5ccd92e0d897a7a701f8525aadcff8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032809"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480567"
 ---
 # <a name="grant-dqs-roles-to-users"></a>ユーザーに DQS ロールを付与する
   このトピックでは、Windows プリンシパルに基づいて SQL ログインを作成し、DQS_MAIN データベースで [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) ロールを付与する方法を説明します。  
@@ -38,12 +38,12 @@ ms.locfileid: "51032809"
   
 5.  ユーザーの検証後、左ペインの **[ユーザー マッピング]** ページをクリックします。  
   
-6.  右ペインで、 **[DQS_MAIN]** データベースの **[マップ]** 列のチェック ボックスをオンにし、ユーザーに必要なアクセス レベルに応じて、 **[DQS_MAIN のデータベース ロール メンバーシップ]** ペインで **[dqs_administrator]**、 **[dqs_kb_editor]** 、または **[dqs_kb_operator]** チェック ボックスをオンにします。 3 つの DQS ロールの詳細については、「 [DQS Security](../dqs-security.md)」を参照してください。  
+6.  右側のウィンドウで、下のチェック ボックスを選択します、**マップ**の列、 **DQS_MAIN**データベースを選び、 **dqs_administrator**、 **dqs_kb_editor ロール。** 、または**dqs_kb_operator**  チェック ボックス、**データベース ロールのメンバーシップ。DQS_MAIN**ウィンドウで、ユーザーのために必要なアクセス レベルによって異なります。 3 つの DQS ロールの詳細については、「 [DQS のセキュリティ](../dqs-security.md)」を参照してください。  
   
 7.  **[ログイン - 新規作成]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
   
     > [!NOTE]  
-    >  **dqs_administrator** ロールをユーザーに付与し、変更を適用してから、ユーザー権限を再びオンにすると、その他の 2 つの DQS ロールのチェック ボックス (**[dq_kb_editor]** および **[dqs_kb_operator]**) もオンになります。  
+    >  **dqs_administrator** ロールをユーザーに付与し、変更を適用してから、ユーザー権限を再びオンにすると、その他の 2 つの DQS ロールのチェック ボックス ( **[dq_kb_editor]** および **[dqs_kb_operator]** ) もオンになります。  
   
 ## <a name="next-steps"></a>次の手順  
  先ほど SQL ログインを作成し、DQS ロールを付与した Windows ユーザー アカウントを使用して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] へのログオンを試みます。  

@@ -9,11 +9,11 @@ ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59de5d316bcef9fb2842d26ef2e7a1154270f5cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63129622"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>スマートフォンやタブレット向けに Reporting Services モバイル レポートをレイアウトする
 [で](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) Reporting Services モバイル レポートを作成 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]できたので、スマートフォンやタブレット バージョンをレイアウトすることができます。  
@@ -21,7 +21,7 @@ ms.locfileid: "47644264"
 ![SSMRP_SalesTrendRptLayout](../../reporting-services/mobile-reports/media/ssmrp-salestrendrptlayout.png)   
 *モバイル レポートのマスター レイアウト。*  
   
-1. [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] の右上隅にあるレイアウト アイコンを選択し、**[Phone (スマートフォン)]** または **[タブレット]** を選択します。  
+1. [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] の右上隅にあるレイアウト アイコンを選択し、 **[Phone (スマートフォン)]** または **[タブレット]** を選択します。  
   
    ![SSMRP_LayoutMenu](../../reporting-services/mobile-reports/media/ssmrp-layoutmenu.png)  
      

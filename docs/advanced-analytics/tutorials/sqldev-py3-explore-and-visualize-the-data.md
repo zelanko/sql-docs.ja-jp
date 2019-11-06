@@ -1,39 +1,39 @@
 ---
-title: レッスン 1 の探索と、Python、T-SQL (SQL Server Machine Learning) を使用してデータを視覚化する |Microsoft Docs
-description: 埋め込む方法を示すチュートリアル SQL Server での Python ストアド プロシージャと T-SQL 関数
+title: 'レッスン 1: Python と T-sql を使用したデータの探索と視覚化'
+description: ストアドプロシージャと T-sql 関数 SQL Server に Python を埋め込む方法を示すチュートリアル
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 6ee82de1431a6bc21596505dc4b008b817b35830
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030982"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714702"
 ---
-# <a name="explore-and-visualize-the-data"></a>探索し、データの視覚化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="explore-and-visualize-the-data"></a>データの探索と視覚化
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、チュートリアルの一部[SQL 開発者向けの in-database Python analytics](sqldev-in-database-python-for-sql-developers.md)します。 
+この記事は、 [SQL 開発者向けのデータベース内 Python analytics](sqldev-in-database-python-for-sql-developers.md)のチュートリアルの一部です。 
 
-このステップでは、サンプル データを探索し、いくつかのプロットを生成します。 その後、Python でのグラフィック オブジェクトをシリアル化しし、それらのオブジェクトを逆シリアル化して、プロットを作成する方法について説明します。
+この手順では、サンプルデータを探索し、いくつかのプロットを生成します。 後で、Python でグラフィックスオブジェクトをシリアル化し、それらのオブジェクトを逆シリアル化してプロットする方法を学習します。
 
-## <a name="review-the-data"></a>データを確認します。
+## <a name="review-the-data"></a>データを確認する
 
-まず、少し、データ スキーマを参照するように、NYC タクシー データを使用するが容易にいくつかの変更を行いました
+まず、NYC タクシーデータを簡単に使用できるように変更を加えたため、データスキーマを参照してください。
 
-+ 元のデータセットは、タクシーの識別子と乗車記録に個別のファイルを使用します。 列に 2 つの元のデータセットを参加_medallion_、 _hack_license_、および_pickup_datetime_します。  
-+ 元のデータセットでは、多数のファイルをスパンおよびが非常に大きくします。 レコードの元の数の 1% だけを取得する downsampled を用意しています。 現在のデータ テーブルには、1,703, 957 行と 23 列があります。
++ 元のデータセットでは、タクシーの識別子と旅行記録用に個別のファイルが使用されていました。 列_medallion_、 _hack_license_、 _pickup_datetime_の2つの元のデータセットを結合しました。  
++ 元のデータセットは多くのファイルにまたがっており、非常に大きくなっていました。 元のレコード数のうち 1% だけを取得することに downsampled しました。 現在のデータテーブルには、1703957行と23列が含まれています。
 
 **タクシーの識別子**
 
-_Medallion_列はタクシーの一意の ID 番号を表します。
+_Medallion_列は、タクシーの一意の ID 番号を表します。
 
-_Hack_license_列には、タクシー運転手のライセンスの数 (匿名化された) が含まれています。
+_Hack_license_列には、タクシードライバーのライセンス番号 (匿名化) が含まれています。
 
 **乗車と料金の記録**
 
@@ -43,53 +43,53 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
 
 最後の 3 つの列はさまざまな機械学習タスクに利用できます。  _tip_amount_ 列には連続する数値が含まれ、回帰分析用の **label** 列として利用できます。 _tipped_ 列には yes/no 値のみが含まれ、二項分類に利用されます。 _tip_class_ 列には複数の **クラス ラベル** が含まれ、複数クラスの分類タスク用のラベルとして利用できます。
 
-ラベル列に使用される値はすべてに基づいて、`tip_amount`これらのビジネス ルールを使用し、列。
+ラベル列に使用される値はすべて、次の`tip_amount`ビジネスルールを使用して列に基づいています。
 
-+ ラベル列`tipped`が使用可能な値 0 および 1
++ ラベル列`tipped`の値は0と1の可能性があります
 
-    場合`tip_amount`> 0、 `tipped` = 1 それ以外の場合以外は`tipped`= 0。
+    > `tip_amount` 0、= `tipped` 1 の場合は`tipped` 、それ以外の場合は0です。
 
-+ ラベル列`tip_class`が可能なクラスの値 0-4
++ ラベル列`tip_class`に使用可能なクラス値0-4
 
     クラス 0: `tip_amount` = $0
 
-    クラス 1: `tip_amount` > $0 と`tip_amount`< = $5
+    クラス 1: `tip_amount` > $0 および`tip_amount` < = $5
     
-    クラス 2: `tip_amount` > $5 と`tip_amount`< = $10
+    クラス 2: `tip_amount` > $5 および`tip_amount` < = $10
     
-    クラス 3: `tip_amount` > $10 と`tip_amount`< = $20
+    クラス 3: `tip_amount` > $10 および`tip_amount` < = $20
     
     クラス 4: `tip_amount` > $20
 
-## <a name="create-plots-using-python-in-t-sql"></a>T-SQL で Python を使用してプロットを作成します。
+## <a name="create-plots-using-python-in-t-sql"></a>T-sql で Python を使用してプロットを作成する
 
-データ科学ソリューションの開発には、通常、集中的なデータの探索とデータの視覚化が伴います。 視覚化は、データや外れ値の分布を理解するため、このような強力なツールであるために、Python は、データを視覚化するための多くのパッケージを提供します。 **Matplotlib**モジュールは、視覚化より一般的なライブラリの 1 つし、ヒストグラム、散布、ボックス プロット、およびその他のデータ探索グラフを作成するための多くの関数が含まれています。
+データ科学ソリューションの開発には、通常、集中的なデータの探索とデータの視覚化が伴います。 視覚エフェクトは、データの分布や外れ値を理解するための強力なツールであるため、Python にはデータを視覚化するためのパッケージが多数用意されています。 **Matplotlib**モジュールは、視覚化用のより一般的なライブラリの1つであり、ヒストグラム、散布図、箱ひげ図、その他のデータ探索グラフを作成するための多くの機能が含まれています。
 
-このセクションでは、ストアド プロシージャを使用してプロットを操作する方法について説明します。 はなく、サーバー上のイメージを開くよりもに、Python オブジェクトを格納`plot`として**varbinary**データ、および、書き込み、ファイルを共有したり別の場所に表示します。
+このセクションでは、ストアドプロシージャを使用してプロットを操作する方法について説明します。 サーバーでイメージを開くのではなく、Python オブジェクト`plot`を**varbinary**データとして格納し、他の場所で共有または表示できるファイルに書き込みます。
 
-### <a name="create-a-plot-as-varbinary-data"></a>Varbinary データとしてプロットを作成します。
+### <a name="create-a-plot-as-varbinary-data"></a>Varbinary データとしてプロットを作成する
 
-ストアド プロシージャが返すシリアル化された Python`figure`オブジェクトのストリームとして**varbinary**データ。 直接、バイナリ データを表示することはできませんが、逆シリアル化し、数値を表示するクライアントでの Python コードを使用して、クライアント コンピューターにイメージ ファイルを保存します。
+このストアドプロシージャは、 **varbinary**データ`figure`のストリームとしてシリアル化された Python オブジェクトを返します。 バイナリデータを直接表示することはできませんが、クライアントで Python コードを使用して、図を逆シリアル化して表示し、イメージファイルをクライアントコンピューターに保存することができます。
 
-1. ストアド プロシージャを作成**PyPlotMatplotlib**PowerShell スクリプトは、既にしなかった場合は、します。
+1. ストアドプロシージャ**PyPlotMatplotlib**を作成します (PowerShell スクリプトによってまだ作成されていない場合)。
 
-    - 変数`@query`クエリ テキストを定義します。 `SELECT tipped FROM nyctaxi_sample`、Python のコード ブロックに、スクリプトの入力変数を引数として渡される`@input_data_1`します。
-    - Python スクリプトは非常に単純: **matplotlib** `figure`オブジェクトを使用して、ヒストグラム、散布図のプロットを作成し、これらのオブジェクトを使用してシリアル化は、`pickle`ライブラリ。
-    - シリアル化する Python のグラフィック オブジェクト、 **pandas**出力データ フレーム。
+    - 変数`@query`は、クエリテキスト`SELECT tipped FROM nyctaxi_sample`を定義し`@input_data_1`ます。これは、スクリプト入力変数の引数として Python コードブロックに渡されます。
+    - Python スクリプトは非常に単純です。 **matplotlib** `figure`オブジェクトを使用してヒストグラムと散布図を作成し、これらのオブジェクトを`pickle`ライブラリを使用してシリアル化します。
+    - Python グラフィックスオブジェクトは、出力用に **pandas** データフレームにシリアル化されます。
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
     CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
     AS
     BEGIN
-      SET NOCOUNT ON;
-      DECLARE @query nvarchar(max) =
-      N'SELECT cast(tipped as int) as tipped, tip_amount, fare_amount FROM [dbo].[nyctaxi_sample]'
-      EXECUTE sp_execute_external_script
-      @language = N'Python',
-      @script = N'
+        SET NOCOUNT ON;
+        DECLARE @query nvarchar(max) =
+        N'SELECT cast(tipped as int) as tipped, tip_amount, fare_amount FROM [dbo].[nyctaxi_sample]'
+        EXECUTE sp_execute_external_script
+        @language = N'Python',
+        @script = N'
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -133,15 +133,15 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
     GO
     ```
 
-2. 今すぐ入力クエリとしてハード コードされたデータからプロットを生成する引数なしで、ストアド プロシージャを実行します。
+2. 次に、引数を指定せずにストアドプロシージャを実行し、入力クエリとしてハードコーディングされたデータからプロットを生成します。
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
-3. 結果は、次のようになります。
+3. 結果は次のようになります。
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...
@@ -150,18 +150,18 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
     ```
 
   
-4. [Python クライアント](../python/setup-python-client-tools-sql.md)、バイナリ プロット オブジェクトを生成する SQL Server インスタンスに接続し、プロットを表示できますようになりました。 
+4. [Python クライアント](../python/setup-python-client-tools-sql.md)から、バイナリプロットオブジェクトを生成した SQL Server インスタンスに接続し、プロットを表示できるようになりました。 
 
-    これを行うには、サーバー名、データベース名、および適切な資格情報に置き換えて、次の Python コードを実行します。 Python のバージョンが、クライアントとサーバーで同じことを確認します。 また、Python ライブラリ (matplotlib など)、クライアントがサーバーにインストールされているライブラリを基準と同等以上のバージョンであることを確認してください。
+    これを行うには、次の Python コードを実行します。必要に応じて、サーバー名、データベース名、および資格情報を置き換えます。 クライアントとサーバーで Python のバージョンが同じであることを確認します。 また、クライアント上の Python ライブラリ (matplotlib など) が、サーバーにインストールされているライブラリと同じかそれ以降のバージョンであることを確認します。
   
-    **SQL Server 認証を使用します。**
+    **SQL Server 認証を使用する:**
     
     ```python
     %matplotlib notebook
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
+    cnxn = pyodbc.connect('DRIVER=SQL Server;SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
     cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
@@ -171,14 +171,14 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-    **Windows 認証を使用します。**
+    **Windows 認証を使用する場合:**
 
     ```python
     %matplotlib notebook
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
+    cnxn = pyodbc.connect('DRIVER=SQL Server;SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
     cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
@@ -188,13 +188,13 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-5.  接続が成功した場合、次のようなメッセージが表示されます。
+5.  接続に成功すると、次のようなメッセージが表示されます。
   
-    *プロットは、ディレクトリに保存されます: xxxx*
+    *プロットはディレクトリ: xxxx に保存されます。*
   
-6.  出力ファイルは、Python の作業ディレクトリに作成されます。 プロットを表示するには、Python の作業ディレクトリをファイルを開きます。 次の図は、クライアント コンピューターに保存されたプロットを示します。
+6.  出力ファイルは Python 作業ディレクトリに作成されます。 プロットを表示するには、Python 作業ディレクトリに移動し、ファイルを開きます。 次の図は、クライアントコンピューターに保存されているプロットを示しています。
   
-    ![チップの金額と料金の金額](media/sqldev-python-sample-plot.png "量と料金でチップの金額") 
+    ![チップの金額と料金 amount](media/sqldev-python-sample-plot.png "チップの金額と料金 amount") 
 
 ## <a name="next-step"></a>次の手順
 
@@ -202,5 +202,5 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
 
 ## <a name="previous-step"></a>前の手順
 
-[NYC タクシー データ セットをダウンロードします。](demo-data-nyctaxi-in-sql.md)
+[NYC タクシーデータセットをダウンロードする](demo-data-nyctaxi-in-sql.md)
 

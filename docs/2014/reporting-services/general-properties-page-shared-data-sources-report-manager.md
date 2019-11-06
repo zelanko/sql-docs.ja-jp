@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbca550f6ecb985248975b6dce332fb9ca05fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109078"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>[全般] プロパティ ページ、共有データ ソース (レポート マネージャー)
   [全般] プロパティ ページでは、共有データ ソース アイテムのプロパティを表示または変更できます。 アイテムのプロパティに対して行った変更は、 **[適用]** をクリックしたときに、そのプロパティを参照するすべてのレポートに反映されます。  
@@ -46,12 +45,12 @@ ms.locfileid: "48218322"
  共有データ ソースを有効または無効にする場合に使用します。 共有データ ソースを無効にすると、そのアイテムを参照するすべてのレポート、レポート モデル、およびデータ ドリブン サブスクリプションの処理を無効にできます。  
   
  **データ ソースの種類**  
- データ ソースから取得したデータの処理に使用する、データ処理拡張機能を指定します。 レポート サーバーにはデータ処理拡張機能が含まれています[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、XML、SAP、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、ODBC および OLE DB します。 サード パーティ ベンダーから、別のデータ処理拡張機能を入手できる可能性もあります。  
+ データ ソースから取得したデータの処理に使用する、データ処理拡張機能を指定します。 レポート サーバーには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、XML、SAP、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、ODBC および OLE DB 用のデータ処理拡張機能があります。 サード パーティ ベンダーから、別のデータ処理拡張機能を入手できる可能性もあります。  
   
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services を使用している場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースのみ選択することができます。  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services を使用している場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースのみ選択することができます。  
   
  **[接続文字列]**  
- レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続の種類によって使用する構文が決まります。 たとえば、XML データ処理拡張機能の接続文字列は、XML ドキュメントの URL になります。 ほとんどの場合、データベース サーバーおよびデータ ファイルは一般的な接続文字列で指定されます。 次の例への接続に使用する接続文字列、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]データベース。  
+ レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続の種類によって使用する構文が決まります。 たとえば、XML データ処理拡張機能の接続文字列は、XML ドキュメントの URL になります。 ほとんどの場合、データベース サーバーおよびデータ ファイルは一般的な接続文字列で指定されます。 以下に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] データベースへの接続に使用する接続文字列の例を示します。  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -71,9 +70,9 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **レポート サーバーに安全に格納されている資格情報**  
  暗号化されたユーザー名およびパスワードを、レポート サーバーのデータベースに格納します。 このオプションを選択すると、レポート (たとえば、ユーザーの操作によってではなく、スケジュールまたはイベントによって起動されるレポート) を自動的に実行できます。 既定のセキュリティを使用している場合、ユーザー名は Windows ドメイン アカウントである必要があります。 この形式でアカウントを指定:\<ドメイン >\\< ユーザー名\>します。 指定するアカウントには、レポートが使用するデータ ソースをホストするコンピューター上でローカルにログオンする権限が必要です。  
   
- 資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証を使用している場合にこのチェック ボックスをオンされません (たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証)。  
+ 資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証 (たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証) を使用している場合は、このチェック ボックスをオフにしてください。  
   
- データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する] (接続に使用する認証)** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースでは、このオプションは、SETUSER 関数を設定します。  
+ データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する] (接続に使用する認証)** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。  
   
  **Windows 統合セキュリティ**  
  現在のユーザーの Windows 資格情報を使用して、データ ソースにアクセスします。 データ ソースへのアクセスに使用される資格情報が、ネットワーク ドメインへのログオンに使用される資格情報と同じである場合に、このオプションを選択します。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報を別のコンピューターに渡すこともできます。 別のコンピューターの接続が必要な場合に、想定されるデータではなく、エラーが返されます。  

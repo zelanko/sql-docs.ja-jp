@@ -10,17 +10,17 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a1af48b83474cbeb331268fd4cf1ab808995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812944"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新
   SQL Server 2012 のサーバー インスタンスをサービス パックで更新するとき、または新しいバージョンにアップグレードするときに、順次更新または順次アップグレードを実行することにより、可用性グループのダウンタイムを手動フェールオーバー 1 回分のみに抑えることができます。 SQL Server のバージョンをアップグレードする場合、この操作をローリング アップグレードと呼びます。現在のバージョンの SQL Server に修正プログラムまたはサービス パックを適用して更新する場合、この操作をローリング アップデートと呼びます。  
   
- ここでは、SQL Server のアップグレードまたは更新についてのみ説明します。 オペレーティング システム関連のアップグレードまたは更新で、高可用性 SQL Server インスタンスが実行されている、次を参照してください[移行の AlwaysOn 可用性グループのクラスター間オペレーティング システムのアップグレード。](http://msdn.microsoft.com/library/jj873730.aspx)  
+ ここでは、SQL Server のアップグレードまたは更新についてのみ説明します。 オペレーティング システム関連のアップグレードまたは更新で、高可用性 SQL Server インスタンスが実行されている、次を参照してください[移行の AlwaysOn 可用性グループのクラスター間オペレーティング システムのアップグレード。](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 可用性グループのローリング アップグレードおよびローリング アップデートのベスト プラクティス  
  サーバーのアップグレードまたは更新の際に可用性グループのダウンタイムとデータ損失を最小限に抑えるには、次のベスト プラクティスに従ってください。  
@@ -104,7 +104,7 @@ ms.locfileid: "48155962"
   
 3.  REMOTE1 をアップグレードまたは更新  
   
-4.  PRIMARY2 をアップグレードまたは更新  
+4.  Upgrade/update PRIMARY2  
   
 5.  FCI1 を PRIMARY2 にフェールオーバーする。  
   
@@ -115,9 +115,9 @@ ms.locfileid: "48155962"
   
 |可用性グループ|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|プライマリ|||  
-|AG2||プライマリ||  
-|AG3|||プライマリ|  
+|AG1|1 次式|||  
+|AG2||1 次式||  
+|AG3|||1 次式|  
   
  この状況では、次の順序で負荷分散ローリング アップグレードまたはローリング アップデートを実行することが適切であると考えられます。  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48155962"
   
 |可用性グループ|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||プライマリ||  
-|AG2|プライマリ|||  
-|AG3|||プライマリ|  
+|AG1||1 次式||  
+|AG2|1 次式|||  
+|AG3|||1 次式|  
   
  実際の実装方法に応じて、アップグレードまたは更新の手順が変わる可能性があります。また、クライアント アプリケーションで発生するダウンタイムも変わります。  
   

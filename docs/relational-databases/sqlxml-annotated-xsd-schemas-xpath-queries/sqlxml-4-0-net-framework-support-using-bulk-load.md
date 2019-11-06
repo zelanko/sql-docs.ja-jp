@@ -13,16 +13,15 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], XML Bulk Load
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d800875c3255866463aee95ff6446f740ace03fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed725ac58b7224ad157dd7b5d06b3b522395023b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220392"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 の .NET Framework サポート - 一括読み込みの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51671071"
  マネージド環境から SQLXML 一括読み込み COM オブジェクトを使用するには、このオブジェクトにプロジェクト参照を追加する必要があります。 これによって、一括読み込み COM オブジェクトのマネージド ラッパー インターフェイスが生成されます。  
   
 > [!NOTE]  
->  マネージド XML 一括読み込みはマネージド ストリームでは動作せず、ネイティブ ストリームのラッパーが必要です。 SQLXML 一括読み込みコンポーネントはマルチスレッド環境 ('[MTAThread]' 属性) では動作しません。 次の追加情報を含む InvalidCastException 例外を取得するマルチ スレッド環境で一括ロード コンポーネントを実行しようとした場合:「インターフェイス SQLXMLBULKLOADLib.ISQLXMLBulkLoad の QueryInterface が失敗しました」。 回避するには、一括読み込みオブジェクト シングル スレッド アクセスを含むオブジェクトを作成する (などを使用して、 **[STAThread]** 属性のサンプルに示すように)。  
+>  マネージド XML 一括読み込みはマネージド ストリームでは動作せず、ネイティブ ストリームのラッパーが必要です。 SQLXML 一括読み込みコンポーネントはマルチスレッド環境 ('[MTAThread]' 属性) では動作しません。 マルチ スレッド環境で一括ロード コンポーネントを実行しようとすると、次の追加情報を含む InvalidCastException 例外が表示されます。「インターフェイス SQLXMLBULKLOADLib.ISQLXMLBulkLoad の QueryInterface が失敗しました。」 回避するには、一括読み込みオブジェクト シングル スレッド アクセスを含むオブジェクトを作成する (などを使用して、 **[STAThread]** 属性のサンプルに示すように)。  
   
  ここでは、データベースに XML データの一括読み込みを行う、実際の C# サンプル アプリケーションを紹介します。 実際のサンプルを作成するには、次の手順に従います。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "51671071"
 2.  次のスキーマをファイル schema.xml に保存します。  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  

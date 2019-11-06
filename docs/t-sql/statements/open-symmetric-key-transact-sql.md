@@ -16,15 +16,14 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], opening
 - OPEN SYMMETRIC KEY statement
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b5fbd7c16e5150c9d547699c26038e435f1e96c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129392"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +81,9 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元にはキーに対する権限が必要です。キーに対する VIEW DEFINITION 権限が拒否されていないことも必要になります。 また、暗号化解除メカニズムに応じた追加要件があります。  
   
--   DECRYPTION BY CERTIFICATE の場合は、証明書に対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
+-   DECRYPTION BY CERTIFICATE:証明書に対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
   
--   DECRYPTION BY ASYMMETRIC KEY の場合は、非対称キーに対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
+-   DECRYPTION BY ASYMMETRIC KEY:非対称キーに対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
   
 -   DECRYPTION BY PASSWORD の場合は、対称キーの暗号化に使用されたパスワードの 1 つについての情報が必要です。  
   

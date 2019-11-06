@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f5838d497808e9a251522536a00d590403674eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011304"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
   暗号化は、キーまたはパスワードを使用してデータを難読化するプロセスです。 暗号化によって、データは対応する暗号化解除キーまたはパスワードがないと使用できなくなります。 暗号化では、アクセス コントロールの問題は解決されません。 ただし、暗号化を使用すると、アクセス コントロールがバイパスされる場合でもデータ損失のリスクが限定されるので、セキュリティが強化されます。 たとえば、データベース ホスト コンピューターの構成が適切でない場合に、機密データをハッカーが入手したとしても、その情報が暗号化されていれば、ハッカーはその情報を使用できません。  
@@ -62,7 +62,7 @@ ms.locfileid: "48053772"
  証明書を使用してデータを暗号化する方法について説明します。  
   
 ## <a name="external-resources"></a>外部リソース  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 - セキュリティと保護](http://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [SQL Server 2005 のセキュリティに関する 10 のポイント](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセキュリティに関する最新情報が掲載されています。  
   
 ## <a name="see-also"></a>参照  

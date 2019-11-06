@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
@@ -14,12 +13,12 @@ ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1affac058c5df7ba5c8329cc6435be6a1f0681a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015774"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>既存の SQL トレース スクリプトから拡張イベント セッションへの変換
   拡張イベント セッションに変換する SQL トレース スクリプトが既に手元にある場合は、このトピックの手順を使用して、等価な拡張イベント セッションを作成できます。 変換を実行するために必要な情報は、trace_xe_action_map および trace_xe_event_map システム テーブル内の情報を使用して収集できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48062522"
   
 2.  トレースの ID を取得します。 そのためには、次のクエリを使用します。  
   
-    ```  
+    ```sql
     SELECT * FROM sys.traces;  
     GO  
     ```  
@@ -55,7 +54,7 @@ ms.locfileid: "48062522"
     > [!NOTE]  
     >  この例では、既定のトレースの ID (1) が使用されます。  
   
-    ```  
+    ```sql
     USE MASTER;  
     GO  
     DECLARE @trace_id int;  
@@ -82,7 +81,7 @@ ms.locfileid: "48062522"
   
     3.  次のクエリを使用して、前の手順で判明したイベントに使用する適切なデータ フィールドを特定します。 このクエリでは、拡張イベントのデータ フィールドが "event_field" 列に反映されます。 クエリ内の *<event_name>* は、前の手順で指定したイベントの名前に置き換えてください。  
   
-        ```  
+        ```sql
         SELECT xp.name package_name, xe.name event_name  
            ,xc.name event_field, xc.description  
         FROM sys.trace_xe_event_map AS em  
@@ -103,7 +102,7 @@ ms.locfileid: "48062522"
   
 1.  イベント セッションを作成するためのステートメントを追加します。*session_name* の部分は、拡張イベント セッションに使用する名前に置き換えてください。  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [Session_Name] ON SERVER;  
     CREATE EVENT SESSION [Session_Name]  
@@ -130,7 +129,7 @@ ms.locfileid: "48062522"
   
      これを等価な拡張イベントに変換するには、sqlserver.sp_statement_starting イベントと sqlserver.sp_statement_completed events イベントを一連のアクションと共に追加します。 述語のステートメントは、WHERE 句として追加されています。  
   
-    ```  
+    ```sql
     ADD EVENT sqlserver.sp_statement_starting  
        (ACTION  
           (  
@@ -158,7 +157,7 @@ ms.locfileid: "48062522"
   
 3.  非同期のファイル ターゲットを追加します。ファイル パスは、出力結果の実際の保存場所に置き換えてください。 ファイル ターゲットを指定するときは、ログ ファイルとメタデータ ファイルのパス ファイルを含める必要があります。  
   
-    ```  
+    ```sql
     ADD TARGET package0.asynchronous_file_target(  
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
@@ -167,7 +166,7 @@ ms.locfileid: "48062522"
   
 1.  出力結果は、sys.fn_xe_file_target_read_file 関数を使用して表示できます。 そのためには、次のクエリを実行します。ファイル パスは、実際に指定したパスに置き換えてください。  
   
-    ```  
+    ```sql
     SELECT *, CAST(event_data as XML) AS 'event_data_XML'  
     FROM sys.fn_xe_file_target_read_file('c:\temp\ExtendedEventsStoredProcs*.xel', 'c:\temp\ExtendedEventsStoredProcs*.xem', NULL, NULL);  
   
@@ -178,7 +177,7 @@ ms.locfileid: "48062522"
   
      sys.fn_xe_file_target_read_file 関数の詳細については、「[sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)」を参照してください。  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [session_name] ON SERVER;  
     CREATE EVENT SESSION [session_name]  
@@ -214,7 +213,7 @@ ms.locfileid: "48062522"
   
 ## <a name="example"></a>例  
   
-```  
+```sql
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
    DROP EVENT SESSION [session_name] ON SERVER;  
 CREATE EVENT SESSION [session_name]  

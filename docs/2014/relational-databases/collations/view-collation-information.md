@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], view
@@ -13,12 +12,12 @@ ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 692d64caad7d09f398d92a1cd41eb0b86111e115
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138419"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918729"
 ---
 # <a name="view-collation-information"></a>照合順序情報の表示
     

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.hostnamevalue.f1
@@ -13,12 +12,12 @@ ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f116033e54e33bc63893865bdc4339399dde4f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f8f7f1304b0d72cf59467aee16c04481fbd51ad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721193"
 ---
 # <a name="hostname-values"></a>[HOST_NAME 値]
   パラメーター化されたフィルター付きのマージ パブリケーションは、SUSER_SNAME() 関数または HOST_NAME() 関数を使用してデータにフィルターをかけます。 関数は、パブリケーションの新規作成ウィザードまたは **[パブリケーションのプロパティ]** ダイアログ ボックスで指定します。  
@@ -34,7 +33,7 @@ ms.locfileid: "48100758"
   
 ## <a name="see-also"></a>参照  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
  [プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)   
  [プッシュ サブスクリプションのプロパティの表示または変更](view-and-modify-push-subscription-properties.md)   
  [HOST_NAME (Transact-SQL)](/sql/t-sql/functions/host-name-transact-sql)   

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - permissions [SQL Server], certificates
 - REVOKE statement, certificates
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 25fae09a89359b5fafe5491f4ed3edd387fc70ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140905"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE (証明書の権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,15 +43,15 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を与える許可を取り消します。 権限自体は取り消されません。  
+ 指定した権限を与える許可を取り消すことを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
   
  *permission*  
- 証明書に対して取り消すことができる権限を指定します。 下の表をご覧ください。  
+ 証明書に対して取り消すことができる権限を指定します。 以下に一覧を示します。  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  権限を取り消す証明書を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

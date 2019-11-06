@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,15 +14,15 @@ ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6676438c37af6d00bd73cc1c26c1c27444d7c036
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63000366"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed イベント クラス
-  **Audit Login Failed** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインしようとして失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
+   **Audit Login Failed** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインしようとして失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
   
 ## <a name="audit-login-failed-event-class-data-columns"></a>Audit Login Failed イベント クラスのデータ列  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48228432"
 |**成功**|**int**|1 = 成功。 0 = 失敗。 このイベントの値は常に失敗 (0) になります。|23|はい|  
 |**TextData**|**ntext**|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2df20e27949b82a9f2e827984f0c2fb77a3814b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ddab7291807222882050233715d3ad61e25124
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061464"
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetStmtAttr**ステートメント属性の現在の設定を返します。  
   
 > [!NOTE]  
@@ -39,7 +38,7 @@ ms.locfileid: "47731990"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetStmtAttr(  
      SQLHSTMT        StatementHandle,  
@@ -75,7 +74,7 @@ SQLRETURN SQLGetStmtAttr(
 -   場合 *\*ValuePtr*ですし、固定長データ型が含まれています*BufferLength* SQL_IS_INTEGER または SQL_IS_UINTEGER のいずれかを適切なは。  
   
  *StringLengthPtr*  
- [出力](Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な *\*ValuePtr*します。 場合*ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きいまたは等しい場合*BufferLength*、内のデータ *\*ValuePtr* に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
+ [出力] (Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な *\*ValuePtr*します。 場合*ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きいまたは等しい場合*BufferLength*、内のデータ *\*ValuePtr* に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -21,17 +20,17 @@ ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729f50c43b277b6456d834e7706c026b36cddfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082748"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、時系列モデルでコンテンツ クエリを使用すると、検出された周期的構造に関する追加情報を取得できます。一方、予測クエリを使用すると、次の 5 ～ 10 のタイム スライスの予測などを取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
   
- ここでは、Microsoft タイム シリーズ アルゴリズムに基づくモデルに対してこの両方の種類のクエリを作成する方法について説明します。  
+ ここでは、Microsoft Time Series アルゴリズムに基づくモデルに対してこの両方の種類のクエリを作成する方法について説明します。  
   
  **コンテンツ クエリ**  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48067992"
 ## <a name="getting-information-about-a-time-series-model"></a>時系列モデルに関する情報の取得  
  モデル コンテンツのクエリを使用すると、モデルに関する基本的な情報を取得できます (モデルの作成時に使用されたパラメーターや、モデルが最後に処理された時間など)。 以下の例は、データ マイニング スキーマ行セットを使用してモデル コンテンツのクエリを実行するための基本構文を示しています。  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1 : モデルの周期性のヒントを取得する  
+###  <a name="bkmk_Query1"></a> サンプル クエリ 1:モデルの周期性のヒントを取得する  
  時系列内で検出された周期性は、ARIMA ツリーや ARTXP ツリーに対してクエリを実行することによって取得できます。 しかし、完成したモデルの周期性は、モデルの作成時にヒントとして指定した周期性と同じであるとは限りません。 モデルの作成時にパラメーターとして指定されたヒントを取得するには、次の DMX ステートメントを使用して、マイニング モデル コンテンツ スキーマ行セットに対してクエリを実行します。  
   
 ```  
@@ -74,7 +73,7 @@ WHERE MODEL_NAME = '<model name>'
 > [!NOTE]  
 >  ここでは、読みやすくするために結果が切り捨てられています。  
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2 : ARIMA モデルの式を取得する  
+###  <a name="bkmk_Query2"></a> サンプル クエリ 2:ARIMA モデルの式を取得する  
  ARIMA モデルの式を取得するには、個々のツリーの任意のノードに対してクエリを実行します。 ARIMA モデル内の各ツリーは、それぞれ異なる周期性を表します。また、複数のデータ系列がある場合は、データ系列ごとに固有の周期性ツリーのセットがあります。 したがって、特定のデータ系列の式を取得するには、まずそのツリーを特定する必要があります。  
   
  たとえば、TA プレフィックスはノードが ARIMA ツリーの一部であることを示します。一方、TS プレフィックスは ARTXP ツリーで使用されます。 モデル コンテンツにクエリを実行して NODE_TYPE 値が 27 のノードを検索することで、すべての ARIMA ルート ツリーを見つけることができます。 また、ATTRIBUTE_NAME の値を使用して、特定のデータ系列の ARIMA ルート ノードを検索することもできます。 次のクエリ例は、ヨーロッパ地域における R250 モデルの販売数量を表す ARIMA ノードを検索します。  
@@ -98,15 +97,15 @@ WHERE NODE_NAME = 'TA00000007'
   
  例の結果を次に示します。  
   
-|Short equation|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|Short equation|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24....|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- この情報の意味の詳細については、「[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
+ この情報の意味の詳細については、「 [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3 : ARTXP モデルの式を取得する  
+###  <a name="bkmk_Query3"></a> サンプル クエリ 3:ARTXP モデルの式を取得します。  
  ARTxp モデルでは、ツリーの各レベルにさまざまな情報が格納されます。 ARTxp モデルの構造と式の意味の詳細については、「[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
   
  次の DMX ステートメントは、ヨーロッパにおける R250 モデルの販売数量を表す ARTxp ツリーの情報の一部を取得します。  
@@ -124,7 +123,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- この情報の意味の詳細については、「[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
+ この情報の意味の詳細については、「 [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>時系列モデルでの予測の作成  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]以降では時系列モデルに新しいデータを追加し、モデルに新しいデータを自動的に組み込むことができます。 次の 2 つの方法のいずれかで、時系列マイニング モデルに新しいデータを追加します。  
@@ -136,13 +135,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> 置換および拡張操作の動作について  
  時系列モデルに新しいデータを追加するときは、トレーニング データを拡張するか置換するかを指定できます。  
   
--   **拡張:** データ系列を拡張すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって新しいデータが既存のトレーニング データの末尾に追加されます。 トレーニング ケースの数も増加します。  
+-   **拡張します。** データ系列を拡張すると[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]既存のトレーニング データの最後に、新しいデータを追加します。 トレーニング ケースの数も増加します。  
   
      モデル ケースの拡張は、新しいデータを使用して継続的にモデルを更新するときに便利です。 たとえば、トレーニング セットを時間の経過と共に成長させるには、単にモデルを拡張します。  
   
-     作成する、データを拡張する、 `PREDICTION JOIN` 、タイム シリーズ モデルで、新しいデータのソースを指定しを使用して、`EXTEND_MODEL_CASES`引数。  
+     データを拡張するには、時系列モデルに `PREDICTION JOIN` を作成し、新しいデータのソースを指定し、`EXTEND_MODEL_CASES` 引数を使用します。  
   
--   **置換:** データ系列のデータを置換すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってトレーニング済みのモデルは保持されますが、既存のトレーニング ケースの一部または全部が新しいデータ値で置換されます。 このためトレーニング データのサイズは変わりませんが、ケース自体は継続的に新しいデータに置換されます。 新しいデータを十分に提供すれば、まったく新しい系列でトレーニング データを置換できます。  
+-   **置き換えます。** データ系列のデータを置き換えるときに[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]がトレーニング済みのモデルのままで新しいデータ値を使用して、既存のトレーニング ケースの一部またはすべてを置き換えます。 このためトレーニング データのサイズは変わりませんが、ケース自体は継続的に新しいデータに置換されます。 新しいデータを十分に提供すれば、まったく新しい系列でトレーニング データを置換できます。  
   
      1 セットのケースでモデルをトレーニングし、そのモデルを別のデータ系列に適用するときは、モデル ケースの置換が便利です。  
   
@@ -179,7 +178,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> REPLACE_MODEL_CASES を使用した予測の作成  
  モデルのケースを置換するときは、モデルのサイズは同じですが、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってモデルの個々のケースが置換されます。 これは、トレーニング データ セットを一定のサイズに保持することが重要なクロス予測およびシナリオに便利です。  
   
- たとえば、ストアの 1 つの販売データが不十分であるとします。 特定の地域のすべてのストアの販売を平均し、モデルをトレーニングして、汎用モデルを作成できます。 作成する十分な販売データを使用しないでストアの予測には、次に、`PREDICTION JOIN`そのストアだけの新しい販売データ。 このようにするとき、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では地域モデルから派生するパターンは保持されますが、既存のトレーニング ケースは個々のストアのデータで置換されます。 その結果、予測値は個々のストアの傾向を示す線に近づきます。  
+ たとえば、ストアの 1 つの販売データが不十分であるとします。 特定の地域のすべてのストアの販売を平均し、モデルをトレーニングして、汎用モデルを作成できます。 次に、十分な販売データを使用しないでストアの予測を作成するには、そのストアだけの新しい販売データに対して `PREDICTION JOIN` を作成します。 このようにするとき、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では地域モデルから派生するパターンは保持されますが、既存のトレーニング ケースは個々のストアのデータで置換されます。 その結果、予測値は個々のストアの傾向を示す線に近づきます。  
   
  `REPLACE_MODEL_CASES` 引数を使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって継続して新しいケースがケース セットの末尾に追加され、対応する数がケース セットの先頭から削除されます。 新しいデータを元のトレーニング セットよりも多く追加する場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって最も古いデータが破棄されます。 新しい値が十分に提供された場合は、完全に新しいデータに基づいて予測を行うことができます。  
   
@@ -222,6 +221,6 @@ AND NODE_TYPE = 15
  [データ マイニング クエリ](data-mining-queries.md)   
  [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)   
- [タイム シリーズ モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

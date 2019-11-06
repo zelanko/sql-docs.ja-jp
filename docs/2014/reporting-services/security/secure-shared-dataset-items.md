@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 590d24fb56a91ce4bea13e5404c24a395986a397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 29b3430e4a29130c4189fbce1a9a023b7a7f26da
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101636"
 ---
 # <a name="secure-shared-dataset-items"></a>共有データセット アイテムをセキュリティで保護する
   レポート サーバーでは、複数のレポートで共有データセット アイテムを使用できます。 共有データセットをセキュリティ保護することによって、共有データセットにユーザーがアクセスする度合いを制御できます。 既定では、あらかじめ登録された **Administrators** グループのメンバーであるユーザーのみが、共有データセットの表示、プロパティの変更、キャッシュの有効化、キャッシュ更新計画の作成、およびアイテムの削除を行えます。 他のすべてのユーザーについては、共有データセットへのアクセスを許可するロールの割り当てを作成する必要があります。  
@@ -47,12 +46,12 @@ ms.locfileid: "48098812"
 |レポートの使用|共有データセット定義を表示します。|コンテンツ マネージャー<br /><br /> レポート ビルダー|  
 |アイテムへのセキュリティの設定|共有データセットへのアクセスを制御するロールの割り当てを作成および変更します。 このタスクは、"レポートの表示" または "レポートの管理" のいずれかのタスクと併用する必要があります。 それ以外の場合、ユーザーはアイテムを選択できないので効果がありません。|コンテンツ マネージャー|  
   
- 詳細については、次を参照してください。[アイテム レベルのタスク](tasks-and-permissions-item-level-tasks.md)と[定義済みロール](role-definitions-predefined-roles.md)します。  
+ 詳細については、「 [アイテムレベルのタスク](tasks-and-permissions-item-level-tasks.md) 」と「 [定義済みロール](role-definitions-predefined-roles.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [共有データセットを管理します。](../report-data/manage-shared-datasets.md)   
+ [共有データセットを管理する](../report-data/manage-shared-datasets.md)   
  [フォルダーをセキュリティで保護する](secure-folders.md)   
- [レポートとリソースを保護します。](secure-reports-and-resources.md)   
+ [レポートとリソースの保護](secure-reports-and-resources.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   

@@ -26,21 +26,20 @@ helpviewer_keywords:
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ce3a973f84664769ced971eedb28a1c13faeae8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 81bdd9f2077a3fb773e36399aedc9c2323169f2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929067"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  **date**、**smalldatetime**、**datetime**、**datetime2**、**datetimeoffset** の各文字列を解釈する際の日付要素 (月、日、年) の順序を指定します。  
+  日付の各文字列を解釈するために、日付要素 (月、日、年) の順序を設定します。 これらの文字列の型は、**date**、**smalldatetime**、**datetime**、**datetime2**、**datetimeoffset** です。  
   
- すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,17 +50,17 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>引数  
- *format* | **@**_format_var_  
- 日付要素の順序を指定します。 有効なパラメーターは、**mdy**、**dmy**、**ymd**、**ydm**、**myd**、**dym** です。 Unicode または Unicode に変換可能な 2 バイト文字セット (DBCS) を指定できます。 言語設定が英語の既定値は **mdy** です。 サポートされている全言語の既定の DATEFORMAT については、「[sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)」を参照してください。  
+ *format* |  **@** _format_var_  
+ 日付要素の順序を指定します。 有効なパラメーターは、**mdy**、**dmy**、**ymd**、**ydm**、**myd**、**dym** です。 Unicode または Unicode に変換可能な 2 バイト文字セット (DBCS) を指定できます。 米国英語の既定値は **mdy** です。 サポートされている全言語の既定の DATEFORMAT については、「[sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  DATEFORMAT **ydm** は、**date**、**datetime2**、**datetimeoffset** データ型にはサポートされていません。  
   
- 文字列の形式によっては、DATEFORMAT 設定が文字列の解釈に与える影響が、**datetime** および **smalldatetime** の値と、**date**、**datetime2**、**datetimeoffset** の値で、異なる場合があります。 この設定は、文字列をデータベース格納用の日付値に変換する際の解釈に影響します。 データベースに格納された日付データ型の値 (ストレージ形式) の表示には影響しません。  
+ DATEFORMAT の設定は、文字列の形式によっては、日付データ型の文字列の解釈が異なる場合があります。 たとえば、**datetime** および **smalldatetime** の解釈は、**date**、**datetime2**、または **datetimeoffset** と一致しないことがあります。 DATEFORMAT は、文字列をデータベースの日付値に変換するときの解釈に影響します。 日付データ型の値の表示や、データベースのストレージ形式には影響しません。  
   
  ISO 8601 など、一部の文字列形式は、DATEFORMAT 設定とは無関係に解釈されます。  
   
- SET DATEFORMAT は、解析時ではなく実行時に設定されます。  
+ SET DATEFORMAT の設定は、解析時ではなく実行時に設定されます。  
   
  SET DATEFORMAT で設定される日付の形式は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) で暗黙的に設定される日付の形式をオーバーライドします。  
   
@@ -91,6 +90,4 @@ GO
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 

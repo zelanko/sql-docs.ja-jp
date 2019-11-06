@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - WMI Classes
@@ -21,12 +19,12 @@ ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4c7df5e46c6f552ead1144eae97b44700faa0820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b83388ff3be4c8cfdfec72968230f957358b1960
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63288422"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>WMI Provider for Configuration Management のクラス
   WMI (Windows Management Instrumentation) Provider for Configuration Management は、次のクラスに対して機能を提供します。  

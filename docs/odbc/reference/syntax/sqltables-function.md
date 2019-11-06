@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e99dd2f5cf3186120297d7679f87e973d5164a57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039530"
 ---
 # <a name="sqltables-function"></a>SQLTables 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: グループを開く。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。[グループを開く]  
   
- **概要**  
+ **まとめ**  
  **SQLTables**のテーブル、カタログ、またはスキーマ名、およびテーブル型を特定のデータ ソースに格納されている一覧を返します。 ドライバーは、その結果、情報を設定を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLTables(  
      SQLHSTMT       StatementHandle,  
@@ -156,13 +155,13 @@ SQLRETURN SQLTables(
 |TABLE_CAT (ODBC 1.0)|1|Varchar|カタログ名。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得するときなどに、他のユーザーではなく一部のテーブルのカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得するときなどに、他のユーザーではなく一部のテーブルのスキーマをサポートする場合 ("")、それらのテーブル スキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|テーブル名です。|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|テーブル型の名前。次のいずれか:"TABLE"、"VIEW"、「システム テーブル」、「グローバルの一時」、「ローカル一時」、「エイリアス」、「シノニム」、またはデータ ソース固有の型の名前。<br /><br /> 「エイリアス」と「シノニム」の意味では、ドライバー固有です。|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|テーブル型の名前。次のいずれか:"TABLE"、"VIEW"、「システム テーブル」、「グローバルの一時」、「ローカル一時」、「エイリアス」、「シノニム」、またはデータ ソースに固有の型の名前。<br /><br /> 「エイリアス」と「シノニム」の意味では、ドライバー固有です。|  
 |「解説」(ODBC 1.0)|5|Varchar|テーブルの説明。|  
   
 ## <a name="example"></a>例  
  次のサンプル コードでは、ハンドルと接続は解放されません。 参照してください[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)と[SQLFreeStmt 関数](../../../odbc/reference/syntax/sqlfreestmt-function.md)ハンドルおよびステートメントを解放するコード サンプルについてはします。  
   
-```  
+```cpp  
 // SQLTables.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

@@ -7,26 +7,23 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c26b1be3e0a107978df25f5f66f9dbd6b330b618
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17e385913c362a2921d715607ca590d66ed69a48
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783770"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262815"
 ---
 # <a name="external-tools"></a>[外部ツール]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスを使用すると、SQL Server 構成マネージャーやメモ帳などの外部ツールを **[ツール]** メニューに追加できます。 外部ツールを追加することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で作業している間に他のアプリケーションを簡単に起動できます。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 さらに、一部のツールの出力は [出力] ウィンドウに表示できます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[メニューの内容]**  
 **[ツール]** メニューに現在追加されている項目のタイトルを一覧表示します。 メニューに表示される項目の順序を変更するには、 **[上へ移動]** と **[下へ移動]** を使用します。 メニューから項目を削除するには、 **[削除]** ボタンを使用します。  
   
@@ -76,8 +73,7 @@ ms.locfileid: "47783770"
   
 3.  **[コマンド]** ボックスで、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 管理コンソールの実行可能ファイルへのパスを「 **C:\WINNT\system32\mmc.exe**」のように入力します。  
   
-4.  **[引数]** ボックスで、.msc ファイルへのパスを「 **"C:\WINNT\system32\SQLServerManager.msc"**」のように入力します。  
+4.  **[引数]** ボックスで、.msc ファイルへのパスを「 **"C:\WINNT\system32\SQLServerManager.msc"** 」のように入力します。  
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [スタート] **メニューで** ショートカットのプロパティを表示して、コンピューター上のファイルの場所を確認します。  
-  

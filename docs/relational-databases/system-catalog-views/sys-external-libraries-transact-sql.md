@@ -1,10 +1,10 @@
 ---
-title: sys.external_libraries (TRANSACT-SQL) |Microsoft Docs
+title: external_libraries (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: system-objects
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - external_libraries
@@ -15,38 +15,41 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.external_libraries catalog view
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19704a37c9f34ee3b27bdee962246d98c0b18e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac6ad0872e813d36d9884a00f979b2a5284cd4a3
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796620"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536159"
 ---
-# <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="sysexternal_libraries-transact-sql"></a>external_libraries (Transact-sql)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
+では、R、Python、Java などの外部ランタイムに関連するパッケージライブラリの管理がサポートされています。
 
-R や Python などの外部のランタイムに関連するパッケージ ライブラリの管理をサポートしています。
+> [!NOTE]
+> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォーム上の R、Python、および Java は SQL Server 2019 以降でサポートされています。
 
-## <a name="sysexternallibraries"></a>sys.external_libraries
+## <a name="sysexternal_libraries"></a>sys.external_libraries
 
-カタログ ビューの sys.external_libraries には、データベースにアップロードされている外部ライブラリごとに 1 行が一覧表示します。
+カタログビュー external_libraries には、データベースにアップロードされた各外部ライブラリの行が一覧表示されます。
 
 |列名 |データ型 | 説明|
 |------|------|------|
-|external_library_id |ssNoversion | 外部ライブラリ オブジェクトの ID。 |
-|NAME |sysname |外部ライブラリの名前。 所有者ごとのデータベース内で一意です。|
-|principal_id |ssNoversion |この外部ライブラリを所有するプリンシパルの ID。 |
-|language | sysname | 言語または外部ライブラリをサポートするランタイムの名前。 有効な値は、'R' です。 追加のランタイムは、今後追加される可能性があります。|
-|スコープ (scope) |ssNoversion |パブリック スコープ以外の場合は 0プライベート スコープ 1 |  
-|scope_desc |varchar (7) |パッケージがパブリックかプライベートかどうかを示します|
+|external_library_id |int | 外部ライブラリオブジェクトの ID。 |
+|name |sysname |外部ライブラリの名前。 所有者ごとにデータベース内で一意です。|
+|principal_id |int |この外部ライブラリを所有するプリンシパルの ID。 |
+|language | sysname | 外部ライブラリをサポートする言語またはランタイムの名前。 有効な値は、' R '、' Python '、および ' Java ' です。 今後、追加のランタイムが追加される可能性があります。|
+|スコープ (scope) |int |パブリックスコープの場合は0。プライベートスコープの場合は1 |  
+|scope_desc |varchar (7) |パッケージがパブリックであるかプライベートであるかを示します|
 
+## <a name="see-also"></a>参照  
 
-## <a name="see-also"></a>関連項目  
-[sys.external_library_files](sys-external-library-files-transact-sql.md)  
-[外部ライブラリを作成します。](../../t-sql/statements/create-external-library-transact-sql.md)  
-[SQL Server R Services のパッケージの管理](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
++ [sys.external_library_files](sys-external-library-files-transact-sql.md)  
++ [外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)  
++ [SQL Server に新しい R パッケージをインストールする](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
++ [SQL Server に新しい Python パッケージをインストールする](../../advanced-analytics/python/install-additional-python-packages-on-sql-server.md)  

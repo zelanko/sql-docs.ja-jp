@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.querydesigner
@@ -22,12 +22,12 @@ ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85b7b24f7a4a21de9602f11c9f05a5882db3ba06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63460002"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>クエリおよびビュー デザイナー ツール (Visual Database Tools)
   クエリ、ビュー、インライン関数、または単一ステートメント ストアド プロシージャをデザインするときに使用するデザイナーは、ダイアグラム ペイン、抽出条件ペイン、SQL ペイン、および結果ペインで構成されています。  

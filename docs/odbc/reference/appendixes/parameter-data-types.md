@@ -3,8 +3,6 @@ title: パラメーターのデータ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6c2a73aec119b7572cad93dedb2994235329cb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.reviewer: ''
+ms.openlocfilehash: 5140c69184332b1760859421b7e802a5163a0f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100603"
 ---
 # <a name="parameter-data-types"></a>パラメーターのデータ型
 各パラメーターが指定されている場合でも**SQLBindParameter**は、SQL データ型を SQL ステートメントのパラメーターを使用して定義されていない組み込みデータ型であります。 そのため、パラメーター マーカーはステートメントのもう 1 つのオペランドからそのデータ型を推論することができる場合にのみ、SQL ステートメントに含めることができます。 でなどの算術式でしょうか。 + COLUMN1、パラメーターのデータ型は、列 1 で表される名前付きの列のデータ型から推論することができます。 データ型を特定できない場合、アプリケーションでパラメーター マーカーを使用することはできません。  

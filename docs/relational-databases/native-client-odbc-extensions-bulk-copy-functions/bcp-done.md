@@ -15,22 +15,21 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_done function
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7393b4900b2942ef67f28fc6ecd9cbf3eee5d54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5db617d974eee588c8a6efd52a2febf34da1f4f4
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818710"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707693"
 ---
-# <a name="bcpdone"></a>bcp_done
+# <a name="bcp_done"></a>bcp_done
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  プログラム変数から一括コピーを終了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メンテナンスに伴う[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)します。  
+  [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)で実行されるプログラム変数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを終了します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,10 +44,10 @@ DBINT bcp_done (
  一括コピーが有効な ODBC 接続ハンドルです。  
   
 ## <a name="returns"></a>戻り値  
- 最後の呼び出し後に完全に保存されている行の数[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)またはエラーが発生した場合は-1。  
+ [Bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)を最後に呼び出した後に完全に保存された行の数。エラーの場合は-1。  
   
-## <a name="remarks"></a>Remarks  
- 呼び出す**bcp_done**を最後に呼び出した後[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)または[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)します。 呼び出しに失敗する**bcp_done**エラーですべてのデータの結果をコピーした後。  
+## <a name="remarks"></a>コメント  
+ [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)または[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を最後に呼び出した後に**bcp_done**を呼び出します。 すべてのデータをコピーした後に**bcp_done**を呼び出さないと、エラーが発生します。  
   
 ## <a name="see-also"></a>関連項目  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

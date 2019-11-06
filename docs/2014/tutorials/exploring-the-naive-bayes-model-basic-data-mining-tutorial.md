@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b06708d5-4477-4a51-bf8d-0b1e3c1f9ebb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc0e052b49cbfbf2324850aced8bd4753ca7ee3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472886"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Naive Bayes モデルの検証 (基本的なデータ マイニング チュートリアル)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムは、自転車の購入と入力属性の間の相互作用を表示するためのいくつかのメソッドを提供します。  
@@ -95,7 +94,7 @@ ms.locfileid: "48058172"
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
  [クラスター モデルの検証&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Naive Bayes ビューアーを使用してモデルを参照します。](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)   
  [属性の識別 タブ&#40;マイニング モデル ビューアー&#41;](../../2014/analysis-services/attribute-discrimination-tab-mining-model-viewer.md)   
  [属性のプロファイル タブ&#40;マイニング モデル ビューアー&#41;](../../2014/analysis-services/attribute-profiles-tab-mining-model-viewer.md)   

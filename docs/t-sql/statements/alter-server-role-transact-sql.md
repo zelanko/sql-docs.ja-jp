@@ -16,16 +16,15 @@ helpviewer_keywords:
 - SERVER ROLE, ALTER
 - ALTER SERVER ROLE statement
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1b80f0d2ee798eea6aafb92d10aae50c14ceee2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070271"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +64,7 @@ ADD MEMBER *server_principal*
 DROP MEMBER *server_principal*  
 指定されたサーバー プリンシパルをサーバー ロールから削除します。 *server_principal* には、ログインまたはユーザー定義サーバー ロールを指定できます。 *server_principal* に、固定サーバー ロール、データベース ロール、または sa を指定することはできません。  
   
-WITH NAME **=**_new_server_role_name_  
+WITH NAME **=** _new_server_role_name_  
 ユーザー定義サーバー ロールの新しい名前を指定します。 サーバー内に存在しない名前を指定してください。  
   
 ## <a name="remarks"></a>Remarks  
@@ -92,7 +91,7 @@ WITH NAME **=**_new_server_role_name_
 ユーザー定義サーバー ロールにメンバーを追加するには、`sysadmin` 固定サーバー ロールのメンバーであるか、`CONTROL SERVER` または `ALTER ANY SERVER ROLE` 権限を持っている必要があります。 または、そのロールに対する `ALTER` 権限を持っている必要があります。  
   
 > [!NOTE]  
->  固定サーバー ロールとは異なり、ユーザー定義サーバー ロールのメンバーは、同じロールにメンバーを追加する権限がもともとありません。  
+>  固定サーバー ロールとは異なり、ユーザー定義サーバー ロールのメンバーには、同じロールにメンバーを追加する権限がもともとありません。  
   
 ## <a name="examples"></a>使用例  
   
@@ -121,7 +120,7 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. サーバー ロールからドメイン アカウントを削除する  
-次の例では、`adventure-works\roberto0` という名前のユーザー定義サーバー ロールから `Production` という名前のドメイン アカウントを削除します。  
+次の例では、`Production` という名前のユーザー定義サーバー ロールから `adventure-works\roberto0` という名前のドメイン アカウントを削除します。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  

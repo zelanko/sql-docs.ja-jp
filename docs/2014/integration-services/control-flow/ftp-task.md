@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ba03c8bcfad515fbe7a651822177ffa349dff25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831540"
 ---
 # <a name="ftp-task"></a>FTP タスク
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
@@ -76,8 +75,8 @@ ms.locfileid: "48079181"
  プログラムによってこれらのプロパティを設定する方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [FTP タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
- [FTP タスク エディター&#40;ファイル転送 ページ&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [[FTP タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
+ [FTP タスク エディター ([ファイル転送] ページ)](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

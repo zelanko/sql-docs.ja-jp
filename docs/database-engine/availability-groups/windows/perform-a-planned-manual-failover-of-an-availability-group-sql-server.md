@@ -1,6 +1,7 @@
 ---
-title: 可用性グループの計画的な手動フェールオーバーの実行 (SQLServer) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの計画的な手動フェールオーバーの実行
+description: このトピックでは、Always On 可用性グループの計画的な手動ールオーバーを実行する方法について説明します。
+ms.custom: seodec18
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014591"
 ---
-# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
+# <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上でデータを失わずに手動フェールオーバー (*計画的な手動フェールオーバー*) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 AlwaysOn 可用性グループのフェールオーバーのように、計画的な手動フェールオーバーではセカンダリ レプリカがプライマリ ロールに移行します。 同時に、フェールオーバーによって元のプライマリ レプリカがセカンダリ ロールに移行します。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "47854060"
     -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [SQL Server PowerShell のヘルプの参照](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> フォロー アップ: 可用性グループの手動フェールオーバーを実行した後 
+##  <a name="FollowUp"></a> 補足情報:可用性グループの手動フェールオーバーを実行した後 
  可用性グループの [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] の外側でフェールオーバーした場合、Windows Server フェールオーバー クラスタリング ノードのクォーラム投票を調整して新しい可用性グループの構成を反映します。 詳細については、「[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)」を参照してください。 
 
 <a name = "ReadScaleOutOnly"><a/>

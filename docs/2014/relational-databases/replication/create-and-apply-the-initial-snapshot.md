@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
@@ -14,12 +13,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bd30b84643032cf68796b9ebc14bf0407d76427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721684"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、初期スナップショットを作成および適用する方法について説明します。 パラメーター化されたフィルターを使用するマージ パブリケーションでは、2 つの部分から成るスナップショットが必要です。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
@@ -85,7 +84,7 @@ ms.locfileid: "48215632"
   
     -   **Windows 資格情報に対応するパスワードを @job_password** に指定します。  
   
-    -   (省略可) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **@publisher_security_mode** の値に **@publisher_security_mode** を指定します。 この場合は、さらに、 **@publisher_login** 」および「 **@publisher_password**」をご覧ください。  
+    -   (省略可) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **@publisher_security_mode** の値に **@publisher_security_mode** を指定します。 この場合は、さらに、 **@publisher_login** 」および「 **@publisher_password** 」をご覧ください。  
   
     -   (省略可) スナップショット エージェント ジョブの同期スケジュールを指定します。 詳しくは、「 [Specify Synchronization Schedules](specify-synchronization-schedules.md)」をご覧ください。  
   
@@ -120,13 +119,13 @@ ms.locfileid: "48215632"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トランザクション パブリケーションを作成し、 **sqlcmd** スクリプト変数を使用して、新しいパブリケーション用にスナップショット エージェント ジョブを追加します。 ジョブを開始するコードも含まれています。  
@@ -148,7 +147,7 @@ ms.locfileid: "48215632"
  スナップショット エージェントは、パブリッシャーが作成された後でスナップショットを生成します。 レプリケーション管理オブジェクト (RMO) およびレプリケーション エージェント機能への直接的なマネージド コード アクセスを使用して、これらのスナップショットをプログラムで生成できます。 使用するオブジェクトは、レプリケーションの種類によって異なります。 スナップショット エージェントを同期的に開始する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> オブジェクトを使用し、非同期的に開始する場合はエージェント ジョブを使用します。 初期スナップショットの生成後、サブスクリプションを最初に同期するときに、初期スナップショットをサブスクライバーに転送して適用することができます。 既存のスナップショットに最新の有効なデータが含まれていない場合は、エージェントを再実行する必要があります。 詳細については、「[Maintain Publications](publish/maintain-publications.md)」(パブリケーションの管理) を参照してください。  
   
 > [!IMPORTANT]  
->  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+>  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>スナップショット エージェント ジョブを非同期的に開始して、スナップショット パブリケーションまたはトランザクション パブリケーションの初期スナップショットを生成するには  
   
@@ -156,13 +155,13 @@ ms.locfileid: "48215632"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを読み込みます。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを読み込みます。 このメソッドが `false` を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
-4.  場合の値<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>は`false`、呼び出す<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>このパブリケーションに対してスナップショット エージェント ジョブを作成します。  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> の値が `false` の場合は、<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> を呼び出して、このパブリケーション用のスナップショット エージェント ジョブを作成します。  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> メソッドを呼び出して、このパブリケーションのスナップショットを生成するエージェント ジョブを開始します。  
   
-6.  (省略可能)ときの値<xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A>は`true`スナップショットはサブスクライバーに使用できます。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> の値が `true` である場合は、スナップショットをサブスクライバーに使用できます。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>スナップショット エージェント ジョブを同期的に実行して、スナップショット パブリケーションまたはトランザクション パブリケーションの初期スナップショットを生成するには  
   
@@ -190,13 +189,13 @@ ms.locfileid: "48215632"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを読み込みます。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを読み込みます。 このメソッドが `false` を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
-4.  場合の値<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>は`false`、呼び出す<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>このパブリケーションに対してスナップショット エージェント ジョブを作成します。  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> の値が `false` の場合は、<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> を呼び出して、このパブリケーション用のスナップショット エージェント ジョブを作成します。  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> メソッドを呼び出して、このパブリケーションのスナップショットを生成するエージェント ジョブを開始します。  
   
-6.  (省略可能)ときの値<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>は`true`スナップショットはサブスクライバーに使用できます。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> の値が `true` である場合は、スナップショットをサブスクライバーに使用できます。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>スナップショット エージェントを同期的に実行して、マージ パブリケーションの初期スナップショットを生成するには  
   
@@ -231,10 +230,10 @@ ms.locfileid: "48215632"
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Publication](publish/create-a-publication.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
  [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
  [スナップショットの作成および適用](create-and-apply-the-snapshot.md)   
  [Initialize a Subscription with a Snapshot (スナップショットを使用したサブスクリプションの初期化)](initialize-a-subscription-with-a-snapshot.md)   

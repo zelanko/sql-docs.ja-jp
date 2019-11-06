@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196840"
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、リレーションシップの外部キー側を変更できます。 テーブルの外部キーを変更すると、主キー テーブルの列に関連付けられる列が変更されます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48130632"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  新しい外部キー列は、関連付けられる主キー列のデータ型およびサイズと一致する必要があります。ただし、次の例外があります。  
@@ -83,7 +82,7 @@ ms.locfileid: "48130632"
      制約を作成した時点、または制約を再度有効にした時点よりも前からテーブルに存在しているすべてのデータについて、その制約に対して検証します。  
   
      **[テーブルと列の指定] カテゴリ**  
-     展開すると、リレーションシップの外部キーおよび主キー (一意キー) として、どのテーブルのどの列が機能しているかわかります。 これらの値を編集または定義するには、プロパティ フィールドの右にある省略記号ボタン (**[...]**) をクリックします。  
+     展開すると、リレーションシップの外部キーおよび主キー (一意キー) として、どのテーブルのどの列が機能しているかわかります。 これらの値を編集または定義するには、プロパティ フィールドの右にある省略記号ボタン ( **[...]** ) をクリックします。  
   
      **[外部キーの基本テーブル]**  
      選択したリレーションシップで、どのテーブルが外部キーとして機能する列を含んでいるかを示します。  
@@ -140,7 +139,7 @@ ms.locfileid: "48130632"
   
     -   **[既定値の設定]** &#xA0;&#xA0;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
   
-4.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+4.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **外部キーを変更するには**  

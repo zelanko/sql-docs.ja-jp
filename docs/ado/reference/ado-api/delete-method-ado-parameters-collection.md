@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8eb7d5d58e0f6afe31304b6fce13da2d8c48e54e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933172"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete メソッド (ADO Parameters コレクション)
 オブジェクトを削除、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。  
@@ -39,12 +38,12 @@ Parameters.Delete Index
  A**文字列**をコレクション内で、削除するオブジェクトまたはオブジェクトの位置 (インデックス) の名前を含む値です。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**削除**一連のメソッドを使用して、一方のオブジェクトをコレクションから削除できます。 このメソッドでのみ使用できます、**パラメーター**のコレクションを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 使用する必要があります、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティまたはそのコレクションのインデックスを呼び出すときに、**削除**メソッド: オブジェクト変数が有効な引数ではありません。  
+ 使用して、**削除**一連のメソッドを使用して、一方のオブジェクトをコレクションから削除できます。 このメソッドでのみ使用できます、**パラメーター**のコレクションを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 使用する必要があります、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティまたはそのコレクションのインデックスを呼び出すときに、**削除**メソッド、オブジェクト変数は有効な引数ではありません。  
   
 ## <a name="applies-to"></a>適用対象  
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Delete メソッド (ADO Fields コレクション)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Delete メソッド (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord メソッド (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

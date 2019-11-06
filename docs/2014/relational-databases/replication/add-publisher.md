@@ -1,11 +1,10 @@
 ---
-title: パブリッシャーの追加 | Microsoft Docs
+title: パブリッシャーの追加 ダイアログ ボックス
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.addpublisher.f1
@@ -15,14 +14,14 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df8cd5e81352bbf0389e56de741f383a4f40d477
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676915"
 ---
-# <a name="add-publisher"></a>[パブリッシャーの追加]
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>SQL Server レプリケーション パブリッシャーの追加 ダイアログ ボックス 
   **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  
   
 ## <a name="options"></a>および  

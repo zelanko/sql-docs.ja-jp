@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], opening
@@ -14,12 +14,12 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49d7153a2acc98e31095e76cd7d6ff6a3a771220
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63254471"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>データベース ダイアグラムを開く方法 (Visual Database Tools)
   ダイアグラムの構造を表示または編集するには、データベース ダイアグラムを開きます。  
@@ -30,7 +30,7 @@ ms.locfileid: "48112662"
   
 2.  開くデータベース ダイアグラムの名前をダブルクリックします。  
   
-     - または -  
+     \- または -  
   
      開くデータベース ダイアグラムの名前を右クリックし、 **[データベース ダイアグラムのデザイン]** を選択します。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -16,12 +15,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917571"
 ---
 # <a name="contained-databases"></a>包含データベース
   *包含データベース* は、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから分離されたデータベースです。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ユーザーは 4 つの方法でインスタンスからデータベースを分離できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "49461077"
   
  データベースへのメタデータの格納など、部分的包含データベースの一部の機能はすべての [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースに適用されます。 データベース レベル認証やカタログ照合順序など、部分的包含データベースの一部の利点を使用可能にするには、あらかじめこれらを有効にしておく必要があります。 部分的包含は、`CREATE DATABASE` ステートメントと `ALTER DATABASE` ステートメントを使用するか、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して有効にします。 部分的データベース包含を有効にする方法の詳細については、「 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)」をご覧ください。  
   
- このトピックの内容は次のとおりです。  
+ このトピックは次のセクションで構成されます。  
   
 -   [部分的包含データベースの概念](#Concepts)  
   

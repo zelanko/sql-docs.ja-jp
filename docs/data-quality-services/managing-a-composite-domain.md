@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6bb5b57845613a408a0e374fd26dd67ebad7cd82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: fac57f53242fa7445820aaed5a39694a7277653c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935074"
 ---
 # <a name="managing-a-composite-domain"></a>複合ドメインの管理
 

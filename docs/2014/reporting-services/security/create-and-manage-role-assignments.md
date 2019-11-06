@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101998"
 ---
 # <a name="create-and-manage-role-assignments"></a>ロールの割り当てを作成および管理する
   *ロールの割り当て* は、ユーザーまたはグループが特定のレポート サーバー アイテムにアクセスできるか、または操作を実行できるかを決定するセキュリティ ポリシーです。 ロールの割り当ては、ユーザーまたはグループのアカウント名 1 つと、1 つ以上のロールの定義で構成されます。  
@@ -42,7 +41,7 @@ ms.locfileid: "48211012"
   
  ロールの割り当てを作成するには、レポート サーバー コンピューターのローカル管理者グループのメンバーであることが必要です。 この役割は、別のユーザーを **コンテンツ マネージャー** ロールに割り当てることで委任できます。  
   
- 詳細については、「[レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)」を参照してください。  
+ 詳細については、「 [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)で有効です。  
   
 ## <a name="creating-a-system-level-role-assignment"></a>システムレベルのロールの割り当ての作成  
  システムレベルのロールの割り当てを作成または管理するには、レポート マネージャーで [サイトの設定] ページを開きます。  
@@ -51,7 +50,7 @@ ms.locfileid: "48211012"
   
  システムレベルのロールの割り当てには広範囲の権限が含まれますが、アイテムレベルのロールの割り当てに組み込まれている権限は含まれません。 コンピューター上のシステム権限とは異なり、レポート サーバーのシステム ロールは、考えられるすべての操作を含んだ包括的な権限を与えるわけではありません。 システムレベルのロールの割り当ては、レポート サーバー サイトで有効な一連のタスクのみが対象です。 システム ロールの割り当てによって与えられる権限では、ユーザーがアプリケーション プロパティ (ホーム ページのイメージやタイトルなど) を表示できるか、共有スケジュールを表示または管理できるか、あるいはレポート ビルダーを使用できるかどうかを決定します。  
   
- 詳細については、次を参照してください。[レポート サーバーにユーザー アクセスを許可&#40;レポート マネージャー&#41; ](grant-user-access-to-a-report-server.md)と[定義済みロール](role-definitions-predefined-roles.md)します。  
+ 詳細については、「 [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md) 」と「 [定義済みロール](role-definitions-predefined-roles.md)で有効です。  
   
 ## <a name="modifying-a-role-assignment"></a>ロールの割り当ての変更  
  ロールの割り当ては、いつでも変更できます。 変更は、ロールの割り当てを保存すると有効になります。 ユーザー セッションは、ロールの割り当ての変更による影響を受けません。 ユーザーがレポートを開いているときに、ロールの割り当てを変更してアクセスを拒否しても、セッションがアクティブである間はユーザーはレポートを使用し続けることができます。  
@@ -65,10 +64,10 @@ ms.locfileid: "48211012"
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)   
- [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](role-assignments-modify-or-delete.md)   
+ [ロールの割り当てを変更または削除する (レポート マネージャー)](role-assignments-modify-or-delete.md)   
  [ロールの割り当て](role-assignments.md)   
  [ロールの定義](role-definitions.md)   
- [定義済みロール](role-definitions-predefined-roles.md)   
+ [Predefined Roles](role-definitions-predefined-roles.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02fd33d8adf1ccee042f09c8b102401d5ba94435
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757807"
 ---
 # <a name="database-representationtabular"></a>データベース表現 (テーブル)
   テーブル モードでは、データベースは、テーブル モデル内に存在するすべてのオブジェクトを対象にするコンテナーです。  
@@ -38,10 +36,10 @@ ms.locfileid: "48116284"
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
-…  
+...  
    ADOMD.AdomdConnection currrentCnx = new ADOMD.AdomdConnection("Data Source=<<server\instance>>;Catalog=<<database>>");  
    currrentCnx.Open();  
-…  
+...  
   
 ```  
   
@@ -55,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>AMO 内のデータベース  
  AMO を使用してデータベース オブジェクトを管理する場合は、<xref:Microsoft.AnalysisServices.Server> オブジェクトの作業を開始します。 その後、データベース コレクション内でデータベースを検索するか、コレクションに 1 つのデータベースを追加して新しいデータベースを作成します。  
   
- 次のコード スニペットは、サーバーに接続する手順と、データベースが存在しないことを確認した後に空のデータベースを作成する手順を示しています。  
+ オンにした後、データベースが存在しない、次のコード スニペットが、サーバーに接続し、空のデータベースを作成する手順を示しています。  
   
 ```  
   
@@ -88,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- AMO を使用して作成してデータベース表現を操作する方法については、実用的な理解 Tabular AMO 2012 サンプル; 内のソース コードを参照してください。具体的には、次のソース ファイルをチェックイン: Database.cs します。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
+ AMO を使用して作成してデータベース表現を操作する方法については、実用的な理解 Tabular AMO 2012 サンプル; 内のソース コードを参照してください。具体的には、次のソース ファイルで確認します。Database.cs します。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
   
   

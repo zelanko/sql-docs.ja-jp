@@ -26,15 +26,15 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 892ea01693d696508ec9dd5286d7b0a89306775e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810278"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175934"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
-  データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の新しいインスタンス上または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
+  データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
   
 ## <a name="before-you-begin"></a>はじめに  
  インポート プロセスでは、2 つの段階を経て新しい DAC が構築されます。  
@@ -43,8 +43,7 @@ ms.locfileid: "43810278"
   
 2.  エクスポート ファイルからデータを一括コピーします。  
   
- DAC およびデータベースのエクスポート/インポート テストに使用できるサンプル アプリケーションが [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ラボに用意されています。 このサンプルのダウンロードと使用方法については、「 [Windows Azure SQL データベースのインポートとエクスポート](http://go.microsoft.com/fwlink/?LinkId=219404)」を参照してください。  
-  
+ 
 ## <a name="sql-server-utility"></a>SQL Server ユーティリティ (SQL Server Utility)  
  データベース エンジンのマネージド インスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **の** details page.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "43810278"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DAC は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]にインポートできるほか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスにインポートすることができます。 新しいバージョンから DAC をエクスポートした場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  ソースが不明または信頼されていない DAC エクスポート ファイルはインポートしないことをお勧めします。 こうしたファイルには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 エクスポート ファイルのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードも確認してください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
 ## <a name="security"></a>セキュリティ  
@@ -91,7 +90,7 @@ ms.locfileid: "43810278"
   
  **オプション**  
   
--   **[次回からこのページを表示しない]** – 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
+-   **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
 -   **[次へ]** : **[インポートの設定]** ページに進みます。  
   
@@ -100,11 +99,11 @@ ms.locfileid: "43810278"
 ###  <a name="Import_settings"></a> [インポートの設定] ページ  
  このページを使用して、インポートする .bacpac ファイルの場所を指定します。  
   
--   **[ローカル ディスクからインポート]** – **[参照...]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
+-   **[ローカル ディスクからインポート]** : **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
   
--   **[Windows Azure からインポート]** : BACPAC ファイルを Windows Azure コンテナーからインポートします。 このオプションを検証するためには、Windows Azure コンテナーに接続する必要があります。 このオプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
+-   **Azure からインポート**-BACPAC ファイルを azure コンテナーからインポートします。 このオプションを検証するには、Azure コンテナーに接続する必要があります。 このオプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
   
-     Windows Azure を参照するときに、1 つのアカウント内のコンテナーを切り替えることができます。 インポート操作を続行するには、1 つの .bacpac ファイルを指定する必要があります。 列は、 **名前**、 **サイズ**、または **更新日時**で並べ替えることができます。  
+     Azure を参照するときに、1 つのアカウント内のコンテナーを切り替えることができます。 インポート操作を続行するには、1 つの .bacpac ファイルを指定する必要があります。 列は、 **名前**、 **サイズ**、または **更新日時**で並べ替えることができます。  
   
      続行するには、インポートする .bacpac ファイルを指定し、 **[開く]** をクリックします。  
   
@@ -117,17 +116,17 @@ ms.locfileid: "43810278"
   
 -   **[データ ファイルのパス]** : データ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
   
--   **[ログ ファイルのパス]** – ログ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
+-   **[ログ ファイルのパス]** : ログ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
   
  続行するには、 **[次へ]** をクリックします。  
   
- **SQL database の場合。**  
+ **SQL Database の場合:**  
   
 -   **[新しいデータベース名]** : インポートするデータベースの名前を指定します。  
   
--   **[[!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディション]**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web を指定します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](http://www.windowsazure.com/home/tour/database/) 」を参照してください。  
+-   エディション-Business また[!INCLUDE[ssSDS](../../includes/sssds-md.md)]は[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web を指定します。 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](http://www.windowsazure.com/home/tour/database/) 」を参照してください。  
   
--   **[データベースの最大サイズ (GB)]** : ドロップダウン メニューを使用して、データベースの最大サイズを指定します。  
+-   **[データベースの最大サイズ (GB)]** : ドロップダウンメニューを使用して、データベースの最大サイズを指定します。  
   
  続行するには、 **[次へ]** をクリックします。  
   
@@ -149,8 +148,8 @@ ms.locfileid: "43810278"
   
  **[閉じる]** をクリックしてウィザードを閉じます。  
   
-## <a name="see-also"></a>参照  
- [データ層アプリケーション](data-tier-applications.md)   
+## <a name="see-also"></a>関連項目  
+ [[データ層アプリケーション]](data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](export-a-data-tier-application.md)  
   
   

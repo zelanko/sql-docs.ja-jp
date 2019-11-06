@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], copying
 - copying versions [Master Data Services]
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b8b505f6eb819c0375e2fa50a12c8d6e4b707b3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70f328da53f2d346fe58f3416b0a3a0c331eb74c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479981"
 ---
 # <a name="copy-a-version-master-data-services"></a>バージョンをコピーする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをコピーして、新しいバージョンを作成します。  
@@ -29,7 +28,7 @@ ms.locfileid: "48131742"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-copy-a-version"></a>バージョンをコピーするには  
   
@@ -46,9 +45,9 @@ ms.locfileid: "48131742"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [バージョン名を変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
+-   [バージョン名を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [バージョン&#40;マスター データ サービス&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

@@ -2,7 +2,7 @@
 title: 式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 04/06/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393224"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661340"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -208,7 +208,7 @@ ms.locfileid: "52393224"
   
      日付または数値のみを格納するテキスト ボックスに書式を適用する場合は、テキスト ボックス内で **Format** 関数を使用するのではなく、テキスト ボックスの Format プロパティを使用する必要があります。  
   
--   **Right**、 **Len**、 **InStr** の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (*) より右側の部分のみが返されます。  
+-   **Right**、 **Len**、 **InStr** の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (* ) より右側の部分のみが返されます。  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -233,7 +233,7 @@ ms.locfileid: "52393224"
   
     ```  
   
--   また、 **の** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*-*" 形式の 10 桁の電話番号を、*-*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
+-   また、 **の** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -247,7 +247,7 @@ ms.locfileid: "52393224"
 -   キー フィールドを指定することで、 **Lookup** 関数を使用し、1 対 1 のリレーションシップ (キーと値のペアなど) の値をデータセットから取得することができます。 次の式では、入力された製品識別子に一致する製品名をデータセット ("Product") から取得し、表示します。  
   
     ```  
-    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
     ```  
   
 ### <a name="lookupset"></a>LookupSet  

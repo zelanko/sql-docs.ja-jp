@@ -1,12 +1,11 @@
 ---
-title: sysmergearticlecolumns (TRANSACT-SQL) |Microsoft Docs
+title: sysmergearticlecolumns (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergearticlecolumns
@@ -18,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 64d4ff2edd683b4da4944fb71244f1d97458b44f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2edf9a5656eaf9dd3f18adff28562e279db892e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029963"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,11 +31,11 @@ ms.locfileid: "47801935"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**artid**|**int**|アーティクルの識別子です。|  
-|**colid**|**smallint**|アーティクル内の列の識別子。|  
+|**artid**|**int**|アーティクルを識別します。|  
+|**colid**|**smallint**|アーティクル内の列を識別します。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

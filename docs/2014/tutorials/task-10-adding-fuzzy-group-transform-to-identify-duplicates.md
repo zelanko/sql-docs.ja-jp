@@ -1,26 +1,23 @@
 ---
-title: 'タスク 10: 重複を識別するために、あいまいグループ化変換を追加する |Microsoft Docs'
+title: タスク 10:重複を識別するために、あいまいグループ化変換の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d11487c2bfbcda4c18904c77d029c91440ca8410
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481250"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>タスク 10: あいまいグループ化変換を追加して重複を識別する
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>タスク 10:あいまいグループ化変換を追加して重複を識別する
   ここでは、あいまいグループ化変換をデータ フローに追加します。 あいまいグループ化変換は、変換元データの重複を識別する際に役立ちます。 参照してください[Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)の詳細。  
   
 1.  ドラッグ アンド ドロップ**あいまいグループ化**変換**その他の変換**上、 **SSIS ツールボックス**を**データ フロー**タブ**正しいと修正済みレコードを結合**します。  
@@ -58,6 +55,6 @@ ms.locfileid: "48211608"
 15. をクリックして**OK**を閉じる、**あいまいグループ化変換エディター**します。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 11: 条件分割変換を追加して重複をフィルターする](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [タスク 11:フィルターに条件分割変換を追加して重複. します。](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

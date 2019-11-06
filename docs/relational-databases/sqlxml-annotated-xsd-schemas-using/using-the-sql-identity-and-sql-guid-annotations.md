@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], IDENTITY-type columns
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61d67e223ffe0a68c9f5bd92d1a4a3ef169edc9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a6c19e23fc886e15b8e116ca293c4560fded74e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066884"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 注釈と sql:guid 注釈の使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47855900"
  **Sql:identity 注釈**と**sql:guid**複合コンテンツ要素に注釈を定義することができます。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 注釈  
- 指定することができます、 **sql:identity 注釈**IDENTITY 型のデータベース列にマップされる任意のノードの XSD スキーマに注釈。 この注釈の値では、IDENTITY 型の列の更新方法として、アップデートグラムで提供される値を使用するか、値を無視するかを定義します。値を無視する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で生成される値が列に使用されます。  
+ 指定することができます、 **sql:identity 注釈**IDENTITY 型のデータベース列にマップされる任意のノードの XSD スキーマに注釈。 この注釈に指定された値は、IDENTITY 型の列を更新する方法を定義します (いずれかの列を変更するアップデート グラムで指定された値を使用するか、その場合、値を無視することによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-生成された値がこの列の使用)。  
   
  **Sql:identity 注釈**注釈には 2 つの値を割り当てることができます。  
   

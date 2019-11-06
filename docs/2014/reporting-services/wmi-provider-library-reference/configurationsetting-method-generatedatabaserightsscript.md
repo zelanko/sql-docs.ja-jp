@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098480"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースおよびレポート サーバーの実行に必要なその他のデータベースに対してユーザー権限を付与する際に使用できる、SQL スクリプトを生成します。 呼び出し元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サーバーに接続して、スクリプトを実行する必要があります。  
@@ -84,18 +83,18 @@ out Int32 HRESULT);
 |LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-19)|Local Service|エラー (下記参照)|  
-|NT AUTHORITY\LocalService|Local Service|エラー (下記参照)|  
+|(S-1-5-19)|Local Service|エラー - 下記参照。|  
+|NT AUTHORITY\LocalService|Local Service|エラー - 下記参照。|  
   
  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]では、組み込みアカウントを使用し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
   
- 場合、`LocalService`組み込みアカウントを指定し、レポート サーバー データベースがリモート、エラーが返されます。  
+ `LocalService` 組み込みアカウントを指定し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
   
  *IsWindowsUser* が true であり、 *UserName* に指定した値を変換する必要がある場合、WMI プロバイダーはレポート サーバー データベースが同じコンピューターにあるかリモート コンピューターにあるかを確認します。 インストールがローカルであるかどうかを確認するため、WMI プロバイダーは以下の値一覧に対して DatabaseServerName プロパティを評価します。 一致が見つかった場合、データベースはローカルです。 見つからなかった場合、リモートです。 比較では大文字小文字を区別しません。  
   
 |DatabaseServerName の値|例|  
 |---------------------------------|-------------|  
-|“.”||  
+|"."||  
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
@@ -113,7 +112,7 @@ out Int32 HRESULT);
   
  生成されたスクリプトは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]をサポートします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

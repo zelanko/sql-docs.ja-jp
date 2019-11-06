@@ -1,27 +1,26 @@
 ---
-title: バックアップ、復元、および SSIS カタログの移動 |Microsoft Docs
+title: SSIS カタログをバックアップ、復元、移動する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64d690c11a76d40e851a23374c568727e3f47a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172782"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670508"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS カタログのバックアップ、復元、および移動
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] SSISDB データベースが含まれています。 **SSISDB** カタログに格納されているオブジェクト、設定、および業務データを検査するには、SSISDB データベースのビューに対してクエリを実行します。 このトピックでは、データベースのバックアップと復元の手順について説明します。  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] には SSISDB データベースが用意されています。 **SSISDB** カタログに格納されているオブジェクト、設定、および業務データを検査するには、SSISDB データベースのビューに対してクエリを実行します。 このトピックでは、データベースのバックアップと復元の手順について説明します。  
   
- **SSISDB** カタログは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを格納します。 カタログの詳細については、「 [SSIS カタログ](catalog/ssis-catalog.md)」を参照してください。  
+ **SSISDB** カタログは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを格納します。 カタログの詳細については、「 [SSIS カタログ](catalog/ssis-catalog.md)」を参照してください。  
   
 ##  <a name="backup"></a> SSIS データベースをバックアップするには  
   
@@ -39,19 +38,19 @@ ms.locfileid: "48172782"
   
     ```  
   
-3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、「 [データベースをバックアップする方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)」を参照してください。  
+3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、[データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812) に関する記事をご覧ください。  
   
 4.  次の手順を実行して、##MS_SSISServerCleanupJobLogin## の CREATE LOGIN スクリプトを生成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)」を参照してください。  
   
-    1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、**[セキュリティ]** ノードを展開し、**[ログイン]** ノードを展開します。  
+    1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、 **[セキュリティ]** ノードを展開し、 **[ログイン]** ノードを展開します。  
   
-    2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 5.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、次の操作を行って、sp_ssis_startup の CREATE PROCEDURE スクリプトを生成します。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)」を参照してください。  
   
-    1.  オブジェクト エクスプローラーで、**[データベース]** ノードを展開し、**[master]** > **[プログラミング]** > **[ストアド プロシージャ]** ノードの順に展開します。  
+    1.  オブジェクトエクスプローラーで、 **[データベース]** ノードを展開し、 **[システムデータベース** > ] [**master** > ] [**プログラミング** > ] **[ストアドプロシージャ]** ノードの順に展開します。  
   
-    2.  **[dbo.sp_ssis_startup]** を右クリックし、 **[ストアド プロシージャをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  **[dbo.sp_ssis_startup]** を右クリックし、 **[ストアド プロシージャをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 6.  SQL Server エージェントが起動したことを確認します。  
   
@@ -59,11 +58,11 @@ ms.locfileid: "48172782"
   
     1.  オブジェクト エクスプローラーで、 **[SQL Server エージェント]** ノードを展開し、 **[ジョブ]** ノードを展開します。  
   
-    2.  SSIS サーバー メンテナンス ジョブを右クリックし、 **[ジョブをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  SSIS サーバー メンテナンス ジョブを右クリックし、 **[ジョブをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS データベースを復元するには  
   
-1.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、sp_configure ストアド プロシージャを実行して、共通言語ランタイム (CLR) を有効にします。 詳細については、「[sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)」と「[clr enabled サーバー構成オプション](http://go.microsoft.com/fwlink/?LinkId=231855)」を参照してください。  
+1.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、sp_configure ストアド プロシージャを実行して、共通言語ランタイム (CLR) を有効にします。 詳細については、「[sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)」と「[clr enabled サーバー構成オプション](https://go.microsoft.com/fwlink/?LinkId=231855)」を参照してください。  
   
     ```  
     use master   
@@ -80,7 +79,7 @@ ms.locfileid: "48172782"
   
     ```  
   
-     ログインを行うには Microsoft Win32 API などの制限付きのリソースへの追加アクセスが必要であるため、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR ストアド プロシージャでは、UNSAFE 権限をログインに付与する必要があります。 UNSAFE コード権限の要件の詳細については、「 [アセンブリの作成](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」を参照してください。  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ログインを行うには Microsoft Win32 API などの制限付きのリソースへの追加アクセスが必要であるため、CLR ストアド プロシージャでは、UNSAFE 権限をログインに付与する必要があります。 UNSAFE コード権限の要件の詳細については、「 [アセンブリの作成](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」を参照してください。  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  

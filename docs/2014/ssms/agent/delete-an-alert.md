@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -18,12 +18,12 @@ ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3f7434c7af3a4e8465bbaab1d0134bd956892c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62523625"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を削除する方法について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "48080152"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  警告を削除すると、この警告に関連するすべての通知も削除されます。  

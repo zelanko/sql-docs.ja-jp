@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - default conflict resolver
@@ -15,12 +14,12 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd11a6f4e54fc835ac35e9d3864fe4190701448
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62931624"
 ---
 # <a name="choose-a-resolver"></a>競合回避モジュールの選択
   競合回避モジュールを選択するときには、アプリケーションでの競合解決の重要性、および既定の優先度ベースの競合回避モジュールを使用できるかどうか、アーティクル競合回避モジュールを使用する必要があるかどうかを考慮します。  
@@ -35,7 +34,7 @@ ms.locfileid: "48174968"
   
 |競合解決に際して考慮すべき問題|推奨|  
 |-------------------------------|--------------------|  
-|異なるジョブ カテゴリのユーザーに対して異なる優先度が必要な場合|既定の競合回避モジュールを使用して、異なる優先度値を持つサーバー サブスクリプションを作成する。<br /><br /> または<br /><br /> アーティクル内の権限値の列を認識するアーティクル競合回避モジュールを使用して、競合を解決する。|  
+|異なるジョブ カテゴリのユーザーに対して異なる優先度が必要な場合|既定の競合回避モジュールを使用して、異なる優先度値を持つサーバー サブスクリプションを作成する。<br /><br /> \- または -<br /><br /> アーティクル内の権限値の列を認識するアーティクル競合回避モジュールを使用して、競合を解決する。|  
 |最初に変更されたデータが優先される競合解決方法が必要な場合|既定の競合回避モジュールを使用して、クライアント サブスクリプションを作成する。|  
 |同じ行に対する変更の競合がない限り、複数のユーザーが同じデータ行を変更することを認める場合|既定の競合回避モジュール、または列レベルの追跡を有効にしたアーティクル競合回避モジュールを使用する。|  
 |行の値に対して複数の変更が発生したときに競合のフラグを付ける場合|既定の競合回避モジュール、または行レベルの追跡を有効にしたアーティクル競合回避モジュールを使用する。|  

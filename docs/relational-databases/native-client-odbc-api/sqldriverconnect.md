@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e0566f7a1ee0332ddbb81a140418d2f59acf057
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e8b52f4940a60e464f9ea4405ddd421bb9b48d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035640"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "51661281"
   
  有効な接続文字列キーワードの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client を参照してください[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
   
- ときに、**SQLDriverConnect * * * DriverCompletion*パラメーター値が SQL_DRIVER_PROMPT、SQL_DRIVER_COMPLETE、または sql_driver_complete_required の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーからキーワード値を取得します表示されるダイアログ ボックス。 接続文字列でキーワード値が渡され、ユーザーがダイアログ ボックスでキーワードの値を変更しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは接続文字列の値を使用します。 接続文字列で値が設定されていない場合、ユーザーがダイアログ ボックスで割り当てを行わないと、ドライバーは既定値を使用します。  
+ ときに、 **SQLDriverConnect**_DriverCompletion_パラメーター値が SQL_DRIVER_PROMPT、SQL_DRIVER_COMPLETE、または sql_driver_complete_required の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー表示されるダイアログ ボックスからキーワード値を取得します。 接続文字列でキーワード値が渡され、ユーザーがダイアログ ボックスでキーワードの値を変更しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは接続文字列の値を使用します。 接続文字列で値が設定されていない場合、ユーザーがダイアログ ボックスで割り当てを行わないと、ドライバーは既定値を使用します。  
   
  **SQLDriverConnect** 、有効なを指定する必要があります*WindowHandle*いずれかが*DriverCompletion*値が必要です (または必要があります)、ドライバーの接続 ダイアログ ボックスの表示。 無効なハンドルを指定すると、SQL_ERROR が返されます。  
   
- DRIVER キーワードまたは DSN キーワードを指定します。 ODBC は、これらの 2 つのキーワードが両方指定されている場合、左側に指定されているキーワードを使用し、他方を無視するように指示します。 ドライバーが指定されているか、2 つの場合、**SQLDriverConnect * * * DriverCompletion*パラメーター値が SQL_DRIVER_NOPROMPT、SERVER キーワードと、適切な値が必要です。  
+ DRIVER キーワードまたは DSN キーワードを指定します。 ODBC は、これらの 2 つのキーワードが両方指定されている場合、左側に指定されているキーワードを使用し、他方を無視するように指示します。 ドライバーが指定されているか、2 つの場合、 **SQLDriverConnect**_DriverCompletion_パラメーター値が SQL_DRIVER_NOPROMPT、SERVER キーワードと、適切な値が必要です。  
   
  SQL_DRIVER_NOPROMPT が指定されているときは、ユーザー認証に関するキーワードに値が指定されている必要があります。 ドライバーは、文字列 "Trusted_Connection=yes" または UID キーワードと PWD キーワードの両方が指定されていることを確認します。  
   

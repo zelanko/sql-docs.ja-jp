@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -15,28 +13,28 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78dec0807ebcfc025d997b995c7b2c083a1baf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62894786"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には Excel 接続マネージャー、Excel ソース、Excel 変換先が用意されており、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ファイル形式のスプレッドシートに保存されているデータを操作できます。 このトピックで説明する方法では、スクリプト タスクを使用して、使用可能な Excel のデータベース (ワークブック ファイル) およびテーブル (ワークシートおよび名前付き範囲) に関する情報を取得します。 これらのサンプルに簡単な変更を加えて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB プロバイダーによってサポートされる他のすべてのファイルベース データ ソースを操作することができます。  
   
  [サンプルをテストするためのパッケージの構成](#configuring)  
   
- [例 1: Excel ファイルが存在するかどうかを確認する](#example1)  
+ [例 1:Excel ファイルが存在するかどうかを確認します。](#example1)  
   
- [例 2: Excel テーブルが存在するかどうかを確認する](#example2)  
+ [例 2: Excel のテーブルが存在するかどうかを確認します。](#example2)  
   
- [例 3: フォルダー内の Excel ファイルの一覧を取得する](#example3)  
+ [例 3:フォルダー内の Excel ファイルの一覧を取得します。](#example3)  
   
- [例 4: Excel ファイル内のテーブルの一覧を取得する](#example4)  
+ [例 4:Excel ファイル内のテーブルの一覧を取得します。](#example4)  
   
  [サンプルの結果の表示](#testing)  
   
@@ -76,7 +74,7 @@ ms.locfileid: "48049552"
   
 5.  **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用して、スクリプト コンポーネントの既定のスクリプト言語を設定します。 詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
-##  <a name="example1"></a> 例 1 の説明: Excel ファイルが存在するかどうかを確認する  
+##  <a name="example1"></a> 例 1 の説明:Excel ファイルが存在するかどうかを確認する  
  この例では、`ExcelFile` 変数で指定された Excel ワークブック ファイルが存在するかどうかを判断し、その結果を `ExcelFileExists` 変数のブール値に設定します。 このブール値は、パッケージのワークフローを分岐させるために使用することができます。  
   
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
@@ -87,17 +85,17 @@ ms.locfileid: "48049552"
   
     -   「`ExcelFile`.  
   
-         - または -  
+         \- または -  
   
-    -   省略記号をクリックします (**.**) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelFile`変数。  
+    -   省略記号をクリックします ( **.** ) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelFile`変数。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
     -   「`ExcelFileExists`.  
   
-         - または -  
+         \- または -  
   
-    -   省略記号をクリックします (**.**) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelFileExists`変数。  
+    -   省略記号をクリックします ( **.** ) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelFileExists`変数。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -146,7 +144,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> 例 2 の説明: Excel テーブルが存在するかどうかを確認する  
+##  <a name="example2"></a> 例 2 の説明:Excel テーブルが存在するかどうかを確認する  
  この例では、`ExcelTable` 変数で指定された Excel ワークシートまたは名前付き範囲が `ExcelFile` 変数で指定された Excel ワークブック ファイル内に存在するかどうかを判断し、その結果を `ExcelTableExists` 変数のブール値に設定します。 このブール値は、パッケージのワークフローを分岐させるために使用することができます。  
   
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
@@ -157,17 +155,17 @@ public class ScriptMain
   
     -   型`ExcelTable`と`ExcelFile`コンマで区切られました。`.`  
   
-         - または -  
+         \- または -  
   
-    -   省略記号をクリックします (**.**) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelTable`と`ExcelFile`変数。  
+    -   省略記号をクリックします ( **.** ) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelTable`と`ExcelFile`変数。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
     -   「`ExcelTableExists`.  
   
-         - または -  
+         \- または -  
   
-    -   省略記号をクリックします (**.**) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelTableExists`変数。  
+    -   省略記号をクリックします ( **.** ) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelTableExists`変数。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -253,28 +251,28 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 例 3 の説明: フォルダー内の Excel ファイルの一覧を取得する  
+##  <a name="example3"></a> 例 3 の説明:フォルダー内の Excel ファイルの一覧を取得する  
  この例では、`ExcelFolder` 変数の値で指定されたフォルダー内で検索された Excel ファイルの一覧を配列に代入し、その配列を `ExcelFiles` 変数にコピーします。 Foreach from Variable 列挙子を使用して、配列内のファイルを繰り返し処理することができます。  
   
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **GetExcelFiles** に変更します。  
   
-2.  **[スクリプト タスク エディター]** を開き、**[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
+2.  **[スクリプト タスク エディター]** を開き、 **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
     -   「`ExcelFolder`」と入力します。  
   
-         - または -  
+         \- または -  
   
-    -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで [ExcelFolder] 変数を選択します。  
+    -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFolder] 変数を選択します。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
     -   「`ExcelFiles`.  
   
-         - または -  
+         \- または -  
   
-    -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで [ExcelFiles] 変数を選択します。  
+    -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFiles] 変数を選択します。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -325,7 +323,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>代替ソリューション  
  スクリプト タスクを使用して Excel ファイルの一覧を配列に集める代わりに、ForEach File 列挙子を使用してフォルダー内のすべての Excel ファイルを繰り返し処理することもできます。 詳細については、「[Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する方法](../control-flow/foreach-loop-container.md)」を参照してください。  
   
-##  <a name="example4"></a> 例 4 の説明: Excel ファイル内のテーブルの一覧を取得する  
+##  <a name="example4"></a> 例 4 の説明:Excel ファイル内のテーブルの一覧を取得する  
  この例では、`ExcelFile` 変数の値で指定された Excel ワークブック ファイル内で検索されたワークシートまたは名前付き範囲の一覧を配列に代入し、その配列を `ExcelTables` 変数にコピーします。 Foreach from Variable 列挙子を使用して、配列内のテーブルを繰り返し処理することができます。  
   
 > [!NOTE]  
@@ -335,21 +333,21 @@ public class ScriptMain
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **GetExcelTables** に変更します。  
   
-2.  **[スクリプト タスク エディター]** を開き、**[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
+2.  **[スクリプト タスク エディター]** を開き、 **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
     -   「`ExcelFile`.  
   
-         - または -  
+         \- または -  
   
-    -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで [ExcelFile] 変数を選択します。  
+    -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFile] 変数を選択します。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
     -   「`ExcelTables`.  
   
-         - または -  
+         \- または -  
   
-    -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで [ExcelTables] 変数を選択します。  
+    -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelTables] 変数を選択します。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -452,9 +450,9 @@ public class ScriptMain
   
     -   各変数の名前をコンマで区切って入力します。  
   
-         - または -  
+         \- または -  
   
-    -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで変数を選択します。  
+    -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで変数を選択します。  
   
 5.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -543,7 +541,7 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [Excel 接続マネージャー](../connection-manager/excel-connection-manager.md)   

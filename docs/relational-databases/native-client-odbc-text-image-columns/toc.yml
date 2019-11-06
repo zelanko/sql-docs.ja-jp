@@ -1,8 +1,0 @@
-- name: text 列と image 列の管理
-  href: managing-text-and-image-columns.md
-- name: バインドされたtext、image 型の列とバインドされない text、image 型の列
-  href: bound-vs-unbound-text-and-image-columns.md
-- name: 実行時データと text 型、ntext 型、または image 型の列
-  href: data-at-execution-and-text-ntext-or-image-columns.md
-- name: ログに記録される変更と記録されない変更
-  href: logged-vs-unlogged-modifications.md

@@ -1,24 +1,22 @@
 ---
 title: セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], database objects
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9af723a7f3dc964550f006885c844fc14e6777b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.openlocfilehash: b21ff2b2db663aacc48ce5643b88034d91cf7771
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912972"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

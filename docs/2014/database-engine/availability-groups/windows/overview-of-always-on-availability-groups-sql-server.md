@@ -16,20 +16,20 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789585"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの概要 (SQL Server)
-  このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の概念について説明します。これは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]での 1 つ以上の可用性グループの構成と管理において重要です。 可用性グループの利点の要約および [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用語の概要については、「[AlwaysOn 可用性グループ&amp;#40;SQL Server&amp;#41;](always-on-availability-groups-sql-server.md)」を参照してください。  
+  このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の概念について説明します。これは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]での 1 つ以上の可用性グループの構成と管理において重要です。 可用性グループの利点の要約および [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用語の概要については、「[AlwaysOn 可用性グループ&#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)」を参照してください。  
   
  *可用性グループ* は、 *可用性データベース*として知られる、ひとまとまりでフェールオーバーされる個別のユーザー データベースのセットのためのフェールオーバー環境をサポートします。 可用性グループは、プライマリ データベースのセットをサポートし、1 ～ 8 セットの対応するセカンダリ データベースをサポートします。 セカンダリ データベースは、バックアップではあ*りません*。 継続してデータベースおよびそのトランザクション ログを定期的にバックアップします。  
   
 > [!TIP]  
->  プライマリ データベースのバックアップの種類を作成できます。 または、セカンダリ データベースのログ バックアップとコピーのみの完全バックアップを作成できます。 詳細については、「[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+>  プライマリ データベースのバックアップの種類を作成できます。 または、セカンダリ データベースのログ バックアップとコピーのみの完全バックアップを作成できます。 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでバックアップ&#40;AlwaysOn 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)します。  
   
  可用性データベースの各セットは、 *可用性レプリカ*によりホストされます。 可用性レプリカには、2 つの種類があります。1 つは、単一の *プライマリ レプリカ*で、 プライマリ データベースをホストします。もう 1 種類は、1 ～ 8 つの *セカンダリ レプリカ*で、それぞれがセカンダリ データベースのセットをホストし、可用性グループの潜在的なフェールオーバー ターゲットとして機能します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 可用性レプリカでは、データセット レベル (1 つの可用性グループのデータベースのセット) でのみ冗長性が提供されます。 データベースの問題 (たとえば、データ ファイルの損失やトランザクション ログの破損による障害が疑われる場合など) が発生してもフェールオーバーは行われません。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "51559389"
   
  指定したインスタンスで、1 つの可用性グループにつき 1 つだけ可用性レプリカをホストすることができます。 ただし、各インスタンスを多数の可用性グループに使用することはできます。 指定したインスタンスは、スタンドアロン インスタンスまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) として使用できます。 サーバー レベルの冗長性が必要な場合は、フェールオーバー クラスター インスタンスを使用します。  
   
- すべての可用性レプリカには、初期ロールとして、 *プライマリ ロール* または *セカンダリ ロール*が割り当てられています。これが、レプリカの可用性データベースによって継承されます。 指定されたレプリカのロールにより、読み取り/書き込みデータベースと読み取り専用のデータベースのどちらがホストされるかが決定されます。 *プライマリ レプリカ*と呼ばれる 1 つのレプリカには、プライマリ ロールが割り当てられ、 *プライマリ データベース*と呼ばれる読み取り/書き込みデータベースをホストします。 それ以外の 1 つ以上のレプリカは *セカンダリ レプリカ*と呼ばれ、セカンダリ ロールが割り当てられます。 セカンダリ レプリカは、セカンダリ データベースと呼ばれる読み取り専用のデータベースをホストします。  
+ すべての可用性レプリカには、初期ロールとして、*プライマリ ロール*または*セカンダリ ロール*が割り当てられています。これが、レプリカの可用性データベースによって継承されます。 指定されたレプリカのロールにより、読み取り/書き込みデータベースと読み取り専用のデータベースのどちらがホストされるかが決定されます。 *プライマリ レプリカ*と呼ばれる 1 つのレプリカには、プライマリ ロールが割り当てられ、 *プライマリ データベース*と呼ばれる読み取り/書き込みデータベースをホストします。 それ以外の 1 つ以上のレプリカは *セカンダリ レプリカ*と呼ばれ、セカンダリ ロールが割り当てられます。 セカンダリ レプリカは、セカンダリ データベースと呼ばれる読み取り専用のデータベースをホストします。  
   
 > [!NOTE]  
 >  フェールオーバー中など、可用性レプリカのロールが不確定である場合、そのデータベースは一時的に NOT SYNCHRONIZING 状態になります。 可用性レプリカのロールが解決されるまで、それらのロールは RESOLVING に設定されます。 可用性レプリカがプライマリ ロールに解決された場合、そのデータベースはプライマリ データベースになります。 可用性レプリカがセカンダリ ロールに解決された場合、そのデータベースはセカンダリ データベースになります。  
   
 ##  <a name="AvailabilityModes"></a> 可用性モード  
- 可用性モードは、各可用性レプリカのプロパティです。 可用性モードによって、特定のセカンダリ レプリカがディスクにトランザクション ログ レコードを書き込む (ログ書き込み) まで、プライマリ レプリカによるデータベースへのトランザクションのコミットを待機するかどうかが決定されます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、*非同期コミット モード* と *同期コミット モード*という 2 種類の可用性モードをサポートします。  
+ 可用性モードは、各可用性レプリカのプロパティです。 可用性モードによって、特定のセカンダリ レプリカがディスクにトランザクション ログ レコードを書き込む (ログ書き込み) まで、プライマリ レプリカによるデータベースへのトランザクションのコミットを待機するかどうかが決定されます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、*非同期コミット モード*と*同期コミット モード*という 2 種類の可用性モードをサポートします。  
   
 -   **Asynchronous-commit mode**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "51559389"
   
  フェールオーバーには、自動、手動、および強制 (データ損失の可能性あり) という 3 つの形式があります。 特定のセカンダリ レプリカでサポートされるフェールオーバーの形式は、可用性モードによって決まります。同期コミット モードでは、プライマリ レプリカのフェールオーバー モードおよび対象のセカンダリ レプリカによって決まります。次に例を示します。  
   
--   同期コミット モードでは、対象のセカンダリ レプリカが現在 avt1 と同期されている場合、*計画的な手動フェールオーバー* と *自動フェールオーバー*という 2 種類のフェールオーバーがサポートされます。 これらのフェールオーバーの形式のサポートは、フェールオーバー パートナーの *フェールオーバー モード プロパティ* の設定によって決まります。 プライマリ レプリカとセカンダリ レプリカのどちらかのフェールオーバー モードが "手動" に設定されている場合、そのセカンダリ レプリカに対しては手動フェールオーバーのみがサポートされます。 プライマリ レプリカとセカンダリ レプリカのどちらのフェールオーバー モードも "自動" に設定されている場合、そのセカンダリ レプリカでは自動フェールオーバーと手動フェールオーバーの両方がサポートされます。  
+-   同期コミット モードでは、対象のセカンダリ レプリカが現在 avt1 と同期されている場合、*計画的な手動フェールオーバー*と*自動フェールオーバー*という 2 種類のフェールオーバーがサポートされます。 これらのフェールオーバーの形式のサポートは、フェールオーバー パートナーの *フェールオーバー モード プロパティ* の設定によって決まります。 プライマリ レプリカとセカンダリ レプリカのどちらかのフェールオーバー モードが "手動" に設定されている場合、そのセカンダリ レプリカに対しては手動フェールオーバーのみがサポートされます。 プライマリ レプリカとセカンダリ レプリカのどちらのフェールオーバー モードも "自動" に設定されている場合、そのセカンダリ レプリカでは自動フェールオーバーと手動フェールオーバーの両方がサポートされます。  
   
     -   **計画的な手動フェールオーバー** (データ損失なし)  
   
@@ -118,13 +118,13 @@ ms.locfileid: "51559389"
   
 -   **セカンダリ レプリカでのバックアップ操作の実行**  
   
-     セカンダリ レプリカでは、ログ バックアップと、データベース全体、ファイル、またはファイル グループの [コピーのみの](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) バックアップを実行できます。 可用性グループを構成して、バックアップを実行する優先順位を指定できます。 優先順位は SQL Server によって適用されるものではないので、アドホック バックアップには影響がないことを理解しておくことが重要です。 この優先順位の解釈は、特定の可用性グループの各データベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 同じ可用性グループ内の個々の可用性レプリカで実行されるバックアップの優先順位を指定できます。 詳細については、「[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+     セカンダリ レプリカでは、ログ バックアップと、データベース全体、ファイル、またはファイル グループの [コピーのみの](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) バックアップを実行できます。 可用性グループを構成して、バックアップを実行する優先順位を指定できます。 優先順位は SQL Server によって適用されるものではないので、アドホック バックアップには影響がないことを理解しておくことが重要です。 この優先順位の解釈は、特定の可用性グループの各データベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 同じ可用性グループ内の個々の可用性レプリカで実行されるバックアップの優先順位を指定できます。 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでバックアップ&#40;AlwaysOn 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)します。  
   
 -   **1 つ以上のセカンダリ レプリカへの読み取り専用アクセス (読み取り可能なセカンダリ レプリカ)**  
   
-     セカンダリ ロールを実行するときに、ローカル データベースへの読み取り専用アクセスを許可するように可用性レプリカを構成できます (ただし、一部の操作は完全にはサポートされていません)。 また、読み取り専用ワークロードがプライマリ レプリカで実行されないようにする場合は、プライマリ ロールで実行されているときに読み取り/書き込みアクセスのみを許可するようにレプリカを構成できます。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+     セカンダリ ロールを実行するときに、ローカル データベースへの読み取り専用アクセスを許可するように可用性レプリカを構成できます (ただし、一部の操作は完全にはサポートされていません)。 また、読み取り専用ワークロードがプライマリ レプリカで実行されないようにする場合は、プライマリ ロールで実行されているときに読み取り/書き込みアクセスのみを許可するようにレプリカを構成できます。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ&#40;AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
   
-     可用性グループに、現在、可用性グループ リスナーと 1 つ以上の読み取り可能なセカンダリ レプリカが存在する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は読み取りを目的とした接続要求をそれらのいずれかにルーティングできます (*読み取り専用ルーティング*)。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
+     可用性グループに、現在、可用性グループ リスナーと 1 つ以上の読み取り可能なセカンダリ レプリカが存在する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は読み取りを目的とした接続要求をそれらのいずれかにルーティングできます (*読み取り専用ルーティング*)。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
   
 ##  <a name="SessionTimeoutPerios"></a> セッション タイムアウト期間  
  セッション タイムアウト期間は、可用性レプリカのプロパティで、他の可用性レプリカとの接続を閉じるまでに非アクティブに保持できる時間を決定します。 プライマリ レプリカとセカンダリ レプリカは、アクティブであることを通知するために互いに ping を実行します。 他のレプリカからタイムアウト期間内に ping を受信した場合は、その接続がまだ開いており、サーバー インスタンスが通信していることを示します。 可用性レプリカは、ping を受信すると、接続のセッション タイムアウト カウンターをリセットします。  
@@ -149,23 +149,23 @@ ms.locfileid: "51559389"
   
 -   **ブログ:**  
   
-     [AlwaysON - HADRON 学習シリーズ: Worker Pool Usage for HADRON 対応データベース](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 1: 次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1:次世代高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 2:AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **ホワイト ペーパー:**  
   
-     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   
@@ -177,8 +177,8 @@ ms.locfileid: "51559389"
  [インメモリ OLTP データベースにおける高可用性のサポート](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
  [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [可用性グループの作成と構成 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ&#40;AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [アクティブなセカンダリ: セカンダリ レプリカでバックアップの&#40;AlwaysOn 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ&#40;AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [アクティブなセカンダリ:セカンダリ レプリカでバックアップ&#40;AlwaysOn 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
   
   

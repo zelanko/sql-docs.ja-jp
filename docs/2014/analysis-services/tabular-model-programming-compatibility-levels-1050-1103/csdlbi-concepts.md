@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757944"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI の概念
   BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデータセットにプログラムでアクセスしてクエリやエクスポートを実行できるように各種のデータを抽象的に表す、Entity Data Framework に基づく言語です。 CSDLBI はリッチ形式でデータ ドリブンのレポートとアプリケーションをサポートしているため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して作成されたデータ モデルを表すために CSDLBI が使用されます。  
   
  このセクションでは、CSDLBI 表現と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルをマップする方法 (テーブルと多次元の両方) を、各モデルの種類の例と共に説明します。  
   
- これらの概念を示すために、Codeplex から入手できる AdventureWorks サンプル データベースの例を使用しています。 サンプルの詳細については、次を参照してください。 [for SQL Server の Adventure Works サンプル](http://go.microsoft.com/fwlink/?linkID=220093)します。  
+ これらの概念を示すために、Codeplex から入手できる AdventureWorks サンプル データベースの例を使用しています。 サンプルの詳細については、次を参照してください。 [for SQL Server の Adventure Works サンプル](https://go.microsoft.com/fwlink/?linkID=220093)します。  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI のテーブル モデルの構造  
  レポート モデルとそのデータを記述する CSDLBI ドキュメントでは、最初に xsd ステートメントを記述し、その後にモデルの定義を記述します。  
@@ -129,23 +127,23 @@ ms.locfileid: "50146518"
   
  その場合、キューブの表現はテーブル モデル データベースによく似ています。 キューブ名とキューブが、表形式のデータベース名とデータベース識別子に対応します。  
   
- **ディメンション:** ディメンションは列とプロパティを持つエンティティ (テーブル) として CSDLBI で表現されます。 パースペクティブに含まれていない場合でも、モデルに含まれるディメンションは、`Hidden` とマークされて CSDL 出力で表現されます。  
+ **ディメンション:** ディメンションは、列とプロパティを持つエンティティ (テーブル) として CSDLBI で表現されます。 パースペクティブに含まれていない場合でも、モデルに含まれるディメンションは、`Hidden` とマークされて CSDL 出力で表現されます。  
   
- **パースペクティブ:** クライアントは、個々 のパースペクティブに対する CSDL を要求できます。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)します。  
+ **パースペクティブ:** クライアントは、個々 のパースペクティブに対する CSDL を要求することができます。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)します。  
   
- **階層:** 階層がサポートされているし、一連のレベルとして CSDLBI で表現されます。  
+ **階層:** 階層はサポートされており、一連のレベルとして CSDLBI で表現されます。  
   
- **メンバー:** サポート、既定のメンバーが追加され、既定値が CSDLBI 出力を自動的に追加します。  
+ **メンバー:** 既定のメンバーのサポートが追加されているし、既定値が CSDLBI 出力を自動的に追加します。  
   
  **計算されるメンバー:** 多次元モデルの子に対して計算されるメンバーをサポートする**すべて**実際のメンバーを 1 つ使用します。  
   
- **ディメンションの属性:** CSDLBI 出力でディメンションの属性がサポートされているし、自動的に非集計としてマークします。  
+ **ディメンションの属性:** CSDLBI 出力でディメンションの属性はサポートされているし、自動的に集計不可能としてマークされます。  
   
  **Kpi:** Kpi は CSDLBI version 1.1 でサポートされていましたが、表現が変更されました。 以前の KPI はメジャーのプロパティでした。 バージョン 1.1 では、メジャー、KPI 要素を追加できます。  
   
  **新しいプロパティ:** DirectQuery モデルをサポートする属性が追加されました。  
   
- **制限事項:** セルのセキュリティはサポートされていません。  
+ **制限事項:** セルのセキュリティがサポートされていません。  
   
 ## <a name="see-also"></a>参照  
  [ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  

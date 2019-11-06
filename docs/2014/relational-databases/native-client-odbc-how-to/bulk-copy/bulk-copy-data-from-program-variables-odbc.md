@@ -13,19 +13,19 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192873"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753644"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>プログラム変数からのデータの一括コピー (ODBC)
   このサンプルでは、一括コピー関数 `bcp_bind` と `bcp_sendrow` を使用して、プログラム変数から SQL Server にデータを一括コピーする方法を示します  (この例では、簡略化のためエラーチェック コードが削除されています)。  
   
  このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
- **セキュリティに関する注意**可能であれば、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  
+ **セキュリティに関する注意**可能であれば、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>プログラム変数に対して一括コピー関数を直接使用するには  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192873"
   
     -   一括コピー エラー メッセージを受け取るデータ ファイルの名前 (メッセージ ファイルを使用しない場合は NULL を指定します)。  
   
-    -   コピーの方向 (アプリケーションからビューまたはテーブルへのコピーの場合は DB_IN、テーブルまたはビューからアプリケーションへのコピーの場合は DB_OUT)。  
+    -   コピーの方向:テーブルまたはビューからアプリケーションに、アプリケーションから、ビュー、テーブル、または DB_OUT に DB_IN します。  
   
 5.  呼び出す[bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の各列の列をプログラム変数にバインドする一括コピーします。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48192873"
 ## <a name="example"></a>例  
  このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -300,7 +300,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピーの SQL Server ODBC ドライバーの操作について&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [プログラム変数からの一括コピー](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   

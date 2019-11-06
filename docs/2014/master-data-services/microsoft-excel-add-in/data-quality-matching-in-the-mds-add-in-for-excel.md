@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 647fe2c53dfc02bd53a063f49e3bef4b635137ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478901"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、新しいデータと既に MDS で管理されているデータを比較することは、重複するデータや不正確なデータの追加を避けるために役立ちます。  
   
- MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Data Quality Services (DQS) 機能を使用して、類似するデータを照合します。 アドインの照合機能を使用すると、類似するレコードがグループ化され、結果の精度を表すスコアが表示されます。 DQS によって提供される照合機能の詳細については、「 [データ照合](../../data-quality-services/data-matching.md)」を参照してください。  
+ MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Data Quality Services (DQS) 機能を使用して、類似するデータを照合します。 アドインの照合機能を使用すると、類似するレコードがグループ化され、結果の精度を表すスコアが表示されます。 DQS によって提供される照合機能の詳細については、「 [データ照合](../../data-quality-services/data-matching.md)」を参照してください。  
   
 ## <a name="workflow-for-data-quality-matching"></a>データ品質照合のワークフロー  
  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で DQS を使用する場合、次のワークフローを使用します。  
@@ -49,8 +48,8 @@ ms.locfileid: "48103494"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|外部データを MDS によって管理されるデータと結合して、比較できるようにします。|[データを結合&#40;MDS アドインの Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
-|DQS ナレッジを使用して、データの類似性を見つけます。|[類似データの照合 &#40;MDS Excel 用 MDS アドイン&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|外部データを MDS によって管理されるデータと結合して、比較できるようにします。|[データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)|  
+|DQS ナレッジを使用して、データの類似性を見つけます。|[類似データの照合 (Excel 用 MDS アドイン)](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

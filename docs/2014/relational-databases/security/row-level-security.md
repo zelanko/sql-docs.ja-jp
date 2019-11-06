@@ -16,15 +16,15 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e051e692361ab70d68103186dd24df8b5f7a6082
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985763"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
-  Row-Level Security を使用すると、クエリを実行するユーザーの特性に基づき、データベース テーブルの行へのアクセスを制御できます (たとえば、グループのメンバーシップや実行コンテキストなど)。 行レベルのセキュリティがで使用できるようになりました[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016。 この機能の現在の説明については、現在のドキュメントの「 [行レベルのセキュリティ](https://msdn.microsoft.com/library/dn765131.aspx) 」を参照してください。  
+  Row-Level Security を使用すると、クエリを実行するユーザーの特性に基づき、データベース テーブルの行へのアクセスを制御できます (たとえば、グループのメンバーシップや実行コンテキストなど)。 行レベルのセキュリティが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 で使用可能になりました。 この機能の現在の説明については、現在のドキュメントの「 [行レベルのセキュリティ](https://msdn.microsoft.com/library/dn765131.aspx) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティ ポリシーを作成する&#40;Azure SQL Database&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   

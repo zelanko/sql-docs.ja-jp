@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
@@ -21,12 +20,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc10aefddfe657e038f524f90075ae1fae0ce23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210708"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   パラメーター化された行フィルターを使用すると、複数のパブリケーションを作成しなくても、パーティションの異なるデータを各サブスクライバーに送信できます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、パラメーター化されたフィルターは動的フィルターと呼ばれていました)。 パーティションとは、テーブル内の行のサブセットのことです。パラメーター化された行フィルターの作成時に選択した設定に基づき、パブリッシュされたテーブルの各行は、1 つのパーティションのみに属するか (重複しないパーティションが作成されます)、2 つ以上のパーティションに属します (重複するパーティションが作成されます)。  
@@ -38,7 +37,7 @@ ms.locfileid: "48216312"
  パラメーター化された行フィルターを定義または変更するには、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。  
   
 ## <a name="how-parameterized-filters-work"></a>パラメーター化されたフィルターの動作  
- パラメーター化された行フィルターでは、WHERE 句を使用して、パブリッシュする適切なデータを選択します。 静的行フィルターのようにこの句でリテラル値を指定するのではなく、システム関数 SUSER_SNAME() および HOST_NAME() のいずれかまたは両方を指定します。 ユーザー定義関数も使用できますが、その場合はユーザー定義関数の本体に SUSER_SNAME() または HOST_NAME() を含めるか、または `MyUDF(SUSER_SNAME()`のように、ユーザー定義関数でこれらのシステム関数のいずれかを評価する必要があります。 ユーザー定義関数の本体に SUSER_SNAME() または HOST_NAME() を含める場合、その関数にパラメーターを渡すことはできません。  
+ パラメーター化された行フィルターでは、WHERE 句を使用して、パブリッシュする適切なデータを選択します。 静的行フィルターのようにこの句でリテラル値を指定するのではなく、システム関数SUSER_SNAME() および HOST_NAME() のいずれかまたは両方を指定します。 ユーザー定義関数も使用できますが、その場合はユーザー定義関数の本体に SUSER_SNAME() または HOST_NAME() を含めるか、または `MyUDF(SUSER_SNAME()`のように、ユーザー定義関数でこれらのシステム関数のいずれかを評価する必要があります。 ユーザー定義関数の本体に SUSER_SNAME() または HOST_NAME() を含める場合、その関数にパラメーターを渡すことはできません。  
   
  システム関数 SUSER_SNAME() および HOST_NAME() は、マージ レプリケーションに固有のものではありませんが、パラメーター化されたフィルター選択のためにマージ レプリケーションで使用されます。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48216312"
   
      サブスクライバーまたはディストリビューターの名前以外の値で、この関数をオーバーライドすることも可能です。 通常、アプリケーションでは、販売員の名前や ID など、より具体的な意味のある値でこの関数をオーバーライドします。 詳細については、このトピックの「HOST_NAME() 値のオーバーライド」を参照してください。  
   
- システム関数によって返された値は、フィルター選択しているテーブルで指定した列と比較され、適切なデータがサブスクライバーにダウンロードされます。 この比較は、サブスクリプションが初期化されたときに実行され (これにより初期スナップショットには適切なデータのみが含まれます)、またサブスクリプションが同期されるたびに実行されます。 既定では、パブリッシャーでの変更によってパーティションから行が移動すると、その行はサブスクライバーで削除されます (この動作は、 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) の **@allow_partition_realignment**パラメーターを使用して制御されます)。  
+ システム関数によって返された値は、フィルター選択しているテーブルで指定した列と比較され、適切なデータがサブスクライバーにダウンロードされます。 この比較は、サブスクリプションが初期化されたときに実行され (これにより初期スナップショットには適切なデータのみが含まれます)、またサブスクリプションが同期されるたびに実行されます。 既定では、パブリッシャーでの変更によってパーティションから行が移動すると、その行はサブスクライバーで削除されます (この動作は、 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) の **@allow_partition_realignment** パラメーターを使用して制御されます)。  
   
 > [!NOTE]  
 >  パラメーター化されたフィルターの比較が実行されるときは、常にデータベース照合順序が使用されます。 たとえば、データベース照合順序で大文字と小文字が区別されず、テーブルまたは列の照合順序で大文字と小文字が区別される場合、比較では大文字と小文字は区別されません。  
@@ -94,8 +93,8 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  たとえば、従業員の Pamela Ansman-Wolfe には、280 という従業員 ID が割り当てられています。 この従業員のサブスクリプションの作成時に、従業員 ID の値 (この場合は 280) を HOST_NAME() 値に指定します。 マージ エージェントはパブリッシャーに接続すると、HOST_NAME() によって返された値をこのテーブル内の値と比較し、 **EmployeeID** 列に 280 という値が格納された行のみをダウンロードします。  
   
-> [!IMPORTANT]  
->  HOST_NAME() 関数を返します、`nchar`値であるため、上記の例では、変換、数値データ型の場合はフィルター句で列を使用する必要があります。 `CONVERT(nchar,EmployeeID) = HOST_NAME()`のように、パラメーター化された行フィルターの句で列名に関数を適用するとパフォーマンスが低下するため、使用しないことをお勧めします。 代わりに、この例で示されている `EmployeeID = CONVERT(int,HOST_NAME())`という句を使用することをお勧めします。 この句を使用することができます、 **@subset_filterclause**パラメーターの[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)が通常では使用できません、パブリケーションの新規作成ウィザードが、(、ウィザードを実行して検証するのには、フィルター句コンピューター名に変換できないため、失敗、 `int`)。 パブリケーションの新規作成ウィザードを使用する場合は、このウィザードで `CONVERT(nchar,EmployeeID) = HOST_NAME()` を指定し、次に [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を使用して句を `EmployeeID = CONVERT(int,HOST_NAME())` に変更してから、パブリケーションのスナップショットを作成することをお勧めします。  
+> [!IMPORTANT]
+>  HOST_NAME() 関数は `nchar` 型の値を返します。したがって、上記の例のようにフィルター句の列が数値データ型の場合は、CONVERT を使用する必要があります。 `CONVERT(nchar,EmployeeID) = HOST_NAME()`のように、パラメーター化された行フィルターの句で列名に関数を適用するとパフォーマンスが低下するため、使用しないことをお勧めします。 代わりに、この例で示されている `EmployeeID = CONVERT(int,HOST_NAME())`という句を使用することをお勧めします。 この句を使用することができます、 **@subset_filterclause** パラメーターの[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)が通常では使用できません、パブリケーションの新規作成ウィザードが、(、ウィザードを実行して検証するのには、フィルター句コンピューター名に変換できないため、失敗、 `int`)。 パブリケーションの新規作成ウィザードを使用する場合は、このウィザードで `CONVERT(nchar,EmployeeID) = HOST_NAME()` を指定し、次に [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を使用して句を `EmployeeID = CONVERT(int,HOST_NAME())` に変更してから、パブリケーションのスナップショットを作成することをお勧めします。  
   
  **HOST_NAME() 値をオーバーライドするには**  
   
@@ -120,7 +119,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  フィルター選択オプションを設定するには、「 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)」を参照してください。  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>"パーティション グループを使用" および "パーティションの変更を保持" の設定  
- **パーティション グループを使用** オプションと **パーティションの変更を保持** オプションでは、いずれもパブリケーション データベースに追加のメタデータを格納することにより、フィルター選択されたアーティクルを持つパブリケーションの同期パフォーマンスを向上します。 **パーティション グループを使用** オプションでは、事前計算済みパーティション機能を使用することにより、パフォーマンスを向上させることができます。 このオプションを設定`true`既定では、パブリケーションのアーティクルが一連の要件に従う場合。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 記事には、事前計算済みパーティションを使用するための要件を満たしていない場合、 **@keep_partition_changes**にするオプションが設定されている`true`します。  
+ **パーティション グループを使用** オプションと **パーティションの変更を保持** オプションでは、いずれもパブリケーション データベースに追加のメタデータを格納することにより、フィルター選択されたアーティクルを持つパブリケーションの同期パフォーマンスを向上します。 **パーティション グループを使用** オプションでは、事前計算済みパーティション機能を使用することにより、パフォーマンスを向上させることができます。 このオプションは、パブリケーションのアーティクルが一連の要件を満たしている場合に、既定で `true` に設定されています。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 記事には、事前計算済みパーティションを使用するための要件を満たしていない場合、 **@keep_partition_changes**にするオプションが設定されている`true`します。  
   
 ### <a name="setting-partition-options"></a>[パーティションのオプション] の設定  
  **[パーティションのオプション]** プロパティの値は、アーティクルを作成するときに、フィルター選択されたテーブルのデータをサブスクライバーが共有する方法に応じて設定します。 このプロパティは、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)、および **[アーティクルのプロパティ]** ダイアログ ボックスを使用して、4 つの値のいずれかに設定できます。 このプロパティは、 **[フィルターの追加]** ダイアログ ボックスまたは **[フィルターの編集]** ダイアログ ボックスを使用して、2 つの値のいずれかに設定できます。これらのダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから使用できます。 次の表は、利用可能な値をまとめたものです。  
@@ -179,13 +178,13 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   結合フィルター階層では、重複するパーティションのアーティクルを、重複しないパーティションのアーティクルよりも上位にすることはできません。 つまり、子アーティクルで重複しないパーティションを使用する場合、親アーティクルでも重複しないパーティションを使用する必要があります。 結合フィルターの詳細については、「 [Join Filters](join-filters.md)」を参照してください。  
   
--   重複しないパーティションを子に持つ結合フィルターでは、 **一意キーの結合** プロパティを 1 に設定する必要があります。 詳しくは、「 [Join Filters](join-filters.md)」をご覧ください。  
+-   重複しないパーティションを子に持つ結合フィルターでは、 **一意キーの結合** プロパティを 1 に設定する必要があります。 詳細については、「 [Join Filters](join-filters.md)」を参照してください。  
   
 -   アーティクルは、1 つのパラメーター化されたフィルターまたは結合フィルターのみを持っている必要があります。 パラメーター化されたフィルターを持ち、かつ結合フィルターの親になることは可能です。 パラメーター化されたフィルターを持ち、かつ結合フィルターの子になることはできません。 複数の結合フィルターを持つことはできません。  
   
 -   パブリッシャーの 2 つのテーブルに結合フィルター リレーションシップがあり、子テーブルの行が親テーブルの行と対応していない場合、その行を親テーブルに挿入しても、関連する行はサブスクライバーにダウンロードされません (行は重複するパーティションによってダウンロードされます)。 たとえば、 **SalesOrderDetail** テーブルの行に対応する行が **SalesOrderHeader** テーブル内に存在せず、その行を **SalesOrderHeader**に挿入した場合、その行はサブスクライバーにダウンロードされますが、 **SalesOrderDetail** 内の対応する行はダウンロードされません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [時間ベースの行フィルターの推奨事項](best-practices-for-time-based-row-filters.md)   
  [パブリッシュされたデータのフィルター処理](../publish/filter-published-data.md)   
  [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](filter-published-data-for-merge-replication.md)  

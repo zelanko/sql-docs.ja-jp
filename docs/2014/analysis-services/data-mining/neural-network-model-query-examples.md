@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ed0ba22087a12f08e7a951a89a7ca989bb6487f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110598"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083291"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、ニューラル ネットワーク モデルのコンテンツ クエリでは、非表示層の数などのモデル メタデータを取得できます。 また、予測クエリでは、入力に基づいて分類を提示し、必要に応じて各分類の確率を提供することもできます。  
@@ -44,7 +43,7 @@ ms.locfileid: "48110598"
 ## <a name="finding-information-about-a-neural-network-model"></a>ニューラル ネットワーク モデルに関する情報の入手  
  すべてのマイニング モデルでは、アルゴリズムによる学習内容が、正規化されたスキーマ (マイニング モデル スキーマ行セット) に従って公開されます。 この情報から、基本的なメタデータ、分析で検出された構造、処理の際に使用されたパラメーターなど、モデルに関する詳細情報を得ることができます。 モデル コンテンツに対するクエリは、データ マイニング拡張機能 (DMX) ステートメントを使用して作成できます。  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1: DMX を使用してモデル メタデータを取得する  
+###  <a name="bkmk_Query1"></a> サンプル クエリ 1:DMX を使用してモデル メタデータを取得する  
  次のクエリは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用して作成されたモデルに関するいくつかの基本的なメタデータを返します。 ニューラル ネットワーク モデルの親ノードには、モデルの名前、モデルが格納されているデータベースの名前、および子ノードの数だけが含まれます。 ただし、マージナル統計ノード (NODE_TYPE = 24) によって、この基本的なメタデータと、モデルで使用される入力列に関するいくつかの派生した統計が提供されます。  
   
  次のサンプル クエリは、「 [中級者向けデータ マイニング チュートリアル](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)」で作成した `Call Center Default NN`というマイニング モデルを基にしています。 このモデルは、コール センターからのデータを使用して、人員配置と電話/注文/案件数との間に存在する可能性がある相関関係を探索します。 この DMX ステートメントは、ニューラル ネットワーク モデルのマージナル統計ノードからデータを取得します。 関心のある入力属性の統計が入れ子になったテーブル NODE_DISTRIBUTION に格納されているため、このクエリには FLATTENED キーワードが含まれています。 ただし、使用しているクエリ プロバイダーが階層的な行セットをサポートしている場合は、FLATTENED キーワードを使用する必要はありません。  
@@ -69,9 +68,9 @@ WHERE NODE_TYPE = 24
 |Adventure Works DW Multidimensional 2012|Call Center NN|案件あたりの平均時間|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|案件あたりの平均時間|< 64.7094100096|11|0.407407407|5|  
   
- ニューラル ネットワーク モデルのコンテキストでは、スキーマ行セット内の列の意味については、次を参照してください。[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)します。  
+ ニューラル ネットワーク モデルのコンテキストにおけるスキーマ行セットの列の意味については、「 [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)というマイニング モデルを基にしています。  
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2: スキーマ行セットからモデル メタデータを取得する  
+###  <a name="bkmk_Query2"></a> サンプル クエリ 2:スキーマ行セットからモデル メタデータを取得する  
  データ マイニング スキーマ行セットに対してクエリを実行すると、DMX コンテンツ クエリで返されたのと同じ情報を取得できます。 ただし、スキーマ行セットから返される情報にはいくつかの追加の列があります 次のサンプル クエリは、モデルが作成された日、変更された日、および最後に処理された日を返します。 また、予測可能列 (モデル コンテンツから簡単に取得することはできません)、およびモデルの作成に使用されたパラメーターも返します。 この情報は、モデルのドキュメントを作成する場合に使用できます。  
   
 ```  
@@ -90,7 +89,7 @@ WHERE MODEL_NAME = 'Call Center Default NN'
 |PREDICTION_ENTITY|Average Time Per Issue,<br /><br /> Grade Of Service,<br /><br /> Number Of Orders|  
 |MINING_PARAMETERS|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=0,<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255,<br /><br /> MAXIMUM_STATES=100, SAMPLE_SIZE=10000, HIDDEN_NODE_RATIO=4|  
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3: モデルの入力属性を取得する  
+###  <a name="bkmk_Query3"></a> サンプル クエリ 3:モデルの入力属性を取得する  
  モデルの作成に使用された入力属性と値のペアを取得するには、入力層 (NODE_TYPE = 18) の子ノード (NODE_TYPE = 20) に対してクエリを実行します。 次のクエリは、ノード記述から入力属性の一覧を返します。  
   
 ```  
@@ -140,7 +139,7 @@ WHERE NODE_TYPE = 21
 </NormContinuous>    
 ```  
   
-###  <a name="bkmk_Query4"></a> サンプル クエリ 4: 非表示層から重みを取得する  
+###  <a name="bkmk_Query4"></a> サンプル クエリ 4:非表示層から重みを取得する  
  ニューラル ネットワーク モデルのモデル コンテンツは、ネットワーク内の任意のノードに関する詳細を取得しやすい構造になっています。 さらに、ノードの ID 番号の情報からも、ノードの種類間のリレーションシップを識別できます。  
   
  次のクエリは、非表示層の特定のノードに格納された係数を取得する方法を示しています。 非表示層は、メタデータのみを含むオーガナイザー ノード (NODE_TYPE = 19)、および属性と値のさまざまな組み合わせの係数を含む複数の子ノード (NODE_TYPE = 22) で構成されます。 このクエリは、係数のノードだけを返します。  
@@ -174,12 +173,12 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  したがって、これらの結果から、ID 70000000200000000 で表されるノードには 6 つの異なる係数 (VALUETYPE = 7) が渡されていることがわかります。 係数の値は、ATTRIBUTE_VALUE 列に含まれています。 どの入力属性の係数かは、ATTRIBUTE_NAME 列のノード ID を使用して判断できます。 たとえば、ノード ID 6000000000000000a は、入力属性と値を参照します。 `Day of Week = 'Tue.'` ノード ID を使用してクエリを作成したり、 [Microsoft 汎用コンテンツ ツリー ビューアー](../microsoft-generic-content-tree-viewer-data-mining.md)を使用してノードを参照したりすることができます。  
   
- 同様に、出力層 (NODE_TYPE = 23) のノードの NODE_DISTRIBUTION テーブルに対してクエリを実行すると、各出力値の係数を確認できます。 ただし、出力層では、ポインターが非表示層のノードを参照します。 詳細については、次を参照してください。[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)します。  
+ 同様に、出力層 (NODE_TYPE = 23) のノードの NODE_DISTRIBUTION テーブルに対してクエリを実行すると、各出力値の係数を確認できます。 ただし、出力層では、ポインターが非表示層のノードを参照します。 詳細については、「 [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)というマイニング モデルを基にしています。  
   
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>ニューラル ネットワーク モデルを使用した予測の作成  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、分類と回帰の両方がサポートされています。 これらのモデルで予測関数を使用して、新しいデータを提供したり、単一予測またはバッチ予測を作成したりすることができます。  
   
-###  <a name="bkmk_Query5"></a> サンプル クエリ 5: 単一予測を作成する  
+###  <a name="bkmk_Query5"></a> サンプル クエリ 5:単一予測を作成する  
  ニューラル ネットワーク モデルに対する予測クエリを作成する最も簡単な方法は、予測クエリ ビルダーを使用することです。このビルダーは、 **および** のデータ マイニング デザイナーの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [マイニング予測] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで使用できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク ビューアーでモデルを参照し、関心のある属性をフィルター選択して傾向を表示します。その後、 **[マイニング予測]** タブに切り替えて、クエリを作成し、それらの傾向について新しい値を予測できます。  
   
  たとえば、コール センター モデルを参照して、注文数とその他の属性の相関関係を表示できます。 これを行うには、モデルを開き、ビューアーでの**入力**、 **\<すべて >** します。  次に、 **[出力]** で **[注文数]** を選択します。 **[値 1]** で最も注文が多い範囲を選択し、 **[値 2]** で最も注文が少ない範囲を選択します。 これにより、モデルで注文数と相関関係があるすべての属性がひとめでわかります。  
@@ -199,12 +198,12 @@ NATURAL PREDICTION JOIN
   
 |Predicted Orders|確率|  
 |----------------------|-----------------|  
-|364|0.9532…|  
+|364|0.9532...|  
   
  この予測された売上高は火曜日の現在の売上高の範囲より高くなり、予測の確率は非常に高い値を示しています。 ただし、バッチ処理を使用して複数の予測を作成し、モデルに対してさまざまな仮説を試す必要がある場合もあります。  
   
 > [!NOTE]  
->  Excel 2007 用データ マイニング アドインで提供されるロジスティック回帰ウィザードを使用すると、サービス グレードを特定のシフトのターゲット レベルまで引き上げるにはレベル 2 のオペレーターが何人必要になるかなど、複雑な質問に対する回答を簡単に求めることができます。 データ マイニング アドインは、無料でダウンロードできます。これらのアドインには、ニューラル ネットワークまたはロジスティック回帰アルゴリズムに基づいたウィザードが含まれています。 詳細については、「 [Office 2007 用データ マイニング アドイン](http://go.microsoft.com/fwlink/?LinkID=117790) 」の Web サイトを参照してください。  
+>  Excel 2007 用データ マイニング アドインで提供されるロジスティック回帰ウィザードを使用すると、サービス グレードを特定のシフトのターゲット レベルまで引き上げるにはレベル 2 のオペレーターが何人必要になるかなど、複雑な質問に対する回答を簡単に求めることができます。 データ マイニング アドインは、無料でダウンロードできます。これらのアドインには、ニューラル ネットワークまたはロジスティック回帰アルゴリズムに基づいたウィザードが含まれています。 詳細については、「 [Office 2007 用データ マイニング アドイン](https://go.microsoft.com/fwlink/?LinkID=117790) 」の Web サイトを参照してください。  
   
 ## <a name="list-of-prediction-functions"></a>予測関数の一覧  
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、共通の関数セットがサポートされています。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、このアルゴリズムに固有の予測関数はありませんが、次の表のような関数がサポートされています。  
@@ -223,9 +222,9 @@ NATURAL PREDICTION JOIN
  特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft ニューラル ネットワーク アルゴリズム](microsoft-neural-network-algorithm.md)   
- [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](microsoft-neural-network-algorithm-technical-reference.md)   
- [ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルの構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+ [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルを構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

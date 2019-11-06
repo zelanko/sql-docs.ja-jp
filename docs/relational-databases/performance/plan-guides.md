@@ -17,23 +17,22 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 736ce0ea9cc700d9064a3fa5fc87a27f9b38e71a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113480"
 ---
 # <a name="plan-guides"></a>プラン ガイド
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドは、サード パーティ ベンダーが提供するデータベース アプリケーションのクエリの小さなサブセットで、期待どおりのパフォーマンスが得られない場合に役に立ちます。 プラン ガイドでは、最適化する Transact-SQL ステートメントのほか、使用するクエリ ヒントを含む OPTION 句またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により Transact-SQL ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
   
  作成できるプラン ガイドの総数の上限は、使用可能なシステム リソースによって決まります。 ただし、プラン ガイドは、ミッションクリティカルなクエリのパフォーマンスの向上と安定化を図る目的にのみ使用する必要があります。 プラン ガイドの使用により配置済みのアプリケーションのクエリ負荷の多くが影響を受けることがないようにしてください。  
   
-> [!NOTE]  
+> [!NOTE]
 >  プラン ガイドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 プラン ガイドはどのエディションでも表示できます。 また、プラン ガイドを含むデータベースは、どのエディションに対してもアタッチできます。 アップグレード済みのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータベースを復元またはアタッチした場合、プラン ガイドはまったく影響を受けません。  
   
 ## <a name="types-of-plan-guides"></a>プラン ガイドの種類  
@@ -96,7 +95,25 @@ sp_create_plan_guide
 @params = NULL,   
 @hints = N'OPTION (MAXDOP 1)';  
 ```  
-  
+別の例として、[sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) を使用して送信された次の SQL ステートメントについて考えます。
+
+```sql  
+exec sp_executesql N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id', N'@so_id int', @so_id = 43662;  
+```  
+ このクエリの毎回の実行について一意のプランを作成するには、次のプラン ガイドを作成し、`OPTION (RECOMPILE)` クエリ ヒントを `@hints` パラメーターで使用します。 
+
+```sql  
+exec sp_create_plan_guide   
+@name = N'PlanGuide1_SalesOrders',   
+@stmt = N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id',
+@type = N'SQL',  
+@module_or_batch = NULL,   
+@params = N'@so_id int',   
+@hints = N'OPTION (recompile)';
+```
+
 > [!IMPORTANT]  
 >  `@module_or_batch` ステートメントの `@params` 引数と `sp_create_plan guide` 引数に指定する値は、実際のクエリで送信される、対応するテキストと一致している必要があります。 詳細については、「 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) ステートメントの [SQL Server Profiler を使用したプラン ガイドの作成とテスト](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。  
   

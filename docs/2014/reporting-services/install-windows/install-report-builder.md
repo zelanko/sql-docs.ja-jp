@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c60455bf38fc0cb8efb3ce44e4121adfe099a393
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108791"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>スタンドアロン バージョンのレポート ビルダーのインストール (レポート ビルダー)
-  レポート ビルダーをインストールすることができます、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=168472)またはレポート ビルダーの Windows インストーラー パッケージである ReportBuilder3_x86.msi にあるパブリック フォルダーなどの場所ダウンロードされています。  
+  レポート ビルダーをインストールすることができます、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=168472)またはレポート ビルダーの Windows インストーラー パッケージである ReportBuilder3_x86.msi にあるパブリック フォルダーなどの場所ダウンロードされています。  
   
- また、レポート ビルダーのインストールをコマンド ラインから実行し、引数を指定してインストールをカスタマイズすることもできます。 標準の MSI 固有パラメーターに加えて、レポート ビルダーに用意されているカスタム パラメーターの RBINSTALLDIR と REPORTSERVERURL も使用できます。 RBINSTALLDIR では、レポート ビルダーのルート インストール フォルダーを指定します。 REPORTSERVERURL では、レポート ビルダーがサーバーにレポートを保存するときに使用する既定のレポート サーバーを指定します。  
+ また、レポート ビルダーのインストールをコマンド ラインから実行し、引数を指定してインストールをカスタマイズすることもできます。 標準の MSI 固有パラメーターに加えて、レポート ビルダーが用意されているカスタム パラメーターを使用できます。RBINSTALLDIR と REPORTSERVERURL です。 RBINSTALLDIR では、レポート ビルダーのルート インストール フォルダーを指定します。 REPORTSERVERURL では、レポート ビルダーがサーバーにレポートを保存するときに使用する既定のレポート サーバーを指定します。  
   
  ユーザー インターフェイスをまったく操作しない完全なサイレント インストールを実行する場合は、 **/quiet** オプションを指定します。 quiet オプション フラグを使用するとインストール エラーが抑制されるように設計されています。 そのため、quiet オプションを使用する場合は、ログ記録を指定する **/l** オプションを含めることをお勧めします。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "48148862"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>ダウンロード サイトからレポート ビルダーをインストールするには  
   
-1.  移動して[Microsoft SQL Server 2012 レポート ビルダー](http://go.microsoft.com/fwlink/?LinkID=219138)し、Web ページのレポート ビルダーのセクションを探します。  
+1.  移動して[Microsoft SQL Server 2012 レポート ビルダー](https://go.microsoft.com/fwlink/?LinkID=219138)し、Web ページのレポート ビルダーのセクションを探します。  
   
 2.  クリックして**X86 パッケージ**します。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48148862"
         > [!NOTE]  
         >  ボリュームに十分な空きディスク領域がない場合は、ボリュームが強調表示されます。  
   
-10. **[既定の対象サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
+10. **[既定のターゲット サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     >  レポート ビルダーをレポート サーバーに接続して使用する場合は、ここでサーバーの URL を指定すると便利です。 ただしもこれから行うことができます、**オプション**ダイアログ ボックスのレポート ビルダーで作業するいるとします。  
@@ -97,7 +96,7 @@ ms.locfileid: "48148862"
         > [!NOTE]  
         >  ボリュームに十分な空きディスク領域がない場合は、ボリュームが強調表示されます。  
   
-7.  **[既定の対象サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
+7.  **[既定のターゲット サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     >  レポート ビルダーをレポート サーバーに接続して使用する場合は、ここでサーバーの URL を指定すると便利です。 ただしもこれから行うことができます、**オプション**ダイアログ ボックスのレポート ビルダーで作業するいるとします。  
@@ -106,7 +105,7 @@ ms.locfileid: "48148862"
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>コマンド ラインからレポート ビルダーをインストールするには  
   
-1.  移動して[Microsoft SQL Server 2012 レポート ビルダー](http://go.microsoft.com/fwlink/?LinkID=219138)し、レポート ビルダーのセクションを探します。  
+1.  移動して[Microsoft SQL Server 2012 レポート ビルダー](https://go.microsoft.com/fwlink/?LinkID=219138)し、レポート ビルダーのセクションを探します。  
   
 2.  クリックして**X86 パッケージ**します。  
   
@@ -124,13 +123,13 @@ ms.locfileid: "48148862"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     レポート ビルダーのインストールに固有のオプションは、RBINSTALLDIR と REPORTSERVERURL の 2 つです。 コマンド ラインにこれらの引数を含めることは必須ではありません。 標準的なコマンド ラインは次のとおりです。  
+     レポート ビルダーのインストールに固有 2 つのオプションは次のとおりです。RBINSTALLDIR と REPORTSERVERURL です。 コマンド ラインにこれらの引数を含めることは必須ではありません。 標準的なコマンド ラインは次のとおりです。  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
 9. コマンドを実行するには、Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)   
  [レポート ビルダーのスタンドアロン バージョンをアンインストール&#40;レポート ビルダー&#41;](install-report-builder.md)  
   

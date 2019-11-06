@@ -1,5 +1,5 @@
 ---
-title: '手順 1: 作業フォルダーと環境変数の作成 | Microsoft Docs'
+title: 手順 1:作業フォルダーと環境変数の作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,22 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5ffaef2277d5e6e902078a75fca75df7c6400106
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719250"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284134"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>レッスン 1-1 - 作業フォルダーと環境変数の作成
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このタスクでは、この後のチュートリアル タスクで使用する作業フォルダー (C:\DeploymentTutorial) と新しいシステム環境変数 (`DataTransfer` および `LoadXMLData`) を作成します。  
   
 作業フォルダーは、C ドライブのルートにあります。 別のドライブまたは場所を使用する必要がある場合は、変更してかまいません。 ただし、この場所を書き留めておいて、チュートリアルで DeploymentTutorial 作業フォルダーの場所が参照されたときに、該当する場所を使用する必要があります。  
   
-この後のレッスンでは、ファイル システムに保存されているパッケージを msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルに配置します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージは別のコンピューターに配置するのが理想的です。 これが不可能な場合でも、パッケージをローカル コンピューターの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに配置してこのチュートリアルを実行すれば、多くのことを学習できます。 ローカル コンピューターと配置先コンピューターで使用する環境変数には同じ変数名が付いていますが、変数に格納される値は異なります。 たとえば、ローカル コンピューターでは、環境変数 `DataTransfer` の値は C:\DeploymentTutorial フォルダーを参照しています。一方、配置先コンピューターでは、環境変数 `DataTransfer` は C:\DeploymentTutorialInstall フォルダーを参照しています。  
+この後のレッスンでは、ファイル システムに保存されているパッケージを msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルに配置します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージは別のコンピューターに配置するのが理想的です。 これが不可能な場合でも、パッケージをローカル コンピューターの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに配置してこのチュートリアルを実行すれば、多くのことを学習できます。 ローカル コンピューターと配置先コンピューターで使用する環境変数には同じ変数名が付いていますが、変数に格納される値は異なります。 たとえば、ローカル コンピューターでは、環境変数 `DataTransfer` の値は C:\DeploymentTutorial フォルダーを参照しています。一方、ターゲット コンピューターでは、環境変数 `DataTransfer` は C:\DeploymentTutorialInstall フォルダーを参照しています。  
   
 ローカル コンピューターに配置する場合は、1 つのセットの環境変数を作成するだけで済みます。ただし、ローカルの配置を行う前に、環境変数を適切な値に更新する必要があります。  
   
@@ -84,7 +87,7 @@ ms.locfileid: "47719250"
 10. 必要に応じて、コンピューターを再起動します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 2: 配置プロジェクトの作成](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+[手順 2:配置プロジェクトの作成](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
   
   

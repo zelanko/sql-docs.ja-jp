@@ -18,12 +18,12 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 70f9bc727ba86d10a48dbc9265c9c2d3655d9fe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179072"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874503"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>データベース ミラーリング中に発生する可能性のあるエラー
   物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題により、データベース ミラーリング セッションが失敗する場合があります。 データベース ミラーリングでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 データベース ミラーリングでは、通知されないその他の失敗を検出するために、独自のタイムアウト メカニズムを実装しています。 ミラーリングでタイムアウトが発生すると、データベース ミラーリングでは失敗が発生したと想定し、 *ソフト エラー*を宣言します。 ただし、SQL Server のインスタンス レベルで発生する一部の失敗ではミラーリングがタイムアウトしないため、失敗が検出されない場合があります。  
@@ -79,7 +79,7 @@ ms.locfileid: "48179072"
   
 -   TCP リンクのタイムアウト、パケットの紛失または破損、不正な順序のパケットなどのネットワーク エラー。  
   
--   オペレーティング システム、サーバー、またはデータベースの停止状態。  
+-   応答していないオペレーティングシステム、サーバー、またはデータベース。  
   
 -   Windows サーバーのタイムアウト。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "48179072"
 ## <a name="responding-to-an-error"></a>エラーへの対応  
  エラーを検出したサーバー インスタンスは、エラーの種類に関係なく、インスタンスのロール、セッションの動作モード、およびセッション内の他のすべての接続の状態に基づいて、適切な応答を行います。 パートナーと通信できなくなった場合の処置の詳細については、「 [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [データベース ミラーリングの動作モード](database-mirroring-operating-modes.md)   
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

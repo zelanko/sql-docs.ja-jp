@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 630e872901d4d63bfd927755d20f8c87dbb2a056
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052283"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の拒否
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -95,7 +94,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -142,7 +141,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
@@ -13,12 +12,12 @@ ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e331169f7477bfcb4a5ae926290664da50897b38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62782280"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory オプションの有効化 (Windows)
   この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。  
@@ -42,7 +41,7 @@ ms.locfileid: "48184962"
   
 5.  詳細ペインで、 **[メモリ内のページのロック]** をダブルクリックします。  
   
-6.  **[ローカル セキュリティの設定 - メモリ内のページのロック]** ダイアログ ボックスで、 **[ユーザーまたはグループの追加]** をクリックします。  
+6.  **[ローカル セキュリティの設定 - メモリ内のページのロック]** ダイアログ ボックスで、**[ユーザーまたはグループの追加]** をクリックします。  
   
 7.  **[ユーザー、サービス アカウント、またはグループの選択]** ダイアログ ボックスで、sqlservr.exe の実行権限のあるアカウントを追加します。  
   

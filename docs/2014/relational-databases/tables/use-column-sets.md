@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
@@ -14,12 +13,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63298628"
 ---
 # <a name="use-column-sets"></a>列セットの使用
   スパース列を使用するテーブルでは、テーブル内のすべてのスパース列を返すための列セットを指定できます。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 列セットは、テーブルに物理的に保存されないという点で計算列に似ています。 計算列と異なるのは、列セットが直接更新できる点です。  
@@ -94,7 +93,7 @@ ms.locfileid: "48180662"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>列セットのデータの挿入または変更  
  スパース列のデータ操作を実行するには、個々の列の名前を使用するか、または列セットの名前を参照し、列セットの XML 形式を使用して列セットの値を指定します。 XML 列では、スパース列を任意の順序で配置できます。  
   
- スパース列の値が挿入または XML 列セットを使用して、更新、ときに、基になるスパース列に挿入する値がから暗黙的に変換、`xml`データ型。 数値列の場合、数値列の XML に含まれる空白値は空白の文字列に変換されます。 これにより、次の例のように、数値列にゼロが挿入されます。  
+ XML 列セットを使用してスパース列の値を挿入または更新すると、基になるスパース列に挿入された値が `xml` データ型から暗黙的に変換されます。 数値列の場合、数値列の XML に含まれる空白値は空白の文字列に変換されます。 これにより、次の例のように、数値列にゼロが挿入されます。  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -108,7 +107,7 @@ GO
  この例では、 `i`列に値が指定されていませんが、値 `0` が挿入されています。  
   
 ## <a name="using-the-sqlvariant-data-type"></a>sql_variant データ型の使用  
- `sql_variant`日付型がなど複数の異なるデータ型を格納できます`int`、 `char`、および`date`します。 列セットは、`sql_variant` 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
+ `sql_variant` データ型には、`int`、`char`、`date` などの種類の異なる複数のデータ型を格納できます。 列セットは、`sql_variant` 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
   
 |データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大の長さ|有効桁数|Scale|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

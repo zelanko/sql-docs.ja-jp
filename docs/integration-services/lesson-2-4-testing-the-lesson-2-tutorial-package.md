@@ -1,33 +1,35 @@
 ---
-title: '手順 4: レッスン 2 のチュートリアル パッケージのテスト | Microsoft Docs'
+title: 手順 4:レッスン 2 のチュートリアル パッケージのテスト | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629515"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283555"
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>レッスン 2-4 - レッスン 2 のチュートリアル パッケージのテスト
-Foreach ループ コンテナーとフラット ファイル接続マネージャーを構成したので、Lesson 2 のパッケージは、Sample Data フォルダー内の 14 個のフラット ファイルに対して反復処理を実行できるようになりました。 指定した条件を満たすファイル名が見つかるたびに、Foreach ループ コンテナーは、ユーザー定義変数にそのファイル名を取り込みます。 次に、この変数に基づいて、フラット ファイル接続マネージャーの ConnectionString プロパティを更新し、新しいフラット ファイルへの接続を確立します。 さらに、新しいフラット ファイル内のデータに対して未変更のデータ フロー タスクを実行してから、フォルダー内の次のファイルに接続します。  
-  
-次の手順を実行して、パッケージに追加した新しいループ機能をテストします。  
+# <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>レッスン 2 から 4:レッスン 2 で作成したチュートリアル パッケージのテスト
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
+Foreach ループ コンテナーとフラット ファイル接続マネージャーを構成したので、レッスン 2 のパッケージは、Sample Data フォルダー内の 14 個のフラット ファイルに対して反復処理を実行できるようになりました。 ファイル名が指定した条件と一致するたびに、Foreach ループ コンテナーは、ユーザー定義変数にそのファイル名を取り込みます。 次に、この変数に基づいて、フラット ファイル接続マネージャーの ConnectionString プロパティが更新され、フラット ファイルへの接続が確立されます。 さらに、Foreach ループ コンテナーは、そのフラット ファイル内のデータに対して未変更のデータ フロー タスクを実行します。  
   
 > [!NOTE]  
-> レッスン 1 で作成したパッケージを実行した場合、このレッスンでパッケージを実行する前に、AdventureWorksDW2012 の dbo.NewFactCurrencyRate からレコードを削除する必要があります。そうしないと、主キー制約違反を示すエラーが発生してパッケージが失敗します。 [デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) パッケージを実行すると、レッスン 1 とレッスン 2 の両方が実行されるため、同じエラーが発生します。 レッスン 2 では、レッスン 1 で既に挿入されたレコードを挿入しようとします。  
+> レッスン 1 のパッケージを実行している場合、このレッスンのパッケージを実行する前に、AdventureWorksDW2012 データベースの dbo.NewFactCurrencyRate テーブルのレコードを削除する必要があります。 レッスン 2 が、レッスン 1 で既に挿入されたレコードを挿入しようとし、それによってエラーが発生します。  
   
-## <a name="checking-the-package-layout"></a>パッケージ レイアウトの確認  
-パッケージをテストする前に、次の図に示すオブジェクトがレッスン 2 のパッケージの制御フローとデータ フローに含まれていることを確認します。 データ フローはレッスン 1 のデータ フローと同じである必要があります。  
+## <a name="check-the-package-layout"></a>パッケージ レイアウトを確認する  
+パッケージをテストする前に、次の図に示すオブジェクトがレッスン 2 のパッケージの制御フローとデータ フローに含まれていることを確認します。 レッスン 2 のデータ フローは、レッスン 1 と同じです。  
   
 **制御フロー**  
   
@@ -37,19 +39,19 @@ Foreach ループ コンテナーとフラット ファイル接続マネージ�
   
 ![パッケージ内のデータ フロー](../integration-services/media/task9lesson1data.gif "パッケージ内のデータ フロー")  
   
-### <a name="to-test-the-lesson-2-tutorial-package"></a>レッスン 2 で作成したチュートリアル パッケージをテストするには  
+## <a name="test-the-lesson-2-tutorial-package"></a>レッスン 2 で作成したチュートリアル パッケージのテスト  
   
-1.  **ソリューション エクスプローラー**で **Lesson 2.dtsx** を右クリックし、 **[パッケージの実行]** をクリックします。  
+1.  **ソリューション エクスプローラー**で **[Lesson 2.dtsx]** を右クリックし、 **[パッケージの実行]** を選択します。  
   
-    パッケージが実行されます。 各ループのステータスは [出力] ウィンドウで確認できます。または、 **[進行状況]** タブをクリックしても確認できます。たとえば、Currency_VEB.txt から 1097 個の行がディメンション テーブルに追加されたことがわかります。  
+    パッケージが実行されます。 各ループのステータスは **[出力]** ウィンドウで確認できます。または、 **[進行状況]** タブを選択しても確認できます。たとえば、ファイル Currency_VEB.txt から 1,097 個の行が宛先のテーブルに追加されたことがわかります。  
   
-2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
-## <a name="next-lesson"></a>次のレッスン  
-[レッスン 5: パッケージ配置モデルの SSIS パッケージ構成を追加する](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+## <a name="go-to-next-lesson"></a>次のレッスンに進む  
+[レッスン 3:SSIS でのログ記録の追加](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
 ## <a name="see-also"></a>参照  
-[プロジェクトとパッケージの実行](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
+[プロジェクトとパッケージの実行](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   

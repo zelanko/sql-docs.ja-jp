@@ -2,7 +2,7 @@
 title: アップグレード オンプレミス SQL Server または SQL Server Data Migration Assistant を使用して Azure Vm 上に SQL Server |Microsoft Docs
 description: Data Migration Assistant を使用して、以降のバージョンの SQL Server または Azure Vm 上の SQL Server には、オンプレミスの SQL Server をアップグレードする方法について説明します
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,20 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
-ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+author: HJToland3
+ms.author: jtoland
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058825"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server または Data Migration Assistant を使用して Azure Vm 上の SQL Server にオンプレミスの SQL Server のアップグレードします。
 
 Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Server オンプレミスと以降のバージョンの SQL Server へのアップグレードまたは SQL Server への移行のシームレスな評価を提供します。
 
-この記事では、Data Migration Assistant を使用して、オンプレミス SQL Server 以降のバージョンの SQL Server または Azure Vm 上の SQL Server をアップグレードするための詳細な手順を説明します。   
+この記事では、Data Migration Assistant を使用して、オンプレミス SQL Server 以降のバージョンの SQL Server または Azure Vm 上の SQL Server をアップグレードするための詳細な手順を説明します。
 
 ## <a name="create-a-new-migration-project"></a>新しい移行プロジェクトを作成します。
 
@@ -65,9 +64,9 @@ Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Ser
    > [!NOTE]
    > 左側のウィンドウで、サーバーを選択して、移行するすべてのデータベースには、移行の設定を適用できます。 左側のウィンドウで、データベースを選択して、個々 のデータベース固有の設定で構成することもできます。
 
-    A. 指定、**ソースとターゲットの SQL サーバーのバックアップ操作でアクセスできる場所を共有**します。 サービス アカウントが実行されているソース SQL Server のインスタンスが書き込み共有の場所での特権と、ターゲット サービス アカウントに読み取り、共有の場所での特権があることを確認してください。
+    a. 指定、**ソースとターゲットの SQL サーバーのバックアップ操作でアクセスできる場所を共有**します。 サービス アカウントが実行されているソース SQL Server のインスタンスが書き込み共有の場所での特権と、ターゲット サービス アカウントに読み取り、共有の場所での特権があることを確認してください。
 
-    B. データと対象サーバー上のトランザクションのログ ファイルを復元する場所を指定します。
+    b. データと対象サーバー上のトランザクションのログ ファイルを復元する場所を指定します。
 
     ![[データベース] ページを追加します。](../dma/media/AddDatabases.png)
 
@@ -111,5 +110,5 @@ Data Migration Assistant は、バックアップ フォルダー、データ、
 ## <a name="see-also"></a>関連項目
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant: 構成の設定](../dma/dma-configurationsettings.md)
-- [Data Migration Assistant: ベスト プラクティス](../dma/dma-bestpractices.md)
+- [Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant:ベスト プラクティス](../dma/dma-bestpractices.md)

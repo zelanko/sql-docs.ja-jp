@@ -34,13 +34,24 @@
           href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
         - name: SQL Server 2014 における管理ツール機能の動作の変更
           href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+- name: ビジネス継続性
+  href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
+  items:
+    - name: Always On 可用性グループ
+      href: availability-groups/windows/toc.yml
+    - name: フェールオーバー クラスター インスタンス
+      href: ../sql-server/failover-clusters/toc.yml
+    - name: データベース ミラーリング
+      href: database-mirroring/toc.yml
+    - name: ログ配布
+      href: log-shipping/toc.yml
 - name: データベース エンジンの機能とタスク
   href: database-engine-features-and-tasks.md
 - name: データベース エンジンのインスタンス (SQL Server)
   href: configure-windows/database-engine-instances-sql-server.md
   items:
     - name: データベース エンジンのインスタンスの構成 +
-      href: configure-windows/configure-database-engine-instances-sql-server.md
+      href: configure-windows/toc.yml
     - name: 照合順序と Unicode のサポート +
       href: ../relational-databases/collations/collation-and-unicode-support.md
     - name: リンク サーバー (データベース エンジン)
@@ -123,12 +134,6 @@
       items:
         - name: 利用状況モニターを開く方法 (SQL Server Management Studio)
           href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
-- name: Always On 可用性グループ +
-  href: availability-groups/windows/always-on-availability-groups-sql-server.md
-- name: データベース ミラーリング エンドポイント +
-  href: database-mirroring/the-database-mirroring-endpoint-sql-server.md
-- name: ログ配布について +
-  href: log-shipping/about-log-shipping-sql-server.md
 - name: SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター +
   href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: テクニカル リファレンス

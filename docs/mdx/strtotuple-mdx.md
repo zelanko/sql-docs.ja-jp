@@ -1,5 +1,5 @@
 ---
-title: StrToTuple (MDX) |Microsoft ドキュメント
+title: StrToTuple (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 35cd9cf849ce35bf82c839f0bbeeb657a75e990c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036715"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 
 
-  多次元式 (MDX) 形式の文字列によって指定されている組を返します。  
+  MDX 形式の文字列によって指定されたタプルを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,17 +29,17 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
   
 ## <a name="arguments"></a>引数  
  *Tuple_Specification*  
- 直接的または間接的に組を指定する有効な文字列式です。  
+ 直接的または間接的にタプルを指定する有効な文字列式です。  
   
 ## <a name="remarks"></a>コメント  
- **StrToTuple**関数には、指定されたセットが返されます。 **StrToTuple**関数は、通常のユーザー定義関数を使用、組指定を外部関数から MDX ステートメントに返します。  
+ **StrToTuple**関数は、指定されたセットを返します。 **StrToTuple**関数は通常、外部関数からタプル仕様を MDX ステートメントに返すためにユーザー定義関数と共に使用されます。  
   
--   CONSTRAINED フラグを使用するときは、組指定に修飾されているメンバー名または修飾されていないメンバー名を含める必要があります。 このフラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 修飾されているメンバー名または修飾されていないメンバー名に直接解決できない文字列を指定すると、"STRTOTUPLE 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラーが表示されます。  
+-   CONSTRAINED フラグを使用するときは、タプル指定に修飾されているメンバー名または修飾されていないメンバー名を含める必要があります。 このフラグは、指定された文字列によるインジェクション攻撃のリスク軽減のために使用されます。 文字列が指定されている場合は、修飾名または修飾されていないに直接解決できないメンバー名は次のエラーが表示されます。"CONSTRAINED によって設定された制限 STRTOTUPLE 関数でフラグに違反しました"。  
   
--   CONSTRAINED フラグを使用しない場合、組を返す有効な MDX 式に解決される組を指定できます。  
+-   CONSTRAINED フラグを使用しない場合、タプルを返す有効な MDX 式に解決されるタプルを指定できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、2004 年の Bayern メンバーの Reseller Sales Amount メジャーを返しています。 組の指定には、有効な MDX 組式が含まれています。  
+ 次の例では、2004 年の Bayern メンバーの Reseller Sales Amount メジャーを返します。 タプルの指定には、有効な MDX タプル式が含まれています。  
   
 ```  
 SELECT StrToTuple ('([Geography].[State-Province].[Bayern],[Date].[Calendar Year].[CY 2004], [Measures].[Reseller Sales Amount])')  
@@ -49,7 +48,7 @@ FROM [Adventure Works]
   
 ```  
   
- 次の例では、2004 年の Bayern メンバーの Reseller Sales Amount メジャーを返しています。 組の指定には、CONSTRAINED フラグによって必要とされる、修飾されたメンバー名が含まれています。  
+ 次の例では、2004 年の Bayern メンバーの Reseller Sales Amount メジャーを返します。 提供されているタプルの指定には、CONSTRAINED フラグによって必要に応じて、修飾されたメンバー名が含まれています。  
   
 ```  
 SELECT StrToTuple ('([Geography].[State-Province].[Bayern],[Date].[Calendar Year].[CY 2004], [Measures].[Reseller Sales Amount])', CONSTRAINED)  
@@ -58,7 +57,7 @@ FROM [Adventure Works]
   
 ```  
   
- 次の例では、2004 年の Bayern メンバーの Reseller Sales Amount メジャーを返しています。 組の指定には、有効な MDX 組式が含まれています。  
+ 次の例では、2004 年の Bayern メンバーの Reseller Sales Amount メジャーを返します。 タプルの指定には、有効な MDX タプル式が含まれています。  
   
 ```  
 SELECT StrToTuple ('([Geography].[State-Province].[Bayern],[Date].[Calendar Year].&[2003].NEXTMEMBER, [Measures].[Reseller Sales Amount])')  
@@ -67,7 +66,7 @@ FROM [Adventure Works]
   
 ```  
   
- 次の例では、CONSTRAINED フラグが原因でエラーが返されます。 組の指定には有効な MDX 組式が含まれていますが、CONSTRAINED フラグを使用する場合は、組の指定に修飾されたメンバー名または修飾されていないメンバー名が必要になります。  
+ 次の例では、CONSTRAINED フラグによってエラーを返します。 指定されたタプルの指定には、有効な MDX タプル式が含まれますが、CONSTRAINED フラグには、タプル仕様内の修飾名または修飾されていないメンバー名が必要です。  
   
 ```  
 SELECT StrToTuple ('([Geography].[State-Province].[Bayern],[Date].[Calendar Year].&[2003].NEXTMEMBER, [Measures].[Reseller Sales Amount])', CONSTRAINED)  
@@ -75,7 +74,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

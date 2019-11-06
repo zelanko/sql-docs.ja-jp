@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c4900794c3a29067c38b1fb16b127d07cf574ab8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37a714956b6d4e21fbbc5daaddf083656bdedcef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072023"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  既存のユーザー定義のリソース ガバナー ワークロード グループを削除します。  
+  既存のユーザー定義の Resource Governor ワークロード グループを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
@@ -45,9 +44,9 @@ DROP WORKLOAD GROUP group_name
  既存のユーザー定義のワークロード グループの名前を指定します。  
   
 ## <a name="remarks"></a>Remarks  
- リソース ガバナーの内部グループや既定のグループに対して、DROP WORKLOAD GROUP ステートメントを使用することはできません。  
+ Resource Governor の内部グループや既定のグループに対して、DROP WORKLOAD GROUP ステートメントを使用することはできません。  
   
- DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
+ DDL ステートメントを実行する場合、Resource Governor の状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
   
  アクティブなセッションが含まれているワークロード グループを削除したり別のリソース プールに移動したりした場合、その変更を適用するために ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを呼び出すと失敗します。 この問題を回避するには、次のいずれかの操作を実行します。  
   
@@ -73,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

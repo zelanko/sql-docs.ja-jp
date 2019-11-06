@@ -1,11 +1,9 @@
 ---
-title: sys.database_firewall_rules (Azure SQL データベース) |Microsoft Docs
+title: database_firewall_rules (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
@@ -20,43 +18,42 @@ helpviewer_keywords:
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e224bec27ba3151fb531f5ad0ce9676a4e3a8d2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61402b762b7a6b4d944214d59e187e1457e93f93
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789510"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155771"
 ---
-# <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL データベース)
+# <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  関連付けられたデータベース レベルのファイアウォール設定に関する情報を返します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。 データベース レベルのファイアウォールの設定は、包含データベース ユーザーを使用する場合に特に役立ちます。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+  に関連付けられている[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]データベースレベルのファイアウォール設定に関する情報を返します。 データベースレベルのファイアウォール設定は、包含データベースユーザーを使用する場合に特に便利です。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
- `sys.database_firewall_rules`ビューには、次の列が含まれています。  
+ ビュー `sys.database_firewall_rules`には、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|id|**INTEGER**|データベース レベルのファイアウォール設定の識別子。|  
+|id|**INTEGER**|データベースレベルのファイアウォール設定の識別子。|  
 |NAME|**NVARCHAR (128)**|データベース レベルのファイアウォール設定を説明し、区別するために選択した名前。|  
-|start_ip_address|**VARCHAR (50)**|データベース レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 最下位の IP アドレスは`0.0.0.0`します。|  
-|end_ip_address|**VARCHAR (50)**|データベース レベルのファイアウォール設定の範囲において最も大きい IP アドレス。 IP アドレス以下への接続にこれを試みる、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]インスタンス。 最上位の IP アドレスは`255.255.255.255`します。<br /><br /> 注: Windows Azure の接続試行が許可されますこの両方のフィールドと**start_ip_address** equals をフィールド`0.0.0.0`します。|  
-|create_date|**DATETIME**|データベース レベルのファイアウォール設定が作成された UTC 日時。|  
-|modify_date|**DATETIME**|データベース レベルのファイアウォール設定が最後に変更された UTC 日時。|  
+|start_ip_address|**VARCHAR (45)**|データベースレベルのファイアウォール設定の範囲の最小の IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 使用可能な最小の IP `0.0.0.0`アドレスはです。|  
+|end_ip_address|**VARCHAR (45)**|ファイアウォール設定の範囲の最上位の IP アドレス。 この値以下の IP アドレスは、インスタンスへの[!INCLUDE[ssSDS](../../includes/sssds-md.md)]接続を試行できます。 使用可能な最大 IP アドレス`255.255.255.255`はです。<br /><br /> 注:Azure の接続試行は、このフィールドと**start_ip_address**フィールドの両方が`0.0.0.0`と等しい場合に許可されます。|  
+|create_date|**/**|データベース レベルのファイアウォール設定が作成された UTC 日時。|  
+|modify_date|**/**|データベース レベルのファイアウォール設定が最後に変更された UTC 日時。|  
   
 ## <a name="remarks"></a>コメント  
- データベースのファイアウォール規則を削除する使用[sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)します。 すべてのファイアウォール規則を設定する[!INCLUDE[ssSDS](../../includes/sssds-md.md)]を参照してください[sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)します。 ファイアウォール規則を既存のデータベースに関する情報を返すクエリ[sys.database_firewall_rules (Azure SQL データベース)](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)します。  
+ Microsoft Azure SQL Database に関連付けられているサーバーレベルのファイアウォール設定に関する情報を返すには、 [firewall_rules (Azure SQL Database)](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- このビューで使用できる、**マスター**データベースと、各ユーザー データベース。 このビューに読み取り専用のアクセスは、データベースに接続するアクセス許可を持つすべてのユーザーに使用できます。  
+ このビューは、 **master**データベースと各ユーザーデータベースで使用できます。 このビューへの読み取り専用アクセスは、データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
-## <a name="see-also"></a>参照  
- [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules (Azure SQL データベース)](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
- [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [データベース エンジン アクセス用の Windows ファイアウォールを構成します。](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
- [FILESTREAM アクセスに対するファイアウォールを構成します。](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
- [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-  
+## <a name="see-also"></a>関連項目
+[sp_set_database_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
+[sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
+[sp_set_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
+[sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
+[firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
+[データベースエンジンアクセスできるように Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     
+[FILESTREAM アクセスのためのファイアウォールの構成](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
+[レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

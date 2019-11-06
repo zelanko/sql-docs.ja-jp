@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - opening queries
@@ -13,12 +13,12 @@ ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5eead90455fd6bdbf61d6ca46bbf0216a60fd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195040"
 ---
 # <a name="open-queries-visual-database-tools"></a>クエリを開く方法 (Visual Database Tools)
   クエリおよびビュー デザイナーで **[開く]** コマンドを使用すると、既存のクエリを開くことができます。  

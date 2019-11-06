@@ -1,431 +1,261 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
-ms.date: 11/06/2018
-ms.prod: sql-server-2018
+ms.date: 08/28/2019
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: bb83237e33f477468cd58ea8a692970268bf1d66
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711833"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807472"
 ---
-# <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 の新機能
+# <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、SQL Server 2019 の新機能をまとめます。 詳細および既知の問題については、「[SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)」(SQL Server 2019 リリース ノート) をご覧ください。
+以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。
 
-**SQL Server 2019 をお試しください。**
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [SQL Server 2019 をダウンロードして Windows にインストールする](https://go.microsoft.com/fwlink/?LinkID=862101)
-- [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)、および [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) の Linux にインストールする。
-- [Docker で SQL Server 2019 を実行する](../linux/quickstart-install-connect-docker.md)。
+この記事では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能と拡張機能について要約します。
 
-## <a name="ctp-21"></a>CTP 2.1
+詳細および既知の問題については、「[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-ver15-release-notes.md)」 をご覧ください。
 
-Community Technology Preview (CTP) 2.1 は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 に関しては、以下の機能が追加または強化されています。
-
-- [ビッグ データ クラスター](#bigdatacluster)
-  - Python アプリおよび R アプリを配置する
-- [データベース エンジン](#databaseengine)
-  - インテリジェントなクエリ処理によりスカラー UDF のインライン化が追加される
-  - テーブル名および列名と切り捨てられた値を取り込むように改善された切り捨てエラー メッセージ
-  - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 設定において UTF-8 対応の照合順序がサポートされている
-  - グラフ一致クエリで派生テーブルまたはビューの別名を使用する
-  - 統計情報のブロックに関する診断データが改善されている
-  - ハイブリッド バッファー プール
-  - 静的データ マスク
-- [ツール](#tools)
-  - Azure Data Studio
-
-## <a name="ctp-20"></a>CTP 2.0 
-
-Community Technology Preview (CTP) 2.0 は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の最初のパブリック リリースです。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 に関しては、以下の機能が追加または強化されています。
-
-- [ビッグ データ クラスター](#bigdatacluster)
-  - SQL および Spark Linux コンテナーを使用するビッグ データ クラスターを Kubernetes にデプロイする
-  - HDFS からビッグ データにアクセスする
-  - Spark で高度な分析と機械学習を実行する
-  - SQL データ プールへのデータに Spark ストリーミングを使用する
-  - Azure Data Studio を使用して、ノートブック エクスペリエンスを提供するクエリ ブックを実行する
-
-- [データベース エンジン](#databaseengine)
-  - UTF-8 のサポート
-  - 再開可能なオンライン インデックス作成により、インデックス作成を中断後に再開できる
-  - クラスター化列ストアのオンライン インデックスのビルドとリビルド
-  - セキュア エンクレーブを使用する Always Encrypted
-  - インテリジェントなクエリ処理
-  - Java 言語のプログラミング機能の拡張
-  - SQL グラフ機能
-  - オンラインおよび再開可能な DDL 操作に対するデータベース スコープの構成設定
-  - Always On 可用性グループ - セカンダリ レプリカの接続のリダイレクト
-  - データの検出と分類 - SQL Server へのネイティブな組み込み
-  - 永続メモリ デバイスの拡張サポート
-  - `DBCC CLONEDATABASE` での列ストア統計のサポート
-  - `sp_estimate_data_compression_savings` に追加された新しいオプション
-  - SQL Server Machine Learning Services フェールオーバー クラスター
-  - 既定で有効になる軽量クエリ プロファイリング インフラストラクチャ
-  - 新しい PolyBase コネクタ
-  - ページ情報を返す新しい `sys.dm_db_page_info` システム関数
-
-- [SQL Server on Linux](#sqllinux)
-  - レプリケーションのサポート
-  - Microsoft 分散トランザクション コーディネーター (MSDTC) のサポート
-  - Kubernetes を使用する Docker コンテナー上の Always On 可用性グループ
-  - サード パーティの AD プロバイダーに対する OpenLDAP のサポート
-  - Linux 上の Machine Learning
-  - 新しいコンテナー レジストリ
-  - 新しい RHEL ベースのコンテナー イメージ
-  - メモリ不足の通知
-
-- [マスター データ サービス](#mds)
-  - Silverlight コントロールの置き換え
-
-- [Security](#security)
-  - SQL Server 構成マネージャーでの証明書管理
-
-- [ツール](#tools)
-  - SQL Server Management Studio (SSMS) 18.0 (プレビュー)
-  - Azure Data Studio
-
-これらの機能の詳細については、以下をお読みください。
-
-## <a id="bigdatacluster"></a>ビッグ データ クラスター
-
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)により、次のような新しいシナリオが可能になります。
-
-- [Python アプリおよび R アプリを配置する](../big-data-cluster/big-data-cluster-create-apps.md)。 (CTP 2.1)
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および Spark Linux コンテナーを使用するビッグ データ クラスターを Kubernetes にデプロイする (CTP 2.0)
-- HDFS からビッグ データにアクセスする (CTP 2.0)
-- Spark で高度な分析と機械学習を実行する (CTP 2.0)
-- SQL データ プールへのデータに Spark ストリーミングを使用する (CTP 2.0)
-- [**Azure Data Studio**](../sql-operations-studio/what-is.md) でノートブック エクスペリエンスを提供するクエリ ブックを実行する。 (CTP 2.0)
- 
-[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
-
-## <a id="databaseengine"></a>データベース エンジン
-
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]では、データベース エンジンについて次に示す新機能の導入または機能強化が行われています
-
-### <a name="scalar-udf-inlining-ctp-21"></a>スカラー UDF のインライン化 (CTP 2.1)
-
-スカラー UDF のインライン化では、スカラー ユーザー定義関数 (UDF) が関係式に変換され、それらが呼び出し元の SQL クエリに埋め込まれます。これにより、スカラー UDF を利用するワークロードのパフォーマンスが向上します。 スカラー UDF のインライン化によって、UDF 内の操作に対するコストに基づく最適化が促進され、その結果として、非効率な、反復的および直列的な実行プランではなく、セット指向で並列的である効率的なプランが提供されます。 この機能は、データベース互換性レベル 150 では既定で有効です。
-
-詳細については、「[Scalar UDF inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md)」 (スカラー UDF のインライン化) を参照してください
-
-### <a name="truncation-error-message-improved-to-include-table-and-column-names-and-truncated-value-ctp-21"></a>テーブル名および列名と切り捨てられた値を取り込むように改善された切り捨てエラー メッセージ (CTP 2.1)
-
-エラー メッセージ ID 8152 `String or binary data would be truncated` は、データ移動ワークロードの開発または管理を行う多くの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 開発者や管理者によく知られています。このエラーは、スキーマが異なるソースと変換先との間でのデータ転送中に、ソース側のデータが大きすぎて変換先のデータ型に収まり切らない場合に発生します。 このエラー メッセージはトラブルシューティングに時間がかかることがあります。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、次のシナリオに対してより具体的な新しいエラー メッセージ (2628) が導入されています。  
-
-`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
-
-新しいエラー メッセージである 2628 では切り捨て問題に関してより多くのコンテキストが表示されます。このため、トラブルシューティング プロセスが簡単になります。 CTP 2.1 の場合、これはオプトイン エラー メッセージであり、使用するには[トレース フラグ](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 を有効にする必要があります。
-
-### <a name="utf-8-support-ctp-21"></a>UTF-8 のサポート (CTP 2.1)
-
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 設定中に既定で UTF-8 照合順序を選択するためのサポートが追加されました。
-
-### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>統計情報のブロックに関する診断データが改善されている (CTP 2.1)
-
-SQL Server 2019 プレビューでは、統計更新の同期操作を待機する、実行時間の長いクエリに対する診断データが改善されています。 クエリの実行を続行する前に `SELECT` が、統計更新の同期操作の完了を待機している場合は、動的管理ビュー `sys.dm_exec_requests` の `command` 列に `SELECT (STATMAN)` が表示されます。  さらに、新しい待機の種類 `WAIT_ON_SYNC_STATISTICS_REFRESH` は `sys.dm_os_wait_stats` 動的管理ビューに表示されます。 これには、統計更新の同期操作に費やされたインスタンス レベルの累積時間が表示されます。
-
-### <a name="static-data-masking-ctp-21"></a>静的データ マスク (CTP 2.1)
-
-SQL Server 2019 プレビューでは、静的データ マスクが導入されています。 静的データ マスクを使用することで、SQL Server データベースのコピー内の機密データをサニタイズすることができます。 静的データ マスクは、データベースのサニタイズされたコピーを作成するのに役立ちます。このコピーでは、非運用環境のユーザーと共有可能なコピーが作成されるようにすべての機密情報が変更されています。 静的データ マスクは、開発、テスト、分析、ビジネス レポート、コンプライアンス、トラブルシューティングのほか、特定のデータを異なる環境にコピーしてはならないシナリオで使用することができます。
-
-静的データ マスクは、列レベルで動作します。 マスクする列を選択し、選択した列ごとにマスク関数を指定します。 静的データ マスクでは、データベースがコピーされてから、指定したマスク関数が列に適用されます。
-
-#### <a name="static-data-masking-vs-dynamic-data-masking"></a>静的データ マスクと動的データ マスクの比較
-
-データ マスクとは、データベースに対してマスクを適用することで機密情報を非表示にすると共に、機密情報を新しいデータまたはスクラブ データに置換するプロセスです。 Microsoft では 2 つのマスク オプションを提供しています。静的データ マスクと動的データ マスクです。 動的データ マスクは、SQL Server 2017 で導入されています。 次の表で、この 2 つのソリューションを比較します。
-
-|静的データ マスク |動的なデータ マスキング
-|:----|:----
-|データベースのコピーに対して行われます <br/><br/>元のデータを取得できません<br/><br/>マスクはストレージ レベルに実行されます<br/><br/>すべてのユーザーが同じマスクされたデータにアクセスできます<br/><br/>継続的なチーム全体のアクセスを目的としています|元のデータベースに対して行われます<br/><br/>元のデータはそのまま保持されます<br/><br/>マスクはクエリ時にその場で実行されます<br/><br/>マスクはユーザーのアクセス許可に基づいて変化します <br/><br/>時間どおりのユーザー固有のアクセスを目的としています
-
-### <a name="database-compatibility-level-ctp-20"></a>データベース互換レベル (CTP 2.0)
-
-データベースの **COMPATIBILITY_LEVEL 150** が追加されています。 特定のユーザー データベースに対して有効にするには、次のコマンドを実行します。
-
-   ```sql
-   ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
-   ```
-
-### <a name="utf-8-support-ctp-20"></a>UTF-8 のサポート (CTP 2.0)
-
-インポートまたはエクスポートのエンコードとして、あるいはテキスト データのデータベース レベルまたは列レベルの照合順序としての、広く使用されている UTF-8 文字エンコードの完全なサポート。 UTF-8 は、`CHAR` および `VARCHAR` データ型で許可されており、`UTF8` サフィックスを持つようにオブジェクトの照合順序を作成するか変更すると有効になります。 
-
-たとえば、`LATIN1_GENERAL_100_CI_AS_SC` を `LATIN1_GENERAL_100_CI_AS_SC_UTF8` に変更するような場合です。 UTF-8 は、SQL Server 2012 で導入された補助文字をサポートする Windows 照合順序にのみ使用できます。 `NCHAR` および `NVARCHAR` では UTF-16 エンコードのみが許可され、変更されていません。
-
-使用されている文字セットによっては、この機能によりストレージを大幅に節約できます。 たとえば、ラテン文字列の既存の列データ型を、UTF-8 対応の照合順序を使用して `NCHAR(10)` から `CHAR(10)` に変更すると、必要なストレージが 50% 削減されます。 このように減るのは、`NCHAR(10)` を保存するには 20 バイト必要であるのに対し、`CHAR(10)` では同じ Unicode 文字列に 10 バイトしか必要ないためです。
-
-### <a name="resumable-online-index-create-ctp-20"></a>再開可能なオンライン インデックスの作成 (CTP 2.0)
-
-- **再開可能なオンライン インデックスの作成**により、インデックス作成操作が一時停止しても、最初からやり直すのではなく、操作が一時停止または失敗した場所から後で再開できます。
-
-  再開可能なオンライン インデックス作成では次のシナリオがサポートされています。
-  - インデックスの作成が失敗した後で、インデックス作成操作を再開します (データベースのフェールオーバー後や、ディスク領域が不足した後など)。
-  - 実行中のインデックス作成操作を一時停止し、後で再開することで、必要なシステム リソースを一時的に解放できます。
-  - 多くのログ領域と、他のメンテナンス アクティビティをブロックしてログが切り捨てられる実行時間の長いトランザクションを使用することなく、大きなインデックスを作成します。
-
-  この機能がないと、インデックス作成が失敗した場合、オンライン インデックス作成操作を最初からもう一度実行する必要があります。
-
-このリリースでは、この機能を追加する再開可能機能を[再開可能なオンライン インデックス再構築](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)に拡張します。
-
-さらに、[オンラインおよび再開可能な DDL 操作に対するデータベース スコープの既定の設定](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を使用して、特定のデータベースに対する既定値としてこの機能を設定できます。
-
-詳しくは、[再開可能なオンライン インデックス作成](../t-sql/statements/create-index-transact-sql.md#resumable-indexes)に関する記事をご覧ください。
-
-### <a name="build-and-rebuild-clustered-columnstore-indexes-online-ctp-20"></a>クラスター化列ストア インデックスのオンラインのビルドとリビルド (CTP 2.0)
-
-行ストア テーブルを列ストア形式に変換します。 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、クラスター化列ストア インデックス (CCI) の作成はオフラインのプロセスで、CCI の作成中はすべての変更を停止する必要がありました。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] および [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] では、CCI をオンラインで作成または再作成できます。 ワークロードはブロックされず、基になるデータに対するすべての変更はターゲットの列ストア テーブルに透過的に追加されます。 使用できる新しい [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの例を次に示します。
-
-  ```sql
-  CREATE CLUSTERED COLUMNSTORE INDEX cci
-    ON <tableName>
-    WITH (ONLINE = ON);
-  ```
-
-  ```sql
-  ALTER INDEX cci
-    ON <tableName>
-    REBUILD WITH (ONLINE = ON);
-  ```
-
-### <a name="always-encrypted-with-secure-enclaves-ctp-20"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted (CTP 2.0)
-
-インプレースの暗号化と高度な計算で Always Encrypted を拡張します。 拡張は、サーバー側のセキュリティ エンクレーブ内でプレーンテキスト データに対する計算を有効にすることによって行われます。
-
-暗号化操作には、列の暗号化と、列暗号化キーのローテーションが含まれます。 これらの操作は [!INCLUDE[tsql](../includes/tsql-md.md)] を使用して発行でき、データベースから外にデータを移動する必要ありません。 セキュア エンクレーブでは、次の要件が両方ともある広範なシナリオのセットに Always Encrypted が提供されます。  
-
-- データベース管理者、システム管理者、クラウド オペレーター、マルウェアなど、高い特権を持ちながら承認されていないユーザーから機密データが保護する必要がある。
-- 保護されたデータに対する高度な計算がデータベース システム内でサポートされている必要がある。
-
-詳しくは、「[Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md)」(セキュア エンクレーブを使用する Always Encrypted) をご覧ください。
-
-> [!NOTE]
-> セキュア エンクレーブを使用する Always Encrypted は、Windows OS でのみ使用できます。
-
-### <a name="intelligent-query-processing-ctp-20"></a>インテリジェントなクエリ処理 (CTP 2.0)
-
-- **行モード メモリ許可フィードバック**は、バッチ モードと行モード両方の演算子のメモリ許可サイズを調整することにより、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] で導入されたメモリ許可フィードバックの機能を拡張します。  メモリ許可条件が過剰な場合、許可されるメモリが実際に使われるメモリ サイズの 2 倍より多いと、メモリ許可フィードバックはメモリ許可を再計算します。 その後は、連続実行で要求されるメモリが少なくなります。 メモリ許可が過少な場合、ディスクへの書き込みが発生すると、メモリ許可フィードバックはメモリ許可の再計算をトリガーします。 その後は、連続実行で要求されるメモリが多くなります。 この機能は、データベース互換性レベル 150 では既定で有効です。
-
-- **概算 COUNT DISTINCT** は、グループ内の一意の非 null 値の概数を返します。 この関数は、ビッグ データのシナリオで使用するために設計されています。 この関数は、次の条件がすべて満たされるクエリ向けに最適化されています。
-   - 数百万行以上のデータ セットにアクセスする。
-   - 多数の個別値を持つ 1 つまたは複数の列を集計する。
-   - 絶対的な精度より応答性が重視される。
-      - 通常、`APPROX_COUNT_DISTINCT` は正確な答の 2% 以内の結果を返します。
-      - 正確な答に必要な時間より短い時間で、おおよその答を返します。
-
-- **行ストアのバッチ モード**では、バッチ モードでクエリを処理するのに列ストア インデックスが不要になりました。 バッチ モードのクエリ演算子は、一度に 1 行だけでなく、行のセットを処理できます。 この機能は、データベース互換性レベル 150 では既定で有効です。 次のすべてが当てはまる場合、行ストア テーブルにアクセスするクエリはバッチ モードによって速度が向上します。
-   - クエリで、結合や集計演算子などの分析演算子が使用されている。
-   - クエリに 100,000 行以上が関係する。
-   - クエリが、入力/出力データ バインドではなく CPU バインドである。
-   - 列ストア インデックスを作成して使用すると、次のいずれかの欠点がある。
-      - クエリに加わるオーバーヘッドが大きすぎる。
-      - 列ストア インデックスでまだサポートされていない機能に依存するアプリケーションのため不可能である。
-
-- **テーブル変数の遅延コンパイル**を使用すると、テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。  この正確な行数の情報は、ダウンストリーム プラン操作を最適化するために使用されます。 この機能は、データベース互換性レベル 150 では既定で有効です。
-
-インテリジェントなクエリ処理機能を使用するには、データベースを `COMPATIBILITY_LEVEL = 150` に設定します。
-
-### <a id="programmability"></a> Java 言語のプログラミング機能の拡張 (CTP 2.0)
-
-- **Java 言語拡張機能 (プレビュー)**: Java 言語の拡張機能を使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で Java コードを実行します。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、機能 "Machine Learning Services (データベース内)" を SQL Server インスタンスに追加すると、この拡張機能がインストールされます。
-
-### <a id="sqlgraph"></a> SQL グラフ機能
-
-- **グラフ一致クエリで派生テーブルまたはビューの別名を使用する (CTP 2.1)** SQL Server 2019 プレビュー上でのグラフ クエリでは、`MATCH` 構文内にビューおよび派生テーブルの別名を使用することがサポートされています。 `MATCH` 内でこれらの別名を使用するには、`UNION ALL` 演算子を使用して、ノード テーブルのセットまたはエッジ テーブルのセットのいずれかに対してビューおよび派生テーブルを作成する必要があります。 ノードまたはエッジのテーブルでは、フィルターが用意されている場合もあればそうでない場合もあります。 `MATCH` クエリ内で派生テーブルおよびビューの別名を使用する機能は、ご利用のグラフ内の 2 つ以上のエンティティ間で、異種のエンティティまたは異種の接続についてクエリを実行したいというシナリオにおいて非常に便利です。
-
-
-- **`MERGE` DML での一致サポート (CTP 2.0)** を使用すると、個別の `INSERT`、`UPDATE`、または `DELETE` ステートメントではなく、単一のステートメントでグラフのリレーションシップを指定できます。 `MERGE` ステートメントの `MATCH` 述語を使用して、新しいデータがあるノードまたはエッジ テーブルから現在のグラフ データをマージします。 この機能により、エッジ テーブルでの `UPSERT` シナリオが可能になります。 ユーザーは 1 つのマージ ステートメントを使用して、2 つのノードの間で、新しいエッジを挿入したり、既存のエッジを更新したりできます。
-
-- **エッジ制約 (CTP 2.0)** が SQL グラフのエッジ テーブルに導入されます。 エッジ テーブルは、任意のノードをデータベース内の他の任意のノードに接続できます。 エッジ制約の導入により、この動作にいくつかの制限を適用できるようになります。 新しい `CONNECTION` 制約を使用して、特定のエッジ テーブルが接続できるノードの種類をスキーマで指定できます。
-
-### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations--ctp-20"></a>オンラインおよび再開可能な DDL 操作に対するデータベース スコープの既定の設定 (CTP 2.0)
-
-- **オンラインおよび再開可能な DDL 操作に対するデータベース スコープの既定の設定**では、データベース レベルで `ONLINE` と `RESUMABLE` のインデックス操作に対して既定の動作を設定できます。インデックスの作成や再構築などの個々のインデックス DDL ステートメントごとにこれらのオプションを定義する必要はありません。
-
-- これらの既定値は、データベース スコープの構成オプション `ELEVATE_ONLINE` と `ELEVATE_RESUMABLE` を使用して設定します。 いずれのオプションでも、エンジンはサポートされる操作をオンラインまたは再開可能のインデックス実行に自動昇格します。 これらのオプションを使用して、次の動作を有効にできます。
-
-  - `FAIL_UNSUPPORTED` オプションでは、すべてのインデックス操作がオンラインまたは再開可能を許可され、オンラインまたは再開可能をサポートされていないインデックス操作は失敗します。
-  - `WHEN_SUPPPORTED` オプションでは、サポートされている操作はオンラインまたは再開可能を許可され、サポートされていない操作はオフラインまたは再開不可能で実行されます。
-  - `OFF` オプションでは、DDL ステートメントで明示的に指定されていない限り、すべてのインデックス操作をオフラインと再開不可能で実行する現在の動作が許可されます。
-
-既定の設定を上書きするには、ONLINE または RESUMABLE オプションをインデックスの作成および再構築コマンドで指定します。  
-
-この機能がないと、インデックスの作成や再構築などのインデックス DDL ステートメントで、オンラインおよび再開可能のオプションを直接指定する必要があります。
-
-詳細情報: インデックスの再開可能な操作について詳しくは、「[再開可能なインデックス操作](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)」をご覧ください。
-
-### <a id="ha"></a>Always On 可用性グループ - 同期レプリカの増加 (CTP 2.0)
-
-- **最大 5 つの同期レプリカ**: [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] では 3 つであった同期レプリカの最大数が、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では 5 つに増加します。 この 5 つのレプリカのグループを、グループ内で自動フェールオーバーするように構成できます。 1 つのプライマリ レプリカと、4 つの同期セカンダリ レプリカがあります。
-
-- **セカンダリ レプリカからプライマリ レプリカへの接続のリダイレクト**: 接続文字列に指定されたターゲット サーバーに関係なく、クライアント アプリケーションの接続をプライマリ レプリカに向けることができます。 この機能により、リスナーなしで接続をリダイレクトできます。 次のような場合に、セカンダリ レプリカからプライマリ レプリカへの接続のリダイレクトを使用します。
-
-  - クラスター テクノロジでリスナー機能が提供されていない。
-  - リダイレクトが複雑になるマルチ サブネット構成。
-  - クラスターの種類が `NONE` である読み取りスケールアウトまたはディザスター リカバリーのシナリオ。
-
-詳しくは、「[セカンダリからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md)」をご覧ください。
-
-### <a name="data-discovery-and-classification-ctp-20"></a>データの検出と分類 (CTP 2.0)
-
-データの検出と分類では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にネイティブに組み込まれた高度な機能が提供されます。 最も機密性の高いデータの分類とラベル付けには、次のような利点があります。
-- データのプライバシーに関する基準と規制のコンプライアンス要件を満たすのに役立ちます。
-- 監視 (監査) や、機密データへの異常アクセスに対するアラートなど、セキュリティ シナリオをサポートします。
-- 企業内で機密データが存在する場所を識別しやすくなるので、管理者はデータベースをセキュリティで保護する適切な手順を実行できます。
-
-詳しくは、「[SQL データの検出と分類](../relational-databases/security/sql-data-discovery-and-classification.md)」をご覧ください。
-
-[監査](../relational-databases/security/auditing/sql-server-audit-database-engine.md)も、新しいフィールド `data_sensitivity_information` が監査ログに追加されて強化されました。このフィールドには、クエリによって返された実際のデータの機密度の分類 (ラベル) が記録されます。 詳細と例については、「[ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md)」をご覧ください。
+**[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] で最良のエクスペリエンスを得るには、[最新のツール](what-s-new-in-sql-server-ver15-prerelease.md#tools)を使用してください。**
 
 >[!NOTE]
->監査を有効にする方法についての変更はありません。 監査レコードには、新しいフィールド `data_sensitivity_information` が追加されています。このフィールドには、クエリによって返された実際のデータの機密度の分類 (ラベル) が記録されます。 「[機密データへのアクセスの監査](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)」をご覧ください。
+>内容は [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース候補に関するものです。 リリース候補はプレリリース版ソフトウェアです。 情報は変更される可能性があります。 サポートのシナリオについては、「[サポート](#support)」を参照してください。
+>
+>このリリースには、Community Technology Preview (CTP) リリースで以前に発表された機能強化が含まれています。 機能強化では機能、バグの修正、セキュリティの強化、および最適化されたパフォーマンスが追加されています。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース候補より前の CTP リリースで導入または強化された機能の一覧については、「[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP アナウンス アーカイブ](what-s-new-in-sql-server-ver15-prerelease.md)」を参照してください。
 
-### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>永続メモリ デバイスの拡張サポート (CTP 2.0)
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 用の [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] が導入されています。 また、SQL Server データベース エンジン、SQL Server Analysis Services、SQL Server Machine Learning Services、SQL Server on Linux、SQL Server マスター データ サービスに対する追加機能と機能強化も提供されています。
 
-永続メモリ デバイスに配置されるすべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ファイルが、"*エンライト化*" モードで動作できるようになりました。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、効率的な memcpy 操作を使用してオペレーティング システムのストレージ スタックをバイパスし、デバイスに直接アクセスします。 このモードでは、このようなデバイスに対して低遅延の入力/出力が許可されるので、パフォーマンスが向上します。
-    - たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には次のようなファイルが含まれます。
-        - データベース ファイル
-        - トランザクション ログ ファイル
-        - インメモリ OLTP チェックポイント ファイル
-    - 永続メモリは、ストレージ クラス メモリとも呼ばれます。
-    - 永続メモリは、Microsoft 以外の Web サイトでは非公式に *pmem* と呼ばれることがあります。
+以下のセクションでは、これらの機能の概要について説明します。
 
-> [!NOTE]
-> このプレビュー リリースでは、永続メモリ デバイス上のファイルのエンライトメントは Linux でのみ利用できます。 Windows 上の SQL Server では、SQL Server 2016 以降で永続メモリ デバイスがサポートされています。
+## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>データの仮想化と [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-### <a name="hybrid-buffer-pool-ctp-21"></a>ハイブリッド バッファー プール (CTP 2.1)
+現代の企業はしばしば、データという財産を大量に管理しています。その財産はさまざまなデータ セットからなりますが、サイロ化されたデータ ソースでホストされるデータ セットは会社全体で増加の一途をたどります。 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] では、機械学習機能や人工知能機能など、大量のデータ セットを処理する完全な環境が与えられ、あらゆるデータから分析情報をほぼリアルタイムで取得できます。
 
-ハイブリッド バッファー プールとは、永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされるという、SQL Server データベース エンジンの新しい機能です。 PMEM デバイスを使用すると、データ アクセスにおける待機時間が非常に短くなるので、エンジンはバッファー プール内の "クリーンなページ" 領域にデータのコピーを作成するのをやめて、単純に PMEM 上のページに直接アクセスすることができます。 エンライトメントの場合と同様に、アクセスはメモリ マップ I/O を使用して実行されます。 この場合は、DRAM にページをコピーすることが回避され、さらに永続的ストレージ上のページにアクセスするときにオペレーティング システムの I/O スタックが回避されることから、パフォーマンス上の利点がもたらされます。 この機能は SQL Server on Windows と SQL Server on Linux の両方で利用できます。
+| 新機能または更新 | 詳細 |
+|:---|:---|
+| スケーラブルなビッグ データ ソリューション | Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置する](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行う<br/><br/> 大量のビッグ データを使用して、価値の高いリレーショナル データを簡単に組み合わせて分析する<br/><br/>外部データ ソースを照会する<br/><br/>SQL Server によって管理される HDFS にビッグ データを格納する<br/><br/>クラスターを介して複数の外部データ ソースからデータを照会する<br/><br/> AI、機械学習、その他の分析タスクにデータを使用する<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] に[アプリケーションをデプロイして実行する](../big-data-cluster/concept-application-deployment.md) <br/><br/> SQL Server マスター インスタンスからは、Always On 可用性グループ テクノロジを利用した、あらゆるデータベースを対象とする、高可用性とディザスター リカバリーが与えられます<br/>|
+|Polybase によるデータ仮想化 | 外部の SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースと外部のテーブルにデータを問い合わせる。新しく [UTF-8 エンコード対応](../relational-databases/collations/collation-and-unicode-support.md)になりました。 詳細については、「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」を参照してください。|
+| &nbsp; | &nbsp; |
 
-詳細については、「[Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md)」 (ハイブリッド バッファー プール) を参照してください
+詳細については、「[SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] とは](../big-data-cluster/big-data-cluster-overview.md)」を参照してください。
 
-### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>DBCC CLONEDATABASE での列ストア統計のサポート (CTP 2.0)
+[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) アナウンス アーカイブ](what-s-new-in-sql-server-ver15-prerelease.md)には、この機能の以前のすべての CTP リリースで発表および変更された機能の一覧が含まれています。
 
-`DBCC CLONEDATABASE` では、データをコピーすることなく、クエリのパフォーマンスに関する問題のトラブルシューティングに必要なすべての要素を含むスキーマのみのデータベースのコピーが作成されます。  以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコマンドでは、列ストア インデックスのクエリのトラブルシューティングを正確に行うために必要な統計情報がコピーされず、手作業でこの情報をキャプチャする必要がありました。 現在の [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の DBCC CLONEDATABASE では、列ストア インデックスの統計 BLOB が自動的にキャプチャされるので、手作業は必要ありません。
+## <a name="intelligent-database"></a>インテリジェント データベース
 
-### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>sp_estimate_data_compression_savings に追加された新しいオプション (CTP 2.0)
+### <a name="intelligent-query-processing"></a>インテリジェントなクエリ処理
 
-`sp_estimate_data_compression_savings` は、要求されたオブジェクトの現在のサイズ、および要求された圧縮状態での推定オブジェクト サイズを返します。  現在、このプロシージャでは、`NONE`、`ROW`、`PAGE` の 3 つのオプションがサポートされています。 SQL Server 2019 では、2 つの新しいオプション `COLUMNSTORE` と `COLUMNSTORE_ARCHIVE` が導入されます。 これらの新しいオプションを使用すると、標準またはアーカイブいずれかの列ストア圧縮を使用してテーブルに列ストア インデックスを作成した場合に節約される領域を見積もることができます。
+|新機能または更新 | 詳細 |
+|:---|:---|
+|行モード メモリ許可フィードバック |バッチ モードと行モード両方の演算子のメモリ許可サイズを調整することで、バッチ モード メモリ許可フィードバックの機能が拡張されます。 これにより、メモリが無駄になってコンカレンシーが低下する過度の許可を自動的に修正し、負荷の高いディスクへの書き込みが発生する原因になる不十分なメモリ許可を修正できます。 「[行モード メモリ許可フィードバック](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。 |
+|テーブル変数の遅延コンパイル|テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報によって、ダウンストリーム プラン操作が最適化されます。 「[テーブル変数の遅延コンパイル](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)」を参照してください。 |
+|`APPROX_COUNT_DISTINCT ` による概数クエリ処理|絶対精度は重要でないが応答性は重要であるシナリオでは、優れたコンカレンシーのための `COUNT(DISTINCT())` よりリソース使用量が少ない `APPROX_COUNT_DISTINCT` で大規模なデータセットを集計します。 「[概数クエリ処理](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)」を参照してください。|
+|行ストアでのバッチ モード|行ストアのバッチ モードでは、列ストア インデックスを必要とせずに、バッチ モードで実行できます。 バッチ モードの実行では、分析ワークロードの間の CPU 使用効率が向上しますが、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] までは、クエリに列ストア インデックスを使用する操作が含まれている場合にのみ使用されました。 ただし、一部のアプリケーションでは、列ストア インデックスでサポートされていない機能が使用されている可能性があるため、バッチ モードを利用できませんでした。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降では、任意の種類のインデックス (行ストアまたは列ストア) を使用する操作がクエリに含まれる適格な分析ワークロードで、バッチ モードが有効になります。 「[行ストアでのバッチ モード](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)」を参照してください。 |
+|スカラー UDF のインライン化|スカラー UDF が関係式に自動的に変換され、それらが呼び出し元の SQL クエリに埋め込まれます。 この変換により、スカラー UDF を利用するワークロードのパフォーマンスが向上します。 [スカラー UDF のインライン化](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)に関するページを参照してください。|
+| &nbsp; | &nbsp; |
 
-### <a id="ml"></a> SQL Server Machine Learning Services フェールオーバー クラスターとパーティション ベースのモデリング (CTP 2.0)
 
-- **パーティション ベースのモデリング**: `sp_execute_external_script` 追加される新しいパラメーターを使用すると、データのパーティションごとに外部スクリプトが処理されます。 この機能は、1 つの大きいモデルではなく、多数の小さいモデル (データのパーティションごとに 1 つのモデル) のトレーニングをサポートします。
+### <a name="in-memory-database"></a>メモリ内データベース
 
-- **Windows Server フェールオーバー クラスター**: Windows Server フェールオーバー クラスター上の Machine Learning Services に対して高可用性を構成します。
+|新機能または更新 | 詳細 |
+|:---|:---|
+|ハイブリッド バッファー プール| 永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされる [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の新機能。 「[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md)」を参照してください。|
+|メモリ最適化 TempDB メタデータ| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[メモリ内データベース](../relational-databases/in-memory-database.md)機能ファミリの一部として、メモリ最適化 TempDB メタデータという新機能が導入されています。この機能により、効果的にこのボトルネックが除去され、TempDB が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。 「[メモリ最適化 TempDB メタデータ](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」をご覧ください。|
+| データベース スナップショットのためのメモリ内 OLTP サポート | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、メモリ最適化されたファイルグループが含まれるデータベースの[データベース スナップショット](../relational-databases/databases/database-snapshots-sql-server.md)を作成するためのサポートが導入されました。 |
+| &nbsp; | &nbsp; |
 
-詳しくは、「[What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)」(SQL Server Machine Learning Services の新機能) をご覧ください。
+### <a name="intelligent-performance"></a>インテリジェントなパフォーマンス
 
-### <a name="lightweight-query-profiling-infrastructure-enabled-by-default-ctp-20"></a>既定で有効になる軽量クエリ プロファイリング インフラストラクチャ (CTP 2.0)
+|新機能または更新 | 詳細 |
+|:---|:---|
+|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|インデックスへの高コンカレンシーの挿入のスループット向上に役立つ、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 内での最適化を有効にします。 このオプションは、最終ページ挿入の競合が起きやすいインデックスを対象としています。これは、一般に、ID 列、シーケンス、または日付/時刻列などの連続したキーを持つインデックスでよく見られます。 詳しくは、「[CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)」をご覧ください。|
+|高速順方向カーソルと静的カーソルを強制する | 高速順方向カーソルと静的カーソルのサポートを強制するクエリ ストア プラン [高速順方向カーソルと静的カーソルのサポートを強制するプラン](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23)に関するページを参照してください。|
+|リソース管理| `CREATE WORKLOAD GROUP` と `ALTER WORKLOAD GROUP` の `REQUEST_MAX_MEMORY_GRANT_PERCENT` オプションの構成可能値が整数から float データ型に変更されており、メモリ上限をさらに細かく制御できます。 「[ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md)」と「[CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。|
+|ワークロードの再コンパイルの削減| 複数のスコープを超えて一時テーブルを使用して改善します。 [ワークロードの再コンパイルの削減](../relational-databases/tables/tables.md#ctp23)に関するページを参照してください。 |
+|間接チェックポイントのスケーラビリティ |[間接チェックポイントのスケーラビリティの向上](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)に関するページを参照してください。|
+|PFS の同時更新|[PFS ページ](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)はデータベース ファイル内の特別なページであり、オブジェクト用の領域を割り当てるときに空き領域を探すために SQL Server によって使用されます。 PFS ページでのページ ラッチの競合は、一般に [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) に関連付けられますが、多数の同時オブジェクト割り当てスレッドがあるときは、ユーザー データベースでも発生する可能性があります。 この機能強化により、PFS の更新でのコンカレンシー管理方法が変更され、排他的ラッチではなく共有ラッチで更新できるようになります。 この動作は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降のすべてのデータベース (`tempdb` を含む) で、既定でオンになります。|
+| &nbsp; | &nbsp; |
 
-軽量クエリ プロファイリング インフラストラクチャ (LWP) では、標準プロファイリング テクノロジより効率的にクエリのパフォーマンス データが提供されます。 軽量プロファイリングが既定で有効になるようになりました。 この機能は、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 で導入されました。 軽量プロファイリングでは推定 2% の CPU オーバーヘッドでクエリ実行統計コレクション メカニズムが提供されるのに対し、標準クエリ プロファイリング メカニズムでは最大 75% の CPU オーバーヘッドが発生します。 以前のバージョンでは、既定ではオフでした。 データベース管理者は、[トレース フラグ 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) でこの機能を有効にできます。 
+### <a name="monitoring"></a>監視
 
-軽量プロファイリングについて詳しくは、「[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」(開発者の選択: クエリの進行状況 - いつでも、どこでも) をご覧ください。
+|新機能または更新 | 詳細 |
+|:---|:---|
+|`WAIT_ON_SYNC_STATISTICS_REFRESH` | `sys.dm_os_wait_stats` 動的管理ビューの新しい待機の種類。 これには、統計更新の同期操作に費やされたインスタンス レベルの累積時間が表示されます。 [`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)に関するページを参照してください。|
+|クエリ ストア用のカスタム キャプチャ ポリシー|有効にすると、新しいクエリ ストアのキャプチャ ポリシーの設定で、特定のサーバーでのデータ収集を微調整するための追加のクエリ ストアを使用できるようになります。 詳しくは、「[ALTER DATABASE SET オプション](../t-sql/statements/alter-database-transact-sql-set-options.md)」をご覧ください。|
+|`LIGHTWEIGHT_QUERY_PROFILING`|新しいデータベース スコープの構成。 [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp)に関するページを参照してください。 |
+|`command` 列の `sys.dm_exec_requests` | クエリの実行を続行する前に `SELECT` が、統計更新の同期操作の完了を待機している場合は、`SELECT (STATMAN)` が表示されます。 [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)に関するページを参照してください。|
+|`sys.dm_exec_query_plan_stats` |新しい DMF では、ほとんどのクエリについて最後の既知の実際の実行プランと同等のものが返されます。 [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) に関するページを参照してください。|
+|`LAST_QUERY_PLAN_STATS` | `sys.dm_exec_query_plan_stats` を有効にする新しいデータベース スコープの構成。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。|
+|`query_post_execution_plan_profile` | 拡張イベントでは、標準プロファイリングを使用する `query_post_execution_showplan` とは異なり、軽量プロファイリングに基づいて、実際の実行プランと同等のものを収集します。 [クエリ プロファイリング インフラストラクチャ](../relational-databases/performance/query-profiling-infrastructure.md)に関するページを参照してください。|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | 新しい DMF では、データベースのページに関する情報が返されます。 「[sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)」を参照してください。|
+| &nbsp; | &nbsp; |
 
-### <a id="polybase"></a>新しい PolyBase コネクタ
+## <a name="developer-experience"></a>開発者エクスペリエンス
 
-- **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata、MongoDB 用の新しいコネクタ**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata、および MongoDB 用に外部データへの新しいコネクタが導入されています。
+### <a name="graph"></a>グラフ
 
-### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>ページ情報を返す新しい sys.dm_db_page_info システム関数 (CTP 2.0)
+|新機能または更新 | 詳細 |
+|:---|:---|
+|エッジ制約のカスケード削除アクション |グラフ データベースでのエッジ制約で連鎖削除操作を定義します。 「[エッジ制約](../relational-databases/tables/graph-edge-constraints.md)」を参照してください。 |
+|新しいグラフ関数 - `SHORTEST_PATH` | `MATCH` 内で `SHORTEST_PATH` を使用し、グラフ内の任意の 2 ノード間の最短パスを検索するか、任意の長さのトラバーサルを実行します。|
+|パーティション テーブルとパーティション インデックス| パーティション テーブルとパーティション インデックスのデータは、グラフ データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 |
+|グラフ一致クエリで派生テーブルまたはビューの別名を使用する |[グラフ一致クエリ](../t-sql/queries/match-sql-graph.md)に関するページを参照してください。 |
+| &nbsp; | &nbsp; |
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` では、データベースでのページに関する情報が返されます。 この関数では、`object_id`、`index_id`、`partition_id` など、ページからのヘッダー情報を含む行が返されます。 この関数を使用すると、ほとんどの場合に `DBCC PAGE` を使用する必要がなくなります。  
+### <a name="unicode-support"></a>Unicode のサポート
 
-ページ関連の待機のトラブルシューティングを容易にするため、page_resource という名前の新しい列も `sys.dm_exec_requests` と `sys.sysprocesses` に追加されました。 この新しい列を使用すると、別の新しいシステム関数 `sys.fn_PageResCracker` を介して、これらのビューに `sys.dm_db_page_info` を結合できます。 例として、次のスクリプトをご覧ください。
+|新機能または更新 | 詳細 |
+|:---|:---|
+|UTF-8 文字エンコードのサポート |インポート エンコードとエクスポート エンコードに対する UTF-8 文字、および文字列データのデータベース レベルまたは列レベルの照合順序がサポートされます。 これにより、グローバルな多言語データベース アプリケーションとサービスを提供する必要性が、顧客の要求と特定の市場規制を満たすために重要である、グローバルなスケールへのアプリケーションの拡張がサポートされます。 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)に関するページを参照してください。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース候補では、Polybase 外部テーブルおよび Always Encrypted (エンクレーブと共に使用しない場合) に対する UTF-8 のサポートが有効になります。|
+| &nbsp; | &nbsp; |
 
-```sql
-SELECT page_info.* 
-FROM sys.dm_exec_requests AS d 
-  CROSS APPLY sys.fn_PageResCracker(d.page_resource) AS r
-  CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
-    AS page_info;
-```
+### <a name="language-extensions"></a>言語拡張機能
 
-## <a id="sqllinux"></a> SQL Server on Linux
+|新機能または更新 | 詳細 |
+|:---|:---|
+|新しい Java 言語 SDK | SQL Server から実行できる Java プログラムの開発を簡略化します。 「[SQL Server 用の Microsoft Extensibility SDK for Java](../language-extensions/how-to/extensibility-sdk-java-sql-server.md)」を参照してください。 |
+|Java 言語の SDK はオープンソースです |[Microsoft SQL Server 用の Microsoft Extensibility SDK for Java](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) がオープン ソース化され、[GitHub で入手可能](https://github.com/microsoft/sql-server-language-extensions)になりました。|
+|Java データ型のサポート|[Java のデータ型](../language-extensions/how-to/java-to-sql-data-types.md)に関するページを参照してください。|
+|新しい既定の Java Runtime | SQL Server には、製品全体での Java サポート用に Azul Systems Zulu Embedded が含まれようになりました。 詳細については、「[Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/)」 (SQL Server 2019 で無料でサポートされる Java が利用可能になりました) を参照してください。 |
+|SQL Server 言語拡張機能| 拡張性フレームワークで外部コードを実行します。 「[SQL Server 言語拡張機能](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)」を参照してください。
+|外部言語を登録する|新しい DDL `CREATE EXTERNAL LANGUAGE` では、Java などの外部の言語を SQL Server に登録します。 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) に関するページを参照してください。 |
+| &nbsp; | &nbsp; |
 
-### <a name="ctp-20"></a>CTP 2.0 
+### <a name="spatial"></a>空間インデックス
 
-- **レプリケーションのサポート**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、Linux での SQL Server レプリケーションがサポートされています。 SQL エージェントを備えた Linux 仮想マシンは、パブリッシャー、ディストリビューター、またはサブスクライバーになることができます。 
+|新機能または更新 | 詳細 |
+|:---|:---|
+| 新しい Spatial Reference Identifier (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) により、全地球測位システム (GPS) に対しさらに緊密に配置された、より堅牢で正確な測量基準点が提供されます。 新しい SRID は次のとおりです。<br/><br/> - 7843: 地理 2D 用<br/> - 7844: 地理 3D 用 <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) ビューには、新しい SRID の定義が含まれています。 |
+| &nbsp; | &nbsp; |
 
-  次の種類のパブリケーションを作成します。
-  - トランザクション
-  - スナップショット
-  - Merge
+### <a name="error-messages"></a>エラー メッセージ
 
-  レプリケーション [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を構成するか、または[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)を使用します。
+|新機能または更新 | 詳細 |
+|:---|:---|
+|詳細な切り捨ての警告 | 切り捨てエラー メッセージに、テーブル名および列名と切り捨てられた値が既定で含まれます。 [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)に関するページを参照してください。|
+| &nbsp; | &nbsp; |
 
-- **Microsoft 分散トランザクション コーディネーター (MSDTC) のサポート**: SQL Server 2019 on Linux では、Microsoft 分散トランザクション コーディネーター (MSDTC) がサポートされています。 詳しくは、「[How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md)」(Linux で MSDTC を構成する方法) をご覧ください。
+## <a name="mission-critical-security"></a>ミッション クリティカル セキュリティ
 
-- **Kubernetes を使用する Docker コンテナーでの Always On 可用性グループ**: Kubernetes は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで実行されているコンテナーを調整して、SQL Server Always On 可用性グループで高可用性のデータベース セットを提供できます。 Kubernetes オペレーターは、**mssql-server コンテナー**と正常性モニターを備えたコンテナーを含む StatefulSet をデプロイします。
+|新機能または更新 | 詳細 |
+|:---|:---|
+|セキュア エンクレーブを使用する Always Encrypted|Always Encrypted、インプレース暗号化、さまざまな計算法を基盤に拡張し、サーバー側のセキュア エンクレーブ内でプレーンテキスト データの計算を可能にします。 インプレース暗号化では、データをデータベースの外に移動することが回避されるため、暗号操作 (列の暗号化、列のローテーション、暗号化鍵など) の性能と信頼度が上がります。 さまざまな計算法 (パターン一致や比較演算) がサポートされることで、機密データの保護が求められ、同時に Transact-SQL クエリで豊富な機能性が求められる幅広いシナリオや用途に Always Encrypted が対応できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)」をご覧ください。|
+|SQL Server 構成マネージャーでの証明書管理|[証明書の管理 (SQL Server 構成マネージャー)](../database-engine/configure-windows/manage-certificates.md) に関するページを参照してください。|
+| &nbsp; | &nbsp; |
 
-- **サード パーティの AD プロバイダーに対する OpenLDAP のサポート**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux は OpenLDAP をサポートしているので、サード パーティのプロバイダーが Active Directory に参加できます。
+## <a name="high-availability"></a>高可用性
 
-- **Linux での Machine Learning**: SQL Server 2019 Machine Learning Services (データベース内) が Linux でサポートされるようになりました。 サポートには、`sp_execute_external_script` ストアド プロシージャが含まれます。 Linux に Machine Learning Services をインストールする方法については、「[Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md)」(R と Python をサポートする SQL Server 2019 Machine Learning Services を Linux にインストールする) をご覧ください。
+### <a name="availability-groups"></a>可用性グループ
 
-- **新しい コンテナー レジストリ**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] および [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] のすべてのコンテナー イメージが、Microsoft Container Registry に格納されるようになります。 Microsoft Container Registry は、Microsoft 製品のコンテナーを配布するための公式のコンテナー レジストリです。 さらに、認定された RHEL ベースのイメージが発行されるようになります。
+|新機能または更新 | 詳細 |
+|:---|:---|
+|最大 5 つの同期レプリカ|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では 3 つであった同期レプリカの最大数が、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] では 5 つに増加します。 この 5 つのレプリカのグループを、グループ内で自動フェールオーバーするように構成できます。 1 つのプライマリ レプリカと、4 つの同期セカンダリ レプリカがあります。|
+|セカンダリからプライマリ レプリカへの接続のリダイレクト| 接続文字列に指定されたターゲット サーバーに関係なく、クライアント アプリケーションの接続先をプライマリ レプリカにすることができます。 詳しくは、「[セカンダリからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md)」をご覧ください。|
+| &nbsp; | &nbsp; |
 
-  - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
-  - 認定済みの RHEL ベースのコンテナー イメージ: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
+### <a name="recovery"></a>Recovery
 
-## <a id="mds"></a> マスター データ サービス (CTP 2.0) 
+|新機能または更新 | 詳細 |
+|:---|:---|
+|高速データベース復旧 | データベースごとに高速データベース復旧を有効にする [高速データベース復旧](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)に関するページを参照してください。|
+| &nbsp; | &nbsp; |
 
-- **Silverlight コントロールの HTML への置き換え**: マスター データ サービス (MDS) ポータルは、Silverlight に依存しなくなりました。 以前の Silverlight コンポーネントはすべて、HTML コントロールに置き換えられました。
+### <a name="resumable-operations"></a>再開可能な操作
 
-## <a id="security"></a>セキュリティ (CTP 2.0)
+|新機能または更新 | 詳細 |
+|:---|:---|
+|オンラインでのクラスター化列ストア インデックスのビルドとリビルド | [オンラインでのインデックス操作の実行](../relational-databases/indexes/perform-index-operations-online.md)に関するページを参照してください。 |
+|再開可能なオンライン行ストア インデックスのビルド | [オンラインでのインデックス操作の実行](../relational-databases/indexes/perform-index-operations-online.md)に関するページを参照してください。 |
+|Transparent Data Encryption (TDE) に対する初期スキャンの一時停止および再開|[Transparent Data Encryption (TDE) スキャンの一時停止と再開](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)に関するページを参照してください。|
+| &nbsp; | &nbsp; |
 
-- **SQL Server 構成マネージャーでの証明書管理**: SSL/TLS 証明書は、SQL Server インスタンスへのアクセスをセキュリティで保護するために広く使われています。 証明書の管理が SQL Server 構成マネージャーに統合され、次のような一般的なタスクが簡単になりました。
+## <a name="setup"></a>セットアップ 
 
-  - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスにインストールされている証明書の表示と検証。 
-  - 有効期限が近い証明書の表示。
-  - Always On 可用性グループに参加しているコンピューターへの証明書の展開 (プライマリ レプリカを保持するノードから)。
-  - フェールオーバー クラスター インスタンスに参加しているコンピューターへの証明書の展開 (アクティブなノードから)。
+|新機能または更新 | 詳細 | 
+|:---|:---| 
+|新しいメモリ セットアップ オプション | インストール中に "*最小サーバー メモリ (MB)* " および "*最大サーバー メモリ (MB)* " のサーバー構成を設定します。 詳細については、「[[データベース エンジンの構成] - [メモリ] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY`、`SQLMAXMEMORY` パラメーターを参照してください。 提案される値は、「[サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)」のメモリ構成ガイドラインと一致します。| 
+|新しい並列処理セットアップ オプション | インストールの間に "*並列処理の最大限度*" サーバー構成オプションを設定します。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `SQLMAXDOP` パラメーターを参照してください。 既定値は、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」の並列処理の最大限度ガイドラインと一致します。| 
+| &nbsp; | &nbsp; |
 
-  > [!NOTE]
-  > ユーザーには、すべてのクラスター ノードでの管理者権限が必要です。
+## <a name="platform-choice"></a>プラットフォームの選択肢
 
-## <a id="tools"></a>ツール
+### <a id="sql-server-on-linux"></a>Linux
 
-- [**Azure Data Studio**](../azure-data-studio/what-is.md): 以前は SQL Operations Studio というプレビュー名でリリースされていた Azure Data Studio は、軽量、最新、オープン ソース、クロスプラットフォームのデスクトップ ツールであり、データの開発と管理におけるほとんどの一般的なタスクに対応します。 Azure Data Studio を使用すると、オンプレミスおよびクラウドの Windows、macOS、Linux 上の SQL Server に接続できます。 Azure Data Studio では次のことができます。
+| 新機能または更新 | 詳細 |
+|:-----|:-----|
+|新しいコンテナー レジストリ|[Docker で SQL Server のコンテナーの使用を開始する](../linux/quickstart-install-connect-docker.md) |
+|レプリケーションのサポート |[Linux での SQL Server のレプリケーション](../linux/sql-server-linux-replication.md)
+|Microsoft 分散トランザクション コーディネーター (MSDTC) のサポート |[Linux で MSDTC を構成する方法](../linux/sql-server-linux-configure-msdtc.md) |
+|サード パーティの AD プロバイダーに対する OpenLDAP のサポート |[チュートリアル: SQL Server on Linux で Active Directory 認証を使用する](../linux/sql-server-linux-active-directory-authentication.md) |
+|Linux 上の Machine Learning |[Linux に Machine Learning を構成する](../linux/sql-server-linux-setup-machine-learning.md) |
+|TempDB の機能強化 | 既定では、Linux 上に SQL Server を新しくインストールすると、論理コアの数に基づいて複数の TempDB データ ファイルが作成されます(最大で 8 個のデータ ファイル)。 これは、マイナー バージョンまたはメジャー バージョンのインプレース アップグレードには適用されません。 各 TempDB ファイルは 8 MB で、64 MB まで自動拡張します。 この動作は、Windows への SQL Server の既定のインストールに似ています。 |
+| Linux での PolyBase | 非 Hadoop コネクタ向けに Linux に [PolyBase をインストール](../relational-databases/polybase/polybase-linux-setup.md)します。<br/><br/>[PolyBase 型のマッピング](../relational-databases/polybase/polybase-type-mapping.md) |
+| 変更データ キャプチャ (CDC) のサポート | SQL Server 2019 では、変更データ キャプチャ (CDC) が Linux でサポートされるようになりました。 |
+| &nbsp; | &nbsp; |
 
-  - [SQL Server 2019 (プレビュー) 拡張機能](../azure-data-studio/sql-server-2019-extension.md)に更新できます。 (CTP 2.1)
-  - 非常に高速の Intellisense、コード スニペット、ソース管理が統合された最新の開発環境で、クエリを編集して実行できます。 (CTP 2.0) 
-  - 組み込まれている結果セット グラフ化機能を使用して、すばやくデータを視覚化できます。 (CTP 2.0)
-  - カスタマイズ可能なウィジェットを使用して、サーバーおよびデータベース用のカスタム ダッシュボードを作成できます。 (CTP 2.0)  
-  - 組み込みのターミナルを使用して、広範な環境を簡単に管理できます。 (CTP 2.0)
-  - Jupyter を基に構築された統合ノートブック エクスペリエンスでデータを分析できます。 (CTP 2.0)
-  - カスタム テーマと拡張機能を使用して自分のエクスペリエンスを拡張できます。(CTP 2.0)
-  - 組み込まれているサブスクリプションとリソースのブラウザーを使用して、Azure リソースを調べることができます。 (CTP 2.0)
-  - SQL Server ビッグ データ クラスターを使用するシナリオをサポートできます。 (CTP 2.0)
+### <a name="containers"></a>[SSIS ログの構成]
 
-- [**SQL Server Management Studio (SSMS) 18.0 (プレビュー)**](../ssms/sql-server-management-studio-ssms.md)
+|新機能または更新 | 詳細 |
+|:---|:---|
+| Microsoft Container Registry | [Microsoft Container Registry](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] など、Microsoft の新しい公式コンテナー イメージのために Docker Hub が取り替えられます。 |
+| ルート以外のコンテナー | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、既定でルート以外のユーザーとして [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] を起動することで、より安全なコンテナーを作成できるようになりました。 詳細については、「[非ルート ユーザーとして SQL Server コンテナーを作成して実行する](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer)」を参照してください。 |
+| &nbsp; | &nbsp; |
 
-  - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のサポート (CTP 2.0)
-  - セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートします。(CTP 2.0)
-  - ダウンロード サイズの縮小。(CTP 2.0)
-  - Visual Studio 2017 Isolated Shell に基づくようになりました。(CTP 2.0)
-  - 完全な一覧については、[SSMS の変更ログ](../ssms/sql-server-management-studio-changelog-ssms.md)に関する記事をご覧ください。(CTP 2.0)
+## <a id="ml"></a> SQL Server Machine Learning Services
 
-## <a name="other-services"></a>その他のサービス
+|新機能または更新 | 詳細 |
+|:---|:---|
+|パーティション ベースのモデリング|`sp_execute_external_script` に追加された新しいパラメーターを使用し、データのパーティションごとに外部スクリプトが処理されます。 この機能は、1 つの大きいモデルではなく、多数の小さいモデル (データのパーティションごとに 1 つのモデル) のトレーニングをサポートします。 [パーティション ベースのモデルの作成](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)に関するページを参照してください。|
+|Windows Server フェールオーバー クラスター| Windows Server フェールオーバー クラスター上の Machine Learning Services に高可用性を構成します。|
+| &nbsp; | &nbsp; |
 
-CTP 2.1 の段階で、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]では、次のサービス向けの新機能は導入されていません。
+## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
+| 新機能または更新 | 詳細 |
+|:---|:---|
+|Azure SQL Database Managed Instance データベースのサポート。| マネージド インスタンス上で [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] をホストします。 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] のインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)に関するページを参照してください。|
+|新しい HTML コントロール| HTML コントロールでは、以前の Silverlight コンポーネントがすべて置き換えられます。 Silverlight の依存関係が削除されました。|
+| &nbsp; | &nbsp; |
+
+## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services (SQL Server Analysis Services)
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+|クエリ インターリーブ| 「[クエリ インターリーブ](https://docs.microsoft.com/analysis-services/tabular-models/query-interleaving)」を参照してください |
+|計算グループを使用した表形式モデルに対する MDX クエリのサポート | [計算グループ](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)に関するページを参照してください。 |
+|表形式モデルでの計算グループ| [テーブル モデルでの計算グループ](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24) |
+|計算グループを使用した表形式モデルに対する MDX クエリのサポート | [計算グループ](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)に関するページを参照してください。 |
+|計算グループを使用したメジャーの動的な書式設定 |この機能を使用すると、[計算グループ](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)を使用してメジャーの書式設定文字列を条件付きで変更できます。 たとえば、通貨換算を使用すると、さまざまな外貨形式を使ってメジャーを表示することができます。|
+|表形式モデルでの多対多リレーションシップ|[表形式モデルでの多対多リレーションシップ](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24)|
+|リソース ガバナンス用のプロパティ設定|[リソース ガバナンス用のプロパティ設定](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24)|
+| Power BI キャッシュに対するガバナンス設定の更新  | Power BI サービスは、Live Connect レポートの初期読み込みのダッシュボード タイル データとレポート データをキャッシュします。これにより、大量のキャッシュ クエリが SSAS に送信され、極端な場合はサーバーが過負荷になります。 このリリースでは、**ClientCacheRefreshPolicy** プロパティが導入されています。 このプロパティによって、サーバー レベルでこの動作をオーバーライドすることが許可されます。 詳細については、「[全般プロパティ](https://docs.microsoft.com/analysis-services/server-properties/general-properties)」を参照してください。 |
+| オンラインのアタッチ  | この機能を使用すると、表形式モデルをオンライン操作としてアタッチすることができます。 オンラインのアタッチは、オンプレミスのクエリ スケールアウト環境で読み取り専用レプリカを同期するために使用できます。 詳細については、[オンラインのアタッチ](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)に関するページを参照してください。 |
+| &nbsp; | &nbsp; |
+
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+
+サポートから除外される特定の機能については、[リリース ノート](sql-server-ver15-release-notes.md)を参照してください。
+
+また、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2 では、次の機能が追加または強化されています。
+
+## <a name="see-also"></a>参照
+
+- [`SqlServer` PowerShell モジュール](https://www.powershellgallery.com/packages/Sqlserver)
+- [SQL Server PowerShell ドキュメント](../powershell/sql-server-powershell.md)
 
 ## <a name="next-steps"></a>次の手順
 
-- [SQL Server 2019 リリース ノート](sql-server-ver15-release-notes.md)
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-ver15-release-notes.md)。
 
-- [Microsoft SQL Server 2019: テクニカル ホワイト ペーパー](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />2018 年 9 月に公開されました。 Windows、Linux、Docker コンテナー向けの Microsoft SQL Server 2019 CTP 2.0 に適用されます。
-
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]:テクニカル ホワイト ペーパー](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />2018 年 9 月に公開されました。 Windows、Linux、Docker コンテナー向けの Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 に適用されます。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

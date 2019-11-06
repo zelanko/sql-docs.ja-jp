@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 05ea4e197a727db6afffeedc3c26be676e358f73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6f3033ea0c95841d15b1b71068c9a566abbfac98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105712"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>最初のページまたは最後のページでページ ヘッダーまたはページ フッターを非表示にする (レポート ビルダーおよび SSRS)
   レポートでは、各ページの上部と下部にそれぞれページ ヘッダーとページ フッターを配置できます。 ヘッダーやフッターを追加した後で、レポートの最初と最後のページのヘッダーとフッターだけを非表示にできます。  
@@ -48,9 +47,9 @@ ms.locfileid: "48101062"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>参照  
- [ページ ヘッダーとページ フッター&#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [追加または削除、ページ ヘッダーまたはフッター&#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [ページ ヘッダーまたはページ フッターの追加および削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

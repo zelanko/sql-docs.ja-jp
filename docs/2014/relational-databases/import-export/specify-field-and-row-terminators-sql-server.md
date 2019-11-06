@@ -13,15 +13,15 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011857"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
@@ -40,7 +40,7 @@ ms.locfileid: "48188402"
 |円記号<sup>1</sup>|\\\|  
 |Null ターミネータ (表示されないターミネータ)<sup>2</sup>|\0|  
 |任意の印刷可能な文字 (NULL、タブ、改行、およびキャリッジ リターンを除き、制御文字は印刷可能ではありません)|(*、A、t、l など)|  
-|上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(\*\*\t\*\*、end、!!!!!!!!!!、\t?\n など)|  
+|上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(**\t\*\*、end、!!!!!!!!!!、\t-\n など)|  
   
  <sup>1</sup>のみ t、n、r、0 および '\0' 文字が制御文字をエスケープ文字を使用します。  
   
@@ -65,24 +65,24 @@ ms.locfileid: "48188402"
   
 -   フォーマット ファイルを使用しない場合には、次の方法があります。  
   
-    -   **-t** スイッチを使用して、行内の最後のフィールドを除くすべてのフィールドのフィールド ターミネータを指定します。および、**-r** スイッチを使用して、行ターミネータを指定します。  
+    -   **-t** スイッチを使用して、行内の最後のフィールドを除くすべてのフィールドのフィールド ターミネータを指定します。および、 **-r** スイッチを使用して、行ターミネータを指定します。  
   
-    -   **-t** スイッチを指定しないで、文字形式のスイッチ (**-c** または **-w**) を使用すると、フィールド ターミネータがタブ文字 \t に設定されます。 これは、 **-t**\t を指定することと同じです。  
+    -   **-t** スイッチを指定しないで、文字形式のスイッチ ( **-c** または **-w**) を使用すると、フィールド ターミネータがタブ文字 \t に設定されます。 これは、 **-t**\t を指定することと同じです。  
   
         > [!NOTE]  
         >  **-n** (ネイティブ データ) スイッチまたは **-N** (Unicode ネイティブ) スイッチを指定すると、ターミネータは挿入されません。  
   
-    -   対話的な **bcp** コマンドに、 **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合に、プレフィックス長とフィールド長の指定をしないと、各フィールドのフィールド ターミネータが要求されます。既定ではターミネータは "なし" になっています。  
+    -   対話的な **bcp** コマンドに、 **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ ( **-f**) またはデータ形式スイッチ ( **-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合に、プレフィックス長とフィールド長の指定をしないと、各フィールドのフィールド ターミネータが要求されます。既定ではターミネータは "なし" になっています。  
   
          `Enter field terminator [none]:`  
   
-         通常は、既定値を選択することをお勧めします。 ただし、`char`または`nchar`データ フィールドは、次のサブセクションでは、「ターミネータ使用のガイドラインです。」を参照してください。 コンテキスト内でこのプロンプトが表示される例については、「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
+         通常は、既定値を選択することをお勧めします。 ただし、`char` データ フィールドまたは `nchar` データ フィールドについては、次の「ターミネータ使用のガイドライン」を参照してください。 コンテキスト内でこのプロンプトが表示される例については、「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
   
         > [!NOTE]  
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
- 状況によっては、ターミネータは適して、`char`または`nchar`データ フィールド。 以下に例を示します。  
+ 状況によっては、`char` データ フィールドまたは `nchar` データ フィールドには、ターミネータが役に立つ場合があります。 例 :  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
   
@@ -125,10 +125,10 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      次の表に示す修飾子を使用して、フォーマット ファイル内の個別のフィールドまたはデータ ファイル全体にターミネータを指定できます。  
   
-    |Qualifier|説明|  
+    |修飾子|説明|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|文字データ ファイルや Unicode 文字データ ファイルに使用されるフィールド ターミネータを指定します。<br /><br /> 既定値は \t (タブ文字) です。|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|文字データ ファイルや Unicode 文字データ ファイルに使用される行ターミネータを指定します。<br /><br /> 既定値は \n (改行記号) です。|  
+    |FIELDTERMINATOR **=' *`field_terminator`* '**|文字データ ファイルや Unicode 文字データ ファイルに使用されるフィールド ターミネータを指定します。<br /><br /> 既定値は \t (タブ文字) です。|  
+    |ROWTERMINATOR **=' *`row_terminator`* '**|文字データ ファイルや Unicode 文字データ ファイルに使用される行ターミネータを指定します。<br /><br /> 既定値は \n (改行記号) です。|  
   
      詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」を参照してください。  
   
@@ -136,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      OPENROWSET 一括行セット プロバイダーでは、ターミネータを指定できるのはフォーマット ファイルのみです (Large Object データ型を除き、これは必須です)。 文字データ ファイルで既定以外のターミネータが使用されている場合、フォーマット ファイルで定義する必要があります。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md) および [データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
   
-     OPENROWSET BULK 句の詳細については、「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
+     OPENROWSET BULK 句の詳細については、「 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)を使用) を示すことができます。  
   
 ### <a name="examples"></a>使用例  
  この例では、前述の例で作成された `Department-c-t.txt` データ ファイルから、 `myDepartment` サンプル データベースの [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] テーブルに、文字データを一括インポートします。 このテーブルを作成しないと、例を実行できません。 **dbo** スキーマでこのテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  
@@ -170,8 +170,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |オプション|属性|  
 |------------|---------------|  
 |DATAFILETYPE **='`char`'**|データ フィールドが文字データとして読み込まれることを指定します。|  
-|FIELDTERMINATOR **='**`,`**'**|コンマ (`,`) をフィールド ターミネータとして指定します。|  
-|ROWTERMINATOR **='**`\n`**'**|改行文字を行ターミネータとして指定します。|  
+|FIELDTERMINATOR **='** `,` **'**|コンマ (`,`) をフィールド ターミネータとして指定します。|  
+|ROWTERMINATOR **='** `\n` **'**|改行文字を行ターミネータとして指定します。|  
   
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
   

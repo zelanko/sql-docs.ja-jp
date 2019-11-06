@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - size [SQL Server], trace tables
@@ -14,12 +13,12 @@ ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25a852c52c0041d69bb73e5b7b8ec3ea48c89eb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15ef5e8621a5edd216b300a8a96f3a9656b55b12
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267148"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>トレース テーブルの最大テーブル サイズの設定 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース テーブルの最大テーブル サイズを設定する方法について説明します。  
@@ -52,8 +51,8 @@ ms.locfileid: "48087052"
     > [!NOTE]  
     >  テーブル内の行数が、指定した最大数を超えると、トレース イベントは記録されなくなります。 ただし、トレースは続行されます。  
   
-## <a name="see-also"></a>参照  
- [SQL Server Profiler](sql-server-profiler.md)   
+## <a name="see-also"></a>関連項目  
+ [[SQL Server Profiler]](sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

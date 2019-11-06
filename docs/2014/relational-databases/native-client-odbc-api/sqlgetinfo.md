@@ -14,12 +14,12 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70877cb9fd10a02f0d8f7f3bd954a8334a3d028b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112199"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128659"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   によって返される値、表に示します**SQLGetInfo**します。 返される値は、接続先サーバーのバージョン番号によって異なる場合があります。  
@@ -208,7 +208,7 @@ ms.locfileid: "48112199"
 |SQL_USER_NAME|現在のユーザー名。|  
   
 ## <a name="see-also"></a>参照  
- [SQLGetInfo 関数](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo 関数](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

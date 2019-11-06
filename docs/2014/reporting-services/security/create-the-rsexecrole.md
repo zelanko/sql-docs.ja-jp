@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bfcf78ea493794527d22a0bc1b62051ede2871b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 3a6bc5ecbd1c59a5dc03f9c28d36d2816e6a8d92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102028"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 呼ばれる定義済みのデータベース ロールを使用して`RSExecRole`レポート、レポート サーバー データベースをサーバーのアクセス許可を付与します。 `RSExecRole`ロールは、レポート サーバー データベースで自動的に作成されます。 原則として、このロールを変更したり、他のユーザーをこのロールに割り当てたりすることはできません。 ただし、レポート サーバー データベースを新規または別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]に移動した場合は、master および MSDB システム データベースでロールを再作成する必要があります。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、`RSExecRole` と呼ばれる定義済みのデータベース ロールを使用して、レポート サーバー データベースに対するレポート サーバーの権限が付与されます。 `RSExecRole`ロールは、レポート サーバー データベースで自動的に作成されます。 原則として、このロールを変更したり、他のユーザーをこのロールに割り当てたりすることはできません。 ただし、レポート サーバー データベースを新規または別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]に移動した場合は、master および MSDB システム データベースでロールを再作成する必要があります。  
   
  ここで説明する手順に従って、次の操作を実行します。  
   
@@ -34,22 +33,22 @@ ms.locfileid: "48171522"
   
 ## <a name="before-you-start"></a>開始前の準備  
   
--   データベースを移動した後に復元できるように、暗号化キーをバックアップします。 これは、手順が作成してプロビジョニングする機能を直接影響しません、`RSExecRole`が、作業を確認するには、キーのバックアップが必要です。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
+-   データベースを移動した後に復元できるように、暗号化キーをバックアップします。 この手順は `RSExecRole` の作成と準備には直接影響しませんが、作業を確認するためにはキーのバックアップが必要です。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
   
--   持つユーザー アカウントでログオンしていることを確認`sysadmin`に対するアクセス許可、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスでの `sysadmin` 権限を持つユーザー アカウントでログオンしていることを確認します。  
   
--   使用する予定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに [!INCLUDE[ssDE](../../../includes/ssde-md.md)] エージェント サービスがインストールされ、実行されていることを確認します。  
+-   使用する予定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに [!INCLUDE[ssDE](../../../includes/ssde-md.md)] エージェント サービスがインストールされ、実行されていることを確認します。  
   
 -   reportservertempdb および reportserver データベースをアタッチします。 実際のロールを作成するためにデータベースをアタッチする必要はありませんが、作業を確認する場合は事前にデータベースをアタッチする必要があります。  
   
  `RSExecRole` を手動で作成する手順は、レポート サーバー インストールの移行というコンテキストで使用されることを目的としています。 レポート サーバー データベースのバックアップや移動などの重要なタスクは、このトピックでは取り上げませんが、データベース エンジンのドキュメントで説明されています。  
   
 ## <a name="create-rsexecrole-in-master"></a>master での RSExecRole の作成  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、拡張ストアド プロシージャを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]スケジュールされた操作をサポートするために、エージェント サービス。 次の手順では、プロシージャの実行権限を `RSExecRole` ロールに付与する方法について説明します。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスの拡張ストアド プロシージャを使用して、スケジュールされた操作をサポートします。 次の手順では、プロシージャの実行権限を `RSExecRole` ロールに付与する方法について説明します。  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio を使用して master システム データベースに RSExecRole を作成するには  
   
-1.  開始[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]に接続して、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]レポート サーバー データベースをホストするインスタンス。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../../includes/ssde-md.md)] インスタンスに接続します。  
   
 2.  **[データベース]** を開きます。  
   
@@ -229,9 +228,9 @@ ms.locfileid: "48171522"
 15. レポート マネージャーを開くリンクをクリックします。 レポート サーバー データベースのレポート サーバー アイテムが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [別のコンピューターにレポート サーバー データベースの移動&#40;SSRS ネイティブ モード&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [ネイティブ モード レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Reporting Services の暗号化キーのバックアップと復元](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+ [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

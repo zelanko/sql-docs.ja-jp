@@ -2,7 +2,7 @@
 title: レポート ビルダーの起動 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0159f5193d2d492696e399989ad18580ed142155
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 8170a46bdcb0d6249b59965e190ff3eb6d14b4d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711773"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571746"
 ---
 # <a name="start-report-builder"></a>レポート ビルダーの起動
 
@@ -38,7 +38,7 @@ ms.locfileid: "52711773"
   
 1.  Web ブラウザーで、アドレス バーにレポート サーバーの URL を入力します。 既定の URL は https://\<*サーバー名*>/reports です。  
   
-2.  Web ポータルの上部のバーで、 **[新規]** > **[ページ分割されたレポート]** の順に選択します。  
+2.  Web ポータルの上部のバーで、 **[新規]**  >  **[ページ分割されたレポート]** の順に選択します。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52711773"
   
      [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] が開き、改ページ調整されたレポートを作成したり、レポート サーバー上のレポートを開いたりできます。  
   
-     **注**   **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]**、 **[レポート ビルダーのモデル]**、または **[レポート データ ソース]** が表示されない場合は、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
+     **注**   **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]** 、 **[レポート ビルダーのモデル]** 、または **[レポート データ ソース]** が表示されない場合は、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
 
 ## <a name="next-steps"></a>次の手順
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9a9a8db6c84bfde40ec7c71012d4cc528d57efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010958"
 ---
 # <a name="upgrade-full-text-search"></a>フルテキスト検索のアップグレード
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのフルテキスト検索のアップグレードは、セットアップ時のほか、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ファイルとフルテキスト カタログのアタッチ時、復元時、またはデータベース コピー ウィザードによるコピー時に行われます。  
@@ -126,7 +126,7 @@ ms.locfileid: "48163542"
 ## <a name="backup-and-imported-full-text-catalogs"></a>バックアップとインポートされたフルテキスト カタログ  
  アップグレード時に再構築またはリセットされたフルテキスト カタログ (および新しいフルテキスト カタログ) は論理的概念であり、ファイル グループ内には存在しません。 そのため、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でフルテキスト カタログをバックアップするには、カタログのフルテキスト インデックスが含まれるファイル グループをすべて特定し、1 つずつバックアップする必要があります。 詳細については、「 [フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](back-up-and-restore-full-text-catalogs-and-indexes.md)」を参照してください。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からインポートされたフルテキスト カタログは、元のファイル グループ内のデータベース ファイルのままです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] におけるフルテキスト カタログのバックアップ プロセスが引き続き適用されます。ただし、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]には MSFTESQL サービスが存在しません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] におけるプロセスの詳細については、SQL Server 2005 オンライン ブックの「 [フルテキスト カタログのバックアップと復元](http://go.microsoft.com/fwlink/?LinkId=209154) 」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からインポートされたフルテキスト カタログは、元のファイル グループ内のデータベース ファイルのままです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] におけるフルテキスト カタログのバックアップ プロセスが引き続き適用されます。ただし、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]には MSFTESQL サービスが存在しません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] におけるプロセスの詳細については、SQL Server 2005 オンライン ブックの「 [フルテキスト カタログのバックアップと復元](https://go.microsoft.com/fwlink/?LinkId=209154) 」を参照してください。  
   
 ##  <a name="Upgrade_Db"></a> データベースをアップグレードする際のフルテキスト インデックスの移行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ファイルおよびフルテキスト カタログは、アタッチ、復元、またはデータベース コピー ウィザードを使用して、既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアップグレードできます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト インデックスがある場合は、インポート、リセット、または再構築されます。 **upgrade_option** サーバー プロパティは、これらのデータベース アップグレード時にサーバー インスタンスで使用されるフルテキスト アップグレード オプションを制御します。  
@@ -135,7 +135,7 @@ ms.locfileid: "48163542"
   
  **サーバー インスタンスでフルテキスト アップグレード動作を変更するには**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) の **upgrade\_option** アクションを使用します。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]:[sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) の **upgrade\_option** アクションを使用します  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **[サーバーのプロパティ]** ダイアログ ボックスの **[フルテキスト アップグレード オプション]** を使用します。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48163542"
   
 -   フルテキスト カタログがオフラインの場合、バックアップは失敗します。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]フルテキスト カタログのバックアップと復元の詳細については、 オンライン ブックの「[フルテキスト カタログのバックアップと復元 ](http://go.microsoft.com/fwlink/?LinkId=121052)」および「[ファイルのバックアップと復元およびフルテキスト カタログ](http://go.microsoft.com/fwlink/?LinkId=121053)」[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]フルテキスト カタログのバックアップと復元の詳細については、 オンライン ブックの「[フルテキスト カタログのバックアップと復元 ](https://go.microsoft.com/fwlink/?LinkId=121052)」および「[ファイルのバックアップと復元およびフルテキスト カタログ](https://go.microsoft.com/fwlink/?LinkId=121053)」[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を参照してください。  
   
  データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元すると、フルテキスト カタログ用の新しいデータベース ファイルが作成されます。 このファイルの既定の名前は、ftrow_*catalog-name*.ndf です。 たとえば、 *catalog-name* が `cat1`の場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース ファイルの既定の名前は `ftrow_cat1.ndf`となります。 ただし、作成先のディレクトリでこの既定の名前が既に使用されている場合は、新しいデータベース ファイルの名前は `ftrow_`*catalog-name*`{`*GUID*`}.ndf`となります。 *GUID* は、新しいファイルのグローバル一意識別子です。  
   

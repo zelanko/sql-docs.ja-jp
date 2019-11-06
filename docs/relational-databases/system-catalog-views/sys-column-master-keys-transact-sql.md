@@ -24,29 +24,28 @@ helpviewer_keywords:
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ae8a4077c0fe4e3f6b7754b4fc53a401d03e355
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140055"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  各データベースのマスター _ キーを使用して、追加の行を返します、 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)ステートメント。 各行では、1 つの列のマスター_キー (CMK) を表します。  
+  各データベースのマスター _ キーを使用して、追加の行を返します、 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)ステートメント。 各行は、1 つの列マスター_キー (CMK) を表します。  
     
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK の名前。|  
-|**column_master_key_id**|**int**|列のマスター_キーの ID です。|  
-|**create_date**|**datetime**|列のマスター_キーが作成された日付。|  
-|**modify_date**|**datetime**|列のマスター_キーが前回変更された日付。|  
-|**key_store_provider_name**|**sysname**|CMK を格納している列のマスター_キーのストアのプロバイダーの名前。 使用できる値は次のとおりです。<br /><br /> 列のマスター キー ストアが証明書ストアである場合は – MSSQL_CERTIFICATE_STORE です。<br /><br /> ユーザー定義値をカスタム型の列マスター キー ストアがある場合。|  
-|**key_path**|**nvarchar (4000)**|キーの列マスター_キー ストア固有のパス。 パスの形式は、列のマスター_キーのストアの種類によって異なります。 例:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 開発者は、責任を定義するためのカスタム列マスター_キー ストアでは、カスタムの列のマスター_キーのストアの場合、どのようなキーのパスをします。|  
-|**allow_enclave_computations**|**bit**|かどうか、列マスター_キーがエンクレーブ対応、(場合、このマスター _ キーで暗号化された列暗号化キーは、サーバー側のセキュリティで保護された enclaves 内の計算に使用できます) を示します。 詳細については、次を参照してください。[セキュリティで保護された enclaves で Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)します。|  
+|**column_master_key_id**|**int**|列のマスター _ キーの ID。|  
+|**create_date**|**datetime**|列マスター_キーが作成された日付。|  
+|**modify_date**|**datetime**|列マスター_キーの最終変更日。|  
+|**key_store_provider_name**|**sysname**|CMK を格納する列のマスター _ キー ストア プロバイダーの名前。 使用できる値は、以下のとおりです。<br /><br /> MSSQL_CERTIFICATE_STORE - 列マスター キー ストアが証明書ストアである場合。<br /><br /> ユーザー定義値、列マスター キー ストアのカスタム型の場合。|  
+|**key_path**|**nvarchar (4000)**|キーの列マスター キー ストア固有パス。 パスの形式は、列マスター キー ストアの種類によって異なります。 例:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 開発者は、責任を定義するためのカスタム列マスター キー ストアでは、カスタム列マスター キー ストアはどのようなキーのパス。|  
+|**allow_enclave_computations**|**bit**|かどうか、列マスター_キーがエンクレーブ対応、(場合、このマスター _ キーで暗号化された列暗号化キーは、サーバー側のセキュリティで保護された enclaves 内の計算に使用できます) を示します。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。|  
 |**signature**|**varbinary(max)**|デジタル署名**key_path**と**allow_enclave_computations**、列マスター_キーを使用して生成された、によって参照される**key_path**します。|
 
 
@@ -56,7 +55,7 @@ ms.locfileid: "47711010"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

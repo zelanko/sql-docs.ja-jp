@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
@@ -14,12 +13,12 @@ ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a796426f02c2ad9c0878c212c51eb0e90cfce8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786684"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled サーバー構成オプション
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でユーザー アセンブリを実行できるかどうかを指定するには、clr enabled オプションを使用します。 clr enabled オプションでは、次の値を指定します。  
@@ -35,7 +34,7 @@ ms.locfileid: "48219380"
 >  RECONFIGURE が実行され、clr enabled オプションの実行値が 1 から 0 に変更されると、ユーザー アセンブリが含まれているすべてのアプリケーション ドメインが直ちにアンロードされます。  
   
 > [!NOTE]  
->  簡易プーリングでは、共通言語ランタイム (CLR) の実行はサポートされていません。 2 つのオプションのいずれかを無効にします。"clr enabled"または"lightweight pooling します。 CLR に依存しているファイバー モードで正しくが動作しない機能、`hierarchy`データ型、レプリケーション、およびポリシー ベースの管理。  
+>  簡易プーリングでは、共通言語ランタイム (CLR) の実行はサポートされていません。 2 つのオプションのいずれかを無効にします。"clr enabled"または"lightweight pooling します。 CLR に依存していてファイバー モードで正しく動作しない機能には、`hierarchy` データ型、レプリケーション、およびポリシー ベースの管理があります。  
   
 ## <a name="example"></a>例  
  次の例では、最初に clr enabled オプションの現在の設定を表示し、その後、オプションの値を 1 に設定することで、このオプションを有効にします。 このオプションを無効にするには、値を 0 に設定します。  

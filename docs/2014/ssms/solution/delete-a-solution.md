@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - removing solutions
@@ -14,12 +14,12 @@ ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6106b8dd542f24bd937e581ca3dc26e0eb3b32e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125239"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043947"
 ---
 # <a name="delete-a-solution"></a>ソリューションを削除する
   ソリューションを完全に削除すると、ソリューションのファイル項目だけでなく、物理的な記憶域のファイルも完全に消去されます。  

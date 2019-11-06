@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2be1625093dfd89e59cef4731e61411f2c7e4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62877877"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
   **[変数]** ウィンドウを使用すると、ユーザー定義変数を作成、変更し、システム変数を表示できます。  
@@ -29,8 +28,8 @@ ms.locfileid: "48158182"
   
  必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
   
-> [!NOTE]  
->  値、`Name`と`Namespace`プロパティは、Unicode Standard 2.0、またはアンダー スコア (_) で定義されているアルファベット文字で始まる必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
+> [!NOTE]
+>  `Name` プロパティと `Namespace` プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
 ## <a name="options"></a>および  
  **[変数の追加]**  
@@ -39,7 +38,7 @@ ms.locfileid: "48158182"
  **変数の移動**  
  一覧で変数をクリックし、 **[変数の移動]** をクリックして変数のスコープを変更します。 **[新しいスコープの選択]** ダイアログ ボックスで、パッケージまたはパッケージ内のコンテナー、タスク、またはイベント ハンドラーを選択して、変数のスコープを変更します。  
   
- 変数のスコープの詳細については、次を参照してください。 [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)します。  
+ 変数のスコープの詳細については、「 [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)領域の下にあります。  
   
  **変数の削除**  
  変数を一覧から選択し、 **[変数の削除]** をクリックします。  
@@ -78,10 +77,10 @@ ms.locfileid: "48158182"
   
  変数に式を割り当てると、変数の横に特別なアイコン マーカーが表示されます。 この特別なアイコン マーカーは、式が設定されている接続マネージャーおよびタスクの横にも表示されます。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)   
- [パッケージで変数を使用します。](../../2014/integration-services/use-variables-in-packages.md)   
- [Integration Services &#40;SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>関連項目  
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
+ [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   
+ [Integration Services &#40;SSIS&#41; の式](expressions/integration-services-ssis-expressions.md)   
  [パッケージ実行用のダンプ ファイルを生成する](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

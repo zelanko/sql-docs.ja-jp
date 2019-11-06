@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.prodinfo.f1
@@ -15,12 +14,12 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 34c5da2f841c1939aacf96ba663b3143675711f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809354"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>[サーバーのプロパティ] ([全般] ページ) - SQL Server Management Studio
   このページを使用すると、インストールされている [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み取り専用情報を表示できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48064272"
  **プラットフォーム**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているオペレーティング システムとハードウェアを表示します。  
   
- **[バージョン]**  
+ **バージョン**  
  現在実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションのバージョン番号を表示します。  
   
  **言語**  
@@ -67,7 +66,7 @@ ms.locfileid: "48064272"
 ## <a name="description-field"></a>[説明] フィールド  
  サーバーのプロパティに関する追加情報を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946283"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  場合、**でしょうか。** 出現インジケーターが指定されていない`sequence of`場合にのみ、True を返します、`Expression`入力と一致する、`Type`指定と`Expression`シングルトンを返します。  
   
- **注**プラス記号 (**+**) およびアスタリスク (**\***) では、出現インジケーターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+ **注**プラス記号 ( **+** ) およびアスタリスク ( **&#42;** ) では、出現インジケーターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
  次の例では、使用、**のインスタンス**XQuery 演算子。  
   
@@ -139,7 +138,7 @@ where ProductModelID=19
  クエリから True が返されます。  
   
 ### <a name="example-c"></a>例 C  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の `instance of` 式は共用体型を使用する場合に制限があります。具体的には、要素または属性の型が共用体型の場合、`instance of` で正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType に指定したアトミック型は、anySimpleType の直接の子である必要があります。 型階層については、次を参照してください。[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)します。  
+ 共用体の型を使用する場合、`instance of`式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]制限があります。具体的には、要素または属性の型が共用体型が場合`instance of`正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType に指定したアトミック型は、anySimpleType の直接の子である必要があります。 型階層については、次を参照してください。[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)します。  
   
  次のクエリの例では、以下の操作を実行します。  
   
@@ -155,7 +154,7 @@ where ProductModelID=19
   
 ```  
 CREATE XML SCHEMA COLLECTION MyTestSchema AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns">  
 <simpleType name="MyUnionType">  
 <union memberTypes="integer string"/>  
 </simpleType>  
@@ -170,9 +169,9 @@ Go
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
   
-SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
+SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
   
-SELECT @var.query('declare namespace ns="https://ns"   
+SELECT @var.query('declare namespace ns="http://ns"   
    data(/ns:TestElement[1]) instance of xs:integer')  
 go  
 ```  
@@ -182,8 +181,8 @@ go
 ```  
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
-SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
-SELECT @var.query('declare namespace ns="https://ns"     
+SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
+SELECT @var.query('declare namespace ns="http://ns"     
    data(/ns:TestElement[1]) instance of xs:decimal')  
 go  
 ```  
@@ -197,7 +196,7 @@ go
 drop xml schema collection SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
 xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
       <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
@@ -243,7 +242,7 @@ go
   
 ```  
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  
@@ -401,7 +400,7 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     結果を次に示します。  
+     これは、結果です。  
   
     ```  
     <a>2002-05-25Z</a>  

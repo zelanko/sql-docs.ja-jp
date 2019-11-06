@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120209"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62743499"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
@@ -82,7 +81,7 @@ ms.locfileid: "49120209"
     > [!NOTE]  
     >  **SQL Server** インスタンスが既定のインスタンスの場合は、 **SQL Server**インスタンスをホストするコンピューターの名前を入力します。 **SQL Server** が名前付きインスタンスの場合は、コンピューターの名前とインスタンスの名前を入力します (例: **Accounting\SQLExpress**)。  
   
-3.  **サーバーの種類**領域で、 **SQL Server**リンク サーバーが別のインスタンスであることを示す**SQL Server**します。  
+3.  **[サーバーの種類]** 領域で **[SQL Server]** をクリックし、リンク サーバーが別の **SQL Server** インスタンスであることを指定します。  
   
 4.  **[セキュリティ]** ページで、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリンク サーバーに接続するときに使用するセキュリティ コンテキストを指定します。 ユーザーがドメイン ログインを使用して接続するドメイン環境では、 **[ログインの現在のセキュリティ コンテキストを使用する]** を選択することが最適な場合が多くあります。 ユーザーが **SQL Server** ログインを使用して元の **SQL Server** に接続する場合は、 **[このセキュリティ コンテキストを使用する]** をクリックして、リンク サーバーでの認証に必要な資格情報を指定することが最適です。  
   
@@ -179,7 +178,7 @@ ms.locfileid: "49120209"
      プロバイダーに対して起動できるのはレベル 0 の OLE DB インターフェイスだけです。  
   
      **[InProcess 許可]**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、インプロセス サーバーとしてプロバイダーのインスタンスを作成できます。 このオプションを設定しない場合、既定の動作として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス外でプロバイダーのインスタンスが作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でプロバイダーのインスタンスが作成されると、プロバイダーでエラーが発生しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスは影響を受けません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でインスタンスが作成されたプロバイダーでは、長い列 (`text`、`ntext`、または `image`) を参照する更新や挿入はできません。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、インプロセス サーバーとしてプロバイダーのインスタンスを作成できます。 このオプションを設定しない場合、既定の動作として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス外でプロバイダーのインスタンスが作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でプロバイダーのインスタンスが作成されると、プロバイダーでエラーが発生しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスは影響を受けません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でインスタンスが作成されたプロバイダーでは、長い列 (`text`、`ntext`、または `image`) を参照する更新や挿入はできません。  
   
      **[トランザクション更新以外]**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、 **ITransactionLocal** を利用できない場合でも更新を実行できます。 このオプションがオンの場合、プロバイダーはトランザクションをサポートしないので、プロバイダーに対する更新を回復することはできません。  
@@ -200,7 +199,7 @@ ms.locfileid: "49120209"
   
 1.  クエリ エディターで、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを入力して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の `SRVR002\ACCTG`インスタンスにリンクします。  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -212,7 +211,7 @@ ms.locfileid: "49120209"
   
 2.  次のコードを実行して、リンク サーバーを使用しているログインのドメイン資格情報を使用するようにリンク サーバーを構成します。  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -221,13 +220,13 @@ ms.locfileid: "49120209"
   
     ```  
   
-##  <a name="FollowUp"></a> 補足情報: リンク サーバーの作成後に実行する手順  
+##  <a name="FollowUp"></a>補足情報: リンク サーバーの作成後に行う手順  
   
 #### <a name="to-test-the-linked-server"></a>リンク サーバーをテストするには  
   
 -   次のコードを実行して、リンク サーバーへの接続をテストします。 この例は、リンク サーバーにあるデータベースの名前を返します。  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -237,7 +236,7 @@ ms.locfileid: "49120209"
   
 -   4 つの要素で構成される名前を使用して、リンク サーバー上のオブジェクトを参照します。 次のコードを実行して、ローカル サーバー上のすべてのログインとリンク サーバー上の対応するログインの一覧を取得します。  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -247,7 +246,7 @@ ms.locfileid: "49120209"
   
      リンク サーバー ログインに対して NULL が返される場合は、リンク サーバー上にログインが存在しないことを示します。 リンク サーバーが別のセキュリティ コンテキストを渡すように構成されている場合、またはリンク サーバーが匿名接続を許可する場合を除き、これらのログインではリンク サーバーを使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンク サーバー &#40;データベース エンジン&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  

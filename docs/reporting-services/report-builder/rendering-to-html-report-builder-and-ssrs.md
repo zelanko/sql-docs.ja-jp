@@ -2,18 +2,18 @@
 title: HTML での表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d184a787becf3e82df7f9051eb8ad576ec1efa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644280"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580652"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、ページ分割されたレポートが XML 形式で返されます。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  
@@ -58,7 +58,7 @@ ms.locfileid: "47644280"
   
 -   その他すべての行と列は、各レポート アイテムのサイズに応じて拡張できます。  
   
--   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
+-   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0\.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
   
   
 ##  <a name="Interactivity"></a> 対話性  

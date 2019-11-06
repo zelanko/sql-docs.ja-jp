@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1cd24b1717bca086bf1419a2df3b44b57104d1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249316"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルの情報の表示に関するプロパティを提供します。  
@@ -37,16 +35,16 @@ class SQLErrorLogFile
 };  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  SQLErrorLogFile クラスは、次のプロパティを定義します。  
   
 |||  
 |-|-|  
-|ArchiveNumber|データ型: `uint32`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのアーカイブ番号。|  
-|InstanceName|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
-|LastModified|データ型: `datetime`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルの最終変更日。|  
-|LogFileSize|データ型: `uint32`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのサイズ (バイト単位)。|  
-|名前|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
+|ArchiveNumber|データ型: `uint32`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> <br /><br /> ログ ファイルのアーカイブ番号。|  
+|InstanceName|データ型: `string`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> 修飾子:キー<br /><br /> <br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
+|LastModified|データ型: `datetime`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> <br /><br /> ログ ファイルの最終変更日。|  
+|LogFileSize|データ型: `uint32`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> <br /><br /> ログ ファイルのサイズ (バイト単位)。|  
+|名前|データ型: `string`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> 修飾子:キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
   
 ## <a name="remarks"></a>コメント  
   
@@ -95,7 +93,7 @@ Next
   
      **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL11** **.\<InstanceName > \MSSQL\Log**  
   
- ファイアウォール経由で接続する場合は、接続先のリモート コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、次を参照してください。 [WMI は、Windows Vista でリモート起動に接続する](http://go.microsoft.com/fwlink/?LinkId=178848)します。  
+ ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、次を参照してください。 [WMI は、Windows Vista でリモート起動に接続する](https://go.microsoft.com/fwlink/?LinkId=178848)します。  
   
 ## <a name="see-also"></a>参照  
  [SqlErrorLogEvent クラス](sqlerrorlogevent-class.md)   

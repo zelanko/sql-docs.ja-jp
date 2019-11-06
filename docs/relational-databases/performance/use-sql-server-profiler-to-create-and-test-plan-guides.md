@@ -19,18 +19,17 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], plan guides
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3673f5efba481bb553243c7ee74f743aeaf1710d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640340"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305088"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler を使用したプラン ガイドの作成とテスト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   プラン ガイドを作成するとき、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sp_create_plan_guide *ストアド プロシージャの* statement_text **引数に使用するために、** を使用して正確なクエリ テキストをキャプチャできます。 これにより、コンパイル時にプラン ガイドをクエリに一致させることができます。 プラン ガイドを作成した後、プラン ガイドが実際にクエリに一致することをテストするためにも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用できます。 通常、クエリがプラン ガイドに一致することを確認するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してプラン ガイドをテストする必要があります。  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>SQL Server Profiler を使用したクエリ テキストのキャプチャ  
@@ -67,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  メモ帳でバッチ テキスト ファイルを開き、テキストをクリップボードにコピーします。  
   
-8.  プラン ガイドを作成し、**@stmt**引数に指定する引用符 ( **@stmt** ') 内にコピーしたテキストを貼り付けます。 **@stmt** 引数内に単一引用符がある場合は、その前にもう 1 つ単一引用符を追加してエスケープする必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'** 20000101 **'** は、 **''** 20000101 **''** として区切る必要があります。  
+8.  プラン ガイドを作成し、 **\@stmt** 引数に指定する引用符 ( **''** ) 内にコピーしたテキストを貼り付けます。 **\@stmt** 引数内に単一引用符がある場合は、その前にもう 1 つ単一引用符を追加してエスケープする必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'** 20000101 **'** は、 **''** 20000101 **''** として区切る必要があります。  
   
  次に、このプラン ガイドを示します。  
   

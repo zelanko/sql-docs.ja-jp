@@ -1,32 +1,33 @@
 ---
 title: Web ポータルのブランド化 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 04/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: この記事では、ブランド パッケージを利用してビジネスのブランドを設定することで Web ポータルの外観を変更する方法について説明します。 CSS (カスケーディング スタイル シート) に詳しくなくても作成できるようにブランド パッケージは設計されています。
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397710"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251914"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-ビジネスのブランドを設定することで Web ポータルの外観を変更できます。 これにはブランド パッケージを使用します。 CSS (カスケーディング スタイル シート) に詳しくなくても作成できるようにブランド パッケージは設計されています。  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-   
+ビジネスのブランドを設定することで Web ポータルの外観を変更できます。 これにはブランド パッケージを使用します。 CSS (カスケーディング スタイル シート) に詳しくなくても作成できるようにブランド パッケージは設計されています。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## <a name="creating-the-brand-package"></a>ブランド パッケージを作成する
   
 Reporting Services のブランド パッケージは 3 つのアイテムから構成されており、zip ファイルとしてパッケージされています。   
   
-- color.json  
+- colors.json  
 - metadata.xml  
 - logo.png (任意)  
   
@@ -74,7 +75,7 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-出力が処理されるとき、LESS 変数の **@primaryButtonBg** が検索され、 **primary**と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
+処理された出力では、LESS 変数の **\@primaryButtonBg** が検索され、**primary** と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
   
     .btn-primary {   
         color:#ffffff;   
@@ -239,5 +240,7 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
             "altTableAccent":"#fdc336"  
         }  
     }  
+
+## <a name="next-steps"></a>次の手順
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

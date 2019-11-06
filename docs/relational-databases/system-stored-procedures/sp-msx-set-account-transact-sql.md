@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22372412f9c3f905b8978741b556724ca880568c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108019"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  対象サーバーに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター サーバーのアカウント名とパスワードを設定します。  
+  ターゲット サーバーに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター サーバーのアカウント名とパスワードを設定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,11 +39,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@credential_name=** ] **'***credential_name***'**  
- マスター サーバーへのログインに使用する資格情報の名前。 既存の資格情報の名前を指定する必要があります。 いずれか*credential_name*または*credential_id*指定する必要があります。  
+`[ @credential_name = ] 'credential_name'` マスター サーバーへのログインに使用する資格情報の名前。 既存の資格情報の名前を指定する必要があります。 いずれか*credential_name*または*credential_id*指定する必要があります。  
   
- [ **@credential_id=** ] *credential_id*  
- マスター サーバーへのログインに使用する資格情報の識別子。 既存の資格情報の識別子を指定する必要があります。 いずれか*credential_name*または*credential_id*指定する必要があります。  
+`[ @credential_id = ] credential_id` マスター サーバーへのログインに使用する資格情報の識別子。 既存の資格情報の識別子を指定する必要があります。 いずれか*credential_name*または*credential_id*指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -53,7 +50,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
  [なし] :  
   
 ## <a name="remarks"></a>コメント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用して、ターゲット サーバーはマスター サーバーにログインを使用してユーザー名とパスワード情報を格納します。 このプロシージャでは、対象サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスター サーバーへのログインで使用する資格情報を設定します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用して、ターゲット サーバーはマスター サーバーにログインを使用してユーザー名とパスワード情報を格納します。 このプロシージャでは、ターゲット サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスター サーバーへのログインで使用する資格情報を設定します。  
   
  既存の資格情報を指定する必要があります。 資格情報の作成の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)します。  
   

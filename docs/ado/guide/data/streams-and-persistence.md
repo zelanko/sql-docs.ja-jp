@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 616a272e9fab9a3bf448063082bfedfe5d7e33a5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924028"
 ---
 # <a name="streams-and-persistence"></a>ストリームと永続性
 [レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[保存](../../../ado/reference/ado-api/save-method.md)メソッド ストア、または*が解決しない*、**レコード セット**ファイルでは、および[を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの復元、 **Recordset**そのファイルから。  
   
- 2.7 以降、ADO を使用した、**保存**と**オープン**メソッドを永続化できる、**レコード セット**を[Stream](../../../ado/reference/ado-api/stream-object-ado.md)もオブジェクトです。 この機能は、リモート データ サービス (RDS) や Active Server Pages (ASP) を使用する場合に便利です。  
+ 2\.7 以降、ADO を使用した、**保存**と**オープン**メソッドを永続化できる、**レコード セット**を[Stream](../../../ado/reference/ado-api/stream-object-ado.md)もオブジェクトです。 この機能は、リモート データ サービス (RDS) や Active Server Pages (ASP) を使用する場合に便利です。  
   
  ASP ページで永続化を単独で使用する方法の詳細については、ASP の現在のドキュメントを参照してください。  
   
@@ -139,8 +138,8 @@ rs.Save response, adPersistADTG
 <BR>  
   
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
-    ID=DC1 HEIGHT=1 WIDTH = 1>  
-    <PARAM NAME="URL" VALUE="https://server/directory/recordset.asp">  
+    ID=DC1 HEIGHT=1 WIDTH = 1>  
+    <PARAM NAME="URL" VALUE="https://server/directory/recordset.asp">  
 </OBJECT>  
   
 </SCRIPT>  
@@ -153,15 +152,15 @@ rs.Save response, adPersistADTG
 ```  
 ...  
 function GetRs()   
-    {  
-    rs = CreateObject("ADODB.Recordset");  
-    rs.Open "https://server/directory/recordset.asp"  
-    DC1.SourceRecordset = rs;  
-    }  
+    {  
+    rs = CreateObject("ADODB.Recordset");  
+    rs.Open "https://server/directory/recordset.asp"  
+    DC1.SourceRecordset = rs;  
+    }  
 ...  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

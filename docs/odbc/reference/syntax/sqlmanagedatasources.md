@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd3604b6de03d6344470758c4de14c15ad47e572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018964"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **準拠**  
- バージョンが導入されています。 ODBC 2.0  
+ バージョンが導入されました。ODBC 2.0  
   
- **概要**  
+ **まとめ**  
  **SQLManageDataSources**ユーザーことができますを設定する、追加、およびシステム情報のデータ ソースを削除 ダイアログ ボックスを表示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -64,7 +63,7 @@ BOOL SQLManageDataSources(
   
  ![ODBC データ ソース アドミニストレーター ダイアログ ボックス](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- ダイアログ ボックスが 3 つのタブの下のシステム情報の一覧にあるデータ ソースが表示されます:**ユーザー DSN**、**システム DSN**、および**ファイル DSN**します。 ユーザーについて、データ ソースをダブルクリックまたはデータ ソースを選択およびクリックしてでかどうか**構成**、 **SQLManageDataSources**呼び出し**ConfigDSN** ODBC_CONFIG_ による DLL のセットアップDSN のオプションです。  
+ ダイアログ ボックスでは、3 つのタブの下のシステム情報の一覧にあるデータ ソースが表示されます。**ユーザー DSN**、**システム DSN**、および**ファイル DSN**します。 ユーザーについて、データ ソースをダブルクリックまたはデータ ソースを選択およびクリックしてでかどうか**構成**、 **SQLManageDataSources**呼び出し**ConfigDSN** ODBC_CONFIG_ による DLL のセットアップDSN のオプションです。  
   
  ユーザーがクリックした場合**追加**、 **SQLManageDataSources**が表示されます、**データ ソースの新規作成** ダイアログ ボックスで、次の図に示すようにします。  
   
@@ -111,14 +110,14 @@ BOOL SQLManageDataSources(
   
  ![ODBC データ ソース アドミニストレーターのトレース タブ](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   
- ユーザーがクリックした場合**トレースの開始**し、クリック **[ok]**、 **SQLManageDataSources**マシンで現在実行されているすべてのアプリケーションを手動でトレースを有効にします。  
+ ユーザーがクリックした場合**トレースの開始**し、クリック **[ok]** 、 **SQLManageDataSources**マシンで現在実行されているすべてのアプリケーションを手動でトレースを有効にします。  
   
  ユーザーが内のトレース ファイルの名前を指定するかどうか、**ログ ファイルのパス**テキスト ボックスと、数回のクリック**OK**、 **SQLManageDataSources**設定、 **TraceFile**の指定した名前に、システム情報 [ODBC] セクションではキーワードです。  
   
 > [!IMPORTANT]  
 >  Visual Studio Analyzer のサポートは、以降 (Visual Studio Analyzer のみ含まれていた以前のバージョンの Visual Studio でします。) Windows 8 では削除されました。 トラブルシューティング メカニズムの代わりに、BID のトレースを使用します。  
   
- ユーザーがクリックした場合**Visual Studio Analyzer の開始**し、クリック **[ok]**、Visual Studio Analyzer を有効にします。 これまでは有効のままに**Visual Studio Analyzer の停止**をクリックします。  
+ ユーザーがクリックした場合**Visual Studio Analyzer の開始**し、クリック **[ok]** 、Visual Studio Analyzer を有効にします。 これまでは有効のままに**Visual Studio Analyzer の停止**をクリックします。  
   
  トレースの詳細については、次を参照してください。[トレース](../../../odbc/reference/develop-app/tracing.md)します。 詳細については、**トレース**と**TraceFile**キーワードを参照してください[ODBC サブキー](../../../odbc/reference/install/odbc-subkey.md)します。  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -15,12 +15,12 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbfc4b20c774becb45570c6ec00c1427a1a87be2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211423"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designate a Fail-Safe Operator
   緊急時のオペレーターとは、指定オペレーターが不在の場合に警告を受信するユーザーのことです。 このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告通知を受信する緊急時のオペレーターを設定する方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48210562"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -59,14 +59,14 @@ ms.locfileid: "48210562"
 1.  **オブジェクト エクスプローラー** で、緊急時のオペレーターとして指定する SQL Server エージェント オペレーターを含むサーバーをプラス記号をクリックして展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
-  
-3.  *[SQL Server エージェントのプロパティ - <サーバー名>]* ダイアログ ボックスの **[ページの選択]** で **[警告システム]** を選択します。  
-  
+
+3.  **SQL Server エージェントのプロパティ -** _server_name_ダイアログ ボックスで、**ページの選択**を選択します**警告システム**します。  
+ 
 4.  **[緊急時のオペレーター]** の **[緊急時のオペレーターを有効にする]** チェック ボックスをオンにします。  
   
 5.  **[オペレーター]** 一覧から、緊急時のオペレーターにするオペレーターを選択します。  
   
-6.  **[電子メール]**、 **[ポケットベル]**、 **[Net send]** チェック ボックスのいずれかまたはすべてを選択して、オペレーターへの通知方法を指定します。  
+6.  次のチェック ボックスのいずれかまたはすべてを選択して、オペレーターへの通知方法を指定します。 **[電子メール]** 、 **[ポケットベル]** 、または **[Net Send]** 。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   

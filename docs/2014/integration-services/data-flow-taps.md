@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9ddd8c6de8574f10b131427cc4ff6fc8de8d5cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059906"
 ---
 # <a name="data-flow-taps"></a>データ フロー タップ
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 実行時にパッケージのデータ フロー パスでのデータ タップを追加して、データ タップから外部ファイルへの出力に出力できる新しい機能が導入されています。 この機能を使用するには、プロジェクト配置モデルを使用して、SSIS サーバーに SSIS プロジェクトを配置する必要があります。 サーバーにパッケージを配置した後、そのパッケージを実行する前に、SSISDB データベースに対して T-SQL スクリプトを実行してデータ タップを追加する必要があります。 次にシナリオの例を示します。  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] の新機能を使用して、ランタイム時にパッケージのデータ フロー パスのデータ タップを追加し、データ タップから外部ファイルに出力できます。 この機能を使用するには、プロジェクト配置モデルを使用して、SSIS サーバーに SSIS プロジェクトを配置する必要があります。 サーバーにパッケージを配置した後、そのパッケージを実行する前に、SSISDB データベースに対して T-SQL スクリプトを実行してデータ タップを追加する必要があります。 次にシナリオの例を示します。  
   
 1.  [catalog.create_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) ストアド プロシージャを使用してパッケージ実行インスタンスを作成します。  
   
@@ -78,7 +77,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  詳細なログ記録レベルを有効にしてデータ タップを追加すると、データ統合ソリューションが実行する I/O 操作が増大します。 そのためデータ タップは、トラブルシューティングの場合に限り追加することをお勧めします  
   
 ## <a name="video"></a>ビデオ  
- この [TechNet のビデオ](http://technet.microsoft.com/sqlserver/dn600163) は、データ タップを SQL Server 2012 SSISDB カタログに追加、使用する方法を紹介しています。パッケージをプログラム処理によってデバッグし、実行時に結果の一部をキャプチャしています。 また、データ タップの一覧および削除の方法、SSIS パッケージ内でのデータ タップの使用に関するベスト プラクティスについても説明しています。  
+ この [TechNet のビデオ](https://technet.microsoft.com/sqlserver/dn600163) は、データ タップを SQL Server 2012 SSISDB カタログに追加、使用する方法を紹介しています。パッケージをプログラム処理によってデバッグし、実行時に結果の一部をキャプチャしています。 また、データ タップの一覧および削除の方法、SSIS パッケージ内でのデータ タップの使用に関するベスト プラクティスについても説明しています。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [データ フローのデバッグ](troubleshooting/debugging-data-flow.md)  

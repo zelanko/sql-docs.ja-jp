@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6c2929062451d139cc3452b6bd272dd85bac951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054993"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +52,14 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id =**] *job_id*  
- ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name =**] **'***job_name***'**  
- ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  か、特定のジョブを表示する*job_id*または*job_name*指定する必要があります。  どちらも省略*job_id*と*job_name*すべてのジョブに関する情報を返します。
   
- [ **@job_aspect =**] **'***job_aspect***'**  
- 表示するジョブ属性を指定します。 *job_aspect*は**varchar (9)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @job_aspect = ] 'job_aspect'` 表示するジョブ属性。 *job_aspect*は**varchar (9)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -73,23 +69,17 @@ sp_help_job { [ @job_id = ] job_id
 |**手順**|ジョブ ステップ情報|  
 |**ターゲット**|表示対象情報|  
   
- [ **@job_type =**] **'***job_type***'**  
- レポートに含めるジョブの種類を指定します。 *job_type*は**varchar (12)**、既定値は NULL です。 *job_type*できる**ローカル**または**MULTI-SERVER**します。  
+`[ @job_type = ] 'job_type'` レポートに含めるジョブの種類。 *job_type*は**varchar (12)** 、既定値は NULL です。 *job_type*できる**ローカル**または**MULTI-SERVER**します。  
   
- [ **@owner_login_name =**] **'***login_name***'**  
- ジョブの所有者のログイン名を指定します。 *login_name*は**sysname**、既定値は NULL です。  
+`[ @owner_login_name = ] 'login_name'` ジョブの所有者のログイン名。 *login_name*は**sysname**、既定値は NULL です。  
   
- [  **@subsystem =**] **'***サブシステム***'**  
- サブシステムの名前です。 *サブシステム*は**nvarchar (40)**、既定値は NULL です。  
+`[ @subsystem = ] 'subsystem'` サブシステムの名前。 *サブシステム*は**nvarchar (40)** 、既定値は NULL です。  
   
- [  **@category_name =**] **'***カテゴリ***'**  
- カテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
+`[ @category_name = ] 'category'` カテゴリの名前。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
- [ **@enabled =**] *enabled*  
- 有効なジョブと無効なジョブのどちらの情報を表示するかを示す数値を指定します。 *有効になっている*は**tinyint**、既定値は NULL です。 **1**有効なジョブ、および**0**ジョブを無効になっていることを示します。  
+`[ @enabled = ] enabled` 情報を表示するかどうかを示す数には、ジョブと無効なジョブが有効になります。 *有効になっている*は**tinyint**、既定値は NULL です。 **1**有効なジョブ、および**0**ジョブを無効になっていることを示します。  
   
- [ **@execution_status =**] *status*  
- ジョブの実行状態を指定します。 *ステータス*は**int**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @execution_status = ] status` ジョブの実行状態です。 *ステータス*は**int**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -101,17 +91,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|一時中断。|  
 |**7**|完了操作の実行中。|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
- 比較に使用する比較演算子*date_created*と*date_modified*します。 *date_comparison*は**char (1)**、できますが、=、 \<、または >。  
+`[ @date_comparator = ] 'date_comparison'` 比較に使用する比較演算子*date_created*と*date_modified*します。 *date_comparison*は**char (1)** 、できますが、=、 \<、または >。  
   
- [ **@date_created =**] *date_created*  
- ジョブが作成された日付を指定します。 *date_created*は**datetime**、既定値は NULL です。  
+`[ @date_created = ] date_created` ジョブが作成された日付。 *date_created*は**datetime**、既定値は NULL です。  
   
- [ **@date_last_modified =**] *date_modified*  
- ジョブが最後に変更された日付を指定します。 *date_modified*は**datetime**、既定値は NULL です。  
+`[ @date_last_modified = ] date_modified` ジョブの最終変更日。 *date_modified*は**datetime**、既定値は NULL です。  
   
- [  **@description =**] **'***description_pattern***'**  
- ジョブの説明を指定します。 *description_pattern*は**nvarchar (512)**、既定値は NULL です。 *description_pattern*パターン マッチングの SQL Server のワイルドカード文字を含めることができます。  
+`[ @description = ] 'description_pattern'` ジョブの説明。 *description_pattern*は**nvarchar (512)** 、既定値は NULL です。 *description_pattern*パターン マッチングの SQL Server のワイルドカード文字を含めることができます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -151,7 +137,7 @@ sp_help_job { [ @job_id = ] job_id
 |**current_retry_attempt**|**int**|ジョブの実行中にステップを再試行した場合、現在の再試行を示します。|  
 |**has_step**|**int**|ジョブのジョブ ステップ数。|  
 |**has_schedule**|**int**|ジョブのジョブ スケジュール数。|  
-|**has_target**|**int**|ジョブの対象サーバー数。|  
+|**has_target**|**int**|ジョブのターゲット サーバー数。|  
 |**type**|**int**|ジョブの種類。<br /><br /> 1 = ローカル ジョブ<br /><br /> **2** = マルチ サーバー ジョブです。<br /><br /> **0** = ジョブには、対象サーバーがありません。|  
   
  場合*job_id*または*job_name*が指定されている**sp_help_job**ジョブ ステップ、ジョブのスケジュール、およびジョブ対象サーバーの場合は、これらの結果セットを返します。  
@@ -170,12 +156,12 @@ sp_help_job { [ @job_id = ] job_id
 |**on_success_step_id**|**int**|場合**on_success_action**は**4**を実行する次の手順を示します。|  
 |**on_fail_action**|**nvarchar (4000)**|ステップが失敗した場合に実行する動作。 値は同じである**on_success_action**します。|  
 |**on_fail_step_id**|**int**|場合**on_fail_action**は**4**を実行する次の手順を示します。|  
-|**server**|**sysname**|予約されています。|  
+|**server**|**sysname**|予約済み。|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)]手順、これは、データベース コマンドを実行します。|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
 |**retry_attempts**|**int**|ステップを正常に実行できない場合、コマンドを再試行する最大回数。この回数に達すると、ステップが失敗したと判断されます。|  
 |**retry_interval**|**int**|再試行の間隔 (分単位) をいずれかです。|  
-|**os_run_priority**|**varchar(4000)**|予約されています。|  
+|**os_run_priority**|**varchar(4000)**|予約済み。|  
 |**output_file_name**|**varchar(200)**|コマンド出力を書き込むファイル ([!INCLUDE[tsql](../../includes/tsql-md.md)]と**CmdExec**ステップのみ)。|  
 |**last_run_outcome**|**int**|最後に実行したときのステップの結果。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **3** = キャンセル<br /><br /> **5** = unknown|  
 |**last_run_duration**|**int**|最後に実行したときのステップの経過時間 (秒単位)。|  
@@ -208,19 +194,19 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_uid**|**uniqueidentifier**|スケジュールの識別子。|  
 |**job_count**|**int**|このスケジュールを参照するジョブの数。|  
   
- 次に、ジョブ対象サーバーに関する結果セットを示します。  
+ 次に、ジョブターゲット サーバーに関する結果セットを示します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|対象サーバーの識別子。|  
-|**server_name**|**nvarchar(30)**|対象サーバーのコンピューター名。|  
-|**enlist_date**|**datetime**|対象サーバーがマスター サーバーに参加した日付。|  
-|**last_poll_date**|**datetime**|対象サーバーが最後にマスター サーバーを呼び出した日付。|  
-|**last_run_date**|**int**|対象サーバーでジョブの実行を最後に開始した日付。|  
-|**last_run_time**|**int**|対象サーバーでジョブの実行を最後に開始した時刻。|  
-|**last_run_duration**|**int**|対象サーバーで最後に実行したときのジョブの経過時間。|  
+|**server_id**|**int**|ターゲット サーバーの識別子。|  
+|**server_name**|**nvarchar(30)**|ターゲット サーバーのコンピューター名。|  
+|**enlist_date**|**datetime**|ターゲット サーバーがマスター サーバーに参加した日付。|  
+|**last_poll_date**|**datetime**|ターゲット サーバーが最後にマスター サーバーを呼び出した日付。|  
+|**last_run_date**|**int**|ターゲット サーバーでジョブの実行を最後に開始した日付。|  
+|**last_run_time**|**int**|ターゲット サーバーでジョブの実行を最後に開始した時刻。|  
+|**last_run_duration**|**int**|ターゲット サーバーで最後に実行したときのジョブの経過時間。|  
 |**last_run_outcome**|**tinyint**|対象サーバーで最後に実行したときのジョブの結果。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **3** = キャンセル<br /><br /> **5** = unknown|  
-|**last_outcome_message**|**nvarchar(1024)**|対象サーバーで最後に実行したときのジョブからの結果メッセージ。|  
+|**last_outcome_message**|**nvarchar(1024)**|ターゲット サーバーで最後に実行したときのジョブからの結果メッセージ。|  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  

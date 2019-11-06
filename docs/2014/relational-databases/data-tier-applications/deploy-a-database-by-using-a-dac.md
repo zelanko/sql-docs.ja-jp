@@ -18,12 +18,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873053"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
   **のインスタンスと** サーバー間、または 2 つの [!INCLUDE[ssDE](../../includes/ssde-md.md)] サーバー間でデータベースを配置するには、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] SQL Azure へのデータベースの配置ウィザード [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]を使用します。  
@@ -66,7 +66,7 @@ ms.locfileid: "48050482"
   
 3.  **[データベース]** ノードを展開します。  
   
-4.  配置するデータベースを右クリックして **[タスク]** を選択し、 **[SQL Azure へのデータベースの配置]** をクリックします。  
+4.  配置するデータベースを右クリックして **[タスク]** を選択し、 **[SQL Azure へのデータベースの配置...]** をクリックします。  
   
 5.  ウィザードの各ダイアログを完了します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48050482"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] データベースの設定:**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディション** : [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディションをドロップダウン メニューから選択します。  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディション**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディションをドロップダウン メニューから選択します。  
   
 -   **[データベースの最大サイズ (GB)]** : データベースの最大サイズをドロップダウン メニューから選択します。  
   
@@ -122,19 +122,19 @@ ms.locfileid: "48050482"
 ## <a name="using-a-net-framework-application"></a>.Net Framework アプリケーションの使用  
  **.Net Framework アプリケーションで DacStoreExport() メソッドおよび Import() メソッドを使用してデータベースを配置するには**  
   
- コード例を参照するには、 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
+ コード例を参照するには、 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
   
 1.  SMO サーバー オブジェクトを作成し、配置するデータベースがあるインスタンスまたはサーバーに設定します。  
   
-2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
+2.  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
   
-3.  使用して、`Export`のメソッド、`Microsoft.SqlServer.Management.Dac.DacStore`データベースを BACPAC ファイルにエクスポートする型。 エクスポートするデータベースの名前と、BACPAC ファイルの出力先となるフォルダーのパスを指定します。  
+3.  `Export` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、BACPAC ファイルにデータベースをエクスポートします。 エクスポートするデータベースの名前と、BACPAC ファイルの出力先となるフォルダーのパスを指定します。  
   
 4.  SMO サーバー オブジェクトを作成し、配置先インスタンスまたはサーバーに設定します。  
   
-5.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
+5.  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
   
-6.  使用して、`Import`のメソッド、 `Microsoft.SqlServer.Management.Dac.DacStore` BACPAC をインポートする型。 エクスポートによって作成された BACPAC ファイルを指定します。  
+6.  `Import` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、BACPAC をインポートします。 エクスポートによって作成された BACPAC ファイルを指定します。  
   
 ## <a name="see-also"></a>参照  
  [データ層アプリケーション](data-tier-applications.md)   

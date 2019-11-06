@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106698"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
   カスケード型パラメーターを使用すると、大量のレポート データの管理が可能になります。 パラメーターの値の一覧が、別のパラメーターで選択された値によって決まるように、関連するパラメーターのセットを定義できます。 たとえば、最初のパラメーターが独立しており、製品カテゴリの一覧を表すとします。 ユーザーが任意のカテゴリを選択すると、2 番目のパラメーターは最初のパラメーターの値によって決まります。 その値は、選択したカテゴリ内のサブカテゴリの一覧で更新されます。 ユーザーがレポートを表示するとき、カテゴリ パラメーターとサブカテゴリ パラメーターの両方の値を使用して、レポート データにフィルターが適用されます。  
@@ -28,7 +27,7 @@ ms.locfileid: "48078352"
   
  一覧の後半にあるパラメーターのデータセット クエリには一覧の前半にある各パラメーターへの参照が含まれているため、カスケード型パラメーターでは順序が重要な意味を持ちます。 実行時には、レポート データ ペインのパラメーターの順序によって、パラメーター クエリがレポート内で作成される順序が決まります。したがって、ユーザーが後続の各パラメーター値を選択する順序が決まります。  
   
- 複数の値を使用したカスケード型パラメーターを作成する方法、および [すべて選択] 機能を含める方法の詳細については、「 [How to have a Select All Multivalue Cascading Parameter](http://go.microsoft.com/fwlink/?LinkId=184757)」を参照してください。  
+ 複数の値を使用したカスケード型パラメーターを作成する方法、および [すべて選択] 機能を含める方法の詳細については、「 [すべてのマルチバリューカスケードパラメータを選択する方法](https://go.microsoft.com/fwlink/?LinkId=184757)」を参照してください。  
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>関連する複数のパラメーターを含むクエリを使用してメイン データセットを作成するには  
   
@@ -44,9 +43,9 @@ ms.locfileid: "48078352"
   
     1.  データ ソース フィールドの一覧。 たとえば [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、SELECT ステートメントは指定されたテーブルまたはビューのデータベース列名の一覧を指定します。  
   
-    2.  カスケード型パラメーターごとに 1 つのクエリ パラメーター。 クエリ パラメーターは、クエリに含める特定の値またはクエリから除外する特定の値を指定することによって、データ ソースから取得するデータを制限します。 通常、クエリ パラメーターはクエリの制約句で使用されます。 たとえば [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントでは、クエリ パラメーターは WHERE 句で使用されます。 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server オンライン ブック [にある](http://go.microsoft.com/fwlink/?linkid=120955)のマニュアルの「WHERE と HAVING を使ったフィルターによる行選択」を参照してください。  
+    2.  カスケード型パラメーターごとに 1 つのクエリ パラメーター。 クエリ パラメーターは、クエリに含める特定の値またはクエリから除外する特定の値を指定することによって、データ ソースから取得するデータを制限します。 通常、クエリ パラメーターはクエリの制約句で使用されます。 たとえば [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントでは、クエリ パラメーターは WHERE 句で使用されます。 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server オンライン ブック [にある](https://go.microsoft.com/fwlink/?linkid=120955)のマニュアルの「WHERE と HAVING を使ったフィルターによる行選択」を参照してください。  
   
-6.  **[実行]** (**!**) をクリックします。 クエリ パラメーターを指定し、クエリを実行したら、クエリ パラメーターに対応するレポート パラメーターが自動的に作成されます。  
+6.  **[実行]** ( **!** ) をクリックします。 クエリ パラメーターを指定し、クエリを実行したら、クエリ パラメーターに対応するレポート パラメーターが自動的に作成されます。  
   
     > [!NOTE]  
     >  最初にクエリを実行したときのクエリ パラメーターの順序によって、クエリ パラメーターがレポート内で作成される順序が決まります。 順序を変更するには、「[レポート パラメーターの順序の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)」を参照してください。  
@@ -73,7 +72,7 @@ ms.locfileid: "48078352"
   
      SELECT DISTINCT コマンドは、指定したテーブルの指定した列から一意の各値を取得できるように、結果セットから重複する値を削除します。  
   
-     **[実行]** (**!**) をクリックします。 結果セットには、この最初のパラメーターに使用可能な値が表示されます。  
+     **[実行]** ( **!** ) をクリックします。 結果セットには、この最初のパラメーターに使用可能な値が表示されます。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -155,11 +154,11 @@ ms.locfileid: "48078352"
 4.  **[レポートの表示]** をクリックします。 選択したパラメーターに基づいて、レポートの表示が更新されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーターを追加、変更、削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
  [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [チュートリアル&#40;レポート ビルダー&#41;](../report-builder-tutorials.md)   
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -26,16 +26,15 @@ helpviewer_keywords:
 - database monitoring [SQL Server]
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbfda8b5768242980d61cce90f1ca16f5de6aa9f
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020250"
 ---
 # <a name="monitor-and-tune-for-performance"></a>パフォーマンスの監視とチューニング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

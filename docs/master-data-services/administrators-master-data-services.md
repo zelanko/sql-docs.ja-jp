@@ -5,23 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ca34e83b313a267f607ee9e45f8bf68fd1b0b357
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047816"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
@@ -54,7 +52,7 @@ ms.locfileid: "52418773"
 ## <a name="master-data-services-super-user"></a>マスター データ サービスのスーパー ユーザー  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、スーパー ユーザー機能領域にユーザー権限を割り当てることができます。 スーパー ユーザー機能領域に対する権限を持つユーザーは、実質的にすべてのモデルに対する管理者権限を持ち、その他のすべての機能領域に対する権限を持ちます。 機能領域に対する権限については、「[機能領域権限について (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
- 既定のスーパー ユーザーは、[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) を使用して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成するときに、**[管理者アカウント]** に指定されます。  
+ 既定のスーパー ユーザーは、[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) を使用して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成するときに、 **[管理者アカウント]** に指定されます。  
   
  スーパー ユーザーは、次の操作を行うことができます。  
   
@@ -66,7 +64,7 @@ ms.locfileid: "52418773"
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   
-|管理者の種類|[説明]|  
+|管理者の種類|説明|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] スーパー ユーザー|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられている権限は、管理者のアクセス権に影響を与えません。<br /><br /> 明示的に割り当てられている機能領域権限、またはグループから継承した権限に基づいてスーパー ユーザーになる場合があります。<br /><br /> すべてのモデルに対するあらゆる権限が自動的に付与されます。<br /><br /> すべての機能領域に対するアクセス権が自動的に付与されます。|  
 |モデル管理者|明示的に割り当てられている管理者権限、またはグループから継承した権限に基づいてモデル管理者になる場合があります。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> 特定のモデルのすべてのオブジェクトおよびメンバーに対するあらゆる権限が自動的に付与されます。|  
@@ -75,7 +73,7 @@ ms.locfileid: "52418773"
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [マスター データ サービス データベースの作成](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [通知 (マスター データ サービス)](../master-data-services/notifications-master-data-services.md)  

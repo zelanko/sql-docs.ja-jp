@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4e47b2cc13c05438ce38d1b6f63bcbcb357c60d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 6d9f5c70e0457009f71c3b9087ecf9f1354a8835
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106925"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML の接続の種類 (SSRS)
   XML データ ソースのデータをレポートに含めるには、種類が XML のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、XML データ拡張機能に基づいています。 このデータ ソースの種類を使用して、XML ドキュメント、Web サービス、またはクエリに埋め込まれた XML に接続し、データを取得します。  
   
  このデータ拡張機能は、接続文字列とは別に管理される資格情報およびパラメーターをサポートしています。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)を参照してください。  
   
 ##  <a name="Connection"></a> 接続文字列  
  接続文字列を、HTTP 経由でアクセス可能な Web サービス、Web ベース アプリケーション、または XML ドキュメントを指す URL に設定する必要があります。 XML ドキュメントの拡張子は XML にする必要があります。 データセット クエリに埋め込まれた XML データに対し、空の接続文字列を使用することもできます。  
@@ -47,7 +46,7 @@ ms.locfileid: "48211952"
   
 -   現在の Windows ユーザー (統合セキュリティとも呼ばれます)。  
   
--   資格情報を必要としない。 資格情報を選択しない場合には、匿名アクセスが使用されます。 レポート サーバーが外部データ ソースに接続するための自動実行アカウントが定義済みであることを確認してください。 XML データ処理拡張機能は、対象 URL または Web サービスに資格情報を渡しません。したがって、自動実行アカウントが定義されていないと接続に失敗します。 詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメントの「[自動実行アカウントの構成 (SSRS 構成マネージャー)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+-   資格情報を必要としない。 資格情報を選択しない場合には、匿名アクセスが使用されます。 レポート サーバーが外部データ ソースに接続するための自動実行アカウントが定義済みであることを確認してください。 XML データ処理拡張機能は、対象 URL または Web サービスに資格情報を渡しません。したがって、自動実行アカウントが定義されていないと接続に失敗します。 詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメントの「[自動実行アカウントの構成 (SSRS 構成マネージャー)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
  保存された資格情報や要求された資格情報はサポートされていません。 Windows 統合セキュリティが無効になっていると、データの取得に Windows 統合セキュリティを使用できないので注意してください。 保存された資格情報や要求された資格情報を指定すると、実行時にエラーが発生します。  
   
@@ -62,11 +61,11 @@ ms.locfileid: "48211952"
   
  XML データ ソースに対して使用できるデータセット クエリの値を以下に示します。  
   
--   *空*: 空のクエリを使用して、既定の結果セットを作成します。 既定のクエリは、データ ソースを読み取り、最初のリーフ コレクションまで XML ノード階層をたどることによって作成されます。 結果セットには、テキスト値を持つすべてのノード、および、そのパス上に存在するすべてのノード属性が格納されます。 結果セットの列は、データセットのフィールドにマップされます。  
+-   *空*:既定の結果セットを作成するには、空のクエリを使用します。 既定のクエリは、データ ソースを読み取り、最初のリーフ コレクションまで XML ノード階層をたどることによって作成されます。 結果セットには、テキスト値を持つすべてのノード、および、そのパス上に存在するすべてのノード属性が格納されます。 結果セットの列は、データセットのフィールドにマップされます。  
   
--   要素パス: データ ソースから XML データを取得するときに使用するノードのシーケンスを指定します。  
+-   要素パス:データ ソースから XML データを取得するときに使用するノードのシーケンスを指定します。  
   
--   XML Query 要素: 次の省略可能な要素の XML クエリの仕様。  
+-   XML Query 要素:XML Query の必須の要素および省略可能な要素を次に示します。  
   
     -   **Web サービス。**  
   
@@ -108,9 +107,9 @@ ms.locfileid: "48211952"
   
          `<ElementPath IgnoreNamespaces="true">`  *要素パス*  `</ElementPath>`  
   
- クエリ構文の詳細については、msdn.microsoft.com にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)) の「[XML レポート データの XML クエリ構文 (SSRS)](report-data-ssrs.md)」を参照してください。  
+ クエリ構文の詳細については、msdn.microsoft.com にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)) の「[XML レポート データの XML クエリ構文 (SSRS)](report-data-ssrs.md)」を参照してください。  
   
- 例については、「 [Reporting Services: XML と Web サービス データ ソースの使用](http://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
+ 例については、「[Reporting Services:XML および Web サービス データ ソースを使用する](https://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>XML Web サービスのデータを取得するための要件  
  これらは XML データ処理拡張機能では検出されません。 そのため、必要なデータを取得する SOAP メソッドを検索するための、なんらかの手段が必要です。 また、Web サービスがそのデータに対して使用するアドレス指定スキームや名前空間を把握しておく必要もあります。  
@@ -124,7 +123,7 @@ ms.locfileid: "48211952"
   
  XQuery と似た XML 構文を使って要素パスを指定できます。  
   
- 詳細については、msdn.microsoft.com にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)) の「[XML レポート データの要素パス構文 (SSRS)](element-path-syntax-for-xml-report-data-ssrs.md)」を参照してください。  
+ 詳細については、msdn.microsoft.com にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)) の「[XML レポート データの要素パス構文 (SSRS)](element-path-syntax-for-xml-report-data-ssrs.md)」を参照してください。  
   
 ##  <a name="Parameters"></a> パラメーター  
  クエリの解析時にパラメーターは識別されません。  
@@ -160,7 +159,7 @@ ms.locfileid: "48211952"
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  クエリによって生成されるデータセット フィールド コレクションについて説明します。  
   
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント)。  
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント)。  
  各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
   
 ## <a name="see-also"></a>参照  

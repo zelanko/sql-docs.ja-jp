@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 187a333da1f38cc89f8783b48e0c171630339c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0b90951dedd0d8fb04203f4e035a4cb8280d169
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140429"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>テンポラル テーブルのシステム一貫性のチェック
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47766181"
 10. 履歴テーブルに、変更の追跡や変更データ キャプチャの構成がありません。  
   
 ### <a name="data-consistency-check"></a>データの一貫性チェック  
- **SYSTEM_VERSIONING** が **ON** に設定される前、任意の DML 操作の一環として、システムでは次のチェックを実行します。 **SysEndTime** ≥**SysStartTime**  
+ **SYSTEM_VERSIONING** が **ON** に設定される前、任意の DML 操作の一環として、システムでは次のチェックを実行します。**SysEndTime** ≥**SysStartTime**  
   
  既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの一貫性チェックでは、既存のレコードに重複がなく、個々の各レコードでテンポラルの要件が満たされたことが確認されます。 データを実行する一貫性チェックが、既定値です。 一般に、データの一貫性は、履歴データが入力された既存の履歴テーブルを組み込む場合など、現行および履歴テーブルのデータ間に一貫性がない可能性がある場合に実行することをお勧めします。  
   

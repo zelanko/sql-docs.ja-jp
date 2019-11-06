@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3b801980f6a9f7bc2fc434a9fac19e204bbc60cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea264c48332f6e72a5f26b330e42cfb1e3d3ff8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061249"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbname=** ] **'***database***'**  
- 削除するデータベースの名前を指定します。 *データベース*は**sysname**既定値は NULL です。  
+`[ @dbname = ] 'database'` 削除するデータベースの名前です。 *データベース*は**sysname**既定値は NULL です。  
   
- [  **@dropdev=** ] **'***dropdev***'**  
- 旧バージョンとの互換性のためのフラグです。現在は無視されます。 *dropdev* 、値を持つ**dropdev**します。  
+`[ @dropdev = ] 'dropdev'` 旧バージョンとの互換性を保つのためのフラグは、現在は無視されます。 *dropdev* 、値を持つ**dropdev**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -65,7 +62,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 EXEC sp_dbremove sales;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   

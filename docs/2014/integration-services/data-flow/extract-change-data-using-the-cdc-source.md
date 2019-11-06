@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 29e8c0afa66e5f6f667ef9435470146109f5676d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520328"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC ソースを使用した変更データ抽出
   CDC ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの CDC 制御タスクがあらかじめ含まれている必要があります。  
@@ -45,15 +44,15 @@ ms.locfileid: "48140666"
   
 8.  処理上のニーズに最も適した処理モードを選択します。 オプションは次のとおりです。  
   
-    -   **[すべて]**: **[更新前]** の値なしで、現在の CDC 範囲内の変更を返します。  
+    -   **[すべて]** : **[更新前]** の値なしで、現在の CDC 範囲内の変更を返します。  
   
-    -   **[古い値を含むすべて]**: 古い値 (**[更新前]**) を含め、現在の CDC 処理範囲内の変更を返します。 更新操作ごとに、2 つの行 (更新前の値の行と更新後の値の行) が存在することになります。  
+    -   **[古い値を含むすべて]** : 古い値 ( **[更新前]** ) を含め、現在の CDC 処理範囲内の変更を返します。 更新操作ごとに、2 つの行 (更新前の値の行と更新後の値の行) が存在することになります。  
   
-    -   **[差分]**: 現在の CDC 処理範囲内で変更された、ソース行あたり 1 つの変更行のみを返します。 ソース行が複数回更新された場合は、変更が結合されたうえで生成されます (たとえば、挿入と更新が 1 回の更新として、または更新と削除が 1 回の削除として、結合されたうえで生成されることがあります)。 [差分] 変更処理モードで作業する場合は、1 つのソース行が複数の出力に出現するため、変更を削除、挿入、および更新の各出力に分割し、並行処理することができます。  
+    -   **[差分]** : 現在の CDC 処理範囲内で変更された、ソース行あたり 1 つの変更行のみを返します。 ソース行が複数回更新された場合は、変更が結合されたうえで生成されます (たとえば、挿入と更新が 1 回の更新として、または更新と削除が 1 回の削除として、結合されたうえで生成されることがあります)。 [差分] 変更処理モードで作業する場合は、1 つのソース行が複数の出力に出現するため、変更を削除、挿入、および更新の各出力に分割し、並行処理することができます。  
   
-    -   **[更新マスクを含む差分]**: このモードは通常の [差分] モードと似ていますが、**__$\<column-name>\__Changed** という名前のパターンを持つブール型の列も追加されます。これは、現在の変更行の変更された列を示します。  
+    -   **[更新マスクを含む差分]** : このモードは通常の [差分] モードと似ていますが、 **__$\<column-name>\__Changed** という名前のパターンを持つブール型の列も追加されます。これは、現在の変更行の変更された列を示します。  
   
-    -   **[結合を含む差分]**: このモードは通常の [結合] モードと似ていますが、挿入操作と更新操作が 1 つの結合操作 (UPSERT) に結合されます。  
+    -   **[結合を含む差分]** : このモードは通常の [結合] モードと似ていますが、挿入操作と更新操作が 1 つの結合操作 (UPSERT) に結合されます。  
   
 9. 現在の CDC コンテキストの CDC 状態を保持する SSIS 文字列パッケージ変数を選択します。 CDC 状態変数の詳細については、「 [状態変数の定義](define-a-state-variable.md)」を参照してください。  
   
@@ -72,8 +71,8 @@ ms.locfileid: "48140666"
 15. **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [[CDC ソース エディター&#40;接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)   
- [[CDC ソース エディター&#40;列] ページ&#41;](../cdc-source-editor-columns-page.md)   
- [[CDC ソース エディター&#40;エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
+ [[CDC ソース エディター] ([接続マネージャー] ページ)](../cdc-source-editor-connection-manager-page.md)   
+ [[CDC ソース エディター] ([列] ページ)](../cdc-source-editor-columns-page.md)   
+ [[CDC ソース エディター] ([エラー出力] ページ)](../cdc-source-editor-error-output-page.md)  
   
   

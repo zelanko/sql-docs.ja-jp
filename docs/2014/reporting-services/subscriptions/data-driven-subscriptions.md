@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f33cf9021864e141b51c10d357fd53f379b3f567
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100864"
 ---
 # <a name="data-driven-subscriptions"></a>データ ドリブン サブスクリプション
   データ ドリブン サブスクリプションでは、実行時に外部データ ソースから取得した動的サブスクリプション データを使用できます。 サブスクリプションの定義時に指定した静的テキストや既定値を使用することもできます。 データ ドリブン サブスクリプションを使用すると、次のようなことが可能になります。  
@@ -45,9 +44,9 @@ ms.locfileid: "48217397"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>データ ドリブン サブスクリプションを使用する場合の要件  
  データ ドリブン サブスクリプション機能は、すべてのエディションで利用できるわけではありません。 また、データ ソースの種類によっては、実行時にサブスクリプション データを取得できない場合もあります。 詳細な要件については、以下の情報を参考にしてください。  
   
--   データ ドリブン サブスクリプション機能をサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「[SQL Server 2012 の各エディションがサポートする機能 ](http://go.microsoft.com/fwlink/?linkid=232473)」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+-   データ ドリブン サブスクリプション機能をサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「[SQL Server 2012 の各エディションがサポートする機能 ](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
--   サブスクリプション データについては、スキーマ情報をレポート サーバーに提供できるデータ ソースを選択します。 サポートされているデータ ソースの種類としては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データ、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ データ、ODBC データ ソース、OLE DB データ ソースなどがあります。 サブスクライバー データ ソースの要件の詳細については、次を参照してください。[サブスクライバー データに対して外部データ ソースを使用して&#40;データ ドリブン サブスクリプション&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)します。  
+-   サブスクリプション データについては、スキーマ情報をレポート サーバーに提供できるデータ ソースを選択します。 サポートされているデータ ソースの種類としては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データ、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ データ、ODBC データ ソース、OLE DB データ ソースなどがあります。 サブスクライバー データ ソース要件の詳細については、「 [サブスクライバー データに対して外部データ ソースを使用する &#40;データ ドリブン サブスクリプション&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)」を参照してください。  
   
 ## <a name="working-with-data-driven-subscriptions"></a>データ ドリブン サブスクリプションの処理  
  以下のトピックでは、データ ドリブン サブスクリプションの詳細について説明します。  
@@ -55,12 +54,12 @@ ms.locfileid: "48217397"
 |トピック|説明|  
 |------------|-----------------|  
 |[データ ドリブン サブスクリプションを作成、変更、および削除する](data-driven-subscriptions.md)|データ ドリブン サブスクリプションの作成、変更、および削除方法について説明します。|  
-|[サブスクライバー データに対して外部データ ソースを使用して&#40;データ ドリブン サブスクリプション&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|データ ドリブン サブスクリプションに使用できるデータ ソースに関する情報を記載しています。|  
+|[サブスクライバー データに対して外部データ ソースを使用する &#40;データ ドリブン サブスクリプション&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|データ ドリブン サブスクリプションに使用できるデータ ソースに関する情報を記載しています。|  
 |[データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|データ ドリブン サブスクリプションの作成方法について理解するための手順を記載しています。|  
-|[レポートのキャッシュ&#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|データ ドリブン サブスクリプションと NULL 配信プロバイダーを使用して、キャッシュを事前に読み込む方法を説明しています。|  
+|[レポートのキャッシュ &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|データ ドリブン サブスクリプションと NULL 配信プロバイダーを使用して、キャッシュを事前に読み込む方法を説明しています。|  
   
-## <a name="see-also"></a>関連項目  
- [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+## <a name="see-also"></a>参照  
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [[データ ドリブン サブスクリプションの作成] ページ &#40;レポート マネージャー&#41;](../create-data-driven-subscription-page-report-manager.md)   
  [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](../report-server/preload-the-cache-report-manager.md)  
   

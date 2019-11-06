@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: d5996eea620d61eb9ca6ccd0f499398492bad591
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617118"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152536"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
 
@@ -41,7 +40,7 @@ ms.locfileid: "52617118"
   
  **参照データ サービス**  
   
- 参照データを使用すると、参照データの品質を保証する企業のサービスを利用して、データを検証、修正、および強化することができます。 参照データ プロバイダーには、Windows Azure MarketPlace のサービスを使用して接続できます。また、プロバイダーに直接接続することもできます。 詳細については、「 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
+ 参照データを使用すると、参照データの品質を保証する企業のサービスを利用して、データを検証、修正、および強化することができます。 Azure Marketplace のサービスを使用して参照データプロバイダーに接続することも、プロバイダーへの直接接続を使用することもできます。 詳細については、「 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
   
  DQS のナレッジ マネージメントの詳細については、「 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)」をご覧ください。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "52617118"
   
  DQS 管理の詳細については、「 [DQS Administration](../data-quality-services/dqs-administration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

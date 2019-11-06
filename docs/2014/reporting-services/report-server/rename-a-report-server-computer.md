@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c040f3afade749772ae1560e9f99af8cd4ac0a85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 23c96ae889017eab71378b91eeb1a9ea1881fb25
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103498"
 ---
 # <a name="rename-a-report-server-computer"></a>レポート サーバー コンピューターの名前の変更
   コンピューターの名前を変更すると、同じコンピューター上に存在する Web サーバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前が対応して変更されます。 場合によっては、コンピューター名を変更した後に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にアクセスできなくなることがあります。 コンピューター名を変更した後にレポート サーバーを再構成するには、このトピックで説明する手順を使用します。  
@@ -39,18 +38,18 @@ ms.locfileid: "48114292"
 ## <a name="renaming-a-report-server-computer"></a>レポート サーバー コンピューターの名前の変更  
  レポート サーバーを実行するコンピューターの名前を変更する場合は、次の手順を実行します。  
   
-1.  開いている**RSReportServer.config**テキスト エディターで変更と、`UrlRoot`新しいサーバー名を反映するように設定します。 `UrlRoot` 設定は、レポート サーバーに格納されているアイテムへのアクセスに使用する URL を構成するために、配信拡張機能によって使用されます。 レポート サーバーの URL アドレスを変更するには、更新する必要があります、`UrlRoot`期待どおりにレポートを配信するサブスクリプションが続行されるように設定します。  
+1.  開いている**RSReportServer.config**テキスト エディターで変更と、`UrlRoot`新しいサーバー名を反映するように設定します。 `UrlRoot` 設定は、レポート サーバーに格納されているアイテムへのアクセスに使用する URL を構成するために、配信拡張機能によって使用されます。 レポート サーバーの URL アドレスを変更するには、`UrlRoot` 設定を更新し、サブスクリプションによってレポートが引き続き適切に配信されるようにする必要があります。  
   
-2.  同じファイルで設定されている場合の変更、`ReportServerUrl`新しいサーバー名を反映するように設定します。 この設定はすべてのインストールで使用されているわけではありません。 この設定が空の場合は、何もしません。  
+2.  同じファイルで、`ReportServerUrl` が設定されている場合は、新しいサーバー名を反映するようにこの設定を変更します。 この設定はすべてのインストールで使用されているわけではありません。 この設定が空の場合は、何もしません。  
   
     > [!NOTE]  
     >  企業ネットワークで Windows インターネット ネーム サービス (WINS) を使用している場合は、レポート サーバーとレポート マネージャーを以前の名前でしばらく利用できることがあります。 WINS は、サービスを提供する各コンピューターに IP アドレスをマップします。 名前を変更したコンピューターの IP アドレスを WINS が更新した後は、古いコンピューター名を使用してレポート サーバーまたはレポート マネージャーにアクセスすることはできなくなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RSReportServer 構成ファイル](rsreportserver-config-configuration-file.md)   
- [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](reporting-services-report-server-native-mode.md)   
- [レポート サーバーのサービス開始および停止](start-and-stop-the-report-server-service.md)   
+ [Start and Stop the Report Server Service](start-and-stop-the-report-server-service.md)   
  [rsconfig ユーティリティ &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  
   
   

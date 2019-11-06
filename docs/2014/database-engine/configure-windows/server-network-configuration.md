@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -19,12 +18,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab0d7678ec07f3819bf7dd6b9b949f4c2d11229d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809482"
 ---
 # <a name="server-network-configuration"></a>サーバー ネットワークの構成
   サーバー ネットワークの構成作業には、プロトコルの有効化、プロトコルで使用されるポートまたはパイプの変更、暗号化の構成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの構成、ネットワーク上での [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の公開または非表示、サーバー プリンシパル名の登録などがあります。 ほとんどの場合、サーバー ネットワークの構成を変更する必要はありません。 特殊なネットワーク要件がある場合は、サーバー ネットワーク プロトコルのみを再構成します。  
@@ -40,7 +39,7 @@ ms.locfileid: "48111692"
  動的ポート向けに構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用されるポートは、起動のたびに変更される可能性があります。 ファイアウォールを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって使用されるポートを開く必要があります。 また、特定のポートを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成して、サーバーへの通信を許可するようにファイアウォールを構成できます。 詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
 ### <a name="changing-a-named-pipe"></a>名前付きパイプの変更  
- 指定した名前付きパイプでリッスンするように名前付きパイプ プロトコルを構成できます。 既定では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスはパイプ \\\\.\pipe\sql\query で、名前付きインスタンスの場合はパイプ \\\\.\pipe\MSSQL$*\<instancename>* \sql\query でそれぞれリッスンします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンできる名前付きパイプは 1 つのみですが、必要に応じてパイプの名前を変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、クライアントが接続時にパイプを識別するのに役立ちます。 詳細については、「[代替パイプをリッスンするサーバーの構成  &#40;SQL Server 構成マネージャー&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md)」を参照してください。  
+ 指定した名前付きパイプでリッスンするように名前付きパイプ プロトコルを構成できます。 既定では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスはパイプ \\\\.\pipe\sql\query で、名前付きインスタンスの場合はパイプ \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query でそれぞれリッスンします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンできる名前付きパイプは 1 つのみですが、必要に応じてパイプの名前を変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、クライアントが接続時にパイプを識別するのに役立ちます。 詳細については、「[代替パイプをリッスンするサーバーの構成  &#40;SQL Server 構成マネージャー&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md)」を参照してください。  
   
 ## <a name="force-encryption"></a>[強制的に暗号化]  
  クライアント アプリケーションとの通信時に暗号化を要求するように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を構成できます。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -49,7 +48,7 @@ ms.locfileid: "48111692"
  チャネル バインドとサービス バインドを使用した認証の拡張保護のサポートは、拡張保護をサポートしているオペレーティング システムで使用できます。 詳細については、「 [拡張保護を使用したデータベース エンジンへの接続](connect-to-the-database-engine-using-extended-protection.md)」を参照してください。  
   
 ## <a name="authenticating-by-using-kerberos"></a>Kerberos を使用した認証  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Kerberos 認証をサポートしています。 Kerberos 認証の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](register-a-service-principal-name-for-kerberos-connections.md) 」および「 [Microsoft® Kerberos Configuration Manager for SQL Server®](http://www.microsoft.com/download/details.aspx?id=39046)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Kerberos 認証をサポートしています。 Kerberos 認証の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](register-a-service-principal-name-for-kerberos-connections.md) 」および「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」を参照してください。  
   
 ### <a name="registering-a-server-principal-name-spn"></a>サービス プリンシパル名 (SPN) の登録  
  Kerberos 認証サービスでは、SPN を使用してサービスが認証されます。 詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。  

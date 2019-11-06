@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d096f978b138de32c9aae7cdadd1480484dd095f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105614"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>対話的な並べ替え (レポート ビルダーおよび SSRS)
   対話的な並べ替えボタンを追加すると、ユーザーがテーブルの行またはマトリックスの行と列を昇順および降順で並べ替えることができるようになります。 対話的な並べ替えの最も一般的な使用方法は、各列ヘッダーに並べ替えボタンを追加することです。 これにより、ユーザーは並べ替えの基準となる列を選択できます。  
@@ -28,9 +27,9 @@ ms.locfileid: "48206122"
   
  対話的な並べ替えを追加する場合、次の項目を指定する必要があります。  
   
--   **並べ替え対象:** 行または列。  
+-   **並べ替え対象**:行または列。  
   
--   **並べ替えの基準:** テーブル列に表示されるフィールド、 または表示されないフィールド。  
+-   **並べ替え基準**:テーブル列に表示されるフィールドですか? または表示されないフィールド。  
   
 -   **並べ替えを行うコンテキスト:** たとえば、行グループに関連付けられた行、列グループに関連付けられた列、詳細行、親グループ内の子グループ、親グループと子グループの両方などを並べ替えることができます。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48206122"
   
 -   **複数のデータ領域の並べ替えを同期するかどうか:** ユーザーが並べ替え順序を切り替えたとき、同じ祖先を持つ他のデータ領域も並べ替えられるようにレポートをデザインできます。  
   
- 手順については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)します。  
+ 詳細な手順については、「 [テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)」を参照してください。  
   
  対話型の並べ替えボタンを使用して実現できる効果を次の表にまとめます。  
   
@@ -50,16 +49,16 @@ ms.locfileid: "48206122"
 |テーブル内の複数の行グループおよび詳細行の行を並べ替える|グループ (グループ式を再定義する必要があります)|列ヘッダー|並べ替えの基準となるデータセット フィールドの集計|データ領域|  
 |複数のデータ領域の並べ替え順序を同期する|グループ|通常、列ヘッダー|グループ式|データセット|  
   
- 対話的な並べ替えは、すべてのデータ領域およびグループの並べ替え式が適用された後に適用されます。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ 対話的な並べ替えは、すべてのデータ領域およびグループの並べ替え式が適用された後に適用されます。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>複数のグループの対話的な並べ替えの追加  
  入れ子になった行グループがそれぞれ 1 つのデータセット フィールドに基づいているテーブルでは、親グループの値、子グループの値、または詳細行を並べ替える対話的な並べ替えボタンを追加できます。 ただし、ユーザーが何度もクリックしなくても親グループの値と子グループの値の両方でテーブルを並べ替えることができるようにすることもできます。  
   
- それには、複数のフィールドを組み合わせる式に基づいてグループ化するようにテーブルをデザインし直す必要があります。 たとえば、在庫数を含むデータセットで、元のテーブルがサイズ、色の順にグループ化されている場合、サイズと色を組み合わせたグループ式で 1 つのグループを指定できます。 詳細については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)します。  
+ それには、複数のフィールドを組み合わせる式に基づいてグループ化するようにテーブルをデザインし直す必要があります。 たとえば、在庫数を含むデータセットで、元のテーブルがサイズ、色の順にグループ化されている場合、サイズと色を組み合わせたグループ式で 1 つのグループを指定できます。 詳細については、「 [テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [テーブルまたはマトリックスに対話的な並べ替えを追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fe7d06c51e388720e7850cdfd3b3c96e7cba0a28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 37f3b93019a837ac5521c52e9ceb5f58f3e39b5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106372"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 常にではありません、データを効果的に表したり、配信されたレポートで正しく機能可能性がある、事前構成済みのインジケーター セットを提供します。 このトピックでは、インジケーター アイコンの外観を変更する手順と、インジケーター セットを変更して別のインジケーター アイコンを含めたり、インジケーター アイコンの数を増減したりする手順について説明します。  
@@ -32,9 +31,9 @@ ms.locfileid: "48079152"
   
 2.  左ペインの **[値と状態]** をクリックします。  
   
-3.  変更するアイコンの横にある **[色]** 列の下矢印をクリックして、使用する色、 **[色なし]**、または **[その他の色]** をクリックします。  
+3.  変更するアイコンの横にある **[色]** 列の下矢印をクリックして、使用する色、 **[色なし]** 、または **[その他の色]** をクリックします。  
   
-     必要に応じて、 **式** (*[fx]*) ボタンをクリックし、 **[色]** オプションの値を設定する式を編集します。  
+     必要に応じて、 **式** ( *[fx]* ) ボタンをクリックし、 **[色]** オプションの値を設定する式を編集します。  
   
      **[その他の色]** をクリックした場合は、 **[色の選択]** ダイアログ ボックスが表示され、さまざまな色から選択できます。 各オプションの詳細については、「[[色の選択] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](../select-color-dialog-box-report-builder-and-ssrs.md)」を参照してください。 **[OK]** をクリックして、 **[色の選択]** ダイアログ ボックスを閉じます。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48079152"
   
 3.  変更するアイコンの横にある下矢印をクリックして、別のアイコンを選択します。  
   
-     必要に応じて、 **式** (*[fx]*) ボタンをクリックし、 **[アイコン]** オプションの値を設定する式を編集します。  
+     必要に応じて、 **式** ( *[fx]* ) ボタンをクリックし、 **[アイコン]** オプションの値を設定する式を編集します。  
   
 4.  **[OK]** をクリックします。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48079152"
   
 3.  変更するアイコンの横にある下矢印をクリックして、 **[画像]** を選択します。  
   
-4.  **[画像ソースの選択]** の一覧で、 **[外部]**、 **[埋め込み]**、または **[データベース]** をクリックします。  
+4.  **[画像ソースの選択]** の一覧で、 **[外部]** 、 **[埋め込み]** 、または **[データベース]** をクリックします。  
   
 5.  画像のソースに応じて、以下のいずれかを行います。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "48079152"
   
 4.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

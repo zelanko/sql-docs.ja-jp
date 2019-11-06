@@ -3,22 +3,24 @@ title: SQL Server データ ソースに接続する (SQL Server インポート
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b49d5a4bee30a8fc5b225bf12e15c29bf942631b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750560"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285702"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft SQL Server** データ ソースに接続する方法を説明します。 SQL Server への接続に使用できるいくつかのデータ プロバイダーがあります。
 
 > [!TIP]
@@ -57,7 +59,7 @@ ms.locfileid: "47750560"
  **[ユーザー ID]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を入力します。  
   
- **Password**  
+ **パスワード**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを入力します。  
 
 ## <a name="connect-to-sql-server-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーを使用して SQL Server に接続する 
@@ -102,7 +104,7 @@ Windows 統合認証ではなく SQL Server 認証を使用する接続文字列
      `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
-**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、**[ConnectionString]** フィールドに接続文字列を入力するか、**[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
+**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 次の例では、この接続文字列を使用しています。
 

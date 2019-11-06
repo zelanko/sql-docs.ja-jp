@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b271da0d9abc35d9733c257452b5f9eb2e317942
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205481"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478890"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、他のユーザーが確実に自分と同じデータを操作するようにするには、ショートカット クエリ ファイルをそのユーザーに電子メールで送信します。 ワークシートを保存して電子メールで送信するのではなく、クエリを共有する必要があります。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] で、他のユーザーが確実に自分と同じデータを操作するようにするには、ショートカット クエリ ファイルをそのユーザーに電子メールで送信します。 ワークシートを保存して電子メールで送信するのではなく、クエリを共有する必要があります。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -38,7 +37,7 @@ ms.locfileid: "48205481"
   
 -   ショートカット クエリ ファイルを開くには、電子メールの受信者は [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] をインストールしておく必要があります。 受信者は、ファイルをダブルクリックして開くことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

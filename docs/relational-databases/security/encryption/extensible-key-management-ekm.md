@@ -1,7 +1,7 @@
 ---
 title: 拡張キー管理 (EKM) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df1fe03ce3d0bf0397222ab3ef0834fac1cf6e33
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545339"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148795"
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *拡張キー管理* (EKM) を含むデータ暗号化機能が用意されています。暗号化とキーの生成には *Microsoft Cryptographic API* (MSCAPI) が使用されます。 データとキーの暗号化のための暗号化キーは一時的なキー コンテナーに作成され、それらをデータベースに格納するには、まずプロバイダーからエクスポートする必要があります。 この方法により、暗号化キー階層とキーのバックアップを含むキー管理を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で処理できるようになります。  
   
  法規制遵守の必要性やデータ プライバシーに対する関心の高まりを受けて、組織では、"多層防御" のソリューションを実現するための手段として暗号化が活用されるようになっています。 このアプローチは多くの場合、データベースの暗号化管理ツールを使用するだけで実現できるものではありません。 各ハードウェア ベンダーからは、 *ハードウェア セキュリティ モジュール* (HSM) を使用して企業のキー管理の問題に対処する製品が提供されています。 HSM デバイスでは、暗号化キーがハードウェア モジュールまたはソフトウェア モジュールに格納されます。 この場合、暗号化キーが暗号化データと一緒に保管されないため、より安全なソリューションが実現されます。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executetsqlstatementtask.f1
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2ad857b2174528db8f6c2d7c8453b956129686d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f20f64c9a26d1e9b030c01618a63157757c0b205
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831737"
 ---
 # <a name="execute-t-sql-statement-task"></a>T-SQL ステートメントの実行タスク
   T-SQL ステートメントの実行タスクは、Transact-SQL ステートメントを実行します。 詳細については、「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」および「[Integration Services (SSIS) のクエリ](../integration-services-ssis-queries.md)」を参照してください。  
@@ -43,6 +42,6 @@ ms.locfileid: "48058504"
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)   
- [Integration Services パッケージで MERGE を実行する](merge-in-integration-services-packages.md)  
+ [MERGE in Integration Services Packages](merge-in-integration-services-packages.md)  
   
   

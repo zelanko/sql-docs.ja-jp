@@ -1,23 +1,25 @@
 ---
 title: Microsoft Word へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
+description: Word 表示拡張機能は、改ページ調整されたレポートを  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 形式 (.docx) で表示します。 形式は、Office Open XML です。
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393337"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66413567"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
-  Word 表示拡張機能は、改ページ調整されたレポートを  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 形式 (.docx) で表示します。 形式は、Office Open XML です。  
+  Word 表示拡張機能は、改ページ調整されたレポートを Microsoft Word 形式 (.docx) で表示します。 形式は、Office Open XML です。  
   
  このレンダラーによって生成されるファイルのコンテンツ タイプは **application/vnd.openxmlformats-officedocument.wordprocessingml.document** で、ファイル拡張子は .docx です。  
   
@@ -149,7 +151,7 @@ ms.locfileid: "52393337"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 表示拡張機能の使用は非推奨とされます。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
- Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 との互換性が維持されます。 詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](https://go.microsoft.com/fwlink/?LinkID=205622)」を参照してください。  
+ Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 との互換性が維持されます。 詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](https://www.microsoft.com/download/details.aspx?id=12439)」を参照してください。  
   
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 と互換性のある Word 表示拡張機能の以前のバージョンは、名前が Word 2003 に変更されます。 既定では、Word 表示拡張機能のみを使用できます。 Word 2003 表示拡張機能を使用できるようにするには、Reporting Services の構成ファイルを更新する必要があります。 Word 2003 レンダラーで生成されるファイルのコンテンツ タイプは **application/vnd.ms-word** で、ファイル名拡張子は .doc です。  
   

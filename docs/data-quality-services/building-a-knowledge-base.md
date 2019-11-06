@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6765a9bd98cc1ae16bd58fd1e3816e8c178d6f92
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: eaa57e58b05b1a5d68355d71cbd6fa6c2ca47ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014791"
 ---
 # <a name="building-a-knowledge-base"></a>ナレッジ ベースの作成
 

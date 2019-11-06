@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d48c5860c097b8d027c23ead603094f9637d8368
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513922"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768855"
 ---
 # <a name="add-publisher"></a>[パブリッシャーの追加]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[追加]**  
  クリックすると、追加するパブリッシャーの種類を選択するための **[サーバーへの接続]** ダイアログ ボックスが表示されます。 使用可能なオプションは次のとおりです。  
   
@@ -70,6 +70,6 @@ ms.locfileid: "52513922"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

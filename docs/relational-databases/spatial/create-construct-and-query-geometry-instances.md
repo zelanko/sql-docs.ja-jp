@@ -10,16 +10,15 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9115aa7ed39102557243ddcc24754b3c7f5453bc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8f3b5cc1721483534307acf797a58e4dc70b5c81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048734"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry インスタンスの作成、構築、およびクエリ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -248,7 +247,7 @@ ms.locfileid: "52521843"
   
 -   **LineString** と **MultiLineString** の境界は、始点と終点 (偶数回出現するものを除く) によって形成されます。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');  
 SELECT @g.STBoundary().ToString();  
@@ -256,7 +255,7 @@ SELECT @g.STBoundary().ToString();
   
  **Polygon** インスタンスや **MultiPolygon** インスタンスの境界は、そのリングの集合です。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0), (1 1, 1 2, 2 2, 2 1, 1 1))');  
 SELECT @g.STBoundary().ToString();  
@@ -264,14 +263,12 @@ SELECT @g.STBoundary().ToString();
   
  **インスタンスの境界を取得するには**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
-  
-  
+   
 ###  <a name="envelope"></a> エンベロープ  
  *geometry* インスタンスの **エンベロープ** ( *境界ボックス*とも呼ばれます) とは、インスタンスの最小および最大の (X,Y) 座標によって形成される軸に沿った四角形です。  
   
  **インスタンスのエンベロープを取得するには**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
-  
   
 ###  <a name="closure"></a> 閉鎖性  
  _閉じている_ **geometry** インスタンスは、始点と終点が同じである図形です。 **Polygon** インスタンスは閉じていると見なされます。 **Point** インスタンスは閉じていないと見なされます。  
@@ -300,8 +297,8 @@ SELECT @g.STBoundary().ToString();
  **インスタンスの SRID を設定または取得するには**  
  [STSrid](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)  
   
- このプロパティは変更できます。  
-  
+> [!NOTE]
+> このプロパティは変更できます。  
   
 ##  <a name="rel"></a> geometry インスタンス間の関係の特定  
  **geometry** データ型には、2 つの **geometry** インスタンスの関係を調べるために使用できる組み込みメソッドが数多く用意されています。  
@@ -339,47 +336,48 @@ SELECT @g.STBoundary().ToString();
  **2 つのジオメトリの点の間の最短距離を調べるには**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-  
 ##  <a name="defaultsrid"></a> geometry インスタンスの既定の SRID は 0  
  **の** geometry [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定の SRID は 0 です。 **geometry** 空間データでは、空間インスタンスに特定の SRID がなくても計算を実行できます。したがって、インスタンスは未定義の平面空間に存在することができます。 **では、** geometry [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データ型のメソッドの計算で未定義の平面空間を表すために SRID 0 が使用されます。  
   
 ##  <a name="examples"></a> 使用例  
- 次の 2 つの例は、geometry 型のデータの追加方法とクエリ方法を示しています。  
+次の 2 つの例は、geometry 型のデータの追加方法とクエリ方法を示しています。  
   
--   最初の例では、ID 列と `geometry` 型の `GeomCol1`列を含むテーブルを作成します。 3 番目の列で、 `geometry` 型の列をその Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現で示し、 `STAsText()` メソッドを使用します。 次に 2 つの行が挿入されます。1 つは、 `LineString` の `geometry`インスタンスを含む行で、もう 1 つは `Polygon` インスタンスを含む行です。  
+### <a name="example-a"></a>例 A.
+この例では、ID 列と `geometry` 型の `GeomCol1` 列を含むテーブルを作成します。 3 番目の列で、 `geometry` 型の列をその Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現で示し、 `STAsText()` メソッドを使用します。 次に 2 つの行が挿入されます。1 つは、 `LineString` の `geometry`インスタンスを含む行で、もう 1 つは `Polygon` インスタンスを含む行です。  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
+
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeomCol1 geometry,   
+    GeomCol2 AS GeomCol1.STAsText() 
+  );  
+GO  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
+GO  
+```  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeomCol1 geometry,   
-        GeomCol2 AS GeomCol1.STAsText() );  
-    GO  
+### <a name="example-b"></a>例 B。
+この例では、`STIntersection()` メソッドを使用して、前の例で挿入した 2 つの `geometry` インスタンスが交差する点を返します。  
   
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
-  
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
-    GO  
-    ```  
-  
--   2 番目の例では、 `STIntersection()` メソッドを使用して、前の例で挿入した 2 つの `geometry` インスタンスが交差する点を返します。  
-  
-    ```  
-    DECLARE @geom1 geometry;  
-    DECLARE @geom2 geometry;  
-    DECLARE @result geometry;  
-  
-    SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geom1.STIntersection(@geom2);  
-    SELECT @result.STAsText();  
-    ```  
-  
+```sql  
+DECLARE @geom1 geometry;  
+DECLARE @geom2 geometry;  
+DECLARE @result geometry;  
+
+SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geom1.STIntersection(@geom2);  
+SELECT @result.STAsText();  
+```  
   
 ## <a name="see-also"></a>参照  
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

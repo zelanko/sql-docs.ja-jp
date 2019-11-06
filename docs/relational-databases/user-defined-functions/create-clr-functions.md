@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0234987ec9bdb6e71348e98d3096505a36e31743
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138539"
 ---
 # <a name="create-clr-functions"></a>CLR 関数の作成
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +33,10 @@ ms.locfileid: "51663291"
   
 -   [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) ステートメントを使用して、登録したアセンブリを参照する関数を作成します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で SQL Server プロジェクトを配置すると、そのプロジェクトで指定されたデータベースにアセンブリが登録されます。 また、プロジェクトを配置することで、 **SqlFunction** 属性で注釈が付けられたすべてのメソッドの CLR 関数がデータベースに作成されます。 詳細については、「 [CLR データベース オブジェクトの配置](../../relational-databases/clr-integration/deploying-clr-database-objects.md)」を参照してください。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、既定では無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [を使用して](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled オプション [を有効にしないと、これらの参照は](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)で実行されません。  
   
 ## <a name="accessing-external-resources"></a>外部リソースへのアクセス  

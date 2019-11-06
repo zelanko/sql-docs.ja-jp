@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - saving tables
@@ -12,12 +12,12 @@ ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c81952706f2e2353406a9d916c8e53d4336d2c07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067517"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムで選択したテーブルの保存 (Visual Database Tools)
   データベース ダイアグラムで加えた変更のすべてを保存する必要がない場合は、特定のまたは複数のテーブルを保存できます。  

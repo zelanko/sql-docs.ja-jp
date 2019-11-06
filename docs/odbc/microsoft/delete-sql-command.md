@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 674c2d9d259d09456bc97edc4a6b9e842f9a4519
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096331"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL コマンド
 レコードの削除をマークします。  
@@ -34,7 +33,7 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>引数  
- [ *DatabaseName!*]*TableName*  
+ FROM [ *DatabaseName!* ] *TableName*  
  レコードが削除対象としてマークするテーブルを指定します。  
   
  *DatabaseName!* 包含データベースは、データ ソースと指定されたデータベースがない場合は、テーブルを含むデータベースの名前を指定します。 データベースが、データ ソースと指定されたデータベースではない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に、テーブル名の前に感嘆符 (!) 区切り記号が含まれます。  
@@ -52,5 +51,5 @@ DELETE FROM [DatabaseName!]TableName
 ## <a name="driver-remarks"></a>ドライバーの解説  
  アプリケーションでは、ODBC SQL ステートメントの削除をデータ ソースに送信するときに、Visual FoxPro ODBC ドライバーを翻訳しないで、Visual FoxPro の削除のコマンドに、コマンドに変換します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SET DELETED コマンド](../../odbc/microsoft/set-deleted-command.md)

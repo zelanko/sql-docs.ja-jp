@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -14,26 +13,26 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 050f82b51537cc7d375ddd04a86e67b8e48a9f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62898077"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) の式
   式は、単一のデータ値が得られる、識別子、リテラル、関数、演算子などの記号の組み合わせです。 単純式には、1 つの定数、変数、または関数を指定できます。 より頻繁に使用されるのは複雑な式で、複数の演算子や関数を使用し、複数の列や変数を参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、CASE ステートメントの条件の定義、データ列値の生成および更新、変数への値の代入、実行時のプロパティの更新および作成、優先順位制約の制約の定義、および For ループ コンテナーでの利用に式を使用できます。  
   
  式は、式の言語および式エバリュエーターに基づいています。 式エバリュエーターは式を解析して、式の言語のルールに従っているかどうか判断します。 式の構文およびサポートされているリテラルと識別子の詳細については、次のトピックを参照してください。  
   
--   [構文&#40;SSIS&#41;](syntax-ssis.md)  
+-   [構文 (SSIS)](syntax-ssis.md)  
   
--   [リテラル&#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
+-   [リテラル (SSIS)](numeric-string-and-boolean-literals.md)  
   
--   [識別子&#40;SSIS&#41;](identifiers-ssis.md)  
+-   [識別子 (SSIS)](identifiers-ssis.md)  
   
 ## <a name="components-that-use-expressions"></a>式を使用するコンポーネント  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の次の要素で式を使用できます。  
@@ -44,7 +43,7 @@ ms.locfileid: "48192172"
   
 -   変数に値を設定するために式を使用します。 たとえば、GETDATE() を使用すると、変数の値として現在の日付が設定されます。  
   
--   優先順位制約では、式を使用して、パッケージ内の制約付きタスクまたはコンテナーを実行するかどうか判断する条件を指定します。 優先順位制約で使用される式を評価する必要があります`true`または`false`します。 たとえば、\@A > \@B という式は 2 つのユーザー定義変数を比較して、制約付きタスクを実行するかどうかを判断します。  
+-   優先順位制約では、式を使用して、パッケージ内の制約付きタスクまたはコンテナーを実行するかどうか判断する条件を指定します。 優先順位制約で使用する式は、`true` または `false` に評価される必要があります。 たとえば、\@A > \@B という式は 2 つのユーザー定義変数を比較して、制約付きタスクを実行するかどうかを判断します。  
   
 -   For ループ コンテナーでは、式を使用して、ループ構造で使用する初期化ステートメント、評価ステートメント、および増分ステートメントを作成します。 たとえば、\@Counter = 1 という式はループ カウンターを初期化します。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48192172"
  [データ フロー コンポーネントで式を使用する](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- social.technet.microsoft.com の技術記事「 [SSIS 式の例](http://go.microsoft.com/fwlink/?LinkId=220761)」  
+ social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

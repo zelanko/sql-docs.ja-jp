@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f6ea6edf61734e794cc588c82aefa4e60141365c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106448"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>データセット フィールド コレクションの参照 (レポート ビルダーおよび SSRS)
   レポート内の各データセットには、1 つのフィールド コレクションが含まれます。 フィールド コレクションは、データセット クエリによって指定されるフィールドと、ユーザーが作成する追加の計算フィールドのセットです。 データセットを作成すると、フィールド コレクションが **[レポート データ]** ペインに表示されます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48093313"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>実行時の動的クエリにおける存在しないフィールドの検出  
- 既定では、フィールド コレクションのアイテムには、Value および IsMissing という 2 つのプロパティがあります。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
+ 既定では、Fields コレクションのアイテムには 2 つのプロパティがあります。Value と IsMissing です。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
   
 > [!NOTE]  
 >  IsMissing は、任意の種類のデータ ソースに関して、デザイン時と実行時の間にデータセット スキーマに加えられた変更を検出します。 IsMissing は、多次元キューブで空のメンバーを検出するために使用することはできませんし、MDX クエリ言語の概念に関連しない`EMPTY`と`NON EMPTY`します。  
@@ -89,7 +88,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>拡張フィールド プロパティの使用  
  拡張フィールド プロパティは、データ処理拡張機能によってフィールドに定義された追加プロパティであり、データセットのデータ ソースの種類に基づいて決定されます。 拡張フィールド プロパティには、定義済みのものと、データ ソースの種類に固有のものがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
- 式の評価がそのフィールドに対してサポートされていないプロパティを指定する場合`null`(`Nothing`で[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 データ プロバイダーが拡張フィールド プロパティをサポートしていないか、クエリを実行すると、フィールドが検出されなかった場合、プロパティの値は場合`null`(`Nothing`で[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 型のプロパティの`String`と`Object`と型のプロパティのゼロ (0)`Integer`します。 データ処理拡張機能は、この構文を含むクエリを最適化することにより、定義済みのプロパティを利用する場合があります。  
+ そのフィールドでサポートされていないプロパティを指定した場合、式は `null` ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では `Nothing`) に評価されます。 データ プロバイダーが拡張フィールド プロパティをサポートしていない場合や、クエリ実行時にフィールドが見つからなかった場合、`null` 型と `Nothing` 型のプロパティの値は `String` ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では `Object`) に、`Integer` 型のプロパティの値はゼロ (0) になります。 データ処理拡張機能は、この構文を含むクエリを最適化することにより、定義済みのプロパティを利用する場合があります。  
   
 ## <a name="see-also"></a>参照  
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   

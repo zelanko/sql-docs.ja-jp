@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e46075e55aa14784e967b3620de5855a47c4bd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70263b98f6b0e933f8b14fbfa74428c77317f462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087805"
 ---
 # <a name="types-of-applications"></a>アプリケーションの種類
 ODBC アプリケーションは、次のように分類できます。  
   
 -   **純粋な ODBC 2。**  
-     ***x*アプリケーション**32 ビット アプリケーションです。  
+     **_x_アプリケーション**32 ビット アプリケーションです。  
   
     -   ODBC 2 だけを呼び出します。*x*関数 (ODBC 1.0 関数を含む**SQLSetParam**)。 ODBC 1 が含まれます。*x* 32 ビットへ移植されたアプリケーション。  
   
@@ -37,12 +36,12 @@ ODBC アプリケーションは、次のように分類できます。
     -   再コンパイルされていない ODBC 3.5 ヘッダー。  
   
 -   **純粋な ODBC 2。**  
-     ***x*アプリケーションの再コンパイル**純粋な ODBC 2 *。x* ODBC 3.5 ヘッダー ファイルを使用して再コンパイルされているアプリケーション 0x0250 = ODBCVER を設定します。  
+     **_x_アプリケーションの再コンパイル**純粋な ODBC 2 *。x* ODBC 3.5 ヘッダー ファイルを使用して再コンパイルされているアプリケーション 0x0250 = ODBCVER を設定します。  
   
 -   **純粋な ODBC 2。**  
-     ***x* Unicode アプリケーション**純粋な ODBC 2 *。x* Unicode 準拠し、SQL_WCHAR データ型を使用するアプリケーションを再コンパイルします。  
+     **_x_ Unicode アプリケーション**純粋な ODBC 2 *。x* Unicode 準拠し、SQL_WCHAR データ型を使用するアプリケーションを再コンパイルします。  
   
--   **純粋なグループと ISO**–**ODBC に準拠したアプリケーション**32 ビット アプリケーションです。  
+-   **純粋なグループと ISO**-**ODBC に準拠したアプリケーション**32 ビット アプリケーションです。  
   
     -   グループを開くまたは ISO CLI 標準で定義された関数を呼び出します。 (これらの関数は、非推奨の 3.0 関数を含めることができます)  
   
@@ -52,7 +51,7 @@ ODBC アプリケーションは、次のように分類できます。
   
 -   **純粋な ODBC 3.0 アプリケーション**32 ビット アプリケーションです。  
   
-    -   3.0 のヘッダーと共にコンパイルされます。  
+    -   3\.0 のヘッダーと共にコンパイルされます。  
   
     -   場合によっては非推奨のものも含めて、すべての ODBC 3.0 関数を呼び出します。  
   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_gettopologyinfo_TSQL
@@ -16,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 043a074c1ae708ed4bc01311fb454c185bf27ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 901ad9739966327102ceda6c7d26815daa867888
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123917"
 ---
-# <a name="spgettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
+# <a name="spgettopologyinfo-transact-sql"></a>sp_gettopologyinfo (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ピア ツー ピア トランザクション レプリケーション トポロジに関する情報を返します。 実行[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)この手順を実行する前に情報を収集します。  
@@ -49,12 +47,12 @@ sp_gettopologyinfo [ @request_id = ] request_id
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- sp_gettopologyinfo は、ピア ツー ピア トランザクション レプリケーションで使用します。 実行[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) sp_gettopologyinfo を実行する前にします。 プロシージャはピア ツー ピア トポロジ構成ウィザードから使用されますが、トポロジ情報が必要な場合は XML 形式で直接使用することもできます。 表形式の結果を使用する場合は、クエリ、 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)システム テーブル。  
+ sp_gettopologyinfo は、ピア ツー ピア トランザクション レプリケーションで使用されます。 実行[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) sp_gettopologyinfo を実行する前にします。 ピア ツー ピア トポロジ構成ウィザードでこれらの手順を使用しますが、それらも直接使用できます、XML 形式でトポロジ情報が必要な場合。 表形式の結果を使用する場合は、クエリ、 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)システム テーブル。  
   
 ## <a name="permissions"></a>アクセス許可  
  固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

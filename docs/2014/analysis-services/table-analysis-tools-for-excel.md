@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -14,12 +13,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af4c8ae7c2ba827e6110602bd21432fec4f74393
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067973"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Excel 用テーブル分析ツール
   データ マイニング ツールで、**分析**ツールバーはデータ マイニングを開始する最も簡単な方法です。 これらのツールは、自動的にデータの分布と型を分析し、有効な結果を取得できるようパラメーターを設定します。 アルゴリズムを選択したり、複雑なパラメーターを構成したりする必要はありません。  
@@ -34,7 +33,7 @@ ms.locfileid: "48049072"
  **分析の主要な影響元**ツールは、Microsoft 単純ベイズ アルゴリズムを使用します。  
   
  [カテゴリの検出&#40;Excel 用テーブル分析ツール&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- このツールを使用すると、任意のデータセットを追加し、クラスタリングを適用することによって、データのグループ化を検出できます。 これは、類似性を見つけ、さらに詳細に分析するためにグループを作成するのに便利です。  
+ このツールを使用すると、任意のデータセットを追加し、クラスタリングを適用することによって、データのグループ化を検出できます。 類似点を検索するため、さらに分析するグループを作成するために便利です。  
   
  **カテゴリの検出**ツールは、Microsoft クラスタ リング アルゴリズムを使用します。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48049072"
  **予測**ツールは、Microsoft タイム シリーズ アルゴリズムを使用します。  
   
  [例外の強調表示&#40;Excel 用テーブル分析ツール&#41;](highlight-exceptions-table-analysis-tools-for-excel.md)  
- このツールは、1 つのテーブルのデータのパターンを分析し、パターンと一致しない行と値を検出します。 ユーザーは、これらの値を確認し、修正してモデルを再実行することも、後で処理するためにこれらの値にフラグを設定することもできます。  
+ このツールでは、テーブルのデータのパターンを分析して、行と、パターンに一致しない値を検索します。 ユーザーは、これらの値を確認し、修正してモデルを再実行することも、後で処理するためにこれらの値にフラグを設定することもできます。  
   
  **例外の強調表示**ツールは、Microsoft クラスタ リング アルゴリズムを使用します。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - forecasting [data mining]
@@ -14,12 +13,12 @@ ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081031"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>予測ウィザード (Excel 用データ マイニング アドイン)
   ![データ マイニング リボンの関連付けウィザード](media/dmc-forecast.gif "データ マイニング リボンのウィザードを関連付ける")  
@@ -66,12 +65,12 @@ ms.locfileid: "48106462"
   
     -   **一時的なモデルを使用する**します。 このチェック ボックスをオンにすると、モデルがサーバーに保存されません。 一時的なモデルは、Excel の終了時に削除されます。  
   
-### <a name="requirements"></a>要件  
- データには、時系列として使用できる列が 1 列以上含まれている必要があります。 この列の値は一意かつ連続している必要があります。つまり、ギャップが許可されません。 ウィザードを実行する前に、時系列の列の昇順でデータを並べ替えてください。  
+### <a name="requirements"></a>必要条件  
+ データには、時系列として使用できる列が 1 列以上含まれている必要があります。 この列の値が一意であり、継続的にある必要があります - これはないはずの矛盾点。 ウィザードを実行する前に、時系列の列の昇順でデータを並べ替えてください。  
   
  データに時刻または日付の列が含まれていない場合は、任意の数値系列を割り当てるか、ウィザードで作成することができます。 ウィザードで系列の順序の列を作成する場合は、ウィザードを開始する前に、他の列が必要な順序で並べ替えられていることを確認してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング モデルを作成します。](creating-a-data-mining-model.md)   
  [予測&#40;Excel 用テーブル分析ツール&#41;](forecast-table-analysis-tools-for-excel.md)   
  [予測モデルの参照](browsing-a-forecasting-model.md)  

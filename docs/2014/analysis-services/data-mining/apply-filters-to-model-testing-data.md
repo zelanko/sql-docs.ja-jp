@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086146"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>モデルのテスト データへのフィルターの適用
   モデルのテストに使用する外部データ ソースを指定する場合に、入力データを制限するフィルターを必要に応じて適用できます。 たとえば、特定の所得範囲の顧客に関する予測についてのみモデルをテストできます。  
@@ -47,7 +46,7 @@ ms.locfileid: "48114442"
   
  結果に影響する可能性のある定義済みのフィルターがモデルに含まれるかどうかを確認するには、 **[プロパティ]** ペインで **Filter** プロパティを探すか、データ マイニング スキーマ行セットを使用してモデルをクエリします。 たとえば、次のクエリは指定したモデルのフィルター テキストを返します。  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  既存のマイニング モデルからフィルターを削除する場合や、フィルター条件を変更する場合は、マイニング モデルを再処理する必要があります。  
@@ -62,7 +61,7 @@ ms.locfileid: "48114442"
   
 3.  **[入力の選択]** タブの **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
-4.  参照ボタン ( **[...]** ) をクリックしてダイアログ ボックスを開き、外部データ セットを選択します。  
+4.  [参照] ボタンをクリックします **([...])。** をダイアログ ボックスを開き、外部データ セットを選択します。  
   
 5.  ケース テーブルを選択し、入れ子になったテーブルを必要に応じて追加します。 必要に応じてモデルの列を外部データ セットの列にマップします。 **[列マッピングの指定]** ダイアログ ボックスを閉じてソース テーブルの定義を保存します。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48114442"
   
 9. **[ルールの適用条件]** ボックスをクリックして論理演算子を選択し、複数の条件を結合する方法を定義します。  
   
-10. 必要に応じて、 **[値]** ボックスの右側にある参照ボタン ( **[...]** ) をクリックして **[フィルター]** ダイアログ ボックスを開き、入れ子になったテーブルまたは個々のケース テーブル列の条件を設定します。  
+10. 必要に応じて、参照 ボタンをクリックして **(...)** の右側にある、**値**テキスト ボックスを開く、**フィルター**  ダイアログ ボックスし、入れ子になったテーブルまたは個々 のケース テーブル列の条件を設定します。  
   
 11. **[式]** ペインに表示されるテキストで、完成したフィルター条件が適切であることを確認します。  
   
@@ -91,8 +90,8 @@ ms.locfileid: "48114442"
      フィルター条件は、精度チャートの作成時にデータ ソースに適用されます。  
   
 ## <a name="see-also"></a>参照  
- [テスト データのモデル選択およびマップ](choose-and-map-model-testing-data.md)   
- [使用して入れ子になったテーブルのデータの入力としての精度チャート](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [モデルのテスト データの選択およびマップ](choose-and-map-model-testing-data.md)   
+ [入れ子になったテーブルのデータを精度チャートの入力として使用する方法](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [精度チャートの種類の選択とグラフのオプションの設定](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

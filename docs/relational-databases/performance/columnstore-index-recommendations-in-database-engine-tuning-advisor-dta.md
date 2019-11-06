@@ -10,15 +10,14 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore index
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f0e6c5641983c3528114120feb17c4f93948e926
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 2899945661ca2f0502b9553cc8e78b751570a092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985012"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "52403017"
   
   2. **[全般]** ウィンドウで、チューニングを行うデータベースとワークロードを選択します。
   
-  3. [チューニング オプション] ウィンドウで、**[列ストア インデックスを推奨する]** チェック ボックスをオンにします (次の図を参照してください)。
+  3. [チューニング オプション] ウィンドウで、 **[列ストア インデックスを推奨する]** チェック ボックスをオンにします (次の図を参照してください)。
   ![DTA 列ストア インデックスのチューニング オプション](../../relational-databases/performance/media/dta-columnstore-indexes-tuning-option.gif)
  
-  4. その他のチューニング オプションを選択し、**[分析の開始]** ボタンをクリックします。
+  4. その他のチューニング オプションを選択し、 **[分析の開始]** ボタンをクリックします。
   
-  5. チューニングが完了したら、**[推奨事項]** ウィンドウに列ストア インデックスを含む、すべての推奨事項が表示されます (次の図を参照してください)。      
+  5. チューニングが完了したら、 **[推奨事項]** ウィンドウに列ストア インデックスを含む、すべての推奨事項が表示されます (次の図を参照してください)。      
   ![DTA 列ストア インデックスの推奨事項](../../relational-databases/performance/media/dta-columnstore-index-recommendation.gif)
   
   6. **[定義]** ハイパーリンクをクリックして、推奨インデックスを作成できる、SQL データ定義言語 (DDL) ステートメントを表示します。 既定では、DTA は、列ストア インデックスを簡単に識別できるように、列ストア インデックスの名前にサフィックス **col** を使用します (次の図を参照してください)。
@@ -56,7 +55,7 @@ dta.exe コマンド ライン ユーティリティの詳細については、�
 ## <a name="see-also"></a>参照
 [列ストア インデックス ガイド](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)      
-[チュートリアル: データベース エンジン チューニング アドバイザー](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
+[チュートリアル:データベース エンジン チューニング アドバイザー](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
 
 
 

@@ -1,11 +1,10 @@
 ---
-title: 'チュートリアル : 所有権の継承とコンテキストの切り替え | Microsoft Docs'
+title: チュートリアル:所有権の継承とコンテキストの切り替え |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - context switching [SQL Server], tutorials
@@ -14,14 +13,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5e46d5f6f28a1d93df5cf92194164a4335501523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524368"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>チュートリアル:所有権の継承とコンテキストの切り替え
   このチュートリアルでは、1 つのシナリオを使用して、所有権の継承とユーザー コンテキストの切り替えに関係する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセキュリティ概念について説明します。  
   
 > [!NOTE]  
@@ -96,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](stored-procedures/stored-procedures-database-engine.md)」を参照してください。 [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのアクセス許可を示したポスターについては、[http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142) を参照してください。  
+ GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](stored-procedures/stored-procedures-database-engine.md)」を参照してください。 [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのアクセス許可を示したポスターについては、[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142) を参照してください。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.データにアクセスするストアド プロシージャを作成する  
  データベース内でコンテキストを切り替えるには、EXECUTE AS ステートメントを使用します。 EXECUTE AS を使用するには IMPERSONATE 権限が必要です。  

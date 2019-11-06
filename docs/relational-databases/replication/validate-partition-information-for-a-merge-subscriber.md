@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cfb463245cc649d010ce6ce97b49170ec37ac9e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a238588d947a48e72359d8da0ea7c32148f6bd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895204"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>マージ サブスクライバーのパーティション情報の検証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "47729600"
  マージ エージェントがパーティションを検証するときには、フィルター式で使用するすべての関数から返される値に対してパーティションを検証するだけなく、メタデータのクリーンアップ操作やスキーマ変更などの変更が行われる前に、その変更で無効になったスナップショットが生成されていたかどうかもチェックします。 パーティション化されたスナップショットが古すぎる場合、マージ エージェントはエラーを返します。この場合は、現在の標準スナップショットに基づいてそのサブスクライバーのパーティション化されたスナップショットを再生成する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [管理 &#40;レプリケーション&#41;](../../relational-databases/replication/administration/administration-replication.md)   
- [レプリケーション管理の推奨事項](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+ [レプリケーション管理に関する FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [レプリケートされたデータの検証](../../relational-databases/replication/validate-replicated-data.md)  
+ [レプリケートされたデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

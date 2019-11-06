@@ -1,22 +1,21 @@
 ---
-title: 'レッスン 7: 親レポートにドリルスルー アクションを追加する | Microsoft Docs'
+title: 'レッスン 7: 親レポートにドリルスルー アクションの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7e6c8547a4234c1edf4273097b53bc41661d3482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108396"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>レッスン 7: 親レポートにドリルスルー アクションを追加する
   Web サイト アプリケーションに ReportViewer コントロールを追加した後は、親レポートにドリルスルー アクションを追加します。  
@@ -29,11 +28,11 @@ ms.locfileid: "48102652"
   
 3.  テキスト ボックスを右クリックし、をクリックし、**テキスト ボックスのプロパティ**します。  
   
-4.  **[アクション]** タブに移動し、**[レポートに移動する]** オプションを選択します。  
+4.  **[アクション]** タブに移動し、 **[レポートに移動する]** オプションを選択します。  
   
 5.  **[レポートの指定]** セクションで、子レポートの名前を入力します。  
   
-6.  クリックして**追加****これらのパラメーターを使用して、レポートを実行する**セクション。  
+6.  クリックして**追加** **これらのパラメーターを使用して、レポートを実行する**セクション。  
   
 7.  型**productid**で、**名前**ボックスをクリックして**ProductID**で、**値**ドロップダウン リスト。  
   

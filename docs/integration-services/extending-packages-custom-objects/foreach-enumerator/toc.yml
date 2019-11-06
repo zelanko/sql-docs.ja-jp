@@ -1,8 +1,0 @@
-- name: カスタム ForEach 列挙子の開発
-  href: developing-a-custom-foreach-enumerator.md
-- name: カスタム Foreach 列挙子の作成
-  href: creating-a-custom-foreach-enumerator.md
-- name: カスタム Foreach 列挙子のコーディング
-  href: coding-a-custom-foreach-enumerator.md
-- name: カスタム ForEach 列挙子用ユーザー インターフェイスの開発
-  href: developing-a-user-interface-for-a-custom-foreach-enumerator.md

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af4d5dfa6d59338fb9640143b387b78421375e05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067799"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>テーブル モデリング (Adventure Works チュートリアル)
-  このチュートリアルでは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] を使用して、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Analysis Services テーブル モデルを作成する方法を学習します。  
+  このチュートリアルでは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] を使用して、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services テーブル モデルを作成する方法を学習します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルでは次のことを学習します。  
@@ -57,9 +56,9 @@ ms.locfileid: "48083282"
   
 -   テーブル モードで実行されている [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services インスタンス。  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 。  
   
--   AdventureWorksDW サンプル データベース このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプル データベースをダウンロードするには、次を参照してください。 [ http://go.microsoft.com/fwlink/?LinkID=335807](http://go.microsoft.com/fwlink/?LinkID=335807)します。  
+-   AdventureWorksDW サンプル データベース このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプル データベースをダウンロードするには、次を参照してください。 [ https://go.microsoft.com/fwlink/?LinkID=335807](https://go.microsoft.com/fwlink/?LinkID=335807)します。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 以降 (レッスン 11 で "Excel で分析" 機能を使用するため)  
   
@@ -68,23 +67,23 @@ ms.locfileid: "48083282"
   
 |レッスン|推定所要時間|  
 |------------|--------------------------------|  
-|[レッスン 1: 新しいテーブル モデル プロジェクトの作成](lesson-1-create-a-new-tabular-model-project.md)|10 分|  
-|[レッスン 2: データの追加](lesson-2-add-data.md)|20 分|  
-|[レッスン 3: 列名の変更](rename-columns.md)|20 分|  
-|[レッスン 4: 日付テーブルとしてマーク](lesson-3-mark-as-date-table.md)|3 分|  
-|[レッスン 5: リレーションシップの作成](lesson-4-create-relationships.md)|10 分|  
-|[レッスン 6: 計算列の作成](lesson-5-create-calculated-columns.md)|15 分|  
-|[レッスン 7: メジャーの作成](lesson-6-create-measures.md)|30 分|  
-|[レッスン 8: 主要業績評価指標の作成](lesson-7-create-key-performance-indicators.md)|15 分|  
-|[レッスン 9: パースペクティブの作成](lesson-8-create-perspectives.md)|5 分|  
-|[レッスン 10: 階層の作成](lesson-9-create-hierarchies.md)|20 分|  
-|[レッスン 11: パーティションの作成](lesson-10-create-partitions.md)|15 分|  
-|[レッスン 12: ロールの作成](lesson-11-create-roles.md)|15 分|  
-|[レッスン 13: Excel での分析](lesson-12-analyze-in-excel.md)|20 分|  
-|[レッスン 14: 配置](lesson-13-deploy.md)|5 分|  
+|[レッスン 1:新しい表形式モデル プロジェクトを作成します。](lesson-1-create-a-new-tabular-model-project.md)|10 分|  
+|[レッスン 2:データを追加します。](lesson-2-add-data.md)|20 分|  
+|[レッスン 3:列名の変更します。](rename-columns.md)|20 分|  
+|[レッスン 4:日付テーブルとしてマークします。](lesson-3-mark-as-date-table.md)|3 分|  
+|[レッスン 5: リレーションシップを作成します。](lesson-4-create-relationships.md)|10 分|  
+|[レッスン 6:計算列を作成します。](lesson-5-create-calculated-columns.md)|15 分|  
+|[レッスン 7: メジャーを作成します。](lesson-6-create-measures.md)|30 分|  
+|[レッスン 8: 主要業績評価指標を作成します。](lesson-7-create-key-performance-indicators.md)|15 分|  
+|[レッスン 9:パースペクティブを作成します。](lesson-8-create-perspectives.md)|5 分|  
+|[レッスン 10:階層を作成します。](lesson-9-create-hierarchies.md)|20 分|  
+|[レッスン 11:パーティションを作成します。](lesson-10-create-partitions.md)|15 分|  
+|[レッスン 12:ロールを作成します。](lesson-11-create-roles.md)|15 分|  
+|[レッスン 13:Excel で分析します。](lesson-12-analyze-in-excel.md)|20 分|  
+|[レッスン 14:展開](lesson-13-deploy.md)|5 分|  
   
 ## <a name="supplemental-lessons"></a>補足のレッスン  
- このチュートリアルには、[補足レッスン](../tutorials/supplemental-lessons.md)も含まれています。 このセクションのトピックはチュートリアルを完了するのに必須ではありませんが、高度なテーブル モデル作成機能をより深く理解するために役立ちます。  
+ このチュートリアルには、 [補足レッスン](../tutorials/supplemental-lessons.md)も含まれています。 このセクションのトピックはチュートリアルを完了するのに必須ではありませんが、高度なテーブル モデル作成機能をより深く理解するために役立ちます。  
   
  このチュートリアルには次の補足レッスンが含まれています。  
   
@@ -94,6 +93,6 @@ ms.locfileid: "48083282"
 |[Power View レポートのレポートのプロパティを構成](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Power View レポートのレポートのプロパティを構成します。|30 分|  
   
 ## <a name="next-step"></a>次の手順  
- チュートリアルを開始するには、[「レッスン 1: 新しいテーブル モデル プロジェクトの作成」](lesson-1-create-a-new-tabular-model-project.md) に進みます。  
+ チュートリアルを開始するには、最初のレッスンに進んでください。[レッスン 1:新しいテーブル モデル プロジェクト作成](lesson-1-create-a-new-tabular-model-project.md)です。  
   
   

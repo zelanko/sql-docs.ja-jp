@@ -1,7 +1,7 @@
 ---
-title: index_option (Transact-SQL) | Microsoft Docs
+title: " | Microsoft Docs"
 ms.custom: ''
-ms.date: 09/08/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 609769abe425b6ec384c327d873d6264cf35cff0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f40e6713c80c0f340303d0b62b629f53285c2e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070220"
 ---
-# <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
+# <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) で作成される制約定義の一部であるインデックスに適用できる一連のオプションを指定します。  
@@ -38,7 +37,8 @@ ms.locfileid: "47853460"
   | IGNORE_DUP_KEY = { ON | OFF }  
   | STATISTICS_NORECOMPUTE = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF }  
-  | ALLOW_PAGE_LOCKS = { ON | OFF }  
+  | ALLOW_PAGE_LOCKS = { ON | OFF } 
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } 
   | SORT_IN_TEMPDB = { ON | OFF }   
   | ONLINE = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -78,7 +78,7 @@ ms.locfileid: "47853460"
  OFF または *fillfactor* の指定なし  
  中間レベル ページは、中間ページの一連のキーを考慮しつつ、インデックスが持つことのできる最大サイズの行が少なくとも 1 つ格納できる領域を残して、ほぼ容量いっぱいに使用されます。  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=** _fillfactor_  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  インデックスの作成時または変更時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 1 ～ 100 の整数値を指定する必要があります。 既定値は 0 です。  
@@ -131,7 +131,13 @@ ms.locfileid: "47853460"
   
  OFF  
  ページ ロックは使用されません。  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。
+
+最終ページ挿入競合に対して最適化するかどうかを指定します。 既定値は OFF です。 詳細については、CREATE INDEX のページの「[シーケンシャル キー](./create-index-transact-sql.md#sequential-keys)」セクションを参照してください。
+ 
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -152,20 +158,20 @@ ms.locfileid: "47853460"
 >  一意な非クラスター化インデックスはオンラインで作成できません。 これには、UNIQUE 制約または PRIMARY KEY 制約によって作成されるインデックスが含まれます。  
   
  ON  
- 長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックス操作の主なフェーズでは、基になるテーブル、インテント共有 (IS) ロックのみが保持されます。 これにより、基になるテーブルやインデックスに対するクエリや更新を続行できます。 操作の開始時、非常に短い時間ですが、ソース オブジェクトの共有 (S) ロックが保持されます。 操作の終了時、短い時間ですが、非クラクタ化インデックスが作成される場合は、ソース オブジェクト上で共有 (S) ロックの取得が行われます。また、クラスター化インデックスがオンラインで作成または削除され、クラスター化または非クラスター化インデックスが再構築される場合は、SCH-M (スキーマ修正) ロックが取得されます。 オンライン インデックス ロックは短いメタデータ ロックですが、特に Sch-M ロックは、このテーブルに対するすべてのブロックしているトランザクションの完了を待機する必要があります。 待機中、Sch-M ロックは、同じテーブルにアクセスするためにこのロックの後に待機している他のすべてのトランザクションをブロックします。 インデックスがローカルの一時テーブルに作成される場合、ONLINE は ON にできません。  
+ 長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックス操作の主なフェーズの間は、基になるテーブル上に、インテント共有 (IS) ロックのみが保持されます。 これにより、基になるテーブルやインデックスに対するクエリや更新を続行できます。 操作の開始時、非常に短い時間ですが、ソース オブジェクトの共有 (S) ロックが保持されます。 操作の終了時、短い時間ですが、非クラスタ化インデックスが作成される場合は、ソース オブジェクト上で共有 (S) ロックの取得が行われます。また、クラスター化インデックスがオンラインで作成または削除され、クラスター化または非クラスター化インデックスが再構築される場合は、SCH-M (スキーマ修正) ロックが取得されます。 オンライン インデックス ロックは短いメタデータ ロックですが、特に Sch-M ロックは、このテーブルに対するすべてのブロックしているトランザクションの完了を待機する必要があります。 待機中、Sch-M ロックは、同じテーブルにアクセスするためにこのロックの後に待機している他のすべてのトランザクションをブロックします。 インデックスがローカルの一時テーブルに作成される場合、ONLINE は ON にできません。  
   
 > [!NOTE]  
 >  オンライン インデックス再構築では、このセクションの後の方で説明されている *low_priority_lock_wait* オプションを設定できます。 *low_priority_lock_wait* は、オンライン インデックス再構築中の S および Sch-M ロックの優先度を管理します。  
   
  OFF  
- テーブル ロックは、インデックス操作の間適用されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。 クラスター化インデックスを作成、再構築、または削除するオフライン インデックス操作や、非クラスター化インデックスを再構築または削除するオフライン インデックス操作では、テーブルのスキーマ修正 (Sch-M) ロックが取得されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。 非クラスター化インデックスを作成するオフライン インデックス操作では、テーブルの共有 (S) ロックが取得されます。 この場合は、基になるテーブルに対して更新は許可されませんが、SELECT ステートメントなどの読み取り操作は許可されます。  
+ テーブル ロックは、インデックス操作の間適用されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。 クラスター化インデックスを作成、再構築、または削除するオフライン インデックス操作や、非クラスター化インデックスを再構築または削除するオフライン インデックス操作では、テーブル上のスキーマ修正 (Sch-M) ロックが取得されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。 非クラスター化インデックスを作成するオフライン インデックス操作では、テーブルの共有 (S) ロックが取得されます。 この場合は、基になるテーブルに対して更新は許可されませんが、SELECT ステートメントなどの読み取り操作は許可されます。  
   
  詳細については、「[オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)」を参照してください。  
   
-> [!NOTE]  
+> [!NOTE]
 >  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
- MAXDOP **=***max_degree_of_parallelism*  
+ MAXDOP **=** _max_degree_of_parallelism_  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  インデックス操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
@@ -178,7 +184,7 @@ ms.locfileid: "47853460"
   
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
-> [!NOTE]  
+> [!NOTE]
 >  並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  DATA_COMPRESSION  
@@ -203,23 +209,23 @@ ms.locfileid: "47853460"
  COLUMNSTORE_ARCHIVE  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- クラスター化列ストア インデックスを使用して格納されているテーブルである、列ストア テーブルにのみ適用されます。 COLUMNSTORE_ARCHIVE は、指定したパーティションをより小さなサイズにさらに圧縮します。 これは、保存用や、ストレージの使用量を減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
+ クラスター化列ストア インデックスを使用して格納されているテーブルである、列ストア テーブルのみに適用されます。 COLUMNSTORE_ARCHIVE は、指定したパーティションをより小さなサイズにさらに圧縮します。 これは、保存用や、ストレージの使用量を減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
   
  圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)** **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  DATA_COMPRESSION 設定を適用するパーティションを指定します。 テーブルがパーティション分割されていない場合に ON PARTITIONS 引数を使用すると、エラーが発生します。 ON PARTITIONS 句を指定しないと、パーティション テーブルのすべてのパーティションに対して DATA_COMPRESSION オプションが適用されます。  
   
 \<partition_number_expression> は以下の方法で指定できます。  
   
--   ON PARTITIONS (2) などのように、パーティションの番号を指定します。  
--   ON PARTITIONS (1, 5) などのように、複数のパーティションのパーティション番号をコンマで区切って指定します。  
--   ON PARTITIONS (2, 4, 6 TO 8) などのように、範囲と個別のパーティションの両方を指定します。  
+-   たとえば次のようにパーティション番号を指定します。ON PARTITIONS (2)。  
+-   コンマで区切った複数の個別のパーティションのパーティション番号を指定します。たとえば次のとおりです。ON PARTITIONS (1, 5)。  
+-   範囲と個別のパーティションの両方を指定します。たとえば次のとおりです。ON PARTITIONS (2, 4, 6 TO 8)。  
   
-\<range> は、ON PARTITIONS (6 TO 8) などのように、パーティション番号を TO で区切って指定できます。  
+\<範囲> はパーティション番号として、TO で区切って指定できます。たとえば次のとおりです。ON PARTITIONS (6 TO 8)。  
   
- さまざまなパーティションにさまざまな種類のデータ圧縮を設定するには、次のように DATA_COMPRESSION オプションを複数回指定します。  
+ さまざまなパーティションにさまざまな種類のデータ圧縮を設定するには、DATA_COMPRESSION オプションを複数回指定します。例:  
   
 ```sql  
 --For rowstore tables  
@@ -252,9 +258,10 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
   
 MAX_DURATION = *time* **[MINUTES]**  
 取得する必要がある、**SWITCH** またはオンライン インデックス再構築のロックが、DDL コマンドの実行時に待機する時間 (分単位で指定される整数値) です。SWITCH またはオンライン インデックス再構築の操作は、直ちに完了しようとします。操作が **MAX_DURATION** の期間ブロックされると、**ABORT_AFTER_WAIT** アクションのいずれかが実行されます。**MAX_DURATION** の期間は常に分単位なので、**MINUTES** という単語は省略できます。  
+
   
 ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
- なし  
+ NONE  
  ロックの優先順位を変更せずに (通常の優先順位を使用して)、**SWITCH** またはオンライン インデックス再構築の操作を続行します。  
   
 SELF  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
@@ -12,18 +12,18 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ebdcf8fd98d24be3c0d8e6d9f2c5a97a90433218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249339"
 ---
 # <a name="activity-monitor"></a>利用状況モニター
   利用状況モニターには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスおよびこれらのプロセスが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに与える影響に関する情報が表示されます。  
   
 ## <a name="benefits-of-activity-monitor"></a>利用状況モニターの利点  
- 利用状況モニターは、次の展開と折りたたみ可能なペインを含むタブ付きドキュメント ウィンドウ:**概要**、**アクティブなユーザー タスク**、**リソースの待機**、 **データ ファイル I/O**、および**最近コストの高いクエリ**します。 ペインを展開すると、利用状況モニターによってインスタンスに対して情報のクエリが実行されます。 ペインを折りたたむと、そのペインのすべての利用状況クエリが停止します。 また、1 つ以上のペインを同時に展開し、インスタンスのさまざまな利用状況を表示することもできます。  
+ 利用状況モニターでは、次の展開と折りたたみ可能なペインを含むタブ付きドキュメント ウィンドウです。 **[概要]** 、 **[アクティブなユーザー タスク]** 、 **[リソースの待機]** 、 **[データ ファイル I/O]** 、および **[最新のコストの高いクエリ]** の展開と折りたたみが可能なペインを含むタブ付きドキュメント ウィンドウです。 ペインを展開すると、利用状況モニターによってインスタンスに対して情報のクエリが実行されます。 ペインを折りたたむと、そのペインのすべての利用状況クエリが停止します。 また、1 つ以上のペインを同時に展開し、インスタンスのさまざまな利用状況を表示することもできます。  
   
  含まれている列に対して、**アクティブなユーザー タスク**、**リソースの待機**、**データ ファイル I/O**、および**最近コストの高いクエリ**ペインでは、次の方法で表示をカスタマイズできます。  
   

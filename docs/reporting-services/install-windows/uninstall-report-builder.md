@@ -2,17 +2,17 @@
 title: レポート ビルダーをアンインストールする | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f99654ed02b96ed2f1b0d26f7e5b4f64851d815b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502661"
 ---
 # <a name="uninstall-report-builder"></a>レポート ビルダーをアンインストールする
 
@@ -38,7 +38,7 @@ ms.locfileid: "52710933"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.   **[名前]** ボックスに「 **cmd**」と入力します。  
+2.  **[名前]** ボックスに「 **cmd**」と入力します。  
   
 3.  コマンド プロンプト ウィンドウで、ReportBuilder3_x86.msi が格納されているフォルダーに移動します。  
   

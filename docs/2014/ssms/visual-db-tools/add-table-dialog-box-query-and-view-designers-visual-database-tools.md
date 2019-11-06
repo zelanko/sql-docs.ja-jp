@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.query.addtable
@@ -13,12 +13,12 @@ ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c48943a14c4b49a58b60e25a954cda04bf2dbad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63460169"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>[テーブルの追加] ダイアログ ボックス (クエリ デザイナーおよびビュー デザイナー) (Visual Database Tools)
   このダイアログ ボックスを使用すると、クエリまたはビューに、テーブル、ビュー、ユーザー定義関数、またはシノニムを追加できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "48052222"
  **シノニム**  
  **[ダイアグラム]** ペインに追加できるシノニムを一覧表示します。 シノニムを追加するには、シノニムを選択して **[追加]** をクリックします。 複数のシノニムを一度に追加するには、それらのシノニムを選択して **[追加]** をクリックします。  
   
- **[更新]**  
+ **更新**  
  一覧を更新します。最後の一覧取得以降にデータベースに対して行われた変更が掲載されます。  
   
  **[追加]**  

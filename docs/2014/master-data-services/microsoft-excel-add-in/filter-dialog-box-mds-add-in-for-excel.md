@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabc7fef47a3d80427e9a4c0ef4587f4dc13f405
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482564"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、 **[フィルター]** ダイアログ ボックスを使用して、MDS によって管理されるデータを Excel に読み込む前に絞り込むことができます。  
   
- このダイアログ ボックスには、 **[列]**、 **[行]**、 **[概要]** の 3 つのセクションがあります。  
+ このダイアログ ボックスには、3 つのセクションが含まれています。**列**、**行**、および**概要**します。  
   
 ## <a name="columns"></a>[列]  
  Excel で表示する属性 (列) を決定するには、 **[列]** セクションを使用します。  
@@ -32,7 +31,7 @@ ms.locfileid: "48140552"
 |明示的階層|属性の型として **[統合]** を選択した場合に、統合メンバーが属する階層を選択します。 詳細については、「[明示的階層 (マスター データ サービス)](../explicit-hierarchies-master-data-services.md)」を参照してください。|  
 |属性グループ|属性グループは、属性のサブセットをグループ化する方法です。 使用可能な属性のサブセットを表示する場合は、属性グループを選択します。 属性の詳細については、「[属性 (マスター データ サービス)](../attribute-groups-master-data-services.md)」を参照してください。|  
 |[すべて選択]|一覧に表示されているすべての属性を選択します。|  
-|[すべてクリア]|一覧に表示されている選択済みの属性をクリアします。<br /><br /> 注: を消去できません**名前**と**コード**します。|  
+|[すべてクリア]|一覧に表示されている選択済みの属性をクリアします。<br /><br /> 注: **[名前]** および **[コード]** をクリアすることはできません。|  
 |上矢印|選択した属性を一覧内で上へ移動します。 この順序 (上から下) は、ワークシート内で列が表示される順序 (左から右) に対応します。|  
 |下向きの矢印|選択した属性を一覧内で下へ移動します。 この順序 (上から下) は、ワークシート内で列が表示される順序 (左から右) に対応します。|  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48140552"
   
 |コントロール名|説明|  
 |------------------|-----------------|  
-|属性|フィルター処理の基準にする属性が表示されます。 属性が表示されない場合は、属性が追加されていません。<br /><br /> 注: ワークシートに表示しない属性を基準にフィルター処理を行うことができます。|  
+|属性|フィルター処理の基準にする属性が表示されます。 属性が表示されない場合は、属性が追加されていません。<br /><br /> 注:ワークシートに表示する予定がない属性によってフィルター処理することができます。|  
 |演算子|選択した属性の型に対応する演算子が表示されます。 詳細については、「[フィルター演算子 (マスター データ サービス)](../filter-operators-master-data-services.md)」を参照してください。|  
 |[抽出条件]|フィルター処理に使用する条件。|  
 |概要の更新|大きなデータセットを操作する場合に、クリックすると、読み込まれるデータの量に関する詳細を含む **[概要]** セクションが更新されます。|  
@@ -60,7 +59,7 @@ ms.locfileid: "48140552"
 |[行]|Excel に読み込まれる行数。 **[行]** セクションで適用したフィルターに基づきます。|  
 |[列]|Excel に読み込まれる列数。 **[列]** セクションで選択した属性に基づきます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [読み込み前にデータをフィルター処理&#40;MDS アドインの Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
  [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

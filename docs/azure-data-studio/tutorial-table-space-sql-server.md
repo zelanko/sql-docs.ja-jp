@@ -1,49 +1,55 @@
 ---
-title: 'チュートリアル: Azure Data Studio でテーブル領域使用状況のサンプル insight ウィジェットを有効にする |Microsoft Docs'
-description: このチュートリアルでは、Azure Data Studio データベース ダッシュ ボードのテーブル領域使用状況のサンプル insight ウィジェットを有効にする方法について説明します。
-ms.custom: tools|sos
-ms.date: 09/24/2018
+title: チュートリアル:テーブル領域使用のサンプル分析情報ウィジェットを有効にする
+titleSuffix: Azure Data Studio
+description: このチュートリアルでは、Azure Data Studio データベース ダッシュボードでテーブル領域使用のサンプル分析情報ウィジェットを有効にする方法について説明します。
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
-ms.translationtype: MT
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/10/2019
+ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355993"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878667"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル: テーブル領域使用状況分析ウィジェットを使用する例を有効にします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル:[!INCLUDE[name-sos](../includes/name-sos-short.md)] を利用し、テーブル領域使用のサンプル分析情報ウィジェットを有効にする
 
-このチュートリアルでは、データベース内のすべてのテーブルの領域の使用状況についての概要ビューを提供すること、データベースのダッシュ ボード、洞察のウィジェットを有効にする方法について説明します。 このチュートリアルでは、中に確認する方法。
+このチュートリアルでは、データベース ダッシュボードで分析情報ウィジェットを有効にする方法について説明します。データベース内のすべてのテーブルを対象に領域の使用状況がひとめでわかります。 このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
-> * 組み込みの洞察のウィジェットの使用例を使用して、洞察のウィジェットですばやく切り替えるには
-> * テーブルの使用領域の詳細を表示します。
-> * データをフィルター処理し、分析グラフのラベルの詳細を表示
+> * 組み込みの分析情報ウィジェット サンプルを利用し、分析情報ウィジェットを簡単にオンにする
+> * テーブル領域の使用状況の詳細を表示する
+> * 分析情報グラフでデータにフィルターを適用し、ラベル詳細を表示する
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-このチュートリアルでは、SQL Server または Azure SQL Database に *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイック スタートのいずれかを行います。
+このチュートリアルには、SQL Server か Azure SQL Database *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
+* [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
+* [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
 
+## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] のデータベース ダッシュボードで管理分析情報をオンにする
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>マネジメント インサイトを有効にする[!INCLUDE[name-sos](../includes/name-sos-short.md)]のデータベースのダッシュ ボード
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] データベース内のテーブルで使用される領域を監視するための組み込みのサンプルのウィジェットがあり。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、データベース内のテーブルによって使用される領域を監視するためのサンプル ウィジェットが組み込まれています。
 
-1. 開く*ユーザー設定*キーを押して**Ctrl + Shift + P**を開く、*コマンド パレット*します。
-2. 型*設定*検索ボックスを選び**設定: ユーザー設定を開く**します。
-2. 型*ダッシュ ボード*設定検索入力ボックス探し**dashboard.database.widgets**します。
+1. **Ctrl + Shift + P** を押して *[ユーザー設定]* を開き、 *[コマンド パレット]* を開きます。
 
-3. カスタマイズする、 **dashboard.database.widgets**設定を編集する必要がある、 **dashboard.database.widgets**内のエントリ、**ユーザー設定**セクション (列に、右側にある)。 存在する場合ありません**dashboard.database.widgets**で、**ユーザー設定**セクションで、マウス、 **dashboard.database.widgets**テキスト列の既定の設定をクリックします鉛筆アイコンをクリックして、テキストの左側に表示される**設定にコピーする**します。 ポップアップがの場合は**設定を指定して置換**、クリックしてしないでください。 移動、**ユーザー設定**右に列を探し、 **dashboard.database.widgets**セクションと、次の手順に進みます。
+2. 検索ボックスに「*settings*」と入力し、 **[ユーザー設定:ユーザー設定を開く]** を選択します。
 
-4. **Dashboard.database.widgets**セクションで、以下を追加します。
+3. [設定の検索] 入力ボックスに「*dashboard*」と入力し、**dashboard.database.widgets** を見つけます。
+
+4. **dashboard.database.widgets** 設定をカスタマイズするには、 **[ユーザー設定]** セクションの **dashboard.database.widgets** を編集する必要があります。
+
+   ![検索設定](media/tutorial-table-space-sql-server/search-settings.png)
+
+   <bpt id="p2">**</bpt>[ユーザー設定]<ept id="p2">**</ept> セクションに <bpt id="p1">**</bpt>dashboard.database.widgets<ept id="p1">**</ept> がない場合、[デフォルト設定] 列の <bpt id="p3">**</bpt>dashboard.database.widgets<ept id="p3">**</ept> テキストにカーソルを合わせ、テキストの左に表示された<bpt id="p4">*</bpt>歯車<ept id="p4">*</ept>アイコンをクリックし、<bpt id="p5">**</bpt>[Copy as Setting JSON]<ept id="p5">**</ept>\(設定 JSON としてコピー\) をクリックします。 ポップアップに **[設定を置換]** と表示された場合、それをクリックしないでください。 右にある **[ユーザー設定]** 列に移動し、**dashboard.database.widgets** セクションを見つけ、次の手順に進みます。
+
+5. **dashboard.database.widgets** セクションに次の行を追加します。
 
    ```json
         {
@@ -57,38 +63,38 @@ ms.locfileid: "49355993"
             }
         },
     ```
-**Dashboard.database.widgets**セクションに次の図のようになります。
 
-   ![検索の設定](./media/tutorial-table-space-sql-server/insight-table-space.png)
+   **dashboard.database.widgets** セクションは、次の画像のようになります。
 
-5. キーを押して**Ctrl + S**設定を保存します。
+    ![検索設定](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-6. 右クリックしてダッシュ ボードを開いているデータベース**TutorialDB**クリック**管理**します。
+6. **Ctrl + S** を押して設定を保存します。
 
-7. ビュー、*テーブル スペース*insight ウィジェットの次の図のようにします。 
+7. **[TutorialDB]** を右クリックしてデータベース ダッシュボードを開き、 **[管理]** をクリックします。
+
+8. 次の画像のように、*テーブル領域*という分析情報ウィジェットを表示します。
 
    ![ウィジェット](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
+## <a name="working-with-the-insight-chart"></a>分析情報ウィジェットを使用する
 
-## <a name="working-with-the-insight-chart"></a>Insight グラフの操作
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] の分析情報グラフでは、フィルターを適用したり、マウス カーソルを合わせることで詳細を表示したりできます。 次の手順でお試しいただけます。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]分析情報のグラフがフィルター処理とマウスのポイントの詳細を提供します。 次の手順を試すには。
+1. グラフの *row_count* 凡例をクリックし、切り替えます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] では、凡例のオン/オフを切り替えると、データ系列の表示/非表示が切り替わります。
 
-1. をクリックし、切り替える、 *row_count*グラフの凡例をします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 表示し、凡例は、オンまたはオフに切り替えると、データ系列を非表示にします。
-    
-2. グラフの上にマウス ポインターを移動します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] データ系列のラベルと次のスクリーン ショットに示すように、その値に関する情報が表示されます。
+2. グラフの上にマウス ポインターを置きます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] には、次のスクリーンショットのように、データ系列ラベルとその値に関する詳細が表示されます。
 
-   ![グラフの切り替え、凡例](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
-
+   ![グラフの切り替えと凡例](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
 ## <a name="next-steps"></a>次の手順
-このチュートリアルでは、以下の使用方法を学習しました:
-> [!div class="checklist"]
-> * 組み込み insight ウィジェットのサンプルを使用して、insight ウィジェットすばやく有効にします。
-> * テーブルの使用領域の詳細を表示します。
-> * データをフィルター処理し、分析グラフのラベルの詳細を表示
 
-カスタム インサイト ウィジェットを構築する方法については、次のチュートリアルを行います。
+このチュートリアルでは、次の方法を学習しました。
+> [!div class="checklist"]
+> * 組み込みの分析情報ウィジェット サンプルを利用し、分析情報ウィジェットを簡単にオンにする
+> * テーブル領域の使用状況の詳細を表示する
+> * 分析情報グラフでデータにフィルターを適用し、ラベル詳細を表示する
+
+カスタムの分析情報ウィジェットを構築する方法については、次のチュートリアルを完了してください。
 
 > [!div class="nextstepaction"]
-> [カスタム インサイト ウィジェットをビルド](tutorial-build-custom-insight-sql-server.md)します。
+> [カスタム分析情報ウィジェットのビルド](tutorial-build-custom-insight-sql-server.md)

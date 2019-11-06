@@ -12,12 +12,12 @@ ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4b0333fea0588911274846b05ffc90bc2145309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0597054914dcbce7e7b1fb1475beb29bab7b8a57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109563"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200401"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>ステートメントの直接実行 (ODBC)
     
@@ -25,9 +25,9 @@ ms.locfileid: "48109563"
   
 1.  使用して、ステートメントにパラメーター マーカーがある場合は、 [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md)各パラメーターをプログラム変数にバインドします。 プログラム変数にデータ値を入力してから、実行時データ パラメーターをセットアップします。  
   
-2.  呼び出す[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)ステートメントを実行します。  
+2.  呼び出す[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)ステートメントを実行します。  
   
-3.  実行時データ入力パラメーターを使用している場合[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) SQL_NEED_DATA を返します。 使用して、データをチャンク単位で送信[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../native-client-odbc-api/sqlputdata.md)します。  
+3.  実行時データ入力パラメーターを使用している場合[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) SQL_NEED_DATA を返します。 使用して、データをチャンク単位で送信[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../native-client-odbc-api/sqlputdata.md)します。  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>列方向のパラメーターのバインドを使用してステートメントを複数回実行するには  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48109563"
   
      S データ値および S データの長さを、バインドされたパラメーター配列に置きます。  
   
-3.  呼び出す[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)ステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) ステートメントが効率よく実行されます。  
+3.  呼び出す[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)ステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) ステートメントが効率よく実行されます。  
   
-4.  実行時データ入力パラメーターを使用している場合[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) SQL_NEED_DATA を返します。 使用して、データをチャンク単位で送信[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../native-client-odbc-api/sqlputdata.md)します。  
+4.  実行時データ入力パラメーターを使用している場合[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) SQL_NEED_DATA を返します。 使用して、データをチャンク単位で送信[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../native-client-odbc-api/sqlputdata.md)します。  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>行方向のパラメーターのバインドを使用してステートメントを複数回実行するには  
   
@@ -79,11 +79,11 @@ ms.locfileid: "48109563"
   
 4.  バインドされたパラメーターのバッファー配列にデータ値を入力します。  
   
-5.  呼び出す[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)ステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) ステートメントが効率よく実行されます。  
+5.  呼び出す[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)ステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) ステートメントが効率よく実行されます。  
   
-6.  実行時データ入力パラメーターを使用している場合[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) SQL_NEED_DATA を返します。 使用して、データをチャンク単位で送信[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../native-client-odbc-api/sqlputdata.md)します。  
+6.  実行時データ入力パラメーターを使用している場合[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) SQL_NEED_DATA を返します。 使用して、データをチャンク単位で送信[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../native-client-odbc-api/sqlputdata.md)します。  
   
- **注**と共に多くの使用は列方向と行方向のバインド[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)と[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)よりで[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+ **注**と共に多くの使用は列方向と行方向のバインド[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)と[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)よりで[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>参照  
  [クエリを実行方法に関するトピック&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  

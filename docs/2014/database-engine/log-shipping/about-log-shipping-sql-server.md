@@ -25,12 +25,12 @@ ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a328dba20de6eca7381cf6e1c76e9b9cc88bc4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774554"
 ---
 # <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログ配布を使用すると、トランザクション ログ バックアップを、 *プライマリ サーバー* インスタンスの *プライマリ データベース* から、別の *セカンダリ サーバー* インスタンスの 1 つ以上の *セカンダリ データベース* に自動的に送信できます。 トランザクション ログ バックアップはセカンダリ データベースごとに個別に適用されます。 オプションで用意する 3 台目のサーバー インスタンス ( *監視サーバー*) では、バックアップ操作と復元操作の履歴と状態が記録されます。また、これらの操作がスケジュールどおりに実行されなかった場合に警告を通知することもできます。  
@@ -115,7 +115,7 @@ ms.locfileid: "48173022"
 ### <a name="a-typical-log-shipping-configuration"></a>通常のログ配布構成  
  次の図に、プライマリ サーバー インスタンス、3 台のセカンダリ サーバー インスタンス、および監視サーバー インスタンスを使用するログ配布構成を示します。 この図に示されているバックアップ ジョブ、コピー ジョブ、および復元ジョブの実行手順は、次のようになります。  
   
-1.  プライマリ サーバー インスタンスがバックアップ ジョブを実行し、プライマリ データベースのトランザクション ログをバックアップします。 このサーバー インスタンスは、次にログ バックアップをプライマリ ログ バックアップ ファイルに配置し、バックアップ フォルダーに送信します。  この図では、バックアップ フォルダーは共有ディレクトリ ( *バックアップ共有*) にあります。  
+1.  プライマリ サーバー インスタンスがバックアップ ジョブを実行し、プライマリ データベースのトランザクション ログをバックアップします。 このサーバー インスタンスは、次にログ バックアップをプライマリ ログ バックアップ ファイルに配置し、バックアップ フォルダーに送信します。  この図では、バックアップ フォルダーは共有ディレクトリ ("*バックアップ共有*") にあります。  
   
 2.  3 台のセカンダリ サーバー インスタンスは、それぞれのコピー ジョブを実行し、プライマリ ログ バックアップ ファイルをローカルのコピー先フォルダーにコピーします。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48173022"
   
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

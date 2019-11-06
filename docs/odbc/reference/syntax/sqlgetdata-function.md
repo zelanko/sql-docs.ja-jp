@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70ee26274d101d1b18b00c83a89bd0c946da6742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f33d55cc8ac5dab37ce200a5a654bcb4be7cc9ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911361"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetData**結果セット内の 1 つの列または後に 1 つのパラメーターのデータを取得します。 **SQLParamData** SQL_PARAM_DATA_AVAILABLE を返します。 呼び出せる複数回パーツ内の可変長データを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetData(  
       SQLHSTMT       StatementHandle,  
@@ -57,7 +56,7 @@ SQLRETURN SQLGetData(
  パラメーターのデータを取得するには、1 から始まりますパラメーターの序数です。  
   
  *TargetType*  
- [入力]C データ型の型の識別子、**TargetValuePtr*バッファー。 有効な C データ型と型識別子の一覧は、次を参照してください。、 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: データ型」セクション。  
+ [入力]C データ型の型の識別子、**TargetValuePtr*バッファー。 有効な C データ型と型識別子の一覧は、次を参照してください、 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: セクション。データ型。  
   
  場合*TargetType* SQL_ARD_TYPE、型識別子が、ARD の SQL_DESC_CONCISE_TYPE フィールドで指定されたドライバーの使用です。 場合*TargetType*は SQL_APD_TYPE、 **SQLGetData**で指定されている同じの C データ型を使用して、 **SQLBindParameter**します。 C データ型がで指定された場合は、 **SQLGetData**で指定された C データ型をオーバーライド**SQLBindParameter**します。 SQL_C_DEFAULT がの場合、ドライバーは、ソースの SQL データ型に基づいて既定の C データ型を選択します。  
   
@@ -105,8 +104,8 @@ SQLRETURN SQLGetData(
 |07009|無効な記述子のインデックス|引数が指定された値*Col_or_Param_Num* 0 の場合、SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されました。<br /><br /> 引数が指定された値*Col_or_Param_Num*が結果セット内の列の数を超えていました。<br /><br /> *Col_or_Param_Num*値が使用できるパラメーターの序数と等しくありませんでした。<br /><br /> (DM) 指定された列にバインドされました。 この説明は、ドライバーの SQL_GETDATA_EXTENSIONS オプション SQL_GD_BOUND ビットマスクを返すには適用されません**SQLGetInfo**します。<br /><br /> (DM) 指定された列の数が、最高のバインドされた列の数以下が。 この説明は、ドライバーの SQL_GETDATA_EXTENSIONS オプション SQL_GD_ANY_COLUMN ビットマスクを返すには適用されません**SQLGetInfo**します。<br /><br /> (DM)、アプリケーションが既に呼び出されて**SQLGetData**は現在の行の現在の呼び出しで指定された列の数が上記の呼び出しで指定された列の数よりも小さいと、ドライバーでは、sql _ が返されませんSQL_GETDATA_EXTENSIONS オプションのビットマスクを GD_ANY_ORDER **SQLGetInfo**します。<br /><br /> (DM)、 *TargetType*引数が SQL_ARD_TYPE、および*Col_or_Param_Num*記述子レコード、ARD で整合性チェックに失敗しました。<br /><br /> (DM)、 *TargetType*引数 SQL_ARD_TYPE、ARD の SQL_DESC_COUNT フィールドの値より小さい*Col_or_Param_Num*引数。|  
 |08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
 |22002|インジケーター変数が必要ですが、指定されていません|*StrLen_or_IndPtr* null ポインター、NULL データを取得します。|  
-|22003|数値が範囲外|(数値または文字列) として、列の数値の値を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> 詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。|  
-|22007|無効な datetime 形式|結果セット内の文字の列 C 日付、時刻、またはタイムスタンプの構造体にバインドされましたし、列の値が無効な日付、時間、またはタイムスタンプ、それぞれします。 詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。|  
+|22003|数値が範囲外|(数値または文字列) として、列の数値の値を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> 詳細については、次を参照してください[付録 d:。データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。|  
+|22007|無効な datetime 形式|結果セット内の文字の列 C 日付、時刻、またはタイムスタンプの構造体にバインドされましたし、列の値が無効な日付、時間、またはタイムスタンプ、それぞれします。 詳細については、次を参照してください[付録 d:。データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。|  
 |22012|0 による除算|0 による除算の結果が算術式の値が返されました。|  
 |22015|Interval フィールド オーバーフロー|真数型または interval SQL 型から C の間隔の種類への割り当てと、先頭のフィールドに有効桁数の損失が発生します。<br /><br /> C の間隔の種類にデータを返すときに C の間隔の種類の SQL 型の値の表現はありませんでした。|  
 |22018|キャストの無効な文字の値|C 文字バッファーに返された結果セット内の文字の列と列には、対象のバッファーの文字セットで表現がない文字が含まれています。<br /><br /> C 型は、真数または概数の数値、datetime、またはデータ間隔の種類。列の SQL 型が文字データ型。列の値がバインドされた C 型の有効なリテラルではありませんでした。|  
@@ -121,7 +120,7 @@ SQLRETURN SQLGetData(
 |HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*BufferLength*が 0 未満でした。<br /><br /> 引数に指定された値*BufferLength*が 4 未満、 *Col_or_Param_Num*引数が 0 の場合に設定されており、ドライバーが、ODBC 2 *.x*ドライバー。|  
 |HY109|無効なカーソルの位置|カーソルの位置が (によって**SQLSetPos**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLBulkOperations**) が削除された行またはをフェッチできませんでした。<br /><br /> カーソルが順方向専用カーソルでは、および行セットのサイズが 1 より大きかった。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
-|HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、の使用をサポートしていない**SQLGetData**で複数の行で**SQLFetchScroll**します。 この説明は、ドライバーの SQL_GETDATA_EXTENSIONS オプション SQL_GD_BLOCK ビットマスクを返すには適用されません**SQLGetInfo**します。<br /><br /> ドライバーまたはデータ ソースの組み合わせで指定された変換をサポートしていません、 *TargetType*引数と対応する列の SQL データ型。 このエラーは、列の SQL データ型は、ドライバー固有の SQL データ型にマップされていた場合にのみ適用されます。<br /><br /> ドライバーには、ODBC 2 のみがサポートしている *.x*、および引数*TargetType*が、次のいずれか。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 間隔の C データ型のいずれかと[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: データ型。<br /><br /> ドライバーのみ、3.50 と引数の前に ODBC バージョンをサポートする*TargetType* SQL_C_GUID でした。|  
+|HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、の使用をサポートしていない**SQLGetData**で複数の行で**SQLFetchScroll**します。 この説明は、ドライバーの SQL_GETDATA_EXTENSIONS オプション SQL_GD_BLOCK ビットマスクを返すには適用されません**SQLGetInfo**します。<br /><br /> ドライバーまたはデータ ソースの組み合わせで指定された変換をサポートしていません、 *TargetType*引数と対応する列の SQL データ型。 このエラーは、列の SQL データ型は、ドライバー固有の SQL データ型にマップされていた場合にのみ適用されます。<br /><br /> ドライバーには、ODBC 2 のみがサポートしている *.x*、および引数*TargetType*が、次のいずれか。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 間隔の C データ型のいずれかと[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d:データ型。<br /><br /> ドライバーのみ、3.50 と引数の前に ODBC バージョンをサポートする*TargetType* SQL_C_GUID でした。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に対応するドライバー、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
@@ -153,11 +152,11 @@ SQLRETURN SQLGetData(
   
  場合、 *TargetType*引数の SQL_DESC_DATETIME_INTERVAL_PRECISION および SQL_DESC_PRECISION のフィールド セットとして、interval データ型を既定の間隔の主要な精度 (2) と既定の間隔 (秒) の有効桁数 (6) は、それぞれ、ARD データに使用されます。 場合、 *TargetType*引数、SQL_C_NUMERIC データ型を (ドライバー定義) の既定の精度は、および、ARD の SQL_DESC_PRECISION および SQL_DESC_SCALE フィールドで設定されている既定のスケール (0)、データに使用されます。 呼び出して場合、アプリケーションで明示的に適切な記述子フィールドを設定、既定の有効桁数または小数点が適切でない場合**SQLSetDescField**または**SQLSetDescRec**します。 SQL_C_NUMERIC と呼び出しに SQL_DESC_CONCISE_TYPE フィールドを設定できます**SQLGetData**で、 *TargetType* SQL_ARD_TYPE と、記述子フィールドの有効桁数と小数点の値の引数使用します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x*、アプリケーション セット*TargetType*を示すために、SQL_C_DATE、SQL_C_TIME、または SQL_C_TIMESTAMP \* *TargetValuePtr*日付、時刻、またはタイムスタンプの構造体。 ODBC 3 *.x*、アプリケーション セット*TargetType* SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、SQL_C_TYPE_TIMESTAMP したりします。 ドライバー マネージャーで適切なマッピングに基づき、必要な場合、アプリケーションとドライバーのバージョン。  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>部分の可変長データを取得します。  
- **SQLGetData**部分の可変長データを含む列からデータを取得するために使用できます: これはときに、SQL データ型の列の識別子がある SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR、SQL_WCHAR、SQL_WVARCHAR、sql _WLONGVARCHAR、SQL_BINARY、SQL_VARBINARY、SQL_LONGVARBINARY、または可変長型のドライバー固有の識別子。  
+ **SQLGetData**が SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR、SQL_WCHAR、SQL_WVARCHAR、sql _、列の SQL データ型の識別子は、要素の可変長データを格納する列からデータを取得するために使用できますWLONGVARCHAR、SQL_BINARY、SQL_VARBINARY、SQL_LONGVARBINARY、または可変長型のドライバー固有の識別子。  
   
  アプリケーションを呼び出す部分内の列からデータを取得する**SQLGetData**複数回、同じ列に連続でします。 各呼び出しで**SQLGetData**データの次の部分を返します。 文字データの中間部分から、null 終了文字を削除してください、パーツを再構成するため、アプリケーションの責任です。 多くのデータを返すか、終端文字用に十分なバッファーが割り当てられた場合**SQLGetData** SQL_SUCCESS_WITH_INFO と SQLSTATE 01004 (データが切り捨てられます) を返します。 データの最後の部分が返されるとき**SQLGetData** SQL_SUCCESS を返します。 ブックをいないため、アプリケーションは、アプリケーションのバッファー内のデータの量が有効かを知る方法 SQL_NO_TOTAL もゼロを列からデータを取得する有効な最後の呼び出しで返されることができます。 場合**SQLGetData**と呼ばれるは、その後、sql_no_data します。 詳細については、次のセクションでは、「SQLGetData を取得するデータ。」を参照してください。  
   
@@ -194,7 +193,7 @@ SQLRETURN SQLGetData(
   
 7.  配置内のデータの長さ\* *StrLen_or_IndPtr*します。 場合*StrLen_or_IndPtr*が null ポインターの場合は、 **SQLGetData**長さは返されません。  
   
-    -   文字またはバイナリ データは、これは、データの長さの変換後と理由のための切り捨て前に、 *BufferLength*します。 場合は、ドライバーは長い形式のデータの場合、変換後、データの長さを決定することはできません、SQL_SUCCESS_WITH_INFO が返されます、長 SQL_NO_TOTAL に設定します。 (最後の呼び出し**SQLGetData** 0 または SQL_NO_TOTAL ではない、データの長さを常に返す必要があります)。SQL_ATTR_MAX_LENGTH ステートメントによりデータが切り捨てられました場合属性、この属性の値: 実際の長さではなく — に\* *StrLen_or_IndPtr*。 これは、この属性は、ドライバーはどのような実際の長さを判断する方法を持たないため、変換前に、サーバー上のデータを切り捨てるに設計されているためにです。 ときに**SQLGetData**を連続して複数回呼び出されると、同じ列に、これは、現在の呼び出しの開始時に使用可能なデータの長さは、後続の呼び出しごとでは、長さが減ります。  
+    -   文字またはバイナリ データは、これは、データの長さの変換後と理由のための切り捨て前に、 *BufferLength*します。 場合は、ドライバーは長い形式のデータの場合、変換後、データの長さを決定することはできません、SQL_SUCCESS_WITH_INFO が返されます、長 SQL_NO_TOTAL に設定します。 (最後の呼び出し**SQLGetData** 0 または SQL_NO_TOTAL ではない、データの長さを常に返す必要があります)。実際の長さではなく、この属性の値を配置、SQL_ATTR_MAX_LENGTH ステートメント属性によりデータが切り捨てられる場合\* *StrLen_or_IndPtr*します。 これは、この属性は、ドライバーはどのような実際の長さを判断する方法を持たないため、変換前に、サーバー上のデータを切り捨てるに設計されているためにです。 ときに**SQLGetData**を連続して複数回呼び出されると、同じ列に、これは、現在の呼び出しの開始時に使用可能なデータの長さは、後続の呼び出しごとでは、長さが減ります。  
   
     -   その他のすべてのデータ型の変換後、データの長さは、このこれは、データが変換される型のサイズがあります。  
   
@@ -204,7 +203,7 @@ SQLRETURN SQLGetData(
   
  連続して呼び出す**SQLGetData**要求された最後の列からデータが取得されます。 以前のオフセットが無効になります。 たとえば、ときに、次のシーケンスは実行されます。  
   
-```  
+```cpp  
 SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)  
 ```  
   
@@ -218,7 +217,7 @@ SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションを実行、**選択**ステートメントを Id、名、顧客の結果セットを返すし、電話番号の名前、ID、および電話番号で並べ替えられます。 データの各行に対して呼び出す**SQLFetch**に次の行にカーソルを移動します。 呼び出す**SQLGetData**取得するへの呼び出しで、フェッチされたデータは、データと返されたバイト数のバッファーを指定します。 **SQLGetData**します。 最後に、各従業員の名前、ID、および電話番号を印刷します。  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 50  
   

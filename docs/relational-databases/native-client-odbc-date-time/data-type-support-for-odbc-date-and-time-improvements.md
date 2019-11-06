@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a910fcac656bc70e974da5c3601288b1659bb57
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 9979de414bb044e23aa01d5ce1be1be6daa83c62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030506"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC の日付/時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "48851819"
   
 |SQL Server データ型|SQL データ型|値|  
 |--------------------------|-------------------|-----------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
 |Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
@@ -57,12 +56,12 @@ ms.locfileid: "48851819"
   
  SQL_C_BINARY バインドを指定すると、配置チェックが実行され、配置が正しくない場合はエラーが報告されます。 このエラーの SQLSTATE は IM016 で、メッセージは "構造体の配置が正しくありません" です。  
   
-## <a name="data-formats-strings-and-literals"></a>データ形式 : 文字列とリテラル  
+## <a name="data-formats-strings-and-literals"></a>データ形式:文字列とリテラル  
  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型、ODBC データ型、ODBC 文字列リテラルの間のマッピングを示します。  
   
 |SQL Server データ型|ODBC データ型|クライアントで変換した場合の文字列の形式|  
 |--------------------------|--------------------|------------------------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
+|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> このデータ型の精度は 1 分です。 秒の部分は、出力時には 0 になり、入力時にはサーバーによって丸められます。|  
 |date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
@@ -81,7 +80,7 @@ ms.locfileid: "48851819"
   
  現在は、句読点の前後に空白を追加することができ、時間とタイム ゾーン オフセットの間の空白は省略可能です。 ただし、これは将来のリリースで変更される可能性があるので、アプリケーションは現在の動作に依存しないようにしてください。  
   
-## <a name="data-formats-data-structures"></a>データ形式 : データ構造体  
+## <a name="data-formats-data-structures"></a>データ形式:データ構造体  
  後述の構造体では、ODBC によって次の制約が定められています。これらはグレゴリオ暦を取り入れたものです。  
   
 -   月の範囲は 1 ～ 12 です。  
@@ -140,7 +139,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
   
  場合、 **timezone_hour**は負の値、 **timezone_minute**負の値である必要がありますまたは 0。 場合、 **timezone_hour**が正の値、 **timezone_minute**正である必要がありますまたは 0。 場合、 **timezone_hour** 0 の場合は、 **timezone_minute** -59 ~ +59 の範囲の任意の値があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

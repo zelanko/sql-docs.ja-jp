@@ -1,7 +1,7 @@
 ---
 title: サーバー監査およびサーバー監査の仕様を作成する方法 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 803ce49a254bc6f0e969828192d914facf46ef3c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523035"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517975"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52523035"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **次のものを使用してサーバー監査およびサーバー監査の仕様を作成するには:**  
   
@@ -67,7 +66,7 @@ ms.locfileid: "52523035"
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、**[新しい監査]** を選択します。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** を選択します。  
   
      **[監査の作成]** ダイアログ ボックスの **[全般]** ページでは、次のオプションを使用できます。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "52523035"
      **[監査の出力先]** にファイルが指定されている場合に、監査データが書き込まれるフォルダーの場所を指定します。  
   
      **省略記号 (...)**  
-     ファイル パスを指定したり監査ファイルの書き込み先フォルダーを作成したりするための **[フォルダーの検索 -**_server\_name]_ ダイアログ ボックスを開きます。  
+     ファイル パスを指定したり監査ファイルの書き込み先フォルダーを作成したりするための **[フォルダーの検索 -** _server\_name]_ ダイアログ ボックスを開きます。  
   
      **[監査ファイルの最大限度]**  
      **[ロールオーバー ファイルの最大数]**  
@@ -113,7 +112,7 @@ ms.locfileid: "52523035"
      作成する監査ファイル数を指定します (2,147,483,647 まで)。 このオプションは、 **[無制限]** がオフの場合にのみ利用可能です。  
   
      **[最大ファイル サイズ]**  
-     監査ファイルの最大サイズをメガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) 単位で指定します。 1024 MB ～ 2,147,483,647 TB の範囲で指定できます。 **[無制限]** チェック ボックスをオンにした場合、ファイルのサイズに制限は設定されません。 1024 MB 未満の値を指定すると、失敗し、エラーが返されます。 既定では、 **[無制限]** チェック ボックスはオンになっています。  
+     監査ファイルの最大サイズをメガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) 単位で指定します。 最大 2,147,483,647 TB までの数値を指定できます。 **[無制限]** チェック ボックスをオンにした場合、ファイルのサイズに制限は設定されません。 既定では、 **[無制限]** チェック ボックスはオンになっています。  
   
      **[ディスク領域を予約する]** チェック ボックス  
      指定した最大ファイル サイズと等しい領域が、ディスク上に事前に割り当てられるように指定します。 この設定は、 **[最大ファイル サイズ]** の **[無制限]** チェック ボックスがオフの場合にのみ使用できます。 既定では、このチェック ボックスはオフになっています。  
@@ -126,11 +125,11 @@ ms.locfileid: "52523035"
   
 1.  オブジェクト エクスプローラーで、プラス記号をクリックして **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[サーバー監査の仕様]** フォルダーを右クリックし、**[新しいサーバー監査の仕様]** を選択します。  
+2.  **[サーバー監査の仕様]** フォルダーを右クリックし、 **[新しいサーバー監査の仕様]** を選択します。  
   
      **[サーバー監査の仕様の作成]** ダイアログ ボックスで、次のオプションを使用できます。  
   
-     **名前**  
+     **[名前]**  
      サーバー監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  
@@ -167,7 +166,7 @@ ms.locfileid: "52523035"
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -181,11 +180,11 @@ ms.locfileid: "52523035"
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

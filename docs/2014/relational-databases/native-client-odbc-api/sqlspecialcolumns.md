@@ -14,12 +14,12 @@ ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e2637e9588404926d8d0e73016765cd54c56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188739"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   行識別子を要求するとき (*IdentifierType* SQL_BEST_ROWID)、 **SQLSpecialColumns** SQL_SCOPE_CURROW 以外のスコープ、要求された空の結果セット (データ行を含まない) を返します。 生成される結果セットは、列がこのスコープ内でのみ有効であることを示します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48107532"
  **SQLSpecialColumns**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLSpecialColumns 関数](http://go.microsoft.com/fwlink/?LinkId=59371)   
+ [SQLSpecialColumns 関数](https://go.microsoft.com/fwlink/?LinkId=59371)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

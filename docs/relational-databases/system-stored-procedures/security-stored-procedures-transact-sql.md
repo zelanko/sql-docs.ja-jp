@@ -1,7 +1,7 @@
 ---
 title: ストアド プロシージャ (Transact SQL) のセキュリティ。マイクロソフトのドキュメント
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ae83ce706d58e627f52fb06120d297c3ae26a82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94fdd6946cbc2800a8f0f16e706e784ff0933f73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941855"
 ---
-# <a name="security-stored-procedures-transact-sql"></a>セキュリティ ストアド プロシージャ (Transact-SQL)
+# <a name="security-stored-procedures-transact-sql"></a>ストアド プロシージャ (Transact SQL) のセキュリティ
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポート次のシステムでは、セキュリティを管理するために使用されるプロシージャが格納されます。 これらのストアド プロシージャのいくつかは推奨されていませんが、下位互換性をサポートするために続けます。 非推奨のプロシージャのトピックでは、代替手段が示されています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポート次のシステムでは、セキュリティを管理するために使用されるプロシージャが格納されます。 これらのストアド プロシージャのいくつかは推奨されていませんが、下位互換性をサポートするために続けます。 推奨手順についてのトピックには、後任者が表示されます。  
 
 |||  
 |-|-|  
-[sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (非推奨)|
+|[sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (非推奨)|
 |[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
 |[sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) (非推奨) |[sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) (非推奨)
 |[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) (非推奨) |[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) (非推奨)
@@ -65,7 +65,7 @@ ms.locfileid: "47624120"
 
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

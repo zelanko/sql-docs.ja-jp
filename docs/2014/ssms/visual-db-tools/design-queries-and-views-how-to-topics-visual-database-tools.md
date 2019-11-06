@@ -4,10 +4,10 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- • vs.solutionexplorer.file.query
+- vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - View Designer, about View Designer
@@ -20,12 +20,12 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316070"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)
   クエリおよびビュー デザイナーを使用すると、アプリケーションのデータ取得部分およびデータ操作部分を作成および保守できます。  
@@ -61,5 +61,3 @@ ms.locfileid: "48108362"
 ## <a name="related-sections"></a>関連項目  
  [テーブルのデザイン (Visual Database Tools)](design-tables-visual-database-tools.md)  
  テーブル、列、キー、インデックス、ストアド プロシージャなどを使ってデータベース構造をデザインおよび管理する方法について、詳しく説明します。  
-  
-  

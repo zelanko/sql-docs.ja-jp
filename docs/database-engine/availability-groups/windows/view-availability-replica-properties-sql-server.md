@@ -11,24 +11,18 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59c7b1d75f8573c2043acf9ec811c56b1f0a2549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f569074893a5894c0823f1a1af7864bacceb9eda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013372"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>可用性レプリカのプロパティの表示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して、AlwaysOn 可用性グループの可用性レプリカのプロパティを表示する方法について説明します。  
   
--   **可用性レプリカのプロパティを表示するために使用するもの:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+ 
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性レプリカのプロパティを表示および変更するには**  
   
@@ -36,11 +30,11 @@ ms.locfileid: "47606190"
   
 2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
-3.  可用性レプリカが属する可用性グループを展開し、**[可用性レプリカ]** ノードを展開します。  
+3.  可用性レプリカが属する可用性グループを展開し、 **[可用性レプリカ]** ノードを展開します。  
   
-4.  プロパティを表示する可用性レプリカを右クリックし、**[プロパティ]** をクリックします。  
+4.  プロパティを表示する可用性レプリカを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、**[全般]** ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、「[可用性レプリカのプロパティ &#40;[全般] ページ&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md)」を参照してください。  
+5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、 **[全般]** ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、「[可用性レプリカのプロパティ &#40;[全般] ページ&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md)」を参照してください。  
 
    [!NOTE]
    >クラスターの種類がなしの場合は、フェールオーバー モードを変更できません。

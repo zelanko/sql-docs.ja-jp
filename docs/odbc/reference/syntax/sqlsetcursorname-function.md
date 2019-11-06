@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092989"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLSetCursorName**カーソル名をアクティブなステートメントに関連付けます。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバーでは、SQL ステートメントの処理に必要なカーソル名が生成されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetCursorName(  
      SQLHSTMT      StatementHandle,  
@@ -78,7 +77,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- カーソル名が位置指定更新でのみ使用、および delete ステートメント (たとえば、**更新***テーブル名*.**WHERE CURRENT OF** *カーソル名*)。 詳細については、次を参照してください。[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)します。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバー SQL_CUR 文字で始まり、18 文字の長さを超えていない名前を生成するクエリ ステートメントの実行時に、カーソル名を定義します。  
+ カーソル名が位置指定更新でのみ使用、および delete ステートメント (たとえば、**更新**_テーブル名_.**WHERE CURRENT OF** _カーソル名_)。 詳細については、次を参照してください。[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)します。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバー SQL_CUR 文字で始まり、18 文字の長さを超えていない名前を生成するクエリ ステートメントの実行時に、カーソル名を定義します。  
   
  接続内のすべてのカーソル名は一意である必要があります。 カーソル名の最大長は、ドライバーによって定義されます。 相互運用性を最大に、アプリケーションは 18 個までの文字にカーソル名を制限することをお勧めします。 ODBC 3 *.x*カーソル名は引用符で囲まれた識別子かどうかは、大文字小文字を区別の方法で扱われ、SQL の構文について、ことを認めていないまたは空白などの特別な処理はまたは予約済みキーワードで、文字を含めることができます。 カーソル名は、大文字と小文字で扱う必要があるを場合は、引用符で囲まれた識別子として渡す必要があります。  
   
@@ -89,7 +88,7 @@ SQLRETURN SQLSetCursorName(
   
  別のコード例では、次を参照してください。 [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 10  
   

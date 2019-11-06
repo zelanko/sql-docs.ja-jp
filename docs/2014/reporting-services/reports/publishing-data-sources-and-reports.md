@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing data sources [Reporting Services]
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bb0768e479c9a308121d99202fea7ea497acd1e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102508"
 ---
 # <a name="publishing-data-sources-and-reports"></a>データ ソースとレポートのパブリッシュ
   レポートをパブリッシュする前に、レポートをプレビューしてレポート実行時の表示を確認する必要があります。 プレビュー後も、表示結果に満足できるまでデザインを調整できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48182182"
  [レポート サーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)  
  レポートをレポート サーバーにパブリッシュする方法について説明します。  
   
- [SharePoint モードでレポート サーバーにパブリッシュされたレポート アイテムの URL の例&#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  レポートを SharePoint サイトにパブリッシュする方法について説明します。  
   
 ## <a name="see-also"></a>参照  

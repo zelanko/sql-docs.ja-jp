@@ -1,18 +1,18 @@
 ---
 title: '[サーバーのプロパティ] ([詳細設定] ページ) - Reporting Services | Microsoft Docs'
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
-ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.date: 01/15/2019
+ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021696"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908262"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
 
@@ -22,7 +22,7 @@ ms.locfileid: "50021696"
 
 このページを開くには、SQL Server Management Studio を起動してレポート サーバー インスタンスに接続し、レポート サーバー名を右クリックして **[プロパティ]** をクリックします。 **[詳細設定]** を選択するとこのページが開きます。
 
-## <a name="options"></a>[変数]
+## <a name="options"></a>オプション
 
 **EnableMyReports**  
 個人用レポート機能が有効になっているかどうかを指定します。 値 **true** は、機能が有効になっていることを示します。  
@@ -80,6 +80,29 @@ Web ポータルのページ タイトルに表示されるレポート サー�
 **SystemSnapshotLimit**  
 レポートに格納されるスナップショットの最大数。 有効値は **-1** ～ **2**、**147**、**483**、**647**です。 値が **-1**の場合、スナップショットに制限はありません。  
 
+**AccessControlAllowCredentials**  
+'credentials' フラグが true に設定されている場合に、クライアント要求への応答を公開できるかどうかを示します。 既定値は **false**です。
+
+**AccessControlAllowHeaders** クライアントが要求したときに、サーバーが許可するヘッダーのコンマ区切りリスト。 このプロパティは、空の文字列にすることができます。* を指定すると、すべてのヘッダーが許可されます。
+
+**AccessControlAllowMethods** クライアントが要求したときに、サーバーが許可する HTTP メソッドのコンマ区切りリスト。 既定値は GET、PUT、POST、PATCH、DELETE です。* を指定すると、すべてのメソッドが許可されます。
+
+**AccessControlAllowOrigin** クライアントが要求したときに、サーバーが許可する要求元のコンマ区切りリスト。 既定値は空白で、すべての要求を防ぎます。* を指定すると、資格情報が設定されていない場合にすべての要求元が許可されます。資格情報が指定されている場合は、要求元の明示的なリストを指定する必要があります。
+
+**AccessControlExposeHeaders** サーバーがクライアントに公開するヘッダーのコンマ区切りリスト。 既定値は空白です。
+
+**AccessControlMaxAge** プリフライト要求の結果をキャッシュできる秒数を指定します。 既定値は 600 (10 分) です。
+
+**AllowedResourceExtensionsForUpload (Power BI Report Server および Reporting Services 2017 以降のみ)** レポート サーバーにアップロードできるリソースの拡張子のセット。 &ast;.rdl や &ast;.pbix のような組み込みのファイルの種類用の拡張子は含める必要はありません。 既定値は "&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx" です。
+
+**RestrictedResourceMimeTypeForUpload**ユーザーがコンテンツをアップロードすることが許可されていない mime の種類のセット。 制限付きの mime の種類で既に保存されているリソースは、ブラウザーによって開かれたり実行されたりするのではなく、アプリケーション/オクテットストリームとしてのみダウンロードできます。  既定では、この一覧には制限された項目はありませんが、セキュリティで保護されたエクスペリエンスを提供するために組織で設定することをお勧めします。
+
+**EditSessionCacheLimit**  
+レポート編集セッションでアクティブにできるデータ キャッシュ エントリの数を指定します。 既定の数は 5 です。  
+
+**EditSessionTimeout**  
+レポート編集セッションがタイムアウトするまでの秒数を指定します。既定値は 7,200 秒 (2 時間) です。  
+
 **EnableIntegratedSecurity**  
 Windows 統合セキュリティをレポート データ ソース接続でサポートするかどうかを決定します。 既定値は **True**です。 有効な値は次のとおりです。
 
@@ -97,25 +120,6 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 
 **EnableRemoteErrors**  
 リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効値は **true** および **false**です。 既定値は **false**です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)」を参照してください。  
-
-**AccessControlAllowCredentials**  
-'credentials' フラグが true に設定されている場合に、クライアント要求への応答を公開できるかどうかを示します。 既定値は **false**です。
-
-**AccessControlAllowHeaders** クライアントが要求したときに、サーバーが許可するヘッダーのコンマ区切りリスト。 このプロパティは、空の文字列にすることができます。* を指定すると、すべてのヘッダーが許可されます。
-
-**AccessControlAllowMethods** クライアントが要求したときに、サーバーが許可する HTTP メソッドのコンマ区切りリスト。 既定値は GET、PUT、POST、PATCH、DELETE です。* を指定すると、すべてのメソッドが許可されます。
-
-**AccessControlAllowOrigin** クライアントが要求したときに、サーバーが許可する要求元のコンマ区切りリスト。 既定値は空白で、すべての要求を防ぎます。* を指定すると、資格情報が設定されていない場合にすべての要求元が許可されます。資格情報が指定されている場合は、要求元の明示的なリストを指定する必要があります。
-
-**AccessControlExposeHeaders** サーバーがクライアントに公開するヘッダーのコンマ区切りリスト。 既定値は空白です。
-
-**AccessControlMaxAge** プリフライト要求の結果をキャッシュできる秒数を指定します。 既定値は 600 (10 分) です。
-
-**EditSessionCacheLimit**  
-レポート編集セッションでアクティブにできるデータ キャッシュ エントリの数を指定します。 既定の数は 5 です。  
-
-**EditSessionTimeout**  
-レポート編集セッションがタイムアウトするまでの秒数を指定します。既定値は 7,200 秒 (2 時間) です。  
 
 **EnableCustomVisuals** ***(Power BI Report Server のみ)*** Power BI カスタム ビジュアルの表示を有効にします。 値は True と False です。 *既定値は True です。*  
 
@@ -136,6 +140,8 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 **ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server のみ)*** スケジュールされた更新がタイムアウトになるまでの時間を設定します。*既定値は 120 です。*
 
 **ShowDownloadMenu** クライアント ツールのダウンロード メニューを有効にします。 *既定値は true です。*
+
+**SupportedHyperlinkSchemes** ***(Power BI Report Server のみ)*** 表示できるハイパーリンク アクションで定義できる URI スキームのコンマ区切りの一覧を設定するか、"&ast;" を設定してすべてのハイパーリンク スキームを有効にします。 たとえば、"http,https" を設定すると、"https://www. contoso.com" へのハイパーリンクは許可されますが、"mailto:bill@contoso.com" や "javascript:window.open(‘www.contoso.com’, ‘_blank’)" へのハイパーリンクは削除されます。 既定値は "&ast;" です。
 
 **TimeInitialDelaySeconds** 初期時間を遅延させる時間を秒単位で設定します。 *既定値は 60 です。*
 

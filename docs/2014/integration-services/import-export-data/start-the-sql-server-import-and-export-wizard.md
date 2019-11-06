@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
@@ -13,43 +12,43 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0791e226f4c4a1c19ab2dffb7a9e7845e59a418c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768034"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを実行する
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用すると、最も簡単な方法でデータ ソース間でデータをコピーしたり、基本パッケージを構築したりすることができます。 ウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。  
   
- SQL Server インポートおよびエクスポート ウィザードを使用して、SQL Server データベースから Microsoft Excel スプレッドシートにデータをエクスポートするパッケージを作成する方法を示すビデオは、次を参照してください。 [Excel (SQL Server ビデオ) への SQL Server データのエクスポート](http://go.microsoft.com/fwlink/?LinkId=131024)します。  
+ SQL Server インポートおよびエクスポート ウィザードを使用して、SQL Server データベースから Microsoft Excel スプレッドシートにデータをエクスポートするパッケージを作成する方法を示すビデオは、次を参照してください。 [Excel (SQL Server ビデオ) への SQL Server データのエクスポート](https://go.microsoft.com/fwlink/?LinkId=131024)します。  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを起動するには  
   
 -   **開始**メニューで、**すべてのプログラム**、 をポイント**Microsoft SQL Server** 、順にクリックします**データ インポートおよびエクスポート**します。  
   
-     — または —  
+     \- または -  
   
      [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を右クリックし、 **SSIS パッケージ**フォルダー、およびクリック**SSISImport およびエクスポート ウィザード**します。  
   
-     — または —  
+     \- または -  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の**プロジェクト**] メニューのをクリックして**SSISImport およびエクスポート ウィザード**します。  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の**プロジェクト** メニューのをクリックして**SSISImport およびエクスポート ウィザード**します。  
   
-     — または —  
+     \- または -  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続、[!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーの種類のデータベースを展開し、データベースを右クリックをポイントして**タスク**、] をクリックし、**データのインポート**または**データをエクスポート**.  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続、[!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーの種類のデータベースを展開し、データベースを右クリックをポイントして**タスク**、 をクリックし、**データのインポート**または**データをエクスポート**.  
   
-     — または —  
+     \- または -  
   
      コマンド プロンプト ウィンドウで、C:\Program Files\Microsoft SQL Server\100\DTS\Binn にある DTSWizard.exe を実行します。  
   
     > [!NOTE]  
-    >  64 ビット コンピューターには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって 64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード (DTSWizard.exe) がインストールされます。 ただし、Access や Excel など、一部のデータ ソースは、32 ビット プロバイダーでしか使用できません。 これらのデータ ソースを操作するには、32 ビット版のウィザードをインストールして実行することが必要になる場合があります。 ウィザードの 32 ビット バージョンをインストールするには、クライアント ツールを選択します。 または[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]セットアップ中にします。  
+    >  64 ビット コンピューターには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって 64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード (DTSWizard.exe) がインストールされます。 ただし、Access や Excel など、一部のデータ ソースは、32 ビット プロバイダーでしか使用できません。 これらのデータ ソースを操作するには、32 ビット版のウィザードをインストールして実行することが必要になる場合があります。 32 ビット版のウィザードをインストールするには、セットアップ中に [クライアント ツール] または [[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]] を選択します。  
   
 ### <a name="to-import-or-export-data-by-using-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートまたはエクスポートするには  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48100342"
     > [!NOTE]  
     >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle では、Oracle BLOB、CLOB、NCLOB、BFILE、および UROWID のデータ型はサポートされません。 したがって、OLE DB ソースで、これらのデータ型を使用する列が含まれるテーブルからデータを抽出することはできません。  
   
-     使用可能なデータの変換先は、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]データ プロバイダー、OLE DB プロバイダー、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、Excel、Access、およびフラット ファイル変換先。  
+     利用できるデータの変換先は、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー、OLE DB プロバイダー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、Excel、Access およびフラット ファイル変換先です。  
   
 3.  選択した変換先の種類に対応するオプションを設定します。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48100342"
   
         |プロパティ|値|  
         |--------------|-----------|  
-        |[照合順序]|Latin1_General_CS_AS_KS_WS|  
+        |照合順序|Latin1_General_CS_AS_KS_WS|  
         |復旧モデル|[完全]|  
         |フルテキスト インデックスを使用する|True|  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48100342"
   
          変換元が [!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロバイダーの場合は、DBCommand 文字列をクエリとして提供し、クエリ結果をコピーするオプションも使用できます。  
   
-         ソース データが、ビューの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードか、コピー先のテーブルに、ビューが自動的に変換します。  
+         変換元のデータがビューの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでは、変換先でビューがテーブルに自動的に変換されます。  
   
     -   変換先テーブルを削除して再作成するかどうか、および ID 挿入を許可するかどうかを示します。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48100342"
   
      パッケージを保存する際に、パッケージの保護レベルを設定し、パスワードを使用する保護レベルの場合はパスワードを指定できます。 パッケージの保護レベルの詳細については、次を参照してください。[パッケージ内の機密データのアクセス制御](../security/access-control-for-sensitive-data-in-packages.md)します。  
   
-     ウィザードを起動する場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プロジェクト[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、ウィザードからパッケージを実行することはできません。 代わりに、ウィザードを起動した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトにパッケージが追加されます。 パッケージを実行することができますし、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]します。  
+     ウィザードを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] プロジェクトから起動した場合、ウィザードからパッケージを実行することはできません。 代わりに、ウィザードを起動した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトにパッケージが追加されます。 パッケージは、その後、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で実行できます。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]、ウィザードによって作成されたパッケージを保存するオプションは使用できません。  

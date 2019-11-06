@@ -9,11 +9,11 @@ ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62683696"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 マップは、地理的データを視覚化するための優れた方法です。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] は、3 種類のマップの視覚エフェクト、および大陸と多数の個々の国の組み込みのマップを提供します。 [カスタム マップをアップロードして使用する](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)こともできます。   
@@ -34,7 +34,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
   
 1. **[レイアウト]** タブで、マップの種類を選択して、それをデザイン画面にドラッグし、必要なサイズにします。  
   
-2. **[レイアウト]** ビュー、**[表示プロパティ]** パネル、**[マップ]** の順に選択し、必要な特定のマップ領域を選択します。  
+2. **[レイアウト]** ビュー、 **[表示プロパティ]** パネル、 **[マップ]** の順に選択し、必要な特定のマップ領域を選択します。  
   
    ![SSMRP_SelectMap](../../reporting-services/mobile-reports/media/ssmrp-selectmaps.png)  
   
@@ -63,7 +63,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
 3. 目的のワークシートを選択し、 **[インポート]** を選択します。  
    [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]でデータを確認します。  
   
-4. **[データ]** ビュー、**[データのプロパティ]** パネル、**[キー]** の順に移動して、左のボックスからマップ データを含むテーブルを選択し、右のボックスから、マップ内の領域に一致するキー フィールドを選択します。  
+4. この **[データ]** ビュー、 **[データのプロパティ]** パネル、 **[キー]** の順に移動して、左のボックスからマップ データを含むテーブルを選択し、右のボックスから、マップ内の領域に一致するキー フィールドを選択します。  
   
 5. **[値]** の下で、同じテーブルが既に左のボックスにあります。 マップに表示する値を持つ数値フィールドを選択します。   
   

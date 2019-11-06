@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0c8b90f1f54df4bf6f7a253e582a12a65b49bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 816f5c563713eaa59337d765a7ccadafbd5c73a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079383"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +51,8 @@ GO
 SELECT d.definition   
 FROM sys.default_constraints AS d  
 INNER JOIN sys.columns AS c  
-ON d.parent_column_id = c.column_id  
+ON d.parent_object_id = c.object_id
+AND d.parent_column_id = c.column_id  
 WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')  
 AND c.name = 'VacationHours';  
 ```  

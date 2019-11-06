@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
@@ -12,18 +12,18 @@ ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63233080"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>以前のバージョンの SQL Server における、新しい日付または時刻の機能の動作 (OLE DB)
   このトピックでは、強化された日付と時刻の機能を使用するクライアント アプリケーションのバージョンと通信する場合に想定される動作を説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、クライアントのバージョンでコンパイルされたときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]強化された日付と時刻の機能をサポートするサーバーへのコマンドを送信します。  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
- バージョンを使用するクライアント アプリケーション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client より前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]として新しい日付/時刻型を参照してください。`nvarchar`列。 列のコンテンツはリテラル表現になります。 詳細については、の「データ形式: 文字列とリテラルをデータする"セクションを参照してください。 [OLE DB の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-ole-db-date-and-time-improvements.md)します。 列のサイズは、列に指定された有効桁数に対するリテラルの最大長です。  
+ バージョンを使用するクライアント アプリケーション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client より前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]として新しい日付/時刻型を参照してください。`nvarchar`列。 列のコンテンツはリテラル表現になります。 詳細については、次を参照してください。、"データ形式。文字列とリテラル」のセクション[OLE DB の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-ole-db-date-and-time-improvements.md)します。 列のサイズは、列に指定された有効桁数に対するリテラルの最大長です。  
   
  カタログ API によって、クライアントに返される下位データ型のコード (`nvarchar` など) および関連する下位の表現 (適切なリテラル形式など) と一貫性のあるメタデータが返されます。 ただし、返されるデータ型名は、実際の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の型名です。  
   
@@ -35,8 +35,8 @@ ms.locfileid: "48125504"
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
 |DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部が 0 以外の場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
-|DBTYPE_DBTIME||Time(7)|失敗します (時刻リテラルが無効です)。|[OK]|  
-|DBTYPE_DBTIMESTAMP|||失敗します (時刻リテラルが無効です)。|[OK]|  
+|DBTYPE_DBTIME||Time(7)|失敗する-無効な時刻のリテラルです。|[OK]|  
+|DBTYPE_DBTIMESTAMP|||失敗する-無効な時刻のリテラルです。|[OK]|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP||datetime2 (7)|[OK]|[OK]|  
 |DBTYPE_DBDATE|Smalldatetime|date|[OK]|[OK]|  
@@ -128,13 +128,13 @@ ms.locfileid: "48125504"
 #### <a name="providertypes-rowset"></a>PROVIDER_TYPES 行セット  
  日付/時刻型に対して返される行を次に示します。  
   
-|型 -><br /><br /> [列]|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|型 -> します。<br /><br /> [列]|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], replaying traces
@@ -16,12 +15,12 @@ ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 447792a89be970078fdfca3f1e79eadbcc25bbfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62688596"
 ---
 # <a name="replay-requirements"></a>再生を実行するための必要条件
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または Distributed Replay Utility を使用してトレース データを再生するには、特定のイベント クラスと列のセットがトレースにキャプチャされている必要があります。 **TSQL_Replay** トレース テンプレートを使用して、後で再生に使用するトレースを構成した場合、これらの設定は既定で有効になります。 このトピックでは、これらの設定と、再生を実行するためのその他の必要条件について説明します。  
@@ -124,7 +123,7 @@ ms.locfileid: "48173672"
  トレースの再生に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](sql-server-profiler.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [トレース テーブルを再生&#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [トレース テーブルを再生する &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを再生する &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server イベント クラスの参照](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql)   

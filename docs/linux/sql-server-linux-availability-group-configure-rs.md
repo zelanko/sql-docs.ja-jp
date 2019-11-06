@@ -1,30 +1,29 @@
 ---
-title: Linux 上の読み取りスケールの SQL Server 可用性グループの構成 |Microsoft Docs
-description: ''
+title: Linux で読み取りスケールの SQL Server 可用性グループを構成する
+titleSuffix: SQL Server
+description: Linux で読み取りスケールのワークロード用に SQL Server Always On 可用性グループ (AG) を構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.date: 02/14/2018
+ms.reviewer: vanto
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: bbacb8630acf10b5c9d20c50ad40cfba3f036a7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677462"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68027260"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux 上の読み取りスケールの SQL Server 可用性グループの構成します。
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux で読み取りスケールの SQL Server 可用性グループを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Linux で、SQL Server 常にで可用性グループ (AG) の読み取りスケール ワークロードを構成できます。 AG には 2 種類のアーキテクチャがあります。 高可用性のアーキテクチャでは、クラスター マネージャーを使用して、改善されたビジネス継続性を提供します。 このアーキテクチャは、読み取りスケール レプリカも含めることができます。 高可用性アーキテクチャを作成するを参照してください。[を構成する SQL Server Always On 可用性グループの Linux での高可用性](sql-server-linux-availability-group-configure-ha.md)します。 その他のアーキテクチャでは、読み取りスケール ワークロードのみをサポートします。 この記事では、読み取りスケール ワークロードの場合で、クラスター マネージャーがない AG を作成する方法について説明します。 このアーキテクチャは、読み取りスケールのみを提供します。 高可用性は提供されません。
+Linux で読み取りスケールのワークロード用に SQL Server Always On 可用性グループ (AG) を構成できます。 AG には 2 種類のアーキテクチャがあります。 高可用性向けのアーキテクチャでは、クラスター マネージャーを使用して、向上した事業継続性が提供されます。 また、このアーキテクチャには、読み取りスケールのレプリカを含めることもできます。 高可用性アーキテクチャを作成するには、「[Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する](sql-server-linux-availability-group-configure-ha.md)」をご覧ください。 その他のアーキテクチャでは、読み取りスケール ワークロードのみをサポートします。 この記事では、読み取りスケール ワークロードの場合で、クラスター マネージャーがない AG を作成する方法について説明します。 このアーキテクチャは、読み取りスケールのみを提供します。 高可用性は提供されません。
 
->[!NOTE]
->`CLUSTER_TYPE = NONE` による可用性グループには、さまざまなオペレーティング システム プラットフォームでホストされているレプリカを含めることができます。 高可用性はサポートできません。 
+> [!NOTE]
+> `CLUSTER_TYPE = NONE` による可用性グループには、さまざまなオペレーティング システム プラットフォームでホストされているレプリカを含めることができます。 高可用性はサポートできません。 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -68,7 +67,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-この AG は高可用性構成ではありません。 高可用性を必要がある場合は」の手順に従ってください[Linux 上の SQL Server の Always On 可用性グループを構成する](sql-server-linux-availability-group-configure-ha.md)します。 含む AG を具体的には、作成`CLUSTER_TYPE=WSFC`(Windows) でまたは`CLUSTER_TYPE=EXTERNAL`(Linux) にします。 クラスタ リング Windows または Linux 上の Pacemaker をいずれかの Windows Server フェールオーバーを使用して、クラスター マネージャーと統合します。
+この AG は高可用性構成ではありません。 高可用性が必要な場合は、[Linux で SQL Server の Always On 可用性グループを構成する](sql-server-linux-availability-group-configure-ha.md)方法に関するページの手順に従ってください。 具体的には、`CLUSTER_TYPE=WSFC` (Windows) または `CLUSTER_TYPE=EXTERNAL` (Linux) で AG を作成します。 その後、Windows Server フェールオーバー クラスタリング (Windows) または Pacemaker (Linux) を使って、クラスター マネージャーと統合します。
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>読み取り専用セカンダリ レプリカに接続する
 
@@ -83,7 +82,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>次の手順
 
-* [分散型可用性グループを構成する](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [可用性グループの詳細](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [分散型可用性グループを構成する](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [可用性グループの詳細](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [強制手動フェールオーバーの実行](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-

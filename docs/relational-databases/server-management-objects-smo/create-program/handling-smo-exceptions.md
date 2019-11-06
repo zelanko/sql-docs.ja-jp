@@ -13,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, exceptions
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c60f391f1429b8693feaee5c2d8e9716a3d74bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fdf4e03eeb839aad74588f3fb338d10fc949220
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823280"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148702"
 ---
 # <a name="handling-smo-exceptions"></a>SMO 例外の処理
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,23 +30,23 @@ ms.locfileid: "47823280"
   
  SMO にはさまざまな例外クラスが存在します。 例外の詳細は、例外に関するテキスト メッセージを指定している **Message** プロパティなどの例外プロパティから抽出することができます。  
   
- 例外処理ステートメントは、プログラミング言語に固有です。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic では、**キャッチ**ステートメント。  
+ 例外処理ステートメントは、プログラミング言語に固有です。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic では、 **Catch** ステートメントとなります。  
   
 ## <a name="inner-exceptions"></a>内部例外  
  例外は、一般または固有のどちらかです。 一般例外には、固有の例外のセットが含まれています。 いくつかの **Catch** ステートメントを使用して、予想されるエラーの処理を行い、残りのエラーを一般例外の処理コードでは処理されないようにすることができます。 例外は、連鎖シーケンスによってしばしば発生します。 SMO 例外が、別の SQL 例外によって生じていることが少なくありません。 これを検出する方法は、 **InnerException** プロパティを連続的に使用して、最終的なトップレベル例外を発生している元の例外を判断します。  
   
 > [!NOTE]  
->  **SQLException**で例外が宣言されている、 **System.Data.SqlClient**名前空間。  
+>  **SQLException**例外は、system.string 名前空間で宣言されています。  
   
- ![元のレベルを示す図を図](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "を元のレベルを示す図を図")  
+ ![Excp からのレベルを示す図](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Excp からのレベルを示す図")  
   
  このダイアグラムは、アプリケーションの層を通じた例外のフローを示しています。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Visual Basic での例外のキャッチ  
- このコード例を使用する方法を示しています、**お試しください.キャッチしてください.最後に**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 例外をキャッチするステートメント。 SMO 例外はすべて SmoException 型であり、これらは SMO のリファレンスに一覧されています。 エラーの原因を示すために、内部例外のシーケンスが表示されます。 詳細については、次を参照してください。、 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET ドキュメント。  
+ このコード例を使用する方法を示しています、**Try...Catch...Finally**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 例外をキャッチするステートメント。 SMO 例外はすべて SmoException 型であり、これらは SMO のリファレンスに一覧されています。 エラーの原因を示すために、内部例外のシーケンスが表示されます。 詳細については、 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET のマニュアルを参照してください。  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
@@ -84,7 +83,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Visual C# での例外のキャッチ  
- このコード例では、 **Try…Catch…Finally** Visual C# ステートメントを使用して SMO 例外をキャッチする方法を示しています。 SMO 例外はすべて SmoException 型であり、これらは SMO のリファレンスに一覧されています。 エラーの原因を示すために、内部例外のシーケンスが表示されます。 詳細については、C# のドキュメントを参照してください。  
+ このコード例では、次のように使用する方法を示します。 **キャッチ...最後**にC# 、SMO 例外をキャッチするための Visual ステートメント。 SMO 例外はすべて SmoException 型であり、これらは SMO のリファレンスに一覧されています。 エラーの原因を示すために、内部例外のシーケンスが表示されます。 詳細については、C# のドキュメントを参照してください。  
   
 ```csharp  
 {   

@@ -24,22 +24,19 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521223"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278193"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 この関数は、指定された *date* の指定された *datepart* を表す整数を返します。
   
@@ -122,7 +119,7 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>week および weekday (datepart 引数)
 **week** (**wk**、**ww**) または **weekday** (**dw**) *datepart* の場合、`DATEPART` の戻り値は、[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) で設定された値によって変わります。
   
-任意の年の 1 月 1 日が、**week**_datepart_ の開始番号と定義されます。 例 :
+任意の年の 1 月 1 日が、**week**_datepart_ の開始番号と定義されます。 例:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
@@ -153,7 +150,7 @@ SET DATEFIRST 7 -- ( Sunday )
 ## <a name="year-month-and-day-datepart-arguments"></a>year、month、day (datepart 引数)  
 DATEPART (**year**, *date*)、DATEPART (**month**, *date*)、DATEPART (**day**, *date*) で返される値は、それぞれ [YEAR](../../t-sql/functions/year-transact-sql.md)、[MONTH](../../t-sql/functions/month-transact-sql.md)、[DAY](../../t-sql/functions/day-transact-sql.md) の各関数で返される値と同じです。
   
-## <a name="isoweek-datepart"></a>ISO_WEEK (datepart)  
+## <a name="iso_week-datepart"></a>ISO_WEEK (datepart)  
 ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されています。 それぞれの週は、木曜日が出現する年と関連付けられます。 たとえば、2004 年の第 1 週 (2004W01) は、2003 年 12 月 29 日月曜日から 2004 年 1 月 4 日 日曜日です。 ヨーロッパの国/地域では、通常、このスタイルの付番方式が使用されます。 通常、ヨーロッパ以外の国/地域はこの方式を使用しません。
 
 注: 1 年の最大週番号は 52 または 53 のいずれかになります。
@@ -162,12 +159,12 @@ ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されていま
   
 |週の最初の曜日|年の最初の週の構成|2 回割り当てられる週の有無|利用されている地域|  
 |---|---|---|---|
-|日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 から 7 日間|[ユーザー アカウント制御]|United States|  
-|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 から 7 日間|[ユーザー アカウント制御]|欧州およびイギリス|  
-|月曜日|4 月は 1 月<br /><br /> 最初の木曜日<br /><br /> 年の 4 から 7 日間|いいえ|ISO 8601、ノルウェー、およびスウェーデン|  
-|月曜日|7 月は 1 月<br /><br /> 最初の月曜日<br /><br /> 年の 7 日間|いいえ||  
-|水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 から 7 日間|[ユーザー アカウント制御]||  
-|土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 から 7 日間|[ユーザー アカウント制御]||  
+|日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 から 7 日間|はい|United States|  
+|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 から 7 日間|はい|欧州およびイギリス|  
+|月曜日|1 月 4 日<br /><br /> 最初の木曜日<br /><br /> 年の 4 から 7 日間|いいえ|ISO 8601、ノルウェー、およびスウェーデン|  
+|月曜日|1 月 7 日<br /><br /> 最初の月曜日<br /><br /> 年の 7 日間|いいえ||  
+|水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 から 7 日間|はい||  
+|土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 から 7 日間|はい||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` は、符号付きの分数として **TZoffset** (**tz**) 値を返します。 次のステートメントは、310 分のタイム ゾーン オフセットを返します。
@@ -187,7 +184,7 @@ SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');
 ## <a name="default-returned-for-a-datepart-that-is-not-in-a-date-argument"></a>date 引数に存在しない datepart を指定した場合に返される既定値  
 *date* 引数のデータ型に指定した *datepart* がない場合、リテラルが *date* に指定されている場合にのみ、`DATEPART` はその *datepart* の既定値を返します。
   
-* * など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。このステートメントは `1900, 1, 1, 1, 2` を返します。
+など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。このステートメントは `1900, 1, 1, 1, 2` を返します。
   
 ```sql
 SELECT DATEPART(year, '12:10:30.123')  
@@ -197,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-*date* が変数またはテーブル列として指定され、その変数または列のデータ型に *datepart* が指定されていない場合、`DATEPART` はエラー 9810 を返します。 この例では、変数 *@t* に **time** データ型があります。 **time** データ型の日付部分の年度が無効なため、この例は失敗します。
+*date* が変数またはテーブル列として指定され、その変数または列のデータ型に *datepart* が指定されていない場合、`DATEPART` はエラー 9810 を返します。 この例では、変数 *\@t* は **time** データ型です。 **time** データ型の日付部分の年度が無効なため、この例は失敗します。
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -216,7 +213,7 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
 ## <a name="remarks"></a>Remarks  
 `DATEPART` は、選択リスト、WHERE、HAVING、GROUP BY、および ORDER BY 句で使用できます。
   
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DATEPART は文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、DATENAME では、日付が文字列として渡される場合、YDM 形式をサポートしません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DATEPART は文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、DATENAME では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
 ## <a name="examples"></a>使用例  
 この例では、基準年を返します。 この基準年は、日付の計算に役立ちます。 この例では、数値で日付を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、0 を 1900 年 1 月 1 日と解釈することに注意してください。

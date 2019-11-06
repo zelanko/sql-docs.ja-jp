@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio]
@@ -14,12 +14,12 @@ ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a30c0ffe6aabe46866d6b2e09b945bc1682898ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62823801"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
   特定の言語や特定のプラットフォームでコードを正しく表示するために、特定の文字エンコードをファイルに関連付けることができます。  

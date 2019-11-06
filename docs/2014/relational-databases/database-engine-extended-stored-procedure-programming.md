@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], programming
@@ -18,12 +16,12 @@ ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be87d9dc0725961200af983e79bc608a2056f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917821"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>データベース エンジン拡張ストアド プロシージャ プログラミング
     

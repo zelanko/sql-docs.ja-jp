@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a4f4831bb8ab288e2dcdf2770936084d0492a91e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059486"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>[ディメンション処理変換先エディター] ([詳細設定] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を構成できます。  
@@ -93,14 +92,14 @@ ms.locfileid: "48085339"
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[エラー ログのパス]**  
- エラー ログのパスを入力するか、 **[…]** をクリックしてログの保存先を選択します。  
+ エラー ログのパスを入力するか、 **[...]** ボタンをクリックしてログの保存先を選択します。  
   
  **[...]**  
  エラー ログのパスを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [ディメンション処理変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [ディメンション処理変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
+ [ディメンション処理変換先エディター ([接続マネージャー] ページ)](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
+ [ディメンション処理変換先エディター ([マッピング] ページ)](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   
   

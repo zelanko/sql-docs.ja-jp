@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa5998d240b447b4204528af6c89e9c202e5963e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5a869d38782478b69ce47656455c38c2b4645b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005744"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLProcedureColumns**入力と出力のパラメーターとして指定したプロシージャの結果セットを構成する列の一覧を返します。 ドライバーは、指定したステートメントの結果として設定情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedureColumns(  
      SQLHSTMT      StatementHandle,  
@@ -78,7 +77,7 @@ SQLRETURN SQLProcedureColumns(
  *NameLength3*  
  [入力]文字の長さ **ProcName*します。  
   
- *ColumnName*  
+ *[ColumnName]*  
  [入力]列名の文字列の検索パターン。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*ColumnName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *ColumnName*パターン引数の値は、; 文字どおり、扱われ、そのケースは重要です。  
@@ -114,7 +113,7 @@ SQLRETURN SQLProcedureColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- この関数は、プロシージャのパラメーターと存在する場合、結果セットまたはプロシージャによって返されたセットを構成する列についての情報を取得するステートメントを実行する前に通常使用されます。 詳細については、次を参照してください。[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)します。  
+ この関数は、プロシージャのパラメーターと存在する場合、結果セットまたはプロシージャによって返されたセットを構成する列についての情報を取得するステートメントを実行する前に通常使用されます。 詳細については、「[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)」を参照してください。  
   
 > [!NOTE]  
 >  **SQLProcedureColumns**プロシージャで使用されるすべての列が返されない可能性があります。 たとえば、ドライバーは、プロシージャ、および生成の結果セットの列によって使用されるパラメーターに関する情報だけを返す可能性があります。  
@@ -161,21 +160,21 @@ SQLRETURN SQLProcedureColumns(
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|プロシージャのスキーマ名。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得するときなどに、他のユーザーではなく一部のプロシージャのスキーマをサポートする場合 ("") のスキーマはありません。 それらの手順。|  
 |PROCEDURE_NAME (ODBC 2.0)|3|NULL 以外の Varchar|プロシージャの名前。 空の文字列には、名前がないプロシージャが返されます。|  
 |COLUMN_NAME (ODBC 2.0)|4|NULL 以外の Varchar|プロシージャ列の名前。 ドライバーは、名前がないプロシージャ列の空の文字列を返します。|  
-|COLUMN_TYPE (ODBC 2.0)|5|Smallint (NULL 以外)|プロシージャのパラメーターとして列または結果セット列を定義します。<br /><br /> SQL_PARAM_TYPE_UNKNOWN: プロシージャの列は、パラメーターの型が不明です。 (ODBC 1.0)<br /><br /> SQL_PARAM_INPUT: プロシージャの列は、入力パラメーターです。 (ODBC 1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT: プロシージャの列は、入力/出力パラメーターです。 (ODBC 1.0)<br /><br /> SQL_PARAM_OUTPUT: プロシージャの列は、出力パラメーターです。 (ODBC 2.0)<br /><br /> SQL_RETURN_VALUE: プロシージャの列は、プロシージャの戻り値です。 (ODBC 2.0)<br /><br /> SQL_RESULT_COL: プロシージャの列は結果セットの列です。 (ODBC 1.0)|  
-|DATA_TYPE (ODBC 2.0)|6|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 Datetime と間隔のデータ型は、この列は、簡潔なデータ型 (たとえば、SQL_TYPE_TIME または SQL_INTERVAL_YEAR_TO_MONTH) を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
-|TYPE_NAME (ODBC 2.0)|7|NULL 以外の Varchar|データ ソースに依存するデータ型の名前。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR FOR BIT DATA ()」。|  
-|COLUMN_SIZE (ODBC 2.0)|8|Integer|データ ソースでプロシージャの列の列のサイズ。 NULL を返しますのデータ型の列のサイズは適用されません。 有効桁数をに関する詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。|  
-|BUFFER_LENGTH 列 (ODBC 2.0)|9|Integer|転送されるデータの長さ (バイト単位)、 **SQLGetData**または**SQLFetch** SQL_C_DEFAULT が指定されている場合に操作します。 数値データは、このサイズは、データ ソースに格納されたデータのサイズよりも異なる場合があります。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)、付録 d: データ型。|  
-|DECIMAL_DIGITS (ODBC 2.0)|10|Smallint|データ ソースでプロシージャの列の 10 進数字。 NULL を返しますのデータ型の 10 進数字は適用されません。 詳細については 10 進数字、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)、付録 d: データ型。|  
+|COLUMN_TYPE (ODBC 2.0)|5|Smallint (NULL 以外)|プロシージャのパラメーターとして列または結果セット列を定義します。<br /><br /> SQL_PARAM_TYPE_UNKNOWN:プロシージャの列は、パラメーターの型が不明です。 (ODBC 1.0)<br /><br /> SQL_PARAM_INPUT:プロシージャの列は、入力パラメーターです。 (ODBC 1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT:プロシージャの列は、入力/出力パラメーターです。 (ODBC 1.0)<br /><br /> SQL_PARAM_OUTPUT:プロシージャの列は、出力パラメーターです。 (ODBC 2.0)<br /><br /> SQL_RETURN_VALUE:プロシージャの列は、プロシージャの戻り値です。 (ODBC 2.0)<br /><br /> SQL_RESULT_COL:プロシージャの列は、結果セットの列です。 (ODBC 1.0)|  
+|DATA_TYPE (ODBC 2.0)|6|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 Datetime と間隔のデータ型は、この列は、簡潔なデータ型 (たとえば、SQL_TYPE_TIME または SQL_INTERVAL_YEAR_TO_MONTH) を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
+|TYPE_NAME (ODBC 2.0)|7|NULL 以外の Varchar|データ ソースに依存するデータ型名です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR FOR BIT DATA ()」。|  
+|COLUMN_SIZE (ODBC 2.0)|8|Integer|データ ソースでプロシージャの列の列のサイズ。 NULL を返しますのデータ型の列のサイズは適用されません。 有効桁数をに関する詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
+|BUFFER_LENGTH 列 (ODBC 2.0)|9|Integer|転送されるデータの長さ (バイト単位)、 **SQLGetData**または**SQLFetch** SQL_C_DEFAULT が指定されている場合に操作します。 数値データは、このサイズは、データ ソースに格納されたデータのサイズよりも異なる場合があります。 詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)、付録 d:。データ型。|  
+|DECIMAL_DIGITS (ODBC 2.0)|10|Smallint|データ ソースでプロシージャの列の 10 進数字。 NULL を返しますのデータ型の 10 進数字は適用されません。 詳細については 10 進数字、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)、付録 d:。データ型。|  
 |NUM_PREC_RADIX (ODBC 2.0)|11|Smallint|数値データ型の場合は、10、または 2 のいずれか。<br /><br /> 10 場合、COLUMN_SIZE と DECIMAL_DIGITS の値は、列に格納できる 10 進数字の数を提供します。 たとえば、DECIMAL(12,5) 列は 10、12、column_size 値と 5 は、DECIMAL_DIGITS の NUM_PREC_RADIX を返しますFLOAT 列では、10、15、column_size 値と NULL の DECIMAL_DIGITS の NUM_PREC_RADIX を返すことができます。<br /><br /> 2 の場合、COLUMN_SIZE と DECIMAL_DIGITS の値はビット列で許容数を提供します。 たとえば、FLOAT 列では、2 の 53、column_size 値と NULL の DECIMAL_DIGITS の NUM_PREC_RADIX を返すことができます。<br /><br /> NULL を返しますのデータ型 NUM_PREC_RADIX は適用されません。|  
-|NULL 許容型 (ODBC 2.0)|12|Smallint (NULL 以外)|かどうか、プロシージャの列は NULL 値を受け取ります。<br /><br /> SQL_NO_NULLS: プロシージャの列では NULL 値は受け入れられません。<br /><br /> SQL_NULLABLE: プロシージャの列は、NULL 値を指定できます。<br /><br /> SQL_NULLABLE_UNKNOWN: これは不明プロシージャの列が NULL 値を受け取る場合です。|  
+|NULL 許容型 (ODBC 2.0)|12|Smallint (NULL 以外)|かどうか、プロシージャの列は NULL 値を受け取ります。<br /><br /> SQL_NO_NULLS:プロシージャの列は NULL 値を受け入れられません。<br /><br /> SQL_NULLABLE:プロシージャの列は、NULL 値を指定できます。<br /><br /> SQL_NULLABLE_UNKNOWN:プロシージャの列が NULL 値を受け取る場合は不明です。|  
 |「解説」(ODBC 2.0)|13|Varchar|プロシージャの列の説明です。|  
 |COLUMN_DEF (ODBC 3.0)|14|Varchar|列の既定値です。<br /><br /> 既定値として NULL が指定されている場合、この列は null の場合、引用符で囲まれていない、単語になります。 場合は切り捨てることがなく、既定値を表すことができない、このコラムでそれを囲む単一引用符が切り捨てられて、含まれています。 既定値が指定されていない場合、この列は NULL を使用します。<br /><br /> COLUMN_DEF の値は、切り捨てられた値が含まれている場合を除き、新しい列定義の生成に使用できます。|  
-|SQL_DATA_TYPE (ODBC 3.0)|15|Smallint (NULL 以外)|記述子の SQL_DESC_TYPE フィールドとして、SQL データ型の値が表示されます。 この列は、datetime と間隔のデータ型を除く、DATA_TYPE 列と同じです。<br /><br /> Datetime と間隔のデータ型の SQL_INTERVAL または SQL_DATETIME、結果セットに SQL_DATA_TYPE フィールドを返すし、SQL_DATETIME_SUB フィールドには、特定の間隔または datetime データ型のサブコードが返されます。 (を参照してください[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。|  
+|SQL_DATA_TYPE (ODBC 3.0)|15|Smallint (NULL 以外)|記述子の SQL_DESC_TYPE フィールドとして、SQL データ型の値が表示されます。 この列は、datetime と間隔のデータ型を除く、DATA_TYPE 列と同じです。<br /><br /> Datetime と間隔のデータ型の SQL_INTERVAL または SQL_DATETIME、結果セットに SQL_DATA_TYPE フィールドを返すし、SQL_DATETIME_SUB フィールドには、特定の間隔または datetime データ型のサブコードが返されます。 (を参照してください[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。|  
 |SQL_DATETIME_SUB (ODBC 3.0)|16|Smallint|Datetime と間隔のデータ型のサブタイプ コード。 その他のデータ型の場合は、NULL が返されます。|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|17|Integer|文字またはバイナリ データの最大長 (バイト単位) は、列を入力します。 他のすべてのデータ型の場合、この列は NULL を返します。|  
 |ORDINAL_POSITION (ODBC 3.0)|18|Integer (NULL 以外)|入力と出力パラメーターの場合 (パラメーター、昇順に 1 から始まる) プロシージャの定義でパラメーターの序数位置。 戻り値 (ある場合)、0 が返されます。 結果内の列の序数位置が設定の結果セットの列に設定されている結果の最初の列番号は 1 です。 複数の結果セットがある場合は、ドライバー固有の方法で列の序数位置が返されます。|  
-|によって IS_NULLABLE (ODBC 3.0)|19|Varchar|"NO"、列に null 値が含まれていない場合。<br /><br /> "YES"場合は、列が null 値を含めることができます。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> NULL 値の許容属性の検査は ISO の規則に従います。 SQL の ISO 準拠の DBMS では、空の文字列を返すことはできません。<br /><br /> この列に返される値は、NULLABLE 列に返される値とは異なります。 (Null 許容の列の説明を参照してください)。|  
+|によって IS_NULLABLE (ODBC 3.0)|19|Varchar|"NO"、列に null 値が含まれていない場合。<br /><br /> "YES"場合は、列が null 値を含めることができます。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> NULL 値の許容属性の検査は ISO の規則に従います。 ISO SQL に準拠している DBMS では、空文字列を返すことはできません。<br /><br /> この列に返される値は、NULLABLE 列に返される値とは異なります。 (Null 許容の列の説明を参照してください)。|  
   
 ## <a name="code-example"></a>コード例  
  参照してください[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)します。  

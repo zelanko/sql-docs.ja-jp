@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce60db3b720b046c44d7507d3164c2f2e6c9173f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091262"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>アップグレード アドバイザーを使用したアップグレードの準備
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの準備に役立ちます。 アップグレード アドバイザーでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされたコンポーネントが分析され、アップグレードの前または後に修正する必要がある問題を示すレポートが生成されます。  
@@ -65,9 +64,9 @@ ms.locfileid: "48209292"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1、および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
--   Windows インストーラー 4.5 以降のバージョン。 Windows インストーラーをインストールすることができます、 [Windows インストーラー Web サイト](http://go.microsoft.com/fwlink/?LinkId=49112)します。  
+-   Windows インストーラー 4.5 以降のバージョン。 Windows インストーラーをインストールすることができます、 [Windows インストーラー Web サイト](https://go.microsoft.com/fwlink/?LinkId=49112)します。  
   
--   Microsoft .NET Framework 4。 .NET framework 4 がで使用できる、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、製品メディアとの間、 [.NET Framework 4 ダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=209895)します。  
+-   Microsoft .NET Framework 4。 .NET framework 4 がで使用できる、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、製品メディアとの間、 [.NET Framework 4 ダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=209895)します。  
   
     -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 \Redist フォルダーをダブルクリック、DotNetFrameworks フォルダーをダブルクリックし、dotNetFx40_Full_x86_x64.exe (32 ビット オペレーティング システムまたは 64 ビットのオペレーティング システム用) を実行します。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48209292"
   
  アップグレード アドバイザーをインストールした後からを開くことができます、**開始**メニュー。  
   
--   クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリックします**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**します。  
+-   クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリックします **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**します。  
   
  詳細については、アップグレード アドバイザーのダウンロードおよび [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリリース ノートに収録されているアップグレード アドバイザーのドキュメントを参照してください。  
   

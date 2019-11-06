@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], deploying
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a69f0a79ce10a17825490bd77e48a26d0d823af4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164415"
 ---
 # <a name="deploying-a-delivery-extension"></a>配信拡張機能の配置
   配信拡張機能では、その構成情報を XML 構成ファイルの形式で指定します。 XML ファイルは、配信拡張機能に定義された XML スキーマに従います。 配信拡張機能により、構成ファイルを設定および変更するためのインフラストラクチャが提供されます。  
@@ -37,9 +35,9 @@ ms.locfileid: "48184252"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 `Name` 属性の最大文字数は 255 文字です。 名前は内のすべてのエントリの中で一意である必要があります、`Extension`構成ファイルの要素。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
+|`Name`|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 `Name` 属性の最大文字数は 255 文字です。 名前は、構成ファイルの `Extension` 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |`Type`|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
-|`Visible`|`false` の値は、配信拡張機能がユーザー インターフェイスに表示されないことを示します。 属性が含まれない場合、既定値は`true`します。|  
+|`Visible`|`false` の値は、配信拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は `true` になります。|  
   
  RSReportServer.config ファイルの詳細については、「[Reporting Services 構成ファイル](../../report-server/reporting-services-configuration-files.md)」を参照してください。  
   
@@ -55,7 +53,7 @@ ms.locfileid: "48184252"
   
 2.  アセンブリ ファイルをコピーした後、RSReportServer.config ファイルを開きます。 RSReportServer.config ファイルは %programfiles%\microsoft SQL server \msrs10_50. にあります。\<InstanceName > \reporting ディレクトリ。 配信拡張機能アセンブリ ファイルの構成ファイルにエントリを作成する必要があります。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] またはメモ帳などの簡単なテキスト エディターを使用して、構成ファイルを開くことができます。  
   
-3.  検索、 `Delivery` RSReportServer.config ファイル内の要素。 新しく作成した配信拡張機能のエントリは、次の場所に作成する必要があります。  
+3.  RSReportServer.config ファイルで `Delivery` 要素を探します。 新しく作成した配信拡張機能のエントリは、次の場所に作成する必要があります。  
   
     ```  
     <Extensions>  
@@ -99,7 +97,7 @@ ms.locfileid: "48184252"
   
 2.  アセンブリ ファイルをコピーした後、RSReportServer.config ファイルを開きます。 RSReportServer.config ファイルは %programfiles%\microsoft SQL server \msrs10_50. にあります。\<InstanceName > \reporting ディレクトリ。 配信拡張機能アセンブリ ファイルの構成ファイルにエントリを作成する必要があります。 Visual Studio .NET またはメモ帳などの単純なテキスト エディターで、構成ファイルを開くことができます。  
   
-3.  検索、 `DeliveryUI` RSReportServer.config ファイル内の要素。 新しく作成した配信拡張機能のエントリは、次の場所に作成する必要があります。  
+3.  RSReportServer.config ファイルで `DeliveryUI` 要素を探します。 新しく作成した配信拡張機能のエントリは、次の場所に作成する必要があります。  
   
     ```  
     <Extensions>  

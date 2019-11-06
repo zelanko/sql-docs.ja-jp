@@ -10,16 +10,15 @@ helpviewer_keywords:
 - statistics [SQL Server], deleting
 - deleting statistics
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67459766dbed0b6dd135e6fbfe6cd0ce43073577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 588531a01a12dcec1a4832241e29dab38841f944
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842300"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906320"
 ---
 # <a name="delete-statistics"></a>統計の削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47842300"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブルまたはビューから統計を削除するために使用するもの:**  
   
@@ -39,7 +38,7 @@ ms.locfileid: "47842300"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -67,7 +66,7 @@ ms.locfileid: "47842300"
 5.  削除する統計オブジェクトを右クリックして、 **[削除]** をクリックします。  
   
 6.  **[オブジェクトの削除]** ダイアログ ボックスで、正しい統計が選択されていることを確認し、 **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>テーブルまたはビューから統計を削除するには  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
@@ -14,12 +13,12 @@ ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17ea214c6e9dacb8517c42e7cb62141b92ef1ccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31e69ddc36079c993e66a7e9253bfdd178057302
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071556"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>データ フィード ライブラリの作成またはカスタマイズ (PowerPivot for SharePoint)
   *データ フィード ライブラリ* は、特殊な用途の SharePoint ライブラリです。このライブラリでは、Atom データ サービス ドキュメント (.atomsvc) を登録して共有できます。 これらのドキュメントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックまたは Atom データ フィード形式をサポートするその他のクライアント アプリケーションに XML データ フィードを提供します。 データ フィード ライブラリは、以下を実行できる点で他の SharePoint ライブラリとは異なります。  
@@ -28,7 +27,7 @@ ms.locfileid: "48126692"
   
 -   集中管理された場所でデータ サービス ドキュメントを共有および管理できます。  
   
--   同じライブラリに格納されている他のドキュメントからサービス ドキュメントを簡単に区別できるように、アイコンでデータ サービス ドキュメントを視覚的に識別: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   データ サービス ドキュメントがアイコン () で視覚的に示されるため、サービス ドキュメントを同じライブラリに格納されている他のドキュメントと簡単に区別できます。![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  データ フィード ライブラリには、データ フィード自体ではなく、常にデータ サービス ドキュメント (.atomsvc) ファイルが格納されます。 静的な XML データで構成されるデータ フィードとは異なり、データ サービス ドキュメントでは、要求時にフィードを生成するサービスまたはアプリケーションの URL を指定します。そのため、反復可能なインポート操作で接続情報を再利用できます。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48126692"
   
 1.  ページの左上にある **[サイトの操作]** をクリックします。  
   
-2.  **[その他のオプション…]** をクリックします。  
+2.  クリックして**より多くのオプション**.  
   
 3.  [ライブラリ] の **[データ フィード ライブラリ]** をクリックします。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48126692"
   
  データ フィード登録ドキュメントを作成または編集するライブラリごとに、次の手順を繰り返す必要があります。  
   
-#### <a name="step-1-enable-content-type-management"></a>手順 1: コンテンツ タイプを管理できるようにする  
+#### <a name="step-1-enable-content-type-management"></a>手順 1:コンテンツの種類の管理を有効にします。  
   
 1.  複数のコンテンツ タイプを有効にする対象のドキュメント ライブラリを開きます。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "48126692"
   
 7.  **[OK]** をクリックします。  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>手順 2: データ サービス ドキュメント コンテンツ タイプを追加する  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>手順 2:データ サービス ドキュメント コンテンツ タイプを追加します。  
   
 1.  [コンテンツ タイプ] セクションの **[既存のサイト コンテンツ タイプから追加]** をクリックします。 このページが表示されない場合は、サイトに戻って [ライブラリ ツール] の **[ライブラリ]** をクリックし、 **[ライブラリの設定]** をクリックします。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48126692"
   
 5.  **[OK]** をクリックします。  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>手順 3: データ サービス ドキュメントの構成を確認する  
+#### <a name="step-3-verify-data-service-document-configuration"></a>手順 3:データ サービス ドキュメントの構成を確認します。  
   
 1.  サイトのホーム ページを開きます。  
   

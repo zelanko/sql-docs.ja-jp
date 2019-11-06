@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105222"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 関数 (レポート ビルダーおよび SSRS)
   名前と値のペアを含むデータセットから、指定された名前に最初に一致した値を返します。  
@@ -45,12 +44,12 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  レポート内のデータセットの名前を指定する定数。 たとえば、"Products" などです。  
   
 ## <a name="return"></a>戻り値  
- 返します、 `Variant`、または`Nothing`一致が存在しない場合。  
+ `Variant` を返します。一致する結果がなかった場合は、`Nothing` を返します。  
   
 ## <a name="remarks"></a>コメント  
- 使用`Lookup`名前/値ペアの指定したデータセットから値を取得する 1-1 のリレーションシップがある場合。 たとえば、テーブル内の ID フィールドに対して `Lookup` を使用して、データ領域にバインドされていないデータセットから対応する Name フィールドを取得することができます。  
+ 指定したデータセットで、名前と値のペアについて 1 対 1 のリレーションシップが存在する場合、`Lookup` を使用して値を取得します。 たとえば、テーブル内の ID フィールドに対して `Lookup` を使用して、データ領域にバインドされていないデータセットから対応する Name フィールドを取得することができます。  
   
- `Lookup` 次を行います。  
+ `Lookup` を実行すると、次の処理が行われます。  
   
 -   ソースの式を現在のスコープ内で評価します。  
   
@@ -72,7 +71,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   変換元、変換先、結果の式には、レポート変数またはグループ変数への参照を含めることができません。  
   
--   `Lookup` 次のレポート アイテムの式として使用できません。  
+-   `Lookup` は、次のレポート アイテムを求める式として使用することはできません。  
   
     -   データ ソースの動的な接続文字列。  
   
@@ -98,9 +97,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

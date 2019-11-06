@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022515"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
   Oracle データベースからのパブリッシュは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
@@ -60,7 +59,7 @@ ms.locfileid: "48191472"
   
 -   入れ子になったテーブル  
   
--   ビュー  
+-   Views  
   
 -   パッケージ、パッケージ本体、プロシージャ、およびトリガー  
   
@@ -104,7 +103,7 @@ ms.locfileid: "48191472"
   
  以下の問題についても考慮に入れてください。  
   
--   Oracle および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、NULL の扱いが異なります。Oracle では、NULL を許容する列に NULL 値が指定された複数の行を許可し、一意の制約またはインデックスに含めることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
+-   Oracle および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は NULL の扱いが異なります。Oracle では、NULL を許容する列に NULL 値が指定された複数の行を許可し、一意の制約またはインデックスに含めることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
   
 -   一意性をテストする場合、フィールドの後続の空白は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では無視されますが、Oracle では無視されません。  
   
@@ -136,7 +135,7 @@ ms.locfileid: "48191472"
   
 -   Oracle パブリケーションに対するサブスクライバーは、バックアップから自動的に初期化することはできません。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[Validate Replicated Data](../validate-replicated-data.md)」 (レプリケートされたデータの検証) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[Validate Replicated Data](../validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
   
@@ -150,7 +149,7 @@ ms.locfileid: "48191472"
   
 -   スナップショット エージェントおよびログ リーダー エージェントがディストリビューターからパブリッシャーへの接続に使用するアカウントは、次のいずれかの方法で指定されます。  
   
-    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) の **@security_mode** パラメーター (Oracle 認証が使用される場合、**@login** と **@password** にも値を指定します)  
+    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) の **@security_mode** パラメーター (Oracle 認証が使用される場合、 **@login** と **@password** にも値を指定します)  
   
     -   SQL Server Management Studio の **[サーバーへの接続]** ダイアログ ボックス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーを構成するときに、これを使用します。  
   
@@ -164,7 +163,7 @@ ms.locfileid: "48191472"
   
     -   [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) または [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql) から **@job_login** パラメーターを変更することはできませんが、パスワードは変更できます。  
   
- レプリケーション セキュリティの詳細については、「[セキュリティと保護 (レプリケーション)](../security/security-and-protection-replication.md)」を参照してください。  
+ レプリケーション セキュリティの詳細については、次を参照してください。 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの管理上の注意点](administrative-considerations-for-oracle-publishers.md)   

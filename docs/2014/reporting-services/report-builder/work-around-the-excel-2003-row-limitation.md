@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a62bcfa9958a19b9e0692caceaa455401d2677f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107549"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Excel の行制限を回避する
   このトピックでは、Excel にレポートをエクスポートときに Excel 2003 の行制限を回避する方法について説明します。 回避策は、テーブルのみを含むレポート向けのものです。  

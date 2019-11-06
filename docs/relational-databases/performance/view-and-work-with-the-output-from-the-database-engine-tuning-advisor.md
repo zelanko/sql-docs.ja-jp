@@ -23,15 +23,14 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662261"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907035"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "51662261"
  また、GUI を使用して、 **dta** コマンド ライン ユーティリティによって生成したチューニング出力を表示できます。  
   
 > [!NOTE]  
->  **dta** コマンド ライン ユーティリティを使用し、 **-ox** 引数を使用して出力を XML ファイルに書き込むように指定した場合は、 **の** [ファイル] **メニューの** [ファイルを開く] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をクリックすると、XML 出力ファイルを開いて表示できます。 詳細については、「 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)」を参照してください。 **dta** コマンド ライン ユーティリティの詳細については、「 [dta ユーティリティ](../../tools/dta/dta-utility.md)」を参照してください。  
+>  **dta** コマンド ライン ユーティリティを使用し、 **-ox** 引数を使用して出力を XML ファイルに書き込むように指定した場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]** メニューの **[ファイルを開く]** をクリックすると、XML 出力ファイルを開いて表示できます。 詳細については、「 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)」を参照してください。 **dta** コマンド ライン ユーティリティの詳細については、「 [dta ユーティリティ](../../tools/dta/dta-utility.md)」を参照してください。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザーの GUI を使用してチューニングに関する推奨設定を表示するには  
   
@@ -61,7 +60,7 @@ ms.locfileid: "51662261"
 5.  **[推奨設定]** タブ ページの下部にある **[既存のオブジェクトを表示する]** をオフにします。 これによって、推奨設定で参照されるデータベース オブジェクトのみがグリッドに表示されます。 下部のスクロール バーを使用して推奨設定のグリッド内の右端の列を表示し、 **[定義]** 列の項目をクリックして、データベース内にそのオブジェクトを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの表示またはコピーを行います。  
   
 6.  この推奨設定内のすべてのデータベース オブジェクトの作成または削除を行う [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを 1 つのスクリプト ファイルにすべて保存するには、 **[アクション]** メニューの **[推奨設定の保存]** をクリックします。  
-  
+
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザーの GUI を使用してチューニング サマリーとレポートを表示するには  
   
 1.  データベース エンジン チューニング アドバイザーの GUI または **dta** コマンド ライン ユーティリティを使用してデータベースをチューニングします。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションを使用しない場合は、この手順を省略して手順 2. に進みます。  
@@ -80,7 +79,7 @@ ms.locfileid: "51662261"
   
 2.  データベース エンジン チューニング アドバイザー GUI を起動します。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションのチューニング サマリーおよびレポートを表示するには、 **[セッション モニター]** ウィンドウでセッション名をダブルクリックしてセッションを開きます。  
   
-3.  新しいチューニング セッションの完了後またはツールによって既存のセッションが読み込まれた後に、 **[進行状況]** タブをクリックします。**[チューニング ログ]** ペインにログの内容が表示されます。 ログには、データベース エンジン チューニング アドバイザーが分析できなかったワークロード イベントに関する情報が含まれています。  
+3.  新しいチューニング セッションの完了後またはツールによって既存のセッションが読み込まれた後に、 **[進行状況]** タブをクリックします。 **[チューニング ログ]** ペインにログの内容が表示されます。 ログには、データベース エンジン チューニング アドバイザーが分析できなかったワークロード イベントに関する情報が含まれています。  
   
      チューニング セッションのすべてのイベントがデータベース エンジン チューニング アドバイザーによって分析された場合は、セッションのチューニング ログが空であるというメッセージが表示されます。 チューニング セッションを実行したときに、 **[全般]** タブの **[チューニング ログを保存する]** が最初からオフであった場合は、そのことを示すメッセージが表示されます。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "51662261"
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
-5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするときに、次の場所にこのスキーマがインストールされます。  
+5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするときに、次の場所にこのスキーマがインストールされます。  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  

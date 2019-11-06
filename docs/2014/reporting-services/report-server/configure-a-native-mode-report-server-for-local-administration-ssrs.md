@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - UAC
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - windows server 2008
 - Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104188"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
   レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 インストールまたは、レポート サーバーの構成がされていないを参照してください[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)と[Reporting Services ネイティブ モード レポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md).  
@@ -119,7 +118,7 @@ ms.locfileid: "48189072"
 2.  ホーム ページの上隅にある **[サイトの設定]** をクリックします。  
   
     > [!TIP]  
-    >  **注:** **[サイトの設定]** オプションが表示されない場合は、ブラウザーを閉じて、管理者特権を使用してもう一度開き、レポート マネージャーを参照してください。  
+    >  **注:** 表示されない場合、**サイト設定**オプション、閉じるとブラウザーを閉じて、管理者特権でのレポート マネージャーを参照します。  
   
 3.  **[セキュリティ]** をクリックします。  
   
@@ -138,7 +137,7 @@ ms.locfileid: "48189072"
 ##  <a name="bkmk_configure_ssms"></a> ローカル レポート サーバー管理を行う目的で SQL Server Management Studio (SSMS) を構成するには  
  既定では、管理者権限を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開始した場合以外は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で使用できるレポート サーバー プロパティのいずれにもアクセスできません。  
   
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度なアクセス許可で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度な権限で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
   
 -   **[スタート]** メニューの **[すべてのプログラム]** をクリックし、 **[SQL Server 2014]** をクリックし、 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** を右クリックして **[管理者として実行]** をクリックします。  
   
@@ -184,9 +183,9 @@ ms.locfileid: "48189072"
 -   このトピックの「 [レポート マネージャーのフォルダーの設定](#bkmk_configure_folder_settings) 」および「 [レポート マネージャーのサイトの設定](#bkmk_configure_site_settings) 」を参照してください。  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> 追加情報  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理に関連する追加の一般的な手順は、Windows ファイアウォールでポート 80 を開いてレポート サーバー コンピューターへのアクセスを許可することです。 手順については、次を参照してください。[レポート サーバーへのアクセスのファイアウォールを構成する](configure-a-firewall-for-report-server-access.md)します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理に関連する追加の一般的な手順は、Windows ファイアウォールでポート 80 を開いてレポート サーバー コンピューターへのアクセスを許可することです。 手順については、「 [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services ネイティブ モードのレポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)  
+ [「Reporting Services ネイティブ モードのレポート サーバーの管理」](manage-a-reporting-services-native-mode-report-server.md)  
   
   

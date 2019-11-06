@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple projects
@@ -21,12 +19,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44ffc8084af6917a8df84c5a204df96112441723
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702062"
 ---
 # <a name="performing-batch-operations-xmla"></a>バッチ操作の実行 (XMLA)
   使用することができます、[バッチ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)XML for Analysis (XMLA) 単一の XMLA を使用して複数の XMLA コマンドを実行するコマンド[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッド。 `Batch` コマンドに含まれる複数のコマンドは、単一のトランザクションとして実行することも、あるいはコマンドごとに別個のトランザクションとして直列または並列で実行することもできます。 アウトオブ ライン バインドおよびその他のプロパティを指定することも、`Batch`の複数の処理コマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  
@@ -35,12 +33,12 @@ ms.locfileid: "50148327"
  `Batch` コマンドは、コマンドを以下の 2 つのいずれかの方法で実行します。  
   
  **トランザクション**  
- 場合、`Transaction`の属性、`Batch`コマンドの設定を true に、`Batch`コマンド実行コマンドのすべてのコマンドに含まれる、`Batch`コマンド 1 つのトランザクションを:、*トランザクション*バッチ。  
+ 場合、`Transaction`の属性、`Batch`コマンドの設定を true に、`Batch`コマンド実行コマンドのすべてのコマンドに含まれる、`Batch`トランザクションを 1 つのコマンド*トランザクション*バッチ。  
   
  トランザクション バッチで任意のコマンドが失敗した場合[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のいずれかのコマンドはロールバック、`Batch`失敗したコマンドの前に実行されたコマンドに対して、`Batch`コマンドを直ちに終了します。 `Batch` コマンド内でまだ実行されていないコマンドはいずれも実行されません。 `Batch` コマンドが終了した後、`Batch` コマンドは失敗したコマンドについて発生したすべてのエラーを報告します。  
   
  **非トランザクション**  
- 場合、`Transaction`属性が false に設定、`Batch`コマンドに含まれる各コマンドを実行、`Batch`別個のトランザクションでコマンドなど、*非トランザクション*バッチ。 非トランザクション バッチ内のいずれかのコマンドが失敗した場合、`Batch` コマンドは、失敗したコマンドの後にあるコマンドの実行を続行します。 `Batch` コマンドが、`Batch` コマンドに含まれるすべてのコマンドの実行を試みた後、`Batch` コマンドは発生したすべてのエラーを報告します。  
+ 場合、`Transaction`属性が false に設定、`Batch`コマンドに含まれる各コマンドを実行、`Batch`コマンドを個別のトランザクションを*非トランザクション*バッチ。 非トランザクション バッチ内のいずれかのコマンドが失敗した場合、`Batch` コマンドは、失敗したコマンドの後にあるコマンドの実行を続行します。 `Batch` コマンドが、`Batch` コマンドに含まれるすべてのコマンドの実行を試みた後、`Batch` コマンドは発生したすべてのエラーを報告します。  
   
  `Batch` コマンドに含まれるコマンドが返す結果はすべて、それらのコマンドが `Batch` コマンド内に含まれている順序と同じ順序で返されます。 `Batch` コマンドによって返される結果は、`Batch` コマンドがトランザクション バッチまたは非トランザクション バッチのいずれであるかによって異なります。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolName Property (ClientNetLibInfo Class)
@@ -20,12 +18,12 @@ ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fceb64cbf2623c48c5f5922806b5ff9e6934ff7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9931ad6cca3e47f3de324fc1fe7f8f0a5ed67cbe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63191099"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName プロパティ (ClientNetLibInfo クラス)
   クライアント ネットワーク ライブラリに関連付けられたプロトコルの名前を取得します。  
@@ -47,7 +45,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>関連項目  
+ [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

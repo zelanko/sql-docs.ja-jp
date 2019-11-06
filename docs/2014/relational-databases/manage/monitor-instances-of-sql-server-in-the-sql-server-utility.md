@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c04bf213db416c702aa1ac479cef4f73d8de6986
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e016b8fb3986b4fa9431a1d223335affa72d3d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188561"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>SQL Server ユーティリティでの SQL Server のインスタンスの監視
   

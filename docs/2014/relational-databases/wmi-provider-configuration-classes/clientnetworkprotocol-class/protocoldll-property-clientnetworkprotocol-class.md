@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolDLL Property (ClientNetworkProtocol Class)
@@ -20,15 +18,15 @@ ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 67fdda95d3a447f9390b8366f99a97e269c99ddd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8558fde82245a02e04c34008eb124219354c4352
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192094"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL プロパティ (ClientNetworkProtocol クラス)
-  によって指定されたネットワーク プロトコルに必要な .dll ファイルの名前を取得、 [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)します。  
+  によって指定されたネットワーク プロトコルに必要な .dll ファイルの名前を取得、 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

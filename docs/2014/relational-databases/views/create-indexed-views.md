@@ -17,19 +17,19 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196429"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し、インデックス付きビューを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。  
   
   
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  次の手順は、インデックス付きビューの作成に必要な手順であり、インデックス付きビューの正常な実装に不可欠です。  
   
 1.  SET オプションが、ビューで参照されるすべての既存のテーブルに対して正しいことを確認します。  
@@ -86,11 +86,11 @@ ms.locfileid: "48164602"
   
 -   インデックスを作成する場合は、IGNORE_DUP_KEY オプションを OFF に設定する必要があります (既定の設定)。  
   
--   ビュー定義では、*schema ***.*** tablename* という 2 つの部分から構成される名前でテーブルが参照される必要があります。  
+-   ビュー定義では、 _schema_ **.** _tablename_ という 2 つの部分から構成される名前でテーブルが参照されていること。  
   
 -   ビューで参照されているユーザー定義関数が、WITH SCHEMABINDING オプションを使用して作成されていること。  
   
--   ビューで参照されるユーザー定義関数は、*schema ***.*** function* という 2 つの部分から構成される名前で参照される必要があります。  
+-   ビューで参照されているユーザー定義関数が、 _schema_ **.** _function_という 2 つの部分から構成される名前で参照されていること。  
   
 -   ユーザー定義関数のデータ アクセス プロパティが NO SQL に、外部アクセス プロパティが NO に設定されている必要があります。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48164602"
   
 -   ビュー定義で使用する CLR ユーザー定義型の CLR 関数やメソッドは、次の表のようにプロパティが設定されている必要があります。  
   
-    |プロパティ|注意|  
+    |プロパティ|注|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|Microsoft .NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
     |PRECISE = TRUE|.NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
@@ -118,7 +118,7 @@ ms.locfileid: "48164602"
     |DISTINCT|STDEV、STDEVP、VAR、VARP、または AVG|共通テーブル式 (CTE)|  
     |`float`\*、 `text`、 `ntext`、 `image`、 `XML`、または`filestream`列|サブクエリ|順位付け関数または集計関数が含まれている OVER 句|  
     |フルテキスト述語 (CONTAIN、FREETEXT)|NULL 値を許容する式を参照する SUM 関数|ORDER BY|  
-    |CLR ユーザー定義集計関数|先頭に戻る|CUBE、ROLLUP、または GROUPING SETS 演算子|  
+    |CLR ユーザー定義集計関数|TOP|CUBE、ROLLUP、または GROUPING SETS 演算子|  
     |MIN、MAX|UNION、EXCEPT、または INTERSECT 演算子。|TABLESAMPLE|  
     |テーブル変数|OUTER APPLY または CROSS APPLY|PIVOT、UNPIVOT|  
     |スパース列セット|インラインまたは複数ステートメントのテーブル値関数|OFFSET|  
@@ -131,7 +131,7 @@ ms.locfileid: "48164602"
 -   ビュー定義に GROUP BY 句を指定した場合、一意のクラスター化インデックスのキーでは、GROUP BY 句で指定した列のみを参照できること。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
- インデックス付きビューで `datetime` 文字リテラルと `smalldatetime` 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。 文字列の暗黙的な変換が必要な式`datetime`または`smalldatetime`は非決定的であると見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。  
+ インデックス付きビューで `datetime` 文字リテラルと `smalldatetime` 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。 `datetime` 型または `smalldatetime` 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。  
   
  照合順序間で行われる Unicode 以外の文字データの暗黙的な変換も非決定的であると見なされます。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48164602"
   
  詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   

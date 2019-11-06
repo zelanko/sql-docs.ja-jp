@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 196347ff0d0a5fb7cbf19ebd679c7a9583ea3a8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028825"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
   **[詳細設定]** タブには、以下のプロパティが既定で表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48206382"
  エラー発生時にメモリ ダンプが配置される場所が表示されます。  
   
  **[エラー報告]**  
- **[はい]** に設定した場合、重大な障害が発生したときに、ワトソン博士プログラムによって [!INCLUDE[msCoName](../../includes/msconame-md.md)] またはエラー サーバーに情報が転送されます。 エラー報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。 この値を変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでサーバーを右クリックし、**[プロパティ]** をクリックし、**[その他のサーバーの設定]** ページをクリックします。 **[エラー報告]** 領域にオプションが表示されます。  
+ **[はい]** に設定した場合、重大な障害が発生したときに、ワトソン博士プログラムによって [!INCLUDE[msCoName](../../includes/msconame-md.md)] またはエラー サーバーに情報が転送されます。 エラー報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。 この値を変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックし、 **[その他のサーバーの設定]** ページをクリックします。 **[エラー報告]** 領域にオプションが表示されます。  
   
  **ファイル バージョン**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルのバージョンが表示されます。  
@@ -64,7 +63,7 @@ ms.locfileid: "48206382"
  **[SKU (Stock Keeping Unit)]**  
  製品の SKU (Stock Keeping Unit) 番号が表示されます。  
   
- **[バージョン]**  
+ **バージョン**  
  この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのバージョン番号が表示されます。  
   
  **[仮想サーバー名]**  

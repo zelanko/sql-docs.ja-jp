@@ -1,7 +1,7 @@
 ---
 title: データベースのファイルの瞬時初期化 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 418fdf1db1dfb6db58ee80b709b267338d2591d8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558229"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909078"
 ---
 # <a name="database-file-initialization"></a>データベース ファイルの初期化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 データおよびログ ファイルの初期化は、ディスクに以前削除したファイルのデータが残っている場合にそれを上書きするために行います。 次のいずれかの操作を実行すると、データとログ ファイルは、まずファイルのゼロイング (ゼロを書き込む処理) で初期化されます。  
   
-- データベースの作成。  
+- データベースを作成します。  
 - 既存のデータベースへのデータ ファイルまたはログ ファイルの追加。  
 - 既存のファイルのサイズを大きくする (自動拡張操作を含む)。  
 - データベースまたはファイル グループの復元。  
@@ -39,9 +38,9 @@ ms.locfileid: "51558229"
 ## <a name="instant-file-initialization-ifi"></a>ファイルの瞬時初期化 (IFI)  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データ ファイルが瞬時に初期化され、ゼロイング操作を回避できます。 ファイルの瞬時初期化を使うと、上記のファイル操作を高速に実行することが可能になります。 ファイルの瞬時初期化では、0 で埋め込むことなく、使用中のディスク領域の返還を要求します。 代わりに、新しいデータがファイルに書き込まれるときに、ディスクの内容が上書きされます。 ログ ファイルを瞬時に初期化することはできません。  
   
-> [!NOTE]  
+> [!NOTE]
 > ファイルの瞬時初期化は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] または [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 以降のバージョンでのみ使用できます。  
-
+> 
 > [!IMPORTANT]
 > ファイルの瞬時初期化は、データ ファイルにのみ使用できます。 ログ ファイルは、作成時やサイズの増大時に常にゼロ化されます。
   
@@ -52,15 +51,17 @@ ms.locfileid: "51558229"
   
 アカウントに `Perform volume maintenance tasks` 権限を許可する方法。  
   
-1.  バックアップ ファイルを作成するコンピューター上で、 **ローカル セキュリティ ポリシー** アプリケーション (`secpol.msc`) を開きます。  
+1.  データ ファイルを作成するコンピューター上で、**ローカル セキュリティ ポリシー** アプリケーション (`secpol.msc`) を開きます。  
   
 2.  左側のペインで **[ローカル ポリシー]** を展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   
 3.  右側のペインで、 **[ボリュームの保守タスクを実行]** をダブルクリックします。  
   
-4.  **[ユーザーまたはグループの追加]** をクリックし、バックアップに使用される任意のユーザー アカウントを追加します。  
+4.  **[ユーザーまたはグループの追加]** をクリックして、SQL Server サービスを実行するアカウントを追加します。  
   
 5.  **[適用]** をクリックし、 **[ローカル セキュリティ ポリシー]** ダイアログ ボックスをすべて閉じます。  
+
+1. SQL Server サービスを再起動します。
 
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、インストール時、セットアップ中にサービス アカウントにこのアクセス許可を付与できます。 [コマンド プロンプト インストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を利用する場合、/SQLSVCINSTANTFILEINIT 引数を追加するか、[インストール ウィザード](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)で *[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]* ボックスを選択します。
@@ -71,15 +72,11 @@ ms.locfileid: "51558229"
 ## <a name="remarks"></a>Remarks
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* が与えられる場合、開始時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに次のような情報メッセージが記録されます。 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* が与えられて**いない**場合、開始時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに次のような情報メッセージが記録されます。 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b4704b1fdb9181e8abd9f800da7c57a7973d2090
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 59c26a7e490edb120d8819d8e2b16158b5b41e76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072129"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ## <a name="remarks"></a>Remarks  
  シノニムへの参照はスキーマにバインドされていません。したがってシノニムはいつでも削除できます。 削除したシノニムへの参照は、実行時にのみ検出されます。  
   
- シノニムは、動的な SQL で作成、削除、および参照できます。  
+ シノニムは、動的な SQL で作成、削除、参照することができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  シノニムを削除するには、ユーザーは次の条件を少なくとも 1 つ 満たしている必要があります。  

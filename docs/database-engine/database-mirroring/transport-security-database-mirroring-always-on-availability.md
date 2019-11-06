@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 47986d4615a6cc9425c8547fecd9527731072d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047977"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>トランスポート セキュリティ - データベース ミラーリング - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47695690"
 ##  <a name="Authentication"></a> [認証]  
  認証とは、ユーザーが本人であるかどうかを検査するプロセスです。 データベース ミラーリング エンドポイント間の接続には、認証が必要になります。 パートナーまたはミラーリング監視サーバーから接続を要求された場合は、その接続要求を認証する必要があります。  
   
- サーバー インスタンスによりデータベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] に使用される認証の種類は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリング エンドポイントに使用できるトランスポート セキュリティには、Windows 認証 (セキュリティ サポート プロバイダー インターフェイス (SSPI)) と証明書ベース認証の 2 種類があります。  
+ サーバー インスタンスによりデータベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] に使用される認証の種類は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリング エンドポイントに使用できるトランスポート セキュリティには、次の 2 種類があります:Windows 認証 (セキュリティ サポート プロバイダー インターフェイス (SSPI)) と証明書ベース認証。  
   
 ### <a name="windows-authentication"></a>[Windows 認証]  
  Windows 認証では、各サーバー インスタンスが相手側のインスタンスにログインする際には、プロセスを実行している Windows ユーザー アカウントの Windows 資格情報が使用されます。 Windows 認証では、次のように、ログイン アカウントの手動による構成が必要になる場合があります。  
@@ -52,7 +51,7 @@ ms.locfileid: "47695690"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが (同じドメインまたは信頼関係のあるドメインの) 異なるドメイン アカウントでサービスとして実行される場合、他の各サーバー インスタンス上の **master** に各アカウントのログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT 権限を与える必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがネットワーク サービス アカウントとして実行される場合、他の各サーバー上の **master** に各ホスト コンピューター アカウント (*DomainName***\\***ComputerName$*) のログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT アクセス許可を与える必要があります。 これは、ネットワーク サービス アカウントで実行されているサーバー インスタンスではホスト コンピューターのドメイン アカウントを使用して認証を行うためです。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがネットワーク サービス アカウントとして実行される場合、他の各サーバー上の_master_ **\\** _に各ホスト コンピューター アカウント (_ DomainName **ComputerName$** ) のログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT 権限を与える必要があります。 これは、ネットワーク サービス アカウントで実行されているサーバー インスタンスではホスト コンピューターのドメイン アカウントを使用して認証を行うためです。  
   
 > [!NOTE]  
 >  Windows 認証を使用したデータベース ミラーリング セッションの設定例については、「[Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)」を参照してください。  
@@ -74,7 +73,7 @@ ms.locfileid: "47695690"
   
 |ALGORITHM の値|[説明]|  
 |---------------------|-----------------|  
-|RC4|エンドポイントで RC4 アルゴリズムを使用する必要があることを指定します。 これは既定値です。<br /><br /> **\*\* 警告 \*\*** RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。|  
+|RC4|エンドポイントで RC4 アルゴリズムを使用する必要があることを指定します。 これは既定値です。<br /><br /> <strong>\*\* 警告 \*\*</strong> RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。|  
 |AES|エンドポイントで AES アルゴリズムを使用する必要があることを指定します。|  
 |AES RC4|2 つのエンドポイントが、AES アルゴリズムを優先するこのエンドポイントと暗号化アルゴリズムについてネゴシエートすることを指定します。|  
 |RC4 AES|2 つのエンドポイントで暗号化アルゴリズムをネゴシエートし、このエンドポイントでは RC4 アルゴリズムを優先することを示します。|  
@@ -82,7 +81,7 @@ ms.locfileid: "47695690"
  接続するエンドポイントで 2 つのアルゴリズムが異なる順序で指定されている場合、接続を受け入れる側のエンドポイントの指定が優先されます。  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
 >   
 >  RC4 は、AES よりもかなり高速ですが、比較的弱いアルゴリズムです。それに対して、AES は比較的強いアルゴリズムです。 したがって、AES アルゴリズムを使用することをお勧めします。  
   
@@ -109,6 +108,6 @@ ms.locfileid: "47695690"
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

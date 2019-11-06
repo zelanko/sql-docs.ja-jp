@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], snippets
@@ -15,12 +14,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b25f7e9e9c4ade922bbbbf65353eb4444149b429
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c47bc6dc82843159f116b62ff6bc68acf981f4f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063956"
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL スニペットの挿入
   [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを新規作成するときの開始位置として使用できるテンプレートです。  

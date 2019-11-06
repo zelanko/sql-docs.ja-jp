@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c96134ede585acee4b556200e67c7301feef7713
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730900"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768221"
 ---
 # <a name="replication-agent-administration"></a>レプリケーション エージェントの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   レプリケーション エージェントは、レプリケーションに関連した数多くのタスクを実行します。たとえば、スキーマとデータのコピーの作成、パブリッシャーまたはサブスクライバーでの更新の検出、およびサーバー間での変更の反映などを行います。 既定では、レプリケーション エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのジョブ ステップで実行されます。 エージェントは単なる実行可能ファイルであるため、コマンド ラインやバッチ スクリプトから直接呼び出すこともできます。 各レプリケーション エージェントでは、ランタイム パラメーターのセットを使用して実行方法を制御できます。このパラメーターはエージェント プロファイルまたはコマンド ラインで指定します。  
   
 > [!IMPORTANT]  
@@ -53,7 +53,7 @@ ms.locfileid: "47730900"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] およびレプリケーション モニター: [レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   レプリケーション プログラミング: [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   レプリケーション プログラミング: [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>[エージェント プロファイル]  
  レプリケーションを構成すると、エージェント プロファイルのセットがディストリビューターにインストールされます。 エージェント プロファイルには、エージェントが実行されるたびに使用されるパラメーターのセットが含まれています。スタートアップ処理中に各エージェントはディストリビューターにログインし、各エージェントのプロファイルのパラメーターをクエリします。 レプリケーションでは、各エージェント用の既定のプロファイルの他に、ログ リーダー エージェント、ディストリビューション エージェント、およびマージ エージェント用の追加の定義済みプロファイルが利用できます。 提供されているプロファイルに加えて、アプリケーションの要件に合わせてプロファイルを作成することもできます。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
@@ -71,7 +71,7 @@ ms.locfileid: "47730900"
   
     -   キュー リーダー エージェント (Queue Reader Agent)  
   
-     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[エージェント]** タブを使用します。詳細については、「[View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)」 (パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;) を参照してください。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[エージェント]** タブを使用します。詳細については、「[View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」 (レプリケーション モニターを使用して情報を表示し、タスクを実行する) を参照してください。  
   
 -   以下のエージェントは、レプリケーション モニターでサブスクリプションと関連付けられています。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47730900"
   
     -   [マージ エージェント]  
   
-     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[サブスクリプション ウォッチ リスト]** タブ (各パブリッシャーで利用可能) または **[すべてのサブスクリプション]** タブ (各パブリケーションで利用可能) を使用します。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、次のタブを使用します。 **[サブスクリプション ウォッチ リスト]** (各パブリッシャーで使用可能)、または **[すべてのサブスクリプション]** タブ (各パブリケーションで使用可能)。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="independent-and-shared-agents"></a>独立したエージェントと共有エージェント  
  独立したエージェントとは、1 つのサブスクリプションを処理するエージェントのことです。 共有エージェントは複数のサブスクリプションにサービスを提供します。同じ共有エージェントを使用している複数のサブスクリプションで同期する必要がある場合、既定では、それらのサブスクリプションはキューに格納されて待機し、共有エージェントがそれらを一度に 1 つずつ処理します。 独立したエージェントは、サブスクリプションが必要に応じていつでも同期できるように常に待機しているので、待機時間が短くなります。 マージ レプリケーションでは常に独立したエージェントが使用され、トランザクション レプリケーションでは、既定ではパブリケーションの新規作成ウィザードで作成されたパブリケーションに対して独立したエージェントが使用されます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、トランザクション レプリケーションは既定で共有エージェントを使用していました)。  
@@ -89,14 +89,14 @@ ms.locfileid: "47730900"
   
 |クリーンアップ ジョブ|[説明]|既定のスケジュール|  
 |------------------|-----------------|----------------------|  
-|エージェント履歴のクリーンアップ: ディストリビューション|ディストリビューション データベースからレプリケーション エージェントの履歴を削除します。|10 分おきに実行されます。|  
-|ディストリビューションのクリーンアップ: ディストリビューション|ディストリビューション データベースからレプリケートされたトランザクションを削除します。 |10 分おきに実行されます。|  
+|エージェント履歴のクリーンアップ: Distribution|ディストリビューション データベースからレプリケーション エージェントの履歴を削除します。|10 分おきに実行されます。|  
+|ディストリビューションのクリーンアップ: Distribution|ディストリビューション データベースからレプリケートされたトランザクションを削除します。 |10 分おきに実行されます。|  
 |有効期限が切れたサブスクリプションのクリーンアップ|パブリケーション データベースから期限切れのサブスクリプションを検出し、削除します。 ディストリビューターで、ディストリビューションの最大保有期間内に同期されなかったサブスクリプションを非アクティブ化します。|毎日、午前 1 時に実行されます。| 
 |データ検証で問題が見つかったサブスクリプションの再初期化|データ検証に失敗したすべてのサブスクリプションを検出し、再初期化のマークを付けます。 次回マージ エージェントまたはディストリビューション エージェントが実行されたときに、サブスクライバーで新しいスナップショットが適用されます。|既定のスケジュールはありません。既定では、有効ではありません。|  
 |レプリケーション エージェントの検査|履歴をログに記録していないレプリケーション エージェントを検出します。 ジョブ ステップが失敗した場合に、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows イベント ログに書き込みます。|10 分おきに実行されます。|  
 |ディストリビューションのレプリケーション モニターの状態更新機能|レプリケーション モニターで使用される、キャッシュされたクエリを更新します。|連続的に実行されます。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

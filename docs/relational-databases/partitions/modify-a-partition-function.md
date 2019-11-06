@@ -7,16 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84c4c13cf1382fd757e2e7ad8832d6170edf3302
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391046"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907346"
 ---
 # <a name="modify-a-partition-function"></a>パーティション関数の変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52391046"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **次を使用してパーティション関数を変更するには:**  
   
@@ -85,7 +84,7 @@ ms.locfileid: "52391046"
 3.  削除するパーティション関数を右クリックして、 **[削除]** をクリックします。  
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで、正しいパーティション関数が選択されていることを確認し、 **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>1 つのパーティションを 2 つのパーティションに分割するには  

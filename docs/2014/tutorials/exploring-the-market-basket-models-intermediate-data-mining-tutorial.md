@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224606"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>マーケット バスケット モデルの検証 (中級者向けデータ マイニング チュートリアル)
   これでビルドした、`Association`モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション ビューアーで、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 このチュートリアルでは、ビューアーを使用してアイテム間の関係を検証する方法を、順を追って学習します。 ビューアーを使用すると、どの製品とどの製品がよく一緒に表示されるかが一目でわかるほか、新たなパターンの概観も可能です。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション ビューアーには、3 つのタブが含まれています:**ルール**、**アイテム セット**、および**依存関係ネットワーク**します。 これらのタブにはデータがそれぞれ少しずつ異なる形で表示されるため、モデルを検証する際には、異なるペインの間を何度も切り替えながら調査を進めるのが一般的です。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション ビューアーには、3 つのタブが含まれています。**ルール**、**アイテム セット**、および**依存関係ネットワーク**します。 これらのタブにはデータがそれぞれ少しずつ異なる形で表示されるため、モデルを検証する際には、異なるペインの間を何度も切り替えながら調査を進めるのが一般的です。  
   
 -   [依存関係ネットワーク タブ](#bkmk_DepNet)  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48211942"
   
      グラフのテキスト ラベルが更新されて、モデル名のみが表示されます。  
   
- [ページのトップへ](#bkmk_DepNet)  
+ [トップに戻る](#bkmk_DepNet)  
   
 ##  <a name="bkmk_Itemsets"></a> アイテム セット タブ  
  次に、Touring Tire と Touring Tire Tube という 2 つの製品についてモデルによって生成された、ルールとアイテムセットの詳細を調べます。 **アイテム セット** タブには、アイテム セットに関連する情報の 3 つの重要な情報が表示される[!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション アルゴリズムを検出します。  
@@ -85,7 +84,7 @@ ms.locfileid: "48211942"
   
 -   **サイズ:** アイテム セット内の項目の数。  
   
--   **項目:** 各アイテム セットに含まれる項目の一覧。  
+-   **項目:** 各アイテム セットに含まれるアイテムの一覧。  
   
  アルゴリズム パラメーターの設定方法によっては、多数のアイテムセットが生成される場合があります。 ビューアーに返される各アイテムセットは、アイテムが販売されたトランザクションを表します。 上部にあるコントロールを使用して、**アイテム セット** タブで、指定された最小のサポートとアイテム セット サイズが含まれているアイテム セットのみを表示するビューアーをフィルター処理できます。  
   
@@ -133,14 +132,14 @@ ms.locfileid: "48211942"
   
      アイテムセットの一覧が更新されて、サポートが 100 以上のアイテムセットのみが表示されます。  
   
- [ページのトップへ](#bkmk_DepNet)  
+ [トップに戻る](#bkmk_DepNet)  
   
 ##  <a name="bkmk_Rules"></a> [規則] タブ  
  **ルール** タブには、アルゴリズムの検索ルールに関連する次の情報が表示されます。  
   
--   **確率:** 、*尤度*ルールの右辺のアイテムの左側にある項目を指定した確率として定義されているのです。  
+-   **確率:** *尤度*ルールの右辺のアイテムの左側にある項目を指定した確率として定義されているのです。  
   
--   **重要:** ルールの有用性の測定します。 この値が大きいほどルールの有効性が高くなります。  
+-   **重要:** ルールの有用性の測定結果。 この値が大きいほどルールの有効性が高くなります。  
   
      ルールの有効性を判断するための基準として重要度が用意されているのは、確率だけでは誤った判断を招く可能性があるためです。 たとえば、プロモーションの一環として各顧客のカートに自動的に水筒が追加される場合は、すべてのトランザクションに水筒が含まれるため、水筒の確率を 1 として予測するルールがモデルによって作成されます。 このルールは、確率に基づく限りはきわめて正確ですが、有用な情報にはなりません。  
   
@@ -170,7 +169,7 @@ ms.locfileid: "48211942"
   
      **ドリル スルー**  ダイアログ ボックス、ペインの上部とルールのサポート データとして使用されていたすべてのケースの一覧にルールの概要を提供します。  
   
- [ページのトップへ](#bkmk_DepNet)  
+ [トップに戻る](#bkmk_DepNet)  
   
 ##  <a name="bkmk_ContentViewer"></a> 汎用コンテンツ ツリー ビューアー  
  このビューアーは、アルゴリズムやモデルの種類に関係なく、すべてのモデルで使用できます。 **Microsoft 汎用コンテンツ ツリー ビューアー**から利用できますが、**ビューアー**ドロップダウン リスト。  
@@ -191,14 +190,14 @@ ms.locfileid: "48211942"
   
  コンテンツ クエリを作成してルールの詳細な統計情報を取得することもできます。 マイニング モデルの内容とその解釈方法の詳細については、次を参照してください。[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)します。  
   
- [ページのトップへ](#bkmk_DepNet)  
+ [トップに戻る](#bkmk_DepNet)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [マイニング モデルの入れ子になったテーブルをフィルター処理&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
- [レッスン 4: シーケンス クラスター シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
+ [レッスン 3:マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
+ [レッスン 4:シーケンス クラスター シナリオの構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Microsoft アソシエーション アルゴリズム](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   

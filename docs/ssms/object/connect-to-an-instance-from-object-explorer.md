@@ -1,36 +1,36 @@
 ---
 title: SQL Server または Azure SQL Database への接続 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e07d1bb2c38fdf5284a09d49a7b81419872720b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847426"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264608"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server または Azure SQL Database への接続
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 サーバーとデータベースで作業するには、まず、サーバーに接続する必要があります。 同時に複数のサーバーに接続することができます。
 
-[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) では、複数の種類の接続をサポートしています。 この記事では、SQL Server と Azure SQL Database への接続 (Azure SQL 論理サーバーへの接続) の詳細について説明します。 他の接続オプションについては、このページの下部に示す[リンク](#see-also)を参照してください。
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) では、複数の種類の接続をサポートしています。 この記事では、SQL Server と Azure SQL Database への接続 (Azure SQL 単一データベースまたはエラスティック プールへの接続) の詳細について説明します。 他の接続オプションについては、このページの下部に示す[リンク](#see-also)を参照してください。
   
 ## <a name="connecting-to-a-server"></a>サーバーへの接続  
 
-1. **オブジェクト エクスプローラー**で、**[接続]、[データベース エンジン]** の順にクリックします。
+1. **オブジェクト エクスプローラー**で、 **[接続]、[データベース エンジン]** の順にクリックします。
 
    ![connect](../media/connect-to-server/connect-db-engine.png)
 
-1. **[サーバーへの接続]** フォームに必要事項を入力し、**[接続]** をクリックします。
+1. **[サーバーへの接続]** フォームに必要事項を入力し、 **[接続]** をクリックします。
 
    ![サーバーへの接続](../media/connect-to-server/connect.png)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47847426"
 
    ![ファイアウォール](../media/connect-to-server/new-firewall-rule.png)
 
-1. ファイアウォール規則を作成して、サーバーに接続するには、**[OK]** をクリックします。
+1. ファイアウォール規則を作成して、サーバーに接続するには、 **[OK]** をクリックします。
 
 1. 接続が正常に行われると、**オブジェクト エクスプローラー**にサーバー表示されます。
 

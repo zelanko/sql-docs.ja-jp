@@ -1,25 +1,24 @@
 ---
-title: 作成、データ ソース ビュー (基本的なデータ マイニング チュートリアル) |Microsoft Docs
+title: データソースビューの作成 (基本的なデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051343"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888648"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>データ ソース ビューの作成 (基本的なデータ マイニング チュートリアル)
-  データ ソース ビューは、データ ソース上に構築され、データのサブセットを定義します。このデータ ソース ビューを、マイニング構造で使用できます。 また、データ ソース ビューを使用して、列の追加、計算列や集計の作成、および名前付きビューの追加を行うこともできます。 データ ソース ビューを使用すると、プロジェクトに関連するデータの選択、テーブルどうしの関連付け、データの構造の変更などの操作を、元のデータ ソースを変更せずに実行できます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。  
+  データ ソース ビューは、データ ソース上に構築され、データのサブセットを定義します。このデータ ソース ビューを、マイニング構造で使用できます。 また、データ ソース ビューを使用して、列の追加、計算列や集計の作成、および名前付きビューの追加を行うこともできます。 データ ソース ビューを使用すると、プロジェクトに関連するデータの選択、テーブルどうしの関連付け、データの構造の変更などの操作を、元のデータ ソースを変更せずに実行できます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)を参照してください。  
   
 ### <a name="to-create-a-data-source-view"></a>データ ソース ビューを作成するには  
   
@@ -40,17 +39,17 @@ ms.locfileid: "48051343"
   
 5.  **[次へ]** をクリックします。  
   
-6.  既定では、Adventure Works DW 2012 という名前のデータ ソース ビューが **[ウィザードの完了]** ページに表示されます。 名を変更して`Targeted Mailing`、 をクリックし、**完了**します。  
+6.  既定では、Adventure Works DW 2012 という名前のデータ ソース ビューが **[ウィザードの完了]** ページに表示されます。 名前をに`Targeted Mailing`変更し、 **[完了]** をクリックします。  
   
      新しいデータ ソース ビューが **[Targeted Mailing.dsv [Design]]** タブで開きます。  
   
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
- [データ ソースを作成する&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [データソース&#40;の作成基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: 絞り込みメール構造を作成する&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [レッスン 2:絞り込みメール配信構造&#40;の作成基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
- [ソース ビューのデータを定義する&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>関連項目  
+ [データ ソース ビューの定義 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

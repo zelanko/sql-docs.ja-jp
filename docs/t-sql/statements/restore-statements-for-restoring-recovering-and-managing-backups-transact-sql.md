@@ -19,21 +19,20 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7abe0c00a48df17eb12ba7b015ea16586b63e36b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62be9d06e64e3ce986da0d96c4d04238d5f9ca3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082549"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>バックアップの復元、復旧、管理用の RESTORE ステートメント (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
-  ここでは、バックアップ用の RESTORE ステートメントについて説明します。 バックアップを復元および復旧するためのメインの RESTORE {DATABASE | LOG} ステートメントの他に、いくつか補助的な RESTORE ステートメントを使用すると、バックアップの管理や復元シーケンスの計画で役立ちます。 補助的な RESTORE のコマンドには、RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY があります。  
+  ここでは、バックアップ用の RESTORE ステートメントについて説明します。 バックアップを復元および復旧するためのメインの RESTORE {DATABASE | LOG} ステートメントの他に、いくつか補助的な RESTORE ステートメントを使用すると、バックアップの管理や復元シーケンスの計画が楽になります。 補助的な RESTORE のコマンドには、次のとおりです。RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY。  
   
 > [!IMPORTANT]  
 >  以前のバージョンの SQL Server では、RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、および RESTORE VERIFYONLY という Transact-SQL ステートメントを使用すると、すべてのユーザーがバックアップ セットやバックアップ デバイスに関する情報を入手できました。 これらのステートメントではバックアップ ファイルの内容に関する情報が明らかになるため、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、これらのステートメントの実行に CREATE DATABASE 権限が必要になります。 この要件により、以前のバージョンよりも、バックアップ ファイルの安全性が高くなり、バックアップ情報が十分保護されます。 このアクセス許可の詳細については、「[データベースの権限の許可&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
@@ -42,8 +41,8 @@ ms.locfileid: "47662540"
   
 |ステートメントから削除してください。|[説明]|  
 |---------------|-----------------|  
-|[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|RESTORE DATABASE および RESTORE LOG Transact-SQL ステートメントについて説明します。これらのステートメントは、BACKUP コマンドで作成されたバックアップからデータベースを復元および復旧するときに使用します。 RESTORE DATABASE は、すべての復旧モデルのデータベースに使用できます。 RESTORE LOG は、完全復旧モデルと一括ログ復旧モデルでのみ使用できます。 RESTORE DATABASE は、データベースをデータベース スナップショットに戻す場合にも使用できます。|  
-|[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE ステートメントと、関連する一連の補助ステートメント (RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY) の「構文」セクションで説明されている引数について説明します。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 それぞれの引数の説明では、その引数を使用できるステートメントについても示します。|  
+|[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|RESTORE DATABASE および RESTORE LOG Transact-SQL ステートメントについて説明します。これらのステートメントは、BACKUP コマンドで作成されたバックアップからデータベースを復元および復旧するときに使用します。 RESTORE DATABASE は、すべての復旧モデルのデータベースに使用できます。 RESTORE LOG は、完全復旧モデルと一括ログ復旧モデルでのみ使用します。 RESTORE DATABASE は、データベースをデータベース スナップショットに戻す場合にも使用できます。|  
+|[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE ステートメントと、関連する一連の補助ステートメントの「構文」セクションで説明されている次の引数について説明します: RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 各引数のサポート状況については、引数の説明で示します。|  
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|RESTORE FILELISTONLY Transact-SQL ステートメントについて説明します。このステートメントでは、バックアップ セットに含まれるデータベースとログ ファイルの一覧を含む結果セットが返されます。|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|RESTORE HEADERONLY Transact-SQL ステートメントについて説明します。このステートメントでは、特定のバックアップ デバイス上にあるすべてのバックアップ セットに関して、すべてのバックアップ ヘッダー情報を含む結果セットが返されます。|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|RESTORE LABELONLY Transact-SQL ステートメントについて説明します。このステートメントでは、特定のバックアップ デバイスによって指定されるバックアップ メディアの情報を含む結果セットが返されます。|  

@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188688"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、混合 (キーセット/動的) カーソル モデルをサポートしません。 SQL_ATTR_KEYSET_SIZE を使用してキーセットのサイズを設定する場合、0 以外の値を設定すると失敗します。  
@@ -64,7 +64,7 @@ ms.locfileid: "48208529"
   
 |*ValuePtr*値|説明|  
 |----------------------|-----------------|  
-|SQL_DP_ON|既定値です。 呼び出した後[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)、されるまで、ステートメントの準備が遅延**SQLExecute**と呼びますか、メタプロパティ操作 (**SQLDescribeCol**または**SQLDescribeParam**) を実行します。|  
+|SQL_DP_ON|既定値です。 呼び出した後[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)、されるまで、ステートメントの準備が遅延**SQLExecute**と呼びますか、メタプロパティ操作 (**SQLDescribeCol**または**SQLDescribeParam**) を実行します。|  
 |SQL_DP_OFF|ステートメントの準備とすぐに**SQLPrepare**を実行します。|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -122,7 +122,7 @@ ms.locfileid: "48208529"
   
  SQL_SOPT_SS_PARAM_FOCUS の型は SQLULEN です。  
   
- 既定値は 0 で、SQL ステートメントのパラメーター マーカーに対応するパラメーターが、上記の呼び出しで指定されます。 テーブル値パラメーターのパラメーター番号に設定すると、そのテーブル値パラメーターの列が上記の呼び出しで指定されます。 テーブル値パラメーターのパラメーター番号以外の値に設定すると、エラー IM020 ("パラメーターのフォーカスがテーブル値パラメーターを参照していません") が返されます。  
+ 既定値は 0 で、SQL ステートメントのパラメーター マーカーに対応するパラメーターが、上記の呼び出しで指定されます。 テーブル値パラメーターのパラメーター番号に設定すると、そのテーブル値パラメーターの列が上記の呼び出しで指定されます。 これらの呼び出しには、テーブル値パラメーターのパラメーター数ではない値に設定すると、エラー IM020 が返されます。「パラメーターのフォーカスを示さない、テーブル値パラメーター」です。  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  SQL_SOPT_SS_NAME_SCOPE 属性は、後続のカタログ関数呼び出しの名前スコープを指定します。 SQLColumns によって返される結果セットは、SQL_SOPT_SS_NAME_SCOPE の設定に依存します。  
@@ -146,7 +146,7 @@ ms.locfileid: "48208529"
  SQLTables、SQLColumns、または SQLPrimaryKeys は、SQL_SOPT_SS_NAME_SCOPE が以外の値を持つときに呼び出される、カタログ関数 SQL_SS_NAME_SCOPE_TABLE、SQL_ERROR が返されます。 "関数のシーケンス エラーです (SQL_SOPT_SS_NAME_SCOPE が SQL_SS_NAME_SCOPE_TABLE に設定されていません)" というメッセージを含む SQLSTATE HY010 の診断レコードが生成されます。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetStmtAttr 関数](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

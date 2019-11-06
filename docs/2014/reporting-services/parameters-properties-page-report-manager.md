@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108117"
 ---
 # <a name="parameters-properties-page-report-manager"></a>[パラメーター] プロパティ ページ (レポート マネージャー)
   パラメーター化されたレポートのパラメーター設定を表示または変更するには、[パラメーター] プロパティ ページを使用します。  
@@ -34,7 +33,7 @@ ms.locfileid: "48153732"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、レポートの [全般] プロパティ ページが開きます。  
   
-4.  **[パラメーター]** タブをクリックします。**[パラメーター]** タブが非表示の場合は、そのレポートにパラメーターはありません。  
+4.  **[パラメーター]** タブをクリックします。 **[パラメーター]** タブが非表示の場合は、そのレポートにパラメーターはありません。  
   
 ## <a name="options"></a>および  
  **[パラメーター名]**  

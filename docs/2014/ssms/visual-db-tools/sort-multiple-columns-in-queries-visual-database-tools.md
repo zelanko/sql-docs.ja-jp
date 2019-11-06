@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple query columns
@@ -12,12 +12,12 @@ ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dda81f854b952831d2158fe4745bff487a30576b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63070907"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>クエリ内の複数の列の並べ替え (Visual Database Tools)
   データを並べ替える列の使用順序指定には、 **[並べ替え順序]** 列を [抽出条件ペイン](visual-database-tools.md)上で使用します。  

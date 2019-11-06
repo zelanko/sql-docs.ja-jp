@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.synonym.general.f1
@@ -15,12 +15,12 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df7ddb36f75c018b626e99bf8253fba02734594
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2a45cf4f34b73996b6ecbd4f9cbb5f5a902e760
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854968"
 ---
 # <a name="create-synonyms"></a>シノニムの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、シノニムを作成する方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48164732"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
  ユーザーが特定のスキーマ内にシノニムを作成するには、CREATE SYNONYM 権限が必要であり、さらにスキーマを所有しているか ALTER SCHEMA 権限が与えられている必要があります。 CREATE SYNONYM 権限は、譲与可能な権限です。  
@@ -50,7 +50,7 @@ ms.locfileid: "48164732"
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[シノニム]** フォルダーを右クリックし、 **[新しいシノニム]** をクリックします。  
+2.  **[シノニム]** フォルダーを右クリックし、 **[新しいシノニム...]** をクリックします。  
   
 3.  **[シノニムの追加]** ダイアログ ボックスで、次の情報を入力します。  
   

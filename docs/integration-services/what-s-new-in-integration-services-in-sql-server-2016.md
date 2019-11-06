@@ -12,18 +12,20 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640199"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295042"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 このトピックでは、SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で追加または更新された機能について説明します。 これには、SQL Server 2016 のタイム フレーム中に [Integration Services &#40;SSIS&#41; 用の Azure Feature Pack](../integration-services/azure-feature-pack-for-integration-services-ssis.md) で追加または更新された機能も含まれます。  
 
@@ -180,7 +182,7 @@ ms.locfileid: "51640199"
   
 -   管理オブジェクト モデル (MOM) API  
   
- 詳細については、「[Services (SSIS) プロジェクトとパッケージの配置](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+ 詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
 
 ####  <a name="encrypted"></a> SSIS カタログでの Always Encrypted のサポート  
  SSIS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の Always Encrypted 機能を既にサポートしています。 詳細については、次のログの投稿を参照してください。  
@@ -200,7 +202,7 @@ ms.locfileid: "51640199"
  SSIS カタログの新しい **RuntimeLineage** ログ記録レベルは、データ フローの系列情報を追跡するために必要な情報を収集します。 この系列情報を解析して、タスク間の系列の関係をマッピングできます。 ISV と開発者は、この情報を利用して、カスタム系列マッピング ツールを構築できます。 
 
 ####  <a name="CustomLogging"></a> SSIS カタログでの新しいカスタム ログ レベル  
- SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 では、**RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
+ SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル (**なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 では、**RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
 
 ####  <a name="ErrorColumn"></a> データ フロー内のエラー列の名前  
  エラー出力にエラーが含まれるデータ フロー内の行をリダイレクトすると、出力には、エラーが発生したが列の名前が表示されない列の数値識別子が含まれています。 エラーが発生した列の名前を、さまざまな方法で検索または表示できるようになりました。  
@@ -213,7 +215,7 @@ ms.locfileid: "51640199"
   
 -   スクリプト コンポーネントまたはカスタムデータフロー コンポーネントで、IDTSComponentMetadata100 インターフェイスの新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> メソッドを呼び出します。  
   
- この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS データ フローのエラー列の機能強化)。  
+ この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (SSIS データ フローのエラー列の機能強化)。  
   
 > [!NOTE]  
 >  (このサポートはその後のリリースで拡張されています。 詳細については、「 [エラー列名の拡張サポート](#getidstring) 」および「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  
@@ -285,7 +287,7 @@ ms.locfileid: "51640199"
  Excel 接続マネージャー、Excel ソース、および Excel 変換先で、Excel 2016 データ ソースの明示的なサポートが提供されるようになりました。  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 のリリース  
- SQL Server 2016 Feature Pack の一部として、Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 がリリースされています。 Feature Pack のコンポーネントをダウンロードするには、「 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。
+ MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。 Feature Pack のコンポーネントをダウンロードするには、「[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。
  
 #### <a name="oracleteradata"></a> Connector v4.0 for Oracle および Connector v4.0 for Teradata のリリース
 Microsoft Connector v4.0 for Oracle および Microsoft Connector v4.0 Teradata がリリースされています。 これらのコネクタをダウンロードするには、「 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)」を参照してください。
@@ -326,7 +328,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
    
  ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > SSIS 用のカスタム拡張機能を開発する場合は、「 [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) 」(カスタム コンポーネントでの複数ターゲットのサポート) および「 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)」(SSIS のカスタム拡張機能を SSDT 2015 for SQL Server 2016 用 SSDT 2015 の複数バージョン サポートでサポートされるようにする) を参照してください。  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>SQL Server Management Studio の管理エクスペリエンスの強化
@@ -346,7 +348,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
  SQL Server インポートおよびエクスポート ウィザードで、データの読み込み元と保存先として Azure BLOB Storage を使用できるようになりました。 詳細については、「[[データ ソースの選択] &#40;SQL Server インポートおよびエクスポート ウィザード&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」および「[[変換先の選択] &#40;SQL Server インポートおよびエクスポート ウィザード&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)」を参照してください。 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer と Service for Oracle for Microsoft SQL Server 2016 のリリース  
- Microsoft® Change Data Capture Designer と Service for Oracle by Attunity for Microsoft SQL Server® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。  これらのコンポーネントで、Oracle 12c のクラシック インストールをサポートできるようになりました (マルチテナント インストールはサポートされません)。Feature Pack のコンポーネントをダウンロードするには、「 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。  
+ MicrosoftÂ® Change Data Capture Designer と Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。  これらのコンポーネントで、Oracle 12c のクラシック インストールをサポートできるようになりました (マルチテナント インストールはサポートされません)。Feature Pack のコンポーネントをダウンロードするには、「[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。  
   
 ####  <a name="cdc2016"></a> SQL Server 2016 での CDC コンポーネントの更新  
  CDC (Change Data Capture) Control Task、Source、および Splitter Transformation コンポーネントが、SQL Server 2016 との完全互換性を提供するように更新されています。 新しい機能の追加も動作の変更もありません。  
@@ -367,10 +369,10 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] では、 **Service Pack 2 で** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] プロパティが導入されました。 その時点では、この新しいプロパティは発表されることも文書化されることもありませんでした。 **ValidationDetails** プロパティは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]でも利用できます。   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)   
  [SQL Server 2016 の各エディションとサポートされる機能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

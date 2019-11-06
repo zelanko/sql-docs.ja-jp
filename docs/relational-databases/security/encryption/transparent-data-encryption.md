@@ -1,7 +1,7 @@
 ---
 title: 透過的なデータ暗号化 (TDE) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -17,27 +17,26 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 ms.reviewer: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac89fa10f34d8c6f4d06c26a3be063cf00fcad2a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: ef9e0378d3a7ca0b5749788471b4ef97832d179d
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383787"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670597"
 ---
-# <a name="transparent-data-encryption-tde"></a>透過的なデータ暗号化 (TDE)
+# <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   *透過的なデータ暗号化* (TDE) では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]、 [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] のデータ ファイルを暗号化します。これは、静止したデータの暗号化として知られています。 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
   
  TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK は、サーバーの master データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。 TDE では、"静止した" データ、つまりデータとログ ファイルが保護されます。 この暗号化は、法律、規制、およびさまざまな業界で確立されているガイドラインの多くに準拠できるようになっています。 これによりソフトウェア開発者は、既存のアプリケーションを変更することなく、AES および 3DES 暗号化アルゴリズムを使用してデータを暗号化できます。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  TDE では、通信チャネル全体を暗号化することはできません。 通信チャネル全体でデータを暗号化する方法の詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
->   
+> 
 >  **関連項目:**  
->   
+> 
 >  -   [Azure SQL Database での Transparent Data Encryption](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
 > -   [SQL Data Warehouse での Transparent Data Encryption (TDE) の概要](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
 > -   [別の SQL Server への TDE で保護されたデータベースの移動](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
@@ -51,7 +50,7 @@ ms.locfileid: "49383787"
   
  **[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] に該当する情報**  
   
- TDE を [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 と一緒に使用すると、マスター データベースに格納されるサーバー レベルの証明書が [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]によって自動的に作成されます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] で TDE データベースを移動するには、データベースの暗号化を解除してデータベースを移動し、移動先の [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を再度有効にする必要があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]での TDE に関する詳細な手順については、「 [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」を参照してください。  
+ TDE を [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 と一緒に使用すると、マスター データベースに格納されるサーバー レベルの証明書が [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] によって自動的に作成されます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] で TDE データベースを移動する目的では、移動操作の際、データベースの暗号化を解除する必要がありません。 TDE と [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] の活用方法については、「[Azure SQL Database の Transparent Data Encryption](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」を参照してください。  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に該当する情報**  
   
@@ -63,7 +62,7 @@ ms.locfileid: "49383787"
   
  TDE 暗号化のアーキテクチャを次の図に示します。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を使用する場合に、ユーザーによって構成可能なのは、データベース レベルの項目 (データベース暗号化キーと ALTER DATABASE の部分) のみです。  
   
- ![トピックで説明された階層を表示](../../../relational-databases/security/encryption/media/tde-architecture.gif "トピックで説明された階層を表示")  
+ ![トピックで説明された階層を表示](../../../relational-databases/security/encryption/media/tde-architecture.png "トピックで説明された階層を表示")  
   
 ## <a name="using-transparent-data-encryption"></a>Transparent Data Encryption の使用  
  TDE を使用するには、次の手順を実行します。  
@@ -104,7 +103,7 @@ GO
 >  TDE が有効になっているデータベースのバックアップ ファイルも、データベース暗号化キーを使用して暗号化されます。 このため、このバックアップを復元するときには、データベース暗号化キーを保護している証明書が必要です。 つまり、データの損失を防ぐには、データベースをバックアップするだけでなく、サーバー証明書のバックアップも確実に保守する必要があります。 証明書が使用できなくなると、データの損失が発生します。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」を参照してください。  
   
 ## <a name="commands-and-functions"></a>コマンドと関数  
- TDE の証明書を次に示すステートメントで処理できるようにするには、この証明書をデータベース マスター キーで暗号化する必要があります。 パスワードだけで暗号化された証明書は、ステートメントで暗号化機能として受け付けられません。  
+ TDE の証明書を次に示すステートメントで処理できるようにするには、この証明書をデータベース マスター キーで暗号化する必要があります。 それらがパスワードだけで暗号化されている場合は、ステートメントで暗号化機能として受け付けられません。  
   
 > [!IMPORTANT]  
 >  TDE で使用された証明書をパスワードで保護するように変更すると、再起動後にデータベースにアクセスできなくなります。  
@@ -226,9 +225,29 @@ GO
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Transparent Data Encryption と FILESTREAM データ  
  FILESTREAM データは TDE が有効になっている場合でも暗号化されません。  
+
+<a name="scan-suspend-resume"></a>
+
+## <a name="transparent-data-encryption-tde-scan"></a>Transparent Data Encryption (TDE) スキャン
+
+データベースで Transparent Data Encryption (TDE) を有効にするには、各ページをデータ ファイルからバッファー プールに読み込み、暗号化されたページをディスクから書き戻す暗号化のスキャンを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で実行する必要があります。 ユーザーが暗号化のスキャンをより制御できるよう、構文の一時停止および再開が可能な、TDE スキャンが [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] に導入されています。これでは、システムでワークロードが多い場合やビジネスに極めて重要な時間のときはスキャンを一時停止し、後でスキャンを再開できます。
+
+TDE 暗号化のスキャンを一時停止するには、次の構文を使用します。
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+同様に、次の構文で TDE 暗号化のスキャンを再開できます。
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+暗号化のスキャンの現在の状態を示すために、`sys.dm_database_encryption_keys` 動的管理ビューに `encryption_scan_state` が追加されています。 また、暗号化のスキャンの状態が最後に変更された日時を含む `encryption_scan_modify_date` という新しい列もあります。 暗号化のスキャンが一時停止中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが再開された場合、一時停止されている既存のスキャンがあることが起動時にエラー ログに記述されます。
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparent Data Encryption とバッファー プール拡張機能  
- バッファー プール拡張機能 (BPE) に関連するファイルは、データベースが TDE を使用して暗号化される場合でも暗号化されません。 BPE 関連のファイルについては、Bitlocker や EFS などのファイル システム レベルの暗号化ツールを使用する必要があります。  
+ バッファー プール拡張機能 (BPE) に関連するファイルは、データベースが TDE を使用して暗号化される場合でも暗号化されません。 BPE 関連のファイルについては、BitLocker や EFS などのファイル システム レベルの暗号化ツールを使用する必要があります。  
   
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption とインメモリ OLTP  
  TDE は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができます。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、TDE が有効な場合、インメモリ OLTP ログ レコードとデータが暗号化されます。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] では、TDE が有効な場合、インメモリ OLTP ログ レコードは暗号化されますが、MEMORY_OPTIMIZED_DATA ファイルグループのファイルは暗号化されません。  

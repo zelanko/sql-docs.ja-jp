@@ -1,7 +1,7 @@
 ---
 title: データ型のシノニム (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 07/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 482177b87fb4d62cbebb64361e0b26ed9a681c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816560"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689842"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>データ型のシノニム (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,23 +34,27 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** *n* **)**|**char(n)**|  
-|**character varying(** *n* **)**|**varchar(n)**|  
-|**dec**|**decimal**|  
-|**DOUBLE PRECISION**|**float**|  
-|**float**[**(***n***)**] for *n* = 1-7|**real**|  
-|**float**[**(***n***)**] for *n* = 8-15|**float**|  
-|**整数 (integer)**|**int**|  
-|**national character(** *n* **)**|**nchar(n)**|  
-|**national char(** *n* **)**|**nchar(n)**|  
-|**national character varying(** *n* **)**|**nvarchar(n)**|  
-|**national char varying(** *n* **)**|**nvarchar(n)**|  
+|**character(** _n_ **)**|**char(n)**|  
+|**character varying(** _n_ **)**|**varchar(n)**|  
+|**Dec**|**decimal**|  
+|**Double precision**|**float**|  
+|**float**[ **(** n **)** ] for _n_ = 1-7|**real**|  
+|**float**[ **(** n **)** ] for _n_ = 8-15|**float**|  
+|**integer**|**int**|  
+|**national character(** _n_ **)**|**nchar(n)**|  
+|**national char(** _n_ **)**|**nchar(n)**|  
+|**national character varying(** _n_ **)**|**nvarchar(n)**|  
+|**national char varying(** _n_ **)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-データ型のシノニムは、CREATE TABLE、CREATE PROCEDURE、または DECLARE *@variable* などのデータ定義言語 (DDL) ステートメントで、対応する基本データ型の名前の代わりに使用できます。 ただし、オブジェクトの作成後は、シノニムを確認できなくなります。 オブジェクトが作成されると、オブジェクトにはシノニムに関連付けられている基本データ型が割り当てられます。 オブジェクトを作成したステートメントでシノニムが指定された記録はありません。
+データ型のシノニムは、データ定義言語 (DDL) ステートメントの中で、対応する基本データ型の名前の代わりに使用できます。 このようなステートメントには、CREATE TABLE、CREATE PROCEDURE、および DECLARE *\@variable* などがあります。 ただし、オブジェクトの作成後は、シノニムを確認できなくなります。 オブジェクトが作成されると、オブジェクトにはシノニムに関連付けられている基本データ型が割り当てられます。 オブジェクトを作成したステートメント内にシノニムが指定されたという記録は存在しません。
   
-結果セット列や式など、元のオブジェクトから派生したオブジェクトにはすべて基本データ型が割り当てられます。 それ以降のすべてのメタデータ関数は元のオブジェクトで実行され、派生オブジェクトはシノニムではなく基本データ型を報告します。 この動作は、**sp_help** およびその他のシステム ストアド プロシージャ、情報スキーマ ビュー、またはテーブルや結果セット列のデータ型を報告するさまざまなデータ アクセス API メタデータ操作などのメタデータ操作と共に発生します。
+結果セット列や式など、元のオブジェクトから派生したオブジェクトには、基本データ型が割り当てられます。 元のオブジェクトまたは派生したオブジェクトを使用するすべてのメタデータ関数では、シノニムではなく、基本データ型が報告されます。
+
+* **sp_help** やその他のシステム ストアド プロシージャなどのメタデータ操作
+* 情報スキーマ ビュー
+* テーブルまたは結果セット列のデータ型を報告するデータ アクセス API のメタデータ操作
   
 たとえば、`national character varying` を指定して、テーブルを作成できます。
   
@@ -59,7 +62,7 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol` が **nvarchar(10)** データ型に実際に割り当てられ、すべての後続のメタデータ関数は、列を **nvarchar(10)** 列として報告します。 メタデータ関数は報告されませんとして、 **各国語文字 varying (10)** 列です。
+`VarCharCol` が **nvarchar(10)** データ型に割り当てられ、すべての後続のメタデータ関数では、列は **nvarchar(10)** 列として報告されます。 メタデータ関数は報告されませんとして、 **各国語文字 varying (10)** 列です。
   
 ## <a name="see-also"></a>参照
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,12 +15,12 @@ ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5190d6fcabe339d4d99e8b5001174c9f638b54a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf11ece3797f9bbc580339846efb685876b2d0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188625"
 ---
 # <a name="working-with-database-objects"></a>データベース オブジェクトでの作業
   SMO オブジェクトの作成には次の段階があります。  

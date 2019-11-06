@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 69388d1b8f3bf572b7db264c8ab1f56d9d7f454e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: b90bb5624e5b5cdbf3f1542ad0bef0d2765da248
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108966"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>ファームへのレポート サーバーの追加 (SSRS スケールアウト)
   2 台目以降の SharePoint モードのレポート サーバーを SharePoint ファームに追加すると、レポート サーバーのパフォーマンスと応答時間を向上させることができます。 ユーザー、レポート、またはその他のアプリケーションをレポート サーバーに追加したときにパフォーマンスが低下する場合は、レポート サーバーを追加することでパフォーマンスを向上できます。 ハードウェアに問題がある場合、または環境内の個々のサーバーに対して全般的なメンテナンスを行う場合も、2 台目のレポート サーバーを追加してレポート サーバーの可用性を向上させることをお勧めします。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のリリースでの SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境をスケールアウトする手順では、標準の SharePoint ファーム配置に従い、SharePoint の負荷分散機能を活用します。  
@@ -75,7 +74,7 @@ ms.locfileid: "48100972"
 |----------|--------------------------|  
 |SharePoint 2010 製品準備ツールを実行します。|SharePoint 2010 のインストール メディアが必要です。 準備ツールはインストール メディアの **PrerequisiteInstaller.exe** です。|  
 |SharePoint 2010 製品をインストールします。|1) 選択、**サーバー ファーム**インストールの種類。<br /><br /> 2) 選択**完了**サーバーの種類。<br /><br /> 3) 既存の SharePoint ファームに SharePoint 2010 SP1 がインストールされている場合は、インストールが完了したときに SharePoint 製品構成ウィザードを実行しないでください。 SharePoint 製品構成ウィザードを実行する前に SharePoint SP1 をインストールする必要があります。|  
-|SharePoint Server 2010 SP1 をインストールします。|既存の SharePoint ファームに SharePoint 2010 SP1 インストールをダウンロードしてから、SharePoint 2010 SP1 をインストールする場合:[http://support.microsoft.com/kb/2460045](http://go.microsoft.com/fwlink/p/?linkID=219697)します。<br /><br /> SharePoint 2010 SP1 の詳細については、「 [Office 2010 SP1 および SharePoint 2010 SP1 インストール時の既知の問題](http://support.microsoft.com/kb/2532126)」を参照してください。|  
+|SharePoint Server 2010 SP1 をインストールします。|既存の SharePoint ファームに SharePoint 2010 SP1 インストールをダウンロードしてから、SharePoint 2010 SP1 をインストールする場合:[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)します。<br /><br /> SharePoint 2010 SP1 の詳細については、「 [Office 2010 SP1 および SharePoint 2010 SP1 インストール時の既知の問題](https://support.microsoft.com/kb/2532126)」を参照してください。|  
 |SharePoint 製品の構成ウィザードを実行して、ファームにサーバーを追加します。|1) で、 **Microsoft SharePoint 2010 製品**プログラム グループで、をクリックして**Microsoft SharePoint 2010 製品構成ウィザード**します。<br /><br /> 2)、**サーバー ファームへの接続**選択ページ**既存ファームへの接続** をクリック**次**。<br /><br /> 3)、**構成データベースの設定の指定** ページで、既存のファーム構成データベースの名前を使用するデータベース サーバーの名前を入力します。 **[次へ]** をクリックします。<br />**\*\* 重要な\* \*** で SQL Server ネットワーク構成に対してどのようなプロトコルが有効になっている確認し、次のようなエラー メッセージが表示アクセス許可があることを確認する場合は、 **Sql ServerConfiguration Manager**:"データベース サーバーへの接続に失敗しました。 確認してください、データベースが存在する、それが Sql Server、およびサーバーにアクセスする適切なアクセス許可がある。"<br />**\*\* 重要な\* \*** ページが表示された場合**サーバー ファーム製品と修正プログラムの状態**ページの情報を確認し、続行する前に、必要なファイルでサーバーを更新する必要がありますファームにサーバーを参加させる。<br /><br /> 4)、**ファームのセキュリティ設定の指定**ページは、ファームのパスフレーズを入力し、をクリックして**次**します。 確認ページで **[次へ]** をクリックして、ウィザードを実行します。<br /><br /> 5) クリック**次**を実行する、**ファーム構成ウィザード**します。|  
 |サーバーが SharePoint ファームに追加されたことを確認します。|1) SharePoint サーバーの全体管理で、 **[システム設定]** の **[このファームのサーバーの管理]** をクリックします。<br /><br /> 2) 新しいサーバーが追加され、状態が正しいことを確認します。<br /><br /> サービスが表示されない 3) 注**SQL Server Reporting Services サービス**を実行します。 このサービスは次の手順でインストールされます。<br /><br /> このサーバーを WFE ロールから削除するには 4) をクリックして**サービス サーバーの管理**サービスを停止および**Microsoft SharePoint Foundation Web アプリケーション**。|  
 |Reporting Services SharePoint モードをインストールして構成します。|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストールを実行します。 インストールの詳細については[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint モードを参照してください[Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)として、アプリケーション サーバーと、サーバーを使用するがないかどうかは、サーバーが使用されますのみWFE、する必要はありません選択**Reporting Services アドインを SharePoint 製品用**で。<br /><br /> **セットアップ ロール**] ページで、[ **SQL Server 機能のインストール**<br /><br /> **機能の選択**] ページで、[ **Reporting Services - SharePoint**<br /><br /> -または-<br /><br /> **Reporting Services 構成**ページ確認、**インストールのみ**オプションが選択されて**Reporting Services SharePoint モード**します。|  
@@ -93,7 +92,7 @@ ms.locfileid: "48100972"
  Reporting Services Web サービスが無効です。 少なくとも 1 つのインスタンスが Reporting Services SharePoint サービスの構成\<IsWebServiceEnable > を true に設定します。 詳細については、「[Reporting Services の構成ファイルの変更 &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint 2013 ファームに web アプリケーションまたはアプリケーション サーバーを追加します。](http://technet.microsoft.com/library/cc261752.aspx)   
- [サービス (SharePoint Server 2010) を構成します。](http://technet.microsoft.com/library/ee794878.aspx)  
+ [SharePoint 2013 ファームに web アプリケーションまたはアプリケーション サーバーを追加します。](https://technet.microsoft.com/library/cc261752.aspx)   
+ [サービス (SharePoint Server 2010) を構成します。](https://technet.microsoft.com/library/ee794878.aspx)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: クエリ (SQLXML 4.0) での XSD スキーマを使用して注釈が付けられた |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48773fe5b4238f74c88bd8fb91f425ce96fd4359
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c9229f612c45c2163148b809d8a79de592f06b32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041079"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>クエリでの注釈付き XSD スキーマの使用 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "51665321"
  たとえば、次の注釈付きスキーマを考えてみます。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -76,7 +75,7 @@ ms.locfileid: "51665321"
   
 ```  
 <ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema1' sql:is-mapping-schema='1'>  
   <xsd:element name='Employees' ms:relation='HumanResources.Employee'>  
@@ -89,7 +88,7 @@ ms.locfileid: "51665321"
   </xsd:element>  
 </xsd:schema>  
   
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema2' sql:is-mapping-schema='1'>  
   <xsd:element name='Contacts' ms:relation='Person.Contact'>  
@@ -127,7 +126,7 @@ ms.locfileid: "51665321"
   
  指定するだけでなく、**マッピング スキーマ**属性を **\<sql:xpath-クエリ >** 要素 (XPath クエリがある) 場合のテンプレート、または **\<updg:sync >** 要素、アップデート グラムで、次を行うことができます。  
   
--   指定、**マッピング スキーマ**属性を**\<ルート >** テンプレート内の要素 (グローバル宣言)。 このマッピング スキーマになりますが、明示的なすべての XPath およびアップデート グラムのノードで使用される既定のスキーマ**マッピング スキーマ**注釈。  
+-   指定、**マッピング スキーマ**属性を **\<ルート >** テンプレート内の要素 (グローバル宣言)。 このマッピング スキーマになりますが、明示的なすべての XPath およびアップデート グラムのノードで使用される既定のスキーマ**マッピング スキーマ**注釈。  
   
 -   指定、**マッピング スキーマ**、ADO を使用して属性**コマンド**オブジェクト。  
   

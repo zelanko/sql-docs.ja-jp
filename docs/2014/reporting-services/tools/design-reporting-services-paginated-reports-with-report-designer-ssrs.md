@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100348"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用してレポートをデザインする (SSRS)
   レポート デザイナーを使用すると、フル機能の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートおよびレポート ソリューションを作成できます。 レポート デザイナーには、データ ソース、データセット、およびクエリ、データ領域とフィールドのレポート レイアウトの配置、連携するパラメーターとレポートのセットなどの対話機能を定義できるグラフィカル インターフェイスが用意されています。  
@@ -104,7 +103,7 @@ ms.locfileid: "48145892"
  **[プレビュー]** は、レポート データとレイアウト デザインを確認する際に使用します。 レポートをプレビューすると、レポート プロセッサはレポート定義スキーマと式の構文を検証し、 [Output](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) ウィンドウに問題を一覧表示します。  
   
 > [!NOTE]  
->  レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>*.rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
+>  レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>* .rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
   
  レポートは、次の方法でプレビューできます。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "48145892"
   
     -   F5 キーを押す。  
   
-     レポートを作成するものも配置しないプロジェクト構成で指定されているレポートを使用する場合、`StartItem`別のプレビュー ウィンドウで、現在の構成プロパティを開きます。  
+     レポートを作成しても配置しないプロジェクト構成を使用している場合は、現在の構成の `StartItem` プロパティで指定されたレポートが、別のプレビュー ウィンドウで開きます。  
   
     > [!NOTE]  
     >  デバッグ モードを使用するには、開始アイテムを設定する必要があります。 ソリューション エクスプ ローラーでレポート プロジェクトを右クリックし、をクリックして**プロパティ**、および`StartItem`、表示するレポートの名前を選択します。  
@@ -183,12 +182,12 @@ ms.locfileid: "48145892"
 |3|レポートのレイアウトが目立たない程度に若干変更されるマイナーなビルドの問題。|  
 |4|パブリッシュ上の警告としてのみ使用される。|  
   
- しようとすると、プレビューまたは配置に新しいレポート アイテムを含むレポートを[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]マップ、データ バーなど、これらのレポート アイテムをレポートから削除できます。 既定では、構成の ErrorLevel プロパティは 2 に設定されます。この設定では、マップが削除されると、レポートの作成が失敗する原因となります。 ただし、ErrorLevel プロパティの値を 0 または 1 に変更すると、マップが削除されても、警告が発行され、ビルド プロセスは続行されます。  
+ マップやデータ バーなど、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で新しくなったレポート アイテムが含まれるレポートをプレビューまたは配置しようとすると、これらのレポート アイテムはレポートから削除される可能性があります。 既定では、構成の ErrorLevel プロパティは 2 に設定されます。この設定では、マップが削除されると、レポートの作成が失敗する原因となります。 ただし、ErrorLevel プロパティの値を 0 または 1 に変更すると、マップが削除されても、警告が発行され、ビルド プロセスは続行されます。  
   
   
 ## <a name="see-also"></a>参照  
  [Reporting Services SQL Server Data Tools の&#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
  [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
- [SQL Server データ ツールの配置およびバージョン サポート &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

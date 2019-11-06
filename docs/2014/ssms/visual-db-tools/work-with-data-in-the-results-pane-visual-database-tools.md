@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -19,12 +19,12 @@ ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a2f61a0d71c1fe54c7b66fab375681a97ae7f64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63313773"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>結果ペインのデータの操作 (Visual Database Tools)
   クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  
@@ -115,9 +115,9 @@ ms.locfileid: "48103484"
 ### <a name="what-can-not-be-represented-fully"></a>完全に表現できないもの  
  データベースから結果ペインに返される内容は、使用しているデータ ソースのプロバイダーに大きく影響されます。 結果ペインでは、必ずしもすべてのデータベース管理システムからのデータを解釈できるわけではありません。 結果ペインでデータを解釈できないケースを以下に示します。  
   
--   結果ペインで作業する場合、binary データ型は不便な場合が多く、ダウンロードに長時間かかる場合があります。 によって表されるように*\<バイナリ データ >* または*Null*します。  
+-   結果ペインで作業する場合、binary データ型は不便な場合が多く、ダウンロードに長時間かかる場合があります。 によって表されるように *\<バイナリ データ >* または*Null*します。  
   
--   有効桁数と小数点以下桁数が保持されない場合があります。 たとえば、結果ペインに表示できる有効桁数は 27 桁です。 データが大きい有効桁数を持つデータ型の場合は、データが切り捨てられる可能性がありますまたはで表すことができます*\<データを読み取れません >* します。  
+-   有効桁数と小数点以下桁数が保持されない場合があります。 たとえば、結果ペインに表示できる有効桁数は 27 桁です。 データが大きい有効桁数を持つデータ型の場合は、データが切り捨てられる可能性がありますまたはで表すことができます *\<データを読み取れません >* します。  
   
 ## <a name="see-also"></a>参照  
  [クエリに関する基本操作を実行&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

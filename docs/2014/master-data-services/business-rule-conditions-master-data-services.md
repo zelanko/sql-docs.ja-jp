@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9c994d6a13ed99a831b63ff930f6912b59274da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c824c1298a9bd5c0fd0564688ea76c48e8975c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480079"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>ビジネス ルール条件 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、1 つまたは複数のアクションの実行にあたって true になることが必須の条件が、ビジネス ルールの条件によって判定されます。  
@@ -37,7 +36,7 @@ ms.locfileid: "48207040"
 |**が次の値で始まる**|選択した属性が特定の属性または**属性値で始まるか**、空白であることを示します。<br /><br /> この条件は、文字列値およびリンク値に有効です。|  
 |**が次の値で終わる**|選択した属性が特定の属性または**属性値で終わる**か、空白であることを示します。<br /><br /> この条件は、文字列値およびリンク値に有効です。|  
 |**が次の値を含む**|選択した属性が特定の属性または**属性値を含む**か、空白であることを示します。<br /><br /> この条件は、文字列値およびリンク値に有効です。|  
-|**がパターンを含む**|選択した属性が特定の属性または属性値の**パターンを含む**か、空白であることを示します。 パターンの指定には、.NET Framework 正規表現を使用します。<br /><br /> 正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](http://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。<br /><br /> この条件は、文字列値およびリンク値に有効です。|  
+|**がパターンを含む**|選択した属性が特定の属性または属性値の**パターンを含む**か、空白であることを示します。 パターンの指定には、.NET Framework 正規表現を使用します。<br /><br /> 正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](https://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。<br /><br /> この条件は、文字列値およびリンク値に有効です。|  
 |**がサブセットを含む**|選択した属性が特定の属性または属性値**のサブセットを含む**ことを示します。 検索の開始位置を指定する必要があります (たとえば、1 を指定すると、最初の文字から検索が開始されます)。<br /><br /> この条件は、文字列値およびリンク値に有効です。|  
 |**が変更されている**|選択した属性は、メンバーにビジネス ルールが最後に**適用された後**に変更されています。 属性がメンバーとなっている変更グループを指定する必要があります。<br /><br /> 変更の追跡グループの詳細については、「[変更の追跡グループに属性を追加する (マスター データ サービス)](add-attributes-to-a-change-tracking-group-master-data-services.md)」を参照してください。<br /><br /> この条件は、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**が次の値の間**|選択した属性が特定の 2 つ**の属性値の間**にあることを示します。<br /><br /> この条件は、文字列値、数値、およびデータ値に有効です。|  
@@ -46,8 +45,8 @@ ms.locfileid: "48207040"
 >  ビジネス ルールに 2 つの値を比較する条件が含まれていて、そのルールが両方の値とも NULL であるメンバーに適用されている場合、そのメンバーは検証に失敗します。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス ルール アクション&#40;マスター データ サービス&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)   
- [ビジネス ルール&#40;マスター データ サービス&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [作成し、ビジネス ルールをパブリッシュ&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [ビジネス ルール アクション (マスター データ サービス)](../../2014/master-data-services/business-rule-actions-master-data-services.md)   
+ [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

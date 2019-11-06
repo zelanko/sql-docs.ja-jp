@@ -1,21 +1,21 @@
 ---
-title: LOCALDB_ERROR_INVALID_PARAMETER です |Microsoft Docs
+title: LOCALDB_ERROR_INVALID_PARAMETER | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47d0dbafbfa2cf87ca73ed8309b238ccb16d8770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e92db0cc41e57d0d8233b83efef0914ded4213e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990387"
 ---
 # <a name="localdberrorinvalidparameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
     

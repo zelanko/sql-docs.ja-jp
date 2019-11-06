@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
@@ -14,18 +14,18 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2209c8de9c65e5740b9a6ebdd62972c93596e396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918594"
 ---
 # <a name="manage-data-collection"></a>データ コレクションの管理
   使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]の有効化またはコレクションを変更するデータの収集を無効にする設定の構成、または管理データ ウェアハウスのデータの表示などに、プロシージャと、データ コレクションのさまざまな側面を管理する関数を格納します.  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用したデータ コレクションの管理  
- オブジェクト エクスプ ローラーを使用して次のデータ コレクター関連のタスクを実行する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーを使用することで、次のデータ コレクター関連のタスクを実行できます。  
   
 -   [管理データ ウェアハウスの構成 &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48104862"
 > [!IMPORTANT]  
 >  通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
- 使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を作成して、付属のコード サンプルを実行します。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 クエリを実行するには、Windows コマンド プロンプトを使用してから、`sqlcmd`ユーティリティ。 詳細については、「 [sqlcmd Utility の使用](../scripting/sqlcmd-use-the-utility.md)」を参照してください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、付属のコード サンプルを作成して実行することができます。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 このクエリは、Windows コマンド プロンプトから `sqlcmd` ユーティリティを使用して実行できます。 詳細については、「 [sqlcmd Utility の使用](../scripting/sqlcmd-use-the-utility.md)」を参照してください。  
   
 ### <a name="stored-procedures-and-views"></a>ストアド プロシージャとビュー  
  **データ コレクターの操作**  
@@ -173,6 +173,6 @@ ms.locfileid: "48104862"
 ## <a name="see-also"></a>参照  
  [ストアド プロシージャの実行](../stored-procedures/execute-a-stored-procedure.md)   
  [SQL Server Management Studio の使用 [SQL Server]](../../database-engine/use-sql-server-management-studio.md)   
- [[データ コレクション]](data-collection.md)  
+ [データ コレクション](data-collection.md)  
   
   

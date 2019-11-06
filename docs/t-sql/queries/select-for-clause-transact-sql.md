@@ -1,7 +1,7 @@
 ---
 title: FOR 句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,33 +19,32 @@ helpviewer_keywords:
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904354"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 句 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  FOR 句を使用し、クエリ結果に次のいずれかのオプションを指定します。  
+FOR 句を使用し、クエリ結果に次のいずれかのオプションを指定します。
   
 -   **[FOR BROWSE]** を指定し、ブラウズ モード カーソルでクエリ結果を表示している間、更新を許可します。  
   
 -   **[FOR XML]** を指定し、XML としてクエリ結果を書式設定します。  
   
 -   **[FOR JSON]** を指定し、JSON としてクエリ結果を書式設定します。  
-  
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -84,20 +83,21 @@ JSON
         [ , WITHOUT_ARRAY_WRAPPER ]  
     ]  
   
-}  
-```  
+}
+```
   
-## <a name="for-browse"></a>FOR BROWSE  
+## <a name="for-browse"></a>FOR BROWSE
+
  BROWSE  
  DB-Library ブラウズ モード カーソルでデータを表示しているときに、更新が許可されます。 テーブルに **timestamp** 列が含まれる場合、テーブルに一意なインデックスがある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送られる SELECT ステートメントの最後に FOR BROWSE オプションがある場合、アプリケーションの中でテーブルを参照できます。  
   
-> [!NOTE]  
->  \<lock_hint> HOLDLOCK は、FOR BROWSE オプションを含む SELECT ステートメントでは使用できません。
+> [!NOTE]
+> \<lock_hint> HOLDLOCK は、FOR BROWSE オプションを含む SELECT ステートメントでは使用できません。
   
  FOR BROWSE は、UNION 演算子によって結合された SELECT ステートメントでは使えません。  
   
-> [!NOTE]  
->  テーブルの一意なインデックス キー列が NULL 値を許容し、かつそのテーブルが外部結合の内部にある場合、そのインデックスはブラウズ モードではサポートされません。  
+> [!NOTE]
+> テーブルの一意なインデックス キー列が NULL 値を許容し、かつそのテーブルが外部結合の内部にある場合、そのインデックスはブラウズ モードではサポートされません。  
   
  ブラウズ モードを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの行をスキャンし、テーブルのデータを 1 回に 1 行ずつ更新できます。 アプリケーションのブラウズ モードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにアクセスするには、次の 2 つのオプションのいずれかを使用する必要があります。  
   
@@ -117,7 +117,7 @@ JSON
   
 -   外部結合ステートメントの内部に存在するテーブルに一意のインデックスが定義されている場合。  
   
- ブラウズ モードでこの動作を再現するには、以下の手順を実行します。  
+ ブラウズ モードでこの動作を再現するには、以下の手順を行います。  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、SampleDB という名前のデータベースを作成します。  
   
@@ -155,8 +155,7 @@ JSON
     FROM tleft   
     RIGHT JOIN tright   
     ON tleft.c1 = tright.c1   
-    WHERE tright.c1 <> 2 ;  
-  
+    WHERE tright.c1 <> 2 ;
     ```  
   
      [結果] ペインに、次の出力が表示されます。  
@@ -171,14 +170,15 @@ JSON
   
  ブラウズ モードで SELECT クエリを実行してテーブルにアクセスすると、右外部結合ステートメントの定義に従い、SELECT クエリの結果セットに tleft テーブルの c1 列の NULL 値が 2 つ格納されます。 したがって、結果セットではテーブルの NULL 値、および右外部結合ステートメントによって提供された NULL 値を区別できません。 結果セットの NULL 値を無視しなければならない場合、正しくない結果が返されることがあります。  
   
-> [!NOTE]  
->  一意のインデックスに含まれる列で NULL 値を使用できない場合は、結果セットの NULL 値がすべて右外部結合ステートメントによって提供されます。  
+> [!NOTE]
+> 一意のインデックスに含まれる列で NULL 値を使用できない場合は、結果セットの NULL 値がすべて右外部結合ステートメントによって提供されます。  
   
-## <a name="for-xml"></a>FOR XML  
+## <a name="for-xml"></a>FOR XML
+
  XML  
  クエリの結果を XML ドキュメントとして返します。 XML モードとして、RAW、AUTO、EXPLICIT のいずれか 1 つを指定する必要があります。 XML データと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の詳細については、「[FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)」を参照してください。  
   
- RAW [ **('***ElementName***')** ]  
+ RAW [ **('** _ElementName_ **')** ]  
  クエリの結果を取得し、結果セット内の各行を、要素タグとして汎用識別子 \<row /> が指定されている XML 要素に変換します。 必要に応じて、その行要素に名前を指定することもできます。 結果の XML 出力では、指定した *ElementName* が、行ごとに生成される行要素として使用されます。 詳細については、「 [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)」を参照してください。
   
  AUTO  
@@ -190,23 +190,42 @@ JSON
  XMLDATA  
  インライン XDR スキーマを返します。ただし、結果にルート要素は追加されません。 XMLDATA を指定すると、XDR スキーマはドキュメントに追加されます。  
   
-> [!IMPORTANT]  
->  XMLDATA ディレクティブは非推奨とされます。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
- XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
+> [!IMPORTANT]
+> XMLDATA ディレクティブは**非推奨**です。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
+_不要な改行を非表示にする:_ SQL Server Management Studio (SSMS) を使用し、FOR XML 句を使用するクエリを発行することがあります。 大量の XML が返され、1 つのグリッド セルに表示されることがあります。 XML 文字列は、1 つの SSMS グリッド セルで 1 行に保持できる長さを超えることがあります。 このような場合、SSMS では、XML 文字列全体の長いセグメントの間に改行文字が挿入されることがあります。 行をまたいで分割するべきではない部分文字列の真ん中でそのような改行が発生することがあります。 キャスト AS XMLDATA を使用することで、改行を防ぐことができます。 FOR JSON PATH を使用するときもこの解決策を適用できます。 この手法についてはスタック オーバーフローで論じられています。また、次の Transact-SQL サンプル SELECT ステートメントで確認できます。
+
+- [Using SQL Server FOR XML:Convert Result Datatype to Text/varchar/string whatever?](https://stackoverflow.com/questions/5655332/using-sql-server-for-xml-convert-result-datatype-to-text-varchar-string-whate/5658758#5658758) (SQL Server の FOR XML を使用する: Result データ型をテキスト/可変文字列/文字列に変換する)
+
+    ```sql
+    SELECT CAST(
+        (SELECT column1, column2
+            FROM my_table
+            FOR XML PATH('')
+        )
+            AS VARCHAR(MAX)
+    ) AS XMLDATA ;
+    ```
+
+<!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
+
+ XMLSCHEMA [ **('** _TargetNameSpaceURI_ **')** ]  
  インライン XSD スキーマを返します。 このディレクティブを指定する場合は、必要に応じて、対象名前空間の URI を指定することもできます。指定した場合は、スキーマにある指定した名前空間が返されます。 詳細については、「 [Generate an Inline XSD Schema](../../relational-databases/xml/generate-an-inline-xsd-schema.md)」を参照してください。  
   
  ELEMENTS  
  列を副要素として返します。 指定していない場合は、XML 属性にマップされます。 このオプションは、RAW、AUTO、および PATH モードでのみサポートされます。 詳細については、「 [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)」を参照してください。  
   
  XSINIL  
- 列の値が NULL の場合、**xsi:nil** 属性が **True** に設定されている要素を作成します。 このオプションは、ELEMENTS ディレクティブでのみ指定できます。 詳細については、「[XSINIL パラメーターを使用した NULL 値に対する要素の生成](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)」を参照してください。  
+ 列の値が NULL の場合、**xsi:nil** 属性が **True** に設定されている要素を作成します。 このオプションは、ELEMENTS ディレクティブでのみ指定できます。 詳細については、以下をご覧ください。
+
+- [XSINIL パラメーターを使用した NULL 値に対する要素の生成](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)。
+- [SELECT ステートメントでの FOR XML](../../relational-databases/xml/for-xml-sql-server.md)
   
  ABSENT  
  列の値が NULL の場合、対応する XML 要素を XML 結果に追加しません。 このオプションは、ELEMENTS でのみ指定してください。  
   
- PATH [ **('***ElementName***')** ]  
- 結果セットの各行に対して \<row> 要素ラッパーを生成します。 必要に応じて、\<row> 要素ラッパーに要素名を指定することもできます。 FOR XML PATH (**''**) ) などの空文字列を指定すると、ラッパー要素は生成されません。 EXPLICIT ディレクティブを使用するよりも、PATH を使用した方が、クエリが単純になる場合があります。 詳細については、「 [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)」を参照してください。  
+ PATH [ **('** _ElementName_ **')** ]  
+ 結果セットの各行に対して \<row> 要素ラッパーを生成します。 必要に応じて、\<row> 要素ラッパーに要素名を指定することもできます。 FOR XML PATH ( **''** ) ) などの空文字列を指定すると、ラッパー要素は生成されません。 EXPLICIT ディレクティブを使用するよりも、PATH を使用した方が、クエリが単純になる場合があります。 詳細については、「 [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)」を参照してください。  
   
  BINARY BASE64  
  クエリは、バイナリ データをバイナリ ベース 64 エンコード形式で返します。 RAW モードおよび EXPLICIT モードでバイナリ データを取得する場合は、このオプションを指定する必要があります。 AUTO モードの場合は、これは既定値です。  
@@ -214,7 +233,7 @@ JSON
  TYPE  
  クエリが結果を **xml** 型で返すことを指定します。 詳細については、「 [FOR XML クエリの TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md)」を参照してください。  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  単一のトップレベル要素を、結果として生成される XML に追加します。 必要に応じて、生成するルート要素名を指定することもできます。 オプションのルート名を指定しない場合は、既定の \<root> 要素が追加されます。  
   
  詳細については、「[FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)」を参照してください。  
@@ -234,7 +253,8 @@ ORDER BY LastName, FirstName
 FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;  
 ```  
   
-## <a name="for-json"></a>JSON の  
+## <a name="for-json"></a>JSON の
+
  JSON  
  FOR JSON を指定し、JSON テキストとして書式設定されたクエリ結果を返します。 JSON モードとして自動またはパスも指定する必要があります。 **FOR JSON** 句の詳細については、「[FOR JSON を使用してクエリ結果を JSON として書式設定する &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」を参照してください。  
   
@@ -249,7 +269,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  **INCLUDE_NULL_VALUES** オプションと **FOR JSON** 句を指定し、JSON 出力に NULL 値を含めます。 このオプションを指定しない場合、出力では、クエリ結果の NULL 値に対する JSON のプロパティは含まれません。 詳細については、「[INCLUDE_NULL_VALUES オプションを使用して JSON の出力に Null 値を含める &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)」を参照してください。  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  **ROOT** オプションと **FOR JSON** 句を指定し、最上位要素を 1 つ JSON 出力に追加します。 指定しない場合、 **ROOT** オプションでは、JSON の出力はルート要素がないです。 詳細と例については、「[ROOT オプションを使用して JSON 出力にルート ノードを追加する &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)」を参照してください。  
   
  WITHOUT_ARRAY_WRAPPER  
@@ -257,7 +277,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  詳細については、「[FOR JSON を使用してクエリ結果を JSON として書式設定する &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+

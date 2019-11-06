@@ -11,15 +11,15 @@ helpviewer_keywords:
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018747"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014294"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography インスタンスの作成、構築、およびクエリ
   地理空間データ型の `geography` は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `geography` データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
@@ -105,7 +105,7 @@ ms.locfileid: "51018747"
 ###  <a name="gml"></a> GML Text 入力からの geography インスタンスの構築  
  `geography`データ型を生成するメソッドを提供する、 `geography` GML の XML 表現からのインスタンスを`geography`インスタンス。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、GML のサブセットをサポートします。  
   
- Geography Markup Language の詳細については、OGC の仕様の「 [OGC の仕様、Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)」を参照してください。  
+ Geography Markup Language の詳細については、OGC の仕様の[「OGC Specification」の「Geography Markup Language」](https://go.microsoft.com/fwlink/?LinkId=93629)を参照してください。  
   
  **GML 入力から任意の型の geography インスタンスを構築するには**  
  [GeomFromGML &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
@@ -225,7 +225,7 @@ ms.locfileid: "51018747"
  [STSymDifference &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
 ##  <a name="supportedsrid"></a> geography インスタンスでは必ずサポート対象の SRID を使用  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] EPSG 標準に基づく SRID をサポートします。 地理空間データを使用して計算を実行したりメソッドを使用したりする際には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている SRID を `geography` インスタンスで使用する必要があります  その SRID が、 **sys.spatial_reference_systems** カタログ ビューに表示される SRID のいずれかに一致する必要があります。 既に説明したように、`geography` データ型を使用して空間データの計算を実行する場合、計算結果は、データの作成に使用された楕円体によって異なります。これは、各楕円体に特定の SRID (spatial reference identifier) が割り当てられているからです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] EPSG 標準に基づく SRID をサポートします。 地理空間データを使用して計算を実行したりメソッドを使用したりする際には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている SRID を `geography` インスタンスで使用する必要があります その SRID が、 **sys.spatial_reference_systems** カタログ ビューに表示される SRID のいずれかに一致する必要があります。 既に説明したように、`geography` データ型を使用して空間データの計算を実行する場合、計算結果は、データの作成に使用された楕円体によって異なります。これは、各楕円体に特定の SRID (spatial reference identifier) が割り当てられているからです。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される既定の SRID は 4326 です。SRID 4326 は、`geography` インスタンスのメソッドを使用する際に WGS 84 空間参照系にマップされます。 WGS 84 (SRID 4326) 以外の空間参照系のデータを使用する場合は、その地理空間データの SRID を確認する必要があります。  
   

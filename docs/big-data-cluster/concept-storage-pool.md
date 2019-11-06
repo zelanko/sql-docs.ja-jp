@@ -1,39 +1,44 @@
 ---
-title: SQL Server のビッグ データ クラスター記憶域プールとは何ですか。 | Microsoft Docs
-description: この記事では、SQL Server 2019 のビッグ データ クラスターで記憶域プールについて説明します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 10/01/2018
+title: 記憶域プールとは
+titleSuffix: SQL Server big data clusters
+description: この記事では、SQL Server 2019 ビッグ データ クラスターの記憶域プールについて説明します。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cbf9ff14ece1b33e1c271786bc96f0ac590b807e
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.technology: big-data-cluster
+ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050754"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009329"
 ---
-# <a name="what-is-the-sql-server-big-data-clusters-storage-pool"></a>SQL Server のビッグ データ クラスター記憶域プールとは何ですか。
+# <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>記憶域プール ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]) とは
 
-この記事では、の役割を説明します、 *SQL Server の記憶域プール*で SQL Server 2019 プレビューのビッグ データ クラスター。 次のセクションでは、アーキテクチャと SQL の記憶域プールの機能について説明します。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の*SQL Server 記憶域プール*の役割について説明します。 以下のセクションでは、SQL 記憶域プールのアーキテクチャと機能について説明します。
 
 ## <a name="storage-pool-architecture"></a>記憶域プールのアーキテクチャ
 
-記憶域プールは、記憶域ノードから成る Linux、Spark、および HDFS 上の SQL Server で構成されます。 SQL のビッグ データ クラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
+記憶域プールは、SQL Server on Linux、Spark、および HDFS で構成される記憶域ノードで構成されます。 SQL ビッグ データ クラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
 
 ![記憶域プールのアーキテクチャ](media/concept-storage-pool/scale-big-data-on-demand.png)
 
-## <a name="responsibilities"></a>責任
+## <a name="responsibilities"></a>役割
 
-記憶域ノードは責任を負います。
+記憶域ノードの役割は次のとおりです。
 
-- Spark からデータの取り込み。
-- HDFS (Parquet 形式) でデータ ストレージ。 HDFS では、HDFS のデータが SQL のビッグ データ クラスター内のすべての記憶域ノードに分散され、データの永続性も提供します。
-- HDFS と SQL Server エンドポイント経由のデータ アクセス。
+- Spark を使用したデータ インジェスト。
+- HDFS のデータストレージ (Parquet および区切られたテキスト形式)。 HDFS では、HDFS データが SQL ビッグ データ クラスター内のすべての記憶域ノードに分散されるため、データの永続性も提供されます。
+- HDFS と SQL Server エンドポイントを使用したデータ アクセス。
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]概要](big-data-cluster-overview.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

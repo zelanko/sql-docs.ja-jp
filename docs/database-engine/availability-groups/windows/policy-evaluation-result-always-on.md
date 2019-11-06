@@ -1,6 +1,7 @@
 ---
-title: ポリシー評価の結果 (AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: ポリシー評価の結果ページ (Always On ダッシュボード) | Microsoft Docs
+description: SQL Server Management Studio の [Always On ダッシュボード] 内にある [ポリシー評価の結果ページ] の説明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,25 +13,18 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 587258b743ae65201e1f30e10fc513f361da8824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f13781e0d0820aaccf3a7fdc9e72145c08c6b4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014539"
 ---
-# <a name="policy-evaluation-result-always-on"></a>ポリシー評価の結果 (AlwaysOn)
+# <a name="policy-evaluation-result-page-always-on-dashboard"></a>ポリシー評価の結果ページ (Always On ダッシュボード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   AlwaysOn ダッシュボードの **[ポリシー評価の結果]** ページは、現在のポリシーの問題を表示するために使用します。  
-  
- **このトピックの内容**  
-  
--   [ダイアログ ボックスのオプション](#Options)  
-  
--   [関連タスク](#RelatedTasks)  
-  
+    
 ##  <a name="Options"></a> ダイアログ ボックスのオプション  
  **[検出された問題]**  
  検出された各問題の行を表示します。 問題に関連付けられているアイコンでは、次のように問題の重大度が視覚的に示されます。  

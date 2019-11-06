@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d32af1e20d3400605b22c4ccbe2d91ebeabe11ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e998245ecb72f889af3fb2c699d6f1e961d8874e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012452"
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management イベント クラス
   **Audit Server Object Management** イベント クラスは、サーバー オブジェクトに対して CREATE、ALTER、または DROP が実行された場合に発生します。  
@@ -36,7 +35,7 @@ ms.locfileid: "48211112"
 |**EventSequence**|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1 = 作成<br /><br /> 2 = 変更<br /><br /> 3 = 削除<br /><br /> 4 = ダンプ<br /><br /> 7 = 資格情報をログインにマッピング<br /><br /> 9 = 資格情報のマッピングを破棄<br /><br /> 11 = 読み込み|21|はい|  
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
+|**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|[はい]|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  

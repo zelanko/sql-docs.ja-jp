@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining shapes
@@ -16,27 +15,27 @@ ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086397"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio 用のデータ マイニング図形
   Visio 用データ マイニング図形は、データ マイニング モデルを表示するためにカスタマイズされたテンプレートです。 これらのテンプレートを使用すると、作成したモデルに接続し、インタラクティブなプレゼンテーションを作成してデータ マイニングの結果を示すことができます。  
   
- これらのテンプレートには静的グラフや画面キャプチャよりも優れた点が多数あります。Analysis Services のインスタンスに格納された、土台となるデータ マイニング モデルとやり取りして、マイニング モデルのパターンの表示方法をカスタマイズすることができます。 ツリー モデルはレベルの折りたたみと展開ができ、データ ノードに対して、または属性別にフィルター処理を実行できるほか、確率や係数などのモデル統計を表示することもできます。  
+ テンプレートは静的グラフの多くの利点を提供し、画面のキャプチャ - は、Analysis Services のインスタンスに格納されている、基になるデータ マイニング モデルを操作し、マイニング モデルのパターンの表示方法をカスタマイズすることができます。 ツリー モデルはレベルの折りたたみと展開ができ、データ ノードに対して、または属性別にフィルター処理を実行できるほか、確率や係数などのモデル統計を表示することもできます。  
   
  ![DM](media/dm-stencil.gif "DM")  
   
  Visio テンプレートには、以下のウィザードが含まれています:  
   
--   **依存関係ネットワーク ダイアグラム:** このウィザードを使用して、デシジョン ツリーとニューラル ネットワークのグラフを作成します。  
+-   **依存関係ネットワーク ダイアグラム:** このウィザードを使用すると、デシジョン ツリーとニューラル ネットワークのグラフを作成します。  
   
--   **デシジョン ツリー ダイアグラム:** このウィザードを使用して、意思決定ポイントとデシジョン ツリー モデルに関連付けられている数式を示すダイアグラムを作成します。 このダイアグラムは、回帰モデルでも使用できます。  
+-   **デシジョン ツリー ダイアグラム:** このウィザードを使用すると、意思決定ポイントとデシジョン ツリー モデルに関連付けられている数式を示すダイアグラムを作成します。 このダイアグラムは、回帰モデルでも使用できます。  
   
--   **クラスター ダイアグラム:** 分割モデルに対応するカラフルなグラフを作成するこのウィザードを使用します。 属性の識別、プロファイル、依存関係などのビューを切り替え、クラスターの外観をカスタマイズすることができます。  
+-   **クラスター ダイアグラム:** このウィザードを使用すると、分割モデルに対応するカラフルなグラフを作成します。 属性の識別、プロファイル、依存関係などのビューを切り替え、クラスターの外観をカスタマイズすることができます。  
   
 ## <a name="installation"></a>インストール  
  Visio 用データ マイニング テンプレートをインストールするときに既定では、次のファイルにインストールされます\<ドライブ > \Program Files\Microsoft SQL Server 2012 DM Add-ins (または\<ドライブ > \ または Program Files (x86) \Microsoft SQL Server 2012 DMAdd-Ins)。  
@@ -60,7 +59,7 @@ ms.locfileid: "48055232"
   
  操作および Visio のモデル ダイアグラムを強化する方法の詳細については、次を参照してください[を表示するデータ マイニング モデルを Visio で&#40;データ マイニング アドイン。&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 -   テンプレートを使用するには、最初に [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を作成する必要があります。  
   

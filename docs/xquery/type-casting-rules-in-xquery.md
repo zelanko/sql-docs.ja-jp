@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d85f49dcb9ab5bb0e6d5dde114d5c807a5780f5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946216"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery での型キャストの規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ go
   
 ```  
 create xml schema collection myCollection as N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
       <xs:element name="root">  
             <xs:complexType>  
                   <xs:sequence>  

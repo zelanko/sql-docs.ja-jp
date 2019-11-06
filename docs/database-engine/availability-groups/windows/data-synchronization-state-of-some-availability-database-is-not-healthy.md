@@ -1,6 +1,7 @@
 ---
-title: 一部の可用性データベースのデータ同期状態が正常でない | Microsoft Docs
-ms.custom: ''
+title: 一部の可用性データベースのデータ同期状態が正常ではない
+description: Always On 可用性グループのデータベースのデータ同期状態が正常でない理由の考えられる原因を特定します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9260f9de24d282b3b6ce5c4e46b4572e01aafa9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b2c42ee67fe0c01570eadd6e3aa1d23019672172
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968334"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>一部の可用性データベースのデータ同期状態が正常ではない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.validate.mergeoptions.f1
@@ -15,12 +14,12 @@ ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4837c185280f68afb025663cdd1da71747f0d3af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7631df4a1e4c6ec37effbc06b6a141b0d41ebc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249293"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>[サブスクリプションの検証オプション]\(マージ サブスクリプション)
   **[サブスクリプションの検証オプション]** ダイアログ ボックスを使用すると、検証の際に行数だけを使用するか、行数とバイナリ チェックサムを使用するかを指定できます。  
@@ -34,6 +33,6 @@ ms.locfileid: "48169852"
   
 ## <a name="see-also"></a>参照  
  [サブスクライバーでのデータの検証](validate-data-at-the-subscriber.md)   
- [レプリケートされたデータの検証](validate-replicated-data.md)  
+ [レプリケートされたデータの検証](validate-data-at-the-subscriber.md)  
   
   

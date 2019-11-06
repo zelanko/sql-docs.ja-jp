@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
@@ -17,12 +16,12 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d0446aaf5508ad0d2655245f441d4da81a6c79c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184409"
 ---
 # <a name="sequence-numbers"></a>シーケンス番号
   シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。 ID 列とは異なり、シーケンスはテーブルには関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行およびテーブルにわたって値キーを調整できます。  
@@ -31,7 +30,7 @@ ms.locfileid: "48106862"
   
  行の挿入時に生成される ID 列値とは異なり、アプリケーションは、 [NEXT VALUE FOR](/sql/t-sql/functions/next-value-for-transact-sql) 関数を呼び出すことにより、行を挿入する前に次のシーケンス番号を取得できます。 番号がテーブルに挿入されない場合でも、シーケンス番号は、NEXT VALUE FOR が呼び出されたときに割り当てられます。 NEXT VALUE FOR 関数は、テーブル定義内の列の既定値として使用できます。 一度に複数のシーケンス番号の範囲を取得するには、 [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql) を使用します。  
   
- シーケンスは、任意の整数データ型として定義できます。 データ型が指定されていない場合、シーケンス既定`bigint`します。  
+ シーケンスは、任意の整数データ型として定義できます。 シーケンスのデータ型を指定しなかった場合、既定で `bigint` 型が使用されます。  
   
 ## <a name="using-sequences"></a>シーケンスの使用  
  シーケンスは、次のシナリオで ID 列の代わりに使用します。  
@@ -268,7 +267,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. シーケンス番号をリセットする  
- 例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました  (`AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
+ 例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました (`AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

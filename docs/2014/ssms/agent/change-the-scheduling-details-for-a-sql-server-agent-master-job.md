@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17cc3b572076ebe1101ff309f26b54947ccae1f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63140695"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブのスケジューリングの詳細の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブ定義のスケジューリングの詳細を変更する方法について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "48053298"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの対象サーバーを、ローカル サーバーとリモート サーバーの両方に設定することはできません。  
@@ -42,7 +42,7 @@ ms.locfileid: "48053298"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)」をご覧ください。  
+ **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48053298"
   
 4.  スケジュールを編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
-5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[スケジュール]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: [新しいジョブ&#40;スケジュール] ページ&#41;](job-properties-new-job-schedules-page.md)します。  
+5.  **ジョブのプロパティ -** _job_name_ダイアログ ボックスで、**ページの選択**、**スケジュール**。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;[スケジュール] ページ&#41;](job-properties-new-job-schedules-page.md)します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202654"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952629"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
   レポート サーバーの各インスタンスには、レポート サーバーの管理対象であるレポート、レポート モデル、共有データ ソース、リソース、およびメタデータが保存された、レポート サーバー データベースへの接続が必要です。 既定の構成をインストールする場合、最初の接続はレポート サーバーのインストール中に作成することができます。 ほとんどの場合は、セットアップの完了後に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して接続を構成します。 この接続は、いつでも変更して、アカウントの種類を変更したり資格情報をリセットしたりできます。 データベースを作成し、接続を構成する方法の詳しい手順については、「[ネイティブ モード レポート サーバー データベース &#40; を作成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -43,18 +42,18 @@ ms.locfileid: "48202654"
   
  レポート サーバー データベースは、レポート サーバーのみがアクセスする内部コンポーネントです。 レポート サーバー データベースに対して指定した資格情報および接続情報は、レポート サーバーによって排他的に使用されます。 レポートを要求するユーザーに、レポート サーバー データベースに対するデータベース権限やデータベース ログインは不要です。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用して`System.Data.SqlClient`への接続に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]レポート サーバー データベースをホストします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のローカル インスタンスを使用する場合、レポート サーバーは共有メモリを使用して接続を確立します。 リモートのデータベース サーバーをレポート サーバー データベースとして使用する場合は、使用中のエディションに応じてリモート接続を有効にする必要が生じる場合があります。 Enterprise Edition を使用している場合は、TCP/IP でのリモート接続が既定で有効になっています。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、`System.Data.SqlClient` を使用して、レポート サーバー データベースをホストする[!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のローカル インスタンスを使用する場合、レポート サーバーは共有メモリを使用して接続を確立します。 リモートのデータベース サーバーをレポート サーバー データベースとして使用する場合は、使用中のエディションに応じてリモート接続を有効にする必要が生じる場合があります。 Enterprise Edition を使用している場合は、TCP/IP でのリモート接続が既定で有効になっています。  
   
- インスタンスがリモート接続を受け入れることを確認するには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックし、各サービスで TCP/IP プロトコルが有効になっていることを確認します。  
+ インスタンスがリモート接続を受け入れることを確認するには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックし、各サービスで TCP/IP プロトコルが有効になっていることを確認します。  
   
- リモート接続を有効にすると、クライアント プロトコルおよびサーバー プロトコルも有効になります。 プロトコルが有効になっていることを確認するには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。次に、 **[SQL Server ネットワークの構成]** をクリックし、 **[MSSQLSERVER のプロトコル]** をクリックします。 詳細については、 [オンライン ブックの「](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) サーバー ネットワーク プロトコルの有効化または無効化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+ リモート接続を有効にすると、クライアント プロトコルおよびサーバー プロトコルも有効になります。 プロトコルが有効になっていることを確認するには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。次に、 **[SQL Server ネットワークの構成]** をクリックし、 **[MSSQLSERVER のプロトコル]** をクリックします。 詳細については、 [オンライン ブックの「](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) サーバー ネットワーク プロトコルの有効化または無効化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ## <a name="defining-a-report-server-database-connection"></a>レポート サーバー データベース接続の定義  
  接続を構成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャー ツールまたは **rsconfig** コマンド ライン ユーティリティを使用する必要があります。 レポート サーバーには、次の接続情報が必要です。  
   
 -   レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。  
   
--   レポート サーバー データベースの名前。 接続を初めて作成する場合、新しいレポート サーバー データベースを作成することも、既存のデータベースを選択することもできます。 詳細については、次を参照してください。[レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)します。  
+-   レポート サーバー データベースの名前。 接続を初めて作成する場合、新しいレポート サーバー データベースを作成することも、既存のデータベースを選択することもできます。 詳細については、 [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)」を参照してください。  
   
 -   資格情報の種類。 サービス アカウント、Windows ドメイン アカウント、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用できます。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48202654"
 ### <a name="storing-database-connection-information"></a>データベース接続情報の保存  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 次の RSreportserver.config 設定に接続情報が格納され暗号化されています。 これらの設定の暗号化された値を作成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは rsconfig ユーティリティを使用する必要があります。  
   
- すべての値がどの種類の接続に対しても設定されるとは限りません。 (つまり、接続するためにサービス アカウントを使用して)、既定値を使用して接続を構成する場合は、<`LogonUser`>、<`LogonDomain`>、および <`LogonCred`> 次のように、空になります。  
+ すべての値がどの種類の接続に対しても設定されるとは限りません。 既定値を使用して接続を構成した場合 (つまり、サービスアカウントを使用して接続を確立した場合)、< `LogonUser` >、< `LogonDomain` >、および < `LogonCred` > は次のように空になります。  
   
 ```  
 <Dsn></Dsn>  
@@ -123,7 +122,7 @@ ms.locfileid: "48202654"
  複数のレポート サーバーで同じレポート サーバー データベースを使用するように構成できます。 この配置構成はスケールアウト配置と呼ばれます。 サーバー クラスター内で複数のレポート サーバーを実行する場合は、この構成が前提条件となります。 ただし、この構成は、サービス アプリケーションを分割する場合や、新しいレポート サーバー インスタンスのインストールと設定をテストして既存のレポート サーバーのインストールと比較する場合にも使用できます。 詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

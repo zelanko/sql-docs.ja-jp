@@ -2,19 +2,18 @@
 title: アプライアンスのネットワークの構成 - Analytics Platform System |Microsoft Docs
 description: Analytics Platform System (APS) アプライアンスが構築された、すべてのサーバーおよび IHV の工場から該当するデバイス全体での IP アドレスの修正プログラムのセットで構成されています。 アプライアンスの配信、ごとに特定の顧客のデータ センターの要件に合わせて外部 (イーサネット) の IP アドレスを再構成する必要があります。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 341db2791f99d72d293fe00dbf92c1f59df444ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9bc836e3e05525b18ea994e768f65012e5c3d945
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961467"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスのネットワーク構成
 Analytics Platform System (APS) アプライアンスが構築された、すべてのサーバーおよび IHV の工場から該当するデバイス全体での IP アドレスの修正プログラムのセットで構成されています。 アプライアンスの配信、ごとに特定の顧客のデータ センターの要件に合わせて外部 (イーサネット) の IP アドレスを再構成する必要があります。  
@@ -58,6 +57,6 @@ Dell のアプライアンスの詳細についてを参照してください。
   
 -   PDU の**Dell Rack PDU を従量制課金**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

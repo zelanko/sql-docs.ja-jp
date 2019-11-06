@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06725d50662500000921c541b2066302a4de918a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17ed6f29442bc55f81d0ef83bfd19473a99e9a95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925106"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML での階層レコードセット
 ADO には、XML に階層レコード セット オブジェクトの永続化ができます。 階層レコード セット オブジェクトでは、親レコード セット内のフィールドの値は、別のレコード セットです。 このようなフィールドは、属性ではなく、XML ストリーム内の子要素として表されます。  
@@ -33,7 +32,7 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
  永続化されたレコード セットの XML 形式を次に示します。  
   
 ```  
-<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
     xmlns:z="#RowsetSchema">   
   <s:Schema id="RowsetSchema">   
     <s:ElementType name="row" content="eltOnly" rs:updatable="true">   
@@ -125,5 +124,5 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   子レコードには、複数の親レコードへの参照がある場合は、レコード セットをもう一度開こう子レコード セットが重複レコードを含みます。 ただし、これらの重複は場合にのみ表示、ユーザーが基になる子行セットを直接操作します。 子レコード セット (つまり ADO 内を移動する唯一の方法) を移動するチャプターを使用する場合は、重複部分は表示されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 954fcc8806a290ffc171bde9db4af883c30ec9a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767904"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
   使用して、**操作を実行して**ページで、進行状況と、インポート/エクスポート操作の結果を表示し、必要な場合は、操作を中断します。  
@@ -37,7 +36,7 @@ ms.locfileid: "48120102"
  **メッセージ**  
  アクションによって生成された表示メッセージおよびエラー メッセージを表示します。  
   
- **Assert**  
+ **[フィルター]**  
  エラー、警告、または成功したアクションのみを表示するかどうかを選択します。 選択して、既定の表示に戻すことができます**すべてのアクションを表示**します。  
   
  **[停止]**  

@@ -2,21 +2,21 @@
 title: Reporting Services でのファイル共有の配信 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cc81cc930f901f162ff58dfe6a5615d557878cf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778120"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278229"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能が用意されています。 ファイル共有配信拡張機能は既定で使用できるため、追加で構成する必要はありません。 ファイルの配信を正常に実行するためには、共有フォルダーに書き込みアクセス権を設定する必要があります。 ライター権限を必要とするアカウントには、サブスクリプションに構成された資格情報またはレポート サーバー用に構成された **ファイル共有アカウント** を使用できます。 ファイル共有アカウントの詳細については、「 [サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。 また、レポートへのアクセスを要求するユーザーは、共有フォルダーの読み取り権限を持っている必要があります。  
@@ -72,9 +72,9 @@ ms.locfileid: "47778120"
   
  **上書き:** 上書きオプションを指定すると、毎回のレポート配信または新規ファイルの作成時に同じファイル名を再利用できます。 ファイルを上書きするには、同じファイル名と拡張子を使用する必要があります。  
   
- 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、 **@timestamp** 変数をファイル名に追加します (例 : *CompanySales@timestamp*)。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
+ 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、 **\@timestamp** 変数をファイル名に追加します (例: *CompanySales@timestamp* )。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
   
- ファイル共有配信用に構成されたサブスクリプションのファイルの設定の例を次の図に示します。  
+ ファイル共有配信用に構成されたサブスクリプションの設定の例を次の図に示します。  
   
  ![ファイル共有サブスクリプション](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "ファイル共有サブスクリプション")  
   

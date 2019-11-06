@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2029cd6fd95916b71ee673713978a1fe3a1ccd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 9fb4893304a17be264a0d5bdcb8add2732c7c271
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103277"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
   ReportingServicesService.exe.config ファイルには、トレースを構成する設定が含まれています。  
@@ -29,7 +28,7 @@ ms.locfileid: "48082543"
  このファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。  
   
 ## <a name="editing-guidelines"></a>編集のガイドライン  
- このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、次を参照してください。 [Report Server Service Trace Log](report-server-service-trace-log.md)します。  
+ このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、「 [レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)」を参照してください。  
   
 ## <a name="example-configuration"></a>構成例  
  ReportingServicesService.exe.config ファイルにある設定および既定値の例を次に示します。  
@@ -82,11 +81,11 @@ ms.locfileid: "48082543"
 |`Prefix`|あるログのインスタンスを別のログのインスタンスと区別するために生成する値を指定します。 既定では、トレース ログ ファイル名にタイムスタンプの値が追加されます。 この値は、" tid, time " に設定されます。 この設定は変更しないでください。|  
 |**TraceListeners**|トレース ログ コンテンツの出力先を指定します。 複数の出力先を指定する場合、各出力先をコンマで区切ってください。 有効な値は次のとおりです。<br /><br /> DebugWindow (既定値)<br /><br /> File (既定値)<br /><br /> StdOut|  
 |**TraceFileMode**|トレース ログに 24 時間データを含めるかどうかを指定します。 コンポーネントごとに、毎日 1 つ、一意のトレース ログが必要です。 この値は、"Unique (既定値)" に設定されます。 この値は変更しないでください。|  
-|**コンポーネント**|トレース ログを作成するコンポーネントを指定します。 既定値は `all` です。 この設定に対する他の有効な値には、内部コンポーネントの名前があります。 この値は変更しないでください。|  
+|**Components**|トレース ログを作成するコンポーネントを指定します。 既定値は `all` です。 この設定に対する他の有効な値には、内部コンポーネントの名前があります。 この値は変更しないでください。|  
 |**ランタイム**|以前のバージョンとの下位互換性をサポートする構成設定を指定します。 Microsoft.ReportingServices.Interfaces の以前のバージョンを対象とする要求を新しいバージョンにリダイレクトするには、Runtime 設定を使用します。<br /><br /> このセクションの構成設定は、すべて [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントで説明されています。 詳細については、MSDN Web サイトまたは [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ドキュメントの「ランタイム設定スキーマ」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成ファイル](reporting-services-configuration-files.md)   
- [レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)  
+ [Report Server Service Trace Log](report-server-service-trace-log.md)  
   
   

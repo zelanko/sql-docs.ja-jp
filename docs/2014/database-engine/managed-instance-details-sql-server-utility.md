@@ -10,12 +10,12 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774344"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
@@ -68,17 +68,17 @@ ms.locfileid: "48185452"
   
 -   [SQL Server のエディション]  
   
--   [クラスター化]\([True] または [False])  
+-   クラスター化します。(True または False)  
   
 -   [バックアップ ディレクトリ]  
   
 -   [照合順序]  
   
--   [大文字と小文字を区別]\([True] または [False])  
+-   大文字小文字を区別します。(True または False)  
   
 -   [言語]  
   
--   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、SQL Server オンライン ブックの「[datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071)」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
+-   最終報告日時:この列は、UCP のローカル日付と時刻の datetime データ型を使用して表示されます。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -96,7 +96,7 @@ ms.locfileid: "48185452"
 -   [1 年] : 1 か月間隔で表示されます。  
   
  [ストレージの使用率] タブ  
- [ストレージの使用率] タブには、記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+ [ストレージの使用率] タブには、記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  表示内容は、データベースまたはボリュームごとにグループ化できます。 データベース ツリー ビューを使用するには、 **[ファイルのグループ化]** の選択項目で **[データベース]** オプション ボタンをクリックします。 個々のデータベース ファイルの記憶域使用率の状態を表示するには、ツリー ビューでデータベース名の横にあるプラス記号をクリックします。 一覧表示されるデータベース ファイルには、リスト ビューで選択した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスに属する、すべてのシステム データベースとユーザー データベースが含まれます。  
   
@@ -165,17 +165,17 @@ ms.locfileid: "48185452"
   
 -   [SQL Server のエディション]  
   
--   [クラスター化]\([True] または [False])  
+-   クラスター化します。(True または False)  
   
 -   [バックアップ ディレクトリ]  
   
 -   [照合順序]  
   
--   [大文字と小文字を区別]\([True] または [False])  
+-   大文字小文字を区別します。(True または False)  
   
 -   [言語]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   

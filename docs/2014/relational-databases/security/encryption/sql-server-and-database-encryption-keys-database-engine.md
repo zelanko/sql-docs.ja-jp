@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011318"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化キーを使用して、サーバー データベースに格納されているデータ、資格情報、および接続情報のセキュリティを保護します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *対称* と *非対称*の 2 種類のキーがあります。 対称キーでは、データの暗号化と暗号化解除に同じパスワードが使用されます。 非対称キーでは、データを暗号化するパスワード ( *公開* キー) とデータの暗号化を解除するパスワード ( *秘密* キー) が使い分けられます。  
@@ -31,9 +31,9 @@ ms.locfileid: "48160702"
   
  データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内にある非対称キーを保護するときに使用されます。 このキーはデータの暗号化にも使用できますが、長さに制限があるため、対称キーに比べるとデータに対する実用性は低くなります。  
   
- このマスター キーは、その作成時に、トリプル DES アルゴリズムとユーザー指定のパスワードを使用して暗号化されます。 マスター キーの暗号化を自動的に解除できるように、SMK を使用してこのキーのコピーが暗号化されます。 これが使用される場合とは、データベースの両方に格納されて、`master`システム データベースです。  
+ このマスター キーは、その作成時に、トリプル DES アルゴリズムとユーザー指定のパスワードを使用して暗号化されます。 マスター キーの暗号化を自動的に解除できるように、SMK を使用してこのキーのコピーが暗号化されます。 暗号化されたコピーは、使用先のデータベースおよび `master` システム データベースの両方に格納されます。  
   
- 格納された DMK のコピー、`master`システム データベースは、DMK が変更されるたびに暗黙的に更新します。 ただし、この既定値を使用して変更できます、`DROP ENCRYPTION BY SERVICE MASTER KEY`のオプション、`ALTER MASTER KEY`ステートメント。 サービス マスター キーで暗号化されていない DMK を開くには、`OPEN MASTER KEY` ステートメントとパスワードを使用する必要があります。  
+ `master` システム データベースに格納された DMK のコピーは、DMK が変更されるたびに自動的に更新されます。 ただし、この既定の動作は `DROP ENCRYPTION BY SERVICE MASTER KEY` ステートメントの `ALTER MASTER KEY` オプションを使用して変更できます。 サービス マスター キーで暗号化されていない DMK を開くには、`OPEN MASTER KEY` ステートメントとパスワードを使用する必要があります。  
   
 ## <a name="managing-sql-server-and-database-keys"></a>SQL Server およびデータベースのキーの管理  
  暗号化キーの管理は、新しいデータベース キーの作成、サーバーおよびデータベースのキーのバックアップ作成、およびキーの復元、削除、変更のタイミングと方法を把握することによって行われます。  

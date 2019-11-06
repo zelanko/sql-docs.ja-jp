@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dc72d4593225d4e692c8508bfc62b8d4d641263f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000755"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の取り消し
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ go
 CREATE XML SCHEMA COLLECTION dbo.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
   
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -87,7 +86,7 @@ go
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
   
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -107,7 +106,7 @@ setuser 'TestLogin1'
 go  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -126,7 +125,7 @@ go
 -- the following now should fail  
 CREATE XML SCHEMA COLLECTION dbo.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  

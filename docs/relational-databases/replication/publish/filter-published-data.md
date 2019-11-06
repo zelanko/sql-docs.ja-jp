@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac4d217245516edf109c137897d5e7cee24b172b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404387"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769879"
 ---
 # <a name="filter-published-data"></a>パブリッシュされたデータのフィルター選択
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   テーブル アーティクルをフィルター選択すると、パブリッシュされるデータのパーティションを作成できます。 パブリッシュされたデータをフィルター選択することによって、次のことができるようになります。  
   
 -   ネットワーク上で送信するデータ量を最小限に抑えられる。  
@@ -131,7 +131,7 @@ ms.locfileid: "52404387"
   
 -   トランザクション レプリケーションでは、インデックス付きビューをビューまたはテーブルとしてレプリケートできます。 このビューをテーブルとしてレプリケートする場合、テーブルから列をフィルター選択することはできません。  
   
- 行フィルターは、データベース間で動作するようには設計されていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(フィルターが実行される) **sp_replcmds** の実行が意図的にデータベース所有者 (**dbo**) に制限されています。 **dbo** には、データベース間の権限がありません。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] に CDC (Change Data Capture) が追加されたことで、**sp_replcmds** のロジックは、ユーザーが戻って照会できる情報を変更追跡テーブルに設定します。 セキュリティ上の理由から、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、悪意のある **dbo** がこの実行パスを乗っ取ることができないようにこのロジックの実行が制限されます。 たとえば、悪意のある **dbo** が CDC テーブルのトリガーを追加すると、その後、 **sp_replcmds**を呼び出すユーザーのコンテキスト (この場合はログ リーダー エージェント) でテーブルが実行されます。  エージェントを実行しているアカウントの権限が高い場合、悪意のある **dbo** は自身の特権を引き上げます。  
+ 行フィルターは、データベース間で動作するようには設計されていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(フィルターが実行される) **sp_replcmds** の実行が意図的にデータベース所有者 (**dbo**) に制限されています。 **dbo** には、データベース間の権限がありません。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] に CDC (Change Data Capture) が追加されたことで、**sp_replcmds** のロジックは、ユーザーが戻って照会できる情報を変更追跡テーブルに設定します。 セキュリティ上の理由から、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、悪意のある **dbo** がこの実行パスを乗っ取ることができないようにこのロジックの実行が制限されます。 たとえば、悪意のある **dbo** が CDC テーブルのトリガーを追加すると、その後、 **sp_replcmds**を呼び出すユーザーのコンテキスト (この場合はログ リーダー エージェント) でテーブルが実行されます。  エージェントを実行しているアカウントの権限が高い場合、悪意のある **dbo** は自身の特権を引き上げます。  
   
 ## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

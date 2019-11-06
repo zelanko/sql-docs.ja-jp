@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193331"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
   SQL クエリで FOR XML 句を使用することにより、クエリの結果を XML データで取得したり、XML データにキャストすることができます。 この機能により、FOR XML のクエリの結果を XML アプリケーション コードで使用するときに、次のことが可能になります。  
@@ -35,9 +35,9 @@ ms.locfileid: "48206072"
  このトピックでは、これらの方法を示す例を提供します。  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>ADO と XML データ アイランドによる、FOR XML データの取得  
- ADO`Stream`オブジェクトまたはその他のオブジェクト、COM をサポートする`IStream`インターフェイス、Active Server Pages (ASP) など`Request`と`Response`FOR XML クエリを使用しているときに、結果を格納するオブジェクトを使用できます。  
+ FOR XML クエリで作業を行っているときに、ADO `Stream` オブジェクト、または ASP (Active Server Page) `IStream` オブジェクトや `Request` オブジェクトなどの、COM `Response` インターフェイスをサポートする他のオブジェクトを使用して、結果を含めることができます。  
   
- たとえば、次の ASP コードはクエリ結果を示しています。、`xml`データ型の列、人口統計、AdventureWorks サンプル データベースの Sales.Store テーブルにします。 具体的には、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
+ たとえば、次の ASP コードは、AdventureWorks サンプル データベースの Sales.Store テーブルにある、`xml` データ型の列である Demographics のクエリ結果を示しています。 具体的には、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -179,7 +179,7 @@ ms.locfileid: "48206072"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206072"
   
  この例では、FOR XML のクエリ結果を返して表示するために、次の Microsoft .NET Framework マネージド API が使用されています。  
   
-1.  `SqlConnection` 指定した接続文字列変数 strConn の内容に基づき、SQL サーバーへの接続を開くために使用します。  
+1.  指定した接続文字列変数 strConn の内容に基づいて SQL Server への接続を開くために、`SqlConnection` が使用されます。  
   
 2.  次に、データ アダプターとして `SqlDataAdapter` が使用されます。また、FOR XML クエリを実行するために、SQL 接続および指定した SQL クエリ文字列を使用します。  
   
-3.  クエリが実行された後、`SqlDataAdapter.Fill`メソッドが呼び出されのインスタンスを渡された、`DataSet,`ある MyDataSet が FOR XML クエリの出力データ セットを格納するためにします。  
+3.  クエリの実行後、`SqlDataAdapter.Fill` メソッドが呼び出され、FOR XML クエリの出力をデータセットに設定するために、`DataSet,` のインスタンスである MyDataSet が渡されます。  
   
-4.  `DataSet.GetXml` Server によって生成される HTML ページに表示可能な文字列としてクエリ結果を返すにはメソッドが呼び出されます。  
+4.  その後、サーバーで生成される HTML ページに表示可能な文字列としてクエリ結果を返すために、`DataSet.GetXml` メソッドが呼び出されます。  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,13 +284,13 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`データ型の FOR XML クエリの結果として返されることを要求するサポートにより`xml`データ型の代わりに文字列またはイメージとして型指定されたデータを指定することによって、 [TYPE ディレクティブ](type-directive-in-for-xml-queries.md)します。 FOR XML クエリに TYPE ディレクティブを使用すると、「[アプリケーションでの XML データの使用](use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`データ型の FOR XML クエリの結果として返されることを要求するサポートにより`xml`データ型の代わりに文字列またはイメージとして型指定されたデータを指定することによって、 [TYPE ディレクティブ](type-directive-in-for-xml-queries.md)します。 FOR XML クエリに TYPE ディレクティブを使用すると、「 [アプリケーションでの XML データの使用](use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
   
 ## <a name="see-also"></a>参照  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

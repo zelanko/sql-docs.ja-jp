@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.send.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057598"
 ---
 # <a name="message-queue-task-editor-send-page"></a>[メッセージ キュー タスク エディター] ([送信] ページ)
-  **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
+   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
   
  このタスクの詳細については、「 [Message Queue Task](control-flow/message-queue-task.md)」を参照してください。  
   
@@ -59,16 +58,16 @@ ms.locfileid: "48095942"
  **[VariableMessage]**  
  変数名を入力します。または、参照ボタン ( **[...]** ) をクリックし、変数を指定します。 変数はコンマで区切って指定します。  
   
- **関連項目 :** 「変数の選択」  
+ **関連トピック:** [変数の選択]  
   
 ### <a name="messagetype--string-message"></a>[MessageType] = [文字列メッセージ]  
  **[StringMessage]**  
  文字列メッセージを入力します。または、参照ボタン ( **[...]** ) をクリックし、メッセージを **[メッセージの入力]** ダイアログ ボックスに入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [メッセージ キュー タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [メッセージ キュー タスク エディター&#40;ページが表示されます。&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [[メッセージ キュー タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
+ [メッセージ キュー タスク エディター ([受信] ページ)](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

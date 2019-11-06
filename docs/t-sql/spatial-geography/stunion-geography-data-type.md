@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STUnion method
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e0479fc0d6af9a3bcfe66261713ad7115b61f985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 34f63ee6609c93dd9435930bfe347a0fa610ce33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120761"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47841770"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  このメソッドは、このインスタンスに対蹠点が含まれている場合、**ArgumentException** をスローします。  
@@ -80,7 +79,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-traigonal-hole"></a>C. CurvePolygon と Polygon の和集合から三角形の穴を生成する  
+### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-triagonal-hole"></a>C. CurvePolygon と Polygon の和集合から三角形の穴を生成する。  
  `CurvePolygon` と `Polygon` インスタンスの和集合から三角形の穴を生成する例を次に示します。  
   
 ```

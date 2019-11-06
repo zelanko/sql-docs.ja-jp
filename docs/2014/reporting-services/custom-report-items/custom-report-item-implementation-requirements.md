@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 534197a9ed148685d58c5f3ff17b6b329e9ee913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: ce2ecf5e44b18298823240519c99eccb80d016e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63264814"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>カスタム レポート アイテムの実装要件
   このトピックでは、カスタム レポート アイテムの開発と配置の前提条件について説明します。  
@@ -50,7 +48,7 @@ ms.locfileid: "48219472"
 ## <a name="see-also"></a>参照  
  [カスタム レポート アイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)   
- [カスタム レポート アイテムを配置する方法](how-to-deploy-a-custom-report-item.md)   
+ [方法:カスタム レポート アイテムを配置します。](how-to-deploy-a-custom-report-item.md)   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)  
   
   

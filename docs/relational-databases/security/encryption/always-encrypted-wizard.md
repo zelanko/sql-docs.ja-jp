@@ -15,33 +15,32 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e45ddec1a380ea6ea867fb0306cca4176786fbf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043158"
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted ウイザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **Always Encrypted ウイザード** を利用すれば、SQL Server データベースに保存されている機密データを保護できます。 Always Encrypted を使用すると、クライアントは SQL Server に暗号化キーを開示することなく、クライアント アプリケーション内の機密データを暗号化することができます。 結果として、Always Encrypted は、データを所有 (および表示できる) 人とデータを管理する (ただし、アクセス権を与えない) 人を分離します。  機能の詳細については、「 [Always Encrypted &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。  
  
- - ウィザードを使用して Always Encrypted を構成し、それをクライアント アプリケーションで使用する方法を説明したエンド ツー エンド チュートリアルについては、 [Always Encrypted を使用した機密データの保護に関する SQL Database チュートリアル](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)のページを参照してください。  
+ - ウィザードを使用して Always Encrypted を構成し、それをクライアント アプリケーションで使用する方法を説明したエンドツーエンド チュートリアルについては、[SQL Database チュートリアル:Always Encrypted を使用した機密データの保護](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)に関するページをご覧ください。  
  
  - ウィザードの利用方法を含む動画が必要な場合、「 [Keeping Sensitive Data Secure with Always Encrypted (Always Encrypted で機密データを守る)](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)」をご覧ください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ チームのブログ「 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)」(SSMS 暗号化ウィザード - 数回の手順で Always Encrypted を有効にする) も参照してください。  
  
- - **権限:** 暗号化された列に対してこのウィザードを使用してクエリを実行し、キーを選択するには、 `VIEW ANY COLUMN MASTER KEY DEFINITION` 権限と `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 権限が必要です。 新しいキーを作成するには、 `ALTER ANY COLUMN MASTER KEY` 権限と `ALTER ANY COLUMN ENCRYPTION KEY` 権限も必要です。  
+ - **権限:** 暗号化された列に対してこのウィザードを使用してクエリを実行し、キーを選択するには、`VIEW ANY COLUMN MASTER KEY DEFINITION` 権限と `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 権限が必要です。 新しいキーを作成するには、 `ALTER ANY COLUMN MASTER KEY` 権限と `ALTER ANY COLUMN ENCRYPTION KEY` 権限も必要です。  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>Always Encrypted ウイザード を開く  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>Always Encrypted ウイザード を開く
  
  1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のオブジェクト エクスプローラー コンポーネントで [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]に接続します。  
    
  2.  データベースを右クリックして **[タスク]** をポイントし、 **[列の暗号化]** をクリックします。  
    
- ## <a name="column-selection-page"></a>列の選択ページ  
+ ## <a name="column-selection-page"></a>列の選択ページ
  - テーブルと列を見つけ、選択した列の暗号化の種類 (決定性またはランダム) と暗号化鍵を選択します。 現在暗号化されている列の暗号化を解除するには、 **[プレーン テキスト]** を選択します。 列の暗号化鍵を回転させるには、別の暗号化鍵を選択します。ウィザードが列の暗号化を解除し、新しい鍵で列を再び暗号化します。 (テンポラル テーブルとインメモリ テーブルの暗号化は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされていますが、このウィザードでは構成できません。)  
  
 ## <a name="master-key-configuration-page"></a>マスター キーの構成ページ  
@@ -57,7 +56,7 @@ ms.locfileid: "51673578"
  
    - **AKV (Azure Key Vault) にマスター キーを保存** 詳細については、「 [Azure Key Vault の使用を開始する](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)」を参照してください。  
  
- - Azure Key Vault で列のマスター キーを生成するには、Key Vault の **WrapKey**、 **UnwrapKey**、 **Verify**、 **Sign** 権限が必要になります。 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**、 **Restore** 権限も場合によっては必要になります。 詳細については、「 [Azure Key Vault とは?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) 」と「   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)」を参照してください。  
+ - Azure Key Vault で列のマスター キーを生成するには、Key Vault の **WrapKey**、 **UnwrapKey**、 **Verify**、 **Sign** 権限が必要になります。 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**、 **Restore** 権限も場合によっては必要になります。 詳しくは、「[Azure Key Vault とは](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)」および「[Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)」をご覧ください。  
  
  - ウィザードでは 2 つのオプションのみがサポートされました。 ハードウェア セキュリティ モジュールとカスタマー ストアを [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] で構成する必要があります。  
  
@@ -69,7 +68,7 @@ ms.locfileid: "51673578"
 
  - **列のマスター キー** は、列の暗号化鍵の暗号化に使用される保護鍵です。 列のマスター キーは信頼できる鍵の保管場所に保管する必要があります。 場所など、列のマスター キーに関する情報はシステム カタログ ビューのデータベースに保管されます。  
 
- - **列の暗号化鍵** は、データベース列に保存されている機密データの暗号化に使用されます。 列のすべての値を 1 つの列暗号化鍵で暗号化できます。 列の暗号化キーの暗号化された値は、システム カタログ ビューのデータベースに保存されます。 列の暗号化キーは、バックアップとして安全で信頼できる場所に格納する必要があります。  
+ - **列の暗号化鍵** は、データベース列に保存されている機密データの暗号化に使用されます。 列のすべての値を 1 つの列暗号化鍵で暗号化できます。 列暗号化鍵の暗号化された値は、システム カタログ ビューでデータベースに保存されます。 列の暗号化キーは、バックアップとして安全で信頼できる場所に格納する必要があります。  
 
  ## <a name="see-also"></a>参照  
  - [Always Encrypted &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

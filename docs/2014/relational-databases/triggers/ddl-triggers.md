@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62654978"
 ---
 # <a name="ddl-triggers"></a>DDL トリガー
   DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに対応して起動されます。 これらのイベントは主に、CREATE、ALTER、DROP、GRANT、DENY、REVOKE、UPDATE STATISTICS のいずれかのキーワードで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "49072036"
   
 ## <a name="types-of-ddl-triggers"></a>DDL トリガーの種類  
  Transact-SQL DDL トリガー  
- 特殊な種類の[!INCLUDE[tsql](../../includes/tsql-md.md)]1 つまたは複数を実行するストアド プロシージャ[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント サーバー スコープまたはデータベース スコープのイベントに応答します。 たとえば、ALTER SERVER CONFIGURATION などのステートメントが実行されたときや、DROP TABLE を使用してテーブルが削除されたときに、DDL トリガーを起動させることができます。  
+ サーバー スコープまたはデータベース スコープのイベントに応答して [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (複数可) を実行する特殊な [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャです。 たとえば、ALTER SERVER CONFIGURATION などのステートメントが実行されたときや、DROP TABLE を使用してテーブルが削除されたときに、DDL トリガーを起動させることができます。  
   
  CLR DDL トリガー  
  CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージド コードに記述されている、1 つ以上のメソッドを実行します。  

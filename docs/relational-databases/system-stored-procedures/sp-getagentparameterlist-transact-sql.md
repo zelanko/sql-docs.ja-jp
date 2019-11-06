@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_getagentparameterlist
@@ -16,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e512d0db07581ccc6b1a656a032d2e54f885b38d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d80aedbe2503c4ab11fd894d44e8e37f2167daf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124010"
 ---
 # <a name="spgetagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたエージェント タイプのエージェント プロファイルに設定可能なすべてのレプリケーション エージェント パラメーターの一覧を返します。 このストアド プロシージャは、エージェントが動作しているディストリビューター側で任意のデータベースについて実行されます。  
+  指定されたエージェント タイプのエージェント プロファイルに設定可能なすべてのレプリケーション エージェント パラメーターの一覧を返します。 このストアド プロシージャは、エージェントが実行されている、任意のデータベース上のディストリビューターで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,8 +37,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@agent_type =** ] **'***agent_type***'**  
- パラメーターを追加するレプリケーション エージェントを指定します。 *agent_type*は**int**、これらの値のいずれかを指定できます。  
+`[ @agent_type = ] 'agent_type'` パラメーターが追加されているレプリケーション エージェントです。 *agent_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|エージェント|  
 |-----------|-----------|  
@@ -58,7 +55,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_getagentparameter**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

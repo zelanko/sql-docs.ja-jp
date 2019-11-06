@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a7b51e2cbfb298493e7001937f7b0f274044478a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924180"
 ---
 # <a name="shape-append-clause"></a>Shape の APPEND 句
 Shape コマンドの APPEND 句を追加、列または列を**Recordset**します。 これらの列が子を参照しているチャプター列には多くの場合、 **Recordset**します。  
@@ -65,7 +64,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  *child-recordset*  
  -   中かっこで囲まれているプロバイダー コマンド ("{}") を返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーに、コマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 通常これは、SQL 言語では、ADO では、特定のクエリ言語は必要ありません。  
   
@@ -96,7 +95,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  追加のキーワードの後に、句一覧を示します実際には、それぞれの句はコンマで区切られます、親に追加する別の列を定義します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  SHAPE コマンドの一部としてユーザー入力からプロバイダーのコマンドを構築する際に図形はユーザーが指定した不透明な文字列としてプロバイダー コマンドを処理します。 およびにプロバイダーに渡します。 次の図形コマンドでなど  
   
 ```  

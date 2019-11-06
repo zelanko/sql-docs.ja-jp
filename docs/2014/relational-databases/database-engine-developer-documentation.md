@@ -1,12 +1,10 @@
 ---
-title: 開発者&#39;ガイド (データベース エンジン) |Microsoft Docs
+title: 開発&#39;者ガイド (データベースエンジン) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
@@ -15,14 +13,14 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d913ffa95ec8be20bc6857de9a46bf4cedf9320
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121812"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530950"
 ---
-# <a name="developer39s-guide-database-engine"></a>開発者&#39;ガイド (データベース エンジン)
+# <a name="developer39s-guide-database-engine"></a>開発&#39;者ガイド (データベースエンジン)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、データベース アプリケーションの開発、管理、および制御のための豊富なツールが用意されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -53,11 +51,11 @@ ms.locfileid: "48121812"
  [例外メッセージ ボックスのプログラミング](../database-engine/dev-guide/exception-message-box-programming.md)  
  アプリケーションに例外メッセージ ボックス プログラム インターフェイスを使用して、メッセージ エクスペリエンスを高い柔軟性で制御し、ユーザーが後で参照できるようにエラー メッセージを保存したり、メッセージのヘルプを表示したりできるようにする方法を説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Mining Programming (データ マイニングのプログラミング)](../analysis-services/dev-guide/data-mining-programming.md)   
- [Developer's Guide &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Developer's Guide &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Developer's Guide&#40;レプリケーション&#41;](replication/concepts/replication-developer-documentation.md)   
- [Developer's Guide &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [開発者ガイド&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [開発者ガイド&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [開発者ガイド&#40;のレプリケーション&#41;](replication/concepts/replication-developer-documentation.md)   
+ [開発者ガイド&#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

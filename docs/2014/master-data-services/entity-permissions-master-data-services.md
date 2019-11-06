@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], permissions
 - permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7add4e6562bdfff222bca289af6d7486efe4e8a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479540"
 ---
 # <a name="entity-permissions-master-data-services"></a>エンティティ権限 (Master Data Services)
   エンティティ権限は、次のものに適用されます。  
@@ -42,8 +41,8 @@ ms.locfileid: "48193782"
 |**Deny**|エンティティが表示されません。|  
   
 ## <a name="see-also"></a>参照  
- [モデル オブジェクト権限を割り当てる&#40;マスター データ サービス&#41;](assign-model-object-permissions-master-data-services.md)   
- [モデル オブジェクト権限&#40;マスター データ サービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [モデル オブジェクト権限を割り当てる (マスター データ サービス)](assign-model-object-permissions-master-data-services.md)   
+ [モデル オブジェクト権限 (マスター データ サービス)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)  
   
   

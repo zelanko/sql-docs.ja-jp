@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 55ac94e1f94e1bfab96b61109216b4ef1144de80
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 492f6a5738da78774e5396d44a2ffb68cc3d37ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052651"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags プロパティ (SInstance クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ object.GeneralFlags [= value]
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

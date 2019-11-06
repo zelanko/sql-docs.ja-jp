@@ -20,12 +20,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206738"
 ---
 # <a name="binding-parameters"></a>パラメーターのバインド
   SQL ステートメントの各パラメーター マーカーは、ステートメントを実行する前にアプリケーション内の変数に関連付ける、つまりバインドする必要があります。 これは、呼び出すことで、 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)関数。 **SQLBindParameter**ドライバーにプログラム変数 (アドレス、C データ型など) について説明します。 また、序数値を示すことでパラメーター マーカーを識別してから、そのパラメーター マーカーが表す SQL オブジェクト表現 (SQL データ型、有効桁数など) を記述します。  
@@ -56,7 +56,7 @@ ms.locfileid: "48227912"
   
  名前付きパラメーターがサポートされるのは、[!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` ステートメントまたは ODBC CALL エスケープ シーケンスを使用してストアド プロシージャを実行するときだけです。  
   
- ストアド プロシージャ パラメーターに `SQL_DESC_NAME` を設定する場合、クエリ内のすべてのストアド プロシージャ パラメーターにも `SQL_DESC_NAME` を設定する必要があります。  かどうかリテラルが呼び出しに使用するストアド プロシージャのパラメーターがある`SQL_DESC_NAME`設定すると、リテラルは形式を使用する必要があります *'名*=*値*' ここで、 *名*ストアド プロシージャのパラメーター名は、(たとえば、 @p1)。 詳細については、次を参照してください。 [(名前付きパラメーター) の名前によるパラメーターのバインド](http://go.microsoft.com/fwlink/?LinkId=167215)します。  
+ ストアド プロシージャ パラメーターに `SQL_DESC_NAME` を設定する場合、クエリ内のすべてのストアド プロシージャ パラメーターにも `SQL_DESC_NAME` を設定する必要があります。  かどうかリテラルが呼び出しに使用するストアド プロシージャのパラメーターがある`SQL_DESC_NAME`設定すると、リテラルは形式を使用する必要があります *'名*=*値*' ここで、 *名*ストアド プロシージャのパラメーター名は、(たとえば、 @p1)。 詳細については、次を参照してください。 [(名前付きパラメーター) の名前によるパラメーターのバインド](https://go.microsoft.com/fwlink/?LinkId=167215)します。  
   
 ## <a name="see-also"></a>参照  
  [ステートメント パラメーターの使用](using-statement-parameters.md)  

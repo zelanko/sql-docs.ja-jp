@@ -1,59 +1,58 @@
 ---
-title: ロック動作の Parallel Data Warehouse |Microsoft ドキュメント
-description: Parallel Data Warehouse との使用方法のロックのトランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するについて説明します。
+title: ロック動作の Parallel Data Warehouse |Microsoft Docs
+description: Parallel Data Warehouse との使用方法のロック トランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するために説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: d93743c83d6315e6ab9484445f344b06f80be845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960642"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのロック動作
-Parallel Data Warehouse との使用方法のロックのトランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するについて説明します。  
+Parallel Data Warehouse との使用方法のロック トランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するために説明します。  
   
 ## <a name="Basics"></a>ロックの基礎  
 **モード**  
   
-SQL Server PDW は、次の 4 つのロック モードをサポートします。  
+SQL Server PDW では、4 つのロック モードがサポートされています。  
   
 [Exclusive]  
-書き込み、排他ロックの完了を保持しているトランザクションまでロックされたオブジェクトからの読み取りや排他ロックを禁止します。 排他ロックが有効なときにいずれかのモードの他のロックが許可されません。 たとえば、DROP TABLE と CREATE DATABASE は、排他ロックを使用します。  
+排他ロックへの書き込みや、トランザクションが完了すると、排他ロックを保持するまでロックされたオブジェクトからの読み取りを禁止します。 排他ロックが有効なときにその他のロックを任意のモードは許可されません。 たとえば、DROP TABLE、CREATE DATABASE は、排他ロックを使用します。  
   
 Shared  
-共有ロックは、影響を受けるオブジェクトの排他ロックの開始を禁止されていますが、他のすべてのロック モードを許可します。 たとえば、SELECT ステートメント共有ロックを開始してしたがってでは複数のクエリを同時に、選択したデータにアクセスできますが、SELECT ステートメントが完了するまでは、読み取られるレコードの更新を回避します。  
+共有ロックは、影響を受けるオブジェクトの排他ロックの開始に使用が禁止されていますが、他のすべてのロック モードを許可します。 たとえば、SELECT ステートメント、共有ロックを開始しますしたがって複数のクエリを同時に、選択したデータにアクセスできますが、SELECT ステートメントが完了するまでは、読み取られるレコードの更新を回避します。  
   
 ExclusiveUpdate  
-ExclusiveUpdate ロックはロックされたオブジェクトへの書き込みを禁止されていますが、共有ロックを使用して読み取りを許可するがします。 ExclusiveUpdate ロックが有効なときに他のロックが許可されません。 たとえば、データベースのバックアップおよびデータベースの復元は、排他的な更新ロックを使用します。  
+ExclusiveUpdate ロックはロックされたオブジェクトへの書き込みを禁止されていますが、共有ロックを使用して読み取りを許可するが。 ExclusiveUpdate ロックが有効なときに、他のロックを許可されません。 たとえば、データベースのバックアップと復元のデータベースは、排他的更新ロックを使用します。  
   
 SharedUpdate  
-SharedUpdate ロックは、排他的と ExclusiveUpdate のロック モードを禁止しで共有および SharedUpdate ロック モードは、オブジェクトでします。 SharedUpdate でオブジェクトを変更制限は行われません読み取りアクセス権を変更中にします。 たとえば、挿入し、更新プログラムでの SharedUpdate ロックを使用します。  
+Exclusive および ExclusiveUpdate ロック モードと共有] および [SharedUpdate ロック モードでは、オブジェクト上 SharedUpdate ロック。 SharedUpdate は、オブジェクトを変更しますが、変更中に読み取りアクセスは制限されません。 たとえば、挿入し、更新での SharedUpdate ロックを使用します。  
   
 **リソース クラス**  
   
-オブジェクトの各クラスでロックが保持されますデータベース、スキーマ、オブジェクト (テーブル、ビュー、または手順)、アプリケーション (内部使用)、EXTERNALDATASOURCE、EXTERNALFILEFORMAT および SCHEMARESOLUTION (データベース レベルのロック取得、作成中に変更、または。削除するスキーマのオブジェクトやデータベース ユーザー)。 これらのオブジェクト クラスは、の object_type 列に示される[sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)です。  
+オブジェクトの次のクラスで、ロックが保持されます。データベース、スキーマ、オブジェクト (テーブル、ビュー、またはプロシージャ)、(内部的に使用される) アプリケーション、EXTERNALDATASOURCE、EXTERNALFILEFORMAT および SCHEMARESOLUTION (データベース レベルのロックを作成、変更、またはスキーマ オブジェクトまたはデータベース ユーザーを削除中に実行された)。 これらのオブジェクト クラスは、の object_type 列に表示できる[sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)します。  
   
 ## <a name="Remarks"></a>全般的な解説  
 ロックは、データベース、テーブル、またはビューに適用できます。  
   
-SQL Server PDW は、構成可能な分離レベルを実装していません。 ANSI 標準で定義されている READ_UNCOMMITTED 分離レベルをサポートします。 ただし、した READ_UNCOMMITTED で操作が実行される読み取り、ごく限られたブロッキング操作実際に発生するか、またはシステムに競合する可能性です。  
+SQL Server PDW は、構成可能な分離レベルを実装していません。 ANSI 標準で定義されている READ_UNCOMMITTED 分離レベルをサポートします。 ただし、READ_UNCOMMITTED で操作が実行される読み取り、非常にいくつかのブロック操作実際に発生する、またはシステムでの競合をリードです。  
   
-SQL Server PDW は、ロックと同時実行制御を実装する、基になる SQL Server エンジンに依存します。 操作は、同じノード内の基になる SQL Server デッドロックにつながる、SQL Server PDW は、SQL Server のデッドロック検出の機能を活用し、ブロックのステートメントのいずれかを終了します。  
+SQL Server PDW は、ロックと同時実行制御を実装する、基になる SQL Server エンジンに依存します。 操作は、同じノード内の基になる SQL Server デッドロックにつながる、SQL Server PDW は、SQL Server のデッドロック検出機能を活用し、ブロックのステートメントのいずれかを終了します。  
   
 > [!NOTE]  
-> SQL Server には、新しいロック要求がブロックされるまでにロックを待機しているステートメントはできません。 SQL Server PDW では、このプロセスは完全に実装がいません。 SQL Server PDW では、継続的なロックの要求を新しい共有は排他ロックの要求前 (ただし、待機中) の場合もありますブロックできます。 たとえば、**更新**(排他ロックを必要とする) ステートメントは、一連の許可されている共有ロックによってブロックされることができます**選択**ステートメントです。 ブロックされたプロセスを解決するのには (確認することで識別される、 [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) DVM) 排他ロックが満たされているまで新しい要求の送信を停止してください。  
+> SQL Server では、ロック新しいロック要求によってブロックされるを待機しているステートメントは許可されません。 SQL Server PDW では、このプロセスは完全に実装がいません。 SQL Server PDW では、新しい共有ロックの継続的な要求は排他ロックの要求を前 (ただし、待機している) 場合がありますをブロックできます。 たとえば、 **UPDATE** (排他ロックを必要とする) ステートメントは、一連の与えられている共有ロックによってブロックされることができます**選択**ステートメント。 ブロックされたプロセスを解決するのには (レビューで識別される、 [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) DVM) を排他ロックが満たされているまで新しい要求の送信を停止します。  
   
-## <a name="lock-definition-table"></a>ロックの定義 テーブル  
-SQL Server では、次の種類のロックをサポートします。 すべてのロックの種類は、コントロール ノードで利用できるが、コンピューティング ノードで発生する可能性があります。  
+## <a name="lock-definition-table"></a>定義のテーブルをロック  
+SQL Server では、次の種類のロックをサポートします。 すべてロックの種類は、制御ノードで使用可能ながコンピューティング ノードで発生する可能性があります。  
   
--   Sch-s (スキーマ安定度) です。 スキーマ エレメントに対してスキーマ安定度ロックが保持されているセッションの中では、テーブルやインデックスなどのスキーマ エレメントは削除されません。  
+-   Sch-s (スキーマ安定度)。 スキーマ エレメントに対してスキーマ安定度ロックが保持されているセッションの中では、テーブルやインデックスなどのスキーマ エレメントは削除されません。  
   
 -   Sch-m (スキーマ修正)。 特定のリソースのスキーマを変更するセッションで保持される必要があります。 他のセッションで目的のオブジェクトが参照されないようにします。  
   
@@ -83,19 +82,19 @@ SQL Server では、次の種類のロックをサポートします。 すべ�
   
 -   RangeI_N (挿入キー範囲と Null リソース ロック)。 新しいキーをインデックスに挿入する前に、範囲をテストするために使用します。  
   
--   RangeI_S です。 RangeI_N と S ロックの重なりによって作成されるキー範囲変換ロックです。  
+-   RangeI_S します。 RangeI_N と S ロックの重なりによって作成されるキー範囲変換ロックです。  
   
--   範囲 I_u。 RangeI_N と U ロックの重なりによって作成されるキー範囲変換ロックです。  
+-   I_u。 RangeI_N と U ロックの重なりによって作成されるキー範囲変換ロックです。  
   
--   範囲 I_x。 RangeI_N と X ロックの重なりによって作成されるキー範囲変換ロックです。  
+-   I_x。 RangeI_N と X ロックの重なりによって作成されるキー範囲変換ロックです。  
   
--   RangeX_S です。 RangeI_N と RangeS_S ロックの重なりによって作成されるキー範囲変換 ロックです。  
+-   RangeX_S します。 RangeI_N と RangeS_S ロックの重なりによって作成されるキー範囲変換 ロックです。  
   
--   RangeX_U です。 RangeI_N と RangeS_U ロックの重なりによって作成されるキー範囲変換ロックです。  
+-   RangeX_U します。 RangeI_N と RangeS_U ロックの重なりによって作成されるキー範囲変換ロックです。  
   
 -   RangeX_X (排他キー範囲と排他リソース ロック)。 範囲内のキーを更新する場合に使用する変換ロックです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

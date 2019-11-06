@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetOrderValue Method (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 603a3e22a3fee14dc3e03ccb2afae7e731547e21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b06773049204b126a37e21ce8c070f11666f19df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62826650"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue メソッド (ClientNetworkProtocol クラス)
   クライアント プロトコル リストから、指定された順序値を持つプロトコルを選択します。  
@@ -56,7 +54,7 @@ OrderValue
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [クライアント プロトコルのプロパティ ([順序] タブ)](http://technet.microsoft.com/library/ms187884.aspx)  
+## <a name="see-also"></a>関連項目  
+ [クライアント プロトコルのプロパティ ([順序] タブ)](https://technet.microsoft.com/library/ms187884.aspx)  
   
   

@@ -1,8 +1,0 @@
-- name: ASSL オブジェクトとオブジェクトの特性
-  href: assl-objects-and-object-characteristics.md
-- name: スクリプト言語 ASSL XMLA +
-  href: ../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-- name: ASSL XML 規則
-  href: assl-xml-conventions.md
-- name: Analysis Services スクリプト言語 (ASSL) での開発
-  href: developing-with-analysis-services-scripting-language-assl.md

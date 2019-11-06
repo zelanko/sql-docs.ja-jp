@@ -18,17 +18,17 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62745721"
 ---
 # <a name="securables"></a>[セキュリティ保護可能なリソース]
   セキュリティ保護可能なリソースは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の承認システムによりアクセスが制限されたリソースです。 たとえば、テーブルはセキュリティ保護可能です。 セキュリティ保護可能なリソースの中には他のセキュリティ保護可能なリソースに含まれているものがあります。これらは "スコープ" と呼ばれ、それ自体をセキュリティで保護できる入れ子構造の階層を形成しています。 セキュリティ保護可能なスコープは、 **サーバー**、 **データベース**、および **スキーマ**です。  
   
-## <a name="securable-scope-server"></a>セキュリティ保護可能なスコープ: サーバー  
+## <a name="securable-scope-server"></a>セキュリティ保護可能なスコープ:[サーバー]  
  **サーバー** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   可用性グループ  
@@ -41,7 +41,7 @@ ms.locfileid: "48170182"
   
 -   [データベース]  
   
-## <a name="securable-scope-database"></a>セキュリティ保護可能なスコープ: データベース  
+## <a name="securable-scope-database"></a>セキュリティ保護可能なスコープ:[データベース]  
  **データベース** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   アプリケーション ロール  
@@ -76,18 +76,18 @@ ms.locfileid: "48170182"
   
 -   ユーザー  
   
-## <a name="securable-scope-schema"></a>セキュリティ保護可能なスコープ: スキーマ  
+## <a name="securable-scope-schema"></a>セキュリティ保護可能なスコープ:スキーマ  
  **スキーマ** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   型  
   
 -   XML スキーマ コレクション  
   
--   オブジェクト – オブジェクト クラスのメンバーは次のとおりです。  
+-   オブジェクト - オブジェクト クラスのメンバーは次のとおりです。  
   
     -   Aggregate  
   
-    -   機能  
+    -   関数  
   
     -   手順  
   

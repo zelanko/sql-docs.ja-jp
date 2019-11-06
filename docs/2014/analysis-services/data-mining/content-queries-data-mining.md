@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085650"
 ---
 # <a name="content-queries-data-mining"></a>コンテンツ クエリ (データ マイニング)
   コンテンツ クエリは、マイニング モデルの内部の統計および構造に関する情報を抽出するための手段です。 コンテンツ クエリを使用すると、ビューアーでは簡単に得られない詳細な情報がわかる場合があります。 また、コンテンツ クエリの結果を利用して、他の用途のためにプログラムで情報を抽出できます。  
@@ -145,7 +144,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 次のクエリはこの情報に対して構築されます。 このクエリでは、ノードの ID、完全なルール、およびアイテムセットの右辺の製品 (アイテムセットの一部として他の製品と関連すると予測された製品) の 3 つの列が返されます。  
+ 次のクエリはこの情報に対して構築されます。 クエリは 3 つの列を返します: ノード、完全なルール、およびアイテム セットの右側にある製品の ID のアイテム セットの一部として他の製品に関連する予測された製品は、します。  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -196,8 +195,8 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  階層的な行セットの操作方法の詳細については、MSDN で OLEDB の仕様を参照してください。  
   
-## <a name="see-also"></a>参照  
- [DMX 選択ステートメントをについてください。](/sql/dmx/understanding-the-dmx-select-statement)   
+## <a name="see-also"></a>関連項目  
+ [DMX 選択ステートメントについて](/sql/dmx/understanding-the-dmx-select-statement)   
  [データ マイニング クエリ](data-mining-queries.md)  
   
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.formula.f1
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b202d3eadef7abc2f638cc8c084849249f8eaab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: d3f03857ebbd1d633d78a25437b1f7c03558c7e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109870"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([計算系列のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[計算系列のプロパティ]** ダイアログ ボックスの **[数式]** を選択すると、既存の系列データを入力として使用する組み込みの数式に基づいて計算される系列を追加または変更できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48096732"
   
 -   エンベロープ  
   
--   [パフォーマンス]  
+-   パフォーマンス  
   
 -   相対力指数  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48096732"
  選択した数式のパラメーターを指定します。  
   
 ## <a name="see-also"></a>参照  
- [グラフ&#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [グラフ (レポート ビルダーおよび SSRS)](report-design/charts-report-builder-and-ssrs.md)  
   
   

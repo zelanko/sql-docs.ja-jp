@@ -12,22 +12,22 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: add630c98373a9b49cbb2469ab3eccfbe41b4f05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63218663"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
   このサンプルでは、BLOB データを設定し、テーブルを作成して、サンプル レコードを追加し、行セット内のそのレコードをフェッチして、BLOB フィールドの値を設定する方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
  コンシューマーは、独自のストレージ オブジェクトにポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。次に、`IRowsetChange::SetData` メソッドまたは `IRowsetChange::InsertRow` メソッドを呼び出します。  
   
- このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
+ このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ## <a name="procedures"></a>手順  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - event file target
@@ -15,12 +14,12 @@ ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064860"
 ---
 # <a name="event-file-target"></a>Event File Target
   イベント ファイル ターゲットは、完全なバッファーをディスクに書き込むターゲットです。  
@@ -34,7 +33,7 @@ ms.locfileid: "48092859"
 |max_rollover_files|任意の 32 ビット整数。 この値は省略可能です。|ファイル システム内に保持するファイルの最大数。 既定値は 5 です。|  
 |increment|任意の 32 ビット整数。 この値は省略可能です。|ファイルの拡張増分値 (MB)。 指定しない場合、増分の既定値はセッション バッファー サイズの 2 倍になります。|  
   
- イベント ファイル ターゲットが初めて作成されるとき、指定したファイル名に _0\_ と長整数値が付加されます。 整数値は、1600 年 1 月 1 日からファイルが作成された日時までのミリ秒数として計算されます。 後続のロールオーバー ファイルでもこの形式が使用されます。 長整数値を調べることで、最新のファイルを判別できます。 次の例は、filename オプションに C:\OutputFiles\MyOutput.xel と指定した場合のファイルの名前の決定方法を示しています。  
+ イベント ファイル ターゲットが初めて作成されるとき、指定したファイル名に _0\_ と長整数値が付加されます。 整数値は 1601 年 1 月 1 日の間のミリ秒数として計算され、ファイルが作成された日付と時刻。 後続のロールオーバー ファイルでもこの形式が使用されます。 長整数値を調べることで、最新のファイルを判別できます。 次の例は、filename オプションに C:\OutputFiles\MyOutput.xel と指定した場合のファイルの名前の決定方法を示しています。  
   
 -   最初に作成されるファイル: C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   
@@ -58,7 +57,7 @@ SELECT *, CAST(event_data AS XML) AS 'event_data_XML'
 FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.fn_xe_file_target_read_file &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

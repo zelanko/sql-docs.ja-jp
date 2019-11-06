@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e1f2196b8ba58af2f13dd1b022d62655f2b0aab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 87edbeaac26ca1c332efe981901cbf0bc57fed30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945967"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 言語リファレンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  このセクションの構成は、W3C (World Wide Web Consortium) XQuery ワーキング ドラフト仕様に基づいています。 このセクションで提供する図の一部は、その仕様から引用したものです。 ここでは、Microsoft XQuery の実装と W3C 仕様を比較し、Microsoft XQuery と W3C がどのように異なるかを説明し、サポートしていない W3C 機能を示します。 W3C の仕様は[ https://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846)します。  
+>  このセクションの構成は、W3C (World Wide Web Consortium) XQuery ワーキング ドラフト仕様に基づいています。 このセクションで提供する図の一部は、その仕様から引用したものです。 ここでは、Microsoft XQuery の実装と W3C 仕様を比較し、Microsoft XQuery と W3C がどのように異なるかを説明し、サポートしていない W3C 機能を示します。 W3C の仕様は[ http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

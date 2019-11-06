@@ -8,14 +8,13 @@ ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4d607a7fa7dd9ce91c5ca97bf144f89e1624ed93
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4ea9e05d0a3f1c330fc24f52670384b2a3cd844d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984687"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
@@ -60,7 +59,7 @@ Active Directory 対話型認証では、Azure Active Directory (AD) Multi-Facto
 - @outlook.com、@hotmail.com、@live.com など、Microsoft アカウント。
 - @gmail.com など、Microsoft 以外のアカウント。
 
-MFA 方法を指定すると、**[ユーザー名]** を指定する必要があり、**[パスワード]** フィールドが無効になります。 
+MFA 方法を指定すると、 **[ユーザー名]** を指定する必要があり、 **[パスワード]** フィールドが無効になります。 
 
 #### <a name="password-entry"></a>パスワードの入力
 

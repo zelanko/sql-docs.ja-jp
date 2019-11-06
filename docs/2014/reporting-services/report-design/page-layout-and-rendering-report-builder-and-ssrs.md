@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99d7bcaf87fec0181392fd8673cb90df37849308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105507"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
-  ページ レイアウトや改ページなど、表示レポートに思いどおりの体裁を実現するには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レンダラーの動作をよく理解したうえでレポートを作成することが大切です。 また、レンダリングされたレポートが、普段自分や組織が使用している用紙サイズに収まるかどうかを確認することも必要です。  
+  ページ レイアウトや改ページなど、表示レポートに思いどおりの体裁を実現するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レンダラーの動作をよく理解したうえでレポートを作成することが大切です。 また、レンダリングされたレポートが、普段自分や組織が使用している用紙サイズに収まるかどうかを確認することも必要です。  
   
  レポート ビルダーやレポート デザイナーのプレビュー ペインやレポート マネージャーでレポートを表示すると、そのレポートは、まず HTML レンダラーによってレンダリングされます。 次に、レポートを Excel や CSV (コンマ区切り) 形式など、別の形式にエクスポートすることができます。 その後、エクスポートしたレポートを Excel での詳細な分析に利用することも、CSV 形式のデータ ファイルをインポートして使用することのできるアプリケーションのデータ ソースとして利用することもできます。  
   
@@ -49,14 +48,14 @@ ms.locfileid: "48082832"
 ##  <a name="RenderingExtensions"></a> レンダラー  
  Reporting Services には、表示拡張機能とも呼ばれる一連のレンダラーが付属しています。レンダラーを使用して、レポートをさまざまな形式にエクスポートできます。 レンダラーには、次の 3 種類があります。  
   
--   **データ レンダラー** データ レンダラーは、すべての書式設定とレイアウト情報をレポートから取り除いたうえで、データのみを表示します。 生成されたファイルを使用して、生のレポート データを別のファイル形式 (Excel、他のデータベース、XML データ メッセージ、カスタム アプリケーションなど) にインポートできます。 利用可能なデータ レンダラーとしては CSV と XML があります。  
+-   **データ レンダラー** データ レンダラーは、すべての書式設定とレイアウト情報をレポートから取り除いたうえで、データのみを表示します。 生成されたファイルを使用して、生のレポート データを別のファイル形式 (Excel、他のデータベース、XML データ メッセージ、カスタム アプリケーションなど) にインポートできます。 使用可能なデータのレンダリングは次のとおりです。CSV と XML。  
   
     > [!NOTE]  
     >  異なる形式に直接エクスポートすることはできませんが、Atom 表示拡張機能によってレポートからデータ ファイルを生成できます。  
   
--   **ソフト改ページ レンダラー** : ソフト改ページ レンダラーでは、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、Web ページなど、画面上での閲覧や配信に最適化されます。 使用可能な論理的な改ページ レンダラーが: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、Web アーカイブ (MHTML)、および HTML。  
+-   **ソフト改ページ レンダラー** : ソフト改ページ レンダラーでは、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、Web ページなど、画面上での閲覧や配信に最適化されます。 使用可能な論理的な改ページ レンダラーは次のとおりです。[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、Web アーカイブ (MHTML)、および HTML。  
   
--   **ハード改ページ レンダラー** ハード改ページ レンダラーでは、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、一貫した印刷結果を提供すること、または、レポートを印刷物のような形でオンライン配信する際の見やすさを優先して最適化されます。 TIFF と PDF のハード改ページ レンダラーが利用できます。  
+-   **ハード改ページ レンダラー** : ハード改ページ レンダラーでは、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、一貫した印刷結果を提供すること、または、レポートを印刷物のような形でオンライン配信する際の見やすさを優先して最適化されます。 使用可能なハード改ページ レンダラーがサポートされています。TIFF と PDF。  
   
  レポートをレポート ビルダーまたはレポート デザイナーでプレビューする場合、またはレポート マネージャーで実行する場合、そのレポートは常に、まず HTML で表示されます。 レポートを実行した後、そのレポートを別のファイル形式にエクスポートすることができます。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
@@ -95,27 +94,27 @@ ms.locfileid: "48082832"
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  レポートでページ割り付けを扱う際の詳細な手順を紹介しているトピックの一覧を次に示します。  
   
--   [改ページを追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [改ページの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [複数のページに行および列ヘッダーを表示する&#40;レポート ビルダーおよび SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [複数のページへの行および列ヘッダーの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [追加または削除、ページ ヘッダーまたはフッター&#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [ページ ヘッダーまたはページ フッターの追加および削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [レポートのスクロール時にヘッダーを表示したまま&#40;レポート ビルダーおよび SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [レポートのスクロール時にヘッダーを表示したままにする &#40;レポート ビルダーおよび SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [ページ番号またはその他のレポート プロパティの表示&#40;レポート ビルダーおよび SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [ページ番号またはその他のレポート プロパティの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [ページ ヘッダーまたはフッターの最初のページまたは最後のページを非表示に&#40;レポート ビルダーおよび SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [最初のページまたは最後のページでページ ヘッダーまたはページ フッターを非表示にする &#40;レポート ビルダーおよび SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> トピックの内容  
  以下のトピックでは、ページ レイアウトとレンダリングに関する詳細情報について説明します。  
   
- [ページ ヘッダーとページ フッター&#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  レポート ヘッダーおよびレポート フッターに関する情報のほか、レポート ヘッダーおよびレポート フッターを使用してページ割り付けを制御する方法について説明します。  
   
- [見出し、列、および行は、改ページの制御&#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [改ページ、見出し、列、および行の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  改ページの使用に関する情報を提供します。  
   
   

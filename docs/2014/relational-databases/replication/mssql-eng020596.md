@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020596 error
@@ -13,12 +12,12 @@ ms.assetid: fa33627c-2e99-4be3-9424-52ab83446e07
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58d47808f52fd2d2624f26f7bd17bcb49df100f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddabe3e1a3a12e3aa14c5a6c641345d3236c2fe2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62938483"
 ---
 # <a name="mssqleng020596"></a>MSSQL_ENG020596
     
@@ -39,7 +38,7 @@ ms.locfileid: "48215182"
 ## <a name="user-action"></a>ユーザーの操作  
  適切な資格情報でログインして **sp_dropanonymousagent**を実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   

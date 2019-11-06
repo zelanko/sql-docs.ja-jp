@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acdc9600b7d1081492893f3cc8497359df65fdb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211786"
 ---
 # <a name="tables"></a>テーブル
   テーブルは、データベースのすべてのデータを格納するデータベース オブジェクトです。 テーブルでは、スプレッドシートのように、データが論理的に行と列の形式にまとめられます。 各行は一意なレコードを表し、各列はレコードのフィールドを表します。 たとえば、会社の従業員のデータを格納するテーブルを、各従業員に相当する行と、従業員の社員番号、姓名、住所、役職名、自宅の電話番号などの情報を格納する列から構成する場合があります。  
@@ -84,7 +83,7 @@ ms.locfileid: "48153726"
 |テーブルに計算列を作成する方法について説明します。|[テーブルの計算列の指定](specify-computed-columns-in-a-table.md)|  
 |列の既定値を指定する方法を説明します。 この値は、別の値が指定されない場合に使用されます。|[列の既定値の指定](specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [主キー制約と外部キー制約](primary-and-foreign-key-constraints.md)   
  [UNIQUE 制約と CHECK 制約](unique-constraints-and-check-constraints.md)  
   

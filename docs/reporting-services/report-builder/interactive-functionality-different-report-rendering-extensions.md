@@ -2,18 +2,18 @@
 title: さまざまなレポート表示拡張機能の対話機能 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580692"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>さまざまなレポート表示拡張機能の対話機能
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、実行時にページ分割されたレポートと対話するための機能を備えています。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  
@@ -72,7 +72,7 @@ ms.locfileid: "47789080"
 |-------------------|-------------------------|  
 |プレビュー/レポート ビューアー、HTML|ユーザーはリンクをクリックして、外部の Web ページを新しいブラウザー ウィンドウで開きます。|  
 |PDF|ハイパーリンクは、PDF 表示拡張機能によって表示されます。 ユーザーがハイパーリンクをクリックすると、リンク先のページがブラウザーに表示されます。|  
-|Excel|ハイパーリンクは、Excel で表示されます。|  
+|[エクスポート]|ハイパーリンクは、Excel で表示されます。|  
 |Word|ハイパーリンクは、Word で表示されます。|  
 |その他|ハイパーリンクは、MHTML、XML、CSV、または Image では使用できません。<br /><br /> MHTML および Image の場合、外部画像は静的ピクチャとして表示されます。|  
   
@@ -108,7 +108,7 @@ ms.locfileid: "47789080"
   
 ## <a name="see-also"></a>参照  
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

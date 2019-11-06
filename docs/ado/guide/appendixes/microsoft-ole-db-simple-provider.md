@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926604"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB プロバイダーの簡単な概要
 Microsoft OLE DB 単純なプロバイダー (OSP) により、対象のプロバイダーが書き込まれたを使用して任意のデータにアクセスする ADO、 [OLE DB 単純なプロバイダー (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)します。 単純なプロバイダーはインメモリ配列、または XML ドキュメントなどの OLE DB の基本的なサポートを必要とするデータ ソースにアクセスするためのものです。
@@ -57,13 +56,13 @@ MSDAOSP
 
 ```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  XML の DSO が組み込みのヒューリスティックを使用して XML ツリー内のノードを階層構造の各章に変換する**Recordset**します。
@@ -73,8 +72,8 @@ Portfolio
 ```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  ポートフォリオおよび情報のタグは、階層で表されないことに注意してください。 **Recordset**します。 XML の DSO に階層を XML ツリーを変換する方法の詳細については**レコード セット**、次の規則を参照してください。 $Text 列は、次のセクションについて説明します。

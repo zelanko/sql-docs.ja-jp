@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f69ae2b8c00f062d3650606de071a4d07eefab4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046941"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>ドライバー マネージャー&#39;接続プロセスでの役割
 いるアプリケーションはドライバー関数を直接呼び出すできませんに注意してください。 代わりに、同じ名前のドライバー マネージャーの関数を呼び出すし、ドライバー マネージャーがドライバー関数を呼び出します。 通常、これはほぼ瞬時に。 たとえば、アプリケーションが呼び出す**SQLExecute**ドライバー マネージャーは、ドライバー マネージャーで、いくつかのエラー チェックした後、 **SQLExecute**ドライバー。  

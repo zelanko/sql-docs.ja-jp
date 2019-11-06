@@ -1,12 +1,11 @@
 ---
-title: MSdistributiondbs (TRANSACT-SQL) |Microsoft Docs
+title: MSdistributiondbs (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdistributiondbs_TSQL
@@ -18,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7b37c25c599e3c823fc319a5ed4ea83e1aae3f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 966a77ae53576488ca14c16b4464ebce2816eb02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907342"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +32,12 @@ ms.locfileid: "47848290"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|ディストリビューション データベースの名前。|  
-|**min_distretention**|**int**|トランザクションを削除するまでの最小保有期間 (時間単位)。|  
-|**max_distretention**|**int**|トランザクションを削除するまでの最大保有期間 (時間単位)。|  
+|**min_distretention**|**int**|トランザクションが削除されるまでの時間の最小保有期間。|  
+|**max_distretention**|**int**|トランザクションが削除されるまでの時間の最大保有期間。|  
 |**history_retention**|**int**|履歴を保持する期間 (時間単位)。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

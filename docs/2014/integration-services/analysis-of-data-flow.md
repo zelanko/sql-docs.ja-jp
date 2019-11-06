@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e612fefcebd0537d13a4377484bbaddc04d086a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061600"
 ---
 # <a name="analysis-of-data-flow"></a>データ フローの分析
   使用することができます、 [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`データベース パッケージのデータ フローを分析するビュー。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
@@ -39,9 +38,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - コンポーネントによって送信されたすべての行の合計数  
   
--   **wall_clock_time_ms** – コンポーネントごとの実行の合計経過時間 (ミリ秒単位)  
+-   **wall_clock_time_ms** - コンポーネントごとの実行の合計経過時間 (ミリ秒単位)  
   
--   **num_rows_per_millisecond** – 各コンポーネントによって送信された 1 ミリ秒あたりの行数  
+-   **num_rows_per_millisecond** - 各コンポーネントによって送信された 1 ミリ秒あたりの行数  
   
  `HAVING`句の計算で 0 除算エラーを防ぐために使用されます。  
   
@@ -64,7 +63,7 @@ order by source_component_name desc
   
  [パッケージ実行のトラブルシューティング ツール](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー内のデータ](data-flow/data-in-data-flows.md)  
   
   

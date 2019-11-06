@@ -1,7 +1,7 @@
 ---
 title: SQL Server と Azure SQL Database でのグラフ処理 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: eb84f1cc40a05078910d10a48de67f1ac3467fe3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035899"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ SQL Server の格納とクエリのグラフ データを簡単にグラフの�
 
 
 ### <a name="create-graph-objects"></a>グラフのオブジェクトを作成します。
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 拡張機能により、ノードまたはエッジ テーブルを作成するユーザー。 ノードとエッジの両方が、それらに関連付けられているプロパティを持つことができます。 以降、ノードとエッジ テーブルとして格納されます、リレーショナル テーブルでサポートされているすべての操作ノードまたはエッジ テーブルでサポートされます。 次に例を示します。  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 拡張機能により、ノードまたはエッジ テーブルを作成するユーザー。 ノードとエッジの両方が、それらに関連付けられているプロパティを持つことができます。 以降、ノードとエッジ テーブルとして格納されます、リレーショナル テーブルでサポートされているすべての操作ノードまたはエッジ テーブルでサポートされます。 以下に例を示します。  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -84,6 +83,9 @@ AND Person1.Name = 'John';
 [マージ](../../t-sql/statements/merge-transact-sql.md)ステートメントで挿入を実行、更新、またはソース テーブルと結合の結果に基づいてターゲット テーブルに対する操作を削除します。 たとえば、挿入、更新、または、対象のテーブルとソース テーブルの間の違いに基づいて、ターゲット テーブル内の行を削除して、2 つのテーブルを同期できます。 Azure SQL Database と SQL Server vNext には、一致する述語を使用して、MERGE ステートメントではサポートされています。 つまり、新しいデータが一致する述語を使用して、挿入/更新/削除の個別のステートメントではなく、単一のステートメントでグラフのリレーションシップを指定すると、現在のグラフ データ (ノードまたはエッジ テーブル) をマージすることはようになりました。
 
 マージ DML での一致の使用方法の詳細を参照して[MERGE ステートメント](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>最短のパス
+[SHORTEST_PATH](./sql-graph-shortest-path.md)関数は、グラフまたはグラフ内の他のすべてのノードに、特定のノードから始まる任意の 2 つのノード間の最短パスを検索します。 最短のパスは、推移的閉包を見つけるには使用もまたはグラフのトラバーサルを任意の長さ。 
 
  ## <a name="next-steps"></a>次の手順  
 読み取り、 [SQL グラフ データベース - アーキテクチャ](./sql-graph-architecture.md)

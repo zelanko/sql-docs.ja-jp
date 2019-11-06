@@ -14,12 +14,12 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20cc9df0fa7a52dfd92ea645eca289bd49860b97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815767"
 ---
 # <a name="availability-database-is-suspended"></a>可用性データベースが中断されている
     
@@ -28,7 +28,7 @@ ms.locfileid: "48063322"
 |||  
 |-|-|  
 |**ポリシー名**|可用性データベースの中断状態|  
-|**問題点**|可用性データベースが中断されています。|  
+|**問題**|可用性データベースが中断されています。|  
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性データベース|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48063322"
  このポリシーは、セカンダリ データベース ("セカンダリ データベース レプリカ" とも呼ばれます) のデータの移動状態をチェックします。 データの移動が中断された場合、ポリシーは通常とは異なる状態です。 それ以外の場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性データベースが中断されている](http://go.microsoft.com/fwlink/p/?LinkId=220860) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
+>  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性データベースが中断されている](https://go.microsoft.com/fwlink/p/?LinkId=220860) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
   
 ## <a name="possible-causes"></a>考えられる原因  
  この可用性データベースでのデータ同期が中断された原因として、次の原因が考えられます。  

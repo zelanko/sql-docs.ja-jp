@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.f1
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 806752a22315586ecd730dad89761a079dc7038e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832874"
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
   一括挿入タスクは、大量のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューにコピーするための効率的な方法です。 たとえば、会社で 100 万行の製品リストをメインフレーム システムに格納し、電子商取引システムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して Web ページを構成しているとします。 また、メインフレームにあるマスター製品リストを使用して、夜間に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の製品テーブルを更新する必要があるものとします。 このテーブルを更新するには、製品リストをタブ区切り形式で保存し、一括挿入タスクを使用してデータを直接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにコピーします。  
@@ -92,9 +91,9 @@ ms.locfileid: "48064182"
   
 -   [一括挿入タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [一括挿入タスク エディター&#40;接続 ページ&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [一括挿入タスク エディター &#40;[接続] ページ&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [一括挿入タスク エディター&#40;オプション ページ&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [一括挿入タスク エディター &#40;[オプション] ページ&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -112,10 +111,10 @@ ms.locfileid: "48064182"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   support.microsoft.com の技術記事: [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](http://go.microsoft.com/fwlink/?LinkId=233693)  
+-   support.microsoft.com の技術記事「 [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=233693)」  
   
--   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](http://go.microsoft.com/fwlink/?LinkId=233700)  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=233700)  
   
--   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](http://go.microsoft.com/fwlink/?LinkId=233701)  
+-   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](https://go.microsoft.com/fwlink/?LinkId=233701)  
   
   

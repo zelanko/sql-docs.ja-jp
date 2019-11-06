@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10500"
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9331aede0a02f0f84bd2ae76998efeb8edc075b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104374"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>[ページ設定] ([レポートのプロパティ] ダイアログ ボックス)
   選択**ページ設定**上、**レポートのプロパティ**、ダイアログ ボックスをレポート全体のページのオプションを設定します。  

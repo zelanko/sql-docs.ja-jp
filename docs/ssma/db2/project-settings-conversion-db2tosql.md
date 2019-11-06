@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d2be16142733fe7c54558781e6f916d3c17e7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084547"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>プロジェクトの設定 (変換) (DB2ToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA が DB2 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文。  
@@ -33,9 +32,9 @@ SSMA に変換中に情報メッセージを生成し、され、出力ウィン
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:** なし  
+**既定/オプティミスティック モード:** いいえ  
   
-**フル モード:** なし  
+**フル モード:** いいえ  
   
 ## <a name="miscellaneous-options"></a>その他のオプション  
   
@@ -62,20 +61,20 @@ SSMA ROWNUM 式が変換されるときに、TOP 句の後に、式に式を変�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/フル モード:** なし  
+**既定/フル モード:** いいえ  
   
-**オプティミスティック モード:** [はい]  
+**オプティミスティック モード:** はい  
   
 ### <a name="default-schema-mapping"></a>既定のスキーマ マッピング  
 この設定は、SQL Server スキーマへの DB2 スキーマのマップ方法を指定します。 2 つのオプションは、この設定で使用できます。  
   
-1.  **データベースにスキーマ:** DB2 このモードで 'sch1' のスキーマを既定では SQL Server データベース 'sch1' の 'dbo' SQL Server スキーマにマップされます。  
+1.  **データベースにスキーマ:** このモードの DB2 スキーマ 'sch1' は、既定では SQL Server データベース 'sch1' の 'dbo' SQL Server スキーマにマップされます。  
   
 2.  **スキーマをスキーマ:** DB2 このモードで 'sch1' のスキーマを既定では、接続ダイアログで提供される既定の SQL Server データベース内の 'sch1' SQL Server スキーマにマップされます。  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic/フル モード:** データベースにスキーマ  
+**既定/オプティミスティック/フル モード:** データベースにスキーマ  
   
 ### <a name="conversion-ways-of-merge-statement"></a>MERGE ステートメントの変換方法  
   
@@ -88,7 +87,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句の後に、式に式を変�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic/フル モード:** マージを使用するステートメント  
+**既定/オプティミスティック/フル モード:** MERGE ステートメントを使用  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>既定の引数を使用して、サブプログラムへの呼び出しに変換します。  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関数は、関数呼び出しでパラメーターの省略をサポートしていません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関数およびプロシージャは既定のパラメーター値として式はサポートされません。  
@@ -112,7 +111,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句の後に、式に式を変�
   
 **既定/フル モード:** [はい]  
   
-**オプティミスティック モード:** なし  
+**オプティミスティック モード:** いいえ  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>WHILE FORALL ステートメントに変換ステートメント  
 SSMA が PL/SQL コレクションの要素で FORALL ループを処理する方法を定義します。  
@@ -123,9 +122,9 @@ SSMA が PL/SQL コレクションの要素で FORALL ループを処理する�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:** なし  
+**既定/オプティミスティック モード:** いいえ  
   
-**フル モード:** [はい]  
+**フル モード:** はい  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>ある列の参照操作を NULL に設定された外部キーの変換は NOT NULL します。  
 DB2 を NULL に設定アクションを実行できませんでした可能性があります参照先の列で null 値が許可されていないため、外部キー制約を作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このような外部キーの構成は許可されません。  
@@ -136,7 +135,7 @@ DB2 を NULL に設定アクションを実行できませんでした可能性�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** なし  
+**既定/オプティミスティック/フル モード:** いいえ  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>プロシージャ呼び出しを関数呼び出しに変換します。  
 一部の DB2 関数が自律的なトランザクションとして定義されますまたはで無効になるステートメントを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このような場合は、SSMA は、手順と、プロシージャのラッパーである関数を作成します。 変換後の関数は、実装のプロシージャを呼び出します。  
@@ -151,7 +150,7 @@ SSMA は、ラッパー関数の呼び出しをプロシージャの呼び出し
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic/フル モード:** 可能な場合  
+**既定/オプティミスティック/フル モード:** 可能な場合  
   
 ### <a name="convert-lock-table-statements"></a>LOCK ステートメントを変換します。  
 SSMA は、テーブル ヒントに多くのロック TABLE ステートメントを変換できます。 SSMA 副区分、パーティションが含まれているすべてのテーブルのロック ステートメントに変換できません@dblink、および NOWAIT 句、および変換エラー メッセージには、このようなステートメントとしてマークされます。  
@@ -174,7 +173,7 @@ SSMA は、テーブル ヒントに多くのロック TABLE ステートメン�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** [はい]  
+**既定/オプティミスティック/フル モード:** はい  
   
 ### <a name="convert-open-for-statements-for-ref-cursor-out-parameters"></a>REF CURSOR 出力パラメーターのオープン FOR ステートメントを変換します。  
 Db2、サブプログラムの REF CURSOR 型のパラメーターを設定する結果を返すオープン FOR ステートメントを使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ストアド プロシージャが直接の SELECT ステートメントの結果を返します。  
@@ -187,7 +186,7 @@ SSMA は、SELECT ステートメントに多くのオープン FOR ステート
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** [はい]  
+**既定/オプティミスティック/フル モード:** はい  
   
 ### <a name="convert-record-as-a-list-of-separates-variables"></a>分離の変数の一覧としてレコードに変換します。  
 SSMA は、分離の変数に、特定の構造を持つ XML 変数に、DB2 のレコードを変換できます。  
@@ -209,9 +208,9 @@ SSMA は DB2 SUBSTR 関数の呼び出しに変換できる[!INCLUDE[ssNoVersion
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:** [はい]  
+**既定/オプティミスティック モード:** はい  
   
-**フル モード:** なし  
+**フル モード:** いいえ  
   
 ### <a name="convert-subtypes"></a>サブタイプを変換します。  
 SSMA は、2 つの方法で PL/SQL サブタイプに変換できます。  
@@ -222,7 +221,7 @@ SSMA は、2 つの方法で PL/SQL サブタイプに変換できます。
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** なし  
+**既定/オプティミスティック/フル モード:** いいえ  
   
 ### <a name="convert-synonyms"></a>シノニムを変換します。  
 次の DB2 オブジェクトのシノニムに移行できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -253,20 +252,20 @@ SSMA は、2 つの方法で PL/SQL サブタイプに変換できます。
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** [はい]  
+**既定/オプティミスティック/フル モード:** はい  
   
 ### <a name="convert-tochardate-format"></a>(日付、形式) の TO_CHAR を変換します。  
 SSMA は、DB2 TO_CHAR(date, format) を sysdb データベースからのプロシージャに変換することができます。  
   
 -   選択した場合**を使用して TO_CHAR_DATE 関数**、SSMA TO_CHAR_DATE 関数を使用して英語の言語の変換のために、TO_CHAR (日付、形式) を変換します。  
   
--   選択した場合**を使用して TO_CHAR_DATE_LS 関数 (NLS ケア)**、SSMA TO_CHAR_DATE_LS 関数を使用してセッションの言語の変換のために、TO_CHAR (日付、形式) を変換します  
+-   選択した場合**を使用して TO_CHAR_DATE_LS 関数 (NLS ケア)** 、SSMA TO_CHAR_DATE_LS 関数を使用してセッションの言語の変換のために、TO_CHAR (日付、形式) を変換します  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:** Using TO_CHAR_DATE 関数  
+**既定/オプティミスティック モード:** TO_CHAR_DATE 関数を使用してください。  
   
-**フル モード:** Using TO_CHAR_DATE_LS 関数 (NLS 注意が必要)  
+**フル モード:** TO_CHAR_DATE_LS 関数 (NLS 注意が必要) を使用してください。  
   
 ### <a name="convert-transaction-processing-statements"></a>トランザクション処理ステートメントを変換します。  
 SSMA は、DB2 トランザクション処理のステートメントに変換できます。  
@@ -299,7 +298,7 @@ SSMA は、NULL 値をチェックして、DB2 の ORDER BY の動作をエミ�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:** なし  
+**既定/オプティミスティック モード:** いいえ  
   
 **フル モード:** [はい]  
   
@@ -322,7 +321,7 @@ INTO 句を伴う SELECT ステートメントは、行を返さない、DB2 NO_
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** エラー  
+**既定/オプティミスティック/フル モード:** Error  
   
 ### <a name="generate-rowid-column"></a>ROWID の列を生成します。  
 SSMA が内のテーブルを作成するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ROWID 列を作成できます。 データが移行されると、各行は、newid() 関数によって生成される新しい UNIQUEIDENTIFIER 値を取得します。  
@@ -338,7 +337,7 @@ SSMA が内のテーブルを作成するときに[!INCLUDE[ssNoVersion](../../i
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:** トリガーを使用してテーブルの列を ROWID 追加  
+**既定/オプティミスティック モード:** トリガーを使用してテーブルの列を ROWID 追加します。  
   
 **フル モード:** [はい]  
   
@@ -374,26 +373,26 @@ ISNULL のステートメントは、DB2 の動作をエミュレートする置
   
 -   YES  
   
--   いいえ  
+-   NO  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:** なし  
+**既定/オプティミスティック モード:** いいえ  
   
-**フル モード:** [はい]  
+**フル モード:** はい  
   
 ### <a name="use-isnull-in-concat-function-calls"></a>CONCAT 関数呼び出しで ISNULL を使用します。  
 ISNULL のステートメントは、DB2 の動作をエミュレートする CONCAT 関数呼び出しに使用されます。 次のオプションは、この設定。  
   
 -   YES  
   
--   いいえ  
+-   NO  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:** なし  
+**既定/オプティミスティック モード:** いいえ  
   
-**フル モード:** [はい]  
+**フル モード:** はい  
   
 ### <a name="use-native-convert-function-when-possible"></a>可能であれば、ネイティブの convert 関数を使用して、  
   
@@ -403,9 +402,9 @@ ISNULL のステートメントは、DB2 の動作をエミュレートする CO
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:** [はい]  
+**既定/オプティミスティック モード:** はい  
   
-**フル モード:** なし  
+**フル モード:** いいえ  
   
 ### <a name="use-selectfor-xml-when-converting-selectinto-for-record-variable"></a>選択を使用してください.FOR XML 変換するときに次のように選択してください.Record 変数の INTO  
 Record 変数を選択すると設定 XML 結果を生成するかどうかを指定します。  
@@ -416,7 +415,7 @@ Record 変数を選択すると設定 XML 結果を生成するかどうかを�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** なし  
+**既定/オプティミスティック/フル モード:** いいえ  
   
 ## <a name="returning-clause-conversion"></a>句の変換を返す  
   
@@ -429,7 +428,7 @@ DB2 は、すぐに削除された値を取得する方法として、RETURNING 
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** [はい]  
+**既定/オプティミスティック/フル モード:** はい  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>INSERT ステートメントの RETURNING 句を出力に変換します。  
 DB2 は、すぐに、挿入された値を取得する方法として、RETURNING 句を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OUTPUT 句と共に、その機能を提供します。  
@@ -479,6 +478,6 @@ SSMA では、SSMA シーケンス エミュレーター DB2 シーケンスに�
   
 -   選択した場合**いいえ**SSMA は、変換後のトリガーの外部エラー CURRVAL をシーケンス処理するすべての参照としてマークされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ユーザー インターフェイス リファレンス&#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

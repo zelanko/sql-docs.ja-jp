@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: ac5f345a6ee07abb8ddf5f4dbacff914914da5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111570"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,13 +25,19 @@ ms.locfileid: "47749040"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを最初に起動するときの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初期化時に作成されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、このキーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されている機密データを暗号化します。 公開キーと秘密キーはオペレーティング システムによって作成され、これらのキーを使用して対称キーが保護されます。 公開キーと秘密キーのペアは、データベースに機密データを格納する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに作成されます。  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server およびデータベース キーの用途  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、キーに 2 つの主要な用途があります。1 つは *インスタンスに対して生成される* サービス マスター キー [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMK)、もう 1 つはデータベースに使用される *データベース マスター キー* (DMK) です。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、キーに 2 つの主要な用途があります。1 つは *インスタンスに対して生成される* サービス マスター キー [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMK)、もう 1 つはデータベースに使用される *データベース マスター キー* (DMK) です。
+
+### <a name="service-master-key"></a>サービス マスター キー
   
- SMK は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの初回起動時に自動的に生成され、リンク サーバーのパスワード、資格情報、およびデータベース マスター キーの暗号化に使用されます。 SMK は、Windows データ保護 API (DPAPI) を使用するローカル コンピューター キーを使用して暗号化されます。 DPAPI では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報およびコンピューターの資格情報から派生するキーが使用されます。 サービス マスター キーの暗号化を解除できるのは、作成元のサービス アカウント、またはコンピューターの資格情報にアクセスできるプリンシパルに限られています。  
+ サービス マスター キーは、SQL Server 暗号化階層のルートになります。 SMK は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの初回起動時に自動的に生成され、リンク サーバーのパスワード、資格情報、およびデータベース マスター キーの暗号化に使用されます。 SMK は、Windows データ保護 API (DPAPI) を使用するローカル コンピューター キーを使用して暗号化されます。 DPAPI では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報およびコンピューターの資格情報から派生するキーが使用されます。 サービス マスター キーの暗号化を解除できるのは、作成元のサービス アカウント、またはコンピューターの資格情報にアクセスできるプリンシパルに限られています。
+
+サービス マスター キーを作成した Windows サービス アカウント、またはサービス アカウント名とサービス アカウントのパスワードの両方にアクセスできるプリンシパルだけが、サービス マスター キーを開くことができます。
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK の再作成の詳細については、「[ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md)」および「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。
+
+### <a name="database-master-key"></a>データベース マスター キー
   
- データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内にある非対称キーを保護するときに使用されます。 このキーはデータの暗号化にも使用できますが、長さに制限があるため、対称キーに比べるとデータに対する実用性は低くなります。  
-  
- このマスター キーは、その作成時に、トリプル DES アルゴリズムとユーザー指定のパスワードを使用して暗号化されます。 マスター キーの暗号化を自動的に解除できるように、SMK を使用してこのキーのコピーが暗号化されます。 暗号化されたコピーは、使用先のデータベースおよび **マスター** システム データベースの両方に格納されます。  
+ データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内にある非対称キーを保護するときに使用されます。 このキーはデータの暗号化にも使用できますが、長さに制限があるため、対称キーに比べるとデータに対する実用性は低くなります。 データベース マスター キーの暗号化を自動的に解除できるように、SMK を使用してこのキーのコピーが暗号化されます。 暗号化されたコピーは、使用先のデータベースおよび **マスター** システム データベースの両方に格納されます。  
   
  **マスター** システム データベースに格納された DMK のコピーは、DMK が変更されるたびに自動的に更新されます。 ただし、この既定の設定は、 **ALTER MASTER KEY** ステートメントの **DROP ENCRYPTION BY SERVICE MASTER KEY** オプションを使用して変更できます。 サービス マスター キーによって暗号化されていない DMK は、 **OPEN MASTER KEY** ステートメントとパスワードを使用して開かれている必要があります。  
   

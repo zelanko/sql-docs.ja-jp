@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5253fc1b7ace718fc2d83cadd9fca944b4898c7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023768"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +122,7 @@ ms.locfileid: "52506223"
   
 |設定|XML 要素|[説明]|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ (管理ツールの **replay** オプションで、サーバー名が既に **-s***target server* パラメーターを使用して指定されている場合)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ (管理ツールの **replay** オプションで、サーバー名が既に **-s**_target server_ パラメーターを使用して指定されている場合)。|  
 |シーケンス モード|`<SequencingMode>`|イベント スケジュールに使用されるモードを指定します。|`synchronization` &#124; `stress`|不可。 既定値は `stress`です。|  
 |ストレス スケールの粒度|`<StressScaleGranularity>`|ストレス モードで、Service Profile ID (SPID) のすべての接続をまとめて測定するのか (SPID)、個別に測定するのか (Connection) を指定します。|SPID &#124; Connection|可能。 既定値は `SPID`です。|  
 |接続タイム スケール|`<ConnectTimeScale>`|ストレス モードで接続時間を測定するのに使用されます。|`1` ～ `100`の整数値です。|不可。 既定値は `100`です。|  
@@ -165,27 +164,27 @@ ms.locfileid: "52506223"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>同期シーケンス モードで実行するときに、考えられる問題
- 再生の機能が表示される「停止」、または再生イベントを非常に遅くなります現象が発生する可能性があります。 この現象は、データまたは復元先データベースに存在しないイベントが再生されるトレースが依存する場合に発生することができます。 
- 
-1 つの例は、キャプチャされたワークロードなど、Service Broker の受信の WAITFOR ステートメントで、WAITFOR を使用します。 同期シーケンス モードを使用して、バッチが順番に再生されます。 データベースのバックアップ後にソース データベースに対して挿入が発生した場合は、トレースを開始する再生キャプチャする前に、WAITFOR 受信再生中に発行された、WAITFOR の期間全体を待機する必要があります。 イベントは、WAITFOR の受信が停止している後に再生するのに設定します。 これにより、再生のデータベース ターゲットをゼロに削除するには、バッチ要求/秒パフォーマンス モニター カウンターで、WAITFOR が完了するまでです。 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>同期シーケンスモードで実行するときに発生する可能性のある問題
+ 再生機能が "停止" と表示されたり、イベントの再生が非常に遅くなったりする症状が発生する可能性があります。 この現象は、再生中のトレースが、復元されたターゲットデータベースに存在しないデータやイベントに依存している場合に発生する可能性があります。 
  
- 同期モードでありを使用して、この動作を回避する必要がある場合は、次の操作を行う必要があります。
+ 1つの例として、Service Broker の WAITFOR RECEIVE ステートメントなど、WAITFOR を使用するキャプチャされたワークロードがあります。 同期シーケンスモードを使用する場合、バッチは直列に再生されます。 データベースのバックアップ後、再生キャプチャトレースが開始される前にソースデータベースに対して挿入が行われた場合、再生中に実行された WAITFOR RECEIVE は WAITFOR の全期間を待機する必要があります。 WAITFOR RECEIVE が停滞した後に再生されるように設定されたイベント。 これにより、replay データベースターゲットに対する Batch Requests/sec パフォーマンスモニターカウンターが、WAITFOR が完了するまで0に削除される可能性があります。 
  
-1.  休止再生ターゲットとして使用するデータベース。
+ 同期モードを使用する必要があり、この動作を回避する必要がある場合は、次の操作を行う必要があります。
+ 
+1.  再生ターゲットとして使用するデータベースを停止します。
 
-2.  完了する保留中のすべてのアクティビティを許可します。
+2.  すべての保留中のアクティビティの完了を許可します。
 
-3.  データベースをバックアップし、バックアップの完了を許可します。
+3.  データベースをバックアップし、バックアップを完了できるようにします。
 
-4.  分散再生のトレース キャプチャを開始し、標準的なワークロードを再開します。 
+4.  分散再生トレースのキャプチャを開始し、通常のワークロードを再開します。 
  
  
 ## <a name="see-also"></a>参照  
  [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay フォーラム](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [分散再生を使用した SQL Server のロード テスト – パート 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [分散再生を使用した SQL Server のロード テスト – パート 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [分散再生を使用した SQL Server のロード テスト – パート 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

@@ -1,24 +1,23 @@
 ---
-title: 'チュートリアル: 式の概要 | Microsoft Docs'
+title: チュートリアル:式の概要 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098846"
 ---
-# <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
+# <a name="tutorial-introducing-expressions"></a>チュートリアル:式の概要
   式を使用すると、強力で柔軟なレポートを作成できます。 このチュートリアルでは、一般的な関数および演算子を使用した式を作成および実装する方法を説明します。 使用する、**式**名前値の連結、見て別のデータセット内の値式を作成する ダイアログ ボックスとフィールドの値に基づいた画像を表示します。  
   
  レポートは縞状で、各行には白と白でない色が交互に使用されます。 レポートには、白以外の行の色を選択するためのパラメーターが含まれています。  
@@ -54,9 +53,9 @@ ms.locfileid: "48075852"
   
 -   [レポートを保存します。](#Save)  
   
- このチュートリアルの推定所要時間: 30 分。  
+ このチュートリアルの推定所要時間:30 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
 ##  <a name="Setup"></a> 1.テーブルまたはマトリックス ウィザードを使用して表レポートとデータセットを作成する  
@@ -66,7 +65,7 @@ ms.locfileid: "48075852"
 >  このチュートリアルのクエリにはデータ値が含まれているため、外部のデータ ソースを必要としません。 このため、クエリが非常に長くなっています。 ビジネス環境でクエリにデータを含めることはありません。 これは、学習に使用することのみを目的としています。  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、およびデータセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
 #### <a name="to-create-a-new-table-report"></a>新しい表レポートを作成するには  
   
@@ -124,7 +123,7 @@ ms.locfileid: "48075852"
   
      クエリには、生年月日、名前、姓、州または郡、国または地域の識別子、性別、年度累計購入額などを示す列の名前が指定されています。  
   
-10. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットには FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、および LastPurchase の各列が含まれ、20 行のデータが表示されます。  
+10. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。 結果セットは、20 行のデータを表示して、次の列が含まれています。FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、LastPurchase です。  
   
 11. **[次へ]** をクリックします。  
   
@@ -153,7 +152,7 @@ ms.locfileid: "48075852"
   
 15. **[次へ]** をクリックします。  
   
-16. **[レイアウトの選択]** ページで、**[次へ]** をクリックします。  
+16. **[レイアウトの選択]** ページで、 **[次へ]** をクリックします。  
   
 17. **スタイルの選択**] ページで [**スレート**、順にクリックします**完了**します。  
   
@@ -163,7 +162,7 @@ ms.locfileid: "48075852"
   
 1.  レポート データ ペインで **[データ ソース]** を展開します。  
   
-2.  **[DataSource1]** を右クリックし、**[データ ソースのプロパティ]** をクリックします。  
+2.  **[DataSource1]** を右クリックし、 **[データ ソースのプロパティ]** をクリックします。  
   
 3.  **[名前]** ボックスに「 **ExpressionsDataSource**」と入力します。  
   
@@ -173,24 +172,24 @@ ms.locfileid: "48075852"
   
 1.  レポート データ ペインで **[データセット]** を展開します。  
   
-2.  **[DataSet1]** を右クリックし、**[データセットのプロパティ]** をクリックします。  
+2.  **[DataSet1]** を右クリックし、 **[データセットのプロパティ]** をクリックします。  
   
 3.  **[名前]** ボックスに「 **Expressions**」と入力します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Concatenate"></a> 3.姓、名、およびイニシャルを表示する  
- 姓およびイニシャルを含む名前に評価される式に、**Left** 関数および**連結** (**&**) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。  
+ 姓およびイニシャルを含む名前に評価される式に、**Left** 関数および**連結** ( **&** ) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。  
   
 #### <a name="to-add-the-name-column"></a>Name 列を追加するには  
   
-1.  **[StateProvince]** 列を右クリックし、**[列の挿入]** をポイントして、**[左]** をクリックします。  
+1.  **[StateProvince]** 列を右クリックし、 **[列の挿入]** をポイントして、 **[左]** をクリックします。  
   
      **[StateProvince]** 列の左側に、新しい列が追加されます。  
   
 2.  新しい列のタイトルをクリックし、「**Name**」と入力します。  
   
-3.  **[Name]** 列のデータ セルを右クリックし、**[式]** をクリックします。  
+3.  **[Name]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
 4.  **[式]** ダイアログ ボックスで、 **[共通の関数]** を展開し、 **[テキスト]** をクリックします。  
   
@@ -202,11 +201,11 @@ ms.locfileid: "48075852"
   
 7.  **[値]** ボックスの一覧の **[FirstName]** をダブルクリックします。  
   
-8.  「 **, 1)**」と入力します。  
+8.  「 **, 1)** 」と入力します。  
   
      この式により、**FirstName** 値の左から数えて 1 文字が抽出されます。  
   
-9. 「**&" "&**」と入力します。  
+9. 「 **&" "&** 」と入力します。  
   
 10. **[値]** ボックスの一覧の **[LastName]** をダブルクリックします。  
   
@@ -233,7 +232,7 @@ ms.locfileid: "48075852"
   
 3.  **[インポート]** をクリックし、C:\Users\Public\Public Pictures\Sample Pictures に移動します。  
   
-4.  Penguins.JPG をクリックし、**[開く]** をクリックします。  
+4.  Penguins.JPG をクリックし、 **[開く]** をクリックします。  
   
      **画像のプロパティ**ダイアログ ボックスで、をクリックして**可視性**順にクリックします、**を非表示に**オプション。  
   
@@ -261,7 +260,7 @@ ms.locfileid: "48075852"
   
 1.  四角形内を右クリックし、[**挿入**、] をクリックし、**イメージ**します。  
   
-2.  **画像のプロパティ** ダイアログ ボックスで、横にある下矢印をクリックして**このイメージを使用して、**、Penguins.JPG など、追加した画像のいずれかを選択します。  
+2.  **画像のプロパティ** ダイアログ ボックスで、横にある下矢印をクリックして**このイメージを使用して、** 、Penguins.JPG など、追加した画像のいずれかを選択します。  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -279,15 +278,15 @@ ms.locfileid: "48075852"
   
 6.  **[値]** ボックスの一覧の **[Gender]** をダブルクリックします。  
   
-7.  「 **="Male", "Koala",**」と入力します。  
+7.  「 **="Male", "Koala",** 」と入力します。  
   
 8.  **[値]** ボックスの一覧の **[Gender]** をダブルクリックします。  
   
-9. 「 **="Female", "Penguins",**」と入力します。  
+9. 「 **="Female", "Penguins",** 」と入力します。  
   
 10. **[値]** ボックスの一覧の **[Gender]** をダブルクリックします。  
   
-11. 「**="Unknown", "Tulips")**」と入力します。  
+11. 「 **="Unknown", "Tulips")** 」と入力します。  
   
      完成した式は、次のようになります。 `=Switch(Fields!Gender.Value ="Male", "Koala",Fields!Gender.Value ="Female","Penguins",Fields!Gender.Value ="Unknown","Tulips")`  
   
@@ -333,7 +332,7 @@ ms.locfileid: "48075852"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. **[実行]** (**!**) をクリックしてクエリを実行します。  
+9. **[実行]** ( **!** ) をクリックしてクエリを実行します。  
   
      クエリ結果は国/地域の識別子と名前です。  
   
@@ -343,7 +342,7 @@ ms.locfileid: "48075852"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion データセット内の値を参照するには  
   
-1.  をクリックして、 **Country Region ID**列のタイトルとテキストの削除: id。  
+1.  をクリックして、 **Country Region ID**列のタイトルとテキストを削除します。ID。  
   
 2.  **[Country Region]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
@@ -361,7 +360,7 @@ ms.locfileid: "48075852"
   
 8.  カーソルが別の位置にある場合は、`CountryRegionID.Value` の直後に置きます。  
   
-9. 右かっこを削除し、「**,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**」と入力します。  
+9. 右かっこを削除し、「 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** 」と入力します。  
   
      完成した式は、次のようになります。 `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -386,13 +385,13 @@ ms.locfileid: "48075852"
   
 4.  **[Days Ago]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
-5.  **[式]** ダイアログ ボックスで、**[共通の関数]** を展開し、**[日付と時刻]** をクリックします。  
+5.  **[式]** ダイアログ ボックスで、 **[共通の関数]** を展開し、 **[日付と時刻]** をクリックします。  
   
 6.  **[アイテム]** ボックスの一覧の **[DateDiff]** をダブルクリックします。  
   
 7.  カーソルが別の位置にある場合は、`DateDiff(` の直後に置きます。  
   
-8.  「**"d",**」と入力します。  
+8.  「 **"d",** 」と入力します。  
   
 9. **[カテゴリ]** ボックスの一覧の **[フィールド (Expressions)]** をクリックします。  
   
@@ -400,7 +399,7 @@ ms.locfileid: "48075852"
   
 11. カーソルが別の位置にある場合は、`Fields!LastPurchase.Value` の直後に置きます。  
   
-12. 「**,**」と入力します。  
+12. 「 **,** 」と入力します。  
   
 13. **カテゴリ**一覧で、**日付と時刻の**もう一度です。  
   
@@ -411,24 +410,24 @@ ms.locfileid: "48075852"
   
 15. カーソルが別の位置にある場合は、`Now(` の直後に置きます。  
   
-16. 左かっこを削除し、「**)**」と入力します。  
+16. 左かっこを削除し、「 **)** 」と入力します。  
   
      完成した式は、次のようになります。 `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7.インジケーターを使用して売上比較を示す  
- 新しい列を追加し、インジケーターを使用して、個人の年度累計 (YTD) 購入額が平均 YTD 購入額を上回るか下回るかを示します。 **Round** 関数では、値から小数が除去されます。  
+ 新しい列を追加し、個人の年の日付 (YTD) 購入額が平均 YTD 購入額の上下でかどうかを表示するインジケーターを使用してください。 **Round** 関数では、値から小数が除去されます。  
   
  インジケーターとその状態を構成するには、多数の手順が必要です。 する場合、"、インジケーターを構成するには」の手順で前方にスキップしてこのチュートリアルから完成した式のコピー/貼り付け、**式** ダイアログ ボックス。  
   
-#### <a name="to-add-the--or---avg-sales-column"></a>+ or - AVG Sales 列を追加するには  
+#### <a name="to-add-the--or---avg-sales-column"></a>\+ or - AVG Sales 列を追加するには  
   
 1.  **[YTD Purchase]** 列を右クリックし、 **[列の挿入]** をポイントして、 **[右]** をクリックします。  
   
      **[YTD Purchase]** 列の右側に、新しい列が追加されます。  
   
-2.  新しい列のタイトルをクリックし、「**+ or - AVG Sales**」と入力します。  
+2.  新しい列のタイトルをクリックし、「 **+ or - AVG Sales**」と入力します。  
   
 #### <a name="to-add-an-indicator"></a>インジケーターを追加するには  
   
@@ -468,7 +467,7 @@ ms.locfileid: "48075852"
   
 13. カーソルが別の位置にある場合は、`Fields!YTDPurchase.Value` の直後に置きます。  
   
-14. 「**, "Expressions"))**」と入力します。  
+14. 「 **, "Expressions"))** 」と入力します。  
   
      完成した式は、次のようになります。 `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
@@ -500,7 +499,7 @@ ms.locfileid: "48075852"
   
 28. カーソルが別の位置にある場合は、`Fields!YTDPurchase.Value` の直後に置きます。  
   
-29. 「**, "Expressions")) < 0**」と入力します。  
+29. 「 **, "Expressions")) < 0**」と入力します。  
   
      完成した式は、次のようになります。 `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) < 0`  
   
@@ -522,7 +521,7 @@ ms.locfileid: "48075852"
   
 38. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="GreenBar"></a> 8。レポートを縞状レポートにする  
+##  <a name="GreenBar"></a> 8.「緑色のステータス バー」レポートのレポートを作成します。  
  パラメーターを使用して、レポート内で 1 行おきに適用する色を指定し、レポートを縞状にします。  
   
 #### <a name="to-add-a-parameter"></a>パラメーターを追加するには  
@@ -543,7 +542,7 @@ ms.locfileid: "48075852"
   
 7.  **[追加]** をクリックします。  
   
-8.  **ラベル**ボックスに、入力:**黄色**  
+8.  **ラベル**ボックスに、入力します。**黄色**  
   
 9. **[値]** ボックスに「 **Yellow**」と入力します。  
   
@@ -601,7 +600,7 @@ ms.locfileid: "48075852"
   
 15. カーソルが別の位置にある場合は、`Count(` の直後に置きます。  
   
-16. 左かっこを削除し、「**,“Expressions”)**」と入力します。  
+16. 左かっこを削除し、入力 **、"Expressions")**  
   
     > [!NOTE]  
     >  Expressions は、データ行をカウントするデータセットの名前です。  
@@ -612,7 +611,7 @@ ms.locfileid: "48075852"
   
 19. カーソルが別の位置にある場合は、`Mod` の直後に置きます。  
   
-20. 「**2 =0,**」と入力します。  
+20. 「**2 =0,** 」と入力します。  
   
     > [!IMPORTANT]  
     >  2 という数値の前に、必ずスペースを入れてください。  
@@ -621,7 +620,7 @@ ms.locfileid: "48075852"
   
 22. カーソルが別の位置にある場合は、`Parameters!RowColor.Value` の直後に置きます。  
   
-23. 「**, "White")**」と入力します。  
+23. 入力 **,"White")**  
   
      完成した式は、次のようになります。 `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -698,17 +697,17 @@ ms.locfileid: "48075852"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  をクリックして**デスクトップ`, `My Documents**、または**コンピューター**、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **名前**、既定の名前を**Sales Comparison Summary**します。  
   
 4.  **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [インジケーター&#40;レポート ビルダーおよび SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [画像、テキスト ボックス、四角形、および行&#40;レポート ビルダーおよび SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

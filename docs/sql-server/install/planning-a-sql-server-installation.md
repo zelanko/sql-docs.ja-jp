@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 94cdaba9319ed683dafcf3e8e29903b1d1957100
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019829"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,6 +76,6 @@ ms.locfileid: "51701920"
   
 ## <a name="see-also"></a>参照  
  [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [高可用性ソリューション &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [フェールオーバー クラスタリングをインストールする前に](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [インストール ウィザードを使用した SQL Server のアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  

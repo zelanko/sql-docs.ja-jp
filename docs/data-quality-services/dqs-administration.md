@@ -12,15 +12,14 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: db618785ace138f958f1b37713cf0c96f6ffb10b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: b801dd3792755c93006c1c6a48cfa9dc5af9cc37
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617862"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152462"
 ---
 # <a name="dqs-administration"></a>DQS 管理
 
@@ -36,7 +35,7 @@ ms.locfileid: "52617862"
   
 -   DQS 管理者は、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] から [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]での DQS アクティビティを監視でき、必要に応じて、実行中のアクティビティを *終了* させたり、アクティビティ内で実行中のプロセスを *停止* させたりできます。  
   
--   Windows Azure Marketplace との接続の設定や、ダイレクト サード パーティ参照データ サービス プロバイダーの管理など、参照データ サービスの設定を構成します。  
+-   Azure Marketplace との接続の設定や、ダイレクトサードパーティ参照データサービスプロバイダーの管理など、参照データサービスの設定を構成します。  
   
 -   クレンジングおよび照合アクティビティのしきい値を構成します。  
   
@@ -53,11 +52,11 @@ ms.locfileid: "52617862"
 ### <a name="configuration"></a>構成  
  **の** [構成] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 画面では、DQS 管理者は次のことを行うことができます。  
   
--   **[参照データ]**: 参照データ サービス プロバイダー (Windows Azure Marketplace プロバイダーまたはダイレクト参照データ サービス プロバイダー) を構成します。 参照データ サービス プロバイダーを設定した後は、ナレッジ ベースでのドメイン管理アクティビティの間にドメイン/複合ドメインと参照データをマップし、データ品質プロジェクトでのクレンジング アクティビティに同じナレッジ ベースを使用できます。 また、インターネットに接続して Windows Azure Marketplace を使用するためのプロキシ設定を指定できます。  
+-   **[参照データ]** : 参照データ サービス プロバイダーAzure Marketplace またはダイレクト参照データサービスプロバイダー。 参照データ サービス プロバイダーを設定した後は、ナレッジ ベースでのドメイン管理アクティビティの間にドメイン/複合ドメインと参照データをマップし、データ品質プロジェクトでのクレンジング アクティビティに同じナレッジ ベースを使用できます。 また、Azure Marketplace を使用するためにインターネットに接続するためのプロキシ設定を指定することもできます。  
   
--   **[全般設定]**: データ クレンジングおよびデータ照合のしきい値、および [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]でのプロファイリングに対する通知を有効にするかどうかを指定できます。 これらのしきい値は、データ品質プロジェクトでのコンピューター支援型のクレンジングおよび照合アクティビティの間に、DQS によって使用されます。  
+-   **[全般設定]** :データ クレンジングおよびデータ照合のしきい値、および [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] でのプロファイリングに対する通知を有効にするかどうかを指定できます。 これらのしきい値は、データ品質プロジェクトでのコンピューター支援型のクレンジングおよび照合アクティビティの間に、DQS によって使用されます。  
   
--   **[ログの設定]**: DQS のログ ファイルには DQS で実行されたアクティビティが記録され、メンテナンスおよびトラブルシューティングの間に運用上の問題を追跡するのに役立ちます。 さまざまな DQS 機能 (ドメイン管理、ナレッジ検出、クレンジング、照合、参照データ サービス) および DQS モジュールに関してログに記録するメッセージを、イベントの重大度レベルに基づいてフィルターできます。  
+-   **[ログの設定]** :DQS のログ ファイルには DQS で実行されたアクティビティが記録され、メンテナンスおよびトラブルシューティングの間に運用上の問題を追跡するのに役立ちます。 さまざまな DQS 機能 (ドメイン管理、ナレッジ検出、クレンジング、照合、参照データ サービス) および DQS モジュールに関してログに記録するメッセージを、イベントの重大度レベルに基づいてフィルターできます。  
   
 > [!NOTE]  
 >  **[構成]** 画面は、DQS_MAIN データベースの dqs_administrator ロールを持つユーザーのみ使用できます。  
@@ -65,9 +64,9 @@ ms.locfileid: "52617862"
 ##  <a name="AdminOutsideClient"></a> Data Quality Client の外部での管理アクティビティ  
  アクティビティは Data Quality Client の外部で実行されます。  
   
--   **DQS データベースのバックアップと復元**: DQS データベースのバックアップと復元は、他の SQL Server データベースのバックアップおよび復元と同じですが、DQS に固有の考慮事項がいくつかあります。  
+-   **DQS データベースのバックアップと復元**:DQS データベースのバックアップと復元は、他の SQL Server データベースのバックアップおよび復元と同じですが、DQS に固有の考慮事項がいくつかあります。  
   
--   **DQS のデータベースのデタッチとアタッチ**: DQS データベースをデタッチおよびアタッチする手順は、他の SQL Server データベースのデタッチおよびアタッチと同じですが、DQS に固有の考慮事項がいくつかあります。  
+-   **DQS のデータベースのデタッチとアタッチ**:DQS データベースをデタッチおよびアタッチする手順は、他の SQL Server データベースのデタッチおよびアタッチと同じですが、DQS に固有の考慮事項がいくつかあります。  
   
  詳細については、「 [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)」を参照してください。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "52617862"
 |DQS データベースのバックアップと復元の方法について説明します。|[DQS データベースのバックアップと復元](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS データベースをデタッチおよびアタッチする方法について説明します。|[DQS データベースのデタッチとアタッチ](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DQS の参照データ サービス](../data-quality-services/reference-data-services-in-dqs.md)   
  [DQS ログ ファイルの管理](../data-quality-services/manage-dqs-log-files.md)   
  [DQS データベースの管理](../data-quality-services/manage-dqs-databases.md)  

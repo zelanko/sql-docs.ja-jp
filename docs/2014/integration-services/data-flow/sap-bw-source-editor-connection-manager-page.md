@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37ef852cea67ee021cee7dd182dc4a11132abcea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901113"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>[SAP BW ソース エディター] ([接続マネージャー] ページ)
   **[SAP BW ソース エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換元の SAP BW 接続マネージャーを選択できます。 このページでは、実行モードと SAP Netweaver BW システムからデータを抽出するためのパラメーターも選択します。  
@@ -84,7 +83,7 @@ ms.locfileid: "48201262"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- 形式で、ゲートウェイ サービスの名前を入力`sapgwNN`ここで、`NN`システム番号です。  
+ `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  
@@ -110,7 +109,7 @@ ms.locfileid: "48201262"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- 形式で、ゲートウェイ サービスの名前を入力`sapgwNN`ここで、`NN`システム番号です。  
+ `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  
@@ -123,7 +122,7 @@ ms.locfileid: "48201262"
  抽出に関連付けられている要求 ID を入力します。  
   
 ## <a name="see-also"></a>参照  
- [SAP bw 変換元エディター&#40;列 ページ&#41;](sap-bw-source-editor-columns-page.md)   
+ [SAP BW ソース エディター ([列] ページ)](sap-bw-source-editor-columns-page.md)   
  [SAP BW ソース エディター &#40;[エラー出力] ページ&#41;](sap-bw-source-editor-error-output-page.md)   
  [SAP BW ソース エディター &#40;[詳細設定] ページ&#41;](sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  

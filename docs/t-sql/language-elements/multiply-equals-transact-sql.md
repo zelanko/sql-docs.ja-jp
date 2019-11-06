@@ -19,23 +19,22 @@ helpviewer_keywords:
 - '*= (multiply equals)'
 - '*= (multiplication assignment)'
 ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20c0ecafa1a6d9b56486a99a7c187d05795fc282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ad2f4cd1c650831415eb4fea8182eaf5fb81fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122089"
 ---
 # <a name="-multiplication-assignment-transact-sql"></a>*= (乗算代入) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  2 つの数値を乗算し、値に演算の結果を設定します。 たとえば、変数 @x が 35 である場合、@x *= 2 は @x の元の値を取得し、2 を乗算して、@x にその新しい値 (70) を設定します。  
+2 つの数値を乗算し、値に演算の結果を設定します。 たとえば、変数 @x が 35 である場合、@x *= 2 は @x の元の値を取得し、2 を乗算して、@x にその新しい値 (70) を設定します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,18 +43,18 @@ expression *= expression
 ```  
   
 ## <a name="arguments"></a>引数  
- *式 (expression)*  
- 数値型に分類される任意のデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。  
+_式 (expression)_  
+数値型に分類される任意のデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。  
   
 ## <a name="result-types"></a>戻り値の型  
- 優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
+優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- 詳細については、「[&#42; &#40;乗算&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-transact-sql.md)」を参照してください。  
+詳細については、「[&#42; &#40;乗算&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+[複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+[演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

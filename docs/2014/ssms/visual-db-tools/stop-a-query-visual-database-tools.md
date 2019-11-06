@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - ending queries [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1841e466148b99af2438af8615014e3fed1eed88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204963"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>クエリの停止 (Visual Database Tools)
   クエリの実行に時間がかかりすぎる場合や、期待した結果を得ることができない場合は、クエリを中止できます。  

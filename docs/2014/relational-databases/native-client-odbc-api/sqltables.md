@@ -14,12 +14,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90ae76e10c4f9ceab4f7185de6448f6add944b5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188666"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables は静的サーバー カーソルで実行できます。 SQLTables を更新可能な (動的またはキーセット) カーソルで実行するとは、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO を返します。  
@@ -28,7 +28,7 @@ ms.locfileid: "48111493"
   
  SQLTables には、使用可能なカタログ、スキーマ、およびテーブル型を報告するため、空の文字列 (長さが 0 バイトのポインター) の特別な用途が。 空文字列は、既定値 (NULL ポインター) ではありません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター: *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター。*Linked_Server_Name.Catalog_Name*します。  
   
  SQLTables がテーブルの名前が一致をに関する情報を返します*TableName*現在のユーザーによって所有されているとします。  
   
@@ -54,7 +54,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQLTables 関数](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables 関数](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

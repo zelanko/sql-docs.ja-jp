@@ -2,8 +2,7 @@
 title: sp_pdw_add_network_credentials (SQL データ ウェアハウス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -11,14 +10,13 @@ dev_langs:
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 38111262840a7667a432422b996c666ddc0d0748
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da1ba0db4467526ef2b54650020a899f88788648
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008958"
 ---
 # <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,14 +35,14 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>引数  
  '*target_server_name*'  
- 対象サーバーのホスト名または IP アドレスを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] このストアド プロシージャに渡されるユーザー名とパスワードの資格情報を使用してこのサーバーがアクセスします。  
+ ターゲット サーバーのホスト名または IP アドレスを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] このストアド プロシージャに渡されるユーザー名とパスワードの資格情報を使用してこのサーバーがアクセスします。  
   
- InfiniBand ネットワーク経由で接続するには、対象サーバーの InfiniBand IP アドレスを使用します。  
+ InfiniBand ネットワーク経由で接続するには、ターゲット サーバーの InfiniBand IP アドレスを使用します。  
   
  *target_server_name* nvarchar (337) として定義されます。  
   
  '*user_name*'  
- 対象サーバーにアクセスする権限を持っているユーザー名を指定します。 対象サーバーの資格情報が既に存在する場合は、新しい資格情報に更新されます。  
+ ターゲット サーバーにアクセスする権限を持っているユーザー名を指定します。 ターゲット サーバーの資格情報が既に存在する場合は、新しい資格情報に更新されます。  
   
  *user_name* nvarchar (513) として定義されます。  
   
@@ -61,12 +59,12 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  [管理] ノードとすべての計算ノードには資格情報の追加が成功しなかった場合、エラーが発生します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- このストアド プロシージャの NetworkService アカウントにネットワーク資格情報を追加する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。 SMP の各インスタンスを実行する、NetworkService アカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コントロールのノードとコンピューティング ノード上。 たとえば、バックアップ操作を実行すると、[管理] ノードおよびすべての計算ノード使用されます NetworkService アカウントの資格情報読み取りのため、対象のサーバーへの書き込み権限を。  
+ このストアド プロシージャの NetworkService アカウントにネットワーク資格情報を追加する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。 SMP の各インスタンスを実行する、NetworkService アカウント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロールのノードと計算ノードにします。 たとえば、バックアップ操作を実行すると、制御ノードおよび各計算ノードは NetworkService アカウントの資格情報を使用してターゲット サーバーへの読み取り、書き込み許可を取得します。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. データベースのバックアップを実行するための資格情報を追加します。  
- 次の例では、10.172.63.255 の IP アドレスが設定されている対象サーバーをドメイン ユーザーの seattle\david のユーザー名とパスワード資格情報を関連付けます。 ユーザー seattle\david では、ターゲット サーバーへの読み取り/書き込み権限を持っています。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] これらの資格情報を格納し、読み取りおよびとバックアップの必要に応じて、ターゲット サーバーの間を書き込み、および復元操作に使用します。  
+ 次の例では、10.172.63.255 の IP アドレスが設定されているターゲット サーバーをドメイン ユーザーの seattle\david のユーザー名とパスワード資格情報を関連付けます。 ユーザー seattle\david は、ターゲット サーバーへの読み取り/書き込み権限を持っています。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] これらの資格情報を格納し、読み取りおよびとバックアップの必要に応じて、ターゲット サーバーの間を書き込み、および復元操作に使用します。  
   
 ```  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  

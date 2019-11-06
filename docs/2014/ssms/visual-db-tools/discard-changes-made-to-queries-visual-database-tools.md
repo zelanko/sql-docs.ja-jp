@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - reverting queries
@@ -14,12 +14,12 @@ ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13a852b4bdc05f10dc1e06b6168d5b3b12b3ebfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63130268"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>クエリに対する変更の破棄 (Visual Database Tools)
   変更を保存する前であれば、クエリ定義に対して行った変更を破棄できます。 いったん変更を保存すると、変更前の状態に戻すことはできなくなります。  

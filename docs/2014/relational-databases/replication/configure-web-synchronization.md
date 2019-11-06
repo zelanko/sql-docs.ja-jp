@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721655"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マージ レプリケーションの Web 同期オプションを使用すると、インターネット経由で HTTPS プロトコルを使用してデータをレプリケートできます。 Web 同期を使用するには、最初に次の構成操作を実行する必要があります。  
@@ -76,9 +75,9 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
  **Web 同期用に IIS を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期用の IIS の構成](configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS の構成](configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期用の IIS 7 の構成](configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS 7 の構成](configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Web ガーデンの作成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーでは、スレッドごとに同時に 2 つの同期処理がサポートされます。 この制限を超えると、レプリケーション リスナーが応答しなくなる可能性があります。 replisapi.dll に割り当てられるスレッドの数は、アプリケーション プールの "ワーカー プロセスの最大数" プロパティで決まります。 既定では、このプロパティは 1 に設定されます。  
@@ -125,7 +124,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 -   大量のデータをレプリケートする場合に、マージ エージェントのバッチ サイズの調整が必要になることがあります。  
   
- マージ レプリケーションのバッチ サイズは、アーティクルごとの変更のコレクションである *生成結果*で示されます。 使用して、バッチ内の生成結果の数が指定されて –`DownloadGenerationsPerBatch`と –`UploadGenerationsPerBatch`マージ エージェントのパラメーター。 詳細については、「 [Replication Merge Agent](agents/replication-merge-agent.md)」を参照してください。  
+ マージ レプリケーションのバッチ サイズは、アーティクルごとの変更のコレクションである *生成結果*で示されます。 使用して、バッチ内の生成結果の数が指定されて、`DownloadGenerationsPerBatch`と -`UploadGenerationsPerBatch`マージ エージェントのパラメーター。 詳細については、「 [Replication Merge Agent](agents/replication-merge-agent.md)」を参照してください。  
   
  大量のデータを扱う場合は、バッチ処理の各パラメーターに小さい数を指定します。 最初は値を 10 にして、アプリケーションのニーズとパフォーマンスに応じて調整することをお勧めします。 通常、これらのパラメーターは、エージェント プロファイルで指定します。 プロファイルの詳細については、「 [Replication Agent Profiles](agents/replication-agent-profiles.md)」を参照してください。  
   

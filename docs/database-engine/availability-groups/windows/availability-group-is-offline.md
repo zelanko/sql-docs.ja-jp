@@ -1,6 +1,7 @@
 ---
-title: 可用性グループがオフライン | Microsoft Docs
-ms.custom: ''
+title: 可用性グループがオフライン
+description: Always On 可用性グループがオフラインになっている理由を特定します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 343ae5ff2b5b65b26569f99ff22d51ed1860e69d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d2f9c6101be3dba631a9e0cbebdfedc3444c72d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991473"
 ---
-# <a name="availability-group-is-offline"></a>可用性グループがオフライン
+# <a name="always-on-availability-group-is-offline"></a>Always On 可用性グループがオフライン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>概要  

@@ -16,15 +16,15 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1db5b5dcf8e1bf5c06882971d3bf3cd2e5a0309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211716"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>ユーザー定義関数の作成 (データベース エンジン)
-  このトピックでユーザー定義関数を作成する方法について説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]します。  
+  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してユーザー定義関数を作成する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48124902"
   
      [テーブル値関数を作成します。](#TVF)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48124902"
   
 -   ユーザー定義関数では複数の結果セットは返せません。 複数の結果セットを返す必要がある場合は、ストアド プロシージャを使用します。  
   
--   エラー処理は、ユーザー定義の関数では制限されます。 UDF では、TRY…CATCH、@ERROR、または RAISERROR をサポートしていません。  
+-   エラー処理は、ユーザー定義の関数では制限されます。 UDF は、TRY をサポートしていません.キャッチ、@ERRORまたは RAISERROR です。  
   
 -   ユーザー定義関数はストアド プロシージャを呼び出すことができませんが、拡張ストアド プロシージャを呼び出すことはできます。  
   
@@ -192,7 +192,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー定義関数](user-defined-functions.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   

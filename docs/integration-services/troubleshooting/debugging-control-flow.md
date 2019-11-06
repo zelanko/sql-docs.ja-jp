@@ -17,17 +17,20 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fcc1dd9aa113c53071363beefc5d9ad238144e28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796140"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295129"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、コンテナーおよびタスク上のブレークポイントがサポートされています。  
@@ -53,7 +56,7 @@ ms.locfileid: "47796140"
 |タスクまたはコンテナーが **OnTaskFailed** イベントを受け取ったとき。|タスク ホストが失敗したとき、タスク ホストによって呼び出されます。|  
 |タスクまたはコンテナーが **OnProgress** イベントを受け取ったとき。|タスクの実行の進行状況を更新するために呼び出されます。|  
 |タスクまたはコンテナーが **OnQueryCancel** イベントを受け取ったとき。|タスク処理の実行をキャンセルできる場合、任意のタイミングで呼び出されます。|  
-|タスクまたはコンテナーが **OnVariableValueChanged** イベントを受け取ったとき。|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 このイベントを起動するには、変数の RaiseChangeEvent を **true** に設定する必要があります。<br /><br /> **\*\* 警告 \*\*** このブレークポイントに関連付けられている変数は、 **コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
+|タスクまたはコンテナーが **OnVariableValueChanged** イベントを受け取ったとき。|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 このイベントを起動するには、変数の RaiseChangeEvent を **true** に設定する必要があります。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** このブレークポイントに関連付けられている変数は、**コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
 |タスクまたはコンテナーが **OnCustomEvent** イベントを受け取ったとき。|タスクによって定義されたカスタム イベントを起動するため、タスクによって呼び出されます。|  
   
  一部のタスクとコンテナーには、すべてのタスクとコンテナーで使用できるブレークの条件以外に、ブレークポイントを設定するための特殊なブレーク条件が含まれています。 たとえば、For ループ コンテナーでは、ループの各反復処理の開始点で実行を中断するブレークポイントを設定するための、ブレークの条件を有効にできます。  
@@ -105,7 +108,7 @@ ms.locfileid: "47796140"
 ## <a name="debug-windows"></a>デバッグ ウィンドウ  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、ブレークポイントの処理、およびブレークポイントが含まれるパッケージのデバッグに使用できる多数のウィンドウがあります。 各ウィンドウの詳細については、ウィンドウを開いて F1 キーを押し、目的のウィンドウのヘルプを参照してください。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]** をポイントします。次に、 **[ブレークポイント]**、 **[出力]**、または **[イミディエイト]** をクリックします。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]** をポイントします。次に、 **[ブレークポイント]** 、 **[出力]** 、または **[イミディエイト]** をクリックします。  
   
  次の表は、各ウィンドウについて説明しています。  
   
@@ -141,7 +144,7 @@ ms.locfileid: "47796140"
 ## <a name="set-breakpoints"></a>[ブレークポイントの設定]
   **[ブレークポイントの設定]** ダイアログ ボックスを使用すると、ブレークポイントを有効にしてブレークポイントの動作を制御するためのイベントを指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **有効**  
  選択すると、イベントのブレークポイントが有効になります。  
   
@@ -151,7 +154,7 @@ ms.locfileid: "47796140"
  **[ヒット カウントの種類]**  
  ブレークポイントがいつ有効になるかを指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**毎回**|ブレークポイントにヒットすると、常に実行が中断されます。|  
 |**ヒット カウント (等しい)**|ブレークポイントの発生回数がヒット カウントと等しくなると実行が中断されます。|  

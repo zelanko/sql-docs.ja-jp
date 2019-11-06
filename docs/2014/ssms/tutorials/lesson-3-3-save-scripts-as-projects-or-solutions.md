@@ -10,12 +10,12 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753045"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>プロジェクトまたはソリューションとしてスクリプトを保存する
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio を使い慣れている開発者であれば、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のソリューション エクスプローラーにもすぐに慣れることができます。 業務を支援するスクリプトはスクリプト プロジェクトにグループ化することができ、スクリプト プロジェクトはソリューションとしてまとめて管理できます。 スクリプト プロジェクトまたはソリューションに格納したスクリプトは、グループとして一括して開けるほか、Visual SourceSafe などのソース管理製品にまとめて保存することができます。 スクリプト プロジェクトは、スクリプトを適切に実行するための接続情報を保持し、テキスト ファイルなどの非スクリプト ファイルを保持することもできます。  
@@ -58,11 +58,11 @@ ms.locfileid: "48125952"
     > [!NOTE]  
     >  クエリを入力するスペースが足りない場合は、Shift + Alt + Enter キーを押して全画面モードに切り替えてください。  
   
-11. ソリューション エクスプローラーで **SQLQuery1**を右クリックし、 **[名前の変更]** をクリックします。 クエリの新しい名前として「 **Check Workorders****.sql** 」と入力し、Enter キーを押します。  
+11. ソリューション エクスプローラーで **SQLQuery1**を右クリックし、 **[名前の変更]** をクリックします。 型**Check Workorders.sql**クエリと ENTER キーを押して新しい名前として。  
   
 12. ソリューションとスクリプト プロジェクトを保存するには、 **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [まとめ : ソリューションとスクリプト プロジェクト](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [概要:ソリューションとスクリプト プロジェクト](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

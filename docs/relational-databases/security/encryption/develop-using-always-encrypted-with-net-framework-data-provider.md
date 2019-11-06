@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4771d3a0fbf49c2d8c87c96d99b3e387b392e3bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049938"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Always Encrypted と .NET Framework Data Provider を使用して開発する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ Always Encrypted を使用すると、クライアント アプリケーショ�
 ## <a name="prerequisites"></a>Prerequisites
 
 - データベースで Always Encrypted を構成します。 この処理には、Always Encrypted キーのプロビジョニング、および選択したデータベース列の暗号化の設定が含まれます。 Always Encrypted が構成されたデータベースがない場合は、「 [Always Encrypted の作業の開始](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5)」の手順に従います。
-- 開発用コンピューターに .NET Framework バージョン 4.6 以降がインストールされていることを確認します。 詳細については、「 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)」を参照してください。 また、開発環境内でターゲットの .NET Framework バージョンとして .NET Framework バージョン 4.6 以降が構成されていることも確認する必要があります。 Visual Studio を使用している場合は、「 [方法: .NET Framework のバージョンをターゲットにする](https://msdn.microsoft.com/library/bb398202.aspx)」を参照してください。 
+- 開発用コンピューターに .NET Framework バージョン 4.6 以降がインストールされていることを確認します。 詳細については、「 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)」を参照してください。 また、開発環境内でターゲットの .NET Framework バージョンとして .NET Framework バージョン 4.6 以降が構成されていることも確認する必要があります。 Visual Studio を使用している場合、「[方法: .NET Framework のバージョンをターゲットにする](https://msdn.microsoft.com/library/bb398202.aspx)」を参照してください。 
 
 > [!NOTE]
 > .NET Framework の特定のバージョンでは、Always Encrypted のサポート レベルが異なります。 詳細については、以下の「Always Encrypted API リファレンス」セクションを参照してください。 
@@ -69,8 +68,8 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 |クエリの特性 | Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる|Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない | Always Encrypted が無効になっている|
 |:---|:---|:---|:---|
-| 暗号化された列をターゲットとするパラメーターを含むクエリ。 | パラメーター値は透過的に暗号化されます。 | [エラー] | [エラー]|
-| 暗号化された列をターゲットとするパラメーターを含まず、暗号化された列からデータを取得するクエリ。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションは、暗号化された列用に構成された SQL Server 型に対応する、.NET データ型のプレーンテキスト値を受け取ります。 | [エラー] | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列 (byte[]) として受け取ります。 
+| 暗号化された列をターゲットとするパラメーターを含むクエリ。 | パラメーター値は透過的に暗号化されます。 | Error | Error|
+| 暗号化された列をターゲットとするパラメーターを含まず、暗号化された列からデータを取得するクエリ。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションは、暗号化された列用に構成された SQL Server 型に対応する、.NET データ型のプレーンテキスト値を受け取ります。 | Error | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列 (byte[]) として受け取ります。 
 
 次の例は、暗号化された列のデータを取得および変更する方法を示しています。 この例では、下のスキーマを含むターゲット テーブルを想定しています。 SSN 列と BirthDate 列が暗号化されていることに注意してください。
 
@@ -282,7 +281,7 @@ cmd.ExecuteNonQuery();
 | クラス | [説明] | プロバイダー (検索) 名 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider クラス| Windows 証明書ストアのプロバイダー。 | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注:** このプロバイダーは、.NET Framework 4.6.1 以降のバージョンで利用可能です。 |[Microsoft Cryptography API: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。  | MSSQL_CNG_STORE|
+|[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注:** このプロバイダーは、.NET Framework 4.6.1 以降のバージョンで利用可能です。 |[Microsoft Cryptography API:Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx) をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。  | MSSQL_CNG_STORE|
 | [SqlColumnEncryptionCspProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**注:** このプロバイダーは、.NET Framework 4.6.1 以降のバージョンで利用可能です。| [Microsoft Cryptography API (CAPI)](https://msdn.microsoft.com/library/aa266944.aspx)をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。| MSSQL_CSP_PROVIDER |
   
 これらのプロバイダーを使用しするために、アプリケーション コードを変更する必要はありませんが、次のことに注意してください。
@@ -511,7 +510,7 @@ SqlBulkCopy を使用して、データの暗号化解除を行うことなく�
 
 - ターゲット テーブルの暗号化構成が、ソース テーブルの構成と同じであることを確認します。 具体的には、両方のテーブルで同じ列が暗号化されており、同じ暗号化タイプおよび同じ暗号化キーを使用してこれらの列が暗号化されている必要があります。 注: いずれかのターゲット列が、対応するソース列と異なる方法で暗号化されている場合、コピー操作の後でターゲット テーブル内のデータを暗号化解除することはできません。 データは破損します。
 - Always Encrypted を有効にせずに、ソース テーブルとターゲット テーブルへの両方のデータベース接続を構成します。 
-- AllowEncryptedValueModifications オプションを設定します (「 [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)」を参照)。 注: データベースが破損する可能性があるので、AllowEncryptedValueModifications を指定する際には注意が必要です。これは、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化のタイプ、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかを、.NET Framework Data Provider for SQL Server がチェックしないためです。
+- AllowEncryptedValueModifications オプションを設定します (「 [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)」を参照)。 注:データベースが破損する可能性があるので、AllowEncryptedValueModifications を指定する際には注意が必要です。これは、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化のタイプ、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかを、.NET Framework Data Provider for SQL Server がチェックしないためです。
 
 .NET Framework 4.6.1 以降のバージョンでは、AllowEncryptedValueModifications オプションを使用できます。
 
@@ -552,7 +551,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |[オブジェクト名]|[説明]|導入された .NET バージョン
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 証明書ストアのキー ストア プロバイダー。|  4.6
-|[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft Cryptography API: Next Generation (CNG) のキー ストア プロバイダー。|  4.6.1
+|[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft Cryptography API:Next Generation (CNG) のキー ストア プロバイダー。|  4.6.1
 |[SqlColumnEncryptionCspProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)|Microsoft CAPI ベースの暗号化サービス プロバイダー (CSP) のキー ストア プロバイダー。|4.6.1  
 |[SqlColumnEncryptionKeyStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)|キー ストア プロバイダーの基本クラス。|  4.6
 |[SqlCommandColumnEncryptionSetting 列挙体](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)|データベース接続の暗号化と暗号化解除を有効にするための設定。|4.6  
@@ -571,7 +570,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 - [Always Encrypted (データベース エンジン)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 関連のブログ](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-- [SQL Database チュートリアル: Always Encrypte を使用して機密データを保護する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+- [SQL Database のチュートリアル:Always Encrypted で機密データを保護する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 
 

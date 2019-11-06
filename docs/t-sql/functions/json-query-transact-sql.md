@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,18 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
-ms.openlocfilehash: 956b40a23d51bc8a3d75eb3ab16ef710a1bc848d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109371"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
- オブジェクトまたは配列を JSON 文字列から抽出します。  
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+
+ JSON 文字列からオブジェクトまたは配列を抽出します。  
   
  オブジェクトまたは配列ではなく JSON 文字列からスカラー値を抽出する場合は、「[JSON_VALUE &#40;TRANSACT-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)」を参照してください。 **JSON_VALUE** と **JSON_QUERY** の違いについては、「[JSON_VALUE と JSON_QUERY を比較する](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)」を参照してください。  
   
@@ -40,14 +41,15 @@ ms.locfileid: "47650843"
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
+
  *式 (expression)*  
- 式。 通常、変数またはを JSON テキストを含む列の名前。  
+ 式。 通常、変数または JSON テキストを含む列の名前。  
   
  **JSON_QUERY** が、*path* によって識別される値を検出する前に *expression* で無効な JSON を検出した場合、関数はエラーを返します。 **JSON_QUERY** が *path* によって識別される値を検出できない場合、テキスト全体がスキャンされ、*expression* のどこかで無効な JSON を検出した場合はエラーを返します。  
   
  *path*  
- オブジェクトまたは抽出先の配列を指定する JSON のパス。
+ 抽出するオブジェクトまたは配列を指定する JSON のパス。
 
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
 
@@ -57,20 +59,21 @@ JSON のパスを解析するための厳密でないまたは strict モード�
 
 *path* の書式が有効でない場合、**JSON_QUERY** はエラーを返します。  
   
-## <a name="return-value"></a>戻り値  
- 型 nvarchar (max) の JSON フラグメントを返します。 返される値の照合順序は、入力された式の照合順序と同じです。  
+## <a name="return-value"></a>戻り値
+
+ nvarchar(max) 型の JSON フラグメントを返します。 返される値の照合順序は、入力された式の照合順序と同じです。  
   
- 場合は、値は、オブジェクトまたは配列には。  
+ 値が、オブジェクトまたは配列ではなかった場合:  
   
--   厳密でないモードで **JSON_QUERY** は null を返します。  
+- 厳密でないモードで **JSON_QUERY** は null を返します。  
   
--   厳格モードで **JSON_QUERY** はエラーを返します。  
+- 厳格モードで **JSON_QUERY** はエラーを返します。  
   
 ## <a name="remarks"></a>Remarks  
 
 ### <a name="lax-mode-and-strict-mode"></a>厳密でないモードと厳格モード
 
- 次の JSON テキストを考慮してください。  
+ 次の JSON テキストを考えてみます。  
   
 ```json  
 {
@@ -92,12 +95,12 @@ JSON のパスを解析するための厳密でないまたは strict モード�
 |[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|全体の JSON テキストを返します|全体の JSON テキストを返します|該当なし|  
-|$info.type。|NULL|[エラー]|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
-|$.info.address.town|NULL|[エラー]|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
-|$ .info。"アドレス|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|該当なし|  
-|$info.tags。|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|該当なし|  
-|$info.type[0]。|NULL|[エラー]|配列ではありません。|  
-|$info.none。|NULL|[エラー]|プロパティが存在しません。|  
+|$.info.type|NULL|Error|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
+|$.info.address.town|NULL|Error|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
+|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|該当なし|  
+|$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|該当なし|  
+|$.info.type[0]|NULL|Error|配列ではありません。|  
+|$.info.none|NULL|Error|プロパティが存在しません。|  
 
 ### <a name="using-jsonquery-with-for-json"></a>JSON_QUERY と FOR JSON の使用
 
@@ -107,7 +110,8 @@ FOR JSON を使用して結果を返すときに (列内または式の結果と
 
 ## <a name="examples"></a>使用例  
   
-### <a name="example-1"></a>例 1  
+### <a name="example-1"></a>例 1
+
  次の例では、クエリの結果内の `CustomFields` 列から JSON フラグメントを返す方法を示します。  
   
 ```sql  
@@ -116,8 +120,9 @@ SELECT PersonID,FullName,
 FROM Application.People
 ```  
   
-### <a name="example-2"></a>例 2  
-次の例では、JSON の FOR 句の出力に JSON フラグメントを含める方法を示します。  
+### <a name="example-2"></a>例 2
+
+FOR JSON 句の出力に JSON フラグメントを含める方法を次の例に示します。  
   
 ```sql  
 SELECT StockItemID, StockItemName,
@@ -127,6 +132,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

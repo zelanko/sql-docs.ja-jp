@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e109713ce9f6ec29a31d19d873c319d47c76fdab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086172"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>サンプルのコンソール スクリプト ファイル (DB2ToSQL) の使用
 いくつかのサンプル ファイルは、ユーザーの参照と使用状況の製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -45,7 +44,7 @@ ms.locfileid: "47675500"
   
     変数値ファイルの詳細については、次を参照してください。[変数値ファイルの作成&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)します。  
   
-3.  **AssessmentReportGenerationSample.xml:** このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成するユーザーをできるようにします。  
+3.  **AssessmentReportGenerationSample.xml:** このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成できます。  
   
     `generate-assessment-report`コマンド、ユーザーが mandatorily 変数の値を変更する必要があります (参照**VariableValueFileSample.xml**) で、`object-name`属性をユーザーによって使用されているデータベース名。 指定すると、オブジェクトの種類に応じて、`object-type`値を変更する必要があります。  
   
@@ -68,16 +67,16 @@ ms.locfileid: "47675500"
     > [!NOTE]  
     > コンソール アプリケーションに渡される変数値ファイルのコマンドライン引数を使用すると、し VariableValueFileSample.xml が指定したユーザーに更新された値。  
   
-5.  **ConversionAndDataMigrationSample.xml:** このサンプルには、データの移行に変換する、エンド ツー エンドの移行を実行するユーザーができるようにします。 変更が必要とされる必須の属性値の一覧は、次に示します。  
+5.  **ConversionAndDataMigrationSample.xml:** このサンプルでは、データの移行に変換する、エンド ツー エンドの移行を実行するユーザーができるようにします。 変更が必要とされる必須の属性値の一覧は、次に示します。  
   
     |コマンド名|説明|属性|  
     |----------------|---------------|-------------|  
-    |`map-schema`|ターゲット スキーマにソース データベースのスキーマ マッピングです。|`source-schema:` 変換に必要となる、ソース データベースを指定します。<br /><br />`sql-server-schema`: に移行するのには、ターゲット データベースを指定します。|  
-    |`convert-schema`|ソースからターゲット スキーマへのスキーマの変換を実行します。<br /><br />場合、ユーザーが複数のオブジェクトを評価する必要があります/データベースは複数を指定できます`metabase-object`ノードに示すように、`convert-schema`サンプルのコンソール スクリプト ファイルのコマンドの例 4。|`object-name`: 指定した転送元データベース]、[オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`|  
+    |`map-schema`|ターゲット スキーマにソース データベースのスキーマ マッピングです。|`source-schema:` 変換に必要となる、ソース データベースを指定します。<br /><br />`sql-server-schema`:ターゲット データベースへの移行を指定します|  
+    |`convert-schema`|ソースからターゲット スキーマへのスキーマの変換を実行します。<br /><br />場合、ユーザーが複数のオブジェクトを評価する必要があります/データベースは複数を指定できます`metabase-object`ノードに示すように、`convert-schema`サンプルのコンソール スクリプト ファイルのコマンドの例 4。|`object-name`:ソース データベースを指定/オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`|  
     |`synchronize-target`|ターゲット オブジェクトは、ターゲット データベースと同期されます。<br /><br />場合、ユーザーが複数のオブジェクトを評価する必要があります/データベース彼複数を指定できます`metabase-object`ノードに示すように、`synchronize-target`サンプルのコンソール スクリプト ファイルのコマンドの例 3。|`object-name:` Sql server データベースを指定/オブジェクト名を作成する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`|  
     |`migrate-data`|ソース データをターゲットに移行します。<br /><br />場合、ユーザーが複数のオブジェクトを評価する必要があります/データベースは複数を指定できます`metabase-object`ノードに示すように、`migrate-data`サンプルのコンソール スクリプト ファイルのコマンドの例 2。|`object-name:` ソース データベースを指定します]、[テーブル名を移行する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [変数値ファイルを作成する&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
 [サーバー接続ファイルを作成する&#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
 [レポートを生成する&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)  

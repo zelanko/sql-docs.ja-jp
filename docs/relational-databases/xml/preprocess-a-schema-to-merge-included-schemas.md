@@ -17,15 +17,14 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5be80f23701fbe911eb96796b8dcd606e12019d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995330"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>含まれているスキーマをマージするためのスキーマの前処理
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +194,7 @@ public class XmlSchemaIncludeNormalizer
 ### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified" >  
   <xsd:element name="publisher" type="xsd:string"/>  
@@ -205,7 +204,7 @@ public class XmlSchemaIncludeNormalizer
 ### <a name="booksxsd"></a>books.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified"  
      targetNamespace="bookstore-schema">  

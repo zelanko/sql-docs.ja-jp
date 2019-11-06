@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
@@ -13,20 +12,20 @@ helpviewer_keywords:
 - service [Integration Services], configuring
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 532a9ae9b44b300cb8d75ea0ea45d24ad5827887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060496"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Integration Services サービスの構成 (SSIS サービス)
     
 > [!IMPORTANT]  
->  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
+>  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスの設定は、構成ファイルに基づきます。 既定では、この構成ファイルの名前は msdtssrvr.ini.xml ですと、ファイルは %ProgramFiles%\Microsoft SQL server \120\dts\binn、フォルダーにあります。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "48114772"
   
   
 > [!CAUTION]  
->  レジストリの編集を誤ると、深刻な問題が発生し、オペレーティング システムの再インストールが必要になる場合があります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] レジストリの編集によって発生した問題を解決できることを保証できません。 レジストリを編集する前に、重要なデータをすべてバックアップしてください。 レジストリのバックアップ、復元、および編集の方法については、 [!INCLUDE[msCoName](../includes/msconame-md.md)] サポート技術情報の記事「 [Microsoft Windows レジストリの説明](http://support.microsoft.com/kb/256986)」を参照してください。  
+>  レジストリの編集を誤ると、深刻な問題が発生し、オペレーティング システムの再インストールが必要になる場合があります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] レジストリの誤った編集により発生した問題に関しては、一切責任を負わないものとします。 レジストリを編集する前に、重要なデータをすべてバックアップしてください。 レジストリのバックアップ、復元、および編集の方法については、 [!INCLUDE[msCoName](../includes/msconame-md.md)] サポート技術情報の記事「 [Microsoft Windows レジストリの説明](https://support.microsoft.com/kb/256986)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、サービスの開始時に構成ファイルを読み込みます。 レジストリ エントリを変更した場合、サービスを再起動する必要があります。  
   

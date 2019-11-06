@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e706a867c9192f4b447badc70db46dc4b0abc338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249679"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
   **パーティションの管理ウィザード** を使用すると、パーティションの切り替えやスライディング ウィンドウ シナリオの実装によって、既存のパーティション テーブルを管理および変更することができます。 このウィザードによって、パーティションの管理が容易になり、テーブル内外へのデータの通常の移行が簡単になります。  
@@ -98,7 +98,7 @@ ms.locfileid: "48130672"
  現在パーティション テーブル内にあるパーティションを含む、すべてのパーティションを表示します。  
   
  **[パーティション グリッド]**  
- 選択したパーティションのパーティション名、 **[左側の境界]**、 **[右側の境界]**、 **[ファイル グループ]**、および **[行数]** を表示します。  
+ 選択したパーティションのパーティション名、 **[左側の境界]** 、 **[右側の境界]** 、 **[ファイル グループ]** 、および **[行数]** を表示します。  
   
  **[切り替え先テーブル]**  
  パーティション テーブルに追加するパーティションを含んでいるステージング テーブルを選択します。 **パーティションの管理ウィザード**でパーティションを切り替える前に、このステージング テーブルを作成する必要があります。  
@@ -110,7 +110,7 @@ ms.locfileid: "48130672"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[パーティション グリッド]**  
- 選択したパーティションのパーティション名、 **[左側の境界]**、 **[右側の境界]**、 **[ファイル グループ]**、および **[行数]** を表示します。  
+ 選択したパーティションのパーティション名、 **[左側の境界]** 、 **[右側の境界]** 、 **[ファイル グループ]** 、および **[行数]** を表示します。  
   
  **[切り替え元テーブル]**  
  データの切り替え元となる新しいテーブルまたは既存のテーブルを選択します。  
@@ -187,7 +187,7 @@ ms.locfileid: "48130672"
  **[スケジュールの種類]**  
  スケジュールの種類を選択します。  
   
- **Enabled**  
+ **有効**  
  スケジュールを有効または無効にします。  
   
 ### <a name="recurring-schedule-types-options"></a>定期スケジュールのオプション  
@@ -247,7 +247,7 @@ ms.locfileid: "48130672"
 ### <a name="one-time-schedule-types-options"></a>指定日時スケジュールのオプション  
  ジョブを一度だけ実行するようにスケジュールする場合は、将来の日付と時刻を選択する必要があります。  
   
- **日付**  
+ **Date**  
  ジョブを実行する日付を選択します。  
   
  **[時刻]**  

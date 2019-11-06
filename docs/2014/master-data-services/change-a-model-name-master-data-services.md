@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 752f31eee490cca61523e3a0bba512e687c0108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d933475231913edeccbc5206afb675916a765302
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054216"
 ---
 # <a name="change-a-model-name-master-data-services"></a>モデル名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、モデルの名前を変更できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "48102962"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-change-a-model-name"></a>モデル名を変更するには  
   
@@ -47,8 +46,8 @@ ms.locfileid: "48102962"
   
 6.  **[モデルの保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [モデルを作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
+## <a name="see-also"></a>関連項目  
+ [モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [モデルを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)  
   

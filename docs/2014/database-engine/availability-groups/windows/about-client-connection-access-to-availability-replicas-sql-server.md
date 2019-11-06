@@ -17,12 +17,12 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789844"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>可用性レプリカに対するクライアント接続アクセスについて (SQL Server)
   AlwaysOn 可用性グループでは、1 つまたは複数の可用性レプリカを構成して、セカンダリ ロールで実行しているとき (つまり、セカンダリ レプリカとして実行しているとき) に読み取り専用接続を許可することができます。 各可用性レプリカをプライマリ ロールで実行しているとき (つまり、プライマリ レプリカとして実行しているとき) に、読み取り専用接続を許可または除外するように構成することもできます。  
@@ -84,9 +84,9 @@ ms.locfileid: "48153681"
 |セカンダリ|なし (これは、セカンダリの既定の動作です)。|読み取り目的、読み取り/書き込み、または接続目的の指定なし|失敗|  
 |セカンダリ|[読み取り目的のみ]|読み取り目的|成功|  
 |セカンダリ|[読み取り目的のみ]|読み取り/書き込み、または接続目的の指定なし|失敗|  
-|プライマリ|すべて (これはプライマリの既定の動作です)|読み取りのみ、読み取り/書き込み、または接続目的の指定なし|成功|  
-|プライマリ|読み取り/書き込み|[読み取り目的のみ]|失敗|  
-|プライマリ|読み取り/書き込み|読み取り/書き込み、または接続目的の指定なし|成功|  
+|1 次式|すべて (これはプライマリの既定の動作です)|読み取りのみ、読み取り/書き込み、または接続目的の指定なし|成功|  
+|1 次式|読み取り/書き込み|[読み取り目的のみ]|失敗|  
+|1 次式|読み取り/書き込み|読み取り/書き込み、または接続目的の指定なし|成功|  
   
  クライアント接続要求を処理する可用性グループ リスナーの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)」をご参照ください。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48153681"
   
 |[レプリカ]|コミット モード|[初期ロール]|セカンダリ ロールの接続アクセス|プライマリ ロールの接続アクセス|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同期|プライマリ|なし|読み取り/書き込み|  
+|Replica1|同期|1 次式|なし|読み取り/書き込み|  
 |Replica2|同期|セカンダリ|なし|読み取り/書き込み|  
 |Replica3|非同期|セカンダリ|読み取り目的のみ|読み取り/書き込み|  
 |Replica4|非同期|セカンダリ|[読み取り目的のみ]|読み取り/書き込み|  
@@ -118,11 +118,11 @@ ms.locfileid: "48153681"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [統計](../../../relational-databases/statistics/statistics.md)  

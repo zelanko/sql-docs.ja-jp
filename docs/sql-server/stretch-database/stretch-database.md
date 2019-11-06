@@ -1,22 +1,20 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: ''
 ms.date: 06/27/2016
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4386963a4ca821b86e03129a958d38373aa3ecbe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1f5830ab8196c699e5d7b851c7ac82c1056ca919
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091832"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +48,7 @@ ms.locfileid: "52503791"
 
 **既存のクエリとクライアント アプリを変更する必要はありません。** データの移行中でも、ローカル データとリモート データの両方に引き続きシームレスにアクセスできます。 リモート クエリについては多少の待機時間がありますが、この待機時間が発生するのは、コールド データのクエリを実行するときに限られます。
 
-移行中にエラーが発生しても、**Stretch Database により、データが失われることがなくなります。**  また、この Stretch Database には、移行中に発生する可能性のある接続の問題に対処する再試行ロジックも用意されています。 移行の状態は動的管理ビューに表示されます。
+移行中にエラーが発生しても、**Stretch Database により、データが失われることがなくなります。** また、この Stretch Database には、移行中に発生する可能性のある接続の問題に対処する再試行ロジックも用意されています。 移行の状態は動的管理ビューに表示されます。
 
 **データの移行を一時停止して** 、ローカル サーバーで発生した問題をトラブルシューティングしたり、使用可能なネットワーク帯域幅を最大化したりできます。  
   

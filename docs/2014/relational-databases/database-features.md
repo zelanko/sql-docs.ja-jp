@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 848b38185c2915c41b97dee594d69598710bba1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917666"
 ---
 # <a name="database-features"></a>データベース機能
   このセクションでは、データベース、データベース オブジェクト、データ型、およびデータの操作や管理に使用されるメカニズムに関連する機能およびタスクついて説明します。  

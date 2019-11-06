@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], designing
@@ -13,12 +12,12 @@ ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8e454e12f3e3c9f4c341406596771276f120a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086332"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>データ マイニングのチュートリアル (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 高度なデータ マイニング ソリューションの作成が容易になります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを使用すると、リレーショナル データまたはキューブ データを使用するデータ マイニング モデルを設計、作成、および管理することができます。 データ マイニング モデルへのクライアント アクセスを管理したり、複数のクライアントから予測クエリを作成したりできます。  
@@ -48,14 +47,14 @@ ms.locfileid: "48197692"
      これらのレッスンで説明する高度な概念には、入れ子になったテーブル、クロス予測、カスタム データ ソース ビューとカスタム名前付きクエリ、およびデータ マイニング クエリのフィルター処理があります。 また、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に付属する予測クエリ ツールの使用方法についても説明します。  
   
 ## <a name="reference"></a>リファレンス  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>関連項目  
  [データ マイニング ツール](data-mining/data-mining-tools.md)  
   
- [論理アーキテクチャ&#40;Analysis Services - データ マイニング&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [論理アーキテクチャ (Analysis Services - データ マイニング)](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
  [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48197692"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ソリューション](data-mining/data-mining-solutions.md)   
- [Microsoft SQL Server データ マイニング リソース](http://go.microsoft.com/fwlink/?LinkId=97965)   
- [作成して、DMX を使用したデータ マイニング モデルのクエリ: チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Microsoft SQL Server データ マイニング リソース](https://go.microsoft.com/fwlink/?LinkId=97965)   
+ [DMX を使用したデータ マイニング モデルのクエリの作成と:チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

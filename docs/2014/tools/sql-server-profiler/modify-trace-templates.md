@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
@@ -17,12 +16,12 @@ ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d98c99721b5dc1ea970793e48d83bacd3940e9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035043"
 ---
 # <a name="modify-trace-templates"></a>トレース テンプレートの変更
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を実行しているローカル コンピューター上のファイルに保存されたテンプレートは変更することができます。 また、それらのファイルから派生したテンプレートも変更できます。 既存のテンプレートを変更する場合は、 **[トレースのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブで、最初にプロパティを設定したときと同じ順序で、イベント クラスやデータ列などのテンプレートのプロパティを編集します。 イベント クラスとデータ列は追加または削除することができ、フィルターは変更することができます。 テンプレートを変更すると、ユーザー固有のテンプレートが作成されます。元のシステム テンプレートは変更されません。 詳細については、「 [トレースとトレース テンプレートの保存](save-traces-and-trace-templates.md)」を参照してください。  
@@ -39,17 +38,17 @@ ms.locfileid: "48115582"
   
  **トレース テンプレートを変更するには**  
   
- [SQL Server Profiler を使用します。](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
+ [SQL Server Profiler の使用](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
  [Transact-SQL の使用](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **トレース テンプレートまたはトレース ファイルからイベントを追加または削除するには**  
   
- [SQL Server Profiler を使用します。](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [SQL Server Profiler の使用](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [Transact-SQL の使用](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
 ## <a name="see-also"></a>参照  
- [トレースを開始する](start-a-trace.md)  
+ [トレースの開始](start-a-trace.md)  
   
   

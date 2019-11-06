@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038917"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>式コンテキストとクエリの評価 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   式のコンテキストは、式の分析と評価を行うために使用される情報です。 次に、XQuery を評価する際の 2 つのフェーズを示します。  
   
--   **静的コンテキスト**– これは、クエリのコンパイル フェーズ。 クエリの静的分析中に、使用できる情報に基づいて、エラーが発生する場合があります。  
+-   **静的コンテキスト**-これは、クエリのコンパイル フェーズ。 クエリの静的分析中に、使用できる情報に基づいて、エラーが発生する場合があります。  
   
--   **動的コンテキスト**– これは、クエリの実行フェーズ。 クエリをコンパイル中のエラーなどの静的エラーが含まれない場合でも、クエリの実行中にエラーが返ることがあります。  
+-   **動的コンテキスト**-これは、クエリの実行フェーズ。 クエリをコンパイル中のエラーなどの静的エラーが含まれない場合でも、クエリの実行中にエラーが返ることがあります。  
   
 ## <a name="static-context"></a>静的コンテキスト  
  静的コンテキストの初期化とは、式の静的分析向けに、すべての情報をまとめるプロセスのことです。 静的コンテキストの初期化の一環として、次のことが行われます。  
@@ -85,7 +84,7 @@ ms.locfileid: "51673521"
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
@@ -133,7 +132,7 @@ ms.locfileid: "51673521"
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XSD schemas [SQLXML], mapping attributes and elements
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 674e47df8f43088f51aacebd0a2e4da0c891443f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013880"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>テーブルおよび列への XSD 要素および属性の既定のマッピング (SQLXML 4.0)
   既定では、XSD 注釈付きスキーマの複合型の要素は、指定されたデータベース内の同じ名前のテーブル (ビュー) にマップされ、単純型の要素または属性は、テーブル内の同じ名前の列にマップされます。  
@@ -93,7 +91,7 @@ ms.locfileid: "48089302"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. XML 要素をデータベース列にマップする  
- この例では、注釈が使用されず、既定のマッピングが行われます。 **\<Person.Contact >** 要素の複合型は、データベース内の同じ名前のテーブルをマップします。 要素**\<名 >** と **\<[氏名] >** と **[社員コード]** 属性は、単純型のし、そのため、マップ、同じ名前の列です。 前の例との唯一の違いは、FirstName フィールドと LastName フィールドのマップに要素を使用する点です。  
+ この例では、注釈が使用されず、既定のマッピングが行われます。 **\<Person.Contact >** 要素の複合型は、データベース内の同じ名前のテーブルをマップします。 要素 **\<名 >** と **\<[氏名] >** と **[社員コード]** 属性は、単純型のし、そのため、マップ、同じ名前の列です。 前の例との唯一の違いは、FirstName フィールドと LastName フィールドのマップに要素を使用する点です。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

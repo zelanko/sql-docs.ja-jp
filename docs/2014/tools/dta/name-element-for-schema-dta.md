@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb954856e5d48a458652de15e7445c9232889b29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62657276"
 ---
 # <a name="name-element-for-schema-dta"></a>Schema の Name 要素 (DTA)
   スキーマの名前が入ります。  
@@ -47,7 +46,7 @@ ms.locfileid: "48096222"
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[Database の schema 要素&#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|**親要素**|[Database の Schema 要素 &#40;DTA&#41;](schema-element-for-database-dta.md)|  
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  

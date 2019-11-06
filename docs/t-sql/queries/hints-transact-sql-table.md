@@ -34,15 +34,14 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901964"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,6 @@ ms.locfileid: "47713370"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -123,13 +121,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>引数  
-WITH **(** \<table_hint> **)**  **[,]**...*n* ]  
+WITH **(** \<table_hint> **)**  **[,]** ...*n* ]  
 いくつかの例外を除き、テーブル ヒントは、FROM 句で WITH キーワードを使用して指定した場合にのみサポートされます。 また、テーブル ヒントはかっこを使用して指定する必要があります。  
   
 > [!IMPORTANT]  
->  WITH キーワードを省略することは非推奨とされます。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> WITH キーワードを省略することは非推奨とされます。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-WITH キーワードの有無にかかわらず使用できるテーブル ヒントは、NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、および NOEXPAND です。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例 :  
+次のテーブル ヒントは、WITH キーワードの有無に関係なく使用できます。NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、NOEXPAND。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -147,9 +145,9 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 >  ヒントの分割にコンマの代わりにスペースを用いる方法は非推奨とされます。[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
-クエリ オプティマイザーがクエリを処理する場合に、インデックス付きビューが展開されず、基になるテーブルがアクセスされないことを指定します。 クエリ オプティマイザーは、ビューをクラスター化インデックスを持つテーブルのように取り扱います。 NOEXPAND はインデックス付きビューにのみ適用できます。 詳細については、「解説」を参照してください。  
+クエリ オプティマイザーがクエリを処理する場合に、インデックス付きビューが展開されず、基になるテーブルがアクセスされないことを指定します。 クエリ オプティマイザーは、ビューをクラスター化インデックスを持つテーブルのように取り扱います。 NOEXPAND はインデックス付きビューにのみ適用できます。 詳細については、「[NOEXPAND の使用](#using-noexpand)」を参照してください。  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 INDEX() 構文では、ステートメントを処理するときにクエリ オプティマイザーが使用する 1 つ以上のインデックスの名前または ID を指定します。 一方、INDEX = 構文では、単一のインデックス値を指定します。 各テーブルに対して指定できるのは 1 つのインデックス ヒントだけです。  
   
 クラスター化インデックスがある場合、INDEX(0) はクラスター化インデックスのスキャンを実行し、INDEX(1) はクラスター化インデックスのスキャンまたはシークを実行します。 クラスター化インデックスがない場合、INDEX(0) はテーブル スキャンを実行し、INDEX(1) はエラーと見なされます。  
@@ -157,7 +155,7 @@ INDEX() 構文では、ステートメントを処理するときにクエリ �
  1 つのヒント リストの中で複数のインデックスが使用されている場合、重複するものは無視され、リスト内の残りのインデックスを使用してテーブルの行が取得されます。 インデックス ヒント内のインデックスの順番は重要です。 複数のインデックス ヒントはインデックスの AND 処理も設定し、クエリ オプティマイザーはアクセスされる各インデックスに可能な限り多くの条件を適用します。 ヒント インデックスの集合に、クエリで参照される列のすべてが含まれているわけではない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]がすべてのインデックス列を取得した後で、残りの列を取得するフェッチが実行されます。  
   
 > [!NOTE]  
->  複数のインデックスを参照するインデックス ヒントが、スター結合のファクト テーブルで使用されている場合、オプティマイザーはそのインデックス ヒントを無視し、警告メッセージを返します。 また、インデックス論理和は、インデックス ヒントが指定されたテーブルでは許可されません。  
+> 複数のインデックスを参照するインデックス ヒントが、スター結合のファクト テーブルで使用されている場合、オプティマイザーはそのインデックス ヒントを無視し、警告メッセージを返します。 また、インデックス論理和は、インデックス ヒントが指定されたテーブルでは許可されません。  
   
  テーブル ヒント内のインデックスの最大個数は、非クラスター化インデックスが 250 個です。  
   
@@ -167,9 +165,9 @@ INSERT ステートメントで、BULK オプションが [OPENROWSET](../../t-s
  インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用することを指定します。 KEEPIDENTITY を指定しない場合、この列の ID 値は確認されるのみでインポートされません。クエリ オプティマイザーは、テーブルの作成時に指定された seed および increment の値を基に一意な値を自動的に割り当てます。  
   
 > [!IMPORTANT]  
->  テーブルやビューの ID 列の値がデータ ファイルに含まれておらず、ID 列がテーブルの最終列でもない場合は、その ID 列をスキップする必要があります。 詳細については、「[フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)」を参照してください。 ID 列のスキップに成功すると、クエリ オプティマイザーは、その ID 列の一意な値を、インポートされたテーブル行に自動的に割り当てます。  
+> テーブルやビューの ID 列の値がデータ ファイルに含まれておらず、ID 列がテーブルの最終列でもない場合は、その ID 列をスキップする必要があります。 詳細については、「[フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)」を参照してください。 ID 列のスキップに成功すると、クエリ オプティマイザーは、その ID 列の一意な値を、インポートされたテーブル行に自動的に割り当てます。  
   
-このヒントを INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントに使用する例については、「[データの一括インポート時の ID 値の保持 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)」を参照してください。  
+このヒントを `INSERT ... SELECT * FROM OPENROWSET(BULK...)` ステートメントに使用する例については、「[データの一括インポート時の ID 値の保持 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)」を参照してください。  
   
 テーブルの ID 値の確認については、「[DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)」を参照してください。  
   
@@ -180,7 +178,7 @@ INSERT ステートメントで、BULK オプションが [OPENROWSET](../../t-s
   
 このヒントを INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントに使用する例については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」を参照してください。  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 クエリ オプティマイザーに対し、テーブルやビューのデータへのアクセス パスとしてインデックスのシーク操作のみを使用することを指定します。 
 
 > [!NOTE]
@@ -221,9 +219,9 @@ FORCESEEK ヒントは以下の方法で指定できます。
 -   パーティション インデックスでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって暗黙的に追加されたパーティション分割列を FORCESEEK ヒントで指定できません。  
   
 > [!CAUTION]  
-> パラメーターを使用して FORCESEEK を指定すると、オプティマイザーで考慮できるプラン数の制限は、パラメーターなしで FORCESEEK を指定した場合よりも多くなります。 これにより、"プランを生成できない" というエラーが生じる回数が増加する可能性があります。 将来のリリースでは、オプティマイザーに対して内部変更を行うため、より多くのプランを考慮できるようになります。  
+> パラメーターを使用して FORCESEEK を指定すると、オプティマイザーで考慮できるプラン数の制限は、パラメーターなしで FORCESEEK を指定した場合よりも多くなります。 これにより、`Plan cannot be generated` というエラーが生じる回数が増加する可能性があります。 将来のリリースでは、クエリ オプティマイザーに対して内部変更を行うため、より多くのプランを考慮できるようになります。  
   
-FORCESCAN **適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+FORCESCAN **適用対象**:[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 クエリ オプティマイザーに対し、参照されているテーブルやビューへのアクセス パスとして、インデックスのスキャン操作のみを使うことを指定します。 FORCESCAN ヒントは、オプティマイザーが影響を受ける行数を過小評価し、スキャン操作ではなくシーク操作を選択するクエリに役立つ場合があります。 この場合、操作に許可されるメモリの量は少なすぎて、クエリのパフォーマンスに影響します。  
   
 FORCESCAN を指定する際には、INDEX ヒントを使用してもしなくてもかまいません。 インデックス ヒントと組み合わせると (`INDEX = index_name, FORCESCAN`)、クエリ オプティマイザーでは、参照されるテーブルにアクセスする際に、指定されたインデックスを介したアクセス パスのみが検討されます。 インデックス ヒント INDEX(0) ベース テーブルのテーブル スキャン操作を強制するには、FORCESCAN を指定できます。  
@@ -366,8 +364,8 @@ XLOCK
 テーブルに計算列があり、その計算列が、別のテーブル内の列にアクセスする式や関数によって計算される場合、テーブル ヒントがそのテーブル上で使用されることや、反映されることはありません。 たとえば、クエリ内のテーブルに NOLOCK テーブル ヒントが指定されているものとします。 このテーブルには、別のテーブル内の列にアクセスする式と関数の組み合わせで計算される、計算列があります。 式と関数で参照されるテーブルが、アクセスされるときに NOLOCK テーブル ヒントを使用することはありません。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FROM 句内の各テーブルに対して、次の各グループの複数のテーブル ヒントが許可されません。  
--   粒度ヒント: PAGLOCK、NOLOCK、READCOMMITTEDLOCK、ROWLOCK、TABLOCK、TABLOCKX  
--   分離レベル ヒント: HOLDLOCK、NOLOCK、READCOMMITTED、REPEATABLEREAD、SERIALIZABLE  
+-   粒度ヒント: PAGLOCK、NOLOCK、READCOMMITTEDLOCK、ROWLOCK、TABLOCK、または TABLOCKX。  
+-   分離レベル ヒント: HOLDLOCK、NOLOCK、READCOMMITTED、REPEATABLEREAD、SERIALIZABLE。  
   
 ## <a name="filtered-index-hints"></a>フィルター選択されたインデックス ヒント  
  フィルター選択されたインデックスをテーブル ヒントとして使用できますが、クエリで選択する行のすべてがカバーされているわけではない場合、クエリ オプティマイザーからエラー 8622 が返されます。 フィルター選択されたインデックス ヒントが無効になる例を次に示します。 この例では、フィルター選択されたインデックス `FIBillOfMaterialsWithComponentID` を作成し、SELECT ステートメントのインデックス ヒントとして使用します。 フィルター選択されたインデックスの述語には、ComponentID が 533、324、および 753 のデータ行が含まれています。 クエリ述語にも ComponentID が 533、324、および 753 のデータ行が含まれていますが、フィルター選択されたインデックスには存在しない ComponentID 855 および 924 も結果セットに含めるよう拡張されています。 したがって、クエリ オプティマイザーはフィルター選択されたインデックス ヒントを使用できず、エラー 8622 が生成されます。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
@@ -408,7 +406,7 @@ NOEXPAND は*インデックス付きビュー*にのみ適用できます。 �
   
  また、NUMERIC_ROUNDABORT オプションは OFF に設定する必要があります。  
   
- オプティマイザーがインデックス付きビューのインデックスを使用するように強制するには、NOEXPAND オプションを指定します。 このヒントは、ビューがクエリ内でも指定されている場合にのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FROM 句で直接ビューを指定していないクエリで、特定のインデックス付きビューが使用されるようにするヒントは用意されていません。しかし、クエリ オプティマイザーでは、インデックス付きビューがクエリで直接参照されていなくても、その使用が検討されます。  
+ オプティマイザーがインデックス付きビューのインデックスを使用するように強制するには、NOEXPAND オプションを指定します。 このヒントは、ビューがクエリ内でも指定されている場合にのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FROM 句で直接ビューを指定していないクエリで、特定のインデックス付きビューが使用されるようにするヒントは用意されていません。しかし、クエリ オプティマイザーでは、インデックス付きビューがクエリで直接参照されていなくても、その使用が検討されます。 NOEXPAND テーブル ヒントを使用すると、SQL Server はインデックス付きビューに対してのみ自動的に統計を作成します。 このヒントを省略すると、統計を手動で作成することでは解決できない、統計がないことに関する実行プランの警告につながる場合があります。 クエリの最適化中、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリがビューを直接参照し、NOEXPAND ヒントが使用されるときに、自動的または手動で作成された統計情報の表示を使用します。    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>クエリ ヒントとしてのテーブル ヒントの使用  
  OPTION (TABLE HINT) 句を使用すると、*テーブル ヒント*をクエリ ヒントとして指定することもできます。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。 アドホック クエリに対しては、これらのヒントをテーブル ヒントとしてのみ指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  

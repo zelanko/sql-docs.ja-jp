@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0647b34ba0ec79e1dacb90220424228588a201d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835948"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
   CDC デザイナー コンソールは、Oracle CDC インスタンスを開発および管理するために使用されます。 CDC デザイナー コンソールは、次の要素を含む Microsoft 管理コンソール スナップインです。  
@@ -45,7 +44,7 @@ ms.locfileid: "48065592"
   
 -   [Change Data Capture Designer for Oracle by Attunity 操作ガイド](change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [インスタンスの作成のための SQL Server 接続](sql-server-connection-for-instance-creation.md)  
+-   [インスタンスの作成のための SQL サーバー接続](sql-server-connection-for-instance-creation.md)  
   
 -   [高度な接続プロパティ](advanced-connection-properties.md)  
   

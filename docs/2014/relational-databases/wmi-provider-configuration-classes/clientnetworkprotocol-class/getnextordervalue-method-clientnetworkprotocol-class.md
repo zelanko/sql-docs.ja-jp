@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - GetNextOrderValue Method (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9615c7a3c416aae7ead2bcfd77c58c9dd5ab0496
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f5d7f8efe305be71a311b822c51ff1ede9afdf9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62691494"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue メソッド (ClientNetworkProtocol クラス)
   プロトコル リスト内で次の位置にあるプロトコルを選択します。  
@@ -48,8 +46,8 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [クライアント プロトコルを構成します。](http://technet.microsoft.com/library/ms181035.aspx)   
- [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>関連項目  
+ [クライアント プロトコルを構成します。](https://technet.microsoft.com/library/ms181035.aspx)   
+ [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

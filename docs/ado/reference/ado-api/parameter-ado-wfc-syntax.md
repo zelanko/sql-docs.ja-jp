@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22f9d928cf008396346067a3e166fa281be4093d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931716"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
@@ -43,7 +42,7 @@ public void appendChunk(char[] chars)
 public void appendChunk(String chars)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getAttributes()  
@@ -70,9 +69,9 @@ public AdoProperties getProperties()
   
  ADO と WFC を実装して、**値**プロパティを**getValue** 、バリアント オブジェクトを返すメソッドと**setValue**メソッドを引数としてのバリアント。 バリアントは、Microsoft Visual Basic などの特定の言語で効率的です。  
   
- 加え、**値**プロパティ、ADO と WFC 提供*アクセサー*メソッドを取得および設定のコンテンツ Java データ型を使用する**パラメーター**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ **取得 * * * データ型*または **設定 * * * データ型*します。  
+ 加え、**値**プロパティ、ADO と WFC 提供*アクセサー*メソッドを取得および設定のコンテンツ Java データ型を使用する**パラメーター**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ**取得**_DataType_または**設定**_DataType_します。  
   
- 1 つの注目すべき例外が発生: がない**注意する必要**プロパティが代わりに、 **isNull**フィールドが null かどうかを示すブール値を返します。  
+ 1 つの注目すべき例外があります。ない**注意する必要**プロパティが代わりに、 **isNull**フィールドが null かどうかを示すブール値を返します。  
   
 ```  
 public boolean getBoolean()  
@@ -95,5 +94,5 @@ public boolean isNull()
 public void setNull()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

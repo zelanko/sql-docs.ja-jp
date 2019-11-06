@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbfea81ca97eda388430c99e009f6867585c6f0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9312fee2bb5c52f9a323dacf501b92c8a752b4df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076647"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +92,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 ### <a name="sending-data-to-the-server"></a>サーバーへのデータの送信  
  **SQL_SS_VARIANT**、新しいデータ型に固有の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーに送信されるデータの使用、 **sql_variant**列。 パラメーターを使用してサーバーにデータを送信するときに (たとえば、INSERT INTO TableName VALUES (?、ですか?))、 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) C 型と、対応するなどのパラメーター情報を指定するために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、適切ないずれかに C データ型を変換**sql_variant**サブタイプ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結果の処理&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

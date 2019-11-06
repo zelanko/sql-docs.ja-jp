@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911315"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetDiagRec**エラー、警告、およびステータス情報を含む診断レコードの複数のフィールドの現在の値を返します。 異なり**SQLGetDiagField**、呼び出しごとに 1 つの診断フィールドを返す**SQLGetDiagRec**いくつかのよく使用される、SQLSTATE、ネイティブ エラー コードを含む、診断レコードのフィールドを返しますと診断メッセージのテキスト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDiagRec(  
      SQLSMALLINT     HandleType,  
@@ -77,7 +76,7 @@ SQLRETURN SQLGetDiagRec(
  *NativeErrorPtr*  
  [出力]データ ソースに固有のネイティブ エラー コードを返すバッファーへのポインター。 この情報は、SQL_DIAG_NATIVE 診断フィールドに含まれます。  
   
- *メッセージ テキスト*  
+ *[MessageText]*  
  [出力]診断メッセージのテキスト文字列を返すバッファーへのポインター。 この情報は、SQL_DIAG_MESSAGE_TEXT 診断フィールドに含まれます。 文字列の形式では、次を参照してください。[診断メッセージ](../../../odbc/reference/develop-app/diagnostic-messages.md)します。  
   
  場合*MessageText*が null の場合、 *TextLengthPtr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*MessageText*します。  
@@ -94,13 +93,13 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="diagnostics"></a>診断  
  **SQLGetDiagRec**自体の診断レコードは通知されません。 次の戻り値を使用して、独自の実行の結果を報告します。  
   
--   SQL_SUCCESS: 関数では診断情報が正常に返されます。  
+-   SQL_SUCCESS:関数には、診断情報が正常に返されます。  
   
--   SQL_SUCCESS_WITH_INFO: \* *MessageText*バッファーが小さすぎるため、要求された診断メッセージを保持します。 診断レコードは生成されませんでした。 切り捨てが発生したことは、アプリケーションを比較する必要がありますを決定する*BufferLength*実際に記述されている、使用可能なバイト数へ **StringLengthPtr*します。  
+-   SQL_SUCCESS_WITH_INFO:\* *MessageText*バッファーが小さすぎるため、要求された診断メッセージを保持します。 診断レコードは生成されませんでした。 切り捨てが発生したことは、アプリケーションを比較する必要がありますを決定する*BufferLength*実際に記述されている、使用可能なバイト数へ **StringLengthPtr*します。  
   
--   SQL_INVALID_HANDLE: で、ハンドルが示される*HandleType*と*処理*が有効なハンドル。  
+-   SQL_INVALID_HANDLE:によって示されるハンドル*HandleType*と*処理*が有効なハンドル。  
   
--   SQL_ERROR: 次のいずれかが発生しました。  
+-   SQL_ERROR:次のいずれかが発生しました。  
   
     -   *RecNumber*が負または 0。  
   
@@ -108,7 +107,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   非同期通知を使用する場合、ハンドルに対して非同期操作は完了しませんでした。  
   
--   SQL_NO_DATA: *RecNumber*診断レコードで指定したハンドルに存在していた数よりも大きかった*を処理します。* 関数が SQL_NO_DATA を任意の正のも返します*RecNumber*に対する診断レコードがない場合*処理*します。  
+-   SQL_NO_DATA:*RecNumber*診断レコードで指定したハンドルに存在していた数よりも大きかった*を処理します。* 関数が SQL_NO_DATA を任意の正のも返します*RecNumber*に対する診断レコードがない場合*処理*します。  
   
 ## <a name="comments"></a>コメント  
  アプリケーションを呼び出す通常**SQLGetDiagRec** SQL_ERROR または sql_success_with_info が以前の ODBC 関数呼び出しが返される場合。 ただし、任意の ODBC 関数では、それが呼び出されるたびに 0 個以上の診断レコードを投稿できます、ため、アプリケーションを呼び出せる**SQLGetDiagRec**任意の ODBC 関数呼び出しの後にします。 アプリケーションが呼び出すことができます**SQLGetDiagRec**診断データの構造の一部またはすべてのレコードを返すを複数回です。 ODBC では、いつでも格納できる診断レコードの数に制限はありません。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 638a79e5785c74a11cb2e424739c3d80959a4d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103169"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
 SQL Server または SQL Azure に MySQL データベースを移行するを移行する MySQL データベースに接続する必要があります。 接続すると、SSMA は、すべての MySQL スキーマに関するメタデータを取得し、MySQL メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -64,7 +63,7 @@ MySQL データベースに接続するために使用するアカウントが�
   
 5.  **SSL:** MySQL に安全に接続する場合は、チェックの Secure Socket Layer (SSL) を使用すること、 **SSL**チェック ボックスをオンします。  
   
-6.  **構成:** セキュア ソケット レイヤー (SSL) 経由の MySQL への接続を構成するオプションを提供します。  
+6.  **構成します。** Secure Socket Layer (SSL) 経由の MySQL への接続を構成するオプションを提供します。  
   
     > [!NOTE]  
     > 有効にする**構成**に SSL を設定する必要があります**True**します。  
@@ -114,6 +113,6 @@ MySQL データベースについてのメタデータは、自動的に更新�
 ## <a name="next-step"></a>次の手順  
 移行プロセスでは、次の手順は[SQL Server に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

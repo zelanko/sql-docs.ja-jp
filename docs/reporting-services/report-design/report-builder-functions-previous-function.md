@@ -2,18 +2,18 @@
 title: Previous 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3cb25aee9e71724173c913fd75ad01c9227ea5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577197"
 ---
 # <a name="report-builder-functions---previous-function"></a>レポート ビルダー関数 - Previous 関数
   アイテムの、指定されたスコープ内の直前のインスタンスに対応する値または指定された集計値を返します。  

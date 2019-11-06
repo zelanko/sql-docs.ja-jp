@@ -10,12 +10,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7fcfdf8a6d25d950970952d9f5dec93a523dc37f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2f16425978b1e6ddc560aabd445b6cfe6737b57
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205632"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154753"
 ---
 # <a name="create-an-encrypted-backup"></a>暗号化されたバックアップの作成
   このトピックでは、暗号化されたバックアップを Transact-SQL で作成するために必要な手順について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "48205632"
   
  データベースの暗号化されたバックアップをローカル ディスクに作成するには、次の手順を実行します。 この例では、MyTestDB というユーザー データベースを使用します。  
   
-1.  **master データベースのデータベース マスター キーの作成:** データベースに格納されるマスター キーのコピーを暗号化するためのパスワードを選択します。 データベース エンジンに接続して新しいクエリ ウィンドウを開き、次の例をコピーして貼り付け、 **[実行]** をクリックします。  
+1.  **master データベースのデータベース マスター キーの作成:** データベースに格納するマスター キーのコピーを暗号化するためのパスワードを指定します。 データベース エンジンに接続して新しいクエリ ウィンドウを開き、次の例をコピーして貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- Creates a database master key.   
@@ -41,7 +41,7 @@ ms.locfileid: "48205632"
   
     ```  
   
-2.  **バックアップ証明書の作成:** master データベースに、バックアップ証明書を作成します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+2.  **バックアップ証明書の作成:** master データベースでバックアップ証明書を作成します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     Use Master  
@@ -71,12 +71,12 @@ ms.locfileid: "48205632"
   
  EKM で保護されているバックアップの暗号化の例については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>暗号化の使用による Windows Azure ストレージへのバックアップ  
- **[SQL Server Backup to URL]** オプションを使用して Windows Azure ストレージへのバックアップを作成する場合、暗号化の手順は同じですが、バックアップ先として URL を使用し、Windows Azure ストレージへの認証用に SQL 資格情報を指定する必要があります。 構成する場合[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]暗号化のオプションを使用して、次を参照してください[を設定する SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)と[の可用性グループを設定するSQLServerManagedBackuptoWindowsAzure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+### <a name="backup-to-azure-storage-with-encryption"></a>暗号化を使用した Azure Storage へのバックアップ  
+ **[SQL Server backup TO URL]** オプションを使用して azure storage へのバックアップを作成する場合、暗号化の手順は同じですが、azure storage に対して認証を行うには、送信先として url を使用し、SQL 資格情報を使用する必要があります。 暗号化オプションを使用し[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]てを構成する場合は、「 [azure への管理](enable-sql-server-managed-backup-to-microsoft-azure.md)されたバックアップのセットアップ SQL Server」および「 [azure への管理されたバックアップの SQL Server 設定](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)」を参照してください。  
   
  **前提条件:**  
   
--   Windows ストレージ アカウントとコンテナー。 詳細については、以下を参照してください。 [レッスン 1: Windows Azure ストレージ オブジェクトの作成](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)。  
+-   Windows ストレージ アカウントとコンテナー。 詳細については、以下を参照してください。 [レッスン 1:Azure Storage オブジェクト](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)を作成します。  
   
 -   master データベースのデータベース マスター キー、SQL Server インスタンス上の証明書または非対称キー。 暗号化の要件と権限については、「 [バックアップの暗号化](backup-encryption.md)」を参照してください。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "48205632"
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account    
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account    
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **データベース マスター キーの作成:** データベースに格納されるマスター キーのコピーを暗号化するためのパスワードを選択します。 データベース エンジンに接続して新しいクエリ ウィンドウを開き、次の例をコピーして貼り付け、 **[実行]** をクリックします。  
+2.  **データベースのマスター キーを作成する:** データベースに格納するマスター キーのコピーを暗号化するためのパスワードを指定します。 データベース エンジンに接続して新しいクエリ ウィンドウを開き、次の例をコピーして貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- Creates a database master key.  
@@ -100,7 +100,7 @@ ms.locfileid: "48205632"
   
     ```  
   
-3.  **バックアップ証明書の作成:** master データベースに、バックアップ証明書を作成します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  **バックアップ証明書の作成:** master データベースでバックアップ証明書を作成します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE Master;  
@@ -117,7 +117,7 @@ ms.locfileid: "48205632"
     BACKUP DATABASE [MyTestDB]  
     TO URL = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
     WITH  
-      CREDENTIAL 'mycredential' – this is the name of the credential created in the first step.  
+      CREDENTIAL 'mycredential' - this is the name of the credential created in the first step.  
       ,COMPRESSION  
       ,ENCRYPTION   
        (  

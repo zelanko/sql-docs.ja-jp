@@ -2,19 +2,18 @@
 title: 電源をオンまたはオフ、Analytics Platform System appliance |Microsoft Docs
 description: Analytics Platform System の電源をオンまたはオフのアプライアンス
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: d24f808365a8a04fdc6b469a8eaac98c208c19e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960240"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System の電源をオンまたはオフのアプライアンス
 このトピックでは、どの電源オフ、Analytics Platform Systemappliance 電源またはを実行している Parallel Data Warehouse について説明します。 使用して、このトピックで Analytics Platform System appliance が移動したとき、または電源にアプライアンスで致命的な電源障害が発生しました。  
@@ -39,15 +38,15 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
 > [!WARNING]  
 > 正確な順序ですべての手順を実行する必要があり、各手順は次の手順を実行すると、前に明記されない限り、完了する必要があります。 誤順序のまたは各手順を完了するを待たずに手順を実行すると、後で、アプライアンスの電源投入時にエラーが発生することができます。  
   
-1.  PDW 管理ノードに接続する (***PDW_region *-CTL01** )、Analytics Platform System appliance ドメイン管理者アカウントを使用してログインします。  
+1.  PDW 管理ノードに接続 ( **_PDW_region_-CTL01** )、Analytics Platform System appliance ドメイン管理者アカウントを使用してログインします。  
   
 2.  実行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`を開く、 **Configuration Manager**します。  
   
 3.  Configuration Manager では、下、**並列データ ウェアハウスのトポロジ** メニューのをクリックして、**サービス状態**タブをクリックし、をクリックして**リージョンの停止**PDW サービスを停止します。   
   
-4.  接続 ***appliance_domain *-HST01**アプライアンスのドメイン管理者アカウントを使用してログインします。  
+4.  接続する **_appliance_domain_-HST01**アプライアンスのドメイン管理者アカウントを使用してログインします。  
   
-5.  使用して、**フェールオーバー クラスター マネージャー**への接続、***appliance_domain *-WFOHST01** 、自動的に接続された場合は、クラスターし、ナビゲーション ウィンドウで次のようにクリックします**ロール**. **ロール**ウィンドウ。  
+5.  使用して、**フェールオーバー クラスター マネージャー**への接続、  **_appliance_domain_-WFOHST01** 、自動的に接続された場合は、クラスターし、ナビゲーション ウィンドウで次のようにクリックします。**ロール**します。 **ロール**ウィンドウ。  
   
     1.  仮想マシンをすべて選択します。 それを右クリックして**シャット ダウン**します。  
   
@@ -55,9 +54,9 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
 6.  閉じる、**フェールオーバー クラスター マネージャー**アプリケーション。  
   
-7. 除くすべてのサーバーをシャット ダウン ***appliance_domain *-HST01**します。  
+7. 除くすべてのサーバーをシャット ダウン **_appliance_domain_-HST01**します。  
   
-8. シャット ダウン、***appliance_domain *-HST01**サーバー。  
+8. シャット ダウン、  **_appliance_domain_-HST01**サーバー。  
   
 9. 配電ユニット (Pdu) をシャット ダウンします。  
   
@@ -70,25 +69,25 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
 1.  自動的に起動するには、電力配分装置 (PDU) とスイッチの待機の電源を入れます。  
   
-2.  電源オン、***appliance_domain *-HST01**サーバー。  
+2.  電源オン、  **_appliance_domain_-HST01**サーバー。  
   
-3.  ログイン ***appliance_domain *-HST01**アプライアンスのドメイン管理者として。  
+3.  ログイン **_appliance_domain_-HST01**アプライアンスのドメイン管理者として。  
   
-4.  開始、 **、HYPER-V Manager**プログラム (**virtmgmt.msc**) への接続と ***appliance_domain *-HST01**既定で接続されていない場合。  
+4.  開始、 **、HYPER-V Manager**プログラム (**virtmgmt.msc**) への接続と **_appliance_domain_-HST01**既定で接続されていない場合。  
   
-    1.  ため、名前で接続できない場合、***PDW_region *-AD01**が実行されていない IP アドレスを使用して接続を再試行してください。  
+    1.  ため、名前で接続できない場合、  **_PDW_region_-AD01**が実行されていない IP アドレスを使用して接続を再試行してください。  
   
-    2.  **仮想マシン**ウィンドウで、検索 ***PDW_region *-AD01**が実行されていることを確認します。 ない場合は、この VM を起動しが完全に起動するまで待機します。  
+    2.  **仮想マシン**ウィンドウで、検索 **_PDW_region_-AD01**が実行されていることを確認します。 ない場合は、この VM を起動しが完全に起動するまで待機します。  
   
 5.  アプライアンス内のサーバーの残りの部分の電源を入れます。  
   
 6.  留まった**HST01**から、アプライアンスのドメイン管理者としてログオンして **、HYPER-V Manager**:  
   
-    1.  接続 ***appliance_domain *-HST02**します。  
+    1.  接続する **_appliance_domain_-HST02**します。  
   
-    2.  **仮想マシン**ウィンドウで、検索 ***PDW_region *-AD02**が実行されていることを確認します。  ない場合は、この VM を起動しが完全に起動するまで待機します。  
+    2.  **仮想マシン**ウィンドウで、検索 **_PDW_region_-AD02**が実行されていることを確認します。  ない場合は、この VM を起動しが完全に起動するまで待機します。  
   
-7.  使用して、**フェールオーバー クラスター マネージャー**への接続、***appliance_domain *-WFOHST01**クラスターの場合は自動的に接続し、**ナビゲーション**ウィンドウで、をクリックして**ロール**します。 **ロール**ウィンドウ。  
+7.  使用して、**フェールオーバー クラスター マネージャー**への接続、  **_appliance_domain_-WFOHST01**クラスターの場合は自動的に接続し、 **ナビゲーション**ウィンドウで、をクリックして**ロール**します。 **ロール**ウィンドウ。  
   
     1.  をクリックし、右クリック、すべての仮想マシンを複数選択**開始**します。  
   
@@ -98,7 +97,7 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
 8. 切断**HST01**たい場合。  
   
-9. 接続 ***PDW_region *-CTL01**アプライアンスのドメイン管理者アカウントを使用します。  
+9. 接続する **_PDW_region_-CTL01**アプライアンスのドメイン管理者アカウントを使用します。  
   
 10. 実行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`を起動する、 **Configuration Manager**します。  
   

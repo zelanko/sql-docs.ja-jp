@@ -22,15 +22,14 @@ helpviewer_keywords:
 - user-defined server roles [SQL Server]
 - roles, server
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5ce469c5ecff661ba4e37cfe88f1e5543de348c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117126"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

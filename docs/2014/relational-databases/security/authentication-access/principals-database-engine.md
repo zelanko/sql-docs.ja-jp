@@ -28,15 +28,15 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6d91a6c21bc162ff1f6100e88101f34a0a275cd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011912"
 ---
 # <a name="principals-database-engine"></a>プリンシパル (データベース エンジン)
-  *プリンシパル* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを要求できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の承認モデルの他のコンポーネントと同様に、プリンシパルは階層内に配置できます。 プリンシパルの効力のスコープは、プリンシパルの定義のスコープ (Windows、サーバー、データベース) と、プリンシパルが分割できないアイテムであるかコレクションであるかによって異なります。 分割できないプリンシパルの例には Windows ログインがあり、コレクションであるプリンシパルの例には Windows グループがあります。 各プリンシパルには、1 つのセキュリティ識別子 (SID) があります。  
+  *プリンシパル* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを要求できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の承認モデルの他のコンポーネントと同様に、プリンシパルは階層内に配置できます。 プリンシパルの効力のスコープは、プリンシパルの定義のスコープによって異なります。Windows、server、database です。プリンシパルが割り切れるかどうかや、コレクション。 分割できないプリンシパルの例には Windows ログインがあり、コレクションであるプリンシパルの例には Windows グループがあります。 各プリンシパルには、1 つのセキュリティ識別子 (SID) があります。  
   
  **Windows レベルのプリンシパル**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48084552"
  データベース ユーザーはすべて、public データベース ロールに属しています。 セキュリティ保護可能なリソースに対する特定の権限が与えられていないか権限が拒否されたユーザーは、public がそのリソースに対して許可されている権限を継承します。  
   
 ## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA と sys  
- 各データベースには、カタログ ビューにユーザーとして表示される 2 つのエンティティ INFORMATION_SCHEMA および sys が含まれています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]はこれらを必要とします。 これらのエンティティはプリンシパルではなく、変更も削除もできません。  
+ すべてのデータベースには、カタログ ビューでのユーザーとして表示される 2 つのエンティティが含まれています。INFORMATION_SCHEMA と sys です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]はこれらを必要とします。 これらのエンティティはプリンシパルではなく、変更も削除もできません。  
   
 ## <a name="certificate-based-sql-server-logins"></a>証明書ベースの SQL Server ログイン  
  名前が 2 つの番号記号 (##) で囲まれたサーバー プリンシパルは、内部システムでのみ使用されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール時に証明書から作成される以下のプリンシパルは、削除しないでください。  
@@ -88,20 +88,20 @@ ms.locfileid: "48084552"
  各データベースには、 **guest**が含まれます。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 **guest** ユーザーに許可された権限を継承します。 **ゲスト**ユーザーを削除することはできませんを取り消すことで無効にすることができますの`CONNECT`権限。 `CONNECT`を実行するためのアクセス許可を失効できます`REVOKE CONNECT FROM GUEST`master または tempdb 以外のデータベースでします。  
   
 ## <a name="client-and-database-server"></a>クライアントとデータベース サーバー  
- 定義上、クライアントとデータベース サーバーはセキュリティ プリンシパルであり、セキュリティで保護できます。 これらのエンティティは、安全なネットワーク接続が確立される前に相互に認証できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サポート、 [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758)認証プロトコルは、クライアントがネットワーク認証サービスとやり取りする方法を定義します。  
+ 定義上、クライアントとデータベース サーバーはセキュリティ プリンシパルであり、セキュリティで保護できます。 これらのエンティティは、安全なネットワーク接続が確立される前に相互に認証できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サポート、 [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758)認証プロトコルは、クライアントがネットワーク認証サービスとやり取りする方法を定義します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックのこのセクションの内容は次のとおりです。  
   
 -   [ログイン、ユーザー、およびスキーマの管理方法に関するトピック](managing-logins-users-and-schemas-how-to-topics.md)  
   
--   [サーバーレベルのロール](server-level-roles.md)  
+-   [サーバー レベルのロール](server-level-roles.md)  
   
 -   [データベース レベルのロール](database-level-roles.md)  
   
 -   [アプリケーション ロール](application-roles.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server の保護](../securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
  [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   

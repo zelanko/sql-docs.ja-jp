@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40620b839b7bf7df14d1beddd90315b51d32d0bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eefc1981d5a064eeb362dd0781a3f682117125a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902416"
 ---
 # <a name="cursor-properties"></a>カーソルのプロパティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "47622720"
   
 -   [カーソルの行セット サイズ](../../../relational-databases/native-client-odbc-cursors/properties/cursor-rowset-size.md)  
   
--   [カーソルのコンカレンシー &amp;#40;ODBC&amp;#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+-   [カーソルのコンカレンシー &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
   
 -   [カーソルのトランザクション分離レベル](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルを使用して&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

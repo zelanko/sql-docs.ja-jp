@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47a13686f1e4938886d11df7b2ee104553d3a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dca69a0378f8e5cf1aa6006ec0ef7a905639507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121217"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>トランザクション レプリケーションの更新可能なサブスクリプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ ms.locfileid: "47756940"
   
  パブリケーションの新規作成ウィザードで更新可能なサブスクリプションによるトランザクション パブリケーションを作成する場合は、即時更新およびキュー更新の両方が有効になります。 ストアド プロシージャによるパブリケーションを作成する場合は、どちらか一方または両方のオプションを有効にすることができます。 パブリケーションに対してサブスクリプションを作成する場合は、使用する更新モードを指定します。 必要に応じて、更新モードを切り替えることができます。 詳細については、以下の「更新モードの切り替え」を参照してください。  
   
- トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「 [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
+ トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「[トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
   
- トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「[トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)」 (トランザクション レプリケーションに更新可能なサブスクリプションを作成する (Management Studio)) を参照してください。 
+ トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「[トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)」 を参照してください。 
   
 ## <a name="switching-between-update-modes"></a>更新モードの切り替え  
  更新可能なサブスクリプションを使用する場合に、サブスクリプションに 1 つの更新モードを指定し、アプリケーションで別の更新モードが必要な場合はそちらに切り替えるように指定できます。 たとえば、サブスクリプションで即時更新を使用するが、システム障害でネットワークに接続できなくなった場合には、キュー更新に切り替えるように指定することができます。  
@@ -83,7 +82,7 @@ ms.locfileid: "47756940"
   
 -   **text**、 **ntext** または **image** 値は、レプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることができないため、サブスクライバーはこれらを更新または挿入できません。 同様に、 **WRITETEXT** や **UPDATETEXT** を使用すると、サブスクライバーは **text** 値や **image** 値を更新したり挿入したりすることができません。これらのデータはパブリッシャーによって上書きされるからです。 ただし、 **text** 列と **image** 列を別々のテーブルに分けて、トランザクション内で 2 つのテーブルを変更することはできます。  
   
-     サブスクライバーで大きなオブジェクト更新するには、 **text**、 **ntext**、 **image** のデータ型の代わりに、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** のデータ型をそれぞれに使用します。  
+     サブスクライバーで大きなオブジェクト更新するには、 **text**、 **ntext**、 **image** のデータ型の代わりに、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** のデータ型をそれぞれに使用します。  
   
 -   一意なキー (主キーを含む) に対する更新によって重複が生じる場合 (たとえば、 `UPDATE <column> SET <column> =<column>+1` などの形式による更新)、その更新を行うことはできません。その更新は一意性違反のため拒否されます。 これは、サブスクライバーで行われた SET 更新が、レプリケーションによって、影響される各行に対する個々の **UPDATE** ステートメントとして反映されるからです。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "47756940"
   
 ## <a name="see-also"></a>参照  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [トランザクション レプリケーションで使用するパブリケーションの種類](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
+ [トランザクション レプリケーション](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
   

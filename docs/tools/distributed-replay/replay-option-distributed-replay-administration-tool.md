@@ -8,19 +8,18 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46285d61f38619ed8dff835faee266e5a76f591d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 75fb9df87b432dc4b1357901e740ed83d628509e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949963"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>replay オプション (Distributed Replay 管理ツール)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。  
   
  **replay** オプションはイベント再生段階を開始します。ここでは、コントローラーは、指定されたクライアントに再生データをディスパッチし、分散再生を開始して、クライアントを同期します。 必要に応じて、再生に参加している各クライアントは再生アクティビティを記録し、結果トレース ファイルをローカルに保存できます。  
   
@@ -36,12 +35,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- **-m** *controller*  
+ **-m** _controller_  
  コントローラーのコンピューターの名前を指定します。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。  
   
  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  中間ファイルが格納される、コントローラー上のディレクトリを指定します。 **-d** パラメーターは必須です。  
   
  これには次の要件があります。  
@@ -59,27 +58,27 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  **-o** パラメーターが指定されていない場合は、結果トレース ファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  分散ワークロードが再生される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンスを指定します。 このパラメーターは、 **server_name[\instance name]** の形式で指定します。  
   
- "`localhost`" または "`.`" を対象サーバーとして使用することはできません。  
+ "`localhost`" または "`.`" をターゲット サーバーとして使用することはできません。  
   
  再生構成ファイル **の** セクションに `<Server>` 要素が指定されている場合、 `<ReplayOptions>` -s `DReplay.exe.replay.config`パラメーターは必要ありません。  
   
  **-s** パラメーターが使用されている場合、再生構成ファイルの `<Server>` セクションの `<ReplayOptions>` 要素は無視されます。  
   
- **-w** *clients*  
+ **-w** _clients_  
  この必須パラメーターは、分散再生に参加するクライアントのコンピューター名を指定するコンマ区切りのリスト (スペースを含まない) です。 IP アドレスは指定できません。 コントローラーにクライアントが既に登録されている必要があることに注意してください。  
   
 > [!NOTE]  
 >  クライアント サービスが開始するときに、クライアント構成ファイルで指定されているコントローラーにクライアントが登録されます。  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  再生構成ファイルの完全なパスです。別の場所に保存されている場合に、その場所を指定するために使用します。  
   
  再生構成ファイル **の既定値を使用する場合、** -c `DReplay.exe.replay.config`パラメーターは必要ありません。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  状態を表示する頻度 (秒単位) を指定します。  
   
  **-f** を指定しない場合は、既定の間隔は 30 秒です。  
@@ -162,7 +161,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)   
  [SQL Server Distributed Replay フォーラム](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [分散再生を使用した SQL Server のロード テスト – パート 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [分散再生を使用した SQL Server のロード テスト – パート 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [分散再生を使用した SQL Server のロード テスト – パート 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

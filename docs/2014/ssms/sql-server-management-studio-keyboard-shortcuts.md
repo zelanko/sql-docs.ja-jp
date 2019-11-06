@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -21,12 +20,12 @@ ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127054"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、2 つのキーボード スキームが用意されています。 既定のスキームは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] スキームであり、そのキーボード ショートカットの基になっているのは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 です。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の標準スキームに似たキーボード スキームも提供されています。 キーボード スキームの変更やキーボード ショートカットの追加を行うには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[環境]** の **[キーボード]** ページで目的のキーボード スキームを選択できます。  
@@ -98,7 +97,7 @@ ms.locfileid: "48085842"
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |カーソルを左に移動する|左方向キー|←|  
-|カーソルを右に移動する|→|→|  
+|カーソルを右に移動する|右矢印|→|  
 |カーソルを上に移動する|上矢印|上矢印|  
 |カーソルを下に移動する|下方向キー|下方向キー|  
 |カーソルを行の先頭に移動する|Home|Home|  
@@ -360,7 +359,7 @@ ms.locfileid: "48085842"
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|**[検索]** ダイアログ ボックスを表示する|Ctrl + F|Ctrl + F|  
+|**[検索]** ダイアログ ボックスを表示する|Ctrl + F|CTRL + F|  
 |**[検索]** ダイアログ ボックスの **[ファイル内]** タブを表示する|||  
 |選択した記号の定義を表示する|F12|同等の機能がありません|  
 |選択した記号の参照の一覧を表示する|Shift + F12|同等の機能がありません|  
@@ -383,10 +382,10 @@ ms.locfileid: "48085842"
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |切り取る (現在選択している項目を削除してクリップボードに配置する)|Ctrl + X<br /><br /> または<br /><br /> Shift + Delete|Ctrl + X<br /><br /> または<br /><br /> Shift + Del|  
-|選択された行をすべて切り取る。何も選択されていない場合は現在の行を切り取る。|Ctrl + L<br /><br /> または<br /><br /> Ctrl + Shift + L|同等の機能がありません|  
-|クリップボードにコピーする|Ctrl + C<br /><br /> または<br /><br /> Ctrl + Ins|Ctrl + C<br /><br /> または<br /><br /> Ctrl + Ins|  
+|選択された行をすべて切り取る。何も選択されていない場合は現在の行を切り取る。|CTRL + L<br /><br /> または<br /><br /> Ctrl + Shift + L|同等の機能がありません|  
+|クリップボードにコピーする|Ctrl + C<br /><br /> または<br /><br /> Ctrl + Ins|CTRL キーを押しながら C<br /><br /> または<br /><br /> Ctrl + Ins|  
 |クリップボードから挿入ポイントに貼り付ける|Ctrl + V<br /><br /> または<br /><br /> Shift + Ins|Ctrl + V<br /><br /> または<br /><br /> Shift + Ins|  
-|挿入ポイントにクリップボード リングから項目を貼り付け、貼り付けた項目を自動的に選択する|Ctrl + Shift + V<br /><br /> または<br /><br /> Ctrl + Shift + Insert|該当するショートカットはありません|  
+|挿入ポイントにクリップボード リングから項目を貼り付け、貼り付けた項目を自動的に選択する|Ctrl + Shift + V<br /><br /> または<br /><br /> Ctrl + Shift + Insert|同等の機能がありません|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>ログ ビューアーのキーボード ショートカット  
   
@@ -406,12 +405,12 @@ ms.locfileid: "48085842"
 |------------|-----------------------------|---------------------------------|  
 |利用状況モニターの起動|Ctrl + Alt + A|Ctrl + Alt + A|  
 |利用状況モニターを閉じる|Ctrl + F4|Ctrl + F4|  
-|更新|F5|F5|  
+|Refresh|F5|F5|  
 |モニター表示にフィルターを適用する|Ctrl + Shift + F|Ctrl + Shift + F|  
 |パネルを順番に表示する|F6|F6|  
 |選択したペインの展開または折りたたみ|Ctrl を押しながら + または -|Ctrl を押しながら + または -|  
 |すべてのペインの展開または折りたたみ|+ または -|+ または -|  
-|グリッド内の選択した行全体をコピー|Ctrl + C|Ctrl + C|  
+|グリッド内の選択した行全体をコピー|CTRL キーを押しながら C|CTRL キーを押しながら C|  
 |セルをコピー|Ctrl + Shift + C|Ctrl + Shift + C|  
 |グリッド内でのフィルター処理のためのドロップダウン|Alt + 下方向キー|Alt + 下方向キー|  
 |利用状況モニターを上下にスクロール|Ctrl + Alt + 上方向/下方向キー|Ctrl + Alt + 上方向/下方向キー|  
@@ -420,7 +419,7 @@ ms.locfileid: "48085842"
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|更新|F5|F5|  
+|Refresh|F5|F5|  
 |グリッドから詳細ウィンドウを開く|Enter|Enter|  
   
 ## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>レプリケーション競合表示モジュールのキーボード ショートカット  
@@ -460,7 +459,7 @@ ms.locfileid: "48085842"
 |ページ上の前のコントロールに移動する|Shift + Tab|同等の機能がありません|  
 |デザイン画面にグリッドを表示する|Enter|同等の機能がありません|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メニューとショートカット キーのカスタマイズ](customize-menus-and-shortcut-keys.md)  
   
   

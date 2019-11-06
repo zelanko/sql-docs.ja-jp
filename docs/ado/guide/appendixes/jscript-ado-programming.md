@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64655ad666954b2fb63448cb1e55430dd6191491
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 8d07759405dc337667cc8971ce7795af428a0cfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926802"
 ---
 # <a name="jscript-ado-programming"></a>JScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  
@@ -58,7 +57,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 <%  
 var Source = "SELECT * FROM Authors";  
 var Connect =  "Provider=sqloledb;Data Source=srv;" +  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
 var Rs1 = Server.CreateObject( "ADODB.Recordset.2.5" );  
 Rs1.Open(Source,Connect,adOpenForwardOnly);  
 Response.Write("Success!");  

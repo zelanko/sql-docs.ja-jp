@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101139"
 ---
 # <a name="specify-credentials-in-report-builder"></a>レポート ビルダーでの資格情報の指定
   資格情報は、データ ソースからデータの取得を試みるユーザーの認証に使用されます。 データ ソースの所有者が、使用する資格情報の種類を決定します。 たとえば、データベース管理者は、Windows のユーザー名とパスワードの入力をユーザーに求めることができます。  
@@ -49,7 +48,7 @@ ms.locfileid: "48154102"
  詳細については、「[[全般] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)」および「[レポート ビルダーでのレポートのプレビュー](report-builder/previewing-reports-in-report-builder.md)」を参照してください。  
   
 ## <a name="types-of-credentials"></a>資格情報の種類  
- データ ソースでサポートされる資格情報の種類は、データ ソースの所有者によって指定されます。 アクセスするなど、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を提供する必要があります、データベース、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログイン ユーザー名とパスワード。 また、別のデータ ソースにアクセスする際には、Windows ユーザー名とパスワードが必要になる場合もあります。 資格情報が必要とされないデータ ソースもあります。  
+ データ ソースでサポートされる資格情報の種類は、データ ソースの所有者によって指定されます。 たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースにアクセスするために、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のログイン ユーザー名とパスワードの入力が必要になる場合があります。 また、別のデータ ソースにアクセスする際には、Windows ユーザー名とパスワードが必要になる場合もあります。 資格情報が必要とされないデータ ソースもあります。  
   
 ### <a name="options-for-specifying-credentials"></a>資格情報を指定するためのオプション  
  データ ソースの資格情報の指定に関しては、次のオプションがあります。  
@@ -72,13 +71,13 @@ ms.locfileid: "48154102"
  資格情報の要求を指定した場合、レポートにアクセスするユーザーがデータを取得するには、それぞれがユーザー名とパスワードを入力する必要があります。 機密データを含むレポートには、このオプションを使用することをお勧めします。 要求される資格情報は、Windows アカウントまたはデータベース ログインのいずれかです。 指定した資格情報がデータベース サーバーによって認識されない場合や、指定したユーザーにデータを取得するための権限が与えられていない場合、接続は失敗します。  
   
 ### <a name="no-credentials"></a>資格情報を使用しない  
- このデータ ソースでは資格情報が必要とされません。 レポート サーバー上でこのレポートを実行するには、自動実行用のアカウントを構成する必要があります。 詳細については、次を参照してください。[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)で、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?linkid=121312)します。  
+ このデータ ソースでは資格情報が必要とされません。 レポート サーバー上でこのレポートを実行するには、自動実行用のアカウントを構成する必要があります。 詳細については、次を参照してください。[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)で、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
   
 ## <a name="see-also"></a>参照  
  [インストール、アンインストール、およびレポート ビルダーのサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [埋め込みし、共有データ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [レポート ビルダーのオプション ダイアログ ボックスで、設定&#40;レポート ビルダー&#41;](report-builder/set-default-options-for-report-builder.md)   
- [データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   

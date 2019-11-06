@@ -9,25 +9,26 @@ ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: 72dc0b6cd9b5cf5f5818e0f447901fcce8c17def
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1f3a1e85fa9d6b8e762a5d3fa68e65b098f9cdd
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416236"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68132873"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開発のパートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server データベース ソリューションの開発をサポートするためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server の開発ソリューションを提供する Microsoft パートナー会社を示します。
 
 ## <a name="our-development-partners"></a>Microsoft の開発パートナー
+
 | Partner | [説明] | リンク |
 | --- | --- | --- |
-|![idera][1] |**IDERA**<br>高速 SQL はデータベース開発者とデータベース管理者が単一のインターフェイスから SQL Server を含むすべての主要なデータベース プラットフォーム上で高性能な SQL コードを作成できるようにする、インテリジェントな SQL が統合開発環境です。<br><br>[システム要件][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Web サイト][idera_website]<br>[Twitter][idera_twitter]<br>[ビデオ][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. によって、開発者コミュニティは、適切なツールセットを使用してプログラミング言語、フレームワーク、サービスを柔軟に選択できるようになります。 Click2Cloud のツールキットを使用して、開発者は "Linux 上の SQL" コンテナーを作成し、アプリケーションにアタッチできるだけでなく、セキュリティで保護されたマルチテナントのアーキテクチャを構築できます。 コンテナーは、任意のクラウドベースのコンテナー プラットフォームに個別に配置できます。|[Marketplace][click2cloud_marketplace]<br>[Web サイト][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[ビデオ][click2cloud_youtube] |
+|![idera][1] |**IDERA**<br>高速 SQL はデータベース開発者とデータベース管理者が単一のインターフェイスから SQL Server を含むすべての主要なデータベース プラットフォーム上で高性能な SQL コードを作成できるようにする、インテリジェントな SQL が統合開発環境です。<br><br>[システム要件][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[[Web サイト]][idera_website]<br>[Twitter][idera_twitter]<br>[ビデオ][idera_youtube] |
+|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. によって、開発者コミュニティは、適切なツールセットを使用してプログラミング言語、フレームワーク、サービスを柔軟に選択できるようになります。 Click2Cloud のツールキットを使用して、開発者は "Linux 上の SQL" コンテナーを作成し、アプリケーションにアタッチできるだけでなく、セキュリティで保護されたマルチテナントのアーキテクチャを構築できます。 コンテナーは、任意のクラウドベースのコンテナー プラットフォームに個別に配置できます。|[Marketplace][click2cloud_marketplace]<br>[[Web サイト]][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[ビデオ][click2cloud_youtube] |
+
 ## <a name="next-steps"></a>次の手順
-その他のパートナーの詳細については、[高可用性、ディザスター リカバリーのパートナー][hadr_partners]、[管理パートナー][management_partners]、[監視パートナー][monitor_partners]をご確認ください。
+その他のパートナーについて詳しくは、[高可用性とディザスター リカバリーのパートナー][hadr_partners]、[管理パートナー][management_partners]、[監視パートナー][monitor_partners]に関するページをご覧ください。
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

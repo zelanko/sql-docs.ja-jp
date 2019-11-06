@@ -17,16 +17,15 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940124"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Microsoft SQL データベース関数とは
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
 分析関数によって、行のグループに基づいた集計値が計算されます。 ただし集計関数とは異なり、分析関数は各グループについて複数の行を返すことがあります。 分析関数を使うと、グループ内の移動平均、集計途中経過、パーセンテージまたは上位 N 位の結果を計算できます。
 
 ## <a name="ranking-functions"></a>順位付け関数
-パーティションの各行の順位値を返します。 使用する関数によっては、いくつかの行で、他の行と同じ値を受け取る場合があります。 順位付け関数は非決定的です。
+順位付け関数により、パーティションの各行の順位値が返されます。 使用する関数によっては、いくつかの行で、他の行と同じ値を受け取る場合があります。 順位付け関数は非決定的です。
 
 ## <a name="rowset-functions"></a>行セット関数
 行セット関数は、SQL ステートメントの中でテーブル参照のように使用できるオブジェクトを返します。
@@ -59,9 +58,9 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
 |[変換関数](conversion-functions-transact-sql.md)|データ型のキャストと変換をサポートします。|  
 |[カーソル関数](cursor-functions-transact-sql.md)|カーソルについての情報を返します。|  
 |[日付と時刻のデータ型および関数](date-and-time-data-types-and-functions-transact-sql.md)|日付時刻型の入力値に対して操作を実行し、文字列値、数値、または日付時刻値を返します。|  
-|[JSON 関数](json-functions-transact-sql.md)|クエリを検証します。 または、JSON データを変更します。|  
-|[論理関数](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|論理演算を実行します。|  
-|[数学関数](mathematical-functions-transact-sql.md)|パラメーターとして渡された入力値に基づいて計算を実行し、数値を返します。|  
+|[JSON 関数](json-functions-transact-sql.md)|JSON データを検証、クエリ、または変更します。|  
+|[論理関数](logical-functions-choose-transact-sql.md)|論理演算を実行します。|  
+|[数学関数](mathematical-functions-transact-sql.md)|パラメーターとして関数に渡された入力値に基づいて計算を実行し、数値を返します。|  
 |[メタデータ関数](metadata-functions-transact-sql.md)|データベースおよびデータベース オブジェクトについての情報を返します。|  
 |[セキュリティ関数](security-functions-transact-sql.md)|ユーザーとロールについての情報を返します。|  
 |[文字列関数](string-functions-transact-sql.md)|文字列型 (**char** または **varchar**) の入力値に対して操作を実行し、文字列値または数値を返します。|  

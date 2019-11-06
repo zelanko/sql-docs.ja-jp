@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - sp_configure
@@ -14,12 +13,12 @@ ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a3fe517434b95ec06affb850a6cd054d3a68d59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9ba0dc47b64c537a6d218dc55fdee1c2f0cac83
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808873"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options サーバー構成オプション
   **show advanced options** オプションを使用すると、 **sp_configure** システム ストアド プロシージャの拡張オプションを表示できます。 **show advanced options** を 1 に設定した場合、 **sp_configure**を使用して拡張オプションを表示できます。 既定値は 0 です。  

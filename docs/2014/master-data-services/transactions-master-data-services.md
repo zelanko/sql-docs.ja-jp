@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478506"
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーに対してアクションが行われるたびに、トランザクションが記録されます。 すべてのユーザーがトランザクションを表示でき、管理者はトランザクションを破棄できます。 日付、時刻、アクションを行ったユーザーが、その他の詳細と共にトランザクションによって表示されます。 ユーザーは、トランザクションが行われた理由を示す注釈をトランザクションに追加できます。  
@@ -57,12 +56,12 @@ ms.locfileid: "48129052"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|トランザクションを破棄してアクションを元に戻す (管理者のみ)。|[トランザクションを破棄する&#40;マスター データ サービス&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|トランザクションを破棄してアクションを元に戻す (管理者のみ)。|[トランザクションを破棄する (マスター データ サービス)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [管理者&#40;マスター データ サービス&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [管理者 (マスター データ サービス)](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [注釈&#40;マスター データ サービス&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [注釈 (マスター データ サービス)](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

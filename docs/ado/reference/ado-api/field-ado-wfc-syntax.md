@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918748"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
@@ -35,7 +34,7 @@ public char[] getCharChunk(int len)
 public String getStringChunk(int len)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getActualSize()  
@@ -69,9 +68,9 @@ public AdoProperties getProperties()
   
  ADO と WFC を実装して、**値**プロパティを**getValue** 、バリアント オブジェクトを返すメソッドと**setValue**メソッドを引数としてのバリアント。 バリアントは、Microsoft Visual Basic などの特定の言語で効率的です。  
   
- 加え、**値**プロパティ、ADO と WFC 提供*アクセサー*メソッドを取得および設定のコンテンツ Java データ型を使用する**フィールド**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ **取得 * * * データ型*または **設定 * * * データ型*します。  
+ 加え、**値**プロパティ、ADO と WFC 提供*アクセサー*メソッドを取得および設定のコンテンツ Java データ型を使用する**フィールド**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ**取得**_DataType_または**設定**_DataType_します。  
   
- 2 つの注目すべき例外があります: のいずれか、 **getObject**メソッドは、指定したクラスに強制型変換オブジェクトを返します。 ない**注意する必要**プロパティが代わりに、 **isNull**フィールドが null かどうかを示すブール値を返します。  
+ 2 つの注目すべき例外があります。1 つ、 **getObject**メソッドは、指定したクラスに強制型変換オブジェクトを返します。 ない**注意する必要**プロパティが代わりに、 **isNull**フィールドが null かどうかを示すブール値を返します。  
   
 ```  
 public native boolean getBoolean();  
@@ -99,5 +98,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)

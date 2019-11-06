@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.sqlce.f1
@@ -15,12 +15,12 @@ ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6480fc8aea74144ee54fd0c96e50fcbdd74e9cfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188139"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>新しい登録済みサーバーの作成 (SQL Server Management Studio)
   このトピックでは、サーバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
@@ -49,10 +49,10 @@ ms.locfileid: "48185502"
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [登録済みサーバー] が表示されていない場合は、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
   
      **サーバーの種類**  
-     [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]** ツール バーの **[データベース エンジン]**、 **[分析サーバー]**、 **[Reporting Services]** 、または **[Integration Services]** をクリックします。  
+     [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]** ツール バーの **[データベース エンジン]** 、 **[分析サーバー]** 、 **[Reporting Services]** 、または **[Integration Services]** をクリックします。  
   
      **サーバー名**  
-     登録するサーバー インスタンスを、*\<servername>*[\\*\<instancename>*] という形式で選択します。  
+     登録するサーバー インスタンスを、 *\<servername>* [\\ *\<instancename>* ] という形式で選択します。  
   
      **[認証]**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続する際には、2 つの認証モードのいずれかを選択します。  
@@ -96,11 +96,11 @@ ms.locfileid: "48185502"
 ## <a name="multiserver-queries"></a>マルチサーバー クエリ  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディター ウィンドウを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスに同時に接続してクエリを実行できます。 クエリから返された結果は、マージして 1 つの結果ペインに表示することも、別々の結果ペインに表示することもできます。 クエリ エディターには、各行を生成したサーバーの名前と、各行を提供したサーバーへの接続に使用されたログインを表示する列をオプションで追加できます。 マルチサーバー クエリを実行する方法については、「[複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)」を参照してください。  
   
- ローカル サーバー グループ内のすべてのサーバーに対してクエリを実行するには、サーバー グループを右クリックし、**[接続]** をポイントして、**[新しいクエリ]** をクリックします。 新しいクエリ エディター ウィンドウで実行したクエリは、ユーザー認証コンテキストなど保存されている接続情報を使用して、グループ内のすべてのサーバーに対して実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して登録されていても、パスワードが保存されていないサーバーは接続できません。  
+ ローカル サーバー グループ内のすべてのサーバーに対してクエリを実行するには、サーバー グループを右クリックし、 **[接続]** をポイントして、 **[新しいクエリ]** をクリックします。 新しいクエリ エディター ウィンドウで実行したクエリは、ユーザー認証コンテキストなど保存されている接続情報を使用して、グループ内のすべてのサーバーに対して実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して登録されていても、パスワードが保存されていないサーバーは接続できません。  
   
  中央管理サーバーに登録されているすべてのサーバーに対してクエリを実行するには、中央管理サーバーを展開し、サーバー グループを右クリックして、 **[接続]** をポイントし、 **[新しいクエリ]** をクリックします。 新しいクエリ エディター ウィンドウで実行したクエリは、保存されている接続情報およびユーザーの Windows 認証コンテキストを使用して、サーバー グループ内のすべてのサーバーに対して実行されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクト エクスプローラーのシステム オブジェクトの非表示](../object/hide-system-objects-in-object-explorer.md)   
  [登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  

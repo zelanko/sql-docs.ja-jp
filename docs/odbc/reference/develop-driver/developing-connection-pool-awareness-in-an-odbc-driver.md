@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897735"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC ドライバー対応接続プールの開発
 このトピックでは、ドライバーが接続プールのサービスを提供する方法に関する情報を含む ODBC ドライバーの開発の詳細について説明します。  
@@ -42,10 +41,10 @@ ms.locfileid: "51661751"
   
  ドライバー対応のプールを有効にできるようにドライバーも次の既存の関数を実装する必要があります。  
   
-|機能|追加された機能|  
+|関数|追加された機能|  
 |--------------|-------------------------|  
-|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|新しいハンドル型のサポート: SQL_HANDLE_DBC_INFO_TOKEN (以下の説明を参照してください)。|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|新しい設定専用の接続属性をサポート: 接続をリセットするための SQL_ATTR_DBC_INFO_TOKEN (以下の説明を参照してください)。|  
+|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|新しいハンドル型のサポート:SQL_HANDLE_DBC_INFO_TOKEN (以下の説明を参照してください)。|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|新しい設定専用の接続属性をサポートしてください。接続をリセットするための SQL_ATTR_DBC_INFO_TOKEN (以下の説明を参照してください)。|  
   
 > [!NOTE]  
 >  非推奨の関数など**SQLError**と**SQLSetConnectOption**ドライバー対応接続プールはサポートされていません。  
@@ -87,7 +86,7 @@ ms.locfileid: "51661751"
   
  接続情報は、複数のソース (接続文字列、接続属性、および DSN) から取得できます、ため、ドライバーは接続文字列を解析し、これらの関数の呼び出しを上記の各ソース間の競合を解決する必要があります。  
   
- そのため、新しい ODBC ハンドルが導入されました。 SQL_HANDLE_DBC_INFO_TOKEN します。 SQL_HANDLE_DBC_INFO_TOKEN で、ドライバーは接続文字列を解析し、複数回接続情報の競合を解決する必要はありません。 これは、ドライバー固有のデータ構造であるため、ドライバーは接続情報などのデータを格納またはプールの id。  
+ そのため、新しい ODBC ハンドルが導入されています。SQL_HANDLE_DBC_INFO_TOKEN します。 SQL_HANDLE_DBC_INFO_TOKEN で、ドライバーは接続文字列を解析し、複数回接続情報の競合を解決する必要はありません。 これは、ドライバー固有のデータ構造であるため、ドライバーは接続情報などのデータを格納またはプールの id。  
   
  このハンドルは、ドライバー マネージャーとドライバーの間のインターフェイスとしてのみ使用されます。 アプリケーションでは、このハンドルを直接割り当てることができません。  
   
@@ -146,6 +145,6 @@ ms.locfileid: "51661751"
   
  ![状態図](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC サービス プロバイダー インターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

@@ -16,12 +16,12 @@ ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213892"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797931"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に、Windows 認証を使用するデータベース ミラーリング エンドポイントを [!INCLUDE[tsql](../../includes/tsql-md.md)]で作成する方法について説明します。 データベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] をサポートするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスにデータベース ミラーリング エンドポイントが必要となります。 サーバー インスタンスは、単一のポートを備えたデータベース ミラーリング エンドポイントを 1 つだけ持つことができます。 データベース ミラーリング エンドポイントは、作成される際に、ローカル システムで利用できる任意のポートを使用できます。 サーバー インスタンス上のすべてのデータベース ミラーリング セッションはそのポートでリッスンし、データベース ミラーリングに対するすべての着信接続はそのポートを使用します。  
@@ -31,19 +31,19 @@ ms.locfileid: "48213892"
   
  **このトピックの内容**  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
 -   **以下を使用してデータベース ミラーリング エンドポイントを作成するには:** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  サーバー インスタンスの認証方法と暗号化方法は、システム管理者が設定します。  
   
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -56,8 +56,8 @@ ms.locfileid: "48213892"
   
 3.  次のステートメントを使用して、データベース ミラーリング エンドポイントが既に存在するかどうかを判断します。  
   
-    ```  
-    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
+    ```sql
+    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;
     ```  
   
     > [!IMPORTANT]  
@@ -79,7 +79,7 @@ ms.locfileid: "48213892"
   
      ]  
   
-     **[,]** ENCRYPTION = **REQUIRED**  
+     [ **[,]** ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { \<*algorithm*> } ]  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48213892"
   
      **[,]** ROLE = \<*role*>  
   
-     )  
+     」を参照)。  
   
      パラメーターの説明  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48213892"
   
     -   既定では、ENCRYPTION は REQUIRED に設定されます。 これは、このエンドポイントへのすべての接続に暗号化を使用する必要があることを意味します。 ただし、エンドポイントで暗号化を無効にしたり、オプションにできます。 選択肢は次のとおりです。  
   
-        |値|定義|  
+        |の値|[定義]|  
         |-----------|----------------|  
         |DISABLED|接続を経由して送信されたデータが暗号化されないことを指定します。|  
         |SUPPORTED|反対側のエンドポイントで SUPPORTED または REQUIRED が指定されている場合に限り、データを暗号化することを指定します。|  
@@ -130,7 +130,7 @@ ms.locfileid: "48213892"
          サーバー インスタンスが、あるデータベース ミラーリング セッションではあるロールを使用し、他のセッションでは別のロールを使用できるようにするには、ROLE=ALL を指定します。 パートナーまたはミラーリング監視サーバーのいずれかになるようにサーバー インスタンスを制限するには、ROLE=PARTNER または ROLE=WITNESS をそれぞれ指定します。  
   
         > [!NOTE]  
-        >  各エディションのデータベース ミラーリング オプションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+        >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションのデータベースミラーリングオプションの詳細については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
      CREATE ENDPOINT 構文の詳細な説明については、「 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)で作成する方法について説明します。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48213892"
 > [!IMPORTANT]  
 >  各サーバー インスタンスにはエンドポイントを 1 つしか作成できません。 したがって、1 つのサーバー インスタンスをセッションによってパートナーにしたりミラーリング監視サーバーにしたりする場合は、ROLE=ALL を指定します。  
   
-```  
+```sql
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  
@@ -178,9 +178,10 @@ GO
 ```  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
- **データベース ミラーリング エンドポイントを構成するには**  
+
+### <a name="to-configure-a-database-mirroring-endpoint"></a>データベース ミラーリング エンドポイントを構成するには
   
--   [データベース ミラーリング エンドポイントの AlwaysOn 可用性グループの作成&#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [AlwaysOn 可用性グループ&#40;SQL Server PowerShell のデータベースミラーリングエンドポイントを作成する&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -196,12 +197,10 @@ GO
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
-  
-  

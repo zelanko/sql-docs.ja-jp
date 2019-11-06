@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
@@ -21,12 +20,12 @@ ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5571c8bc684a8d57f8696b3a5630170679c1cf63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086130"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft シーケンス クラスター ビューアーを使用したモデルの参照
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] シーケンス クラスター ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、パス ( *シーケンス*) をたどることによってリンクできるイベントが含まれているデータを探索するためのシーケンス分析アルゴリズムです。 このアルゴリズムの詳細については、 [「Microsoft シーケンス クラスター アルゴリズム」](microsoft-sequence-clustering-algorithm.md)を参照してください。  
@@ -35,7 +34,7 @@ ms.locfileid: "48229472"
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーに似た機能とオプションが用意されています。 詳細については、「 [Microsoft クラスター ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-cluster-viewer.md)」を参照してください。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーに似た機能とオプションが用意されています。 詳細については、 [「Microsoft クラスター ビューアーを使用したモデルの参照」](browse-a-model-using-the-microsoft-cluster-viewer.md)を参照してください。  
   
 ##  <a name="BKMK_ViewerTabs"></a> ビューアーのタブ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でマイニング モデルを参照すると、そのモデルに適したビューアーを使用してデータ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーには、シーケンス クラスター マイニング モデルを調べるための次のタブがあります。  
@@ -53,7 +52,7 @@ ms.locfileid: "48229472"
 ###  <a name="BKMK_Diagram"></a> クラスター ダイアグラム  
  **シーケンス クラスター ビューアーの** [クラスター ダイアグラム] [!INCLUDE[msCoName](../../includes/msconame-md.md)] タブには、マイニング モデルに含まれているすべてのクラスターが表示されます。 クラスター間を結ぶ線の網掛けは、クラスターの類似性の強度を表します。 網掛けが薄いか存在しない場合は、クラスターがあまり似ていません。 線の網掛けが濃くなるほど、リンクの類似性も強くなります。 ビューアーに表示される線の数は、クラスターの右側のスライダーを使用して調整できます。 スライダーを小さく設定すると、緊密なリンクのみが表示されます。  
   
- 既定では、網掛けはクラスターの母集団を表します。 **[シェーディング変数]** オプションと **[状態]** オプションを使用すると、網掛けによって、属性と状態のどの組み合わせを表すかを選択できます。 網掛けが濃いほど、対応する状態の属性分布は広くなります。 網掛けが薄くなるほど、分布は狭くなります。  
+ 既定では、網掛けはクラスターの母集団を表します。 使用して、**シェーディング**と**状態**オプション、属性を選択できます。 またペア網掛けの状態を表します。 網掛けが濃いほど、対応する状態の属性分布は広くなります。 網掛けが薄くなるほど、分布は狭くなります。  
   
  クラスターの名前を変更するには、そのノードを右クリックして **[クラスター名の変更]** を選択します。 新しい名前はサーバーに保存されます。  
   
@@ -94,9 +93,9 @@ ms.locfileid: "48229472"
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
  [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft シーケンス クラスタ リング アルゴリズム](microsoft-sequence-clustering-algorithm.md)   
+ [「Microsoft シーケンス クラスター アルゴリズム」](microsoft-sequence-clustering-algorithm.md)   
  [データ マイニング ツール](data-mining-tools.md)   
  [データ マイニング モデル ビューアー](data-mining-model-viewers.md)   
- [Microsoft クラスター ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [「Microsoft クラスター ビューアーを使用したモデルの参照」](browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   

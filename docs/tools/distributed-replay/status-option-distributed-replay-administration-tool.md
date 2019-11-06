@@ -6,19 +6,18 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 64db1b89c66f21a571bfd05fa4017f799405c8bc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6370d68b3575e80c4094aa2df82aa4bf6c0b4dd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949846"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>status オプション (Distributed Replay 管理ツール)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **status** コマンド ライン オプションとそれに対応する構文について説明します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe** は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **status** コマンド ライン オプションとそれに対応する構文について説明します。  
   
  **status** オプションは、コントローラーに照会し、現在の状態を表示します。  
   
@@ -32,12 +31,12 @@ dreplay status [-m controller] [-f status_interval]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- **-m** *controller*  
+ **-m** _controller_  
  コントローラーのコンピューターの名前を指定します。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。  
   
  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  状態を表示する頻度 (秒単位) を指定します。  
   
  **-f** パラメーターを指定しない場合は、既定の間隔は 30 秒です。  

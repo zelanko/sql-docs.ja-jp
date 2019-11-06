@@ -1,8 +1,0 @@
-- name: Reporting Services の SOAP ヘッダーの使用
-  href: using-reporting-services-soap-headers.md
-- name: メソッドのバッチ処理
-  href: batching-methods.md
-- name: 実行状態の識別
-  href: identifying-execution-state.md
-- name: GetProperties メソッドのアイテム名前空間の設定
-  href: setting-the-item-namespace-for-the-getproperties-method.md

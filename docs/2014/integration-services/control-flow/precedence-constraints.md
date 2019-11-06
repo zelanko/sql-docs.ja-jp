@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d233d2ee94a611c63e8466102c66bd01e77b0513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831708"
 ---
 # <a name="precedence-constraints"></a>優先順位制約
   優先順位制約は、パッケージ内の実行可能ファイル、コンテナー、およびタスクをリンクして制御フローを作成し、実行可能ファイルを実行するかどうかを決定する条件を指定します。 実行可能ファイルには、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスク、またはイベント ハンドラーを設定できます。 また、イベント ハンドラーは優先順位制約を使用して実行可能ファイルをリンクし、制御フローを作成します。  
@@ -38,7 +37,7 @@ ms.locfileid: "48063462"
   
  ![パッケージの優先順位制約](../media/mw-dts-12.gif "パッケージの優先順位制約")  
   
- パッケージは、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] コンテナー階層の最上層にあるため、複数のパッケージを優先順位制約によってリンクすることはできません。ただし、パッケージ実行タスクをパッケージに追加して、別のパッケージを間接的に制御フローにリンクできます。  
+ パッケージは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] コンテナー階層の最上層にあるため、複数のパッケージを優先順位制約によってリンクすることはできません。ただし、パッケージ実行タスクをパッケージに追加して、別のパッケージを間接的に制御フローにリンクできます。  
   
  優先順位制約は、次の方法で構成できます。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48063462"
   
 -   優先順位付き実行可能ファイルの実行結果か、式を評価した戻り結果を使用する、式または制約。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、色を使用して、優先順位制約の種類を識別します。 成功制約は緑、失敗制約は赤、完了制約は青で表示されます。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで制約の種類を示すテキスト ラベルを表示するには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザー補助機能を構成する必要があります。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、優先順位制約の種類を色で識別します。 成功制約は緑、失敗制約は赤、完了制約は青で表示されます。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで制約の種類を示すテキスト ラベルを表示するには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザー補助機能を構成する必要があります。  
   
  式は、有効な [!INCLUDE[ssIS](../../../includes/ssis-md.md)] の式である必要があります。この式には、関数、演算子、システム関数およびカスタム関数を含めることができます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../expressions/integration-services-ssis-expressions.md)」および「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」を参照してください。  
   
@@ -75,14 +74,14 @@ ms.locfileid: "48063462"
 -   失敗。制約付き実行可能ファイルを実行するには、優先順位付き実行可能ファイルが失敗する必要があります。  
   
 > [!NOTE]  
->  同一のメンバーである優先順位制約のみ`Precedence Constraint`コレクションは論理 AND 条件でグループ化することができます。 たとえば、2 つの Foreach ループ コンテナーの優先順位制約を組み合わせることはできません。  
+>  同じ `Precedence Constraint` コレクションのメンバーである優先順位制約のみが、論理 AND 条件でグループ化できます。 たとえば、2 つの Foreach ループ コンテナーの優先順位制約を組み合わせることはできません。  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>優先順位制約の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「[優先順位制約エディター](../precedence-constraint-editor.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [優先順位制約エディター](../precedence-constraint-editor.md)」を参照してください。  
   
- プログラムによってこれらのプロパティを設定する方法については、「<xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>」を参照してください。  
+ これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
@@ -96,7 +95,7 @@ ms.locfileid: "48063462"
      このトピックでは、優先順位制約の既定の動作を設定する方法、および既定の優先順位制約を使用して実行可能ファイルを連結する方法について説明しています。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- social.technet.microsoft.com の技術記事「 [SSIS 式の例](http://go.microsoft.com/fwlink/?LinkId=220761)」  
+ social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
 ## <a name="see-also"></a>参照  
  [優先順位制約に式を追加します。](../add-expressions-to-precedence-constraints.md)   

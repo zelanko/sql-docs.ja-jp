@@ -12,12 +12,12 @@ ms.assetid: 29800aa9-81aa-4371-992c-487dbb617f46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 917836401a07aa794b091cfcf416b24ea317718b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5169e030246b8f5a834e6a2526232907a7e22526
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62914431"
 ---
 # <a name="mssqlserver2570"></a>MSSQLSERVER_2570
     
@@ -36,7 +36,7 @@ ms.locfileid: "48071652"
  指定した列に格納されている値は、列のデータ型に対する有効値の範囲外です。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- このエラーは修復できません。 列のデータ型に対する範囲内に収まるよう列の値を更新して、再度コマンドを実行してください。  詳細については、サポート技術情報の資料 [923247](http://support.microsoft.com/kb/923247) を参照してください。  
+ このエラーは修復できません。 列のデータ型に対する範囲内に収まるよう列の値を更新して、再度コマンドを実行してください。  詳細については、サポート技術情報の資料 [923247](https://support.microsoft.com/kb/923247) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)   

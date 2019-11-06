@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8bf73a049dbff9980da4a87c6226f946e3caf13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a64d4a3cc46a68a06367d51a3cf3511191c6232
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912957"
 ---
 # <a name="new-alias-alias-tab"></a>[別名 - 新規] ダイアログ ボックス ([別名] タブ)
   別名は、接続のために使用できる代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 **[別名 - 新規]** ダイアログ ボックスの **[別名]** ページでは、別名の接続文字列の各要素を指定できます。 既存の別名の接続文字列を変更する場合は、「[[&#60;Alias&#62; のプロパティ] ダイアログ ボックス ([別名] タブ)](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)」を参照してください。  
@@ -26,7 +25,7 @@ ms.locfileid: "48076472"
  **[別名]**  
  この接続を参照するために使用する名前 (別名) です。  
   
- **[パイプ名]** / **[ポート番号]**  
+ **[パイプ名]**  /  **[ポート番号]**  
  接続文字列の追加要素です。 このボックスの名前は、選択したプロトコルによって異なります。  
   
  **[プロトコル]**  

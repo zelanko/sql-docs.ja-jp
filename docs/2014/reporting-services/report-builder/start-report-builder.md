@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
@@ -15,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 30fef45662f5cfa81e88ce740e556cdc0e66cf39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107598"
 ---
 # <a name="start-report-builder-report-builder"></a>レポート ビルダーの起動 (レポート ビルダー)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] スタンドアロンが含まれていますと[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]レポート ビルダーのバージョン。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンは、ネイティブ モードまたは SharePoint 統合モードでインストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共に使用できます。  
   
 > [!NOTE]  
->  レポート ビルダーは、Itanium 64 ベースのコンピューターにはインストールできません。 これに適用されます、[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]およびレポート ビルダーのスタンドアロン バージョンです。  
+>  レポート ビルダーは、Itanium 64 ベースのコンピューターにはインストールできません。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンおよびスタンドアロン バージョンのレポート ビルダーの場合も同様です。  
   
  場合、[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]表示されるレポート ビルダーのバージョンが以前のバージョンのレポート ビルダーを使用するには、レポート マネージャーおよび SharePoint サイトに更新できるユーザー、管理者に問い合わせて、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]レポート ビルダーのバージョン  
   
- [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンのレポート ビルダーを使用して、SharePoint にパブリッシュされている [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ブックについてのレポートを作成することもできます。 レポート ビルダーの使用の詳細については[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]を参照してください[PowerPivot データを Reporting Services レポートの作成](http://go.microsoft.com/fwlink/?LinkId=185238)technet.microsoft.com します。  
+ [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンのレポート ビルダーを使用して、SharePoint にパブリッシュされている [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ブックについてのレポートを作成することもできます。 レポート ビルダーの使用の詳細については[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]を参照してください[PowerPivot データを Reporting Services レポートの作成](https://go.microsoft.com/fwlink/?LinkId=185238)technet.microsoft.com します。  
   
- レポート ビルダー スタンドアロンを起動する、**開始**メニューで、ローカル コンピューター、ユーザーまたは管理者は、ツールを使用するには前に、コンピューターに直接のレポート ビルダーをインストールする必要があります。 スタンドアロン バージョンは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時にインストールされません。別途ダウンロードして、インストールする必要があります。 レポート ビルダーをダウンロードするには、次を参照してください。 [Microsoft® SQL Server® 2012 レポート ビルダー](http://go.microsoft.com/fwlink/?LinkId=401502)します。  
+ レポート ビルダー スタンドアロンを起動する、**開始**メニューで、ローカル コンピューター、ユーザーまたは管理者は、ツールを使用するには前に、コンピューターに直接のレポート ビルダーをインストールする必要があります。 スタンドアロン バージョンは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時にインストールされません。別途ダウンロードして、インストールする必要があります。 レポート ビルダーをダウンロードするには、次を参照してください。 [Microsoft® SQL Server® 2012 レポート ビルダー](https://go.microsoft.com/fwlink/?LinkId=401502)します。  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>レポート マネージャーからレポート ビルダー ClickOnce を起動するには  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48192502"
   
 1.  Web ブラウザーでアドレス バーに次の URL を入力します。  
   
-     http://\<servername >/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
+     http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
   
 2.  Enter キーを押します。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48192502"
   
      レポート ビルダーが開き、レポート サーバー上でレポートを作成したり、レポートを開いたりできます。  
   
-     **注**場合、**新しいドキュメント**メニューに表示されない、**レポート ビルダー レポート**、**レポート ビルダーのモデル**、および**レポートのデータソース**オプション、そのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、次を参照してください[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=154888)で。msdn.microsoft.com します。  
+     **注**場合、**新しいドキュメント**メニューに表示されない、**レポート ビルダー レポート**、**レポート ビルダーのモデル**、および**レポートのデータソース**オプション、そのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、次を参照してください[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=154888)で。msdn.microsoft.com します。  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>[スタート] メニューからレポート ビルダー スタンドアロンを起動するには  
   

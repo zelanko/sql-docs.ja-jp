@@ -1,6 +1,7 @@
 ---
-title: SQL Server 可用性グループ リースの正常性チェック タイムアウト | Microsoft Docs
-ms.custom: ''
+title: 可用性グループ リースの正常性チェック タイムアウトのしくみ
+description: Always On 可用性グループのリース、クラスター、正常性チェック タイムのしくみとガイドライン。
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393985"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874361"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>リース、クラスター、正常性チェック タイムアウトのメカニズムとガイドライン 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性グループのリース、クラスター、正常性チェック タイムアウトのしくみとガイドライン。 
 
 ハードウェア、ソフトウェア、クラスターの構成に応じて、また、稼働時間やパフォーマンスに関するアプリケーション要件に応じて、リース、クラスター、正常性チェック タイムアウトの値を構成する必要があります。 特定のアプリケーションやワークロードでは、ハード エラー後のダウンタイムを制限するためにより積極的な監視が必要になります。 その他のアプリケーションやワークロードでは、リソースの使用量が多いために発生する一時的なネットワークの問題や待機時間に対する許容範囲を広げる必要があり、低速のフェールオーバーでよい場合があります。 
 
@@ -45,7 +45,7 @@ Always On リソース DLL は、内部の SQL Server コンポーネントの�
 
 リースのメカニズムでは、SQL Server と Windows Server フェールオーバー クラスター間の同期が適用されます。 フェールオーバー コマンドが実行されたときに、クラスター サービスは現在のプライマリ レプリカのリソース DLL に対してオフライン呼び出しを行います。 リソース DLL は、まず、ストアド プロシージャを使用して AG をオフラインにしようとします。 このストアド プロシージャが失敗した場合、またはタイムアウトになった場合、クラスター サービスにエラーが報告され、終了コマンドが実行されます。 終了の際に再度同じストアド プロシージャの実行が試行されますが、クラスターはこの時点では、リソース DLL が新しいレプリカで AG がオンラインになる前に成功または失敗を報告するまで待機しません。 この 2 番目のプロシージャ呼び出しが失敗した場合、リソース ホストはリース メカニズムに依存して、インスタンスをオフラインにする必要があります。 AG をオフラインにするためにリソース DLL が呼び出されると、リソース DLL はリース停止イベントを通知し、SQL Server のリース ワーカー スレッドをウェイクアップして AG をオフラインにします。 この停止イベントが通知されない場合でも、リースは期限切れとなり、レプリカは解決中の状態に遷移します。 
 
-リースは主にプライマリ インスタンスとクラスター間の同期メカニズムですが、その他の場合はフェールオーバーが不要なエラー状態が発生することもあります。 たとえば、CPU の高い使用率、メモリ不足状態、メモリ ダンプ生成時の SQL プロセスの応答失敗、システム全体のハング、tempdb のプレッシャーにより、リース ワーカー スレッドにリソースが与えられず、SQL インスタンスからのリース更新が妨げられたり、フェールオーバーが引き起こされたりします。 
+リースは主にプライマリ インスタンスとクラスター間の同期メカニズムですが、その他の場合はフェールオーバーが不要なエラー状態が発生することもあります。 たとえば、CPU の高い使用率、メモリ不足状態 (少ない仮想メモリ、プロセス ページング)、メモリ ダンプ生成時の SQL プロセスの応答停止、システムの応答停止、クラスター (WSFC) のオフラインへの移行 (たとえば、クォーラム損失のため) により、SQL インスタンスからのリース更新が妨げられ、再起動やフェールオーバーが発生する可能性があります。 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>クラスターのタイムアウト値に関するガイドライン 
 
@@ -55,7 +55,7 @@ Always On リソース DLL は、内部の SQL Server コンポーネントの�
 
 ### <a name="relationship-between-cluster-timeout-and-lease-timeout"></a>クラスター タイムアウトとリース タイムアウトの関係 
 
-リース メカニズムの主な機能は、別のノードへのフェールオーバーを実行する間、クラスター サービスがインスタンスと通信できない場合に、SQL Server リソースを利用することです。 クラスターが AG クラスター リソースでオフライン操作を行う際に、クラスター サービスはリソースをオフラインにするために、rhs.exe に対して RPC 呼び出しを行います。 リソース DLL ではストアド プロシージャを使用して、AG をオフラインにするよう SQL Server に指示しますが、このストアド プロシージャが失敗またはタイムアウトになることがあります。 また、リソース ホストは、オフライン呼び出し中に自身のリース更新スレッドを停止します。 最悪の場合、SQL Server により、リースが ½ \* LeaseTimeout で期限切れとなり、インスタンスが解決中の状態に遷移します。 フェールオーバーは複数の異なるパーティによって開始できますが、クラスター状態のビューがクラスターと SQL Server インスタンス間で一貫していることが非常に重要となります。 たとえば、プライマリ インスタンスとクラスターの残りの部分との接続が切断されたとします。 クラスター内の各ノードは、クラスター タイムアウト値のため、同じような時刻にエラーを判断しますが、プライマリ SQL Server インスタンスと対話して、プライマリ ロールを放棄するよう強制できるのはプライマリ ノードのみです。 
+リース メカニズムの主な機能は、別のノードへのフェールオーバーを実行する間、クラスター サービスがインスタンスと通信できない場合に、SQL Server リソースをオフラインにすることです。 クラスターが AG クラスター リソースでオフライン操作を行う際に、クラスター サービスはリソースをオフラインにするために、rhs.exe に対して RPC 呼び出しを行います。 リソース DLL ではストアド プロシージャを使用して、AG をオフラインにするよう SQL Server に指示しますが、このストアド プロシージャが失敗またはタイムアウトになることがあります。 また、リソース ホストは、オフライン呼び出し中に自身のリース更新スレッドを停止します。 最悪の場合、SQL Server により、リースが ½ \* LeaseTimeout で期限切れとなり、インスタンスが解決中の状態に遷移します。 フェールオーバーは複数の異なるパーティによって開始できますが、クラスター状態のビューがクラスターと SQL Server インスタンス間で一貫していることが非常に重要となります。 たとえば、プライマリ インスタンスとクラスターの残りの部分との接続が切断されたとします。 クラスター内の各ノードは、クラスター タイムアウト値のため、同じような時刻にエラーを判断しますが、プライマリ SQL Server インスタンスと対話して、プライマリ ロールを放棄するよう強制できるのはプライマリ ノードのみです。 
 
 プライマリ ノードの観点から、クラスター サービスはクォーラムを失い、サービスは自身を終了し始めます。 クラスター サービスはリソース ホストに対して RPC 呼び出しを行い、プロセスを終了します。 SQL Server インスタンスで AG をオフラインにする作業は、この終了呼び出しで行う必要があります。 このオフライン呼び出しは T-SQL を使用して行われますが、SQL とリソース DLL の間の接続が正常に確立されることを保証できません。 
 
@@ -74,13 +74,13 @@ Always On リソース DLL は、内部の SQL Server コンポーネントの�
 AG のエラー状態レベルによって、正常性チェックのエラー状態が変わります。 あらゆるエラー レベルで、AG 要素が `sp_server_diagnostics` によって正常でないと報告された場合、正常性チェックは失敗します。 各レベルは、その下のレベルからエラー状態をすべて継承します。 
 
 
-| レベル | インスタンスが停止と見なされる状態
+| Level | インスタンスが停止と見なされる状態
 |:---|---
-| 1: OnServerDown | AG 以外のすべてのリソースが失敗した場合、正常性チェックでアクションは行われません。 AG データが 5 間隔内、または 5/3 \* HealthCheckTimeout 内で受信されない場合
-| 2: OnServerUnresponsive | HealthCheckTimeout の `sp_server_diagnostics` からデータが受信されない場合
-| 3: OnCriticalServerError | (既定値) システム コンポーネントがエラーを報告する場合
-| 4: OnModerateServerError | リソース コンポーネントがエラーを報告する場合 
-| 5:  OnAnyQualifiedFailureConitions |  クエリ処理コンポーネントがエラーを報告する場合
+| 1:OnServerDown | AG 以外のすべてのリソースが失敗した場合、正常性チェックでアクションは行われません。 AG データが 5 間隔内、または 5/3 \* HealthCheckTimeout 内で受信されない場合
+| 2:OnServerUnresponsive | HealthCheckTimeout の `sp_server_diagnostics` からデータが受信されない場合
+| 3:OnCriticalServerError | (既定値) システム コンポーネントがエラーを報告する場合
+| 4:OnModerateServerError | リソース コンポーネントがエラーを報告する場合 
+| 5:OnAnyQualifiedFailureConitions |  クエリ処理コンポーネントがエラーを報告する場合
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>クラスターと Always On のタイムアウト値の更新 
 
@@ -114,13 +114,13 @@ WSFC 構成には、クラスター タイムアウト値を判断する必要�
 リースのメカニズムは、WSFC クラスター内の各 AG に固有の単一の値によって制御されます。 フェールオーバー クラスター マネージャーでこの値に移動するには:
 
 1. ロール タブで、ターゲットの AG ロールを見つけます。 ターゲットの AG ロールをクリックします。 
-2. ウィンドウの下部にある AG リソースを右クリックして、**[プロパティ]** を選択します。 
+2. ウィンドウの下部にある AG リソースを右クリックして、 **[プロパティ]** を選択します。 
 
    ![フェールオーバー クラスター マネージャー](media/availability-group-lease-healthcheck-timeout/image2.png) 
 
 3. ポップアップ ウィンドウで、プロパティ タブに移動します。そこに、この AG に固有の値の一覧があります。 LeaseTimeout 値をクリックして、これを変更します。 
 
-   ![[プロパティ]](media/availability-group-lease-healthcheck-timeout/image3.png) 
+   ![Properties](media/availability-group-lease-healthcheck-timeout/image3.png) 
 
 
    AG の構成に応じて、リスナー、共有ディスク、ファイル共有などのリソースが追加される可能性があります。これらのリソースに追加の構成は必要ありません。 
@@ -152,10 +152,17 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | タイムアウトの設定 | 用途 | [次の値の間] | 使用法 | IsAlive と LooksAlive | 原因 | 結果 
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | リースのタイムアウト </br> **既定値: 20000** | スプリット ブレインを防ぐ | プライマリからクラスター </br> (HADR) | [Windows イベント オブジェクト](/windows/desktop/Sync/event-objects)| 両方で使用される | OS の応答停止、仮想メモリの不足、ワーキング セット ページング、ダンプの生成、固定された CPU、WSFC ダウン (クォーラムの損失) | AG リソースのオフライン - オンライン、フェールオーバー |  
+ | セッション タイムアウト </br> **既定値: 10000** | プライマリとセカンダリの間の通信の問題を通知する | セカンダリからプライマリ </br> (HADR) | [TCP ソケット (DBM エンドポイント経由で送信されるメッセージ)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 両方で使用されない | ネットワーク通信、 </br> セカンダリでの問題 - ダウン、OS の応答停止、リソースの競合 | セカンダリ - 切断 | 
+ |正常性チェック タイムアウト  </br> **既定値: 30000** | プライマリ レプリカの正常性を判断しようとしている間のタイムアウトを示す | クラスターからプライマリ </br> (FCI、HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 両方で使用される | エラー条件が満たされる、OS の応答停止、仮想メモリの不足、ワーキング セットのトリミング、ダンプの生成、WSFC (クォーラムの損失)、スケジューラの問題 (デッド ロックしたスケジューラ)| AG リソース オフライン - オンラインまたはフェールオーバー、FCI 再起動/フェールオーバー |  
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>参照    
 
-[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

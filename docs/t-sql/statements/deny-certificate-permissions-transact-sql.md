@@ -15,15 +15,14 @@ helpviewer_keywords:
 - DENY statement, certificates
 - denying permissions [SQL Server], certificates
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 21eb0fdce01f4c48f11f084ff3bf1ba8a1354b1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 2b9314935f347fb4c8768cfaa192c5df0c18d1ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114931"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY (証明書の権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ DENY permission  [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  *permission*  
- 証明書に対して拒否できる権限を指定します。 下の表をご覧ください。  
+ 証明書に対して拒否できる権限を指定します。 以下に一覧を示します。  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  権限を拒否する証明書を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

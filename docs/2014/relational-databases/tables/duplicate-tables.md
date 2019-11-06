@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - copying tables
@@ -16,12 +15,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c574ac8153e6d7032bc49f4438e1d0c8241f5cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62760754"
 ---
 # <a name="duplicate-tables"></a>テーブルの複製
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、新しいテーブルを作成して既存のテーブルから列情報をコピーすることで既存のテーブルを複製できます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48093649"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48093649"
   
 6.  **[編集]** メニューの **[貼り付け]** をクリックします。  
   
-7.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+7.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいテーブルの名前を入力し、 **[OK]** をクリックします。  
   

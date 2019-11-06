@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetEnable Method (ServerNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b766ec37e22169a0f9e5716826713345405f5345
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3dee294e84ebe0fa8577630886ee00255e928ac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63055702"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>SetEnable メソッド (ServerNetworkProtocol クラス)
   サーバー ネットワーク プロトコルを有効にします。  
@@ -48,7 +46,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>関連項目  
+ [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

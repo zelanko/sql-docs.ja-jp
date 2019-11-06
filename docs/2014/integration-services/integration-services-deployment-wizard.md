@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058006"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 配置ウィザード
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 配置ウィザードでは、プロジェクト配置モデルを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの SSISDB カタログにプロジェクトが配置されます。  
@@ -27,11 +26,11 @@ ms.locfileid: "48086302"
   
  このウィザードでは、次の 4 つの手順を行います。 をクリックして **[次へ]** 次の手順に移動するまたは**前**前の手順に戻ります。  
   
-1.  **ソースの選択**– Select、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に展開するプロジェクト。  
+1.  **ソースの選択**- 選択、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に展開するプロジェクト。  
   
-2.  **変換先を選択します。** – プロジェクトの配置先を選択します。  
+2.  **変換先を選択します。** -プロジェクトの配置先を選択します。  
   
-3.  **レビュー** – 選択内容を表示します。  
+3.  **レビュー** -選択内容を表示します。  
   
 4.  **配置/結果**: プロジェクトを配置し、結果が表示されます。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48086302"
  **[閉じる]** をクリックしてウィザードを終了します。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services サーバーへのプロジェクトを配置します。](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [プロジェクトとパッケージの展開](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

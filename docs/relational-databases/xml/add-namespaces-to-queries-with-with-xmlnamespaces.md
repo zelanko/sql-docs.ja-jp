@@ -19,15 +19,14 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: cede10b01e1300a1b354cdc5a0d1dd5f80d5a006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095453"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES を使用したクエリへの名前空間の追加
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ FOR XML RAW, ELEMENTS XSINIL
  結果を次に示します。  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +180,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- 次の PATH モード クエリで示すように、WITH XMLNAMESPACES を使用して明示的に定義せずに使用できる名前空間プレフィックスは xml のみです。 また、プレフィックスが宣言されている場合は、 https://www.w3.org/XML/1998/namespace 名前空間にバインドする必要があります。 SELECT 句に指定されている名前は、WITH XMLNAMESPACES を使用して明示的に定義されていない xml 名前空間を参照します。  
+ 次の PATH モード クエリで示すように、WITH XMLNAMESPACES を使用して明示的に定義せずに使用できる名前空間プレフィックスは xml のみです。 また、プレフィックスが宣言されている場合は、 http://www.w3.org/XML/1998/namespace 名前空間にバインドする必要があります。 SELECT 句に指定されている名前は、WITH XMLNAMESPACES を使用して明示的に定義されていない xml 名前空間を参照します。  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -220,7 +219,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 上記のクエリでは、**query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 例 :  
+ 上記のクエリでは、**query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 例:  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

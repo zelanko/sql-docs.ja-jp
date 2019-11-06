@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 054cc0f649a120805fb3ed2f5f58911959ddceaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901377"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL コマンド
 プログラムによってテーブルの構造を変更します。  
@@ -70,7 +69,7 @@ ALTER TABLE TableName1
  ALTER [COLUMN] *FieldName1*  
  変更する既存のフィールドの名前を指定します。  
   
- *FieldType* [( *nFieldWidth* [、 *nPrecision*])  
+ *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
  新しいまたは変更されたフィールドのフィールドの型、フィールドの幅、およびフィールドの有効桁数 (小数点以下桁数の数) を指定します。  
   
  *FieldType*を示す、フィールドの 1 つの文字は、[データ型](../../odbc/microsoft/visual-foxpro-field-data-types.md)します。 一部のフィールド データ型を指定することを必要と*nFieldWidth*または*nPrecision*またはその両方です。  
@@ -85,7 +84,7 @@ ALTER TABLE TableName1
  確認*lExpression1*  
  フィールドの検証規則を指定します。 *lExpression1*論理式を評価する必要があり、ユーザー定義関数またはストアド プロシージャを指定できます。 空のレコードを追加すると、されるたびに検証規則がチェックされます。 検証規則が追加されたレコードのフィールドが空白の値を許可しない場合は、エラーが生成されます。  
   
- エラー *cMessageText1*  
+ ERROR *cMessageText1*  
  フィールドの検証規則がエラーを生成するときにエラー メッセージが表示されますを指定します。  
   
  既定の*eExpression1*  
@@ -128,7 +127,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  セット チェック*lExpression2*  
  既存のフィールドに対して新しい検証規則を指定します。 *lExpression2*論理式を評価する必要があり、ユーザー定義関数またはストアド プロシージャがあります。  
   
- エラー *cMessageText2*  
+ ERROR *cMessageText2*  
  フィールドの検証規則がエラーを生成するときにエラー メッセージが表示されますを指定します。 参照または編集ウィンドウ内でデータが変更されたときにのみ、メッセージが表示されます。  
   
  DROP DEFAULT  
@@ -145,7 +144,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  セット チェック*lExpression3*  
  テーブルの検証規則を指定します。 *lExpression3*論理式を評価する必要があり、ユーザー定義関数またはストアド プロシージャがあります。  
   
- エラー *cMessageText3*  
+ ERROR *cMessageText3*  
  テーブルの検証ルールがエラーを生成するときに、エラー メッセージが表示されますを指定します。 参照または編集ウィンドウ内でデータが変更されたときにのみ、メッセージが表示されます。  
   
  チェックを削除します。  
@@ -192,6 +191,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  変更するテーブルは、データベースの ALTER TABLE - SQL には、データベースを排他的に使用が必要です。 排他的に使用するデータベースを開くには、するには、開くデータベースの排他を含めます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE TABLE - SQL コマンド](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX コマンド](../../odbc/microsoft/index-command.md)

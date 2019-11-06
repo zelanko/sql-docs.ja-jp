@@ -1,6 +1,7 @@
 ---
-title: 可用性モード (Always On 可用性グループ) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの可用性モードの違い
+description: Always On 可用性グループの各種可用性モードの説明。
+ms.custom: seodec18
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934844"
 ---
-# <a name="availability-modes-always-on-availability-groups"></a>可用性モード (AlwaysOn 可用性グループ)
+# <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性モードの違い
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の *可用性モード* は、可用性レプリカが同期コミット モードで動作できるかどうかを指定するレプリカのプロパティです。 可用性レプリカごとに、可用性モードを同期コミット モード、非同期コミット モード、または構成のみモードとして構成する必要があります。  プライマリ レプリカが *非同期コミット モード*で構成されている場合、プライマリ レプリカはセカンダリ レプリカによる受信トランザクション ログ レコードのディスクへの書き込みを ( *ログ書き込み*) 待機しません。 特定のセカンダリ レプリカが非同期コミット モードで構成されている場合、プライマリ レプリカはそのセカンダリ レプリカによるログ書き込みを待機しません。 プライマリ レプリカとセカンダリ レプリカの両方が *同期コミット モード*で構成されている場合、プライマリ レプリカはログが書き込まれたことをセカンダリ レプリカが確認するまで待機します (プライマリの *セッション タイムアウト期間*内に、セカンダリ レプリカがプライマリ レプリカに対する ping に失敗した場合を除きます)。 
@@ -32,18 +32,6 @@ ms.locfileid: "52544042"
 
 > [!NOTE]  
 >  セカンダリ レプリカがプライマリのセッション タイムアウト期間を超えた場合、プライマリ レプリカはそのセカンダリ レプリカに対して一時的に非同期コミット モードに移行します。 セカンダリ レプリカがプライマリ レプリカと再接続すると、同期コミット モードが再開されます。  
-  
- **このトピックの内容**  
-  
--   [サポートされる可用性モード](#SupportedAvModes)  
-  
--   [Asynchronous-Commit Availability Mode](#AsyncCommitAvMode)  
-  
--   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> サポートされる可用性モード  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、次のように、非同期コミット モード、同期コミット モード、および構成のみモードの 3 種類の可用性モードをサポートします。  
@@ -66,8 +54,8 @@ ms.locfileid: "52544042"
   
 |現在のプライマリ レプリカ|自動フェールオーバー ターゲット|同期コミット モードの動作の対象|非同期コミット モードの動作の対象|自動フェールオーバー|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 と 03|04|[ユーザー アカウント制御]|  
-|02|01|01 と 03|04|[ユーザー アカウント制御]|  
+|01|02|02 と 03|04|はい|  
+|02|01|01 と 03|04|はい|  
 |03||01 と 02|04|いいえ|  
 |04|||01、02、03|いいえ|  
   
@@ -185,7 +173,7 @@ ms.locfileid: "52544042"
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

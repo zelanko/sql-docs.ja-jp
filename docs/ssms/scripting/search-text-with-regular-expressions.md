@@ -7,37 +7,35 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1dba6a77288a4bebba70372ecf6fbd7a1f05dda6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538787"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264171"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。  **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
+
+正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
   
-#### <a name="to-find-using-regular-expressions"></a>正規表現を使用して検索を行うには  
+## <a name="find-using-regular-expressions"></a>正規表現を使用して検索を行う  
   
-1.  **[クイック検索]** 、 **[フォルダーを指定して検索]**、 **[クイック置換]**、 **[フォルダーを指定して置換]** の各操作を実行するときに **[検索する文字列]** フィールドで正規表現が使用できるようにするには、 **[検索オプション]** の下の **[条件]** をオンにし、 **[正規表現]** を選択します。  
+1.  **[クイック検索]** 、 **[フォルダーを指定して検索]** 、 **[クイック置換]** 、 **[フォルダーを指定して置換]** の各操作を実行するときに **[検索する文字列]** フィールドで正規表現が使用できるようにするには、 **[検索オプション]** の下の **[条件]** をオンにし、 **[正規表現]** を選択します。  
   
 2.  **[検索する文字列]** フィールドの横にある三角形の **参照一覧** ボタンが使用可能になります。 このボタンをクリックすると、一般的に使用される正規表現の一覧が表示されます。 正規表現ビルダーから項目を選択すると、その項目が **[検索する文字列]** の文字列に挿入されます。  
   
 > [!NOTE]  
->  **[検索する文字列]** の文字列で使用できる正規表現の構文と、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework のプログラミングで有効な正規表現の構文には違いがあります。 たとえば、 **[検索と置換]** では、タグ付き正規表現に中かっこ {} を使用します。 したがって、正規表現「zo{1}」は、「zo」の後にタグ 1 が続くすべての項目 (「Alonzo1」、「Gonzo1」など) と一致します。 ところが、.NET Framework の場合は、量化子に中かっこ {} を使用します。 したがって、正規表現「zo{1}」は、「z」の後に 1 個の「o」が続くすべての項目と一致します (つまり、「zone」は一致項目ですが、「zoo」は違います)。  
+> **[検索する文字列]** の文字列で使用できる正規表現の構文と、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework のプログラミングで有効な正規表現の構文には違いがあります。 たとえば、 **[検索と置換]** では、タグ付き正規表現に中かっこ {} を使用します。 したがって、正規表現「zo{1}」は、「zo」の後にタグ 1 が続くすべての項目 (「Alonzo1」、「Gonzo1」など) と一致します。 ところが、.NET Framework の場合は、量化子に中かっこ {} を使用します。 したがって、正規表現「zo{1}」は、「z」の後に 1 個の「o」が続くすべての項目と一致します (つまり、「zone」は一致項目ですが、「zoo」は違います)。  
   
  **参照一覧**から使用できる正規表現を以下にまとめます。  
   
@@ -137,5 +135,3 @@ ms.locfileid: "52538787"
 ## <a name="see-also"></a>参照  
  [検索と置換](../../relational-databases/scripting/search-and-replace.md)   
  [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)  
-  
-  

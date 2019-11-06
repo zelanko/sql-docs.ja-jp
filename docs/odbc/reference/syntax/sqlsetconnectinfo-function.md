@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1014e545e237c80f71660a1e6bd24dce56ca78b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5d8087e7672dd331d0b078cea4930be7582a026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093004"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 関数
 **準拠**  
- バージョンで導入されました ODBC 3.81 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLSetConnectInfo**のアプリケーションの接続情報のトークンに、データ ソース、ユーザーの ID とパスワードを設定するため[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
+  
 SQLRETURN  SQLSetConnectInfo(  
                 SQLHDBC_INFO_TOKEN   TokenHandle,  
                 WCHAR *              ServerName,  
@@ -56,7 +56,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength2*  
  [入力]長さ **UserName*文字数。  
   
- *[認証]*  
+ *\[認証]*  
  [入力]認証の文字列 (通常はパスワード)。  
   
  *NameLength3*  

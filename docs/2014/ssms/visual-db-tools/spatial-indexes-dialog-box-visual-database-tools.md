@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049136"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
   **[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、 **[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
@@ -88,7 +88,7 @@ ms.locfileid: "48113362"
  空間インデックスの名前を表示します。 新しいインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
  **[説明]**  
- インデックスの説明です。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
+ インデックスの説明です。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン ( **[...]** ) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
  **[テーブル デザイナー] カテゴリ**  
  展開してこの空間インデックスのプロパティに関する情報を表示します。  
@@ -109,7 +109,7 @@ ms.locfileid: "48113362"
  **[ページのロックを許可]**  
  該当するインデックスでページレベルのロックを許可するかどうかを指定します。 ページレベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。  
   
- **再計算する****統計情報**   
+ **統計を再計算します。**  
  インデックスの作成時に、統計情報を新たに計算するかどうかを指定します。 統計情報の再計算により、インデックスの構築には前よりも時間がかかりますが、通常はクエリのパフォーマンスが向上します。  
   
  **[行のロックを許可]**  

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109673"
 ---
 # <a name="create-a-model-using-report-manager"></a>レポート マネージャーを使用してモデルを作成する
   レポート マネージャーを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のキューブ、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータベース、Oracle のデータベースからモデルを生成できます。 レポート モデルは、レポート サーバーにパブリッシュされている共有データ ソースから生成されます。 まだ共有データ ソースがない場合は、作成する必要があります。  
@@ -41,15 +40,15 @@ ms.locfileid: "48064852"
   
 5.  **[このデータ ソースを有効にする]** チェック ボックスがオンになっていることを確認します。  
   
-6.  **[接続の種類]** ボックスの一覧で、接続先のデータ ソースの種類を選択します。 接続の種類は、 **[Oracle]**、 **[Microsoft SQL Server]** 、 **[Microsoft SQL Server Analysis Services]** のいずれかである必要があります。  
+6.  **[接続の種類]** ボックスの一覧で、接続先のデータ ソースの種類を選択します。 接続の種類は、次のいずれかである必要があります。**Oracle**、 **Microsoft SQL Server**または**Microsoft SQL Server Analysis Services**します。  
   
 7.  **[接続文字列]** ボックスに、データベースを指す接続文字列を入力します。  
   
 8.  レポート ビルダーのユーザーがデータベースに接続するために使用する必要のある接続方法を選択します。  
   
-    -   Windows 認証 : オペレーティング システムで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザーを認証する場合には、このオプションを選択します。 このオプションを選択すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、パスワードの暗号化などの Windows のセキュリティ機能を使用してユーザーを認証します。 このオプションを選択することを強くお勧めします。  
+    -   Windows 認証:オペレーティング システムに認証する場合は、このオプションを選択[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ユーザー。 このオプションを選択すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、パスワードの暗号化などの Windows のセキュリティ機能を使用してユーザーを認証します。 このオプションを選択することを強くお勧めします。  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証: は、ユーザーを使用する場合にこのオプションを選択、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログイン アカウントを作成します。 ユーザーは、正しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログイン名とパスワードを入力する必要があります。  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証:ユーザーを使用する場合は、このオプションを選択、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログイン アカウントを作成します。 ユーザーは、正しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログイン名とパスワードを入力する必要があります。  
   
         > [!CAUTION]  
         >  できるだけ Windows 認証を使用してください。  

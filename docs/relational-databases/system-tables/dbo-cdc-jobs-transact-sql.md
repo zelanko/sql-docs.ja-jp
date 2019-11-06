@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 321e6b1809f6dc8f30710c98665316c50a6ab50a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c9668c234728dc34952a7095889fe6ba5cfd06a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084701"
 ---
 # <a name="dbocdcjobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

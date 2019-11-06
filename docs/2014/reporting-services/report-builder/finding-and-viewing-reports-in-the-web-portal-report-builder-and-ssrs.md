@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0ea0eaef40940205b03aaad984d9af7b8782888d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 22d183aa8ddbad06b0dc949bfe1780f360eb96ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107871"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../report-server/configure-web-portal.md)」を参照してください。  
   
- レポート マネージャーを使用するときに表示される内容は、レポート サーバーに対してシステム管理者が設定した権限によって決まります。 権限はロールの割り当てによって与えられます。 レポートを検索および表示するには、ロールの割り当てに "レポートの表示" タスクが含まれている必要があります。 レポート サーバーでレポートを検索するには、名前または説明からレポートを検索するか、レポート サーバーのフォルダーを参照します。 検索または参照できるのは、レポート サーバーにパブリッシュまたはアップロードされたレポートのみです。 レポートを検索する方法の詳細については、次を参照してください。[レポートおよびその他の項目を検索する&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)します。  
+ レポート マネージャーを使用するときに表示される内容は、レポート サーバーに対してシステム管理者が設定した権限によって決まります。 権限はロールの割り当てによって与えられます。 レポートを検索および表示するには、ロールの割り当てに "レポートの表示" タスクが含まれている必要があります。 レポート サーバーでレポートを検索するには、名前または説明からレポートを検索するか、レポート サーバーのフォルダーを参照します。 検索または参照できるのは、レポート サーバーにパブリッシュまたはアップロードされたレポートのみです。 レポートの検索方法の詳細については、「 [レポートおよび他のアイテムの検索 &#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,7 +44,7 @@ ms.locfileid: "48144592"
   
  フォルダー階層で表示されているすべてのレポートにすぐアクセスできるとは限りません。 レポートによっては、ユーザー名とパスワードがユーザーに要求され、そのレポートのデータ ソースへのアクセス権がユーザーにあるかどうか、検証が行われるものもあります。 レポート マネージャーでレポートを開く方法の詳細については、「[レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)」を参照してください。  
   
- レポート ビルダーからレポート サーバーのレポートを直接参照したり開いたりすることもできます。 詳細については、次を参照してください。[レポートおよびその他の項目を検索する&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)します。  
+ レポート ビルダーからレポート サーバーのレポートを直接参照したり開いたりすることもできます。 詳細については、「 [レポートおよび他のアイテムの検索 &#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="to-search-for-a-items"></a>アイテムを検索するには  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48144592"
 -   レポート内の特定のテキストを検索するには、レポートの最上部にあるツール バーを使用します。  
   
 ## <a name="see-also"></a>参照  
- [レポートおよびその他の項目を検索する&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [レポートおよび他のアイテムの検索 &#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

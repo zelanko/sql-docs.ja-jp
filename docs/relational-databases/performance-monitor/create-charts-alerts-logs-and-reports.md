@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], charts and reports
@@ -17,15 +17,14 @@ helpviewer_keywords:
 - System Monitor [SQL Server], logs
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e3fd06d594a3fd6515bdad7823a40617657b2d5
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 5e67b62ec00e2dd98ff4289c1f725892592340e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024758"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>グラフ、警告、ログ、およびレポートの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "52158440"
   
  現在発生しているイベントを監視する場合など、ローカル コンピューターまたはリモート コンピューターを短い時間、リアルタイムで監視するのにグラフは便利です。  
   
-## <a name="alerts"></a>オブジェクト エクスプローラーには  
+## <a name="alerts"></a>警告  
  システム モニターで警告を使用すると、特定のイベントを追跡して、要求に応じてそのイベントを通知できます。 警告ログは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のオブジェクトに対して選択したカウンターとインスタンスについて現在のパフォーマンスを監視できます。 カウンターが指定した値を超えたときに、ログはそのイベントの日付と時刻を記録します。 イベントはネットワーク警告を生成することもできます。 また、イベントが初めて発生したとき、またはイベントが発生するたびに、特定のプログラムを実行できます。 たとえば、警告はすべてのシステム管理者に対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのディスク容量が不足していることを示すネットワーク メッセージを送信できます。  
   
 ## <a name="logs"></a>ログ  

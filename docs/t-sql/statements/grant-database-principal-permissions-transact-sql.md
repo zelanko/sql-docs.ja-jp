@@ -22,16 +22,15 @@ helpviewer_keywords:
 - GRANT statement, roles
 - application roles [SQL Server], permissions
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b899bc08ebdff746792cd8070ca966ca6f6edb84
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: b681050bdcb101078a8dbab6027e8a2fc162ba4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065505"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (データベース プリンシパルの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

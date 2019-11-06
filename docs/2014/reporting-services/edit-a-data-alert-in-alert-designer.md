@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - editing, alerts
 - updating, alerts
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 511a057721f1dbd8273fe1909c4eaae31dd128f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 948bf1fd8145da9db9d0e0b81beabb8e7b3efaf2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109248"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>警告デザイナーでのデータ警告の編集
   編集対象のデータ警告定義は、データ警告マネージャーから開きます。 警告の定義は、作成したユーザーのみが編集できます。 詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)」をご覧ください。  
@@ -38,7 +37,7 @@ ms.locfileid: "48119442"
   
      データ警告デザイナーに警告定義が表示されます。  
   
-2.  ルール、スケジュール設定、および電子メールの設定を更新します。 詳細については、次を参照してください。[データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)と[データ警告デザイナーでデータ アラートを作成して](create-a-data-alert-in-data-alert-designer.md)します。  
+2.  ルール、スケジュール設定、および電子メールの設定を更新します。 詳細については、「 [データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md) 」および「 [警告デザイナーでのデータ警告の作成](create-a-data-alert-in-data-alert-designer.md)」をご覧ください。  
   
     > [!NOTE]  
     >  別のデータ フィードを選択することはできません。 異なるデータ フィードを使用するには、新しいデータ警告定義を作成する必要があります。  
@@ -50,6 +49,6 @@ ms.locfileid: "48119442"
   
 ## <a name="see-also"></a>参照  
  [警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services のデータ警告](../ssms/agent/alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

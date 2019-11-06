@@ -5,19 +5,17 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 907c99e6d3acb5bbc66af72ecf594300e27ea14a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 0ee2921a8e7178385651dc52c48b7bf82866dc49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092579"
 ---
 # <a name="member-revision-history-master-data-services"></a>メンバー リビジョン履歴 (マスター データ サービス)
 
@@ -72,7 +70,7 @@ ms.locfileid: "47772350"
 |----------------------|-----------|  
 |メンバー リビジョン履歴のロールバック|[メンバー リビジョン履歴のロールバック (マスター データ サービス)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)   
  [システム設定 (マスター データ サービス)](../master-data-services/system-settings-master-data-services.md)  
   

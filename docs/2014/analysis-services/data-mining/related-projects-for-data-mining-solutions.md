@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082986"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
   データ マイニング ソリューションに最低限必要なのは、データ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルを定義した、データ マイニング プロジェクトです。 ただし、データ マイニング モデルを日々の意志決定に使用する場合は、データ マイニングを予測分析ソリューションの他の部分と統合し、次のプロセスやコンポーネントを含めることが重要です。  
@@ -66,7 +65,7 @@ ms.locfileid: "48106872"
   
 -   [データ クレンジング](../../data-quality-services/data-cleansing.md)  
   
--   [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [データ プロファイル タスク](../../integration-services/control-flow/data-profiling-task.md)  
   
@@ -162,7 +161,7 @@ ms.locfileid: "48106872"
   
  詳細については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
- フルテキスト インデックスの作成後に保存される単語のバージョンは、圧縮形式のトークンです。 フルテキスト インデックスに対する後続のクエリにより、その言語のルールに基づいて特定の単語の変化形が複数生成されるため、あいまい一致も漏らさず照合されます。 たとえば、格納されているトークンが "run" であっても、クエリ エンジンは "running"、"ran"、および "runner" の各用語も検索します。これらは、原形の単語 "run" からルールどおりに派生した変化形であるためです。  
+ フルテキスト インデックスの作成後に保存される単語のバージョンは、圧縮形式のトークンです。 フルテキスト インデックスに対する後続のクエリにより、その言語のルールに基づいて特定の単語の変化形が複数生成されるため、あいまい一致も漏らさず照合されます。 たとえばが格納されているトークンが"run"、クエリ エンジンも検索用語を"running"、"ran"、および"runner"これらは、定期的に派生原形の単語"run"のため、します。  
   
  ユーザー類義語辞典を作成および構築して、シノニムの格納、検索結果の精度の向上、用語の分類を行うこともできます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 詳細については、「 [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)」を参照してください。  
   
@@ -202,7 +201,7 @@ ms.locfileid: "48106872"
 -   すべてのフルテキスト言語でセマンティック インデックスの作成がサポートされているわけではありません。 サポートされている言語の一覧については、「[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル ソリューション&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [テーブル モデル ソリューション&#40;SSAS 表形式&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [多次元モデル ソリューション &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [テーブル モデル ソリューション &#40;SSAS テーブル&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

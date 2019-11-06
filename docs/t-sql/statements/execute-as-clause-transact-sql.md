@@ -23,15 +23,14 @@ helpviewer_keywords:
 - switching execution context
 - functions [SQL Server], execution context
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 17d2a3ce8ff7fba2cc8e34472911287e25c61e08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761060"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155059"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ Queues
   
 ```  
   
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -89,7 +88,7 @@ DDL Triggers with Database Scope
 >  **sys.service_queues** カタログ ビューの **execute_as_principal_id** 列のユーザー ID を変更するには、ALTER QUEUE ステートメントで EXECUTE AS 設定を明示的に指定する必要があります。  
   
  OWNER  
- モジュール内のステートメントを、モジュールの現在の所有者のコンテキストで実行します。 モジュールの所有者が指定されていない場合、そのモジュールのスキーマの所有者が使用されます。 OWNER は、DDL トリガーまたはログオン トリガーに対しては指定できません。  
+ モジュール内のステートメントがモジュールの現在の所有者のコンテキストで実行されるように指定します。 モジュールの所有者が指定されていない場合、そのモジュールのスキーマの所有者が使用されます。 OWNER は、DDL トリガーまたはログオン トリガーに対しては指定できません。  
   
 > [!IMPORTANT]  
 >  OWNER は、単一アカウントにマップする必要があります。ロールまたはグループにはマップできません。  
@@ -111,7 +110,7 @@ DDL Triggers with Database Scope
   
  所有権の継承には、次のような制限があります。  
   
--   DML ステートメントの SELECT、INSERT、UPDATE、DELETE にのみ適用されます。  
+-   次の DML ステートメントにのみ適用されます:SELECT、INSERT、UPDATE、DELETE。  
   
 -   呼び出し元のオブジェクトと呼び出されたオブジェクトの所有者は同一である必要があります。  
   

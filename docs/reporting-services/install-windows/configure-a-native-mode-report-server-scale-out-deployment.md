@@ -9,14 +9,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710643"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500580"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成
 
@@ -27,6 +27,9 @@ Reporting Services ネイティブ モードでは、1 つのレポート サー
 Power BI Report Server の場合、任意のスケール アウト環境向けのロード バランサー上でクライアント アフィニティ (スティッキー セッションと呼ばれることもある) を構成することで、適切なパフォーマンスを保証する必要があります。  
   
 SQL Server 2016 Reporting Services 以前の場合、SharePoint モードのレポート サーバーは、SharePoint 製品のインフラストラクチャを利用してスケールアウトを行います。SharePoint モードのスケールアウトは、SharePoint モードのレポート サーバーを SharePoint ファームに追加することによって実行されます。 SharePoint モードでのスケールアウトについては、 「[ファームへのレポート サーバーの追加 &#40;SSRS スケールアウト&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」を参照してください。  
+
+> [!NOTE]
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
  
   *スケールアウト配置* は次のシナリオで使用します。  
   
@@ -66,7 +69,7 @@ SQL Server 2016 Reporting Services 以前の場合、SharePoint モードのレ�
   
 1.  レポート サーバー データベースをホストするコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールします。 少なくとも、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をインストールします。  
   
-2.  必要に応じて、レポート サーバーでリモート接続を有効にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンの中には、既定で TCP/IP および名前付きパイプのリモート接続が有効になっていないバージョンもあります。 リモート接続が許可されているかどうかを確認するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、対象インスタンスのネットワーク構成設定を確認します。 リモート インスタンスが名前付きインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが有効になっていることと、対象サーバーで実行されていることを確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser によって、名前付きインスタンスへの接続に使用されるポート番号が提供されます。 
+2.  必要に応じて、レポート サーバーでリモート接続を有効にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンの中には、既定で TCP/IP および名前付きパイプのリモート接続が有効になっていないバージョンもあります。 リモート接続が許可されているかどうかを確認するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、対象インスタンスのネットワーク構成設定を確認します。 リモート インスタンスが名前付きインスタンスの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが有効になっていることと、ターゲット サーバーで実行されていることを確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser によって、名前付きインスタンスへの接続に使用されるポート番号が提供されます。 
 
 ## <a name="service-accounts"></a>サービス アカウント
 
@@ -143,7 +146,7 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>次の手順
 
-[サービス アカウントの構成](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[サービス アカウントを構成](configure-the-report-server-service-account-ssrs-configuration-manager.md)
 [URL の構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [ネイティブ モードのレポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [レポート サーバーの URL の構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   

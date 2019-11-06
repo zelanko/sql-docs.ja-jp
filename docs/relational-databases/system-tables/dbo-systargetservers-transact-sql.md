@@ -19,30 +19,29 @@ helpviewer_keywords:
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c8297c02d66671ea41b8a2dae4462514d4ef2fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c6304b108d75d6fe9ba00ccccdae322bf7cedde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095839"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マルチサーバー操作ドメインに現在参加している対象サーバーを記録します。  
+  マルチサーバー操作ドメインに現在参加しているターゲット サーバーを記録します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|サーバー id。|  
 |**server_name**|**sysname**|サーバー名。|  
-|**location**|**nvarchar(200)**|指定した対象サーバーの場所。|  
+|**location**|**nvarchar(200)**|指定したターゲット サーバーの場所。|  
 |**time_zone_adjustment**|**int**|グリニッジ標準時 (GMT) との時差 (時間数単位)。|  
-|**enlist_date**|**datetime**|指定した対象サーバーが参加した日付と時刻。|  
+|**enlist_date**|**datetime**|指定したターゲット サーバーが参加した日付と時刻。|  
 |**last_poll_date**|**datetime**|日付と時刻の指定した対象サーバーでは、マルチ サーバーの最後を呼び出した**sysdownloadlist**のジョブを実行するシステム テーブル。|  
-|**status**|**int**|対象サーバーの状態。<br /><br /> **1** = 標準<br /><br /> **2** = 保留中の再同期<br /><br /> **4** = オフラインの疑い|  
-|**local_time_at_last_poll**|**datetime**|ジョブ操作について、対象サーバーがポーリングされた前回の日付と時刻。|  
+|**status**|**int**|ターゲット サーバーの状態。<br /><br /> **1** = 標準<br /><br /> **2** = 保留中の再同期<br /><br /> **4** = オフラインの疑い|  
+|**local_time_at_last_poll**|**datetime**|ジョブ操作について、ターゲット サーバーがポーリングされた前回の日付と時刻。|  
 |**enlisted_by_nt_user**|**nvarchar(100)**|実行しているユーザーのユーザー名**sp_msx_enlist**ターゲット サーバー上。|  
-|**poll_internal**|**int**|対象サーバーが、新規のダウンロード命令についてマスター サーバーをポーリングするまでに経過した秒数。|  
+|**poll_internal**|**int**|ターゲット サーバーが、新規のダウンロード命令についてマスター サーバーをポーリングするまでに経過した秒数。|  
   
   

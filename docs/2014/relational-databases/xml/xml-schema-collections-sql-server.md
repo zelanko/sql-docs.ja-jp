@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193031"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
   」の説明に従って[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)、SQL Server が使用して XML データのネイティブ ストレージが提供、`xml`データ型。 変数や列と XSD スキーマを関連付けることができます必要に応じて`xml`XML スキーマ コレクションによって型。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
@@ -48,7 +48,7 @@ ms.locfileid: "48054738"
  また、XML スキーマ コレクションは、XML 変数、パラメーター、および列の型指定にも使用できます。  
   
 ##  <a name="ddl"></a> スキーマ コレクションを管理するための DDL  
- データベース内の XML スキーマ コレクションを作成しての変数および列と関連付ける`xml`型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、データベースでスキーマ コレクションを管理するために、次の DDL ステートメントが用意されています。  
+ データベースに XML スキーマ コレクションを作成し、`xml` 型の変数や列に関連付けることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、データベースでスキーマ コレクションを管理するために、次の DDL ステートメントが用意されています。  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql): データベースにスキーマ コンポーネントをインポートします。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48054738"
   
 -   [ DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql): XML スキーマ コレクション全体とそのすべてのコンポーネントを削除します。  
   
- XML スキーマ コレクションとそのコレクションに含まれるスキーマを使用するには、まず CREATE XML SCHEMA COLLECTION ステートメントを使用して、コレクションとスキーマを作成する必要があります。 変数および列を作成できますし、スキーマ コレクションが作成された後`xml`を入力し、スキーマ コレクションに関連付けます。 スキーマ コレクションを作成すると、さまざまなスキーマ コンポーネントがメタデータに格納されます。 ALTER XML SCHEMA COLLECTION ステートメントを使用して、既存のスキーマにコンポーネントを追加したり、既存のスキーマ コレクションに新しいスキーマを追加することもできます。  
+ XML スキーマ コレクションとそのコレクションに含まれるスキーマを使用するには、まず CREATE XML SCHEMA COLLECTION ステートメントを使用して、コレクションとスキーマを作成する必要があります。 スキーマ コレクションを作成したら、`xml` 型の変数および列を作成し、スキーマ コレクションに関連付けることができます。 スキーマ コレクションを作成すると、さまざまなスキーマ コンポーネントがメタデータに格納されます。 ALTER XML SCHEMA COLLECTION ステートメントを使用して、既存のスキーマにコンポーネントを追加したり、既存のスキーマ コレクションに新しいスキーマを追加することもできます。  
   
  スキーマ コレクションを削除するには、DROP XML SCHEMA COLLECTION ステートメントを使用します。 このステートメントを実行すると、スキーマ コレクションに含まれているすべてのスキーマが削除され、コレクション オブジェクトが削除されます。 スキーマ コレクションを削除する前に、「[DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql)」に記載されている条件を満たしていることを確認してください。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48054738"
   
 -   MODELGROUP  
   
- 以下に例を示します。  
+ 例 :  
   
 -   **SomeAttribute** は、ATTRIBUTE コンポーネントです。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48054738"
   
  このことを次の例で説明します。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例 : XML スキーマ コレクションでの XML 名前空間の列挙  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例:XML スキーマ コレクションでの XML 名前空間の列挙  
  XML スキーマ コレクション "myCollection" に次のクエリを実行します。  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例 : XML スキーマ コレクションのコンテンツの列挙  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例:XML スキーマ コレクションのコンテンツの列挙  
  次のステートメントは、リレーショナル スキーマ dbo 内の XML スキーマ コレクション "myCollection" のコンテンツを列挙します。  
   
 ```  
@@ -190,12 +190,12 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  コレクション内の個別の XML スキーマとして取得できます`xml`データ型の 3 番目の引数として対象名前空間を指定することによってインスタンス**XML_SCHEMA_NAMESPACE()** します。 次の例を参照してください。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例 : XML スキーマ コレクションからの指定したスキーマの出力  
- 次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、対象になる名前空間が "http://www.microsoft.com/books" である XML スキーマが出力されます。  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例:XML スキーマ コレクションからの指定したスキーマの出力  
+ 次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、対象になる名前空間が "<https://www.microsoft.com/books>" である XML スキーマが出力されます。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>XML スキーマへのクエリ  
@@ -203,7 +203,7 @@ N'http://www.microsoft.com/books')
   
 -   XML スキーマ名前空間のカタログ ビューに対する Transact-SQL クエリを記述します。  
   
--   `xml` データ型の列を含むテーブルを作成し、その列に XML スキーマを保存して XML 型のシステムに読み込みます。 使用して XML 列をクエリすることができます、`xml`データ型のメソッド。 また、この列に XML インデックスを作成することもできます。 ただしこの方法を使用する場合は、XML 列に保存されている XML スキーマと XML 型のシステムとの整合性をアプリケーションで保つ必要があります。 たとえば、XML 型のシステムから XML スキーマ名前空間を削除する場合、整合性を保つためにテーブルからもその名前空間を削除する必要があります。  
+-   `xml` データ型の列を含むテーブルを作成し、その列に XML スキーマを保存して XML 型のシステムに読み込みます。 その後、`xml` データ型のメソッドを使用して XML 列にクエリを実行できます。 また、この列に XML インデックスを作成することもできます。 ただしこの方法を使用する場合は、XML 列に保存されている XML スキーマと XML 型のシステムとの整合性をアプリケーションで保つ必要があります。 たとえば、XML 型のシステムから XML スキーマ名前空間を削除する場合、整合性を保つためにテーブルからもその名前空間を削除する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [格納されている XML スキーマ コレクションの表示](../xml/view-a-stored-xml-schema-collection.md)   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1b00f346f53bf0dced0da1182376d8575986e92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d080cfc68ebab00a7b699d427be064ef4a49ecaf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253412"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>ユーザー データベースの対称キー
   このルールでは、長さが 128 バイト未満のキーが RC2 または RC4 暗号化アルゴリズムを使用していないかどうかを確認します。  
@@ -28,7 +28,7 @@ ms.locfileid: "48165082"
 ## <a name="for-more-information"></a>詳細情報  
  [暗号化アルゴリズムの選択](../security/encryption/choose-an-encryption-algorithm.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

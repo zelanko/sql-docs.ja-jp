@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678934"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)
   固有の名前の付いた検索フォルダーのセットのアセンブリ、保存、および変更や、検索の順序の指定ができます。 このダイアログ ボックスを表示するには、[フォルダーを指定して検索]、[フォルダーを指定して置換]、または [検索と置換] のいずれかのウィンドウで、 **[検索対象]** ドロップダウン リストの横の **[...]** をクリックします。  
@@ -56,5 +54,3 @@ ms.locfileid: "48095152"
   
  **[適用]**  
  **[選択されたフォルダー]** の一覧に表示された検索フォルダーのセットを名前付きフォルダー セットとして保存します。 このフォルダー セットは、 **[検索と置換]** ウィンドウのすべてのタブで **[検索対象]** フィールドから選択できます。 [検索フォルダーの選択] ダイアログ ボックスを閉じます。  
-  
-  

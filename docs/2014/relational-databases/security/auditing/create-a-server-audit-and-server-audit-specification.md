@@ -17,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198412"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](sql-server-audit-database-engine.md)」を参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "48219618"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48219618"
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** をクリックします。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** を選択します。  
   
      **[監査の作成]** ダイアログ ボックスの **[全般]** ページでは、次のオプションを使用できます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48219618"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 **[続行]** オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許すおそれがあります。 完全な監査を維持することより、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の操作を続行することの方が重要である場合に、このオプションを選択します。 これは既定値です。  
   
      **[サーバーのシャットダウン]**  
-     監査対象に書き込みを行うサーバー インスタンスが監査対象にデータを書き込むことができない場合に、サーバーを強制的にシャットダウンします。 これを発行するログインする必要がありますが、`SHUTDOWN`権限。 ログオンにこの権限がない場合、この機能は失敗し、エラー メッセージが表示されます。 監査イベントは発生しません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを選択します。  
+     監査対象に書き込みを行うサーバー インスタンスが監査対象にデータを書き込むことができない場合に、サーバーを強制的にシャットダウンします。 これを発行するログインには、`SHUTDOWN` 権限が必要です。 ログオンにこの権限がない場合、この機能は失敗し、エラー メッセージが表示されます。 監査イベントは発生しません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを選択します。  
   
      **[失敗の操作]**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit が監査ログを出力できないとき、そのままではデータベース アクションが原因で、監査イベントが発生する場合、そのデータベース アクションを失敗させます。 監査イベントは発生しません。 監査イベントを発生させないアクションは続行できます。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]へのフル アクセスより、完全な監査の維持の方が重要である場合に、このオプションを選択します。  
@@ -94,8 +94,8 @@ ms.locfileid: "48219618"
      **[ファイル パス]**  
      **[監査の出力先]** にファイルが指定されている場合に、監査データが書き込まれるフォルダーの場所を指定します。  
   
-     **省略記号 [...]**  
-     ファイル パスを指定したり監査ファイルの書き込み先フォルダーを作成したりするための **[フォルダーの検索 –***server_name]* ダイアログ ボックスを開きます。  
+     **省略記号 (...)**  
+     開く、**フォルダーの検索 -** _server_name_ファイル パスを指定したり監査ファイルの書き込み先フォルダーを作成 ダイアログ ボックス。  
   
      **[監査ファイルの最大限度]**  
      **[ロールオーバー ファイルの最大数]**  
@@ -143,13 +143,13 @@ ms.locfileid: "48219618"
      **[オブジェクト名]**  
      監査するオブジェクトの名前。 これは監査アクションにのみ使用できます。監査グループには適用されません。  
   
-     **省略記号 [...]**  
+     **省略記号 (...)**  
      指定した **[監査アクションの種類]** に基づいて、使用可能なオブジェクトを参照して選択するための **[オブジェクトの選択]** ダイアログ ボックスを開きます。  
   
      **[プリンシパル名]**  
      監査対象のオブジェクトで監査をフィルター選択するためのアカウント。  
   
-     **省略記号 [...]**  
+     **省略記号 (...)**  
      指定した **[オブジェクト名]** に基づいて、使用可能なオブジェクトを参照して選択するための **[オブジェクトの選択]** ダイアログ ボックスを開きます。  
   
 3.  終了したら **[OK]** をクリックします。  
@@ -165,7 +165,7 @@ ms.locfileid: "48219618"
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -179,11 +179,11 @@ ms.locfileid: "48219618"
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

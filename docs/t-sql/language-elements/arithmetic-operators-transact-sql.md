@@ -14,21 +14,20 @@ helpviewer_keywords:
 - arithmetic operators
 - math operations [Transact-SQL]
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b124878e337473789665aeba9b8509be9732f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94d617f0da60b73ecfc7a0dcdd4530a3a36f3ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927368"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>算術演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  算術演算子は、数値型に分類されるデータ型が 1 つ以上含まれる 2 つの式の間で、数学的な操作を実行します。 データ型の分類の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。  
+算術演算子は、1 つまたは複数のデータ型の 2 つの式に対して算術演算を実行します。 それらは、数値データ型のカテゴリから実行されます。 データ型の分類の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。  
   
 |演算子|意味|  
 |--------------|-------------|  
@@ -38,13 +37,13 @@ ms.locfileid: "47783660"
 |[/ (除算)](../../t-sql/language-elements/divide-transact-sql.md)|除算|  
 |[% (剰余)](../../t-sql/language-elements/modulo-transact-sql.md)|除算による整数の剰余を返します。 たとえば、12 % 5 の場合、12 を 5 で割ると余りは 2 なので、12 % 5 = 2 となります。|  
   
- + および - 演算子を使用して、**datetime** および **smalldatetime** 型の値に対して算術演算を実行することもできます。  
+加算 (+) 演算子と減算 (-) 演算子を使用して、**datetime** 型と **smalldatetime** 型の値に対して算術演算を実行することもできます。  
   
- 算術演算の結果の有効桁数と小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
+算術演算の結果の有効桁数と小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9b4b5b41908c726f8baca6acb38a8bcacdf93a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010182"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>FILESTREAM データ用のクライアント アプリケーションの作成
   Win32 を使用して FILESTREAM BLOB に対してデータを読み書きすることができます。 次の手順を実行する必要があります。  
@@ -40,14 +40,14 @@ ms.locfileid: "48151052"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) は、セッションの現在のトランザクションを表すトークンを返します。 アプリケーションでは、このトークンを使用して、FILESTREAM のファイル システム ストリーミング操作をトランザクションにバインドします。  
   
--   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 。Win32 ファイル ハンドルを取得します。 アプリケーションでは、このハンドルを使って FILESTREAM データをストリーミングして、Win32 API の [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)、 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)にハンドルを渡すことができます。 このハンドルを使用してその他の API を呼び出すと、ERROR_ACCESS_DENIED エラーが返されます。 ハンドルは、 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428)を使用して閉じる必要があります。  
+-   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 。Win32 ファイル ハンドルを取得します。 アプリケーションでは、このハンドルを使って FILESTREAM データをストリーミングして、次の Win32 API にハンドルを渡すことができます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 このハンドルを使用してその他の API を呼び出すと、ERROR_ACCESS_DENIED エラーが返されます。 ハンドルは、 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)を使用して閉じる必要があります。  
   
  すべての FILESTREAM データ コンテナー アクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションで実行されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行すると、SQL データと FILESTREAM データの一貫性を維持できます。  
   
 ##  <a name="steps"></a> FILESTREAM データにアクセスするための手順  
   
 ###  <a name="path"></a> FILESTREAM ファイルのパスの読み取り  
- FILESTREAM テーブルの各セルには、ファイル パスが関連付けられています。 パスを読み取るには、`PathName`のプロパティを`varbinary(max)`内の列を[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 次の例のファイル パスを読み取る方法を示しています、`varbinary(max)`列。  
+ FILESTREAM テーブルの各セルには、ファイル パスが関連付けられています。 パスを読み取るには、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで `PathName` 列の `varbinary(max)` プロパティを使用します。 `varbinary(max)` 列のファイル パスを読み取る方法を次の例に示します。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48151052"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
 ###  <a name="handle"></a> Win32 ファイル ハンドルの取得  
- Win32 ファイル ハンドルを取得するには、OpenSqlFilestream API を呼び出します。 この API は、sqlncli.dll ファイルからエクスポートされます。 返されるハンドルは、Win32 API の [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)、 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)に渡すことができます。 Win32 ファイル ハンドルを取得し、これを使用して FILESTREAM BLOB に対してデータを読み書きする方法を次の例に示します。  
+ Win32 ファイル ハンドルを取得するには、OpenSqlFilestream API を呼び出します。 この API は、sqlncli.dll ファイルからエクスポートされます。 返されるハンドルは、次のいずれかの Win32 API に渡すことができます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 Win32 ファイル ハンドルを取得し、これを使用して FILESTREAM BLOB に対してデータを読み書きする方法を次の例に示します。  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48151052"
   
 -   FILESTREAM BLOB の更新や FILESTREAM BLOB の後または前にデータを追加する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは使用しないようにします。 そのような操作を行うと、BLOB データが tempdb データベースにスプールされ、新しい物理的ファイルに戻される可能性があります。  
   
--   小さな BLOB 更新を FILESTREAM BLOB に追加しないようにします。 追加操作ごとに、基になる FILESTREAM ファイルがコピーされます。 アプリケーションは、小さな Blob を追加するが、書き込む、Blob を`varbinary(max)`列、し、Blob の数があらかじめ設定された制限に達したときに FILESTREAM BLOB に対して 1 回の書き込み操作を実行します。  
+-   小さな BLOB 更新を FILESTREAM BLOB に追加しないようにします。 追加操作ごとに、基になる FILESTREAM ファイルがコピーされます。 アプリケーションで小さな BLOB を書き込む必要がある場合は、BLOB を `varbinary(max)` 列に書き込んでおき、BLOB の数があらかじめ設定された制限に達したときに FILESTREAM BLOB に対して 1 回の書き込み操作を行います。  
   
 -   アプリケーションで大量の BLOB ファイルのデータ長を取得しないようにします。 サイズは [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に格納されないため、この操作を実行するには多くの時間が必要になります。 BLOB ファイルの長さを調べる必要がある場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 関数を使用して BLOB のサイズを調べます (BLOB が閉じている場合)。 DATALENGTH() でサイズを取得する際には、BLOB ファイルは開かれません。  
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75873b347cc7d9d648b826e794098711853d2a44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a57302ea7438256ba4dc258fa200b11d8e035ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134029"
 ---
 # <a name="odbc-cursor-library"></a>ODBC カーソル ライブラリ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +41,15 @@ ms.locfileid: "47820260"
  SQL_CUR_USE_ODBC  
  このオプションを設定すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ODBC カーソル ライブラリよりも優先、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのネイティブ カーソル サポートします。 接続で使用できるのは、カーソル ライブラリでサポートされているカーソルのみで、サーバー カーソルは使用できません。  
   
- SQL_CUR_USE_DRIVER   
+ SQL_CUR_USE_DRIVER  
  カーソルのすべてをサポートするネイティブこのオプションが設定されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、接続に使用することができます。 この場合、ODBC カーソル ライブラリは使用できません。 すべてのカーソルはサーバー カーソルとして実装されます。  
   
- SQL_CUR_USE_IF_NEEDED   
+ SQL_CUR_USE_IF_NEEDED  
  SQL_CUR_USE_DRIVER で使用する場合と同じ効果は、このオプションが設定されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。 接続時に、ODBC ドライバー マネージャーのテストに接続されている ODBC ドライバーの SQL_FETCH_PRIOR オプションでサポートされているかどうかに[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)します。 ドライバーでこのオプションがサポートされていない場合、ODBC ドライバー マネージャーは ODBC カーソル ライブラリを読み込みます。 サポートされている場合、ODBC ドライバー マネージャーは ODBC カーソル ライブラリを読み込みません。この場合、アプリケーションではドライバーのネイティブ サポートが使用されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーには SQL_FETCH_PRIOR がサポートしている、ODBC ドライバー マネージャーは ODBC カーソル ライブラリを読み込みません。  
   
  カーソル ライブラリにより、アプリケーションはスクロール可能なカーソルや更新可能なカーソルを使用できるだけでなく、1 つの接続に対して複数のアクティブ ステートメントを使用できます。 この機能をサポートする場合は、カーソル ライブラリを読み込む必要があります。 使用[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)カーソル ライブラリの使用方法を指定し、 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)カーソルの種類、同時実行性、および行セットのサイズを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルの実装方法](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
   

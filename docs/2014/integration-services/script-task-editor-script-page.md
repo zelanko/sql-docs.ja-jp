@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ee7bb13e8a9fa4826297cd0c55b82881aee5296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056188"
 ---
 # <a name="script-task-editor-script-page"></a>[スクリプト タスク エディター] \([スクリプト] ページ)
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[スクリプト]** ページを使用すると、スクリプト プロパティを設定し、スクリプトによってアクセスできる変数を指定できます。  
@@ -44,13 +43,13 @@ ms.locfileid: "48198082"
  VSTA プロジェクトでメソッドの名前を変更する場合は、 **EntryPoint** プロパティの値を変更する必要があります。  
   
  **[ReadOnlyVariables]**  
- スクリプトに使用できる読み取り専用の変数の一覧をコンマ区切りで入力するか、省略記号ボタン (**[...]**) をクリックして **[変数の選択]** ダイアログ ボックスで変数を選択します。  
+ スクリプトに使用できる読み取り専用の変数の一覧をコンマ区切りで入力するか、省略記号ボタン ( **[...]** ) をクリックして **[変数の選択]** ダイアログ ボックスで変数を選択します。  
   
 > [!NOTE]  
 >  変数名では大文字と小文字が区別されます。  
   
  **[ReadWriteVariables]**  
- スクリプトに使用できる読み取り/書き込み用の変数の一覧をコンマ区切りで入力するか、省略記号ボタン (**[...]**) をクリックして **[変数の選択]** ダイアログ ボックスで変数を選択します。  
+ スクリプトに使用できる読み取り/書き込み用の変数の一覧をコンマ区切りで入力するか、省略記号ボタン ( **[...]** ) をクリックして **[変数の選択]** ダイアログ ボックスで変数を選択します。  
   
 > [!NOTE]  
 >  変数名では大文字と小文字が区別されます。  
@@ -60,11 +59,11 @@ ms.locfileid: "48198082"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[全般] ページ](general-page-of-integration-services-designers-options.md)   
- [スクリプト タスク エディター &#40;[全般] ページ&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [General Page](general-page-of-integration-services-designers-options.md)   
+ [[スクリプト タスク エディター] &#40;[全般] ページ&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [スクリプト タスクの例](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
  [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

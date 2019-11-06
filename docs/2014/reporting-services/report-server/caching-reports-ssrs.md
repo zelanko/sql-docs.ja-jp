@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f026e83f5f968480b9484c0a1251929a299055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104108"
 ---
 # <a name="caching-reports-ssrs"></a>複数のレポートのキャッシュ (SSRS)
   レポート サーバーでは、処理済みレポートのコピーをキャッシュして、ユーザーがレポートを開いたときにそのコピーを返すことができます。 レポートがキャッシュされたコピーかどうかをユーザーが判断できる唯一の方法は、レポートが実行された日時を確認することです。 その日時が現在の日時ではなく、レポートがスナップショットでない場合、そのレポートはキャッシュから取得されたレポートです。  
@@ -63,7 +62,7 @@ ms.locfileid: "48069418"
   
  レポートのキャッシュは、パラメーター化されたレポートの複数のインスタンスをキャッシュする場合に特に役立ちます。この場合、さまざまなレポートのインスタンスを生成するために個別のパラメーター値が使用されます。 レポートには、クエリ ベースのパラメーターのみを指定できることに注意してください。  
   
- スケジュールを指定する場合や、データ ドリブン サブスクリプションを作成する場合は、キャッシュに対するレポートの配信頻度をスケジュールする必要があります。 古いコピーの有効期限が切れていない場合、新しいコピーはキャッシュに配信されません。 したがって、レポートの実行プロパティの構成には、キャッシュの有効期限の設定を含める必要があります。 この有効期限の設定には、定義するサブスクリプションのスケジュールとの一貫性が必要です。 たとえば、毎晩実行されるサブスクリプションを作成する場合、サブスクリプションが実行される前に、キャッシュも毎晩、有効期限切れになる必要があります。 実行プロパティに有効期限の日時が含まれていない場合、新しい配信が無視されます。 キャッシュ更新計画の詳細については、次を参照してください。[スケジュール](../subscriptions/schedules.md)します。 プロパティの設定の詳細については、次を参照してください。[レポート処理プロパティの設定](set-report-processing-properties.md)します。 データ ドリブン サブスクリプションの使用に関する詳細については、次を参照してください。[データ ドリブン サブスクリプション](../subscriptions/data-driven-subscriptions.md)します。  
+ スケジュールを指定する場合や、データ ドリブン サブスクリプションを作成する場合は、キャッシュに対するレポートの配信頻度をスケジュールする必要があります。 古いコピーの有効期限が切れていない場合、新しいコピーはキャッシュに配信されません。 したがって、レポートの実行プロパティの構成には、キャッシュの有効期限の設定を含める必要があります。 この有効期限の設定には、定義するサブスクリプションのスケジュールとの一貫性が必要です。 たとえば、毎晩実行されるサブスクリプションを作成する場合、サブスクリプションが実行される前に、キャッシュも毎晩、有効期限切れになる必要があります。 実行プロパティに有効期限の日時が含まれていない場合、新しい配信が無視されます。 キャッシュの更新の詳細については、「 [スケジュール](../subscriptions/schedules.md)」を参照してください。 プロパティの設定方法については、「 [レポート処理プロパティの設定](set-report-processing-properties.md)」を参照してください。 データ ドリブン サブスクリプションの使用に関する詳細については、「 [データ ドリブン サブスクリプション](../subscriptions/data-driven-subscriptions.md)」を参照してください。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>キャッシュが有効期限切れとなる条件  
  レポート定義の変更、レポート パラメーターの変更、データ ソースの資格情報の変更、レポート実行オプションの変更などのイベントが発生すると、キャッシュされたレポートが無効になります。 キャッシュに格納されたレポートを削除する場合、キャッシュされたバージョンのレポートも削除されます。  
@@ -71,12 +70,12 @@ ms.locfileid: "48069418"
  何らかの理由で、キャッシュされたインスタンスでレポートを実行できない場合 (たとえば、ユーザーが指定したパラメーター値が、キャッシュされたレポートの生成に使用するパラメーター値と異なる場合)、レポート サーバーでレポートが再実行されます。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションを設定&#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [レポート処理プロパティを設定します。](set-report-processing-properties.md)   
- [Reporting Services の概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](preload-the-cache-report-manager.md)   
+ [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [レポート処理プロパティの設定](set-report-processing-properties.md)   
+ [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
+ [キャッシュの事前読み込み (レポート マネージャー)](preload-the-cache-report-manager.md)   
  [[スケジュール]](../subscriptions/schedules.md)   
- [共有データセットのキャッシュ &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
- [[キャッシュ更新オプション] &#40;レポート マネージャー&#41;](../cache-refresh-options-report-manager.md)  
+ [共有データセットのキャッシュ (SSRS)](cache-shared-datasets-ssrs.md)   
+ [キャッシュ更新オプション (レポート マネージャー)](../cache-refresh-options-report-manager.md)  
   
   

@@ -24,33 +24,33 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b4876d7d41a286cae12a39e11d8442d1fbe360f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44c4bb7c01f18db6062ad1982fcf5a5f80e4d6b0
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152702"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797981"
 ---
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
   
--   **作業を開始する準備:**  [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
+-   **作業を開始する準備:** [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、[制限事項と制約事項](#LimitationsRestrictions)、[前提条件](#Prerequisites)、[セキュリティ](#Security)、[権限](#Permissions)  
   
--   **DAC のアップグレード:**  [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、 [PowerShell の使用](#UpgradeDACPowerShell)  
+-   **DAC のアップグレード:** [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、[PowerShell の使用](#UpgradeDACPowerShell)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  DAC アップグレードは、既存のデータベースのスキーマを新しい DAC バージョンで定義されているスキーマに一致するように変更するインプレース アップグレードです。 新しい DAC バージョンは、DAC パッケージ ファイルで提供されます。 DAC パッケージの作成の詳細については、「 [データ層アプリケーション](data-tier-applications.md)」を参照してください。  
   
 ###  <a name="ChoseDACUpgOptions"></a> DAC アップグレード オプションの選択  
  インプレース アップグレードには 4 つのアップグレード オプションがあります。  
   
--   **データ損失を無視**–`True`データの損失が発生するいくつかの操作の場合でも、アップグレードを続行します。 `False` の場合、これらの操作によってアップグレードは終了します。 たとえば、現在のデータベース内のテーブルが新しい DAC のスキーマに存在しない場合、テーブルは削除される場合`True`を指定します。 既定の設定は`True`します。  
+-   [**データ損失を無視**する]-`True`した場合、一部の操作によってデータが失われてもアップグレードが続行されます。 `False` の場合、これらの操作によってアップグレードは終了します。 たとえば、現在のデータベースにあるテーブルが新しい DAC のスキーマにない場合は、`True` が指定されていると、テーブルは削除されます。 既定の設定は `True` です。  
   
--   **変更時にブロック**– `True`、データベース スキーマが前の DAC で定義されているものとは異なる場合、アップグレードは終了します。 場合`False`変更が検出された場合でも、アップグレードが続行されます。 既定の設定は`False`します。  
+-   **[変更時にブロック**する]-`True`した場合、データベーススキーマが前の DAC で定義されているスキーマと異なる場合は、アップグレードが終了します。 `False` の場合、変更が検出されても、アップグレードは続行されます。 既定の設定は `False` です。  
   
--   **失敗時にロールバック**–`True`トランザクションでは、アップグレードが囲まれているエラーが発生した場合と、ロールバックが試行されます。 `False` の場合、すべての変更が実行時にコミットされます。エラーが発生する場合は、データベースの前のバックアップの復元が必要になる場合があります。 既定の設定は`False`します。  
+-   **失敗時にロールバック**する-`True`した場合、アップグレードはトランザクションに含まれ、エラーが発生すると、ロールバックが試行されます。 `False` の場合、すべての変更が実行時にコミットされます。エラーが発生する場合は、データベースの前のバックアップの復元が必要になる場合があります。 既定の設定は `False` です。  
   
--   **ポリシーの検証をスキップ**– `True`、DAC サーバー選択ポリシーは評価されません。 場合`False`ポリシーが評価され、検証エラーがある場合、アップグレードは終了します。 既定の設定は`False`します。  
+-   **[ポリシーの検証をスキップ]** : `True`した場合、DAC サーバーの選択ポリシーは評価されません。 `False` の場合は、ポリシーが評価され、検証エラーがあるとアップグレードは終了します。 既定の設定は `False` です。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC アップグレードは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降でのみ実行できます。  
@@ -83,7 +83,7 @@ ms.locfileid: "48152702"
   
 2.  **[管理]** ノードを展開し、 **[データ層のアプリケーション]** ノードを展開します。  
   
-3.  アップグレードする DAC のノードを右クリックし、 **[データ層アプリケーションのアップグレード]** をクリックします。  
+3.  アップグレードする DAC のノードを右クリックしてから、 **[データ層アプリケーションのアップグレード]** を選択します。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "48152702"
   
  **[DAC パッケージの内容を検証しています]** : 検証プロセスの現在の状態を示す進捗状況バーです。  
   
- **\< 以前**-の初期状態に戻り、**パッケージの選択**ページ。  
+ [**前\<** **]: [パッケージの選択**] ページの初期状態に戻ります。  
   
- **[次へ >]**: **[パッケージの選択]** ページの最終状態に進みます。  
+ **[次へ >]** : **[パッケージの選択]** ページの最終状態に進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48152702"
   
  **[ポリシー違反を無視します]** : ポリシー条件が満たされていない場合にアップグレードを続行するには、このチェック ボックスを使用します。 すべての条件が満たされていなくても DAC を正常に操作できるようにする場合のみ、このチェック ボックスをオンにしてください。  
   
- **\< 以前**-を返します、**パッケージの選択**ページ。  
+ [**前\<** **]: [パッケージの選択**] ページに戻ります。  
   
  **[次へ]** : **[変更の検出]** ページに進みます。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "48152702"
   
  **[レポートの保存]** : ウィザードで検出された、データベースのオブジェクトと DAC 定義の対応するオブジェクトの間の変更点のレポートを保存する場合に、このボタンをクリックします。 その後、レポートを確認し、アップグレードの完了後に、レポートに表示されたオブジェクトの一部またはすべてを新しいデータベースに組み込む操作を行う必要があるかどうかを判断できます。  
   
- **\< 以前**-を返します、 **DAC パッケージの**ページ。  
+ [**前\<** **]: [DAC パッケージの選択**] ページに戻ります。  
   
  **[次へ]** : **[オプション]** ページに進みます。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48152702"
   
  **[既定値に戻す]** : オプションを既定値の false に戻します。  
   
- **\< 以前**-を返します、**変更の検出**ページ。  
+ **\< Previous** -[変更の**検出**] ページに戻ります。  
   
  **[次へ]** : **[アップグレード計画の確認]** ページに進みます。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48152702"
   
  **[既定値に戻す]** : オプションを既定値の false に戻します。  
   
- **\< 以前**-を返します、**変更の検出**ページ。  
+ **\< Previous** -[変更の**検出**] ページに戻ります。  
   
  **[次へ]** : **[概要]** ページに進みます。  
   
@@ -214,9 +214,9 @@ ms.locfileid: "48152702"
   
  **[次の設定を使用して DAC をアップグレードします。]** : 表示された情報を確認し、実行されるアクションが正しいかどうかを確認します。 このウィンドウには、アップグレード対象として選択した DAC と、新しいバージョンの DAC が含まれている DAC パッケージが表示されます。 また、現在のバージョンのデータベースが現在の DAC 定義と同じかどうか、またはデータベースが変更されているかどうかも表示されます。  
   
- **\< 以前**-に戻り、**アップグレード計画の確認**ページ。  
+ **\< 前**へ-**アップグレード計画の確認** ページに戻ります。  
   
- **[次へ]** : DAC を配置し、**[DAC のアップグレード]** ページに結果を表示します。  
+ **[次へ]** : DAC を配置し、 **[DAC のアップグレード]** ページに結果を表示します。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -234,25 +234,25 @@ ms.locfileid: "48152702"
   
 1.  SMO サーバー オブジェクトを作成し、アップグレードする DAC が含まれたインスタンスにそれを設定します。  
   
-2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
+2.  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
   
-3.  使用`System.IO.File`DAC パッケージ ファイルを読み込めません。  
+3.  `System.IO.File` を使用して、DAC パッケージ ファイルを読み込みます。  
   
-4.  使用`add_DacActionStarted`と`add_DacActionFinished`DAC アップグレード イベントをサブスクライブします。  
+4.  `add_DacActionStarted` および `add_DacActionFinished` を使用して、DAC アップグレード イベントをサブスクライブします。  
   
-5.  設定、`DacUpgradeOptions`します。  
+5.  `DacUpgradeOptions`を設定します。  
   
-6.  使用して、 `IncrementalUpgrade` DAC をアップグレードする方法。  
+6.  `IncrementalUpgrade` メソッドを使用して DAC をアップグレードします。  
   
 7.  DAC パッケージ ファイルの読み取りに使用するファイル ストリームを閉じます。  
   
 ### <a name="example-powershell"></a>例 (PowerShell)  
  次の例では、MyApplicationVNext.dacpac パッケージで新しい DAC バージョンを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスの MyApplication という名前の DAC をアップグレードします。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -284,8 +284,6 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>参照  
- [データ層アプリケーション](data-tier-applications.md)   
+## <a name="see-also"></a>関連項目  
+ [[データ層アプリケーション]](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
-  
-  

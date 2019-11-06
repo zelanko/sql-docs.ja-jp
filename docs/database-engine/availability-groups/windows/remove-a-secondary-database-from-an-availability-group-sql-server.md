@@ -1,6 +1,7 @@
 ---
-title: 可用性グループからのセカンダリ データベースの削除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: セカンダリ データベースの可用性グループからの削除
+description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループからセカンダリ データベースを削除する手順について説明します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,44 +16,24 @@ helpviewer_keywords:
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 40f08d9b924f8bfd223490694de0f6160f5f9962
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94b495bf507dcbe67c305dbb69454bad943d2003
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014443"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ データベースの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ データベースを削除する方法について説明します。  
+   
   
--   **作業を開始する準備:**  
-  
-     [前提条件](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **セカンダリ データベースを削除する方法:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **補足情報:**  [セカンダリ データベースを可用性グループから削除した後](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
-  
-###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> 前提条件と制限  
+##  <a name="Prerequisites"></a> 前提条件と制限  
   
 -   このタスクは、セカンダリ レプリカ上でのみサポートされます。 データベースを削除するセカンダリ レプリカをホストするサーバー インスタンスに接続している必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -113,7 +94,7 @@ ms.locfileid: "47632680"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報: セカンダリ データベースを可用性グループから削除した後  
+##  <a name="FollowUp"></a> 補足情報:セカンダリ データベースを可用性グループから削除した後  
  セカンダリ データベースを削除すると、可用性グループに参加しなくなり、削除されたセカンダリ データベースに関するすべての情報が可用性グループによって破棄されます。 削除されたセカンダリ データベースは RESTORING 状態になります。  
   
 > [!TIP]  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: adc4c6ea2cc33fe9c0c911b75c74a4232963fe2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: b3a4dc8e890f2b23319afcc02c628410d5264c6a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108018"
 ---
 # <a name="planning"></a>計画
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]について十分に理解するには、次の各トピックをご覧ください。 ニーズに最も合った [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境をインストールおよび構成する方法について学習してください。  
@@ -33,7 +32,7 @@ ms.locfileid: "48100382"
  ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **Reporting Services のセットアップ**  
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  
   
- [配置のチェックリスト: 既存の SharePoint ファームに Reporting Services をインストールします。](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
+ [配置のチェックリスト:既存の SharePoint ファームに Reporting Services をインストールします。](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
  [SharePoint の SQL Server BI 機能の配置トポロジ](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)    
   

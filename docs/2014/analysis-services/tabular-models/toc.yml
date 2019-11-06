@@ -17,7 +17,7 @@
       href: import-from-analysis-services-ssas-tabular.md
     - name: PowerPivot からのインポート
       href: import-from-power-pivot-ssas-tabular.md
-- name: '[プロパティ]'
+- name: Properties
   href: properties-ssas-tabular.md
   items:
     - name: Power View レポート プロパティ
@@ -149,7 +149,7 @@
     - name: ワークスペース データベースのパーティションの作成と管理
       href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
     - name: ワークスペース データベースのパーティションの処理
-      href: process-partitions-in-the-workspace-databse-ssas-tabular.md
+      href: process-partitions-in-the-workspace-database-ssas-tabular.md
 - name: パースペクティブ
   href: perspectives-ssas-tabular.md
   items:

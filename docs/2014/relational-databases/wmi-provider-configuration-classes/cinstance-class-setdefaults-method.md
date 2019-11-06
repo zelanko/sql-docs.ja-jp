@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetDefaults Method (CInstance Class)
@@ -20,12 +18,12 @@ ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b242e76bb714088895048cb869473c23d2e4cb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192445"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>SetDefaults メソッド (CInstance クラス)
   インスタンスのすべての既定値の設定、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既存のデータを上書きするオプションを使用するクライアント。  
@@ -57,6 +55,6 @@ OverwriteAll
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

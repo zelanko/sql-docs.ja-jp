@@ -26,16 +26,15 @@ helpviewer_keywords:
 - OPEN MASTER KEY statement
 - database master key [SQL Server], opening
 ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 658b45708c13ae8d4ff12470e46e27bf60f7479b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd9510f28c1cdfda1f0ff9303c77df946bf5b9d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129432"
 ---
 # <a name="open-master-key-transact-sql"></a>OPEN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

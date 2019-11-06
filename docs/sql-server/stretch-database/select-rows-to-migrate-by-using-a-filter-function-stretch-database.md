@@ -1,8 +1,7 @@
 ---
 title: フィルター関数を使用して移行する行を選択する (Stretch Database) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/27/2016
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,14 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65ce518617b3e7728e503504bfea838fee4f1beb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5456a9c8febe97f7dbfc09ebba52be469b30c3e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136061"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>フィルター関数を使用して移行する行を選択する (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -153,7 +151,7 @@ RETURN  SELECT 1 AS is_eligible
  サブクエリや非決定論的関数 (RAND() や GETDATE() など) は使用できません。  
   
 ## <a name="add-a-filter-function-to-a-table"></a>フィルター関数をテーブルに追加する  
- **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 例 :  
+ **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 例:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -485,7 +483,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database がフィルター関数を適用するしくみ  
- Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 例 :  
+ Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 例:  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -494,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  関数から行の空ではない結果が返された場合、その行は移行の対象になります。  
   
 ## <a name="replacePredicate"></a>既存のフィルター関数の置き換え  
- 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 例 :  
+ 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 例:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -589,7 +587,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>テーブルからのフィルター関数の削除  
- 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 例 :  
+ 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 例:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

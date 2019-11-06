@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unlocking versions [Master Data Services]
 - versions [Master Data Services], unlocking
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2893e96ca672c3f97b380ada623fe38a0c56fc87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8541dec5d64de7e0e98e30bbc48c5a5c4eeea9fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482595"
 ---
 # <a name="unlock-a-version-master-data-services"></a>バージョンをロック解除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをロック解除して、モデルのメンバーおよびメンバーの属性に対する変更を有効にします。  
@@ -29,9 +28,9 @@ ms.locfileid: "48203742"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
--   バージョンのステータスは、**[ロック済み]** である必要があります。 詳細については、「[バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)」を参照してください。  
+-   バージョンのステータスは、 **[ロック済み]** である必要があります。 詳細については、「 [バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)」を参照してください。  
   
 ### <a name="to-unlock-a-version"></a>バージョンをロック解除するには  
   
@@ -45,9 +44,9 @@ ms.locfileid: "48203742"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [バージョンをロックする&#40;マスター データ サービス&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
+-   [バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
- [バージョン&#40;マスター データ サービス&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>関連項目  
+ [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

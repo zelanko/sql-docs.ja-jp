@@ -2,7 +2,7 @@
 title: SQL Server データ ツールの Reporting Services (SSDT) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403007"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889839"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
@@ -39,7 +39,7 @@ ms.locfileid: "52403007"
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
- ![SSDT の新しいプロジェクト テンプレート](../../analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
+ ![SSDT の新しいプロジェクト テンプレート](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
@@ -237,7 +237,7 @@ ms.locfileid: "52403007"
   
 
 ##  <a name="bkmk_SourceControl"></a> ソース管理  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。 **[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
  新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは次の場所にあります: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  

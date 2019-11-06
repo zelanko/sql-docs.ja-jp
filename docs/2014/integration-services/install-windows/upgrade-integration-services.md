@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -16,12 +15,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072026"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768088"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
   [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] または [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] がコンピューターに現在インストールされている場合は、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] にアップグレードできます。  
@@ -36,16 +35,16 @@ ms.locfileid: "49072026"
 ## <a name="before-upgrading-integration-services"></a>Integration Services をアップグレードする前に  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする前に、アップグレード アドバイザーを実行することをお勧めします。 アップグレード アドバイザーは、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で使用される新しいパッケージ形式に移行する場合に発生する可能性がある問題を報告します。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
   
-> [!NOTE]  
+> [!NOTE]
 >  現在のリリースでの移行またはデータ変換サービス (DTS) パッケージの実行のサポートは廃止されました[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 次の DTS 機能は廃止されました。  
->   
+> 
 >  -   DTS ランタイム  
 > -   DTS API  
 > -   DTS パッケージを次期バージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   DTS パッケージのメンテナンス機能のサポート [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   DTS 2000 パッケージ実行タスク  
 > -   アップグレード アドバイザーによる DTS パッケージのスキャン  
->   
+> 
 >  その他の提供が中止された機能については、次を参照してください。[提供が中止された Integration Services の機能で SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md)します。  
   
 ## <a name="upgrading-integration-services"></a>Integration Services のアップグレード  
@@ -94,7 +93,7 @@ ms.locfileid: "49072026"
   
 -   パッケージへのアクセスを制御するために、db_ssisadmin、db_ssisltduser、および db_ssisoperator という 3 つの固定データベース レベル ロールを新しく作成します。 db_dtsadmin、db_dtsltduser、および db_dtsoperator という [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ロールは削除されませんが、対応する新しいロールのメンバーになります。  
   
--   場合、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア (で管理されているファイル システムの場所は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス) が既定の場所で**\SQL Server\90**、 **\SQL Server\100**、または**\SQL Server\110**下で新しい既定の場所にそれらのパッケージを移動**\SQL Server\120**します。  
+-   場合、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア (で管理されているファイル システムの場所は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス) が既定の場所で **\SQL Server\90**、 **\SQL Server\100**、または **\SQL Server\110**下で新しい既定の場所にそれらのパッケージを移動 **\SQL Server\120**します。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアップグレード済みのインスタンスを指すように [!INCLUDE[ssDE](../../includes/ssde-md.md)]サービス構成ファイルを更新します。  
   
@@ -145,6 +144,6 @@ ms.locfileid: "49072026"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のアップグレード済みのインスタンスに格納されている [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージまたは [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージを実行する [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] コンピューターまたは [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンピューターでは使用できません。  
   
 ## <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ記事「 [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157)」  
+ blogs.msdn.com のブログ記事「 [既存のカスタムSSIS拡張機能とアプリケーションをデナリで動作させる](https://go.microsoft.com/fwlink/?LinkId=238157)」  
   
   

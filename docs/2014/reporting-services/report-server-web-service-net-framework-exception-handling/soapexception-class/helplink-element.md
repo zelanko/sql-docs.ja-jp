@@ -4,28 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - HelpLink element
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4e938b75bce51aa89952b7cb13cb4fd52434386c
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046026"
 ---
 # <a name="helplink-element"></a>HelpLink 要素
   **Detail** プロパティの **HelpLink** 要素は、レポート サーバーで生成される URL 文字列です。 この URL は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ヘルプとサポートで管理されている Web ページを指し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生する特定のエラーに関するヘルプとサポート技術情報の記事を提供します。 URL の構文は、次のようになっています。  
   
- **http://** www.microsoft.com**/** 製品**/** ee**/** transform.aspx**でしょうか。EvtSrc**=_値_**& 情報が必要な**=_値_**& ProdName** =_値_**& ProdVer**=_値_  
+ **http://** www.microsoft.com **/** 製品 **/** ee **/** transform.aspx**でしょうか。EvtSrc**=_値_ **& 情報が必要な**=_値_ **& ProdName** =_値_ **& ProdVer**=_値_  
   
  次の表は、**HelpLink** URL の引数を示しています。  
   
@@ -39,7 +37,7 @@ ms.locfileid: "49168872"
  次の例を示しています、 **HelpLink**エラー コードで返される URL`rsReservedItem`します。 このエラーは、ユーザーが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の予約アイテムの変更または削除を試みたときに発生します。  
   
 ```  
-http://www.microsoft.com/products/ee/transform.aspx?  
+https://www.microsoft.com/products/ee/transform.aspx?  
 EvtSrc=Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings  
 &EvtID=rsReservedItem&ProdName=Microsoft%20SQL%20Server%20Reporting%20Services&ProdVer=8.00  
 ```  

@@ -16,12 +16,12 @@ ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843736"
 ---
 # <a name="set-source-control-options"></a>ソース管理のオプションの設定
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] に組み込まれているソース管理機能を使用する前に、さまざまな作業環境に合わせて、ソース管理のオプションを設定する必要があります。  
@@ -54,7 +54,7 @@ ms.locfileid: "48101992"
     |----------|-----------------|  
     |**Visual SourceSafe**|最もよく使用する設定を使用することを指定します。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe ユーザー。|  
     |**個人開発者**|独立して作業していることを指定します。|  
-    |**カスタム**|ロールの設定を変更したことを指定します。|  
+    |**Custom**|ロールの設定を変更したことを指定します。|  
   
      **バック グラウンド状態を更新**  
      ソリューション エクスプローラーのソース管理シグナル アイコンを、項目のステータス変更に応じて自動的に更新します。 サーバーに負荷が集中する操作の実行時の遅延、特にソリューションまたはプロジェクトをソース管理から開く場合の遅延については、このチェック ボックスをオフにすることにより、パフォーマンスが向上する場合があります。  
@@ -78,15 +78,15 @@ ms.locfileid: "48101992"
     |----------|-----------------|  
     |**Visual SourceSafe**|最もよく使用する設定を使用することを指定します。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe ユーザー。|  
     |**個人開発者**|独立して作業していることを指定します。|  
-    |**カスタム**|ロールの設定を変更したことを指定します。|  
+    |**Custom**|ロールの設定を変更したことを指定します。|  
   
      いずれかのロールを選択すると、適切なソース管理オプションが自動的に選択されます。  
   
      **項目をチェックインするときにチェック アウト状態を保持します。**  
-     ソース管理ストアを更新するために項目をチェックインするときに項目がチェックアウト状態を保つようにすることを指定します。 特定のチェックインに対してこのオプションを変更する場合にクリックして、**オプション**の矢印の**チェックイン** ダイアログ ボックスと 消去、**保持 * * * チェック アウト** チェック ボックス。  
+     ソース管理ストアを更新するために項目をチェックインするときに項目がチェックアウト状態を保つようにすることを指定します。 特定のチェックインに対してこのオプションを変更する場合にクリックして、**オプション**の矢印、**チェックイン** ダイアログ ボックスと 消去、**チェック アウト状態を保持** チェック ボックス。  
   
      **チェックイン項目**  
-     チェックアウトされていない項目を編集しようとしたときの [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の動作を指定するオプションの一覧を表示します。使用できるオプションを次の表に示します。  
+     指定するオプションの一覧を表示する方法[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]チェック アウトされていないアイテムを編集しようとしたときに動作する必要があります。次の表では、使用可能なオプションについて説明します。  
   
      **保存しています**  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48101992"
      **リセット**  
      ソース管理確認ダイアログ ボックスを既定の設定にリセットします。 例では、選択した場合、**次回からこのダイアログ ボックスを表示しない**ソース コントロールのダイアログ ボックスでは、チェック ボックスを選択すると、**リセット**オプションは、そのアクションを反転させます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)   
  [ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)   
  [ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f427e1bcea7fcd4b926b953d27008b4e8143cbb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482863"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの保存 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、同じデータ セットに頻繁にアクセスする必要がある場合に、ショートカット クエリ ファイルを保存します。  
@@ -36,7 +35,7 @@ ms.locfileid: "48195882"
   
 -   **[クエリの保存]** の下の矢印をクリックし、ショートカット クエリを表示して開きます。  
   
--   [ショートカット クエリ ファイルの電子メールでの送信 &#40;Excel 用 MDS アドイン&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
+-   [ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>参照  
  [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](shortcut-query-files-mds-add-in-for-excel.md)  

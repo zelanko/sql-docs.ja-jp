@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
@@ -16,12 +14,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11ea6b99818a1f1ffaf4b38019a234aa54294d2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721810"
 ---
 # <a name="replication-programming-concepts"></a>レプリケーションのプログラミング概念
   レプリケーション機能を利用するアプリケーションを開発する前に、次に示す一般的な計画手順を実行してください。  
@@ -83,7 +81,7 @@ ms.locfileid: "48186932"
   
  セキュリティの詳細については、次のトピックで解説します。  
   
--   [セキュリティと保護 &#40;レプリケーション&#41;](../security/security-and-protection-replication.md)  
+-   [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)  
   
 -   [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

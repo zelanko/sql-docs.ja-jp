@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, configuration settings
@@ -17,12 +16,12 @@ ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 126a0814bb30018c6bcc8fca21c71dd8da84a6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8addba32560e136f68e538240f4fce01f826355e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075265"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>ソリューションの配置に関する構成設定の指定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開ウィザードから、配置スクリプトで使用する展開オプション パーティションおよびロールを読み取り、 \<*プロジェクト名*> >.configsettings ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時にこのファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 現在のプロジェクトの構成設定を使用して、作成、 \<*プロジェクト名*> >.configsettings ファイル。  
@@ -46,21 +45,21 @@ ms.locfileid: "48179522"
  パーティションおよびロールの配置を変更する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト内のこの情報を変更する必要があります、 \<*プロジェクト名*> >.configsettings ファイルを次の手順で説明します。 に、プロジェクト内のパーティションおよびロールの設定を変更することはできません、 *\<プロジェクト名 >* **プロパティ ページ** ダイアログ ボックスで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]これらのオプションは表示されません。  
   
 > [!NOTE]  
->  構成設定は、すべてのオブジェクトに適用することも、新たに作成したオブジェクトのみに適用することもできます。 以前に配置した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに追加のオブジェクトを配置し、既存のオブジェクトを上書きしないようにする場合は、新たに作成したオブジェクトのみに構成設定を適用します。 構成設定がすべてのオブジェクトに適用またはのみ新たに作成した、このオプションで設定するかどうかを指定する、 \<*プロジェクト名*> >.deploymentoptions ファイル。 詳細については、「[パーティションおよびロールの配置オプションの指定](deployment-script-files-partition-and-role-deployment-options.md)」を参照してください。  
+>  構成設定は、すべてのオブジェクトに適用することも、新たに作成したオブジェクトのみに適用することもできます。 以前に配置した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに追加のオブジェクトを配置し、既存のオブジェクトを上書きしないようにする場合は、新たに作成したオブジェクトのみに構成設定を適用します。 構成設定がすべてのオブジェクトに適用またはのみ新たに作成した、このオプションで設定するかどうかを指定する、 \<*プロジェクト名*> >.deploymentoptions ファイル。 詳細については、「 [パーティションおよびロールの配置オプションの指定](deployment-script-files-partition-and-role-deployment-options.md)」を参照してください。  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>入力ファイルの生成後に構成設定を変更するには  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行し、 **[構成設定]** ページで配置するオブジェクトの構成設定を指定します。  
   
-     — または —  
+     \- または -  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 応答ファイル モードの詳細については、「 [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)」を参照してください。  
   
-     — または —  
+     \- または -  
   
 -   変更、 \<*プロジェクト名*> 任意のテキスト エディターを使用して、>.configsettings ファイル。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インストール先の指定](deployment-script-files-specifying-the-installation-target.md)   
  [パーティションおよびロールの配置オプションの指定](deployment-script-files-partition-and-role-deployment-options.md)   
  [処理オプションの指定](deployment-script-files-specifying-processing-options.md)  

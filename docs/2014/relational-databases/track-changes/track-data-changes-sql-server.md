@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -34,12 +33,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aef16266b62754884017528a9db6065ca824e4eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63073957"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースのデータに対する変更を追跡する [変更データ キャプチャ](#Capture) および [変更の追跡](#Tracking)という 2 つの機能が用意されています。 これらの機能では、データベース内のユーザー テーブルに対して行われた DML の変更 (挿入操作、更新操作、および削除操作) をアプリケーションで特定できます。 変更データ キャプチャと変更の追跡は、同じデータベースに対して有効にすることができます。特別な配慮は必要ありません。 エディションの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更データ キャプチャし、変更の追跡、サポートを参照してください、[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
@@ -59,7 +58,7 @@ ms.locfileid: "48190642"
   
 -   DML 操作のオーバーヘッドが低減します。 同期変更追跡では、オーバーヘッドが常に若干発生します。 しかし、変更の追跡を使用すると、オーバーヘッドを最小限に抑えることができます。 多くの場合、オーバーヘッドは、代わりのソリューション (特にトリガーを使用する必要があるソリューション) を使用する場合よりも少なくなります。  
   
--   コミットされたトランザクションに基づいた変更の追跡 変更の順序は、トランザクションのコミット時間に基づきます。 このため、実行時間の長いトランザクションや重複するトランザクションが存在する場合でも、信頼性が高い結果を取得できます。 使用するカスタム ソリューション`timestamp`値は、これらのシナリオを処理するために具体的には設計する必要があります。  
+-   コミットされたトランザクションに基づいた変更の追跡 変更の順序は、トランザクションのコミット時間に基づきます。 このため、実行時間の長いトランザクションや重複するトランザクションが存在する場合でも、信頼性が高い結果を取得できます。 `timestamp` 値を使用するカスタム ソリューションは、このようなシナリオに対処するように特別に設計する必要があります。  
   
 -   構成および管理に使用できる標準的なツールがあります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 標準の DDL ステートメント、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、カタログ ビュー、およびセキュリティ権限を利用できます。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48190642"
  **構成と管理**  
  有効にするか、変更を無効にするデータのキャプチャ データベースの場合、呼び出し元の[sys.sp_cdc_enable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)または[sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)固定のサーバーのメンバーである必要があります`sysadmin`ロール。 有効にして、テーブル レベルで変更データ キャプチャを無効化の呼び出し元が必要です[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)と[sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)するか、sysadmin ロールのメンバーまたはデータベースのメンバーである`database db_owner`ロール。  
   
- 変更データ キャプチャ ジョブの管理をサポートするストアド プロシージャの使用は、サーバーのメンバーに制限`sysadmin`ロールとメンバーの`database db_owner`ロール。  
+ 変更データ キャプチャ ジョブの管理をサポートするストアド プロシージャを使用できるのは、`sysadmin` サーバー ロールのメンバー、および `database db_owner` ロールのメンバーに制限されます。  
   
  **変更の列挙とメタデータ クエリ**  
  キャプチャ インスタンスに関連付けられた変更データにアクセスするには、関連付けられたソース テーブルのすべてのキャプチャ対象列に対する選択アクセスがユーザーに許可されている必要があります。 また、キャプチャ インスタンスの作成時にゲーティング ロールが指定されている場合、呼び出し元は、指定されたゲーティング ロールのメンバーである必要もあります。 メタデータにアクセスするためのその他の一般的な変更データ キャプチャ関数には、public ロールですべてのデータベース ユーザーがアクセスできます。ただし、通常は、返されるメタデータへのアクセスも、基になるソース テーブルに対する選択アクセス、および定義されたすべてのゲーティング ロールのメンバーシップに基づいて制限されます。  
@@ -140,7 +139,7 @@ ms.locfileid: "48190642"
   
 -   データベースを別のサーバーに復元した場合、既定では変更データ キャプチャが無効になり、関連するメタデータがすべて削除されます。  
   
-     変更データ キャプチャを保持するには使用、`KEEP_CDC`データベースを復元するときのオプションします。 このオプションの詳細については、「 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
+     変更データ キャプチャを保持するには、データベースを復元する際に `KEEP_CDC` オプションを使用します。 このオプションの詳細については、「 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
 -   データベースをデタッチしてから、同じサーバーまたは別のサーバーにアタッチした場合、変更データ キャプチャは有効のままです。  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48190642"
   
      変更の追跡について説明します。変更の追跡のしくみについて概要を示し、変更の追跡が [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のその他の機能とどのように連携するかを説明します。  
   
--   [Microsoft Sync Framework デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] および [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]に関する完全なドキュメントが用意されています。 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]のドキュメントのトピック「SQL Server 変更の追跡の使用方法」には、詳細な情報とコードの例があります。  
+     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] および [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]に関する完全なドキュメントが用意されています。 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] のドキュメントのトピック「How to:Use SQL Server Change Tracking」(方法: SQL Server 変更の追跡を使用する) には、詳細な情報とコードの例が掲載されています。  
   
   
 ## <a name="related-tasks-required"></a>関連タスク (必須)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBCreateInstance
@@ -18,12 +16,12 @@ ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4a34fff85c1b5c4277c17f880756eab2c7bba268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5e46c3d8a8a6836dbc0252177e45e86115abb07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128796"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 関数
   新しい SQL Server Express LocalDB インスタンスを作成します。  

@@ -1,58 +1,64 @@
 ---
-title: '手順 8: レッスン 1 のパッケージをわかりやすくする作業 | Microsoft Docs'
+title: 手順 8:レッスン 1 パッケージに注釈を付け、書式を設定する | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 61eea29c0c8094bf5f5c70df4488a950b860bc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806050"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680975"
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>レッスン 1-8 - レッスン 1 のパッケージをわかりやすくする作業
-ここまでの作業で、レッスン 1 のパッケージの構成が完了しました。次は、パッケージのレイアウトを整理することをお勧めします。 制御フローやデータ フローのレイアウトの図形サイズがまちまちであったり、図形の整列やグループ化が行われていないと、パッケージの機能がわかりにくくなることがあります。  
+# <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>レッスン 1-8:レッスン 1 パッケージに注釈を付け、書式を設定する 
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
+ここまでの作業で、レッスン 1 のパッケージの構成が完了しました。次は、パッケージのレイアウトを整理することをお勧めします。 コントロールやデータ フロー レイアウトで図形のサイズが異なっていたり、均等にレイアウトされていなかったりする場合、パッケージがわかりにくくなることがあります。  
   
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools には、パッケージのレイアウトをすばやく簡単に書式設定できるツールが用意されています。 この書式設定機能を使用すると、複数の図形を同じサイズにしたり、整列したり、図形間の上下左右の間隔を操作することができます。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools には、パッケージ レイアウトを簡単に書式設定するためのツールがあります。 この書式設定機能を使用すると、複数の図形を同じサイズにしたり、整列したり、図形間の上下左右の間隔を変更したりできます。  
   
 パッケージの機能をわかりやすくするには、パッケージ機能について説明した注釈を追加するという方法もあります。  
   
-この実習では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools の書式設定機能を使用してデータ フローのレイアウトを改善し、さらにデータ フローに注釈を追加します。  
+この実習では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools の書式設定機能を使用してデータ フローのレイアウトを改善し、注釈を追加します。  
   
-### <a name="to-format-the-layout-of-the-data-flow"></a>データ フローのレイアウトを書式設定するには  
+## <a name="format-the-layout-of-the-data-flow"></a>データ フローのレイアウトを書式設定する  
   
-1.  レッスン 1 のパッケージを開いていない場合は、ソリューション エクスプローラーで Lesson 1.dtsx をダブルクリックします。  
+1.  レッスン 1 のパッケージを開いていない場合は、**ソリューション エクスプローラー**で **Lesson 1.dtsx** をダブルクリックします。  
   
-2.  **[データ フロー]** タブをクリックします。  
+2.  **[データ フロー]** タブを選択します。  
   
-3.  Extract Sample Currency 変換の右上隅にカーソルを合わせ、クリックしてすべてのデータ フロー コンポーネントを囲むようにドラッグします。  
+3.  データ フロー コンポーネントを一度に全部選択するには、 **[編集]** の **[すべて選択]** を使用します。
   
-4.  **[書式]** メニューの **[同じサイズに揃える]** をポイントし、 **[両方]** をクリックします。  
+4.  **[書式]** メニューの **[同じサイズに揃える]** を選択し、 **[両方]** を選択します。  
   
-5.  データ フロー オブジェクトが選択されている状態で、 **[書式]** メニューの **[整列]** をポイントし、 **[左]** をクリックします。  
+5.  データ フロー オブジェクトが選択されている状態で、 **[書式]** メニューの **[整列]** を選択し、 **[中央]** をクリックします。  
+
+6.  データ フロー オブジェクトが選択されている状態で、 **[書式]** メニューの **[上下の間隔]** をポイントし、 **[間隔を均等にする]** をクリックします。  
   
-### <a name="to-add-an-annotation-to-the-data-flow"></a>データ フローに注釈を追加するには  
+## <a name="add-an-annotation-to-the-data-flow"></a>データ フローに注釈を追加する  
   
-1.  データ フローのデザイン画面の背景で任意の場所を右クリックし、 **[注釈の追加]** をクリックします。  
+1.  データ フローのデザイン画面の背景で任意の場所を右クリックし、 **[注釈の追加]** を選択します。  
   
 2.  注釈ボックスに、次のテキストを入力するか、コピーして貼り付けます。  
   
-    **このデータ フローは、ファイルからデータを抽出し、DimCurrency テーブルの CurrencyKey 列の値と DimDate テーブルの DateKey 列の値を参照して、データを NewFactCurrencyRate テーブルに書き込みます。**  
+        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
   
-    注釈ボックスのテキストを折り返すには、改行する場所にカーソルを置いて、Enter キーを押します。  
+    注釈ボックスのテキストを折り返すには、改行する場所にカーソルを置いて、**Enter** を押します。  
   
-    注釈ボックスにテキストを追加しない場合は、注釈ボックスの外側をクリックするとボックスは表示されなくなります。  
+    注釈ボックスにテキストを追加しない場合、注釈ボックスの外側をクリックするとボックスの表示が消えます。  この動作により、注釈ボックスにテキストを貼り付けたい場合は、[注釈の追加] を選択する前にテキストをクリップボードにコピーします。 
   
-## <a name="next-steps"></a>Next Steps  
-[手順 9: レッスン 1 のチュートリアル パッケージのテスト](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+## <a name="go-to-next-task"></a>次のタスクに進む
+[手順 9:レッスン 1 パッケージをテストする](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   

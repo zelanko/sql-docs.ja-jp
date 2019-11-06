@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - deadlocks [SQL Server], saving deadlock graphs
@@ -15,12 +14,12 @@ ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8bd4e6d73a0141b187ef21fcb6eee6208e38e95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150702"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Deadlock Graph の保存 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して Deadlock Graph を保存する方法について説明します。 Deadlock Graph は XML ファイルとして保存されます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48202042"
   
 4.  次のいずれかの操作を行います。  
   
-    -   トレースをファイルにキャプチャするには、**[ファイルに保存]** チェック ボックスをオンにします。 **[最大ファイル サイズの設定]** ボックスに値を指定します。  
+    -   トレースをファイルにキャプチャするには、 **[ファイルに保存]** チェック ボックスをオンにします。 **[最大ファイル サイズの設定]** ボックスに値を指定します。  
   
          必要に応じて、 **[ファイル ロールオーバーを有効にする]** チェック ボックスと **[サーバーがトレース データを処理する]** チェック ボックスをオンにします。  
   

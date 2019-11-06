@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abb7c01b2495ad58c14ca7e2aefede233213f963
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130048"
 ---
 # <a name="decimal-digits"></a>10 進数字
 *10 進数字*decimal および numeric のデータの種類は、またはデータの小数点以下桁数、小数点の右側に桁の数字の最大数として定義されます。 浮動小数点概数の数値列またはパラメーターの場合、小数点の右側にある数字の数が固定されていないため、小数点以下桁数が定義されていません。 秒コンポーネントを含む datetime または間隔のデータ、10 進数字は、データの秒部分の小数点の右側にある数字の数として定義されます。  
@@ -33,7 +32,7 @@ ms.locfileid: "47694450"
 |SQL 型|10 進数字|  
 |--------------|--------------------|  
 |すべての文字とバイナリの型が [a]|n/a|  
-|SQL_DECIMAL<br />SQL_NUMERIC|小数点の右側にある数字の定義済みの数。 たとえば、NUMERIC(10,3) として定義されている列の小数点以下桁数には 3 です。 負の数値を指数表記を使用せずに膨大な数のストレージをサポートできます。たとえば、「12000」–3 の小数点以下桁数には、「12」として格納します。|  
+|SQL_DECIMAL<br />SQL_NUMERIC|小数点の右側にある数字の定義済みの数。 たとえば、NUMERIC(10,3) として定義されている列の小数点以下桁数には 3 です。 負の数値を指数表記を使用せずに膨大な数のストレージをサポートできます。たとえば、「12000」-3 の桁数には、「12」として格納します。|  
 |SQL_DECIMAL と SQL_NUMERIC [a] 以外のすべての正確な数値型|0|  
 |すべて概数のデータ型 [a]|n/a|  
 |SQL_TYPE_DATE とコンポーネントがありません。 秒 [a] すべて間隔型|n/a|  

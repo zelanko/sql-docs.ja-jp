@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b223b4f96f70e2d7526bcf1c9f076733da167619
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 308a74501b0b4bf7b071feae2088c1ab1b7f030c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768768"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 式)
   数値式の平方根を返します。  
@@ -67,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  式に含まれる変数名には、常にプレフィックス \@ を付けます。  
   
-## <a name="see-also"></a>参照  
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+## <a name="see-also"></a>関連項目  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

@@ -1,23 +1,21 @@
 ---
 title: データ移行の監視とトラブルシューティング (Stretch Database) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, monitoring
 - monitoring Stretch Database
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2fb568ca1e1f5410762da9744598dbfba743f470
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6130bd88e93a33c5bcb295e73b752ae1b749ff77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136078"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>データ移行の監視とトラブルシューティング (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

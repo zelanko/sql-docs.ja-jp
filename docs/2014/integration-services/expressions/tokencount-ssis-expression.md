@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b4dc9070625ab85b80ebe7117adc9d010c291365
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100653"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896699"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 式)
   指定された区切り記号で区切られたトークンを含んでいる文字列内のトークン数を返します。  
@@ -32,7 +31,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  区切り記号で区切られたトークンを含む文字列です。  
   
  *delimiter_string*  
- 区切り記号を含む文字列です。 たとえば、「; ,」には 3 つの区切り記号 (セミコロン、空白、コンマ) が含まれています。  
+ 区切り記号を含む文字列です。 たとえば、"; ," には 3 つの区切り記号 (セミコロン、空白、コンマ) が含まれています。  
   
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
@@ -82,6 +81,6 @@ TOKENCOUNT("        a little white dog", " ")
 ```  
   
 ## <a name="see-also"></a>参照  
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

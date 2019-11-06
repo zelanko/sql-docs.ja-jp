@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8eeb349c91dd87175f8baaabad75acccc8a622d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 84c8d4f9ed6eccbf7e58be46a9b84c53559a317d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63232417"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>プログラムによる WMI プロバイダーへのアクセス
   このトピックは作成中です。  

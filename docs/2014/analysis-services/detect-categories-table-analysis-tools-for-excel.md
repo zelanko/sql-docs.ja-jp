@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -16,12 +15,12 @@ ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65fc89bf8d93a957f7cb1e25664621a8ff6420a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06c466eb5e3275818a710a9f9d90c705ed93c957
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081861"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>カテゴリの検出 (Excel 用のテーブル分析ツール)
   ![リボンの [Categories] ボタンを検出](media/tat-detectcat.gif "でリボン カテゴリの検出 ボタン")  
@@ -72,7 +71,7 @@ ms.locfileid: "48087732"
   
  ![レポートのカテゴリの検出ツールによって作成される](media/dm13-tat-detectcat-report3.gif "カテゴリの検出ツールによって作成されたレポート")  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **カテゴリの検出**ツール量やデータの種類の要件がありません。  
   
 > [!NOTE]  

@@ -1,27 +1,24 @@
 ---
-title: 'タスク 6: から値のインポート、Cleanse Supplier List プロジェクト |Microsoft Docs'
+title: タスク 6:値をインポート、Cleanse Supplier List プロジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489095"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>タスク 6: Cleanse Supplier List プロジェクトから値をインポートする
-  ここでは、クレンジング プロセスで収集したデータ品質ナレッジをインポートします。 参照してください[クレンジング プロジェクトの値をドメインにインポート](http://msdn.microsoft.com/library/hh479581.aspx)詳細についてはトピック。 エクスポートすることも、ナレッジ ベースを DQS ファイルに、更新を発行する前に**Suppliers**ナレッジ ベース。  
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>タスク 6:Cleanse Supplier List プロジェクトから値をインポートする
+  ここでは、クレンジング プロセスで収集したデータ品質ナレッジをインポートします。 参照してください[クレンジング プロジェクトの値をドメインにインポート](https://msdn.microsoft.com/library/hh479581.aspx)詳細についてはトピック。 エクスポートすることも、ナレッジ ベースを DQS ファイルに、更新を発行する前に**Suppliers**ナレッジ ベース。  
   
 1.  メイン ページで**DQS クライアント**、] をクリックして**右矢印**横に**Suppliers** [**最近使用したナレッジ ベース**をクリックします **。ドメイン管理**します。  
   
@@ -44,7 +41,7 @@ ms.locfileid: "48137642"
   
     |値|次に修正|  
     |-----------|----------------|  
-    |United State|United States|  
+    |United State|米国|  
   
 7.  古いドメイン値を表示するには、オフ**新規のみ表示**チェック ボックスをオンします。  
   
@@ -59,7 +56,7 @@ ms.locfileid: "48137642"
   
 10. 型、Tutorial フォルダーに移動**Suppliers.dqs**の**ファイル名**、 をクリック**保存**します。 この DQS ファイルを使用して、これに基づく新しいナレッジ ベースを作成できます。  
   
-11. クリックして**OK**を閉じる、**ナレッジ ベースのエクスポート – Suppliers**メッセージ ボックス。  
+11. をクリックして**OK**を閉じる、**ナレッジ ベースのエクスポート - サプライヤー**メッセージ ボックス。  
   
 12. クリックして**完了**してアクティビティを終了します。  
   
@@ -68,6 +65,6 @@ ms.locfileid: "48137642"
 14. クリックして**OK**メッセージ ボックス。  
   
 ## <a name="next-step"></a>次の手順  
- [レッスン 3: データを照合して仕入先の一覧から重複を削除する](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [レッスン 3:削除するデータを照合して仕入先の一覧から重複します。](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

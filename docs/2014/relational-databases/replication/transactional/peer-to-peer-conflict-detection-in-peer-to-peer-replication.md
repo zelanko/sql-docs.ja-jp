@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
@@ -14,12 +13,12 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba4adf36783aece0f222917a429628432bcda427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198991"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションにおける競合検出
   ピア ツー ピア トランザクション レプリケーションを使用すると、トポロジ内の任意のノードでデータの挿入、更新、または削除を実行し、データ変更をその他のノードに反映させることができます。 どのノードでもデータを変更できるので、さまざまなノードで行われたデータ変更が相互に競合する場合があります。 行が複数のノードで変更されると、他のノードに反映される際に競合が発生したり、場合によっては更新データが失われたりする可能性があります。  
@@ -27,7 +26,7 @@ ms.locfileid: "48229612"
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降のバージョンのピア ツー ピア レプリケーションには、ピア ツー ピア トポロジの競合の検出を有効にするオプションが導入されています。 このオプションは、検出されない競合によって引き起こされる問題 (アプリケーションの動作の矛盾や更新データの喪失など) の防止に役立ちます。 このオプションが有効になっている場合は、競合する変更が、ディストリビューション エージェントの障害を引き起こす重大なエラーとして既定で扱われるようになります。 競合が発生した場合は、その競合が解決されて、トポロジでデータの一貫性が確保されるまで、トポロジが一貫性のない状態のままになります。  
   
 > [!NOTE]  
->  データの不整合が生じないようにするため、競合の検出を有効にしている場合でも、ピア ツー ピア トポロジで競合を発生させないようにしてください。 特定の行の書き込み操作が 1 つのノードだけで行われるようにするには、データにアクセスしてそのデータを変更するアプリケーションで、挿入、更新、および削除の各操作をパーティション分割する必要があります。 これにより、1 つのノードの特定の行に対する変更は、トポロジ内の他のすべてのノードと同期されてから、別のノードでその行が変更されるようになります。 競合の検出と解決のための高度な機能がアプリケーションに必要な場合は、マージ レプリケーションを使用します。 詳細については、「[Merge Replication](../merge/merge-replication.md)」 (マージ レプリケーション) と「[Detect and Resolve Merge Replication Conflicts](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)」 (マージ レプリケーションの競合の検出と解決) を参照してください。  
+>  データの不整合が生じないようにするため、競合の検出を有効にしている場合でも、ピア ツー ピア トポロジで競合を発生させないようにしてください。 特定の行の書き込み操作が 1 つのノードだけで行われるようにするには、データにアクセスしてそのデータを変更するアプリケーションで、挿入、更新、および削除の各操作をパーティション分割する必要があります。 これにより、1 つのノードの特定の行に対する変更は、トポロジ内の他のすべてのノードと同期されてから、別のノードでその行が変更されるようになります。 競合の検出と解決のための高度な機能がアプリケーションに必要な場合は、マージ レプリケーションを使用します。 詳細については、「[Merge Replication](../merge/merge-replication.md)」 (マージ レプリケーション) と「[Detect and Resolve Merge Replication Conflicts](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)」 (マージ レプリケーションの競合の検出と解決) を参照してください。  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>競合と競合検出について  
  1 つのデータベース内では、異なるアプリケーションによって同じ行が変更されても、競合は発生しません。 これは、トランザクションがシリアル化され、同時変更はロックを使用して処理されるためです。 ピア ツー ピア レプリケーションなどの非同期の分散システムでは、トランザクションが各ノードで独立して実行されます。つまり、複数のノード間でトランザクションをシリアル化するメカニズムはありません。 2 フェーズ コミットのようなプロトコルを使用することはできますが、これはパフォーマンスに重大な影響を及ぼします。  
@@ -93,14 +92,14 @@ ms.locfileid: "48229612"
   
     3.  競合表示モジュールを使用して検出された競合を確認し、関係する行、競合の種類、および優先されたデータを特定します。 競合は、構成時に指定した発信元 ID 値に基づいて解決されます。つまり、最も ID の大きいノードの行が競合で優先されます。 詳細については、「[View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」 (トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;) を参照してください。  
   
-    4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[Validate Replicated Data](../validate-replicated-data.md)」 (レプリケートされたデータの検証) を参照してください。  
+    4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[Validate Replicated Data](../validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。  
   
         > [!NOTE]  
         >  この手順の実行後にデータに一貫性がない場合は、最も優先度の高いノードの行を手動で更新して、そのノードから変更を反映する必要があります。 競合する変更がトポロジ内になくなると、すべてのノードが一貫性のある状態になります。  
   
     5.  実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): 'p2p_continue_onconflict' を指定、@propertyパラメーターと`false`の@valueパラメーター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [@loopback_detection](peer-to-peer-transactional-replication.md)  
   
   

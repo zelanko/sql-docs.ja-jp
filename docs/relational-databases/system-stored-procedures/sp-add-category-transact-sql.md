@@ -1,5 +1,5 @@
 ---
-title: sp_add_category (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,20 +17,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 047b936bf608be86407c93860078758d43ebbb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792070"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810554"
 ---
-# <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  指定されたジョブ、警告、またはオペレーターのカテゴリをサーバーに追加します。  
+  指定されたジョブ、警告、またはオペレーターのカテゴリをサーバーに追加します。 別の方法については、「 [SQL Server Management Studio を使用したジョブカテゴリの作成](/sql/ssms/agent/create-a-job-category)」を参照してください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+ > [!IMPORTANT]  
+ > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -43,26 +45,23 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class =** ] **'***クラス***'**  
- 追加するカテゴリのクラスを指定します。 *クラス*は**varchar (8)** でジョブの既定値は、これらの値のいずれかを指定できます。  
+`[ @class = ] 'class'`追加するカテゴリのクラス。 *クラス*は**varchar (8)** で、既定値は JOB,、これらの値のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|JOB|ジョブ カテゴリを追加します。|  
-|ALERT|警告カテゴリを追加します。|  
-|OPERATOR|オペレーター カテゴリを追加します。|  
+|補足|ジョブカテゴリを追加します。|  
+|ALERT|アラートカテゴリを追加します。|  
+|OPERATOR|オペレーターカテゴリを追加します。|  
   
- [ **@type =** ] **'***type***'**  
- 追加するカテゴリの種類を指定します。 *型*は**varchar (12)** の既定値を持つ**ローカル**、これらの値のいずれかを指定できます。  
+`[ @type = ] 'type'`追加するカテゴリの種類。 *型*は**varchar (12)**,、既定値は**LOCAL**,、これらの値のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |LOCAL|ローカル ジョブ カテゴリ|  
-|マルチ サーバー|マルチサーバー ジョブ カテゴリ|  
-|なし|JOB 以外のクラスのカテゴリ**します。**|  
+|マルチサーバー|マルチサーバージョブカテゴリ。|  
+|なし|JOB 以外のクラスのカテゴリ **。**|  
   
- [ **@name =** ] **'***name***'**  
- 追加するカテゴリの名前を指定します。 名前は指定したクラス内で一意であることが必要です。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'`追加するカテゴリの名前。 名前は、指定されたクラス内で一意である必要があります。 *名前*は**sysname**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -71,10 +70,10 @@ sp_add_category
  なし  
   
 ## <a name="remarks"></a>コメント  
- **sp_add_category**から実行する必要があります、 **msdb**データベース。  
+ **sp_add_category**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_category**します。  
+ **Sp_add_category**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`AdminJobs` というローカル ジョブ カテゴリを作成します。  
@@ -90,12 +89,12 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo.sysjobservers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_delete_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sysjobs &#40;transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo. sysjobservers &#40;transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

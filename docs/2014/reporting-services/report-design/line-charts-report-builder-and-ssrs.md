@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e985fd7b1d18bfe33da7185bc769bb31186bdfe2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0f6380144faaa138e558d0118b6620aa22a095e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105576"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折れ線グラフ (レポート ビルダーおよび SSRS)
-  折れ線グラフでは、1 本の線で結ばれた点のセットとして系列が表示されます。 折れ線グラフは、継続的に発生する大量のデータを表す場合に使用されます。 折れ線グラフにデータを追加する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
+  折れ線グラフでは、1 本の線で結ばれた点のセットとして系列が表示されます。 折れ線グラフは、継続的に発生する大量のデータを表す場合に使用されます。 折れ線グラフにデータを追加する方法の詳細については、「 [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)」を参照してください。  
   
  次の図は、3 つの系列を含む折れ線グラフを示しています。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "48199952"
   
 -   **階段状折れ線**: 直線ではなく階段状折れ線を使用した折れ線グラフ。 階段状折れ線は、はしごや階段の段のように見える線を使用して点を結びます。  
   
--   **スパークライン グラフ**: 折れ線グラフの一種で、テーブルまたはマトリックスのセルに線系列のみが表示されます。 詳細については、「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
+-   **スパークライン グラフ**: 折れ線グラフの一種で、テーブルまたはマトリックスのセルに線系列のみが表示されます。 詳細については、「 [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="data-considerations-for-line-charts"></a>折れ線グラフのデータに関する注意点  
   
@@ -46,13 +45,13 @@ ms.locfileid: "48199952"
   
 -   線で描画される系列は、グラフ領域内であまり場所を取りません。  そのため、折れ線グラフは、縦棒グラフなどの他の種類のグラフと組み合わせることがよくあります。 ただし、折れ線グラフは、横棒、極座標、円、または図形のグラフと組み合わせることはできません。  
   
-## <a name="see-also"></a>参照  
- [横棒グラフ&#40;レポート ビルダーおよび SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
- [縦棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [横棒グラフ (レポート ビルダーおよび SSRS)](bar-charts-report-builder-and-ssrs.md)   
+ [縦棒グラフ (レポート ビルダーおよび SSRS)](column-charts-report-builder-and-ssrs.md)   
+ [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [面グラフ &#40;レポート ビルダーおよび SSRS&#41;](area-charts-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

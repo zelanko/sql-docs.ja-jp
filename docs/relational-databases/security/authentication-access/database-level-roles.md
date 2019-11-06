@@ -1,7 +1,7 @@
 ---
 title: データベース レベルのロール | Microsoft Docs
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,16 +37,16 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780830"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742839"
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データベースでの権限を簡単に管理できるように、いくつかの *ロール* が用意されています。ロールは、セキュリティ プリンシパルとして他のプリンシパルをグループ化します。 ロールは、 ***Windows オペレーティング システムの*** グループ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] に似ています。 データベース レベルのロールは、その権限のスコープがデータベース全体に及びます。  
@@ -57,7 +57,7 @@ ms.locfileid: "47780830"
   
  固定データベース ロールはデータベース レベルで定義されており、各データベースに存在します。 **db_owner** データベース ロールのメンバーは、固定データベース ロールのメンバーシップを管理できます。 msdb データベースには、特別な用途のデータベース ロールもいくつかあります。  
   
- データベース レベルのロールには、すべてのデータベース アカウントとその他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ロールを追加できます。 固定データベース ロールの各メンバーは、その同じロールに他のユーザーを追加できます。  
+ データベース レベルのロールには、すべてのデータベース アカウントとその他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ロールを追加できます。
   
 > [!TIP]  
 >  ユーザー定義データベース ロールは、固定ロールのメンバーとして追加しないでください。 これを行うと、特権が意図せず昇格されることがあります。  
@@ -73,7 +73,7 @@ ms.locfileid: "47780830"
 |固定データベース ロールの名前|[説明]|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定データベース ロールのメンバーは、データベースでのすべての構成作業とメンテナンス作業を実行でき、 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でデータベースを削除することもできます。 ( [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]では、一部のメンテナンス作業にサーバー レベルの権限が必要であり、 **db_owners**では実行できません。)|  
-|**db_securityadmin**|**db_securityadmin** 固定データベース ロールのメンバーは、ロールのメンバーシップを変更し、権限を管理できます。 このロールにプリンシパルを追加すると、特権が意図せず昇格されることがあります。|  
+|**db_securityadmin**|**db_securityadmin** 固定データベース ロールのメンバーは、カスタム ロールのロール メンバーシップのみの変更、および権限の管理を実行できます。 このロールのメンバーは、特権を昇格させる可能性があり、そのアクションを監視する必要があります。|  
 |**db_accessadmin**|**db_accessadmin** 固定データベース ロールのメンバーは、Windows ログイン、Windows グループ、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのデータベースに対するアクセスを追加または削除できます。|  
 |**db_backupoperator**|**db_backupoperator** 固定データベース ロールのメンバーは、データベースをバックアップできます。|  
 |**db_ddladmin**|**db_ddladmin** 固定データベース ロールのメンバーは、すべての DDL (データ定義言語) コマンドをデータベースで実行できます。|  
@@ -86,17 +86,17 @@ ms.locfileid: "47780830"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>特別なロール - [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>特別なロール - [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
-以下のデータベース ロールは、仮想 master データベース内にのみ存在します。 その権限は master で実行されるアクションに制限されます。 これらのロールに追加できるのは、master のデータベース ユーザーのみです。 これらのロールにログインを追加することはできませんが、ログインに基づいてユーザーを作成してから、そのユーザーをロールに追加することはできます。 これらのロールに、master の包含データベース ユーザーを追加することもできます。
+以下のデータベース ロールは、仮想 master データベース内にのみ存在します。 その権限は master で実行されるアクションに制限されます。 これらのロールに追加できるのは、master のデータベース ユーザーのみです。 これらのロールにログインを追加することはできませんが、ログインに基づいてユーザーを作成してから、そのユーザーをロールに追加することはできます。 これらのロールに、master の包含データベース ユーザーを追加することもできます。 ただし、master の **dbmanager** ロールに追加された包含データベース ユーザーを使用して新しいデータベースを作成することはできません。
 
 |ロール名|[説明]|  
 |--------------------|-----------------|
-**dbmanager** | データベースの作成と削除を行うことができます。 データベースを作成する dbmanager ロールのメンバーは、そのデータベースの所有者になります。これにより、ユーザーは dbo ユーザーとしてそのデータベースに接続できるようになります。 dbo ユーザーには、データベースでのすべてのデータベース権限があります。 dbmanager ロールのメンバーには、所有していないデータベースへのアクセス権が必ずしもあるとは限りません。
-**loginmanager** | 仮想 master データベースのログインを作成および削除できます。  
+|**dbmanager** | データベースの作成と削除を行うことができます。 データベースを作成する dbmanager ロールのメンバーは、そのデータベースの所有者になります。これにより、ユーザーは dbo ユーザーとしてそのデータベースに接続できるようになります。 dbo ユーザーには、データベースでのすべてのデータベース権限があります。 dbmanager ロールのメンバーには、所有していないデータベースへのアクセス権が必ずしもあるとは限りません。|
+|**loginmanager** | 仮想 master データベースのログインを作成および削除できます。|
 
 > [!NOTE]
-> サーバー レベル プリンシパルと Azure Active Directory 管理者 (構成されている場合) には [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] でのすべての権限があり、すべてのロールのメンバーである必要はありません。 詳細については、「 [SQL Database の認証と承認: アクセス権の付与](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)」を参照してください。 
+> サーバー レベル プリンシパルと Azure Active Directory 管理者 (構成されている場合) には [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] でのすべての権限があり、すべてのロールのメンバーである必要はありません。 詳細については、「[SQL Database の認証と承認:アクセス権の付与](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)」を参照してください。 
   
 ## <a name="msdb-roles"></a>msdb ロール  
  msdb データベースには、次の表に示す特別な用途のロールが含まれています。  
@@ -114,7 +114,7 @@ ms.locfileid: "47780830"
 
 ## <a name="working-with-r-services"></a>R Services の使用  
 
-**適用対象:** SQL Server ( [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**適用対象:** SQL Server ([!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)] 以降)   
 
 R Services がインストールされている場合は、パッケージの管理で追加のデータベース ロールを使用できます。 詳細については、 [SQL Server の R パッケージ管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)に関するページを参照してください。
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d71e3522ab46116e378b2ee17689a7048af04c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003308"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access ドライバー)
 > [!NOTE]  
@@ -27,11 +26,11 @@ ms.locfileid: "47696280"
   
  **SQLGetInfo** SQL_FILE_USAGE 情報の種類をサポートしています。 返される値は、ドライバーが直接データ ソース内のファイルを処理する方法を示す 16 ビット整数を示します。  
   
--   SQL_FILE_NOT_SUPPORTED-ドライバーは、1 階層のドライバーではありません。  
+-   SQL_FILE_NOT_SUPPORTED - ドライバーは、1 階層のドライバーではありません。  
   
--   SQL_FILE_TABLE — 1 階層のドライバーは、テーブルとしてデータ ソース内のファイルを扱います。  
+-   SQL_FILE_TABLE - 1 階層のドライバーは、テーブルとしてデータ ソース内のファイルを扱います。  
   
--   SQL_FILE_QUALIFIER — 1 階層のドライバーは、修飾子としてデータ ソース内のファイルを扱います。  
+-   SQL_FILE_QUALIFIER - 1 階層のドライバーは、修飾子としてデータ ソース内のファイルを扱います。  
   
  ODBC ドライバーでは、各ファイルは、データベースの完全なために、SQL_FILE_QUALIFIER が返されます。  
   
@@ -188,7 +187,7 @@ ms.locfileid: "47696280"
   
  PIVOT  
   
- 短い  
+ SHORT  
   
  1 つ  
   
@@ -204,7 +203,7 @@ ms.locfileid: "47696280"
   
  [TEXT]  
   
- 先頭に戻る  
+ TOP  
   
  変換  
   

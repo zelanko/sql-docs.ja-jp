@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.columnproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f73bbec32dc8f5d8d20e443428589a3aa45980ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854905"
 ---
 # <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
   このページを使用すると、選択されている列のプロパティを表示できます。  

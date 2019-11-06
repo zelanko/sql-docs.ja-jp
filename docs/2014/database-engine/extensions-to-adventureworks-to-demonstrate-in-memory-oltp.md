@@ -10,17 +10,17 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100413"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779972"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
     
 ## <a name="overview"></a>概要  
- このサンプルでは、[!INCLUDE[hek_2](../includes/hek-2-md.md)] に含まれている[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] の新機能を紹介します。 このサンプルで取り上げるのは、新しいメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、 [!INCLUDE[hek_2](../includes/hek-2-md.md)]のパフォーマンス上の利点も示します。  
+ このサンプルでは、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] に含まれている [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]の新機能を紹介します。 このサンプルで取り上げるのは、新しいメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、 [!INCLUDE[hek_2](../includes/hek-2-md.md)]のパフォーマンス上の利点も示します。  
   
 > [!NOTE]  
 >  SQL Server 2016 のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](https://msdn.microsoft.com/library/mt465764.aspx)」をご覧ください。  
@@ -35,15 +35,15 @@ ms.locfileid: "50100413"
   
 -   [AdventureWorksに基づくインメモリOLTPサンプルのインストール](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
   
--   [サンプル テーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] サンプルによって AdventureWorks に追加されるテーブルおよびプロシージャの説明、オリジナルの AdventureWorks テーブルをメモリ最適化テーブルに移行する際の考慮事項が記載されています。  
+-   [サンプル テーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures)-テーブルおよびプロシージャによって AdventureWorks に追加の説明が含まれるこの、[!INCLUDE[hek_2](../includes/hek-2-md.md)]の移行に関する考慮事項とサンプルについては、AdventureWorks のテーブルに、元の一部メモリ最適化  
   
--   [デモ ワークロードを使用したパフォーマンス測定](#PerformanceMeasurementsusingtheDemoWorkload) を実行する手順 - デモ ワークロード自体を実行する手順だけでなく、ワークロードを操作するツール、ostress をインストールして実行する手順も記載されています。  
+-   [デモ ワークロードを使用したパフォーマンス測定](#PerformanceMeasurementsusingtheDemoWorkload)を実行する手順 - デモ ワークロード自体を実行する手順だけでなく、ワークロードを操作するツール、ostress をインストールして実行する手順も記載されています  
   
 -   [サンプルにおけるメモリおよびディスク領域の使用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
 ##  <a name="Prerequisites"></a> 前提条件  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM - Evaluation、Developer、または Enterprise Edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM - Evaluation、Developer、または Enterprise edition  
   
 -   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に使用できるメモリが 16 GB 以上必要です。 ハードウェアに関する一般的なガイドラインについて[!INCLUDE[hek_2](../includes/hek-2-md.md)]ブログの投稿を参照してください。[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -87,13 +87,13 @@ ms.locfileid: "50100413"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" サンプル スクリプトを、「 [SQL Server 2014 RTM のインメモリ OLTP のサンプル](http://go.microsoft.com/fwlink/?LinkID=396372) 」からローカル フォルダーにダウンロードします。  
+5.  サンプル スクリプトをダウンロード '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' から[SQL Server 2014 RTM のインメモリ OLTP のサンプル](https://go.microsoft.com/fwlink/?LinkID=396372)ローカル フォルダーにします。  
   
-6.  "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" スクリプトで、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] チェックポイント ファイルの対象の場所を指すように、変数 "checkpoint_files_location" の値を更新します。 チェックポイント ファイルは、シーケンシャル IO パフォーマンスに優れたドライブに配置します。  
+6.  変数"checkpoint_files_location スクリプト内の値を更新 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' のターゲットの場所を指す、[!INCLUDE[hek_2](../includes/hek-2-md.md)]チェックポイント ファイル。 チェックポイント ファイルは、シーケンシャル IO パフォーマンスに優れたドライブに配置します。  
   
      AdventureWorks2014 データベースを指すように変数 'database_name' の値を更新します。  
   
-    1.  パス名には必ずバックスラッシュ "\" を含めてください  
+    1.  円記号を含めるようにしてください '\'パス名の一部として  
   
     2.  例:  
   
@@ -108,18 +108,18 @@ ms.locfileid: "50100413"
     1.  sqlcmd コマンド ライン ユーティリティを使用します。 たとえば、スクリプトが含まれるフォルダーで、コマンド ライン プロンプトから次のコマンドを実行します。  
   
         ```  
-        sqlcmd –S . –E –i "ssSQL14 RTM hek_2 Sample.sql"  
+        sqlcmd -S . -E -i "ssSQL14 RTM hek_2 Sample.sql"  
         ```  
   
     2.  Management Studio を使用します。  
   
-        1.  クエリ ウィンドウで、"[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" スクリプトを開きます  
+        1.  スクリプトを開きます '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' クエリ ウィンドウで  
   
-        2.  AdventureWorks2014 データベースが含まれているサーバーに接続します  
+        2.  AdventureWorks2014 データベースが含まれているターゲット サーバーに接続します  
   
-        3.  [クエリ] > [SQLCMD モード] の順にクリックして、SQLCMD モードを有効にします  
+        3.  'クエリでは、SQLCMD モードを ->' をクリックして、SQLCMD モードを有効にします。  
   
-        4.  [実行] をクリックして、スクリプトを実行します  
+        4.  スクリプトを実行するには、[実行] ボタンをクリックします。  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> サンプル テーブルおよびプロシージャの説明  
  サンプルでは、AdventureWorks の既存のテーブルに基づいて、製品および販売注文ごとに新しいテーブルを作成します。 新しいテーブルのスキーマは既存のテーブルと似ていますが、以下に示すように、異なる点がいくつかあります。  
@@ -206,9 +206,9 @@ ms.locfileid: "50100413"
   
  Sales.SalesOrderDetail  
   
--   *既定の制約* - SalesOrderHeader と同様、システムの日付/時刻を必要とする既定の制約は移行されません。現在のシステムの日付/時刻の挿入は、販売注文を挿入するストアド プロシージャによる初回挿入時に行われます。  
+-   "*既定の制約*" - SalesOrderHeader と同様、システムの日付/時刻を必要とする既定の制約は移行されません。現在のシステムの日付/時刻の挿入は、販売注文を挿入するストアド プロシージャによる初回挿入時に行われます。  
   
--   *計算列* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である LineTotal は計算列としては移行されませんでした。 この列にアクセスするには、Sales.vSalesOrderDetail_extended_inmem ビューを使用します。  
+-   "*計算列*" - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である LineTotal は計算列としては移行されませんでした。 この列にアクセスするには、Sales.vSalesOrderDetail_extended_inmem ビューを使用します。  
   
 -   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
@@ -221,13 +221,13 @@ ms.locfileid: "50100413"
   
  Production.Product  
   
--   *エイリアス UDT* – 元のテーブルでは、ユーザー定義データ型 dbo.Flag が使用されます。これは、システム データ型 bit と同じです。 移行したテーブルでは、代わりに bit データ型が使用されます。  
+-   "*エイリアス UDT*" - 元のテーブルでは、ユーザー定義データ型 dbo.Flag が使用されます。これは、システム データ型 bit と同じです。 移行したテーブルでは、代わりに bit データ型が使用されます。  
   
--   *"BIN2 照合順序"* – The columns Name and ProductNumber are included in index keys, and must thus have s in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では BIN2 照合順序が必要です。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
+-   *BIN2 照合順序*-名前と ProductNumber 列は、インデックス キーに含まれ、BIN2 照合順序であるため[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
   
 -   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
--   *"UNIQUE 制約"*, *Check* 、および *"外部キー制約"* are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem 、および "外部キー制約" Product.usp_DeleteProduct_inmem can be used to insert 、および "外部キー制約" delete products; these procedures validate domain 、および "外部キー制約" referential integrity, 、および "外部キー制約" will fail if integrity is violated. 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
+-   *"UNIQUE 制約"* , *Check* 、および *"外部キー制約"* are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem 、および "外部キー制約" Product.usp_DeleteProduct_inmem can be used to insert 、および "外部キー制約" delete products; these procedures validate domain 、および "外部キー制約" referential integrity, 、および "外部キー制約" will fail if integrity is violated. 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  
@@ -263,7 +263,7 @@ ms.locfileid: "50100413"
   
  ハッシュ インデックスを使用すると、ワークロードをさらに最適化できます。 これは、特にポイント参照と行挿入に合わせて最適化されています。 ただし、範囲スキャン、並べ替えられたスキャン、または先頭のインデックス キー列での検索がサポートされていないことを考慮する必要があります。 したがって、このインデックスを使用するときは注意が必要です。 また、作成時に bucket_count を指定する必要もあります。 一般的にはインデックス キー値の数の 1 ～ 2 倍に設定しますが、多めに設定しても通常は問題ありません。  
   
- 詳細については、オンライン ブックの [インデックスのガイドライン](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 、および [適切な bucket_count の選択](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)に関するガイドラインをご覧ください。  
+ 詳細については、オンライン ブックの [インデックスのガイドライン](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 、および [適切な bucket_count の選択](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)に関するガイドラインをご覧ください。  
   
  移行したテーブルのインデックスは、販売注文処理のデモ ワークロードに合わせて調整されています。 ワークロードは、Sales.SalesOrderHeader_inmem テーブルおよび Sales.SalesOrderDetail_inmem テーブルの挿入とポイント参照のほか、Production.Product_inmem テーブルおよび Sales.SpecialOffer_inmem テーブルの主キー列のポイント参照にも依存します。  
   
@@ -309,7 +309,7 @@ ms.locfileid: "50100413"
   
     -   出力パラメーター:  
   
-        -   @SalesOrderID int – 挿入された販売注文の SalesOrderID  
+        -   @SalesOrderID int - 挿入された販売注文の SalesOrderID  
   
     -   入力パラメーター (必須):  
   
@@ -323,7 +323,7 @@ ms.locfileid: "50100413"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – 注文の品目が含まれる TVP  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 注文の品目が含まれる TVP  
   
     -   入力パラメーター (省略可能):  
   
@@ -351,7 +351,7 @@ ms.locfileid: "50100413"
   
     -   指定された販売注文の出荷情報を更新します。 これにより、販売注文のすべての品目の出荷情報も更新されます。  
   
-    -   これはネイティブ コンパイル ストアド プロシージャ Sales.usp_UpdateSalesOrderShipInfo_native のラッパー プロシージャで、再試行ロジックを備えており、同じ注文を更新する同時実行トランザクションとの間で発生する可能性のある (予期しない) 競合を処理します。 再試行ロジックの詳細については、オンライン ブックの [こちら](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)のトピックを参照してください。  
+    -   これはネイティブ コンパイル ストアド プロシージャ Sales.usp_UpdateSalesOrderShipInfo_native のラッパー プロシージャで、再試行ロジックを備えており、同じ注文を更新する同時実行トランザクションとの間で発生する可能性のある (予期しない) 競合を処理します。 再試行ロジックの詳細については、オンライン ブックの [こちら](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)のトピックを参照してください。  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -379,7 +379,7 @@ ms.locfileid: "50100413"
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   省略可能なパラメーター: @object_id – 整合性を検証するオブジェクトの ID  
+    -   省略可能なパラメーター: @object_id - 整合性を検証するオブジェクトの ID  
   
     -   このプロシージャは、検証する必要がある整合性規則に関して、dbo.DomainIntegrity テーブル、dbo.ReferentialIntegrity テーブル、および dbo.UniqueIntegrity テーブルに依存しています。サンプルでは、AdventureWorks データベースの元のテーブルに対して存在する CHECK 制約、外部キー制約、および UNIQUE 制約に基づいて、これらのテーブルにデータが入力されます。  
   
@@ -393,9 +393,9 @@ ms.locfileid: "50100413"
   
  インストール手順:  
   
-1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。[http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
-2.  特定のファイルが使用中であることを通知するダイアログ ボックスが表示された場合は、[続行] をクリックします。  
+2.  特定のファイルが使用中であることを通知するダイアログ ボックスが表示された場合は、[続行] をクリックします  
   
 ### <a name="running-ostress"></a>ostress の実行  
  ostress は、コマンド ライン プロンプトから実行されます。 最も便利なのは、RML ユーティリティの一部としてインストールされている "RML Cmd Prompt" から実行する方法です。  
@@ -412,7 +412,7 @@ ms.locfileid: "50100413"
   
 -   -S 接続先の [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前  
   
--   -E Windows 認証を使用して接続 (既定)。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、オプションとして –U および -P を使用して、ユーザー名とパスワードをそれぞれ指定  
+-   -E Windows 認証を使用して接続 (既定)。使用する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証では、オプションを使用してにして、P、ユーザー名とパスワードをそれぞれ指定するには  
   
 -   -d データベースの名前。この例では AdventureWorks2014  
   
@@ -459,7 +459,7 @@ END
   
  前のスクリプトでは、メモリ最適化テーブルに販売注文が挿入されます。 ディスク ベース テーブルに販売注文を挿入するスクリプトを取得するには、2 つある "_inmem" を "_ondisk" に置き換えます。  
   
- ostress ツールを使って、複数のコンカレント接続を使用してスクリプトを実行します。 "- n" パラメーターで接続数を制御し、"r" パラメーターで各接続のスクリプト実行回数を制御します。  
+ ostress ツールを使って、複数のコンカレント接続を使用してスクリプトを実行します。 "-n" パラメーターで接続数を制御し、"r" パラメーターで各接続のスクリプト実行回数を制御します。  
   
 #### <a name="functional-validation-of-the-workload"></a>ワークロードの機能検証  
  動作しますが、サンプルのテストで開始することを確認するを同時に 10 を使用して接続と 10 * 5 の合計を挿入する 5 つのイテレーション\*20 = 1000 の販売注文します。  
@@ -471,7 +471,7 @@ END
  [コピー] をクリックしてコマンドをコピーし、RML ユーティリティのコマンド プロンプトに貼り付けてください。  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  すべてが適切に機能していると、コマンド ウィンドウは次のようになります。 エラー メッセージはありません。  
@@ -483,11 +483,11 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  [コピー] をクリックしてコマンドをコピーし、RML ユーティリティのコマンド プロンプトに貼り付けてください。  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
 #### <a name="running-the-workload"></a>ワークロードの実行  
- 拡張性をテストするために、100 個の接続を使用して、1,000 万個の販売注文を挿入します。 このテストは、適度なサーバー (たとえば、8 個の物理コアと 16 個の論理コア) と、ログ用の基本 SSD ストレージで問題なく実行されます。 ご利用のハードウェアでテストを正常に実行できない場合は、「 [実行速度の遅いテストのトラブルシューティング](#Troubleshootingslow-runningtests)」セクションをご参照ください。このテストのストレス レベルを下げるには、"-n" パラメーターを変更して接続数を減らします。 たとえば、接続数を 40 に下げるには、"- n100" パラメーターを "n40" に変更します。  
+ 拡張性をテストするために、100 個の接続を使用して、1,000 万個の販売注文を挿入します。 このテストは、適度なサーバー (たとえば、8 個の物理コアと 16 個の論理コア) と、ログ用の基本 SSD ストレージで問題なく実行されます。 ご利用のハードウェアでテストを正常に実行できない場合は、「[実行速度の遅いテストのトラブルシューティング](#Troubleshootingslow-runningtests)」セクションをご覧ください。このテストのストレス レベルを下げるには、"-n" パラメーターを変更して接続数を減らします。 たとえば、接続数を 40 に下げるには、"-n100" パラメーターを "-n40" に変更します。  
   
  ワークロードのパフォーマンス評価基準として、ワークロードの実行後に ostress.exe によって報告された経過時間を使用します。  
   
@@ -499,7 +499,7 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  [コピー] をクリックしてコマンドをコピーし、RML ユーティリティのコマンド プロンプトに貼り付けてください。  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  合計 8 個の物理 (16 個の論理) コアを備えたテスト サーバーでの所要時間は 2 分 5 秒でした。 合計 24 個の物理 (48 個の論理) コアを備えた 2 台目のテスト サーバーでの所要時間は 1 分 0 秒でした。  
@@ -514,12 +514,12 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 
  [コピー] をクリックしてコマンドをコピーし、RML ユーティリティのコマンド プロンプトに貼り付けてください。  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  合計 8 個の物理 (16 個の論理) コアを備えたテスト サーバーでの所要時間は 41 分 25 秒でした。 合計 24 個の物理 (48 個の論理) コアを備えた 2 台目のテスト サーバーでの所要時間は 52 分 16 秒でした。  
   
- ディスク ベース テーブルを使用していると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では CPU をフルに活用できません。これが主な要因となり、このテストでは、メモリ最適化テーブルとディスク ベース テーブルのパフォーマンスに差が生じました。 CPU をフル活用できない原因はラッチ競合です。同時実行トランザクションは同じデータ ページに書き込もうとしますが、ラッチにより、一度に 1 つのトランザクションしかページに書き込むことができなくなります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] エンジンはラッチ フリーで、データ行はページ単位で整理されていません。 このため、同時実行トランザクションが挿入をブロックし合うことはなく、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は CPU をフル活用できます。  
+ ディスク ベース テーブルを使用していると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では CPU をフルに活用できません。これが主な要因となり、このテストでは、メモリ最適化テーブルとディスク ベース テーブルのパフォーマンスに差が生じました。 CPU をフル活用できない原因はラッチ競合です。同時実行トランザクションは同じデータ ページに書き込もうとしますが、ラッチにより、一度に 1 つのトランザクションしかページに書き込むことができなくなります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] エンジンはラッチ フリーで、データ行はページ単位で整理されていません。 このため、同時実行トランザクションは互いの挿入が有効にしないブロック[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]CPU をフルに活用します。  
   
  ワークロードの実行中、タスク マネージャーなどを使用して、CPU の使用率を確認できます。 ディスク ベース テーブルの CPU 使用率が、100% からはかけ離れていることがわかります。 16 個の論理プロセッサを備えたテスト構成では、使用率は 24% 前後で推移します。  
   
@@ -539,13 +539,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> 実行速度の遅いテストのトラブルシューティング  
  テスト結果は、通常、ハードウェアと、テスト実行で使用されたコンカレンシーのレベルによって変わります。 期待した結果を得られない場合に確認することをいくつか次に示します。  
   
--   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
+-   同時実行トランザクション数:1 つのスレッドでワークロードを実行すると、[!INCLUDE[hek_2](../includes/hek-2-md.md)] によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用できるコアが少ない: つまり、低レベルのコンカレンシーがシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションをコンカレンシーできないからです。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用できるコアが少ない:つまり、システムのコンカレンシー レベルが低いことになります。これは、SQL で使用できるコアの数しか、トランザクションをコンカレンシーできないからです。  
   
     -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、コンカレンシーが不足していることを示します。  
   
--   ログ ドライブの速度: ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)]でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
+-   ログ ドライブの速度:ログ ドライブの速度が、システムのトランザクション スループットのレベルに追いつかない場合、ログ IO がワークロードのボトルネックになります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)]でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
   
     -   現象: メモリ最適化テーブルでワークロードを実行しているとき、CPU 使用率が 100% からかけ離れている場合、または、その変動が激しい場合は、ログ IO ボトルネックが存在する可能性があります。 これを確認するには、リソース モニターを開き、ログ ドライブのキュー長を確認します。  
   
@@ -601,7 +601,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- テーブルがかなり小さいことがわかります。SalesOrderHeader_inmem は約 7 MB、SalesOrderDetail_inmem は約 15 MB です。  
+ ご覧のとおり、これらは非常に小さいテーブルです。SalesOrderHeader_inmem のサイズは約 7 MB、SalesOrderDetail_inmem は約 15 MB です。  
   
  ここで印象的なのは、インデックスに割り当てられているメモリのサイズです (テーブル データのサイズと比較)。 このサイズになるのは、サンプルのハッシュ インデックスが、大きなデータ サイズに合わせて事前にサイズ調整されているためです。 ハッシュ インデックスのサイズは固定されているため、テーブルのデータのサイズに合わせて大きくなることはありません。  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- データの合計サイズが約 6.5 GB であることがわかります。 SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem のインデックスのサイズが、インデックスのサイズと同じ販売注文を挿入する前に注目してください。 インデックスのサイズが変わらなかったのは、この両方のテーブルがハッシュ インデックスを使用しているからです。ハッシュ インデックスは静的です。  
+ データの合計サイズが約 6.5 GB であることがわかります。 SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem テーブルのインデックスのサイズが、販売注文を挿入する前のインデックスのサイズと同じであることに注意してください。 インデックスのサイズが変わらなかったのは、この両方のテーブルがハッシュ インデックスを使用しているからです。ハッシュ インデックスは静的です。  
   
 #### <a name="after-demo-reset"></a>デモのリセット後  
  ストアド プロシージャ Demo.usp_DemoReset を使用すると、デモをリセットできます。 これにより SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem テーブルのデータが削除され、元の SalesOrderHeader テーブルと SalesOrderDetail テーブルからデータが再送信されます。  

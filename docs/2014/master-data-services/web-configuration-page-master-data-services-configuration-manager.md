@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebab5de453d383b20e55e52ec3d57b10cfaebcf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481217"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>[Web の構成] ページ (マスター データ サービス構成マネージャー)
   **[Web の構成]** ページを使用すると、Web サイトまたは Web アプリケーションを新規作成できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションを選択すると、アプリケーションの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを指定して、Data Quality Services を有効にすることができます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48200870"
 ## <a name="see-also"></a>参照  
  [マスター データ サービスのデータベースと web サイトの設定します。](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Web アプリケーションの要件&#40;マスター データ サービス&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [マスター データ マネージャー Web アプリケーションを作成する&#40;マスター データ サービス&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 と「サービス利用不可」エラー](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+ [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [MDS 2014 と「サービス利用不可」エラー](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

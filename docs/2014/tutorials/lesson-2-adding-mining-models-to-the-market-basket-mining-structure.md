@@ -1,25 +1,24 @@
 ---
-title: 'レッスン 2: Market Basket マイニング構造にマイニング モデルの追加 |Microsoft Docs'
+title: レッスン 2:Market Basket マイニング構造にマイニング モデルの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204720"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>レッスン 2: Market Basket マイニング構造へのマイニング モデルの追加
-  このレッスンで作成した Market Basket マイニング構造に 2 つのマイニング モデルを追加[レッスン 1: Market Basket マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)します。 これらのマイニング モデルを使用すると、予測を作成できます。  
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>レッスン 2:マイニング モデルを Market Basket マイニング構造に追加する
+  このレッスンで作成した Market Basket マイニング構造に 2 つのマイニング モデルを追加[レッスン 1。Market Basket マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)します。 これらのマイニング モデルを使用すると、予測を作成できます。  
   
  使用して 2 つのマイニング モデルを作成すると同時に購入する傾向が強い製品の種類を予測する、 [Microsoft アソシエーション アルゴリズム](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)と 2 つの異なる値、 *MINIMUM_PROBABILTY*パラメーター。  
   
@@ -107,7 +106,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>Association マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -201,7 +200,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>Association マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -286,6 +285,6 @@ ADD MINING MODEL [<mining model name>]
  次のレッスンでは、Market Basket マイニング構造とそれに関連するマイニング モデルを処理します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 3: Market Basket マイニング構造の処理](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [レッスン 3:Market Basket マイニング構造の処理](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

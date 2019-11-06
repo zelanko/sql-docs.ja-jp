@@ -27,23 +27,22 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - time [SQL Server], system
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4b1d36e60213fc9c2e10614a886eb46d53fe201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7213174c47bb466f34b896560060c140086b325a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117523"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターの日付と時刻を含む **datetimeoffset(7)** 値を返します。 タイム ゾーン オフセットが含まれます。  
   
- すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,15 +67,15 @@ SYSDATETIMEOFFSET ( )
  次の例では、現在の日付と時刻を返す 6 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>A. 日付および時刻の関数から返される形式を表示する  
- 次の例では、日付と時刻の関数によって返されるさまざまな形式を表示します。  
+ 次の例では、日付と時刻関数から返されるさまざまな形式を示します。  
   
 ```  
-SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
+SELECT SYSDATETIME() AS [SYSDATETIME()]  
+    ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
+    ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
     ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
+    ,GETDATE() AS [GETDATE()]  
+    ,GETUTCDATE() AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -117,12 +116,12 @@ SELECT CONVERT (date, SYSDATETIME())
  次の例では、日付と時刻の値を `time` に変換する方法を示します。  
   
 ```  
-SELECT CONVERT (time, SYSDATETIME()) AS SYSDATETIME()  
-    ,CONVERT (time, SYSDATETIMEOFFSET()) AS SYSDATETIMEOFFSET()  
-    ,CONVERT (time, SYSUTCDATETIME()) AS SYSUTCDATETIME()  
-    ,CONVERT (time, CURRENT_TIMESTAMP) AS CURRENT_TIMESTAMP  
-    ,CONVERT (time, GETDATE()) AS GETDATE()  
-    ,CONVERT (time, GETUTCDATE()) AS GETUTCDATE();  
+SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
+    ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
+    ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  
+    ,CONVERT (time, CURRENT_TIMESTAMP) AS [CURRENT_TIMESTAMP]  
+    ,CONVERT (time, GETDATE()) AS [GETDATE()]  
+    ,CONVERT (time, GETUTCDATE()) AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

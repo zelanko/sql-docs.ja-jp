@@ -12,12 +12,12 @@ ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2706d2ec2c82828534c41851001dbac644ecbe1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913623"
 ---
 # <a name="mssqlserver5512"></a>MSSQLSERVER_5512
     
@@ -36,6 +36,6 @@ ms.locfileid: "48132492"
  切り捨て操作に失敗しました。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- エラーの原因を特定の Windows 状態コードを参照してください。 この状態コードの詳細については、次を参照してください。、[イベントとエラー メッセージ センター](http://go.microsoft.com/fwlink/?linkid=47660)します。  
+ エラーの原因を特定の Windows 状態コードを参照してください。 この状態コードの詳細については、次を参照してください。[イベントとエラー メッセージが Microsoft サポート](https://support.microsoft.com/search?query=events%20and%20error%20messages)します。  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -15,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc1702fd89a232d6b939dc8300e42925a0da293b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672147"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
   このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "51560169"
  キャプチャ ジョブの動作を理解するには、`sp_cdc_scan` における構成可能パラメーターの使用方法について理解する必要があります。  
   
 #### <a name="maxtrans-parameter"></a>maxtrans パラメーター  
- *maxtrans* パラメーターは、ログの単一のスキャン サイクルで処理できるトランザクションの最大数を指定します。 スキャン中に処理するトランザクションの数にはこの制限に達すると場合、現在のスキャンで追加のトランザクションは含まれません。 スキャン サイクルの完了後は、処理されたトランザクションの数は常に *maxtrans*以下になります。  
+ *maxtrans* パラメーターは、ログの単一のスキャン サイクルで処理できるトランザクションの最大数を指定します。 スキャン時に、処理するトランザクションの数がこの制限値に達すると、現在のスキャンにはそれ以上のトランザクションは含まれません。 スキャン サイクルの完了後は、処理されたトランザクションの数は常に *maxtrans*以下になります。  
   
 #### <a name="maxscans-parameter"></a>maxscans パラメーター  
  *maxscans* パラメーターは、制御を返す前 (continuous = 0)、または waitfor を実行する前 (continuous = 1) に、ログを空にするために実行されるスキャン サイクルの最大数を指定します。  
@@ -76,7 +75,7 @@ ms.locfileid: "51560169"
  クリーンアップが実行されると、すべてのキャプチャ インスタンスの低水位マークが単一のトランザクションで最初に更新されます。 その後、使用されなくなったエントリの変更テーブルおよび cdc.lsn_time_mapping テーブルからの削除が試みられます。 単一のステートメントで削除できるエントリの数は、構成可能なしきい値によって制限されます。 1 つのテーブルで削除が失敗しても、残りのテーブルで削除操作ができなくなるわけではありません。  
   
 ### <a name="cleanup-job-customization"></a>クリーンアップ ジョブのカスタマイズ  
- クリーンアップ ジョブの場合、カスタマイズが可能なのは、破棄する変更テーブル エントリを決定する戦略です。 配布されたクリーンアップ ジョブでサポートされる唯一の戦略は時間ベースのものです。 この状況では、新しい低水位マークは最後に処理されたトランザクションのコミット時刻から許容保有期間を引いて計算します。 基になるクリーンアップ プロシージャが基づいているため`lsn`時間ではなく任意の数の戦略を使用して、最小値を決定する`lsn`変更テーブルに保持します。 厳密には時間ベースのものはそのうちの一部のみです。 たとえばクライアントに関する知識は、変更テーブルへのアクセスを必要とするダウンストリーム プロセスを実行できない場合にフェールセーフを提供するために使用できます。 また、既定の戦略ではすべてのデータベースの変更テーブルのクリーンアップに同じ `lsn` を使用しますが、基になるクリーンアップ プロシージャを呼び出してキャプチャ インスタンス レベルでクリーンアップすることもできます。  
+ クリーンアップ ジョブの場合、カスタマイズが可能なのは、破棄する変更テーブル エントリを決定する戦略です。 配布されたクリーンアップ ジョブでサポートされる唯一の戦略は時間ベースのものです。 この状況では、新しい低水位マークは最後に処理されたトランザクションのコミット時刻から許容保有期間を引いて計算します。 基になるクリーンアップ プロシージャは、時間ではなく `lsn` に基づいているため、変更テーブルに保持する最小の `lsn` を決定する戦略はいくつもあります。 厳密には時間ベースのものはそのうちの一部のみです。 たとえばクライアントに関する知識は、変更テーブルへのアクセスを必要とするダウンストリーム プロセスを実行できない場合にフェールセーフを提供するために使用できます。 また、既定の戦略ではすべてのデータベースの変更テーブルのクリーンアップに同じ `lsn` を使用しますが、基になるクリーンアップ プロシージャを呼び出してキャプチャ インスタンス レベルでクリーンアップすることもできます。  
   
 ##  <a name="Monitor"></a> 変更データ キャプチャ プロセスの監視  
  変更データ キャプチャ プロセスを監視すると、変更が変更テーブルに適切に書き込まれているかどうか、および書き込み時の待機時間が妥当かどうかを判断できます。 また、発生する可能性のあるエラーを特定することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、変更データ キャプチャの監視に役立つ 2 つの動的管理ビューが用意されています。 [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) と [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)です。  
@@ -156,11 +155,11 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
     GO  
     ```  
   
-3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]**、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、 **[データ コレクション セットの開始]** をクリックします。  
+3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]** 、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、 **[データ コレクション セットの開始]** をクリックします。  
   
 4.  手順 1. で構成したデータ ウェアハウスで、custom_snapshots.cdc_log_scan_data テーブルを検索します。 このテーブルには、ログ スキャン セッションのデータの履歴スナップショットが格納されています。 このデータを使用すると、待機時間やスループットなどのパフォーマンス指標を時系列で分析できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ変更の追跡 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   

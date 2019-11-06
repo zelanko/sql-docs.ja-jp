@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771438"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローが完了したので、次の作業では、変更データを取得するテーブル値関数を作成します。 この関数は、最初の増分読み込みの前に一度作成するだけで済みます。  
@@ -133,7 +132,7 @@ deallocate #hfunctions
   
 -   変更データの要求されたすべての列。  
   
--   行に関連付けられている操作を示すために 1 文字または 2 文字のフィールドを使用する、__CDC_OPERATION という名前の列。 このフィールドに有効な値は、'I' (挿入)、'D' (削除)、'UO' (古い値の更新)、および 'UN' (新しい値の更新) です。  
+-   行に関連付けられている操作を示すために 1 文字または 2 文字のフィールドを使用する、__CDC_OPERATION という名前の列。 このフィールドに有効な値は、'I' (挿入)、'D' (削除)、'UO' (古い値の更新)、'UN' (新しい値の更新) です。  
   
 -   操作コードの後に、 *@update_flag_list* パラメーターで指定された順にビット列として表示される更新フラグ (要求時)。 これらの列には、関連する列名に '_uflag' が追加された名前が付けられています。  
   
@@ -142,7 +141,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>独自のテーブル値関数の作成  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、変更データ キャプチャのクエリ関数を呼び出す独自のテーブル値ラッパー関数を作成して、そのテーブル値ラッパー関数を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納することもできます。 Transact-SQL 関数の作成方法の詳細については、「[CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)」をご覧ください。  
   
- 次の例では、指定した変更間隔の Customer テーブルから変更を取得するテーブル値関数を定義します。 この関数は、変更データ キャプチャ関数にマップする、`datetime`バイナリ ログへの値のシーケンス番号 (LSN) 値を変更テーブルは内部的に使用します。 また、この関数では、次の特殊な条件も処理されます。  
+ 次の例では、指定した変更間隔の Customer テーブルから変更を取得するテーブル値関数を定義します。 この関数では、変更データ キャプチャの関数を使用して、変更テーブルで内部的に使用されるバイナリ ログ シーケンス番号 (LSN) の値に `datetime` 値をマップします。 また、この関数では、次の特殊な条件も処理されます。  
   
 -   開始時刻に NULL 値が渡されると、この関数では、使用可能な最も早い時刻値が使用されます。  
   

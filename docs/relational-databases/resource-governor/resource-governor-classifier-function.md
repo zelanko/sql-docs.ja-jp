@@ -12,18 +12,17 @@ helpviewer_keywords:
 - classifier function [SQL Server]
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b5375adcf3ca5be203ba31aa29633702ca7e38ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699440"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903913"
 ---
 # <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーの分類プロセスにより、着信セッションがセッションの特性に基づいてワークロード グループに割り当てられます。 分類ロジックは、分類子関数と呼ばれるユーザー定義関数を記述することで調整できます。  
   
 ## <a name="classification"></a>分類  
@@ -74,7 +73,7 @@ ms.locfileid: "47699440"
 2.  LOGON トリガー実行  
   
 3.  分類  
-  
+
  分類が開始されると、リソース ガバナーは分類子関数を実行し、関数から返された値を使用して適切なワークロード グループに要求を送信します。  
   
 > [!NOTE]  
@@ -87,7 +86,7 @@ ms.locfileid: "47699440"
 |ユーザー定義の分類子関数を作成およびテストする方法について説明します。|[ユーザー定義の分類子関数の作成とテスト](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62813195"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>フルテキスト検索の動作の変更
   このトピックでは、フルテキスト検索の動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の機能や操作方法が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のバージョンと異なっています。  
@@ -68,7 +68,7 @@ ms.locfileid: "49461017"
   
 |**項目**|**以前のワード ブレーカーとステミング機能の結果**|**新しいワード ブレーカーとステミング機能の結果**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(条項が英語版の有効な文字)*|‘jěˊÿｑℭžl’|je yq zl|  
+|jěˊÿqℭžl<br /><br /> *(条項が英語版の有効な文字)*|' jěˊÿqℭžl'|je yq zl|  
 |table's|table's<br /><br /> テーブル|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(v と z はノイズ ワードです)*|*(結果なし)*|v-z|  
@@ -79,7 +79,7 @@ ms.locfileid: "49461017"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 におけるフルテキスト検索の動作の変更  
  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]サーバー クエリとストレージ エンジン インフラストラクチャの一部として、リレーショナル データベースに、以降のバージョンでは、Full-text Engine がデータベース サービスとして統合されています。 フルテキスト検索の新しいアーキテクチャにより、次の目的が達成されます。  
   
--   ストレージと管理の統合: フルテキスト検索はの本質的なストレージと管理機能と直接統合されました[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、MSFTESQL サービスが存在しません。  
+-   統合ストレージおよび管理-フルテキスト検索の本質的なストレージと管理機能と直接統合は[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、MSFTESQL サービスが存在しません。  
   
     -   フルテキスト インデックスが、ファイル システム内ではなくデータベース ファイル グループ内に格納されます。 バックアップの作成など、データベースに対する管理操作は、自動的にフルテキスト インデックスにも影響します。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461017"
         > [!NOTE]  
         >  フルテキスト カタログを指定する [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] の [!INCLUDE[tsql](../includes/tsql-md.md)] DDL ステートメントは、正しく動作します。  
   
--   クエリ処理の統合 : 新しいフルテキスト検索クエリ プロセッサがデータベース エンジンに含まれ、SQL Server クエリ プロセッサに完全に統合されています。 このため、クエリ オプティマイザーはフルテキスト クエリ述語を認識し、自動的に最も効率的に実行します。  
+-   統合クエリ処理、新しいフルテキスト検索クエリ プロセッサ、データベース エンジンの一部であり、SQL Server クエリ プロセッサに完全に統合します。 このため、クエリ オプティマイザーはフルテキスト クエリ述語を認識し、自動的に最も効率的に実行します。  
   
--   管理およびトラブルシューティングの強化: フルテキスト インデックス、特定のワード ブレーカーの出力、ストップワードの構成など、検索構造の分析に役立つツールが、フルテキスト検索の統合によって提供されます。  
+-   強化された管理およびトラブルシューティングに統合されたフルテキスト検索には、フルテキスト インデックス、特定のワード ブレーカー、ストップ ワードの構成などの出力など、検索構造を分析するのに役立つツールが用意されています。  
   
 -   ノイズ ワードとノイズ ワード ファイルが、ストップワードとストップリストに置き換えられました。 ストップリストは、ストップワードの管理タスクを容易にし、異なるサーバー インスタンスや環境間の整合性を向上させるデータベース オブジェクトです。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   

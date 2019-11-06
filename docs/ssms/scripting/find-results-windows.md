@@ -8,22 +8,19 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vs.findresults1
-- findresultswindow
 - vs.findresults2
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: daeaef85b0fd00436afc3ccfd5f4f5dbc28acce2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e1162aed479c7c895b21138e882c6fbdce51eec3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644045"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265444"
 ---
 # <a name="find-results-windows"></a>検索結果ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,5 +96,3 @@ ms.locfileid: "51644045"
  最後の行には、次のような統計情報が含まれます。  
   
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
-  
-  

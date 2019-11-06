@@ -1,10 +1,8 @@
 ---
 title: 検索用のワード ブレーカーとステマーの構成と管理 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c38011c43d3800aa1892ead4779ae5bc2ea12efd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792580"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388336"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>検索用のワード ブレーカーとステミング機能の構成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "47792580"
 
 -   **単語の境界 (単語区切り) の検出**。 *ワード ブレーカー* が、言語の語彙の規則に基づいて単語の境界を検出し、個々の単語を識別します。 各単語 ( *トークン*ともいいます) は、サイズを縮小するために圧縮された表現でフルテキスト インデックスに挿入されます。
 
--   **動詞の活用 (ステミング)**。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。
+-   **動詞の活用 (ステミング)** 。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。
 
 ## <a name="word-breakers-and-stemmers-are-language-specific"></a>言語固有のワード ブレーカーとステマー
 
@@ -86,7 +84,7 @@ GO
 特定の列のワード ブレーカーの言語を表示するには、次のステートメントを実行します。
    
 ```sql 
-SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
+SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ```  
 
 追加のオプションと詳細については、「[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)」をご覧ください。
@@ -96,7 +94,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>MSSQLSERVER_30053 エラーに関する情報
   
-|プロパティ|ReplTest1|
+|プロパティ|[値]|
 |-|-|
 |製品名|SQL Server|  
 |イベント ID|30053|  
@@ -135,11 +133,9 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
  各バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、通常、新しいワード ブレーカーが含まれています。これらのワード ブレーカーでは、言語の規則が改良されているため、以前のワード ブレーカーよりも精度が向上しています。 新しいワード ブレーカーは、前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からインポートされたフルテキスト インデックスのワード ブレーカーとは少し動作が異なる場合もあります。
  
 データベースが現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にアップグレードされたときにフルテキスト カタログをインポートした場合は、この動作の違いが重要になります。 フルテキスト カタログのフルテキスト インデックスで使用される 1 つまたは複数の言語が、新しいワード ブレーカーに関連付けられる可能性があります。 詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
-  
-
+ 
 ## <a name="see-also"></a>参照  
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- 
-  
+

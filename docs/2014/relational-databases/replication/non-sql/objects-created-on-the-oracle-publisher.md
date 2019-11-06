@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], objects created
@@ -13,12 +12,12 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5331597181f8d04ae74dd5d3bc4b8781bd4eb04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022145"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oracle パブリッシャー上で作成されたオブジェクト
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、変更の追跡と転送を行えるように、Oracle パブリッシャーにデータベース オブジェクトがインストールされます ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって Oracle パブリッシャーにバイナリ ファイルがインストールされることはありません)。 次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーがパブリッシャーとして認識されたときに、Oracle パブリッシャーで作成されるオブジェクトの一覧を示します。 オブジェクトの説明は、情報の提供のみを目的としています。 これらのオブジェクトは変更しないでください。  
@@ -41,7 +40,7 @@ ms.locfileid: "48124822"
 |HREPL_Stmt|Sequence|ステートメント ID を生成するために使われるシーケンス。|  
 |HREPL|パッケージとパッケージ本体|パブリッシャーで作成された、パブリッシャー サポート コードのパッケージ。|  
 |MSSQLSERVERDISTRIBUTOR|パブリック シノニム|HREPL_Distributor テーブル用のパブリック シノニム。 Oracle パブリッシャーを使用するようにディストリビューターを構成すると、このシノニムが既にデータベースにある場合に、削除されてから再作成されます。<br /><br /> パブリック シノニムと、CASCADE オプションで構成した Oracle レプリケーション ユーザーを削除すると、Oracle パブリッシャーからすべてのレプリケーション オブジェクトが削除されます。|  
-|HREPL_Len_I_J_K|機能|Oracle パブリッシング パッケージ コードの外で定義された関数。LONG 列の長さに対するクエリを実行するために使用します (パブリッシュされた LONG 列を含むテーブルに対してパラメーター化されたコマンドを生成する際に使用されます)。 関数は、LONG 列を含むパブリッシュされたテーブルごとに作成されます。|  
+|HREPL_Len_I_J_K|関数|Oracle パブリッシング パッケージ コードの外で定義された関数。LONG 列の長さに対するクエリを実行するために使用します (パブリッシュされた LONG 列を含むテーブルに対してパラメーター化されたコマンドを生成する際に使用されます)。 関数は、LONG 列を含むパブリッシュされたテーブルごとに作成されます。|  
 |HREPL_DropPublisher|手順|Oracle パブリッシング パッケージ コードの外で定義されたプロシージャで、Oracle パブリッシャーを削除するために使用します。|  
 |HREPL_ExecuteCommand|手順|Oracle パブリッシング パッケージ コードの外で定義されたプロシージャで、パブリッシャーでコマンドを実行するために使用します。|  
 |HREPL_ArticleN_Trigger_Row|トリガー|パブリッシュされたテーブルごとに生成されるトリガーで、行の変更を追跡するために使用します。|  
@@ -50,7 +49,7 @@ ms.locfileid: "48124822"
 |HREPL_Log_I_J_K|表示|パブリッシュされたテーブルごとに作成されるビューで、変更追跡テーブルにクエリを実行するために使用されます。|  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの用語](glossary-of-terms-for-oracle-publishing.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   

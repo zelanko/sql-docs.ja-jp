@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.TextEditor
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
 - Code Editor [SQL Server Management Studio], about Query Editor
@@ -28,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df942352f756c1911693ce339498489f88e31a7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132974"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891756"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のいずれかのエディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、または XML/A スクリプトを対話的に編集し、テストできます。XML またはプレーンテキスト ファイルを編集することもできます。 各エディターでは、キーワードを色分け表示したり、言語固有の構文や使用方法のエラーをチェックするサービスがサポートされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの問題を解決するのに役立つ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが用意されています。  
@@ -111,8 +108,8 @@ ms.locfileid: "48132974"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|MDX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|DMX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|MDX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|DMX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |XML/A エディターの基本的な機能を表示し、使用する方法について説明します。|[XML エディター &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |行番号表示や IntelliSense オプションなど、各種エディターのオプションを構成する方法について説明します。|[エディターの構成 &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でエディターを開くための、さまざまな方法について説明します。|[エディターの表示 &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
@@ -131,7 +128,5 @@ ms.locfileid: "48132974"
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行したり、デバッグ情報 (変数やパラメーターの値など) を表示したりする方法について説明します。|[Transact-SQL デバッガー](transact-sql-debugger.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスに対して独自の色を設定したり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターのウィンドウのステータス バーの背景としてそれらの色を設定する方法について説明します。|[ステータス バー &#40;データベース エンジン クエリ エディター&#41;](status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

@@ -1,8 +1,0 @@
-- name: パッケージとその他の操作を実行するモニター
-  href: monitor-running-packages-and-other-operations.md
-- name: Integration Services パッケージによってログに記録されるイベント
-  href: events-logged-by-an-integration-services-package.md
-- name: Integration Services (SSIS) のログ記録
-  href: integration-services-ssis-logging.md
-- name: パフォーマンス カウンター
-  href: performance-counters.md

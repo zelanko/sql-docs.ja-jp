@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: faecf1d3a7ab820ef01a25ea67b2313ab03e056a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028837"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>移行の Sybase ASE データの SQL Server - Azure SQL DB (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクトを正常に読み込んだ後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB では、データを移行する ASE から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。  
@@ -64,7 +63,7 @@ Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクト
   
 **データを移行するには**  
   
-1.  次を確認します。  
+1.  次のことを検証します。  
   
     -   ASE のプロバイダーは、SSMA を実行しているコンピューターにインストールされます。  
   
@@ -92,10 +91,10 @@ Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクト
   
     -   実行するため**サーバー側のデータ移行**を選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定** ダイアログ ボックス。  
   
-4.  右クリック**スキーマ**Sybase メタデータ エクスプ ローラーでクリック**Migrate Data**します。 個々 のオブジェクトまたはオブジェクトのカテゴリのデータを移行することもできます。 オブジェクトまたはその親フォルダーを右クリックして、**データ移行**オプション。  
+4.  右クリック**スキーマ**Sybase メタデータ エクスプ ローラーでクリック**Migrate Data**します。 個々 のオブジェクトまたはオブジェクトのカテゴリのデータを移行することもできます。オブジェクトまたはその親フォルダーを右クリックして、 **Migrate Data**オプション。  
   
     > [!NOTE]  
-    > SSMA for Sybase の拡張機能パックは、SQL Server のインスタンスにインストールされていない場合、**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行する際に、次のエラーが発生しました: ' SSMASQL Server のデータ移行のコンポーネントが見つかりません、サーバー側のデータの移行を可能にすることはできません。 拡張機能パックが正しくインストールされているかどうかを確認してください '。 クリックして**キャンセル**データ移行を終了します。  
+    > SSMA for Sybase の拡張機能パックは、SQL Server のインスタンスにインストールされていない場合、**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行する際に、次のエラーが発生しました。' SQL Server のデータ移行の SSMA コンポーネントが見つかりません、サーバー側のデータの移行を可能にすることはできません。 拡張機能パックが正しくインストールされているかどうかを確認してください '。 クリックして**キャンセル**データ移行を終了します。  
   
 5.  **Sybase ASE への接続**ダイアログ ボックスが接続の資格情報を入力し、クリックして**Connect**します。 Sybase ASE への接続に関する詳細については、次を参照してください[Sybase への接続&#40;SybaseToSQL。&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   

@@ -10,12 +10,12 @@ ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843065"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>VM 環境でのインメモリ OLTP の使用
   サーバー仮想化に伴い、各企業は IT の資本コストと運用コストを削減し、アプリケーションの準備、メンテナンス、可用性、バックアップと復旧の各プロセスを向上させることにより、IT 効率の大幅な上昇を達成しています。 最近の技術的な進歩により、仮想化を使用して、複雑なデータベース ワークロードを従来より容易に統合することができます。 ここでは、仮想化環境内での [!INCLUDE[hek_1](../includes/hek-1-md.md)] の使用に関して推奨されるベスト プラクティスについて取り扱います。  

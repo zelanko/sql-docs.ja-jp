@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
@@ -13,12 +12,12 @@ ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 364c86c5b908408dc3212593612467abade93735
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082176"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>現地の通貨参照の定義 (ビジネス インテリジェンス ウィザード)
   **[現地の通貨参照の定義]** ページを使用すると、 **[換算の種類の選択]** ページで指定された多対多または多対一の変換を実行する通貨の換算機能のための現地通貨を定義できます。 現地通貨とは、 **[メジャーの選択]** ページで選択されたメジャーのトランザクションが保存される通貨です。  
@@ -30,7 +29,7 @@ ms.locfileid: "48048624"
  **ファクト テーブルの識別子**  
  選択すると、 **[メジャーの選択]** ページで選択されたメジャーを格納するファクト テーブルから参照される、通貨ディメンションの現地通貨の通貨識別子を表す属性を指定できます (のいずれかでディメンションを通貨`Type`プロパティに設定されて*通貨*)。  
   
- このオプションは、トランザクションでそのトランザクション自体の現地通貨を決定する場合に使用します。 たとえば、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]サンプル データベースでは、"インターネット販売" メジャー グループに "通貨" ディメンションに対する通常のディメンション リレーションシップが含まれています。 このメジャー グループのファクト テーブルは、このディメンションのディメンション テーブル内の通貨識別子を参照する外部キー列を格納します。  
+ このオプションは、トランザクションでそのトランザクション自体の現地通貨を決定する場合に使用します。 たとえば、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サンプル データベース-[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]、Internet Sales メジャー グループが、通貨ディメンションに対する通常のディメンション リレーションシップ。 このメジャー グループのファクト テーブルは、このディメンションのディメンション テーブル内の通貨識別子を参照する外部キー列を格納します。  
   
  **通貨ディメンションとファクト データによって参照される属性**  
  通貨ディメンションのメンバーが現地通貨の通貨識別子を表す、その通貨ディメンション内の通貨属性を選択します。 (通貨属性が 1 つ持つ`Type`プロパティに設定されて*通貨*)。  
@@ -41,7 +40,7 @@ ms.locfileid: "48048624"
  **ディメンション テーブルの属性**  
  選択すると、現地通貨の通貨識別子を格納するメジャー グループに関連したディメンションから属性を指定できます。  
   
- このオプションは、トランザクションと他のビジネス エンティティ (たとえば場所) とのリレーションシップによって、そのトランザクションの現地通貨が決定される場合に使用します。 たとえば、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]サンプル データベースにおいて、[Financial Reporting] メジャー グループは、組織ディメンションを介して、通貨ディメンションに対する参照ディメンション リレーションシップを持ちます。 つまり、[Financial Reporting] メジャー グループのファクト テーブルには、組織ディメンションのディメンション テーブル内のメンバーを参照する外部キー列があります。 さらに、組織ディメンションのディメンション テーブルには、通貨ディメンションのディメンション テーブル内の通貨識別子を参照する外部キー列があります。  
+ このオプションは、トランザクションと他のビジネス エンティティ (たとえば場所) とのリレーションシップによって、そのトランザクションの現地通貨が決定される場合に使用します。 たとえば、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サンプル データベースの[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]、Financial Reporting メジャー グループが、組織ディメンションを介して、通貨ディメンションに対する参照ディメンション リレーションシップ。 つまり、[Financial Reporting] メジャー グループのファクト テーブルには、組織ディメンションのディメンション テーブル内のメンバーを参照する外部キー列があります。 さらに、組織ディメンションのディメンション テーブルには、通貨ディメンションのディメンション テーブル内の通貨識別子を参照する外部キー列があります。  
   
  **通貨を参照するディメンションの属性**  
  ディメンションのメンバーが現地通貨の通貨識別子を参照する、そのディメンション内の属性を選択します。  

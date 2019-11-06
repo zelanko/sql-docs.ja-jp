@@ -4,24 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ae78c114b9c46fd23d066a37837620441c6e6a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63154997"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] には、SQL Server のインスタンスを構成、監視、および管理するためのツールが備わっています。 さらに、データ層コンポーネント (アプリケーションで使用されるデータベースやデータ ウェアハウス) を配置、監視、およびアップグレードするためのツールのほか、クエリやスクリプトを作成するためのツールも用意されています。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、SQL Server インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] には、SQL Server のインスタンスを構成、監視、および管理するためのツールが備わっています。 さらに、データ層コンポーネント (アプリケーションで使用されるデータベースやデータ ウェアハウス) を配置、監視、およびアップグレードするためのツールのほか、クエリやスクリプトを作成するためのツールも用意されています。  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>SQL Server Management Studio の利点  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server を管理するための包括的なユーティリティ オブジェクトの豊富なスクリプト機能と使いやすいグラフィカル インターフェイスを結合します。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 管理に使用できる[!INCLUDE[ssDE](../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、および[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]します。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、SQL Server オブジェクトを管理するための総合ユーティリティです。使いやすいグラフィカル インターフェイスと豊富なスクリプト機能を備えています。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] を使用して、[!INCLUDE[ssDE](../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を管理することができます。  
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio のコンポーネント  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48181152"
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に付属のビジュアル デザイン ツールを使用する方法について説明します。|[Visual Database Tools](visual-db-tools/visual-database-tools.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 言語エディターを使用し、クエリおよびスクリプトを対話形式でビルド、デバッグする方法について説明します。|[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
  [チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
   

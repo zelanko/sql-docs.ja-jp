@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827564"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
@@ -33,7 +32,7 @@ ms.locfileid: "48072569"
 |`CS`|現在の処理範囲の始点 (Current Start) を示します。|  
 |`<cs-lsn>`|前回の CDC 実行で処理された最後のログ シーケンス番号 (LSN) です。|  
 |`CE`|現在の処理範囲の終点 (Current End) を示します。 CDC 状態に CE 要素が存在するかどうかにより、CDC パッケージが現在処理中であるか、または CDC 処理範囲が完全に処理される前に CDC パッケージが失敗したことが示されます。|  
-|`<ce-lsn>`|現在の CDC 実行で処理される最後の LSN です。 処理対象の最後のシーケンス番号は最大値 (0xFFF…) であることが常に想定されます。|  
+|`<ce-lsn>`|現在の CDC 実行で処理される最後の LSN です。 処理対象の最後のシーケンス番号は最大値 (0xFFF...) であることが常に想定されます。|  
 |`IR`|初期処理範囲を示します。|  
 |`<ir-start>`|初期読み込みが開始した直前の変更の LSN です。|  
 |`<ir-end>`|初期読み込みが終了した直後の変更の LSN です。|  
@@ -50,10 +49,10 @@ ms.locfileid: "48072569"
 |-----------|-----------------|  
 |(INITIAL)|現在の CDC グループでパッケージが実行される前の初期状態です。 CDC 状態が空のときの状態でもあります。|  
 |ILSTART (Initial Load Started)|CDC 制御タスクに対する `MarkInitialLoadStart` 操作の呼び出し後、初期読み込みパッケージが開始したときの状態です。|  
-|ILEND (Initial Load Ended)|これは、初期読み込みパッケージが正常に終了したときの状態後、 `MarkInitialLoadEnd` CDC 制御タスクに対する操作の呼び出し。|  
-|ILUPDATE (Initial Load Update)|初期読み込みの後にトリクル フィード更新パッケージが実行され、まだ初期処理範囲を処理しているときの状態です。 これは、後に、 `GetProcessingRange` CDC 制御タスクに対する操作の呼び出し。<br /><br /> __$reprocessing 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。|  
+|ILEND (Initial Load Ended)|CDC 制御タスクに対する `MarkInitialLoadEnd` 操作の呼び出し後、初期読み込みパッケージが正常に終了したときの状態です。|  
+|ILUPDATE (Initial Load Update)|初期読み込みの後にトリクル フィード更新パッケージが実行され、まだ初期処理範囲を処理しているときの状態です。 CDC 制御タスクに対する `GetProcessingRange` 操作の呼び出し後に、この状態になります。<br /><br /> __$reprocessing 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。|  
 |TFEND (Trickle-Feed Update Ended)|定期的な CDC の実行で期待される状態です。 前の実行が正常に完了していることと、新しい実行を新しい処理範囲で開始できることを表します。|  
-|TFSTART|これは、後、トリクル フィード更新パッケージの非初期実行時に状態、 `GetProcessingRange` CDC 制御タスクに対する操作の呼び出し。<br /><br /> 定期的な CDC の実行が開始されたが、完了していないか、まだ完了していない、正常に (`MarkProcessedRange`)。|  
+|TFSTART|CDC 制御タスクに対する `GetProcessingRange` 操作の呼び出し後、トリクル フィード更新パッケージの後続実行を行ったときの状態です。<br /><br /> 定期的な CDC の実行を開始したものの、まだ完了していないことを表します (`MarkProcessedRange`)。|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|TFSTART の後に `GetProcessingRange` が行われたときの状態です。 前の実行が正常に完了しなかったことを表します。<br /><br /> __$reprocessing 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。|  
 |ERROR|CDC グループはエラー状態です。|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48072569"
  [状態の自動保持] を指定して CDC 制御タスクを使用しない場合は、パッケージが最後に実行されたときに変数の値が保存された永続ストレージからその値を読み込み、現在の処理範囲の処理が終了したときに永続ストレージにその値を書き戻す必要があります。  
   
 ## <a name="see-also"></a>参照  
- [CDC 制御タスク](../control-flow/cdc-control-task.md)   
- [CDC 制御タスク エディター](../cdc-control-task-editor.md)  
+ [CDC Control Task](../control-flow/cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

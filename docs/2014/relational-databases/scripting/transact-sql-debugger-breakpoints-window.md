@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpoints
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a8cb745670ebfe1c9a8a08eb4674e0a3755cc50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6f9701371b9a6007f831d1e06dd6bbd0605e7dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063578"
 ---
 # <a name="breakpoints-window"></a>[ブレークポイント] ウィンドウ
   **[ブレークポイント]** ウィンドウには、現在の[!INCLUDE[ssDE](../../includes/ssde-md.md)]のクエリ エディターで設定されているすべてのブレークポイントが表示されます。 ブレークポイントを管理するには、 **[ブレークポイント]** ウィンドウのツール バーを使用します。 ブレークポイントとは、デバッグ モードでコードの実行を一時停止する箇所で、デバッグ データを表示できます。  
@@ -44,7 +41,7 @@ ms.locfileid: "48170722"
   
  **[列]** ボックスの一覧で次の列を選択して、それらの列を追加したり、削除したりできます。  
   
- **Assert**  
+ **[フィルター]**  
  **[(なし)]** が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント フィルターの設定をサポートしていません。  
   
  **[ヒット時]**  
@@ -88,5 +85,3 @@ ms.locfileid: "48170722"
   
 ## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー](transact-sql-debugger.md)  
-  
-  

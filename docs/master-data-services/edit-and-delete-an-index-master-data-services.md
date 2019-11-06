@@ -5,19 +5,17 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0cf2439b7cd85f145d2326b8949e5e882c1e6089
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 106a496bd1bd7acb0895de2bc41438ef76cbea1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086434"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>インデックスの編集と削除 (Master Data Services)
 
@@ -25,12 +23,12 @@ ms.locfileid: "52402497"
 
   作成したインデックスの属性の編集と、インデックスの削除を実行できます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
  **インデックスを編集するには**  
   
@@ -64,7 +62,7 @@ ms.locfileid: "52402497"
   
 5.  確認メッセージ ボックスで、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インデックスを作成する (マスター データ サービス)](../master-data-services/create-an-index-master-data-services.md)   
  [カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)  
   

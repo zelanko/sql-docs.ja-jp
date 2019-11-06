@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f0e4b7946c0e34e79940ac149ac9d3544d85d50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946114"
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ WHERE ProductModelID=7
   
 -   [Sql:column() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)構築される XML にリレーショナル値が含まれています。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -76,7 +75,7 @@ WHERE ProductModelID=7
               MachineHours="2"  LaborHours="1.75" LotSize="1">  
   <Steps>  
    <Step>Assemble all frame components following blueprint 1299.</Step>  
-     …  
+     ...  
   </Steps>  
  </Location>  
 </ManuStep>    
@@ -120,7 +119,7 @@ where ProductModelID=7
   
 -   このとき 2 つの FLWOR (for...return) の繰り返しが使用されます。1 つはツールの取得のため、もう 1 つは使用される材料の取得のためです。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -162,7 +161,7 @@ where ProductModelID=19
   
 -   クエリでは、FOR ...RETURN ループを使用して、製品モデルの機能説明を取得します。 **Position()** 関数を使用して、最初の 2 つの機能を取得します。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -205,7 +204,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -235,7 +234,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <LastTwoManuSteps>  

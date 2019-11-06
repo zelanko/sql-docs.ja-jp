@@ -18,16 +18,15 @@ helpviewer_keywords:
 - connections [SQL Server], active transactions
 - active transactions
 ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89305bba6869f07aed0684c800c0cc0b8e108e9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42e5bd7b00b8d0fb10de9e33576b7e58a47c6bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098846"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47755090"
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. BEGIN ステートメントと COMMIT ステートメントの影響を確認する  
+### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. BEGIN と COMMIT ステートメントの影響を確認する  
  次の例では、`BEGIN` ステートメントと `COMMIT` ステートメントを入れ子にした場合の `@@TRANCOUNT` 変数に対する影響を確認します。  
   
 ```  

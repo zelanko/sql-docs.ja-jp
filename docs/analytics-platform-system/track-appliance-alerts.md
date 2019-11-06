@@ -2,19 +2,18 @@
 title: アプライアンスの警告 - Analytics Platform System の追跡 |Microsoft Docs
 description: Analytics Platform System でアプライアンスの警告を追跡します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 62f116b8e45512d5a6fc5ce50c0fbc76344103be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960029"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Analytics Platform System でアプライアンスの警告を追跡します。
 このトピックでは、管理コンソールとシステム ビューを使用して、SQL Server PDW アプライアンスでアラートを管理する方法について説明します。  
@@ -70,7 +69,7 @@ ORDER BY
     aa.[pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
 [アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

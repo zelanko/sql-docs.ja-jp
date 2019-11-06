@@ -1,6 +1,7 @@
 ---
-title: 可用性グループからのプライマリ データベースの削除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループからプライマリ データベースを削除する
+description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio を使用して Always On 可用性グループからプライマリ データベースを削除する手順。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,43 +17,23 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae9f27f97cc49192c1398a75528d66239649df70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b18d1c8a573a42a8b92deead627783a195bb9e6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014394"
 ---
-# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>可用性グループからのプライマリ データベースの削除 (SQL Server)
+# <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Always On 可用性グループからプライマリ データベースを削除する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからプライマリ データベースおよび対応するセカンダリ データベースの両方を削除する方法について説明します。  
   
--   **作業を開始する準備:**  
-  
-     [前提条件と制限](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **可用性データベースを削除する方法:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **補足情報**  [可用性グループから可用性データベースを削除した後](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
-  
-###  <a name="Prerequisites"></a> 前提条件と制限  
+##  <a name="Prerequisites"></a> 前提条件と制限  
   
 -   このタスクは、プライマリ レプリカ上でのみサポートされます。 プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -112,7 +93,7 @@ ms.locfileid: "47700380"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報: 可用性グループから可用性データベースを削除した後  
+##  <a name="FollowUp"></a> 補足情報:可用性グループから可用性データベースを削除した後  
  可用性グループから可用性データベースを削除すると、以前のプライマリ データベースおよび対応するセカンダリ データベース間のデータの同期が終了します。 以前のプライマリ データベースはオンラインのまま残ります。 すべての対応するセカンダリ データベースは RESTORING 状態になります。  
   
  この時点で、削除されたセカンダリ データベースを処理する別の方法は次のとおりです。  

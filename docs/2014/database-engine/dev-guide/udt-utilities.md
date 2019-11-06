@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62780219"
 ---
 # <a name="udt-utilities"></a>UDT ユーティリティ
   UDT Utilities サンプルには、さまざまなユーティリティ関数が含まれています。 Transact-SQL へアセンブリ メタデータを公開するための関数、アセンブリ内の型をテーブルとして返すサンプル ストリーミング テーブル値関数、およびユーザー定義データ型のフィールド、メソッド、プロパティを返す関数などがあります。 例示されているテクノロジは、ストリーミング テーブル値関数、.NET Framework リフレクション API、Transact-SQL からのテーブル値関数の呼び出しなどです。  
@@ -25,9 +23,9 @@ ms.locfileid: "48210182"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](http://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
   
--   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 、Codeplex で使用できるデータベースが[Web サイト](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 、Codeplex で使用できるデータベースが[Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -1598,7 +1596,7 @@ USE AdventureWorks2012;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

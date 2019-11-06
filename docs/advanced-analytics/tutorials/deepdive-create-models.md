@@ -1,51 +1,56 @@
 ---
-title: R モデル (SQL と R deep dive) を作成 |Microsoft ドキュメント
+title: R モデルの作成 RevoScaleR のチュートリアル
+description: SQL Server で R 言語を使用してモデルを構築する方法に関するチュートリアルチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: a2f6e9b23e1592073c1b21bc41e4975ffaf17075
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00c1c1ed13f1257267111c3bdf71277fa41d0bdc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32446846"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714874"
 ---
-# <a name="create-r-models-sql-and-r-deep-dive"></a>R モデル (SQL と R deep dive) を作成します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R モデルの作成 (SQL Server と RevoScaleR のチュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
+このレッスンは、SQL Server で[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法に関する[RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-トレーニング データの強化が終了したので、次に線形回帰を使用してデータを分析します。 予測分析の世界で線形モデルは重要なツールです。 **の** RevoScaleR [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] パッケージには、高パフォーマンスのスケーラブルなアルゴリズムが含まれています。
+トレーニングデータを強化しました。 ここで、回帰モデリングを使用してデータを分析します。 線形モデルは、予測分析の世界において重要なツールです。 **RevoScaleR**パッケージには、ワークロードを分割して並列で実行できる回帰アルゴリズムが含まれています。
+
+> [!div class="checklist"]
+> * 線形回帰モデルを作成する
+> * ロジスティック回帰モデルを作成する
 
 ## <a name="create-a-linear-regression-model"></a>線形回帰モデルを作成する
 
-内の値を独立変数として使用して、顧客のクレジット_カード残高を推定する単純な線形モデルを作成するこの手順で、*性別*と*creditLine*列です。
+この手順では、[*性別*] 列と [ *creditLine* ] 列の値を独立変数として使用する顧客のクレジットカード残高を推定する単純な線形モデルを作成します。
   
-これを行うを使用して、 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)関数で、リモート計算コンテキストをサポートしています。
+これを行うには、リモート計算コンテキストをサポートする[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)関数を使用します。
   
-1. 完成したを格納する R 変数を作成モデル、および呼び出し**rxLinMod**、該当する式を渡すことです。
+1. 完成したモデルを格納する R 変数を作成し、適切な式を渡して**rxLinMod**を呼び出します。
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. 結果の概要を表示する標準的な R を呼び出す`summary`モデル オブジェクトに対して関数。
+2. 結果の概要を表示するには、モデルオブジェクトに対して標準の R **summary**関数を呼び出します。
   
      ```R
      summary(linModObj)
      ```
 
-特殊なプレーンな R 関数のように考える可能性があります`summary`はここでは、前の手順でサーバーに、計算コンテキストを設定するため機能します。 **rxLinMod** 関数でリモート計算コンテキストを使用してモデルを作成する場合でも、そのモデルを含むオブジェクトがローカル ワークステーションに返され、共有ディレクトリに格納されます。
+前の手順では、サーバーに対して計算コンテキストを設定したので、この手順で **summary** のような単純な R 関数を利用できることが奇妙に感じられるかもしれませんが、 **rxLinMod** 関数でリモート計算コンテキストを使用してモデルを作成する場合でも、そのモデルを含むオブジェクトがローカル ワークステーションに返され、共有ディレクトリに格納されます。
 
 そのため、"ローカル" コンテキストを使用して作成した場合と同様に、モデルに対して標準の R コマンドを実行することができます。
 
 **結果**
 
-```
+```R
 Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)
 Dependent variable(s): balance
 Total independent variables: 4 (Including number dropped: 1)
@@ -58,7 +63,7 @@ Estimate Std. Error t value Pr(>|t|) (Intercept)
 gender=Male -88.813 78.360 -1.133 0.257
 gender=Female Dropped Dropped Dropped Dropped
 creditLine 95.379 3.862 24.694 2.22e-16
-Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes: 0  0.001  0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 3812 on 9997 degrees of freedom
 Multiple R-squared: 0.05765
@@ -69,11 +74,11 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>ロジスティック回帰モデルを作成する
 
-次に、特定の顧客が不正行為リスクであるかどうかを示すロジスティック回帰モデルを作成します。 使用して、 **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)関数の場合、計算コンテキストをリモートでロジスティック回帰モデルの場合は、どのサポート調整します。
+次に、特定の顧客が不正行為のリスクであるかどうかを示すロジスティック回帰モデルを作成します。 リモート計算コンテキストでのロジスティック回帰モデルの継ぎ手をサポートする**RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)関数を使用します。
 
-1.  計算コンテキストはそのまま保持します。 データ ソースも引き続き同じものを使用します。
+計算コンテキストはそのまま保持します。 また、同じデータソースも引き続き使用します。
 
-2.  **rxLogit** 関数を呼び出して、モデルの定義に必要な数式を渡します。
+1. **rxLogit** 関数を呼び出して、モデルの定義に必要な数式を渡します。
 
     ```R
     logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
@@ -83,7 +88,7 @@ Condition number: 1.0184
     
     このモデルがこのように大きくなるのは、R と **RevoScaleR** パッケージでは、カテゴリ要因変数のすべてのレベルがそれぞれ個別のダミー変数として自動的に処理されるためです。
   
-3.  返されたモデルの概要を表示する、R を呼び出す`summary`関数。
+2. 返されるモデルの概要を確認するには、R の **summary** 関数を呼び出します。
   
     ```R
     summary(logitObj)
@@ -91,7 +96,7 @@ Condition number: 1.0184
   
 **結果の一部**
 
-```
+```R
 Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine
 Data: sqlFraudDS (RxSqlServerData Data Source)
 Dependent variable(s): fraudRisk
@@ -117,15 +122,12 @@ numTrans              4.950e-02  2.202e-03  22.477 2.22e-16
 numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10
 creditLine            1.042e-01  4.705e-03  22.153 2.22e-16
 
-Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 '\*\*\*' 0.001 '\*\*' 0.01 '\*' 0.05 '.' 0.1 ' ' 1
 Condition number of final variance-covariance matrix: 3997.308
 Number of iterations: 15
 ```
 
-## <a name="next-step"></a>次の手順
+## <a name="next-steps"></a>次の手順
 
-[新しいデータのスコア](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
-
-## <a name="previous-step"></a>前の手順
-
-[R を使用して SQL Server のデータを表示する](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+> [!div class="nextstepaction"]
+> [新しいデータのスコア付け](../../advanced-analytics/tutorials/deepdive-score-new-data.md)

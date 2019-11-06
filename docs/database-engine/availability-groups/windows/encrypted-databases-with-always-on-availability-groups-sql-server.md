@@ -1,6 +1,7 @@
 ---
-title: 暗号化されたデータベースと AlwaysOn 可用性グループ (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 暗号化されたデータベースを可用性グループに追加する
+description: 暗号化された (または最近暗号化解除された) データベースを Always On 可用性グループに追加する手順。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,25 +14,19 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12ee0cb358d64b0f81872c8c1d0d3fcf36d3a815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5e86fe6a4f37e4ac21afb3a9aa72d80d48f3544
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000198"
 ---
-# <a name="encrypted-databases-with-always-on-availability-groups-sql-server"></a>暗号化されたデータベースと AlwaysOn 可用性グループ (SQL Server)
+# <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>暗号化されたデータベースを Always On 可用性グループに追加する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で現在暗号化されているデータベースまたは最近暗号化解除されたデータベースと [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用する方法について説明します。  
   
- **このトピックの内容**  
-  
--   [制限事項と制約事項](#Restrictions)  
-  
--   [関連タスク](#RelatedTasks)  
-  
+ 
 ##  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データベースが暗号化されているか、データベース暗号化キー (DEK) を含んでいる場合、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] または [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] を使用してそのデータベースを可用性グループに追加することはできません。 暗号化されたデータベースの暗号化を解除した場合でも、そのログ バックアップには暗号化されたデータが含まれていることがあります。 この場合、データベースに対する初期データの完全同期が失敗する可能性があります。 これは、ログの復元操作にはデータベース暗号化キー (DEK) で使用された証明書が必要なことがあり、その証明書を使用できないことがあるためです。  

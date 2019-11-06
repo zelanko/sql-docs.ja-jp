@@ -14,15 +14,14 @@ helpviewer_keywords:
 - system objects [SQL Server]
 - GRANT statement, system objects
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c90b3d751484520f86ef6d56c8516c79707e9eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050671"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (システム オブジェクトの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

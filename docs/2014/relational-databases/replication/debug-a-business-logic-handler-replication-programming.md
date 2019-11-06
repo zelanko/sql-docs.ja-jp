@@ -1,11 +1,10 @@
 ---
-title: ビジネス ロジック ハンドラーのデバッグ (レプリケーション プログラミング) | Microsoft Docs
+title: ビジネス ロジック ハンドラーのデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8bc3dd8ccacf4348002f0a9ca45a63632f7cb08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721502"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>ビジネス ロジック ハンドラーのデバッグ (レプリケーション プログラミング)
   マージ サブスクリプションの同期時にカスタム ビジネス ロジックを呼び出すには、ビジネス ロジック ハンドラーを使用します。 詳細については、「[Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
@@ -32,7 +31,7 @@ ms.locfileid: "48148562"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>ローカル コンピューターでビジネス ロジック ハンドラーをデバッグするには  
   
-1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、「[Configure Publishing and Distribution](configure-publishing-and-distribution.md)」(パブリッシングとディストリビューションの構成) と「[Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md)」(パブリケーションとアーティクルの作成、変更、削除 (レプリケーション)) をご覧ください。  
+1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、「[パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)」と「[パブリケーションの作成](publish/create-a-publication.md)」をご参照ください。  
   
 2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
   

@@ -18,16 +18,15 @@ helpviewer_keywords:
 - versions [SQL Server], @@VERSION
 - processors [SQL Server], types
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c72da307abd6de30cfb188128eeea52f64b074e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1894f0e4aa31e8b80255fb49f30c7cfe1c1a146b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927534"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;バージョン - Transact SQL 構成関数
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47841160"
  **nvarchar**  
   
 ## <a name="remarks"></a>Remarks  
- @@VERSION の結果は 1 つの nvarchar 文字列として表示されます。 を使用する [SERVERPROPERTY (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/serverproperty-transact-sql.md) 個々 のプロパティの値を取得します。  
+ @@VERSION の結果は 1 つの nvarchar 文字列として表示されます。 を使用する [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md) 個々 のプロパティの値を取得します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、次の情報が返されます。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "47841160"
 > [!NOTE]  
 > @@VERSION によって報告された製品バージョンが Azure SQL Database で正しくない問題を認識しています。 Azure SQL Database で実行される SQL Server データベース エンジンのバージョンは常に、SQL Server のオンプレミスのバージョンより新しいため、最新のセキュリティ修正プログラムが含まれています。 これは、パッチ レベルが SQL Server のオンプレミスのバージョンと同じかそれより新しく、SQL Server で使用できる最新の機能が Azure SQL Database で使用できることを意味します。
 >
-> エンジンのエディションをプログラムで確認するには、SELECT SERVERPROPERTY('EngineEdition') を使用します。 このクエリでは、スタンドアロンのデータベースの場合に '5'、Azure SQL Database のマネージド インスタンスの場合に '8' を返します。 
+> エンジンのエディションをプログラムで確認するには、SELECT SERVERPROPERTY('EngineEdition') を使用します。 このクエリでは、単一データベース/エラスティック プールの場合に '5'、Azure SQL Database のマネージド インスタンスの場合に '8' が返されます。 
 >
 > この問題が解決されたら、ドキュメントを更新します。
 

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e8477b4e8e0e6c0fc6e4801a975b11d79dadf83f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106229"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
-  縦棒グラフでは、カテゴリ別にグループ化された縦棒のセットとして系列が表示されます。 縦棒グラフは、時間の経過に伴うデータの変化を示す場合やアイテム間の比較を示す場合に便利です。 一般的な縦棒グラフは、横棒グラフおよび範囲縦棒グラフと密接な関係にあります。横棒グラフでは、横棒のセットとして系列が表示され、範囲縦棒グラフでは、始点と終点が異なる縦棒のセットとして系列が表示されます。 詳細については、次を参照してください。[横棒グラフ&#40;レポート ビルダーおよび SSRS&#41; ](charts-report-builder-and-ssrs.md)と[範囲グラフ&#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)します。  
+  縦棒グラフでは、カテゴリ別にグループ化された縦棒のセットとして系列が表示されます。 縦棒グラフは、時間の経過に伴うデータの変化を示す場合やアイテム間の比較を示す場合に便利です。 一般的な縦棒グラフは、横棒グラフおよび範囲縦棒グラフと密接な関係にあります。横棒グラフでは、横棒のセットとして系列が表示され、範囲縦棒グラフでは、始点と終点が異なる縦棒のセットとして系列が表示されます。 詳細については、「 [横棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md) 」と「 [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)」を参照してください。  
   
  3 つの系列では共通の期間が共有され、有効な比較が可能になるため、このデータには縦棒グラフが適しています。  
   
@@ -36,9 +35,9 @@ ms.locfileid: "48056442"
   
 -   **3-D 円柱**: 3-D グラフで棒が円柱のような形をしている縦棒グラフ。  
   
--   `Histogram`。 グラフの棒が正規分布で配置されるように計算されている縦棒グラフ。  
+-   `Histogram` 。 グラフの棒が正規分布で配置されるように計算されている縦棒グラフ。  
   
--   `Pareto`。 棒が最も高い方から順に配置されている縦棒グラフ。  
+-   `Pareto` 。 棒が最も高い方から順に配置されている縦棒グラフ。  
   
 ## <a name="data-considerations-for-a-column-chart"></a>縦棒グラフのデータに関する注意点  
   
@@ -46,16 +45,16 @@ ms.locfileid: "48056442"
   
 -   縦棒グラフでは、カテゴリ軸のラベルを横方向に表示するための十分な領域がありません。 カテゴリのラベルが長い場合は、横棒グラフを使用するか、ラベルの回転角度を変更することを検討してください。  
   
--   縦棒グラフの各棒に特殊な描画スタイルを追加して、視覚的な効果を高めることができます。 描画スタイルには、くさび形、エンボス、円柱、およびグラデーションがあります。 これらの効果は、2D グラフを見やすくするためにデザインされています。 3D グラフを使用している場合でも描画スタイルを適用できますが、同じ効果を得られないことがあります。 横棒グラフに描画スタイルを追加する方法の詳細については、次を参照してください。[追加の傾斜、エンボス、およびテクスチャのスタイルをグラフに&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)します。  
+-   縦棒グラフの各棒に特殊な描画スタイルを追加して、視覚的な効果を高めることができます。 描画スタイルには、くさび形、エンボス、円柱、およびグラデーションがあります。 これらの効果は、2D グラフを見やすくするためにデザインされています。 3D グラフを使用している場合でも描画スタイルを適用できますが、同じ効果を得られないことがあります。 横棒グラフに描画スタイルを追加する方法の詳細については、「 [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)」をご覧ください。  
   
 -   グラフをヒストグラムまたはパレート グラフとして表示する機能は、縦棒グラフ固有の機能です。 これを行うに ShowColumnAs プロパティを設定`Histogram`または`Pareto`を [プロパティ] ウィンドウで`true`します。  
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [横棒グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [範囲グラフ&#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
+ [横棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
- [空にして、Null データ ポイントのグラフで&#40;レポート ビルダーおよび SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e20f280df7054596f357c4864ef95177ca3e9cf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: fcc0e1482d3b38a395724f090805767291b609d7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749637"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767603"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>レプリケーション モニターのしきい値と警告の設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。 既定で表示される警告は、初期化されていないサブスクリプションに対する警告だけですが、その他の条件に対する警告を有効にすることもできます。 トポロジに対する警告を有効にすることをお勧めします。この警告を有効にすると、状態やパフォーマンスに関する情報をタイムリーに受け取ることができます。  
   
  警告を有効にする際には、しきい値を指定します。 指定したしきい値に達したり、それを超えると、警告が表示されます (それより優先度の高い問題がない場合)。 しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 以下のような条件について、警告を有効にすることができます。  
@@ -63,7 +63,7 @@ ms.locfileid: "47749637"
   
 2.  **[警告]** タブをクリックします。このタブの各オプションに関する情報を表示するには、メニュー バーの **[ヘルプ]** をクリックしてください。  
   
-3.  **[サブスクリプションの有効期限がしきい値内で切れる場合に警告します]** チェック ボックスまたは **[待機時間がしきい値を超えた場合に警告します]** チェック ボックスのいずれかをオンにして警告を有効にします。  
+3.  適切なチェック ボックスをオンにして警告を有効にします。 **[サブスクリプションの有効期限がしきい値内で切れる場合に警告します]** または **[待機時間がしきい値を超えた場合に警告します]** 。  
   
 4.  **[しきい値]** 列で警告のしきい値を設定します。 たとえば、手順 3. で **[待機時間がしきい値を超えた場合に警告します]** チェック ボックスをオンにした場合、 **[しきい値]** 列で **60 秒** の待機時間を選択します。  
   
@@ -164,6 +164,6 @@ ms.locfileid: "47749637"
 5.  **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

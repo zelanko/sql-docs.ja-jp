@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual Basic [SMO]
@@ -20,12 +18,12 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 893245a2716ad51b4204d6974f81147e2d51a4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63158711"
 ---
 # <a name="programming-specific-tasks"></a>プログラミング特有のタスク
   SMO オブジェクトを使用したプログラミングに特有のタスクには、バックアップ、統計の監視、レプリケーション、インスタンス オブジェクトの管理、および構成オプションの設定など、特定の関数を使用したプログラムにのみ必要となる場合がある複雑な処理が含まれています。  

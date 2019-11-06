@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 703514e884ede08db13fbb70f5fa27247e75503b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767034"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  
@@ -33,7 +32,7 @@ ms.locfileid: "48133382"
   
 -   値の集計の繰り返しを防止します。 たとえば、平均や合計など多くの集計値の計算を集計ごとに別々のデータ フロー タスクを使用して実行するパッケージで 1 つの集計値の計算が失敗した場合、パッケージを再開して、その集計のみを再実行することができます。  
   
- パッケージがチェックポイントを使用するように設定されている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はチェックポイント ファイルから再開ポイントを取得します。 失敗したコンテナーの種類や、トランザクションなどの実装機能によって、チェックポイント ファイルに記録される再開ポイントは影響を受けます。 変数の現在の値も、チェックポイント ファイルにキャプチャされます。 ただし、変数の値がある、`Object`データ型はチェックポイント ファイルに保存されません。  
+ パッケージがチェックポイントを使用するように設定されている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はチェックポイント ファイルから再開ポイントを取得します。 失敗したコンテナーの種類や、トランザクションなどの実装機能によって、チェックポイント ファイルに記録される再開ポイントは影響を受けます。 変数の現在の値も、チェックポイント ファイルにキャプチャされます。 ただし、`Object` データ型を持つ変数の値は、チェックポイント ファイルに保存されません。  
   
 ## <a name="defining-restart-points"></a>再開ポイントの定義  
  単一のタスクがカプセル化されているタスク ホスト コンテナーが、再開可能な最小のアトミック作業単位です。 Foreach ループ コンテナーおよびトランザクション化されたコンテナーも、アトミックな作業単位です。  
@@ -43,7 +42,7 @@ ms.locfileid: "48133382"
 > [!NOTE]  
 >  同じパッケージでチェックポイントとトランザクションを使用すると、予期しない結果が生じる可能性があります。 たとえば、パッケージが失敗してチェックポイントから再開した場合、既に正常にコミットされているトランザクションがパッケージで繰り返し実行される可能性があります。  
   
- チェックポイント データは、For ループ コンテナーおよび Foreach ループ コンテナーには保存されません。 パッケージが再開されると、For ループ コンテナーおよび Foreach ループ コンテナーと、子コンテナーが再実行されます。 ループ内の子コンテナーの実行が成功してもチェックポイント ファイルには記録されないため、子コンテナーは再実行されます。 詳細情報および回避策については、「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」を参照してください。  
+ チェックポイント データは、For ループ コンテナーおよび Foreach ループ コンテナーには保存されません。 パッケージが再開されると、For ループ コンテナーおよび Foreach ループ コンテナーと、子コンテナーが再実行されます。 ループ内の子コンテナーの実行が成功してもチェックポイント ファイルには記録されないため、子コンテナーは再実行されます。 詳細情報および回避策については、「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](https://go.microsoft.com/fwlink/?LinkId=241633)」を参照してください。  
   
  パッケージの再開時にはパッケージの構成が再読み込みされず、チェックポイント ファイルに書き込まれた構成情報が代わりに使用されます。 これによって、確実に、パッケージが失敗した時点と同じ構成を使用してパッケージが再実行されます。  
   
@@ -85,11 +84,11 @@ ms.locfileid: "48133382"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   social.technet.microsoft.com の技術資料「 [フェールオーバーまたはエラー後の SSIS パッケージの自動再起動](http://go.microsoft.com/fwlink/?LinkId=200407)」  
+-   social.technet.microsoft.com の技術資料「 [フェールオーバーまたはエラー後の SSIS パッケージの自動再起動](https://go.microsoft.com/fwlink/?LinkId=200407)」  
   
--   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」  
+-   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](https://go.microsoft.com/fwlink/?LinkId=241633)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

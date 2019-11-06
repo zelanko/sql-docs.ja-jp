@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -17,12 +16,12 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0464304a23e53762b3e2eb887383b111764379fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916746"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>ヒープ サイズの見積もり
   ヒープにデータを格納するために必要な領域は、次の手順で見積もることができます。  
@@ -58,7 +57,7 @@ ms.locfileid: "48192062"
      ***Max_Var_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。 この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて ***Max_Var_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
     > [!NOTE]  
-    >  組み合わせることができます`varchar`、 `nvarchar`、 `varbinary`、または`sql_variant`8,060 バイトを超える定義されているテーブルの合計幅となる列にします。 これらの列のそれぞれの長さ 8,000 バイトの制限内に収まる必要があります、 `varchar`、 `nvarchar,``varbinary`、または`sql_variant`列。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
+    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える `varchar`、`nvarchar`、`varbinary`、または `sql_variant` 列の連結が可能です。 これらの列のそれぞれの長さ 8,000 バイトの制限内に収まる必要があります、 `varchar`、 `nvarchar,``varbinary`、または`sql_variant`列。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
   
      可変長列が存在しない場合は、 ***Variable_Data_Size*** に 0 を設定します。  
   

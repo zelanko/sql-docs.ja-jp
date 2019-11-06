@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections
@@ -14,12 +13,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087347"
 ---
 # <a name="connect-to-a-data-mining-server"></a>データ マイニング サーバーへの接続
   ![[接続] ボタン](media/misc-connection.gif "[接続] ボタン")  
@@ -68,7 +67,7 @@ ms.locfileid: "48196992"
   
  **自分の接続が失われすべての作業を失うでしたか。**  
   
- サーバーへの接続を終了しても結果とデータが失われることはありません。これは、これらが Excel に保存されているためです。 ただし一時的なモデルを作成している場合、これらのモデルはすぐにサーバーから削除されます。 このため、一時的に接続が失われても、モデルが削除されていない場合があります。  
+ サーバーへの接続を終了しても結果とデータが失われることはありません。これは、これらが Excel に保存されているためです。 ただし一時的なモデルを作成している場合、これらのモデルはすぐにサーバーから削除されます。 したがって、接続が一時的に失われる場合いずれかの時点、モデルが削除されずまだします。  
   
  すべてのレポートおよびテーブルが Excel 内に保存されるため、生成した結果やデータが失われることはありません。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48196992"
   
 2.  接続のアクティビティ ログを表示して、列および予測可能な出力 (一例です) を確認してモデルを特定します。  
   
-     上級ユーザー: DMX または XMLA について理解している場合は、ステートメントをファイルにコピーして後で使用することができます。  
+     上級ユーザー:DMX または XMLA に詳しい場合は、後で使用できるファイルに、ステートメントをコピーできます。  
   
 3.  一時的なモデルおよび構造の名前が見つかったら、開く**モデルの管理**モデルを選択します。  
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108244"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>[ラベル] ([マップの緯線のプロパティ] ダイアログ ボックス)
   使用して、 **MapParallel プロパティ**ダイアログ ボックスで、マップ ビューポートの水平グリッドのラベルのオプションを変更します。 緯線とは、ビューポートに指定された座標系に応じて、次の値を表します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48097292"
   
 -   **地理的です。** 現在の投影法での緯度。  
   
- **式** (*[fx]*) ボタンをクリックし、オプションの値を設定する式を編集します。  
+ **式** ( *[fx]* ) ボタンをクリックし、オプションの値を設定する式を編集します。  
   
 ## <a name="options"></a>および  
  **間隔**  
@@ -50,8 +49,8 @@ ms.locfileid: "48097292"
   
 -   **[遠く]** ラベルを下部に表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [変更するマップの凡例、カラー スケール、および関連付けられているルール&#40;レポート ビルダーおよび SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

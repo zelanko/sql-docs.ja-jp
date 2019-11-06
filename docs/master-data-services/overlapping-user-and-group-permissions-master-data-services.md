@@ -5,23 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9c8e5c76ceffe53f2b2ee4dd759db748ae58f7b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 44c4374e2c1304f381775be5a37f42ec3c88afc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904008"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>ユーザー権限とグループ権限の重複 (Master Data Services)
 
@@ -55,7 +53,7 @@ ms.locfileid: "47606590"
   
  グループ 2 には、Product エンティティに対する **読み取り** 権限が与えられています。  
   
- 結果: ユーザーの有効な権限は、Product エンティティに対する **更新** 権限となります。  
+ 結果:ユーザーの有効な権限は、Product エンティティに対する **更新** 権限となります。  
   
 ## <a name="example-2"></a>例 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -68,7 +66,7 @@ ms.locfileid: "47606590"
   
  グループ 2 には、Product エンティティに対する **拒否** 権限が与えられています。  
   
- 結果: ユーザーの有効な権限は、Product エンティティに対する **拒否** 権限となります。  
+ 結果:ユーザーの有効な権限は、Product エンティティに対する **拒否** 権限となります。  
   
 ## <a name="example-3"></a>例 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -81,10 +79,10 @@ ms.locfileid: "47606590"
   
  グループ 2 には、階層ノードのメンバーのグループに対する **読み取り** 権限が与えられています。  
   
- 結果: ユーザーの有効な権限は、メンバーに対する **更新** 権限となります。  
+ 結果:ユーザーの有効な権限は、メンバーに対する **更新** 権限となります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [モデル アクセス許可とメンバー アクセス許可の重複 (マスター データ サービス)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [モデル権限とメンバー権限の重複 (マスター データ サービス)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

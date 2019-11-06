@@ -15,19 +15,19 @@ ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e52ab35b0f75f80a6117995a353b66c320a5294
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196405"
 ---
 # <a name="delete-views"></a>ビューの削除
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、次のいずれかを使用してビューを削除できます: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48085592"
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  **[オブジェクトの削除]** ダイアログ ボックスの **[依存関係の表示]** をクリックして *[view_name*** の依存関係*]* ダイアログ ボックスを開きます。 ビューに依存するすべてのオブジェクトと、ビューが依存するすべてのオブジェクトが表示されます。  
+    >  **[オブジェクトの削除]** ダイアログ ボックスの **[依存関係の表示]** をクリックして _[view_name_**の依存関係]** ダイアログ ボックスを開きます。 ビューに依存するすべてのオブジェクトと、ビューが依存するすべてのオブジェクトが表示されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

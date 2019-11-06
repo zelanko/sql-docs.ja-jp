@@ -6,21 +6,18 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49379a938fad8bce92dd68b9620cb87fbfe4254c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 23cead258b38f8b580d1331f69b7aa70483f41ce
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643105"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267701"
 ---
 # <a name="specify-a-breakpoint-filter"></a>ブレークポイント フィルターの指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +30,7 @@ ms.locfileid: "51643105"
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[フィルター]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[フィルター]** をクリックします。  
   
@@ -51,5 +48,3 @@ ms.locfileid: "51643105"
  [ブレークポイント条件の指定](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [ヒット カウントの指定](../../relational-databases/scripting/specify-a-hit-count.md)   
  [ブレークポイント アクションの指定](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
-  
-  

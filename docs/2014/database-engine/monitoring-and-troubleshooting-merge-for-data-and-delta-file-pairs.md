@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5febee69483b5f1a2e8aa5b7b48fdde0a7ada2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61a9b1697b705e56c73a0b610ae426deb288901e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62844090"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>データ ファイルとデルタ ファイルのペアのマージに関する監視とトラブルシューティング
   インメモリ OLTP は、マージ ポリシーを使用して、データ ファイルとデルタ ファイルの隣接するペアを自動的にマージします。 マージ操作を無効にすることはできません。  
@@ -31,7 +31,7 @@ ms.locfileid: "48075282"
   
  次のクエリを使用して、データ ファイルとデルタ ファイルに関する情報を取得します。  
   
-```tsql  
+```sql  
 select checkpoint_file_id, file_type_desc, internal_storage_slot, file_size_in_bytes, file_size_used_in_bytes,   
 inserted_row_count, deleted_row_count, lower_bound_tsn, upper_bound_tsn   
 from sys.dm_db_xtp_checkpoint_files  
@@ -41,7 +41,7 @@ order by file_type_desc, upper_bound_tsn
   
  マージされていない 3 つのデータ ファイルがあると仮定します。 最初のデータ ファイルの `lower_bound_tsn` 値と最後のデータ ファイルの `upper_bound_tsn` を使用して、次のコマンドを実行できます。  
   
-```tsql  
+```sql  
 exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890  
 ```  
   

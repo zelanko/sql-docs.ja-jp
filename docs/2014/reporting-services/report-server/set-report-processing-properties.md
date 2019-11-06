@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90928774eb2429430da0cbc1e8904ec5b1dc0c08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103238"
 ---
 # <a name="set-report-processing-properties"></a>レポート処理プロパティの設定
   レポート実行プロパティでは、レポートの処理方法を制御します。 実行プロパティは、各レポートごとに設定する必要があります。  
@@ -44,7 +43,7 @@ ms.locfileid: "48161732"
 ### <a name="running-reports-from-snapshots"></a>スナップショットからレポートを実行  
  レポート スナップショットは、レイアウト情報および特定の時期に取得されるデータを含むレポートです。 レポートが予定外に (たとえば、スケジュールされたバックアップ中に) 実行されないように、レポートをレポート スナップショットとして実行することができます。 レポート スナップショットは、通常はスケジュールに従って作成され、その後更新されます。これによって、正確な時間でレポートとデータ処理を行うことができます。 レポートが実行に長時間かかるクエリに基づいている場合や、クエリに使用されているデータのデータ ソースが、ある一定時間の間アクセスを避けたいものである場合は、レポートをスナップショットとして実行してください。  
   
- レポート スナップショットは、レポート サーバー データベースに格納され、後でユーザーまたはプロセス (サブスクリプションなど) がレポートを要求したときに取得されます。 レポート スナップショットが更新されると、新しいインスタンスによって上書きされます。 レポート サーバーでは、レポート履歴に追加するように特別にオプションを設定しない限り、以前のバージョンのレポートを保存しません。 詳細については、「[レポート履歴でのスナップショットの作成、変更、および削除](create-modify-and-delete-snapshots-in-report-history.md)」を参照してください。  
+ レポート スナップショットは、レポート サーバー データベースに格納され、後でユーザーまたはプロセス (サブスクリプションなど) がレポートを要求したときに取得されます。 レポート スナップショットが更新されると、新しいインスタンスによって上書きされます。 レポート サーバーでは、レポート履歴に追加するように特別にオプションを設定しない限り、以前のバージョンのレポートを保存しません。 詳細については、「 [レポート履歴でのスナップショットの作成、変更、および削除](create-modify-and-delete-snapshots-in-report-history.md)」を参照してください。  
   
  すべてのレポートがスナップショットとして実行されるように構成できるとは限りません。 ユーザーに資格情報を要求するレポートや、Windows 統合セキュリティを使用してデータを取得するレポートのスナップショットを作成することはできません。 パラメーター化されたレポートをスナップショットとして実行する場合、スナップショットの作成時に使用する既定のパラメーターを指定する必要があります。 要求時に実行されるレポートとは異なり、レポートが開かれると、レポート スナップショットに対して別のパラメーター値を指定することはできません。 別のパラメーター値を選択すると、新しいレポート処理要求が生じますが、これは許可されません。  
   
@@ -57,10 +56,10 @@ ms.locfileid: "48161732"
  この条件が存在する場合、レポート サーバーは、次にスケジュールされているサブスクリプションの実行時に、サブスクリプションを無効にします。 サブスクリプションを再度アクティブ化するには、サブスクリプションを開いてから保存します。 サブスクリプションを開くと、レポート サーバーにより、スナップショットに指定されたサブスクリプションのパラメーター値が更新されます。 サブスクリプションの詳細については、「[サブスクリプションと配信 &#40;Reporting Services&#41](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションを設定&#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [レポートの実行プロパティを構成する&#40;レポート マネージャー&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [レポートの実行プロパティを構成する &#40;レポート マネージャー&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services の概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [レポート履歴にスナップショットを追加する方法](add-a-snapshot-to-report-history-report-manager.md)   
+ [方法:レポート履歴にスナップショットを追加します。](add-a-snapshot-to-report-history-report-manager.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

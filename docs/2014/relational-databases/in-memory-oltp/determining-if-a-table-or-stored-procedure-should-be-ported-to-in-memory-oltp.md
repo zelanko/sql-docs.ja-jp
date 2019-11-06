@@ -13,15 +13,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63072382"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス コレクターは、インメモリ OLTP によってデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、トランザクション パフォーマンス分析レポートによって、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。  
+  トランザクション パフォーマンス コレクター[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]インメモリ OLTP データベース アプリケーションのパフォーマンスが向上する場合に評価するのに役立ちます。 また、トランザクション パフォーマンス分析レポートによって、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。  
   
  このトピックでは、次の方法について説明します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48194142"
   
 -   パフォーマンス クリティカルなテーブルとストアド プロシージャを特定するためのトランザクション パフォーマンス分析レポートの生成。  
   
- 移行方法については、「 [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](http://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
+ 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
   
  トランザクション パフォーマンス コレクターとトランザクション パフォーマンス分析レポートは、次の操作を実行するために使用できます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48194142"
     > [!IMPORTANT]  
     >  データベース システムのパフォーマンスはさまざまな要因に左右されますが、そのすべてをトランザクション パフォーマンス コレクターで観察および測定できるわけではありません。 したがって、トランザクション パフォーマンス分析レポートは、作成した予測が実際のパフォーマンスの向上と一致することを保証するものではありません。  
   
- 選択すると、トランザクション パフォーマンス コレクター、およびトランザクション パフォーマンス分析レポートを生成する機能がインストールされて**管理ツール-基本**または**管理ツール-[詳細設定]** インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
+ 選択すると、トランザクション パフォーマンス コレクター、およびトランザクション パフォーマンス分析レポートを生成する機能がインストールされて**管理ツール-基本**または**管理ツール-高度な**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
  推奨されるワークフローを、次のフローチャートで説明します。 黄色のノードは省略可能な手順を表しています。  
@@ -123,7 +123,7 @@ ms.locfileid: "48194142"
   
  SQL Server 2012 またはそれ以降のバージョンのでは、データ コレクターを構成できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
- トランザクションがプロファイルされる場所とは異なるインスタンス上の管理データ ウェアハウス データベースにデータ コレクターがデータをアップロードするためには、適切な資格情報が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシが必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシを有効にするには、ドメイン対応のログインを持つ資格情報を最初に設定する必要があります。 ドメイン対応のログインは、管理データ ウェアハウス データベースの `mdw_admin` グループのメンバーである必要があります。 参照してください[方法: 資格情報 (SQL Server Management Studio) 作成](../security/authentication-access/create-a-credential.md)資格情報を作成する方法についてはします。  
+ トランザクションがプロファイルされる場所とは異なるインスタンス上の管理データ ウェアハウス データベースにデータ コレクターがデータをアップロードするためには、適切な資格情報が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシが必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシを有効にするには、ドメイン対応のログインを持つ資格情報を最初に設定する必要があります。 ドメイン対応のログインは、管理データ ウェアハウス データベースの `mdw_admin` グループのメンバーである必要があります。 「[作成 (SQL Server Management Studio) の資格情報を](../security/authentication-access/create-a-credential.md)資格情報を作成する方法についてはします。  
   
  別のインスタンスの管理データ ウェアハウス データベースにアップロードするようにデータ コレクションを構成するには  
   
@@ -186,13 +186,13 @@ ms.locfileid: "48194142"
   
 -   競合統計セクション  
   
-     このセクションには、データベース テーブルの競合を示すテーブルが含まれます。 データベースのラッチおよびロックの詳細についてを参照してください[ロック アーキテクチャ](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx)します。 次の列で構成されます。  
+     このセクションには、データベース テーブルの競合を示すテーブルが含まれます。 データベースのラッチおよびロックの詳細についてを参照してください[ロック アーキテクチャ](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx)します。 次の列で構成されます。  
   
     -   待機の総数に対する比率。 データベースのアクティビティと比較した、このデータベース テーブルでのラッチ待機とロック待機の割合です。 この割合が高くなるほど、データベース内の他のテーブルと比較して、テーブルが使用される頻度が高くなります。  
   
-    -   ラッチ統計。 これらの列には、このテーブルの関連するクエリに対するラッチ待機数が記録されます。 ラッチについては、次を参照してください。[ラッチ](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)します。 この数値が大きくなるほど、テーブルでのラッチの競合が増加します。  
+    -   ラッチ統計。 これらの列には、このテーブルの関連するクエリに対するラッチ待機数が記録されます。 ラッチについては、次を参照してください。[ラッチ](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)します。 この数値が大きくなるほど、テーブルでのラッチの競合が増加します。  
   
-    -   ロック統計。 この列のグループには、このテーブルのクエリに対するページ ロックの取得および待機の数が記録されます。 ロックの詳細については、次を参照してください。 [SQL server についてロック](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)します。 待機数が多いほど、テーブルでのロックの競合が増加します。  
+    -   ロック統計。 この列のグループには、このテーブルのクエリに対するページ ロックの取得および待機の数が記録されます。 ロックの詳細については、次を参照してください。 [SQL server についてロック](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)します。 待機数が多いほど、テーブルでのロックの競合が増加します。  
   
 -   移行難易度セクション  
   

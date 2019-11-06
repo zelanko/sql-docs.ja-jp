@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73ff25f7de2ce3dcaffa962025ef8d93e535e75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 98ab53220b995c0c94aa2eb25d509bd67f7090b5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527064"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908037"
 ---
 # <a name="create-nonclustered-indexes"></a>非クラスター化インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,8 +71,8 @@ ms.locfileid: "52527064"
   
 8.  **[閉じる]** をクリックします。  
   
-9. **[ファイル]** メニューの *[<テーブル名> の保存]* をクリックします。  
-  
+9. **ファイル** メニューの **テーブル名**_の保存_をクリックします。  
+
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>オブジェクト エクスプ ローラーを使用して非クラスター化インデックスを作成するには  
   
 1.  オブジェクト エクスプローラーで、非クラスター化インデックスを作成するテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
@@ -82,13 +81,13 @@ ms.locfileid: "52527064"
   
 3.  非クラスター化インデックスを作成するテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[非クラスター化インデックス]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[非クラスター化インデックス]** を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-6.  **[インデックス キー列]** で、**[追加]** をクリックします。  
+6.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
   
-7.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、非クラスター化インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+7.  **テーブル名**_から列を選択_ ダイアログ ボックスで、非クラスター化インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   

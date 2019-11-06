@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 538990f9bd54125af29e3432674601e6ab6b1907
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714909"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>SQL Server Express LocalDB のエラー メッセージ リファレンス
   ここでは、次の SQL Server Express LocalDB エラー メッセージについての参照情報を示します。  

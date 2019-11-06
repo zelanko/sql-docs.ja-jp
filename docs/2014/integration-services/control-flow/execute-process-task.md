@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 02f00d9846176edabb2da486906b5d1946c94124
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831869"
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
   プロセス実行タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルを実行します。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
@@ -40,9 +39,9 @@ ms.locfileid: "48205622"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [プロセス実行タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[プロセス実行タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [プロセス実行タスク エディター&#40;ページの処理&#41;](../execute-process-task-editor-process-page.md)  
+-   [[プロセス実行タスク エディター] &#40;[処理] ページ&#41;](../execute-process-task-editor-process-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
@@ -61,22 +60,22 @@ ms.locfileid: "48205622"
   
  プロセス実行タスクの各種プロパティを設定する際にも、式を使用できます。  
   
- 使用すると、 **StandardInputVariable**入力を提供するプロセス実行タスクを構成するプロパティを呼び出す、`Console.ReadLine`で入力を読み取るアプリケーションからのメソッド。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](http://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
+ 使用すると、 **StandardInputVariable**入力を提供するプロセス実行タスクを構成するプロパティを呼び出す、`Console.ReadLine`で入力を読み取るアプリケーションからのメソッド。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](https://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
   
  **Arguments** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、次のいずれかの手順を実行して、引数を取得します。  
   
--   Microsoft Visual Basic を使用して、アプリケーションを記述する場合は、設定、`My.Application.CommandLineArgs`プロパティ。 次の例では、`My.Application.CommandLineArgs` プロパティを使用して、2 つの引数を取得しています。  
+-   Microsoft Visual Basic を使用してアプリケーションを作成する場合は、`My.Application.CommandLineArgs` プロパティを設定します。 次の例では、`My.Application.CommandLineArgs` プロパティを使用して、2 つの引数を取得しています。  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     詳細については、 [のリファレンスで、](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs プロパティ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のトピックを参照してください。  
+     詳細については、 [のリファレンスで、](https://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs プロパティ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のトピックを参照してください。  
   
 -   Microsoft Visual C# を使用してアプリケーションを作成する場合は、`Main` メソッドを使用します。  
   
-     詳細については、『C# プログラミング ガイド』の「 [コマンド ライン引数 (C# プログラミング ガイド)](http://go.microsoft.com/fwlink/?LinkId=129406)」を参照してください。  
+     詳細については、『C# プログラミング ガイド』の「 [コマンド ライン引数 (C# プログラミング ガイド)](https://go.microsoft.com/fwlink/?LinkId=129406)」を参照してください。  
   
  プロセス実行タスクには、 **StandardOutputVariable** プロパティおよび **StandardErrorVariable** プロパティがあります。それぞれ、アプリケーションの標準出力とエラー出力を取り込むための変数を指定できます。  
   

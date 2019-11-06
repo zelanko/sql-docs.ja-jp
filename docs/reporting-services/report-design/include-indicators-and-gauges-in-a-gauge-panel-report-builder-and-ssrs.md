@@ -2,18 +2,18 @@
 title: ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f5e493485df8346ca66da5f9125a0ff024addf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 3c53c5c034fcefb1da13c5830679863f9d7d9ae9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580199"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS)
   ゲージ パネルは、1 つ以上のゲージとインジケーターを格納する最上位のコンテナーです。 インジケーターは、ゲージに埋め込んだり、ゲージ パネルのゲージの横に配置したりできます。  

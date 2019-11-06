@@ -4,29 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63315078"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>コール センター モデルの検証 (中級者向けデータ マイニング チュートリアル)
   調査モデルを構築したら、それを使用して、データについてより深く考察することができます。具体的には、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] に備わっている次のツールを使用します。  
   
 -   [Microsoft ニューラル ネットワーク ビューアー](#bkmk_NNviewer) **:** このビューアーは、**マイニング モデル ビューアー**データ マイニング デザイナーのタブとをデータを考察できるように設計されています。  
   
--   [Microsoft 汎用コンテンツ ツリー ビューアー](#bkmk_genviewer) **:** この標準的なビューアーは、パターンに関する詳細を提供し、統計モデルの検出されたアルゴリズムによって生成時にします。  
+-   [Microsoft 汎用コンテンツ ツリー ビューアー](#bkmk_genviewer) **:** この標準的なビューアーでは、パターンと統計モデルの生成時に、アルゴリズムで検出に関する詳細を提供します。  
   
 ##  <a name="bkmk_NNviewer"></a> Microsoft ニューラル ネットワーク ビューアー  
- ビューアーが 3 つのウィンドウ:**入力**、**出力**、および**変数**します。  
+ ビューアーが 3 つのペインの**入力**、**出力**、および**変数**します。  
   
  使用して、**出力**ウィンドウで、予測可能属性または従属変数に別の値を選択することができます。 属性を選択できますが、モデルに複数の予測可能な属性が含まれている場合、**出力属性**一覧。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48110032"
   
 2.  **値**、 **AM**します。  
   
-     **変数**ペインが更新されて、シフトはときに、モデルに影響を表示する**AM**します。 それ以外のすべての選択内容は変わりません。引き続き、最低と最高のサービス グレードが対比されます。  
+     **変数**ペインが更新されて、シフトはときに、モデルに影響を表示する**AM**します。 その他のすべての選択内容は変わりません - まだ最低と最高のサービス グレードを比較します。  
   
 3.  **値**、 **PM1**します。  
   
@@ -94,13 +93,13 @@ ms.locfileid: "48110032"
 ### <a name="interpreting-the-statistics-provided-in-the-viewer"></a>ビューアーに表示される統計の解釈  
  待ち時間が長ければ、電話放棄呼率が高くなり、サービス グレードも低下します。 当然の結果のようにも見えますが、マイニング モデルは、その傾向を読み解くための補足的な統計データをいくつか提供します。  
   
--   **スコア**: 結果を区別するためには、この変数の全体的な重要度を示す値。 スコアが高いほど、その変数が結果に及ぼす影響は強くなります。  
+-   **スコア**:この変数の結果を区別するための全体的な重要度を示す値。 スコアが高いほど、その変数が結果に及ぼす影響は強くなります。  
   
--   **値 1 の確率**: 結果に対するこの値の確率を表す割合。  
+-   **値 1 の確率**:この結果のこの値の確率を表す割合です。  
   
--   **値 2 の確率**: 結果に対するこの値の確率を表す割合。  
+-   **値 2 の確率**:この結果のこの値の確率を表す割合です。  
   
--   **値 1 のリフト**と**値 2 のリフト**: この特定の変数を使用して、値 1] および [値 2 の結果を予測するための影響を表すスコア。 スコアが高いほど、その変数を使って、効果的に結果を予測することができます。  
+-   **値 1 のリフト**と**値 2 のリフト**:この特定の変数を使用して、値 1] および [値 2 の結果を予測するための影響を表すスコア。 スコアが高いほど、その変数を使って、効果的に結果を予測することができます。  
   
  次の表に、トップ インフルエンサについて、いくつかの値の例を示します。 たとえば、**値 1 の確率**60.6% と**値 2 の確率**8.30%、つまり、案件あたり平均時間が 44 ~ 70 分の範囲、ケースの 60.6% がのシフトには、最高のサービス グレード (値 1) とケースの 8.30% は、サービス グレード (値 2) のシフトでした。  
   
@@ -110,10 +109,10 @@ ms.locfileid: "48110032"
   
 |属性|値|優先\<0.07|水準 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|案件あたりの平均時間|89.087 120.000||スコア: 100<br /><br /> Value1 の確率: 4.45%<br /><br /> 値 2 の確率: 51.94%<br /><br /> Value1 のリフト: 0.19 の水を<br /><br /> Value2 のリフト: 1.94|  
-|案件あたりの平均時間|44.000 70.597|スコア : 92.35<br /><br /> 値 1 の確率 : 60.06 %<br /><br /> 値 2 の確率 : 8.30 %<br /><br /> 値 1 のリフト : 2.61<br /><br /> 値 2 のリフト : 0.31||  
+|案件あたりの平均時間|89.087 - 120.000||スコア:100<br /><br /> Value1 の確率:4.45 %<br /><br /> 値 2 の確率:51.94 %<br /><br /> Value1 をリフトします。0.19<br /><br /> Value2 をリフトします。1.94|  
+|案件あたりの平均時間|44.000 - 70.597|スコア:92.35<br /><br /> Value1 の確率:60.06 %<br /><br /> 値 2 の確率:8.30 %<br /><br /> Value1 をリフトします。2.61<br /><br /> Value2 をリフトします。0.31||  
   
- [ページのトップへ](#bkmk_NNviewer)  
+ [トップに戻る](#bkmk_NNviewer)  
   
 ##  <a name="bkmk_genviewer"></a> Microsoft 汎用コンテンツ ツリー ビューアー  
  このビューアーを使用すると、モデルの処理時にアルゴリズムによって作成された、さらに詳しい情報を閲覧できます。 **MicrosoftGeneric コンテンツ ツリー ビューアー**一連のノード、各ノードが、トレーニング データに関する学習済みの知識を表す、として、マイニング モデルを表します。 このビューアーは、あらゆるモデルで使用できますが、ノードの内容はモデルの種類によって異なります。  
@@ -146,15 +145,15 @@ WHERE NODE_NAME = '10000000000000000'
   
  ノード階層と、NODE_DISTRIBUTION テーブル内の詳細情報を使用して、ニューラル ネットワーク内のパスを個別にたどり、非表示になっているレイヤーの統計を閲覧することもできます。 詳細については、次を参照してください。[ニューラル ネットワーク モデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)します。  
   
- [ページのトップへ](#bkmk_NNviewer)  
+ [トップに戻る](#bkmk_NNviewer)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [コール センター構造へのロジスティック回帰モデルの追加&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>参照  
- [ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ニューラル ネットワーク モデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
- [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [マイニング モデルでの列の分離の変更](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
   

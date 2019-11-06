@@ -10,16 +10,15 @@ helpviewer_keywords:
 - updating statistics
 - statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 59efa5a8143d448ca322ab1b6efa86cbfa9f66d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934080"
 ---
 # <a name="update-statistics"></a>統計の更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52586285"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **統計オブジェクトを更新するために使用するもの:**  
   
@@ -60,7 +59,7 @@ ms.locfileid: "52586285"
   
 5.  更新する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **[統計のプロパティ - _statistics\_name_]** ダイアログ ボックスで **[この列の統計を更新する]** チェック ボックスをオンにし、**[OK]** をクリックします。  
+6.  **[統計のプロパティ - _statistics\_name_]** ダイアログ ボックスで **[この列の統計を更新する]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

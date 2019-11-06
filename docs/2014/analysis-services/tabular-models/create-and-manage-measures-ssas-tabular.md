@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc49813893a296ac5342452a286f39284a8901d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067446"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>メジャーを作成および管理する (SSAS テーブル)
-  メジャーとは、レポートまたは Excel ピボットテーブル (またはピボットグラフ) で使用するために作成される数式のことです。 COUNT や SUM などの標準の集計関数に基づいてメジャーを作成することも、DAX を使用して独自の数式を定義することもできます。 このトピックのタスクでは、テーブルのメジャー グリッドを使用してメジャーを作成し管理する方法について説明します。  
+  メジャーとは、レポートまたは Excel ピボットテーブル (またはピボットグラフ) で使用するために作成される数式のことです。 COUNT や SUM などの標準の集計関数に基づいてメジャーを作成することも、DAX を使用して独自の数式を定義することもできます。 このトピックの実習では、作成し、テーブルのメジャー グリッドを使用してメジャーを管理する方法について説明します。  
   
  このトピックでは、次のタスクについて説明します。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "48126368"
 -   [メジャーを削除するには](#bkmk_delete)  
   
 ## <a name="tasks"></a>処理手順  
- メジャーを作成、管理するには、テーブルのメジャー グリッドを使用します。 テーブルのメジャー グリッドは、モデル デザイナーのデータ ビューのみで表示することができます。 ダイアグラム ビューでは、メジャーの作成もメジャー グリッドの表示もできません。ただし、既存のメジャーであれば、ダイアグラム ビューで表示できます。 あるテーブルのメジャー グリッドを表示するには、 **[テーブル]** メニューをクリックしてから **[メジャー グリッドの表示]** をクリックします。  
+ 作成し、メジャーの管理は、テーブルのメジャー グリッドを使用します。 テーブルのメジャー グリッドは、モデル デザイナーのデータ ビューのみで表示することができます。 ダイアグラム ビューでは、メジャーの作成もメジャー グリッドの表示もできません。ただし、既存のメジャーであれば、ダイアグラム ビューで表示できます。 あるテーブルのメジャー グリッドを表示するには、 **[テーブル]** メニューをクリックしてから **[メジャー グリッドの表示]** をクリックします。  
   
 ###  <a name="bkmk_create_stand"></a> 標準の集計式を使用してメジャーを作成するには  
   
@@ -61,8 +60,8 @@ ms.locfileid: "48126368"
 -   メジャー グリッドで、メジャーを右クリックしてから **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)   
- [Kpi &#40;SSAS 表形式&#41;](kpis-ssas-tabular.md)   
- [計算列&#40;SSAS 表形式&#41;](ssas-calculated-columns.md)  
+ [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)   
+ [KPI &#40;SSAS テーブル&#41;](kpis-ssas-tabular.md)   
+ [計算列 &#40;SSAS テーブル&#41;](ssas-calculated-columns.md)  
   
   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82c52544bf808bee40097043871a4e4703c513d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753784"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>カレンダー対応の日付と時刻 UDT サンプル
   使用されているカレンダー システムを把握していないと日付は意味を持たないため、日付を文字列として格納すると混乱が生じる可能性があります。`CADatetime` サンプルでは、日付と時刻のカレンダー対応処理を行う `CADatetime` と `CADate` という 2 つのユーザー定義データ型を定義しています。  
@@ -25,9 +23,9 @@ ms.locfileid: "48108702"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](http://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](http://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -161,8 +159,8 @@ ms.locfileid: "48108702"
         // This type uses days == 0 as the way to designate a NULL value  
   
         const string CADateSchema =  
-            "<xs:schema targetNamespace=\"http://schemas.microsoft.com/sqlserver/2004/08/CADate\" " +  
-                "xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
+            "<xs:schema targetNamespace=\"https://schemas.microsoft.com/sqlserver/2004/08/CADate\" " +  
+                "xmlns=\"https://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
                 "elementFormDefault=\"qualified\"" +  
                 "xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" >" +  
                 "<xs:element name=\"CADate\" >" +  
@@ -611,7 +609,7 @@ ms.locfileid: "48108702"
   
             writer.WriteStartElement(  
                 "CADate",  
-                "http://schemas.microsoft.com/sqlserver/2004/08/CADate");  
+                "https://schemas.microsoft.com/sqlserver/2004/08/CADate");  
             writer.WriteAttributeString("IsNull", this.IsNull.ToString(CultureInfo.CurrentUICulture));  
             if (!this.IsNull)  
             {  
@@ -807,8 +805,8 @@ ms.locfileid: "48108702"
     public struct CADateTime : INullable, IXmlSerializable  
     {  
         const string CADateTimeSchema =  
-            "<xs:schema targetNamespace=\"http://schemas.microsoft.com/sqlserver/2004/08/CADateTime\" " +  
-                "xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
+            "<xs:schema targetNamespace=\"https://schemas.microsoft.com/sqlserver/2004/08/CADateTime\" " +  
+                "xmlns=\"https://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
                 "elementFormDefault=\"qualified\"" +  
                 "xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" >" +  
                 "<xs:element name=\"CADate\" >" +  
@@ -1336,7 +1334,7 @@ ms.locfileid: "48108702"
                 throw new ArgumentNullException("writer");  
             }  
   
-            writer.WriteStartElement("CADate", "http://schemas.microsoft.com/sqlserver/2004/08/CADate");  
+            writer.WriteStartElement("CADate", "https://schemas.microsoft.com/sqlserver/2004/08/CADate");  
             writer.WriteAttributeString("IsNull", this.IsNull.ToString());  
   
             if (!this.IsNull)  

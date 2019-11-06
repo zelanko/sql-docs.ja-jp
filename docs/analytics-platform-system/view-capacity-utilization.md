@@ -2,19 +2,18 @@
 title: Analytics Platform System での容量使用率の表示 |Microsoft Docs
 description: Analytics Platform System での容量使用率を表示します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 0ac9347c9f5ec31c5f4f41228b1ef14119257751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959786"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Analytics Platform System の容量使用率の表示
 このトピックでは、SQL Server PDW アプライアンスでの容量使用率を表示する方法について説明します。  
@@ -103,7 +102,7 @@ GROUP BY [pdw_node_id], [db_name]
 ORDER BY [db_name], [pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
 [アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

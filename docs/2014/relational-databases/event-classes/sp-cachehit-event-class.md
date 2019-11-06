@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e6ee2cfdf337090d7080a5b5de866a3933f6fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050952"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit イベント クラス
   SP:CacheHit イベント クラスは、ストアド プロシージャがプラン キャッシュに格納されていることを示します。  
@@ -35,7 +34,7 @@ ms.locfileid: "48175322"
 |DatabaseName|`nvarchar`|ストアド プロシージャが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 38。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = 実行コンテキスト ヒット: プラン キャッシュ内にフリー実行プランが見つかりました。<br /><br /> 2 = コンパイル済みプラン ヒット: プラン キャッシュ内にコンパイル済みプランが見つかりました。|21|はい|  
+|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = 実行コンテキスト ヒット。プラン キャッシュ内にフリー実行プランが見つかりました。<br /><br /> 2 = コンパイル済みプラン ヒット。コンパイル済みプランがプラン キャッシュに見つかりました。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
@@ -46,7 +45,7 @@ ms.locfileid: "48175322"
 |ObjectID|`int`|システムによって割り当てられた、キャッシュ内のストアド プロシージャの ID。|22|はい|  
 |ObjectName|`nvarchar`|キャッシュ内のオブジェクトの名前。 ObjectName に値が設定されている場合、TextData に値は設定されません。|34|はい|  
 |ObjectType|`int`|イベントに関係するオブジェクトの種類を表す値。 この値は sys.objects カタログ ビューの type 列に対応します。 値については、「 [ObjectType トレース イベント列](objecttype-trace-event-column.md)」を参照してください。|28|はい|  
-|RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
+|RequestID|`int`|ステートメントが含まれている要求の ID。|49|[はい]|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  

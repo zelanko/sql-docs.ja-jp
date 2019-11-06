@@ -2,7 +2,7 @@
 title: サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8425d664ea849d00b78c4f4e76fd01e54e990b33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 9f50535bbf4cca1775e963a2733e19dcd4ec7497
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582157"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)
   複数の関連レポートのコンテナーであるメイン レポートを作成する場合は、レポートにサブレポートを追加します。 サブレポートは別のレポートへの参照です。 これらのレポートをデータ値で関係付けるには (たとえば、複数のレポートに同じ顧客のデータを表示する場合)、サブレポートとしてパラメーター化されたレポート (特定の顧客の詳細を示すレポートなど) をデザインする必要があります。 サブレポートをメイン レポートに追加するときは、サブレポートに渡すパラメーターを指定できます。  

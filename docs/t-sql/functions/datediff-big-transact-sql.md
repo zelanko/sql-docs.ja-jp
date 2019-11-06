@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,15 +18,14 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644850"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329290"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,19 +38,20 @@ ms.locfileid: "47644850"
   
 ## <a name="syntax"></a>構文  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。 `DATEDIFF_BIG` では、ユーザー定義変数に相当するものは受け入れられません。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
+*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。
 
 > [!NOTE]
-> `DATEDIFF_BIG` は、*datepart* 引数に関して、ユーザー定義変数に相当するものは受け入れられません。
+> `DATEDIFF_BIG` では、ユーザー定義変数からの、または引用符で囲まれた文字列としての *datepart* 値は受け入れられません。
+
+この表には、有効な *datepart* 引数名と省略形をすべて一覧表示しています。
   
-|*datepart*|省略形|  
+|*datepart* 名| *datepart* 省略形|  
 |---|---|
 |**year**|**yy、yyyy**|  
 |**quarter**|**qq, q**|  
@@ -65,7 +65,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> 特定の各 *datepart* 名と、その *datepart* 名の省略形では、同じ値が返されます。
+
 *startdate*  
 次のいずれかの値に解決できる式。
 
@@ -82,14 +85,12 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 「*startdate*」をご覧ください。
   
 ## <a name="return-type"></a>戻り値の型  
-
 符号付き **bigint**  
   
 ## <a name="return-value"></a>戻り値  
-startdate と enddate で指定された 2 つの日付間の差を、指定された datepart 境界の数で (符号付き多倍長整数値として) 返します。
--   特定の各 *datepart* と、その *datepart* の省略形では、同じ値が返されます。  
+*datepart* により設定された境界に表示された、*startdate* と *enddate* の間の **bigint** 差を返します。
   
-**bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 **millisecond** の場合、*enddate* と *startdate* の差の最大値は 24 日 20 時間 31 分 23.647 秒です。 **second** の場合、差の最大値は 68 年です。
+**bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 **int** を返すため **minute** 以上の精度でオーバーフローする可能性がある `DATEDIFF` とは異なり、`DATEDIFF_BIG` は **nanosecond** の精度を使用する場合にのみオーバーフローする可能性があります。この場合、*enddate* と *startdate* の差は 292 年以上、3 か月、10 日、23 時間、47 分、および 16.8547758 秒です。
   
 *startdate* と *enddate* の両方に時刻値のみが割り当てられており、*datepart* が時刻の *datepart* でない場合、`DATEDIFF_BIG` は 0 を返します。
   
@@ -97,12 +98,12 @@ startdate と enddate で指定された 2 つの日付間の差を、指定さ�
   
 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または *enddate* に **smalldatetime** 値を使用した場合、`DATEDIFF_BIG` では、戻り値で秒とミリ秒が常に 0 に設定されます。
   
-日付データ型の変数に時刻値のみが割り当てられている場合、`DATEDIFF_BIG` では、欠落している日付要素の値が既定値である 1900-01-01 に設定されます。 時刻データ型または日付データ型の変数に日付値のみが割り当てられている場合、`DATEDIFF_BIG` では、欠落している時刻要素の値が既定値である 00:00:00 に設定されます。 *startdate* または *enddate* のいずれか一方が時刻要素のみで、もう一方が日付要素のみであった場合、`DATEDIFF_BIG` では、欠落している時刻要素と日付要素がそれぞれの既定値に設定されます。
+日付データ型の変数に時刻値のみが割り当てられている場合、`DATEDIFF_BIG` では、欠落している日付要素の値が既定値である `1900-01-01` に設定されます。 時刻データ型または日付データ型の変数に日付値のみが割り当てられている場合、`DATEDIFF_BIG` では、欠落している時刻要素の値が既定値である `00:00:00` に設定されます。 *startdate* または *enddate* のいずれか一方が時刻要素のみで、もう一方が日付要素のみであった場合、`DATEDIFF_BIG` では、欠落している時刻要素と日付要素がそれぞれの既定値に設定されます。
   
 *startdate* と *enddate* で異なる日付データ型が使用されており、一方の時刻要素の数または秒の小数部の有効桁数が、もう一方のデータ型を超えている場合、`DATEDIFF_BIG` では、欠落している要素が 0 に設定されます。
   
 ## <a name="datepart-boundaries"></a>datepart の差
-次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は .0000001 秒です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも戻り値は 1 です。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF_BIG` では、*datepart* **week** に対して 0 を返します。
+次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は 1 マイクロ秒 (0.0000001 秒) です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも 1 を返します。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF_BIG` では、*datepart* **week** に対して 0 を返します。
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -118,11 +119,13 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>Remarks  
-`DATEDIFF_BIG` は、SELECT <list>、WHERE、HAVING、GROUP BY、および ORDER BY 句で使用します。
+`DATEDIFF_BIG` は、`SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY`、`ORDER BY` 句で使用します。
   
 `DATEDIFF_BIG` は、文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、`DATEDIFF_BIG` では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
-SET DATEFIRST を指定しても `DATEDIFF_BIG` に影響はありません。 `DATEDIFF_BIG` では、週の最初の曜日として常に日曜日を使用し、関数が決定的な方法で動作するようにします。
+`SET DATEFIRST` を指定しても、`DATEDIFF_BIG` には何の影響もありません。 `DATEDIFF_BIG` では、週の最初の曜日として常に日曜日を使用し、関数が決定的な方法で動作するようにします。
+
+*enddate* と *startdate* の差として **bigint** の範囲を超える値が返された場合、`DATEDIFF_BIG` は **nanosecond** の精度でオーバーフローする可能性があります。
   
 ## <a name="examples"></a>使用例 
   
@@ -140,6 +143,66 @@ SELECT DATEDIFF_BIG(day, startDate, endDate) AS 'Duration'
     FROM dbo.Duration;  
 -- Returns: 1  
 ```  
+
+### <a name="finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>startdate と enddate の差を日付部分の文字列として検索する
+
+```sql
+DECLARE @date1 DATETIME2, @date2 DATETIME2, @result VARCHAR(100)
+DECLARE @years BIGINT, @months BIGINT, @days BIGINT, @hours BIGINT, @minutes BIGINT, @seconds BIGINT, @milliseconds BIGINT
+
+SET @date1 = '0001-01-01 00:00:00.00000000'
+SET @date2 = '2018-12-12 07:08:01.12345678'
+
+SELECT @years = DATEDIFF(yy, @date1, @date2)
+IF DATEADD(yy, -@years, @date2) < @date1 
+SELECT @years = @years-1
+SET @date2 = DATEADD(yy, -@years, @date2)
+
+SELECT @months = DATEDIFF(mm, @date1, @date2)
+IF DATEADD(mm, -@months, @date2) < @date1 
+SELECT @months=@months-1
+SET @date2= DATEADD(mm, -@months, @date2)
+
+SELECT @days=DATEDIFF(dd, @date1, @date2)
+IF DATEADD(dd, -@days, @date2) < @date1 
+SELECT @days=@days-1
+SET @date2= DATEADD(dd, -@days, @date2)
+
+SELECT @hours=DATEDIFF(hh, @date1, @date2)
+IF DATEADD(hh, -@hours, @date2) < @date1 
+SELECT @hours=@hours-1
+SET @date2= DATEADD(hh, -@hours, @date2)
+
+SELECT @minutes=DATEDIFF(mi, @date1, @date2)
+IF DATEADD(mi, -@minutes, @date2) < @date1 
+SELECT @minutes=@minutes-1
+SET @date2= DATEADD(mi, -@minutes, @date2)
+
+SELECT @seconds=DATEDIFF(s, @date1, @date2)
+IF DATEADD(s, -@seconds, @date2) < @date1 
+SELECT @seconds=@seconds-1
+SET @date2= DATEADD(s, -@seconds, @date2)
+
+SELECT @milliseconds=DATEDIFF(ms, @date1, @date2)
+
+SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
+     + ISNULL(' ' + CAST(NULLIF(@months,0) AS VARCHAR(10)) + ' months,','')    
+     + ISNULL(' ' + CAST(NULLIF(@days,0) AS VARCHAR(10)) + ' days,','')
+     + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
+     + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
+     + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+               ELSE '' END 
+          + ' seconds','')
+
+SELECT @result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+
+```
+2017 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
+```   
 
 より密接に関連する例については、「[DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md)」を参照してください。
   

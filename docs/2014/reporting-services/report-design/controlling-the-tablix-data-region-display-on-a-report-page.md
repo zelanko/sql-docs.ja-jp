@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c6fd4b09947bc10a9e4e960ca1097f807a47c14f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106210"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>レポート ページでの Tablix データ領域の表示の制御 (レポート ビルダーおよび SSRS)
   このトピックでは、レポートに表示されたときの Tablix データ領域の表示方法を変更するために使用する、Tablix データ領域のプロパティについて説明します。  
@@ -56,7 +55,7 @@ ms.locfileid: "48117852"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Tablix の行グループおよび列グループの表示方法の制御  
  Tablix データ領域のグループの表示を制御する方法は、グループ構造によって異なります。 Tablix データ領域には、次の図に示すように 4 つの領域を含めることができます。  
   
- ![Tablix データ領域部分](../media/rs-tablixareas.gif "Tablix データ領域部分")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  行グループ領域と列グループ領域にはグループ ヘッダーがあります。 Tablix データ領域にグループ ヘッダーがある場合、 **[Tablix のプロパティ]** ダイアログ ボックスの **[全般]** ページのプロパティを設定することにより、行と列の繰り返し方法を制御します。  
   
@@ -75,8 +74,8 @@ ms.locfileid: "48117852"
 ## <a name="see-also"></a>参照  
  [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [見出し、列、および行は、改ページの制御&#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [改ページ、見出し、列、および行の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracking data changes [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97ed62336cad7f3e1bc0bbe70edd895384336205
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670843"
 ---
 # <a name="manage-change-tracking-sql-server"></a>変更の追跡の管理 (SQL Server)
   このトピックでは、変更の追跡を管理する方法について説明します。 また、セキュリティを構成する方法、および変更の追跡を使用する場合のストレージとパフォーマンスへの影響を判断する方法について説明します。  
@@ -97,12 +96,12 @@ ms.locfileid: "48197752"
   
  その他の内部テーブルと同様に、変更追跡テーブルに使用される領域は、 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) ストアド プロシージャを使用して確認できます。 内部テーブルの名前は、次の例に示すように、 [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) カタログ ビューを使用して取得できます。  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ変更の追跡 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../databases/database-properties-changetracking-page.md)   

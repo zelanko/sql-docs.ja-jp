@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Size Property (ClientNetLibInfo Class)
@@ -20,12 +18,12 @@ ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 74a343a87403120b0cb4e06c9b8efb1c510135da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cf2c598b358c5c43e9dc9717b012bc5c5f873d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63191125"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size プロパティ (ClientNetLibInfo クラス)
   クライアント ネットワーク ライブラリのサイズ (KB 単位) を取得します。  
@@ -47,7 +45,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>関連項目  
+ [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

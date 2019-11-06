@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b531feb33d9d555296f428fb01778a7b7627d851
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a86d958114a0755d8aead4470936115902f9c57a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024554"
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver 関数
 **準拠**  
- バージョンが導入されています。 ODBC 3.0  
+ バージョンが導入されました。ODBC 3.0  
   
  **概要**  
  **SQLRemoveDriver**変更やシステム情報の Odbcinst.ini のエントリから、ドライバーに関する情報を削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDriver(  
      LPCSTR   lpszDriver,  
@@ -51,7 +50,7 @@ BOOL SQLRemoveDriver(
  *fRemoveDSN*  
  [入力]有効な値は次のとおりです。  
   
- TRUE: Dsn に指定されたドライバーに関連付けられているを削除する*lpszDriver*します。 FALSE: Dsn に指定されたドライバーに関連付けられているを削除しないでください*lpszDriver*します。  
+ TRUE:Dsn に指定されたドライバーに関連付けられている削除*lpszDriver*します。 FALSE:Dsn に指定されたドライバーに関連付けられているを削除しないでください*lpszDriver*します。  
   
  *lpdwUsageCount*  
  [出力]この関数が呼び出された後、ドライバーの使用率カウントします。  

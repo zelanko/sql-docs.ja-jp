@@ -1,24 +1,23 @@
 ---
-title: '手順 2: 破損ファイルの作成 | Microsoft Docs'
+title: 手順 2:破損ファイルの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767384"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>手順 2: 破損ファイルの作成
+# <a name="step-2-creating-a-corrupted-file"></a>手順 2:破損ファイルの作成
   変換エラーの構成と処理を体験するために、コンポーネントの処理が失敗するサンプル フラット ファイルを作成します。  
   
  この実習では、既存のサンプル フラット ファイルのコピーを作成します。 その後、このファイルをメモ帳などで開き、 **CurrencyID** 列を編集して、参照変換中に照合が失敗するようにします。 新しいファイルの処理時、参照が失敗すると Lookup Currency Key 変換は失敗し、それ以降のパッケージも失敗します。 破損しているサンプル ファイルを作成したら、パッケージを実行して、パッケージのエラーを確認します。  
@@ -29,7 +28,7 @@ ms.locfileid: "48226602"
   
      このサンプル データは、SSIS のレッスン パッケージに含まれています。 サンプル データとレッスン パッケージをダウンロードするには、次の手順を実行します。  
   
-    1.  「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkID=267527)」に移動します。  
+    1.  「 [Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=267527)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48226602"
     >  数値 27 はコンポーネントの ID です。 この値はデータ フローを構築したときに割り当てられるもので、パッケージの値とは異なることがあります。  
   
 ## <a name="next-steps"></a>次の手順  
- [手順 3: エラー フロー リダイレクトの追加](lesson-4-3-adding-error-flow-redirection.md)  
+ [ステップ 3:エラー フロー リダイレクションの追加](lesson-4-3-adding-error-flow-redirection.md)  
   
   

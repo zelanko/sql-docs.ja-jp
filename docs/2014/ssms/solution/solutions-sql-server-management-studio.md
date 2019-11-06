@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio]
@@ -16,12 +16,12 @@ ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ae4b0fbcad05a9faba84a1eb7a47b4f34ce21d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63064902"
 ---
 # <a name="solutions-sql-server-management-studio"></a>ソリューション (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ソリューションは、1 つまたは複数の関連プロジェクトのコレクションです。 プロジェクトは、一般的に使用される管理スクリプトなどの関連ファイルを編成するために開発者が使用できるコンテナーです。  
@@ -52,7 +52,7 @@ ms.locfileid: "48200072"
 |ソリューション内のプロジェクト間で項目を移動する方法について説明します。|[ソリューションのアイテムの移動](move-items-in-a-solution.md)|  
 |ソリューションまたはソリューション内の項目の名前を変更する方法について説明します。|[ソリューションとプロジェクト アイテムの名前変更](rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション エクスプ ローラー](solution-explorer.md)   
  [プロジェクト&#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [ソリューション エクスプローラーのソース管理](../../database-engine/solution-explorer-source-control.md)  

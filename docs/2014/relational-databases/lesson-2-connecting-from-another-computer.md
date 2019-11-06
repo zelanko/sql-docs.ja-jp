@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 2: 別のコンピューターからの接続 | Microsoft Docs'
+title: レッスン 2:別のコンピューターからの接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144799"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
+# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2:別のコンピューターからの接続
   セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
   
  このレッスンの内容は次のとおりです。  
@@ -40,16 +39,16 @@ ms.locfileid: "48183212"
   
 #### <a name="how-to-enable-tcpip-connections-from-another-computer"></a>別のコンピューターからの TCP/IP 接続を有効にするには  
   
-1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
     > [!NOTE]  
     >  32 ビットと 64 ビットの両方のオプションが利用できる場合もあります。  
   
-2.  **SQL Server 構成マネージャー**、展開**SQL Server ネットワーク構成**、 をクリックし、**プロトコル**  *\<InstanceName>* します。  
+2.  **SQL Server 構成マネージャー**、展開**SQL Server ネットワーク構成**、 をクリックし、**プロトコル**  _\<InstanceName>_ します。  
   
      既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
-3.  プロトコルの一覧で、有効にするプロトコル (**[TCP/IP]**) を右クリックし、 **[有効化]** をクリックします。  
+3.  プロトコルの一覧で、有効にするプロトコル ( **[TCP/IP]** ) を右クリックし、 **[有効化]** をクリックします。  
   
     > [!NOTE]  
     >  ネットワーク プロトコルを変更したら [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを再起動する必要がありますが、これは次の作業で実行されます。  
@@ -58,7 +57,7 @@ ms.locfileid: "48183212"
  セキュリティ強化のために、Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]、および Windows 7 では Windows ファイアウォールが有効になっています。 別のコンピューターからこのインスタンスに接続する場合は、ファイアウォールで通信ポートを開放する必要があります。 [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスはポート 1433 でリッスンするので、固定ポートを構成する必要はありません。 ただし、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の名前付きインスタンスは、動的ポートでリッスンします。 ファイアウォールでポートを開く前に、まず [!INCLUDE[ssDE](../includes/ssde-md.md)] が固定ポートまたは静的ポートと呼ばれる特定のポートでリッスンするように構成する必要があります。このように構成しないと、 [!INCLUDE[ssDE](../includes/ssde-md.md)] は起動のたびに異なるポートでリッスンする可能性があります。 ファイアウォール、Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
 > [!NOTE]  
->  ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、[http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) に一覧が掲載されています。ポート番号には 49152 ～ 65535 の数値を割り当てる必要があります。  
+>  ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、[http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) に一覧が掲載されています。ポート番号には 49152 ～ 65535 の数値を割り当てる必要があります。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>SQL Server が特定のポートでリッスンするよう構成するには  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48183212"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスが **[データベース エンジン]** になっていることを確認します。  
   
-3.  **[サーバー名]** ボックスに「 **tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:***<コンピューター名>*」と入力します。 今回の名前付きインスタンスの例では、「**tcp:***<コンピューター名>***,49172**」と入力します。  
+3.  **[サーバー名]** ボックスに「**tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:** _<computer_name>_ 」と入力します。 今回の名前付きインスタンスの例では、「**tcp:** _<computer_name>_ **,49172**」と入力します。  
   
     > [!NOTE]  
     >  **[サーバー名]** ボックスで **tcp:** を省略した場合、クライアントは、有効になっているすべてのプロトコルをクライアント構成に指定された順番で試行します。  
@@ -128,6 +127,6 @@ ms.locfileid: "48183212"
  これで、基本的な接続に関する簡単なチュートリアルを終了します。  
   
 ## <a name="return-to-tutorials-portal"></a>チュートリアル ポータルに戻る  
- [チュートリアル : データベース エンジンの概要](tutorial-getting-started-with-the-database-engine.md)  
+ [チュートリアル:データベース エンジンの概要](tutorial-getting-started-with-the-database-engine.md)  
   
   

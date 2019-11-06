@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 910d3ba33b5c78ffe7b4fd3eba637c52f55d4ba2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663207"
 ---
 # <a name="cursors-event-category"></a>Cursors イベント カテゴリ
   **Cursors** イベント カテゴリには、カーソルの動作の監視に使用するイベント クラスが含まれています。  

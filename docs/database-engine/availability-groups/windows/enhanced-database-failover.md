@@ -1,6 +1,7 @@
 ---
-title: 可用性グループへの拡張データベース フェールオーバーの追加 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの拡張データベース フェールオーバーの有効化
+description: Always On 可用性グループ内のデータベースがトランザクションを書き込むことができなくなった場合にフェールオーバーをトリガーする、拡張データベース フェールオーバーを有効にする手順です。
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
@@ -12,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947958"
 ---
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>可用性グループへの拡張データベース フェールオーバーの追加 (SQL Server)
+# <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Always On 可用性グループのデータベースの拡張データベース フェールオーバーの有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2012 および 2014 で、プライマリ レプリカ上の可用性グループに参加しているデータベースがトランザクションを記述できなくなった場合、レプリカが同期され、自動的にフェールオーバーされるよう構成されている場合でも、フェールオーバーはトリガーされません。
@@ -37,7 +37,7 @@ SQL Server 2016 には、ウィザードまたは TRANSACT-SQL を使用して�
 
 **シナリオ 3**
 
-インスタンス A とインスタンス B 間で可用性グループが構成されています。これには、DB1 と DB2 という名前のデータベースが 2 つ格納されています。 この可用性モードは、同期コミットと自動フェールオーバー モードに設定されており、拡張データベース フェールオーバーが有効になっています。 DB2 のデータとトランザクション ログ ファイルを含むディスクへのアクセスが失われています。 可用性グループは、問題が検出されると、インスタンス B に自動的にフェールオーバーされます。
+インスタンス A とインスタンス B 間で可用性グループが構成されています。これには、DB1 と DB2 という 2 つのデータベースが格納されています。 この可用性モードは、同期コミットと自動フェールオーバー モードに設定されており、拡張データベース フェールオーバーが有効になっています。 DB2 のデータとトランザクション ログ ファイルを含むディスクへのアクセスが失われています。 可用性グループは、問題が検出されると、インスタンス B に自動的にフェールオーバーされます。
 
 ## <a name="configure-and-view-the-enhanced-database-failover-option"></a>拡張データベース フェールオーバー オプションを構成および参照する
 
@@ -49,11 +49,11 @@ SQL Server 2016 には、ウィザードまたは TRANSACT-SQL を使用して�
 
 *手動で可用性グループを作成する*
 
-可用性グループを作成するには、記事「[[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)」の手順に従います。 拡張データベース フェールオーバーを有効にするには、*[データベース レベルの正常性検出]* の横のチェックボックスをオンにします。
+可用性グループを作成するには、記事「[[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)」の手順に従います。 拡張データベース フェールオーバーを有効にするには、 *[データベース レベルの正常性検出]* の横のチェックボックスをオンにします。
 
 *可用性グループ ウィザードを使用する*
 
-記事「[可用性グループ ウィザードの使用 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)」の手順に従います。 拡張データベース フェールオーバーを有効にするオプションは、[可用性グループ名の指定] ダイアログにあります。 これを有効にするには、*[データベース レベルの正常性検出]* の横のボックスをオンにします。
+記事「[可用性グループ ウィザードの使用 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)」の手順に従います。 拡張データベース フェールオーバーを有効にするオプションは、[可用性グループ名の指定] ダイアログにあります。 これを有効にするには、 *[データベース レベルの正常性検出]* の横のボックスをオンにします。
 
 ### <a name="transact-sql"></a>Transact-SQL
 

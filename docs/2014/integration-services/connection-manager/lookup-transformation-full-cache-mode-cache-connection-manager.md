@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 872d886f8e38d408b39387329f13c120d1dc5744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833711"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する
   フル キャッシュ モードおよびキャッシュ接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
@@ -62,7 +61,7 @@ ms.locfileid: "48152192"
   
 -   [シーケンス コンテナー](../control-flow/sequence-container.md)  
   
- キャッシュ接続マネージャーを使用してフル キャッシュ モードで参照変換を実装する方法のデモ ビデオについては、「 [フル キャッシュ モードで参照変換を実装する方法 (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkId=131031)」を参照してください。  
+ キャッシュ接続マネージャーを使用してフル キャッシュ モードで参照変換を実装する方法のデモ ビデオについては、「[フル キャッシュ モードで参照変換を実装する方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=131031)」を参照してください。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>キャッシュ接続マネージャーおよびデータ フロー内のデータ ソースを使用して 1 つのパッケージでフル キャッシュ モードの参照変換を実装するには  
   
@@ -169,7 +168,7 @@ ms.locfileid: "48152192"
   
 9. 子パッケージで、キャッシュ接続マネージャーを作成します。その場合、 **[接続マネージャー]** 領域内を右クリックして **[新しい接続]** をクリックし、 **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[CACHE] を選択し** 、 **[追加]** をクリックします。  
   
-     **デザイナーの** [制御フロー] **タブ、**[データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
+     **デザイナーの** [制御フロー] **タブ、** [データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
   
 10. **[キャッシュ接続マネージャー エディター]** の **[全般]** タブで、次のオプションを設定して選択したキャッシュ ファイルからデータを読み取るようにキャッシュ接続マネージャーを構成します。  
   
@@ -223,7 +222,7 @@ ms.locfileid: "48152192"
   
 2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい接続]** をクリックします。  
   
-     **デザイナーの** [制御フロー] **タブ、**[データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
+     **デザイナーの** [制御フロー] **タブ、** [データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
   
 3.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[CACHE]** を選択し、 **[追加]** をクリックしてキャッシュ接続マネージャーを追加します。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105832"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)
   ゲージ ポインターは、ゲージの現在の値を示します。 既定では、フィールドが追加されると、フィールドに格納されている各値が 1 つの値に集計され、この値がゲージのポインターで示されます。 複数のポインターをゲージに追加して同じスケール上の複数の値を示したり、複数のスケールを追加し、追加したスケールごとにポインターを追加したりすることもできます。 フィールドをゲージに追加した後は、ポインターの値にコンテキストを指定するため、対応するスケール上で最大値と最小値を設定する必要があります。 また、スケールの重要な領域を示すため、範囲の最小値と最大値を設定するオプションもあります。  
@@ -39,11 +38,11 @@ ms.locfileid: "48183192"
 ##  <a name="DisplayingMultiple"></a> ゲージでの複数のポインターの表示  
  複数のポインターをゲージに追加して、同じスケール上の複数の値を示すことができます。 これは、小さい値と大きい値を同時に表示する場合に便利です。 同じスケールのゲージに複数のポインターを指定するには、ゲージ内を右クリックし、ショートカット メニューの **[ポインターの追加]** をクリックします。 または、ゲージ内を右クリックし、 **[スケールの追加]** をクリックしてスケールを追加し、 続いて新しいポインターを追加できます。このポインターは、最後のスケールに自動的に関連付けられます。  
   
- ポインターが重なる場合、ポインターの描画順序はゲージにポインターが追加された順序です。 データ ペインでフィールドの順序を変更して、ポインターの描画順序を変更することはできません。 複数のポインターの描画順序を変更するには、プロパティ ペインを開き、 **[ポインター (…)]** をクリックします。 次に、ポインター コレクションでポインターの順序を変更します。  
+ ポインターが重なる場合、ポインターの描画順序はゲージにポインターが追加された順序です。 データ ペインでフィールドの順序を変更して、ポインターの描画順序を変更することはできません。 複数のポインターの描画順序を変更するには、プロパティ ペインを開き、 **[ポインター (…)]** をクリックします。次に、ポインター コレクションでポインターの順序を変更します。  
   
   
 ##  <a name="SettingGradients"></a> ニードル キャップのグラデーションの設定  
- 放射状ゲージに限り、ポインターの上部または下部に描画できるニードル キャップを指定できます。 すべてのニードル キャップ スタイルは、変更できない組み込みのグラデーションを使用して描画されます。 例外は、`RoundedDark`スタイル、グラデーションの色とグラデーション スタイルを指定できます。  
+ 放射状ゲージに限り、ポインターの上部または下部に描画できるニードル キャップを指定できます。 すべてのニードル キャップ スタイルは、変更できない組み込みのグラデーションを使用して描画されます。 ただし、例外として `RoundedDark` スタイルではグラデーションの色とスタイルを指定できます。  
   
   
 ##  <a name="SettingSnappingInterval"></a> スナップ間隔の設定  
@@ -57,8 +56,8 @@ ms.locfileid: "48183192"
   
   
 ## <a name="see-also"></a>参照  
- [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [ゲージの範囲の書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  
   
   

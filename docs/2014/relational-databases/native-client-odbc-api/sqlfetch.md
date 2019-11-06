@@ -12,12 +12,12 @@ ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5523a9d982093b413e5939a47deec189f9d63cb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015804"
 ---
 # <a name="sqlfetch"></a>SQLFetch
   SQLFetch サポートには、日付と時刻の機能が強化されています。  
@@ -28,7 +28,7 @@ ms.locfileid: "48144802"
  `SQLFetch` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=80703)   
+ [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

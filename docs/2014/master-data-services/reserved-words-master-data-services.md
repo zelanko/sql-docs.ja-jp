@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reserved words [Master Data Services]
 - Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cecb05cc93128baa31fea75ac0583f218d5dbe87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482580"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル オブジェクトまたはメンバーを作成するときに使用できない単語がいくつかあります。 これらの単語を使用すると、エラーが発生する可能性があります。  
@@ -29,11 +28,11 @@ ms.locfileid: "48140542"
   
 -   [モデル](#models)  
   
--   [エンティティ](#entities)  
+-   [[エンティティ]](#entities)  
   
 -   [明示的階層](#exhierarchies)  
   
--   [Attributes](#attributes)  
+-   [属性](#attributes)  
   
 -   [メンバー](#members)  
   

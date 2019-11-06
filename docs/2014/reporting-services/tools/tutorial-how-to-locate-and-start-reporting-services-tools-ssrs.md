@@ -1,11 +1,10 @@
 ---
-title: 'チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs'
+title: チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
@@ -21,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c8c175eaaf84df788a9b7cbc90e637d51d5c07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4edd0b6e3928a2bc3a280403a87eda5bb797e620
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105503"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099478"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
-  このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、レポートの作成とパブリッシュに使用できるツールを紹介します。 このチュートリアルの目的は、ツールを初めて使用する場合にそれぞれのツールをすぐに見つけて起動できるようにすることです。 使い慣れたツールを使用している場合に移動できますのに役立つその他のチュートリアルを使用するための重要なスキルについて説明します[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]します。 その他のチュートリアルの詳細については、次を参照してください。 [Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS)
+  このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、レポートの作成とパブリッシュに使用できるツールを紹介します。 このチュートリアルの目的は、ツールを初めて使用する場合にそれぞれのツールをすぐに見つけて起動できるようにすることです。 既にツールを使用している場合は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]を使用するときの重要なスキルを学ぶことができるその他のチュートリアルへお進みください。 その他のチュートリアルの詳細については、次を参照してください。 [Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
   
  このトピックの内容  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48105503"
   
 -   自動レポート処理および電子メールによるレポート配信を構成します。  
   
- **インストール:** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。 詳細については、「[Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)」を参照してください。  
+ **インストール:** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。 詳細については、「 [Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)」を参照してください。  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Reporting Services 構成マネージャーを起動するには  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48105503"
   
      **Or**  
   
-     **[スタート]** ボタンをクリックして、 **[プログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[Reporting Services 構成マネージャー]** の順にクリックします。  
+     **[スタート]** ボタンをクリックして、 **[プログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** 、 **[Reporting Services 構成マネージャー]** の順にクリックします。  
   
      **[レポート サーバー インスタンスの選択]** ダイアログ ボックスが表示されます。このダイアログ ボックスでは構成するレポート サーバー インスタンスを選択します。  
   
@@ -85,12 +84,12 @@ ms.locfileid: "48105503"
   
      ![Reporting Services 構成ツール](../media/rs-ui-reportserverconfigkatmai.gif "Reporting Services 構成ツール")  
   
- **次の手順:** 「[レポート サーバーを構成および管理する (SSRS ネイティブ モード)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」、「[Reporting Services 構成マネージャー (ネイティブ モード)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+ **次の手順:** 「[レポート サーバーを構成および管理する (SSRS ネイティブ モード)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」と「[Reporting Services 構成マネージャー (ネイティブ モード)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」。  
   
 ##  <a name="bkmk_report_manager"></a> レポート マネージャー (ネイティブ モード)  
  使用[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)と、アクセス許可を設定、サブスクリプションおよびスケジュールの管理、レポートを使用します。 また、レポート マネージャーを使ってレポートを閲覧することもできます。  
   
- **インストール:** をインストールすると、レポート マネージャーがインストールされている[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ネイティブ モード: [Reporting Services ネイティブ モード レポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **インストール:** インストールすると、レポート マネージャーがインストールされている[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ネイティブ モード。[Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  レポート マネージャーを起動するには適切なアクセス許可が必要です。初期状態では、レポート マネージャーの機能へのアクセス許可は、ローカルの管理者グループのメンバーにのみ与えられています。 レポート マネージャーに表示されるページとオプションは、現在のユーザーに割り当てられているロールによって異なります。 アクセス許可のないユーザーには空白のページが表示され、 レポート閲覧用のアクセス許可が与えられているユーザーにはリンクが表示されます。このユーザーはリンクをクリックしてレポートを表示することができます。 アクセス許可の詳細については、「[ロールと権限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "48105503"
   
      **Or**  
   
-     **[スタート]**、 **[すべてのプログラム]** とクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[SQL Server Management Studio]** の順にクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
+     **[スタート]** 、 **[すべてのプログラム]** とクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[SQL Server Management Studio]** の順にクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスが表示されない場合は、 **[オブジェクト エクスプローラー]** で **[接続]** をクリックし、 **[Reporting Services]** を選択します。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "48105503"
   
 1.  Web ブラウザーでアドレス バーに次の URL を入力します。  
   
-     **http://\<servername >/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
+     **http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
   
 2.  Enter キーを押します。  
   

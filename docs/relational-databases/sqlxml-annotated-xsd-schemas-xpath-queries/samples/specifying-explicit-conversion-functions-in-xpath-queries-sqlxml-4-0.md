@@ -13,16 +13,15 @@ helpviewer_keywords:
 - number function
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f992e474646b376eff1f510121fe640b6be9dbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e01c63fd0961755eefc0afb0493005d3b5c1c6c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027067"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリでの明示変換関数の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47607260"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 明示変換関数を使用する  
  **Number()** 関数の引数を数値に変換します。  
   
- 値と仮定すると**ContactID**は数値型以外は、次のクエリに変換します**ContactID**を数値と値 4 を比較します。 クエリが、すべてを返します**\<従業員 >** 、コンテキスト ノードの子要素、 **ContactID** 4 の数値の値を持つ属性。  
+ 値と仮定すると**ContactID**は数値型以外は、次のクエリに変換します**ContactID**を数値と値 4 を比較します。 クエリが、すべてを返します **\<従業員 >** 、コンテキスト ノードの子要素、 **ContactID** 4 の数値の値を持つ属性。  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -82,7 +81,7 @@ ms.locfileid: "47607260"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 明示変換関数を使用する  
  **String()** 関数の引数を文字列に変換します。  
   
- 次のクエリに変換します**ContactID**文字列値「4」文字列を比較します。 クエリでは、すべてを返します**\<従業員 >** 、コンテキスト ノードの子要素を**ContactID** 「4」の文字列値を持つ。  
+ 次のクエリに変換します**ContactID**文字列値「4」文字列を比較します。 クエリでは、すべてを返します **\<従業員 >** 、コンテキスト ノードの子要素を**ContactID** 「4」の文字列値を持つ。  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -15,19 +14,19 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe5d710c29f8f63a1ee09eab322b23f74dbe2ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210754"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>更新可能トランザクション サブスクリプションの更新モードの切り替え
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、更新可能トランザクション サブスクリプションの更新モードを切り替える方法について説明します。 サブスクリプションの新規作成ウィザードを使用して、更新可能サブスクリプションのモードを指定します。 このウィザードを使用する場合のモードの設定については、「[プル サブスクリプションのプロパティの表示または変更](../view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
   
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -50,17 +49,17 @@ ms.locfileid: "48057902"
   
 3.  更新モードを設定するサブスクリプションを右クリックしてから、 **[更新方法の設定]** をクリックします。  
   
-4.  **[更新方法の設定 - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスで、**[即時更新]** または **[キュー更新]** を選択します。  
+4.  **[更新方法の設定 - \<サブスクライバー>:\<サブスクリプション データベース>]** ダイアログ ボックスで、 **[即時更新]** または **[キュー更新]** を選択します。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>プル サブスクリプションの更新モードを設定するには  
   
-1.  **[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** ダイアログ ボックスの **[サブスクライバーの更新方法]** オプションで、**[変更をすぐにレプリケートする]** または **[変更をキューに登録]** のいずれかの値を選択します。  
+1.  **[サブスクリプションのプロパティ - \<パブリッシャー>:\<パブリケーション データベース>]** ダイアログ ボックスの **[サブスクライバーの更新方法]** オプションで、 **[変更をすぐにレプリケートする]** または **[変更をキューに登録]** のいずれかの値を選択します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** ダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](../view-and-modify-pull-subscription-properties.md)」を参照してください。  
+ **[サブスクリプションのプロパティ - \<パブリッシャー>:\<パブリケーション データベース>]** ダイアログ ボックスへのアクセスについて詳しくは、[「プル サブスクリプションのプロパティの表示または変更](../view-and-modify-pull-subscription-properties.md)」をご覧ください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -68,13 +67,13 @@ ms.locfileid: "48057902"
   
 1.  プル サブスクリプションの場合は [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql) 、プッシュ サブスクリプションの場合は [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) を実行して、サブスクリプションでフェールオーバーがサポートされていることを確認します。 結果セットの **update mode** の値が **3** または **4**の場合、フェールオーバーがサポートされます。  
   
-2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql)を実行します。 **@publisher**、**@publisher_db**、**@publication** を指定し、**@failover_mode** に次のいずれかの値を指定します。  
+2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** を指定し、 **@failover_mode** に次のいずれかの値を指定します。  
   
     -   **queued** - 接続が一時的に失われた場合、キュー更新にフェールオーバーします。  
   
     -   **immediate** - 接続が回復した場合、即時更新にフェールオーバーします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

@@ -1,30 +1,29 @@
 ---
-title: ワークロードの管理タスクの Analytics Platform System |Microsoft ドキュメント
+title: ワークロードの管理タスク - Analytics Platform System |Microsoft Docs
 description: Analytics Platform System でワークロードの管理タスク。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 16206cb5cefd68b19e1640592b903890808b5a31
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: ea6b3785914781e73a8570c1282741f7c4b56298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959753"
 ---
-# <a name="workload-management-tasks-in-analytics-platform-system"></a>Analytics Platform System でのワークロードの管理タスク
+# <a name="workload-management-tasks-in-analytics-platform-system"></a>Analytics Platform System でワークロードの管理タスク
 Analytics Platform System でワークロードの管理タスク。
 
-## <a name="view-login-members-of-each-resource-class"></a>各リソースのクラスのログインのメンバーを表示
-SQL Server PDW で各リソース クラスのサーバー ロールのログインのメンバーを表示する方法について説明します。 このクエリを使用すると、各ログインで送信された要求の使用可能なリソースのクラスを確認します。  
+## <a name="view-login-members-of-each-resource-class"></a>各リソース クラスのログインのメンバーの表示
+SQL Server PDW で各リソース クラスのサーバー ロールのログインのメンバーを表示する方法について説明します。 各ログインによって送信された要求の許可されているリソースのクラスを確認するには、このクエリを使用します。  
   
-リソース クラスの説明を参照してください。[ワークロード管理](workload-management.md)です。  
+リソース クラスの説明を参照してください。[ワークロード管理](workload-management.md)します。  
   
-このクエリは、各リソースのクラスのメンバーシップの一覧を表示します。 次の 3 つのリソース クラス、mediumrc、largerc、および xlargerc があります。  
+このクエリでは、各リソース クラスのメンバーシップの一覧が表示されます。 次の 3 つのリソース クラス、mediumrc、largerc、および xlargerc があります。  
   
 ```sql  
 SELECT l.name AS [member], r.name AS [server role]  
@@ -40,18 +39,18 @@ WHERE
   AND r.[name] in ('mediumrc', 'largerc', 'xlargerc');  
 ```  
   
-ログインがこの一覧にない場合は、その要求は既定のリソースを受信します。 ログインが 1 つ以上のリソース クラスのメンバーである場合は、最大のクラスは、優先順位をいます。  
+ログインがこの一覧にない場合は、その要求は既定のリソースを受信します。 ログインが 1 つ以上のリソース クラスのメンバーである場合は、最大クラスは、優先順位をいます。  
   
-リソース割り当ては、「[ワークロード管理](workload-management.md)です。  
+リソース割り当ては、「[ワークロード管理](workload-management.md)します。  
   
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>変更要求に割り当てられたシステム リソース
-リソースを把握する方法について説明で、SQL Server PDW 要求が実行されるクラスとし、その要求のシステム リソースを変更する方法です。 メンバーシップの変更、リソース クラスを使用して、要求を送信するログインの要求のリソースを変更すると、 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)ステートメントです。  
+どのリソースを把握する方法について説明します、SQL Server PDW の要求が実行されているクラスとし、その要求のシステム リソースを変更する方法。 リソースの変更要求を使用して、要求を送信するログインのリソース クラスのメンバーシップを変更する必要があります、 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)ステートメント。  
   
-### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>手順 1: では、要求を実行しているログインのリソース クラスを決定します。  
-このクエリは、リソース クラスのサーバー ロールのメンバーシップのメンバーであるログインを表示します。 次の 3 つのリソース クラスがある**mediumrc**、 **largerc**、および**xlargerc**です。  
+### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>手順 1:要求を実行しているログインのリソース クラスを決定します。  
+このクエリは、リソース クラスのサーバー ロールのメンバーシップのメンバーであるログインを表示します。 次の 3 つのリソース クラスがある**mediumrc**、 **largerc**、および**xlargerc**します。  
   
 > [!IMPORTANT]  
-> このクエリを持つログインによって実行される必要があります**CONTROL SERVER**権限です。 ログインなしで実行された場合**CONTROL SERVER**アクセス許可は、次のクエリのみが返されます、現在のログインのロールのメンバーシップ。  
+> このクエリを持つログインによって実行される必要があります**CONTROL SERVER**権限。 ログインなしで実行する場合**CONTROL SERVER**権限、このクエリのみが返されます、現在のログインのロールのメンバーシップ。  
   
 ```sql  
 SELECT l.name AS [member], r.name AS [server role]  
@@ -68,26 +67,26 @@ WHERE
 GO  
 ```  
   
-リソース クラスのサーバー ロールのメンバーであるログインがない場合、結果のテーブルが空になります。 ここでは、クエリを返す場合 Ching をという名前のログイン、し Ching が、要求を送信するときに要求を受け取ります既定のシステム リソース、リソース クラスのシステム リソースよりも小さい。 ログインが 1 つ以上のリソース クラスのメンバーである場合は、最大のクラスは、優先順位をいます。  
+リソース クラスのサーバー ロールのメンバーであるログインがない場合、結果のテーブルが空になります。 ここでは、クエリ Ching という名前のログインを返す場合、Ching、要求を送信すると、要求を受け取ります既定のシステム リソース、リソース クラスのシステム リソースよりも小さい。 ログインが 1 つ以上のリソース クラスのメンバーである場合は、最大クラスは、優先順位をいます。  
   
-各リソースのクラスのリソース割り当ての一覧は、次を参照してください。[ワークロード管理](workload-management.md)です。  
+各リソース クラスのリソース割り当ての一覧は、次を参照してください。[ワークロード管理](workload-management.md)します。  
   
-### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>手順 2: 別のリソース クラスのメンバーシップを持つログインで要求を実行します。  
-これには、拡大または縮小のシステム リソースと要求を実行する 2 つの方法があります。  
+### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>手順 2:別のリソース クラスのメンバーシップを持つログインで要求を実行します。  
+いずれかの拡大または縮小のシステム リソースで要求を実行する 2 つの方法はあります。  
   
--   拡大または縮小のリソース クラスのメンバーである別のログインで要求を実行します。  
+-   大きいまたは小さいリソース クラスのメンバーである別のログインで要求を実行します。  
   
--   リソース クラスの役割のいずれかに必要なログインを追加します。 注意が必要です。 このオプションを選択します。ログインのリソース クラスを変更すると、ログインによって送信されるすべての要求に対するシステム リソースのレベルが変更されます。  
+-   リソース クラスのロールのいずれかに必要なログインを追加します。 注意が必要です。 このオプションを選択します。ログインのリソース クラスを変更すると、システムのリソース レベルのログインによって送信されたすべての要求が変更されます。  
   
-Ching largerc サーバー ロールのメンバーであるとします。 次の例では、ログイン Ching xlargerc サーバーの役割を追加する方法を示します。  
+Ching largerc のサーバー ロールのメンバーであるとします。 次の例では、ログイン Ching xlargerc サーバーの役割を追加する方法を示します。  
   
 ```sql  
 ALTER SERVER ROLE xlargerc ADD MEMBER Ching;  
 ```  
   
-Ching は、largerc と xlargerc サーバー ロールのメンバーであるようになりました。 Ching 要求を送信すると、要求 xlargerc のシステム リソースが表示されます。  
+Ching は largerc、および xlargerc のサーバーの役割のメンバーであるようになりました。 Ching では、要求を送信するときに、要求 xlargerc のシステム リソースが表示されます。  
   
-次の例は、戻る、Ching を mediumrc サーバーの役割に移動します。  新しいロールを変更するには、ログインを xlargerc、および largerc サーバーの役割から削除され、mediumrc サーバー ロールに追加する必要があります。  
+次の例は、戻る、Ching を mediumrc サーバーの役割に移動します。  新しいロールを変更するには、ログインを xlargerc のと largerc のサーバーの役割から削除され、mediumrc のサーバー ロールに追加する必要があります。  
   
 ```sql  
 -- Move login Ching back to using medium system resources for requests.  
@@ -96,23 +95,23 @@ ALTER SERVER ROLE largerc DROP MEMBER Ching;
 ALTER SERVER ROLE mediumrc ADD MEMBER Ching;  
 ```  
   
-Ching は mediumrc サーバー ロールのメンバーであるようになりました。  次の例では、要求の既定のシステム リソースを Ching を変更します。  
+Ching は mediumrc のサーバー ロールのメンバーであるようになりました。  次の例では、要求の既定のシステム リソースを用意する Ching を変更します。  
   
 ```sql  
 -- Move login Ching to use the default system resources for requests.  
 ALTER SERVER ROLE mediumrc DROP MEMBER Ching;  
 ```  
   
-リソース クラスのロールのメンバーシップを変更する方法の詳細については、次を参照してください。 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)です。  
+リソース クラス ロールのメンバーシップを変更する方法についての詳細については、次を参照してください。 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)します。  
 
 ## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>ログインを要求の既定のシステム リソースに変更します。
-既定値への SQL Server PDW ログインに割り当てられたシステム リソースの割り当てを変更する方法について説明します。 
+既定値へのログインを SQL Server PDW に割り当てられたシステム リソースの割り当てを変更する方法について説明します。 
   
-リソース クラスの説明を参照してください[ワークロードの管理。](workload-management.md)  
+リソース クラスの説明を参照してください[ワークロード管理。](workload-management.md)  
   
-ログインは、どのリソース クラスのサーバー ロールのメンバーではない、ログインで送信された要求は、既定のシステム リソース量に表示されます。  
+ログインは、どのリソース クラスのサーバー ロールのメンバーではない、ログインで送信された要求に既定のシステム リソースの量が表示されます。  
   
-Matt 現在リソース クラスのすべてのサーバー ロールのメンバーは、既定のリソースのみが表示される要求に戻すには、ログインがあるとします。  次の例は、すべての 3 つのリソース クラス サーバー ロールのメンバーシップを削除することにより、Matt の要求に既定のリソースを割り当てます。  
+ログイン Matt は、現在リソース クラスのすべてのサーバー ロールのメンバーと既定のリソースのみを受信する要求に戻す必要があるとします。  次の例 3 つのリソース クラスのすべてのサーバー ロールからのメンバーシップを削除することにより、Matt の要求に既定のリソースを割り当てます。  
   
 ```sql  
 --Give the requests submitted by Matt the default system resources   
@@ -122,12 +121,12 @@ ALTER SERVER ROLE LargeRC DROP MEMBER Matt;
 ALTER SERVER ROLE MediumRC DROP MEMBER Matt;  
 ```  
   
-## <a name="display-the-number-of-concurrency-slots-needed-for-a-waiting-request"></a>同時実行スロットの数に必要な待機中の要求の表示
-スロットは、SQL Server PDW の実行を待機している要求で必要な同時実行の数を確認する方法について説明します。  
+## <a name="display-the-number-of-concurrency-slots-needed-for-a-waiting-request"></a>待ちの要求についての同時実行スロットの数に必要な表示
+同時実行スロットは、SQL Server PDW の実行を待機している要求で必要な数を把握する方法について説明します。  
   
-詳細については、次を参照してください。[ワークロード管理](workload-management.md)です。  
+詳細については、次を参照してください。[ワークロード管理](workload-management.md)します。  
   
-要求は、実行されることがなく長時間待機している可能性があります。 要求が必要な同時実行スロットの番号を確認要求をトラブルシューティングする方法の 1 つです。  次の例では、各待機中の要求で必要な同時実行スロットの数を示します。  
+要求は、実行されることがなく長時間待機している可能性があります。 要求が必要な同時実行スロットの数を確認要求をトラブルシューティングする方法の 1 つです。  次の例では、各待機中の要求で必要な同時実行スロットの数を示します。  
   
 ```sql  
 --Display the number of concurrency slots required   
@@ -138,5 +137,5 @@ FROM sys.dm_pdw_resource_waits;
   
   
 ## <a name="see-also"></a>参照  
-[ワークロードの管理](workload-management.md)  
+[ワークロード管理](workload-management.md)  
   

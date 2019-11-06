@@ -16,16 +16,15 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c35a9ea5f34b8c05e1724f232de18536489a3a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fd00cae14d5dd3f00a848edc166b7fbe8c4b7c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102412"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "47809932"
 /child::Customer/child::Order  
 ```  
   
- クエリで`child`は、軸と`Customer`と`Order`はノード テストです (顧客と注文がある場合、これらのノード テストは TRUE **\<要素 >** ノード、ため、  **\<要素 >** ノードは、プライマリ ノードの**子**軸) です。 一致する各ノードに対して**\<顧客 >**、一致するノード**\<注文 >** 結果に追加されます。 のみ**\<順序 >** が結果セットに返されます。  
+ クエリで`child`は、軸と`Customer`と`Order`はノード テストです (顧客と注文がある場合、これらのノード テストは TRUE **\<要素 >** ノード、ため、  **\<要素 >** ノードは、プライマリ ノードの**子**軸) です。 一致する各ノードに対して **\<顧客 >** 、一致するノード **\<注文 >** 結果に追加されます。 のみ **\<順序 >** が結果セットに返されます。  
   
  **子**軸は既定値。 そのため、クエリは、として指定できます。  
   
@@ -162,10 +161,10 @@ ms.locfileid: "47809932"
 </ROOT>  
 ```  
   
- XPath クエリが指定されている場合`Customer/Order/OrderDetail`、一致する各ノードから**\<顧客 >** に移動する、クエリ、 **\<順序 >** 要素。 一致する各ノードに対して**\<順序 >**、クエリには、ノードが追加されます **\<OrderDetail >** 結果にします。 のみ **\<OrderDetail >** が結果セットに返されます。  
+ XPath クエリが指定されている場合`Customer/Order/OrderDetail`、一致する各ノードから **\<顧客 >** に移動する、クエリ、 **\<順序 >** 要素。 一致する各ノードに対して **\<順序 >** 、クエリには、ノードが追加されます **\<OrderDetail >** 結果にします。 のみ **\<OrderDetail >** が結果セットに返されます。  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して  parent 軸を指定する  
- 次のクエリでは、すべてを取得、 **\<順序 >** 要素の親が**\<顧客 >** を持つ要素を**CustomerID**属性1 の値。 クエリを使用して、**子**の親を検索する述語内の軸、 **\<順序 >** 要素。  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して parent 軸を指定する  
+ 次のクエリでは、すべてを取得、 **\<順序 >** 要素の親が **\<顧客 >** を持つ要素を**CustomerID**属性1 の値。 クエリを使用して、**子**の親を検索する述語内の軸、 **\<順序 >** 要素。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -184,7 +183,7 @@ ms.locfileid: "47809932"
 ```  
   
 > [!NOTE]  
->  XPath クエリ`/Order[../@CustomerID="1"]`の親が存在しないため、エラーが返されます**\<順序 >** します。 含まれているマッピング スキーマ内の要素である可能性がありますが**\<順序 >**、XPath ですこれらのいずれかで開始していないその結果、 **\<順序 >** と見なされます、。ドキュメントの最上位の要素の型。  
+>  XPath クエリ`/Order[../@CustomerID="1"]`の親が存在しないため、エラーが返されます **\<順序 >** します。 含まれているマッピング スキーマ内の要素である可能性がありますが **\<順序 >** 、XPath ですこれらのいずれかで開始していないその結果、 **\<順序 >** と見なされます、。ドキュメントの最上位の要素の型。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   

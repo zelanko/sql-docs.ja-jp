@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502927"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
@@ -75,6 +75,9 @@ ms.locfileid: "50099913"
  画像ファイルを取得する際、レポート サーバーでは自動的にこのアカウントが使用され、ユーザー側で特別な操作を行う必要はありません。 このアカウントを使用してレポート用のデータを提供する外部データ ソースに接続するには、レポート データ ソースまたは共有データ ソースの [データ ソースのプロパティ] ページで **[資格情報の種類]** オプションを指定する必要があります。  
   
 -   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] または SharePoint サイトで、 **[資格情報は必要ありません]** オプションを選択します。  
+
+> [!NOTE]
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
  自動レポート処理アカウントは主に外部サーバーへの接続に使用されますが、データベース サーバーへのログインには使用されません。 アカウント資格情報を使用してデータベースにログインする場合は、資格情報を接続文字列に指定する必要があります。 データベース サーバーで Windows 統合セキュリティがサポートされ、自動実行レポート処理に使用されるアカウントにデータベースの読み取り権限がある場合は、 **Integrated Security=SSPI** を指定できます。 それ以外の場合は、接続文字列にユーザー名およびパスワードを入力する必要があり、これはデータ ソース接続プロパティを編集する権限を持つすべてのユーザーにクリア テキストで表示されます。  
   

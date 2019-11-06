@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
@@ -18,21 +17,21 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 156fa271582673d93cf2f76e92e447ea63b846c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811286"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 **認証の拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 でサポートされており、 **以前のオペレーティング システムでは、** 拡張保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] がサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。  
   
 > [!IMPORTANT]  
->  既定では、Windows の **拡張保護** は有効になっていません。 Windows で **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](http://support.microsoft.com/kb/968389)」を参照してください。  
+>  既定では、Windows の **拡張保護** は有効になっていません。 Windows で **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](https://support.microsoft.com/kb/968389)」を参照してください。  
   
 ## <a name="description-of-extended-protection"></a>拡張保護の説明  
- **拡張保護** では、認証リレー攻撃を防止するために、サービス バインドとチャネル バインドが使用されます。 認証リレー攻撃では、NTLM 認証を実行できるクライアント (Windows エクスプローラー、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient アプリケーションなど) が攻撃者のサーバー (悪意のある CIFS ファイル サーバーなど) に接続します。 攻撃者は、そのクライアントの資格情報を使用してクライアントになりすまし、サービス ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのインスタンスなど) への認証を行います。  
+ **拡張保護** では、認証リレー攻撃を防止するために、サービス バインドとチャネル バインドが使用されます。 認証リレー攻撃では、NTLM 認証を実行できるクライアント (Windows エクスプローラー、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient アプリケーションなど) が攻撃者のサーバー (悪意のある CIFS ファイル サーバーなど) に接続します。 攻撃者は、そのクライアントの資格情報を使用してクライアントになりすまし、サービス ([!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのインスタンスなど) への認証を行います。  
   
  この攻撃には次の 2 つのバリエーションがあります。  
   
@@ -54,11 +53,11 @@ ms.locfileid: "48200832"
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート  
  Windows による **拡張保護**のサポートの詳細については、以下のリンク先を参照してください。  
   
--   [拡張保護付き統合 Windows 認証](http://msdn.microsoft.com/library/dd639324.aspx)  
+-   [拡張保護付き統合 Windows 認証](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [マイクロソフト セキュリティ アドバイザリ (973811)、認証の拡張保護](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [マイクロソフト セキュリティ アドバイザリ (973811)、認証の拡張保護](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  サービス バインドとチャネル バインドに影響する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続設定は 3 つあります。 これらの設定を構成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは WMI を使用します。これらの設定を表示するには、ポリシー ベースの管理の **[サーバー プロトコル設定]** ファセットを使用します。  
   
 -   **[強制的に暗号化]**  
@@ -67,7 +66,7 @@ ms.locfileid: "48200832"
   
 -   **拡張保護**  
   
-     選択できる値は、 **[オフ]**、 **[許可]**、および **[必須]** です。 **拡張保護** 変数を使用すると、各 **インスタンスの** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルを構成できます。 **[拡張保護]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ) にあります。  
+     選択できる値は、 **[オフ]** 、 **[許可]** 、および **[必須]** です。 **拡張保護** 変数を使用すると、各 **インスタンスの** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルを構成できます。 **[拡張保護]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ) にあります。  
   
     -   **[オフ]** に設定すると、 **[拡張保護]** は無効になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは、クライアントが保護されているかどうかに関係なく、任意のクライアントからの接続を許可します。 **[オフ]** は、古いオペレーティング システムや修正プログラムの適用が解除されたオペレーティング システムと互換性がありますが、安全性は低くなります。 この設定は、クライアント オペレーティング システムで拡張保護がサポートされていないことがわかっている場合に使用してください。  
   
@@ -80,13 +79,13 @@ ms.locfileid: "48200832"
      **[承認された NTLM SPN]** の変数は、サーバーに複数の SPN がある場合に必要です。 クライアントがサーバーへの接続に使用した有効な SPN がサーバーで認識されないと、サービス バインドが失敗します。 この問題を回避するには、 **[承認された NTLM SPN]** を使用して、サーバーを表す複数の SPN を指定します。 **[承認された NTLM SPN]** には、一連の SPN をセミコロンで区切って指定します。 たとえば、 **MSSQLSvc/ HostName1.Contoso.com** および **MSSQLSvc/ HostName2.Contoso.com**という SPN を許可するには、 **[承認された NTLM SPN]** ボックスに「 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 」と入力します。 変数の最大長は 2048 文字です。 **[承認された NTLM SPN]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ)) にあります。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>データベース エンジンでの拡張保護の有効化  
- **拡張保護**を使用するには、サーバーとクライアントの両方のオペレーティング システムで **拡張保護**がサポートされていて、オペレーティング システムで **拡張保護** が有効になっている必要があります。 オペレーティング システムで **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](http://support.microsoft.com/kb/968389)」を参照してください。  
+ **拡張保護**を使用するには、サーバーとクライアントの両方のオペレーティング システムで **拡張保護**がサポートされていて、オペレーティング システムで **拡張保護** が有効になっている必要があります。 オペレーティング システムで **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](https://support.microsoft.com/kb/968389)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 以前のバージョンの**については、今後の更新によって一部で** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用できるようになります。 サーバー コンピューターで **拡張保護** を有効にした後、次の手順に従って **拡張保護**を有効にします。  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server ネットワークの構成]** を展開し、**[*\<* InstanceName*>* のプロトコル]** を右クリックして、**[プロパティ]** をクリックします。  
+2.  **[SQL Server ネットワークの構成]** を展開し、 **[ *\<* InstanceName *>* のプロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  チャネル バインドとサービス バインドの両方について、 **[詳細設定]** タブで **[拡張保護]** を適切な値に設定します。  
   
@@ -99,12 +98,12 @@ ms.locfileid: "48200832"
 ## <a name="configuring-other-sql-server-components"></a>その他の SQL Server コンポーネントの構成  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の 構成方法の詳細については、「 [Reporting Services での認証の拡張保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)」を参照してください。  
   
- IIS を使用して HTTP 接続または HTTPS 接続経由で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データにアクセスする場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で IIS によって提供される拡張保護を利用できます。 拡張保護を使用するように IIS を構成する方法の詳細については、「 [IIS 7.5 における拡張保護の構成](http://go.microsoft.com/fwlink/?LinkId=181105)」を参照してください。  
+ IIS を使用して HTTP 接続または HTTPS 接続経由で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データにアクセスする場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で IIS によって提供される拡張保護を利用できます。 拡張保護を使用するように IIS を構成する方法の詳細については、「 [IIS 7.5 における拡張保護の構成](https://go.microsoft.com/fwlink/?LinkId=181105)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー ネットワークの構成](server-network-configuration.md)   
  [クライアント ネットワーク構成](client-network-configuration.md)   
- [認証の拡張保護の概要](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [拡張保護付き統合 Windows 認証](http://go.microsoft.com/fwlink/?LinkId=179922)  
+ [認証の拡張保護の概要](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [拡張保護付き統合 Windows 認証](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

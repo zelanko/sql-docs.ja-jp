@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.f1
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 19da5b920b31791eacaf362819ce731d2822c0c4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a74ab896e974410e8357a22546cb63ed7365a149
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148107"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833157"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクは、データ定義言語 (DDL) ステートメントを実行します。DDL ステートメントを使用すると、マイニング モデルや多次元オブジェクト (キューブおよびディメンションなど) を作成、削除、または変更できます。 たとえば DDL ステートメントは、 **Adventure Works** キューブ内にパーティションを作成したり、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]に含まれるサンプルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のディメンションを削除したりできます。  
@@ -53,7 +52,7 @@ ms.locfileid: "50148107"
  次の DDL ステートメントは、 **Promotion** ディメンションを削除します。  
   
 ```  
-<Delete xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Delete xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <DimensionID>Dim Promotion</DimensionID>  
@@ -65,7 +64,7 @@ ms.locfileid: "50148107"
  次の DDL ステートメントは、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] キューブを処理します。  
   
 ```  
-<Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
     <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
@@ -82,7 +81,7 @@ ms.locfileid: "50148107"
  次の DDL ステートメントは、 **Forecasting** マイニング モデルを作成します。  
   
 ```  
-<Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <ParentObject>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <MiningStructureID>Forecasting</MiningStructureID>  
@@ -136,7 +135,7 @@ ms.locfileid: "50148107"
  次の DDL ステートメントは、 **Promotion** ディメンションを削除します。  
   
 ```  
-<Delete xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Delete xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <DimensionID>Dim Promotion</DimensionID>  
@@ -148,7 +147,7 @@ ms.locfileid: "50148107"
  次の DDL ステートメントは、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] キューブを処理します。  
   
 ```  
-<Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
     <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
@@ -165,7 +164,7 @@ ms.locfileid: "50148107"
  次の DDL ステートメントは、 **Forecasting** マイニング モデルを作成します。  
   
 ```  
-<Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <ParentObject>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <MiningStructureID>Forecasting</MiningStructureID>  

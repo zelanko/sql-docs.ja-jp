@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.charactertrans.f1
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70fbac16859572c8b18f62fe7645ac6f1c5af77f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055879"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770422"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
   文字マップ変換は、小文字から大文字への変換関数などの文字列関数を、文字データに適用します。 この変換は、文字列データ型の列データにのみ実行されます。  
@@ -46,8 +45,8 @@ ms.locfileid: "48055879"
 |カタカナ|ひらがなをカタカナにマップします。|  
 |言語の文字種|システム規則ではなく言語の文字種を適用します。 言語の文字種は、Win32 API が提供する、チュルク語や他のロケールの Unicode 単純文字種のマップに関する機能を基準とします。|  
 |小文字|文字を小文字に変換します。|  
-|簡体字中国語|繁体字中国語文字を簡体字中国語文字にマップします。|  
-|繁体字中国語|簡体字中国語文字を繁体字中国語文字にマップします。|  
+|簡体中国語|繁体中国語文字を簡体中国語文字にマップします。|  
+|繁体字中国語|簡体中国語文字を繁体中国語文字にマップします。|  
 |大文字|文字を大文字に変換します。|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>相互に排他的なマップ操作  
@@ -58,7 +57,7 @@ ms.locfileid: "48055879"
 |小文字|大文字|  
 |ひらがな|カタカナ|  
 |半角|全角|  
-|繁体字中国語|簡体字中国語|  
+|繁体字中国語|簡体中国語|  
 |小文字|ひらがな、カタカナ、半角、全角|  
 |大文字|ひらがな、カタカナ、半角、全角|  
   

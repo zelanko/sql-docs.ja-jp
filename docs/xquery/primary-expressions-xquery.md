@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946388"
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 組み込みの Boolean 関数**true()** と**false()**、ブール値を表す次の例に示すように使用できます。  
+ 組み込みの Boolean 関数**true()** と**false()** 、ブール値を表す次の例に示すように使用できます。  
   
 ```  
 DECLARE @var XML  

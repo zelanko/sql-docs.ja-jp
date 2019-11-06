@@ -31,15 +31,14 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: 9d88540aa6c4d3ada8af6808713405829a3e352e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081460"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>バックアップの履歴とヘッダーの情報 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +114,7 @@ ms.locfileid: "47684740"
  詳細については、このトピックの後の方の「 [メディア ヘッダーとバックアップ ヘッダーの情報の比較](#CompareMediaHeaderBackupHeader)」を参照してください。  
   
 ##  <a name="BackupHeader"></a> バックアップ ヘッダー情報  
- バックアップ ヘッダーを表示すると、メディア上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ セットおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のバックアップ セットに関する情報が表示されます。 表示される情報には、使用しているバックアップ デバイスの種類、バックアップの種類 (データベース、トランザクション、ファイル、差分データベースなど)、およびバックアップの開始と終了の日時が含まれています。 この情報は、テープ上のどのバックアップ セットを復元するかを判断したり、メディアに書き込まれているバックアップを調べる場合に役立ちます。  
+ バックアップ ヘッダーを表示すると、メディア上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ セットおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のバックアップ セットに関する情報が表示されます。 表示される情報には、使用しているバックアップ デバイスの種類、バックアップの種類 (データベース、トランザクション、ファイル、差分データベースなど)、およびバックアップの開始と終了の日時が含まれています。 この情報は、テープ上のどのバックアップ セットを復元するかを判断したり、メディアに書き込まれているバックアップを調べる場合に役立ちます。  
   
 > [!NOTE]  
 >  メディア上の各バックアップに関する情報を表示するにはメディア全体をスキャンする必要があるため、大容量のテープの場合はバックアップ ヘッダー情報を表示するのに時間がかかることがあります。  

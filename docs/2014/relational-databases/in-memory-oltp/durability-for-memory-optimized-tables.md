@@ -10,12 +10,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 981b0b57debf6e1916adb65620feca7025bd3803
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63072761"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>メモリ最適化テーブルの持続性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] により、メモリ最適化テーブルには完全な持続性が提供されます。 メモリ最適化テーブルを変更したトランザクションがコミットされると、基になるストレージが使用可能な場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(ディスク ベース テーブルの場合と同様に) この変更が永続的である (データベースの再起動後も保持される) ことが保証されます。 持続性には、トランザクション ログとディスク上ストレージでのデータ変更の保持という、2 つの主なコンポーネントがあります。  
@@ -24,7 +24,7 @@ ms.locfileid: "48063492"
  ディスク ベース テーブルまたは持続性のあるメモリ最適化テーブルに対するすべての変更は、1 つ以上のトランザクション ログ レコードにキャプチャされます。 トランザクションのコミット時に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トランザクションに関連付けられているログ レコードをディスクに書き込んだ後、トランザクションによってコミットされたアプリケーションまたはユーザー セッションと通信します。 これにより、トランザクションによる変更が持続可能であることが保証されます。 メモリ最適化テーブルのトランザクション ログは、ディスク ベース テーブルで使用されている同じログ ストリームと完全に統合されています。 この統合によって、既存のトランザクション ログ バックアップ、復旧、および復元操作は引き続き機能し、追加の手順は必要ありません。 ただし、[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] によりワークロードのトランザクションのスループットを大幅に向上できるため、トランザクション ログ ストレージが高くなった IO 要件を処理するよう正しく構成されていることを確認する必要があります。  
   
 ## <a name="data-and-delta-files"></a>データ ファイルとデルタ ファイル  
- メモリ最適化テーブルのデータは、1 つ以上のメモリ内インデックスでリンクされる自由形式のデータ行としてメモリに格納されます。 ディスク ベース テーブルで使用されるような、データ行のページ構造はありません。 アプリケーションが、トランザクションをコミットする準備ができたとき、[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]トランザクションのログ レコードが生成されます。 メモリ最適化テーブルの永続化は、バックグラウンド スレッドを使用して一連のデータ ファイルおよびデルタ ファイルで実行されます。 データ ファイルとデルタ ファイルは 1 つ以上のコンテナーにあります (FILESTREAM データで使用される同様のメカニズムを使用しています)。 これらのコンテナーは、メモリ最適化ファイル グループと呼ばれる、新しい種類のファイル グループにマップされます。  
+ メモリ最適化テーブルのデータは、1 つ以上のメモリ内インデックスでリンクされる自由形式のデータ行としてメモリに格納されます。 ディスク ベース テーブルで使用されるような、データ行のページ構造はありません。 アプリケーションがトランザクションをコミットできる状態になったら、[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] によってトランザクションのログ レコードが生成されます。 メモリ最適化テーブルの永続化は、バックグラウンド スレッドを使用して一連のデータ ファイルおよびデルタ ファイルで実行されます。 データ ファイルとデルタ ファイルは 1 つ以上のコンテナーにあります (FILESTREAM データで使用される同様のメカニズムを使用しています)。 これらのコンテナーは、メモリ最適化ファイル グループと呼ばれる、新しい種類のファイル グループにマップされます。  
   
  データはこれらのファイルに厳密な順次形式で書き込まれるため、スピン メディアの場合のディスク待機時間が最小限に抑えられます。 異なるディスクにある複数のコンテナーを使用して、I/O 動作を分散することもできます。 異なるディスクにある複数のコンテナーにデータ ファイルとデルタ ファイルを配置すると、復旧時に、ディスク上のデータ ファイルとデルタ ファイルからメモリにデータが読み込まれるときのパフォーマンスが向上します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48063492"
  手動マージを呼び出すことによって明示的に実行することができます必要な場合、 [sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)します。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP のライフ サイクル  
- CPF は、割り当てが解除されるまでにいくつかの状態を遷移します。 どの時点でも、CFP は次のフェーズのいずれかにあります。PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE、および TOMBSTONE。 これらのフェーズの説明については、「[sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)」を参照してください。  
+ CPF は、割り当てが解除されるまでにいくつかの状態を遷移します。 任意の時点で、Cfp は、次のフェーズのいずれかでは。PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE、および廃棄 (tombstone)。 これらのフェーズの説明については、「[sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)」を参照してください。  
   
  さまざまな状態にある CFP によって取得されるストレージを考慮に入れると、持続性のあるメモリ最適化テーブルによって取得されるストレージ全体のサイズは、メモリ内のテーブルのサイズの 2 倍を大きく超える可能性があります。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)をフェーズは、メモリ最適化ファイルグループ内のすべての Cfp を一覧表示するクエリを実行できます。 CFP を MERGE SOURCE 状態から TOMBSTONE に移行すると、ガベージ コレクションが最終的に 5 個のチェックポイントを使用する可能性があり、データベースが完全復旧モデルまたは一括ログ復旧モデルを使用するように構成されている場合は、各チェックポイントの後にトランザクション ログ バックアップが続きます。  
   

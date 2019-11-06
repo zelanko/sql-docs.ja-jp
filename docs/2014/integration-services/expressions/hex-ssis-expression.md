@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6892dd643958aed567893dbe873617a0b4128112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dfd342647f6d355ee34e1e815db9431a212dbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897857"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 式)
   整数の 16 進値を表す文字列を返します。  
@@ -45,7 +44,7 @@ HEX(integer_expression)
   
  返される結果には、0x プレフィックスなどの修飾子は含まれません。 プレフィックスを含めるには、+ (連結) 演算子を使用します。 詳細については、「[+ &#40;連結&#41; &#40;SSIS 式&#41;](concatenate-ssis-expression.md)」を参照してください。  
   
- HEX 表記法で使用される A ～ F の文字は、大文字で表示されます。  
+ HEX 表記法で使用される A から F の文字は、大文字で表示されます。  
   
  整数データ型の結果の文字列の長さは、次のようになります。  
   
@@ -77,6 +76,6 @@ HEX(@LocaleID)
 ```  
   
 ## <a name="see-also"></a>参照  
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

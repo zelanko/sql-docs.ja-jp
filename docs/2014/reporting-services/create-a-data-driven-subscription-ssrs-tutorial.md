@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081691"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109689"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が提供するデータ ドリブン サブスクリプションにより、動的なサブスクライバー データに基づいてレポートの配信をカスタマイズできます。 データ ドリブン サブスクリプションには次のような用途があります。  
@@ -34,16 +33,16 @@ ms.locfileid: "48081691"
   
  このチュートリアルは、次の 3 つのレッスンで構成されています。  
   
- [レッスン 1: サンプル サブスクライバー データベースの作成](lesson-1-creating-a-sample-subscriber-database.md)  
+ [レッスン 1:サンプル サブスクライバー データベースの作成](lesson-1-creating-a-sample-subscriber-database.md)  
  このレッスンでは、サブスクライバー情報を格納するローカル [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを作成する方法を学習します。  
   
- [レッスン 2: レポート データ ソースのプロパティの変更](lesson-2-modifying-the-report-data-source-properties.md)  
+ [レッスン 2:レポート データ ソースのプロパティの変更](lesson-2-modifying-the-report-data-source-properties.md)」を参照してください  
  このレッスンでは、レポート データ ソースのプロパティを変更し、レポートを自動実行できるようにする方法を学習します。 自動処理では保存された資格情報が必要です。 また、レポートのデータセットを変更して、サブスクライバーのデータが提供するパラメーターを含めます。  
   
- [レッスン 3 : データ ドリブン サブスクリプションの定義](lesson-3-defining-a-data-driven-subscription.md)  
+ [レッスン 3:データ ドリブン サブスクリプションを定義します。](lesson-3-defining-a-data-driven-subscription.md)  
  このレッスンでは、データ ドリブン サブスクリプションを定義する方法を学習します。 ここでは、データ ドリブン サブスクリプション ウィザードを 1 ページずつ順に実行します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  通常、データ ドリブン サブスクリプションはレポート サーバー管理者が作成し、保守します。 データ ドリブン サブスクリプションを作成するには、クエリ作成の専門知識、サブスクライバー データを持つデータ ソースに関する知識、およびレポート サーバーへの高度なアクセス権が必要です。  
   
  チュートリアルでは、このチュートリアルで作成したレポートを使用します[基本的な表レポートの作成&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)とからのデータ。 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
@@ -56,7 +55,7 @@ ms.locfileid: "48081691"
   
 -   SQL Server エージェント サービス (実行された状態)。  
   
--   パラメーターを含むレポート。 このチュートリアルで、サンプル レポート`Sales Orders`チュートリアルを使用して作成する[基本的な表レポートの作成&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)します。  
+-   パラメーターを含むレポート。 このチュートリアルでは、チュートリアル「 `Sales Orders` 基本的なテーブル レポートの作成 (SSRS チュートリアル) [基本的なテーブル レポートの作成 (SSRS チュートリアル)](create-a-basic-table-report-ssrs-tutorial.md)のデータを使用します。  
   
 -   サンプル レポートにデータを提供する [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベース。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48081691"
  **このチュートリアルの推定所要時間:** 30 分。 基本的なレポートのチュートリアルを完了していない場合は追加で 30 分かかります。  
   
 ## <a name="see-also"></a>参照  
- [データ ドリブン サブスクリプション](subscriptions/data-driven-subscriptions.md)   
- [基本的なテーブル レポートを作成する&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
+ [基本的なテーブル レポートの作成 (SSRS チュートリアル)](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02bc4c6d30fc6f8fa9d77e3da5f10664fd5a2704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef0f25660a0faa0747752a8ca15c207c1e939669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039548"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLStatistics** 1 つのテーブルとテーブルに関連付けられているインデックスに関する統計情報の一覧を取得します。 ドライバーは、その結果、情報を設定を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLStatistics(  
      SQLHSTMT        StatementHandle,  
@@ -79,14 +78,14 @@ SQLRETURN SQLStatistics(
  [入力]文字の長さ **TableName*します。  
   
  *[一意]*  
- [入力]インデックスの種類: SQL_INDEX_UNIQUE または SQL_INDEX_ALL します。  
+ [入力]インデックスの種類:SQL_INDEX_UNIQUE または SQL_INDEX_ALL します。  
   
  *Reserved*  
  [入力]結果セットのカーディナリティおよびページの列の重要度を示します。 次のオプションに影響を与える、戻り値のカーディナリティおよびページの列だけです。カーディナリティおよびページが返されない場合でも、インデックスの情報が返されます。  
   
  SQL_ENSURE では、ドライバーが統計を無条件に取得することを要求します。 (ドライバーのみ、Open Group 標準に準拠しているし、ODBC 拡張機能をサポートしていないをできなく SQL_ENSURE をサポートするためにします。)  
   
- SQL_QUICK 要求をサーバーからすぐに使用できる場合に、ドライバーでカーディナリティおよびページを取得します。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 (Open Group 標準に記述されているアプリケーションが ODBC 3 から SQL_QUICK 動作を取得常に *.x*-準拠のドライバーです)。  
+ SQL_QUICK 要求をサーバーからすぐに使用できる場合に、ドライバーでカーディナリティおよびページを取得します。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 (ODBC から SQL_QUICK 動作を常に取得は、Open Group 標準に記述されているアプリケーション*3.x*-準拠のドライバーです)。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
@@ -126,9 +125,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
   
- 次の列が ODBC 3 の名前が変更された *.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
+ 次の列が ODBC の名前が変更された*3.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
   
-|ODBC 2.0 列|ODBC 3 *.x*列|  
+|ODBC 2.0 列|ODBC *3.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
@@ -148,7 +147,7 @@ SQLRETURN SQLStatistics(
 |型 (ODBC 1.0)|7|Smallint (NULL 以外)|返される情報の種類です。<br /><br /> SQL_TABLE_STAT では、(カーディナリティやページの列) 内のテーブルの統計情報を示します。<br /><br /> SQL_INDEX_BTREE は B ツリー インデックスを示します。<br /><br /> SQL_INDEX_CLUSTERED では、クラスター化インデックスを示します。<br /><br /> SQL_INDEX_CONTENT では、コンテンツ インデックスを示します。<br /><br /> SQL_INDEX_HASHED では、ハッシュ インデックスを示します。<br /><br /> SQL_INDEX_OTHER では、インデックスの別の種類を示します。|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|(1 から開始)。 インデックス内の列のシーケンス番号型が SQL_TABLE_STAT の場合は、NULL が返されます。|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|列名 列が式に基づいている場合など、給与 + 特典では、式が返されます。式を決定できない場合は、空の文字列が返されます。 型が SQL_TABLE_STAT の場合は、NULL が返されます。|  
-|ASC_OR_DESC (ODBC 1.0)|10|Char (1)|列のシーケンスを並べ替える: 昇順; の"A"降順以外の場合に、"D"列の並べ替え順序は、データ ソースでサポートされていない場合、または型が SQL_TABLE_STAT の場合は、NULL が返されます。|  
+|ASC_OR_DESC (ODBC 1.0)|10|Char (1)|列の並べ替え順序:昇順; の"a"降順以外の場合に、"D"列の並べ替え順序は、データ ソースでサポートされていない場合、または型が SQL_TABLE_STAT の場合は、NULL が返されます。|  
 |カーディナリティ (ODBC 1.0)|11|Integer|テーブルまたはインデックスのカーディナリティ型が SQL_TABLE_STAT 以外の場合、テーブル内の行の数型は SQL_TABLE_STAT; がない場合、インデックスの一意の値の数データ ソースから値が使用できない場合は、NULL が返されます。|  
 |ページ (ODBC 1.0)|12|Integer|インデックスまたはテーブルを格納するために使用するページ数型が SQL_TABLE_STAT 以外の場合、テーブルのページ数型は SQL_TABLE_STAT; がない場合、インデックスのページ数データ ソースから値が使用できない場合、またはデータ ソースに適用されない場合は、NULL が返されます。|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|これは、フィルター条件の給与など、インデックスがフィルター選択されたインデックスの場合は、30000 を >フィルター条件を決定できない場合は、空の文字列になります。<br /><br /> NULL の場合は、インデックスがフィルター選択されたインデックスを特定できないかどうか、インデックスがフィルター選択されたインデックス、または型が SQL_TABLE_STAT。|  

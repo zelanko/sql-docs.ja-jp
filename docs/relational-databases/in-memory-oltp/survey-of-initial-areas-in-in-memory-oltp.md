@@ -1,7 +1,7 @@
 ---
-title: 'クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ | Microsoft Docs'
+title: '簡単なアンケート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/05/2017"
+ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31a4e59da5f3555f79ac6fe6b82fa2d03721a81b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519452"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712946"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
@@ -59,7 +59,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
   
 後で、インメモリ OLTP によるパフォーマンスの向上を実証する以下の記事を参照してください。  
   
-- 「[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 」には、大幅なパフォーマンス向上が望める小規模なデモが用意されています。  
+- 「[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)」には、大幅なパフォーマンス向上が望める小規模なデモが用意されています。  
 - 「[Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)」 (インメモリ OLTP のサンプル データベース) には、より大規模なデモが用意されています。  
   
   
@@ -93,7 +93,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 
 1. [インメモリ テクノロジを使用したリアルタイム運用分析](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
 2. [リアルタイム運用分析 - 非クラスター化列ストア インデックス (NCCI) の概要](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [リアルタイム運用分析: SQL Server 2016 で非クラスター化列ストア インデックス (NCCI) を使用する単純な例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
+3. [リアルタイム運用分析: SQL Server 2016 で非クラスター化列ストア インデックス (NCCI) を使用するシンプルな例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
 4. [リアルタイム運用分析: SQL Server 2016 の DML 運用と非クラスター化列ストア インデックス (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
 5. [リアルタイム運用分析: フィルターした非クラスター化列ストア インデックス (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
 6. [リアルタイム運用分析: 非クラスター化列ストア インデックス (NCCI) の圧縮遅延オプション](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
@@ -108,7 +108,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 #### <a name="bulk-importation-of-data"></a>データの一括インポート
 
 1. [クラスター化列ストア: 一括読み込み](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [クラスター化列ストア: データ読み込みの最適化 - 最小ログ記録](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+2. [クラスター化列ストア インデックス: データ読み込みの最適化 - 最小ログ記録](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
 3. [クラスター化列ストア インデックス: データ読み込みの最適化 - 並行一括インポート](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
@@ -163,14 +163,11 @@ CREATE PROCEDURE ステートメントの T-SQL キーワード NATIVE_COMPILATI
   
 まず、データベースの互換性レベルを少なくとも 130 に設定することが重要です。 ここでは、現在のデータベースに設定されている現在の互換性レベルを表示する T-SQL コードを示します。  
   
-  
-  
-  
-  
-    SELECT d.compatibility_level  
-        FROM sys.databases as d  
-        WHERE d.name = Db_Name();  
-  
+```sql
+SELECT d.compatibility_level
+    FROM sys.databases as d
+    WHERE d.name = Db_Name();
+```
   
   
   
@@ -178,10 +175,10 @@ CREATE PROCEDURE ステートメントの T-SQL キーワード NATIVE_COMPILATI
   
   
   
-  
-    ALTER DATABASE CURRENT  
-        SET COMPATIBILITY_LEVEL = 130;  
-  
+```sql
+ALTER DATABASE CURRENT
+    SET COMPATIBILITY_LEVEL = 130;
+```
   
   
   
@@ -196,10 +193,10 @@ CREATE PROCEDURE ステートメントの T-SQL キーワード NATIVE_COMPILATI
   
   
   
-  
-    ALTER DATABASE CURRENT  
-        SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;  
-  
+```sql
+ALTER DATABASE CURRENT
+    SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
+```
   
   
   
@@ -215,9 +212,9 @@ Microsoft SQL Server では、メモリ最適化テーブルを作成する前�
   
 Azure SQL Database では、このようなファイルグループを作成する必要はありません (作成できません)。  
 
-次のサンプルの T-SQL スクリプトでは、インメモリ OLTP のデータベースを有効にし、すべての推奨設定を構成します。 SQL Server と Azure SQL Database の両方で機能します: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)。
+次のサンプルの T-SQL スクリプトでは、インメモリ OLTP のデータベースを有効にし、すべての推奨設定を構成します。 SQL Server と Azure SQL Database の両方で機能します: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)。
 
-MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、サポートされていない SQL Server 機能もあります。 制限の詳細については、「[インメモリ OLTP に対してサポートされていない SQL Server の機能](unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください。
+MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、サポートされていない SQL Server 機能もあります。 制限の詳細については、次を参照してください: [インメモリ OLTP に対してサポートされていない SQL Server の機能](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -227,18 +224,18 @@ MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、サ
   
   
   
-  
-    CREATE TABLE dbo.SalesOrder  
-    (  
-        SalesOrderId   integer        not null  IDENTITY  
-            PRIMARY KEY NONCLUSTERED,  
-        CustomerId     integer        not null,  
-        OrderDate      datetime       not null  
-    )  
-        WITH  
-            (MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA_AND_DATA);  
-  
+```sql
+CREATE TABLE dbo.SalesOrder
+    (
+        SalesOrderId   integer   not null   IDENTITY
+            PRIMARY KEY NONCLUSTERED,
+        CustomerId   integer    not null,
+        OrderDate    datetime   not null
+    )
+        WITH
+            (MEMORY_OPTIMIZED = ON,
+            DURABILITY = SCHEMA_AND_DATA);
+```
   
   
   
@@ -269,8 +266,8 @@ ALTER TABLE...ADD/DROP では、メモリ最適化テーブルの列またはイ
   
   
   
-  
-    CREATE PROCEDURE ncspRetrieveLatestSalesOrderIdForCustomerId  
+```sql
+CREATE PROCEDURE ncspRetrieveLatestSalesOrderIdForCustomerId  
         @_CustomerId   INT  
         WITH  
             NATIVE_COMPILATION,  
@@ -278,10 +275,10 @@ ALTER TABLE...ADD/DROP では、メモリ最適化テーブルの列またはイ
     AS  
     BEGIN ATOMIC  
         WITH  
-            (TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
+            (TRANSACTION ISOLATION LEVEL = SNAPSHOT,
             LANGUAGE = N'us_english')  
       
-        DECLARE @SalesOrderId int, @OrderDate datetime;  
+        DECLARE @SalesOrderId int, @OrderDate datetime;
       
         SELECT TOP 1  
                 @SalesOrderId = s.SalesOrderId,  
@@ -292,7 +289,7 @@ ALTER TABLE...ADD/DROP では、メモリ最適化テーブルの列またはイ
       
         RETURN @SalesOrderId;  
     END;  
-  
+```
   
   
   
@@ -309,13 +306,13 @@ SCHEMABINDING キーワードは、ネイティブ プロシージャで参照�
   
   
   
-  
-    INSERT into dbo.SalesOrder  
-            ( CustomerId, OrderDate )  
-        VALUES  
-            ( 42, '2013-01-13 03:35:59' ),  
-            ( 42, '2015-01-15 15:35:59' );  
-  
+```sql
+INSERT into dbo.SalesOrder  
+        ( CustomerId, OrderDate )  
+    VALUES  
+        ( 42, '2013-01-13 03:35:59' ),
+        ( 42, '2015-01-15 15:35:59' );
+```
   
   
   
@@ -323,15 +320,16 @@ EXECUTE によるネイティブ コンパイル ストアド プロシージャ
   
   
   
-  
-    DECLARE @LatestSalesOrderId int, @mesg nvarchar(128);  
+```sql
+DECLARE @LatestSalesOrderId int, @mesg nvarchar(128);
       
-    EXECUTE @LatestSalesOrderId =  
-        ncspRetrieveLatestSalesOrderIdForCustomerId 42;  
+EXECUTE @LatestSalesOrderId =  
+    ncspRetrieveLatestSalesOrderIdForCustomerId 42;
       
-    SET @mesg = CONCAT(@LatestSalesOrderId,  
-        ' = Latest SalesOrderId, for CustomerId = ', 42);  
-    PRINT @mesg;  
+SET @mesg = CONCAT(@LatestSalesOrderId,  
+    ' = Latest SalesOrderId, for CustomerId = ', 42);
+PRINT @mesg;  
+```
       
     -- Here is the actual PRINT output:  
     -- 2 = Latest SalesOrderId, for CustomerId = 42  
@@ -364,7 +362,7 @@ EXECUTE によるネイティブ コンパイル ストアド プロシージャ
 **デュアル構成:** メモリ最適化テーブルはデュアル構成になっており、アクティブ メモリ内とハード ディスク上に 1 つずつ存在します。 各トランザクションは両方のテーブルに対してコミットされます。 トランザクションは、より高速なアクティブ メモリ内のテーブルに対して操作を行います。 そのためメモリ最適化テーブルは、ディスクよりも高速なアクティブ メモリの恩恵を受けることになります。 さらに、アクティブ メモリは非常に敏捷なので、速度に関して最適化されたより高度なテーブル構造も使用できます。 高度なテーブル構造はページレスでもあるため、ラッチやスピンロックのオーバーヘッドや競合を回避できます。  
   
   
-**ロックなし:** メモリ最適化テーブルは*オプティミスティック*なアプローチにより、データの整合性と、コンカレンシーおよび高スループットとのバランスを取っています。 トランザクションの間、更新されたデータ行のどのバージョンもロックすることはありません。 これにより、特に大規模システムでは大幅に競合を減らすことができます。  
+**ロックなし:** メモリ最適化テーブルは*オプティミスティックな*アプローチにより、データの整合性と、コンカレンシーおよび高スループットとのバランスを取っています。 トランザクションの間、更新されたデータ行のどのバージョンもロックすることはありません。 これにより、特に大規模システムでは大幅に競合を減らすことができます。  
   
   
 **行のバージョン:** メモリ最適化テーブルは、更新された行をロックする代わりに、更新された行の新しいバージョンを (tempdb ではなく) テーブルに追加します。 元の行は、トランザクションがコミットされるまで保持されます。 トランザクションの間も、他のプロセスが行の元のバージョンを読み取ることができます。  
@@ -405,7 +403,7 @@ EXECUTE によるネイティブ コンパイル ストアド プロシージャ
 - [メモリ最適化テーブルのテーブルと行のサイズ](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**大規模テーブルのパーティション分割:** 大量のアクティブ メモリの需要を満たす方法の 1 つは、大規模なテーブルをパーティション分割して、 *使用中の最近の* データ行を格納する部分 (メモリ内) と、出荷済みや完了済みの注文など、 *使用していない古い* 行を格納する部分 (ディスク上) に分けることです。 このパーティション分割は、手動で設計して実装します。 次のチュートリアルを参照してください。  
+**大規模テーブルのパーティション分割:** 大量のアクティブ メモリの需要を満たす方法の 1 つは、大規模なテーブルをパーティション分割して、*使用中の最近の*データ行を格納する部分 (メモリ内) と、出荷済みや完了済みの注文など、*使用していない古い*行を格納する部分 (ディスク上) に分けることです。 このパーティション分割は、手動で設計して実装します。 次のチュートリアルを参照してください。  
   
 - [アプリケーション レベルのパーティション分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -499,5 +497,5 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
     
 インメモリ OLTP を使用して実現できるパフォーマンスの向上を実証するためのコードを提供する記事は以下のとおりです。  
   
-- 「[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 」には、大幅なパフォーマンス向上が望める小規模なデモが用意されています。  
+- 「[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)」には、大幅なパフォーマンス向上が望める小規模なデモが用意されています。  
 - 「[Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)」 (インメモリ OLTP のサンプル データベース) には、より大規模なデモが用意されています。  

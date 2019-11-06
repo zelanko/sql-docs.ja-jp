@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d254fce8d7765c6248c6e060f2a225f595f804f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104706"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLDriverConnect**に代わる**SQLConnect**します。 3 個の引数よりも多くの接続情報を必要とするデータ ソースがサポートしている**SQLConnect**、すべての接続情報、およびシステムで定義されていないデータ ソースのユーザー入力を求めるダイアログ ボックス情報。  
   
  **SQLDriverConnect**次の接続属性を提供します。  
@@ -48,7 +47,7 @@ ms.locfileid: "47597177"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLDriverConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -63,7 +62,7 @@ SQLRETURN SQLDriverConnect(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *WindowHandle*  
  [入力]ウィンドウ ハンドル。 該当する場合、アプリケーションは、親ウィンドウのハンドルを渡すことができますか、どちらの場合は null ポインターのウィンドウ ハンドルは、該当するはまたは**SQLDriverConnect**はダイアログ ボックスが表示されません。  
@@ -112,8 +111,8 @@ SQLRETURN SQLDriverConnect(
 |08S01|通信リンク エラー|前に、ドライバーとの接続に、ドライバーをしようとしましたデータ ソース間の通信リンクが失敗しました、 **SQLDriverConnect**関数が完了した処理します。|  
 |28000|無効な認証指定|ユーザー id、承認文字列またはその両方の接続文字列で指定されている (*InConnectionString*)、データ ソースで定義されている制約に違反します。|  
 |HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*szMessageText*バッファーは、エラーとその原因について説明します。|  
-|HY000|一般的なエラー: 無効なファイル dsn|(DM) 内の文字列 **InConnectionString* FILEDSN キーワードが含まれているが、.dsn ファイルの名前が見つかりませんでした。|  
-|HY000|一般的なエラー: ファイル バッファーを作成できません。|(DM) 内の文字列 **InConnectionString* FILEDSN キーワードが含まれているが、.dsn ファイルを読み取れませんでした。|  
+|HY000|一般的なエラー:無効なファイル dsn|(DM) 内の文字列 **InConnectionString* FILEDSN キーワードが含まれているが、.dsn ファイルの名前が見つかりませんでした。|  
+|HY000|一般的なエラー:ファイル バッファーを作成できません。|(DM) 内の文字列 **InConnectionString* FILEDSN キーワードが含まれているが、.dsn ファイルを読み取れませんでした。|  
 |HY001|メモリの割り当てエラー|ドライバー マネージャーは実行または完了をサポートするために必要なメモリを割り当てることができませんが、 **SQLDriverConnect**関数。<br /><br /> ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効に、 *ConnectionHandle*します。 関数が呼び出された、および実行を完了する前に、 [SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)が呼び出されて、 *ConnectionHandle*をクリックし、 **SQLDriverConnect**関数が再度呼び出されました、 *ConnectionHandle*します。<br /><br /> また、 **SQLDriverConnect**関数が呼び出された、および前に、実行を完了**SQLCancelHandle**が呼び出されて、 *ConnectionHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) 非同期的に実行中の別の関数 (いない**SQLDriverConnect**) に対して呼び出された、 *ConnectionHandle*ときに実行されていると、 **SQLDriverConnect**関数が呼び出されました。|  
@@ -161,7 +160,7 @@ SQLRETURN SQLDriverConnect(
   
  アプリケーションは後の属性値を囲む中かっこを追加する必要はありません、**ドライバー**キーワード属性にセミコロン (;) が含まれている場合を除き、この場合、中かっこが必要です。 ドライバーが受信した属性の値には、中かっこが含まれている場合、ドライバーは削除せず、返される接続文字列の一部である必要があります。  
   
- DSN または接続文字列値を中かっこで囲む ({}) 文字のいずれかを含む**{}()、;?\*=! @** ドライバーにそのまま渡されます。 ただし、キーワードでこれらの文字を使用して、ドライバー マネージャーはファイル Dsn を使用する場合はエラーを返しますが、通常の接続文字列用のドライバーに接続文字列を渡します。 キーワードの値に埋め込まれた中かっこを使用しないでください。  
+ DSN または接続文字列値を中かっこで囲む ({}) 文字のいずれかを含む **{}()、;?\*=! @** ドライバーにそのまま渡されます。 ただし、キーワードでこれらの文字を使用して、ドライバー マネージャーはファイル Dsn を使用する場合はエラーを返しますが、通常の接続文字列用のドライバーに接続文字列を渡します。 キーワードの値に埋め込まれた中かっこを使用しないでください。  
   
  接続文字列は、任意の数のドライバー定義のキーワードを含めることができます。 **ドライバー**キーワードは、システム情報の情報を使用していない、ドライバーはドライバーが接続文字列情報のみを使用してデータ ソースに接続できるように十分なキーワードを定義する必要があります。 (詳細については、このセクションの後半の「ドライバー ガイドライン」を参照してください)。ドライバーでは、どのキーワードはデータ ソースに接続するために必要なものを定義します。  
   
@@ -194,11 +193,11 @@ SQLRETURN SQLDriverConnect(
   
  ドライバー マネージャーのアクションがの値に基づいて、 *DriverCompletion*引数。  
   
--   SQL_DRIVER_PROMPT: いずれかの接続文字列が含まれない場合、**ドライバー**、 **DSN**、または**FILEDSN**キーワード、ドライバー マネージャーが、データ ソース ダイアログ ボックスが表示されます。 ダイアログ ボックスによって返されるデータ ソース名と、アプリケーションによって渡されたその他のキーワードから接続文字列が構築します。 ドライバー マネージャーが、DSN キーワードと値のペアを指定します ダイアログ ボックスによって返されるデータ ソース名が空の場合は、既定値を = です。 (このダイアログ ボックスは、"Default"という名前のデータ ソースを表示はされません)。  
+-   SQL_DRIVER_PROMPT:いずれかの接続文字列が含まれない場合、**ドライバー**、 **DSN**、または**FILEDSN**キーワード、ドライバー マネージャーが、データ ソース ダイアログ ボックスが表示されます。 ダイアログ ボックスによって返されるデータ ソース名と、アプリケーションによって渡されたその他のキーワードから接続文字列が構築します。 ドライバー マネージャーが、DSN キーワードと値のペアを指定します ダイアログ ボックスによって返されるデータ ソース名が空の場合は、既定値を = です。 (このダイアログ ボックスは、"Default"という名前のデータ ソースを表示はされません)。  
   
--   SQL_DRIVER_COMPLETE または sql_driver_complete_required の場合: アプリケーションによって指定された接続文字列が含まれている場合、 **DSN**キーワード、ドライバー マネージャーが、アプリケーションで指定された接続文字列をコピーします。 ときにと同じ操作を実行、それ以外の場合、 *DriverCompletion* SQL_DRIVER_PROMPT です。  
+-   SQL_DRIVER_COMPLETE または sql_driver_complete_required の場合:アプリケーションで指定された接続文字列が含まれている場合、 **DSN**キーワード、ドライバー マネージャーが、アプリケーションで指定された接続文字列をコピーします。 ときにと同じ操作を実行、それ以外の場合、 *DriverCompletion* SQL_DRIVER_PROMPT です。  
   
--   SQL_DRIVER_NOPROMPT: ドライバー マネージャーは、アプリケーションで指定された接続文字列をコピーします。  
+-   SQL_DRIVER_NOPROMPT:ドライバー マネージャーは、アプリケーションで指定された接続文字列をコピーします。  
   
  アプリケーションで指定された接続文字列が含まれている場合、**ドライバー**キーワード、ドライバー マネージャーが、アプリケーションで指定された接続文字列をコピーします。  
   
@@ -257,11 +256,11 @@ SQLRETURN SQLDriverConnect(
   
  値に基づく*DriverCompletion*ドライバーの接続については、ユーザー ID やパスワードなどのユーザーに求めます、データ ソースに接続します。  
   
--   SQL_DRIVER_PROMPT: ドライバーには、初期値として (あれば) 接続文字列とシステム情報からの値を使用して、ダイアログ ボックスが表示されます。 ユーザーは、ダイアログ ボックスを終了すると、ドライバーは、データ ソースに接続します。 値からの接続文字列を構築、 **DSN**または**ドライバー**キーワード\* *InConnectionString*から返される情報と、ダイアログ ボックス。 この接続文字列を配置、**OutConnectionString*バッファー。  
+-   SQL_DRIVER_PROMPT:ドライバーでは、初期値として (あれば) 接続文字列とシステム情報からの値を使用して、ダイアログ ボックスが表示されます。 ユーザーは、ダイアログ ボックスを終了すると、ドライバーは、データ ソースに接続します。 値からの接続文字列を構築、 **DSN**または**ドライバー**キーワード\* *InConnectionString*から返される情報と、ダイアログ ボックス。 この接続文字列を配置、**OutConnectionString*バッファー。  
   
--   SQL_DRIVER_COMPLETE または sql_driver_complete_required の場合: 接続文字列には、十分な情報が含まれていて、その情報が正しい場合、ドライバーは、データ ソースとコピーに接続\* *InConnectionString*に\* *OutConnectionString*します。 ときに、ドライバーが同じ操作を実行情報が見つからないか正しくない場合は、 *DriverCompletion* SQL_DRIVER_PROMPT は、その場合を除く*DriverCompletion* SQL_DRIVER_COMPLETE_ には必要に応じて、ドライバーには、コントロールしないデータ ソースに接続するために必要な情報が無効にします。  
+-   SQL_DRIVER_COMPLETE または sql_driver_complete_required の場合:接続文字列には、十分な情報が含まれていて、その情報が正しい場合、ドライバーは、データ ソースとコピーに接続\* *InConnectionString*に\* *OutConnectionString*. ときに、ドライバーが同じ操作を実行情報が見つからないか正しくない場合は、 *DriverCompletion* SQL_DRIVER_PROMPT は、その場合を除く*DriverCompletion* SQL_DRIVER_COMPLETE_ には必要に応じて、ドライバーには、コントロールしないデータ ソースに接続するために必要な情報が無効にします。  
   
--   SQL_DRIVER_NOPROMPT: 接続文字列に十分な情報が含まれている場合、ドライバーで接続するデータ ソースとコピー \* *InConnectionString*に\* *OutConnectionString*. ドライバーは SQL_ERROR を返しますそれ以外の場合、 **SQLDriverConnect**します。  
+-   SQL_DRIVER_NOPROMPT:接続文字列に十分な情報が含まれている場合、ドライバーは、データ ソースとコピーに接続\* *InConnectionString*に\* *OutConnectionString*します。 ドライバーは SQL_ERROR を返しますそれ以外の場合、 **SQLDriverConnect**します。  
   
  ドライバーのデータ ソースへの接続が成功すると、設定も\* *StringLength2Ptr*で返される使用できる出力の接続文字列の長さ **OutConnectionString*します。  
   
@@ -291,7 +290,7 @@ SQLRETURN SQLDriverConnect(
   
  詳細については、次を参照してください。 [SQLDriverConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)します。  
   
-```  
+```cpp  
 // SQLDriverConnect_ref.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  

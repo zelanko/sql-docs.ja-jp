@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f321f4851a5257ebaacccbc05ecec46ba1baae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079838"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
-  このトピックでは、以前の PowerPivot 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、PowerPivot ブックをアップグレードする方法について説明します。 新機能の詳細については、「 [PowerPivot の新機能](http://go.microsoft.com/fwlink/?LinkID=203917)」を参照してください。  
+  このトピックでは、以前の PowerPivot 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、PowerPivot ブックをアップグレードする方法について説明します。 新しい機能の詳細については、次を参照してください。 [PowerPivot で新](https://go.microsoft.com/fwlink/?LinkID=203917)します。  
   
 > [!WARNING]  
->  サーバーで自動的にアップグレードされるブックのアップグレードをロールバックすることはできません。 ブックのアップグレードが完了すると、アップグレードされた状態のままになります。 以前のバージョンを使用するには、以前のブックを SharePoint に再パブリッシュするか、以前のバージョンを復元するか、ブックを再利用します。 SharePoint でのドキュメントの復元または再利用の詳細については、「 [ごみ箱とバージョン管理を使用したコンテンツ保護を計画する](http://go.microsoft.com/fwlink/?LinkId=238669)」を参照してください。  
+>  サーバーで自動的にアップグレードされるブックのアップグレードをロールバックすることはできません。 ブックのアップグレードが完了すると、アップグレードされた状態のままになります。 以前のバージョンを使用するには、以前のブックを SharePoint に再パブリッシュするか、以前のバージョンを復元するか、ブックを再利用します。 SharePoint でのドキュメントの復元または再利用の詳細については、「 [ごみ箱とバージョン管理を使用したコンテンツ保護を計画する](https://go.microsoft.com/fwlink/?LinkId=238669)」を参照してください。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -53,24 +52,24 @@ ms.locfileid: "48190262"
 |作成|\<|サポートおよび動作|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot for SharePoint 2010**|**2012 PowerPivot for SharePoint 2010**|**2012 SP1 PowerPivot for SharePoint 2013**|  
-|**2008 R2 PowerPivot for Excel 2010**|すべての機能|**エクスペリエンス:** ユーザーはブラウザーでブックを操作し、他のソリューションのデータ ソースとして使用できます。<br /><br /> **アップグレード:** SharePoint ファームの PowerPivot System サービスで自動アップグレードが有効になっている場合、ドキュメント ライブラリのブックが自動アップグレードされます。<br /><br /> **定期データ更新:** サポートされていません。 ブックをアップグレードする必要があります。|**エクスペリエンス:** ユーザーはブックを操作し、他のソリューションのデータ ソースとして使用できます。<br /><br /> **アップグレード:** 自動アップグレードは使用できません。 SQL Server 2008 R2 ブックを、2012 バージョンまたは Office 2013 バージョンに手動でアップグレードする必要があります。<br /><br /> **定期データ更新:** サポートされていません。 ブックをアップグレードする必要があります。|  
-|**2012 PowerPivot for Excel**|サポートされていません|すべての機能|**エクスペリエンス:** ユーザーはブラウザーでブックを操作し、他のソリューションのデータ ソースとして使用できます。 定期データ更新を使用できます。<br /><br /> **アップグレード:** 自動アップグレードはサポートされていません。 手動でブックを Office 2013 バージョンにアップグレードできます。<br /><br /> **定期データ更新:** サポートされています。|  
+|**2008 R2 PowerPivot for Excel 2010**|すべての機能|**エクスペリエンス:** ユーザーは、ブラウザーでブックを操作し、他のソリューションのデータ ソースとして使用できます。<br /><br /> **アップグレード:** ブックが自動アップグレード ドキュメント ライブラリ内の PowerPivot system サービス、SharePoint ファームでの自動アップグレードが有効になっている場合<br /><br /> **データ更新をスケジュールします。** サポートされていません。 ブックをアップグレードする必要があります。|**エクスペリエンス:** ユーザーでは、ブックを操作でき、他のソリューションのデータ ソースとして使用することができます。<br /><br /> **アップグレード:** 自動アップグレードは、ご利用いただけません。 SQL Server 2008 R2 ブックを、2012 バージョンまたは Office 2013 バージョンに手動でアップグレードする必要があります。<br /><br /> **データ更新をスケジュールします。** サポートされていません。 ブックをアップグレードする必要があります。|  
+|**2012 PowerPivot for Excel**|サポートされていません|すべての機能|**エクスペリエンス:** ユーザーは、ブラウザーでブックを操作し、他のソリューションのデータ ソースとして使用できます。 定期データ更新を使用できます。<br /><br /> **アップグレード:** 自動アップグレードがサポートされていません。 手動でブックを Office 2013 バージョンにアップグレードできます。<br /><br /> **定期データ更新:** サポートされています。|  
 |**Excel 2013**|サポートされていません|サポートされていません|すべての機能|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> SQL Server 2008 R2 ブックから SQL Server 2012 Service Pack 1 (SP1) ブックへのアップグレード  
  ここでは、SQL Server 2008 R2 の PowerPivot for Excel 2010 ブックから、SQL Server 2012 SP1 の PowerPivot for Excel 2013 ブックへアップグレードする方法について説明します。  
   
- **動作変更:** SQL Server 2008 R2 の PowerPivot ブックを SQL Server 2012 SP1 の PowerPivot for SharePoint 2013 で使用するときに、ブックは自動的にはアップグレードされません。 そのため、SQL Server 2008 R2 の PowerPivot ブックの定期データ更新は機能しません。  
+ **動作変更:** SQL Server 2008 R2 PowerPivot ブックは自動的にアップグレードされませんで SQL Server 2012 SP1 PowerPivot for SharePoint 2013 使用している場合。 そのため、SQL Server 2008 R2 の PowerPivot ブックの定期データ更新は機能しません。  
   
  2008 R2 ブックは、PowerPivot for SharePoint 2013 で開きますが、定期データ更新は機能しません。 更新履歴を確認すると、次のようなエラー メッセージが表示されます。  
   
- 「ブックに、サポートされていない PowerPivot モデルが含まれています。 ブックの PowerPivot モデルは、SQL Server 2008 R2 PowerPivot for Excel 2010 形式です。 サポートされている PowerPivot モデルは、  
+ "ブックには、サポートされていない PowerPivot モデルが含まれています。 ブックの PowerPivot モデルは、SQL Server 2008 R2 PowerPivot for Excel 2010 形式です。 サポートされている PowerPivot モデルは、  
   
 -   SQL Server 2012 PowerPivot for Excel 2010  
   
 -   または SQL Server 2012 PowerPivot for Excel 2013 です。」  
   
- **ブックをアップグレードする方法:** 定期データ更新は、ブックを 2012 ブックにアップグレードするまで機能しません。 ブックとブックに含まれるモデルをアップグレードするには、次のいずれかの手順を実行します。  
+ **ブックをアップグレードする方法。** ブックを 2012年ブックにアップグレードするまで、スケジュールされたデータの更新は機能しません。 ブックとブックに含まれるモデルをアップグレードするには、次のいずれかの手順を実行します。  
   
 -   SQL Server 2012 PowerPivot for Excel アドインがインストールされた Microsoft Excel 2010 でブックをダウンロードして開きます。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48190262"
   
  ブックをアップグレードすると、以前のバージョンのブックで定期データ更新を試みると発生する、次のエラーが解決されます。  
   
- 「前のバージョンの PowerPivot で作成されたブックに対する更新操作は使用できません。」  
+ 「以前のバージョンの PowerPivot で作成されたブックに対する更新操作はできません。」  
   
  **ブックをアップグレードする方法**  
   
@@ -110,15 +109,15 @@ ms.locfileid: "48190262"
   
  ブックをアップグレードすると、以前のバージョンのブックで定期データ更新を試みると発生する、次のエラーが解決されます。  
   
- 「前のバージョンの PowerPivot で作成されたブックに対する更新操作は使用できません。」  
+ 「以前のバージョンの PowerPivot で作成されたブックに対する更新操作はできません。」  
   
  **ブックをアップグレードする方法**  
   
  アップグレードには 2 つの方法があります。  
   
-1.  あるコンピューター上で Excel で開くことによって手動で各ブックをアップグレード、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]バージョンの PowerPivot for Excel、し、サーバーに再発行します。 新しいバージョンのアドインでブックを開くと、内部でいくつかの処理が行われます。具体的には、ブックのデータ接続文字列でデータ プロバイダーが MSOLAP.5 に更新され、メタデータが更新され、新しい実装に対応するためにリレーションシップが再作成されます。  
+1.  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] バージョンの PowerPivot for Excel がインストールされているコンピューターの Excel でブックを開いて各ブックを手動でアップグレードし、サーバーにブックを再発行します。 新しいバージョンのアドインでブックを開くと、内部でいくつかの処理が行われます。具体的には、ブックのデータ接続文字列でデータ プロバイダーが MSOLAP.5 に更新され、メタデータが更新され、新しい実装に対応するためにリレーションシップが再作成されます。  
   
-2.  または、SharePoint 管理者は自動的にアップグレードする SharePoint ファームで PowerPivot System サービスの自動アップグレード機能できるように、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]定期データ更新の実行 (ブックのみである時に、PowerPivot ブック用に構成されたスケジュールされたデータ更新がアップグレードされます)。  
+2.  もう 1 つの方法では、SharePoint 管理者が SharePoint ファームの PowerPivot System サービスの自動アップグレード機能を有効にして、定期データ更新が実行されると [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] PowerPivot ブックが自動的にアップグレードされるようにできます (定期データ更新用に構成されているブックのみがアップグレードされます)。  
   
     > [!NOTE]  
     >  自動アップグレードは、サーバー構成機能です。特定のブック、ライブラリ、またはサイト コレクションについては有効または無効にできません。  
@@ -133,22 +132,22 @@ ms.locfileid: "48190262"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- Get-PowerPivotSystemService からの出力は、プロパティとそれに対応する値のリストです。 表示する必要があります`WorkbookUpgradeOnDataRefresh`プロパティの一覧。 自動アップグレードが有効になっている場合、値は **true** に設定されます。 **false**の場合は、次の手順を続行し、ブックの自動アップグレードを有効にします。  
+ Get-PowerPivotSystemService からの出力は、プロパティとそれに対応する値のリストです。 プロパティ リストの `WorkbookUpgradeOnDataRefresh` を確認してください。 自動アップグレードが有効になっている場合、値は **true** に設定されます。 **false**の場合は、次の手順を続行し、ブックの自動アップグレードを有効にします。  
   
  ブックの自動アップグレードを有効にするには、次のコマンドを実行します。  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  アップグレードした後のブックは、定期データ更新および PowerPivot for Excel アドインの新機能を使用できます。  
   
 ##  <a name="bkmk_runold"></a> 新しいサーバーでの複数バージョンのブックの実行  
- [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] の [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] インスタンスでは、古いバージョンと新しいバージョンの PowerPivot ブックを同時に実行できます。  
+ [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] の [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]インスタンスでは、古いバージョンと新しいバージョンの PowerPivot ブックを同時に実行できます。  
   
  サーバーをインストールした方法によっては、つのサーバー上で古いブックと新しいブックにアクセスする前に、以前のバージョンの Analysis Services OLE DB プロバイダーのインストー**ルが必要になる場合があります**。  
   
- 以前の [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] SQL Server インスタンスでの新しいバージョンのブックの発行はできません。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] のインスタンスでは、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] バージョンで作成したブックは読み込まれません。SQL Server 2012 のインスタンスでは、Excel で PowerPivot の [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] バージョンを使用して作成した高度なデータ モデルが含まれる Office 2013 ブックは読み込まれません。  
+ 以前の [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] SQL Server インスタンスでの新しいバージョンのブックの発行はできません。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] のインスタンスでは、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]バージョンで作成したブックは読み込まれません。SQL Server 2012 のインスタンスでは、Excel で PowerPivot の [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] バージョンを使用して作成した高度なデータ モデルが含まれる Office 2013 ブックは読み込まれません。  
   
 ###  <a name="bkmk_msolapxslx"></a> PowerPivot ブックで MSOLAP データ プロバイダーの情報を確認する方法  
  PowerPivot ブックで使用される OLE DB プロバイダーを確認するには、次の手順に従います。 データの接続情報を確認するために [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] アドインをインストールする必要はありません。  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.advancedsaveoptions
@@ -14,12 +14,12 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c90e963bd5e6eb59ef412ec26ed1b56d4c4ef08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678996"
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
   このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 アクセスする、 **保存オプションの** ダイアログ ボックスで、**ファイル** メニューのをクリックして**保存**\<クエリ名 >**として .sql**に開く、**ファイルに名前を付けて**ダイアログ ボックスで下向きの矢印をクリックして、**保存**ボタンをクリックし、をクリックし、**エンコード付きで保存**。  

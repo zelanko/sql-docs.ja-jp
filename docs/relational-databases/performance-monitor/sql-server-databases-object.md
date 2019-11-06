@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093603"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52158919"
 |**Backup/Restore Throughput/sec**|データベースのバックアップ操作と復元操作の読み取り/書き込みの 1 秒あたりのスループット。 たとえば、より多くのバックアップ デバイスを並行して使用した場合、またはより高速なデバイスを使用した場合に、データベース バックアップ操作のパフォーマンスがどのように変化するかを計測することができます。 データベースのバックアップ操作または復元操作のスループットを計測すると、バックアップ操作と復元操作の進行状況およびパフォーマンスを調べることができます。|  
 |**Bulk Copy Rows/sec**|1 秒間に一括コピーされた行数。|  
 |**Bulk Copy Throughput/sec**|1 秒間に一括コピーされたデータの量 (KB)。|  
-|**Commit table entries**|データベースのコミット テーブルのインメモリ部分のサイズ。 詳細については、「[sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)」を参照してください。|  
+|**Commit table entries**|データベースのコミット テーブルのインメモリ部分のサイズ (行数)。 詳細については、「[sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)」を参照してください。|  
 |**Data File(s) Size (KB)**|データベース内のすべてのデータ ファイルの合計サイズ (KB)。自動拡張した分のサイズも含みます。 このカウンターは、 **tempdb**の正しいサイズを判断する場合などに役立ちます。|  
 |**DBCC Logical Scan Bytes/sec**|DBCC (データベース コンソール コマンド) の 1 秒あたりの論理読み取りスキャン バイト数。|  
 |**Group Commit Time/sec**|1 秒あたりのグループ停止時間 (マイクロ秒)。|
@@ -70,7 +69,7 @@ ms.locfileid: "52158919"
 |**Log Pool Total Active Log Size**|共有キャッシュ バッファー マネージャーに現在格納されているアクティブなログの合計 (バイト単位) です。|
 |**Log Pool Total Shared Pool Size**|共有キャッシュ バッファー マネージャーの現在のメモリ使用量の合計 (バイト単位) です。|
 |**Log Shrinks**|このデータベースのログ圧縮の総数。|  
-|**Log Truncations**|トランザクション ログが圧縮された回数。|  
+|**Log Truncations**|トランザクション ログが切り捨てられた回数 (単純復旧モデルの場合)。|  
 |**Percent Log Used**|ログの中で使用中の領域の割合。|  
 |**Repl.Pending Xacts**|レプリケーション用にマークされていてまだディストリビューション データベースに配信されていないパブリケーション データベースのトランザクション ログ内のトランザクションの数。|  
 |**Repl.Trans.Rate**|1 秒間に、パブリケーション データベースのトランザクション ログから読み取られ、ディストリビューション データベースに配信されたトランザクションの数。|  

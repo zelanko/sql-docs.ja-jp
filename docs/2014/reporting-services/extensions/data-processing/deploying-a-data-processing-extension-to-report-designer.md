@@ -1,28 +1,26 @@
 ---
-title: データ処理拡張機能をレポート デザイナーに配置する方法 | Microsoft Docs
+title: 操作方法:レポート デザイナーにデータ処理拡張機能の配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 242071ac3ee49932f1767d6736cba5c17993ff40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164327"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>データ処理拡張機能をレポート デザイナーに配置する方法
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>操作方法:データ処理拡張機能をレポート デザイナーに配置する
   レポートを設計する際、レポート デザイナーは、データ処理拡張機能を使用してデータを取得し、処理します。 データ処理拡張機能アセンブリは、プライベート アセンブリとしてレポート デザイナーに配置する必要があります。 さらに、レポート デザイナー構成ファイル RSReportDesigner.config にエントリを作成する必要があります。  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>データ処理拡張機能のアセンブリを配置するには  

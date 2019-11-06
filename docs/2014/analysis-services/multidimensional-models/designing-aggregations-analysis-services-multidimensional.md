@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - aggregations [Analysis Services], partitions
@@ -14,12 +13,12 @@ ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b045ae1d214628ac10acc699ac82a3a7b77a7e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 307d2ff0419cf5def9f422f08daf349b80bcad2e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075206"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>集計のデザイン (Analysis Services - 多次元)
   集計とは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で高速なクエリ応答を実現するために、キューブ データを事前に計算してまとめたものです。  
@@ -38,7 +37,7 @@ ms.locfileid: "48198562"
   
 -   集計をデザインしない。  
   
- ストレージをデザインするには、ウィザードが対象サーバー上の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に接続できる必要があります。 対象サーバーで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が実行されていない場合や、それ以外の理由でストレージ デザイン プロセスが対象サーバーに接続できない場合は、ウィザードにエラー メッセージが表示されます。  
+ ストレージをデザインするには、ウィザードがターゲット サーバー上の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に接続できる必要があります。 ターゲット サーバーで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が実行されていない場合や、それ以外の理由でストレージ デザイン プロセスがターゲット サーバーに接続できない場合は、ウィザードにエラー メッセージが表示されます。  
   
  ストレージ デザイン ウィザードの最後の手順では、処理を今すぐに行うか、後で行うかを指定するオプションが表示されます。 すぐに処理すると、このウィザードでデザインした集計が作成されますが、保留にすると、デザインした集計は後で処理するために保存され、処理しないでデザイン行動を継続できます。 パーティションのサイズによっては、処理にかなりの時間がかかる場合があります。 必要に応じて、パーティションの処理を中断することもできます。  
   

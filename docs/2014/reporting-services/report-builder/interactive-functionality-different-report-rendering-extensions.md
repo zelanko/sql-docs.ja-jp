@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eb066c069d9cc1e15d442627e018818b35097e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107800"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>さまざまなレポート表示拡張機能の対話機能 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 実行時に、レポートを操作するための対話型レポート機能を提供します。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートを実行時に操作できるようにする対話的なレポート機能が用意されています。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,7 +74,7 @@ ms.locfileid: "48174012"
 |-------------------|-------------------------|  
 |プレビュー/レポート ビューアー、HTML|ユーザーはリンクをクリックして、外部の Web ページを新しいブラウザー ウィンドウで開きます。|  
 |PDF|ハイパーリンクは、PDF 表示拡張機能によって表示されます。 ユーザーがハイパーリンクをクリックすると、リンク先のページがブラウザーに表示されます。|  
-|Excel|ハイパーリンクは、Excel で表示されます。|  
+|[エクスポート]|ハイパーリンクは、Excel で表示されます。|  
 |Word|ハイパーリンクは、Word で表示されます。|  
 |その他|ハイパーリンクは、MHTML、XML、CSV、または Image では使用できません。<br /><br /> MHTML および Image の場合、外部画像は静的ピクチャとして表示されます。|  
   
@@ -109,11 +108,11 @@ ms.locfileid: "48174012"
 |Word|レポート サーバーは、現在のレポート内のフィルター処理されたデータを使用して、レポートを Word にエクスポートします。|  
 |その他|レポート サーバーは、現在のレポート内のフィルター処理されたデータを使用して、レポートをその他の形式にエクスポートします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [グラフ&#40;レポート ビルダーおよび SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

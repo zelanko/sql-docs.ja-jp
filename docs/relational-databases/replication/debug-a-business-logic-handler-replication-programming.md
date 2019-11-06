@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35f53ef33d1cf9316fcb7225ab5baf67a3b33383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01a1e4be7476b2f683345e8bfd23f4fcf0e90642
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063084"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>ビジネス ロジック ハンドラーのデバッグ (レプリケーション プログラミング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47804061"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>ローカル コンピューターでビジネス ロジック ハンドラーをデバッグするには  
   
-1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、「[Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)」(パブリッシングとディストリビューションの構成) と「[Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)」(パブリケーションとアーティクルの作成、変更、削除 (レプリケーション)) をご覧ください。  
+1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、「[パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)」と「[パブリケーションの作成](../../relational-databases/replication/publish/create-a-publication.md)」をご参照ください。  
   
 2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
   

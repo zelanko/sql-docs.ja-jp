@@ -1,71 +1,68 @@
 ---
-title: R と SQL Server Machine Learning を使用してデータベース内分析のチュートリアル |Microsoft Docs
-description: R プログラミング言語のコードでは、SQL Server のストアド プロシージャおよび T-SQL 関数を埋め込む方法について説明します。
+title: R を使用したデータベース内分析のチュートリアル
+description: SQL Server ストアドプロシージャおよび T-sql 関数に R プログラミング言語コードを埋め込む方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 80c4d39e87984b022340079be4d944ed6ad963e3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 5b2629a50a73208181cc14fd843cd9ab9c0b05df
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030649"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633606"
 ---
-# <a name="tutorial-in-database-r-analytics-for-sql-developers"></a>SQL 開発者向けのチュートリアル: データベース内の R の分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向け R Data Analytics
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-構築し、R ベースの machine learning を使用してソリューションを展開する R の統合について説明します SQL プログラマ向けのこのチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 
+SQL プログラマー向けのこのチュートリアルでは、SQL Server 上の[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)データベースを使用して r ベースの機械学習ソリューションを構築してデプロイすることで、r の統合について学習します。 T-sql、SQL Server Management Studio、およびデータベースエンジンインスタンスを [Machine Learning Services] ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)および R 言語サポートと共に使用します。
 
-このチュートリアルでは、ワークフローをモデル化データで使用される R 関数を紹介します。 手順には、データの探索、ビルドして二項分類モデルとモデルのデプロイが含まれます。 ニューヨーク市タクシーのデータセットと Limosine 委員会のサンプル データを使用し、ビルドは、モデルが旅行に日、しかも、距離、乗車場所の時間に基づくヒントに可能性があるかどうかを予測します。 このチュートリアルで使用する R コードのすべては、作成して、Management Studio で実行するストアド プロシージャにラップされます。
+このチュートリアルでは、データモデリングワークフローで使用される R 関数について説明します。 手順には、データの探索、二項分類モデルの構築とトレーニング、モデルのデプロイが含まれます。 ビルドするモデルは、旅行が、時間、距離旅行、集荷位置に基づいてヒントを生成する可能性があるかどうかを予測します。 
 
+このチュートリアルで使用するすべての R コードは、Management Studio で作成して実行するストアドプロシージャにラップされています。
 
-> [!NOTE]
-> 
-> このチュートリアルは、R と Python の両方で使用できます。 Python のバージョンについては、次を参照してください。 [in-database analytics Python 開発者向けの](../tutorials/sqldev-in-database-python-for-sql-developers.md)します。
+## <a name="background-for-sql-developers"></a>SQL 開発者のための背景
 
-## <a name="overview"></a>概要
+機械学習ソリューションを構築するプロセスは、複数のツールに関連する可能性がある複雑なソリューションであり、複数の段階にわたって複数の分野の専門家を調整します。
 
-Machine learning ソリューションを構築するプロセスをいくつかのフェーズの間で複数のツール、および領域の専門家の調整を伴う複雑なものを示します。
++ データの取得とクリーニング
++ データの調査とモデリングに役立つ機能の構築
++ モデルのトレーニングとチューニング
++ 運用環境への配置
 
-+ 取得して、データのクリーニング
-+ データの探索とモデリングの便利な機能の作成
-+ トレーニング セットと、モデルの調整
-+ 運用環境へのデプロイ
+実際のコードの開発とテストは、専用の R 開発環境を使用して実行することをお勧めします。 ただし、スクリプトが完全にテストされた後は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]使い慣れた[!INCLUDE[tsql](../../includes/tsql-md.md)]環境でストアドプロシージャを使用して簡単に配置できます。
 
-実際のコードの開発とテストに専用の開発環境を使用してを実行が最適です。 ただし、スクリプトを完全にテストした後に簡単にデプロイできますを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い慣れた環境でのストアド プロシージャ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。
+このマルチパートチュートリアルの目的は、"完成した R コード" を SQL Server に移行するための一般的なワークフローの概要です。 
 
-R に新しい SQL プログラマでは、R 開発者が SQL では、このマルチパート チュートリアルに新しいされるかは、R と SQL Server の in-database 分析を実施するための一般的なワークフローを紹介します。 
+- [レッスン 1:ストアドプロシージャで R 関数を呼び出して、データの形状と分布を調べ、視覚化する](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [レッスン 1: の探索し、ストアド プロシージャで R 関数を呼び出すことによってデータのシェイプと分布を視覚化](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [レッスン 2: T-SQL 関数で R を使用してデータ機能を作成します。](sqldev-create-data-features-using-t-sql.md)
+- [レッスン 2:T-sql 関数で R を使用してデータ機能を作成する](sqldev-create-data-features-using-t-sql.md)
   
-- [レッスン 3: トレーニングし、関数およびストアド プロシージャを使用して R モデルの保存](sqldev-train-and-save-a-model-using-t-sql.md)
+- [レッスン 3:関数とストアドプロシージャを使用した R モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [レッスン 4: ストアド プロシージャで R モデルを使用して潜在的な結果を予測します。](../tutorials/sqldev-operationalize-the-model.md)
+- [レッスン 4:ストアドプロシージャで R モデルを使用して潜在的な結果を予測する](../tutorials/sqldev-operationalize-the-model.md)
 
-モデルをデータベースに保存した後から予測モデルを呼び出す[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを使用します。
+モデルがデータベースに保存された後、ストアドプロシージャを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)] 、からの予測のためにモデルを呼び出します。
 
 ## <a name="prerequisites"></a>前提条件
 
-すべてのタスクを行うことができますを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。
+すべてのタスクは、の[!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ストアドプロシージャを使用して実行できます。
 
-このチュートリアルは、データベースとテーブルを作成、データをインポートする SQL クエリの記述などの基本的なデータベース操作に関する知識を前提とします。 R. を把握することを想定しませんそのため、すべての R コードが提供されます。 
+このチュートリアルでは、データベースとテーブルの作成、データのインポート、SQL クエリの作成などの基本的なデータベース操作について理解していることを前提としています。 R がわかっていることを前提としていません。そのため、すべての R コードが提供されます。 
 
-+ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)または[有効になっている R を使用した SQL Server 2017 Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [R が有効になっている](../install/sql-machine-learning-services-windows-install.md#verify-installation) [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md#verify-installation)または SQL Server Machine Learning Services
 
-+ [R ライブラリ](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [R ライブラリ](../package-management/r-package-information.md)
 
 + [権限](../security/user-permission.md)
 
-+ [NYC タクシー デモ データベース](demo-data-nyctaxi-in-sql.md)
++ [NYC タクシーデモデータベース](demo-data-nyctaxi-in-sql.md)
 
 
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [NYC タクシーのデータベースを設定します。](demo-data-nyctaxi-in-sql.md)
+> [ストアドプロシージャで R 関数を使用してデータの探索と視覚化を行う](../tutorials/sqldev-explore-and-visualize-the-data.md)

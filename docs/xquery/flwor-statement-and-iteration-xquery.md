@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038905"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR ステートメントと繰り返し (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "51662882"
   
  たとえば、次のクエリは最初の製造拠点で <`Step`> 要素を繰り返し、<`Step`> ノードの文字列値を返します。  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -74,7 +73,7 @@ SELECT @x.query('
 ')  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
@@ -82,7 +81,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  次のクエリは上記のクエリと似ていますが、ProductModel テーブルの型指定された xml 列である Instructions 列に対して指定されている点が異なります。 特定の製品に対し、最初のワーク センター拠点で行われるすべての製造手順 (<`step`> 要素) を繰り返します。  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -115,7 +114,7 @@ the aluminum sheet. ....
   
  これ以外に許可されている入力シーケンスの例を示します。  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -146,7 +145,7 @@ SELECT @x.query('
   
  製造手順は、AdventureWorks サンプル データベースに格納されている、**指示**の列、 **Production.ProductModel**テーブルがある、次の形式。  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -158,11 +157,11 @@ SELECT @x.query('
   
  次のクエリは、ワーク センター拠点の属性を子要素として返す <`Location`> 要素を含んだ新しい XML を生成します。  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -170,7 +169,7 @@ SELECT @x.query('
   
  クエリは次のとおりです。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -196,7 +195,7 @@ where ProductModelID=7
   
  これは、結果の一部です。  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -214,7 +213,7 @@ where ProductModelID=7
   
  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース内の製造手順には、必要なツールとツールを使用する場所の情報が保存されています。 次のクエリは、`let` 句を使用して、製品モデルの作成に必要なツールと、それぞれのツールが必要となる場所を一覧表示します。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -227,11 +226,11 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>where 句の使用  
- `where` 句を使用して、繰り返しの結果をフィルター選択できます。 このことを次の例で説明します。  
+ 使用することができます、`where`句をイテレーションの結果をフィルター処理します。 このことを次の例で説明します。  
   
  自転車を製造するときは、ワーク センター拠点をいくつか経て製造プロセスが進行します。 ワーク センター拠点ごとに、一連の製造手順が定義されています。 次のクエリは、あるモデルの自転車を製造するためのワーク センター拠点のうち、製造手順が 3 工程未満の拠点を取得します。 つまり、<`step`> 要素が 3 つ未満のものだけが取得されます。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -251,7 +250,7 @@ where ProductModelID=7
   
 -   `return` 式で、繰り返しの結果から必要な XML を生成します。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <Location LocationID="30"/>   
@@ -270,7 +269,7 @@ where ProductModelID=7
 ## <a name="multiple-variable-binding-in-flwor"></a>FLWOR での複数の変数のバインド  
  1 つの FLWOR 式で入力シーケンスに複数の変数をバインドできます。 次の例では、型指定されていない xml 変数に対してクエリを指定しています。 FLWOR 式が、各 <`Location`> 要素の最初の <`Step`> 子要素を返します。  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -302,7 +301,7 @@ SELECT @x.query('
   
 -   `$Loc` は、`$FirstStep` 変数に関連付けられた式で指定しています。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 Manu step 1 at Loc 1   
@@ -311,7 +310,7 @@ Manu step 1 at Loc 2
   
  次のクエリは、型指定された、Instructions 列に対して指定されている点と同様、 **xml**  列の**ProductModel**テーブル。 [XML の構築 (XQuery)](../xquery/xml-construction-xquery.md)する XML を生成するために使用します。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -335,7 +334,7 @@ WHERE ProductModelID=7
   
  結果の一部を次に示します。  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -360,7 +359,7 @@ WHERE ProductModelID=7
   
  次のクエリは、AdditionalContactInfo 列から特定の顧客のすべての電話番号を取得します。 結果は電話番号順に並べ替えます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -380,9 +379,9 @@ WHERE BusinessEntityID=291;
 order by data($a/act:number[1]) descending  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -393,7 +392,7 @@ order by data($a/act:number[1]) descending
   
  名前空間は、クエリのプロローグではなく WITH XMLNAMESPACES でも宣言できます。  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -409,7 +408,7 @@ WHERE BusinessEntityID=291;
   
  属性値による並べ替えも行えます。 たとえば、次のクエリでは、新しく作成した、LocationID 属性および LaborHours 属性を含む <`Location`> 要素を LaborHours 属性の降順で並べ替えて取得します。 結果として、労働時間が最も長いワーク センター拠点が最初に返されます。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -424,7 +423,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <Location LocationID="60" LaborHours="4"/>  
@@ -437,7 +436,7 @@ WHERE ProductModelID=7;
   
  次のクエリは、結果を要素名順に並べ替えます。 製品カタログから特定の製品の仕様を取得します。 製品仕様は <`Specifications`> 要素の子です。  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -455,9 +454,9 @@ where ProductModelID=19;
   
 -   `order by (local-name($a))` 式でシーケンスを要素名のローカル部分の順に並べ替えます。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -467,7 +466,7 @@ where ProductModelID=19;
   
  並べ替え式が空の結果を返したノードは、次の例のようにシーケンスの先頭に来ます。  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -482,9 +481,9 @@ select @x.query('
 ')  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -492,7 +491,7 @@ select @x.query('
   
  次の例のように、並べ替え条件は複数指定できます。 この例のクエリは、<`Employee`> 要素をまず Title 属性の値で並べ替え、次に Administrator 属性の値で並べ替えます。  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -511,9 +510,9 @@ order by $e/@Title ascending, $e/@Gender descending
 ')  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  

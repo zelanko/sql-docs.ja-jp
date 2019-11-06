@@ -23,15 +23,14 @@ helpviewer_keywords:
 - transferring Database Master Keys
 - RESTORE MASTER KEY statement
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ef8810837eeb9f5d63b9c01579f7c291fde924f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 3f821e16baa3853926da1323457385365ea64807
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141262"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

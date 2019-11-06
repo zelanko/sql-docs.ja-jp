@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f404d3cbba96aae8157b4c7f3261062b4bf33a39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014242"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>[結果] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47652292"
 ##  <a name="PageOptions"></a> [結果] ページのオプション  
  **[概要]** グリッドに含まれる列は、次のとおりです。  
   
- **名前**  
+ **[名前]**  
  特定の操作について説明する語句が表示されます。  
   
  **結果**  

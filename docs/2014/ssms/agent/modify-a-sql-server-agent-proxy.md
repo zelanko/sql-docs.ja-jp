@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], modifying
@@ -13,12 +13,12 @@ ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58189921fbf5207d3de320274c2b314e64e941d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211367"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを変更する方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48180982"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -62,11 +62,11 @@ ms.locfileid: "48180982"
   
 3.  プラス記号をクリックして **[プロキシ]** フォルダーを展開します。  
   
-4.  プロキシにサブシステムのノードを展開するプラス記号をクリックします (たとえば **[ActiveX スクリプト]**)。  
+4.  プロキシにサブシステムのノードを展開するプラス記号をクリックします (たとえば **[ActiveX スクリプト]** )。  
   
 5.  変更するプロキシ アカウントを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  *[<プロキシ名> - プロキシ アカウントのプロパティ]* ダイアログ ボックスで、必要に応じてプロキシ アカウントを変更します。 このダイアログ ボックスのオプションについては、「[SQL Server エージェント プロキシの作成](create-a-sql-server-agent-proxy.md)」を参照してください。  
+6.  _proxy_name_ **[ プロキシ アカウントのプロパティ]** ダイアログ ボックスで、必要に応じてプロキシ アカウントを変更します。 このダイアログ ボックスのオプションについては、「[SQL Server エージェント プロキシの作成](create-a-sql-server-agent-proxy.md)」を参照してください。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   

@@ -16,12 +16,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e59fe6624c84c9918e659063d4d46ca0d7337b4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa5c6b607fa7523380950ecd89f9cae20ffc6f21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63228952"
 ---
 # <a name="performing-distributed-transactions"></a>分散トランザクションの実行
   Microsoft 分散トランザクション コーディネーター (MS DTC) により、アプリケーションで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の複数のインスタンスにトランザクションを分散できるようになります。 また、Open Group DTP XA 標準に準拠するトランザクション マネージャーによって管理されるトランザクションに参加させることもできます。  
@@ -30,7 +30,7 @@ ms.locfileid: "48135912"
   
  MS DTC を使用している場合ただし、MS DTC がトランザクション マネージャーとアプリケーションを使用して、不要になった**sqlendtran を呼び出してと**。  
   
- 分散トランザクションに参加しているときに 2 番目の分散トランザクションに参加すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは元の分散トランザクションへの参加を解除して、新しいトランザクションに参加します。 詳細についてを参照してください[DTC プログラマーズ リファレンス](http://msdn.microsoft.com/library/ms686108\(VS.85\).aspx)。  
+ 分散トランザクションに参加しているときに 2 番目の分散トランザクションに参加すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは元の分散トランザクションへの参加を解除して、新しいトランザクションに参加します。 詳細についてを参照してください[DTC プログラマーズ リファレンス](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx)。  
   
 ## <a name="see-also"></a>参照  
  [トランザクションを実行する&#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  

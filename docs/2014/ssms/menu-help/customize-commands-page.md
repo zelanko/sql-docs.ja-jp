@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.vs.customizecom.f1
-- vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1636d8a99cd337afc1c2ec28f2463455a7b9ff98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62470019"
 ---
 # <a name="customize-commands-page"></a>[カスタマイズ] ([コマンド] ページ)
   このダイアログ ボックスでは、ツール バーおよびメニューのコマンドを追加したり、削除したりできます。また、ツール バー ボタンやメニュー コマンドに使用されているイメージを変更できます。 **[コマンド]** ページにアクセスするには、 **[ツール]** メニューの **[カスタマイズ]** をクリックし、次に **[コマンド]** をクリックします。  
@@ -41,5 +40,3 @@ ms.locfileid: "48158412"
   
 ## <a name="see-also"></a>参照  
  [メニューとショートカット キーのカスタマイズ](../customize-menus-and-shortcut-keys.md)  
-  
-  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10148"
@@ -27,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 55f7b30650abdacc9a7fe85ec1e9de77d36cecd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105853"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
   座標ベースのグラフ (縦棒グラフ、横棒グラフ、面グラフ、散布図、線グラフ、および範囲グラフ) では、2 本の軸を使用してデータ間の関係を分類および表示します。 それぞれの軸には、異なる書式が適用されます。  
@@ -52,7 +51,7 @@ ms.locfileid: "48185392"
   
  データセットのフィールドをグラフ上にドラッグすると、グラフでは、そのフィールドがカテゴリ軸と値軸のどちらに属するかが決定されます。  
   
- 値軸は、通常、グラフの縦軸 (Y 軸) です。 これは、グラフ化される数値データの値を表示するために使用されます。 データ フィールドの領域にドラッグされたフィールドは、値軸にプロットされます。 カテゴリ軸は、通常、グラフの横軸 (X 軸) です。 横棒グラフの場合、これらの軸は逆になります。 横棒グラフでは、カテゴリ軸が縦軸、値軸が横軸になります。 詳細については、次を参照してください。[横棒グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
+ 値軸は、通常、グラフの縦軸 (Y 軸) です。 これは、グラフ化される数値データの値を表示するために使用されます。 データ フィールドの領域にドラッグされたフィールドは、値軸にプロットされます。 カテゴリ軸は、通常、グラフの横軸 (X 軸) です。 横棒グラフの場合、これらの軸は逆になります。 横棒グラフでは、カテゴリ軸が縦軸、値軸が横軸になります。 詳細については、「 [横棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>グラフで軸ラベルの間隔を計算する方法  
  軸ラベルの書式を設定する前に、グラフで軸ラベルの間隔がどのように計算されるかを理解する必要があります。 これにより、目的とする軸のラベル付け動作を実現するのに必要なプロパティを設定できます。  
@@ -92,13 +91,13 @@ ms.locfileid: "48185392"
  Name フィールドはカテゴリ軸にプロットされます。 グラフでは、4 ～ 6 個のラベルが計算され、ラベルが重ならないようにカテゴリ軸でラベルを調整する方法を決定する自動調整設定が計算されます。 その結果、一部のカテゴリ ラベルは省略される場合があります。 各軸の自動調整オプションを個別にオーバーライドすることができます。  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>カテゴリ軸のすべてのラベルの表示  
- 値軸では、軸の間隔により、グラフ上のデータ ポイントに一貫性のある基準が提供されます。 ただしカテゴリ軸では、この機能により、軸ラベルなしでカテゴリが表示されることがあります。 ところが、カテゴリにはすべてラベルを付けるのが普通です。 間隔数を 1 に設定すると、すべてのカテゴリを表示できます。  詳細については、次を参照してください。[軸の間隔を指定&#40;レポート ビルダーおよび SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)します。  
+ 値軸では、軸の間隔により、グラフ上のデータ ポイントに一貫性のある基準が提供されます。 ただしカテゴリ軸では、この機能により、軸ラベルなしでカテゴリが表示されることがあります。 ところが、カテゴリにはすべてラベルを付けるのが普通です。 間隔数を 1 に設定すると、すべてのカテゴリを表示できます。  詳細については、「 [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)をクリックします。  
   
 > [!NOTE]  
 >  ラベルの自動調整機能を使用せずに手動で軸の間隔を設定した場合、これに応じてグラフでは、他のすべての要素をサイズ変更する必要が生じます。 その結果、ラベルのサイズと配置、またはグラフ上の他の要素のサイズに関して、予期しない結果が生じる可能性があります。  
   
 ## <a name="variable-axis-intervals"></a>軸の可変間隔  
- グラフでは、グラフのサイズに関係なく、約 5 個の軸ラベルの間隔が計算されます。 幅の広いグラフや高さのあるグラフでは、軸上にラベルが 5 個しかない場合、各ラベル間の空白部分が大きくなる場合があります。 このような場合、軸に対して各データ ポイントの値を特定することが難しくなります。 幅の広いグラフや高さのあるグラフでこの状況を回避するには、軸の可変間隔を設定できます。 グラフでは、対応する軸に応じ、グラフの幅または高さに基づいて、軸に表示されるラベルの最適な数が計算されます。 詳細については、次を参照してください。[軸の間隔を指定&#40;レポート ビルダーおよび SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)します。  
+ グラフでは、グラフのサイズに関係なく、約 5 個の軸ラベルの間隔が計算されます。 幅の広いグラフや高さのあるグラフでは、軸上にラベルが 5 個しかない場合、各ラベル間の空白部分が大きくなる場合があります。 このような場合、軸に対して各データ ポイントの値を特定することが難しくなります。 幅の広いグラフや高さのあるグラフでこの状況を回避するには、軸の可変間隔を設定できます。 グラフでは、対応する軸に応じ、グラフの幅または高さに基づいて、軸に表示されるラベルの最適な数が計算されます。 詳細については、「 [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)をクリックします。  
   
 ## <a name="sorting-axis-values"></a>軸の値の並べ替え  
  カテゴリは、結果セットに出現する順序で X 軸に表示されます。 グループの順序を変更するには、SORT コマンドをクエリに追加するか、式を使用してデータセットを並べ替えます。 グラフ データ領域は、その他のすべてのデータ領域と同じように並べ替えることができます。 データを並べ替える方法の詳細については、「[データ領域内のデータの並べ替え &#40;レポート ビルダーおよび SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)」をご覧ください。  
@@ -113,18 +112,18 @@ ms.locfileid: "48185392"
 -   **[系列のプロパティ]** ダイアログ ボックスの **[カテゴリ フィールド]** オプションで、フィールドを選択するか、式を入力します。 グラフでは、指定したカテゴリ フィールドのすべての値に対して軸の間隔が追加されます。  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>カテゴリ軸の横余白の追加または削除  
- 横棒グラフ、縦棒グラフ、および散布図では、横余白が X 軸の両端に自動的に追加されます。 余白のサイズは変更できません。 その他すべての種類のグラフでは、横余白は追加されません。 詳細については、次を参照してください。[グラフから削除する余白の追加と&#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)します。  
+ 横棒グラフ、縦棒グラフ、および散布図では、横余白が X 軸の両端に自動的に追加されます。 余白のサイズは変更できません。 その他すべての種類のグラフでは、横余白は追加されません。 詳細については、「 [グラフの余白の追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [日付または通貨として軸ラベルの書式&#40;レポート ビルダーおよび SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [グラフにラベルを配置&#40;レポート ビルダーおよび SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [グラフへのラベルの配置 &#40;レポート ビルダーおよび SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [軸の間隔を指定&#40;レポート ビルダーおよび SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [追加またはグラフの余白を削除する&#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [グラフの余白の追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [対数スケールの指定&#40;レポート ビルダーおよび SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [対数スケールの指定 &#40;レポート ビルダーおよび SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   

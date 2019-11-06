@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 812c99f830505918da506f94ce4fe70ce3b48a89
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56cacefdcc0afd1ff2b17986658b27d7f4eddb07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139219"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events について
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ GO
   
  プロバイダー DLL である Sqlwep.dll は、サーバー上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの数にかかわらず、サーバーのオペレーティング システムの WMI ホスト サービスに一度だけ読み込まれます。  
   
- 例については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Server Events, WMI プロバイダーを使用するエージェント管理アプリケーションを参照してください[サンプル: SQL Server エージェント警告を使用して、サーバー イベント用 WMI プロバイダーを作成します。](https://technet.microsoft.com/library/ms186385.aspx)します。 マネージ コードでサーバー イベント用 WMI プロバイダーを使用する管理アプリケーションの例は、次を参照してください。[サンプル: WMI イベント プロバイダーを使用して、マネージ コードで](https://technet.microsoft.com/library/ms179315.aspx)します。 WMI の詳細についての詳細についてはまた、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK。  
+ 例については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Server Events, WMI プロバイダーを使用するエージェント管理アプリケーションを参照してください[サンプル。サーバー イベント用 WMI プロバイダーを使用して SQL Server エージェント警告の作成](https://technet.microsoft.com/library/ms186385.aspx)です。 マネージ コードでサーバー イベント用 WMI プロバイダーを使用する管理アプリケーションの例は、次を参照してください。[サンプル。WMI イベント プロバイダーを使用してマネージ コード](https://technet.microsoft.com/library/ms179315.aspx)します。 WMI の詳細についての詳細についてはまた、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK。  
   
 ## <a name="see-also"></a>参照  
  [WMI Provider for Server Events の概念](https://technet.microsoft.com/library/ms180560.aspx)  

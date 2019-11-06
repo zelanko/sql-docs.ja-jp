@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76ff04ce4b2a56387a573f7409b1e56c93fdedff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 487d214dbdd6974442749dd0cff6ac24fe9d1977
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979953"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>getServerName メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public java.lang.String getServerName()
  サーバー名を含む**文字列**です。値が設定されていない場合は null です。  
   
 ## <a name="remarks"></a>Remarks  
- サーバー名は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している、対象のコンピューターのホスト名です。 getServerName プロパティが設定されていない場合、getServerName は既定値の null が返されます。  
+ サーバー名は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している、ターゲット コンピューターのホスト名です。 getServerName プロパティが設定されていない場合、getServerName は既定値の null が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

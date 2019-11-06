@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -18,12 +18,12 @@ ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cdf03d4e890347af90984989b0cffbd3c1691295
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89eebf359167559357ef9c3aadf7599b77c8d376
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63010754"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>結合を使用したクエリ (Visual Database Tools)
   クエリ結果には、複数のテーブルまたはテーブル値オブジェクトのデータを含めることができます。 複数のテーブル値オブジェクトのデータを結合するには、SQL の JOIN 演算子を使用します。  

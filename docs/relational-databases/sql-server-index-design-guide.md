@@ -1,7 +1,7 @@
 ---
 title: SQL Server のインデックスのアーキテクチャとデザイン ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 663e4bca1dc607cbdf4b19849701bea24461b600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081537"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ XML インデックスの詳細については、[XML インデックスの概�
 ##  <a name="Basics"></a> インデックスのデザインの基礎  
  インデックスとは、テーブルまたはビューに関連付けられたディスク上またはメモリ内の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 ディスク上のインデックスの場合、これらのキーは 1 つの構造 (B-Tree) 内に格納されます。SQL Server はこの構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。  
 
- インデックスは、論理的には、行と列があるテーブルとして編成されたデータを格納します。また物理的には、*行ストア* <sup>1</sup> と呼ばれる行単位のデータ形式、または*[列ストア](#columnstore_index)* という列単位のデータ形式で格納されます。  
+ インデックスは、論理的には、行と列があるテーブルとして編成されたデータを格納します。また物理的には、*行ストア* <sup>1</sup> と呼ばれる行単位のデータ形式、または *[列ストア](#columnstore_index)* という列単位のデータ形式で格納されます。  
     
  データベースとワークロードに適したインデックスの選択は、クエリの速度と更新コストのバランスを取る必要がある複雑な作業です。 インデックス キー内の列数が少ないインデックスを使用すると、ディスク領域とメンテナンスのオーバーヘッドが少なくて済みます。 これに対して、列数の多いインデックスを使用すると、より多くのクエリに対応できます。 効率の高いインデックスを決定するには、さまざまなデザインをテストする必要があります。 インデックスは、データベース スキーマやアプリケーションのデザインに影響を与えずに追加、変更、および削除できます。 さまざまなデザインのインデックスを積極的にテストするようにしてください。  
   
@@ -123,7 +122,7 @@ XML インデックスの詳細については、[XML インデックスの概�
   
 -   クラスター化インデックスのインデックス キー長は長くならないようにします。 また、クラスター化インデックスは一意列や非 NULL 列に作成すると効率的です。  
   
--   **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)**、および **varbinary(max)** データ型の列を、インデックス キー列として指定することはできません。 ただし、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、および **xml** データ型は、インデックスの非キー列として非クラスター化インデックスに含めることができます。 詳細については、このガイドの ['付加列インデックス'](#Included_Columns)に関するセクションを参照してください。  
+-   **ntext**、 **text**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** データ型の列を、インデックス キー列として指定することはできません。 ただし、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、および **xml** データ型は、インデックスの非キー列として非クラスター化インデックスに含めることができます。 詳細については、このガイドの ['付加列インデックス'](#Included_Columns)に関するセクションを参照してください。  
   
 -   **xml** データ型は、XML インデックスでのみキー列にできます。 詳細については、「[XML インデックス &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。 SQL Server 2012 SP1 では、選択的 XML インデックスと呼ばれる新しい種類の XML インデックスが導入されています。 この新しいインデックスを使用すると、SQL Server に XML 形式で格納されたデータに対するクエリのパフォーマンスが向上するため、XML データの大量のワークロードに対するインデックスの設定がはるかに高速になります。また、インデックス自体のストレージ コストを削減できるため、スケーラビリティも向上します。 詳細については、「[選択的 XML インデックス &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
@@ -218,7 +217,7 @@ ON Purchasing.PurchaseOrderDetail
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -277,7 +276,7 @@ ON Purchasing.PurchaseOrderDetail
     たとえば、従業員 ID は、従業員を一意に識別します。 `EmployeeID` 列にクラスター化インデックスまたは [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 制約を設定すると、従業員 ID 番号に基づいて従業員情報を検索するクエリのパフォーマンスが向上します。 また、 `LastName`列、 `FirstName`列、 `MiddleName` 列を基にクラスター化インデックスを作成することもできます。従業員レコードは、これらの列でグループ化されたりクエリが実行されることが多く、これらの列を組み合わせると高い多様性が生まれます。 
 
     > [!TIP]
-    > 別の指定をしない場合、[PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 制約を作成するときに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってその制約をサポートする[クラスター化インデックス](#clustered_index)が作成されます。
+    > 別の指定をしない場合、[PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 制約を作成するときに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってその制約をサポートする[クラスター化インデックス](#Clustered)が作成されます。
     > PRIMARY KEY として一意性を適用するために *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* を使用できますが、これは効率的なクラスター化キーではありません。
     > PRIMARY KEY として *uniqueidentifier* を使用する場合は、非クラスター化インデックスとして作成し、`IDENTITY` などの別の列を使用してクラスター化インデックスを作成することをお勧めします。   
   
@@ -464,7 +463,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   1 ページに収まるインデックス行が少なくなります。 これにより、ディスク I/O が増加しキャッシュ効率が低下します。  
   
--   インデックスを格納するために、さらに多くのディスク領域が必要になります。 特に、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、または **xml** のデータ型を非キー インデックス列として追加すると、必要なディスク領域が大幅に増加します。 これは、列の値がインデックスのリーフ レベルにコピーされるためです。 そのため、列の値がインデックスとベース テーブルの両方に存在します。  
+-   インデックスを格納するために、さらに多くのディスク領域が必要になります。 特に、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、または **xml** のデータ型を非キー インデックス列として追加すると、必要なディスク領域が大幅に増加します。 これは、列の値がインデックスのリーフ レベルにコピーされるためです。 そのため、列の値がインデックスとベース テーブルの両方に存在します。  
   
 -   インデックスのメンテナンスによって、基になるテーブルやインデックス付きビューに対する変更、挿入、更新、削除にかかる時間が長くなる場合があります。  
   
@@ -824,7 +823,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>インメモリ非クラスター化インデックスのアーキテクチャ
 
-インメモリ非クラスター化インデックスは、2011 年に Microsoft Research が独自に考案した Bw ツリーというデータ構造を使用して実装されています。 Bw ツリーは、B ツリーのロックおよびラッチフリーのバリエーションです。 詳細については、「[The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)」(Bw ツリー: 新しいハードウェア プラットフォーム向けの B ツリー) を参照してください。 
+インメモリ非クラスター化インデックスは、2011 年に Microsoft Research が独自に考案した Bw ツリーというデータ構造を使用して実装されています。 Bw ツリーは、B ツリーのロックおよびラッチフリーのバリエーションです。 詳細については、「[The Bw-Tree:A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)」(Bw ツリー: 新しいハードウェア プラットフォーム向けの B ツリー) を参照してください。 
 
 大まかに説明すると、Bw ツリーは、ページ ID (PidMap) で整理されたページのマップです。また、ページ ID (PidAlloc) と、ページ マップ内および相互にリンクされているページのセットを割り当て、再利用する機能があります。 これら 3 つの上位レベルのサブコンポーネントが、Bw ツリーの基本的な内部構造を構成します。
 
@@ -871,7 +870,7 @@ Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB
 
 **手順 1:** キー値 10 (青色の三角形) を表す差分ページが作成され、非リーフ ページ Pp1 内のそのポインターは新しい差分ページに設定されます。 さらに、特別なマージ差分ページ (緑色の三角形) が作成され、差分ページを示すようにリンクされます。 この段階では、両方のページ (差分ページとマージ差分ページ) は、同時のトランザクションには表示されません。 1 つのアトミック手順では、ページ マッピング テーブルのリーフレベル ページ P1 へのポインターはマージ差分ページを示すように更新されます。 この手順の後、Pp1 のキー値 10 のエントリはマージ差分ページを示すようになります。 
 
-**手順 2**: 非リーフ ページ Pp1 のキー値 7 を表す行を削除し、キー値 10 のエントリが P1 を示すように更新する必要があります。 この処理を実行するために、新しい非リーフ ページ Pp2 が割り当てられ、キー値 7 を表す行を除き、Pp1 のすべての行がコピーされます。キー値 10 の行はページ P1 を示すように更新されます。 この処理が完了すると、1 つのアトミック手順で、Pp1 を示すページ マッピング テーブルのエントリは Pp2 を示すように更新されます。 Pp1 には到達できなくなります。 
+**手順 2:** 非リーフ ページ Pp1 のキー値 7 を表す行を削除し、キー値 10 のエントリが P1 を示すように更新する必要があります。 この処理を実行するために、新しい非リーフ ページ Pp2 が割り当てられ、キー値 7 を表す行を除き、Pp1 のすべての行がコピーされます。キー値 10 の行はページ P1 を示すように更新されます。 この処理が完了すると、1 つのアトミック手順で、Pp1 を示すページ マッピング テーブルのエントリは Pp2 を示すように更新されます。 Pp1 には到達できなくなります。 
 
 **手順 3:** リーフレベル ページ P2 と P1 はマージされ、差分ページは削除されます。 この処理を実行するために、新しいページ P3 が割り当てられ、P2 と P1 の行がマージされ、差分ページの変更は新しい P3 に含まれます。 次に、1 つのアトミック手順で、ページ P1 を示すページ マッピング テーブルのエントリは、ページ P3 を示すように更新されます。 
 

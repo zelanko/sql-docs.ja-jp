@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481356"
 ---
 # <a name="versions-master-data-services"></a>バージョン (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル内に複数のバージョンのマスター データを作成できます。 データを検証している間はバージョンをロックし、データが検証した後にコミットすることができます。 コミットされたバージョンは、変更の監査可能なレコードを形成します。 作成される各バージョンには、モデルのすべてのメンバー、属性値、階層メンバー、階層リレーションシップ、およびコレクションが含まれます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48190918"
   
 1.  最初のバージョンは、モデルを作成して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに会社のマスター データを入力すると、自動的に作成されます。 ユーザーは権限に基づいて、必要に応じてこのバージョンを変更できます。  
   
-2.  モデルのバージョンをコミットする場合は、モデル管理者のみがデータを更新できるように、バージョンをロックします。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。 通知が構成されている場合、バージョンのステータスが変更されるたびに電子メール通知がモデル管理者に送信されます。 詳細については、「[電子メール通知を構成する (マスター データ サービス)](../../2014/master-data-services/configure-email-notifications-master-data-services.md)」を参照してください。  
+2.  モデルのバージョンをコミットする場合は、モデル管理者のみがデータを更新できるように、バージョンをロックします。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。 通知が構成されている場合、バージョンのステータスが変更されるたびに電子メール通知がモデル管理者に送信されます。 詳細については、「[電子メール通知を構成する (マスター データ サービス)](../../2014/master-data-services/configure-email-notifications-master-data-services.md)」を参照してください。  
   
 3.  ロックしたバージョンのデータにビジネス ルールを適用し、検証の問題がないか確認します。 必要に応じて、不足している情報を入力したり、問題の原因となったトランザクションを破棄したりできます。 ユーザーが変更できるように、バージョンのロックを解除することもできます。  
   
@@ -70,21 +69,21 @@ ms.locfileid: "48190918"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|既存のバージョンの名前を変更する。|[バージョン名を変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
-|管理者のみがデータを編集できるようにバージョンをロックする。|[バージョンをロックする&#40;マスター データ サービス&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
-|ユーザーがデータを編集できるようにバージョンのロックを解除する。|[バージョンをロック解除&#40;マスター データ サービス&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
-|すべてのデータを検証した後にバージョンをコミットする。|[バージョンをコミットする&#40;マスター データ サービス&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
-|新しいフラグを作成してバージョンをマークする。|[バージョン フラグを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|既存のバージョンのフラグ名を変更する。|[バージョン フラグ名を変更する&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|既存のフラグをバージョンに割り当てる。|[バージョンにフラグを割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|既存のバージョンの新しいコピーを作成する。|[バージョンをコピーする&#40;マスター データ サービス&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
-|既存のバージョンを削除する。|[バージョンを削除する&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
+|既存のバージョンの名前を変更する。|[バージョン名を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
+|管理者のみがデータを編集できるようにバージョンをロックする。|[バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
+|ユーザーがデータを編集できるようにバージョンのロックを解除する。|[バージョンをロック解除する (マスター データ サービス)](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
+|すべてのデータを検証した後にバージョンをコミットする。|[バージョンをコミットする (マスター データ サービス)](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
+|新しいフラグを作成してバージョンをマークする。|[バージョン フラグを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|既存のバージョンのフラグ名を変更する。|[バージョン フラグ名を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|既存のフラグをバージョンに割り当てる。|[バージョンにフラグを割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|既存のバージョンの新しいコピーを作成する。|[バージョンをコピーする (マスター データ サービス)](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
+|既存のバージョンを削除する。|[バージョンを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [トランザクションを破棄する&#40;マスター データ サービス&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [トランザクションを破棄する (マスター データ サービス)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [通知&#40;マスター データ サービス&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [通知 (マスター データ サービス)](../../2014/master-data-services/notifications-master-data-services.md)  
   
 -   [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)  
   

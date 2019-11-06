@@ -18,24 +18,23 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134675"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **データ層アプリケーションの登録ウィザード** または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成し、その DAC 定義を **msdb** システム データベース (**では** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]データベース) に登録します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **DAC のアップグレード:**  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)、 [PowerShell の使用](#RegisterDACPowerShell)  
+-   **DAC のアップグレード:** [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)、[PowerShell の使用](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
- 登録プロセスでデータベース オブジェクトを定義する DAC 定義を作成します。 DAC の定義とデータベースを組み合わせたものが DAC インスタンスになります。 データベース エンジンのマネージド インスタンス上で DAC としてデータベースを登録した場合は、SQL Server ユーティリティ コレクション セットをこのインスタンスからユーティリティ コントロール ポイントへ次に送信するときに、登録した DAC が SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
+ 登録プロセスでデータベース オブジェクトを定義する DAC 定義を作成します。 DAC の定義とデータベースを組み合わせたものが DAC インスタンスになります。 データベース エンジンのインスタンス上で DAC としてデータベースを登録した場合は、SQL Server ユーティリティ コレクション セットをこのインスタンスからユーティリティ コントロール ポイントへ次に送信するときに、登録した DAC が SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースでのみ登録できます。 DAC が既にデータベースに登録されている場合は、DAC の登録を実行できません。 たとえば、DAC を配置してデータベースを作成した場合、 **データ層アプリケーションの登録ウィザード**を実行できません。  
@@ -52,7 +51,7 @@ ms.locfileid: "52513232"
   
 2.  **[データベース]** ノードを展開します。  
   
-3.  登録するデータベースを右クリックし、**[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
+3.  登録するデータベースを右クリックし、 **[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -102,18 +101,18 @@ ms.locfileid: "52513232"
   
  **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>オブジェクトの検証  
- ****  *SchemaName* **を実行できません。** *ObjectName* **を実行できません。** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_**.**_ObjectName_ は、現在検証されているオブジェクトを示します。  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_ **.** _ObjectName_ は、現在検証されているオブジェクトを示します。  
   
  **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "52513232"
   
  **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   

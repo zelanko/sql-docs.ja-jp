@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4017ed07681a74da4832db2db3aeabddf22edb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020330"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetCursorName**指定したステートメントに関連付けられたカーソル名を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetCursorName(  
      SQLHSTMT        StatementHandle,  
@@ -55,7 +54,7 @@ SQLRETURN SQLGetCursorName(
  場合*カーソル名*が null の場合、 *NameLengthPtr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*カーソル名*します。  
   
  *BufferLength*  
- [入力]長さ\**カーソル名*、文字数。 場合の値*\*カーソル名*は Unicode 文字列です (呼び出し時に**SQLGetCursorNameW**)、 *BufferLength*引数は偶数である必要があります。  
+ [入力]長さ\**カーソル名*、文字数。 場合の値 *\*カーソル名*は Unicode 文字列です (呼び出し時に**SQLGetCursorNameW**)、 *BufferLength*引数は偶数である必要があります。  
   
  *NameLengthPtr*  
  [出力]文字 (null 終了文字を除く) の合計数を返すメモリへのポインターで返される使用可能な\**カーソル名*します。 返すに使用できる文字数がより大きいかに等しい場合*BufferLength*でカーソル名\**カーソル名*に切り捨てられます*BufferLength*null 終了文字の長さマイナスです。  
@@ -81,9 +80,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- カーソル名が位置指定更新でのみ使用、および delete ステートメント (たとえば、**更新***テーブル名*.**WHERE CURRENT OF** *カーソル名*)。 詳細については、次を参照してください。[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)します。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバーをカーソル名を定義するには、名前を生成します。 この名前は文字 SQL_CUR で開始します。  
+ カーソル名が位置指定更新でのみ使用、および delete ステートメント (たとえば、**更新**_テーブル名_.**WHERE CURRENT OF** _カーソル名_)。 詳細については、次を参照してください。[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)します。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバーをカーソル名を定義するには、名前を生成します。 この名前は文字 SQL_CUR で開始します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x*開いているカーソルはありませんでしたしへの呼び出しで名前が設定されていないときに、 **SQLSetCursorName**への呼び出し**SQLGetCursorName** SQLSTATE HY015 が返されます (カーソル名がありません使用可能な) にします。 ODBC 3 *.x*、true 以外の場合に関係なくこれが不要になった**SQLGetCursorName**が呼び出されると、ドライバーは、カーソル名を返します。  
   
  **SQLGetCursorName**明示的または暗黙的に名前が作成されたかどうか、カーソルの名前を返します。 場合、カーソル名が暗黙的に生成された**SQLSetCursorName**は呼び出されません。 **SQLSetCursorName**カーソルが割り当てられたまたは準備された状態である限り、ステートメントのカーソルの名前を変更するということができます。  

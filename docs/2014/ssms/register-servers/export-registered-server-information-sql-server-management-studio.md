@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.exportregisteredservers.f1
@@ -16,12 +16,12 @@ ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da729cd3381537848f5e384f9c05647ac35f31cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63298109"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のエクスポート (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で登録済みサーバーの情報を保存およびエクスポートして、他の従業員またはサーバーに配布する方法について説明します。 このエクスポート機能を使用すると、複数のコンピューターに一貫性のあるユーザー インターフェイスを提供できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "48065202"
      サーバー グループには、現在の登録済みサーバー ツリーのサーバー グループだけが表示されます。  
   
      **[エクスポート ファイル]**  
-     テキスト ボックスにエクスポート ファイルの名前を入力するか、参照ボタン (**[...]**) を使用してクライアント コンピューター内のエクスポート ファイルを選択します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 .regsrvr 拡張子を使用します。 登録済みサーバーの情報を他のユーザーまたはコンピューターが利用できるようにする場合は、ネットワーク上にファイルを保存できます。 他のユーザーは、そのファイルにアクセスし、一部またはすべての登録済みサーバーの情報をインポートできます。 既存のファイルをエクスポート ファイルとして選択した場合、そのファイルの内容はサーバーの登録情報で上書きされます。  
+     テキスト ボックスにエクスポート ファイルの名前を入力するか、参照ボタン ( **[...]** ) を使用してクライアント コンピューター内のエクスポート ファイルを選択します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 .regsrvr 拡張子を使用します。 登録済みサーバーの情報を他のユーザーまたはコンピューターが利用できるようにする場合は、ネットワーク上にファイルを保存できます。 他のユーザーは、そのファイルにアクセスし、一部またはすべての登録済みサーバーの情報をインポートできます。 既存のファイルをエクスポート ファイルとして選択した場合、そのファイルの内容はサーバーの登録情報で上書きされます。  
   
      **[エクスポート ファイルにユーザー名とパスワードを含めない]**  
      ファイルをエクスポートするときにユーザー名を除外します。  

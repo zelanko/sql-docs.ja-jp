@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.initializesubscriptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19b520bc5f977e3d6d1c56919f75f4cfa5195ce2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721138"
 ---
 # <a name="initialize-subscriptions"></a>サブスクリプションの初期化
   レプリケートされたデータをサブスクライバーで受信するためには、あらかじめサブスクライバーを初期化する必要があります。 初期データセットは必要ありませんが、少なくともサブスクライバーは、レプリケートされたそれぞれのオブジェクトのスキーマと、レプリケーションに必要なメタデータ テーブルおよびプロシージャを持つ必要があります。  
@@ -34,7 +33,7 @@ ms.locfileid: "48156312"
   
 ## <a name="see-also"></a>参照  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
  [サブスクリプションの初期化](initialize-a-subscription.md)   
  [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
   

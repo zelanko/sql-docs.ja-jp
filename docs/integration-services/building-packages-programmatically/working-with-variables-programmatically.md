@@ -20,17 +20,20 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 73eed98ef8b7d6c8f842431d5ebc5f1ea846e8c0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642209"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299079"
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変数を使用すると、値を動的に設定し、パッケージ、コンテナー、タスク、およびイベント ハンドラーの処理を制御できます。 また、優先順位制約で変数を使用して、別のタスクへのデータ フローの方向を制御することもできます。 変数には、以下のようにさまざまな使用方法があります。  
   
 -   実行時にパッケージのプロパティを更新する。  
@@ -163,7 +166,7 @@ End Module
   
  使用できるシステム変数は、コンテナーの種類によって異なります。 パッケージ、コンテナー、タスク、およびイベント ハンドラーで使用できるシステム変数の一覧については、「[システム変数](../../integration-services/system-variables.md)」を参照してください。  
   
-## <a name="value"></a>ReplTest1  
+## <a name="value"></a>[値]  
  カスタム変数の値には、リテラルまたは式を設定できます。  
   
 -   変数にリテラル値を格納する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティの値を設定します。  

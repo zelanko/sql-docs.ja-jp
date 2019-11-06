@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d31038f5c392f5dde04af753e42874f495362e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c4c34ae8fbfc88bde59b44bc079b1df0dbcdf26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985077"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "47601831"
   
  特定の種類のカーソル モデルを使用するには、カーソル モデルに対応する列を探し、列の値が "T" であるすべての行セット プロパティを見つけます。 これらの行セット プロパティに VARIANT_TRUE を設定すると、その特定のカーソル モデルを使用できます。 値が "-" の行セット プロパティには、VARIANT_TRUE と VARIANT_FALSE のどちらも設定できます。  
   
-|行セット プロパティ/カーソル モデル|既定<br /><br /> result<br /><br /> セット (set)<br /><br /> (RO)|[高速]<br /><br /> 順方向<br /><br /> 専用<br /><br /> (RO)|静的<br /><br /> (RO)|Keyset<br /><br /> ドリブン<br /><br /> (RO)|  
+|行セット プロパティ/カーソル モデル|既定<br /><br /> 結果<br /><br /> セット (set)<br /><br /> (RO)|[高速]<br /><br /> 順方向<br /><br /> 専用<br /><br /> (RO)|スタティック<br /><br /> (RO)|Keyset<br /><br /> ドリブン<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -146,7 +145,7 @@ ms.locfileid: "47601831"
   
  行セット プロパティの特定のセットに対して選択されるカーソル モデルは、次のようにして決まります。  
   
- 行セット プロパティの指定されたコレクションから、上の表に示したプロパティのサブセットを取得します。 これらのプロパティを、上に示した表の各行セット プロパティのフラグ値、必須 (T、F) またはオプション (-) に応じて、2 つのサブグループに分けます。 最初の表から始め、左から右に向かってカーソル モデルごとに、2 つのサブグループ内のプロパティの値を、その列の対応するプロパティの値と比較します。 必須プロパティに不一致がなく、かつオプション プロパティの不一致が最も少ないカーソル モデルが選択されます。 複数のカーソル モデルが該当する場合は、一番左側のモデルが選択されます。  
+ 行セット プロパティの指定されたコレクションから、上の表に示したプロパティのサブセットを取得します。 これらのプロパティを、各行セット プロパティのフラグ値 (必須 (T、F) または省略可能 (-)) に応じて、2 つのサブグループに分けます。 最初の表から始め、左から右に向かってカーソル モデルごとに、2 つのサブグループ内のプロパティの値を、その列の対応するプロパティの値と比較します。 必須プロパティに不一致がなく、かつオプション プロパティの不一致が最も少ないカーソル モデルが選択されます。 複数のカーソル モデルが該当する場合は、一番左側のモデルが選択されます。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server カーソル ブロックのサイズ  
  ときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソルがサポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー行セットの配列パラメーターを処理する行の要素の数、 **irowset::getnextrows**または**irowsetlocate::getrowsat**メソッドは、カーソル ブロックのサイズを定義します。 配列内のハンドルで指定される行が、カーソル ブロックのメンバーです。  
@@ -155,7 +154,7 @@ ms.locfileid: "47601831"
   
  行セットの作成や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソル ブロックの形成にどのメソッドを使用したかにかかわらず、行セットの次の行をフェッチするメソッドが実行されるまで、カーソル ブロックはアクティブです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

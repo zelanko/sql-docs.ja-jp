@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832457"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
@@ -45,13 +44,13 @@ ms.locfileid: "48069582"
  ![データ フロー](../media/mw-dts-09.gif "データ フロー")  
   
 ## <a name="log-entries"></a>ログ エントリ  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] また、多くのタスクにカスタム ログ エントリを提供します。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、多くのタスクにカスタム ログ エントリも提供しています。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
-|`OnPipelinePostEndOfRowset`|最後の呼び出しで設定される行セットの終了シグナルがコンポーネントに指定されていることを示します、`ProcessInput`メソッド。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
-|`OnPipelinePostPrimeOutput`|コンポーネントで、最後の呼び出しが完了したことを示します、`PrimeOutput`メソッド。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、このログ エントリは、コンポーネントが行の処理を完了したことを意味します。|  
+|`OnPipelinePostEndOfRowset`|`ProcessInput` メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePostPrimeOutput`|コンポーネントが `PrimeOutput` メソッドの最終呼び出しを完了したことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、このログ エントリは、コンポーネントが行の処理を完了したことを意味します。|  
 |`OnPipelinePreEndOfRowset`|コンポーネントがまもなくの最後の呼び出しで設定される行セットの終了シグナルを受信することを示します、`ProcessInput`メソッド。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePrePrimeOutput`|コンポーネントに、`PrimeOutput` メソッドからの呼び出しが通知されたことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
 |`OnPipelineRowsSent`|`ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
@@ -72,7 +71,7 @@ ms.locfileid: "48069582"
 ### <a name="sample-messages-from-a-data-flow-task"></a>データ フロー タスクからのサンプル メッセージ  
  次の表は、ごく単純なパッケージでのログ エントリのサンプル メッセージの一覧です。 このパッケージは、OLE DB ソースを使用してテーブルからデータを抽出し、並べ替え変換を使用してデータを並べ替え、さらに OLE DB 変換先を使用してデータを別のテーブルに書き込みます。  
   
-|ログ エントリ|メッセージ|  
+|ログ エントリ|Messages|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  
@@ -91,8 +90,8 @@ ms.locfileid: "48069582"
   
 |[列]|説明|値|  
 |------------|-----------------|-----------|  
-|**PathID**|値、 `ID` OLE DB ソースと並べ替え変換の間のパスのプロパティ。|1185|  
-|**PathName**|値、`Name`パスのプロパティ。|OLE DB ソースの出力|  
+|**PathID**|OLE DB ソースと並べ替え変換の間のパスの `ID` プロパティの値です。|1185|  
+|**PathName**|パスの `Name` プロパティの値です。|OLE DB ソースの出力|  
 |**ComponentID**|値、`ID`並べ替え変換のプロパティ。|1180|  
 |**ComponentName**|並べ替え変換の `Name` プロパティの値です。|並べ替え|  
 |**InputID**|並べ替え変換に対する入力の `ID` プロパティの値です。|1181|  
@@ -115,6 +114,6 @@ ms.locfileid: "48069582"
  [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- technet.microsoft.com のビデオ「 [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
+ technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
   

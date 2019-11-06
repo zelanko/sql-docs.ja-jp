@@ -10,12 +10,12 @@ ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 125e8ac5d6bf8cfc7696a207bb9a931c9099ba89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62636426"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>登録済みサーバーおよびオブジェクト エクスプローラーを使用した接続
   このチュートリアルでは、登録済みサーバーとオブジェクト エクスプローラーの使用方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48143612"
   
 5.  **[登録済みサーバーの名前]** ボックスに「 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]」と入力します。  
   
-6.  **[接続プロパティ]** タブで、**[データベースへの接続]** ボックスの一覧から **[\<サーバーの参照...>]** を選択します。  
+6.  **接続プロパティ**] タブで、**データベースへの接続**一覧で、[ **\<サーバーの参照 ...> >** します。  
   
 7.  **[データベースの参照]** ダイアログ ボックスで、 **[はい]** をクリックします。  
   

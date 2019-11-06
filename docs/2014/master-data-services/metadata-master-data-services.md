@@ -1,11 +1,10 @@
 ---
 title: メタデータ (マスター データ サービス) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], about user-defined metadata
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - metadata [Master Data Services]
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054034"
 ---
 # <a name="metadata-master-data-services"></a>メタデータ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] におけるユーザー定義メタデータは、モデル オブジェクトを説明するために使用する情報です。 たとえば、特定のモデルまたはエンティティの所有者を追跡する場合や、エンティティにデータを提供するソース システムを追跡する場合があります。  
@@ -33,7 +32,7 @@ ms.locfileid: "48185012"
 ## <a name="metadata-entities"></a>メタデータ エンティティ  
  メタデータ モデルには 5 つのエンティティが含まれます。各エンティティはユーザー定義メタデータをサポートするマスター データ モデル オブジェクトの種類を表します。 たとえば、**モデル メタデータ定義**エンティティにはモデルを表すメンバーが含まれています、**属性メタデータ定義**エンティティがすべてのモデルのすべての属性を表すメンバー。  
   
- モデル オブジェクトのメタデータを定義するには、こうしたメンバーのいずれかの属性を設定します。 たとえば、**エンティティ メタデータ定義**エンティティ、Price メンバーの Description 属性、テキストを設定することができます:**顧客に販売する際の製品価格**。  
+ モデル オブジェクトのメタデータを定義するには、こうしたメンバーのいずれかの属性を設定します。 たとえば、**エンティティ メタデータ定義**エンティティ、Price メンバーの Description 属性、テキストを設定することができます。**顧客に販売する際の製品価格**します。  
   
  メタデータ モデルのメンバーは、ユーザー定義メタデータをサポートするモデル オブジェクトが追加または削除されると自動的に更新されます。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48185012"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |モデル オブジェクトにメタデータを追加します。|[メタデータの追加&#40;マスター データ サービス&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>関連コンテンツ  
   

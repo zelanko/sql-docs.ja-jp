@@ -20,15 +20,14 @@ helpviewer_keywords:
 - dynamic index rebuilding [SQL Server]
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 0090be5f985354d4cec29add4d008deea6cac068
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101996"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>使用例  
 ### <a name="a-rebuilding-an-index"></a>A. インデックスを再構築する  
-次の例では、`Employee_EmployeeID` データベースの `80` テーブルで、`Employee` クラスター化インデックスを FILL FACTOR `AdventureWorks` で再構築します。
+次の例では、`AdventureWorks` データベースの `Employee` テーブルで、`Employee_EmployeeID` クラスター化インデックスを FILL FACTOR `80` で再構築します。
   
 ```sql  
 USE AdventureWorks2012;   

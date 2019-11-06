@@ -21,16 +21,15 @@ helpviewer_keywords:
 - SYSUTCDATETIME function [SQL Server]
 - time [SQL Server], system
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 305fbf35deccf81c127e6b53f2c2b2f946c06aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fda203cc50956c5aad76d998a663cfb61710871e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117483"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47658070"
   返します、 **datetime2** いるコンピューターの日時を表す値のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されています。 日付と時刻が UTC 時刻 (世界協定時刻) として返されます。 秒の小数部の有効桁数は 1 ～ 7 桁の範囲で指定できます。 既定の有効桁数は 7 桁です。  
   
 > [!NOTE]  
->  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATE の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATE、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。  
+>  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATETIME の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATETIME、および SYSDATETIMEOFFSET は、date 型と time 型のいずれか 1 つの変数に割り当てることができます。  
   
  すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] [日付と時刻のデータ型および関数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)を参照してください 日付と時刻のデータ型および関数です。  
   
@@ -65,15 +64,15 @@ SYSUTCDATETIME ( )
  次の例では、現在の日付と時刻を返す 6 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>A. 日付および時刻の関数から返される形式を表示する  
- 次の例では、日付と時刻の関数によって返されるさまざまな形式を表示します。  
+ 次の例では、日付と時刻関数から返されるさまざまな形式を示します。  
   
 ```  
-SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
+SELECT SYSDATETIME() AS [SYSDATETIME()]  
+    ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
+    ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
+    ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
+    ,GETDATE() AS [GETDATE()]  
+    ,GETUTCDATE() AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

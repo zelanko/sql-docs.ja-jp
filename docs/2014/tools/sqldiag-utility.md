@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
@@ -30,12 +29,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 475c77650179648642aead8275040b894ccc4b40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035421"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
   **SQLdiag** ユーティリティは、コンソール アプリケーションまたはサービスとして実行できる汎用的な診断収集ユーティリティです。 **SQLdiag** を使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 **SQLdiag** は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスによる診断情報収集の高速化と簡素化も目的としています。  
@@ -85,16 +84,16 @@ ms.locfileid: "48125322"
  **/?**  
  使用方法についての情報を表示します。  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  **SQLdiag** が使用する構成ファイルを設定します。 既定では、 **/I** は SQLDiag.Xml に設定されます。  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  **SQLdiag** 出力を、指定されたフォルダーにリダイレクトします。 **/O** オプションが指定されない場合、 **SQLdiag** 出力は、 **SQLdiag** スタートアップ フォルダーの下にある SQLDIAG という名前のサブフォルダーに書き込まれます。 SQLDIAG フォルダーが存在しない場合、 **SQLdiag** によって作成されます。  
   
 > [!NOTE]  
 >  出力フォルダーの場所は、 **/P**で指定できるサポート フォルダーの場所に応じて決まります。 まったく別の場所に出力フォルダーを設定するには、 **/O**に完全なディレクトリ パスを指定します。  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  サポート フォルダーのパスを設定します。 既定では、 **/P** は **SQLdiag** 実行可能ファイルが存在するフォルダーに設定されます。 サポート フォルダーには、XML 構成ファイル、Transact-SQL スクリプト、診断情報の収集中にユーティリティが使用するその他のファイルなどの **SQLdiag** サポート ファイルが格納されています。 このオプションを使用して、別のサポート ファイルのパスを指定すると、 **SQLdiag** は指定されたフォルダーに必要なサポート ファイルが存在しない場合、それらのファイルを指定されたフォルダーへ自動的にコピーします。  
   
 > [!NOTE]  
@@ -102,7 +101,7 @@ ms.locfileid: "48125322"
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  起動時に **SQLdiag** が出力フォルダーを上書きまたは名前を変更するかどうかを設定します。 使用できるオプションは次のとおりです。  
   
  1 = 出力フォルダーを上書きします (既定)。  
@@ -112,19 +111,19 @@ ms.locfileid: "48125322"
 > [!NOTE]  
 >  **SQLdiag** は起動時に、現在の出力フォルダーに出力を追加しません。 既定の出力フォルダーを上書きするか (オプション 1)、または既定のフォルダー名を変更して (オプション 2)、SQLDIAG という名前の新しい既定の出力フォルダーに出力を書き込むかのどちらかです。  
   
- **/M** *machine1* [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  構成ファイルで指定されたコンピューターをオーバーライドします。 既定では、構成ファイルは SQLDiag.Xml です。または **/I** パラメーターで設定されます。 複数のコンピューターを指定する場合、それぞれのコンピューター名をスペースで区切ります。  
   
  *@machinelistfile* を使用すると、構成ファイルに保存するコンピューター一覧のファイル名が指定されます。  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  **SQLdiag** 出力フォルダー ファイルで使用されるファイル圧縮の種類を設定します。 使用できるオプションは次のとおりです。  
   
  0 = なし (既定)。  
   
  1 = NTFS 圧縮を使用します。  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  診断データの収集を開始する日時は、  
   
  YYYYMMDD_HH:MM:SS の形式で指定します。  
@@ -139,7 +138,7 @@ ms.locfileid: "48125322"
   
  **SQLdiag** は、ユーティリティが実行されているコンピューター上のローカル時間を使用することに注意してください。  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  診断データの収集を停止する日時は、  
   
  YYYYMMDD_HH:MM:SS の形式で指定します。  
@@ -152,20 +151,20 @@ ms.locfileid: "48125322"
   
  **SQLdiag** は、ユーティリティが実行されているコンピューター上のローカル時間を使用することに注意してください。  
   
- **/A**  *SQLdiag_application_name*  
+ **/A** _SQLdiag_application_name_  
  **SQLdiag** ユーティリティの複数のインスタンスの実行を、同一の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに対して有効にします。  
   
  各 *SQLdiag_application_name* は、異なるインスタンスの **SQLdiag**を特定します。 *SQLdiag_application_name* インスタンスの名前と [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前には関連性はありません。  
   
  *SQLdiag_application_name* を使用すると、 **SQLdiag** サービスの特定のインスタンスを開始または停止できます。  
   
- 以下に例を示します。  
+ 例 :  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
  **/R** オプションと共に使用し、 **SQLdiag** の特定のインスタンスをサービスとして登録することもできます。 以下に例を示します。  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** は *SQLdiag_application_name*に指定されたインスタンス名に、自動的にプレフィックスの DIAG$ を付けます。 これにより、 **SQLdiag** をサービスとして登録する場合に、わかりやすいサービス名になります。  
@@ -201,7 +200,7 @@ ms.locfileid: "48125322"
   
  **net start** コマンドを次のように使用してサービスを開始することもできます。  
   
- **net**  **start SQLDIAG**  
+ **net start SQLDIAG**  
   
  **/U**  
  **SQLdiag** のサービスとしての登録を解除します。  
@@ -222,13 +221,13 @@ ms.locfileid: "48125322"
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** サービスを開始または停止します。 **STOP_ABORT** は、現在実行されている診断収集が終了していなくても、できるだけ早く強制的にサービスをシャットダウンします。  
   
- このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 以下に例を示します。  
+ このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 例 :  
   
  **SQLDIAG START**  
   
- **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 以下に例を示します。  
+ **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例 :  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>セキュリティ要件  
  **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合は、 **SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  
@@ -295,7 +294,7 @@ SQLDIAG STOP /A Instance1
 >  **SQLdiag** サービスを停止するには、 **SQLDiag STOP** または **SQLDIAG STOP_ABORT** を使用します。 **SQLdiag** またはその他の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを停止する場合は、Windows サービス コンソールを使用しないでください。  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>SQLdiag の自動開始と停止  
- 指定された時間に診断データ収集を自動的に開始および停止するには、**/B***start_time* 引数と **/E***stop_time* 引数を使用します (24 時間形式を使用)。 たとえば、ほぼ 02:00:00 に定期的に発生する問題のトラブルシューティングを行う場合、01:00 に診断データの収集を自動的に開始して、03:00:00 に自動的に終了するように **SQLdiag** を構成することができます。 開始時間および終了時間を指定するには、 **/B** 引数と **/E** 引数を使用します。 24 時間表記を使用して、YYYYMMDD_HH:MM:SS 形式で開始日時と終了日時を正確に指定します。 開始時間や終了時間を相対的に指定するには、次の例のように、開始時間および終了時間の前に **+** を付け、日付部分 (YYYYMMDD_) を省略します。次の例では、 **SQLdiag** は情報の収集を開始する前に 1 時間待機し、それから情報の収集を 3 時間行い、停止して終了します。  
+ 指定された時間に診断データ収集を自動的に開始および停止するには、 **/B**_start_time_ 引数と **/E**_stop_time_ 引数を使用します (24 時間形式を使用)。 たとえば、ほぼ 02:00:00 に定期的に発生する問題のトラブルシューティングを行う場合、01:00 に診断データの収集を自動的に開始して、03:00:00 に自動的に終了するように **SQLdiag** を構成することができます。 開始時間および終了時間を指定するには、 **/B** 引数と **/E** 引数を使用します。 24 時間表記を使用して、YYYYMMDD_HH:MM:SS 形式で開始日時と終了日時を正確に指定します。 開始時間や終了時間を相対的に指定するには、次の例のように、開始時間および終了時間の前に **+** を付け、日付部分 (YYYYMMDD_) を省略します。次の例では、 **SQLdiag** は情報の収集を開始する前に 1 時間待機し、それから情報の収集を 3 時間行い、停止して終了します。  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -356,7 +355,7 @@ SQLDIAG START /A Instance1
  **SQLdiag** サービスの一時停止はサポートされていません。  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>複数の SQLdiag インスタンスの実行  
- 同一コンピューター上で複数の **SQLdiag** インスタンスを実行するには、コマンド ラインで **/A***SQLdiag_application_name* を指定します。 これは、同一の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから別の診断セットを同時に収集する場合に便利です。 たとえば、簡単なデータ収集を連続して実行するように、 **SQLdiag** の名前付きインスタンスを構成できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で特定の問題が発生した場合は、既定の **SQLdiag** インスタンスを実行し、その問題に対する診断データを収集したり、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスが収集を要望している問題に対する一連の診断データを収集したりできます。  
+ 同一コンピューター上で複数の **SQLdiag** インスタンスを実行するには、コマンド ラインで **/A**_SQLdiag_application_name_ を指定します。 これは、同一の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから別の診断セットを同時に収集する場合に便利です。 たとえば、簡単なデータ収集を連続して実行するように、 **SQLdiag** の名前付きインスタンスを構成できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で特定の問題が発生した場合は、既定の **SQLdiag** インスタンスを実行し、その問題に対する診断データを収集したり、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスが収集を要望している問題に対する一連の診断データを収集したりできます。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>クラスター化された SQL Server インスタンスからの診断データの収集  
  **SQLdiag** は、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスからの診断データの収集をサポートしています。 クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから診断データを収集するには、構成ファイル SQLDiag.Xml 内にある **\<Machine>** 要素の **name** 属性に **"."** が指定されていることを確認してください。コマンド ラインで **/G** 引数は指定しないでください。 既定では、構成ファイル内の **name** 属性に対して **"."** が指定されていて、 **/G** 引数はオフになっています。 通常、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから収集する場合、構成ファイルの編集やコマンド ライン引数の変更は必要ありません。  
@@ -366,7 +365,7 @@ SQLDIAG START /A Instance1
 > [!NOTE]  
 >  クラスター化された [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] インスタンスから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] トレース情報を収集するには、管理共有 (ADMIN$) をクラスター上で有効にする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

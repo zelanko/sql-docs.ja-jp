@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetServiceAccount Method (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 363859fb4b1a680ff8f665a552bf4373fdc8adeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63218104"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount メソッド (SqlService クラス)
   サーバー インスタンスの実行環境に対応するユーザー名およびパスワードを変更します。  
@@ -64,6 +62,6 @@ ServiceStartName , ServiceStartPassword
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

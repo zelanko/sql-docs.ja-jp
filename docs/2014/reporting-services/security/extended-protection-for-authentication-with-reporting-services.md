@@ -4,44 +4,43 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 04cc82d92c1b2fecb79bbe044408c90295ac1226
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c1ce348edd9b4d4b6260a0eea56fe28656b03985
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101946"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
   拡張保護は、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに追加された一連の拡張機能です。 拡張保護により、アプリケーションで資格情報と認証を保護する方法の幅が広がります。 この機能自体は、資格情報の転送をはじめとする特定の攻撃を直接防ぐものではありませんが、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] などのアプリケーションに対し、認証の拡張保護を適用するためのインフラストラクチャを提供します。  
   
- 拡張保護に含まれる認証の拡張機能を代表するのが、サービス バインドとチャネル バインドです。 チャネル バインドでは、チャネル バインド トークン (CBT) を使用して、2 つのエンド ポイント間に確立されたチャネルに問題が生じていないかどうかを確認します。 サービス バインドでは、サービス プリンシパル名 (SPN) を使用して認証トークンの目的の送信先を検証します。 拡張保護の詳細な背景情報については、「 [拡張保護付き統合 Windows 認証](http://go.microsoft.com/fwlink/?LinkId=179922)」を参照してください。  
+ 拡張保護に含まれる認証の拡張機能を代表するのが、サービス バインドとチャネル バインドです。 チャネル バインドでは、チャネル バインド トークン (CBT) を使用して、2 つのエンド ポイント間に確立されたチャネルに問題が生じていないかどうかを確認します。 サービス バインドでは、サービス プリンシパル名 (SPN) を使用して認証トークンの目的の送信先を検証します。 拡張保護の詳細な背景情報については、「 [拡張保護付き統合 Windows 認証](https://go.microsoft.com/fwlink/?LinkId=179922)」を参照してください。  
   
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] でサポートおよび適用されるのは、オペレーティング システムで有効化し、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. 既定では、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] はネゴシエート認証または NTLM 認証を指定する要求を受け入れるため、オペレーティング システムでの拡張保護のサポートと [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の拡張保護機能を活用できます。  
   
 > [!IMPORTANT]  
->  既定では、Windows の拡張保護は有効になっていません。 Windows で拡張保護を有効にする方法の詳細については、「 [認証に対する保護の強化](http://go.microsoft.com/fwlink/?LinkID=178431)」を参照してください。 認証を成功させるためには、オペレーティング システムとクライアントの認証スタックが両方とも拡張保護をサポートしている必要があります。 旧バージョンのオペレーティング システムを使用している場合は、拡張保護に対応したコンピューターを準備するために、1 つ以上の更新プログラムのインストールが必要になることがあります。 拡張保護の最新情報については、 [こちら](http://go.microsoft.com/fwlink/?LinkId=183362)を参照してください。  
+>  既定では、Windows の拡張保護は有効になっていません。 Windows で拡張保護を有効にする方法の詳細については、「 [認証に対する保護の強化](https://go.microsoft.com/fwlink/?LinkID=178431)」を参照してください。 認証を成功させるためには、オペレーティング システムとクライアントの認証スタックが両方とも拡張保護をサポートしている必要があります。 旧バージョンのオペレーティング システムを使用している場合は、拡張保護に対応したコンピューターを準備するために、1 つ以上の更新プログラムのインストールが必要になることがあります。 拡張保護の最新情報については、 [こちら](https://go.microsoft.com/fwlink/?LinkId=183362)を参照してください。  
   
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services の拡張保護の概要  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、オペレーティング システムで有効になっている拡張保護がサポートされ、適用されます。 オペレーティング システムが拡張保護をサポートしていないか、拡張保護機能がオペレーティング システムで有効化されていない場合、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の拡張保護機能を使用した認証は失敗します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の拡張保護では、SSL 証明書も必要になります。 詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  既定では、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の拡張保護は有効になっていません。 この機能を有効にするには、`rsreportserver.config` 構成ファイルを変更するか、WMI API を使用して構成ファイルを更新します。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 拡張保護の設定を変更または表示するユーザー インターフェイスは提供されません。 詳細については、このトピックの [構成設定に関するセクション](#ConfigurationSettings) を参照してください。  
   
  拡張保護の設定に加えた変更や設定の不適切な構成が原因で一般的な問題が発生しても、目に見えるエラー メッセージやダイアログ ウィンドウで示されることはありません。 拡張保護の構成や互換性に関係する問題が生じると、認証に失敗し、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のトレース ログにエラーが記録されます。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  一部のデータ アクセス テクノロジでは、拡張保護がサポートされないことがあります。 データ アクセス テクノロジは、SQL Server データ ソースおよび [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] カタログ データベースへの接続に使用されます。 データ アクセス テクノロジで拡張保護がサポートされない場合、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に次のような影響が生じます。  
->   
+> 
 >  -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] カタログ データベースを実行する SQL Server は拡張保護を有効にできません。つまり、レポート サーバーがカタログ データベースへの接続に失敗し、認証エラーが返されます。  
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート データ ソースとして使用される SQL Server は拡張保護を有効にできません。つまり、レポート サーバーがレポート データ ソースへの接続に失敗し、認証エラーが返されます。  
->   
+> 
 >  データ アクセス テクノロジのドキュメントには、拡張保護のサポートに関する情報が記載されています。  
   
 ### <a name="upgrade"></a>アップグレード  
@@ -98,7 +97,7 @@ ms.locfileid: "48851927"
   
 |シナリオ|シナリオを表した図|セキュリティ保護の方法|  
 |--------------|----------------------|-------------------|  
-|プロキシに対するクライアントまたはクライアントをレポート サーバー接続のどちらかで SSL なしのレポート サーバー サービスをクライアントからの間接と直接アクセスします。|1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ<br /><br /> 4) クライアント アプリケーション|クライアントからレポート サーバーへのサービス バインドを適用できます。<br /><br /> レポート サーバーがプロキシ名を把握できなければなりません。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ `BackConnectionHostNames` でプロキシ名を構成する必要があります。<br /><br /> `RSWindowsExtendedProtectionLevel` を `Allow` または `Require` に設定します。<br /><br /> `RSWindowsExtendedProtectionScenario` を `Any` に設定します。|  
+|クライアントからレポート サーバー サービスへの間接的なアクセスと直接的なアクセスを行います。クライアントからプロキシ、またはクライアントからレポート サーバーへの接続で SSL を使用しません。|1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ<br /><br /> 4) クライアント アプリケーション|クライアントからレポート サーバーへのサービス バインドを適用できます。<br /><br /> レポート サーバーがプロキシ名を把握できなければなりません。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ `BackConnectionHostNames` でプロキシ名を構成する必要があります。<br /><br /> `RSWindowsExtendedProtectionLevel` を `Allow` または `Require` に設定します。<br /><br /> `RSWindowsExtendedProtectionScenario` を `Any` に設定します。|  
 |クライアントからレポート サーバーへの間接的なアクセスと直接的なアクセスを行います。その際、クライアントからプロキシまたはレポート サーバーへの SSL 接続を確立します。|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ<br /><br /> 4) クライアント アプリケーション|チャネル バインドを適用できます。<br /><br /> プロキシの名前は、レポート サーバーに認識する必要があります。 また、レポート サーバー管理者必要がありますホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリでプロキシ名を構成`BackConnectionHostNames`します。<br /><br /> `RSWindowsExtendedProtectionLevel` を `Allow` または `Require` に設定します。<br /><br /> `RSWindowsExtendedProtectionScenario` を `Proxy` に設定します。|  
   
 ## <a name="configuring-reporting-rervices-extended-protection"></a>Reporting Services の拡張保護の構成  
@@ -113,8 +112,8 @@ ms.locfileid: "48851927"
   
 |設定|説明|  
 |-------------|-----------------|  
-|`RSWindowsExtendedProtectionLevel`|拡張保護の適用レベルを指定します。 有効な値は`Off`、 `Allow`、および`Require`します。<br /><br /> 既定値は `Off` です。<br /><br /> `Off` を指定した場合、チャネル バインドまたはサービス バインドの検証は行われません。<br /><br /> `Allow` を指定した場合、拡張保護はサポートされますが、要求されません。 Allow を指定した場合、次の効果があります。<br /><br /> 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。 保護の適用方法は、`RsWindowsExtendedProtectionScenario` 設定によって決まります。<br /><br /> 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証が許可されます。<br /><br /> `Require` を指定した場合、次の効果があります。<br /><br /> 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。<br /><br /> 認証は**いない**拡張保護がサポートされていないオペレーティング システムで実行されているアプリケーションに許可します。|  
-|`RsWindowsExtendedProtectionScenario`|検証する拡張保護の形式を指定します (チャネル バインド、サービス バインド、またはその両方)。 有効な値は`Any`、 `Proxy`、および`Direct`します。<br /><br /> 既定値は `Proxy` です。<br /><br /> `Any` を指定した場合、次の効果があります。<br /><br /> - Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証とチャネル バインドは要求されません。<br /><br /> - サービス バインドが適用されます。<br /><br /> `Proxy` を指定した場合、次の効果があります。<br /><br /> - チャネル バインド トークンが存在する場合は、Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証が行われます。<br /><br /> - サービス バインドが適用されます。<br /><br /> `Direct` を指定した場合、次の効果があります。<br /><br /> - CBT と現在のサービスへの SSL 接続が存在し、SSL 接続の CBT が NTLM、Kerberos、またはネゴシエート トークンの CBT に一致する場合に、それぞれ Windows NTLM 認証、Kerberos 認証、またはネゴシート認証が行われます。<br /><br /> - サービス バインドは適用されません。<br /><br /> <br /><br /> 注: この設定は無視されます`RsWindowsExtendedProtectionLevel`に設定されている`OFF`します。|  
+|`RSWindowsExtendedProtectionLevel`|拡張保護の適用レベルを指定します。 有効な値は `Off`、`Allow`、`Require` です。<br /><br /> 既定値は `Off` です。<br /><br /> `Off` を指定した場合、チャネル バインドまたはサービス バインドの検証は行われません。<br /><br /> `Allow` を指定した場合、拡張保護はサポートされますが、要求されません。 Allow を指定した場合、次の効果があります。<br /><br /> 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。 保護の適用方法は、`RsWindowsExtendedProtectionScenario` 設定によって決まります。<br /><br /> 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証が許可されます。<br /><br /> `Require` を指定した場合、次の効果があります。<br /><br /> 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。<br /><br /> 認証は**いない**拡張保護がサポートされていないオペレーティング システムで実行されているアプリケーションに許可します。|  
+|`RsWindowsExtendedProtectionScenario`|検証する拡張保護の形式を指定します。チャネル バインド、サービス バインド、またはその両方です。 有効な値は `Any`、`Proxy`、`Direct` です。<br /><br /> 既定値は `Proxy` です。<br /><br /> `Any` を指定した場合、次の効果があります。<br /><br /> \- Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証とチャネル バインドは要求されません。<br /><br /> \- サービス バインドが適用されます。<br /><br /> `Proxy` を指定した場合、次の効果があります。<br /><br /> \- チャネル バインド トークンが存在する場合は、Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証が行われます。<br /><br /> \- サービス バインドが適用されます。<br /><br /> `Direct` を指定した場合、次の効果があります。<br /><br /> \- CBT と現在のサービスへの SSL 接続が存在し、SSL 接続の CBT が NTLM、Kerberos、またはネゴシエート トークンの CBT に一致する場合に、それぞれ Windows NTLM 認証、Kerberos 認証、またはネゴシート認証が行われます。<br /><br /> \- サービス バインドは適用されません。<br /><br /> <br /><br /> 注:場合、この設定は無視されます`RsWindowsExtendedProtectionLevel`に設定されている`OFF`します。|  
   
  `rsreportserver.config` 構成ファイル内のエントリの例を次に示します。  
   
@@ -164,9 +163,9 @@ ms.locfileid: "48851927"
   
 ## <a name="see-also"></a>参照  
  [拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
- [認証の拡張保護の概要](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [拡張保護付き統合 Windows 認証](http://go.microsoft.com/fwlink/?LinkId=179922)   
- [マイクロソフト セキュリティ アドバイザリ: 認証の拡張保護](http://go.microsoft.com/fwlink/?LinkId=179923)   
+ [認証の拡張保護の概要](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [拡張保護付き統合 Windows 認証](https://go.microsoft.com/fwlink/?LinkId=179922)   
+ [マイクロソフト セキュリティ アドバイザリ:認証の拡張保護](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
  [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41; (SetExtendedProtectionSettings メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;)](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

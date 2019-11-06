@@ -15,15 +15,14 @@ helpviewer_keywords:
 - DENY statement, availability groups
 - denying permissions, [SQL Server], availability groups
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: abe94591648a9c4a20df5f3a7d934df5aea989ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 043d98195f21a7e0abe6a26734f4534c14070a31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114984"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>可用性グループの権限の拒否 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  可用性グループに対して拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
- 権限を拒否する可用性グループを指定します。 スコープ修飾子 (**::**) が必要です。  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 権限を拒否する可用性グループを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  TO \<server_principal>  
  権限を拒否する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
@@ -81,7 +80,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
  可用性グループに関する情報は、[sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) カタログ ビューで表示できます。 サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。  
   
- 可用性グループは、サーバー レベルのセキュリティ保護可能なリソースです。 次の表に、可用性グループで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ 可用性グループは、サーバー レベルでセキュリティ保護可能なリソースです。 次の表に、可用性グループで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |可用性グループの権限|権限が含まれる可用性グループ権限|権限が含まれるサーバー権限|  
 |-----------------------------------|----------------------------------------------|----------------------------------|  
@@ -92,7 +91,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## <a name="permissions"></a>アクセス許可  
- 可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILTIY GROUP 権限が必要です。  
+ 可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILITY GROUP 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   

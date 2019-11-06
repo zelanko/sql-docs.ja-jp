@@ -1,5 +1,5 @@
 ---
-title: '例 : ELEMENT ディレクティブとエンティティのエンコードを指定する | Microsoft Docs'
+title: '例: ELEMENT ディレクティブとエンティティのエンコードを指定する | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 375a8e520de2e50f9a9ab47ea4b597a33f6fb5bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63287237"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例 : ELEMENT ディレクティブとエンティティのエンコードを指定する
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例:ELEMENT ディレクティブとエンティティのエンコードの指定
   この例では、 **ELEMENT** ディレクティブと **XML** ディレクティブの違いを説明します。 **ELEMENT** ディレクティブを指定した場合はデータがエンティティとしてエンコードされますが、 **XML** ディレクティブを指定した場合はその処理が行われません。 このクエリでは、\<Summary> 要素に、`<Summary>This is summary description</Summary>` のように XML が割り当てられています。  
   
  次のクエリについて考えてみます。  
@@ -84,7 +84,7 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
        (SELECT CatalogDescription.query('  
-            declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
           /pd:ProductDescription/pd:Summary'))  
 FROM     Production.ProductModel  
 WHERE    CatalogDescription is not null  
@@ -92,7 +92,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e85edf0da738b51aabaef66d9e52954ffcb44591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6eb2a23761dc24243a7a10b0e4cdbeb5b9ffe58d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137535"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([サービス] タブ)
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
@@ -46,13 +45,13 @@ ms.locfileid: "48211092"
  **開始モード**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   「手動」: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動：このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
+-   自動：このサービスは、このコンピューターの起動時に起動しようとします。  
   
--   \[無効]: このサービスは開始できません。  
+-   無効になっています。このサービスを開始できません。  
   
- **状態**  
- このサービスが実行中か、停止しているか、無効になっているかが表示されます。 **[...]** の場合は、状態の変更が保留になっています。  
+ **State**  
+ このサービスが実行中か、停止しているか、無効になっているかが表示されます。 " **...** " の場合は、状態の変更が保留になっています。  
   
   

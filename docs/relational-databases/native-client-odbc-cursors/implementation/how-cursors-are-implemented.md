@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d96a1879867f17b10baa3fd93f8225f3da7b184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 154600107c8b05079c3dd389b78dea6c4ba84944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134068"
 ---
 # <a name="how-cursors-are-implemented"></a>カーソルの実装方法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "47846230"
   
 -   [ODBC カーソル ライブラリ](../../../relational-databases/native-client-odbc-cursors/implementation/odbc-cursor-library.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルを使用して&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

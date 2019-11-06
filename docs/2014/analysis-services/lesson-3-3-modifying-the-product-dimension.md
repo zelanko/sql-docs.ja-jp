@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078841"
 ---
 # <a name="modifying-the-product-dimension"></a>Product ディメンションの変更
   このトピックの実習では、名前付き計算を使用して製品ラインにわかりやすい名前を指定し、Product ディメンションに階層を定義して、その階層の (All) メンバー名を指定します。 また、属性をグループ化して別々の表示フォルダーに格納します。  
@@ -58,19 +57,19 @@ ms.locfileid: "48081542"
   
 2.  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Line]** をクリックします。  
   
-3.  画面右側の [プロパティ] ウィンドウで、ウィンドウの下部にある **[NameColumn]** プロパティ フィールドをクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます (場合によっては、画面右側の **[プロパティ]** タブをクリックして、[プロパティ] ウィンドウを開く必要があります)。  
+3.  画面の右側にある プロパティ ウィンドウで、 **NameColumn**プロパティ ウィンドウの下部にあるフィールドし、クリックし、参照 ( **.** ) ボタンをクリックする、**名前列** ダイアログ ボックス。 (場合によっては、画面右側の **[プロパティ]** タブをクリックして、[プロパティ] ウィンドウを開く必要があります)。  
   
 4.  選択`ProductLineName`の下部にある、**基になる列**ボックスの一覧をクリックして**OK**。  
   
-     NameColumn フィールドに、テキスト " **Product.ProductLineName (WChar)**" が表示されるようになりました。 これで、 **Product Line** 属性階層のメンバーが、簡略名ではなく製品ラインの完全な名前で表示されるようになりました。  
+     NameColumn フィールドに、テキスト " **Product.ProductLineName (WChar)** " が表示されるようになりました。 これで、 **Product Line** 属性階層のメンバーが、簡略名ではなく製品ラインの完全な名前で表示されるようになりました。  
   
 5.  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Key]** をクリックします。  
   
-6.  [プロパティ] ウィンドウで、 **[NameColumn]** プロパティ フィールドをクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
+6.  プロパティ ウィンドウ、 **NameColumn**プロパティ フィールドし、参照ボタンをクリックし ( **.** ) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 7.  **[基になる列]** ボックスの一覧で **[EnglishProductName]** を選択し、 **[OK]** をクリックします。  
   
-     NameColumn フィールドに、テキスト " **Product.EnglishProductName (WChar)**" が表示されるようになりました。  
+     NameColumn フィールドに、テキスト " **Product.EnglishProductName (WChar)** " が表示されるようになりました。  
   
 8.  プロパティ ウィンドウで上にスクロール をクリックして、**名前**プロパティ フィールドと入力し、`Product Name`します。  
   
@@ -151,7 +150,7 @@ ms.locfileid: "48081542"
 9. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="defining-attribute-relationships"></a>属性リレーションシップの定義  
- 基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理速度が上がります。 詳細については、「[属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」および「[属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
+ 基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理速度が上がります。 詳細については、「 [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md) 」および「 [属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   
 #### <a name="to-define-attribute-relationships"></a>属性リレーションシップを定義するには  
   
@@ -159,7 +158,7 @@ ms.locfileid: "48081542"
   
 2.  ダイアグラムで、 **[Model Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、**[基になる属性]** に **[Model Name]** を指定します。 **[関連属性]** を **[Product Line]** に設定します。  
+3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Model Name]** を指定します。 **[関連属性]** を **[Product Line]** に設定します。  
   
      時間が経過するとメンバー間のリレーションシップが変化する可能性があるため、 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定は **[可変]** のままにします。 たとえば、製品モデルが最終的に別の製品ラインに移動される場合があります。  
   
@@ -182,9 +181,9 @@ ms.locfileid: "48081542"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [Date ディメンションの変更](lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>参照  
- [データ ソース ビューで名前付き計算の定義&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [ユーザー定義階層を作成します。](multidimensional-models/user-defined-hierarchies-create.md)   
- [構成、&#40;すべて&#41;属性階層のレベル](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>関連項目  
+ [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)   
+ [属性階層の &#40;All&#41; レベルの構成](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b8ad2b23e25cd5d36cbf890aeb8ec502314f777
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 269afec77614cdcd92e23b1fa66915c44cfa28e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069510"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "47659240"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、以前の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへのアクセスをサポートしています。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client には、XML の統合は含まれていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、選択をサポートしています. XML のクエリが、他の XML 機能をサポートしていません。 ただし、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントではサポート、 **xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client には、XML の統合は含まれていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、選択をサポートしています.XML のクエリが、他の XML 機能をサポートしていません。 ただし、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントではサポート、 **xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]します。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、接続文字列の属性のみを使用する、クライアント側のネットワーク ライブラリの構成がサポートされます。 ネットワーク ライブラリをさらに詳細に構成する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用する必要があります。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "47659240"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、TABLE_TYPE を SYNONYM に設定すると、TABLES スキーマ行セットと TABLE_INFO スキーマ行セットのシノニムを返します。  
   
--   データ型の値を返す**では**、 **nvarchar(max)**、 **varbinary(max)**、 **xml**、 **udt**、その他のラージ オブジェクト型は、クライアントのバージョンには返されませんかより前の[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。 これらの型を戻り値として使用する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用する必要があります。  
+-   データ型の値を返す**では**、 **nvarchar(max)** 、 **varbinary(max)** 、 **xml**、 **udt**、その他のラージ オブジェクト型は、クライアントのバージョンには返されませんかより前の[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。 これらの型を戻り値として使用する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用する必要があります。  
   
 -   手動および暗黙のトランザクション開始時において、以下のステートメントの実行が MDAC では許可されていましたが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では許可されません。 これらは、自動コミット モードで実行する必要があります。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "47659240"
   
     -   再構成時  
   
-    -   Shutdown  
+    -   シャットダウン  
   
     -   Kill  
   
@@ -96,7 +95,7 @@ ms.locfileid: "47659240"
   
 -   MDAC アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続すると、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータ型は、次の表に示すような、[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] と互換性を持つデータ型として扱われます。  
   
-    |SQL Server 2005 の型|SQL Server 2000 の種類|  
+    |SQL Server 2005 の型|SQL Server 2000 の型|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
@@ -112,11 +111,11 @@ ms.locfileid: "47659240"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client、ITransactionLocal::BeginTransaction のすぐに開始されるトランザクションが発生します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)」を参照してください。  
   
--   使用する場合に、エラーが発生する可能性が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ドライバー System.Data.Odbc にアクセスすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、新しい公開サーバー コンピューター [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定のデータ型または機能します。 System.Data.Odbc は ODBC の汎用実装を提供し、その後は公開しないベンダー固有の機能または拡張機能。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーは最新の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能をネイティブでサポートするように更新されます)。回避策をこの問題、MDAC に戻すか、System.Data.SqlClient に移行します。  
+-   使用する場合に、エラーが発生する可能性が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ドライバー System.Data.Odbc にアクセスすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、新しい公開サーバー コンピューター [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定のデータ型または機能します。 System.Data.Odbc は ODBC の汎用実装を提供し、その後は公開しないベンダー固有の機能または拡張機能。 (、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーは、最新のネイティブ サポートするために更新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]機能します)。回避策をこの問題、MDAC に戻すか、System.Data.SqlClient に移行します。  
   
- 行のバージョン管理機能を使用した Read Committed トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC の両方でサポートされていますが、スナップショット トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のみでサポートされています  (プログラミング用語では、「行のバージョン管理機能を使用した Read Committed トランザクション分離」は「Read Committed トランザクション」と同義語です)。  
+ 行のバージョン管理機能を使用した Read Committed トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC の両方でサポートされていますが、スナップショット トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のみでサポートされています (プログラミング用語では、「行のバージョン管理機能を使用した Read Committed トランザクション分離」は「Read Committed トランザクション」と同義語です)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

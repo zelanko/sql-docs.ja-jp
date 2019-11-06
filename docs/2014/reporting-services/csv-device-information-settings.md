@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2dfb27e467dc762c6591c8b820cb71302eac99fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: ddce07fd322948e16abb753f00b3e736026c0365
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109589"
 ---
 # <a name="csv-device-information-settings"></a>CSV デバイス情報設定
   CSV 表示拡張機能のデバイス情報設定では、区切り記号と修飾子を変更し、改行処理を指定できます。 ファイルの拡張子、エンコード、および出力にヘッダー行を含めることも指定できます。 区切り記号は通常特殊文字であるため、設定が XML として記述されている場合、CDATA セクションでエンコードしてください。  
@@ -35,8 +34,8 @@ ms.locfileid: "48116912"
 |**NoHeader**|出力からヘッダー行を除外するかどうかを示します。 既定値は `false` です。|  
 |`Qualifier`|フィールド区切り文字またはレコード区切り文字が入った結果を囲む修飾子文字列。 結果に修飾子が入っている場合、修飾子は繰り返されます。 `Qualifier` 設定は `FieldDelimiter` および `RecordDelimiter` の設定とは異なるものである必要があります。 既定値は引用符 (") です。|  
 |`RecordDelimiter`|各レコードの末尾に付けるレコード区切り記号。 既定値は \<cr>\<lf> です。|  
-|**SuppressLineBreaks**|出力に入れるデータから改行を削除するかどうかを示します。 既定値は `false` です。 値が場合`true`、 `FieldDelimiter`、 `RecordDelimiter`、および`Qualifier`設定が空白文字にすることはできません。|  
-|`UseFormattedValues`|書式設定された文字列を CSV 出力に流し込むかどうかを示します。 既定値は`true`とき`ExcelMode`は`true`。 それ以外の場合は`false`。|  
+|**SuppressLineBreaks**|出力に入れるデータから改行を削除するかどうかを示します。 既定値は `false` です。 値が `true` である場合、`FieldDelimiter`、`RecordDelimiter`、および `Qualifier` の設定は空白文字にはできません。|  
+|`UseFormattedValues`|書式設定された文字列を CSV 出力に流し込むかどうかを示します。 既定値は、`true` が `ExcelMode` の場合は `true` で、それ以外の場合は `false` です。|  
   
 ## <a name="see-also"></a>参照  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

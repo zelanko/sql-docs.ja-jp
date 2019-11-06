@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.welcome.f1
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 777d6d1234db70a40840e2539df5b7d2d646ab5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899839"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードへようこそ]
   **緩やかに変化するディメンション ウィザード** を使用すると、さまざまな種類の緩やかに変化するディメンションへのデータの読み込みを設定できます。  

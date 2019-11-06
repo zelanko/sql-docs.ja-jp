@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function create
@@ -16,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16eb3ef5b20a2aa3d8ffc869d386e541b081752f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212004"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>ユーザー定義の分類子関数の作成とテスト
   このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ステートメントを実行します。  
@@ -263,8 +262,8 @@ ms.locfileid: "48112822"
         > [!WARNING]  
         >  以上のベスト プラクティスに従うことを強くお勧めします。 ベスト プラクティスに従うことのできない事情がある場合は、問題の発生を事前に防ぐためにも、Microsoft サポートにお問い合わせいただくことをお勧めします。  
   
-## <a name="see-also"></a>参照  
- [[リソース ガバナー]](resource-governor.md)   
+## <a name="see-also"></a>関連項目  
+ [リソース ガバナー](resource-governor.md)   
  [リソース ガバナーの有効化](enable-resource-governor.md)   
  [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   

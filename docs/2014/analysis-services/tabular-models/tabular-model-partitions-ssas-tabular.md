@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.partitions.partitionmgr.imbi.f1
@@ -13,12 +12,12 @@ ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7551cd654fbecf48e4d5bb101531ff412365ee02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066388"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>テーブル モデル パーティション (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時にあるモデルのために定義されたパーティションが、配置済みモデルで複製されます。 いったん配置されると、 **の** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスまたはスクリプトを使用して、それらのパーティションを管理したり、新しいパーティションを作成したりできます。 このトピックでは、配置済みのテーブル モデル データベースにおけるパーティションについて説明します。 モデル作成時のパーティションの作成と管理の詳細については、「[パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  
@@ -36,7 +35,7 @@ ms.locfileid: "48089232"
 ##  <a name="bkmk_benefits"></a> 利点  
  効率的なモデル設計によるパーティションの活用によって、不必要な処理とその後の Analysis Services サーバーでのプロセッサ負荷が排除されます。同時に、データ ソースの大部分の最新のデータを反映できる頻度でデータが処理され更新されるようになります。  
   
- たとえば、あるテーブル モデルに現会計年度 (2011 年度) の売上データと過去の各会計年度の売上データを含む売上テーブルがあるとします。 モデルの売上テーブルは次の 3 つのパーティションで構成されます。  
+ たとえば、あるテーブル モデルに現会計年度 (2011 年度) の売上データと過去の各会計年度の売上データを含む売上テーブルがあるとします。 モデルの売上テーブルには、次の 3 つのパーティションがあります。  
   
 |パーティション|データ ソース|  
 |---------------|---------------|  
@@ -48,9 +47,9 @@ ms.locfileid: "48089232"
   
  Sales2010-2001 パーティションのデータは毎晩処理する必要がありません。ただし、製品の返品などの調整によって過去 10 年間の会計年度の売上データも変化する場合があるため、定期的に処理する必要があります。そのため、Sales2010-2001 パーティションのデータは毎月処理されます。 SalesOld パーティションのデータは変化しないため、1 年に 1 回処理されます。  
   
- 2012 年度になると、新しい Sales2012 というパーティションがモードの売上テーブルに追加されます。 Sales2011 パーティションは、Sales2010-2001 パーティションとマージして、Sales2011-2002 という名前に変更することができます。 2001 年度のデータは、新しい Sales2011-2002 パーティションから削除され、SalesOld パーティションに移動されます。 次に、変更を反映させるためにすべてのパーティションが処理されます。  
+ 2012 年を入力するときに、新しい sales2012 というパーティションがモードの売上テーブルに追加されます。 Sales2011 パーティションは、Sales2010-2001 パーティションとマージして、Sales2011-2002 という名前に変更することができます。 2001 年度のデータは、新しい Sales2011-2002 パーティションから削除され、SalesOld パーティションに移動されます。 次に、変更を反映させるためにすべてのパーティションが処理されます。  
   
- 組織のテーブル モデルにパーティション分割の方法をどのように実装するかは、特定のモデル データ処理ニーズと使用可能なリソースによって大きく左右されます。  
+ 組織の表形式モデルにパーティション分割を実装する方法は主に依存する、特定のモデル データ処理のニーズや使用可能なリソース。  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパーティションを作成、管理、および処理するには、適切な Analysis Services 権限がセキュリティ ロールで定義されている必要があります。 各セキュリティ ロールには次のいずれかの権限があります。  
@@ -78,7 +77,7 @@ ms.locfileid: "48089232"
   
 |タスク|説明|  
 |----------|-----------------|  
-|[テーブル モデル パーティション作成し、管理&#40;SSAS 表形式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを作成および管理する方法について説明します。|  
-|[テーブル モデル パーティションの処理&#40;SSAS 表形式&#41;](process-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを処理する方法について説明します。|  
+|[テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを作成および管理する方法について説明します。|  
+|[テーブル モデル パーティションの処理 (SSAS テーブル)](process-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを処理する方法について説明します。|  
   
   

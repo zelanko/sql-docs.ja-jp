@@ -2,7 +2,7 @@
 title: レポートのアップグレード (SSRS) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], upgrading
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 072b8d78d0dcb70b56fe596bd3e994395bd6e64b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c4d5684850dff9157a56435547e48b5446dd929c
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028901"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494552"
 ---
 # <a name="upgrade-reports-ssrs"></a>レポートのアップグレード (SSRS)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50028901"
 
 レポート定義 (.rdl) ファイルは、次の方法で開いたときに自動的にアップグレードされます。  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーでページ分割されたレポートを開くと、レポート定義は現在サポートされている RDL スキーマにアップグレードされます。 プロジェクトのプロパティで [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] レポート サーバーを指定すると、レポート定義はターゲット サーバーと互換性のあるスキーマに保存されます。  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーでページ分割されたレポートを開くと、レポート定義は現在サポートされている RDL スキーマにアップグレードされます。 プロジェクトのプロパティで [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] レポート サーバーを指定すると、レポート定義はターゲット サーバーと互換性のあるスキーマに保存されます。  
   
 -   既にインストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] にアップグレードすると、レポート サーバーにパブリッシュされている既存のレポートとスナップショットは、最初に処理されるときにコンパイルされ、新しいスキーマへと自動的にアップグレードされます。 レポートを自動的にアップグレードできない場合、レポートは下位互換性モードを使用して処理されます。 レポート定義は元のスキーマのまま残ります。  
   
@@ -136,8 +136,8 @@ ms.locfileid: "50028901"
 ## <a name="next-steps"></a>次の手順
 
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016 における SQL Server Reporting Services の重大な変更](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[SQL Server 2016 における SQL Server Reporting Services の動作変更](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016 における SQL Server Reporting Services の重大な変更](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+[SQL Server 2016 における SQL Server Reporting Services の動作変更](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [カスタム レポート アイテム](../../reporting-services/custom-report-items/custom-report-items.md)   
 [レポート サーバー データベースのアップグレード](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

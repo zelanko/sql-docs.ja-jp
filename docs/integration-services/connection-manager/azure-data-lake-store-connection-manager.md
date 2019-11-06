@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,22 +13,25 @@ f1_keywords:
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
-manager: craigg
-ms.openlocfilehash: 3e9caa6e272e4b1e2479f0abf10547e52721049c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 095865071b3a9ddfcba15635d9e3d857b2dbee20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904792"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SQL Server Integration Services (SSIS) パッケージでは、Azure Data Lake Store 接続マネージャーを使用して、次の 2 つの認証の種類のいずれかで Azure Data Lake Storage Gen1 アカウントに接続できます。
 -   Azure AD のユーザー ID
 -   Azure AD のサービス ID 
 
 Azure Data Lake Store 接続マネージャー は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
 
->   [!NOTE]
+> [!NOTE]
 > Azure Data Lake Store 接続マネージャーとこれを使用するコンポーネント (つまり、接続元の Data Lake Storage Gen1 と接続先の Data Lake Storage Gen1) がサービスに接続できるようにするために、必ず最新バージョンの Azure Feature Pack を [こちら](https://www.microsoft.com/download/details.aspx?id=49492)からダウンロードしてください。 
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 接続マネージャーを構成する
@@ -42,21 +45,21 @@ Azure Data Lake Store 接続マネージャー は、[SQL Server Integration Ser
     1.  **[Azure AD のユーザー ID]** 認証オプションを選択する場合は、次の操作を行います。
         1. **[ユーザー名]** と **[パスワード]** のフィールドに値を指定します。 
     
-        2. 接続をテストするには、**[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Storage Gen1 データへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「[Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)」を参照してください。
+        2. 接続をテストするには、 **[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Storage Gen1 データへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)」を参照してください。
     
-        >   [!NOTE] 
+        > [!NOTE] 
         > **[Azure AD のユーザー ID]** 認証オプションを選択する場合、多要素認証と Microsoft アカウント認証はサポートされません。
     
     2. **[Azure AD のサービス ID]** 認証オプションを選択する場合は、次の操作を行います。
         1. Data Lake Storage Gen1 データにアクセスするための Azure Active Directory (AAD) アプリケーションおよびサービス プリンシパルを作成します。
     
-        2. 適切な権限を割り当てて、この AAD アプリケーションが Data Lake Storage Gen1 リソースにアクセスできるようにします。 この認証オプションの詳細については、「[Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。
+        2. 適切な権限を割り当てて、この AAD アプリケーションが Data Lake Storage Gen1 リソースにアクセスできるようにします。 この認証オプションの詳細については、「 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。
     
-        3. **[クライアント ID]**、**[シークレット キー]** および **[テナント名]** の各フィールドに値を指定します。
+        3. **[クライアント ID]** 、 **[シークレット キー]** および **[テナント名]** の各フィールドに値を指定します。
     
-        4. 接続をテストするには、**[接続テスト]** を選択します。  
+        4. 接続をテストするには、 **[接続テスト]** を選択します。  
   
-6.  **[OK]** を選択して、**[Azure Data Lake Store 接続マネージャー エディター]** ダイアログ ボックスを閉じます。  
+6.  **[OK]** を選択して、 **[Azure Data Lake Store 接続マネージャー エディター]** ダイアログ ボックスを閉じます。  
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>接続マネージャーのプロパティを表示する
 作成した接続マネージャーのプロパティは、 **[プロパティ]** ウィンドウに表示されます。  

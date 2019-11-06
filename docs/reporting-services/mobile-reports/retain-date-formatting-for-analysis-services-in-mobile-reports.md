@@ -9,11 +9,11 @@ ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62503003"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>モバイル レポートで Analysis Services の日付の書式設定を保持する
 レポート ビルダー内の共有データセットにメジャーを追加して、 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] データ ソースの日付のデータ型が [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]で保持されるようにします。
@@ -26,7 +26,7 @@ ms.locfileid: "47853400"
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>日付フィールドのデータ型を保持するためにメジャーを作成する
 
-1. 日付フィールドの値を保持するためのメジャーを作成し、式フィールドで日付の階層/レベルを選択し、 **.CurrentMember.MemberValue**を追加します。 例 :
+1. 日付フィールドの値を保持するためのメジャーを作成し、式フィールドで日付の階層/レベルを選択し、 **.CurrentMember.MemberValue**を追加します。 例:
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    

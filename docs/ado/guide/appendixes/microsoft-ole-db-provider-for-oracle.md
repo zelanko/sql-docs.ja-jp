@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926625"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle の概要
 > [!IMPORTANT]
@@ -71,5 +70,5 @@ MSDAORA
 |**プロンプト**|接続が確立されるときにユーザーに確認するかどうかを示します。|
 |**拡張プロパティ**|プロバイダー固有の拡張された接続情報を含む文字列。 このプロパティはプロパティのメカニズムでは記述できないプロバイダーに固有の接続情報にのみ使用します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [プロバイダー プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f16916421a8ffc81c6ec48d344712a323aeb79b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c965e4f24a8055250d91e7755fff6ca84e0ce011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112018"
 ---
 # <a name="fetching-result-data"></a>結果データのフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "47709948"
   
  この最適化は、アプリケーションに適用できるようにありません**テキスト**、 **ntext**、または**イメージ**ユーザーがカーソルを上下にスクロール中にデータが表示されます。 アプリケーションを呼び出して、ユーザーが行を選択後**SQLGetData**を取得する、**テキスト**、 **ntext**、または**イメージ**データ。 転送、**テキスト**、 **ntext**、または**イメージ**のどの行のデータ、ユーザーは選択を解除して、非常に大量のデータの送信を節約できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結果の処理&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

@@ -19,35 +19,34 @@ helpviewer_keywords:
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8dc70580de4f759a5adb6a501ac5dc200b62cba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053672"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError 関数
 **準拠**  
- バージョンが導入されています。 ODBC 3.0  
+ バージョンが導入されました。ODBC 3.0  
   
  **概要**  
  **SQLPostInstallerError**ドライバーまたはトランスレーター セットアップ ライブラリ エラーを報告するメカニズムを提供します、 **ConfigDriver**、 **ConfigDSN**、および**ConfigTranslator**インストーラー エラー キューに機能します。 アプリケーションは、この API を使用しません使用する**SQLInstallerError**エラーを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 RETCODE SQLPostInstallerError(  
-     DWORD    fErrorCode,  
-     LPSTR    szErrorMsg);  
+     DWORD    fErrorCode,  
+     LPSTR    szErrorMsg);  
 ```  
   
 ## <a name="arguments"></a>引数  
  *fErrorCode*  
  [入力]インストーラーのエラー コード。  
   
- *後*  
+ *szErrorMsg*  
  [入力]エラー メッセージ テキスト。  
   
 ## <a name="returns"></a>戻り値  

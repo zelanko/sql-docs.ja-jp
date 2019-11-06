@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136662"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -274,7 +273,7 @@ END
 ELSE IF @ret_code = 1  
    PRINT 'ERROR: You must specify a last name for the sales person.'  
 ELSE IF @ret_code = 2   
-   PRINT 'EERROR: You must enter a valid last name for the sales person.'  
+   PRINT 'ERROR: You must enter a valid last name for the sales person.'  
 ELSE IF @ret_code = 3  
    PRINT 'ERROR: An error occurred getting sales value.'  
 ELSE IF @ret_code = 4  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071846"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109704"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
   データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md) 」および「 [警告デザイナーでのデータ警告の編集](edit-a-data-alert-in-alert-designer.md)」を参照してください。  
@@ -55,7 +54,7 @@ ms.locfileid: "49071846"
   
      レポートの名前が、警告定義の既定の名前として使用されます。 警告定義名は必ずしも一意である必要はありませんが、後でデータ警告マネージャーで警告の一覧を表示したときに区別しづらくなる可能性はあります。 警告定義には、一意でわかりやすい名前を使用することをお勧めします。  
   
-6.  必要に応じてから既定のデータ オプションを変更**データ フィード内の任意のデータが**に**データ フィード内のデータを持たない**します。  
+6.  必要に応じて、既定のデータ オプションを **[データ フィード内のいずれかのデータに次が含まれる]** から **[データ フィード内のどのデータにも次のものが含まれていません]** に変更します。  
   
 7.  **[ルールの追加]** をクリックします。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "49071846"
   
      一覧表示される比較演算子は、選択した列のデータ型によって異なります。 日付データ型の列の場合、ルールのしきい値の横にカレンダーのアイコンが表示されます。 カレンダーの日付をクリックするか日付を入力してデータを入力できます。  
   
-     データ警告デザイナーでは、 **[値入力モード]** と **[フィールドの選択モード]** の 2 つの比較モードが提供されます。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
+     データ警告デザイナーには 2 つの比較モードが用意されています。**[値入力モード]** と **[フィールドの選択モード]** です。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
   
 9. OR 句を追加するには、下矢印をクリックし、 **[値入力モード]** をクリックします。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "49071846"
   
 22. **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)   
  [警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  

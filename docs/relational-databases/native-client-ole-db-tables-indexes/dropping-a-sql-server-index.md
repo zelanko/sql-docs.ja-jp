@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eadcd1de5bfc3eea254bb134b963c2b4be094eaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4178e4b44bc226e31b6f6287b366d154cc306a9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069547"
 ---
 # <a name="dropping-a-sql-server-index"></a>SQL Server インデックスの削除
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47806000"
   
  インデックス名は、*pIndexID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。 *pIndexID* の *eKind* メンバーを DBKIND_NAME にする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがテーブルのすべてのインデックスを削除するの OLE DB の機能をサポートしていないときに*pIndexID*が null です。 *pIndexID* が NULL の場合、E_INVALIDARG を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルとインデックス](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  

@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ad2ccc2505c3bb72b8d2efc02afbc5ef5aebaf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b23525dc9762d012948e6eba0b41156b45ac69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056280"
 ---
-# <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
+# <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   毎回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの起動、新しいセッションを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが予期せず再開または停止すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントではジョブの状態を保持するためセッションが使用されます。 行ごと、 **syssessions**テーブルに 1 つのセッションの情報が含まれています。 使用して、 **sysjobactivity**セッションごとの最後に、ジョブの状態を表示するテーブル。  
@@ -42,7 +41,7 @@ ms.locfileid: "47806832"
 ## <a name="remarks"></a>コメント  
  メンバーであるユーザーのみの**sysadmin**固定サーバー ロールがこのテーブルにアクセスできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo.sysjobactivity &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98adb71b745d38a609d3538c4b4ae3b5f71c14a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fca94c601dff429458fbde9d1614b078004f4d5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770368"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードの完了]
   **[緩やかに変化するディメンション ウィザードの完了]** ダイアログ ボックスを使用すると、緩やかに変化するディメンションのサポートをウィザードで構築する前に選択内容を確認できます。  

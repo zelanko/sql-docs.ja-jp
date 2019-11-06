@@ -16,15 +16,14 @@ helpviewer_keywords:
 - database audit specification
 - DROP DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 63a88b1b389f9e3e3df5de3634ead91a3f757a18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898181"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  既存の監査仕様オブジェクトの名前。  
   
 ## <a name="remarks"></a>Remarks  
- DROP DATABASE AUDIT SPECIFICATION は、監査仕様のメタデータを削除します。ただし、DROP コマンドが実行される前に収集された監査データは削除されません。 データベース監査仕様を削除するには、`ALTER DATABASE AUDIT SPECIFICATION` を使用して状態を OFF に設定しておく必要があります。  
+ DROP DATABASE AUDIT SPECIFICATION では、監査仕様のメタデータを削除しますが、DROP コマンドが発行される前に収集された監査データは削除されません。 データベース監査仕様を削除するには、`ALTER DATABASE AUDIT SPECIFICATION` を使用して状態を OFF に設定しておく必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **ALTER ANY DATABASE AUDIT** 権限を持つユーザーは、データベース監査仕様を削除できます。  

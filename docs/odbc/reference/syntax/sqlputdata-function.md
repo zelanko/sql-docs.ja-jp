@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23a81ceda914bb43d4361e9c6fb8a2409bf2556e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 676f9fb526996e96b27bb758a7343c86afaac460
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053650"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
- **SQLPutData**により、ステートメントの実行時にドライバーをパラメーターまたは列のデータを送信するアプリケーション。 この関数は、部分の文字、バイナリ、またはデータ ソース固有のデータ型 (たとえば、SQL_LONGVARBINARY、SQL_LONGVARCHAR または型のパラメーター) を持つ列に文字またはバイナリ データ値を送信する使用できます。 **SQLPutData**基になるドライバーが Unicode データをサポートしていない場合でも、Unicode の C データ型へのバインドをサポートしています。  
+ **まとめ**  
+ **SQLPutData**により、ステートメントの実行時にドライバーをパラメーターまたは列のデータを送信するアプリケーション。 この関数は、部分の文字、バイナリ、またはデータ ソースに固有のデータ型 (たとえば、SQL_LONGVARBINARY、SQL_LONGVARCHAR または型のパラメーター) の列に文字またはバイナリ データ値を送信する使用できます。 **SQLPutData**基になるドライバーが Unicode データをサポートしていない場合でも、Unicode の C データ型へのバインドをサポートしています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLPutData(  
       SQLHSTMT     StatementHandle,  
@@ -60,7 +59,7 @@ SQLRETURN SQLPutData(
   
 -   C データ型は SQL_C_DEFAULT、および指定した SQL データ型の既定の C データ型は、SQL_C_CHAR または SQL_C_BINARY します。  
   
- 他のすべての種類を C のデータの場合*StrLen_or_Ind* SQL_NULL_DATA または SQL_DEFAULT_PARAM ではないことが前提とドライバーのサイズ、 \* *DataPtr*バッファーが指定された C データ型のサイズ*ValueType*または*TargetType*データ値全体を送信します。 詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d: データ型。  
+ 他のすべての種類を C のデータの場合*StrLen_or_Ind* SQL_NULL_DATA または SQL_DEFAULT_PARAM ではないことが前提とドライバーのサイズ、 \* *DataPtr*バッファーが指定された C データ型のサイズ*ValueType*または*TargetType*データ値全体を送信します。 詳細については、次を参照してください[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d:。データ型。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
@@ -75,7 +74,7 @@ SQLRETURN SQLPutData(
 |07006|制限付きのデータ型の属性違反|識別されるデータ値、 *ValueType*引数**SQLBindParameter**のバインドされたパラメーターがで識別されるデータ型に変換できませんでした、 *ParameterType*引数**SQLBindParameter**します。|  
 |07S01|既定のパラメーターの使い方が正しくありません。|パラメーターの値の設定で**SQLBindParameter**が SQL_DEFAULT_PARAM、および対応するパラメーターは、既定値はありませんでした。|  
 |08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
-|22001|文字列データの右側が切り捨てられました|文字値または列にバイナリ値の割り当ては、空白 (文字) または null 以外 (バイナリ) の文字またはバイトの切り捨てが発生しました。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo**が"Y"と指定された以外 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソース固有のデータ型)、long 型パラメーターのより多くのデータが送信されました。*StrLen_or_IndPtr*引数**SQLBindParameter**します。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo** "Y"で指定された数より長い列 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソース固有のデータ型) のより多くのデータが送信された、追加または更新されたデータの行の列に対応する長バッファー **SQLBulkOperations**またはで更新された**SQLSetPos**します。|  
+|22001|文字列データの右側が切り捨てられました|文字値または列にバイナリ値の割り当ては、空白 (文字) または null 以外 (バイナリ) の文字またはバイトの切り捨てが発生しました。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo**が"Y"と指定された以外 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型)、long 型パラメーターのより多くのデータが送信されました。*StrLen_or_IndPtr*引数**SQLBindParameter**します。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo** "Y"で指定された数より長い列 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型) のより多くのデータが送信された、追加または更新されたデータの行の列に対応する長バッファー **SQLBulkOperations**またはで更新された**SQLSetPos**します。|  
 |22003|数値が範囲外|列に関連付けられているテーブル列に割り当てられたときに切り詰められる数値の (ではなく小数部) 全体の一部が原因となったまたはバインドされている数値パラメーターのデータが送信されます。<br /><br /> 1 つまたは複数の入力/出力または出力パラメーター (数値または文字列) としての数値の値が返される原因となる (ではなく小数部) 整数部分が切り捨てられる数値。|  
 |22007|無効な datetime 形式|それぞれ、無効な日付、時刻、またはタイムスタンプ パラメーターまたは列の日付、時刻、またはタイムスタンプの構造体にバインドされた送信されるデータがでした。<br /><br /> または入力/出力の出力パラメーターは、日付、時刻、またはタイムスタンプ C 構造体にバインドされていたし、返されるパラメーターの値が、それぞれ、無効な日付、時刻、またはタイムスタンプ。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |22008|Datetime フィールド オーバーフロー|Datetime 式が入力/出力の計算または出力パラメーターの日付、時刻、または無効なタイムスタンプ C の構造体が発生しました。|  
@@ -88,7 +87,7 @@ SQLRETURN SQLPutData(
 |HY009|無効な null ポインターの使用|(DM) 引数*DataPtr*が null ポインターの場合は、および引数*StrLen_or_Ind*でした SQL_DEFAULT_PARAM、または SQL_NULL_DATA は 0。|  
 |HY010|関数のシーケンス エラー|(DM) 前の関数呼び出しはへの呼び出しではない**SQLPutData**または**SQLParamData**します。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数は、SQLPutData 関数が呼び出されたときにまだ実行中だった。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY019|部分で送信される文字またはバイナリ以外のデータ|**SQLPutData**が呼び出された複数の 1 回のパラメーターまたは列、およびそれが使用されていない文字、バイナリ、またはデータ ソース固有のデータ型の列に文字データを送信する、または文字の列にバイナリの C データを送信するには、バイナリ、またはデータ ソース固有のデータ型。|  
+|HY019|部分で送信される文字またはバイナリ以外のデータ|**SQLPutData**が呼び出された複数の 1 回のパラメーターまたは列、およびそれが使用されていない文字、バイナリ、またはデータのソースに固有のデータ型の列に文字データを送信する、または文字の列にバイナリの C データを送信するには、バイナリ、またはデータ ソースに固有のデータ型。|  
 |HY020|Null 値を連結しようとしてください。|**SQLPutData** 、SQL_NEED_DATA が返されますの呼び出し後、これらの呼び出しのいずれかで複数回呼び出された、 *StrLen_or_Ind* SQL_NULL_DATA または SQL_DEFAULT_PARAM 引数が含まれています。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数*DataPtr*が null ポインターの場合は、および引数*StrLen_or_Ind* SQL_NTS または SQL_NULL_DATA 等しくありませんが、0 より小さいをでした。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
@@ -109,16 +108,16 @@ SQLRETURN SQLPutData(
  方法の実行時データ パラメーターのデータの詳細については、ステートメントの実行時に渡されるを参照してください「パラメーターの値を渡す」で[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)と[長い形式のデータを送信する](../../../odbc/reference/develop-app/sending-long-data.md)します。 詳細については、方法、実行時データ列のデータが更新または追加を参照してください"を使用して SQLSetPos" [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)、「を実行する一括更新プログラムを使用してブックマーク」で[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)と[長い形式のデータ、SQLSetPos および SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)します。  
   
 > [!NOTE]  
->  アプリケーションで使用できます**SQLPutData**文字、バイナリ、またはデータ ソース固有のデータ型の列に文字データを送信するときにのみ、または列が文字、バイナリ、C のバイナリ データを送信するときに、部分のデータまたはデータを送信するにはソース固有のデータを入力します。 場合**SQLPutData**というが複数回、他の条件下で SQL_ERROR と返す SQLSTATE HY019 (文字またはバイナリ以外のデータが分割されて送信されました)。  
+>  アプリケーションで使用できます**SQLPutData**文字、バイナリ、またはデータのソースに固有のデータ型の列に文字データを送信するときにのみ、または列が文字、バイナリ、C のバイナリ データを送信するときに、部分のデータまたはデータを送信するにはソースに固有のデータを入力します。 場合**SQLPutData**というが複数回、他の条件下で SQL_ERROR と返す SQLSTATE HY019 (文字またはバイナリ以外のデータが分割されて送信されました)。  
   
 ## <a name="example"></a>例  
  次の例は、テストと呼ばれるデータ ソース名を想定しています。 関連付けられているデータベースには、次のように、作成できるテーブルが必要です。  
   
-```  
+```sql  
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 ```  
   
-```  
+```cpp  
 // SQLPutData.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <stdio.h>  

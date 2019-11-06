@@ -1,7 +1,8 @@
 ---
-title: 分散トランザクション対応の可用性グループを構成する | Microsoft Docs
-ms.custom: ''
-ms.date: 05/22/2018
+title: 可用性グループ用に分散トランザクションを構成する
+description: 'Always On 可用性グループ内のデータベースに対して分散トランザクションを構成する方法について説明します。 '
+ms.custom: seodec18
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -15,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513681"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713271"
 ---
-# <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
+# <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] は、可用性グループのデータベースを含むすべての分散トランザクションをサポートします。 この記事では、分散トランザクションの可用性グループを構成する方法について説明します。  
@@ -39,6 +39,8 @@ ms.locfileid: "52513681"
 
 可用性グループが分散トランザクション用に構成されていない場合であっても、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] は可用性グループ内のデータベースに対する分散トランザクションを妨げません。 ただし、可用性グループが分散トランザクション対応に構成されていない場合は、一部の状況でフェールオーバーが失敗する可能性があります。 具体的には、新しいプライマリ レプリカの [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンスが、DTC からトランザクションの結果を取得できない場合があります。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンスがフェールオーバー後に DTC から未確定トランザクションの結果を取得できるようにするには、可用性グループを分散トランザクション対応に構成します。 
 
+データベースがフェールオーバー クラスターのメンバーでもある場合を除き、DTC は可用性グループの処理には関与しません。 可用性グループ内では、可用性グループのロジックによってレプリカ間の整合性が維持されます。永続的なストレージにログ レコードが永続化されたことをセカンダリが確認して初めて、プライマリはコミットを完了し、呼び出し元へのコミットを確認します。 その後で初めて、プライマリはトランザクションの完了を宣言します。 非同期モードでは、セカンダリからの肯定応答を待たないため、少量のデータが失われる可能性が明示的に存在します。
+
 ## <a name="prerequisites"></a>Prerequisites
 
 分散トランザクションをサポートするように可用性グループを構成するには、次の前提条件が満たされている必要があります。
@@ -51,6 +53,8 @@ ms.locfileid: "52513681"
 
 分散トランザクションをサポートするように可用性グループを構成します。 各データベースがリソース マネージャーとして登録するのを許可するように、可用性グループを設定します。 この記事では、各データベースが DTC のリソース マネージャーになることができるように、可用性グループを構成する方法について説明します。
 
+
+
 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 以降では、分散トランザクション対応の可用性グループを作成できます。 分散トランザクション対応の可用性グループを作成するには、可用性グループの定義に `DTC_SUPPORT = PER_DB` を追加します。 次のスクリプトは、分散トランザクション対応の可用性グループを作成します。 
 
 ```sql
@@ -60,12 +64,12 @@ CREATE AVAILABILITY GROUP MyAG
       )
    FOR DATABASE DB1, DB2
    REPLICA ON
-      Server1 WITH (
+      'Server1' WITH (
          ENDPOINT_URL = 'TCP://SERVER1.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
-         )
-      Server2 WITH (
+         ),
+      'Server2' WITH (
          ENDPOINT_URL = 'TCP://SERVER2.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
@@ -87,7 +91,16 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] では、分散トランザクション対応に可用性グループを変更することはできません。 設定を変更するには、可用性グループをいったん削除した後、`DTC_SUPPORT = PER_DB` の設定を指定して作成し直します。 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、分散トランザクションの可用性グループを変更できます。 Service Pack 2 より前の [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] バージョンの場合、可用性グループを削除し、`DTC_SUPPORT = PER_DB` 設定で作り直す必要があります。 
+
+分散トランザクションを無効にするには、次の Transact-SQL コマンドを使います。
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散トランザクション - 技術的概念
 
@@ -186,10 +199,10 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [分散トランザクション](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
-[Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+[Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [トランザクション - Always On 可用性グループとデータベース ミラーリング](transactions-always-on-availability-and-database-mirroring.md)  
 
 [XA トランザクションのサポート](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[動作のしくみ: DTC トランザクションのセッション/SPID (-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[動作方法:DTC トランザクションのセッション/SPID (-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - AcceptStop Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: afce20f92e237a97b56e92b0d1a9c0c1c2d8f3b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63223335"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop プロパティ (SqlService クラス)
   サービスを停止できるかどうかを指定するブール型のプロパティの値を取得します。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

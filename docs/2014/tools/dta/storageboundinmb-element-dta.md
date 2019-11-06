@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5e6cf3c0be2ec3ab8587bd086c99b32e718cd78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63460103"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 要素 (DTA)
   データベース エンジン チューニング アドバイザーのチューニング推奨設定 (インデックスとパーティション分割のセット) で使用できる最大容量を MB 単位で指定します。  
@@ -39,7 +38,7 @@ ms.locfileid: "48069452"
   
 |特性|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|`unsignedInt`、長さの制限はありません。|  
+|**データ型と長さ**|`unsignedInt`、長さは無制限です。|  
 |**既定値**|[なし] :|  
 |**個数**|任意。 `TuningOptions` 要素に 1 回だけ使用できます。|  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48069452"
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[TuningOptions 要素&#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**親要素**|[TuningOptions 要素 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**子要素**|なし|  
   
 ## <a name="remarks"></a>コメント  
@@ -59,7 +58,7 @@ ms.locfileid: "48069452"
   
  既定の記憶領域サイズには、非クラスター化インデックスとインデックス付きビューは含まれません。  
   
- 値が指定されている場合、`StorageBoundInMB`要素は、エラー、データベース エンジン チューニング アドバイザーを返します。 実際のディスク領域を超えていますが、チューニングが続行されます。 チューニングの完了後に、推奨設定を実装することにした場合はディスク容量を追加できます。  
+ `StorageBoundInMB` 要素に指定した値が実際のディスク容量のサイズを超えている場合は、データベース エンジン チューニング アドバイザーからエラーが返されますが、チューニング自体は続行されます。 チューニングの完了後に、推奨設定を実装することにした場合はディスク容量を追加できます。  
   
 ## <a name="example"></a>例  
   

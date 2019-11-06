@@ -1,26 +1,23 @@
 ---
-title: 'タスク 9: は正しいと修正済みレコードを結合する変換 Union All を追加する |Microsoft Docs'
+title: タスク 9:Union All を追加するレコードと修正のレコードを結合する変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93b160b6e513ad866126df8b401b82ee1270be84
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489647"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>タスク 9: 全体結合変換を追加して適切なレコードと修正済みレコードを結合する
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>タスク 9:全体結合変換を追加して適切なレコードと修正済みレコードを結合する
   ここでは、全体結合変換をデータ フローに追加します。 全体結合変換は、複数の入力を 1 つの出力に結合します。 このシナリオでは、1 つのストリームに適切なレコードと修正済みレコードを結合します。  
   
 1.  ドラッグ アンド ドロップ**全体結合**から変換**共通**のセクション、 **SSIS ツールボックス**を**データ フロー**タブし、下に配置**レコードと修正のレコードを選択**します。  
@@ -46,6 +43,6 @@ ms.locfileid: "48180912"
 7.  これは、**コネクタ**というが**Corrected**します。 2 つの条件があるため**修正**と**修正済み**、し、1 つの条件が既に使用されて、**入出力の選択** ダイアログ ボックスではこの時間は表示されません。 コネクタが重複する場合は、左側のコネクタを右側のコネクタに、または右側のコネクタを左側のコネクタにドラッグ アンド ドロップします。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 10: あいまいグループ化変換を追加して重複を識別する](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [タスク 10:重複を識別するために、あいまいグループ化変換を追加します。](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

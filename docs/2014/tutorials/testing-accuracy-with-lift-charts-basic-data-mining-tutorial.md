@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042667"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)
   **マイニング精度チャート**タブ データ マイニング デザイナーの各は、モデルの予測は、どの程度を計算し、他のモデルの結果に対して直接には、各モデルの結果を比較します。 このメソッドの比較と呼ばれます、*リフト チャート*します。 通常、マイニング モデルの予測精度は、リフトまたは分類の精度によって測定します。 このチュートリアルでは、リフト チャートのみを使用します。  
@@ -47,7 +46,7 @@ ms.locfileid: "48222242"
   
      として列を使用する、**予測可能列名**精度チャートで列が使用法の種類を持つ`Predict`または`Predict Only`します。 また、対象列のコンテンツの種類は、`Discrete` と `Discretized` のどちらかであることが必要です。 つまり、リフト チャートを使用して、連続する数値の出力に関する精度を測定することはできません。  
   
--   モデルの全般的な精度、または特定の値を予測する場合の精度 (たとえば、[Bike Buyer] = 'Yes') を測定することを希望していますか。  
+-   モデルの全般的な精度、または特定の値の予測で精度を測定する (など、[Bike Buyer] = 'Yes')  
   
 #### <a name="to-generate-the-lift-chart"></a>リフト チャートを生成するには  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48222242"
  [フィルター選択されたモデルのテスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [リフト チャート&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [リフト チャート タブ&#40;マイニング精度チャート ビュー&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

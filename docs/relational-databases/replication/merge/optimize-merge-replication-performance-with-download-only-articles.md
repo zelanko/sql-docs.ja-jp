@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd5c45f61329a63825eac983d21aca7e3106920d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7875347d1bc002f32721c00ac1ad470b5ec75281
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018723"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47814082"
   
  ダウンロード専用アーティクルはクライアント サブスクリプションと併用されます。アーティクルがダウンロード専用に作成されている場合、クライアント サブスクリプションを使用するサブスクライバーでは、このアーティクルに対して行の挿入、更新、および削除を行うことができません。 サーバー サブスクリプションを使用するパブリッシャーおよびサブスクライバー (通常は、他のサブスクライバーにデータを再パブリッシュするサブスクライバー) では、行の挿入、更新、および削除を行うことができます。 クライアント サブスクリプションの詳細については、「[パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
   
- アーティクルをダウンロード専用に指定するには、「 [マージ テーブル アーティクルをダウンロード専用に指定する](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)」を参照してください。  
+ アーティクルがダウンロード専用になるように指定するには、「[Specify Merge Replication properties](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)」(マージ レプリケーションのプロパティを指定する) を参照してください。  
   
 ## <a name="using-different-article-types-in-your-applications"></a>アプリケーションに応じた各種アーティクルの使い分け  
  アプリケーションの要件を理解することにより、柔軟性の最大化とパフォーマンスの最適化の間でアプリケーションを調整できます。 たとえば、パブリッシャーとサブスクライバーの両方で多数の競合と変更が発生するアプリケーションでは、標準アーティクルから構成されるパブリケーションを使用します。 セールス フォース オートメーションなど一部のアプリケーションでは、競合の可能性のあるアーティクルと、それ以外にダウンロード専用に指定できる参照テーブル用のアーティクルが使用されることがあります。 POS システムやフィールド フォース オートメーションなどのデータ入力アプリケーションでは、競合を排除するように厳密にデータがパーティション分割されている場合が多く、あるサブスクライバーから他のサブスクライバーにデータが送信されることは決してありません。 このような状況では、重複しないパーティション、ダウンロード専用アーティクル、および事前計算済みパーティションを組み合わせて使用することで、パフォーマンスとスケーラビリティを最大化することができます。 重複しないパーティションおよび事前計算済みパーティションの詳細については、「 [パラメータ化された行フィルタ](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  

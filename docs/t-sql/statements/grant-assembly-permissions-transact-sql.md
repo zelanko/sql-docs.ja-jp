@@ -14,15 +14,14 @@ helpviewer_keywords:
 - assemblies [CLR integration], permissions
 - GRANT statement, assemblies
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6d5c434bc9bc73b58b9b7f2cc59d32f413eef8f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 2f375de9db1cce966206402b99d3e54724cbf2bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065607"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT (アセンブリの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 ## <a name="arguments"></a>引数  
  *permission*  
- アセンブリで許可できる権限を指定します。 下の表をご覧ください。  
+ アセンブリで許可できる権限を指定します。 以下に一覧を示します。  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  権限を許可するアセンブリを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

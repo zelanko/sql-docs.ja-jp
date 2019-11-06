@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10545"
@@ -17,13 +16,13 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a6f13d8d76854c3fdf01dceeeb61c4d06f2a0e16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: da3f95120b81877076533d19e4cb05785d5cb932
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105644"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>インジケーター (レポート ビルダーおよび SSRS)
   インジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 インジケーターとその状態を表すアイコンは単純で、小さなサイズでもわかりやすくなっています。  
@@ -44,7 +43,7 @@ ms.locfileid: "48142462"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、そのまま使用できるインジケーター セットとインジケーター アイコンが組み込まれていますが、必要に応じて、個々のインジケーター アイコンとインジケーター セットをカスタマイズできます。  
   
- インジケーターを KPI として使用する方法の詳細については、「[チュートリアル: レポートへの KPI の追加 (レポート ビルダー)](../tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
+ インジケーターを KPI として使用する方法の詳細については、「[チュートリアル:レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  インジケーターは、レポート パーツとしてレポートとは別にパブリッシュできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -59,7 +58,7 @@ ms.locfileid: "48142462"
   
  ![rs_GaugePanelWithIndicator](../media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
- データ値を示す方法によっては、インジケーターではなくゲージを使用した方がより適切な場合もあります。 詳しくは、「 [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)」をご覧ください。  
+ データ値を示す方法によっては、インジケーターではなくゲージを使用した方がより適切な場合もあります。 詳細については、「 [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="ChoosingIndicatorTypes"></a> 使用するインジケーター タイプの選択  
@@ -90,7 +89,7 @@ ms.locfileid: "48142462"
   
 -   インジケーター セットからアイコンを削除して、少ないアイコンでより単純にデータを表示する。  
   
- 詳細については、「[インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> テーブルおよびマトリックスでのインジケーターの使用  
@@ -100,23 +99,23 @@ ms.locfileid: "48142462"
   
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
- インジケーターの追加、変更、削除の詳細については、「[インジケーターの追加または削除 (レポート ビルダーおよび SSRS)](add-or-delete-an-indicator-report-builder-and-ssrs.md)」を参照してください。  
+ インジケーターの追加、変更、削除の詳細については、「 [インジケーターの追加または削除 (レポート ビルダーおよび SSRS)](add-or-delete-an-indicator-report-builder-and-ssrs.md)」を参照してください。  
   
- レポートにインジケーターを最初に追加すると、既定値を使用するように構成されます。 この値は、データがインジケーターに希望どおりに表示されるように変更できます。 また、インジケーター アイコンの外観、使用するアイコンをインジケーターが選択する方法、およびインジケーター セットによって使用されるアイコンを変更できます。 詳細については、「[インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)」を参照してください。  
+ レポートにインジケーターを最初に追加すると、既定値を使用するように構成されます。 この値は、データがインジケーターに希望どおりに表示されるように変更できます。 また、インジケーター アイコンの外観、使用するアイコンをインジケーターが選択する方法、およびインジケーター セットによって使用されるアイコンを変更できます。 詳細については、「 [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)」を参照してください。  
   
- 既定では、インジケーターは測定単位としてパーセンテージを使用し、データの最小値と最大値を自動的に検出するように構成されます。 インジケーター内の各アイコンにはパーセンテージ範囲があります。 パーセンテージ範囲の数は、アイコン セット内のアイコンの数によって異なりますが、範囲は同じサイズで、連続しています。 たとえば、アイコン セットに 5 つのアイコンが含まれている場合は、それぞれ 20% のサイズのパーセンテージ範囲が 5 つ存在することになります。 最初の範囲は 0 で始まり 20 で終わります。同様に 2 番目の範囲は 20 で始まり、40 で終わります。それ以降の範囲も同様です。 レポートのインジケーターは、パーセンテージ範囲にインジケーター データ値が含まれるインジケーター セットのアイコンを使用します。 セット内の各アイコンのパーセンテージ範囲は変更可能です。 最小値と最大値は、値または式を指定することにより、明示的に設定できます。 さらに、測定単位が数値になるように変更することができます。 その場合、データの最小値または最大値は指定しません。 代わりに、インジケーターが使用する各アイコンに対して開始値と終了値のみを指定します。 詳細については、次を参照してください。[セットと構成の測定単位&#40;レポート ビルダーおよび SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)します。  
+ 既定では、インジケーターは測定単位としてパーセンテージを使用し、データの最小値と最大値を自動的に検出するように構成されます。 インジケーター内の各アイコンにはパーセンテージ範囲があります。 パーセンテージ範囲の数は、アイコン セット内のアイコンの数によって異なりますが、範囲は同じサイズで、連続しています。 たとえば、アイコン セットに 5 つのアイコンが含まれている場合は、それぞれ 20% のサイズのパーセンテージ範囲が 5 つ存在することになります。 最初の範囲は 0 で始まり 20 で終わります。同様に 2 番目の範囲は 20 で始まり、40 で終わります。それ以降の範囲も同様です。 レポートのインジケーターは、パーセンテージ範囲にインジケーター データ値が含まれるインジケーター セットのアイコンを使用します。 セット内の各アイコンのパーセンテージ範囲は変更可能です。 最小値と最大値は、値または式を指定することにより、明示的に設定できます。 さらに、測定単位が数値になるように変更することができます。 その場合、データの最小値または最大値は指定しません。 代わりに、インジケーターが使用する各アイコンに対して開始値と終了値のみを指定します。 詳細については、「 [測定単位の設定および構成 (レポート ビルダーおよび SSRS)](set-and-configure-measurement-units-report-builder-and-ssrs.md)」を参照してください。  
   
- インジケーターは、指定されたスコープ内のインジケーター データ値全体を同期することによってデータ値を示します。 既定では、このスコープは、インジケーターを含んでいるテーブルやマトリックスなどのインジケーターの親コンテナーです。 インジケーターの同期を変更するには、レポートのレイアウトに応じて、異なるスコープを選択します。 インジケーターの同期は省略できます。 詳細については、「[Set Synchronization Scope &#40;Report Builder and SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)」 (同期スコープの設定 &#40;レポート ビルダーおよび SSRS&#41;) を参照してください。  
+ インジケーターは、指定されたスコープ内のインジケーター データ値全体を同期することによってデータ値を示します。 既定では、このスコープは、インジケーターを含んでいるテーブルやマトリックスなどのインジケーターの親コンテナーです。 インジケーターの同期を変更するには、レポートのレイアウトに応じて、異なるスコープを選択します。 インジケーターの同期は省略できます。 詳細については、「 [同期スコープの設定 (レポート ビルダーおよび SSRS)](set-synchronization-scope-report-builder-and-ssrs.md)」を参照してください。  
   
  レポート内のスコープの説明および設定方法については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
- インジケーターでは、1 つの値のみを使用します。 複数のデータ値を表示する必要がある場合は、インジケーターではなくスパークラインやデータ バーを使用します。 スパークラインやデータ バーは、複数のデータ値を表示できますが、小さなサイズでも単純で理解しやすく、テーブルやマトリックスでも適切に機能します。 詳細については、「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
+ インジケーターでは、1 つの値のみを使用します。 複数のデータ値を表示する必要がある場合は、インジケーターではなくスパークラインやデータ バーを使用します。 スパークラインやデータ バーは、複数のデータ値を表示できますが、小さなサイズでも単純で理解しやすく、テーブルやマトリックスでも適切に機能します。 詳細については、「 [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="SizingIndicatators"></a> 視覚的効果を高めるためのインジケーターのサイズ変更  
  インジケーターは、色、方向、形状のほか、サイズを変更して、視覚的効果を高めることができます。 あるレポートで、さまざまな種類の自転車に関する顧客満足度を示すインジケーターを使用するとします。 インジケーターで使用するアイコンを、顧客満足度に応じて異なるサイズになるように構成します。 顧客満足度が大きくなるほど、レポートに表示されるアイコンのサイズも大きくなります。 次の図は、自転車の売上のレポートを示し、アイコンのサイズは売上高に対応しています。  
   
- 式を使用することで、星形のサイズを、インジケーターで使用されるフィールドの値に基づいて動的に設定できます。 詳細については、次を参照してください。[インジケーターを使用して、式のサイズを指定&#40;レポート ビルダーおよび SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)します。  
+ 式を使用することで、星形のサイズを、インジケーターで使用されるフィールドの値に基づいて動的に設定できます。 詳細については、「 [式を使用したインジケーターのサイズの指定 (レポート ビルダーおよび SSRS)](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)」を参照してください。  
   
  式の記述と使用の詳細については、「[式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -128,9 +127,9 @@ ms.locfileid: "48142462"
   
  ![rs_GaugePanelWithIndicatorAndGauge](../media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- 詳細については、「[ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS)](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS)](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)」を参照してください。  
   
- ゲージの使用の詳細については、「[ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)」を参照してください。  
+ ゲージの使用の詳細については、「 [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="SequenceIndicatorStates"></a> インジケーターの状態のシーケンス  
@@ -188,22 +187,22 @@ ms.locfileid: "48142462"
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  インジケーターの追加、変更、および削除方法、インジケーターの構成およびカスタマイズ方法、ゲージ内でのインジケーターの使用方法について説明しているトピックの一覧を次に示します。  
   
--   [追加または削除するインジケーター&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [インジケーターの追加または削除 (レポート ビルダーおよび SSRS)](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [インジケーター アイコンとインジケーター セットの変更&#40;レポート ビルダーおよび SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定および構成の測定単位&#40;レポート ビルダーおよび SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [測定単位の設定および構成 (レポート ビルダーおよび SSRS)](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [同期スコープの設定&#40;レポート ビルダーおよび SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [同期スコープの設定 (レポート ビルダーおよび SSRS)](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [式を使用してインジケーターのサイズを指定する&#40;レポート ビルダーおよび SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [式を使用したインジケーターのサイズの指定 (レポート ビルダーおよび SSRS)](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [ゲージ パネルにインジケーターとゲージを含める&#40;レポート ビルダーおよび SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS)](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>関連項目  
- [ゲージ&#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)   
  [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)  
   
   

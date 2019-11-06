@@ -1,7 +1,7 @@
 ---
 title: 'T-SQL のチュートリアル: データベース オブジェクトに対するアクセス許可の構成 | Microsoft Docs'
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ''
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 791517685f4204f87f9c0cb96f48fe48d6828c53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122867"
 ---
-# <a name="lesson-2-configure-permissions-on-database-objects"></a>レッスン 2: データベース オブジェクトに対するアクセス許可の構成
+# <a name="lesson-2-configure-permissions-on-database-objects"></a>レッスン 2:データベース オブジェクトに対するアクセス許可の構成
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 データベースへのアクセス権をユーザーに付与するには、次の 3 つの手順があります。 まず、ログインを作成します。 ユーザーはこのログインを使用して、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]に接続できます。 次に、指定したデータベースでユーザーとしてログインを構成します。 最後に、データベース オブジェクトに対する権限をユーザーに付与します。 このレッスンではこれらの 3 つの手順を紹介し、ビューとストアド プロシージャをオブジェクトとして作成する方法について説明します。  
 
@@ -33,9 +32,11 @@ ms.locfileid: "48878135"
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
-- **Windows**: [SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**: [Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
-  
+- **Windows**:[SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- **macOS**:[Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="create-a-login"></a>ログインを作成します
 [!INCLUDE[ssDE](../includes/ssde-md.md)]にアクセスするには、ユーザーのログインが必要です。 ログインは、ユーザーの ID を Windows のアカウントまたは Windows グループのメンバーとして表すか、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のみに存在する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインを使用することができます。 できるだけ Windows 認証を使用してください。  
   
@@ -43,10 +44,10 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
   
 ### <a name="create-a-new-windows-account"></a>新しい Windows アカウントの作成  
   
-1.  **[スタート]** ボタン、**[ファイル名を指定して実行]** の順にクリックし、**[名前]** ボックスに「 **%SystemRoot%\system32\compmgmt.msc /s**」と入力して、**[OK]** をクリックします。コンピューターの管理プログラムが開きます。 
-2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開し、**[ユーザー]** を右クリックして、**[新しいユーザー]** をクリックします。    
+1.  **[スタート]** ボタン、 **[ファイル名を指定して実行]** の順にクリックし、 **[名前]** ボックスに「 **%SystemRoot%\system32\compmgmt.msc /s**」と入力して、 **[OK]** をクリックします。コンピューターの管理プログラムが開きます。 
+2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開し、 **[ユーザー]** を右クリックして、 **[新しいユーザー]** をクリックします。    
 3.  **[ユーザー名]** ボックスに、「 **Mary**」と入力します。    
-4.  **[パスワード]** および **[パスワードの確認入力]** ボックスに強力なパスワードを入力し、**[作成]** をクリックして、新しいローカルの Windows ユーザーを作成します。  
+4.  **[パスワード]** および **[パスワードの確認入力]** ボックスに強力なパスワードを入力し、 **[作成]** をクリックして、新しいローカルの Windows ユーザーを作成します。  
   
 ### <a name="create-a-sql-login"></a>SQL ログインの作成  
 

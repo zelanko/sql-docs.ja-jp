@@ -15,15 +15,14 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d173ba7737e8c1920b5dc8711a12e06d1a4ea289
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 5dbd2c35b360d3b3e1e9f6dabe7d011c20795bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071190"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT (XML スキーマ コレクションの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

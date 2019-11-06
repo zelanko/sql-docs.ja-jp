@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111805"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "52712483"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP のハードウェアに関する一般的なガイドラインについては、ブログ記事「[Hardware considerations for In-Memory OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md)」(SQL Server 2014 でのインメモリ OLTP に関するハードウェアの考慮事項) をご覧ください
+-   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP でのハードウェアに関する一般的なガイドラインは、ブログの投稿「[SQL Server 2014 におけるインメモリ OLTP のハードウェアに関する考慮事項](blog-hardware-in-memory-oltp.md)」を参照してください。
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorksに基づくインメモリOLTPサンプルのインストール  
  サンプルをインストールするには、次の手順を実行します。  
@@ -148,7 +147,7 @@ ms.locfileid: "52712483"
   
 -   *計算列* - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。
 
   
@@ -313,7 +312,7 @@ ms.locfileid: "52712483"
   
  インストール手順:  
   
-1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。 [SQL Server 用の Report Markup Language (RML) をダウンロードする](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。[SQL Server 用の Report Markup Language (RML) をダウンロードする](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
 
 2.  特定のファイルが使用中であることを通知するダイアログ ボックスが表示された場合は、[続行] をクリックします  
   
@@ -387,7 +386,7 @@ END
  以下の手順と測定では、1,000 万個の販売注文を挿入するワークロードを使用します。 販売注文を 100 万個に縮小して挿入するワークロードを実行する手順については、SQLServer2016CTP3Samples.zip アーカイブに含まれる 'In-Memory OLTP\readme.txt' 内の手順をご覧ください。  
   
 ##### <a name="memory-optimized-tables"></a>メモリ最適化テーブル  
- まず、メモリ最適化テーブルでワークロードを実行します。 次のコマンドは、100 個のスレッドを開きます。このスレッドそれぞれが、5,000 個の繰り返しに対して実行されており、  各繰り返しによって、20 個の販売注文が個別のトランザクションに挿入されます。 1 つの繰り返しにつき 20 個の挿入があり、挿入するデータがデータベースを使用して生成されるという事実を補います。 この結果、販売注文の挿入の合計は "20 × 5,000 \* 100 = 10,000,000" 個になります。  
+ まず、メモリ最適化テーブルでワークロードを実行します。 次のコマンドは、100 個のスレッドを開きます。このスレッドそれぞれが、5,000 個の繰り返しに対して実行されており、  各繰り返しによって、20 個の販売注文が個別のトランザクションに挿入されます。 1 つの繰り返しにつき 20 個の挿入があり、挿入するデータがデータベースを使用して生成されるという事実を補います。 この結果、販売注文の挿入の合計は 20 \* 5,000 \* 100 = 10,000,000" 個になります。  
   
  RML Cmd Prompt を開いて、次のコマンドを実行します。  
   
@@ -434,13 +433,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> 実行速度の遅いテストのトラブルシューティング  
  テスト結果は、通常、ハードウェアと、テスト実行で使用されたコンカレンシーのレベルによって変わります。 期待した結果を得られない場合に確認することをいくつか次に示します。  
   
--   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、インメモリ OLTP によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
+-   同時実行トランザクション数:1 つのスレッドでワークロードを実行すると、インメモリ OLTP によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
   
--   SQL Server で使用できるコアが少ない: つまり、低レベルのコンカレンシーがシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションをコンカレンシーできないからです。  
+-   SQL Server で使用できるコアが少ない: つまり、低レベルの同時実行がシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションを同時実行できないからです。  
   
     -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、コンカレンシーが不足していることを示します。  
   
--   ログ ドライブの速度: ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 インメモリ OLTP でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
+-   ログ ドライブの速度:ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 インメモリ OLTP でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
   
     -   現象: メモリ最適化テーブルでワークロードを実行しているとき、CPU 使用率が 100% からかけ離れている場合、または、その変動が激しい場合は、ログ IO ボトルネックが存在する可能性があります。 これを確認するには、リソース モニターを開き、ログ ドライブのキュー長を確認します。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37e724d36094ceac2cb05b059a83de2a415e9476
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013808"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
   データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 制限の対象となるデータベース列を識別し、返されるデータのフィルター選択に使用する制限値を指定するには、`sql:limit-field` 注釈と `sql:limit-value` 注釈を使用します。  
@@ -121,7 +119,7 @@ ms.locfileid: "48224166"
     INSERT INTO Addresses values  
                (1, 'Obere Str. 57 Berlin', 'billing')  
     INSERT INTO Addresses values  
-               (1, 'Avda. de la Constitución 2222 México D.F.', 'shipping')  
+               (1, 'Avda. de la Constituci??n 2222 M??xico D.F.', 'shipping')  
     INSERT INTO Addresses values  
                (2, '120 Hanover Sq., London', 'billing')  
     INSERT INTO Addresses values  
@@ -150,13 +148,13 @@ ms.locfileid: "48224166"
   
      詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Customer CustomerID="1" CompanyName="Company A">   
      <BillTo>Obere Str. 57 Berlin</BillTo>   
-     <ShipTo>Avda. de la Constitución 2222 México D.F.</ShipTo>   
+     <ShipTo>Avda. de la Constituci??n 2222 M??xico D.F.</ShipTo>   
   </Customer>   
   <Customer CustomerID="2" CompanyName="Company B">   
      <BillTo>120 Hanover Sq., London</BillTo>   
@@ -289,7 +287,7 @@ ms.locfileid: "48224166"
   
 5.  Windows エクスプローラーで TestQuery.vbs ファイルをクリックして実行します。  
   
-     結果を次に示します。  
+     これは、結果です。  
   
     ```  
     <root>  

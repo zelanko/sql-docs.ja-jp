@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 23d07daa8b67edc171dce033c3e46ebc8f9a9f1c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 335ccdfb3857ba7d32147424a46f76bc0ccdbe17
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419893"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288422"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   1 番目の式パラメーターの値が NULL の場合、2 番目の式パラメーターの値を返します。NULL でない場合は、1 番目の式の値を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -54,8 +57,8 @@ REPLACENULL(expression 1,expression 2)
 REPLACENULL(MyColumn, "1900-01-01")  
 ```  
   
-> [!NOTE]  
->  次の例では、 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]で行われていた方法を示します。  
+> [!NOTE]
+>  次の例では、 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/ [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]で行われていた方法を示します。  
   
 ```  
 (DT_DBTIMESTAMP) (ISNULL(MyColumn) ? "1900-01-01" : MyColumn)   

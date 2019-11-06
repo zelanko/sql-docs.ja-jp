@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dff8cfc38e71c2594ecbfb753d5e7b9b432f7263
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd4acd7ce6a33665ce3d32e42328c906aaec3049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910382"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLSetConnectAttr**接続の側面を制御する属性を設定します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC 3 の詳細については *.x*アプリケーションの操作は、ODBC 2 *.x*ドライバーを参照してください[後方のマッピング置換関数アプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetConnectAttr(  
      SQLHDBC       ConnectionHandle,  
@@ -50,7 +49,7 @@ SQLRETURN SQLSetConnectAttr(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *属性*  
  [入力]属性を設定すると、「コメントです」記載されています。  
@@ -119,10 +118,10 @@ SQLRETURN SQLSetConnectAttr(
   
  このセクションの後半の表で現在定義されている属性とが導入されました ODBC のバージョンが表示されます。複数の属性のさまざまなデータ ソースを活用するために定義することが期待されます。 属性の範囲は ODBC; によって予約されていますドライバー開発者向けには、Open Group から個々 のドライバーの使用するための値を予約する必要があります。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ステートメント属性を呼び出すことで、接続レベルで設定できる**SQLSetConnectAttr** ODBC 3 では非推奨 *.x*します。 ODBC 3 *.x*アプリケーションは接続レベルでステートメント属性を設定しない必要があります。 ODBC 3 *.x*で、これは、接続属性とステートメント属性の両方を指定できます、SQL_ATTR_METADATA_ID および SQL_ATTR_ASYNC_ENABLE 属性を除く、接続レベルでのステートメント属性を設定することはできません接続レベルまたはステートメント レベルのいずれかに設定します。  
->   
->  ODBC 3 *.x* ODBC 2 協力する場合、ドライバーはこの機能をサポートのみ必要 *.x* ODBC 2 を設定するアプリケーションに *.x*接続レベルでステートメントのオプション。 詳細については、次を参照してください。 [SQLSetConnectOption のマッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
+> 
+>  ODBC 3 *.x* ODBC 2 協力する場合、ドライバーはこの機能をサポートのみ必要 *.x* ODBC 2 を設定するアプリケーションに *.x*接続レベルでステートメントのオプション。 詳細については、次を参照してください[SQLSetConnectOption のマッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
  アプリケーションが呼び出すことができます**SQLSetConnectAttr**接続の割り当て、解放までの間、いつでもできます。 まで、接続用にアプリケーションによって設定が正常に接続し、ステートメントのすべての属性が永続化**SQLFreeHandle**が接続で呼び出されます。 たとえば、アプリケーションを呼び出す**SQLSetConnectAttr**をデータ ソースに接続する前に、属性が解決しない場合でも**SQLSetConnectAttr**アプリケーションに接続するときに、ドライバーが失敗した、データ ソース。アプリケーションでは、ドライバー固有の属性を設定、アプリケーションが接続で別のドライバーに接続する場合でも、属性が永続化します。  
   
@@ -171,23 +170,23 @@ SQLRETURN SQLSetConnectAttr(
 |*属性*|*ValuePtr*内容|  
 |-----------------|-------------------------|  
 |SQL_ATTR_ACCESS_MODE (ODBC 1.0)|SQLUINTEGER 値。 SQL_MODE_READ_ONLY は、ドライバー、またはデータ ソース、接続を更新する SQL ステートメントをサポートする必要はありませんが、インジケーターとして使用されます。 このモードは、ロック戦略、トランザクションの管理、またはドライバーまたはデータ ソースに適したその他の領域を最適化するために使用できます。 このようなステートメントからデータ ソースに送信されるようにするのには、ドライバーは必要はありません。 データ ソースが読み取り専用、読み取り専用の接続中に SQL ステートメントを処理するように求められたら、ドライバーの動作では、実装定義されます。 SQL_MODE_READ_WRITE では、既定値です。|  
-|SQL_ATTR_ASYNC_DBC_EVENT (ODBC 3.8)|イベント ハンドルである SQLPOINTER 値。<br /><br /> 呼び出して非同期関数の完了の通知が有効になっている**SQLSetConnectAttr** SQL_ATTR_ASYNC_STMT_EVENT 属性イベント ハンドルを指定するとします。 **注:** カーソル ライブラリを使用した通知方法はサポートされていません。 アプリケーションと通知方法を有効にすると、SQLSetConnectAttr を使用してカーソル ライブラリを有効にするとエラー メッセージが表示されます。|  
+|SQL_ATTR_ASYNC_DBC_EVENT (ODBC 3.8)|イベント ハンドルである SQLPOINTER 値。<br /><br /> 呼び出して非同期関数の完了の通知が有効になっている**SQLSetConnectAttr** SQL_ATTR_ASYNC_STMT_EVENT 属性イベント ハンドルを指定するとします。 **注:** カーソル ライブラリでは、通知方法はサポートされていません。 アプリケーションと通知方法を有効にすると、SQLSetConnectAttr を使用してカーソル ライブラリを有効にするとエラー メッセージが表示されます。|  
 |SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE (ODBC 3.8)|またはの非同期実行を無効にする SQLUINTEGER 値は、接続ハンドルで関数を選択します。 詳細については、次を参照してください。[非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)します。<br /><br /> SQL_ASYNC_DBC_ENABLE_ON = 指定した接続に関連する関数の非同期操作を有効にします。<br /><br /> SQL_ASYNC_DBC_ENABLE_OFF = 指定した接続に関連する関数の非同期操作を (既定値) の無効化します。<br /><br /> 設定 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE は同期では常に (つまり、返さない SQL_STILL_EXECUTING)。<br /><br /> SQL_ATTR_ASYNC_ENABLE では、ステートメントの操作の非同期実行が有効になります。|  
 |SQL_ATTR_ASYNC_DBC_PCALLBACK (ODBC 3.8)|Context 構造体を指す SQLPOINTER 値。<br /><br /> ドライバー マネージャーがドライバーを呼び出すことができますのみ**SQLSetStmtAttr**この属性を持つ関数です。|  
 |SQL_ATTR_ASYNC_DBC_PCONTEXT (ODBC 3.8)|Context 構造体を指す SQLPOINTER 値。<br /><br /> ドライバー マネージャーがドライバーを呼び出すことができますのみ**SQLSetStmtAttr**この属性を持つ関数です。|  
 |SQL_ATTR_ASYNC_ENABLE (ODBC 3.0)|指定した接続でステートメントを持つ関数が呼び出されたかどうかを示す sqlulen です値は非同期的に実行されます。<br /><br /> SQL_ASYNC_ENABLE_OFF ステートメント操作 (既定値) を無効にする接続レベルの非同期実行のサポートを = です。<br /><br /> SQL_ASYNC_ENABLE_ON = ステートメント操作のための接続レベルの非同期実行のサポートを有効にします。<br /><br /> この属性ができるかどうかを設定**SQLGetInfo** SQL_AM_CONNECTION または SQL_AM_STATEMENT SQL_ASYNC_MODE 情報を使用して型を返します。|  
 |SQL_ATTR_AUTO_IPD (ODBC 3.0)|読み取り専用 SQLUINTEGER 値を指定するかどうかを呼び出した後、IPD の自動作成**SQLPrepare**はサポートされています。<br /><br /> SQL_TRUE 呼び出しの後に、IPD の自動作成を = **SQLPrepare**ドライバーでサポートされています。<br /><br /> SQL_FALSE を呼び出した後、IPD の自動作成を = **SQLPrepare**はドライバーによってサポートされていません。 準備されたステートメントをサポートしていないサーバーは、IPD を自動的に設定できません。<br /><br /> SQL_TRUE は SQL_ATTR_AUTO_IPD 接続属性の返された場合、IPD の自動作成を有効または無効にする SQL_ATTR_ENABLE_AUTO_IPD ステートメント属性を設定できます。 SQL_ATTR_AUTO_IPD が SQL_FALSE の場合は、SQL_ATTR_ENABLE_AUTO_IPD が SQL_TRUE に設定できません。 SQL_ATTR_ENABLE_AUTO_IPD の既定値は SQL_ATTR_AUTO_IPD の値にします。<br /><br /> この接続属性によって返される**SQLGetConnectAttr**設定することはできませんが、 **SQLSetConnectAttr**します。|  
-|SQL_ATTR_AUTOCOMMIT (ODBC 1.0)|自動コミット、または手動コミット モードを使用するかどうかを指定する SQLUINTEGER 値:<br /><br /> SQL_AUTOCOMMIT_OFF = ドライバー手動コミット モードを使用して、アプリケーションのコミットまたはとのトランザクションをロールバックする必要があります明示的に**SQLEndTran**します。<br /><br /> Sql_autocommit_on の状態、ドライバーは自動コミット モードを = です。 各ステートメントは、それが実行された直後後に努めています。 既定値です。 手動コミット モードから自動コミット モードに変更する sql_autocommit_on の状態を SQL_ATTR_AUTOCOMMIT に設定、接続で開かれたトランザクションがコミットされます。<br /><br /> 詳細については、次を参照してください。[コミット モード](../../../odbc/reference/develop-app/commit-mode.md)します。 **重要:** 一部のデータ ソース アクセス プランを削除して閉じるで接続するたびにすべてのステートメントのカーソル ステートメントがコミットされるは、自動コミット モードはこれを各 nonquery ステートメントが実行された後、またはカーソルがあるときに発生する可能性クエリの終了。 詳細についてで SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR 情報の種類を参照してください。 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)と[カーソルと準備されたステートメントでトランザクションの効果](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)します。 <br /><br /> バッチが自動コミット モードで実行されると、2 つのことが可能です。 バッチ全体を autocommitable 単位として扱うことができます、またはバッチ内の各ステートメントは、autocommitable 単位として扱われます。 特定のデータ ソースは、これら両方の動作をサポートできるし、どちらか一方を選択する方法を提供することがあります。 バッチが autocommitable 単位として扱われるかどうか、またはバッチ内で個々 のステートメント autocommitable ドライバー定義されていることをお勧めします。|  
+|SQL_ATTR_AUTOCOMMIT (ODBC 1.0)|自動コミット、または手動コミット モードを使用するかどうかを指定する SQLUINTEGER 値:<br /><br /> SQL_AUTOCOMMIT_OFF = ドライバー手動コミット モードを使用して、アプリケーションのコミットまたはとのトランザクションをロールバックする必要があります明示的に**SQLEndTran**します。<br /><br /> Sql_autocommit_on の状態、ドライバーは自動コミット モードを = です。 各ステートメントは、それが実行された直後後に努めています。 既定値です。 手動コミット モードから自動コミット モードに変更する sql_autocommit_on の状態を SQL_ATTR_AUTOCOMMIT に設定、接続で開かれたトランザクションがコミットされます。<br /><br /> 詳細については、次を参照してください。[コミット モード](../../../odbc/reference/develop-app/commit-mode.md)します。 **重要:** 一部のデータ ソース アクセス プランを削除し、接続、ステートメントがコミットされます。 毎回ですべてのステートメントのカーソルを閉じる自動コミット モードには、これを nonquery の各ステートメントが実行された後、またはクエリにカーソルが閉じられたときに発生する可能性があります。 詳細についてで SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR 情報の種類を参照してください。 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)と[カーソルと準備されたステートメントでトランザクションの効果](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)します。 <br /><br /> バッチが自動コミット モードで実行されると、2 つのことが可能です。 バッチ全体を autocommitable 単位として扱うことができます、またはバッチ内の各ステートメントは、autocommitable 単位として扱われます。 特定のデータ ソースは、これら両方の動作をサポートできるし、どちらか一方を選択する方法を提供することがあります。 バッチが autocommitable 単位として扱われるかどうか、またはバッチ内で個々 のステートメント autocommitable ドライバー定義されていることをお勧めします。|  
 |SQL_ATTR_CONNECTION_DEAD<br /><br /> (ODBC 3.5)|接続の状態を示す読み取り専用 SQLUINTEGER 値。 場合は SQL_CD_TRUE、接続が失われました。 場合は SQL_CD_FALSE、接続は、アクティブなままです。|  
 |SQL_ATTR_CONNECTION_TIMEOUT (ODBC 3.0)|アプリケーションに返す前に完了への接続上ですべての要求を待機する秒数に対応する SQLUINTEGER 値。 ドライバーは SQLSTATE HYT00 を返す必要があります (タイムアウトの期限切れ) いつでもクエリの実行またはログインに関連付けられていない状況でタイムアウトすることであること。<br /><br /> 場合*ValuePtr*は 0 (既定値) に等しいか、タイムアウトはありません。|  
-|SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|データ ソースで使用されるカタログの名前を含む文字列。 たとえば、SQL Server で、カタログは、データベース、ため、ドライバーの送信、**使用***データベース*ステートメント、データ ソースをどこ*データベース*で指定したデータベース\* *ValuePtr*します。 1 階層のドライバーの場合、カタログがあるディレクトリ、ためドライバーで指定したディレクトリに、現在のディレクトリが変更された **ValuePtr*します。|  
+|SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|データ ソースで使用されるカタログの名前を含む文字列。 たとえば、SQL Server で、カタログは、データベース、ため、ドライバーの送信、**使用**_データベース_ステートメント、データ ソースをどこ*データベース*で指定したデータベース\* *ValuePtr*します。 1 階層のドライバーの場合、カタログがあるディレクトリ、ためドライバーで指定したディレクトリに、現在のディレクトリが変更された **ValuePtr*します。|  
 |SQL_ATTR_DBC_INFO_TOKEN (ODBC 3.8|設定するための SQLPOINTER 値戻す、DBC への接続情報トークン時に処理[SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)の (\**pRating*) パラメーターは 100 に等しくありません。<br /><br /> SQL_ATTR_DBC_INFO_TOKEN はセット専用です。 使用することはできません**SQLGetConnectAttr**または**SQLGetConnectOption**この値を取得します。 ドライバー マネージャーの**SQLSetConnectAttr**アプリケーションはこの属性を設定する必要がありますいないため、SQL_ATTR_DBC_INFO_TOKEN を受け入れません。<br /><br /> ドライバーは SQL_ERROR を返します SQL_ATTR_DBC_INFO_TOKEN を設定した後、プールから取得した接続が解放されます。 ドライバー マネージャーは、プールから別の接続を取得するから再試行してください。 参照してください[ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)詳細についてはします。|  
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3.0)|Microsoft コンポーネント サービスによって調整される分散トランザクションで ODBC ドライバーを使用するかどうかを示す SQLPOINTER 値。<br /><br /> DTC OLE トランザクションを指定するオブジェクト、接続の DTC の関連付けを終了するには、SQL Server、または sql_dtc_done を指定してエクスポートするトランザクションを渡します。<br /><br /> クライアントは、MS DTC トランザクションを開始し、トランザクションを表す MS DTC トランザクション オブジェクトを作成する Microsoft 分散トランザクション コーディネーター (MS DTC) OLE itransactiondispenser::begintransaction メソッドを呼び出します。 次に、アプリケーションは、ODBC 接続とトランザクション オブジェクトを関連付ける SQL_ATTR_ENLIST_IN_DTC オプションを使用して SQLSetConnectAttr を呼び出します。 関連のあるすべてのデータベース操作は、MS DTC トランザクションで保護されます。 アプリケーションでは、sql_dtc_done を指定して、接続の DTC の関連付けを終了すると、SQLSetConnectAttr を呼び出します。 詳細については、MS DTC のドキュメントを参照してください。|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1.0)|ログイン要求をアプリケーションに返す前に完了するまで待機する秒数に対応する SQLUINTEGER 値。 既定ではドライバーによって異なります。 場合*ValuePtr* 0 にも、タイムアウトが無効で、接続試行は無期限に待機します。<br /><br /> ドライバーがその値に置き換えられ、SQLSTATE 01S02 を返します、指定したタイムアウトがデータ ソースの最大ログイン タイムアウトを超えた場合 (オプションの値が変更されました)。|  
 |SQL_ATTR_METADATA_ID (ODBC 3.0)|カタログ関数の文字列引数の処理方法を決定する SQLUINTEGER 値。<br /><br /> 場合は SQL_TRUE、カタログ関数の文字列引数は、識別子として扱われます。 大文字と小文字は大きくありません。 規格文字列の場合、ドライバーは、末尾のスペースを削除および文字列が大文字に折りたたまれません。 区切られた文字列の場合、ドライバーは、先頭または末尾のスペースを削除し、区切り記号の間は文字どおりは。 返しますが SQL_ERROR と SQLSTATE HY009 null ポインターにこれらの引数のいずれかに設定されている場合 (null ポインターの無効な使用)。<br /><br /> 場合は sql_false になります、カタログ関数の文字列引数は、識別子としては扱われません。 大文字と小文字は重要です。 か、含めることができます、文字列の検索パターンまたはそうでない引数に応じて。<br /><br /> 既定値は、sql_false になります。<br /><br /> *TableType*の引数**SQLTables**、この属性を受けませんが、値の一覧を受け取ります。<br /><br /> SQL_ATTR_METADATA_ID をステートメント レベルの設定もできます。 (これは、ステートメント属性になっている唯一の接続属性です)。<br /><br /> 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。|  
-|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|ドライバー マネージャーで、ODBC カーソル ライブラリを使用する方法を指定する sqlulen です値:<br /><br /> SQL_CUR_USE_IF_NEEDED 必要な場合にのみ、ODBC カーソル ライブラリで、ドライバー マネージャーの使用を = です。 ドライバーの SQL_FETCH_PRIOR オプションをサポートしている場合**SQLFetchScroll**、ドライバー マネージャーがドライバーのスクロール機能を使用します。 それ以外の場合、ODBC カーソル ライブラリを使用します。<br /><br /> SQL_CUR_USE_ODBC、ドライバー マネージャーは ODBC カーソル ライブラリを = です。<br /><br /> SQL_CUR_USE_DRIVER ドライバーのスクロール機能、ドライバー マネージャーの使用を = です。 これが既定の設定です。<br /><br /> ODBC カーソル ライブラリの詳細については、次を参照してください。[付録 f: ODBC カーソル ライブラリ](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)します。 **警告:** カーソル ライブラリは、Windows の将来のバージョンで削除される予定です。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。|  
+|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|ドライバー マネージャーで、ODBC カーソル ライブラリを使用する方法を指定する sqlulen です値:<br /><br /> SQL_CUR_USE_IF_NEEDED 必要な場合にのみ、ODBC カーソル ライブラリで、ドライバー マネージャーの使用を = です。 ドライバーの SQL_FETCH_PRIOR オプションをサポートしている場合**SQLFetchScroll**、ドライバー マネージャーがドライバーのスクロール機能を使用します。 それ以外の場合、ODBC カーソル ライブラリを使用します。<br /><br /> SQL_CUR_USE_ODBC、ドライバー マネージャーは ODBC カーソル ライブラリを = です。<br /><br /> SQL_CUR_USE_DRIVER ドライバーのスクロール機能、ドライバー マネージャーの使用を = です。 これが既定の設定です。<br /><br /> ODBC カーソル ライブラリの詳細については、次を参照してください[付録 f:。ODBC カーソル ライブラリ](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)します。 **警告:** カーソル ライブラリは、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。|  
 |SQL_ATTR_PACKET_SIZE (ODBC 2.0)|ネットワーク パケット サイズをバイト単位で示す SQLUINTEGER 値。 **注:** 多くのデータ ソースは、このオプションをサポートしてまたはのみできる戻り値が未設定ネットワーク パケット サイズ。 <br /><br /> ドライバーがその値に置き換えられ、SQLSTATE 01S02 を返します、指定したサイズ、最大パケット サイズを超えていますまたは最小パケットのサイズよりも小さい、(オプションの値が変更されました)。<br /><br /> アプリケーションは、接続が既に確立した後、パケット サイズを設定、ドライバーは SQLSTATE HY011 を返します (属性はここで設定することはできません)。|  
-|SQL_ATTR_QUIET_MODE (ODBC 2.0)|ウィンドウ ハンドル (HWND)。<br /><br /> ウィンドウ ハンドルが null ポインターの場合、ドライバーはすべてのダイアログ ボックスが表示されません。<br /><br /> ウィンドウ ハンドルが null ポインターではない場合、アプリケーションの親ウィンドウ ハンドルが必要です。 既定値です。 ドライバーでは、このハンドルを使用して、ダイアログ ボックスを表示します。 **注:** SQL_ATTR_QUIET_MODE 接続属性は、によって表示されるダイアログ ボックスには当てはまりません**SQLDriverConnect**します。|  
+|SQL_ATTR_QUIET_MODE (ODBC 2.0)|ウィンドウ ハンドル (HWND)。<br /><br /> ウィンドウ ハンドルが null ポインターの場合、ドライバーはすべてのダイアログ ボックスが表示されません。<br /><br /> ウィンドウ ハンドルが null ポインターではない場合、アプリケーションの親ウィンドウ ハンドルが必要です。 既定値です。 ドライバーでは、このハンドルを使用して、ダイアログ ボックスを表示します。 **注:** によって表示されるダイアログ ボックスに、SQL_ATTR_QUIET_MODE 接続属性は適用されません**SQLDriverConnect**します。|  
 |SQL_ATTR_TRACE (ODBC 1.0)|ドライバー マネージャーは、トレースを実行するかどうかを示す SQLUINTEGER 値:<br /><br /> SQL_OPT_TRACE_OFF off (既定) のトレースを =<br /><br /> SQL_OPT_TRACE_ON でトレースを =<br /><br /> トレースが on の場合は、ドライバー マネージャーは、トレース ファイルに各 ODBC 関数呼び出しを書き込みます。 **注:** トレースが on の場合、ドライバー マネージャーは SQLSTATE IM013 を返すことができます (トレース ファイルのエラー) 任意の関数から。 <br /><br /> アプリケーションでは、SQL_ATTR_TRACEFILE オプションを使用してトレース ファイルを指定します。 ファイルが既に存在する場合、ドライバー マネージャーは、ファイルに追加します。 それ以外の場合、ファイルを作成します。 トレースが有効で、トレース ファイルが指定されていない場合は、ドライバー マネージャーは、SQL ファイルに書き込みます。ルート ディレクトリにログインします。<br /><br /> アプリケーションは、変数を設定できます**ODBCSharedTraceFlag**動的にトレースを有効にします。 現在実行されているすべての ODBC アプリケーションでは、トレースは有効ですし。 場合は、アプリケーションは、トレースをオフに、そのアプリケーションでのみオフにされています。<br /><br /> 場合、**トレース**アプリケーションを呼び出すと、システム情報のキーワードが 1 に設定されて**SQLAllocHandle**で、 *HandleType* sql_handle_env としてのすべてのトレースが有効処理します。 呼び出したアプリケーションに対してのみ有効になっている**SQLAllocHandle**します。<br /><br /> 呼び出す**SQLSetConnectAttr**で、*属性*SQL_ATTR_TRACE のいる必要はありません、 *ConnectionHandle*引数が有効である場合、SQL_ERROR を返しませんが、*ConnectionHandle*は NULL です。 この属性は、すべての接続に適用されます。|  
 |SQL_ATTR_TRACEFILE (ODBC 1.0)|トレース ファイルの名前を含む null で終わる文字列。<br /><br /> SQL_ATTR_TRACEFILE 属性の既定値が指定されています、 **TraceFile**システム情報のキーワード。 詳細については、次を参照してください。 [ODBC サブキー](../../../odbc/reference/install/odbc-subkey.md)します。<br /><br /> 呼び出す**SQLSetConnectAttr**で、*属性*SQL_ATTR TRACEFILE は必要ありません、 *ConnectionHandle*引数を有効にして、SQL_ERROR が返されません場合*ConnectionHandle*が無効です。 この属性は、すべての接続に適用されます。|  
 |SQL_ATTR_TRANSLATE_LIB (ODBC 1.0)|関数が含まれるライブラリの名前を含む null で終わる文字列**SQLDriverToDataSource**と**SQLDataSourceToDriver**などのタスクを実行するドライバーにアクセスします。文字セットを変換します。 このオプションがあります、ドライバーがデータ ソースに接続されているかどうかにのみ指定します。 この属性の設定は、接続間で保持されます。 データの翻訳の詳細については、次を参照してください。[翻訳の Dll](../../../odbc/reference/develop-app/translation-dlls.md)と[DLL 関数の参照を翻訳](../../../odbc/reference/syntax/translation-dll-api-reference.md)します。|  

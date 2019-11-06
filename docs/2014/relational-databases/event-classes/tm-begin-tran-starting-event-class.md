@@ -1,11 +1,10 @@
 ---
-title: 'TM: Begin Tran Starting イベント クラス | Microsoft Docs'
+title: 'TM: Begin Tran Starting イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,15 +14,15 @@ ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 516357e45a17c172064fa6a89bb51a60e891f0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 649ab6329c0bdc2f059b8be0e282e0e68f33e2d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061359"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting イベント クラス
-  TM: Begin Tran Starting イベント クラスは、BEGIN TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。  
+  TM:Begin Tran Starting イベント クラスは、BEGIN TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM: Begin Tran Starting イベント クラスのデータ列  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48152449"
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`ntext`|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
-|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
+|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|[はい]|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
 ## <a name="see-also"></a>参照  

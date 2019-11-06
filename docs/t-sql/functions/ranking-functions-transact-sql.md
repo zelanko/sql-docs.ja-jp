@@ -15,20 +15,19 @@ helpviewer_keywords:
 - functions [SQL Server], ranking
 - ranking rows
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a34866fb7c83098f3cb060ab009e4b187fc3c0e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 36c2fd4974bb295516f90f7e8c80635dbcae48eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927764"
 ---
 # <a name="ranking-functions-transact-sql"></a>順位付け関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  パーティションの各行の順位値を返します。 使用する関数によっては、いくつかの行で、他の行と同じ値を受け取る場合があります。 順位付け関数は非決定的です。  
+  順位付け関数により、パーティションの各行の順位値が返されます。 使用する関数によっては、いくつかの行で、他の行と同じ値を受け取る場合があります。 順位付け関数は非決定的です。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] には、次の順位付け関数があります。  
   
@@ -79,5 +78,4 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
   

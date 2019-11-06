@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63261897"
 ---
 # <a name="replicate-identity-columns"></a>ID 列のレプリケート
   IDENTITY プロパティを列に割り当てると、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、その ID 列を含むテーブルに挿入された新しい行に対して連続する番号が自動的に生成されます。 詳細については、「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)」を参照してください。 ID 列は主キーの一部に含まれる場合があるため、ID 列の値が重複しないようにすることが重要です。 複数のノードで更新されるレプリケーション トポロジで ID 列を使用するには、レプリケーション トポロジ内の各ノードで異なる範囲の ID 値を使用して、重複が生じないようにする必要があります。  
@@ -57,7 +56,7 @@ ms.locfileid: "48089854"
  挿入が **db_owner** 固定データベース ロールのメンバーによって実行されている場合は、パブリッシャーがその挿入後に ID 範囲をすべて使用すると、新しい範囲が自動的に割り当てられます。 挿入がそのロール以外のユーザー、ログ リーダー エージェント、マージ エージェントによって実行されている場合は、**db_owner** ロールのメンバーであるユーザーが [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql) を実行する必要があります。 トランザクション パブリケーションの場合は、ログ リーダー エージェントを実行して新しい範囲を自動で割り当てる必要があります (既定ではエージェントは継続して実行されます)。  
   
 > [!WARNING]  
->  大規模な一括挿入処理中、レプリケーション トリガーが起動されるのは、挿入の行ごとではなく 1 度だけです。 Id 範囲がなど、大規模な挿入時になくなった場合、insert ステートメントが失敗する可能性を`INSERT INTO`ステートメント。  
+>  大規模な一括挿入処理中、レプリケーション トリガーが起動されるのは、挿入の行ごとではなく 1 度だけです。 その結果、大規模な挿入処理中に ID 範囲が使い果たされると、`INSERT INTO` ステートメントなど、挿入ステートメントが失敗する場合があります。  
   
 |データ型|範囲|  
 |---------------|-----------|  
@@ -82,7 +81,7 @@ ms.locfileid: "48089854"
   
 -   **@threshold** パラメーター。[!INCLUDE[ssEW](../../../includes/ssew-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の以前のバージョンに対するサブスクリプションに、ID の新しい範囲が必要かどうかを判断するために使用されます。  
   
- たとえば、 **@identity_range** に 10,000 を指定し、 **@pub_identity_range**」を参照してください。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンを実行しているパブリッシャーとすべてのサブスクライバー (サーバー サブスクリプションを使用するサブスクライバーを含む) には、プライマリ範囲として 10,000 が割り当てられます。 サーバー サブスクリプションを使用するサブスクライバーには、500,000 のプライマリ範囲も割り当てられます。この範囲は、再パブリッシュ サブスクライバーと同期するサブスクライバーで使用できます (再パブリッシュ サブスクライバーのパブリケーション内のアーティクルに対しては、 **@identity_range**、 **@pub_identity_range**、および **@threshold** の指定も必要です)。  
+ たとえば、 **@identity_range** に 10,000 を指定し、 **@pub_identity_range** 」を参照してください。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンを実行しているパブリッシャーとすべてのサブスクライバー (サーバー サブスクリプションを使用するサブスクライバーを含む) には、プライマリ範囲として 10,000 が割り当てられます。 サーバー サブスクリプションを使用するサブスクライバーには、500,000 のプライマリ範囲も割り当てられます。この範囲は、再パブリッシュ サブスクライバーと同期するサブスクライバーで使用できます (再パブリッシュ サブスクライバーのパブリケーション内のアーティクルに対しては、 **@identity_range** 、 **@pub_identity_range** 、および **@threshold** の指定も必要です)。  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンを実行している各サブスクライバーは、セカンダリ ID 範囲も受け取ります。 セカンダリ範囲のサイズはプライマリ範囲のサイズと同じです。プライマリ範囲がすべて使用されると、セカンダリ範囲が使用されて、マージ エージェントによって新しい範囲がサブスクライバーに割り当てられます。 新しい範囲はセカンダリ範囲となり、サブスクライバーで ID 値が使用される限りこのプロセスは継続されます。  
   
@@ -96,7 +95,7 @@ ms.locfileid: "48089854"
   
 -   **@threshold** パラメーター。サブスクリプションに ID の新しい範囲が必要になる時点を決定するために使用します。  
   
- たとえば、 **@pub_identity_range**には 10,000、 **@identity_range** には 1,000 (サブスクライバーの更新数が少ないと仮定)、 **@threshold**」を参照してください。 サブスクライバーの挿入数が 800 (1,000 の 80%) を超えると、サブスクライバーに新しい範囲が割り当てられます。 パブリッシャーの挿入数が 8,000 を超えると、パブリッシャーに新しい範囲が割り当てられます。 新しい範囲が割り当てられると、テーブル内の ID 範囲値にはギャップが生じます。 高いしきい値を指定すると、ギャップは小さくなりますが、システムのフォールト トレランスは低くなります。ディストリビューション エージェントが何らかの理由で実行できない場合、サブスクライバーで ID の消費がさらに進みやすくなります。  
+ たとえば、 **@pub_identity_range** には 10,000、 **@identity_range** には 1,000 (サブスクライバーの更新数が少ないと仮定)、 **@threshold** 」を参照してください。 サブスクライバーの挿入数が 800 (1,000 の 80%) を超えると、サブスクライバーに新しい範囲が割り当てられます。 パブリッシャーの挿入数が 8,000 を超えると、パブリッシャーに新しい範囲が割り当てられます。 新しい範囲が割り当てられると、テーブル内の ID 範囲値にはギャップが生じます。 高いしきい値を指定すると、ギャップは小さくなりますが、システムのフォールト トレランスは低くなります。ディストリビューション エージェントが何らかの理由で実行できない場合、サブスクライバーで ID の消費がさらに進みやすくなります。  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>手動で ID 範囲を管理する場合の範囲の割り当て  
  手動による ID 範囲の管理を指定した場合は、パブリッシャーと各サブスクライバーがそれぞれ異なる ID 範囲を使用することが必要です。 たとえば、 `IDENTITY(1,1)`と定義されている ID 列を含むパブリッシャーのテーブルがあるとします。ID 列は 1 から開始し、行が挿入されるたびに 1 ずつ増えていきます。 パブリッシャーのテーブルの行数が 5,000 で、アプリケーションを実行中にテーブルがある程度大きくなると考えられる場合、パブリッシャーでは範囲 1 ～ 10,000 を使用できます。 2 つのサブスクライバーの場合、サブスクライバー A では 10,001 ～ 20,000 を使用し、サブスクライバー B では 20,001 ～ 30,000 を使用できます。  
@@ -123,7 +122,7 @@ ms.locfileid: "48089854"
     > [!NOTE]  
     >  ID 列の値が増分ではなく減分に設定されている場合は、検出された最も低い値を記録してから、その値から新しい範囲を設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   

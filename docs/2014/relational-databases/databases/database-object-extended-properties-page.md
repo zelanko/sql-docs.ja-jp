@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.extendedproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1f3f9518a6d104801b6d81d68def64facbd589a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119093"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917207"
 ---
 # <a name="database-object-extended-properties-page"></a>データベース オブジェクト ([拡張プロパティ] ページ)
   拡張プロパティによって、カスタム プロパティをデータベース オブジェクトに追加できます。 このページを使用すると、選択されているオブジェクトの拡張プロパティを表示または変更できます。 データベース オブジェクトのすべての種類に対して、同じ **[拡張プロパティ]** ページが表示されます。  
@@ -34,12 +33,12 @@ ms.locfileid: "48119093"
  オブジェクトの拡張プロパティを表示または指定します。 各拡張プロパティは、オブジェクトに関連付けられたメタデータの名前/値ペアで構成されています。  
   
  **[参照] ボタン**  
- **[値]** の後ろにある参照 ([...]) ボタンをクリックすると、 **拡張プロパティの値を設定するための** ダイアログ ボックスが開きます。 ここでは、より大きなテキスト ボックスを使用して拡張プロパティの値を入力または表示できます。  
+ **[値]** の後ろにある参照 ([...]) ボタンをクリックすると、**拡張プロパティの値を設定するための**ダイアログ ボックスが開きます。 ここでは、より大きなテキスト ボックスを使用して拡張プロパティの値を入力または表示できます。  
   
  **削除**  
  選択されている拡張プロパティを削除します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張プロパティ カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties)  
   
   

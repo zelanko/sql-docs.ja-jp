@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079580"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
   Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
@@ -47,9 +46,9 @@ SELECT * FROM $System.<schemaRowset>
  DMV クエリは、XML/A Discover コマンドの実行の代わりとなる手段です。 クエリの構文は SQL に基づいているため、多くの管理者にとって DMV クエリを記述するのはより簡単です。 また、結果セットは、読み取りやコピーが容易な表形式で返されます。  
   
 ##  <a name="bkmk_ex"></a> 例とシナリオ  
- DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 このセクションでは、DMV クエリが最もよく使用されるシナリオの例を示します。 DMV クエリを使用してサーバー インスタンスを監視する方法の詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 」を参照してください。  
+ DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 このセクションでは、DMV クエリが最もよく使用されるシナリオの例を示します。 DMV クエリを使用してサーバー インスタンスを監視する方法の詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 」を参照してください。  
   
- `Select * from $System.discover_object_activity` /** このクエリは、サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。 この DMV に基づくクエリの例については、「 [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)」を参照してください。  
+ `Select * from $System.discover_object_activity` /** このクエリは、サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。 この DMV に基づくクエリの例については、「 [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)」を参照してください。  
   
  `Select * from $System.discover_object_memory_usage` /** このクエリは、オブジェクトによるメモリ消費についてレポートします。  
   
@@ -99,7 +98,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  DMV が指定された行セットは利用できない場合、サーバーは、次のエラーを返します:"、 \<schemarowset > サーバーで要求の種類が認識されませんでした"。 他のすべてのエラーは、構文の問題を示します。  
+>  DMV が指定された行セットは利用できない場合、サーバーには、次のエラーが返されます。"、 \<Schemarowset > サーバーで要求の種類が認識されませんでした"。 他のすべてのエラーは、構文の問題を示します。  
   
 |[行セット]|説明|  
 |------------|-----------------|  
@@ -164,8 +163,8 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_SETS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|現在の接続で定義されるセットの一覧を表示します。|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [制限された行セットと DMV の新しい SYSTEMRESTRICTEDSCHEMA 関数](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [制限された行セットと DMV の新しい SYSTEMRESTRICTEDSCHEMA 関数](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

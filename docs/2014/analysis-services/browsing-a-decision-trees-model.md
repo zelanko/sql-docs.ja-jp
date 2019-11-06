@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -18,12 +17,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9e1ccaf9e000779485be93e476f9114817529a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064666"
 ---
 # <a name="browsing-a-decision-trees-model"></a>デシジョン ツリー モデルの参照
   使用して分類モデルを開く**参照**は対話型デシジョン ツリー ビューアーでのようなモデルが表示されます、[!INCLUDE[msCoName](../includes/msconame-md.md)]デシジョン ツリー ビューアーに[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 ビューアーは、あるデータ グループを別のデータ グループから区別する条件を強調するグラフとして分類結果を表示します。 ツリーの個々のサブセットにドリルダウンして、基になるデータを取得することもできます。  
@@ -90,15 +89,15 @@ ms.locfileid: "48137052"
   
     -   Age > = 32 と\<53 と Yearly Income > = 26000 かつ Children = 0  
   
-         ケースの合計: 1150  
+         ケースの合計:1150  
   
-         自転車購入確率: 18%  
+         自転車購入確率:18%  
   
     -   Age > = 32 と\<53 と Yearly Income > = 26000 かつ Children not 0 かつ Marital Status を = = 'Single'  
   
-         ケースの合計: 402  
+         ケースの合計:402  
   
-         自転車購入確率: 16%  
+         自転車購入確率:16%  
   
 7.  値を変更**バック グラウンド**から**はい**に**いいえ**とグラフがどのように変化するかを参照してください。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48137052"
   
 -   データを複数のシリーズに分割できる場合、モデル化するデータ セットごとに異なるモデルが構築されます。  
   
--   サンプル データ モデルでは、予測可能な結果が 1 つしかありませんが (Bike Buyer)、顧客がサービス計画を購入したかという情報もあって、それについても予測するとします。 その場合、そのデータを別の列に保持して、モデルに 2 つの予測可能な属性を含めます。  
+-   サンプル データ モデルでは、1 つだけの予測可能な結果の Bike Buyer - が顧客のサービス プランを購入済みおよびも予測したいかどうかに関する情報があるとします。 その場合、そのデータを別の列に保持して、モデルに 2 つの予測可能な属性を含めます。  
   
      をクリックして、**ヒストグラム**のデシジョン ツリー ペインの左上隅のオプションは、ツリーのヒストグラムに表示する状態の最大数を変更します。 これは、予測可能な属性に多数の状態が含まれている場合に便利です。 ヒストグラムには、状態がポピュラリティ順に左から右に表示されます。  
   
@@ -148,13 +147,13 @@ ms.locfileid: "48137052"
   
     -   **モデルのドリルスルー**します。 このオプションは、選択したノードに属するケースを取得して、Excel のテーブルに保存します。 モデルの構築に実際に使用されたデータ列のみが取り出されます。  
   
-    -   **構造列をドリルスルー**します。 このオプションは、選択したノードに属するケースを取得して、Excel のテーブルに保存します。 基になるデータで使用可能な情報をすべて、モデルで使用されなかった列であっても、取得します。 たとえば、分析には役立たないため顧客の住所と郵便番号をモデルから除外して、構造には残していた場合です。  
+    -   **構造列をドリルスルー**します。 このオプションは、選択したノードに属するケースを取得して、Excel のテーブルに保存します。 基になるで使用可能だったすべての情報を取得するデータ列のもそれを構築したときに、モデルで使用されていません。 たとえば、分析には役立たないため顧客の住所と郵便番号をモデルから除外して、構造には残していた場合です。  
   
      Excel に戻ってデータを表示します。 参照ビューアーを使って、クエリを実行し、新しいワークシートのテーブルにデータを保存し、結果にラベルを付けます。  
   
      ![ドリルスルーの結果を Excel に保存される](media/dm13-dectree-drillthroughresults.gif "ドリルスルーの結果は Excel に保存されます")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

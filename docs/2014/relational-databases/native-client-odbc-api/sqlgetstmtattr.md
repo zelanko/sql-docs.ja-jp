@@ -14,12 +14,12 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd74525cda5946fb7c86f21638437ee91c3ac7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211199"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62657811"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはドライバー固有のステートメント属性を公開する SQLGetStmtAttr を拡張します。  
@@ -50,7 +50,7 @@ ms.locfileid: "48211199"
  テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLSetStmtAttr 関数](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [SQLSetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

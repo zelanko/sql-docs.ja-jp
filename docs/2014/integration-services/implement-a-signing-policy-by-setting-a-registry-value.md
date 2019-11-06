@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058214"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>レジストリ値を設定して署名ポリシーを実装する
   オプションのレジストリ値を使用して、署名付きパッケージまたは署名がないパッケージを読み込む際の組織のポリシーを管理できます。 このレジストリ キーを使用する場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が実行されるコンピューターおよびポリシーを適用するコンピューターごとにこのレジストリ値を作成する必要があります。 レジストリ値が設定されると、パッケージを読み込む前に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって署名が確認されます。  
@@ -43,7 +42,7 @@ ms.locfileid: "48103022"
 |3|署名が無効であるか署名が信頼できないパッケージ、および署名がないパッケージをブロックします。<br /><br /> この設定では、自己生成された署名もブロックします。|  
   
 > [!NOTE]  
->  `BlockedSignatureStates` の推奨設定値は 3 です。 この設定では、署名されていないパッケージまたは無効な署名や信頼できない署名に対する最大の保護が提供されます。 ただし、推奨される設定がすべての状況に適しているとは限りません。 デジタル アセットの署名の詳細については、MSDN ライブラリの「[コード署名の概要](http://go.microsoft.com/fwlink/?LinkId=51414)」を参照してください。  
+>  `BlockedSignatureStates` の推奨設定値は 3 です。 この設定では、署名されていないパッケージまたは無効な署名や信頼できない署名に対する最大の保護が提供されます。 ただし、推奨される設定がすべての状況に適しているとは限りません。 デジタル アセットの署名の詳細については、MSDN ライブラリの「[コード署名の概要](https://go.microsoft.com/fwlink/?LinkId=51414)」を参照してください。  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>パッケージに対する署名ポリシーを実装するには  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48103022"
   
 4.  **[MSDTS]** を右クリックし、 **[新規]** をポイントして、 **[DWORD 値]** をクリックします。  
   
-5.  新しい値の名前を更新`BlockedSignatureStates`します。  
+5.  新しい値の名前を「`BlockedSignatureStates`」に更新します。  
   
 6.  右クリック`BlockedSignatureStates`クリック**変更**します。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "48103022"
 9. **[ファイル]** メニューの **[終了]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティの概要&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [セキュリティの概要 (Integration Services)](security/security-overview-integration-services.md)   
  [デジタル署名を使用してパッケージのソースを特定する](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

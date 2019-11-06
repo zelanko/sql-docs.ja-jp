@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted のキー管理の概要 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 872c752355c12074ed90b525940fa3889726e662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111642"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Always Encrypted キーとキーの管理について説明するときは、実
 
 - ***列マスター キー*** は、列暗号化キーの暗号化に使用される保護キーです。 列マスター キーは、Windows 証明書ストア、Azure Key Vault、またはハードウェア セキュリティ モジュールなどの信頼できるキー ストアに格納する必要があります。 データベースには、列マスター キーに関するメタデータ (キー ストアの種類と場所) のみが含まれます。 列マスター キーのメタデータは、 [sys.column_master_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) カタログ ビューに格納されています。  
 
-データベース システム内のキー メタデータには、プレーンテキストの列マスター キーまたはプレーンテキストの列暗号化キーは含まれていないことに注意してください。 データベースには、列マスター キーの種類と場所に関する情報と、列暗号化キーの暗号化された値のみが含まれます。 これは、プレーンテキストのキーはデータベース システムに決して公開されないので、データベース システムが侵害された場合でも、Always Encrypted を使用して保護されているデータの安全性が保証されることを意味します。 データベース システムがプレーンテキストのキーにアクセスできないようにするため、キー管理ツールは、データベースをホストしているコンピューターとは異なるコンピューターで必ず実行します。詳細については、後述の「 [キー管理のセキュリティに関する考慮事項](#SecurityForKeyManagement) 」でご確認ください。
+データベース システム内のキー メタデータには、プレーンテキストの列マスター キーまたはプレーンテキストの列暗号化キーは含まれていないことに注意してください。 データベースには、列マスター キーの種類と場所に関する情報と、列暗号化キーの暗号化された値のみが含まれます。 これは、プレーンテキストのキーはデータベース システムに決して公開されないので、データベース システムが侵害された場合でも、Always Encrypted を使用して保護されているデータの安全性が保証されることを意味します。 データベース システムがプレーンテキストのキーにアクセスできないようにするため、キー管理ツールは、データベースをホストしているコンピューターとは異なるコンピューターで必ず実行します。詳細については、後述の「 [キー管理のセキュリティに関する考慮事項](#security-considerations-for-key-management) 」でご確認ください。
 
 データベースには (Always Encrypted で保護された列内の) 暗号化されたデータだけが含まれ、プレーン テキストのキーにアクセスできないため、データを復号化することはできません。 つまり、Always Encrypted 列に対してクエリを実行しても、暗号化された値が返されるだけなので、保護されたデータを暗号化または復号化する必要があるクライアント アプリケーションは、列マスター キーと関連する列暗号化キーにアクセスできる必要があります。 詳細については、「 [Always Encrypted (クライアント開発)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」を参照してください。
 
@@ -82,7 +81,7 @@ Always Encrypted キーは、 [SQL Server Management Studio (SSMS)](https://msdn
     - [PowerShell を使用した Always Encrypted キーの交換](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> キー管理のセキュリティに関する考慮事項
+## <a name="security-considerations-for-key-management"></a>キー管理でのセキュリティに関する考慮事項
 
 Always Encrypted の主な目的は、データベース システムまたはそのホスティング環境が侵害された場合でも、データベースに格納されている機密データの安全を保証することです。 Always Encrypted が機密データの漏えい防止に役立つ、セキュリティ攻撃の例を次に示します。
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Objects, versions
@@ -18,12 +16,12 @@ ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 333406ee6d7596c1aa8187b26476fb39f220c36e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a1b0b28afbb83028af8d71644af08ca660a0b36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753414"
 ---
 # <a name="files-and-version-numbers"></a>ファイルとバージョン番号
   必要なすべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの一部として管理オブジェクト (SMO) コンポーネントがインストールされている[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントまたはサーバー。 SMO は複数のマネージド アセンブリに実装されます。 クライアント上またはサーバー上のいずれかで SMO アプリケーションを開発することができます。  

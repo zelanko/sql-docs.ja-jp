@@ -1,9 +1,9 @@
 ---
 title: EXECUTE AS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 08/27/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -23,15 +23,16 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4db2249838a1032ce44e13870463fac43012dfa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512618"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252220"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   セッションの実行コンテキストを設定します。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "52512618"
  権限を借用する実行コンテキストがログインであることを指定します。 権限借用のスコープはサーバー レベルです。  
   
 > [!NOTE]  
->  このオプションは、包含データベースまたは SQL Database では使用できません。  
+>  このオプションは、包含データベース、SQL Database、SQL Data Warehouse では使用できません。  
   
  User  
  権限を借用するコンテキストが、現在のデータベース内のユーザーであることを指定します。 権限借用のスコープは、現在のデータベースに限定されます。 コンテキスト スイッチの対象がデータベース ユーザーであっても、そのユーザーのサーバー レベルの権限は継承されません。  
@@ -68,8 +69,7 @@ ms.locfileid: "52512618"
 > [!IMPORTANT]  
 >  データベース ユーザーに対するコンテキスト スイッチがアクティブであるときに、データベース外部のリソースへアクセスを試みると、ステートメントが失敗する原因となります。 たとえば、USE *database* ステートメントや分散クエリ、3 部または 4 部構成の識別子を使用する別のデータベースを参照するクエリなどは実行しないでください。  
   
- **'** *name* **'**  
- 有効なユーザーまたはログイン名を指定します。 *name* は、**sysadmin** 固定サーバー ロールのメンバーであるか、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) または [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) のプリンシパルとして存在する必要があります。  
+ '*name*' は、有効なユーザー名またはログイン名です。 *name* は、**sysadmin** 固定サーバー ロールのメンバーであるか、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) または [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) のプリンシパルとして存在する必要があります。  
   
  *name* はローカル変数として指定できます。  
   
@@ -82,25 +82,26 @@ ms.locfileid: "52512618"
   
  以前のコンテキストに戻す方法について詳しくは、「[REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)」をご覧ください。  
   
- COOKIE INTO **@**_varbinary_variable_  
- REVERT WITH COOKIE ステートメントの呼び出し時に適切な **@**_varbinary_variable_ 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻せることを示します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、Cookie を **@**_varbinary_variable_ に渡します。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
+ COOKIE INTO @*varbinary_variable*  
+ REVERT WITH COOKIE ステートメントの呼び出し時に適切な @*varbinary_variable* 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻すことができます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、Cookie が @*varbinary_variable* に渡されます。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
   
- **@** *varbinary_variable* は **varbinary(8000)** です。  
+ @*varbinary_variable* は **varbinary(8000)** です。  
   
 > [!NOTE]  
 >  Cookie の **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(100)** を返します。 将来のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションが引き続き正常に動作するように、アプリケーションでは **varbinary(8000)** を予約しておく必要があります。  
   
  CALLER  
- モジュール内で使用した場合、モジュールの呼び出し元のコンテキストで、モジュール内のステートメントが実行されます。  
-  
- モジュール外で使用した場合、このステートメントでは何も処理されません。  
+ モジュール内で使用した場合、モジュールの呼び出し元のコンテキストで、モジュール内のステートメントが実行されます。
+モジュール外で使用した場合、このステートメントでは何も処理されません。
+ > [!NOTE]  
+>  SQL Data Warehouse では、このオプションは使用できません。  
   
 ## <a name="remarks"></a>Remarks  
  実行コンテキストでの変更は、次のいずれかが行われるまで有効です。  
   
 -   別の EXECUTE AS ステートメントの実行  
   
--   REVERT ステートメントの実行  
+-   REVERT ステートメントの実行。  
   
 -   セッションの停止  
   

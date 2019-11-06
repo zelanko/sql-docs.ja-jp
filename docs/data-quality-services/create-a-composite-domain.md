@@ -11,15 +11,14 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: f6c146146a039958937a74cbdbd072dfb482bf4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935553"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
 
@@ -83,17 +82,17 @@ ms.locfileid: "52616862"
   
 4.  **[解析方法]** で、次のいずれかを選択します。  
   
-    -   **[参照データ]**: 参照データ サービス (RDS) によるデータの書式設定の方法に従ってフィールドの値を解析します。 Data Quality Services は複合ドメインの値を RDS に送信し、RDS は複合ドメイン内のドメインに従って修正および解析されたデータを返します。  
+    -   **[参照データ]** : 参照データ サービス (RDS) によるデータの書式設定の方法に従ってフィールドの値を解析します。 Data Quality Services は複合ドメインの値を RDS に送信し、RDS は複合ドメイン内のドメインに従って修正および解析されたデータを返します。  
   
-    -   **[順番]**: 複合ドメイン内のドメインの順序に従ってフィールドの値を解析します。 最初の値は最初のドメインに、2 番目の値は 2 番目のドメインに含まれます。  
+    -   **[順番]** : 複合ドメイン内のドメインの順序に従ってフィールドの値を解析します。 最初の値は最初のドメインに、2 番目の値は 2 番目のドメインに含まれます。  
   
-    -   **[区切り記号]**: [区切り記号] が選択されているときに表示されるオプション ボタンから選択された区切り記号に基づいてフィールドの値を解析します。 **[タブ]**、 **[セミコロン]**、 **[コンマ]**、 **[スペース]**、または **[その他]** を選択できます。 **[その他]** の場合は、区切り記号として使用する値を入力します。  
+    -   **[区切り記号]** : [区切り記号] が選択されているときに表示されるオプション ボタンから選択された区切り記号に基づいてフィールドの値を解析します。 **[タブ]** 、 **[セミコロン]** 、 **[コンマ]** 、 **[スペース]** 、または **[その他]** を選択できます。 **[その他]** の場合は、区切り記号として使用する値を入力します。  
   
 5.  解析方法として **[区切り記号]** を選択した場合は、 **[ナレッジ ベース解析を使用します]** を選択することもできます。 詳細については、「 [Knowledge-Based Parsing](#KnowledgeBaseParsing)」をご参照ください。  
   
 6.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a> 補足情報: 複合ドメインの作成後  
+##  <a name="FollowUp"></a>補足情報: 複合ドメインの作成後  
  複合ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

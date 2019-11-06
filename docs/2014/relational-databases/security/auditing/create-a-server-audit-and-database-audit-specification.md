@@ -15,12 +15,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21eb8108c8779ca3558336a6d1d46cbeac0a77cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211984"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサーバー監査とデータベース監査の仕様を作成する方法について説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "48109880"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  データベース監査仕様は、セキュリティ保護できないオブジェクトであり、特定のデータベースに保存されます。 作成されたデータベース監査仕様は無効な状態です。  
@@ -64,7 +64,7 @@ ms.locfileid: "48109880"
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** を選択します。 詳しくは、「 [サーバー監査およびサーバー監査の仕様を作成する方法](create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** を選択します。詳しくは、「 [サーバー監査およびサーバー監査の仕様を作成する方法](create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
   
 3.  オプションの選択が完了したら、 **[OK]** をクリックします。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48109880"
   
 2.  **[セキュリティ]** フォルダーを展開します。  
   
-3.  **[データベース監査の仕様]** フォルダーを右クリックし、 **[新しいデータベース監査の仕様]** を選択します。  
+3.  **[データベース監査の仕様]** フォルダーを右クリックし、 **[新しいデータベース監査の仕様...]** を選択します。  
   
      **[データベース監査の仕様の作成]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "48109880"
      **[オブジェクト名]**  
      監査するオブジェクトの名前。 これは監査アクションにのみ使用できます。監査グループには適用されません。  
   
-     **省略記号 [...]**  
+     **省略記号 (...)**  
      指定した **[監査アクションの種類]** に基づいて、使用可能なオブジェクトを参照して選択するための **[オブジェクトの選択]** ダイアログ ボックスを開きます。  
   
      **[プリンシパル名]**  
      監査対象のオブジェクトで監査をフィルター選択するためのアカウント。  
   
-     **省略記号 [...]**  
+     **省略記号 (...)**  
      指定した **[オブジェクト名]** に基づいて、使用可能なオブジェクトを参照して選択するための **[オブジェクトの選択]** ダイアログ ボックスを開きます。  
   
 4.  オプションの選択が完了したら、 **[OK]** をクリックします。  

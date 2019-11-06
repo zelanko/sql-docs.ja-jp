@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c91331f93347a860946741229f9b6a287796e03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094290"
 ---
 # <a name="installation-type"></a>インストールの種類
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インストールの種類] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールするか既存のインスタンスに機能を追加するかを指定します。  
@@ -30,7 +29,7 @@ ms.locfileid: "48105612"
   
      既存のインスタンスに機能を追加するオプションを選択した場合、ドロップダウン リストを使用して、更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] の準備済みイメージには、SysPrep でサポートされる機能 ( [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) のみを追加できます。 SysPrep でサポートされない他の機能については、準備済みインスタンスの完了後にのみ追加できます。  
+ SysPrep でサポートされる機能にのみ追加できます[!INCLUDE[ssDE](../../includes/ssde-md.md)]と[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-の準備済みイメージに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SysPrep でサポートされない他の機能については、準備済みインスタンスの完了後にのみ追加できます。  
   
  **注** フェールオーバー クラスター インスタンスがインストールされている場合、そのインスタンスに機能を追加することはできません。 既存のフェールオーバー クラスターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を追加するには、新規インストールを実行して、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスをインストールする必要があります。  
   

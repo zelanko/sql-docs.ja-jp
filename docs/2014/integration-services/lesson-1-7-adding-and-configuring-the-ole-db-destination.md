@@ -1,24 +1,23 @@
 ---
-title: '手順 7 : OLE DB 変換先の追加と構成 | Microsoft Docs'
+title: 手順 7:追加して、OLE DB 変換先の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 89073c9da5a4cd6243bd1fcdcd53d3fa13d02bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767561"
 ---
-# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>手順 7 : OLE DB 変換先の追加と構成
+# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>手順 7:OLE DB 変換先の追加と構成
   前回までの実習で、フラット ファイル ソースからデータを抽出し、変換先との互換性のある形式にデータを変換できるパッケージを作成しました。 次は、変換したデータを実際に変換先に読み込みます。 データを読み込むには、データ フローに OLE DB 変換先を追加する必要があります。 OLE DB 変換先では、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込むことができます。  
   
  この操作では、以前に作成した OLE DB の接続マネージャーを使用できるように、OLE DB 変換先を追加、構成します。  
@@ -54,9 +53,9 @@ ms.locfileid: "48138466"
 14. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されて**英語 (米国)** と`DefaultCodePage`プロパティに設定されて**1252**します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 8: レッスン 1 のパッケージをわかりやすくする作業](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [手順 8:レッスン 1 パッケージを理解しやすきます。](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>参照  
- [OLE DB 変換先](data-flow/ole-db-destination.md)  
+ [[OLE DB 変換先]](data-flow/ole-db-destination.md)  
   
   

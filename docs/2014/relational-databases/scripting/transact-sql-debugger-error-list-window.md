@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ErrorList
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08ba949c2cb835296c1442fcac4d5984a051bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f7649875faf636d2bbc78834c13d4b5b1b99e72
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063440"
 ---
 # <a name="error-list-window-management-studio"></a>[エラー一覧] ウィンドウ (Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[エラー一覧]** には、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
@@ -90,5 +87,3 @@ ms.locfileid: "48216362"
   
  **プロジェクト**  
  スクリプト ファイルを含むプロジェクトの名前を表示します。  
-  
-  

@@ -10,12 +10,12 @@ ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 663c9a407019028390a8595354087a0c07cafce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779216"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン
   メモリ最適化テーブルにアクセスするトランザクションに発生するエラー条件にはさまざまなものがあります。  
@@ -75,11 +75,11 @@ ms.locfileid: "48143591"
   
  次のサンプルでは、ネイティブ コンパイル ストアド プロシージャまたは複数コンテナーにまたがるトランザクションへの呼び出しが含まれている [!INCLUDE[tsql](../includes/tsql-md.md)] の解釈されたストアド プロシージャの再試行ロジックを示します。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  
-  -- number of retries – tune based on the workload  
+  -- number of retries - tune based on the workload  
   DECLARE @retry INT = 10  
   
   WHILE (@retry > 0)  
@@ -91,7 +91,7 @@ BEGIN
       --       or  
   
       -- BEGIN TRANSACTION  
-      --   …  
+      --   ...  
       -- COMMIT TRANSACTION  
   
       SET @retry = 0  

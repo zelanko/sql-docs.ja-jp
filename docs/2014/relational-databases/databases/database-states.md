@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASESTATES.F1
@@ -27,12 +26,12 @@ ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b96d575384a7d2be546193c8ce829723f57a3dbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871698"
 ---
 # <a name="database-states"></a>データベースの状態
   データベースは、常に、ある特定の状態にあります。 たとえば、ONLINE、OFFLINE、SUSPECT などです。 データベースの現在の状態を確認するには、 **sys.databases** カタログ ビューで [state_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列を選択するか、 **DATABASEPROPERTYEX** 関数で [Status](/sql/t-sql/functions/databasepropertyex-transact-sql) プロパティを選択します。  

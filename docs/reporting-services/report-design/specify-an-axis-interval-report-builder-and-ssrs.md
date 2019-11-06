@@ -2,18 +2,18 @@
 title: 軸の間隔の指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 09/02/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05e0650c71c7f2ed8f9dc51bf01bbb33e325add5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: ecee87ddf31314b8e54c98148ab0570db08a1caf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578497"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割されたレポートで軸の間隔を設定して、グラフのカテゴリ (x) 軸に表示するラベル数と目盛り数を変更する方法について説明します。
@@ -41,7 +41,7 @@ ms.locfileid: "50030181"
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、**[間隔]** を **1** に設定して、すべてのカテゴリ グループ ラベルを表示します。 X 軸でカテゴリ グループのラベルを 1 つおきに表示するには、 **2**と入力します。 
+2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、 **[間隔]** を **1** に設定して、すべてのカテゴリ グループ ラベルを表示します。 X 軸でカテゴリ グループのラベルを 1 つおきに表示するには、 **2**と入力します。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -78,7 +78,7 @@ ms.locfileid: "50030181"
   
 1.  変更するグラフ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 
   
-2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、**[間隔]** を **[自動]** に設定して、すべてのカテゴリ グループ ラベルを表示します。軸に収まる最適な数のカテゴリ ラベルがグラフに表示されます。  
+2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、 **[間隔]** を **[自動]** に設定して、すべてのカテゴリ グループ ラベルを表示します。軸に収まる最適な数のカテゴリ ラベルがグラフに表示されます。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

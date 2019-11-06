@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.dest.f1
@@ -13,12 +12,12 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aceac781da7dcbf5fa41786f006af6040cdd66bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871220"
 ---
 # <a name="secondary-database-settings"></a>[セカンダリ データベースの設定]
   このダイアログ ボックスを使用すると、ログ配布構成におけるセカンダリ データベースのプロパティを構成および変更できます。  
@@ -74,7 +73,7 @@ ms.locfileid: "48061392"
  **ジョブ名**  
  トランザクション ログ バックアップ ファイルをプライマリ サーバーからセカンダリ サーバーにコピーするときに使用する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの名前が表示されます。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
   
- **[スケジュール]**  
+ **スケジュール**  
  トランザクション ログ バックアップを、プライマリ サーバーからセカンダリ サーバーにコピーする、SQL Server エージェントのコピー ジョブの現在のスケジュールを表示します。 **[スケジュール]** をクリックすると、このスケジュールを変更できます。  
   
  **[スケジュール]**  
@@ -107,7 +106,7 @@ ms.locfileid: "48061392"
  **ジョブ名**  
  トランザクション ログ バックアップを、セカンダリ データベースに復元するために使用する SQL Server エージェント ジョブの名前を表示します。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
   
- **[スケジュール]**  
+ **スケジュール**  
  トランザクション ログ バックアップを、セカンダリ データベースに復元するために使用する SQL Server エージェント ジョブの現在のスケジュールを表示します。 **[スケジュール]** をクリックすると、このオプションを変更できます。  
   
  **[スケジュール]**  

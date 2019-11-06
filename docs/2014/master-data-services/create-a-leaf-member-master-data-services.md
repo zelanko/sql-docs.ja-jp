@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 132d4acdbe47d3e790131834c6a71486dcd660d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483406"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>リーフ メンバーを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]、リーフ メンバーを作成する、システムにマスター データを追加して、ステージング テーブルを使用していない場合、または[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]データをインポートします。  
@@ -50,9 +49,9 @@ ms.locfileid: "48136592"
   
 8.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](add-update-and-delete-data-master-data-services.md)   
- [統合メンバーを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
- [メンバー&#40;マスター データ サービス&#41;](../../2014/master-data-services/members-master-data-services.md)  
+ [統合メンバーを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
+ [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)  
   
   

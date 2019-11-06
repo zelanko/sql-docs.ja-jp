@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8907bc0df08010b49bdfcb2a7f4b77ea646fbcf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770681"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
@@ -91,13 +90,13 @@ ms.locfileid: "48084622"
 ### <a name="configuring-the-script-component-in-the-designer"></a>デザイナーでのスクリプト コンポーネントの構成  
  **[スクリプト変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [スクリプト変換エディター&#40;入力列 ページ&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [スクリプト変換エディター ([入力列] ページ)](../../script-transformation-editor-input-columns-page.md)  
   
--   [スクリプト変換エディター&#40;入力し、出力のページ&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [スクリプト変換エディター ([入力および出力] ページ)](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../script-transformation-editor-script-page.md)  
+-   [スクリプト変換エディター ([スクリプト] ページ)](../../script-transformation-editor-script-page.md)  
   
--   [スクリプト変換エディター&#40;接続マネージャー ページ&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [スクリプト変換エディター ([接続マネージャー] ページ)](../../script-transformation-editor-connection-managers-page.md)  
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   

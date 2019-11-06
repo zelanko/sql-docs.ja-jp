@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
@@ -18,17 +17,17 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4b1b53558f27c3d86046c2ab71639e6d487ebc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1fe324da14460d69d6930bf9d398a50e816f676f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068837"
 ---
 # <a name="thread-pool-properties"></a>スレッド プール プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、多くの操作でマルチスレッドを使用し、複数のジョブを並列実行することによって、サーバーの全体的なパフォーマンスを向上させます。 スレッドをより効率的に管理するために、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスレッド プールを使用してスレッドの事前割り当てを実行し、次のジョブがスレッドを容易に利用できるようにします。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスは、スレッド プールの独自セットを維持します。 テーブル インスタンスと多次元インスタンスでは、スレッド プールの使用方法が大幅に異なります。 最も重要な違いは、多次元ソリューションのみを使用する、`IOProcess`スレッド プール。 そのため、`PerNumaNode`テーブル インスタンスにとって意味は、このトピックで説明されているプロパティ。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスは、スレッド プールの独自セットを維持します。 テーブル インスタンスと多次元インスタンスでは、スレッド プールの使用方法が大幅に異なります。 最も重要な違いは、多次元ソリューションのみを使用する、`IOProcess`スレッド プール。 したがって、このトピックで説明する `PerNumaNode` プロパティは、表形式インスタンスに当てはまりません。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48116925"
 -   [MSMDSRV.INI の概要](#bkmk_msmdrsrvini)  
   
 > [!NOTE]  
->  NUMA システムに対する表形式の配置は、このトピックの範囲外です。 NUMA システムに対して表形式のソリューションを正常に配置できますが、表形式のモデルが採用しているインメモリ データベース テクノロジのパフォーマンス特性による利点は、高度にスケールアップされたアーキテクチャでは制約を受ける可能性があります。 詳しくは、「 [Analysis Services ケース スタディ: 大規模なコマーシャル ソリューションでテーブル モデルを使用する](http://msdn.microsoft.com/library/dn751533.aspx) 」および「 [表形式のソリューションに関するハードウェアのサイズ設定](http://go.microsoft.com/fwlink/?LinkId=330359)」をご覧ください。  
+>  NUMA システムに対する表形式の配置は、このトピックの範囲外です。 NUMA システムに対して表形式のソリューションを正常に配置できますが、表形式のモデルが採用しているインメモリ データベース テクノロジのパフォーマンス特性による利点は、高度にスケールアップされたアーキテクチャでは制約を受ける可能性があります。 詳細については、次を参照してください。 [Analysis Services ケース スタディ。大規模な商用ソリューションにおける表形式モデルを使用して](https://msdn.microsoft.com/library/dn751533.aspx)と[ハードウェア サイズ決定の表形式ソリューション](https://go.microsoft.com/fwlink/?LinkId=330359)します。  
   
 ##  <a name="bkmk_threadarch"></a> Analysis Services におけるスレッド管理  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はマルチスレッドを使用して、並列実行されるタスクの数を増やすことにより、使用可能な CPU リソースを活用します。 ストレージ エンジンはマルチスレッド化されています。 ストレージ エンジン内で実行されるマルチ スレッドのジョブには、オブジェクトの並列処理、ストレージ エンジンにパブリッシュされた独立したクエリの処理、クエリによって要求されたデータ値を返す処理などがあります。 数式エンジンは、実行する計算に順次処理という性質があるため、シングル スレッド化されています。 各クエリは主にシングル スレッド内で実行され、データを要求し、多くの場合はストレージ エンジンから返されるデータを待ちます。 クエリ スレッドは実行に長い時間を要する傾向があり、クエリ全体が完了した後にのみ解放されます。  
@@ -88,47 +87,47 @@ ms.locfileid: "48116925"
   
  プロパティは、アルファベット順に示しています。  
   
-|名前|型|説明|既定値|ガイダンス|  
+|名前|型|説明|既定|ガイダンス|  
 |----------|----------|-----------------|-------------|--------------|  
-|`IOProcess` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
+|`IOProcess` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
 |`IOProcess` \ `GroupAffinity`|string|システムのプロセッサ グループに対応する 16 進値の配列です。IOProcess スレッド プールのスレッドと各プロセッサ グループの論理プロセッサとの関係を設定するために使用されます。|なし|このプロパティを使用して、カスタム関係を作成することもできます。 既定では、このプロパティは空です。<br /><br /> 詳細については、「 [プロセッサ グループ内のプロセッサにスレッドを関連付けるための GroupAffinity の設定](#bkmk_groupaffinity) 」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
-|`IOProcess` \ `MaxThreads`|ssNoversion|スレッド プールに含めるスレッドの最大数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、サーバーはこの値を 64、または論理プロセッサ数の 10 倍のうち、どちらか大きい方に設定します。 たとえば、ハイパースレッディングが有効な 4 コアのシステムでは、スレッド プールの最大値は 80 スレッドです。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、MaxThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](http://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
-|`IOProcess` \ `MinThreads`|ssNoversion|スレッド プールに事前に割り当てるスレッドの最小数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、最小値は 1 です。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](http://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
+|`IOProcess` \ `MaxThreads`|ssNoversion|スレッド プールに含めるスレッドの最大数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、サーバーはこの値を 64、または論理プロセッサ数の 10 倍のうち、どちらか大きい方に設定します。 たとえば、ハイパースレッディングが有効な 4 コアのシステムでは、スレッド プールの最大値は 80 スレッドです。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、MaxThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](https://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
+|`IOProcess` \ `MinThreads`|ssNoversion|スレッド プールに事前に割り当てるスレッドの最小数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、最小値は 1 です。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](https://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
 |`IOProcess` \ `PerNumaNode`|ssNoversion|msmdsrv プロセスを対象にして作成されるスレッド プールの数を決定する、符号付き 32 ビット整数です。|-1|有効な値は、-1、0、1、2 です。<br /><br /> -1 = NUMA ノードの数に基づいて、サーバーが選択する IO スレッド プールの方針が異なります。 NUMA ノード数が 4 未満のシステムでは、サーバーの動作は 0 の場合と同じです (1 つの IOProcess スレッド プールがシステム用に作成されます)。 ノード数が 4 以上のシステムでは、値が 1 の場合の動作と同じです (各ノードに対して IOProcess スレッド プールが作成されます)。<br /><br /> 0 = NUMA ノードごとのスレッド プールを無効にし、msmdsrv.exe プロセスが使用する IOProcess スレッド プールは 1 つだけ存在するようになります。<br /><br /> 1 = NUMA ノードごとに 1 つの IOProcess スレッド プールを有効にします。<br /><br /> 2 = 論理プロセッサごとに 1 つの IOProcess スレッド プール。 各スレッド プール内のスレッドは、論理プロセッサの NUMA ノードに関連付けられ、論理プロセッサに対して最適なプロセッサが設定されます。<br /><br /> 詳細については、「 [NUMA ノード内のプロセッサに IO スレッドを関連付けるための PerNumaNode の設定](#bkmk_pernumanode) 」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
 |`IOProcess` \ `PriorityRatio`|ssNoversion|優先順位の高いキューが空でない場合も、優先順位の低いスレッドが時折実行されるようにする目的で使用できる、32 ビット符号付き整数です。|2|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> 多次元モデルにのみ適用されます。|  
 |`IOProcess` \ `StackSizeKB`|ssNoversion|スレッド実行中にメモリ割り当てを調整するために使用できる、符号付き 32 ビット整数です。|0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> 多次元モデルにのみ適用されます。|  
-|**解析**  \ `Long` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。|  
+|**解析**  \ `Long` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。|  
 |**解析**  \ `Long` \ `GroupAffinity`|string|システムのプロセッサ グループに対応する 16 進値の配列です。解析スレッドと各プロセッサ グループの論理プロセッサとの関係を設定するために使用されます。|なし|このプロパティを使用して、カスタム関係を作成することもできます。 既定では、このプロパティは空です。<br /><br /> 詳細については、「 [プロセッサ グループ内のプロセッサにスレッドを関連付けるための GroupAffinity の設定](#bkmk_groupaffinity) 」をご覧ください。|  
-|**解析**  \ `Long` \ `NumThreads`|ssNoversion|長いコマンドに対して作成可能なスレッドの数を定義する、符号付き 32 ビット整数のプロパティです。|0|0 は、サーバーが既定値を決定することを表します。 既定の動作を設定するのには`NumThreads`4、または論理プロセッサ数の 2 倍の絶対値にどちらが高い。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、NumThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。|  
+|**解析**  \ `Long` \ `NumThreads`|ssNoversion|長いコマンドに対して作成可能なスレッドの数を定義する、符号付き 32 ビット整数のプロパティです。|0|0 は、サーバーが既定値を決定することを表します。 既定の動作では、`NumThreads` を、4 という絶対値、または論理プロセッサ数の 2 倍のうち、どちらか大きい方に設定します。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、NumThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。|  
 |**解析**  \ `Long` \ `PriorityRatio`|ssNoversion|優先順位の高いキューが空でない場合も、優先順位の低いスレッドが時折実行されるようにする目的で使用できる、32 ビット符号付き整数です。|0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。|  
 |**解析**  \ `Long` \ `StackSizeKB`|ssNoversion|スレッド実行中にメモリ割り当てを調整するために使用できる、符号付き 32 ビット整数です。|0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。|  
-|**解析**  \ `Short` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。|  
+|**解析**  \ `Short` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。|  
 |**解析**  \ `Short` \ `GroupAffinity`|string|システムのプロセッサ グループに対応する 16 進値の配列です。解析スレッドと各プロセッサ グループの論理プロセッサとの関係を設定するために使用されます。|なし|このプロパティを使用して、カスタム関係を作成することもできます。 既定では、このプロパティは空です。<br /><br /> 詳細については、「 [プロセッサ グループ内のプロセッサにスレッドを関連付けるための GroupAffinity の設定](#bkmk_groupaffinity) 」をご覧ください。|  
-|**解析**  \ `Short` \ `NumThreads`|ssNoversion|短いコマンドに対して作成可能なスレッドの数を定義する、符号付き 32 ビット整数のプロパティです。|0|0 は、サーバーが既定値を決定することを表します。 既定の動作を設定するのには`NumThreads`4、または論理プロセッサ数の 2 倍の絶対値にどちらが高い。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、NumThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。|  
+|**解析**  \ `Short` \ `NumThreads`|ssNoversion|短いコマンドに対して作成可能なスレッドの数を定義する、符号付き 32 ビット整数のプロパティです。|0|0 は、サーバーが既定値を決定することを表します。 既定の動作では、`NumThreads` を、4 という絶対値、または論理プロセッサ数の 2 倍のうち、どちらか大きい方に設定します。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、NumThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。|  
 |**解析**  \ `Short` \ `PriorityRatio`|ssNoversion|優先順位の高いキューが空でない場合も、優先順位の低いスレッドが時折実行されるようにする目的で使用できる、32 ビット符号付き整数です。|0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。|  
 |**解析**  \ `Short` \ `StackSizeKB`|ssNoversion|スレッド実行中にメモリ割り当てを調整するために使用できる、符号付き 32 ビット整数です。|64 ×論理プロセッサ数|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。|  
-|`Process` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。|  
+|`Process` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。|  
 |`Process` \ `GroupAffinity`|string|システムのプロセッサ グループに対応する 16 進値の配列です。処理スレッドと各プロセッサ グループの論理プロセッサとの関係を設定するために使用されます。|なし|このプロパティを使用して、カスタム関係を作成することもできます。 既定では、このプロパティは空です。<br /><br /> 詳細については、「 [プロセッサ グループ内のプロセッサにスレッドを関連付けるための GroupAffinity の設定](#bkmk_groupaffinity) 」をご覧ください。|  
-|`Process` \ `MaxThreads`|ssNoversion|スレッド プールに含めるスレッドの最大数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、サーバーはこの値を、64 という絶対値、または論理プロセッサ数のうち、どちらか大きい方に設定します。 たとえば、ハイパースレッディングが有効な 64 コアのシステム (つまり、128 個の論理プロセッサが存在) では、スレッド プールの最大値は 128 スレッドです。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、MaxThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](http://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。|  
-|`Process` \ `MinThreads`|ssNoversion|スレッド プールに事前に割り当てるスレッドの最小数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、最小値は 1 です。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](http://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。|  
+|`Process` \ `MaxThreads`|ssNoversion|スレッド プールに含めるスレッドの最大数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、サーバーはこの値を、64 という絶対値、または論理プロセッサ数のうち、どちらか大きい方に設定します。 たとえば、ハイパースレッディングが有効な 64 コアのシステム (つまり、128 個の論理プロセッサが存在) では、スレッド プールの最大値は 128 スレッドです。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、MaxThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](https://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。|  
+|`Process` \ `MinThreads`|ssNoversion|スレッド プールに事前に割り当てるスレッドの最小数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、最小値は 1 です。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](https://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。|  
 |`Process` \ `PriorityRatio`|ssNoversion|優先順位の高いキューが空でない場合も、優先順位の低いスレッドが時折実行されるようにする目的で使用できる、32 ビット符号付き整数です。|2|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。|  
 |`Process` \ `StackSizeKB`|ssNoversion|スレッド実行中にメモリ割り当てを調整するために使用できる、符号付き 32 ビット整数です。|0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。|  
-|`Query`  \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。|  
+|`Query`  \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。|  
 |`Query` \ `GroupAffinity`|string|システムのプロセッサ グループに対応する 16 進値の配列です。処理スレッドと各プロセッサ グループの論理プロセッサとの関係を設定するために使用されます。|なし|このプロパティを使用して、カスタム関係を作成することもできます。 既定では、このプロパティは空です。<br /><br /> 詳細については、「 [プロセッサ グループ内のプロセッサにスレッドを関連付けるための GroupAffinity の設定](#bkmk_groupaffinity) 」をご覧ください。|  
-|`Query`  \ `MaxThreads`|ssNoversion|スレッド プールに含めるスレッドの最大数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、サーバーはこの値を、10 という絶対値、または論理プロセッサ数の 2 倍のうち、どちらか大きい方に設定します。 たとえば、ハイパースレッディングが有効な 4 コアのシステムでは、最大スレッド数は 16 です。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、MaxThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](http://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。|  
-|`Query` \ `MinThreads`|ssNoversion|スレッド プールに事前に割り当てるスレッドの最小数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、最小値は 1 です。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](http://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。|  
+|`Query`  \ `MaxThreads`|ssNoversion|スレッド プールに含めるスレッドの最大数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、サーバーはこの値を、10 という絶対値、または論理プロセッサ数の 2 倍のうち、どちらか大きい方に設定します。 たとえば、ハイパースレッディングが有効な 4 コアのシステムでは、最大スレッド数は 16 です。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。 たとえば、32 個の論理プロセッサが存在するサーバーでこの値を -10 に設定すると、最大値は 320 スレッドになります。<br /><br /> 最大値は、以前に定義したカスタムの関係マスクごとに使用可能なプロセッサに適用されます。 たとえば、32 個のプロセッサのうち 8 個を使用するようにスレッド プールの関係を既に設定している場合、MaxThreads を -10 に設定すると、スレッド プールの上限は 10 x 8 で 80 スレッドになります。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](https://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。|  
+|`Query` \ `MinThreads`|ssNoversion|スレッド プールに事前に割り当てるスレッドの最小数を指定する、符号付き 32 ビット整数です。|0|0 は、サーバーが既定値を決定することを表します。 既定では、最小値は 1 です。<br /><br /> この値を負の値に設定した場合は、サーバーはこの値に論理プロセッサ数を掛けます。<br /><br /> このスレッド プールのプロパティで使用する実際の値は、サービスの起動時に msmdsrv log ファイルに書き込まれます。<br /><br /> スレッド プールの設定のチューニングに関する詳細については、「 [Analysis Services 操作ガイド](https://msdn.microsoft.com/library/hh226085.aspx)」をご覧ください。|  
 |`Query` \ `PriorityRatio`|ssNoversion|優先順位の高いキューが空でない場合も、優先順位の低いスレッドが時折実行されるようにする目的で使用できる、32 ビット符号付き整数です。|2|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。|  
 |`Query`  \ `StackSizeKB`|ssNoversion|スレッド実行中にメモリ割り当てを調整するために使用できる、符号付き 32 ビット整数です。|0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。|  
   
 ##  <a name="bkmk_groupaffinity"></a> プロセッサ グループ内のプロセッサにスレッドを関連付けるための GroupAffinity の設定  
- `GroupAffinity` は、高度なチューニングの目的で用意されています。 使用することができます、`GroupAffinity`間の関係を設定するプロパティ[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]スレッド プールと特定のプロセッサ。 ただし、ほとんどのインストールの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は使用可能なすべての論理プロセッサを使用できる場合に最適。 したがって、既定ではグループ関係は指定されていません。  
+ `GroupAffinity` は、高度なチューニングの目的で用意されています。 `GroupAffinity` プロパティを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のスレッド プールと特定のプロセッサ間の関係を設定できます。ただし、ほとんどのインストール環境では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、使用可能な論理プロセッサをすべて使用できる場合にパフォーマンスが最も高くなります。 したがって、既定ではグループ関係は指定されていません。  
   
  パフォーマンス テストの結果、CPU 最適化が必要なことが示された場合は、Windows Server リソース マネージャーを使用して論理プロセッサとサーバー プロセスの間で関係を設定するなど、より高度なアプローチを考慮することもできます。 このようなアプローチは、個別のスレッド プールに対してカスタム関係を定義する場合より、実装と管理が容易です。  
   
  このアプローチが不十分な場合は、スレッド プールに対してカスタム関係を定義することで、精度を高めることができます。 多くの場合、関係設定のカスタマイズは、スレッド プールが非常に多くのプロセッサに分散されることによってパフォーマンスの低下が発生する大規模なマルチコア システム (NUMA または NUMA 以外) で推奨されます。 論理プロセッサ数が 64 未満のシステムで `GroupAffinity` を設定することもできますが、利点はごくわずかであり、パフォーマンスが低下する可能性さえあります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のエディションごとに使用できるコアの数が制限されており、`GroupAffinity` はその制約を受けます。 起動時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]エディション情報を使用して、`GroupAffinity`プロパティの各によって管理される 5 つのスレッド プールの関係マスクを計算する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 Standard Edition では最大 16 個のコアを使用できます。 16 個よりも多くのコアを使用する大規模なマルチコア システムに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をインストールした場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が使用するコアは 16 個に限られます。 以前のバージョンの Enterprise インスタンスをアップグレードした場合、コアは 20 個に制限されます。 各エディションとライセンスの詳細については、「 [SQL Server 2012 のライセンスの概要](http://go.microsoft.com/fwlink/?LinkId=246061)」をご覧ください。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のエディションごとに使用できるコアの数が制限されており、`GroupAffinity` はその制約を受けます。 起動時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はエディション情報と `GroupAffinity` プロパティを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が管理する 5 つの各スレッド プールの関係マスクを計算します。 Standard Edition では最大 16 個のコアを使用できます。 16 個よりも多くのコアを使用する大規模なマルチコア システムに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をインストールした場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が使用するコアは 16 個に限られます。 以前のバージョンの Enterprise インスタンスをアップグレードした場合、コアは 20 個に制限されます。 各エディションとライセンスの詳細については、「 [SQL Server 2012 のライセンスの概要](https://go.microsoft.com/fwlink/?LinkId=246061)」をご覧ください。  
   
 ### <a name="syntax"></a>構文  
  この値は、各プロセッサ グループに対応する 16 進数であり、この 16 進数は、特定のスレッド プールに対応するスレッドを割り当てるときに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が最初に使用しようとする論理プロセッサを表します。  
@@ -148,7 +147,7 @@ ms.locfileid: "48116925"
   
 1.  **プロセッサ数とプロセッサ グループ数を特定します。**  
   
-     [winsysinternals から Coreinfo ユーティリティ](http://technet.microsoft.com/sysinternals/cc835722.aspx)をダウンロードできます。  
+     [winsysinternals から Coreinfo ユーティリティ](https://technet.microsoft.com/sysinternals/cc835722.aspx)をダウンロードできます。  
   
      **coreinfo** を実行し、Logical Processor to Group Map セクションからこの情報を取得します。 論理プロセッサごとに単独の行が生成されます。  
   
@@ -179,7 +178,7 @@ ms.locfileid: "48116925"
  多次元の Analysis Services インスタンスを設定できます`PerNumaNode`上、`IOProcess`スレッド プール スレッドのスケジューリングと実行をさらに最適化します。 一方`GroupAffinity`に特定のスレッド プールでは、使用する論理プロセッサのセットを識別する`PerNumaNode`さらに、許容される論理プロセッサのサブセットに関連付けられた複数のスレッド プールを作成するかどうかを指定することでさらに、1 つのステップを移動します。  
   
 > [!NOTE]  
->  Windows Server 2012 でタスク マネージャーを起動し、コンピューター上の NUMA ノード数を表示します。 タスク マネージャーの [パフォーマンス] タブで、 **[CPU]** を選択し、グラフ領域を右クリックして NUMA ノードを表示します。 もう 1 つの方法として、Windows Sysinternals から Coreinfo ユーティリティを [ダウンロード](http://technet.microsoft.com/sysinternals/cc835722.aspx) し、NUMA ノードと各ノードの論理プロセッサを返す `coreinfo –n` を実行します。  
+>  Windows Server 2012 でタスク マネージャーを起動し、コンピューター上の NUMA ノード数を表示します。 タスク マネージャーの [パフォーマンス] タブで、 **[CPU]** を選択し、グラフ領域を右クリックして NUMA ノードを表示します。 もう 1 つの方法として、Windows Sysinternals から Coreinfo ユーティリティを [ダウンロード](https://technet.microsoft.com/sysinternals/cc835722.aspx) し、NUMA ノードと各ノードの論理プロセッサを返す `coreinfo -n` を実行します。  
   
  有効な値`PerNumaNode`は-1、0、1、2 で説明されている、[スレッド プール プロパティに関するリファレンス](#bkmk_propref)このトピックの「します。  
   
@@ -193,13 +192,13 @@ ms.locfileid: "48116925"
   
  NUMA ノードは無視されます。 IOProcess スレッド プールは 1 つしか存在しなくなり、そのスレッド プール内のすべてのスレッドがすべての論理プロセッサに関連付けられます。 既定 (PerNumaNode=-1) では、コンピューターの NUMA ノード数が 4 未満の場合はこれが有効な設定です。  
   
- ![Numa、プロセッサ、およびスレッド プールの一致](../media/ssas-threadpool-numaex0.PNG "Numa、プロセッサ、およびスレッド プールの一致")  
+ ![Numa、プロセッサ、およびスレッド プールの対応](../media/ssas-threadpool-numaex0.PNG "Numa、プロセッサ、およびスレッド プールの対応")  
   
  **PerNumaNode=1 の設定**  
   
  NUMA ノードごとに IOProcess スレッド プールが作成されます。 個別のスレッド プールを用意すると、NUMA ノード上のローカル キャッシュなど、ローカル リソースへの連携アクセスが改善されます。  
   
- ![Numa、プロセッサ、およびスレッド プールの一致](../media/ssas-threadpool-numaex1.PNG "Numa、プロセッサ、およびスレッド プールの一致")  
+ ![Numa、プロセッサ、およびスレッド プールの対応](../media/ssas-threadpool-numaex1.PNG "Numa、プロセッサ、およびスレッド プールの対応")  
   
  **PerNumaNode=2 の設定**  
   
@@ -207,9 +206,9 @@ ms.locfileid: "48116925"
   
  次の例では、システムでとを持つ 4 つの NUMA ノード設定 32 個の論理プロセッサ`PerNumaNode`2 の IOProcess スレッド プールが 32 になります。 最初の 8 個のスレッド プール内にあるスレッドは、いずれも NUMA ノード 0 内の論理プロセッサに関連付けられますが、最適なプロセッサは 0、1、2、...最大で 7 まで設定されます。 続く 8 個のスレッド プールは、いずれも NUMA ノード 1 内の論理プロセッサに関連付けられますが、最適なプロセッサは 8、9、10、...最大で 15 まで設定されます。  
   
- ![Numa、プロセッサ、およびスレッド プールの一致](../media/ssas-threadpool-numaex2.PNG "Numa、プロセッサ、およびスレッド プールの一致")  
+ ![Numa、プロセッサ、およびスレッド プールの対応](../media/ssas-threadpool-numaex2.PNG "Numa、プロセッサ、およびスレッド プールの対応")  
   
- この関係レベルでは、スケジューラは必ず、優先 NUMA ノード内にある最適な論理プロセッサを最初に使用しようとします。 その論理プロセッサが使用できない場合は、スケジューラは同じノード内にある別のプロセッサを選択するか、他のスレッドが使用できない場合は同じプロセッサ グループ内にある別のプロセッサを選択します。 詳細と例については、「 [Analysis Services 2012 の構成設定 (Wordpress ブログ)](http://go.microsoft.com/fwlink/?LinkId=330387)」をご覧ください。  
+ この関係レベルでは、スケジューラは必ず、優先 NUMA ノード内にある最適な論理プロセッサを最初に使用しようとします。 その論理プロセッサが使用できない場合は、スケジューラは同じノード内にある別のプロセッサを選択するか、他のスレッドが使用できない場合は同じプロセッサ グループ内にある別のプロセッサを選択します。 詳細と例については、「 [Analysis Services 2012 の構成設定 (Wordpress ブログ)](https://go.microsoft.com/fwlink/?LinkId=330387)」をご覧ください。  
   
 ###  <a name="bkmk_workdistrib"></a> IOProcess スレッド間での作業の分散  
  設定するかどうかを検討するとき、`PerNumaNode`プロパティを知ること方法`IOProcess`スレッドは、使用をより十分な情報に基づいて判断するのに役立ちます。  
@@ -233,16 +232,16 @@ ms.locfileid: "48116925"
 > [!NOTE]  
 >  サーバー プロパティを変更するときは、現在のインスタンスで実行されているすべてのデータベースに構成オプションが適用されることに注意してください。 最も重要なデータベースまたは最も数が多いデータベースにメリットがもたらされる設定を選択します。 データベース レベルでプロセッサの関係を設定することはできません。また、個々のパーティションと特定のプロセッサ間の関係を設定することもできません。  
   
- ジョブ アーキテクチャの詳細については、「 [SQL Server 2008 Analysis Services パフォーマンス ガイド](http://www.microsoft.com/download/details.aspx?id=17303)」のセクション 2.2 をご覧ください。  
+ ジョブ アーキテクチャの詳細については、「 [SQL Server 2008 Analysis Services パフォーマンス ガイド](https://www.microsoft.com/download/details.aspx?id=17303)」のセクション 2.2 をご覧ください。  
   
 ##  <a name="bkmk_related"></a> 依存プロパティまたは関連プロパティ  
- セクション 2.4 で説明した、 [Analysis Services 操作ガイド](http://msdn.microsoft.com/library/hh226085.aspx)、処理中のスレッド プールを増やす場合するできるようにしてください、`CoordinatorExecutionMode`の設定だけでなく`CoordinatorQueryMaxThreads`設定、値があるを増加のスレッド プールのサイズを最大限に活用できます。  
+ セクション 2.4 で説明した、 [Analysis Services 操作ガイド](https://msdn.microsoft.com/library/hh226085.aspx)、処理中のスレッド プールを増やす場合するできるようにしてください、`CoordinatorExecutionMode`の設定だけでなく`CoordinatorQueryMaxThreads`設定、値があるを増加のスレッド プールのサイズを最大限に活用できます。  
   
  Analysis Services はコーディネーター スレッドを使用して、処理またはクエリの要求を完了するために必要なデータを収集します。 コーディネーターは最初に、各パーティションに対して、操作する必要のある 1 つのジョブをキューに登録します。 その後、パーティション内でスキャンする必要のあるセグメントの総数に応じて、これらのジョブのそれぞれは引き続き他のジョブをキューに登録します。  
   
  `CoordinatorExecutionMode` の既定値は -4 であり、コアあたり 4 つの並列ジョブに制限され、ストレージ エンジン内のサブキューブ要求によって並列実行できるコーディネーター ジョブの総数が制限されることを意味します。  
   
- 既定値`CoordinatorQueryMaxThreads`16 では、各パーティションに対して並列で実行できるセグメント ジョブの数を制限します。  
+ `CoordinatorQueryMaxThreads` の既定値は 16 であり、各パーティションに対して並列実行できるセグメント ジョブの数が制限されます。  
   
 ##  <a name="bkmk_currentsettings"></a> 現在のスレッド プールの設定の確認  
  各サービスの起動時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は現在のスレッド プール設定を msmdsrv.log ファイルに出力し、その中には最小スレッド数と最大スレッド数、プロセッサ関係マスク、およびコンカレンシー数が含まれます。  
@@ -251,17 +250,17 @@ ms.locfileid: "48116925"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- **MinThread** と **MaxThread** を設定するアルゴリズムが、システム構成、特にプロセッサ数を組み込んでいることに注意してください。 次のブログ投稿は、値の計算方法に関する洞察を示しています。「 [Analysis Services 2012 の構成設定 (Wordpress ブログ)](http://go.microsoft.com/fwlink/?LinkId=330387)」。 これらの設定と動作が、それ以降のリリースで調整される可能性があることに注意してください。  
+ **MinThread** と **MaxThread** を設定するアルゴリズムが、システム構成、特にプロセッサ数を組み込んでいることに注意してください。 次のブログ記事では、値の計算方法に関する洞察を提供します。[Analysis Services 2012 の構成設定 (Wordpress ブログ)](https://go.microsoft.com/fwlink/?LinkId=330387)します。 これらの設定と動作が、それ以降のリリースで調整される可能性があることに注意してください。  
   
  次の一覧に、プロセッサのさまざまな組み合わせを対象にした、他の関係マスクの設定例を示します。  
   
--   8 コアのシステムでプロセッサ 3-2-1-0 との関係を設定すると、ビットマスクは 00001111 になり、対応する 16 進値は 0xF です  
+-   8 コアのシステムでプロセッサ 3-2-1-0 は、このビットマスクが得られます。00001111、および 16 進数値の場合:0 xf です.  
   
--   8 コアのシステムでプロセッサ 7-6-5-4 との関係を設定すると、ビットマスクは 11110000 になり、対応する 16 進値は 0xF0 です  
+-   8 コアのシステムでプロセッサ 7-6-5-4 は、このビットマスクが得られます。11110000、および 16 進数値の場合:0xf0 です.  
   
--   8 コアのシステムでプロセッサ 5-4-3-2 との関係を設定すると、ビットマスクは 00111100 になり、対応する 16 進値は 0x3C です  
+-   8 コアのシステムでプロセッサ 5-4-3-2 は、このビットマスクが得られます。00111100、および 16 進数値の場合:0x3c です.  
   
--   8 コアのシステムでプロセッサ 7-6-1-0 との関係を設定すると、ビットマスクは 11000011 になり、対応する 16 進値は 0xC3 です  
+-   8 コアのシステムでプロセッサ 7-6-1-0 は、このビットマスクが得られます。11000011、および 16 進数値の場合:0xc3 です.  
   
  システムに複数のプロセッサ グループが存在する場合は、グループごとに個別の関係マスクが生成され、コンマ区切りリストの形式で表現されることに注意してください。  
   
@@ -279,9 +278,9 @@ ms.locfileid: "48116925"
  [プロセスとスレッドの概要](/windows/desktop/ProcThread/about-processes-and-threads)   
  [複数のプロセッサ](/windows/desktop/ProcThread/multiple-processors)   
  [プロセッサ グループ](/windows/desktop/ProcThread/processor-groups)   
- [SQL server 2012 analysis Services のスレッド プールの変更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Analysis Services 2012 の構成設定 (Wordpress ブログ)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [64 を超えるプロセッサを搭載したシステムのサポート](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
- [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)  
+ [SQL Server 2012 での Analysis Services のスレッド プールの変更](https://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Analysis Services 2012 の構成設定 (Wordpress ブログ)](https://go.microsoft.com/fwlink/?LinkId=330387)   
+ [64 を超えるプロセッサを搭載したシステムのサポート](https://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

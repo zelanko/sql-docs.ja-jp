@@ -14,12 +14,12 @@ ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: feb5cd9df428ec09441ae1ebe0ff1cb051660754
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046686"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャは値を返します。 **SQLProcedures**に結果セット列 PROCEDURE_TYPE を報告します。  
@@ -30,8 +30,8 @@ ms.locfileid: "48203992"
   
  **SQLProcedures**名前に一致するすべてのプロシージャに関する情報を返します*ProcName*され、現在のユーザーによってまたは現在のユーザーが付与されている VIEW DEFINITION 権限で実行できます。  
   
-## <a name="see-also"></a>参照  
- [SQLProcedures 関数](http://go.microsoft.com/fwlink/?LinkId=59364)   
+## <a name="see-also"></a>関連項目  
+ [SQLProcedures 関数](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

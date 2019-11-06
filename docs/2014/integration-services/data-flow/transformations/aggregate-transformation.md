@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770638"
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "48205532"
 |操作|説明|  
 |---------------|-----------------|  
 |グループ化|データセットをグループに分割します。 グループ化には、任意のデータ型の列を使用できます。 詳細については、「[GROUP BY (Transact-SQL)](/sql/t-sql/queries/select-group-by-transact-sql)」を参照してください。|  
-|SUM|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「[SUM (Transact-SQL)](/sql/t-sql/functions/sum-transact-sql)」を参照してください。|  
+|Sum|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「[SUM (Transact-SQL)](/sql/t-sql/functions/sum-transact-sql)」を参照してください。|  
 |平均|列内の列値の平均を返します。 numeric データ型を持つ列のみ、平均値を計算することができます。 詳細については、「[AVG (Transact-SQL)](/sql/t-sql/functions/avg-transact-sql)」を参照してください。|  
 |Count|グループ内のアイテムの数を返します。 詳細については、「[COUNT (Transact-SQL)](/sql/t-sql/functions/count-transact-sql)」を参照してください。|  
 |個別のカウント|グループ内の NULL でない一意の値の数を返します。|  
@@ -66,9 +65,9 @@ ms.locfileid: "48205532"
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
  集計変換には、変換のパフォーマンスが向上するように設定できる、プロパティのセットが含まれています。  
   
--   **グループ化** 操作を実行する場合は、コンポーネントとコンポーネント出力の Keys プロパティまたは KeysScale プロパティを設定します。 Keys を使用すると、変換で処理されるキーの正確な数を指定できます  (ここでは、Keys は、**グループ化**操作の結果として予想されるグループの数を示します)。KeysScale を使用すると、キーの概数を指定できます。 Keys または KeysScale に適切な値を指定すると、変換時にキャッシュされるデータ用に十分なメモリが割り当てられるようになるため、パフォーマンスが向上します。  
+-   **グループ化** 操作を実行する場合は、コンポーネントとコンポーネント出力の Keys プロパティまたは KeysScale プロパティを設定します。 Keys を使用すると、変換で処理されるキーの正確な数を指定できます (ここでは、Keys は、**グループ化**操作の結果として予想されるグループの数を示します)。KeysScale を使用すると、キーの概数を指定できます。 Keys または KeysScale に適切な値を指定すると、変換時にキャッシュされるデータ用に十分なメモリが割り当てられるようになるため、パフォーマンスが向上します。  
   
--   **個別のカウント** 操作を実行するときは、コンポーネントの CountDistinctKeys プロパティまたは CountDistinctScale プロパティを設定します。 CountDistinctKeys を使用すると、変換時に個別のカウント操作で処理されるキーの正確な数を指定できます  (ここでは、CountDistinctKeys は、**個別のカウント**操作の結果として予想される個別の値の数を示します)。CountDistinctScale を使用すると、個別のカウントの操作で処理するキーの概数を指定できます。 CountDistinctKeys または CountDistinctScale に適切な値を指定すると、変換時にキャッシュされるデータ用に十分なメモリが割り当てられるようになるため、パフォーマンスが向上します。  
+-   **個別のカウント** 操作を実行するときは、コンポーネントの CountDistinctKeys プロパティまたは CountDistinctScale プロパティを設定します。 CountDistinctKeys を使用すると、変換時に個別のカウント操作で処理されるキーの正確な数を指定できます (ここでは、CountDistinctKeys は、**個別のカウント**操作の結果として予想される個別の値の数を示します)。CountDistinctScale を使用すると、個別のカウントの操作で処理するキーの概数を指定できます。 CountDistinctKeys または CountDistinctScale に適切な値を指定すると、変換時にキャッシュされるデータ用に十分なメモリが割り当てられるようになるため、パフォーマンスが向上します。  
   
 ## <a name="aggregate-transformation-configuration"></a>集計変換の構成  
  集計変換は、変換、出力、および列の各レベルで構成します。  
@@ -101,7 +100,7 @@ ms.locfileid: "48205532"
   
  集計変換は非同期です。つまり、行ごとにデータを使用またはパブリッシュしません。 集計変換は行セット全体を使用してグループ化と集計を実行し、その結果をパブリッシュします。  
   
- この変換では列をパススルーすることはなく、変換によりパブリッシュされるデータ用に、新しい列がデータ フロー内に作成されます。 集計関数が適用される入力列、または変換がグループ化用に使用する入力列のみが、変換出力にコピーされます。 たとえば、集計変換入力に、 **CountryRegion**、 **City**、および **Population**という 3 つの列があるものとします。 集計変換は、 **CountryRegion** 列によりグループ化を行い、 関数を **Population** 列に適用します。 したがって、出力には **City** 列は含まれません。  
+ この変換では列をパススルーすることはなく、変換によりパブリッシュされるデータ用に、新しい列がデータ フロー内に作成されます。 集計関数が適用される入力列、または変換がグループ化用に使用する入力列のみが、変換出力にコピーされます。 たとえば、集計変換入力に次の 3 つの列があるものとします: **CountryRegion**、**City**、**Population**。 集計変換は、 **CountryRegion** 列によりグループ化を行い、 関数を **Population** 列に適用します。 したがって、出力には **City** 列は含まれません。  
   
  また、複数の出力を集計変換に追加し、各集計を別々の出力に送ることもできます。 たとえば、集計変換が Sum および Average 関数を適用する場合に、各集計をそれぞれ別の出力に送ることができます。  
   
@@ -113,9 +112,9 @@ ms.locfileid: "48205532"
   
  **[集計変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [集計変換エディター&#40;集計 タブ&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [[集計変換エディター] ([集計] タブ)](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [集計変換エディター&#40;詳細設定 タブ&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [[集計変換エディター] ([詳細設定] タブ)](../../aggregate-transformation-editor-advanced-tab.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   

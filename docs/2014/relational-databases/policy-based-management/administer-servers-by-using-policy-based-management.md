@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -20,12 +20,12 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91483db92422a4510a6cefd2eca7d7f1f6f3f1e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63157105"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
   ポリシー ベースの管理とは、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを管理するためのシステムのことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ポリシー管理者は、ポリシー ベースの管理を使用する際、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してサーバー上のエンティティ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス、データベース、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトなど) を管理するためのポリシーを作成します。  
@@ -53,7 +53,7 @@ ms.locfileid: "48067624"
  ポリシーに違反する場合は、オブジェクト エクスプローラーで、対象およびオブジェクト エクスプローラー ツリーの上位にあるノードの横に、重大な状態の警告が赤いアイコンとして示されます。  
   
 > [!NOTE]  
->  ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx) を参照してください。  
+>  ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx) を参照してください。  
   
 ## <a name="policy-based-management-concepts"></a>ポリシー ベースの管理の概念  
  ポリシー ベースの管理は 3 つの要素で構成されます。  
@@ -70,16 +70,16 @@ ms.locfileid: "48067624"
   
      実行モードには次の 4 種類があり、そのうち 3 つは自動化できます。  
   
-    -   **[要求時]**:  このモードでは、ユーザーが直接指定した場合にポリシーが評価されます。  
+    -   **[要求時]** : このモードでは、ユーザーが直接指定した場合にポリシーが評価されます。  
   
-    -   **[変更時: 回避]**: この自動モードでは、DDL トリガーを使用してポリシー違反が防止されます。  
+    -   **[変更時: 回避]** : この自動モードでは、DDL トリガーを使用してポリシー違反が防止されます。  
   
         > [!IMPORTANT]  
-        >  nested triggers サーバー構成オプションが無効になっている場合、**[変更時: 回避]** は正しく動作しません。 ポリシー ベースの管理では、この評価モードを使用するポリシーに準拠しない DDL 操作の検出およびロールバックに DDL トリガーが使用されます。 ポリシー ベースの管理の DDL トリガーを削除するか、nested triggers を無効にすると、この評価モードが失敗したり、予期しない動作をすることがあります。  
+        >  nested triggers サーバー構成オプションが無効になっている場合、 **[変更時: 回避]** は正しく動作しません。 ポリシー ベースの管理では、この評価モードを使用するポリシーに準拠しない DDL 操作の検出およびロールバックに DDL トリガーが使用されます。 ポリシー ベースの管理の DDL トリガーを削除するか、nested triggers を無効にすると、この評価モードが失敗したり、予期しない動作をすることがあります。  
   
-    -   **[変更時: ログのみ]**: この自動モードでは、関連する変更が行われたときにイベント通知を使用してポリシーが評価されます。  
+    -   **[変更時: ログのみ]** : この自動モードでは、関連する変更が行われたときにイベント通知を使用してポリシーが評価されます。  
   
-    -   **[スケジュールで実行]**: この自動モードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用してポリシーが定期的に評価されます。  
+    -   **[スケジュールで実行]** : この自動モードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用してポリシーが定期的に評価されます。  
   
      自動ポリシーが有効になっていない場合、ポリシー ベースの管理はシステム パフォーマンスに影響しません。  
   
@@ -128,10 +128,10 @@ ms.locfileid: "48067624"
 |ポリシー ベースの管理ポリシーをエクスポートおよびインポートする方法について説明します。|[ポリシーベースの管理ポリシーのエクスポート](export-a-policy-based-management-policy.md)<br /><br /> [ポリシーベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)|  
 |サーバー インスタンス、データベース、サーバー オブジェクト、またはデータベース オブジェクトがポリシーに準拠していることを確認する方法について説明します。|[オブジェクトからのポリシーベースの管理ポリシーの評価](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [ポリシーからのポリシーベースの管理ポリシーの評価](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [ポリシーベースの管理ポリシーがスケジュールに従っていることの評価](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |ポリシー ベースの管理ファセットの状態を表示してファイルにコピーする方法について説明します。|[ポリシー ベースの管理ファセットの操作](working-with-policy-based-management-facets.md)|  
-|ベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価する方法について説明します。|[ポリシーベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
+|ベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価する方法について説明します。|[ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーの **[ポリシー管理]** ノードに関する F1 ヘルプ トピックを提供します。|[ポリシー管理 ノード&#40;オブジェクト エクスプ ローラー&#41;](../../ssms/object/object-explorer.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

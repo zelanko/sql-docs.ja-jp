@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], XML Bulk Load
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b832f6d92b847ee823a350559dbc54fd35a13ec2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014903"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>.NET 環境での SQLXML 一括読み込みの使用
   ここでは、XML 一括読み込み機能を .NET 環境で使用する方法について説明します。 XML 一括読み込みの詳細については、次を参照してください。 [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)します。  
@@ -30,7 +28,7 @@ ms.locfileid: "48175882"
  マネージド環境から SQLXML 一括読み込み COM オブジェクトを使用するには、このオブジェクトにプロジェクト参照を追加する必要があります。 これによって、一括読み込み COM オブジェクトのマネージド ラッパー インターフェイスが生成されます。  
   
 > [!NOTE]  
->  マネージド XML 一括読み込みはマネージド ストリームでは動作せず、ネイティブ ストリームのラッパーが必要です。 SQLXML 一括読み込みコンポーネントはマルチスレッド環境 ('[MTAThread]' 属性) では動作しません。 次の追加情報を含む InvalidCastException 例外を取得するマルチ スレッド環境で一括ロード コンポーネントを実行しようとした場合:「インターフェイス SQLXMLBULKLOADLib.ISQLXMLBulkLoad の QueryInterface が失敗しました」。 回避するには、一括読み込みオブジェクト シングル スレッド アクセスを含むオブジェクトを作成する (などを使用して、 **[STAThread]** 属性のサンプルに示すように)。  
+>  マネージド XML 一括読み込みはマネージド ストリームでは動作せず、ネイティブ ストリームのラッパーが必要です。 SQLXML 一括読み込みコンポーネントはマルチスレッド環境 ('[MTAThread]' 属性) では動作しません。 マルチ スレッド環境で一括ロード コンポーネントを実行しようとすると、次の追加情報を含む InvalidCastException 例外が表示されます。「インターフェイス SQLXMLBULKLOADLib.ISQLXMLBulkLoad の QueryInterface が失敗しました。」 回避するには、一括読み込みオブジェクト シングル スレッド アクセスを含むオブジェクトを作成する (などを使用して、 **[STAThread]** 属性のサンプルに示すように)。  
   
  ここでは、データベースに XML データの一括読み込みを行う、実際の C# サンプル アプリケーションを紹介します。 実際のサンプルを作成するには、次の手順に従います。  
   

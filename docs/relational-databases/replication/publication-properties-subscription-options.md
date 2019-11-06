@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92aa4b83697bd424d4e6940f3c46b96033d5ecf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847011"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769994"
 ---
 # <a name="publication-properties-subscription-options"></a>[パブリケーションのプロパティ]、[サブスクリプション オプション]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[パブリケーション プロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページを使用すると、サブスクリプションに関連付けられたパブリケーション レベルのプロパティを表示したり設定したりできます。 プロパティは次のように分類されます。  
   
 -   すべてのパブリケーションに適用されるプロパティ。  
@@ -59,13 +59,13 @@ ms.locfileid: "47847011"
  このデータベースの他のパブリケーションから独立したエージェントを使用するかどうかを決定します。 このオプションは読み取り専用であり、パブリケーションの新規作成ウィザードで作成されたパブリケーションに対して既定で **[True]** に設定され、パブリケーション作成後は変更できません。 詳細については、「[Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)」 (レプリケーション エージェントの管理) を参照してください。  
   
  **[スナップショットが常に利用可能]**  
- スナップショット エージェントが実行されるたびにスナップショット ファイルを作成するかどうかを決定します ( **[独立したディストリビューション エージェント]** が有効な場合のみ)。 このオプションは読み取り専用であり、パブリケーションの新規作成ウィザードの **[スナップショット エージェント]** ページで **[スナップショットをすぐに作成し、サブスクリプションを初期化できるようにそのスナップショットを保持する]** を選択した場合は **[True]** に設定されます (既定)。 詳細については、「[スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-snapshot.md)」を参照してください。  
+ スナップショット エージェントが実行されるたびにスナップショット ファイルを作成するかどうかを決定します ( **[独立したディストリビューション エージェント]** が有効な場合のみ)。 このオプションは読み取り専用であり、パブリケーションの新規作成ウィザードの **[スナップショット エージェント]** ページで **[スナップショットをすぐに作成し、サブスクリプションを初期化できるようにそのスナップショットを保持する]** を選択した場合は **[True]** に設定されます (既定)。 詳細については、「[スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
  **[バックアップ ファイルからの初期化を許可]**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクリプションの初期化でバックアップ ファイルを使用できるようにするかどうかを決定します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
  **[SQL Server 以外のサブスクライバーを許可]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 パブリケーションで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーをサポートするかどうかを決定します。 このオプションを **[True]** にすると、他のパブリケーション プロパティで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーをサポートするように設定されます。 サブスクリプションが存在する場合、このオプションは読み取り専用です。 **[即時更新サブスクリプションを許可]** 、 **[キュー更新サブスクリプションを許可]**、または **[ピア ツー ピア サブスクリプションを許可]** が **[True]** に設定されている場合、このオプションは **[True]** に設定できません。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 パブリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーをサポートするかどうかを決定します。 このオプションを **[True]** に設定すると、他のパブリケーション プロパティで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされるように設定されます。 サブスクリプションが存在する場合、このオプションは読み取り専用です。 **[即時更新サブスクリプションを許可]** 、 **[キュー更新サブスクリプションを許可]** 、または **[ピア ツー ピア サブスクリプションを許可]** が **[True]** に設定されている場合、このオプションは **[True]** に設定できません。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
 ### <a name="data-transformation"></a>[データの変換]  
  **[データ変換を許可]**  
@@ -117,7 +117,7 @@ ms.locfileid: "47847011"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 どのデータがどのパーティションに属しているかを事前に計算することによって、同期を最適化するかどうかを決定します。 この設定は、パブリケーションが事前計算済みパーティションの基準を満たしている場合、既定で **[True]** になっています。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
  **[同期の最適化]**  
- 各サブスクライバーで追加メタデータを格納することによって、マージ プロセスを最適化するかどうかを決定します。 この最適化よりも事前計算済みパーティションが優先されます。 **[同期の最適化]** オプションは、 **[パーティションの事前計算]** が **[False]** に設定された場合のみ適用されます。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ 各サブスクライバーで追加メタデータを格納することによって、マージ プロセスを最適化するかどうかを決定します。 この最適化よりも事前計算済みパーティションが優先されます。 **[同期の最適化]** オプションは、 **[パーティションの事前計算]** が **[False]** に設定された場合のみ適用されます。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 ### <a name="merge-processes"></a>[マージ プロセス]  
  **[同時実行プロセスの制限]**  

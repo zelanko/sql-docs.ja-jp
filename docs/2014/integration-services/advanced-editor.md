@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.advancededitor.columnmappings.f1
@@ -14,15 +13,15 @@ f1_keywords:
 - sql12.dts.designer.advancededitor.componentproperties.f1
 - sql12.dts.designer.advancededitor.connections.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85155dec153c3d50f12efd5ddb9ada2c6d0a73a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62772195"
 ---
 # <a name="advanced-editor"></a>[詳細エディター]
   **[詳細エディター]** ダイアログ ボックスを使用すると、選択した [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトのプロパティを構成できます。  
@@ -43,7 +42,7 @@ ms.locfileid: "48178042"
   
  表示されるプロパティはコンポーネントによって異なります。 **[詳細エディター]** に表示される可能性のあるプロパティの詳細については、次のトピックを参照してください。  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [共通プロパティ](../../2014/integration-services/common-properties.md)  
   
 -   [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48178042"
   
 -   [Integration Services の変換](data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>関連項目  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

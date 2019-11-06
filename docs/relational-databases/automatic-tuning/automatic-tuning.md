@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a196ef879c176fe731fe85b2de7962d70edff7b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934556"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52541173"
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]モニター、データベースと自動的に実行されるクエリ ワークロードのパフォーマンスが向上します。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]組み込みのインテリジェンス メカニズムを自動的に調整して、ワークロードにデータベースを動的に適応することで、クエリのパフォーマンスを向上させることができます。 利用できる 2 つの自動チューニング機能があります。
 
- -  **自動プラン修正**問題のあるクエリ実行プランし、クエリの実行プランのパフォーマンスに関する問題の修正を識別します。 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **自動プラン修正**問題のあるクエリ実行プランし、クエリの実行プランのパフォーマンスに関する問題の修正を識別します。 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **自動インデックス管理**を削除するインデックスと、データベースに追加するインデックスを識別します。 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>なぜ自動チューニングでしょうか。
@@ -114,24 +113,21 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
-      estimated_gain = (regressedPlanExecutionCount+recommendedPlanExecutionCount)
-                  *(regressedPlanCpuTimeAverage-recommendedPlanCpuTimeAverage)/1000000,
-      error_prone = IIF(regressedPlanErrorCount>recommendedPlanErrorCount, 'YES','NO')
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
 FROM sys.dm_db_tuning_recommendations
-  CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
-            [current plan_id] int '$.regressedPlanId',
-            [recommended plan_id] int '$.recommendedPlanId',
-
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
             regressedPlanErrorCount int,
             recommendedPlanErrorCount int,
-
             regressedPlanExecutionCount int,
             regressedPlanCpuTimeAverage float,
             recommendedPlanExecutionCount int,
             recommendedPlanCpuTimeAverage float
-
-          ) as planForceDetails;
+          ) AS planForceDetails;
 ```
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
@@ -176,7 +172,7 @@ FROM sys.dm_db_tuning_recommendations
 
 ### <a name="alternative---manual-index-management"></a>代替 - 手動のインデックスの管理
 
-ユーザーは手動でクエリを実行する必要があります、自動インデックス管理[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)パフォーマンスを向上させる可能性があります詳細を使用してインデックスを作成するインデックスを検索するビューこのビューを手動でクエリのパフォーマンスの監視で提供されます。 削除するインデックスを検索するには、するには、ユーザーはあまり使われない検索インデックスにインデックスの運用上の使用状況の統計を監視する必要があります。
+ユーザーは手動でクエリを実行する必要があります、自動インデックス管理[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)でパフォーマンス ダッシュ ボード レポートを表示または[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]が検索インデックスにパフォーマンスを向上させる、このビューで詳細情報を使用してインデックスを作成し、手動でクエリのパフォーマンスを監視します。 削除するインデックスを検索するには、するには、ユーザーはあまり使われない検索インデックスにインデックスの運用上の使用状況の統計を監視する必要があります。
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] このプロセスを簡略化します。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ワークロードを分析し、新しいインデックスでは、高速実行するクエリが識別されます未使用または重複するインデックスを識別します。 変更する必要があるインデックスの識別に関する詳細情報[Azure portal でのインデックスの推奨事項を見つける](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)します。
 

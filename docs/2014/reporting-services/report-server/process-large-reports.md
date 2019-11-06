@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], large reports
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b22d42d48b3357cc004c89886ebaaaca42c35f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103620"
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  
@@ -34,12 +33,12 @@ ms.locfileid: "48084662"
   
  変化しやすいデータを含むレポートの場合、レポートのサイズはレポートを実行するたびに大きく変化する可能性があります。 この場合、データ ソースを監視し、データの変化がレポートへ及ぼす影響を見極めた上で、このトピックに記載されている手順に従う必要があるかどうかを判断する必要があります。  
   
- タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.com の記事「 [レポート サーバーでのレポート実行の問題を診断する方法](http://go.microsoft.com/fwlink/?LinkId=85634) 」を参照してください。  
+ タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.com の記事「 [レポート サーバーでのレポート実行の問題を診断する方法](https://go.microsoft.com/fwlink/?LinkId=85634) 」を参照してください。  
   
 ## <a name="configuration-recommendations"></a>構成に関する推奨事項  
  レポートの実行、レポートの表示、およびレポートのアクセスに関する推奨事項としては、次の事項が挙げられます。  
   
--   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、次を参照してください。[キャッシュの事前読み込み&#40;レポート マネージャー&#41;](preload-the-cache-report-manager.md)します。  
+-   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、「 [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](preload-the-cache-report-manager.md)」を参照してください。  
   
 -   レポートは、要求時に実行されることを防ぐため、スケジュールされたレポート スナップショットとして実行するように構成します。 レポートの実行にタイムアウト値は設定しないでください。 レポートは、オフピーク時間中に実行してください。  
   
@@ -70,10 +69,10 @@ ms.locfileid: "48084662"
  レポートを電子メールで配信する場合は、リンクを含むようにサブスクリプションを構成します。 レポートを添付ファイルとして送信することは避けてください。  
   
 ## <a name="see-also"></a>参照  
- [サブスクリプションと配信&#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [レポート処理プロパティを設定します。](set-report-processing-properties.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [レポート処理プロパティの設定](set-report-processing-properties.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
  [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](preload-the-cache-report-manager.md)  
   
   

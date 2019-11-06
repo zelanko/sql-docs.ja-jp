@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - GeneralFlags Property (SInstance Class)
@@ -20,12 +18,12 @@ ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be204c2cd70b7e27d18f8443dd84c9217bcda218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5d59bf8398d43304f4888f3a3ad3a93b98b70ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137263"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags プロパティ (SInstance クラス)
   関連付けられている一般的なフラグを取得のインスタンス[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

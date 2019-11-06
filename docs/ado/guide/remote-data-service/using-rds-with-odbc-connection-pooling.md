@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921937"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS での ODBC 接続プールの使用
 ODBC データ ソースを使用している場合は、クライアントの負荷の処理を高パフォーマンスを実現するために、接続オプションでは、インターネット インフォメーション サービス (IIS) のプールを使用できます。 接続プールは、頻繁に使用される接続の開いている状態を維持する接続は、リソース マネージャーです。  
@@ -49,7 +48,7 @@ ODBC データ ソースを使用している場合は、クライアントの�
   
 2.  続行を 2 回クリックします。  
   
-3.  Microsoft SQL Server で、オプション ダイアログ ボックスは、ネットワーク サポートの変更を選択し、し、続行 をクリックします。  
+3.  Microsoft SQL Server でのオプション ダイアログ ボックスは、ネットワーク サポートの変更を選択し、し、続行 をクリックします。  
   
 4.  TCP/IP ソケットのチェック ボックスが選択されているかどうかを確認し、[ok] をクリックします。  
   
@@ -124,7 +123,7 @@ ODBC データ ソースを使用している場合は、クライアントの�
   
 5.  [Ok] をクリックして、ユーティリティを終了し、もう一度 [ok] です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

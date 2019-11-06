@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 673dcead751bf5db8da326de5cfe8e3aa18288a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5e2ed258caa8019b13ddd8600a5ada2956913977
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105947"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)
   リボンの [挿入] タブからテーブル、マトリックス、または一覧のデータ領域を追加するとき、Tablix データ領域用の初期テンプレートを使用しますが、このテンプレートによって制限されることはありません。 グループ、行、列などの Tablix データ領域機能を追加または削除することによって、引き続きデータの表示方法を設定できます。  
   
- 行グループや列グループを削除するとき、グループの値を表示するのに使用されている行や列を削除することもできます。 行や列を手動で追加または削除することもできます。 詳細やグループのデータを表示する行と列を使用する方法については、次を参照してください。 [Tablix データ領域&#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)します。  
+ 行グループや列グループを削除するとき、グループの値を表示するのに使用されている行や列を削除することもできます。 行や列を手動で追加または削除することもできます。 行や列を使用して詳細やグループ データを表示する方法については、「 [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)」をご覧ください。  
   
- Tablix データ領域の構造を変更した後、プロパティを設定して、レポートでのデータ領域の表示方法を制御できます。たとえば、すべてのページの上部に列ヘッダーを繰り返し表示したり、グループでグループ ヘッダーを保持したりすることができます。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
+ Tablix データ領域の構造を変更した後、プロパティを設定して、レポートでのデータ領域の表示方法を制御できます。たとえば、すべてのページの上部に列ヘッダーを繰り返し表示したり、グループでグループ ヘッダーを保持したりすることができます。 詳細については、「 [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

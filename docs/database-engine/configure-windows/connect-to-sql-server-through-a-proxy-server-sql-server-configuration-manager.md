@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 187004d1ff87fdc1b22ab62537cbe06f5d56c706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65313b589892a2a72edc50c017914272c6a31925
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012142"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>プロキシ サーバーを介して SQL Server に接続する方法 (SQL Server 構成マネージャー)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47631030"
   
 2.  プロキシ サーバーで、プロキシ サーバー用のローカル アドレス テーブル (LAT) を定義し、受信待ちするノード アドレスが LAT エントリの範囲外になるようにします。 詳細については、プロキシ サーバーのマニュアルを参照してください。  
   
->  [!NOTE]
+> [!NOTE]
 >  このトピックの対象は、オンプレミスの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]に関連する接続問題については、 [「Troubleshoot connection issues to Azure SQL Database」](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues)(Azure SQL Database の接続問題のトラブルシューティング) を参照してください。  
 
 

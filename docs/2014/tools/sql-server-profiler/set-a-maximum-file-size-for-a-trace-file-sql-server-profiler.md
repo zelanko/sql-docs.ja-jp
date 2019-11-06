@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - maximum file size for traces
@@ -14,12 +13,12 @@ ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 402c51ca0727cd23a34b3b03891338259d6850b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0bb761cf3402080842ae0eaff7b04a0f312a3a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267322"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>トレース ファイルの最大ファイル サイズの設定 (SQL Server Profiler)
   トレース ファイルの最大ファイル サイズを設定するには、次の手順を実行します。  

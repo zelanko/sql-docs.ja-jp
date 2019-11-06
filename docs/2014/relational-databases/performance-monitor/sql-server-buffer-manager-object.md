@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
@@ -13,12 +13,12 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a5ef0580e2c13f191a233f5eb42029e4749f949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250756"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server: Buffer Manager オブジェクト
   **Buffer Manager** オブジェクトには、次に示す項目の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による使用状況を監視するためのカウンターが用意されています。  

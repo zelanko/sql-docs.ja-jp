@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SupportAlias Property (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2bfb677ba05bc5303c706d65dd2dda70eb67d23d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62826758"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias プロパティ (ClientNetworkProtocol クラス)
   現在のネットワーク プロトコルがで指定されたかどうかを指定するブール型プロパティを取得、 [SetOrderValue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)別名をサポートします。  
@@ -52,6 +50,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -22,17 +22,17 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a84ad46068260524a2e6232ca668da445447529
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 625d56a38d88b3cccbea1c75ad88917af1a6f6dd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63228941"
 ---
 # <a name="return-codes"></a>リターン コード
   最も基本的なレベルでは、メンバー関数は成功するか失敗するかのどちらかです。 それよりもやや詳細なレベルでは、関数は成功しても、その成功はアプリケーション開発者が意図した状態ではない場合があります。  
   
- OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)」を参照してください。  
+ OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631)」を参照してください。  
   
  ときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのメンバー関数が S_OK では、その関数は成功を返します。  
   

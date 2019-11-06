@@ -15,15 +15,14 @@ helpviewer_keywords:
 - GRANT statement, types
 - type permissions [SQL Server]
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5b2cc4e32272a337a196d93df8c3101a3bbbad8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: b263463874113ce590da9bde57f15b4b03c13e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071213"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT (型の権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,8 +55,8 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  型で許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
- 権限を許可する型を指定します。 スコープ修飾子 (**::**) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (**.**) が必要です。  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ 権限を許可する型を指定します。 スコープ修飾子 ( **::** ) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 ( **.** ) が必要です。  
   
  TO \<database_principal> 権限を許可するプリンシパルを指定します。  
   
@@ -104,7 +103,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  型は、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。  
   
 > [!IMPORTANT]  
->  **GRANT**、**DENY,**、**REVOKE** の各権限は、システム型には適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型について詳しくは、「[SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)」をご覧ください。  
+>  **GRANT**、**DENY,** 、**REVOKE** の各権限は、システム型には適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型について詳しくは、「[SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)」をご覧ください。  
   
  次の表に、型で許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2e5596948a9e764ca0005d6cc41e62d65421866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 719b34eef3eb51af1e5eeabce3a88d453f005eff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138822"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLNativeSql**ドライバーによって変更された SQL 文字列を返します。 **SQLNativeSql** SQL ステートメントは実行されません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
      SQLHDBC        ConnectionHandle,  
@@ -49,7 +48,7 @@ SQLRETURN SQLNativeSql(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *InStatementText*  
  [入力]SQL 翻訳されるテキストを指定する文字列。  
@@ -97,25 +96,25 @@ SQLRETURN SQLNativeSql(
 ## <a name="comments"></a>コメント  
  どのような例を次に**SQLNativeSql** CONVERT スカラー関数を含む次の入力 SQL 文字列を返す可能性があります。 データ ソースの整数型の列 empid があると仮定します。  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  Microsoft SQL Server 用のドライバーでは、次の変換された SQL 文字列を返す可能性があります。  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  ORACLE サーバー用のドライバーでは、次の変換された SQL 文字列を返す可能性があります。  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  Ingres 用のドライバーでは、次の変換された SQL 文字列を返す可能性があります。  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   

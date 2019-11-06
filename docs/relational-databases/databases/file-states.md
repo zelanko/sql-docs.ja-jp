@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e54445a926dbb6f7d1e03720f31ee0bd9a1601cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934440"
 ---
 # <a name="file-states"></a>ファイルの状態
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "51560339"
 |状態|定義|  
 |-----------|----------------|  
 |ONLINE|すべての操作でファイルを使用できます。 データベース自体がオンラインである場合、プライマリ ファイル グループ内のファイルは常にオンラインです。 プライマリ ファイル グループ内のファイルがオンラインでない場合、データベースはオンラインにならないので、セカンダリ ファイルの状態は未定義となります。|  
-|OFFLINE|ファイルにアクセスできません。また、ファイルがディスク上に存在しない可能性があります。 ファイルは、ユーザーの明示的な操作によってオフラインになり、ユーザーが追加操作を行うまではオフラインのままになります。<br /><br /> **\*\* 注意 \*\*** ファイルをオフラインにする必要があるのはファイルが破損している場合だけですが、ファイルは復元できます。 オフラインに設定されたファイルをオンラインに設定する唯一の方法は、バックアップからファイルを復元することです。 単一ファイルの復元の詳細については、「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。|  
+|OFFLINE|ファイルにアクセスできません。また、ファイルがディスク上に存在しない可能性があります。 ファイルは、ユーザーの明示的な操作によってオフラインになり、ユーザーが追加操作を行うまではオフラインのままになります。<br /><br /> **\*\* 注意 \*\*** ファイルが破損しているとき、ファイルの状態がオフラインに設定されることがありますが、オンラインに戻すことができます。 オフラインに設定されたファイルをオンラインに設定する唯一の方法は、バックアップからファイルを復元することです。 単一ファイルの復元の詳細については、「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。 <br /><br /> データベースが完全または一括のログ復旧状態のとき、ファイルが削除されると、データベース ファイルもオフラインに設定されます。 sys.master_files のエントリは、drop_lsn 値を超えたためにトランザクション ログが切り詰められるまで残ります。 詳細については、「[トランザクション ログの切り捨て](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation)」を参照してください. |  
 |RESTORING|ファイルは復元中です。 復元コマンドはページの復元だけでなくファイル全体に影響するため、ファイルが復元状態になります。復元が完了してファイルが復旧されるまではこの状態のままになります。|  
 |RECOVERY PENDING|ファイルの復旧が延期されました。 ファイルが復元および復旧されず、復元処理が断片的な状態になると、ファイルは自動的にこの状態になります。 エラーを解決して復旧処理を完了できるようにするには、ユーザーによる追加操作が必要です。 詳細については、「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。|  
 |SUSPECT|オンラインの復元処理中にファイルの復旧に失敗しました。 ファイルがプライマリ ファイル グループにある場合、データベースも問題ありとしてマークされます。 それ以外の場合、ファイルのみが問題ありの状態になり、データベースはオンラインのままになります。<br /><br /> 次の方法のいずれかによってファイルが使用可能になるまで、ファイルは問題ありの状態のままになります。<br /><br /> 復元および復旧<br /><br /> REPAIR_ALLOW_DATA_LOSS を指定した DBCC CHECKDB|  
@@ -65,5 +64,3 @@ ms.locfileid: "51560339"
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
  [データベース ファイルとファイル グループ](../../relational-databases/databases/database-files-and-filegroups.md)  
-  
-  

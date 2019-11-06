@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 9cc4dda934496bbfa33306537b515870f0de23de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108174"
 ---
 # <a name="new-data-source-page-report-manager"></a>[新しいデータ ソース] ページ (レポート マネージャー)
   [新しいデータ ソース] ページを使用すると、共有データ ソース アイテムを作成できます。 共有データ ソースにより、外部のデータ ソースへの接続が定義されます。 共有データ ソースを使用すると、データ ソースの接続の設定を、そのデータ ソースを使用するレポート、モデル、およびデータ ドリブン サブスクリプションとは別に作成および保持できます。  
@@ -44,14 +43,14 @@ ms.locfileid: "48073740"
  共有データ ソースを有効または無効にする場合に使用します。 共有データ ソースを無効にすると、そのアイテムを参照するすべてのレポートおよびモデルの処理を無効にできます。  
   
  **データ ソースの種類**  
- データ ソースから取得したデータの処理に使用する、データ処理拡張機能を指定します。 レポート サーバーにはデータ処理拡張機能が含まれています[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]SAP、XML、ODBC、および OLE DB します。 サード パーティ ベンダーから、別のデータ処理拡張機能を入手できる可能性もあります。  
+ データ ソースから取得したデータの処理に使用する、データ処理拡張機能を指定します。 レポート サーバーには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、SAP、XML、ODBC、および OLE DB 用のデータ処理拡張機能があります。 サード パーティ ベンダーから、別のデータ処理拡張機能を入手できる可能性もあります。  
   
- リモートおよび非 SQL データ ソースのサポートの詳細については、次を参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](http://go.microsoft.com/fwlink/?linkid=232473)(HYPERLINK"http://go.microsoft.com/fwlink/?linkid=232473"http://go.microsoft.com/fwlink/?linkid=232473)と[レポートでサポートされるデータ ソース。サービス&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
+ リモートおよび非 SQL データ ソースのサポートの詳細については、次を参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](https://go.microsoft.com/fwlink/?linkid=232473)(HYPERLINK"<https://go.microsoft.com/fwlink/?linkid=232473>" <https://go.microsoft.com/fwlink/?linkid=232473>) と[レポートでサポートされるデータ ソース。サービス&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
   
  **[接続文字列]**  
  レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続の種類によって使用する構文が決まります。 たとえば、XML データ処理拡張機能の接続文字列は、XML ドキュメントの URL になります。 ほとんどの場合、データベース サーバーおよびデータ ファイルは一般的な接続文字列で指定されます。  
   
- 次の例への接続に使用する接続文字列、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]データベース。  
+ 以下に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] データベースへの接続に使用する接続文字列の例を示します。  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -68,14 +67,14 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **(接続に使用)、レポートを実行しているユーザーによって指定された資格情報**  
  各ユーザーには、ユーザー名およびパスワードを入力してデータ ソースにアクセスするように求めるメッセージが表示されます。 ユーザーに資格情報の入力を要求するメッセージを定義できます。 既定のテキスト文字列は、"データ ソースへのアクセスに使用するユーザー名とパスワードを入力してください。" です。  
   
- ユーザーが指定する資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証を使用している場合にこのチェック ボックスをオンされません (たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証)。  
+ ユーザーが指定する資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証 (たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証) を使用している場合は、このチェック ボックスをオフにしてください。  
   
  **(接続に使用)、レポート サーバーに安全に格納されている資格情報**  
  暗号化されたユーザー名およびパスワードを、レポート サーバーのデータベースに格納します。 このオプションを選択すると、レポート (たとえば、ユーザーの操作によってではなく、スケジュールまたはイベントによって起動されるレポート) を自動的に実行できます。 既定のセキュリティを使用している場合、ユーザー名は Windows ドメイン アカウントである必要があります。 この形式でアカウントを指定:\<ドメイン >\\< ユーザー名\>します。 指定するアカウントには、レポートが使用するデータ ソースをホストするコンピューター上でローカルにログオンする権限が必要です。  
   
- 資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証を使用している場合にこのチェック ボックスをオンされません (たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証)。  
+ 資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証 (たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証) を使用している場合は、このチェック ボックスをオフにしてください。  
   
- データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースでは、このオプションは、SETUSER 関数を設定します。  
+ データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。  
   
  **Windows 統合セキュリティ (接続に使用)**  
  現在のユーザーの Windows 資格情報を使用して、データ ソースにアクセスします。 データ ソースへのアクセスに使用される資格情報が、ネットワーク ドメインへのログオンに使用される資格情報と同じである場合に、このオプションを選択します。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報を別のコンピューターに渡すこともできます。 別のコンピューターの接続が必要な場合に、想定されるデータではなく、エラーが返されます。  
@@ -93,11 +92,11 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  変更を保存する場合にクリックします。  
   
 ## <a name="see-also"></a>参照  
- [作成、削除、または共有データ ソース変更&#40;レポート マネージャー&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [作成、変更、および共有データ ソースを削除する&#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
+ [共有データ ソースを作成、変更、および削除する (SSRS)](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

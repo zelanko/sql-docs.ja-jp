@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e2d6833165def5c73ebe15ec77cf23cffb1c1a3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8504dde4c5d86de50fd110d57675df269f659ce6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945264"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>フォルダーとファイルの権限 (マスター データ サービス)
 
@@ -42,7 +40,7 @@ ms.locfileid: "47717380"
 |CREATOR OWNER|特別な権限|  
 |SYSTEM|特別な権限|  
 |管理者|特別な権限|  
-|ユーザー|読み取りと実行、フォルダー内容の一覧表示、読み取り|  
+|Users|読み取りと実行、フォルダー内容の一覧表示、読み取り|  
 |TrustedInstaller|フォルダー内容の一覧表示、特別な権限|  
   
 ## <a name="explicit-permissions"></a>明示的権限  
@@ -66,7 +64,7 @@ ms.locfileid: "47717380"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config ファイルのコンテンツの詳細については、「[Web 設定リファレンス (マスター データ サービス)](../master-data-services/web-configuration-reference-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービスのインストール](../master-data-services/install-windows/install-master-data-services.md)  
   
   

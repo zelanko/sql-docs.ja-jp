@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e43bbb27fc94d9fc7a32fb95b90e0b4e2cd53bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: df37de909461ace62edbbf3cfe9e7b9dd8448b56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099390"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)
   レポート パーツを使用するために役立つヒントを以下に示します。  
@@ -27,7 +26,7 @@ ms.locfileid: "48189322"
  自分の権限と同僚の権限を確認するには、レポート サーバー管理者に問い合わせてください。  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint サーバーにアップロードしたレポート パーツを検索しても、 表示されない  
- レポート ビルダーを使用してパブリッシュする代わりに、SharePoint ドキュメント ライブラリに手動でアップロードしたレポート パーツは、レポート パーツ ギャラリーに表示されない場合があります。 ギャラリー検索に使用されるレポート サーバーは、SharePoint ドキュメント ライブラリのコンテンツと同期することが必要な場合があります。 詳細については、次を参照してください。 [SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
+ レポート ビルダーを使用してパブリッシュする代わりに、SharePoint ドキュメント ライブラリに手動でアップロードしたレポート パーツは、レポート パーツ ギャラリーに表示されない場合があります。 ギャラリー検索に使用されるレポート サーバーは、SharePoint ドキュメント ライブラリのコンテンツと同期することが必要な場合があります。 詳細については、次を参照してください。 [SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>他の人のレポートに画像が表示されない  
  画像ファイルのリンクとなるレポート パーツをパブリッシュした場合、このレポート パーツは単なるリンクになります。 他の人がレポートに画像レポート パーツを作成したときに画像が表示されない場合は、リンク先の画像に対する権限を持っていないことが考えられます。  
@@ -44,6 +43,6 @@ ms.locfileid: "48189322"
  レポート アイテムに循環参照が含まれている場合、そのアイテムをレポート パーツとしてパブリッシュすることはできません。 たとえば、レポート アイテムがデータセットを参照し、そのデータセットがパラメーターを参照するとします。 また、そのパラメーターはデータセットを参照します。 レポート パーツをパブリッシュするには、まずいずれかの参照を削除する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

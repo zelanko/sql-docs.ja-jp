@@ -1,7 +1,7 @@
 ---
 title: XML フォーマット ファイル (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,16 +12,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2cbf1dfaef9b5985cff5764f3855d23029fd29f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091434"
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -182,19 +181,19 @@ ms.locfileid: "51659361"
   
  <FIELD  
   
- ID **="**_fieldID_**"**  
+ ID **="** _fieldID_ **"**  
   
- xsi **:** type **="**_fieldType_**"**  
+ xsi **:** type **="** _fieldType_ **"**  
   
- [ LENGTH **="**_n_**"** ]  
+ [ LENGTH **="** _n_ **"** ]  
   
- [ PREFIX_LENGTH **="**_p_**"** ]  
+ [ PREFIX_LENGTH **="** _p_ **"** ]  
   
- [ MAX_LENGTH **="**_m_**"** ]  
+ [ MAX_LENGTH **="** _m_ **"** ]  
   
- [ COLLATION **="**_collationName_**"** ]  
+ [ COLLATION **="** _collationName_ **"** ]  
   
- [ TERMINATOR **="**_terminator_**"** ]  
+ [ TERMINATOR **="** _terminator_ **"** ]  
   
  />  
   
@@ -202,13 +201,13 @@ ms.locfileid: "51659361"
   
 |FIELD 要素の属性|説明|省略可能 /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="**_fieldID_**"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID **="**_fieldID_**"**/> は \<COLUMN SOURCE **="**_fieldID_**"**/> にマップします|Required|  
-|xsi:type **="**_fieldType_**"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
-|LENGTH **="**_n_**"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
-|PREFIX_LENGTH **="**_p_**"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p*は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
-|MAX_LENGTH **="**_m_**"**|指定したフィールドに格納できる最大バイト数を定義します。 対象のテーブルがない場合、列の最大長を決めることはできません。 MAX_LENGTH 属性では、出力先の文字列型の列の最大長を制限し、列の値に割り当てる領域を制限しています。 この属性は、SELECT FROM 句で OPENROWSET 関数の BULK オプションを使用している場合に特に有益です。<br /><br /> *m* の値は、正の整数にする必要があります。 既定では、 **char** 列の最大長は 8,000 文字で、 **nchar** 列の最大長は 4,000 文字です。|省略可|  
-|COLLATION **="**_collationName_**"**|COLLATION は、文字列型のフィールドでのみ使用できる属性です。 SQL 照合順序名の一覧については、「[SQL Server の照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」を参照してください。|省略可|  
-|TERMINATOR **= "**_terminator_**"**|データ フィールドのターミネータを指定します。 ターミネータには、任意の文字を使用できます。 ただし、ターミネータには、データに含まれていない一意な文字を使用する必要があります。<br /><br /> 既定では、フィールド ターミネータはタブ文字 (\t) です。 段落記号を表すには、\r\n を使用します。|この属性が必要な文字型データの xsi:type でのみ使用されます。|  
+|ID **="** _fieldID_ **"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> は \<COLUMN SOURCE **="** _fieldID_ **"** /> にマップします|Required|  
+|xsi:type **="** _fieldType_ **"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
+|LENGTH **="** _n_ **"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
+|PREFIX_LENGTH **="** _p_ **"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p* は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
+|MAX_LENGTH **="** _m_ **"**|指定したフィールドに格納できる最大バイト数を定義します。 対象のテーブルがない場合、列の最大長を決めることはできません。 MAX_LENGTH 属性では、出力先の文字列型の列の最大長を制限し、列の値に割り当てる領域を制限しています。 この属性は、SELECT FROM 句で OPENROWSET 関数の BULK オプションを使用している場合に特に有益です。<br /><br /> *m* の値は、正の整数にする必要があります。 既定では、 **char** 列の最大長は 8,000 文字で、 **nchar** 列の最大長は 4,000 文字です。|省略可|  
+|COLLATION **="** _collationName_ **"**|COLLATION は、文字列型のフィールドでのみ使用できる属性です。 SQL 照合順序名の一覧については、「[SQL Server の照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」を参照してください。|省略可|  
+|TERMINATOR **= "** _terminator_ **"**|データ フィールドのターミネータを指定します。 ターミネータには、任意の文字を使用できます。 ただし、ターミネータには、データに含まれていない一意な文字を使用する必要があります。<br /><br /> 既定では、フィールド ターミネータはタブ文字 (\t) です。 段落記号を表すには、\r\n を使用します。|この属性が必要な文字型データの xsi:type でのみ使用されます。|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a>\<FIELD> 要素の Xsi:type 値  
  xsi:type 値は、要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 詳細については、このトピックの「xsi:type 値のデータセットへの格納」を参照してください。  
@@ -255,12 +254,12 @@ ms.locfileid: "51659361"
   
 |COLUMN 要素の属性|[説明]|省略可能 /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="**_fieldID_**"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE **="**_fieldID_**"**/> maps to \<FIELD ID **="**_fieldID_**"**/>|Required|  
+|SOURCE **="** _fieldID_ **"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> maps to \<FIELD ID **="** _fieldID_ **"** />|Required|  
 |NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|Required|  
-|xsi **:** type **="**_ColumnType_**"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: *ColumnType* に設定できる値と関連する属性値は、「[&lt;COLUMN&gt; 要素の xsi:type 値](#XsiTypeValuesOfCOLUMN)」セクションの \<COLUMN> 要素の表に示します。|省略可|  
-|LENGTH **="**_n_**"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
-|PRECISION **="**_n_**"**|数値全体の桁数を示します。 たとえば、数字 123.45 の有効桁数は 5 桁です。<br /><br /> この値は、正の整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
-|SCALE **="**_int_**"**|数値の中で小数点より右側の桁数を示します。 たとえば、数字 123.45 の小数点以下桁数は 2 桁です。<br /><br /> この値は、整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
+|xsi **:** type **="** _ColumnType_ **"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: *ColumnType* に設定できる値と関連する属性値は、「[&lt;COLUMN&gt; 要素の xsi:type 値](#XsiTypeValuesOfCOLUMN)」セクションの \<COLUMN> 要素の表に示します。|省略可|  
+|LENGTH **="** _n_ **"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
+|PRECISION **="** _n_ **"**|数値全体の桁数を示します。 たとえば、数字 123.45 の有効桁数は 5 桁です。<br /><br /> この値は、正の整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
+|SCALE **="** _int_ **"**|数値の中で小数点より右側の桁数を示します。 たとえば、数字 123.45 の小数点以下桁数は 2 桁です。<br /><br /> この値は、整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|列で NULL 値を使用できるかどうかを示します。 この属性は、FIELDS 要素から完全に独立しています。 ただし、列が NULLABLE ではない場合に、フィールドで NULL が指定された (何も値が指定されない) 場合、実行時エラーが発生します。<br /><br /> NULLABLE 属性は、単純な SELECT FROM OPENROWSET(BULK...) ステートメントを実行する場合にのみ使用されます。|省略可能 (任意のデータ型で使用可能)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 要素の xsi:type 値  
@@ -278,7 +277,7 @@ ms.locfileid: "51659361"
 |文字列|**SQLCHAR**、 **SQLVARYCHAR**、 **SQLNCHAR**、および **SQLNVARCHAR**|[なし] :|NULLABLE、LENGTH|  
   
 > [!IMPORTANT]  
->  SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には、SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます) のいずれかを使用します。  
+>  SQLXML データを一括エクスポートまたは一括インポートするには、フォーマット ファイルで次のいずれかのデータ型を使用します。SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
@@ -319,7 +318,7 @@ XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");
 for(int i=0;i<ColumnList.Count;i++)  
 {  
    Console.Write("COLUMN: xsi:type=" +ColumnList[i].Attributes["type",  
-      "https://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
+      "http://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
 }  
 ```  
   
@@ -365,7 +364,7 @@ for(int i=0;i<ColumnList.Count;i++)
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>   
@@ -401,7 +400,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -436,7 +435,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -468,7 +467,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
             MAX_LENGTH="4"/>  
@@ -510,7 +509,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="8"/>  
@@ -529,7 +528,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
-       xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  

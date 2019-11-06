@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbpublishingwizard.choosestoredprocedures.f1
@@ -44,12 +43,12 @@ ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f13a2eaf83a4134f601cb1f70cd357bcea69ac55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022579"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   ここでは、パブリケーションの新規作成ウィザードの以下のページについて説明します。  
@@ -80,9 +79,9 @@ ms.locfileid: "48080982"
   
 -   [スナップショット エージェント (パブリケーションの新規作成ウィザード)](snapshot-agent-new-publication-wizard.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Publication](publish/create-a-publication.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)   
- [プロパティ リファレンス &#40;レプリケーション&#41;](properties-reference-replication.md)  
+
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082248"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107035"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
   レポート サーバーは、資格情報を使用して、レポートにコンテンツを提供したり、データ ドリブン サブスクリプションに受信者の情報を提供する外部データ ソースに接続します。 Windows 認証、データベース認証、認証なし、またはカスタム認証を使用する資格情報を指定できます。 ネットワーク経由で接続要求を送信するときに、レポート サーバーはユーザー アカウントまたは自動実行アカウントのいずれかの権限を借用します。 接続要求の実行時に使用されるセキュリティ コンテキストの詳細については、このトピックの「 [データ ソースの構成とネットワーク接続](#DataSourceConfigurationConnections) 」をご覧ください。  
@@ -111,7 +110,7 @@ ms.locfileid: "48082248"
     2.  該当するアカウントが表示されている場合は、そのアカウントを選択して **[削除]** をクリックします。  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>保存された資格情報での権限借用の使用  
- 資格情報を使用して、別のユーザーの ID の権限を借用することもできます。 SQL Server データベースの場合、権限の借用を使用してオプションのセット、 [SETUSER](/sql/t-sql/statements/setuser-transact-sql)関数。  
+ 資格情報を使用して、別のユーザーの ID の権限を借用することもできます。 SQL Server データベースの場合、権限借用のオプションを使用すると、 [SETUSER](/sql/t-sql/statements/setuser-transact-sql) 関数が設定されます。  
   
 > [!IMPORTANT]  
 >  サブスクリプションをサポートするレポート、またはスケジュールを使用してレポート履歴を生成したりレポート実行スナップショットを更新するレポートには権限の借用を使用しないでください。  
@@ -134,18 +133,18 @@ ms.locfileid: "48082248"
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |統合セキュリティ|現在のユーザーを借用します。|すべてのデータ ソースの種類で、現在のユーザー アカウントを使用して接続します。|  
 |Windows 資格情報|指定したユーザーの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、および OLE DB の場合 : 権限を借用したユーザー アカウントを使用して接続します。|  
-|データベース資格情報|自動実行アカウントまたはサービス アカウントの権限を借用します。<br /><br /> (Reporting Services は、サービス ID を使用して接続要求を送信する際に管理者権限を削除します。)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> ユーザー名とパスワードを接続文字列に追加します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> TCP/IP プロトコルを使用している場合は、接続が正常に行われます。それ以外の場合は、失敗します。<br /><br /> XML の場合 :<br /><br /> データベース資格情報を使用している場合は、レポート サーバーで接続に失敗します。|  
-|なし|自動実行アカウントの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> 接続文字列で定義されている資格情報を使用します。 自動実行アカウントが未定義の場合は、レポート サーバーで接続に失敗します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 自動実行アカウントが定義されていても、資格情報が指定されていない場合は、必ず接続に失敗します。<br /><br /> XML の場合 :<br /><br /> 自動実行アカウントが定義されている場合は、匿名ユーザーとして接続します。それ以外の場合は、接続に失敗します。|  
+|データベース資格情報|自動実行アカウントまたはサービス アカウントの権限を借用します。<br /><br /> (Reporting Services は、サービス ID を使用して接続要求を送信する際に管理者権限を削除します。)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> ユーザー名とパスワードを接続文字列に追加します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の場合:<br /><br /> TCP/IP プロトコルを使用している場合は、接続が正常に行われます。それ以外の場合は、失敗します。<br /><br /> XML の場合 :<br /><br /> データベース資格情報を使用している場合は、レポート サーバーで接続に失敗します。|  
+|なし|自動実行アカウントの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> 接続文字列で定義されている資格情報を使用します。 自動実行アカウントが未定義の場合は、レポート サーバーで接続に失敗します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の場合:<br /><br /> 自動実行アカウントが定義されていても、資格情報が指定されていない場合は、必ず接続に失敗します。<br /><br /> XML の場合 :<br /><br /> 自動実行アカウントが定義されている場合は、匿名ユーザーとして接続します。それ以外の場合は、接続に失敗します。|  
   
 ## <a name="setting-credentials-programmatically"></a>プログラム上での資格情報の設定  
- コード内で資格情報を設定して、レポートおよびレポート サーバーへのアクセスを制御できます。 詳細については、次を参照してください。[データ ソースとの接続方法](../report-server-web-service/methods/data-sources-and-connection-methods.md)します。  
+ コード内で資格情報を設定して、レポートおよびレポート サーバーへのアクセスを制御できます。 詳しくは、「 [データ ソースと接続のメソッド](../report-server-web-service/methods/data-sources-and-connection-methods.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [レポート データ ソースを管理します。](../../integration-services/connection-manager/data-sources.md)   
+ [レポート データ ソースを管理する](../../integration-services/connection-manager/data-sources.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [作成、削除、または共有データ ソース変更&#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [レポートのデータ ソースのプロパティを構成する&#40;レポート マネージャー&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

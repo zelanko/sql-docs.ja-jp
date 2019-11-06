@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.border.f1
@@ -23,13 +22,13 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 345523929eddcefc072bc7f55be49fc5e26057d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 681ff6b46f692804aef5c7cbbc16e5abe99dbb2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105798"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>線、色、および画像の書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、線、色、データ領域、画像、その他のレポート アイテムの書式を設定する機能が用意されています。  
@@ -44,7 +43,7 @@ ms.locfileid: "48192632"
   
  標準の罫線枠だけでなく、追加の罫線枠もグラフに適用できます。 詳細については、「[グラフへの枠線の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
- 罫線をレポート自体に追加することもできます。 詳細については、「[レポートへの罫線の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)」をご覧ください。  
+ 罫線をレポート自体に追加することもできます。 詳細については、「 [レポートへの罫線の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)の詳細を参照してください。  
   
 ## <a name="applying-background-colors"></a>背景色の適用  
  レポート全体の背景、レポート内のテキスト ボックスの背景、またはデータ領域内のセルやセルのグループに、塗りつぶしの色を追加できます。 既定の背景色は白ですが、レポート アイテムの **プロパティ** ダイアログ ボックスの **[塗りつぶし]** タブで色を選択できます。 たとえば、テキスト ボックスの背景色を変更する場合は、テキスト ボックスを右クリックして、 **[テキスト ボックスのプロパティ]** をクリックします。 **[塗りつぶし]** をクリックして、適切な色を選択します。 このダイアログ ボックスでは、選択したアイテムの背景色を選択することも、背景に表示される画像を追加することもできます。  
@@ -57,9 +56,9 @@ ms.locfileid: "48192632"
  ロゴなどの画像をレポートの背景に追加したり、四角形、テキスト ボックス、テーブル、マトリックスなどのグラフの一部、またはレポートの本文やページのセクションに追加することもできます。 詳細については、「[画像 &#40;レポート ビルダーおよび SSRS& #41;](images-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [テキストとプレース ホルダーの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [数値と日付の書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [テキスト ボックス内のテキストの書式設定 (レポート ビルダーおよび SSRS)](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [[塗りつぶし] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: 読み取りスケール可用性グループ | Microsoft Docs
-ms.custom: ''
+title: 可用性グループで読み取りスケールを使用する
+description: 'Always On 可用性グループの使用時、読み取りスケールを達成する方法の説明。 '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014464"
 ---
-# <a name="read-scale-availability-groups"></a>読み取りスケール可用性グループ
+# <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 可用性グループで読み取りスケールを使用する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 可用性グループは、SQL Server で高可用性機能を実現するだけではなく、統合されたスケーリング ソリューションも提供する、包括的なソリューションです。 一般的なデータベース アプリケーションでは、複数のクライアントがさまざまな種類のワークロードを実行します。 リソースの制約のために、ボトルネックが発生することもあります。 リソースを解放すると、OLTP ワークロードのために、より高いスループットを達成することができます。 また、読み取り専用ワークロードで、より優れたパフォーマンスとスケールを実現することもできます。 SQL Server の高速レプリケーション技術を活用し、複製されたデータベースのグループを作成し、レポートと分析のワークロードを読み取り専用レプリカに移します。
@@ -33,7 +33,7 @@ ms.locfileid: "47622410"
 プライマリ レプリカで実行されるミッションクリティカルなワークロードのためにリソースを確保しておく必要がある場合、読み取り専用のルーティングを利用するか、読み取り可能セカンダリ レプリカに直接接続できます。 何らかのクラスタリング技術との統合に頼る必要はありません。 この新しい技術は、Windows プラットフォームと Linux プラットフォームの両方を実行している SQL Server 2017 で利用できます。
 
 >[!IMPORTANT]
->これは高可用性設定ではありません。 障害検出と自動フェールオーバーを監視し、調整するためのインフラストラクチャはありません。 クラスターがない場合、SQL Server は自動化された 高可用性ソリューションで提供される、短い目標回復時間 (RTO) を提供することはできません。 高可用性機能が必要な場合は、クラスター マネージャー (Windows の Windows Server フェールオーバー クラスタリングまたは Linux の Pacemaker) をご利用ください。
+>これは高可用性設定ではありません。 障害検出と自動フェールオーバーを監視し、調整するためのインフラストラクチャはありません。 クラスターがない場合、SQL Server は自動化された 高可用性ソリューションで提供される、短い目標回復時間 (RTO) を提供することはできません。 高可用性機能が必要な場合は、クラスター マネージャー (Windows の Windows Server フェールオーバー クラスター、または Linux の Pacemaker) をご利用ください。
 >
 >読み取りスケール可用性グループは、ディザスター リカバリー機能を提供できます。 読み取り専用レプリカが同期コミット モードになっている場合、回復ポイントの目標 (RPO) がゼロになります。 読み取りスケール可用性グループのフェールオーバーについては、[読み取りスケール可用性グループのプライマリ レプリカのフェールオーバー](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)に関するページをご覧ください。
 

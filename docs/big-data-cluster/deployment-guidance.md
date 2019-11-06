@@ -1,305 +1,422 @@
 ---
-title: Kubernetes でのクラスターのビッグ データの SQL Server をデプロイする方法 |Microsoft Docs
-description: Kubernetes での SQL Server 2019 ビッグ データ クラスター (プレビュー) をデプロイする方法について説明します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 11/06/2018
+title: 展開のガイダンス
+titleSuffix: SQL Server big data clusters
+description: Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) する方法について説明します。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.technology: big-data-cluster
+ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269865"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688308"
 ---
-# <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>SQL Server のビッグ データは、kubernetes クラスターをデプロイする方法
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]する方法
 
-SQL Server のビッグ データ クラスターは、Kubernetes クラスター上の docker コンテナーとしてデプロイできます。 これは、セットアップと構成手順の概要を示します。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-- 1 つの VM、Vm、または Azure Kubernetes Service (AKS) クラスター上の Kubernetes クラスターを設定します。
-- クラスターの構成ツールをインストール**mssqlctl**クライアント コンピューターにします。
-- Kubernetes クラスターで SQL Server のビッグ データ クラスターをデプロイします。
+SQL Server ビッグ データ クラスターは、Kubernetes クラスター上に docker コンテナーとして展開されます。 ここでは、セットアップと構成の手順の概要を説明します。
+
+- 単一の VM 上、VM のクラスター上、または Azure Kubernetes Service (AKS) に、Kubernetes クラスターを設定します。
+- クライアント コンピューター上にクラスター構成ツール **azdata** をインストールする。
+- Kubernetes クラスターに SQL Server ビッグ データ クラスターを展開する。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="prereqs"></a> Kubernetes クラスターの前提条件
+## <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 ビッグ データ ツールをインストールする
 
-SQL Server のビッグ データのクラスターでは、kubernetes では、サーバーおよびクライアントの両方に v1.10 の最小バージョンが必要です。 Kubectl クライアントでは、特定のバージョンをインストールするを参照してください。 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。 Minikube と AKS の最新バージョンとは、少なくとも 1.10 です。 For AKS を使用する必要があります`--kubernetes-version`既定とは異なるバージョンを指定するパラメーター。
+SQL Server 2019 ビッグ データ クラスターを展開する前に、まず、[ビッグ データ ツールをインストール](deploy-big-data-tools.md)します。
+
+- **azdata**
+- **kubectl**
+- **Azure Data Studio**
+- **SQL Server 2019 の拡張機能**
+
+## <a id="prereqs"></a> Kubernetes の前提条件
+
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]サーバーとクライアント (kubectl) の両方に対して、少なくとも Kubernetes の最小バージョンを必要とします。
 
 > [!NOTE]
-> クライアントとサーバーの Kubernetes のバージョンで +1 または-1 のマイナー バージョンがあることに注意してください。 詳細については、次を参照してください。 [Kubernetes がサポートされるのは、リリースと傾斜コンポーネント](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)します。
+> クライアントとサーバーでの Kubernetes のバージョンは、マイナー バージョンが +1 または -1 の範囲内になっている必要があることに注意してください。 詳細については、[Kubernetes のリリース ノートとバージョン スキューの SKU ポリシー](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)に関するページを参照してください。
 
-## <a id="kubernetes"></a> Kubernetes クラスターのセットアップ
+### <a id="kubernetes"></a> Kubernetes クラスターの設定
 
-上記の前提条件を満たしている Kubernetes クラスターが既にある場合に直接進んで、[配置手順](#deploy)します。 このセクションでは、Kubernetes の概念の基本的な知識を前提とします。  Kubernetes の詳細については、次を参照してください。、 [Kubernetes のドキュメント](https://kubernetes.io/docs/home)します。
+上記の前提条件を満たす Kubernetes クラスターを既にお持ちの場合は、[展開の手順](#deploy)に直接進むことができます。 このセクションでは、Kubernetes の概念の基本的な理解を前提としています。  Kubernetes の詳細については、[Kubernetes のドキュメント](https://kubernetes.io/docs/home)を参照してください。
 
-3 つの方法のいずれかでの Kubernetes にデプロイすることができます。
+次の3つの方法のいずれかを選んで、Kubernetes を展開できます。
 
-| Kubernetes をデプロイします。 | 説明 |
-|---|---|
-| **Minikube** | VM で単一ノードの Kubernetes クラスター。 |
-| **Azure Kubernetes サービス (AKS)** | Azure の managed Kubernetes コンテナー サービスです。 |
-| **複数のマシン** | 物理マシンまたはを使用して仮想マシンにデプロイされる Kubernetes クラスター **kubeadm** |
+| Kubernetes の展開先: | 説明 | リンク |
+|---|---|---|
+| **Azure Kubernetes Services (AKS)** | Azure にあるマネージド Kubernetes コンテナー サービス。 | [手順](deploy-on-aks.md) |
+| **複数のマシン (kubeadm)** | **kubeadm** を使用して物理または仮想マシン上に展開された Kubernetes クラスター | [手順](deploy-with-kubeadm.md) |
+| **Minikube** | VM にある単一ノード Kubernetes クラスター。 | [手順](deploy-on-minikube.md) |
 
-ビッグ データの SQL Server クラスターの Kubernetes クラスター オプションのいずれかを構成する方法の詳細については、次の記事のいずれかを参照してください。
-
-   - [Minikube を構成します。](deploy-on-minikube.md)
-   - [Azure Kubernetes Service で Kubernetes を構成します。](deploy-on-aks.md)
-   - [Kubeadm で複数のコンピューターでの Kubernetes を構成します。](deploy-with-kubeadm.md)
-   
 > [!TIP]
-> AKS と SQL Server の両方のビッグ データ クラスターをデプロイするサンプル python スクリプトについては、次を参照してください。[ビッグ データ クラスター Azure Kubernetes Service (AKS) で SQL Server 展開](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)します。
+> また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](deploy-notebooks.md)において、この操作を行う方法を確認してください。
 
-## <a id="deploy"></a> SQL Server のビッグ データ クラスターをデプロイします。
+### <a name="verify-kubernetes-configuration"></a>Kubernetes の構成を確認する
 
-Kubernetes クラスターを構成した後は、SQL Server のビッグ データ クラスターの配置を続行することができます。 
-
-> [!NOTE]
-> 以前のリリースからアップグレードする場合を参照してください、[この記事の「アップグレード](#upgrade)します。
-
-開発/テスト環境のすべての既定の構成で Azure でビッグ データ クラスターをデプロイするには、この記事の手順に従います。
-
-[クイック スタート: Kubernetes 上の SQL Server のビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
-
-ワークロードのニーズに従って、ビッグ データ クラスター構成をカスタマイズする場合は、一連の手順に従います。
-
-## <a name="verify-kubernetes-configuration"></a>Kubernetes 構成を確認します。
-
-実行、 **kubectl**クラスター構成を表示するコマンド。 その kubectl が適切なクラスター コンテキストを指すことを確認します。
+クラスター構成を表示するには、**kubectl** コマンドを実行します。 Kubectl が正しいクラスター コンテキストを指していることを確認します。
 
 ```bash
 kubectl config view
 ```
 
-## <a id="mssqlctl"></a> Mssqlctl をインストールします。
+> [!Important] 
+> Kubeadm を使用してブートストラップしたマルチノード Kuberntes クラスターにをデプロイする場合は、ビッグデータクラスターのデプロイを開始する前に、デプロイが対象としているすべての Kubernetes ノード間でクロックが同期されていることを確認してください。 ビッグデータクラスターには、時間の影響を受けるさまざまなサービスの正常性プロパティが組み込まれており、時計の傾斜によって状態が正しくないことがあります。
 
-**mssqlctl**は Python で記述された、により、クラスター管理者のブートス トラップし、REST Api を使用してビッグ データ クラスターを管理するコマンド ライン ユーティリティです。 必要な最小の Python バージョン v3.5 です。 必要がある`pip`をダウンロードしてインストールに使用される**mssqlctl**ツール。 
+Kubernetes クラスターを構成したら、新しい SQL Server ビッグ データ クラスターの展開に進むことができます。 以前のリリースからアップグレードする場合は、「[アップグレード[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]方法](deployment-upgrade.md)」を参照してください。
+
+## <a id="deploy"></a> 展開の概要
+
+ほとんどのビッグ データ クラスター設定は、JSON 展開構成ファイルに定義されています。 AKS、`kubeadm`、または `minikube` に対する既定の展開プロファイルを使用しても、セットアップ中に使用する独自の展開構成ファイルをカスタマイズしてもかまいません。 セキュリティ上の理由から、認証設定は環境変数を介して渡されます。
+
+以降のセクションでは、ビッグ データ クラスターの展開を構成する方法と、一般的なカスタマイズの例について詳しく説明します。 また、たとえば VS Code のようなエディターを使用して、カスタムの展開構成ファイルをいつでも編集できます。
+
+## <a id="configfile"></a> 既定の構成
+
+ビッグ データ クラスターの展開オプションは、JSON 構成ファイルに定義されています。 組み込みの展開プロファイルから、開発/テスト環境の既定の設定を使用して、クラスターの展開のカスタマイズを開始できます。
+
+| 展開プロファイル | Kubernetes 環境 |
+|---|---|
+| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test** | 複数のマシン (kubeadm) |
+| **minikube-dev-test** | minikube |
+
+**azdata bdc create** を実行することで、ビッグ データ クラスターを展開できます。 これにより、既定の構成の 1 つを選択するよう求めるメッセージが表示され、展開へと進みます。
+
+初めて `azdata` を実行するときは、使用許諾契約書 (EULA) に同意するために `--accept-eula=yes` を含める必要があります。
+
+```bash
+azdata bdc create --accept-eula=yes
+```
+
+このシナリオでは、パスワードなど、既定の構成に含まれない設定をすべて入力するように求められます。 
 
 > [!IMPORTANT]
-> 以前のリリースをインストールした場合は、クラスターを削除する必要があります*する前に*アップグレード**mssqlctl**と新しいリリースをインストールします。 詳細については、次を参照してください。[新しいリリースにアップグレードする](deployment-guidance.md#upgrade)します。
+> ビッグ データ クラスターの既定の名前は **mssql-cluster** です。 `-n` パラメーターを使用して Kubernetes 名前空間を指定する任意の **kubectl** コマンドを実行するために、このことを知っておくことは重要です。
 
-### <a name="windows-mssqlctl-installation"></a>Windows mssqlctl インストール
+## <a id="customconfig"></a> カスタムの構成
 
-1. Windows クライアントでは、上から必要な Python パッケージをダウンロード[ https://www.python.org/downloads/](https://www.python.org/downloads/)します。 Python3.5.3 以降、Python をインストールすると、pip3 もインストールします。 
+また、独自の展開構成プロファイルをカスタマイズすることも可能です。 次の手順を利用して、これを行うことができます。
 
-   > [!TIP] 
-   > Python3 でインストールする場合は、Python のパスを追加選択します。 そうでない場合は、pip3 がある場所を後で検索し、パスに手動で追加できます。
-
-1. 最新であることを確認**要求**パッケージ。
-
-   ```cmd
-   python -m pip install requests
-   python -m pip install requests --upgrade
-   ```
-
-1. インストール**mssqlctl**次のコマンドを使用します。
+1. Kubernetes 環境に適合する標準の展開プロファイルの 1 つを使用して開始します。 **azdata bdc config list** コマンドを使用して、一覧表示できます。
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   azdata bdc config list
    ```
 
-### <a name="linux-mssqlctl-installation"></a>Linux mssqlctl のインストール
-
-Linux では、インストールする必要があります、 **python3**と**python3 pip**パッケージ化し、実行`sudo pip3 install --upgrade pip`します。 3.5 最新の Python と pip がインストールされます。 Ubuntu のこれらのコマンドのしくみは次の例を示しています (別のプラットフォームを使用している場合、コマンドの変更、パッケージ マネージャー)。
-
-1. 必要な Python パッケージをインストールします。
+1. 展開をカスタマイズするには、**azdata bdc config init** コマンドを使用して、展開プロファイルのコピーを作成します。 たとえば、次のコマンドでは、**aks-dev-test** 展開構成ファイルのコピーが `custom` という名前のターゲット ディレクトリに作成されます。
 
    ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
+   azdata bdc config init --source aks-dev-test --target custom
    ```
 
-1. インストール**mssqlctl**次のコマンドを使用します。
+   azdata
+   > は`--target` 、 `--source`パラメーターに基づいて、構成ファイル ( **bdc**と**control. json**) を格納するディレクトリを指定します。
+
+1. 展開構成プロファイルでの設定をカスタマイズするために、VS Code などの JSON ファイルの編集に適したツール上で、展開構成ファイルを編集できます。 スクリプト化されたオートメーションの場合、**azdata bdc config**  コマンドを使用してカスタムの展開プロファイルを編集することもできます。 たとえば、次のコマンドでは、カスタムの展開プロファイルを変更して、展開されたクラスターの名前を既定 (**mssql-cluster**) から **test-cluster** に変えています。  
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
+   ```
+   
+   > [!TIP]
+   > また、*azdata create bdc* コマンドに *--name* パラメータ―を使用して、展開時にクラスター名を渡すことも可能です。 コマンド内のパラメーターは、構成ファイルでの値よりも優先されます。
+
+   > JSON パスを検索するための便利なツールとして、[JSONPath Online Evaluator](https://jsonpath.com/) があります。
+
+   キーと値のペアを渡すだけでなく、インライン JSON 値を指定したり、JSON パッチ ファイルを渡したりすることもできます。 詳細については、「[ビッグ データ クラスターの展開設定を構成する](deployment-custom-configuration.md)」を参照してください。
+
+1. 次に、カスタム構成ファイルを **azdata bdc create** に渡します。 必要な[環境変数](#env)を必ず設定することに注意してください。そうしないと、値の入力を求められます。
+
+   ```bash
+   azdata bdc create --config-profile custom --accept-eula yes
    ```
 
-## <a name="define-environment-variables"></a>環境変数を定義します。
+> 展開構成ファイルの構造の詳細については、[展開構成ファイルのリファレンス](reference-deployment-config.md)に関するページを参照してください。 他の構成例については、「[ビッグ データ クラスターの展開設定を構成する](deployment-custom-configuration.md)」を参照してください。
 
-渡される環境変数のセットを使用して、クラスター構成をカスタマイズすることができます、`mssqlctl create cluster`コマンド。 環境変数のほとんどは、以下に従って既定値を持つ省略可能です。 資格情報をユーザー入力を必要とするように環境変数があることに注意してください。
+## <a id="env"></a> 環境変数
 
-| 環境変数 | 必須 | 既定値 | 説明 |
-|---|---|---|---|
-| **ACCEPT_EULA** | はい | なし | SQL Server のライセンス契約 (たとえば、"Y") をそのまま使用します。  |
-| **CLUSTER_NAME** | はい | なし | SQLServer にビッグ データのクラスターをデプロイする Kubernetes 名前空間の名前。 |
-| **CLUSTER_PLATFORM** | はい | なし | Kubernetes クラスターが展開されているプラットフォームです。 `aks`、 `minikube`、 `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | いいえ | 1 | 構築するためのコンピューティング プールのレプリカの数。CTP2.0 のみ値が 1 には許可します。 |
-| **CLUSTER_DATA_POOL_REPLICAS** | いいえ | 2 | データの数はプールを構築するためのレプリカです。 |
-| **CLUSTER_STORAGE_POOL_REPLICAS** | いいえ | 2 | 構築するための記憶域プールのレプリカの数。 |
-| **DOCKER_REGISTRY** | はい | TBD | クラスターのデプロイに使用されるイメージが格納されているプライベート レジストリです。 |
-| **DOCKER_REPOSITORY** | はい | TBD | イメージを格納、上記のレジストリ内のプライベート リポジトリ。  ゲートのパブリック プレビューの期間が必要です。 |
-| **DOCKER_USERNAME** | はい | なし | これらはプライベート リポジトリに格納されている場合に、コンテナー イメージにアクセスするユーザー名。 ゲートのパブリック プレビューの期間が必要です。 |
-| **DOCKER_PASSWORD** | はい | なし | 上記のプライベート リポジトリにアクセスするパスワード。 ゲートのパブリック プレビューの期間が必要です。|
-| **DOCKER_EMAIL** | はい | なし | 上記のプライベート リポジトリに関連付けられた電子メール アドレス。 ゲートのプライベート プレビューの期間が必要です。 |
-| **DOCKER_IMAGE_TAG** | いいえ | 最新 | イメージにタグ付けに使用されるラベル。 |
-| **DOCKER_IMAGE_POLICY** | いいえ | 毎回 | イメージのプルは常に強制します。  |
-| **DOCKER_PRIVATE_REGISTRY** | はい | 1 | ゲートのパブリック プレビューの期間、この値は 1 に設定するのには。 |
-| **CONTROLLER_USERNAME** | はい | なし | クラスター管理者のユーザー名。 |
-| **CONTROLLER_PASSWORD** | はい | なし | クラスター管理者のパスワード。 |
-| **KNOX_PASSWORD** | はい | なし | Knox ユーザーのパスワード。 |
-| **MSSQL_SA_PASSWORD** | はい | なし | SQL のマスター インスタンスの SA ユーザーのパスワードです。 |
-| **USE_PERSISTENT_VOLUME** | いいえ | true | `true` Kubernetes 永続ボリュームを使用するには、ポッドの記憶域を要求します。  `false` ポッドの記憶域の一時的なホストの記憶域を使用します。 参照してください、[データ永続化](concept-data-persistence.md)詳細については資料。 SQL Server が minikube 上でビッグ データ クラスターおよび USE_PERSISTENT_VOLUME 展開する場合は、= true に設定する必要があります値を設定するの`STORAGE_CLASS_NAME=standard`します。 |
-| **STORAGE_CLASS_NAME** | いいえ | 既定値 (default) | 場合`USE_PERSISTENT_VOLUME`は`true`を使用する Kubernetes ストレージ クラスの名前を示します。 参照してください、[データ永続化](concept-data-persistence.md)詳細については資料。 SQL Server が minikube 上でビッグ データ クラスターをデプロイする場合、既定のストレージ クラス名が異なると設定をオーバーライドする必要があります`STORAGE_CLASS_NAME=standard`します。 |
-| **MASTER_SQL_PORT** | いいえ | 31433 | Master の SQL インスタンスがパブリック ネットワークをリッスンする TCP/IP ポート。 |
-| **KNOX_PORT** | いいえ | 30443 | Apache Knox がパブリック ネットワークをリッスンする TCP/IP ポート。 |
-| **GRAFANA_PORT** | いいえ | 30888 | アプリケーションの監視 Grafana がパブリック ネットワークをリッスンする TCP/IP ポート。 |
-| **KIBANA_PORT** | いいえ | 30999 | Kibana のログ検索アプリケーションがパブリック ネットワークでリッスンする TCP/IP ポート。 |
+次の環境変数は、展開構成ファイルに保存されないセキュリティ設定に使用されます。 資格情報以外の Docker 設定は、構成ファイル内で設定できることに注意してください。
+
+| 環境変数 | 要件 |説明 |
+|---|---|---|
+| **CONTROLLER_USERNAME** | 必須 |クラスター管理者のユーザー名。 |
+| **CONTROLLER_PASSWORD** | 必須 |クラスター管理者のパスワード。 |
+| **MSSQL_SA_PASSWORD** | 必須 |SQL マスター インスタンス用の SA ユーザーのパスワード。 |
+| **KNOX_PASSWORD** | 必須 |Knox **root**ユーザーのパスワード。 注: 基本認証のセットアップでは、Knox に対してサポートされているユーザーのみが**root**です。|
+| **ACCEPT_EULA**| `azdata` を初めて使用する場合は必須| [はい] に設定します。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula=yes` を含めることができます。|
+| **DOCKER_USERNAME** | 省略可 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
+| **DOCKER_PASSWORD** | 省略可 |上記のプライベート リポジトリにアクセスするためのパスワード。 |
+
+これらの環境変数は、**azdata bdc create** を呼び出す前に設定される必要があります。 設定されていない変数がある場合は、入力を求められます。
+
+次の例は、Linux (bash) と Windows (PowerShell) 用に環境変数を設定する方法を示しています。
+
+```bash
+export CONTROLLER_USERNAME=admin
+export CONTROLLER_PASSWORD=<password>
+export MSSQL_SA_PASSWORD=<password>
+export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
+```
+
+```PowerShell
+SET CONTROLLER_USERNAME=admin
+SET CONTROLLER_PASSWORD=<password>
+SET MSSQL_SA_PASSWORD=<password>
+SET KNOX_PASSWORD=<password>
+```
+
+> [!NOTE]
+> 上記のパスワードを使用して、Knox ゲートウェイに**root**ユーザーを使用する必要があります。 **root**は、この基本認証 (ユーザー名/パスワード) のセットアップでサポートされている唯一のユーザーです。 SQL Server マスターの場合、上記のパスワードと共に使用するためにプロビジョニングされたユーザー名は**sa**です。
+
+
+環境変数を設定したら、`azdata bdc create` を実行して展開をトリガーする必要があります。 この例では、上記で作成したクラスター構成プロファイルを使用します。
+
+```bash
+azdata bdc create --config-profile custom --accept-eula yes
+```
+
+次のガイドラインに注意してください。
+
+- 特殊文字が含まれている場合は、必ずパスワードを二重引用符で囲みます。 **MSSQL_SA_PASSWORD** は自由に設定できますが、必ずパスワードを十分に複雑にして、`!`、`&`、`'` 文字は使用しないでください。 二重引用符の区切り記号は bash コマンドでしか機能しないことに注意してください。
+- **SA** ログインは、セットアップ時に作成される SQL Server マスター インスタンス上でのシステム管理者です。 SQL Server コンテナーを作成した後、そのコンテナー内で `echo $MSSQL_SA_PASSWORD` を実行すると、指定した **MSSQL_SA_PASSWORD** 環境変数を検索できるようになります。 セキュリティ上の理由から、[こちら](../linux/quickstart-install-connect-docker.md#sapassword)に記載されているベスト プラクティスに従って、SA パスワードを変更してください。
+
+## <a id="unattended"></a> 無人インストール
+
+無人展開の場合は、必要なすべての環境変数を設定して、構成ファイルを使用し、`--accept-eula yes` パラメーターを指定して `azdata bdc create` コマンドを呼び出す必要があります。 前のセクションの例では、無人インストールに対応した構文を示しています。
+
+## <a id="monitor"></a> 展開を監視する
+
+クラスターのブートストラップ中に、クライアントのコマンド ウィンドウに展開の状態が出力されます。 展開プロセス中に、コントローラー ポッドを待機している一連のメッセージが表示されます。
+
+```output
+Waiting for cluster controller to start.
+```
+
+15 から 30 分以内に、コントローラー ポッドが実行中になっていることが通知されるはずです。
+
+```output
+Cluster controller endpoint is available at 11.111.111.11:30080.
+Cluster control plane is ready.
+```
 
 > [!IMPORTANT]
->1. 制限付きのプライベート プレビューの期間中、プライベート Docker レジストリの資格情報はお客様に提供されるトリアージ時に、 [EAP 登録](https://aka.ms/eapsignup)します。
->1. 構築された、オンプレミスのクラスターの**kubeadm**、環境変数の値は、`CLUSTER_PLATFORM`は`kubernetes`します。 また、 `USE_PERSISTENT_VOLUME=true`、Kubernetes ストレージ クラスに事前に準備しを使用して通過する必要があります、`STORAGE_CLASS_NAME`します。
->1. 特殊文字が含まれている場合、二重引用符で囲まれた、パスワードをラップすることを確認します。 MSSQL_SA_PASSWORD を任意に設定できますが必ず、十分に複雑な使用しないでください、 `!`、`&`または`‘`文字。 コマンドの bash でのみ二重引用符区切り記号の動作に注意してください。
->1. クラスターの名前は小文字英数字文字、空白のみである必要があります。 すべての Kubernetes ・ アーティファクト (コンテナー、ポッド、ステートフルのセット、サービスなど)、クラスターのクラスターと同じ名前を持つ名前空間に作成されます名を指定します。
->1. **SA**アカウントは、システム管理者は、セットアップ中に作成される SQL Server マスター インスタンス。 実行して探索可能なは、MSSQL_SA_PASSWORD 環境変数を指定した、SQL Server のコンテナーを作成した後は、コンテナー内の $MSSQL_SA_PASSWORD をエコーします。 セキュリティのために、文書化のベスト プラクティスに従って、SA のパスワードを変更する[ここ](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)します。
+> ビッグ データ クラスターのコンポーネントに対応するコンテナー イメージのダウンロードに必要な時間によって、展開全体に時間がかかる場合があります。 ただし、数時間もかかることはありません。 展開で問題が発生している場合は、「[監視[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とトラブルシューティング](cluster-troubleshooting-commands.md)」を参照してください。
 
-ビッグ データ クラスターを展開するために必要な環境変数の設定は、Windows または Linux クライアントを使用しているかどうかによって異なります。  使用しているオペレーティング システムに応じて次の手順を選択します。
+展開が完了すると、出力に成功したことが通知されます。
 
-次の環境変数を初期化、クラスターをデプロイに必要な場合。
-
-### <a name="windows"></a>Windows
-
-コマンド ウィンドウ (PowerShell ではなく) を使用して、次の環境変数を構成します。 値を囲む引用符は使用しないでください。
-
-```cmd
-SET ACCEPT_EULA=Y
-SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
-
-SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
-
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+```output
+Cluster deployed successfully.
 ```
 
-### <a name="linux"></a>Linux
+> [!TIP]
+> カスタム構成によって変更されない限り、展開されたビッグ データ クラスターの既定の名前は `mssql-cluster` になります。
 
-次の環境変数を初期化します。 Bash では、各値を囲む引用符を使用できます。
+## <a id="endpoints"></a> エンドポイントを取得する
+
+展開スクリプトが正常に完了したら、次の手順を使用して、ビッグ データ クラスターに対応する外部エンドポイントの IP アドレスを取得できます。
+
+1. 展開後、展開の標準出力から、または次の **kubectl** コマンドの EXTERNAL-IP 出力を確認して、コントローラー エンドポイントの IP アドレスを検索します。
+
+   ```bash
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
+   ```
+
+   > [!TIP]
+   > 展開中に既定の名前を変更しなかった場合、前のコマンドにある `-n mssql-cluster` を使用します。 **mssql-cluster** は、ビッグ データ クラスターの既定の名前です。
+
+1. [azdata login](reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 **--controller-endpoint** パラメーターをコントローラー エンドポイントの外部 IP アドレスに設定します。
+
+   ```bash
+   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   ```
+
+   展開中にコントローラー (CONTROLLER_USERNAME と CONTROLLER_PASSWORD) に対して構成したユーザー名とパスワードを指定します。
+
+1. [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) を実行して、各エンドポイントの説明とそれに対応する IP アドレスおよびポート値を示した一覧を取得します。 
+
+   ```bash
+   azdata bdc endpoint list -o table
+   ```
+
+   次の一覧は、このコマンドからの出力例を示しています。
+
+   ```output
+   Description                                             Endpoint                                                   Ip              Name               Port    Protocol
+   ------------------------------------------------------  ---------------------------------------------------------  --------------  -----------------  ------  ----------
+   Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  gateway            30443   https
+   Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  spark-history      30443   https
+   Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  yarn-ui            30443   https
+   Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  app-proxy          30778   https
+   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  mgmtproxy          30777   https
+   Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  logsui             30777   https
+   Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  metricsui          30777   https
+   Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  controller         30080   https
+   SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  sql-server-master  31433   tcp
+   HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  webhdfs            30443   https
+   Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
+   ```
+
+次の **kubectl** コマンドを実行して、クラスターに展開されたすべてのサービス エンドポイントを取得することもできます。
 
 ```bash
-export ACCEPT_EULA=Y
-export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
-
-export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
-export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-export DOCKER_REGISTRY="private-repo.microsoft.com"
-export DOCKER_REPOSITORY="mssql-private-preview"
-export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
-export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
-export DOCKER_PRIVATE_REGISTRY="1"
+kubectl get svc -n <your-big-data-cluster-name>
 ```
-
-### <a name="minikube-settings"></a>Minikube 設定
-
-Minikube を展開する場合と`USE_PERSISTENT_VOLUME=true`(既定値) の既定値もオーバーライドする必要があります`STORAGE_CLASS_NAME`環境変数。
-
-Minikube 展開の Windows で、次のコマンドを使用します。
-
-```cmd
-SET STORAGE_CLASS_NAME=standard
-```
-
-Linux 上の次のコマンドを使用して、minikube 展開。
-
-```bash
-export STORAGE_CLASS_NAME=standard
-```
-
-永続ボリュームを設定して minikube を使用してを抑制する代わりに、`USE_PERSISTENT_VOLUME=false`します。
-
-### <a name="kubadm-settings"></a>Kubadm 設定
-
-Kubernetes ストレージ クラスの事前プロビジョニングし、を使用して通過する必要があります、独自の物理または仮想マシンに kubeadm を展開している場合、`STORAGE_CLASS_NAME`します。 永続ボリュームを使用して設定を抑制する代わりに、`USE_PERSISTENT_VOLUME=false`します。 永続的なストレージの詳細については、次を参照してください。[を Kubernetes クラスターのビッグ データ、SQL Server でのデータ永続化](concept-data-persistence.md)します。
-
-## <a name="deploy-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターを展開する
-
-Kubernetes 名前空間を初期化して、名前空間にすべてのアプリケーション ポッドをデプロイする作成クラスター API が使用されます。 Kubernetes クラスターで SQL Server のビッグ データ クラスターをデプロイするには、次のコマンドを実行します。
-
-```bash
-mssqlctl create cluster <name of your cluster>
-```
-
-クラスターのブートス トラップ中には、クライアントのコマンド ウィンドウが展開ステータスを出力します。 別のコマンド ウィンドウでこれらのコマンドを実行してデプロイの状態をチェックすることもできます。
-
-```bash
-kubectl get all -n <name of your cluster>
-kubectl get pods -n <name of your cluster>
-kubectl get svc -n <name of your cluster>
-```
-
-実行してより詳細な状態と各ポッドの構成を確認できます。
-```bash
-kubectl describe pod <pod name> -n <name of your cluster>
-```
-
-コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルの [展開] タブを利用できます。
-
-## <a id="masterip"></a> SQL Server マスター インスタンスと SQL Server のビッグ データ クラスター IP アドレスを取得します。
-
-配置スクリプトが正常に完了したら、次の手順を使用して、SQL Server マスター インスタンスの IP アドレスを取得できます。 この IP アドレスとポート番号 31433 master の SQL Server インスタンスへの接続に使用する (例:  **\<ip アドレス\>31433、**)。 同様に、SQL Server のビッグ データ クラスターの IP を実行します。 クラスターの管理ポータルもサービス エンドポイント タブでは、クラスターのすべてのエンドポイントが記載されています。 クラスターの管理ポータルを使用すると、展開を監視します。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
-
-### <a name="aks"></a>AKS
-
-AKS を使用している場合、Azure は、Azure ロード バランサーのサービスを提供します。 次のコマンドを実行します。
-
-```bash
-kubectl get svc service-master-pool-lb -n <name of your cluster>
-kubectl get svc service-security-lb -n <name of your cluster>
-kubectl get svc service-proxy-lb -n <name of your cluster>
-```
-
-探して、 **EXTERNAL-IP**サービスに割り当てられている値。 ポート 31433 で IP アドレスを使用して、SQL Server マスター インスタンスに接続し (例:  **\<ip アドレス\>31433、**) との外部 ip アドレスを使用して SQL Server ビッグ データ クラスター エンドポイントに`service-security-lb`サービス。 
 
 ### <a name="minikube"></a>Minikube
 
-Minikube を使用している場合に接続する必要がある IP アドレスを取得する次のコマンドを実行する必要があります。 だけでなく、IP への接続に必要なエンドポイントのポートを指定します。 すべてのサービス エンドポイントを取得するには 
+Minikube を使用している場合は、次のコマンドを実行して、接続に必要な IP アドレスを取得する必要があります。 IP に加えて、接続する必要があるエンドポイントのポートを指定します。
 
 ```bash
 minikube ip
 ```
 
-プラットフォームに関係なく、Kubernetes クラスターを実行するクラスター、次のコマンド用にデプロイされたすべてのサービス エンドポイントを取得する、実行されます。
+## <a id="status"></a> クラスターの状態を確認する
+
+展開後に、[azdata bdc status show](reference-azdata-bdc-status.md) コマンドを使用して、クラスターの状態を確認できます。
+
 ```bash
-kubectl get svc -n <name of your cluster>
+azdata bdc status show
 ```
 
-## <a id="upgrade"></a> 新しいリリースにアップグレードします。
+> [!TIP]
+> status コマンドを実行するには、最初に、前述のエンドポイントのセクションに示した **azdata login** コマンドを使ってログインする必要があります。
 
-現時点では、ビッグ データ クラスターを新しいリリースにアップグレードする唯一の方法は、手動で削除してクラスターを再作成します。 各リリースでは、一意のバージョンの**mssqlctl**ですが、以前のバージョンと互換性がありません。 また、古いクラスターを新しいノードにイメージをダウンロードする場合は、最新のイメージ可能性がありますと互換性がない、クラスター上で古いイメージ。 最新のリリースにアップグレードするには、次の手順を使用します。
+このコマンドからの出力例を、次に示します。
 
-1. 以前のクラスターを削除する前に、HDFS と SQL Server のマスター インスタンスにデータをバックアップします。 使用することができます、SQL Server のマスター インスタンスの[SQL Server のバックアップと復元](data-ingestion-restore-databse.md)します。 HDFS のする[で、データをコピーできます**curl**](data-ingestion-curl.md)します。
+```output
+Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Services: ready                                                                                                                                                                                                     Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Servicename    State    Healthstatus    Details
 
-1. 以前のクラスターを削除、`mssqlctl delete cluster`コマンド。
+ sql            ready    healthy         -
+ hdfs           ready    healthy         -
+ spark          ready    healthy         -
+ control        ready    healthy         -
+ gateway        ready    healthy         -
+ app            ready    healthy         -
 
-   ```bash
-    mssqlctl delete cluster <old-cluster-name>
-   ```
 
-1. 最新バージョンのインストール**mssqlctl**します。
-   
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
+ Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
 
-   > [!IMPORTANT]
-   > 各リリースへのパス**mssqlctl**変更します。 以前にインストールした場合でも**mssqlctl**、新しいクラスターを作成する前に最新のパスから再インストールする必要があります。
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
 
-1. 」の手順に従って、最新リリースをインストール、[セクションを展開](#deploy)に改訂された記事。 
+
+ Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+
+
+ Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Control Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+
+
+ Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ gateway         ready    healthy         StatefulSet gateway is healthy
+
+
+ App Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ appproxy        ready    healthy         ReplicaSet appproxy is healthy
+```
+
+次のコマンドを使用して、より詳細なステータスを取得することもできます。
+
+- [azdata bdc control status show](reference-azdata-bdc-control-status.md)は、コントロール管理サービスに関連付けられているすべてのコンポーネントの正常性状態を返します
+```
+azdata bdc control status show
+```
+サンプル出力:
+```output
+Control: ready                                                                                                                                                                                                      Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+```
+
+- **azdata bdc sql status show**は、SQL Server サービスを持つすべてのリソースの正常性状態を返します
+```
+azdata bdc sql status show
+```
+サンプル出力:
+```output
+Sql: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+```
+
+> [!IMPORTANT]
+> **--All**パラメーターを使用する場合、これらのコマンドからの出力には、詳細な分析のための Kibana および Grafana ダッシュボードへの url が含まれます。
+
+**azdata** を使用するほかに、Azure Data Studio を利用してエンドポイントと状態情報の両方を検索することも可能です。 **azdata** および Azure Data Studio を利用したクラスターの状態の表示に関する詳細については、「[ビッグ データ クラスターの状態を表示する方法](view-cluster-status.md)」を参照してください。
+
+## <a id="connect"></a> クラスターに接続する
+
+ビッグ データ クラスターに接続する方法の詳細については、「[Azure Data Studio を利用して SQL Server ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスター Kubernetes では、SQL Server を正常に展開した後[ビッグ データ ツールをインストール](deploy-big-data-tools.md)について説明し、新機能の一部を試して[SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
+ビッグ データ クラスターの展開に関する詳細については、次の資料を参照してください。
+
+- [ビッグ データ クラスターの展開設定を構成する](deployment-custom-configuration.md)
+- [SQL Server ビッグ データ クラスターのオフライン展開を実行する](deploy-offline.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

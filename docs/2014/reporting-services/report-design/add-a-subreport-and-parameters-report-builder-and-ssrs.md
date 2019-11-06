@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10093"
@@ -13,20 +12,20 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2d7ab908fa5f9696c5db4c49f3d99338c9f01a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 906f4527bdca38f4571a2e1686f885a2857e47c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106779"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)
   複数の関連レポートのコンテナーであるメイン レポートを作成する場合は、レポートにサブレポートを追加します。 サブレポートは別のレポートへの参照です。 これらのレポートをデータ値で関係付けるには (たとえば、複数のレポートに同じ顧客のデータを表示する場合)、サブレポートとしてパラメーター化されたレポート (特定の顧客の詳細を示すレポートなど) をデザインする必要があります。 サブレポートをメイン レポートに追加するときは、サブレポートに渡すパラメーターを指定できます。  
   
  また、サブレポートをテーブルまたはマトリックスの動的列または動的行に追加することもできます。 メイン レポートを処理するとき、各行のサブレポートが処理されます。 この場合、データ領域または入れ子になったデータ領域を使用して、意図した結果が得られたか確認してください。  
   
- レポートにサブレポートを追加するには、サブレポートとして機能するレポートを最初に作成する必要があります。 サブレポートの作成の詳細については、次を参照してください。[サブレポート&#40;レポート ビルダーおよび SSRS&#41;](subreports-report-builder-and-ssrs.md)します。  
+ レポートにサブレポートを追加するには、サブレポートとして機能するレポートを最初に作成する必要があります。 サブレポートの作成の詳細については、「 [サブレポート &#40;レポート ビルダーおよび SSRS&#41;](subreports-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -72,8 +71,8 @@ ms.locfileid: "48166192"
   
      サブレポート パラメーターの順序を変更しても、サブレポートの処理には影響しません。  
   
-## <a name="see-also"></a>参照  
- [サブレポート&#40;レポート ビルダーおよび SSRS&#41;](subreports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [サブレポート &#40;レポート ビルダーおよび SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

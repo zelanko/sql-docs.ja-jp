@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ca387618f1b996f620a1697053196926ed9dfd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 49ba35fb0ecb5ed70fe737a10ce9a700d4e4c816
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106586"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>テキスト ボックスの追加、移動、または削除 (レポート ビルダーおよび SSRS)
   テキスト ボックスはレポート内で最も一般的に使用されるレポート アイテムです。 テキスト ボックスをレポート本文に追加して、タイトル、パラメーターの選択肢、組み込みフィールド、日付などの情報を表示できます。  
@@ -74,8 +73,8 @@ ms.locfileid: "48123012"
     >  テキスト ボックスの中をクリックして編集モードになった場合は、&lt;localizedText&gt;Esc&lt;/localizedText&gt; キーを押すとテキスト ボックスを選択できます。  
   
 ## <a name="see-also"></a>参照  
- [テキスト ボックス&#40;レポート ビルダーおよび SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [テキスト ボックス &#40;レポート ビルダーおよび SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [キーボード ショートカット&#40;レポート ビルダー&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
+ [キーボード ショートカット (レポート ビルダー)](../report-builder/keyboard-shortcuts-report-builder.md)  
   
   

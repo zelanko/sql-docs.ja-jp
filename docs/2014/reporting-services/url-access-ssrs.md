@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5550a321e812b84c2d3e2dc8c64efd298e8eb95f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098731"
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
   SQL Server Reporting Services (SSRS) のレポート サーバーの URL アクセスにより、URL 要求を使用してレポート サーバーにコマンドを送信できます。 たとえば、ネイティブ モードのレポート サーバーや SharePoint ライブラリのレポートの表示をカスタマイズすることができます。 特定のレポート パラメーター値のセットを使用してレポートを表示したり、レポートの関心のある特定ページを表示することがあります。 この情報を、事前に定義された URL アクセス パラメーターを使用して URL にカプセル化することができます。 表示形式またはレポート ビューアーのルック アンド フィールのパラメーターを埋め込むことで、レポート サーバーによるレポートの処理方法をさらにカスタマイズできます。 その後、この URL を電子メールまたは Web ページに直接貼り付けて、他のユーザーがブラウザーから同じ方法でレポートにアクセスできるようにすることができます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48206342"
   
 -   レポート セッションを管理する  
   
- コマンドおよび URL アクセスにより使用できる設定の完全な一覧で、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。  
+ URL アクセスにより使用できるコマンドおよび設定の完全な一覧については、「 [URL Access Parameter Reference](url-access-parameter-reference.md)」(URL アクセス パラメーター リファレンス) を参照してください。  
   
 ## <a name="url-access-concepts"></a>URL アクセスの概念  
  レポート サーバーに対する URL 要求には、レポート サーバーによって処理されるパラメーターが含まれます。 レポート サーバーが URL 要求を処理する方法は、URL に含まれるパラメーター、パラメーター プレフィックス、アイテムの種類によって異なります。 レポート サーバーの URL は、World Wide Web Consortium W3C/IETF 共同ドラフト仕様として提案されている URL フォーマット ガイドラインに準拠します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の URL 機能は、標準的な URL アドレス指定をサポートするほとんどのインターネット ブラウザーやアプリケーションと互換性があります。  
@@ -105,7 +104,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  使用しているパラメーターの値に対応する URL テキスト。  
   
- **注:** 使用可能な URL アクセス パラメーターの一覧は、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。 URL でレポート パラメーターを渡す例については、次を参照してください。 [、レポート内で URL パラメーターを渡す](pass-a-report-parameter-within-a-url.md)します。  
+ **注:** 使用可能な URL アクセス パラメーターの一覧は、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -115,13 +114,13 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |レポート パラメーターをレポートに受け渡す|[URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)|  
 |日付、通貨など、ロケール固有の解釈を定義する URL アクセス文字列にレポート パラメーターのロケールを設定する|[URL でレポート パラメーターの言語を設定する](set-the-language-for-report-parameters-in-a-url.md)|  
 |レポートの表示形式をカスタマイズする表示拡張機能固有の設定を送信する|[URL でデバイス情報設定を指定する](specify-device-information-settings-in-a-url.md)|  
-|ブラウザーに表示せずに、レポートを直接ファイル形式にエクスポートする|[URL アクセスを使用してレポートをエクスポート](export-a-report-using-url-access.md)|  
+|ブラウザーに表示せずに、レポートを直接ファイル形式にエクスポートする|[URL アクセスを使用してレポートをエクスポートする](export-a-report-using-url-access.md)|  
 |レポートを開き、文字列の場所に直接移動する|[URL アクセスを使用してレポートを検索する](search-a-report-using-url-access.md)|  
 |特例のレポート履歴スナップショットを表示する|[URL アクセスを使用してレポート履歴スナップショットを表示する](render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>参照  
  [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)   
- [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)   
+ [URL Access Parameter Reference](url-access-parameter-reference.md)   
  [URL アクセスを使用した Reporting Services の統合](application-integration/integrating-reporting-services-using-url-access.md)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

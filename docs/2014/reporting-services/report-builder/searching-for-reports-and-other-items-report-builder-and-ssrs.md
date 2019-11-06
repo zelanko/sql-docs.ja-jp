@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 36eb4d030933594900d4f73c180fd92cc0323d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 76746ade9222257bcea6962c180ea12a01ff8afa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107646"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>レポートおよび他のアイテムの検索 (レポート ビルダーおよび SSRS)
   レポート マネージャーを使用して、名前や説明からレポート サーバーの特定のアイテムを検索できます。 検索できるアイテムは、パブリッシュされているレポート、レポート モデル、フォルダー、共有データ ソース、およびリソースです。 スケジュール、所有者、ロールの割り当て、レポート履歴の特定のスナップショット、またはサブスクリプションは検索できません。 検索は、アイテムが保存されているレポート サーバー データベースに対して実行されます。  
@@ -33,10 +32,10 @@ ms.locfileid: "48145778"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [レポート マネージャーを使用したレポートの検索と表示 &#40;レポート ビルダーおよび SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
- [個人用レポートの使用 &#40;レポート ビルダーおよび SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
+ [個人用レポートの使用 (レポート ビルダーおよび SSRS)](using-my-reports-report-builder-and-ssrs.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [レポートを開閉する &#40;レポート マネージャー&#41;](../reports/open-and-close-a-report-report-manager.md)  
+ [レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)  
   
   

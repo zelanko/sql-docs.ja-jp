@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 1: Bike Buyer マイニング構造の作成 |Microsoft Docs'
+title: レッスン 1:Bike Buyer マイニング構造の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678502"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>レッスン 1: Bike Buyer マイニング構造の作成
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>レッスン 1:Bike Buyer マイニング構造の作成
   このレッスンでは、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の潜在顧客が自転車を購入するかどうかを予測するためのマイニング構造を作成します。 マイニング構造およびデータ マイニングでのロールに慣れていない場合は、次を参照してください。[マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)します。  
   
  このレッスンで作成する Bike Buyer マイニング構造に基づく追加のマイニング モデルをサポートしている、 [Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)します。 後のレッスンでは、クラスター マイニング モデルを使用して顧客をグループ化するさまざまな方法を確認し、デシジョン ツリー マイニング モデルを使用して潜在顧客が自転車を購入するかどうかを予測します。  
@@ -99,7 +98,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 2.  **サーバーへの接続** ダイアログ ボックスの**サーバーの種類**を選択します**Analysis Services**します。 **サーバー名**、型`LocalHost`のインスタンスの名前を入力または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスンに接続します。 **[接続]** をクリックします。  
   
-3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**を開く、**クエリ エディター**と新しい空のクエリ。  
+3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、] をクリックし、 **DMX**を開く、**クエリ エディター**と新しい空のクエリ。  
   
 ## <a name="altering-the-query"></a>クエリの変更  
  次の手順では、上の CREATE MINING STRUCTURE ステートメントを変更し、Bike Buyer マイニング構造を作成します。  
@@ -215,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  次のレッスンでは、作成した構造にマイニング モデルを追加します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: Bike Buyer マイニング構造へのマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [レッスン 2:Bike Buyer マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: データベース マスター キーの復元 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,58 +11,47 @@ helpviewer_keywords:
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: ea2487e7b6a62f2b277569547b420accdbd67cc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc215f3ea8746c8bb3e4150b41079656df6f1f9d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795080"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908416"
 ---
 # <a name="restore-a-database-master-key"></a>データベース マスター キーの復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でデータベース マスター キーを復元する方法について説明します。  
   
- **このトピックの内容**  
+## <a name="before-you-begin"></a>はじめに  
   
--   **作業を開始する準備:**  
+### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
   
-     [制限事項と制約事項](#Restrictions)  
+- マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では現在アクティブなマスター キーによって暗号化されたすべてのキーの暗号化が解除された後、復元されたマスター キーを使用してこれらのキーが暗号化されます。 この操作はリソースを大量に消費するため、リソース要求が少ないときに実行するように考慮してください。 現在のデータベースのマスター キーが開いていないか、開けない場合、またはマスター キーで暗号化されたキーを 1 つでも暗号化解除できない場合、復元操作は失敗します。  
   
-     [Security](#Security)  
+- 暗号化解除が 1 つでも失敗した場合、復元は失敗します。 FORCE オプションを使用するとエラーを無視できますが、暗号化を解除できないデータが失われる可能性があります。  
   
--   [Transact-SQL を使用してデータベース マスター キーを復元するには](#SSMSProcedure)  
+- マスター キーがサービス マスター キーで暗号化されている場合は、復元されたマスター キーもサービス マスター キーで暗号化されます。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+- 現在のデータベースにマスター キーが存在しない場合は、RESTORE MASTER KEY を実行するとマスター キーが作成されます。 この新しいマスター キーは、サービス マスター キーで自動的に暗号化されません。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+## <a name="security"></a>Security  
   
--   マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では現在アクティブなマスター キーによって暗号化されたすべてのキーの暗号化が解除された後、復元されたマスター キーを使用してこれらのキーが暗号化されます。 この操作はリソースを大量に消費するため、リソース要求が少ないときに実行するように考慮してください。 現在のデータベースのマスター キーが開いていないか、開けない場合、またはマスター キーで暗号化されたキーを 1 つでも暗号化解除できない場合、復元操作は失敗します。  
+### <a name="permissions"></a>アクセス許可
+データベースに対する CONTROL 権限が必要です。  
   
--   暗号化解除が 1 つでも失敗した場合、復元は失敗します。 FORCE オプションを使用するとエラーを無視できますが、暗号化を解除できないデータが失われる可能性があります。  
+## <a name="using-sql-server-management-studio-with-transact-sql"></a>Transact-SQL を備えた SQL Server Management Studio の使用  
   
--   マスター キーがサービス マスター キーで暗号化されている場合は、復元されたマスター キーもサービス マスター キーで暗号化されます。  
+### <a name="to-restore-the-database-master-key"></a>データベース マスター キーを復元するには  
   
--   現在のデータベースにマスター キーが存在しない場合は、RESTORE MASTER KEY を実行するとマスター キーが作成されます。 この新しいマスター キーは、サービス マスター キーで自動的に暗号化されません。  
+1. バックアップしたデータベース マスター キーのコピーを、物理バックアップ メディアまたはローカル ファイル システム上のディレクトリから取得します。  
   
-###  <a name="Security"></a> セキュリティ  
+2. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-####  <a name="Permissions"></a> Permissions  
- データベースに対する CONTROL 権限が必要です。  
+3. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-##  <a name="SSMSProcedure"></a> Transact-SQL を備えた SQL Server Management Studio の使用  
-  
-#### <a name="to-restore-the-database-master-key"></a>データベース マスター キーを復元するには  
-  
-1.  バックアップしたデータベース マスター キーのコピーを、物理バックアップ メディアまたはローカル ファイル システム上のディレクトリから取得します。  
-  
-2.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
-  
-3.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
-  
-4.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
-  
-    ```  
+4. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+
+    ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  
     GO  
@@ -74,8 +63,6 @@ ms.locfileid: "47795080"
     ```  
   
     > [!NOTE]  
-    >  キーのファイル パスとキーのパスワード (存在する場合) は、実際は上に示したものと異なります。 両方がサーバーとキーのセットアップで固有であることをご確認ください。  
+    > キーのファイル パスとキーのパスワード (存在する場合) は、実際は上に示したものと異なります。 両方がサーバーとキーのセットアップで固有であることをご確認ください。  
   
  詳細については、「[RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md)」を参照してください。  
-  
-  

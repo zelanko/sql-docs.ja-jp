@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 961ff9fe552fa30eaad4667fdd1911a44f3a35f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34d1b6d143f6f40d73e2feeb0b718f3c3b3248fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094129"
 ---
 # <a name="installation-components"></a>インストール コンポーネント
 > [!NOTE]  
@@ -29,8 +28,8 @@ ms.locfileid: "47793040"
   
  ![インストール コンポーネント間の関係](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
-> [!IMPORTANT]  
->  ODBC 2 で使用されていた Odbc.inf ファイルです。*x*各 ODBC に必要なファイルを記述するコンポーネントで使用されていない ODBC 3 *.x*します。 ODBC 3 が添付されているドライバー *.x*コンポーネントは Odbc.inf ファイルを作成する必要はありません。 削除**SQLInstallDriver**と**SQLInstallODBC**との非推奨**SQLInstallTranslator**が Odbc.inf の不要なレンダリングします。 ドライバー情報の Odbc.inf Driver キーワード節で説明するために使用するように提供されています、 *lpszDriver*引数**SQLInstallDriverEx**します。 Translator 情報 [ODBC トランスレーター] であるを使用して、Odbc.inf のトランスレーターの仕様のセクションに含まれるようになりました、 *lpszTranslator*の引数**SQLInstallTranslatorEx**します。 これらの変更は、プラットフォーム間で移植性を向上できる ODBC インストーラーを許可します。  
+> [!IMPORTANT]
+>  ODBC で使用されていた Odbc.inf ファイル*2.x*各 ODBC に必要なファイルを記述するコンポーネントで使用されていない ODBC *3.x*します。 付属の ODBC ドライバー *3.x*コンポーネントは Odbc.inf ファイルを作成する必要はありません。 削除**SQLInstallDriver**と**SQLInstallODBC**との非推奨**SQLInstallTranslator**が Odbc.inf の不要なレンダリングします。 ドライバー情報の Odbc.inf Driver キーワード節で説明するために使用するように提供されています、 *lpszDriver*引数**SQLInstallDriverEx**します。 Translator 情報 [ODBC トランスレーター] であるを使用して、Odbc.inf のトランスレーターの仕様のセクションに含まれるようになりました、 *lpszTranslator*の引数**SQLInstallTranslatorEx**します。 これらの変更は、プラットフォーム間で移植性を向上できる ODBC インストーラーを許可します。  
   
  これらのコンポーネントの詳細については、このセクションの最後に、次のトピックを参照してください。  
   

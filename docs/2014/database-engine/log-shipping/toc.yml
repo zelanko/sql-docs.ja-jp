@@ -1,24 +1,27 @@
-- name: ログ配布について
+- name: 概要
   href: about-log-shipping-sql-server.md
+- name: 操作方法
   items:
-    - name: SQL Server 2014 へのログ配布のアップグレード (Transact-SQL)
+    - name: SQL Server 2014 へのログ配布のアップグレード
       href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
     - name: ログ配布の構成
       href: configure-log-shipping-sql-server.md
-    - name: ログ配布構成へのセカンダリ データベースの追加
+    - name: セカンダリ データベースの追加
       href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-    - name: ログ配布構成からのセカンダリ データベースの削除
+    - name: セカンダリ データベースの削除
       href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
     - name: ログ配布の削除
       href: remove-log-shipping-sql-server.md
-    - name: ログ配布レポートの表示 (SQL Server Management Studio)
+    - name: ログ配布レポートの表示
       href: view-the-log-shipping-report-sql-server-management-studio.md
-    - name: ログ配布の監視 (Transact-SQL)
+    - name: ログ配布の監視
       href: monitor-log-shipping-transact-sql.md
-    - name: ログ配布のセカンダリへのフェールオーバー
+    - name: セカンダリへのフェールオーバー
       href: fail-over-to-a-log-shipping-secondary-sql-server.md
-    - name: プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更
+    - name: プライマリとセカンダリ間でのロールの変更
       href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+- name: 概念
+  items:
     - name: ログ配布とレプリケーション
       href: log-shipping-and-replication-sql-server.md
     - name: Log Shipping Tables and Stored Procedures

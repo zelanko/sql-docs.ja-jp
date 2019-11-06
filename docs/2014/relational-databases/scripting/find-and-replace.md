@@ -4,25 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.quickfind
-- vs.find
-- vs.findreplace.quickreplace
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fa77ecd50631224b366eb3f5aca98593d56cbc3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090459"
 ---
 # <a name="find-and-replace"></a>[検索と置換]
   **[検索と置換]** ダイアログ ボックスを使用すると、ファイル内のテキストを検索し、必要に応じて置換できます。 **[検索と置換]** ダイアログ ボックスを開く方法に応じて、表示されるオプションが多少異なることがあります。 **[編集]** メニューで **[検索と置換]** をポイントし、 **[クイック検索]** をクリックすると、検索オプションがあって置換オプションがないダイアログ ボックスが開きます。 **[編集]** メニューで **[検索と置換]** をポイントし、 **[クイック置換]** をクリックすると、検索オプションと置換オプションの両方が表示されるダイアログ ボックスが開きます。  
@@ -78,7 +73,7 @@ ms.locfileid: "48152522"
  **[検索オプション]** セクションは、展開したり折りたたんだりできます。 次のオプションをオンまたはオフに設定できます。  
   
  **[大文字と小文字を区別する]**  
- このチェック ボックスをオンにすると、検索結果ウィンドウには、 **[検索する文字列]** で指定した文字列に大文字と小文字の違いを含めて完全に一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、**[大文字と小文字を区別する]** チェック ボックスをオンにした状態で " **MyObject** " を検索すると、"myobject" や "MYOBJECT" ではなく "MyObject" のみが返されます。  
+ このチェック ボックスをオンにすると、検索結果ウィンドウには、 **[検索する文字列]** で指定した文字列に大文字と小文字の違いを含めて完全に一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、 **[大文字と小文字を区別する]** チェック ボックスをオンにした状態で " **MyObject** " を検索すると、"myobject" や "MYOBJECT" ではなく "MyObject" のみが返されます。  
   
  **[単語単位]**  
  このチェック ボックスをオンにすると、 **[検索する文字列]** で指定した文字列に、単語単位で一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、「 **MyObject** 」を検索すると、"CMyObject" や "MyObjectC" ではなく "MyObject" のみが返されます。  
@@ -125,7 +120,5 @@ ms.locfileid: "48152522"
  **[フォルダーを指定して置換]**  
  このツール バー タブを使用すると、ダイアログ ボックスが **[フォルダーを指定して置換]** ダイアログ ボックスに変わります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

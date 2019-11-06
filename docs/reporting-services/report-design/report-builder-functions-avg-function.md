@@ -2,18 +2,18 @@
 title: Avg 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c03f0d04b8fe643480817d25cef402b304ef862
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 255201c7f24f013becd8230e9329e41a6d6a8d0d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576408"
 ---
 # <a name="report-builder-functions---avg-function"></a>レポート ビルダー関数 - Avg 関数
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、式で指定された NULL 以外のすべての数値の平均を、指定されたスコープで評価して返します。  

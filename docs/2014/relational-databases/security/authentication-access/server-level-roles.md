@@ -22,12 +22,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2df9244f042098be8b0e7898b70254a2b4c50d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011924"
 ---
 # <a name="server-level-roles"></a>サーバー レベルのロール
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、サーバー上の権限を管理するためのサーバー レベルのロールを提供します。 これらのロールは、他のプリンシパルをグループ化するセキュリティ プリンシパルです。 サーバー レベルのロールは、その権限のスコープがサーバー全体に及びます (*ロール* は、Windows オペレーティング システムの *グループ* に似ています)。  
@@ -54,15 +54,15 @@ ms.locfileid: "48072652"
 |public|すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインは、public サーバー ロールに属しています。 サーバー プリンシパルにセキュリティ保護可能なオブジェクトに対する特定の権限が与えられていないか権限が拒否されている場合、そのユーザーは、そのオブジェクトに対して public に付与されている権限を継承します。 すべてのユーザーがオブジェクトを使用できるようにする場合は、対象のオブジェクトに public 権限のみを割り当てます。 public のメンバーシップを変更することはできません。<br /><br /> 注: public は、他のロールとは実装方法が異なります。 しかし、public から権限の許可、拒否、および取り消しを行うことができます。|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>固定サーバー ロールの権限  
- 各固定サーバー ロールには、特定の権限が割り当てられます。 サーバー ロールに割り当てられる権限のチャートについては、「 [データベース エンジンの固定サーバー ロールおよび固定データベース ロール](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)」を参照してください。  
+ 各固定サーバー ロールには、特定の権限が割り当てられます。 サーバー ロールに割り当てられる権限のチャートについては、「 [データベース エンジンの固定サーバー ロールおよび固定データベース ロール](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)」を参照してください。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER`権限は似ていますが同一ではない、`sysadmin`固定サーバー ロール。 権限があることはロールのメンバーシップを意味せず、ロールのメンバーシップによって権限は付与されません。 (例: `CONTROL SERVER` は `sysadmin` 固定サーバー ロールのメンバーシップを意味しません)。ただし、ロールと同等の権限の間で借用が可能な場合があります。 ほとんどの `DBCC` コマンドと多くのシステム プロシージャには、`sysadmin` 固定サーバー ロールのメンバーシップが必要です。 ストアド プロシージャを必要とする 171 のシステムの一覧について`sysadmin`メンバーシップ、ブログの投稿では、Andreas Wolter を参照してください[CONTROL SERVER と sysadmin/sa: 権限、システム プロシージャ、DBCC、自動スキーマ作成および権限。エスカレーション - 注意事項](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)します。  
+>  `CONTROL SERVER` 権限は `sysadmin` 固定サーバー ロールと似ていますが、同じではありません。 権限があることはロールのメンバーシップを意味せず、ロールのメンバーシップによって権限は付与されません。 (例: `CONTROL SERVER` メンバーシップを意味しません、`sysadmin`固定サーバー ロール)。ただし、ロールと同等の権限の間で借用が可能な場合があります。 ほとんどの `DBCC` コマンドと多くのシステム プロシージャには、`sysadmin` 固定サーバー ロールのメンバーシップが必要です。 ストアド プロシージャを必要とする 171 のシステムの一覧について`sysadmin`メンバーシップ、ブログの投稿では、Andreas Wolter を参照してください[CONTROL SERVER と sysadmin/sa: 権限、システム プロシージャ、DBCC、自動スキーマ作成および権限。エスカレーション - 注意事項](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)します。  
   
 ## <a name="server-level-permissions"></a>サーバーレベルの権限  
  ユーザー定義のサーバー ロールに追加できるのは、サーバー レベルの権限のみです。 サーバー レベルの権限の一覧を表示するには、次のステートメントを実行します。 サーバー レベルの権限は、次のとおりです。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   
@@ -78,12 +78,12 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[sp_srvrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|メタデータ|サーバー レベルのロールの権限を表示します。|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|メタデータ|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインが、指定されたサーバー レベルのロールのメンバーであるかどうかを示します。|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|メタデータ|各サーバー レベルのロールのメンバーごとに 1 行のデータを返します。|  
-|[sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|コマンド|ログインをサーバー レベルのロールのメンバーとして追加します。 非推奨。 代わりに [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) を使用してください。|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|コマンド|サーバー レベルのロールから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインや、Windows ユーザーまたはグループを削除します。 非推奨。 代わりに [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) を使用してください。|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|コマンド|ログインをサーバー レベルのロールのメンバーとして追加します。 使用しないでください。 代わりに [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) を使用してください。|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|コマンド|サーバー レベルのロールから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインや、Windows ユーザーまたはグループを削除します。 使用しないでください。 代わりに [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) を使用してください。|  
 |[CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|コマンド|ユーザー定義サーバー ロールを作成します。|  
 |[ALTER SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|コマンド|サーバー ロールのメンバーシップを変更、またはユーザー定義のサーバー ロールの名前を変更します。|  
 |[DROP SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|コマンド|ユーザー定義サーバー ロールを削除します。|  
-|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|機能|サーバー ロールのメンバーシップを決定します。|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|関数|サーバー ロールのメンバーシップを決定します。|  
   
 ## <a name="see-also"></a>参照  
  [データベース レベルのロール](../authentication-access/database-level-roles.md)   

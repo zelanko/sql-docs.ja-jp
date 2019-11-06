@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 360d49814a2d4a80194242e2c0e14c8e469dcf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ed18d5f14a2245290e14804d4a64f58beba885d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107913"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能は、レポートを [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 のネイティブ形式で表示します。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
@@ -26,14 +25,14 @@ ms.locfileid: "48096152"
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。 詳細については、「 [Excel Device Information Settings](../excel-device-information-settings.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  10 MB よりも大きいレポートを Excel にエクスポートするときにエラー メッセージが表示されないようにするには、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の最新のサービス パックをインストールします。 この問題は SP2 で修正されています。  
+>  10 MB よりも大きいレポートを Excel にエクスポートするときにエラー メッセージが表示されないようにするには、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]の最新のサービス パックをインストールします。 この問題は SP2 で修正されています。  
 >   
->  問題の詳細については、 [「修正: SSRS 2012 で 10 MB を超えるレポートを Excel 形式にエクスポートでない」](http://go.microsoft.com/fwlink/p/?LinkId=402513)を参照してください。  
+>  問題の詳細については、次を参照してください。[修正。SSRS 2012 は、Excel 形式の 10 MB よりも大きいレポートをエクスポートできません。](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
->  最新サービス パックを入手する[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を参照してください[SQL Server 2012 の最新サービス パックを入手する方法](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
+>  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]の最新のサービス パックを入手するには、「 [SQL Server 2012 の最新のサービス パックの入手方法](https://go.microsoft.com/fwlink/p/?LinkId=402512)」を参照してください。  
   
 > [!IMPORTANT]  
->  型のパラメーターを定義するとき`String`、任意の値を使用できるテキスト ボックスで、ユーザーが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
+>  `String` 型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
 >   
 >  悪意のあるスクリプトを誤って実行するリスクを軽減するためには、信頼されたソースのレポートしか開かないようにする必要があります。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
@@ -129,14 +128,14 @@ ms.locfileid: "48096152"
 ## <a name="excel-renderer"></a>Excel レンダラー  
   
 ### <a name="excel-2007-2010-renderer"></a>Excel 2007-2010 レンダラー  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、既定の Excel レンダラーは、バージョンと互換性のある[!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)]2007-2010。 これは、レポート マネージャーおよび SharePoint リストの **[エクスポート]** メニューに用意されている **[Excel]** オプションです。  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の既定の Excel レンダラーは、[!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 と互換性があるバージョンです。 これは、レポート マネージャーおよび SharePoint リストの **[エクスポート]** メニューに用意されている **[Excel]** オプションです。  
   
  以前の Excel 2003 レンダラーの代わりに既定の Excel レンダラーを使用すると、Word/Excel/PowerPoint 用 Microsoft Office 互換機能パックをインストールして、エクスポートされたファイルを開くことができます。  
   
 ### <a name="excel-2003-renderer"></a>Excel 2003 レンダラー  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 表示拡張機能の使用は推奨されません。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services の非推奨機能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)します。  
+>  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 表示拡張機能は非推奨とされます。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services の非推奨機能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)します。  
   
  Excel 2003 と互換性のある Excel レンダラーの以前のバージョンは、Excel 2003 という名前になり、この名前がメニューに表示されます。 このレンダラーで生成されるファイルのコンテンツ タイプは **application/vnd.ms-excel** で、ファイル名の拡張子は .xls です。  
   
@@ -146,7 +145,7 @@ ms.locfileid: "48096152"
   
 -   レポート ビルダーが切断モードのときにレポート ビルダーでレポートをプレビューした場合。 RSReportServer 構成ファイルはレポート サーバー上に存在しているため、レポートをエクスポートするツールまたは製品が構成ファイルを読み取るためにレポート サーバーに接続されている必要があります。  
   
-     これは、どちらも、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]およびレポート ビルダーのスタンドアロン バージョンです。  
+     レポート ビルダーの [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] バージョンおよびスタンドアロン バージョンの両方に該当します。  
   
 -   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -158,7 +157,7 @@ ms.locfileid: "48096152"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でレポートをプレビューする場合。  
   
--   レポート ビルダーがレポート サーバーに接続されている場合。 これを[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]またはレポート ビルダーのスタンドアロン バージョンです。  
+-   レポート ビルダーがレポート サーバーに接続されている場合。 レポート ビルダーの [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] バージョンまたはスタンドアロン バージョンが該当します。  
   
 -   リモート モードのレポート ビューアー Web パーツ。  
   
@@ -168,12 +167,12 @@ ms.locfileid: "48096152"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 拡張機能は Excel 2007-2010 用の Excel レンダラーを定義します。 EXCEL 拡張機能は、Excel 2003 バージョンを定義します。 `Visible = “false”` は、Excel 2003 レンダラーが非表示であることを示します。 詳細については、次を参照してください。 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)と[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)します。  
+ EXCELOPENXML 拡張機能は Excel 2007-2010 用の Excel レンダラーを定義します。 EXCEL 拡張機能は、Excel 2003 バージョンを定義します。 `Visible = "false"` は、Excel 2003 レンダラーが非表示であることを示します。 詳細については、「 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) 」および「 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)」を参照してください。  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Excel 2007-2010 レンダラーと Excel 2003 レンダラーの違い  
  Excel レンダラーまたは Excel 2003 レンダラーを使用して表示されるレポートは通常は同じですが、まれに 2 つの形式が異なる場合があります。 Excel レンダラーと Excel 2003 レンダラーの比較を次の表に示します。  
   
-|プロパティ|Excel 2003|[エクスポート]|  
+|プロパティ|[Excel 2003]|[エクスポート]|  
 |--------------|----------------|-----------|  
 |ワークシートあたりの最大列数|256|16,384|  
 |ワークシートあたりの最大行数|65,536|1,048,576|  
@@ -200,11 +199,11 @@ ms.locfileid: "48096152"
  一致するものが見つからなかった場合は、プリンターの既定のページ サイズが使用されます。 用紙方向は、ページの幅が高さよりも小さければ [縦] に、それ以外の場合は [横] に設定されます。  
   
 ##  <a name="WorksheetTabNames"></a> ワークシートのタブ名  
- レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。ただし、ワークブック内の各ワークシートは一意の名前を使用する必要があるため、追加のワークシートごとに 1 から開始され昇順に 1 ずつ増加する整数値がワークブック名に追加されます。 たとえば、最初のページ名が **"会計年度ごとの売り上げレポート"** である場合、2 番目のワークシート名は **"会計年度ごとの売り上げレポート1"**、3 番目のワークシート名は **"会計年度ごとの売り上げレポート2"** となります。  
+ レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。ただし、ワークブック内の各ワークシートは一意の名前を使用する必要があるため、追加のワークシートごとに 1 から開始され昇順に 1 ずつ増加する整数値がワークブック名に追加されます。 たとえば、最初のページ名が **"会計年度ごとの売り上げレポート"** である場合、2 番目のワークシート名は **"会計年度ごとの売り上げレポート1"** 、3 番目のワークシート名は **"会計年度ごとの売り上げレポート2"** となります。  
   
  改ページによって生じたすべてのレポート ページに新しいページ名がある場合は、各ワークシートには関連するページ名が付けられます。 ただし、これらのページ名が一意でない場合があります。 ページ名が一意でない場合、ワークシートには最初に説明したページ名と同じ方法で名前が付けられます。 たとえば、2 つのグループのページ名が **"東北部の売り上げ"** である場合、1 つのワークシートに **"東北部の売り上げ"** という名前が付けられ、もう一方のワークシートには **"東北部の売り上げ1"** という名前が付けられます。  
   
- レポートに、最初のページ名も改ページに関連付けられたページ名もない場合、ワークシートのタブには、**"シート1"**、**"シート2"** と順番に続く既定の名前が使用されます。  
+ レポートに、最初のページ名も改ページに関連付けられたページ名もない場合、ワークシートのタブには、 **"シート1"** 、 **"シート2"** と順番に続く既定の名前が使用されます。  
   
  Reporting Services には、ユーザーが指定する方法で Excel にエクスポートできるレポートの作成を支援するために、レポート、データ領域、グループ、および四角形に設定するプロパティが用意されています。 詳細については、「 [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -226,7 +225,7 @@ ms.locfileid: "48096152"
  Excel のヘッダー セクションとフッター セクションでサポートされる最大文字数は 256 文字 (マークアップを含む) です。 この制限を超えた場合、Excel レンダラーは、文字数の合計を減らすために、ヘッダー文字列またはフッター文字列の終端位置を起点として、マークアップ文字を削除します。 マークアップ文字をすべて削除しても最大文字数を超えていた場合、文字列が右側から切り詰められます。  
   
 ### <a name="simplepageheader-settings"></a>SimplePageHeader の設定  
- 既定では、デバイス情報の SimplePageHeaders 設定に設定`False`。 したがって、ページ ヘッダーは、Excel ワークシート領域にレポート内の行として表示されます。 ヘッダーが格納されるワークシートの行はロックされます。 Excel のウィンドウ枠は固定することも、固定を解除することもできます。  
+ 既定では、デバイス情報の SimplePageHeaders 設定は `False` に設定されます。つまり、ページ ヘッダーは、レポートの行として Excel ワークシート領域にレンダリングされます。 ヘッダーが格納されるワークシートの行はロックされます。 Excel のウィンドウ枠は固定することも、固定を解除することもできます。  
   
 > [!NOTE]  
 >  Excel の **[印刷タイトル]** オプションが選択されている場合、すべてのワークシート ページについて、これらのヘッダーが印刷されるように自動的に設定されます。  
@@ -254,7 +253,7 @@ ms.locfileid: "48096152"
 -   Excel の制限により、アウトラインの入れ子レベルは最大 7 です。  
   
 ### <a name="document-map"></a>ドキュメント マップ  
- レポートにドキュメント マップ ラベルが存在する場合、そのドキュメント マップがレンダリングされます。 ドキュメント マップは、表紙の Excel ワークシートとして、ブックの最初のタブ位置に挿入され、レンダリングされます。 ワークシートには、**"Document map"** という名前が付けられます。  
+ レポートにドキュメント マップ ラベルが存在する場合、そのドキュメント マップがレンダリングされます。 ドキュメント マップは、表紙の Excel ワークシートとして、ブックの最初のタブ位置に挿入され、レンダリングされます。 ワークシートには、 **"Document map"** という名前が付けられます。  
   
  ドキュメント マップに表示されるテキストは、レポート アイテムまたはレポート グループの DocumentMapLabel プロパティによって決まります。 ドキュメント マップ ラベルは、先頭列の先頭行を起点とし、レポートにおける出現順に一覧表示されます。 各ドキュメント マップ ラベルのセルは、レポートでの見出しの階層に合わせてインデントされます。 それぞれのインデント レベルは、ラベルを後続の列に配置することによって表現されます。 Excel でサポートされるアウトラインの入れ子レベルは、最大 256 です。  
   

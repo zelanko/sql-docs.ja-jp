@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 662510b04b9bc5be9b94a5ffe149bf9eebcbf13a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025282"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッション中の役割の交代 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +68,9 @@ ms.locfileid: "47612890"
   
 ||高パフォーマンス|ミラーリング監視サーバーを伴わない高い安全性モード|ミラーリング監視サーバーを伴う高い安全性モード|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|自動フェールオーバー (automatic failover)|いいえ|いいえ|[ユーザー アカウント制御]|  
-|手動フェールオーバー (manual failover)|いいえ|はい|[ユーザー アカウント制御]|  
-|サービスの強制|[ユーザー アカウント制御]|はい|いいえ|  
+|自動フェールオーバー (automatic failover)|いいえ|いいえ|はい|  
+|手動フェールオーバー (manual failover)|いいえ|はい|はい|  
+|サービスの強制|はい|はい|いいえ|  
   
  役割の交代後、すべてのデータベース ユーザーが新しいプリンシパル データベースにアクセスできるようにするには、特定のメタデータが両方のパートナーに存在する必要があります。 また、データベースが定期的にバックアップされ続けるようにするには、新しいプリンシパル サーバーでバックアップ ジョブを作成する必要があります。 詳細については、「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」を参照してください。  
   
@@ -159,7 +158,7 @@ ms.locfileid: "47612890"
 -   プリンシパル サーバーとその他のデータベース ミラーリング構成との通信が切断され、ミラー サーバーとミラーリング監視サーバーはクォーラムを保持している。 ただし、すべてのサーバー インスタンスで通信が切断された場合、ミラーリング監視サーバーとミラー サーバーの通信が回復しても、自動フェールオーバーは行われません。  
   
     > [!NOTE]  
-    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 -   プリンシパル サーバーの障害がミラー サーバーによって検出される。  
   

@@ -1,5 +1,5 @@
 ---
-title: '付録 d: データ型 |Microsoft Docs'
+title: 付録 D:データの種類 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cfaecb5b3705e2c5affe8c2cda3e42eeaddf4156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e709c74062e31483b042c3930572fb63ca8c786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996219"
 ---
-# <a name="appendix-d-data-types"></a>付録 D: データ型
-ODBC データ型の 2 つのセットを定義します。 SQL データ型と C データ型。 SQL データ型は、データ ソースに格納されているデータのデータ型を示します。 C データ型は、アプリケーションのバッファーに格納されたデータのデータ型を示します。  
+# <a name="appendix-d-data-types"></a>付録 D:データ型
+ODBC では、2 つのデータ型のセットを定義します。SQL データ型と C データ型。 SQL データ型は、データ ソースに格納されているデータのデータ型を示します。 C データ型は、アプリケーションのバッファーに格納されたデータのデータ型を示します。  
   
- SQL データ型は、sql-92 標準に従って各 DBMS によって定義されます。 定義は、型の識別子、sql-92 標準で指定された各 SQL データ型では、ODBC、 **#define** ODBC 関数の引数として渡したり、結果セットのメタデータに返される値。 唯一の SQL 92 ODBC でサポートされていないデータ型は (ODBC SQL_BIT 型は、異なる特性を持つ) ビット、BIT_VARYING、TIME_WITH_TIMEZONE、TIMESTAMP_WITH_TIMEZONE、および NATIONAL_CHARACTER します。 ドライバーは ODBC SQL データ型識別子と個々 のドライバーの SQL データ型識別子へのデータ ソース固有の SQL データ型のマッピングを担当します。 SQL データ型は、実装記述子の SQL_DESC_CONCISE_TYPE フィールドで指定されます。  
+ SQL データ型は、sql-92 標準に従って各 DBMS によって定義されます。 定義は、型の識別子、sql-92 標準で指定された各 SQL データ型では、ODBC、 **#define** ODBC 関数の引数として渡したり、結果セットのメタデータに返される値。 唯一の SQL 92 ODBC でサポートされていないデータ型は (ODBC SQL_BIT 型は、異なる特性を持つ) ビット、BIT_VARYING、TIME_WITH_TIMEZONE、TIMESTAMP_WITH_TIMEZONE、および NATIONAL_CHARACTER します。 ドライバーは ODBC SQL データ型識別子と個々 のドライバーの SQL データ型識別子へのデータ ソースに固有の SQL データ型のマッピングを担当します。 SQL データ型は、実装記述子の SQL_DESC_CONCISE_TYPE フィールドで指定されます。  
   
  ODBC C データ型とその対応する ODBC 型識別子を定義します。 アプリケーションの適切な C 型の識別子を渡すことによって結果セットのデータを受信するバッファーの C データ型を指定します、 *TargetType*への呼び出しで引数**SQLBindCol**または**SQLGetData**します。 適切な C 型の識別子を渡すことによって、ステートメントのパラメーターを格納するバッファーの C 型を指定します、 *ValueType*への呼び出しで引数**SQLBindParameter**します。 C データ型は、アプリケーション記述子を SQL_DESC_CONCISE_TYPE フィールドで指定されます。  
   

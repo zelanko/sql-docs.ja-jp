@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -13,12 +12,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065330"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>どのような&#39;マイニング Office 用アドインのデータに含まれる s
   Office 2013 用データ マイニング アドインをインストールし、すべてのインストール オプションを選択して、ときに、次のツールバーとテンプレートが追加されます。  
@@ -31,7 +30,7 @@ ms.locfileid: "48157632"
   
 -   [Excel 用データ マイニング クライアント&#40;SQL Server データ マイニング アドイン&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     このアドインは、データのクリーニングとサンプリングをはじめ、モデルの構築、モデルの精度のテスト、クロス検証の実行にいたるまで、ほぼすべての必要なデータ マイニング タスクのためのツールです。 また、モデルの管理と文書作成、テンプレートからの DMX クエリの作成もできます。  
+     このアドインでは、クリーニングとサンプリングのモデルの作成を実行する、モデルの精度をテストおよびクロス検証を実行する、データから - 必要なすべてのデータ マイニング タスクのツールを提供します。 また、モデルの管理と文書作成、テンプレートからの DMX クエリの作成もできます。  
   
      経験豊富なデータ マイニング担当者は、モデルのインポートとエクスポート、予測クエリおよびコンテンツ クエリを含め、SQL Server のデータ マイニングで使用できるすべてのツールにアクセスして活用することができます。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48157632"
   
      使用するデータを特定し、そのデータを準備する方法を理解することは、データ分析にとって重要です。 このトピックでは、考えられる中で最善のモデルを作成できるようにデータを準備する方法に関するヒントを示します。  
   
-     データ マイニングに初めて取り組み、ツールの使用経験を積もうとする場合は、アドインと共にインストールされているサンプル データのブックを使用することをお勧めします。このデータを参照すると、タイム シリーズ モデルまたはアソシエーション モデルで使用するデータを準備する方法の例も確認できます。  
+     データ マイニングを初めて使用し、ツールを使用して実験するだけの場合は、アドインと共にインストールされるサンプル データのブックを使用することをお勧めします。このデータを確認してもわかりますタイム シリーズ モデルまたはアソシエーション モデルのデータを準備する方法の例を示します。  
   
      **サンプル データ**  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48157632"
   
     -   \<ドライブ >: \Program Files\Microsoft SQL Server 2014 DM アドイン  
   
-    -   \<ドライブ >: \Program Files (x86) \Microsoft SQL Server 2014 DM アドイン  
+    -   \<drive>:\Program Files(x86)\Microsoft SQL Server 2014 DM add-ins  
   
 ## <a name="see-also"></a>参照  
  [データ マイニングの概要&#40;データ マイニング Excel 用アドイン&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

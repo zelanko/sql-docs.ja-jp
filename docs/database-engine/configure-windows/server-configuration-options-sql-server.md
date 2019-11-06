@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7388c5c768c9ffe6865a46f4513090cc1716c59e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837436"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609630"
 ---
 # <a name="server-configuration-options-sql-server"></a>サーバー構成オプション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47837436"
   
 -   オプションを設定し、**RECONFIGURE** ステートメントまたは場合によっては **RECONFIGURE WITH OVERRIDE**ステートメントを実行した直後。 特定のオプションを再設定すると、プラン キャッシュのプランが無効になり、新しいプランがコンパイルされます。 詳細については、「 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)」を参照してください。
   
-     - または -  
+     \- または -  
   
 -   上の操作を行い、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを再起動した後。
   
@@ -57,7 +56,7 @@ ms.locfileid: "47837436"
   
 オプションの中には、新しい構成を有効にするために、サーバーを再起動する必要があるものもあります。 新しい値を設定し sp_configure を実行した後にサーバーを再起動した場合、新しい値は構成オプションの **value_in_use** 列ではなく **value** 列に表示されます。 サーバーの再起動後は、新しい値が **value_in_use** 列に表示されます。  
   
-自己構成オプションは、システムのニーズに合わせて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が調整するオプションです。 このため、ほとんどの場合、値を手動で変更する必要はありません。 たとえば、 **min server memory** 、 **max server memory** 、user connections などの各オプションがあります。  
+自己構成オプションは、システムのニーズに合わせて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が調整するオプションです。 このため、ほとんどの場合、値を手動で変更する必要はありません。 例には、**ワーカー スレッドの最大数**オプションとユーザー接続オプションが含まれます。  
   
 ## <a name="configuration-options-table"></a>構成オプションの表  
  次の表は、使用可能なすべての構成オプション、設定可能範囲、および既定値を示しています。 構成オプションには文字コードを付けています。その内容を次に示します。  
@@ -99,7 +98,7 @@ ms.locfileid: "47837436"
     |[default trace enabled](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。|0|1|0|  
+    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (SC)<br /><br /> **再起動が必要**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A、RR)|0|100|0|  
     |ft crawl bandwidth (max)、 [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A) を参照|0|32767|100|  
@@ -114,7 +113,7 @@ ms.locfileid: "47837436"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|0<br /><br /> 0 の場合、32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (256 + (*\<processors>* -4) * 8) を使用し、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (512 + (*\<processors>* - 4) * 8) を使用して、プロセッサ数に基づいたワーカー スレッドの最大数が自動的に構成されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|0<br /><br /> 0 の場合、32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (256 + ( *\<processors>* -4) * 8) を使用し、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (512 + ( *\<processors>* - 4) * 8) を使用して、プロセッサ数に基づいたワーカー スレッドの最大数が自動的に構成されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  

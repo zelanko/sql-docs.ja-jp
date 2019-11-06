@@ -10,16 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91439c93e0c21ca447bb0ca585904ddf41d885c9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541084"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251295"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>インメモリ OLTP でのクエリ ストアの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52541084"
   
 -   クエリ ストアを有効にすると、クエリ、プランおよびコンパイル時の統計が既定で収集されます。 ただし、実行時統計の収集は、[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) で明示的に有効にしない限り、アクティブになりません。  
   
--   *@new_collection_value* を 0 に設定すると、クエリ ストアは影響を受けるプロシージャまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス全体の実行時統計の収集を停止します。  
+-   *\@new_collection_value* を 0 に設定すると、クエリ ストアでの影響を受けるプロシージャまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス全体の実行時統計の収集が停止されます。  
   
 -   [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) で構成された値は保持されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の再起動後に、統計収集を確認し、再構成するようにしてください。  
   

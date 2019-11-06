@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8d334a319807692f099056f0f350c395ecbeeb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63229003"
 ---
 # <a name="index-element-dta"></a>Index 要素 (DTA)
   ユーザー指定の構成のために作成したり削除したりするインデックスの情報が含まれます。  
@@ -66,13 +65,13 @@ ms.locfileid: "48120112"
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[要素作成&#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
-|**子要素**|[インデックスの要素を名前&#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Index の column 要素&#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> `PartitionColumn` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> [Index の Filegroup 要素&#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> `PercentUsage` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
+|**親要素**|[Create 要素 &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
+|**子要素**|[Index の Name 要素 &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Index の Column 要素 &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> `PartitionColumn` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> [Index の Filegroup 要素 &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> `PercentUsage` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

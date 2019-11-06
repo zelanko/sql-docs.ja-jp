@@ -2,18 +2,18 @@
 title: Level 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dfd17acaa01bd415c5fde547bb714f62936d09e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 9dbecce71d9464267da63dcebb7388cd947a168f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579494"
 ---
 # <a name="report-builder-functions---level-function"></a>レポート ビルダー関数 - Level 関数
   再帰型階層の現在の深さのレベルを返します。  

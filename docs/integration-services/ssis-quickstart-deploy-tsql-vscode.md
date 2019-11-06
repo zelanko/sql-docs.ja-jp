@@ -6,17 +6,20 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d1fb90cc492103df7c408c5cd9bc1b88ae374907
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665490"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281546"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS プロジェクトを配置する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このクイックスタートでは、Visual Studio Code を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS プロジェクトを SSIS カタログに配置する方法を示します。
 
 Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure SQL Data Warehouse に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
@@ -45,7 +48,7 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 
 2. ステータス バーの右下隅にある **[プレーン テキスト]** をクリックします。
  
-3. 開いた **[言語モードの選択]** ドロップダウン メニューで、**[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
+3. 開いた **[言語モードの選択]** ドロップダウン メニューで、 **[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>SSIS カタログ データベースに接続する
 
@@ -55,7 +58,7 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
 
 2. 「**sqlcon**」と入力し、**Enter** キーを押します。
 
-3. **Enter** キーを押して、**[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
+3. **Enter** キーを押して、 **[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
 
 4. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してから、**Enter** キーを押して続行します。 
 

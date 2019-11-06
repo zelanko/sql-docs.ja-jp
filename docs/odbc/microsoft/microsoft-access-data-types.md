@@ -1,7 +1,7 @@
 ---
 title: Microsoft Access データの種類 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11f45698a5ad8b7fd05052cbb2d23520790c425a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045164"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access データ型
 次の表は、Microsoft Access データ型やテーブルを作成するために使用するデータ型、ODBC SQL データ型を示します。  
@@ -38,17 +37,17 @@ ms.locfileid: "47692980"
 |日付/時刻|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |長のバイナリ|文字列|SQL_LONGVARBINARY|  
-|長いテキスト|長いテキスト|[2] の SQL_LONGVARCHAR SQL_WLONGVARCHAR [3]|  
-|メモ|長いテキスト|[2] の SQL_LONGVARCHAR SQL_WLONGVARCHAR [3]|  
+|長いテキスト|長いテキスト|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|メモ|長いテキスト|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |数 (フィールド サイズ = 1 つ)|1 つ|SQL_REAL|  
 |数 (フィールド サイズ = 倍)|DOUBLE|SQL_DOUBLE|  
 |数 (フィールド サイズ = バイト)|符号なしバイト|SQL_TINYINT|  
-|数 (フィールド サイズ = 整数)|短い|SQL_SMALLINT|  
+|数 (フィールド サイズ = 整数)|SHORT|SQL_SMALLINT|  
 |数 (フィールド長整数を =)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
-|OLE●ole○|文字列|SQL_LONGVARBINARY|  
+|OLE|文字列|SQL_LONGVARBINARY|  
 |[TEXT]|VARCHAR|[1] SQL_VARCHAR SQL_WVARCHAR [2]|  
-ARBINARY|VARBINARY|SQL_VARBINARY|  
+|VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] 4.0 アプリケーションのみにアクセスします。 4,000 バイトの最大長。 文字列のような動作です。  
   
@@ -61,7 +60,7 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
   
  次の表では、Microsoft Access データ型の制限事項を示します。  
   
-|データ型|説明|  
+|データの種類|説明|  
 |---------------|-----------------|  
 |BINARY、VARBINARY、および VARCHAR|0 BINARY、VARBINARY、または VARCHAR 列を作成するか指定されていない長さが実際に 510 バイト列を返します。|  
 |BYTE|フィールド サイズが BYTE に等しいと Microsoft アクセス番号フィールドが署名されていない場合でも、Microsoft Access ドライバーを使用する場合、負の数は、フィールドに挿入できます。|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51b94ca4b8fcd9aada2b6963a8ee567fb0e12882
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e4d0ec8118fd7496c34d4107f0e824145ca6ae0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066987"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 属性を使用した、対象名前空間の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ ms.locfileid: "51669581"
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 対象名前空間を指定する  
- 次の XSD スキーマを使用して、ターゲット名前空間を指定する、 **xsd:targetNamespace**属性です。 また、スキーマ、設定、**よ**と**されていません**属性に値を **「不適切な」** (これらの属性の既定値)。 これはグローバル宣言であり、すべてのローカル要素に影響を与えます (**\<注文 >** スキーマで) と属性 (**[得意先コード]**、 **[担当者名]**、および **[受注コード]** スキーマで)。  
+ 次の XSD スキーマを使用して、ターゲット名前空間を指定する、 **xsd:targetNamespace**属性です。 また、スキーマ、設定、**よ**と**されていません**属性に値を **「不適切な」** (これらの属性の既定値)。 これはグローバル宣言であり、すべてのローカル要素に影響を与えます ( **\<注文 >** スキーマで) と属性 ( **[得意先コード]** 、 **[担当者名]** 、および **[受注コード]** スキーマで)。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:CO="urn:MyNamespace"   
             targetNamespace="urn:MyNamespace" >  
@@ -78,7 +77,7 @@ ms.locfileid: "51669581"
   
  このスキーマの内容は次のとおりです。  
   
--   **顧客タイプ**と**OrderType**型の宣言は、グローバルし、したがって、スキーマのターゲット名前空間に含まれますが。 宣言でこれらの種類は参照されているとその結果、 **\<お客様 >** 要素とその**\<注文 >** 子要素では、関連付けられているプレフィックスを指定ターゲット名前空間の。  
+-   **顧客タイプ**と**OrderType**型の宣言は、グローバルし、したがって、スキーマのターゲット名前空間に含まれますが。 宣言でこれらの種類は参照されているとその結果、 **\<お客様 >** 要素とその **\<注文 >** 子要素では、関連付けられているプレフィックスを指定ターゲット名前空間の。  
   
 -   **\<お客様 >** スキーマのグローバル要素であるため、スキーマのターゲット名前空間に要素が含まれるもします。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "51669581"
   
  このインスタンス ドキュメントでは、urn: マークアップの名前空間を定義しには、プレフィックス (y0) を関連付けます。 プレフィックスが適用されるだけに、 **\<お客様 >** 大域要素です。 (要素は、の子として宣言されているために、グローバル **\<xsd:schema >** スキーマ内の要素です)。  
   
- のローカル要素と属性にプレフィックスは適用されませんの値**よ**と**されていません**に属性が設定されて **「不適切な」** スキーマにします。 注意して、 **\<注文 >** 要素は、ローカルの子としてその宣言が表示されますので、 **\<複合型 >** を定義する要素、  **\<顧客タイプ >** 要素です。 同様に、属性 (**[得意先コード]**、 **[受注コード]** と **[担当者名]**) は、ローカル、グローバルにできません。  
+ のローカル要素と属性にプレフィックスは適用されませんの値**よ**と**されていません**に属性が設定されて **「不適切な」** スキーマにします。 注意して、 **\<注文 >** 要素は、ローカルの子としてその宣言が表示されますので、 **\<複合型 >** を定義する要素、  **\<顧客タイプ >** 要素です。 同様に、属性 ( **[得意先コード]** 、 **[受注コード]** と **[担当者名]** ) は、ローカル、グローバルにできません。  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>このスキーマの実際のサンプルを作成するには  
   
@@ -132,7 +131,7 @@ ms.locfileid: "51669581"
   
      詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
- スキーマが指定されている場合**よ**と**されていません**属性の値を持つ **「修飾」**、すべてのローカル インスタンス ドキュメントには要素および属性で修飾します。 これらの属性を含めるには、前のスキーマを変更することができます、  **\<xsd:schema >** 要素テンプレートを再度実行するとします。 この場合は、インスタンスで属性も修飾されるので、名前空間プレフィックスを含むよう XPath クエリを変更します。  
+ スキーマが指定されている場合**よ**と**されていません**属性の値を持つ **「修飾」** 、すべてのローカル インスタンス ドキュメントには要素および属性で修飾します。 これらの属性を含めるには、前のスキーマを変更することができます、  **\<xsd:schema >** 要素テンプレートを再度実行するとします。 この場合は、インスタンスで属性も修飾されるので、名前空間プレフィックスを含むよう XPath クエリを変更します。  
   
  次は変更した XPath クエリです。  
   

@@ -14,12 +14,12 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4def24dac95db8cf86d0a23bd1e0f7a951d4e9e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067769"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   実行されるステートメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは結果セット内の列を示すサーバー クエリを実行する必要はありません。 この場合、`SQLDescribeCol`サーバーとのやり取りは行われません。 ような[SQLColAttribute](sqlnumresultcols.md)を呼び出すと、`SQLDescribeCol`準備されていても実行されていないステートメントには、サーバーとのやり取りが生成されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "48054992"
  `SQLDescribeCol` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLDescribeCol 関数](http://go.microsoft.com/fwlink/?LinkID=59338)   
+ [SQLDescribeCol 関数](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

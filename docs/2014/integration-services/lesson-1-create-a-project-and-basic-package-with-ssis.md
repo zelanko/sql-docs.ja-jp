@@ -1,28 +1,27 @@
 ---
-title: 'レッスン 1: プロジェクトと基本パッケージの作成 |Microsoft Docs'
+title: レッスン 1:プロジェクトと基本パッケージの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62a4a0737f57d6040d2c166847f191f13d435071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229491"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767504"
 ---
-# <a name="lesson-1-creating-the-project-and-basic-package"></a>レッスン 1: プロジェクトと基本パッケージの作成
+# <a name="lesson-1-creating-the-project-and-basic-package"></a>レッスン 1:プロジェクトと基本パッケージの作成
   このレッスンでは、簡単な ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換コンポーネントを使用してそのデータを変換します。さらに、変換したデータを、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  
   
 > [!IMPORTANT]  
->  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012** をインストールおよび展開する方法の詳細については、「[Reporting Services Product Samples on CodePlex (CodePlex の Reporting Services 製品サンプル)](http://go.microsoft.com/fwlink/p/?LinkID=52691)」を参照してください。  
+>  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 インストールおよび展開の詳細については**AdventureWorksDW2012**を参照してください[Microsoft SQL Server の製品サンプル。Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples)します。  
   
 ## <a name="understanding-the-package-requirements"></a>パッケージ要件について  
  このチュートリアルには、Microsoft SQL Server Data Tools が必要です。  
@@ -81,25 +80,25 @@ ms.locfileid: "48229491"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンの内容は次のとおりです。  
   
--   [手順 1: 新しい Integration Services プロジェクトの作成](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [ステップ 1: 新しい Integration Services プロジェクトを作成します。](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [手順 2: フラット ファイル接続マネージャーの追加と構成](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [手順 2:フラット ファイル接続マネージャーの追加と構成](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [手順 3: OLE DB 接続マネージャーの追加と構成](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [ステップ 3:追加して、OLE DB 接続マネージャーの構成](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [手順 4: パッケージへのデータ フロー タスクの追加](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [手順 4:データ フロー タスクをパッケージに追加します。](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [手順 5: フラット ファイル ソースの追加と構成](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [手順 5:フラット ファイル ソースの追加と構成](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [手順 6: 参照変換の追加と構成](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [手順 6:追加して、参照変換を構成します。](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [手順 7: OLE DB 変換先の追加と構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [手順 7:追加して、OLE DB 変換先の構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [手順 8: レッスン 1 のパッケージをわかりやすくする作業](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [手順 8:レッスン 1 パッケージを理解しやすきます。](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [手順 9: レッスン 1 のチュートリアル パッケージのテスト](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [手順 9:レッスン 1 のチュートリアル パッケージのテスト](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
- [手順 1: 新しい Integration Services プロジェクトの作成](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [ステップ 1: 新しい Integration Services プロジェクトを作成します。](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

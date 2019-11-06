@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220734"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109796"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>[クリックスルー レポート] ページ (レポート マネージャー)
   クリックスルー レポートは、レポート内に含まれている対話的なデータをユーザーがクリックしたときに、関連するデータのテーブルを表示するレポートです。 これらのレポートは、レポートの作成に使用したモデルに含まれている情報に基づいて、レポート サーバーによって生成されます。 レポート サーバーによって生成されるクリックスルー レポートを使用しない場合は、カスタム レポートを作成し、レポート サーバーにパブリッシュして、そのモデルで定義されている対話的なデータ ポイントにマップすることができます。 カスタム レポートは、レポート ビルダーで同じモデルを使用して作成し、レポート サーバーにパブリッシュする必要があります。 カスタム レポートをモデル内のアイテムにマップするには、レポート マネージャーの [クリックスルー レポート] ページを使用します。  
@@ -32,7 +31,7 @@ ms.locfileid: "48220734"
  アクセス可能な任意のレポートを選択できますが、構成する対象のモデル用に作成されたレポートのみを選択してください。  
   
 > [!NOTE]  
->  クリックスルー レポートはすべてのエディションで使用できません[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 組織で実行している [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションが不明な場合は、データベース管理者に問い合わせてください。  
+>  クリックスルー レポートは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 組織で実行している [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションが不明な場合は、データベース管理者に問い合わせてください。  
   
 ## <a name="navigation"></a>ナビゲーション  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
@@ -57,7 +56,7 @@ ms.locfileid: "48220734"
  **複数インスタンスのレポート**  
  ユーザーの移動によって複数インスタンス データのビューが必要な場合は、使用するカスタム レポートを指定します。 参照ボタンをクリックして、使用するレポートを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートのパブリッシュ](../../2014/reporting-services/publish-reports.md)  
   
   

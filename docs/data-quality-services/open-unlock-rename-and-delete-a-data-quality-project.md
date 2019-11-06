@@ -15,15 +15,14 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: 5054e2a14260bf16aafb4042fac39d191b8f5afa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935088"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する
 

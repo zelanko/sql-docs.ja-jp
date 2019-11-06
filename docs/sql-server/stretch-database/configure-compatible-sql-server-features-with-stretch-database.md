@@ -1,20 +1,18 @@
 ---
 title: Stretch Database と互換性のある SQL Server 機能を構成する | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9cd313b8db22a74f8e2fead537f3b513a94e7818
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e7ff4a816d7255f667ece0a4984f464d152280ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136288"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Stretch Database と互換性のある SQL Server 機能を構成する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +21,7 @@ ms.locfileid: "47738090"
 簡単な手順で、Stretch Database を操作できるように次の SQL Server 機能を構成します。
 -   Always On
 -   Always Encrypted
--   透過的なデータ暗号化 (TDE)
+-   Transparent Data Encryption (TDE)
 -   テンポラル テーブル
 
 ## <a name="configure-always-on-with-stretch-database"></a>Stretch Database で Always On を構成する

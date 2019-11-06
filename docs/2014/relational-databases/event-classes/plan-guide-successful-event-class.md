@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d55e6bc30ec2634fd2b782fbb8986ab99c1fc91a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827205"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful イベント クラス
   Plan Guide Successful イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がプラン ガイドを含むクエリまたはバッチに対する実行プラン ガイドを正常に生成したことを示します。 このイベントは、次の条件に該当する場合に発生します。  
@@ -42,9 +41,9 @@ ms.locfileid: "48174956"
 |EventClass|`int`|イベントの種類 = 214。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|IsSystem|`int`|イベントがシステム プロセスで発生したか、ユーザー プロセスで発生したかを示します。1 = システム、0 = ユーザーです。|60|はい|  
+|IsSystem|`int`|システム プロセスまたはユーザー プロセスのどちらでイベントが発生したのかを示します。1 はシステム、0 はユーザーです。|60|はい|  
 |LoginName|`nvarchar`|ユーザーのログイン名 (DOMAIN [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] username [!INCLUDE[msCoName](../../includes/msconame-md.md)] の形式で表された\\*セキュリティ ログインまたは*Windows ログイン資格情報)。|11|はい|  
-|LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) カタログ ビューまたは [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) カタログ ビューまたは [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|[はい]|  
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ObjectID|`int`|プラン ガイドが適用されたときにコンパイルされていたモジュールのオブジェクト ID。 プラン ガイドがモジュールに適用されなかった場合、この列は NULL に設定されます。|22|はい|  
@@ -57,7 +56,7 @@ ms.locfileid: "48174956"
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Plan Guide Unsuccessful イベント クラス](plan-guide-unsuccessful-event-class.md)   
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  

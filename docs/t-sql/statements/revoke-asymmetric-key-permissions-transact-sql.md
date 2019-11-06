@@ -14,15 +14,14 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server], permissions
 - REVOKE statement, asymmetric keys
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 515699af51ea0a4a9dd685bf221eb8a08b9fc8a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: baf3fd0a03beb185a43180599352b6f64f8044cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082364"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE (非対称キーの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,15 +43,15 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を与える許可を取り消します。  
+ 指定した権限を与える許可を取り消すことを示します。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
   
  *permission*  
- アセンブリで取り消すことができる権限を指定します。 下の表をご覧ください。  
+ アセンブリで取り消すことができる権限を指定します。 以下に一覧を示します。  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  権限を取り消す非対称キーを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  

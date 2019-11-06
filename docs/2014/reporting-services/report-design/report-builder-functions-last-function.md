@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5d2b74428de2ae01b2b514309b0d825a6151b44c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105260"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 関数 (レポート ビルダーおよび SSRS)
   指定された式の指定されたスコープの最後の値を返します。  
@@ -33,7 +32,7 @@ Last(expression, scope)
   
 #### <a name="parameters"></a>パラメーター  
  *式 (expression)*  
- (`Variant`または`Binary`) など、集計を実行する対象の式`=Fields!Fieldname.Value`します。  
+ (`Variant` または `Binary`) この集計関数の実行対象の式です (`=Fields!Fieldname.Value` など)。  
   
  *スコープ (scope)*  
  (`String`) (省略可) この関数の適用先となるレポート アイテムを含むデータセット、データ領域、またはグループの名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
@@ -44,9 +43,9 @@ Last(expression, scope)
 ## <a name="remarks"></a>コメント  
  `Last` 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最後の値を返します。  
   
- `Last`関数は、現在 (既定) のスコープ以外のすべてのグループ化フィルター式では使用できません。  
+ `Last` 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  
   
- 使用することも`Last`から最後の値を返し、ページ ヘッダーで、`ReportItems`ページの最初と最後のエントリを表示する辞書形式のヘッダーを生成するために、ページのコレクション。  
+ また、ページ ヘッダーで `Last` を使用して、ページの `ReportItems` コレクションから最後の値を返し、各ページの最初と最後のエントリを表示する辞書形式のヘッダーを作成することもできます。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
   
@@ -72,9 +71,9 @@ Last(expression, scope)
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

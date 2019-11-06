@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], completing snippets
@@ -15,12 +14,12 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e1e6438128398b0210da20f68efcd88bb2f6eec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 103b8c23dba7119dde28a8d6e87b963400eaf0c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090584"
 ---
 # <a name="complete-transact-sql-snippets"></a>Transact-SQL スニペットの作成
   [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットがスクリプトに挿入されると、スニペットのコンテンツを編集して [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "48092572"
   
 3.  一覧からアイテムを選択するか、置換を入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-SQL スニペットの挿入](insert-transact-sql-snippets.md)   
  [ブロックの挿入 Transact-SQL スニペットの挿入](insert-surround-with-transact-sql-snippets.md)  
   

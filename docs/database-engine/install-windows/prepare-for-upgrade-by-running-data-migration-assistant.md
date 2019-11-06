@@ -10,13 +10,12 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 64d139326929c8bfa8d64e5f471b6e67762468f9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 85846c2e4a9989533d89a4e448d6d31831555ca6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990848"
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>Data Migration Assistant を実行してアップグレードを準備する
 

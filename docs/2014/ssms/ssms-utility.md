@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], opening
@@ -17,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cadd1de9ee94c89ab0b1604321423238a9a8c7e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127000"
 ---
 # <a name="ssms-utility"></a>Ssms ユーティリティ
   **Ssms**ユーティリティが [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。 指定すると、 **Ssms** はサーバーへの接続を確立し、クエリ、スクリプト、ファイル、プロジェクト、ソリューションを開きます。  
@@ -52,16 +51,16 @@ ms.locfileid: "48111232"
  *solutionfile*  
  開くソリューションを指定します。 パラメーターには、ソリューション ファイルへの完全パスを含める必要があります。  
   
- [**-S** *servername*]  
+ [ **-S** _servername_]  
  サーバー名  
   
- [**-d** *databasename*]  
+ [ **-d** _databasename_]  
  データベース名  
   
- [**-U** *username*]  
+ [ **-U** _username_]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用して接続するときのユーザー名です。  
   
- [**-P** *password*]  
+ [ **-P** _password_]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用して接続するときのパスワードです。  
   
  **[-E]**  
@@ -70,7 +69,7 @@ ms.locfileid: "48111232"
  **[-nosplash]**  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開くとき、スプラッシュ スクリーンのグラフィックを表示しません。 限られた帯域幅を使用した接続では、ターミナル サービスを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動しているコンピューターへ接続する場合に、このオプションを使用してください。 この引数では、大文字と小文字は区別されず、他の引数の前後どちらにも指定できます。  
   
- [**-log***[filename]?*]  
+ [ **-log** _[filename]?_ ]  
  トラブルシューティング用に指定したファイルに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のアクティビティを記録します。  
   
  **[-?]**  

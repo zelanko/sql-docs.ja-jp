@@ -17,15 +17,14 @@ helpviewer_keywords:
 - cryptography [SQL Server], symmetric keys
 - granting permissions [SQL Server], symmetric keys
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7975e0fd4a3a429a324679d1761de8fbc518ca76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: a7c592af7f2971cc637c9049b8ca06a92a2f3c05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050769"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT (対称キーの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -136,7 +135,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.symmetric_keys (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [DENY (対称キーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
  [REVOKE (対称キーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   

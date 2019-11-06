@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 07b52a71d3f12455bacdd2e9789aadb5ed5967db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604680"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266132"
 ---
 # <a name="creating-test-cases-oracletosql"></a>テスト ケースの作成 (OracleToSQL)
 テストを作成するのにには、テスト_ケースのウィザードを使用します。 このウィザードを使用して、テストおよび検証オブジェクトを選択し、テストのパラメーターを指定して、テスト_ケースを作成できます。  
   
 ## <a name="starting-the-test-case-wizard"></a>テスト_ケースのウィザードを開始します。  
-テスト_ケースのウィザードを起動する**新しいテスト_ケース.** **テスター**メニュー。  
+テスト_ケースのウィザードを起動する **新しいテスト_ケース** から、 **テスター** メニュー。  
   
 起動すると、ウィザードは、ソース Oracle サーバー上のスキーマ SSMATESTER_ORACLE を検索します。 テスト担当者拡張機能のスキーマの補助オブジェクトの格納に使用することをお勧めします。 テスト_ケースのウィザードでは、SSMATESTER_ORACLE を見つけられない場合は、スキーマを作成することを提案する ダイアログ ウィンドウが表示されます。 (そのような状況通常発生 SSMA テスターの最初の実行中にします。)  
   
@@ -42,6 +42,6 @@ ms.locfileid: "47604680"
   
 5.  [テスト_ケースの準備の終了&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

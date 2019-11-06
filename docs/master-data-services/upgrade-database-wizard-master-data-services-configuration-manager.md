@@ -5,19 +5,17 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 601334f4d767f0e632f5641512b9855a75ddd282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102567"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
 
@@ -31,7 +29,7 @@ ms.locfileid: "47696310"
 ## <a name="upgrade-review"></a>[アップグレードの確認]  
  このページで指定した情報を確認します。 問題がなければ、 **[次へ]** をクリックして、指定したデータベースをアップグレードします。  
   
-|コントロール名|[説明]|  
+|コントロール名|説明|  
 |------------------|-----------------|  
 |**SQL Server インスタンス (SQL Server instance)**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
 |**[Master Data Services データベース]**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  
@@ -39,7 +37,7 @@ ms.locfileid: "47696310"
 ## <a name="progress-and-finish"></a>[続行して完了する]  
  アップグレード処理の進捗状況を表示します。 データベースのアップグレードが完了したら、ログ ファイルへのリンクをクリックしてアップグレードに関する詳細情報を表示するか、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 アップグレードされたデータベースが選択され、そのシステム設定を表示および変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)  
  [マスター データ サービスのアップグレード](../database-engine/install-windows/upgrade-master-data-services.md)  

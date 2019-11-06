@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
@@ -21,12 +20,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084129"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、よく知られている Apriori アルゴリズムの直接的な実装です。  
@@ -77,7 +76,7 @@ ms.locfileid: "50146017"
  マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでを使用してもパラメーターを変更することができます、 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> AMO、またはを使用して、コレクション、 [MiningModels 要素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA でします。 次の表では、各パラメーターについて説明します。  
   
 > [!NOTE]  
->  DMX ステートメントを使用して既存のモデルのパラメーターを変更することはできません。パラメーターは、モデルを作成するときに DMX CREATE MODEL または ALTER STRUCTURE… ADD MODEL で指定する必要があります。  
+>  DMX ステートメントでは; を使用して、既存のモデル内のパラメーターを変更することはできません。DMX CREATE MODEL または ALTER STRUCTURE では、パラメーターを指定する必要があります.ADD MODEL で指定する必要があります。  
   
  *MAXIMUM_ITEMSET_COUNT*  
  生成されるアイテムセットの最大数を指定します。 数が指定されていない場合は、既定値が使用されます。  
@@ -148,7 +147,7 @@ ms.locfileid: "50146017"
   
  マイニング モデル列に適用されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  アソシエーション モデルには、キー列、入力列、および 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
@@ -162,7 +161,7 @@ ms.locfileid: "50146017"
 > [!NOTE]  
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft アソシエーション アルゴリズム](microsoft-association-algorithm.md)   
  [結合モデルのクエリ例](association-model-query-examples.md)   
  [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  

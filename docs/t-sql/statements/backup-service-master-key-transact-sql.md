@@ -22,15 +22,14 @@ helpviewer_keywords:
 - encryption [SQL Server], Service Master Key
 - service master key [SQL Server], exporting
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f00a79122de487c376746669589ed2072dc2e3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 1a8526ee9113af846288f68b0ad0bc24dbf9b821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091731"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

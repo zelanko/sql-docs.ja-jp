@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a5b2893468f9c28e85fd92b3a4ab3236292938af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 737e5eb03cabe655b4b1dc1da6735b9b4ef68c05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107247"
 ---
 # <a name="manage-report-data-sources"></a>レポート データ ソースを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート、レポート モデル、およびデータ ドリブン サブスクリプションが外部データ ソースからデータを取得します。 レポート サーバーは外部データ ソースに接続するために、レポート、モデル、またはサブスクリプションで定義または参照されているデータ ソース接続情報を使用します。 データ ソース接続プロパティは常に、レポートやモデルの作成時にそれらと共に定義されますが、レポートやモデルをレポート サーバーにパブリッシュした後は、それらとは別に管理できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48193234"
   
  クエリの変更はデータ ソース接続の管理には含まれません。 レポートやモデルのクエリを変更するには、レポート作成ツールを使用してレポートやモデルの定義に変更を加える必要があります。  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>マネージド プロパティ : データ ソースの種類、接続文字列、および資格情報  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>管理対象のプロパティ:データ ソースの種類、接続文字列、および資格情報  
  レポート サーバー上で管理できるデータ ソース プロパティは次のとおりです。  
   
 |プロパティ|説明|管理する方法|  
@@ -53,9 +52,9 @@ ms.locfileid: "48193234"
  データ ソース プロパティが埋め込まれたレポートをパブリッシュする場合は、共有データ ソース プロパティに切り替えることを検討してください。 資格情報や接続文字列を 1 つのページで更新できるので、共有データ ソースの方が管理が容易です。 そのデータ ソースを使用するすべてのレポート、モデル、およびデータ ドリブン サブスクリプションに、変更がすぐに反映されます。 また、共有データ ソースをオフラインにすると、レポートやサブスクリプションが事実上一時停止されるため、発生した問題のトラブルシューティングや調査を行っている間にそれらが実行されないようにすることができます。  
   
 ## <a name="controlling-access-data-source-properties"></a>データ ソース プロパティへのアクセスの制御  
- 既定では、レポートを管理するための権限があれば誰でもレポートのすべてのプロパティを設定できます。これには、データ ソースの種類、接続文字列、資格情報、および接続情報の取得方法 (レポートに埋め込まれているか、共有データ ソースから取得するか) を決定するプロパティも含まれます。 タスクと権限を制御するネイティブ モードのレポート サーバー上のデータ ソース プロパティへのアクセスの詳細については、次を参照してください。[共有データ ソース アイテムをセキュリティで保護された](../security/secure-shared-data-source-items.md)と[レポートのセキュリティ保護とリソース](../security/secure-reports-and-resources.md)します。  
+ 既定では、レポートを管理するための権限があれば誰でもレポートのすべてのプロパティを設定できます。これには、データ ソースの種類、接続文字列、資格情報、および接続情報の取得方法 (レポートに埋め込まれているか、共有データ ソースから取得するか) を決定するプロパティも含まれます。 ネイティブ モードのレポート サーバーのデータ ソース プロパティへのアクセスを制御するタスクと権限の詳細については、「 [共有データ ソース アイテムをセキュリティで保護する](../security/secure-shared-data-source-items.md) 」と「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
- SharePoint ライブラリのアイテムのプロパティを表示および編集する権限は、サイトの管理者によって決定されます。 データ ソース接続プロパティへのアクセスを制御するアクセス許可の詳細については、次を参照してください。[の SharePoint サイトおよびリスト権限のリファレンスをレポート サーバー アイテムに対する](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)します。  
+ SharePoint ライブラリのアイテムのプロパティを表示および編集する権限は、サイトの管理者によって決定されます。 データ ソース接続プロパティを制御するアクセス許可については、「 [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」を参照してください。  
   
 ## <a name="how-to-work-with-data-source-properties-on-a-report-server"></a>レポート サーバーでデータ ソース プロパティを操作する方法  
  データ ソース プロパティの作成や変更を行うには、さまざまなツールを使用できます。 次の表に、それらの方法およびツールと、詳しい手順へのリンクを示します。  
@@ -64,24 +63,24 @@ ms.locfileid: "48193234"
 |----------|----------|----------|  
 |接続文字列の例を表示する。||[Reporting Services でのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |データ ソースに接続するための資格情報を取得する方法を選択する。||[レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)|  
-|データ ソース接続プロパティをレポート定義 (.rdl) ファイルに追加する。|レポート デザイナー|[埋め込みまたは共有データ ソースを作成&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
-|共有データ ソース (.rds) ファイルをレポート プロジェクトに追加する/そのファイルへのリンクを設定する。|レポート デザイナー|[作成、変更、および共有データ ソースを削除する&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
+|データ ソース接続プロパティをレポート定義 (.rdl) ファイルに追加する。|レポート デザイナー|[埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)](../create-an-embedded-or-shared-data-source-ssrs.md)|  
+|共有データ ソース (.rds) ファイルをレポート プロジェクトに追加する/そのファイルへのリンクを設定する。|レポート デザイナー|[共有データ ソースを作成、変更、および削除する (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |ユーザーが実行時に選択できるデータ ソースの定義済み一覧を作成する。 ユーザーがレポートを要求すると、データ ソースの一覧が表示されます。 ユーザーは、レポートを実行する前に、使用するデータ ソースを選択する必要があります。 レポートにデータ ソース選択一覧を追加するには式を使用します。<br /><br /> これは、動的データ ソース接続と呼ばれます。|レポート デザイナー|[Reporting Services でのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|レポート サーバー上の共有データ ソース アイテムを作成する。|レポート マネージャー|[作成、削除、または共有データ ソース変更&#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
-|サブスクリプションやレポート スナップショットを作成するために必要な資格情報を格納する。|レポート マネージャー|[Reporting Services データ ソースに資格情報を保存する](store-credentials-in-a-reporting-services-data-source.md)|  
-|パブリッシュされたレポートのデータ ソース接続プロパティを編集する。|レポート マネージャー|[レポートのデータ ソースのプロパティを構成する&#40;レポート マネージャー&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
-|レポート サーバー上の共有データ ソース アイテムを作成する。|SharePoint サイト|[共有データ ソースを作成および管理する &#40;Reporting Services の SharePoint 統合モード&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
-|既存の .odc 接続情報をレポートで使用する。|SharePoint サイト|[Office データ接続を使用して、 &#40;.odc&#41;レポート&#40;Reporting Services の SharePoint 統合モード&#41;](use-an-office-data-connection-odc-with-reports.md)|  
+|レポート サーバー上の共有データ ソース アイテムを作成する。|レポート マネージャー|[共有データ ソースを作成、削除、または変更する (レポート マネージャー)](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
+|サブスクリプションやレポート スナップショットを作成するために必要な資格情報を格納する。|レポート マネージャー|[Store Credentials in a Reporting Services Data Source](store-credentials-in-a-reporting-services-data-source.md)|  
+|パブリッシュされたレポートのデータ ソース接続プロパティを編集する。|レポート マネージャー|[レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](configure-data-source-properties-for-a-report-report-manager.md)|  
+|レポート サーバー上の共有データ ソース アイテムを作成する。|SharePoint サイト|[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
+|既存の .odc 接続情報をレポートで使用する。|SharePoint サイト|[レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  レポート データ ソースへのデータ ソース接続の管理と、レポート サーバー データベースへのレポート サーバー接続の管理は異なります。 内部データ ストアへのレポート サーバーの接続の詳細については、「[レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポートまたはモデルを共有データ ソースにバインド&#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [作成、削除、または共有データ ソース変更&#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [レポートまたはモデルを共有データ ソースにバインドする (SSRS)](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [共有データ ソースを作成、削除、または変更する (レポート マネージャー)](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Reporting Services データ ソースに資格情報を保存する](store-credentials-in-a-reporting-services-data-source.md)   
  [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

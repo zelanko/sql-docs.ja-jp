@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], aliases
@@ -13,12 +13,12 @@ ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9d0a3c52b22f6834a862435335f8e34aa991d74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a6be65da2da5da5c025520314c069258aeb7bfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050903"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184353"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>列の別名の作成 (Visual Database Tools)
   列名に別名を作成すると、列名、計算、および集計値を簡単に操作できるようになります。 たとえば、列の別名を作成するのは次の場合です。  
@@ -35,7 +35,7 @@ ms.locfileid: "48050903"
   
 2.  その行の **[エイリアス]** 列に別名を入力します。 別名を付けるときは、SQL の名前付け規則に従う必要があります。 入力した別名にスペースが含まれる場合は、自動的に区切り記号が付きます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリに列を追加する&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [クエリ結果の要約&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   

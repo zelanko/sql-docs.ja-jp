@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482625"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel 用マスター データ サービス アドイン
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、参照データのマスター リストは、Excel を使用して、組織内ですべてのユーザーに配布できます。 セキュリティによって、ユーザーが表示および更新できるデータを決定します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48198372"
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、Data Quality Services (DQS) を使用して、MDS に読み込む前にデータを照合できます。 これにより、MDS 内のデータの重複を防ぐことができます。  
   
 > [!IMPORTANT]  
->  使用し続けることができます、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]マスター データ サービス アドインの Excel 用マスター データ サービスおよび Data Quality Services をアップグレードした後の SP1 バージョン[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CTP2 します。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 ダウンロードすることができます、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 バージョンのマスター データ サービス アドインを使用して Excel の[ここ](http://go.microsoft.com/fwlink/?LinkId=328664)します。  
+>  マスター データ サービスおよび Data Quality Services を [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 にアップグレードした後も、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 バージョンの Excel 用マスター データ サービス アドインを使用し続けることができます。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 ダウンロードすることができます、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 バージョンのマスター データ サービス アドインを使用して Excel の[ここ](https://go.microsoft.com/fwlink/?LinkId=328664)します。  
   
 ## <a name="terms"></a>用語  
  アドインを使用するときに、次の用語を目にすることがあります。  
@@ -62,7 +61,7 @@ ms.locfileid: "48198372"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [接続 &#40;Excel 用 MDS アドイン&#41;](connections-mds-add-in-for-excel.md)  
+-   [接続 (Excel 用 MDS アドイン)](connections-mds-add-in-for-excel.md)  
   
 -   [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
@@ -72,8 +71,8 @@ ms.locfileid: "48198372"
   
 -   [データのパブリッシュ&#40;MDS アドインの Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
--   [モデルの構築 &#40;Excel 用 MDS アドイン&#41;](building-a-model-mds-add-in-for-excel.md)  
+-   [モデルの構築 (Excel 用 MDS アドイン)](building-a-model-mds-add-in-for-excel.md)  
   
--   [セキュリティ &#40;マスター データ サービス&#41;](../security-master-data-services.md)  
+-   [セキュリティ (マスター データ サービス)](../security-master-data-services.md)  
   
   

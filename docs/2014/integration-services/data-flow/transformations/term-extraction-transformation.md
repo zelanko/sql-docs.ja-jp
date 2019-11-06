@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899935"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
@@ -56,7 +55,7 @@ ms.locfileid: "48155132"
   
  ある用語を除外一覧に追加すると、その用語を含むすべての用語 (単語または名詞句) も除外されます。 たとえば、除外一覧に 1 つの単語 *data*が含まれる場合、 *data*、 *data mining*、 *data integrity*、および *data validation* など、この単語を含むすべての用語も除外されます。 単語 *data*を含む複合語のみを除外する場合、その複合語を除外一覧に明示的に追加する必要があります。 たとえば、 *data*の出現を抽出して、 *data validation*を除外する場合は、 *data validation* を除外一覧に追加し、除外一覧から *data* が削除されていることを確認します。  
   
- 参照テーブルは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または Access データベースのテーブルである必要があります。 用語抽出変換は、個別の OLE DB 接続を使用して、参照テーブルに接続します。 詳細については、「 [OLE DB 接続マネージャー](../../connection-manager/ole-db-connection-manager.md)」をご覧ください。  
+ 参照テーブルは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または Access データベースのテーブルである必要があります。 用語抽出変換は、個別の OLE DB 接続を使用して、参照テーブルに接続します。 詳細については、「 [OLE DB 接続マネージャー](../../connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
  用語抽出変換は、完全な事前キャッシュ モードで動作します。 用語抽出変換は、実行時に参照テーブルの除外用語を読み取って独自のメモリに格納してから、変換入力行を処理します。  
   
@@ -147,7 +146,7 @@ ms.locfileid: "48155132"
   
 -   数字、句読点、および英文字の組み合わせ。 たとえば、 *A23B#99* は、用語 *A23B*を返します。  
   
--   %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ 文字。  
+-   %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
   
     > [!NOTE]  
     >  1 つ以上のピリオド (.) が含まれる頭字語は、複数の文に分割されません。  
@@ -174,11 +173,11 @@ ms.locfileid: "48155132"
   
  **[用語抽出変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [用語抽出変換エディター&#40;用語抽出 タブ&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [[用語抽出変換エディター] &#40;[用語抽出] タブ&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [用語抽出変換エディター &#40;[除外] タブ&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [[用語抽出変換エディター] &#40;[除外] タブ&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [用語抽出変換エディター&#40;詳細設定 タブ&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [[用語抽出変換エディター] &#40;[詳細設定] タブ&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   

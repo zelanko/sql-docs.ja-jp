@@ -19,33 +19,32 @@ helpviewer_keywords:
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a8aa88e4a7eaea25a7c7114599d9b9cac601ab1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900228"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  1 つの行の現在の設定を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クラスターのこのトピックで識別されるリソース プロパティ。 このビューのスタンドアロン インスタンスで実行している場合にデータが返されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  このトピックに記載されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスター リソース プロパティの現在の設定内容で 1 つの行を返します。 このビューが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスで実行されている場合、データは返されません。  
   
  これらのプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのエラー検出、障害応答時間、および正常性状態の監視のログ記録に影響を与える値を設定するために使用されます。  
   
 
 |列名|プロパティ|説明|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|BIGINT|SQL Server フェールオーバー クラスターのログ記録レベルです。 詳細ログをオンにすると、トラブルシューティングを目的とした詳細情報をエラー ログに追加できます。 次のいずれかの値です。<br /><br /> 0: ログ記録はオフです (既定)。<br /><br /> 1: エラーのみ。<br /><br /> 2: エラーおよび警告。<br /><br /> 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)します。|  
-|SqlDumperDumpFlags|BIGINT|SQLDumper ダンプ フラグによって生成されたダンプ ファイルの種類を決定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 既定の設定は 0 です。|  
+|VerboseLogging|BIGINT|SQL Server フェールオーバー クラスターのログ記録レベルです。 詳細ログをオンにすると、トラブルシューティングを目的とした詳細情報をエラー ログに追加できます。 次のいずれかの値です。<br /><br /> 0: ログ記録はオフです (既定)<br /><br /> 1: エラーのみ。<br /><br /> 2: エラーおよび警告<br /><br /> 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)します。|  
+|SqlDumperDumpFlags|BIGINT|SQLDumper ダンプ フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。|  
 |SqlDumperDumpPath|nvarchar (260)|SQLDumper ユーティリティがダンプ ファイルを生成する場所です。|  
 |SqlDumperDumpTimeOut|BIGINT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが発生した場合の、SQLDumper ユーティリティによるダンプの生成のタイムアウト値 (ミリ秒単位) です。 既定値は 0 です。|  
 |FailureConditionLevel|BIGINT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのエラーまたは再起動の条件を設定します。 既定値は、3 です。 詳細については、またはプロパティの設定を変更するを参照してください。 [FailureConditionLevel プロパティ設定の構成](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)します。|  
 |HealthCheckTimeout|BIGINT|SQL Server データベース エンジンのリソース DLL が、サーバーの状態情報を待機する時間のタイムアウト値です。この待機時間を経過すると、SQL Server のインスタンスが応答不能と見なされます。 このタイムアウト値は、ミリ秒単位で指定します。 既定値は 60000 です。 詳細については、またはこのプロパティの設定を変更するを参照してください。 [HealthCheckTimeout プロパティ設定の構成](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)します。|  
   
 ## <a name="permissions"></a>アクセス許可  
- に対する VIEW SERVER STATE 権限が必要です、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、sys.dm_os_cluster_properties を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター リソースのプロパティ設定を返します。  

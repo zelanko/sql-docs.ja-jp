@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcd118e2690414c868f105c50e1c4b92c3ef9af5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662969"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction イベント クラス
   **DTCTransaction** イベント クラスは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分散トランザクション コーディネーター (DTC) によってコーディネートされた [!INCLUDE[msCoName](../../includes/msconame-md.md)] トランザクションの状態を監視するために使用します。 このようなトランザクションには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同一インスタンスの 2 つ以上のデータベースに関連するトランザクションや、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 2 つ以上のインスタンスに関連する分散トランザクションがあります。  
@@ -50,7 +49,7 @@ ms.locfileid: "48228552"
 |**SessionLoginName**|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|`int`|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**TextData**|`ntext`|DTC 内でこのトランザクションを一意に識別する UOW のテキスト形式の表記。|1|はい|  
+|**TextData**|`ntext`|DTC 内でこのトランザクションを一意に識別する UOW のテキスト形式の表記。|1|[はい]|  
 |**TransactionID**|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**XactSequence**|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae0b4ead486206f19871144f85bf6ab7336792d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62a6b3a1f92723d43fde32060c6d4ccbbfc14a98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62699011"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access イベント クラス
   **Audit Database Object Access** イベント クラスは、スキーマなどのデータベース オブジェクトがアクセスされたときに発生します。  
@@ -54,7 +53,7 @@ ms.locfileid: "48077212"
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

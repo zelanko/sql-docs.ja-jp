@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, backward compatibility
@@ -19,12 +18,12 @@ ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60cf56b2d230435c42f1ef1402d55938e89af2b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250489"
 ---
 # <a name="replication-backward-compatibility"></a>レプリケーションの旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションのバージョン間における動作の違いについて説明します。 アップグレードを行う場合や、レプリケーション トポロジ内に複数のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在する場合は、旧バージョンとの互換性を理解することが重要です。  

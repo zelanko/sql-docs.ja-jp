@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 91c7333f47306da90d634e45f50df44d1b6ae0f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cdcbd34978738d64d52b3c70a280507b6cb0c391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052369"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "51675331"
   
 -   クライアントが接続されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが代替の名前付きパイプをリッスンする場合。  
   
- **注:** 、 [SqlServerAlias クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)継承、**配置**プロバイダー クラスのメソッド。 ただし、これは結果を返しませんによって示される、 **Provider::Put**メソッド。 詳細については、WMI のドキュメントを参照してください。  
+ **注:** [SqlServerAlias クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)継承、**配置**プロバイダー クラスのメソッド。 ただし、これは結果を返しませんによって示される、 **Provider::Put**メソッド。 詳細については、WMI のドキュメントを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10226"
@@ -158,13 +157,13 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5c643df1d6f8849cc610d9d94a12cfeecde2836d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ec55d658da67c7d6ef7e9989f310c26ef11a20d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105744"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>ゲージ (レポート ビルダーおよび SSRS)
   ゲージ データ領域は、データセット内の 1 つの値を表示する 1 次元データ領域です。 各ゲージは常に、ゲージ パネル内に配置されます。ゲージ パネルでは、子ゲージまたは隣接ゲージを追加できます。 ゲージ パネルを使用すると、フィルター選択、グループ化、並べ替えなどの共通機能を使用する 1 つのゲージ パネル内に複数のゲージを作成できます。  
@@ -181,7 +180,7 @@ ms.locfileid: "48154172"
   
  ![ゲージ要素の図](../media/gauge-elements-diagram.gif "ゲージ要素の図")  
   
- ゲージを KPI として使用する方法の詳細については、「[チュートリアル: レポートへの KPI の追加 (レポート ビルダー)](../tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
+ ゲージを KPI として使用する方法の詳細については、「[チュートリアル:レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  ゲージは、レポート パーツとしてレポートとは別にパブリッシュできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +203,13 @@ ms.locfileid: "48154172"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 放射状ゲージのオプション : 放射状、ミニゲージ付きで放射状、2 つのスケール、右上 90°、左上 90°、左下 90°、右下 90°、上 180°、下 180°、左 180°、右 180°、メーター  
+ 放射状ゲージのオプション:放射状、ミニゲージ付きで放射状、2 つのスケール、右上 90°、左上 90°、左下 90°、右下 90°、上 180°、下 180°、左 180°、右 180°、メーター。  
   
  **線形ゲージ**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 線形ゲージのオプション : 横、縦、複数バー ポインター、2 つのスケール、3 色の範囲、対数、温度計、温度計 (華氏/摂氏)、ブレット グラフ  
+ 線形ゲージのオプション:横、縦、複数バー ポインター、2 つのスケール、3 色の範囲、対数、温度計、温度計 (華氏/摂氏)、ブレット グラフ。  
   
   
 ##  <a name="AddingData"></a> ゲージへのデータの追加  
@@ -244,14 +243,14 @@ ms.locfileid: "48154172"
 -   ゲージ ポインターを右クリックし、 **[ポインターのプロパティ]** を選択します。 `Value`、ドロップダウン リストからフィールドを選択または をクリックしてフィールド式を定義、**式**(*fx*) ボタンをクリックします。  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>単一の値へのフィールドの集計  
- ゲージにフィールドが追加されたときに[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]既定では、フィールドの集計を計算します。 数値データ型は、SUM 関数を使用して集計します。 非数値データ型は COUNT 関数を使用して集計され、データセットまたはグループ内の特定の値またはフィールドのインスタンス数がカウントされます。 値フィールドのデータ型が String の場合、フィールドに数字が入っていても、ゲージでは数値を表示できません。 代わりに、ゲージでは COUNT 関数を使用して文字列フィールドを集計します。 この動作を回避するには、使用するフィールドに、書式設定された数値を格納した文字列ではなく、数値データ型を設定してください。 Visual Basic の式で CDbl または CInt 定数を使用して、文字列値を数値データ型に変換できます。 たとえば、[MyField] という名前の文字列フィールドを数値に変換するには、次の式を作成します。  
+ ゲージにフィールドが追加されると、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は既定でフィールドの集計を行います。 数値データ型は、SUM 関数を使用して集計します。 非数値データ型は COUNT 関数を使用して集計され、データセットまたはグループ内の特定の値またはフィールドのインスタンス数がカウントされます。 値フィールドのデータ型が String の場合、フィールドに数字が入っていても、ゲージでは数値を表示できません。 代わりに、ゲージでは COUNT 関数を使用して文字列フィールドを集計します。 この動作を回避するには、使用するフィールドに、書式設定された数値を格納した文字列ではなく、数値データ型を設定してください。 Visual Basic の式で CDbl または CInt 定数を使用して、文字列値を数値データ型に変換できます。 たとえば、[MyField] という名前の文字列フィールドを数値に変換するには、次の式を作成します。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
  集計式の詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
 ### <a name="defining-a-group-on-a-gauge"></a>ゲージでのグループの定義  
- フィールドをゲージに追加すると、1 つのデータ グループを追加できます。 ゲージは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] にある他のすべてのデータ領域とは異なり、1 つのデータ領域に複数のグループを表示できます。 ゲージでグループ式を定義してグループを追加するときの操作は、Tablix データ領域で行グループを追加する場合と同じです。 ただし、グループを追加した場合、最後のグループの値のみがポインター値としてゲージに表示されます。 たとえば、年度に関するグループ化式を追加した場合、データセット内の昨年の売上集計値を表す値がポインターによって指し示されます。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
+ フィールドをゲージに追加すると、1 つのデータ グループを追加できます。 ゲージは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]にある他のすべてのデータ領域とは異なり、1 つのデータ領域に複数のグループを表示できます。 ゲージでグループ式を定義してグループを追加するときの操作は、Tablix データ領域で行グループを追加する場合と同じです。 ただし、グループを追加した場合、最後のグループの値のみがポインター値としてゲージに表示されます。 たとえば、年度に関するグループ化式を追加した場合、データセット内の昨年の売上集計値を表す値がポインターによって指し示されます。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
  表またはリスト内に複数のゲージを表示したり、グループ別に集計したデータを表示する場合に、グループをゲージに追加できます。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -287,9 +286,9 @@ ms.locfileid: "48154172"
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  レポートでゲージを扱う際の方法、ゲージでデータを効果的に表示する方法、およびゲージとその要素を追加および構成する方法の詳細な手順を紹介しているトピックの一覧を次に示します。  
   
--   [レポートにゲージを追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [レポートへのゲージの追加 (レポート ビルダーおよび SSRS)](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [ゲージに最小値または最大値を設定&#40;レポート ビルダーおよび SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [ゲージへの最小値または最大値の設定 (レポート ビルダーおよび SSRS)](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [ゲージにスナップ間隔を設定&#40;レポート ビルダーおよび SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
@@ -302,9 +301,9 @@ ms.locfileid: "48154172"
 |||  
 |-|-|  
 |項目|定義|  
-|[ゲージのスケールの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|ゲージのスケールの書式設定に関する一般情報と、放射状および線形ゲージのスケールの書式設定オプションに関する詳細情報について説明します。|  
-|[ゲージ ポインターの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|ゲージのポインターの書式設定に関する一般情報と、放射状および線形ゲージで使用可能なポインター スタイルの書式設定オプションに関する詳細情報について説明します。|  
-|[ゲージの範囲の書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|ゲージ上の値の重要なサブセクションを示したり、ポインター値が特定の値範囲に入る時期を視覚的に示したりするゲージ上の範囲の書式設定に関する情報について説明します。|  
+|[ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|ゲージのスケールの書式設定に関する一般情報と、放射状および線形ゲージのスケールの書式設定オプションに関する詳細情報について説明します。|  
+|[ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|ゲージのポインターの書式設定に関する一般情報と、放射状および線形ゲージで使用可能なポインター スタイルの書式設定オプションに関する詳細情報について説明します。|  
+|[ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|ゲージ上の値の重要なサブセクションを示したり、ポインター値が特定の値範囲に入る時期を視覚的に示したりするゲージ上の範囲の書式設定に関する情報について説明します。|  
   
   
 ## <a name="see-also"></a>参照  

@@ -1,20 +1,18 @@
 ---
 title: Stretch Database の拡張イベント | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1fd033b3a575a5841c062a938688a30c7fc2c44
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fb91bbf75b64123719c4b580dd31977363842feb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136147"
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database の拡張イベント
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

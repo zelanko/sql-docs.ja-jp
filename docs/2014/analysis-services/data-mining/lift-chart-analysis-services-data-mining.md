@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
@@ -18,15 +17,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084309"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>リフト チャート (Analysis Services - データ マイニング)
-  A**リフト チャート**グラフィカルにマイニング モデルと比較した場合は、ランダムな推測に対する改善し、の観点で変化を測定する*リフト*スコア。 データ セットのさまざまな部分のリフト スコアとさまざまなモデルのリフト スコアを比較することにより、どのモデルが最適であるか、またデータ セットのケースの何パーセントがモデルの予測の適用から利点を得るかを調べることができます。  
+  A**リフト チャート**グラフィカルにマイニング モデルと比較した場合は、ランダムな推測に対する改善し、の観点で変化を測定する*リフト*スコア。 データ セットのさまざまな部分とさまざまなモデルのリフト スコアを比較すると、どのモデルが最適で、データ セット内のケースのどの割合が、モデルの予測を適用するメリットを確認できます。  
   
  リフト チャートにより、同じ予測属性を含む複数のモデルの予測の精度を比較できます。 また、1 つの結果 (予測属性の 1 つの値) またはすべての結果 (指定された属性のすべての値) のどちらかの予測精度を評価することもできます。  
   
@@ -71,8 +70,8 @@ ms.locfileid: "48119402"
 |メーリング対象全員|0.71|47.40%|61.38%|  
 |30 歳未満のメーリング対象|0.85|51.81%|46.62%|  
 |ランダム推測モデル||31.00%||  
-|理想モデル : メーリング対象全員||62.48%||  
-|理想モデル : 30 歳未満のメーリング対象||65.28%||  
+|理想モデル:メーリング対象全員||62.48%||  
+|理想モデル:30 歳未満のメーリング対象||65.28%||  
   
  [トップに戻る](#bkmk_Top)  
   
@@ -112,12 +111,12 @@ ms.locfileid: "48119402"
   
  1 つのリフト チャートに複数のモデルを追加することができます。ただし、すべてのモデルに同じ予測可能な属性が必要です。 属性を共有しないモデルは、 **[入力]** タブの選択で使用できません。  
   
- タイム シリーズ モデルは、リフト チャートまたは利益チャートで表示できません。 タイム シリーズ予測の精度の測定は、履歴データの一部を取っておき、そのデータを予測と比較する方法が一般的です。 詳細については、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+ タイム シリーズ モデルは、リフト チャートまたは利益チャートで表示できません。 タイム シリーズ予測の精度の測定は、履歴データの一部を取っておき、そのデータを予測と比較する方法が一般的です。 詳細については、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
 ### <a name="related-content"></a>関連コンテンツ  
  [トップに戻る](#bkmk_Top)  
   
-## <a name="see-also"></a>参照  
- [テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>関連項目  
+ [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
   
   

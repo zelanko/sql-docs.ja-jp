@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62a5d85272aae56b7f54b780b863642b5ddac6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f8937658fd7330148f8bcf4e0f5e4db5463e7f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071348"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  構成、修復、または削除、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] PowerPivot 構成ツールを使用します。  
+  PowerPivot 構成ツールを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を構成、修復、または削除します。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードでは、SharePoint 2010 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールと SharePoint 2013 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールがインストールされます。 このトピックでは、2 つのツールの一般的な用途と相違点について説明します。  
   
@@ -41,12 +40,12 @@ ms.locfileid: "48102112"
   
 -   Analysis Services インスタンスでサーバー管理者である必要があります (SharePoint 2010 のみ)。  
   
--   ファームの構成データベースで db_owner である必要があります。  
+-   ファームの構成データベースに対する db_owner 権限があります。  
   
 -   構成ツールを使用するための TCP/IP ポートの要件はないため、構成ツールに対応するようファイアウォールを構成する必要はありません。 構成ツールを使用するには、Web アプリケーションおよび共有サービスを SharePoint プラットフォームの一部として使用できることが必要です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー用にファイアウォールを構成することが必要な場合があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
 ##  <a name="bkmk_twoversions"></a> 構成ツールの 2 つのバージョン  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]セットアップ ウィザードは、SharePoint 2010 用 PowerPivot 構成ツールと SharePoint 2013 用 PowerPivot 構成ツールがインストールされます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードでは、SharePoint 2010 用 PowerPivot 構成ツールと SharePoint 2013 用 PowerPivot 構成ツールがインストールされます。  
   
  このツールは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] または [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]インスタンスでのみ使用できます。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] インストールでツールを使用しないでください。  
   
@@ -82,17 +81,17 @@ ms.locfileid: "48102112"
   
 -   [PowerPivot for SharePoint 用 PowerShell リファレンス](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
-> [!NOTE]  
+> [!NOTE]
 >  このツールでは、Reporting Services は構成できません。 Reporting Services を SharePoint 環境に追加する場合は、Reporting Services を個別にインストールし、構成する必要があります。 詳細については、以下を参照してください。  
->   
+> 
 >  -   [インストールの Reporting Services の SharePoint Mode for SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)します。  
 > -   [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
 ##  <a name="bmkm_start_tool"></a> PowerPivot 構成ツールのいずれかを開始します。  
   
-1.  **開始**画面で「 `powerpivot`  
+1.  **開始**画面で `powerpivot`  
   
-     **開始**画面で「`powerpivot`かまたは、**開始**] メニューの [] をクリックして**すべてのプログラム** をクリック[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**次のいずれかをクリックします。  
+     **開始**画面で`powerpivot`かまたは、**開始** メニューの [] をクリックして**すべてのプログラム** をクリック[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、をクリックして**構成ツール**次のいずれかをクリックします。  
   
     -   **PowerPivot 構成ツール**  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48102112"
   
      ![2 つの PowerPivot 構成ツール](../media/as-powerpivot-configtools-bothicons.gif "2 つの PowerPivot 構成ツール")  
   
-     **注:** このツールは、ローカル サーバーに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がインストールされている場合にのみ使用できます。  
+     **注:** ツールは、使用可能な場合にのみ[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]ローカル サーバーにインストールされます。  
   
 2.  構成ツールが起動されると、インストールのステータスがチェックされ、インストールに有効なタスクが提供されます。  
   
@@ -123,9 +122,9 @@ ms.locfileid: "48102112"
  [実行] をクリックすると、すべてのアクションがバッチ モードで処理されます。 各アクションはタスクの一覧で別個のアイテムとして表示されますが、タスクに含まれるすべてのアクションが一度に処理されます。 検証チェックに合格したアクションのみが処理されます。 検証チェックに合格するために、いくつかの入力値を追加または変更することが必要になる場合があります。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [PowerPivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)ファームにある既存のインストールをアップグレードするワークフローについて説明します。  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) ファームにある既存のインストールをアップグレードするためのワークフローについて説明します。  
   
- [PowerPivot for SharePoint をアンインストール](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)の SharePoint サービス、ソリューション、およびアプリケーション ページをファームから PowerPivot を削除するワークフローについて説明します。  
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) PowerPivot for SharePoint サービス、ソリューション、およびアプリケーション ページをファームから削除するためのワークフローについて説明します。  
   
  [Windows PowerShell を使用した PowerPivot の構成](power-pivot-configuration-using-windows-powershell.md)  
   

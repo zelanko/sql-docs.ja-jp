@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 092bc63ac93c58d1a37f7fa52fde4fd9bf1d8486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d570ce785e575f607e49dcc10f5bf4aadca741ae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753364"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>CLR と XML を使用した連絡先の作成
   SQL Server の Contact サンプルは、基礎となる AdventureWorks2012 サンプル データベースに新しい機能の層を追加する便利なユーティリティをいくつか提供します。 1 つ目のユーティリティは、AdventureWorks2012 データベースに関係した、さまざまな人々の連絡先のレコードを作成します。 連絡先の情報は XML を使用して指定され、XML を作成してデータベースの適切なテーブルに配置するための C# ベースのストアド プロシージャまたは VB ストアド プロシージャに渡されます。  
@@ -25,9 +23,9 @@ ms.locfileid: "48212412"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](http://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](http://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -1386,14 +1384,14 @@ End Class
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール スクリプト (`Install.sql`) は、アセンブリを展開し、データベースにストアド プロシージャを作成します。  
   
-```tsql  
+```sql  
 use AdventureWorks  
 GO  
   
 DECLARE @contactID Int;  
 DECLARE @customerID Int;  
   
-EXEC dbo.usp_CreateContact N'<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Individual>  
+EXEC dbo.usp_CreateContact N'<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Individual>  
 <Title>Dr.</Title>  
 <FirstName>Kim</FirstName>  
 <LastName>Smith</LastName>  
@@ -1401,7 +1399,7 @@ EXEC dbo.usp_CreateContact N'<Contact xmlns="http://schemas.microsoft.com/sqlser
 <PasswordHash>F1AF7A6028F2FEA29292C09603F1C209BB84B518</PasswordHash>  
 <PasswordSalt>2Hdr7Jc=</PasswordSalt>  
 <Demographics>  
-<IndividualSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey">  
+<IndividualSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey">  
 <TotalChildren>2</TotalChildren>  
 <NumberChildrenAtHome>1</NumberChildrenAtHome>  
 </IndividualSurvey>  
@@ -1413,7 +1411,7 @@ PRINT 'Individual Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Individual Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Store>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Store>  
 <FirstName>Catherine</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>catherine@proseware.com</EmailAddress>  
@@ -1428,7 +1426,7 @@ PRINT 'Store Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Store Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Vendor>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Vendor>  
 <FirstName>Amy</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>amy@proseware.com</EmailAddress>  
@@ -1443,7 +1441,7 @@ PRINT 'Vendor Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Vendor Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Employee>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Employee>  
 <FirstName>Ramona</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>ramona@proseware.com</EmailAddress>  
@@ -1554,7 +1552,7 @@ DROP ASSEMBLY Contacts;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

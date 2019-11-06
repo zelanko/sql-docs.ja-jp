@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923131"
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
 A*セルセット*多次元データに対するクエリの結果です。 軸、以下の 4 つの軸は、通常、通常 2 つまたは 3 つのコレクションで構成されます。 *軸*を探すか、キューブ内の特定の値をフィルター処理に使用される 1 つまたは複数のディメンションのメンバーのコレクションです。  
@@ -33,13 +32,13 @@ A*セルセット*多次元データに対するクエリの結果です。 軸�
   
 -   営業担当者  
   
--   Geography (自然階層): 大陸、国、州、およびなど  
+-   大陸、国、州、および、geography (自然階層)  
   
--   四半期、四半期、月、日  
+-   四半期四半期、月、日  
   
 -   Years  
   
--   メジャー、Sales、PercentChange、BudgetedSales  
+-   メジャーの Sales、PercentChange、BudgetedSales  
   
 -   Products  
   
@@ -50,19 +49,19 @@ A*セルセット*多次元データに対するクエリの結果です。 軸�
   
  このセル セットの特性は次のとおりです。  
   
--   軸ディメンション: 四半期数、販売員、Geography  
+-   軸ディメンション:四半期数、販売員、Geography  
   
--   ディメンションをフィルター処理: メジャー、年の製品  
+-   ディメンションをフィルター処理します。メジャー、年の製品  
   
--   2 つの軸: (x、または軸 0) の列と行 (y または軸 1)  
+-   2 つの軸:(X、または軸 0) の列と行 (y または軸 1)  
   
 -   x 軸: 入れ子になった 2 つの販売員と Geography ディメンションは、  
   
--   y 軸: 四半期のディメンション  
+-   y 軸:ディメンションの四半期  
   
- X 軸が 2 つの入れ子になったディメンション: 販売員と Geography です。 Geography 型から 4 つのメンバーが選択されている: シアトル、ボストン、米国南部、および日本です。 営業担当者から 2 つのメンバーが選択されている: バレンタイン"と"Nash します。 この軸 (2 * 8 = 4) の 8 つの位置の合計が生成されます。  
+ X 軸では、2 つの入れ子になったディメンションがあります。販売員と Geography です。 Geography 型から 4 つのメンバーが選択されます。シアトル、ボストン、米国南部、および日本です。 2 つのメンバーは、営業担当者から選択されます。バレンタイン Nash. この軸 (2 * 8 = 4) の 8 つの位置の合計が生成されます。  
   
- 各座標が 2 つのメンバーの位置として表されます: Geography ディメンションから別の販売員のディメンションと 1 つ。  
+ 各座標は、販売員のディメンションから 1 つと、Geography ディメンションからの 2 つのメンバーの位置として表されます。  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -76,9 +75,9 @@ A*セルセット*多次元データに対するクエリの結果です。 軸�
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- セル セット、セル、軸、および位置はすべてで表される ADO MD で対応するオブジェクト:[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、および[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ セル セット、セル、軸、および位置はすべてで表される ADO MD で対応するオブジェクト。[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、および[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

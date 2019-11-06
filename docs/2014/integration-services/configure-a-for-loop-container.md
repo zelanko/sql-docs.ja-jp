@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2adcb3e79e3733b5fb8151bfa7f65e7bebb4d910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe51deb631f0c3d794bdce3f05af61b5e030d5e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126167"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060827"
 ---
 # <a name="configure-a-for-loop-container"></a>For ループ コンテナーを構成する
-  この手順では、**[For ループ エディター]** ダイアログ ボックスを使用して、For ループ コンテナーを構成する方法について説明します。  
+  この手順では、 **[For ループ エディター]** ダイアログ ボックスを使用して、For ループ コンテナーを構成する方法について説明します。  
   
- For ループ コンテナーの例については、bimonkey.com の「 [失敗しない SSIS ループ](http://go.microsoft.com/fwlink/?LinkId=240295) 」を参照してください。  
+ For ループ コンテナーの例については、bimonkey.com の「 [失敗しない SSIS ループ](https://go.microsoft.com/fwlink/?LinkId=240295) 」を参照してください。  
   
 ### <a name="to-configure-the-for-loop-container"></a>For ループ コンテナーを構成するには  
   

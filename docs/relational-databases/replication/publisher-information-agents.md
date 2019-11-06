@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab01e5745293bd4e50f59358b17a0fa5d06d9e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785240"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769734"
 ---
 # <a name="publisher-information-agents"></a>パブリッシャー情報、[エージェント]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[エージェント]** タブには、パブリッシャーに関連するエージェントおよびメンテナンス ジョブに関する詳細情報が表示されます。  
   
 -   すべてのパブリケーションで表示されるスナップショット エージェント  
@@ -46,16 +46,16 @@ ms.locfileid: "47785240"
   
  これらのジョブの詳細については、「[Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)」 (レプリケーション エージェントの管理) を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  エージェントまたはジョブに関する情報を表示するには、 **[エージェントとジョブの種類]** メニューから選択します。 エージェントまたはジョブに関する詳細情報やタスクを調べるには、対象のエージェントまたはジョブの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
--   **[並べ替え]**: **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
+-   **[並べ替え]** : **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
--   **[表示する列の選択]**: **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
+-   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
+-   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
--   **[フィルターのクリア]**: グリッドのフィルター設定をすべてクリアします。  
+-   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47785240"
  **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   Error  
   
 -   [再試行]  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47785240"
  **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   Error  
   
 -   [再試行]  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47785240"
  **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   Error  
   
 -   [再試行]  
   
@@ -176,7 +176,7 @@ ms.locfileid: "47785240"
  **ステータス**  
  それぞれのジョブの状態。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   Error  
   
 -   [再試行]  
   
@@ -198,8 +198,7 @@ ms.locfileid: "47785240"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

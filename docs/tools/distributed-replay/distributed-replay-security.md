@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay のセキュリティ |Microsoft Docs
+title: 分散再生 Security |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6279a9ff5dd965a1ca2920c13c993bf364736355
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079849"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ ms.locfileid: "51677751"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client サービスを一連のコンピューターにインストールした後、それらのサービス アカウントに使用されるセキュリティ プリンシパルに、トレース ワークロードの再生対象である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上の sysadmin サーバー ロールを付与する必要があります。 この手順は、Distributed Replay のセットアップで自動的に実行されません。  
   
 ## <a name="data-protection"></a>データ保護  
- Distributed Replay 環境では、次のユーザー アカウントに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対象サーバー インスタンス、入力トレース データ、および結果トレース ファイルへのフル アクセスが付与されます。  
+ Distributed Replay 環境では、次のユーザー アカウントに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のターゲット サーバー インスタンス、入力トレース データ、および結果トレース ファイルへのフル アクセスが付与されます。  
   
 -   管理ツールの実行に使用される対話ユーザー アカウント。  
   

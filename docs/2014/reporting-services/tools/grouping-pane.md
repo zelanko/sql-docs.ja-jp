@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -15,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 70301dae9505cce59e924cd37149e32314f6868d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100268"
 ---
 # <a name="grouping-pane"></a>グループ化ペイン
   グループ化ペインには、行グループと、現在選択されている Tablix データ領域の列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインは、行グループ ペインと列グループ ペインで構成されています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -35,7 +34,7 @@ ms.locfileid: "48204672"
   
 -   **既定値です。** グループの追加、編集、削除を行うには、既定モードを使用します。 レポート データ ペインからフィールドをドラッグし、グループ階層に挿入することによって、親グループ、子グループ、および詳細グループを追加できます。 隣接するグループを追加するには、 **[グループの追加]** ショートカットを使用する必要があります。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
--   **詳細設定**。 行グループと列グループのすべてのメンバーを表示し、静的メンバーのプロパティを設定するには、 **詳細設定モード** を使用します。 グループを作成したり合計を追加したりすると、Tablix データ領域で各レポート ページの行と列の表示方法を制御するプロパティが自動的に設定されます。 これらのプロパティを手動で調整するには、Tablix メンバーのプロパティを設定する必要があります。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
+-   **詳細設定**。 行グループと列グループのすべてのメンバーを表示し、静的メンバーのプロパティを設定するには、 **詳細設定モード** を使用します。 グループを作成したり合計を追加したりすると、Tablix データ領域で各レポート ページの行と列の表示方法を制御するプロパティが自動的に設定されます。 これらのプロパティを手動で調整するには、Tablix メンバーのプロパティを設定する必要があります。 詳細については、「 [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   
 ## <a name="default-mode"></a>既定モード  
  既定モードでは、行グループ ペインと列グループ ペインにすべての親グループ、子グループ、および隣接グループの階層ビューが表示されます。 子グループは親グループの下にインデント表示されます。 隣接グループは、その兄弟グループと同じインデント レベルに表示されます。 次の図に、行グループと隣接列グループが入れ子になった Tablix データ領域を示します。  
@@ -70,7 +69,7 @@ ms.locfileid: "48204672"
   
 -   `Hidden`。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
   
--   **ToggleItem。** 文字列です。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
+-   **ToggleItem。** [String]。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
   
  Tablix データ領域でのこれらの動作を制御する方法の詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   
@@ -80,9 +79,9 @@ ms.locfileid: "48204672"
   
 -   **(Static)** 静的メンバーにはヘッダー セルがなく、非表示静的と呼ばれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータの並べ替え&#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

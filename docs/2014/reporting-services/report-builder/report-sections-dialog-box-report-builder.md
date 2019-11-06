@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d3aab1e36d51df8eabf14bbd5fb4ecf6824591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107670"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>[レポート セクション] ダイアログ ボックス (レポート ビルダー)
   レポートを開くと、レポート ビルダーにより、レポートにレポート定義言語 (RDL) の **\<Section>** 要素が 1 つだけ含まれていることが確認されます。 複数の **\<Section>** 要素を含むレポートを開くことはサポートされていません。  
@@ -29,7 +28,7 @@ ms.locfileid: "48050554"
   
  続行するには、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [レポート ビルダー ダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>関連項目  
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

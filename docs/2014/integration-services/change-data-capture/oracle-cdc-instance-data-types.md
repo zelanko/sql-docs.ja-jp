@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4483646883ede33ae3203fbe8335afb3ed91756
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d72ece429ae04e8cb6ee3af3acd872fa751d3a57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835454"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC インスタンスのデータ型
   Oracle CDC インスタンスでは、ほとんどの Oracle データ型がサポートされます。 次のセクションでは、サポートされるデータ型とサポートされないデータ型について説明します。  
@@ -74,7 +73,7 @@ ms.locfileid: "48135352"
 -   VARRAY  
   
 ## <a name="see-also"></a>参照  
- [For Oracle by Attunity の change Data Capture Designer](change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Attunity の Change Data Capture Designer for Oracle](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC インスタンス](the-oracle-cdc-instance.md)  
   
   

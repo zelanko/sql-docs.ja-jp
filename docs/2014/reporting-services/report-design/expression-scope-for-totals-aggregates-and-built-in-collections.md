@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b8d9838306090cf219fed799c5982481ac3365a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105917"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)
   式の作成に関して、*スコープ*という用語は、さまざまな文脈で用いられています。 スコープは、式を評価するのに使用するデータ、表示されたページのテキスト ボックスのセット、または表示と非表示を切り替えることのできるレポート アイテムのセットを示します。 *スコープ* という用語は、式の評価、集計関数の構文、条件付き表示に関連したトピックと、これらの領域に関連したエラー メッセージで使用されます。 次の説明を参考にして、どの意味で *スコープ* が適用されているかを区別してください。  
@@ -71,7 +70,7 @@ ms.locfileid: "48204882"
      次の式は、SellStartDate と LastReceiptDate の間にある年数を生成します。 これらのフィールドは、DataSet1 と DataSet2 の異なる 2 つのデータセットに含まれます。 集計関数である [First 関数 &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-first-function.md) は、DataSet1 にある SellStartDate の最初の値と、DataSet2 にある LastReceiptDate の最初の値を返します。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **ドメイン スコープ** 同期スコープとも呼ばれます。 入れ子になったデータ領域の式の評価に適用されるデータ スコープの種類。 ドメイン スコープはすべてのグループ インスタンスの集計を示すのに使用されるため、入れ子になったインスタンスを揃えて簡単に比較できます。 たとえば、値を並べるには、テーブルに埋め込まれたスパークラインの範囲と高さを揃えます。  
@@ -133,7 +132,7 @@ ms.locfileid: "48204882"
 ##  <a name="Indicators"></a> インジケーターの範囲の同期  
  インジケーターのセットに使用するデータ値を指定するには、スコープを指定する必要があります。 インジケーターを含むデータ領域のレイアウトに応じて、スコープまたはコンテナー スコープを指定します。 たとえば、売上カテゴリに関連付けられたグループ ヘッダー行で、矢印セット (上、下、横向き) はしきい値に対して相対的な売上値を示すことができます。 コンテナー スコープは、インジケーターを含んでいるテーブルまたはマトリックスの名前です。  
   
- 詳細については、「[Set Synchronization Scope &#40;Report Builder and SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)」 (同期スコープの設定 &#40;レポート ビルダーおよび SSRS&#41;) を参照してください。  
+ 詳細については、「 [同期スコープの設定 (レポート ビルダーおよび SSRS)](set-synchronization-scope-report-builder-and-ssrs.md)」を参照してください。  
   
   
   
@@ -151,27 +150,27 @@ ms.locfileid: "48204882"
   
  Tablix データ領域で、テキスト ボックスをクリックしてテーブルを展開し詳細なデータを表示するドリルダウン効果を作成するには、グループの **[表示]** プロパティを設定し、コンテナー グループに関連付けられたグループ ヘッダー内のテキスト ボックスを切り替えとして選択する必要があります。  
   
- 詳細については、「[アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
   
   
   
 ##  <a name="Sort"></a> 並べ替え順序を同期する並べ替え式の指定  
  対話的な並べ替えボタンをテーブル列に追加すると、共通のコンテナー スコープを持つ複数のアイテムの並べ替えを同期できます。 たとえば、並べ替えボタンをマトリックス内の列ヘッダーに追加し、コンテナー スコープをマトリックスにバインドされたデータセットの名前として指定します。 並べ替えボタンをクリックすると、マトリックス行が並べ替えられるだけでなく、同じデータセットにバインドされたグラフのグラフ系列グループも並べ替えられます。 この方法により、そのデータセットに依存するすべてのデータ領域を同期して、同じ並べ替え順で表示することができます。  
   
- 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
   
   
 ##  <a name="Nulls"></a> セルの NULL 値または 0 の非表示  
- 多くのレポートでは、グループにスコープが設定された計算でゼロ (0) または NULL 値を含むセルが多数生成される場合があります。 レポートを見やすくするためには、集計値が 0 の場合に空白を返す式を追加します。 詳細についてを参照してください「の例を抑制する Null またはゼロ値」[式の例&#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)します。  
+ 多くのレポートでは、グループにスコープが設定された計算でゼロ (0) または NULL 値を含むセルが多数生成される場合があります。 レポートを見やすくするためには、集計値が 0 の場合に空白を返す式を追加します。 詳細については、「 [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)のように、使用するデータセットの名前を指定する必要があります。  
   
   
   
 ## <a name="see-also"></a>参照  
- [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
+ [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [再帰型階層グループを作成する&#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [テキストとプレース ホルダーの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

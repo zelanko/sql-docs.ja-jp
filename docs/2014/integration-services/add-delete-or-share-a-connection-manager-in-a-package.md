@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fba1fff373ad7d9ea4371715bcc2ca2b72a38477
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062008"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>パッケージの接続マネージャーを追加、削除、または共有する
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] リレーショナル データベースなどのさまざまなデータ ソースに接続するための各種接続マネージャーが含まれています[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース、および CSV、XML 形式のファイル。 接続マネージャーは、パッケージ レベルまたはプロジェクト レベルで作成できます。 プロジェクト レベルで作成した接続マネージャーは、プロジェクト内のすべてのパッケージで使用できます。 一方、パッケージ レベルで作成した接続マネージャーは、特定のパッケージでのみ使用できます。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、リレーショナル データベース、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、CSV 形式のファイル、XML 形式のファイルなど、さまざまなデータ ソースに接続するための各種接続マネージャーがあります。 接続マネージャーは、パッケージ レベルまたはプロジェクト レベルで作成できます。 プロジェクト レベルで作成した接続マネージャーは、プロジェクト内のすべてのパッケージで使用できます。 一方、パッケージ レベルで作成した接続マネージャーは、特定のパッケージでのみ使用できます。  
   
  データ ソースの代わりにプロジェクト レベルで作成された接続マネージャーを使用して、ソースへの接続を共有します。 プロジェクト レベルで接続マネージャーを追加するには、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトでプロジェクト配置モデルを使用する必要があります。 このモデルを使用するようにプロジェクトが構成されている場合、 **[接続マネージャー]** フォルダーが **ソリューション エクスプローラー**に表示され、 **[データ ソース]** フォルダーが **ソリューション エクスプローラー**から削除されます。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48148312"
   
     -   パッケージに追加する接続マネージャーの種類をクリックします。  
   
-         — または —  
+         \- または -  
   
     -   追加する種類が一覧にない場合は、 **[新しい接続]** をクリックして **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開き、接続マネージャーの種類を選択してから **[OK]** をクリックします。  
   
@@ -77,16 +76,16 @@ ms.locfileid: "48148312"
     |[Excel 接続マネージャー](connection-manager/excel-connection-manager.md)|[Excel 接続マネージャー エディター](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[複数ファイル接続マネージャー](connection-manager/multiple-files-connection-manager.md)|[[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)|[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター&#40;列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)|[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
+    |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([列] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)|[FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[HTTP 接続マネージャー](connection-manager/http-connection-manager.md)|[HTTP 接続マネージャー エディター&#40;サーバー ページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 接続マネージャー エディター&#40;プロキシ ページ&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[HTTP 接続マネージャー](connection-manager/http-connection-manager.md)|[[HTTP 接続マネージャー エディター] ([サーバー] ページ)](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [[HTTP 接続マネージャー エディター] ([プロキシ] ページ)](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ 接続マネージャー](connection-manager/msmq-connection-manager.md)|[MSMQ 接続マネージャー エディター](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)|[ODBC 接続マネージャーの UI リファレンス](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](configure-ole-db-connection-manager.md)|  
     |[SMO 接続マネージャー](connection-manager/smo-connection-manager.md)|[SMO 接続マネージャー エディター](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[SMTP 接続マネージャー](connection-manager/smtp-connection-manager.md)|[SMTP 接続マネージャー エディター](../../2014/integration-services/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 接続マネージャー エディター&#40;接続 ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 接続マネージャー エディター&#40;すべて ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
+    |[SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)|[[SQL Server Compact Edition 接続マネージャー エディター] &#40;[接続] ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [[SQL Server Compact Edition 接続マネージャー エディター] &#40;[すべて] ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[WMI 接続マネージャー](connection-manager/wmi-connection-manager.md)|[WMI 接続マネージャー エディター](../../2014/integration-services/wmi-connection-manager-editor.md)|  
   
      **[接続マネージャー]** 領域に、追加した接続マネージャーが一覧表示されます。  
@@ -113,16 +112,16 @@ ms.locfileid: "48148312"
     |[Excel 接続マネージャー](connection-manager/excel-connection-manager.md)|[Excel 接続マネージャー エディター](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[複数ファイル接続マネージャー](connection-manager/multiple-files-connection-manager.md)|[[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)|[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター&#40;列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)|[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
+    |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([列] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)|[FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[HTTP 接続マネージャー](connection-manager/http-connection-manager.md)|[HTTP 接続マネージャー エディター&#40;サーバー ページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 接続マネージャー エディター&#40;プロキシ ページ&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[HTTP 接続マネージャー](connection-manager/http-connection-manager.md)|[[HTTP 接続マネージャー エディター] ([サーバー] ページ)](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [[HTTP 接続マネージャー エディター] ([プロキシ] ページ)](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ 接続マネージャー](connection-manager/msmq-connection-manager.md)|[MSMQ 接続マネージャー エディター](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)|[ODBC 接続マネージャーの UI リファレンス](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](configure-ole-db-connection-manager.md)|  
     |[SMO 接続マネージャー](connection-manager/smo-connection-manager.md)|[SMO 接続マネージャー エディター](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[SMTP 接続マネージャー](connection-manager/smtp-connection-manager.md)|[SMTP 接続マネージャー エディター](../../2014/integration-services/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 接続マネージャー エディター&#40;接続 ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 接続マネージャー エディター&#40;すべて ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
+    |[SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)|[[SQL Server Compact Edition 接続マネージャー エディター] &#40;[接続] ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [[SQL Server Compact Edition 接続マネージャー エディター] &#40;[すべて] ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[WMI 接続マネージャー](connection-manager/wmi-connection-manager.md)|[WMI 接続マネージャー エディター](../../2014/integration-services/wmi-connection-manager-editor.md)|  
   
      追加した接続マネージャーが、 **ソリューション エクスプローラー** の **[接続マネージャー]** ノードの下に表示されます。 また、プロジェクト内のすべてのパッケージの **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブにも表示されます。 このタブに表示される接続マネージャーの名前の前には **(プロジェクト)** と表記され、パッケージ レベルの接続マネージャーと区別されます。  

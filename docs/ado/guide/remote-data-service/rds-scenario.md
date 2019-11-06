@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 665afeb4be263ae0772557d2d2f30e112596f289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922448"
 ---
 # <a name="rds-scenario"></a>RDS のシナリオ
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- アドレス帳アプリケーションがリモート データ サービス (RDS) を使用して、簡単なデータ対応の Web アプリケーションを構築する方法を示すシナリオ-オンラインのコーポレート アドレス帳。 このシナリオは Microsoft Visual Basic Scripting Edition (VBScript) に役立ちますを希望する COM プログラマが RDS を使用してデータ対応の ActiveX コントロールを使用する方法について説明し開発者向けのデータ中心の Web アプリケーションのビルド経験豊富なソフトウェア。  
+ アドレス帳アプリケーションは、リモート データ サービス (RDS) を使用して単純なデータ対応 Web アプリケーション - オンラインのコーポレート アドレス帳を構築する方法を示すシナリオです。 このシナリオは Microsoft Visual Basic Scripting Edition (VBScript) に役立ちますを希望する COM プログラマが RDS を使用してデータ対応の ActiveX コントロールを使用する方法について説明し開発者向けのデータ中心の Web アプリケーションのビルド経験豊富なソフトウェア。  
   
  このシナリオでは、ActiveX コントロールで基本的な HTML タグのレイアウト、DHTML データ バインディングの使用方法、およびプログラムを使用する方法がわかっている前提としています。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "51559439"
   
 -   [アドレス帳のナビゲーション ボタン](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アドレス帳アプリケーションのシステム要件](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

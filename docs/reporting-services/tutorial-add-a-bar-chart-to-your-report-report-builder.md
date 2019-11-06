@@ -9,11 +9,11 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041185"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
@@ -49,7 +49,7 @@ ms.locfileid: "52712443"
   
      ![レポート ビルダーの作業の開始](../reporting-services/media/rb-getstarted.png "レポート ビルダーの作業の開始")  
   
-     **[作業の開始]** ダイアログ ボックスが表示されない場合は、 **[ファイル]** >**[新規作成]** をクリックします。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。 
+     **[作業の開始]** ダイアログ ボックスが表示されない場合は、 **[ファイル]**  > **[新規作成]** をクリックします。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。 
       
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52712443"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2015, CAST(207000. AS money) AS SalesYear2014  
     ```  
   
-8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
+8.  (省略可) [実行] ボタン ( **!** ) をクリックして、グラフの基になるデータを確認します。  
   
 9. **[次へ]** をクリックします。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "52712443"
   
 2.  グラフの底辺に沿った横軸をクリックして選択します。  
   
-3.  **[ホーム]** タブの **[数値]** グループで、**[通貨]** をクリックします。 横軸ラベルが通貨に変更されます。  
+3.  **[ホーム]** タブの **[数値]** グループで、 **[通貨]** をクリックします。 横軸ラベルが通貨に変更されます。  
   
 3.  (省略可) 小数点以下の桁を削除します。 **[通貨]** ボタンの近くにある **[小数点表示桁下げ]** ボタンを 2 回クリックします。  
   
@@ -245,13 +245,13 @@ ms.locfileid: "52712443"
   
 5.  **[追加]** をクリックします。 新しい空のフィルターが表示されます。  
   
-6.  **[式]** に「 **[Sum(SalesYear2015)]**」と入力します。 基になる式 `=Sum(Fields!SalesYear2015.Value)`が作成され、この式は **[fx]** ボタンをクリックすると表示できます。  
+6.  **[式]** に「 **[Sum(SalesYear2015)]** 」と入力します。 基になる式 `=Sum(Fields!SalesYear2015.Value)`が作成され、この式は **[fx]** ボタンをクリックすると表示できます。  
   
 7.  データ型が **Text**であることを確認します。  
   
 8.  **[演算子]** で、ドロップダウン リストから **[上位 N]** を選択します。  
   
-9.  **[値]** に式「 **=5**」を入力します。  
+9. **[値]** に式「 **=5**」を入力します。  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52712443"
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  **[ファイル]** > **[名前を付けて保存]** をクリックします。  
+2.  **[ファイル]**  >  **[名前を付けて保存]** をクリックします。  
   
 3.  **[名前]** に「 **Sales Bar Chart**」と入力します。  
 

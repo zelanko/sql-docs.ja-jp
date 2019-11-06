@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5c11ee87fe49e13bddd1a4331258a412916373b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9b310d062ec9c9acdbfce328abc5533bfb69178
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059541"
 ---
 # <a name="cursor-concurrency-odbc"></a>カーソル コンカレンシー (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47666036"
   
 -   ロック (SQL_CONCUR_LOCK)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルのプロパティ](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

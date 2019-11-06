@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7da91677755f2d7e808165bdc8361864e15ac2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721546"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
   ここでは、マージ レプリケーションの Web 同期で使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) バージョン 7 以降を手動で構成する手順について説明します。 
@@ -29,7 +28,7 @@ ms.locfileid: "48131752"
  構成プロセス全体の概要については、「[Configure Web Synchronization (Web 同期の構成)](configure-web-synchronization.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 以前のバージョンの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] があると、エラーが発生する可能性があります。たとえば、"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
+>  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 以前のバージョンの[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]など、エラーが発生することができます。"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
   
  Web 同期を使用するには、以下の手順で IIS 7 を構成する必要があります。 ここでは、各手順を詳しく説明します。  
   
@@ -69,7 +68,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     2.  **エイリアス**、入力`SQLReplication`します。  
   
-    3.  **[物理パス]** に「**\<drive>:\Inetpub\SQLReplication\\**」と入力し、**[OK]** をクリックします。  
+    3.  **[物理パス]** に「 **\<drive>:\Inetpub\SQLReplication\\** 」と入力し、 **[OK]** をクリックします。  
   
 7.  replisapi.dll を実行できるように IIS を構成します。  
   
@@ -83,7 +82,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     5.  **[モジュール]** ボックスの一覧から **[IsapiModule]** を選択します。  
   
-    6.  **[実行可能ファイル]** に「**\<drive>:\Inetpub\SQLReplication\replisapi.dll**」と入力します。  
+    6.  **[実行可能ファイル]** に「 **\<drive>:\Inetpub\SQLReplication\replisapi.dll**」と入力します。  
   
     7.  **名前**、入力`Replisapi`します。  
   
@@ -158,7 +157,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 1.  **ternet formation Services (IIS) Manager**で、 **[既定の Web サイト].**  
   
-2.  **[アクション]** ペインで、**[Browse \*:443(https)]** をクリックします。  
+2.  **[アクション]** ペインで、 **[Browse \*:443(https)]** をクリックします。  
   
 3.  Internet Explorer が開き、"この Web サイトのセキュリティ証明書には問題があります" というメッセージが表示されます。 これは、関連付けられている証明書が既知の CA によって発行された証明書ではないために信頼できないことを通知する警告です。 これは予期されたとおりの警告なので、 **[このサイトの閲覧を続行する (推奨されません)]** をクリックします。  
   
@@ -201,7 +200,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 2.  アカウントを IIS_IUSRS グループに追加します。  
   
-    1.  **サーバー マネージャー**で、 **[構成]**、 **[ローカル ユーザーとグループ]** の順に展開し、 **[グループ]** をクリックします。  
+    1.  **サーバー マネージャー**で、 **[構成]** 、 **[ローカル ユーザーとグループ]** の順に展開し、 **[グループ]** をクリックします。  
   
     2.  **[IIS_IUSRS]** を右クリックし、 **[グループに追加]** をクリックします。  
   
@@ -211,7 +210,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     5.  **[場所を指定してください]** フィールドに、ドメインではなくローカル コンピューターの名前が表示されていることを確認します。 ローカル コンピューターの名前が表示されていない場合は、 **[場所]** をクリックします。 **[場所]** ダイアログ ボックスで、ローカル コンピューターを選択し、 **[OK]** をクリックします。  
   
-    6.  **[ユーザーの選択]** ダイアログ ボックスと **[IIS_IUSRS のプロパティ]** ダイアログ ボックスで、**[OK]** をクリックします。  
+    6.  **[ユーザーの選択]** ダイアログ ボックスと **[IIS_IUSRS のプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 3.  replisapi.dll が保存されているフォルダーに対する最小限の権限をアカウントに許可します。  
   
@@ -223,7 +222,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     4.  **[場所を指定してください]** フィールドに、ドメインではなくローカル コンピューターの名前が表示されていることを確認します。 ローカル コンピューターの名前が表示されていない場合は、 **[場所]** をクリックします。 **[場所]** ダイアログ ボックスで、ローカル コンピューターを選択し、 **[OK]** をクリックします。  
   
-    5.  アカウントには、**[読み取り]**、**[読み取りと実行]**、**[フォルダーの内容の一覧表示]** のみが許可されていることを確認します。  
+    5.  アカウントには、 **[読み取り]** 、 **[読み取りと実行]** 、 **[フォルダーの内容の一覧表示]** のみが許可されていることを確認します。  
   
     6.  ディレクトリにアクセスする必要がないユーザーまたはグループを選択し、 **[削除]** をクリックし、 **[OK]** をクリックします。  
   
@@ -281,7 +280,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]** チェック ボックスをオンにして、 **[OK]** をクリックします。  
   
-2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 例:  **https://server.domain.com/directory/replisapi.dll?diag**します。  
+2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 例:  **https://server.domain.com/directory/replisapi.dll?diag** します。  
   
     > [!NOTE]  
     >  上の例の **server.domain.com** は、IIS マネージャーの **[サーバー証明書]** セクションに表示される **[発行先]** の正確な名前に置き換える必要があります。  

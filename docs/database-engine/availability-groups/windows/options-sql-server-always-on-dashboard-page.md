@@ -1,6 +1,7 @@
 ---
 title: オプション (SQL Server AlwaysOn、[ダッシュボード] ページ) | Microsoft Docs
-ms.custom: ''
+description: SQL Server Always On ダッシュ ボードに表示される 'オプション' ページの説明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,13 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d79165eae0ccbc1e5c442849c5df0ef83d4f1e90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014645"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>オプション (SQL Server AlwaysOn、[ダッシュボード] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 931b25de9acbf851f3a68475000833080d25ae93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c166fe18ad7fdd651f07025aa7deb6ea2f599e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905156"
 ---
-# <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
+# <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースに対して変更データ キャプチャ機能のクリーンアップ ジョブまたはキャプチャ ジョブを停止します。  
@@ -42,8 +41,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_type=** ] **' * * * job_type*']  
- 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** 、既定値は**キャプチャ**します。 有効な入力は**キャプチャ**と**クリーンアップ**します。  
+`[ [ @job_type = ] 'job_type_' ]` 追加するジョブの種類。 *job_type*は**nvarchar (20)** 、既定値は**キャプチャ**します。 有効な入力は**キャプチャ**と**クリーンアップ**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -67,7 +65,7 @@ EXEC sys.sp_cdc_stop_job @job_type = N'capture';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   

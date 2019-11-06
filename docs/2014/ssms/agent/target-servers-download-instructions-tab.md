@@ -1,10 +1,10 @@
 ---
-title: '[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ) | Microsoft Docs'
+title: '[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.target.download.f1
@@ -12,15 +12,15 @@ ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2ebcf08d7fb6826c8274a97bf0e629544effef5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245341"
 ---
-# <a name="target-servers-download-instructions-tab"></a>[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
-  このページを使用すると、1 つ以上の対象サーバーに対するダウンロード命令の表示および更新ができます。  
+# <a name="target-servers-download-instructions-tab"></a>[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
+  このページを使用すると、1 つ以上のターゲット サーバーに対するダウンロード命令の表示および更新ができます。  
   
 ## <a name="options"></a>および  
  **[対象サーバー]**  
@@ -42,7 +42,7 @@ ms.locfileid: "48057322"
  ダウンロード命令が通知された日時を、サーバーのローカル時刻で表示します。  
   
  **[ダウンロード日付]**  
- 対象サーバーが命令をダウンロードした日時を、そのサーバーのローカル時刻で表示します。 ダウンロード中にエラーが発生した場合、エラー表示されます。  
+ ターゲット サーバーが命令をダウンロードした日時を、そのサーバーのローカル時刻で表示します。 ダウンロード中にエラーが発生した場合、エラー表示されます。  
   
  **[命令のダウンロード状態]**  
  選択されているダウンロード命令の最新の状態を表示します。  

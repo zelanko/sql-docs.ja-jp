@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d7acb87440377516e287e8ba077242953f13adc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 001e62869146a7090fe4598650c763a690809cfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103638"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター
   このトピックでは、次の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -30,7 +29,7 @@ ms.locfileid: "48141712"
 > [!NOTE]  
 >  このパフォーマンス オブジェクトを使用して、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置全体ではなく、現在のサーバーに適用されます。  
   
- パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  このトピックの内容  
   
@@ -43,11 +42,11 @@ ms.locfileid: "48141712"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モード |ネイティブ モード。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)  
- `ReportServer:Service` パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトには、ごとに 1 つが表示されます。[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]すると、コンピューター上のインスタンスを追加または各インスタンスのパフォーマンス オブジェクトからカウンターを削除できます。 既定のインスタンスのカウンターは、`ReportServer:Service` という形式で表示されます。 カウンターの形式で名前付きインスタンスの表示は`ReportServer$<` *instance_name*`>:Service`します。  
+ `ReportServer:Service` パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、`ReportServer:Service` という形式で表示されます。 カウンターの形式で名前付きインスタンスの表示は`ReportServer$<` *instance_name*`>:Service`します。  
   
- `ReportServer:Service`パフォーマンス オブジェクトはで新しく追加された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、インターネット インフォメーション サービス (IIS) に含まれていたカウンターのサブセットを提供および[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]以前のバージョンの[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 これらは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
+ `ReportServer:Service`パフォーマンス オブジェクトはで新しく追加された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、インターネット インフォメーション サービス (IIS) に含まれていたカウンターのサブセットを提供および[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]以前のバージョンの[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 これらは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
   
- 次の表に含まれているカウンターの一覧、`ReportServer:Service`パフォーマンス オブジェクトです。  
+ 次の表は、`ReportServer:Service` パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
  ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48141712"
 |`Logon Attempts/sec`|ログオン試行の割合。|  
 |`Logon Successes Total`|RSWindows 認証タイプのログオンに成功した回数。 RSWindows 認証タイプには、RSWindowsNegotiate、RSWindowsNTLM、RSWindowsKerberos、RSWindowsBasic などがあります。 ゼロ (0) はカスタム認証を表します。|  
 |`Logon Successes/sec`|成功したログオンの割合。|  
-|`Memory Pressure State`|サーバーの現在のメモリの状態を示す 1 ～ 5 の数値。<br /><br /> 1: 負荷なし<br /><br /> 2: 低負荷<br /><br /> 3: 中負荷<br /><br /> 4: 高負荷<br /><br /> 5: 負荷が限度を超えている|  
+|`Memory Pressure State`|サーバーの現在のメモリの状態を示す 1 ～ 5 の数値。<br /><br /> 1:負荷なし<br /><br /> 2:低負荷<br /><br /> 3:中負荷<br /><br /> 4:高負荷<br /><br /> 5:しきい値を超える負荷|  
 |`Memory Shrink Amount`|使用メモリ量を縮小するためにサーバーが要求したバイト数。|  
 |`Memory Shrink Notifications/sec`|使用メモリ量を縮小するために、サーバーが直前の 1 秒間に送信した通知の数。 この値は、サーバーでメモリ不足が何回発生しているかを示しています。|  
 |`Requests Disconnected`|通信エラーのために切断された要求の数。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.QRA.f1
@@ -15,12 +14,12 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b0780016cce58223ebe2e5b14726e535a440f41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 657116e00b6905964f8cc65c28dff383c3cc9ad0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63261690"
 ---
 # <a name="queue-reader-agent-security"></a>[キュー リーダー エージェントのセキュリティ]
   **[キュー リーダー エージェントのセキュリティ]** ダイアログ ボックスを使用すると、キュー リーダー エージェントを実行したり、ディストリビューターへのローカル接続を行ったりするための [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 エージェントは、( **[ディストリビューターのプロパティ]** ダイアログ ボックスから呼び出される) **[パブリッシャーのプロパティ]** ダイアログ ボックスで指定されたアカウントを使用してパブリッシャーに接続します。エージェントは、同じコンテキストを使用して、サブスクリプションのディストリビューション エージェントとしてサブスクライバーに接続します。 詳細については、「[レプリケーションのセキュリティ設定の表示および変更](security/view-and-modify-replication-security-settings.md)」を参照してください。  
@@ -35,7 +34,7 @@ ms.locfileid: "48160332"
  Windows アカウントのパスワードを入力します。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションのログインとパスワードの管理](security/manage-logins-and-passwords-in-replication.md)   
+ [レプリケーションのログインとパスワードの管理](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [レプリケーション エージェントのセキュリティ モデル](security/replication-agent-security-model.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], Oracle publishing
@@ -16,12 +15,12 @@ ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d43a87f42edf24f9cd51e1cd042fe65f2ae9f968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022482"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle パブリッシャーのバックアップと復元
   バックアップと復元を実行する場合は、次のガイドラインに従ってください。  
@@ -48,7 +47,7 @@ ms.locfileid: "48176712"
   
 ## <a name="see-also"></a>参照  
  [レプリケートされたデータベースのバックアップと復元](../administration/back-up-and-restore-replicated-databases.md)   
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   
   

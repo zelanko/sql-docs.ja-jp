@@ -1,9 +1,9 @@
 ---
-title: sys.pdw_nodes_partitions (TRANSACT-SQL) |Microsoft Docs
+title: sys. pdw パーティション (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -11,50 +11,49 @@ dev_langs:
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aadbe305d7ad72858a46b1df2af4ef2cb0e940be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843360"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305228"
 ---
-# <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (TRANSACT-SQL)
+# <a name="syspdw_nodes_partitions-transact-sql"></a>システムパーティション (Transact-sql) (_d)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  すべてのテーブルとインデックスのほとんどの種類の各パーティションの行を格納する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]データベース。 すべてのテーブルとインデックスには明示的にパーティション分割されているかどうかを示す、少なくとも 1 つのパーティションが含まれます。  
+  すべてのテーブルのパーティションごとに1行のデータを格納し、@no__t 0 データベースのほとんどの種類のインデックスを格納します。 すべてのテーブルとインデックスには、明示的にパーティション分割されているかどうかにかかわらず、少なくとも1つのパーティションが含まれます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|partition_id|`bigint`|パーティションの id です。 データベース内で一意です。|  
-|object_id|`int`|このパーティションが所属するオブジェクトの id。 すべてのテーブルまたはビューは 1 つ以上のパーティションで構成されます。|  
-|index_id|`int`|このパーティションが所属するオブジェクト内のインデックスの id です。|  
-|partition_number|`int`|所有しているインデックスまたはヒープ内の 1 から始まるパーティション番号。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、この列の値は 1 です。|  
-|hobt_id|`bigint`|このパーティションの行を保持するデータ ヒープまたは B ツリーの ID です。|  
-|rows|`bigint`|このパーティション内の行の概数です。 |  
-|data_compression|`int`|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|`nvarchar(60)`|各パーティションの圧縮状態を示します。 有効値は、NONE、ROW、および PAGE です。|  
-|pdw_node_id|`int`|一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|  
+|partition_id|**bigint**|パーティションの id。 データベース内で一意です。|  
+|object_id|**int**|このパーティションが所属するオブジェクトの id。 すべてのテーブルまたはビューは、少なくとも1つのパーティションで構成されます。|  
+|index_id|**int**|このパーティションが所属するオブジェクト内のインデックスの id。|  
+|partition_number|**int**|所有しているインデックスまたはヒープ内の1から始まるパーティション番号。 @No__t-0 の場合、この列の値は1です。|  
+|hobt_id|**bigint**|このパーティションの行を含むデータヒープまたは B ツリー (HoBT) の ID。|  
+|rows|**bigint**|このパーティション内の行の概数です。 |  
+|data_compression|**int**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE<br /><br /> 1 = 行<br /><br /> 2 = ページ<br /><br /> 3 = 列ストア|  
+|data_compression_desc|**nvarchar(60)**|各パーティションの圧縮の状態を示します。 指定できる値は、[なし]、[行]、および [ページ] です。|  
+|pdw_node_id|**int**|@No__t 0 ノードの一意識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
- CONTROL SERVER 権限が必要です。  
+ `CONTROL SERVER` 権限が必要です。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>各配布内で各パーティション内の表示行の例 a: 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>例 A:各ディストリビューション内の各パーティションに行を表示する 
 
-適用対象: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-各配布内で各パーティションで行の数を表示する使用[DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md)します。
+各ディストリビューション内の各パーティションの行数を表示するには、 [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md)を使用します。
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>例 b: 使用のシステム ビュー、テーブルの各配布の各パーティションの行を表示するには
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>例 B:システムビューを使用して、テーブルの各ディストリビューションの各パーティションの行を表示します。
 
-適用対象: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-このクエリは、各パーティション内の各ディストリビューション テーブルの行の数を返します`myTable`します。  
+このクエリは、テーブルの各ディストリビューションの各パーティションの行の数を返します `myTable`。  
  
-```  
+```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   
     pnp.data_compression_desc, pnp.pdw_node_id  
 FROM sys.pdw_nodes_partitions AS pnp  
@@ -70,8 +69,8 @@ WHERE o.name = 'myTable'
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
   
-## <a name="see-also"></a>参照  
- [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>関連項目  
+ [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

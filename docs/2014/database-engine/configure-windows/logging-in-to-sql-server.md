@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, logging in
@@ -22,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4f3e9da57e718790ac071ebc1411ec8a33d23f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62782115"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server へのログイン
   任意のグラフィカルな管理ツール、またはコマンド プロンプトを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインできます。  
@@ -72,7 +71,7 @@ ms.locfileid: "48201782"
 ## <a name="verifying-your-connection-protocol"></a>接続プロトコルの確認  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続している場合、次のクエリは現在の接続に使用されているプロトコルと認証方法 (NTLM または Kerberos) を返し、接続が暗号化されているかどうかを示します。  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -83,9 +82,9 @@ WHERE session_id = @@SPID;
   
  以下のリソースは、接続の問題に関するトラブルシューティングに役立ちます。  
   
--   [SQL Server データベース エンジンへの接続のトラブルシューティングの方法](http://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [SQL Server データベース エンジンへの接続のトラブルシューティングの方法](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [SQL の接続問題のトラブルシューティングの手順](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [SQL の接続問題のトラブルシューティングの手順](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)  

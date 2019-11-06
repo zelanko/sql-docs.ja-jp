@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02bd2846f4425a4849ab16170c76a55af16c2b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478804"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Excel から MDS へのデータのパブリッシュ (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、Excel での作業が終わったときに、変更を保存して他のユーザーがアクセスできるようにするには、MDS リポジトリにデータをパブリッシュします。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   変更をパブリッシュすると、MDS によって管理されるセルのコメントは削除されます。  
 > -   MDS によって管理されるセルでは、数式がサポートされていません。 MDS によって管理されるセル内の数式はテキスト値として処理されます。  
   
@@ -48,10 +47,10 @@ ms.locfileid: "48130854"
 >  新しいメンバー (行) をワークシートに追加する場合、MDS リポジトリに正常にパブリッシュできないときは、ワークシートのすべての属性に対する **更新** 権限がない可能性があります。 **[校閲]** タブの **[変更]** グループの **[シート保護の解除]** をクリックし、再度パブリッシュしてください。  
   
 ## <a name="next-steps"></a>次の手順  
- [ビジネス ルールの適用&#40;MDS アドインの Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [ビジネス ルールの適用 (Excel 用 MDS アドイン)](apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データのパブリッシュ&#40;MDS アドインの Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
- [データの検証 &#40;Excel 用 MDS アドイン&#41;](validating-data-mds-add-in-for-excel.md)  
+ [データの検証 (Excel 用 MDS アドイン)](validating-data-mds-add-in-for-excel.md)  
   
   

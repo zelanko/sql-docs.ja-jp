@@ -17,16 +17,15 @@ helpviewer_keywords:
 - CHECKSUM function
 - checksum values
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6febad4b4bbb9de2dcec7d0c7fc93adb0403947e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064752"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47795580"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -45,7 +44,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 \*  
 この引数は、チェックサムの計算がすべてのテーブル列をカバーしていることを指定します。 列のいずれかが比較できないデータ型である場合、`CHECKSUM` ではエラーが返されます。 比較できないデータ型は次のとおりです。
 
-- **カーソル (cursor)**
+- **cursor**
 - **image**
 - **ntext**
 - **text**
@@ -60,14 +59,16 @@ CHECKSUM ( * | expression [ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM では、引数リストに対してハッシュ値 (チェックサム) が計算されます。 このハッシュ値を使用して、ハッシュ インデックスを作成します。 `CHECKSUM` 関数に列の引数があり、計算された CHECKSUM 値を基にインデックスを作成する場合、結果はハッシュ インデックスになります。 このハッシュ インデックスは、列で等値検索を行うときに使用できます。
+`CHECKSUM` では、引数リストに対してハッシュ値 (チェックサム) が計算されます。 このハッシュ値を使用して、ハッシュ インデックスを作成します。 `CHECKSUM` 関数に列の引数があり、計算された `CHECKSUM` 値を基にインデックスを作成する場合、結果はハッシュ インデックスになります。 このハッシュ インデックスは、列で等値検索を行うときに使用できます。
   
-`CHECKSUM` はハッシュ関数のプロパティとなります。`CHECKSUM` を任意の 2 つの式のリストに適用した場合、その 2 つのリストに対応する要素のデータ型が同じで、等号 (=) 演算子により比較した場合にそれらの対応する要素が等しければ、同じ値が返されます。 `CHECKSUM` 関数の目的のために、指定した型の NULL 値は等しいものとして比較されるように定義されます。 式リストのいずれかの値を変更した場合は、そのリストのチェックサムも変わります。 ただし、これは保証されません。 そのため、値が変更されたかどうかを検出する際には、アプリケーションが変更を検出できないことを許容できる場合のみ、`CHECKSUM` の使用をお勧めします。 それ以外の場合は、代わりに [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md) の使用を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、HashBytes から 2 つの異なる入力に対して同じ結果が返される可能性が CHECKSUM よりもはるかに低くなります。
+`CHECKSUM` はハッシュ関数のプロパティとなります。`CHECKSUM` を任意の 2 つの式のリストに適用した場合、その 2 つのリストに対応する要素のデータ型が同じで、等号 (=) 演算子により比較した場合にそれらの対応する要素が等しければ、同じ値が返されます。 `CHECKSUM` 関数の目的のために、指定した型の NULL 値は等しいものとして比較されるように定義されます。 式リストのいずれかの値を変更した場合は、そのリストのチェックサムも変わります。 ただし、これは保証されません。 そのため、値が変更されたかどうかを検出する際には、アプリケーションが変更を検出できないことを許容できる場合のみ、`CHECKSUM` の使用をお勧めします。 それ以外の場合は、代わりに `HASHBYTES` の使用を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、`HASHBYTES` から 2 つの異なる入力に対して同じ結果が返される可能性が `CHECKSUM` よりもはるかに低くなります。
   
-式の順序は、計算される `CHECKSUM` 値に影響します。 CHECKSUM(\*) で使用される列の順序は、テーブルまたはビュー定義で指定される列の順序です。 これには、計算列が含まれます。
+式の順序は、計算される `CHECKSUM` 値に影響します。 `CHECKSUM(*)` で使用される列の順序は、テーブルまたはビュー定義に指定された列の順序です。 これには、計算列が含まれます。
   
-CHECKSUM 値は照合順序によって異なります。 異なる照合順序で保存された同じ値は別の CHECKSUM 値を返します。
+`CHECKSUM` 値は照合順序によって異なります。 異なる照合順序で保存された同じ値は別の `CHECKSUM` 値を返します。
   
+`CHECKSUM ()` では、結果が一意になるとは限りません。
+
 ## <a name="examples"></a>使用例  
 これらの例は、`CHECKSUM` を使用してハッシュ インデックスを作成する方法を示しています。
   
@@ -75,6 +76,7 @@ CHECKSUM 値は照合順序によって異なります。 異なる照合順序�
   
 ```sql
 -- Create a checksum index.  
+
 SET ARITHABORT ON;  
 USE AdventureWorks2012;   
 GO  
@@ -91,6 +93,7 @@ GO
 /*Use the index in a SELECT query. Add a second search   
 condition to catch stray cases where checksums match,   
 but the values are not the same.*/  
+
 SELECT *   
 FROM Production.Product  
 WHERE CHECKSUM(N'Bearing Ball') = cs_Pname  
@@ -102,7 +105,7 @@ GO
   
 ## <a name="see-also"></a>参照
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[HASHBYTES (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
   
   

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f9eed345d3d6483cd1b47f8141e00d2a0164eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039509"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 関数
 **準拠**  
- ODBC のバージョンが導入されました: 1.0  
+ バージョンが導入されました。ODBC 1.0  
   
  **概要**  
  **SQLWriteDSNToIni**システム情報をデータ ソースを追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLWriteDSNToIni(  
      LPCSTR   lpszDSN,  

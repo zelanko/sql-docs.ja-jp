@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
@@ -13,12 +12,12 @@ ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068594"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Slice Source Cube (Data Mining Wizard)
   **[ソース キューブのスライス]** ダイアログ ボックスを使用すると、モデルのトレーニング用に使用するデータを制限できます。 通常、キューブには、すべての店舗、すべての地域、すべての製品など、多くの異なるディメンションと属性に関連するデータが含まれています。 属性の無限の組み合わせに対してモデルのトレーニングを実行することは実用的ではないため、このダイアログ ボックスを使用して、モデルのトレーニングで利用する特定のセットを選択します。  
@@ -29,16 +28,16 @@ ms.locfileid: "48089992"
   
 -   [パーティションの Slice プロパティを設定&#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+-   [ローカル パーティションの作成と管理 (Analysis Services)](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  動的 MDX 関数 ([Generate (MDX)](/sql/mdx/generate-mdx) または [Except (MDX)](/sql/mdx/except-mdx-function) など) はパーティションの Slice プロパティでサポートされていないことに注意してください。 明示的な組またはメンバー参照を使用して、スライスを定義する必要があります。  
 >   
 >  使用するのではなく、たとえば、 [:&#40;範囲&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)範囲を定義するには、特定の年で各メンバーを列挙する必要があるとします。  
 >   
->  複雑なスライスを定義する必要がある場合は、XMLA Alter スクリプトを使用して、スライスで組を定義することをお勧めします。 Ascmd コマンド ライン ツールまたは SSIS を使用する、 [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md)スクリプトを実行し、パーティションを処理する前にすぐに、指定したメンバーのセットを作成します。  
+>  複雑なスライスを定義する必要がある場合は、XMLA Alter スクリプトを使用して、スライスで組を定義することをお勧めします。 続けて、ascmd コマンド ライン ツールまたは SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) を使用してスクリプトを実行し、指定したメンバーのセットをパーティション処理の直前に作成します。  
   
- **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。**[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **Dimension**  
@@ -52,7 +51,7 @@ ms.locfileid: "48089992"
  **[演算子]**  
  スライス式の作成に使用する演算子を選択します。  
   
- たとえば、階層として地理を選択した場合は、= 演算子を選択し、フィルターとして「Europe」(欧州) と入力すると、Europe のみを対象とするキューブ データを取得できます。  
+ たとえば、階層として地理を選択した場合は、演算子を選択できます = し、ヨーロッパにのみキューブ データを取得する、フィルターとして「ヨーロッパ」を入力します。  
   
  **[フィルター式]**  
  選択したディメンションでキューブをフィルター処理するときに条件として使用する式を入力します。  

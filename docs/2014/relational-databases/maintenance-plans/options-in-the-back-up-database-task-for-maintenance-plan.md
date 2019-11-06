@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.backup.f1
@@ -16,12 +15,12 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 177c5f7406ec3af9ebaa200376611f5327e76260
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205949"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>[データベースのバックアップ タスク] (メンテナンス プラン)
   **[データベースのバックアップ タスク]** ダイアログ ボックスを使用すると、バックアップ タスクをメンテナンス プランに追加できます。 システムまたはハードウェアのトラブル (またはユーザー エラー) が原因でデータがなんらかの損傷を受けた場合、データの回復にはバックアップ コピーからの復元が必要になるため、データベースのバックアップは定期的に実行することが重要です。 このタスクを使用すると、ファイル、ファイル グループ、トランザクション ログの完全バックアップと差分バックアップを実行できます。  
@@ -31,14 +30,14 @@ ms.locfileid: "48111332"
 -   [メンテナンス プランの作成](create-a-maintenance-plan.md)  
   
 ## <a name="options"></a>および  
- **[接続]**  
+ **Connection**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
  このタスクを実行するときに使用する新しいサーバー接続を作成します。 **[新しい接続]** ダイアログ ボックスについては、後で説明します。  
   
  **データベース**  
- このタスクで操作するデータベースを指定します。 ボックスの一覧から、 **[すべてのデータベース]**、 **[すべてのシステム データベース]**、 **[すべてのユーザー データベース]**、または **[特定のデータベース]** を選択します。  
+ このタスクで操作するデータベースを指定します。 選択した場合、ドロップダウン リストには、次のオプションが用意されています。**すべてのデータベース**、**すべてのシステム データベース**、**すべてのユーザー データベース**、**これら特定のデータベース**します。  
   
  **[すべてのデータベース]**  
  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。  
@@ -134,7 +133,7 @@ ms.locfileid: "48111332"
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a007f4c7c92bf4254e4d36638cf2d92ba0764be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082019"
 ---
 # <a name="connection-string-format-and-attributes"></a>接続文字列の形式と属性
 > [!IMPORTANT]  
@@ -45,7 +44,7 @@ ms.locfileid: "47652470"
 |DSN|データ ソース名の一覧の ドライバー タブで、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックス。|""|  
 |PWD|アクセスする Oracle サーバーのパスワード。 このドライバーは、Oracle は、パスワードの配置の制限をサポートします。|""|  
 |SERVER|アクセスする Oracle サーバーへの接続文字列。|""|  
-|UID|Oracle サーバーのユーザー名。 システムに応じて、この属性できない可能性があります省略可能: は、特定のデータベースとテーブルが必要ですがこの属性セキュリティ上の理由。<br /><br /> 「/」を使用して Oracle の使用のシステムの認証を操作します。|""|  
+|UID|Oracle サーバーのユーザー名。 システムに応じて、この属性は省略可能なできない可能性があります - は、特定のデータベースとテーブルが必要ですがこの属性セキュリティ上の理由。<br /><br /> 「/」を使用して Oracle の使用のシステムの認証を操作します。|""|  
 |BUFFERSIZE|列をフェッチするときに使用される最適なバッファー サイズ。<br /><br /> Oracle サーバーから 1 つのフェッチがこのサイズのバッファーを入力するための十分な行を返されるようにをフェッチしています。 ドライバーが最適化されます。 大きな値は、大量のデータをフェッチする場合は、パフォーマンスを向上する傾向があります。|65535|  
 |SYNONYMCOLUMNS|この値が true の場合 (1)、SQLColumn () API の呼び出しは、列情報を返します。 それ以外の場合、SQLColumn () は、テーブルおよびビューの列のみを返します。 ODBC Driver for Oracle は、この値が設定されていないときに、高速アクセスを提供します。|1|  
 |REMARKS|この値が true の場合 (1)、ドライバーは、「解説」列を返します、 [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果セット。 ODBC Driver for Oracle は、この値が設定されていないときに、高速アクセスを提供します。|0|  

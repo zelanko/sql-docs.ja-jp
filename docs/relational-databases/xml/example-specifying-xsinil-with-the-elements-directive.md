@@ -1,5 +1,5 @@
 ---
-title: '例 : ELEMENTS ディレクティブで XSINIL を指定する | Microsoft Docs'
+title: '例: ELEMENTS ディレクティブで XSINIL を指定する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b94f9f665b561b82195972ffafbd8a6aaf89f01
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: b93c7b9acfc5a3e197709cf71ec0c7923fe7d91c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943487"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例 : ELEMENTS ディレクティブで XSINIL を指定する
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例: ELEMENTS ディレクティブで XSINIL を指定する
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   次のクエリでは、 `ELEMENTS` ディレクティブを指定し、クエリ結果から要素中心の XML を生成します。  
   
@@ -63,7 +62,7 @@ FOR XML RAW, ELEMENTS XSINIL ;
  結果の一部を次に示します。  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <ProductID>1</ProductID>  
   <Name>Adjustable Race</Name>  
   <Color xsi:nil="true" />  

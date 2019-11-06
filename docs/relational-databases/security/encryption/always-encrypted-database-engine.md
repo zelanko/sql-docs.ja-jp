@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675131"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903170"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "51675131"
  顧客はオンプレミスのクライアント アプリケーションと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の両方を社内で運用しています。 外部ベンダーを雇用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の管理を委任することを考えています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納された機微なデータを保護するために、顧客は Always Encrypted を使用してデータベース管理者とアプリケーション管理者の役割分担を明確にしています。 顧客は Always Encrypted のキーのプレーンテキスト値を、クライアント アプリケーションがアクセスできる信頼できるキー ストアに格納しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の管理者はキーにアクセスできないため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納された機微なデータを暗号化解除できません。  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>クライアントがオンプレミス、データが Azure 内にある  
- 顧客はオンプレミスのクライアント アプリケーションを社内で運用しています。 アプリケーションは、Azure にホストされたデータベース (Microsoft Azure の仮想マシンで実行されている[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) に格納された機微なデータを元に運用しています。 顧客は Always Encrypted を使用して、Always Encrypted のキーをオンプレミスにホストされた信頼できるキー ストアに格納することで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] クラウドの管理者が機微なデータにアクセスできないようにします。  
+ 顧客はオンプレミスのクライアント アプリケーションを社内で運用しています。 アプリケーションは、Azure にホストされたデータベース (Microsoft Azure の仮想マシンで実行されている[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に格納された機微なデータを元に運用しています。 顧客は Always Encrypted を使用して、Always Encrypted のキーをオンプレミスにホストされた信頼できるキー ストアに格納することで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] クラウドの管理者が機微なデータにアクセスできないようにします。  
   
 ### <a name="client-and-data-in-azure"></a>クライアントとデータの両方が Azure 内にある  
  顧客には、(worker ロールや Web ロールなどで) Microsoft Azure でホストされているクライアント アプリケーションがあります。このアプリケーションは、Azure でホストされているデータベースに格納されている機密データに影響があります。 Always Encrypted には、クラウド管理者からのデータの完全な分離機能がありませんが、データとキーの両方がクライアント層をホストするプラットフォームのクラウド管理者に公開されているので、セキュリティ攻撃の対象となる領域を減らすという利点が顧客にあります (データベース内のデータは常に暗号化されています)。  
@@ -90,7 +89,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>明確な暗号化またはランダム化された暗号化の選択  
  データベース エンジンは、暗号化された列に格納されているプレーンテキスト データに対して動作しませんが、列の暗号化の種類によっては、暗号化されたデータでも一部のクエリをサポートしています。 Always Encrypted は、ランダム化された暗号化と明確な暗号化の 2 種類の暗号化をサポートします。  
   
-- 明確な暗号化は、任意のプレーン テキストを指定した値の場合、常に同じ暗号化された値を生成します。 明確な暗号化を使用すると、暗号化された列で、ポイント参照、等価結合、グループ化、インデックス作成を行うことができます。 ただし、権限のないユーザーが、暗号化された列のパターンを調べることで、暗号化された値に関する情報を推測できる可能性もあります。特に、True/False や、North/South/East/West 地域など、暗号化される可能性のある少数のグループがある場合は注意が必要です。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。
+- 明確な暗号化は、任意のプレーン テキストを指定した値の場合、常に同じ暗号化された値を生成します。 明確な暗号化を使用すると、暗号化された列で、ポイント参照、等価結合、グループ化、インデックス作成を行うことができます。 ただし、権限のないユーザーが、暗号化された列のパターンを調べることで、暗号化された値に関する情報を推測できる可能性もあります。特に、True/False や、North/South/East/West 地域など、暗号化可能な値セットが小規模である場合は注意が必要です。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。
 
 - ランダム化された暗号化は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダム化された暗号化は安全性が上がりますが、暗号化された列に対して検索、グループ化、インデックス作成、結合ができなくなります。
 
@@ -104,10 +103,10 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 
 |タスク|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|[ユーザー アカウント制御]|[はい]|いいえ|
-|データベース内にキー メタデータを作成する。|[ユーザー アカウント制御]|[はい]|[ユーザー アカウント制御]|
-|暗号化された列がある新しいテーブルを作成する|[ユーザー アカウント制御]|[はい]|[ユーザー アカウント制御]|
-|選択されたデータベース列内にあるデータを暗号化する|[ユーザー アカウント制御]|[はい]|いいえ|
+|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|はい|はい|いいえ|
+|データベース内にキー メタデータを作成する。|はい|はい|はい|
+|暗号化された列がある新しいテーブルを作成する|はい|はい|はい|
+|選択されたデータベース列内にあるデータを暗号化する|はい|はい|いいえ|
 
 > [!NOTE]
 > 必ず、データベースをホストするコンピューターと異なるコンピューターで、キー プロビジョニングまたはデータ暗号化ツールを実行してください。 そうしないと、機密データやキーがサーバー環境に漏れ、Always Encrypted を使用する利点が少なくなる可能性があります。  
@@ -124,7 +123,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 >  ウィザードの利用方法については、「 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)」(SSMS での Always Encrypted の作業の開始) の動画をご覧ください。
 
 1.  Management Studio の **オブジェクト エクスプローラー** を使用して暗号化する列があるテーブルを含む既存のデータベースに接続するか、新しいデータベースを作成し、暗号化する列がある 1 つ以上のテーブルを作成し、接続します。
-2.  データベースを右クリックして **[タスク]** をポイントし、[**列の暗号化**] をクリックして **Always Encrypted ウィザード**を開きます。
+2.  データベースを右クリックして **[タスク]** をポイントし、 **[列の暗号化]** をクリックして **Always Encrypted ウィザード**を開きます。
 3.  **[概要]** ページの内容を確認し、 **[次へ]** をクリックします。
 4.  **[列の選択]** ページで、テーブルを展開して暗号化する列を選択します。
 5.  暗号化する選択した各列で、 **[暗号化の種類]** を *[明確]* または *[ランダム化]* のいずれかに設定します。
@@ -181,11 +180,11 @@ Always Encrypted は、以下の特性を持つ列に対してはサポートさ
 次の機能は、暗号化された列では機能しません。
 
 - トランザクション レプリケーションまたはマージ レプリケーション
-- 分散クエリ (リンク サーバー)
+- 分散クエリ (リンク サーバー、OPENROWSET(T-SQL)、OPENDATASOURCE(T-SQL))
 
 ツールの要件
 
-- SQL Server Management Studio は、 *[サーバーへの接続]* ダイアログの **[追加のプロパティ]** タブで **column encryption setting=enabled** に接続している場合、暗号化された列から取得した結果を復号化できます。 暗号化された列の挿入、更新、フィルター処理には、SQL Server Management Studio バージョン 17 以降が必要です。
+- SQL Server Management Studio は、 *[サーバーへの接続]* ダイアログの **[追加のプロパティ]** タブで **column encryption setting=enabled** に接続している場合、暗号化された列から取得した結果を復号化できます。 暗号化された列の挿入、更新、フィルター処理には、SQL Server Management Studio バージョン 17 以降が必要です。 クライアント アプリケーションで使われる接続文字列については、「[Always Encrypted (クライアント開発)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」をご覧ください
 
 - `sqlcmd` からの暗号化された接続には、バージョン 13.1 以上が必要です。これは [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=825643)から入手できます。
 

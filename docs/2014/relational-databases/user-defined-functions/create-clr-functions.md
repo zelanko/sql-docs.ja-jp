@@ -13,12 +13,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33aaebe7172ac637354527bb9777afe5eb9a0a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524062"
 ---
 # <a name="create-clr-functions"></a>CLR 関数の作成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内部には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) で作成されたアセンブリの形式でプログラミングされたデータベース オブジェクトを作成できます。 共通言語ランタイムが提供する豊富なプログラミング モデルを利用できるデータベース オブジェクトには、集計関数、関数、ストアド プロシージャ、トリガー、型などがあります。  
@@ -53,7 +53,7 @@ ms.locfileid: "48173422"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
 ## <a name="accessing-native-code"></a>ネイティブ コードへのアクセス  
- CLR 関数では、マネージド コードから PInvoke を使用することにより、C や C++ で記述されたコードなどのネイティブ (アンマネージド) コードにアクセスできます (詳細については、「[マネージド コードからのネイティブ関数の呼び出し](http://go.microsoft.com/fwlink/?LinkID=181929)」を参照してください)。 これにより、レガシ コードを CLR UDF として再利用したり、パフォーマンスが重要な UDF をネイティブ コードで記述したりできます。 そのためには、UNSAFE アセンブリを使用する必要があります。 UNSAFE アセンブリの使用に関する注意事項は、「 [CLR 統合のコード アクセス セキュリティ](../clr-integration/security/clr-integration-code-access-security.md) 」を参照してください。  
+ CLR 関数では、マネージド コードから PInvoke を使用することにより、C や C++ で記述されたコードなどのネイティブ (アンマネージド) コードにアクセスできます (詳細については、「[マネージド コードからのネイティブ関数の呼び出し](https://go.microsoft.com/fwlink/?LinkID=181929)」を参照してください)。 これにより、レガシ コードを CLR UDF として再利用したり、パフォーマンスが重要な UDF をネイティブ コードで記述したりできます。 そのためには、UNSAFE アセンブリを使用する必要があります。 UNSAFE アセンブリの使用に関する注意事項は、「 [CLR 統合のコード アクセス セキュリティ](../clr-integration/security/clr-integration-code-access-security.md) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ユーザー定義関数の作成 &#40;データベース エンジン&#41;](create-user-defined-functions-database-engine.md)   

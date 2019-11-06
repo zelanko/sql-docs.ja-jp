@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Reporting Services], parameters
 - parameters [Reporting Services], queries
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 20de7b7f2d8927b9858d3129685d55b44015a0f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 697a8bbfa77a8afcabfdf00deef93620ff607233
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107468"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>クエリ パラメーターのレポート パラメーターへの関連付け (レポート ビルダーおよび SSRS)
   クエリ変数を含んだデータセット クエリを定義すると、クエリ コマンドが解析されます。 クエリ変数ごとに、対応するデータセット クエリ パラメーターおよびレポート パラメーターが作成されます。 データセット パラメーターは、レポート パラメーターを参照します。 これにより、クエリに直接渡される値を入力できます。 クエリ コマンドを編集するたびに、同じ処理が実行されます。  
@@ -31,10 +30,10 @@ ms.locfileid: "48158922"
   
 ### <a name="to-associate-a-query-parameter-with-a-report-parameter"></a>クエリ パラメーターをレポート パラメーターに関連付けるには  
   
-1.  レポート データ ペインでデータセットを右クリックし、**[データセットのプロパティ]** をクリックして、**[パラメーター]** をクリックします。  
+1.  レポート データ ペインでデータセットを右クリックし、 **[データセットのプロパティ]** をクリックして、 **[パラメーター]** をクリックします。  
   
     > [!NOTE]  
-    >  レポート データ ペインが表示されていない場合は、**[表示]** メニューの **[レポート データ]** をクリックします。  
+    >  レポート データ ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。  
   
 2.  **[パラメーター名]** 列で、クエリ パラメーターの名前を探します。 パラメーター名は、クエリに基づいて自動的に設定されます。 クエリを変更するたびに、新しいクエリ パラメーターがチェックされます。 手動で作成したクエリ パラメーターは、クエリが変更されても変更されません。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48158922"
   
 3.  クエリ パラメーターを追加する場合は、手順 2. を繰り返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [レポート パラメーターの概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   

@@ -1,36 +1,36 @@
 ---
-title: あやめのデモ データ セットの SQL Server での Python および R のチュートリアル |Microsoft Docs
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+title: Python および R 用の虹彩のデモデータセットのチュートリアル
+Description: 虹彩データセットを含むデータベースと、モデルを格納するためのテーブルを作成します。 このデータセットは、R 言語または Python コードを SQL Server ストアドプロシージャにラップする方法を示す演習で使用されます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 78acdd0ef2eed808d8f974c38899282dc823436d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216686"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715500"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server での Python および R のチュートリアル: あやめのデモ データ 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server での Python および R チュートリアル用の虹彩のデモデータ 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この演習でデータを格納する SQL Server データベースを作成、[あやめデータ セット](https://en.wikipedia.org/wiki/Iris_flower_data_set)と同じデータに基づくモデルです。 あやめデータは、SQL Server がインストールされている、R と Python のディストリビューションに含まれているし、SQL Server の machine learning のチュートリアルに使用されます。 
+この演習では、同じデータに基づいて、[虹彩フラワーデータセット](https://en.wikipedia.org/wiki/Iris_flower_data_set)とモデルのデータを格納する SQL Server データベースを作成します。 虹彩データは SQL Server によってインストールされた R と Python の両方のディストリビューションに含まれており、SQL Server の機械学習のチュートリアルで使用されます。 
 
-この手順を完了しておく[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)または T-SQL クエリを実行できる他のツール。
+この演習を完了するには、 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)または t-sql クエリを実行できる別のツールが必要です。
 
-チュートリアルとクイック スタートのこのデータ セットを使用して、次に示します。
+このデータセットを使用したチュートリアルとクイックスタートには、次のものがあります。
 
-+  [SQL Server の Python のモデルを使用するトレーニングとスコア付け](train-score-using-python-in-tsql.md)
++  [クイック スタート:ストアドプロシージャを使用した Python モデルの作成、トレーニング、および使用 SQL Server](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>データベースの作成
 
-1. SQL Server Management Studio を起動し、新しく開きます**クエリ**ウィンドウ。  
+1. SQL Server Management Studio を開始し、新しい**クエリ**ウィンドウを開きます。  
 
-2. このプロジェクトで新しいデータベースを作成し、コンテキストの変更、**クエリ**に新しいデータベースを使用するウィンドウ。
+2. このプロジェクトの新しいデータベースを作成し、新しいデータベースを使用するように**クエリ**ウィンドウのコンテキストを変更します。
 
     ```sql
     CREATE DATABASE irissql
@@ -40,11 +40,11 @@ ms.locfileid: "50216686"
     ```
 
     > [!TIP] 
-    > よくある間違いがログインを表示していることに注意することがなく作業を開始するには、SQL Server を初めて使用するか、または自分が所有するサーバーで作業している場合、**マスター**データベース。 適切なデータベースを使用していることを確認して、常に指定を使用して、コンテキスト、`USE <database name>`ステートメント (たとえば、 `use irissql`)。
+    > SQL Server に慣れていない場合、または所有しているサーバーで作業している場合は、通常、ログインして、 **master**データベース内にあることを確認せずに作業を開始します。 正しいデータベースを使用していることを確認するには、常に`USE <database name>`ステートメント (など`use irissql`) を使用してコンテキストを指定します。
 
-3. いくつか空のテーブルの追加: データを格納して、トレーニング済みモデルを格納します。 **Iris_models**テーブルが他の演習で生成されたシリアル化されたモデルを格納するために使用します。
+3. 空のテーブルを追加します。1つはデータを格納するテーブル、もう1つはトレーニング済みのモデルを格納するテーブルです。 **Iris_models**テーブルは、他の演習で生成されるシリアル化されたモデルを格納するために使用されます。
 
-    次のコードでは、トレーニング データのテーブルを作成します。
+    次のコードでは、トレーニングデータ用のテーブルを作成します。
 
     ```sql
     DROP TABLE IF EXISTS iris_data;
@@ -58,9 +58,9 @@ ms.locfileid: "50216686"
     ```
 
     > [!TIP] 
-    > 記憶する的確を T-SQL に慣れていない場合、`DROP...IF`ステートメント。 テーブルを作成しようとすると、既に存在する、SQL Server にエラーが返されます"が既にデータベースに ' iris_data' という名前のオブジェクト。"。 このようなエラーを回避するために 1 つの方法では、コードの一部として、既存のテーブルまたはその他のオブジェクトを削除します。
+    > T-sql を初めて使用する場合は、 `DROP...IF`ステートメントを覚えることになります。 テーブルを作成しようとしたときに、テーブルが既に存在している場合、SQL Server はエラーを返します。"データベースに ' iris_data ' という名前のオブジェクトが既に存在します。" このようなエラーを回避する方法の1つは、既存のテーブルやその他のオブジェクトをコードの一部として削除することです。
 
-4. トレーニング済みモデルを格納するために使用するテーブルを作成する次のコードを実行します。 SQL Server での Python (または R) モデルを保存するする必要があるシリアル化型の列に格納されている**varbinary (max)** します。 
+4. 次のコードを実行して、トレーニング済みのモデルを格納するために使用するテーブルを作成します。 SQL Server で Python (または R) モデルを保存するには、 **varbinary (max)** 型の列にシリアル化して格納する必要があります。 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
@@ -73,17 +73,17 @@ ms.locfileid: "50216686"
     GO
     ```
 
-    モデルの内容に加え通常とも、モデルの名前、日付がトレーニングを受けたソース アルゴリズムとパラメーターをソース データなどの他の便利なメタデータの列を追加しなど。 ここで単純さの維持し、モデル名だけを使用して、なります。
+    モデルの内容に加えて、通常は、モデルの名前、トレーニングされた日付、ソースアルゴリズムとパラメーター、ソースデータなど、その他の便利なメタデータの列も追加します。 ここでは、単純化し、モデル名だけを使用します。
 
-## <a name="populate-the-table"></a>テーブルを設定します
+## <a name="populate-the-table"></a>テーブルを設定する
 
-あやめの組み込みのデータは、R または Python のいずれかから取得できます。 Python または R データ フレームにデータを読み込むを使用して、データベース内のテーブルに挿入できます。 SQL Server テーブルに外部のセッションからトレーニング データの移動は、マルチ ステップのプロセスです。
+組み込みの虹彩データは、R または Python から取得できます。 Python または R を使用してデータをデータフレームに読み込んでから、データベース内のテーブルに挿入することができます。 外部セッションから SQL Server テーブルにトレーニングデータを移動するには、次の手順を実行します。
 
-+ 必要なデータを取得するストアド プロシージャをデザインします。
-+ 実際にデータを取得するストアド プロシージャを実行します。
-+ 取得したデータの保存場所を指定する INSERT ステートメントを構築します。
++ 必要なデータを取得するストアドプロシージャを設計します。
++ 実際にデータを取得するには、ストアドプロシージャを実行します。
++ 取得したデータを保存する場所を指定する INSERT ステートメントを構築します。
 
-1. Python の統合システムで Python コードを使用して、データを読み込む次のストアド プロシージャを作成します。
+1. Python 統合を使用するシステムでは、Python コードを使用してデータを読み込む、次のストアドプロシージャを作成します。
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -104,9 +104,9 @@ ms.locfileid: "50216686"
     GO
     ```
 
-    このコードを実行するときにメッセージが表示、「コマンドの完了しました」 つまり、すべては、指定どおりに、ストアド プロシージャが作成されたことです。
+    このコードを実行すると、"コマンドは正常に完了しました。" というメッセージが表示されます。 これは、ストアドプロシージャが仕様に従って作成されていることを意味します。
 
-2. また、R 統合を持つシステムでは、代わりに R を使用するプロシージャを作成します。
+2. または、R を統合するシステムでは、代わりに R を使用するプロシージャを作成します。
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -126,26 +126,26 @@ ms.locfileid: "50216686"
     GO
     ```
 
-3. 実際には、テーブルを設定するには、ストアド プロシージャを実行し、データの書き込み先となるテーブルを指定します。 実行すると、ストアド プロシージャは、組み込みのあやめデータ セットの読み込みとにデータを挿入し、Python または R コードを実行、 **iris_data**テーブル。
+3. テーブルに実際にデータを設定するには、ストアドプロシージャを実行し、データの書き込み先のテーブルを指定します。 実行すると、ストアドプロシージャは Python または R コードを実行します。このコードでは、組み込みの虹彩データセットが読み込まれ、 **iris_data**テーブルにデータが挿入されます。
 
     ```sql
     INSERT INTO iris_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species", "SpeciesId")
     EXEC dbo.get_iris_dataset;
     ```
 
-    T-SQL を初めて、INSERT ステートメントでのみ新しいデータが追加されることを認識します。既存のデータを確認し、削除またはテーブルを再構築をことはありません。 テーブルで同じデータの複数のコピーの取得を避けるため、ステートメントを実行できますこのまず:`TRUNCATE TABLE iris_data`します。 T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql)ステートメントは、既存のデータが削除されますが、状態テーブルの構造は保持します。
+    T-sql を初めて使用する場合は、INSERT ステートメントで新しいデータのみを追加することに注意してください。既存のデータをチェックしたり、テーブルを削除および再構築したりすることはありません。 テーブル内の同じデータの複数のコピーが取得さ`TRUNCATE TABLE iris_data`れないようにするには、最初にステートメントを実行します。 T-sql [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql)ステートメントでは、既存のデータが削除されますが、テーブルの構造はそのまま維持されます。
 
     > [!TIP]
-    > ストアド プロシージャを変更した後で必要ありませんを削除して再作成します。 使用して、 [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql)ステートメント。 
+    > 後でストアドプロシージャを変更するには、ストアドプロシージャを削除して再作成する必要はありません。 [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql)ステートメントを使用します。 
 
 
 ## <a name="query-the-data"></a>データのクエリ
 
-検証手順として、データがアップロードされたことを確認するためのクエリを実行します。
+検証手順として、クエリを実行してデータがアップロードされたことを確認します。
 
-1. データベースのオブジェクト エクスプ ローラーで右クリックし、 **irissql**データベース、および新しいクエリを開始します。
+1. オブジェクトエクスプローラーの [データベース] で、 **irissql**データベースを右クリックし、新しいクエリを開始します。
 
-2. シンプルなクエリを実行します。
+2. いくつかの単純なクエリを実行します。
 
     ```sql
     SELECT TOP(10) * FROM iris_data;
@@ -154,6 +154,6 @@ ms.locfileid: "50216686"
 
 ## <a name="next-steps"></a>次の手順
 
-次のレッスンでは、機械学習モデルを作成しし、テーブルに保存から予測される結果を生成するモデルを使用します。
+次のクイックスタートでは、機械学習モデルを作成してテーブルに保存し、モデルを使用して予測結果を生成します。
 
-+ [SQL Server の Python のモデルを使用するトレーニングとスコア付け](train-score-using-python-in-tsql.md)
++ [クイック スタート:ストアドプロシージャを使用した Python モデルの作成、トレーニング、および使用 SQL Server](quickstart-python-train-score-in-tsql.md)

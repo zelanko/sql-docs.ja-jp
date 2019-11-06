@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2174684879a71372e19d9e7ac3390ee7c0831e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663508"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute イベント クラス
   **CursorExecute** イベント クラスは、API (アプリケーション プログラミング インターフェイス) のカーソルで発生する、カーソル実行イベントを記述しています。 カーソル実行イベントは、カーソル準備イベントで作成された実行プランから、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってカーソルの作成およびデータ設定が行われたときに発生します。  

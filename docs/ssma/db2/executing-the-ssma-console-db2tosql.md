@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 31333a7fd1c97f6915010c874de2f55dca3cd59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989683"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>SSMA コンソール (DB2ToSQL) の実行
 Microsoft は、ファイルのコマンドを実行し、SSMA アクティビティを制御する堅牢なスクリプトのセットを提供します。 次のセクションでは、同じについて説明します。 コンソール アプリケーションは、このセクションでは、列挙型として標準的なスクリプト ファイルの特定のコマンドを使用します。  
@@ -291,7 +290,7 @@ generate-assessment-report
 ```  
   
 ## <a name="migration-script-file-commands"></a>移行スクリプト ファイルのコマンド  
-移行コマンドでは、送信元スキーマのターゲット データベースのスキーマの変換し、ターゲット サーバーにデータを移行します。 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力: ソース オブジェクトのツリーのルート ノードで概要のみです。  
+移行コマンドでは、送信元スキーマのターゲット データベースのスキーマの変換し、ターゲット サーバーにデータを移行します。 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力を示します。ソース オブジェクトのツリーのルート ノードでのみの概要です。  
   
 **Command**  
   
@@ -361,7 +360,7 @@ generate-assessment-report
 ```  
 **Command**  
   
-データの移行: ソース データをターゲットに移行します。  
+移行-データ:ソース データをターゲットに移行します。  
   
 **[スクリプト]**  
   
@@ -475,7 +474,7 @@ generate-assessment-report
 ## <a name="manageability-script-file-commands"></a>スクリプト コマンド ファイルの管理の容易性  
 管理コマンドは、ソース データベースとターゲットのデータベース オブジェクトを同期するのに役立ちます。  
   
-設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力: ソース オブジェクトのツリーのルート ノードで概要のみです。  
+設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力を示します。ソース オブジェクトのツリーのルート ノードでのみの概要です。  
   
 **Command**  
   
@@ -605,7 +604,7 @@ generate-assessment-report
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>スクリプトの生成スクリプト ファイル コマンド  
-スクリプトの生成コマンドが 2 つのタスクを実行します、コンソール出力スクリプト ファイルに保存できる。コンソールまたは指定したパラメーターに基づいてファイルを T-SQL で出力を記録します。  
+スクリプトの生成コマンドでは、2 つのタスクを実行します。コンソール出力スクリプト ファイルに保存できます。コンソールまたは指定したパラメーターに基づいてファイルを T-SQL で出力を記録します。  
   
 **Command**  
   

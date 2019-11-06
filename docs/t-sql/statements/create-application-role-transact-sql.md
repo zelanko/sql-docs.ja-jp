@@ -21,15 +21,14 @@ helpviewer_keywords:
 - CREATE APPLICATION ROLE statement
 - application roles [SQL Server], creating
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f434bd06f06071b61d037ce68f8a69edbb8c2977
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: dc3caf4c1643405cc7db31e2a9c76cf70456b272
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168937"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064594"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  アプリケーション ロールの名前を指定します。 この名前は、データベース内のどのプリンシパルへの参照にも使用されていない名前である必要があります。  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  データベース ユーザーがアプリケーション ロールのアクティブ化に使用するパスワードを指定します。 複雑なパスワードの使用をお勧めします。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
- DEFAULT_SCHEMA **=**_schema\_name_  
+ DEFAULT_SCHEMA **=** _schema\_name_  
  このロール用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 DEFAULT_SCHEMA が定義されていない場合、アプリケーション ロールでは既定のスキーマとして DBO が使用されます。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
 ## <a name="remarks"></a>Remarks  
@@ -74,7 +73,7 @@ CREATE APPLICATION ROLE application_role_name
 ## <a name="examples"></a>使用例  
  次の例では、アプリケーション ロール `weekly_receipts` を作成します。このアプリケーション ロールのパスワードは `987Gbv876sPYY5m23` で、既定のスキーマは `Sales` です。  
   
-```  
+```sql  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987G^bv876sPY)Y5m23'   
     , DEFAULT_SCHEMA = Sales;  

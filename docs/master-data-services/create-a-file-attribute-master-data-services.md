@@ -5,22 +5,20 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating file attributes [Master Data Services]
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: de33b9191f38c862d8f5092f9801795fc791ddb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea016778880ad4254d75a567659c9d7fc428592d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906718"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>ファイル属性を作成する (マスター データ サービス)
 
@@ -28,37 +26,37 @@ ms.locfileid: "47720750"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でファイル属性を作成して、ファイルで属性値を設定します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   属性を作成するエンティティが存在する必要があります。 詳細については、「[エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)」を参照してください。  
   
 ## <a name="attribute-information"></a>属性情報  
  作成された属性ごとに、7 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|[列]|[説明]|  
+|[列]|説明|  
 |------------|-----------------|  
 |状態|属性の状態。<br /><br /> [保存] をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、属性が更新中であることを示します。<br /><br /> 属性の作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
-|[オブジェクト名]|属性名です。|  
+|名前|属性名です。|  
 |表示名|属性の表示名。|  
-|[説明]|属性の説明。|  
+|説明|属性の説明。|  
 |ピクセル幅の表示|属性の幅。|  
 |種類とプロパティ|属性の種類とデータ型の情報。|  
 |変更の追跡を有効化|変更の追跡に対して属性が有効になっているかどうかを指定し、グループ番号を括弧で表示します。|  
   
  属性をクリックすると、次の情報が表示されます。  
   
--   **作成者**: 属性を作成したユーザーの名前。  
+-   **作成者**:属性を作成したユーザーの名前。  
   
--   **作成日時**: 属性が作成された日時。  
+-   **作成日時**:属性が作成された日時。  
   
 -   **更新者**: 属性を最後に更新したユーザーの名前。  
   
--   **更新日時**: 属性が最後に更新された日時。  
+-   **更新日時**:属性が最後に更新された日時。  
   
 ### <a name="to-create-a-file-attribute"></a>ファイル属性を作成するには  
   
@@ -92,7 +90,7 @@ ms.locfileid: "47720750"
   
 12. **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
  [属性名とデータ型を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

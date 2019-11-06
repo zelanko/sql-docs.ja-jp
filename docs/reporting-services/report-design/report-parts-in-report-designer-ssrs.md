@@ -2,7 +2,7 @@
 title: レポート デザイナーでのレポート パーツ (SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1edea2ccb742d68010700bc20f29c313dc93c2f7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576782"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>レポート デザイナーでのレポート パーツ (SSRS)
 

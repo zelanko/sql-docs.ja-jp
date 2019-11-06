@@ -12,15 +12,14 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: 59cf81243c76da1747c558c7ab6e0c15323eff62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992052"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
 
@@ -44,7 +43,7 @@ ms.locfileid: "52616892"
 ####  <a name="Permissions"></a> Permissions  
  Excel ファイルからドメイン値をインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Import"></a> 値を Excel ファイルからドメインへインポートします。  
+##  <a name="Import"></a> 値を Excel ファイルからドメインへインポートする  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
@@ -68,13 +67,13 @@ ms.locfileid: "52616892"
   
 11. **[ドメイン値のインポート]** ダイアログ ボックスに "インポート完了" と表示されていることを確認します。 このダイアログ ボックスで、正常にインポートされた値とインポートされなかった値を確認します。 ファイルの名前とパス、処理の完了状態、正常にインポートされた値の数、インポートされなかった値の数、および処理された値の総数が表示されます。  
   
-12. 正常にインポートされなかった値について、**[ログ]** をクリックして **[ドメイン値のインポート - 問題のある失敗]** ダイアログ ボックスを表示し、インポート操作が失敗した理由を確認します。 **[問題のある値]** 列に、Excel ファイルからドメインにインポートできなかった値が表示され、 **[理由]** 列に、インポートが失敗した理由が表示されます。 **[クリップボードにコピー]** をクリックすると、 **[問題のある値]** のテーブルをクリップボードにコピーし、Excel のワークシートやメモ帳のファイルなど、別のプログラムにコピーできます。 **[OK]** をクリックして **[問題のある値]** ダイアログ ボックスを閉じます。  
+12. 正常にインポートされなかった値について、 **[ログ]** をクリックして **[ドメイン値のインポート - 問題のある失敗]** ダイアログ ボックスを表示し、インポート操作が失敗した理由を確認します。 **[問題のある値]** 列に、Excel ファイルからドメインにインポートできなかった値が表示され、 **[理由]** 列に、インポートが失敗した理由が表示されます。 **[クリップボードにコピー]** をクリックすると、 **[問題のある値]** のテーブルをクリップボードにコピーし、Excel のワークシートやメモ帳のファイルなど、別のプログラムにコピーできます。 **[OK]** をクリックして **[問題のある値]** ダイアログ ボックスを閉じます。  
   
 13. **[OK]** をクリックしてインポート操作を完了し、ダイアログ ボックスを閉じます。 インポートが正常に完了すると、 **[ドメイン値]** ページのドメイン値の一覧が更新され、インポートされた新しい値が表示されます。 フィルターが **[すべての値]** に変わり、 **[新規のみ表示]** が選択されます。 インポート操作の完了後に **[新規のみ表示]** を選択すると、Excel ファイルからインポートされた値だけが表示されます。  
   
 14. **[完了]** をクリックしてナレッジ ベースに値を追加します。  
   
-##  <a name="FollowUp"></a> 補足情報: Excel ファイルからドメインに値をインポートした後  
+##  <a name="FollowUp"></a>補足情報: Excel ファイルからドメインに値をインポートした後  
  ドメインに値をインポートした後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Synonyms"></a> シノニムのインポート  

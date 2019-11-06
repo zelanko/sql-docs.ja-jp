@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -14,12 +14,12 @@ ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0bd265d8214e3ad97fd899a93cfbcc933e169d7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211402"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を編集する方法について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48179052"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48179052"
   
 4.  編集する警告を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[全般]**、 **[応答]**、および **[オプション]** の各ページで、警告のプロパティを更新します。  
+5.  **[全般]** 、 **[応答]** 、および **[オプション]** の各ページで、警告のプロパティを更新します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Visio]
@@ -16,12 +15,12 @@ ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c54ca4bfa793ed704691d7a757ffb5de16dc96e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065525"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>モデルの参照 (Office 用データ マイニング アドイン)
   Excel 用データ マイニング アドインでは、作成した分析モデルを次の方法で操作できます。  

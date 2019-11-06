@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
@@ -15,12 +15,12 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fecaa0fb1b4bb68ee2decddd50e1410313f17fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda582c7b9171e89a43b6870b3b6c2df139b7b11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670465"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>クエリからのテーブルの削除 (Visual Database Tools)
   クエリからテーブルまたはテーブル値オブジェクトを削除できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48056202"
   
 -   **ダイアグラム ペイン**で、テーブル、ビュー、ユーザー定義関数、シノニム、またはクエリを選択し、Del キーを押すか、オブジェクトを右クリックして、表示されるダイアログ ボックスの **[削除]** をクリックします。 同時に複数のオブジェクトを選択して削除することもできます。  
   
-     または  
+     \- または -  
   
 -   **SQL ペイン**でオブジェクトへのすべての参照を削除します。  
   

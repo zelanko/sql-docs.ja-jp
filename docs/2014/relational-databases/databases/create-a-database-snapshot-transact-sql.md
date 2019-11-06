@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb53467361cec415b95f2fe3477f3b0730f33b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762340"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットを作成する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用することです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、データベース スナップショットの作成はサポートされません。  
@@ -29,11 +28,11 @@ ms.locfileid: "48212202"
   
      [Security](#Security)  
   
-     [ベスト プラクティス: データベース スナップショットの名前付け](#Naming)  
+     [ベスト プラクティス:データベース スナップショットの名前付け](#Naming)  
   
--   **データベースを使用して、スナップショットを作成する:**[TRANSACT-SQL  ](#TsqlProcedure)  
+-   **データベースのスナップショットを作成します。** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  任意の復旧モデルを使用できるソース データベースは、次の前提条件を満たす必要があります。  
@@ -42,7 +41,7 @@ ms.locfileid: "48212202"
   
 -   ソース データベースは、データベース ミラーリング セッション内のミラー データベースである場合を除き、オンラインである必要があります。  
   
--   ミラー データベースにデータベース スナップショットを作成するにはデータベースは同期済みである必要があります[ミラーリング状態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)します。  
+-   ミラー データベースにデータベース スナップショットを作成するには、データベースは "同期済み" の[ミラーリング状態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)になっている必要があります。  
   
 -   ソース データベースは、スケーラブルな共有データベースとして構成できません。  
   
@@ -52,13 +51,13 @@ ms.locfileid: "48212202"
 ###  <a name="Recommendations"></a> 推奨事項  
  このセクションでは、次のベスト プラクティスについて説明します。  
   
--   [ベスト プラクティス: データベース スナップショットの名前付け](#Naming)  
+-   [ベスト プラクティス:データベース スナップショットの名前付け](#Naming)  
   
--   [ベスト プラクティス: データベース スナップショット数の制限](#Limiting_Number)  
+-   [ベスト プラクティス:データベース スナップショット数の制限](#Limiting_Number)  
   
--   [ベスト プラクティス: データベース スナップショットへのクライアント接続](#Client_Connections)  
+-   [ベスト プラクティス:データベース スナップショットへのクライアント接続](#Client_Connections)  
   
-####  <a name="Naming"></a> ベスト プラクティス: データベース スナップショットの名前付け  
+####  <a name="Naming"></a> ベスト プラクティス:データベース スナップショットの名前付け  
  スナップショットを作成する前に、名前付けの方法を検討することが重要です。 各データベース スナップショットでは、一意のデータベース名が必要になります。 管理を容易にするために、次のようなデータベースを識別する情報を、スナップショット名に含めることができます。  
   
 -   ソース データベースの名前。  
@@ -83,13 +82,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> ベスト プラクティス: データベース スナップショット数の制限  
+####  <a name="Limiting_Number"></a> ベスト プラクティス:データベース スナップショットの数を制限します。  
  一連のスナップショットを長期にわたって作成することで、ソース データベースのシーケンシャルなスナップショットがキャプチャされます。 各スナップショットは、明示的に削除されるまで保持されます。 元のページが更新されるにつれて、各スナップショットが継続的に拡張されるので、新しいスナップショットの作成後に古いスナップショットを削除するとディスク領域を節約できます。  
   
 > [!NOTE]  
 >  データベース スナップショットに戻す場合は、そのデータベースから他のすべてのスナップショットを削除する必要があります。  
   
-####  <a name="Client_Connections"></a> ベスト プラクティス: データベース スナップショットへのクライアント接続  
+####  <a name="Client_Connections"></a> ベスト プラクティス:データベース スナップショットへのクライアント接続  
  データベース スナップショットを使用するには、クライアントはそのスナップショットを見つける場所を認識している必要があります。 ユーザーは、あるデータベース スナップショットが作成または削除されている間でも、他のデータベース スナップショットから読み取ることができます。 ただし、既存のスナップショットを新しいスナップショットに置き換えるときに、クライアントを新しいスナップショットにリダイレクトする必要があります。 ユーザーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、データベース スナップショットに手動で接続できます。 ただし、実稼働環境をサポートするには、ユーザーが意識しないうちにレポート作成クライアントをデータベースの最新のデータベース スナップショットにリダイレクトするような、プログラム ソリューションを作成する必要があります。  
   
 ###  <a name="Security"></a> セキュリティ  

@@ -1,24 +1,23 @@
 ---
-title: 'チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ee60121e4356b8b54a943ab7373fafd504e5778f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099132"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)
   縦棒グラフでは、カテゴリ別にグループ化された縦棒のセットとして系列が表示されます。 縦棒グラフは次の場合に便利です。  
   
 -   時間の経過に伴うデータの変化を示す。  
@@ -53,11 +52,11 @@ ms.locfileid: "48104134"
 9. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、およびデータセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
- このチュートリアルの推定所要時間: 15 分  
+ このチュートリアルの推定所要時間:15 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
 ##  <a name="Chart"></a> 1.グラフ ウィザードからグラフ レポートを作成する  
@@ -68,7 +67,7 @@ ms.locfileid: "48104134"
   
 #### <a name="to-create-a-new-chart-report"></a>新しいグラフ レポートを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "48104134"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
+8.  (省略可) [実行] ボタン ( **!** ) をクリックして、グラフの基になるデータを確認します。  
   
 9. **[次へ]** をクリックします。  
   
@@ -210,7 +209,7 @@ ms.locfileid: "48104134"
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  単語を選択します。**グラフのタイトル**グラフ、および入力し、次のテキストの上部にある: **Store Sales Order Totals**します。  
+2.  単語を選択します。**グラフのタイトル**グラフ、および入力し、次のテキストの上部にあります。**販売注文の合計を格納**します。  
   
 3.  **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -237,13 +236,13 @@ ms.locfileid: "48104134"
   
 9. グラフの側面に沿った縦軸のタイトルを右クリックし、をクリックして**軸のタイトルのプロパティ**します。  
   
-10. テキストを置き換える、**タイトルのテキスト**フィールドには、次のテキスト: **Sales Total (in Thousands)** します。 タイトルの表示形式に関連した各種オプションを指定することもできます。  
+10. テキストを置き換える、**タイトルのテキスト**フィールドには、次のテキスト。**売上の合計 (in Thousands)** します。 タイトルの表示形式に関連した各種オプションを指定することもできます。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 12. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Average"></a> 7.移動平均を追加する  
+##  <a name="Average"></a> 7.移動平均を追加します。  
   
 #### <a name="to-add-a-moving-average"></a>移動平均を追加するには  
   
@@ -267,7 +266,7 @@ ms.locfileid: "48104134"
   
  グラフに、4 日ごとに平均値を求めた日付別の売上合計の移動平均を示す線が表示されます。  
   
-##  <a name="Title"></a> 8。レポート タイトルを追加する  
+##  <a name="Title"></a> 8.レポート タイトルを追加する  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
   
@@ -291,7 +290,7 @@ ms.locfileid: "48104134"
   
 7.  **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Save"></a> 9 です。レポートを保存する  
+##  <a name="Save"></a> 9.レポートを保存する  
   
 #### <a name="to-save-the-report"></a>レポートを保存するには  
   

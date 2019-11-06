@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ragged hierarchies [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69c39bb516c198005246d7d3dde5c588fd68cef1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087892"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889330"
 ---
 # <a name="ragged-hierarchies"></a>不規則階層
   不規則階層はユーザー定義の階層で、不均一な数のレベルが含まれています。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
@@ -40,11 +39,11 @@ ms.locfileid: "48087892"
 ##  <a name="bkmk_approach"></a> 不規則階層でのドリル ダウン ナビゲーションを変更する方法  
  ドリル ダウン ナビゲーションが予期した値を返さない場合や使いにくい場合、不規則階層の存在が問題になります。 不規則階層が原因となるナビゲーションの問題を解決するには、次の点を検討してください。  
   
--   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 設定するときに`HideMemberIf`も設定する必要があります`MDXCompatibility`既定のナビゲーション動作をオーバーライドする接続文字列にします。 これらのプロパティの設定手順をこのトピックで説明します。  
+-   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 `HideMemberIf` を設定するとき、接続文字列で `MDXCompatibility` も設定し、既定のナビゲーション動作をオーバーライドします。 これらのプロパティの設定手順をこのトピックで説明します。  
   
--   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンライン ブックの「詳細については、次を参照してください。 [、親子階層](parent-child-dimension.md)します。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
+-   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンラインブックの詳細については、「[親子階層](parent-child-dimension.md)」を参照してください。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
   
- 最初の方法では、設定を使用する必要があります、ディメンションには、複数の不規則階層が含まれている場合`HideMemberIf`します。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 この方法の詳細については、「 [SSAS Financial Cube–Part 1a–Ragged Hierarchies](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 」(SSAS 財務キューブ – パート 1a – 不規則階層 (Martin Mason のブログ)) をご覧ください。  
+ ディメンションに複数の不規則階層が含まれている場合は、第 1 の方法である、`HideMemberIf` の設定を使用してください。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 この手法の詳細について[は、「Martin を使用した SSAS 財務キューブ-パート 1a-不規則階層 (ブログ)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 」を参照してください。  
   
 ##  <a name="bkmk_Hide"></a> HideMemberIf を設定して標準階層のメンバーを非表示にする  
  不規則なディメンションのテーブルでは、論理的に欠落しているメンバーはさまざまな方法で表されます。 テーブルのセルに NULL または空の文字列を含めたり、親と同じ値を含めてプレースホルダーとして使用できます。 プレースホルダーの表示は、子メンバーのプレースホルダーのステータス、`HideMemberIf` プロパティ、クライアント アプリケーションの `MDX Compatibility` 接続文字列プロパティによって決まります。  
@@ -64,7 +63,7 @@ ms.locfileid: "48087892"
     |**ParentName**|レベル メンバーは、名前がその親の名前と同じである場合、表示されません。|  
   
 ##  <a name="bkmk_Mdx"></a> MDX の互換性を設定してクライアント アプリケーションでのプレースホルダーの表示方法を指定する  
- 設定後`HideMemberIf`階層レベルで設定は、`MDX Compatibility`クライアント アプリケーションから送信される接続文字列内のプロパティ。 `MDX Compatibility` の設定によって、`HideMemberIf` が使用されるかどうかが決まります。  
+ 階層レベルで `HideMemberIf` を設定したら、クライアント アプリケーションから送信される接続文字列の `MDX Compatibility` プロパティも設定する必要があります。 `MDX Compatibility` の設定によって、`HideMemberIf` が使用されるかどうかが決まります。  
   
 |MDX Compatibility の設定|説明|使用方法|  
 |-------------------------------|-----------------|-----------|  
@@ -72,9 +71,9 @@ ms.locfileid: "48087892"
 |**2**|プレースホルダーの値 (null 値または親レベルの複製) を非表示にします。ただし、関連する値を持つ他のレベルとノードは表示します。|不規則階層では、通常、`MDX Compatibility`=2 が優先される設定として示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートと一部のサードパーティのクライアント アプリケーションでは、この設定を保存できます。|  
   
 ## <a name="see-also"></a>参照  
- [ユーザー定義階層を作成します。](user-defined-hierarchies-create.md)   
+ [ユーザー定義階層の作成](user-defined-hierarchies-create.md)   
  [ユーザー階層](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [親子階層](parent-child-dimension.md)   
- [接続文字列プロパティ (Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [接続文字列プロパティ &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

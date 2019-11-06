@@ -23,16 +23,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - names [SQL Server], logins
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5333687cfd9a8e7c59d8a1c695af2e8015ce2a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ecfa682fb8b3942b1931c07273cdfa93831c6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117607"
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- ログイン名のセキュリティ ID 番号を指定します (省略可能)。 *server_user_sid* は **varbinary(85)** です。 *server_user_sid* には、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーやグループのセキュリティ ID 番号を指定できます。 *server_user_sid* の指定を省略すると、現在のユーザーについての情報が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
+ オプションのログイン セキュリティ ID 番号を指定します。 *server_user_sid* は **varbinary(85)** です。 *server_user_sid* には、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーやグループのセキュリティ ID 番号を指定できます。 *server_user_sid* の指定を省略すると、現在のユーザーについての情報が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
@@ -104,7 +103,7 @@ GO
 ```  
   
 ### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. SUSER_SNAME を EXECUTE AS と組み合わせて呼び出す  
- 次の例は、権限を借用したコンテキストから呼び出した場合の SUSER_SNAME の動作を示しています。  
+ この例は、権限を借用したコンテキストから呼び出した場合の SUSER_SNAME の動作を示しています。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   

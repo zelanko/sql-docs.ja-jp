@@ -1,22 +1,21 @@
 ---
-title: 'レッスン 8: データ フィルターを作成する | Microsoft Docs'
+title: 'レッスン 8: データのフィルターの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108388"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
   親レポートにドリルスルー アクションを追加した後は、子レポート用に定義したデータ テーブル用のデータ フィルターを作成します。  
@@ -42,9 +41,9 @@ ms.locfileid: "48189922"
   
 4.  **式**フィールドで、をクリックして`ProductID`ドロップダウン リストから。 これは、フィルターを適用する列です。  
   
-5.  [等しい] をクリックして (**=**) 内の演算子、**演算子**ドロップダウン リスト。  
+5.  [等しい] をクリックして ( **=** ) 内の演算子、**演算子**ドロップダウン リスト。  
   
-6.  次の式ボタンをクリックして、**値**フィールドに、をクリックして**パラメーター**で、**カテゴリ**領域、およびダブルクリック`productid`で、 **値**領域。 **[式の設定: 値]** フィールドに、 **=Parameters!productid.Value**のような式が表示されます。  
+6.  次の式ボタンをクリックして、**値**フィールドに、をクリックして**パラメーター**で、**カテゴリ**領域、およびダブルクリック`productid`で、 **値**領域。 **式の設定。値**フィールドのような式に表示するようになりました**パラメーターを =! productid します。値**します。  
   
 7.  をクリックして**ok、** と**OK**で再度、 **Tablix のプロパティ** ダイアログ ボックス。  
   
@@ -56,9 +55,9 @@ ms.locfileid: "48189922"
   
 2.  パラメーターを受け取る新しい関数を作成`productid`、整数型を返します、`datatable`オブジェクト、および実行すると、次です。  
   
-    1.  データセットのインスタンスを作成します`DataSet2`の手順 2. で作成された[レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)します。  
+    1.  データセットのインスタンスを作成します`DataSet2`、ステップ 2 で作成された[レッスン 4。子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)します。  
   
-    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義されたクエリを実行します。  
+    2.  定義されているクエリを実行する SqlServer データベースへの接続を作成する**レッスン 4。定義、データ接続と DataTable を子レポートの**します。  
   
     3.  クエリにより、フィルター選択されていないデータが返されます。  
   
@@ -166,9 +165,9 @@ ms.locfileid: "48189922"
   
 2.  新しい関数を作成します。この関数は、Integer 型の `productid` パラメーターを受け取った後、`datatable` オブジェクトを返し、次の操作を行います。  
   
-    1.  データセットのインスタンスを作成します`DataSet2`の手順 2. で作成された[レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)します。  
+    1.  データセットのインスタンスを作成します`DataSet2`、ステップ 2 で作成された[レッスン 4。子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)します。  
   
-    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義したクエリを実行します。  
+    2.  定義クエリを実行する SqlServer データベースへの接続を作成する**レッスン 4。定義、データ接続と DataTable を子レポートの**します。  
   
     3.  このクエリには、返されるデータを親レポートで選択された `productid` に基づいてフィルター選択するための `ProductID` パラメーターが含まれます。  
   

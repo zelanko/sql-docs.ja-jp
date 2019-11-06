@@ -2,18 +2,18 @@
 title: First 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 075d2253f8662786952e0057042dd04351296aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579529"
 ---
 # <a name="report-builder-functions---first-function"></a>レポート ビルダー関数 - First 関数
   指定された式の指定されたスコープの最初の値を返します。  

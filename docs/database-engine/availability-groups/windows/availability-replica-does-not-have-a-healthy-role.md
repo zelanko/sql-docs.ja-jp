@@ -1,6 +1,7 @@
 ---
-title: 正常なロールのない可用性レプリカ | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの可用性レプリカに正常なロールがない
+description: Always On 可用性グループ内のレプリカに正常なロールがない理由を特定します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aec1a0cc2b6a5f12dce1d8c49c7d2c1b26771e00
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9454b48f17af904db87e0000b07651c1bc454362
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991379"
 ---
-# <a name="availability-replica-does-not-have-a-healthy-role"></a>正常なロールのない可用性レプリカ
+# <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性レプリカに正常なロールがない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>概要  
@@ -42,7 +42,7 @@ ms.locfileid: "51602822"
 ## <a name="possible-causes"></a>考えられる原因  
  この可用性レプリカのロールが正常ではありません。 このレプリカにはプライマリ ロールもセカンダリ ロールも割り当てられていません。  
   
-## <a name="possible-solution-informationstilltocome"></a>考えられる解決方法: ここに情報を挿入  
+## <a name="possible-solution-informationstilltocome"></a>考えられる解決方法:Information_still_to_come  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

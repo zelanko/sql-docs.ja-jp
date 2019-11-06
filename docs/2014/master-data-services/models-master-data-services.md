@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2e4abc0b318af1ad13856d4ab6f1ca13e011d76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482546"
 ---
 # <a name="models-master-data-services"></a>モデル (Master Data Services)
   モデルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の最上位レベルのデータ編成単位です。 モデルは、マスター データ管理ソリューションでのデータの構造を定義します。 モデルには次のオブジェクトが含まれています。  
@@ -71,7 +70,7 @@ ms.locfileid: "48088802"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|モデルを作成してマスター データを整理する。|[モデルを作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|モデルを作成してマスター データを整理する。|[モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)|  
 |既存のモデルの名前を変更する。|[モデル名を変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
 |既存のモデルを削除する。|[モデルを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
@@ -81,10 +80,10 @@ ms.locfileid: "48088802"
   
 -   [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [モデルの配置&#40;マスター データ サービス&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [モデルの配置 (マスター データ サービス)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [モデル オブジェクト権限&#40;マスター データ サービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [モデル オブジェクト権限 (マスター データ サービス)](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: CLR ユーザー定義集計関数の呼び出し |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9fa5ab2af307cb0ebdd55e4137c3c7642251f10e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028371"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR ユーザー定義集計 - 関数の呼び出し
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ public class Concatenate : IBinarySerialize
     /// <summary>  
     /// The variable that holds the intermediate result of the concatenation  
     /// </summary>  
-    private StringBuilder intermediateResult;  
+    public StringBuilder intermediateResult;  
   
     /// <summary>  
     /// Initialize the internal data structures  
@@ -144,7 +143,7 @@ Public Class Concatenate
     ''' <summary>  
     ''' The variable that holds the intermediate result of the concatenation  
     ''' </summary>  
-    Private intermediateResult As StringBuilder  
+    Public intermediateResult As StringBuilder  
   
     ''' <summary>  
     ''' Initialize the internal data structures  
@@ -442,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

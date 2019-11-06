@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.sqlsyntaxerrorsencountered
@@ -13,12 +13,12 @@ ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73f72bea0e286c3de884c2c56a77aaf292d4699c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77b858cdee3940bb797ab2bfa3929ae09ed807e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204566"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>[SQL 構文エラーが発生] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスは、デザイナーが SQL ペインの SQL ステートメントを解析できないことを通知します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48196602"
   
  ダイアログ ボックスには、SQL ステートメントが解析できない理由を示すメッセージが表示されます。 **[OK]** をクリックして作業を続けます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](visual-database-tools.md)  
   
   

@@ -26,12 +26,12 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ba043e2c19a1fd835f04c5426c0518dec2831b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874838"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR パラメーター データのマッピング
   次の表[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型の場合の共通言語ランタイム (CLR) の同等の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、`System.Data.SqlTypes`名前空間とのネイティブの CLR 同等の[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework です。  
@@ -50,9 +50,9 @@ ms.locfileid: "48148122"
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset では、null 許容\<DateTimeOffset >**|  
 |`decimal`|`SqlDecimal`|**10 進数、null 値許容\<Decimal >**|  
 |`float`|`SqlDouble`|**Null 値は二重\<Double >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` SQL Server と共にインストールされからダウンロードできます。 これには、Microsoft.SqlServer.Types.dll に定義されて、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][機能パック](http://go.microsoft.com/fwlink/?LinkId=131220)します。|なし|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` SQL Server と共にインストールされからダウンロードできます。 これには、Microsoft.SqlServer.Types.dll に定義されて、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][機能パック](http://go.microsoft.com/fwlink/?LinkId=131220)します。|なし|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` SQL Server と共にインストールされからダウンロードできます。 これには、Microsoft.SqlServer.Types.dll に定義されて、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][機能パック](http://go.microsoft.com/fwlink/?LinkId=131220)します。|なし|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` SQL Server と共にインストールされからダウンロードできます。 これには、Microsoft.SqlServer.Types.dll に定義されて、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][機能パック](https://www.microsoft.com/en-us/download/details.aspx?id=53164)します。|なし|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` SQL Server と共にインストールされからダウンロードできます。 これには、Microsoft.SqlServer.Types.dll に定義されて、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][機能パック](https://www.microsoft.com/en-us/download/details.aspx?id=53164)します。|なし|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` SQL Server と共にインストールされからダウンロードできます。 これには、Microsoft.SqlServer.Types.dll に定義されて、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][機能パック](https://www.microsoft.com/en-us/download/details.aspx?id=53164)します。|なし|  
 |`image`|なし|なし|  
 |`int`|`SqlInt32`|**Null 許容の Int32\<Int32 >**|  
 |`money`|`SqlMoney`|**10 進数、null 値許容\<Decimal >**|  
@@ -86,13 +86,13 @@ ms.locfileid: "48148122"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 <Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( <Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

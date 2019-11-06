@@ -1,6 +1,7 @@
 ---
-title: 動的管理ビューおよびシステム カタログ ビュー (Always On 可用性グループ - SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: AlwaysOn 可用性グループの動的管理ビューとシステム カタログ ビュー
+description: Always On 可用性グループの正常性を監視し、診断するために役立つ一連の動的管理ビューとカタログ ビュー。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 79318dcd39a91eb8e3b9f570425f73838a1e53a3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 591365dfd1aff7e4c4dc8811ea640cc3885dfeb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000188"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>動的管理ビューおよびシステム カタログ ビュー (Always On 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

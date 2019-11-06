@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771578"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   `SSISDB`カタログが操作するための中心点[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) プロジェクトを展開している、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -27,7 +26,7 @@ ms.locfileid: "48201342"
   
  `SSISDB` データベースを保守するには、ユーザー データベースの管理に標準的なエンタープライズ ポリシーを適用することをお勧めします。 メンテナンス プランの作成については、「 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)」をご覧ください。  
   
- `SSISDB`カタログと`SSISDB`データベースは Windows PowerShell をサポートします。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)」をご覧ください。  
+ `SSISDB`カタログと`SSISDB`データベースは Windows PowerShell をサポートします。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」をご覧ください。  
   
  オペレーション データを表示する方法についての詳細については、次を参照してください。[パッケージの実行とその他の操作の監視を](../performance/monitor-running-packages-and-other-operations.md)します。  
   
@@ -39,14 +38,14 @@ ms.locfileid: "48201342"
 > [!NOTE]  
 >  場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが、`SSISDB`データベースに接続されて、停止するか、ISServerExec.exe が応答しないプロセスが終了します。 メッセージが Windows イベント ログに書き込まれます。  
 >   
->  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+>  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳しくは、「 [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md)」をご覧ください。  
   
 ## <a name="catalog-object-identifiers"></a>カタログ オブジェクト識別子  
  カタログに新しいオブジェクトを作成するときは、オブジェクトに名前を割り当てる必要があります。 オブジェクト名が識別子となります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、識別子に使用できる文字のルールが定義されています。 次のオブジェクトの名前は、識別子のルールに従っている必要があります。  
   
 -   フォルダー  
   
--   プロジェクト  
+-   Project  
   
 -   環境  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48201342"
 -   2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (_) を使用できます。  
   
 ## <a name="catalog-configuration"></a>カタログの構成  
- カタログ プロパティを調整することによって、カタログの動作を微調整します。 カタログ プロパティは、機微なデータを暗号化する方法と、操作およびプロジェクトのバージョン管理データを保持する方法を定義します。 カタログ プロパティを設定するには、**[カタログのプロパティ]** ダイアログ ボックスを使用するか、[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) ストアド プロシージャを呼び出します。 プロパティを表示するには、ダイアログ ボックスまたはクエリ [catalog.catalog_properties (SSISDB Database)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) を使用します。 ダイアログ ボックスには、オブジェクト エクスプローラーで `SSISDB` を右クリックしてアクセスできます。  
+ カタログ プロパティを調整することによって、カタログの動作を微調整します。 カタログ プロパティは、機微なデータを暗号化する方法と、操作およびプロジェクトのバージョン管理データを保持する方法を定義します。 カタログ プロパティを設定するには、 **[カタログのプロパティ]** ダイアログ ボックスを使用するか、[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) ストアド プロシージャを呼び出します。 プロパティを表示するには、ダイアログ ボックスまたはクエリ [catalog.catalog_properties (SSISDB Database)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) を使用します。 ダイアログ ボックスには、オブジェクト エクスプローラーで `SSISDB` を右クリックしてアクセスできます。  
   
 ### <a name="operations-and-project-version-cleanup"></a>操作とプロジェクト バージョンのクリーンアップ  
  カタログの多くの操作の状態データは、内部データベース テーブルに格納されます。 たとえば、カタログではパッケージの実行とプロジェクトの配置の状態が追跡されます。 操作データのサイズを維持するには、 **の** SSIS サーバー メンテナンス ジョブ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して古いデータを削除します。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に作成されます。  
@@ -98,7 +97,7 @@ ms.locfileid: "48201342"
  次`SSISDB`カタログのプロパティを定義する方法、この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブの動作します。 **[カタログ プロパティ]** ダイアログ ボックスを利用するか、[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) と [catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) を利用し、プロパティを表示し、変更できます。  
   
  **ログを定期的に消去する**  
- このプロパティ設定されている場合、操作のクリーンアップのジョブ ステップが実行される`True`します。  
+ このプロパティが `True` に設定されている場合は、操作のクリーンアップのジョブ ステップが実行されます。  
   
  **保有期間 (日)**  
  操作データの最大保有期間を日数で定義します。 この期間を経過したデータは削除されます。  
@@ -106,7 +105,7 @@ ms.locfileid: "48201342"
  最小値は 1 日です。 最大値はの最大値によってのみ制限されます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int`データ。 このデータ型に関する詳細については、「[int、bigint、smallint、および tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)」を参照してください。  
   
  **古いバージョンを定期的に削除する**  
- プロジェクト バージョンのクリーンアップ ジョブ ステップの実行このプロパティが設定されている場合`True`します。  
+ このプロパティが `True` に設定されている場合は、プロジェクト バージョンのクリーンアップのジョブ ステップが実行されます。  
   
  **プロジェクトごとのバージョンの最大数**  
  カタログに格納されるプロジェクトのバージョンの数を定義します。 この数を超える古いバージョンのプロジェクトは削除されます。  
@@ -128,7 +127,7 @@ ms.locfileid: "48201342"
   
 -   DES  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバーに配置する場合、カタログは自動的にパッケージのデータと重要な値を暗号化します。 また、ユーザーがデータを取得するときには、自動的に暗号化を解除します。 SSISDB カタログを使用して、`ServerStorage`保護レベル。 詳しくは、「 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)」をご覧ください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバーに配置する場合、カタログは自動的にパッケージのデータと重要な値を暗号化します。 また、ユーザーがデータを取得するときには、自動的に暗号化を解除します。 SSISDB カタログは、`ServerStorage` 保護レベルを使用します。 詳しくは、「 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)」をご覧ください。  
   
  暗号化アルゴリズムの変更は、時間のかかる操作です。 最初に、サーバーで以前に指定したアルゴリズムを使用して、すべての構成値の暗号化を解除する必要があります。 次に、新しいアルゴリズムを使用して、その値を再暗号化する必要があります。 この間、サーバーで他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作を実行できません。 そのため、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作を途切れることなく続行できるように、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では、暗号化アルゴリズムが読み取り専用の値になっています。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "48201342"
   
  次の表では、 **[カタログのプロパティ]** ダイアログ ボックスに示されるプロパティ名と、データベース ビュー内の対応するプロパティについて説明します。  
   
-|プロパティ名 (**[カタログのプロパティ]** ダイアログ ボックス)|プロパティ名 (データベース ビュー)|  
+|プロパティ名 ( **[カタログのプロパティ]** ダイアログ ボックス)|プロパティ名 (データベース ビュー)|  
 |---------------------------------------------------------|-------------------------------------|  
 |暗号化アルゴリズムの名前|ENCRYPTION_ALGORITHM|  
 |ログを定期的に消去する|OPERATION_CLEANUP_ENABLED|  
@@ -284,10 +283,10 @@ ms.locfileid: "48201342"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   blogs.msdn.com のブログ「 [SQL Server 2012 での SSIS と PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)」  
+-   blogs.msdn.com のブログ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」  
   
--   blogs.msdn.com のブログ エントリ「 [SSIS カタログのアクセス制御のヒント](http://go.microsoft.com/fwlink/?LinkId=246669)」  
+-   blogs.msdn.com のブログ エントリ「 [SSIS カタログのアクセス制御のヒント](https://go.microsoft.com/fwlink/?LinkId=246669)」  
   
--   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](http://go.microsoft.com/fwlink/?LinkId=254267)」  
+-   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=254267)」  
   
   

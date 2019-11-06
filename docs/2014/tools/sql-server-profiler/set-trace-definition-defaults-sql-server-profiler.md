@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], defaults
@@ -13,12 +12,12 @@ ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75bf4ef757be34eabff2f0283cf53947fbffdcc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267436"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>トレース定義の既定値の設定 (SQL Server Profiler)
   トレース定義の既定値は、プロバイダーまたはサーバーごとに使用される既定のトレース テンプレートです。 既定のトレース テンプレートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に設定できます。  
@@ -37,7 +36,7 @@ ms.locfileid: "48167022"
   
 6.  **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler のテンプレート](sql-server-profiler-templates.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

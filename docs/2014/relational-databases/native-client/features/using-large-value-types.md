@@ -17,15 +17,15 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206989"
 ---
 # <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値データ型は、8 KB の最大行サイズを超えています。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入された、 **max**の指定子**varchar**、 **nvarchar**と**varbinary** 2 と同じ大きさの値を格納を許可するデータ型 ^31-1バイト数。 テーブルの列と[!INCLUDE[tsql](../../../includes/tsql-md.md)]変数を指定できます**varchar (max)**、 **nvarchar (max)** または**varbinary (max)** データ型。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値データ型は、8 KB の最大行サイズを超えています。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入された、 **max**の指定子**varchar**、 **nvarchar**と**varbinary** 2 と同じ大きさの値を格納を許可するデータ型 ^31-1バイト数。 テーブルの列と[!INCLUDE[tsql](../../../includes/tsql-md.md)]変数を指定できます**varchar (max)** 、 **nvarchar (max)** または**varbinary (max)** データ型。  
   
 > [!NOTE]  
 >  大きな値をとるデータ型は、最大サイズを 1 ～ 8 KB に制限できます。また、サイズを無制限にすることもできます。  
@@ -39,7 +39,7 @@ ms.locfileid: "48136192"
 >  データをレプリケートする場合は、構成する必要があります、 [max text repl size サーバー構成オプション](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)を-1 にします。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** 型 DBTYPE_STR、DBTYPE_BYTES、として、DBTYPE_WSTR、それぞれします。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **varchar (max)** 、 **varbinary (max)** 、および**nvarchar (max)** 型 DBTYPE_STR、DBTYPE_BYTES、として、DBTYPE_WSTR、それぞれします。  
   
  **max** のサイズが無制限に設定されている列の **varchar(max)** データ型、**varbinary(max)** データ型、**nvarchar(max)** データ型は、列のデータ型を返す主要な OLE DB スキーマ行セットやインターフェイスでは ISLONG で表されます。  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
  方法の詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、大きな値データ型を公開します。 は、「 [Blob と OLE オブジェクト](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)します。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを公開して、 **varchar (max)**、 **varbinary (max)** と**nvarchar (max)** 型として SQL_VARCHAR、SQL_VARBINARY、および sql _WVARCHAR ODBC API 関数や ODBC SQL データ型を戻り値にします。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを公開して、 **varchar (max)** 、 **varbinary (max)** と**nvarchar (max)** 型として SQL_VARCHAR、SQL_VARBINARY、および sql _WVARCHAR ODBC API 関数や ODBC SQL データ型を戻り値にします。  
   
  ドライバーでは、列の最大サイズを報告するときに次のいずれかを報告します。  
   
@@ -718,7 +718,7 @@ _ExitProcessResultSet:
   
 -   [SQLGetTypeInfo](../../native-client-odbc-api/sqlgettypeinfo.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client の機能](sql-server-native-client-features.md)  
   
   

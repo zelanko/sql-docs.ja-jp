@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -20,12 +19,12 @@ ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb04d2fd2b0587863d59d90a4fff7f949c108ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316329"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler を使用したデッドロックの分析
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、デッドロックの原因を特定します。 デッドロックは、SQL Server 内のリソースの集合に対して複数のスレッド間またはプロセス間で相互に依存関係があるときに発生します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、分析用にデッドロック イベントを記録、再生、および表示するトレースを作成できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48176582"
  テーブル、インデックス、行などのデータベース オブジェクト。  
   
  エッジ  
- プロセスとリソース間の関係。 A `request` edge は、プロセスがリソースを待機しているときに発生します。 `owner` Edge は、リソースがプロセスを待機しているときに発生します。 ロック モードは、エッジの記述に含まれます。 たとえば、" **モード: X**" などです。  
+ プロセスとリソース間の関係。 `request`エッジは、プロセスがリソースを待機したときに発生します。 `owner`エッジは、リソースがプロセスを待機したときに発生します。 ロック モードは、エッジの記述に含まれます。 たとえば、**モード。X**します。  
   
 ## <a name="deadlock-process-node"></a>デッドロック プロセス ノード  
  Deadlock Wait-for Graph には、プロセス ノードにプロセスに関する情報が含まれています。 次の表で、プロセスの構成要素について説明します。  

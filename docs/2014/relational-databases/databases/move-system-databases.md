@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
@@ -28,12 +27,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3297457db7fb0d363e8122cab9b4d02abcd87ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871539"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム データベースを移動する方法について説明します。 システム データベースの移動は、次の状況で便利な場合があります。  
@@ -61,7 +60,7 @@ ms.locfileid: "48080422"
   
 -   [Resource データベースの移動](#Resource)  
   
--   [補足情報: すべてのシステム データベースを移動した後](#Follow)  
+-   [補足情報:すべてのシステム データベースを移動した後](#Follow)  
   
 -   [使用例](#Examples)  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48080422"
   
 3.  ファイルを新しい場所に移動します。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたはサーバーを再起動します。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたはサーバーを再起動します。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md) 」を参照してください。  
   
 5.  次のクエリを実行して、ファイルが変更されたことを確認します。  
   
@@ -153,17 +152,17 @@ ms.locfileid: "48080422"
 ##  <a name="master"></a> master データベースの移動  
  master データベースを移動するには、次の手順を実行します。  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントし、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[構成ツール]** の順にポイントし、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server のサービス]** ノードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (たとえば、 **[SQL Server (MSSQLSERVER)]**) を右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server のサービス]** ノードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (たとえば、 **[SQL Server (MSSQLSERVER)]** ) を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[SQL Server (***instance_name***) のプロパティ]** ダイアログ ボックスで、**[起動時のパラメーター]** タブをクリックします。  
+3.  **[SQL Server (***instance_name***) のプロパティ]** ダイアログ ボックスで、 **[起動時のパラメーター]** タブをクリックします。  
   
-4.  **[既存のパラメーター]** ボックスで –d パラメーターを選択して、マスター データ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
+4.  **[既存のパラメーター]** ボックスで -d パラメーターを選択して、マスター データ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
   
      **[起動時のパラメーターの指定]** ボックスで、パラメーターを master データベースの新しいパスに変更します。  
   
-5.  **[既存のパラメーター]** ボックスで –l パラメーターを選択して、マスター ログ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
+5.  **[既存のパラメーター]** ボックスで -l パラメーターを選択して、マスター ログ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
   
      **[起動時のパラメーターの指定]** ボックスで、パラメーターを master データベースの新しいパスに変更します。  
   
@@ -197,7 +196,7 @@ ms.locfileid: "48080422"
 ##  <a name="Resource"></a> Resource データベースの移動  
  Resource データベースの既定の場所は、\<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\ です。 データベースを移動することはできません。  
   
-##  <a name="Follow"></a> 補足情報: すべてのシステム データベースを移動した後  
+##  <a name="Follow"></a> 補足情報:すべてのシステム データベースを移動した後  
  すべてのシステム データベースを、新しいドライブやボリューム、または別のドライブ文字を使用した別のサーバーに移動した場合は、次の更新を行います。  
   
 -   SQL Server エージェントのログ パスを変更します。 このパスを更新しないと、SQL Server エージェントは起動しません。  

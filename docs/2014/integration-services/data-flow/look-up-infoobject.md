@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c3fa39cde45e568ad713a3238c98e96d40f8495
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771118"
 ---
 # <a name="look-up-infoobject"></a>[インフォオブジェクトの参照]
   SAP Netweaver BW システムで定義されたインフォオブジェクトを参照する場合、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用します。 使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、SAP BW 変換先で関連するオプションに必要な値が設定されます。  
@@ -80,12 +79,12 @@ ms.locfileid: "48155042"
  使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、変換先で関連するオプションに必要な値が設定されます。  
   
 ## <a name="see-also"></a>参照  
- [トランザクション データのインフォ キューブを作成します。](create-infocube-for-transaction-data.md)   
- [インフォ ソースを作成します。](create-infosource.md)   
- [トランザクション データのインフォソースの作成](create-infosource-for-transaction-data.md)   
+ [[トランザクション データのインフォキューブの作成]](create-infocube-for-transaction-data.md)   
+ [[インフォソースの作成]](create-infosource.md)   
+ [[トランザクション データのインフォソースの作成]](create-infosource-for-transaction-data.md)   
  [マスター データのインフォソースの作成](create-infosource-for-master-data.md)   
- [新しいインフォオブジェクトの作成](create-new-infoobject.md)   
- [SAP BW 変換先エディター&#40;接続マネージャー ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [[追加]](create-new-infoobject.md)   
+ [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

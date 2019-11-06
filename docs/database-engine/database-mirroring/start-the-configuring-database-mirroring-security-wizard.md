@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 77a616477592f0d23d24db80714f8667703e19ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1858a76625e4caaaa913c4d1bf91a466e04ef712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048021"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>データベース ミラーリング セキュリティ構成ウィザードの起動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

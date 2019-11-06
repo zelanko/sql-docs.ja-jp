@@ -15,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b3706237fdd673e4bcf42fbcc5e611e094fd1ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101041"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-指定した **geometry** インスタンスの近似を返します。これは、指定された許容範囲で、特定のインスタンスに対して Douglas-Peucker アルゴリズムの拡張を実行することにより生成されます。
+指定された **geometry** インスタンスの近似を返します。 近似は、指定された許容範囲で、特定のインスタンスに対して Douglas-Peucker アルゴリズムの拡張を実行することにより生成されます。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,20 +43,20 @@ ms.locfileid: "47805620"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  コレクションの場合、このアルゴリズムは個別に各 **geometry** インスタンスに含まれています。  
   
- このアルゴリズムによって **Point** インスタンスが変更されることはありません。  
+ このアルゴリズムによって、**Point** インスタンスが変更されることはありません。  
   
- **LineString**、**CircularString**、**CompoundCurve** のインスタンスでは、近似アルゴリズムはインスタンスの元の始点と終点を保持し、指定された許容範囲を超えない範囲で、結果から最も離れた元のインスタンスの地点を追加する処理を繰り返します。  
+ **LineString**、**CircularString**、**CompoundCurve** のインスタンスでは、近似アルゴリズムによってインスタンスの元の始点と終点が維持されます。 次に、アルゴリズムでは、結果から最も離れた元のインスタンスの点が繰り返し追加されます。 この処理は、指定された許容範囲より大きく外れた点がなくなるまで続けられます。  
   
  `Reduce()` は、**CircularString** インスタンスに対して **LineString**、**CircularString**、**CompoundCurve** インスタンスを返します。  `Reduce()` は、**CompoundCurve** インスタンスに対して **CompoundCurve** または **LineString** インスタンスを返します。  
   
  **Polygon** インスタンスでは、近似アルゴリズムが各リングに個別に適用されます。 返された **Polygon** インスタンスが無効な場合、メソッドは `FormatException` を生成します。たとえば、インスタンス内の各リングを簡略化するために `Reduce()` が適用され、その結果リングが重なる場合、無効な **MultiPolygon** が作成されます。  外部リングがあり、内部リングがない **CurvePolygon** インスタンスでは、`Reduce()` は **CurvePolygon**、**LineString**、**Point** インスタンスを返します。  **CurvePolygon** に内部リングがある場合、**CurvePolygon** または **MultiPoint** インスタンスが返されます。  
   
- 円弧が検出されると、指定された許容範囲の半分以内で弦によって円弧を近似できるかどうかが近似アルゴリズムによってチェックされます。  弦がこの条件を満たす場合、円弧は計算において弦で置き換えられます。 弦がこの条件を満たしていない場合は、円弧が保持され、近似アルゴリズムが残りのセグメントに適用されます。  
+ 円弧が検出されると、指定された許容範囲の半分以内で弦によって円弧を近似できるかどうかが近似アルゴリズムによってチェックされます。 弦がこの条件を満たす場合、円弧は計算において弦で置き換えられます。 弦がこの条件を満たしていない場合は、円弧が保持され、近似アルゴリズムが残りのセグメントに適用されます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -101,8 +100,8 @@ SELECT @g.Reduce(.75).ToString();
   
  この例では、2 番目の **SELECT** ステートメントによって **LineString** インスタンス (`LineString(0 0, 16 0)`) が返されます。  
   
-### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>元の始点と終点が失われる例  
- 次の例では、元の始点と終点が結果のインスタンスで保持されない状況を示します。 この状況は、元の始点と終点を保持した結果、**LineString** インスタンスが無効となった場合に発生します。  
+### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>元の始点と終点が失われる例を示す  
+ 次の例では、元の始点と終点が結果のインスタンスで保持されない状況を示します。 このような動作は、元の始点と終点を保持した結果、**LineString** インスタンスが無効となった場合に発生します。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  
@@ -114,5 +113,3 @@ SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;
 ## <a name="see-also"></a>参照  
  [拡張された静的なジオメトリ メソッド](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
-  
-

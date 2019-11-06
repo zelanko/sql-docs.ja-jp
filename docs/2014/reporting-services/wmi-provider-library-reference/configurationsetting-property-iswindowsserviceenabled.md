@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - IsWindowsServiceEnabled
@@ -16,18 +15,18 @@ topic_type:
 helpviewer_keywords:
 - IsWindowsServiceEnabled property
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8547320f6ac9cda5f98da04209060f433da1436e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 8014f107ca2b552bf5aef316b1aefcb283a645d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097588"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー Windows サービスが有効かどうかを示します。 読み取り専用です。  
+  レポート サーバー Windows サービスが有効かどうかを示します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +44,7 @@ public boolean IsWindowsServiceEnabled;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

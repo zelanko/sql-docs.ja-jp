@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc5c128de983fc2bf2c4287b53f74495ff76ebb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 724309ed2b66ee75eb8f223ebd300a2ae941cd2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014013"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>エンドポイント URL の指定 - 可用性レプリカの追加と変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,34 +28,27 @@ ms.locfileid: "52518247"
 > [!NOTE]  
 >  "エンドポイント URL" という用語は、データベース ミラーリングのユーザー インターフェイスとドキュメントで使用される "サーバー ネットワーク アドレス" という用語と同義です。  
   
--   [エンドポイント URL の構文](#SyntaxOfURL)  
-  
--   [システムの完全修飾ドメイン名の検索](#Finding_FQDN)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
   
 ##  <a name="SyntaxOfURL"></a> エンドポイント URL の構文  
  エンドポイント URL の構文は、次のような形式になります。  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  パラメーターの説明  
   
--   *\<system-address* は、ミラーリング先のコンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
+-   *\<system-address&gt;* は、ターゲット コンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
   
     -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターのノードが同じドメイン内にある場合、コンピューター システムの名前 ( `SYSTEM46`など) を使用できます。  
   
-    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、**[***<IPv6_address>***]** のように、角かっこで囲む必要があります。  
+    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、 **[** _<IPv6_address>_ **]** のように、角かっこで囲む必要があります。  
   
          システムの IP アドレスを参照するには、Windows コマンド プロンプトで、 **ipconfig** コマンドを入力します。  
   
     -   完全修飾ドメイン名は動作が保証されています。 これは、場所によって異なる形式を使用するローカルに定義されたアドレス文字列です。 常にではありませんが多くの場合、完全修飾ドメイン名は、次の形式のようにコンピューター名、およびピリオド区切りの一連のドメイン セグメントを含む複合名になります。  
   
-         *computer_name* **など) を使用できます。** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **など) を使用できます。** _domain_segment_[... **.** _domain_segment_]  
   
-         *computer_name* はサーバー インスタンスを実行しているコンピューターのネットワーク名であり、*domain_segment*[...**.***domain_segment*] はサーバーのその他のドメイン情報です。たとえば、`localinfo.corp.Adventure-Works.com` のようになります。  
+         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[... **.** _domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
   
          ドメイン セグメントの内容と数は、会社内または組織内で決定されます。 詳細については、このトピックの「 [完全修飾ドメイン名の検索](#Finding_FQDN)」を参照してください。  
   
@@ -64,7 +56,7 @@ ms.locfileid: "52518247"
   
      データベース ミラーリング エンドポイントは、コンピューター システム上の使用可能な任意のポートを使用できます。 各ポート番号は 1 つのエンドポイントだけに関連付けられている必要があります。また、各エンドポイントは 1 つのサーバー インスタンスに関連付けられています。そのため、1 台のサーバー上に複数のサーバー インスタンスがある場合、各サーバー インスタンスは、ポートが異なる別のエンドポイントでリッスンします。 したがって、可用性レプリカを指定するときにエンドポイント URL で指定するポートにより、必ず、エンドポイントがそのポートに関連付けられているサーバー インスタンスに受信メッセージがリダイレクトされます。  
   
-     エンドポイント URL で、対象のコンピューターのミラーリング エンドポイントに関連付けられているサーバー インスタンスを識別するのは、ポートの番号だけです。 次の図は、1 台のコンピューターにある 2 つのサーバー インスタンスのエンドポイント URL を示しています。 既定のインスタンスではポート `7022` が使用され、名前付きインスタンスではポート `7033`が使用されます。 これら 2 つのサーバー インスタンスのエンドポイント URL は、それぞれ `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` と `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`です。 アドレスにサーバー インスタンス名が含まれていないことに注意してください。  
+     エンドポイント URL で、ターゲット コンピューターのミラーリング エンドポイントに関連付けられているサーバー インスタンスを識別するのは、ポートの番号だけです。 次の図は、1 台のコンピューターにある 2 つのサーバー インスタンスのエンドポイント URL を示しています。 既定のインスタンスではポート `7022` が使用され、名前付きインスタンスではポート `7033`が使用されます。 これら 2 つのサーバー インスタンスのエンドポイント URL は、それぞれ `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` と `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`です。 アドレスにサーバー インスタンス名が含まれていないことに注意してください。  
   
      ![既定のインスタンスのサーバー ネットワーク アドレス](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "既定のインスタンスのサーバー ネットワーク アドレス")  
   
@@ -103,9 +95,9 @@ ms.locfileid: "52518247"
   
  **IPCONFIG /ALL**  
   
- 完全修飾ドメイン名を作成するには、次に示すように、*<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
+ 完全修飾ドメイン名を作成するには、次に示すように、 *<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  たとえば、次のような IP 構成があるとします。  
   

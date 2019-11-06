@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性グループの正常性診断ログ (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: SQL Server リソース DLL による可用性グループの正常性診断ログ
+description: SQL Server リソース DLL によって Always On 可用性グループの正常性が監視されるしくみについて説明します。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3a4ff7c777add4fa2228fb6525d24f172533a609
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014710"
 ---
-# <a name="always-on-availability-groups-health-diagnostics-log"></a>Always On 可用性グループの正常性診断ログ
+# <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>SQL Server リソース DLL による可用性グループの正常性診断ログ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   プライマリ可用性レプリカの正常性を監視するために、Windows Server フェールオーバー クラスタリング (WSFC) クラスターで実行される SQL Server リソース DLL は、[sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) という名前の SQL Server インスタンスのストアド プロシージャを使用します。  
   

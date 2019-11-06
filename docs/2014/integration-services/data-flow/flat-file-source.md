@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a8a06ae3b308c90b2dc789c97f5f262530826229
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62902451"
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
   フラット ファイル ソースは、テキスト ファイルからデータを読み取ります。 テキスト ファイルには、Delimited 形式、FixedWidth 形式、または Mixed 形式を使用できます。  
@@ -56,15 +55,15 @@ ms.locfileid: "48125412"
   
  **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[フラット ファイル ソース エディター&#40;接続マネージャー] ページ&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [フラット ファイル ソース エディター ([接続マネージャー] ページ)](../flat-file-source-editor-connection-manager-page.md)  
   
--   [[フラット ファイル ソース エディター&#40;列] ページ&#41;](../flat-file-source-editor-columns-page.md)  
+-   [フラット ファイル ソース エディター ([列] ページ)](../flat-file-source-editor-columns-page.md)  
   
--   [[フラット ファイル ソース エディター&#40;エラー出力] ページ&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [フラット ファイル ソース エディター ([エラー出力] ページ)](../flat-file-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [フラット ファイルのカスタム プロパティ](flat-file-custom-properties.md)  
   

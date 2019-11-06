@@ -10,21 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508051"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "68065450"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
   
- ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")構文表記規則についてを参照してください。[コマンド プロンプト ユーティリティ リファレンス&#40;データベース エンジン&#41;](../tools/command-prompt-utility-reference-database-engine.md)します。  
+ 構文規則の詳細については、「![コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,25 +33,25 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ```  
   
 ## <a name="arguments"></a>引数  
- **-server** *instance_name*  
+ **-server** _instance_name_  
  操作を実行する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを指定します。 指定するサーバー インスタンスは、指定するログ配布操作によって異なります。 **-backup**を指定する場合、 *instance_name* は、ログ配布構成のプライマリ サーバーの名前にする必要があります。 **-copy** または **-restore**を指定する場合、 *instance_name* は、ログ配布構成のセカンダリ サーバーの名前にする必要があります。  
   
- **-backup** *primary_id*  
+ **-backup** _primary_id_  
  *primary_id*でプライマリ ID を指定したプライマリ データベースのバックアップ操作を行います。 この ID を取得するには、 [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) システム テーブルから選択するか、 [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) ストアド プロシージャを使用します。  
   
  バックアップ操作を行うと、バックアップ ディレクトリにログ バックアップが作成されます。 その後、ファイル保有期間に基づき、 **sqllogship** アプリケーションによって古いバックアップ ファイルが削除されます。 次に、プライマリ サーバーと監視サーバーにバックアップ操作の履歴ログが記録されます。 最後に、保有期間に基づき古い履歴情報を削除するため、 [sp_cleanup_log_shipping_history](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)が実行されます。  
   
- **-copy** *secondary_id*  
+ **-copy** _secondary_id_  
  *secondary_id*でセカンダリ ID を指定したセカンダリ データベースのバックアップを、指定したセカンダリ サーバーからコピーするコピー操作を行います。 この ID を取得するには、 [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) システム テーブルから選択するか、 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) ストアド プロシージャを使用します。  
   
  この操作を行うと、バックアップ ディレクトリからコピー先ディレクトリにバックアップ ファイルがコピーされます。 その後、 **sqllogship** アプリケーションによって、セカンダリ サーバーと監視サーバーにコピー操作の履歴ログが記録されます。  
   
- **-restore** *secondary_id*  
+ **-restore** _secondary_id_  
  *secondary_id*でセカンダリ ID を指定したセカンダリ データベースを取得するため、指定したセカンダリ サーバーで復元操作を行います。 この ID を取得するには、 **sp_help_log_shipping_secondary_database** ストアド プロシージャを使用します。  
   
  復元先ディレクトリにある、最新の復元ポイント以降に作成されたバックアップ ファイルは、セカンダリ データベースに復元されます。 その後、ファイル保有期間に基づき、 **sqllogship** アプリケーションによって古いバックアップ ファイルが削除されます。 次に、セカンダリ サーバーと監視サーバーに復元操作の履歴ログが記録されます。 最後に、保有期間に基づき古い履歴情報を削除するため、 **sp_cleanup_log_shipping_history**が実行されます。  
   
- **-verboselevel** *level*  
+ **-verboselevel** _level_  
  ログ配布の履歴に追加するメッセージのレベルを指定します。 *level* は、次のいずれかの整数です。  
   
 |level|[説明]|  
@@ -63,10 +62,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|情報メッセージ、警告、およびエラー処理メッセージを出力します。 これが既定値です。|  
 |4|すべてのデバッグおよびトレースのメッセージを出力します。|  
   
- **-logintimeout** *timeout_value*  
+ **-logintimeout** _timeout_value_  
  サーバー インスタンスへのログインを試みてからタイムアウトするまでの時間を指定します。既定値は 15 秒です。 *timeout_value* のデータ型は **int**_です。_  
   
- **-querytimeout** *timeout_value*  
+ **-querytimeout** _timeout_value_  
  指定した操作を開始してからタイムアウトするまでの時間を指定します。既定では、タイムアウトはありません。 *timeout_value* のデータ型は **int**_です。_  
   
 ## <a name="remarks"></a>Remarks  

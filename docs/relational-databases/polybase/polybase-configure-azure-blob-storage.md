@@ -1,26 +1,25 @@
 ---
 title: Azure Blob Storage 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 981824bc93708759970f026f1e930ce5ac33ccfb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 81334dbfee970f7ce26ef723a463e10f7349d841
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415399"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710651"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage 上の外部データにアクセスするように PolyBase を構成する
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL Server インスタンス上で PolyBase を使用して、Hadoop 上の外部データに対してクエリを実行する方法について説明します。
+この記事では、SQL Server インスタンスで PolyBase を使用し、Azure Blob Storage 上の外部データに対してクエリを実行する方法について説明します。
 
 ## <a name="prerequisites"></a>Prerequisites
 

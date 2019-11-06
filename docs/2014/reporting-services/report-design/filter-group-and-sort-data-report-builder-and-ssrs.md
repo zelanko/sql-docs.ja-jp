@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
@@ -19,13 +18,13 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b38aaceb3f40051138e124286e51922f3e8f218a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f25545a48a95082636fc3efa951e5eab42c94be7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105888"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)
   レポートでは、式を使用してレポート データの制御、整理、および並べ替えを行うことができます。 既定では、データセットを作成してレポート レイアウトをデザインすると、データセット フィールドやパラメーターなど、レポート データ ペインに表示されるアイテムに基づいて、レポート アイテムのプロパティが式に自動的に設定されます。 グループまたはグループ内の行の並べ替え順序をユーザーが対話的に変更できるように、テーブルまたはマトリックスのセルに対話的な並べ替えボタンを追加することもできます。  
@@ -42,15 +41,15 @@ ms.locfileid: "48182192"
   
  詳細と例については、次のトピックを参照してください。  
   
--   [グループ式の例&#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [フィルター式の例&#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [チュートリアル&#40;レポート ビルダー&#41;](../report-builder-tutorials.md)  
   
 -   [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
--   [レポート サンプル (レポート ビルダーおよび SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,16 +59,14 @@ ms.locfileid: "48182192"
   
  可能であれば、レポートに表示する必要があるデータだけを返すデータセット クエリを作成します。 取得および処理する必要があるデータ量を少なくすると、レポートのパフォーマンスの向上に役立ちます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
- データが外部データ ソースから取得された後、データセット、データ領域、およびデータ領域グループ (詳細グループを含む) にフィルターを追加できます。 実行時には、フィルターが最初にデータセットに適用され、次にデータ領域に適用された後、グループに (グループ階層の上から順に) 適用されます。 テーブル、マトリックス、または一覧では、行グループ、列グループ、および隣接するグループに対するフィルターが別々に適用されます。 グラフでは、カテゴリ グループと系列グループに対するフィルターが別々に適用されます。 詳細については、次を参照してください。[データセット フィルターの追加、データ領域フィルター、およびグループ フィルター&#40;レポート ビルダーおよび SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)します。  
+ データが外部データ ソースから取得された後、データセット、データ領域、およびデータ領域グループ (詳細グループを含む) にフィルターを追加できます。 実行時には、フィルターが最初にデータセットに適用され、次にデータ領域に適用された後、グループに (グループ階層の上から順に) 適用されます。 テーブル、マトリックス、または一覧では、行グループ、列グループ、および隣接するグループに対するフィルターが別々に適用されます。 グラフでは、カテゴリ グループと系列グループに対するフィルターが別々に適用されます。 詳細については、「 [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)」を参照してください。  
   
  フィルターには、それぞれ *フィルター式*を指定します。 フィルター式には、フィルターの対象となるデータを識別するデータセット フィールドまたは式、演算子、および比較対象の値が含まれます。 それらのデータ値のうちフィルター条件に一致するものだけが、アイテムを処理する際の対象になります。  
   
  レポートのデータをユーザーが制御しやすくするために、フィルター式にパラメーターを含めることができます。 詳細については、「[Parameters コレクションの参照 (レポート ビルダーおよび SSRS)](built-in-collections-parameters-collection-references-report-builder.md)」を参照してください。  
   
- ユーザーごとに表示をカスタマイズするには、組み込みのフィールド UserID への参照をフィルターに含めます。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+ ユーザーごとに表示をカスタマイズするには、組み込みのフィールド UserID への参照をフィルターに含めます。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。
+
 ##  <a name="Grouping"></a> レポートのデータのグループ化  
  グループを使用すると、レポートのデータを整理して表示したり、集計値を計算したりすることができます。 グループを定義して使用する方法を理解することは、簡潔なレポートの作成に役立ちます。  
   
@@ -89,35 +86,33 @@ ms.locfileid: "48182192"
   
  式のスコープはグループ名で識別されます。 集計を計算するスコープ、データを階層にまとめてドリルダウン レポートの親ノードから子ノードの表示を切り替えるスコープ、複数のデータ領域で同じデータの異なるビューを表示するスコープ、およびテーブル、マトリックス、グラフ、ゲージ、またはマップでサマリ データを視覚化するスコープとして、グループの名前を指定できます。 詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)を表しています。  
   
- 複数のデータセット フィールドに基づきグループ化するには、各フィールドをグループ式のセットに追加します。 独自のグループ式を記述することもできます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]します。 たとえば、値の範囲でグループ化したり、レポート パラメーターを使用してデータ領域のデータのグループ化の方法を選択できるようにしたりすることができます。 詳細については、「[グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)」を参照してください。  
+ 複数のデータセット フィールドに基づきグループ化するには、各フィールドをグループ式のセットに追加します。 さらに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で独自のグループ式を記述することもできます。 たとえば、値の範囲でグループ化したり、レポート パラメーターを使用してデータ領域のデータのグループ化の方法を選択できるようにしたりすることができます。 詳細については、「 [グループ式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)」を参照してください。  
   
  レポート表示では、各グループまたは各グループ インスタンスの前後に改ページを追加して、各ページのデータ量を減らし、レポート表示のパフォーマンスを管理できます。 詳細については、「[改ページの追加 (レポート ビルダーおよび SSRS)](add-a-page-break-report-builder-and-ssrs.md)」を参照してください。  
   
- データ領域グループを作成することは、レポートのデータを整理する 1 つの方法です。 データを整理する方法は他にもあり、そのそれぞれに利点があります。 詳細については、「[ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)」を参照してください。  
+ データ領域グループを作成することは、レポートのデータを整理する 1 つの方法です。 データを整理する方法は他にもあり、そのそれぞれに利点があります。 詳細については、「 [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)」を参照してください。  
   
 ### <a name="defining-group-variables"></a>グループ変数の定義  
  グループを定義する場合、スコープがグループであり、入れ子になったグループからアクセスできる式で使用するグループ変数を作成できます。 グループ変数は、グループ インスタンスごとに 1 回計算され、子グループの式からアクセスできます。 たとえば、地域とサブ地域でグループ化されたデータの場合、各地域の税額を計算し、その税額をサブ地域グループの計算に使用できます。  
   
- 詳細については、次を参照してください[レポートとグループ変数コレクションの参照&#40;レポート ビルダーおよび SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md)と[合計、集計、および組み込みコレクションの式のスコープ&#40;レポート。ビルダーと SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)します。  
+ 詳細については、「 [レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](built-in-collections-report-and-group-variables-references-report-builder.md) 」および「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
 ### <a name="groups-and-scope-in-data-regions"></a>グループとデータ領域のスコープ  
- 同じデータセットのデータを複数の形式で表示するには、各データ領域に同じグループ式を指定します。 たとえば、分類されたデータを表示するときに、すべての詳細データをテーブルで示し、データセット全体に対する各カテゴリの集計を円グラフで視覚化することができます。 詳細については、次を参照してください。[同じデータセットへの複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)します。  
+ 同じデータセットのデータを複数の形式で表示するには、各データ領域に同じグループ式を指定します。 たとえば、分類されたデータを表示するときに、すべての詳細データをテーブルで示し、データセット全体に対する各カテゴリの集計を円グラフで視覚化することができます。 詳細については、「 [同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
- テーブル、マトリックス、または一覧のセルでデータ領域を入れ子にすると、データのスコープは自動的にそのセルの最も内側のグループ メンバーシップになります。 たとえば、行グループと列グループの両方に存在するセルにグラフを追加するとします。 そのグラフで使用可能なデータは、実行時に最も内側の行グループ インスタンスと最も内側の列グループ インスタンスにスコープが設定されます。 詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)を表しています。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+ テーブル、マトリックス、または一覧のセルでデータ領域を入れ子にすると、データのスコープは自動的にそのセルの最も内側のグループ メンバーシップになります。 たとえば、行グループと列グループの両方に存在するセルにグラフを追加するとします。 そのグラフで使用可能なデータは、実行時に最も内側の行グループ インスタンスと最も内側の列グループ インスタンスにスコープが設定されます。 詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
+
 ##  <a name="Sorting"></a> レポートのデータの並べ替え  
  レポートのデータの並べ替え順序を制御するには、データセット クエリのデータを並べ替えるか、データ領域またはグループの並べ替え式を定義します。 対話的な並べ替えボタンをテーブルおよびマトリックスに追加して、ユーザーが行の並べ替え順序を変更できるようにすることもできます。  
   
  同じレポート内で、3 種類すべての並べ替えを組み合わせて使用できます。 既定では、並べ替え順序は、データがデータセット クエリから返された順序によって決まります。 並べ替え式は、データ領域およびデータ領域グループで適用されます。 対話的な並べ替えは、並べ替え式の後に適用されます。  
   
- 集計関数を含む式の結果に並べ替え順序が影響することはほとんどありません。 戻り値が並べ替え順序の影響を受ける集計関数には、First、Last、および Previous があります。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
+ 集計関数を含む式の結果に並べ替え順序が影響することはほとんどありません。 次の集計関数の戻り値は並べ替え順序の影響を受けます:First、Last、Previous。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>データセット クエリのデータの並べ替え  
  データセット クエリで並べ替え順序を指定し、レポートのデータが取得される前にデータを事前に並べ替えます。 クエリのデータを並べ替えることによって、レポート プロセッサではなく、データ ソースによって並べ替えが実行されます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソースの種類、データセット クエリに ORDER BY 句を追加することができます。 たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリは、`SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC` のように、Sales 列および Region 列を Sales を基準にテーブル SalesOrders から降順で並べ替えます。 詳細については、 [SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=98335)の「ORDER BY の使用による行の並べ替え」を参照してください。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの種類の場合、ORDER BY 句をデータセット クエリに追加できます。 たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリは、 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`のように、Sales 列および Region 列を Sales を基準にテーブル SalesOrders から降順で並べ替えます。 詳細については、 [SQL Server オンライン ブック](https://go.microsoft.com/fwlink/?linkid=98335)の「ORDER BY の使用による行の並べ替え」を参照してください。  
   
 > [!NOTE]  
 >  すべてのデータ ソースでクエリの並べ替え順序を指定できるわけではありません。  
@@ -168,55 +163,51 @@ FROM Production.Product
  テーブルまたはマトリックスでユーザーがレポート データの並べ替え順序を変更できるようにするには、列ヘッダーまたはグループ ヘッダーに対話的な並べ替えボタンを追加します。 ユーザーはそのボタンをクリックして、並べ替え順序を切り替えることができます。 対話的な並べ替えは、ユーザーとの対話が可能な HTML などの表示形式でサポートされています。  
   
  対話的な並べ替えボタンは、Tablix データ領域のセルのテキスト ボックスに追加します。 既定では、すべてのセルにテキスト ボックスが含まれています。 テキスト ボックス プロパティで、並べ替えるテーブルまたはマトリックスのデータ領域の部分 (親グループ値、子グループ値、または詳細行)、並べ替え基準、およびピア関係を持つ他のレポート アイテムに並べ替え式を適用するかどうかを指定します。 たとえば、同じデータセットのビューを表示するテーブルとグラフが四角形内に含まれている場合は、このテーブルとグラフはピア データ領域です。 ユーザーがテーブルの並べ替え順序を切り替えると、グラフの並べ替え順序も切り替わります。 詳細については、「[対話的な並べ替え (レポート ビルダーおよび SSRS)](interactive-sort-report-builder-and-ssrs.md)」を参照してください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
- [レポートのスクロール時にヘッダーを表示したまま&#40;レポート ビルダーおよび SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [グループ ヘッダーとフッターを表示&#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [グループ単位でのヘッダーとフッターの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [テーブルまたはマトリックスに対話的な並べ替えを追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [データ領域のないデータのメッセージを設定&#40;レポート ビルダーおよび SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [データ領域にデータがないことを示すメッセージの設定 (レポート ビルダーおよび SSRS)](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [再帰型階層グループの作成&#40;レポート ビルダーおよび SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [再帰型階層グループの作成 (レポート ビルダーおよび SSRS)](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [追加またはデータ領域でグループを削除する&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [グループ ヘッダーとフッターを表示&#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [追加またはグラフでのグループを削除&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [グラフでのグループの追加または削除 (レポート ビルダーおよび SSRS)](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [グループまたは Tablix データ領域に合計を追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [グループまたは Tablix データ領域への合計の追加 (レポート ビルダーおよび SSRS)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> トピックの内容  
- [グループ式の例&#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [グループ式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
- [フィルター式の例&#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [追加のデータセット フィルター、データ領域フィルター、およびグループ フィルターの&#40;レポート ビルダーおよび SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> 関連項目  
- [グループについて&#40;レポート ビルダーおよび SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [グループについて (レポート ビルダーおよび SSRS)](understanding-groups-report-builder-and-ssrs.md)  
   
- [再帰型階層グループを作成する&#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [複数の再帰型階層グループの作成 (レポート ビルダーおよび SSRS)](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [レポート変数とグループ変数コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [グラフ上で複数のデータ範囲を持つ系列の表示&#40;レポート ビルダーおよび SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [グラフ上で複数のデータ範囲を持つ系列の表示 (レポート ビルダーおよび SSRS)](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [同じデータセットに複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [マップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)   
+ [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)   
  [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [ゲージ&#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](indicators-report-builder-and-ssrs.md)  
-  
-  
+ [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [インジケーター (レポート ビルダーおよび SSRS)](indicators-report-builder-and-ssrs.md)  

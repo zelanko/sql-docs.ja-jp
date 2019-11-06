@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [Analysis Services - multidimensional data]
@@ -16,18 +15,18 @@ ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a988044b258eb114a0a58ed7902e58c41d340e3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079746"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services インスタンスの監視
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] またはパフォーマンス モニター ( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **とも呼ばれるアプリケーション) を使用して、** のパフォーマンスを監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] レースを作成および管理し、トレースの結果を分析および再生できます。 パフォーマンス モニターでは、特定のカウンターでインデックスを付けたサーバーの状態が報告されます。これについては、次のセクションで説明します。  
   
 > [!NOTE]  
->  操作の監視の詳細については、「 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+>  操作の監視の詳細については、「 [SQL Server 2008 R2 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  監視の詳細については、次のリンクを参照してください。  

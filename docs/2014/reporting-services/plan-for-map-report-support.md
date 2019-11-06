@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105883"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108078"
 ---
 # <a name="plan-for-map-report-support"></a>マップ レポートのサポートを計画する
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 空間データ ソースを使用するマップ レポートをサポートしています。 空間データは、SQL Server データベース、ESRI シェープファイル、または Reporting Services かレポート ビルダーを使用してインストールされたマップ ギャラリーから取得できます。 また、マップには Bing のマップ タイルの背景も表示できます。 レポート作成者には、動的と実行時に取得した、または静的と、レポート定義に埋め込まれたとして空間データまたは Bing のマップ タイルを示すレポートを作成できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "48105883"
  各レポートについて、レポート作成者は、タイル サーバーからタイルを取得する際に SSL (Secure Sockets Layer) 接続を使用するかどうかを指定できます。 タイル レイヤーのプロパティ ウィンドウで、UseSecureConnection ブール型プロパティを設定する必要がありますに`true`します。  
   
 > [!NOTE]  
->  レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
+>  レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
   
 ## <a name="report-design-recommendations"></a>レポートのデザインに関する推奨事項  
  マップ レポートを適切にデザインするには、静的な空間データと動的な空間データのトレードオフを評価し、レポートのユーザーにとって最適なバランスを見極める必要があります。 マップ要素を埋め込んだ場合、レポート定義のサイズが著しく増加しますが、レポート内でマップを表示するために要する時間が短縮されます。 動的なマップ要素の場合、レポート定義のサイズが小さくなりますが、マップを処理して表示するために要する時間が増加します。 レポートの作成者は、この相反する要因の間で適切にバランスをとる必要があります。  
@@ -51,6 +50,6 @@ ms.locfileid: "48105883"
  詳細については、[マップ&#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
- [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

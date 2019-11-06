@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108141"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>[新しいサブスクリプション] ページまたは [サブスクリプションの編集] ページ (レポート マネージャー)
   [新しいサブスクリプション] ページまたは [サブスクリプションの編集] ページでは、レポートに新しいサブスクリプションを作成したり、既存のサブスクリプションを変更したりできます。 このページに表示されるオプションは、ロールの割り当てによって異なります。 高度な権限を持つユーザーは、追加のオプションを使用して作業できます。  
   
- サブスクリプションは、自動的に実行できるレポートでサポートされています。 少なくとも、レポートでは、格納された資格情報を使用するか、資格情報を使用しないようにする必要があります。 レポートでパラメーターを使用する場合、既定値を指定する必要があります。 レポート実行の設定を変更したり、パラメーター プロパティで使用される既定値を削除したりすると、サブスクリプションが非アクティブになることがあります。 詳細については、次を参照してください。[ネイティブ モード レポート サーバーの管理のサブスクリプションを作成および](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)します。  
+ サブスクリプションは、自動的に実行できるレポートでサポートされています。 少なくとも、レポートでは、格納された資格情報を使用するか、資格情報を使用しないようにする必要があります。 レポートでパラメーターを使用する場合、既定値を指定する必要があります。 レポート実行の設定を変更したり、パラメーター プロパティで使用される既定値を削除したりすると、サブスクリプションが非アクティブになることがあります。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)」を参照してください。  
   
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
@@ -37,7 +36,7 @@ ms.locfileid: "48208398"
   
 3.  ドロップダウン メニューで次のいずれかの操作を行います。  
   
-    -   **[管理]** をクリックします。 この操作により、レポートの [全般] プロパティ ページが開きます。 **[サブスクリプション]** タブをクリックします。ツールバーで、次のようにクリックします。**新しいサブスクリプション**、または既存のサブスクリプションを選択し、クリック**編集**します。  
+    -   **[管理]** をクリックします。 この操作により、レポートの [全般] プロパティ ページが開きます。 **[サブスクリプション]** タブをクリックします。ツール バーで、 **[新しいサブスクリプション]** をクリックするか、既存のサブスクリプションを選択して **[編集]** をクリックします。  
   
     -   **[サブスクライブ]** をクリックします。 この操作により、レポートの **[新しいサブスクリプション]** ページが開きます。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "48208398"
  **パラメーターの値を入力します**  
  パラメーターを使用するレポートをサブスクライブしている場合にこのオプションを使用します。 このオプションは、パラメーター化されたレポートにのみ使用できます。 パラメーター化されたレポートをサブスクライブしている場合、サブスクリプションを使用して配信されるバージョンのレポートを作成するときに使用するパラメーター値を指定できます。 たとえば、地域コードを指定して特定の地域の売上データを選択できます。 値を指定しない場合は、既定値が使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   

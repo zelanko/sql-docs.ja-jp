@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c3fc1b8aa5c6a2f76ebdfe98fd8aa98e5a593919
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144907"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079743"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 拡張イベント (XEvent) を使用した Analysis Services の監視
   Analysis Services の使用を通じてトレース機能を提供する[拡張イベント](../../relational-databases/extended-events/extended-events.md)します。  
@@ -29,18 +28,18 @@ ms.locfileid: "50144907"
  拡張イベントのトレースは、以下のような XMLA のオブジェクト作成スクリプト コマンドを使用して有効にします。  
   
 ```  
-<Execute …>  
+<Execute ...>  
    <Command>  
-      <Batch …>  
-         <Create …>  
+      <Batch ...>  
+         <Create ...>  
             <ObjectDefinition>  
                <Trace>  
                   <ID>trace_id</ID>  
                   <Name>trace_name</Name>  
                   <ddl300_300:XEvent>  
-                     <event_session …>  
+                     <event_session ...>  
                         <event package="AS" name="AS_event">  
-                           <action package="PACKAGE0" …/>  
+                           <action package="PACKAGE0" .../>  
                         </event>  
                         <target package="PACKAGE0" name="asynchronous_file_target">  
                            <parameter name="filename" value="data_filename.xel"/>  
@@ -81,8 +80,8 @@ ms.locfileid: "50144907"
 ```  
 <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">  
    <Command>  
-      <Batch …>  
-         <Delete …>  
+      <Batch ...>  
+         <Delete ...>  
             <Object>  
                <TraceID>trace_id</TraceID>  
             </Object>  

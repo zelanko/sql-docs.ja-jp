@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909522"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>インデックスの FILL FACTOR の指定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "52401627"
   
      [パフォーマンスに関する考慮事項](#Performance)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してインデックスの FILL FACTOR を指定するには:**  
   
@@ -73,7 +72,7 @@ ms.locfileid: "52401627"
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、**[デザイン]** を選択します。  
+3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、 **[デザイン]** を選択します。  
   
 4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52401627"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
+8.  **ファイル** メニューの **table_name**_を保存_を選びます。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してインデックスの FILL FACTOR を指定するには  
   

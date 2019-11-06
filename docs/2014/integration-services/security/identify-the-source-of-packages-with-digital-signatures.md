@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
@@ -14,21 +13,21 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8a94f52f72f91a465adcb4fba1d9a6e8c95375d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62766654"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、そのソースを識別するために、デジタル証明書を使用して署名できます。 パッケージがデジタル証明書を使用して署名されたら、パッケージを読み込む前に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] でデジタル署名を確認できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で署名を確認するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** ユーティリティ (dtexec.exe) でオプションを設定するか、オプションのレジストリ値を設定します。  
   
 ## <a name="signing-a-package-with-a-digital-certificate"></a>デジタル証明書を使用したパッケージの署名  
- デジタル証明書を使用してパッケージに署名する前に、証明書を取得または作成する必要があります。 証明書を用意したら、この証明書を使用してパッケージに署名できます。 証明書を取得し、その証明書を使用してパッケージに署名する方法の詳細については、「[デジタル証明書を使用してパッケージに署名する](../sign-a-package-by-using-a-digital-certificate.md)」を参照してください。  
+ デジタル証明書を使用してパッケージに署名する前に、証明書を取得または作成する必要があります。 証明書を用意したら、この証明書を使用してパッケージに署名できます。 証明書を取得し、その証明書を使用してパッケージに署名する方法の詳細については、「 [デジタル証明書を使用してパッケージに署名する](../sign-a-package-by-using-a-digital-certificate.md)」を参照してください。  
   
 ## <a name="setting-an-option-to-check-the-package-signature"></a>パッケージの署名を確認するオプションの設定  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と **dtexec** ユーティリティの両方に、署名付きパッケージのデジタル署名を確認するように [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を構成するオプションがあります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と **dtexec** ユーティリティのどちらを使用するかは、すべてのパッケージを確認するか特定のパッケージだけを確認するかによって決まります。  
@@ -44,7 +43,7 @@ ms.locfileid: "48073502"
 >  オプションの **BlockedSignatureStates** レジストリ値では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** コマンド ラインで設定されたデジタル署名オプションよりも制限が厳しい設定を指定できます。 この場合、制限が厳しい方のレジストリ設定が他の設定をオーバーライドします。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41;パッケージ](../integration-services-ssis-packages.md)   
- [セキュリティの概要&#40;Integration Services&#41;](security-overview-integration-services.md)  
+ [Integration Services &#40;SSIS&#41; パッケージ](../integration-services-ssis-packages.md)   
+ [セキュリティの概要 &#40;Integration Services&#41;](security-overview-integration-services.md)  
   
   

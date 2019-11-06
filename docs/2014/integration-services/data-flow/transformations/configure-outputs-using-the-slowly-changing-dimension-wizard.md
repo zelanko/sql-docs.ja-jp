@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79ae2c560bfc5e5e38d46e72bad0b1a734421ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770614"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
   緩やかに変化するディメンション ウィザードは、緩やかに変化するディメンションの変換用のエディターとして機能します。 緩やかに変化するディメンションのデータのデータ フローを構築および構成する作業は、複雑なタスクになる場合があります。 緩やかに変化するディメンション ウィザードを使用すると、列のマッピング、ビジネス キーの列の選択、列の変化する属性の設定、および推定ディメンション メンバー サポートの構成などの手順の指針が示され、これにより、最も簡単な方法で、緩やかに変化するディメンションの変換出力のデータ フローを構築できます。  
@@ -81,6 +80,6 @@ ms.locfileid: "48085422"
  緩やかに変化するディメンションの変換出力の構成を最も簡単に更新するには、緩やかに変化するディメンション ウィザードを再実行し、ウィザード ページからプロパティを変更します。 また、 **[詳細エディター]** ダイアログ ボックスまたはプログラムによっても、緩やかに変化するディメンションの変換を更新できます。  
   
 ## <a name="see-also"></a>参照  
- [緩やかに変化するディメンション変換](slowly-changing-dimension-transformation.md)  
+ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

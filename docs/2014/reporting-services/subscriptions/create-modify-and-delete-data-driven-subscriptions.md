@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 68a9d73139154ffd3d1343fb54a33ce103d6d7ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100938"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>データ ドリブン サブスクリプションを作成、変更、および削除する
   データ ドリブン サブスクリプションは、サブスクリプションの処理に使用するデータ値を実行時に取得するためのクエリ ベースのサブスクリプションです。 データ ドリブン サブスクリプションが開始されると、クエリが実行され、受信者、レポート配信オプション、表示形式、およびパラメーター設定に関する最新情報が取得されます。 このクエリ結果がサブスクリプション定義に組み込まれ、既存のデータを使用する動的サブスクリプションが作成されます。この動的サブスクリプションは、従業員データベース、顧客データベースなど、サブスクライバーのデータ ソースとして利用可能なすべてのデータベースのデータを使用します。  
@@ -65,7 +64,7 @@ ms.locfileid: "48207584"
   
 2.  **[サブスクリプション]** タブをクリックします。または、レポート マネージャーの上部にある **[個人用サブスクリプション]** リンクをクリックします。  
   
-3.  変更するサブスクリプションを選択します。 次のアイコンがデータ ドリブン サブスクリプションを表します: ![データ ドリブン サブスクリプション アイコン](../media/hlp-16subscriptiondd.gif "データ ドリブン サブスクリプション アイコン")  
+3.  変更するサブスクリプションを選択します。 次のアイコンがデータ ドリブン サブスクリプションを表します。![データ ドリブン サブスクリプション アイコン](../media/hlp-16subscriptiondd.gif "データ ドリブン サブスクリプション アイコン")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>既存のデータ ドリブン サブスクリプションを変更するには (SharePoint モード)  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48207584"
   
  データ ドリブン サブスクリプションを作成する前に、以下の必要条件を満たしていることを確認してください。  
   
--   **レポートの必要条件**。 実行時にデータを取得するには、保存された資格情報を使用するレポート、または資格情報を使用しないレポートが必要です。 権限を借用した資格情報や委任された資格情報を使用して外部データ ソースに接続するレポートをサブスクライブすることはできません。サブスクリプションの処理時には、サブスクリプションを作成または所有するユーザーの資格情報を使用できないためです。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、次を参照してください。[資格情報の指定とレポート データ ソースに関する接続情報](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)します。  
+-   **レポートの必要条件**。 実行時にデータを取得するには、保存された資格情報を使用するレポート、または資格情報を使用しないレポートが必要です。 権限を借用した資格情報や委任された資格情報を使用して外部データ ソースに接続するレポートをサブスクライブすることはできません。サブスクリプションの処理時には、サブスクリプションを作成または所有するユーザーの資格情報を使用できないためです。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。  
   
      モデルにモデル アイテム セキュリティ設定が含まれている場合、データ ソースとしてモデルを使用するレポート ビルダーのレポートをサブスクライブすることはできません。 この制限は、モデル アイテム セキュリティを使用するレポートのみが対象となります。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48207584"
   
 -   **データの必要条件**。 サブスクライバー データが格納されている外部データ ソースへのアクセス権が必要になります。  
   
--   **ユーザーの必要条件**。 サブスクリプションの作成者には、"レポートの管理" および "すべてのサブスクリプションを管理" の実行権限が必要です。 項目レベルのタスクのアクセス許可の詳細については、次を参照してください。[タスクと権限](../security/tasks-and-permissions.md)します。 また、作成者には、サブスクライバー データが格納されている外部データ ソースにアクセスするための資格情報も必要です。  
+-   **ユーザーの必要条件**。 サブスクリプションの作成者には、"レポートの管理" および "すべてのサブスクリプションを管理" の実行権限が必要です。 アイテムレベルのタスク権限の詳細については、「 [タスクと権限](../security/tasks-and-permissions.md)」を参照してください。 また、作成者には、サブスクライバー データが格納されている外部データ ソースにアクセスするための資格情報も必要です。  
   
 ##  <a name="bkmk_define_query"></a> サブスクリプション情報を取得するクエリを定義します。  
  データ ドリブン サブスクリプションでは、サブスクライバー データを取得するクエリまたはコマンドを指定する必要があります。 クエリは、サブスクライバーごとに 1 行生成する必要があります。 電子メール配信拡張機能を使用している場合、クエリは、各サブスクライバーの有効な電子メール エイリアスを返す必要があります。 配信される回数は、クエリが返す行数に基づいています。 行セットが 10,000 行で構成されている場合、サブスクリプションは 10,000 のレポートを配信します。  
@@ -98,12 +97,12 @@ ms.locfileid: "48207584"
 ##  <a name="bkmk_run_subscription"></a> サブスクリプションを実行します。  
  サブスクリプションを処理するための条件を設定します。 スケジュールを構成するか、レポート実行スナップショットの更新と同時にサブスクリプションを開始することができます。  
   
- ![注](../media/rs-fyinote.png "注")ですぐにサブスクリプションの実行に使用できるユーザー インターフェイスの機能はありません、サブスクリプションを実行をトリガーする簡単な Windows PowerShell スクリプトを使用することができます。 詳細については、次を参照してください。、"スクリプト: サブスクリプションの実行 (起動)、1 つ"のセクション[List Reporting Services Subscription Owners と Run a Subscription を変更し、PowerShell を使用して](manage-subscription-owners-and-run-subscription-powershell.md)します。  
+ ![注](../media/rs-fyinote.png "注")ですぐにサブスクリプションの実行に使用できるユーザー インターフェイスの機能はありません、サブスクリプションを実行をトリガーする簡単な Windows PowerShell スクリプトを使用することができます。 詳細については、次を参照してください。、"スクリプト。(起動)、1 つのサブスクリプションの実行"のセクションの[List Reporting Services Subscription Owners と Run a Subscription を変更し、PowerShell を使用して](manage-subscription-owners-and-run-subscription-powershell.md)します。  
   
  データ ドリブン サブスクリプションを実行するためのスケジュールと条件は、標準のサブスクリプションの処理と同じです。  
   
 ##  <a name="bkmk_manage_and_delete"></a> 管理およびデータ ドリブン サブスクリプションの削除  
- 実行中のデータ ドリブン サブスクリプションは、レポート マネージャーの [ジョブの管理] ページで停止または削除できません。 そのため、共有スケジュールを使用してデータ ドリブン サブスクリプションを開始すると便利です。 一時的にサブスクリプションを処理しないようにする場合は、サブスクリプションを開始するスケジュールを一時停止できます。 詳細については、次を参照してください。[ネイティブ モード レポート サーバーの管理のサブスクリプションを作成および](../create-manage-subscriptions-native-mode-report-servers.md)します。  
+ 実行中のデータ ドリブン サブスクリプションは、レポート マネージャーの [ジョブの管理] ページで停止または削除できません。 そのため、共有スケジュールを使用してデータ ドリブン サブスクリプションを開始すると便利です。 一時的にサブスクリプションを処理しないようにする場合は、サブスクリプションを開始するスケジュールを一時停止できます。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../create-manage-subscriptions-native-mode-report-servers.md)」を参照してください。  
   
  データ ドリブン サブスクリプションを削除するには、[個人用サブスクリプション] ページまたはレポートの [サブスクリプション] ページでサブスクリプションを選択して、 **[削除]** をクリックします。  
   
@@ -111,9 +110,9 @@ ms.locfileid: "48207584"
   
 ## <a name="see-also"></a>参照  
  [作成、変更、および標準のサブスクリプションを削除&#40;Reporting Services のネイティブ モード&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [サブスクリプションがネイティブ モード レポート サーバーの作成し、管理](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../create-manage-subscriptions-native-mode-report-servers.md)   
  [[サブスクリプション] ページ (レポート マネージャー)](../subscriptions-page-report-manager.md)   
  [[個人用サブスクリプション] ページ (レポート マネージャー)](../my-subscriptions-page-report-manager.md)  
   

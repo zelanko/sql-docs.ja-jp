@@ -10,30 +10,30 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018193"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014312"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry インスタンスの作成、構築、およびクエリ
-  平面空間データ型の `geometry` は、ユークリッド (平面) 座標系のデータを表します。 この型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では共通言語ランタイム (CLR) のデータ型として実装されています。  
+  平面空間データ型の `geometry` は、ユークリッド (平面) 座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では共通言語ランタイム (CLR) のデータ型として実装されています。  
   
- `geometry` 型は、各データベースで使用できるように事前に定義されています。 `geometry` 型のテーブル列を作成し、他の CLR 型を使用するときと同じように `geometry` データを操作できます。  
+ `geometry` 型は、各データベースで使用できるように事前に定義されています。 型のテーブル列を作成する`geometry`操作と`geometry`他の CLR 型を使用すると同じ方法でデータ。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってサポートされている `geometry` データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 に準拠しています。  
   
  OGC の仕様の詳細については、以下を参照してください。  
   
--   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [OGC の仕様、簡易機能アクセス Part 2 – SQL オプション](http://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [OGC の仕様、簡易機能アクセス Part 2 - SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次のスキーマで定義されている既存の GML 3.1 標準のサブセットをサポートしています: [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次のスキーマで定義されている既存の GML 3.1 標準のサブセットをサポートしています: [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959)。  
   
 ##  <a name="creating"></a> 新しい geometry インスタンスの作成または構築  
   

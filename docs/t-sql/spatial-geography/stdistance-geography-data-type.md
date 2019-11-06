@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STDistance method
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7a1b5a95b5123186ce76a4d8b7c9dde7044fe827
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: d739e9a6320781725f3cc498c9bc68e8ade8d684
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042287"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47688465"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型: **SqlDouble**  
+ CLR の戻り値の型:**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に null を返します。  

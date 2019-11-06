@@ -15,15 +15,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011077"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
   以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、`varbinary`、`varbinary(max)` (`FILESTREAM` を含む)、または `image` バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、 *プロパティ検索*と呼びます。  
@@ -61,7 +61,7 @@ ms.locfileid: "48086842"
 ##  <a name="impact"></a> プロパティ検索を有効にした場合の影響  
  1 つまたは複数のプロパティを対象とした検索をサポートするようにフルテキスト インデックスを構成すると、検索プロパティ リストに指定したプロパティの数および各プロパティの内容に応じて、インデックスのサイズが増加します。  
   
- Microsoft Word の一般的なコーパスのテストで<sup>®</sup>、Excel<sup>®</sup>、および PowerPoint<sup>®</sup>ドキュメント、フルテキスト インデックスにインデックスの一般的な検索プロパティを構成しました。 これらのプロパティのインデックスを作成した結果、フルテキスト インデックスのサイズは約 5% 増加しました。 サイズの増加に関するこの概算値は、ほとんどのドキュメント コーパスに当てはまると考えられます。 ただし、最終的には、サイズの増加量は、全体的なデータ量に関連する特定のドキュメント コーパス内のプロパティ データの量に依存します。  
+ Microsoft Word の一般的なコーパスのテストで<sup>??</sup>、Excel<sup>??</sup>、および PowerPoint<sup>??</sup> ドキュメント、フルテキスト インデックスにインデックスの一般的な検索プロパティを構成しました。 これらのプロパティのインデックスを作成した結果、フルテキスト インデックスのサイズは約 5% 増加しました。 サイズの増加に関するこの概算値は、ほとんどのドキュメント コーパスに当てはまると考えられます。 ただし、最終的には、サイズの増加量は、全体的なデータ量に関連する特定のドキュメント コーパス内のプロパティ データの量に依存します。  
   
   
   
@@ -115,7 +115,7 @@ ms.locfileid: "48086842"
   
      プロパティ名として、次のいずれかを指定できます。  
   
-    -   Windows の正規名、プロパティのなど`System.Author`または`System.Contact.HomeAddress`します。  
+    -   Windows の正規のプロパティ名 (`System.Author`、`System.Contact.HomeAddress` など)。  
   
     -   ユーザーにとって覚えやすくわかりやすい名前。 いくつかのプロパティは "Author" や "Home Address" などの一般的なわかりやすい名前に関連付けられていますが、ユーザーにとって最も適した任意の名前を指定できます。  
   
@@ -169,7 +169,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> CONTAINS を使用した検索プロパティのクエリ  
  プロパティ スコープのフルテキスト クエリのための [CONTAINS](/sql/t-sql/queries/contains-transact-sql) の基本的な構文を次に示します。  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

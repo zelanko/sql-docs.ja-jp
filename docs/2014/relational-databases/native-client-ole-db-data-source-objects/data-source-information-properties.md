@@ -16,27 +16,27 @@ ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f46c6e0cdac2d23f4aea66481629a0359fb3ed6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 946c6d39bd02bbccd898262da6642813fbb3c94f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62679790"
 ---
 # <a name="data-source-information-properties"></a>データ ソース情報のプロパティ
   プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERDATASOURCEINFO には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにより、次のデータ ソース情報プロパティが定義されます。  
   
 |プロパティ ID|説明|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|型 : VT_BOOL<br /><br /> R/W: 読み取り<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明 : 列の照合順序がサポートされるかどうかの判断に使用されます。<br /><br /> VARIANT_TRUE: 列レベルの照合順序がサポートされます。<br /><br /> VARIANT_FALSE: 列レベルの照合順序はサポートされません。|  
-|SSPROP_UNICODELCID|型 : VT_I4 R/W: 読み取り<br /><br /> 説明 : Unicode ロケール ID です。<br /><br /> これは、Unicode データの並べ替えに使われるロケールです。|  
-|SSPROP_UNICODECOMPARISONSTYLE|型 : VT_I4 R/W: 読み取り<br /><br /> 説明 : Unicode 比較形式です。<br /><br /> Unicode データの並べ替えに使われる並べ替えオプションです。|  
+|SSPROP_COLUMNLEVELCOLLATION|型:VT_BOOL<br /><br /> R/WRead<br /><br /> 既定値:VARIANT_TRUE<br /><br /> 説明:列の照合順序がサポートされているかどうかを判断するために使用します。<br /><br /> VARIANT_TRUE:列レベルの照合順序がサポートされています。<br /><br /> VARIANT_FALSE:列レベルの照合順序がサポートされていません。|  
+|SSPROP_UNICODELCID|型:VT_I4 R/WRead<br /><br /> 説明:Unicode ロケール id。<br /><br /> これは、Unicode データの並べ替えに使われるロケールです。|  
+|SSPROP_UNICODECOMPARISONSTYLE|型:VT_I4 R/WRead<br /><br /> 説明:Unicode 比較形式です。<br /><br /> Unicode データの並べ替えに使われる並べ替えオプションです。|  
   
  プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERSTREAM には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにより、次の追加プロパティが定義されます。  
   
 |プロパティ ID|説明|  
 |-----------------|-----------------|  
-|SSPROP_STREAM_XMLROOT|型 : VT_BSTR R/W: 読み取り/書き込み<br /><br /> 説明: FOR XML クエリの結果に、整形式でないドキュメントを許可します。 このプロパティが指定されている場合の結果を ' を選択しています. for XML' クエリが、整形式 XML ドキュメントを返すためには、このプロパティによって提供されるルート タグにラップされています。 クエリがブラウザーから実行されている場合、結果の読み込み時にブラウザーがパーサー エラーを表示する場合があります。 このエラーを回避するために、SQL ISAPI はキーワード ROOT をサポートしています。 このキーワードは SSPROP_STREAM_XMLROOT プロパティにマップされます。|  
+|SSPROP_STREAM_XMLROOT|型:VT_BSTR R/W[読み取り/書き込み]<br /><br /> 説明:FOR XML クエリの結果が整形式のドキュメントをできない可能性があります。 このプロパティを指定すると、'select ... for XML' クエリの結果はこのプロパティが提供するルート タグにラップされて、整形式の XML ドキュメントが返されます。 クエリがブラウザーから実行されている場合、結果の読み込み時にブラウザーがパーサー エラーを表示する場合があります。 このエラーを回避するために、SQL ISAPI はキーワード ROOT をサポートしています。 このキーワードは SSPROP_STREAM_XMLROOT プロパティにマップされます。|  
   
 ## <a name="see-also"></a>関連項目  
  [データ ソース オブジェクト&#40;OLE DB&#41;](data-source-objects-ole-db.md)  

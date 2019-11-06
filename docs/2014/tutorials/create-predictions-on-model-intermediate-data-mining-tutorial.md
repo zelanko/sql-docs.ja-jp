@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfilee
+ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146555"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63217742"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>シーケンス クラスター モデルでの予測の作成 (中級者向けデータ マイニング チュートリアル)
   予測クエリ ビルダーを使用して予測クエリを作成するには、シーケンス クラスター モデルの改善をビューアーで順を理解したら、**マイニング モデル予測**データ マイニング デザイナーのタブ。 予測を作成するには、まずシーケンス クラスター モデルを選択し、次に入力データを選択します。 入力については、外部データ ソースを使用するか、単一クエリを作成してダイアログ ボックスで値を指定することができます。  
@@ -196,7 +195,7 @@ NATURAL PREDICTION JOIN
  これで、シーケンス クラスター モデルのチュートリアルは完了です。  
   
 ## <a name="next-steps"></a>次の手順  
- すべてのセクションを完了した場合、[中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)、次の手順は、データ マイニング拡張機能 (DMX) ステートメントを使用してモデルを構築する方法を学習して予測を生成します。 詳細については、次を参照してください。[の作成とクエリを実行するデータ マイニング モデルと DMX: チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)します。  
+ すべてのセクションを完了した場合、[中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)、次の手順は、データ マイニング拡張機能 (DMX) ステートメントを使用してモデルを構築する方法を学習して予測を生成します。 詳細については、次を参照してください。[の作成とクエリを実行するデータ マイニング モデル DMX を使用しました。チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)します。  
   
  プログラミングの概念について理解している場合は、分析管理オブジェクト (AMO) を使用してデータ マイニング オブジェクトをプログラムで操作することもできます。 詳細については、「 [AMO データ マイニング クラス](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)」を参照してください。  
   

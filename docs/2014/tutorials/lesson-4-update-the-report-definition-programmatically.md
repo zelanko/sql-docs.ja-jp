@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 4: レポート定義をプログラムで更新する |Microsoft Docs'
+title: レッスン 4:レポート定義をプログラムで更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5b1b996e2135953e862b27d992d22c6a7666904c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137462"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>レッスン 4 : プログラムによるレポート定義の更新
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>レッスン 4:プログラムによるレポート定義の更新
   前のレッスンでは、レポート サーバーからレポート定義を読み込み、レポート フィールドにその参照を指定しました。次は、レポート定義を更新する必要があります。 この例では、レポートの `Description` プロパティを更新します。  
   
 ### <a name="to-update-the-report-definition"></a>レポート定義を更新するには  
@@ -89,7 +88,7 @@ ms.locfileid: "48137132"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、更新したレポート定義をもう一度レポート サーバーに保存します。 参照してください[レッスン 5: レポート サーバーにレポート定義のパブリッシュ](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)します。  
+ 次のレッスンでは、更新したレポート定義をもう一度レポート サーバーに保存します。 「[レッスン 5:レポート サーバーにレポート定義のパブリッシュ](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)します。  
   
 ## <a name="see-also"></a>参照  
  [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

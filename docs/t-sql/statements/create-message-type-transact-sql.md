@@ -28,16 +28,15 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83210f76165d18b5e3e4225eccb3673edf0417b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700540"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745468"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   新しいメッセージ型を作成します。 メッセージ型によって、メッセージの名前と、その名前を持つメッセージに対し [!INCLUDE[ssSB](../../includes/sssb-md.md)] が実行する検証方法が定義されます。 メッセージ交換の両側で、同じメッセージ型を定義する必要があります。  
   
@@ -63,7 +62,7 @@ CREATE MESSAGE TYPE message_type_name
  AUTHORIZATION *owner_name*  
  メッセージ型の所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが **dbo** または **sa** の場合、*owner_name* には、任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが持つ IMPERSONATE 権限に対応するユーザーの名前、または現在のユーザーが所属するロールの名前を指定する必要があります。 この句を省略すると、メッセージ型は現在のユーザーに属します。  
   
- VALIDATION   
+ VALIDATION  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、この型のメッセージの本文が検証される方法を指定します。 この句を指定しない場合、検証は既定で NONE に設定されます。  
   
  なし  
@@ -72,8 +71,8 @@ CREATE MESSAGE TYPE message_type_name
  EMPTY  
  メッセージの本文は NULL にする必要があることを指定します。  
   
- WELL_FORMED_XML   
- メッセージの本文に、整形式の XML が含まれている必要があることを指定します。  
+ WELL_FORMED_XML  
+ メッセージの本文に、整形式の XML が含まれる必要があることを指定します。  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  メッセージの本文に、指定されたスキーマ コレクション内のスキーマに準拠する XML が含まれている必要があることを指定します。*schema_collection_name* は、既存の XML スキーマ コレクションの名前にする必要があります。  
@@ -94,7 +93,7 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. 整形式の XML が含まれるメッセージ型を作成する  
+### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. 整形式の XML を含むメッセージ型を作成する  
  次の例では、整形式の XML が含まれる新しいメッセージ型を作成します。  
   
 ```  
@@ -103,13 +102,13 @@ CREATE MESSAGE TYPE
   VALIDATION = WELL_FORMED_XML ;     
 ```  
   
-### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. 型指定された XML が含まれるメッセージ型を作成する  
- 次の例では、XML でエンコードされた経費報告書に対するメッセージ型を作成します。 この例では、単純な経費報告書に対するスキーマを保持する XML スキーマ コレクションを作成します。 次に、スキーマに対するメッセージを検証する新しいメッセージ型を作成します。  
+### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. 型指定された XML を含むメッセージ型を作成する  
+ 次の例では、XML でエンコードされた経費報告書に対するメッセージ型を作成します。 この例では、シンプルな経費報告書に対するスキーマを保持する XML スキーマ コレクションを作成します。 次に、スキーマに対するメッセージを検証する新しいメッセージ型を作成します。  
   
 ```  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
-  <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      targetNamespace="https://Adventure-Works.com/schemas/expenseReport"  
      xmlns:expense="https://Adventure-Works.com/schemas/expenseReport"  
      elementFormDefault="qualified"  
@@ -151,8 +150,8 @@ CREATE MESSAGE TYPE
     VALIDATION = EMPTY ;  
 ```  
   
-### <a name="d-creating-a-message-type-containing-binary-data"></a>D. バイナリ データが含まれるメッセージ型を作成する  
- 次の例では、バイナリ データが含まれる新しいメッセージ型を作成します。 メッセージには XML 以外のデータが含まれるので、メッセージ型には `NONE` の検証型が指定されます。 この場合、この型のメッセージを受信するアプリケーションで、メッセージにデータが含まれ、このデータが目的の型であることを確認する必要があります。  
+### <a name="d-creating-a-message-type-containing-binary-data"></a>D. バイナリ データを含むメッセージ型を作成する  
+ 次の例では、バイナリ データを保持する新しいメッセージ型を作成します。 メッセージには XML 以外のデータが含まれるので、メッセージ型には `NONE` の検証型が指定されます。 この場合、この型のメッセージを受信するアプリケーションで、メッセージにデータが含まれ、このデータが目的の型であることを確認する必要があります。  
   
 ```  
 CREATE MESSAGE TYPE  

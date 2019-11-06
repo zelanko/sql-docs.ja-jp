@@ -6,21 +6,18 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpoints
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67f46cc097f65a0a6e4dfe057a726d6249f9505f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4795f3567f1e9b0067d7811c1631c73bac2b0ac8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643079"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259012"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL デバッガー - [ブレークポイント] ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "51643079"
 ## <a name="breakpoints-window-columns"></a>[ブレークポイント] ウィンドウの列  
  既定では、 **[ブレークポイント]** ウィンドウには次の列が表示されます。  
   
- **名前**  
+ **[名前]**  
  ブレークポイントの名前が表示されます。 ブレークポイント名はデバッガーによって指定されます。 この名前には、そのブレークポイントを含むデータベース エンジンのクエリ エディター ウィンドウの名前、およびそのブレークポイントが設定されているクエリ エディター内の行番号が含まれます。  
   
  **条件**  
@@ -89,5 +86,3 @@ ms.locfileid: "51643079"
   
 ## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
-  

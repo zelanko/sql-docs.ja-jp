@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -17,12 +17,12 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6a20f68eb253f23871f91d95b8f514a9289895d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188742"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オペレーターに関する情報の表示方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "48147782"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -64,13 +64,13 @@ ms.locfileid: "48147782"
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  表示するオペレーターを右クリックし、**[プロパティ]** をクリックします。  
+4.  表示するオペレーターを右クリックし、 **[プロパティ]** をクリックします。  
   
-     *[<オペレーター名> のプロパティ]* ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
+     _operator_name_**のプロパティ** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
     -   [オペレーターのプロパティと演算子の新しい&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [オペレーターのプロパティ: 新しい演算子&#40;[通知] ページ&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [オペレーターのプロパティ:New 演算子&#40;[通知] ページ&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [[オペレーターのプロパティ] ([履歴] ページ)](operator-properties-history-page.md)  
   
@@ -87,13 +87,13 @@ ms.locfileid: "48147782"
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
-    -- reports information about operator François Ajenstat   
+    -- reports information about operator Fran??ois Ajenstat   
     -- This example assumes that the operator exists.  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_help_operator  
-        @operator_name = N'François Ajenstat' ;  
+        @operator_name = N'Fran??ois Ajenstat' ;  
     GO  
     ```  
   

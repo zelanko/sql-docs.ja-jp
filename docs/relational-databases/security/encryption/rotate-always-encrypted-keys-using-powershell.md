@@ -1,7 +1,7 @@
 ---
 title: PowerShell を使用した Always Encrypted キーの交換 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e52e83a630a81b87f30e2c07d954fc9bb14696d9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 964095eb103e11fdf34e7cc0a29dfe7f668ef7bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111615"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell を使用した Always Encrypted キーの交換
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,23 +30,23 @@ Always Encrypted は 2 種類のキーを使用するので、列マスター �
 * **列暗号化キーの交換** - 現在のキーで暗号化されたデータの復号化と、新しい列暗号化キーを使用した再暗号化が行われます。 列暗号化キーの交換には、キーとデータベースの両方にアクセスする必要があるので、列暗号化キーの交換は、役割を分離せずに行う必要があります。
 * **列マスター キーの交換** では、現在の列マスター キーで保護された列暗号化キーを暗号化解除し、新しい列マスター キーを使用して列暗号化キーを再度暗号化し、両方の種類のキーについてメタデータを更新するという処理が必要です。 列マスター キーの交換は、(SqlServer PowerShell モジュールを使用する場合) 役割の分離の有無にかかわらず実行できます。
 
-
 ## <a name="column-master-key-rotation-without-role-separation"></a>役割の分離を行わない列マスター キーの交換
-このセクションで説明している列マスター キーを交換する方法は、セキュリティ管理者と DBA 間の役割の分離をサポートしていません。 以下の一部の手順では、物理キーの操作とキー メタデータの操作が組み合わされています。そのため、このワークフローは、DevOps を使用する組織、またはデータベースがクラウドでホストされ、主な目的が (オンプレミス DBA ではなく) クラウドの管理者が機密データにアクセスしないように制限することの場合に推奨されます。 潜在的な対立関係に DBA が含まれる場合、あるいは DBA に機密データへのアクセス許可を与えるべきではない場合、この方法はお勧めされません。  
+
+このセクションで説明されている列マスター キーを交換する方法では、セキュリティ管理者と DBA の間での役割の分離はサポートされていません。 以下の一部の手順では、物理キーの操作とキー メタデータの操作が組み合わされています。そのため、このワークフローは、DevOps を使用する組織、またはデータベースがクラウドでホストされ、主な目的が (オンプレミス DBA ではなく) クラウドの管理者が機密データにアクセスしないように制限することの場合に推奨されます。 潜在的な対立関係に DBA が含まれる場合、または DBA に機密データへのアクセスを許可するべきではない場合は、この方法は推奨されません。  
 
 
 | タスク | [アーティクル] | プレーンテキストのキー/キーストアへのアクセス| データベースへのアクセス
 |:---|:---|:---|:---
-|手順 1. キー ストアで新しい列マスター キーを作成します。<br><br>**注:** SqlServer PowerShell モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアに固有のツールを使用する必要があります。 | [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| [ユーザー アカウント制御] | いいえ
+|手順 1. キー ストアで新しい列マスター キーを作成します。<br><br>**注:** SqlServer PowerShell モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアに固有のツールを使用する必要があります。 | [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| はい | いいえ
 |手順 2. PowerShell 環境を起動し、SqlServer モジュールをインポートします | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
-|手順 3. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | [ユーザー アカウント制御]
+|手順 3. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
 |手順 4. 新しい列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 作成するには、キー ストアに固有のコマンドレットを使用する必要があります。 |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | いいえ | いいえ
-|手順 5. データベースの新しい列マスター キーに関するメタデータを作成します。 | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注:** このコマンドレットは背後で [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。 | いいえ | [ユーザー アカウント制御]
-|手順 6. 現在の列マスター キーまたは新しい列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証する | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | [ユーザー アカウント制御] | いいえ
-|手順 7. 現在は古い列マスター キーで保護されている各列暗号化キーを、新しい列マスター キーを使用して暗号化することで交換を開始します。 この手順を実行すると、影響を受ける各列暗号化キー (古い列マスター キーと関連付けられ、交換対象であるキー) は、新旧両方の列マスター キーで暗号化され、データベース メタデータに 2 つの暗号化された値があります。| [Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation) | [ユーザー アカウント制御] | [ユーザー アカウント制御]
-|手順 8. データベース内の暗号化された (そして古い列マスター キーで保護されている) 列をクエリするすべてのアプリケーションの管理者と調整して、アプリケーションから新しい列マスター キーにアクセスできるようにします。| [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | [ユーザー アカウント制御] | いいえ
-|手順 9. 交換を完了する<br><br>**注:** この手順を実行する前に、古い列マスター キーで保護されている暗号化された列をクエリするすべてのアプリケーションが、新しい列マスター キーを使用するように構成されていることを確認してください。 この手順を先に実行すると、一部のアプリケーションがデータを復号化できない可能性があります。 古い列マスター キーで作成された、暗号化された値をデータベースから削除して交換を完了します。 この操作で、古い列マスター キーと保護されている列マスター キーの関連付けが削除されます。 |[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)| いいえ | [ユーザー アカウント制御]
-|手順 10. 古い列マスター キーからメタデータを削除します。 |[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)| いいえ | [ユーザー アカウント制御]
+|手順 5. データベースの新しい列マスター キーに関するメタデータを作成します。 | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注:** このコマンドレットは背後で [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。 | いいえ | はい
+|手順 6. 現在の列マスター キーまたは新しい列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証する | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | はい | いいえ
+|手順 7. 現在は古い列マスター キーで保護されている各列暗号化キーを、新しい列マスター キーを使用して暗号化することで交換を開始します。 この手順を実行すると、影響を受ける各列暗号化キー (古い列マスター キーと関連付けられ、交換対象であるキー) は、新旧両方の列マスター キーで暗号化され、データベース メタデータに 2 つの暗号化された値があります。| [Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation) | はい | はい
+|手順 8. データベース内の暗号化された (そして古い列マスター キーで保護されている) 列をクエリするすべてのアプリケーションの管理者と調整して、アプリケーションから新しい列マスター キーにアクセスできるようにします。| [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | はい | いいえ
+|手順 9. 交換を完了する<br><br>**注:** この手順を実行する前に、古い列マスター キーで保護されている暗号化された列をクエリするすべてのアプリケーションが、新しい列マスター キーを使用するように構成されていることを確認してください。 この手順を先に実行すると、一部のアプリケーションがデータを復号化できない可能性があります。 古い列マスター キーで作成された、暗号化された値をデータベースから削除して交換を完了します。 この操作で、古い列マスター キーと保護されている列マスター キーの関連付けが削除されます。 |[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)| いいえ | はい
+|手順 10. 古い列マスター キーからメタデータを削除します。 |[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)| いいえ | はい
 
 > [!NOTE]
 > 回転の後、古い列マスター キーは完全に削除しないを強くお勧めします。 そこで、古い列マスター キーを現在のキー ストアに保存するか、セキュリティで保護された別の場所にアーカイブします。 バックアップ ファイルからデータベースを復元して、新しい列マスター キーを構成する *前* の時点まで戻る場合は、古いキーでデータにアクセスする必要があります。
@@ -96,8 +95,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 このセクションで説明する列マスター キー ワークフローでは、セキュリティ管理者と DBA 間を分離します。
 
 > [!IMPORTANT]
-> 以下の表で、 *プレーンテキストのキー/キーストアへのアクセス*=**はい** の手順 (プレーンテキスト キーまたはキー ストアにアクセスする手順) を実行する前に、データベースをホストするコンピューターとは異なるセキュリティで保護されたコンピューターで PowerShell 環境が実行されていることを確認します。 詳細については、「 [キー管理でのセキュリティに関する考慮事項](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)」を参照してください。
-
+> 以下の表で、 *プレーンテキストのキー/キーストアへのアクセス*=**はい** の手順 (プレーンテキスト キーまたはキー ストアにアクセスする手順) を実行する前に、データベースをホストするコンピューターとは異なるセキュリティで保護されたコンピューターで PowerShell 環境が実行されていることを確認します。 詳細については、「 [キー管理でのセキュリティに関する考慮事項](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)」を参照してください。
 
 ### <a name="part-1-dba"></a>パート 1: DBA
 
@@ -107,9 +105,9 @@ DBA は、交換する列マスター キーと、現在の列マスター キ�
 | タスク | [アーティクル] | プレーンテキストのキー/キーストアへのアクセス| データベースへのアクセス
 |:---|:---|:---|:---
 |手順 1. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | なし
-|手順 2. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | [ユーザー アカウント制御]
-|手順 3. 古い列マスター キーに関するメタデータを取得します。| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | いいえ | [ユーザー アカウント制御]
-|手順 4. 古い列マスター キーで保護されている列マスター キーに関するメタデータ (暗号化値など) を取得します。 | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | いいえ | [ユーザー アカウント制御]
+|手順 2. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
+|手順 3. 古い列マスター キーに関するメタデータを取得します。| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | いいえ | はい
+|手順 4. 古い列マスター キーで保護されている列マスター キーに関するメタデータ (暗号化値など) を取得します。 | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | いいえ | はい
 |手順 5. 列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と、前の列マスター キーで保護されている対応する列暗号化キーの暗号化値を共有します。| 後半の例を参照してください。 | いいえ | いいえ
 
 ### <a name="part-2-security-administrator"></a>パート 2: セキュリティ管理者
@@ -119,17 +117,16 @@ DBA は、交換する列マスター キーと、現在の列マスター キ�
 | タスク | [アーティクル] | プレーンテキストのキー/キーストアへのアクセス| データベースへのアクセス
 |:---|:---|:---|:---
 |手順 1. 古い列マスター キーの場所と、古い列マスター キーで保護されている対応する列暗号化キーの暗号化値を、DBA から取得します。|なし<br>後半の例を参照してください。|いいえ| いいえ
-|手順 2. キー ストアで新しい列マスター キーを作成します。<br><br>**注:** SqlServer モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアの種類に固有のツールを使用する必要があります。|[列マスター キーの作成と保存 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| [ユーザー アカウント制御] | いいえ
+|手順 2. キー ストアで新しい列マスター キーを作成します。<br><br>**注:** SqlServer モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアの種類に固有のツールを使用する必要があります。|[列マスター キーの作成と保存 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| はい | いいえ
 |手順 3. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
 |手順 4. **古い** 列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 |New-SqlColumnMasterKeySettings| いいえ | いいえ
-|手順 5. **新しい** 列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 作成するには、キー ストアに固有のコマンドレットを使用する必要があります。 | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| いいえ | いいえ
-|手順 6. 古い (現在の) 列マスター キーまたは新しい列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | [ユーザー アカウント制御] | いいえ
-|手順 7. 現在は古い列マスター キーで保護されている各列暗号化キー値を、新しい列マスター キーを使用して再暗号化します。 | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**注:** このコマンドレットを呼び出すときは、SqlColumnMasterKeySettings オブジェクトと、列暗号化キー値を新旧両方の列マスター キーに渡して、再暗号化します。|[ユーザー アカウント制御]|いいえ
+|手順 5. **新しい** 列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 作成するには、キー ストアに固有のコマンドレットを使用する必要があります。 | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| いいえ | いいえ
+|手順 6. 古い (現在の) 列マスター キーまたは新しい列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | はい | いいえ
+|手順 7. 現在は古い列マスター キーで保護されている各列暗号化キー値を、新しい列マスター キーを使用して再暗号化します。 | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**注:** このコマンドレットを呼び出すときは、SqlColumnMasterKeySettings オブジェクトと、列暗号化キー値を新旧両方の列マスター キーに渡して、再暗号化します。|はい|いいえ
 |手順 8. 新しい列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と、列暗号化キーの新しい暗号化値セットを DBA と共有します。| 後半の例を参照してください。 | いいえ | いいえ
 
 > [!NOTE]
 > 回転の後、古い列マスター キーは完全に削除しないを強くお勧めします。 そこで、古い列マスター キーを現在のキー ストアに保存するか、セキュリティで保護された別の場所にアーカイブします。 バックアップ ファイルからデータベースを復元して、新しい列マスター キーを構成する *前* の時点まで戻る場合は、古いキーでデータにアクセスする必要があります。
-
 
 ### <a name="part-3-dba"></a>パート 3: DBA
 
@@ -139,14 +136,14 @@ DBA は、新しい列マスター キーのメタデータを作成し、影響
 |:---|:---|:---|:---
 |手順 1. 新しい列マスター キーの場所と、古い列マスター キーで保護されている対応する列暗号化キーの新しい暗号化値セットを、セキュリティ管理者から取得します。| 後半の例を参照してください。 | いいえ | いいえ
 |手順 2. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
-|手順 3. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | [ユーザー アカウント制御]
+|手順 3. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
 |手順 4. 新しい列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 |New-SqlColumnMasterKeySettings| いいえ| いいえ
-|手順 5. データベースの新しい列マスター キーに関するメタデータを作成します。|[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注:** このコマンドレットは背後で [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。 | いいえ | [ユーザー アカウント制御]
-|手順 6. 古い列マスター キーで保護されている列マスター キーに関するメタデータを取得します。| [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)| いいえ | [ユーザー アカウント制御]
-|手順 7. 影響を受ける各列暗号化キーについて、新しい暗号化値 (新しい列マスター キーを使用して保護されている値) をメタデータに追加します。|[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)|いいえ|[ユーザー アカウント制御]
+|手順 5. データベースの新しい列マスター キーに関するメタデータを作成します。|[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注:** このコマンドレットは背後で [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。 | いいえ | はい
+|手順 6. 古い列マスター キーで保護されている列マスター キーに関するメタデータを取得します。| [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)| いいえ | はい
+|手順 7. 影響を受ける各列暗号化キーについて、新しい暗号化値 (新しい列マスター キーを使用して保護されている値) をメタデータに追加します。|[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)|いいえ|はい
 |手順 8. データベース内の暗号化された (そして古い列マスター キーで保護されている) 列をクエリするすべてのアプリケーションの管理者と調整して、アプリケーションから新しい列マスター キーにアクセスできるようにします。|[列マスター キーの作成と保存 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| いいえ|いいえ
-|手順 9. 古い列マスター キーと関連付けられた暗号化値をデータベースから削除して交換を完了します。<br><br>**注:** この手順を実行する前に、古い列マスター キーで保護されている暗号化された列をクエリするすべてのアプリケーションが、新しい列マスター キーを使用するように構成されていることを確認してください。 この手順を先に実行すると、一部のアプリケーションがデータを復号化できない可能性があります。<br><br>この手順で、古い列マスター キーと保護されている列マスター キーの関連付けが削除されます。 | [Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)<br><br>また、 [Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)を使用することもできます | いいえ|[ユーザー アカウント制御]
-|手順 10. 古い列マスター キーをデータベースから削除する| [Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)| いいえ|[ユーザー アカウント制御]
+|手順 9. 古い列マスター キーと関連付けられた暗号化値をデータベースから削除して交換を完了します。<br><br>**注:** この手順を実行する前に、古い列マスター キーで保護されている暗号化された列のクエリを実行するすべてのアプリケーションが、新しい列マスター キーを使用するように構成されていることを確認してください。 この手順を先に実行すると、一部のアプリケーションがデータを復号化できない可能性があります。<br><br>この手順で、古い列マスター キーと保護されている列マスター キーの関連付けが削除されます。 | [Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)<br><br>また、 [Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)を使用することもできます | いいえ|はい
+|手順 10. 古い列マスター キーをデータベースから削除する| [Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)| いいえ|はい
 
 ### <a name="rotating-a-column-master-key-with-role-separation-windows-certificate-example"></a>役割の分離ありで列マスター キーを交換する (Windows Certificate の例)
 
@@ -296,23 +293,22 @@ Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName  -Inp
 Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 ```
 
-
 ## <a name="rotating-a-column-encryption-key"></a>列暗号化キーの交換
 
-列暗号化キーを交換するには、交換するキーで暗号化されたすべての列のデータを暗号化解除し、新しい列暗号化キーを使用してデータを再度暗号化する必要があります。 この交換ワークフローでは、キーとデータベースの両方にアクセスする必要があるので、役割の分離ありでは実行できません。 交換するキーで暗号化された列を含むテーブルが大きい場合、列暗号化キーの交換には長い時間がかかることがあります。 したがって、組織で列暗号化キーを回転する場合は、慎重に計画を立てる必要があります。
+列暗号化キーを交換するには、交換するキーで暗号化されたすべての列のデータを暗号化解除し、新しい列暗号化キーを使用してデータを再度暗号化する必要があります。 この交換ワークフローでは、キーとデータベースの両方にアクセスする必要があるので、役割の分離ありでは実行できません。 交換されるキーで暗号化される列が含まれるテーブルが大きい場合、列暗号化キーの交換に長い時間がかかることがあります。 したがって、組織で列暗号化キーを交換する場合は、慎重に計画を立てる必要があります。
 
-オフラインまたはオンラインの手法で、列暗号化キーを回転できます。 前者の方法のほうが速いですが、お使いのアプリケーションでは、影響を受けるテーブルに書き込めません。 後者の手法は時間がかかりますが、時間間隔を設定できます。その間は、影響を受けるテーブルはアプリケーションで利用できません。 詳細については、「 [PowerShell を使用して列の暗号化の構成](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) 」と「 [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) 」を参照してください。
+オフラインまたはオンラインの手法で、列暗号化キーを回転できます。 前者の方法のほうが速いですが、お使いのアプリケーションでは、影響を受けるテーブルに書き込めません。 後者の手法は時間がかかりますが、時間間隔を設定できます。その間、アプリケーションでは影響を受けるテーブルを利用できません。 詳細については、「[PowerShell を使用した列の暗号化の構成](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)」および「[Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/)」を参照してください。
 
 | タスク | [アーティクル] | プレーンテキストのキー/キーストアへのアクセス| データベースへのアクセス
 |:---|:---|:---|:---
 |手順 1. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
-|手順 2. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | [ユーザー アカウント制御]
-|手順 3. (列暗号化キーを保護する、交換される) 列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | [ユーザー アカウント制御] | いいえ
-|手順 4. 新しい列暗号化キーを生成し、それを列マスター キーで暗号化し、データベースで列の暗号化キー メタデータを作成します。  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注:** 内部で列の暗号化キーを生成し、暗号化するコマンドレットのバリエーションを使用します。<br>このコマンドレットは背後で [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。 | [ユーザー アカウント制御] | [ユーザー アカウント制御]
-|手順 5. 古い列暗号化キーで暗号化されたすべての列を検索します。 | [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | いいえ | [ユーザー アカウント制御]
+|手順 2. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
+|手順 3. (列暗号化キーを保護する、交換される) 列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | はい | いいえ
+|手順 4. 新しい列暗号化キーを生成し、それを列マスター キーで暗号化し、データベースで列の暗号化キー メタデータを作成します。  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注:** 内部で列の暗号化キーを生成し、暗号化するコマンドレットのバリエーションを使用します。<br>このコマンドレットは背後で [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。 | はい | はい
+|手順 5. 古い列暗号化キーで暗号化されたすべての列を検索します。 | [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | いいえ | はい
 |手順 6. 影響を受ける各列について *SqlColumnEncryptionSettings* オブジェクトを作成します。  SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 列のターゲット暗号化方式を指定します。 この場合、オブジェクトには、影響を受ける列を新しい列暗号化キーで暗号化することを指定します。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | いいえ | いいえ
-|手順 7. 新しい暗号化キーを使用して、手順 5 で指定した列を再暗号化します。 | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注:** この手順の実行には時間がかかる場合があります。 アプリケーションは、選択されたアプローチ (オンラインとオフライン) に応じて、操作全体または一部の操作でテーブルにアクセスできなくなります。 | [ユーザー アカウント制御] | [ユーザー アカウント制御]
-|手順 8. 古い列暗号化キーのメタデータを削除します。 | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | いいえ | [ユーザー アカウント制御]
+|手順 7. 新しい暗号化キーを使用して、手順 5 で指定した列を再暗号化します。 | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注:** この手順の実行には時間がかかる場合があります。 アプリケーションでは、選択されたアプローチ (オンラインまたはオフライン) に応じて、操作全体または一部の操作でテーブルにアクセスできなくなります。 | はい | はい
+|手順 8. 古い列暗号化キーのメタデータを削除します。 | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | いいえ | はい
 
 ### <a name="example---rotating-a-column-encryption-key"></a>例 - 列暗号化キーの交換
 
@@ -364,7 +360,7 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
   
 ## <a name="next-steps"></a>Next Steps  
     
-- [Always Encrypted と .NET Framework SQL Server 用データ プロバイダーを使用してアプリケーションを開発する](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+- [Always Encrypted と .NET Framework Data Provider for SQL Server を使用してアプリケーションを開発する](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
   
 ## <a name="additional-resources"></a>その他のリソース  
 

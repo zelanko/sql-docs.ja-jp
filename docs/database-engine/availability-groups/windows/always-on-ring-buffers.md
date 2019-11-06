@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性グループのリング バッファー (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: リング バッファーを使用し、可用性グループに関する正常性情報を取得する
+description: SQL Server リング バッファーを使用し、Always On 可用性グループに関する特定の診断情報を取得します。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1bc5ccc83285ead5a5d5de55742380d0af5766b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef5213139271def9f2901f87fa150950bdeb513d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014709"
 ---
-# <a name="always-on-availability-groups-ring-buffers"></a>Always On 可用性グループのリング バッファー
+# <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>リング バッファーを使用し、Always On 可用性グループに関する正常性情報を取得する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   いくつかの Always On 可用性グループの診断情報を SQL Server のリング バッファー、または sys.dm_os_ring_buffers 動的管理ビュー (DMV) から入手できます。 リング バッファーは、SQL Server の起動中に作成され、内部診断用に SQL Server システム内のアラートを記録します。 それらはサポートされていませんが、問題のトラブルシューティングを行うときにそれらから貴重な情報を抽出することができます。 これらのリング バッファーは、SQL Server がハングまたはクラッシュしたときに別の診断のソースを提供します。  
   

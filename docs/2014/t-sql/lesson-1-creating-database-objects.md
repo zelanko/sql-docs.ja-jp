@@ -1,28 +1,28 @@
 ---
-title: 'レッスン 1: データベース オブジェクトの作成 | Microsoft Docs'
+title: レッスン 1:データベース オブジェクトの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31c3d4cdac735aea203a88aa51154ae7c14c95a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45eabd88d5753721b081c79d3dab03b0a6134c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704551"
 ---
-# <a name="lesson-1-creating-database-objects"></a>レッスン 1: データベース オブジェクトの作成
+# <a name="lesson-1-creating-database-objects"></a>レッスン 1:データベース オブジェクトの作成
   このレッスンでは、データベースを作成する方法、データベースにテーブルを作成する方法、およびテーブル内のデータにアクセスして変更する方法を説明します。 これは [!INCLUDE[tsql](../includes/tsql-md.md)]の入門レッスンであるため、これらのステートメントの各種オプションは使用せず、その説明も含まれていません。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは次の方法で作成して [!INCLUDE[ssDE](../includes/ssde-md.md)] に送信できます。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?linkid=67359)から無料でダウンロードできます。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=67359)から無料でダウンロードできます。  
   
 -   [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用する。  
   
@@ -34,17 +34,17 @@ ms.locfileid: "48210492"
   
  このレッスンの内容は次のとおりです。  
   
--   [データベースを作成する&#40;チュートリアル&#41;](lesson-1-1-creating-a-database.md)  
+-   [データベースの作成 (チュートリアル)](lesson-1-1-creating-a-database.md)  
   
--   [テーブルを作成する&#40;チュートリアル&#41;](lesson-1-2-creating-a-table.md)  
+-   [テーブルの作成 (チュートリアル)](lesson-1-2-creating-a-table.md)  
   
--   [データ テーブルの挿入と更新&#40;チュートリアル&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [テーブルのデータの挿入と更新 (チュートリアル)](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [テーブル内のデータの読み取り&#40;チュートリアル&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [テーブルのデータの読み取り (チュートリアル)](lesson-1-4-reading-the-data-in-a-table.md)  
   
--   [要約 : データベース オブジェクトの作成](lesson-1-5-summary-creating-database-objects.md)  
+-   [概要:データベース オブジェクトの作成](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [データベースを作成する&#40;チュートリアル&#41;](lesson-1-1-creating-a-database.md)  
+ [データベースの作成 (チュートリアル)](lesson-1-1-creating-a-database.md)  
   
   

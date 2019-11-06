@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+manager: kfile
+ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105668"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>レポートへの HTML のインポート (レポート ビルダーおよび SSRS)
   テキスト ボックスを使用すると、データセットのフィールドから取得した HTML 形式のテキストをレポートに挿入できます。 正しい形式の HTML に評価される単純型または複合型の式のテキストを使用できます。 書式付きのテキストは、PDF などのサポートされている出力形式すべてにレンダリングできます。  
@@ -28,7 +27,7 @@ ms.locfileid: "50099520"
 > [!NOTE]  
 >  HTML マークアップが含まれたテキストをインポートする場合、データは必ず最初にテキスト ボックスによって解析される必要があります。 サポートされているのは HTML タグのサブセットのみなので、レンダリングされたレポートに表示される HTML が元の HTML と異なる場合もあります。  
   
- すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
+ すぐに使用するには、「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +35,7 @@ ms.locfileid: "50099520"
 ## <a name="supported-html-tags"></a>サポートされる HTML タグ  
  以下は、プレースホルダー テキストとして定義された場合に HTML として表示されるタグの全リストです。  
   
--   ヘッダー、スタイル、およびブロック要素: \<H {n} >、 \<DIV >、 \<SPAN >、\<P >、 \<LI >  
+-   ヘッダー、スタイル、およびブロック要素:\<H {n} >、 \<DIV >、 \<SPAN >、\<P >、 \<LI >  
   
  レポートの処理中、その他の HTML マークアップ タグはすべて無視されます。 プレースホルダー テキスト内の式で表される HTML が整形式でない場合、プレースホルダーはプレーン テキストに変換されます。 HTML タグの大文字と小文字は区別されません。  
   
@@ -60,8 +59,6 @@ ms.locfileid: "50099520"
     -   CSS の絶対的な長さ単位で表された有効な RDL サイズ値のみサポートされます。 サポートされる単位は、in、cm、mm、pt、および pc です。  
   
     -   CSS の相対的な長さ単位はサポートされず、無視されます。 サポートされない単位は、em、ex、px、%、rem などです。  
-  
-     CSS の単位の詳細については、「[CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)」(CSS の値と単位のリファレンス) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx) を参照してください。  
   
 -   color  
   

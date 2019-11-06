@@ -1,22 +1,21 @@
 ---
-title: 'レッスン 3: 処理のタイム シリーズが構造体、およびモデル化 |Microsoft Docs'
+title: 'レッスン 3: タイム シリーズを処理構造およびモデルの |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042878"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>レッスン 3: 時系列構造と時系列モデルの処理
   このレッスンでは、使用、 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)時系列マイニング構造とマイニング モデルを作成したを処理するステートメント。  
@@ -79,7 +78,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>INSERT INTO を使用してマイニング構造とそれに関連するマイニング モデルを処理するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -123,7 +122,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     ソース クエリの参照、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] IntermediateTutorial サンプル プロジェクトで定義されているデータ ソース。 ソース クエリはこのデータ ソースを使用して、vTimeSeries ビューにアクセスします。 このビューには、マイニング モデルのトレーニングに使用されるソース データが含まれています。 このプロジェクトやこのビューに慣れていない場合は、次を参照してください。[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)します。  
+     ソース クエリの参照、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] IntermediateTutorial サンプル プロジェクトで定義されているデータ ソース。 ソース クエリはこのデータ ソースを使用して、vTimeSeries ビューにアクセスします。 このビューには、マイニング モデルのトレーニングに使用されるソース データが含まれています。 このプロジェクトやこのビューに慣れていない場合は、次を参照してください。[レッスン 2。予測シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)します。  
   
      最終的なステートメントは次のようになります。  
   
@@ -147,11 +146,11 @@ OPENQUERY (<source data definition>)
  クエリの実行が終了したら、処理済みのマイニング モデルを使用して予測を作成できます。 次のレッスンでは、作成したマイニング モデルに基づいて、いくつかの予測を作成します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4: DMX を使用した時系列予測の作成](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [レッスン 4:DMX を使用して時系列予測の作成](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [処理の要件および注意事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](/sql/dmx/source-data-query-openquery)  
+ [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)  
   
   

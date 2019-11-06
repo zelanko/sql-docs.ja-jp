@@ -1,24 +1,23 @@
 ---
-title: '手順 2: プロジェクトをプロジェクト配置モデルに変換する | Microsoft Docs'
+title: 手順 2:プロジェクトをプロジェクト配置モデルに変換する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 459630f452458d4bbc9723133013c861619806bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767354"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>手順 2: プロジェクトをプロジェクト配置モデルに変換する
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>手順 2:プロジェクトをプロジェクト配置モデルに変換する
   ここでは、Integration Services プロジェクトの変換ウィザードを使用して、プロジェクトをプロジェクト配置モデルに変換します。  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>プロジェクトをプロジェクト配置モデルに変換する  
@@ -52,6 +51,6 @@ ms.locfileid: "48093932"
 13. [パラメーター] タブをクリックし、パッケージが VarFolderName のパラメーターに含まれ、値がレッスン 5 の構成ファイルの新しいサンプル データ フォルダーに指定されたパスと同じであることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3: レッスン 6 のパッケージのテスト](lesson-6-3-testing-the-lesson-6-package.md)  
+ [ステップ 3:レッスン 6 パッケージのテスト](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

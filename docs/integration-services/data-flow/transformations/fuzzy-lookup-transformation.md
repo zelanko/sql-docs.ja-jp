@@ -31,17 +31,20 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540895"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291493"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
   
 > [!NOTE]  
@@ -55,7 +58,7 @@ ms.locfileid: "52540895"
   
  この変換は 1 つの入力と 1 つの出力をとります。  
   
- あいまい一致に使用できるのは、**DT_WSTR** データ型および **DT_STR** データ型の入力列のみです。 完全一致では、**DT_TEXT****DT_NTEXT** **DT_IMAGE** を除くすべての DTS データ型を使用できます。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。 入力と参照テーブルの結合に使用される列のデータ型には、互換性が必要です。 たとえば、DTS の **DT_WSTR** データ型の列と、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** データ型の列の結合は有効ですが、 **DT_WSTR** データ型の列と、 **int** データ型の列の結合は無効です。  
+ あいまい一致に使用できるのは、**DT_WSTR** データ型および **DT_STR** データ型の入力列のみです。 完全一致では、 **DT_TEXT** **DT_NTEXT** **DT_IMAGE** を除くすべての DTS データ型を使用できます。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。 入力と参照テーブルの結合に使用される列のデータ型には、互換性が必要です。 たとえば、DTS の **DT_WSTR** データ型の列と、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** データ型の列の結合は有効ですが、 **DT_WSTR** データ型の列と、 **int** データ型の列の結合は無効です。  
   
  この変換は、使用する最大メモリ量、行比較アルゴリズム、および変換で使用するインデックス テーブルと参照テーブルのキャッシュを指定することにより、カスタマイズできます。  
   
@@ -70,7 +73,7 @@ ms.locfileid: "52540895"
   
  類似性のしきい値は、コンポーネント レベルおよび結合レベルで設定できます。 結合レベルの類似性のしきい値は、入力と参照テーブルの列のあいまい一致を実行する場合にのみ使用できます。 類似性の範囲は 0 ～ 1 です。 しきい値が 1 に近いほど、行や列が一致していると判断される場合の類似性が高くなります。 類似性のしきい値は、コンポーネント レベルおよび結合レベルで MinSimilarity プロパティを設定して指定します。 コンポーネント レベルで指定された類似性を満たすには、すべての行がすべての一致に関して、指定された類似性のしきい値以上の類似性を持つ必要があります。 したがって、行レベルまたは結合レベルでの一致が均一に類似していない限り、コンポーネント レベルで非常に類似した一致を指定することはできません。  
   
- 一致には、類似スコアおよび信頼スコアが含まれます。 類似スコアは、入力レコードとあいまい参照変換が参照テーブルから返したレコードとのテキストの類似性を数値で表したものです。 信頼スコアは、特定の値が、参照テーブル内で見つかった一致の中で最適の一致である確率を表す数値です。 特定のレコードに割り当てられる信頼スコアは、返された他の一致レコードに依存します。 たとえば、 *St.* と *Saint* の一致の類似スコアは他の一致に関係なく低くなりますが、 *Saint* が返された唯一の一致の場合には、信頼スコアは高くなります。 参照テーブル内に *Saint* と *St.* の両方が存在した場合、 *St.* の信頼スコアが高く、 *Saint* の信頼スコアが低くなります。 ただし、類似スコアが高くても、信頼スコアが高いとは限りません。 たとえば、*Chapter 4* という値を検索した場合、*Chapter 1**Chapter 2* *Chapter 3* が結果として返されて、それぞれの類似スコアは高くなります。しかし、どの結果が最適の一致であるかがはっきりしないため、信頼スコアは低くなります。  
+ 一致には、類似スコアおよび信頼スコアが含まれます。 類似スコアは、入力レコードとあいまい参照変換が参照テーブルから返したレコードとのテキストの類似性を数値で表したものです。 信頼スコアは、特定の値が、参照テーブル内で見つかった一致の中で最適の一致である確率を表す数値です。 特定のレコードに割り当てられる信頼スコアは、返された他の一致レコードに依存します。 たとえば、 *St.* と *Saint* の一致の類似スコアは他の一致に関係なく低くなりますが、 *Saint* が返された唯一の一致の場合には、信頼スコアは高くなります。 参照テーブル内に *Saint* と *St.* の両方が存在した場合、 *St.* の信頼スコアが高く、 *Saint* の信頼スコアが低くなります。 ただし、類似スコアが高くても、信頼スコアが高いとは限りません。 たとえば、 *Chapter 4* という値を検索した場合、 *Chapter 1* *Chapter 2* *Chapter 3* が結果として返されて、それぞれの類似スコアは高くなります。しかし、どの結果が最適の一致であるかがはっきりしないため、信頼スコアは低くなります。  
   
  類似スコアは 0 ～ 1 の 10 進値で示されます。類似スコア 1 は、入力列の値と参照テーブルの値が完全に一致していることを表します。 信頼スコアも 0 ～ 1 の 10 進値で、一致の信頼性を表します。 使用できる一致が見つからない行には類似スコアおよび信頼スコアに 0 が割り当てられ、参照テーブルからコピーされる出力列は NULL 値になります。  
   
@@ -146,7 +149,7 @@ ms.locfileid: "52540895"
 > [!NOTE]  
 >  あいまい参照変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまい参照変換エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 さらに、 **MaxOutputMatchesPerInput** の 100 より大きい値は、 **[詳細エディター]** でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[キャッシュなし]**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -182,11 +185,11 @@ ms.locfileid: "52540895"
 ## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>[あいまい参照変換エディター] ([列] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列および出力列のプロパティを設定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  入力列をドラッグして、使用できる参照列に接続します。 これらの列は、サポートされているデータ型と一致する必要があります。 マッピングする行を選択して右クリックし、 [[リレーションシップの作成]](../../../integration-services/data-flow/transformations/create-relationships.md) ダイアログ ボックスでマッピングを編集します。  
   
- **名前**  
+ **[名前]**  
  使用可能な入力列の名前が表示されます。  
   
  **[パススルー]**  
@@ -204,7 +207,7 @@ ms.locfileid: "52540895"
 ## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>[あいまい参照変換エディター] ([詳細設定] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、あいまい参照のパラメーターを設定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[参照ごとの出力に対する最大一致数]**  
  変換で返される、各入力行の一致の最大数を指定します。 既定値は **1**です。  
   

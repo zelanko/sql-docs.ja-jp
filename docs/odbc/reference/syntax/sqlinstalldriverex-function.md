@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030605"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 関数
 **準拠**  
- バージョンが導入されています。 ODBC 3.0  
+ バージョンが導入されました。ODBC 3.0  
   
- **概要**  
+ **まとめ**  
  **SQLInstallDriverEx**システム情報の Odbcinst.ini のエントリに、ドライバーに関する情報を追加し、インクリメント、ドライバーの*UsageCount*を 1 つ。 ただし、バージョンのドライバー、既に存在する場合が、 *UsageCount*値のドライバーが存在しない新しい*UsageCount*値が 2 に設定します。  
   
  この関数は、すべてのファイルを実際にはコピーしません。 ドライバーのファイルを正しくターゲット ディレクトリにコピーする呼び出し元のプログラムの役目です。  
@@ -40,7 +39,7 @@ ms.locfileid: "49169339"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverEx(  
      LPCSTR    lpszDriver,  
@@ -71,9 +70,9 @@ BOOL SQLInstallDriverEx(
  *起こり*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
   
- ODBC_INSTALL_INQUIRY: を問い合わせてドライバーをインストールできます。  
+ ODBC_INSTALL_INQUIRY:ドライバーをインストールできる場所について照会します。  
   
- ODBC_INSTALL_COMPLETE: は、インストールの要求を完了します。  
+ ODBC_INSTALL_COMPLETE:インストール要求を完了します。  
   
  *lpdwUsageCount*  
  [出力]この関数が呼び出された後、ドライバーの使用率カウントします。  
@@ -100,9 +99,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>コメント  
  *LpszDriver*引数は、キーワードと値のペアの形式で属性の一覧を示します。 各ペアは、null バイトで終了し、全体の一覧は null バイトで終了します。 (つまり、2 つの null バイトの末尾を示す一覧。)この一覧の形式は次のとおりです。  
   
- _ドライバー desc_ **\\**0Driver**=**_ドライバー-filename DLL_ **\\**0 [セットアップ**=**_セットアップ-filename DLL_<b>\\</b>0]  
+ _ドライバー desc_ **\\** 0Driver **=** _ドライバー-filename DLL_ **\\** 0 [セットアップ **=** _セットアップ-filename DLL_<b>\\</b>0]  
   
- [_ドライバー-attr-keyword1_**=**_value1_<b>\\</b>0] [_ドライバー-attr-keyword2_ **=** _value2_<b>\\</b>0].<b> \\ </b>0  
+ [_ドライバー-attr-keyword1_ **=** _value1_<b>\\</b>0] [_ドライバー-attr-keyword2_ **=** _value2_<b>\\</b>0].<b> \\ </b>0  
   
  \0 の null バイトがあると*ドライバー-attr-keywordn*ドライバー属性のいずれかのキーワードは、します。 キーワードは、指定した順序で表示する必要があります。 たとえば、書式設定されたテキスト ファイル用のドライバーが個別のドライバーと Dll のセットアップとし、.txt および .csv の拡張子を持つファイルを使用できます。 *LpszDriver*引数のこのドライバーで次のようにある可能性があります。  
   

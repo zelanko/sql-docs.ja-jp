@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e5dc7d93b411834ae127d5bce7f775b78dc36ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1641685bfe017ab7bc3adfda5c667684a70b786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130648"
 ---
-# <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
+# <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ジョブのスケジュールを削除します。  
@@ -34,9 +33,9 @@ ms.locfileid: "47815350"
   
   
 ## <a name="remarks"></a>コメント  
- ジョブ スケジュールはジョブとは別々に管理できます。 ジョブからスケジュールを削除するには使用**sp_detach_schedule**します。 スケジュールを削除するには使用**sp_delete_schedule**します。  
+ ジョブのスケジュールは、ジョブとは無関係に管理できるようにします。 ジョブからスケジュールを削除するには使用**sp_detach_schedule**します。 スケジュールを削除するには使用**sp_delete_schedule**します。  
   
-> **注:****sp_delete_jobschedule**は複数のジョブにアタッチされているスケジュールをサポートしていません。   既存のスクリプトを呼び出す場合**sp_delete_jobschedule**を 1 つ以上のジョブに関連付けられているスケジュールを削除する手順には、エラーが返されます。  
+> **注: sp_delete_jobschedule**は複数のジョブにアタッチされているスケジュールをサポートしていません。 既存のスクリプトを呼び出す場合**sp_delete_jobschedule**を 1 つ以上のジョブに関連付けられているスケジュールを削除する手順には、エラーが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
@@ -51,7 +50,7 @@ ms.locfileid: "47815350"
   
  メンバー、 **sysadmin**ロールは、任意のジョブ スケジュールを削除できます。 以外のユーザーがメンバーの**sysadmin**ロールは、自分が所有するジョブ スケジュールのみを削除できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
  [表示またはジョブの変更](../../ssms/agent/view-or-modify-jobs.md)   

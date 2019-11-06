@@ -17,12 +17,12 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997855d160108abe530affdd2b28e464076fbbb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667380"
 ---
 # <a name="using-catalog-functions"></a>カタログ関数の使用
   どのようなデータベースであっても、その構造は、データベースに格納されたデータを保持するような構造になっています。 この構造の定義は、権限などその他の情報と共にカタログに保存されます。カタログは、システム テーブルのセットとして実装され、データ辞書と呼ばれることもあります。  
@@ -43,7 +43,7 @@ ms.locfileid: "48077012"
   
      リンク サーバーに含まれるカタログの一覧を返します。  
   
- リンク サーバー名とカタログ名を取得したら、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの 2 つの部分名を使用して、カタログから情報を取得をサポートしている*linked_server_name ***.*** カタログ*の*CatalogName*で次の ODBC カタログ関数。  
+ リンク サーバー名とカタログ名を取得したら、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの 2 つの部分名を使用して、カタログから情報を取得をサポートしている_linked_server_name_ **.** _カタログ_の*CatalogName*で次の ODBC カタログ関数。  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077012"
   
 -   **SQLTables**  
   
- 2 つの部分*linked_server_name ***.*** カタログ*はサポートされても*FKCatalogName*と*PKCatalogName*で[SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)します。  
+ 2 つの部分_linked_server_name_ **.** _カタログ_はサポートされても*FKCatalogName*と*PKCatalogName*で[SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)します。  
   
  SQLLinkedServers と SQLLinkedCatalogs を使用する場合は、次のファイルが必要です。  
   

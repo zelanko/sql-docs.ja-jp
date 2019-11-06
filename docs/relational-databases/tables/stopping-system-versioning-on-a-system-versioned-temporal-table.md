@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7792e66f97fa31e27b100bcae32a7622c5e77113
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016231"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,8 +32,8 @@ ms.locfileid: "52409167"
 -   通常のテーブルとしての履歴テーブル  
   
 ### <a name="important-remarks"></a>重要な解説  
-  
--   **SYSTEM_VERSIONING = OFF** を設定するか、または **SYSTEM_TIME** 期間を削除すると、データ損失が発生しません。  
+-   **SYSTEM_VERSIONING = OFF** の間、履歴テーブルでは更新の取得が**停止**します。
+-   **SYSTEM_VERSIONING = OFF** を設定するか、**SYSTEM_TIME** 期間を削除すると、**テンポラル テーブル**でデータが失われません。
   
 -   **SYSTEM_VERSIONING = OFF** を設定し、 **SYSTEM_TIME** 期間を削除しない場合、システムでは挿入および更新操作ごとに期間列が引き続き更新されます。 現在のテーブルでの削除は永続的なものになります。  
   
@@ -64,7 +63,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   現在のテーブルに **SWITCH IN** をパーティション分割する  
   
- この例では、特定のメンテナンス操作を実行できるように SYSTEM_VERSIONING を一時的に停止します。 テーブル メンテナンスの前提条件としてバージョン管理を一時的に停止する場合は、データの整合性を保つために、トランザクション内で行うことを強くお勧めします。  
+ この例では、特定のメンテナンス操作を実行できるように SYSTEM_VERSIONING を一時的に停止します。 テーブル メンテナンスの前提条件としてバージョン管理を一時的に停止する場合は、データの整合性を保つために、トランザクション内で行うことを強くお勧めします。
+ 
+> [!NOTE]  
+>  システムのバージョン管理をオンに戻すとき、HISTORY_TABLE 引数を必ず指定してください。  指定しないと、新しい履歴テーブルが作成され、現在のテーブルに関連付けられます。  元の履歴テーブルは通常のテーブルとして残りますが、現在のテーブルに関連付けられません。  
   
 ```  
 BEGIN TRAN   

@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 99dbf8f5a9ba634899360b86d7f778d73a30de80
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a9789c2d017200650bcae7b5f864da708e5c7453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194296"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>カスタム レポート アイテムのデザイン時コンポーネントの作成
   カスタム レポート アイテムのデザイン時コンポーネントは、Visual Studio レポート デザイナー環境で使用できるコントロールです。 カスタム レポート アイテムのデザイン時コンポーネントは、ドラッグ アンド ドロップ操作を使用できるアクティブ化されたデザイン画面、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーとの統合、およびカスタム プロパティ エディター機能を提供します。  
@@ -24,7 +24,7 @@ ms.locfileid: "50020606"
   
  開発環境でデザイン時コンポーネントを使用して設定されるプロパティは、ホスト デザイン環境によってシリアル化およびシリアル化解除され、レポート定義言語 (RDL) ファイルに要素として格納されます。 レポート プロセッサによるレポートの実行時には、デザイン時コンポーネントを使用して設定されたプロパティが、レポート プロセッサによってカスタム レポート アイテムの実行時コンポーネントに渡されます。実行時コンポーネントは、カスタム レポート アイテムを表示してレポート プロセッサに返します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  カスタム レポート アイテムのデザイン時コンポーネントは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装されます。 ここでは、カスタム レポート アイテムのデザイン時コンポーネントに固有の実装詳細について説明します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用したコンポーネント開発の詳細については、MSDN ライブラリの「[Visual Studio のコンポーネント](https://go.microsoft.com/fwlink/?LinkId=116576)」を参照してください。  
   
  完全に実装されたカスタム レポート アイテムの例については、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  

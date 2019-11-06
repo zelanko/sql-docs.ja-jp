@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057672"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>[メッセージ キュー タスク エディター] ([受信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[受信]** ページを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) メッセージを受信するためのメッセージ キュー タスクを構成します。  
@@ -56,7 +55,7 @@ ms.locfileid: "48060852"
  **Overwrite**  
  データ ファイル メッセージの内容を保存するとき、既存のファイルのデータを上書きするかどうかを示します。 既定値は `False` です。  
   
- **Assert**  
+ **[フィルター]**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
 |ReplTest1|説明|  
@@ -74,10 +73,10 @@ ms.locfileid: "48060852"
  **[Identifier]**  
  フィルターの適用を選択した場合、メッセージの受信元のパッケージを表す固有の識別子を入力するか、省略記号ボタン ( **[...]** ) をクリックしてパッケージを指定します。  
   
- **関連項目:** [パッケージの選択](control-flow/select-a-package.md)  
+ **関連トピック:** [パッケージの選択](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>[MessageType] = [変数メッセージ]  
- **Assert**  
+ **[フィルター]**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
 |ReplTest1|説明|  
@@ -86,9 +85,9 @@ ms.locfileid: "48060852"
 |**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
   
  **変数**  
- 変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  
+ 変数の名前を入力するか、[\<**新しい変数...** >] をクリックして新しい変数を設定します。  
   
- **関連項目:** [変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>[Filter] の動的オプション  
   
@@ -100,7 +99,7 @@ ms.locfileid: "48060852"
  **[Identifier]**  
  フィルターの適用を選択した場合、メッセージの受信元のパッケージを表す固有の識別子を入力するか、省略記号ボタン ( **[...]** ) をクリックしてパッケージを指定します。  
   
- **関連項目:** [パッケージの選択](control-flow/select-a-package.md)  
+ **関連トピック:** [パッケージの選択](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>[MessageType] = [文字列メッセージ]  
  **[Compare]**  
@@ -108,7 +107,7 @@ ms.locfileid: "48060852"
   
 |ReplTest1|説明|  
 |-----------|-----------------|  
-|**なし**|メッセージは比較されません。|  
+|**None**|メッセージは比較されません。|  
 |**完全一致**|メッセージは **[CompareString]** オプションで指定した文字列と完全に一致する必要があります。|  
 |**大文字と小文字を区別しない**|メッセージは **[CompareString]** オプションで指定した文字列と一致する必要がありますが、大文字と小文字は区別されません。|  
 |**[含まれる文字列]**|メッセージに **[CompareString]** オプションで指定した文字列が含まれている必要があります。|  
@@ -122,7 +121,7 @@ ms.locfileid: "48060852"
   
 |ReplTest1|説明|  
 |-----------|-----------------|  
-|**なし**|メッセージは比較されません。|  
+|**None**|メッセージは比較されません。|  
 |**完全一致**|メッセージは **[CompareString]** オプションで指定した文字列と完全に一致する必要があります。|  
 |**大文字と小文字を区別しない**|メッセージは **[CompareString]** オプションで指定した文字列と一致する必要がありますが、大文字と小文字は区別されません。|  
 |**[含まれる文字列]**|メッセージに **[CompareString]** オプションで指定した文字列が含まれている必要があります。|  
@@ -131,15 +130,15 @@ ms.locfileid: "48060852"
  **[Compare]** オプションが **[なし]** に設定されていない場合、メッセージと比較する文字列を入力します。  
   
  **変数**  
- 受信したメッセージを格納する変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  
+ 受信したメッセージを格納する変数の名前を入力するか、\<[**新しい変数...>]** をクリックして新しい変数を設定します。  
   
- **関連項目:** [変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [変数の追加](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [メッセージ キュー タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [メッセージ キュー タスク エディター&#40;の送信 ページ&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [[メッセージ キュー タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
+ [[メッセージ キュー タスク エディター] ([送信] ページ)](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [[式] ページ](expressions/expressions-page.md)   
- [メッセージ キュー タスク](control-flow/message-queue-task.md)  
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

@@ -1,24 +1,23 @@
 ---
-title: '手順 5: フラット ファイル ソースの追加と構成 | Microsoft Docs'
+title: 手順 5:追加と構成、フラット ファイル ソース |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4037b33f1668333d54f160eade5f5ad24c4dffe6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891540"
 ---
-# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>手順 5: フラット ファイル ソースの追加と構成
+# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>手順 5:フラット ファイル ソースの追加と構成
   ここでは、フラット ファイル ソースをパッケージに追加し、構成します。 フラット ファイル ソースとは、フラット ファイル接続マネージャーにより定義されるメタデータを使用するデータ フロー コンポーネントです。フラット ファイル接続マネージャーは、変換処理によってフラット ファイルから取得されるデータの形式や構造を指定します。 フラット ファイル接続マネージャーに定義されているファイル形式を使用し、1 つのフラット ファイルからデータを取得するよう、フラット ファイル ソースを定義できます。  
   
  このチュートリアルでは、使用するフラット ファイル ソースを構成します、`Sample Flat File Source Data`以前に作成した接続マネージャー。  
@@ -44,7 +43,7 @@ ms.locfileid: "48134802"
 9. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されて**英語 (米国)** します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 6: 参照変換の追加と構成](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+ [手順 6:追加して、参照変換を構成します。](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>参照  
  [フラット ファイル ソース](data-flow/flat-file-source.md)   

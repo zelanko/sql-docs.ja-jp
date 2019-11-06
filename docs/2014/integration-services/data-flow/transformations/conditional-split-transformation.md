@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6cfae604393fa2fec1c8d3a22edf2c0379581b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900826"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
   条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているため、行が式に一致しない場合は既定の出力に送信されます。  
@@ -45,9 +44,9 @@ ms.locfileid: "48073582"
   
  `SUBSTRING(FirstName,1,1) == "B"`  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、入力データを評価して出力データを出力する式を作成するために使用できる、関数と演算子が含まれます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、入力データを評価して出力データを出力する式を作成するために使用できる、関数と演算子が含まれます。 詳細については、「 [Integration Services (SSIS) 式](../../expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
- 条件分割変換には、`FriendlyExpression`カスタム プロパティ。 このプロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳細については、「 [パッケージでプロパティ式を使用する](../../expressions/use-property-expressions-in-packages.md) 」および「 [変換のカスタム プロパティ](transformation-custom-properties.md)」を参照してください。  
+ 条件分割変換には、`FriendlyExpression` カスタム プロパティがあります。 このプロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳細については、「 [パッケージでプロパティ式を使用する](../../expressions/use-property-expressions-in-packages.md) 」および「 [変換のカスタム プロパティ](transformation-custom-properties.md)」を参照してください。  
   
  この変換は、1 つの入力、1 つ以上の出力、および 1 つのエラー出力をとります。  
   

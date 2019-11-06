@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], external
@@ -15,12 +15,12 @@ ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ae5d3d75a5d7b7acdb5d480ded584a119b54ec5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226171"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>[ツール] メニューへの外部ツールの追加 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] から任意の [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションまたは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] アプリケーションを起動できます。 外部アプリケーションを **[ツール]** メニューに追加し、そこから起動することができます。  

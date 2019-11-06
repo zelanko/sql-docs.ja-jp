@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c64b28dba868344ed30c02f4ea9869caf241168a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012349"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0)
   ここでは、SQLXML における、クライアント側とサーバー側の XML 書式設定の一般的な違いについて説明します。  
@@ -44,7 +42,7 @@ ms.locfileid: "48076032"
   
  このテンプレートはアプリケーション コードで実行できます。実行すると、クライアント側の XML 書式設定では複数の行セットの書式設定がサポートされていないため、エラーが返されます。 2 つのクエリを指定する場合は、各 **\<sql:query >** ブロックでは、目的の結果が表示されます。  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>クライアント側とサーバー側の XML 書式設定では timestamp 型のマッピングが異なる  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>マップとは異なるクライアント vs でのタイムスタンプ。サーバー側の書式設定  
  サーバー側の XML 書式設定では、XMLDATA オプションがクエリで指定される場合、`timestamp` 型のデータベース列が i8 XDR 型にマップされます。  
   
  クライアント側の XML 書式設定では、バイナリの base64 オプションがクエリで指定されているかどうかに従って、`timestamp` 型のデータベース列が `uri` または `bin.base64` XDR 型にマップされます。 `bin.base64` XDR 型は、この型に変換されますので、アップデート グラムや一括読み込み機能を使用する場合に便利です、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp`型。 この方法で、挿入、更新、または削除操作が成功します。  
@@ -52,7 +50,7 @@ ms.locfileid: "48076032"
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>サーバー側の書式設定ではサブタイプの VARIANT 型も使用される  
  サーバー側の XML 書式設定では、サブタイプの VARIANT 型も使用されます。 クライアント側の XML 書式設定を使用する場合、variant は Unicode 文字列に変換され、サブタイプの VARIANT は使用されません。  
   
-## <a name="nested-mode-vs-auto-mode"></a>NESTED モードと AUTO モード  
+## <a name="nested-mode-vs-auto-mode"></a>モードとの入れ子になった。AUTO モード  
  クライアント側の FOR XML の NESTED モードは、サーバー側の FOR XML の AUTO モードに似ていますが、次の点が異なります。  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>サーバー側で AUTO モードを使用してビューにクエリを実行すると、ビュー名が結果の XML 内の要素名として返されます。  
@@ -77,7 +75,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- テンプレートを実行すると、次の XML が返されます。 ここでは一部の結果のみが表示されています。クエリの実行対象のビューの名前が要素名になっていることに注意してください。  
+ テンプレートを実行すると、次の XML が返されます。 (部分的な結果のみ表示されます。要素名には、クエリの実行対象となるビューの名前に注意してください。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -133,7 +131,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- クライアント側の FOR XML を NESTED モードで使用すると、テーブル名が、結果の XML 内の要素名として返されます。 クエリで指定されたテーブルの別名は使用されません。たとえば、次のテンプレートを考えてみます。  
+ クライアント側の FOR XML を NESTED モードで使用すると、テーブル名が、結果の XML 内の要素名として返されます。 (クエリで指定されているテーブルの別名は使用されません)。たとえば、次のテンプレートを考えてみます。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -181,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- サーバー上で XML の書式設定が行われた場合 (**クライアント側の xml「0」を =**)、dbobject クエリを実行 (指定したエイリアスがある場合) 場合でも実際のテーブルおよび列の名前が返されるを取得する列の別名を使用することができます。 たとえば、次のテンプレートが、クエリを実行し、サーバーで行われる XML の書式設定 (、**クライアント側の xml**オプションが指定されていないと、**クライアントで実行**のオプションが選択されていない、仮想ルート)。 このクエリでは、クライアント側の NESTED モードではなく AUTO モードも指定されています。  
+ サーバー上で XML の書式設定が行われた場合 (**クライアント側の xml「0」を =** )、dbobject クエリを実行 (指定したエイリアスがある場合) 場合でも実際のテーブルおよび列の名前が返されるを取得する列の別名を使用することができます。 たとえば、次のテンプレートが、クエリを実行し、サーバーで行われる XML の書式設定 (、**クライアント側の xml**オプションが指定されていないと、**クライアントで実行**のオプションが選択されていない、仮想ルート)。 このクエリでは、クライアント側の NESTED モードではなく AUTO モードも指定されています。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

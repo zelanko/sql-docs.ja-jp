@@ -5,21 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 847e0dd3546062f00a1feb939ec4fa469f693c06
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017269"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 設定リファレンス (Master Data Services)
 
@@ -30,7 +28,7 @@ ms.locfileid: "51702710"
 ## <a name="webconfig-elements"></a>Web.Config 要素  
  Web.config ファイルには、標準 IIS、.NET Framework、ASP.NET、および Windows Communication Foundation (WCF) の構成の要素以外に、カスタム [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 要素 **\<masterDataServices>** が含まれています。 次の表では、Web.config ファイルに含まれている要素について説明します。  
   
-|Configuration 要素|[説明]|  
+|Configuration 要素|説明|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Custom 要素。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに接続します。|  
 |**connectionStrings**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [connectionStrings 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178347) 」を参照してください。|  
@@ -57,7 +55,7 @@ ms.locfileid: "51702710"
   
 ### <a name="elements-and-attributes"></a>要素と属性  
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |----------|-----------------|  
 |**インスタンス (instance)**|子要素。 Web サービスとデータベース接続文字列の情報を指定する属性を含みます。|  
 |**virtualPath**|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスの仮想パスを指定します。 これは、IIS ApplicationHost.config ファイルの **\<site>** 要素にある **\<application>** 要素の **path** 属性に対応します。|  

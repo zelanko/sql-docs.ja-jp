@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], creating
@@ -13,12 +13,12 @@ ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4d6786e4b5980a23195ac848b31845b33f09249
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f96156bc22f730a8e550ef6007bb45401284f60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666688"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>新しいデータベース ダイアグラムの作成 (Visual Database Tools)
   オブジェクト エクスプローラーを使用すると、新しいデータベース ダイアグラムを作成できます。 データベース ダイアグラムは、データベースの構造をグラフィカル表示するツールです。 データベース ダイアグラムを使用すると、テーブル、列、リレーションシップ、キーを作成および変更できます。 また、インデックスや制約を変更することもできます。  

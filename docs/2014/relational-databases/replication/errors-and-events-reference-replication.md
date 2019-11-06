@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server replication], troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee17325a02e6b146ef372b4655ae8c437b76cdff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721320"
 ---
 # <a name="errors-and-events-reference-replication"></a>エラーとイベントのリファレンス (レプリケーション)
   ここでは、レプリケーションに関連するさまざまなエラーの原因と解決方法について説明します。  
@@ -77,7 +76,7 @@ ms.locfileid: "48159752"
 |MSSQL_ENG021642。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー '%s' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。|  
 |MSSQL_ENG021663。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|ソース テーブル [%s].[%s] に有効な主キーが見つかりません。|  
 |MSSQL_ENG021684。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|Oracle パブリッシャー '%s' の管理者ログインに関連付けられた権限が不十分です。|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' は次の形式の有効な Windows ログインにしてください: 'MACHINE\Login' または 'DOMAIN\Login'。 '%s' については、マニュアルを参照してください。|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' は、形式で有効な Windows ログインである必要があります。有効な Windows ログインを指定してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|続行する前に、'%s' エージェント ジョブを '%s' 経由で追加してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|プロセスは、'%1' を '%2' で実行できませんでした。|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|マージ プロセスが、'%1' で生成履歴を変更できませんでした。 トラブルシューティングを行うには、詳細な履歴ログとの同期を再開して、書き込み先の出力ファイルを指定してください。|  

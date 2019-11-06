@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
@@ -15,12 +15,12 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09b9f0286f368f38c339a6001a576914b0def6ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a768b1e05bc123aecec4175ed6f66f6d920e1806
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295256"
 ---
 # <a name="print-query-results-visual-database-tools"></a>クエリ結果の印刷 (Visual Database Tools)
   クエリの結果を印刷するには、 [結果ペイン](visual-database-tools.md) の内容をワード プロセッシング プログラムなど、他の Windows プログラムにコピーし、書式を設定してから印刷します。  
@@ -39,7 +39,7 @@ ms.locfileid: "48065742"
   
 5.  書式設定を行い、結果を印刷します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

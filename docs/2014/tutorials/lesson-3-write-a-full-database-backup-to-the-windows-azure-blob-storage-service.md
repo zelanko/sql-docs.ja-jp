@@ -1,27 +1,26 @@
 ---
-title: 'レッスン 3: Windows Azure Blob ストレージ サービスへのデータベースの完全バックアップの書き込み |Microsoft Docs'
+title: 'レッスン 3: Azure Blob Storage サービスにデータベースの完全バックアップを書き込む |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f0de77c43dc2a18bbbb4496f6c1d1c3aab21de96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172272"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153476"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>レッスン 3: Windows Azure BLOB ストレージ サービスに対するデータベースの完全バックアップの書き込み
-  このレッスンでは、TSQL ステートメントを使用して Windows Azure BLOB ストレージ サービスにデータベースの完全バックアップを実行する方法を紹介します。  
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>レッスン 3: Azure Blob Storage サービスにデータベースの完全バックアップを書き込む
+  このレッスンでは、tsql ステートメントを使用して、Azure Blob ストレージサービスへのデータベースの完全バックアップを実行する方法を示します。  
   
-## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスに対するデータベースの完全バックアップの実行  
+## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Azure Blob Storage サービスへのデータベースの完全バックアップを実行する  
  データベースの完全バックアップを実行するには、次の手順を実行します。  
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]に接続します。  
@@ -45,6 +44,6 @@ ms.locfileid: "48172272"
 5.  オブジェクト エクスプローラーで、Azure ストレージに接続します。 コンテナーと、新しく作成したバックアップ ファイルを参照して指定します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4: データベースの完全バックアップから復元を実行する](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)します。  
+ [レッスン 4:データベースの完全バックアップ](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)から復元を実行します。  
   
   

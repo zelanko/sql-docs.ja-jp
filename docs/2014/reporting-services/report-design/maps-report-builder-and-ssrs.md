@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
@@ -17,13 +16,13 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 86932da9ccec6e973a2a35fc0ccbb5f54af63f05
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187962"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826546"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   レポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -32,7 +31,7 @@ ms.locfileid: "48187962"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- 今すぐマップを使い始めるには、「[チュートリアル: マップ レポート &#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)」または「[レポート サンプル (レポート ビルダーおよび SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
+ 今すぐマップを使い始めるには、「[チュートリアル:マップ レポート &#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)」または「[レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
   
 > [!NOTE]  
 >  マップは、レポート パーツとして、レポートとは別に保存できます。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -49,11 +48,11 @@ ms.locfileid: "48187962"
   
 -   空間データ ソース、空間データ、分析データ ソース、および分析データを指定する際に必要となる情報を収集します。 たとえば、空間データ ソースに対する接続文字列、必要な空間データの種類のほか、空間データと分析データを関連付けるための対応フィールドがレポート データに含まれているかどうか、といった情報を確認する必要があります。  
   
--   マップ ウィザードを実行してマップをレポートに追加します。 これにより、マップに最初のマップ レイヤーが追加されます。 追加のレイヤーを作成したり、既存のレイヤーを変更するには、マップ レイヤー ウィザードを実行します。 ウィザードの指示に従いながら、必要な手順を簡単に実行できます。 詳細については、「[マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)」を参照してください。  
+-   マップ ウィザードを実行してマップをレポートに追加します。 これにより、マップに最初のマップ レイヤーが追加されます。 追加のレイヤーを作成したり、既存のレイヤーを変更するには、マップ レイヤー ウィザードを実行します。 ウィザードの指示に従いながら、必要な手順を簡単に実行できます。 詳細については、「 [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)」を参照してください。  
   
 -   レポートでマップをプレビューした後、マップ ビューを調整する、レイヤーごとのデータの表示方法を変更する、データの意味を示す凡例を追加する、ユーザーにとって見やすいマップを作成するために解像度を調整するなど、マップにさまざまな調整を施すことができます。  
   
- 詳細については、「[マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
   
 
   
@@ -78,18 +77,18 @@ ms.locfileid: "48187962"
 #### <a name="sources-of-spatial-data"></a>空間データのソース  
  空間データには次のソースがサポートされます。  
   
--   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーが *\<ドライブ>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery にインストールされます。  
+-   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーが *\<ドライブ>* :\Program Files\Microsoft SQL Server\Report Builder \MapGallery にインストールされます。  
   
     > [!NOTE]  
-    >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、[http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
+    >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルに関する詳細情報については、「[TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation (TIGER/Line シェープファイルと TIGER/Line ファイルに関する技術ドキュメント)](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)」をご覧ください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
   
--   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI) のシェープファイル空間データ形式に準拠するデータが格納されています。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](http://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
+-   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI)シェープファイルの空間データ形式。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](https://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
--   **データベースに格納されている SQL Server 空間データ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース内の `SQLGeometry` データ型または `SQLGeography` データ型を指定するクエリを使用できます。 詳細については、 [SQL Server オンライン ブック](../../relational-databases/spatial/spatial-data-types-overview.md) の「 [空間データ型の概要](http://go.microsoft.com/fwlink/?linkid=98335)」を参照してください。  
+-   **データベースに格納されている SQL Server 空間データ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース内の `SQLGeometry` データ型または `SQLGeography` データ型を指定するクエリを使用できます。 詳細については、 [SQL Server オンライン ブック](../../relational-databases/spatial/spatial-data-types-overview.md) の「 [空間データ型の概要](https://go.microsoft.com/fwlink/?linkid=98335)」を参照してください。  
   
      クエリ デザイナーに表示される結果セットでは、空間データの各行が 1 単位として扱われ、1 つのマップ要素に格納されます。 たとえば、結果セットの 1 つの行に複数のポイントが定義されている場合、そのマップ要素のすべてのポイントに表示プロパティが適用されます。  
   
--   **独自に作成した場所** 埋め込まれたポイント レイヤーに対して、埋め込まれたポイントとして場所を手動で追加することができます。 詳細については、次を参照してください。[マップにカスタムの場所の追加&#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)します。  
+-   **独自に作成した場所** 埋め込まれたポイント レイヤーに対して、埋め込まれたポイントとして場所を手動で追加することができます。 詳細については、「 [カスタムの場所のマップへの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)」を参照してください。  
   
 #### <a name="spatial-data-in-design-view"></a>デザイン ビューでの空間データ  
  デザイン ビューには、マップ レイヤーをデザインしやすくするためのサンプル空間データがレポート プロセッサによって表示されます。 表示されるデータは、空間データが利用できるかどうかによって異なります。  
@@ -172,9 +171,9 @@ ms.locfileid: "48187962"
   
 -   Bing Maps Web サービスからタイルを取得する際にセキュリティで保護された接続を使用するかどうか。  
   
- 手順については、次を参照してください。[追加、変更、またはマップまたはマップ レイヤーの削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)します。  
+ 実行手順については、「 [マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
- タイルの詳細については、「 [Bing Maps のタイル システム](http://go.microsoft.com/fwlink/?linkid=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
+ タイルの詳細については、「 [Bing Maps のタイル システム](https://go.microsoft.com/fwlink/?linkid=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
   
  
   
@@ -197,7 +196,7 @@ ms.locfileid: "48187962"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- マップ レイヤーの詳細については、次を参照してください。[追加、変更、またはマップまたはマップ レイヤーの削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)します。  
+ マップ レイヤーの詳細については、「 [マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>ポイント、線、および多角形の表示プロパティを変更する  
  マップ要素の表示オプションは、レイヤーのルールを使用してレイヤー レベルで設定するか、または個々の要素レベルで設定できます。 たとえば、レイヤーに対するすべてのポイントの表示プロパティを設定 (または、埋め込まれているかどうかに関係なく、レイヤーに対するすべてのポイントの表示プロパティを制御するルールを設定) できるほか、埋め込まれている特定のポイントに対する表示プロパティの設定をオーバーライドすることもできます。  
@@ -244,36 +243,36 @@ ms.locfileid: "48187962"
   
  マップ レポートを閲覧する際に期待した結果が表示されない根本原因は多種多様です。 それぞれの問題を特定して把握するには、扱うレイヤーは一度に 1 つずつとすることをお勧めします。 マップ ペインを使用すると、特定のレイヤーを選択し、その表示/非表示を簡単に切り替えることができます。  
   
- マップ レポートの問題の詳細については、「[レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)」を参照してください。  
+ マップ レポートの問題の詳細については、「[レポートのトラブルシューティング:マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  レポートでマップやマップ レイヤーを扱う際の詳細な手順を紹介しているトピックの一覧を次に示します。  
   
--   [追加、変更、またはマップまたはマップ レイヤーの削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [変更するマップの凡例、カラー スケール、および関連付けられているルール&#40;レポート ビルダーおよび SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [マップにカスタムの場所を追加&#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [カスタムの場所のマップへの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> このセクションの内容  
- [マップ レポートの計画&#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [データとマップまたはマップ レイヤーの表示のカスタマイズ&#40;レポート ビルダーおよび SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [マップまたはマップ レイヤーのデータと表示のカスタマイズ &#40;レポート ビルダーおよび SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [追加、変更、またはマップまたはマップ レイヤーの削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [変更するマップの凡例、カラー スケール、および関連付けられているルール&#40;レポート ビルダーおよび SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [マップにカスタムの場所を追加&#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [カスタムの場所のマップへの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

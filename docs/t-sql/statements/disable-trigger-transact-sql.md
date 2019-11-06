@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ce241446bdcb928b0edc976117731e78dca7f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e2100858c6f18a515db8ee4baf413853ee0a04b
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737754"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064582"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  トリガーが属するスキーマの名前を指定します。 DDL トリガーまたはログオン トリガーでは *schema_name* を指定できません。  
   
  *trigger_name*  
- 無効にするトリガーの名前を指定します。  
+ 無効にするトリガーの名前です。  
   
  ALL  
  ON 句の有効範囲で定義されたすべてのトリガーを無効にすることを示します。  
@@ -80,7 +79,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="permissions"></a>アクセス許可  
  DML トリガーを無効にするには、少なくともトリガーが作成されたテーブルまたはビューに対する ALTER 権限が必要です。  
   
- サーバー スコープ (ON ALL SERVER) 付きの DDL トリガーまたはログオン トリガーを無効化するには、サーバーでの CONTROL SERVER 権限が必要です。 データベース スコープ (ON DATABASE) の DDL トリガーを無効にするには、現在のデータベースに対する ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
+ サーバー スコープ (ON ALL SERVER) 付きの DDL トリガーまたはログオン トリガーを無効にするには、サーバーでの CONTROL SERVER 権限が必要です。 データベース スコープ (ON DATABASE) の DDL トリガーを無効にするために、ユーザーには少なくとも、現在のデータベースに対する ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
 次の例は、AdventureWorks2012 データベースで記述されています。
@@ -88,7 +87,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. テーブルの DML トリガーを無効にする  
  次の例では、テーブル `Address` に作成されたトリガー `uAddress` を無効にします。  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -96,7 +95,7 @@ GO
 ### <a name="b-disabling-a-ddl-trigger"></a>B. DDL トリガーを無効にする  
  次の例では、データベース スコープの DDL トリガー `safety` を作成し、無効にします。  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -109,7 +108,7 @@ GO
 ```  
   
 ### <a name="c-disabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. 同じスコープに定義されたすべてのトリガーを無効にする  
- 次の例では、サーバー スコープで作成されたすべての DDL トリガーを無効化します。  
+ 次の例では、サーバー スコープで作成された DDL トリガーをすべて無効にします。  
   
 ```  
 DISABLE Trigger ALL ON ALL SERVER;  

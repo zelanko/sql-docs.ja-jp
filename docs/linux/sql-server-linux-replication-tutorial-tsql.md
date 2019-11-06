@@ -1,58 +1,57 @@
 ---
-title: Linux 上の SQL Server レプリケーションの構成 |Microsoft Docs
-description: このチュートリアルでは、Linux 上の SQL Server スナップショット レプリケーションを構成する方法を示します。
+title: Linux 上で SQL Server レプリケーションを構成する
+description: このチュートリアルでは、Linux 上で SQL Server スナップショット レプリケーションを構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
-ms.translationtype: MT
+ms.openlocfilehash: 9ac898430bbdc3704e43c62be09884ee1925cb75
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390834"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68130109"
 ---
-# <a name="configure-replication-with-t-sql"></a>T-SQL でレプリケーションを構成します。
+# <a name="configure-replication-with-t-sql"></a>T-SQL を使用してレプリケーションを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-このチュートリアルでは、TRANSACT-SQL を使用して SQL Server の 2 つのインスタンスを使った Linux 上に SQL Server スナップショット レプリケーションを構成します。 パブリッシャーとディストリビューターに、同じインスタンスをして、サブスクライバーが別のインスタンスになります。
+このチュートリアルでは、Transact-SQL を使用し、SQL Server の 2 つのインスタンスを使用して、Linux 上で SQL Server スナップショット レプリケーションを構成します。 パブリッシャーとディストリビューターは同じインスタンスになり、サブスクライバーは別のインスタンスに展開されます。
 
 > [!div class="checklist"]
-> * Linux 上の SQL Server レプリケーション エージェントを有効にします。
+> * Linux 上で SQL Server レプリケーション エージェントを有効にする
 > * サンプル データベースの作成
-> * SQL Server エージェントのアクセスのスナップショット フォルダーを構成します。
+> * SQL Server エージェントのアクセス用にスナップショット フォルダーを構成する
 > * ディストリビューターの構成
-> * パブリッシャーを構成します
-> * パブリケーションとアーティクルを構成します。
-> * サブスクライバーを構成します。 
-> * レプリケーション ジョブを実行します。
+> * パブリッシャーを構成する
+> * パブリケーションとアーティクルを構成する
+> * サブスクライバーを構成する 
+> * レプリケーション ジョブを実行する
 
-すべてのレプリケーション構成で構成できます[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。
+すべてのレプリケーション構成は、[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)を使用して構成できます。
 
-## <a name="prerequisites"></a>前提条件  
-このチュートリアルを完了するには、必要があります。
+## <a name="prerequisites"></a>Prerequisites  
+このチュートリアルを完了するには、次の要件があります。
 
-- SQL Server on Linux の最新バージョンの SQL Server の 2 つのインスタンス
-- SQLCMD または SSMS などのレプリケーションを設定する問題の T-SQL クエリするためのツール
+- 最新バージョンの SQL Server on Linux を使用した SQL Server の 2 つのインスタンス
+- SQLCMD や SSMS などのレプリケーションを設定する T-SQL クエリを発行するツール
 
-  参照してください[SSMS を使用して、SQL Server on Linux を管理する](./sql-server-linux-manage-ssms.md)します。
+  「[SSMS を使用して SQL Server on Linux を管理する](./sql-server-linux-manage-ssms.md)」を参照してください。
 
 ## <a name="detailed-steps"></a>詳細な手順
 
-1. レプリケーション エージェントを使用する SQL Server エージェントを有効にする Linux 上の SQL Server レプリケーション エージェントを有効にします。 両方のホスト コンピューターで、ターミナルで次のコマンドを実行します。 
+1. Linux 上で SQL Server レプリケーション エージェントを有効にします。SQL Server エージェントでレプリケーション エージェントを使用できるようにします。 両方のホスト マシン上のターミナルで次のコマンドを実行します。 
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
   ```
 
-1. サンプル データベースとテーブルで、パブリッシャーの作成、サンプル データベースとパブリケーションのアーティクルとして機能するテーブルを作成します。
+1. サンプル データベースとテーブルを作成します。パブリッシャーで、パブリケーションのアーティクルとして機能するサンプル データベースとテーブルを作成します。
 
   ```sql
   CREATE DATABASE Sales
@@ -64,14 +63,14 @@ ms.locfileid: "49390834"
   INSERT INTO CUSTOMER (CustomerID, SalesAmount) VALUES (1,100),(2,200),(3,300)
   ```
 
-  その他の SQL Server インスタンスで、サブスクライバーのアーティクルを受信するデータベースを作成します。
+  他の SQL Server インスタンスであるサブスクライバーで、アーティクルを受け取るデータベースを作成します。
 
   ```sql
   CREATE DATABASE Sales
   GO
   ```
 
-1. 読み取り/書き込みをディストリビューターでスナップショット フォルダーを作成し、'mssql' ユーザーにアクセスを許可する SQL Server エージェントのスナップショット フォルダーを作成します。 
+1. SQL Server エージェントの読み取り/書き込み用のスナップショット フォルダーを作成します。ディストリビューターで、スナップショット フォルダーを作成し、'mssql' ユーザーにアクセス権を付与します 
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -79,7 +78,7 @@ ms.locfileid: "49390834"
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-1. この例では、ディストリビューターを構成、発行元は、ディストリビューターにもなります。 配布もインスタンスを構成するパブリッシャーで、次のコマンドを実行します。
+1. ディストリビューターを構成します。この例では、パブリッシャーはディストリビューターでもあります。 パブリッシャーで次のコマンドを実行して、ディストリビューション用にもインスタンスを構成します。
 
   ```sql
   DECLARE @distributor AS sysname
@@ -112,7 +111,7 @@ ms.locfileid: "49390834"
   GO
   ```
 
-1. パブリッシャーで、次の TSQL コマンドを実行するパブリッシャーを構成します。
+1. パブリッシャーを構成します。パブリッシャーで次の TSQL コマンドを実行します。
 
   ```sql
   DECLARE @publisher AS sysname
@@ -137,7 +136,7 @@ ms.locfileid: "49390834"
   GO
   ```
 
-1. パブリッシャーのパブリケーションがジョブの実行、次の TSQL コマンドを構成します。
+1. パブリケーション ジョブを構成します。パブリッシャーで次の TSQL コマンドを実行します。
 
   ```sql
   DECLARE @replicationdb AS sysname
@@ -176,7 +175,7 @@ ms.locfileid: "49390834"
   @publisher_password = @publisherpassword
   ```
 
-1. パブリッシャーで、アーティクルを次の TSQL コマンド実行 sales テーブルからに作成します。
+1. sales テーブルからアーティクルを作成します。パブリッシャーで次の TSQL コマンドを実行します。
 
   ```sql
   use [Sales]
@@ -196,7 +195,7 @@ ms.locfileid: "49390834"
   @vertical_partition = N'false'
   ```
 
-1. サブスクリプションの実行、パブリッシャーで、次の TSQL コマンドを構成します。
+1. サブスクリプションを構成します。パブリッシャーで次の TSQL コマンドを実行します。
 
   ```sql
   DECLARE @subscriber AS sysname
@@ -241,13 +240,13 @@ ms.locfileid: "49390834"
 
 1. レプリケーション エージェント ジョブを実行します。
 
-  ジョブの一覧を取得する次のクエリを実行します。
+  次のクエリを実行してジョブの一覧を取得します。
 
   ```sql
   SELECT name, date_modified FROM msdb.dbo.sysjobs order by date_modified desc
   ```
 
-  スナップショットを生成するスナップショットのレプリケーション ジョブを実行します。
+  スナップショット レプリケーション ジョブを実行してスナップショットを生成します。
 
   ```sql
   USE msdb;  
@@ -256,7 +255,7 @@ ms.locfileid: "49390834"
   GO
   ```
 
-  スナップショットを生成するスナップショットのレプリケーション ジョブを実行します。
+  スナップショット レプリケーション ジョブを実行してスナップショットを生成します。
 
   ```sql
   USE msdb;  
@@ -265,32 +264,32 @@ ms.locfileid: "49390834"
   GO
   ```
 
-1. サブスクライバーを接続し、レプリケートされたデータのクエリ 
+1. サブスクライバーに接続し、レプリケートされたデータを照会します 
 
-  サブスクライバーでは、次のクエリを実行して、レプリケーションが動作しているを確認します。
+  サブスクライバーで、次のクエリを実行してレプリケーションが機能していることを確認します。
 
   ```sql
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-このチュートリアルでは、SQL Server スナップショット レプリケーションを構成して、TRANSACT-SQL を使用して SQL Server の 2 つのインスタンスを使った Linux 上。
+このチュートリアルでは、Transact-SQL を使用し、SQL Server の 2 つのインスタンスを使用して、Linux 上で SQL Server スナップショット レプリケーションを構成します。
 
 > [!div class="checklist"]
-> * Linux 上の SQL Server レプリケーション エージェントを有効にします。
+> * Linux 上で SQL Server レプリケーション エージェントを有効にする
 > * サンプル データベースの作成
-> * SQL Server エージェントのアクセスのスナップショット フォルダーを構成します。
+> * SQL Server エージェントのアクセス用にスナップショット フォルダーを構成する
 > * ディストリビューターの構成
-> * パブリッシャーを構成します
-> * パブリケーションとアーティクルを構成します。
-> * サブスクライバーを構成します。 
-> * レプリケーション ジョブを実行します。
+> * パブリッシャーを構成する
+> * パブリケーションとアーティクルを構成する
+> * サブスクライバーを構成する 
+> * レプリケーション ジョブを実行する
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-レプリケーションの詳細については、次を参照してください。 [SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)します。
+レプリケーションの詳細については、[SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-[Linux 上の概念: SQL Server レプリケーション](sql-server-linux-replication.md)
+[概念:Linux での SQL Server のレプリケーション](sql-server-linux-replication.md)
 
-[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。
+[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。

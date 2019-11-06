@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2071ec7d7c9a31a9da8982b583ef7618700db5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135011"
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスの適合性
-レベル 1 インターフェイスの適合性レベルには、コア インターフェイスへの準拠レベルの機能に加えて、OLTP のリレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 インターフェイス – 準拠のドライバーにより、アプリケーションは、コア インターフェイスの適合性レベルで機能に加え、次の操作します。  
+レベル 1 インターフェイスの適合性レベルには、コア インターフェイスへの準拠レベルの機能に加えて、OLTP のリレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 インターフェイスに準拠のドライバーにより、アプリケーションは、コア インターフェイスの適合性レベルで機能に加え、次の操作します。  
   
 |||  
 |-|-|  
@@ -33,6 +32,6 @@ ms.locfileid: "47649320"
 |104|呼び出すことによって、テーブルの主キーを取得**SQLPrimaryKeys**します。|  
 |105|プロシージャ呼び出しについて、ODBC エスケープ シーケンスの実行中のストアド プロシージャを使用して、ストアド プロシージャに関するデータのディクショナリを呼び出すことによってクエリ**SQLProcedureColumns**と**SQLProcedures**します。 (プロシージャの作成し、データ ソースに格納されているプロセスは、このドキュメントの範囲外です)。|  
 |106|対話形式で呼び出すことによって、使用可能なサーバーを参照してデータ ソースに接続する**SQLBrowseConnect**します。|  
-|107|SQL ステートメントの代わりに ODBC 関数を使用して、特定のデータベース操作を実行する: **SQLSetPos** SQL_POSITION SQL_REFRESH とします。|  
+|107|特定のデータベース操作を実行するのに SQL ステートメントの代わりに ODBC 関数を使用します。**SQLSetPos** SQL_POSITION SQL_REFRESH とします。|  
 |108|呼び出すことによって、バッチおよびストアド プロシージャは、によって生成される複数の結果セットの内容にアクセスできる**SQLMoreResults**します。|  
 |109|True の原子性と SQL_ROLLBACK を指定する機能でいくつかの ODBC 関数にまたがるトランザクションを区切る**SQLEndTran**します。|

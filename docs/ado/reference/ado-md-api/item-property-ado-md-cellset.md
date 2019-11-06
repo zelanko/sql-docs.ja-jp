@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949622"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item プロパティ (ADO MD セルセット)
 セルを取得します、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)の座標を使用します。  
@@ -60,7 +59,7 @@ Cellset.Item ( Positions )Cellset ( Positions )
   
  序数の位置は内で 1 つのセルを一意に識別する番号、**セルセット**します。 内のセルの番号付け概念的には、**セルセット**場合と、**セルセット**された、 *p*-次元の配列場所*p*軸の数です。 セルは、行優先順で指定されます。 セルの序数を計算する数式を次に示します。  
   
- として文字列をメンバー名が渡された場合**項目**軸の数値識別子の増加順に、メンバーを一覧表示する必要があります。 軸内のメンバーをディメンションの入れ子の増加順に表示する必要があります-これは、最も外側にあるディメンションのメンバーか早い方、内部のディメンションのメンバーが従います。 別個の文字列によって表される各ディメンションおよびメンバーの文字列のリストをコンマで区切る必要があります。  
+ として文字列をメンバー名が渡された場合**項目**軸の数値識別子の増加順に、メンバーを一覧表示する必要があります。 軸内で、メンバーは、ディメンションの入れ子の増加順に一覧表示する必要があります - は、最も外側にあるディメンションのメンバーは、最初に、内部のディメンションのメンバーが従います。 別個の文字列によって表される各ディメンションおよびメンバーの文字列のリストをコンマで区切る必要があります。  
   
 > [!NOTE]
 >  データ プロバイダーによってセル メンバー名の取得をサポートされていない可能性があります。 詳細については、プロバイダーのマニュアルを参照してください。  
@@ -68,6 +67,6 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

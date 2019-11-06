@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ConnectionString Property (SqlServerAlias Class)
@@ -20,12 +18,12 @@ ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 306fa22f4a828b3367d6af66d729853b1ce21514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 647fb88b6af501ad17dcf64738d72679f36e704e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035622"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString プロパティ (SqlServerAlias クラス)
   サーバー接続別名に対応する接続を確立するために使用される接続文字列を取得します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -13,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105456"
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
   レポート ビルダーでは、さまざまな種類のレポートを作成できます。 たとえば、売上データの概要または詳細、マーケティングと売上の傾向、経営報告、またはダッシュボードを示すレポートを作成できます。 また、販売注文、製品カタログ、定型書簡などの高度な書式付きテキストを利用したレポートも作成できます。 これらのレポートはすべて、レポート ビルダーの同じ基本的な構成要素をさまざまに組み合わせて作成されます。 便利でわかりやすいレポートを作成するには、まず計画を立てることが役立ちます。 開始する前に検討すると役立ついくつかの事項を次に示します。  
@@ -50,11 +49,11 @@ ms.locfileid: "48202032"
   
 -   **どのようにしてレポートを配信するか**  
   
-     レポートをローカル コンピューターに保存して、引き続き操作したり、独自の情報に関してローカルで実行したりすることができます。 ただし、レポートを他のユーザーと共有するには、ネイティブ モードで構成されたレポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートを保存する必要があります。 サーバーに保存すると、他のユーザーが必要なときにいつでも実行できます。 または、レポート サーバー管理者がレポートのサブスクリプションを設定したり、他のユーザーへのレポートの電子メール配信を設定したりすることができます。 必要に応じて、レポートを特定のエクスポート形式で配信できます。 詳細については、次を参照してください。[検索、表示、およびレポートの管理&#40;レポート ビルダーおよび SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)します。  
+     レポートをローカル コンピューターに保存して、引き続き操作したり、独自の情報に関してローカルで実行したりすることができます。 ただし、レポートを他のユーザーと共有するには、ネイティブ モードで構成されたレポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートを保存する必要があります。 サーバーに保存すると、他のユーザーが必要なときにいつでも実行できます。 または、レポート サーバー管理者がレポートのサブスクリプションを設定したり、他のユーザーへのレポートの電子メール配信を設定したりすることができます。 必要に応じて、レポートを特定のエクスポート形式で配信できます。 詳細については、「 [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のレポート ビルダー](../report-builder/report-builder-in-sql-server-2016.md)   
- [レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [チュートリアル&#40;レポート ビルダー&#41;](../report-builder-tutorials.md)  
   
   

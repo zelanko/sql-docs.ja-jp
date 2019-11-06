@@ -1,26 +1,23 @@
 ---
-title: 'タスク 4: 照合アクティビティを Excel ファイルからの結果のエクスポート |Microsoft Docs'
+title: タスク 4:照合アクティビティを Excel ファイルから結果をエクスポートする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: abded209f6367308c23e548962e1d4a5362791f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74164c6f6178acbcfe4784dac855c7c0485fc3b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489441"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>タスク 4: 照合アクティビティから Excel ファイルに結果をエクスポートする
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>タスク 4:照合アクティビティから Excel ファイルに結果をエクスポートする
   ここでは、照合アクティビティから Excel ファイルに結果をエクスポートします。  
   
 1.  **エクスポート**] ページで、[ **Excel ファイル**の**変換先の型**します。  
@@ -33,11 +30,11 @@ ms.locfileid: "48127632"
   
 5.  確認します**ピボット レコード**が選択されている、**サバイバーシップ ルール**します。 このオプションを選択すると、各クラスターのピボット レコードがクラスターからの出力に選択されます。 サバイバーシップ ルールの他のオプションは次のとおりです。  
   
-    1.  **最も完全なレコード:** で保持するレコードが設定されたフィールドの数が 1 つ。  
+    1.  **最も完全なレコード:** 保持するレコードは、設定されたフィールドの最大数です。  
   
-    2.  **最長のレコード:** で保持するレコードのソース フィールド内の語句の最大数です。  
+    2.  **最長のレコード:** 保持するレコードは、ソース フィールド内の語句の最大数です。  
   
-    3.  **最も完全で最長のレコード:** で保持するレコードは、設定されたフィールドの最大数のものであり、語句の数が、各フィールド。  
+    3.  **最も完全で最長のレコード:** 保持するレコードは、設定されたフィールドの数が 1 つであるため、各フィールドに語句の最大数があります。  
   
      ![結果の照合 ページからエクスポート](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "照合 ページからの結果のエクスポート")  
   
@@ -52,6 +49,6 @@ ms.locfileid: "48127632"
  これで、仕入先データは重複項目を削除するためにクレンジングおよび照合されました。  
   
 ## <a name="next-step"></a>次の手順  
- [レッスン 4: MDS に仕入先データを格納する](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)  
+ [レッスン 4:MDS の仕入先データを格納します。](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)  
   
   

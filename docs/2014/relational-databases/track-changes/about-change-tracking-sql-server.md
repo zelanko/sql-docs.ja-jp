@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23abfb7b5de5f319a15d8d255705929cc4d7293d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670928"
 ---
 # <a name="about-change-tracking-sql-server"></a>変更の追跡について (SQL Server)
   変更の追跡は、アプリケーションの効率的な変更追跡メカニズムを提供する簡易ソリューションです。 一般に、データベース内のデータに対する変更のクエリをアプリケーションで実行し、その変更に関連する情報にアクセスできるようにするには、アプリケーション開発者がカスタムの変更追跡メカニズムを実装する必要がありました。 これらのメカニズムを作成、作業の手間は、通常、頻繁にトリガーの組み合わせを使用する必要がある`timestamp`列、追跡情報、およびカスタム クリーンアップ プロセスを格納する新しいテーブル。  

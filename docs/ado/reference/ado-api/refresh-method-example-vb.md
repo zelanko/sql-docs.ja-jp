@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 90fecd4dcb60907137aecdbe4cbfb792e9dc4c23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 220703626f5cbe7aa1b7f8aa3d6ee24fee238827
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917301"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh メソッドの例 (VB)
 この例では、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)を更新する方法、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)ストアド プロシージャのコレクション[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
   
-```  
+```vb
 'BeginRefreshVB  
 Public Sub Main()  
     On Error GoTo ErrorHandler  
@@ -60,7 +59,7 @@ Public Sub Main()
     cmdByRoyalty.CommandType = adCmdStoredProc  
     cmdByRoyalty.Parameters.Refresh  
   
-    ' Get paramater value, execute the command  
+    ' Get parameter value, execute the command  
     ' and store the results in a recordset  
     strRoyalty = InputBox("Enter royalty:")  
     If strRoyalty = "" Then  
@@ -121,7 +120,7 @@ End Sub
 'EndRefreshVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

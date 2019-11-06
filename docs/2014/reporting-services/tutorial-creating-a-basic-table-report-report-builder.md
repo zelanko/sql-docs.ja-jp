@@ -1,24 +1,23 @@
 ---
-title: 'チュートリアル: 基本的な表レポートの作成 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:基本的な表レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93213609abbc3e274cc61207d02b3828f9b90d7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099032"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル:基本的な表レポートの作成 (レポート ビルダー)
   このチュートリアルでは、サンプルの売上データに基づいて基本的な表レポートを作成する方法を説明します。 次の図に、ここで作成するレポートを示します。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,9 +49,9 @@ ms.locfileid: "48189112"
   
 7.  [レポートをエクスポートします。](#Export)  
   
- このチュートリアルの推定所要時間 : 20 分  
+ このチュートリアルの推定所要時間:20 分  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="CreateTable"></a> 1.[作業の開始] を使用して新しいレポートを作成する  
@@ -60,7 +59,7 @@ ms.locfileid: "48189112"
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
      **Getting Started**  ダイアログ ボックスが表示されます。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "48189112"
   
     ```  
   
-3.  クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。  
+3.  クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。  
   
      SalesDate、Subcategory、Product、Sales、および Quantity の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
   
@@ -229,7 +228,7 @@ ms.locfileid: "48189112"
   
 3.  **[完了]** をクリックします。  
   
- テーブルがデザイン画面に追加されます。 テーブルには 5 列および 5 行が含まれています。 行グループ ペインに、SalesDate、Subcategory、および Details の 3 つの行グループが表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+ テーブルがデザイン画面に追加されます。 テーブルには 5 列および 5 行が含まれています。 [行グループ] ペインには 3 つの行グループが表示されます。SalesDate、Subcategory、Details です。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
 ##  <a name="FormatCurrency"></a> 2.データに通貨の書式を設定する  
  既定では、Sales フィールドの集計データは通常の数値として表示されます。 このフィールドを書式設定して、数値を通貨として表示します。 書式設定したテキスト ボックスおよびプレースホルダー テキストのサンプル値を表示するには、 **[プレースホルダーのスタイル]** の設定を切り替えます。  
@@ -350,7 +349,7 @@ ms.locfileid: "48189112"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **[名前]** に入力されている既定の名前を「 **Product Sales**」に置き換えます。  
   

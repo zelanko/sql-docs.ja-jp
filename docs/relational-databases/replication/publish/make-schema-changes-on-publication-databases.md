@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605370"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769873"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで実行した場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
   
 -   ALTER TABLE  
@@ -109,7 +109,7 @@ ms.locfileid: "47605370"
   
 -   削除する列は、データベースのどのパブリケーションのどのアーティクルのフィルター句でも使用できません。  
   
--   パブリッシュされたアーティクルから列を削除するときには、データベースに影響する可能性のある列の制約、インデックスまたはプロパティについて考慮する必要があります。 例 :  
+-   パブリッシュされたアーティクルから列を削除するときには、データベースに影響する可能性のある列の制約、インデックスまたはプロパティについて考慮する必要があります。 例:  
   
     -   主キーで使用されている列をトランザクション パブリケーションのアーティクルから削除することはできません。それらの列は、レプリケーションによって使用されます。  
   

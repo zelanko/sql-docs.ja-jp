@@ -12,16 +12,14 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 8c6b1e4aeeb8a7969c663c42a50035cf0a521274
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9ea3d65d8ceaf06fc04efea138b3133fdeb0f335
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599988"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714656"
 ---
 # <a name="upgrade-sql-server"></a>SQL Server をアップグレードする
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ss2016](../../includes/sssql15-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行して [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする前に、アップグレード プロセスに関する以下の記事とリリース ノートを確認してください。  
@@ -56,6 +54,6 @@ ms.locfileid: "51599988"
  [レプリケートされたデータベースのアップグレード](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [マスター データ サービスのアップグレード](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 ベスト プラクティス アナライザー](https://go.microsoft.com/fwlink/?LinkId=197135)   
- [旧バージョンとの互換性_削除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

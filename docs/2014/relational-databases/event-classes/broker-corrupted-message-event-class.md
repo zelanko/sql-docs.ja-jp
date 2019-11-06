@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a126d842be4cb197f1bb562b41f5dcd0006409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664087"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Service Broker が破損したメッセージを受信すると、 **Broker:Corrupted Message** イベントが作成されます。  
@@ -40,13 +39,13 @@ ms.locfileid: "48141022"
 |**FileName**|**nvarchar**|リモート エンドポイントのネットワーク アドレス。|36|いいえ|  
 |**GUID**|**uniqueidentifier**|破損したメッセージが所属するメッセージ交換のメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
 |**Host Name**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|**IntegerData**|**int**|このメッセージのフラグメント番号。|25|はい|  
+|**IntegerData**|**int**|このメッセージのフラグメント番号。|25|[はい]|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|[はい]|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|メッセージ交換の相手側のサービス名、およびこのデータベースに接続するためにリモート データベースで使用される接続文字列。|34|いいえ|  
-|**RoleName**|**nvarchar**|このメッセージを受信するエンドポイントのロール。 次の値のうちの 1 つです。<br /><br /> **イニシエーター**:<br />                  受信エンドポイントはメッセージ交換の発信側です。<br /><br /> **ターゲット**:<br />                  受信エンドポイントはメッセージ交換の対象となる側です。|38|いいえ|  
+|**RoleName**|**nvarchar**|このメッセージを受信するエンドポイントのロール。 次の値のうちの 1 つです。<br /><br /> **initiator**:<br />                  受信エンドポイントはメッセージ交換の発信側です。<br /><br /> **target**:<br />                  受信エンドポイントはメッセージ交換の対象となる側です。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**Severity**|**int**|エラーが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でメッセージが削除される場合の、エラーの重要度。|29|いいえ|  
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  

@@ -14,12 +14,12 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bea7e5bac71c3e4fdd90253f30a503dc44f44d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067818"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` データを提供するために使用するときにデータ変換の負担を解消できます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー、アプリケーションのクライアントとサーバーの両方のコンポーネントの大幅なパフォーマンスが大幅に向上します。 その他に、概数データ型を挿入または更新するときに有効桁数を失うことが少なくなるという利点もあります。  
@@ -57,6 +57,6 @@ ms.locfileid: "48209002"
   
 ## <a name="see-also"></a>参照  
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)   
- [SQLBindParameter 関数](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter 関数](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

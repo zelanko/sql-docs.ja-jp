@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], deleting
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04177b96f74efba2b7e856ddb5fddd235758397e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479712"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを削除する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、不要になったメンバーまたはコレクションを削除します。 複数のメンバーを一括で削除する場合は、代わりにステージング処理を使用します。 詳細については、次を参照してください。[非アクティブ化またはステージング処理を使用してメンバーの削除&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)します。  
@@ -57,13 +56,13 @@ ms.locfileid: "48048962"
   
 5.  グリッドで、削除するメンバーまたはコレクションの行をクリックします。  
   
-6.  **[メンバーの削除]**、 **[削除]**、または **[コレクションの削除]** をクリックします。  
+6.  **[メンバーの削除]** 、 **[削除]** 、または **[コレクションの削除]** をクリックします。  
   
 7.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [メンバーまたはコレクションを再アクティブ化&#40;マスター データ サービス&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)   
- [コレクション&#40;マスター データ サービス&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

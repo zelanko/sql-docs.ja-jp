@@ -1,23 +1,22 @@
 ---
-title: T-SQL 言語要素に並列データ ウェアハウス |Microsoft ドキュメント
-description: T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+title: Parallel Data Warehouse の T-SQL 言語要素 |Microsoft Docs
+description: T-SQL 言語要素の分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 0f019599e5dde2759da9f1e8f94e71b2fe2b9c9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959940"
 ---
-# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>並列データ ウェアハウスの T-SQL 言語要素
-T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Parallel Data Warehouse の T-SQL 言語要素
+T-SQL 言語要素の分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 
 ## <a name="core-elements"></a>主要な要素
 * [構文表記規則](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -30,11 +29,11 @@ T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウ
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
-* [IDENTITY プロパティの回避策](../t-sql/statements/create-table-transact-sql-identity-property.md)
+* [IDENTITY プロパティの代替手段](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
-## <a name="batches-control-of-flow-and-variables"></a>バッチ、制御フロー、および変数
+## <a name="batches-control-of-flow-and-variables"></a>バッチ、フローの制御、および変数
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
 * [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
@@ -59,7 +58,7 @@ T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウ
 * [> (より大きい)](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< (より小さい)](../t-sql/language-elements/less-than-transact-sql.md)
 * [> = (優れた以上)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
-* [< = (以下を)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
+* [< = (に等しいまたはそれよりも小さい)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (等しくない)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (等しくない)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
@@ -69,12 +68,12 @@ T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウ
 * [そうじゃないです](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [または](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>ビットごとの演算子
 * [& (ビット演算 AND)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [| (ビットごとの OR)](../t-sql/language-elements/bitwise-or-transact-sql.md)
-* [^ (ビットごとの排他的 OR)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
+* [^ (ビット演算子排他的 OR)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~ (ビット演算子 NOT)](../t-sql/language-elements/bitwise-not-transact-sql.md)
 * [^= (ビットごとの排他的 OR 代入)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
 * [|= (ビットごとの OR 代入)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
@@ -163,7 +162,7 @@ T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウ
 * [OBJECT_NAME](../t-sql/functions/object-name-transact-sql.md)
 * [OBJECTPROPERTY](../t-sql/functions/objectproperty-transact-sql.md)
 * [OIBJECTPROPERTYEX](../t-sql/functions/objectpropertyex-transact-sql.md)
-* [ODBCS スカラー関数](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
+* [ODBCS スカラ関数](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
 * [OVER 句](../t-sql/queries/select-over-clause-transact-sql.md)
 * [PARSENAME](../t-sql/functions/parsename-transact-sql.md)
 * [PATINDEX](../t-sql/functions/patindex-transact-sql.md)
@@ -196,7 +195,7 @@ T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウ
 * [SQRT](../t-sql/functions/sqrt-transact-sql.md)
 * [SQUARE](../t-sql/functions/square-transact-sql.md)
 * [STATS_DATE](../t-sql/functions/stats-date-transact-sql.md)
-* [[STDEV]](../t-sql/functions/stdev-transact-sql.md)
+* [STDEV](../t-sql/functions/stdev-transact-sql.md)
 * [STDEVP](../t-sql/functions/stdevp-transact-sql.md)
 * [STR](../t-sql/functions/str-transact-sql.md)
 * [STUFF](../t-sql/functions/stuff-transact-sql.md)
@@ -254,29 +253,29 @@ T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウ
 * [sp_unprepare](../relational-databases/system-stored-procedures/sp-unprepare-transact-sql.md)
 
 ## <a name="set-statements"></a>SET ステートメント
-* [[SET ANSI_DEFAULTS]](../t-sql/statements/set-ansi-defaults-transact-sql.md)
+* [SET ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
 * [SET ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
 * [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
 * [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
 * [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
-* [[SET ANSI_WARNINGS]](../t-sql/statements/set-ansi-warnings-transact-sql.md)
-* [[SET ARITHABORT]](../t-sql/statements/set-arithabort-transact-sql.md)
+* [SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
+* [SET ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
 * [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
-* [セット CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
+* [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
 * [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
 * [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
-* [[SET QUOTED_IDENTIFIER]](../t-sql/statements/set-quoted-identifier-transact-sql.md)
-* [[SET ROWCOUNT]](../t-sql/statements/set-rowcount-transact-sql.md)
-* [[SET TEXTSIZE]](../t-sql/statements/set-textsize-transact-sql.md)
+* [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
+* [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
+* [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
 * [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>次の手順
-参照の詳細については、次を参照してください。 [T-SQL ステートメント](tsql-statements.md)と[T-SQL システム ビュー](tsql-system-views.md)です。
+参照の詳細については、次を参照してください。 [T-SQL ステートメント](tsql-statements.md)と[T-SQL システム ビュー](tsql-system-views.md)します。
 
 <!--Image references-->
 

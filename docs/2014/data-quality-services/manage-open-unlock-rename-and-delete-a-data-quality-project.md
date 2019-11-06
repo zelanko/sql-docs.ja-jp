@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d08b2de75796b602c1f275c456d463c44a894fe7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: d5e3ec1fc7c3c811b588aaf4145aa286d9aa078e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033159"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484154"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>データ品質プロジェクトの管理 (開く、ロック解除、名前の変更、および削除)
   このトピックでは、データ品質プロジェクトを開く、ロック解除、名前の変更、削除などの、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用したデータ品質プロジェクトの管理方法について説明します。  
@@ -59,9 +59,9 @@ ms.locfileid: "51033159"
   
 4.  最後に閉じられたときと同じアクティビティの状態でデータ品質プロジェクトが開きます。 データ品質プロジェクトには次の状態があります。  
   
-    -   **クレンジング** アクティビティでは、データ品質プロジェクトは **クレンジング - マップ**、 **クレンジング - 最適化**、 **クレンジング - 結果の管理と表示**、および **クレンジング - エクスポート**の状態を取ります。  
+    -   **クレンジング** アクティビティでは、データ品質プロジェクトは**クレンジング - マップ**、**クレンジング - 最適化**、**クレンジング - 結果の管理と表示**、および**クレンジング - エクスポート**の状態を取ります。  
   
-    -   **照合** アクティビティでは、データ品質プロジェクトは **照合 - マップ**、 **照合 - 照合**、 **照合 - サバイバーシップ**、および **照合 - エクスポート**の状態を取ります。  
+    -   **照合**アクティビティでは、データ品質プロジェクトは**照合 - マップ**、**照合 - 照合**、**照合 - サバイバーシップ**、および**照合 - エクスポート**の状態を取ります。  
   
 ##  <a name="Unlock"></a> データ品質プロジェクトのロック解除  
  データ品質プロジェクトを作成すると、プロジェクトは他のユーザーによる使用や変更を防ぐためにロック状態になります。 他のユーザーがデータ品質プロジェクトを操作できるようにするには、作業を完了した後にデータ品質プロジェクトのロックを解除する必要があります。 ロックされているプロジェクトには、ロック アイコンが表示されます。  

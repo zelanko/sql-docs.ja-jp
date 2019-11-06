@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0af3a454963474df483c56e5afddaede77b29dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61e55bec7a35009f0d83a43550a434e0966559b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019467"
 ---
 # <a name="index-command"></a>INDEX コマンド
 インデックス ファイルを表示し、論理的な順序でテーブルのレコードへのアクセスを作成します。  
@@ -116,7 +115,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  インデックスの式で、ユーザー定義関数を使用する場合、Visual FoxPro は、ユーザー定義関数を検索できる必要があります。 Visual FoxPro は、インデックスを作成するときは、インデックスの式は、インデックス ファイルに保存されますが、インデックスの式で、ユーザー定義関数への参照のみが含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TABLE - SQL コマンド](../../odbc/microsoft/alter-table-sql-command.md)   
  [DELETE TAG コマンド](../../odbc/microsoft/delete-tag-command.md)   
  [SET COLLATE コマンド](../../odbc/microsoft/set-collate-command.md)   

@@ -14,12 +14,12 @@ ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 679888376c7ea02570e877ed5eac0e9638af48e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046757"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   実行されるステートメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは結果セット内の列の数を報告するサーバーを利用しません。 この場合、`SQLNumResultCols`サーバーとのやり取りは行われません。 ような[SQLDescribeCol](sqldescribecol.md)と[SQLColAttribute](sqlcolattribute.md)を呼び出すと、`SQLNumResultCols`準備されていても実行されていないステートメントには、サーバーとのやり取りが生成されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48220362"
  以降では、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]期待どおりの結果のより正確な記述を取得する SQLNumResultCols を許可します。 これらのより正確な結果の以前のバージョンの SQLNumResultCols によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../native-client/features/metadata-discovery.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLNumResultCols 関数](http://go.microsoft.com/fwlink/?LinkId=59359)   
+ [SQLNumResultCols 関数](https://go.microsoft.com/fwlink/?LinkId=59359)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

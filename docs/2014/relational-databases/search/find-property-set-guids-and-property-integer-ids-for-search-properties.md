@@ -10,20 +10,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 387cb0f529858efc858004c9c0d2a382f52cf048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011333"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
   このトピックでは、プロパティを検索プロパティ リストに追加してフルテキスト検索で検索できるようにするために事前に必要な値を取得する方法について説明します。 これらの値には、ドキュメント プロパティのプロパティ セット GUID およびプロパティ整数識別子が含まれます。  
   
- ドキュメントから抽出された Ifilter でバイナリ データからは、データに格納されているプロパティ、 `varbinary`、 `varbinary(max)` (含む`FILESTREAM`)、または`image`データ型の列をフルテキスト検索に使用できます。 抽出されたプロパティを検索できるようにするには、検索プロパティ リストにプロパティを手動で追加する必要があります。 さらに、検索プロパティ リストを 1 つ以上のフルテキスト インデックスに関連付ける必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](search-document-properties-with-search-property-lists.md)」を参照してください。  
+ ドキュメントから抽出された Ifilter でバイナリ データ、つまりに格納されたデータからプロパティを`varbinary`、 `varbinary(max)` (含む`FILESTREAM`)、または`image`- データ型の列をフルテキスト検索の使用できます。 抽出されたプロパティを検索できるようにするには、検索プロパティ リストにプロパティを手動で追加する必要があります。 さらに、検索プロパティ リストを 1 つ以上のフルテキスト インデックスに関連付ける必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](search-document-properties-with-search-property-lists.md)」を参照してください。  
   
  使用可能なプロパティをプロパティ リストに追加する前に、プロパティに関する以下の 2 つの情報を入手する必要があります。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48222642"
 |型|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
 |[タイトル]|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
   
- ファイル形式間で一貫性を保持するため、マイクロソフトでは、頻繁に使用される、優先度の高いドキュメントのプロパティのサブセットを、いくつかのドキュメントのカテゴリとして特定しています。 これらには、通信、連絡先、ドキュメント、音楽ファイル、画像、およびビデオがあります。 各カテゴリの上位のプロパティの詳細については、Windows サーチに関するドキュメントの「 [カスタム ファイル形式のシステム定義プロパティ](http://go.microsoft.com/fwlink/?LinkId=144336) 」を参照してください。  
+ ファイル形式間で一貫性を保持するため、マイクロソフトでは、頻繁に使用される、優先度の高いドキュメントのプロパティのサブセットを、いくつかのドキュメントのカテゴリとして特定しています。 これらには、通信、連絡先、ドキュメント、音楽ファイル、画像、およびビデオがあります。 各カテゴリの上位のプロパティの詳細については、Windows サーチに関するドキュメントの「 [カスタム ファイル形式のシステム定義プロパティ](https://go.microsoft.com/fwlink/?LinkId=144336) 」を参照してください。  
   
  特定のファイル形式では、以下の 3 種類のプロパティが実装される場合があります。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48222642"
   
  **filtdump.exe** はコマンド プロンプトから実行し、1 つの引数を指定します。 この引数は、インストールした IFilter が対象とする種類のファイルの個別の名前です。 このユーティリティは、IFilter で検出された、ドキュメント内のすべてのプロパティと、そのプロパティ セット GUID、整数 ID、および追加情報の一覧を表示します。  
   
- このソフトウェアをインストールする方法の詳細については、「 [Windows 7 および .NET Framework 4 用 Microsoft Windows SDK](http://go.microsoft.com/fwlink/?LinkId=212980)」を参照してください。 SDK をダウンロードしてインストールした後、以下のフォルダーで filtdump.exe ユーティリティを見つけてください。  
+ このソフトウェアをインストールする方法の詳細については、「 [Windows 7 および .NET Framework 4 用 Microsoft Windows SDK](https://go.microsoft.com/fwlink/?LinkId=212980)」を参照してください。 SDK をダウンロードしてインストールした後、以下のフォルダーで filtdump.exe ユーティリティを見つけてください。  
   
 -   64 ビット バージョンの場合は、 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`にあります。  
   
@@ -75,15 +75,15 @@ ms.locfileid: "48222642"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
- このプロパティの完全な説明については、Windows サーチに関するドキュメントの「 [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) 」を参照してください。  
+ このプロパティの完全な説明については、Windows サーチに関するドキュメントの「 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 」を参照してください。  
   
- Windows プロパティの完全な一覧については、Windows サーチに関するドキュメントの「 [Windows プロパティ](http://go.microsoft.com/fwlink/?LinkId=215013)」を参照してください。  
+ Windows プロパティの完全な一覧については、Windows サーチに関するドキュメントの「 [Windows プロパティ](https://go.microsoft.com/fwlink/?LinkId=215013)」を参照してください。  
   
 ##  <a name="examples"></a> 検索プロパティ リストへのプロパティの追加  
  次の例では、プロパティを検索プロパティ リストに追加する方法を示します。 この例では、 [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) ステートメントを使用して、 `System.Author` プロパティを `PropertyList1`という名前の検索プロパティ リストに追加し、 `Author`という表示名を指定します。  

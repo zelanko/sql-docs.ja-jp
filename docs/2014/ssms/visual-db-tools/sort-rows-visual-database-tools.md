@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - sorting rows [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2183b8cb96895dc2bbb1308bccd818fb5a04dba5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049157"
 ---
 # <a name="sort-rows-visual-database-tools"></a>行の並べ替え (Visual Database Tools)
   クエリ結果の行は、並べ替えることができます。 つまり、特定の列または列のセットを指定し、その値で結果セットの行の順序を決定できます。  
@@ -89,7 +89,7 @@ ms.locfileid: "48156102"
   
      2 番目の並べ替えの基準にする列として、 `state` 列が指定されています。 したがって、著者の数が同じ州がある場合は、アルファベット順に表示されます。  
   
--   **各種言語のデータを使用して並べ替える** つまり、列の既定の規則とは異なる照合規則を使用して、列を並べ替えることができます。 たとえば、Jaime Patino の作品の全書名を取得するクエリを作成できます。 アルファベット順に書名を表示するには、書名列に対してスペイン語の照合規則を使用します。 結果の SQL ステートメントは次のようになります。  
+-   **各種言語のデータを使用して並べ替える** つまり、列の既定の規則とは異なる照合規則を使用して、列を並べ替えることができます。 たとえば、Jaime Pati によってすべてのブック タイトルを取得するクエリを記述できます??o します。 アルファベット順に書名を表示するには、書名列に対してスペイン語の照合規則を使用します。 結果の SQL ステートメントは次のようになります。  
   
     ```  
     SELECT title  
@@ -105,7 +105,7 @@ ms.locfileid: "48156102"
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

@@ -3,7 +3,7 @@ title: OPENJSON を使用して JSON データを解析して変換する (SQL S
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e98782a264e696f585c643068311a176873387
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e09a24d4f75c0b559a247176a7d57516cf75e43e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909438"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON を使用して JSON データを解析して変換する (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 **OPENJSON** 行セット関数は、JSON テキストを行と列のセットに変換します。 **OPENJSON** を使用して JSON コレクションを行セットに変換したら、返されたデータで SQL クエリを実行したり、行セットをテーブルに挿入したりできます。 
   
@@ -42,9 +41,10 @@ ms.locfileid: "51659653"
 **OPENJSON** は、JSON オブジェクトの各プロパティ、または配列の各要素を、個別の行として返します。  
 
 これは、既定のスキーマ (つまり、オプションの **WITH** 句を指定しない) で **OPENJSON** を使用した簡単な例です。この例では JSON オブジェクトのプロパティごとに 1 つの行が返されています。  
- 
+
 **例**
-```sql  
+
+```sql
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -53,7 +53,7 @@ SELECT *
 FROM OPENJSON(@json);
 ```  
   
-**結果**  
+**結果**
   
 |キー (key)|value|型|  
 |---------|-----------|----------|  
@@ -68,8 +68,8 @@ FROM OPENJSON(@json);
 
 構文と使用法については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)でのみ使用できます。 
 
-    
 ## <a name="option-2---openjson-output-with-an-explicit-structure"></a>オプション 2 - 明示的な構造を指定した OPENJSON 出力
+
 **OPENJSON** 関数の **WITH** 句を使用して結果のスキーマを指定すると、**WITH** 句に定義した列のみを持つテーブルが返されます。 オプションの **WITH** 句では、いくつかの出力列、各列の型、各出力値の JSON ソース プロパティのパスを指定します。 **OPENJSON** は JSON オブジェクトの配列を繰り返し処理し、列ごとに指定されたパスで値を読み取り、値を指定の型に変換します。  
 
 **WITH** 句で出力のスキーマを明示的に指定して **OPENJSON** を使用する簡単な例は次のようになります。  
@@ -114,7 +114,7 @@ WITH (
  ) 
 ```  
   
-**結果**  
+**結果**
   
 |数値|date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
@@ -128,11 +128,13 @@ WITH (
 -   `colName type json_path` 構文を使用して指定された列ごとに、**OPENJSON** 関数は、指定したパスの配列要素で検出された値を指定の型に変換します。 この例では、`Date` 列の値がパス `$.Order.Date` の各要素から取得され、datetime 値に変換されます。  
   
 ### <a name="more-info-about-openjson-with-an-explicit-schema"></a>明示的なスキーマを指定した OPENJSON に関する詳細情報
+
 詳細と例については、「[明示的なスキーマで OPENJSON を使用する &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)」を参照してください。
 
 構文と使用法については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)でのみ使用できます。
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON には、互換性レベル 130 が必要
+
 **OPENJSON** 関数は、 **互換性レベル 130**でのみ使用できます。 データベースの互換性レベルが 130 よりも低い場合、SQL Server は **OPENJSON** 関数を見つけて実行することができません。 他の組込み JSON 関数は、すべての互換性レベルで使用できます。
 
 `sys.databases` ビューまたはデータベース プロパティで互換性レベルを確認できます。
@@ -142,21 +144,16 @@ WITH (
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  
   
-### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
-  
-具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
-
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 
 SQL Server と Azure SQL Database に組み込まれている JSON のサポートの視覚的な紹介は、次のビデオをご覧ください。
 
--   [SQL Server 2016 と JSON のサポート](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+- [SQL Server 2016 と JSON のサポート](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
--   [SQL Server 2016 と Azure SQL Database での JSON の使用](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+- [SQL Server 2016 と Azure SQL Database での JSON の使用](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 
--   [NoSQL とリレーショナル環境間の架け橋としての JSON](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+- [NoSQL とリレーショナル環境間の架け橋としての JSON](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>参照  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
-  
   

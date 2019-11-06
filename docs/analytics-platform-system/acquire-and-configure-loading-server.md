@@ -2,19 +2,18 @@
 title: 取得し、Parallel Data Warehouse の読み込みサーバーの構成 |Microsoft Docs
 description: この記事では、取得、および読み込みサーバー データの読み込みを並列データ ウェアハウス (PDW) を送信するための非アプライアンス Windows システムとして構成する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d753237841695786de3d368bebf9a606875ea634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961618"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>取得し、Parallel Data Warehouse の読み込みサーバーの構成
 この記事では、取得、および読み込みサーバー データの読み込みを並列データ ウェアハウス (PDW) を送信するための非アプライアンス Windows システムとして構成する方法について説明します。  
@@ -32,12 +31,12 @@ ms.locfileid: "51703780"
   
 -   アプライアンスのドメインではなく、独自の顧客ドメインです。 顧客のドメインとアプライアンスのドメインと信頼関係はありません。  
   
-## <a name="Step1"></a>手順 1: 容量の要件を決定します。  
+## <a name="Step1"></a>手順 1:容量要件を決定します。  
 同時読み込みを実行する 1 つまたは複数の読み込みサーバー システムの読み込みを設計できます。 読み込みの各サーバーをワークロードのパフォーマンスとストレージの要件を処理する限り、専用の読み込み、のみにする必要はありません。  
   
 読み込みサーバーのシステム要件は、独自のワークロードにほぼ完全に依存します。 使用して、[サーバー容量計画ワークシートの読み込み](loading-server-capacity-planning-worksheet.md)容量の要件を確認するためです。  
   
-## <a name="Step2"></a>手順 2: サーバを取得します。  
+## <a name="Step2"></a>手順 2:サーバを取得します。  
 これで、容量の要件をより深く理解するには、サーバーとのネットワーク コンポーネントを購入またはプロビジョニングする必要がありますを計画できます。 次の要件の一覧を購入の計画に組み込むと、サーバーを購入するか、既存のサーバーをプロビジョニングします。  
   
 ### <a name="R"></a>ソフトウェアの要件  
@@ -60,7 +59,7 @@ Windows Server 2012 または Windows Server 2012 R2 の InfiniBand 接続を準
   
 3.  デュアル ポート カードは、FDR InfiniBand 2 本のケーブルまたは 1 つのポートのカードの 1 の FDR InfiniBand ケーブルを購入します。 FDR InfiniBand ケーブルでは、読み込みのサーバーをアプライアンスの InfiniBand ネットワークに接続します。 ケーブルの長さは、環境に従ってに読み込み、サーバーとアプライアンスの InfiniBand スイッチ間の距離によって異なります。  
   
-## <a name="Step3"></a>手順 3: InfiniBand ネットワークにサーバーを接続します。  
+## <a name="Step3"></a>手順 3:サーバーの InfiniBand ネットワークに接続します。  
 読み込みサーバーの InfiniBand ネットワークを接続するのにには、次の手順を使用します。 サーバーが、InfiniBand ネットワークを使用していない場合は、この手順をスキップします。  
   
 1.  ラック、サーバーを閉じてアプライアンスに十分なために、アプライアンスの InfiniBand ネットワークに接続することができます。  
@@ -75,7 +74,7 @@ Windows Server 2012 または Windows Server 2012 R2 の InfiniBand 接続を準
   
 5.  ネットワーク アダプターの InfiniBand と DNS の設定を構成します。 構成手順については、次を参照してください。[構成の InfiniBand ネットワーク アダプター](configure-infiniband-network-adapters.md)します。  
   
-## <a name="Step4"></a>手順 4: 読み込みツールをインストールします。  
+## <a name="Step4"></a>手順 4:読み込みツールをインストールします。  
 クライアント ツールは、Microsoft ダウンロード センターからダウンロードできます。 
 
 Dwloader をインストールするには、クライアント ツールから dwloader のインストールを実行します。
@@ -85,7 +84,7 @@ Dwloader をインストールするには、クライアント ツールから 
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>手順 5: 読み込みを開始します。  
+## <a name="Step5"></a>手順 5:読み込みを開始します。  
 データの読み込みを開始する準備が整いました。 詳細については、以下をご覧ください。  
   
 1.  [dwloader のコマンドライン読み込みツール](dwloader.md)  
@@ -107,7 +106,7 @@ Dwloader をインストールするには、クライアント ツールから 
   
 -   データを読み込むためのアクセス許可を持つ 1 つの PDW ユーザーを指定します。 セキュリティの要件に応じてデータベースごとの 1 つの特定ユーザーことができます。  
   
--   読み込みサーバーでの操作には、信頼されている内部ネットワークの外部からのデータをプルする元の UNC パスを使用できます。 ネットワーク上や名前解決に影響する機能により、攻撃者が傍受または SQL Server の PDW に送信されるデータを変更します。 これは、改ざんや情報漏えいのリスクを表示します。 接続で署名を要求することによって、改ざんを軽減する必要があります。 このリスクを軽減するで、次のグループ ポリシー オプションを設定します。**セキュリティ \ セキュリティ オプション**読み込みサーバー上: **Microsoft ネットワーク クライアント: 常に通信にデジタル署名。有効になっています。**  
+-   読み込みサーバーでの操作には、信頼されている内部ネットワークの外部からのデータをプルする元の UNC パスを使用できます。 ネットワーク上や名前解決に影響する機能により、攻撃者が傍受または SQL Server の PDW に送信されるデータを変更します。 これは、改ざんや情報漏えいのリスクを表示します。 接続で署名を要求することによって、改ざんを軽減する必要があります。 このリスクを軽減するで、次のグループ ポリシー オプションを設定します。**セキュリティ \ セキュリティ オプション**読み込みサーバー上。**Microsoft ネットワーク クライアント:常に通信にデジタル署名します。有効になっています。**  
   
 -   ファイルの瞬時初期化では、Windows Server 2012 以降をオフにします。 これは、パフォーマンスのセクションで説明したように、パフォーマンスとセキュリティのトレードオフです。 セキュリティ ニーズに合わせて最適なものを決定する必要があります。  
   

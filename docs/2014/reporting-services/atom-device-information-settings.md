@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a424f7af44f6272f0d511a68b1e29d89b90d3372
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: bdbac1500063accf868d4b538b82ba9f3b5aebb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109980"
 ---
 # <a name="atom-device-information-settings"></a>ATOM デバイス情報の設定
   ATOM 表示拡張機能のデバイス情報設定では、ATOM フィードの名前および使用する文字エンコードの送信がサポートされています。  

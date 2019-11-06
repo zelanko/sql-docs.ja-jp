@@ -1,36 +1,38 @@
 ---
-title: SQL ビッグ データ クラスター コンピューティング プールとは何ですか。 | Microsoft Docs
-description: この記事では、SQL Server 2019 ビッグ データ クラスターでコンピューティング プールについて説明します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 11/06/2018
+title: Spark コンピューティング プールとは
+titleSuffix: SQL Server big data clusters
+description: この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]内のコンピューティングプールについて説明します。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.technology: big-data-cluster
+ms.openlocfilehash: 420c4705d86eb55b6b99a6cf432cb95f3b9a6694
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221798"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798237"
 ---
-# <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>SQL ビッグ データ クラスター コンピューティング プールとは何ですか。
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのコンピューティング プールとは
 
-この記事では、の役割を説明します。 *SQL のサーバー プールのコンピューティング*で SQL Server 2019 プレビューのビッグ データ クラスター。 コンピューティング プールは、ビッグ データ クラスターのスケール アウトのコンピューティング リソースを提供します。 次のセクションでは、アーキテクチャとコンピューティング プールの機能について説明します。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-## <a name="compute-pool-architecture"></a>コンピューティング プール アーキテクチャ
+この記事では、SQL Server 2019 プレビュー ビッグ データ クラスターでの "*SQL Server コンピューティング プール*" の役割について説明します。 コンピューティング プールにより、ビッグ データ クラスター用のスケールアウト コンピューティング リソースが提供されます。 以下のセクションでは、コンピューティング プールのアーキテクチャと機能について説明します。
 
-Kubernetes で実行されるポッド コンピューティングまたはいずれかのコンピューティング プールが行われます。 によって調整が自動作成されるとこれらのポッドの管理、 [SQL Server のマスター インスタンス](concept-master-instance.md)します。 それぞれのポッドには、一連の基本サービスと、SQL Server データベース エンジンのインスタンスが含まれています。
+## <a name="compute-pool-architecture"></a>コンピューティング プールのアーキテクチャ
 
-> [!NOTE]
-> CTP 2.1 は、クラスターあたり 1 つのコンピューティング プールのみをサポートします。
+コンピューティング プールは、Kubernetes で実行されている 1 つまたは複数のコンピューティング ポッドで構成されます。 これらのポッドの自動化された作成と管理は、[SQL Server マスター インスタンス](concept-master-instance.md)によって調整されます。 各ポッドには、一連の基本サービスと、SQL Server データベース エンジンのインスタンスが含まれています。
 
 ## <a name="scale-out-groups"></a>スケール アウト グループ
 
-コンピューティング プールは、HDFS、Oracle、MongoDB、Terradata などのさまざまなデータ ソース - 経由で分散クエリを PolyBase スケール アウト グループとして動作できます。 コンピューティング Kubernetes ポッドを使用して、ビッグ データ クラスターは作成とコンピューティング ポッド PolyBase スケール アウト グループの構成を自動化できます。
+コンピューティングプールは、HDFS、Oracle、MongoDB、Teradata などのさまざまなデータソースに対する分散クエリの PolyBase スケールアウトグループとして機能できます。 Kubernetes でコンピューティング ポッドを使用することにより、ビッグ データ クラスターで PolyBase スケールアウト グループ用のコンピューティング ポッドの作成と構成を自動化できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは何ですか。](big-data-cluster-overview.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] のアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

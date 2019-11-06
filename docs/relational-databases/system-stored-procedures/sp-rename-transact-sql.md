@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006933"
 ---
-# <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
+# <a name="sprename-transact-sql"></a>sp_rename (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベースでユーザーが作成したオブジェクトの名前を変更します。 このオブジェクトは、テーブル、インデックス、列、別名データ型、または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) ユーザー定義の型。  
+  現在のデータベース内のユーザーが作成したオブジェクトの名前を変更します。 このオブジェクトは、テーブル、インデックス、列、別名データ型、または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) ユーザー定義の型。  
   
 > [!CAUTION]  
 >  オブジェクト名の一部または全部を変更すると、スクリプトおよびストアド プロシージャが壊れる可能性があります。 ストアド プロシージャ、トリガー、ユーザー定義関数、またはビューの名前を変更する場合は、このステートメントを使用しないことをお勧めします。代わりに、オブジェクトを削除して新しい名前で再作成してください。  
@@ -49,49 +48,49 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="arguments"></a>引数  
  [ @objname =] '*object_name*'  
- ユーザー オブジェクトやデータ型に関する現在の修飾名または非修飾名を指定します。 名前を変更するオブジェクトがテーブルの列の場合*object_name*形式である必要があります*table.column*または*schema.table.column*します。 名前を変更するオブジェクトが、インデックスの場合*object_name*形式である必要があります*table.index*または*schema.table.index*します。 名前を変更するオブジェクトが、制約の場合*object_name*形式である必要があります*schema.constraint*します。  
+ ユーザー オブジェクト、またはデータ型の現在の修飾付きまたは修飾なしの名前です。 名前を変更するオブジェクトがテーブルの列の場合*object_name*形式である必要があります*table.column*または*schema.table.column*します。 名前を変更するオブジェクトが、インデックスの場合*object_name*形式である必要があります*table.index*または*schema.table.index*します。 名前を変更するオブジェクトが、制約の場合*object_name*形式である必要があります*schema.constraint*します。  
   
- 引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 *object_name*は**nvarchar (776)**、既定値はありません。  
+ 引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む、完全修飾名が指定されている場合、データベース名は、現在のデータベースの名前である必要があります。 *object_name*は**nvarchar (776)** 、既定値はありません。  
   
- [ @newname =] '*new_name*'  
+ [ @newname = ] '*new_name*'  
  指定したオブジェクトの新しい名前を指定します。 *新しい名前*は、1 つの要素名と識別子の規則に従う必要があります。 *newname*は**sysname**、既定値はありません。  
   
 > [!NOTE]  
 >  トリガー名の先頭に # または ## は使用できません。  
   
  [ @objtype =] '*object_type*'  
- 名前を変更するオブジェクトの種類を指定します。 *object_type*は**varchar (13)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+ 名前を変更するオブジェクトの種類を指定します。 *object_type*は**varchar (13)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |COLUMN|名前を変更する列。|  
-|DATABASE|ユーザー定義のデータベース。 データベースの名前を変更する場合は、このオブジェクトの種類が必要です。|  
-|INDEX|ユーザー定義のインデックス。 統計のあるインデックスの名前を変更すると、統計の名前も自動的に変更されます。|  
+|DATABASE|ユーザー定義のデータベースです。 データベースの名前を変更するときに、このオブジェクトの種類が必要です。|  
+|INDEX|ユーザー定義のインデックス。 統計のインデックスの名前を変更するには、統計情報も自動的に名前変更します。|  
 |OBJECT|型の項目の追跡で[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。 たとえば、OBJECT を使用して、制約 (CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY)、ユーザー テーブル、ルールなどのオブジェクトの名前を変更できます。|  
-|STATISTICS|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> ユーザーによって明示的に作成された統計、作成またはインデックスで暗黙的に作成された統計です。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
+|STATISTICS|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 統計情報は、ユーザーによって明示的に作成またはインデックスを使用して暗黙的に作成します。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
 |USERDATATYPE|A [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)を実行して追加[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)または[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または 0 以外の数値 (失敗)  
+ 0 (成功) または 0 以外の値の数 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 名前を変更できるのは、現在のデータベース内にあるオブジェクトまたはデータ型だけです。 ほとんどのシステム データ型およびシステム オブジェクトの名前は変更できません。  
+ 現在のデータベースにのみ、オブジェクトまたはデータ型の名前を変更できます。 ほとんどのシステム データ型およびシステム オブジェクトの名前を変更できません。  
   
- sp_rename では、PRIMARY KEY (主キー) または UNIQUE (一意) 制約の名前を変更した場合、関連するインデックスの名前も自動的に変更されます。 名前を変更したインデックスが PRIMARY KEY 制約に関連付けられている場合は、sp_rename によって PRIMARY KEY 制約の名前も自動的に変更されます。  
+ sp_rename では、PRIMARY KEY (主キー) または UNIQUE (一意) 制約の名前を変更した場合、関連するインデックスの名前も自動的に変更されます。 名前が変更されたインデックスは、PRIMARY KEY 制約に関連付けられている、sp_rename によって PRIMARY KEY 制約が自動的に名前変更されます。  
   
  sp_rename は、プライマリおよびセカンダリ XML インデックスの名前を変更する場合に使用できます。  
   
  ストアド プロシージャ、関数、ビュー、またはトリガーは変更されません、対応するオブジェクトの名前の definition 列にあるいずれか、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューまたはを使用して取得、 [object _定義](../../t-sql/functions/object-definition-transact-sql.md)組み込み関数。 したがって、これらのオブジェクトの種類の名前を変更する場合は、sp_rename を使用しないことをお勧めします。 代わりに、オブジェクトを削除して新しい名前で再作成してください。  
   
- テーブルや列などのオブジェクトの名前を変更しても、そのオブジェクトに対する参照は自動的には変更されません。 名前を変更したオブジェクトを参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルの列の名前を変更するとき、その列がトリガーで参照されている場合は、新しい列名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトの名前を変更する前には、 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
+ テーブルまたは列などのオブジェクトの名前を変更しても、そのオブジェクトへの参照が自動的に変更はできません。 名前が変更されたオブジェクトを手動で参照するすべてのオブジェクトを変更する必要があります。 たとえば、テーブルの列の名前を変更するとき、その列がトリガーで参照されている場合は、新しい列名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトの名前を変更する前には、 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- オブジェクト、列、およびインデックスの名前を変更するには、そのオブジェクトに対する ALTER 権限が必要です。 ユーザー定義型の名前を変更するには、その型に対する CONTROL 権限が必要です。 データベースの名前を変更するには、sysadmin 固定サーバー ロールまたは dbcreator 固定サーバー ロールのメンバーシップが必要です。  
+ オブジェクト、列、およびインデックスの名前を変更するには、オブジェクトに対する ALTER 権限が必要です。 ユーザー定義型の名前を変更するには、その型に対する CONTROL 権限が必要です。 データベースの名前を変更するには、sysadmin 固定サーバー ロールまたは dbcreator 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-renaming-a-table"></a>A. テーブル名を変更する  
- 次の例では、 `SalesTerritory` スキーマの `SalesTerr` テーブルの名前を `Sales` に変更します。  
+### <a name="a-renaming-a-table"></a>A. テーブルの名前を変更します。  
+ 次の例では、 `Sales` スキーマの `SalesTerritory` テーブルの名前を `SalesTerr` に変更します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -100,7 +99,7 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>B. 列名を変更する  
+### <a name="b-renaming-a-column"></a>B. 列の名前変更  
  次の例の名前を変更、`TerritoryID`内の列、`SalesTerritory`テーブル`TerrID`します。  
   
 ```  
@@ -120,7 +119,7 @@ EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_Vendo
 GO  
 ```  
   
-### <a name="d-renaming-an-alias-data-type"></a>D. 別名データ型の名前を変更する  
+### <a name="d-renaming-an-alias-data-type"></a>D. 別名データ型の名前を変更します。  
  次の例の名前を変更、`Phone`別名データ型を`Telephone`します。  
   
 ```  
@@ -130,7 +129,7 @@ EXEC sp_rename N'Phone', N'Telephone', N'USERDATATYPE';
 GO  
 ```  
   
-### <a name="e-renaming-constraints"></a>E. 制約の名前を変更する  
+### <a name="e-renaming-constraints"></a>E. 制約の名前を変更します。  
  次の例では、PRIMARY KEY 制約、CHECK 制約、および FOREIGN KEY 制約の名前を変更します。 制約の名前を変更する際は、制約が属するスキーマを指定する必要があります。  
   
 ```  
@@ -193,7 +192,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>F. 統計の名前を変更する  
- 次の例では、contactMail1 をという名前の統計オブジェクトを作成し、sp_rename を使用して NewContact にし、統計の名前を変更します。 統計の名前を変更する際は、オブジェクトを schema.table.statistics_name の形式で指定する必要があります。  
+ 次の例では、contactMail1 をという名前の統計オブジェクトを作成し、sp_rename を使用して NewContact に統計を変更します。 統計の名前を変更するには場合、は、オブジェクトを schema.table.statistics_name の形式で指定する必要があります。  
   
 ```  
 CREATE STATISTICS ContactMail1  
@@ -204,7 +203,7 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

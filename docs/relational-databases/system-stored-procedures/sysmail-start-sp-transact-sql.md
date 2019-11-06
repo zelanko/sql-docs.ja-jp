@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08a073099616898ebd4f2a5161b0fe26f4bdb688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e15996a9db6e1b782875f2dd3d73d0e3e514c8f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044442"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,20 +48,20 @@ sysmail_start_sp
  なし  
   
 ## <a name="remarks"></a>コメント  
- データベース メールが有効になっているかにインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールします。 データベース メール オブジェクトを有効化およびインストールするには、データベース メール構成ウィザードを使用します。  
+ データベース メールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に有効化またはインストールされません。 データベース メール オブジェクトを有効化およびインストールするには、データベース メール構成ウィザードを使用します。  
   
  このストアド プロシージャは、 **msdb**データベース。 このストアド プロシージャは、送信メッセージ要求を保持しているデータベース メール キューを開始し、外部プログラムに対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] のアクティブ化を有効にします。  
   
- キューが開始されると、データベース メール外部プログラムではメッセージを処理できます。 この手順で、キューを停止した後に、キューを再起動するように、 **sysmail_stop_sp**ストアド プロシージャ。  
+ キューが開始されると、データベース メール外部プログラムはメッセージを処理できます。 この手順で、キューを停止した後に、キューを再起動するように、 **sysmail_stop_sp**ストアド プロシージャ。  
   
 > [!NOTE]  
->  このストアド プロシージャは、データベース メールのキューだけを開始します。 データベースでの [!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ配信はアクティブになりません。  
+>  このストアド プロシージャでは、データベース メールのキューのみ開始します。 データベースでの [!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ配信はアクティブになりません。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、以降ではデータベース メール、 **msdb**データベース。 ここではデータベース メールが有効になっていることを前提としています。  
+ 次の例は、以降ではデータベース メール、 **msdb**データベース。 例では、データベース メールが有効になっていると仮定します。  
   
 ```  
 USE msdb ;  
@@ -72,7 +71,7 @@ EXECUTE dbo.sysmail_start_sp ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail XPs サーバー構成オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
  [sysmail_stop_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   

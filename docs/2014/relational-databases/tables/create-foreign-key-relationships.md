@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1b52e98fe47049640a2ee5a3240d9ad43961bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761614"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で外部キーのリレーションシップを作成する方法について説明します。 あるテーブルの行と他のテーブルの行を関連付ける場合は、2 つのテーブル間にリレーションシップを作成します。  
@@ -37,7 +36,7 @@ ms.locfileid: "48128779"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48128779"
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>テーブル デザイナーで外部キー リレーションシップを作成するには  
   
-1.  オブジェクト エクスプローラーで、リレーションシップの外部キー側となるテーブルを右クリックして、**[デザイン]** をクリックします。  
+1.  オブジェクト エクスプローラーで、リレーションシップの外部キー側となるテーブルを右クリックして、 **[デザイン]** をクリックします。  
   
      **テーブル デザイナー**にテーブルが表示されます。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48128779"
   
 4.  **[選択されたリレーションシップ]** ボックスの一覧で、リレーションシップをクリックします。  
   
-5.  右側のグリッドの **[テーブルと列の指定]** をクリックし、その右側にある省略記号 (**[...]**) をクリックします。  
+5.  右側のグリッドの **[テーブルと列の指定]** をクリックし、その右側にある省略記号 ( **[...]** ) をクリックします。  
   
 6.  **[テーブルと列]** ダイアログ ボックスの **[主キー]** ボックスの一覧で、リレーションシップの主キー側となるテーブルをクリックします。  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48128779"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、テーブルを作成し、 `TempID` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `Sales.SalesReason` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、 `Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、テーブルを作成し、`Sales.SalesReason` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `TempID` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、`Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。  
   
     ```  
     USE AdventureWorks2012;  
@@ -123,7 +122,7 @@ ms.locfileid: "48128779"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、`TempID` 列に外部キーを作成し、`SalesReasonID` テーブルの `Sales.SalesReason` 列を参照します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、`TempID` 列に外部キーを作成し、`Sales.SalesReason` テーブルの `SalesReasonID` 列を参照します。  
   
     ```  
     USE AdventureWorks2012;  

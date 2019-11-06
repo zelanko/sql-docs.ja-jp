@@ -10,12 +10,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4b791f83342d02fb003a14f48861ae992ddc37df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62468328"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>メモリ最適化テーブルが含まれるデータベースのバックアップ
   メモリ最適化されたテーブルは、通常のデータベースのバックアップの一部としてバックアップされます。 ディスク ベース テーブルについては、ストレージの破損を検出するために、データベース バックアップの一部としてデータのチェックサムおよびデルタ ファイルのペアが検証されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "48190292"
   
  最初のワークロードのシナリオは、(ほとんどが) 挿入の場合です。 このシナリオでは、ほとんどのデータ ファイルは Active 状態で、完全読み込みであり、削除済みの行はごくわずかです。 データベースのバックアップのサイズは、メモリ内にあるデータのサイズに近づきます。  
   
- 2 番目のワークロードのシナリオは、INSERT、DELETE、UPDATE の各操作が頻繁に実行される場合です。最悪のケースでは、削除された行を考慮に入れた後、各チェックポイント ファイル ペアは 50% が読み込み済みになります。 したがって、データベースのバックアップのサイズは、メモリ内にあるデータのサイズの少なくとも 2 倍になります。 また、データベースのバックアップのサイズを大きくする Merge source および Required for backup/high availability という状態にあるチェックポイント ファイル ペアはわずかです。  
+ 2 番目のワークロードのシナリオでは、頻繁な insert、delete、および更新操作には。最悪のケースでは、削除された行を考慮に入れた後、各チェックポイント ファイル ペアは 50% が読み込み済みになります。 したがって、データベースのバックアップのサイズは、メモリ内にあるデータのサイズの少なくとも 2 倍になります。 また、データベースのバックアップのサイズを大きくする Merge source および Required for backup/high availability という状態にあるチェックポイント ファイル ペアはわずかです。  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>メモリ最適化テーブルを含むデータベースの差分バックアップ  
  メモリ最適化テーブルのストレージは、「 [メモリ最適化テーブルの持続性](memory-optimized-tables.md)」で説明しているようにデータ ファイルとデルタ ファイルで構成されます。 メモリ最適化テーブルが含まれるデータベースの差分バックアップには、次のデータが含まれています。  

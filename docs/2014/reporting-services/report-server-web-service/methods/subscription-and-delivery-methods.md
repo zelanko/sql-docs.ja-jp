@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - reports [Reporting Services], delivering
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5598122d95d3c90bcd91a32b8423117e05dc2a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c6ae92a6abd5c25b9ab1236a2b5b11429d210cba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163598"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63283910"
 ---
 # <a name="subscription-and-delivery-methods"></a>サブスクリプション メソッドおよび配信メソッド
   これらのメソッドを使用して、カタログ アイテムのサブスクリプションと配信を作成および管理できます。  
@@ -40,7 +38,7 @@ ms.locfileid: "48163598"
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|データ ドリブン サブスクリプションのプロパティ値を設定します。|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|サブスクリプションのプロパティ値を設定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [レポート サーバー Web サービス](../report-server-web-service.md)   
  [レポート サーバー Web サービス メソッド](report-server-web-service-methods.md)   

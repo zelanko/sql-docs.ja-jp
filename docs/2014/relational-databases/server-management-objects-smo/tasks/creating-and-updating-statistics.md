@@ -1,12 +1,10 @@
 ---
-title: 作成して、統計の更新 |マイクロソフトのドキュメント
+title: 統計の作成と更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,12 +14,12 @@ ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb4fe2a6670cd2cb5eb9db95367607647681434
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54995cc99aae2065112cbb510203b656c409dcac
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121622"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782126"
 ---
 # <a name="creating-and-updating-statistics"></a>統計の作成と更新
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Statistic> オブジェクトを使用して、データベース内のクエリの処理に関する統計情報を収集することができます。  
@@ -29,7 +27,7 @@ ms.locfileid: "48121622"
  任意の列に対する統計の作成は、<xref:Microsoft.SqlServer.Management.Smo.Statistic> および <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> オブジェクトを使用して行うことができます。 <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> メソッドを実行して、<xref:Microsoft.SqlServer.Management.Smo.Statistic> オブジェクト内の統計を更新することができます。 結果は、クエリ オプティマイザーで表示できます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Visual Basic での統計の作成および更新  
  このコード例では、既存のデータベースに新しいテーブルを作成し、<xref:Microsoft.SqlServer.Management.Smo.Statistic> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> オブジェクトを作成しています。  
@@ -39,7 +37,7 @@ ms.locfileid: "48121622"
 ## <a name="creating-and-update-statistics-in-visual-c"></a>Visual C# での統計の作成および更新  
  このコード例では、既存のデータベースに新しいテーブルを作成し、<xref:Microsoft.SqlServer.Management.Smo.Statistic> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> オブジェクトを作成しています。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -66,7 +64,7 @@ ms.locfileid: "48121622"
 ## <a name="creating-and-update-statistics-in-powershell"></a>PowerShell での統計の作成および更新  
  このコード例では、既存のデータベースに新しいテーブルを作成し、<xref:Microsoft.SqlServer.Management.Smo.Statistic> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> オブジェクトを作成しています。  
   
-```  
+```powershell
 # Example of implementing a full text search on the default instance.  
 # Set the path context to the local, default instance of SQL Server and database tables  
   
@@ -109,5 +107,3 @@ $fti.CatalogName = "Test_Catalog2"
 # Create the Full Text Search Index  
 $fti.Create()  
 ```  
-  
-  

@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eb340f0786c61ef1536b893b309bdc959108087a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32819a694769092c255c4b2ed918dd8fde99362e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482603"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>ビジネス ルールの適用 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] では、データを検証してデータが有効であることを確認する必要がある場合に、ビジネス ルールを適用できます。 検証に基づいて修正し、データを再度パブリッシュできます。  
   
 > [!NOTE]  
->  データの検証は、データをパブリッシュするときに自動的に行われます。 詳細については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../validation-stored-procedure-master-data-services.md)」を参照してください。  
+>  データの検証は、データをパブリッシュするときに自動的に行われます。 詳細については、「 [検証ストアド プロシージャ (マスター データ サービス)](../validation-stored-procedure-master-data-services.md)」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  

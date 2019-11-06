@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], rows not matching value
@@ -15,12 +15,12 @@ ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 92e0ac92531caeab2aa64187141c4978bc08bcba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067538"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>値の一致しない行を選択する方法 (Visual Database Tools)
   値の一致しない行を検索するには、NOT 演算子を使用します。  

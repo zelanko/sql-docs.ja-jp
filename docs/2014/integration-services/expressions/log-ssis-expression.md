@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d5a09e2b641828cacefb188859f5bd794d6e105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769068"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 式)
   数値式の常用対数を返します。  
@@ -65,6 +64,6 @@ LOG(@Length)
 ## <a name="see-also"></a>参照  
  [EXP &#40;SSIS 式&#41;](exp-ssis-expression.md)   
  [LN &#40;SSIS 式&#41;](ln-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: 可用性レプリカに対するクライアント接続アクセスについて (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループ内のレプリカに対するクライアント接続の種類
+description: SQL Server 内の Always On 可用性グループのプライマリまたはセカンダリ レプリカにクライアントから行える接続の種類について説明します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991732"
 ---
-# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>可用性レプリカに対するクライアント接続アクセスについて (SQL Server)
+# <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性グループ内のレプリカに対するクライアント接続の種類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   AlwaysOn 可用性グループでは、1 つまたは複数の可用性レプリカを構成して、セカンダリ ロールで実行しているとき (つまり、セカンダリ レプリカとして実行しているとき) に読み取り専用接続を許可することができます。 各可用性レプリカをプライマリ ロールで実行しているとき (つまり、プライマリ レプリカとして実行しているとき) に、読み取り専用接続を許可または除外するように構成することもできます。  
   
@@ -34,18 +34,6 @@ ms.locfileid: "51602672"
   
 > [!NOTE]  
 >  クライアント接続要求を処理する可用性グループ リスナーの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」をご参照ください。  
-  
- **このトピックの内容**  
-  
--   [セカンダリ ロールでサポートされる接続アクセスの種類](#ConnectAccessForSecondary)  
-  
--   [プライマリ ロールでサポートされる接続アクセスの種類](#ConnectAccessForPrimary)  
-  
--   [接続アクセス構成がクライアント接続に与える影響](#HowConnectionAccessAffectsConnectivity)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
   
 ##  <a name="ConnectAccessForSecondary"></a> セカンダリ ロールでサポートされる接続アクセスの種類  
  セカンダリ ロールは、次に示すように 3 種類のクライアント接続をサポートします。  
@@ -121,7 +109,7 @@ ms.locfileid: "51602672"
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

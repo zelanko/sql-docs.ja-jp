@@ -1,25 +1,24 @@
 ---
-title: 'レッスン 2: 時系列マイニング構造にマイニング モデルの追加 |Microsoft Docs'
+title: レッスン 2:時系列マイニング構造にマイニング モデルの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62855715"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>レッスン 2: 時系列マイニング構造へのマイニング モデルの追加
-  このレッスンで作成したマイニング構造に新しいマイニング モデルを追加[レッスン 1: 時系列マイニング モデルおよびマイニング構造を作成する](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)します。  
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>レッスン 2:時系列マイニング構造へのマイニング モデルの追加
+  このレッスンで作成したマイニング構造に新しいマイニング モデルを追加[レッスン 1。タイム シリーズ マイニング モデルとマイニング構造を作成する](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)します。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE ステートメント  
  使用する既存のマイニング構造に新しいマイニング モデルを追加するには、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
@@ -96,7 +95,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>ARIMA 時系列マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -219,7 +218,7 @@ WITH DRILLTHROUGH
  次のレッスンでは、すべてのモデルとマイニング構造を処理します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 3: 時系列構造と時系列モデルの処理](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [レッスン 3:タイム シリーズを処理構造およびモデル](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>参照  
  [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

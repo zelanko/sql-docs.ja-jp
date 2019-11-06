@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec1ec91705dfb9194f42c079cb7b3d5100c9d396
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090106"
 ---
 # <a name="start-the-sqlcmd-utility"></a>sqlcmd ユーティリティの起動
   `sqlcmd` を使用するには、最初にユーティリティを起動し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する必要があります。 既定のインスタンスまたは名前付きインスタンスのいずれにも接続できます。 最初の手順として、`sqlcmd` ユーティリティを起動します。  
@@ -33,7 +32,7 @@ ms.locfileid: "48228352"
   
 1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **[名前]** ボックスに「 **cmd**」と入力して、 **[OK]** をクリックします。コマンド プロンプト ウィンドウが開きます  
   
-2.  コマンド プロンプトで「`sqlcmd`します。  
+2.  コマンド プロンプトで、「`sqlcmd`」と入力します。  
   
 3.  Enter キーを押します。  
   
@@ -49,12 +48,12 @@ ms.locfileid: "48228352"
   
 2.  Enter キーを押します。  
   
-     `sqlcmd` プロンプト (1>) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定されたインスタンスに接続していることを示します。  
+     `sqlcmd`プロンプト (1 >) の指定されたインスタンスに接続されていることを示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
     > [!NOTE]  
     >  入力した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはバッファーに格納されます。 GO コマンドが見つかると、ステートメントがバッチとして実行されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sqlcmd を使用した Transact-SQL スクリプト ファイルの実行](sqlcmd-run-transact-sql-script-files.md)  
   
   

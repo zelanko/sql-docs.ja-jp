@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8480a8b8f3889a1686d29bcd3858ee3921383cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940725"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +111,7 @@ ms.locfileid: "51559475"
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- DB_CHAINING データベース オプションと TRUSTWORTHY データベース オプションは、既定では OFF になっています。 これらのオプションのいずれかが元のデータベースで ON に設定されていると、対象のサーバー インスタンスのデータベースで、これらの設定を有効にする必要がある場合があります。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
+ DB_CHAINING データベース オプションと TRUSTWORTHY データベース オプションは、既定では OFF になっています。 これらのオプションのいずれかが元のデータベースで ON に設定されていると、対象のサーバー インスタンスのデータベースで、これらの設定を有効にする必要がある場合があります。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
  アタッチおよびデタッチ操作により、複数データベースにまたがる組み合わせ所有権が無効になります。 チェーンを有効にする方法については、「[cross db ownership chaining サーバー構成オプション](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)」を参照してください。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "51559475"
   
  サーバー インスタンスでデータベース マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してデータベース マスター キーのコピーを暗号化します。 この暗号化されたコピーをデータベースと **master**データベースの両方に格納します。 通常、 **master** に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、インスタンスのサービス マスター キーを使用して、データベース マスター キーの暗号化解除が最初に試行されます。 暗号化解除が失敗した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では資格情報ストア内で、マスター キーが必要なデータベースと同じファミリ GUID のマスター キー資格情報が検索されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。 サービス マスター キーによって暗号化されていないマスター キーは、OPEN MASTER KEY ステートメントとパスワードを使用して開かれている必要があります。  
   
- 暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'** ステートメントを実行します。 次に、ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
+ 暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、次のステートメントを実行します:OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** 。 その後、次のステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします:ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
   
  ミラー データベースのデータベース マスター キーの自動暗号化解除を有効にする方法については、「[暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)」を参照してください。  
   
@@ -158,7 +157,7 @@ ms.locfileid: "51559475"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Windows Management Instrumentation (WMI) イベント  
  WMI Provider for Server Events を使用すれば、Windows Management Instrumentation (WMI) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のイベントを監視できます。 データベースが依存する WMI プロバイダーによって公開されているサーバーレベルのイベントに依存するすべてのアプリケーションは、対象のサーバー インスタンスのコンピューターで定義されている必要があります。 WMI イベント プロバイダーは、 **msdb**で定義されている対象サービスでイベント通知を作成します。  
   
-> **注:** 詳細については、「 [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」をご覧ください。  
+> **注:** 詳細については、「 [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」を参照してください。  
   
  **SQL Server Management Studio を使用して WMI 警告を作成するには**  
   
@@ -195,7 +194,7 @@ ms.locfileid: "51559475"
   
  さらに、[ワード ブレーカーとステマー](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)のコンポーネント、または[フルテキスト検索フィルター](../../relational-databases/search/configure-and-manage-filters-for-search.md) コンポーネントのバージョンが、元のサーバー インスタンスと対象のサーバー インスタンスで異なると、フルテキスト インデックスおよびクエリの動作が異なる場合があります。 また、 [類義語辞典](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) はインスタンス固有のファイルに格納されています。 それらのファイルのコピーを対象のサーバー インスタンスの該当する場所にコピーするか、新しいインスタンス上でこれらのファイルを再作成する必要があります。  
   
-> **注:** フルテキスト カタログ ファイルを含む [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアタッチする場合、カタログ ファイルは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同様に他のデータベース ファイルと一緒に以前の場所からアタッチされます。 詳細については、「 [SQL Server 2005 からのフルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
+> **注:** フルテキスト カタログ ファイルを含む [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアタッチする場合、カタログ ファイルは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同様に他のデータベース ファイルと一緒に以前の場所からアタッチされます。 詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
   
  詳細については、次のトピックも参照してください。  
   
@@ -263,7 +262,7 @@ ms.locfileid: "51559475"
   
  元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、SQL Server スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[スクリプト ログイン]** オプションを **[True]** に設定することで作成できます。  
   
-> **注:** ミラー化されたデータベースのログインを設定する方法については、「[データベース ミラーリングまたは AlwaysOn 可用性グループのログイン アカウントの設定 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)」および「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」をご覧ください。  
+> **注:** ミラー化されたデータベースのログインを設定する方法については、「[データベース ミラーリングまたは Always On 可用性グループのログイン アカウントの設定 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)」および「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」をご覧ください。  
   
   
 ##  <a name="permissions"></a> Permissions  

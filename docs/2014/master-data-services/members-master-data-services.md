@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - leaf members [Master Data Services], about leaf members
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b07719a39cd8f82561bd92635dcba8e97ffee532
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8523843633675fb9d0d319dac10417172832f8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482811"
 ---
 # <a name="members-master-data-services"></a>メンバー (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーは物理マスター データです。 たとえば、Product エンティティの Road-150 バイクや、Customer エンティティの特定の顧客をメンバーにすることができます。  
@@ -62,11 +61,11 @@ ms.locfileid: "48096042"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しいリーフ メンバーを作成する。|[リーフ メンバー作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
-|新しい統合メンバーを作成する。|[統合メンバーを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|既存のメンバーまたはコレクションを削除する。|[メンバーまたはコレクションの削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|削除したメンバーまたはコレクションを再アクティブ化する。|[メンバーまたはコレクションを再アクティブ化&#40;マスター データ サービス&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|メンバーの属性値を更新する。|[属性の型を変更する&#40;MDS アドインの Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|新しいリーフ メンバーを作成する。|[リーフ メンバーを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
+|新しい統合メンバーを作成する。|[統合メンバーを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|既存のメンバーまたはコレクションを削除する。|[メンバーまたはコレクションを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|削除したメンバーまたはコレクションを再アクティブ化する。|[メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|メンバーの属性値を更新する。|[属性の型の変更 (Excel 用 MDS アドイン)](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 |階層内のメンバーを移動する。|[階層内のメンバーを移動&#40;マスター データ サービス&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
@@ -75,16 +74,16 @@ ms.locfileid: "48096042"
   
 -   [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [階層&#40;マスター データ サービス&#41;](hierarchies-master-data-services.md)  
+-   [階層 (マスター データ サービス)](hierarchies-master-data-services.md)  
   
--   [コレクション&#40;マスター データ サービス&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
   
--   [リーフ アクセス許可&#40;マスター データ サービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [リーフ権限 (マスター データ サービス)](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [アクセス許可を統合&#40;マスター データ サービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
--   [フィルター演算子&#40;マスター データ サービス&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
+-   [フィルター演算子 (マスター データ サービス)](../../2014/master-data-services/filter-operators-master-data-services.md)  
   
   

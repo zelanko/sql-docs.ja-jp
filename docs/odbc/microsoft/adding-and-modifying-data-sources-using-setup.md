@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28f7fb52cb4babdce6e90452f40d81ba643466ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 621d10c3c602b2f406461a24e53b2302e45835eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901401"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>セットアップを使用してデータ ソースを追加および変更する
 > [!IMPORTANT]  
@@ -58,9 +57,9 @@ ms.locfileid: "47767760"
   
 1.  ODBC Driver for Oracle のセットアップに関する多くの仕様作成のオプションをクリックします。  
   
-    -   **翻訳**— [読み込まれたデータの翻訳者を選択する] をクリックします。 既定値は\<いいえ Translator >。  
+    -   **翻訳**-[読み込まれたデータの翻訳者を選択する] をクリックします。 既定値は\<いいえ Translator >。  
   
-    -   **パフォーマンス**— カタログ関数のチェック ボックスが含まれての解説では、ドライバーでの「解説」列を返すかどうかを指定します、 [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果セット。 ODBC Driver for Oracle は、この値が設定されていないときに、高速アクセスを提供します。  
+    -   **パフォーマンス**のカタログ関数のチェック ボックスが含まれての解説では、ドライバーでの「解説」列を返すかどうかを指定します、 [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果セット。 ODBC Driver for Oracle は、この値が設定されていないときに、高速アクセスを提供します。  
   
          SQL の列のチェック ボックスで、シノニムは、ドライバーが列の情報を返すかどうかを指定します。 **バッファー サイズ**(バイト)、フェッチされたデータを受信する割り当てサイズを指定します。 ドライバーは、Oracle サーバーから 1 つのフェッチが指定されたサイズのバッファーに格納のための十分な行を返されるようにフェッチを最適化します。 大きな値は、大量のデータをフェッチするときにパフォーマンスを向上する傾向があります。  
   

@@ -1,112 +1,77 @@
 ---
 title: SQL Server 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
-manager: craigg
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: babfa67f96f9514d748e6d87c0230e154468eff4
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mikeray
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: df3b8fb47e232b62bfd485c366f6b1e3acf7dcca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858597"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907585"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server 上の外部データにアクセスするための PolyBase の構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、別の SQL Server インスタンス上の外部データに対してクエリを実行する方法について説明します。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。
+PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。 また、インストールが完了したら、[PolyBase を有効にする](polybase-installation.md#enable)ようにしてください。
 
-## <a name="configure-an-external-table"></a>外部テーブルを構成する
+データベース スコープ資格情報より前に、[マスター キー](../../t-sql/statements/create-master-key-transact-sql.md)を作成しておく必要があります。 
+
+## <a name="configure-a-sql-server-external-data-source"></a>SQL Server の外部データ ソースを構成する
 
 SQL Server データ ソースのデータに対してクエリを実行するには、外部テーブルを作成して外部データを参照する必要があります。 このセクションでは、これらの外部テーブルを作成するサンプル コードを示します。 
  
 最適なクエリのパフォーマンスを得るために、外部テーブルの列、特に結合、フィルター、集計に使用される列に対して統計を作成します。
 
-このセクションでは、次のオブジェクトが作成されます。
+このセクションでは以下の Transact-SQL コマンドが使用されます。
 
-- データベース スコープ ベースの資格情報 (TRANSACT-SQL) の作成します。 
-- 外部データ ソース (TRANSACT-SQL) を作成します。 
-- 外部テーブル (TRANSACT-SQL) を作成します。 
-- CREATE STATISTICS (Transact-SQL)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1. データベースにマスター キーを作成します。 資格情報シークレットを暗号化するには、マスター キーが必要です。
+1. SQL Server ソースにアクセスするために、データベース スコープ資格情報を作成します。 次の例では、`IDENTITY = 'username'` および `SECRET = 'password'` を使用して、外部データ ソースに対する資格情報を作成します。
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-     ```
+    ```sql
+    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
+    WITH IDENTITY = 'username', SECRET = 'password';
+    ```
 
-1. データベース スコープ資格情報を作成します。
+1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。 次に例を示します。
 
-     ```sql
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-     WITH IDENTITY = 'username', Secret = 'password';
-     ```
+   - `SQLServerInstance` という名前の外部データ ソースを作成します。
+   - 外部のデータ ソースを識別します (`LOCATION = '<vendor>://<server>[:<port>]'`)。 この例では、SQL Server の既定のインスタンスを指しています。
+   - 計算をソースにプッシュする必要があるかどうかを識別します (`PUSHDOWN`)。 `PUSHDOWN` は既定では `ON` です。
 
-1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。 外部データ ソースの場所と、SQL Server の資格情報を指定します。
+   最後に、この例では、前に作成した資格情報を使用します。
 
-     ```sql
-    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *  CREDENTIAL: the database scoped credential, created above.
-    */  
+    ```sql
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
-    LOCATION = 'sqlserver://SqlServer',
-    -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = SQLServerCredentials
-    );
+        WITH ( LOCATION = 'sqlserver://SqlServer',
+        PUSHDOWN = ON,
+        CREDENTIAL = SQLServerCredentials);
+    ```
 
-     ```
+1. 必要に応じて、外部テーブルの統計を作成します。
 
-1. 外部データのスキーマを作成します。
+  最適なクエリのパフォーマンスを得るために、外部テーブルの列、特に結合、フィルター、集計に使用される列に対して統計を作成します。
 
-     ```sql
-     CREATE SCHEMA sqlserver;
-     GO
-     ```
+  ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY)
+    WITH FULLSCAN;
+  ```
 
-1.  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) を使用して、外部の SQL Server インスタンスに格納されているデータを表す外部テーブルを作成します。
- 
-     ```sql
-     /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
-     *  DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE sqlserver.customer(
-     C_CUSTKEY INT NOT NULL,
-     C_NAME VARCHAR(25) NOT NULL,
-     C_ADDRESS VARCHAR(40) NOT NULL,
-     C_NATIONKEY INT NOT NULL,
-     C_PHONE CHAR(15) NOT NULL,
-     C_ACCTBAL DECIMAL(15,2) NOT NULL,
-     C_MKTSEGMENT CHAR(10) NOT NULL,
-     C_COMMENT VARCHAR(117) NOT NULL
-      )
-      WITH (
-      LOCATION='tpch_10.dbo.customer',
-      DATA_SOURCE=SqlServerInstance
-     );
-      ```
-
-1. 外部テーブルの統計を作成します。
-
-     ```sql
-      CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+>[!IMPORTANT] 
+>外部データ ソースを作成すると、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成することができます。
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server コネクタの互換性のある型
 

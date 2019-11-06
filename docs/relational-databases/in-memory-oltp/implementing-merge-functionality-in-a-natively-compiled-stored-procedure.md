@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa0139887cc51e9b883d7afe6091d818d49073f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bebb334438f911dd061075edf0b338ef4f1c3fff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050347"
 ---
 # <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャに MERGE 機能を実装する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

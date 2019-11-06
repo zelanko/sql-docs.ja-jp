@@ -2,7 +2,7 @@
 title: レポート パーツ (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576731"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>レポート パーツ (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、グラフ、画像などのレポート アイテムを、 *レポート パーツ*としてパブリッシュできます。 レポート パーツは、レポート サーバーに個別にパブリッシュされ、別のページ分割されたレポートで再利用できる、ページ分割されたレポート用のアイテムです。 レポート パーツのファイル拡張子は .rsc です。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159985"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901072"
 ---
 # <a name="sap-bw-source"></a>SAP BW 転送元
   SAP BW 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元コンポーネントです。 SAP BW 変換元は、SAP Netweaver BW Version 7 システムからデータを抽出し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにこのデータを使用可能にします。  
@@ -107,7 +106,7 @@ ms.locfileid: "48159985"
   
     -   **[E - 抽出のみ]** オプションでは、要求 ID を指定します。  
   
--   文字列変換のルールを指定します (などによっては、SAP Netweaver BW システムが Unicode かどうか、すべての文字列を変換またはすべての文字列に変換`varchar`または`nvarchar`)。  
+-   文字列変換のルールを指定します (たとえば、すべての文字列を SAP Netweaver BW システムが Unicode であるかどうかに応じて変換するか、`varchar` または `nvarchar` に変換するかどうか)。  
   
 -   選択したオプションを使用して、抽出するデータをプレビューします。  
   
@@ -115,22 +114,22 @@ ms.locfileid: "48159985"
   
  変換元を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
- SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](http://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
+ SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>SSIS デザイナーを使用してソースを構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換元のプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [SAP bw 変換元エディター&#40;接続マネージャー ページ&#41;](sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW ソース エディター ([接続マネージャー] ページ)](sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP bw 変換元エディター&#40;列 ページ&#41;](sap-bw-source-editor-columns-page.md)  
+-   [SAP BW ソース エディター ([列] ページ)](sap-bw-source-editor-columns-page.md)  
   
--   [SAP bw 変換元エディター&#40;エラー出力 ページ&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW ソース エディター ([エラー出力] ページ)](sap-bw-source-editor-error-output-page.md)  
   
--   [SAP bw 変換元エディター &#40;[詳細] ページ&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW ソース エディター ([詳細設定] ページ)](sap-bw-source-editor-advanced-page.md)  
   
  SAP BW 変換元を構成するときに、SAP Netweaver BW オブジェクトを参照したり、ソース データをプレビューしたりするためにさまざまなダイアログ ボックスを使用できます。 これらのダイアログ ボックスの詳細については、次のトピックのいずれかを参照してください。  
   
--   [RFC 転送先の参照](look-up-rfc-destination.md)  
+-   [[RFC 転送先の参照]](look-up-rfc-destination.md)  
   
 -   [プロセス チェーンの参照](look-up-process-chain.md)  
   
@@ -138,7 +137,7 @@ ms.locfileid: "48159985"
   
 -   [プレビュー](preview.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft Connector 1.1 for SAP BW のコンポーネント](../microsoft-connector-for-sap-bw-components.md)  
   
   

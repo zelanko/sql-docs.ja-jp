@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetStrValue Method (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: da80e6ee5524dd4b5fbd34d28906d671a061d5ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62911846"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue メソッド (SqlServiceAdvancedProperty クラス)
   プロパティの文字列値を設定します。  
@@ -58,6 +56,6 @@ StrValue
  プロパティを文字列値に設定するには、プロパティ値の型が *string* である必要があります。  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

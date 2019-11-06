@@ -16,12 +16,12 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0157d30495166aba0a001997d843dafb5ba916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62870980"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によってエラーが発生した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に発生した問題の種類がエラーの重大度によって示されます。  
@@ -57,18 +57,18 @@ ms.locfileid: "48180152"
  RAISERROR を使用して、重大度レベル 1 ～ 25 のユーザー定義のエラー メッセージを生成することができます。 RAISERROR は、 **sys.messages** カタログ ビューに格納されているユーザー定義のエラー メッセージを参照することも、メッセージを動的に作成することもできます。 エラーの発生中に、**sys.messages** にあるユーザー定義エラー メッセージを使用する場合、RAISERROR で指定された重大度は、**sys.messages** で指定された重大度をオーバーライドします。 詳細については、「[RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)」を参照してください。  
   
 ## <a name="error-severity-and-trycatch"></a>エラーの重大度と TRY...CATCH  
- TRY...CATCH 構造は、データベース接続を終了しない、重大度が 10 を超えるすべての実行エラーを検出します。  
+ TRY...CATCH コンストラクトでは、データベース接続を終了しない、重大度が 10 を超えるすべての実行エラーが検出されます。  
   
- 重大度 0 ～ 10 のエラーは情報メッセージであるため、TRY...CATCH 構造の CATCH ブロックからのジャンプは実行されません。  
+ 重大度 0 から 10 のエラーは情報メッセージであるため、TRY...CATCH コンストラクトの CATCH ブロックからのジャンプは実行されません。  
   
  接続が終了すると実行は中断されるため、データベース接続を終了させるエラー (通常の場合、重大度 20 ～ 25 のエラー) は CATCH ブロックでは処理されません。  
   
  詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)に発生した問題の種類がエラーの重大度によって示されます。  
   
 ## <a name="retrieving-error-severity"></a>エラーの重大度の取得  
- システム関数 ERROR_SEVERITY を使用して、TRY...CATCH 構造の CATCH ブロックを実行したエラーの重大度を取得することができます。 CATCH ブロックの範囲外で呼び出された場合、ERROR_SEVERITY は NULL を返します。 詳細については、「[ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql)」を参照してください。  
+ システム関数 ERROR_SEVERITY を使用して、TRY...CATCH コンストラクトの CATCH ブロックを実行したエラーの重大度を取得することができます。 CATCH ブロックの範囲外で呼び出された場合、ERROR_SEVERITY は NULL を返します。 詳細については、「[ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン エラーについて](../native-client-ole-db-errors/errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [システム関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/system-functions-transact-sql)   

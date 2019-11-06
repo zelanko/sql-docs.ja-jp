@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f32495e2e12ab56ac2adb8ad5686a669714b81dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6ad90fe277e76f98298f4e66fe8c652e64fd38d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483656"
 ---
 # <a name="business-rules-master-data-services"></a>ビジネス ルール (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のビジネス ルールは、マスター データの品質と精度を保証するために使用するルールです。 ビジネス ルールを使用して自動的にデータを更新したり、電子メールを送信したり、ビジネス プロセスまたはワークフローを開始したりできます。  
@@ -69,13 +68,13 @@ ms.locfileid: "48074341"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しいビジネス ルールを作成してパブリッシュする。|[作成し、ビジネス ルールをパブリッシュ&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|新しいビジネス ルールを作成してパブリッシュする。|[ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |ビジネス ルールに複数の条件を追加する。|[ビジネス ルールに複数の条件を追加する &#40;マスター データ サービス&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |属性が値を持つことを必須とするビジネス ルールを作成する。|[属性値を要求する &#40;マスター データ サービス&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|属性値の変更に基づくアクションを行うためのビジネス ルールを作成する。|[属性値の変更に基づいてアクションを開始する&#40;マスター データ サービス&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|属性値の変更に基づくアクションを行うためのビジネス ルールを作成する。|[属性値の変更に基づいてアクションを開始する (マスター データ サービス)](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |既存のビジネス ルールの名前を変更する。|[ビジネス ルールの名前を変更する &#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|ビジネス ルールが適用されたときに通知を送信するように [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を構成する。|[通知を送信するビジネス ルールを構成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|特定のメンバーにビジネス ルールを適用する。|[ビジネス ルールに対して特定のメンバーを検証する&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|ビジネス ルールが適用されたときに通知を送信するように [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を構成する。|[通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|特定のメンバーにビジネス ルールを適用する。|[ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |ビジネス ルールを除外して、使用されないようにする。|[ビジネス ルールを除外する &#40;マスター データ サービス&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |既存のビジネス ルールを削除する。|[ビジネス ルールを削除する &#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48074341"
   
 -   [マスター データ サービス概要](master-data-services-overview-mds.md)  
   
--   [バージョン&#40;マスター データ サービス&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+-   [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   
 -   [検証 (マスター データ サービス)](../../2014/master-data-services/validation-master-data-services.md)  
   

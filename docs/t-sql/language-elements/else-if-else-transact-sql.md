@@ -17,16 +17,15 @@ helpviewer_keywords:
 - ELSE keyword
 - IF keyword
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075312"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,10 +48,10 @@ IF Boolean_expression
  TRUE または FALSE を返す式です。 *Boolean_expression* が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
   
  { *sql_statement* | *statement_block* }  
- 有効な 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロック (バッチ) を定義するのには、BEGIN と END は、フロー制御言語キーワードを使用します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはすべて BEGIN...END ブロック内で有効ですが、同じバッチ (ステートメント ブロック) 内で一緒にグループ化できない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもあります。  
+ 有効な 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロック (バッチ) を定義するには、フロー制御言語キーワードの BEGIN と END を使用します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはすべて BEGIN...END ブロック内で有効ですが、同じバッチ (ステートメント ブロック) 内で一緒にグループ化できない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもあります。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="examples"></a>使用例  
   
@@ -118,7 +117,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>D. 入れ子になった IF...ELSE ステートメントを使用する  
- 次の例では、IF のかを示します。別の内部は、ELSE ステートメントを入れ子にすることができます。 各ステートメントをテストするには、`@Number` 変数を `5`、`50`、および `500` に設定します。  
+ 次の例では、IF のかを示します。ELSE ステートメントを入れ子にする方法を示します。 各ステートメントをテストするには、`@Number` 変数を `5`、`50`、および `500` に設定します。  
   
 ```  
 DECLARE @Number int;  
@@ -137,7 +136,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. クエリをブール式の一部として使用する  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: クエリをブール式の一部として使用する  
  次の例では、`IF...ELSE` を使用し、`DimProduct` テーブルの項目の重み付けを基にして、2 つの応答のどちらをユーザーに表示するかを決定します。  
   
 ```  

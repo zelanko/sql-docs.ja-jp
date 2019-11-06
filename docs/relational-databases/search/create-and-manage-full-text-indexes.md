@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082933"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,6 +50,7 @@ ms.locfileid: "51669021"
 
 ##  <a name="view"></a> フルテキスト インデックスのプロパティを表示する
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Transact-SQL で、フルテキスト インデックスのプロパティを表示する
+
 |カタログ ビューまたは動的管理ビュー|[説明]|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|フルテキスト カタログからフルテキスト インデックスへの参照ごとに 1 行のデータを返します。|  
@@ -74,11 +74,11 @@ ms.locfileid: "51669021"
   
     |ページ|[説明]|  
     |----------|-----------------|  
-    |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**<br /><br />詳細については、「[フルテキスト インデックス プロパティ &#40;[全般] ページ&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)」を参照してください。|  
-    |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[フルテキスト インデックス プロパティ &#40;[列] ページ&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)」を参照してください。|  
-    |**スケジュール**|このページでは、フルテキスト インデックスを作成するためのテーブルの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。 詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。<br /><br /> 注: **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを閉じると、新規作成したスケジュールが SQL Server エージェント ジョブ ( *database_name*.*table_name*でテーブルの増分作成を開始) に関連付けられます。|  
+    |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**|  
+    |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[Populate Full-Text Indexes](populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。|
+    |**スケジュール**|このページでは、フルテキスト インデックスを作成するためのテーブルの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。 詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。<br /><br /> 注: **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを閉じると、新規作成したスケジュールが SQL Server エージェント ジョブ (*database_name*.*table_name* でテーブルの増分作成を開始) に関連付けられます。|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] をクリックして変更を保存し、**[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] をクリックして変更を保存し、 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  
   
 ##  <a name="props"></a>インデックスが作成されたテーブルと列のプロパティの表示  
  OBJECTPROPERTYEX など、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の中には、さまざまなフルテキスト インデックス プロパティの値を取得できるものがあります。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  

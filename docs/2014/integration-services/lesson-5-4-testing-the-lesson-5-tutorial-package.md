@@ -1,22 +1,21 @@
 ---
-title: '手順 4: レッスン 5 のチュートリアル パッケージのテスト | Microsoft Docs'
+title: 手順 4:レッスン 5 のチュートリアル パッケージのテスト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c9054cdbba90a3d0323a46e29aa4a860fbca7c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890944"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>手順 4:レッスン 5 のチュートリアル パッケージのテスト
   パッケージを実行すると、そのときに更新される変数から `Directory` の値が取得されます。パッケージの作成時に指定した元の名前は使用されません。 この変数の値は、SSISTutorial.dtsConfig ファイルにより生成されます。  
@@ -41,6 +40,6 @@ ms.locfileid: "48060892"
 2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 6: プロジェクト配置モデルを持つパラメーターを使用する](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [レッスン 6:プロジェクト配置モデルでパラメーターの使用](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

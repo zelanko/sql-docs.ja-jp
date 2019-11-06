@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c23c3216bc7bdff86a9e508de87c2086f6f6b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108861"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
   レポート マネージャーやレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。 SharePoint 統合モードを使用するように構成されているレポート サーバーを利用している場合に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用してレポート サーバー Web サービスの URL を変更するには、SharePoint サーバーの全体管理でも URL を更新する必要があります。  
@@ -44,7 +43,7 @@ ms.locfileid: "48162772"
   
 -   同じコンピューターに IIS 6.0 または 7.0 がインストールされている場合は、ポート 80 を使用する Web サイトの仮想ディレクトリの名前を確認してください。 Reporting Services の既定の仮想ディレクトリ名 ("Reports" および "ReportServer") を使用している仮想ディレクトリがあった場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL を構成する際に別の仮想ディレクトリ名を選択します。  
   
--   URL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して構成する必要があります。 システム ユーティリティを使用したり、 URL 予約を変更しないでください、 `URLReservations` RSReportServer.config ファイルを直接のセクション。 内部に格納されている基になる URL 予約と、RSReportServer.config ファイルに格納されている URL 設定の両方を更新し、同期を維持するためには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用する必要があります。  
+-   URL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して構成する必要があります。 システム ユーティリティを使用したり、 RSReportServer.config ファイルの `URLReservations` セクションで直接 URL 予約を変更したりしないでください。 内部に格納されている基になる URL 予約と、RSReportServer.config ファイルに格納されている URL 設定の両方を更新し、同期を維持するためには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用する必要があります。  
   
 -   レポートがあまり使用されない時間に行うようにしてください。 URL 予約を変更するたびに、レポート サーバー Web サービスとレポート マネージャーのアプリケーション ドメインの再利用が行われる可能性があります。  
   
@@ -76,15 +75,15 @@ ms.locfileid: "48162772"
   
          複数のカードがある場合や、ネットワークで IPv4 と IPv6 の両方のアドレスがサポートされている場合は、複数の IP アドレスが表示されます。 1 つの IP アドレスのみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。 通常、この値を選択するのは、明確な IP アドレスやホスト名を指定する複数の URL 予約 (イントラネット接続に使用するネットワーク アダプター カード用と外部接続に使用するネットワーク アダプター カード用など) を構成する場合です。  
   
-5.  ポートを指定します。 ポート 80 が既定値は[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で[!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]および Windows Server 2008 他のアプリケーションと共有できるためです。 カスタム ポート番号を使用する場合は、レポート サーバーへのアクセスに使用する URL で常にその番号を指定する必要があることに注意してください。 使用可能なポートを見つけるには、次の方法を使用できます。  
+5.  ポートを指定します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および Windows Server 2008 の [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] では、ポート 80 が既定のポートになっています。これは、他のアプリケーションとポートを共有できるためです。 カスタム ポート番号を使用する場合は、レポート サーバーへのアクセスに使用する URL で常にその番号を指定する必要があることに注意してください。 使用可能なポートを見つけるには、次の方法を使用できます。  
   
     -   コマンド プロンプトで次のコマンドを入力し、使用されている TCP ポートの一覧を取得します。  
   
-         `netstat –a –n -p tcp`  
+         `netstat -a -n -p tcp`  
   
-    -   Microsoft サポート技術情報の「 [TCP/IP ポートの割り当てについて](http://support.microsoft.com/kb/174904)」を読んで、TCP ポートの割り当てと、Well Known ポート (0 ～ 1023)、予約済みポート (1024 ～ 49151)、および動的/プライベート ポート (49152 ～ 65535) の違いについて確認します。  
+    -   Microsoft サポート技術情報の「 [TCP/IP ポートの割り当てについて](https://support.microsoft.com/kb/174904)」を読んで、TCP ポートの割り当てと、Well Known ポート (0 ～ 1023)、予約済みポート (1024 ～ 49151)、および動的/プライベート ポート (49152 ～ 65535) の違いについて確認します。  
   
-    -   Windows ファイアウォールを使用している場合はポートを開く必要があります。 手順については、次を参照してください。[レポート サーバーへのアクセスのファイアウォールを構成する](../report-server/configure-a-firewall-for-report-server-access.md)します。  
+    -   Windows ファイアウォールを使用している場合はポートを開く必要があります。 手順については、「 [Configure a Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   
 6.  まだ確認していない場合は、使用する予定の名前と同じ名前の仮想ディレクトリが IIS にないことを確認します (IIS がインストールされている場合)。  
   
@@ -170,7 +169,7 @@ ms.locfileid: "48162772"
 -   https://www.adventure-works.com:8080/reports  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

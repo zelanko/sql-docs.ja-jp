@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924707"
 ---
 # <a name="persisting-data"></a>データの保持
 (たとえば、ラップトップを使用して)、ポータブル コンピューター、接続および切断状態の両方で実行できるアプリケーションの必要性が生成されます。 ADO には、開発者に、クライアント カーソルを保存する機能を提供することによりこのサポートが追加されて**Recordset**をディスクに後で再読み込みします。  
   
  この種の機能は、次のようを使用することがいくつかのシナリオがあります。  
   
--   **旅行:** 変更を行い、後で、データベースに再接続してコミットできるは、新しいレコードを追加する機能を提供する必要が外出先で、アプリケーションを実行するとき。  
+-   **移動。** 外出先で、アプリケーションを作成する際に、変更を行い、後で、データベースに再接続してコミットできるは、新しいレコードを追加する機能を提供に不可欠です。  
   
--   **参照を更新する頻度:** 多くの場合、アプリケーションでは、テーブルが参照として使用されます: たとえば、税のテーブルの状態します。 頻繁に更新され、読み取り専用します。 サーバーからデータをこのアプリケーションを起動するたびに、再度読み取ることではなく、アプリケーションできますだけからデータを読み込むローカルに保存される**Recordset**します。  
+-   **ルックアップを頻繁に更新します。** 多くの場合、アプリケーションでは、テーブルとして使用されます参照-たとえば、税のテーブルの状態します。 頻繁に更新され、読み取り専用します。 サーバーからデータをこのアプリケーションを起動するたびに、再度読み取ることではなく、アプリケーションできますだけからデータを読み込むローカルに保存される**Recordset**します。  
   
  ADO では、保存および読み込みで**レコード セット**を使用して、 **Recordset.Save**と**Recordset.Open(,,,adCmdFile)** ADO 上のメソッド**Recordset**オブジェクト。  
   
@@ -113,7 +112,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このセクションでは、次のトピックを扱います。  
   
 -   [レコードセットの保持に関する詳細情報](../../../ado/guide/data/more-about-recordset-persistence.md)  

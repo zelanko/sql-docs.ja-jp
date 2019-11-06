@@ -11,20 +11,20 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be5092eef0cab7d4f9681df91c933c94291dc4bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011949"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートしたり、テーブルからデータを一括エクスポートしたりする場合、 *フォーマット ファイル* を使用して、データの一括エクスポートと一括インポートに必要なすべてのフォーマット情報を格納できます。 これには、そのテーブルに対応するデータ ファイル内の各フィールドのフォーマット情報が含まれます。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、XML フォーマット ファイルと XML 以外のフォーマット ファイルの 2 種類がサポートされます。 XML 以外のフォーマット ファイルにも XML フォーマット ファイルにもデータ ファイル内のすべてのフィールドの説明が含まれており、XML フォーマット ファイルには対応するテーブル列の説明も含まれています。 通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」をご覧ください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます: XML の形式と XML 以外のフォーマット ファイル。 XML 以外のフォーマット ファイルにも XML フォーマット ファイルにもデータ ファイル内のすべてのフィールドの説明が含まれており、XML フォーマット ファイルには対応するテーブル列の説明も含まれています。 通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)です。  
   
  
   
@@ -68,7 +68,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 ```  
  <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -110,7 +110,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   終了文字またはプレフィックス長がデータ ファイルの列によって異なる場合。  
   
 > [!NOTE]  
->  フォーマット ファイルが存在しない場合に、 **bcp** コマンドで data-format スイッチ (**-n**、 **-c**、 **-w**、または **-N**) を指定するか、BULK INSERT 操作で DATAFILETYPE オプションを指定すると、指定したデータ形式がデータ ファイルのフィールドを解釈するための既定の方法として使用されます。  
+>  フォーマット ファイルが存在しない場合に、 **bcp** コマンドで data-format スイッチ ( **-n**、 **-c**、 **-w**、または **-N**) を指定するか、BULK INSERT 操作で DATAFILETYPE オプションを指定すると、指定したデータ形式がデータ ファイルのフィールドを解釈するための既定の方法として使用されます。  
   
  
   
@@ -128,7 +128,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
  [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

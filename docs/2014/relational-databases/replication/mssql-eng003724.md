@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG003724 error
@@ -13,12 +12,12 @@ ms.assetid: 10cb119d-92df-4124-b85d-cd2f2666c99c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62c5300561cf70462402692d03f53f2de860781a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3ea7c8720d43fdba53821091c0664bfe375a57b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63191450"
 ---
 # <a name="mssqleng003724"></a>MSSQL_ENG003724
     
@@ -37,7 +36,7 @@ ms.locfileid: "48131182"
  データベース内のオブジェクトがレプリケートされると、システム テーブル **sysarticles** (スナップショット パブリケーションまたはトランザクション パブリケーションの場合) または **sysmergearticles** (マージ パブリケーションの場合) に、レプリケート済みのマークが付けられています。 レプリケート済みのオブジェクトを削除しようとした場合に、このエラーが発生します。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- データベース オブジェクトを削除する前に、そのオブジェクトがレプリケートされていないことを確認します。 以下に例を示します。  
+ データベース オブジェクトを削除する前に、そのオブジェクトがレプリケートされていないことを確認します。 例 :  
   
 -   パブリケーション データベースでエラーが発生した場合、オブジェクトを削除する前にパブリケーションからアーティクルを削除します。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
@@ -20,13 +19,13 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: feab5870c703fbe253923006a6f6ba84c4959cdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106249"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
   データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 グラフを使用すると、大量の集計情報がひとめでわかります。 グラフを作成する前に、データを慎重に準備および理解することが重要です。これにより、グラフをすばやく効率的にデザインできます。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。 グラフをすぐに使用を開始するには、バー、列、スパーク ライン、および円グラフのチュートリアルを参照してください[チュートリアル&#40;レポート ビルダー&#41; ](../report-builder-tutorials.md)または横棒グラフおよび円グラフのチュートリアル[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
@@ -98,18 +97,18 @@ ms.locfileid: "48120042"
   
  グラフ上のデータを整理するには、いくつかの方法があります。  
   
--   円グラフを使用している場合は、複数の小さいスライスを "その他" という 1 つのスライスにまとめます。 こうすると、円グラフのスライスの数が少なくなります。 詳細については、「[円グラフの小さいスライスをまとめる &#40;レポート ビルダーおよび SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)」を参照してください。  
+-   円グラフを使用している場合は、複数の小さいスライスを "その他" という 1 つのスライスにまとめます。 こうすると、円グラフのスライスの数が少なくなります。 詳細については、「 [円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)」(グラフ (レポート ビルダーおよび SSRS)) を参照してください。  
   
 -   データ ポイントの数が多い場合は、データ ポイント ラベルを使用しないでください。 データ ポイント ラベルが最も効果的なのは、グラフ上のポイントが少数の場合です。  
   
--   不要なデータや無関係なデータをフィルター処理します。 これにより、グラフに表示する主要なデータを強調することができます。 グラフ内のデータ ポイントをフィルター処理するには、カテゴリ グループまたは系列グループに対するフィルターを設定します。 既定では、組み込み関数 Sum を使って、同じグループに属する値が系列内の個々のデータ ポイントとして集計されます。 系列の集計関数を変更する場合は、フィルター式の集計関数を変更する必要もあります。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+-   不要なデータや無関係なデータをフィルター処理します。 これにより、グラフに表示する主要なデータを強調することができます。 グラフ内のデータ ポイントをフィルター処理するには、カテゴリ グループまたは系列グループに対するフィルターを設定します。 既定では、組み込み関数 Sum を使って、同じグループに属する値が系列内の個々のデータ ポイントとして集計されます。 系列の集計関数を変更する場合は、フィルター式の集計関数を変更する必要もあります。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
--   テーブルやマトリックスのテンプレートに比率データを表示する場合は、横棒グラフではなく線形ゲージの使用を検討してください。 セル内にある 1 つの値を表示するには、ゲージの方が適しています。 詳細については、「[入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)」 を参照してください。  
+-   テーブルやマトリックスのテンプレートに比率データを表示する場合は、横棒グラフではなく線形ゲージの使用を検討してください。 セル内にある 1 つの値を表示するには、ゲージの方が適しています。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
   
   
   
 ##  <a name="AggregateValues"></a> グラフのデータ フィールドの値の集計  
- 既定では、フィールドがグラフの [値] 領域に追加されると、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 フィールドを特定の領域にドロップせずにグラフ上にドラッグすると、グラフでは、フィールドのデータ型に基づいて、このフィールドがカテゴリ軸 (x 軸) または値軸 (y 軸) のいずれに属するかが判断されます。 [値] 領域にドロップされた数値フィールドは、SUM 関数を使用して集計されます。 [値] 領域で値フィールドのデータ型が String の場合、フィールドに数値が存在する場合でも、グラフに数値は表示されず、COUNT 関数が表示されます。 この動作を回避するには、フィールドに、書式設定された数値を格納した文字列ではなく、数値データ型を設定してください。 Visual Basic の式を使用して文字列値を使用して数値データ型に変換することができます、`CDbl`または`CInt`定数。 たとえば、次の複合式を使用すると、文字列として書式設定された数値を格納する `MyField` という名前のフィールドを変換できます。  
+ 既定では、フィールドがグラフの [値] 領域に追加されると、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 フィールドを特定の領域にドロップせずにグラフ上にドラッグすると、グラフでは、フィールドのデータ型に基づいて、このフィールドがカテゴリ軸 (x 軸) または値軸 (y 軸) のいずれに属するかが判断されます。 [値] 領域にドロップされた数値フィールドは、SUM 関数を使用して集計されます。 [値] 領域で値フィールドのデータ型が String の場合、フィールドに数値が存在する場合でも、グラフに数値は表示されず、COUNT 関数が表示されます。 この動作を回避するには、フィールドに、書式設定された数値を格納した文字列ではなく、数値データ型を設定してください。 Visual Basic の式を使用して文字列値を数値データ型に変換するには、`CDbl` 定数または `CInt` 定数を使用します。 たとえば、次の複合式を使用すると、文字列として書式設定された数値を格納する `MyField` という名前のフィールドを変換できます。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -118,38 +117,38 @@ ms.locfileid: "48120042"
   
   
 ##  <a name="InThisSection"></a> トピックの内容  
- [レポートにグラフを追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  レポートにグラフを追加する最初の手順について説明します。  
   
- [グラフの種類&#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で使用できるすべてのグラフの種類とサブタイプについて説明します。また、さまざまな種類のグラフを使用する際の注意事項およびベスト プラクティスについても説明します。  
+ [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]で使用できるすべてのグラフの種類とサブタイプについて説明します。また、さまざまな種類のグラフを使用する際の注意事項およびベスト プラクティスについても説明します。  
   
- [グラフの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  全体の見た目を向上させる書式設定を使用し、グラフの主要なデータ ポイントを強調表示します。  
   
- [空にして、Null データ ポイントのグラフで&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
  空の値または NULL 値を持つフィールドに基づくグラフを操作する際の考慮事項について説明します。  
   
- [グラフ上で複数のデータ範囲を持つ系列の表示&#40;レポート ビルダーおよび SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [グラフ上で複数のデータ範囲を持つ系列の表示 &#40;レポート ビルダーおよび SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  複数範囲のデータを含む系列にスケール区切りを追加する方法について説明します。  
   
- [グラフ上の複数の系列&#40;レポート ビルダーおよび SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [グラフ上の複数の系列 &#40;レポート ビルダーおよび SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  同じグラフで複数の系列を表示するいくつかの方法について説明します。これには、グラフの種類の組み合わせ、セカンダリ軸の使用、異なるグラフの種類の指定、および複数のグラフ領域の使用などが含まれます。  
   
- [同じデータセットに複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  同じレポート データセットのデータをさまざまな形式で表示することができます。  
   
- [追加またはグラフでのグループを削除&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [グラフでのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  グループや入れ子構造のグループをグラフに追加する方法について説明します。  
   
- [移動平均をグラフに追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [グラフへの移動平均の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
  系列内のデータの平均を計算する移動平均式の使用方法について説明します。  
   
- [グラフのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [グラフのトラブルシューティング &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  グラフを操作する際に役立つヒントについて説明します。  
   
-## <a name="see-also"></a>参照  
- [画像、テキスト ボックス、四角形、および行&#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   

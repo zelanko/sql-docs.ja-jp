@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 559864d5d3931a1ef57c51089ce671bcb53215d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901433"
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
   このトピックでは、SQL Server 2016 Integration Services (SSIS) を使用して ODBC データ フローを作成するために必要な概念について説明します。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -33,7 +32,7 @@ ms.locfileid: "48187512"
 ## <a name="getting-started-with-the-odbc-source-and-destination"></a>ODBC 入力元および入力先の概要  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]を使用するパッケージをセットアップする前に、以下のコンポーネントを使用できることを確認する必要があります。  
   
--   [ODBC 変換元](odbc-source.md)  
+-   [ODBC 入力元](odbc-source.md)  
   
 -   [ODBC 変換先](odbc-destination.md)  
   
@@ -130,6 +129,6 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
   
 -   [ODBC 変換元](odbc-source.md)  
   
--   [ODBC 変換先](odbc-destination.md)  
+-   [ODBC 入力先](odbc-destination.md)  
   
  

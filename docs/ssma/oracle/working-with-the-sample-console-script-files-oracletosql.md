@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2eb30c45af544fc57c0d3dfd328ce2d4c2246746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: fbe3e8c07af283f657926776e906dca4a95f7a7e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675310"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259590"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>サンプルのコンソール スクリプト ファイルの操作 (OracleToSQL)
 いくつかのサンプル ファイルは、ユーザーの参照と使用状況の製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -49,7 +49,7 @@ ms.locfileid: "47675310"
   
     変数値ファイルの詳細については、次を参照してください。[変数値ファイルの作成&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)します。  
   
--   **AssessmentReportGenerationSample.xml:** このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成するユーザーをできるようにします。  
+-   **AssessmentReportGenerationSample.xml:** このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成できます。  
   
     `generate-assessment-report`コマンド、ユーザーが mandatorily 変数の値を変更する必要があります (参照**VariableValueFileSample.xml**) で、`object-name`属性をユーザーによって使用されているデータベース名。 指定すると、オブジェクトの種類に応じて、`object-type`値を変更する必要があります。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47675310"
   
     -   `source-schema:` 変換に必要となる、ソース データベースを指定します。  
   
-    -   `sql-server-schema`: に移行するのには、ターゲット データベースを指定します。  
+    -   `sql-server-schema`:ターゲット データベースへの移行を指定します  
   
     **コマンド名**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47675310"
   
     **属性**  
   
-    `object-name`: 指定した転送元データベース]、[オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
+    `object-name`:ソース データベースを指定/オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
   
     **コマンド名**  
   

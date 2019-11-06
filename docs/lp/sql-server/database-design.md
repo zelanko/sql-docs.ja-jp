@@ -4,20 +4,24 @@ hide_bc: true
 title: SQL Server のデータベースの設計
 description: ビジネス ニーズに最適なデータベースを設計する際に役立つ SQL Server の機能を確認します。
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: e72ef40dcce199c962c67e2c8c517681664e5b11
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c08b067a8c92b7fea32b53cd8b14b7ecc13272d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077241"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +31,7 @@ ms.locfileid: "51702180"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server のダウンロード</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +77,7 @@ ms.locfileid: "51702180"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: データベースの設計</h1>
+        <h1>SQL Server:データベースの設計</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>
@@ -92,7 +96,7 @@ ms.locfileid: "51702180"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>[照合順序]</h3>
+                                                    <h3>照合順序</h3>
                                                     <p>SQL Server の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 char や varchar などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 </p>
                                                 </div>
                                             </div>
@@ -112,7 +116,7 @@ ms.locfileid: "51702180"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>データベース</h3>
-                                                    <p>SQL Server のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたは組) と列 (属性) から構成されます。</p>
+                                                    <p>SQL Server のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたはタプル) と列 (属性) から構成されます。</p>
                                                 </div>
                                             </div>
                                         </div>

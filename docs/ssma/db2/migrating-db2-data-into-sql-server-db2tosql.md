@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b9dbaf1a3cc15373097a1aea996c36f895d45172
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9cc7b3dd309dfac9e35021ca3234ca66483181e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074099"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) への DB2 データの移行
 変換されたオブジェクトが正常に同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、DB2 からデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -56,7 +55,7 @@ ms.locfileid: "51670391"
   
 **データを移行するには**  
   
-1.  次を確認します。  
+1.  次のことを検証します。  
   
     -   DB2 プロバイダーは、SSMA を実行しているコンピューターにインストールされます。  
   
@@ -84,10 +83,10 @@ ms.locfileid: "51670391"
   
     -   実行するため**サーバー側のデータ移行**を選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定** ダイアログ ボックス。  
   
-4.  右クリック**スキーマ**DB2 メタデータ エクスプ ローラーでクリック**Migrate Data**します。 個々 のオブジェクトまたはオブジェクトのカテゴリのデータを移行することもできますオブジェクトまたはその親フォルダーを右クリック。選択、 **Migrate Data**オプション。  
+4.  右クリック**スキーマ**DB2 メタデータ エクスプ ローラーでクリック**Migrate Data**します。 個々 のオブジェクトまたはオブジェクトのカテゴリのデータを移行することもできます。オブジェクトまたはその親フォルダーを右クリックします。選択、 **Migrate Data**オプション。  
   
     > [!NOTE]  
-    > SSMA for DB2 の拡張機能パックがのインスタンスにインストールされていないかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、場合**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行する際に、次のエラーが発生しました: 'SQL Server のデータ移行の SSMA コンポーネントが見つかりません、サーバー側のデータの移行を可能にすることはできません。 拡張機能パックが正しくインストールされているかどうかを確認してください '。 クリックして**キャンセル**データ移行を終了します。  
+    > SSMA for DB2 の拡張機能パックがのインスタンスにインストールされていないかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、場合**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行する際に、次のエラーが発生しました。' SQL Server のデータ移行の SSMA コンポーネントが見つかりません、サーバー側のデータの移行を可能にすることはできません。 拡張機能パックが正しくインストールされているかどうかを確認してください '。 クリックして**キャンセル**データ移行を終了します。  
   
 5.  **DB2 への接続**ダイアログ ボックスが接続の資格情報を入力し、クリックして**Connect**します。 DB2 に接続する方法の詳細については、次を参照してください[DB2 データベースに接続する&#40;DB2ToSQL。&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   

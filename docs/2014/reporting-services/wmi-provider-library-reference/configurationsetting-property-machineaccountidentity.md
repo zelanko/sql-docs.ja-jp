@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - MachineAccountIdentity property
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d03d6ebec2a3d2c40b8cd674e51dee56160bc26b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: f3e9e871ab8bceebe2aa6507883fcac19c610db8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097597"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>MachineAccountIdentity プロパティ (WMI)
   レポート サーバーがインストールされているコンピューターのコンピューター アカウント ID を取得します。  
@@ -34,12 +33,12 @@ public string MachineAccountIdentity;
 ```  
   
 ## <a name="property-values"></a>プロパティ値  
- A`String`にレポート サーバーがインストールされているコンピューターのコンピューター アカウント id を表す値です。  
+ レポート サーバーがインストールされているコンピューターのコンピューター アカウント ID を含む `String` 値。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting プロパティ](msreportserver-configurationsetting-properties.md)  
   
   

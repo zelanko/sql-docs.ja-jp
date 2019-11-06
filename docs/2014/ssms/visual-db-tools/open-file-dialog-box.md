@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.openfile
-- vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f197c90dc20c3c3cff031e58af2e1cac19bcb706
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63138897"
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
-  ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
+  ディスクから既存のファイルを開くには、 **[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
   
  このダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[開く]** をクリックし、 **[ファイル]** をクリックします。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスなどの他の要素のファイルを開く場合にも表示されます。 **[ファイル]** メニューの **[開く]** を選択し、 **[プロジェクト/ソリューション]** を選択して、同様の **[プロジェクトを開く]** ダイアログ ボックスを開きます。  
   
@@ -97,5 +96,3 @@ ms.locfileid: "48070859"
   
  **[ネットワーク ドライブの割り当て]**  
  **[ネットワーク ドライブの割り当て]** ダイアログ ボックスを開きます。  
-  
-  

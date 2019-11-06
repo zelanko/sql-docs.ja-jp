@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096235"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_チューニング\_(TRANSACT-SQL) の推奨事項
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   チューニングの推奨事項に関する詳細な情報を返します。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。
 
 | **列名** | **データ型** | **[説明]** |
 | --- | --- | --- |
@@ -62,6 +61,7 @@ ms.locfileid: "47792110"
  によって返される情報`sys.dm_db_tuning_recommendations`データベース エンジンは、潜在的なクエリ パフォーマンスの低下を識別し、永続化されていないときに更新されます。 推奨事項がまでのみ保持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 データベース管理者は、サーバーの再利用後も保持する場合は、チューニング推奨設定のバックアップ コピーを定期的に作成する必要があります。 
 
  `currentValue` フィールドに、`state`列は、次の値がある可能性があります。
+ 
  | 状態 | 説明 |
  |--------|-------------|
  | `Active` | アクティブであり、まだ適用されていません。 お勧めします。 ユーザーは、推奨設定スクリプトを作成し、それを手動で実行できます。 |
@@ -80,7 +80,7 @@ JSON ドキュメント`state`列が現在の状態で、推奨事項である�
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` オプションは、検証プロセス中に、ユーザーが無効です。 有効にする`FORCE_LAST_GOOD_PLAN`オプションを使用して[AUTOMATIC_TUNING 設定データベースの ALTER &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)ステートメントまたは強制的に、プラン内のスクリプトを使用して手動で`[details]`列。 |
 | `UnsupportedStatementType` | クエリにプランを強制することはできません。 サポートされていないクエリの例は、カーソルと`INSERT BULK`ステートメント。 |
 | `LastGoodPlanForced` | 推奨事項が正常に適用されます。 |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 潜在的なパフォーマンスの低下、識別されたが、`FORCE_LAST_GOOD_PLAN`オプションが有効になっていないを参照してください: [AUTOMATIC_TUNING 設定データベースの ALTER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 推奨事項を手動で適用または有効にする`FORCE_LAST_GOOD_PLAN`オプション。 |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 潜在的なパフォーマンスの低下、識別されたが、`FORCE_LAST_GOOD_PLAN`オプションが有効になっていないを参照してください - [AUTOMATIC_TUNING 設定データベースの ALTER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)します。 推奨事項を手動で適用または有効にする`FORCE_LAST_GOOD_PLAN`オプション。 |
 | `VerificationAborted`| 検証プロセスが再起動またはクエリ ストアのクリーンアップにより中止されました。 |
 | `VerificationForcedQueryRecompile`| クエリは、大幅なパフォーマンス向上がないために再コンパイルされます。 |
 | `PlanForcedByUser`| プランを使用して、ユーザーが手動で強制[sp_query_store_force_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)プロシージャ。 |
@@ -88,27 +88,95 @@ JSON ドキュメント`state`列が現在の状態で、推奨事項である�
 
  [詳細] 列の統計では、プランのランタイム統計情報 (たとえば、現在の CPU 時間) は表示されません。 推奨事項の詳細の回帰の検出時に行われ、理由について説明します[!INCLUDE[ssde_md](../../includes/ssde_md.md)]パフォーマンスの低下を識別します。 使用`regressedPlanId`と`recommendedPlanId`クエリに[クエリ ストアのカタログ ビュー](../../relational-databases/performance/how-query-store-collects-data.md)プランの正確なランタイム統計情報を検索します。
 
-## <a name="using-tuning-recommendations-information"></a>チューニングの推奨事項の情報を使用してください。  
-取得する次のクエリを使用することができます、[!INCLUDE[tsql](../../includes/tsql-md.md)]問題を解決するスクリプト。  
+## <a name="examples-of-using-tuning-recommendations-information"></a>チューニング推奨設定の情報を使用する例  
+
+### <a name="example-1"></a>例 1
+次に、生成された取得[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリの適切なプランを強制するスクリプト。  
  
 ```sql
 SELECT name, reason, score,
-        JSON_VALUE(details, '$.implementationDetails.script') as script,
-        details.* 
+    JSON_VALUE(details, '$.implementationDetails.script') AS script,
+    details.* 
 FROM sys.dm_db_tuning_recommendations
-    CROSS APPLY OPENJSON(details, '$.planForceDetails')
-                WITH (  query_id int '$.queryId',
-                        regressed_plan_id int '$.regressedPlanId',
-                        last_good_plan_id int '$.recommendedPlanId') as details
-WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
+CROSS APPLY OPENJSON(details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressed_plan_id int '$.regressedPlanId',
+            last_good_plan_id int '$.recommendedPlanId') AS details
+WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
-  
- 推奨事項のビューでクエリの値に使用できる JSON 関数の詳細については、次を参照してください。[の JSON サポート](../../relational-databases/json/index.md)で[!INCLUDE[ssde_md](../../includes/ssde_md.md)]します。
+### <a name="example-2"></a>例 2
+次に、生成された取得[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトは、指定されたクエリと推定利益に関する追加情報の適切なプランを強制します。
+
+```sql
+SELECT reason, score,
+      script = JSON_VALUE(details, '$.implementationDetails.script'),
+      planForceDetails.*,
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  *(regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+FROM sys.dm_db_tuning_recommendations
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
+            regressedPlanErrorCount int,
+            recommendedPlanErrorCount int,
+            regressedPlanExecutionCount int,
+            regressedPlanCpuTimeAverage float,
+            recommendedPlanExecutionCount int,
+            recommendedPlanCpuTimeAverage float
+          ) AS planForceDetails;
+```
+
+### <a name="example-3"></a>例 3
+次に、生成された取得[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトは、指定されたクエリとクエリ テキストを含む追加の情報の適切なプランとクエリのストアに格納されているクエリ プランを強制します。
+
+```sql
+WITH cte_db_tuning_recommendations
+AS (SELECT reason,
+        score,
+        query_id,
+        regressedPlanId,
+        recommendedPlanId,
+        current_state = JSON_VALUE(state, '$.currentValue'),
+        current_state_reason = JSON_VALUE(state, '$.reason'),
+        script = JSON_VALUE(details, '$.implementationDetails.script'),
+        estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+        error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+    FROM sys.dm_db_tuning_recommendations
+    CROSS APPLY OPENJSON(Details, '$.planForceDetails')
+    WITH ([query_id] int '$.queryId',
+        regressedPlanId int '$.regressedPlanId',
+        recommendedPlanId int '$.recommendedPlanId',
+        regressedPlanErrorCount int,    
+        recommendedPlanErrorCount int,
+        regressedPlanExecutionCount int,
+        regressedPlanCpuTimeAverage float,
+        recommendedPlanExecutionCount int,
+        recommendedPlanCpuTimeAverage float
+        )
+    )
+SELECT qsq.query_id,
+    qsqt.query_sql_text,
+    dtr.*,
+    CAST(rp.query_plan AS XML) AS RegressedPlan,
+    CAST(sp.query_plan AS XML) AS SuggestedPlan
+FROM cte_db_tuning_recommendations AS dtr
+INNER JOIN sys.query_store_plan AS rp ON rp.query_id = dtr.query_id
+    AND rp.plan_id = dtr.regressedPlanId
+INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
+    AND sp.plan_id = dtr.recommendedPlanId
+INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
+INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
+```
+
+推奨事項のビューでクエリの値に使用できる JSON 関数の詳細については、次を参照してください。[の JSON サポート](../../relational-databases/json/index.md)で[!INCLUDE[ssde_md](../../includes/ssde_md.md)]します。
   
 ## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+必要があります`VIEW SERVER STATE`権限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]します。   
+必要があります、`VIEW DATABASE STATE`で、データベースに対する権限[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。   
 
 ## <a name="see-also"></a>参照  
  [自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)   

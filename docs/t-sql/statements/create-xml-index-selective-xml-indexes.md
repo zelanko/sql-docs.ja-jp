@@ -10,15 +10,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1ad57508fcfdab112a5ebefc4badb9b65b232444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058494"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選択的 XML インデックス)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ CREATE XML INDEX index_name
     [WITH ( <index_options> )]  
   
 <table_object> ::=   
-{ [database_name. [schema_name ] . | schema_name. ] table_name }  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <xquery_or_sql_values_path>::=   
 <path_name>   

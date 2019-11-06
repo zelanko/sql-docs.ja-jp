@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - positive values [Integration Services]
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ff2f3cdf2bd44aa617dc378c32ad99cf1aa2042
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b77aaffe4e6f0f0163978ba346abdd31cdc61ce8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897308"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 式)
   数値式の符号として正 (+1)、負 (-1)、0 のいずれかを返します。  
@@ -55,7 +54,7 @@ SIGN(-123.45)
 SIGN(DealerPrice - StandardCost)  
 ```  
   
-## <a name="see-also"></a>参照  
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+## <a name="see-also"></a>関連項目  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

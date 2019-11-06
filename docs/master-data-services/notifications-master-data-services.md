@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - notifications [Master Data Services]
@@ -14,15 +13,14 @@ helpviewer_keywords:
 - e-mail [Master Data Services]
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ab3388df365458d7fdc8fcac7692b58c6a2da743
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.openlocfilehash: 265c285781484ab06a329a617f5a0f9433a6b4d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904046"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
 
@@ -36,11 +34,11 @@ ms.locfileid: "51701297"
 ## <a name="when-notifications-are-sent"></a>通知の送信タイミング  
  通知を構成すると、以降は次のインスタンスで自動の電子メール通知を送信できます。  
   
-|インスタンス|[説明]|  
+|Instance|説明|  
 |--------------|-----------------|  
-|データがビジネス ルール検証に失敗した場合|属性値がビジネス ルールの検証に失敗した場合に電子メールを送信するように、個々のビジネス ルールを構成する必要があります。 通知には次の情報が含まれます。<br /><br /> [モデル]<br /><br /> [バージョンのオプション]<br /><br /> Entity<br /><br /> メンバー コード<br /><br /> 失敗したビジネス ルール<br /><br /> その属性値によってビジネス ルールが失敗したメンバーへのリンク<br /><br /> 通知発行時間<br /><br /> 詳細については、「 [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)の通知を構成します。|  
-|モデル バージョンの状態が変わった場合|モデル バージョンの状態が変わるたびに、モデル管理者であるユーザーは自動的に通知を受け取ります。 通知には次の情報が含まれます。<br /><br /> [モデル]<br /><br /> [バージョンのオプション]<br /><br /> バージョンの前の状態と新しい状態<br /><br /> 通知発行時間<br /><br /> 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。|  
-|変更セットの状態の変更|承認を必要とするエンティティに対する変更セットの状態が変更されるたびに、エンティティの管理者または変更セットの所有者、あるいはその両方が自動的に通知を受信します。 通知には次の情報が含まれます。<br /><br /> [モデル]<br /><br /> [バージョンのオプション]<br /><br /> 変更セットの名前<br /><br /> 前の状態<br /><br /> 新しい状態<br /><br /> 保留中の変更内容を表示および変更するために変更セットを適用するリンク<br /><br /> 詳細については、「[変更セット (マスター データ サービス)](../master-data-services/changesets-master-data-services.md)」を参照してください。|  
+|データがビジネス ルール検証に失敗した場合|属性値がビジネス ルールの検証に失敗した場合に電子メールを送信するように、個々のビジネス ルールを構成する必要があります。 通知には次の情報が含まれます。<br /><br /> モデル<br /><br /> バージョン<br /><br /> Entity<br /><br /> メンバー コード<br /><br /> 失敗したビジネス ルール<br /><br /> その属性値によってビジネス ルールが失敗したメンバーへのリンク<br /><br /> 通知発行時間<br /><br /> 詳細については、「 [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)の通知を構成します。|  
+|モデル バージョンの状態が変わった場合|モデル バージョンの状態が変わるたびに、モデル管理者であるユーザーは自動的に通知を受け取ります。 通知には次の情報が含まれます。<br /><br /> モデル<br /><br /> バージョン<br /><br /> バージョンの前の状態と新しい状態<br /><br /> 通知発行時間<br /><br /> 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。|  
+|変更セットの状態の変更|承認を必要とするエンティティに対する変更セットの状態が変更されるたびに、エンティティの管理者または変更セットの所有者、あるいはその両方が自動的に通知を受信します。 通知には次の情報が含まれます。<br /><br /> モデル<br /><br /> バージョン<br /><br /> 変更セットの名前<br /><br /> 前の状態<br /><br /> 新しい状態<br /><br /> 保留中の変更内容を表示および変更するために変更セットを適用するリンク<br /><br /> 詳細については、「[変更セット (マスター データ サービス)](../master-data-services/changesets-master-data-services.md)」を参照してください。|  
   
 ## <a name="system-settings"></a>システム設定  
  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] には、通知に影響を与える設定があります。 これらの設定は、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整するか、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの System Settings テーブルで直接調整することができます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  

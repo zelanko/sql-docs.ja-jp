@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - FlagValue Property (ServerSettingsGeneralFlag Class)
@@ -20,12 +18,12 @@ ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d6f1aff6636814b358972675487eb7b2ed5cf2ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ef78f09512f4d1ad06c48259914fbc8742fdbd4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63135478"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>FlagValue プロパティ (ServerSettingsGeneralFlag クラス)
   フラグの値を取得します。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

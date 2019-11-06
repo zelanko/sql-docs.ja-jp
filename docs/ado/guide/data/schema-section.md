@@ -12,32 +12,31 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aaf20a7318236280e7b861a5fbd21ea8315d288d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924297"
 ---
 # <a name="schema-section"></a>スキーマ セクション
 スキーマ セクションが必要です。 前の例に示すように、ADO は更新可能な限りデータ値のセマンティクスを保持するには、各列に関する詳細なメタデータを書き込みます。 ただし、XML に読み込むには、ADO のみが必要です、列および所属する行セットの名前。 最小限のスキーマの例を次に示します。  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
-    xmlns:rs="urn:schemas-microsoft-com:rowset"  
-    xmlns:z="#RowsetSchema">  
-  <s:Schema id="RowsetSchema">  
-    <s:ElementType name="row" content="eltOnly">  
-      <s:AttributeType name="ShipperID"/>  
-      <s:AttributeType name="CompanyName"/>  
-      <s:AttributeType name="Phone"/>  
-      <s:Extends type="rs:rowbase"/>  
-    </s:ElementType>  
-  </s:Schema>  
-  <rs:data>  
+    xmlns:rs="urn:schemas-microsoft-com:rowset"  
+    xmlns:z="#RowsetSchema">  
+  <s:Schema id="RowsetSchema">  
+    <s:ElementType name="row" content="eltOnly">  
+      <s:AttributeType name="ShipperID"/>  
+      <s:AttributeType name="CompanyName"/>  
+      <s:AttributeType name="Phone"/>  
+      <s:Extends type="rs:rowbase"/>  
+    </s:ElementType>  
+  </s:Schema>  
+  <rs:data>  
 ...  
-  </rs:data>  
+  </rs:data>  
 </xml>  
 ```  
   
@@ -79,35 +78,35 @@ ms.locfileid: "51599807"
   
 ```  
 <s:Schema id="RowsetSchema">  
-  <s:ElementType name="row" content="eltOnly">  
-    <s:attribute type="s1"/>  
-    <s:attribute type="CompanyName"/>  
-    <s:attribute type="s3"/>  
-    <s:extends type="rs:rowbase"/>  
-  </s:ElementType>  
-  <s:AttributeType name="s1" rs:name="ShipperID" rs:number="1"   
-    rs:maydefer="true" rs:writeunknown="true">  
-    <s:datatype dt:type="i4" dt:maxLength="4" rs:precision="10"   
-      rs:fixedlength="true" rs:maybenull="true"/>  
-  </s:AttributeType>  
+  <s:ElementType name="row" content="eltOnly">  
+    <s:attribute type="s1"/>  
+    <s:attribute type="CompanyName"/>  
+    <s:attribute type="s3"/>  
+    <s:extends type="rs:rowbase"/>  
+  </s:ElementType>  
+  <s:AttributeType name="s1" rs:name="ShipperID" rs:number="1"   
+    rs:maydefer="true" rs:writeunknown="true">  
+    <s:datatype dt:type="i4" dt:maxLength="4" rs:precision="10"   
+      rs:fixedlength="true" rs:maybenull="true"/>  
+  </s:AttributeType>  
 </s:Schema>  
 <rs:data>  
-  <z:row s1="1" CompanyName="Speedy Express" s3="(503) 555-9831"/>  
+  <z:row s1="1" CompanyName="Speedy Express" s3="(503) 555-9831"/>  
 </rs:data>  
 ```  
   
  同様があるため、エイリアスに対して定義されていない`CompanyName`前の例では、`CompanyName`ドキュメント全体で一貫して使用する必要があります。  
   
 ## <a name="data-types"></a>データ型  
- データ型は、dt:type 属性を持つ列に適用できます。 使用できる XML 型に説明するものでは、データ型を参照してください、 [W3C の XML データの指定](https://www.w3.org/TR/1998/NOTE-XML-data/)します。 2 つの方法でデータ型を指定できます。 列の定義自体で直接 dt:type 属性を指定するか、入れ子になった列定義の要素として s:datatype コンストラクトを使用します。 例えば以下のようにします。  
+ データ型は、dt:type 属性を持つ列に適用できます。 使用できる XML 型に説明するものでは、データ型を参照してください、 [W3C の XML データの指定](http://www.w3.org/TR/1998/NOTE-XML-data/)します。 2 つの方法でデータ型を指定できます。 列の定義自体で直接 dt:type 属性を指定するか、入れ子になった列定義の要素として s:datatype コンストラクトを使用します。 例を次に示します。  
   
 ```  
 <s:AttributeType name="Phone" >  
-  <s:datatype dt:type="string"/>  
+  <s:datatype dt:type="string"/>  
 </s:AttributeType>  
 ```  
   
- 等価します。  
+ 上記の式は、次の式と同じです。  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  
@@ -122,20 +121,20 @@ ms.locfileid: "51599807"
 ```  
 <!-- 1. String with no max length -->  
 <s:AttributeType name="title_id"/>  
-<!—or -->  
+<!-or -->  
 <s:AttributeType name="title_id" dt:type="string"/>  
   
-<!—- 2. Fixed length string with max length of 6 -->  
+<!-- 2. Fixed length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
-    <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
+    <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
 </s:AttributeType>  
   
-<!—- 3. Variable length string with max length of 6 -->  
+<!-- 3. Variable length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
-    <s:datatype dt:type="string" dt:maxLength="6" />  
+    <s:datatype dt:type="string" dt:maxLength="6" />  
 </s:AttributeType>  
   
-<!—- 4. Integer -->  
+<!-- 4. Integer -->  
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   
@@ -146,10 +145,10 @@ ms.locfileid: "51599807"
   
 ```  
 <s:AttributeType name="ShipperID">  
-  <s:datatype dt:type="int" dt:maxLength="4"/>  
+  <s:datatype dt:type="int" dt:maxLength="4"/>  
 </s:AttributeType>  
 <s:AttributeType name="CompanyName">  
-  <s:datatype dt:type="string" dt:maxLength="40" rs:maybenull="true"/>  
+  <s:datatype dt:type="string" dt:maxLength="40" rs:maybenull="true"/>  
 </s:AttributeType>  
 ```  
   
@@ -175,5 +174,5 @@ ms.locfileid: "51599807"
   
  For OLE DB、XML ドキュメントのスキーマ内で使用可能な構造、OLE DB の詳細については、の定義を参照してください"urn: スキーマ-microsoft-com:rowset"と OLE DB プログラマ ガイド。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

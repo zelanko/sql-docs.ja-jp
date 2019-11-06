@@ -4,35 +4,34 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107187"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の PowerPivot ギャラリーにパブリッシュされた PowerPivot ブックからデータを取得することができます。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  PowerPivot データ ソースは、SharePoint サイトの PowerPivot ギャラリーにパブリッシュされている必要があります。  
   
- レポート ビルダーから PowerPivot ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 Excel 用 PowerPivot でこのクライアント ライブラリがインストールされているが、このアプリケーションがないコンピューターを使用している場合は、ダウンロードして、ページから ADOMD.NET をインストールする必要があります、 [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565)します。  
+ レポート ビルダーから PowerPivot ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 Excel 用 PowerPivot でこのクライアント ライブラリがインストールされているが、このアプリケーションがないコンピューターを使用している場合は、ダウンロードして、ページから ADOMD.NET をインストールする必要があります、 [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565)します。  
   
 ## <a name="data-source-type"></a>データ ソースの種類  
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
   
 ## <a name="connection-string"></a>[接続文字列]  
- 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxします。  
+ 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx します。  
   
 ## <a name="credentials"></a>[資格情報]  
  PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳しくは、「[データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)に関する記事を参照してください。  
@@ -53,7 +52,7 @@ ms.locfileid: "48166102"
   
  PowerPivot ブック内のデータは大幅に圧縮されていますが、PowerPivot ブックから取得されたレポートのデータは圧縮されません。 クエリ デザイナーを使用してフィルターとパラメーターを指定し、レポートに必要なデータだけに制限します。  
   
- Analysis Services キューブへの接続とは異なり、PowerPivot モデルには階層はありません。 ブック内の関連するスライサーに同様の機能を提供するには、レポートでカスケード型パラメーターを作成する必要があります。 詳細については、次を参照してください。[レポートにカスケード パラメーターを追加&#40;レポート ビルダーおよび SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)します。  
+ Analysis Services キューブへの接続とは異なり、PowerPivot モデルには階層はありません。 ブック内の関連するスライサーに同様の機能を提供するには、レポートでカスケード型パラメーターを作成する必要があります。 詳細については、「 [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)で作成するモバイル レポートで使用できます。  
   
  PowerPivot モデルの基になるデータ値に対応するように、式を調整しなければならない場合があります。 式を変更してデータを適切なデータ型に変換したり、集計関数を追加または削除したりすることが必要になります。 たとえば、データ型を文字列型から整数型に変換するには、 `=CInt`を使用します。 レポートをパブリッシュする前に、PowerPivot モデルのデータから意図した値が表示されることを必ず確認してください。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48166102"
 -   レポートには、PowerPivot データ ソースからの PowerPivot データのみが格納されます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services MDX クエリ デザイナーのユーザー インターフェイス&#40;レポート ビルダー&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

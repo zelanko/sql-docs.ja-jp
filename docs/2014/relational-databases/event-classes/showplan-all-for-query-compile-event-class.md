@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: facea3ca200d2b4ecb6a7230e8b49f85772a27fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 398b24ddbb9d128446012d36f4b691596433054c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662226"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile イベント クラス
   Showplan All for Query Compile イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントがコンパイルされるときに発生します。 Showplan 操作を識別するには、このイベント クラスを含めます。 含まれる情報は、Showplan XML For Query Compile イベント クラスで使用できる情報のサブセットです。  
@@ -61,7 +60,7 @@ ms.locfileid: "48125162"
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [プラン表示の論理操作と物理操作のリファレンス](../showplan-logical-and-physical-operators-reference.md)  

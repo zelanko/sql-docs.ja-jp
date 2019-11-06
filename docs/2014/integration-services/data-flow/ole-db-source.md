@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120579"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770998"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48120579"
   
  パラメーター化クエリを使用すると、変数をパラメーターにマップして、SQL ステートメント内の個別のパラメーターの値を指定できます。  
   
- OLE DB ソースは、OLE DB 接続マネージャーを使用してデータ ソースに接続します。OLE DB 接続マネージャーは、使用する OLE DB プロバイダーを指定します。 詳細については、「 [OLE DB 接続マネージャー](../connection-manager/ole-db-connection-manager.md)」をご覧ください。  
+ OLE DB ソースは、OLE DB 接続マネージャーを使用してデータ ソースに接続します。OLE DB 接続マネージャーは、使用する OLE DB プロバイダーを指定します。 詳細については、「 [OLE DB 接続マネージャー](../connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトでは、OLE DB 接続マネージャーを作成できるデータ ソース オブジェクトも用意されています。このオブジェクトは、データ ソースとデータ ソース ビューを OLE DB ソースで使用できるようにします。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48120579"
  このストアド プロシージャでは、パラメーター値を指定するために変数 `@StartProductID` と `@CheckDate`を必要としています。 パラメーターが **[マッピング]** ボックスの一覧に表示される順序は関係ありません。 ここで必要となるのは、パラメーター名が、\@ 記号を含めて、ストアド プロシージャの変数名と一致することのみです。  
   
 ### <a name="mapping-parameters-to-variables"></a>パラメーターの変数へのマッピング  
- パラメーターは、実行時にパラメーター値を提供する変数にマップされます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されているシステム変数を使用することもできますが、通常はユーザー定義変数を使用します。 ユーザー定義変数を使用する場合、この変数に設定するデータ型は、パラメーター参照がマップされている列のデータ型との互換性があることを確認してください。 詳細については、「[Integration Services (SSIS) の変数](../integration-services-ssis-variables.md)」を参照してください。  
+ パラメーターは、実行時にパラメーター値を提供する変数にマップされます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されているシステム変数を使用することもできますが、通常はユーザー定義変数を使用します。 ユーザー定義変数を使用する場合、この変数に設定するデータ型は、パラメーター参照がマップされている列のデータ型との互換性があることを確認してください。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」を参照してください。  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>OLE DB ソースのトラブルシューティング  
  OLE DB ソースによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、OLE DB ソースによる外部データ ソースからのデータ読み込みに関するトラブルシューティングを行うことができます。 OLE DB ソースによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
@@ -91,21 +90,21 @@ ms.locfileid: "48120579"
   
  **[OLE DB ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [OLE DB ソース エディター&#40;接続マネージャー ページ&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB ソース エディター &#40;[接続マネージャー] ページ&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB ソース エディター&#40;列 ページ&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB ソース エディター &#40;[列] ページ&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [OLE DB ソース エディター&#40;エラー出力 ページ&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB ソース エディター &#40;[エラー出力] ページ&#41;](../ole-db-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [OLE DB カスタム プロパティ](ole-db-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [OLE DB 変換元を使用してデータを抽出する](ole-db-source.md)  
+-   [OLE DB ソースを使用してデータを抽出する](ole-db-source.md)  
   
 -   [クエリ パラメーターをデータ フロー コンポーネントの変数にマップする](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120579"
 -   [マージ変換およびマージ結合変換用にデータを並べ替える](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- social.technet.microsoft.com の Wiki の記事「 [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS から Oracle への接続)」  
+ social.technet.microsoft.com の Wiki の記事「 [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS から Oracle への接続)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB 変換先](ole-db-destination.md)   
- [Integration Services &#40;SSIS&#41;変数](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
  [データ フロー](data-flow.md)  
   
   

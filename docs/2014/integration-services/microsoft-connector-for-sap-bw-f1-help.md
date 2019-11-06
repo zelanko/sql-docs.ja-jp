@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e7412074cbea2baecf2a3437f7bbc267ed1e2ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890664"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Microsoft Connector 1.1 for SAP BW の F1 ヘルプ
   このセクションには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW の 3 種類のコンポーネントについての F1 ヘルプのトピックが含まれています。 このヘルプ トピックは、ウィザードの各画面やダイアログ ボックスで F1 キーを押すか、[ヘルプ] をクリックすることにより、ユーザー インターフェイスから表示することもできます。  
@@ -32,15 +31,15 @@ ms.locfileid: "48199752"
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 変換元の F1 ヘルプ  
   
--   [SAP bw 変換元エディター&#40;接続マネージャー ページ&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW ソース エディター ([接続マネージャー] ページ)](data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP bw 変換元エディター&#40;列 ページ&#41;](data-flow/sap-bw-source-editor-columns-page.md)  
+-   [SAP BW ソース エディター ([列] ページ)](data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [SAP bw 変換元エディター&#40;エラー出力 ページ&#41;](data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW ソース エディター ([エラー出力] ページ)](data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP bw 変換元エディター &#40;[詳細] ページ&#41;](data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW ソース エディター ([詳細設定] ページ)](data-flow/sap-bw-source-editor-advanced-page.md)  
   
--   [RFC 転送先の参照](data-flow/look-up-rfc-destination.md)  
+-   [[RFC 転送先の参照]](data-flow/look-up-rfc-destination.md)  
   
 -   [プロセス チェーンの参照](data-flow/look-up-process-chain.md)  
   
@@ -50,15 +49,15 @@ ms.locfileid: "48199752"
   
 ### <a name="sap-bw-destination-f1-help"></a>SAP BW 変換先の F1 ヘルプ  
   
--   [SAP BW 変換先エディター&#40;接続マネージャー ページ&#41;](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 変換先エディター ([接続マネージャー] ページ)](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 変換先エディター&#40;マッピング ページ&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 変換先エディター ([マッピング] ページ)](data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 変換先エディター&#40;エラー出力 ページ&#41;](data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 変換先エディター ([エラー出力] ページ)](data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 変換先エディター &#40;[詳細] ページ&#41;](data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 変換先エディター ([詳細設定] ページ)](data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [インフォパッケージの参照](data-flow/look-up-infopackage.md)  
+-   [[インフォパッケージの参照]](data-flow/look-up-infopackage.md)  
   
 -   [新しいインフォオブジェクトの作成](data-flow/create-new-infoobject.md)  
   

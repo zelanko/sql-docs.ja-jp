@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539164"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903864"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52539164"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **サーバー監査とデータベース監査の仕様を作成する方法:**  
   
@@ -66,25 +65,25 @@ ms.locfileid: "52539164"
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、**[新しい監査...]** を選択します。詳しくは、「 [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** を選択します。詳しくは、「 [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
   
 3.  オプションの選択が完了したら、 **[OK]** をクリックします。  
-  
+
 #### <a name="to-create-a-database-level-audit-specification"></a>データベース レベルの監査仕様を作成するには  
   
 1.  オブジェクト エクスプローラーで、監査仕様を作成するデータベースを展開します。  
   
 2.  **[セキュリティ]** フォルダーを展開します。  
   
-3.  **[データベース監査の仕様]** フォルダーを右クリックし、**[新しいデータベース監査の仕様...]** を選択します。  
+3.  **[データベース監査の仕様]** フォルダーを右クリックし、 **[新しいデータベース監査の仕様...]** を選択します。  
   
      **[データベース監査の仕様の作成]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **名前**  
+     **[名前]**  
      データベース監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  
-     既存のデータベース監査の名前。 監査の名前を入力するか、一覧から選択します。  
+     既存のサーバー監査オブジェクトの名前。 監査の名前を入力するか、一覧から選択します。  
   
      **[監査アクションの種類]**  
      キャプチャするデータベース レベルの監査アクション グループと監査アクションを指定します。 データベース レベルの監査アクション グループと監査アクションの一覧、およびそれらに含まれるイベントの説明については、「 [SQL Server 監査のアクション グループとアクション](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  

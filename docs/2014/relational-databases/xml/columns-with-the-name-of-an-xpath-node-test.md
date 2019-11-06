@@ -10,18 +10,18 @@ helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6d2ed88feef80027a7c52c89b3fe891d8f589c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 804ca2ebe3aa307272645fa5a626ea2212367f87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637965"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>XPath ノード テストの名前が付いた列
-  XPath ノード テストのいずれかが列名である場合、内容は次の表に示すようにマップされます。 列名がいずれかの XPath ノード テストであれば、対応するノードに内容がマップされます。 列の SQL 型が場合`xml`エラーが返されます。  
+  XPath ノード テストのいずれかが列名である場合、内容は次の表に示すようにマップされます。 列名がいずれかの XPath ノード テストであれば、対応するノードに内容がマップされます。 列の SQL 型が `xml` の場合は、エラーが返されます。  
   
 |列名|動作|  
 |-----------------|--------------|  
@@ -71,7 +71,7 @@ FOR XML PATH;
   
  `<First>Ken</First>`  
   
- `<Last>Sánchez</Last>`  
+ `<Last>S??nchez</Last>`  
   
  `</EmpName>`  
   

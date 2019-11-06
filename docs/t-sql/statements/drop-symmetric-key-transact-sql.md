@@ -21,15 +21,14 @@ helpviewer_keywords:
 - cryptography [SQL Server], symmetric keys
 - DROP SYMMETRIC KEY statement
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 57411cac88e2e2edd353230b254f37240cf1c143
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 7fa45fece4925165bb87ad960acd6e7d1731c38e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929187"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

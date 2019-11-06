@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 175f3922a5c8d78f94db78cdbaf01534c5c7bc9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073171"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services の配置に関する要件と注意点
   あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  
@@ -53,7 +52,7 @@ ms.locfileid: "48172352"
   
  [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
- [最大容量仕様&#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
+ [最大容量仕様 &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>必要なディスク領域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インストールのさまざまな側面とオブジェクト処理に関連するタスクによって、必要なディスクの空き容量が異なります。 次の一覧では、このような要件について説明します。  
@@ -62,7 +61,7 @@ ms.locfileid: "48172352"
  大きなファクト テーブルを持つキューブでは、小さなファクト テーブルを持つキューブよりも大きなディスク空き容量が必要です。 同様に、小さなエクステントでも、多くの大きなディメンションを持つキューブでは、ディメンション メンバーが少ないキューブよりも大きなディスク空き容量が必要です。 通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースでは、基になるリレーショナル データベースに保存されている同じデータに必要な空き容量の約 20% が必要です。  
   
  集計  
- 集計では、追加される集計に比例した空き容量が必要であり、集計が多くなるほど、大きな空き容量が必要です。 不要な集計を作成しないようにするには、通常、集計に必要な追加の空き容量が、基になるリレーショナル データベースに保存されているデータのサイズの約 10% を超えないようにする必要があります。  
+ 集計で必要な追加、集計するために比例した空き容量より多くの集計があるより多くの領域が必要です。 不要な集計を作成しないようにするには、通常、集計に必要な追加の空き容量が、基になるリレーショナル データベースに保存されているデータのサイズの約 10% を超えないようにする必要があります。  
   
  データ マイニング  
  既定では、マイニング構造によって、トレーニングされるデータセットがディスクにキャッシュされます。 このキャッシュされたデータをディスクから削除するには、マイニング構造オブジェクトで **[構造消去の処理]** の処理オプションを使用できます。 詳細については、「[処理の要件および注意事項 (データ マイニング)](../data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
@@ -76,7 +75,7 @@ ms.locfileid: "48172352"
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>ハードウェアまたはソフトウェアの障害時における可用性の提供  
  ハードウェアやソフトウェアでは、さまざまな理由により障害が発生します。 ただし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インストールの可用性を維持すると、そのような障害の原因をトラブルシューティングできるだけでなく、障害が発生した場合にユーザーがシステムの使用を続行できるように代替のリソースを提供することもできます。 サーバーのクラスター化と負荷分散は、通常、ハードウェアまたはソフトウェアの障害が発生した場合に可用性の維持に必要な代替のリソースを提供するために使用されます。  
   
- ハードウェアまたはソフトウェアの障害が発生した場合に可用性を維持するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をフェールオーバー クラスターに配置することを検討してください。 フェールオーバー クラスターでは、なんらかの理由でプライマリ ノードで障害が発生した場合や、プライマリ ノードを再起動する必要がある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のクラスター化によってセカンダリ ノードにフェールオーバーされます。 フェールオーバーは非常に短時間で行われ、その後にユーザーがクエリを実行すると、そのクエリはセカンダリ ノードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにアクセスします。 フェールオーバー クラスターの詳細については、「 [Windows Server テクノロジ: フェールオーバー クラスター](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)」をご覧ください。  
+ ハードウェアまたはソフトウェアの障害が発生した場合に可用性を維持するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をフェールオーバー クラスターに配置することを検討してください。 フェールオーバー クラスターでは、なんらかの理由でプライマリ ノードで障害が発生した場合や、プライマリ ノードを再起動する必要がある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のクラスター化によってセカンダリ ノードにフェールオーバーされます。 フェールオーバーは非常に短時間で行われ、その後にユーザーがクエリを実行すると、そのクエリはセカンダリ ノードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにアクセスします。 フェールオーバー クラスターの詳細については、次を参照してください。 [Windows Server テクノロジ。フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)します。  
   
  可用性の問題に対する別の解決方法としては、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを 2 つ以上の実稼働サーバーに配置することです。 Windows サーバーのネットワーク負荷分散 (NLB) 機能を使用して、実稼働サーバーを 1 つのクラスターに結合できます。 NLB クラスターでは、クラスター内のサーバーがハードウェアまたはソフトウェアの問題が原因で使用できない場合、NLB サービスによって使用可能なサーバーにクエリするように指示されます。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48172352"
   
 -   1 つまたは複数のリレーショナル データベースから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースにデータが提供される場合は、これらのデータベースを別のコンピューターに移動できます。 データベースを移動する前に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースと基になるデータベース間に存在するネットワークの速度と帯域幅を検討してください。 ネットワークが低速であるか混雑している場合、基になるデータベースを別のコンピューターに移動すると、処理のパフォーマンスが低下します。  
   
--   処理がクエリのパフォーマンスに影響を与えるが、クエリの負荷が低いときに処理できない場合は、処理タスクをステージング サーバーに移動し、実稼働サーバーとステージング サーバーの同期をオンラインで実行することを検討してください。 詳細については、「 [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)」を参照してください。 また、リモート パーティションを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに処理を分散することもできます。 リモート パーティションの処理では、ローカル コンピューターのリソースではなく、リモート サーバーのプロセッサおよびメモリ リソースを使用します。 リモート パーティションの管理の詳細については、「[リモート パーティションの作成と管理 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)」を参照してください。  
+-   処理クエリのパフォーマンスに影響を与えます削減クエリ負荷のときに処理できない場合は、ステージング サーバーに移行して、処理タスク、実稼働サーバーとステージング サーバーの同期をオンラインを実行することを検討してください。 詳細については、「 [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)」を参照してください。 また、リモート パーティションを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに処理を分散することもできます。 リモート パーティションの処理では、ローカル コンピューターのリソースではなく、リモート サーバーのプロセッサおよびメモリ リソースを使用します。 リモート パーティションの管理の詳細については、「[リモート パーティションの作成と管理 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)」を参照してください。  
   
 -   クエリのパフォーマンスは低いが、ローカル サーバーのプロセッサおよびメモリ リソースを増やすことができない場合は、2 つ以上の実稼働サーバーに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを配置することを検討してください。 ネットワーク負荷分散 (NLB) を使用して、サーバーを 1 つのクラスターに結合できます。 NLB クラスターでは、クエリは NLB クラスター内のすべてのサーバーに自動的に分散されます。  
   

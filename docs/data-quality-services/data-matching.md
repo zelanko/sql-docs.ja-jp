@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0464dc24bcb2842c822ac2b2a38e19283b428ad2
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: c2aede1654f993feba951d2053d9a0ae5e31011b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992237"
 ---
 # <a name="data-matching"></a>データ照合
 

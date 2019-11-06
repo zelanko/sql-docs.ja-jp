@@ -4,23 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d56a6e32818296343b711769ad594bf7cadce57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011244"
 ---
 # <a name="full-text-search"></a>フルテキスト検索
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。 フルテキスト クエリをテーブルに対して実行するには、まずデータベース管理者がテーブル上にフルテキスト インデックスを作成する必要があります。 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 これらの列は、次のデータ型のいずれかを持つことができます: `char`、 `varchar`、 `nchar`、 `nvarchar`、 `text`、 `ntext`、 `image`、 `xml`、または`varbinary(max)`および FILESTREAM です。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。 フルテキスト クエリをテーブルに対して実行するには、まずデータベース管理者がテーブル上にフルテキスト インデックスを作成する必要があります。 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 この列のデータ型は、`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary(max)`、FILESTREAM のいずれかになります。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。  
   
  フルテキスト クエリでは、英語や日本語などの特定の言語の規則に基づいて語や句を操作することにより、フルテキスト インデックス内のテキスト データに対して言語検索を実行できます。 フルテキスト クエリには、単純な語や句、または複数の形式の語や句を含めることができます。 フルテキスト クエリでは、1 つ以上の一致 ( *ヒット*とも呼ばれます) が含まれているすべてのドキュメントが返されます。 一致は、フルテキスト クエリに指定されたすべての語句が対象のドキュメントに含まれていて、その他の検索条件 (一致する語句間の距離など) を満たしているときに、発生します。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48144192"
 >  フルテキスト検索は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのオプションのコンポーネントです。 詳細については、次を参照してください。 [SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)します。  
   
 ##  <a name="benefits"></a> フルテキスト検索では、どうすればでしょうか。  
- フルテキスト検索はさまざまなビジネス シナリオで応用できます。たとえば、e ビジネスでは Web サイトで品目を検索できます。また、法律事務所では訴訟データのリポジトリで訴訟履歴を検索し、人事部門では保管している履歴書と職務明細書を照合できます。 フルテキスト検索の基本的な管理タスクと開発タスクは、どのビジネス シナリオでも同じです。 ただし、特定のビジネス シナリオで、ビジネスの目標を達成できるようにフルテキスト インデックスおよびクエリを調整することができます。 たとえば e ビジネスでは、結果の順位、再呼び出しの精度 (既存の一致結果のうちフルテキスト クエリで実際に返される結果の数)、または複数言語のサポートよりも、パフォーマンスの最大化が重視されます。 法律事務所では、ヒットしたすべての結果 (情報の*総再呼び出し*) を返すことが最も重要な要素となります。  
+ フルテキスト検索はさまざまな e ビジネス-検索 web サイト上のアイテムのようなビジネス シナリオに適用されます。法律、有効なデータのリポジトリの履歴の企業検索または、人事部門に一致するジョブの説明ストアド再開します。 フルテキスト検索の基本的な管理タスクと開発タスクは、どのビジネス シナリオでも同じです。 ただし、特定のビジネス シナリオで、ビジネスの目標を達成できるようにフルテキスト インデックスおよびクエリを調整することができます。 たとえば e ビジネスでは、結果の順位、再呼び出しの精度 (既存の一致結果のうちフルテキスト クエリで実際に返される結果の数)、または複数言語のサポートよりも、パフォーマンスの最大化が重視されます。 法律事務所では、ヒットしたすべての結果 (情報の*総再呼び出し*) を返すことが最も重要な要素となります。  
   
  [このトピックの内容](#top)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48144192"
   
  フルテキスト クエリでは、少数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] 述語 (CONTAINS と FREETEXT) および関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 ただし、ビジネス シナリオの検索目的によってフルテキスト クエリの構造は異なります。 以下に例を示します。  
   
--   e ビジネス - Web サイト上で製品を検索する場合  
+-   e ビジネス - Web サイト上で製品を検索する場合:  
   
     ```  
     SELECT product_id   
@@ -62,7 +62,7 @@ ms.locfileid: "48144192"
     AND product_cost < 200 ;  
     ```  
   
--   人員採用のシナリオ - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の使用経験を持つ候補者を検索する場合  
+-   人員採用のシナリオ - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の使用経験を持つ候補者を検索する場合:  
   
     ```  
     SELECT candidate_name,SSN   

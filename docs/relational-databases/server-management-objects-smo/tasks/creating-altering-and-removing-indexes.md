@@ -1,7 +1,7 @@
 ---
-title: 作成、変更、およびインデックスを削除します。マイクロソフトのドキュメント
+title: インデックスの作成、変更、および削除 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7325d9a9093e1b62ecf8564ca10c31499d915a45
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 566cec97b8c26f21602807b3dd36c307864f62ec
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671311"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148475"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>インデックスの作成、変更、および削除
+
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト) 階層では、インデックスは <xref:Microsoft.SqlServer.Management.Smo.Index> オブジェクトで表現します。 インデックス付き列は、<xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> プロパティによって表される <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> オブジェクトのコレクションで表現します。  
@@ -29,10 +29,10 @@ ms.locfileid: "51671311"
  <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Index> プロパティを指定すると、XML 列のインデックスを作成できます。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Visual Basic での非クラスター化複合インデックスの作成  
- このコード例では、非クラスター化複合インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 設定、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>プロパティを**False**非クラスター化インデックス。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスのプロパティをFalseに設定し<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>ます。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Visual C# での非クラスター化複合インデックスの作成  
- このコード例では、非クラスター化複合インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 設定、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>プロパティを**False**非クラスター化インデックス。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスのプロパティをFalseに設定し<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>ます。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>PowerShell での非クラスター化複合インデックスの作成  
- このコード例では、非クラスター化複合インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 設定、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>プロパティを**False**非クラスター化インデックス。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスのプロパティをFalseに設定し<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>ます。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
@@ -188,7 +188,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Visual Basic での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は MySampleCollection という名前の XML スキーマコレクションで、XML スキーマ[を使用して](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)作成されます。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -208,7 +208,7 @@ Public Class A
         Dim tb As New Table(db1, "XmlTable3")  
   
         Dim mySample As New XmlSchemaCollection(db1, "Sample4", "dbo")  
-        mySample.Text = "<xsd:schema xmlns:xsd=""https://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
+        mySample.Text = "<xsd:schema xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
         mySample.Create()  
   
         Dim col11 As Column  
@@ -251,7 +251,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Visual C# での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は MySampleCollection という名前の XML スキーマコレクションで、XML スキーマ[を使用して](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)作成されます。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -271,7 +271,7 @@ public class A {
       Table tb = new Table(db1, "XmlTable3");  
   
       XmlSchemaCollection mySample = new XmlSchemaCollection(db1, "Sample4", "dbo");  
-      mySample.Text = "<xsd:schema xmlns:xsd=\"https://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
+      mySample.Text = "<xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
       mySample.Create();  
   
       Column col11;  
@@ -314,7 +314,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>PowerShell での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は MySampleCollection という名前の XML スキーマコレクションで、XML スキーマ[を使用して](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)作成されます。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

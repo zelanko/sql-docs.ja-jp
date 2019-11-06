@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: da77653fa78503a62ec974aa88d41dee020a34d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483277"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス (Master Data Services 構成マネージャー)
   **[データベース メール プロファイルとアカウントの作成]** ダイアログ ボックスを使用すると、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのデータベース メール プロファイルおよびデータベース メール アカウントを作成できます。 このプロファイルは、ビジネス ルールの検証が失敗したときに電子メールでユーザーやグループに通知する際に使用されます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48089182"
 |**電子メール アドレス**|アカウントの電子メール アドレスの名前を入力します。 これは、電子メールの送信元の電子メール アドレスで、 *email_name*@*domain_name*の形式にする必要があります。 例の電子メール アドレスは sales@contoso.com です。|  
 |**表示名**|この設定は省略可能です。 このアカウントから送信する電子メール メッセージに表示する名前を入力します。 たとえば、表示名は Contoso Sales Group のようになります。|  
 |**[返信用電子メール アドレス]**|この設定は省略可能です。 このアカウントから送信した電子メール メッセージに対する返信に使用する電子メール アドレスを入力します。 例の返信用電子メール アドレスは admin@contoso.com です。|  
-|**[SMTP サーバー]**|アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 たとえば、SMTP サーバーの形式は`smtp.` *< company_name >*`.com`します。 詳細については、電子メールの管理者に問い合わせてください。|  
+|**[SMTP サーバー]**|アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 たとえば、SMTP サーバーの形式は`smtp.` *< company_name >* `.com`します。 詳細については、電子メールの管理者に問い合わせてください。|  
 |**[ポート番号]**|このアカウントで使用する SMTP サーバーのポート番号を入力します。 既定の SMTP ポートは 25 です。|  
 |**[このサーバーはセキュリティで保護された接続 (SSL) を必要とする]**|SSL (Secure Sockets Layer) を使用して通信を暗号化します。|  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48089182"
 |**[匿名認証]**|SMTP サーバーで認証を要求しないことを指定します。 SMTP サーバーの認証には資格情報をまったく使用しません。|  
   
 ## <a name="see-also"></a>参照  
- [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [マスター データ サービスのデータベースと Web サイトの設定](set-up-the-database-and-website-for-master-data-services.md)  
   
   

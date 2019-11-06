@@ -15,31 +15,30 @@ helpviewer_keywords:
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b4eb0d7865b71ba29ec00895e64574c0a188b3bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121920"
 ---
 # <a name="operator-precedence-transact-sql"></a>演算子の優先順位 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  複合式に複数の演算子がある場合は、演算子の優先順位によって、操作の実行順序が決まります。 実行される順序により、結果の値は大きく変わります。  
+  複合式に複数の演算子がある場合は、演算子の優先順位によって、操作のシーケンスが決まります。 実行される順序により、結果の値は大きく変わります。  
   
- 演算子には、次の表に示す優先順位レベルが定義されています。 優先順位が高い演算子は、優先順位が低い演算子よりも前に評価されます。  
+ 演算子には、次の表に示す優先順位レベルが定義されています。 優先順位が高い演算子は、優先順位が低い演算子よりも前に評価されます。 次の表では、1 が最も高いレベルで 8 が最も低いレベルです。
   
-|レベル|演算子|  
+|Level|オペレーター|  
 |-----------|---------------|  
 |1|~ (ビットごとの NOT)|  
 |2|* (乗算)、/ (除算)、% (剰余)|  
 |3|+ (正号)、- (負号)、+ (追加)、+ (連結)、- (減算)、& (ビットごとの AND)、^ (ビットごとの排他的 OR)、&#124; (ビットごとの OR)|  
 |4|=、>、\<、>=、<=、<>、!=、!>、!< (比較演算子)|  
-|5|[NOT]|  
-|6|[AND]|  
+|5|NOT|  
+|6|AND|  
 |7|ALL、ANY、BETWEEN、IN、LIKE、OR、SOME|  
 |8|= (代入)|  
   
@@ -52,9 +51,9 @@ SET @MyNumber = 4 - 2 + 27;
 SELECT @MyNumber;  
 ```  
   
- 式の中で演算子の定義済みの優先順位をオーバーライドするには、かっこを使用します。 この場合、かっこ内のすべての演算が評価され、1 つの値が作成されてから、かっこ外の演算子でこの値が使用されます。  
+ 式の中で演算子の定義済みの優先順位をオーバーライドするには、かっこを使用します。 1 つの値を生成するために、かっこ内のすべてのものが評価されます。 その値は、かっこ外の任意の演算子で使用できます。  
   
- たとえば、次の `SET` ステートメントで使用される式では、乗算演算子の優先順位は加算演算子よりも高くなります。 したがって、乗算演算子が先に評価され、式の結果は `13` になります。  
+ たとえば、次の `SET` ステートメントで使用される式では、乗算演算子の優先順位は加算演算子よりも高くなります。 乗算演算が最初に評価され、式の結果は `13` です。  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -63,7 +62,7 @@ SET @MyNumber = 2 * 4 + 5;
 SELECT @MyNumber;  
 ```  
   
- 次の `SET` ステートメントで使用される式では、かっこにより、加算が先に実行されます。 式の結果は `18` になります。  
+ 次の `SET` ステートメントで使用される式では、かっこにより、加算が先に評価されます。 式の結果は `18` になります。  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -72,7 +71,7 @@ SET @MyNumber = 2 * (4 + 5);
 SELECT @MyNumber;  
 ```  
   
- 式の中でかっこが入れ子になっている場合は、最も深い入れ子になった式が先に評価されます。 次の例ではかっこが入れ子になっており、かっこで囲まれている `5 - 3` という式が最も深い入れ子になっています。 この式の結果は `2` になります。 次に、加算演算子 (`+`) によって、この結果に `4` が加算されます。 ここでの結果は `6` になります。 最後に `6` に `2` が乗算され、式の最終的な結果は `12` になります。  
+ 式の中でかっこが入れ子になっている場合は、最も深い入れ子になった式が先に評価されます。 次の例ではかっこが入れ子になっており、かっこで囲まれている `5 - 3` という式が最も深い入れ子になっています。 この式の結果は `2` になります。 次に、加算演算子 (`+`) によって、この結果が `4` に加算され、結果は `6` の値になります。 最後に `6` に `2` が乗算され、式の最終的な結果は `12` になります。  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -86,5 +85,4 @@ SELECT @MyNumber;
  [論理演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  
   

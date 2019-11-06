@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.computermgr.cert.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 009ef6454246682a91e14dd3ffa391f35b011d34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245008"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([証明書] タブ)
   **[MSSQLSERVER のプロトコルのプロパティ]** ダイアログ ボックスの **[証明書]** ページでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の証明書の選択や、証明書のプロパティの表示を行います。 証明書を選択するまで、すべてのフィールドは空になっています。  
@@ -41,7 +40,7 @@ ms.locfileid: "48119312"
  [有効期限]  
  証明書の有効期間の最終日付です。  
   
- 表示名  
+ フレンドリ名  
  証明書の発行先の個人または認証局を表す表示名または一般名です。  
   
  [発行元]  

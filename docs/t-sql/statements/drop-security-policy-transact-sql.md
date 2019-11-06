@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - DROP SECURITY POLICY statement
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e6403eec02fa800ca0fd09ac93479c993f47fd26
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 33b04fb6e1db0afa87ecde24e28dd28772d6c3a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070281"
 ---
-# <a name="drop-security-policy-transact-sql"></a>セキュリティ ポリシーの削除 (TRANSACT-SQL)
+# <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   セキュリティ ポリシーを削除します。  
@@ -43,7 +42,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
   
 ## <a name="arguments"></a>引数  
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、セキュリティ ポリシーを削除します。  
   

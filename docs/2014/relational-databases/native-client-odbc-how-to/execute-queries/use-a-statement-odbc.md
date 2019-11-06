@@ -12,34 +12,34 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 195b38804045c26053771d263d650cfaa2efecde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200329"
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
     
 ### <a name="to-use-a-statement"></a>ステートメントを使用するには  
   
-1.  *HandleType* を SQL_HANDLE_STMT として [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) を呼び出し、ステートメント ハンドルを割り当てます。  
+1.  *HandleType* を SQL_HANDLE_STMT として [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) を呼び出し、ステートメント ハンドルを割り当てます。  
   
 2.  また、[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) を呼び出してステートメント オプションを設定するか、[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) を呼び出してステートメント属性を取得することもできます。  
   
      サーバー カーソルを使用するには、カーソルの属性を既定値以外の値に設定する必要があります。  
   
-3.  また、ステートメントを複数回実行する場合は、[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)を使用して実行するステートメントを準備します。  
+3.  また、ステートメントを複数回実行する場合は、[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)を使用して実行するステートメントを準備します。  
   
-4.  ステートメントにバインドされたパラメーター マーカーが含まれている場合は、必要に応じて、[SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) を使用してパラメーター マーカーをプログラム変数にバインドします。 ステートメントが準備されている場合は、[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) および [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) を呼び出して、パラメーターの数と特性を検索できます。  
+4.  ステートメントにバインドされたパラメーター マーカーが含まれている場合は、必要に応じて、[SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) を使用してパラメーター マーカーをプログラム変数にバインドします。 ステートメントが準備されている場合は、[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) および [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) を呼び出して、パラメーターの数と特性を検索できます。  
   
 5.  SQLExecDirect を使用してステートメントを直接実行します。  
   
-     \- または -  
+     \- - または -  
   
-     ステートメントが準備されている場合は、[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
+     ステートメントが準備されている場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
   
-     \- または -  
+     \- - または -  
   
      カタログ関数を呼び出すと、結果が返されます。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "48227012"
   
      ステートメントの結果セットを一度に 1 行ずつフェッチします。  
   
-     \- または -  
+     \- - または -  
   
      ブロック カーソルを使用して一度に複数行の結果セットをフェッチします。  
   
-     \- または -  
+     \- - または -  
   
      [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
   

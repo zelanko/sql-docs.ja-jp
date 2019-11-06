@@ -2,29 +2,29 @@
 title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
-ms.prod: ''
+ms.prod: sql
+ms.technology: data-warehouse
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 532a19a4fca82e200b9499672cf48f736cfd3f4b
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226324"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809844"
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行プランを表示します。 クエリの計算ノードと管理 ノードで実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うには、これを使用します。
+特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行プランを表示します。 クエリの計算ノードと制御ノードでの実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うにはこれを使用します。
   
-SMP のクエリ パフォーマンスの問題が認識されたら [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、コンピューティング ノードで実行されているクエリのパフォーマンスを向上させるためにいくつかの方法があります。 複数列統計を作成する、非クラスター化インデックスを作成する、またはクエリ ヒントを使用してコンピューティング ノードでのクエリのパフォーマンスを向上させる方法が含まれます。
+計算ノードで実行されている SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリについて、クエリのパフォーマンスに問題があることがわかった場合、パフォーマンスを向上する方法がいくつかあります。 計算ノードでのクエリのパフォーマンスを向上させる方法として、複数列統計の作成、非クラスター化インデックスの作成、クエリ ヒントの使用が考えられます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,13 +44,13 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## <a name="arguments"></a>引数  
  *distribution_id*  
- クエリ プランを実行しているディストリビューションの識別子です。 これは、整数であり、NULL にすることはできません。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] をターゲットとする場合に使用されます。  
+ クエリ プランを実行しているディストリビューションの識別子です。 これは整数であり、NULL にすることはできません。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] をターゲットとする場合に使用されます。  
   
  *pdw_node_id*  
- クエリ プランを実行しているノードの識別子です。 これは、整数であり、NULL にすることはできません。 アプライアンスをターゲットとする場合に使用されます。  
+ クエリ プランを実行しているノードの識別子です。 これは整数であり、NULL にすることはできません。 アプライアンスをターゲットとする場合に使用されます。  
   
  *spid*  
- クエリ プランを実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セッションの識別子です。 これは、整数であり、NULL にすることはできません。  
+ クエリ プランを実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セッションの識別子です。 これは整数であり、NULL にすることはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] に対する CONTROL アクセス許可が必要です。  
@@ -59,7 +59,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN の基本的な構文  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN の基本的な構文  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] インスタンスで実行している場合は、上記のクエリを変更して distribution_id も選択します。  
   
 ```sql
@@ -76,10 +76,10 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN の基本的な構文  
- 長時間実行されているクエリは、DMS を実行するか、プランの操作またはクエリ プランの操作が SQL クエリを実行します。  
+### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN の基本的な構文  
+ 実行時間が長すぎるクエリでは、DMS クエリプラン操作または SQL クエリ プラン操作が実行されています。  
   
-クエリでは、DM クエリ プランの操作を実行している場合、は、ノード Id と手順については、不完全なセッション Id の一覧を取得する次のクエリを使用することができます。
+クエリで DMS クエリ プラン操作が実行されている場合は、次のクエリを使用して、不完全な手順のノード ID とセッション ID のリストを取得できます。
   
 ```sql
 SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start_time], [end_time], [status]   
@@ -89,7 +89,7 @@ AND pdw_node_id = 201001
 order by request_id, [dms_step_index], [distribution_id];  
 ```  
   
-上記のクエリの結果に基づき、DBCC PDW_SHOWEXEUCTIONPLAN へのパラメーターとして、sql_spid と pdw_node_id を使用します。 たとえば、次のコマンドでは、pdw_node_id 201001 と sql_spid 375 の実行プランが表示されます。
+上記のクエリの結果に基づき、DBCC PDW_SHOWEXECUTIONPLAN へのパラメーターとして、sql_spid と pdw_node_id を使用します。 たとえば、次のコマンドでは、pdw_node_id 201001 と sql_spid 375 の実行プランが表示されます。
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  

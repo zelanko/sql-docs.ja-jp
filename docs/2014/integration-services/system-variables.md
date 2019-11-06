@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927231"
 ---
 # <a name="system-variables"></a>システム変数
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、実行中のパッケージとそのオブジェクトに関する情報を格納する、システム変数のセットが用意されています。 これらの変数は、式およびプロパティ式の内部で使用でき、パッケージ、コンテナー、タスク、およびイベント ハンドラーをカスタマイズできます。  
@@ -47,7 +46,7 @@ ms.locfileid: "48163472"
 |**MachineName**|String|パッケージが実行されているコンピューターの名前です。|  
 |**OfflineMode**|ブール値|パッケージがオフライン モードかどうかを示します。 オフライン モードでは、データ ソースへの接続は取得されません。|  
 |**PackageID**|String|パッケージの一意識別子です。|  
-|**PackageName**|String|パッケージの名前です。|  
+|**PackageName**|String|パッケージの名前。|  
 |**StartTime**|DateTime|パッケージの実行を開始した時刻です。|  
 |`ServerExecutionID`|Int64|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーで実行されるパッケージの実行 ID です。<br /><br /> 既定値はゼロです。 この値が変更されるのは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーで ISServerExec によってパッケージが実行される場合のみです。 子パッケージがある場合は、この値が親パッケージから子パッケージに渡されます。|  
 |**UserName**|String|パッケージを開始したユーザーのアカウントです。 ユーザー名は、ドメイン名によって修飾されます。|  
@@ -90,7 +89,7 @@ ms.locfileid: "48163472"
 |**ProgressCountHigh**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の上位部分です。|OnProgress イベント ハンドラー|  
 |`ProgressCountLow`|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の下位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressDescription**|String|進行状況の説明です。|OnProgress イベント ハンドラー|  
-|`Propagate`|ブール値|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注: の値、`Propagate`変数は、パッケージの検証中に無視されます。<br /><br /> 子パッケージ内で `Propagate` を `False` に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
+|`Propagate`|ブール値|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注:値、`Propagate`変数は、パッケージの検証中に無視されます。<br /><br /> 子パッケージ内で `Propagate` を `False` に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
 |`SourceDescription`|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの説明です。|すべてのイベント ハンドラー|  
 |`SourceID`|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの一意識別子です。|すべてのイベント ハンドラー|  
 |**[SourceName]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの名前です。|すべてのイベント ハンドラー|  

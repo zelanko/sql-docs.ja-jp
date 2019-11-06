@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3086eff0e4a774e7f63e7ff876a9675668d5912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925807"
 ---
 # <a name="comments-on-hellodata"></a>HelloData に関するコメント
 HelloData アプリケーションが一般的な ADO アプリケーションの基本的な操作手順: を取得する、確認、編集、およびデータを更新します。 アプリケーションを起動するときに、最初のボタンをクリックします。**データの取得**します。 これは、実行、 **GetData**サブルーチンです。  
@@ -74,4 +73,4 @@ HelloData アプリケーションが一般的な ADO アプリケーション�
  データを更新する方法の詳細については、対象とした場合の対処を含むデータ中にサーバーの変更を**レコード セット**は、切断されているを参照してください[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)。  
   
 ## <a name="formunload"></a>Form_Unload  
- **Form_Unload**いくつかの理由のサブルーチンが重要です。 最初に、これはサンプル アプリケーションであるため、form_unload をアプリケーションが終了する前にデータベースに加えられた変更します。 次に、コードは、コマンドを実行して、開いているから直接方法**接続**オブジェクトを使用して、 **Execute**メソッド。 最後に、データ ソースに対する行 – 返すクエリ (UPDATE クエリ) を実行する例を示します。
+ **Form_Unload**いくつかの理由のサブルーチンが重要です。 最初に、これはサンプル アプリケーションであるため、form_unload をアプリケーションが終了する前にデータベースに加えられた変更します。 次に、コードは、コマンドを実行して、開いているから直接方法**接続**オブジェクトを使用して、 **Execute**メソッド。 最後に、データ ソースに対する行を返すクエリ (UPDATE クエリ) を実行する例を示します。

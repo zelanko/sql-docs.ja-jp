@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
@@ -20,12 +19,12 @@ ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6739f427642151bec0fd193c26d40a16af51e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211025"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler を使用したトレースの表示と分析
   トレースにキャプチャされたイベント データを表示するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、定義されたトレース プロパティに基づいてデータが表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを分析するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーなどの別のプログラムにデータをコピーする方法があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、 **Text** データ列がトレースに含まれている場合、SQL バッチおよびリモート プロシージャ コール (RPC) のイベントを含んだトレース ファイルを使用できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用する適切なイベントと列がキャプチャされるようにするには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]に付属の定義済みチューニング テンプレートを使用します。  
@@ -33,7 +32,7 @@ ms.locfileid: "48213432"
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレースを開くとき、そのトレース ファイルが [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または SQL トレース システムのストアド プロシージャによって作成されている場合は、トレース ファイルに .trc というファイル拡張子が付いている必要はありません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、SQL トレース .log ファイルと汎用 SQL スクリプト ファイルも読み取ることができます。 ファイル拡張子 .log がない SQL トレース ファイル、たとえば trace.txt を開く場合は、ファイル形式として **SQLTrace_Log** を指定します。  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、SQL トレース ファイル (.log) と汎用 SQL スクリプト ファイルも読み取ることができます。 ファイル拡張子 .log がない SQL トレース ファイル、たとえば trace.txt を開く場合は、ファイル形式として **SQLTrace_Log** を指定します。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の日付および時刻の表示形式は、トレース分析を行いやすいように設定できます。  
   
@@ -70,7 +69,7 @@ AND     CPU < (Duration * 1000)
   
 2.  対象のイベントを検索します。  
   
-    -   トレース ファイルまたはテーブルを開き、必要なイベント クラスのノード、たとえば **Deadlock Chain**を展開します。 詳細については、「[トレース ファイルを開く &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)」または「[トレース テーブルを開く &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)」を参照してください。  
+    -   トレース ファイルまたはテーブルを開き、必要なイベント クラスのノード、たとえば **Deadlock Chain**を展開します。 詳細については、「 [トレース ファイルを開く &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) や [トレース テーブルを開く &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)に付属の定義済みチューニング テンプレートを使用します。  
   
     -   目的のイベントが見つかるまで、トレース データ全体を検索します。 **の** [編集] **メニューの** [検索] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、トレース内の値を検索するときに便利です。 トレースするイベントの **ClientProcessID** データ列に加えて **Start Time** データ列の値を書き留めておきます。  
   
@@ -82,7 +81,7 @@ AND     CPU < (Duration * 1000)
   
  これと同じ方法で、グループ化されたイベントを見つけることができます。 目的のイベントが見つかったら、 **ClientProcessID**、 **ApplicationName**、その他のイベント クラスでイベントをグループ化すると、関連する動作を発生順に表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [保存されているトレースの表示 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
  [フィルター情報の表示 &#40;SQL Server Profiler&#41;](view-filter-information-sql-server-profiler.md)   

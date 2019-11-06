@@ -4,31 +4,30 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 8e6a94ff3a40a4c2287f9870222c94ec22e611a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108270"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>[ラベル] ([マップの経線のプロパティ] ダイアログ ボックス)
   使用して、 **MapMeridian プロパティ**ダイアログ ボックスで、マップ ビューポートの垂直グリッドのラベルのオプションを変更します。 経線は、ビューポートに指定された座標系に応じて、次の値を表します。  
   
--   **[平面]**: Y 座標。  
+-   **[平面]** : Y 座標。  
   
--   **[地理]**: 現在の投影法での緯度。  
+-   **[地理]** : 現在の投影法での緯度。  
   
- **式** (*[fx]*) ボタンをクリックし、オプションの値を設定する式を編集します。  
+ **式** ( *[fx]* ) ボタンをクリックし、オプションの値を設定する式を編集します。  
   
 ## <a name="options"></a>および  
  **間隔**  
@@ -50,7 +49,7 @@ ms.locfileid: "48115762"
   
 -   **[遠く]** ラベルを右端に表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マップ (レポート ビルダーおよび SSRS)](report-design/maps-report-builder-and-ssrs.md)  
   
   

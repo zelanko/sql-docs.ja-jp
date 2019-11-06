@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5407fdc291cd1d0d0a533466b0e45dd0cbce320b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106490"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>横棒グラフ (レポート ビルダーおよび SSRS)
   横棒グラフでは、横棒のセットとして系列が表示されます。 一般的な横棒グラフは、縦棒グラフおよび範囲横棒グラフと密接な関係にあります。縦棒グラフでは、縦棒のセットとして系列が表示され、範囲横棒グラフでは、始点と終点が異なる横棒のセットとして系列が表示されます。  
   
- 横棒グラフは、データを水平方向に表示する唯一のグラフの種類です。 このため、開始日と終了日が限定された状態で、時間の経過と共に発生するデータを表す際によく使用されます。 また、カテゴリを水平方向に表示できるため、カテゴリ情報を示す際にもよく使用されます。 データ バー グラフを追加する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
+ 横棒グラフは、データを水平方向に表示する唯一のグラフの種類です。 このため、開始日と終了日が限定された状態で、時間の経過と共に発生するデータを表す際によく使用されます。 また、カテゴリを水平方向に表示できるため、カテゴリ情報を示す際にもよく使用されます。 折れ線グラフにデータを追加する方法の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」をご覧ください。  
   
  次の図は、横棒グラフを示しています。 3 つの系列では共通の期間が共有され、有効な比較が可能になるため、このデータには横棒グラフが適しています。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48106102"
   
 -   レポート内のテーブルやマトリックスに横棒を追加する場合、横棒グラフの代わりに線形ゲージの使用を検討してください。 線形ゲージは、複数のグループではなく 1 つの値を表示するようにデザインされています。そのため、一覧またはテーブルのデータ領域内でより柔軟に使用できます。 詳しくは、「 [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)」をご覧ください。  
   
--   横棒グラフの各棒に特殊な描画スタイルを追加して、視覚的な効果を高めることができます。 描画スタイルには、くさび形、エンボス、円柱、およびグラデーションがあります。 これらの効果は、2D グラフを見やすくするためにデザインされています。 3D グラフを使用している場合でも描画スタイルを適用できますが、同じ効果を得られないことがあります。 横棒グラフに描画スタイルを追加する方法の詳細については、次を参照してください。[追加の傾斜、エンボス、およびテクスチャのスタイルをグラフに&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)します。  
+-   横棒グラフの各棒に特殊な描画スタイルを追加して、視覚的な効果を高めることができます。 描画スタイルには、くさび形、エンボス、円柱、およびグラデーションがあります。 これらの効果は、2D グラフを見やすくするためにデザインされています。 3D グラフを使用している場合でも描画スタイルを適用できますが、同じ効果を得られないことがあります。 横棒グラフに描画スタイルを追加する方法の詳細については、「 [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)」をご覧ください。  
   
 -   積み上げ横棒グラフでは、複数の系列が相互に重なって 1 つの積み上げ横棒が作成されます。 積み上げ横棒グラフは、カテゴリごとに積み上げ横棒の複数のセットに分割できます。 グループ化された積み上げグラフは、横に並んで表示されます。 グラフには、グループ化された積み上げグラフをいくつでも含めることができます。  
   
@@ -58,17 +57,17 @@ ms.locfileid: "48106102"
   
 -   グラフのサイズに対してデータセット内のデータ ポイントの数が多い場合は、列または横棒のサイズおよびその間隔が小さくなります。 グラフ内の列の幅を手動で設定するには、 **PointWidth** プロパティを変更して列の幅をピクセル単位で変更します。 既定では、このプロパティの値は 0.8 です。 グラフの列または横棒の幅を大きくすると、各列または横棒の間隔は小さくなります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [縦棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [範囲グラフ&#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
+ [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [チュートリアル : レポートへの横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [チュートリアル: レポートへの横棒グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

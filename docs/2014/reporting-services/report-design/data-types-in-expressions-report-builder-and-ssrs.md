@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f48846f1cb78a8ea8a21be5a7114bf11017f5ca5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147922"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891865"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
   データを効率よく格納し、処理できるように、さまざまなデータの種類を表すデータ型が用意されています。 代表的なデータ型としては、テキスト (文字列) 型、数値型 (小数点以下桁数を含む)、数値型 (小数点以下桁数を含まない)、日付/時刻型、イメージ型などがあります。 レポート内の値は、レポート定義言語 (RDL) データ型である必要があります。 値は、レポートに表示する場合に目的に応じて書式設定できます。 たとえば、通貨を表すフィールドの場合、データを浮動小数点数としてレポート定義に格納しておき、実際には、指定した書式設定プロパティに従ってさまざまな形式で表示することができます。  
@@ -31,12 +30,12 @@ ms.locfileid: "48147922"
   
 |RDL 型|CLR 型|  
 |--------------|---------------|  
-|String|既定値: String<br /><br /> Chart、GUID、Timespan|  
-|ブール値|既定値: Boolean|  
-|Integer|既定値: Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
-|DateTime|既定値: DateTime<br /><br /> DateTimeOffset|  
-|Float|既定値: Double<br /><br /> Single、Decimal|  
-|Binary|既定値: Byte[]|  
+|String|既定値:String<br /><br /> Chart、GUID、Timespan|  
+|ブール値|既定値:ブール値|  
+|整数型|既定値:Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
+|DateTime|既定値:DateTime<br /><br /> DateTimeOffset|  
+|Float|既定値:Double<br /><br /> Single、Decimal|  
+|Binary|既定値:Byte[]|  
 |Variant|Byte[] 以外の上記すべて|  
 |VariantArray|Variant の配列|  
 |Serializable|Serializable に指定されている、または ISerializable を実装する Variant または型|  
@@ -57,7 +56,7 @@ ms.locfileid: "48147922"
 -   データ ソースから取得した値を別のデータ型に変換する。  
   
 ## <a name="determining-the-data-type-of-report-data"></a>レポート データのデータ型を調べる  
- レポート アイテムのデータ型を調べるには、そのアイテムのデータ型を返す式を作成します。 たとえば、 `MyField`というフィールドのデータ型を確認するには、テーブルのセルに `=Fields!MyField.Value.GetType().ToString()`という式を追加します。 結果には、CLR データ型を表すために使用が表示されます。 `MyField`、たとえば、`System.String`または`System.DateTime`します。  
+ レポート アイテムのデータ型を調べるには、そのアイテムのデータ型を返す式を作成します。 たとえば、 `MyField`というフィールドのデータ型を確認するには、テーブルのセルに `=Fields!MyField.Value.GetType().ToString()`という式を追加します。 式の結果には、`MyField` に使用されている CLR データ型 (`System.String` や `System.DateTime` など) が表示されます。  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>データセット フィールドを異なるデータ型に変換する  
  レポートで使用するデータセット フィールドを事前に変換することもできます。 既存のデータセット フィールドを変換するには、次のような方法があります。  
@@ -69,7 +68,7 @@ ms.locfileid: "48147922"
 -   使用しているデータ処理拡張機能に、書式設定済みのデータを取得するためのメタデータが含まれているかどうかを確認する。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリには、キューブの処理時に書式設定されたキューブ値を保持する FORMATTED_VALUE という拡張プロパティがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
 ## <a name="understanding-parameter-data-types"></a>パラメーターのデータ型について  
- レポート パラメーターに使用できるデータ型は、Boolean、DateTime、Integer、Float、Text (String) の 5 つだけです。 データセット クエリにクエリ パラメーターが含まれている場合は、レポート パラメーターが自動的に作成されて、対応するクエリ パラメーターに関連付けられます。 レポート パラメーターの既定のデータ型は String です。 レポート パラメーターの既定のデータ型を変更するには、 **[レポート パラメーターのプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[データ型]** ボックスの一覧から該当する値を選択します。  
+ レポート パラメーターは 5 つのデータ型のいずれかである必要があります。つまり、Boolean、DateTime、Integer、Float、または Text (String とも呼ばれます) です。 データセット クエリにクエリ パラメーターが含まれている場合は、レポート パラメーターが自動的に作成されて、対応するクエリ パラメーターに関連付けられます。 レポート パラメーターの既定のデータ型は String です。 レポート パラメーターの既定のデータ型を変更するには、 **[レポート パラメーターのプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[データ型]** ボックスの一覧から該当する値を選択します。  
   
 > [!NOTE]  
 >  DateTime データ型のレポート パラメーターは、ミリ秒をサポートしていません。 ミリ秒を含む値に基づいてパラメーターを作成することはできますが、ミリ秒が指定された Date 値または Time 値を値ドロップダウン リストから選択することはできません。  
@@ -90,7 +89,7 @@ ms.locfileid: "48147922"
 |DateTimeOffset 値から DateTime 部分のみを抽出|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |DateTimeOffset 値から Offset 部分のみを抽出|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- Format 関数を使用して、値の表示形式を制御することもできます。 詳細については、「 [関数 (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483)」を参照してください。  
+ Format 関数を使用して、値の表示形式を制御することもできます。 詳細については、「 [関数 (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483)」を参照してください。  
   
 ## <a name="advanced-examples"></a>高度な例  
  データ ソースへの接続に使用するデータ プロバイダーが、すべてのデータ型の変換をサポートしているとは限りません。このような場合、サポートされていないデータ ソースの種類に対する既定のデータ型は String になります。 次の例では、データ型が文字列として返される場合の対処方法について説明します。  
@@ -105,7 +104,7 @@ ms.locfileid: "48147922"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- この例では、日付 (July 1, 2008) に続けて、小数点以下 7 桁の時刻値 (6:05:07.9999999 A.M.) と UTC タイム ゾーン オフセット (+8 時間、0 分) が続きます。 次の例については、この値が配置されている、`String`という名前のフィールド`MyDateTime.Value`します。  
+ この例では、日付 (July 1, 2008) に続けて、小数点以下 7 桁の時刻値 (6:05:07.9999999 A.M.) と UTC タイム ゾーン オフセット (+8 時間、0 分) が続きます。 以下の例では、この値が `MyDateTime.Value` という `String` 型のフィールドに格納されています。  
   
  次のいずれかの方法を使用することで、このデータを 1 つまたは複数の CLR 値に変換できます。  
   
@@ -117,9 +116,9 @@ ms.locfileid: "48147922"
   
     -   文字列を日時の値に変換するには、次の式を使用します。 `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         `MyDateTime.Value` の文字列に UTC オフセットが含まれている場合、まず、 `DateTime.Parse` 関数によって UTC オフセットの調整が行われます (ここでは、午前 7 時から [`+08:00`] を差し引いて、前日の午後 11 時という UTC 時刻が 求められます)。 次に、 `DateTime.Parse` 関数は、レポート サーバーのローカル UTC オフセットを適用し、必要に応じて夏時間のために再度時刻調整を行います。 たとえば、ワシントン州レドモンドの場合、夏時間調整後のローカル時刻オフセットは `[-07:00]`(午後 11 時の 7 時間前) になります。 したがって、`2007-07-06 04:07:07 PM` (2007 年 7 月 6 日午後 4 時 07 分) という `DateTime` 値が得られます。  
+         `MyDateTime.Value` の文字列に UTC オフセットが含まれている場合、まず、 `DateTime.Parse` 関数によって UTC オフセットの調整が行われます (ここでは、午前 7 時から [`+08:00`] を差し引いて、前日の午後 11 時という UTC 時刻が 求められます)。 次に、 `DateTime.Parse` 関数は、レポート サーバーのローカル UTC オフセットを適用し、必要に応じて夏時間のために再度時刻調整を行います。 たとえば、ワシントン州レドモンドの場合、夏時間調整後のローカル時刻オフセットは `[-07:00]`(午後 11 時の 7 時間前) になります。 結果は次`DateTime`の値になります。`2007-07-06 04:07:07 PM` (2007 年 7 月 6 日午後 4 時 07 分)。  
   
- 文字列の変換の詳細については`DateTime`、データ型を参照してください[解析の日付と時刻文字列](http://go.microsoft.com/fwlink/?LinkId=89703)、 [、特定のカルチャの書式設定の日付と時刻](http://go.microsoft.com/fwlink/?LinkId=89704)、および[を選択します。DateTime、DateTimeOffset、TimeZoneInfo 間](http://go.microsoft.com/fwlink/?linkid=110652)msdn です。  
+ 文字列をデータ型に変換する`DateTime`方法の詳細については、「[日付と時刻文字列の解析](https://go.microsoft.com/fwlink/?LinkId=89703)」、「[特定のカルチャの日付と時刻の書式設定](https://go.microsoft.com/fwlink/?LinkId=89704)」、および「 [DateTime、DateTimeOffset、および TimeZoneInfo on の選択](https://go.microsoft.com/fwlink/?linkid=110652)」を参照してください。旧.  
   
 -   レポート データセットに、文字列の一部分を抽出する式を使った新しい計算フィールドを追加します。 詳細については、「[レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -139,11 +138,11 @@ ms.locfileid: "48147922"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、[SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=120955) の「[データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)」および「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、[SQL Server オンライン ブック](https://go.microsoft.com/fwlink/?linkid=120955) の「[データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)」および「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ型の詳細については、 [SQL Server オンライン ブック](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) の「 [SQL Server Books Onlの「e](http://go.microsoft.com/fwlink/?linkid=120955)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ型の詳細については、 [SQL Server オンライン ブック](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) の「 [SQL Server Books Onlの「e](https://go.microsoft.com/fwlink/?linkid=120955)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  
   
   

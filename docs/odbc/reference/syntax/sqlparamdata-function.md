@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41cb718b5425315856fe4db27658cce873f90e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018944"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLParamData**と共に使用**SQLPutData**パラメーターのデータと、ステートメントの実行時に提供する**SQLGetData**ストリーミングされる出力パラメーターのデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLParamData(  
      SQLHSTMT       StatementHandle,  
@@ -61,7 +60,7 @@ SQLRETURN SQLParamData(
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限付きのデータ型の属性違反|識別されるデータ値、 *ValueType*引数**SQLBindParameter**のバインドされたパラメーターがで識別されるデータ型に変換できませんでした、 *ParameterType*引数**SQLBindParameter**します。<br /><br /> SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT で識別されるデータ型に変換しないとしてバインドされたパラメーターのデータ値が返される、 *ValueType*引数**SQLBindParameter**します。<br /><br /> (1 つまたは複数の行のデータ値を変換できませんでした、1 つまたは複数の行が正常に返された場合は、この関数を返します SQL_SUCCESS_WITH_INFO。)|  
 |08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
-|22026|文字列データの長さが合致しません|SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo**が"Y"と指定された以外 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソース固有のデータ型)、long 型パラメーターの低いデータが送信されました。*StrLen_or_IndPtr*引数**SQLBindParameter**します。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo** "Y"で指定された数より長い列 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソース固有のデータ型) の低いデータが送信された、追加または更新されたデータの行の列に対応する長バッファー **SQLBulkOperations**またはで更新された**SQLSetPos**します。|  
+|22026|文字列データの長さが合致しません|SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo**が"Y"と指定された以外 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型)、long 型パラメーターの低いデータが送信されました。*StrLen_or_IndPtr*引数**SQLBindParameter**します。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo** "Y"で指定された数より長い列 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型) の低いデータが送信された、追加または更新されたデータの行の列に対応する長バッファー **SQLBulkOperations**またはで更新された**SQLSetPos**します。|  
 |40001|シリアル化エラー|トランザクションが別のトランザクションでリソース デッドロックによりロールバックされました。|  
 |40003|不明なステートメント入力候補|、この関数の実行中に、関連付けられた接続が失敗し、トランザクションの状態を特定できません。|  
 |HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
@@ -82,7 +81,7 @@ SQLRETURN SQLParamData(
   
  アプリケーションを呼び出すと**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**ドライバーは SQL_NEED_ を返します実行時のデータのデータが必要がある場合は、データ。 その後、アプリケーションを呼び出す**SQLParamData**に送信するデータを決定します。 ドライバーは、パラメーターのデータを必要とする場合、ドライバーを返します、  *\*ValuePtrPtr*出力バッファーの行セットのバッファーでアプリケーションを配置する値。 アプリケーションでは、ドライバーが要求しているパラメーター データを決定するのに、この値を使用できます。 ドライバーは、列のデータを必要とする場合、ドライバーを返します、  *\*ValuePtrPtr*バッファーの列が最初にバインドされている、次のように、アドレス。  
   
- *アドレスをバインド* + *オフセットをバインド*+ ((*行数*– 1) x*要素のサイズ*)  
+ *アドレスをバインド* + *オフセットをバインド*+ ((*行数*- 1) x*要素のサイズ*)  
   
  変数が定義されて次の表に記載されています。  
   

@@ -14,23 +14,22 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 202293da5a056e65bb10715d6dac985555e898d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aeae859d86f33e264234c38e0d398e772c537ddf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062524"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、 **smallint** は **int**としてコピーされます。ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>ファイル ストレージ型の bcp プロンプト  
- 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのファイル ストレージ型を要求するプロンプトが表示されます。  
+ 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、 **-c**、 **-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのファイル ストレージ型を要求するプロンプトが表示されます。  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -44,15 +43,15 @@ ms.locfileid: "47626670"
   
     |ファイル ストレージ型|コマンド プロンプトで入力する文字|  
     |-----------------------|-----------------------------|  
-    |**char***|**c****[har]**|  
+    |**char**|**c** **[har]**|  
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text**\*\*|**T****[ext]**|  
+    |**text**|**T** **[ext]**|  
     |**ntext2**|**W**|  
-    |**[バイナリ]**|**x**|  
+    |**binary**|**x**|  
     |**varbinary**|**x**|  
-    |**image**\*\*|**I****[mage]**|  
+    |**image**|**I** **[mage]**|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -78,22 +77,22 @@ ms.locfileid: "47626670"
   
      \* **char** ファイル ストレージ型でエクスポートされた非文字データのデータ ファイルの場合、このファイルに割り当てられる格納領域のサイズは、フィールド長、プレフィックス長、およびターミネータの相互関係で決まります。  
   
-     \*\* **ntext**、 **text**、および **image** データ型は、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに、 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)** を使用してください。  
+     \*\* **ntext**、 **text**、および **image** データ型は、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに、 **nvarchar(max)** 、 **varchar(max)** 、 **varbinary(max)** を使用してください。  
   
 ## <a name="native-file-storage-types"></a>ネイティブのファイル ストレージ型  
  各ネイティブのファイル ストレージ型は、対応するホスト ファイル データ型として、フォーマット ファイルに記録されます。  
   
 |ファイル ストレージ型|ホスト ファイル データ型|  
 |-----------------------|-------------------------|  
-|**char***|SQLCHAR|  
+|**char**|SQLCHAR|  
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**text**\*\*|SQLCHAR|  
-|**ntext**\*\*|SQLNCHAR|  
+|**text**|SQLCHAR|  
+|**ntext**|SQLNCHAR|  
 |**[バイナリ]**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**image**\*\*|SQLBINARY|  
+|**image**|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  

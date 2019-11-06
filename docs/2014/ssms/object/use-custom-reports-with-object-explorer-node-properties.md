@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,18 +12,16 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7198118f9eadbf58bab83727ed45899f5fd2a0df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62823699"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用
   オブジェクト エクスプローラーで選択されているノードのレポート パラメーターがカスタム レポートで参照されていれば、そのノードのコンテキストでカスタム レポートを実行できます。 これにより、カスタム レポートで現在のコンテキスト (現在のデータベースなど)、またはデータベース オブジェクトやサーバー オブジェクトを使用できるようになります。  
   
-## <a name="report-samples"></a>サンプル レポート  
- [サンプル レポート](http://go.microsoft.com/fwlink/?LinkId=81792)( [!INCLUDE[msCoName](../../includes/msconame-md.md)]で作成された標準レポートを含む) をダウンロードできます。 サンプルは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して変更することができます。  
   
 ## <a name="object-explorer-node-report-parameters"></a>オブジェクト エクスプローラー ノードのレポート パラメーター  
   
@@ -58,7 +56,7 @@ ms.locfileid: "48167672"
   
  `<?xml version="1.0" encoding="utf-8"?>`  
   
- `<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
+ `<Report xmlns="https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="https://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
   
  `<ReportParameters>`  
   

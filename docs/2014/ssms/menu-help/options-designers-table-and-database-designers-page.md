@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.Table_Designer
@@ -12,12 +12,12 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 715456e4e358346d19a3fe698cbb5d36fd754929
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63283656"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>オプション (デザイナーのテーブルおよびデータベース デザイナー ページ)
   このページを使用すると、デザイナーの既定の動作を設定できます。 この設定にアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[デザイナー]** フォルダーを展開して、 **[テーブル デザイナー]** をクリックします。  

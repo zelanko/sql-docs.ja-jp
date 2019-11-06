@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -13,12 +13,12 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbc3d3ce9bd665efa78554c98c010ee0952c8e51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918223"
 ---
 # <a name="page-compression-implementation"></a>ページの圧縮の実装
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に実装されているページの圧縮方法の概要を説明します。 この概要では、データに必要なストレージ領域の計画に役立つ基本的な情報を提供します。  

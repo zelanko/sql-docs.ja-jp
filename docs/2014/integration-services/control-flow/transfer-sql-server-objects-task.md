@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b45c0c3d20b3b7f6405e44a456cd5ebbce6472c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62829461"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスク
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内の 1 つ以上の種類のオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で転送します。 たとえば、このタスクを使用して、テーブルやストアド プロシージャをコピーできます。 転送元として使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて、コピーできるオブジェクトの種類が異なります。 たとえば、スキーマとユーザー定義集計は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースだけに含まれます。  
@@ -80,7 +79,7 @@ ms.locfileid: "48175472"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクでは、オブジェクト転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- 実行値に格納されている、`ExecutionValue`タスクのプロパティが転送されるオブジェクトの数を返します。 SQL Server オブジェクトの転送タスクの `ExecValueVariable` プロパティにユーザー定義変数を割り当てると、オブジェクト転送に関する情報をパッケージの他のオブジェクトで使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
+ このタスクの `ExecutionValue` プロパティに格納される実行値は、転送されたオブジェクトの数を返します。 SQL Server オブジェクトの転送タスクの `ExecValueVariable` プロパティにユーザー定義変数を割り当てると、オブジェクト転送に関する情報をパッケージの他のオブジェクトで使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  SQL Server オブジェクトの転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -89,7 +88,7 @@ ms.locfileid: "48175472"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects    転送が完了したことを報告このログ エントリです。 ログ エントリには、終了時刻が含まれます。  
   
- また、`OnInformation` イベントのログ エントリは、転送対象として選択された種類のオブジェクトの数、転送されたオブジェクトの数、およびテーブルと一緒にデータが転送されたときはテーブルの切り捨てなどのアクションを報告します。 ログ エントリ、`OnWarning`が上書きされる変換先の各オブジェクトのイベントが書き込まれます。  
+ また、`OnInformation` イベントのログ エントリは、転送対象として選択された種類のオブジェクトの数、転送されたオブジェクトの数、およびテーブルと一緒にデータが転送されたときはテーブルの切り捨てなどのアクションを報告します。 `OnWarning` イベントのログ エントリは転送先でオブジェクトが上書きされると書き込まれます。  
   
 ## <a name="security-and-permissions"></a>セキュリティおよび権限  
  ユーザーは、転送元サーバー上でオブジェクトを参照する権限、および転送先サーバー上でオブジェクトを削除および作成する権限を持っていることに加えて、指定したデータベースおよびデータベース オブジェクトにアクセスできる必要があります。  
@@ -107,9 +106,9 @@ ms.locfileid: "48175472"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [SQL Server オブジェクトのタスク エディターを転送&#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[SQL Server オブジェクトの転送タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [SQL Server オブジェクトのタスク エディターを転送&#40;オブジェクト ページ&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [[SQL Server オブジェクトの転送タスク エディター] &#40;[オブジェクト] ページ&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

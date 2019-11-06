@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768027"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
   使用して、**変換先の選択**ページをコピーするデータの送信先を指定します。  
   
  このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションについては、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
- 目的、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードは、先のソースからデータをコピーします。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="static-options"></a>静的オプション  
  **変換先**  
@@ -47,10 +46,10 @@ ms.locfileid: "48117008"
  パッケージで Microsoft Windows 認証を使用してデータベースにログインするかどうかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。  
   
  **[SQL Server 認証を使用する]**  
- パッケージを使用するかどうかを指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースへのログインを認証します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
+ データベースへのログインに、パッケージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するかどうかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
  **ユーザー名**  
- 使用しているときに、データベース接続のユーザー名を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のユーザー名を指定します。  
   
  **Password**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のパスワードを指定します。  
@@ -110,7 +109,7 @@ ms.locfileid: "48117008"
  変換先のブックで使用される Excel のバージョンを選択します。  
   
 > [!NOTE]  
->  データをエクスポートするときに、[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]変換先、ウィザードを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel 変換先コンポーネントです。 いくつかの使用に関する考慮事項と既知の問題については、次を参照してください。 [Excel 変換先](../data-flow/excel-destination.md)します。  
+>  データを変換先の [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] にエクスポートする場合、ウィザードでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel 変換先コンポーネントを使用します。 いくつかの使用に関する考慮事項と既知の問題については、次を参照してください。 [Excel 変換先](../data-flow/excel-destination.md)します。  
   
 ### <a name="destination--microsoft-access"></a>[変換先] = [Microsoft Access]  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48117008"
  ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のためにユーザーのパスワードを指定します。 ただし、データベースがすべてのユーザーに対して 1 つのパスワードで保護されている場合、 **[データ リンク プロパティ]** ダイアログ ボックスでもこの値を入力する必要があります。このダイアログ ボックスを表示するには **[詳細設定]** ボタンをクリックします。  
   
  **詳細設定**  
- **[データ リンク プロパティ]** ダイアログ ボックスで、データベースのパスワードや既定以外のワークグループ情報ファイルなどの詳細なオプションを指定します。 OLE DB プロバイダーのプロパティの詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?linkid=62553)の「データ アクセス」を検索してください。  
+ **[データ リンク プロパティ]** ダイアログ ボックスで、データベースのパスワードや既定以外のワークグループ情報ファイルなどの詳細なオプションを指定します。 OLE DB プロバイダーのプロパティの詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?linkid=62553)の「データ アクセス」を検索してください。  
   
   

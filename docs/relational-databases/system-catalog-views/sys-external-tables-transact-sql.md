@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c86f9eed16b83d9cc63c54f907f50dda1aab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054312"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "47702720"
 |data_source_id|**int**|外部データ ソースのオブジェクト ID。||  
 |file_format_id|**int**|HADOOP の外部データ ソース経由で外部テーブルの外部ファイル形式のオブジェクト ID です。||  
 |location|**nvarchar (4000)**|HADOOP の外部データ ソース経由で外部テーブルは、これは、HDFS 内の外部データのパスです。||  
-|reject_type|**tinyint**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部データを照会するときに、拒否された行はカウント方法です。|VALUE – 拒否された行の数。<br /><br /> PERCENTAGE – 拒否された行の割合。|  
+|reject_type|**tinyint**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部データを照会するときに、拒否された行はカウント方法です。|値 - 拒否された行の数。<br /><br /> 割合 - 拒否された行の割合。|  
 |reject_value|**float**|HADOOP の外部データ ソース経由で外部テーブルは。<br /><br /> *Reject_type =* valueで、これは、クエリが失敗するまでに許可する行の拒否された回数。<br /><br /> *Reject_type* = percentage、これは、クエリが失敗するまでに許可する行の却下のパーセンテージです。||  
 |reject_sample_value|**int**|*Reject_type* = percentage、これは、読み込むには、成功と失敗、拒否された行の比率を計算する前に行の数。|reject_type = value の場合は NULL です。|  
-|distribution_type|**int**|SHARD_MAP_MANAGER の外部データ ソース経由で外部テーブルの基になるベース テーブルの間で、行のデータ分布になります。|0 – Sharded<br /><br /> 1 – レプリケート<br /><br /> 2 – ラウンド ロビン|  
+|distribution_type|**int**|SHARD_MAP_MANAGER の外部データ ソース経由で外部テーブルの基になるベース テーブルの間で、行のデータ分布になります。|0 - シャード化されました。<br /><br /> 1-レプリケート<br /><br /> 2-ラウンド ロビン|  
 |distribution_desc|**nvarchar(120)**|SHARD_MAP_MANAGER の外部データ ソース経由で外部テーブルは、これは、分布の種類を文字列として表示されます。||  
 |sharding_column_id|**int**|SHARD_MAP_MANAGER の外部データ ソースと sharded ディストリビューション経由で外部テーブルは、シャーディング キー値を含む列の列 ID です。||  
 |remote_schema_name|**sysname**|SHARD_MAP_MANAGER の外部データ ソース経由で外部テーブルの場合、ベース テーブルの場所 (外部テーブルが定義されているスキーマと異なる) 場合は、リモート データベースでスキーマです。||  

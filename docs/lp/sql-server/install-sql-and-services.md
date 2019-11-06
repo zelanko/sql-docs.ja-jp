@@ -4,20 +4,24 @@ hide_bc: true
 title: SQL Server - インストールとアップグレード
 description: ご利用の SQL Server と関連するサービスのインストールまたはアップグレードに役立つコンテンツを見つけます。
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 729759ad9e60f5ec45845545f7b81e1cbc1bae73
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fe6f37b362f9426bebb1c334eb9b5376ca5c9ab4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000040"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +31,7 @@ ms.locfileid: "52402084"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server のダウンロード</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +77,7 @@ ms.locfileid: "52402084"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: インストールまたはアップグレード</h1>
+        <h1>SQL Server:インストールまたはアップグレード</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>

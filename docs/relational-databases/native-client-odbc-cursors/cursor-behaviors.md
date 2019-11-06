@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba61da8bc8146ad2dcaa1e6db04d90e07a3d21f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac0e2585398eb3e3d47edea769c75d512bc4d2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134099"
 ---
 # <a name="cursor-behaviors"></a>カーソル動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "47623470"
 ## <a name="sensitivity"></a>感度  
  SQL_ATTR_CURSOR_SENSITIVITY が SQL_SENSITIVE に設定されているとき、現在のユーザーが行ったデータ変更または他のユーザーがコミットしたデータ変更がカーソルに反映されます。 SQL_ATTR_CURSOR_SENSITIVITY が SQL_INSENSITIVE に設定されているときは、データ変更がカーソルに反映されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソル (ODBC) を使用して](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)[カーソル プロパティ](properties/cursor-properties.md) 
   
   

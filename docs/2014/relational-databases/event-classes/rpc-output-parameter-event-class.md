@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b54f54f90467dd95c188e0bb8f237609c23b4ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 205b0a7cfeab4d512eac86c39be78bdfd42abe90
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044245"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter イベント クラス
   RPC Output Parameter イベント クラスは、リモート プロシージャ コール (RPC) を実行した後の出力パラメーター値をトレースします。  
@@ -39,10 +38,10 @@ ms.locfileid: "48137442"
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
+|IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|[はい]|  
 |LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
 |LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
-|NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
+|NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|[はい]|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ObjectName|`nvarchar`|参照されているパラメーターの名前。|34|はい|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  

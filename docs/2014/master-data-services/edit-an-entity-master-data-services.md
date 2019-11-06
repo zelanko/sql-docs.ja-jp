@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8b4d17968d91d8b6c90a49730cbab9f4e422d1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483884"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>エンティティ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、エンティティの名前を変更できます。  
@@ -31,7 +30,7 @@ ms.locfileid: "48228412"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-change-an-entity-name"></a>エンティティ名を変更するには  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48228412"
   
 7.  クリックして**エンティティの保存**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エンティティを作成する&#40;マスター データ サービス&#41;](create-an-entity-master-data-services.md)   
  [エンティティを削除する (マスター データ サービス)](delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](entities-master-data-services.md)  

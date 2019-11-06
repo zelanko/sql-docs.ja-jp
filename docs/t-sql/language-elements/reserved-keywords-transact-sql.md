@@ -15,30 +15,29 @@ helpviewer_keywords:
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091773"
 ---
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と SQL Data Warehouse の予約済みキーワードの一覧を次の表に示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Azure SQL Data Warehouse の予約済みキーワードの一覧を次の表に示します。  
   
 ||||  
 |-|-|-|  
 |ADD|EXTERNAL|PROCEDURE|  
 |ALL|FETCH|PUBLIC|  
 |ALTER|FILE|RAISERROR|  
-|[AND]|FILLFACTOR|READ|  
+|AND|FILLFACTOR|READ|  
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
@@ -48,13 +47,13 @@ ms.locfileid: "47853573"
 |BETWEEN|FUNCTION|RETURN|  
 |BREAK|GOTO|REVERT|  
 |BROWSE|GRANT|REVOKE|  
-|BULK|GROUP|[RIGHT]|  
+|BULK|GROUP|RIGHT|  
 |BY|HAVING|ROLLBACK|  
 |CASCADE|HOLDLOCK|ROWCOUNT|  
 |CASE|IDENTITY|ROWGUIDCOL|  
 |CHECK|IDENTITY_INSERT|RULE|  
 |CHECKPOINT|IDENTITYCOL|SAVE|  
-|CLOSE|[IF]|SCHEMA|  
+|CLOSE|IF|SCHEMA|  
 |CLUSTERED|IN|SECURITYAUDIT|  
 |COALESCE|INDEX|SELECT|  
 |COLLATE|INNER|SEMANTICKEYPHRASETABLE|  
@@ -65,44 +64,44 @@ ms.locfileid: "47853573"
 |CONTAINS|JOIN|SETUSER|  
 |CONTAINSTABLE|KEY|SHUTDOWN|  
 |CONTINUE|KILL|SOME|  
-|CONVERT|[LEFT]|STATISTICS|  
+|CONVERT|LEFT|STATISTICS|  
 |CREATE|LIKE|SYSTEM_USER|  
 |CROSS|LINENO|TABLE|  
 |CURRENT|LOAD|TABLESAMPLE|  
 |CURRENT_DATE|MERGE|TEXTSIZE|  
 |CURRENT_TIME|NATIONAL|THEN|  
 |CURRENT_TIMESTAMP|NOCHECK|TO|  
-|CURRENT_USER|NONCLUSTERED|先頭に戻る|  
-|CURSOR|[NOT]|TRAN|  
+|CURRENT_USER|NONCLUSTERED|TOP|  
+|CURSOR|NOT|TRAN|  
 |DATABASE|NULL|TRANSACTION|  
 |DBCC|NULLIF|TRIGGER|  
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|Del|ON|UNION|  
+|DELETE|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|USER|  
-|DROP|スイッチまたは|VALUES|  
+|DOUBLE|OPTION|User|  
+|DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|のすべてのメンションを|  
+|EXEC|PRECISION|WITH|  
 |EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-**SQL Data Warehouse** に固有の予約済みキーワードの一覧を次の表に示します。
+**Azure SQL Data Warehouse** に固有の予約済みキーワードの一覧を次の表に示します。
 
 |||
 |-|-|
-|**ラベル**||
+|**LABEL**||
   
  これに加えて、ISO 標準では予約済みキーワードの一覧が定義されています。 オブジェクト名と識別子には、ISO の予約済みキーワードを使用しないでください。 次の表にある ODBC の予約済みキーワードの一覧は、ISO の予約済みキーワードの一覧と同じです。  
   
@@ -168,7 +167,7 @@ ms.locfileid: "47853573"
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**LOWER**|**宛先**|  
+|**CURRENT_TIME**|**LOWER**|**TO**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
 |**CURRENT_USER**|**MAX**|**TRANSACTION**|  
 |**CURSOR**|**MIN**|**TRANSLATE**|  
@@ -204,7 +203,7 @@ ms.locfileid: "47853573"
 ||||  
 |-|-|-|  
 |ABSOLUTE|HOST|RELATIVE|  
-|ACTION|[HOUR]|RELEASE|  
+|ACTION|HOUR|RELEASE|  
 |ADMIN|IGNORE|RESULT|  
 |AFTER|IMMEDIATE|RETURNS|  
 |AGGREGATE|INDICATOR|ROLE|  
@@ -216,7 +215,7 @@ ms.locfileid: "47853573"
 |ASSERTION|INTEGER|SCROLL|  
 |ASYMMETRIC|INTERSECTION|SCOPE|  
 |AT|INTERVAL|SEARCH|  
-|ATOMIC|ISOLATION|[SECOND]|  
+|ATOMIC|ISOLATION|SECOND|  
 |BEFORE|ITERATE|SECTION|  
 |BINARY|LANGUAGE|SENSITIVE|  
 |BIT|LARGE|SEQUENCE|  
@@ -225,7 +224,7 @@ ms.locfileid: "47853573"
 |BOTH|LEADING|SIMILAR|  
 |BREADTH|LESS|SIZE|  
 |CALL|LEVEL|SMALLINT|  
-|CALLED|LIKE_REGEX|Space|  
+|CALLED|LIKE_REGEX|SPACE|  
 |CARDINALITY|LIMIT|SPECIFIC|  
 |CASCADED|LN|SPECIFICTYPE|  
 |CAST|LOCAL|SQL|  
@@ -236,12 +235,12 @@ ms.locfileid: "47853573"
 |CLOB|MATCH|STATE|  
 |COLLATION|MEMBER|STATEMENT|  
 |COLLECT|METHOD|STATIC|  
-|COMPLETION|[MINUTE]|STDDEV_POP|  
-|CONDITION|[MOD]|STDDEV_SAMP|  
+|COMPLETION|MINUTE|STDDEV_POP|  
+|CONDITION|MOD|STDDEV_SAMP|  
 |CONNECT|MODIFIES|STRUCTURE|  
 |CONNECTION|MODIFY|SUBMULTISET|  
 |CONSTRAINTS|MODULE|SUBSTRING_REGEX|  
-|CONSTRUCTOR|[MONTH]|SYMMETRIC|  
+|CONSTRUCTOR|MONTH|SYMMETRIC|  
 |CORR|MULTISET|SYSTEM|  
 |CORRESPONDING|NAMES|TEMPORARY|  
 |COVAR_POP|NATURAL|TERMINATE|  
@@ -249,21 +248,21 @@ ms.locfileid: "47853573"
 |CUBE|NCLOB|TIME|  
 |CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
-|CURRENT_DEFAULT_TRANSFORM_GROUP|いいえ|TIMEZONE_MINUTE|  
+|CURRENT_DEFAULT_TRANSFORM_GROUP|NO|TIMEZONE_MINUTE|  
 |CURRENT_PATH|なし|TRAILING|  
 |CURRENT_ROLE|NORMALIZE|TRANSLATE_REGEX|  
 |CURRENT_SCHEMA|NUMERIC|TRANSLATION|  
 |CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
 |CYCLE|OCCURRENCES_REGEX|TRUE|  
 |DATA|OLD|UESCAPE|  
-|[DATE]|ONLY|UNDER|  
-|[DAY]|OPERATION|UNKNOWN|  
+|DATE|ONLY|UNDER|  
+|DAY|OPERATION|UNKNOWN|  
 |DEC|ORDINALITY|UNNEST|  
-|[DECIMAL]|OUT|USAGE|  
+|DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
 |DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|パラメーター|VAR_SAMP|  
+|DEREF|PARAMETER|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  
@@ -283,7 +282,7 @@ ms.locfileid: "47853573"
 |FALSE|READS|XMLELEMENT|  
 |FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
-|[FLOAT]|REF|XMLITERATE|  
+|FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
 |FREE|REGR_AVGX|XMLPARSE|  
 |FULLTEXTTABLE|REGR_AVGY|XMLPI|  
@@ -292,7 +291,7 @@ ms.locfileid: "47853573"
 |GET|REGR_R2|XMLTABLE|  
 |GLOBAL|REGR_SLOPE|XMLTEXT|  
 |GO|REGR_SXX|XMLVALIDATE|  
-|GROUPING|REGR_SXY|[YEAR]|  
+|GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
 ## <a name="see-also"></a>参照  

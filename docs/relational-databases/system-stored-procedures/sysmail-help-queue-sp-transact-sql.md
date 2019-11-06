@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_queue_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_queue_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796518"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305215"
 ---
-# <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
+# <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メールには、メール キューと状態キューの 2 つのキューがあります。 メール キューには、送信待ちのメール アイテムが格納され、 状態キューには、送信済みのアイテムの状態が格納されます。 このストアド プロシージャを使用すると、メール キューや状態キューの状態を確認できます。 場合、パラメーター **@queue_type**が指定されていない、ストアド プロシージャは、各キューの 1 つの行を返します。  
+  データベース メールには、メール キューと状態キューの 2 つのキューがあります。 メール キューには、送信待ちのメール アイテムが格納され、 状態キューには、送信済みのアイテムの状態が格納されます。 このストアドプロシージャを使用すると、メールキューまたはステータスキューの状態を表示できます。 パラメーター **@no__t 1queue_type**が指定されていない場合、ストアドプロシージャは、キューごとに1つの行を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,8 +39,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@queue_type** =] **'***queue_type***'**  
- 省略可能な引数として指定された型の電子メールを削除する、 *queue_type*します。 *queue_type*は**nvarchar (6)** 既定値はありません。 有効なエントリは**メール**と**状態**します。  
+`[ @queue_type = ] 'queue_type'` 省略可能な引数は、 *queue_type*として指定された種類の電子メールを削除します。 *queue_type*は**nvarchar (6)** 既定値はありません。 有効なエントリは、 **mail**および**status**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -50,17 +48,17 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|キューの種類。 指定できる値は**メール**と**状態**します。|  
+|**queue_type**|**nvarchar(6)**|キューの種類。 指定できる値は、 **mail**および**status**です。|  
 |**length**|**int**|指定したキュー内のメール アイテムの数。|  
-|**state**|**nvarchar(64)**|監視の状態。 指定できる値は**INACTIVE** (キューはアクティブなされません)**通知**(キューがされている受信)、および**RECEIVES_OCCURRING** (キューは受信中)。|  
-|**last_empty_rowset_time**|**DATETIME**|キューが最後に空になった日時。 24 時間形式、GMT タイム ゾーンで表されます。|  
-|**last_activated_time**|**DATETIME**|キューが最後にアクティブ化された日時。 24 時間形式、GMT タイム ゾーンで表されます。|  
+|**state**|**nvarchar(64)**|モニターの状態です。 有効な値は、**非アクティブ**(キューが非アクティブ)、**通知**された (キューの通知が受信されたことを通知する)、および**RECEIVES_OCCURRING** (キューは受信中) です。|  
+|**last_empty_rowset_time**|**/**|キューが最後に空だった日付と時刻。 [軍用時刻形式] と [GMT タイムゾーン]。|  
+|**last_activated_time**|**/**|キューが最後にアクティブ化された日時。 [軍用時刻形式] と [GMT タイムゾーン]。|  
   
 ## <a name="remarks"></a>コメント  
- データベース メールのトラブルシューティングを行うとき**sysmail_help_queue_sp**と最後に、キューの状態のアクティブ化する項目の数は、キューにあるを参照してください。  
+ データベースメールのトラブルシューティングを行う場合は、 **sysmail_help_queue_sp**を使用して、キューにあるアイテムの数、キューの状態、および最後にアクティブ化された日時を確認します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定のメンバーだけで、 **sysadmin**固定サーバー ロールは、このプロシージャを使用できます。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーだけがこのプロシージャにアクセスできます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、メール キューと状態キュー両方を返します。  
@@ -70,7 +68,7 @@ EXECUTE msdb.dbo.sysmail_help_queue_sp ;
 GO  
 ```  
   
- 次は、結果セットのサンプルです。length 列に編集が加えられています。  
+ このサンプルの結果セットは、長さに対して編集されています。  
   
 ```  
 queue_type length      state              last_empty_rowset_time  last_activated_time  
@@ -82,7 +80,7 @@ status     0        INACTIVE           2005-10-07 21:04:47.003 2005-10-10 21:04:
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)  
   
   

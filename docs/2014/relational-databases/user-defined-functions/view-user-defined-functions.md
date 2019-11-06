@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211682"
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のユーザー定義関数の定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 関数のデータが元のテーブルからどのように抽出されているのかを理解したり、関数で定義されているデータを確認するために、関数の定義を調べたい場合があります。  
@@ -43,7 +43,7 @@ ms.locfileid: "48223172"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48223172"
   
 4.  プロパティを表示する関数を右クリックし、 **[プロパティ]** を選択します。  
   
-     **[関数のプロパティ –** *function_name* ] ダイアログ ボックスに、次のプロパティが表示されます。  
+     **[関数のプロパティ - _function_name_]** ダイアログ ボックスに、次のプロパティが表示されます。  
   
      **[データベース]**  
      この関数を含むデータベースの名前です。  
@@ -76,7 +76,7 @@ ms.locfileid: "48223172"
      **[サーバー]**  
      現在のサーバー インスタンスの名前です。  
   
-     **ユーザー**  
+     **User**  
      この接続のユーザーの名前です。  
   
      **[作成日]**  

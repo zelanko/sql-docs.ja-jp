@@ -1,6 +1,7 @@
 ---
-title: 運用上の問題のための AlwaysOn ポリシー - Always On 可用性 | Microsoft Docs
-ms.custom: ''
+title: 可用性グループでの運用上の問題に対するポリシー ベースの管理
+description: Always On 可用性グループの正常性モデルは、定義済みポリシー ベースの管理 (PBM) ポリシーのセットを評価します。 これらのポリシーを使用すると、可用性グループとレプリカおよびデータベースの正常性を SQL Server で表示できます。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,32 +13,18 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: edb59eacc43d0563c8cd00372d27155f4100703f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991554"
 ---
-# <a name="always-on-policies-for-operational-issues---always-on-availability"></a>運用上の問題のための AlwaysOn ポリシー - Always On 可用性
+# <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 可用性グループでの運用上の問題に対するポリシー ベースの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルは、定義済みポリシー ベースの管理 (PBM) ポリシーのセットを評価します。 これらのポリシーを使用すると、可用性グループとその可用性レプリカおよびデータベースの正常性を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で表示できます。  
+  Always On 可用性グループの正常性モデルは、定義済みポリシー ベースの管理 (PBM) ポリシーのセットを評価します。 これらのポリシーを使用すると、可用性グループとその可用性レプリカおよびデータベースの正常性を SQL Server で表示できます。  
   
- **このトピックの内容**  
-  
--   [用語と定義](#TermsAndDefinitions)  
-  
--   [定義済みのポリシーと問題点](#Always OnPBM)  
-  
--   [AlwaysOn ダッシュボード](#Dashboard)  
-  
--   [AlwaysOn 正常性モデルの拡張](#ExtendHealthModel)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
  AlwaysOn の定義済みのポリシー  
@@ -61,7 +48,7 @@ ms.locfileid: "51601682"
 ##  <a name="Always OnPBM"></a> 定義済みのポリシーと問題点  
  次の表は、定義済みのポリシーをまとめたものです。  
   
-|ポリシー名|問題点|カテゴリ**\***|ファセット|  
+|ポリシー名|問題点|カテゴリ **&#42;**|ファセット|  
 |-----------------|-----------|--------------------|-----------|  
 |WSFC クラスターの状態|[WSFC クラスター サービスはオフラインです](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|重大|SQL Server のインスタンス|  
 |可用性グループのオンライン状態|[可用性グループがオフライン](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|重大|可用性グループ|  
@@ -78,8 +65,8 @@ ms.locfileid: "51601682"
 |可用性データベースの参加状態|[セカンダリ データベースが参加していません](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性データベース|  
 |可用性データベースのデータ同期状態|[可用性データベースのデータ同期状態が正常ではありません](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性データベース|  
   
-> [!IMPORTANT]  
->  **\*** AlwaysOn ポリシーでは、カテゴリの名前が ID として使用されます。 AlwaysOn カテゴリの名前を変更すると、正常性評価の機能を使用できなくなります。 このため、AlwaysOn カテゴリの名前は変更しないでください。  
+> [!IMPORTANT]
+>  **&#42;** Always On ポリシーでは、カテゴリの名前が ID として使用されます。 AlwaysOn カテゴリの名前を変更すると、正常性評価の機能を使用できなくなります。 このため、AlwaysOn カテゴリの名前は変更しないでください。  
   
 ##  <a name="Dashboard"></a> AlwaysOn ダッシュボード  
  AlwaysOn ダッシュボードには、可用性グループの正常性を一目で確認できるビューが用意されています。 AlwaysOn ダッシュボードには、次の機能が含まれています。  
@@ -99,7 +86,7 @@ ms.locfileid: "51601682"
 ##  <a name="ExtendHealthModel"></a> AlwaysOn 正常性モデルの拡張  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルを拡張するには、独自のユーザー定義のポリシーを作成し、監視するオブジェクトの種類に基づいて特定のカテゴリに分類します。  いくつかの設定を変更した後、独自のユーザー定義のポリシーおよび AlwaysOn の定義済みのポリシーが、AlwaysOn ダッシュボードによって自動的に評価されます。  
   
- ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「 [定義済みのポリシーと問題点](#Always OnPBM)」を参照してください)。 サーバーのファセットは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性状態の監視用に、**IsHadrEnabled** プロパティおよび **HadrManagerStatus**プロパティを提供します。 サーバーのファセットは、WSFC クラスター構成の監視用に、 **ClusterQuorumType**プロパティおよび **ClusterQuorumState**プロパティも提供します。  
+ ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「 [定義済みのポリシーと問題点](#Always OnPBM)」を参照してください)。 サーバーのファセットは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性状態の監視用に、**IsHadrEnabled** プロパティおよび **HadrManagerStatus**プロパティを提供します。 サーバーのファセットは、WSFC クラスター構成の監視用に、**ClusterQuorumType** プロパティおよび **ClusterQuorumState** プロパティも提供します。  
   
  詳細については、「 [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) 」を参照してください (SQL Server AlwaysOn チームのブログ)。  
   

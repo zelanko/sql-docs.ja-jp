@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - dragging and dropping text
@@ -14,12 +13,12 @@ ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b248f61465e3c9f2228608a5640b2b7395fd902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c103672bbc8dcb6028190a624c1f9ecdb3caf3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064141"
 ---
 # <a name="drag-and-drop-text"></a>テキストのドラッグ アンド ドロップ
   テキストを選択して、別の場所にドラッグ アンド ドロップすることができます。 次のような場合にテキストをドラッグ アンド ドロップできます。  
@@ -44,7 +43,7 @@ ms.locfileid: "48049772"
   
  テキストをドラッグすると、テキストが移動します。つまり、テキストが元の場所から消去されて新しい場所に移動します。 Ctrl キーを押しながらテキストをドラッグすると、テキストが新しい場所にコピーされます。 オブジェクト エクスプローラーからオブジェクトをドラッグする場合は例外で、オブジェクト エクスプローラーからオブジェクト名は削除されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コード内とテキスト内の移動](navigate-code-and-text.md)  
   
   

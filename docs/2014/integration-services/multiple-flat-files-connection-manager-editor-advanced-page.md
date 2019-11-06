@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.advanced.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dda5cb294536354ed4bcc5003983d36f61167007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057548"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、フラット ファイル接続マネージャーが接続するテキスト ファイルの各列のデータ型や区切り記号などのプロパティを設定できます。  
@@ -42,12 +41,12 @@ ms.locfileid: "48143332"
 |プロパティ|説明|  
 |--------------|-----------------|  
 |**[列の型]**|列が区切り形式、固定幅形式、幅合わせしない形式のうちどれであるかを示します。 このプロパティは読み取り専用です。 幅合わせしないファイルとは、最後の列以外のすべての列が固定幅を持つファイルです。最後の列は、行区切り記号で終了します。|  
-|**[出力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 データ フロー タスクでは、この値を使用してフラット ファイル ソースの出力列の幅を設定します。<br /><br /> 注: オブジェクト モデルでは、このプロパティの名前は MaximumWidth です。|  
+|**[出力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 データ フロー タスクでは、この値を使用してフラット ファイル ソースの出力列の幅を設定します。<br /><br /> 注:オブジェクト モデルでは、このプロパティの名前は MaximumWidth です。|  
 |**DataType**|使用できるデータ型を一覧から選択します。 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。|  
-|**[テキスト修飾子]**|テキスト修飾子文字を使用してテキスト データは修飾するかどうかを示します。 有効な値は、<br /><br /> **True**: フラット ファイルのテキスト データは修飾されます。<br /><br /> **False**: フラット ファイルのテキスト データは修飾されません。|  
+|**[テキスト修飾子]**|テキスト修飾子文字を使用してテキスト データは修飾するかどうかを示します。 有効な値は、<br /><br /> **True**:フラット ファイルのテキスト データは修飾されます。<br /><br /> **False**:フラット ファイルのテキスト データは修飾されません。|  
 |**名前**|列名を指定します。 既定では列の番号になりますが、わかりやすい一意な名前を選択することもできます。|  
 |**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。|  
-|**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}** – 列は、復帰と改行の組み合わせで区切られます<br /><br /> **{CR}** – 列は、復帰で区切られます<br /><br /> **{LF}** – 列は、改行で区切られます<br /><br /> **Semicolon {;}** – 列は、セミコロンで区切られます<br /><br /> **Colon {:}** – 列は、コロンで区切られます<br /><br /> **Comma {,}** – 列は、コンマで区切られます<br /><br /> **Tab {t}** – 列は、タブで区切られます<br /><br /> **Vertical bar {&#124;}** – 列は、縦棒で区切られます|  
+|**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}** - 列は、復帰と改行の組み合わせで区切られます<br /><br /> **{CR}** - 列は、復帰で区切られます<br /><br /> **{LF}** - 列は、改行で区切られます<br /><br /> **Semicolon {;}** - 列は、セミコロンで区切られます<br /><br /> **Colon {:}** - 列は、コロンで区切られます<br /><br /> **Comma {,}** - 列は、コンマで区切られます<br /><br /> **Tab {t}** - 列は、タブで区切られます<br /><br /> **Vertical bar {&#124;}** - 列は、縦棒で区切られます|  
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|  
   
@@ -68,8 +67,8 @@ ms.locfileid: "48143332"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[複数フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [[複数フラット ファイル接続マネージャー エディター&#40;列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [[複数フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[複数フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fc3241881c8c87c7ab2978820119e8bdabeee3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: decf18a42bc2f3f80d5c6099adc58a42869eec64
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012762"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation イベント クラス
   **Audit Server Principal Impersonation** イベント クラスは、サーバー スコープ内に EXECUTE AS \<*login*> などの権限の借用がある場合に発生します。  
@@ -48,9 +47,9 @@ ms.locfileid: "48079632"
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|[はい]|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します。|23|はい|  
-|**TextData**|**ntext**|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
+|**TextData**|**ntext**|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|[はい]|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   

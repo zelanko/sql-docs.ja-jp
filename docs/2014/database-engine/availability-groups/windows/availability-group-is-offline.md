@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f2d6612b50fc3bd9b07231c42363a8e1e6889e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815425"
 ---
 # <a name="availability-group-is-offline"></a>可用性グループがオフライン
     
@@ -28,7 +28,7 @@ ms.locfileid: "48148722"
 |||  
 |-|-|  
 |**ポリシー名**|可用性グループのオンライン状態|  
-|**問題点**|可用性グループはオフラインです。|  
+|**問題**|可用性グループはオフラインです。|  
 |**カテゴリ**|**重大**|  
 |**ファセット**|可用性グループ|  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48148722"
  可用性グループのクラスター リソースがオンライン状態で、可用性グループがプライマリ レプリカを持つ場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性グループがオフライン](http://go.microsoft.com/fwlink/p/?LinkId=220850) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
+>  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性グループがオフライン](https://go.microsoft.com/fwlink/p/?LinkId=220850) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
   
 ## <a name="possible-causes"></a>考えられる原因  
  この問題は、プライマリ レプリカをホストするサーバー インスタンスのエラー、またはオフラインになっている Windows Server フェールオーバー クラスター (WSFC) 可用性グループ リソースによって発生する可能性があります。 可用性グループがオフラインになる原因として、次のような状況が考えられます。  
@@ -72,7 +72,7 @@ ms.locfileid: "48148722"
   
 -   フェールオーバーが進行中の場合は、フェールオーバーが完了するのを待ちます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

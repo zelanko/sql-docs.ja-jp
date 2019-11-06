@@ -1,6 +1,7 @@
 ---
-title: ドメインに依存しない可用性グループ (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: ドメインに依存しない可用性グループを作成する
+description: ワークグループ クラスターを使用する可用性グループを作成する手順について説明します。 これにより SQL Server 2016 (以降) で Active Directory Domain Services を必要としない、従って各サーバーが同じドメインの一部となる必要がない Always On 可用性グループを WSFC 上に展開できるようになります。
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000225"
 ---
-# <a name="domain-independent-availability-groups"></a>ドメインに依存しない可用性グループ
+# <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On 可用性グループ (AG) には、基になる Windows Server フェールオーバー クラスター (WSFC) が必要です。 Windows Server 2012 R2 を使用して WSFC を展開するには、WSFC (ノードとも呼ばれる) に参加しているサーバーが同じドメインに追加されていることが常に必要です。 Active Directory Domain Services (AD DS) の詳細については、[ここ](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)を参照してください。
@@ -70,14 +70,16 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 10. 再起動を求めるメッセージが表示されます。 すぐに再起動しない場合は、[後で再起動] をクリックします。それ以外の場合は、[今すぐ再起動する] をクリックします。
 11. サーバーが再起動されたら、もう一度システムを確認して、共通の DNS サフィックスが構成されていることを確認します。
 
-
 ![DNS サフィックスの正常に終了した構成][4]
+
+  > [!NOTE]
+  > 複数のサブネットを使用していて、静的 DNS がある場合は、フェールオーバーを実行する前にリスナーに関連付けられている DNS レコードを更新するためのプロセスを、用意する必要があります。そうしないと、ネットワーク名がオンラインになりません。
 
 ## <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
 
 現在、ドメインの独立した可用性グループの作成は、SQL Server Management Studio を使用して完全に達成することはできません。 ドメインに依存しない可用性グループの作成は、標準の可用性グループの作成と基本的に同じですが、特定のアスペクト (証明書の作成など) は Transact-SQL でのみ可能です。 次の例は、2 つのレプリカを持つ可用性グループの構成を想定しています。プライマリが 1 つとセカンダリが 1 つです。 
 
-1. [このリンクの手順を使用して](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)、すべてが可用性グループに参加するサーバーで構成されるワークグループ クラスターを展開します。 ワークグループ クラスターを構成する前に、共通の DNS サフィックスが既に構成されていることを確認します。
+1. [このリンクの手順を使用して](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)、すべてが可用性グループに参加するサーバーで構成されるワークグループ クラスターを展開します。 ワークグループ クラスターを構成する前に、共通の DNS サフィックスが既に構成されていることを確認します。
 2. 可用性グループに追加する各インスタンスの [Always On 可用性グループ機能を有効にします](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)。 これには、各 SQL Server インスタンスの再起動が必要がです。
 3. プライマリ レプリカをホストするインスタンスごとに、データベース マスター キーが必要です。 マスター キーがまだ存在していない場合は、次のコマンドを実行します。
 
@@ -125,7 +127,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
    ```
 
 10. プライマリになる可能性があるレプリカでは、関連するすべてのセカンダリ レプリカでログインとユーザーを作成します。
-11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例 :
+11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例:
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]
@@ -170,4 +172,4 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png
+[4]: ./media/diag-successful-dns-suffix.png 

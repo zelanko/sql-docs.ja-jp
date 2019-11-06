@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58db5b7c1317f2bddffc1375bdfac6c5246e4ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032492"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server モニターの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47767360"
  これらのモジュールのいずれかを使用するには、 **[実行]** メニューから該当するモジュールを選択します。 現在選択されているモジュールには、ナビゲーション ペインと詳細ペインの内容、詳細ペインでのユーザーとのやり取り、および内容と状態に関するクエリがあります。  
   
 > [!NOTE]  
->  これらのモニターの詳細については、「 [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md) 」および「 [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)」をご覧ください。  
+>  これらのモニターの詳細については、「 [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md) 」および「 [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
   
@@ -57,7 +56,7 @@ ms.locfileid: "47767360"
   
 -   データベース ミラーリング  
   
--   のレプリケーション  
+-   レプリケーション  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   

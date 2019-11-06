@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileconnection.f1
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7920b14f006784569ead9bbbe40e96af9a6e2b91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833874"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
   **[ファイル接続マネージャーの追加]** ダイアログ ボックスを使用すると、ファイルまたはフォルダーのグループへの接続を定義できます。  
@@ -57,6 +56,6 @@ ms.locfileid: "48161722"
  ファイルまたはフォルダーを選択し、矢印ボタンを使用して上または下に移動して、アクセスのシーケンスを指定します。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
@@ -16,15 +16,15 @@ ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e32be6583a84318558079439e444a2512e5b3b53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127431"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62955901"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>サーバー接続の F1 ヘルプ (SQL Server Management Studio)
-  ここでは、 **の** [サーバーへの接続] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
+  ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバーへの接続]** ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
   
  [[サーバーの参照] ([ローカル サーバー])](../../database-engine/browse-for-servers-local-servers.md)  
   

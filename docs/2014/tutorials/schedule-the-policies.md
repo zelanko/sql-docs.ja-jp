@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 59417a54-55f1-4468-ba41-368aa852c2d4
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ab324e94efdfdebea0387a2212440ed971c11aa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033504"
 ---
 # <a name="schedule-the-policies"></a>ポリシーのスケジュール設定
   ここでは、前の作業でインポートしたベスト プラクティス ポリシーをスケジュールします。  

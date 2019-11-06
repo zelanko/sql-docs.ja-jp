@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107896"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、レポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
@@ -54,24 +53,20 @@ ms.locfileid: "48116402"
   
 -   `Images, lines, and custom report items`画像、線、およびカスタム レポート アイテムは無視されます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> データ型  
  テキスト ボックスの要素または属性には、テキスト ボックスに表示される値に基づいた XSD データ型が割り当てられます。  
   
 |テキスト ボックスの値|割り当てられるデータ型|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (または`Decimal`と任意の整数かバイト データ型)|**xsd:decimal**|  
-|`Float` (または`Decimal`と任意の整数かバイト データ型)|**xsd:float**|  
-|`Double` (または`Decimal`と任意の整数かバイト データ型)|**xsd:double**|  
+|`Decimal` (または `Decimal` と任意の整数かバイト データ型)|**xsd:decimal**|  
+|`Float` (または `Decimal` と任意の整数かバイト データ型)|**xsd:float**|  
+|`Double` (または `Decimal` と任意の整数かバイト データ型)|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
 |`String`, `Char`|**xsd:string**|  
 |その他|**xsd:string**|  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> XML 固有の表示規則  
  次のセクションでは、レポート内のアイテムが XML 表示拡張機能によってどのように解釈されるかについて説明します。  
@@ -81,7 +76,7 @@ ms.locfileid: "48116402"
   
  レポート要素には、XML 名前空間の定義とスキーマ参照属性も含まれます。 以下の例では、変数が太字で示されています。  
   
- \<**レポート**xmlns ="**SchemaName**"xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc %3aschema =true"名前 ="ReportName">  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  それぞれの変数の値は次のとおりです。  
   
@@ -115,8 +110,6 @@ ms.locfileid: "48116402"
   
 ### <a name="lines"></a>線  
  線はレンダリングされません。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ### <a name="tables-matrices-and-lists"></a>テーブル、マトリックス、および一覧  
  テーブル、マトリックス、および一覧は要素としてレンダリングされます。 要素の名前は、Tablix の DataElementName RDL プロパティから取得されます。  
@@ -155,17 +148,11 @@ ms.locfileid: "48116402"
   
  DataElementOutput プロパティの値が Output と等しい場合、繰り返しアイテムのヘッダーが、detail 要素の子としてレンダリングされます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> カスタム形式および XSL 変換  
  XML 表示拡張機能で生成した XML ファイルは、XSL 変換 (XSLT) を使用してほとんどすべての形式に変換できます。 この機能を使用すると、既存の表示拡張機能ではサポートされていない形式でデータを生成できます。 独自の表示拡張機能の作成を試みる前に、XML 表示拡張機能および XSLT を使用することを検討してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> 重複する名前  
  同じスコープ内に重複するデータ要素名が存在する場合、レンダラーからエラー メッセージが表示されます。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> XSLT 変換  
  XML レンダラーでは、元の XML データに対し、サーバー側で XSLT 変換を適用できます。 XSLT が適用された場合、元の XML データの代わりに、変換済みのコンテンツが出力されます。 変換はクライアント側ではなく、サーバー側で実行されます。  
@@ -173,8 +160,6 @@ ms.locfileid: "48116402"
  出力結果に適用する XSLT は、レポート定義ファイル内で、レポートの DataTransform プロパティまたは XSLT の *DeviceInfo* パラメーターで定義します。 いずれかの値が設定されている場合、XML レンダラーを使用するたびに変換が実行されます。 サブスクリプションを使用する場合は、RDL DataTransform プロパティで XSLT を定義する必要があります。  
   
  DataTransform 定義プロパティおよびデバイス情報設定の両方で XSLT ファイルを指定した場合は、最初に DataTransform で指定された XSLT が適用され、続けて、デバイス情報設定による XSLT が適用されます。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> デバイス情報設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。変更できる設定には、次のようなものがあります。  
@@ -195,13 +180,9 @@ ms.locfileid: "48116402"
   
  詳細については、「 [XML デバイス情報設定](../xml-device-information-settings.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

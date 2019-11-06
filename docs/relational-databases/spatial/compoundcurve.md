@@ -7,16 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511844"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909209"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,15 +29,14 @@ ms.locfileid: "52511844"
 1.  少なくとも 1 つの **CircularString** インスタンスまたは **LineString** インスタンスを含める必要があります。  
   
 2.  **CircularString** インスタンスまたは **LineString** インスタンスのシーケンスは連続している必要があります。  
-  
- **CompoundCurve** に複数の **CircularString** インスタンスおよび **LineString** インスタンスのシーケンスが含まれている場合、最後のインスタンスを除くすべてのインスタンスのエンドポイントは、シーケンス内の次のインスタンスの開始エンドポイントであることが必要です。 これは、シーケンス内の前のインスタンスの終点が (4 3 7 2) である場合は、シーケンス内の次のインスタンスの始点が (4 3 7 2) になる必要があることを意味します。 点の Z (標高) 値および M (メジャー) 値も同じである必要があることに注意してください。 これら 2 つの点が異なる場合は、 `System.FormatException` がスローされます。 **CircularString** の点は、Z 値または M 値を持つ必要はありません。 前のインスタンスの終点に対して Z 値または M 値が指定されていない場合、次のインスタンスの始点には Z 値または M 値を含めることはできません。 前のシーケンスの終点が (4 3) である場合、次のシーケンスの始点は (4 3) となり、(4 3 7 2) を設定することはできません。 **CompoundCurve** インスタンスのすべての点は、Z 値をまったく持たないか、または同じ Z 値を持つ必要があります。  
+
+**CompoundCurve** に複数の **CircularString** インスタンスおよび **LineString** インスタンスのシーケンスが含まれている場合、最後のインスタンスを除くすべてのインスタンスのエンドポイントは、シーケンス内の次のインスタンスの開始エンドポイントであることが必要です。 これは、シーケンス内の前のインスタンスの終点が (4 3 7 2) である場合は、シーケンス内の次のインスタンスの始点が (4 3 7 2) になる必要があることを意味します。 点の Z (標高) 値および M (メジャー) 値も同じである必要があることに注意してください。 これら 2 つの点が異なる場合は、 `System.FormatException` がスローされます。 **CircularString** の点は、Z 値または M 値を持つ必要はありません。 前のインスタンスの終点に対して Z 値または M 値が指定されていない場合、次のインスタンスの始点には Z 値または M 値を含めることはできません。 前のシーケンスの終点が (4 3) である場合、次のシーケンスの始点は (4 3) となり、(4 3 7 2) を設定することはできません。 **CompoundCurve** インスタンスのすべての点は、Z 値をまったく持たないか、または同じ Z 値を持つ必要があります。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
- 次の図は、有効な **CompoundCurve** 型を示しています。  
+次の図は、有効な **CompoundCurve** 型を示しています。  
   
 ![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
-  
 ### <a name="accepted-instances"></a>許容されるインスタンス  
  **CompoundCurve** インスタンスは、空のインスタンスであるかまたは次の条件を満たす場合に許容されます。  
   
@@ -47,20 +45,20 @@ ms.locfileid: "52511844"
 2.  **CompoundCurve** インスタンス内のすべての円弧セグメントが接続されている。 後続のそれぞれの円弧の始点が、前の円弧の終点と同じである必要があります。  
   
     > [!NOTE]  
-    >  これには、Z 座標および M 座標が含まれます。 したがって、4 つの座標 (X、Y、Z、M) すべてが同じである必要があります。  
+    > これには、Z 座標および M 座標が含まれます。 したがって、4 つの座標 (X、Y、Z、M) すべてが同じである必要があります。  
   
 3.  含まれているすべてのインスタンスが、空のインスタンスではない。  
   
- 次の例は、許容される **CompoundCurve** インスタンスを示しています。  
+次の例は、許容される **CompoundCurve** インスタンスを示しています。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 ```  
   
- 許容されない **CompoundCurve** インスタンスを次の例に示します。 これらのインスタンスは、 `System.FormatException`をスローします。  
+許容されない **CompoundCurve** インスタンスを次の例に示します。 これらのインスタンスは、 `System.FormatException`をスローします。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0))';  
 ```  
@@ -72,28 +70,27 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
   
 2.  **CompoundCurve** インスタンスに含まれるすべての円弧インスタンスが、有効なインスタンスである。  
   
- 次の例は、有効な **CompoundCurve** インスタンスを示しています。  
+次の例は、有効な **CompoundCurve** インスタンスを示しています。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
-  
 ```  
   
- `@g3`**CircularString** インスタンスが有効であるため、有効です。 **CircularString** インスタンスの妥当性の詳細については、「 [CircularString](../../relational-databases/spatial/circularstring.md)」を参照してください。  
+`@g3`**CircularString** インスタンスが有効であるため、有効です。 **CircularString** インスタンスの妥当性の詳細については、「 [CircularString](../../relational-databases/spatial/circularstring.md)」を参照してください。  
   
- 有効でない **CompoundCurve** インスタンスを次の例に示します。  
+有効でない **CompoundCurve** インスタンスを次の例に示します。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4, 3 5))';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE((1 1, 1 1))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` 2 番目のインスタンスが有効な LineString インスタンスではないため、無効です。 `@g2`**LineString** インスタンスが有効ではないため、無効です。 `@g3`**CircularString** インスタンスが有効ではないため、無効です。 有効な **CircularString** インスタンスと **LineString** インスタンスの詳細については、「 [CircularString](../../relational-databases/spatial/circularstring.md) 」および「 [LineString](../../relational-databases/spatial/linestring.md)」を参照してください。  
+`@g1` 2 番目のインスタンスが有効な LineString インスタンスではないため、無効です。 `@g2`**LineString** インスタンスが有効ではないため、無効です。 `@g3`**CircularString** インスタンスが有効ではないため、無効です。 有効な **CircularString** インスタンスと **LineString** インスタンスの詳細については、「 [CircularString](../../relational-databases/spatial/circularstring.md) 」および「 [LineString](../../relational-databases/spatial/linestring.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -140,7 +137,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- この場合の出力は、4∏ と等しい 12.566370… となります。 この例の `CompoundCurve` インスタンスは、半径が 2 の円を格納します。 前のコード例のどちらの場合も、 `CompoundCurve`を使用する必要はありません。 最初の例では `LineString` インスタンスを、2 番目の例では `CircularString` インスタンスをより単純化することができました。 ただし、次の例は、 `CompoundCurve` がより優れた代替手段となるケースを示しています。  
+この場合の出力は、4? と等しい `12.5663706143592` となります。 この例の `CompoundCurve` インスタンスは、半径が 2 の円を格納します。 前のコード例のどちらの場合も、 `CompoundCurve`を使用する必要はありません。 最初の例では `LineString` インスタンスを、2 番目の例では `CircularString` インスタンスをより単純化することができました。 ただし、次の例は、 `CompoundCurve` がより優れた代替手段となるケースを示しています。  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. CompoundCurve を使用して半円を格納する  
  次の例では、 `CompoundCurve` インスタンスを使用して半円を格納します。  
@@ -179,14 +176,14 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount  
 ```  
   
- この場合の出力結果を次に示します。  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circle One11.940039...  
 Circle Two12.566370...  
 ```  
   
- Circle Two の境界は約 4∏ で、これは境界の実際の値です。 ただし、Circle One の境界はきわめて不正確です。 Circle One の `CompoundCurve` インスタンスは、1 つの円弧 (ABC) と 2 つの線分 (CD、DA) を格納します。 `CompoundCurve` インスタンスは、円を定義するために 2 つの円弧 (ABC、CDA) を格納する必要があります。 `LineString` インスタンスは、2 番目の点のセット (4 2, 2 4, 0 2) を Circle One の `CompoundCurve` インスタンスに定義します。 ここで、 `CircularString` 内の `CompoundCurve`インスタンスを明示的に宣言する必要があります。  
+Circle Two の境界は約 4? で、これは境界の実際の値です。 ただし、Circle One の境界はきわめて不正確です。 Circle One の `CompoundCurve` インスタンスは、1 つの円弧 (ABC) と 2 つの線分 (CD、DA) を格納します。 `CompoundCurve` インスタンスは、円を定義するために 2 つの円弧 (ABC、CDA) を格納する必要があります。 `LineString` インスタンスは、2 番目の点のセット (4 2, 2 4, 0 2) を Circle One の `CompoundCurve` インスタンスに定義します。 ここで、 `CircularString` 内の `CompoundCurve`インスタンスを明示的に宣言する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

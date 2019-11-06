@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4032a624d49cbf7c70d710b6b4df7373353f1d2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483403"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>モデル管理者を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、モデル管理者を作成する場合、グループまたはユーザーに与える**Update** 1 つまたは複数のモデルのすべてのオブジェクトへのアクセスを許可します。  
@@ -31,7 +30,7 @@ ms.locfileid: "48099162"
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-create-a-model-administrator"></a>モデル管理者を作成するには  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48099162"
   
  1 つの例外が発生: 場合は、ユーザーがある**Update**階層に割り当てられた権限**ルート**上、**階層メンバー**  タブで、ユーザーがモデルと見なされますが管理者です。  
   
-## <a name="see-also"></a>参照  
- [管理者&#40;マスター データ サービス&#41;](administrators-master-data-services.md)   
- [モデル オブジェクト権限を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
- [階層メンバー権限を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [モデル オブジェクト権限&#40;マスター データ サービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [階層メンバーの権限&#40;マスター データ サービス&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>関連項目  
+ [管理者 (マスター データ サービス)](administrators-master-data-services.md)   
+ [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [階層メンバーの権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [モデル オブジェクト権限 (マスター データ サービス)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [階層メンバーの権限 (マスター データ サービス)](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

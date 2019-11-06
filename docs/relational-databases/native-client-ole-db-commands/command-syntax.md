@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34b8841bcd173693f28af511b6e855366882f461
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b2dcd12d947c90753652fbb26b7a2c8b5b65e1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128791"
 ---
 # <a name="command-syntax"></a>コマンドの構文
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,7 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     EXECUTE SalesByCategory 'Produce', '1995'  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[コマンド]](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

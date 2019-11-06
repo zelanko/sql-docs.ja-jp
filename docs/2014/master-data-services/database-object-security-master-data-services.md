@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eafc9720197ffc32cdca2ef58f91725befaaec1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483150"
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでは、データは複数のデータベース テーブルに格納されており、ビューで表示できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで保護されている可能性がある情報は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにアクセスできるユーザーであれば参照できます。  
@@ -45,13 +44,13 @@ ms.locfileid: "48183522"
 ##  <a name="Staging"></a> データをステージングする  
  次の表では、セキュリティ保護可能な各リソースの名前の一部に "name" を使用しています。 これは、エンティティの作成時に指定するステージング テーブルの名前を示します。 詳細については、次を参照してください[データのインポート&#40;マスター データ サービス。&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
-|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
+|アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
-|リーフ メンバーとその属性をステージング テーブルに読み込む|stg.name_Leaf|必須: INSERT<br /><br /> オプション: SELECT および UPDATE|  
+|リーフ メンバーとその属性をステージング テーブルに読み込む|stg.name_Leaf|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |リーフ ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Leaf|EXECUTE|  
-|統合メンバーとその属性をステージング テーブルに読み込む|stg.name_Consolidated|必須: INSERT<br /><br /> オプション: SELECT および UPDATE|  
+|統合メンバーとその属性をステージング テーブルに読み込む|stg.name_Consolidated|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |統合ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Consolidated|EXECUTE|  
-|明示的階層のリーフ メンバーと統合メンバーの相互リレーションシップをステージング テーブルに読み込む|stg.name_Relationship|必須: INSERT<br /><br /> オプション: SELECT および UPDATE|  
+|リーフ メンバーと相互に明示的階層内の統合メンバーのリレーションシップをステージング テーブルに読み込みます。|stg.name_Relationship|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |リレーションシップ ステージング テーブルから MDS の適切なテーブルにデータを読み込む|stg.udp_name_Relationship|EXECUTE|  
 |ステージング テーブルのデータが MDS データベース テーブルに挿入されたときに発生したエラーを表示する|stg.udp_name_Relationship|SELECT|  
   
@@ -59,15 +58,15 @@ ms.locfileid: "48183522"
   
 ##  <a name="rules"></a> ビジネス ルールに対してデータを検証する  
   
-|操作|セキュリティ保護可能|アクセス許可|  
+|アクション|セキュリティ保護可能|アクセス許可|  
 |------------|---------------|-----------------|  
 |ビジネス ルールに対してデータのバージョンを検証する|mdm.udpValidateModel|EXECUTE|  
   
- 詳細については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
+ 詳細については、「 [検証ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
   
 ##  <a name="Versions"></a> バージョンを削除する  
   
-|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
+|アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
 |削除するバージョンの ID を決定する|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |モデルのバージョンを削除する|mdm.udpVersionDelete|EXECUTE|  
@@ -76,7 +75,7 @@ ms.locfileid: "48183522"
   
 ##  <a name="Hierarchy"></a> 階層メンバーの権限を直ちに適用する  
   
-|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
+|アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
 |メンバー権限を直ちに適用する|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48183522"
   
 ##  <a name="SysAdmin"></a> システム管理者アカウントを変更します。  
   
-|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
+|アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
 |新しい管理者の SID を決定する|mdm.tblUser|SELECT|  
 |システム管理者アカウントを変更します。|mdm.udpSecuritySetAdministrator|EXECUTE|  
@@ -94,7 +93,7 @@ ms.locfileid: "48183522"
 ##  <a name="SysSettings"></a> システム設定を構成する  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]での動作を制御するために構成可能なシステム設定が用意されています。 これらの設定は [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整できます。または、UPDATE アクセス権を持つ場合は、mdm.tblSystemSetting データベース テーブルで直接調整できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティ &#40;マスター データ サービス&#41;](../../2014/master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   
   

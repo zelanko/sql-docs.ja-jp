@@ -10,12 +10,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 396f26f617ec64aa1d2c46f4c4b600a824a2f278
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018937"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779137"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep を使用すると、コンピューター上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスを準備し、後で構成を完了できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep では、2 段階のプロセスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスを構成します。 手順は次のとおりです。  
@@ -39,7 +39,7 @@ ms.locfileid: "51018937"
   
 -   Windows System Preparation ツール ("Windows SysPrep" ともいいます) と組み合わせると、ソース コンピューター上で未構成の準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを格納したオペレーティング システムのイメージを作成できます。 これにより、オペレーティング システム イメージを複数のコンピューター上に配置できます。 オペレーティング システムの構成が完了したら、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのイメージの完了手順を使用して、準備済みインスタンスを構成できます。  
   
-     Windows オペレーティング システムのイメージを準備するには、Windows SysPrep ツールを使用します。 このツールは、組織全体に配置するためにオペレーティング システムのカスタマイズされたイメージをキャプチャする場合に使用されます。 SysPrep とその使用方法の詳細については、「 [Sysprep とは](http://go.microsoft.com/fwlink/?LinkId=143546)」を参照してください。  
+     Windows オペレーティング システムのイメージを準備するには、Windows SysPrep ツールを使用します。 このツールは、組織全体に配置するためにオペレーティング システムのカスタマイズされたイメージをキャプチャする場合に使用されます。 SysPrep とその使用方法の詳細については、「 [Sysprep とは](https://go.microsoft.com/fwlink/?LinkId=143546)」を参照してください。  
   
 ## <a name="installation-media-considerations"></a>インストール メディアに関する注意点  
  完全バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用している場合は、次のことを考慮してください。  

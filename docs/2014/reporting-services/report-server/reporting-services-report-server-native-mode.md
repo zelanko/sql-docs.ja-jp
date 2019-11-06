@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103312"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  
@@ -78,7 +77,7 @@ ms.locfileid: "48086912"
   
 -   レポート処理のスケジュールを設定し、要求時に実行できるレポート処理とキャッシュから読み込まれるレポート処理を指定することにより、サーバーに対するレポート処理の要求を分散させます。  
   
- 管理タスクを実行するための権限は、 **システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。 詳細については、「[ロールとアクセス許可 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)」を参照してください。  
+ 管理タスクを実行するアクセス許可は、2 つの定義済みロールを通じて提供されます。**システム管理者**と**コンテンツ マネージャー**します。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。 詳細については、「[ロールとアクセス許可 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
  レポート サーバーのコンテンツを管理するためのツールには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーがあります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、既定値を設定したり、各機能を有効化することができます。 レポート マネージャーでは、レポート サーバーのアイテムや操作に対するアクセス権を付与できます。また、レポートをはじめとする各種のコンテンツ、さらに、すべての共有アイテムとレポート配信機能を表示および使用できます。  
   

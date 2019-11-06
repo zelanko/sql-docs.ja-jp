@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], viewing conflicts
@@ -15,12 +14,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0eebecfdb3852445fc8c113d25524414dd03fc13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63255427"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>マージ パブリケーションでのデータの競合の表示および解決 (SQL Server Management Studio)
   マージ レプリケーションの競合は、各アーティクルに対して指定された競合回避モジュールに基づいて解決されます。 既定では、競合はユーザーの介入を必要とせずに解決されます。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レプリケーション競合表示モジュールで競合を表示したり、解決の結果を変更したりすることができます。  
@@ -29,7 +28,7 @@ ms.locfileid: "48113022"
   
 -   [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) の **@conflict_retention** パラメーターに保有期間の値を指定します。  
   
--   [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) の **@property** パラメーターに **conflict_retention** を、**@value** パラメーターに保有期間の値を指定します。  
+-   [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) の **@property** パラメーターに **conflict_retention** を、 **@value** パラメーターに保有期間の値を指定します。  
   
  競合情報の既定の保存先は次のとおりです。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48113022"
 3.  競合を表示するパブリケーションを右クリックしてから、 **[競合の表示]** をクリックします。  
   
     > [!NOTE]  
-    >  **conflict_logging** プロパティの値として **'subscriber'** を指定した場合は、 **[競合の表示]** メニュー オプションを利用できません。 競合を表示するには、コマンド プロンプトで ConflictViewer.exe を起動します。 既定では、ConflictViewer.exe が格納されているディレクトリは、Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE です。 有効な起動時のパラメーターの一覧を表示するには、ConflictViewer.exe -? を実行します。  
+    >  **conflict_logging** プロパティの値として **'subscriber'** を指定した場合は、 **[競合の表示]** メニュー オプションを利用できません。 競合を表示するには、コマンド プロンプトで ConflictViewer.exe を起動します。 既定では、ConflictViewer.exe は Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE のディレクトリにあります。 有効な起動時のパラメーターの一覧を表示するには、ConflictViewer.exe -? を実行します。  
   
 4.  **[競合テーブルの選択]** ダイアログ ボックスで、競合を表示するデータベース、パブリケーション、およびテーブルを選択します。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48113022"
   
     -   上のグリッドで 1 つ以上の行を選択し、 **[削除]** をクリックする。これは、データに変更を加えずに **[優先されたデータの送信]** をクリックするのと同じです。  
   
-    -   プロパティ ボタン (**[...]**) をクリックし、競合に関係のある列の詳細情報を表示する。  
+    -   プロパティ ボタン **[...]** をクリックし、競合に関係のある列の詳細情報を表示する。  
   
     -   データを送信する前に、 **[競合で優先されたデータ]** 列または **[競合で優先されなかったデータ]** 列でデータを編集する (列が灰色の場合、データは読み取り専用です)。  
   
@@ -72,11 +71,11 @@ ms.locfileid: "48113022"
   
     -   **[優先されなかったデータの送信]** をクリックして解決をオーバーライドし、競合で優先されないデータとして指定された値をトポロジのすべてのノードに反映する。  
   
-    -   **[この競合の詳細をログに記録する]** を選択して、競合のデータをログ ファイルに記録する。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、または参照ボタン (**[...]**) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを終了します。  
+    -   **[この競合の詳細をログに記録する]** を選択して、競合のデータをログ ファイルに記録する。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、または参照ボタン ( **[...]** ) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを終了します。  
   
 6.  レプリケーション競合表示モジュールを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [マージ アーティクル競合回避モジュールの指定](publish/specify-a-merge-article-resolver.md)  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62720048"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>データ型およびコンテンツの種類の指定 (基本的なデータ マイニング チュートリアル)
   前の作業では、構造の作成およびモデルのトレーニングに使用する列を選択しました。次の作業では、ウィザードによって設定されたデータ型およびコンテンツの種類を変更します。  
@@ -31,25 +30,25 @@ ms.locfileid: "48176613"
   
     |[列]|コンテンツの種類|データ型|  
     |------------|------------------|---------------|  
-    |**アドレス Line1**|**不連続**|**テキスト**|  
-    |**アドレス Line2**|**不連続**|**テキスト**|  
+    |**アドレス Line1**|**不連続**|**Text**|  
+    |**アドレス Line2**|**不連続**|**Text**|  
     |**経過時間**|**継続的です**|**Long**|  
     |**Bike Buyer**|**不連続**|**Long**|  
-    |**Commute Distance**|**不連続**|**テキスト**|  
+    |**Commute Distance**|**不連続**|**Text**|  
     |**CustomerKey**|**[キー]**|**Long**|  
-    |**DateLastPurchase**|**継続的です**|**日付**|  
-    |**Email Address**|**不連続**|**テキスト**|  
-    |**English Education**|**不連続**|**テキスト**|  
-    |**English Occupation**|**不連続**|**テキスト**|  
-    |**FirstName**|**不連続**|**テキスト**|  
-    |**Gender**|**不連続**|**テキスト**|  
-    |**Geography Key**|**不連続**|**テキスト**|  
-    |**House Owner Flag**|**不連続**|**テキスト**|  
-    |**[Last Name]**|**不連続**|**テキスト**|  
-    |**Marital Status**|**不連続**|**テキスト**|  
+    |**DateLastPurchase**|**継続的です**|**Date**|  
+    |**Email Address**|**不連続**|**Text**|  
+    |**English Education**|**不連続**|**Text**|  
+    |**English Occupation**|**不連続**|**Text**|  
+    |**FirstName**|**不連続**|**Text**|  
+    |**Gender**|**不連続**|**Text**|  
+    |**Geography Key**|**不連続**|**Text**|  
+    |**House Owner Flag**|**不連続**|**Text**|  
+    |**[Last Name]**|**不連続**|**Text**|  
+    |**Marital Status**|**不連続**|**Text**|  
     |**Number Cars Owned**|**不連続**|**Long**|  
     |**Number Children At Home**|**不連続**|**Long**|  
-    |**Region**|**不連続**|**テキスト**|  
+    |**Region**|**不連続**|**Text**|  
     |**Total Children**|**不連続**|**Long**|  
     |**Yearly Income**|**継続的です**|**Double**|  
   
@@ -61,8 +60,8 @@ ms.locfileid: "48176613"
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
  [ターゲット メーリングのマイニング モデル構造の作成&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
- [コンテンツの種類&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [データ型&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+## <a name="see-also"></a>関連項目  
+ [コンテンツの種類 &#40;です。 データ マイニング&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
+ [データ型 (データ マイニング)](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

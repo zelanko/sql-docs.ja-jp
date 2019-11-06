@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6d441d6d6b87799ea33cd25f69027f4ea9704f20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100908"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能が用意されています。 ファイル共有配信拡張機能は既定で使用できるため、追加で構成する必要はありません。 ファイルの配信を正常に実行するためには、共有フォルダーに書き込みアクセス権を設定する必要があります。 また、レポートへのアクセスを要求するユーザーは、共有フォルダーの読み取り権限を持っている必要があります。  
@@ -68,7 +67,7 @@ ms.locfileid: "48102542"
   
  上書きオプションを指定すると、毎回のレポート配信または新規ファイルの作成時に同じファイル名を再利用できます。 ファイルを上書きするには、同じファイル名と拡張子を使用する必要があります。  
   
- 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、追加、`@timestamp`変数にファイル名 (たとえば、 *CompanySales@timestamp*)。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
+ 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、追加、`@timestamp`変数にファイル名 (たとえば、 *CompanySales@timestamp* )。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
   
 ## <a name="see-also"></a>参照  
  [作成、変更、および標準のサブスクリプションを削除&#40;Reporting Services のネイティブ モード&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

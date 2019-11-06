@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f0281a487de123adfeb3739066628694b1da17a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108894"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)
 
@@ -60,7 +59,7 @@ ms.locfileid: "51606852"
   
 1.  レポート サーバー データベースをホストするコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールします。 少なくとも、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をインストールします。  
   
-2.  必要に応じて、レポート サーバーでリモート接続を有効にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンの中には、既定で TCP/IP および名前付きパイプのリモート接続が有効になっていないバージョンもあります。 リモート接続が許可されているかどうかを確認するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、対象インスタンスのネットワーク構成設定を確認します。 リモート インスタンスが名前付きインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが有効になっていることと、対象サーバーで実行されていることを確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser によって、名前付きインスタンスへの接続に使用されるポート番号が提供されます。  
+2.  必要に応じて、レポート サーバーでリモート接続を有効にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンの中には、既定で TCP/IP および名前付きパイプのリモート接続が有効になっていないバージョンもあります。 リモート接続が許可されているかどうかを確認するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、対象インスタンスのネットワーク構成設定を確認します。 リモート インスタンスが名前付きインスタンスの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが有効になっていることと、ターゲット サーバーで実行されていることを確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser によって、名前付きインスタンスへの接続に使用されるポート番号が提供されます。  
   
 ### <a name="to-install-the-first-report-server-instance"></a>最初のレポート サーバー インスタンスをインストールするには  
   
@@ -111,9 +110,9 @@ ms.locfileid: "51606852"
 3.  [スケール アウト配置] ページで、配置に参加し、をクリックを待機しているレポート サーバー インスタンスを選択します。**サーバーの追加**します。  
   
     > [!NOTE]  
-    >  **問題:** Reporting Services レポート サーバー インスタンスをスケールアウト配置に追加しようとすると、アクセス拒否のようなエラー メッセージが表示される場合があります。  
+    >  **問題点:** Reporting Services レポート サーバー インスタンスをスケール アウト配置に参加しようとしたときに"へのアクセスが拒否されました"のようなエラー メッセージが発生する可能性があります。  
     >   
-    >  **回避策:** 最初の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスからの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 暗号化キーをバックアップして、このキーを 2 番目の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに復元します。 その後、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のスケールアウト配置に 2 番目のサーバーの追加を試行します。  
+    >  **回避策:** バックアップ、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]最初から暗号化キー[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インスタンスし、2 番目のキーを復元[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー。 その後、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のスケールアウト配置に 2 番目のサーバーの追加を試行します。  
   
 4.  これで、両方のレポート サーバー インスタンスが動作していることを確認できるようになります。 2 番目のインスタンスを確認するには、Reporting Services 構成ツールを使用してレポート サーバーに接続し、Web サービスまたはレポート マネージャーの URL をクリックします。  
   

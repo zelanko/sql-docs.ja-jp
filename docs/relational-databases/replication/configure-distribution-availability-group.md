@@ -1,7 +1,7 @@
 ---
 title: 可用性グループの SQL Server ディストリビューション データベースの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -19,22 +19,24 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 719fc39579f76b8f028de27cf8d22623968231c6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 13a883d71262a044555fe3d0a59a945461de426e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405969"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908477"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、Always On 可用性グループ (AG) の SQL Server レプリケーション ディストリビューション データベースを設定する方法について説明します。
 
 SQL Server 2017 CU 6 と SQL Server 2016 SP2-CU3 では、次のメカニズムを使用して AG のレプリケーション ディストリビューション データベースをサポートするようになりました。
 
 - ディストリビューション データベース AG にはリスナーが必要です。 パブリッシャーでは、ディストリビューターを追加する場合、リスナー名をディストリビューター名として使用します。
-- レプリケーション ジョブの作成では、リスナー名をディストリビューター名として使用します。
+- レプリケーション ジョブの作成では、リスナー名をディストリビューター名として使用します。 ディストリビューション サーバー上で作成されたレプリケーション スナップショット ジョブ、ログ リーダー ジョブ、ディストリビューション エージェント (プッシュ サブスクリプション) ジョブは、ディストリビューション DB 用 AG のすべてのセカンダリ レプリカ上で作成されます。
+ >[!NOTE]
+ >プル サブスクリプション用のディストリビューション エージェント ジョブは、サブスクライバー サーバー上には作成されますが、ディストリビューション サーバー上には作成されません。 
 - 新しいジョブでは、ディストリビューション データベースの状態 (AG 内でプライマリかセカンダリか) を監視し、ディストリビューション データベースの状態に基づいてレプリケーション ジョブを有効または無効にします。
 
 AG のディストリビューション データベースを下記の手順に基づいて構成したら、ディストリビューション データベース AG のフェールオーバーの前後にレプリケーション構成ジョブおよびランタイム ジョブが正常に実行されるようになります。
@@ -48,16 +50,17 @@ AG のディストリビューション データベースを下記の手順に�
 - 既存のディストリビューション データベース AG にノードを追加、またはその AG からノードを削除します。
 - ディストリビューターには複数のディストリビューション データベースが存在する場合があります。 各ディストリビューション データベースは独自の AG に属することはできますが、任意の AG に属することはできません。 複数のディストリビューション データベースで AG を共有することができます。
 - パブリッシャーとディストリビューターは別々の SQL Server インスタンス上に置く必要があります。
-- ディストリビューション データベースをホストしている可用性グループのリスナーが、既定以外のポートを使用するように構成されている場合は、リスナーと既定以外のポートに別名を設定する必要があります。 この別名は、すべてのパブリッシャー、ディストリビューター、およびサブスクライバーのレプリカ (プル モードで実行されているサブスクライバーの場合) で作成される必要があります。 
+- ディストリビューション データベースをホストしている可用性グループのリスナーが、既定以外のポートを使用するように構成されている場合は、リスナーと既定以外のポートに別名を設定する必要があります。
 
 ## <a name="limitations-or-exclusions"></a>制限事項または適用除外事項
 
-- ローカル ディストリビューターはサポートされていません。 たとえば、パブリッシャーとディストリビューターは、別々の SQL Server インスタンスでなければなりません。 自身をディストリビューターとして使用するパブリッシャー ( ローカル ディストリビューターとも呼ばれる) では、AG のディストリビューション データベースをサポートすることはできません。
+- ローカル ディストリビューターはサポートされていません。 たとえば、パブリッシャーとディストリビューターは、別々の SQL Server インスタンスでなければなりません。 これらのインスタンスは、同じノード セットでホストできます。  自身をディストリビューターとして使用するパブリッシャー ( ローカル ディストリビューターとも呼ばれる) では、AG のディストリビューション データベースをサポートすることはできません。
 - Oracle パブリッシャーはサポートされていません。
 - マージ レプリケーションはサポートされていません。
 - 即時更新サブスクライバーまたはキュー更新サブスクライバーでのトランザクション レプリケーションはサポートされていません。
 - ピア ツー ピア レプリケーションはサポートされていません。
-- ディストリビューション データベースのレプリカをホストする SQL Server インスタンスはすべて、SQL Server 2017 CU 6 以降とする必要があります。 
+- ディストリビューション データベースのレプリカをホストする SQL Server 2017 インスタンスはすべて、SQL Server 2017 CU 6 以降とする必要があります。 
+- ディストリビューション データベースのレプリカをホストする SQL Server 2016 インスタンスはすべて、SQL Server 2016 SP2-CU3 以降とする必要があります。
 - ディストリビューション データベースのレプリカをホストする SQL Server インスタンスはすべて、同じバージョンである必要があります。ただし、アップグレードが実行される狭いタイムフレームの期間中は例外です。
 - ディストリビューション データベースは、完全復旧モードである必要があります。
 - 復旧の場合に、トランザクション ログの切り捨てを許可するには、完全バックアップとトランザクション ログ バックアップを構成します。
@@ -393,9 +396,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>参照  

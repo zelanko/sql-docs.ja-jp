@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e4a0c3d8b7a01f43b03d3f94b48d5bba800b64f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014554"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath、および XML Schema (XSD) のデータ型は大きく異なります。 たとえば、XPath に整数や日付のデータ型はありませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と XSD にはこれらのデータ型が多く用意されています。 また、XSD では時間値の精度はナノ秒ですが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の精度は最大でも 1/300 秒です。 このため、あるデータ型から別のデータ型へのマッピングが常に可能であるとは限りません。 マッピングの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XSD データ型にデータ型を参照してください[データ型の強制変換、sql:datatype 注釈&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
@@ -65,7 +63,7 @@ ms.locfileid: "48054752"
 |どちらもノード セットでない場合|両方のオペランドを `number` に変換し比較。|両方のオペランドを共通のデータ型に変換し比較。 いずれかが `boolean` の場合は `boolean` に変換し、いずれかが `number` の場合は `number` に変換します。それ以外の場合は `string` に変換します。|  
   
 > [!NOTE]  
->  XPath の関係演算子ではオペランドが常に `number` に変換されるので、`string` の比較はできません。 日付の比較を含めるため、SQL Server 2000 では XPath の仕様が変更され、関係演算子で `string` と `string`、ノード セットと `string`、または文字列値ノード セットと文字列値ノード セットが比較される場合には、`string` ではなく `number` の比較が行われるようになりました。  
+>  XPath の関係演算子ではオペランドが常に `number` に変換されるので、`string` の比較はできません。 日付の比較を含めるには、SQL Server 2000 は、XPath 仕様にこのバリエーションの 1 つを提供します。関係演算子を比較すると、`string`を`string`、ノード セットと、 `string`、または、文字列値ノード セットを文字列値ノード セットを`string`比較 (いない、`number`比較) が実行されます。  
   
 ## <a name="node-set-conversions"></a>ノード セット変換  
  ノード セット変換は常に直感的なものとは限りません。 ノード セットから `string` への変換では、セット内の先頭ノードの文字列値のみが使用されます。 ノード セットに変換されます`number`に変換してから、 `string`、および変換し、`string`に`number`します。 ノード セットから `boolean` への変換では、その存在が検査されます。  

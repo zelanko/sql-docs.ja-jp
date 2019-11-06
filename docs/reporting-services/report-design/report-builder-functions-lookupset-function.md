@@ -2,18 +2,18 @@
 title: LookupSet 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c4ceb9cd36d27a5c9fe29e0d446a56baf6698489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577409"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>レポート ビルダー関数 - LookupSet 関数
   名前と値のペアを含むデータセットから、指定された名前に対応する一連の値を返します  
@@ -30,13 +30,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>パラメーター  
  *source_expression*  
- (**Variant**) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、 `=Fields!ID.Value`のようにします。  
+ (**Variant**) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、`=Fields!ID.Value` のようになります。  
   
  *destination_expression*  
  (**Variant**) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、 `=Fields!CustomerID.Value`のようにします。  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、 `=Fields!PhoneNumber.Value`のようにします。  
+ (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、`=Fields!PhoneNumber.Value` のようになります。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"ContactInformation" のように指定します。  

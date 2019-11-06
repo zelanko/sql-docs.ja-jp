@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cd6188de21c40b1edb5a365724451b44189e462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a28e5c7ccf3c701e5f97440cd97ed843ab53dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063503"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>テキスト ファイル ドライバーのプログラムでオプションの設定
-|オプション|説明|方法|  
+
+|OPTION|説明|メソッド|  
 |------------|-----------------|------------|  
 |Data Source Name|給与または担当者など、データ ソースを識別する名前。|このオプションを動的に設定するには、使用、 **DSN**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|  
 |形式を定義します。|表示、**テキスト形式の定義** ダイアログ ボックス データ ソース ディレクトリ内の個々 のテーブルのスキーマを指定することができます。|このオプションへの呼び出しによって動的に設定することはできません[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|  

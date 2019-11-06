@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecf079c86362aeae78b7c9ceaad640b0ad1519c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923854"
 ---
 # <a name="types-of-cursors-ado"></a>カーソルの種類 (ADO)
-一般的な規則として、アプリケーションに必要なデータ アクセスを提供する最も簡単なカーソルを使用する必要があります。 各追加のカーソルの特性 (順方向専用、読み取り専用、静的、スクロール、バッファーなし) の基本機能を越えてが価格 — クライアントのメモリ、ネットワーク負荷やパフォーマンスにします。 多くの場合は、既定のカーソル オプションは、アプリケーションが実際に必要以上より複雑なカーソルを生成します。  
+一般的な規則として、アプリケーションに必要なデータ アクセスを提供する最も簡単なカーソルを使用する必要があります。 基本の (順方向専用、読み取り専用、static、スクロール、バッファリングされていない) 場合は、各追加カーソル特性には、クライアントのメモリ、ネットワークの負荷、またはパフォーマンスの価格 - があります。 多くの場合は、既定のカーソル オプションは、アプリケーションが実際に必要以上より複雑なカーソルを生成します。  
   
  カーソルの種類の選択とによって異なります、アプリケーションが結果セットを使用する方法も、結果セットでは、使用される可能性のデータの割合、データの変更、およびアプリケーションのパフォーマンスに対する感度のサイズなど、いくつかの設計考慮事項要件。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "47786960"
   
 -   [動的カーソル](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [順方向専用カーソル](../../../ado/guide/data/forward-only-cursors.md)   
  [静的カーソル](../../../ado/guide/data/static-cursors.md)   
  [Keyset カーソル](../../../ado/guide/data/keyset-cursors.md)   

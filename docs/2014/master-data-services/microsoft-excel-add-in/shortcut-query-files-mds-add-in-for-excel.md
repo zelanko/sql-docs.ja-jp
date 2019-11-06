@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e49af33f5e7c02536757cf408e9b774852a9002b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482665"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>ショートカット クエリ ファイル (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、よく使用するデータにすばやく接続して読み込むために、ショートカット クエリ ファイルを使用します。 MDS データを他のユーザーと共有する場合にも使用できます。 ワークシートを保存して電子メールで送信する代わりに、ショートカット クエリ ファイルを保存して電子メールで送信する必要があります。 これにより、両者が MDS リポジトリに接続して最新のデータを取得するようになります。  
@@ -46,15 +45,15 @@ ms.locfileid: "48215662"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|アクティブなワークシートの内容をショートカット クエリ ファイルとして保存します。|[ショートカット クエリ ファイルの保存 &#40;Excel 用 MDS アドイン&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|アクティブなワークシートの内容を表すショートカット クエリ ファイルを電子メールで送信します。|[ショートカット クエリ ファイルの電子メールでの送信 &#40;Excel 用 MDS アドイン&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|アクティブなワークシートの内容をショートカット クエリ ファイルとして保存します。|[ショートカット クエリ ファイルの保存 (Excel 用 MDS アドイン)](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|アクティブなワークシートの内容を表すショートカット クエリ ファイルを電子メールで送信します。|[ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [接続 &#40;Excel 用 MDS アドイン&#41;](connections-mds-add-in-for-excel.md)  
+-   [接続 (Excel 用 MDS アドイン)](connections-mds-add-in-for-excel.md)  
   
--   [マスター データ サービス アドイン for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Microsoft Excel 用マスター データ サービス アドイン](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [セキュリティ &#40;マスター データ サービス&#41;](../security-master-data-services.md)  
+-   [セキュリティ (マスター データ サービス)](../security-master-data-services.md)  
   
   

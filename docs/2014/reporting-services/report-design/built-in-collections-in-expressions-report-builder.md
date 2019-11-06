@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6065291efcf59f5ac5341b47bfdae95afb35a119
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106422"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)
-  レポート内の式には、ReportItems、Parameters、Fields、DataSets、DataSources、Variables などの組み込みコレクションへの参照とレポート名などのグローバル情報の組み込みフィールドへの参照を含めることができます。 **[式]** ダイアログ ボックスにすべてのコレクションが表示されるとは限りません。 DataSets コレクションと DataSources コレクションを使用できるのは、レポート サーバー上でパブリッシュされたレポートの実行時のみです。 ReportItems コレクションは、ページまたはページ ヘッダーのテキスト ボックスなど、レポート領域内のテキスト ボックスのコレクションです。  
+  レポートの式には、次の組み込みコレクションへの参照を含めることができます:ReportItems、Parameters、Fields、DataSets、DataSources、Variables。また、レポート名などのグローバル情報の組み込みフィールドを含めることができます。 **[式]** ダイアログ ボックスにすべてのコレクションが表示されるとは限りません。 DataSets コレクションと DataSources コレクションを使用できるのは、レポート サーバー上でパブリッシュされたレポートの実行時のみです。 ReportItems コレクションは、ページまたはページ ヘッダーのテキスト ボックスなど、レポート領域内のテキスト ボックスのコレクションです。  
   
  詳細については、「[式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -51,8 +50,8 @@ ms.locfileid: "48095662"
 |*Collection("Member")*|`=User("Language")`|  
 |*Collection.Member*|`=User.Language`|  
   
-## <a name="see-also"></a>参照  
- [式を追加して&#40;レポート ビルダーおよび SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [式の追加 (レポート ビルダーおよび SSRS)](add-an-expression-report-builder-and-ssrs.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

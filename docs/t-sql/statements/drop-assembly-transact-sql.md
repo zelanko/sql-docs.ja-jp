@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f39ac767cd330bc34db8482210fab21cd29e161e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984287"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +46,18 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、アセンブリを削除します。  
   
  *assembly_name*  
- 削除するアセンブリの名前を指定します。  
+ 削除するアセンブリの名前です。  
   
  WITH NO DEPENDENTS  
  指定した場合、*assembly_name* だけが削除され、アセンブリで参照される依存アセンブリは削除されません。 指定しない場合、DROP ASSEMBLY では *assembly_name* とすべての依存アセンブリが削除されます。  
   
 ## <a name="remarks"></a>Remarks  
- アセンブリを削除すると、ソース コードやデバッグ ファイルなど、アセンブリに関連するファイルもデータベースから削除されます。  
+ アセンブリを削除すると、データベースからアセンブリと、ソース コードやデバッグ ファイルなどのアセンブリに関連するファイルが削除されます。  
   
  WITH NO DEPENDENTS を指定しない場合、DROP ASSEMBLY では *assembly_name* とすべての依存アセンブリが削除されます。 依存アセンブリの削除に失敗した場合、DROP ASSEMBLY ではエラーが返されます。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS Script task, converting scripts
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - Script task [Integration Services], converting scripts
 - SSIS Script component, converting scripts
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
-author: mashamsft
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b23d85aa038acae6631dedf64417c65e745baf90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093986"
 ---
 # <a name="migrate-scripts-to-vsta"></a>VSTA へのスクリプトの移行
   アップグレードするときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]パッケージを[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]スクリプト タスクまたはスクリプト コンポーネント内のスクリプトは移行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 VSTA は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で使用されるスクリプト環境です。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、ためのスクリプト環境[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]は[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA)。  

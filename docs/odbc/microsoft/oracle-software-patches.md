@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afd5a20d99692c1a623b13b53218f62c00cb218a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce38aabddfc3891314940d4b7cb21f02965c083
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100777"
 ---
 # <a name="oracle-software-patches"></a>Oracle ソフトウェアの修正プログラム
 > [!IMPORTANT]  
@@ -36,7 +35,7 @@ ms.locfileid: "47845920"
   
 2.  次のディレクトリに移動します:/server/wgt_tech/server/windowsNT します。  
   
-3.  Windows 95、Windows 98 および Windows NT または Windows 2000 の最も重要な修正プログラムをダウンロードするには、Oracle のバージョンのサブディレクトリに移動: 7.3 または 8.0。 2 つのサブディレクトリは、/73patchsets および/80patchsets です。  
+3.  Windows 95、Windows 98 および Windows NT または Windows 2000 の最も重要な修正プログラムをダウンロードするには、Oracle - 7.3 または 8.0 のバージョンのサブディレクトリに移動します。 2 つのサブディレクトリは、/73patchsets および/80patchsets です。  
   
 4.  Oracle のネットワーク テクノロジのいずれかの SQL の修正プログラムをダウンロードする * Net または Net8、次のディレクトリに移動します:/ネットワークします。  
   

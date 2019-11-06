@@ -1,5 +1,5 @@
 ---
-title: Always On 可用性グループの相互運用性 (SQL Server) | Microsoft Docs
+title: Always On 可用性グループ:相互運用性 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 602762df164e22ebf49285e89a3f64d24b5387a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815751"
 ---
-# <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループの相互運用性 (SQL Server)
+# <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループ:相互運用性 (SQL Server)
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能との間の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の相互運用性について説明します。  
   
 
@@ -36,7 +36,7 @@ ms.locfileid: "48209192"
 |データベース暗号化|[暗号化されたデータベースと AlwaysOn 可用性グループ&#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |データベース スナップショット|[データベースと AlwaysOn 可用性グループのスナップショット&#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
 |FILESTREAM と FileTable|[FILESTREAM および FileTable と AlwaysOn 可用性グループ&#40;SQL Server&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
-|フルテキスト検索|注: フルテキスト インデックスは、AlwaysOn セカンダリ データベースと同期されます。|  
+|フルテキスト検索|注:フルテキスト インデックスは、AlwaysOn セカンダリ データベースと同期されます。|  
 |ログ配布|[AlwaysOn 可用性グループへのログ配布を移行する前提条件&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
 |リモート BLOB ストア (RBS)|[リモート Blob ストア&#40;RBS&#41;と AlwaysOn 可用性グループ&#40;SQL Server&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
 |レプリケーション[AlwaysOn 可用性グループ (SQL Server) のレプリケーションを構成します。](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [AlwaysOn パブリケーション データベースのメンテナンス&#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
@@ -58,19 +58,19 @@ ms.locfileid: "48209192"
   
 -   **ブログ:**  
   
-     [移行ガイド：以前のクラスタリングおよびミラーリングの展開によるSQL Server 2012フェールオーバークラスタリングおよび可用性グループへの移行](http://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [移行ガイド: フェールオーバー クラスタ リングと可用性グループ、以前のクラスタ リングとミラーリングの展開によるから SQL Server 2012 に移行します。](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
-     [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [AlwaysOn 可用性グループへの移行の移行ガイド: 以前の配置の結合からデータベース ミラーリングとログ配布](http://msdn.microsoft.com/library/jj635217)  
+     [移行ガイド: AlwaysOn 可用性グループへの移行前の配置の結合データベース ミラーリングとログ配布から](https://msdn.microsoft.com/library/jj635217)  
   
-     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   

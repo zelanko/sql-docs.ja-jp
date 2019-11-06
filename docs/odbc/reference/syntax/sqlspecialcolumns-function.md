@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 52ad6bc3fc84b0d50675b4e0a4e7bb44a6ded1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15fa1269b733c9adc938b1880735ae2a4e5db731
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039557"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: グループを開く。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。[グループを開く]  
   
- **概要**  
+ **まとめ**  
  **SQLSpecialColumns**指定されたテーブル内の列に関する次の情報を取得します。  
   
 -   テーブルの行を一意に識別する最適な列のセット。  
@@ -40,7 +39,7 @@ ms.locfileid: "47849360"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLSpecialColumns(  
      SQLHSTMT      StatementHandle,  
@@ -62,9 +61,9 @@ SQLRETURN SQLSpecialColumns(
  *IdentifierType*  
  [入力]返される列の型。 値は次のいずれかを指定する必要があります。  
   
- SQL_BEST_ROWID: は、最適な列または列または列から値を取得することによって、指定したテーブルを一意に識別できる任意の行を使用する列のセットを返します。 列には設計されています (Oracle ROWID または Ingres TID) ように、この目的または、列またはテーブルの一意のインデックスの列は、擬似列を指定できます。  
+ SQL_BEST_ROWID:最適な列または列または列から値を取得することによって、指定したテーブルを一意に識別できる任意の行を使用する列のセットを返します。 列には設計されています (Oracle ROWID または Ingres TID) ように、この目的または、列またはテーブルの一意のインデックスの列は、擬似列を指定できます。  
   
- SQL_ROWVER: 返します列または列、指定したテーブルである SQLBase ROWID または Sybase タイムスタンプ) などのトランザクションによって行の任意の値が更新されたときに、データ ソースによって自動的に更新される場合。  
+ SQL_ROWVER:ある SQLBase ROWID または Sybase タイムスタンプ) などのトランザクションによって行の任意の値が更新されたときに、データ ソースによって自動的に更新される場合、指定したテーブルの列または列を返します。  
   
  *カタログ名*  
  [入力]テーブルのカタログ名。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") のカタログはありません。 それらのテーブルを表します。 *CatalogName*文字列の検索パターンを含めることはできません。  
@@ -93,18 +92,18 @@ SQLRETURN SQLSpecialColumns(
  *Scope*  
  [入力]Rowid の最低限必要な範囲です。 大きいスコープの返された rowid があります。 次のいずれかを指定する必要があります。  
   
- SQL_SCOPE_CURROW: rowid がその行に配置されている間のみ有効である保証されます。 行が更新または別のトランザクションによって削除された場合、rowid を使用して、後で再度選択に行が返されません可能性があります。  
+ SQL_SCOPE_CURROW:Rowid の該当する行に配置されている間のみ有効にすることが保証されます。 行が更新または別のトランザクションによって削除された場合、rowid を使用して、後で再度選択に行が返されません可能性があります。  
   
- SQL_SCOPE_TRANSACTION: を有効にする、現在のトランザクションの実行中は、rowid が保証されます。  
+ SQL_SCOPE_TRANSACTION:Rowid を現在のトランザクションの期間を有効にすることが保証されます。  
   
- SQL_SCOPE_SESSION: 有効なセッションの期間 (複数のトランザクションにまたがって) である、rowid が保証されます。  
+ SQL_SCOPE_SESSION:Rowid を (複数のトランザクションにまたがって) 有効、セッションの間にすることが保証されます。  
   
- *[可]*  
+ *NULL 値の使用*  
  [入力]特殊な列値は NULL を返すかどうかを決定します。 次のいずれかを指定する必要があります。  
   
- SQL_NO_NULLS: は、NULL 値は、特別な列を除外します。 一部のドライバーが SQL_NO_NULLS をサポートできないし、これらのドライバーが SQL_NO_NULLS が指定されている場合は、設定、空の結果を返します。 絶対に必要な場合にのみ、このケースと要求 SQL_NO_NULLS アプリケーションを準備する必要があります。  
+ SQL_NO_NULLS:NULL 値は、特別な列を除外します。 一部のドライバーが SQL_NO_NULLS をサポートできないし、これらのドライバーが SQL_NO_NULLS が指定されている場合は、設定、空の結果を返します。 絶対に必要な場合にのみ、このケースと要求 SQL_NO_NULLS アプリケーションを準備する必要があります。  
   
- SQL_NULLABLE: は、NULL 値があった場合でも、特殊な列を返します。  
+ SQL_NULLABLE:NULL 値があった場合でも、特殊な列を返します。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
@@ -125,7 +124,7 @@ SQLRETURN SQLSpecialColumns(
 |HY009|無効な null ポインターの使用|*TableName*引数が null ポインター。<br /><br /> SQL_ATTR_METADATA_ID のステートメント属性、SQL_TRUE に設定されて、 *CatalogName*引数が null ポインターの場合は、および、SQL_CATALOG_NAME*情報の種類*カタログ名を返しますがサポートされています。<br /><br /> (DM) SQL_ATTR_METADATA_ID ステートメント属性の SQL_TRUE に設定された、 *SchemaName*引数が null ポインター。|  
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この関数ではときに実行されている**SQLSpecialColumns**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM) 長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。<br /><br /> 長の引数のいずれかの値には、対応する名前の最大長の値を超えています。 それぞれの名前の最大長を呼び出すことによって取得できます**SQLGetInfo**で、*情報の種類*値: SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、または SQL_MAX_TABLE_NAME_LEN します。|  
+|HY090|文字列またはバッファーの長さが無効です。|(DM) 長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。<br /><br /> 長の引数のいずれかの値には、対応する名前の最大長の値を超えています。 それぞれの名前の最大長を呼び出すことによって取得できる**SQLGetInfo**で、*情報の種類*値。SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、または SQL_MAX_TABLE_NAME_LEN します。|  
 |HY097|範囲外の列の型|(DM)、無効な*IdentifierType*値が指定されました。|  
 |HY098|範囲外のスコープの種類|(DM)、無効な*スコープ*値が指定されました。|  
 |HY099|範囲外の null 許容型|(DM)、無効な*Nullable*値が指定されました。|  
@@ -138,7 +137,7 @@ SQLRETURN SQLSpecialColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- ときに、 *IdentifierType*引数は、SQL_BEST_ROWID **SQLSpecialColumns**列またはテーブル内の各行を一意に識別する列を返します。 これらの列で常に使用できる、*選択リスト*または**場所**句。 **SQLColumns**テーブルの列でさまざまな情報を返すために使用するは必ずしも返さない、各行を一意に識別する列またはによって行のいずれかの値に自動的に更新される列を更新します。トランザクションです。 たとえば、 **SQLColumns** Oracle の擬似列 ROWID を返さなかった可能性があります。 これは、ため**SQLSpecialColumns**これらの列を返すために使用します。 詳細については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
+ ときに、 *IdentifierType*引数は、SQL_BEST_ROWID **SQLSpecialColumns**列またはテーブル内の各行を一意に識別する列を返します。 これらの列で常に使用できる、*選択リスト*または**WHERE**句。 **SQLColumns**テーブルの列でさまざまな情報を返すために使用するは必ずしも返さない、各行を一意に識別する列またはによって行のいずれかの値に自動的に更新される列を更新します。トランザクションです。 たとえば、 **SQLColumns** Oracle の擬似列 ROWID を返さなかった可能性があります。 これは、ため**SQLSpecialColumns**これらの列を返すために使用します。 詳細については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
   
 > [!NOTE]  
 >  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
@@ -151,9 +150,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns**スコープによって順序付けられた、標準的な結果セットとして結果を返します。  
   
- 次の列が ODBC 3 の名前が変更された *.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
+ 次の列が ODBC の名前が変更された*3.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
   
-|ODBC 2.0 列|ODBC 3 *.x*列|  
+|ODBC 2.0 列|ODBC *3.x*列|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  
@@ -168,11 +167,11 @@ SQLRETURN SQLSpecialColumns(
 |スコープ (ODBC 1.0)|1|Smallint|Rowid の実際の範囲。 次の値のいずれかが含まれます。<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL が返されます*IdentifierType* SQL_ROWVER です。 各値については、の説明を参照してください。*スコープ*構文では"、"このセクションで前にします。|  
 |COLUMN_NAME (ODBC 1.0)|2|NULL 以外の Varchar|列名 ドライバーは、名前がない列の空の文字列を返します。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)します。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
-|TYPE_NAME (ODBC 1.0)|4|NULL 以外の Varchar|データ ソースに依存するデータ型の名前。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR FOR BIT DATA ()」。|  
+|TYPE_NAME (ODBC 1.0)|4|NULL 以外の Varchar|データ ソースに依存するデータ型名です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR FOR BIT DATA ()」。|  
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|データ ソースの列のサイズ。 列のサイズに関する詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。|  
 |BUFFER_LENGTH 列 (ODBC 1.0)|6|Integer|転送されるデータの長さ (バイト単位)、 **SQLGetData**または**SQLFetch** SQL_C_DEFAULT が指定されている場合に操作します。 数値データは、このサイズは、データ ソースに格納されたデータのサイズよりも異なる場合があります。 この値は、文字またはバイナリ データ、COLUMN_SIZE 列の場合と同じです。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|データ ソースの列の 10 進数字。 10 進数字は適用できないデータ型の NULL を返します。 詳細については 10 進数字、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|列が Oracle ROWID などの擬似列かどうかを示します。<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**注:** 最大の相互運用性の擬似列必要がありますいないは引用符で囲むによって返される引用符文字の識別子を持つ**SQLGetInfo**します。|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|列が Oracle ROWID などの擬似列かどうかを示します。<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**に注意してください。** 最大の相互運用性の擬似列必要がありますいないは引用符で囲むによって返される引用符文字の識別子を持つ**SQLGetInfo**します。|  
   
  アプリケーションは、SQL_BEST_ROWID の値を取得した後、アプリケーションは、定義されたスコープ内でその行をこれらの値を使用できます。 **選択**ステートメントに行または 1 つの行を返すことが保証されます。  
   

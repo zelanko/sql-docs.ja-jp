@@ -14,19 +14,19 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cde0718a387fa197e7aeb7d157ecb9b0a0aa4ae6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067735"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   任意の SQL ステートメントのパラメーターを記述する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが構築され、実行、 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQLDescribeParam が準備された ODBC ステートメント ハンドルで呼び出されたときに、SELECT ステートメント。 この結果セットのメタデータにより、準備されたステートメント内のパラメーターの特性が決まります。 SQLDescribeParam は、SQLExecute、SQLExecDirect またはを返す可能性のあるエラー コードを返すことができます。  
   
  以降では、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]期待どおりの結果のより正確な記述を取得する SQLDescribeParam を許可します。 これらのより正確な結果の以前のバージョンの SQLDescribeParam によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../native-client/features/metadata-discovery.md)します。  
   
- 新しいも[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 *ParameterSizePtr*で定義されている、対応するパラメーター マーカーの式または列の文字で、サイズの定義に合わせて値を返すようになりました、 [ODBC仕様](http://go.microsoft.com/fwlink/?LinkId=207044)します。 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、 *ParameterSizePtr*可能性がありますの対応する値`SQL_DESC_OCTET_LENGTH`型または型の場合、値の場合は、SQLBindParameter に渡された無関係な列サイズの値これを無視するかの (`SQL_INTEGER`など)。  
+ 新しいも[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 *ParameterSizePtr*で定義されている、対応するパラメーター マーカーの式または列の文字で、サイズの定義に合わせて値を返すようになりました、 [ODBC仕様](https://go.microsoft.com/fwlink/?LinkId=207044)します。 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、 *ParameterSizePtr*可能性がありますの対応する値`SQL_DESC_OCTET_LENGTH`型または型の場合、値の場合は、SQLBindParameter に渡された無関係な列サイズの値これを無視するかの (`SQL_INTEGER`など)。  
   
  ドライバーでは、次の状況で呼び出し元 SQLDescribeParam はサポートされません。  
   
@@ -88,7 +88,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  `SQLDescribeParam` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLDescribeParam 関数](http://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam 関数](https://go.microsoft.com/fwlink/?LinkId=59339)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

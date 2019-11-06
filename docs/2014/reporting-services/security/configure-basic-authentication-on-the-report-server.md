@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102163"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>レポート サーバーで基本認証を構成する
   Reporting Services は、既定では、ネゴシエート認証および NTLM 認証を指定する要求を受け入れます。 基本認証を使用するクライアント アプリケーションやブラウザーが配置に含まれる場合は、サポートされる種類の一覧に基本認証を追加する必要があります。 また、レポート ビルダーを使用する場合は、レポート ビルダーのファイルへの匿名アクセスを有効にする必要もあります。  
@@ -28,7 +27,7 @@ ms.locfileid: "48071292"
   
  基本認証を有効にする前に、セキュリティ インフラストラクチャで基本認証がサポートされていることを確認します。 基本認証では、レポート サーバー Web サービスがローカル セキュリティ機関に資格情報を渡します。 資格情報でローカル ユーザー アカウントが指定されていた場合は、ユーザーはレポート サーバー コンピューター上のローカル セキュリティ機関によって認証されて、ローカル リソースに対して有効なセキュリティ トークンを受け取ります。 ドメイン ユーザー アカウントの資格情報は、ドメイン コントローラーに転送されて認証されます。 この場合は、認証が完了すると、ネットワーク リソースに対して有効なチケットが渡されます。  
   
- 資格情報がネットワークのドメイン コントローラーに転送される間に傍受されるリスクを軽減するには、チャネルの暗号化 (Secure Sockets Layer (SSL) など) を使用する必要があります。 基本認証のみを使用した場合、ユーザー名はクリア テキストで転送され、パスワードは Base64 エンコード形式で転送されます。 チャネルの暗号化を追加すると、パケットが読み取り不可能になります。 詳細については、「[ネイティブ モードのレポート サーバーでの SSL 接続の構成](configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
+ 資格情報がネットワークのドメイン コントローラーに転送される間に傍受されるリスクを軽減するには、チャネルの暗号化 (Secure Sockets Layer (SSL) など) を使用する必要があります。 基本認証のみを使用した場合、ユーザー名はクリア テキストで転送され、パスワードは Base64 エンコード形式で転送されます。 チャネルの暗号化を追加すると、パケットが読み取り不可能になります。 詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
   
  基本認証を有効にすると、レポートにデータを提供する外部データ ソースへの接続のプロパティをユーザーが設定するときに **[Windows 統合セキュリティ]** オプションを選択できなくなることに注意してください。 このオプションは、データ ソース プロパティ ページでグレー表示されます。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48071292"
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-     ファイルがある*\<ドライブ >:* \Program Files\Microsoft SQL Server\MSRS12 します。MSSQLSERVER\Reporting services \reportserver にあります。  
+     ファイルがある *\<ドライブ >:* \Program Files\Microsoft SQL Server\MSRS12 します。MSSQLSERVER\Reporting services \reportserver にあります。  
   
 2.  検索 <`Authentication`>。  
   
@@ -68,13 +67,13 @@ ms.locfileid: "48071292"
   
 4.  既存のエントリを貼り付けます <`Authentication`>。  
   
-     複数の認証の種類を使用している場合は、追加、`RSWindowsBasic`要素のエントリを削除しないように`RSWindowsNegotiate`、 `RSWindowsNTLM`、または`RSWindowsKerberos`します。  
+     複数の認証の種類を使用する場合は、`RSWindowsBasic` 要素を追加するだけにして、`RSWindowsNegotiate`、`RSWindowsNTLM`、および `RSWindowsKerberos` の各エントリは削除しないでください。  
   
-     Safari ブラウザーをサポートする場合は、複数の認証の種類を使用できるようにレポート サーバーを構成することはできません。 のみを指定する必要があります`RSWindowsBasic`およびその他のエントリを削除します。  
+     Safari ブラウザーをサポートする場合は、複数の認証の種類を使用できるようにレポート サーバーを構成することはできません。 `RSWindowsBasic` のみを指定して、その他のエントリを削除する必要があります。  
   
      `Custom` は他の認証の種類と併用できないので注意してください。  
   
-5.  <`Realm`> または <`DefaultDomain`> の空の値を、現在の環境で有効な値に置き換えます。  
+5.  空の値を置き換える <`Realm`> または <`DefaultDomain`> の環境で有効な値にします。  
   
 6.  ファイルを保存します。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "48071292"
   
 |要素|必須|有効な値|  
 |-------------|--------------|------------------|  
-|LogonMethod|はい<br /><br /> 値を指定しない場合は 3 が使用されます。|`2` = プレーン テキスト パスワードを認証する高パフォーマンス サーバー向けネットワーク ログオン。<br /><br /> `3` = クリア テキスト ログオンは、各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報を保持するには、ネットワークの他のサーバーに接続するときにユーザーを偽装するサーバーを許可します。 (既定値)。<br /><br /> 注: 値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]ではサポートされません。|  
+|LogonMethod|はい<br /><br /> 値を指定しない場合は 3 が使用されます。|`2` = プレーン テキスト パスワードを認証する高パフォーマンス サーバー向けネットワーク ログオン。<br /><br /> `3` = クリア テキスト ログオン。各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報が保持されます。これにより、ネットワーク内の他のサーバーに接続する際に、サーバーがユーザーの権限を借用できます。 EnterprisePublishing<br /><br /> 注:値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ではサポートされません。|  
 |Realm|省略可|組織内の保護されたリソースへのアクセスを制御するための承認機能や認証機能を含んだリソース パーティションを指定します。|  
 |DefaultDomain|省略可|サーバーがユーザーを認証する際のドメインを指定します。 この値はオプションです。ただし、省略した場合、レポート サーバーでは、コンピューター名がドメインとして使用されます。 コンピューターがドメインのメンバーになっている場合は、そのドメインが既定のドメインです。 レポート サーバーをドメイン コントローラーにインストールした場合、そのコンピューターによって制御されるドメインを指定します。|  
   
@@ -136,17 +135,17 @@ ms.locfileid: "48071292"
     </configuration>  
     ```  
   
-     認証モードを設定する必要があります`Windows`Web.config ファイルを含める場合。  
+     Web.config ファイルを含める場合は、認証モードを `Windows` に設定する必要があります。  
   
-     `Identity impersonate` `True`または`False`します。  
+     `Identity impersonate` には、`True` または `False` を指定できます。  
   
-    -   設定`False`ASP.NET セキュリティ トークンを読み取るしたくない場合。 この場合、要求はレポート サーバー サービスのセキュリティ コンテキストで実行されます。  
+    -   ASP.NET がセキュリティ トークンを読み取らないようにする場合は、`False` に設定します。 この場合、要求はレポート サーバー サービスのセキュリティ コンテキストで実行されます。  
   
-    -   設定`True`ASP.NET ホスト層からセキュリティ トークンを読み取るようにする場合。 `True` に設定した場合は、`userName` と `password` を指定して匿名アカウントを指定する必要もあります。 指定する資格情報により、要求が発行されるセキュリティ コンテキストが決まります。  
+    -   ASP.NET がホスト層からセキュリティ トークンを読み取るようにする場合は、`True` に設定します。 `True` に設定した場合は、`userName` と `password` を指定して匿名アカウントを指定する必要もあります。 指定する資格情報により、要求が発行されるセキュリティ コンテキストが決まります。  
   
 5.  Web.config ファイルを ReportBuilder\bin フォルダーに保存します。  
   
-6.  RSReportServer.config ファイルを開き、[サービス] セクションの検索`IsReportManagerEnabled`し、その下の次の設定を追加します。  
+6.  RSReportServer.config ファイルを開き、Services セクションで `IsReportManagerEnabled` を見つけて、その下に次の設定を追加します。  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  
@@ -158,6 +157,6 @@ ms.locfileid: "48071292"
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー アプリケーションのアプリケーション ドメイン](../report-server/application-domains-for-report-server-applications.md)   
- [Reporting Services セキュリティと保護](reporting-services-security-and-protection.md)  
+ [Reporting Services のセキュリティと保護](reporting-services-security-and-protection.md)  
   
   

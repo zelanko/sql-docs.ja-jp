@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7fe5ffc867063d745a01ed12024acc536f8f634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63036233"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>インデックスの FILL FACTOR の指定
   このトピックでは、FILL FACTOR について説明すると共に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]のインデックスの FILL FACTOR 値を指定する方法について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "48188082"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Performance"></a> パフォーマンスに関する考慮事項  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48188082"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
+8.  **ファイル** メニューの **table_name**_を保存_を選びます。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してインデックスの FILL FACTOR を指定するには  
   

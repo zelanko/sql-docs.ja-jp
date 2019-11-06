@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c806e506f7ee344268a63278fda455926d4ef9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128996"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC テーブル値パラメーターの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,18 +55,18 @@ ms.locfileid: "51673111"
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>行のストリーミングを使用するテーブル値パラメーター (実行時のデータを使用する TVP としてデータを送信する)  
  このシナリオでは、要求に応じてアプリケーションからドライバーに行が渡され、サーバーにストリーム送信されます。 これにより、すべての行をメモリ内にバッファリングする必要がなくなります。 これは、一括挿入や一括更新のシナリオの代表的な例です。 テーブル値パラメーターは、パフォーマンスの点ではパラメーター配列と一括コピーとの間に位置します。 つまり、テーブル値パラメーターは、パラメーター配列と同程度にプログラミングが容易ですが、サーバー側の柔軟性が増します。  
   
- テーブル値パラメーターとその列は、前の「複数行のバッファーに完全にバインドされるテーブル値パラメーター」で説明したとおりにバインドされますが、テーブル値パラメーター自体の長さのインジケーターは、SQL_DATA_AT_EXEC に設定されます。 ドライバーが実行時データ パラメーターの通常の方法で SQLExecute または SQLExecuteDirect 応答-つまり、SQL_NEED_DATA を返すことによって。 SQLParamData がの値を返します、ドライバーのデータ、テーブル値パラメーターを受け取る準備ができたら*ParameterValuePtr* SQLBindParameter にします。  
+ テーブル値パラメーターとその列は、前の「複数行のバッファーに完全にバインドされるテーブル値パラメーター」で説明したとおりにバインドされますが、テーブル値パラメーター自体の長さのインジケーターは、SQL_DATA_AT_EXEC に設定されます。 実行時データ パラメーターの通常の方法で、ドライバーが SQLExecute または SQLExecuteDirect 応答-つまり、SQL_NEED_DATA を返すことによって。 SQLParamData がの値を返します、ドライバーのデータ、テーブル値パラメーターを受け取る準備ができたら*ParameterValuePtr* SQLBindParameter にします。  
   
- アプリケーションでは、テーブル値パラメーターの SQLPutData を使用して、テーブル値パラメーターを構成する列のデータの可用性を示します。 SQLPutData がテーブル値パラメーターの場合に呼び出されると*DataPtr*は常に null と*StrLen_or_Ind*必要があります 0 または数値のいずれかに指定された配列のサイズ小さいテーブル値パラメーターのバッファー (、 *ColumnSize* SQLBindParameter のパラメーター)。 0 はテーブル値パラメーターの行がなくなったことを示すため、ドライバーはプロシージャの次の実パラメーターの処理に進みます。 ときに*StrLen_or_Ind*が 0 ではなく、ドライバーは処理、テーブル値パラメーターを構成する列と同じ方法で非テーブル値パラメーターにバインドされて: 各テーブル値パラメーター列は、実際のデータを指定できます長さ、SQL_NULL_DATA、またはそれには、その長さ/インジケーター バッファーを使用して実行時データを指定できます。 テーブル値パラメーターの列で値を渡すことができますを繰り返し呼び出す SQLPutData 通常どおりに渡すことを文字またはバイナリ値とするとします。  
+ アプリケーションでは、テーブル値パラメーターの SQLPutData を使用して、テーブル値パラメーターを構成する列のデータの可用性を示します。 SQLPutData がテーブル値パラメーターの場合に呼び出されると*DataPtr*は常に null と*StrLen_or_Ind*必要があります 0 または数値のいずれかに指定された配列のサイズ小さいテーブル値パラメーターのバッファー (、 *ColumnSize* SQLBindParameter のパラメーター)。 0 はテーブル値パラメーターの行がなくなったことを示すため、ドライバーはプロシージャの次の実パラメーターの処理に進みます。 ときに*StrLen_or_Ind*が 0 ではなく、ドライバーは処理、テーブル値パラメーターを構成する列と同じ方法で非テーブル値パラメーターにバインドされたパラメーター。各テーブル値パラメーター列が、実際のデータの長さ、SQL_NULL_DATA を指定したり、その長さ/インジケーター バッファーを使用して実行時データを指定できます。 テーブル値パラメーターの列で値を渡すことができますを繰り返し呼び出す SQLPutData 通常どおりに渡すことを文字またはバイナリ値とするとします。  
   
  テーブル値パラメーターのすべての列が処理されたら、ドライバーはテーブル値パラメーターに戻り、テーブル値パラメーターのデータの次の行を処理します。 したがって、実行時データのテーブル値パラメーターの場合、バインドされたパラメーターを順番にスキャンする通常の方法には従いません。 SQLPutData がで呼び出されるまでバインドされたテーブル値パラメーターがポーリングする*StrLen_Or_IndPtr* 0、時点で、ドライバーがテーブル値パラメーターの列をスキップし、[次へ] の実際のストアド プロシージャ パラメーターに移動します。  SQLPutData にインジケーター値が渡されたは、1 以上、ときにドライバー テーブル値パラメーター列と行を順番に処理されるまで、すべてのバインドされている行と列の値があります。 その後、ドライバーはテーブル値パラメーターに戻ります。 SQLParamData からテーブル値パラメーターのトークンを受信して、テーブル値パラメーターの SQLPutData (hstmt、null の場合、n) を呼び出し、間、アプリケーション設定する必要がありますテーブル値パラメーターの構成要素である列のデータとインジケーターのバッファーの内容、次の行またはサーバーに渡される行。  
   
  このシナリオのサンプル コードは、ルーチン`demo_variable_TVP_binding`で[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)します。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>システム カタログからテーブル値パラメーターのメタデータを取得  
- アプリケーションで SQLProcedureColumns テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すときに DATA_TYPE は SQL_SS_TABLE、TYPE_NAME はテーブル値パラメーターのテーブル型の名前と返されます。 SQLProcedureColumns から返される結果セットに 2 つの列が追加されます: SS_TYPE_CATALOG_NAME がテーブル値パラメーターのテーブル型が定義されているし、スキーマの名前を返します場所、カタログの名前を返します場所、テーブル値パラメーターのテーブル型が定義されています。 SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME がの以前のバージョンで追加されたすべてのドライバーの特定列の前に、の表示には、ODBC 仕様に準拠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と後、すべての列が ODBC 自体によって指定します。  
+ アプリケーションで SQLProcedureColumns テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すときに DATA_TYPE は SQL_SS_TABLE、TYPE_NAME はテーブル値パラメーターのテーブル型の名前と返されます。 SQLProcedureColumns から返される結果セットには、2 つの列が追加されます。SS_TYPE_CATALOG_NAME がテーブル値パラメーターのテーブル型が定義されているし、スキーマの名前を返します場所、カタログの名前を返します場所、where、テーブル値パラメーターのテーブル型が定義されています。 SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME がの以前のバージョンで追加されたすべてのドライバーの特定列の前に、の表示には、ODBC 仕様に準拠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と後、すべての列が ODBC 自体によって指定します。  
   
- 新しい列は、テーブル値パラメーター用だけでなく、CLR ユーザー定義型パラメーター用にも作成されます。 UDT パラメーターの既存のスキーマ列とカタログ列も依然として作成されますが、共通のスキーマ列とカタログ列を必要とするデータ型にもそれらの列を含めておくと、今後アプリケーション開発が簡単になります  (XML スキーマ コレクションは多少異なり、この変更には含まれていないことに注意してください)。  
+ 新しい列は、テーブル値パラメーター用だけでなく、CLR ユーザー定義型パラメーター用にも作成されます。 UDT パラメーターの既存のスキーマ列とカタログ列も依然として作成されますが、共通のスキーマ列とカタログ列を必要とするデータ型にもそれらの列を含めておくと、今後アプリケーション開発が簡単になります (XML スキーマ コレクションは多少異なり、この変更には含まれていないことに注意してください)。  
   
  アプリケーションでは、SQLTables を使用して、テーブル型の名前は永続的なテーブル、システム テーブルおよびビューの場合と同じ方法を決定します。 アプリケーションでテーブル値パラメーターに関連付けられたテーブル型を識別できるように、新しいテーブル型として TABLE TYPE が導入されました。 テーブル型と通常のテーブルでは、異なる名前空間を使用します。 つまり、テーブル型と実際のテーブルに、同じ名前を使用できます。 これに対処するために、新しいステートメント属性として SQL_SOPT_SS_NAME_SCOPE が導入されました。 この属性は、かどうか SQLTables とテーブル名をパラメーターとして取る他のカタログ関数が解釈実際のテーブルの名前とテーブル名またはテーブル型の名前を指定します。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "51673111"
   
  このユース ケースのサンプル コードは、ルーチン`demo_metadata_from_prepared_statement`で[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

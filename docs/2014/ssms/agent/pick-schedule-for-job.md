@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.pickscheduleforjob.f1
@@ -14,12 +14,12 @@ ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9da20c25e0b116c1c91f5eb9015d5c5625d7514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472932"
 ---
 # <a name="pick-schedule-for-job"></a>[ジョブのスケジュール選択]
   このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの既存のスケジュールを選択できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "48185092"
  **名前**  
  スケジュールの名前を表示します。  
   
- **Enabled**  
+ **有効**  
  スケジュールが有効な場合に選択されます。  
   
  **[説明]**  
@@ -43,7 +43,7 @@ ms.locfileid: "48185092"
  **プロパティ**  
  **[ジョブ スケジュールのプロパティ]** ダイアログを表示します。このダイアログには、スケジュールに関する情報が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スケジュールの作成とジョブへのアタッチ](create-and-attach-schedules-to-jobs.md)  
   
   

@@ -18,15 +18,14 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], ENCRYPTBYKEY function
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f146b9aed0e8d5cf94e2028c83d7eb751202c309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135852"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,10 +48,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  *cleartext*. **uniqueidentifier** の暗号化に使用する、キーの GUID です。  
   
  '*cleartext*'  
- キーで暗号化されるデータを指定します。  
+ キーを使用して暗号化するデータです。  
   
  @cleartext  
- キーで暗号化されるデータを含む **nvarchar**、**char**、**varchar****binary**、**varbinary**、または **nchar** 型の変数です。  
+ キーで暗号化されるデータを含む **nvarchar**、**char**、**varchar** **binary**、**varbinary**、または **nchar** 型の変数です。  
   
  *add_authenticator*  
  *cleartext* と共に認証子を暗号化するかどうかを指定します。 認証子を使用する場合は 1 にする必要があります。 **int**.  
@@ -76,9 +75,9 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ## <a name="remarks"></a>Remarks  
  EncryptByKey では対称キーが使用されます。 このキーは開いている必要があります。 対称キーが現在のセッションで既に開いている場合、クエリのコンテキストで再度開く必要はありません。  
   
- 認証子を使用すると、暗号化されたフィールド全体が外部から置き換えられるのを防ぐことができます。 次の給与データの表を例として説明します。  
+ 認証子を使用すると、暗号化されたフィールド全体が外部から置き換えられるのを防ぐことができます。 たとえば、次の給与データのテーブルについて考えてみます。  
   
-|従業員 ID (Employee_ID)|役職 (Standard_Title)|基本給 (Base_Pay)|  
+|従業員 ID (Employee_ID)|Standard_Title|Base_Pay|  
 |------------------|---------------------|---------------|  
 |345|事務アシスタント|Fskj%7^edhn00|  
 |697|最高財務責任者|M0x8900f56543|  
@@ -93,10 +92,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  対称キーの暗号化と暗号化解除は比較的高速なので、データが大きい場合に適しています。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の暗号化関数を ANSI_PADDING OFF 設定で使用すると、暗黙的な変換によってデータが失われる可能性があります。 詳細については、ANSI_PADDING、を参照してください。 [ANSI_PADDING の設定 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の暗号化関数を ANSI_PADDING OFF 設定で使用すると、暗黙的な変換によってデータが失われる可能性があります。 詳細については、ANSI_PADDING、を参照してください。 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
- 次の例に示されている機能を実行するには、「[データ列を暗号化する方法](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)」で作成するキーと証明書が必要です。  
+ 次の例に示されている機能を実行するには、「[データの列の暗号化](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)」で作成するキーと証明書が必要です。  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 対称キーで文字列を暗号化する  
  次の例では、`Employee` テーブルに列を追加した後、`NationalIDNumber` 列に格納された社会保障番号の値を暗号化します。  
@@ -128,7 +127,7 @@ GO
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   
@@ -151,6 +150,6 @@ GO
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

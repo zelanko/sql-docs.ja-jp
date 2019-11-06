@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性グループの待機の種類 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性グループに関連付けられている待機を識別する
+description: Transact-SQL (T-SQL) と拡張イベントを使用し、Always On 可用性グループに関連付けられている待機を識別する
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee819aefcac1dc21fdf56d6b8ec93d4d1297f83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934968"
 ---
-# <a name="always-on-availability-groups-wait-types"></a>Always On 可用性グループの待機の種類
+# <a name="identify-waits-associated-with-availability-groups"></a>可用性グループに関連付けられている待機を識別する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Always On 可用性グループの遅延のトラブルシューティングを行うときには、動的管理ビュー(DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) で可用性グループ固有の待機の種類を使用して、累積の統計を監視できるまで待ちます。  
   

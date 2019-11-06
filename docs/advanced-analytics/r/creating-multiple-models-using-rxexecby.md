@@ -1,57 +1,58 @@
 ---
-title: RxExecBy (SQL Server Machine Learning) を使用して複数のモデルを作成する |Microsoft Docs
+title: rxExecBy を使用して複数のモデルを作成する
+description: SQL Server に格納されているマシンデータに対して複数のミニモデルを構築するには、RevoScaleR ライブラリの rxExecBy 関数を使用します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: b83abad65689e3e12310251d09199f5aa0e7c3cb
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1b2e6e1d546b9bbd1b3b3196c37716acbbe0ae74
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085128"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715710"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>rxExecBy を使用して複数のモデルを作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 2017 CTP 2.0 には、新しい関数が含まれています。 **rxExecBy**、複数の関連モデルの並列処理をサポートします。 非常に大規模なモデルが複数のようなエンティティからデータに基づくいずれかのトレーニングではなく、データ サイエンティストは非常に高速、多くの関連モデルを作成、単一のエンティティに固有のデータを使用して各します。
+RevoScaleR の**rxExecBy**関数は、複数の関連モデルの並列処理をサポートしています。 データ科学者は、類似した複数のエンティティのデータに基づいて1つの大きなモデルをトレーニングするのではなく、1つのエンティティに固有のデータを使用して、多数の関連モデルをすばやく作成できます。 
 
-たとえば、デバイスの障害を監視してさまざまな種類の機器のデータをキャプチャします。 RxExecBy を使用すると、入力として 1 つの大規模なデータセットを提供、デバイスの種類など、データセット、層化する列を指定および、個々 のデバイスの複数のモデルを作成することができます。
+たとえば、デバイスの障害を監視していて、さまざまな種類の機器のデータをキャプチャしているとします。 RxExecBy を使用すると、1つの大規模なデータセットを入力として指定し、デバイスの種類など、データセットを分配する列を指定してから、個々のデバイスに対して複数のモデルを作成できます。
 
-このプロセスがされていると呼ばれる「pleasingly 並列」の処理をタスクが、データ サイエンティストのやや面倒かせいぜい面倒でしたが、操作を高速かつ容易になりますがかかるため。
+このユースケースは、大量の複雑な問題をコンポーネントパーツに分割して同時処理するため、 ["pleasingly parallel"](https://en.wikipedia.org/wiki/Embarrassingly_parallel)と呼ばれていました。
 
-このアプローチの一般的なアプリケーションには、個々 の世帯スマート メーターの予測の別の製品ラインの収益予測を作成またはの個々 の銀行の支店に合わせたローン承認モデルの作成が含まれます。
+この方法の一般的なアプリケーションには、個々の家庭用スマートメーターの予測、個別の製品ラインの収益予測の作成、個々の銀行の分岐に合わせて調整されたローン承認のためのモデルの作成などがあります。
 
 ## <a name="how-rxexec-works"></a>RxExec のしくみ
 
-Revoscaler rxExecBy 関数は、大量並列の小さなデータ セットの数が多い処理に適しています。
+RevoScaleR の rxExecBy 関数は、多数の小さなデータセットに対して大量の並列処理を行うように設計されています。
 
-1. R コードの一部として rxExecBy 関数を呼び出し、順序付けられていないデータのデータセットを渡すとします。
-2. パーティションをデータがグループ化して並べ替えを指定します。
-3. 変換またはデータの各パーティションに適用される関数をモデル化を定義します。
-4. 関数を実行すると、環境内でサポートされている場合、データのクエリが並列で処理されます。 さらに、モデリングまたは変換タスクが個々 のコア間で分散し、並列で実行します。 サポートされているコンピューティング コンテキストとして、RxSpark と RxInSQLServer 3 つの操作が含まれます。
+1. R コードの一部として rxExecBy 関数を呼び出し、順序付けられていないデータのデータセットを渡します。
+2. データのグループ化と並べ替えを行うパーティションを指定します。
+3. 各データパーティションに適用する必要がある変換関数またはモデリング関数を定義します。
+4. 関数を実行すると、データクエリは、環境でサポートされている場合は並列処理されます。 さらに、モデリングタスクまたは変換タスクは個々のコアに分散され、並列で実行されます。 RxSpark や RxInSQLServer など、操作に対してサポートされている計算コンテキスト。
 5. 複数の結果が返されます。
 
-## <a name="rxexecby-syntax-and-examples"></a>rxExecBy 構文と例
+## <a name="rxexecby-syntax-and-examples"></a>rxExecBy の構文と例
 
-**rxExecBy**は 4 つの入力をパーティション分割するデータセットまたはデータ ソース オブジェクトをされている入力の 1 つに、指定した**キー**列。 関数は、パーティションごとに出力を返します。 出力の形式は、引数として渡される関数によって異なります。、、、など rxLinMod などのモデリング関数を渡す場合は、データセットのパーティションごとに個別のトレーニング済みモデルを返すことができます。
+**rxExecBy**は4つの入力を受け取ります。入力の1つは、指定された**キー**列でパーティション分割できるデータセットまたはデータソースオブジェクトです。 関数は、各パーティションの出力を返します。 出力形式は、引数として渡される関数によって異なります。 たとえば、rxLinMod などのモデリング関数を渡した場合、データセットの各パーティションに対して個別のトレーニング済みモデルを返すことができます。
 
 ### <a name="supported-functions"></a>サポートされる関数
 
-モデリング: `rxLinMod`、 `rxLogit`、 `rxGlm`、 `rxDtree`
+モデリング: `rxLinMod` `rxLogit` 、、、`rxGlm``rxDtree`
 
-スコア付け: `rxPredict`、
+スコアリング: `rxPredict`、
 
-変換または分析: `rxCovCor`
+変換または分析:`rxCovCor`
 
 ## <a name="example"></a>例
 
-次の例では、航空会社のデータセットは [DayOfWeek] 列でパーティション分割を使用して複数のモデルを作成する方法を示します。 ユーザー定義関数、 `delayFunc`、呼び出し元 rxExecBy によって各パーティションに適用されます。 関数は、月曜日、火曜日の別のモデルを作成します。 など。
+次の例は、航空データセットを使用して複数のモデルを作成する方法を示しています。このデータセットは、[DayOfWeek] 列でパーティション分割されています。 ユーザー定義関数`delayFunc`は、rxExecBy を呼び出すことによって各パーティションに適用されます。 この関数は、月曜日、火曜日などに個別のモデルを作成します。
 
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language = N'R'
 , @script = N'
@@ -66,11 +67,11 @@ OutputDataSet <- rxExecBy(airlineData, c("DayOfWeek"), delayFunc)
 
 ```
 
-エラーが発生した場合`varsToPartition is invalid`、キー列または列の名前が正しく入力されているかどうかを確認します。 R 言語は大文字小文字を区別します。
+エラーが発生`varsToPartition is invalid`した場合は、キー列の名前が正しく入力されているかどうかを確認します。 R 言語では大文字と小文字が区別されます。
 
-SQL データのグループを使用してパフォーマンス向上のためこの例は、SQL Server の最適化されていないと、多くの場合の可能性があります。 ただし、rxExecBy を使用して、ジョブを作成できます並列 r
+この特定の例は SQL Server に最適化されていません。多くの場合、SQL を使用してデータをグループ化することで、パフォーマンスを向上させることができます。 ただし、rxExecBy を使用すると、R から並列ジョブを作成できます。
 
-次の例は、計算コンテキストとして SQL Server を使用して、R でプロセスを示しています。
+次の例は、SQL Server を計算コンテキストとして使用して、R でのプロセスを示しています。
 
 ```R
 sqlServerConnString <- "SERVER=hostname;DATABASE=TestDB;UID=DBUser;PWD=Password;"

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a6546a9b38c8f12e493ea9fa47741fa56c9fab79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: cf21cc35bb41837b65d2a2b3c2c946ffae34864f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101259"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>[資格情報] ([共有データ ソース プロパティ] ダイアログ ボックス)
   **[共有データ ソース プロパティ]** ダイアログ ボックスの **[資格情報]** を選択すると、レポート内の共有データ ソースに接続するための資格情報を表示および変更できます。 指定した資格情報は、データ ソースへのアクセス、およびレポート プレビュー用のデータのコピーのキャッシュに使用されます。 プレビュー データのキャッシュの方法の詳細については、「 [レポートのプレビュー](reports/previewing-reports.md)」を参照してください。 資格情報の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
@@ -28,7 +27,7 @@ ms.locfileid: "48171082"
  Windows 認証を使用します。  
   
  **このユーザー名とパスワードを使用して、**  
- 特定のユーザー名とパスワードを指定します。 共有データ ソースの場合、レポート サーバー プロジェクトを対象サーバーにパブリッシュするときに、データベース用の保存された資格情報としてユーザー名とパスワードが保存されます。 ユーザー名とパスワードを Windows 資格情報として使用する場合は、対象サーバーにパブリッシュされた共有データ ソースのプロパティを編集できます。 詳細については、「[共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)」を参照してください。  
+ 特定のユーザー名とパスワードを指定します。 共有データ ソースの場合、レポート サーバー プロジェクトをターゲット サーバーにパブリッシュするときに、データベース用の保存された資格情報としてユーザー名とパスワードが保存されます。 ユーザー名とパスワードを Windows 資格情報として使用する場合は、ターゲット サーバーにパブリッシュされた共有データ ソースのプロパティを編集できます。 詳細については、「[共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)」を参照してください。  
   
  **ユーザー名**  
  データ ソースへのログインに使用するユーザー名を入力します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - trace window [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 441a43a929ff8973233861e732a9b335beac7e01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 442c8ffca93052235db69394ed71ad2ff3157dfe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316211"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>トレース ウィンドウの消去 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して実行しているトレースのトレース ウィンドウを消去する方法について説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "48199474"
   
      トレース ウィンドウの内容が削除されます。 トレース ファイルまたはトレース テーブルを保存していた場合、トレース ファイルまたはトレース テーブルの内容は変わりません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

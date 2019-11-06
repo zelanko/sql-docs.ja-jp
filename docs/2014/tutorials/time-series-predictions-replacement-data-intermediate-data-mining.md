@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63312880"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>時系列予測での置き換え後のデータの使用 (中級者向けデータ マイニング チュートリアル)
   ここでは、全世界の売上データに基づく新しいモデルを作成します。 その後、全世界の売上モデルを個々の地域のいずれかに適用する予測クエリを作成します。  
   
 ## <a name="building-a-general-model"></a>汎用モデルの作成  
- 元のマイニング モデルの結果を分析したところ、地域間や製品ライン間で大きな差が見られました。 たとえば、North America では M200 モデルの売上が強い一方で、T1000 モデルの売上はそれほどでもありません。 ただし、一部の系列には十分なデータがなく、開始時期が同じでないデータもあるため、分析は複雑です。 不足しているデータもあります。  
+ 元のマイニング モデルの結果を分析したところ、地域間や製品ライン間で大きな差が見られました。 たとえば、North America では M200 モデルの売上が強い一方で、T1000 モデルの売上はそれほどでもありません。 ただし、分析は多くのデータ、またはデータの時間内に別の時点で開始一部の系列がありませんでしたという事実によって複雑になります。 不足しているデータもあります。  
   
  ![M200 および T1000 の数量を予測するシリーズ](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 および T1000 の数量を予測するシリーズ")  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48120284"
   
 2.  データ マイニング ウィザードで、以下の選択を行います。  
   
-    -   [アルゴリズム]: [Microsoft タイム シリーズ]  
+    -   アルゴリズム:Microsoft タイム シリーズ  
   
     -   モデルのソースとして、この高度なレッスンで既に作成したデータ ソースを使用する。 参照してください[タイム シリーズ予測を高度な&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)します。  
   
@@ -53,9 +52,9 @@ ms.locfileid: "48120284"
   
     -   系列キーおよび時間キーの列として、次の列を選択する。  
   
-         キー時刻: ReportingDate  
+         キー時刻:ReportingDate  
   
-         キー: リージョン  
+         キー:Region  
   
     -   `Input` および `Predict` の列として、次の列を選択する。  
   

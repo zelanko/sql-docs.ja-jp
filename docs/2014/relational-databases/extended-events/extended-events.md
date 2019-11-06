@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
@@ -14,20 +13,20 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e436ba6a981ac03ca5f4b194e9dc257a22aba7a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990703"
 ---
 # <a name="extended-events"></a>拡張イベント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントのアーキテクチャは高い拡張性と柔軟な構成を備えており、これによってユーザーは、トラブルシューティングまたはパフォーマンスの問題の特定に必要な量の情報を過不足なく収集できます。  
   
- Web サイトで拡張イベントに関する詳細を検索する[SQL Server 拡張イベント](http://blogs.msdn.com/b/extended_events/)します。  
+ Web サイトで拡張イベントに関する詳細を検索する[SQL Server 拡張イベント](https://blogs.msdn.com/b/extended_events/)します。  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
- 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]**)。  
+ 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]** )。  
   
 ## <a name="extended-events-concepts"></a>拡張イベントの概念  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントは、イベントやイベント コンシューマーなど、既存の概念を基にして、Event Tracing for Windows の概念や、新しい概念を導入したものです。  
@@ -98,8 +97,8 @@ ms.locfileid: "48221662"
 |データベース パフォーマンスを低下させているロックのソースを特定する方法について説明します。|[ロックの大半を取得しているオブジェクトを見つける](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |拡張イベントを Event Tracing for Windows と共に使用してシステムの使用状況を監視する方法について説明します。|[拡張イベントを使用したシステムの使用状況の監視](monitor-system-activity-using-extended-events.md)|  
   
-## <a name="see-also"></a>関連項目  
- [データ層アプリケーション](../data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [[データ層アプリケーション]](../data-tier-applications/data-tier-applications.md)   
  [SQL Server オブジェクトとバージョンの DAC サポート](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [データ層アプリケーションの配置](../data-tier-applications/deploy-a-data-tier-application.md)   
  [データ層アプリケーションの監視](../data-tier-applications/monitor-data-tier-applications.md)   

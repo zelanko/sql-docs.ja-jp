@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6dae0f33308ca37bb9a5fd4b0f1f94280ecbf146
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512899"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809821"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,12 +51,16 @@ ms.locfileid: "51512899"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-  | AS TABLE ( { <column_definition> | <computed_column_definition> }  
-        [ <table_constraint> ] [ ,...n ] )    
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
+ 
 } [ ; ]  
   
 <column_definition> ::=  
@@ -112,14 +115,18 @@ column_name AS computed_column_expression
 {  
     IGNORE_DUP_KEY = { ON | OFF }  
 }  
+
+< table_index > ::=  
+  INDEX constraint_name  
+     [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
 ```  
--- User-defined Table Types Syntax  
+-- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
-AS TABLE ( { <column_definition> }  
-    |  [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ]    } )
+AS TABLE ( { <column_definition> [ ,... n ] }  
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
     [ WITH ( <table_option> [ ,... n ] ) ]  
  [ ; ]  
   
@@ -200,7 +207,7 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- ユーザー定義型を実装するアセンブリ内のクラスを指定します。 *class_name* は有効な識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 *class_name* は、対応するアセンブリ内のクラス名に正確に一致している必要があります。大文字と小文字は、データベース照合順序に関係なく区別されます。 クラスの記述に使用されている C# などのプログラミング言語が、名前空間の概念を使用している場合、クラス名は、角かっこ (**[ ]**) で囲まれた名前空間で修飾された名前にすることができます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって *type_name* と同じであると見なされます。  
+ ユーザー定義型を実装するアセンブリ内のクラスを指定します。 *class_name* は有効な識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 *class_name* は、対応するアセンブリ内のクラス名に正確に一致している必要があります。大文字と小文字は、データベース照合順序に関係なく区別されます。 クラスの記述に使用されている C# などのプログラミング言語が、名前空間の概念を使用している場合、クラス名は、角かっこ ( **[ ]** ) で囲まれた名前空間で修飾された名前にすることができます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって *type_name* と同じであると見なされます。  
   
  \<column_definition>  
  ユーザー定義テーブル型の列を定義します。  
@@ -219,6 +226,12 @@ column_name <data_type>
   
  \<index_option>  
  一意のクラスター化インデックスまたは一意の非クラスター化インデックスにおいて、複数行の挿入操作で重複したキー値が見つかった場合の、エラー応答を指定します。 インデックス オプションについて詳しくは、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」をご覧ください。  
+ 
+  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
+     
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+
+テーブル上にインデックスを作成することを指定します。 これには、クラスター化インデックスまたは非クラスター化インデックスを指定できます。 インデックスには一覧表示される列が含まれ、昇順、降順のいずれかでデータが並べ替えられます。
   
  INDEX  
  CREATE TABLE ステートメントの一部として列インデックスとテーブル インデックスを指定する必要があります。 メモリ最適化テーブルでは、CREATE INDEX および DROP INDEX はサポートされません。  
@@ -305,6 +318,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. プライマリ キーとインデックスでユーザー定義テーブル型を作成する
+次の例では、3 つの列を持つユーザー定義テーブル型を作成します。そのうちの 1 つ (`Name`) はプライマリ キーで、もう 1 つ (`Price`) には非クラスター化インデックスが作成されています。  テーブル値パラメーターの作成方法および使用方法の詳細については、「[テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」をご覧ください。
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
 ## <a name="see-also"></a>参照  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   

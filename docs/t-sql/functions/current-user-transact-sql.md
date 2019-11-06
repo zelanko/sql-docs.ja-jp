@@ -19,16 +19,15 @@ helpviewer_keywords:
 - CURRENT_USER
 - users [SQL Server], names
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de6b10ad7853d34dd1aeaf0248c33e72146d6c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf0046f4b0fac91c8b6d44b13c1c844578c81f79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026311"
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,12 +110,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. 権限を借用したコンテキストから CURRENT_USER を使用する  
-この例では、ユーザー `Wanida` によって次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードが実行されます。
+この例では、ユーザー `Wanida` が次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行し、ユーザー 'Arnalfo' になりすまします。
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Wanida';  
+EXECUTE AS USER = 'Arnalfo';  
 GO  
 SELECT CURRENT_USER;  
 GO  
@@ -135,8 +134,8 @@ Wanida
 ```
   
 ## <a name="see-also"></a>参照
-[ユーザー名 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)  
+[USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

@@ -1,19 +1,20 @@
 ---
-title: ReportViewer コントロール 2016 でのデータ収集 | Microsoft Docs
-ms.date: 09/18/2018
+title: ReportViewer コントロール 2016 でのデータ収集
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 69cc665274d7463982cdfddd32d2b979e25a156e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.custom: ''
+ms.date: 09/18/2018
+ms.openlocfilehash: 2372adbf0fd0b9ad15383d6538d25ef955b27426
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028151"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923800"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer コントロールを使用した Reporting Services の統合 - データ収集
 
@@ -25,14 +26,14 @@ Microsoft SQL Server と Report Viewer でのデータ収集と使用方法に�
 
 使用状況データの収集は、```EnableTelemetry``` プロパティを使用して無効にすることができます。
 
-```
+```xml
 <rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 </rsweb:ReportViewer>
 ```
 
 または、コントロールがレンダリングされる前にプログラムで無効にできます。
     
-```
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
     ReportViewer1.EnableTelemetry = false;

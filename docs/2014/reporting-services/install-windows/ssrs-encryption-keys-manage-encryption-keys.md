@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16a1851a46b6602bc9d92d5c7e0111ece8701d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 4858b9844c4b07d270c615d30089d104bb7ba76a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108731"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>暗号化キーの構成と管理 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化キーを使用して、レポート サーバー データベースに格納されている資格情報および接続情報をセキュリティで保護します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の暗号化では、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、レポート サーバーをインストールまたは構成するとき、レポート サーバーの初期化中に作成されます。レポート サーバーはこの対称キーを使用して、レポート サーバーに保存される機密データを暗号化します。 公開キーと秘密キーはオペレーティング システムによって作成され、これらのキーを使用して対称キーが保護されます。 公開キーと秘密キーのペアは、レポート サーバー データベースに機密データを格納するレポート サーバー インスタンスごとに作成されます。  
@@ -46,22 +45,22 @@ ms.locfileid: "48222512"
 -   複数のレポート サーバーが 1 つのレポート サーバー データベースとそのデータベースの暗号化を解除する対称キーの両方を共有する場合、スケールアウト配置のレポート サーバーでレポート サーバーのインスタンスを追加、または削除します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [レポート サーバーの初期化&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
  暗号化キーの作成方法について説明します。  
   
  [Reporting Services の暗号化キーのバックアップと復元](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  暗号化キーをバックアップおよび復元し、レポート サーバーを復旧または移行する方法について説明します。  
   
- [暗号化されたレポート サーバーのデータ保存&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  レポート サーバーでの暗号化について説明します。  
   
- [削除して、暗号化キーを再作成&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [暗号化キーの削除と再作成 &#40;SSRS構成マネージャー&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  対称キーを新しいバージョンに置き換える方法、および対称キーを検証できない場合にやり直す方法について説明します。  
   
- [追加し、スケール アウト配置に関する暗号化キーを削除&#40;SSRS 構成マネージャー&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS構成マネージャー&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  暗号化キーを追加および削除し、どのレポート サーバーをスケールアウト配置の一部に含めるのかを管理する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [暗号化されたレポート サーバーのデータ保存&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/16/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,15 +14,15 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0617135d1e7a07d30f4581783cefb7add601c88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789148"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)
-  レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションが失敗することがあります。 トランザクション サブスクライバーの場合、サブスクリプションがサブスクライバーの可用性グループ リスナーの名前を使用していると、ディストリビューション エージェントは自動的にレプリケーションを継続します。 マージ サブスクライバーの場合、レプリケーション管理者はサブスクリプションを再作成して、手動でサブスクライバーを再構成する必要があります。  
+  レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションが失敗することがあります。 トランザクション レプリケーションのプッシュ サブスクライバーの場合、サブスクリプションが AG リスナー名を使用して作成されていれば、フェールオーバー後にディストリビューション エージェントは自動的にレプリケーションを継続します。 トランザクション レプリケーションのプル サブスクライバーの場合、サブスクリプションが AG リスナー名を使用して作成されており、元のサブスクライバー サーバーが稼働中であれば、フェールオーバー後にディストリビューション エージェントは自動的にレプリケーションを継続します。 これは、ディストリビューション エージェントのジョブは元のサブスクライバー (AG のプライマリ レプリカ) 上でのみ作成されるためです。 マージ サブスクライバーの場合、レプリケーション管理者はサブスクリプションを再作成して、手動でサブスクライバーを再構成する必要があります。  
   
 ## <a name="what-is-supported"></a>サポート対象  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションは、パブリッシャーの自動フェールオーバー、トランザクション サブスクライバーの自動フェールオーバー、およびマージ サブスクライバーの手動フェールオーバーをサポートします。 可用性データベース上のディストリビューターのフェールオーバーはサポートされていません。 AlwaysOn は、Websync および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact のシナリオと組み合わせることはできません。  
@@ -81,7 +81,7 @@ GO
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>サブスクライバーの可用性グループがフェールオーバーした後で、マージ エージェントを再開するには  
  マージ レプリケーションでは、レプリケーション管理者が次の手順に従い、手動でサブスクライバーを再構成する必要があります。  
   
-1.  実行`sp_subscription_cleanup`サブスクライバーの古いサブスクリプションを削除します。 この操作は、新しいプライマリ レプリカ (以前のセカンダリ レプリカ) で実行します。  
+1.  `sp_subscription_cleanup` を実行し、サブスクライバーの古いサブスクリプションを削除します。 この操作は、新しいプライマリ レプリカ (以前のセカンダリ レプリカ) で実行します。  
   
 2.  新しいサブスクリプションを作成し、新しいスナップショットから開始して、サブスクリプションを再作成します。  
   

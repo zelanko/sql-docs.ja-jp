@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -21,12 +20,12 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 081e84289367d2fe5cf2ef2e35c8907cfce3882f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3333b41a4ff1c341f0ae0290f838cd2c76c6254e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063951"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>エディターと表示モードの管理
   エディターには、コードの表示を制御するさまざまな方法が用意されています。  

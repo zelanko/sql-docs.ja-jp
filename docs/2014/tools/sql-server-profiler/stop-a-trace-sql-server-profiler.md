@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], stopping
@@ -14,12 +13,12 @@ ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51fa35e63cd4c6445108136f62fde6e20515fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a84673b88ce6401986655a16fd407cafea6f3af1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63297658"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>トレースの停止 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、実行中のトレースを停止する方法について説明します。  

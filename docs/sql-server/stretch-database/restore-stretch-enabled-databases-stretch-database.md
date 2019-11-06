@@ -1,20 +1,18 @@
 ---
 title: Stretch 対応データベースの復元 (Stretch Database) | Microsoft Docs
-ms.custom: ''
 ms.date: 07/06/2016
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1ac64701d800bd20eea93dee6c688296cee1e975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 169d1d2dfe2ab36d5ae7541ee33912ea162f372f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136103"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースの復元 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +23,7 @@ ms.locfileid: "47764346"
   バックアップの詳細については、「 [Stretch 対応データベースのバックアップ](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)」をご覧ください。
 
 > [!TIP]
-> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性の詳細については、「 [高可用性ソリューション](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)」をご覧ください。
+> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性の詳細については、「 [高可用性ソリューション](../../database-engine/sql-server-business-continuity-dr.md)」をご覧ください。
 
 ## <a name="restore-your-sql-server-data"></a>SQL Server データの復元
 ハードウェアの障害または破損から復元するには、Stretch 対応 SQL Server データベースをバックアップから復元します。 現在使用中の SQL Server の復元方法を引き続き使用できます。 詳細については、「 [復元と復旧の概要](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」をご覧ください。

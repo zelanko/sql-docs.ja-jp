@@ -1,24 +1,23 @@
 ---
-title: 'チュートリアル: マップ レポート (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:マップ レポート (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098861"
 ---
-# <a name="tutorial-map-report-report-builder"></a>チュートリアル: マップ レポート (レポート ビルダー)
+# <a name="tutorial-map-report-report-builder"></a>チュートリアル:マップ レポート (レポート ビルダー)
   このチュートリアルでは、地図を背景としてレポート データを表示するときに使用できるマップ機能について学習できます。  
   
  マップは、空間データに基づいています。空間データは通常、ポイント、線、および多角形で構成され (郡の輪郭を表す多角形、道路を表す線、市区町村の場所を表すポイントなど)、 種類ごとに異なるマップ レイヤーにマップ要素のセットとして表示されます。  
@@ -63,11 +62,11 @@ ms.locfileid: "48098852"
 10. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
- このチュートリアルの推定所要時間: 30 分。  
+ このチュートリアルの推定所要時間:30 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
 ##  <a name="Map"></a> 1.マップ ウィザードを使用して多角形レイヤーを含むマップを作成する  
@@ -192,9 +191,9 @@ ms.locfileid: "48098852"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。  
+9. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。  
   
-     結果セットには、7 つの列 (StoreKey、StoreName、SellingArea、City、County、Sales、SpatialLocation) が表示されます。 このデータは、消費者向けの商品を販売している New York 州内の店舗を表しています。 結果セットの各行には、店舗識別子、店舗名、商品の展示に使用できる面積、店舗の所在地の市および郡、売上合計、および所在地の経度と緯度が含まれています。 展示面積の範囲は 455 ～ 1125 平方フィートです。  
+     結果セットには、7 つの列が表示されます。StoreKey、StoreName、SellingArea、City、County、Sales、および SpatialLocation します。 このデータは、消費者向けの商品を販売している New York 州内の店舗を表しています。 結果セットの各行には、店舗識別子、店舗名、商品の展示に使用できる面積、店舗の所在地の市および郡、売上合計、および所在地の経度と緯度が含まれています。 展示面積の範囲は 455 ～ 1125 平方フィートです。  
   
 10. **[次へ]** をクリックします。  
   
@@ -319,7 +318,7 @@ ms.locfileid: "48098852"
   
 4.  **[表示]** をクリックします。  
   
-5.  **透明度 (%)**、型**30**します。  
+5.  **透明度 (%)** 、型**30**します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -330,7 +329,7 @@ ms.locfileid: "48098852"
   
  以降の手順では、各郡の店舗売上の範囲に特定の色を関連付ける色ルールを指定します。 赤、黄、緑の各色は、売上高が相対的に高い、中程度、または低いことを示します。 カラー スケールを通貨形式に変更します。 新しい凡例に年間売上高の範囲を表示します。 店舗のない郡については、どの色も使用しないことで、関連付けられたデータがないことを示します。  
   
-###  <a name="Relationship"></a> 6a します。 空間データと分析データの間にリレーションシップを構築する  
+###  <a name="Relationship"></a> 6a. 空間データと分析データの間にリレーションシップを構築する  
  分析データに基づいて郡の図形を色分けするには、まず分析データを空間データに関連付けておく必要があります。 このチュートリアルでは、郡の名前を使用してデータを対応させます。  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>空間データと分析データの間にリレーションシップを構築するには  
@@ -581,7 +580,7 @@ ms.locfileid: "48098852"
 ## <a name="next-steps"></a>次の手順  
  これで、レポートにマップを追加する方法のチュートリアルは終了です。  
   
- 詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)とブログ エントリ[地図的調整の空間データを SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com します。  
+ 詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)とブログ エントリ[地図的調整の空間データを SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com します。  
   
  詳細なチュートリアルについては、次を参照してください。[チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)します。  
   

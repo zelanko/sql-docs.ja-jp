@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -15,13 +14,13 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6e3e43a8b2f39d4396945d47ee7e943e64fd1195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104646"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)
   レポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。 多くの場合、テーブル、マトリックス、または一覧の既定の構造を使用してデータを表示できます。 詳細については、次を参照してください[テーブル&#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)、[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)、または[一覧&#40;レポート ビルダーと。SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
@@ -107,7 +106,7 @@ ms.locfileid: "48072432"
  Tablix 本体領域のセルには、セルが詳細行または詳細列内にある場合は詳細データを、セルがグループ行またはグループ列内にある場合は集計グループ データを表示できます。 セルのデータのスコープは、そのセルが属する最も内側の行グループと最も内側の列グループの交点です。  
   
 > [!NOTE]  
->  各セルについて表示される実際のデータは、セルに含まれているレポート アイテムの評価済みの式 (通常、テキスト ボックス) です。 詳細行または詳細列に属するセルの場合、式は既定で詳細データ (例: **[LineTotal]**) になります。 詳細行または詳細列に属さないセルの場合、式は既定で集計関数 (例: **Sum[LineTotal]**) になります。 セルがグループ行またはグループ列に属していても、式で集計関数が指定されていない場合、グループ内の最初の値が表示されます。 集計の詳細については、「[合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
+>  各セルについて表示される実際のデータは、セルに含まれているレポート アイテムの評価済みの式 (通常、テキスト ボックス) です。 詳細行または詳細列に属するセルの場合、式は既定で詳細データ (例: **[LineTotal]** ) になります。 詳細行または詳細列に属さないセルの場合、式は既定で集計関数 (例: **Sum[LineTotal]** ) になります。 セルがグループ行またはグループ列に属していても、式で集計関数が指定されていない場合、グループ内の最初の値が表示されます。 集計の詳細については、「[合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
 ### <a name="merging-and-splitting-cells"></a>セルの結合と分割  
  Tablix 領域内では、隣接する複数のセルを結合できます。 たとえば、複数の列または行にまたがるラベルのセルを作成できます。  
@@ -121,6 +120,6 @@ ms.locfileid: "48072432"
  以前に結合したセルを分割できます。 セルを水平方向に列に分割するか、垂直方向に行に分割できます。 セルを、セルのブロックに分割するには、最初にセルを水平方向に分割し、次に、垂直方向に必要な数だけ分割します。  
   
 ## <a name="see-also"></a>参照  
- [Tablix データ領域&#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix データ領域 (レポート ビルダーおよび SSRS)](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

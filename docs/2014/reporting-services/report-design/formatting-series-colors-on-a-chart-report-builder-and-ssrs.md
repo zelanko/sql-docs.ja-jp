@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10245"
@@ -15,13 +14,13 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3be68007b9398b356d86cb0c1395be62c60aac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 445e6d2ccaba0d03de9f25d770ac22f35b628778
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105768"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>グラフの系列の色の書式設定 (レポート ビルダーおよび SSRS)
   Reporting Services にはグラフ用にいくつかの組み込みパレットが用意されていますが、カスタム パレットを定義することもできます。 既定では、グラフは、組み込みを使用して**BrightPastel**各系統に色パレット。 これらの色は、凡例にも表示されます。 複数の系統をグラフに追加すると、グラフでは、パレットで定義されている色の順序で系統に色が割り当てられます。  
@@ -46,14 +45,14 @@ ms.locfileid: "48166818"
 ## <a name="using-a-color-fill-on-each-series"></a>各系統での塗りつぶしの使用  
  グラフの各系統に色を指定して、グラフに独自の色を定義することもできます。 この操作を行うには、 **[系列のプロパティ]** ダイアログ ボックスを開き、 **Color** プロパティを **[塗りつぶし]** に設定します。 この方法により、定義されたすべてのパレットがオーバーライドされます。 一般的に、データセットの系統の数はレポート処理の段階まで不明な場合があるため、カスタム パレットを使用して独自の色を定義することをお勧めします。  
   
- この方法は、式を基に系統の色を条件に応じて設定する場合に最も適しています。  詳細については、次を参照してください。[グラフのデータ ポイントの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)します。  
+ この方法は、式を基に系統の色を条件に応じて設定する場合に最も適しています。  詳細については、「 [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [パレットを使用したグラフの色の定義 &#40;レポート ビルダーおよび SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
- [背景の縞模様の追加によるグラフのデータを強調表示&#40;レポート ビルダーおよび SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [ストリップ ラインの追加によるグラフのデータの強調表示 &#40;レポート ビルダーおよび SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7947bba9f41ffb77a1260ce79a5f4afb6c773295
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63277428"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>オブジェクト エクスプローラーからインスタンスへの接続
   オブジェクト エクスプローラーを使用してオブジェクトを管理するには、まず、オブジェクトを含むインスタンスにオブジェクト エクスプローラーを接続する必要があります。 オブジェクト エクスプローラーは複数のインスタンスに同時に接続できます。  

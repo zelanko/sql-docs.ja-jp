@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], database objects
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d61854f57214212d079b4d32ae69b0bc6e8c5cce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011035"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の統計的セマンティック検索をサポートする Transact-SQL ステートメントおよびデータベース オブジェクトの一覧を示します。  
@@ -57,7 +57,7 @@ ms.locfileid: "48160472"
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> システム ビュー: カタログ ビュー  
+##  <a name="cv"></a> システム ビュー - カタログ ビュー  
   
 |オブジェクト|詳細情報|  
 |------------|----------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "48160472"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> システム ビュー: 動的管理ビュー  
+##  <a name="dmv"></a> システム ビュー - 動的管理ビュー  
   
 |オブジェクト|詳細情報|  
 |------------|----------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "48160472"
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)|[セマンティック検索の管理および監視](manage-and-monitor-semantic-search.md)|  
 |[sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql)|[セマンティック検索の管理および監視](manage-and-monitor-semantic-search.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セマンティック検索の管理および監視](manage-and-monitor-semantic-search.md)  
   
   

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df05fc03563c88a10a7c56b71536e41068ffb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45fabf20b18fb0f3227f99ab2a6b5270e245562a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845480"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907305"
 ---
 # <a name="duplicate-tables"></a>テーブルの複製
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47845480"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブルを複製するための方法:**  
   
@@ -44,7 +43,7 @@ ms.locfileid: "47845480"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -67,10 +66,10 @@ ms.locfileid: "47845480"
   
 6.  **[編集]** メニューの **[貼り付け]** をクリックします。  
   
-7.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+7.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいテーブルの名前を入力し、 **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-duplicate-a-table-in-query-editor"></a>クエリ エディターでテーブルを複製するには  

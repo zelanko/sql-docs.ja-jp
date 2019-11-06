@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
@@ -17,12 +16,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087912"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>クラスター ダイアグラムのチュートリアル (データ マイニング アドイン)
   クラスタ リング モデルを作成した後を使用して Visio にインポートできる、**クラスター**図形、カスタマイズおよび強化、レイアウトに進みます。 **Visio 用データ マイニング図形**データ マイニング ダイアグラムを操作するため、次のカスタム コントロールが含まれます。  
@@ -73,9 +72,9 @@ ms.locfileid: "48057092"
   
 7.  オプションでは、状態のまま**グラフ内の行の数**、5 として。  
   
-     このオプションは、モデル内のクラスターの数を変更しません。各クラスターの特徴として表示できる属性の数を制限するだけです。  
+     このオプションは、モデル内のクラスターの数を変更しません。各クラスターの機能として表示できる属性の数を制限するだけです。  
   
-     ただし、グラフ データに対するフィルターとして機能するので、後から項目の数を増やすことはできません。  
+     ただし、オプションは、後から項目の数を増やすことはできませんので、グラフのデータに対するフィルターとして機能します。  
   
 8.  **[詳細設定]** をクリックします。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48057092"
   
      ![[詳細設定] 図形の色を選択する](media/dm13-visio-clusteroptions-advanced.gif "図形の色を選択する [詳細設定] をクリックします。")  
   
-     **ヒント:** Visio の配色テーマと図形編集コントロールを使用して一部の色を後で変更できます。 ただし、Visio の配色テーマは選択した色の一部をオーバーライドするため、最初は既定の色で使い、徐々に変更することをお勧めします。  
+     **ヒント:** 一部の色は、Visio の配色テーマと図形編集コントロールを使用して後で変更できます。 ただし、Visio の配色テーマは選択した色の一部をオーバーライドするため、最初は既定の色で使い、徐々に変更することをお勧めします。  
   
 9. をクリックして**完了**グラフを作成します。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "48057092"
      **ページのサイズ変更します。**  
      このコントロールは、HTML の以前のバージョンを対象としたものです。 代わりに、Visio のページのサイズ変更コントロールを使用してください。  
   
-     **Description**  
+     **[説明]**  
      クラスターが選択されている場合、このオプションをクリックすると、クラスターに関する詳細が表示されます。  
   
      ![説明は、クラスターに関する詳細を取得する をクリックして](media/dm13-visio-cluster-description-control.gif "クラスターに関する情報を取得の説明をクリックします。")  
@@ -124,7 +123,7 @@ ms.locfileid: "48057092"
   
      ただし、背景も含めて、ウィザードが生成した既定値以外の特殊な書式設定を適用した場合は、この数字が表示されないことがあります。  
   
-     **スライダー**  
+     **Slider**  
      クラスターを結ぶ線を絞り込みます。 スライダーを上へ移動すると、最も重要な関連付けだけを残して、すべての線が削除されます。  
   
      **網掛け**  

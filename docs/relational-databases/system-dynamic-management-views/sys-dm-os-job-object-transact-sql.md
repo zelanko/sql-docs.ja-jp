@@ -2,10 +2,8 @@
 title: sys.dm_os_job_object (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6517ba1223f90aa95f475e050553e02af26f0dcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43063bb56607d1b5a21ae04b40ee4c7a17825521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900135"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "47780420"
 |peak_job_memory_used_mb|**bigint**|ピーク時のジョブ オブジェクトのすべてのプロセスは、ジョブ オブジェクトから累積的使用いたを mb 単位でのメモリ量が作成されました。|
   
 ## <a name="permissions"></a>アクセス許可  
-SQL Database マネージ インスタンスが必要です。`VIEW SERVER STATE`権限。 SQL Database が必要です、`VIEW DATABASE STATE`データベースの権限。  
+SQL Database マネージ インスタンスが必要です。`VIEW SERVER STATE`権限。 SQL Database では、データベースにおける `VIEW DATABASE STATE` アクセス許可が必要です。  
  
 ## <a name="see-also"></a>参照  
 

@@ -1,6 +1,7 @@
 ---
-title: 可用性グループに対するセカンダリ データベースの手動準備 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループに対するセカンダリ データベースの準備
+description: Always On 可用性グループに参加させるセカンダリ データベースを手動で準備する方法に関する説明。
+ms.custom: seodec18
 ms.date: 07/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8422db4a4888cf217c674954588c04acad675d9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023711"
 ---
-# <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>可用性グループに対するデータベースの手動準備 (SQL Server)
+# <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 可用性グループに対するセカンダリ データベースの準備
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] で AlwaysOn 可用性グループのデータベースを準備する方法について説明します。 データベースの準備には、2 つの手順が必要です。 
 
@@ -79,7 +79,7 @@ ms.locfileid: "52529932"
   
 3.  セカンダリ レプリカをホストするサーバー インスタンスで、プライマリ データベースの完全バックアップ (および必要に応じて差分バックアップ)、それ以降のすべてのログ バックアップの順で復元します。  
   
-     **[データベースの復元] の [オプション]** ページで、**[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます] (RESTORE WITH NORECOVERY)** を選択します。  
+     **[データベースの復元] の [オプション]** ページで、 **[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます] (RESTORE WITH NORECOVERY)** を選択します。  
   
      プライマリ データベースとセカンダリ データベースのファイル パスが異なる場合、たとえばプライマリ データベースはドライブ "F:" にあり、セカンダリ レプリカをホストするサーバー インスタンスに F: ドライブがない場合は、WITH 句に MOVE オプションを含めてください。  
   
@@ -193,36 +193,36 @@ ms.locfileid: "52529932"
         GO  
         ```  
   
-5.  完全バックアップを復元した後、プライマリ データベースでログ バックアップを作成する必要があります。 たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、ログを *E:\MyDB1_log.bak*というバックアップ ファイルにバックアップします。  
+5.  完全バックアップを復元した後、プライマリ データベースでログ バックアップを作成する必要があります。 たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、ログを *E:\MyDB1_log.trn* というバックアップ ファイルにバックアップします。  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  データベースをセカンダリ レプリカに参加させるには、必要なログ バックアップ (およびそれ以降のすべてのログ バックアップ) を事前に適用する必要があります。  
   
-     たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、最初のログを *C:\MyDB1.bak*から復元します。  
+     たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、最初のログを *C:\MyDB1.trn* から復元します。  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  データベースをセカンダリ レプリカに参加させる前に追加のログ バックアップが行われた場合は、RESTORE WITH NORECOVERY を使用して、それらすべてのログ バックアップもセカンダリ レプリカをホストするサーバー インスタンスに順番に復元する必要があります。  
   
-     たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、2 つの追加のログを *E:\MyDB1_log.bak*から復元します。  
+     たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、2 つの追加のログを *E:\MyDB1_log.trn* から復元します。  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  

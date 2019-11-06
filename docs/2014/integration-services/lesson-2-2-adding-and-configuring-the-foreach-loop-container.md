@@ -1,33 +1,32 @@
 ---
-title: '手順 2: Foreach ループ コンテナーの追加と構成 | Microsoft Docs'
+title: 手順 2:Foreach ループ コンテナーの追加と構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f4227b819597573d51b9720006fe6536f774103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767524"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>手順 2: Foreach ループ コンテナーの追加と構成
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>手順 2:Foreach ループ コンテナーの追加と構成
   この実習では、フラット ファイルのフォルダー全体にループ機能を付加し、レッスン 1 で使用したデータ フロー変換と同じ変換を各フラット ファイルに適用します。 そのためには、Foreach ループ コンテナーを制御フローに追加して、構成します。  
   
  Foreach ループ コンテナーを追加したら、フォルダー内の各フラット ファイルに接続できるようにする必要があります。 フォルダー内のファイルはすべて同じ形式なので、Foreach ループ コンテナーは、どのファイルに接続する場合でも同じフラット ファイル接続マネージャーを使用できます。 このループ コンテナーが使用するフラット ファイル接続マネージャーは、レッスン 1 で作成したフラット ファイル接続マネージャーと同じものです。  
   
  レッスン 1 で作成したフラット ファイル接続マネージャーは、現在、1 つのフラット ファイルにのみ接続しています。 フォルダーの各フラット ファイルに 1 つずつ接続するには、Foreach ループ コンテナーとフラット ファイル接続マネージャーをそれぞれ次のように構成します。  
   
--   **ForEach ループ コンテナー:** このコンテナーの列挙値をユーザー定義のパッケージ変数にマップします。 ForEach ループ コンテナーは、このユーザー定義の変数を使用して、フラット ファイル接続マネージャーの `ConnectionString` プロパティを動的に変更しながら、フォルダー内の各フラット ファイルへ順番に接続します。  
+-   **Foreach ループ コンテナー:** このコンテナーの列挙値をユーザー定義のパッケージ変数にマップします。 ForEach ループ コンテナーは、このユーザー定義の変数を使用して、フラット ファイル接続マネージャーの `ConnectionString` プロパティを動的に変更しながら、フォルダー内の各フラット ファイルへ順番に接続します。  
   
--   **フラット ファイル接続マネージャー:** は、ユーザー定義変数を使用して、接続マネージャーの設定によって、レッスン 1 で作成された接続マネージャーを変更`ConnectionString`プロパティ。  
+-   **フラット ファイル接続マネージャー:** ユーザー定義変数を使用して、接続マネージャーの設定によって、レッスン 1 で作成された接続マネージャーを変更`ConnectionString`プロパティ。  
   
  この実習の手順では、ForEach ループ コンテナーを作成し、ユーザー定義パッケージ変数を使用するように変更する方法、およびデータ フロー タスクをこのループに追加する方法を説明します。 次の実習では、ユーザー定義変数を使用するようにフラット ファイル接続マネージャーを変更します。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48197982"
   
      このサンプル データは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] のレッスン パッケージに含まれています。 サンプル データとレッスン パッケージをダウンロードするには、次の手順を実行します。  
   
-    1.  「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「 [Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48197982"
   
 1.  **[変数のマッピング]** をクリックします。  
   
-2.  **[変数のマッピング]** ページで、**[変数]** 列の空いているセルをクリックし、**\<新しい変数…>** をクリックします。  
+2.  **[変数のマッピング]** ページで、 **[変数]** 列の空いているセルをクリックし、 **\<新しい変数...>** をクリックします。  
   
 3.  **変数の追加** ダイアログ ボックスの**名前**、型`varFileName`します。  
   
@@ -90,10 +89,10 @@ ms.locfileid: "48197982"
 -   ドラッグ、 **Extract Sample Currency Data**データ フロー タスクの名前を変更した Foreach ループ コンテナーを`Foreach File in Folder`します。  
   
 ## <a name="next-lesson-task"></a>次のレッスンの作業  
- [手順 3: フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [手順 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>参照  
- [Foreach ループ コンテナーを構成します。](control-flow/foreach-loop-container.md)   
+ [Foreach ループ コンテナーを構成する](control-flow/foreach-loop-container.md)   
  [パッケージで変数を使用する](use-variables-in-packages.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046744"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services の概念 (SSRS)
   このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
@@ -39,7 +38,7 @@ ms.locfileid: "48094452"
  レポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインスタンスがインストールされているコンピューターです。 レポート サーバーには、レポート、レポート関連のアイテムやリソース、スケジュール、サブスクリプションなどのアイテムが内部的に保存されます。 レポート サーバーは、スタンドアロンの単一サーバーまたはスケールアウト ファームとして構成したり、SharePoint Server と統合したりすることができます。 レポート サーバーのアイテムは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web サービス、WMI プロバイダー、URL アクセス、またはプログラムからスクリプトを使用して操作します。 レポート サーバーを操作する方法は、配置トポロジと構成によって異なります。  
   
  **ネイティブ モードのレポート サーバー**  
- ネイティブ モードで構成されたレポート サーバーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされ、スタンドアロン サーバーとして構成されているコンピューターです。 レポート サーバー、レポート、およびレポート関連アイテムは、レポート マネージャーとブラウザー、URL アクセス コマンド、SQL Server Management Studio、またはプログラムからスクリプトを使用して操作します。 詳細については、「[Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
+ ネイティブ モードで構成されたレポート サーバーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされ、スタンドアロン サーバーとして構成されているコンピューターです。 レポート サーバー、レポート、およびレポート関連アイテムは、レポート マネージャーとブラウザー、URL アクセス コマンド、SQL Server Management Studio、またはプログラムからスクリプトを使用して操作します。 詳細については、「 [Reporting Services レポート サーバー (ネイティブ モード)](report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
   
  **SharePoint モードのレポート サーバー**  
  SharePoint と統合されたレポート サーバーは、2 種類の構成が可能です。 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]の場合、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は SharePoint Server と共に SharePoint 共有サービスとしてインストールされます。 以前のリリースのレポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint アドインをインストールすることで SharePoint Server と統合されます。 どちらの場合も、レポート サーバー、レポート、およびレポート関連アイテムは、SharePoint サイトでアプリケーション ページを使用して操作します。 レポートに関連するコンテンツの種類を保存するには、SharePoint ドキュメント ライブラリや独自に作成するその他のライブラリを使用します。 詳細については、「[Reporting Services レポート サーバー &#40;SharePoint モード&#41;](../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)」を参照してください。  
@@ -58,26 +57,26 @@ ms.locfileid: "48094452"
  SharePoint サイトでは、SharePoint サイト管理者ページを使用して、レポートおよびレポート関連のサイト コンテンツに対する権限を管理します。  
   
  **スケジュール**  
- ネイティブのレポート サーバーで、特定の時間またはピーク タイム以外の時間にデータを取得してレポートとデータセット クエリを配信するように、レポート、共有データセット、およびサブスクリプションのスケジュールを設定できます。 スケジュールは、一度だけ実行することも、時間、日、週、月間隔で継続して実行することもできます。 詳細については、次を参照してください。[スケジュール](subscriptions/schedules.md)します。  
+ ネイティブのレポート サーバーで、特定の時間またはピーク タイム以外の時間にデータを取得してレポートとデータセット クエリを配信するように、レポート、共有データセット、およびサブスクリプションのスケジュールを設定できます。 スケジュールは、一度だけ実行することも、時間、日、週、月間隔で継続して実行することもできます。 詳細については、「 [Schedules](subscriptions/schedules.md)」を参照してください。  
   
  **サブスクリプションと配信**  
- サブスクリプションとは、特定の時刻やイベントの発生時に、指定したアプリケーション ファイル形式でレポートを受け取ることができるようにする予約された配信要求です。 サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 要求時にレポートを実行するには、レポートを表示したいときに、毎回レポートを選択する必要があります。 一方、サブスクリプションを使用すると、レポートの配信をスケジュールして自動実行することができます。 電子メールの受信ボックスまたはファイル共有にレポートを配信できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+ サブスクリプションとは、特定の時刻やイベントの発生時に、指定したアプリケーション ファイル形式でレポートを受け取ることができるようにする予約された配信要求です。 サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 要求時にレポートを実行するには、レポートを表示したいときに、毎回レポートを選択する必要があります。 一方、サブスクリプションを使用すると、レポートの配信をスケジュールして自動実行することができます。 電子メールの受信ボックスまたはファイル共有にレポートを配信できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
  **拡張機能**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート ソリューションのカスタマイズに使用できる拡張可能なアーキテクチャが用意されています。 レポート サーバーは、カスタム認証拡張機能、データ処理拡張機能、レポート処理拡張機能、表示拡張機能、配信拡張機能、およびユーザーが RSReportServer.config 構成ファイルで構成できる拡張機能をサポートします。 たとえば、レポート ビューアーで使用できるエクスポート形式を制限できます。 配信拡張機能とレポート処理拡張機能は省略可能ですが、レポートの配信またはカスタム コントロールをサポートする場合は必須です。 詳細については、「[拡張機能 &#40;SSRS&#41;](extensions-ssrs.md)」を参照してください。  
   
  **レポートへのアクセス**  
- 要求時アクセスでは、ユーザーがレポート表示ツールからレポートを選択できます。 レポート マネージャーを使用するレポート サーバーの構成に応じて、 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web パーツ、SharePoint ライブラリと[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]が SharePoint 統合モードで埋め込みの ReportViewer コントロール、または URL を使用してブラウザーにインストールされています。アクセスします。 レポートへのオンデマンド アクセスの詳細については、「[レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
+ 要求時アクセスでは、ユーザーがレポート表示ツールからレポートを選択できます。 レポート サーバーの構成によって異なりますが、レポート マネージャー、 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web パーツ、SharePoint ライブラリ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が SharePoint 統合モードでインストールされている場合)、埋め込みの ReportViewer コントロール、または URL アクセスを使用するブラウザーの使用が可能です。 レポートへのオンデマンド アクセスの詳細については、「[レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   
- サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+ サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
- レポート サーバーの操作に使用するツールの一覧については、「[Reporting Services ツール](tools/reporting-services-tools.md)」を参照してください。  
+ レポート サーバーの操作に使用するツールの一覧については、「 [Reporting Services ツール](tools/reporting-services-tools.md)」を参照してください。  
   
 ##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> レポートと関連アイテムの概念  
  **レポートおよびレポート定義**  
  **RDL。** レポート定義は、レポート定義言語 (RDL) と呼ばれる XML 文法に準拠した XML ファイルです。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポート ビルダーやレポート デザイナーなどのツールでレポート定義を作成します。 レポート定義には、データ ソース接続、データ取得に使用するクエリ、式、パラメーター、画像、テキスト ボックス、表、デザイン時のその他のレイアウトなどを定義する要素が含まれています。 詳細については、「[レポート定義言語 (SSRS)](reports/report-definition-language-ssrs.md)」を参照してください。  
   
- **RDLX します。** RDLX のレポート定義は、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] の見やすさを高める内部拡張機能が含まれた RDL ファイルです。 詳細については、「 [Power View Overview](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)」をご覧ください。  
+ **RDLX します。** RDLX のレポート定義は、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] の見やすさを高める内部拡張機能が含まれた RDL ファイルです。 詳細については、「 [Power View Overview](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684)」をご覧ください。  
   
  **RDLC します。** Visual Studio のレポート デザイナーでは、ReportViewer コントロールで使用する、XML 形式のクライアント レポート定義 (.rdlc) ファイルが生成されます。  
   
@@ -126,13 +125,13 @@ ms.locfileid: "48094452"
   
  データ領域を使用すると、一般的なデータ視覚化機能 (テーブル、マトリックス、または一覧内の数値やテキスト、グラフまたはゲージ内のグラフィック表示、マップに対する地理的表示) を有効にできます。 テーブル、マトリックス、および一覧は、Tablix データ領域に基づいており、データセットのデータをすべて表示するために必要に応じて拡張されます。 Tablix データ領域では、複数の行グループおよび列グループと、静的および動的な行と列がサポートされます。 グラフでは、複数の系列グループとカテゴリ グループをさまざまなグラフ形式で表示します。 ゲージでは、データセットの単一の値または集計値を表示します。 マップでは、データセットの集計データに基づいて表示を変更できるマップ要素として空間データを表示します。  
   
--   **テーブル。** テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS& #41;](report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
+-   **テーブル。** テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **マトリックス。** マトリックスは、クロス集計ともいいます。 マトリックス データ領域では、動的な列と行の両方がデータに応じて拡張されます。 マトリックスには、動的な列と行、および静的な列と行を含めることができます。 列または行には、他の列または行を含めることができ、データのグループ化にも使用できます。 詳細については、次を参照してください。[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)します。  
   
 -   **一覧。** 一覧は、任意の形式で配置されたデータを表すデータ領域です。 レポート アイテムを配置して、テキスト ボックス、画像、およびその他のデータ領域が一覧内の任意の場所に配置されたフォームを作成できます。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
   
--   **グラフ。** グラフを使用すると、データをグラフィカルに表示できます。 グラフの例としては、棒グラフ、円グラフ、折れ線グラフなどがありますが、その他にも多くの形式がサポートされています。 グラフ要素の詳細については、「[グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
+-   **グラフ。** グラフを使用すると、データをグラフィカルに表示できます。 グラフの例としては、棒グラフ、円グラフ、折れ線グラフなどがありますが、その他にも多くの形式がサポートされています。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **ゲージ。** ゲージは、特定の値を指すインジケーターを内部に含む領域としてデータを表示します。 ゲージは、主要業績評価指標 (KPI) やその他の基準を表示するために使用されます。 ゲージの例として、線形ゲージや円形ゲージなどがあります。 詳しくは、「 [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)」をご覧ください。  
   
@@ -219,8 +218,8 @@ ms.locfileid: "48094452"
  エクスポートされたレポートは、特定のファイル形式で保存された、完全にページ分割されたレポートです。 エクスポート形式は、インストールされている表示拡張機能によって異なり、カスタマイズできます。 既定のエクスポート形式には、Excel、Word、XML、PDF、TIFF、CSV などがあります。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の機能とタスク&#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
- [テクニカル リファレンス (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)   
+ [Reporting Services の機能とタスク &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
+ [テクニカル リファレンス &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb84709afc962f938af1019742e66bc238ed78bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074178"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63199126"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>SQL Server Management Studio のレプリケーション ダイアログ ボックス
   ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に用意されているいくつかのレプリケーション ダイアログ ボックスについて説明します。  
@@ -33,7 +32,7 @@ ms.locfileid: "48074178"
   
 -   [エージェント プロファイル &#40;単独のエージェント&#41;](agent-profiles-single-agent.md)  
   
--   [エージェント プロファイル](agent-profiles.md)  
+-   [[エージェント プロファイル]](agent-profiles.md)  
   
 -   [&#60;AgentProfileName&#62; のプロパティ](agentprofilename-properties.md)  
   

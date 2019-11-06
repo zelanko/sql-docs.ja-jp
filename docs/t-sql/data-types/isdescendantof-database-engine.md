@@ -1,7 +1,7 @@
 ---
 title: IsDescendantOf (データベース エンジン) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0d4ac986469c1e0528de335424866835aee4f976
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077820"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 IsDescendantOf テストを実行する必要がある **hierarchyid** ノード。
   
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: * *ビット * ***
+**SQL Server の戻り値の型: ビット**
   
 **CLR の戻り値の型:SqlBoolean**
   
@@ -59,7 +58,7 @@ IsDescendantOf テストを実行する必要がある **hierarchyid** ノード
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-isdescendantof-in-a-where-clause"></a>A. WHERE 句で IsDescendantOf を使用する  
-次の例では、指定したマネージャー、およびそのマネージャーの部下にあたる従業員を取得します。
+次の例では、マネージャーと、そのマネージャーに直属の従業員を返します。
   
 ```sql
 DECLARE @Manager hierarchyid  
@@ -71,7 +70,7 @@ WHERE OrgNode.IsDescendantOf(@Manager) = 1
 ```  
   
 ### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>B. IsDescendantOf を使用してリレーションシップを評価する  
-次のコードでは、3 つの変数を宣言して設定します。 その後に階層リレーションシップを評価し、比較を基に 2 つの出力結果のいずれかを返します。
+次のコードでは、3 つの変数を宣言して値を設定します。 その後に階層リレーションシップを評価し、比較を基に 2 つの出力結果のいずれかを返します。
   
 ```sql
 DECLARE @Manager hierarchyid, @Employee hierarchyid, @LoginID nvarchar(256)  

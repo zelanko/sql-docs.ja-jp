@@ -2,7 +2,7 @@
 title: キーボード ショートカット (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d51d20ae6e3ce9ff780de03a105be31a1466e74
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712673"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037861"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>キーボード ショートカット (レポート ビルダー)
   レポート ビルダーで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを作成および編集する際には、Windows 環境が提供しているナビゲーション用ショートカット キーのすべてにアクセスできます。 複数ある標準キーボード マッピング スキームから選択できます。  
@@ -91,7 +91,6 @@ ms.locfileid: "52712673"
   
 ## <a name="see-also"></a>参照  
  [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [用語集 (レポート ビルダー)](../../reporting-services/report-builder/glossary-report-builder.md)  
-  
+ [レポート デザイン ビュー &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+
   

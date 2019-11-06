@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.SSA.f1
@@ -15,12 +14,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 476ca2bc3c82e7551472cf61fe0cb5138b91b545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676638"
 ---
 # <a name="snapshot-agent-security"></a>[スナップショット エージェントのセキュリティ]
   **[スナップショット エージェントのセキュリティ]** ダイアログ ボックスを使用すると、次の項目を指定できます。  
@@ -55,8 +54,8 @@ ms.locfileid: "48130052"
   
  接続に使用される Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントは、少なくとも、パブリケーション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-## <a name="see-also"></a>参照  
- [レプリケーションのログインとパスワードの管理](security/manage-logins-and-passwords-in-replication.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーションのログインとパスワードの管理](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [レプリケーション エージェントのセキュリティ モデル](security/replication-agent-security-model.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1bf535dadc1f2deecd9262fd6fdc9da13045216
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fd2de6167b646610e8b57898b186accbbc1593d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135291"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 での xml データ型のサポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47663630"
   
 -   SQLXML 4.0 では保持されません XML 宣言の処理命令 (など) の動作に基づいて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 代わりに、XML 宣言がするディレクティブとして扱われます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML パーサー、およびその属性 (バージョン、エンコーディング、およびスタンドアロン) が失われるデータに変換されます、 **xml**データ型。 XML データは内部的に UCS-2 として保存されます。 XML インスタンス内の他のすべての処理命令は保持されます。許可されている、 **xml**列と、SQLXML でサポートされていることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

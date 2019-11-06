@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1ecface6931e73f2153e32ee9ae71ed22ca56057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105413"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS)
   レポート パーツを既定の設定を使用して既定の場所でパブリッシュすることも、名前や説明などのレポート パーツのメタデータを編集し、レポート サーバー上に保存することもできます。 適切な権限があれば、レポート サーバーと統合された SharePoint サイトに保存することもできます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48136902"
   
      それ以外の場合は、 **[パブリッシュする前にレポート パーツを確認および変更する]** をクリックします。  
   
-3.  レポート パーツの名前と説明を編集します。名前をダブルクリックして編集し、 **[説明]** フィールドをクリックして説明を追加します。  
+3.  レポートの名前と説明を編集します。名前をダブルクリックして編集し、**[説明]** フィールドをクリックして説明を追加します。  
   
     > [!NOTE]  
     >  検索時に識別しやすいように、レポート パーツの名前と説明を指定することをお勧めします。 レポート パーツの名前の最大文字数は、サーバー上のフォルダーの名前とその後に続くレポート パーツの実際の名前を含め、パス全体で 260 文字です。  
@@ -58,10 +57,10 @@ ms.locfileid: "48136902"
 >  新しいレポート パーツとしてパブリッシュすると、新しい一意の ID が割り当てられます。 元のレポート パーツが変更されても、更新されません。  
   
 ## <a name="see-also"></a>参照  
- [レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [更新プログラムまたは更新のチェック&#40;レポート ビルダーおよび SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [レポート パーツの参照し、既定のフォルダーの設定&#40;レポート ビルダーおよび SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [レポート パーツの参照と既定のフォルダーの設定 &#40;レポート ビルダーおよび SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

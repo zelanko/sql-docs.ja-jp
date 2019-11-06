@@ -1,24 +1,23 @@
 ---
-title: '手順 9: レッスン 1 のチュートリアル パッケージのテスト | Microsoft Docs'
+title: 手順 9:レッスン 1 のチュートリアル パッケージのテスト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ba98c694b99eb1ab81836a5d1f23a5cd4ea0d545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767611"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>手順 9: レッスン 1 のチュートリアル パッケージのテスト
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>手順 9:レッスン 1 のチュートリアル パッケージのテスト
   このレッスンでは次の作業を行いました。  
   
 -   新しい [!INCLUDE[ssIS](../includes/ssis-md.md)] プロジェクトを作成しました。  
@@ -49,7 +48,7 @@ ms.locfileid: "48197002"
 2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: ループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [レッスン 2:ループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>参照  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)  

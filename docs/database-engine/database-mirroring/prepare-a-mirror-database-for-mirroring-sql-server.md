@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2179ae0fd8110f7172ca936b77045f58fb50cd7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33c9db8ae95807f0b95141945bddaef8560608b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009959"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>ミラーリングのためのミラー データベースの準備 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +35,17 @@ ms.locfileid: "47770179"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   [ミラーリングを再開するために既存のミラー データベースを準備するには](#PrepareToRestartMirroring)  
   
 -   [新しいミラー データベースを準備するには](#CombinedProcedure)  
   
--   **補足情報:**  [ミラー データベースを準備した後](#FollowUp)  
+-   **補足情報:** [ミラー データベースを準備した後](#FollowUp)  
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Requirements"></a> 必要条件  
   
@@ -237,7 +236,7 @@ ms.locfileid: "47770179"
   
  データベース ミラーリングの設定、セキュリティの設定、ミラー データベースの準備、パートナーの設定、およびミラーリング監視サーバーの追加をすべて含む例については、「 [データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)でミラー データベースを準備する方法について説明します。  
   
-##  <a name="FollowUp"></a> 補足情報: ミラー データベースを準備した後  
+##  <a name="FollowUp"></a>補足情報: ミラー データベースを準備した後  
   
 1.  最新の RESTORE LOG 操作の後、ログ バックアップを採取している場合は、ミラーリングを開始する前に、採取したすべてのログ バックアップを手動で適用する必要があります (WITH NORECOVERY を使用します。  
   

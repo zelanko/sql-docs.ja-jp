@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774660"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  CTP2 へのアップグレード シナリオは 4 つあります。 状況に適したシナリオを選択してください。  
@@ -28,12 +28,12 @@ ms.locfileid: "51019017"
   
 -   [アップグレードおよびバックアップからのデータベースの復元](#restore)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 リリースから CTP2 リリースへのアップグレードはサポートされていません。  
 > -   アップグレードを実行する前にデータベースをバックアップしてください。  
 > -   アップグレード プロセスでは、ストアド プロシージャを再作成し、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]で使用されるテーブルをアップグレードします。 これらのコンポーネントのいずれかに加えたカスタマイズは失われる場合があります。  
 > -   モデル配置パッケージは作成されたエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のみで使用できます。 作成されたモデル配置パッケージを展開することはできません[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。  
-> -   マスター データ サービスおよび Data Quality Services を [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 にアップグレードした後も、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 バージョンの Excel 用マスター データ サービス アドインを使用し続けることができます。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 ダウンロードすることができます、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 バージョンのマスター データ サービス アドインを使用して Excel の[ここ](http://go.microsoft.com/fwlink/?LinkId=328664)します。  
+> -   マスター データ サービスおよび Data Quality Services を [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 にアップグレードした後も、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 バージョンの Excel 用マスター データ サービス アドインを使用し続けることができます。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 ダウンロードすることができます、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 バージョンのマスター データ サービス アドインを使用して Excel の[ここ](https://go.microsoft.com/fwlink/?LinkId=328664)します。  
   
 ##  <a name="noengine"></a> データベース エンジンのアップグレードを伴わないアップグレード  
  このシナリオと見なす、サイド バイ サイドでインストールのため両方[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]と[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]同じコンピューターまたは別のコンピューターに同時にインストールされます。  
@@ -90,7 +90,7 @@ ms.locfileid: "51019017"
         > [!IMPORTANT]  
         >  以前のバージョンの SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) から取得した既存の MDS Web アプリケーションを、Master Data Services 構成マネージャーの SQL Server 2014 バージョンで選択できます。 既存の Web アプリケーションを選択することはできません。代わりに MDS に対応する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web アプリケーションを作成する必要があります。 それ以外の場合は、アップグレード後の MDS データベースに Web アプリケーションを関連付けようとすると、ページに関連付けられた構成データが無効であるため、要求したページにアクセスできないことを示すエラーが返されます。  
         >   
-        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web アプリケーションとして同じ名前を、MDS Web アプリケーションの名前 (別名) として使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次に Master Data Services 構成マネージャーの SQL Server 2014 バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
+        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web アプリケーションとして同じ名前を、MDS Web アプリケーションの名前 (別名) として使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次に Master Data Services 構成マネージャーの SQL Server 2014 バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
   
 4.  アップグレードされた MDS データベースと新しい web アプリケーションを関連付けるようになりました。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "51019017"
   
  この作業を実行するには、次の手順を実行します。  
   
-1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**: **[コントロール パネル]** > **[プログラムと機能]** の順に開き、Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をアンインストールします。  
+1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**:**[コントロール パネル]** > **[プログラムと機能]** の順に開き、Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をアンインストールします。  
   
 2.  データベース エンジンを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードします。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "51019017"
   
     4.  ウィザードを完了します。  
   
-3.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみ**: アップグレードが完了したら、追加、 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 機能します。  
+3.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**:アップグレードが完了したら、追加、 ** [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] **機能します。  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを開きます。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "51019017"
   
     4.  **インストールの種類**、ウィザードのページ、**既存のインスタンスに機能を追加**オプション、および MDS データベースがインストールされているインスタンスを選択します。  
   
-    5.  **機能の選択**] ページ [**共有機能**を選択します **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** します。  
+    5.  **機能の選択**] ページ [**共有機能**を選択します** [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** します。  
   
     6.  ウィザードを完了します。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "51019017"
         > [!IMPORTANT]  
         >  以前のバージョンの SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) から取得した既存の MDS Web アプリケーションを、Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンで選択できます。 既存の Web アプリケーションを選択することはできません。代わりに MDS に対応する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web アプリケーションを作成する必要があります。 それ以外の場合は、アップグレード後の MDS データベースに Web アプリケーションを関連付けようとすると、ページに関連付けられた構成データが無効であるため、要求したページにアクセスできないことを示すエラーが返されます。  
         >   
-        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web アプリケーションとして同じ名前を、MDS Web アプリケーションの名前 (別名) として使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次に Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
+        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web アプリケーションとして同じ名前を、MDS Web アプリケーションの名前 (別名) として使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次に Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
   
 6.  アップグレードされた MDS データベースと新しい web アプリケーションを関連付けるようになりました。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "51019017"
         > [!IMPORTANT]  
         >  以前のバージョンの SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) から取得した既存の MDS Web アプリケーションを、Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンで選択できます。 既存の Web アプリケーションを選択することはできません。代わりに MDS に対応する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web アプリケーションを作成する必要があります。 それ以外の場合は、アップグレード後の MDS データベースに Web アプリケーションを関連付けようとすると、ページに関連付けられた構成データが無効であるため、要求したページにアクセスできないことを示すエラーが返されます。  
         >   
-        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web アプリケーションとして同じ名前を、MDS Web アプリケーションの名前 (別名) として使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次に Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
+        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web アプリケーションとして同じ名前を、MDS Web アプリケーションの名前 (別名) として使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次に Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
   
 4.  Web アプリケーションをアップグレード後の MDS データベースに関連付けます。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "51019017"
         > [!IMPORTANT]  
         >  以前のバージョンの SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) から取得した既存の MDS Web アプリケーションを、Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンで選択できます。 既存の Web アプリケーションを選択することはできません。代わりに MDS に対応する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web アプリケーションを作成する必要があります。 それ以外の場合は、アップグレード後の MDS データベースに Web アプリケーションを関連付けようとすると、ページに関連付けられた構成データが無効であるため、要求したページにアクセスできないことを示すエラーが返されます。  
         >   
-        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web アプリケーションとして同じ名前を、MDS Web アプリケーションの名前 (別名) として使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次に Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
+        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web アプリケーションとして同じ名前を、MDS Web アプリケーションの名前 (別名) として使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次に Master Data Services 構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
   
 5.  アップグレードされた MDS データベースと新しい web アプリケーションを関連付けるようになりました。  
   
@@ -298,7 +298,7 @@ ms.locfileid: "51019017"
     3.  **[適用]** をクリックします。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
- **問題:** を開くと、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]または[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web アプリケーション、「クライアント バージョンには、データベースのバージョンと互換性がありません」エラー メッセージが表示されます。  
+ **問題点:** 開くと、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]または[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web アプリケーション、「クライアント バージョンには、データベースのバージョンと互換性がありません」エラー メッセージが表示されます。  
   
  **解決方法:** この問題が発生したときに、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]または[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]マスター データ マネージャー web アプリケーションをアップグレードされたデータベースにアクセスしようとする[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]マスター データ サービス。 代わりに、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web アプリケーションを使用する必要があります。  
   

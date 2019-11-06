@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation and upgrading
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-author: mashamsft
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 652cec720eae440106a0c8e30bd9910140dcff0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091507"
 ---
 # <a name="upgrade-lookup-transformations"></a>参照変換のアップグレード
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする場合、パッケージに変更を加え、参照変換でこれらの新しい機能を利用することを検討してください。 この変換では、[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] で使用可能なキャッシュの種類とデータ出力オプションがサポートされます。 詳細については追加のキャッシュとデータの出力を参照してください[参照変換](../../integration-services/data-flow/transformations/lookup-transformation.md)します。  
@@ -34,6 +33,6 @@ ms.locfileid: "48182622"
  詳細については、次を参照してください。[参照変換エディター &#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)します。  
   
 ## <a name="see-also"></a>参照  
- [参照変換](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

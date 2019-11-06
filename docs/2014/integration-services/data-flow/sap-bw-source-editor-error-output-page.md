@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d81103febe20dd10e0ca6949b3ae77f558f90b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8eb25ae1083e05ccb85dda6d07d391ca58d7951a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770710"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>[SAP BW 変換元エディター] ([エラー出力] ページ)
   **[SAP BW 変換元エディター]** の **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48197062"
  データ ソースの名前を表示します。  
   
  **列**  
- **[SAP BW 変換元エディター]** ダイアログ ボックスの **[列]** ページで選択した外部 (ソース) 列を表示します。 このダイアログ ボックスの詳細については、次を参照してください。 [SAP bw 変換元エディター&#40;列 ページ&#41;](sap-bw-source-editor-columns-page.md)します。  
+ **[SAP BW 変換元エディター]** ダイアログ ボックスの **[列]** ページで選択した外部 (ソース) 列を表示します。 このダイアログ ボックスの詳細については、「 [SAP BW 変換元エディター &#40;[列] ページ&#41;](sap-bw-source-editor-columns-page.md)」(SAP BW 変換元) をご覧ください。  
   
  **Error**  
  SAP BW 変換元コンポーネントが、エラーが発生した場合に障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
@@ -64,8 +63,8 @@ ms.locfileid: "48197062"
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
- [SAP bw 変換元エディター&#40;接続マネージャー ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [SAP bw 変換元エディター&#40;列 ページ&#41;](sap-bw-source-editor-columns-page.md)   
+ [SAP BW 変換元エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 変換元エディター &#40;[列] ページ&#41;](sap-bw-source-editor-columns-page.md)   
  [SAP BW ソース エディター &#40;[詳細設定] ページ&#41;](sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   

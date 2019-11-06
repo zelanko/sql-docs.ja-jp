@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: db81b9dc854a5b753db2b59da35ffcec6d719dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006437"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>データベース ミラーリング - セッションの確立 - Windows 認証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +28,10 @@ ms.locfileid: "52529922"
   
  ミラー データベースを準備した後 (「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照)、データベース ミラーリング セッションを確立できます。 プリンシパル サーバー、ミラー サーバー、およびミラーリング監視サーバーのインスタンスは、別々のホスト システムにある別々のサーバー インスタンスでなければなりません。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  ミラーリングの構成はパフォーマンスに影響する場合があるので、データベース ミラーリングの構成はピーク タイム以外の時間に行うことをお勧めします。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  特定のサーバー インスタンスを、同じパートナーまたは別のパートナーを含む複数の同時実行データベース ミラーリング セッションに参加させることができます。 また、サーバー インスタンスを、あるセッションではパートナーとし、別のセッションではミラーリング監視にすることができます。 ミラー サーバー インスタンスでは、プリンシパル サーバー インスタンスと同じエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されている必要があります。 データベース ミラーリングは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 また、ワークロードの処理能力が同程度のシステム上で運用することを強くお勧めします。  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>データベース ミラーリング セッションを確立するには  
@@ -46,7 +45,7 @@ ms.locfileid: "52529922"
     > [!NOTE]  
     >  サーバー インスタンスによりデータベースのミラーリングに使用される認証の形式は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリングのトランスポートには、Windows 認証と証明書ベースの認証の 2 種類のセキュリティを使用できます。 詳細については、「[データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)」を参照してください。  
   
-     各パートナー サーバーで、データベース ミラーリング用のエンドポイントが存在していることを確認します。 サポートするミラーリング セッションの数にかかわらず、サーバー インスタンスではデータベース ミラーリング エンドポイントを 1 つしか持つことができません。 このサーバー インスタンスをデータベース ミラーリング セッションでパートナー専用に使用する場合は、パートナーのロールをエンドポイントに割り当てることができます (ROLE**=** PARTNER)。 また、このサーバーを他のデータベース ミラーリング セッションのミラーリング監視サーバーとしても使用する場合は、エンドポイントのロールを ALL として割り当てます。  
+     各パートナー サーバーで、データベース ミラーリング用のエンドポイントが存在していることを確認します。 サポートするミラーリング セッションの数にかかわらず、サーバー インスタンスではデータベース ミラーリング エンドポイントを 1 つしか持つことができません。 このサーバー インスタンスをデータベース ミラーリング セッションでパートナー専用に使用する場合は、パートナーのロールをエンドポイントに割り当てることができます (ROLE **=** PARTNER)。 また、このサーバーを他のデータベース ミラーリング セッションのミラーリング監視サーバーとしても使用する場合は、エンドポイントのロールを ALL として割り当てます。  
   
      SET PARTNER ステートメントを実行するには、両方のパートナーのエンドポイントの STATE が、STARTED に設定されている必要があります。  
   
@@ -65,15 +64,15 @@ ms.locfileid: "52529922"
   
 4.  プリンシパル サーバーをミラー データベースのパートナーとして設定するには、ミラー サーバーに接続し、次のステートメントを実行します。  
   
-     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=** _\<server\_network\_address\>_  
   
-     _\<database\_name\>_ はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、_\<server\_network\_address\>_ はプリンシパル サーバーのサーバー ネットワーク アドレスです。  
+     _\<database\_name\>_ はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、 _\<server\_network\_address\>_ はプリンシパル サーバーのサーバー ネットワーク アドレスです。  
   
      サーバー ネットワーク アドレスの構文は次のとおりです。  
   
-     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
+     TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
-     _\<system-address_> は目的のコンピューター システムを明確に指定する文字列です。また、_\<port>_ はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
+     _\<system-address_> は目的のコンピューター システムを明確に指定する文字列です。また、 _\<port>_ はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
      たとえば、ミラーリング サーバー インスタンスで、次の ALTER DATABASE ステートメントは元のプリンシパル サーバー インスタンスとしてパートナーを設定します。 データベース名は **AdventureWorks**、システムのアドレスは DBSERVER1 (パートナーのシステム名)、パートナーのデータベース ミラーリング エンドポイントが使用するポートは 7022 です。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "52529922"
   
 5.  ミラー サーバーをプリンシパル データベースのパートナーとして設定するには、プリンシパル サーバーに接続し、次のステートメントを実行します。  
   
-     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=** _\<server\_network\_address\>_  
   
      詳細については、手順 4. を参照してください。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "52529922"
          自動フェールオーバーを行わず、高可用性よりパフォーマンスを重視する場合は、トランザクションの安全性を無効にします。 詳細については、｢[データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)」を参照してください。  
   
         > [!NOTE]  
-        >  高パフォーマンス モードでは、WITNESS を OFF に設定してください。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+        >  高パフォーマンス モードでは、WITNESS を OFF に設定してください。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], mining structures
@@ -13,12 +12,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085412"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>リフト チャート、利益チャート、または分類マトリックスの作成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング モデルの精度チャートを作成するには、次の 5 つの基本手順に従います。  
@@ -70,7 +69,7 @@ ms.locfileid: "48069432"
   
     -   マイニング構造の予約データ セットの一部として定義されたテスト ケースの完全なセットを使用するには、 **[マイニング モデルのテスト ケースを使用する]** オプションを選択します。  
   
-    -   外部データを使用する場合は、 **[別のデータセットを指定する]** オプションを選択します。  データ セットは、データ ソース ビューとして使用可能である必要があります。   参照 (**[…]**) ボタンをクリックして、精度チャートに使用するデータ テーブルを選択します。 詳細については、「 [モデルのテスト データの選択およびマップ](choose-and-map-model-testing-data.md)」を参照してください。  
+    -   外部データを使用する場合は、 **[別のデータセットを指定する]** オプションを選択します。  データ セットは、データ ソース ビューとして使用可能である必要があります。   [参照] をクリックして ( **.** ) ボタンを精度チャートに使用するデータ テーブルを選択します。 詳細については、「 [モデルのテスト データの選択およびマップ](choose-and-map-model-testing-data.md)」を参照してください。  
   
          外部データセットを使用する場合、必要に応じて入力データセットをフィルター選択できます。 詳細については、「 [モデルのテスト データへのフィルターの適用](apply-filters-to-model-testing-data.md)」を参照してください。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48069432"
   
 3.  **分類マトリックス**の場合は、 **[分類マトリックス]** タブをクリックします。それ以上の設定は不要です。グラフは、選択した入力データおよびモデルに基づいて自動的に生成されます。  
   
-4.  **利益チャート**の場合は、まず **[リフト チャート]** タブをクリックします。**[グラフの種類]** ボックスの一覧から **[利益チャート]** を選択します。  
+4.  **利益チャート**の場合は、まず **[リフト チャート]** タブをクリックします。 **[グラフの種類]** ボックスの一覧から **[利益チャート]** を選択します。  
   
      **[利益チャートの設定]** ダイアログ ボックスで次の設定を入力します。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "48069432"
      成功した各販売に関連する収益です。  
   
 ## <a name="see-also"></a>参照  
- [リフト チャート&#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)   
- [分類マトリックス&#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [リフト チャート &#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)   
+ [分類マトリックス &#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

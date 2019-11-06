@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - ServerSettings Class
@@ -20,12 +18,12 @@ ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f9efc018ad87c2a6a25ed4844cf73c1233445577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137315"
 ---
 # <a name="serversettings-class"></a>ServerSettings クラス
   [ServerSettings クラス] serversettings-class.md) のインスタンス上のサーバー設定を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
@@ -39,6 +37,6 @@ ms.locfileid: "48084252"
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対するセキュリティ証明書の設定  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

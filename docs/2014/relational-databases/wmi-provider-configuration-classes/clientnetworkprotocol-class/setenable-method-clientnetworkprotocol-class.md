@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetEnable Method (ClientNetworkProtocol Class)
@@ -20,15 +18,15 @@ ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d0ffbcdea50abcdfaa72ea6814248165a31f8bbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aa192f2dc78a424b1d4c8792044caac0934173a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62826722"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable メソッド (ClientNetworkProtocol クラス)
-  指定されているクライアント ネットワーク プロトコルを有効に、 [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)します。  
+  指定されているクライアント ネットワーク プロトコルを有効に、 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,6 +47,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

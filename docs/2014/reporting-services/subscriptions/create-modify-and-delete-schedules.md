@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81ad874c4d7e3c417058b2403c1307893300feaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 4e04f3f9a89fef9c00312ae1622f74fc0a279314
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100879"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   このトピックでは、スケジュールを作成、変更、および削除する方法について説明します。  
@@ -42,7 +41,7 @@ ms.locfileid: "48118782"
 -   [作成し、共有スケジュール (ネイティブ モード) の管理](#bkmk_native)  
   
 ##  <a name="bkmk_overview"></a> 共有スケジュールの管理の概要  
- ネイティブ モードの共有スケジュールを管理するには、レポート マネージャーで [スケジュール] ページまたは共有スケジュール] フォルダーを使用して、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 SharePoint モードの場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを使用します。  
+ ネイティブ モードの共有スケジュールを管理するには、レポート マネージャーの [スケジュール] ページまたは [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の [共有スケジュール] フォルダーを使用します。 SharePoint モードの場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを使用します。  
   
  レポート サーバーに定義されたすべての共有スケジュールの表示、スケジュールの一時停止と再開 (レポート マネージャーのみで可能)、変更または削除するスケジュールの選択を行うことができます。 [共有スケジュール] ページには、頻度、所有者、有効期限、およびステータスなど、各スケジュールの状態に関する情報がまとめられています。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48118782"
   
 -   特定の共有スケジュールの [レポート] ページを表示する。 このページには、共有スケジュールを使用するすべてのレポートと共有データセットが一覧表示されます。  
   
--   レポート実行ログ ファイルまたはトレース ログを表示して、レポートがスケジュールによって指定された時間に実行されたかどうかを確認する。 詳細については、「[Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
+-   レポート実行ログ ファイルまたはトレース ログを表示して、レポートがスケジュールによって指定された時間に実行されたかどうかを確認する。 詳細については、「 [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
 ##  <a name="bkmk_sharepoint"></a> 共有スケジュールの作成および管理 (SharePoint モード)  
  共有スケジュールは、定義済みのスケジュール情報を任意の数のレポートまたはサブスクリプションに提供する、多目的のスケジュールです。 共有スケジュールを作成した後は、スケジュール情報が必要なときにサブスクリプションまたはプロパティ ページでその共有スケジュールを参照できます。 共有スケジュールは、管理、一時停止、および再開を一元的に行うことができます。 これとは対照的に、カスタム スケジュールでレポートやサブスクリプションの実行を回避する場合は、手動でスケジュールを編集する必要があります。  
@@ -104,7 +103,7 @@ ms.locfileid: "48118782"
 4.  スケジュールを選択し、 **[削除]** をクリックします。  
   
 ##  <a name="bkmk_native"></a> 作成し、共有スケジュール (ネイティブ モード) の管理  
- 共有スケジュールは、レポート マネージャーの [スケジュール] ページまたは [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の [共有スケジュール] フォルダーを使用して、手動で削除する必要があります。 使用中の共有スケジュールを削除する場合、その共有スケジュールへのすべての参照はレポート固有スケジュールに置き換えられます。  
+ 共有スケジュールは、レポート マネージャーの [スケジュール] ページまたは [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の [共有スケジュール] フォルダーを使用して、手動で削除する必要があります。 使用中の共有スケジュールを削除する場合、その共有スケジュールへのすべての参照はレポート固有スケジュールに置き換えられます。  
   
  レポートおよびサブスクリプションに固有のスケジュールは、レポートまたはサブスクリプションを削除したとき、または別の方法でレポートまたはサブスクリプションを実行することを選択したときに削除されます。 たとえば、 **[常に最新データを使用して、このレポートを実行する]** を選択すると、レポート実行スナップショットとしてレポートを実行するために作成したレポート固有のスケジュールは削除されます。  
   
@@ -139,7 +138,7 @@ ms.locfileid: "48118782"
   
 5.  わかりやすいスケジュール名を入力します。  
   
-6.  **[時間]**、 **[日]**、 **[週]**、または **[月]** をクリックします。 一度だけ実行するスケジュールを作成するには、 **[一度だけ]** をクリックします。 スケジュールの基準を指定すると、新たなオプションが表示されます。  
+6.  **[時間]** 、 **[日]** 、 **[週]** 、または **[月]** をクリックします。 一度だけ実行するスケジュールを作成するには、 **[一度だけ]** をクリックします。 スケジュールの基準を指定すると、新たなオプションが表示されます。  
   
 7.  必要に応じて、スケジュールの開始日を選択します。 既定値は、現在の日付です。 明日以降の日付を入力して、スケジュールの開始日を延期できます。  
   
@@ -183,7 +182,7 @@ ms.locfileid: "48118782"
   
 6.  必要に応じて、スケジュールの終了日を選択します。 スケジュールの実行は設定日に停止されますが、スケジュールは削除されません。  
   
-7.  定期的なスケジュールを構成するには、 **[時間]**、 **[日]**、 **[週]**、または **[月]** を選択します。 追加のオプションが表示されます。 これらの追加のオプションを使用して、必要に応じた時間、日、週、または月に基づいて、スケジュールの頻度を構成します。  
+7.  定期的なスケジュールを構成するには、 **[時間]** 、 **[日]** 、 **[週]** 、または **[月]** を選択します。 追加のオプションが表示されます。 これらの追加のオプションを使用して、必要に応じた時間、日、週、または月に基づいて、スケジュールの頻度を構成します。  
   
      また、1 回のみの (定期的ではない) スケジュールを指定するには、 **[一度だけ]** を選択し、 **[開始時刻]** を指定します。  
   
@@ -197,11 +196,11 @@ ms.locfileid: "48118782"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- 複数のレポートおよびサブスクリプションによって使用される共有スケジュールを削除した場合、以前にその共有スケジュールを使用していたレポートおよびサブスクリプションごとに別個のスケジュールが作成されます。 新たに作成される各スケジュールには、共有スケジュールで指定されていた日付、時刻、および定期的なパターンが保持されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個々のスケジュールを一元管理する手段は存在しません。 共有スケジュールを削除した場合、それ以降は、各アイテムのスケジュール情報を個別に管理する必要があります。 共有スケジュールを削除する前に、使用して、[レポート ページ](../tools/schedule-properties-reports-page.md)レポートは、共有スケジュールを現在使用しているかを判断します。  
+ 複数のレポートおよびサブスクリプションによって使用される共有スケジュールを削除した場合、以前にその共有スケジュールを使用していたレポートおよびサブスクリプションごとに別個のスケジュールが作成されます。 新たに作成される各スケジュールには、共有スケジュールで指定されていた日付、時刻、および定期的なパターンが保持されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個々のスケジュールを一元管理する手段は存在しません。 共有スケジュールを削除した場合、それ以降は、各アイテムのスケジュール情報を個別に管理する必要があります。 共有スケジュールを削除する前に、 [[レポート] ページ](../tools/schedule-properties-reports-page.md) を使用して、どのレポートが共有スケジュールを現在使用しているかを確認します。  
   
 ## <a name="see-also"></a>参照  
- [[スケジュール]](schedules.md)   
- [共有スケジュールを一時停止および再開する](pause-and-resume-shared-schedules.md)   
+ [Schedules](schedules.md)   
+ [Pause and Resume Shared Schedules](pause-and-resume-shared-schedules.md)   
  [レポートのキャッシュ (レポート マネージャー)](../report-server/cache-a-report-report-manager.md)   
  [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)  
   

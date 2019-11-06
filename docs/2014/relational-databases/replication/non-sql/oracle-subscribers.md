@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,12 +16,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a11cdbd373a173fd2709b07ccb860484c0f59eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022226"
 ---
 # <a name="oracle-subscribers"></a>Oracle サブスクライバー
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Oracle の提供する OLE DB プロバイダーによる、Oracle へのプッシュ サブスクリプションがサポートされています。  
@@ -86,7 +85,7 @@ ms.locfileid: "48145152"
   
     -   パブリッシュされたテーブルに空の文字列が列値として挿入されないようにする。  
   
-    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **–SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 (**-SkipErrors1400**) を指定します。  
+    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 ( **-SkipErrors1400**) を指定します。  
   
     -   生成されたテーブルの作成スクリプトを変更して、空の文字列が関連付けられている文字型の列から NOT NULL 属性を削除する。さらに、 @creation_script sp_addarticle [の](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)パラメーターを使用して、アーティクルのカスタム作成スクリプトとして変更済みスクリプトを指定する。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
@@ -14,12 +13,12 @@ ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087933"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>分類ウィザード (Excel 用データ マイニング アドイン)
   ![データ マイニング リボンの分類ウィザード](media/dmc-classify.gif "データ マイニング リボンの分類ウィザード")  
@@ -34,7 +33,7 @@ ms.locfileid: "48094122"
   
 2.  **ソース データの選択** ページで、分析するデータを選択します。  
   
-     このウィザードは、複数の種類のデータ (Excel テーブル、Excel 範囲、および外部データ ソース) をサポートしています。 外部データを使用する場合、外部データを Excel に追加するか、Analysis Services データ ソース内の一連のテーブルまたはビューを選択することができます。 また、テーブルを追加したり列を変更したりして、アドホック データ ソースを作成することもできます。  
+     このウィザードは、複数の種類のデータをサポートしています。Excel テーブル、Excel 範囲、および外部データ ソース。 外部データを使用する場合、外部データを Excel に追加するか、Analysis Services データ ソース内の一連のテーブルまたはビューを選択することができます。 また、テーブルを追加したり列を変更したりして、アドホック データ ソースを作成することもできます。  
   
 3.  **分類** ページで、分類する列を選択します。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48094122"
   
  [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  使用する、**分類**ウィザード、する必要がありますに接続する、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。 接続を作成する方法については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
   
 ## <a name="see-also"></a>参照  

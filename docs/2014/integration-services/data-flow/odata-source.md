@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ODATASOURCE.F1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 788a644f191fe84bf8bfe2dc580b62fb345493a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771038"
 ---
 # <a name="odata-source"></a>OData ソース
   SSIS パッケージ内で OData ソース コンポーネントを使用して、Open Data Protocol (OData) サービスから取得したデータを使用します。 このコンポーネントは、OData v2 と v3 の各プロトコル、および ATOM と JSON の各データ形式をサポートします。  
   
 > [!NOTE]  
->  OData ソースを使用して、SharePoint リストから読み取りを行うことができます。 SharePoint サーバー上のすべてのリストを表示するには、次の URL を使用: http://\<server >//_vti_bin/listdata.svc。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](http://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。  
+>  OData ソースを使用して、SharePoint リストから読み取りを行うことができます。 SharePoint サーバー上のすべてのリストを表示するには、次の URL を使用: http://\<server >//_vti_bin/listdata.svc。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](https://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。  
   
 ## <a name="odata-format"></a>OData の形式  
  ほとんどの OData サービスは、結果を複数の形式で返します。 $format クエリ オプションを使用して、結果セットの形式を指定することができます。 JSON と JSON Light のような形式は、ATOM/XML より効率的であり、大量のデータを転送する場合により高いパフォーマンスを達成できる可能性があります。 次の表に、サンプル テストの結果を示します。 ご覧のように、ATOM から新しい JSON light 形式 (WCF Data Services 5.1 で使用可能) に切り替える場合、ATOM から JSON と 67% パフォーマンスの向上に切り替える場合がありますが 30 ~ 53% パフォーマンスが向上します。  
@@ -42,7 +41,7 @@ ms.locfileid: "48188982"
   
 -   [OData ソース コンポーネントのインストールと、アンインストール](../install-and-uninstall-odata-source-component.md)  
   
--   [チュートリアル: OData ソースの使用&#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
+-   [チュートリアル: OData ソースを使用して&#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
   
 -   [実行時の OData ソース クエリの変更](modify-odata-source-query-at-runtime.md)  
   

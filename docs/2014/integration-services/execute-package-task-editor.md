@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059056"
 ---
 # <a name="execute-package-task-editor"></a>パッケージ実行タスク エディター
   パッケージ実行タスクを構成するには、パッケージ実行タスク エディターを使用します。 パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -59,7 +58,7 @@ ms.locfileid: "48119042"
 >  **[ReferenceType]** オプションは読み取り専用であり、対象パッケージを含むプロジェクトがプロジェクト配置モデルに変換されていない場合は **[外部参照]** に設定されます。 変換の詳細については、「 [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)」を参照してください。  
   
  **Password**  
- 子パッケージがパスワードで保護されている場合は、子パッケージのパスワードを入力するか、参照ボタン ([...]) をクリックして子パッケージの新しいパスワードを作成します。  
+ 子パッケージがパスワードで保護されている場合は、子パッケージのパスワードを入力するか、参照ボタン [...] をクリックして子パッケージの新しいパスワードを作成します。  
   
  `ExecuteOutOfProcess`  
  子パッケージが親パッケージのプロセス内で実行するか、または別のプロセスで実行するかを指定します。 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティに設定が`False`、子パッケージが親パッケージと同じプロセスで実行するとします。 このプロパティを `true` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、プロパティを `true` に設定した場合、ツールのみのインストールではパッケージをデバッグできません。[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 製品をインストールする必要があります。 詳細については、「 [Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。  
@@ -75,7 +74,7 @@ ms.locfileid: "48119042"
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
   
- **[接続]**  
+ **Connection**  
  子パッケージの格納場所の種類を選択します。  
   
  **PackageNameReadOnly**  
@@ -88,19 +87,19 @@ ms.locfileid: "48119042"
 ### <a name="location-dynamic-options"></a>[Location] の動的オプション  
   
 #### <a name="location--sql-server"></a>Location = SQL Server  
- **[接続]**  
- OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
+ **Connection**  
+ OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、[OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  子パッケージの名前を入力するか、[...] をクリックし、パッケージを指定します。  
   
 #### <a name="location--file-system"></a>Location = ファイル システム  
- **[接続]**  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ **Connection**  
+ ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  パッケージ名が表示されます。  

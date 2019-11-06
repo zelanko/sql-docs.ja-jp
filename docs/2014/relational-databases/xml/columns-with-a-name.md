@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 788e68241cb922839274834ab3415b6c1111066c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638166"
 ---
 # <a name="columns-with-a-name"></a>名前のある列
   行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
@@ -89,7 +89,7 @@ for xml PATH
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
@@ -239,7 +239,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での PATH モードの使用](use-path-mode-with-for-xml.md)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cd826013df93bff905134f18d58eb50ac962917
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63240780"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>組み込みの XML スキーマ コレクション (sys) の参照
   作成したどのデータベースでも、 **sys** リレーショナル スキーマに **sys** XML スキーマ コレクションが事前に定義されています。 各データベースはこれらの事前定義されたスキーマを保持します。また、これらのスキーマは、ユーザーが作成した他の XML スキーマ コレクションからアクセスできます。 このような事前定義されたスキーマに使われているプレフィックスは、XQuery で意味があるものとして扱われます。 **xml** のみが、予約されているプレフィックスです。  
@@ -31,13 +31,13 @@ xml = http://www.w3.org/XML/1998/namespace
 xs = http://www.w3.org/2001/XMLSchema  
 xsi = http://www.w3.org/2001/XMLSchema-instance  
 fn = http://www.w3.org/2004/07/xpath-functions  
-sqltypes = http://schemas.microsoft.com/sqlserver/2004/sqltypes  
+sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
 xdt = http://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
-(no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
+(no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- **sqltypes** 名前空間には、ユーザーが作成したどの XML スキーマ コレクションからでも参照できるコンポーネントが含まれます。 **sqltypes** スキーマは、 [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=31850)からダウンロードできます。 組み込みのコンポーネントには、次のものが含まれます。  
+ **sqltypes** 名前空間には、ユーザーが作成したどの XML スキーマ コレクションからでも参照できるコンポーネントが含まれます。 **sqltypes** スキーマは、 [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=31850)からダウンロードできます。 組み込みのコンポーネントには、次のものが含まれます。  
   
 -   XSD 型  
   
@@ -65,9 +65,9 @@ CREATE XML SCHEMA COLLECTION SC AS '
    xmlns="http://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
-   xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+   xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
    <import namespace="http://www.w3.org/XML/1998/namespace"/>  
-   <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+   <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
           <sequence>  
@@ -98,7 +98,7 @@ GO
     CREATE XML SCHEMA COLLECTION SC AS '  
     <schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace    
-        ="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+        ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
     </schema>'  
     GO  
@@ -123,9 +123,9 @@ GO
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
-        xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+        xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     
-     namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+     namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
             <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -141,7 +141,7 @@ go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 GO  

@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509360"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263572"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "52509360"
   
 空間インデックスの作成の制限については、「 [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[選択された空間インデックス]**  
 既存の空間インデックスを一覧表示します。 特定の空間インデックスのプロパティを表示するには、そのインデックスをクリックします。 この一覧が空の場合、テーブルには空間インデックスがまったく定義されていません。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "52509360"
 空間インデックスの名前を表示します。 新しいインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
 **[説明]**  
-インデックスの説明です。 より詳細な説明を記述する場合は、**[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
+インデックスの説明です。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン ( **[...]** ) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
 **[テーブル デザイナー] カテゴリ**  
 展開してこの空間インデックスのプロパティに関する情報を表示します。  
@@ -111,7 +110,7 @@ ms.locfileid: "52509360"
 **[ページのロックを許可]**  
 該当するインデックスでページレベルのロックを許可するかどうかを指定します。 ページレベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。  
   
-**[統計値** **再計算する]**  
+**[統計値を再計算する]**  
 インデックスの作成時に、統計情報を新たに計算するかどうかを指定します。 統計情報の再計算により、インデックスの構築には前よりも時間がかかりますが、通常はクエリのパフォーマンスが向上します。  
   
 **[行のロックを許可]**  

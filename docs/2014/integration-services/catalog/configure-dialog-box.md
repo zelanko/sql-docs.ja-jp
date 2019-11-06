@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql12.dts.designer.configure.f1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac0637b19437c2570cbb87fb56b84641274d9d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62836114"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
   パッケージとプロジェクトのパラメーター、接続マネージャー、および環境への参照を構成するには、 **[構成]** ダイアログ ボックスを使用します。  
@@ -80,7 +79,7 @@ ms.locfileid: "48174192"
 ##  <a name="references"></a> [参照] ページのオプションの設定  
  環境への参照を追加および削除したり、環境プロパティにアクセスするには、 **[参照]** ページを使用します。  
   
- 環境は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージのランタイム値を示します。  
+ 環境は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージのランタイム値を示します。  
   
  **環境**  
  環境を一覧表示します。  

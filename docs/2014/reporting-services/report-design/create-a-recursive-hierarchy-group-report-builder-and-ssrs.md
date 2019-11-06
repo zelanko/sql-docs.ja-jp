@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f234f4112cee70e3b62fc5076f9e04c05e9bf56f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106136"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
   再帰型階層グループは、組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、複数の階層レベルから成る単一のレポート データセットのデータを編成します。  
@@ -51,22 +50,22 @@ ms.locfileid: "48154112"
     > [!NOTE]  
     >  プロパティ ペインが表示されない場合は、 **[表示]** タブの **[プロパティ]** をクリックします。  
   
-2.  [プロパティ] ウィンドウで、展開、`Padding`ノード、をクリックして**左**、ドロップダウン リストから選択し、 **\<式… >**。  
+2.  [プロパティ] ウィンドウで、展開、`Padding`ノード、をクリックして**左**、ドロップダウン リストから選択し、 **\<式… >** 。  
   
 3.  式ペインで次の式を入力します。  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Padding のプロパティはすべて、 *nnyy*形式の文字列が必要です。ここで、 *nn* は数字、 *yy* は単位です。 例の式を使用する文字列を構築して、`Level`再帰レベルに基づいて余白のサイズを大きく関数。 たとえば、レベルが 1 の行では余白は 12 ポイント (2 + (1\*10)) に、レベルが 3 の行では 32 ポイント (2 + (3\*10)) になります。 については、`Level`関数を参照してください[レベル](report-builder-functions-level-function.md)します。  
+     Padding のプロパティはすべて、 *nnyy*形式の文字列が必要です。ここで、 *nn* は数字、 *yy* は単位です。 この例の式では、`Level` 関数を使用する文字列が構築され、再帰レベルに基づいて余白のサイズが増加されます。 たとえば、レベルが 1 の行では余白は 12 ポイント (2 + (1\*10)) に、レベルが 3 の行では 32 ポイント (2 + (3\*10)) になります。 については、`Level`関数を参照してください[レベル](report-builder-functions-level-function.md)します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      レポートを実行します。 グループ化されたデータの階層ビューがレポートに表示されます。  
   
 ## <a name="see-also"></a>参照  
- [再帰型階層グループを作成する&#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [集計関数リファレンス&#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

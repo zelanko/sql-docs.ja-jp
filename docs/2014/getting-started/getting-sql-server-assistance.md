@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
@@ -42,12 +41,12 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 416540095fe08c5777b453db5875212fbea80989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09293b660bc096f8dc9eacf3986f03950eabfb1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088558"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server の参考資料の入手
   [!INCLUDE[msCoName](../includes/msconame-md.md)] に関して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供している主な情報ソースは次の 3 つです。  
@@ -80,19 +79,19 @@ ms.locfileid: "48064884"
   
 |リソース|対象ユーザー|  
 |--------------|--------------|  
-|[SQL Server デベロッパー センター](http://msdn.microsoft.com/sqlserver/)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、レポート システム、およびビジネス インテリジェンス ソリューションを構築し、アプリケーションと Web サイトがこれらのシステムを使用できるようにする開発者。|  
-|[XML デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=42458)|データの格納と操作を行うために XML を使用するサイトおよびアプリケーションを作成する、Web サイト作成者およびアプリケーション開発者。|  
-|[SQL Server TechNet サイト](http://technet.microsoft.com/sqlserver/dn135309)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用して、システムの計画、配置、管理、およびサポートを行う管理者およびオペレーター。|  
+|[SQL Server デベロッパー センター](https://msdn.microsoft.com/sqlserver/)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、レポート システム、およびビジネス インテリジェンス ソリューションを構築し、アプリケーションと Web サイトがこれらのシステムを使用できるようにする開発者。|  
+|[XML デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=42458)|データの格納と操作を行うために XML を使用するサイトおよびアプリケーションを作成する、Web サイト作成者およびアプリケーション開発者。|  
+|[SQL Server TechNet サイト](https://technet.microsoft.com/sqlserver/dn135309)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用して、システムの計画、配置、管理、およびサポートを行う管理者およびオペレーター。|  
   
 ## <a name="additional-online-information"></a>その他のオンライン情報  
  その他の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 情報は、次の [!INCLUDE[msCoName](../includes/msconame-md.md)] Web サイトから利用可能です。  
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|データ ストレージおよびビジネス インテリジェンス ツールとしての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の評価に関する発売前情報を提供します。|  
-|[マイクロソフト サポート技術情報](http://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サポートで作成された [!INCLUDE[msCoName](../includes/msconame-md.md)] 記事を検索できるリポジトリを提供します。|    
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|データ ストレージおよびビジネス インテリジェンス ツールとしての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の評価に関する発売前情報を提供します。|  
+|[マイクロソフト サポート技術情報](https://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サポートで作成された [!INCLUDE[msCoName](../includes/msconame-md.md)] 記事を検索できるリポジトリを提供します。|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品には、各リリースに利用できるサポート期間を定めたサポート ライフサイクルがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] サポートが、[!INCLUDE[msCoName](../includes/msconame-md.md)] サポート ライフサイクルを定めたページを管理しています。 このページには、[!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のサポートが利用可能かどうかを指定した別のページへのリンクが含まれています。 詳細については、次を参照してください。[マイクロソフト サポート ライフ サイクル](http://go.microsoft.com/fwlink/?LinkId=98306)します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品には、各リリースに利用できるサポート期間を定めたサポート ライフサイクルがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] サポートが、[!INCLUDE[msCoName](../includes/msconame-md.md)] サポート ライフサイクルを定めたページを管理しています。 このページには、[!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のサポートが利用可能かどうかを指定した別のページへのリンクが含まれています。 詳細については、次を参照してください。[マイクロソフト サポート ライフ サイクル](https://go.microsoft.com/fwlink/?LinkId=98306)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server の製品ドキュメントを使用します。](../2014-toc/books-online-for-sql-server-2014.md)  

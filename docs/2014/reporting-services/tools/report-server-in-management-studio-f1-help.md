@@ -4,34 +4,33 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4109625d2f596d095a8b691bc11b164b67506f72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100076"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio のレポート サーバーの F1 ヘルプ
   ここでは、レポート サーバーを管理するために使用する [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の各種ダイアログ ボックスに関するトピックを説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [レポート サーバー ジョブのキャンセル](cancel-report-server-jobs-management-studio.md)  
+-   [[レポート サーバー ジョブのキャンセル]](cancel-report-server-jobs-management-studio.md)  
   
--   [カタログ アイテムの削除](delete-catalog-items-management-studio.md)  
+-   [[カタログ アイテムの削除]](delete-catalog-items-management-studio.md)  
   
--   [ジョブのプロパティ ページ](job-properties-management-studio.md)  
+-   [[ジョブのプロパティ] ページ](job-properties-management-studio.md)  
   
--   [新しい共有スケジュール](new-shared-schedule-management-studio.md)  
+-   [[新しい共有スケジュール]](new-shared-schedule-management-studio.md)  
   
 -   [新しいシステム ロール](new-system-role-management-studio.md)  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48179222"
   
 -   [[ユーザー ロールのプロパティ]](user-role-properties-management-studio.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [機能リファレンス (Reporting Services)](../feature-reference-reporting-services.md)   
  [SQL Server Management Studio の概要](../../ssms/sql-server-management-studio-ssms.md)  
   

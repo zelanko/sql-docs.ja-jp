@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924145"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 句
 図形の COMPUTE 句には、親が生成されます**レコード セット**の子への参照で構成されている列を持つ**レコード セット**は省略可能内容は章では、新しい、または計算列、列、または子の集計関数の実行結果**レコード セット**または以前に整形**レコード セット**; と任意の列の子から**レコード セット**記載されています句で省略可能。  
@@ -65,7 +64,7 @@ SHAPE child-command [AS] child-alias
  以下に例を示します。  
   
 ```  
-SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
+SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
  どの方法に関係なく、親**レコード セット**の形式が子への関連付けに使用するチャプター列が含まれます (COMPUTE を使用または追加を使用して)、**レコード セット**します。 場合は、親**Recordset**子の行を集計 (SUM、MIN、MAX、およびなど) を含む列を含めることもできます。 親と子の両方**レコード セット**内の行の式を含む列を含めることができます、**レコード セット**、および新しいと、最初にある列を空にします。  
@@ -133,7 +132,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |OR|Portland|400,000|  
 |OR|Corvallis|300,000|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [階層レコード セット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [データ シェイプの概要](../../../ado/guide/data/data-shaping-overview.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   

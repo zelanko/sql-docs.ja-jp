@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58d2d159d0788d3a32c793899b253b66c62a0dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002464"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,15 +46,13 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>引数
 
-[  **@name =** ] **'***module_name***'**   
-ストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、またはサーバー レベルの DDL トリガーの名前を指定します。 *モジュール名*共通言語ランタイム (CLR) ストアド プロシージャまたは CLR 関数にすることはできません。 *モジュール名*スキーマ バインドをすることはできません。 *モジュール名*は`nvarchar`、既定値はありません。 *モジュール名*、マルチパート識別子を指定できますが、現在のデータベース内のオブジェクトに参照できるのみです。
+`[ @name = ] 'module_name'` ストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、またはサーバー レベル DDL トリガーの名前です。 *モジュール名*共通言語ランタイム (CLR) ストアド プロシージャまたは CLR 関数にすることはできません。 *モジュール名*スキーマ バインドをすることはできません。 *モジュール名*は`nvarchar`、既定値はありません。 *モジュール名*、マルチパート識別子を指定できますが、現在のデータベース内のオブジェクトに参照できるのみです。
 
-[  **@namespace =** ] **'** < クラス > **'**   
-指定されたモジュールのクラスです。 ときに*module_name* 、DDL トリガーは、`<class>`が必要です。 `<class>` `nvarchar(20)`します。 有効な入力は`DATABASE_DDL_TRIGGER`と`SERVER_DDL_TRIGGER`します。    
+`[ @namespace = ] ' < class > '` 指定したモジュールのクラスです。 ときに*module_name* 、DDL トリガーは、`<class>`が必要です。 `<class>` は `nvarchar(20)` です。 有効な入力は`DATABASE_DDL_TRIGGER`と`SERVER_DDL_TRIGGER`します。    
 
 ## <a name="return-code-values"></a>リターン コードの値  
 
-0 (成功) または 0 以外の数値 (失敗)
+0 (成功) または 0 以外の値の数 (失敗)
 
 
 ## <a name="remarks"></a>コメント
@@ -68,9 +65,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `sp_refresh_parameter_encryption` 拡張プロパティをアクセス許可には影響しませんまたは`SET`オブジェクトに関連付けられているオプション。 
 
-サーバー レベルの DDL トリガーを更新するには、このストアド プロシージャをデータベースのコンテキストから実行します。
+サーバー レベルの DDL トリガーを更新するには、任意のデータベースのコンテキストからこのストアド プロシージャを実行します。
 
->  [!NOTE]   
+> [!NOTE]
 >  実行すると、オブジェクトに関連付けられている署名は削除`sp_refresh_parameter_encryption`します。
 
 ## <a name="permissions"></a>アクセス許可
@@ -156,7 +153,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted ウィザード](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

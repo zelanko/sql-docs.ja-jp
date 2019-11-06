@@ -1,5 +1,5 @@
 ---
-title: データを一括コピーして IRowsetFastLoad (OLE DB) を使用します。マイクロソフトのドキュメント
+title: IRowsetFastLoad を使用した一括データコピー (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7427ffe72ef46c9099e6914fa0a26dd8492d1f6f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d8d3d095e038f296ffbaf908798bcdc7f9bfe6d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666791"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906658"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad を使用したデータの一括コピー (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51666791"
 
   このサンプルでは、IRowsetFastLoad を使用して、レコードをテーブルに一括コピーする方法を示します。  
   
- コンシューマーは、SQLOLEDB プロバイダー固有のプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定することにより、一括コピーを実行する必要があることを SQLOLEDB に通知します。 コンシューマーはデータ ソースのプロパティ セットを使用して、SQLOLEDB セッションを作成します。 新しいセッションへの消費者のアクセスを許可する**して IRowsetFastLoad**。  
+ コンシューマーは、SQLOLEDB プロバイダー固有のプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定することにより、一括コピーを実行する必要があることを SQLOLEDB に通知します。 コンシューマーはデータ ソースのプロパティ セットを使用して、SQLOLEDB セッションを作成します。 新しいセッションでは、コンシューマーが**IRowsetFastLoad**にアクセスできるようになります。  
   
  **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 テーブル **IRFLTable** をデータベース内に作成する必要があります。  
   
@@ -45,22 +44,22 @@ ms.locfileid: "51666791"
   
 2.  SQLOLEDB プロバイダー固有のデータ ソース プロパティである SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定します。 このプロパティを VARIANT_TRUE に設定すると、新しく作成されたセッションを使用して、コンシューマーから **IRowsetFastLoad** にアクセスできるようになります。  
   
-3.  セッションの要求を作成、**により、IOpenRowset**インタ フェースです。  
+3.  **IOpenRowset**インターフェイスを要求するセッションを作成します。  
   
 4.  **IOpenRowset::OpenRowset** を呼び出して、(一括コピー操作によるデータのコピー先の) テーブルのすべての行が含まれる行セットを開きます。  
   
-5.  必要なバインドを行い、使用するアクセサーを作成**IAccessor::CreateAccessor**。  
+5.  必要なバインドを実行し、 **IAccessor:: CreateAccessor**を使用してアクセサーを作成します。  
   
 6.  テーブルへのデータのコピー元となる、メモリ バッファーを設定します。  
   
-7.  呼び出す**IRowsetFastLoad::InsertRow**テーブル内のデータの一括コピーにします。  
-  
+7.  **IRowsetFastLoad:: InsertRow**を呼び出して、データをテーブルに一括コピーします。  
+
 ## <a name="example"></a>例  
  この例では、テーブル IRFLTable に 10 個のレコードを追加します。 テーブル IRFLTable をデータベース内に作成する必要があります。 このサンプルは IA64 ではサポートされていません。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したテーブルを削除します。  
   

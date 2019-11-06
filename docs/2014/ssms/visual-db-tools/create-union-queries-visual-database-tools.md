@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -16,12 +16,12 @@ ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5571494e5dbf3410152d18445d4454d91ae8e0d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63270588"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>UNION クエリの作成 (Visual Database Tools)
   UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、次を参照してください。 [SELECT の例&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)します。  

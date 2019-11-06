@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108320"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>[全般] ([マップの色のルールのプロパティ] ダイアログ ボックス)
   **[マップの色のルールのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、このレイヤー上のマップ要素の色オプションを定義できます。 マップ要素には、多角形、線、およびポイントがあります。 データセット フィールドまたは空間データ ソース フィールドからの空間データと分析データに基づいてマップ要素間のリレーションシップを作成している場合に、色ルールを適用できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48179292"
  独自の色のリストを指定して、分析データを視覚化します。  
   
  **データ フィールド**  
- このオプションは、**[ビジュアライズデータ]** オプションのいずれかを選択すると表示されます。  
+ このオプションは、 **[ビジュアライズデータ]** オプションのいずれかを選択すると表示されます。  
   
  使用する分析データ フィールドをドロップダウン リストから選択します。 リストには、空間データのソースに応じて、空間データ ソースからのフィールドと、空間データと分析データ間のリレーションシップを持つレポート データセットからのフィールドが表示されます。 このようなリレーションシップを作成するには、選択したマップ レイヤーの [分析データ] ページでデータ オプションを設定します。  
   
@@ -61,6 +60,6 @@ ms.locfileid: "48179292"
   
 ## <a name="see-also"></a>参照  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [変更するマップの凡例、カラー スケール、および関連付けられているルール&#40;レポート ビルダーおよび SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

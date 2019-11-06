@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35883a1cb34a7d3ff6bd4e37f15ef0125aea7951
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63066338"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>予測モデルの予測の比較 (中級者向けデータ マイニング チュートリアル)
   このチュートリアルのこれまでの手順では、複数の時系列モデルを作成しました。  
@@ -36,7 +35,7 @@ ms.locfileid: "48206482"
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
 ##  <a name="bkmk_EXTEND"></a> データを追加した後、元の結果の結果を比較します。  
- 太平洋地域の M200 製品ラインのデータだけを見て、新しいデータでのモデルの更新による結果への影響を調べます。 元のデータ系列は 2004 年 6 月に終了し、7 月、8 月、9 月の新しいデータを取得したことに注意してください。  
+ データに新しいデータでモデルを更新すると、結果にどのように影響する方法を参照してください、太平洋地域の M200 製品の行だけを見てみましょう。 元のデータ系列は 2004 年 6 月に終了し、7 月、8 月、9 月の新しいデータを取得したことに注意してください。  
   
 -   最初の列は、追加された新しいデータを示します。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48206482"
  一般に、アルゴリズムでは、モデル データの開始からのデータより、新しいデータでの変更に、より大きい重みを設定します。 しかし、このケースでは、新しい売上の値は前の期間に対して 20 ～ 30% だけの増加を示しているので、予測される売上にはわずかな上昇しかなく、その後の売上予測は再度下降して、新しいデータの前の数か月の傾向と同じようになっています。  
   
 ##  <a name="bkmk_REPLACE"></a> 元とクロス予測の結果の比較  
- 元のマイニング モデルでは、地域と製品ラインの間に大きな差が見られました。 たとえば、M200 モデルの売上は非常に強い一方で、T1000 モデルの売上はすべての地域でかなり低くなっています。 また、一部の系列には十分なデータがありませんでした。 系列は不規則であり、開始位置が異なることを意味しました。  
+ 元のマイニング モデルでは、地域と製品ラインの間に大きな差が見られました。 たとえば、M200 モデルの売上は非常に強い一方で、T1000 モデルの売上はすべての地域でかなり低くなっています。 さらに、一部のシリーズでは、データの量がありませんでした。 系列が不規則、つまり同じ開始点だけでした。  
   
  ![M200 および T1000 の数量を予測するシリーズ](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 および T1000 の数量を予測するシリーズ")  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48206482"
   
  REPLACE_MODEL_CASES パラメーターを使用し、異なるデータ系列にモデルを適用することによって、クロス予測に使用できるモデルを作成する方法について学習しました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   

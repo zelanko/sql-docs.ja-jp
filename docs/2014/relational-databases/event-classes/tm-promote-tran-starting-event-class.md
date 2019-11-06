@@ -1,11 +1,10 @@
 ---
-title: 'TM: Promote Tran Starting イベント クラス | Microsoft Docs'
+title: 'TM: Promote Tran Starting イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,15 +14,15 @@ ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8ad93db74cc0cdc7ea450fa1b47653c1f7bf85d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43deb215fded67055c069dd629dcb5553b663f71
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061364"
 ---
 # <a name="tm-promote-tran-starting-event-class"></a>TM: Promote Tran Starting イベント クラス
-  TM: Promote Tran Starting イベント クラスは、PROMOTE TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。  
+  TM:Promote Tran Starting イベント クラスは、PROMOTE TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。  
   
 ## <a name="tm-promote-tran-starting-event-class-data-columns"></a>TM: Promote Tran Starting イベント クラスのデータ列  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48145308"
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

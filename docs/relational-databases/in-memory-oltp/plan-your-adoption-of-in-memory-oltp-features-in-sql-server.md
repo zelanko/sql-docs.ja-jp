@@ -1,7 +1,7 @@
 ---
 title: SQL Server でのインメモリ OLTP 機能の採用計画 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2aaee2db975d9632c1f13a664a6ad2939afe20b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021811"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server でのインメモリ OLTP 機能の採用計画
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "52519564"
 
 Azure SQL データベースのクラウド サービスでホストされているデータベースの場合、選択したサービス層が、データベースで消費可能なアクティブ メモリの量に影響します。 アラートを使用してデータベースのメモリ使用量を監視する計画を立てる必要があります。 詳細については、次の情報を参照してください。
 
-- [価格レベル](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)に対するインメモリ OLTP ストレージの制限を確認する
+- [価格レベル](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)に対するインメモリ OLTP ストレージの制限を確認する
 - [インメモリ OLTP ストレージの監視](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>メモリ最適化テーブル変数
@@ -205,7 +204,7 @@ IDENTITY 列を再シードするために[DBCC CHECKIDENT](../../t-sql/database
 
 メモリ最大化テーブルを初めて実装する際に、多くの場合、従来の B ツリー非クラスター化インデックスを選択するのが賢明かつ簡単です。 後で、アプリケーションのパフォーマンスを確認してから、インデックスの別の種類への切り替えを検討できます。
 
-特殊な 2 種類のインデックス (ハッシュ インデックスと列ストア インデックス) では、メモリ最適化テーブルのコンテキストでのディスカッションが必要になります。
+次の特殊な 2 種類のインデックスでは、メモリ最適化テーブルのコンテキストでのディスカッションが必要になります:ハッシュ インデックスと列ストア インデックス。
 
 メモリ最適化テーブルのインデックスの概要については、次の情報を参照してください。
 
@@ -214,9 +213,9 @@ IDENTITY 列を再シードするために[DBCC CHECKIDENT](../../t-sql/database
 
 #### <a name="hash-indexes"></a>ハッシュ インデックス
 
-ハッシュ インデックスは、'**=**' 演算子を使用して正確な主キー値で 1 つの特定の行に最も速くアクセスできる形式です。
+ハッシュ インデックスは、' **=** ' 演算子を使用して正確な主キー値で 1 つの特定の行に最も速くアクセスできる形式です。
 
-- '**!=**'、'**>**'、または '**BETWEEN**' などの不正確な演算子をハッシュ インデックスで使用すると、パフォーマンスが損なわれます。
+- ' **!=** '、' **>** '、または '**BETWEEN**' などの不正確な演算子をハッシュ インデックスで使用すると、パフォーマンスが損なわれます。
 
 - キー値の重複率が高くなる場合、ハッシュ インデックスは最良の選択とは言えないかもしれません。
 
@@ -284,7 +283,7 @@ Transact-SQL の特定の要素に対する制限事項に加えて、ネイテ�
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. アプリケーション デザイン: トランザクションと再試行ロジック
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. アプリケーション デザイン:トランザクションと再試行ロジック
 
 メモリ最適化テーブルに関係するトランザクションは、同じテーブルに関係する別のトランザクションに依存できます。 従属トランザクション数が許容最大値を超えた場合、すべての従属トランザクションが失敗します。
 

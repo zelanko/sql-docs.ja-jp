@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66009847"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート BLOB ストア (RBS) はオプションのアドオン コンポーネントです。これを使用すると、データベース管理者は、バイナリ ラージ オブジェクトを、主なデータベース サーバーに直接格納するのではなく、汎用的なストレージ ソリューションに格納できます。  
@@ -50,22 +50,22 @@ ms.locfileid: "48181475"
 ## <a name="rbs-requirements"></a>RBS 要件  
  RBS では、BLOB メタデータが格納されている主なデータベース サーバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise が必要です。 ただし、指定された FILESTREAM プロバイダーを使用する場合は、BLOB 自体を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard に格納できます。  
   
- RBS には、RBS を使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで格納できる FILESTREAM プロバイダーが含まれています。 RBS を使用して BLOB を別のストレージ ソリューションに格納する場合は、そのストレージ ソリューション用に開発されたサード パーティの RBS プロバイダーを使用するか、RBS API を使用してカスタム RBS プロバイダーを開発する必要があります。 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)には、NTFS ファイル システムに BLOB を格納するサンプル プロバイダーが学習用リソースとして用意されています。  
+ RBS には、RBS を使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで格納できる FILESTREAM プロバイダーが含まれています。 RBS を使用して BLOB を別のストレージ ソリューションに格納する場合は、そのストレージ ソリューション用に開発されたサード パーティの RBS プロバイダーを使用するか、RBS API を使用してカスタム RBS プロバイダーを開発する必要があります。 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)には、NTFS ファイル システムに BLOB を格納するサンプル プロバイダーが学習用リソースとして用意されています。  
   
 ## <a name="rbs-security"></a>RBS セキュリティ  
  カスタム プロバイダーを使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部に格納する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ システムをバイパスするその他のプロセスで使用される場合があります。 カスタム プロバイダーが使用するストレージ メディアに適した権限と暗号化オプションで格納された BLOB が保護されていることを確認してください。  
   
 ##  <a name="rbsresources"></a> RBS リソース  
  **RBS ドキュメント**  
- RBS ドキュメントは Windows インストーラー パッケージに含まれています。 RBS をインストールせずに RBS ドキュメントを確認する場合は、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版のドキュメントを [MSDN ライブラリからオンライン](http://go.microsoft.com/fwlink/?LinkId=210192)で参照できます。  
+ RBS ドキュメントは Windows インストーラー パッケージに含まれています。 RBS をインストールせずに RBS ドキュメントを確認する場合は、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版のドキュメントを [MSDN ライブラリからオンライン](https://go.microsoft.com/fwlink/?LinkId=210192)で参照できます。  
   
  **RBS ホワイト ペーパー**  
- Microsoft Word 文書としてダウンロードできるホワイト ペーパー「[リモート BLOB ストレージ](http://go.microsoft.com/fwlink/?LinkId=210422)」には、RBS のインストールと構成の詳細が記載されています。  
+ Microsoft Word 文書としてダウンロードできるホワイト ペーパー「[リモート BLOB ストレージ](https://go.microsoft.com/fwlink/?LinkId=210422)」には、RBS のインストールと構成の詳細が記載されています。  
   
  **RBS サンプル**  
- [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) で入手できる RBS サンプルでは、RBS アプリケーションの開発方法とカスタム RBS プロバイダーの開発およびインストール方法を示します。  
+ [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) で入手できる RBS サンプルでは、RBS アプリケーションの開発方法とカスタム RBS プロバイダーの開発およびインストール方法を示します。  
   
  **RBS ブログ**  
- [RBS ブログ](http://go.microsoft.com/fwlink/?LinkId=210315) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
+ [RBS ブログ](https://go.microsoft.com/fwlink/?LinkId=210315) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
   
   

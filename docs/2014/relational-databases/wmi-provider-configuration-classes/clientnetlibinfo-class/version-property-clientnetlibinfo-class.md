@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Version Property (ClientNetLibInfo Class)
@@ -20,12 +18,12 @@ ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ff8420a96c4bfb3ef62a08f88faa9b9fa374b1f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7016b056c404d1e60f53bd0d0afd1270fdbb73a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63191093"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version プロパティ (ClientNetLibInfo クラス)
   クライアント ネットワーク ライブラリ ファイルのバージョンを取得します。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

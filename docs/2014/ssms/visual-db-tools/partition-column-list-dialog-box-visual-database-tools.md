@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.partitioncolumnlist
@@ -12,12 +12,12 @@ ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9faa987b5cd7dc00cde0d691177c722bd73eaa26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280377"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>[パーティション列の一覧] ダイアログ ボックス (Visual Database Tools)
   テーブルがパーティション スキームに関連付けられている場合、このダイアログ ボックスを使用すると、パーティション関数を適用する列を選択できます。 関数が動作するためには、切り替え先の列のデータ型が、パーティション関数で定義されている列のデータ型と同じである必要があります。  

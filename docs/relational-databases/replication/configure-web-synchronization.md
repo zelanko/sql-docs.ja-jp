@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519338"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907235"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "52519338"
 3.  Web 同期が許可されるようにマージ パブリケーションを構成します。  
   
 4.  Web 同期が使用されるように 1 つ以上のサブスクリプションを構成します。  
-  
+
 > [!NOTE]  
 >  大量のデータや **varchar(max)** などのサイズの大きなデータ型を含むデータをレプリケートする場合は、このトピックの「大量のデータのレプリケート」を参照してください。  
   
@@ -87,9 +86,9 @@ ms.locfileid: "52519338"
   
  **Web 同期用に IIS を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Web ガーデンの作成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーでは、スレッドごとに同時に 2 つの同期処理がサポートされます。 この制限を超えると、レプリケーション リスナーが応答しなくなる可能性があります。 replisapi.dll に割り当てられるスレッドの数は、アプリケーション プールの "ワーカー プロセスの最大数" プロパティで決まります。 既定では、このプロパティは 1 に設定されます。  
@@ -136,7 +135,7 @@ ms.locfileid: "52519338"
   
 -   大量のデータをレプリケートする場合に、マージ エージェントのバッチ サイズの調整が必要になることがあります。  
   
- マージ レプリケーションのバッチ サイズは、アーティクルごとの変更のコレクションである *生成結果*で示されます。 1 つのバッチ内の生成結果の数は、マージ エージェントの -**DownloadGenerationsPerBatch** パラメーターと -**UploadGenerationsPerBatch** パラメーターを使用して指定します。 詳細については、「 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  
+ マージ レプリケーションのバッチ サイズは、アーティクルごとの変更のコレクションである *生成結果*で示されます。 1 つのバッチ内の生成結果の数は、マージ エージェントの -**DownloadGenerationsPerBatch** および -**UploadGenerationsPerBatch** パラメーターを使用して指定します。 詳細については、「 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  
   
  大量のデータを扱う場合は、バッチ処理の各パラメーターに小さい数を指定します。 最初は値を 10 にして、アプリケーションのニーズとパフォーマンスに応じて調整することをお勧めします。 通常、これらのパラメーターは、エージェント プロファイルで指定します。 プロファイルの詳細については、「 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
@@ -156,13 +155,13 @@ ms.locfileid: "52519338"
   
      エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
--   サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページでアカウントとパスワードを指定するとき、または **@internet_url** 」および「 **@internet_login** および [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)」を参照してください。 このアカウントには、スナップショット共有の読み取り権限が必要です。  
+-   サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページでアカウントとパスワードを指定するとき、または [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) の `@internet_url` および `@internet_login` パラメーターの値を指定するときに、マージ エージェントで使用されるドメイン アカウントと同じアカウントを指定します。 このアカウントには、スナップショット共有の読み取り権限が必要です。  
   
 -   各パブリケーションでは、IIS 用に個別の仮想ディレクトリを使用する必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (Replisapi.dll) の実行に使用するアカウントは、同期の際にパブリッシャーとディストリビューターに接続するアカウントでもあります。 したがって、パブリッシャーとディストリビューターで SQL ログイン アカウントにマップされている必要があります。 詳細については、「[Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md)」(Web 同期用の IIS の構成) の「Setting Permissions for the SQL Server Replication Listener」(SQL Server レプリケーション リスナーの権限の設定) セクションをご覧ください。  
   
--   IIS を実行しているコンピューターにパブリッシャーからスナップショットを配信するときに、FTP を使用できます。 IIS を実行しているコンピューターからサブスクライバーにスナップショットを配信するときには、常に HTTPS が使用されます。 詳細については、「[FTP によるスナップショットの転送](../../relational-databases/replication/transfer-snapshots-through-ftp.md)」を参照してください。  
+-   IIS を実行しているコンピューターにパブリッシャーからスナップショットを配信するときに、FTP を使用できます。 IIS を実行しているコンピューターからサブスクライバーにスナップショットを配信するときには、常に HTTPS が使用されます。 詳細については、「[FTP によるスナップショットの転送](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
 -   レプリケーション トポロジ内のサーバーがファイアウォールの内側にあるとき、Web 同期を有効にするために、ファイアウォールのポートを開くことが必要になる場合があります。  
   
@@ -170,7 +169,7 @@ ms.locfileid: "52519338"
   
     -   通常、IIS を実行しているコンピューターは、ポート 1433 (既定のインスタンス用) を使用してパブリッシャーまたはディストリビューターに接続します。 パブリッシャーまたはディストリビューターが、サーバー上の既定のインスタンスとは別に存在する名前付きインスタンスである場合、その名前付きインスタンスへの接続には通常はポート 1500 が使用されます。  
   
-    -   IIS を実行しているコンピューターがファイアウォールによってディストリビューターから分離されており、スナップショットの配信に FTP 共有が使用される場合は、FTP 用のポートが開かれている必要があります。 詳細については、「[Transfer Snapshots Through FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md)」(FTP によるスナップショットの転送) をご覧ください。  
+    -   IIS を実行しているコンピューターがファイアウォールによってディストリビューターから分離されており、スナップショットの配信に FTP 共有が使用される場合は、FTP 用のポートが開かれている必要があります。 詳細については、「[Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」(FTP によるスナップショットの転送) をご覧ください。  
   
 > [!IMPORTANT]  
 >  ファイアウォールのポートを開くと、サーバーが攻撃を受けやすくなります。 ポートを開く前に、ファイアウォール システムについて理解しておいてください。 詳細については、「 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  

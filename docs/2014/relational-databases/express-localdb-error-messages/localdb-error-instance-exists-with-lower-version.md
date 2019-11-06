@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d56dbcb5fe1d37e3fce223bc910830b063484aa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3bc344e3e23ce965a2057628e4662ebe41508d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990926"
 ---
 # <a name="localdberrorinstanceexistswithlowerversion"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
     

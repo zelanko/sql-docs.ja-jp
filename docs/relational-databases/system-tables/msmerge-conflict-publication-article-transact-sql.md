@@ -1,12 +1,11 @@
 ---
-title: Msmerge_conflict _&lt;パブリケーション&gt;_&lt;記事&gt;(TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_conflict_&lt;publication&gt;_&lt;article&gt;(Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_conflict_publication_article_TSQL
@@ -18,28 +17,27 @@ helpviewer_keywords:
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ab6a6578da86fb7dd1fdb3564cdbf7b854e9b84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 342b0f51fb4f68945f6ab8c4b511c5299acfba49
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843210"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893581"
 ---
-# <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>Msmerge_conflict _&lt;パブリケーション&gt;_&lt;記事&gt;(TRANSACT-SQL)
+# <a name="msmerge_conflict_ltpublicationgt_ltarticlegt-transact-sql"></a>MSmerge\_conflict\_&lt;publication&gt;\_&lt;article&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Msmerge_conflict _*パブリケーション*_ * 記事*** テーブルには、競合がある行のデータ集約を実現するために元に戻された行変更に関する情報が含まれています。 競合テーブルはパブリケーション内のレプリケートされたテーブルごとに存在し、競合テーブルの名前にはパブリケーションとアーティクルの名前が付加されます。 このアーティクル固有の競合テーブルは、競合ログで使用するデータベースに保存されます。通常、これはパブリケーション データベースですが、集中型でない競合ログの場合はサブスクリプション データベースの場合もあります。  
+  **MSmerge\_conflict\_publication\_article** には、競合している行や、データの収束を実現するために元に戻された行の変更に関する情報が含まれています。 競合テーブルはパブリケーション内のレプリケートされたテーブルごとに存在し、競合テーブルの名前にパブリケーションとアーティクルの名前が付加されます。 このアーティクル固有の競合テーブルは、競合ログで使用するデータベースに保存されます。通常、これはパブリケーション データベースですが、集中型でない競合ログの場合はサブスクリプション データベースの場合もあります。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|***article_column_name***|**variable**|レプリケートされたテーブルの列。 このシステム テーブルにはテーブル アーティクルの列ごとに 1 行のデータが格納されます。|  
-|**rowguid**|**uniqueidentifier**|競合する行の行識別子。|  
+|**_article\_column\_name_**|**variable**|レプリケートされたテーブルの列。 このシステム テーブルにはテーブル アーティクルの列ごとに 1 行のデータが格納されます。|  
+|**rowguid**|**uniqueidentifier**|競合行の行識別子。|  
 |**ModifiedDate**|**datetime**|競合が発生した時刻。|  
-|**origin_datasource_id**|**uniqueidentifier**|行変更が取り消された、または競合が失われたサブスクリプション。|  
+|**origin\_datasource\_id**|**uniqueidentifier**|行変更が取り消された、または競合が失われたサブスクリプション。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

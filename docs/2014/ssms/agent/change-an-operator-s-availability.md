@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -22,12 +22,12 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79add9bcf43604b52a28eae6ab477489d23d8370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017103"
 ---
 # <a name="change-an-operator39s-availability"></a>オペレーターの可用性の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、オペレーターの警告通知受信スケジュールを変更する方法について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "48200438"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48200438"
   
 4.  有効または無効にするオペレーターを右クリックし、 **[プロパティ]** を選択した後、 **[全般]** タブをクリックします。  
   
-5.  *[<オペレーター名> のプロパティ]* ダイアログ ボックスで、**[有効]** チェック ボックスをオンまたはオフにします。  
+5.  [_operator_name_ **のプロパティ**] ダイアログ ボックスで、 **[有効]** チェック ボックスをオンまたはオフにします。  
   
 6.  **[OK]** をクリックします。  
   
@@ -78,12 +78,12 @@ ms.locfileid: "48200438"
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
-    -- disables the 'François Ajenstat' operator  
+    -- disables the 'Fran??ois Ajenstat' operator  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_update_operator   
-        @name = N'François Ajenstat',  
+        @name = N'Fran??ois Ajenstat',  
         @enabled = 0;  
     GO  
     ```  

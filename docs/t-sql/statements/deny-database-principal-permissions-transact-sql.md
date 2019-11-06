@@ -24,15 +24,14 @@ helpviewer_keywords:
 - denying permissions [SQL Server], application roles
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 739abfdbf2d25d5df634e7a085c393af9176a659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: d781778f46617a8961506fb022854835717ea0bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114889"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (データベース プリンシパルの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +70,15 @@ DENY permission [ ,...n ]
  データベース プリンシパルで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  USER ::*database_user*  
- 権限を拒否するユーザーのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するユーザーのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  ROLE ::*database_role*  
- 権限を拒否するロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  APPLICATION ROLE ::*application_role*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 権限を拒否するアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  

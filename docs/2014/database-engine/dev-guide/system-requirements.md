@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SMO]
@@ -17,12 +15,12 @@ ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db02b170bd4cccb2842b44d405da332f3df18e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781951"
 ---
 # <a name="system-requirements"></a>システム要件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient`オブジェクト用のドライバーに接続しのインスタンスと通信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -32,6 +30,6 @@ ms.locfileid: "48107582"
  SMO を使用してアプリケーションを開発する必要[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 をインストールします。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server のインストールの概要](http://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
+ [SQL Server のインストールの概要](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

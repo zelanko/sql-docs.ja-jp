@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c9cfd87578b2ffaaefb8b46b340f76f74b373ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 530db4d31d3db4773713816f1b68404990997512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081311"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR パラメーター データのマッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ ms.locfileid: "47794568"
 |-|-|-|  
 |**SQL Server データ型**|型 (System.Data.SqlTypes または Microsoft.SqlServer.Types)|**CLR データ型 (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64 では、null 許容\<Int64 >**|  
-|**[バイナリ]**|**SqlBytes、SqlBinary**|**Byte[]**|  
+|**binary**|**SqlBytes、SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**ブール値、null 値許容\<ブール >**|  
 |**char**|なし|なし|  
-|**カーソル (cursor)**|なし|なし|  
+|**cursor**|なし|なし|  
 |**date**|**SqlDateTime**|**DateTime、null 許容\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**DateTime、null 許容\<DateTime >**|  
 |**datetime2**|なし|**DateTime、null 許容\<DateTime >**|  
-|**DATETIMEOFFSET**|**なし**|**DateTimeOffset では、null 許容\<DateTimeOffset >**|  
+|**DATETIMEOFFSET**|**None**|**DateTimeOffset では、null 許容\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**10 進数、null 値許容\<Decimal >**|  
 |**float**|**SqlDouble**|**Null 値は二重\<Double >**|  
 |**geography**|**SqlGeography**<br /><br /> **SqlGeography**は SQL Server と共にインストールされからダウンロードできます。 これには、Microsoft.SqlServer.Types.dll に定義されて、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [機能パック](https://www.microsoft.com/download/details.aspx?id=52676)します。|なし|  
@@ -67,7 +66,7 @@ ms.locfileid: "47794568"
 |**smallint**|**SqlInt16**|**Int16 型、null 許容\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**10 進数、null 値許容\<Decimal >**|  
 |**sql_variant**|なし|**Object**|  
-|**テーブル**|なし|なし|  
+|**table**|なし|なし|  
 |**text**|なし|なし|  
 |**time**|なし|**TimeSpan、null 許容\<TimeSpan >**|  
 |**timestamp**|なし|なし|  
@@ -87,13 +86,13 @@ ms.locfileid: "47794568"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 \<Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( \<Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   
@@ -111,9 +110,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR データ型 (SQL Server)**|**SQL Server データ型**|  
-|**10 進数**|SMALLMONEY|  
+|**Decimal**|SMALLMONEY|  
 |**SqlMoney**|SMALLMONEY|  
-|**10 進数**|money|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

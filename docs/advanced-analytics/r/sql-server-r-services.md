@@ -1,73 +1,92 @@
 ---
-title: SQL server 2016 R Services |Microsoft Docs
-description: データ サイエンスと統計モデリング、予測分析、データの視覚化をなどのリレーショナル データに対する統合された R タスク用の SQL Server で R です。
+title: SQL Server 2016 R Services とは
+titleSuffix: ''
+description: R Services は、リレーショナルデータを使用して R スクリプトを実行する機能を提供する SQL Server 2016 の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習のための Microsoft R パッケージを使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server R Services の基本について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 08/12/2019
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 17d0aa51d43ad9592a075ae91be88c857035b15f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: dphansen
+ms.author: davidph
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659931"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149926"
 ---
-# <a name="r-services-in-sql-server-2016"></a>SQL server 2016 R Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services とは
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-R Services は、SQL Server で R コードと関数を実行するために使用される、SQL Server 2016 データベース エンジン インスタンスへのアドオンです。 コア エンジンのプロセスから分離が完全にストアド プロシージャ、T-SQL スクリプトが R のステートメントを含むまたは T-SQL を含む R コードとしてのリレーショナル データに使用可能な機能拡張フレームワークでコードが実行されます。 
-
-R Services には、R、読み込みと複数コアで大量のデータを処理して 1 つの統合の出力に結果を集計できるように、Microsoft からの企業の R パッケージを使用したオーバーレイの基本ディストリビューションが含まれています。 Microsoft の R 関数とアルゴリズムがスケールとユーティリティの両方のエンジニア リング: 予測分析、統計モデリング、データの視覚化、および最先端の機械学習、商用のサーバー製品のエンジニア リングでアルゴリズムを提供し、Microsoft によってサポートされています。 
-
-R ライブラリには、RevoScaleR、MicrosoftML、およびその他のユーザーが含まれます。 R Services がデータベース エンジンと統合されているため、データの近くで分析し、コストとデータの移動に関連付けられているセキュリティ上のリスクを排除できます。
+R Services は、リレーショナルデータを使用して R スクリプトを実行する機能を提供する SQL Server 2016 の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習のための[Microsoft R パッケージ](#packages)を使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server R Services の基本について説明します。
 
 > [!Note]
-> R Services を SQL Server 2017 で名前が変更されました[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)Python の加算を反映します。
+> R Services は SQL Server 2017 以降の[Machine Learning Services](../what-is-sql-server-machine-learning.md)に名前が変更され、Python と r の両方をサポートしています。
 
-## <a name="components"></a>Components
+## <a name="what-is-r-services"></a>R Services とは?
 
-SQL Server 2016 には R のみです。 次の表では、SQL Server 2016 の機能について説明します。
+SQL Server R Services を使用すると、データベース内で R スクリプトを実行できます。 この機能を使用して、データの準備とクリーンアップ、特徴エンジニアリング、およびデータベース内での機械学習モデルのトレーニング、評価、およびデプロイを行うことができます。 この機能により、データが存在するスクリプトが実行され、ネットワーク経由で別のサーバーにデータが転送されることがなくなります。
 
-| コンポーネント | 説明 |
-|-----------|-------------|
-| SQL Server スタート パッド サービス | 外部の R ランタイムと、SQL Server インスタンス間の通信を管理するサービス。 |
-| R パッケージ | [**RevoScaleR** ](revoscaler-overview.md)はこのライブラリでスケーラブルな R. 関数が最も広く使用されている間は、プライマリ ライブラリ。 データ変換と操作、統計の概要作成、視覚化、およびモデリングと分析の多くの形式は、これらのライブラリで表示されます。 さらに、これらのライブラリ内の関数は、並列処理、調整され、計算エンジンによって管理されるデータのチャンク上で動作する機能の使用可能なコア間でワークロードを自動的に配布します。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。 <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) T-SQL ストアド プロシージャに R スクリプトを配置すること、データベースでストアド プロシージャを登録すると、R 開発環境からストアド プロシージャを実行しているヘルパー関数を提供します。<br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md)は R で MDX クエリを指定するため|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)は r です Microsoft のオープン ソース ディストリビューションには。パッケージおよびインタープリターが含まれます。 常にセットアップによってインストールされている MRO のバージョンを使用します。 |
-| R ツール | R コンソール ウィンドウとコマンド プロンプトは、R のディストリビューションで標準的なツールです。  |
-| R のサンプルとスクリプト |  オープン ソースの R と RevoScaleR パッケージが作成して事前インストールされているデータを使用してスクリプトを実行できるように、組み込みのデータ セットを含める |
-| R で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 モデルでは、R services での実行が、SQL Server セットアップでインストールすることはできません。 詳細については、次を参照してください。[インストール事前トレーニング済みの機械学習では、SQL Server のモデル](../install/sql-pretrained-models-install.md)します。 |
+R の基本ディストリビューションは R Services に含まれています。 Microsoft packages [RevoScaleR](../r/ref-r-revoscaler.md)、[MicrosoftML](../r/ref-r-microsoftml.md)、microsoft packages、[olapr]. に加えて、オープンソースのパッケージとフレームワークを使用することもできます。/r/ref-r-olapr.md)、および R の[sqlrutils](../r/ref-r-sqlrutils.md)。
 
-## <a name="using-r-services"></a>R Services を使用します。
+R Services は、拡張フレームワークを使用して SQL Server で R スクリプトを実行します。 詳細については、次を参照してください。
 
-開発者およびアナリスト多くの場合、ローカルの SQL Server インスタンス上で実行されるコードがあります。 Machine Learning サービスを追加し、外部スクリプトの実行を有効にして、SQL Server のモダリティで R コードを実行することができます。 ストアド プロシージャにスクリプトをラップする、SQL Server テーブルでは、モデルを格納する、またはクエリの T-SQL と R 関数を組み合わせることです。
++ [機能拡張フレームワーク](../concepts/extensibility-framework.md)
++ [R 拡張機能](../concepts/extension-r.md)
 
-データベース内分析の最も一般的なアプローチは、使用する[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)、R スクリプトを入力パラメーターとして渡します。
+## <a name="what-can-i-do-with-r-services"></a>R Services でできること
 
-従来のクライアント サーバーのやり取りは別の方法です。 IDE のある任意のクライアント ワークステーションからインストールできます[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)、実行をプッシュするコードを記述 (と呼ばれる、*リモート計算コンテキスト*) データとリモートの SQL を操作するサーバー。 
+R Services を使用して、SQL Server 内で機械学習とディープラーニングモデルを構築し、トレーニングすることができます。 また、既存のモデルを R Services に配置し、予測にリレーショナルデータを使用することもできます。
 
-最後に、使用する場合、[スタンドアロン サーバー](r-server-standalone.md)と Developer edition では、同じライブラリとインタープリターを使用して、クライアント ワークステーションでソリューションを構築して SQL Server Machine Learning で運用環境のコードを配置することができます、Services (In-database)。 
+に SQL Server R Services 使用できる予測の種類の例として、次のものがあります。
 
-## <a name="how-to-get-started"></a>開始する方法
+|||
+|-|-|
+|分類/分類|顧客からのフィードバックを自動的に正および負のカテゴリに分割する|
+|回帰/予測の連続値|サイズと場所に基づいて、家の価格を予測する|
+|異常検出|不正な銀行取引の検出 |
+|推奨事項|以前の購入に基づいて、オンラインの買物客が購入する可能性のある製品を提案します|
 
-セットアップを開始、バイナリを使い慣れた開発ツールにアタッチし、最初のスクリプトを記述します。
+### <a name="how-to-execute-r-scripts"></a>R スクリプトを実行する方法
 
-**手順 1:** をインストールし、ソフトウェアを構成します。 
+R Services で R スクリプトを実行するには、次の2つの方法があります。
 
-+ [SQL Server 2016 R Services (In-database) をインストールします。](../install/sql-r-services-windows-install.md)
++ 最も一般的な方法は、T-sql ストアドプロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を使用することです。
 
-**手順 2:** これらのチュートリアルのいずれかを使用して実践的な経験を積みます。
++ また、任意の R クライアントを使用して、(*リモートコンピューティングコンテキスト*と呼ばれる) 実行をリモート SQL Server にプッシュするスクリプトを記述することもできます。 詳細については[、「データサイエンスクライアントの R 開発を設定](../r/set-up-a-data-science-client.md)する方法」を参照してください。
 
-+ [チュートリアル: R を使用した in-database 分析を説明します。](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [チュートリアル: エンド ツー エンドのチュートリアルでは、R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+<a name="packages"></a>
 
-**手順 3:** お気に入りの R パッケージを追加し、Microsoft によって提供されるパッケージと共に使用
+## <a name="r-packages"></a>R パッケージ
 
-+ [SQL Server の R パッケージ管理](install-additional-r-packages-on-sql-server.md)
+Microsoft のエンタープライズパッケージに加えて、オープンソースのパッケージとフレームワークを使用することもできます。 最も一般的なオープンソースの R パッケージは、R Services にプレインストールされています。 Microsoft の次の R パッケージも含まれています。
 
+| [パッケージ] | 説明 |
+|-|-|
+| [RevoScaleR](../r/ref-r-revoscaler.md) | スケーラブルな R のプライマリパッケージ。データの変換と操作、統計の概要作成、視覚化、およびさまざまな形式のモデリングを行うことができます。 さらに、このパッケージの関数は、並列処理のために使用可能なコア間にワークロードを自動的に分散します。 |
+| [Microsoft Ml (R)](../r/ref-r-microsoftml.md) | 機械学習アルゴリズムを追加して、テキスト分析、画像分析、およびセンチメント分析のためのカスタムモデルを作成します。 |
+| [olapR](../r/ref-r-olapr.md) | SQL Server Analysis Services OLAP キューブに対する MDX クエリに使用される R 関数。 |
+| [sqlrutils](../r/ref-r-sqlrutils.md) | T-sql ストアドプロシージャで R スクリプトを使用し、そのストアドプロシージャをデータベースに登録し、 [r 開発環境](../r/set-up-a-data-science-client.md)からストアドプロシージャを実行するためのメカニズム。 |
+| [Microsoft R オープンプラン](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) は、Microsoft からの R の拡張ディストリビューションです。 これは、統計分析とデータサイエンスを行うための完全なオープンソースプラットフォームです。 これは、R と互換性があり、100% に準拠しており、パフォーマンスと再現性を向上させるための追加機能が含まれています。 |
 
-## <a name="see-also"></a>関連項目
+## <a name="how-do-i-get-started-with-rservices"></a>RServices を使ってみる操作方法
 
- [SQL Server 2016 R Services をインストールします。](../install/sql-r-services-windows-install.md)
+1. [SQL Server 2016 R Services のインストール](../install/sql-r-services-windows-install.md)
+
+1. 開発ツールを構成します。 次のものを使用できます。
+
+    + [Azure Data Studio](../../azure-data-studio/what-is.md)または[SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)を使用して、t-sql とストアドプロシージャ[Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を使用して R スクリプトを実行します。
+    + スクリプトを実行するには、独自の開発用ノート pc またはワークステーションで R を使用します。 [RevoScaleR](../r/ref-r-revoscaler.md)を使用してデータをローカルにプルするか、リモートで実行を SQL Server にプッシュすることができます。 詳細については[、「データサイエンスクライアントの R 開発を設定](../r/set-up-a-data-science-client.md)する方法」を参照してください。
+
+1. 最初の R スクリプトを作成する
+
+    + クイック スタート: [SQL Server での単純な R スクリプトの作成と実行](../tutorials/quickstart-r-create-script.md)
+    + クイック スタート: [R で予測モデルを作成してトレーニングする](../tutorials/quickstart-r-train-score-model.md)
+    + チュートリアル:[T-sql で R を使用する](../tutorials/sqldev-in-database-r-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
+    + チュートリアル:R[ツールで r Services を使用する](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md):データの探索、グラフとプロットの作成、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (6 部構成シリーズ)
+
+## <a name="next-steps"></a>次の手順
+
++ [SQL Server 2016 R Services のインストール](../install/sql-r-services-windows-install.md)
++ [R 開発用のデータサイエンスクライアントをセットアップする](../r/set-up-a-data-science-client.md)

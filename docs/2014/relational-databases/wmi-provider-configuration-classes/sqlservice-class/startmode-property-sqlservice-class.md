@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - StartMode Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbdf2e807f5f36cf8814be95cb98ec53bb813790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63187826"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode プロパティ (SqlService クラス)
   サービスの開始モードを取得します。  
@@ -51,20 +49,20 @@ object
  値 = 0。 オペレーティング システム ローダーによって開始されるサービスです。 このオプションは、ドライバー サービスにのみ有効です。  
   
  システム  
- 値 = 1 `IoInitSystem` メソッドによって開始されるサービスです。 このオプションは、ドライバー サービスにのみ有効です。  
+ 値 = 1。 `IoInitSystem` メソッドによって開始されるサービスです。 このオプションは、ドライバー サービスにのみ有効です。  
   
- 自動  
+ Automatic  
  値 = 2。 システムの起動時にサービス コントロール マネージャーによって自動的に開始されるサービスです。  
   
  手動  
- 値 = 3 プロセスが `StartService` メソッドを呼び出すとコンピューター マネージャーによって開始されるサービスです。  
+ 値 = 3。 プロセスが `StartService` メソッドを呼び出すとコンピューター マネージャーによって開始されるサービスです。  
   
  Disabled  
- 値 = 4 サービスを開始できません。  
+ 値 = 4。 サービスを開始できません。  
   
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

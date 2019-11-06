@@ -1,30 +1,29 @@
 ---
-title: 'レッスン 3 : データ ドリブン サブスクリプションの定義 | Microsoft Docs'
+title: 'レッスン 3: データ ドリブン サブスクリプションの定義 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108504"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3: データ ドリブン サブスクリプションの定義
   このレッスンでは、データ ドリブン サブスクリプションを使用し、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、および結果セットとレポート、配信オプションのマッピングを行います。  
   
 > [!NOTE]  
->  開始する前に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスが実行されていることを確認します。 実行されていない場合は、サブスクリプションを保存できません。  
+>  開始する前に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスが実行されていることを確認します。 実行されていない場合は、サブスクリプションを保存できません。  
   
- このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「 [レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください。  
+ このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「[レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください  
   
  このトピックの内容  
   
@@ -96,7 +95,7 @@ ms.locfileid: "48058732"
   
 1.  **[ファイル名]** で、 **[データベースから値を取得]** を選択します。 **Order**フィールドをクリックします。  
   
-2.  **[パス]** で、 **[静的な値を指定]** を選択します。 値の設定は、書き込みアクセス許可があるパブリック ファイル共有の名前を入力します (たとえば、 `\\mycomputer\public\myreports`)。  
+2.  **[パス]** で、 **[静的な値を指定]** を選択します。 [値の設定] に、書き込み権限のあるパブリック ファイル共有の名前を入力します (例: `\\mycomputer\public\myreports`)。  
   
 3.  **[表示形式]** で、 **[データベースから値を取得]** を選択します。 **[書式]** を選択します。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "48058732"
   
 ##  <a name="bkmk_configure_parameter"></a> 手順 5 - レポート出力を変化させるパラメーター値を構成します。  
   
-1.  **[OrderNumber]** には、 **[データベースから値を取得]** を選択します。 [値] で、 **[注文]** をクリックします。 **[次へ].**  
+1.  **[OrderNumber]** には、 **[データベースから値を取得]** を選択します。 [値] で、 **[Order]** をクリックします。 **[次へ].**  
   
 ##  <a name="bkmk_schedule_subscription"></a> 手順 6 - サブスクリプションのスケジュール設定するには  
   
@@ -140,9 +139,9 @@ ms.locfileid: "48058732"
   
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [データ ドリブン サブスクリプション](subscriptions/data-driven-subscriptions.md)   
  [作成、変更、およびデータ ドリブン サブスクリプションの削除](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [サブスクライバー データに対して外部データ ソースを使用して&#40;データ ドリブン サブスクリプション&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [サブスクライバー データに対して外部データ ソースを使用する &#40;データ ドリブン サブスクリプション&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

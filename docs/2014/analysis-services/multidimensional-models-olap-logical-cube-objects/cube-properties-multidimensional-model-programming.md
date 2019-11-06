@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Collation property
@@ -33,12 +31,12 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd7ff7f21bcf0dbd761e745fc1fcd42f7e2d3d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727648"
 ---
 # <a name="cube-properties"></a>キューブ プロパティ
   キューブには、キューブ全体の動作に影響するように設定できる多数のプロパティがあります。 次の表は、これらのプロパティについてまとめたものです。  
@@ -70,7 +68,7 @@ ms.locfileid: "48084612"
 |`Visible`|キューブを表示するかどうかを決定します。|  
   
 > [!NOTE]  
->  Null 値やその他のデータ整合性の問題を使用する場合は、ErrorConfiguration プロパティの値を設定する方法についての詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](http://go.microsoft.com/fwlink/?LinkId=81891)します。  
+>  Null 値やその他のデータ整合性の問題を使用する場合は、ErrorConfiguration プロパティの値を設定する方法についての詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)します。  
   
 ## <a name="see-also"></a>参照  
  [プロアクティブ キャッシュ&#40;パーティション&#41;](partitions-proactive-caching.md)  

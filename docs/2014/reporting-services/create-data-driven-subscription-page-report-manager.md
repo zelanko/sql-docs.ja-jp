@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109618"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>[データ ドリブン サブスクリプションの作成] ページ (レポート マネージャー)
   [データ ドリブン サブスクリプションの作成] ページでは、実行するたびにサブスクライバー データベースにサブスクリプション情報をクエリするサブスクリプションを作成または変更できます。 データ ドリブン サブスクリプションはクエリ結果を使用して、サブスクリプションの受信先、配信設定、およびレポート パラメーターの値を決定します。 実行時に、レポート サーバーで、サブスクリプションの設定に使用されている値を取得するクエリが実行されます。 [データ ドリブン サブスクリプションの作成] ページを使用して、クエリを定義し、クエリの値をサブスクリプションの設定に割り当てることができます。 データドリブン サブスクリプションに指定する値およびオプションは、いくつかのウィザード形式になったページに分かれて表示されます。 ページは全部で 7 ページあります。  
@@ -53,7 +52,7 @@ ms.locfileid: "48116870"
   
 -   ファイル共有にレポートを配信するには、 **[レポート サーバーのファイル共有]** を選択します。 レポートは、レポート サーバーから切断された静的ファイルとして配信されます。 詳細については、「 [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md)」を参照してください。  
   
--   電子メールの受信トレイにレポートを配信するには、 **[レポート サーバーの電子メール]** を選択します。 詳細については、「 [Reporting Services の電子メール配信](subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
+-   電子メールの受信トレイにレポートを配信するには、 **[レポート サーバーの電子メール]** を選択します。 詳細については、「 [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
 -   レポート サーバー データベースにレポートを配信するには、 **[NULL 配信プロバイダー]** を選択します。 このオプションを使用すると、レポート スナップショットが作成されます。 特定のスケジュールに基づいて、ユーザー固有のレポート スナップショットまたはパラメーター化されたレポート スナップショットをレポート サーバーに事前に読み込む場合に、このオプションを選択します。 詳細については、「 [レポートのキャッシュ (SSRS)](report-server/caching-reports-ssrs.md)でキャッシュを事前に読み込む唯一の方法でした。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48116870"
   
 |選択するオプション|目的|  
 |-----------------|----------------|  
-|**静的な値を指定します。**|配信設定に定数値を使用します。 一部の配信拡張機能では、静的な値の候補が表示されます。 たとえば、レポート サーバーの電子メール配信機能の場合、 **[レポートを含める]**、 **[表示形式]**、 **[優先度]**、および **[リンクを含める]** の値が表示されます。|  
+|**静的な値を指定します。**|配信設定に定数値を使用します。 一部の配信拡張機能では、静的な値の候補が表示されます。 たとえば、レポート サーバーの電子メール配信機能の場合、 **[レポートを含める]** 、 **[表示形式]** 、 **[優先度]** 、および **[リンクを含める]** の値が表示されます。|  
 |**データベースから値を取得します。**|結果セットの値を使用します。 結果セットの列は、サブスクライバー データおよびレポート パラメーターの値の指定に使用できます。|  
 |**値はありません。**|サブスクリプションの設定を省略します。|  
   
@@ -152,7 +151,7 @@ ms.locfileid: "48116870"
  1 時間ごとに実行されるスケジュールを定義します。  
   
  **毎日**  
- 選択した日の指定した時刻に実行されるスケジュールを定義します。 次の方法で日を指定することができます: すべて*\<日 >*、すべての平日、毎回*\<数 >* 日。 いずれかのオプションを選択すると、それ以外のオプションは表示されていても無効になります。  
+ 選択した日の指定した時刻に実行されるスケジュールを定義します。 次の方法では、日を指定できます。すべて *\<日>* 、すべての平日、毎回 *\<数>* 日。 いずれかのオプションを選択すると、それ以外のオプションは表示されていても無効になります。  
   
  **毎週**  
  毎週特定の曜日の指定した時刻に実行されるスケジュールを定義します。 実行間隔は、2 週間ごとのようにちょうど 1 週間を単位としているものでも、週の複数の曜日を指定するものでもかまいません。  
@@ -174,7 +173,7 @@ ms.locfileid: "48116870"
  [データ ドリブン サブスクリプション](subscriptions/data-driven-subscriptions.md)   
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

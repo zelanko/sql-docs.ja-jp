@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - StartService Method (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 708d96bab30b9828f41b1e29fef80173a6f711aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62911719"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
   サービスを開始状態にする動作を試行します。  
@@ -124,6 +122,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

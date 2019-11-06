@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bf6502b459cf8f81a3137d73402b73ab6b6e9c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1756c80b86ec9b8c16792bf488cc1d3d19b590d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62813165"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>AlwaysOn 可用性グループの構成のトラブルシューティング (SQL Server)
   このトピックでは、サーバー インスタンスでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。 構成に関する一般的な問題には、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] が無効になっている、アカウントが適切に構成されていない、データベース ミラーリング エンドポイントが存在しない、エンドポイントにアクセスできない (SQL Server エラー 1418)、ネットワーク アクセスが存在しない、データベース参加コマンドが失敗する (SQL Server エラー 35250) などがあります。  
@@ -116,7 +116,7 @@ ms.locfileid: "48182262"
  可用性レプリカをホストしている各サーバー インスタンスは、TCP で他の各サーバー インスタンスのポートにアクセスできる必要があります。 これは、サーバー インスタンスが相互に信頼関係を持たない別のドメイン (信頼されていないドメイン) に存在する場合に特に重要になります。  
   
 ##  <a name="Msg1418"></a> エンドポイント アクセス (SQLServer エラー 1418)  
- この [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] メッセージは、エンドポイントの URL で指定されたサーバー ネットワーク アドレスに到達できないか、そのアドレスが存在しないことを意味し、ネットワーク アドレス名を確認してコマンドを再実行するように示しています。 詳細については、「[MSSQLSERVER_1418](../../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) 」を参照してください。  
+ この [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] メッセージは、エンドポイントの URL で指定されたサーバー ネットワーク アドレスに到達できないか、そのアドレスが存在しないことを意味し、ネットワーク アドレス名を確認してコマンドを再実行するように示しています。 詳細については、「 [MSSQLSERVER_1418](../../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md)」を参照してください。  
   
 ##  <a name="JoinDbFails"></a> データベースの参加の失敗 (SQL Server エラー 35250)  
  ここでは、プライマリ レプリカへの接続がアクティブでないためにセカンダリ データベースを可用性グループに参加させることができない問題について、考え得る原因と解決策について説明します。  
@@ -130,14 +130,14 @@ ms.locfileid: "48182262"
 ##  <a name="ROR"></a> 読み取り専用ルーティングが正常に動作しない  
  次の構成値の設定を確認し、必要に応じて修正します。  
   
-||項目|操作|コメント|リンク|  
+||対象|アクション|コメント|リンク|  
 |------|---------|------------|--------------|----------|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|現在のプライマリ レプリカ|可用性グループ リスナーがオンラインであることを確認します。|**リスナーがオンラインになっているかどうかを確認するには:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **オフラインのリスナーを再起動するには:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|現在のプライマリ レプリカ|READ_ONLY_ROUTING_LIST に、読み取り可能なセカンダリ レプリカをホストしているサーバー インスタンスだけが含まれていることを確認します。|**読み取り可能なセカンダリ レプリカを識別するには:** sys.availability_replicas  (**secondary_role_allow_connections_desc** 列)<br /><br /> **読み取り専用ルーティング リストを表示するには:** sys.availability_read_only_routing_lists<br /><br /> **読み取り専用ルーティング リストを変更するには:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL ポートが Windows ファイアウォールでブロックされていないことを確認します。|—|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで次のことを確認します:<br /><br /> SQL Server のリモート接続が有効になっている。<br /><br /> TCP/IP が有効になっている。<br /><br /> IP アドレスが正しく構成されている。|—|[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL ことを確認します (TCP **://*`system-address`*: * * * ポート*) 正しい完全修飾ドメイン名 (FQDN) とポート番号が含まれています。|—|[AlwaysOn の read_only_routing_url の計算](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|クライアント システム|クライアント ドライバーが読み取り専用のルーティングをサポートしていることを確認します。|—|[AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL ポートが Windows ファイアウォールでブロックされていないことを確認します。|-|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで次のことを確認します:<br /><br /> SQL Server のリモート接続が有効になっている。<br /><br /> TCP/IP が有効になっている。<br /><br /> IP アドレスが正しく構成されている。|-|[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL ことを確認します (TCP<strong>:// *`system-address`* :</strong>*ポート*) 正しい完全修飾ドメイン名 (FQDN) とポート番号が含まれています。|-|[AlwaysOn の read_only_routing_url の計算](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|クライアント システム|クライアント ドライバーが読み取り専用のルーティングをサポートしていることを確認します。|-|[AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -157,11 +157,11 @@ ms.locfileid: "48182262"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [フェールオーバー クラスターのイベントおよびログを表示する](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

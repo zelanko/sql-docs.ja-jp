@@ -7,23 +7,22 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d42aa77e4ecddf96ee0405645e7f98a52b5823e7
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658847"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816742"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CurvePolygon** は、1 つの外部境界リングと 0 個以上の内部リングによって定義された、位相的に閉じた表面です  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]CurvePolygon **サブタイプを含む、** で導入された空間機能の詳細な説明とサンプルについては、 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)に関するホワイト ペーパーをダウンロードして参照してください。  
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]CurvePolygon **サブタイプを含む、** で導入された空間機能の詳細な説明とサンプルについては、 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)に関するホワイト ペーパーをダウンロードして参照してください。  
   
  **CurvePolygon** インスタンスの属性を定義する条件を次に示します。  
   
@@ -31,7 +30,7 @@ ms.locfileid: "51658847"
   
 -   **CurvePolygon** インスタンスの内部は、外部リングとすべての内部リングとの間にある空間です。  
   
- **CurvePolygon** インスタンスが **Polygon** インスタンスと異なるのは、 **CurvePolygon** インスタンスは円弧 ( **CircularString** および **CompoundCurve**) を含む場合があるという点です。  
+ **CurvePolygon** インスタンスが **Polygon** インスタンスと異なるのは、**CurvePolygon** インスタンスは次の円弧を含む場合があるという点です:**CircularString** および **CompoundCurve**。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
  有効な **CurvePolygon** の図を次に示します。  
@@ -44,13 +43,13 @@ ms.locfileid: "51658847"
 2.  4 つ以上の点があること。  
   
 3.  始点および終点の X 座標と Y 座標が同じであること。  
-  
+
     > [!NOTE]  
-    >  Z 値および M 値は無視されます。  
+    > Z 値および M 値は無視されます。  
   
- 次の例は、許容される **CurvePolygon** インスタンスを示しています。  
+次の例は、許容される **CurvePolygon** インスタンスを示しています。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0, 0 0))';  
 DECLARE @g3 geometry = 'CURVEPOLYGON((0 0 1, 0 0 2, 0 0 3, 0 0 3))'  
@@ -58,67 +57,57 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 始点と終点の Z 値が異なりますが Z 値は無視されるため、許容されます。 `@g5`**geography** 型インスタンスは無効ですが、許容されます。  
+`@g3` 始点と終点の Z 値が異なりますが Z 値は無視されるため、許容されます。 `@g5`**geography** 型インスタンスは無効ですが、許容されます。  
   
- 次の例では、 `System.FormatException`がスローされます。  
+次の例では、 `System.FormatException`がスローされます。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON((0 5, 0 0, 0 0, 0 0))';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';  
 ```  
   
- `@g1` 始点と終点の Y 値が同じでないため、許容されません。 `@g2` リングに十分な数の点が含まれていないため、許容されません。  
+`@g1` 始点と終点の Y 値が同じでないため、許容されません。 `@g2` リングに十分な数の点が含まれていないため、許容されません。  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- **CurvePolygon** インスタンスを有効にするためには、外部リングと内部リングの両方が次の条件を満たす必要があります。  
+**CurvePolygon** インスタンスを有効にするためには、外部リングと内部リングの両方が次の条件を満たす必要があります。  
   
 1.  1 つの接点でのみ接していること。  
-  
 2.  互いに交差していないこと。  
-  
 3.  それぞれのリングに 4 つ以上の点が含まれていること。  
-  
 4.  それぞれのリングは許容される curve 型であること。  
   
- さらに、**CurvePolygon** インスタンスは、 **geometry** データ型であるかまたは **geography** データ型であるかに応じて、特定の条件を満たす必要があります。  
+さらに、**CurvePolygon** インスタンスは、 **geometry** データ型であるかまたは **geography** データ型であるかに応じて、特定の条件を満たす必要があります。  
   
 #### <a name="geometry-data-type"></a>geometry データ型  
- 有効な **geometryCurvePolygon** インスタンスは、次の属性を持つ必要があります。  
+有効な **geometryCurvePolygon** インスタンスは、次の属性を持つ必要があります。  
   
 1.  すべての内部リングが外部リング内に含まれていること。  
-  
 2.  複数の内部リングを含むことはできますが、内部リング内に別の内部リングを含めることはできません。  
-  
 3.  リングがそれ自体または別のリングと交差していないこと。  
-  
 4.  リングどうしは、1 つの接点でのみ接することができます (リングが接する点の数は有限であることが必要です)。  
-  
 5.  多角形の内部が接続されていること。  
   
- 次の例は、有効な **geometryCurvePolygon** インスタンスを示しています。  
+次の例は、有効な **geometryCurvePolygon** インスタンスを示しています。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
- CurvePolygon インスタンスには Polygon インスタンスと同じ妥当性規則が適用されますが、例外として、CurvePolygon インスタンスでは新しい円弧型が許容されます。 他の有効または無効なインスタンスの例については、「 [Polygon](../../relational-databases/spatial/polygon.md)」を参照してください。  
+CurvePolygon インスタンスには Polygon インスタンスと同じ妥当性規則が適用されますが、例外として、CurvePolygon インスタンスでは新しい円弧型が許容されます。 他の有効または無効なインスタンスの例については、「 [Polygon](../../relational-databases/spatial/polygon.md)」を参照してください。  
   
 #### <a name="geography-data-type"></a>geography データ型  
- 有効な **geographyCurvePolygon** インスタンスは、次の属性を持つ必要があります。  
+有効な **geographyCurvePolygon** インスタンスは、次の属性を持つ必要があります。  
   
 1.  多角形の内部が左辺ルールを使用して接続されている必要があります。  
-  
 2.  リングがそれ自体または別のリングと交差していないこと。  
-  
 3.  リングどうしは、1 つの接点でのみ接することができます (リングが接する点の数は有限であることが必要です)。  
-  
 4.  多角形の内部が接続されていること。  
   
- 次の例は、有効な geography CurvePolygon インスタンスを示しています。  
+次の例は、有効な geography CurvePolygon インスタンスを示しています。  
   
-```  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -122.3 47))';  
 SELECT @g.STIsValid();  
 ```  
@@ -182,7 +171,7 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- @g1 と @g2 はどちらも同じ外部境界リング (半径 5 の円) を使用し、内部リングに正方形を使用しています。  しかし、インスタンス @g1 は有効ですが、インスタンス @g2 は無効です。  @g2 が無効な理由は、外部リングによって範囲指定された内部空間が内部リングによって 4 つの別個の領域に分割されているためです。  この状況を次の図に示します。  
+ `@g1` と `@g2` はどちらも同じ外部境界リング (半径 5 の円) を使用し、内部リングに正方形を使用しています。  しかし、インスタンス `@g1` は有効ですが、インスタンス `@g2` は無効です。 @g2 が無効な理由は、外部リングによって範囲指定された内部空間が内部リングによって 4 つの別個の領域に分割されているためです。 この状況を次の図に示します。  
   
 ## <a name="see-also"></a>参照  
  [Polygon](../../relational-databases/spatial/polygon.md)   

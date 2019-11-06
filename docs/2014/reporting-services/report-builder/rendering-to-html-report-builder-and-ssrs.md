@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107718"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   HTML 表示拡張機能では、HTML 形式でレポートを表示します。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  
   
  HTML 表示拡張機能は、レポート マネージャーで実行する場合など、ブラウザーで表示されるレポートの既定の表示拡張機能です。  
   
- HTML 表示拡張機能は、レポート マネージャーで実行する場合など、ブラウザーで表示されるレポートの既定の表示拡張機能です。 HTML 表示拡張機能を使用すると、HTML を部分的に表示することも、完全な HTML ドキュメントとして表示することもできます。 HTML がフラグメントの場合、 `HEAD`、 `HTML`、および`BODY`HTML ドキュメントのタグが削除されます。 表示されるのは、`BODY` タグのコンテンツのみです。 これは、他のアプリケーションで作成した HTML に HTML を埋め込む場合に便利です。  
+ HTML 表示拡張機能は、レポート マネージャーで実行する場合など、ブラウザーで表示されるレポートの既定の表示拡張機能です。 HTML 表示拡張機能を使用すると、HTML を部分的に表示することも、完全な HTML ドキュメントとして表示することもできます。 HTML が部分的な場合、HTML ドキュメントの `HEAD` タグ、`HTML` タグ、および `BODY` タグは削除されます。 表示されるのは、`BODY` タグのコンテンツのみです。 これは、他のアプリケーションで作成した HTML に HTML を埋め込む場合に便利です。  
   
  状況によっては、レポート パラメーターを使用して、レポートが HTML で表示される際にスクリプト インジェクション攻撃を開始することも可能であることを意味します。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
@@ -35,8 +34,6 @@ ms.locfileid: "48084542"
 ##  <a name="RenderingMHTML"></a> MHTML での表示  
  HTML 表示拡張機能を使用すると、MHTML (MIME Encapsulation of Aggregate HTML Documents) でレポートを表示することもできます。 MHTML は、HTML を拡張して、画像などのエンコードされているオブジェクトを HTML ドキュメントに埋め込むことができるようにしたものです。 MHTML 表示拡張機能を使用すると、画像、ドキュメント、その他のバイナリ ファイルなどのリソースを、レポート HTML 内部の MIME 構造として単一のファイルに埋め込むことができます。 また、MHTML レポートは、すべてのリソースがレポートの中に含まれるので、電子メール メッセージに埋め込むのにも役立ちます。 実際に MHTML を表示するのは HTML 表示拡張機能ですが、この機能を MHTML 表示拡張機能と呼ぶこともあります。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
 ##  <a name="BrowserSupport"></a> ブラウザー サポート  
  この表示拡張機能では、次のブラウザー バージョンをサポートしています。  
   
@@ -47,8 +44,6 @@ ms.locfileid: "48084542"
 -   Safari 3.0 以降  
   
  各ブラウザーで適切に処理されるようにするため、表示されるレポートはブラウザーによって多少異なる場合があります。 たとえば、テキスト ボックスには WritingMode というプロパティが表示されます。 このプロパティは Firefox でサポートされていません。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="HTMLSpecificRenderingRules"></a> HTML 固有の表示規則  
  表示する際は、次の HTML 固有の規則が適用されます。  
@@ -65,9 +60,7 @@ ms.locfileid: "48084542"
   
 -   その他すべての行と列は、各レポート アイテムのサイズに応じて拡張できます。  
   
--   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
+-   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0\.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
   
 ##  <a name="Interactivity"></a> 対話性  
  HTML では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
@@ -92,18 +85,12 @@ ms.locfileid: "48084542"
   
  追加の検索機能は、ReportViewer Web フォーム コントロールによって提供されます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
 ##  <a name="DeviceInfo"></a> デバイス情報設定  
- デバイス情報設定を変更することによって、このレンダラーに関する既定の設定の一部 (表示モードなど) を変更することができます。 詳細については、「[HTML デバイス情報設定](../html-device-information-settings.md)」を参照してください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+ デバイス情報設定を変更することによって、このレンダラーに関する既定の設定の一部 (表示モードなど) を変更することができます。 詳細については、「 [HTML デバイス情報設定](../html-device-information-settings.md)」を参照してください。  
+
 ## <a name="see-also"></a>参照  
  [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], disabling
@@ -18,12 +17,12 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d320c18bce915d5361fe9bde0a9fb1c910bc856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db1a34a93c740aac5e24734f0a5f07c2d6719b73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670601"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>変更の追跡の有効化と無効化 (SQL Server)
   このトピックでは、データベースとテーブルに対する変更の追跡を有効または無効にする方法について説明します。  
@@ -31,7 +30,7 @@ ms.locfileid: "48100502"
 ## <a name="enable-change-tracking-for-a-database"></a>データベースの変更の追跡を有効にする  
  変更の追跡を使用するには、あらかじめデータベース レベルで変更の追跡を有効にしておく必要があります。 次の例では、 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)を使用して変更の追跡を有効にする方法を示します。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
@@ -56,7 +55,7 @@ SET CHANGE_TRACKING = ON
   
  次の例では、 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)を使用してテーブルの変更の追跡を有効にする方法を示します。  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 ENABLE CHANGE_TRACKING  
 WITH (TRACK_COLUMNS_UPDATED = ON)  
@@ -71,14 +70,14 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  データベース内のテーブルで変更が追跡されていなければ、データベースの変更の追跡を無効にすることができます。 次の例では、 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)を使用してデータベースの変更の追跡を無効にする方法を示します。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
  次の例では、 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)を使用してテーブルの変更の追跡を無効にする方法を示します。  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  

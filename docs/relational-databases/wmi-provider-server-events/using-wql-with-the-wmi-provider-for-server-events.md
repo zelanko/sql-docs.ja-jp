@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 433e23cdd4805da701d4eaf1104d4f534cdb3a6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 17d28b2d8d2da467fa07bd2c2ddc2de8db207cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139383"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events と WQL の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "51673391"
 SELECT * FROM DDL_DATABASE_LEVEL_EVENTS WHERE DatabaseName = 'AdventureWorks'  
 ```  
   
- このクエリから、WMI プロバイダーは、このイベント通知と同等のものを対象サーバー上に生成しようとします。  
+ このクエリから、WMI プロバイダーは、このイベント通知と同等のものをターゲット サーバー上に生成しようとします。  
   
 ```  
 USE AdventureWorks ;  
@@ -80,7 +79,7 @@ WHERE where_condition
 >  DDL に似た操作を実行する一部のシステム ストアド プロシージャもイベント通知を起動することができます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**両方のストアド プロシージャが、CREATE_TYPE イベントで作成されるイベント通知が起動されます。 ただし、 **sp_rename**ストアド プロシージャでは、すべてのイベント通知は発生しません。 詳細については、次を参照してください。[DDL イベント](../../relational-databases/triggers/ddl-events.md)します。  
   
  *where_condition*  
- WHERE 句のクエリの述語から成るは*event_property*名と論理演算子および比較演算子。 *Where_condition*対応するイベント通知がターゲット データベースに登録されているスコープを決定します。 特定のスキーマまたはクエリを元のオブジェクトを対象にフィルターとしても機能できます*event_type します。* 詳細については、このトピックの後半の「解説」を参照してください。  
+ WHERE 句のクエリの述語から成るは*event_property*名と論理演算子および比較演算子。 *Where_condition*対応するイベント通知がターゲット データベースに登録されているスコープを決定します。 特定のスキーマまたはクエリを元のオブジェクトを対象にフィルターとしても機能できます*event_type します。* 詳細については、このトピックで後述する「解説」を参照してください。  
   
  のみ、`=`オペランドと同時に使用できる**DatabaseName**、 **SchemaName**、および**ObjectName**します。 その他の式は、これらのイベント プロパティと共に使用することはできません。  
   
@@ -93,7 +92,7 @@ WHERE where_condition
   
  WMI Provider for Server Events は、bottom-up および first-fit アルゴリズムを使用して、基になる EVENT NOTIFICATION に対してできるだけ小さなスコープを生成します。 アルゴリズムにより、サーバーの内部的な利用状況、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと WMI ホスト プロセス間のネットワーク トラフィックが最小になるように試行されます。 プロバイダーを調べ、 *event_type* FROM 句と WHERE 句の条件で指定し、できるだけ狭いスコープで、基になるイベント通知を登録しようとしています。 プロバイダーが最も狭いスコープで登録できない場合は、登録が正常に終了するまで、順次より高いスコープでの登録が試行されます。 最も高いスコープ (サーバーレベル) に到達して失敗した場合、エラーがコンシューマーに返されます。  
   
- たとえば場合、DatabaseName =**'** AdventureWorks **'** でイベント通知を登録すると、プロバイダー、WHERE 句で指定されて、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが存在し、呼び出し側クライアントが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のイベント通知を作成するために必要な権限を持っている場合、登録は正常に完了します。 それ以外の場合は、イベント通知をサーバー レベルで登録しようとします。 WMI クライアントが必要な権限を持っている場合、登録は正常に終了します。 ただし、このシナリオでは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが作成されるまで、イベントはクライアントに返されません。  
+ たとえば場合、DatabaseName = **'** AdventureWorks **'** でイベント通知を登録すると、プロバイダー、WHERE 句で指定されて、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが存在し、呼び出し側クライアントが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のイベント通知を作成するために必要な権限を持っている場合、登録は正常に完了します。 それ以外の場合は、イベント通知をサーバー レベルで登録しようとします。 WMI クライアントが必要な権限を持っている場合、登録は正常に終了します。 ただし、このシナリオでは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが作成されるまで、イベントはクライアントに返されません。  
   
  *Where_condition*さらに特定のデータベース、スキーマ、またはオブジェクトにクエリを制限するフィルターとしても機能することができます。 たとえば、次の WQL クエリを考えてみます。  
   

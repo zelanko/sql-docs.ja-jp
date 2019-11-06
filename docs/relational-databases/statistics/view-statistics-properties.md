@@ -12,16 +12,15 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406689"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908013"
 ---
 # <a name="view-statistics-properties"></a>統計のプロパティの表示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52406689"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **統計のプロパティを表示するために使用するもの:**  
   
@@ -60,9 +59,9 @@ ms.locfileid: "52406689"
   
 5.  プロパティを表示する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  [ **統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
+6.  [ **統計のプロパティ -** _statistics_name_ ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
   
-     **統計のプロパティ -**  **statistics_name** *statistics_name* ページで次のプロパティが表示されます。  
+     **統計のプロパティ -** **statistics_name** _statistics_name_ ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -71,11 +70,11 @@ ms.locfileid: "52406689"
      統計情報が格納されるデータベース オブジェクトの名前が表示されます。  
   
      **[INDEX の統計 statistics_name]**  
-     このテキスト ボックスは、統計オブジェクトから返されるプロパティを示します。 このプロパティは、統計ヘッダー、密度ベクトル、およびヒストグラムという 3 つのセクションに分かれています。  
+     このテキスト ボックスは、統計オブジェクトから返されるプロパティを示します。 このプロパティは、次の 3 つのセクションに分かれています:統計ヘッダー、密度ベクトル、ヒストグラム。  
   
      以下に、統計ヘッダーを指定した場合に結果セットに返される列を示します。  
   
-     **名前**  
+     **[名前]**  
      統計オブジェクトの名前。  
   
      **[更新]**  
@@ -97,7 +96,7 @@ ms.locfileid: "52406689"
      統計オブジェクトのすべてのキー列の、値ごとの平均バイト数。  
   
      **String Index**  
-     Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 (`WHERE ProductName LIKE '%Bike'` など) に対するカーディナリティの推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)**、 **nvarchar(max)**、 **text**、 **ntext**である場合に作成されます。  
+     Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 (`WHERE ProductName LIKE '%Bike'` など) に対するカーディナリティの推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)** 、 **nvarchar(max)** 、 **text**、 **ntext**である場合に作成されます。  
   
      **[フィルター式]**  
      統計オブジェクトに含まれるテーブル行のサブセットの述語。 NULL = フィルター選択されていない統計情報です。  
@@ -108,7 +107,7 @@ ms.locfileid: "52406689"
      以下に、密度ベクトルを指定した場合に結果セットに返される列を示します。  
   
      **[すべての密度]**  
-     密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、および (A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A, B, C) を使用すると、これらの各リストは個別の値リスト (3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7) のようになります。 プレフィックス (A, B) を使用すると、同じ列値の個別の値リストが (3, 5)、(4, 4)、および (4, 5) になります。  
+     密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、(A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A、B、C) を使用すると、これらの各リストは次の個別の値リストになります。(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 プレフィックス (A、B) を使用すると、同じ列値に次の個別の値リストが含まれます。(3, 5)、(4, 4)、(4, 5)。  
   
      **[平均の長さ]**  
      列プレフィックスの列値のリストを格納する平均の長さ (バイト単位)。 たとえば、リスト (3, 5, 6) の値ごとに 4 バイト必要な場合は、長さは 12 バイトになります。  
@@ -134,7 +133,7 @@ ms.locfileid: "52406689"
      ヒストグラム区間内 (上限は除く) にある重複する列値を持つ行の平均数 (DISTINCT_RANGE_ROWS > 0 の場合 RANGE_ROWS / DISTINCT_RANGE_ROWS)  
   
 7.  **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-statistics-properties"></a>統計のプロパティを表示するには  

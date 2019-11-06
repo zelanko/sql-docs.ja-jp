@@ -11,17 +11,20 @@ helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a4271eb5bc3956fd58b942eb7c7076716f8f03f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414269"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293828"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   XML タスクの **ValidationDetails** プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。  
   
  次のスクリーン ショットは、 **XML タスク エディター** と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。  
@@ -32,8 +35,8 @@ ms.locfileid: "52414269"
   
  この XML 検証機能は、大きなサイズの XML ドキュメントや大量のエラーにも、簡単に規模を変更して対応できます。 出力ファイル自体が XML 形式なので、出力に対するクエリの実行と分析が可能です。 たとえば、出力に大量のエラーが含まれている場合、このトピックで説明する方法で [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して、エラーをグループ化することができます。  
   
-> [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) では、 **Service Pack 2 で** ValidationDetails [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] プロパティが導入されました。 このプロパティは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]でも利用できます。  
+> [!NOTE]
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) では、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2 で **ValidationDetails** プロパティが導入されました。 このプロパティは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]でも利用できます。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有効な XML のサンプル出力  
  有効な XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。  

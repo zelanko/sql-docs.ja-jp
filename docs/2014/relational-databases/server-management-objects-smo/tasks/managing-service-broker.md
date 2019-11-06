@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - Service Broker [SMO]
@@ -14,12 +12,12 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbd837c0dc28e1c083a14c21614d174580eb7b0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226206"
 ---
 # <a name="managing-service-broker"></a>Service Broker の管理
   SMO では、[!INCLUDE[ssSB](../../../includes/sssb-md.md)] オブジェクトは `Microsoft.SqlServer.Management.Smo.Broker` 名前空間にあり、この名前空間は Microsoft.SqlServer.Smo.dll への参照を必要とします。 クラス情報のサポートには、Microsoft.SqlServer.ServiceBrokerEnum.dll への参照も必要です。  
@@ -44,6 +42,6 @@ ms.locfileid: "48219922"
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
- [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
+ [SQL Server Service Broker (SQL Server Service Broker)](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067381"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>サポートされているデータ ソース (SSAS テーブル)
   このトピックでは、テーブル モデルで使用できるデータ ソースの種類について説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "48054372"
   
 |||||  
 |-|-|-|-|  
-|Source|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
+|ソース|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
 |Access データベース|Microsoft Access 2003、2007、2010。|.accdb または .mdb|ACE 14 OLE DB プロバイダー|  
 |SQL Server リレーショナル データベース|Microsoft SQL Server2005、2008、2008 R2、SQL Server 2012、Microsoft SQL Azure データベース<sup>2</sup>|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 10.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server 並列データ ウェアハウス (PDW) <sup>3</sup>|2008 R2|(該当なし)|OLE DB provider for SQL Server PDW|  
@@ -53,9 +52,9 @@ ms.locfileid: "48054372"
   
  <sup>1</sup> for ODBC、OLE DB プロバイダーを使用することもできます。  
   
- <sup>2</sup> SQL Azure の詳細については、web サイトを参照してください。 [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856)します。  
+ <sup>2</sup> SQL Azure の詳細については、web サイトを参照してください。 [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856)します。  
   
- <sup>3</sup> SQL Server PDW の詳細については、web サイトを参照してください。 [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)します。  
+ <sup>3</sup> SQL Server PDW の詳細については、web サイトを参照してください。 [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895)します。  
   
  <sup>4</sup>場合によっては、MSDAORA OLE DB プロバイダーを使用して新しいバージョンの Oracle との接続エラーで結果ことができます。 エラーが生じる場合は、Oracle 用に記載されている他のプロバイダーを使用することをお勧めします。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48054372"
 4.  一般に、OLE DB プロバイダーは、大規模なデータに対して高いパフォーマンスを発揮します。 同じデータ ソースに対して数種類のプロバイダーの中から選択する場合は、最初に OLE DB プロバイダーを選択することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース&#40;SSAS 表形式&#41;](../data-sources-ssas-tabular.md)   
- [データをインポート&#40;SSAS 表形式&#41;](../import-data-ssas-tabular.md)  
+ [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   
+ [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)  
   
   

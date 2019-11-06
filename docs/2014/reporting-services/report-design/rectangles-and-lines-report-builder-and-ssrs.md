@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aa5aca2f152a66d838fd49662c937932586338a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105387"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>四角形と線 (レポート ビルダーおよび SSRS)
   四角形と線は、レポートに視覚効果を与えることができます。 [ホーム] タブの [罫線] セクションでこれらのレポート アイテムの表示プロパティを設定し、プロパティ ペインを使用してその他のプロパティを設定できます。 背景色、背景画像、ツールヒント、ブックマークなどの機能を、四角形に追加できます。  
@@ -42,18 +41,18 @@ ms.locfileid: "48181172"
 
   
 ##  <a name="ReportBorder"></a> レポートの罫線の追加  
- 線や四角形を追加せずに、ヘッダー、フッター、およびレポート本文自体に罫線を追加することで、レポートに罫線を追加できます。 詳細については、「[レポートへの罫線の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)」をご覧ください。  
+ 線や四角形を追加せずに、ヘッダー、フッター、およびレポート本文自体に罫線を追加することで、レポートに罫線を追加できます。 詳細については、「 [レポートへの罫線の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)の詳細を参照してください。  
   
 
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
- [レポートに罫線を追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
+ [レポートへの罫線の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [四角形またはコンテナーの追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [四角形またはコンテナーの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [追加および変更行&#40;レポート ビルダーおよび SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [罫線の追加および変更 &#40;レポート ビルダーおよび SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>参照  
- [四角形またはコンテナーの追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>関連項目  
+ [四角形またはコンテナーの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

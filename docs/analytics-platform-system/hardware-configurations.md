@@ -1,23 +1,22 @@
 ---
-title: ハードウェアの構成 - Analytics Platform System |Microsoft ドキュメント
-description: Analytics Platform System (APS) アプライアンス ハードウェアは、設計拡張性の高いユニット ビジネス ニーズに合わせて適切な処理と記憶域容量を購入するようにします。 アプライアンスは、データの単位からペタバイト単位以上 6 数テラバイトから Parallel Data Warehouse の記憶域を拡張できます。
+title: Analytics Platform System のハードウェア構成 |Microsoft Docs
+description: お客様のビジネス要件に従って処理およびストレージの量を適切を購入するために、スケーラブルなユニットで、Analytics Platform System (APS) アプライアンスのハードウェアが設計されています。 アプライアンスは、超える 6 ペタバイト規模のデータに数テラバイトから Parallel Data Warehouse 用のストレージをスケーリングします。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5677298e1924959c83cd95b86845e37eab7340e9
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f3e1759dcde0dd792ce5179de08e9add1ef355e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960893"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Analytics Platform System のハードウェア構成
-Analytics Platform System (APS) ハードウェアは、設計拡張性の高いユニット ビジネス ニーズに合わせて適切な処理と記憶域容量を購入するようにします。 アプライアンスは、記憶域の SQL Server 並列データ Wareouse (PDW) 数テラバイトからを超える 6 ペタバイト級のデータをスケーリングします。  
+お客様のビジネス要件に従って処理およびストレージの量を適切を購入するために、スケーラブルなユニットで、Analytics Platform System (APS) ハードウェアが設計されています。 アプライアンスの SQL Server 並列データ Wareouse (PDW) 数テラバイトからを超える 6 ペタバイト規模のデータ ストレージをスケーリングします。  
   
 ## <a name="contents"></a>目次  
   
@@ -27,30 +26,30 @@ Analytics Platform System (APS) ハードウェアは、設計拡張性の高い
 
   
 ## <a name="section1"></a>1 つのラック構成  
-アプライアンス内の最初のラックには、PDW の実行に必要なコンポーネントが含まれています。 最小アプライアンス構成は、ラック、ネットワーク、および基本スケール単位です。 これらの図は、アプライアンスの最初のラックを構成できることを方法を示します。 2 ノードと 9 コンピューティング ノードのハードウェアの製造元によって、最初のラックにことができます。  
+アプライアンスの最初のラックには、PDW の実行に必要なコンポーネントが含まれています。 最小のアプライアンスの構成は、ラック、ネットワーク、および基本スケール単位です。 これらの図は、アプライアンスの最初のラックを構成する方法を示します。 ハードウェア ベンダーによって、最初のラックに 2 から 9 のコンピューティング ノード間でことができます。  
   
-### <a name="first-rack-configurations---dell"></a>DELL の構成をまずラックします。  
-DELL アプライアンスの最小構成には、3 つのコンピューティング ノードがあります。 9 のコンピューティング ノードの合計については、最初のラックに最大 2 つのデータのスケール ユニットを追加できます。  
+### <a name="first-rack-configurations---dell"></a>まずラック構成 - を DELL  
+DELL は、アプライアンスの最小の構成では、3 つのコンピューティング ノードがあります。 最大 2 つのデータのスケール ユニットを追加するには、合計 9 個のコンピューティング ノードの最初のラックにします。  
   
-![Dell 最初のラック構成](media/first-rack-configurations-dell.png "Dell 最初のラック構成")  
+![Dell の最初のラック構成](media/first-rack-configurations-dell.png "Dell 最初のラック構成")  
   
 ### <a name="first-rack-configurations---hpe"></a>最初の構成 - HPE をラックします。  
-HPE アプライアンスの最小構成には、2 つのコンピューティング ノードがあります。 8 のコンピューティング ノードの合計については、最初のラックには、最大 3 つのデータのスケール ユニットを追加できます。  
+アプライアンスの HPE の最小の構成では、2 つのコンピューティング ノードがあります。 合計で 8 個のコンピューティング ノードの最初のラックには、最大 3 つのデータのスケール ユニットを追加できます。  
   
-![HPE が HPE の構成をまずラック](media/first-rack-configurations-hpe.png "HPE が最初に構成をラック")  
+![HPE が最初に HPE の構成をラック](media/first-rack-configurations-hpe.png "HPE が最初に構成をラック")  
   
 ## <a name="section2"></a>複数のラック構成  
-PDW に容量を追加するには、ネットワー キング、必要に応じて、適切な能力を提供する、追加のラック & ネットワーク コンポーネントと共にデータのスケール ユニットを追加して、インフラストラクチャをラックすることができます。 各追加ラック & ネットワークには、パッシブ ホストが必要です。  
+PDW に容量を追加するには、ネットワーク、その他のラック & ネットワーク コンポーネントに応じて、適切な機能を提供する、データのスケール ユニットを追加して、インフラストラクチャのラックことができます。 各追加のラック & ネットワーク パッシブ ホストが必要です。  
   
-各ハードウェア ベンダーには、アプライアンスの容量を指定できますを追加するデータのスケール ユニットの数を指定します。 少なくとも、20% へのアップグレードのパフォーマンスを表示するための十分なデータのスケール ユニットを追加することをお勧めします。 たとえば、1 つのデータのスケールを追加する 20 のデータのスケール ユニットが既にいるアプライアンスに単位可能性がありますごくわずかでありのパフォーマンスが向上。 純利益は、コストと労力の価値があるでしょう。  
+各ハードウェア ベンダーには、アプライアンスの容量を指定できますを追加するデータのスケール ユニットの数を指定します。 少なくとも、20% へのアップグレードのパフォーマンスを表示するには、十分なデータのスケール ユニットを追加することをお勧めします。 たとえば、1 つのデータのスケールを追加する 20 のデータのスケール ユニットに既にあるアプライアンスに単位可能性がありますごくわずかのパフォーマンスが向上。 純利益は、コストと労力の価値はないでしょう。  
   
-### <a name="scale-out-example---hpe"></a>スケール アウト HPE の使用例  
-この図では、20 のコンピューティング ノードを含む 3 HP ラック マウント型アプライアンスを示します。  
+### <a name="scale-out-example---hpe"></a>スケール アウトのサンプル - HPE  
+この図は、20 のコンピューティング ノードを含む 3 つのラック HP アプライアンスを示しています。  
   
-![20 の計算ノードを伴う HPE アプライアンス](media/scale-out-hpe.png "20 の計算ノードを伴う HPE アプライアンス")  
+![20 のコンピューティング ノードで HPE アプライアンス](media/scale-out-hpe.png "HPE アプライアンス 20 のコンピューティング ノードの使用")  
   
-### <a name="scale-out-example--dell-quanta"></a>スケール アウトの例 – DELL、クォンタム  
-この図では、21 のコンピューティング ノードを含む 3 つのラック DELL または Quanta アプライアンスを示します。  
+### <a name="scale-out-example---dell-quanta"></a>スケール アウトの例: DELL、クォンタム  
+この図は、21 のコンピューティング ノードを含む 3 つのラック DELL または Quanta アプライアンスを示しています。  
   
-![21 の計算ノードを伴う Dell アプライアンス](media/scale-out-dell.png "21 の計算ノードを伴う Dell アプライアンス")  
+![21 のコンピューティング ノードの使用の Dell アプライアンス](media/scale-out-dell.png "21 のコンピューティング ノードの使用の Dell アプライアンス")  
  

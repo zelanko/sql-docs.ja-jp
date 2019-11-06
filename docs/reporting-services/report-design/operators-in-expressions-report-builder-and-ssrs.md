@@ -2,18 +2,18 @@
 title: 式で使用される演算子 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 870792045a0281461362262fe81a831644ac06dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582236"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  
@@ -63,7 +63,7 @@ ms.locfileid: "50021136"
 |--------------|-----------------|  
 |And|2 つのブール式の場合は論理積、2 つの数値式の場合はビットごとの積を求めます。|  
 |Not|ブール式の場合は論理否定、数値式の場合はビットごとの否定を求めます。|  
-|Or|2 つのブール式の場合は論理和、2 つの数値の場合はビットごとの和を求めます。|  
+|または|2 つのブール式の場合は論理和、2 つの数値の場合はビットごとの和を求めます。|  
 |Xor|2 つのブール式の場合は排他的論理演算、2 つの数値式の場合はビットごとの排他を求めます。|  
 |AndAlso|2 つの式の論理積を求めます。|  
 |OrElse|2 つの式の論理和を求めます。|  

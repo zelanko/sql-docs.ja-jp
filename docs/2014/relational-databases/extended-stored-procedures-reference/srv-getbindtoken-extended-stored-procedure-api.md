@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_getbindtoken
@@ -22,12 +20,12 @@ ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9904127d1d685b79efd56475a508c500cd317ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dec2e73de3c4c3525b29b44b7c4563a7fd6887ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127300"
 ---
 # <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (拡張ストアド プロシージャ API)
     
@@ -76,7 +74,7 @@ bindtoken
     >  共有の接続にアクセスできるバインドされたセッションは、一度に 1 つだけです。 あるセッションが現在サーバーでステートメントを実行しているかサーバーからの結果を待っている場合、バインドされた同じ接続を共有している他のセッションは、現在のセッションで現在のステートメントの実行が完了するまでサーバーにアクセスできません。 あるセッションが、サーバーがビジー状態のときに接続にアクセスを試みると、そのセッションは競合状態になりにエラーが返されます。その際、接続が使用中なので後でセッションを再試行する必要があることが示されます。  
   
 > [!IMPORTANT]  
->  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)をご覧ください。  
+>  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [sp_bindsession &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindsession-transact-sql)   

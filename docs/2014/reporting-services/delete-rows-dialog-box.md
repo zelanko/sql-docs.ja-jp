@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
@@ -13,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Rows dialog box
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 71c039623498e991107518a77ec7140308b096ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 2fbc640573d6d897205e11dbc40d40210502ee60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108041"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109306"
 ---
 # <a name="delete-rows-dialog-box"></a>[行の削除] ダイアログ ボックス
   **[行の削除]** ダイアログ ボックスを使用すると、テーブル、マトリックス、または一覧の各データ領域から行を削除できます。 グループに関連付けられている行の場合は、グループ定義も削除できます。  

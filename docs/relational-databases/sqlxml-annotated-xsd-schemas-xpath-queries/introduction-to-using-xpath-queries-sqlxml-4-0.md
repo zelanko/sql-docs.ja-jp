@@ -12,16 +12,15 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c8edb6cb54d2ef600080093729a9ff0c06f4082
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fa7b7004f1cfca9a1fbec27742af7df515c05c59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073350"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,11 +47,11 @@ ms.locfileid: "51671641"
 </root>  
 ```  
   
- このドキュメントで**\<顧客 >** 要素ノード、 **cid**が属性ノード、および **"Important"** テキスト ノードします。  
+ このドキュメントで **\<顧客 >** 要素ノード、 **cid**が属性ノード、および **"Important"** テキスト ノードします。  
   
- XPath は、XML ドキュメントからノード セットを選択するときに使用できるグラフ ナビゲーション言語です。 XPath の各演算子では、前の XPath 演算子によって選択されたノード セットに基づいて、ノード セットを選択します。 たとえば、与えられた一連の**\<顧客 >** XPath のノードは、すべてを選択できます**\<順序 >** を持つノード、**日付**の値の属性 **「7/14/1999」** します。 結果のノード セットには、注文日が 1999 年 7 月 14 日となっているすべての注文が含まれます。  
+ XPath は、XML ドキュメントからノード セットを選択するときに使用できるグラフ ナビゲーション言語です。 XPath の各演算子では、前の XPath 演算子によって選択されたノード セットに基づいて、ノード セットを選択します。 たとえば、与えられた一連の **\<顧客 >** XPath のノードは、すべてを選択できます **\<順序 >** を持つノード、**日付**の値の属性 **「7/14/1999」** します。 結果のノード セットには、注文日が 1999 年 7 月 14 日となっているすべての注文が含まれます。  
   
- XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 にある W3C XPath 仕様のサブセットを実装する https://www.w3.org/TR/1999/PR-xpath-19991008.htmlします。  
+ XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 にある W3C XPath 仕様のサブセットを実装する http://www.w3.org/TR/1999/PR-xpath-19991008.html します。  
   
  次に、W3C XPath 実装と SQLXML 4.0 実装の主な違いを示します。  
   
@@ -98,9 +97,9 @@ ms.locfileid: "51671641"
 |連続する述語や入れ子になった述語など、ブール値を使用する述語||[XPath クエリで算術演算子の指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |すべての関係演算子|=, !=, <, \<=, >, >=|[関係演算子を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算術演算子|+、-、*、div|[XPath クエリで算術演算子の指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|明示的な変換関数|**number()**, **string()**, **Boolean()**|[XPath クエリで明示的な変換関数を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|明示的な変換関数|**number()** , **string()** , **Boolean()**|[XPath クエリで明示的な変換関数を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |ブール演算子|AND、OR|[ブール演算子を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Boolean 関数群|**true()**, **false()**, **not()**|[Boolean 関数群を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Boolean 関数群|**true()** , **false()** , **not()**|[Boolean 関数群を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath 変数||[XPath クエリで XPath 変数を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>サポートされない機能  
@@ -108,13 +107,13 @@ ms.locfileid: "51671641"
   
 |機能|アイテム|  
 |-------------|----------|  
-|軸|**先祖**、**先祖や self**、**子孫**、**子孫または self (//)**、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
+|軸|**先祖**、**先祖や self**、**子孫**、**子孫または self (//)** 、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
 |数値を使用する述語||  
 |算術演算子|mod|  
-|ノード関数|**先祖**、**先祖や self**、**子孫**、**子孫または self (//)**、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
-|文字列関数|**string()**、 **concat()**、 **starts-with()**、 **contains()**、 **substring-before()**、 **substring-after()**、 **substring()**、 **string-length()**、 **normalize()**、 **translate()**|  
+|ノード関数|**先祖**、**先祖や self**、**子孫**、**子孫または self (//)** 、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
+|文字列関数|**string()** 、 **concat()** 、 **starts-with()** 、 **contains()** 、 **substring-before()** 、 **substring-after()** 、 **substring()** 、 **string-length()** 、 **normalize()** 、 **translate()**|  
 |Boolean 関数群|**lang()**|  
-|数値関数|**sum()**、 **floor()**、 **ceiling()**、 **round()**|  
+|数値関数|**sum()** 、 **floor()** 、 **ceiling()** 、 **round()**|  
 |Union 演算子|&#124;|  
   
  テンプレートに XPath クエリを指定する場合には、次の動作に注意してください。  

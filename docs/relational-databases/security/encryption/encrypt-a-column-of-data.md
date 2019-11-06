@@ -1,7 +1,7 @@
 ---
 title: データの列の暗号化 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -15,63 +15,53 @@ helpviewer_keywords:
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650370"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902982"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。  
+
+## <a name="security"></a>Security  
   
- **この記事の内容**  
-  
--   **作業を開始する準備:**  
-  
-     [Security](#Security)  
-  
--   [Transact-SQL を使用してデータ列を暗号化するには](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
-  
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+### <a name="permissions"></a>アクセス許可  
  次の手順を実行するには、次の権限が必要です。  
   
--   データベースに対する CONTROL 権限。  
+- データベースに対する CONTROL 権限。  
   
--   データベースに対する CREATE CERTIFICATE 権限。 証明書を所有できるのは、Windows ログイン、ログイン、およびアプリケーション ロールだけです。 グループとロールは証明書を所有できません。  
+- データベースに対する CREATE CERTIFICATE 権限。 証明書を所有できるのは、Windows ログイン、ログイン、およびアプリケーション ロールだけです。 グループとロールは証明書を所有できません。  
   
--   テーブルに対する ALTER 権限。  
+- テーブルに対する ALTER 権限。  
   
--   キーに対する権限。VIEW DEFINITION 権限が拒否されていないことが必要です。  
+- キーに対する権限。VIEW DEFINITION 権限が拒否されていないことが必要です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+## <a name="using-transact-sql"></a>Transact-SQL の使用  
 
-次の例を使うには、データベース マスター キーが必要です。 データベースにデータベース マスター キーがまだない場合、次のステートメントを実行してパスワードを提供することにより作成します。   
-```  
+次の例を使うには、データベース マスター キーが必要です。 データベースにデータベース マスター キーがまだない場合、次のステートメントを実行してパスワードを提供することにより作成します。
+
+```sql  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
+
 データベース マスター キーは常にバックアップしてください。 データベース マスター キーの詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)」をご覧ください。
 
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>認証子を含む対称暗号化を使用して列を暗号化するには  
+### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>認証子を含む対称暗号化を使用して列を暗号化するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
-  
-    ```  
+3. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+
+    ```sql
     USE AdventureWorks2012;  
-    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -85,7 +75,7 @@ PASSWORD = '<some strong password>';
   
     -- Create a column in which to store the encrypted data.  
     ALTER TABLE Sales.CreditCard   
-        ADD CardNumber_Encrypted varbinary(128);   
+        ADD CardNumber_Encrypted varbinary(160);   
     GO  
   
     -- Open the symmetric key with which to encrypt the data.  
@@ -120,15 +110,15 @@ PASSWORD = '<some strong password>';
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>単純な対称暗号化を使用してデータ列を暗号化するには  
+### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>単純な対称暗号化を使用してデータ列を暗号化するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
   
@@ -185,5 +175,3 @@ PASSWORD = '<some strong password>';
 -   [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115750"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] \(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52532115"
 > [!NOTE]  
 >  メンテナンス クリーンアップ タスクでは、指定したディレクトリのサブフォルダーにあるファイルは自動的に削除されません。 この機能によって、メンテナンス クリーンアップ タスクを使ってファイルを削除するなど、悪意のある攻撃を受ける危険性を最小限に抑えることができます。 直下のサブフォルダーにあるファイルを削除する場合は、 **[直下のサブフォルダーを含める]** を選択する必要があります。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **接続**  
  現在の接続を表示します。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "52532115"
  削除するファイルが格納されているフォルダーのパスと名前を指定します。  
   
  **[ファイル拡張子]**  
- 削除するファイルのファイル拡張子を指定します。  
+ 削除するファイルのファイル拡張子を指定します。 拡張子の前後にその他の文字を含めないでください (たとえば、BAK や TRN)。 
   
  **[直下のサブフォルダーを含める]**  
  **[ファイル拡張子]** に指定された拡張子を持つファイルを、 **[フォルダー]** の直下のサブフォルダーから削除します。  

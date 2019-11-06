@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: efb68eefbaff0f984c38393c9bf863f0654716fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103077"
 ---
 # <a name="upload-files-to-a-folder"></a>フォルダーへのファイルのアップロード
   ファイル システムからファイルをアップロードし、それらを管理対象アイテムとしてレポート サーバー データベースに格納できます。 ファイルのアップロード時に行われる処理は、ファイルの種類によって異なります。  
@@ -63,6 +62,6 @@ ms.locfileid: "48162572"
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./レポート-マネージャーの ssrs-ネイティブ-mode.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [タスクと権限](../security/tasks-and-permissions.md)   
- [ファイルまたはレポートをアップロードする &#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)  
+ [ファイルまたはレポートをアップロードする (レポート マネージャー)](../reports/upload-a-file-or-report-report-manager.md)  
   
   

@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e87aa1b7fd49681594220f81e447abbadc6716d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922901"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server エージェントでの Windows PowerShell ステップの実行
   SQL Server エージェントを使用して、スケジュールされた時刻に SQL Server PowerShell スクリプトを実行します。  
   
-1.  **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)  
+1.  **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)  
   
-2.  **SQL Server エージェントから PowerShell を実行するには:**  [PowerShell ジョブ ステップ](#PShellJob)と [コマンド プロンプト ジョブ ステップ](#CmdExecJob)  
+2.  **SQL Server エージェントから PowerShell を実行するには:**[PowerShell ジョブ ステップ](#PShellJob)、[コマンド プロンプト ジョブ ステップ](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>はじめに  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのジョブ ステップにはいくつかの種類があります。 それぞれの種類は、レプリケーション エージェントやコマンド プロンプト環境など、特定の環境を実装するサブシステムに関連付けられています。 Windows PowerShell スクリプトのコードを作成した後、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントを使用して、スケジュールされた時刻に実行されるジョブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] イベントに応答して実行されるジョブにそのスクリプトを含めることができます。 コマンド プロンプト ジョブ ステップまたは PowerShell ジョブ ステップを使用して、Windows PowerShell スクリプトを実行できます。  
   
 1.  PowerShell ジョブ ステップを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サブシステムに `sqlps` ユーティリティを実行させる。このユーティリティは、PowerShell 2.0 を起動し、`sqlps` モジュールをインポートする。  
   
-2.  コマンド プロンプト ジョブ ステップを使用して、PowerShell.exe を実行して、インポートするスクリプトを指定、`sqlps`モジュール。  
+2.  コマンド プロンプト ジョブ ステップを使用して PowerShell.exe を実行し、`sqlps` モジュールをインポートするスクリプトを指定する。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
   

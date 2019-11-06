@@ -20,16 +20,15 @@ helpviewer_keywords:
 - names [SQL Server], database users
 - database usernames [SQL Server]
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52324e652343a39195ddff570eb786b49a74af55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cdead9d5b6f84072dae454eced8301add4b3c31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927616"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,9 +51,9 @@ USER
   
  USER は、CREATE TABLE または ALTER TABLE ステートメントで DEFAULT 制約を指定して実行するか、標準的な関数として使用します。  
   
- USER では、常に現在のコンテキストの名前が返されます。 EXECUTE AS ステートメントの後に呼び出した場合は、権限を借用したコンテキストの名前が返されます。  
+ USER では、常に現在のコンテキストの名前が返されます。 EXECUTE AS ステートメントの後に呼び出した場合は、権限を借用したコンテキストの名前が USER により返されます。  
   
- Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、グループの名前ではなく Windows プリンシパルの名前が返されます。  
+ Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、グループの名前ではなく Windows プリンシパルの名前が USER により返されます。  
   
 ## <a name="examples"></a>使用例  
   

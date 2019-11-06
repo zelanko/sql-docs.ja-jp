@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105199"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous 関数 (レポート ビルダーおよび SSRS)
   アイテムの、指定されたスコープ内の直前のインスタンスに対応する値または指定された集計値を返します。  
@@ -33,20 +32,20 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>パラメーター  
  *式 (expression)*  
- (`Variant`または`Binary`) を使用してデータを識別する式と以前の値の取得対象となる`Fields!Fieldname.Value`または`Sum(Fields!Fieldname.Value)`します。  
+ (`Variant` または `Binary`) データを識別し、直前の値を取得するための式 (`Fields!Fieldname.Value` や `Sum(Fields!Fieldname.Value)` など) です。  
   
  *スコープ (scope)*  
- (`String`) 省略可能です。 グループまたはデータ領域、または null の名前 (`Nothing`で[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])、によって指定された以前の値を取得する対象のスコープを指定する*式*します。  
+ (`String`) 省略可。 グループまたはデータ領域、または null の名前 (`Nothing`で[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])、によって指定された以前の値を取得する対象のスコープを指定する*式*します。  
   
 ## <a name="return-type"></a>戻り値の型  
- 返します、`Variant`または`Binary`します。  
+ `Variant` または `Binary` 値を返します。  
   
 ## <a name="remarks"></a>コメント  
  `Previous` 関数は、すべての並べ替えおよびフィルター処理が適用された後、指定されたスコープで評価された式の直前の値を返します。  
   
  場合*式*集計が含まれていない、`Previous`既定値は、レポート アイテムの現在のスコープに機能します。  
   
- 詳細グループで使用して`Previous`詳細行の前のインスタンスで、フィールドの参照の値を指定します。  
+ 詳細グループで、直前の詳細行のフィールド参照の値を指定するには `Previous` を使用します。  
   
 > [!NOTE]  
 >  `Previous`関数では、詳細グループでフィールドへの参照のみがサポートしています。 たとえば、詳細グループのテキスト ボックスの場合、 `=Previous(Fields!Quantity.Value)` では、直前の行から `Quantity` フィールドのデータが返されます。 この式が先頭行にある場合は、NULL ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では `Nothing`) が返されます。  
@@ -81,10 +80,10 @@ Previous(expression, scope)
 =Sum(Fields!Sales.Value) & " " & Previous(Sum(Fields!Sales.Value,"GroupbyDay"),"GroupbyYear")  
 ```  
   
-## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

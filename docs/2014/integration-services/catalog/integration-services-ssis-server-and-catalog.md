@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67a74b8b9958eb52426a4f2bc8f36cd14c005f87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771738"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services (SSIS) サーバー
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置できます。  
@@ -33,9 +32,9 @@ ms.locfileid: "48075004"
  SSISDB カタログの機能の概要については、「[SSIS カタログ](ssis-catalog.md)」を参照してください。  
   
 ## <a name="high-availability"></a>高可用性  
- などの他のユーザー データベース、`SSISDB`データベースでデータベース ミラーリングとレプリケーションはサポートされます。 ミラーリングとレプリケーションの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
+ 他のユーザー データベースと同様に、`SSISDB` データベースでデータベース ミラーリングとレプリケーションをサポートします。 ミラーリングとレプリケーションの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
- SSIS と AlwaysOn 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳細については、Matt Masson による blogs.msdn.com のブログ記事「 [SSIS と AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)」を参照してください。  
+ SSIS と AlwaysOn 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳細については、Matt Masson による blogs.msdn.com のブログ記事「 [SSIS と AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)」を参照してください。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio の Integration Services サーバー  
  `SSISDB` データベースをホストする [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続している場合、オブジェクト エクスプローラーに、次のオブジェクトが表示されます。  
@@ -59,6 +58,6 @@ ms.locfileid: "48075004"
 -   [SQL Server Management Studio を使用した SSIS サーバーでのパッケージの実行](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- blogs.msdn.com のブログ エントリ「 [SSIS と AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)」。  
+ blogs.msdn.com のブログ エントリ「 [SSIS と AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)」。  
   
   

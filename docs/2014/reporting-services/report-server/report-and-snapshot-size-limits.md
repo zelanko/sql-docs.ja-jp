@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - large reports
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119328"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103538"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  
@@ -53,14 +52,14 @@ ms.locfileid: "49119328"
  レポート サイズのハード制限は、Excel 形式で表示する場合にのみ存在します。 ワークシートの大きさが、65536 行および 256 列を超えることはできません。 他の表示形式にはこれらの制限がないので、サーバーのリソース量によってのみサイズが制限されます。 Excel ファイルの制限の詳細については、次を参照してください。[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
->  レポートの処理とレンダリングは、メモリ内で行われます。 レポートが大きい場合またはユーザーが多い場合は、なんらかのキャパシティ プランニングを行い、ユーザーにとって満足のいくレベルのパフォーマンスを実現できるようにレポート サーバーを配置してください。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](http://go.microsoft.com/fwlink/?LinkID=70650) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](http://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  
+>  レポートの処理とレンダリングは、メモリ内で行われます。 レポートが大きい場合またはユーザーが多い場合は、なんらかのキャパシティ プランニングを行い、ユーザーにとって満足のいくレベルのパフォーマンスを実現できるようにレポート サーバーを配置してください。 ツールとガイドラインの詳細については、MSDN の次の記事を参照してください。[Reporting Services でのスケーラビリティおよびパフォーマンス計画](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/)と[Visual Studio 2005 を使用して、SQL Server 2005 Reporting Services レポート サーバーのロード テストを実行する](https://go.microsoft.com/fwlink/?LinkID=77519)します。  
   
 ## <a name="measuring-snapshot-storage"></a>スナップショット ストレージの測定  
  スナップショットのサイズは、レポートのデータ量に比例します。 通常、スナップショットは、レポート サーバーに格納されている他の項目よりはるかに大きくなります。 スナップショットの一般的なサイズの範囲は、数メガバイトから数十メガバイトです。 非常に大きいレポートを使用している場合、さらにスナップショットが大きくなる可能性があります。 スナップショットを使用する頻度およびレポート履歴の構成方法に応じて、レポート サーバー データベースに必要なディスク領域が短期間で急速に増える可能性があります。  
   
  既定では、 **reportserver** と **reportservertempdb** データベースは、自動拡張に設定されます。 データベース サイズが自動的に大きくなりますが、自動的に小さくなることはありません。 スナップショットを削除したため、 **reportserver** データベースに余分な容量がある場合、手動でサイズを小さくして、ディスク領域を回復する必要があります。 同様に、非常に大きな対話型のレポートを格納するために **reportservertempdb** のサイズが大きくなっていても、ディスク領域の割り当ては、サイズを小さくするまでその設定のままです。  
   
- レポート サーバー データベースのサイズを測定するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行します。 定期的にデータベースの合計サイズを計算すると、時間の経過と共にレポート サーバー データベースの領域の割り当て方法に関する適切な推定値を算出できます。 次のステートメントは現在使用されている領域の量を測定 (ステートメントは、既定のデータベース名を使用するいると仮定)。  
+ レポート サーバー データベースのサイズを測定するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行します。 定期的にデータベースの合計サイズを計算すると、時間の経過と共にレポート サーバー データベースの領域の割り当て方法に関する適切な推定値を算出できます。 次のステートメントは、現在使用されている領域を測定します (このステートメントでは、既定のデータベース名が使用されていると仮定します)。  
   
 ```  
 USE ReportServer  

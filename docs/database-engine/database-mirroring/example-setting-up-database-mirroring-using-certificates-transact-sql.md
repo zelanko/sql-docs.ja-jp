@@ -1,5 +1,5 @@
 ---
-title: 証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL) | Microsoft Docs
+title: 例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a3aa589de707e6f2edaac83db40ba908bf7177ae
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542733"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212351"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   この例では、証明書ベースの認証を使用してデータベース ミラーリング セッションを作成するために必要なすべての段階について説明します。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  
   
@@ -263,7 +262,7 @@ ms.locfileid: "52542733"
     ```  
   
     > [!NOTE]  
-    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、トランザクションの安全性を FULL (既定の設定) のままにし、2 番目の SET PARTNER **'***partner_server***'** ステートメントの実行後、できる限り早い段階でミラーリング監視サーバーを追加します。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
+    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、トランザクションの安全性を FULL (既定の設定) のままにし、2 番目の SET PARTNER **'**_partner_server_**'** ステートメントの実行後、できる限り早い段階でミラーリング監視サーバーを追加します。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
   
  [&#91;例の先頭に戻る&#93;](#ExampleH2)  
   

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating cache files for Lookup transformation
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c26b79cde6f6b3e8bce96f765fec03f1a2d7c5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900647"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>参照変換用のキャッシュを作成および配置する
   参照変換用のキャッシュ ファイル (.caw) を作成および配置できます。 参照データセットはキャッシュ ファイルに格納されます。  
@@ -73,7 +72,7 @@ ms.locfileid: "48118656"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] プロジェクトを開き、そのパッケージを開きます。  
   
-2.  必要に応じて、パッケージ構成を作成します。 詳細については、「[パッケージ構成を作成する](../../create-package-configurations.md)」を参照してください。  
+2.  必要に応じて、パッケージ構成を作成します。 詳細については、「 [パッケージ構成を作成する](../../create-package-configurations.md)」を参照してください。  
   
 3.  次の操作を行って、キャッシュ ファイルをプロジェクトに追加します。  
   

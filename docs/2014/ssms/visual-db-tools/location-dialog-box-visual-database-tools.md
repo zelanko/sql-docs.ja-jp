@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.getdirectoryname
@@ -12,12 +12,12 @@ ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fd239a71c551c9fc3d5be3dd5fe0ae5aa772308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63306216"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスを使用すると、必要なファイルが含まれているフォルダーを見つけて、選択できます。 選択したフォルダーのパスが、このダイアログ ボックスから呼び出し元のダイアログに返されます。 次の方法でこのダイアログ ボックスにアクセスできます。  

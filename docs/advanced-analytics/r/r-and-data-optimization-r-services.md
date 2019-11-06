@@ -1,188 +1,188 @@
 ---
-title: SQL Server R Services - データの最適化のパフォーマンス |Microsoft Docs
+title: データ最適化のパフォーマンスチューニング
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a8143bae69e85ecf0056dcb9433707a681a69077
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699510"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271891"
 ---
-# <a name="performance-for-r-services---data-optimization"></a>R Services - データの最適化のパフォーマンス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="performance-for-r-services---data-optimization"></a>R Services のパフォーマンス-データの最適化
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、2 つのケース スタディに基づく R Services のパフォーマンスの最適化を説明するシリーズの 3 つ目です。 この記事では、R のパフォーマンスの最適化をについて説明します。 または、Python スクリプトの SQL Server で実行されています。 パフォーマンスを向上し、既知の問題を回避するために、R コードを更新するための方法も説明します。
+この記事は、2つのケーススタディに基づく R Services のパフォーマンスの最適化について説明している3番目の記事です。 この記事では、SQL Server で実行される R または Python スクリプトのパフォーマンスの最適化について説明します。 また、R コードの更新に使用できるメソッドについても説明します。これにより、パフォーマンスを向上させ、既知の問題を回避することができます。
 
-## <a name="choosing-a-compute-context"></a>コンピューティング コンテキストを選択します。
+## <a name="choosing-a-compute-context"></a>コンピューティングコンテキストの選択
 
-SQL Server 2016 および 2017 で、いずれかを使用できる、**ローカル**または**SQL** R または Python スクリプトを実行するときに、コンピューティング コンテキスト。
+SQL Server 2016 および2017では、R または Python スクリプトを実行するときに、**ローカル**または**SQL**のいずれかの計算コンテキストを使用できます。
 
-使用する場合、**ローカル**コンピューターおよびサーバーではなく、分析、コンピューティング コンテキストを実行します。 そのため、コードで使用する SQL Server からデータを取得する場合、データをネットワーク経由でフェッチする必要があります。 このネットワーク転送によるパフォーマンスの低下は、転送されるデータのサイズ、ネットワークの速度、および同時に発生しているその他のネットワーク転送によって異なります。
+**ローカル**の計算コンテキストを使用する場合は、サーバー上ではなく、コンピューター上で分析が実行されます。 したがって、コードで使用するために SQL Server からデータを取得する場合は、ネットワーク経由でデータをフェッチする必要があります。 このネットワーク転送によるパフォーマンスの低下は、転送されるデータのサイズ、ネットワークの速度、および同時に発生しているその他のネットワーク転送によって異なります。
 
-使用する場合、 **SQL Server 計算コンテキスト**コードは、サーバーで実行されます。 SQL Server からデータを取得する場合は、データは、分析を実行するサーバーにローカルにする必要があり、ネットワークのオーバーヘッドが発生しないためです。 他のソースからデータをインポートする必要がある場合は、ETL を事前に配置することを検討します。
+**SQL Server の計算コンテキスト**を使用する場合、コードはサーバー上で実行されます。 SQL Server からデータを取得する場合、データは分析を実行しているサーバーに対してローカルである必要があるため、ネットワークのオーバーヘッドは発生しません。 他のソースからデータをインポートする必要がある場合は、事前に ETL を配置することを検討してください。
 
 大規模なデータ セットを操作する場合は、常に SQL 計算コンテキストを使用してください。
 
 ## <a name="factors"></a>因子
 
-R 言語の概念には*要因*、カテゴリ データの特殊な変数であります。 データ サイエンティストは多くの場合、数式で因子変数を使用して、データを確実要因としてのカテゴリの変数を処理するためは、machine learning の関数によって正しく処理します。 詳細については、次を参照してください。[ダミーの R: 因子変数](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)します。
+R 言語には、カテゴリデータに対する特殊な変数である*要素*の概念があります。 多くの場合、データ科学者は、カテゴリ変数を要因として処理することで、データが機械学習関数によって適切に処理されるようにするため、因子変数を式で使用します。 詳細については[、「R for ダミー」を参照してください。Factor 変数](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
 
-仕様では、整数と保管または処理用にもう一度因子変数文字列から変換できます。 R`data.frame`場合を除き、関数が要素の変数としてすべての文字列を処理、引数*stringsAsFactors*に設定されている**False**します。 これにより、処理するために整数に変換され、元の文字列にマップされ、文字列が自動的には。
+仕様により、係数変数を文字列から整数に変換し、ストレージまたは処理のために再度返すことができます。 引数 stringsAsFactors `data.frame`が**False**に設定されていない限り、 R 関数はすべての文字列を factor 変数として処理します。 これは、文字列が処理のために自動的に整数に変換され、元の文字列にマップされることを意味します。
 
-要素のソース データが、整数として格納されている場合パフォーマンスが低下、R 係数の整数を実行時に文字列に変換し、独自の内部文字列から整数型に変換を実行するためです。
+係数のソースデータが整数として格納されている場合、R は実行時に係数整数を文字列に変換してから、独自の内部文字列から整数への変換を実行するため、パフォーマンスが低下する可能性があります。
 
-このような実行時変換を回避するには、として、SQL Server テーブル内の整数値を格納して、使用を検討してください、 _colInfo_要素として使用する列のレベルを指定する引数。 RevoScaleR のほとんどのデータ ソース オブジェクトは、パラメーターを受け取る_colInfo_します。 データ ソースで使用される変数の名前で、型を指定して、列の値で変数のレベルや変換を定義するには、このパラメーターを使用します。
+このような実行時の変換を回避するには、値を整数として SQL Server テーブルに格納し、 _Colinfo_引数を使用して、係数として使用する列のレベルを指定することを検討してください。 RevoScaleR のほとんどのデータソースオブジェクトは、パラメーター _Colinfo_を受け取ります。 このパラメーターを使用して、データソースによって使用される変数に名前を指定し、その型を指定して、列の値に対して変数のレベルまたは変換を定義します。
 
-たとえば、次の R 関数の呼び出しはテーブルから 1、2、および 3 の整数を取得します。、"apple"レベルの要素の値、「オレンジ」および"banana"をマッピングします。
+たとえば、次の R 関数の呼び出しでは、テーブルから整数1、2、および3が取得されますが、値は "apple"、"オレンジ"、および "バナナ" の各レベルの係数にマップされます。
 
 ```R
 c("fruit" = c(type = "factor", levels=as.character(c(1:3)), newLevels=c("apple", "orange", "banana")))
 ```
 
-基になる列に文字列が含まれている場合は常に詳細を使用して、事前にレベルを指定する効率的な_colInfo_パラメーター。 たとえば、次の R コードは、読み取られるとして、要因として、文字列を処理します。
+ソース列に文字列が含まれている場合は、 _Colinfo_パラメーターを使用して事前にレベルを指定する方が効率的です。 たとえば、次の R コードは、文字列を読み取り中の要素として扱います。
 
 ```R
 c("fruit" = c(type = "factor", levels= c("apple", "orange", "banana")))
 ```
 
-モデルの生成でセマンティックな相違点がない場合は、後者のアプローチはパフォーマンスが向上するつながることができます。
+モデルの生成にセマンティックの違いがない場合、後者のアプローチによってパフォーマンスが向上する可能性があります。
 
 ## <a name="data-transformations"></a>データ変換
 
-多くの場合、データ サイエンティストは、分析の一部として R で記述された変換関数を使用します。 変換関数は、テーブルから取得した各行に適用されます。 SQL Server では、このような変換は、R インタープリターと分析エンジン間の通信を必要とする、バッチで取得したすべての行に適用されます。 変換を実行するため、データは SQL から分析エンジンに移動し、その後 R インタープリターで処理されて戻ってきます。
+多くの場合、データ サイエンティストは、分析の一部として R で記述された変換関数を使用します。 変換関数は、テーブルから取得した各行に適用されます。 SQL Server では、このような変換はバッチで取得されるすべての行に適用されます。これには、R インタープリターと分析エンジン間の通信が必要です。 変換を実行するため、データは SQL から分析エンジンに移動し、その後 R インタープリターで処理されて戻ってきます。
 
-このため、R コードの一部として変換を使用して関連するデータの量によって、アルゴリズムのパフォーマンスに悪影響が重要なことができます。
+このため、R コードの一部として変換を使用すると、関連するデータ量によっては、アルゴリズムのパフォーマンスに大きな悪影響を及ぼす可能性があります。
 
-テーブルまたはビュー、分析を実行する前にすべての必要な列があり、計算中に変換を回避する方が効率的になります。 既存のテーブルに列を追加できない場合は、変換後の列を含む別のテーブルまたはビューを作成し、適切なクエリを使用してデータを取得することを検討してください。
+分析を実行する前に、テーブルまたはビューに必要なすべての列を用意し、計算中に変換を回避する方が効率的です。 既存のテーブルに列を追加できない場合は、変換後の列を含む別のテーブルまたはビューを作成し、適切なクエリを使用してデータを取得することを検討してください。
 
-## <a name="batch-row-reads"></a>バッチの行を読み取ります
+## <a name="batch-row-reads"></a>バッチ行読み取り
 
-SQL Server のデータ ソースを使用する場合 (`RxSqlServerData`) で、コードをお勧め、パラメーターを使用して試してみること_rowsPerRead_バッチ サイズを指定します。 このパラメーターは、クエリを実行し、外部のスクリプトに送信して処理を行の数を定義します。 アルゴリズムでは、実行時に指定した各バッチ内の行の数のみが表示されます。
+コード内で SQL Server データソース (`RxSqlServerData`) を使用する場合は、 _rowsperread_パラメーターを使用してバッチサイズを指定することをお勧めします。 このパラメーターは、クエリを実行してから外部スクリプトに送信して処理する行の数を定義します。 実行時には、アルゴリズムによって、各バッチ内の指定された行数のみが認識されます。
 
-一度に処理されるデータの量を制御する機能は、解決または問題を回避するのに役立ちます。 たとえば、入力データセットが非常に広い場合 (多数の列がある)、またはデータセットにフリー テキスト) など、いくつかの大きな列がある場合は、メモリ不足データのページングを回避するためにバッチ サイズを小さくことができます。
+一度に処理されるデータの量を制御できるため、問題の解決や回避に役立ちます。 たとえば、入力データセットの幅が非常に広い (多数の列がある) 場合や、データセットにいくつかの大きな列 (フリーテキストなど) が含まれている場合、バッチサイズを小さくして、メモリからのページングデータを回避できます。
 
-既定では、このパラメーターの値は低いメモリ マシン上であっても適切なパフォーマンスを確保、50000 に設定されます。 サーバーに十分なメモリがある場合は、500,000 または 1,000,000 にこの値を増やすと、特に大規模なテーブルのパフォーマンスを向上できます。
+既定では、このパラメーターの値は5万に設定されており、メモリが不足しているマシンでもパフォーマンスが向上します。 サーバーに十分なメモリがある場合は、この値を50万または100万に増やした方がパフォーマンスが向上する可能性があります (特に大きなテーブルの場合)。
 
-バッチ サイズを増やすことの利点は、複数のプロセスで実行できるタスクと大規模なデータ セットでは、明らかになります。 ただし、この値を増やすことが常になければ、最適な結果です。 お客様のデータと、最適な値を特定するアルゴリズムを試すことをお勧めします。
+バッチサイズを大きくする利点は、大きなデータセットや、複数のプロセスで実行できるタスクで明らかになります。 ただし、この値を大きくしても、常に最適な結果が得られるとは限りません。 最適な値を判断するには、データとアルゴリズムを試してみることをお勧めします。
 
 ## <a name="parallel-processing"></a>並列処理
 
-パフォーマンスを向上させる**rx**分析関数は、サーバー コンピューターで使用可能なコアを使用して並列でタスクを実行する SQL Server の機能を活用することができます。
+**Rx**分析関数のパフォーマンスを向上させるために、SQL Server の機能を活用して、サーバーコンピューターで使用可能なコアを使用してタスクを並列に実行することができます。
 
-SQL Server で R を使用した並列化を実現するために 2 つの方法はあります。
+SQL Server で R を使用して並列化を実現するには、次の2つの方法があります。
 
--   **使用\@並列です。** `sp_execute_external_script` ストアド プロシージャを使用して R スクリプトを実行する場合は、`@parallel` パラメーターを `1` に設定します。 最適な方法は、R スクリプトの場合これは**いない**処理のためには、その他のメカニズムがあるは、RevoScaleR 関数を使用します。 スクリプト (一般的に rx が付く"")、RevoScaleR 関数を使用する場合は、並列処理が自動的に実行を明示的に設定する必要はありません`@parallel`に`1`します。
+-   **並列\@を使用します。** `sp_execute_external_script` ストアド プロシージャを使用して R スクリプトを実行する場合は、`@parallel` パラメーターを `1` に設定します。 これは、R スクリプトが RevoScaleR functions を使用し**ない**場合に最適な方法です。これには、他の処理メカニズムがあります。 スクリプトで RevoScaleR 関数 (通常は "rx" で始まる) を使用している場合は、並列処理が自動的に実行さ`@parallel`れる`1`ため、を明示的にに設定する必要はありません。
 
-    R スクリプトを並列に処理でき、SQL クエリを並列化できる場合は、データベース エンジンは複数の並列プロセスを作成します。 作成できるプロセスの最大数が等しく、**並列処理の最大限度**インスタンスの (MAXDOP) 設定します。 すべてのプロセスは、同じスクリプトを実行しが、データの一部のみが表示されます。
+    R スクリプトを並列化できる場合、および SQL クエリを並列化できる場合は、データベースエンジンによって複数の並列処理が作成されます。 作成できるプロセスの最大数は、インスタンスの [**並列処理の最大限度**(MAXDOP)] 設定と同じです。 その後、すべてのプロセスが同じスクリプトを実行しますが、データの一部のみを受け取ります。
     
-    したがって、このメソッドは場合など、すべてのデータを確認する必要がありますスクリプトでは有用モデルをトレーニングします。 ただし、バッチ予測などのタスクを並列で実行する場合は便利です。 並列化を使用しての詳細については`sp_execute_external_script`を参照してください、**ヒントの詳細: 並列処理**の[TRANSACT-SQL での R コードを使用して](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)します。
+    このため、モデルのトレーニング時など、すべてのデータを表示する必要があるスクリプトでは、この方法は役に立ちません。 ただし、バッチ予測などのタスクを並列で実行する場合は便利です。 で`sp_execute_external_script`の並列処理の使用の詳細については、「 [transact-sql での R コードの使用](../tutorials/quickstart-r-create-script.md)」の「**高度なヒント: 並列処理**」セクションを参照してください。
 
--   **NumTasks を使用して、1 を = です。** 使用する場合**rx**で SQL Server 計算コンテキストでは、関数の値の設定、 _numTasks_パラメーターを作成するにはプロセスの数。 作成されたプロセスの数にすることはできません以上**MAXDOP**。 ただし、データベース エンジンによって作成されたプロセスの実際の数が決定されます、要求することがよりも簡単です。
+-   **NumTasks = 1 を使用します。** SQL Server の計算コンテキストで**rx**関数を使用する場合は、 _numtasks_パラメーターの値を、作成するプロセスの数に設定します。 作成されるプロセスの数は**MAXDOP**を超えることはできません。ただし、実際に作成されるプロセスの数はデータベースエンジンによって決定され、要求した数よりも少なくなる場合があります。
 
-    R スクリプトを並列に処理でき、SQL クエリを並列化できる場合は、rx 関数を実行している場合に SQL Server によって複数の並列プロセスに作成されます。 作成されたプロセスの実際の数は、さまざまなリソース ガバナンスなどの要因、リソース、他のセッション、および R スクリプトで使用されるクエリのクエリ実行プランの現在の使用量に依存します。
+    R スクリプトを並列化でき、SQL クエリを並列化できる場合、SQL Server は、rx 関数を実行するときに複数の並列プロセスを作成します。 実際に作成されるプロセスの数は、リソースガバナンス、リソースの現在の使用状況、その他のセッション、R スクリプトで使用されるクエリのクエリ実行プランなど、さまざまな要因によって異なります。
 
-## <a name="query-parallelization"></a>クエリの並列処理
+## <a name="query-parallelization"></a>クエリの並列化
 
-Microsoft R では、RxSqlServerData データ ソース オブジェクトとしてデータを定義して SQL Server データ ソースを操作できます。
+Microsoft R では、RxSqlServerData データソースオブジェクトとしてデータを定義することで、SQL Server データソースを操作できます。
 
-全体のテーブルまたはビューをに基づいてデータ ソースを作成します。
+テーブルまたはビュー全体に基づいてデータソースを作成します。
 
 ```R
 RxSqlServerData(table= "airline", connectionString = sqlConnString)
 ```
 
-SQL クエリに基づくデータ ソースを作成します。
+SQL クエリに基づいてデータソースを作成します。
 
 ```R
 RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airlineWithIndex WHERE rowNum <= 100000", connectionString = sqlConnString)
 ```
 
 > [!NOTE]
-> R Services が内部のヒューリスティックを使用して、テーブルから取得するために必要な列を決定する場合は、クエリではなく、データ ソースにテーブルを指定すると、ただし、この方法では、並列実行で発生する可能性はありません。
+> クエリではなく、データソースにテーブルが指定されている場合、R Services は内部ヒューリスティックを使用して、テーブルからフェッチするのに必要な列を決定します。ただし、この方法では、並列実行が発生する可能性はほとんどありません。
 
-確実に並列でデータを分析することができます、データベース エンジンが並列クエリ プランを作成できるように、データを取得するためのクエリを構成する必要があります。 コードやアルゴリズムは、大量のデータを使用している場合、以下のことを確認する指定されたクエリ`RxSqlServerData`は並列実行用に最適化されています。 並列実行プランにならないクエリは、計算の 1 つのプロセスになる可能性があります。
+データを並列で分析できるようにするには、データの取得に使用されるクエリを、データベースエンジンが並列クエリプランを作成できるようにする必要があります。 コードまたはアルゴリズムで大量のデータを使用する場合は、に`RxSqlServerData`指定されたクエリが並列実行のために最適化されていることを確認してください。 並列実行プランにならないクエリは、計算の 1 つのプロセスになる可能性があります。
 
-大規模なデータセットを使用する必要がある場合は、Management Studio または R コードを実行する前に、別の SQL クエリ アナライザーを使用して、実行プランを分析します。 クエリのパフォーマンスを向上させるために推奨される手順を実行し、します。 たとえば、テーブルのインデックス不足は、クエリの実行時間に影響する可能性があります。 詳細については、次を参照してください。[パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)します。
+大規模なデータセットを処理する必要がある場合は、R コードを実行する前に Management Studio または別の SQL クエリアナライザーを使用して、実行プランを分析します。 次に、クエリのパフォーマンスを向上させるために、推奨される手順を実行します。 たとえば、テーブルのインデックス不足は、クエリの実行時間に影響する可能性があります。 詳細については、「[パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)」を参照してください。
 
-パフォーマンスに影響を与えるもう 1 つのよくある間違いは、クエリが必要な数より多い列を取得します。 たとえば、数式は、3 つだけの列に基づいていますが、ソース テーブル内の 30 個の列が、移動する場合はデータが不必要にします。
+パフォーマンスに影響する可能性があるもう1つの一般的な誤りは、クエリが必要以上に多くの列を取得することです。 たとえば、数式が3つの列にのみ基づいていても、ソーステーブルに30列含まれている場合は、データを不必要に移動します。
 
- + 使用しないでください`SELECT *`!
- + データセット内の列を確認し、分析のために必要なもののみを識別する時間がかかる
- + GUID や更新などの R コードと互換性があるデータ型を含むすべての列に、クエリから削除します。
- + サポートされていない日付と時刻の形式の確認
- + テーブルを読み込むのではなく特定の値を選択するか、変換エラーを回避するために列をキャストするビューを作成します。
+ + を使用`SELECT *`しないでください。
+ + データセット内の列を確認し、分析に必要な列のみを特定します。
+ + GUID や rowguids など、R コードと互換性のないデータ型を含む列をクエリから削除します。
+ + サポートされていない日付と時刻の形式を確認する
+ + 変換エラーを回避するために、テーブルを読み込むのではなく、特定の値を選択するビューまたは列をキャストするビューを作成します。
 
-## <a name="optimizing-the-machine-learning-algorithm"></a>機械学習アルゴリズムを最適化します。
+## <a name="optimizing-the-machine-learning-algorithm"></a>機械学習アルゴリズムの最適化
 
-このセクションでは、その他のヒントと RevoScaleR と Microsoft R での他のオプションに固有のリソースを提供します。
+このセクションでは、Microsoft R の RevoScaleR およびその他のオプションに固有のその他のヒントとリソースについて説明します。
 
 > [!TIP]
-> R の最適化の概要については、この記事の範囲外です。 ただし、コードを速く必要がある場合をお勧め、人気のある情報の記事[、R Inferno](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf)します。 R でのプログラミング構成要素と鮮明な言語と詳細のよくある落とし穴について説明し、R プログラミング技法の多くの具体例を提供します。
+> R の最適化についての一般的な説明は、この記事の範囲外です。 ただし、コードの作成を高速化する必要がある場合は、「 [R inferno 』](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf)」という人気の記事をお勧めします。 R のプログラミング構成要素と、鮮やかな言語と詳細におけるよくある落とし穴について説明し、R プログラミング手法のさまざまな例を示します。
 
 ### <a name="optimizations-for-revoscaler"></a>RevoScaleR の最適化
 
-RevoScaleR アルゴリズムの多くは、トレーニング済みモデルを生成する方法を制御するパラメーターをサポートします。 精度とモデルの正確性は重要ですが、アルゴリズムのパフォーマンスが同じくらい重要な場合があります。 精度とトレーニングの時間のバランスを取得すると多くの場合、計算速度を上げるため、精度と正確性を損なうことがなくパフォーマンスを向上するパラメーターを変更することができます。
+多くの RevoScaleR アルゴリズムは、トレーニング済みモデルの生成方法を制御するためのパラメーターをサポートしています。 モデルの精度と正確性は重要ですが、アルゴリズムのパフォーマンスも同様に重要な場合があります。 精度とトレーニング時間の間で適切なバランスを得るために、パラメーターを変更して計算速度を向上させることができます。多くの場合、精度や正確性を低下させずにパフォーマンスを向上させることができます。
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree` サポート、`maxDepth`パラメーターで、デシジョン ツリーの深さを制御します。 として`maxDepth`は大きくしても、パフォーマンスが低下、ため、パフォーマンスの低下と深さを増やすことのメリットを分析することが重要です。
+    `rxDTree`では`maxDepth` 、デシジョンツリーの深さを制御するパラメーターがサポートされています。 増加`maxDepth`に応じてパフォーマンスが低下する可能性があるため、深さと低下のパフォーマンスを向上させる利点を分析することが重要です。
 
-    などのパラメーターを調整することで時間の複雑さと予測の精度のバランスを制御することもできます。 `maxNumBins`、 `maxDepth`、 `maxComplete`、および`maxSurrogate`します。 深さを 10 または 15 を超えた値に増やすと、計算が非常に不経済になる可能性があります。
+    `maxNumBins` 、`maxDepth`、、などのパラメーターを調整することで、時間の複雑さと予測精度のバランスを制御することもできます。`maxSurrogate` `maxComplete` 深さを 10 または 15 を超えた値に増やすと、計算が非常に不経済になる可能性があります。
 
 + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
 
-    使用してください、`cube`引数が数式の最初の従属変数が因子変数である場合。
+    数式の最初`cube`の依存変数が factor 変数の場合は、引数を使用してください。
     
-    ときに`cube`に設定されている`TRUE`、高速である可能性があり、標準の回帰計算よりもメモリを使用するパーティションの逆関数を使用して、回帰を実行します。 数式に大量の変数がある場合は、パフォーマンスが大幅に向上する可能性があります。
+    が`cube` に`TRUE`設定されている場合、回帰はパーティション分割された逆を使用して実行されます。これは、標準の回帰計算よりも高速で使用されるメモリが少なくなる可能性があります。 数式に大量の変数がある場合は、パフォーマンスが大幅に向上する可能性があります。
 
 + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
 
-    使用して、`cube`引数の最初の従属変数が因子変数である場合。
+    最初の`cube`依存変数が factor 変数の場合は、引数を使用します。
     
-    ときに`cube`に設定されている`TRUE`アルゴリズムは、高速である可能性がありより少ないメモリを使用するパーティションの逆関数を使用します。 数式に大量の変数がある場合は、パフォーマンスが大幅に向上する可能性があります。
+    が`cube` に`TRUE`設定されている場合、アルゴリズムではパーティション分割された逆が使用されますが、これは高速で、使用するメモリが少なくなる可能性があります。 数式に大量の変数がある場合は、パフォーマンスが大幅に向上する可能性があります。
 
-RevoScaleR の最適化については、次の記事を参照してください。
+RevoScaleR の最適化に関するその他のガイダンスについては、次の記事を参照してください。
 
-+ サポートの記事:[パフォーマンス チューニング rxDForest と rxDTree のオプション](https://support.microsoft.com/kb/3104235)
++ サポート記事:[RxDForest と rxDTree のパフォーマンスチューニングオプション](https://support.microsoft.com/kb/3104235)
 
-+ ブースト ツリー モデルでモデルを制御する方法に合わせて:[の推定モデルを使用して確率的勾配ブースティング](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ ブーストツリーモデルでモデルを制御するためのメソッドは次のとおりです。[ストキャスティクス勾配ブーストを使用したモデルの推定](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ RevoScaleR の移動し、データ処理の概要: [ScaleR でカスタムのチャンク アルゴリズムを記述します。](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ RevoScaleR がデータを移動して処理する方法の概要:[ScaleR でカスタムチャンキングアルゴリズムを作成する](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ RevoScaleR のプログラミング モデル: [RevoScaleR でスレッドを管理します。](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ RevoScaleR のプログラミングモデル:[RevoScaleR でのスレッドの管理](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
-+ 関数リファレンス[rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
++ [RxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)の関数リファレンス
 
-+ 関数リファレンス[rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
++ [Rxbtrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)の関数リファレンス
 
-### <a name="use-microsoftml"></a>MicrosoftML を使用します。
+### <a name="use-microsoftml"></a>Microsoft Ml を使用する
 
-また、新しいを調査することをお勧め**MicrosoftML**パッケージで、計算コンテキストと RevoScaleR で提供される変換に使用できるスケーラブルな機械学習アルゴリズムを提供します。
+また、RevoScaleR によって提供されるコンピューティングコンテキストと変換を使用できるスケーラブルな機械学習アルゴリズムを提供する、新しい**Microsoft ml**パッケージを参照することをお勧めします。
 
-+ [MicrosoftML を概要します。](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Microsoft Ml を使ってみる](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
-+ [MicrosoftML アルゴリズムを選択する方法](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
++ [Microsoft Ml アルゴリズムを選択する方法](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
-### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Microsoft R Server を使用してソリューションを運用化します。
+### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Microsoft R Server を使用したソリューションの運用化
 
-場合は、シナリオでは、格納されたモデルを使用して予測を高速をアプリケーションに machine learning の統合、使用することもできます、 [operationalization](https://docs.microsoft.com/r-server/what-is-operationalization) (旧称 DeployR)、Microsoft R Server で機能します。
+格納済みモデルを使用した迅速な予測、または機械学習をアプリケーションに統合するシナリオでは、Microsoft R Server (旧称 DeployR) の運用[化機能を](https://docs.microsoft.com/r-server/what-is-operationalization)使用できます。
 
-+ として、**データ サイエンティスト**を使用して、 [mrsdeploy パッケージ](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)、他のコンピューターと R コードを共有し、web、デスクトップ、モバイル、およびダッシュ ボード アプリケーション内での R 分析を統合する:[を発行する方法R Server で R の web サービスおよび管理](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ **データ科学**者は、 [mrsdeploy パッケージ](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)を使用して、r コードを他のコンピューターと共有したり、web、デスクトップ、モバイル、およびダッシュボードのアプリケーション内に r analytics を統合したりできます。[R Server で R web サービスを発行および管理する方法](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ として、**管理者**、パッケージの管理、web のノードを監視する方法について説明しますとコンピューティング ノード、および R ジョブでのセキュリティを制御:[と対話し、R での web サービスを使用する方法](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ **管理者**は、パッケージの管理、web ノードとコンピューティングノードの監視、R ジョブのセキュリティの制御を行う方法について説明します。[R で web サービスを操作して使用する方法](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>このシリーズの記事
 
-[パフォーマンス チューニング-R の概要](sql-server-r-services-performance-tuning.md)
+[R のパフォーマンスチューニング-概要](sql-server-r-services-performance-tuning.md)
 
-[R で SQL Server の構成のパフォーマンス チューニング](sql-server-configuration-r-services.md)
+[R SQL Server 構成のパフォーマンスチューニング](sql-server-configuration-r-services.md)
 
-[R の R のパフォーマンス チューニング コードとデータの最適化](r-and-data-optimization-r-services.md)
+[R のパフォーマンスチューニング-R コードとデータの最適化](r-and-data-optimization-r-services.md)
 
-[パフォーマンス チューニング - 結果のケース スタディ](performance-case-study-r-services.md)
+[パフォーマンスチューニング-ケーススタディの結果](performance-case-study-r-services.md)

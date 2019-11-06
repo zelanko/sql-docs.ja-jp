@@ -11,16 +11,15 @@ helpviewer_keywords:
 - data formats [SQL Server], choosing
 - bulk importing [SQL Server], data formats
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b87bd6357b51803ff9535483b9991099b903e1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 80221c25d6bfba9374fbe662237678ea27d0c455
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035791"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>一括インポートまたは一括エクスポートのデータ形式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +38,11 @@ ms.locfileid: "52527516"
 |演算|ネイティブ|Unicode ネイティブ|文字|Unicode 文字|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |拡張文字や 2 バイト文字セット (DBCS) の文字を含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。 フォーマット ファイルを使用する場合を除いて、これらのテーブルは同じように定義されている必要があります。|可*|-|-|-|  
-|文字形式や Unicode 形式とは異なり、ネイティブ データ形式では各 **sql_variant** 値のメタデータが保持されるので、 **sql_variant** 列ではネイティブ データ形式を使用することが最も適しています。|[ユーザー アカウント制御]|-|-|-|  
-|拡張文字や DBCS 文字を含むデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|[ユーザー アカウント制御]|-|-|  
-|別のプログラムで生成されたテキスト ファイルからデータを一括インポートします。|-|-|[ユーザー アカウント制御]|-|  
-|別のプログラムで使用するテキスト ファイルにデータを一括エクスポートします。|-|-|[ユーザー アカウント制御]|-|  
-|Unicode データを含み、拡張文字や DBCS 文字は含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|-|-|[ユーザー アカウント制御]|  
+|文字形式や Unicode 形式とは異なり、ネイティブ データ形式では各 **sql_variant** 値のメタデータが保持されるので、 **sql_variant** 列ではネイティブ データ形式を使用することが最も適しています。|はい|-|-|-|  
+|拡張文字や DBCS 文字を含むデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|はい|-|-|  
+|別のプログラムで生成されたテキスト ファイルからデータを一括インポートします。|-|-|はい|-|  
+|別のプログラムで使用するテキスト ファイルにデータを一括エクスポートします。|-|-|はい|-|  
+|Unicode データを含み、拡張文字や DBCS 文字は含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|-|-|はい|  
   
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp **を使用して**からデータを最も速く一括エクスポートできる方法です。  
   

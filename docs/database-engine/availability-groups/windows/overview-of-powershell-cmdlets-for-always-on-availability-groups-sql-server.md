@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性グループの PowerShell コマンドレットの概要 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの PowerShell コマンドレットの概要
+description: 'Always On 可用性グループの管理に利用できるさまざまな PowerShell コマンドレットの参照。 '
+ms.custom: seodec18
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,37 +14,20 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f4491943f13e515bda4d46285b1a1e0dd52dfd9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb6542b5fa2028cf63712e17281b0a120f76f1d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014633"
 ---
-# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Always On 可用性グループの PowerShell コマンドレットの概要 (SQL Server)
+# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 可用性グループの PowerShell コマンドレットの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell は、特にシステム管理用に設計されている、タスク ベースのコマンド ライン シェルとスクリプト言語です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で一連の PowerShell コマンドレットを提供しており、それらを使用すると可用性グループ、可用性レプリカ、および可用性データベースの配置、管理、および監視ができます。  
   
 > [!NOTE]  
 >  PowerShell コマンドレットは、アクションを正常に開始した時点で完了できます。 つまり、目的の操作 (可用性グループのフェールオーバーなど) の完了を示すわけではありません。 一連の操作をスクリプト化している場合は、アクションの状態を確認し、完了するまで待機しなければならないことがあります。  
-  
- このトピックでは、以下の一連のタスクのためのコマンドレットについて説明します。  
-  
--   [Always On 可用性グループのためのサーバー インスタンスの構成](#ConfiguringServerInstance)  
-  
--   [データベースおよびトランザクション ログのバックアップと復元](#BnRcmdlets)  
-  
--   [可用性グループの作成と管理](#DeployManageAGs)  
-  
--   [可用性グループ リスナーの作成と管理](#AGlisteners)  
-  
--   [可用性レプリカの作成と管理](#DeployManageARs)  
-  
--   [可用性データベースの追加と管理](#DeployManageDbs)  
-  
--   [可用性グループの正常性の監視](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のタスクを実行するコマンドレットの使用方法を説明している [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] オンライン ブックのトピックの一覧については、「[Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「関連タスク」を参照してください。  
@@ -117,7 +101,7 @@ ms.locfileid: "47597871"
 |[**Test-SqlAvailabilityReplica**](/powershell/module/sqlserver/test-sqlavailabilityreplica)|SQL Server のポリシー ベースの管理 (PBM) のポリシーを評価することによって、可用性レプリカの正常性を査定します。|可用性レプリカをホストする任意のサーバー インスタンス。*|  
 |[**Test-SqlDatabaseReplicaState**](/powershell/module/sqlserver/test-sqldatabasereplicastate)|SQL Server のポリシー ベースの管理 (PBM) のポリシーを評価することによって、参加しているすべての可用性レプリカ上の可用性データベースの正常性を査定します。|可用性レプリカをホストする任意のサーバー インスタンス。*|  
   
- * 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
+ \* 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
   
  詳細については、「[Always On ポリシーを使用した可用性グループの正常性の確認 &#40;SQL Server&#41](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)」を参照してください。  
   

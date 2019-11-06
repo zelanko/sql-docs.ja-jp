@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873340"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のサーバー側のトレース機能を利用して、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。 このプロセスは 2 つの部分で構成されます。  
@@ -54,7 +54,7 @@ ms.locfileid: "48143442"
   
 6.  **[全般]** タブで、次の操作を行います。  
   
-    1.  **[トレース名]** ボックスに、トレースに使用する名前を入力します。 この例では、トレース名は`SPgt80`します。  
+    1.  **[トレース名]** ボックスに、トレースに使用する名前を入力します。 この例では、トレース名は「`SPgt80`」です。  
   
     2.  **[使用するテンプレート]** ボックスの一覧でトレースに使用するテンプレートを選択します。 この例では、 **[TSQL_SPs]** をクリックします。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48143442"
   
 10. ツール バーの **[選択されたトレースの停止]** または **[選択されたトレースの一時停止]** をクリックします。  
   
-11. **[ファイル]** メニューで **[エクスポート]**、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
+11. **[ファイル]** メニューで **[エクスポート]** 、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
   
 12. **[名前を付けてファイルを保存]** ダイアログ ボックスの **[ファイル名]** ボックスに、トレース定義に使用する名前を入力し、目的の場所に保存します。 この例では、ファイル名はトレース名 (SPgt80) と同じです。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48143442"
   
 3.  スクリプトをスクロールし、スクリプトのコメント テキストに示されている次の置換を行います。  
   
-    -   **SQLTrace Collection Set Name Here** をコレクション セットに使用する名前に置換します。 この例では、コレクション セットの名前`SPROC_CollectionSet`します。  
+    -   **SQLTrace Collection Set Name Here** をコレクション セットに使用する名前に置換します。 この例では、コレクション セット名は "`SPROC_CollectionSet`" です。  
   
-    -   **SQLTrace Collection Item Name Here** をコレクション アイテムに使用する名前に置換します。 この例では、名、コレクション アイテム`SPROC_Collection_Item`します。  
+    -   **SQLTrace Collection Item Name Here** をコレクション アイテムに使用する名前に置換します。 この例では、コレクション アイテム名は "`SPROC_Collection_Item`" です。  
   
 4.  **[実行]** をクリックして、クエリを実行してコレクション セットを作成します。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48143442"
   
     1.  **[管理]** を右クリックし、 **[更新]** をクリックします。  
   
-    2.  **[管理]**、 **[データ コレクション]** の順に展開します。  
+    2.  **[管理]** 、 **[データ コレクション]** の順に展開します。  
   
      `SPROC_CollectionSet`と同じレベルでコレクション セットが表示されます、**システム データ コレクション セット**ノード。 既定では、このコレクション セットは無効になっています。  
   

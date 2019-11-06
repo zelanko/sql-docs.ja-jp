@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02bf9026d14f759b5e5931b132faae3ee0fec1a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084731"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>マイニング モデルからのフィルターの削除
   マイニング モデルに対するフィルターを作成する場合は、データ ソース ビュー内のデータのサブセットに対するモデルを作成できます。 フィルターは、元のデータのサブセットでモデルの精度をテストするためにも役立ちます。  
@@ -33,20 +32,20 @@ ms.locfileid: "48082942"
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     または  
+     - または -  
   
      モデルを選択します。 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
 4.  **[モデル フィルター]** ダイアログ ボックスで、削除する条件が含まれているグリッドの行を右クリックします。  
   
-5.  **[削除]** を選択します。  
+5.  [ **削除**] を選択します。  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>フィルター エディターのダイアログ ボックスからマイニング モデルのフィルターを消去するには  
   
 -   **[フィルター エディター]** ダイアログ ボックスで、グリッドの任意の行を右クリックし、 **[すべて削除]** をクリックします。  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>[プロパティ] ウィンドウを使用したモデル フィルターの操作  
- フィルター全体を削除する場合、フィルター エディターのダイアログ ボックスを開く必要はありません。 作成したフィルター条件が表示されます、`Filter`マイニング モデルのプロパティ。  
+ フィルター全体を削除する場合、フィルター エディターのダイアログ ボックスを開く必要はありません。 作成したフィルター条件は、マイニング モデルの `Filter` プロパティで使用できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ではマイニング モデルのプロパティを表示できますが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ではできません。  
@@ -59,9 +58,9 @@ ms.locfileid: "48082942"
   
 3.  BackSpace キーまたは Del キーを押します。  
   
-## <a name="see-also"></a>参照  
- [マイニング モデルからケース データにドリルスルーします。](drill-through-to-case-data-from-a-mining-model.md)   
+## <a name="see-also"></a>関連項目  
+ [マイニング モデルからケース データへのドリルスルー](drill-through-to-case-data-from-a-mining-model.md)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
- [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)  
+ [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)  
   
   

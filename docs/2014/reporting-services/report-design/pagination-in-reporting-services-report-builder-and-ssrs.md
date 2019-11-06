@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0748fd29a116ee426f17c3cf12ce67ebcd0c519a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098043"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105475"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services の改ページ (レポート ビルダーおよび SSRS)
-  ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 改ページ[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]表示し、レポートの配信に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レンダラーを使用して、レポートの配信に最適化された、ユーザーの読みやすいレポートをデザインするのには、改ページを制御するために使用するルールを理解する必要があります[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]します。  
+  ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] での改ページは、レポートの閲覧と作成に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レポート作成に使用するレンダラーに最適化された、ユーザーにとって見やすいレポートをデザインするには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]における改ページの制御規則を理解しておく必要があります。  
   
  このトピックでは、物理的なページ サイズとレポート レイアウトが、ハード改ページ レンダラーによるレポートのレンダリングに与える影響について説明します。 **[レポートのプロパティ]** ペイン、 **[プロパティ]** ペイン、または **[ページ設定]** ダイアログ ボックスを使用すると、プロパティを設定することで、物理的なページ サイズと余白を変更し、レポートを複数のカラムに分割できます。 **[レポートのプロパティ]** ペインにアクセスするには、レポート本文の外側の青い領域をクリックします。 **[ページ設定]** ダイアログ ボックスにアクセスするには、[ホーム] タブで **[実行]** をクリックした後、[実行] タブで **[ページ設定]** をクリックします。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48098043"
   
  既定のページ サイズは 8.5 x 11 インチですが、 **[レポートのプロパティ]** ペインまたは **[ページ設定]** ダイアログ ボックスを使用するか、 **[プロパティ]** ペインで PageHeight プロパティや PageWidth プロパティを変更することによって、このサイズを変更できます。 ページ サイズがレポート本文のコンテンツに合わせて拡大または縮小されることはありません。 レポートを 1 ページに表示させたい場合は、レポート本文のすべてのコンテンツを、特定の物理ページに収まるように配置する必要があります。 ハード改ページ形式を使用していて、物理ページに収まりきらない場合は、ページを追加する必要があります。 レポート本文が物理ページの右端からはみ出た場合、改ページが水平方向に挿入されます。 レポート本文が物理ページの下端からはみ出た場合、改ページが垂直方向に挿入されます。  
   
- レポートで定義されている物理ページ サイズは、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の物理ページ サイズを指定することによりオーバーライドできます。 詳細については、「 [Reporting Services デバイス情報設定](http://go.microsoft.com/fwlink/?LinkId=102515)」を参照してください。  
+ レポートで定義されている物理ページ サイズは、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の物理ページ サイズを指定することによりオーバーライドできます。 詳細については、「 [Reporting Services デバイス情報設定](https://go.microsoft.com/fwlink/?LinkId=102515)」を参照してください。  
   
 ### <a name="margins"></a>余白  
  余白は、物理ページの寸法の端を基準とし、指定された余白設定に達するまで内側に向かって描画されます。 余白領域にはみ出たレポート アイテムはクリッピングされ、重なり合う領域はレンダリングされません。 ページの水平方向または垂直方向の幅がゼロになるような余白サイズを指定した場合は、余白設定が既定でゼロに設定されます。 余白は、 **[レポートのプロパティ]** ペインまたは **[ページ設定]** ダイアログ ボックスを使用して指定できるほか、 **[プロパティ]** ペインで TopMargin、BottomMargin、LeftMargin、RightMargin の各プロパティを変更することによって指定できます。 レポートで定義されている余白サイズは、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の余白サイズを指定することによりオーバーライドできます。  
@@ -72,11 +71,11 @@ ms.locfileid: "48098043"
   
 -   ResetPageNumber は、改ページが生じたときにページ番号を 1 にリセットするかどうかを指定します。 このプロパティによって True に評価された場合、ページ番号はリセットされます。  
   
- **[Tablix のプロパティ]**、 **[四角形のプロパティ]**、または **[グループのプロパティ]** ダイアログ ボックスの BreakLocation プロパティを設定できますが、レポート ビルダーのプロパティ ペインで Disabled、ResetPageNumber、および PageName の各プロパティを設定する必要があります。 プロパティ ペインのプロパティがカテゴリごとに整理されている場合、これらのプロパティは **PageBreak** カテゴリ内にあります。 グループの場合、 **PageBreak** カテゴリは、 **Group** カテゴリ内にあります。  
+ **[Tablix のプロパティ]** 、 **[四角形のプロパティ]** 、または **[グループのプロパティ]** ダイアログ ボックスの BreakLocation プロパティを設定できますが、レポート ビルダーのプロパティ ペインで Disabled、ResetPageNumber、および PageName の各プロパティを設定する必要があります。 プロパティ ペインのプロパティがカテゴリごとに整理されている場合、これらのプロパティは **PageBreak** カテゴリ内にあります。 グループの場合、 **PageBreak** カテゴリは、 **Group** カテゴリ内にあります。  
   
  定数と、単純型または複合型の式を使用して、Disabled および ResetPageNumber プロパティの値を設定します。 ただし、BreakLocation プロパティを持つ式は使用できません。 式の記述と使用の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)」をご覧ください。  
   
- レポートを使用して、現在のページ名またはページ番号を参照する式を記述することができます、`Globals`コレクション。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
+ レポートでは、`Globals` コレクションを使用して、現在のページ名またはページ番号を参照する式を記述できます。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Excel ワークシート タブの名前指定  
  これらのプロパティは、Excel ブックにレポートをエクスポートする際に役立ちます。 レポートをエクスポートするときに、ワークシートのタブ名として既定の名前を指定するには、InitialPage プロパティを使用し、各ワークシートで異なる名前を指定する場合は、PageName プロパティを使用します。 改ページで定義された新しい各レポート ページは、PageName プロパティの値によって指定されたそれぞれのワークシートにエクスポートされます。 PageName が空白であるが、レポートに最初のページ名が含まれる場合、Excel ブックのすべてのワークシートでは、同じ名前 (最初のページ名) が使用されます。  
@@ -84,6 +83,6 @@ ms.locfileid: "48098043"
  レポートが Excel にエクスポートされるときのこれらのプロパティのしくみの詳細については、「[Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [ページ レイアウトとレンダリング&#40;レポート ビルダーおよび SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

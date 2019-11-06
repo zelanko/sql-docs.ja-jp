@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c2911f9ac2da57e284bd6841df7b4b1ec5b2b105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109958"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
-  選択**軸のオプション**で、**水平**または **[縦軸のプロパティ**] ダイアログ ボックスで、グラフの指定された軸の外観を定義します。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、既定でグラフの X 軸上にすべてのラベルが表示されていました。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 では、グラフ内の画像を見やすくし、ラベルの重なりを回避するために、ラベルは省略されます。 詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
+  選択**軸のオプション**で、**水平**または **[縦軸のプロパティ**] ダイアログ ボックスで、グラフの指定された軸の外観を定義します。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、既定でグラフの X 軸上にすべてのラベルが表示されていました。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 では、グラフ内の画像を見やすくし、ラベルの重なりを回避するために、ラベルは省略されます。 詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **スケール区切りを有効にします。**  
@@ -68,6 +67,6 @@ ms.locfileid: "48144182"
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [セカンダリ軸にデータをプロット&#40;レポート ビルダーおよび SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [追加またはグラフの余白を削除する&#40;レポート ビルダーおよび SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [グラフの余白の追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

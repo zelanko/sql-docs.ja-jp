@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
@@ -19,12 +18,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a43cfd2b692bb897950be25e29aa7932d32f780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811546"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>複数の TCP ポートでリッスンするデータベース エンジンの構成
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
@@ -75,11 +74,11 @@ ms.locfileid: "48212462"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>追加の TCP ポートでリッスンするように SQL Server データベース エンジンを構成するには  
   
-1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、*[<instance_name> のプロトコル]* をクリックします。  
+1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、 _[<instance_name>_ **のプロトコル**] をクリックします。  
   
-2.  *[<instance_name> のプロトコル]* を展開し、**[TCP/IP]** をクリックします。  
+2.  **[ _<instance_name>_ のプロトコル]** を展開し、 **[TCP/IP]** をクリックします。  
   
-3.  右ペインで、無効になっている IP アドレスのうち、有効にする IP アドレスをそれぞれ右クリックし、**[有効化]** をクリックします。  
+3.  右ペインで、無効になっている IP アドレスのうち、有効にする IP アドレスをそれぞれ右クリックし、 **[有効化]** をクリックします。  
   
 4.  **[IPAll]** を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48212462"
   
 6.  左ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-7.  右ペインで、**[SQL Server***<instance_name>]* を右クリックし、**[再起動]** をクリックします。  
+7.  右ペインで、 **[SQL Server _<instance_name>_ ]** を右クリックし、 **[再起動]** をクリックします。  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]が再起動すると、エラー ログには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンしているポートが記録されています。  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48212462"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   

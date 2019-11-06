@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a6b77f61c8eadd8ef58d9eb475aaeb3faf88c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138057"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相対と絶対のスクロール
-スクロール オプションのほとんど**SQLFetchScroll**絶対位置または現在位置を基準にカーソルを配置します。 **SQLFetchScroll** 、次のフェッチをサポートしています前に、最初と最後の行セットとしても相対パスとしてをフェッチしています (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (フェッチ、行セットの開始。行の*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 したがって、– 1 の行の絶対フェッチは、結果セットの最後の行で始まる行セットをフェッチすることです。  
+スクロール オプションのほとんど**SQLFetchScroll**絶対位置または現在位置を基準にカーソルを配置します。 **SQLFetchScroll** 、次のフェッチをサポートしています前に、最初と最後の行セットとしても相対パスとしてをフェッチしています (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (フェッチ、行セットの開始。行の*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 そのため、行-1 の絶対フェッチは、結果セットの最後の行で始まる行セットをフェッチすることです。  
   
  動的カーソルに挿入および動的カーソルの速度が低下する可能性が、結果セットの先頭から読み取り以外の特定の数の行を取得する簡単な方法はありませんので、結果セットから削除された行を検出します。 さらに、絶対フェッチは動的カーソルで非常に便利な行番号を変更する行の挿入や削除されたため、そのため、連続して同数の行をフェッチするいますと別の行が生成することができます。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "47661860"
 |--------------------------|-------------------------------------|  
 |1 画面分上へ移動 (PageUp)|SQL_FETCH_PRIOR|  
 |1 画面分下へ移動 (PageDown)|SQL_FETCH_NEXT|  
-|1 行上へ移動|指定した SQL_FETCH_RELATIVE *FetchOffset* – 1 と等しい|  
+|1 行上へ移動|指定した SQL_FETCH_RELATIVE *FetchOffset*を-1 に等しくないです。|  
 |1 行下へ移動|指定した SQL_FETCH_RELATIVE *FetchOffset*を 1 に等しい|  
 |上部にあるスクロール ボックス|SQL_FETCH_FIRST|  
 |下部のスクロール ボックス|SQL_FETCH_LAST|  

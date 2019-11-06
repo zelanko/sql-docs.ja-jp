@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - management endpoints [Reporting Services]
@@ -15,21 +13,21 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119989"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63283488"
 ---
 # <a name="report-server-web-service-endpoints"></a>レポート サーバー Web サービスのエンドポイント
   レポート サーバー Web サービスでは、レポートの実行およびナビゲーションに加えて、レポート サーバーの管理に利用できる複数のエンドポイントが提供されます。  
   
 ## <a name="the-management-endpoints"></a>管理エンドポイント  
- <xref:ReportService2005>、<xref:ReportService2006>、<xref:ReportService2010> という 3 つのエンドポイントを利用して、レポート サーバーでオブジェクトを管理できます。 <xref:ReportService2005> エンドポイントは、ネイティブ モード用に構成されたレポート サーバーのオブジェクトを管理するために使用できます。 <xref:ReportService2006> エンドポイントは、SharePoint 統合モード用に構成されたレポート サーバーのオブジェクトを管理するために使用できます。 <xref:ReportService2010>エンドポイントの機能をまとめたもの<xref:ReportService2005>と<xref:ReportService2006>およびネイティブ モードまたは SharePoint 統合モード用に構成されたレポート サーバー上のオブジェクトを管理することができます。  
+ <xref:ReportService2005>、<xref:ReportService2006>、<xref:ReportService2010> という 3 つのエンドポイントを利用して、レポート サーバーでオブジェクトを管理できます。 <xref:ReportService2005> エンドポイントは、ネイティブ モード用に構成されたレポート サーバーのオブジェクトを管理するために使用できます。 <xref:ReportService2006> エンドポイントは、SharePoint 統合モード用に構成されたレポート サーバーのオブジェクトを管理するために使用できます。 <xref:ReportService2010> エンドポイントは、<xref:ReportService2005> と <xref:ReportService2006> の機能をまとめたものであり、ネイティブ モード用または SharePoint 統合モード用に構成されているレポート サーバー上のオブジェクトを管理できます。  
   
 > [!IMPORTANT]  
 >  レポート サーバーが SharePoint 統合モード用に構成されている場合、<xref:ReportService2005> API は `rsOperationNotSupportedSharePointMode` エラーを返します。 レポート サーバーがネイティブ モード用に構成されている場合、<xref:ReportService2006> API は `rsOperationNotSupportedNativeMode` エラーを返します。 同様に、<xref:ReportService2010> のモード固有 API を不適切なモードで使用した場合も、それぞれエラーが返されます。  

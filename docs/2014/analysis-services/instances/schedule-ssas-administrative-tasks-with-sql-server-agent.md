@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b76142fe806e7a294eb67e5e3d43cbf56713760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079682"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う
   SQL Server エージェント サービスを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理タスクのスケジュールを設定して、必要なときに必要な順序で実行できます。 定期タスクは、一定の周期または指定した周期で実行されるプロセスを自動化するのに役立ちます。 キューブ処理などの管理タスクは、ビジネス活動が盛んでない時間帯に実行されるようにスケジュールできます。 また、SQL Server エージェント ジョブでジョブ ステップを作成することにより、タスクの実行順序を指定できます。 たとえば、キューブを処理した後でバックアップを実行できます。  
@@ -32,7 +31,7 @@ ms.locfileid: "48080352"
   
  操作対象のテスト データベースも必要です。 AdventureWorks 多次元サンプル データベースまたはプロジェクトを Analysis Services 多次元チュートリアルから配置して、このチュートリアルで使用できます。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)」を参照してください。  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>例 1: 定期タスクでのディメンションの処理  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>例 1 : スケジュールされたタスクでのディメンションの処理  
  この例では、ディメンションを処理するジョブを作成し、スケジュール設定を行う方法を示します。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の定期タスクは、SQL Server エージェント ジョブに組み込まれる XMLA スクリプトです。 このジョブは、指定した時刻と頻度で実行されるようにスケジュールされます。 SQL Server エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の一部なので、管理タスクの作成およびスケジュール設定には、データベース エンジンおよび [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用します。  
@@ -54,7 +53,7 @@ ms.locfileid: "48080352"
      この手順により、XMLA スクリプトが Windows クリップボードにコピーされます。 XMLA スクリプトをクリップボードに残しておくか、メモ帳または別のテキスト エディターに貼り付けます。 XMLA スクリプトの例を次に示します。  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -80,9 +79,9 @@ ms.locfileid: "48080352"
   
 5.  **[ページの選択]** で、 **[ステップ]** を選択し、 **[新規作成]** をクリックします。  
   
-6.  **[新しいジョブ ステップ]** ダイアログ ボックスで、**[ステップ名]** にステップ名を入力します。  
+6.  **[新しいジョブ ステップ]** ダイアログ ボックスで、 **[ステップ名]** にステップ名を入力します。  
   
-7.  **[サーバー]** で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの **localhost** と、名前付きインスタンスの **localhost\\**\<*インスタンス名*> を入力します。  
+7.  **[サーバー]** で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの **localhost** と、名前付きインスタンスの **localhost\\** \<*インスタンス名*> を入力します。  
   
      リモート コンピューターからジョブを実行する場合は、ジョブが実行されるサーバー名およびインスタンス名を使用します。 形式を使用して\<*サーバー名*> 既定のインスタンスと\<*サーバー名*>\\<*インスタンス名前*> 名前付きインスタンス。  
   
@@ -106,8 +105,8 @@ ms.locfileid: "48080352"
   
 15. ジョブが完了したら、 **[閉じる]** をクリックします。  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>例 2: 定期タスクでのディメンションおよびパーティションのバッチ処理  
- この例の手順では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース ディメンションをバッチ処理するジョブを作成してスケジュールを設定する方法と、そのディメンションに集計で依存するキューブ パーティションを処理する方法を示します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのバッチ処理の詳細については、「[バッチ処理 (Analysis Services)](../multidimensional-models/batch-processing-analysis-services.md)」を参照してください。  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>例 2:ディメンションと、スケジュールされたタスクでのパーティションをバッチ処理  
+ この例の手順では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース ディメンションをバッチ処理するジョブを作成してスケジュールを設定する方法と、そのディメンションに集計で依存するキューブ パーティションを処理する方法を示します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのバッチ処理の詳細については、「[バッチ処理 (Analysis Services)](../multidimensional-models/batch-processing-analysis-services.md)」を参照してください。  
   
 ###  <a name="bkmk_BatchProcess"></a> SQL Server エージェント ジョブでディメンションとパーティションをバッチ処理するスクリプトを作成する  
   
@@ -121,7 +120,7 @@ ms.locfileid: "48080352"
   
 4.  **[ディメンションの処理]** ダイアログ ボックスで、 **[キャンセル]** をクリックしてダイアログ ボックスを閉じます。  
   
-5.  **[キューブ]**、 **[Adventure Works]**、 **[メジャー グループ]**、 **[インターネット販売]**、 **[パーティション]** の順に展開し、一覧の最後のパーティションを右クリックして **[処理]** をクリックします。  
+5.  **[キューブ]** 、 **[Adventure Works]** 、 **[メジャー グループ]** 、 **[インターネット販売]** 、 **[パーティション]** の順に展開し、一覧の最後のパーティションを右クリックして **[処理]** をクリックします。  
   
 6.  **[パーティションの処理]** ダイアログ ボックスにある **[オブジェクト一覧]** の **[処理オプション]** 列で、この列のオプションが **[完全処理]** であることを確認します。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "48080352"
      次の例は、変更後の XMLA スクリプトを示しています。  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -223,7 +222,7 @@ ms.locfileid: "48080352"
 16. ジョブが完了したら、 **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションと設定&#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
+ [処理オプションと設定 (Analysis Services)](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Analysis Services の管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
   
   

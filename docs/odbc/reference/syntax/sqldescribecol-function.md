@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0240d5fe1f701715f11adc4f68e80abed896d704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63982d87f0dbbe0c8ab1a540185e298d9943f630
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104789"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
- **SQLDescribeCol**結果の記述子を返します: 列名、型、列のサイズ、10 進数字、および null 値の許容:、結果内の 1 つの列を設定します。 この情報もは、ird フィールドにします。  
+ **まとめ**  
+ **SQLDescribeCol**結果セットの 1 つの列に列名、型、列のサイズ、10 進数字、および null 値の許容 - 結果記述子を返します。 この情報もは、ird フィールドにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeCol(  
       SQLHSTMT       StatementHandle,  
@@ -57,7 +56,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [入力]結果のデータの列数は、1 から始まる、増加の列の順序で順番に順序付けします。 *ColumnNumber*ブックマーク列を記述する引数が 0 に設定することもできます。  
   
- *ColumnName*  
+ *[ColumnName]*  
  [出力]列名を取得するための null で終わるバッファーへのポインター。 この値は、IRD の SQL_DESC_NAME フィールドから読み取られます。 列が名前付きか、列名が確認できない場合、ドライバーは、空の文字列を返します。  
   
  場合*ColumnName*が null の場合、 *NameLengthPtr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*ColumnName*します。  
@@ -75,22 +74,22 @@ SQLRETURN SQLDescribeCol(
   
  ときに*ColumnNumber*と等しいで返される SQL_BINARY (ブックマーク列) を 0 に *\*DataTypePtr*の可変長のブックマーク。 (SQL_INTEGER は ODBC の 3 つのブックマークを使用する場合に返されます。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーまたは ODBC 2 *。x*アプリケーションは、ODBC 3 の操作します *。x*ドライバー)。  
   
- これらのデータ型の詳細については、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
+ これらのデータ型の詳細については、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
   
  *ColumnSizePtr*  
- [出力]データ ソースの列の文字) 単位でサイズを返すバッファーへのポインター。 列のサイズを決定できない場合、ドライバーは、0 を返します。 列のサイズの詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。  
+ [出力]データ ソースの列の文字) 単位でサイズを返すバッファーへのポインター。 列のサイズを決定できない場合、ドライバーは、0 を返します。 列のサイズの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。  
   
  *DecimalDigitsPtr*  
- [出力]データ ソースの列の 10 進数字の数を返すバッファーへのポインター。 10 進数字の数が特定できないまたは適用可能でない、ドライバーは 0 を返します。 10 進数字の詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。  
+ [出力]データ ソースの列の 10 進数字の数を返すバッファーへのポインター。 10 進数字の数が特定できないまたは適用可能でない、ドライバーは 0 を返します。 10 進数字の詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。  
   
  *NullablePtr*  
  [出力]列が NULL 値を許容するかどうかを示す値を返すバッファーへのポインター。 この値は、IRD の SQL_DESC_NULLABLE フィールドから読み取られます。 値は次のいずれかになります。  
   
- SQL_NO_NULLS: 列は NULL 値を許容しません。  
+ SQL_NO_NULLS:その列には NULL 値が許容されていません。  
   
- SQL_NULLABLE: 列は、NULL 値を許可します。  
+ SQL_NULLABLE:列が NULL 値を許容します。  
   
- SQL_NULLABLE_UNKNOWN: ドライバーを特定できません列が NULL 値を許容するかどうか。  
+ SQL_NULLABLE_UNKNOWN:列が NULL 値を許容するかどうか、ドライバーを特定できません。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table dependencies [SQL Server]
@@ -16,15 +15,15 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1ce3195b114969a44f818ca0eb69d2979087e55
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196610"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>テーブルの依存関係の表示
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルの依存関係を表示できます。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してテーブルの依存関係を表示できます。  
   
  **このトピックの内容**  
   
@@ -32,7 +31,7 @@ ms.locfileid: "49169122"
   
      [Security](#Security)  
   
--   **テーブルの依存関係を表示する方法:**  
+-   **テーブルの依存関係を表示するには、次を使用します:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "49169122"
   
 2.  テーブルを右クリックし、 **[依存関係の表示]** をクリックします。  
   
-3.  **[オブジェクトの依存関係_\<object name>_]** ダイアログ ボックスで、**[*\<object name>* に依存するオブジェクト]** または **[**_\<object name>_ **が依存するオブジェクト]** を選択します。  
+3.  **[オブジェクトの依存関係 _\<object name>_ ]** ダイアログ ボックスで、 **[ _\<object name>_ に依存するオブジェクト]** または **[** _\<object name>_ **が依存するオブジェクト]** を選択します。  
   
 4.  **[依存関係]** グリッドでオブジェクトをクリックします。 オブジェクトの種類 ("トリガー" や "ストアド プロシージャ" など) が、 **[種類]** ボックスに表示されます。  
   

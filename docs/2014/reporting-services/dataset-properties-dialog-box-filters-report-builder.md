@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ff8ae37c2caf34432acde8fab2235a3b83b372a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109379"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>[フィルター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[データセットのプロパティ]** ダイアログ ボックスの **[フィルター]** を選択すると、データセットに対するフィルターを作成できます。  
@@ -43,7 +42,7 @@ ms.locfileid: "48172152"
  選択したフィルターを一覧内で下に移動します。  
   
  **式**  
- フィルターを適用する式を入力または選択します。 式を編集するには、式 (**[fx]**) ボタンをクリックします。  
+ フィルターを適用する式を入力または選択します。 式を編集するには、式 ( **[fx]** ) ボタンをクリックします。  
   
  **データ型**  
  **[値]** のデータ型を選択します。 可能であれば、 **[式]** のデータ型と一致するデータ型を選択します。  
@@ -56,12 +55,12 @@ ms.locfileid: "48172152"
  式と値の比較に使用する演算子を選択します。  
   
  **[値]**  
- **[式]** ボックスに指定された式を評価する際に使用する式または値を入力します。 式を編集するには、式 (**[fx]**) ボタンをクリックします。  
+ **[式]** ボックスに指定された式を評価する際に使用する式または値を入力します。 式を編集するには、式 ( **[fx]** ) ボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [データセットにフィルターを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

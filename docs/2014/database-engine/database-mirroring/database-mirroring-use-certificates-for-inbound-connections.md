@@ -14,12 +14,12 @@ ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 20c4cc7fe03d9c57ea45575b243a24da690ba88d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807561"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする (Transact-SQL)
   このトピックでは、データベース ミラーリングの着信接続を認証する際に証明書を使用するようにサーバー インスタンスを構成する手順について説明します。 着信接続を設定する前に、各サーバー インスタンスで発信接続を構成する必要があります。 詳細については、「[データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)」を参照してください。  
@@ -113,7 +113,7 @@ ms.locfileid: "48064472"
   
 5.  リモート ミラーリング エンドポイント用のログインに CONNECT 権限を許可します。  
   
-     たとえば、HOST_A に対する権限を HOST_B 上のリモート サーバー インスタンスに許可し、このローカル ログインに接続 (つまり、 `HOST_B_login`に接続) するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
+     たとえば、HOST_A に対する権限を HOST_B 上のリモート サーバー インスタンスに許可し、このローカル ログインに接続 (つまり、`HOST_B_login` に接続) するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
   
     ```  
     USE master;  
@@ -157,12 +157,12 @@ GO
   
  Transact-SQL の例を含む、ミラー データベースを作成する方法の詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
   
- 高パフォーマンス モード セッションを確立する Transact-SQL 例については、「 [証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)」を参照してください。  
+ 高パフォーマンス モード セッションを確立する TRANSACT-SQL 例では、次を参照してください。[例。データベース ミラーリングを使用して証明書設定&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)します。  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  証明書を別のシステムにコピーする場合は、セキュリティで保護されたコピー方法を使用してください。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [GRANT (エンドポイントのアクセス許可の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [暗号化されたミラー データベースの設定](set-up-an-encrypted-mirror-database.md)   

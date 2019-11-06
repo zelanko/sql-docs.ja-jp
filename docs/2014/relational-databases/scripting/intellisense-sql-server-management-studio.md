@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b43d901205e13f4e0e728705e3764512dc26647
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb3e97175b1580b7f149fd3ba0e97584e281ec04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090410"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のエディターは [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションをサポートしているので、入力操作を減らし、構文情報をすばやく提示し、複合式の区切りをわかりやすく表示できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48182222"
 |IntelliSense が区切り記号のペアの両端を識別する方法と、ペアの片方の端からもう一方の端へ移動する方法を説明します。|[構文ペアの自動照合](automatic-matching-of-syntax-pairs.md)|  
 |IntelliSense が動作しない状況について説明します。|[IntelliSense のトラブルシューティング (SQL Server Management Studio)](troubleshooting-intellisense.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

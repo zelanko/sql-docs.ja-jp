@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9422afe49ecd31512b22995767ead61b7e9f4cce
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779114"
 ---
 # <a name="migrate-query-plans"></a>クエリ プランの移行
   データベースを最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、ほとんどの場合、クエリのパフォーマンスが向上します。 ただし、慎重にパフォーマンス チューニングされたミッションクリティカルなクエリがある場合は、アップグレードする前に、各クエリのプラン ガイドを作成してこれらのクエリのクエリ プランを保存しておくことをお勧めします。 アップグレード後に、効率性の劣るクエリ プランが 1 つ以上のクエリに対してクエリ オプティマイザーで選択される場合は、プラン ガイドを有効にし、強制的にアップグレード前のプランが使用されるように設定できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "51018467"
 ## <a name="example"></a>例  
  次の例は、プラン ガイドを作成することにより、アップグレード前のプランを記録する方法を示しています。  
   
-### <a name="step-1-collect-the-plan"></a>手順 1: プランを収集する  
+### <a name="step-1-collect-the-plan"></a>手順 1:プランを収集します。  
  プラン ガイドに記録するクエリ プランは XML 形式にする必要があります。 XML 形式のクエリ プランは、次の方法で生成できます。  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>手順 2: プラン ガイドを作成しプランを適用する  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>手順 2:プランを強制するプラン ガイドを作成します。  
  プラン ガイドで (前述のいずれかの方法で取得した) XML 形式のクエリ プランを使用し、sp_create_plan_guide の OPTION 句に指定した USE PLAN クエリ ヒント内に、文字列リテラルとしてそのクエリ プランをコピーして貼り付けます。  
   
  プラン ガイドを作成する前に、XML プラン自体に含まれている引用符 (') には引用符をもう 1 つ付けてエスケープします。 たとえば、`WHERE A.varchar = 'This is a string'` を含むプランの場合は、コードを `WHERE A.varchar = ''This is a string''` のように変更してエスケープする必要があります。  
@@ -79,16 +79,16 @@ EXECUTE sp_create_plan_guide
 @type = N'SQL',  
 @module_or_batch = NULL,  
 @params = NULL,  
-@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''http://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
+@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''https://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
     Version=''''0.5'''' Build=''''9.00.1116''''>  
     <BatchSequence><Batch><Statements><StmtSimple>  
-    …  
+    ...  
     </StmtSimple></Statements></Batch>  
     </BatchSequence></ShowPlanXML>'')';  
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>手順 3: プラン ガイドがクエリに適用されていることを確認する  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>手順 3:プラン ガイドは、クエリに適用されていることを確認します。  
  クエリを再実行し、生成されたクエリ プランを調べます。 このプランがプラン ガイドで指定したプランに一致していることを確認してください。  
   
 ## <a name="see-also"></a>参照  

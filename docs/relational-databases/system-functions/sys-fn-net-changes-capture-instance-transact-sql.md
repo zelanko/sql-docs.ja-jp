@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122569"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 -   行を挿入または更新する必要がある場合は M  
   
- 変更を適用するために挿入と更新のどちらが必要であるかを特定するロジックでは、クエリが複雑になってしまいます。 挿入操作と更新操作を区別する必要がない場合は、パフォーマンスを向上させるためにこのオプションを使用してください。 このアプローチは、マージ操作が、直接などに使用できるターゲット環境で最適な[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]環境。  
+ 変更を適用するために挿入と更新のどちらが必要であるかを特定するロジックでは、クエリが複雑になってしまいます。 挿入操作と更新操作を区別する必要がない場合は、パフォーマンスを向上させるためにこのオプションを使用してください。 この方法は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 環境など、マージ操作を直接利用できるターゲット環境に最適です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -109,15 +108,15 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 2.  スクリプトを実行して、実際にラッパー関数を作成します。  
   
- ラッパー関数は、体系的にクエリで範囲指定された期間内に発生する変更点についてユーザーを有効にする**datetime** LSN 値での値の代わりにします。 ラッパー関数が提供されている間、すべての必要な変換を実行**datetime**値およびクエリ関数の引数として内部的に必要な LSN 値です。 データが紛失または繰り返し、次の規則に準拠していることを確認しますが、ラッパー関数は変更データのストリームを処理する順番に使用する場合: @end_time として1回の呼び出しに関連付けられている間隔の値が指定されました。@start_time後続の呼び出しに関連付けられている間隔の値。  
+ ラッパー関数は、体系的にクエリで範囲指定された期間内に発生する変更点についてユーザーを有効にする**datetime** LSN 値での値の代わりにします。 ラッパー関数が提供されている間、すべての必要な変換を実行**datetime**値およびクエリ関数の引数として内部的に必要な LSN 値です。 ラッパー関数は、変更データのストリームを処理する順番に使用して、ときにデータがありませんが欠落や重複の次の規則が後に用意されていることが支えます。 @end_time として 1 回の呼び出しに関連付けられている期間の値が指定された、 @start_time 後続の呼び出しに関連付けられている間隔の値です。  
   
- 使用して、@closed_high_end_pointパラメーター、スクリプトを作成するときに、指定のクエリ ウィンドウで、閉じた上限または開いている上限のいずれかをサポートするラッパーを生成することができます。 つまり、抽出期間の上限とコミット時間が等しいエントリを、その期間に含めるかどうかを決定できます。 既定では、上限が含まれます。  
+ スクリプトの作成時に @closed_high_end_point パラメーターを使用すると、閉じた上限または開いた上限をサポートするラッパーを、指定のクエリ ウィンドウに生成できます。 つまり、抽出期間の上限とコミット時間が等しいエントリを、その期間に含めるかどうかを決定できます。 既定では、上限が含まれます。  
   
- によって返される結果セットは、**変更の net**ラッパー関数は、追跡対象列に含まれていたのみを返し、@column_listラッパーが生成されたとき。 場合@column_listが null の場合、すべての追跡対象ソース列が返されます。 ソース列に続いて、操作列 __CDC_OPERATION が返されます。これは、操作を表す 1 文字か 2 文字の列です。  
+ によって返される結果セットは、**変更の net**ラッパー関数は、追跡対象列に含まれていたのみを返し、@column_listラッパーが生成されたとき。 @column_list が NULL の場合、追跡対象のすべてのソース列が返されます。 ソース列に続いて、操作列 __CDC_OPERATION が返されます。これは、操作を表す 1 文字か 2 文字の列です。  
   
  ビット フラグがパラメーターで指定されている各列の結果セットに追加し、@update_flag_listします。 **変更の net**あれば、ビット フラグは常に NULL にする場合、@row_filter_optionは 'all' または 'all with merge' は、ラッパー関数の呼び出しで使用します。 場合、 @row_filter_option 'all with mask'、かつ _ _cdc_operation に設定されている必要があるが ' または 'I'、フラグの値は NULL にもなります。 場合\__CDC_OPERATION が ' UN '、1 または 0 かどうかに応じて、フラグが設定されます、 **net**列への変更の原因となった操作を更新します。  
   
- 変更データ キャプチャの構成テンプレート "Instantiate CDC Wrapper TVFs for Schema" には、sp_cdc_generate_wrapper_function ストアド プロシージャを使用して、スキーマの定義済みクエリ関数に対するすべてのラッパー関数の CREATE スクリプトを取得する方法が示されています。 このテンプレートで、それらのスクリプトが作成されます。 テンプレートの詳細については、次を参照してください。[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)します。  
+ 変更データ キャプチャの構成テンプレート 'Instantiate CDC Wrapper TVFs スキーマの' は、sp_cdc_generate_wrapper_function ストアド プロシージャを使用して、すべてのスキーマの定義済みクエリ関数のラッパー関数の CREATE スクリプトを取得する方法を示します。 このテンプレートで、それらのスクリプトが作成されます。 テンプレートの詳細については、次を参照してください。[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)します。  
   
 ## <a name="see-also"></a>参照  
  [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - aggregations [Analysis Services], about aggregations
@@ -20,12 +18,12 @@ ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a892581ff245559d08ac0a37eca5e4a7db3db1dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727698"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>集計と集計デザイン
   <xref:Microsoft.AnalysisServices.AggregationDesign> オブジェクトは、複数のパーティションで共有できる集計定義のセットを定義します。  
@@ -40,7 +38,7 @@ ms.locfileid: "48051242"
   
  回答が複数の値になる質問もあります。 たとえば、"1998 年のハードウェア製品の四半期別の地域別売上は?" のような質問です。 この場合、指定された条件を満たす座標位置にある各セルが返されます。 返されるセルの数は、製品ディメンションの Hardware レベルに含まれる項目数、1998 年の 4 つの四半期、および地理ディメンションの地域数によって決まります。 ここで、すべての要約データが事前計算され集計として格納されていれば、このクエリの応答時間は、指定されたセルの抽出に必要な時間だけになります。 つまり、データの計算やファクト テーブルからのデータの読み取りは必要ありません。  
   
- キューブに含まれるすべての集計を事前計算しておくと、すべてのクエリの応答時間が最も高速になりますが、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では特定の集計値を他の事前計算された集計から簡単に計算することができます。 これに加えて、可能な集計をすべて計算するには、大量の処理時間とストレージが必要になります。 そのため、必要なストレージと事前計算される集計の割合の間にトレードオフが発生します。 集計を事前計算しない (0%) 場合、キューブに必要な処理時間とストレージ領域は最小限に抑えられます。ただし、各クエリへの応答に必要なデータをリーフ セルから取得してから、各クエリに応答するためにクエリ時に集計しなければならないので、クエリ応答時間は遅くなる可能性があります。 たとえば、前述の質問 ("北西地域における 1998 年の製品 X の売上は?") の場合、回答となる 1 つの数値を返すために、場合によっては何千行ものデータ行を読み取り、それぞれの行から Sales メジャーを求めるための列の値を抽出し、合計を算出しなければなりません。 これだけでなく、そのデータに使用されているストレージ モード (MOLAP、HOLAP、または ROLAP) によっても、データの取得に必要な時間が異なります。  
+ キューブに含まれるすべての集計を事前計算しておくと、すべてのクエリの応答時間が最も高速になりますが、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では特定の集計値を他の事前計算された集計から簡単に計算することができます。 これに加えて、可能な集計をすべて計算するには、大量の処理時間とストレージが必要になります。 そのため、必要なストレージと事前計算される集計の割合の間にトレードオフが発生します。 集計を事前計算しない (0%) 場合、キューブに必要な処理時間とストレージ領域は最小限に抑えられます。ただし、各クエリへの応答に必要なデータをリーフ セルから取得してから、各クエリに応答するためにクエリ時に集計しなければならないので、クエリ応答時間は遅くなる可能性があります。 たとえば、前述の質問 ("北西地域における 1998 年の製品 X の売上は?") の場合、回答となる 1 つの数値を返すために、場合によっては何千行ものデータ行を読み取り、それぞれの行から Sales メジャーを求めるための列の値を抽出し、合計を算出しなければなりません。 選択したデータのストレージ モードに応じてそのデータを取得するために必要な時間の長さがさらに、非常には、MOLAP、HOLAP、または ROLAP します。  
   
 ## <a name="designing-aggregations"></a>集計のデザイン  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ならなかったの集計を選択して、その他の集計を事前計算された値からすばやく計算できるようにする高度なアルゴリズムが組み込まれています。 たとえば、時間階層の Month レベルの集計が事前計算されている場合、Quarter レベルの算出に必要なのは 3 つの数値を集計することだけで、これは要求時に即座に計算できます。 この方法では、クエリ応答時間への影響を最小限に抑えながら、処理時間を節約し、必要なストレージを削減できます。  

@@ -1,37 +1,47 @@
 ---
-title: SQL Server 2019 展開 kubeadm で Kubernetes を構成する |Microsoft Docs
-description: 複数の Ubuntu 16.04 上の Kubernetes または 18.04 のマシン (物理または仮想) の SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイを構成する方法について説明します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 11/06/2018
+title: Kubeadm を使用して Kubernetes を構成する
+titleSuffix: SQL Server big data clusters
+description: 複数の Ubuntu 16.04 または18.04 マシン (物理または仮想) でデプロイ用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に Kubernetes を構成する方法について説明します。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.technology: big-data-cluster
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221778"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688301"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>SQL Server 2019 展開用の複数のコンピューターでの Kubernetes を構成します。
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために複数のマシン上に Kubernetes を構成する
 
-この記事では、使用する方法の例を示します**kubeadm**を複数のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイで Kubernetes を構成します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想)、ターゲットとは。 さまざまな Linux プラットフォームに展開する場合、システムに一致するようにコマンドの一部を変更する必要があります。  
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+この記事では、 **kubeadm**を使用して複数の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]コンピューターで Kubernetes を構成する方法の例について説明します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想) を対象とします。 別の Linux プラットフォームに展開する場合は、お使いのシステムに合わせてコマンドの一部を変更する必要があります。  
 
 > [!TIP] 
-> Kubernetes を構成するサンプル スクリプトでは、次を参照してください。 [Kubeadm を Ubuntu 16.04 LTS または 18.04 LTS を使用して Kubernetes クラスターを作成する](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)します。
+> Kubernetes を構成するサンプル スクリプトについては、「[Ubuntu 16.04 LTS または 18.04 LTS 上で Kubeadm を使用して Kubernetes クラスターを作成する](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)」を参照してください。
+また、VM 上での単一ノードの kubeadm の展開を自動化して、その上にビッグ データ クラスターの既定の構成を展開するサンプル スクリプトについては、[こちら](deployment-script-single-node-kubeadm.md)のトピックを参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-- 複数の Linux の物理マシンまたは仮想マシン、クラスターで使用するには
-- 推奨構成: 8 個の Cpu、32 GB のメモリ、および各マシンの記憶域の 100 GB 以上
-- クラスター内の 3 つのマシンの最小値
+- 最低 3 台の Linux 物理マシンまたは仮想マシン
+- マシンごとに推奨される構成:
+   - 8 個の CPU
+   - 64 GB のメモリ
+   - 100 GB のストレージ
+ 
+> [!Important] 
+> ビッグデータクラスターのデプロイを開始する前に、デプロイが対象としているすべての Kubernetes ノード間でクロックが同期されていることを確認します。 ビッグデータクラスターには、時間の影響を受けるさまざまなサービスの正常性プロパティが組み込まれており、時計の傾斜によって状態が正しくないことがあります。
 
-## <a name="prepare-the-machines"></a>マシンを準備します。
+## <a name="prepare-the-machines"></a>マシンを準備する
 
-各コンピューターでは、いくつか必要な前提条件があります。 Bash 端末では、各コンピューターで、次のコマンドを実行します。
+各マシンには、必須の前提条件がいくつかあります。 bash 端末で、各マシン上で次のコマンドを実行します。
 
-1. 現在のマシンを追加、`/etc/hosts`ファイル。
+1. 現在のマシンを `/etc/hosts` ファイルに追加します。
 
    ```bash
    echo $(hostname -i) $(hostname) | sudo tee -a /etc/hosts
@@ -44,26 +54,26 @@ ms.locfileid: "51221778"
    sudo swapoff -a
    ```
 
-1. キーをインポートし、Kubernetes のリポジトリを登録します。
+1. キーをインポートし、Kubernetes 用のリポジトリを登録します。
 
    ```bash
    sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
    echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
    ```
 
-1. マシンに docker と Kubernetes の前提条件を構成します。
+1. マシン上に docker と Kubernetes の前提条件を構成します。
 
    ```bash
-   KUBE_DPKG_VERSION=1.11.3-00
-   sudo apt-get update && /
-   sudo apt-get install -y ebtables ethtool && /
-   sudo apt-get install -y docker.io && /
-   sudo apt-get install -y apt-transport-https && /
-   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && /
+   KUBE_DPKG_VERSION=1.15.0-00
+   sudo apt-get update && \
+   sudo apt-get install -y ebtables ethtool && \
+   sudo apt-get install -y docker.io && \
+   sudo apt-get install -y apt-transport-https && \
+   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && \
    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
    ```
  
-1. `net.bridge.bridge-nf-call-iptables=1` を設定します。 Ubuntu の 18.04 で、次のコマンドが最初に有効に`br_netfilter`します。
+1. `net.bridge.bridge-nf-call-iptables=1` を設定します。 Ubuntu 18.04 の場合は、次のコマンドで最初に `br_netfilter` が有効にされます。
 
    ```bash
    . /etc/os-release
@@ -71,11 +81,11 @@ ms.locfileid: "51221778"
    sudo sysctl net.bridge.bridge-nf-call-iptables=1
    ```
 
-## <a name="configure-the-kubernetes-master"></a>Kubernetes マスターを構成します。
+## <a name="configure-the-kubernetes-master"></a>Kubernetes マスターを構成する
 
-各コンピューターで、前のコマンドを実行した後、Kubernetes マスターとして指定する、マシンのいずれかを選択します。 そのコンピューターで、次のコマンドを楽しいします。
+各マシン上で上記のコマンドを実行した後、Kubernetes マスターにするマシンを 1 つ選択します。 その後、そのマシン上で次のコマンドを実行します。
 
-1. 最初に、次のコマンドを使用して、現在のディレクトリに rbac.yaml ファイルを作成します。 
+1. まず、次のコマンドを使用して、現在のディレクトリに rbac. yaml ファイルを作成します。 
 
    ```bash
    cat <<EOF > rbac.yaml
@@ -94,18 +104,18 @@ ms.locfileid: "51221778"
    EOF
    ```
 
-1. このコンピューター上の Kubernetes マスターを初期化します。 Kubernetes マスターが正常に初期化する出力が表示されます。
+1. このマシン上で Kubernetes マスターを初期化します。 Kubernetes マスターが正常に初期化されたことを示す出力が表示されます。
 
    ```bash
    KUBE_VERSION=1.11.3
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
 
-1. 注、`kubeadm join`コマンドを他のサーバーを使用して Kubernetes クラスターに参加する必要があります。 後で使用できるは、これをコピーします。
+1. Kubernetes クラスターに参加するために、他のサーバー上で使用する必要がある `kubeadm join` コマンドに注意してください。 後で使用するために、これをコピーします。
 
-   ![kubeadm 結合](./media/deploy-with-kubeadm/kubeadm-join.png)
+   ![kubeadm join](./media/deploy-with-kubeadm/kubeadm-join.png)
 
-1. Kubernetes 構成ファイルをホーム ディレクトリを設定します。
+1. ホーム ディレクトリに Kubernetes 構成ファイルを設定します。
 
    ```bash
    mkdir -p $HOME/.kube
@@ -113,34 +123,34 @@ ms.locfileid: "51221778"
    sudo chown $(id -u):$(id -g) $HOME/.kube/config
    ```
 
-1. クラスターと、Kubernetes ダッシュ ボードを構成します。
+1. クラスターと Kubernetes ダッシュボードを構成します。
 
    ```bash
    kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
    helm init
    kubectl apply -f rbac.yaml
-   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
    kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
    ```
 
-## <a name="configure-the-kubernetes-agents"></a>Kubernetes エージェントを構成します。
+## <a name="configure-the-kubernetes-agents"></a>Kubernetes エージェントを構成する
 
-その他のマシンは、Kubernetes クラスターのエージェントとして機能します。 
+他のマシンは、クラスターでの Kubernetes エージェントとして機能します。 
 
-その他のマシンごとに実行、`kubeadm join`前のセクションでコピーしたコマンド。
+他の各マシン上で、前のセクションでコピーした `kubeadm join` コマンドを実行します。
 
-![kubeadm 結合エージェント](./media/deploy-with-kubeadm/kubeadm-join-agents.png)
+![kubeadm join エージェント](./media/deploy-with-kubeadm/kubeadm-join-agents.png)
 
-## <a name="view-the-cluster-status"></a>クラスターの状態を表示します。
+## <a name="view-the-cluster-status"></a>クラスターの状態を表示する
 
-クラスターへの接続を確認するため、 [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)コマンドをクラスター ノードの一覧を返します。
+クラスターへの接続を確認するには、クラスター ノードの一覧を返す [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) コマンドを使用します。
 
 ```bash
 kubectl get nodes
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-この記事の手順では、複数の Ubuntu コンピューターで Kubernetes クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データのクラスターにデプロイします。 手順については、次の記事を参照してください。
+この記事の手順では、複数の Ubuntu マシン上に Kubernetes クラスターを構成しました。 次のステップとして、SQL Server 2019 ビッグ データ クラスターを展開します。 手順については、次の記事を参照してください。
 
-[SQL Server 2019 CTP 2.1 では、Kubernetes をデプロイします。](deployment-guidance.md#deploy)
+[Kubernetes 上に SQL Server を展開する](deployment-guidance.md#deploy)

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108412"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループ化と集計 (Reporting Services) を追加します。
   レポートにグループと合計を追加すると、データを整理して要約できます。  
   
- レポートを実行中の合計を追加する方法については、curah.microsoft.com のキュレーションを参照してください: [Reporting Services (SSRS) レポートに合計を追加](http://go.microsoft.com/fwlink/p/?LinkId=403698)します。  
+ レポートを実行中の合計を追加する方法についてを参照してください。[Reporting Services (SSRS) レポートに合計を追加](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)します。  
   
  **このトピックの内容:**  
   
@@ -41,13 +40,13 @@ ms.locfileid: "48095299"
   
 2.  表示されない場合、**行グループ**ウィンドウがデザイン サーフェイスを右クリックし、クリックして**ビュー**順にクリックします**グループ化**します。  
   
-3.  **レポート データ**ウィンドウで、ドラッグ、`Date`フィールドを**行グループ**ウィンドウ。 **(詳細)** 行の上に配置します。  
+3.  **[レポート データ]** ウィンドウから、`Date` フィールドを **[行グループ]** ウィンドウにドラッグします。 **(詳細)** 行の上に配置します。  
   
      グループを示す角かっこが行ハンドルに表示されます。 テーブルにも 2 つの日付列が表示されます (点線の両側に 1 つずつ)。  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  **レポート データ**ウィンドウで、ドラッグ、`Order`フィールドを**行グループ**ウィンドウ。 **詳細**の上、日付の下に配置します。  
+4.  **[レポート データ]** ウィンドウから、`Order` フィールドを **[行グループ]** ウィンドウにドラッグします。 **(詳細)** の上、Date の下に配置します。  
   
      2 つのグループを示す 2 個の角かっこが行ハンドルに表示されます。 テーブルに 2 つ`Order`列、すぎます。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48095299"
   
 6.  **[書式]** メニューの **[背景色]** をクリックし、 **[淡い灰色]** をクリックして、 **[OK]** をクリックします。  
   
-     ![デザイン ビュー: 注文合計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "デザイン ビュー: 注文合計がある基本的なテーブル")  
+     ![デザイン ビュー:注文合計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif ":デザイン ビュー:注文合計がある基本的なテーブル")  
   
 ##  <a name="bkmk_adddailytotal"></a> レポートに毎日の合計を追加するには  
   
@@ -97,7 +96,7 @@ ms.locfileid: "48095299"
   
 ##  <a name="bkmk_addgrandtotal"></a> レポートに総計を追加するには  
   
-1.  日付セルを右クリックし、 **[合計の追加]** をポイントして、 **[指定日付より後]** をクリックします。  
+1.  Date セルを右クリックし、 **[合計の追加]** をポイントして、 **[後]** をクリックします。  
   
      レポート全体の数量と金額の合計が含まれた新しい行が追加されます、**合計**でラベル付け、`Date`列。  
   
@@ -107,13 +106,13 @@ ms.locfileid: "48095299"
   
 4.  **[書式]** メニューの **[背景色]** をクリックし、 **[薄い青]** をクリックして、 **[OK]** をクリックします。  
   
-     ![デザイン ビュー: 基本的なテーブルの総計](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー: 基本的なテーブルの総計")  
+     ![デザイン ビュー:基本的なテーブルの総計](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー:基本的なテーブルの総計")  
   
 5.  [プレビュー] をクリックします。  
   
      最終的なページは次のようになります。  
   
-     ![プレビュー: 総計がある基本的なテーブルの](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "プレビュー: 総計がある基本的なテーブル")  
+     ![プレビュー:総計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "プレビュー:総計がある基本的なテーブル")  
   
 ##  <a name="bkmk_publishreport"></a> (省略可能) レポート サーバーにレポートをパブリッシュするには  
   
@@ -129,9 +128,9 @@ ms.locfileid: "48095299"
   
      出力ウィンドウに次のようなメッセージが表示されていれば、正常に展開されたことを示しています。  
   
-    > ------ ビルド開始: プロジェクト: tutorial、構成: デバッグ ------'Sales Orders.rdl' をスキップしています。 項目が最新の状態です。ビルドの完了--エラー 0、0 件の警告---配置開始: プロジェクト: tutorial、構成: デバッグ--- http:// へのデプロイ\<サーバー名 >/reportserverDeploying 報告 ' チュートリアル/Sales Orders'。配置完了--エラー 0、0 件の警告ステージ ビルド: 1 正常終了または最新、0 失敗、0 スキップ ステージの展開: 1 正常終了、0 失敗、0 スキップ ステージ  
+    > ------ ビルド開始:プロジェクト: tutorial、構成:デバッグ---'Sales Orders.rdl' をスキップしています。 項目が最新の状態です。ビルド完了--0 個のエラー、警告 0-展開の開始。プロジェクト: tutorial、構成:デバッグ--- http:// へのデプロイ\<サーバー名 >]、[レポートの reportserverDeploying ' チュートリアル/Sales Orders'。配置完了--エラー 0、0 件の警告ステージ ビルドします。正常終了または最新の状態は 1、0 失敗、0 スキップ ステージの展開。1 正常終了、0 失敗、0 スキップ ==========  
   
-     次のようなメッセージが表示されている場合は、レポート さーばーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
+     次のようなメッセージが表示されている場合は、レポート サーバーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
   
     > "ユーザーに付与されるアクセス許可 'XXXXXXXX\\< ユーザー名\>' 不十分なため、この操作を実行する"  
   
@@ -139,12 +138,12 @@ ms.locfileid: "48095299"
   
      レポート マネージャーの URL (たとえば `http://<server name>/reports`) を参照します。  
   
-7.  レポートを含むフォルダーを参照して、レポートの名前をクリックします。 `Sales Orders` 、ブラウザーでレンダリングされたレポートを表示します。  
+7.  レポートを含むフォルダーを参照し、レポート `Sales Orders` の名前をクリックして、表示レポートをブラウザーで表示します。  
   
 ## <a name="next-steps"></a>次の手順  
  これで、「基本的なテーブル レポートの作成」チュートリアルを終了します。  
   
 ## <a name="see-also"></a>参照  
- [フィルター、グループ、およびデータの並べ替え&#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: db6f438bc4a4b241b939806fd4dacef6bb146be8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6785c481c9cb1049b50c39f7b1cff7ffad8c38f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042040"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ ON ALL SERVER
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. DML トリガーを削除する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `employee_insupd` トリガーを削除します。 (以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] トリガー IF EXISTS の DROP 構文を使用することができます)。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `employee_insupd` トリガーを削除します ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、DROP TRIGGER IF EXISTS 構文を使うことができます)。  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

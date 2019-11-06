@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
@@ -13,12 +12,12 @@ ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3759aeb64524386ed0ac522e47e1de3ff99c18a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f62b8d690e71c8efdfc33c15966758d10a4412af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063354"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL デバッガー
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの実行時の動作を確認してエラーを検出できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウをデバッグ モードに設定した後、特定のコード行で実行を一時停止し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用されている (またはステートメントから返される) 情報やデータを調べることができます。  

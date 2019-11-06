@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectreporttype.f1
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d18c3524b769e210520dcffde1416cb9ef72ca9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101428"
 ---
 # <a name="select-the-report-type"></a>レポートの種類を選択します
   レポート ウィザードのこのページを使用すると、テーブル形式のレポートまたはマトリックス形式のレポートのいずれかを選択できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "48091509"
   
  ウィザードの後続のページには、マトリックスを定義するオプションが用意されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [レポート ウィザードのヘルプ](../../2014/reporting-services/report-wizard-help.md)  

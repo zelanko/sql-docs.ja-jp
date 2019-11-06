@@ -4,20 +4,24 @@ hide_bc: true
 title: SQL Server の管理、監視、チューニング
 description: SQL Server の管理、監視、およびチューニングに役立つ機能を示します。
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 5ea660552e228438dd002ab2d274db280fd90ec6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 001c39b6c8b6b10c3329881a8e07c7e298457c15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131872"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +31,7 @@ ms.locfileid: "51698387"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server のダウンロード</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +77,7 @@ ms.locfileid: "51698387"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: 管理、監視、チューニング</h1>
+        <h1>SQL Server:管理、監視、チューニング</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>
@@ -83,7 +87,7 @@ ms.locfileid: "51698387"
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
                             <li class="fullSpan">
                                 <div class="container intro">
-                                <h2>[管理]</h2>
+                                <h2>管理する</h2>
                             </li>
                             <li>
                                 <a href="/sql/relational-databases/database-lifecycle-management/">
@@ -436,7 +440,7 @@ ms.locfileid: "51698387"
                                 </a>
                             </li> 
                             <li>
-                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017/">
+                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

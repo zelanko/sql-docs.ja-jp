@@ -1,19 +1,19 @@
 ---
 title: 集計関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b97d2a45a0312e2d2db0425f89262526ddbe76ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: aa6d1892c8aceb4640207bce9bc2321541137b6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030531"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576386"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>レポート ビルダー関数 - 集計関数
   データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。  
@@ -47,7 +47,7 @@ Aggregate(expression, scope)
   
  この既定の動作を変更するには、 **[データセットのプロパティ]** ダイアログ ボックスの **[小計を詳細行として解釈]** オプションの値を変更します。 このオプションを **True**に設定すると、サーバー集計値を含むすべてのデータが詳細データとして表示されます。 **False**に設定すると、サーバー集計値は合計として表示されます。 このプロパティの設定は、このデータセットにリンクされているすべてのデータ領域に影響します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  **Aggregate** を参照するレポート アイテムを含むすべてのグループでは、そのグループ式に単純なフィールド参照 ( `[FieldName]`など) が指定されている必要があります。 複雑なグループ式を使用するデータ領域で **Aggregate** を使用することはできません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、 **Aggregate** 関数を使用した集計がサポートされるように、( **MemberProperty**型ではなく) **LevelProperty**型の MDX フィールドをクエリに含める必要があります。  
   
  *Expression* には、入れ子になった集計関数への呼び出しを含めることができます。ただし、次に示すように、これには例外および条件があります。  

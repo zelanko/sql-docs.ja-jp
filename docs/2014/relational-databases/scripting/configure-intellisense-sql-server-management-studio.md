@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Options [SQL Server Management Studio], IntelliSense
@@ -15,12 +14,12 @@ ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cafcf49f5552f9de1e94cf6978924e88246ec075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dc17f3f7e1b58c871a6a1efead6338f4f0c3243
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090506"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense の構成 (SQL Server Management Studio)
   ほとんどの [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションは、既定でオンになっています。 IntelliSense オプションをオフにして、メニュー コマンドやキーストロークの組み合わせによって起動することも可能です。  
@@ -29,7 +28,7 @@ ms.locfileid: "48155152"
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]** を展開し、 **[すべての言語]**、 **[Transact-SQL]**、 **[XML]** のいずれかを展開して、 **[全般]** をクリックします。  
+2.  **[テキスト エディター]** を展開し、 **[すべての言語]** 、 **[Transact-SQL]** 、 **[XML]** のいずれかを展開して、 **[全般]** をクリックします。  
   
 3.  入力候補オプションのうち、使用しないオプションのチェック ボックスをオフにし、 **[OK]** をクリックします。  
   

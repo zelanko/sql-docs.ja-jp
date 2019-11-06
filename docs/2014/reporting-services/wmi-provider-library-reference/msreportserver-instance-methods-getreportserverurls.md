@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 148e0ece44e97bd4c559bbed9cc95aa97092dffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097189"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls メソッド (WMI MSReportServer_Instance)
   ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を返します。  
@@ -37,7 +36,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="parameters"></a>パラメーター  
  *ApplicationName[]*  
- インストールされているアプリケーションを含む配列。 値は`ReportServerWebService`または`ReportManager`します。  
+ インストールされているアプリケーションを含む配列。 値は `ReportServerWebService` または `ReportManager` です。  
   
  *URLs[]*  
  正常に登録された URL を含む配列。  
@@ -53,10 +52,10 @@ public void GetReportServerUrls(out string[] applicationName,
 ## <a name="remarks"></a>コメント  
  WMI 管理オブジェクトによって公開されるメソッドは、InvokeMethod 関数によって呼び出されます。 詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI ドキュメントの「管理オブジェクトのメソッドの実行」を参照してください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], reports
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - tasks [Reporting Services]
 - roles [Reporting Services], methods
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 906fe43c9b1f9743c74891d1098e8dbf03d58b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: daf96fad259166d64d9716064eaae4cc922d9d4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63255245"
 ---
 # <a name="authorization-methods"></a>Authorization メソッド
   以下のメソッドを使用して、レポート サーバーでタスク、ロール、およびポリシーを管理できます。  

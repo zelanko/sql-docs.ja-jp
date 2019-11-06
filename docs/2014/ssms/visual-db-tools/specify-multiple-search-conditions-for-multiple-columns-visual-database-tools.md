@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
@@ -16,12 +16,12 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6fd1c3e162b338d90c75ccb54bae5f94569ce6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204949"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>複数の列に対して複数の検索条件を指定する (Visual Database Tools)
   検索条件に複数のデータ列を指定して、クエリの範囲を広くしたり狭くしたりできます。 たとえば、次の場合です。  

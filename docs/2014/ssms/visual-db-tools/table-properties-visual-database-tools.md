@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.tabledesigner
@@ -13,12 +13,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33e75ea1383a597f3e896ad2d7d24f05a7021ac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204689"
 ---
 # <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] (Visual Database Tools)
   以下のプロパティは、テーブル デザイナーで右クリックして [プロパティ] をクリックすると開く [プロパティ] ウィンドウに表示されます。 特に断りのない限り、テーブルが選択されているときにこれらのプロパティを [プロパティ] ウィンドウで編集できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48065382"
 >  このトピックでは、プロパティを五十音順ではなくカテゴリ別に示しています。  
   
  **[IDENTITY] カテゴリ**  
- 展開して **[名前]**、 **[説明]**、および **[スキーマ]** の各プロパティを表示します。  
+ 展開して **[名前]** 、 **[説明]** 、および **[スキーマ]** の各プロパティを表示します。  
   
  **名前**  
  テーブルの名前を表示します。 名前を編集するには、テキスト ボックスに入力します。  
@@ -53,7 +53,7 @@ ms.locfileid: "48065382"
  データ ソースのサーバーの名前を表示します。  
   
  **[テーブル デザイナー] カテゴリ**  
- 展開して **[IDENTITY 列]**、 **[Indexable]**、および **[Replicated]** の各プロパティを表示します。  
+ 展開して **[IDENTITY 列]** 、 **[Indexable]** 、および **[Replicated]** の各プロパティを表示します。  
   
  **[IDENTITY 列]**  
  テーブルの ID 列として使用されている列を表示します。 ID 列を変更するには、ドロップダウン リストから列を選択します。 数値データ型の列だけが一覧に表示されます。  
@@ -65,7 +65,7 @@ ms.locfileid: "48065382"
  テーブルが別の場所でレプリケートされているかどうかを表示します。  
   
  **[標準データ スペースの指定] カテゴリ**  
- 展開して **[(データ スペースの種類)]**、 **[ファイル グループまたはパーティション スキーム名]**、および **[パーティション列の一覧]** の各プロパティを表示します。  
+ 展開して **[(データ スペースの種類)]** 、 **[ファイル グループまたはパーティション スキーム名]** 、および **[パーティション列の一覧]** の各プロパティを表示します。  
   
  **[(データ スペースの種類)]**  
  テーブルがファイル グループまたはパーティション スキームを使用して保存されるかどうかを表示します。  

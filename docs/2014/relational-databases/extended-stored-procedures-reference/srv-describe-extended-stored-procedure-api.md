@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_describe
@@ -22,12 +20,12 @@ ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 376aa2a01f6b7f25f29c1086c5ce0ea81fe87b14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127331"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (拡張ストアド プロシージャ API)
     
@@ -114,7 +112,7 @@ srcdata
  アプリケーションで使用する列名が Unicode である場合は、**srv_describe** を呼び出す前に、列名をサーバーのマルチバイト コード ページに変換する必要があります。 詳しくは、「[Unicode データおよびサーバー コード ページ](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)をご覧ください。  
+>  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [srv_sendrow &#40;拡張ストアド プロシージャ API&#41;](srv-sendrow-extended-stored-procedure-api.md)   

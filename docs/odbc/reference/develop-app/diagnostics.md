@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0c7ddfeda7538027c56af17664e5962d09903b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd6640c0dc06d9e957176717ef26aa3e444ffa9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022519"
 ---
 # <a name="diagnostics"></a>診断
-ODBC 関数では、2 つの方法で診断情報を返します。 リターン コードでは、全体的な成功または失敗、関数の診断レコードが、関数に関する詳細情報を提供に示します。 少なくとも 1 つの診断レコード、ヘッダー レコード: 関数が成功した場合でも返されます。  
+ODBC 関数では、2 つの方法で診断情報を返します。 リターン コードでは、全体的な成功または失敗、関数の診断レコードが、関数に関する詳細情報を提供に示します。 関数が成功した場合でも、少なくとも 1 つの診断レコードのヘッダー レコード - が返されます。  
   
  診断情報は、ハード コーディングされた SQL ステートメントで無効なハンドルなどのプログラミング エラーや構文エラーをキャッチする開発時に使用されます。 実行時エラーとデータの切り捨て、アクセス違反、構文エラーなどの警告をユーザーが入力した SQL ステートメントでキャッチする実行時に使用されます。  
   

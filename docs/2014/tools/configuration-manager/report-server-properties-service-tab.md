@@ -1,22 +1,21 @@
 ---
-title: レポート サーバーのプロパティ ([サービス] タブ) |Microsoft Docs
+title: レポート サーバーのプロパティ ([サービス] タブ) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478278f6cc0c097fd8ced85ae42990d31b2578c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506774"
 ---
 # <a name="report-server-properties-service-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレポート サーバー サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
@@ -46,16 +45,16 @@ ms.locfileid: "48159022"
  **開始モード**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   「手動」: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動：このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
+-   自動：このサービスは、このコンピューターの起動時に起動しようとします。  
   
--   \[無効]: このサービスは開始できません。  
+-   無効になっています。このサービスを開始できません。  
   
- **状態**  
+ **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server のサービス](../../../2014/tools/configuration-manager/sql-server-services.md)  
+ [[SQL Server のサービス]](../../../2014/tools/configuration-manager/sql-server-services.md)  
   
   

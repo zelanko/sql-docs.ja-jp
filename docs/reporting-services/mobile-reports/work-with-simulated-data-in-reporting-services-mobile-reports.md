@@ -9,11 +9,11 @@ ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813965"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62474871"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Reporting Services のモバイル レポートでシミュレートされたデータを使用する
 デザイン サーフェイスにギャラリー要素を配置すると、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は、その要素のシミュレートされたデータを即座に生成します。 このデータは、モバイル レポートを作成するときにさまざまな目的を果たします。   

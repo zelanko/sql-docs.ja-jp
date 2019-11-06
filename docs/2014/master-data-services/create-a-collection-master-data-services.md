@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 386da4804e3153361e055fc11cff6dfc2352a473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ea763aa9c0bd187b2207dc50a1f678c295f3b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483390"
 ---
 # <a name="create-a-collection-master-data-services"></a>コレクションを作成する (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーまたは統合メンバーの一覧表示を作成する必要があるときは、コレクションを作成します。 コレクションは、エンティティのすべてのメンバーを含む必要はありません。  
@@ -51,15 +50,15 @@ ms.locfileid: "48208842"
   
 8.  必要に応じて、 **[説明]** ボックスにコレクションの説明を入力します。  
   
-9. **[OK]** をクリックします。  
+9. [**OK**] をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   
--   [コレクションにメンバーを追加&#40;マスター データ サービス&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [コレクションにメンバーを追加する (マスター データ サービス)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [コレクション&#40;マスター データ サービス&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [メンバーまたはコレクションの削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [明示的階層を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+ [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)   
+ [メンバーまたはコレクションを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

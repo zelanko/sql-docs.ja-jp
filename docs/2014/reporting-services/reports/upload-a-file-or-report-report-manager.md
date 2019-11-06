@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - uploading files [Reporting Services]
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc1a807ed81ffb0b0aa5482d2fe3a09e70eb7908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102396"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>ファイルまたはレポートをアップロードする (レポート マネージャー)
   レポート マネージャーには、レポート、モデル、およびその他のファイルをクライアント アプリケーションからパブリッシュしなくてもレポート サーバーに追加できるアップロード機能が備わっています。 ファイル システムからアップロードしたファイルは、レポート サーバー上のアイテムとして格納されます。 ファイルがどのように格納されるかは、アップロードするファイルの種類によって異なります。  
@@ -43,16 +42,16 @@ ms.locfileid: "48116183"
   
 4.  **[参照]** をクリックして、アップロードするファイルを選択します。 レポート定義ファイル、画像、ドキュメント、またはレポート サーバーで利用できるようにする任意のファイルをアップロードできます。  
   
-5.  新しいアイテムの名前を入力します。 アイテム名ではスペースを使用できます。ただし、予約文字 (; ? :) は使用できません : \@ & = +, $/* \< > |。  
+5.  新しいアイテムの名前を入力します。 アイテム名ではスペースを使用できます。ただし、予約文字 (; ? :) は使用できません : \@ & = + , $ / * \< > |.  
   
 6.  既存のアイテムを新しいアイテムに置き換える場合は、 **[アイテムが存在する場合は上書きする]** をクリックします。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [作成、削除、または共有データ ソース変更&#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../contents-page-report-manager.md)   
- [[ファイルのアップロード] ページ &#40;レポート マネージャー&#41;](../upload-file-page-report-manager.md)   
+ [共有データ ソースを作成、削除、または変更する (レポート マネージャー)](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../contents-page-report-manager.md)   
+ [[ファイルのアップロード] ページ (レポート マネージャー)](../upload-file-page-report-manager.md)   
  [フォルダーへのファイルのアップロード](../report-server/upload-files-to-a-folder.md)  
   
   

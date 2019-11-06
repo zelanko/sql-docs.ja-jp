@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098866"
 ---
 # <a name="upload-file-page-report-manager"></a>[ファイルのアップロード] ページ (レポート マネージャー)
   ファイル システムからレポート サーバー データベースにファイルをパブリッシュするには、[ファイルのアップロード] ページを使用します。 アップロードされたファイルは、レポート サーバーのフォルダー階層に、アイテムとして表示されます。  
   
 -   アップロードされた .rdl ファイルは、レポートとしてレポート サーバーにパブリッシュされます。  
   
--   アップロードされた .smdl ファイルにデータ ソース ビュー情報が含まれていた場合、このファイルはレポート モデルとしてパブリッシュされます。 データ ソース ビューへの参照が失われると、アップロード中にエラーが発生します。 .Smdl ファイルをアップロードする場合、データ ソース ビュー情報が不足している可能性がありますが、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]レポート モデル プロジェクト。 レポート モデル プロジェクトでは、データ ソース ビュー情報は、.smdl ファイル自体ではなく、独立したファイルに格納されます。  
+-   アップロードされた .smdl ファイルにデータ ソース ビュー情報が含まれていた場合、このファイルはレポート モデルとしてパブリッシュされます。 データ ソース ビューへの参照が失われると、アップロード中にエラーが発生します。 データ ソース ビュー情報は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] レポート モデル プロジェクトから .smdl ファイルをアップロードすると失われる場合があります。 レポート モデル プロジェクトでは、データ ソース ビュー情報は、.smdl ファイル自体ではなく、独立したファイルに格納されます。  
   
      データ ソース ビュー情報を含む (およびアップロードが正常に実行される) モデル ファイルは、以前にレポート サーバーにパブリッシュされて、サーバーからファイル システムのファイルに保存されたものです。 モデルの [全般プロパティ] ページを開き、 **[編集]** をクリックしてモデルを開くと、モデルをファイルに保存できます。その後、そのファイルを新しいモデルとしてレポート サーバーにアップロードすることができます。 次にアップロードした .smdl ファイルには、モデルのパブリケーションに必要な情報がすべて含められます。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48128262"
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [フォルダーへのファイルのアップロード](report-server/upload-files-to-a-folder.md)  
   

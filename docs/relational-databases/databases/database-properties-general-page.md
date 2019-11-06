@@ -3,9 +3,8 @@ title: '[データベースのプロパティ] ([全般] ページ) | Microsoft 
 ms.custom: ''
 ms.date: 10/27/2015
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: configuration"
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.general.f1
@@ -13,26 +12,25 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9e043f66817b1c45b56d6c04b1a093c7435c633
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099600"
 ---
 # <a name="database-properties-general-page"></a>[データベースのプロパティ] \([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[最終データベース バックアップ]**  
  データベースが最後にバックアップされた日付を表示します。  
   
  **[最終データベース ログ バックアップ]**  
  データベース トランザクション ログが最後にバックアップされた日付を表示します。  
   
- **名前**  
+ **[名前]**  
  データベースの名前が表示されます。  
   
  **ステータス**  

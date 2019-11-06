@@ -1,33 +1,32 @@
 ---
-title: '手順 2: フラット ファイル接続マネージャーの追加と構成 | Microsoft Docs'
+title: 手順 2:追加して、フラット ファイル接続マネージャーの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2d22c652ce63bfc3069756251ff554a5d13c186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891794"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>手順 2: フラット ファイル接続マネージャーの追加と構成
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>手順 2:フラット ファイル接続マネージャーの追加と構成
   この実習では、先ほど作成したパッケージにフラット ファイル接続マネージャーを追加します。 パッケージにフラット ファイル接続マネージャーを追加すると、フラット ファイルからデータを抽出できるようになります。 フラット ファイル接続マネージャーでは、フラット ファイルからデータを抽出するときに適用するファイルの名前と場所、ロケールとコード ページ、およびファイル形式を指定できます。また、列区切り記号も指定できます。 さらに、各列のデータ型を手動で指定できます。 **[列の型の予測]** ダイアログ ボックスを使用して、抽出したデータの列を [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] データ型に自動的にマップすることもできます。  
   
  通常は、操作する各フラット ファイルについて、新しいファイル インポート マネージャーを作成する必要があります。 ただし、このチュートリアルでは、データ形式がまったく同じである複数のフラット ファイルからデータを抽出するので、フラット ファイル接続マネージャーを 1 つだけパッケージに追加して、構成します。  
   
  このチュートリアルでは、フラット ファイル接続マネージャーで次のプロパティを構成します。  
   
--   **列名:** フラット ファイルには列名がないため、フラット ファイル接続マネージャーによって既定の列名が作成されます。 これらの既定の列名は、各列の内容を明確に表していません。 わかりやすい名前にするには、既定の列名を変更し、フラット ファイル データの読み込み先であるファクト テーブルと一致する名前を付ける必要があります。  
+-   **列名:** フラット ファイルには、列名があるありません、ため、フラット ファイル接続マネージャーは列名デフォルトを作成します。 これらの既定の列名は、各列の内容を明確に表していません。 わかりやすい名前にするには、既定の列名を変更し、フラット ファイル データの読み込み先であるファクト テーブルと一致する名前を付ける必要があります。  
   
--   **データのマッピング:** フラット ファイル接続マネージャーのデータ型マッピングを指定します。このマッピングは、その接続マネージャーを参照するすべてのフラット ファイル データ ソース コンポーネントで使用されます。 フラット ファイル接続マネージャーでは、データ型を手動でマップできます。また、 **[列の型の予測]** ダイアログ ボックスを使用してマップすることもできます。 このチュートリアルでは、 **[列の型の予測]** ダイアログ ボックスで予測されたマッピングを表示し、 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで必要なマッピングを手動で行います。  
+-   **データのマッピング:** フラット ファイル接続マネージャーの指定したデータ型マッピングは、接続マネージャーを参照するすべてのフラット ファイル データ ソース コンポーネントで適用されます。 フラット ファイル接続マネージャーでは、データ型を手動でマップできます。また、 **[列の型の予測]** ダイアログ ボックスを使用してマップすることもできます。 このチュートリアルでは、 **[列の型の予測]** ダイアログ ボックスで予測されたマッピングを表示し、 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで必要なマッピングを手動で行います。  
   
  フラット ファイル接続マネージャーでは、データ ファイルに関するロケール情報が提供されます。 コンピューターが、地域オプション [英語 (米国)] を使用するように構成されていない場合、 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで追加のプロパティを設定する必要があります。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48197352"
   
      このサンプル データは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] のレッスン パッケージに含まれています。 サンプル データとレッスン パッケージをダウンロードするには、次の手順を実行します。  
   
-    1.  「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「 [Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   
@@ -100,9 +99,9 @@ ms.locfileid: "48197352"
 4.  **[OK]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3: OLE DB 接続マネージャーの追加と構成](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [ステップ 3:追加して、OLE DB 接続マネージャーの構成](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md)   
  [Integration Services のデータ型](data-flow/integration-services-data-types.md)  
   

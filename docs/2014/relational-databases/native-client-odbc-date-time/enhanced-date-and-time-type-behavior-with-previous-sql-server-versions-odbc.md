@@ -12,18 +12,18 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184197"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63140632"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
   このトピックでは、強化された日付や時刻の機能を使用するクライアント アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] と通信する場合、および Microsoft Data Access Components、Windows Data Access Components、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用しているクライアント アプリケーションから、機能強化された日付や時刻をサポートするサーバーへコマンドを送信する場合に想定される動作について説明します。  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用してコンパイルされたクライアント アプリケーションでは、新しい日付型と時刻型が nvarchar 列と見なされます。 「データ形式: 文字列とリテラルをデータする"セクションで説明した列のコンテンツ リテラル表現[ODBC の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)します。 列のサイズは、列に指定された秒の小数部の有効桁数に対するリテラルの最大長です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用してコンパイルされたクライアント アプリケーションでは、新しい日付型と時刻型が nvarchar 列と見なされます。 」の説明に従って、列のコンテンツはリテラル表現"データ形式。文字列とリテラル」のセクション[ODBC の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)します。 列のサイズは、列に指定された秒の小数部の有効桁数に対するリテラルの最大長です。  
   
  カタログ API によって、クライアントに返される下位データ型のコード (nvarchar など) および関連する下位の表現 (適切なリテラル形式など) と一貫性のあるメタデータが返されます。 ただし、返されるデータ型名は、実際の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の型名です。  
   
@@ -37,8 +37,8 @@ ms.locfileid: "48184197"
 |||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK \(2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK] \(1)|  
 |||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK \(2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time(7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|[OK] \(1)|  
-|||SQL_C_TYPE_TIMESTAMP|失敗します (時刻リテラルが無効です)。|[OK] \(1)|  
+||Time(7)|SQL_C_TIME|失敗する-無効な時刻のリテラルです。|[OK] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|失敗する-無効な時刻のリテラルです。|[OK] \(1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK] \(1)|  
 ||datetime2 (7)|SQL_C_TYPE_TIMESTAMP|[OK]|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|[OK]|[OK]|  
@@ -87,8 +87,8 @@ ms.locfileid: "48184197"
 |TYPE_NAME|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

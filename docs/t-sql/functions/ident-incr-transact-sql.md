@@ -17,48 +17,46 @@ helpviewer_keywords:
 - IDENT_INCR function
 - identity columns [SQL Server], IDENT_INCR function
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac2a77f861330686d618fdd13764d11f27d12e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 6edd1cb219f7250a6f9e5671efdb076c6e0a0349
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770922"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969476"
 ---
-# <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
+# <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  増分値を返します (**数値** (**@@** MAXPRECISION, 0) として返される)。テーブルまたはビューを id 列を持つ id 列の作成時に指定します。  
+テーブルまたはビューの ID 列を作成するときに指定された増分値を返します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 IDENT_INCR ( 'table_or_view' )  
 ```  
   
 ## <a name="arguments"></a>引数  
- **'** *table_or_view* **'**  
- 有効な ID 増分値を確認するためのテーブルまたはビューを表す[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *table_or_view* は引用符、変数、関数、または列名で囲まれた文字列定数を指定できます。 *table_or_view* は **char**、**nchar**、**varchar**、または **nvarchar**です。  
+**'** *table_or_view* **'**  
+有効な ID 増分値を確認するためのテーブルまたはビューを表す[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *table_or_view* には、引用符で囲まれた文字列定数を指定できます。 変数、関数、または列名を指定することもできます。 *table_or_view* は **char**、**nchar**、**varchar**、または **nvarchar**です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **numeric**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>例外  
- エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
+エラーが発生した場合、または呼び出し元にオブジェクトの表示アクセス許可がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_INCR など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、自身が所有している、またはアクセス許可を持っているセキュリティ保護可能なリソースのメタデータのみを表示できます。 ユーザー オブジェクトのアクセス許可がないと、IDENT_INCR などのメタデータを発行する組み込み関数から NULL が返されることがあります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. 指定したテーブルの増分値を返す  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Person.Address` テーブルの増分値を返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_INCR('Person.Address') AS Identity_Increment;  
@@ -68,7 +66,7 @@ GO
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. 複数のテーブルの増分値を返す  
  次の例では、増分値を持つ ID 列を含む、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのテーブルを返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   
@@ -98,6 +96,6 @@ Production          BillOfMaterials                    1
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

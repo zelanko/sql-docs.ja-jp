@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7217be66fa41328d2483bc42fa66f2f71fcc1beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1db02ef90af9e014e3481961daf08a1ce10a54c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048083"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>サーバー ネットワーク アドレスの指定 (データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47789040"
 ##  <a name="Syntax"></a> サーバー ネットワーク アドレスの構文  
  サーバー ネットワーク アドレスの構文は、次のような形式になります。  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  パラメーターの説明  
   
@@ -41,15 +40,15 @@ ms.locfileid: "47789040"
   
     -   システムが同じドメイン内にある場合、 `SYSTEM46`などのコンピューター システムの名前を使用できます。  
   
-    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、**[***<IPv6_address>***]** のように、角かっこで囲む必要があります。  
+    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、 **[** _<IPv6_address>_ **]** のように、角かっこで囲む必要があります。  
   
          システムの IP アドレスを参照するには、Windows コマンド プロンプトで、 **ipconfig** コマンドを入力します。  
   
     -   完全修飾ドメイン名は動作が保証されています。 これは、場所によって異なる形式を持つローカルに定義されたアドレス文字列です。 常にではありませんが多くの場合、完全修飾ドメイン名は、次の形式のようにコンピューター名、およびピリオド区切りの一連のドメイン セグメントを含む複合名になります。  
   
-         *computer_name* **など) を使用できます。** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **など) を使用できます。** _domain_segment_[... **.** _domain_segment_]  
   
-         *computer_name* はサーバー インスタンスを実行しているコンピューターのネットワーク名であり、*domain_segment*[...**.***domain_segment*] はサーバーのその他のドメイン情報です。たとえば、`localinfo.corp.Adventure-Works.com` のようになります。  
+         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[... **.** _domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
   
          ドメイン セグメントの内容と数は、会社内または組織内で決定されます。 使用しているサーバーの完全修飾ドメイン名がわからない場合は、システム管理者に問い合わせてください。  
   
@@ -107,9 +106,9 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  **IPCONFIG /ALL**  
   
- 完全修飾ドメイン名を作成するには、次に示すように、*<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
+ 完全修飾ドメイン名を作成するには、次に示すように、 *<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  たとえば、次のような IP 構成があるとします。  
   

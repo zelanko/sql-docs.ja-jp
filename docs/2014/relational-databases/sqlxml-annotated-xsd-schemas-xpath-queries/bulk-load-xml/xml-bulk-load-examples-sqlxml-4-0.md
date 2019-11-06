@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - overflow-field annotation
@@ -30,15 +28,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981cca7f393b4f576bd2d3f11358fcd6491c9f24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013267"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 一括読み込みの例 (SQLXML 4.0)
   以下の例では、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の XML 一括読み込み機能について示します。 それぞれの例では、XSD スキーマと、同等の XDR スキーマを提供します。  
@@ -201,7 +199,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 複数テーブルでの XML データの一括読み込み  
- XML ドキュメントから成る、この例では、 **\<顧客 >** と**\<順序 >** 要素。  
+ XML ドキュメントから成る、この例では、 **\<顧客 >** と **\<順序 >** 要素。  
   
 ```  
 <ROOT>  
@@ -233,7 +231,7 @@ Cust(CustomerID, CompanyName, City)
 CustOrder(OrderID, CustomerID)  
 ```  
   
- 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップを指定します、 **\<顧客 >** と**\<順序 >** 要素。  
+ 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップを指定します、 **\<顧客 >** と **\<順序 >** 要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -385,7 +383,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- スキーマを指定します、 **\<順序 >** を持つ要素を**\<製品 >** 子要素。 **\<順序 >** 要素は、Ord テーブルにマップし、 **\<製品 >** 要素は、データベースの Product テーブルにマップされます。 指定されたチェーン リレーションシップでは、 **\<製品 >** 要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
+ スキーマを指定します、 **\<順序 >** を持つ要素を **\<製品 >** 子要素。 **\<順序 >** 要素は、Ord テーブルにマップし、 **\<製品 >** 要素は、データベースの Product テーブルにマップされます。 指定されたチェーン リレーションシップでは、 **\<製品 >** 要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
   
  このスキーマで XML ドキュメントの一括読み込みを行うと、Ord テーブル、Product テーブル、および OrderDetail テーブルにレコードが追加されます。  
   
@@ -458,7 +456,7 @@ OrderDetail (OrderID, ProductID)
   
  この場合、XML 一括読み込みでは、テーブル間の主キー/外部キーのリレーションシップが識別されます。 一括読み込みでは、主キーのあるテーブルにレコードが挿入された後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で生成された ID 値が、外部キー列のあるテーブルに格納されます。 次の XML 一括読み込みの例では、次の順序でテーブルにデータが挿入されます。  
   
-1.  Product  
+1.  製品  
   
 2.  Ord  
   
@@ -847,7 +845,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各**\<顧客 >** 要素は、この列に追加されます。  
+ このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各 **\<顧客 >** 要素は、この列に追加されます。  
   
 > [!NOTE]  
 >  すべての abstract 要素 (要素の**抽象 ="true"** が指定されて)、すべての属性が禁止されています (対象の属性**禁止されています ="true"** が指定されて) XML の一括でオーバーフローと解釈ロード テストとは、指定されている場合は、オーバーフロー列に追加されます。 それ以外の場合は無視されます。  
@@ -1253,7 +1251,7 @@ End Sub
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
     <xsd:complexType>  
       <xsd:sequence>  
@@ -1290,8 +1288,8 @@ End Sub
     <ProductModel ProductModelID="2005">  
         <Name>Mountain-100 (2005 model)</Name>  
         <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-            <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-                  xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+            <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+                  xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
                   xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
                   xmlns:html="http://www.w3.org/1999/xhtml"   
                   xmlns="">  

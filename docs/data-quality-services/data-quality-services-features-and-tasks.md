@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 31bc5374f0db1bcca9487884c3e0493d2a1d18af
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: e29784a54a692c2463abc7ada688dbcb297ff7f8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616392"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890633"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services の機能とタスク
 
@@ -24,7 +23,7 @@ ms.locfileid: "52616392"
 
   データ スチュワード、Data Quality Services 管理者、または SQL Server 管理者がデータ品質プロジェクトを準備して実行するために必要とする情報を検索します。  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **データ品質ソリューションの設計と実装**  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **データ品質ソリューションの設計と実装**  
  [Data Quality Client アプリケーション](../data-quality-services/data-quality-client-application.md)  
   
  [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
@@ -39,7 +38,7 @@ ms.locfileid: "52616392"
   
  [DQS でのデータ プロファイルと通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **Data Quality Services の管理**  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **Data Quality Services の管理**  
  [DQS 管理](../data-quality-services/dqs-administration.md)  
   
  [DQS セキュリティ](../data-quality-services/dqs-security.md)  

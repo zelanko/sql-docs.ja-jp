@@ -13,13 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: c671ff9f1f4996401d31aac2788ccf9c8a52f3fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994725"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC と処理の出力でのストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "51603832"
   
 3.  DBBINDING 構造体の配列を使用して、各パラメーター マーカーに 1 つずつ一連のバインドを作成します。  
   
-4.  使用して、定義済みパラメーターのアクセサーを作成、 **iaccessor::createaccessor**メソッド。 **CreateAccessor** では、バインドのセットからアクセサーを作成します。  
+4.  **IAccessor:: CreateAccessor**メソッドを使用して、定義済みパラメーターのアクセサーを作成します。 **CreateAccessor** では、バインドのセットからアクセサーを作成します。  
   
 5.  DBPARAMS 構造体にデータを格納します。  
   
 6.  **Execute** コマンド (この場合はストアド プロシージャへの呼び出し) を呼び出します。  
   
-7.  行セットを処理し、リリースを使用して、 **irowset::release**メソッド。  
+7.  行セットを処理し、 **IRowset:: release**メソッドを使用して解放します。  
   
 8.  ストアド プロシージャから受信したリターン コードと出力パラメーターの値を処理します。  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050164"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62915052"
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
     
@@ -71,7 +71,7 @@ ms.locfileid: "48050164"
   
     10. ORDER BY  
   
-    11. 先頭に戻る  
+    11. TOP  
   
      列の別名は SELECT 句が処理されるまでは定義されないため、GROUP BY 句が処理される時点では別名が不明になってしまいます。  
   

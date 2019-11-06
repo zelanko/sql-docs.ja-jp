@@ -16,15 +16,14 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 54f2add3bd85250d94e82d13e9e1b3ddcef61a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: ee69855ebc242218e0a254c538e3c7e00fee7747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082321"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (データベース プリンシパルの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,18 +62,18 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  データベース プリンシパルで取り消すことのできる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  USER ::*database_user*  
- 権限を取り消すユーザーのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すユーザーのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  ROLE ::*database_role*  
- 権限を取り消すロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  APPLICATION ROLE ::*application_role*  
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 権限を取り消すアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -124,7 +123,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>データベース ユーザー権限  
- データベース ユーザーは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、データベース ユーザーで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ データベース ユーザーは、データベース レベルでセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、データベース ユーザーで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |データベース ユーザー権限|権限が含まれるデータベース ユーザー権限|権限が含まれるデータベース権限|  
 |------------------------------|-----------------------------------------|------------------------------------|  

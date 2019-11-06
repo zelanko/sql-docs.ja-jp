@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -15,27 +14,27 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 142a22e07a9abf5a87e63268910de35ff95b79ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62926692"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]機能と制御フローのトラブルシューティングに使用できるツールが含まれて、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]パッケージ。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] コンテナーおよびタスク上のブレークポイントをサポートしています。  
+-   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、コンテナーおよびタスク上のブレークポイントがサポートされています。  
   
 -   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、実行時の進行状況レポートが用意されています。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] では、デバッグ ウィンドウが用意されています。  
   
 ## <a name="breakpoints"></a>ブレークポイント  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで用意されて、**ブレークポイントの設定**ダイアログ ボックスで、ブレークの条件を有効にすると、ブレークポイントを設定することができ、中断は、ブレークポイントがパッケージの実行前に出現回数の数を指定します。 ブレークポイントは、パッケージ レベル、または個別のコンポーネントのレベルで有効にできます。 タスクまたはコンテナー レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのデザイン画面上にあるタスクまたはコンテナーの隣に、ブレークポイントのアイコンが表示されます。パッケージ レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのラベル上にブレークポイントのアイコンが表示されます。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーには、 **[ブレークポイントの設定]** ダイアログ ボックスが用意されています。このダイアログ ボックスから、ブレークの条件を有効にし、パッケージの実行が中断するまでのブレークポイントの到達回数を指定することにより、ブレークポイントを設定できます。 ブレークポイントは、パッケージ レベル、または個別のコンポーネントのレベルで有効にできます。 タスクまたはコンテナー レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのデザイン画面上にあるタスクまたはコンテナーの隣に、ブレークポイントのアイコンが表示されます。パッケージ レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのラベル上にブレークポイントのアイコンが表示されます。  
   
  ブレークポイントにヒットすると、ブレークポイントのアイコンが変化し、ブレークポイントの発生元を識別できます。 ブレークポイントは、パッケージの実行時に追加、削除、および変更できます。  
   
@@ -43,16 +42,16 @@ ms.locfileid: "48216282"
   
 |ブレークの条件|説明|  
 |---------------------|-----------------|  
-|タスクまたはコンテナーが受信すると、`OnPreExecute`イベント。|タスクが実行される直前に呼び出されます。 このイベントは、タスクまたはコンテナーが実行される直前に、タスクまたはコンテナーから発生します。|  
-|タスクまたはコンテナーが受信すると、`OnPostExecute`イベント。|タスクの実行ロジックが完了した直後に呼び出されます。 このイベントは、タスクまたはコンテナーが実行された直後に、タスクまたはコンテナーから発生します。|  
-|タスクまたはコンテナーが受信すると、`OnError`イベント。|エラーが発生すると、タスクまたはコンテナーによって呼び出されます。|  
-|タスクまたはコンテナーが受信すると、`OnWarning`イベント。|タスクでエラーは発生していないが、警告が確認された状態にあるときに、呼び出されます。|  
-|タスクまたはコンテナーが受信すると、`OnInformation`イベント。|タスクから情報が提供される必要があるときに呼び出されます。|  
-|タスクまたはコンテナーが受信すると、`OnTaskFailed`イベント。|タスク ホストが失敗したとき、タスク ホストによって呼び出されます。|  
-|タスクまたはコンテナーが受信すると、`OnProgress`イベント。|タスクの実行の進行状況を更新するために呼び出されます。|  
-|タスクまたはコンテナーが受信すると、`OnQueryCancel`イベント。|タスク処理の実行をキャンセルできる場合、任意のタイミングで呼び出されます。|  
-|タスクまたはコンテナーが受信すると、`OnVariableValueChanged`イベント。|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 変数の RaiseChangeEvent に設定する必要があります`true`このイベントを発生させる。<br /><br /> **\*\* 警告 \*\*** このブレークポイントに関連付けられている変数は、 **コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
-|タスクまたはコンテナーが受信すると、`OnCustomEvent`イベント。|タスクによって定義されたカスタム イベントを起動するため、タスクによって呼び出されます。|  
+|タスクまたはコンテナーが `OnPreExecute` イベントを受け取ったとき|タスクが実行される直前に呼び出されます。 このイベントは、タスクまたはコンテナーが実行される直前に、タスクまたはコンテナーから発生します。|  
+|タスクまたはコンテナーが `OnPostExecute` イベントを受け取ったとき|タスクの実行ロジックが完了した直後に呼び出されます。 このイベントは、タスクまたはコンテナーが実行された直後に、タスクまたはコンテナーから発生します。|  
+|タスクまたはコンテナーが `OnError` イベントを受け取ったとき|エラーが発生すると、タスクまたはコンテナーによって呼び出されます。|  
+|タスクまたはコンテナーが `OnWarning` イベントを受け取ったとき|タスクでエラーは発生していないが、警告が確認された状態にあるときに、呼び出されます。|  
+|タスクまたはコンテナーが `OnInformation` イベントを受け取ったとき|タスクから情報が提供される必要があるときに呼び出されます。|  
+|タスクまたはコンテナーが `OnTaskFailed` イベントを受け取ったとき|タスク ホストが失敗したとき、タスク ホストによって呼び出されます。|  
+|タスクまたはコンテナーが `OnProgress` イベントを受け取ったとき|タスクの実行の進行状況を更新するために呼び出されます。|  
+|タスクまたはコンテナーが `OnQueryCancel` イベントを受け取ったとき|タスク処理の実行をキャンセルできる場合、任意のタイミングで呼び出されます。|  
+|タスクまたはコンテナーが `OnVariableValueChanged` イベントを受け取ったとき|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 変数の RaiseChangeEvent に設定する必要があります`true`このイベントを発生させる。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** このブレークポイントに関連付けられている変数は、**コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
+|タスクまたはコンテナーが `OnCustomEvent` イベントを受け取ったとき|タスクによって定義されたカスタム イベントを起動するため、タスクによって呼び出されます。|  
   
  一部のタスクとコンテナーには、すべてのタスクとコンテナーで使用できるブレークの条件以外に、ブレークポイントを設定するための特殊なブレーク条件が含まれています。 たとえば、For ループ コンテナーでは、ループの各反復処理の開始点で実行を中断するブレークポイントを設定するための、ブレークの条件を有効にできます。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48216282"
 -   [タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>進行状況レポート  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーには 2 種類進行状況レポートにはが含まれています: デザイン サーフェイスの色分け、**制御フロー**  タブとで進行状況メッセージ、**進行状況**タブ。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーには、2 種類の進行状況レポート機能が含まれています。1 つは **[制御フロー]** タブのデザイン画面上の色分けで、もう 1 つは **[進行状況]** タブ上の進行状況メッセージです。  
   
  パッケージを実行すると、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、各タスクまたはコンテナーが実行状態を示す色で表示され、進行状況を確認できます。 この色により、要素が実行の待機中か、現在実行中か、正常に完了したか、または正しく終了しなかったか、などがわかります。 パッケージの実行を停止すると、表示は色分けされなくなります。  
   
@@ -103,11 +102,11 @@ ms.locfileid: "48216282"
 ## <a name="debug-windows"></a>デバッグ ウィンドウ  
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] には、ブレークポイントの処理、およびブレークポイントが含まれるパッケージのデバッグに使用できる多数のウィンドウがあります。 各ウィンドウの詳細については、ウィンドウを開いて F1 キーを押し、目的のウィンドウのヘルプを参照してください。  
   
- [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]** をポイントします。次に、 **[ブレークポイント]**、 **[出力]**、または **[イミディエイト]** をクリックします。  
+ [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]** をポイントします。次に、 **[ブレークポイント]** 、 **[出力]** 、または **[イミディエイト]** をクリックします。  
   
  次の表は、各ウィンドウについて説明しています。  
   
-|[Window]|説明|  
+|Window|説明|  
 |------------|-----------------|  
 |ブレークポイント|パッケージ内のブレークポイントを一覧表示し、ブレークポイントの有効化および削除のオプションを提供します。|  
 |[出力]|[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|  

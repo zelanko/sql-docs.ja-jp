@@ -1,7 +1,7 @@
 ---
 title: ORDER BY 句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 12/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -36,18 +36,18 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530235"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419639"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 句 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリによって返されるデータを並べ替えます。 この句は次の場合に使用します。  
@@ -63,7 +63,7 @@ ms.locfileid: "52530235"
 
 ## <a name="syntax"></a>構文  
   
-```sql  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -98,7 +98,14 @@ ORDER BY order_by_expression
   
  並べ替え列は複数指定できます。 列名は一意である必要があります。 ORDER BY 句内に記述する並べ替え列の並び順によって、並べ替えられた結果セットの構成が決まります。 つまり、結果セットが最初の列を基準に並べ替えられた後、その並べ替えられたリストが 2 つ目の列を基準に並べ替えられます。それ以降も同様の並べ替えが行われます。  
   
- ORDER BY 句で参照されている列名は、選択リスト内の列か、FROM 句で指定したテーブルで定義されている列と正確に対応している必要があります。  
+ ORDER BY 句で参照されている列名は、選択リスト内の列または列エイリアスか、FROM 句で指定したテーブルで定義されている列と正確に対応している必要があります。 ORDER BY 句が選択リストの列エイリアスを参照している場合、列エイリアスは、ORDER BY 句内の式の一部としてではなく、スタンドアロンで使用する必要があります。次に例を示します。
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  テーブルまたはビューで定義した列の照合順序ではなく、*collation_name* で指定した照合順序に従って ORDER BY 操作を実行します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は、**char**、**varchar**、**nchar**、および **nvarchar** 型の列にのみ適用できます。  
@@ -145,7 +152,7 @@ ORDER BY order_by_expression
   
  **ntext**、**text**、**image**、**geography**、**geometry**、および **xml** 型の列は、ORDER BY 句では使用できません。  
   
- 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。  
   
  FROM 句でテーブルの別名を指定している場合、ORDER BY 句でその列を修飾する際に使用できるのは別名だけです。  
   
@@ -188,7 +195,7 @@ ORDER BY order_by_expression
   
  例については、このトピックの「例」セクションの「単一のトランザクションで複数のクエリを実行する」を参照してください。  
   
- ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 OPTIMZE FOR の詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
+ ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 OPTIMIZE FOR の詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -437,7 +444,6 @@ FROM HumanResources.Department
 ORDER BY DepartmentID ASC   
     OFFSET @StartingRowNumber ROWS   
     FETCH NEXT (SELECT PageSize FROM dbo.AppSettings WHERE AppSettingID = 1) ROWS ONLY;  
-  
 ```  
   
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. 単一のトランザクションで複数のクエリを実行する  
@@ -456,7 +462,7 @@ GO
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 GO  
   
--- Beging the transaction  
+-- Beginning the transaction.
 BEGIN TRANSACTION;  
 GO  
 -- Declare and set the variables for the OFFSET and FETCH values.  
@@ -481,7 +487,6 @@ END;
 GO  
 COMMIT TRANSACTION;  
 GO  
-  
 ```  
   
 ###  <a name="Union"></a> UNION、EXCEPT、および INTERSECT と ORDER BY の併用  
@@ -499,7 +504,6 @@ SELECT Name, Color, ListPrice
 FROM Production.Product  
 WHERE Color = 'Yellow'  
 ORDER BY ListPrice ASC;  
-  
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -547,7 +551,7 @@ ORDER BY LastName, FirstName;
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [順位付け関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [EXCEPT および INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   

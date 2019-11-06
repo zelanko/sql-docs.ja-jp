@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.agent.history.f1
@@ -12,12 +12,12 @@ ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bead031a6d7966db8894fc4b612714ae9c76eda2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10796dde3513e5c4b7970d1e4f6c4eedcad3c6c0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245585"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>[SQL Server エージェントのプロパティ] ([履歴] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス履歴ログの管理設定の表示と設定を行うことができます。  

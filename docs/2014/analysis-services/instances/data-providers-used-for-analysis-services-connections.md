@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080098"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Analysis Services 接続に使用するデータ プロバイダー
   Analysis Services では、サーバーとデータにアクセスするために 3 種類のデータ プロバイダーを用意しています。 Analysis Services に接続するすべてのアプリケーションでは、これらのプロバイダーのいずれかを使用します。 これらのプロバイダーのうち、ADOMD.NET および Analysis Services 管理オブジェクト (AMO) の 2 つは、マネージド データ プロバイダーです。 Analysis Services OLE DB Provider (MSOLAP DLL) は、ネイティブ データ プロバイダーです。  
@@ -44,7 +43,7 @@ ms.locfileid: "50145226"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の初回リリースのメジャー ビルド番号は 12.0.2000.9 です。  
   
- バージョンおよびビルド情報の取得の詳細については、次を参照してください。[バージョンとエディションの SQL Server とそのコンポーネントを確認する方法](http://support.microsoft.com/kb/321185)します。  
+ バージョンおよびビルド情報の取得の詳細については、次を参照してください。[バージョンとエディションの SQL Server とそのコンポーネントを確認する方法](https://support.microsoft.com/kb/321185)します。  
   
 ##  <a name="bkmk_LibUpdate"></a> Analysis Services データ プロバイダーのバージョンを確認する方法  
  データ プロバイダーは、Excel など、日常的に Analysis Services データベースに接続するクライアント アプリケーションによって、Analysis Services と共にインストールされます。  
@@ -74,7 +73,7 @@ ms.locfileid: "50145226"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>ダウンロード サイトでデータ プロバイダーを探す  
   
-1.  [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/p/?LinkID=296473)にアクセスします。  
+1.  [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkID=296473)にアクセスします。  
   
 2.  **[インストール方法]** を展開します。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "50145226"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に付属する Analysis Services OLE DB プロバイダーのバージョンは、MSOLAP130.dll です。 最近のバージョンとしては、MSOLAP10.dll (SQL Server 2008 および 2008 R2) と MSOLAP90.dll (SQL Server 2005) があります。  
   
- OLE DB Provider は多くの場合、接続文字列で指定されます。 Analysis Services 接続文字列では、別の用語体系を使用して、OLE DB プロバイダーを参照: MSOLAP します。\<バージョン > .dll  
+ OLE DB Provider は多くの場合、接続文字列で指定されます。 Analysis Services 接続文字列では、別の用語体系を使用して、OLE DB プロバイダーを参照してください。MSOLAP します。\<バージョン > .dll  
   
  Excel 2013 と同時にインストールされる最新の Analysis Services OLE DB Provider は、MSOLAP.5.dll です。 以前のバージョンの Excel を実行しているワークステーションでは、多くの場合、MSOLAP.4.dll や MSOLAP.3.dll など、以前のバージョンを使用しています。 PowerPivot アドインなど、一部の Analysis Services 機能では、特定のバージョンの OLE DB Provider が必要です。 詳細については、「[接続文字列プロパティ (Analysis Services)](connection-string-properties-analysis-services.md)」を参照してください。  
   

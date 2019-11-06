@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, what's new
@@ -15,12 +14,12 @@ ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92e363dacc893931073fb53e64db539ecb8b1775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206173"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190082"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server インストールの新機能
   Windows Vista は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のサポート対象のオペレーティング システムではありません。 Service Pack 1 は、[!INCLUDE[win7](../../includes/win7-md.md)] および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の各オペレーティング システムの場合の最小要件として残されています。 オペレーティング システムの要件の詳細については、次を参照してください。 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)します。  

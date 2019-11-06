@@ -4,20 +4,24 @@ hide_bc: true
 title: SQL Server - クエリ データ
 description: ご利用の SQL Server データベースのデータへのクエリが簡単になる機能について調査します。
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 19ca726086355529576d7d47ff825dbe3cac32d8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6de02348bd11c1fa48911668a8be5e7543b0373d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109739"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +31,7 @@ ms.locfileid: "51699330"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server のダウンロード</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +77,7 @@ ms.locfileid: "51699330"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: クエリ データ</h1>
+        <h1>SQL Server:クエリ データ</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>
@@ -92,7 +96,7 @@ ms.locfileid: "51699330"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>フルテキスト検索 </h3>
+                                                    <h3>フルテキスト検索</h3>
                                                     <p>フルテキスト インデックスに含まれるのは、テーブル内の 1 つ以上の文字ベースの列です。フルテキスト検索ではそれらに対するクエリを実行できます。</p>
                                                 </div>
                                             </div>

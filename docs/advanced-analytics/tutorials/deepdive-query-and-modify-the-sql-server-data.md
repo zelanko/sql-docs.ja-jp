@@ -1,70 +1,66 @@
 ---
-title: クエリおよび SQL Server のデータ (SQL と R の詳細情報) の変更 |Microsoft Docs
+title: RevoScaleR を使用して SQL Server データを照会および変更する
+description: SQL Server で R 言語を使用してデータのクエリと変更を行う方法に関するチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9bcf782e509263b087cfc599758ae9492b888aed
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975651"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715523"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>クエリおよび SQL Server のデータ (SQL と R の詳細情報) の変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>SQL Server データのクエリと変更 (SQL Server と RevoScaleR のチュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、データ サイエンスの詳細情報を使用する方法のチュートリアルの一部[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法に関する[RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-これで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを読み込んだので、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]で R 関数への引数として作成したデータ ソースを使用して、変数に関する基本情報を取得したり、概要やヒストグラムを生成したりできます。
+前のレッスンでは、データをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込みました。 この手順では、 **RevoScaleR**を使用してデータを探索し、変更できます。
 
-この手順で簡単な分析を行い、データを強化し、データ ソースを再利用します。
+> [!div class="checklist"]
+> * 変数に関する基本的な情報を返す
+> * 生データからカテゴリデータを作成する
 
-## <a name="query-the-data"></a>データのクエリ
+カテゴリデータ (*因子変数*) は、探索的データの視覚化に役立ちます。 これらをヒストグラムへの入力として使用すると、どのような変数データが表示されるかを把握できます。
 
-最初に、列とそのデータ型の一覧を取得します。
+## <a name="query-for-columns-and-types"></a>列と型のクエリ
 
-1.  関数を使用して[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)し分析するデータ ソースを指定します。
+R IDE または RGui を使用して R スクリプトを実行します。 
 
-    RevoScaleR のバージョンによって、使用することも[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)します。 
+最初に、列とそのデータ型の一覧を取得します。 関数[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)を使用して、分析するデータソースを指定できます。 **RevoScaleR**のバージョンによっては、 [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)を使用することもできます。 
   
-    ```R
-    rxGetVarInfo(data = sqlFraudDS)
-    ```
+```R
+rxGetVarInfo(data = sqlFraudDS)
+```
 
-    **結果**
-    
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: gender, Type: integer*
-    
-    *Var 3: state, Type: integer*
-    
-    *Var 4: cardholder, Type: integer*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+**結果**
 
+```R
+Var 1: custID, Type: integer
+Var 2: gender, Type: integer
+Var 3: state, Type: integer
+Var 4: cardholder, Type: integer
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: fraudRisk, Type: integer
+```
 
-## <a name="modify-metadata"></a>メタデータを変更します。
+## <a name="create-categorical-data"></a>カテゴリデータを作成する
 
-すべての変数は、整数として格納されますが、いくつかの変数と呼ばれるカテゴリのデータを表す*要因変数*r.たとえば、列*状態*50 の州およびコロンビア、識別子として使用する番号が含まれています。  データをわかりやすくするために、この数値を州の略称の一覧で置き換えます。
+すべての変数は整数として格納されますが、一部の変数は、R の*factor 変数*と呼ばれるカテゴリデータを表します。たとえば、列の*状態*には、50州の識別子として使用される番号と、コロンビアの地区が含まれます。 データをわかりやすくするために、この数値を州の略称の一覧で置き換えます。
 
-この手順で、省略形を含む文字列ベクトルを作成し、元の整数識別子をこれらのカテゴリ値をマップします。 新しい変数を使用して、 *colInfo*この列が係数として処理することを指定するための引数。 データを分析したり、移動したときに、省略形が使用され、列が係数として処理されます。
+この手順では、省略形を含む文字列ベクターを作成し、これらのカテゴリ値を元の整数識別子にマップします。 次に、 *Colinfo*引数で新しい変数を使用して、この列が要素として処理されるように指定します。 データを分析または移動するたびに、省略形が使用され、列が要素として処理されます。
 
-列を略称にマップしてから要因として使用すると、パフォーマンスも改善されます。 詳細については、次を参照してください。 [R とデータの最適化](..\r\r-and-data-optimization-r-services.md)します。
+列を略称にマップしてから要因として使用すると、パフォーマンスも改善されます。 詳細については、「 [R とデータの最適化](../r/r-and-data-optimization-r-services.md)」を参照してください。
 
-1. まず、次のように R 変数 *stateAbb*を作成し、この変数に追加する文字列のベクトルを定義します。
+1. まず、R 変数*Stateabb*を作成し、次のように、追加する文字列のベクトルを定義します。
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -99,7 +95,7 @@ ms.locfileid: "45975651"
     )
     ```
   
-3. 最新のデータを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースを作成するには、以前と同様に **RxSqlServerData** を呼び出しますが、今回は *colInfo* 引数を追加します。
+3. 更新され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たデータを使用するデータソースを作成するには、前と同じように**RxSqlServerData**関数を呼び出しますが、 *colinfo*引数を追加します。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -118,30 +114,21 @@ ms.locfileid: "45975651"
 
     **結果**
     
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: 2 つの因子水準の性別: 男性、女性*
-    
-    *Var 3: 状態 51 factor levels: AK AL AR AZ CA.VT WA WI WV WY*
-    
-    *Var 4: 2 カード名義人の因子水準: プリンシパルのセカンダリ*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+    ```R
+    Var 1: custID, Type: integer
+    Var 2: gender  2 factor levels: Male Female
+    Var 3: state   51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY
+    Var 4: cardholder  2 factor levels: Principal Secondary
+    Var 5: balance, Type: integer
+    Var 6: numTrans, Type: integer
+    Var 7: numIntlTrans, Type: integer
+    Var 8: creditLine, Type: integer
+    Var 9: fraudRisk, Type: integer
+    ```
 
-これで、指定した 3 つの変数 (_性別_、 _州_、および _カード名義人_) は要素として扱われます。
+これで、指定した 3 つの変数 (*性別*、 *州*、および *カード名義人*) は要素として扱われます。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[計算コンテキストの定義と使用](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
-## <a name="previous-step"></a>前の手順
-
-[RxSqlServerData を使用して SQL Server のデータ オブジェクトを作成する](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
+> [!div class="nextstepaction"]
+> [計算コンテキストの定義と使用](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

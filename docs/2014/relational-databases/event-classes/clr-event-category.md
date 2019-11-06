@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83e8c1bdbfca318ab0f0caec00faa3830a141700
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663647"
 ---
 # <a name="clr-event-category"></a>CLR イベント カテゴリ
   **CLR** イベント カテゴリには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) オブジェクトを実行すると生成されるイベント クラスが含まれます。  
@@ -34,7 +33,7 @@ ms.locfileid: "48229507"
 |[Assembly Load イベント クラス](../../database-engine/assembly-load-event-class.md)|アセンブリの読み込み要求が実行されたことを示します。|  
 |[Assembly Load イベント クラス](../../database-engine/assembly-load-event-class.md)|アセンブリの読み込み要求が実行されるときに発生します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)  
   
   

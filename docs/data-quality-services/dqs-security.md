@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 91b7f5cd25601dff60705465fadbb80a1b169dca
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: c732645c526b2179265a6669055d005e944ee114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992105"
 ---
 # <a name="dqs-security"></a>DQS セキュリティ
 

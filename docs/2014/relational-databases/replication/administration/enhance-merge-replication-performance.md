@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -20,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62805890"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
   「 [レプリケーションの全般的パフォーマンスの向上](enhance-general-replication-performance.md)」で説明した全般的なパフォーマンスのヒントを検討した後、マージ レプリケーションに固有なこれらの項目を併せて検討してください。  
@@ -42,7 +41,7 @@ ms.locfileid: "48175662"
   
 -   Large Object (LOB) データ型を含むテーブルで、正規化を十分に行うことを検討する。  
   
-     同期が発生するとき、マージ エージェントはパブリッシャーまたはサブスクライバーからすべての行を読み取って転送する必要があります。 行に LOB を使用する列が含まれている場合、この処理には追加のメモリ割り当てが必要となることがあり、これらの列が更新されていない場合でもパフォーマンスを低下させる可能性があります。 このようなパフォーマンス低下が発生する可能性を減らすには、LOB 列を別のテーブルに置き、残りの行データとの一対一リレーションシップを使用することを検討してください。 データ型`text`、 `ntext`、および`image`は非推奨とされます。 Lob を追加する場合、データ型を使用することが勧め`varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、それぞれします。  
+     同期が発生するとき、マージ エージェントはパブリッシャーまたはサブスクライバーからすべての行を読み取って転送する必要があります。 行に LOB を使用する列が含まれている場合、この処理には追加のメモリ割り当てが必要となることがあり、これらの列が更新されていない場合でもパフォーマンスを低下させる可能性があります。 このようなパフォーマンス低下が発生する可能性を減らすには、LOB 列を別のテーブルに置き、残りの行データとの一対一リレーションシップを使用することを検討してください。 `text`、`ntext`、および `image` の各データ型は非推奨です。 LOB が必要な場合は、`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` の各データ型を使用することをお勧めします。  
   
 ## <a name="publication-design"></a>パブリケーションの設計  
   
@@ -64,11 +63,11 @@ ms.locfileid: "48175662"
   
 -   パラメーター化されたフィルターによる事前計算済みパーティションを使用する (これは既定で使用される機能です)。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
-     事前計算済みパーティションでは、フィルターの動作にさまざまな制限が課せられます。 アプリケーションがこれらの制限に従うことができない場合は、 **keep_partition_changes** オプションを **True**に設定すると、パフォーマンスが向上します。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+     事前計算済みパーティションでは、フィルターの動作にさまざまな制限が課せられます。 アプリケーションがこれらの制限に従うことができない場合は、 **keep_partition_changes** オプションを **True**に設定すると、パフォーマンスが向上します。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 -   フィルター選択されたデータがユーザー間で共有されていない場合は、重複しないパーティションを使用する。  
   
-     レプリケーションは、複数のパーティションまたはサブスクリプションによって共有されていないデータのパフォーマンスを最適化できます。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+     レプリケーションは、複数のパーティションまたはサブスクリプションによって共有されていないデータのパフォーマンスを最適化できます。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 -   複雑な結合フィルター階層を作成しない。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48175662"
   
 -   サブスクリプションが高速接続を介して同期され、パブリッシャーおよびサブスクライバーから変更が送信される場合は、マージ エージェントに対して **-ParallelUploadDownload** パラメーターを使用する。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で、新しいマージ エージェント パラメーターである **–ParallelUploadDownload**が導入されました。 このパラメーターを設定することによって、マージ エージェントはパブリッシャーにアップロードされた複数の変更およびサブスクライバーにダウンロードされた複数の変更を並列処理できるようになります。 これは、帯域幅が広いネットワークを使用している大容量環境において役立ちます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で、新しいマージ エージェント パラメーターである **-ParallelUploadDownload** が導入されました。 このパラメーターを設定することによって、マージ エージェントはパブリッシャーにアップロードされた複数の変更およびサブスクライバーにダウンロードされた複数の変更を並列処理できるようになります。 これは、帯域幅が広いネットワークを使用している大容量環境において役立ちます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
   
     -   [レプリケーション エージェント プロファイルの操作](../agents/replication-agent-profiles.md)  
   
@@ -141,10 +140,10 @@ ms.locfileid: "48175662"
   
 -   必要な場合、マージ レプリケーションのシステム テーブルのインデックスを再度作成する。  
   
-     マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションに関連付けられたシステム テーブル **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、および **MSmerge_past_partition_mappings**の増大を必要に応じて確認します。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../../indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
+     マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションと関連するシステム テーブルが拡大しているかを時々確認してください(**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings**、および **MSmerge_past_partition_mappings**)。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../../indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
 -   レプリケーション モニターの **[同期の履歴]** タブを使用して、同期のパフォーマンスを監視する。  
   
-     マージ レプリケーションの場合、レプリケーション モニターの **[同期の履歴]** タブには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報の表示の詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する (レプリケーション モニター)](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+     マージ レプリケーションの場合、レプリケーション モニターの **[同期の履歴]** タブには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報を表示する方法について詳しくは、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
   

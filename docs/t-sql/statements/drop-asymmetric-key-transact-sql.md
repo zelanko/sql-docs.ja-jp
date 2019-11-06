@@ -21,15 +21,14 @@ helpviewer_keywords:
 - deleting asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7a859f8c7ce44cb830e10b1ce72a6d2ccbaede0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: fdc08d0598209e3d5fa4957ca241bfa49c60b6a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898307"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  データベースから削除する非対称キーの名前を指定します。  
   
  REMOVE PROVIDER KEY  
- EKM デバイスから拡張キー管理 (EKM) キーを削除します。 拡張キー管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
+ EKM デバイスから拡張キー管理 (EKM) を削除します。 拡張キー管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
- データベース内の対称キーが非対称キーで暗号化されている場合、またはユーザーやログインが非対称キーにマップされる場合、非対称キーは削除できません。 このようなキーを削除するには、事前にそのキーにマップされるユーザーまたはログインを削除する必要があります。 また、その非対称キーで暗号化されているすべての対称キーを削除または変更する必要があります。 非対称キーによる暗号化を削除するには、[ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) の DROP ENCRYPTION オプションを使います。  
+ データベース内の対称キーが非対称キーで暗号化されている場合、またはユーザーやログインが非対称キーにマップされる場合、非対称キーは削除できません。 このようなキーを削除するには、そのキーにマップされるユーザーまたはログインを削除する必要があります。 また、その非対称キーで暗号化されているすべての対称キーを削除または変更する必要があります。 非対称キーによる暗号化を削除するには、[ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) の DROP ENCRYPTION オプションを使います。  
   
  非対称キーのメタデータには、[sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) カタログ ビューを使うことによってアクセスできます。 非対称キー自体を、データベース内部から直接表示することはできません。  
   

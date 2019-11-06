@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
@@ -29,12 +28,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083858"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは *パーセプトロン* で構成される *多層パーセプトロン*ネットワーク ( *バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
@@ -103,9 +102,9 @@ ms.locfileid: "48217652"
   
  **不連続値**  
   
- Μ = p – 状態の前の確率  
+ Μ = p - 状態の前の確率  
   
- StdDev sqrt(p(1-p)) を =  
+ StdDev  = sqrt(p(1-p))  
   
  **連続値**  
   
@@ -187,7 +186,7 @@ ms.locfileid: "48217652"
  Log Normal  
  列内の値を、 *対数正規* 曲線に従って分布している (値の対数が正規分布している) 値として処理する必要があることを示します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  線形回帰モデルには、1 つ以上の入力列と 1 つの出力列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
@@ -203,7 +202,7 @@ ms.locfileid: "48217652"
   
 ## <a name="see-also"></a>参照  
  [Microsoft ニューラル ネットワーク アルゴリズム](microsoft-neural-network-algorithm.md)   
- [ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ニューラル ネットワーク モデルのクエリ例](neural-network-model-query-examples.md)  
   
   

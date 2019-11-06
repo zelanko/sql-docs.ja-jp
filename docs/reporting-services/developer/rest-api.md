@@ -1,20 +1,20 @@
 ---
 title: Reporting Services の REST API による開発 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 05/25/2018
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4872ffea819c23ca27ec0d01e4709a231f95cf5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.custom: seodec18
+ms.date: 12/12/2018
+ms.openlocfilehash: ba424fa0c79249a8870962d0df4cdaf383c9aa39
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514403"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263030"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services の REST API による開発
 
@@ -39,14 +39,14 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 * HTTP 要求メッセージ ヘッダーのフィールド:
 
-    * 必須の [HTTP メソッド](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (操作または動詞ともいう)。要求する操作の種類をサービスに通知します。 Reporting Services REST API では、DELETE、GET、HEAD、PUT、POST、および PATCH の各メソッドがサポートされます。
+    * 必須の [HTTP メソッド](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (操作または動詞ともいう)。要求する操作の種類をサービスに通知します。 Reporting Services REST API では、DELETE、GET、HEAD、PUT、POST、および PATCH の各メソッドがサポートされます。
     * 省略可能な追加ヘッダー フィールド。指定された URI および HTTP メソッドで必要です。
 
 * 省略可能な HTTP **要求メッセージ本文**のフィールド。URI および HTTP 操作をサポートするためのものです。 たとえば、POST 操作には、複合パラメーターとして渡される MIME でエンコードされたオブジェクトが含まれます。 POST または PUT 操作の場合、本文の MIME エンコードの種類を `Content-type` 要求ヘッダーでも指定する必要があります。 一部のサービスでは、`application/json` などの特定の MINE の種類を使用する必要があります。
 
 * HTTP **応答メッセージ ヘッダー**のフィールド:
 
-    * [HTTP 状態コード](https://www.w3.org/Protocols/HTTP/HTRESP.html)。成功コードの 2xx から、エラー コードの 4xx または 5xx までの範囲です。 または、API のドキュメントに記載されているように、サービスで定義された状態コードが返されることもあります。
+    * [HTTP 状態コード](http://www.w3.org/Protocols/HTTP/HTRESP.html)。成功コードの 2xx から、エラー コードの 4xx または 5xx までの範囲です。 または、API のドキュメントに記載されているように、サービスで定義された状態コードが返されることもあります。
     * 省略可能な追加ヘッダー フィールド。要求の応答をサポートするために必要です (`Content-type` 応答ヘッダーなど)。
 
 * 省略可能な HTTP **応答メッセージ本文**のフィールド:
@@ -55,7 +55,7 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 ## <a name="api-documentation"></a>API のドキュメント
 
-最新の REST API には最新の API ドキュメントが必要です。 REST API は OpenAPI 仕様 ( Swagger 仕様ともいう) に基づいてビルドされており、ドキュメントは [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) で入手できます。 SwaggerHub は、API の文書化だけでなく、任意の言語 (JavaScript、TypeScript、C#、Java、Python、Ruby など) でのクライアント ライブラリの作成にも役立ちます。
+最新の REST API には最新の API ドキュメントが必要です。 REST API は OpenAPI 仕様 (Swagger 仕様ともいう) に基づいてビルドされており、ドキュメントは [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) で入手できます。 SwaggerHub は、API の文書化だけでなく、任意の言語 (JavaScript、TypeScript、C#、Java、Python、Ruby など) でのクライアント ライブラリの作成にも役立ちます。
 
 ## <a name="testing-api-calls"></a>API 呼び出しのテスト
 

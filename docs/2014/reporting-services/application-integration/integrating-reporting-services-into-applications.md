@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - integrating reports [Reporting Services]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - application integration [Reporting Services]
 - reports [Reporting Services], integrating
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 993e6abe1df84f712f107f994b5a824e04d89467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 9ad6d24495bb44a7bd1013dbc822eefe346f02d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126151"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>アプリケーションへの Reporting Services の統合
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、拡張性のあるオープンなレポート プラットフォームであり、ソリューションを開発するための API の包括的なセットを開発者に提供するように設計されています。  
@@ -52,7 +50,7 @@ ms.locfileid: "48153572"
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [URL アクセスと SOAP の選択](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [テクニカル リファレンス (SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)   
+ [テクニカル リファレンス &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [レポート サーバー web サービス](../report-server-web-service/report-server-web-service.md)  
   
   

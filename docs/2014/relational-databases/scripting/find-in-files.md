@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.findinfiles
-- vs.findinfiles
 helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 882e13938e85db653dbe43e859bbc582833d68d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da0ea4121408c8b9e5911cc77b7790c00ec1e9dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064023"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
   **[検索と置換]** ウィンドウの [フォルダーを指定して検索] タブでは、指定したファイルのセットのコードで文字列や式を検索できます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  
@@ -135,7 +131,5 @@ ms.locfileid: "48114062"
  **[[シンボルの検索] に切り替える]**  
  このツール バー タブを使用すると、ダイアログ ボックスが **[シンボルの検索]** ダイアログ ボックスに変わります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

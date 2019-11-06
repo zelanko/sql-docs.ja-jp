@@ -21,15 +21,14 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1d3405aa23caf7df2f0f2f02425a681d84197d8f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984424"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (Service Broker の権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  セキュリティ保護可能な [!INCLUDE[ssSB](../../includes/sssb-md.md)] に対して拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  権限を拒否するコントラクトを指定します。 スコープ修飾子 **::** が必要です。  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  権限を拒否するメッセージ型を指定します。 スコープ修飾子 **::** が必要です。  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  権限を拒否するリモート サービス バインドを指定します。 スコープ修飾子 **::** が必要です。  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  権限を拒否するルートを指定します。 スコープ修飾子 **::** が必要です。  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  権限を拒否するサービスを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  

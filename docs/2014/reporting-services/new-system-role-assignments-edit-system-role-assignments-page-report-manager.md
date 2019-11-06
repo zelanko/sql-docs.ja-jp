@@ -1,24 +1,23 @@
 ---
-title: '新しいシステム ロールの割り当て: 編集システム ロールの割り当て ページ (レポート マネージャー) |Microsoft Docs'
+title: 新しいシステム ロールの割り当て:[編集システム ロールの割り当て] ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108129"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ (レポート マネージャー)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新しいシステム ロールの割り当て:システム ロールの割り当て ページ (レポート マネージャー) を編集します。
   レポート サーバーのセキュリティを定義する場合には、[システム ロールの新規割り当て] ページまたは [システム ロールの割り当てを編集] ページを使用します。 すべてのセキュリティはロールの割り当てによって定義され、この割り当てを通じて、実行できるタスクに特定のユーザーまたはグループがマップされます。 タスク リストは、ロールの割り当ての作成時に選択するロールの定義を示します。  
   
  システム レベルでは、作成または変更するロールの割り当てがレポート サーバー全体に適用されます。 たとえば、共有スケジュールはシステム全体で使用されるため、共有スケジュールを作成する機能はシステム レベルで指定されます。  
@@ -52,9 +51,9 @@ ms.locfileid: "48053992"
  **Roles**  
  他のユーザーに割り当てることができるシステム レベルのロールを指定します。 1 つのロールの割り当てに複数のロールを指定できます。  
   
- レポート マネージャーでは、各ロールのタスクは表示されず、タスクを追加または変更することもできません。 ロールは定義されているとおりに使用する必要があります。 作成、変更、またはロールの削除を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]します。 詳細については、次を参照してください。[作成、削除、またはロールを変更&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)します。  
+ レポート マネージャーでは、各ロールのタスクは表示されず、タスクを追加または変更することもできません。 ロールは定義されているとおりに使用する必要があります。 ロールを作成、変更、または削除するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用します。 詳細については、「 [ロールを作成、削除、または変更する &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)」を参照してください。  
   
- 使用している場合[!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)]with Advanced Services では、提供される既定のロールを使用する必要があります。  
+ [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services を使用している場合、提供されている既定のロールを使用する必要があります。  
   
  **説明**  
  ロールに関する詳細を表示します。 システム ユーザーやシステム管理者などの定義済みロールに関しては、各ロールでサポートされているタスクの要約が説明として提供されます。  

@@ -1,24 +1,23 @@
 ---
 title: '[サーバーのプロパティ] ([詳細設定] ページ) - Reporting Services | Microsoft Docs'
 ms.custom: ''
-ms.date: 2016-10-18
+ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099656"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
   このページを使用して、レポート サーバーのシステム プロパティを設定します。 システム プロパティを設定する方法はいくつかあります。 このツールにはグラフィカル ユーザー インターフェイスが用意されているので、コードを記述しなくてもプロパティを設定できます。  
@@ -54,7 +53,7 @@ ms.locfileid: "49119876"
  保存したパラメーターを保持できる最大日数を指定します。 有効値は `-1`、`+1` ～ `2,147,483,647` です。 既定値は `180` 日です。  
   
  **StoredParametersThreshold**  
- レポート サーバーによって格納できるパラメーター値の最大数を指定します。 有効値は `-1`、`+1` ～ `2,147,483,647` です。 既定値は `1500` です。  
+ レポート サーバーが保存できるパラメーター値の最大数を指定します。 有効値は `-1`、`+1` ～ `2,147,483,647` です。 既定値は `1500` です。  
   
  **UseSessionCookies**  
  レポート サーバーがクライアント ブラウザーとの通信時にセッションクッキーを使用する必要があるかどうかを指定します。 既定値は `true` です。  

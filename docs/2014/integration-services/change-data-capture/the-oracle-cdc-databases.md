@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ba180417eb3a426d24ffa6ee8dc985c89fb8e0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205897"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771200"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -31,7 +30,7 @@ ms.locfileid: "48205897"
   
 -   SQL Server CDC メカニズムによって生成される一連の変更テーブルと変更アクセス関数。これらは、通常の (Oracle 用ではない) SQL Server CDC で使用されるものと同じです。  
   
- 初期状態で `cdc` スキーマにアクセスできるのは、 **dbowner** 固定データベース ロールのメンバーだけです。 変更テーブルと変更関数へのアクセスは、SQL Server CDC と同じセキュリティ モデルによって決まります。 このセキュリティ モデルの詳細については、「 [セキュリティ モデル](http://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
+ 初期状態で `cdc` スキーマにアクセスできるのは、 **dbowner** 固定データベース ロールのメンバーだけです。 変更テーブルと変更関数へのアクセスは、SQL Server CDC と同じセキュリティ モデルによって決まります。 このセキュリティ モデルの詳細については、「 [セキュリティ モデル](https://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
   
 ## <a name="creating-the-cdc-database"></a>CDC データベースの作成  
  CDC データベースは、CDC デザイナー コンソールを使用して作成されるのが一般的ですが、CDC デザイナー コンソールを使用して生成される CDC 配置スクリプトを使用して作成することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム管理者は、このデータベースの設定を必要に応じて変更できます (ストレージ、セキュリティ、可用性のための項目の設定など)。  
@@ -51,11 +50,11 @@ ms.locfileid: "48205897"
  ミラー テーブルは空です。データは格納されていません。 ミラー テーブルは、Oracle CDC インスタンスによって使用される標準の SQL Server CDC インフラストラクチャを有効にするために使用されます。 ミラー テーブルに対してデータの挿入や更新が行われないようにするために、UPDATE、DELETE、および INSERT のすべての操作が PUBLIC に対して拒否されます。 これにより、ミラー テーブルを変更できないことが保証されます。  
   
 ## <a name="access-to-change-data"></a>変更データへのアクセス  
- キャプチャ インスタンスに関連付けられている変更データへのアクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルによって制御されます。このセキュリティ モデルでは、ユーザーが変更データにアクセスするには、関連付けられているミラー テーブルのすべてのキャプチャ対象列に対する `select` アクセスが許可されている必要があります (元の Oracle テーブルへのアクセスが許可されていても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変更テーブルにはアクセスできません)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルについては、「 [セキュリティ モデル](http://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
+ キャプチャ インスタンスに関連付けられている変更データへのアクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルによって制御されます。このセキュリティ モデルでは、ユーザーが変更データにアクセスするには、関連付けられているミラー テーブルのすべてのキャプチャ対象列に対する `select` アクセスが許可されている必要があります (元の Oracle テーブルへのアクセスが許可されていても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変更テーブルにはアクセスできません)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルについては、「 [セキュリティ モデル](https://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
   
  また、キャプチャ インスタンスの作成時にゲーティング ロールが指定されている場合、呼び出し元は、指定されたゲーティング ロールのメンバーである必要もあります。 メタデータにアクセスするためのその他の一般的な変更データ キャプチャ関数には、PUBLIC ロールですべてのデータベース ユーザーがアクセスできます。ただし、通常、返されるメタデータへのアクセスは、基になるソース テーブルに対する select アクセス、および定義されたすべてのゲーティング ロールのメンバーシップに基づいて制限されます。  
   
- 変更データを読み取るには、キャプチャ インスタンスの作成時に SQL Server の CDC コンポーネントによって生成される特殊なテーブル ベース関数を呼び出します。 この関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
+ 変更データを読み取るには、キャプチャ インスタンスの作成時に SQL Server の CDC コンポーネントによって生成される特殊なテーブル ベース関数を呼び出します。 この関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
   
  これらの規則は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の CDC ソース コンポーネントから CDC データにアクセスする場合にも適用されます。  
   
@@ -74,23 +73,23 @@ ms.locfileid: "48205897"
   
 -   [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_staged_transactions)  
   
-###  <a name="BKMK_Change_Tables_CT"></a> 変更テーブル (_CT)  
+###  <a name="bkmk_change_tables_ct"></a> 変更テーブル (_CT)  
  変更テーブルは、ミラー テーブルから作成されます。 変更テーブルには、Oracle データベースからキャプチャされた変更データが含まれます。 テーブルは、次の規則に従って命名されます。  
   
  **[cdc].[\<capture-instance>_CT]**  
   
  テーブル `<schema-name>.<table-name>`に対して最初にキャプチャを有効にしたときの既定のキャプチャ インスタンス名は、 `<schema-name>_<table-name>`です。 たとえば、Oracle HR.EMPLOYEES テーブルの既定のキャプチャ インスタンス名は HR_EMPLOYEES で、関連付けられる変更テーブルは [cdc]. [HR_EMPLOYEES_CT] です。  
   
- キャプチャ テーブルは、Oracle CDC インスタンスによって書き込まれ、 キャプチャ インスタンスの作成時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される特殊なテーブル値関数を使用して読み取られます たとえば、 `fn_cdc_get_all_changes_HR_EMPLOYEES`のようにします。 これらの CDC 関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
+ キャプチャ テーブルは、Oracle CDC インスタンスによって書き込まれ、 キャプチャ インスタンスの作成時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される特殊なテーブル値関数を使用して読み取られます たとえば、 `fn_cdc_get_all_changes_HR_EMPLOYEES`のようにします。 これらの CDC 関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
   
-###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** テーブルは、SQL Server の CDC コンポーネントによって生成されます。 Oracle CDC の場合、このテーブルの使用方法が通常とは異なります。  
   
  Oracle CDC の場合、このテーブルに格納されている LSN 値は、変更に関連付けられている Oracle システム変更番号 (SCN) の値に基づいています。 LSN 値の最初の 6 バイトは、元の Oracle SCN 番号です。  
   
  また、Oracle CDC を使用する場合は、時刻の列 (`tran_begin_time` および `tran_end_time`) に格納される変更の時刻が UTC 時刻になります (通常の SQL Server CDC ではローカル時刻が格納されます)。 これにより、lsn_time_mapping に格納されているデータが夏時間の変化による影響を受けないことが保証されます。  
   
-###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="bkmk_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  このテーブルには、Oracle CDC インスタンスの構成データが含まれています。 このテーブルは、CDC デザイナー コンソールを使用して更新されます。 このテーブルに含まれる行は 1 つだけです。  
   
  次の表に、 **cdc.xdbcdc_config** テーブルの列を示します。  
@@ -98,8 +97,8 @@ ms.locfileid: "48205897"
 |アイテム|説明|  
 |----------|-----------------|  
 |version|CDC インスタンスの構成のバージョンを追跡します。 このテーブルが更新されたり、キャプチャ インスタンスが追加または削除されたりするたびに更新されます。|  
-|connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、[http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
-|use_windows_authentication|次のいずれかのブール値です。<br /><br /> **0**: 認証のために Oracle のユーザー名とパスワードを指定します (既定値)。<br /><br /> **1**: Windows 認証を使用して Oracle データベースに接続します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。|  
+|connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、[https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
+|use_windows_authentication|次のいずれかのブール値です。<br /><br /> **0**:認証のために Oracle のユーザー名とパスワードを指定します (既定値)。<br /><br /> **1**:Windows 認証を使用して Oracle データベースに接続します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。|  
 |username|ログ マイニング Oracle データベース ユーザーの名前です。 **use_windows_authentication = 0**の場合のみ必須です。|  
 |パスワード|ログ マイニング Oracle データベース ユーザーのパスワードです。 **use_windows_authentication = 0**の場合のみ必須です。|  
 |transaction_staging_timeout|メモリに保持されている、コミットされていない Oracle トランザクションが **cdc.xdbcdc_staged_transactions** テーブルに書き込まれるまでの時間 (秒) です。 既定値は 120 秒です。|  
@@ -133,7 +132,7 @@ ms.locfileid: "48205897"
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Boolean です。 **True** は、重大なスキーマ変更が検出されたときに停止することを示します。<br /><br /> **False** は、ミラー テーブルとキャプチャ インスタンスを削除することを示します。|  
 |source_oracle_home||-|-|False|特定の Oracle ホーム パスか、CDC インスタンスが Oracle への接続に使用する Oracle ホーム名に設定できます。|  
   
-###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="bkmk_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  このテーブルには、Oracle CDC インスタンスの永続化された状態に関する情報が含まれています。 キャプチャ状態は、復旧およびフェールオーバーのシナリオで使用されるほか、状態の監視にも使用されます。  
   
  次の表に、 **cdc.xdbcdc_state** テーブルの列を示します。  
@@ -142,8 +141,8 @@ ms.locfileid: "48205897"
 |----------|-----------------|  
 |status|現在の Oracle CDC インスタンスの現在の状態コードです。 CDC の現在の状態を表します。|  
 |sub_status|現在の状態に関する追加情報を提供する二次的な状態です。|  
-|active|次のいずれかのブール値です。<br /><br /> **0**: Oracle CDC インスタンス プロセスはアクティブではありません。<br /><br /> **1**: Oracle CDC インスタンス プロセスはアクティブです。|  
-|error|次のいずれかのブール値です。<br /><br /> **0**: Oracle CDC インスタンス プロセスはエラー状態ではありません。<br /><br /> **1**: Oracle CDC インスタンスはエラー状態です。|  
+|active|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはアクティブではありません。<br /><br /> **1**:Oracle CDC インスタンス プロセスはアクティブです。|  
+|error (エラー)|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはエラー状態ではありません。<br /><br /> **1**:Oracle CDC インスタンスはエラー状態です。|  
 |status_message|エラーまたは状態の説明を表す文字列です。|  
 |TIMESTAMP|キャプチャ状態が最後に更新された時刻 (UTC) のタイムスタンプです。|  
 |active_capture_node|現在 Oracle CDC Service と (Oracle トランザクション ログを処理している) Oracle CDC インスタンスを実行しているホストの名前です (クラスターのノードの場合があります)。|  
@@ -158,7 +157,7 @@ ms.locfileid: "48205897"
 |read_changes|ソース Oracle トランザクション ログから読み取られた変更レコードの数です。|  
 |staged_transactions|**cdc.xdbcdc_staged_transactions** テーブルにステージングされている、現在アクティブなトランザクションの数です。|  
   
-###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="bkmk_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  このテーブルには、CDC インスタンスの操作に関する情報が含まれています。 このテーブルに格納される情報には、エラー レコード、重要な状態変更、トレース レコードが含まれます。 エラーの情報は、 **cdc.xcbcdc_trace** テーブルを使用できない場合にも使用できるように、Windows イベント ログにも書き込まれます。  
   
  次の表に、cdc.xdbcdc_trace テーブルの列を示します。  
@@ -173,7 +172,7 @@ ms.locfileid: "48205897"
 |status_message|状態テーブルで使用される状態メッセージ。|  
 |data|エラー レコードまたはトレース レコードにペイロードが含まれている場合の追加データ (壊れたログ レコードなど)。|  
   
-###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  このテーブルには、大きなトランザクションや実行時間の長いトランザクションの変更レコードが、トランザクションのコミットまたはロールバックのイベントがキャプチャされるまで格納されます。 キャプチャされたログ レコードは、まずトランザクションのコミット時間順に並べ替えられ、さらにトランザクションの発生順に並べ替えられます。 同じトランザクションのログ レコードは、トランザクションが終了するまでメモリに格納された後、ターゲット変更テーブルに書き込まれるか、破棄されます (ロールバックの場合)。 使用できるメモリの量は限られているため、大きなトランザクションは、完了するまで **cdc.xdbcdc_staged_transactions** テーブルに書き込まれます。 トランザクションは、実行時間が長い場合にもこのステージング テーブルに書き込まれます。 したがって、Oracle CDC インスタンスが再起動しても、Oracle トランザクション ログから古い変更を再び読み取る必要はありません。  
   
  次の表に、 **cdc.xdbcdc_staged_transactions** テーブルの列を示します。  
@@ -186,7 +185,5 @@ ms.locfileid: "48205897"
 |data_end_cn|この行のデータの最後の変更の変更番号 (CN) です。|  
 |data|トランザクションのステージングされた変更です (BLOB 形式)。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Attunity の Change Data Capture Designer for Oracle](change-data-capture-designer-for-oracle-by-attunity.md)  
-  
-  

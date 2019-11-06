@@ -1,23 +1,21 @@
 ---
 title: データベースに対して Stretch Database を有効にする | Microsoft Docs
-ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 54393dbc44fd8f48b0078fcd63dd06bfddc3e18a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136259"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,8 +27,8 @@ ms.locfileid: "51696409"
   
  データベースまたはテーブルで Stretch Database を有効にするには、db_owner アクセス許可が必要です。 データベースで Stretch Database を有効にするには、管理データベースのアクセス許可も必要です。  
 
- >   [!NOTE]
- > 後で、Stretch Database を無効にする場合は、テーブルまたはデータベースで Stretch Database を無効にしてもリモート オブジェクトは削除されないことに注意してください。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを手動で削除するまで、引き続き Azure ストレージのコストが発生します。 
+> [!NOTE]
+> 後で、Stretch Database を無効にする場合は、テーブルまたはデータベースで Stretch Database を無効にしてもリモート オブジェクトは削除されないことに注意してください。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを手動で削除するまで、引き続き Azure ストレージのコストが発生します。 
  
 ## <a name="before-you-get-started"></a>始める前に  
   
@@ -42,7 +40,7 @@ ms.locfileid: "51696409"
   
 -   新しい Azure サーバーを作成する、または既存の Azure サーバーを選択するために必要な接続およびログイン情報を入手します。  
   
-##  <a name="EnableTSQLServer"></a> 前提条件: サーバーで Stretch Database を有効にする  
+##  <a name="EnableTSQLServer"></a> 前提条件:サーバーで Stretch Database を有効にする  
  データベースまたはテーブルで Stretch Database を有効にする前に、ローカル サーバーで有効にする必要があります。 この操作には、sysadmin または serveradmin のアクセス許可が必要です。  
   
 -   必要な管理アクセス許可がある場合、 **データベースのストレッチの有効化** ウィザードは Stretch 用にサーバーを構成します。  

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2be5161bd84a6bd2fe2bcc87c494ddebe9e7787
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227211d860e250d9cb179940b1d671a18cddc219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126897"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>ICommand::Execute を使用した行セットの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47674220"
   
  スクロール可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でネイティブ クライアント OLE DB プロバイダーの行セットがサポートされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のカーソルです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、他のデータベース ユーザーの変更によって影響を受けるカーソルに制限が設けらます。 たとえば、一部のカーソル内の行は順序付けできません。この場合に、SQL ORDER BY 句を含むコマンドを使用して行セットを作成しようとすると、エラーが発生します。 詳細については、「[行セットと SQL Server カーソル](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

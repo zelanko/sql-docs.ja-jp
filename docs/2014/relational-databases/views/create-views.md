@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 550f4dbc3e733c3dee9fb200d85789931722e4f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211660"
 ---
 # <a name="create-views"></a>ビューの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューを作成できます。 ビューは、次の目的で使用できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "48215002"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  ビューは現在のデータベースでのみ作成できます。  
@@ -60,7 +60,7 @@ ms.locfileid: "48215002"
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[ビュー]** を右クリックし、 **[新しいビュー]** をクリックします。  
+2.  **[ビュー]** フォルダーを右クリックし、 **[新しいビュー]** をクリックします。  
   
 3.  **[テーブルの追加]** ダイアログ ボックスで、新しいビューに含める 1 つまたは複数の要素を、[テーブル]、[ビュー]、[関数]、および [シノニム] のいずれかのタブから選択します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48215002"
   
 6.  **抽出条件ペイン**で、列の追加の並べ替え条件またはフィルター条件を選択します。  
   
-7.  **[ファイル]** メニューの *[*view name の保存***]* をクリックします。  
+7.  **ファイル** メニューの **view name**_の保存_をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいビューの名前を入力し、 **[OK]** をクリックします。  
   

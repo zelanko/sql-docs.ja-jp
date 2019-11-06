@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
@@ -13,15 +12,15 @@ ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c28b74a271fc2da7c99aeb1ab7b990b11e90fd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085491"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>テンプレートからの単一予測クエリの作成
-  単一クエリは、予測に使用するモデルがあり、それを外部入力データ セットにマップしたり一括予測を行ったりしない場合に役立ちます。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
+  単一クエリは、外部入力データ セットにマップしたり一括予測を行う必要はありませんが、使用、予測に使用するモデルがある場合に便利です。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
   
  たとえば、次の DMX クエリは、メーリング対象モデル TM_Decision_Tree に対する単一クエリを表しています。  
   
@@ -89,11 +88,11 @@ AS [t]
   
 10. クエリのテキスト ペインで、コンマと省略記号の下に構文エラーを示す赤い波線がある箇所を見つけます。 省略記号を削除し、必要なクエリ条件を追加します。 他の条件を追加しない場合はコンマを削除します。  
   
-     このトピックの冒頭に示したサンプル コードでの追加のクエリ条件に設定されて`'45' as [Age]`します。  
+     このトピックの冒頭に示したサンプル コードでは、追加のクエリ条件として `'45' as [Age]` を設定していました。  
   
 11. **[実行]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [予測の作成&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [予測の作成 &#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

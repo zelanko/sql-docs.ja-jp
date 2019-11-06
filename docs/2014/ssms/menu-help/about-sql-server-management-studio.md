@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.aboutsqlserverworkbench.f1
@@ -14,12 +14,12 @@ ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ab53396ba107cfe2a184c572dbbbfb6fc3b3b8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e48a38ba97feaf03a9ed14f3668ac4b98095a92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62679123"
 ---
 # <a name="about-sql-server-management-studio"></a>[Microsoft SQL Server Management Studio のバージョン情報]
   このダイアログ ボックスを使用すると、インストール済みの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に関する情報を表示したり、コピーしたりできます。 評価版の場合、製品の有効期限を示す日数が表示されます。  

@@ -5,32 +5,31 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb3c412361acf4e3c059f902c2fc0ae498601d36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947922"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Microsoft **の** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  
   
- **User Settable** オブジェクトには、 **ユーザー カウンター 1** から **ユーザー カウンター 10**まで、クエリ カウンターの 10 個のインスタンスが含まれています。 これらのカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **から** sp_user_counter10 **までの**ストアド プロシージャに対応します。 ユーザー アプリケーションからこれらのストアド プロシージャが実行されると、ストアド プロシージャによって設定された値がシステム モニターに表示されます。 1 つのカウンターは、1 日に発生した特定製品の注文件数を数えるストアド プロシージャなど、任意の整数値を 1 つ監視できます。  
+ **User Settable** オブジェクトには、**ユーザー カウンター 1** から **ユーザー カウンター 10** まで、クエリ カウンターの 10 個のインスタンスが含まれています。 これらのカウンターは、 **sp_user_counter1** から **sp_user_counter10** までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャに対応します。 ユーザー アプリケーションからこれらのストアド プロシージャが実行されると、ストアド プロシージャによって設定された値がシステム モニターに表示されます。 1 つのカウンターは、1 日に発生した特定製品の注文件数を数えるストアド プロシージャなど、任意の整数値を 1 つ監視できます。  
   
 > [!NOTE]  
 >  ユーザー カウンターのストアド プロシージャは、システム モニターから自動的にポーリングされることはありません。 カウンター値を更新するには、ユーザー アプリケーションから明示的にストアド プロシージャを実行する必要があります。 カウンター値を自動的に更新するには、トリガーを使用します。 たとえば、テーブルの行数を監視するカウンターを作成するには、テーブルに対する INSERT と DELETE のトリガーを作成し、 `SELECT COUNT(*) FROM table`というステートメントが実行されるようにします。 テーブルに対する INSERT 操作か DELETE 操作が発生するとトリガーが起動され、システム モニター カウンターが自動的に更新されます。  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
+ 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトについて説明します。  
   
 |SQL Server User Settable カウンター|[説明]|  
 |---------------------------------------|-----------------|  

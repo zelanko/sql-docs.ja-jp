@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: e0bec04d00222ca0dd11854b41c5ec6b4bf705a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992250"
 ---
 # <a name="create-term-based-relations"></a>用語ベースのリレーションの作成
 
@@ -101,9 +100,9 @@ ms.locfileid: "52617272"
   
 6.  **[変更を適用]** をクリックして、ドメインに用語ベースのリレーションを適用します。  
   
-7.  **[完了]** をクリックし、「 [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+7.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a> 補足情報: 用語ベースのリレーションを作成した後  
+##  <a name="FollowUp"></a>補足情報: 用語ベースのリレーションを作成した後  
  用語ベースのリレーションを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加したりすることができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

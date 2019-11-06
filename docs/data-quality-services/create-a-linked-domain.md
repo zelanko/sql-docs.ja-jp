@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: e193aa9cec02e47a98973b6ae1c8381634fdbe4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992265"
 ---
 # <a name="create-a-linked-domain"></a>リンク ドメインの作成
 
@@ -76,7 +75,7 @@ ms.locfileid: "52617892"
   
 4.  [ドメインの作成] ダイアログ ボックスで、ドメインの名前と説明を入力し、[OK] をクリックします。  
   
-##  <a name="FollowUp"></a> 補足情報: リンク ドメインの作成後  
+##  <a name="FollowUp"></a>補足情報: リンク ドメインの作成後  
  リンク ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Behavior"></a> リンク ドメインの動作  
@@ -84,7 +83,7 @@ ms.locfileid: "52617892"
   
 -   リンク ドメインの名前と説明を変更することができます。  
   
--   ドメインの **[データ型]**、 **[先頭の値を使用]**、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。  
+-   ドメインの **[データ型]** 、 **[先頭の値を使用]** 、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。  
   
 -   [ドメイン管理] ページの **[参照データ]** タブ、 **[ドメイン ルール]** タブ、 **[ドメイン値]** タブ、および **[用語ベースのリレーション]** タブの設定は、リンク ドメインとリンク先のドメインのどちらでも変更できます。一方を変更すると、もう一方に反映されます。  
   

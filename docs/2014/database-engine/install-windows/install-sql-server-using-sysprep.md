@@ -10,15 +10,15 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018267"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775305"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>SysPrep を使用した SQL Server 2014 のインストール
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep に関連するセットアップ操作には、インストール センターからアクセスできます。 **[インストール センター]** の **[詳細設定]** ページには、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** と **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の準備済みスタンドアロン インスタンスのイメージの完了]** の 2 つのオプションがあります。 [準備](#prepare)のセクションと[完了](#complete)のセクションで、インストール プロセスについて詳しく説明します。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep に関連するセットアップ操作には、インストール センターからアクセスできます。 **[インストール センター]** の **[詳細設定]** ページには、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** と **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の準備済みスタンドアロン インスタンスのイメージの完了]** の 2 つのオプションがあります。 [準備](#prepare)のセクションと[完了](#complete)のセクションで、インストール プロセスについて詳しく説明します。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
   
  コマンド プロンプトまたは構成ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの準備および完了を行うこともできます。 詳細については、以下をご覧ください。  
   
@@ -48,12 +48,12 @@ ms.locfileid: "51018267"
   
 -   [準備済み SQL Server インスタンスからの機能の削除](#RemoveFeatures)  
   
--   [準備済みインスタンスのアンインストール](install-sql-server-using-sysprep.md#uninstall)  
+-   [準備済みインスタンスのアンインストール](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [完了した SQL Server インスタンスの変更またはアンインストール](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [完了した SQL Server インスタンスの変更またはアンインストール](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep クラスター サポート  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降、SysPrep は、コマンド ラインからのインストールでクラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをサポートしています。 詳細については、「 [Sysprep とは](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)」を参照してください。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降、SysPrep は、コマンド ラインからのインストールでクラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをサポートしています。 詳細については、「 [Sysprep とは](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)」を参照してください。  
   
 #### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターを準備するには (自動実行)  
   
@@ -101,17 +101,17 @@ ms.locfileid: "51018267"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、**[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。  
+2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、 **[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。  
   
-3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
-4.  [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。  
+4.  [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。  
   
 5.  [セットアップ ファイルのインストール] ページのセットアップには、セットアップ ファイルのダウンロード、抽出、およびインストールの進行状況が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの更新プログラムが検出され、含まれるように指定されている場合は、その更新プログラムもインストールされます。  
   
-6.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+6.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
-7.  **[イメージの種類の準備]** ページで、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の新しいインスタンスを準備する]** をクリックします。  
+7.  **[イメージの種類の準備]** ページで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の新しいインスタンスを準備する]** をクリックします。  
   
      **[イメージの種類の準備]** ページは、コンピューター上に既存の未構成の準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが存在する場合にのみ表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスを準備するか、SysPrep でサポートされている機能をコンピューター上の既存の準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに追加するかを選択できます。 機能を準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに追加する方法については、「 [準備済みインスタンスへの機能の追加](#AddFeatures)」を参照してください。  
   
@@ -127,21 +127,21 @@ ms.locfileid: "51018267"
   
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   
-10. **[イメージの準備ルール]** ページで、セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+10. **[イメージの準備ルール]** ページで、セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 11. [インスタンスの構成] ページで、インスタンスのインスタンス ID を指定します。 **[次へ]** をクリックして次に進みます。  
   
-     **[インスタンス ID]** : インスタンス ID は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は指定したものと変わりません。  
+     **[インスタンス ID]** - インスタンス ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は指定したものと変わりません。  
   
-     **[インスタンス ルート ディレクトリ]** : 既定では、インスタンス ルート ディレクトリは [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]になります。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、 **[参照]** をクリックしてインストール フォルダーを検索します。 準備手順で指定したディレクトリは、完了手順の構成時に使用されます。  
+     **[インスタンス ルート ディレクトリ]** - 既定では、インスタンス ルート ディレクトリは [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] になります。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、 **[参照]** をクリックしてインストール フォルダーを検索します。 準備手順で指定したディレクトリは、完了手順の構成時に使用されます。  
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
-     **[インストール済みのインスタンス]** : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。  
+     **[インストール済みのインスタンス]** - セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。  
   
 12. **[必要なディスク領域]** ページでは、指定した機能に必要なディスク領域が計算されます。 その後、必要なディスク領域が使用可能なディスク領域と比較されます。  
   
-13. システム構成チェッカーによってイメージの準備のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能が検証されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+13. システム構成チェッカーによってイメージの準備のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能が検証されます。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 14. **[イメージの準備の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 このページで、セットアップは製品の更新プログラム機能が有効/無効であるか、および最終バージョンの更新プログラムであるかどうかを示します。 続行するには、 **[準備]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、選択した機能の必須コンポーネントを最初にインストールし、その後で機能をインストールします。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "51018267"
   
 3.  **[セットアップ サポート ファイル]** ページで **[インストール]** をクリックして、セットアップ サポート ファイルをインストールします。  
   
-4.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+4.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 5.  **[プロダクト キー]** ページでオプション ボタンをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディション、または PID キーを持つ製品版のどちらをインストールするかを指定します。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../../sql-server/editions-and-components-of-sql-server-2016.md)します。 Evaluation Edition をインストールする場合、180 日の試用期間はこの手順が完了した時点から開始します。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51018267"
   
 7.  **[準備済みインスタンスの選択]** ページで、ドロップダウン ボックスから完了させる準備済みインスタンスを選択します。 **[インスタンス ID]** ボックスから未構成のインスタンスを選択します。  
   
-     **[インストール済みのインスタンス]:** このコンピューター上の準備済みインスタンスを含むすべてのインスタンスがグリッドに表示されます。  
+     **インストール済みのインスタンス:** このグリッドには、このコンピューターの準備済みインスタンスを含むすべてのインスタンスが表示されます。  
   
 8.  **[機能の確認]** ページには、準備手順で選択したインストールに含まれる機能とコンポーネントが表示されます。 準備済みインスタンスに含まれていない機能を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに追加する場合は、まずこの手順で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを完了させてから、 **[インストール センター]** の **[機能の追加]** から機能を追加します。  
   
@@ -180,9 +180,9 @@ ms.locfileid: "51018267"
   
 9. [インスタンスの構成] ページで、準備済みインスタンスのインスタンス名を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の構成が完了すると、これがインスタンスの名前になります。 **[次へ]** をクリックして次に進みます。  
   
-     **[インスタンス ID]** : インスタンス ID は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は準備手順で指定したものと変わりません。  
+     **[インスタンス ID]** - インスタンス ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は準備手順で指定したものと変わりません。  
   
-     **[インスタンス ルート ディレクトリ]** : 準備手順で指定したディレクトリが使用されます。この手順ではディレクトリを変更できません。  
+     **[インスタンス ルート ディレクトリ]** - 準備手順で指定したディレクトリが使用されます。この手順ではディレクトリを変更できません。  
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "51018267"
   
 10. このトピックの残りの部分のワーク フローは、準備手順で選択した機能によって異なります。 選択した機能によっては、表示されないページもあります。  
   
-11. **[サーバーの構成 - サービス アカウント]** ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。  
+11. **[サーバーの構成 - サービス アカウント]** ページで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。  
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、各サービスに最小の権限を与えるためにはサービス アカウントを個別に構成することをお勧めします。サービス アカウントを個別に構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスには、サービスでのタスクの実行に必要な最小権限が付与されます。 詳細については、「 [サーバー構成 - サービス アカウント](../../sql-server/install/server-configuration-service-accounts.md) 」および「 [Windows サービス アカウントと権限の構成](../configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51018267"
   
 13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - アカウントの準備] ページを使用して、次の項目を指定します。  
   
-    -   セキュリティ モード: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
+    -   [セキュリティ モード] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
          デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../sql-server/install/database-engine-configuration-account-provisioning.md)します。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "51018267"
   
 17. **[エラー レポート]** ページで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] に送信する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の機能向上に役立つ情報を指定します。 既定では、エラー レポートのオプションは有効になっています。  
   
-18. **[イメージの完了ルール]** ページで、システム構成チェッカーによってイメージの完了のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成が検証されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+18. **[イメージの完了ルール]** ページで、システム構成チェッカーによってイメージの完了のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成が検証されます。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 19. **[イメージの完了の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 続行するには、 **[インストール]** をクリックします。  
   
@@ -243,9 +243,9 @@ ms.locfileid: "51018267"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスに機能を追加するには、**[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。  
+2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスに機能を追加するには、 **[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。  
   
-3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 4.  [セットアップ サポート ファイル] ページで **[インストール]** をクリックして、セットアップ サポート ファイルをインストールします。  
   
@@ -255,11 +255,11 @@ ms.locfileid: "51018267"
   
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   
-7.  **[イメージの準備ルール]** ページで、セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+7.  **[イメージの準備ルール]** ページで、セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 8.  [必要なディスク領域] ページでは、指定した機能に必要なディスク領域が計算されます。 その後、必要なディスク領域が使用可能なディスク領域と比較されます。  
   
-9. **[イメージの準備ルール]** ページで、システム構成チェッカーによってイメージの準備のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能が検証されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
+9. **[イメージの準備ルール]** ページで、システム構成チェッカーによってイメージの準備のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能が検証されます。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 10. **[イメージの準備の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 続行するには、 **[インストール]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、選択した機能の必須コンポーネントを最初にインストールし、その後で機能をインストールします。  
   
@@ -323,7 +323,5 @@ ms.locfileid: "51018267"
 -   [SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>参照  
- [Sysprep とは](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Sysprep のしくみ](http://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  
+ [Sysprep とは](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Sysprep のしくみ](https://go.microsoft.com/fwlink/?LinkId=143547)  

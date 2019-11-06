@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
@@ -14,12 +14,12 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4917da0fcf09abacff567c7525cc01dce1db590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc15477759c7039533250cf98323729334cf5b80
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116845"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049308"
 ---
 # <a name="registered-servers-f1-help"></a>[登録済みサーバー] の F1 ヘルプ
   ここでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [登録済みサーバー] コンポーネントの F1 ヘルプ トピックについて紹介します。  

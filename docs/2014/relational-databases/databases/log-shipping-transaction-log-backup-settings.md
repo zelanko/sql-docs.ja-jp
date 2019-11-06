@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.tlogback.f1
@@ -13,12 +12,12 @@ ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f4b54d14ff56113e115ce5eb611c227e7bc1020
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916890"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>[トランザクション ログのバックアップの設定]
   このダイアログ ボックスを使用すると、ログ配布構成のトランザクション ログ バックアップ設定を構成および変更できます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48208112"
  **ジョブ名**  
  ログ配布用のトランザクション ログ バックアップを作成する際に使用される SQL Server エージェント ジョブの名前を表示します。 最初にジョブを作成するときに、ボックスに別の名前を入力して名前を変更できます。  
   
- **[スケジュール]**  
+ **スケジュール**  
  プライマリ データベースのトランザクション ログのバックアップに関する現在のスケジュールを表示します。 バックアップ ジョブが作成される前に、 **[スケジュール]** をクリックしてこのスケジュールを変更できます。バックアップ ジョブが作成された後は、 **[ジョブの編集]** をクリックしてこのスケジュールを変更できます。  
   
 ### <a name="backup-job"></a>バックアップ ジョブ  

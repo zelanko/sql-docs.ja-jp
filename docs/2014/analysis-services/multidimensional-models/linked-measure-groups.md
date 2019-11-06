@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074779"
 ---
 # <a name="linked-measure-groups"></a>リンク メジャー グループ
   リンク メジャー グループは、同じデータベースまたは別の Analysis Services データベースにある別のキューブ内の別のメジャー グループに基づいています。 複数のキューブ内にある一連のメジャー、および対応するデータ値を再使用する場合は、リンク メジャー グループを使用することができます。  
@@ -47,7 +46,7 @@ ms.locfileid: "48140352"
   
 -   リンク メジャー グループでは、書き戻しがサポートされていません。  
   
--   複数の多対多リレーションシップで、リンク メジャー グループを使用することはできません。特に、これらのリレーションシップが異なるキューブ内に存在する場合です。 このような方法で使用すると、あいまいな集計になります。 詳細については、「 [多対多リレーションシップを含むキューブでリンク メジャーの値が不適切](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)」を参照してください。  
+-   複数の多対多リレーションシップで、リンク メジャー グループを使用することはできません。特に、これらのリレーションシップが異なるキューブ内に存在する場合です。 このような方法で使用すると、あいまいな集計になります。 詳細については、「 [多対多リレーションシップを含むキューブでリンク メジャーの値が不適切](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)」を参照してください。  
   
  リンク メジャー グループに含まれるメジャーは、同一の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースから取得したリンク ディメンションに従ってのみ直接編成できます。 ただし、計算されるメンバーを使用すると、リンク メジャー グループから、キューブ内の他のリンクされていないディメンションに情報を関連付けることができます。 さらに、参照リレーションシップや多対多リレーションシップなどの間接リレーションシップを使用して、他のリンクされていないディメンションをリンク メジャー グループに関連付けることもできます。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48140352"
 ## <a name="secure-a-linked-measure"></a>リンク メジャーをセキュリティで保護  
  リンクが定義されると、リンク メジャー グループのメジャーへのアクセスは、他のメジャー グループへのアクセスと同じように管理されます。 リンク オブジェクトは、ロール デザイナー内で、リンクされていない対応オブジェクトの横に表示されます。 メジャー グループのセキュリティの管理の詳細については、「[キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)」を参照してください。  
   
- を定義またはリンク メジャー グループを使用するには、Windows サービス アカウント、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスに属している、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を持つデータベース ロール`ReadDefinition`と`Read`ソースのアクセス権[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを、ソース キューブおよびメジャー グループ、またはに属している必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ソースの管理者ロール[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。  
+ リンク メジャー グループを定義または使用するには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの Windows サービス アカウントが、ソース [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスでソース キューブおよびメジャー グループに対する `ReadDefinition` アクセス権および `Read` アクセス権を持つ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース ロールに属しているか、またはソース [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrators ロールに属している必要があります。  
   
 ## <a name="see-also"></a>参照  
  [リンク ディメンションの定義](define-linked-dimensions.md)  

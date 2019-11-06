@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515782"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906383"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスの別のファイル グループへの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52515782"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **既存のインデックスを別のファイル グループに移動するために使用するもの:**  
   
@@ -77,7 +76,7 @@ ms.locfileid: "52515782"
 8.  **[閉じる]** をクリックします。  
   
 9. **ファイル** メニューの **table_name**_を保存_を選びます。  
-  
+
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>オブジェクト エクスプローラーで既存のインデックスを別のファイル グループに移動するには  
   
 1.  オブジェクト エクスプローラーで、移動するインデックスがあるテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
@@ -102,7 +101,7 @@ ms.locfileid: "52515782"
   
 8.  **[OK]** をクリックします。  
   
- **[インデックスのプロパティ – *index_name*]** ダイアログ ボックスの **[ストレージ]** ページでは、次の情報が利用できます。  
+ **[インデックスのプロパティ – _index_name_]** ダイアログ ボックスの **[ストレージ]** ページでは、次の情報が利用できます。  
   
  **[ファイル グループ]**  
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。  

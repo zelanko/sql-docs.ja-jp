@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetVersions
@@ -18,12 +16,12 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 333cd5a6793c335a0003ac6b39ddd6abba710f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032283"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 関数
   コンピューターで使用できるすべての SQL Server Express LocalDB バージョンを返します。  
@@ -38,7 +36,7 @@ ms.locfileid: "48077812"
   
 ## <a name="parameters"></a>パラメーター  
  *pVersionNames*  
- [出力] ユーザーのワークステーションで使用できる LocalDB バージョンの名前を格納します。  
+ [出力]ユーザーのワークステーションで利用できる LocalDB バージョンの名前が含まれています。  
   
  *lpdwNumberOfVersions*  
  [入力/出力]入力内のバージョンのスロットの数を保持する、 *pVersionNames*バッファー。   

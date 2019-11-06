@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
@@ -19,12 +18,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185971"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
   **tablediff** ユーティリティは、2 つのテーブル内のデータを比較して非収束の発生を調べる場合に使用されます。これは、レプリケーション トポロジ内の非収束に対するトラブルシューティングを行うときに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
@@ -77,8 +76,8 @@ ms.locfileid: "49169402"
  [ **-?** ]  
  サポートされているパラメーターのリストを返します。  
   
- **-sourceserver** *source_server_name*[**\\**_instance_name_]  
- ソース サーバー名を指定します。 指定_ソース\_server\_名前_の既定のインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 指定_ソース\_server\_名前_**\\**_インスタンス\_名前_の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
+ ソース サーバー名を指定します。 指定_ソース\_server\_名前_の既定のインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 指定_ソース\_server\_名前_ **\\** _インスタンス\_名前_の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  ソース データベース名を指定します。  
@@ -101,8 +100,8 @@ ms.locfileid: "49169402"
  **-sourcelocked**  
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、ソース テーブルがロックされます。  
   
- **-destinationserver** *destination_server_name*[**\\**_インスタンス\_名前_]  
- 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 指定_先\_server\_名前_**\\**_インスタンス\_名前_の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[ **\\** _インスタンス\_名前_]  
+ 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 指定_先\_server\_名前_ **\\** _インスタンス\_名前_の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  対象データベース名を指定します。  
@@ -178,7 +177,7 @@ ms.locfileid: "49169402"
   
 |ソースのデータ型|対象のデータ型|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`、`int`、または `bigint`|  
+|`tinyint`|`smallint`、 `int`、または `bigint`|  
 |`smallint`|`int` または `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
@@ -220,7 +219,7 @@ ms.locfileid: "49169402"
   
  **-o** または **-f** オプションを使用するには、指定されたファイル ディレクトリの場所に対する書き込み権限を持っている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケートされたテーブルを比較して相違があるかどうかを確認する &#40;レプリケーション プログラミング&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

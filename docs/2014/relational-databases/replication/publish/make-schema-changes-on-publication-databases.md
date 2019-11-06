@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,12 +17,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199453"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
   レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで実行した場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
@@ -58,7 +57,7 @@ ms.locfileid: "48203032"
   
 -   スキーマ変更は、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の制限の対象となります。 たとえば、ALTER TABLE で主キー列を変更することはできません。  
   
--   データ型マッピングは、初期スナップショットに対してのみ実行されます。 スキーマ変更で、以前のバージョンのデータ型へのマッピングは行われません。 たとえば場合、ステートメント`ALTER TABLE ADD datetime2 column`で使用されて[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、データ型には翻訳されません`nvarchar`の[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]サブスクライバー。 場合によっては、スキーマ変更がパブリッシャーでブロックされます。  
+-   データ型マッピングは、初期スナップショットに対してのみ実行されます。 スキーマ変更で、以前のバージョンのデータ型へのマッピングは行われません。 たとえば、`ALTER TABLE ADD datetime2 column` というステートメントを [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] で使用している場合、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] サブスクライバーでは、データ型が `nvarchar` に変換されません。 場合によっては、スキーマ変更がパブリッシャーでブロックされます。  
   
 -   スキーマ変更の反映を許可するようにパブリケーションが設定されている場合は、関連するスキーマ オプションがパブリケーションのアーティクルに対してどのように設定されているかに関係なく、スキーマ変更が反映されます。 たとえば、外部キー制約をレプリケートしないようにテーブル アーティクルに対して指定している場合に、外部キーをテーブルに追加する ALTER TABLE コマンドをパブリッシャーで実行すると、サブスクライバーで外部キーがテーブルに追加されます。 これを回避するには、ALTER TABLE コマンドを実行する前にスキーマ変更の反映を無効にします。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48203032"
   
 -   既存のパブリケーションに既存の列を含めるには、[sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
   
-     詳細については、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、サブスクリプションの再初期化が必要になります。  
+     詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、サブスクリプションの再初期化が必要になります。  
   
 -   パブリッシュされたテーブルに ID 列を追加することはサポートされていません。これは、列がサブスクライバーにレプリケートされると集約されなくなる可能性があるからです。 パブリッシャーの ID 列の値は、影響を受けるテーブルの行が物理的に格納されている順序に依存します。 サブスクライバーで行が同じように格納されているとは限らないため、同じ行で ID 列の値が異なる可能性があります。  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48203032"
   
 -   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルからは削除しない場合は、[sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
   
-     詳細については、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、新しいスナップショットの生成が必要になります。  
+     詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、新しいスナップショットの生成が必要になります。  
   
 -   削除する列は、データベースのどのパブリケーションのどのアーティクルのフィルター句でも使用できません。  
   
@@ -157,7 +156,7 @@ ms.locfileid: "48203032"
   
 -   マージ レプリケーションには、トラブルシューティングの際にスキーマ変更をスキップするストアド プロシージャが用意されています。 詳細については、「[sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql)」および「[sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   

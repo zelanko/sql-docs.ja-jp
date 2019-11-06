@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020554 error
@@ -13,12 +12,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35bea347563f775570bb8f605ec1b2a76163e51b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63057122"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     
@@ -53,19 +52,19 @@ ms.locfileid: "48217788"
   
      レプリケーション モニターでエラーの詳細を確認してから、エージェントが停止している場合は再起動します。 エラーの詳細には、エージェントが正しく実行されなかった原因について追加の情報が示されている場合があります。 エージェントが実行中の場合は、エージェントを停止および再起動しないでください。停止および再起動すると、問題がさらに悪化する可能性があります。 レプリケーション モニターにおけるエージェントの状態およびエラーの詳細の表示については、以下のトピックを参照してください。  
   
-    -   スナップショット エージェント、ログ リーダー エージェント、およびキュー リーダー エージェントについては、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
+    -   スナップショット エージェント、ログ リーダー エージェント、およびキュー リーダー エージェントを参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
-    -   ディストリビューション エージェントおよびマージ エージェントについては、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+    -   ディストリビューション エージェントおよびマージ エージェントでは、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 -   エージェントがビジーであるためにこのエラーが頻繁に発生する場合は、次の操作を実行します。  
   
      場合によっては、エージェントの処理時間が短くなるように、アプリケーションを再設計する必要があります。  
   
-     **[ジョブのプロパティ]** ダイアログ ボックスを使用してエージェントの状態を確認する間隔を長くすることができます。 レプリケーション ジョブの場合のこのダイアログ ボックスへのアクセスの詳細については、「[パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)」を参照してください。  
+     **[ジョブのプロパティ]** ダイアログ ボックスを使用してエージェントの状態を確認する間隔を長くすることができます。 レプリケーション ジョブの場合は、このダイアログ ボックスへのアクセス方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 -   エージェントがトポロジ内のコンピューターのいずれにもログインできない場合には、次の操作を実行します。  
   
-     **-LoginTimeOut** の値を、レプリケーション エージェントの検査ジョブを実行する間隔よりも低い値に設定することをお勧めします。 ネットワークの問題により、 **-LoginTimeOut** が高く設定され、その結果ログインがタイムアウトになる場合があります。**-LoginTimeOut** の値を低く設定すると、レプリケーションから他の具体的なエラーが報告されるので、ログインの問題の原因 (権限、ネットワーク障害、その他の問題など) を特定してトラブルシューティングできます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
+     **-LoginTimeOut** の値を、レプリケーション エージェントの検査ジョブを実行する間隔よりも低い値に設定することをお勧めします。 ネットワークの問題により、 **-LoginTimeOut** が高く設定され、その結果ログインがタイムアウトになる場合があります。 **-LoginTimeOut** の値を低く設定すると、レプリケーションから他の具体的なエラーが報告されるので、ログインの問題の原因 (権限、ネットワーク障害、その他の問題など) を特定してトラブルシューティングできます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
   
     -   [レプリケーション エージェント プロファイルの操作](agents/replication-agent-profiles.md)  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48217788"
  [レプリケーション ログ リーダー エージェント](agents/replication-log-reader-agent.md)   
  [レプリケーション マージ エージェント](agents/replication-merge-agent.md)   
  [レプリケーション キュー リーダー エージェント](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [レプリケーション スナップショット エージェント](agents/replication-snapshot-agent.md)  
   
   

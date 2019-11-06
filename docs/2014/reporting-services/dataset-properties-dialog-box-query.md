@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7a9a15146c6abbcad899f9af3c9fb5e665b76fa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: aead5d8e5c85b67333f10bee4e73e2bb1a8633ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205953"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109371"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>[クエリ] ([データセットのプロパティ] ダイアログ ボックス)
   選択**クエリ**で、**データセットのプロパティ** ダイアログ ボックスに、データ ソースを選択し、クエリを作成します。  

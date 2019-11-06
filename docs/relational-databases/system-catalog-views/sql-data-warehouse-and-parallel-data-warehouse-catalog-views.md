@@ -2,29 +2,27 @@
 title: SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: ''
-ms.technology: system-objects
+ms.service: sql-data-warehouse
+ms.reviewer: jrasnick
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
-aauthor: ronortloff
-ms.author: rortloff
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c3e7a329ac77d3d630f380a836bd05f5bea75aea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7d9818e59029eb2e8e8d32d73807aab17d021c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018243"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  このトピックで、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューです。  
+ このトピックで、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューです。  
   
  すべて[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューが始まる**sys.pdw**します。  
   
@@ -32,8 +30,6 @@ ms.locfileid: "47821670"
  次のカタログ ビューの両方に適用されます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.pdw_column_distribution_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
-  
- [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
  [sys.pdw_distributions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)  
   
@@ -63,10 +59,28 @@ ms.locfileid: "47821670"
   
  [sys.pdw_table_distribution_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
   
- [sys.pdw_table_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)  
-  
-## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログ ビュー  
- 次のカタログ ビューに適用[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]のみ。  
+ [sys.pdw_table_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
+
+[sys.workload_management_workload_classifier_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (プレビュー)
+
+[sys.workload_management_workload_classifiers &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (プレビュー)
+
+> [!Note]
+> SQL Data Warehouse Gen2 上でワークロードの分類のプレビュー版が使用可能です。 ワークロード管理の分類および重要性のプレビューは、リリース日が 2019 年 4 月 9 日以降のビルドに対応しています。  ワークロード管理テストでは、この日付より前のビルドは使用しないでください。  ビルドがワークロード管理に対応しているかどうかを確認するには、SQL Data Warehouse インスタンスに接続しているときに select @@version を実行してください。
+
+## <a name="includesssdwincludessssdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] カタログ ビュー
+
+ 次のカタログ ビューに適用[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]のみ。
+
+[sys.pdw_materialized_view_column_distribution_properties &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)
+[sys.pdw_materialized_view_distribution_properties](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
+ [sys.pdw_materialized_view_mappings](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)
+
+## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログ ビュー
+
+ 次のカタログ ビューに適用[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]のみ。
+
+ [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
  [sys.pdw_diag_event_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-diag-event-properties-transact-sql.md)  
   
@@ -86,7 +100,7 @@ ms.locfileid: "47821670"
   
  [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

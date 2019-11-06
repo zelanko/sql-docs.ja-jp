@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], download-only articles
@@ -15,12 +14,12 @@ ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b22d7c9d47092e9895ccb9ef2d63bdbfbc42367d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250366"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化
   マージ レプリケーションには、異なるアプリケーション ニーズに対応する 2 種類のアーティクルが用意されています。 アプリケーションでの必要に応じて、パブリケーションにはこれら 2 種類のアーティクルを 1 つ以上格納できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "48114595"
   
  ダウンロード専用アーティクルはクライアント サブスクリプションと併用されます。アーティクルがダウンロード専用に作成されている場合、クライアント サブスクリプションを使用するサブスクライバーでは、このアーティクルに対して行の挿入、更新、および削除を行うことができません。 サーバー サブスクリプションを使用するパブリッシャーおよびサブスクライバー (通常は、他のサブスクライバーにデータを再パブリッシュするサブスクライバー) では、行の挿入、更新、および削除を行うことができます。 クライアント サブスクリプションの詳細については、「[パブリケーションのサブスクライブ](../subscribe-to-publications.md)」を参照してください。  
   
- アーティクルをダウンロード専用に指定するには、「 [マージ テーブル アーティクルをダウンロード専用に指定する](../publish/specify-that-a-merge-table-article-is-download-only.md)」を参照してください。  
+ アーティクルをダウンロード専用に指定するには、「 [マージ テーブル アーティクルをダウンロード専用に指定する](../publish/specify-merge-replication-properties.md#download-only)」を参照してください。  
   
 ## <a name="using-different-article-types-in-your-applications"></a>アプリケーションに応じた各種アーティクルの使い分け  
  アプリケーションの要件を理解することにより、柔軟性の最大化とパフォーマンスの最適化の間でアプリケーションを調整できます。 たとえば、パブリッシャーとサブスクライバーの両方で多数の競合と変更が発生するアプリケーションでは、標準アーティクルから構成されるパブリケーションを使用します。 セールス フォース オートメーションなど一部のアプリケーションでは、競合の可能性のあるアーティクルと、それ以外にダウンロード専用に指定できる参照テーブル用のアーティクルが使用されることがあります。 POS システムやフィールド フォース オートメーションなどのデータ入力アプリケーションでは、競合を排除するように厳密にデータがパーティション分割されている場合が多く、あるサブスクライバーから他のサブスクライバーにデータが送信されることは決してありません。 このような状況では、重複しないパーティション、ダウンロード専用アーティクル、および事前計算済みパーティションを組み合わせて使用することで、パフォーマンスとスケーラビリティを最大化することができます。 重複しないパーティションおよび事前計算済みパーティションの詳細については、「 [パラメータ化された行フィルタ](parameterized-filters-parameterized-row-filters.md)」を参照してください。  

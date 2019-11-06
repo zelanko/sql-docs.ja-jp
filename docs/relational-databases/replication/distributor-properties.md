@@ -1,36 +1,93 @@
 ---
-title: ディストリビューターのプロパティ | Microsoft Docs
+title: SQL Server レプリケーションの 'ディストリビューターのプロパティ' ダイアログ ボックス | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
 ms.topic: conceptual
+f1_keywords:
+- sql13.rep.configdistwizard.distdbproperties.f1
+- sql13.rep.configdistwizard.distproperties.general.f1
+- sql13.rep.configdistwizard.distproperties.publishers.f1
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 02968c30439c40288326b6cc404c6a8758f40dc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7a14ded4a0d86973b6e267d35b505aa21e5d8629
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606606"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768584"
 ---
-# <a name="distributor-properties"></a>ディストリビューターのプロパティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ここでは、ディストリビューターおよびディストリビューション データベースのプロパティについて紹介します。  
+# <a name="sql-server-replication-distributor-properties-dialog-box"></a>SQL Server レプリケーションの 'ディストリビューターのプロパティ' ダイアログ ボックス 
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+このページでは、[ディストリビューターのプロパティ] ダイアログ ボックス内にあるページについて説明します。 
+
+## <a name="general"></a>全般
+**[ディストリビューターのプロパティ]** ダイアログ ボックスの **[全般]** ページを使用すると、ディストリビューション データベースの追加と削除や、ディストリビューション データベースのプロパティの設定を行うことができます。  
   
--   [[ディストリビューターのプロパティ]、[全般]](../../relational-databases/replication/distributor-properties-general.md)  
+ ディストリビューション データベースには、すべての種類のレプリケーションのメタデータと履歴データ、およびトランザクション レプリケーションのトランザクションが格納されます。 多くの場合、ディストリビューション データベースは 1 つで十分です。 ただし、複数のパブリッシャーが 1 つのディストリビューターを使用する場合、各パブリッシャーにディストリビューション データベースを作成することを検討してください。 これによって、各ディストリビューション データベースを経由するデータ フローが区別されます。  
+
+ **データベース**  
+ **[データベース]** プロパティ グリッドには、ディストリビューターのディストリビューション データベースの名前と保有期間のプロパティが表示されます。 **[トランザクションの保有期間]** は、トランザクションがトランザクション レプリケーションに格納される期間です (トランザクションの保有期間は、ディストリビューションの保有期間でもあります)。 **[履歴の保有期間]** は、履歴メタデータがすべての種類のレプリケーションに格納される期間です。 ディストリビューション保有期間の詳細については、「[Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)」 (サブスクリプションの有効期限と非アクティブ化) を参照してください。  
   
--   [[ディストリビューターのプロパティ]、[パブリッシャー]](../../relational-databases/replication/distributor-properties-publishers.md)  
+ **[ディストリビューション データベースのプロパティ]** ダイアログ ボックスを表示するには、 **[データベース]** プロパティ グリッドのプロパティ ボタン ( **[...]** ) をクリックします。  
   
--   [[ディストリビューション データベースのプロパティ]](../../relational-databases/replication/distribution-database-properties.md)  
+ **[新規作成]**  
+ 新しいディストリビューション データベースを作成します。  
+  
+ **削除**  
+ **[データベース]** プロパティ グリッドで既存のディストリビューション データベースを選択し、 **[削除]** をクリックしてデータベースを削除します。 ディストリビューターは少なくとも 1 つのディストリビューション データベースを持つ必要があるため、データベースが 1 つだけの場合はディストリビューション データベースを削除することはできません。 すべてのディストリビューション データベースを削除するには、コンピューターでディストリビューションを無効にする必要があります。 詳細については、「[Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)」 (パブリッシングおよびディストリビューションの無効化) を参照してください。  
+  
+ **[プロファイルの既定値]**  
+ **[エージェント プロファイル]** ダイアログ ボックスのレプリケーション エージェント プロファイルにアクセスします。 プロファイルの詳細については、「 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
+
+## <a name="publishers"></a>[ディストリビューターのプロパティ]
+**[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページを使用すると、パブリッシャーでこのディストリビューターを使用できるように設定できます。 さらに、このパブリッシャーに関連付けられているプロパティも設定できます。 パブリッシャーがサーバーをパブリッシャーのリモート ディストリビューターとして使用しても、そのサーバーがパブリッシャーにならないことに注意してください。 パブリッシャーに接続し、パブリッシュするための構成を行って、このサーバーをディストリビューターとして選択する必要があります。 パブリケーションの新規作成ウィザードを使用して、パブリッシャーを構成し、ディストリビューターを選択できます。  
+  
+ **[パブリッシャー]**  
+ このディストリビューターの使用を許可するサーバーを選択します。 その他のプロパティを表示し、設定するには、[パブリッシャー] の横にあるプロパティ ボタン ( **[...]** ) をクリックします。  
+  
+ **[追加]**  
+ 許可するサーバーが一覧に表示されていない場合には、 **[追加]** をクリックして、使用できるパブリッシャーの一覧に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーまたは Oracle パブリッシャーを追加します。 追加したサーバーが、最初にこのディストリビューターをリモート ディストリビューターとして使用するサーバーである場合、管理用リンク パスワードを入力するように求められます。  
+  
+ **[管理用リンク パスワード]**  
+ レプリケーションにより **distributor_admin** ログインを使用してパブリッシャーとリモート ディストリビューター間に作成される接続のパスワードを指定したり、更新したりできます。  
+  
+-   ディストリビューターがローカル ディストリビューターとしてのみ動作する場合、このパスワードはランダムに生成され、自動的に設定されます。   
+-   既にディストリビューターにリモート パブリッシャーがある場合、パスワードはディストリビューションの構成ウィザードのこのページまたは **[ディストリビューター パスワード]** ページで最初に指定されています。    
+-   このディストリビューターの最初のリモート パブリッシャーを有効にすると、パスワードを入力するように求められます。  ディストリビューターのセキュリティの詳細については、「[ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)」を参照してください。  
+
+## <a name="distribution-database"></a>ディストリビューション データベース 
+ **[ディストリビューション データベースのプロパティ]** ダイアログ ボックスを使用すると、多数のプロパティを表示でき、データベースにおけるトランザクションの保有期間と履歴の保有期間を設定できます。  
+  
+ **[名前]**  
+ ディストリビューション データベースの名前です。既定の名前は "distribution" です (読み取り専用)。  
+  
+ **[ファイルの場所]**  
+ データベース ファイルとログ ファイルの場所です (読み取り専用)。  
+  
+ **[トランザクションの保有期間]**  
+ ディストリビューション保有期間とも呼ばれます。 トランザクション レプリケーションで格納されるトランザクションの期間の長さです。 詳細については、「 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)」を参照してください。  
+  
+ **[履歴の保有期間]**  
+ すべての種類のレプリケーションで格納される、履歴メタデータの期間の長さです。  
+  
+ **[キュー リーダー エージェントのセキュリティ]**  
+ キュー リーダー エージェントは、トランザクション レプリケーションのキュー更新サブスクリプションで使用されます。 パブリケーションの新規作成ウィザードの **[パブリケーションの種類]** ページで **[更新可能なサブスクリプションを含むトランザクション パブリケーション]** を選択すると、キュー リーダー エージェントが自動的に作成されます。 エージェントの実行や、ディストリビューターへの接続の作成に使用するアカウントを変更するには、 **[セキュリティ設定]** をクリックします。  
+  
+ キュー リーダー エージェントは、このページの **[キュー リーダー エージェントを作成する]** を選択することでも作成できます (キュー リーダー エージェントが既に作成されている場合、このオプションは無効になります)。  
+  
+ キュー リーダー エージェントのその他の接続情報は、次の 2 つの場所で指定されます。    
+-   **[パブリッシャーのプロパティ]** ダイアログ ボックス。エージェントは、このダイアログ ボックスで指定された資格情報を使用してパブリッシャーに接続します。このダイアログ ボックスは、 **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページから開きます。    
+-   サブスクリプションの新規作成ウィザードの [ディストリビューション エージェント]。エージェントは、ここで指定された資格情報を使用してサブスクライバーに接続します。  詳細については、「  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。 
   
 ## <a name="see-also"></a>参照  
- [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)   
- [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [プロパティ リファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)   
+ [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
   
   

@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b962fd3691aff2986db40f187557f54247b897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188842"
 ---
 # <a name="start-sql-server-management-studio"></a>SQL Server Management Studio の起動
   このチュートリアルを開始する前に、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開いてみましょう。  
@@ -27,7 +27,7 @@ ms.locfileid: "48159702"
 1.  **開始**メニューで、**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリックします**SQL Server Management Studio**します。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、既定ではインストールされません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を利用できない場合は、セットアップを実行してインストールしてください。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では使用できません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express は無料でダウンロードから使用可能な[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409)、このチュートリアルでは説明とは別のユーザー インターフェイスのあるがします。  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、既定ではインストールされません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を利用できない場合は、セットアップを実行してインストールしてください。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では使用できません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express は無料でダウンロードから使用可能な[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409)、このチュートリアルでは説明とは別のユーザー インターフェイスのあるがします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで既定の設定を確認し、 **[接続]** をクリックします。 に接続する、**サーバー名**ボックスは、コンピューターの名前を含める必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、名前付きのインスタンス、**サーバー名**ボックス形式でインスタンス名を含める必要があります\< *computer_name* > \\ <*instance_name*>。  
   

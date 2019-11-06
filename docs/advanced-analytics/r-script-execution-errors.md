@@ -1,74 +1,71 @@
 ---
-title: SQL Server Machine Learning と R Services での R スクリプトのエラー |Microsoft Docs
+title: R スクリプトエラーとトラブルシューティング
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 941a8bbc5e7326d87dcdba8c822fb2c3f2190900
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 10ec78bf8627bfef3232dfc72d7ef7f638604b15
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695440"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715750"
 ---
-# <a name="r-scripting-errors-in-sql-server"></a>SQL Server で R スクリプトのエラー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="r-scripting-errors-in-sql-server"></a>SQL Server での R スクリプトエラー
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、SQL Server で R コードを実行するときに、いくつかの scriptin gerrors を説明します。 一覧では、大文字と小文字は包括的なありません。 多くのパッケージがあるし、エラーは、同じパッケージのバージョンによって異なります。 スクリプトのエラーの送信をお勧め、 [Machine Learning Server フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)、machine learning R Services (In-database)、Microsoft R Client、および Microsoft R Server で使用されるコンポーネントをサポートしています。
+この記事では、SQL Server で R コードを実行する際のいくつかのスクリプトエラーについて説明します。 この一覧は包括的なものではありません。 パッケージは多数あり、同じパッケージのバージョンによってエラーが異なる場合があります。 [Machine Learning Server フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)では、R Services (データベース内)、Microsoft R Client、および Microsoft R Server で使用される機械学習コンポーネントをサポートするスクリプトエラーを投稿することをお勧めします。
 
-**適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning サービス
+## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>T-sql またはストアドプロシージャで有効なスクリプトが失敗する
 
+ストアドプロシージャで R コードをラップする前に、外部 IDE または RTerm や Rterm などの R ツールのいずれかで R コードを実行することをお勧めします。 これらのメソッドを使用すると、R によって返される詳細なエラーメッセージを使用して、コードをテストおよびデバッグできます。
 
-## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>有効なスクリプトは、T-SQL またはストアド プロシージャが失敗しました。
+ただし、外部 IDE やユーティリティで完全に動作するコードは、ストアドプロシージャや SQL Server の計算コンテキストでは実行できない場合があります。 この問題が発生した場合は、パッケージが SQL Server で動作しないと見なす前に、さまざまな問題を探す必要があります。
 
-ストアド プロシージャで R コードをラップする前はまたは RTerm、RGui などの R ツールのいずれかで外部の IDE で R コードを実行することをお勧めします。 これらのメソッドを使用するには、テストおよび R. によって返される詳細なエラー メッセージを使用して、コードをデバッグすることができます。
+1. スタートパッドが実行されているかどうかを確認します。
 
-ただし、場合があります、外部の IDE またはユーティリティで完全に動作するコードはストアド プロシージャで実行したり、SQL server 計算コンテキストを失敗可能性があります。 この場合は、さまざまな問題を探して前に、パッケージを SQL Server で動作しないことを想定しています。
+2. メッセージを確認して、入力データまたは出力データに互換性のないデータ型またはサポートされていないデータ型の列が含まれるかどうかを確認します。 たとえば、SQL データベースに対するクエリでは、Guid または行 Guid が返されることがよくありますが、どちらもサポートされていません。 詳細については、「 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)」を参照してください。
 
-1. スタート パッドが実行されているかどうかを確認します。
+3. 個々の R 関数のヘルプページを参照して、SQL Server 計算コンテキストですべてのパラメーターがサポートされているかどうかを確認します。 ScaleR のヘルプを表示するには、インラインの R ヘルプコマンドを使用するか、[パッケージのリファレンス](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)を参照してください。
 
-2. メッセージは、入力データと出力データに互換性がないかサポートされていないデータ型の列が含まれているかどうかを確認します。 たとえば、SQL database でのクエリは Guid または RowGUIDs、どちらもサポートされていないを返す多くの場合。 詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
+R ランタイムが機能していても、スクリプトからエラーが返された場合は、R Tools for Visual Studio などの専用の R 開発環境でスクリプトをデバッグすることをお勧めします。
 
-3. SQL Server のコンピューティング コンテキストのすべてのパラメーターがサポートされているかどうかを判断する個々 の R 関数のヘルプ ページを確認します。 ScaleR のヘルプについては、R のインライン ヘルプのコマンドを使用して、または参照してください[パッケージ参照](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)します。
+また、R とデータベースエンジンの間でデータを移動するときに発生する可能性のあるデータ型に関する問題を修正するために、スクリプトを確認し、少し書き直しておくことをお勧めします。 詳細については、「 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)」を参照してください。
 
-R ランタイムが機能している、スクリプトがエラーを返す場合は、R Tools for Visual Studio など、専用の R 開発環境でスクリプトのデバッグを試してみることをお勧めします。
+また、sqlrutils パッケージを使用して、ストアドプロシージャとしてより簡単に使用できる形式で R スクリプトをバンドルすることもできます。 詳細については、以下をご覧ください。
+* [sqlrutils パッケージ](r/ref-r-sqlrutils.md)
+* [Sqlrutils を使用してストアドプロシージャを作成する](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-私たちはまた、確認し、R とデータベース エンジンの間でデータを移動するときに生じる可能性のあるデータ型に関する問題を修正するスクリプトを少し修正することお勧めします。 詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
+## <a name="script-returns-inconsistent-results"></a>スクリプトは一貫性のない結果を返します
 
-さらに、ストアド プロシージャとしてより簡単に使用される形式で R スクリプトをバンドルするのに sqlrutils パッケージを使用することができます。 詳細については、以下をご覧ください。
-* [Sqlrutils パッケージを使用して R コード用のストアド プロシージャを生成します。](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-* [Sqlrutils を使用してストアド プロシージャを作成します。](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+R スクリプトは、いくつかの理由により、SQL Server のコンテキストで異なる値を返すことがあります。
 
-## <a name="script-returns-inconsistent-results"></a>スクリプトには、一貫性のない結果が返されます。
+- データが SQL Server と R の間で渡される場合、暗黙的な型変換は一部のデータ型に対して自動的に実行されます。詳細については、「 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)」を参照してください。
 
-R スクリプトは、いくつかの理由、SQL Server のコンテキストで異なる値を返すことができます。
+- ビットが因子であるかどうかを判断します。 たとえば、32ビットおよび64ビットの浮動小数点ライブラリでは、算術演算の結果に違いがあることがよくあります。
 
-- 暗黙的な型変換は SQL Server と R. 間のデータが渡されるときに、自動的に一部のデータ型の実行します。詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
+- 任意の操作で Nan が生成されたかどうかを確認します。 これにより、結果が無効になる可能性があります。
 
-- ビットが要因であるかどうかを確認します。 たとえば、32 ビットおよび 64 ビットの浮動小数点ポイント ライブラリの算術演算の結果の違いは多くの場合。
+- ゼロに近い数値の逆数を取得すると、小さい違いが増幅される可能性があります。
 
-- Nan は、いずれかの操作で生成されたかどうかを決定します。 結果がこれを無効にできます。
+- 丸め誤差が累積されると、0ではなく0未満の値が発生する可能性があります。
 
-- ゼロに近い数の逆数を取得すると、小さな違いを増幅されることができます。
+## <a name="implied-authentication-for-remote-execution-via-odbc"></a>ODBC を使用したリモート実行の暗黙の認証
 
-- 丸めの誤差が累積などの値がゼロではなく 0 未満にする可能性があります。
+RevoScaleR 関数を使用し[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]て R コマンドを実行するためにコンピューターに接続した場合、データをサーバーに書き込む ODBC 呼び出しを使用すると、エラーが発生することがあります。 このエラーは、Windows 認証を使用している場合にのみ発生します。
 
-## <a name="implied-authentication-for-remote-execution-via-odbc"></a>ODBC 経由のリモート実行の暗黙の認証
+その理由は、R Services に対して作成されたワーカーアカウントには、サーバーに接続するためのアクセス許可がないためです。 そのため、ODBC 呼び出しをユーザーに代わって実行することはできません。 Sql ログインでは、資格情報が R クライアントから SQL Server インスタンスに明示的に渡され、次に ODBC に渡されるため、SQL ログインでは問題は発生しません。 ただし、SQL ログインの使用は、Windows 認証を使用する場合よりも安全性が低くなります。
 
-接続する場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] R を実行するコンピューターのコマンドを使用して、 **RevoScaleR**関数の場合、サーバーにデータを書き込む ODBC 呼び出しを使用するときにエラーを発生可能性があります。 このエラーは、Windows 認証を使用している場合にのみ発生します。
+リモートで開始されるスクリプトから Windows 資格情報を安全に渡すには、SQL Server 資格情報をエミュレートする必要があります。 このプロセスは_暗黙の認証_と呼ばれます。 この作業を行うには、SQL Server コンピューターで R または Python スクリプトを実行するワーカーアカウントに適切なアクセス許可が必要です。
 
-理由は、R Services に対して作成されるワーカー アカウントに、サーバーに接続する権限がないことです。 そのため、ODBC 呼び出しを自動的に実行できません。 問題はため、SQL ログイン名、資格情報明示的に渡される、R クライアントから SQL Server インスタンスに ODBC にし、SQL ログインでは発生しません。 ただし、SQL ログインを使用して、Windows 認証を使用してほど安全でも。
+1. R [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]コードを実行するインスタンスで管理者としてを開きます。
 
-リモートでの SQL Server が開始したスクリプトから安全に渡される Windows 資格情報を有効にするには、資格情報をエミュレートする必要があります。 このプロセスと呼ばれる_暗黙の認証_します。 この作業をするためには、SQL Server コンピューターで R または Python スクリプトを実行するワーカー アカウントは、適切なアクセス許可が必要です。
+2. 次のスクリプトを実行します。 既定値を変更した場合は、ユーザーグループ名を編集し、コンピューター名とインスタンス名を必ず編集してください。
 
-1. 開いている[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]R コードを実行するインスタンスの管理者として。
-
-2. 次のスクリプトを実行します。 既定値を変更した場合、ユーザー グループ名とコンピューターとインスタンス名を編集してください。
-
-    ```SQL
+    ```sql
     USE [master]
     GO
     
@@ -77,28 +74,28 @@ R スクリプトは、いくつかの理由、SQL Server のコンテキスト�
     GO
     ```
 
-## <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>SQL 計算コンテキストで R を実行しているときに、ワークスペースをクリアできません。
+## <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>SQL コンピューティングコンテキストで R を実行しているときにワークスペースをクリアしないようにする
 
-ワークスペースをクリアすると、R コンソールで作業するときに一般的なは、予期しない結果に SQL 計算コンテキスト。
+ワークスペースのクリアは、R コンソールで作業するときは一般的ですが、SQL の計算コンテキストで意図しない結果が生じる可能性があります。
 
-`revoScriptConnection` SQL Server から呼び出される R セッションに関する情報を含む R ワークスペース内のオブジェクトです。 ただし、R コードがワークスペースをクリアするためのコマンドを含むかどうか (など`rm(list=ls())`)、セッションと R ワークスペース内の他のオブジェクトに関するすべての情報がもクリアされます。
+`revoScriptConnection`は、R ワークスペース内のオブジェクトであり、SQL Server から呼び出された R セッションに関する情報が含まれています。 ただし、r コードにワークスペースをクリアするコマンド ( `rm(list=ls())`など) が含まれている場合は、r ワークスペースのセッションとその他のオブジェクトに関するすべての情報もクリアされます。
 
-この問題を回避するには、SQL Server で R を実行しているときに、変数とその他のオブジェクトを無差別にクリアしないようにします。 使用して特定の変数を削除することができます、**削除**関数。
+回避策として、SQL Server で R を実行しているときに、変数とその他のオブジェクトの区別を解除しないようにしてください。 **Remove**関数を使用すると、特定の変数を削除できます。
 
 ```R
 remove('name1', 'name2', ...)
 ```
 
-複数の変数を削除する場合は、一時変数の名前を一覧に保存し、リストの定期的なガベージ コレクションを実行することが推奨されます。
+複数の変数を削除する場合は、一時変数の名前をリストに保存し、定期的にガベージコレクションを実行することをお勧めします。
 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[Machine Learning サービスのトラブルシューティングと既知の問題](machine-learning-troubleshooting-faq.md)
+[Machine Learning Services のトラブルシューティングと既知の問題](machine-learning-troubleshooting-faq.md)
 
-[Machine learning のトラブルシューティングのためのデータの収集](data-collection-ml-troubleshooting-process.md)
+[Machine learning のトラブルシューティングのためのデータ収集](data-collection-ml-troubleshooting-process.md)
 
 [アップグレードとインストールに関してよく寄せられる質問](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-[データベース エンジンの接続をトラブルシューティングします。](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
+[データベースエンジン接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

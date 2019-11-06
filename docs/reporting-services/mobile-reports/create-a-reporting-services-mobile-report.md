@@ -9,18 +9,18 @@ ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316455"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートの作成
 SQL Server Mobile Report Publisher を使用すると、調整可能なグリッド行とグリッド列、および柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応する SQL Server Reporting Services モバイル レポートをすばやく作成できます。  
   
 初めてモバイル レポートを作成するときは、Reporting Services Web ポータルから SQL Server Mobile Report Publisher をローカル コンピューターにインストールできます。 または、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=733527)からインストールすることもできます。 2 回目以降は、Web ポータルまたはローカルのいずれかから開始できます。   
     
-1. Reporting Services Web ポータルの上部のバーで、**[新規]** > **[モバイル レポート]** の順に選択します。  
+1. Reporting Services Web ポータルの上部のバーで、 **[新規]**  >  **[モバイル レポート]** の順に選択します。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
@@ -54,7 +54,7 @@ SQL Server Mobile Report Publisher を使用すると、調整可能なグリッ
   
    ![SSMRP_DataProps](../../reporting-services/mobile-reports/media/ssmrp-dataprops.png)  
   
-9. **[レイアウト]** タブに戻り、 **[表示プロパティ]** ボックスで、 **[タイトル]**、 **[時間の単位]**、 **[数値書式]** などのプロパティを設定します。  
+9. **[レイアウト]** タブに戻り、 **[表示プロパティ]** ボックスで、 **[タイトル]** 、 **[時間の単位]** 、 **[数値書式]** などのプロパティを設定します。  
   
    ![SSMRP_ChartVizProps](../../reporting-services/mobile-reports/media/ssmrp-chartvizprops.png)  
     

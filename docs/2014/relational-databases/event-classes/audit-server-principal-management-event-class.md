@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f40b905f3568c88555f40cfb95e0914d5434c7ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 392cd07148516c4c61ed39cba4b34d81bcf4c5c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012420"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management イベント クラス
   **Audit Server Principal Management** イベント クラスは、サーバー プリンシパルが作成、変更、または削除されるときに発生します。  
@@ -35,11 +34,11 @@ ms.locfileid: "48213852"
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名。|40|はい|  
 |**EventSequence**|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1 = 作成<br /><br /> 2 = 変更<br /><br /> 3 = 削除<br /><br /> 4 = ダンプ<br /><br /> 5 = 無効<br /><br /> 6 = 有効<br /><br /> 11 = 読み込み|21|はい|  
-|**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
+|**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|[はい]|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
-|**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
-|**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
+|**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|[はい]|  
+|**NTUserName**|**nvarchar**|Windows のユーザー名。|6|[はい]|  
 |**ObjectName**|**nvarchar**|参照されているオブジェクトの名前。|34|はい|  
 |**ObjectType**|**int**|イベントに関係するオブジェクトの種類を表す値。 この値は **sys.objects** カタログ ビューの type 列に対応します。 値については、「 [ObjectType トレース イベント列](objecttype-trace-event-column.md)」を参照してください。|28|はい|  
 |**OwnerName**|**nvarchar**|オブジェクト所有者のデータベース ユーザー名。|37|はい|  
@@ -51,7 +50,7 @@ ms.locfileid: "48213852"
 |**成功**|**int**|1 = 成功。 0 = 失敗。 たとえば、値 1 は権限チェックの成功を示し、値 0 は失敗を示します。|23|はい|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

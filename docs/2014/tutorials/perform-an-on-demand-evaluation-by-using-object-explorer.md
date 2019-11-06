@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f950b99b7de4b7e81d75ed9decee47f74a785206
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210943"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用した要求時評価の実行
   ここでは、オブジェクト エクスプローラーを使用して、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の単一インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に対して、ベスト プラクティス ポリシーの要求時評価を実行します。  
@@ -39,13 +38,13 @@ ms.locfileid: "48098112"
     > [!NOTE]  
     >  既定では、ローカル インスタンスがポリシーのソースとして使用されます。 ベスト プラクティス ポリシーを以前にインポートしている場合は、作成済みのポリシーがあれば、それと共に一覧表示されます。 インポートしたベスト プラクティス ポリシーのいずれかを選択してクリックして**Evaluate**します。 ベスト プラクティス ポリシーをインポートしていない場合には、この手順を続行します。  
   
-3.  **ポリシーの評価** ダイアログ ボックスの横に、**ソース**ボックスで、省略記号ボタンをクリックします (**.**) ボタンをクリックします。  
+3.  **ポリシーの評価** ダイアログ ボックスの横に、**ソース**ボックスで、省略記号ボタンをクリックします ( **.** ) ボタンをクリックします。  
   
 4.  **ソースの選択**ダイアログ ボックスで、いずれかを選択できます**ファイル**または**Server**を評価するポリシー ファイルのソースとして。 クリックすると**Server**、ローカルまたはリモート サーバー上のポリシー ベースの管理に以前インポートされたすべてのベスト プラクティス ポリシーのオンデマンドで評価を行うことができます。 このチュートリアルをクリックして**ファイル**、し評価する個々 のポリシー ファイルを選択します。 これを行うには、次の手順を実行します。  
   
     1.  クリックして**ファイル**します。  
   
-    2.  横に**ファイル**、省略記号をクリックします (**.**) ボタンをクリックします。  
+    2.  横に**ファイル**、省略記号をクリックします ( **.** ) ボタンをクリックします。  
   
     3.  **ポリシーの選択** ダイアログ ボックスで、ベスト プラクティス ポリシーを格納している次のフォルダーを参照します。  
   

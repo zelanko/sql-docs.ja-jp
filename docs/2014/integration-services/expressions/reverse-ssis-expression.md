@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42b74657402e3e4b8ade0deaf2505217ceb0c0de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce882ae32718f634efb6b2f39ed397dfb9cbf785
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897339"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 式)
   文字式を逆に並べ替えたものを返します。  
@@ -38,7 +37,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  *character_expression* 引数は、DT_WSTR データ型である必要があります。  
   
  *character_expression* が NULL の場合、REVERSE は NULL を返します。  
@@ -56,7 +55,7 @@ REVERSE("Mountain Bike")
 REVERSE(@Name)  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+## <a name="see-also"></a>参照  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

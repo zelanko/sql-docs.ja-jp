@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 713d471d350877a207b49a9649db0b7262273f52
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926423"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ での ADO プログラミング
 ADO の API リファレンスには、ADO アプリケーション プログラミング インターフェイス (API)、Microsoft Visual Basic に似た構文を使用しての機能について説明します。 ADO のプログラマが Visual Basic、Visual C などのさまざまな言語を使用する対象とするユーザーには、すべてのユーザーが、(としない場合、 **#import**ディレクティブ)、および Visual j (ADO と WFC クラス パッケージ) にします。  
@@ -40,7 +39,7 @@ ADO の API リファレンスには、ADO アプリケーション プログラ
   
  クラス (メソッドまたはプロパティの呼び出し) 内の各操作については、宣言操作を直接 (つまり、「生」の形式、操作)、呼び出すと、生の操作を呼び出すし、succ を実行する操作が失敗した場合は、COM エラーをスローする宣言essfully します。 操作がプロパティの場合、Visual Basic のような構文のある操作の代替構文を作成できるコンパイラ ディレクティブは通常があります。  
   
- プロパティの値を取得する操作は、フォームの名前を持つ **取得 * * * プロパティ*します。 プロパティの値を設定する操作は、フォームの名前を持つ **配置 * * * プロパティ*します。 ADO オブジェクトへのポインターのプロパティの値を設定する操作は、フォームの名前を持つ **PutRef * * * プロパティ*します。  
+ プロパティの値を取得する操作は、フォームの名前を持つ**取得**_プロパティ_します。 プロパティの値を設定する操作は、フォームの名前を持つ**配置**_プロパティ_します。 ADO オブジェクトへのポインターのプロパティの値を設定する操作は、フォームの名前を持つ**PutRef**_プロパティ_します。  
   
  これらの形式の呼び出しでプロパティを設定または取得できます。  
   
@@ -65,16 +64,17 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- コンパイラは、適切な生成 **Get * * *-*、**配置**-、または **PutRef * * * プロパティ*代替構文は宣言されており、プロパティは、かどうかに基づいて、呼び出し読み取りまたは書き込み。  
+ コンパイラは、適切な生成**取得** _-_ 、**配置**-、または**PutRef**_プロパティ_代替構文は宣言されており、プロパティがされているかどうかに基づいて、呼び出しの読み取りまたは書き込み。  
   
  **__Declspec(property...)** コンパイラ ディレクティブでのみ宣言できます**取得**、**配置**、または**取得**と**配置**関数の代替構文。 読み取り専用操作のみがある、**取得**宣言です書き込み専用の操作のみが、**配置**宣言です。 操作はどちらも読み取りおよび書き込みの両方がある**取得**と。**配置**宣言します。  
   
- 2 つだけ宣言はこのディレクティブを指定します。ただし、各プロパティは次の 3 つのプロパティ関数可能性があります。 **取得 * * * プロパティ*、**配置 * * * プロパティ*、および **PutRef * * * プロパティ*します。 その場合は、プロパティの 2 つの形式では、代替構文があります。  
+ 2 つだけ宣言はこのディレクティブを指定します。ただし、各プロパティには、次の 3 つのプロパティ関数があります。**取得**_プロパティ_、**配置**_プロパティ_、および**PutRef**_プロパティ_します。 その場合は、プロパティの 2 つの形式では、代替構文があります。  
   
- たとえば、**コマンド**オブジェクト**ActiveConnection**プロパティが、別の構文で宣言された **取得 * * * ActiveConnection*と **PutRef ** * ActiveConnection*します。 **PutRef**-たいので、実際が通常開いている状態に、構文は、適切な選択**接続**オブジェクト (つまり、**接続**オブジェクト ポインター) このプロパティ。 一方で、**レコード セット**オブジェクトが**取得**-、**配置**-、および **PutRef * * * ActiveConnection*操作が他に方法構文があります。  
+ たとえば、**コマンド**オブジェクト**ActiveConnection**プロパティが、別の構文で宣言された**取得**_ActiveConnection_と**PutRef**_ActiveConnection_します。 **PutRef**-たいので、実際が通常開いている状態に、構文は、適切な選択**接続**オブジェクト (つまり、**接続**オブジェクト ポインター) このプロパティ。 一方で、**レコード セット**オブジェクトが**取得**-、**配置**-、および**PutRef**_ActiveConnection_、操作が別の構文ではありません。  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>コレクション、GetItem メソッドをおよび項目のプロパティ  
- ADO など、いくつかのコレクションを定義する**フィールド**、**パラメーター**、**プロパティ**、および**エラー**します。 Visual C で、 **GetItem (***インデックス***)** メソッドは、コレクションのメンバーを返します。 *インデックス*は、**バリアント**、この値は、コレクション内のメンバーの数値インデックスまたは、メンバーの名前を含む文字列。  
+
+ ADO など、いくつかのコレクションを定義する**フィールド**、**パラメーター**、**プロパティ**、および**エラー**します。 Visual C で、 **GetItem (_インデックス_)** メソッドは、コレクションのメンバーを返します。 *インデックス*は、**バリアント**、この値は、コレクション内のメンバーの数値インデックスまたは、メンバーの名前を含む文字列。  
   
  **__Declspec(property...)** コンパイラ ディレクティブを宣言、**項目**プロパティとして各コレクションに別の構文の基本的な**37-1getitem ()** メソッド。 代替構文は、角かっこを使用して、配列参照するようになります。 一般に、2 つの形式は、次のようになります。  
   
@@ -84,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- などのフィールドに値を割り当てる、 **Recordset**という名前のオブジェクト***rs***から派生した、**作成者**のテーブル、 **pubs**データベース。 使用して、 **Item()** 、3 番目にアクセスするプロパティ**フィールド**の**Recordset**オブジェクト**フィールド**コレクション (コレクションのインデックスはから0;3 番目のフィールドがという名前の想定***au_fname***)。 呼び出して、 **Value()** メソッドを**フィールド**文字列値を代入するオブジェクト。  
+ などのフィールドに値を割り当てる、 **Recordset**という名前のオブジェクト **_rs_** から派生した、**作成者**のテーブル**pubs**データベース。 使用して、 **Item()** 、3 番目にアクセスするプロパティ**フィールド**の**Recordset**オブジェクト**フィールド**コレクション (コレクションのインデックスはから0;3 番目のフィールドがという名前の想定 **_au\_fname_** )。 呼び出して、 **Value()** メソッドを**フィールド**文字列値を代入するオブジェクト。  
   
  これで表現できる Visual Basic では、次の 4 つの方法 (Visual Basic に最後の 2 つのフォームが固有; 他の言語には、相当するはありません)。  
   
@@ -102,7 +102,7 @@ rs->Fields->GetItem(long(2))->PutValue("value");
 rs->Fields->GetItem("au_fname")->PutValue("value");  
 ```
   
- - または - (の代替構文を**値**もプロパティが表示されます)  
+ \- または - (の代替構文を**値**もプロパティが表示されます)  
   
 ```cpp
 rs->Fields->Item[long(2)]->Value = "value";  
@@ -114,7 +114,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
 ## <a name="com-specific-data-types"></a>COM に固有のデータ型  
  一般に、任意の Visual Basic データ型が ADO の API リファレンスを検索するには、同等の Visual C があります。 などの標準的なデータ型が含まれます**unsigned char** Visual basic**バイト**、**短い**の**整数**、および**長い**の**長い**します。 構文 Indexesto ファイルの場所では、オペランドの特定のメソッドまたはプロパティの必要なものだけを参照してください。  
   
- このルールの例外は COM に固有のデータ型:**バリアント**、 **BSTR**、および**SafeArray**します。  
+ このルールの例外は、COM に固有のデータ型は。**Variant**、 **BSTR**、および**SafeArray**します。  
   
 ### <a name="variant"></a>Variant  
  A**バリアント**value メンバーとデータ型のメンバーを含む構造化されたデータ型です。 A**バリアント**幅広い別バリアント、BSTR、ブール値、IDispatch または IUnknown ポインター、通貨、日付、およびなどを含むその他のデータ型を含めることができます。 COM では、メソッドを簡単に 1 つのデータ型の変換も提供します。  
@@ -140,12 +140,12 @@ rs->Fields->Item["au_fname"]->Value = "value";
  宣言など、 **Recordset::Open**メソッドは。  
   
 ```cpp
-    HRESULT Open (  
-        const _variant_t & Source,  
-        const _variant_t & ActiveConnection,  
-        enum CursorTypeEnum CursorType,  
-        enum LockTypeEnum LockType,  
-        long Options );  
+    HRESULT Open (  
+        const _variant_t & Source,  
+        const _variant_t & ActiveConnection,  
+        enum CursorTypeEnum CursorType,  
+        enum LockTypeEnum LockType,  
+        long Options );  
 ```
   
  `ActiveConnection`引数への参照には、 **_variant_t**、接続文字列または開いているへのポインターとしてコーディングすることがありますが**接続**オブジェクト。  
@@ -179,9 +179,9 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
 ```cpp
 _RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
-        long Options );  // Connection  
+        long Options );  // Connection  
 _RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
-        long Options );  // Command  
+        long Options );  // Command  
 _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
 ```
   
@@ -222,7 +222,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- - または -  
+ \- または -  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -241,14 +241,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- - または -  
+ \- または -  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- - または -  
+ \- または -  
   
 ```cpp
 _RecordsetPtr  rs;  
@@ -265,14 +265,14 @@ rs->Open(...);
   
  2 つの方法で 1 つの変数を使用できる、"`->`"インターフェイスへのポインターと同様に動作するためのクラスのインスタンスを許可する演算子をオーバー ロードします。 インスタンス変数のプライベート クラス メンバーにはへのポインターが含まれています、 **_Recordset**インターフェイスは、"`->`"演算子を返しますそのポインターと返されるポインターのメンバーにアクセスする、 **_Recordset。** オブジェクト。  
   
-### <a name="coding-a-missing-parameter--string"></a>不足しているパラメーターのコーディング: 文字列  
+### <a name="coding-a-missing-parameter---string"></a>不足しているパラメーターの文字列のコーディング  
  存在しないをコーディングする必要がある場合**文字列**オペランド、オペランドの省略だけで Visual basic でします。 Visual C では、オペランドを指定する必要があります。 コードを **_bstr_t**を持つ値として空の文字列。  
   
 ```cpp
 _bstr_t strMissing(L"");  
 ```
   
-### <a name="coding-a-missing-parameter--variant"></a>不足しているパラメーターのコーディング: バリアント  
+### <a name="coding-a-missing-parameter---variant"></a>不足しているパラメーターの場合は、バリアントのコーディング  
  存在しないをコーディングする必要がある場合**バリアント**オペランド、オペランドの省略だけで Visual basic でします。 Visual C では、すべてのオペランドを指定する必要があります。 コードが存在しない**バリアント**パラメーター、 **_variant_t**特殊な値や DISP_E_PARAMNOTFOUND、型、VT_ERROR に設定します。 代わりに、指定**vtMissing**、これと同じ定義済みの定数によって提供される、 **#import**ディレクティブ。  
   
 ```cpp
@@ -292,7 +292,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
 Dim VariableName As Variant  
 ```
   
- Visual C での型として変数を宣言 **_variant_t**します。 いくつかの概略図 **_variant_t**宣言を以下に示します。  
+ ビジュアルでC++、型として変数を宣言 **_variant_t**します。 いくつかの概略図 **_variant_t**宣言を以下に示します。  
   
 > [!NOTE]
 >  これらの宣言は、独自のプログラムでコーディングする内容の大まかなアイデアだけを提供します。 詳細については、以下の例と Visual c ドキュメントを参照してください。  
@@ -324,9 +324,9 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- Visual C の例を次に示しますを使用して、 **SafeArray**と併用、 **_variant_t**します。  
+ 次のビジュアルC++使用例を示します、 **SafeArray**と併用、 **_variant_t**します。  
   
-#### <a name="notes"></a>注  
+#### <a name="notes"></a>メモ  
  次のノートは、コード例ではコメント部分に対応します。  
   
 1.  もう一度、TESTHR() のインライン関数は、既存のエラー処理メカニズムを活用するために定義されます。  
@@ -334,13 +334,13 @@ End Sub
 2.  必要なだけ 1 次元配列で使用できるように**SafeArrayCreateVector**、一般的な用途ではなく**SAFEARRAYBOUND**宣言と**SafeArrayCreate**関数。 次にそのコードがどのようにを使用して**SafeArrayCreate**:  
   
     ```cpp
-       SAFEARRAYBOUND   sabound[1];  
-       sabound[0].lLbound = 0;  
-       sabound[0].cElements = 4;  
-       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
+       SAFEARRAYBOUND   sabound[1];  
+       sabound[0].lLbound = 0;  
+       sabound[0].cElements = 4;  
+       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
     ```
   
-3.  列挙型の定数で識別されるスキーマ**adSchemaColumns**、4 つの制約の列に関連付けられた: TABLE_CATALOG、table_schema、TABLE_NAME、COLUMN_NAME、します。 そのため、配列の**バリアント**4 つの要素を持つ値を作成します。 TABLE_NAME、3 番目の列に対応する制約値を指定します。  
+3.  列挙型の定数で識別されるスキーマ**adSchemaColumns**、4 つの制約の列に関連付けられました。TABLE_CATALOG、table_schema、TABLE_NAME、COLUMN_NAME します。 そのため、配列の**バリアント**4 つの要素を持つ値を作成します。 TABLE_NAME、3 番目の列に対応する制約値を指定します。  
   
      **Recordset**返されるサブセットを実行するは、制約列の複数の列で構成されます。 返された各行の制約列の値は、対応する制約の値と同じである必要があります。  
   
@@ -349,9 +349,9 @@ End Sub
      場合**SafeArrayDestroy**いたよう呼び出されると、コードになります。  
   
     ```cpp
-          TESTHR(SafeArrayDestroy(pSa));  
-       vtCriteria.vt = VT_EMPTY;  
-          vtCriteria.parray = NULL;  
+          TESTHR(SafeArrayDestroy(pSa));  
+       vtCriteria.vt = VT_EMPTY;  
+          vtCriteria.parray = NULL;  
     ```
   
      ただし、使用できるようにするほうが、 **_variant_t**管理、 **SafeArray**します。  
@@ -422,7 +422,7 @@ Dim rs As New ADODB.Recordset
 Dim cn As New ADODB.Connection  
 Dim sz as Integer  
 cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
-         "Initial Catalog=pubs;Integrated Security=SSPI;"  
+         "Initial Catalog=pubs;Integrated Security=SSPI;"  
 rs.PageSize = 10  
 sz = rs.PageSize  
 rs.ActiveConnection = cn  
@@ -433,9 +433,9 @@ cn.Close
 End Sub  
 ```
   
- この Visual C の例では、**取得**/**配置**/**PutRef * * * プロパティ*します。  
+ この Visual C の例では、**取得**/**配置**/**PutRef**_プロパティ_します。  
   
-#### <a name="notes"></a>注  
+#### <a name="notes"></a>メモ  
  次のノートは、コード例ではコメント部分に対応します。  
   
 1.  この例は、不足している文字列引数の 2 つの形式を使用して: 明示的な定数、 **strMissing**、およびコンパイラが、一時パスワードが作成に使用する文字列 **_bstr_t** のスコープに存在します。**開いている**メソッド。  
@@ -490,7 +490,7 @@ Public Sub GetItemItem
 Dim rs As New ADODB.Recordset  
 Dim name as String  
 rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
-         adLockBatchOptimistic, adTable  
+         adLockBatchOptimistic, adTable  
 name = rs(0)  
 ' -or-  
 name = rs.Fields.Item(0)  
@@ -506,7 +506,7 @@ End Sub
  この Visual C の例では**項目**します。  
   
 > [!NOTE]
->  コード例ではコメント部分に対応する次に注意してください: をコレクションにアクセスするときに**項目**、インデックス、 **2**にキャストする必要があります**長い**のため、適切なコンス トラクターが呼び出されます。  
+>  次のメモは、コード例のセクションをコメントに対応します。コレクションにアクセスするときに**項目**、インデックス、 **2**にキャストする必要があります**長い**適切なコンス トラクターが呼び出されるようにします。  
   
 ```cpp
 // Visual_CPP_ado_prog_3.cpp  
@@ -554,7 +554,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>ADO オブジェクトのポインターにキャスト (IDispatch *)  
  Visual C の例を次に示しますを使用して (IDispatch *) ADO オブジェクト ポインターのキャストにします。  
   
-#### <a name="notes"></a>注  
+#### <a name="notes"></a>メモ  
  次のノートは、コード例ではコメント部分に対応します。  
   
 1.  開いているを指定**接続**で明示的にコード化されたオブジェクト**バリアント**します。 キャスト (IDispatch \*) 適切なコンス トラクターが呼び出されるようにします。 また、2 つ目を明示的に設定 **_variant_t**パラメーターの既定値を**true**、オブジェクトの参照カウントされるため、適切なときに、 **Recordset::Open**操作を終了します。  

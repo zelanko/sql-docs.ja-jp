@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 01/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,14 +13,13 @@ dev_langs:
 - TSQL
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b0eb2db49a4bda6fc8be884790c3caf9cfdb7bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de42757543ebc09a63de250178cc1c2e00aa8a74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019791"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ APPROX_COUNT_DISTINCT ( expression )
 
 97% の確率でエラー率が最大 2% 以内に収まることが、関数の実装によって保証されます。 
 
-`APPROX_COUNT_DISTINCT` に必要なメモリは、完全な COUNT DISTINCT 操作よりも少なくて済みます。  メモリの使用量が少ないため、`APPROX_COUNT_DISTINCT` がメモリをディスクに書き込む可能性は、正確な COUNT DISTINCT 操作に比べて小さくなります。 
+`APPROX_COUNT_DISTINCT` に必要なメモリは、完全な COUNT DISTINCT 操作よりも少なくて済みます。  メモリの使用量が少ないため、`APPROX_COUNT_DISTINCT` がメモリをディスクに書き込む可能性は、正確な COUNT DISTINCT 操作に比べて小さくなります。 これを実現するために使用されるアルゴリズムの詳細については、「[HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog)」をご覧ください。
 
 > [!NOTE]
 > 照合順序に依存する文字列では、APPROX_COUNT_DISTINCT のパブリック プレビュー バージョンではバイナリ一致が使用され、BIN 照合順序がある場合 (BIN2 はなし) に生成されるのと同じ結果が提供されます。 
@@ -100,5 +99,5 @@ P                                                                388036
 ```
     
 ## <a name="see-also"></a>参照
-[集計関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 

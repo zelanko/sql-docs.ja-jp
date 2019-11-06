@@ -2,19 +2,18 @@
 title: Azure Blob storage 内の外部データにアクセスする PolyBase の構成 |Microsoft Docs
 description: 外部の Hadoop に接続するための Parallel Data Warehouse で PolyBase を構成する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960288"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage 内の外部データへのアクセスに PolyBase を構成します。
 
@@ -32,7 +31,7 @@ ms.locfileid: "49460634"
 
 最初に、Azure Blob storage を使用するアクセス ポイントを構成します。
 
-1. 実行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)で 'hadoop connectivity' を Azure Blob ストレージ プロバイダーに設定します。 プロバイダーの値を検索する、次を参照してください。 [PolyBase 接続構成](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)します。
+1. 実行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)で 'hadoop connectivity' を Azure Blob ストレージ プロバイダーに設定します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -47,11 +46,11 @@ ms.locfileid: "49460634"
 
 2. APS リージョンのサービスの状態のページを使用して再起動[アプライアンス Configuration Manager](launch-the-configuration-manager.md)します。
   
-## <a name="configure-an-external-table"></a>外部テーブルを構成します。
+## <a name="configure-an-external-table"></a>外部テーブルを構成する
 
-Azure Blob storage 内のデータを照会するには、TRANSACT-SQL クエリで使用する外部テーブルを定義する必要があります。 次の手順では、外部テーブルを構成する方法について説明します。
+Azure Blob storage 内のデータを照会するには、TRANSACT-SQL クエリで使用する外部テーブルを定義する必要があります。 次の手順では、外部テーブルを構成する方法を説明します。
 
-1. データベースのマスター _ キーを作成します。 資格情報シークレットを暗号化することが必要です。
+1. データベースにマスター キーを作成します。 資格情報シークレットを暗号化することが必要です。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -66,7 +65,7 @@ Azure Blob storage 内のデータを照会するには、TRANSACT-SQL クエリ
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 外部データ ソースの作成[CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,7 +77,7 @@ Azure Blob storage 内のデータを照会するには、TRANSACT-SQL クエリ
    );  
    ```
 
-1. 外部ファイル形式を作成する[CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)します。
+1. [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) を使用して外部ファイル形式を作成します。
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -89,7 +88,7 @@ Azure Blob storage 内のデータを照会するには、TRANSACT-SQL クエリ
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. 使用した Azure storage に格納されたデータを指す外部テーブルを作成する[CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)します。 この例では、外部のデータには、車のセンサー データが含まれています。
+1. [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)を使用して、Azure ストレージに格納されているデータをポイントする外部テーブルを作成します。 この例では、外部データには車両センサー データが含まれています。
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -106,7 +105,7 @@ Azure Blob storage 内のデータを照会するには、TRANSACT-SQL クエリ
    );  
    ```
 
-1. 外部テーブルに対する統計を作成します。
+1. 外部テーブルの統計を作成します。
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -117,10 +116,10 @@ Azure Blob storage 内のデータを照会するには、TRANSACT-SQL クエリ
 PolyBase が適している機能には、次の 3 つがあります。  
   
 - 外部テーブルに対するアドホック クエリ。  
-- データをインポートします。  
-- データをエクスポートします。  
+- データのインポート。  
+- データのエクスポート。  
 
-次のクエリでは、架空の車両センサー データの例を提供します。
+次のクエリでは、架空の車両センサー データの例を示します。
 
 ### <a name="ad-hoc-queries"></a>アドホック クエリ  
 
@@ -179,5 +178,5 @@ SQL Server Data tools、外部テーブルが別のフォルダーに表示さ�
 
 ## <a name="next-steps"></a>次の手順
 
-PolyBase の詳細については、次を参照してください。、 [PolyBase とは何ですか?](../relational-databases/polybase/polybase-guide.md)します。 
+PolyBase について詳しくは、「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」をご覧ください。 
 

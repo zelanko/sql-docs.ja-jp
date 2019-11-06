@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - opening Database Diagram Designer
@@ -15,12 +15,12 @@ ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b45e9729eb66334703b15f9a9d801fc072a5ea5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a4fb2a6fc58d008dc0c69824282f5ac35b2bb6a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63254742"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナーを開く (Visual Database Tools)
   データベース ダイアグラム デザイナーは、接続しているデータベースをデザインしたりビジュアル化したりできるビジュアル ツールです。 データベースをデザインするときは、データベース デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約の作成、編集、または削除を行うことができます。 データベースをビジュアル化するには、データベースに含まれるテーブル、列、キー、およびリレーションシップの一部または全部を表すダイアグラムを作成します。  

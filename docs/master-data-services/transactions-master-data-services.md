@@ -5,22 +5,20 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7d71093c81f002611c857bf16c2f4cd1a6ca83d2
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.openlocfilehash: a06c23b5e6860886f98c3505f711f76a12cfbb15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102608"
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
 
@@ -56,7 +54,7 @@ ms.locfileid: "51697701"
   
  次のストアド プロシージャを呼び出して、トランザクション ログをクリーンアップすることもできます。  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|トランザクション履歴をクリーンアップします。|  
 |mdm.udpValidationsCleanup|検証履歴をクリーンアップします。|  

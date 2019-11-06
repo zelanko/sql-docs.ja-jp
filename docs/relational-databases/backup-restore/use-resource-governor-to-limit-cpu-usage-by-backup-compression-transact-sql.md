@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6ea2daec0d2926588e80ade4a5e41cc602da58b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be8d6f23c880d96f46aecc433d46b0971995278d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041302"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47649360"
 ##  <a name="setup_login_and_user"></a> 優先度の低い操作を行うためのログインとユーザーの設定  
  このトピックのシナリオには、優先度の低い [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインおよびユーザーが必要です。 ユーザー名は、このログインで実行されるセッションを分類し、CPU 使用率を制限するリソース ガバナー ワークロード グループにセッションをルーティングするために使用されます。  
   
- 以下では、この目的でログインとユーザーを設定する手順について説明した後に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の例「例 A : ログインとユーザーの設定 (Transact-SQL)」を示します。  
+ 以下では、この目的でログインとユーザーを設定する手順について説明した後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] の例「例 A :ログインとユーザーの設定 (Transact-SQL)」を説明します。  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>セッションを分類するためにログインとデータベース ユーザーを設定するには  
   
@@ -79,7 +78,7 @@ ms.locfileid: "47649360"
   
      詳細については、「[GRANT (データベース プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)」を参照してください。  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>例 A : ログインとユーザーの設定 (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>例 A:ログインとユーザーの設定 (Transact-SQL)  
  次の例は、優先度の低いバックアップ用に新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインおよびユーザーを作成する場合にのみ該当します。 既存のログインとユーザーで適切なものがあれば、それを使用してもかまいません。  
   
 > [!IMPORTANT]  
@@ -186,7 +185,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>例 B : リソース ガバナーの構成 (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>例 B:Resource Governor の構成 (Transact-SQL)  
  次の例では、以下の手順を 1 つのトランザクションで実行します。  
   
 1.  `pMAX_CPU_PERCENT_20` リソース プールを作成します。  
@@ -200,7 +199,7 @@ GO
  この例では、トランザクションをコミットした後に、ALTER WORKLOAD GROUP または ALTER RESOURCE POOL ステートメントで要求された構成の変更が適用されます。  
   
 > [!IMPORTANT]  
->  次の例では、「例 A: ログインとユーザーの設定 (Transact-SQL)」で作成したサンプルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーのユーザー名 *domain_name*`\MAX_CPU`を使用しています。 この名前を、優先度の低い圧縮されたバックアップを作成する際に使用する予定のログインのユーザーの名前に置き換えてください。  
+>  次の例では、「例 A: ログインとユーザーの設定 (Transact-SQL)」で作成したサンプルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーのユーザー名*domain_name*`\MAX_CPU` を使用しています。 この名前を、優先度の低い圧縮されたバックアップを作成する際に使用する予定のログインのユーザーの名前に置き換えてください。  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -262,9 +261,9 @@ GO
  [&#91;先頭に戻る&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> CPU が制限されているセッションを使用したバックアップの圧縮  
- 最大 CPU が制限されているセッションで圧縮されたバックアップを作成するには、分類子関数で指定したユーザーでログインします。 バックアップ コマンドで、WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定するか、**[バックアップを圧縮する]** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) を選択します。 圧縮されたデータベース バックアップを作成する方法については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」をご覧ください。  
+ 最大 CPU が制限されているセッションで圧縮されたバックアップを作成するには、分類子関数で指定したユーザーでログインします。 バックアップ コマンドで、WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定するか、 **[バックアップを圧縮する]** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) を選択します。 圧縮されたデータベース バックアップを作成する方法については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」をご覧ください。  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>例 C : 圧縮されたバックアップの作成 (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>例 C: 圧縮されたバックアップの作成 (Transact-SQL)  
  次に示す [BACKUP](../../t-sql/statements/backup-transact-sql.md) の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの圧縮された完全バックアップを、新たな形式のバックアップ ファイル `Z:\SQLServerBackups\AdvWorksData.bak`に作成します。  
   
 ```sql  

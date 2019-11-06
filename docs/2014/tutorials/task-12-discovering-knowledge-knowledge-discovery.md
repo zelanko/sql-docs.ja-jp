@@ -1,29 +1,26 @@
 ---
-title: 'タスク 12: ナレッジ (ナレッジ検出) を検出する |Microsoft Docs'
+title: タスク 12:(ナレッジ検出) のナレッジを検出する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484683"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>タスク 12: ナレッジを検出する (ナレッジ検出)
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>タスク 12:ナレッジを検出する (ナレッジ検出)
   このタスクで実行して、**ナレッジ検出**でアクティビティ**Supplier ID**と**Supplier Name**ドメイン。 このシナリオでは、ナレッジ検出プロセスにより主にこれら 2 つのドメインの値をインポートします。  
   
- このチュートリアルでは、ナレッジ ベースを最初から作成しました。 さらに、ナレッジ検出アクティビティを実行してナレッジ ベースを作成することができます。 クリックすると**ナレッジ ベースを作成**をページにする DQS クライアントは、のメイン ページで、**ドメイン管理**活動の選択したアクティビティ。 変更することができます、**アクティビティ**に**ナレッジ検出**とし、次のページでドメインを作成できます、ナレッジ検出プロセスの一部として。 参照してください[Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx)の詳細。  
+ このチュートリアルでは、ナレッジ ベースを最初から作成しました。 さらに、ナレッジ検出アクティビティを実行してナレッジ ベースを作成することができます。 クリックすると**ナレッジ ベースを作成**をページにする DQS クライアントは、のメイン ページで、**ドメイン管理**活動の選択したアクティビティ。 変更することができます、**アクティビティ**に**ナレッジ検出**とし、次のページでドメインを作成できます、ナレッジ検出プロセスの一部として。 参照してください[Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx)の詳細。  
   
 1.  DQS クライアントのメイン ページでの**最近使用したナレッジ ベース**セクションで、**右矢印**横に、 **Suppliers**ナレッジ ベースをクリックします**ナレッジ探索**します。 また、クリックすることができます**ナレッジ ベースを開く**を選択します**Suppliers**から、**ナレッジ ベースの一覧**、**ナレッジ検出**として**アクティビティ**クリック**次**します。  
   
@@ -70,6 +67,6 @@ ms.locfileid: "48167702"
      これで、チュートリアルの最初のレッスンを完了しました。  
   
 ## <a name="next-step"></a>次の手順  
- [レッスン 2: Suppliers ナレッジ ベースを使用して仕入先データをクレンジングする](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [レッスン 2:Suppliers ナレッジ ベースを使用して仕入先データのクレンジング](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

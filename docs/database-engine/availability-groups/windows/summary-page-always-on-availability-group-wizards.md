@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 200f85cd1687289bfe0be2e47bf20b3cf10c1728
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694420"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892264"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>[概要] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47694420"
  **キャンセル**  
  ウィザードをキャンセルします。 **[概要]** ページでウィザードをキャンセルすると、何もアクションを実行せずに終了します。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [&#91;トップ&#93;](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [&#91;トップ&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -54,7 +53,7 @@ ms.locfileid: "47694420"
   
 -   [可用性グループのフェールオーバー ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [&#91;トップ&#93;](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [&#91;トップ&#93;](#Top)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

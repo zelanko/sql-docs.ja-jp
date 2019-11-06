@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 679260f7c8a7f50eb9a3f638f3547c82ac488cef
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409619"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238750"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,18 +34,17 @@ ms.locfileid: "52409619"
   
 ```  
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
 )    
-WITH (SYSTEM_VERSIONING = ON)   
-;  
-```  
+WITH (SYSTEM_VERSIONING = ON);
+```
   
 ### <a name="important-remarks"></a>重要な解説  
   
@@ -58,7 +56,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   匿名履歴テーブルは、現在のテーブルまたはテンポラル テーブルと同じスキーマで自動的に作成されます。  
   
--   匿名履歴テーブル名の形式は、*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* です。 サフィックスは省略可能であり、テーブル名の最初の部分が一意ではない場合にのみ追加されます。  
+-   匿名履歴テーブルの名前は次の形式になります。*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]*。 サフィックスは省略可能であり、テーブル名の最初の部分が一意ではない場合にのみ追加されます。  
   
 -   履歴テーブルは、行ストア テーブルとして作成されます。 可能な場合はページの圧縮が適用されます。不可能な場合は、履歴テーブルは圧縮されません。 たとえば、スパース列などの一部のテーブル構成では、圧縮は許可されません。  
   
@@ -69,22 +67,18 @@ WITH (SYSTEM_VERSIONING = ON)
 ## <a name="creating-a-temporal-table-with-a-default-history-table"></a>既定の履歴テーブルによるテンポラル テーブルの作成  
  既定の履歴テーブルによるテンポラル テーブルの作成は、名前付けを制御しながら、一方で既定の構成による履歴テーブルの作成はシステムに任せたい場合に、便利なオプションです。 次の例では、システム バージョン管理が有効な新しいテーブルを、履歴テーブルの名前を明示的に定義して作成しています。  
   
-```  
+```
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)     
-)   
-WITH    
-   (   
-      SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory)   
-   )   
-;  
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL
+  , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 ```  
   
 ### <a name="important-remarks"></a>重要な解説  
@@ -100,34 +94,35 @@ WITH
  ユーザー定義の履歴テーブルによるテンポラル テーブルの作成は、ユーザーが特定のストレージ オプションと追加インデックスで履歴テーブルを指定したい場合に便利なオプションです。 次の例では、作成されるテンポラル テーブルと整合するスキーマで、ユーザー定義の履歴テーブルを作成します。 このユーザー定義の履歴テーブルに対して、クラスター化列ストア インデックスおよびその他の非クラスター化行ストア (B ツリー) インデックスが、ポイント参照用に作成されます。 このユーザー定義の履歴テーブルを作成した後、ユーザー定義の履歴テーブルを既定の履歴テーブルとして指定して、システム バージョン管理されたテンポラル テーブルを作成します。  
   
 ```  
-CREATE TABLE DepartmentHistory   
-(    
-     DeptID int NOT NULL  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 NOT NULL  
-   , SysEndTime datetime2 NOT NULL   
-);   
-GO   
-CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory   
-   ON DepartmentHistory;   
-CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS   
-   ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);   
-GO   
+CREATE TABLE DepartmentHistory
+(
+    DeptID INT NOT NULL
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 NOT NULL
+  , SysEndTime DATETIME2 NOT NULL
+);
+GO
+
+CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory
+    ON DepartmentHistory;
+CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS
+    ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);
+GO
+
 CREATE TABLE Department   
-(    
+(
     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL     
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
-)    
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))   
-;  
-```  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL     
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
+```
   
 ### <a name="important-remarks"></a>重要な解説  
   
@@ -149,25 +144,26 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   最小限のメンテナンス コスト  
   
- 既存のテーブルを変換するときは、新しい列を処理するように設計されていない既存のアプリケーションに影響しないように、 **HIDDEN** 句を使用して新しい **PERIOD** 列を非表示にすることを検討します。  
-  
+ 既存のテーブルを変換するときは、新しい列を処理するように設計されていない既存のアプリケーションに影響しないように、**HIDDEN** 句を使用して新しい **PERIOD** 列 (datetime2 列の **SysStartTime** と **SysEndTime**) を非表示にすることを検討します。  
+
 ### <a name="adding-versioning-to-non-temporal-tables"></a>非テンポラル テーブルへのバージョン管理の追加  
  データを含む非テンポラル テーブルの変更の追跡を開始する場合は、 **PERIOD** 定義を追加する必要があり、必要に応じて、SQL Server で作成される空の履歴テーブルの名前を指定します。  
   
 ```  
 CREATE SCHEMA History;   
-GO   
+GO
+
+ALTER TABLE InsurancePolicy
+    ADD   
+        SysStartTime DATETIME2(0) GENERATED ALWAYS AS ROW START HIDDEN
+            CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
+      , SysEndTime DATETIME2(0) GENERATED ALWAYS AS ROW END HIDDEN
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2 (0), '9999-12-31 23:59:59'),
+        PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
+GO
+
 ALTER TABLE InsurancePolicy   
-   ADD   
-      SysStartTime datetime2(0) GENERATED ALWAYS AS ROW START HIDDEN    
-           CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()  
-      , SysEndTime datetime2(0) GENERATED ALWAYS AS ROW END HIDDEN    
-           CONSTRAINT DF_SysEnd DEFAULT CONVERT(datetime2 (0), '9999-12-31 23:59:59'),   
-      PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);   
-GO   
-ALTER TABLE InsurancePolicy   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy));
 ```  
   
 #### <a name="important-remarks"></a>重要な解説  
@@ -196,10 +192,9 @@ ALTER TABLE ProjectTaskCurrent ALTER COLUMN [ValidTo] datetime2 NOT NULL;
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidFrom] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidTo] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskCurrent   
-   ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
+    ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
 ALTER TABLE ProjectTaskCurrent   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON));
 ```  
   
 #### <a name="important-remarks"></a>重要な解説  
@@ -209,6 +204,8 @@ ALTER TABLE ProjectTaskCurrent
 -   **PERIOD** を追加すると、現在のテーブルでデータ整合性チェックが実行されて、期間列の既存の値が有効であることが確認されます。  
   
 -   **DATA_CONSISTENCY_CHECK = ON** で **SYSTEM_VERSIONING** を設定し、既存データに対するデータ整合性チェックを強制的に行うことを強くお勧めします。  
+
+-   非表示列が優先される場合は、`ALTER TABLE [tableName] ALTER COLUMN [columnName] ADD HIDDEN;` コマンドを使用します。
   
  
 ## <a name="see-also"></a>参照  
@@ -221,5 +218,3 @@ ALTER TABLE ProjectTaskCurrent
  [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
  [システム バージョン管理されたテンポラル テーブルのスキーマを変更する](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
  [システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
-  
-  

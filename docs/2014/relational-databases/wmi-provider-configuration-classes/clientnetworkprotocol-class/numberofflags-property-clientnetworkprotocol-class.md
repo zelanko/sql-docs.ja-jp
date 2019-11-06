@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - NumberOfFlags Property (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6be2a4a4e85b3d92cb44db8783dfa7c12e595f87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a47f6e17a85fdf9cec169a611b9fe205ba02543
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192036"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags プロパティ (ClientNetworkProtocol クラス)
   によって指定されたクライアント ネットワーク プロトコルに必要なフラグ オプションの数を取得、 [SetOrderValue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)します。  
@@ -45,9 +43,9 @@ object
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  `Uint32` プロパティによって参照されるクライアント ネットワーク プロトコルに必要なフラグ オプションの数を指定する `OrderValue` 値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>関連項目  
- [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

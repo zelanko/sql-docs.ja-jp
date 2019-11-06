@@ -1,26 +1,23 @@
 ---
-title: 'タスク 2: Excel の列を DQS ドメインにマップする |Microsoft Docs'
+title: タスク 2:Excel の列を DQS ドメインにマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4af26cb52b8d30dbfad5fc5ab40dc732f8ce4dc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484703"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>タスク 2: DQS ドメインに Excel 列をマップする
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>タスク 2:DQS ドメインに Excel 列をマップする
     
 1.  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。  
   
@@ -52,6 +49,6 @@ ms.locfileid: "48135522"
 6.  をクリックして**次**に切り替える、 **Cleanse**ページ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジングする](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジング](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

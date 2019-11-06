@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+manager: kfile
+ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164052"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>シーケンス クラスター モデルの検証 (中級者向けデータ マイニング チュートリアル)
-  これでビルドした、 **Sequence Clustering with Region**モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]でシーケンス クラスター ビューアー、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 [!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター ビューアーには、5 つのタブが含まれています:**クラスター ダイアグラム**、**クラスターのプロファイル**、**クラスターの特性**、 **ClusterDiscrimination**、および**状態遷移**します。 このビューアーを使用する方法の詳細については、次を参照してください。 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)します。  
+  これでビルドした、 **Sequence Clustering with Region**モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]でシーケンス クラスター ビューアー、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 [!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター ビューアーには、5 つのタブが含まれています。**クラスター ダイアグラム**、**クラスターのプロファイル**、**クラスターの特性**、 **ClusterDiscrimination**、および**状態遷移**. このビューアーを使用する方法の詳細については、次を参照してください。 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)します。  
   
 -   [クラスター ダイアグラム タブ](#bkmk_CDiagram)  
   
@@ -171,7 +170,7 @@ ms.locfileid: "49085478"
  [トップに戻る](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> クラスターの識別 タブ  
- **クラスターの識別** タブを使用して、どの属性が別のクラスターから特定のクラスターを区別する、2 つのクラスターを比較できます。 タブには、4 つの列が含まれる:**変数**、**値**、**クラスター 1**、および**クラスター 2**します。  任意のクラスターとして使用することができます**クラスター 1**と**クラスター 2**します。  
+ **クラスターの識別** タブを使用して、どの属性が別のクラスターから特定のクラスターを区別する、2 つのクラスターを比較できます。 タブには、4 つの列が含まれています。**変数**、**値**、 **Cluster 1**、および**2 のクラスター**します。  任意のクラスターとして使用することができます**クラスター 1**と**クラスター 2**します。  
   
  **変数**列は、列名または列名と、単語の組み合わせを指定できますいずれかの属性の名前を通知**遷移**します。 **値**列には、属性または遷移の正確な値が表示されます。 列の色付きのバー**クラスター 1**と**クラスター 2**を比較するクラスター内の属性の強さを示します。 バーが長いほど、その属性を持つケースがクラスターに含まれる可能性が高くなります。  
   
@@ -179,7 +178,7 @@ ms.locfileid: "49085478"
   
 1.  **クラスターの識別** タブの**クラスター 1**、`Pacific Cluster`します。  
   
-     既定で選択されたを**クラスター 2**への変更**補数の太平洋 * * * クラスター**。  
+     既定で選択**クラスター 2**変更**Pacific Cluster の補数**します。  
   
      最も重要な属性を区別する`Pacific Cluster`それ以外の場合からは、リージョン。 地域がクラスター化のための属性として強力すぎるために、他の属性がわかりにくくなっています。 この影響を回避するために、いくつかの小さなクラスターを互いに比較してみます。 そうすれば、属性の一覧が変更されて、モデル間の遷移がより多く含まれるようになる可能性があります。  
   

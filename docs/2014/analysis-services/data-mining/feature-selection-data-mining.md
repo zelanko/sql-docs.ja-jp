@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084418"
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
   *機能の選択*はツールと処理と分析のために管理しやすいサイズに入力を減らすために使用できる手法を説明するデータ マイニングでよく使用する用語です。 機能の選択は意味だけでなく*カーディナリティの引き下げ*、つまり、モデルをも意味している属性の選択のビルド時に考慮できる属性の数に、任意または定義済みのカットオフを課すアナリストまたはモデリング ツールのいずれか積極的に、選択または分析のための有用性に基づく属性を破棄します。  
@@ -43,9 +42,9 @@ ms.locfileid: "48067922"
  データ ソースの 500 列中、モデルの構築に有用な情報が含まれている列が 50 列のみである場合、それらを単純にモデルから削除することもできますが、機能の選択の技法を使用して最適な機能を自動的に見つけ、統計的に重要でない値を除外することもできます。 機能の選択は、価値の低いデータが多すぎること、または価値の高いデータが少なすぎることという、2 つの問題を解決するために役立ちます。  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services によるデータ マイニングでの機能の選択  
- 機能の選択が自動的に実行は、通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、各アルゴリズムが一連の機能の削減を適切に適用するための既定の技法とします。 機能の選択は、常にモデルのトレーニングの前に実行されます。これにより、モデルで使用される可能性の高い属性がデータセット内で自動的に選択されます。 ただし、機能の選択の動作に影響を与えるようにパラメーターを手動で設定することもできます。  
+ 通常、機能の選択は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で自動的に実行され、各アルゴリズムには、機能の削減を適切に適用する一連の既定の技法が含まれています。 機能の選択は、常にモデルのトレーニングの前に実行されます。これにより、モデルで使用される可能性の高い属性がデータセット内で自動的に選択されます。 ただし、機能の選択の動作に影響を与えるようにパラメーターを手動で設定することもできます。  
   
- 一般に機能の選択では、各属性のスコアが計算されて、ベスト スコアの属性のみが選択されます。 トップ スコアのしきい値を調整することもできます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] これらのスコアを計算するための複数のメソッドと任意のモデルに適用される、正確なメソッドは、これらの要因によって異なりますを提供します。  
+ 一般に機能の選択では、各属性のスコアが計算されて、ベスト スコアの属性のみが選択されます。 トップ スコアのしきい値を調整することもできます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、これらのスコアを計算するための複数のメソッドを提供しており、モデルに適したメソッドは、次の要因によって異なります。  
   
 -   モデルで使用されるアルゴリズム  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48067922"
 #### <a name="bayesian-with-k2-prior"></a>K2 事前分布を指定したベイズ定理  
  Analysis Services には、ベイジアン ネットワークに基づく 2 つの機能選択スコアが用意されています。 ベイジアン ネットワークとは、状態および状態間の遷移の " *有向* " または " *非循環* " のグラフ (常に現在の状態より前にある状態と後にある状態がある、繰り返し (ループ) を含まないグラフ) です。 定義上、ベイジアン ネットワークでは事前知識を使用できます。 ただし、前の状態のうちのどれを使用して後の状態の確率を計算するかという問題が、アルゴリズムのデザイン、パフォーマンス、および精度にとって重要になります。  
   
- ベイジアン ネットワークの学習のための K2 アルゴリズムは、Cooper と Herskovits によって開発されたもので、データ マイニングでよく使用されます。 K2 アルゴリズムは拡張可能で、複数の変数を分析できますが、入力として使用する変数の順序付けが必要とされます。 詳細については、「[ベイジアン ネットワークの学習: 知識と統計データの組み合わせ](http://go.microsoft.com/fwlink/?LinkId=105885)」(Chickering、Geiger、および Heckerman) を参照してください。  
+ ベイジアン ネットワークの学習のための K2 アルゴリズムは、Cooper と Herskovits によって開発されたもので、データ マイニングでよく使用されます。 K2 アルゴリズムは拡張可能で、複数の変数を分析できますが、入力として使用する変数の順序付けが必要とされます。 詳細については、「[ベイジアン ネットワークの学習: 知識と統計データの組み合わせ](https://go.microsoft.com/fwlink/?LinkId=105885)」(Chickering、Geiger、および Heckerman) を参照してください。  
   
  このスコアリング方法は、不連続属性と分離された属性で使用できます。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48067922"
   
  均一な事前分布を指定したベイズ ディリクレ等式 (BDEU) の方法では、数学定数を使用して事前状態の固定分布 (均一な分布) が作成されるディリクレ分布の特殊なケースが想定されています。 また尤度等価も想定されているため、データで等価な構造が区別されることを期待できません。 つまり、If A Then B のスコアが If B Then A のスコアと同じ場合、そのデータに基づいて構造を区別することはできず、因果関係を推論できません。  
   
- ベイジアン ネットワークの詳細およびこれらのスコアリング方法の実装の詳細については、「[ベイジアン ネットワークの学習 : 知識と統計データの組み合わせ](http://go.microsoft.com/fwlink/?LinkId=105885)」を参照してください。  
+ ベイジアン ネットワークの詳細およびこれらのスコアリング方法の実装の詳細については、「 [ベイジアン ネットワークの学習 : 知識と統計データの組み合わせ](https://go.microsoft.com/fwlink/?LinkId=105885)」を参照してください。  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services のアルゴリズムで使用される機能の選択の方法  
  次の表は、機能の選択をサポートするアルゴリズム、そのアルゴリズムによって使用される機能の選択の方法、および機能の選択の動作を制御するために設定するパラメーターの一覧です。  
@@ -113,18 +112,18 @@ ms.locfileid: "48067922"
 |クラスター|興味深さのスコア|Microsoft クラスタリング アルゴリズムでは、不連続なデータまたは分離されたデータを使用できます。 ただし、各属性のスコアは距離として計算され、連続する数値として表現されるため、興味深さのスコアを使用する必要があります。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)」を参照してください。|  
 |線形回帰|興味深さのスコア|Microsoft 線形回帰アルゴリズムでは、連続列のみをサポートするため、使用できるのは興味深さのスコアだけです。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)」を参照してください。|  
 |アソシエーション ルール<br /><br /> シーケンス クラスター|使用しない|これらのアルゴリズムでは、機能の選択は実行されません。<br /><br /> ただし、必要に応じてパラメーター MINIMUM_SUPPORT および MINIMUM_PROBABILIITY の値を設定することによって、アルゴリズムの動作を制御し、入力データのサイズを小さくすることができます。<br /><br /> 詳細については、「 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](microsoft-association-algorithm-technical-reference.md) 」および「 [Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)」を参照してください。|  
-|タイム シリーズ。|使用しない|機能の選択は、時系列モデルには適用されません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。|  
+|タイム シリーズ。|使用しない|機能の選択は、時系列モデルには適用されません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。|  
   
 ## <a name="feature-selection-parameters"></a>機能の選択のパラメーター  
  機能の選択をサポートするアルゴリズムでは、以下のパラメーターを使用して、機能の選択をいつオンにするかを制御できます。 各アルゴリズムには、許可される入力数の既定値がありますが、その既定値をオーバーライドして属性の数を指定できます。 このセクションは、機能の選択を管理するために提供されるパラメーターを示します。  
   
-#### <a name="maximuminputattributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
+#### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
  *MAXIMUM_INPUT_ATTRIBUTES* パラメーターで指定した数より多い列がモデルにある場合、アルゴリズムでは、計算により無意味であると判断されたすべての列が無視されます。  
   
-#### <a name="maximumoutputattributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
+#### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  同様に、 *MAXIMUM_OUTPUT_ATTRIBUTES* パラメーターで指定した数より多い予測可能列がモデルにある場合、アルゴリズムでは、計算により無意味であると判断されたすべての列が無視されます。  
   
-#### <a name="maximumstates"></a>MAXIMUM_STATES  
+#### <a name="maximum_states"></a>MAXIMUM_STATES  
  モデルに *MAXIMUM_STATES* パラメーターで指定された数より多いケースがある場合、最も一般的でない状態はグループ化され、無視されます。 これらのパラメーターのいずれかが 0 に設定されている場合、機能の選択はオフになり、処理時間とパフォーマンスに影響を及ぼします。  
   
  機能の選択のこれらのメソッドに加え、モデルの "*モデリング フラグ*"、または構造の "*ディストリビューション フラグ*" を設定すると、アルゴリズム機能を改善して重要な属性を識別したり昇格させたりすることができます。 これらの概念の詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」および「[列の分布 &#40;データ マイニング&#41;](column-distributions-data-mining.md)」を参照してください。  

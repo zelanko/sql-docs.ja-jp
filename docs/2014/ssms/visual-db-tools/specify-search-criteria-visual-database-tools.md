@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
@@ -22,12 +22,12 @@ ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 579a93f6553abac8556b8d21cbce4f9e9c897370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63277121"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>検索基準の指定 (Visual Database Tools)
   検索基準を使用すると、クエリによって返される行数を制限できます。  

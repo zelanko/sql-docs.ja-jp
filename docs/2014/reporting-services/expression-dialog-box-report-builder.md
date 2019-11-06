@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10040"
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109146"
 ---
 # <a name="expression-dialog-box-report-builder"></a>[式] ダイアログ ボックス (レポート ビルダー)
   使用して、**式**書き込む ダイアログ ボックス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]の式のレポート アイテムのプロパティ。 式を使用して、色、フォント、罫線など多数のプロパティを設定できます。 実行時に、レポート プロセッサによって式が評価され、その結果がプロパティの値に置き換えられます。  
@@ -30,11 +29,11 @@ ms.locfileid: "48220902"
 ## <a name="expression-constructs"></a>式の構成  
  式は等号 (=) で始まり、定数、リテラル、演算子に加え、組み込みフィールド、組み込みコレクション、組み込み関数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ランタイム ライブラリ関数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 共通言語ランタイム クラス、およびカスタム関数への参照を含むことができます。 式に追加できるカテゴリおよび値を次に示します。  
   
- **式の設定:***\<PropertyName >*   
+ **式を設定します。** _\<PropertyName>_  
  式を定義するプロパティの名前です。 このプロパティは、[プロパティ] ペインで名前を指定して設定することもできます。  
   
  **定数**  
- 定数に基づくプロパティに有効な定義済みの値の一覧を、このプロパティに提供します。 たとえば、色に基づいたプロパティでは、有効な色の名前が表示されます。 Boolean データ型は、プロパティ、値は`True`と`False`します。  
+ 定数に基づくプロパティに有効な定義済みの値の一覧を、このプロパティに提供します。 たとえば、色に基づいたプロパティでは、有効な色の名前が表示されます。 ブール値型のプロパティの場合、値は `True` および `False` になります。  
   
  式をサポートするすべてのアイテムに定数を設定できるとは限りません。 プロパティに定数値を設定できない場合は、その情報が説明ペインに表示されます。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48220902"
  **パラメーター**  
  レポート パラメーターの一覧を表示します。  
   
- **フィールド (** *\<データセットを選択 >* **)**  
+ **フィールド (** _\<データセットを選択 >_ **)**  
  [データセット] カテゴリで選択したデータセットのフィールドの一覧を表示します。 **[式]** ボックスにフィールドをコピーするには、フィールドをダブルクリックします。  
   
  **データセット**  
@@ -83,12 +82,12 @@ ms.locfileid: "48220902"
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [数値と日付の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [フィルター式の例&#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [データセット フィールド コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [集計関数リファレンス&#40;レポート ビルダーおよび SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [色のダイアログ ボックスをオンに&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   

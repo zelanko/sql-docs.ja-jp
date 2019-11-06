@@ -1,7 +1,7 @@
 ---
-title: sys.index_resumable_operations (TRANSACT-SQL) |Microsoft Docs
+title: index_resumable_operations (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,53 +18,59 @@ helpviewer_keywords:
 ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df53ab01ecd535de0f742129cae56c44cd2d6221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821783"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227194"
 ---
-# <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (TRANSACT-SQL)
+# <a name="sysindex_resumable_operations-transact-sql"></a>index_resumable_operations (Transact-sql)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**sys.index_resumable_operations**システム ビューを監視し、再開可能なインデックス再構築の現在の実行状態を確認します。  
-**適用対象**: SQL Server 2017 と Azure SQL Database 
+**index_resumable_operations**は、再開可能なインデックス再構築の現在の実行状態を監視および確認するシステムビューです。  
+**適用対象**:SQL Server 2017 と Azure SQL Database
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|このインデックスが属する (いない null 許容の) オブジェクトの ID。|  
-|**index_id**|**int**|(非 null 許容) のインデックスの ID。 **index_id**オブジェクト内でのみ一意です。|
-|**name**|**sysname**|インデックスの名前です。 **名前**オブジェクト内でのみ一意です。|  
-|**sql_text**|**nvarchar(max)**|DDL の T-SQL ステートメントのテキスト|
-|**last_max_dop**|**smallint**|最後の使用の MAX_DOP (既定 = 0)|
-|**partition_number**|**int**|所有しているインデックスまたはヒープ内のパーティション番号。 非パーティション テーブルとパーティション インデックスの場合またはこの列の値を再構築が NULL のすべてのパーティションがされています。|
+|**object_id**|**int**|このインデックスが所属するオブジェクトの ID (null 値は許容されません)。|  
+|**index_id**|**int**|インデックスの ID (null 値は許容されません)。 **index_id**は、オブジェクト内でのみ一意です。|
+|**name**|**sysname**|インデックスの名前です。 **name**は、オブジェクト内でのみ一意です。|  
+|**sql_text**|**nvarchar(max)**|DDL T-sql ステートメントのテキスト|
+|**last_max_dop**|**smallint**|最後に使用された MAX_DOP (既定値 = 0)|
+|**partition_number**|**int**|所有しているインデックスまたはヒープ内のパーティション番号。 パーティション分割されていないテーブルとインデックスの場合、またはすべてのパーティションが再構築される場合は、この列の値が NULL になります。|
 |**state**|**tinyint**|再開可能なインデックスの動作状態:<br /><br />0 = 実行中<br /><br />1 = 一時停止|
-|**state_desc**|**nvarchar(60)**|再開可能なインデックス (実行中または一時停止) の操作状態の説明|  
-|**start_time**|**datetime**|インデックス操作の開始時刻が (いない null 許容の)|
-|**last_pause_time**|**datatime**| インデックス操作 (null 許容の) 最後の一時停止時間。 操作が実行されているとしない一時停止した場合は NULL です。|
-|**total_execution_time**|**int**|開始時間 (分) (null 許容のない) からの合計実行時間|
-|**percent_complete**|**real**|% (Null を許容しません) でインデックス操作の進行状況の完了。|
-|**page_count**|**bigint**|新しいインデックス構築操作とのマッピング インデックス (null を許容しません) によって割り当てられたインデックス ページの合計数。 
+|**state_desc**|**nvarchar(60)**|再開可能なインデックスの動作状態の説明 (実行中または一時停止)|  
+|**start_time**|**datetime**|インデックス操作の開始時刻 (null 非許容)|
+|**last_pause_time**|**datatime**| インデックス操作の最後の一時停止時刻 (null 許容)。 操作が実行中で一時停止されていない場合は NULL です。|
+|**total_execution_time**|**int**|開始時刻からの合計実行時間 (分) (null 非許容)|
+|**percent_complete**|**real**|インデックス操作の進行状況は% で完了しました (null 非許容)。|
+|**page_count**|**bigint**|新しいインデックスおよびマッピングインデックスのインデックス構築操作によって割り当てられたインデックスページの合計数 (null 非許容)。
 
-## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
-   
-## <a name="example"></a>例  
- 一時停止状態にあるすべての再開可能なインデックス再構築操作を一覧表示します。 
-  
-```  
+## <a name="permissions"></a>アクセス許可
+
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+
+## <a name="example"></a>例
+
+ 一時停止状態にある再開可能なインデックス再構築操作をすべて一覧表示します。
+
+```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
-```  
-  
-## <a name="see-also"></a>参照 
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [カタログ ビュー &#40;TRANSACT-SQL&#41; ](catalog-views-transact-sql.md) [オブジェクト カタログ ビュー &#40;TRANSACT-SQL&#41; ](object-catalog-views-transact-sql.md) [sys.indexes &#40;TRANSACT-SQL&#41; ](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;TRANSACT-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;TRANSACT-SQL&#41;](sys-key-constraints-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
- [SQL Server システム カタログに対するクエリに関してよくあるご質問](querying-the-sql-server-system-catalog-faq.md)   
-  
+```
+
+## <a name="see-also"></a>関連項目
+
+- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [カタログビュー](catalog-views-transact-sql.md)
+- [オブジェクトカタログビュー](object-catalog-views-transact-sql.md)
+- [sys.indexes](sys-xml-indexes-transact-sql.md)
+- [sys.index_columns](sys-index-columns-transact-sql.md)
+- [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
+- [sys.objects](sys-index-columns-transact-sql.md)
+- [sys.key_constraints](sys-key-constraints-transact-sql.md)
+- [sys.filegroups](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
+- [SQL Server システム カタログに対するクエリに関してよくあるご質問](querying-the-sql-server-system-catalog-faq.md)

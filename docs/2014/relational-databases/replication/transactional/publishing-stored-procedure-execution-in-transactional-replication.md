@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
@@ -15,12 +14,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195658"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63272805"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行
   パブリッシャー側で実行され、パブリッシュされたテーブルに影響を与えるストアド プロシージャがある場合、それらのストアド プロシージャをストアド プロシージャ実行アーティクルとしてパブリケーションに含めることを検討してください。 プロシージャの定義 (CREATE PROCEDURE ステートメント) はサブスクリプションが初期化されるときにサブスクライバーにレプリケートされます。プロシージャがパブリッシャーで実行されるときに、レプリケーションは対応するプロシージャをサブスクライバーで実行します。 これにより、各行の個別の変更のレプリケーションが回避されてプロシージャの実行のみがレプリケートされるため、大量のバッチ操作が実行される場合にはパフォーマンスが著しく向上します。 たとえば、パブリケーション データベースで次のストアド プロシージャを作成するとします。  
@@ -51,7 +50,7 @@ EXEC give_raise
   
  **ストアド プロシージャの実行をパブリッシュするには**  
   
--   SQL Server Management Studio: [トランザクション パブリケーションでストアド プロシージャの実行をパブリッシュする方法 &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
+-   SQL Server Management Studio:[トランザクション パブリケーションでのストアド プロシージャの実行のパブリッシュ (SQL Server Management Studio)](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
 -   レプリケーション Transact-SQL プログラミング: [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) を実行し、パラメーター **@type** に対して「serializable proc exec」(推奨) または「proc exec」の値を指定します。 アーティクルの定義の詳細については、「[Define an Article](../publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
   
@@ -94,7 +93,7 @@ COMMIT TRANSACTION T2
   
  XACT_ABORT を OFF に設定する必要がある場合は、ディストリビューション エージェントの **-SkipErrors** パラメーターを指定してください。 これで、エラーが発生した場合でも、エージェントは引き続きサブスクライバーに変更を適用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

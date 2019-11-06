@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, configurations
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060165"
 ---
 # <a name="create-package-configurations"></a>パッケージ構成を作成する
   パッケージの構成は、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスまたはパッケージ構成ウィザードを使用して作成します。 これらのツールにアクセスするには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をクリックします。  
@@ -111,14 +110,14 @@ ms.locfileid: "48140642"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   msdn.microsoft.com の技術記事「 [Integration Services パッケージ構成について](http://go.microsoft.com/fwlink/?LinkId=165643)」  
+-   msdn.microsoft.com の技術記事「 [Integration Services パッケージ構成について](https://go.microsoft.com/fwlink/?LinkId=165643)」  
   
--   www.mssqltips.com のブログ「 [コードでのパッケージの作成 – パッケージ構成](http://go.microsoft.com/fwlink/?LinkId=217663)」  
+-   ブログ エントリ「[コード - パッケージ構成でパッケージを作成する](https://go.microsoft.com/fwlink/?LinkId=217663)、 www.sqlis.com にします。  
   
--   blogs.msdn.com のブログ「 [API サンプル – プログラムによるパッケージへの構成ファイルの追加](http://go.microsoft.com/fwlink/?LinkId=217664)」  
+-   ブログ エントリ「 [API のサンプル - がプログラムによって構成ファイル パッケージに追加](https://go.microsoft.com/fwlink/?LinkId=217664)、blogs.msdn.com します。  
   
-## <a name="see-also"></a>参照  
- [パッケージの構成](../../2014/integration-services/package-configurations.md)   
+## <a name="see-also"></a>関連項目  
+ [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
  [パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [プログラムによる変数の使用](building-packages-programmatically/working-with-variables-programmatically.md)  
   

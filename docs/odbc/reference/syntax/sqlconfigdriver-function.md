@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 90c1c31e6b4b33d662636d34fcebbd17393f69a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121446"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 関数
 **準拠**  
- 2.5 ODBC のバージョンで導入されました。  
+ バージョンが導入されました。ODBC 2.5  
   
  **概要**  
  **SQLConfigDriver**適切なドライバーのセットアップ DLL と呼び出しを読み込み、 **ConfigDriver**関数。  
@@ -38,7 +37,7 @@ ms.locfileid: "47608250"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLConfigDriver(  
      HWND     hwndParent,  
@@ -57,11 +56,11 @@ BOOL SQLConfigDriver(
  *起こり*  
  [入力]要求の種類。 *起こり*値は次のいずれかを含める必要があります。  
   
- ODBC_CONFIG_DRIVER: は、接続プール、ドライバーによって使用されるタイムアウトを変更します。  
+ ODBC_CONFIG_DRIVER:接続プール、ドライバーによって使用されるタイムアウトを変更します。  
   
- ODBC_INSTALL_DRIVER: は、新しいドライバーをインストールします。  
+ ODBC_INSTALL_DRIVER:新しいドライバーをインストールします。  
   
- ODBC_REMOVE_DRIVER: は、既存のドライバーを削除します。  
+ ODBC_REMOVE_DRIVER:既存のドライバーを削除します。  
   
  このオプションは、ドライバー固有を場合にも、*起こり*最初のオプションが ODBC_CONFIG_DRIVER_MAX + 1 から開始する必要があります。 *起こり*追加のオプションは ODBC_CONFIG_DRIVER_MAX + 1 より大きい値から開始もする必要があります。  
   
@@ -109,7 +108,7 @@ BOOL SQLConfigDriver(
   
  ときに**SQLConfigDriver**を使用して呼び出した*起こり*ODBC_INSTALL_DRIVER または ODBC_REMOVE_DRIVER に設定すると、ドライバー マネージャー、適切なドライバーのセットアップ DLL と読み込みの呼び出し、 **ConfigDriver**関数。 ときに**SQLConfigDriver**を呼び出すと、*起こり*ODBC_CONFIG_DRIVER のすべての処理が、ODBC インストーラーの実行、ドライバーのセットアップ DLL が読み込まれる必要があるないようにします。  
   
-## <a name="messages"></a>メッセージ  
+## <a name="messages"></a>Messages  
  ドライバーのセットアップ ルーチンは、アプリケーション内の null で終わる文字列としてテキスト メッセージを送信することができます、 *lpszMsg*バッファー。 メッセージに切り捨てられます*cbMsgMax*によって null 終了文字マイナス、 **ConfigDriver**する以上の場合は機能*cbMsgMax*文字。  
   
 ## <a name="related-functions"></a>関連する関数  

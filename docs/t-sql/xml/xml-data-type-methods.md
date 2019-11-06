@@ -3,7 +3,6 @@ title: xml データ型のメソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,14 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9bee0dcb0b0673d9ea565e0c4ed6b05c4573633e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948040"
 ---
 # <a name="xml-data-type-methods"></a>xml データ型のメソッド
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.locfileid: "47674100"
 |[XML データ内部のリレーショナル データのバインド](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|XML 内部の XML 以外のデータをバインドする方法について説明します。|  
 |[xml データ型メソッドの使用に関するガイドライン](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|**xml** データ型メソッドの使用に関するガイドラインを示します。|  
   
- これらのメソッドは、ユーザー定義型メソッドの呼び出し構文を使用して呼び出します。 例 :  
+ これらのメソッドは、ユーザー定義型メソッドの呼び出し構文を使用して呼び出します。 例:  
   
 ```  
 SELECT XmlCol.query(' ... ')  
@@ -48,7 +46,7 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  **xml** データ型のメソッドである **query()**、**value()**、および **exist()** は、NULL の XML インスタンスに対して実行された場合 NULL を返します。 また、**modify()** は何も返しませんが、**nodes()** は NULL 入力以外の場合は行セットを、NULL 入力の場合は空の行セットを返します。  
+>  **xml** データ型のメソッドである **query()** 、**value()** 、および **exist()** は、NULL の XML インスタンスに対して実行された場合 NULL を返します。 また、**modify()** は何も返しませんが、**nodes()** は NULL 入力以外の場合は行セットを、NULL 入力の場合は空の行セットを返します。  
   
 ## <a name="see-also"></a>参照  
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

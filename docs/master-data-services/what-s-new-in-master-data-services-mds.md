@@ -5,31 +5,27 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392342"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810502"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]リリースのマスター データ サービスの変更と更新の概要を説明します。 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のデータを整理する方法の概要については、[マスター データ サービスの概要](../master-data-services/master-data-services-overview-mds.md)を参照してください。 
   
- **マスター データ サービスをインストールし、データベースと Web サイトをセットアップして、サンプル モデルをデプロイするには、「**[Master Data Services Overview (MDS) (マスター データ サービスの概要 (MDS))](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
+ **マスター データ サービスをインストールし、データベースと Web サイトをセットアップして、サンプル モデルをデプロイするには、「** [Master Data Services Overview (MDS) (マスター データ サービスの概要 (MDS))](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
   
  **ダウンロード**  
   
@@ -181,7 +177,7 @@ ms.locfileid: "52392342"
     
  **カスタム インデックス**  
   
- 1 つの属性 (シングル インデックス) または属性の一覧 (複合インデックス) に 1 つのエンティティとして非クラスター化インデックスを作成して、クエリ パフォーマンスを高めることができます。 詳細については、「[カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)」を参照してください。  
+ 1つの属性 (単一のインデックス) または属性の一覧 (複合インデックス) で、エンティティ内の非クラスター化インデックスを作成して、クエリのパフォーマンスを向上させることができます。 詳細については、「[カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)」を参照してください。  
  
   **属性フィルター**  
   
@@ -229,13 +225,13 @@ ms.locfileid: "52392342"
    
  **モデル配置パッケージ サンプルの更新**  
   
- 新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「 [SQL Server サンプル: モデルの配置パッケージ (マスター データ サービス)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)   
- [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+ 新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「[SQL Server の例: モデルの配置パッケージ (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+  
+## <a name="see-also"></a>関連項目  
+ [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)  
+ [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)

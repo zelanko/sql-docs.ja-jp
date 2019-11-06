@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 397604c04c71b662a36cb5bf39f7aaa99c600a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 89f992afc1a419f5d2fa5aa172d9e5e930a8a21b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799470"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769680"
 ---
 # <a name="replication-monitor"></a>レプリケーション モニター
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   ここでは、レプリケーション モニターに関する情報を紹介します。 モニターに表示されるページとダイアログ ボックスは、レプリケーションの種類と、監視の対象となる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて変わります。  
   
 -   [レプリケーション モニター、メイン ページ](../../relational-databases/replication/replication-monitor-main-page.md)  
@@ -33,14 +33,6 @@ ms.locfileid: "47799470"
 -   [ディストリビューターの設定](../../relational-databases/replication/distributor-settings.md)  
   
 -   [ディストリビューター情報、パブリケーション](../../relational-databases/replication/distributor-information-publications.md)  
-  
--   [ディストリビューター情報、[サブスクリプション ウォッチ リスト] &#40;トランザクション パブリケーション、SQL Server 2005 以降&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [ディストリビューター情報、[サブスクリプション ウォッチ リスト] &#40;マージ パブリケーション、SQL Server 2005 以降&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [ディストリビューター情報、[サブスクリプション ウォッチ リスト] &#40;スナップショット パブリケーション、SQL Server 2005 以降&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [ディストリビューター情報、エージェント](../../relational-databases/replication/distributor-information-agents.md)  
   
 -   [[パブリッシャーの設定]](../../relational-databases/replication/publisher-settings.md)  
   
@@ -68,8 +60,7 @@ ms.locfileid: "47799470"
   
 -   [パブリケーション情報、[エージェント] &#40;トランザクション パブリケーション&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
--   [パブリケーション情報、[エージェント] &#40;マージ パブリケーション&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
-  
+-   [パブリケーション情報、[エージェント] &#40;マージ パブリケーション&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
 -   [パブリケーション情報、[エージェント] &#40;スナップショット パブリケーション&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [パブリケーション情報、トレーサー トークン &#40;トランザクション パブリケーション、SQL Server 2005 以降&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
@@ -81,8 +72,6 @@ ms.locfileid: "47799470"
 -   [サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] &#40;トランザクション サブスクリプション&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
 -   [サブスクリプション、[同期の履歴] &#40;マージ サブスクリプション、SQL Server 2005 以降&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
-  
--   [サブスクリプション、[同期の履歴] &#40;マージ サブスクリプション、SQL Server 2000&#41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
   
 -   [サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] &#40;スナップショット サブスクリプション&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
@@ -98,7 +87,6 @@ ms.locfileid: "47799470"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [プロパティ リファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

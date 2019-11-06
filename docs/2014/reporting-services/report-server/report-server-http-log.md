@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b990f4a2dbf321b20d9d8e45ecf13b3ede47987
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103395"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
@@ -55,7 +54,7 @@ ms.locfileid: "48147872"
 ```  
   
 ## <a name="log-file-fields"></a>ログ ファイル フィールド  
- 次の表は、ログで利用できるフィールドの一覧です。 フィールド リストが構成可能です。含めるフィールドを指定することができます、`HTTPTraceSwitches`構成設定。 **既定**列を指定、フィールドを追加するどうか、ログ ファイルに自動的に指定しない場合`HTTPTraceSwitches`します。  
+ 次の表は、ログで利用できるフィールドの一覧です。 ログに含めるフィールドは、`HTTPTraceSwitches` 構成設定で指定できます。 **既定**列を指定、フィールドを追加するどうか、ログ ファイルに自動的に指定しない場合`HTTPTraceSwitches`します。  
   
 |フィールド|説明|既定|  
 |-----------|-----------------|-------------|  
@@ -79,9 +78,9 @@ ms.locfileid: "48147872"
 |CookieSent|サーバーによって送信されたクッキーの内容。|いいえ|  
 |Referrer|クライアントが直前に訪問したサイト。|いいえ|  
   
-## <a name="see-also"></a>参照  
- [レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)   
+## <a name="see-also"></a>関連項目  
+ [Report Server Service Trace Log](report-server-service-trace-log.md)   
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
- [エラーおよびイベント リファレンス&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41346b81aa56f9ed4d83494092834535611cb905
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078782"
 ---
 # <a name="replication-security-best-practices"></a>レプリケーション セキュリティの推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47794540"
   
     -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   異なる Windows アカウントで各レプリケーション エージェントを実行し、すべてのレプリケーション エージェント接続に対して Windows 認証を使用する。 アカウントの指定の詳細については、「[レプリケーションのログインとパスワードの管理](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)」を参照してください。  
+-   異なる Windows アカウントで各レプリケーション エージェントを実行し、すべてのレプリケーション エージェント接続に対して Windows 認証を使用する。 アカウントを指定する方法の詳細については、「[ID およびアクセス制御 (レプリケーション)](../../../relational-databases/replication/security/identity-and-access-control-replication.md)」を参照してください。  
   
 -   各エージェントに必要な権限のみを許可する。 詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)」の「エージェントに必要な権限」を参照してください。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "47794540"
   
     -   指定されたエージェント (たとえば、サブスクリプションのディストリビューション エージェント) が、各コンピューターで同じアカウントを使用して接続しているかどうかを確認します。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が必要な状況では、多くの場合、UNC スナップショット共有へのアクセスは実行できません (たとえば、アクセスがファイアウォールでブロックされます)。 この場合は、ファイル転送プロトコル (FTP) を使用して、スナップショットをサブスクライバーに転送できます。 詳細については、「[FTP によるスナップショットの転送](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)」を参照してください。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が必要な状況では、多くの場合、UNC スナップショット共有へのアクセスは実行できません (たとえば、アクセスがファイアウォールでブロックされます)。 この場合は、ファイル転送プロトコル (FTP) を使用して、スナップショットをサブスクライバーに転送できます。 詳細については、「[FTP によるスナップショットの転送](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
@@ -75,6 +74,6 @@ ms.locfileid: "47794540"
  [サブスクライバーのセキュリティ保護](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [ディストリビューターのセキュリティ保護](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [パブリッシャーのセキュリティ保護](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [セキュリティと保護 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -27,31 +26,31 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b0271c21b849ee754e0050ea461c86d1f773850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206105"
 ---
 # <a name="database-checkpoints-sql-server"></a>データベース チェックポイント (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース チェックポイントについて概説します。 *チェックポイント* によって、予期しないシャットダウンやクラッシュの後の復旧中に、ログに格納されている変更を [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が適用するための最適なポイントが作成されます。  
   
   
 ##  <a name="Overview"></a> チェックポイントの概要  
- パフォーマンス向上のため、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、メモリ (バッファー キャッシュ) にあるデータベース ページが変更されるようになり、ページが変更されるたびにディスクに書き込まれることはなくなりました。 また、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では定期的に各データベースにチェックポイントが発行されます。 *チェックポイント* では、現在メモリにある修正ページ (つまり *ダーティ ページ*) とトランザクション ログ情報がメモリからディスクに書き込まれ、トランザクション ログの情報も記録されます。  
+ パフォーマンス向上のため、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、メモリ (バッファー キャッシュ) にあるデータベース ページが変更されるようになり、ページが変更されるたびにディスクに書き込まれることはなくなりました。 また、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では定期的に各データベースにチェックポイントが発行されます。 *チェックポイント* では、現在メモリにある修正ページ (つまり *ダーティ ページ*) とトランザクション ログ情報がメモリからディスクに書き込まれ、トランザクション ログの情報も記録されます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、自動、間接、手動、および内部といったチェックポイントの種類がサポートされています。 次の表は、チェックポイントの種類をまとめたものです。  
   
 |名前|[!INCLUDE[tsql](../../includes/tsql-md.md)] インターフェイス|説明|  
 |----------|----------------------------------|-----------------|  
-|自動|EXEC sp_configure **'`recovery interval`'、'*`seconds`*'**|によって予測された上位時間制限を満たすためにバック グラウンドで自動的に発行された、`recovery interval`サーバー構成オプション。 自動チェックポイントは、最後まで実行されます。  自動チェックポイントは、未処理の書き込み数と、20 ミリ秒を超える書き込み待機時間の上昇を[!INCLUDE[ssDE](../../includes/ssde-md.md)]が検出したかどうかに応じて調整されます。<br /><br /> 詳細については、「[recovery interval サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)」を参照してください。|  
-|間接|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|所定のデータベースのユーザーが指定したターゲット復旧時間に合わせて、バック グラウンドで発行されます。 既定のターゲット復旧時間は 0 です。この場合、自動チェックポイント ヒューリスティックがデータベースで使用されます。 ALTER DATABASE を使用して TARGET_RECOVERY_TIME を >0 に設定した場合、サーバー インスタンスに指定された復旧間隔ではなく、この値が使用されます。<br /><br /> 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)サーバー構成オプションを構成する方法について説明します。|  
+|Automatic|EXEC sp_configure **'`recovery interval`'、' *`seconds`* '**|によって予測された上位時間制限を満たすためにバック グラウンドで自動的に発行された、`recovery interval`サーバー構成オプション。 自動チェックポイントは、最後まで実行されます。  自動チェックポイントは、未処理の書き込み数と、20 ミリ秒を超える書き込み待機時間の上昇を[!INCLUDE[ssDE](../../includes/ssde-md.md)]が検出したかどうかに応じて調整されます。<br /><br /> 詳細については、「[recovery interval サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)」を参照してください。|  
+|間接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS &#124; MINUTES }|所定のデータベースのユーザーが指定したターゲット復旧時間に合わせて、バック グラウンドで発行されます。 既定のターゲット復旧時間は 0 です。この場合、自動チェックポイント ヒューリスティックがデータベースで使用されます。 ALTER DATABASE を使用して TARGET_RECOVERY_TIME を >0 に設定した場合、サーバー インスタンスに指定された復旧間隔ではなく、この値が使用されます。<br /><br /> 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)サーバー構成オプションを構成する方法について説明します。|  
 |手動|CHECKPOINT [ *checkpoint_duration* ]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT コマンドを実行すると発行されます。 接続している現在のデータベースで手動チェックポイントが作成されます。 既定では、手動のチェックポイントは最後まで実行されます。 調整は自動チェックポイントの場合と同様に行われます。  必要に応じて、 *checkpoint_duration* パラメーターを使用し、チェックポイントを完了するのに必要な時間を秒単位で指定します。<br /><br /> 詳細については、「 [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)」を参照してください。|  
 |Internal|[なし] :|ディスク イメージがログの現在の状態と一致することを保証するために、バックアップやデータベース スナップショット作成など、さまざまなサーバー操作によって発行されます。|  
   
 > [!NOTE]  
->  `-k` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]高度なセットアップ オプションをデータベース管理者は、チェックポイントの一部の種類のチェックポイントの I/O サブシステムのスループットに基づいた I/O 動作を調整できます。 `-k`セットアップ オプションには、自動チェックポイントと、適用されます-k を手動および内部チェックポイントします。  
+>  一部の種類のチェックポイントでは、データベース管理者が `-k`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の詳細設定オプションを使用して、I/O サブシステムのスループットに基づいてチェックポイントの I/O 動作を調整できます。 `-k`セットアップ オプションには、自動チェックポイントと、適用されます-k を手動および内部チェックポイントします。  
   
  自動チェックポイント、手動チェックポイント、および内部チェックポイントでは、データベース復旧中にロールフォワードする必要があるのは、最新チェックポイントの後で行われた修正のみです。 これにより、データベースの復旧にかかる時間が短縮されます。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48058535"
   
   
 ###  <a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME オプションと 'recovery interval' オプションの相互作用  
- 次の表は、サーバーの間の相互作用をまとめたものです**sp_configure'`recovery interval`'** 設定とデータベース固有の ALTER DATABASE.。 TARGET_RECOVERY_TIME 設定の相互作用をまとめたものです。  
+ 次の表は、サーバーの間の相互作用をまとめたものです**sp_configure'`recovery interval`'** 設定とデータベース固有の ALTER DATABASE.。TARGET_RECOVERY_TIME 設定の相互作用をまとめたものです。  
   
 |target_recovery_time|'recovery interval'|使用されるチェックポイントの種類|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -92,7 +91,7 @@ ms.locfileid: "48058535"
   
   
 ###  <a name="IndirectChkpt"></a> 間接チェックポイント  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] に新たに導入された間接チェックポイントは、自動チェックポイントの代わりに使用できる、構成可能なデータベース レベルのチェックポイントです。 間接チェックポイントでは、自動チェックポイントに比べて、システム障害時の復旧時間が短く、予測可能です。 間接チェックポイントには次の利点があります。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に新たに導入された間接チェックポイントは、自動チェックポイントの代わりに使用できる、構成可能なデータベース レベルのチェックポイントです。 間接チェックポイントでは、自動チェックポイントに比べて、システム障害時の復旧時間が短く、予測可能です。 間接チェックポイントには次の利点があります。  
   
 -   間接チェックポイントが構成されたデータベースでオンライン トランザクション ワークロードが生じると、パフォーマンスが低下することがあります。 間接チェックポイントは、ターゲットの復旧時間内でデータベースの回復が完了するように、ダーティ ページの数が特定のしきい値を下回るようにします。 復旧間隔構成オプションは、ダーティ ページ数を使用する間接チェックポイントとは異なり、トランザクション数を使用して復旧時間を決定します。 DML 操作の受信数が多いデータベースで間接チェックポイントが有効な場合、バックグラウンド ライターは積極的にディスクにダーティ バッファーのフラッシュを開始し、回復を実行するのに必要な時間をデータベースのターゲット復旧時間内にすることができます。 これにより、ディスクのサブシステムが I/O のしきい値よりも高い動作をするかまたはその値に近づいた場合、パフォーマンス ボトルネックの原因となる追加の I/O アクティビティが特定のシステムで発生する可能性があります。  
   
@@ -135,10 +134,10 @@ ms.locfileid: "48058535"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [トランザクション ログの物理アーキテクチャ](http://technet.microsoft.com/library/ms179355.aspx) ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
+-   [トランザクション ログの物理アーキテクチャ](https://technet.microsoft.com/library/ms179355.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション ログ &#40;SQL Server&#41;](the-transaction-log-sql-server.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.partitionmgr.f1
@@ -13,12 +12,12 @@ ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe732d1647acbfdf70dacaddfc4eea3eca479d8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067459"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>ワークスペース データベースのパーティションの作成と管理 (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 その後、各パーティションは、個別に、または他のパーティションと並列に処理 (更新) することができます。 パーティションによって、大規模なデータベースのスケーラビリティと管理性を向上させることができます。 既定では、各テーブルに 1 つのパーティションがあり、すべての列がこのパーティションに含まれます。 このトピックのタスクでは、 **[パーティション マネージャー]** ダイアログ ボックスを使用して、モデル ワークスペース データベースでパーティションを作成し管理する方法について説明します。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -69,8 +68,8 @@ ms.locfileid: "48094802"
   
 2.  **[パーティション]** リストで削除するパーティションを選択し、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [パーティション&#40;SSAS 表形式&#41;](partitions-ssas-tabular.md)   
- [ワークスペース データベースのパーティションの処理&#40;SSAS 表形式&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)   
+ [ワークスペース データベースでパーティションを処理&#40;SSAS 表形式&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

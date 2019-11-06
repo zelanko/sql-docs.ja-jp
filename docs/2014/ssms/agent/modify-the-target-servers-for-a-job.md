@@ -1,10 +1,10 @@
 ---
-title: ジョブの対象サーバーの変更 | Microsoft Docs
+title: ジョブのターゲット サーバーの変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying target servers
@@ -14,12 +14,12 @@ ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7a3abf08d7b6aceb6a4c832cfaac1a288cbec1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a97fd3892e74b16c844867f88bc7d72fedc46d20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62720384"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエージェント ジョブの対象サーバーを変更する方法について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48221952"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -51,11 +51,11 @@ ms.locfileid: "48221952"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-modify-the-target-servers-for-a-job"></a>ジョブの対象サーバーを変更するには  
+#### <a name="to-modify-the-target-servers-for-a-job"></a>ジョブのターゲット サーバーを変更するには  
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、ジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]** 、 **[ジョブ]** の順に展開し、ジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
   
 3.  **[ジョブのプロパティ]** ダイアログ ボックスで **[対象サーバー]** ページをクリックし、 **[ローカル サーバーを対象とする]** または **[複数のサーバーを対象とする]** をクリックします。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48221952"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-modify-the-target-servers-for-a-job"></a>ジョブの対象サーバーを変更するには  
+#### <a name="to-modify-the-target-servers-for-a-job"></a>ジョブのターゲット サーバーを変更するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   

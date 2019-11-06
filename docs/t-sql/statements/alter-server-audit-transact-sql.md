@@ -17,18 +17,17 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9176be66c987d3ff4f7cdf09ac8dd70fc1447273
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070309"
 ---
-# <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (TRANSACT-SQL)
+# <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、サーバー監査オブジェクトを変更します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
@@ -80,15 +79,15 @@ ALTER SERVER AUDIT audit_name
  監査ターゲットの場所を指定します。 オプションは、バイナリ ファイル、Windows アプリケーション ログ、または Windows セキュリティ ログです。  
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance では SQL 監査はサーバー レベルで動作し、Azure Blob Storage に `.xel` ファイルを格納します。
+> Azure SQL Database マネージド インスタンスでは SQL 監査はサーバー レベルで動作し、Azure Blob Storage に `.xel` ファイルを格納します。
   
- FILEPATH **= '**_os\_file\_path_**'**  
+ FILEPATH **= '** _os\_file\_path_ **'**  
  監査記録のパス。 ファイル名は、監査名と監査 GUID に基づいて生成されます。  
   
- MAXSIZE **=**_max\_size_  
+ MAXSIZE **=** _max\_size_  
  監査ファイルのサイズの上限を指定します。 *max_size* の値は、整数の後に **MB**、**GB**、**TB** を付けて指定するか、または **UNLIMITED** を指定します。 *max_size* に指定できる最小サイズは 2 **MB**、最大サイズは 2,147,483,647 **TB** です。 **UNLIMITED** を指定した場合、ファイルはディスクがいっぱいになるまで拡張されます。 2 MB 未満の値を指定すると、MSG_MAXSIZE_TOO_SMALL エラーが発生します。 既定値は **UNLIMITED** です。  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  ファイル システム内に保持するファイルの最大数を指定します。 MAX_ROLLOVER_FILES=0 が設定されている場合、作成されるロールオーバー ファイルの数は制限されません。 既定値は 0 です。 指定できるファイルの最大数は 2,147,483,647 です。  
   
  MAX_FILES =*integer*  
@@ -98,14 +97,14 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  このオプションは、ディスク上のファイルを MAXSIZE 値に事前に割り当てます。 MAXSIZE が UNLIMITED でない場合にのみ適用されます。 既定値は OFF です。  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  監査アクションの処理が強制されるまでの経過時間 (ミリ秒) を指定します。 値 0 は同期配信を表します。 クエリ遅延に設定可能な最小値は 1000 (1 秒) で、これが既定値です。 最大値は 2,147,483,647 (2,147,483.647 秒、つまり 24 日、20 時間、31 分、23.647 秒) です。 無効な数値を指定すると、MSG_INVALID_QUEUE_DELAY エラーが発生します。  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が監査ログに書き込むことができない場合に、ターゲットへのインスタンスの書き込みをエラーにするか、続行するか、停止するかを示します。  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
   
 SHUTDOWN  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がなんらかの理由で監査ターゲットへのデータの書き込みに失敗した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを強制的にシャットダウンします。 `ALTER` ステートメントを実行しているログインには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内での `SHUTDOWN` 権限が必要です。 実行中のログインから `SHUTDOWN` 権限が後で取り消された場合でも、シャットダウンの動作は継続します。 ユーザーがこの権限を持っていない場合は、ステートメントが失敗し、監査は変更されません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを使用します。 詳細については、「[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)」を参照してください。 
@@ -115,7 +114,7 @@ SHUTDOWN
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]   
   
  STATE **=** { ON | OFF }  
- 監査によるレコードの収集を有効または無効にします。 実行中の監査の状態を (ON から OFF に) 変更すると、監査が停止されたこと、監査を停止したプリンシパル、および監査が停止された時間を表す監査エントリが作成されます。  
+ 監査によるレコードの収集を有効または無効にします。 実行中の監査の状態を (ON から OFF に) 変更すると、監査が停止されたこと示す監査エントリ、監査を停止したプリンシパル、および監査が停止された時間が作成されます。  
   
  MODIFY NAME = *new_audit_name*  
  監査の名前を変更します。 他のオプションと組み合わせて使用することはできません。  
@@ -151,7 +150,7 @@ SHUTDOWN
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-a-server-audit-name"></a>A. サーバー監査の名前を変更する  
- 次の例では、サーバー監査 `HIPPA_Audit` の名前を `HIPAA_Audit_Old` に変更します。  
+ 次の例では、サーバー監査 `HIPAA_Audit` の名前を `HIPAA_Audit_Old` に変更します。  
   
 ```  
 USE master  
@@ -168,7 +167,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-server-audit-target"></a>B. サーバー監査のターゲットを変更する  
- 次の例では、`HIPPA_Audit` というサーバー監査を、ファイル ターゲットに変更します。  
+ 次の例では、`HIPAA_Audit` というサーバー監査を、ファイル ターゲットに変更します。  
   
 ```  
 USE master  

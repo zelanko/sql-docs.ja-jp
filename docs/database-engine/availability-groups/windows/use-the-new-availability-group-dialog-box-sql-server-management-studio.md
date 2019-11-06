@@ -11,40 +11,25 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c589ac9755be006f5521f942e6bf1e19ea6e6a6e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 556a0442a64caa5bcbcab98933650da93b4e410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013473"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 **の** [新しい可用性グループ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] が有効な [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
   
 > [!NOTE]  
->  可用性グループの概要については、「 [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
-  
--   **作業を開始する準備:**  
-  
-     [前提条件](#PrerequisitesRestrictions)  
-  
-     [制限事項](#Limitations)  
-  
-     [Security](#Security)  
-  
--   **以下を使用して可用性グループを作成するには:**  [[新しい可用性グループ] ダイアログ ボックス](#SSMSProcedure)  
-  
--   **補足情報:**  [[新しい可用性グループ] ダイアログ ボックスを使用して可用性グループを作成した後](#FollowUp)  
-  
+>  可用性グループの概要については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  
+   
 > [!NOTE]  
 >  可用性グループを作成する別の方法については、このトピックの後の「 [関連タスク](#RelatedTasks)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
- 可用性グループを初めて作成する場合は、あらかじめこのセクションに目を通しておくことを強くお勧めします。  
   
-###  <a name="PrerequisitesRestrictions"></a> 前提条件  
+##  <a name="PrerequisitesRestrictions"></a> 前提条件  
   
 -   可用性グループを作成する前に、可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが同じ Windows Server フェールオーバー クラスタリング (WSFC) フェールオーバー クラスター内の別の WSFC ノードに存在していることを確認します。 さらに、各サーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] が有効であり、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関するその他の前提条件がすべて満たされていることを確認します。 詳細については、「 [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
   
@@ -52,20 +37,16 @@ ms.locfileid: "51602612"
   
 -   **[新しい可用性グループ]** ダイアログ ボックスを使用するには、可用性レプリカをホストするサーバー インスタンスの名前がわかっている必要があります。 さらに、新しい可用性グループに追加するすべてのデータベースの名前がわかっている必要があるほか、これらのデータベースが「 [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。 無効な値を入力した場合、新しい可用性グループは機能しません。  
   
-###  <a name="Limitations"></a> 制限事項  
+## <a name="Limitations"></a> 制限事項  
  **[新しい可用性グループ]** ダイアログ ボックスでは、次の操作を実行できません。  
   
--   [可用性グループ リスナーの作成]  
-  
--   セカンダリ レプリカの可用性グループへの参加  
-  
+-   [可用性グループ リスナーの作成]    
+-   セカンダリ レプリカの可用性グループへの参加    
 -   最初のデータの同期の実行  
   
- これらの構成タスクについては、このトピックの後の「 [補足情報: [新しい可用性グループ] ダイアログ ボックスを使用して可用性グループを作成した後](#FollowUp)」を参照してください。  
+ これらの構成タスクの詳細については、[補足情報: 可用性グループを作成した後](#FollowUp)に関する情報 (このトピックで後述) を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限のいずれかが必要です。  
   
 ##  <a name="SSMSProcedure"></a> [新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)  
@@ -88,13 +69,13 @@ ms.locfileid: "51602612"
     > [!TIP]  
     >  レプリカを追加した後ホスト サーバー インスタンスに接続できない場合は、このレプリカを削除し、新しいレプリカを追加できます。 詳細については、「[可用性グループからのセカンダリ レプリカの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)」および「[可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
-8.  ダイアログ ボックスの **[ページの選択]** ペインで、 **[バックアップの設定]** をクリックします。 次に、 **[バックアップの設定]** ページで、レプリカのロールに基づいてどこでバックアップを実行するかを指定し、この可用性グループの可用性レプリカをホストするそれぞれのサーバー インスタンスにバックアップの優先順位を割り当てます。 詳細については、「[[可用性グループのプロパティ]: [新しい可用性グループ] &#40;[バックアップの設定] ページ&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)」を参照してください。  
+8.  ダイアログ ボックスの **[ページの選択]** ペインで、 **[バックアップの設定]** をクリックします。 次に、 **[バックアップの設定]** ページで、レプリカのロールに基づいてどこでバックアップを実行するかを指定し、この可用性グループの可用性レプリカをホストするそれぞれのサーバー インスタンスにバックアップの優先順位を割り当てます。 詳細については、「[可用性グループのプロパティ: 新しい可用性グループ &#40;[バックアップの設定] ページ&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)」を参照してください。  
   
 9. 可用性グループを作成するには、 **[OK]** をクリックします。 これにより、指定したデータベースが前提条件を満たしているかどうかが確認されます。  
   
      可用性グループを作成しないでダイアログ ボックスを終了するには、 **[キャンセル]** をクリックします。  
   
-##  <a name="FollowUp"></a> 補足情報: [新しい可用性グループ] ダイアログ ボックスを使用して可用性グループを作成した後  
+##  <a name="FollowUp"></a>補足情報: [新しい可用性グループ] ダイアログ ボックスを使用して可用性グループを作成した後  
   
 -   可用性グループのセカンダリ レプリカをホストするそれぞれのサーバー インスタンスに接続し、次の手順を実行する必要があります。  
   

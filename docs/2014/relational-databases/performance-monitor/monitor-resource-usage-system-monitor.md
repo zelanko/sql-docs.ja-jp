@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
@@ -25,12 +25,12 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef07f6885b99393b05b85b530464040490dd7bd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032116"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>リソースの利用状況の監視 (システム モニター)
   Microsoft Windows サーバー オペレーティング システムを使用している場合は、システム モニター GUI ツールを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパフォーマンスを測定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のオブジェクトやパフォーマンス カウンターだけでなく、プロセッサ、メモリ、キャッシュ、スレッド、プロセスなどその他のオブジェクトの動作も確認できます。 これらの各オブジェクトには、それに関連したデバイス使用率、キューの長さ、遅延を測定するカウンターと、スループットおよび内部輻輳を表示するインジケーターのセットがあります。  

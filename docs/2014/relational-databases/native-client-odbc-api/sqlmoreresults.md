@@ -14,12 +14,12 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c6b6bc36139020f64ae4dd280988f5783d6f837
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207674"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046727"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults**により、アプリケーションを複数の結果の行のセットを取得できます。 COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント、または ODBC ステートメントや [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの送信済みのバッチによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは複数の結果セットを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの場合もサーバー カーソルを作成して結果を処理することはできません。 したがって、開発者は ODBC ステートメントがブロックされていることを確認する必要があります。 また、同じ接続で他のアクティブなステートメントからのデータを処理する前に、返されたデータをすべて処理するか ODBC ステートメントを取り消す必要があります。  
@@ -161,7 +161,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQLMoreResults 関数](http://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults 関数](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

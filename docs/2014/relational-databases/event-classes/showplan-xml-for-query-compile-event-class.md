@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b7f0027b92671328b835aa7ec2af6695eb3eea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61ae582c2b35f96ccb21d16b19b0191017e05366
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62650405"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile イベント クラス
   Showplan XML For Query Compile イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって SQL ステートメントがコンパイルされたときに発生します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で Showplan 操作を識別するには、このイベント クラスを含めます。  
   
  Showplan XML For Query Compile イベント クラスでは完全なコンパイル時のデータが表示されるので、このイベント クラスを含んでいるトレースによって大きなパフォーマンス上のオーバーヘッドが発生する可能性があります。 これを最小限に抑えるには、特定の問題を短い期間監視するトレース以外に、このイベント クラスを使用しないようにします。  
   
- Showplan XML ドキュメントには、スキーマが関連付けられています。 このスキーマは、 [Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=41740)で提供されています。また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一部として提供されています。  
+ Showplan XML ドキュメントには、スキーマが関連付けられています。 このスキーマは、 [Microsoft Web サイト](https://go.microsoft.com/fwlink/?LinkId=41740)で提供されています。また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一部として提供されています。  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Showplan XML For Query Compile イベント クラスのデータ列  
   

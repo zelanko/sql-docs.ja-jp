@@ -19,21 +19,20 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ebd9b778f48e42c9200e7586983aba801b52e4c
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: cf134f630e4112f0cef87b7138b92fc83959e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097670"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 同時実行クエリの最適化を抑制するために使用するリソース セマフォの現在の状態を返します。
 
-|[列]|型|説明|  
+|[列]|種類|説明|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|リソース ガバナーの下のリソース プール ID|  
 |**name**|**sysname**|ゲート名 (中規模ゲートウェイの場合は、小規模のゲートウェイ大規模ゲートウェイ) のコンパイルします。|
@@ -69,7 +68,7 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [DBCC MEMORYSTATUS コマンドを使用して、SQL Server 2005 のメモリ使用量を監視する方法](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)

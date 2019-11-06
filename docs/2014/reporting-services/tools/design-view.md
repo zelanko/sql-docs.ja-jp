@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords:
 - Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100294"
 ---
 # <a name="design-view"></a>[デザイン] ビュー
   [デザイン] ビューを使用すると、レポートにレポート アイテムを配置できます。 [デザイン] ビューは、デザイン画面またはレイアウト ビューと呼ばれることもあります。  
@@ -36,7 +35,7 @@ ms.locfileid: "48137392"
   
  [レポート データ] ペインから、デザイン画面上のデータ領域やテキスト ボックスにアイテムをドラッグして、レポートにデータや画像を追加します。  
   
- 詳しくは、「 [Report Data Pane](../report-data/report-data-pane.md)」をご覧ください。  
+ 詳細については、「 [[レポート データ] ペイン](../report-data/report-data-pane.md)」を参照してください。  
   
 ## <a name="grouping-pane"></a>グループ化ペイン  
  グループは、レポート データを整理して階層構造で表示したり、合計を計算したりする際に使用します。 [グループ化] ペインを使用すると、テーブル、マトリックス、または一覧のデータ領域に対して定義されたグループを表示できます。 [グループ化] ペインには、既定で、選択したデータ領域のすべてのグループが、フラットな一覧として表示されます。 グラフおよびゲージのデータ領域では、[グループ化] ペインは無効になっています。  
@@ -52,7 +51,7 @@ ms.locfileid: "48137392"
  [プロパティ] ペインを使用すると、デザイン画面で現在選択されているレポート アイテムのプロパティや、[グループ化] ペインで現在選択されているグループのプロパティを表示できます。 別の方法として、選択したレポート アイテムまたはグループを右クリックし、 **[プロパティ]** をクリックして、そのレポート アイテムまたはグループに対応する **[プロパティ]** ダイアログ ボックスを開くこともできます。  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーとページ フッター&#40;レポート ビルダーおよび SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [レポート デザインに関するヒント &#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [レポート デザインに関するヒント (レポート ビルダーおよび SSRS)](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

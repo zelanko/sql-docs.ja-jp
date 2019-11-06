@@ -10,13 +10,12 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 62389a315befed467497f87dd3b86c3f52171e91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051211"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>SQL Server 2005、2008、または 2008R2 からアップグレードしますか?
 
@@ -32,20 +31,21 @@ ms.locfileid: "52394756"
 >  SQL Server 2005 の延長サポートは 2016 年 4 月 12 日で終了しました。 2016 年 4 月 12 日を過ぎても SQL Server 2005 を実行している場合、セキュリティ更新プログラムを受け取れなくなります。  
 
 > [!IMPORTANT]  
->  SQL Server 2008 および 2008 R2 の延長サポートは 2019 年 7 月 9 日で終了します。 2019 年 7 月 9 日を過ぎても SQL Server 2008 または 2008R2 を実行している場合、セキュリティ更新プログラムを受け取れなくなります。 詳細については、[SQL Server 2008 の新しいオプションのお知らせ](https://azure.microsoft.com/blog/announcing-new-options-for-sql-server-2008-and-windows-server-2008-end-of-support/)に関するブログ記事を参照してください。  
+>  SQL Server 2008 および 2008 R2 の延長サポートは 2019 年 7 月 9 日をもって終了しました。 2019 年 7 月 9 日を過ぎても SQL Server 2008 または 2008R2 を実行している場合、セキュリティ更新プログラムを受け取れなくなります。 詳細については、[SQL Server 2008 の新しいオプションのお知らせ](https://azure.microsoft.com/blog/announcing-new-options-for-sql-server-2008-and-windows-server-2008-end-of-support/)に関するブログ記事を参照してください。 サポートを無料で延長するには、お客様の SQL Server を Azure VM に移行してください。 詳細については、「[Azure での SQL Server 2008 および SQL Server 2008 R2 のサポート延長](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)」をご覧ください。  
   
 ## <a name="choose-your-upgrade-option"></a>アップグレード オプションの選択  
 SQL Server の古いバージョンからリレーショナル データベースをアップグレードする場合、Microsoft プラットフォームでのリレーショナル ストレージ用のオプションがあります。  
   
-これらのオプションの包括的な分析の詳細を確認するには、 [こちら](https://sql05upgrade.azurewebsites.net/)をクリックします。  
+これらのオプションに関するより包括的な分析内容を確認するには、[PaaS と IaaS](/azure/sql-database/sql-database-paas-vs-sql-server-iaas) に関する記事をご覧ください。  
   
 |リレーショナル ストレージのオプション|利点|その他の考慮すべき要素|  
 |-------------------------------|--------------|-------------------------------|  
-|**オンプレミスの SQL Server**<br /><br /> トランザクション システムからデータ ウェアハウスまで、あらゆる種類のデータベース アプリケーションに対して、このオプションをご検討ください。|ハードウェアとソフトウェアの両方を管理するので、機能と拡張性の大部分を制御できます。<br /><br /> SQL Server の古いインスタンスからアップグレードする場合、これが最も類似した環境になります。|自前のハードウェアとソフトウェアを購入、維持、管理する必要があるため、必要な先行投資は最大で、管理は最も継続的なものとなります。<br /><br /> 詳細については、「[SQL Server](https://www.microsoft.com/server-cloud/products/sql-server-2017/)」を参照してください。|  
-|**Azure 仮想マシンでホストされる SQL Server**<br /><br /> 次のことが必要な場合は、このオプションの使用をご検討ください。<br /><br /> ホストされる環境への移行の利点。<br /><br /> 操作環境の制御。<br /><br /> SQL Server の使い慣れた機能セット。|仮想マシン イメージのライブラリからすばやく展開できます。<br /><br /> SQL Server の完全な機能セットが利用できます。<br /><br /> ハードウェアとサーバー ソフトウェアのコストを節約できます。 1 時間単位で使用した分だけ課金されます。|SQL Server と、オペレーティング システム ソフトウェアの両方を構成して管理する必要があります。<br /><br /> <br /><br /> 詳細については、「 [Azure Virtual Machines 上の SQL Server の概要](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)」を参照してください。<br /><br /> 移行について詳しくは、「 [Azure VM の SQL Server へのデータベースの移行](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)」をご覧ください。|  
-|**Azure SQL Database のホストされるデータベース サービス**<br /><br /> メンテナンスが容易で低コストのソリューションをお探しなら、このオプションをご検討ください。<br /><br /> このオプションは、必要なキャパシティがいつも同じではないアプリ、または外部アクセスを許可する必要のあるアプリに、特に適しています。|すばやく展開でき、簡単にスケール アップできます。<br /><br /> 1 時間単位で使用した分だけ課金されます。<br /><br /> サービスのコストには、ストレージだけでなく高可用性の自動バックアップが含まれています。|Azure SQL Database には、ホストされるクラウド環境には当てはまらない一部の SQL Server の機能が装備されていません。 詳しくは、「 [Azure SQL Database の Transact-SQL 情報](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)」を参照してください。<br /><br /> また、Azure SQL Database のデータベースの最大サイズは 4 TB である一方、SQL Server は 524 PB です。 詳細については、[単一データベースに対するリソース制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)に関するページを参照してください。<br /><br /> SQL Database の詳細については、[Azure SQL Database の概要](https://azure.microsoft.com/services/sql-database/)ページと「[Azure SQL Database のドキュメント](https://docs.microsoft.com/azure/sql-database/)」を参照してください。<br /><br /> 移行の詳細については、「 [SQL Server データベースの Azure SQL Database への移行](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)」を参照してください。|  
-  
- また、特定のデータおよびアプリケーションに対して、非リレーショナル ソリューションまたは NoSQL ソリューションを検討することもできます。  
+|**Azure 仮想マシンでホストされる SQL Server**<br /><br /> 次のことが必要な場合は、このオプションの使用をご検討ください。<br /><br /> ホストされる環境への移行の利点。<br /><br /> 操作環境の制御。<br /><br /> SQL Server の使い慣れた機能セット。|**SQL Server 2008 および 2008 R2 について、無料で最大 3 年間[サポートを延長](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)できます。** <br /><br /> 仮想マシン イメージのライブラリからすばやく展開できます。<br /><br /> SQL Server の完全な機能セットが利用できます。<br /><br /> ハードウェアとサーバー ソフトウェアのコストを節約できます。 1 時間単位で使用した分だけ課金されます。|SQL Server とオペレーティング システム ソフトウェアの両方を管理する必要があります。<br /><br /> <br /><br /> 詳細については、「 [Azure Virtual Machines 上の SQL Server の概要](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)」を参照してください。<br /><br /> 移行について詳しくは、「 [Azure VM の SQL Server へのデータベースの移行](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)」をご覧ください。|  
+|**Azure SQL Database マネージド インスタンス (PaaS)** <br /><br /> メンテナンスが容易で低コストのソリューションをお探しなら、このオプションをご検討ください。<br /><br /> マネージド インスタンスは、Microsoft SQL Server データベース エンジンのインスタンスに似ています。データベース用の共有リソースと、インスタンスの範囲での追加機能が提供されます。 <br /><br />マネージド インスタンスでは、オンプレミスからのデータベースの移行がサポートされ、データベースの変更は発生しないか最小限に抑えられます。|同じマネージド インスタンス内での複数データベースにまたがるクエリの利点、および CLR と SQL ジョブのサポートを得られます。 <br /><br /> 99.995% の可用性が保証されます。<br /><br /> サービスのコストには、ストレージだけでなく、高可用性、修正プログラムの適用、自動バックアップが含まれます。|Azure SQL Database マネージド インスタンスとオンプレミスの SQL Server との間には、Transact-SQL (T-SQL) に関していくつかの相違点があります。 詳しくは、[Azure SQL Database マネージド インスタンスの T-SQL 情報](/azure/sql-database/sql-database-managed-instance-transact-sql-information)に関する記事をご覧ください。<br /><br /> SQL Database マネージド インスタンスについて詳しくは、[Azure SQL Database マネージド インスタンスの概要](/azure/sql-database/sql-database-managed-instance-index)および[Azure SQL Database マネージド インスタンスの機能](/azure/sql-database/sql-database-managed-instance)に関する記事をご覧ください。<br /><br /> 移行について詳しくは、[Azure SQL Database マネージド インスタンスへの SQL Server の移行](/azure/sql-database/sql-database-managed-instance-migrate)に関する記事をご覧ください。|  
+|**Azure SQL Database 単一データベースまたはエラスティック プール (PaaS)** <br /><br /> メンテナンスが容易で低コストのソリューションをお探しなら、このオプションをご検討ください。<br /><br /> このオプションは、開発者の生産性および新しいソリューションの高速な市場投入が重要になる場合や、外部アクセスを提供する必要がある場合のクラウド設計アプリケーションに対して特に適しています。 <br /><br />最もよく使用される SQL Server の機能をご利用いただけますが、Azure SQL Database マネージド インスタンスの場合よりは少なくなります。 |すばやく展開でき、簡単にスケール アップできます。<br /><br /> 99.995% の可用性が保証されます。<br /><br /> 秒単位または時間単位の使用量に対してお支払いいただけます。 <br /><br /> サービスのコストには、ストレージだけでなく、高可用性の修正プログラムの適用と、自動バックアップが含まれます。|Azure SQL Database とオンプレミスの SQL Server との間には、Transact-SQL (T-SQL) に関していくつかの相違点があります。 詳しくは、「 [Azure SQL Database の Transact-SQL 情報](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)」を参照してください。<br /><br /> また、Azure SQL Database のデータベースの最大サイズは 100 TB である一方、SQL Server の場合は 524 PB です。 詳細については、[単一データベースに対するリソース制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)に関するページを参照してください。<br /><br /> SQL Database の詳細については、[Azure SQL Database の概要](https://azure.microsoft.com/services/sql-database/)ページと「[Azure SQL Database のドキュメント](/azure/sql-database/sql-database-technical-overview)」を参照してください。<br /><br /> 移行の詳細については、「 [SQL Server データベースの Azure SQL Database への移行](/azure/sql-database/sql-database-single-database-migrate)」を参照してください。|  
+|**オンプレミスの SQL Server**<br /><br /> トランザクション システムからデータ ウェアハウスまで、あらゆる種類のデータベース アプリケーションに対して、このオプションをご検討ください。|ハードウェアとソフトウェアの両方を管理するので、機能と拡張性の大部分を制御できます。<br /><br /> SQL Server の古いインスタンスからアップグレードする場合、これが最も類似した環境になります。|自前のハードウェアとソフトウェアを購入、維持、管理する必要があるため、必要な先行投資は最大で、管理は最も継続的なものとなります。<br /><br /> 詳細については、「[SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)」を参照してください。|  
+
+また、特定のデータおよびアプリケーションに対して、非リレーショナル ソリューションまたは NoSQL ソリューションを検討することもできます。  
   
 |非リレーショナル ソリューション|利点|  
 |------------------------------|--------------|  
@@ -55,7 +55,7 @@ SQL Server の古いバージョンからリレーショナル データベー�
 ## <a name="plan-your-upgrade"></a>アップグレードの計画  
   
 -   ご使用の SQL Server 2005 インスタンスのアップグレードを計画する方法については、SQL Server チームからの次の一連のブログ投稿をご確認ください。 
-    - SQL Server 2005 からの効率的なアップグレードの計画: [ステップ 1/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)、[ステップ 2/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)、[ステップ 3/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)
+    - SQL Server 2005 からの効率的なアップグレードの計画:[ステップ 1/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)、[ステップ 2/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)、[ステップ 3/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)
 - [SQL Server 2008 のサポート終了に備えましょう](https://www.microsoft.com/sql-server/sql-server-2008)。
   
 -   「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」の要件と考慮事項 (「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を含む) をご確認ください。  

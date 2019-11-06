@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5911783558ff259eef7488df082560cfe56a4dfb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e0c47713cb0aab0c87d1f9f652e1472100becf97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133468"
 ---
 # <a name="process-odbc-errors-odbc"></a>ODBC エラーの処理 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  2 つの ODBC 関数呼び出し [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を使用すると、ODBC メッセージを取得できます。 **SQLState**、**pfNative**、および **ErrorMessage** の各診断フィールドの主要な ODBC 関連情報を取得するには、SQL_NO_DATA が返されるまで [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出します。 診断レコードごとに、[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出して個々のフィールドを取得できます。 ドライバー固有のフィールドはすべて、**SQLGetDiagField** を使用して取得する必要があります。  
+  ODBC メッセージを取得する 2 つの ODBC 関数呼び出しを使用できます。[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)と[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)します。 **SQLState**、**pfNative**、および **ErrorMessage** の各診断フィールドの主要な ODBC 関連情報を取得するには、SQL_NO_DATA が返されるまで [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出します。 診断レコードごとに、[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出して個々のフィールドを取得できます。 ドライバー固有のフィールドはすべて、**SQLGetDiagField** を使用して取得する必要があります。  
   
  [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) は、個々のドライバーではなく、ODBC ドライバー マネージャーによって処理されます。 ODBC ドライバー マネージャーは、接続が正しく確立されるまでドライバー固有の診断フィールドをキャッシュしません。 接続が正しく確立される前に、ドライバー固有の診断フィールドに対して [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出すことはできません。 これには、SQL_SUCCESS_WITH_INFO が返される場合の ODBC 接続コマンドも含まれます。 ドライバー固有の診断フィールドは、次の ODBC 関数呼び出しまで使用できません。  
   
@@ -39,15 +38,15 @@ ms.locfileid: "51665921"
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、このサンプルで使用するストアド プロシージャを作成します。  
+ 最初の実行 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストをこのサンプルで使用されるストアド プロシージャを作成します。  
   
  odbc32.lib を使用して 2 つ目の (C++) コード リストをコンパイルします。 次に、プログラムを実行します。  
   
- 3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、このサンプルで使用したストアド プロシージャを削除します。  
+ 3 つ目の実行 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストをこのサンプルで使用されるストアド プロシージャを削除します。  
   
 ### <a name="code"></a>コード  
   
@@ -240,7 +239,7 @@ DROP PROCEDURE BadOne
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の使用法に関するトピック](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

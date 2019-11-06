@@ -14,21 +14,20 @@ helpviewer_keywords:
 - DROP DATABASE SCOPED CREDENTIAL statement
 - credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 22907a34874df447581dc38048bdbc366a1cf36f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10c1b29b1e5a8d4c7d91c428fd404b19cb77dd80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898103"
 ---
-# <a name="drop-database-scoped-credential-transact-sql"></a>データベース スコープ ベースの資格情報 (TRANSACT-SQL) を削除します。
+# <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  データベース スコープの資格情報をサーバーから削除します。  
+  サーバーからデータベース スコープ資格情報を削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +40,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
   
 ## <a name="arguments"></a>引数  
  *credential_name*  
- サーバーから削除するデータベース スコープの資格情報の名前です。  
+ サーバーから削除するデータベース スコープ資格情報の名前です。  
   
 ## <a name="remarks"></a>Remarks  
  データベース スコープの資格情報自体を削除せずに、データベース スコープの資格情報に関連付けられているシークレットを削除するには、次のように使用します。 [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md) です。  

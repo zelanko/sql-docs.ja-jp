@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109918"
 ---
 # <a name="cache-refresh-options-report-manager"></a>キャッシュ更新オプション (レポート マネージャー)
   [キャッシュ更新オプション] ページでは、レポートまたは共有データセットのデータの一時コピーを事前にキャッシュに読み込むスケジュールを作成できます。 更新計画には、スケジュールと、パラメーターの値を指定またはオーバーライドするためのオプションが含まれます。 共有データセットの場合、読み取り専用にマークされているパラメーターの値をオーバーライドすることはできません。 更新オプション ページの一部として複数の更新計画を作成して使用できます。  
@@ -66,12 +65,12 @@ ms.locfileid: "48081552"
  **構成**  
  クリックすると、[スケジュール] ページが開きます。このページは、頻度に関する情報の指定に使用します。  
   
- 詳細については、次を参照してください。[新しいスケジュール: スケジュールの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)します。  
+ 詳細については、次を参照してください。[新しいスケジュール。[スケジュール] ページの編集&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)します。  
   
  **共有スケジュール**  
  既存のスケジュールを選択するには、このオプションを選択します。  
   
- 詳細については、次を参照してください。 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)します。  
+ 詳細については、「 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)」をご覧ください。  
   
  **@\<** *パラメーター* **>**  
  パラメーター値の 1 つの組み合わせを指定します。 このセクションは、現在のデータセットまたはレポートでパラメーターが使用されている場合にのみ表示されます。  
@@ -103,7 +102,7 @@ ms.locfileid: "48081552"
   
  共有データセット定義で、パラメーターに **[クエリから省略]** オプションが指定されている場合、既定値を指定する必要はありません。 このフラグは、データセット パラメーターがクエリで使用されないことを示します。 たとえば、このパラメーターが共有データセット定義に表示されるのは、それがデータセット フィルターでのみ使用されるレポート パラメーターである場合です。  
   
- データセット パラメーター オプションを表示または変更するには、共有データセット定義を編集する必要があります。 詳細については、次を参照してください。[共有データセットの管理](report-data/manage-shared-datasets.md)します。  
+ データセット パラメーター オプションを表示または変更するには、共有データセット定義を編集する必要があります。 詳細については、「 [共有データセットの管理](report-data/manage-shared-datasets.md)」を参照してください。  
   
 ### <a name="report-parameters"></a>レポート パラメーター  
  レポートの場合、キャッシュ更新計画を正常に作成するには、各パラメーター値が有効でなければなりません。 各レポート パラメーターに、既定値を入力または選択する必要があります。 ユーザーが値を設定すると、レポート サーバー上のレポート パラメーターに定義されている既定値がオーバーライドされます。  

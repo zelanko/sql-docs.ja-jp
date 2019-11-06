@@ -1,5 +1,5 @@
 ---
-title: 'アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ) |Microsoft Docs'
+title: アクティブなセカンダリ:読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789854"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ:読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、1 つ以上のセカンダリ レプリカ (*読み取り可能なセカンダリ レプリカ*) への読み取り専用アクセスをサポートしています。 読み取り可能なセカンダリ レプリカは、すべてのセカンダリ データベースへの読み取り専用アクセスを許可します。 ただし、読み取り可能なセカンダリ データベースは読み取り専用に設定されません。 これらは動的です。 セカンダリ データベースは、対応するプライマリ データベースに対する変更がそのセカンダリ データベースに適用されると変更されます。 一般的なセカンダリ レプリカでは、持続性のあるメモリ最適化テーブルを含めて、セカンダリ データベースのデータはほぼリアルタイムです。 また、フルテキスト インデックスはセカンダリ データベースと同期されます。 多くの場合、プライマリ データベースと対応するセカンダリ データベース間のデータ待機時間は数秒です。  
   
  プライマリ データベースに適用されるセキュリティ設定は、セカンダリ データベースに保存されます。 これには、ユーザー、データベース ロール、およびアプリケーション ロールと、それぞれの権限が含まれます。また、透過的なデータ暗号化 (TDE) も含まれます (プライマリ データベースで有効な場合)。  
@@ -210,7 +210,7 @@ GO
   
 -   メモリ最適化テーブルでのみ実行されるクエリの場合、サポートされている分離レベルは SNAPSHOT、REPEATABLE READ、および SERIALIZABLE のみです。 データベース レベルで MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT オプションを有効にしていなければ、READ UNCOMMITTED または READ COMMITTED 分離レベルのクエリではエラーが返されます。  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -228,7 +228,7 @@ GO
   
 -   メモリ最適化テーブルでロック ヒントはサポートされません。 たとえば、次のクエリはすべて、エラーが発生し失敗します。 NOLOCK ヒントのみ使用でき、メモリ最適化テーブルとの使用では NOOP になります。  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -238,9 +238,9 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   複数コンテナーにまたがるトランザクションの場合、セッションの分離レベルが SNAPSHOT に指定されたトランザクションによるメモリ最適化テーブルへのアクセスはサポートされません。 例を次に示します。  
+-   コンテナーにまたがるトランザクションのトランザクションとセッションの分離レベル「スナップショット」そのアクセスをメモリ最適化テーブルではサポートされていません。 例を次に示します。  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  
@@ -272,7 +272,7 @@ GO
     |セカンダリ レプリカは読み取り可能かどうか|スナップショット分離または RCSI レベルは有効かどうか|プライマリ データベース|セカンダリ データベース|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
     |いいえ|いいえ|行のバージョンまたは 14 バイトのオーバーヘッドなし|行のバージョンまたは 14 バイトのオーバーヘッドなし|  
-    |いいえ|はい|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンはないが、14 バイトのオーバーヘッドあり|  
+    |いいえ|[はい]|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンはないが、14 バイトのオーバーヘッドあり|  
     |はい|いいえ|行のバージョンはないが、14 バイトのオーバーヘッドあり|行のバージョンおよび 14 バイトのオーバーヘッド|  
     |はい|はい|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンおよび 14 バイトのオーバーヘッド|  
   
@@ -292,7 +292,7 @@ GO
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

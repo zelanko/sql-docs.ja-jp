@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - member properties [Analysis Services], attribute relationships
@@ -26,12 +24,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081605"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62728518"
 ---
 # <a name="attribute-relationships"></a>のディメンション デザイナーでは、[ディメンション構造] ビューの
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンション内の属性は常に関連する直接的または間接的にキー属性にします。 同一のリレーショナル テーブルからすべてのディメンション属性が派生するスター スキーマに基づいてディメンションを定義すると、ディメンションのキー属性と各非キー属性の間に自動的に属性リレーションシップが定義されます。 関連を持った複数のテーブルからディメンション属性が派生するスノーフレーク スキーマを基にディメンションを定義すると、属性リレーションシップが自動的に次のように定義されます。  
@@ -80,7 +78,7 @@ ms.locfileid: "48081605"
   
 -   Customer 属性に対する属性リレーションシップとしての City 属性  
   
- キューブ内のデータを移動するため、データの自然階層を表さないユーザー定義の階層を作成することも (と呼ばれる、*アドホック*または*reporting*階層)。 たとえば、`{Age, Gender}` を基にしたユーザー定義階層を作成できます。 自然階層には、ソース データ内の自然なリレーションシップを表した構造をユーザーからは見えないところで集計およびインデックス化する利点がありますが、ユーザーにはこの 2 つの階層の動作の違いはわかりません。  
+ キューブ内のデータを移動するため、データの自然階層を表さないユーザー定義の階層を作成することも (と呼ばれる、*アドホック*または*reporting*階層)。 たとえば、`{Age, Gender}` を基にしたユーザー定義階層を作成できます。 ユーザー表示されない、2 つの階層の動作の違い自然階層が集計と非ユーザーからの構造のインデックス作成からメリットがありますが、ソース データの自然なリレーションシップのアカウント。  
   
  あるレベルの `SourceAttribute` プロパティには、そのレベルの記述に使用する属性を指定します。 属性の `KeyColumns` プロパティには、メンバーの取り込み元のデータ ソース ビューの列を指定します。 属性の `NameColumn` プロパティには、別の名前列をメンバーに対して指定できます。  
   
@@ -96,7 +94,7 @@ ms.locfileid: "48081605"
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](attributes-and-attribute-hierarchies.md)   
- [ディメンション属性のプロパティの参照](../multidimensional-models/dimension-attribute-properties-reference.md)   
+ [ディメンションの属性のプロパティの参照](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [ユーザー階層](user-hierarchies.md)   
  [ユーザー階層プロパティ](user-hierarchies-properties.md)  
   

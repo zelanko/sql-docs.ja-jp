@@ -1,5 +1,5 @@
 ---
-title: '例 : XML 型の列のクエリ | Microsoft Docs'
+title: '例: XML 型の列のクエリ | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ae1077d933d9872e3b5691e6233af4b82d61d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637732"
 ---
-# <a name="example-querying-xmltype-columns"></a>例 : XML 型の列のクエリ
-  次のクエリには列が含まれています`xml`型。 クエリでは、`xml` 型の `Instructions` 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
+# <a name="example-querying-xmltype-columns"></a>例: XML 型の列のクエリ
+  次のクエリには、`xml` 型の列が含まれています。 クエリでは、`xml` 型の `Instructions` 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
   
 ## <a name="example"></a>例  
   
@@ -29,7 +29,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ')   
 FROM Production.ProductModel  
@@ -55,7 +55,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ') as ManuSteps  
 FROM Production.ProductModel  
@@ -83,7 +83,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ') as ManuSteps  
 FROM Production.ProductModel  

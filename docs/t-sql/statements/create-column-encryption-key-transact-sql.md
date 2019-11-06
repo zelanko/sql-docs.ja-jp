@@ -28,20 +28,19 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5148c640dc862d641453a72592e861d0a26f98d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766716"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064567"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  指定した列のマスター_キーで暗号化された値の初期セットでは、列の暗号化キーを作成します。 これは、メタデータの操作です。 CEK には、列のマスター_キーの回転を可能にするまでに 2 つの値を持つことができます。 [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能を使ってデータベースの列を暗号化する前に、CEK を作成しておく必要があります。 CEK は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使って作成することもできます。 CEK を作成する前に、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを使って CMK を定義する必要があります。  
+値の初期セットを使用して列暗号化キー (CEK) を作成します。暗号化は、指定された列のマスター キー (CMK) を使用して実行されます。 この暗号化は、メタデータ操作です。 CEK には最大 2 つの値を持つことができます。これにより、CMK をローテーションできます。 [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能によってデータベースの列を暗号化する前に、CEK を作成しておく必要があります。 CEK は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使って作成することもできます。 CEK を作成する前に、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを使って CMK を定義する必要があります。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,41 +61,40 @@ WITH VALUES
 ```  
   
 ## <a name="arguments"></a>引数  
- *key_name*  
- データベースで、列の暗号化キーを認識する名前です。  
+_key\_name_  
+データベースで、列の暗号化キーを認識する名前です。  
   
- *column_master_key_name*  
- 列の暗号化キー (CEK) を暗号化するために使用される列のカスタム マスター キー (CMK) の名前を指定します。  
+_column\_master\_key\_name_ CEK を暗号化するために使用されるカスタム CMK の名前を指定します。  
   
- *algorithm_name*  
- 列の暗号化キーの値を暗号化するために使用する暗号化アルゴリズムの名前です。 システム プロバイダーのアルゴリズムは、**RSA_OAEP** である必要があります。  
+_algorithm\_name_  
+列の暗号化キーの値を暗号化するために使用する暗号化アルゴリズムの名前です。 システム プロバイダーのアルゴリズムは、**RSA_OAEP** である必要があります。  
   
- *varbinary_literal*  
- 暗号化のように CEK 値 BLOB です。  
+_varbinary\_literal_  
+暗号化された CEK 値 BLOB です。  
   
 > [!WARNING]  
->  ありませんプレーン テキスト CEK 値で渡す次のステートメント。 そうと、この機能のメリットを構成します。  
+>  このステートメントでは、プレーンテキストの CEK 値を渡さないでください。 そうすれば、この機能の利点が得られます。  
   
 ## <a name="remarks"></a>Remarks  
- 列の暗号化キーの作成ステートメントでは、少なくとも 1 つの VALUES 句を含める必要があります、2 つまでことがあります。 提供されているだけの場合は、2 番目の値を後で追加するのに列の暗号化キーの ALTER ステートメントを使用できます。 VALUES 句を削除するのに列の暗号化キーの ALTER ステートメントを使用することもできます。  
+列の暗号化キーの作成ステートメントでは、少なくとも 1 つの VALUES 句を含める必要があり、最大 2 つまで含めることができます。 1 つしか指定されていない場合は、後で ALTER COLUMN ENCRYPTION KEY ステートメントを使用して 2 番目の値を追加できます。 ALTER COLUMN ENCRYPTION KEY ステートメントを使用して、VALUES 句を削除することもできます。  
   
- 通常、1 つだけの暗号化された値は、列の暗号化キーが作成されます。 列のマスター_キーが必要な場合は、(現在列マスター_キーのニーズに新しい列のマスター_キーに置き換えられます) を回転する、列の暗号化キーの新しい値を追加する列の新しいマスター_キーで暗号化します。 これは、オプションを選択するクライアント アプリケーションは、新しい列マスター_キーはクライアント アプリケーションで使用できるに確立している間に、列の暗号化キーで暗号化されたデータにアクセスできることを確認することができます。 常に暗号化するには、新しいマスター_キーにアクセスできない、列の古いマスター_キーで暗号化された列の暗号化のキー値を使用して機密データにアクセスできるクライアント アプリケーションでのドライバーを有効になっています。  
+通常、CEK は、1 つの暗号化された値のみを使用して作成されます。 CMK は、ときどきローテーションする必要があります。 現在の CMK を新しい CMK に置き換えます。 キーをローテーションする必要がある場合は、新しい CMK を使用して暗号化された列暗号化キーの値を追加します。 このローテーションにより、クライアント アプリケーションが CEK を使用して暗号化されたデータに確実にアクセスでき、新しい CMK を使用できるようになります。 クライアント アプリケーション内の新しいマスター キーにアクセスできない Always Encrypted 対応ドライバーでは、古い CMK を使用して暗号化された CEK を使用して、重要なデータのアクセスします。  
   
- 暗号化アルゴリズム、常に暗号化のサポートでは、256 ビットをプレーン テキストの値が必要です。  
+Always Encrypted でサポートされる暗号化アルゴリズムでは、プレーンテキスト値が 256 ビットである必要があります。  
   
- 列のマスター キーを押しながらキー ストアをカプセル化するキー ストア プロバイダーを使用して、暗号化された値を生成する必要があります。 詳しくは、「[Always Encrypted &#40;クライアント開発&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)」をご覧ください。  
+暗号化された値は、CMK を保持するキー ストアをカプセル化するキー ストア プロバイダーを使用して生成する必要があります。 詳しくは、「[Always Encrypted &#40;クライアント開発&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)」をご覧ください。  
   
- 列暗号化キーについての情報を表示するには、[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)、[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) を使います。  
+列暗号化キーについての情報を表示するには、[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)、および [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **ALTER ANY COLUMN ENCRYPTION KEY** 権限が必要です。  
+**ALTER ANY COLUMN ENCRYPTION KEY** 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-column-encryption-key"></a>A. 列の暗号化キーを作成します。  
- 次の例では、列の暗号化キー `MyCEK` を作成します。  
+### <a name="a-creating-a-column-encryption-key"></a>A. 列の暗号化キーを作成します  
+次の例では、列の暗号化キー `MyCEK` を作成します。  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
 WITH VALUES  
 (  
@@ -107,11 +105,11 @@ WITH VALUES
 GO  
 ```  
   
-### <a name="creating-a-column-encryption-key-with-2-values"></a>2 つの値を列の暗号化キーを作成します。  
- 次の例では、2 つの値を使って列の暗号化キー `TwoValueCEK` を作成します。  
+### <a name="creating-a-column-encryption-key-with-two-values"></a>2 つの値を使用した列暗号化キーの作成  
+次の例では、2 つの値を使って列の暗号化キー `TwoValueCEK` を作成します。  
   
-```  
-  
+```sql
+
 CREATE COLUMN ENCRYPTION KEY TwoValueCEK   
 WITH VALUES  
 (  
@@ -128,12 +126,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
- [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+[ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+[DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+[CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

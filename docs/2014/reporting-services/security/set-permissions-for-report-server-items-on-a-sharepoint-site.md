@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad14d7005dc01c700b99c4a41cc8f95cac30da02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101561"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)
   既定のセキュリティ設定では必要なレベルのアクセスが提供されない場合は、新しい権限レベルを作成して、特定のレポート サーバー アイテムまたは処理に対するアクセスを提供できます。 カスタム セキュリティ設定は、アクセスを特定のレポートに制限する場合に便利です。  
@@ -73,10 +72,10 @@ ms.locfileid: "48078644"
 12. **[OK]** をクリックします。 特定のモデルの権限の管理権限が与えられたユーザーは、モデルを開いて、モデル内の権限を編集できます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用します。](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
+ [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [SharePoint Web アプリケーションのレポート サーバー操作に対するアクセス許可を設定する](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [SQL Server Reporting Services と SharePoint グループの役割とタスクの比較とアクセス許可](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [SharePoint サイトとレポート サーバー アイテムのリスト権限のリファレンス](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

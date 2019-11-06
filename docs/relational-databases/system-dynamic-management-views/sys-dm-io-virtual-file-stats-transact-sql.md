@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d55d63b9cfbf501750522f3f5d0ca68757ae1ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 524f0d82b5f426ae41169b8358dd8ad8be66da03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900290"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -89,8 +88,8 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|ファイルでの I/O 完了をユーザーが待機した総時間 (ミリ秒単位)。|  
 |**size_on_disk_bytes**|**bigint**|ファイルに対して使用されているディスク上のバイト数。 スパース ファイルの場合、この数値は、データベース スナップショットに使用されているディスク上の実際のバイト数になります。|  
 |**file_handle**|**varbinary**|ファイルの Windows ファイル ハンドル。|  
-|**io_stall_queued_read_ms**|**bigint**|**適用されません。**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]します。<br /><br /> 読み取りの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)します。|  
-|**io_stall_queued_write_ms**|**bigint**|**適用されません。**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]します。<br /><br />  書き込みの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。|
+|**io_stall_queued_read_ms**|**bigint**|**適用されません。** :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]します。<br /><br /> 読み取りの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)します。|  
+|**io_stall_queued_write_ms**|**bigint**|**適用されません。** :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]します。<br /><br />  書き込みの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。|
 |**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布のノードの識別子。
  
   
@@ -101,7 +100,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. ログ ファイルの統計情報を返す
 
-**適用対象:** SQL Server (2008年以降)、Azure SQL Database
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database
 
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのログ ファイルに関するすべての統計を返します。  
   
@@ -116,7 +115,7 @@ GO
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

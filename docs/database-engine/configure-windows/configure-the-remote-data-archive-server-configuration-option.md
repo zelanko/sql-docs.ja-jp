@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6465c5ccfc10847ac011274ed4b25cdb7f52b978
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012331"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>remote data archive サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "47625650"
   
  **remote data archive** には次の値を指定できます。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |0|サーバー上のデータベースとテーブルを Stretch に対して有効にできません。|  
 |1|サーバー上のデータベースとテーブルを Stretch に対して有効にできます。|  

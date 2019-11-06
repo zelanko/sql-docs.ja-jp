@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - mixed types [SQL Server]
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ea0036898d14e86e02b1625bbff494423a1b2292
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: b1a0fb6a72fde7ba871554abf4e3b40d6bb6c9fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137532"
 ---
 # <a name="mixed-type-and-simple-content"></a>混合型と単純コンテンツ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +28,8 @@ ms.locfileid: "51674921"
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns"  
-xmlns:ns1="https://ns1">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns"  
+xmlns:ns1="http://ns1">  
   
     <complexType name="myComplexTypeA" mixed="true">  
         <sequence>  

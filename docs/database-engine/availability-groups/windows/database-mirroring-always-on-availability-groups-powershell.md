@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング - AlwaysOn 可用性グループ- PowerShell | Microsoft Docs
-ms.custom: ''
+title: PowerShell を利用し、可用性グループのデータベース ミラーリング エンドポイントを作成する
+description: PowerShell を利用し、Always On 可用性グループのデータベース ミラーリング エンドポイントを作成する方法について説明します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,34 +14,25 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 857fe97c4ef19456c4ce755857702bfd19ff8bd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d4672d582242347240a0202a430f03f7ebd91b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968312"
 ---
-# <a name="database-mirroring---always-on-availability-groups--powershell"></a>データベース ミラーリング - AlwaysOn 可用性グループ- PowerShell
+# <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>PowerShell を利用し、可用性グループのデータベース ミラーリング エンドポイントを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、PowerShell を使用して、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用するデータベース ミラーリング エンドポイントを作成する方法について説明します。  
   
- **このトピックの内容**  
+
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
-  
--   **データベース ミラーリング エンドポイントを作成するために使用するもの:**  [PowerShell](#PowerShellProcedure)  
-  
-## <a name="before-you-begin"></a>はじめに  
-  
-###  <a name="Security"></a> セキュリティ  
-  
+##  <a name="Permissions"></a> Permissions  
+ CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
+
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
-  
-####  <a name="Permissions"></a> Permissions  
- CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **データベース ミラーリング エンドポイントを作成するには**  

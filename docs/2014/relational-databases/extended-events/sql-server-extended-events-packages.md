@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], packages
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fd92b13584ec31d7a7a70a7e63caf7baf4a393
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638745"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
   パッケージは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
@@ -80,7 +79,7 @@ ms.locfileid: "48141302"
 |管理|管理イベントの対象は、主にエンド ユーザー、管理者、およびサポートです。 管理チャネルのイベントは、管理者が対応できる明確な解決策が存在する問題を示します。 たとえば、アプリケーションがプリンターに接続できなかった場合に発生するイベントなどがあります。 これらのイベントには、詳しい解説が付属するか、問題の解決方法をユーザーに伝えるメッセージが関連付けられています。|  
 |運用|運用イベントは、問題や事象の分析および診断のために使用されます。 問題や事象に応じたツールまたはタスクを起動する目的で使用できます。 たとえば、プリンターがシステムに追加されたり、システムから削除された場合に発生するイベントなどがあります。|  
 |分析|非常に多くの分析イベントが公開されています。 プログラムの動作を説明するもので、主にパフォーマンス調査に用いられます。|  
-|デバッグ|デバッグ イベントは、開発者がデバッグ時に問題を診断する目的でのみ使用されます。<br /><br /> 注: デバッグ チャネルのイベントには、内部の実装に固有の状態データが返されます。 スキーマ、およびこのイベントによって返されるデータは、SQL Server の将来のバージョンで変更または無効化される可能性があります。 そのため、デバッグ チャネルのイベントは、SQL Server の将来のバージョンで予告なしに変更または削除されることがあります。|  
+|デバッグ|デバッグ イベントは、開発者がデバッグ時に問題を診断する目的でのみ使用されます。<br /><br /> 注:デバッグ チャネルのイベントでは、実装固有の内部状態データが返されます。 スキーマ、およびこのイベントによって返されるデータは、SQL Server の将来のバージョンで変更または無効化される可能性があります。 そのため、デバッグ チャネルのイベントは、SQL Server の将来のバージョンで予告なしに変更または削除されることがあります。|  
   
  **Keyword**  
   
@@ -94,7 +93,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  キーワードを使用すると、現在の SQL トレース イベントのグループを緊密に対応付けることができます。  
   
-### <a name="targets"></a>対象サーバー  
+### <a name="targets"></a>ターゲット  
  ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](../../database-engine/sql-server-extended-events-targets.md)」を参照してください。  
   
 ### <a name="actions"></a>アクション  

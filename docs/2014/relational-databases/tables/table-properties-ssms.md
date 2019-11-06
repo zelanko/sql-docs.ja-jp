@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,12 +16,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196713"
 ---
 # <a name="table-properties"></a>テーブルのプロパティ
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [テーブルのプロパティ] ダイアログ ボックスに表示されるテーブルのプロパティについて説明します。 これらのプロパティの表示方法の詳細については、「 [テーブル定義の表示](view-the-table-definition.md)」を参照してください。  
@@ -44,7 +43,7 @@ ms.locfileid: "48096662"
  **[サーバー]**  
  現在のサーバー インスタンスの名前です。  
   
- **ユーザー**  
+ **User**  
  この接続のユーザーの名前です。  
   
  **[作成日]**  
@@ -66,7 +65,7 @@ ms.locfileid: "48096662"
  オブジェクトが、引用符で囲まれた識別子オプションが ON に設定されて作成されたかどうかを指定します。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)」を参照してください。  
   
  **[ロックのエスカレーション]**  
- テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](http://msdn.microsoft.com/library/jj856598.aspx)」をご覧ください。 有効な値は次のとおりです。  
+ テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](https://msdn.microsoft.com/library/jj856598.aspx)」をご覧ください。 設定可能な値は、次のとおりです。  
   
  AUTO  
  このオプションを使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、テーブル スキーマに適したロック エスカレーションの粒度を選択します。  
@@ -136,7 +135,7 @@ ms.locfileid: "48096662"
  設定可能な値は `True` および `False` です。  
   
  **[Filestream ファイル グループ]**  
- テーブルに FILESTREAM データ ファイル グループの名前を指定する`varbinary(max)`FILESTREAM 属性を持つ列。 既定値は、既定の FILESTREAM データ ファイル グループです。  
+ テーブルが FILESTREAM 属性がある `varbinary(max)` 列を持つ場合は、FILESTREAM データ ファイル グループの名前を指定します。 既定値は、既定の FILESTREAM データ ファイル グループです。  
   
  テーブルに FILESTREAM データが含まれていない場合、フィールドは空白です。  
   
@@ -170,7 +169,7 @@ ms.locfileid: "48096662"
   
  FILESTREAM パーティション構成は、 **[パーティション構成]** オプションで指定した構成と対称である必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル定義の表示](view-the-table-definition.md)   
  [列の変更 &#40;データベース エンジン&#41;](../tables/modify-columns-database-engine.md)  
   

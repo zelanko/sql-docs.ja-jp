@@ -1,6 +1,6 @@
 ---
 title: 移行後の検証および最適化ガイド | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,20 +12,21 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: craigg
-ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506341"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909155"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の移行後手順は、データの精度と完全性の調整、およびワークロードのパフォーマンスの問題の発見に、非常に重要です。
 
-# <a name="common-performance-scenarios"></a>パフォーマンスの一般的なシナリオ 
+## <a name="common-performance-scenarios"></a>パフォーマンスの一般的なシナリオ
+
 次に示すのは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プラットフォームへの移行後に発生する一般的なパフォーマンスのシナリオと、その解決方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行 (古いバージョンから新しいバージョン) に固有のシナリオや、外部のプラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行に固有のシナリオが含まれています。
 
 ## <a name="CEUpgrade"></a> CE バージョンでの変更によるクエリ パフォーマンス低下
@@ -51,7 +52,7 @@ ms.locfileid: "52506341"
 **適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題がある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  のより新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。 
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題が存在していた場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初のコンパイルで入力パラメーターのスニッフィングを使って、その入力データの分布に最適化された、パラメーター化された再利用可能なプランを生成することで、ストアド プロシージャのクエリ プランをコンパイルします。 ストアド プロシージャではない場合でも、単純なプランを生成するほとんどのステートメントがパラメーター化されます。 プランが最初にキャッシュされた後、それ以降の実行は前にキャッシュされたプランにマップします。
 その最初のコンパイルで通常のワークロードに対する最も一般的なパラメーターのセットが使われないことがある場合、問題が発生する可能性があります。 異なるパラメーターに対して実行プランが同じでは非効率的になります。 このトピックの詳細については、「[パラメーター スニッフィング](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)」を参照してください。
@@ -106,6 +107,7 @@ SARGable ではない述語の例を次に示します。
   -   これには、データベースに格納されるユーザー定義のコード構造 (ストアド プロシージャ、ユーザー定義関数、ビューなど) と、基になるテーブルで使われるデータ型についての情報を保持するシステム テーブル ([sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md) など) の比較が含まれる場合があります。
 2. 前のポイントまですべてのコードをスキャンできない場合は、同じ目的で、変数/パラメーターの宣言と一致するように、テーブルのデータ型を変更します。
 3. 次の構造の有用性を熟考します。
+
   -   述語として使われている関数
   -   ワイルドカード検索
   -   列データに基づく複雑な式 – インデックスを作成できる永続計算列を代わりに作成する必要性を評価します。
@@ -126,6 +128,7 @@ SARGable ではない述語の例を次に示します。
 > MSTVF (複数ステートメントのテーブル値関数) の出力テーブルはコンパイル時に作成されないので、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは実際の統計ではなくヒューリスティックに依存して、行の推定を決定します。 基底テーブルにインデックスを追加しても、役には立ちません。 MSTVF の場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、MSTVF によって返されるものと予想される行数に固定値 1 を使います ([!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降、固定の推定値は 100 行です)。
 
 ### <a name="steps-to-resolve"></a>解決手順
+
 1.  複数ステートメントの TVF が 1 ステートメントのみである場合は、インライン TVF に変換します。
 
     ```sql
@@ -142,7 +145,8 @@ SARGable ではない述語の例を次に示します。
     RETURN
     END
     ```
-    変換先 
+
+    インライン形式の例を次に示します。
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ SARGable ではない述語の例を次に示します。
 
 2.  さらに複雑な場合は、メモリ最適化テーブルまたは一時テーブルに格納される中間結果を使うことを検討します。
 
-##  <a name="Additional_Reading"></a> その他の情報  
+##  <a name="Additional_Reading"></a> その他の情報
+
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [メモリ最適化テーブル](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [ユーザー定義関数](../relational-databases/user-defined-functions/user-defined-functions.md)  

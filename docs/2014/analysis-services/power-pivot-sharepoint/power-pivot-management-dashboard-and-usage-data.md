@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071118"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理ダッシュボードと使用状況データ
   PowerPivot 管理ダッシュボードとは、SQL Server PowerPivot for SharePoint の配置の管理に役立つ SharePoint サーバーの全体管理の定義済みのレポートおよび Web パーツのコレクションです。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
@@ -67,7 +66,7 @@ ms.locfileid: "48069718"
 ### <a name="change-the-current-service-application"></a>現在のサービス アプリケーションを変更する  
  管理ダッシュボードで現在の PowerPivot サービス アプリケーションを変更するには、次の手順を実行します。  
   
-1.  PowerPivot 管理ダッシュボードの上部で、現在のサービス アプリケーションの名前 (" **既定の PowerPivot サービス アプリケーション**" など) を確認します。  
+1.  PowerPivot 管理ダッシュ ボードの上部にあるには、現在のサービス アプリケーションの名前をたとえばメモ**Default PowerPivot Service Application**します。  
   
 2.  **[アクション]** ダッシュボードで、 **[サービス アプリケーションの一覧を表示する]** をクリックします。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48069718"
   
 -   [使用状況データ収集の構成&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- PowerPivot サーバー システムに関するデータをキャプチャするために、イベント メッセージング、データ更新の履歴、およびその他の使用状況履歴が各 PowerPivot サービス アプリケーションに対して有効になっていることを確認してください。 通常のサーバー操作中に収集されるサーバーおよび使用状況のデータは、最終的に、内部データ モデルに格納されるソース データになります。 **注:** イベントまたは使用状況履歴を無効にすると、複合レポートは不完全またはエラーになります。  
+ PowerPivot サーバー システムに関するデータをキャプチャするために、イベント メッセージング、データ更新の履歴、およびその他の使用状況履歴が各 PowerPivot サービス アプリケーションに対して有効になっていることを確認してください。 通常のサーバー操作中に収集されるサーバーおよび使用状況のデータは、最終的に、内部データ モデルに格納されるソース データになります。 **注:** イベントまたは使用状況履歴を無効にした場合、複合レポートは不完全またはエラーになります。  
   
 ##  <a name="edit"></a> PowerPivot ダッシュ ボードを編集します。  
  ダッシュボードの開発またはカスタマイズに関する専門知識がある場合は、ダッシュボードを編集して新しい Web パーツを含めることができます。 また、ダッシュボードに含まれる Web パーツのプロパティも編集できます。  
@@ -93,7 +92,7 @@ ms.locfileid: "48069718"
  カスタム レポートでの作業を簡単に開始できるように、PowerPivot 管理ダッシュボードには、ソースのブックに接続するための Office データ接続 (.odc) ファイルが用意されています。 たとえば、.odc ファイルを Excel で使用して、追加のレポートを作成できます。  
   
 > [!NOTE]  
->  Excel で .odc ファイルを使用しようとしたときに "データ ソースの初期化に失敗しました" というエラーが表示されないように、ファイルを編集してください。 自動生成される .odc ファイルには、MSOLAP OLE DB プロバイダーでサポートされていないパラメーターが 1 つ含まれています。 次の手順では、これらのパラメーターを削除する回避策について説明します。  
+>  Excel で .odc ファイルを使用するときに、次のエラーを回避するためにファイルを編集します。「データ ソースの初期化に失敗しました」。 自動生成される .odc ファイルには、MSOLAP OLE DB プロバイダーでサポートされていないパラメーターが 1 つ含まれています。 次の手順では、これらのパラメーターを削除する回避策について説明します。  
   
  PowerPivot ブックに基づいて全体管理でレポートを作成するには、ファーム管理者またはサービス管理者である必要があります。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48069718"
   
     7.  接続の名前を指定して、 **[次へ]** をクリックします。  
   
-    8.  [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集します。 **Edit Mode プロパティ名の形式が正しくありません。** というエラー メッセージが表示される場合は、.ODC ファイルを編集していることを確認してください。  
+    8.  MDX クエリの指定 をクリックして**デザイン**を使用するデータを収集する MDX クエリ デザイナーを開く**エラー メッセージが表示された場合**「Edit Mode のプロパティ名形式が正しくありません」ことを確認します。編集します。ODC ファイルです。  
   
     9. **[OK]** をクリックし、 **[完了]** をクリックします。  
   

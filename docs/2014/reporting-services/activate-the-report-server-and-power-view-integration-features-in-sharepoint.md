@@ -4,30 +4,29 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1ab486390e8da36d14d5aac1e1049a5836dd2be9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110024"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のサイト コレクション機能は、通常、SharePoint 製品用の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] アドインをインストールすると、既定でアクティブ化されます。 場合によっては、この機能を手動でアクティブ化する必要があります。  
   
- SharePoint 製品のインストール後に SharePoint 2010 製品用の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインをインストールした場合、レポート サーバーの統合機能と Power View の統合機能はルート サイト コレクションでのみアクティブ化されます。 他のサイト コレクションについては、この機能を手動でアクティブ化する必要があります。 たとえば、サイト コレクションがある場合**http://[my サーバー名]/sites/[サイト コレクション名]** を手動でアクティブ化する必要があります、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サイト コレクションの機能です。  
+ SharePoint 製品のインストール後に SharePoint 2010 製品用の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインをインストールした場合、レポート サーバーの統合機能と Power View の統合機能はルート サイト コレクションでのみアクティブ化されます。 他のサイト コレクションについては、この機能を手動でアクティブ化する必要があります。 たとえば、 **http://[my server name]/sites/[site collection name]** というサイト コレクションが存在する場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のサイト コレクション機能を手動でアクティブ化する必要があります。  
   
- ルート サイト コレクションが存在しない場合、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]アドインで、次のようなメッセージが記録されます。  
+ ルート サイト コレクションがない場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインによって、次のようなメッセージがログに記録されます。  
   
  "SharePoint Web アプリケーション 80 にはルート サイト コレクションがありません"  
   
- メッセージは、"RS_SP_#.log" (# は増加する値) という名前のアドイン インストール ログに記録されます。 ログ ファイルは、現在のユーザーの Temp フォルダー (例: C:\Users\\[user name]\AppData\Local\Temp) にあります。追加のログ オプションの詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。  
+ メッセージは"rs_sp_#.log"# は、増分する番号をという名前のアドインのインストール ログに記載されています。 ログ ファイルは、現在のユーザーの Temp フォルダー (例: C:\Users\\[user name]\AppData\Local\Temp) にあります。追加のログ オプションの詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。  
   
  このトピックの内容  
   

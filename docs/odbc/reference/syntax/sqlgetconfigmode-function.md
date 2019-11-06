@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1148ab38f7d389c3fe78a09a646a9cbdec0bb723
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14fb43015db9113262320f78f0bae53f8a168f95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044555"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 関数
 **準拠**  
- バージョンが導入されています。 ODBC 3.0  
+ バージョンが導入されました。ODBC 3.0  
   
  **概要**  
  **SQLGetConfigMode** DSN の値を一覧表示した Odbc.ini エントリが、システム情報の場所を示す構成モードを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLGetConfigMode(  
-     UWORD *   pwConfigMode);  
+     UWORD *   pwConfigMode);  
 ```  
   
 ## <a name="arguments"></a>引数  

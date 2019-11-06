@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791816"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性モード (AlwaysOn 可用性グループ)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の *可用性モード* は、可用性レプリカが同期コミット モードで動作できるかどうかを指定するレプリカのプロパティです。 可用性レプリカごとに、可用性モードを同期コミット モードまたは非同期コミット モードとして構成する必要があります。  プライマリ レプリカが *非同期コミット モード*で構成されている場合、プライマリ レプリカはセカンダリ レプリカによる受信トランザクション ログ レコードのディスクへの書き込みを ( *ログ書き込み*) 待機しません。 特定のセカンダリ レプリカが非同期コミット モードで構成されている場合、プライマリ レプリカはそのセカンダリ レプリカによるログ書き込みを待機しません。 プライマリ レプリカとセカンダリ レプリカの両方が *同期コミット モード*で構成されている場合、プライマリ レプリカはログが書き込まれたことをセカンダリ レプリカが確認するまで待機します (プライマリの *セッション タイムアウト期間*内に、セカンダリ レプリカがプライマリ レプリカに対する ping に失敗した場合を除きます)。  
@@ -32,7 +32,7 @@ ms.locfileid: "48129042"
   
   
 ##  <a name="SupportedAvModes"></a> サポートされる可用性モード  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、次のように、非同期コミット モードと同期コミット モードという 2 種類の可用性モードをサポートします。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 次のように、2 つの可用性モード非同期コミット モードと同期コミット モードをサポートします。  
   
 -   *非同期コミット モード* は、可用性レプリカが離れた距離に分散されている場合に正常に利用できる災害復旧ソリューションです。 すべてのセカンダリ レプリカが非同期コミット モードで実行されている場合、プライマリ レプリカは、いずれかのセカンダリ レプリカによりログが書き込まれるまで待機しません。 ログ レコードがローカル ログ ファイルに書き込まれるとすぐに、プライマリ レプリカはクライアントにトランザクションの確認を送信します。 プライマリ レプリカは、非同期コミット モードが構成されているセカンダリ レプリカに対して、トランザクションの遅延を最小限に抑えて実行されます。  現在のプライマリに非同期コミット可用性モードが構成されている場合、このプライマリは、セカンダリの個々の可用性モードの設定に関係なく、すべてのセカンダリ レプリカに対してトランザクションを非同期にコミットします。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48129042"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -21,12 +20,12 @@ ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74dd3b1548eae75da210259d81c711348da713f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b52319eaa9af7305c2d3044f3e19762437fff62
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084014"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、さまざまなツリー作成手法が組み込まれた複合アルゴリズムであり、回帰、分類、アソシエーションなど、複数の分析タスクをサポートしています。 Microsoft デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方のモデリングをサポートしています。  
@@ -34,7 +33,7 @@ ms.locfileid: "48190582"
  このトピックでは、アルゴリズムの実装について説明し、さまざまなタスクに合わせてアルゴリズムの動作をカスタマイズする方法を示します。また、デシジョン ツリー モデルに対するクエリに関する追加情報へのリンクも示します。  
   
 ## <a name="implementation-of-the-decision-trees-algorithm"></a>デシジョン ツリー アルゴリズムの実装  
- Microsoft デシジョン ツリー アルゴリズムは、モデルの近似的事後分布を取得して、因果的相互作用のモデルの学習にベイジアン アプローチを適用します。 このアプローチの詳細な説明については、Microsoft Research サイトにある [構造とパラメーターの学習](http://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409)に関する論文を参照してください。  
+ Microsoft デシジョン ツリー アルゴリズムは、モデルの近似的事後分布を取得して、因果的相互作用のモデルの学習にベイジアン アプローチを適用します。 このアプローチの詳細な説明については、Microsoft Research サイトにある [構造とパラメーターの学習](https://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409)に関する論文を参照してください。  
   
  学習に必要な *事前分布* 情報の価値を評価する手法は、 *尤度等価*の想定に基づいています。 この想定では、条件的に独立した同じアサーションのネットワーク構造は、データでは識別できないものと見なします。 各ケースには、ベイジアン事前分布ネットワークと、そのネットワークの信頼メジャーが、それぞれ 1 つずつあるものと見なされます。  
   
@@ -58,10 +57,10 @@ ms.locfileid: "48190582"
   
  予測可能属性が連続する数値データ型の場合、結果数をできるだけ減らしてモデルの作成を高速化するために、機能の選択が出力にも適用されます。 MAXIMUM_OUTPUT_ATTRIBUTES パラメーターを設定することにより、機能の選択のしきい値を変更して、使用可能な値の数を増減できます。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが、不連続の予測可能列をどのように処理するかについては、「[ベイジアン ネットワークの学習 : 知識と統計データの組み合わせ](http://go.microsoft.com/fwlink/?LinkId=45963)」を参照してください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが、連続する予測可能列をどのように処理するかについては、「 [時系列分析の自動回帰ツリー モデル](http://go.microsoft.com/fwlink/?LinkId=45966)」の付録を参照してください。  
+ 方法についてのように処理するかについて[!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムが不連続の予測可能列を参照してください[ベイジアン ネットワークの学習。知識と統計データの組み合わせ](https://go.microsoft.com/fwlink/?LinkId=45963)します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが、連続する予測可能列をどのように処理するかについては、「 [時系列分析の自動回帰ツリー モデル](https://go.microsoft.com/fwlink/?LinkId=45966)」の付録を参照してください。  
   
 ### <a name="scoring-methods-and-feature-selection"></a>スコアリング方法と機能の選択  
- Microsoft デシジョン ツリー アルゴリズムには、情報利得のスコアを計算する式が 3 つ用意されています。Shannon のエントロピー、K2 事前分布を指定したベイジアン ネットワーク、および均一なディリクレ事前分布を指定したベイジアン ネットワークです。 データ マイニング フィールドには、3 つの方法すべてが準備されています。 最適な結果を得るには、複数のパラメーターとスコアリング方法を試してみることをお勧めします。 これらのスコアリング方法の詳細については、「 [機能の選択](../../sql-server/install/feature-selection.md)」を参照してください。  
+ Microsoft デシジョン ツリー アルゴリズムには、情報利得のスコア付けの式が 3 つが用意されています。Shannon のエントロピー、k2、ベイジアン ネットワークおよびベイジアン事前分布の均一なディリクレ事前分布ネットワーク。 データ マイニング フィールドには、3 つの方法すべてが準備されています。 最適な結果を得るには、複数のパラメーターとスコアリング方法を試してみることをお勧めします。 これらのスコアリング方法の詳細については、「 [機能の選択](../../sql-server/install/feature-selection.md)」を参照してください。  
   
  すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング アルゴリズムでは、分析の向上と処理負荷の削減のため、機能の選択が自動的に使用されます。 機能の選択に使用される方法は、モデルの作成に使用したアルゴリズムによって異なります。 デシジョン ツリー モデルに対する機能の選択を制御するアルゴリズム パラメーターは、MAXIMUM_INPUT_ATTRIBUTES と MAXIMUM_OUTPUT です。  
   
@@ -94,13 +93,13 @@ ms.locfileid: "48190582"
 -   任意の属性に対する不連続値の数を、10 以下に制限します。 モデルに応じたさまざまな方法で、値のグループ化を試みることができます。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] のデータ探索ツールを使用すると、データ マイニングの開始前に、データ内の値の分布を視覚化し、値を適切にグループ化することができます。 詳細については、「 [データ プロファイル タスクとビューアー](../../integration-services/control-flow/data-profiling-task-and-viewer.md)」を参照してください。 また、 [Excel 2007 用データ マイニング アドイン](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51)を使用すると、データの探索、グループ化、およびラベル変更を Microsoft Excel で行うことができます。  
+    >  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] のデータ探索ツールを使用すると、データ マイニングの開始前に、データ内の値の分布を視覚化し、値を適切にグループ化することができます。 詳細については、「 [データ プロファイル タスクとビューアー](../../integration-services/control-flow/data-profiling-task-and-viewer.md)」を参照してください。 また、 [Excel 2007 用データ マイニング アドイン](https://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51)を使用すると、データの探索、グループ化、およびラベル変更を Microsoft Excel で行うことができます。  
   
 ## <a name="customizing-the-decision-trees-algorithm"></a>デシジョン ツリー アルゴリズムのカスタマイズ  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、結果として得られるマイニング モデルのパフォーマンスおよび精度に影響を与えるパラメーターがサポートされています。 マイニング モデル列またはマイニング構造列にモデリング フラグを設定して、データの処理方法を制御することもできます。  
   
 > [!NOTE]  
->  Microsoft デシジョン ツリー アルゴリズムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できます。ただし、Microsoft デシジョン ツリー アルゴリズムの動作をカスタマイズするためのいくつかの高度なパラメーターは、特定のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473)」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+>  Microsoft デシジョン ツリー アルゴリズムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できます。ただし、Microsoft デシジョン ツリー アルゴリズムの動作をカスタマイズするためのいくつかの高度なパラメーターは、特定のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
  次の表は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムで使用できるパラメーターを示しています。  
@@ -165,9 +164,9 @@ ms.locfileid: "48190582"
   
 |ID|名前|  
 |--------|----------|  
-|1|**Binary:** 属性値の実際の数にかかわらず、ツリーが 2 つの分岐に分割されることを示します。|  
-|2|**Complete:** 属性値と同じ数の分割をツリーに作成できることを示します。|  
-|3|**Both:** バイナリ分割と完全分割のどちらを使用すると最適な結果が生成されるのかが、Analysis Services によって判断されることを示します。|  
+|1|**バイナリ。** 属性の値の実際の数に関係なくは、ツリーを 2 つの分岐に分割する必要があることを示します。|  
+|2|**完了します。** 属性の値と同じ数の分割をツリーに作成できることを示します。|  
+|3|**両方とも：** Analysis Services を判断できること、最適な結果を生成するためにバイナリまたは完全な分割を使用するかどうかを指定します。|  
   
  既定値は 3 です。  
   
@@ -176,7 +175,7 @@ ms.locfileid: "48190582"
   
 |モデリング フラグ|説明|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|2 つの状態を持つものとして扱わ列があることを示します:`Missing`と`Existing`します。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
+|MODEL_EXISTENCE_ONLY|列が、`Missing` および `Existing` の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
   
 ### <a name="regressors-in-decision-tree-models"></a>デシジョン ツリー モデルのリグレッサー  
@@ -188,7 +187,7 @@ ms.locfileid: "48190582"
   
  たとえば、 **Income** を属性として使用して顧客の購入行動を予測する場合に、その列に REGRESSOR モデリング フラグを設定すると、アルゴリズムはまず、標準の回帰式を使用して **Income** の値を試します。 偏差が大きすぎる場合はその回帰式が放棄され、ツリーが他の属性で分割されます。 その後デシジョン ツリー アルゴリズムは、分割後の各分岐で、Income をリグレッサーとして使用できるかどうかを試します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  デシジョン ツリー モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
@@ -205,6 +204,6 @@ ms.locfileid: "48190582"
 ## <a name="see-also"></a>参照  
  [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)   
  [デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)   
- [デシジョン ツリー モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

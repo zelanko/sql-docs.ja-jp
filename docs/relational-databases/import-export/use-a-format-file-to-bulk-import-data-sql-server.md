@@ -11,16 +11,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 425b2b1c9b6adabf2399566db95314d438dad666
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a64534cad9211bee7d10a1e6ef87d5d21b401f13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116863"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +69,7 @@ CREATE TABLE dbo.MyFirstImport (
 
 また、次の PowerShell スクリプトを実行して、データ ファイルを作成および設定することもできます。
 ```powershell
-cls
+Clear-Host
 # revise directory as desired
 $dir = 'D:\BCP\';
 
@@ -93,7 +92,7 @@ Add-Content -Path $bcpFile -Value '3,Stella,Rosenhain,1992-03-02';
 
 #Review content
 Get-Content -Path $bcpFile;
-Invoke-Item $bcpFile;
+Notepad.exe $bcpfile;
 ```
 
 ## フォーマット ファイルの作成<a name="create_format_file"></a>
@@ -137,7 +136,7 @@ Notepad D:\BCP\myFirstImport.xml
 XML フォーマット ファイルの `D:\BCP\myFirstImport.xml` は次のようになります。
 ```xml
 <?xml version="1.0"?>
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>

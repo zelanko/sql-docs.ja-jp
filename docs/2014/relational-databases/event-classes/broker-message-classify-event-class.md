@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4926c53c5c64afe1ac7ad7b4ff002ad665287178
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4398085227952f30e4df7d54ac78c1aef1355173
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664051"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Service Broker によりメッセージのルーティングが決定されると、 **Broker:Message Classify** イベントを生成します。  
@@ -34,7 +33,7 @@ ms.locfileid: "48214852"
 |**DatabaseID**|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**EventClass**|**int**|キャプチャされたイベント クラスの種類。 **Broker:Message Classify** の場合は、常に **141**です。|27|いいえ|  
 |**EventSequence**|**int**|このイベントのシーケンス番号。|51|いいえ|  
-|**EventSubClass**|**nvarchar**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> **Local**: 選択されるルートには LOCAL アドレスが含まれます。<br /><br /> **リモート**: 選択されるルートは LOCAL 以外のアドレス。<br /><br /> **遅延**: 転送が無効か存在する一致するルートがないため、メッセージが遅延します。|21|はい|  
+|**EventSubClass**|**nvarchar**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> **Local**: 選択されるルートには LOCAL アドレスが含まれます。<br /><br /> **Remote**: 選択されるルートには、LOCAL 以外のアドレスが含まれます。<br /><br /> **Delayed**: 転送が無効か、一致するルートが存在しないため、メッセージが遅延されます。|21|[はい]|  
 |**FileName**|**nvarchar**|メッセージ送信先のサービス名。|36|いいえ|  
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
 |**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  

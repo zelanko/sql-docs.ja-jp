@@ -1,6 +1,6 @@
 ---
 title: DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 075615be9adac78aa59e6dfad1934fc4d7993bf3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223597"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 1 つ以上のデータベース列から秘密度の分類に関するメタデータを削除します。
 
@@ -64,7 +64,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 ## <a name="permissions"></a>アクセス許可  
 
-ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFACTION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
+ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFICATION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
 
 
 ## <a name="examples"></a>使用例  

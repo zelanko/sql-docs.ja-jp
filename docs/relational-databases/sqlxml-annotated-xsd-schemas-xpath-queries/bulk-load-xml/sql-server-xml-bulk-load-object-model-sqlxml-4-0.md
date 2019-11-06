@@ -29,16 +29,15 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e6ae99d44fbcf3f09a18fb899a2d14368dfd31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6201ddd9a04fd95ae27b987710f94701161577cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005282"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 一括読み込みオブジェクト モデル (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47790910"
  Execute  
  パラメーターとして渡されるスキーマ ファイルとデータ ファイル (またはストリーム) を使用して、データの一括読み込みを行います。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  一括読み込み  
  一括読み込みを実行するかどうかを指定します。 このプロパティは、(を SchemaGen、SGDropTables、および SGUseID プロパティを参照してください)、スキーマだけが生成され、一括読み込みを実行する場合に便利です。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、XML 一括読み込みが行われます。 FALSE に設定すると、XML 一括読み込みは行われません。  
   
@@ -71,12 +70,12 @@ ms.locfileid: "47790910"
   
  ConnectionString と ConnectionCommand プロパティを使用する場合、XML 一括読み込みは、最後の指定したプロパティを使用します。  
   
- 既定値は NULL になります。  
+ 既定値は NULL です。  
   
  ConnectionString  
  データベース インスタンスへの接続の確立に必要な情報を提供する OLE DB 接続文字列を指定します。 ConnectionString と ConnectionCommand プロパティを使用する場合、XML 一括読み込みは、最後の指定したプロパティを使用します。  
   
- 既定値は NULL になります。  
+ 既定値は NULL です。  
   
  ErrorLogFile  
  XML 一括読み込みでエラーとメッセージを記録するログ ファイル名を指定します。 既定値は空文字列で、この場合ログは記録されません。  
@@ -140,7 +139,7 @@ ms.locfileid: "47790910"
  既定値は FALSE です。  
   
  TempFilePath  
- XML 一括読み込みで、読み込んだデータ用の一時ファイルを作成するファイル パスを指定します。 このプロパティは、Transaction プロパティを TRUE に設定した場合にのみ有用です。いることを確認する必要があります、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 一括読み込みに使用されるアカウントは、このパスにアクセスします。 このプロパティを設定しない場合、XML 一括読み込みでは、TEMP 環境変数で指定された場所に一時ファイルが格納されます。  
+ XML 一括読み込みで、読み込んだデータ用の一時ファイルを作成するファイル パスを指定します。 (このプロパティでは、トランザクションのプロパティが TRUE に設定する場合にのみ便利です)。いることを確認する必要があります、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 一括読み込みに使用されるアカウントは、このパスにアクセスします。 このプロパティを設定しない場合、XML 一括読み込みでは、TEMP 環境変数で指定された場所に一時ファイルが格納されます。  
   
  トランザクション  
  一括読み込みをトランザクションとして実行するよう指定します。この場合、一括読み込みが失敗するとロールバックが実行されます。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、一括読み込みはトランザクション コンテキストで実行されます。 TempFilePath プロパティは、トランザクションが TRUE に設定されている場合にのみ便利です。  

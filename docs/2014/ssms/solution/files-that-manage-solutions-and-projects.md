@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], files
@@ -18,12 +18,12 @@ ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037b8b76aed407e89a4d8cb0556bd3d8bbcff3ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8481c1cce3e43287c04678ddae10ac1b0703af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044381"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>ソリューションとプロジェクトを管理するためのファイル
   ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]固有の種類のファイルについて説明します。 既定では、すべてのソリューションとプロジェクトが \My Documents\SQL Server Management Studio\Projects に作成されます。  

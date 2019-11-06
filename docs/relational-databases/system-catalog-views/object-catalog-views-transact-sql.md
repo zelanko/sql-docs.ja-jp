@@ -1,7 +1,7 @@
 ---
 title: オブジェクト カタログ ビュー (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,18 +16,19 @@ ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc012ec59e264a496892de2e296e1dfbd45a098b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daa9064feb59ab7052077d9d67701630ee7fcef5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658121"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220355"
 ---
-# <a name="object-catalog-views-transact-sql"></a>オブジェクト カタログ ビュー (Transact-SQL)
+# <a name="object-catalog-views-transact-sql"></a>オブジェクト カタログ ビュー (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ここでは、次のカタログ ビューについて説明します。  
-  
+このセクションには、次のカタログ ビューへのリンクが含まれています。
+
 |||  
 |-|-|  
 |[sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)|[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
@@ -45,13 +46,13 @@ ms.locfileid: "51658121"
 |[sys.hash_indexes](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.synonyms](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)|  
 |[sys.identity_columns](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)|[sys.table_types](../../relational-databases/system-catalog-views/sys-table-types-transact-sql.md)|  
 |[sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|[sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)|
-[sys.trigger_event_types](../../relational-databases/system-catalog-views/sys-trigger-event-types-transact-sql.md)|[sys.key_constraints](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)|
+|[sys.trigger_event_types](../../relational-databases/system-catalog-views/sys-trigger-event-types-transact-sql.md)|[sys.key_constraints](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)|
 |[sys.trigger_events](../../relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)|[sys.masked_columns](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)|
 |[sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|
 |[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)|[sys.numbered_procedure_parameters](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)|
 |[sys.numbered_procedures](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム カタログ ビュー](catalog-views-transact-sql.md) [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

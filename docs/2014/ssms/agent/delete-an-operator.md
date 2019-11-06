@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -18,12 +18,12 @@ ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aebc7d167d03868a05d3b39d57b0af948237459a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524388"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告通知を受信しないように、オペレーターを削除する方法について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "48052002"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  オペレーターを削除すると、そのオペレーターと関連するすべての通知も削除されます。  
@@ -77,12 +77,12 @@ ms.locfileid: "48052002"
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
-    -- deletes operator 'Test Operator' and reassigns all alerts and jobs sent to that operator to 'François Ajenstat'  
+    -- deletes operator 'Test Operator' and reassigns all alerts and jobs sent to that operator to 'Fran??ois Ajenstat'  
     USE msdb ;  
     GO  
   
     EXEC sp_delete_operator @name = 'Test Operator',  
-        @reassign_to_operator = 'François Ajenstat';  
+        @reassign_to_operator = 'Fran??ois Ajenstat';  
     GO  
     ```  
   

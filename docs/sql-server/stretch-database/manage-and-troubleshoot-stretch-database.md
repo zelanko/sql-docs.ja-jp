@@ -1,8 +1,7 @@
 ---
 title: Stretch Database の管理とトラブルシューティング | Microsoft Docs
-ms.custom: ''
 ms.date: 06/27/2016
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,14 @@ helpviewer_keywords:
 - managing Stretch Database
 - troubleshooting Stretch Database
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6de10b5f30073a33a23549cb4522d90a162ace7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 282d712f1ebb870c236917d49beb50423957b2a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136107"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database の管理とトラブルシューティング
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

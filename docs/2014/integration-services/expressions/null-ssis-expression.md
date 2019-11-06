@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6659b9390f52bc27c52f82b875d50da3fd37b5ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768828"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 式)
   要求されたデータ型の NULL 値を返します。  
@@ -53,7 +52,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
   
 ## <a name="expression-examples"></a>式の例  
- これらの例は、DT_STR、DT_DATE、および DT_BOOL データ型の NULL 値を返します。  
+ これらの例は、DT_STR、DT_DATE、DT_BOOL データ型の NULL 値を返します。  
   
 ```  
 NULL(DT_STR,10,1252)  
@@ -63,6 +62,6 @@ NULL(DT_BOOL)
   
 ## <a name="see-also"></a>参照  
  [ISNULL &#40;SSIS 式&#41;](null-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

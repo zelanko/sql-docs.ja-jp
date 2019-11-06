@@ -14,12 +14,12 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 208687bdc243b596b4b47d1696fdcea472552af3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115117"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193305"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData**列の値をバインドしないで結果セットのデータを取得するために使用します。 **SQLGetData**列から大量のデータを取得する同じ列に連続して呼び出すことができます、**テキスト**、 **ntext**、または**イメージ**データ型。  
@@ -95,7 +95,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQLGetData 関数](http://go.microsoft.com/fwlink/?LinkId=59350)   
+ [SQLGetData 関数](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

@@ -11,14 +11,13 @@ dev_langs:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7412b6ee9ad3b551fb91200c7d3f45f3287f6780
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52255654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119849"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>リテラル日付文字列を DATE 値に非決定論的に変換する
 
@@ -28,7 +27,7 @@ CHARACTER 文字列を DATE データ型に変換することを許可すると�
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE 例: ポーランド語の月名
+## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE の例:ポーランド語の月の名前
 
 - `SET LANGUAGE Polish;`
 
@@ -75,7 +74,7 @@ SL_Croatian
 
 また、**ymd** が指定された場合、何が出力されるかはわかりません。 "2018" という数値は日としては大きすぎる数字です。
 <!--
-The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team??
+The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>特定の国
@@ -124,8 +123,8 @@ YMD-Interpretation--?--NotGuaranteed
 
 CAST と CONVERT に関する Microsoft のドキュメント記事には、CONVERT 関数と併用し、日付変換を_決定的に_制御できる明示的コードの一覧があります。 この記事は毎月、飛び抜けて高い閲覧数を記録します。
 
-- [CAST と CONVERT (Transact-SQL): 日付と時刻のスタイル](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST と CONVERT (Transact-SQL): 一部の datetime 変換が非決定論的である](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST および CONVERT (Transact-SQL):日付および時刻のスタイル](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST および CONVERT (Transact-SQL):一部の datetime 変換が非決定的である](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 
@@ -137,7 +136,7 @@ SQL Server 2000 では、互換性レベルは 80 でした。 80 以下のレ�
 
 #### <a name="unicode"></a>Unicode
 
-<!-- The next live sentence needs an explanatory example!  N'??'.
+<!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
 照合順序間で行われる Unicode 以外の文字データの変換も非決定論的であると見なされます。
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111025"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108698"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>暗号化キーの削除と再作成 (SSRS 構成マネージャー)
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  
@@ -41,7 +40,7 @@ ms.locfileid: "48111025"
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>暗号化キーの再作成方法 (Reporting Services 構成ツール)  
   
-1.  レポート サーバー Web サービスおよび HTTP に変更することによってアクセスを無効にする、 `IsWebServiceEnabled` rsreportserver.config ファイルのプロパティ。 この手順を実行すると、レポート サーバーへの認証要求の送信が一時的に停止されますが、レポート サーバーが完全にシャットダウンされることはありません。 キーを再作成できるように最小限のサービスが必要です。  
+1.  rsreportserver.confi ファイルで `IsWebServiceEnabled` プロパティを変更することにより、レポート サーバー Web サービスおよび HTTP アクセスを無効にします。 この手順を実行すると、レポート サーバーへの認証要求の送信が一時的に停止されますが、レポート サーバーが完全にシャットダウンされることはありません。 キーを再作成できるように最小限のサービスが必要です。  
   
      レポート サーバーのスケールアウト配置に対する暗号化キーを再作成する場合、配置内のすべてのインスタンスでこのプロパティを無効にします。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48111025"
   
     2.  rsreportserver.config ファイルを開きます。  
   
-    3.  `IsWebServiceEnabled`プロパティ、指定`False`、変更を保存します。  
+    3.  `IsWebServiceEnabled` プロパティに対して `False` を指定し、変更を保存します。  
   
 2.  Reporting Services 構成ツールを起動して、構成するレポート サーバー インスタンスに接続します。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48111025"
   
 4.  レポート サーバー Windows サービスを再開します。 レポート サーバーのスケールアウト配置に対する暗号化キーを再作成する場合、すべてのインスタンスでサービスを再起動します。  
   
-5.  Web サービスおよび HTTP に変更することによってアクセスを再度有効にする、 `IsWebServiceEnabled` rsreportserver.config ファイルのプロパティ。 スケールアウト配置の場合は、すべてのインスタンスについてこの作業を行います。  
+5.  rsreportserver.confi ファイルで `IsWebServiceEnabled` プロパティを変更することにより、レポート サーバー Web サービスおよび HTTP アクセスを再び有効にします。 スケールアウト配置の場合は、すべてのインスタンスについてこの作業を行います。  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>暗号化キーの再作成方法 (rskeymgmt)  
   
@@ -110,14 +109,14 @@ ms.locfileid: "48111025"
   
 1.  各共有データ ソースに対して、接続文字列を再入力する必要があります。  
   
-2.  保存された資格情報を使用するレポートおよび共有データ ソースごとに、ユーザー名とパスワードを再入力して、これらの情報を保存する必要があります。 詳細については、次を参照してください。[資格情報の指定とレポート データ ソースに関する接続情報](../../integration-services/connection-manager/data-sources.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+2.  保存された資格情報を使用するレポートおよび共有データ ソースごとに、ユーザー名とパスワードを再入力して、これらの情報を保存する必要があります。 詳細については、 [オンライン ブックの「](../../integration-services/connection-manager/data-sources.md) レポート データ ソースに関する資格情報と接続情報を指定する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
 3.  各データ ドリブン サブスクリプションを開いて、資格情報をサブスクリプション データベースに再入力します。  
   
 4.  暗号化されたデータ (ファイル共有の配信拡張機能や暗号化を使用するサードパーティ製の配信拡張機能など) を使用する各サブスクリプションを開いて、資格情報を再入力します。 レポート サーバーの電子メール配信を使用するサブスクリプションでは、暗号化されたデータが使用されないため、キーの変更による影響を受けません。  
   
 ## <a name="see-also"></a>参照  
- [構成し、暗号化キーの管理&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [暗号化されたレポート サーバーのデータ保存&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

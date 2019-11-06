@@ -1,7 +1,7 @@
 ---
 title: Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 044e52311bbdb21f1a7f144a2b6f25809ea33ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610180"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908978"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +30,8 @@ ms.locfileid: "47610180"
   
 ## <a name="configure-encryption"></a>暗号化の構成  
  次の手順では、ストアド プロシージャ [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) を使用して暗号化設定を指定する方法を示します。  
-  
-1.  **暗号化アルゴリズムを決定する:** まず、使用する暗号化アルゴリズムの名前を決定します。 次のアルゴリズムから 1 つ選択します。  
+
+1.  **暗号化アルゴリズムを決定する:** 最初に、使用する暗号化アルゴリズムの名前を決定します。 次のアルゴリズムから 1 つ選択します。  
   
     -   AES_128  
   
@@ -44,7 +43,7 @@ ms.locfileid: "47610180"
   
     -   NO_ENCRYPTION  
   
-2.  **データベース マスター キーの作成:** データベースに格納されるマスター キーのコピーを暗号化するためのパスワードを選択します。  
+2.  **データベースのマスター キーを作成する:** データベースに格納するマスター キーのコピーを暗号化するためのパスワードを指定します。  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +54,7 @@ ms.locfileid: "47610180"
     GO  
     ```  
   
-3.  **バックアップ証明書または非対称キーを作成する** : 暗号化には、証明書または非対称キーのいずれかを使用できます。 次の例では、暗号化に使用するバックアップ証明書を作成します。  
+3.  **証明書または非対称キーを作成する:** 暗号化には、証明書または非対称キーのいずれかを使用できます。 次の例では、暗号化に使用するバックアップ証明書を作成します。  
   
     ```sql  
     USE Master;  
@@ -65,7 +64,7 @@ ms.locfileid: "47610180"
     GO  
     ```  
   
-4.  **マネージド バックアップの暗号化を設定する:** 対応する値を使用して **managed_backup.sp_backup_config_advanced** ストアド プロシージャを呼び出します。 たとえば、次の例では暗号化に、 `MyDB` という証明書と `MyTestDBBackupEncryptCert` の暗号化アルゴリズムを使用し、 `AES_128` データベースを構成します。  
+4.  **マネージド バックアップ暗号化を設定する:** 対応する値を使用して **managed_backup.sp_backup_config_advanced** ストアド プロシージャを呼び出します。 たとえば、次の例では暗号化に、 `MyDB` という証明書と `MyTestDBBackupEncryptCert` の暗号化アルゴリズムを使用し、 `AES_128` データベースを構成します。  
   
     ```  
     USE msdb;  
@@ -84,17 +83,17 @@ ms.locfileid: "47610180"
 ## <a name="configure-a-custom-backup-schedule"></a>カスタム バックアップ スケジュールの構成  
  次の手順では、ストアド プロシージャ [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) を使用して、カスタム スケジュールを設定する方法を示します。  
   
-1.  **完全バックアップの頻度を決定する** : データベースの完全バックアップを実行する頻度を決定します。 完全バックアップを '毎日' または '毎週' 実行するか選択できます。  
+1.  **完全バックアップの頻度を決定する:** :データベースの完全バックアップを実行する頻度を決定します。 完全バックアップを '毎日' または '毎週' 実行するか選択できます。  
   
-2.  **ログ バックアップの頻度を決定する** : ログ バックアップを実行する頻度を決定します。 この値は、分または時間単位です。  
+2.  **ログ バックアップの頻度を決定する:** ログ バックアップを実行する頻度を決定します。 この値は、分または時間単位です。  
   
-3.  **毎週バックアップをする曜日を決定する** : 毎週バックアップをする場合、完全バックアップを実行する曜日を選択します。  
+3.  **毎週のバックアップの曜日を決定する:** バックアップを毎週実行する場合は、完全バックアップを実行する曜日を選択します。  
   
-4.  **バックアップの開始時刻を決定する**: 24 時間表記を使用し、バックアップの開始時刻を選択します。  
+4.  **バックアップの開始時刻を決定する:** 24 時間表記を使用して、バックアップの開始時刻を選択します。  
   
-5.  **バックアップを許可する時間の長さを決定する** : バックアップが完了しなければならない時間を指定します。  
+5.  **バックアップで許可される時間の長さを決定する:** これは、その時間中にバックアップを完了する必要がある時間を指定します。  
   
-6.  **カスタム バックアップ スケジュールを設定する:** 次のストアド プロシージャで、 `MyDB` データベースのカスタム スケジュールを定義します。 完全バックアップは、毎週 `Monday` に `17:30`に実行されます。 ログ バックアップは `5` 分ごとに実行されます。 バックアップの完了には 2 時間かかります。  
+6.  **カスタム バックアップ スケジュールを構成する:** 次のストアド プロシージャで、`MyDB` データベースのカスタム スケジュールを定義します。 完全バックアップは、毎週 `Monday` に `17:30`に実行されます。 ログ バックアップは `5` 分ごとに実行されます。 バックアップの完了には 2 時間かかります。  
   
     ```  
     USE msdb;  

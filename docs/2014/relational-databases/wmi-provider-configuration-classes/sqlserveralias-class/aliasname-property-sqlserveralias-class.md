@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - AliasName Property (SqlServerAlias Class)
@@ -20,12 +18,12 @@ ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9faf224c7fa4b14c8a3dc9a2cdc0439e22ea16d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1115707b08c3068b27d83e3e292e6baf64e6cbeb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035679"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName プロパティ (SqlServerAlias クラス)
   サーバー接続別名を取得します。  

@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cdfaf96e353c8942d48b26cc47383121c2fa6cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f49c43eeaf6f5b799d60f500c303227f94452503
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63151008"
 ---
 # <a name="xtp-transaction-log"></a>XTP Transaction Log
-  XTP トランザクション ログ パフォーマンス オブジェクトには、XTP トランザクション ロギングに関連するカウンターが含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  XTP Transaction Log パフォーマンス オブジェクトには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の XTP トランザクション ログに関連するカウンターが含まれています。  
   
  この表は、 **XTP Transaction Log**カウンター。  
   

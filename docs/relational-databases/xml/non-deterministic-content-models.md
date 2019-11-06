@@ -11,15 +11,14 @@ helpviewer_keywords:
 - non-deterministic content models
 - content models [XML in SQL Server]
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6ef6f0f0a8d271780df238f9af175d4a85df7297
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 4de53a22bb650098db48619bef26efe543dd9ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137434"
 ---
 # <a name="non-deterministic-content-models"></a>非決定的コンテンツ モデル
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -27,12 +26,12 @@ ms.locfileid: "51656469"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 以降では、オカレンス制約が 0、1、または unbounded の場合、非決定的コンテンツ モデルが許容されます。  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>例 : 拒否される非決定的コンテンツ モデル  
+## <a name="example-non-deterministic-content-model-rejected"></a>例: 拒否される非決定的コンテンツ モデル  
  次の例では、非決定的コンテンツ モデルを含む XML スキーマの作成を試みています。 このコードは、 `<root>` 要素には 2 つの `<a>` 要素で構成されたシーケンスが 1 つ必要なのか、 `<root>` 要素にはそれぞれ `<a>` 要素を含む 2 つのシーケンスが必要なのかが明確ではないので失敗します。  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="1" maxOccurs="2">  
@@ -61,12 +60,12 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>例 : 許容される非決定的コンテンツ モデル  
+## <a name="example-non-deterministic-content-model-accepted"></a>例: 許容される非決定的コンテンツ モデル  
  次のスキーマは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 よりも前のバージョンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では拒否されます。  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="0" maxOccurs="unbounded">  

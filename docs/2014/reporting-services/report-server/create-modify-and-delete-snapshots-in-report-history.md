@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d72c7991f1ebcf36a3408af344225967c1dc498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: ecddbed328d1625f525069fe3d502c3348eb065a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103911"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>レポート履歴のスナップショットの作成、変更および削除
   レポート履歴は、一連のレポート スナップショットです。 スナップショットの追加と削除、またはレポート履歴の記憶域に影響するプロパティの変更を行うことで、レポート履歴を管理できます。 レポート履歴は手動で、またはスケジュールに従って作成できます。  
@@ -61,10 +60,10 @@ ms.locfileid: "48144702"
  また、レポートを削除するとレポート履歴も削除されます。 たとえば、月間の売上レポートを新しい売上レポートに置き換えるために削除する場合、そのレポートに関連付けられたすべてのレポート履歴も削除されます。 ただし、レポートを移動する場合、すべてのレポート履歴がそのレポートと共に移動されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート履歴の作成&#40;Reporting Services の SharePoint 統合モード&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [レポート履歴の作成 (Reporting Services の SharePoint 統合モード)](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
- [レポート履歴にスナップショットを追加&#40;レポート マネージャー&#41;](add-a-snapshot-to-report-history-report-manager.md)   
- [レポート履歴を制限する &#40;レポート マネージャー&#41;](../reports/limit-report-history-report-manager.md)  
+ [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](report-server-content-management-ssrs-native-mode.md)   
+ [レポート履歴へのスナップショットの追加 (レポート マネージャー)](add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴を制限する (レポート マネージャー)](../reports/limit-report-history-report-manager.md)  
   
   

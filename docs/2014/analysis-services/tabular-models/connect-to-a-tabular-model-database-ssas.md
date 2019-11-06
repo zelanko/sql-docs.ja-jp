@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067659"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>テーブル モデル データベースへの接続 (SSAS)
   テーブル モデルを構築し、Analysis Services テーブル モード サーバーに配置したら、クライアント アプリケーションからの使用を可能にするための権限を設定する必要があります。 このトピックでは、クライアント アプリケーションからデータベースに接続するための権限と方法について説明します。  
@@ -51,7 +50,7 @@ ms.locfileid: "48100092"
   
 1.  サーバーの全体管理で、[サービス アカウントの構成] ページを開きます。  
   
-2.  Excel Services によって使用されるサービス アプリケーション プールを選択します。 **[サービス アプリケーション プール - SharePoint Web サービスのシステム]** またはカスタム アプリケーション プールである可能性があります。 Excel Services によって使用される管理アカウントがページに表示されます。  
+2.  Excel Services によって使用されるサービス アプリケーション プールを選択します。 可能性があります**サービス アプリケーション プール - SharePoint Web サービスのシステム**またはカスタム アプリケーション プール。 Excel Services によって使用される管理アカウントがページに表示されます。  
   
      SharePoint モードの Reporting Services を含む SharePoint ファームでは、Reporting Services サービス アプリケーションのアカウント情報も取得します。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48100092"
   
 5.  データベースを選択します。 有効なデータベースを選択すると、データベースの単一の **モデル** キューブが表示されます。 **[次へ]** をクリックし、 **[完了]** をクリックします。  
   
- 接続を確立した後は、データを使用して、ピボットテーブルやピボットグラフを作成できます。 詳細については、「[Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)」を参照してください。  
+ 接続を確立した後は、データを使用して、ピボットテーブルやピボットグラフを作成できます。 詳しくは、後の「 [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)で [ロール マネージャー] ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint からの接続  
  PowerPivot for SharePoint を使用している場合は、Analysis Services テーブル モード サーバー上で実行されているデータベースへのリダイレクトを提供する BI セマンティック モデル接続ファイルを SharePoint で作成できます。 BI セマンティック モデル接続により、データベースへの HTTP エンドポイントが提供されます。 また、SharePoint サイト上のドキュメントを定期的に使用するナレッジ ワーカーが簡単にテーブル モデルにアクセスできるようになります。 ナレッジ ワーカーがテーブル モデル データベースにアクセスするために知っておく必要があるのは、BI セマンティック モデル接続ファイルの場所またはその URL だけです。 サーバーの場所やデータベース名に関する詳細は、BI セマンティック モデル接続にカプセル化されます。 作成して、BI セマンティック モデル接続ファイルの使用の詳細については、次を参照してください[PowerPivot BI セマンティック モデル接続&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)と[表形式モデルへの BI セマンティック モデル接続の作成。データベース](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)します。  
@@ -114,7 +113,7 @@ ms.locfileid: "48100092"
   
  SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、ユーザーがブックに対する十分な SharePoint 権限を持っていないために発生します。 ユーザーには、 **読み取り** 権限以上の権限が必要です。 データにアクセスするには、**表示のみ** 権限では不十分です。  
   
-## <a name="see-also"></a>参照  
- [表形式モデル ソリューションの配置&#40;SSAS 表形式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [テーブル モデル ソリューションの配置 &#40;SSAS テーブル&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

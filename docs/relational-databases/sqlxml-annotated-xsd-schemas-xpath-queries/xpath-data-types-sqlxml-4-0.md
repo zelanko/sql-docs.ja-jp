@@ -25,16 +25,15 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c9f66bf1ded94b0877309917e9f03e71512ac8f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051591"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "51670408"
  XPath が 3 つのデータ型:**文字列**、**数**、および**ブール**します。 **数**データ型は、IEEE 754 倍精度浮動小数点では常にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float (53)** データ型が XPath に最も近い**数**します。 ただし、 **float (53)** IEEE 754 ではありません。 たとえば、非数 (NaN) も無限大も使用されません。 数値以外の文字列を変換しようとしています。**数**エラー 0 個の結果で除算しようとします。  
   
 ## <a name="xpath-conversions"></a>XPath 変換  
- `OrderDetail[@UnitPrice > "10.0"]` などの XPath クエリを使用する場合は、データ型の変換を暗黙的に行うか明示的に行うかによって、クエリの意味が微妙に変わります。 このため、XPath データ型の実装方法について理解しておくことが重要です。 XML パス言語 (XPath) version 1.0 W3C XPath 言語仕様の W3C Web サイトで 8 1999 年 10 月の推奨事項を提示するを参照して https://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
+ `OrderDetail[@UnitPrice > "10.0"]` などの XPath クエリを使用する場合は、データ型の変換を暗黙的に行うか明示的に行うかによって、クエリの意味が微妙に変わります。 このため、XPath データ型の実装方法について理解しておくことが重要です。 XML パス言語 (XPath) version 1.0 W3C XPath 言語仕様の W3C Web サイトで 8 1999 年 10 月の推奨事項を提示するを参照して http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath の演算子は、次の 4 つのカテゴリに分けられます。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "51670408"
 |どちらもノード セットでない場合|両方のオペランドを変換**数**し比較。|両方のオペランドを共通のデータ型に変換し比較。 変換**ブール**いずれかの場合**ブール**、**数**いずれかの場合**数**それ以外に変換**文字列**。|  
   
 > [!NOTE]  
->  XPath の関係演算子はオペランドを常に変換するため、**数**、**文字列**比較はできません。 日付の比較は、SQL Server 2000 は、XPath 仕様には、このバリエーションを提供しています: 関係演算子を比較すると、**文字列**に、**文字列**、ノード セットに、**文字列**、または、文字列の値を持つノード セットを文字列の値を持つノード セット、**文字列**比較 (いない、**数**の比較) が使用されます。  
+>  XPath の関係演算子はオペランドを常に変換するため、**数**、**文字列**比較はできません。 日付の比較を含めるには、SQL Server 2000 は、XPath 仕様にこのバリエーションの 1 つを提供します。関係演算子を比較すると、**文字列**を**文字列**、ノード セットと、**文字列**、または、文字列値ノード セットを文字列値ノード セットを**文字列**比較 (いない、**数**比較) が実行されます。  
   
 ## <a name="node-set-conversions"></a>ノード セット変換  
  ノード セット変換は常に直感的なものとは限りません。 ノード セットに変換されます、**文字列**セット内の最初のノードのみの文字列値を取得しています。 ノード セットに変換されます**数**に変換してから、**文字列**、および変換し、**文字列**に**数**します。 ノード セットに変換されます**ブール**によってその存在をテストします。  
@@ -74,7 +73,7 @@ ms.locfileid: "51670408"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ノード セットで位置の選択は実行されません。たとえば、XPath クエリ `Customer[3]` は 3 番目の顧客を意味しますが、このような位置の選択は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサポートされていません。 ノードではそのため、-設定-に-**文字列**またはノードの設定-に-**数**XPath 仕様での説明に従って、変換は実装されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XPath 仕様で "先頭" の意味で指定されているものが "任意" の意味として扱われます。 W3C XPath 仕様に XPath クエリに基づいて、たとえば、 `Order[OrderDetail/@UnitPrice > 10.0]` 、最初にそれらの注文を選択**OrderDetail**は、 **[単価]** 10.0 よりも大きい。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、次の XPath クエリでこれらの注文を選択する**OrderDetail**は、 **[単価]** 10.0 よりも大きい。  
   
- 変換**ブール**、存在検査が生成されますテスト。 したがって、XPath クエリ`Products[@Discontinued=true()]`が SQL 式と同じ"products.discontinued is null でない"、SQL 式ではありません"Products.Discontinued = 1" です。 クエリを後者の SQL 式に相当するためには、以外を最初にノード セットを変換**ブール**などの入力**数**します。 たとえば、 `Products[number(@Discontinued) = true()]` のようにします。  
+ 変換**ブール**、存在検査が生成されますテスト。 したがって、XPath クエリ`Products[@Discontinued=true()]`が SQL 式と同じ"products.discontinued is null でない"、SQL 式ではありません"Products.Discontinued = 1" です。 クエリを後者の SQL 式に相当するためには、以外を最初にノード セットを変換**ブール**などの入力**数**します。 たとえば、`Products[number(@Discontinued) = true()]` のようにします。  
   
  大半の演算子は、ノード セット内の 1 つ以上のノードに対して TRUE であれば TRUE となるように定義されているので、これらの演算はノード セットが空の場合は常に FALSE となります。 したがって、A が空の場合、`A = B` と `A != B` は両方とも FALSE になり、`not(A=B)` と `not(A!=B)` は TRUE になります。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "51670408"
 ## <a name="mapping-xdr-data-types-to-xpath-data-types"></a>XDR データ型から XPath データ型へのマッピング  
  次の表に示すように、ノードの XPath データ型は、スキーマ内の XDR データ型から派生した (ノード **[社員コード]** は、例示の目的に使用)。  
   
-|XDR データ型|同等の<br /><br /> XPath データ型|使用される SQL Server 変換|  
+|XDR データ型|同等の表記<br /><br /> XPath データ型|使用される SQL Server 変換|  
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|なし|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  

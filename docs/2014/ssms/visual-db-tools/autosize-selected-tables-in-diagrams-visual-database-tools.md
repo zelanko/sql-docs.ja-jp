@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic database diagram table sizing
@@ -15,12 +15,12 @@ ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84dbc664cf9804ee7fa276371ed7f3f90be7f71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63297571"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>ダイアグラムで選択したテーブルのサイズの自動変更 (Visual Database Tools)
   すべてのフィールドを表示できる最小のサイズに合うように、ダイアグラム内のテーブルのサイズを簡単に変更できます。  

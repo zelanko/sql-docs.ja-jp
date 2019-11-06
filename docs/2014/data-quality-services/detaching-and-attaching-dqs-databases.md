@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-author: douglaslMS
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 50c29f343399e0cc7d3c65d630ac622278d10eec
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480692"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS データベースのデタッチとアタッチ
   ここでは、DQS データベースをデタッチおよびアタッチする方法について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "51032019"
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
 ##  <a name="Detach"></a> DQS データベースのデタッチ  
- SQL Server Management Studio を使用して DQS データベースをデタッチすると、デタッチされたファイルはコンピューターに残り、同じ SQL Server インスタンスに再アタッチすることも、別のサーバーに移動して、そこにアタッチすることもできます。 DQS データベース ファイルは通常、Data Quality Services コンピューターの次の場所: C:\Program files \microsoft SQL Server\MSSQL12 します。*< Instance_Name >* \MSSQL\DATA します。  
+ SQL Server Management Studio を使用して DQS データベースをデタッチすると、デタッチされたファイルはコンピューターに残り、同じ SQL Server インスタンスに再アタッチすることも、別のサーバーに移動して、そこにアタッチすることもできます。 DQS データベース ファイルは通常、Data Quality Services コンピューターの C:\Program Files\Microsoft SQL Server\MSSQL12. *<Instance_Name>* \MSSQL\DATA.  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "51032019"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **[データベースの詳細]** (下部) ペインには、アタッチするファイルの名前が表示されます。 ファイルのパス名を確認または変更するには、 **参照** ボタン ([...]) をクリックします。  
+5.  **[データベースの詳細]** (下部) ペインには、アタッチするファイルの名前が表示されます。 ファイルのパス名を確認または変更するには、**参照**ボタン [...] をクリックしてください。  
   
 6.  DQS_MAIN データベースをアタッチするには、 **[OK]** をクリックします。  
   

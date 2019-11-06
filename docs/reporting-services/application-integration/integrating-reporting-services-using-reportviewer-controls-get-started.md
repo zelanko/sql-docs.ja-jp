@@ -2,18 +2,18 @@
 title: ReportViewer 2016 Cortana の概要 | Microsoft Docs
 ms.date: 09/18/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fedc2265a7d8e879a2ca67c5d2e6946ae1cb2c30
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503908"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>ReportViewer コントロールを使用した Reporting Services の統合 - 概要
 
@@ -55,7 +55,7 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
 
 <!DOCTYPE html>
 
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
     <title></title>
@@ -177,7 +177,7 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
 
 ```
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <style>
         html,body,form,#div1 {
@@ -201,11 +201,11 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
 
 ### <a name="setting-the-parents-height-attribute"></a>親の height 属性を設定
 
-ビューポートの割合の長さについては、「[Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths)」(ビューポートの割合の長さ) を参照してください。
+ビューポートの割合の長さについては、「[Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)」(ビューポートの割合の長さ) を参照してください。
 
 ```
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 </head>
 <body>
@@ -232,7 +232,7 @@ Report Viewer コントロールは NuGet パッケージとして出荷され�
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. ツールボックス内のいずれかの場所を右クリックし、**[アイテムの追加]** を選択します。
+3. ツールボックス内のいずれかの場所を右クリックし、 **[アイテムの追加]** を選択します。
 
     ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

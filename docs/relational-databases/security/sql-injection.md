@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e4fad8c85b620b817439529bfabd65361ed0207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126857"
 ---
 # <a name="sql-injection"></a>SQL インジェクション
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52536132"
   
  次のスクリプトは、単純な SQL インジェクションを示しています。 ハードコードされた文字列とユーザー入力の文字列を連結することによって、SQL クエリが作成されます。  
   
-```  
+```csharp
 var Shipcity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
@@ -40,19 +39,19 @@ var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";
   
  ユーザーは、都市の名前を入力するように要求されます。 ユーザーが「 `Redmond`」と入力した場合、スクリプトによって構築されたクエリは次のようになります。  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
 ```  
   
  ただし、ユーザーが次のように入力するとします。  
   
-```  
+```sql
 Redmond'; drop table OrdersTable--  
 ```  
   
  この場合、スクリプトによって構築されたクエリは次のようになります。  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
@@ -86,7 +85,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   検証されていないユーザー入力は連結しない。 文字列の連結は、スクリプト インジェクションを行うための主なポイントとなります。  
   
--   ファイル名に AUX、CLOCK$、COM1 ～ COM8、CON、CONFIG$、LPT1 ～ LPT8、NUL、および PRN を使用できる場合、これらの文字列をフィールドで受け入れない。  
+-   ファイル名の作成に使用できるフィールドでは、次の文字列を受け付けない:AUX、CLOCK$、COM1 から COM8、CON、CONFIG$、LPT1 から LPT8、NUL、PRN。  
   
  可能であれば、次の文字を含む入力は受け入れないでください。  
   
@@ -99,9 +98,9 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |**xp_**|`xp_cmdshell`など、カタログ拡張ストアド プロシージャ名の先頭に使用します。|  
   
 ### <a name="use-type-safe-sql-parameters"></a>Type-Safe SQL パラメーターの使用  
- **の** Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Parameters** コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
 myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",  
@@ -114,7 +113,7 @@ parm.Value = Login.Text;
 ### <a name="use-parameterized-input-with-stored-procedures"></a>ストアド プロシージャとパラメーター化された入力の使用  
  ストアド プロシージャがフィルターされていない入力を使用する場合、このストアド プロシージャは SQL インジェクションの影響を受けやすくなります。 たとえば、次のコードには脆弱性があります。  
   
-```  
+```csharp
 SqlDataAdapter myCommand =   
 new SqlDataAdapter("LoginStoredProcedure '" +   
                                Login.Text + "'", conn);  
@@ -125,7 +124,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
 ### <a name="use-the-parameters-collection-with-dynamic-sql"></a>動的な SQL を使用した Parameters コレクションの使用  
  ストアド プロシージャを使用できない場合でも、次のコード例に示すようにパラメーターを使用することができます。  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter(  
 "SELECT au_lname, au_fname FROM Authors WHERE au_id = @au_id", conn);  
 SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",   
@@ -136,7 +135,7 @@ Parm.Value = Login.Text;
 ### <a name="filtering-input"></a>入力のフィルター  
  入力をフィルターすると、エスケープ文字が削除されることで SQL インジェクションの防御に役立ちます。 ただし、問題となり得る文字は数が多いため、信頼性の高い防御策にはなりません。 次の例では、文字の文字列区切り記号を検索しています。  
   
-```  
+```csharp
 private string SafeSqlLiteral(string inputSQL)  
 {  
   return inputSQL.Replace("'", "''");  
@@ -146,7 +145,7 @@ private string SafeSqlLiteral(string inputSQL)
 ### <a name="like-clauses"></a>LIKE 句  
  `LIKE` 句を使用している場合、ワイルドカード文字もエスケープする必要があることに注意してください。  
   
-```  
+```csharp
 s = s.Replace("[", "[[]");  
 s = s.Replace("%", "[%]");  
 s = s.Replace("_", "[_]");  
@@ -155,7 +154,7 @@ s = s.Replace("_", "[_]");
 ## <a name="reviewing-code-for-sql-injection"></a>SQL インジェクションのコードの確認  
  `EXECUTE`、 `EXEC`、または `sp_executesql`を呼び出すすべてのコードを確認する必要があります。 次のようなクエリを使用すると、これらのステートメントを含むプロシージャの識別に役立てることができます。 このクエリは、 `EXECUTE` または `EXEC`という語の後に 1 ～ 4 個のスペースがあるかどうかをチェックします。  
   
-```  
+```sql
 SELECT object_Name(id) FROM syscomments  
 WHERE UPPER(text) LIKE '%EXECUTE (%'  
 OR UPPER(text) LIKE '%EXECUTE  (%'  
@@ -179,12 +178,12 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
   
  この方法を使用すると、SET ステートメントを次のように変更できます。  
   
-```  
---Before:  
+```sql
+-- Before:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
  + @au_lname + N'''';  
   
---After:  
+-- After:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
@@ -192,7 +191,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ### <a name="injection-enabled-by-data-truncation"></a>データの切り捨てによって有効になるインジェクション  
  変数に代入されるすべての動的な [!INCLUDE[tsql](../../includes/tsql-md.md)] は、その変数に割り当てられているバッファーよりも大きい場合は切り捨てられます。 予期しない長さの文字列をストアド プロシージャに渡すことで、強制的にステートメントの切り捨てを行うことができれば、攻撃者が結果を操作することも可能になります。 たとえば、次のスクリプトによって作成されるストアド プロシージャは、切り捨てによって有効になるインジェクションの影響を受けやすくなります。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
 @loginname sysname,  
 @old sysname,  
@@ -222,7 +221,7 @@ GO
   
  攻撃者は、sa の古いパスワードがわからなくても、128 文字バッファーに 154 文字を渡して新しいパスワードを設定できます。  
   
-```  
+```sql
 EXEC sp_MySetPassword 'sa', 'dummy',   
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
@@ -232,7 +231,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 ### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>QUOTENAME(@variable, '''') および REPLACE() 使用時の切り捨て  
  QUOTENAME() および REPLACE() から返される文字列は、割り当てられている領域よりも大きくなると、暗黙に切り捨てられます。 次の例で作成されるストアド プロシージャは、行われる可能性がある処理を示しています。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -269,13 +268,13 @@ GO
   
  このため、次のステートメントでは、すべてのユーザーのパスワードを前のコードで渡された値に設定します  
   
-```  
+```sql
 EXEC sp_MyProc '--', 'dummy', '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678'  
 ```  
   
  REPLACE() を使用すると、割り当てられたバッファー領域よりも大きくすることで強制的に文字列の切り捨てを行うことができます。 次の例で作成されるストアド プロシージャは、行われる可能性がある処理を示しています。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -314,7 +313,7 @@ GO
   
  次の計算は、すべての場合に対応します。  
   
-```  
+```sql
 WHILE LEN(@find_string) > 0, required buffer size =  
 ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
  + (LEN(@input) % LEN(@find_string))  
@@ -323,7 +322,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ### <a name="truncation-when-quotenamevariable--is-used"></a>QUOTENAME(@variable, ']') 使用時の切り捨て  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースの名前が `QUOTENAME(@variable, ']')`という形式のステートメントに渡されると、切り捨てが発生する可能性があります。 次に例を示します。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MyProc  
     @schemaname sysname,  
     @tablename sysname,  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - event notifications [WMI]
@@ -22,18 +20,18 @@ ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bd4def614340115bafc6046b4d0ea9d90f647e9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195732"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events の操作
   このトピックでは、WMI Provider for Server Events を使用したプログラミングを行う前に、検討する必要があるガイドラインを示します。  
   
 ## <a name="enabling-service-broker"></a>Service Broker の有効化  
- WMI Provider for Server Events は、イベントに対する WQL クエリを変換して、対象とするデータベースにイベント通知を作成します。 イベント通知のしくみを理解しておくと、プロバイダーに対してプログラミングを行う際に役立つ場合があります。 詳細については、「 [WMI Provider for Server Events の概念](http://technet.microsoft.com/library/ms180560.aspx)」を参照してください。  
+ WMI Provider for Server Events は、イベントに対する WQL クエリを変換して、対象とするデータベースにイベント通知を作成します。 イベント通知のしくみを理解しておくと、プロバイダーに対してプログラミングを行う際に役立つ場合があります。 詳細については、「 [WMI Provider for Server Events の概念](https://technet.microsoft.com/library/ms180560.aspx)」を参照してください。  
   
  特に、WMI プロバイダーによって作成されたイベント通知は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してサーバー イベントに関するメッセージを送信するため、イベントが生成される場合は必ずこのサービスが有効化されている必要があります。 サーバー インスタンス上のイベントに対してクエリを実行するプログラムであれば、そのインスタンスの msdb 内の [!INCLUDE[ssSB](../../includes/sssb-md.md)] が有効化されている必要があります。これが、プロバイダーによって作成される対象 [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービス (SQL/Notifications/ProcessWMIEventProviderNotification/v1.0) の拠点になります。 プログラムがデータベース内のイベントまたは特定のデータベース オブジェクト上のイベントに対してクエリを実行する場合、その対象データベース内の [!INCLUDE[ssSB](../../includes/sssb-md.md)] が有効化されている必要があります。 アプリケーションの展開後に対応する [!INCLUDE[ssSB](../../includes/sssb-md.md)] が有効化されていない場合、基になるイベント通知によって生成されたイベントはすべて、イベント通知が使用するサービスのキューに送信されますが、[!INCLUDE[ssSB](../../includes/sssb-md.md)] が有効化されるまで WMI 管理アプリケーションには返されません。  
   
@@ -64,7 +62,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 -   キュー スコープされるイベント通知を作成するには、少なくとも、キューの ALTER 権限が必要です。  
   
- WQL クエリがスコープ設定する方法については、次を参照してください。 [WMI Provider for Server Events と WQL の使用](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)します。  
+ WQL クエリがスコープ設定する方法については、次を参照してください。 [WMI Provider for Server Events と WQL の使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)します。  
   
  スコープの例として、次の WQL クエリを含む WMI プロバイダー アプリケーションを考えます。  
   
@@ -114,6 +112,6 @@ WHERE DatabaseName = "AdventureWorks2012"
  WMI プロバイダーの後に for Server Events、ターゲット データベースで必要なイベント通知を作成するイベント通知サービスに送信イベント データ ターゲットの名前は msdb で**SQL/通知/ProcessWMIEventProviderNotification/v1.0**します。 内のキューにイベントを対象となるサービスに配置`msdb`という**WMIEventProviderNotificationQueue**します。 (サービスもキューも、プロバイダーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に最初に接続する際に動的に作成されます)。プロバイダーは、このキューから XML イベント データを読み取り、それをマネージド オブジェクト フォーマット (MOF) に変換してからクライアント アプリケーションに返します。 MOF データは、CIM (Common Information Model) クラス定義として WQL クエリから要求されるイベントのプロパティで構成されています。 各プロパティには、対応する CIM 型があります。 たとえば、`SPID` プロパティは CIM 型 `Sint32` として返されます。 各プロパティの CIM 型は、各イベント クラスの下に表示されます[WMI Provider for Server Events のクラスとプロパティ](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)します。  
   
 ## <a name="see-also"></a>参照  
- [WMI Provider for Server Events の概念](http://technet.microsoft.com/library/ms180560.aspx)  
+ [WMI Provider for Server Events の概念](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

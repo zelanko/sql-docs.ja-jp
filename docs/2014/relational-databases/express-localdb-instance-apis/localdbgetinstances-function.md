@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -18,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032248"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 関数
   指定したバージョンのすべての SQL Server Express LocalDB インスタンスを返します。  
@@ -42,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>パラメーター  
  *pInstanceNames*  
- [出力] この関数が返す場合、ユーザーのワークステーション上の名前付きおよび既定の LocalDB インスタンスの両方の名前を格納します。  
+ [出力]この関数から制御が戻るときにという名前の両方の名前を格納し、既定のユーザーのワークステーションに LocalDB インスタンス。  
   
  *lpdwNumberOfInstances*  
- [入力/出力]入力時にインスタンス名にスロットの数が含まれています。、 *pInstanceNames*バッファー。 出力側では、ユーザーのワークステーション上で見つかった LocalDB インスタンスの数を格納します。  
+ [入力/出力]入力時にインスタンス名にスロットの数が含まれています。、 *pInstanceNames*バッファー。 出力では、ユーザーのワークステーションで見つかった LocalDB インスタンスの数が含まれています。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  

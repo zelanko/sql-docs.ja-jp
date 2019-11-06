@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7982f81d5046c0d3c9f23b4357f5b0364603c222
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483543"
 ---
 # <a name="collections-master-data-services"></a>コレクション (Master Data Services)
   コレクションは、1 つのエンティティのリーフ メンバーと統合メンバーのグループです。 コレクションは、完全な階層を必要としない場合で、レポートまたは分析のためにメンバーのさまざまなグループを表示するとき、または分類を作成する必要があるときに使用します。  
@@ -46,12 +45,12 @@ ms.locfileid: "48203632"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |明示的階層とコレクションに対してエンティティを有効にする。|[明示的階層およびコレクションに対してエンティティを有効にする&#40;マスター データ サービス&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|新しいコレクションを作成する。|[コレクションを作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|既存のコレクションにメンバーを追加する。|[コレクションにメンバーを追加&#40;マスター データ サービス&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|新しいコレクションを作成する。|[コレクションを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|既存のコレクションにメンバーを追加する。|[コレクションにメンバーを追加する (マスター データ サービス)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [明示的階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [データのエクスポート&#40;マスター データ サービス&#41;](overview-exporting-data-master-data-services.md)  
   

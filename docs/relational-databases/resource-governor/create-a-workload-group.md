@@ -10,26 +10,25 @@ helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 47d64b30c14f81b96615167fd48401af45435165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686840"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903955"
 ---
 # <a name="create-a-workload-group"></a>ワークロード グループの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ワークロード グループを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
 -   **ワークロード グループの作成に使用するもの:** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -57,7 +56,7 @@ ms.locfileid: "47686840"
 6.  既定値から変更する場合は、その対象となる行の他のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
 7.  変更を保存するには、 **[OK]** をクリックします。  
-  
+
 ##  <a name="CreRPTSQL"></a> Transact-SQL を使用してワークロード グループを作成する  
  **ワークロード グループを作成するには [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
@@ -77,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [ワークロード グループの設定の変更](../../relational-databases/resource-governor/change-workload-group-settings.md)   

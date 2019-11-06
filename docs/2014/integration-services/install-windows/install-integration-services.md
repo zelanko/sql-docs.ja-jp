@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768222"
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 セットアップによって、他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントと共にまたは単独で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を 1 台のコンピューターにインストールできます。  
@@ -125,6 +124,6 @@ ms.locfileid: "48204802"
  64 ビット バージョンの機能は、 **Program Files** ディレクトリに格納されます。32 ビット バージョンの機能は、 **Program Files (x86)** ディレクトリに別個にインストールされます。 この動作は [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に固有の動作ではありません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] パッケージの 32 ビット開発環境である [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 ビット オペレーティング システムではサポートされていないので、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] サーバーにはインストールされません。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの 32 ビット開発環境であるは、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 ビット オペレーティング システムではサポートされていないので、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] サーバーにはインストールされません。  
   
   

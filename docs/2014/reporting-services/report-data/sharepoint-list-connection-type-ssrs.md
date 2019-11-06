@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: cfa09322af5b4838ccdc2bb9dc85d13a412bc359
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116351"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107077"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint リストの接続の種類 (SSRS)
   Microsoft SharePoint リストのデータをレポートに含めるには、種類が Microsoft SharePoint リストのレポート データ ソースに基づいたデータセットを追加または作成する必要があります。 これは、Microsoft SQL Server Reporting Services SharePoint リストのデータ拡張機能に基づいたビルトイン データ ソースの種類です。 このデータ ソースの種類を使用して、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0、および [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 のサイトからのリスト データに接続し、そのデータを取得します。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)を参照してください。  
   
 ##  <a name="Connection"></a> 接続文字列  
  SharePoint リストへの接続文字列は、SharePoint サイトまたはサブサイトの URL です ( `http://MySharePointWeb/MySharePointSite` や `http://MySharePointWeb/MySharePointSite/Subsite`など)。  
@@ -31,7 +30,7 @@ ms.locfileid: "48116351"
  他の接続文字列の例については、 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)に関する記事を参照してください。  
   
 ##  <a name="Credentials"></a> 資格情報  
- クエリの実行、ローカルでのレポートのプレビュー、およびレポート サーバーからのレポートのプレビューには、資格情報が必要です。 レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。 このデータ拡張機能で使用できる資格情報の種類は、データ ソースとして使用している SharePoint リストの SharePoint テクノロジの構成によって異なります。  
+ クエリの実行、ローカルでのレポートのプレビュー、およびレポート サーバーからのレポートのプレビューには、資格情報が必要です。 レポートをパブリッシュした後、そのデータ ソースに対する資格情報を変更する必要が生じる場合があります。そのレポートをレポート サーバーで実行するときに、データを取得するためのアクセス許可が有効な状態になるようにするためです。 このデータ拡張機能で使用できる資格情報の種類は、データ ソースとして使用している SharePoint リストの SharePoint テクノロジの構成によって異なります。  
   
  次の表は、ローカル ファームの SharePoint リストおよびリモートの SharePoint リストに接続するときに SharePoint リスト拡張機能が実行する資格情報取得動作の概要を示しています。  
   
@@ -42,18 +41,18 @@ ms.locfileid: "48116351"
 ||サポートされる資格情報|クラシック モードの Windows 認証|<sup>3</sup>要求認証|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |ローカル ファームの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|はい|  
-||保存、要求、なし (Windows 資格情報を持つ<sup>1</sup>)|はい|いいえ|  
+||保存、要求、なし (Windows 資格情報を使用<sup>1</sup>)|はい|いいえ|  
 |リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|いいえ<sup>2</sup>|  
-||保存、要求、なし (Windows 資格情報を持つ<sup>1</sup>)|はい|いいえ<sup>2</sup>|  
+||保存、要求、なし (Windows 資格情報を使用<sup>1</sup>)|はい|いいえ<sup>2</sup>|  
   
  **表 2**  
   
 ||サポートされる資格情報|クラシック モードの Windows 認証|<sup>3</sup>要求認証|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |ローカル ファームの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|はい|  
-||保存、要求、なし (Windows 資格情報を持つ<sup>1</sup>)|いいえ|いいえ|  
+||保存、要求、なし (Windows 資格情報を使用<sup>1</sup>)|いいえ|いいえ|  
 |リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|いいえ<sup>2</sup>|  
-||保存、要求、なし (Windows 資格情報を持つ<sup>1</sup>)|いいえ|いいえ<sup>2</sup>|  
+||保存、要求、なし (Windows 資格情報を使用<sup>1</sup>)|いいえ|いいえ<sup>2</sup>|  
   
  <sup>1</sup>保存された情報や Windows 以外の資格情報のプロンプトの資格情報はサポートされていません。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48116351"
  **[資格情報は必要ありません]\([資格情報を使用しない])**  
  このオプションを使用するには、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
- Microsoft BI スタックにおける要求認証サポートの詳細については、「 [Microsoft BI スタックにおける要求認証の使用](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)」を参照してください。  
+ Microsoft BI スタックにおける要求認証サポートの詳細については、「 [Microsoft BI スタックにおける要求認証の使用](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)」を参照してください。  
   
  詳細については、次を参照してください[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)、[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)、および[でサポートされるデータ ソース。Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
   
@@ -182,7 +181,7 @@ ms.locfileid: "48116351"
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  クエリによって生成されるデータセット フィールド コレクションについて説明します。  
   
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント)。  
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント)。  
  各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
   
   

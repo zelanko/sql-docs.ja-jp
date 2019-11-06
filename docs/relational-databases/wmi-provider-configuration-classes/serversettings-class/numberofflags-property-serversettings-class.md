@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f9fe308986b37108763004e15728de515db1696
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7d52e43994d4d038d39243c40fc93f058210e244
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052863"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags プロパティ (ServerSettings クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ object.NumberOfFlags [= value]
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

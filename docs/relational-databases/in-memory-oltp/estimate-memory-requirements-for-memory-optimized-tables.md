@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdacecf1c6d6c8c08411eff57c65adc0872dd39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531512"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811173"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,8 +77,7 @@ CREATE TABLE t_hk
   col8 char (30) NOT NULL,   
   col9 char (50) NOT NULL  
 
-  WITH (memory_optimized = on)  
-);
+)   WITH (memory_optimized = on)  ;
 GO  
 ```  
 
@@ -145,7 +143,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 3 つのハッシュ インデックスが存在するため、ハッシュ インデックスで必要とされるメモリは 3 * 64MB = 192MB です。  
   
-#### <a name="memory-for-non-clustered-indexes"></a>非クラスター化インデックスに対応するメモリ  
+#### <a name="memory-for-nonclustered-indexes"></a>非クラスター化インデックスに対応するメモリ  
   
 非クラスター化インデックスは BTree として実装されており、内部ノードはインデックス値と、後続のノードを指すポインターを保持しています。  リーフ ノードは、インデックス値と、メモリ内にあるテーブルの行を指すポインターを保持しています。  
   

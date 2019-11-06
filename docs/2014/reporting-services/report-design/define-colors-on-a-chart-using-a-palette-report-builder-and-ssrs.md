@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0db138c140b0f5e51a148a3114ad6f0a7054f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106077"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>パレットを使用したグラフの色の定義 (レポート ビルダーおよび SSRS)
   グラフの色パレットは、定義済みのパレットを選択するかカスタム パレットを定義すると、変更できます。 カスタム パレットはレポート固有です。  
@@ -45,11 +44,11 @@ ms.locfileid: "48166952"
   
 3.  **グラフ**セクションの`Palette`プロパティで、**カスタム**します。  
   
-4.  CustomPaletteColors プロパティで、コレクションの編集ボタン (**[...]**) をクリックします。 **[ReportColorExpression コレクション エディター]** が表示されます。  
+4.  CustomPaletteColors プロパティで、コレクションの編集ボタン ( **[...]** ) をクリックします。 **[ReportColorExpression コレクション エディター]** が表示されます。  
   
 5.  **[追加]** をクリックして、色を追加します。 ドロップダウン リストから色を選択するか、[式] を選択して具体的な色の 16 進値 (たとえば "オレンジ" の場合は ff6600) を指定します。  
   
-     16 進値の詳細については、MSDN の「 [カラー テーブル](http://go.microsoft.com/fwlink/?linkid=9258) 」を参照してください。  
+     16 進値の詳細については、MSDN の「 [カラー テーブル](https://go.microsoft.com/fwlink/?linkid=9258) 」を参照してください。  
   
 6.  さらにパレットに色を追加するには、 **[追加]** をクリックします。  
   

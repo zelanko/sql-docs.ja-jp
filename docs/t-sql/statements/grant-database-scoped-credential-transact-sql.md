@@ -18,16 +18,15 @@ helpviewer_keywords:
 - database scoped credential [SQL Server], permissions
 - GRANT statement, database scoped credentials
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10aad145473d2b47ad0f845def3f71da23c8430d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d820e8740740335a576385a7c971d1e0fe5eb5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942947"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT (データベース スコープの資格情報の権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ GRANT permission  [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  *permission*  
- データベース スコープの資格情報で許可できる権限を指定します。 下の表をご覧ください。  
+ データベース スコープの資格情報で許可できる権限を指定します。 以下に一覧を示します。  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::** _credential_name_  
  権限を許可するデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

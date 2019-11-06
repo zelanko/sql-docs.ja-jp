@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d2afca6-ab7a-4695-b9c9-bc2bdaa4060e
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f3a2d208ffac04eef6200fa3147fe112e18ef29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c4ef2ab45fbace1fb94c7935fcd2e3d5ca4471a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096698"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108976"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>画像、テキスト ボックス、四角形、線の F1 ヘルプ
   このセクションのトピックでは、レポート デザイナーのダイアログ ボックスで画像、テキスト ボックス、四角形、および線に対して設定できるオプションについて説明します。  

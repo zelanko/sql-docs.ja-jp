@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.number.f1
@@ -19,13 +18,13 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f0ee681c291d9dd96733f083138af39ef2b280e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105837"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
   データ領域の数値と日付の書式を設定するには、対応するデータ領域の **[プロパティ]** ダイアログ ボックスの **[数値]** ページを使用します。  
@@ -47,21 +46,21 @@ ms.locfileid: "48166162"
   
 -   既定では、数値の書式はクライアント コンピューターのカルチャ設定を反映して設定されます。 数値の表示方法を指定するために書式設定の文字列を使用すると、レポートを参照するユーザーの地域に関係なく、一貫した書式を指定できます。  
   
--   **[数値]** ページで指定された書式は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準の数値書式設定文字列のサブセットです。 ダイアログ ボックスに表示されないカスタム書式を使用して数値や日付の書式を設定するには、数値または日付の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列を使用します。 カスタム書式設定文字列の詳細については、MSDN のトピック「 [型の書式設定](http://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
+-   **[数値]** ページで指定された書式は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準の数値書式設定文字列のサブセットです。 ダイアログ ボックスに表示されないカスタム書式を使用して数値や日付の書式を設定するには、数値または日付の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列を使用します。 カスタム書式設定文字列の詳細については、MSDN のトピック「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
   
 -   カスタム書式設定文字列が指定されている場合、既定のカルチャ固有の設定よりも優先度が高くなります。 たとえば、カスタム書式設定文字列 "#,###" を設定して、数値 1234 を 1,234 と表すとします。 これは、米国のユーザーとヨーロッパのユーザーで意味が異なる場合があります。 カスタム書式設定を指定する前に、レポートを参照する異なるカルチャのユーザーに対して選択した書式設定がどのような影響を与えるか考慮するようにしてください。  
   
 -   指定した書式設定文字列が正しくない場合、書式設定されたテキストは、書式設定をオーバーライドするリテラル文字列として解釈されます。  
   
--   同じテキスト ボックスで数字と文字が混在するテキストの書式を設定する場合、プレースホルダーを使用して、テキストの数値以外の部分とは別に数値の書式を設定します。 詳細については、「[テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)」を参照してください。 テキスト ボックスで Format プロパティについて指定された書式設定文字列が正しくない場合、書式設定文字列は無視されます。 グラフまたはゲージで Format プロパティについて指定された書式設定文字列が正しくない場合、指定した書式設定文字列は文字列として解釈され、書式設定は適用されません。  
+-   同じテキスト ボックスで数字と文字が混在するテキストの書式を設定する場合、プレースホルダーを使用して、テキストの数値以外の部分とは別に数値の書式を設定します。 詳細については、「 [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)をクリックする必要があります。 テキスト ボックスで Format プロパティについて指定された書式設定文字列が正しくない場合、書式設定文字列は無視されます。 グラフまたはゲージで Format プロパティについて指定された書式設定文字列が正しくない場合、指定した書式設定文字列は文字列として解釈され、書式設定は適用されません。  
   
--   **[カテゴリ]** の **[通貨]** をクリックして、 **[値の表示単位]** をオンにすると、 **[千]**、 **[百万]**、または **[十億]** を選択し、財務上の形式を使用して数値を表示できます。 たとえば、フィールド値が 1,789,905,394 の場合、 **[十億]** を選択して、小数点以下桁数を 2 桁に指定すると、レポートに表示される値は 1.78 です。  
+-   **[カテゴリ]** の **[通貨]** をクリックして、 **[値の表示単位]** をオンにすると、 **[千]** 、 **[百万]** 、または **[十億]** を選択し、財務上の形式を使用して数値を表示できます。 たとえば、フィールド値が 1,789,905,394 の場合、 **[十億]** を選択して、小数点以下桁数を 2 桁に指定すると、レポートに表示される値は 1.78 です。  
   
 ## <a name="see-also"></a>参照  
- [テキストとプレース ホルダーの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [線、色、および画像の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](images-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [ゲージのスケールの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

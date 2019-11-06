@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952009"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 属性  
  接続文字列には、イニシャル パートナー名を指定する **Server** 属性を含める必要があります。この名前で現在のプリンシパル サーバー インスタンスを特定します。  
   
- サーバー インスタンスを特定する最も簡単な方法は、*<server_name>*[**\\***<SQL_Server_instance_name>*] の形式でインスタンス名を指定することです。 例 :  
+ サーバー インスタンスを特定する最も簡単な方法は、 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ] の形式でインスタンス名を指定することです。 例:  
   
  `Server=Partner_A;`  
   
@@ -101,7 +100,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  接続文字列に名前付きインスタンス名を指定し、ポート名を指定しない場合は、SQL Server Browser クエリの実行が必要です。  
   
- **Server** 属性では、`Server=`*<ip_address>*`,`\<*port*> という形式で IP アドレスとポートを指定します。次に例を示します。  
+ **Server** 属性では、`Server=` *<ip_address>* `,`\<*port*> という形式で IP アドレスとポートを指定します。次に例を示します。  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +120,7 @@ Server=123.34.45.56,4724;
 >  この文字列では、認証情報が省略されています。  
   
 > [!IMPORTANT]  
->  **Server** 属性にプロトコル プレフィックスを指定すると (`Server=tcp:`\<*servername>*)、**Network** 属性と互換性がなくなります。また、両方の属性にプロトコルを指定すると、エラーが発生する可能性が高くなります。 このため、接続文字列でプロトコルを指定するときには **Network** 属性を使用し、**Server** 属性にはサーバー名だけを指定することをお勧めします。つまり、`"Network=dbmssocn; Server=`\<*servername>*`"` という形式を使用します。  
+>  **Server** 属性にプロトコル プレフィックスを指定すると (`Server=tcp:`\<*servername>* )、**Network** 属性と互換性がなくなります。また、両方の属性にプロトコルを指定すると、エラーが発生する可能性が高くなります。 このため、接続文字列でプロトコルを指定するときには **Network** 属性を使用し、**Server** 属性にはサーバー名だけを指定することをお勧めします。つまり、`"Network=dbmssocn; Server=`\<*servername>* `"` という形式を使用します。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 属性  
  クライアントは、イニシャル パートナー名以外に、現在のミラー サーバー インスタンスを特定するフェールオーバー パートナー名も指定できます。 フェールオーバー パートナーは、Failover Partner 属性を表すいずれかのキーワードで指定します。 この属性を表すキーワードは、使用する API によって異なります。 次の表は、これらのキーワードを示しています。  
@@ -132,7 +131,7 @@ Server=123.34.45.56,4724;
 |ODBC ドライバー|**Failover_Partner**|  
 |ActiveX Data Objects (ADO)|**Failover Partner**|  
   
- サーバー インスタンスを特定する最も簡単な方法は、そのインスタンスのシステム名を *<server_name>*[**\\***<SQL_Server_instance_name>*] という形式で指定することです。  
+ サーバー インスタンスを特定する最も簡単な方法は、そのインスタンスのシステム名を *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ] という形式で指定することです。  
   
  また、 **Failover Partner** 属性に IP アドレスとポート番号を指定することもできます。 これにより、最初の接続試行がデータベースへの最初の接続に失敗した場合、DNS と SQL Server Browser に依存しないでフェールオーバー パートナーへの接続を試行できます。 接続が確立されると、指定したフェールオーバー パートナー名が接続時のフェールオーバー パートナー名に上書きされるので、次にフェールオーバーが発生した場合、リダイレクトされた接続では DNS と SQL Server Browser が必要になります。  
   
@@ -169,7 +168,7 @@ Server=123.34.45.56,4724;
   
  再試行時間は、次の式を使用して計算されます。  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;** _LoginTimeout_ **)**  
   
  ここでは、 *PreviousRetryTime* の初期値は 0 です。  
   
@@ -177,10 +176,10 @@ Server=123.34.45.56,4724;
   
 |四捨五入|*RetryTime* の計算|接続試行ごとの再試行時間|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1.2 秒|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2.4 秒|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3.6 秒|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4.8 秒|  
+|1|0 **+(** 0.08 **&#42;** 15 **)**|1.2 秒|  
+|2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4 秒|  
+|3|2.4 **+(** 0.08 **&#42;** 15 **)**|3.6 秒|  
+|4|3.6 **+(** 0.08 **&#42;** 15 **)**|4.8 秒|  
   
  次の図では、連続する接続試行のそれぞれがタイムアウトする再試行時間を示しています。  
   

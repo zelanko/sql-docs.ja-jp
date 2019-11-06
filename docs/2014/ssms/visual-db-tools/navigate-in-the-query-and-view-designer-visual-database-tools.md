@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
@@ -15,12 +15,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f12ed69b92922046f4a4432ed56b46d9a40904d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63066260"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーでの移動 (Visual Database Tools)
   クエリおよびビュー デザイナー内では、キーボードまたはマウスを使用して作業できます。 具体的な方法については、次の表を参照してください。  
@@ -51,7 +51,7 @@ ms.locfileid: "48123192"
   
 ## <a name="criteria-pane"></a>抽出条件ペイン  
   
-|変換先|ショートカット キー|クリックする場所|  
+|目的|ショートカット キー|クリックする場所|  
 |--------|-----------|-----------|  
 |セル間で移動する|方向キーまたは Tab または Shift + Tab|移動先のセル|  
 |選択した列の最後の行に移動する|Ctrl + ↓||  
@@ -61,7 +61,7 @@ ms.locfileid: "48123192"
 |ドロップダウン リスト内で移動する|↑または↓|セル内のボタン|  
 |グリッド内の 1 つの列全体を選択する|Ctrl + SPACE キー|列ヘッダー|  
 |編集モードとセル選択モードを切り替える|F2||  
-|セル内の選択された文字列をクリップボードにコピーする (編集モードの場合)|Ctrl + C||  
+|セル内の選択された文字列をクリップボードにコピーする (編集モードの場合)|CTRL キーを押しながら C||  
 |セル内で選択したテキストを切り取ってクリップボードに送る (編集モードの場合)|Ctrl + X||  
 |クリップボードからテキストを貼り付ける (編集モードの場合)|Ctrl + V||  
 |セルでの編集中に挿入モードと上書きモードを切り替える|Ins||  
@@ -77,7 +77,7 @@ ms.locfileid: "48123192"
  詳細については、「[抽出条件ペイン (Visual Database Tools)](criteria-pane-visual-database-tools.md)」を参照してください。  
   
 ## <a name="sql-pane"></a>SQL ペイン  
- SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]**、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
+ SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]** 、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
   
 > [!NOTE]  
 >  テキストの挿入だけができます。上書きモードはありません。  
@@ -101,8 +101,8 @@ ms.locfileid: "48123192"
 |現在のセルに対する変更を元に戻す|変更したセル内で Esc||  
 |現在の行に対する変更を元に戻す|変更していないいずれかのセル内で Esc||  
 |セルに NULL を入力する|Ctrl + 0||  
-|選択した列または行をクリップボードにコピーする|Ctrl + C||  
-|セル内の選択された文字列をクリップボードにコピーする (編集モードの場合)|Ctrl + C||  
+|選択した列または行をクリップボードにコピーする|CTRL キーを押しながら C||  
+|セル内の選択された文字列をクリップボードにコピーする (編集モードの場合)|CTRL キーを押しながら C||  
 |セル内の選択された文字列を切り取ってクリップボードに送る (編集モードの場合)|Ctrl + X||  
 |クリップボードからテキストを貼り付ける (編集モードの場合)|Ctrl + V||  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48123192"
   
  詳細については、「[SQL ペイン (Visual Database Tools)](results-pane-visual-database-tools.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

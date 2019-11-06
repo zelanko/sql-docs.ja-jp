@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - removing registered servers
@@ -14,12 +14,12 @@ ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea3b22ee5afee3e46b60112485a98ac2a3ab1924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 918661b548d22383efd884442416a9206456234d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62960534"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>登録済みサーバーの削除 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーからサーバーを削除する方法について説明します。  

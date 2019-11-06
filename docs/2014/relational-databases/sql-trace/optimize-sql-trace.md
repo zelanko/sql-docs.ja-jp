@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time [SQL Server], traces
@@ -16,12 +15,12 @@ ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b4c021e29180c25981582bab0d1ecb888345e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63135537"
 ---
 # <a name="optimize-sql-trace"></a>SQL トレースの最適化
   SQL トレースを実行すると、データを収集するためにシステム リソースが使用されるのでパフォーマンス コストが発生しますが、このコストはさまざまな方法で最小限に抑えることができます。 トレースによって発生するパフォーマンス コストを最小限に抑えるには、次のようにしてください。  

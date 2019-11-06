@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining models, creating
@@ -20,12 +19,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086727"
 ---
 # <a name="creating-a-data-mining-model"></a>データ マイニング モデルの作成
   データ モデリングは、適用することでパターンや傾向を作成する場所のデータ マイニング手順*アルゴリズム*データにします。 その後、それらのデータを使って追加の分析を行ったり、予測を立てたりすることができます。  
@@ -72,7 +71,7 @@ ms.locfileid: "48134794"
  [クラスター ウィザード&#40;データ マイニング アドインを Excel の&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)します。  
   
 ## <a name="detect-categories-analyze"></a>カテゴリの検出 (分析)  
- **カテゴリの検出**ツールでは、任意のデータ セットを追加し、データのグループを検索するクラスタ リングを適用することができます。 これは、類似性を見つけ、さらに詳細に分析するためにグループを作成するのに便利です。  
+ **カテゴリの検出**ツールでは、任意のデータ セットを追加し、データのグループを検索するクラスタ リングを適用することができます。 類似点を検索するため、さらに分析するグループを作成するために便利です。  
   
  **カテゴリの検出**ツールは、Microsoft クラスタ リング アルゴリズムを使用します。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "48134794"
   
  [予測計算&#40;Excel 用テーブル分析ツール&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-goal-seek-analyze"></a>シナリオ: ゴール シーク (分析)  
+## <a name="scenario-goal-seek-analyze"></a>シナリオ:ゴール シーク (分析)  
  **ゴール シーク**ターゲット値、およびツールをそのターゲットを満たすために変更する必要がありますのある基になる要因を識別します。 を指定するツール。 たとえば、電話対応満足度を 20% 向上させる必要がある場合、その目標を達成するために変更する必要のある要因を予測するようモデルに要求できます。  
   
  **ゴール シーク**ツールは、Microsoft ロジスティック回帰アルゴリズムを使用します。  
@@ -125,7 +124,7 @@ ms.locfileid: "48134794"
   
  [ゴール シーク シナリオ&#40;Excel 用テーブル分析ツール&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>シナリオ: What-If シナリオ(分析)  
+## <a name="scenario-what-if-scenario-analyze"></a>シナリオ:What-if シナリオ (分析)  
  **What-If 分析**ツールを補完、**ゴール シーク**ツール。 このツールで変更する必要のある値を入力すると、モデルはその変更が目標の結果を達成するために十分であるかどうかを予測します。 たとえば、電話オペレーターを 1 人追加することによって顧客満足度が 1 ポイント向上するかどうかを推測するようモデルに要求できます。  
   
  **What-if**ツールは、Microsoft ロジスティック回帰アルゴリズムを使用します。  

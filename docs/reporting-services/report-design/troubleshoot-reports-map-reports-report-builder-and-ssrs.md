@@ -2,18 +2,18 @@
 title: 'レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs'
 ms.date: 01/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8668a88ef7e2375c0500fed68b1ffbc4a0494ba9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574474"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでマップの問題が発生しやすいのは、マップまたはマップ レイヤーをレポートに追加するときや、レポート内の既存のマップまたはマップ レイヤーをカスタマイズするとき、レポートのマップをプレビューするとき、またはマップを含んだレポートをパブリッシュするときです。 このトピックでは、このような問題のトラブルシューティングについて説明します。  
@@ -136,7 +136,7 @@ ms.locfileid: "50100393"
   
 -   **透明度 :** 透明度は、各マップ レイヤーに対して別々に指定することができます。 透明度の既定値は、レイヤーの追加方法によって異なります。 透明度 0% は、そのレイヤーが不透明であり、他のレイヤー データは一切透けて見えないことを意味します。 既存のレイヤーをとおして他のデータが透けて見えるようにするには、思うような効果が得られるまで、このパーセンテージを大きくします。  
   
--   **表示 :** レイヤーの表示は、マップ ビューポートのズーム レベルに基づいて、 **[表示]**、 **[非表示]**、 or **[ZoomBased]**、 based on the zoom level of the map viewport. ズーム レベルには、最大と最小の範囲を指定することもできます。 いずれかの値に評価されるような式を使って表示を制御することができます。  
+-   **表示 :** レイヤーの表示は、マップ ビューポートのズーム レベルに基づいて、 **[表示]** 、 **[非表示]** 、 or **[ZoomBased]** 、 based on the zoom level of the map viewport. ズーム レベルには、最大と最小の範囲を指定することもできます。 いずれかの値に評価されるような式を使って表示を制御することができます。  
   
     > [!TIP]  
     >  マップ ペインでは各レイヤーの表示/非表示を切り替えることができます。 各レイヤーをデザインする際、それ以外のすべてのレイヤーをオフにすることで、問題の原因が個々のレイヤーにあるのか、レイヤー間の透明度の問題なのかを特定することができます。  

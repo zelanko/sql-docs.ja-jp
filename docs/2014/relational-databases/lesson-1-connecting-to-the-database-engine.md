@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 145adf31e3b59e846eb17369a897e4012f0177ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63145493"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
+# <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1:データベース エンジンへの接続
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインストール時に一緒にインストールされるツールは、エディションとセットアップによって異なります。 このレッスンでは、主要なツールについて確認し、接続して基本機能を実行する方法について学習します。これで、さらに多くのユーザーを認証することができます。  
   
   
@@ -28,7 +27,7 @@ ms.locfileid: "48132398"
   
 ### <a name="basic-tools"></a>基本ツール  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssDE](../includes/ssde-md.md)]を管理し、[!INCLUDE[tsql](../includes/tsql-md.md)] コードを記述するための主要なツールです。 このツールは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルでホストされます。 含まれません[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]から個別にダウンロードとして入手できますが、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=144346)します。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssDE](../includes/ssde-md.md)]を管理し、[!INCLUDE[tsql](../includes/tsql-md.md)] コードを記述するための主要なツールです。 このツールは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルでホストされます。 含まれません[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]から個別にダウンロードとして入手できますが、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=144346)します。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびクライアント ツールと共にインストールされます。 このツールを使用すると、サーバー プロトコルを有効化したり、TCP ポートなどのプロトコル オプション、サーバー サービスの自動開始、指定の方法によるクライアント コンピューターの接続などを構成することができます。 このツールはより詳細な接続要素を構成しますが、機能は有効にしません。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48132398"
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを起動するには  
   
--   **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+-   **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 ##  <a name="connect"></a> Management Studio との接続  
  接続するは簡単、[!INCLUDE[ssDE](../includes/ssde-md.md)]コンピューターの Administrators グループのメンバーとして接続している場合、インスタンスの名前がわかっている場合と同じコンピューターで実行されているツールから。 次の手順は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]をホストしている同じコンピューター上で実行する必要があります。  
@@ -102,6 +101,6 @@ ms.locfileid: "48132398"
 >  上記は開始するための基本的な情報です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では優れたセキュリティ環境が提供されます。セキュリティはデータベース操作において明らかに重要な要素です。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: 別のコンピューターからの接続](lesson-2-connecting-from-another-computer.md)  
+ [レッスン 2:別のコンピューターからの接続](lesson-2-connecting-from-another-computer.md)  
   
   

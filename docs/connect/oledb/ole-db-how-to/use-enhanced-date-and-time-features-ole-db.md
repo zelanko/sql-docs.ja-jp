@@ -1,5 +1,5 @@
 ---
-title: 強化された日付と時刻の機能 (OLE DB) の使用 |Microsoft Docs
+title: 強化された日付と時刻の機能を使用する (OLE DB) |Microsoft Docs
 description: 強化された日付/時刻機能の使用 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 276cf9f67d83ce67fa86ea00ca594f0c176456b9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015527"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>強化された日付/時刻機能の使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このサンプルでは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] で導入された日付/時刻機能を使用する方法を示します。 サンプルは、次の 4 つの新しい日付と時刻型を使用 (**日付**、**時間**、 **datetime2**、および**datetimeoffset**) のコマンドを実行するにはパラメーターと行セットの結果を取得します。  
+  このサンプルでは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] で導入された日付/時刻機能を使用する方法を示します。 このサンプルでは、4つの新しい日付/時刻型 (**date**、 **time**、 **datetime2**、および**datetimeoffset**) を使用して、パラメーターを持つコマンドを実行し、行セットの結果を取得します。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1fdca5fb5b8600664d22aabb0b87f458a84f0937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479911"
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でエンティティを作成して、メンバーおよびその属性を含めます。  
@@ -29,7 +28,7 @@ ms.locfileid: "48129562"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   モデルが存在する必要があります。 詳細については、「[モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)」を参照してください。  
   
@@ -62,16 +61,16 @@ ms.locfileid: "48129562"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [テキスト属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
--   [ドメイン ベースの属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+-   [ドメイン ベースの属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [ファイル属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [ファイル属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [エンティティ&#40;マスター データ サービス&#41;](../../2014/master-data-services/entities-master-data-services.md)   
- [明示的階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)   
+ [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [エンティティ名を変更&#40;マスター データ サービス&#41;](edit-an-entity-master-data-services.md)   
- [エンティティを削除する&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
+ [エンティティを削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
   
   

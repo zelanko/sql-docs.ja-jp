@@ -11,17 +11,20 @@ helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 856b4dfea1025e9cd9b6818a35410d9463d01e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9053a5ab4ac64bea8104ce7d9079bf891ffa887a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817807"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296771"
 ---
-# <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB データベース)
+# <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのセキュリティ保護可能なオブジェクトに対するアクセス許可を許可します。  
@@ -37,7 +40,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引数  
  [ @object_type = ] *object_type*  
- セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint**** です。  
+ セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint** _です。_  
   
  [ @object_id = ] *object_id*  
  セキュリティ保護可能なオブジェクトの一意識別子 (ID)。 *object_id* は **bigint** です。  
@@ -59,7 +62,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
  4 (アクセス許可が有効な)  
   
- その他のエラーの場合は 5 を返します。  
+ 5 (その他のエラー)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  

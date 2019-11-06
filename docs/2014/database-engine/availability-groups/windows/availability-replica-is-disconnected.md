@@ -14,12 +14,12 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ab17646913b217b877c09070affe65be49bf880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791856"
 ---
 # <a name="availability-replica-is-disconnected"></a>可用性レプリカが切断されている
     
@@ -28,7 +28,7 @@ ms.locfileid: "48088952"
 |||  
 |-|-|  
 |**ポリシー名**|可用性レプリカの接続状態|  
-|**問題点**|可用性レプリカの接続が解除されます。|  
+|**問題**|可用性レプリカの接続が解除されます。|  
 |**カテゴリ**|**重大**|  
 |**ファセット**|可用性レプリカ|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48088952"
  このポリシーは、可用性レプリカ間の接続状態を確認します。 可用性レプリカ間の接続状態が DISCONNECTED の場合、ポリシーは通常とは異なる状態です。 それ以外の場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性レプリカの接続が解除される](http://go.microsoft.com/fwlink/p/?LinkId=220857) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
+>  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性レプリカの接続が解除される](https://go.microsoft.com/fwlink/p/?LinkId=220857) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
   
 ## <a name="possible-causes"></a>考えられる原因  
  セカンダリ レプリカがプライマリ レプリカに接続されていません。 接続状態は DISCONNECTED です。 この問題は、次の状況で発生する可能性があります。  

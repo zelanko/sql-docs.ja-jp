@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9eddf5cb58b18651acd77afe44758a47b1fd8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059269"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,29 +39,29 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>引数  
  *query_sql_text*  
- クエリのストアのハンドルにクエリのテキストです。 *query_sql_text*は、 **nvarchar (max)**、既定値はありません。  
+ ハンドルをクエリ ストアでのクエリのテキストです。 *query_sql_text*は、 **nvarchar (max)** 、既定値はありません。  
   
  *query_param_type*  
- クエリのパラメーターの型です。 *query_param_type*は、 **tinyint**します。 有効な値は次のとおりです。  
+ クエリのパラメーター型です。 *query_param_type*は、 **tinyint**します。 設定可能な値は、次のとおりです。  
   
--   NULL – 既定値は 0  
+-   NULL の既定値は 0  
   
--   0 ～ なし  
+-   0 - なし  
   
--   1 – ユーザー  
+-   1-ユーザー  
   
--   2 – 簡単です  
+-   2-シンプルです  
   
--   3 – 強制  
+-   3-強制  
   
 ## <a name="columns-returned"></a>返される列  
- 次の表では、列を sys.fn_stmt_sql_handle_from_sql_stmt を返します。  
+ 次の表に、列を sys.fn_stmt_sql_handle_from_sql_stmt を返します。  
   
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary(64)**|SQL ハンドルです。|  
+|**statement_sql_handle**|**varbinary(64)**|SQL ハンドル。|  
 |**query_sql_text**|**nvarchar(max)**|テキスト、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。|  
-|**query_parameterization_type**|**tinyint**|クエリのパラメーター化の種類。|  
+|**query_parameterization_type**|**tinyint**|クエリ パラメーターの型。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -80,7 +79,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- その他の動的管理ビューとクエリのストア データを関連付けるために、関数を使用します。 次の例では:  
+ その他の動的管理ビューとクエリ ストアのデータを関連付けるために、関数を使用します。 次の例では:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -93,7 +92,7 @@ JOIN sys.dm_exec_query_stats AS qs
     ON fn_handle_from_stmt.statement_sql_handle = qs.statement_sql_handle;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_query_store_force_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

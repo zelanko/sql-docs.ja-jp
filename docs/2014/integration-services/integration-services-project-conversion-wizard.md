@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057976"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services プロジェクト変換ウィザード
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
   
 > [!NOTE]  
->  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
+>  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージの接続マネージャーを追加、削除、または共有する](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)」を参照してください。  
   
  **目的に合ったトピックをクリックしてください**  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48194912"
  **[選択項目に適用]**  
  クリックすると、 **[パスワード]** ボックスのパスワードが選択したパッケージに適用されます。  
   
- **[更新]**  
+ **更新**  
  パッケージの一覧を更新します。  
   
 ##  <a name="destination"></a> [配置先の選択] ページのオプションの設定  
@@ -181,7 +180,7 @@ ms.locfileid: "48194912"
  **[構成の追加]**  
  他のプロジェクトに含まれているパッケージ構成を、パラメーターで置き換える (使用可能な) 構成の一覧に追加します。 ファイル システムまたは SQL Server に格納された構成を選択できます。  
   
- **[更新]**  
+ **更新**  
  構成の一覧を更新する場合にクリックします。  
   
  **[変換後にすべてのパッケージから構成を削除する]**  
@@ -222,7 +221,7 @@ ms.locfileid: "48194912"
 ##  <a name="review"></a> [確認] ページのオプションの設定  
  プロジェクトの変換に関して選択したオプションを確認するには、 **[確認]** ページを使用します。  
   
- **Previous**  
+ **前へ**  
  オプションを変更する場合にクリックします。  
   
  **[変換]**  
@@ -242,7 +241,7 @@ ms.locfileid: "48194912"
  **[レポートの保存]**  
  プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

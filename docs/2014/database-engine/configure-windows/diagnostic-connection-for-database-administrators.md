@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -21,12 +20,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62810423"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーへの標準の接続が確立できないときに、管理者向けの特殊な診断接続が用意されています。 診断接続を使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が標準の接続要求に応答していない場合でも、管理者は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアクセスして診断クエリを実行し、問題のトラブルシューティングを行うことができるようになります。  
@@ -37,14 +36,14 @@ ms.locfileid: "48147560"
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
 ## <a name="connecting-with-dac"></a>DAC による接続  
  また、既定では、サーバーで実行されているクライアントからしか接続できません。 [remote admin connections オプション](remote-admin-connections-server-configuration-option.md)を指定した sp_configure ストアド プロシージャを使用して構成しない限り、ネットワーク接続は許可されません。  
   
  DAC を使用して接続できるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin ロールのメンバーのみです。  
   
- DAC は、 **sqlcmd** コマンド プロンプト ユーティリティで特殊な管理者スイッチ (**-A**) を指定することによって使用できます。 **sqlcmd** を使用する方法については、「[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。 プレフィックスとして接続することもできます`admin:`形式でインスタンス名に**sqlcmd-sadmin: * * * < instance_name >。* DAC を開始することも、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に接続してクエリ エディター `admin:` \<* instance_name * >。  
+ DAC は、 **sqlcmd** コマンド プロンプト ユーティリティで特殊な管理者スイッチ ( **-A**) を指定することによって使用できます。 **sqlcmd** を使用する方法については、「[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。 プレフィックスとして接続することもできます`admin:`形式でインスタンス名に**sqlcmd-sadmin:** _< instance_name >。_ DAC を開始することも、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に接続してクエリ エディター `admin:` \< *instance_name*>。  
   
 ## <a name="restrictions"></a>制限  
  DAC の唯一の目的は、ごくまれな状況でサーバーの問題を診断することであるので、この接続には次のようないくつかの制限があります。  
@@ -55,7 +54,7 @@ ms.locfileid: "48147560"
   
 -   DAC では、まずログインに関連付けられた既定のデータベースへの接続が試行されます。 既定のデータベースに正常に接続されたら、master データベースに接続できます。 既定のデータベースがオフライン状態であるか、または別の原因で使用できない場合、接続の際にエラー 4060 が返されます。 ただし、master データベースへ接続するために、次のコマンドを使用する代わりに既定のデータベースをオーバーライドすると成功します。  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      DAC を使用するときは、master データベースに接続することをお勧めします。これは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが起動すると master を使用できることが保証されているためです。  
   
@@ -75,9 +74,9 @@ ms.locfileid: "48147560"
   
 -   カタログ ビューのクエリ。  
   
--   DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS などの基本的な DBCC コマンド`,`DBCC SQLPERF です。 **DBCC** CHECKDB、DBCC DBREINDEX、DBCC SHRINKDATABASE などのリソースを集中的に消費するコマンドは実行しないでください。  
+-   DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS、DBCC SQLPERF などの基本的な DBCC コマンド。`,` **DBCC** CHECKDB、DBCC DBREINDEX、DBCC SHRINKDATABASE などのリソースを集中的に消費するコマンドは実行しないでください。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>* コマンド。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の状態によっては、KILL コマンドは必ずしも成功しません。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動するしか方法がありません。 次に一般的なガイドラインをいくつか示します。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* コマンド。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の状態によっては、KILL コマンドは必ずしも成功しません。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動するしか方法がありません。 次に一般的なガイドラインをいくつか示します。  
   
     -   `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`というクエリを実行し、SPID が実際に強制終了されたかどうかを確認します。 行が返されなかった場合は、セッションが強制終了されたことを示します。  
   
@@ -94,16 +93,16 @@ ms.locfileid: "48147560"
   
  DAC ポートは、起動中に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって動的に割り当てられます。 既定のインスタンスに接続する場合、DAC では SQL Server Browser サービスへの SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) 要求が使用されません。 まず、TCP ポート 1434 経由で接続が試行されます。 接続が失敗した場合、ポートを取得するために SSRP 呼び出しが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が SSRP 要求をリッスンしていない場合は、接続要求によってエラーが返されます。 DAC がリッスンしているポート番号を確認するには、エラー ログを参照します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート管理接続を受け入れるように構成されている場合、次のように DAC を明示的なポート番号で開始する必要があります。  
   
- **sqlcmd–Stcp:** *\<server>,\<port>*  
+ **sqlcmd-Stcp:** _\<server>,\<port>_  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログには DAC のポート番号が一覧されます。既定のポート番号は 1434 です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカルの DAC 接続のみを受け入れるように構成されている場合は、次のコマンドを実行し、ループバック アダプターを使用して接続します。  
   
- **sqlcmd – S127.0.0.1**、`1434`  
+ **sqlcmd-S127.0.0.1**,`1434`  
   
 ## <a name="example"></a>例  
  この例では、管理者がサーバー `URAN123` が応答していないことに気付き、その問題を診断します。 これを行うには、次のように、ユーザーが `sqlcmd` コマンド プロンプト ユーティリティをアクティブにし、DAC であることを示す `URAN123` を指定して、サーバー `-A` に接続します。  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  これで、管理者はクエリを実行して問題を診断し、場合によっては応答していないセッションを終了させることができます。  
   

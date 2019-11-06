@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.results.f1
@@ -13,12 +13,12 @@ ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c304f672ddcead8ac2077f27d02b65033c4b1b77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62691707"
 ---
 # <a name="results-detailed-view-dialog-box"></a>[結果の詳細ビュー] ダイアログ ボックス
   **[ポリシーの評価]** ダイアログ ボックスを使用してポリシーを実行し、 **[評価]** をクリックすると、このダイアログ ボックスにポリシーの評価結果が表示されます。 このダイアログ ボックスは読み取り専用で、プロパティ式のどの部分に問題があるかを把握するのに役立ちます。  

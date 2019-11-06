@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48fd9be77e8b72ee25211bbf52a70f7989785f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63155719"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ内でサポートされる構造
   このトピックの「にはネイティブ コンパイル ストアド プロシージャのサポートされている機能の一覧にはが含まれています ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql))。  
@@ -34,9 +34,9 @@ ms.locfileid: "48091242"
   
 -   [並べ替えに関する制限事項](#los)  
   
- ネイティブでサポートされるデータ型については、ストアド プロシージャをコンパイルを参照してください。 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)します。  
+ ネイティブ コンパイル ストアド プロシージャでサポートされるデータ型については、「 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)」を参照してください。  
   
- サポートされない構造の詳細については、およびネイティブ コンパイル ストアド プロシージャでサポートされていない機能の一部を回避する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
+ サポートされない構造に関する詳細と、ネイティブ コンパイル ストアド プロシージャのサポートされない一部の機能に対処する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)」を参照してください。 サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
   
 ##  <a name="pncsp"></a> ネイティブ コンパイル ストアド プロシージャでのプログラミング  
  サポート対象は次のとおりです。  
@@ -81,21 +81,21 @@ ms.locfileid: "48091242"
 ##  <a name="bfncsp"></a> ネイティブ コンパイル ストアド プロシージャの組み込み関数  
  メモリ最適化テーブルの既定構造とネイティブ コンパイル ストアド プロシージャでは、次の関数がサポートされます。  
   
--   数学関数: ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE、および TAN  
+-   算術関数:ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE、TAN  
   
--   日付関数: CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME、および YEAR  
+-   日付関数:CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME、YEAR  
   
--   文字列関数: LEN、LTRIM、RTRIM、および SUBSTRING  
+-   文字列関数:LEN、LTRIM、RTRIM、SUBSTRING  
   
 -   ID 関数: SCOPE_IDENTITY  
   
 -   NULL 関数: ISNULL  
   
--   Uniqueidentifier 関数: NEWID および NEWSEQUENTIALID  
+-   一意識別子関数:NEWID および NEWSEQUENTIALID  
   
--   エラー関数: ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、および ERROR_STATE  
+-   エラー関数:ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE  
   
--   変換: CAST および CONVERT。 Unicode 文字と非 Unicode 文字の文字列 (n(var)char および (var)char) の間の変換はサポートされません。  
+-   変換:CAST および CONVERT。 Unicode 文字と非 Unicode 文字の文字列 (n(var)char および (var)char) の間の変換はサポートされません。  
   
 -   システム関数: @@rowcount。 ネイティブ コンパイル ストアド プロシージャ内のステートメントによって、@@rowcount が更新されます。ネイティブ コンパイル ストアド プロシージャ内で @@rowcount を使用し、ネイティブ コンパイル ストアド プロシージャ内で実行された最後のステートメントによる影響を受けた行の数を決定することができます。 ただし、ネイティブ コンパイル ストアド プロシージャの実行の開始時および終了時に、@@rowcount は 0 にリセットされます。  
   
@@ -130,26 +130,26 @@ ms.locfileid: "48091242"
   
 -   SELECT リストでの変数代入。  
   
--   WHERE … AND  
+-   どこ。。。AND  
   
  <sup>1</sup> ORDER BY および TOP がいくつかの制限と、ネイティブ コンパイル ストアド プロシージャでサポートされています。  
   
--   サポートされていません`DISTINCT`で、`SELECT`または`ORDER BY`句。  
+-   `DISTINCT` 句または `SELECT` 句での `ORDER BY` のサポートはありません。  
   
 -   `WITH TIES` 句での `PERCENT` または `TOP` のサポートはありません。  
   
--   `TOP` 組み合わせて`ORDER BY`で定数を使用する場合は、8,192 を超える値をサポートしません、`TOP`句。 クエリに結合または集計関数が含まれている場合は、この制限値がさらに小さくなる場合があります (たとえば、1 回の結合 (2 つのテーブル) では、制限値は 4,096 行です。 2 回の結合 (3 つのテーブル) では、制限値は 2,730 行です)。  
+-   `TOP` と `ORDER BY` の組み合わせでは、`TOP` 句内で定数を使用するときに 8,192 を超える値はサポートされません。 クエリに結合または集計関数が含まれている場合は、この制限値がさらに小さくなる場合があります (たとえば、1 回の結合 (2 つのテーブル) では、制限値は 4,096 行です。 2 回の結合 (3 つのテーブル) では、制限値は 2,730 行です)。  
   
      変数内に行の数を格納すると、8,192 より多くの結果を取得できます。  
   
-    ```tsql  
+    ```sql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  ただし、変数を使用する場合に比べて、`TOP` 句内で定数を使用する方がパフォーマンスが向上する結果になります。  
   
- これらの制限が解釈されるには適用[!INCLUDE[tsql](../../includes/tsql-md.md)]メモリ最適化テーブルにアクセスします。  
+ これらの制限は、インタープリターによって処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスには適用されません。  
   
 ##  <a name="auditing"></a> 監査  
  プロシージャ レベルの監査はネイティブ コンパイル ストアド プロシージャでサポートされています。 ステートメント レベルの監査はサポートされていません。  
@@ -172,15 +172,15 @@ ms.locfileid: "48091242"
 ##  <a name="los"></a> 並べ替えに関する制限事項  
  [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用しない場合、[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  
   
- クエリが [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、"**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>*、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。*\<number>* が要求されました**" というエラー メッセージが表示されます。  
+ クエリが [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、エラー メッセージが表示されます:**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName >* 、行 *\<lineNumber >* TOP 演算子は、最大 8192 行を返すことができます *\<数 >* が要求されました。**  
   
  TOP 句がない場合は、ORDER BY で任意の数の行を並べ替えることができます。  
   
  ORDER BY 句を使用しない場合、TOP 演算子と共に任意の整数値を使用できます。  
   
- TOP N = 8192 の例: コンパイル  
+ TOP N = 8192 の例:コンパイルできます。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -191,9 +191,9 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- TOP N > 8192 の例: コンパイルは失敗します。  
+ TOP N > 8192 の例:コンパイルできません。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -206,9 +206,9 @@ GO
   
  8192 行の制限は、 `TOP N` が定数の場合に、前の例のように、 `N` にのみ適用されます。  8192 より大きな `N` が必要である場合は、値を変数に割り当て、 `TOP`と共にその変数を使用することができます。  
   
- 変数を使用した例: コンパイル  
+ 変数を使用した例:コンパイルできます。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
@@ -14,12 +13,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064149"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>構文ペアの自動照合
   構文ペアの自動照合では、ペアでコーディングする必要がある構文要素が正しくペアになっているかどうかをすぐに検出します。 この機能は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは区切り記号の照合、Analysis Services の XMLA クエリ エディターでは中かっこの照合、MDX エディターと DMX エディターではかっこの照合として知られています。  
@@ -70,6 +69,6 @@ ms.locfileid: "49085118"
 -   属性の開始引用符と終了引用符。  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>MDX エディターと DMX エディターでのかっこの照合  
- 多次元式 (MDX) およびデータ マイニング式 (DMX) のエディターで関数のかっこのペアを自動的に照合します。  
+ 多次元式 (MDX) エディターとデータ マイニング式 (DMX) のエディターでは、関数のかっこのペアが自動的に照合されます。  
   
   

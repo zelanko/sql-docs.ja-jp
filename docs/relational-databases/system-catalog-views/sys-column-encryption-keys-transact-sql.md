@@ -19,33 +19,32 @@ helpviewer_keywords:
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83dde1e60b9c9dd78a76c4bfa6afa86ac23f1bd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fd9177ad646a8086e00f9494e7e73488aace53d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140095"
 ---
 # <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  作成された列の暗号化キー (CEKs) に関する情報を返す、[列の暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)ステートメントです。 各行には、CEK を表します。  
+  作成された列の暗号化キー (CEKs) に関する情報を返す、[列の暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)ステートメントです。 各行は、CEK を表します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK の名前。|  
 |**column_encryption_key_id**|**int**|CEK の ID です。|  
 |**create_date**|**datetime**|CEK が作成された日付。|  
-|**modify_date**|**datetime**|CEK の最終変更日。|  
+|**modify_date**|**datetime**|CEK が最後に修正された日付。|  
   
 ## <a name="permissions"></a>アクセス許可  
  必要です、**ビューの列の暗号化キー**のアクセス許可。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   

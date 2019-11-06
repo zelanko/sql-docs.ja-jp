@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59799119920170db3dcab21619c01b52e7dda8db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e060411864c0f354ee9107216b86a47f738bf43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028065"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>ホスト保護属性と CLR 統合プログラミング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47800770"
   
 -   **ExternalProcessMgmt**、ホスト プロセスを制御する方法が API で公開するかどうかを示します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CAS 要件は、3 つのいずれかで指定された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス許可セット。**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**します。 サーバーで、アセンブリが登録されているときにこれらの 3 つのセキュリティ レベルのいずれかが指定されてを使用して、 **CREATE ASSEMBLY**ステートメント。 内でコードが実行されて、**セーフ**または**EXTERNAL_ACCESS**特定の型またはメンバーを持つ、アクセス許可セットは避ける必要があります、 **System.Security.Permissions.HostProtectionAttribute**属性が適用されています。 詳細については、次を参照してください。[アセンブリを作成する](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)と[CLR 統合プログラミング モデルの制限事項](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CAS 要件は、3 つのいずれかで指定された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス許可セット。**安全な**、 **EXTERNAL_ACCESS**、または**UNSAFE**します。 サーバーで、アセンブリが登録されているときにこれらの 3 つのセキュリティ レベルのいずれかが指定されてを使用して、 **CREATE ASSEMBLY**ステートメント。 内でコードが実行されて、**セーフ**または**EXTERNAL_ACCESS**特定の型またはメンバーを持つ、アクセス許可セットは避ける必要があります、 **System.Security.Permissions.HostProtectionAttribute**属性が適用されています。 詳細については、次を参照してください。[アセンブリを作成する](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)と[CLR 統合プログラミング モデルの制限事項](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)します。  
   
  **HostProtectionAttribute**でないセキュリティ アクセス許可を固有のコードを識別することで、信頼性を向上させる方法を構築します、型またはメソッドでは、同じくらいこと、ホストを許可しない可能性があります。 使用、 **HostProtectionAttribute**プログラミング モデルにより、ホストの安定性の保護を適用します。  
   

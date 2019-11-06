@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1862d4d8a1437f223e688b0b2b95ad5b5768e6a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109270"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)
   クエリが実行されるとき、またはレポートが処理されるとき、レポートはデータを取得するためにデータ接続を使用します。 ユーザーは、そのデータ接続を、リレーショナル データベース、多次元データベース、Web サービスなどのデータ ソースに接続する組み込みのデータ接続の種類の一覧から選択します。 データ接続の説明では、次の用語を使用します。  
@@ -45,11 +44,11 @@ ms.locfileid: "48224444"
 ## <a name="shared-data-sources"></a>共有データ ソース  
  共有データ ソースは、よく使用するデータ ソースがある場合に役立ちます。 可能な限り共有データ ソースを使用することをお勧めします。 レポートやレポートへのアクセスが管理しやすくなり、レポートやレポートからアクセスするデータ ソースの安全性を高めることができます。 共有データ ソースが必要な場合は、システム管理者に依頼して作成してもらってください。  
   
- レポート ビルダーで共有データ ソースを作成することはできません。 共有データ ソースはレポート サーバーで参照し、選択できます。 詳細については、次を参照してください。[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)します。  
+ レポート ビルダーで共有データ ソースを作成することはできません。 共有データ ソースはレポート サーバーで参照し、選択できます。 詳細については、「 [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
  レポート デザイナーでは、レポート サーバー上の共有データ ソースを参照できません。 共有データ ソースは、ソリューション エクスプローラーでプロジェクトの一部として作成し、レポート サーバーに配置するかどうかを選択できます。 使用しているコンピューターとレポート サーバーの資格情報の相違のため、これらをローカルでのみ使用するように選択する場合もあります。 詳細については、「[Reporting Services でのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。  
   
- 次のアイコンは、レポート サーバー フォルダー階層内の共有データ ソース アイテムを示します:![共有データ ソースのアイコン](media/hlp-16datasource.png "共有データ ソースのアイコン")  
+ 次のアイコンは、レポート サーバーのフォルダー階層内の共有データ ソース アイテムを示します。![共有データ ソースのアイコン](media/hlp-16datasource.png "共有データ ソースのアイコン")  
   
 ## <a name="embedded-data-sources"></a>埋め込みデータ ソース  
  埋め込みデータ ソースは、レポート定義に保存されるデータ接続です。 埋め込まれたデータ ソースの接続情報は、その情報が埋め込まれたレポートでのみ使用できます。 埋め込みデータ ソースを定義および管理するには、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用します。  
@@ -70,8 +69,8 @@ ms.locfileid: "48224444"
   
 ## <a name="see-also"></a>参照  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   

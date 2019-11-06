@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.addeditjoin.f1
@@ -13,12 +12,12 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abe1fb743410bdf7e0e9b586fc175a4308d8e8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62625937"
 ---
 # <a name="add-or-edit-join"></a>結合の追加と編集
   **[結合の追加]** ダイアログ ボックスおよび **[結合の編集]** ダイアログ ボックスでは、マージ パブリケーションに使用する結合フィルターの追加と編集を行えます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48130355"
   
     -   新しい結合を追加する場合、 **[ビルダーを使用してステートメントを作成する]** または **[JOIN ステートメントを手動で作成する]** を選択します。 結合を手動で作成する場合、ビルダーは使用できません。  
   
-         ビルダーの使用を選択した場合、グリッド内の列 (**[結合]**、 **[フィルター選択されたテーブルの列]**、 **[演算子]**、 **[結合テーブルの列]**) を使用して JOIN ステートメントを作成します。 グリッド内の各列にはドロップダウン リスト ボックスがあり、これを使用して 2 つの列と演算子 (**=**、 **<>**、 **<=**、 **\<**、 **>=**、 **>**、 **[like]**) を選択できます。 結果は **[プレビュー]** テキスト領域に表示されます。 結合に列が 2 組以上使用される場合には、**[結合]** 列で結合 ( **[AND]** または **[OR]** ) を選択し、2 つの列と別の演算子を入力します。  
+         ビルダーの使用を選択した場合、グリッド内の列 ( **[結合]** 、 **[フィルター選択されたテーブルの列]** 、 **[演算子]** 、 **[結合テーブルの列]** ) を使用して JOIN ステートメントを作成します。 グリッド内の各列にはドロップダウン リスト ボックスがあり、これを使用して 2 つの列と演算子 ( **=** 、 **<>** 、 **<=** 、 **\<** 、 **>=** 、 **>** 、 **[like]** ) を選択できます。 結果は **[プレビュー]** テキスト領域に表示されます。 結合に列が 2 組以上使用される場合には、 **[結合]** 列で結合 ( **[AND]** または **[OR]** ) を選択し、2 つの列と別の演算子を入力します。  
   
          ステートメントを手動で作成する場合、 **[JOIN ステートメント]** テキスト領域に JOIN ステートメントを入力します。 **[フィルター選択されたテーブルの列]** リスト ボックスと **[結合テーブルの列]** リスト ボックスを使用して、列を **[結合テーブルの列]** テキスト領域にドラッグ アンド ドロップします。  
   
@@ -63,11 +62,11 @@ ms.locfileid: "48130355"
   
  フィルターを追加または編集した後に、 **[OK]** をクリックして変更を保存し、ダイアログ ボックスを閉じます。 指定したフィルターは、SELECT 句のテーブルに対して解析され、実行されます。 フィルター ステートメントに構文エラーなどの問題がある場合には通知され、フィルター ステートメントを編集することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Publication](publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
  [パブリッシュされたデータのフィルター選択](publish/filter-published-data.md)   
- [結合フィルター](merge/join-filters.md)   
+ [Join Filters](merge/join-filters.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)  
   

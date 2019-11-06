@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e350687f69ea8e6a8ab70f5fa2eb5a1552058525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62691659"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、マージ テーブル アーティクル間に論理レコード リレーションシップを定義する方法について説明します。  
@@ -57,7 +56,7 @@ ms.locfileid: "48069922"
   
 #### <a name="to-define-a-logical-record-relationship"></a>論理レコード リレーションシップを定義するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内の行フィルターを選択します。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内の行フィルターを選択します。  
   
      論理レコード リレーションシップは、行フィルターを拡張する結合フィルターに関連付けられます。 したがって、先に行フィルターが定義されていないと、行フィルターを結合で拡張して論理レコード リレーションシップを適用することはできません。 1 つの結合フィルターが定義されると、この結合フィルターを別の結合フィルターを使用して拡張できます。 結合フィルターの定義の詳細については、「 [マージ アーティクル間の結合フィルターの定義および変更](define-and-modify-a-join-filter-between-merge-articles.md)」を参照してください。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48069922"
   
 3.  **[結合の追加]** ダイアログ ボックスで結合フィルターを定義してから、 **[論理レコード]** チェック ボックスをオンにします。  
   
-4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
+4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>論理レコード リレーションシップを削除するには  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48069922"
   
      論理レコード リレーションシップのみを削除するには  
   
-    1.  パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内の論理レコード リレーションシップに関連付けられている結合フィルターを選択し、**[編集]** をクリックします。  
+    1.  パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内の論理レコード リレーションシップに関連付けられている結合フィルターを選択し、 **[編集]** をクリックします。  
   
     2.  **[結合の編集]** ダイアログ ボックスで、 **[論理レコード]** チェック ボックスをオフにします。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48069922"
   
      論理レコード リレーションシップとそれに関連付けられている結合フィルターを削除するには  
   
-    -   パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[削除]** をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
+    -   パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  プログラムでレプリケーション ストアド プロシージャを使用して、アーティクル間に論理レコード リレーションシップを指定できます。  
@@ -92,7 +91,7 @@ ms.locfileid: "48069922"
   
     -   値が **1**の場合、事前計算済みパーティションが既に使用されています。  
   
-    -   値が **0**の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行します。 **@property** に **use_partition_groups** を指定し、**@value** に **true** を指定します。  
+    -   値が **0**の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行します。 **@property** に **use_partition_groups** を指定し、 **@value** に **true** を指定します。  
   
         > [!NOTE]  
         >  パブリケーションで事前計算済みパーティションがサポートされない場合、論理レコードは使用できません。 詳細については、[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)に関するページで、事前計算済みパーティションを使用するための要件をご覧ください。  
@@ -101,9 +100,9 @@ ms.locfileid: "48069922"
   
 2.  論理レコードを構成するアーティクルが存在しない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 論理レコードの競合の検出と解決に関するオプションを次の中から 1 つ指定します。  
   
-    -   論理レコードの関連する行で発生する競合を検出し、解決するには、 **@value** には **@logical_record_level_conflict_detection** 」および「 **@logical_record_level_conflict_resolution**」をご覧ください。  
+    -   論理レコードの関連する行で発生する競合を検出し、解決するには、 **@value** には **@logical_record_level_conflict_detection** 」および「 **@logical_record_level_conflict_resolution** 」をご覧ください。  
   
-    -   標準的な行または列レベルの競合の検出と解決を使用するには、値を指定`false`の**@logical_record_level_conflict_detection**と**@logical_record_level_conflict_resolution**、既定値します。  
+    -   標準的な行または列レベルの競合の検出と解決を使用するには、値を指定`false`の **@logical_record_level_conflict_detection** と **@logical_record_level_conflict_resolution** 、既定値します。  
   
 3.  論理レコードを構成する各アーティクルに対して、手順 2. を実行します。 論理レコード内の各アーティクルに使用する競合の検出および解決のオプションは、すべて同じである必要があります。 詳しくは、「 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
   
@@ -122,15 +121,15 @@ ms.locfileid: "48069922"
   
 1.  論理レコードの関連する行で発生する競合を検出し、解決するには、次の手順を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **logical_record_level_conflict_detection** を指定し、**@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **logical_record_level_conflict_detection** を指定し、 **@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **logical_record_level_conflict_resolution** を指定し、**@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **logical_record_level_conflict_resolution** を指定し、 **@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
 2.  標準の行レベルまたは列レベルの競合の検出と解決を使用するには、次の手順を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定**logical_record_level_conflict_detection**の**@property**の値と`false`の **@value**します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定**logical_record_level_conflict_detection**の **@property** の値と`false`の **@value** します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定**logical_record_level_conflict_resolution**の**@property**の値と`false`の **@value**します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定**logical_record_level_conflict_resolution**の **@property** の値と`false`の **@value** します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>論理レコード リレーションシップを削除するには  
   
@@ -161,7 +160,7 @@ ms.locfileid: "48069922"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定して、手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが `false` を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> プロパティが <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>に設定されている場合、これを <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>に設定します。  
   
@@ -173,7 +172,7 @@ ms.locfileid: "48069922"
   
     -   (省略可) アーティクルが行方向にフィルター選択される場合、 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティに行フィルター句を指定します。 このプロパティを使用して、静的行フィルターまたはパラメーター化された行フィルターを指定します。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
-     詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
+     詳しくは、「 [Define an Article](define-an-article.md)」をご覧ください。  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> メソッドを呼び出します。  
   
@@ -202,7 +201,7 @@ ms.locfileid: "48069922"
   
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージ アーティクル間の結合フィルターの定義および変更](define-and-modify-a-join-filter-between-merge-articles.md)   
  [マージ アーティクルのパラメーター化された行フィルターの定義と変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [静的行フィルターの定義と変更](define-and-modify-a-static-row-filter.md)   

@@ -17,12 +17,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62792005"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で導入された[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]高可用性ディザスター リカバリー ソリューションには、Windows Server フェールオーバー クラスタリング (WSFC) が必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバー クラスタリングには依存しませんが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、フェールオーバー クラスタリング インスタンス (FCI) を使用して、可用性グループの可用性レプリカをホストすることもできます。 実際に [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境を設計する際は、それぞれのクラスタリング テクノロジの役割を知り、注意点を把握しておくことが大切です。  
@@ -49,7 +49,7 @@ ms.locfileid: "48167944"
 ### <a name="cross-cluster-migration-of-alwayson-availability-groups-for-os-upgrade"></a>OS アップグレードのための AlwaysOn 可用性グループのクラスター間での移行  
  [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] から、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]では、新しい Windows Server フェールオーバー クラスタリング (WSFC) クラスターに配置するために行う可用性グループのクラスター間での移行が新たにサポートされています。 クラスター間の移行では、ダウンタイムを最小限に抑えながら、1 つの可用性グループを (または複数の可用性グループを一括して) 新しい移行先 WSFC クラスターに移行します。 クラスター間の移行プロセスを使用すると、 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] クラスターへのアップグレード時にサービス レベル契約 (SLA) を維持できます。 移行先の WSFC クラスターに [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (またはそれ以降のバージョン) をインストールし、AlwaysOn 用に有効にする必要があります。 クラスター間での移行を成功させるには、移行先 WSFC クラスターを綿密に計画し、準備することが必要です。  
   
- 詳細については、「[OS アップグレードのための AlwaysOn 可用性グループのクラスター間での移行](http://msdn.microsoft.com/library/jj873730.aspx)」を参照してください。  
+ 詳細については、「[OS アップグレードのための AlwaysOn 可用性グループのクラスター間での移行](https://msdn.microsoft.com/library/jj873730.aspx)」を参照してください。  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) と可用性グループ  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスタリングを WSFC クラスターと共に実装することにより、サーバー インスタンス レベルで第 2 のフェールオーバー レイヤーをセットアップできます。 可用性レプリカは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスまたは FCI インスタンスでホストできます。 特定の可用性グループのレプリカをホストできる FCI パートナーは 1 つに限られます。 可用性レプリカが FCI で実行されている場合、可用性グループの有効な所有者の一覧には、アクティブな FCI ノードだけが含まれます。  
@@ -76,7 +76,7 @@ ms.locfileid: "48167944"
  **可用性グループのフェールオーバー ポリシー設定は、スタンドアロン インスタンスと FCI インスタンスのどちらでホストされているかに関係なく、すべてのレプリカに適用されます。  
   
 > [!NOTE]  
->  詳細については**ノード数**フェールオーバー クラスタ リング内と**AlwaysOn 可用性グループ**の各エディションの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[でサポートされる機能、SQL Server 2012 の各エディション](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)します。  
+>  詳細については**ノード数**フェールオーバー クラスタ リング内と**AlwaysOn 可用性グループ**の各エディションの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[でサポートされる機能、SQL Server 2012 の各エディション](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) します。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI で可用性レプリカをホストする場合の考慮事項  
   
@@ -112,19 +112,19 @@ ms.locfileid: "48167944"
   
 -   **ブログ:**  
   
-     [制限付きセキュリティを使用した SQL Server 用 Windows フェールオーバー クラスタリング (可用性グループまたは FCI) の構成](http://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [制限付きセキュリティを使用した SQL Server 用 Windows フェールオーバー クラスタリング (可用性グループまたは FCI) の構成](https://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
   
-     [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [AlwaysOn アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループを使用して高可用性とディザスター リカバリー ソリューションを構築します。](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性およびディザスター リカバリー ソリューションの構築](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   

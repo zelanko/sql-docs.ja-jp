@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcbe9d23bab18e47b69f82812f604a94d4c5ce9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022770"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,25 +39,25 @@ ms.locfileid: "47734600"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<列を継承 >**|—|列を継承**sys.endpoints** (詳細については、次を参照してください。 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
-|**role**|**tinyint**|ミラーリング ロール。次のいずれかになります。<br /><br /> **0** = なし<br /><br /> **1**パートナーを =<br /><br /> **2** = ミラーリング監視サーバー<br /><br /> **3** = all<br /><br /> 注: この値はデータベース ミラーリングのみ関連します。|  
-|**role_desc**|**nvarchar(60)**|ミラーリング ロールの説明。次のいずれかになります。<br /><br /> **NONE**<br /><br /> **パートナー**<br /><br /> **ミラーリング監視サーバー**<br /><br /> **ALL**<br /><br /> 注: この値はデータベース ミラーリングのみ関連します。|  
+|**\<列を継承 >**|-|列を継承**sys.endpoints** (詳細については、次を参照してください。 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
+|**role**|**tinyint**|ミラーリング ロール。次のいずれかになります。<br /><br /> **0** = なし<br /><br /> **1**パートナーを =<br /><br /> **2** = ミラーリング監視サーバー<br /><br /> **3** = all<br /><br /> 注:この値は、データベース ミラーリングのみ関連します。|  
+|**role_desc**|**nvarchar(60)**|ミラーリング ロールの説明。次のいずれかになります。<br /><br /> **NONE**<br /><br /> **パートナー**<br /><br /> **ミラーリング監視サーバー**<br /><br /> **ALL**<br /><br /> 注:この値は、データベース ミラーリングのみ関連します。|  
 |**is_encryption_enabled**|**bit**|**1**その暗号化が有効になっていることを意味します。<br /><br /> **0**その暗号化が無効になっていることを意味します。|  
 |**connection_auth**|**tinyint**|エンドポイントへの接続に必要な接続認証の種類。次のいずれかになります。<br /><br /> **1** - NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -ネゴシエート<br /><br /> **4** -証明書<br /><br /> **5** -NTLM、CERTIFICATE<br /><br /> **6** -KERBEROS、CERTIFICATE<br /><br /> **7** -NEGOTIATE、CERTIFICATE<br /><br /> **8** -CERTIFICATE、NTLM<br /><br /> **9** -証明書、KERBEROS<br /><br /> **10** -CERTIFICATE、NEGOTIATE|  
-|**connection_auth_desc**|**Nvarchar (60)**|エンドポイントへの接続に必要な認証の種類の説明。次のいずれかになります。<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
+|**connection_auth_desc**|**Nvarchar (60)**|このエンドポイントは、のいずれかへの接続に必要な認証の種類の説明です。<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> ネゴシエート<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
 |**certificate_id**|**int**|認証で使用される証明書の ID (存在する場合)。<br /><br /> 0 = Windows 認証が使用されます。|  
-|**encryption_algorithm**|**tinyint**|暗号化アルゴリズム。次のいずれかになります。<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** – NONE、RC4<br /><br /> **4** – NONE、AES<br /><br /> **5** – RC4、AES<br /><br /> **6** – AES、RC4<br /><br /> **7** – NONE、RC4、AES<br /><br /> **8** – NONE、AES、RC4|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|暗号化アルゴリズムの説明。次のいずれかになります。<br /><br /> なし<br /><br /> RC4<br /><br /> AES<br /><br /> NONE、RC4<br /><br /> NONE、AES<br /><br /> RC4、AES<br /><br /> AES、RC4<br /><br /> NONE、RC4、AES<br /><br /> NONE、AES、RC4|  
+|**encryption_algorithm**|**tinyint**|暗号化アルゴリズム。次のいずれかになります。<br /><br /> **0** -なし<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -NONE、RC4<br /><br /> **4** -NONE、AES<br /><br /> **5** -RC4、AES<br /><br /> **6** -AES、RC4<br /><br /> **7** -NONE、RC4、AES<br /><br /> **8** -NONE、AES、RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|いずれかの暗号化アルゴリズムの説明です。<br /><br /> なし<br /><br /> RC4<br /><br /> AES<br /><br /> NONE、RC4<br /><br /> NONE、AES<br /><br /> RC4、AES<br /><br /> AES、RC4<br /><br /> NONE、RC4、AES<br /><br /> NONE、AES、RC4|  
   
 ## <a name="remarks"></a>コメント  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を解除できます。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を解除できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [追加または可用性レプリカを変更する場合は、エンドポイント URL の指定&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
  [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [sys.database_mirroring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   

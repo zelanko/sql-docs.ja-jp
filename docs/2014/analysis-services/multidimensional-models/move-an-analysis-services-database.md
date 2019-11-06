@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - moving databases [Anlysis Services]
@@ -15,12 +14,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073599"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services データベースの移動
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) が多次元式またはテーブル モデル データベースを別の場所に移動することは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。  
@@ -44,7 +43,7 @@ ms.locfileid: "50145327"
   
 1.  SSMS の左側または右側のペインで、移動するデータベースを探します。  
   
-2.  データベースを右クリックし、 **[デタッチ]** をクリックします。  
+2.  クリックし、データベースを右クリックして**デタッチしています.**  
   
 3.  デタッチするデータベースにパスワードを割り当て、 **[OK]** をクリックしてデタッチ コマンドを実行します。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "50145327"
   
 5.  SSMS の左側または右側のペインで、 **[データベース]** フォルダーを探します。  
   
-6.  **[データベース]** フォルダーを右クリックし、 **[アタッチ]** をクリックします。  
+6.  右クリックし、**データベース**フォルダーと選択**アタッチしています.**  
   
-7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 または、参照ボタン (**[…]**) を使用して、データベース フォルダーを探すこともできます。  
+7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 また、[参照] ボタンを使用することができます (**.**) データベース フォルダーを検索します。  
   
 8.  選択、`ReadWrite`データベースのモード。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "50145327"
   
 2.  次の XMLA 用のスクリプト テンプレートをコピーします。  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -128,11 +127,11 @@ ms.locfileid: "50145327"
   
 4.  新しい XMLA タブに、次の XMLA 用のスクリプト テンプレートをコピーします。  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

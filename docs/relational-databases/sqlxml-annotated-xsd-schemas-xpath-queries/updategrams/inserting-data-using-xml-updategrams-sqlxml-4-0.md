@@ -31,20 +31,19 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 319980e5ce6b2bb1671c57c9619b635fbf130bf8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086839"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  レコード インスタンスが表示されたら、アップデート グラムは挿入操作を示します、 **\<後 >** ブロックが、対応する**\<する前に >** ブロックします。 アップデート グラムがでレコードを挿入するこの例では、 **\<後 >** をデータベースにブロックします。  
+  レコード インスタンスが表示されたら、アップデート グラムは挿入操作を示します、 **\<後 >** ブロックが、対応する **\<する前に >** ブロックします。 アップデート グラムがでレコードを挿入するこの例では、 **\<後 >** をデータベースにブロックします。  
   
  挿入操作のアップデートグラムの形式は次のとおりです。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "51671161"
  アップデート グラムがシステムによって割り当てられた値をキャプチャ オプションを使用してアップデート グラムでは、IDENTITY 型列を持つテーブルにレコードを挿入、ときに**updg: id で**属性。 キャプチャした値は、後続のアップデートグラム操作で使用できます。 アップデート グラムの実行時に指定することによって生成される id 値を返すことができます、 **updg:returnid**属性。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
- **Updg:guid**属性は省略可能な属性をグローバルに一意の識別子が生成されます。 この値が全体のスコープ内に残ります**\<同期 >** ブロックが指定されています。 この値はで任意の場所を使用することができます、 **\<同期 >** ブロックします。 属性の呼び出し、 **NEWGUID()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一意識別子を生成する関数。  
+ **Updg:guid**属性は省略可能な属性をグローバルに一意の識別子が生成されます。 この値が全体のスコープ内に残ります **\<同期 >** ブロックが指定されています。 この値はで任意の場所を使用することができます、 **\<同期 >** ブロックします。 属性の呼び出し、 **NEWGUID()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一意識別子を生成する関数。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要があります[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
@@ -160,7 +159,7 @@ ms.locfileid: "51671161"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. アップデートグラムを使用して複数のレコードを挿入する  
- このアップデートグラムでは、HumanResources.Shift テーブルに 2 つの新しい勤務時間レコードを追加します。 アップデート グラムでは、オプションで指定されていない**\<する前に >** ブロックします。  
+ このアップデートグラムでは、HumanResources.Shift テーブルに 2 つの新しい勤務時間レコードを追加します。 アップデート グラムでは、オプションで指定されていない **\<する前に >** ブロックします。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -187,7 +186,7 @@ ms.locfileid: "51671161"
   
      詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
- この例の別のバージョンは 2 つの個別を使用するアップデート グラム**\<後 >** 2 人の従業員を挿入する 1 つのブロックではなくブロックします。 これは有効であり、次のようにエンコードできます。  
+ この例の別のバージョンは 2 つの個別を使用するアップデート グラム **\<後 >** 2 人の従業員を挿入する 1 つのブロックではなくブロックします。 これは有効であり、次のようにエンコードできます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -238,7 +237,7 @@ ms.locfileid: "51671161"
   
  Order Details テーブル内の UnitPrice 列が、 **money**型。 適切な型変換を適用する (から、**文字列**型、 **money**型)、ドル記号 ($) は、値の一部として追加する必要があります。 アップデート グラムがマッピング スキーマでの最初の文字を指定しないかどうか、**文字列**値が評価されます。 最初の文字がドル記号 ($) の場合、適切な変換が行われます。  
   
- アップデート グラムがいずれかとして、列が正しくマークされているマッピング スキーマに対して指定されている場合**dt:type="fixed.14.4"** または**sql:datatype ="money"**、ドル記号 ($) が必要でないと、変換は、マッピングによって処理されます。 適切な型変換が行われるようにするには、この方法が推奨されます。  
+ アップデート グラムがいずれかとして、列が正しくマークされているマッピング スキーマに対して指定されている場合**dt:type="fixed.14.4"** または**sql:datatype ="money"** 、ドル記号 ($) が必要でないと、変換は、マッピングによって処理されます。 適切な型変換が行われるようにするには、この方法が推奨されます。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   
@@ -388,7 +387,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  次のスキーマ (CustOrderSchema.xml) について説明します、  **\<CustOrder >** 要素で構成される、 **OrderID**と**EmployeeID**属性。 スキーマをさらに興味深いにするために、既定値が割り当てられている、 **EmployeeID**属性。 アップデートグラムでは、属性の既定値は、アップデートグラムでその属性が指定されていない挿入操作のみに使用されます。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="CustOrder" >  
    <xsd:complexType>  
@@ -458,7 +457,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="Student" sql:relation="Students">  
   <xsd:complexType>  
@@ -489,7 +488,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
       xmlns:updg="urn:schemas-microsoft-com:xml-updategram"  
-      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   
 <updg:sync mapping-schema='StudentSchema.xml'>  
   <updg:before/>  
@@ -564,7 +563,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  次のスキーマ (XSD-ElementHavingNamespace.xml) では、対応する要素と属性の宣言方法を示しています。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
      xmlns:dt="urn:schemas-microsoft-com:datatypes"   
      xmlns:sql="urn:schemas-microsoft-com:mapping-schema"    
      xmlns:x="https://server/xyz/schemas/"   
@@ -636,7 +635,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
         <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
               xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
               xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
-              xmlns:html="https://www.w3.org/1999/xhtml"   
+              xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
   <p1:Summary>  
      <html:p>Insert Example</html:p>  
@@ -687,7 +686,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
            xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  

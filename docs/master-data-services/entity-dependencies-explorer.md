@@ -5,21 +5,19 @@ ms.date: 04/06/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - マスター データ サービス
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 87d9d0ea6ea2310f305eb6cb58ec8e39ecab8649
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 6572f8a72dbbd4b4c197db82819ad7a372cedf78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052050"
 ---
 # <a name="entity-dependencies-explorer"></a>エンティティの依存関係エクスプローラー
 

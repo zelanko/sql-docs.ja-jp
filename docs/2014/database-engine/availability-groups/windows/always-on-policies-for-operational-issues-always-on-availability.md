@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104174"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815757"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルは、定義済みポリシー ベースの管理 (PBM) ポリシーのセットを評価します。 これらのポリシーを使用すると、可用性グループとその可用性レプリカおよびデータベースの正常性を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で表示できます。  
@@ -84,9 +84,9 @@ ms.locfileid: "48104174"
 ##  <a name="ExtendHealthModel"></a> AlwaysOn の正常性モデルの拡張  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルを拡張するには、独自のユーザー定義のポリシーを作成し、監視するオブジェクトの種類に基づいて特定のカテゴリに分類します。  いくつかの設定を変更した後、独自のユーザー定義のポリシーおよび AlwaysOn の定義済みのポリシーが、AlwaysOn ダッシュボードによって自動的に評価されます。  
   
- ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「[定義済みのポリシーと問題点](#AlwaysOnPBM)」を参照してください)。 サーバーのファセットを監視するため、次のプロパティを提供する[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]正常性: (`IsHadrEnabled`と`HadrManagerStatus`)。 サーバーのファセットは、WSFC クラスター構成の監視用に、`ClusterQuorumType` プロパティおよび `ClusterQuorumState` プロパティも提供します。  
+ ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「[定義済みのポリシーと問題点](#AlwaysOnPBM)」を参照してください)。 サーバーのファセットは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性状態の監視用に、`IsHadrEnabled` プロパティおよび `HadrManagerStatus` プロパティを提供します。 サーバーのファセットは、WSFC クラスター構成の監視用に、`ClusterQuorumType` プロパティおよび `ClusterQuorumState` プロパティも提供します。  
   
- 詳細については、「[AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」を参照してください (SQL Server AlwaysOn チームのブログ)。  
+ 詳細については、「[AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」を参照してください (SQL Server AlwaysOn チームのブログ)。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -104,13 +104,13 @@ ms.locfileid: "48104174"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループ (SQL Server)](always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの管理 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   

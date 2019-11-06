@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - results [SQL Server], cursors
@@ -19,12 +18,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10e6590da7d5efdb704a3f4005c278e2add41a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918693"
 ---
 # <a name="cursors"></a>カーソル
   リレーショナル データベースで操作を実行する場合、行の完全なセットが操作の対象になります。 たとえば、SELECT ステートメントでは、WHERE 句で指定した条件を満たすすべての行のセットが返されます。 このステートメントが返す行の完全なセットを結果セットと呼びます。 アプリケーション、特に対話型のオンライン アプリケーションでは、必ずしも、結果セット全体をひとまとめに使用して作業することが効率的であるとは限りません。 そのため、このようなアプリケーションでは、一度に 1 行または少数の行のブロックを使用するためのメカニズムが必要になります。 カーソルはそのメカニズムを提供する結果セットの拡張機能です。  
@@ -62,7 +61,7 @@ ms.locfileid: "48134072"
   
  データベース API カーソル モデルでは、順方向専用カーソルが特殊な種類のカーソルと見なされますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では違います。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、順方向専用とスクロールの両方が静的カーソル、キーセット ドリブン カーソル、および動的カーソルに適用できるオプションと見なされます。 [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルは、順方向専用の静的カーソル、キーセット ドリブン カーソル、および動的カーソルをサポートします。 データベース API カーソル モデルでは、静的カーソル、キーセット ドリブン カーソル、および動的カーソルが常にスクロール可能であることを前提としています。 データベース API カーソルの属性またはプロパティを順方向専用に設定すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、カーソルは順方向専用の動的カーソルとして実装されます。  
   
- 静的  
+ スタティック  
  静的カーソルを開くと、そのカーソルの完全な結果セットが **tempdb** に作成されます。 静的カーソルは常に、カーソルを開いた時点の結果セットの状態を表示します。 静的カーソルは変更をほとんど検出しませんが、スクロール中に消費するリソースは比較的少なくなります。  
   
  このカーソルは、結果セットのメンバーシップに影響を与えるデータベース内の変更や、結果セットを構成する行の列内の値に対する変更を反映しません。 静的カーソルを開いた後にデータベースに新しい行が挿入されると、カーソルの SELECT ステートメントの検索条件に一致していても、静的カーソルにそれらの行は表示されません。 結果セットを構成する行が他のユーザーによって更新された場合、その新しいデータ値は静的カーソルに表示されません。 静的カーソルを開いた後にデータベースから削除された行は、静的カーソルに表示されます。 UPDATE、INSERT、または DELETE による操作は、静的カーソルを閉じてから再度開かない限り、静的カーソルに反映されません。これは、その静的カーソルを開いたのと同じ接続を使用して変更を行った場合でも同様です。  

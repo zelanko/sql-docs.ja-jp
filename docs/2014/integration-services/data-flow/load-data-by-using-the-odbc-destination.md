@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1a0d8e895189e3fe71d9d99178beff7cd603208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771068"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
   次の手順では、ODBC 入力先を使用してデータを読み込む方法を示します。 ODBC 入力先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの入力元があらかじめ含まれている必要があります。  
@@ -35,9 +34,9 @@ ms.locfileid: "48103972"
   
 6.  データのアクセス方法を選択します。  
   
-    -   **[テーブル名 - バッチ]** バッチモードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]** を設定できます。  
+    -   **[テーブル名 - バッチ]**: バッチ モードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]** を設定できます。  
   
-    -   **[テーブル名 - 行ごと]**: 一度に 1 行ずつ、入力先に各行を挿入する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
+    -   **[テーブル名 - 行ごと]**: 一度に 1 行ずつ、入力先テーブルに各行を挿入するように ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
   
 7.  **[テーブル名またはビュー名]** フィールドで、使用できるテーブルまたはビューを一覧のデータベースから選択するか、正規表現を入力してテーブルを指定します。この一覧には、最初の 1,000 テーブルのみが表示されます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。  
   
@@ -47,13 +46,13 @@ ms.locfileid: "48103972"
   
 10. エラー出力を構成するには、 **[エラー出力]** をクリックします。  
   
-11. **[OK]** をクリックします。  
+11. [**OK**] をクリックします。  
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [Odbc 入力先エディター&#40;接続マネージャー ページ&#41;](../odbc-destination-editor-connection-manager-page.md)   
- [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](../odbc-destination-editor-mappings-page.md)   
- [Odbc 入力元エディター&#40;エラー出力 ページ&#41;](../odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>関連項目  
+ [ODBC 変換先エディター ([接続マネージャー] ページ)](../odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 変換先エディター ([マッピング] ページ)](../odbc-destination-editor-mappings-page.md)   
+ [ODBC ソース エディター ([エラー出力] ページ)](../odbc-source-editor-error-output-page.md)  
   
   

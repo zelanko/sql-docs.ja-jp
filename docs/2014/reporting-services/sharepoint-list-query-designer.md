@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a68cc175ec8339fc9af0554a6b9c5c5b6f7386ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 62428860419dd42b263b9408bb2c0d39514ca0e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135167"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101186"
 ---
 # <a name="sharepoint-list-query-designer"></a>SharePoint リストのクエリ デザイナー
   レポート デザイナーにはグラフィカル クエリ デザイナーとテキストベースのクエリ デザイナーが用意されており、レポート データセット用に SharePoint サイトから取得するデータを指定するクエリの作成に使用できます。 SharePoint リスト メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示、クエリの変更、またはクエリ コマンドの入力を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -64,7 +63,7 @@ ms.locfileid: "48135167"
  このペインのフィールドを追加したり削除したりするには、SharePoint リスト ペインでテーブルまたはビューのフィールドのチェック ボックスをオンまたはオフにします。  
   
 ###  <a name="AppliedFilters"></a> 適用されたフィルター ペイン  
- 適用されたフィルター ペインには、実行時に取得されるデータの行数を制限するために使用される条件が表示されます。 このペインで指定した条件を使用して、生成、 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE 句。 パラメーター オプションを選択すると、レポート パラメーターが自動的に生成されます。 クエリ パラメーターに基づくレポート パラメーターを使用すると、ユーザーがクエリの値を指定してレポートのデータを制御できるようになります。  
+ 適用されたフィルター ペインには、実行時に取得されるデータの行数を制限するために使用される条件が表示されます。 このペインで指定された条件を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] の WHERE 句が生成されます。 パラメーター オプションを選択すると、レポート パラメーターが自動的に生成されます。 クエリ パラメーターに基づくレポート パラメーターを使用すると、ユーザーがクエリの値を指定してレポートのデータを制御できるようになります。  
   
  次の列が表示されます。  
   

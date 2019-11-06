@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 042ded6eb375dd77655d423dbf238662ba9093a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f189bacee19f7377ae36a15f6b62f05de94fa5a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835399"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 変更データベース インスタンスを作成する方法
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスを作成する方法について説明します。  

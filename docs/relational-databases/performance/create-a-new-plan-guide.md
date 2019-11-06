@@ -12,24 +12,23 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bfcbf1862968a00009bca4d735eb95a3bb5d1719
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946965"
 ---
 # <a name="create-a-new-plan-guide"></a>新しいプラン ガイドの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドでは、最適化するステートメントと、使用するクエリ ヒントを含む OPTION 句 またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、クエリ オプティマイザーにより [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
 
 プラン ガイドは固定クエリ プランまたはクエリ ヒントをクエリに適用します。
   
 ##  <a name="Restrictions"></a> 制限事項と制約事項  
--   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、**@name =** を指定する場合は、**@stmt =**、**@type =** なども指定する必要があります。 同様に、**@name =** を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
+-   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、 **@name =** を指定する場合は、 **@stmt =** 、 **@type =** なども指定する必要があります。 同様に、 **@name =** を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
   
 -   同一のクエリとバッチまたはモジュールに対し、複数の OBJECT または SQL プラン ガイドを作成できます。 ただし、有効にできるプラン ガイドは常に 1 つだけです。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "52712115"
 ##  <a name="SSMSProcedure"></a> SSMS を使用してプラン ガイドを作成する  
 1.  プラス記号をクリックして、作成するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
-2.  **[プラン ガイド]** フォルダーを右クリックし、**[新しいプラン ガイド...]** をクリックします。 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
+2.  **[プラン ガイド]** フォルダーを右クリックし、 **[新しいプラン ガイド...]** をクリックします。 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  **[新しいプラン ガイド]** ダイアログ ボックスの **[名前]** ボックスに、プラン ガイドの名前を入力します。  
   

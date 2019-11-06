@@ -5,7 +5,7 @@ ms.date: 11/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672631"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908531"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージド コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "51672631"
  [[ディストリビューションの構成]](../../../relational-databases/replication/configure-distribution.md)  
  このセクションのトピックでは、RMO を使用してパブリッシングおよびディストリビューションを構成する方法について説明します。  
   
- [パブリケーションとアーティクルの作成、変更、および削除 &#40;レプリケーション&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)  
  このセクションのトピックでは、RMO を使用してパブリケーションおよびアーティクルを作成、削除、および変更する方法について説明します。  
   
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
  このセクションのトピックでは、RMO を使用してサブスクリプションを作成、削除、および変更する方法について説明します。  
   
- [レプリケーション トポロジのセキュリティ保護](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [レプリケーション トポロジのセキュリティ保護](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  このセクションのトピックでは、RMO を使用してセキュリティ設定を表示および変更する方法について説明します。  
   
- [サブスクリプションの同期 &#40;レプリケーション&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [サブスクリプションの同期 &#40;レプリケーション&#41;](../../../relational-databases/replication/synchronize-data.md)  
  ここでは、サブスクリプションを同期する方法を説明します。  
   
- [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  ここでは、プログラムからレプリケーション トポロジを監視する方法を説明します。  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO プログラミングの概要  
@@ -87,12 +87,12 @@ ms.locfileid: "51672631"
     > [!NOTE]  
     >  複数のファイルを選択するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら各ファイルをクリックします。  
   
-8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
+8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、 **[OK]** をクリックします。  
   
 9. **[表示]** メニューの **[コード]** をクリックします。  
   
 10. コード内で、名前空間のステートメントの前に次の **using** ステートメントを入力し、RMO 名前空間内の型を修飾します。  
-  
+
     ```  
     // These namespaces are required.  
     using Microsoft.SqlServer.Replication;  
@@ -127,7 +127,7 @@ ms.locfileid: "51672631"
     > [!NOTE]  
     >  複数のファイルを選択するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら各ファイルをクリックします。  
   
-8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
+8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、 **[OK]** をクリックします。  
   
 9. **[表示]** メニューの **[コード]** をクリックします。  
   

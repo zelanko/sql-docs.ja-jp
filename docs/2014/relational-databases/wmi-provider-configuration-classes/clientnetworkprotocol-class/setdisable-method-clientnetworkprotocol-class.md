@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetDisable Method (ClientNetworkProtocol Class)
@@ -20,15 +18,15 @@ ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6fac31f7faccf6b2c3c4f81c4aadaa69a2223d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b37e2cd0b3342d6ecb520add0bbe4fd533e786a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192862"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable メソッド (ClientNetworkProtocol クラス)
-  指定されているクライアント ネットワーク プロトコルを無効になります、 [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)します。  
+  指定されているクライアント ネットワーク プロトコルを無効になります、 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,7 +46,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>関連項目  
+ [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: 包含データベースと Always On 可用性グループ (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 包含データベースと可用性グループを使用する
+description: 包含データベースと Always On 可用性グループを使用する方法
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,24 +13,17 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a1252614ee29436ac15ba3e783e22a834abe0f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26e92d38188b02c5a2ce0025cc2d33fccc5c6728
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988425"
 ---
-# <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>包含データベースと Always On 可用性グループ (SQL Server)
+# <a name="use-contained-databases-with-always-on-availability-groups"></a>包含データベースと Always On 可用性グループを使用する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックには、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と共に包含データベースを使用する方法に関する情報が含まれています。  
-  
- **このトピックの内容**  
-  
--   [前提条件](#Prerequisites)  
-  
--   [関連タスク](#RelatedTasks)  
   
 ##  <a name="Prerequisites"></a> 前提条件  
   

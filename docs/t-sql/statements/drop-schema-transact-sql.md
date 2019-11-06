@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72d8ea141f28927230c981fe40a31ec3cab8af51
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8247260f7a0233e255375143c23d5bc1c9e22c28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070196"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ DROP SCHEMA schema_name
   
 ## <a name="arguments"></a>引数  
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、スキーマを削除します。  
   
@@ -77,7 +76,7 @@ DROP SCHEMA schema_name
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
     CREATE TABLE NineProngs (source int, cost int, partnumber int)  
     GRANT SELECT TO Anibal   
-    DENY SELECT TO Hung-Fu;  
+    DENY SELECT TO [Hung-Fu];  
 GO  
 ```  
   

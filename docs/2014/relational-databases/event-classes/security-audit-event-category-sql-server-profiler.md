@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cef812c3473ce2089f1fd5f7dc8e6204e787e570
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044224"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit イベント カテゴリ (SQL Server Profiler)
   **Security Audit** イベント カテゴリには、セキュリティ監査イベントが含まれています。  
@@ -51,7 +50,7 @@ ms.locfileid: "48123502"
 |[Audit Database Operation イベント クラス](audit-database-operation-event-class.md)|チェックポイント処理やクエリ通知のサブスクライブなど、さまざまな操作が行われたことを示します。|  
 |[Audit Database Principal Impersonation イベント クラス](audit-database-principal-impersonation-event-class.md)|データベース スコープ内で権限の借用が行われたことを示します。|  
 |[Audit Database Principal Management イベント クラス](audit-database-principal-management-event-class.md)|データベースのプリンシパルが作成、変更、または削除されたことを示します。|  
-|[Audit Database Scope GDR イベント クラス](audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
+|[Audit Database Scope GDR イベント クラス](audit-database-scope-gdr-event-class.md)| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
 |[Audit DBCC イベント クラス](audit-dbcc-event-class.md)|DBCC コマンドが発行されたことを示します。|  
 |[Audit Fulltext イベント クラス](audit-fulltext-event-class.md)|フルテキスト イベントが発生したことを示します。|  
 |[Audit Login Change Password イベント クラス](audit-login-change-password-event-class.md)|ユーザーが自身の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードを変更したことを示します。|  

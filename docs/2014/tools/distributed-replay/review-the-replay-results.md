@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149702"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能が分散再生を完了した後は、各クライアントの再生アクティビティをキャプチャし、クライアントごとに結果トレース ファイルに保存できます。 このアクティビティをキャプチャするには、**replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -42,16 +42,16 @@ ms.locfileid: "48181332"
 |エラーおよび警告|Replay Internal Error|各内部エラーにつき 1 回|内部エラー条件による|  
 ||Replay Provider Error|各プロバイダー エラーにつき 1 回|プロバイダー エラー条件による|  
   
- 次のことを考慮してください。  
+ 次の点に注意してください。  
   
--   対象サーバーで正常に再生される各イベントに対して、対応する出力イベント クラスは 1 つです。  
+-   ターゲット サーバーで正常に再生される各イベントに対して、対応する出力イベント クラスは 1 つです。  
   
 -   それぞれのイベントの失敗またはキャンセルに対して、複数のエラーが生成される可能性があります。  
   
 ## <a name="event-class-column-mapping"></a>イベント クラス列マッピング  
  次の図は、再生中にキャプチャされるイベント クラスのそれぞれの種類に対して使用できる結果トレースの列を示しています。  
   
- ![イベント クラス列マッピング](../../database-engine/media/eventclassmappings.gif "イベント クラス列マッピング")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## <a name="column-descriptions-for-result-trace"></a>結果トレースの列の説明  
  次の表では、結果トレース データの列について説明します。  
@@ -77,9 +77,9 @@ ms.locfileid: "48181332"
 |ApplicationName|`nvarchar`|キャプチャ中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続を作成したクライアント アプリケーションの名前。|17|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 分散再生](sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [分散再生の要件](distributed-replay-requirements.md)   
- [管理ツール コマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [分散再生の構成](configure-distributed-replay.md)  
+ [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay の構成](configure-distributed-replay.md)  
   
   

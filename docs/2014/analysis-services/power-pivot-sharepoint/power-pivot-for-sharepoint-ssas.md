@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1028dc0f73c6acb9832ce83bc5fad82e11322a13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 486db389b3cca8936a5350da61880637406a1387
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071143"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint は、SharePoint モードで実行される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーです。 PowerPivot for SharePoint は、SharePoint ファーム内の PowerPivot データのサーバー ホスティングを実現します。 PowerPivot データを使用して、次のいずれかをビルドする分析データ モデルです。  
@@ -25,7 +24,7 @@ ms.locfileid: "48209862"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
   
  そのデータをサーバーでホストするには、SharePoint、Excel Services、および PowerPivot for SharePoint のインストールが必要です。 PowerPivot for SharePoint インスタンスにデータが読み込まれます。このデータは、PowerPivot データ更新機能を使用してスケジュール設定された間隔で更新できます。Excel 2010 ブックの場合はこの更新機能がサーバーで実行され、Excel 2013 ブックの場合は SharePoint 2013 Excel Services で実行されます。  
   
@@ -88,8 +87,8 @@ ms.locfileid: "48209862"
   
  [ライセンスのトポロジの例と SQL Server 2014 セルフ サービス ビジネス インテリジェンスのコスト](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
-## <a name="see-also"></a>参照  
- [PowerPivot の計画と展開](http://go.microsoft.com/fwlink/?linkID=220972)   
- [Powerpivot for SharePoint の災害復旧](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+## <a name="see-also"></a>関連項目  
+ [PowerPivot の計画と展開](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [Powerpivot for SharePoint の災害復旧](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3eb6ce3b08f8a1681906646eaa0c3498410582bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58591c71bccc093e8ca5ad2307ff9700769347e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128812"
 ---
 # <a name="command-parameters"></a>コマンド パラメーター
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "47803470"
 > [!NOTE]  
 >  サポートを公開する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]XML とユーザー定義型 (UDT)、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを実装する新しい[ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[コマンド]](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

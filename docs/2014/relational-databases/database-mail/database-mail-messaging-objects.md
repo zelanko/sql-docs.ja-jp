@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], host databases
@@ -16,12 +15,12 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 582c74fd68528792d996aee4491d4bc3b8c7af96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917716"
 ---
 # <a name="database-mail-messaging-objects"></a>データベース メール メッセージング オブジェクト
   **msdb** データベースはデータベース メール ホスト データベースです。 このデータベースには、データベース メールのストアド プロシージャやメッセージング オブジェクトが格納されます。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にはデータベース メール構成ウィザードが付属していて、データベース メールの有効化、プロファイルとアカウントの作成と管理、およびデータベース メール オプションの構成をこのウィザードから行うことができます。  

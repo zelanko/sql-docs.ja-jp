@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100576"
 ---
 # <a name="supported-access-report-features-ssrs"></a>サポートされる Access レポート機能 (SSRS)
   レポート デザイナーにレポートをインポートすると、インポート処理の際に、[!INCLUDE[msCoName](../includes/msconame-md.md)] Access のレポートは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義言語 (RDL) ファイルに変換されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は Access のいくつかの機能をサポートしていますが、Access と [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の相違のため、アイテムの中には、若干変更されるものや、まったくサポートされないものがあります。 このトピックでは、Access のレポート機能を RDL に変換する方法を説明します。  
@@ -57,7 +56,7 @@ ms.locfileid: "48180612"
   
 |||||  
 |-|-|-|-|  
-|イメージ|[ラベル]|線|四角形|  
+|イメージ|group1|線|四角形|  
 |サブフォーム|サブレポート<br /><br /> **注**サブレポート コントロールは、メイン レポート内で変換は、サブレポート自体は個別に変換されます。|テキスト ボックス||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のコントロールはサポートされません。  
@@ -85,7 +84,7 @@ ms.locfileid: "48180612"
 |ハイパーリンクあり|可視|同一ページ印刷 (グループ)|Left|  
 |左余白|線傾斜|ラベル|リンク子フィールド|  
 |リンク親フィールド|改段|ページフッター|ページヘッダー|  
-|ページ|画像|ピクチャ全体表示 (レポート)|読みの順序|  
+|ページ数|画像|ピクチャ全体表示 (レポート)|読みの順序|  
 |セクション繰り返し|右余白|集計実行|OLE サイズ|  
 |TextAlign|TOP|上余白|[幅]|  
   
@@ -94,7 +93,7 @@ ms.locfileid: "48180612"
 |||||  
 |-|-|-|-|  
 |印刷時拡張 (セクション)|印刷時縮小 (セクション)|小数点以下表示桁数|高速レーザー印刷|  
-|Assert|フィルター適用|[形式]|書式条件|  
+|Assert|フィルター適用|形式|書式条件|  
 |同一ページ印刷グループ|同一ページ印刷 (セクション)|数字の形態|方向|  
 |ペイント パレット|パレット元|ピクチャ配置|ピクチャ表示ページ|  
 |ピクチャサイズ|ピクチャ全体表示 (イメージ)|スクロールバー|立体表示|  
@@ -124,7 +123,7 @@ ms.locfileid: "48180612"
 |Asc|CBool|CByte|CCur|  
 |CDate|CDbl|CDec|Chr|  
 |Chr$|CInt|CLng|CSng|  
-|CStr|CVar|CVDate|[形式]|  
+|CStr|CVar|CVDate|形式|  
 |FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|  
 |Hex|Hex$|Nz|Oct|  
 |Oct$|Str|Str$|StrConv|  
@@ -264,7 +263,7 @@ ms.locfileid: "48180612"
 |||||  
 |-|-|-|-|  
 |Avg|Count|Max|Min|  
-|StDev|StDevP|SUM|Var|  
+|StDev|StDevP|Sum|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>文字列関数  
@@ -272,7 +271,7 @@ ms.locfileid: "48180612"
   
 |||||  
 |-|-|-|-|  
-|[形式]|Format$|InStr|InStrRev|  
+|形式|Format$|InStr|InStrRev|  
 |LCase|LCase$|Left|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|[置換]|Right|Right$|  

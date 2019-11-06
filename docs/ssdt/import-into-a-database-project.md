@@ -12,15 +12,14 @@ f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119842"
 ---
 # <a name="import-into-a-database-project"></a>データベース プロジェクトへのインポート
 [インポート] を使用すると、ライブ データベースや .dacpac から新しいオブジェクトをプロジェクトに取り込んだり、スクリプトの新しい定義でプロジェクト内の既存のオブジェクトを更新したりできます。 次の 3 つの方法の動作には、注意が必要な相違点がいくつかあります。これらの方法について以下で説明します。  
@@ -59,8 +58,7 @@ ms.locfileid: "52400395"
   
 スクリプトからのインポート プロセスでは、配置前スクリプトと配置後スクリプト、SQLCMD 変数、または RefactorLog ファイルが認識されません。 インポート時に検出される、このようにサポートされていないコンストラクターは、プロジェクトの **Scripts** フォルダー内の **ScriptsIgnoredOnImport.sql** ファイルに配置されます。  
   
-詳しくは、SSDT チーム フォーラム ([https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads)) をご覧ください。  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>暗号化されたオブジェクトのインポート  
 暗号化されたオブジェクトをデータベース プロジェクトにインポートする際、必ずしも、オブジェクト定義の本体を完全にサーバーから取得できるとは限りません。 このように、インポートの動作は、このクラスのオブジェクトを処理する際に異なる場合があります。  
   

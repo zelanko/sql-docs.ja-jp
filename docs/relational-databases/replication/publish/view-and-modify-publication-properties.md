@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7ec6d96d338d31779ef7815be3c2c4cdd36b1571
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ff07e2eaa15b76fe45a3f3ef7128a47e9415a4d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677220"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908061"
 ---
 # <a name="view-and-modify-publication-properties"></a>パブリケーション プロパティの表示および変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションのプロパティを表示および変更する方法について説明します。  
   
  **このトピックの内容**  
@@ -90,7 +90,7 @@ ms.locfileid: "47677220"
 3.  パブリケーションを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
-  
+
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>レプリケーション モニターでパブリケーションのプロパティを表示および変更するには  
   
 1.  レプリケーション モニターの左ペインでパブリッシャー グループを展開し、パブリッシャーを展開します。  
@@ -104,29 +104,29 @@ ms.locfileid: "47677220"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのプロパティを表示するには  
   
-1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [@publication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)パラメーターにパブリケーション名を指定して、 **@publication** を実行します。 このパラメーターを指定しなかった場合、パブリッシャーのすべてのパブリケーションの情報が返されます。  
+1.  **\@publication** パラメーターにパブリケーション名を指定して、[sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) を実行します。 このパラメーターを指定しなかった場合、パブリッシャーのすべてのパブリケーションの情報が返されます。  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのプロパティを変更するには  
   
-1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)を実行します。このとき、変更するパブリケーションのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** を実行します。  
+1.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)を実行します。このとき、変更するパブリケーションのプロパティを **\@property** パラメーターに指定し、このプロパティの新しい値を **\@value** パラメーターに指定します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot**を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription**」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  さらに、新しいスナップショットを生成する必要がある場合は、 **\@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、 **\@force_reinit_subscription** に **1** を指定します。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>マージ パブリケーションのプロパティを表示するには  
   
-1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [@publication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)パラメーターにパブリケーション名を指定して、 **@publication** を実行します。 このパラメーターを指定しなかった場合、パブリッシャーのすべてのパブリケーションの情報が返されます。  
+1.  **\@publication** パラメーターにパブリケーション名を指定して、[sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) を実行します。 このパラメーターを指定しなかった場合、パブリッシャーのすべてのパブリケーションの情報が返されます。  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>マージ パブリケーションのプロパティを変更するには  
   
-1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。このとき、変更するパブリケーションのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** を実行します。  
+1.  [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。このとき、変更するパブリケーションのプロパティを **\@property** パラメーターに指定し、このプロパティの新しい値を **\@value** パラメーターに指定します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、**@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、**@force_reinit_subscription** に **1** を指定します。変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[パブリケーションとアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」をご覧ください。  
+    >  さらに、新しいスナップショットを生成する必要がある場合は、 **\@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、 **\@force_reinit_subscription** に **1** を指定します。変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[パブリケーションおよびアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」を参照してください。  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>スナップショットのプロパティを表示するには  
   
-1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [@publication](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)パラメーターにパブリケーション名を指定して、 **@publication** を実行します。  
+1.  **\@publication** パラメーターにパブリケーション名を指定して、[sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) を実行します。  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>スナップショットのプロパティを変更するには  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47677220"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
-4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティに特定の <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値が設定されているかどうかを判断するには、論理積演算子 (Microsoft Visual C# では **&**、Microsoft Visual Basic では **And**) を使用します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値を変更するには、包括的論理和演算子 (Visual C# では **|**、Visual Basic では **Or**) および排他的論理和演算子 (Visual C# では **^**、Visual Basic では **Xor**) を使用します。  
+4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティに特定の <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値が設定されているかどうかを判断するには、論理積演算子 (Microsoft Visual C# では **&** 、Microsoft Visual Basic では **And**) を使用します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値を変更するには、包括的論理和演算子 (Visual C# では **|** 、Visual Basic では **Or**) および排他的論理和演算子 (Visual C# では **^** 、Visual Basic では **Xor**) を使用します。  
   
 5.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に値 **false** (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "47677220"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
-4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティに特定の <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値が設定されているかどうかを判断するには、論理積演算子 (Visual C# では **&**、Visual Basic では **And**) を使用します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値を変更するには、包括的論理和演算子 (Visual C# では **|**、Visual Basic では **Or**) および排他的論理和演算子 (Visual C# では **^**、Visual Basic では **Xor**) を使用します。  
+4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティに特定の <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値が設定されているかどうかを判断するには、論理積演算子 (Visual C# では **&** 、Visual Basic では **And**) を使用します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値を変更するには、包括的論理和演算子 (Visual C# では **|** 、Visual Basic では **Or**) および排他的論理和演算子 (Visual C# では **^** 、Visual Basic では **Xor**) を使用します。  
   
 5.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に値 **false** (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "47677220"
  [パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [パブリケーションでのアーティクルの追加または削除 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md)   
- [パブリケーションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [アーティクルのプロパティの表示と変更](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
   
   

@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995628"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 SQL Server データベース エンジンでは、さまざまなオブジェクトのアクセス許可が与えられます。この記事では、アクセス許可が与えられているユーザーを判断する方法について説明します。 SQL Server では、データベース エンジンのために 2 つのアクセス許可システムが実装されます。 固定ロールの古いほうのシステムでは、アクセス許可が事前構成されました。 SQL Server 2005 より、より柔軟で正確なシステムが利用できます。 (この記事の情報は 2005 以降の SQL Server に適用されます。 SQL Server のバージョンによっては、利用できない種類のアクセス許可があります。)
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * 両方のアクセス許可システムの集合体が有効なアクセス許可となります。 
 >  * アクセス許可の拒否はアクセス許可の承諾をオーバーライドします。 
 >  * あるユーザーが sysadmin という固定のサーバー ロールに属している場合、アクセス許可はそれ以上確認されません。拒否は強制されません。 
@@ -51,20 +50,20 @@ SQL Server データベース エンジンでは、さまざまなオブジェ�
 ## <a name="older-fixed-role-permission-system"></a>古い固定ロール アクセス許可システム
 
 固定サーバー ロールと固定データベース ロールでは、アクセス許可が事前構成されています。このアクセス許可は変更できません。 固定サーバー ロールのメンバーを判断するには、次のクエリを実行します。    
->  [!NOTE] 
+> [!NOTE]
 >  サーバー レベルのアクセス許可が利用できない SQL データベースまたは SQL データ ウェアハウスには適用しないでください。 `sys.server_principals` の `is_fixed_role` 列が SQL Server 2012 に追加されました。 古いバージョンの SQL Server には必要ありません。  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
-```
->  [!NOTE] 
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
+> ```
+> [!NOTE]
 >  * すべてのログインは public ロールに属し、削除できません。 
 >  * このクエリはマスター データベースのテーブルを確認しますが、オンプレミス製品のデータベースでは実行できません。 
 
@@ -106,18 +105,18 @@ Windows ユーザーは複数の Windows グループに属することがあり
 ### <a name="server-permissions"></a>サーバーのアクセス許可
 
 次のクエリは、サーバー レベルで承諾または拒否されているアクセス許可の一覧を返します。 このクエリはマスター データベースで実行してください。   
->  [!NOTE] 
+> [!NOTE]
 >  サーバー レベルのアクセス許可を SQL データベースまたは SQL データ ウェアハウスで承諾または拒否することはできません。   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
-```
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
+> ```
 
 ### <a name="database-permissions"></a>データベース権限
 
@@ -146,7 +145,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-`HAS_PERMS_BY_NAME` 関数を使用すると、特定のユーザー (この場合、`TestUser`) にアクセス許可が与えられているかどうかが判断されます。 例 :   
+`HAS_PERMS_BY_NAME` 関数を使用すると、特定のユーザー (この場合、`TestUser`) にアクセス許可が与えられているかどうかが判断されます。 例:   
 ```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
@@ -157,5 +156,5 @@ REVERT;
 ## <a name="see-also"></a>参照:
 
 [データベース エンジンの権限の概要](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[チュートリアル : データベース エンジンの概要](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[チュートリアル:データベース エンジンの概要](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
 

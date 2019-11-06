@@ -1,12 +1,11 @@
 ---
-title: sp_MSchange_snapshot_agent_properties (TRANSACT-SQL) |Microsoft Docs
+title: sp_MSchange_snapshot_agent_properties (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_snapshot_agent_properties_TSQL
@@ -16,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2fb47f7475a64c89a11fca8bb3dee1f3e180765a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4dcd79945644f0bc44d9ca3e948fa4f85d4e40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905185"
 ---
-# <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
+# <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   実行されるスナップショット エージェント ジョブのプロパティを変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降のバージョンのディストリビューター。 このストアド プロシージャがパブリッシャーのインスタンス上の実行時にプロパティを変更する使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
@@ -58,17 +56,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher** =] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーション データベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [ **@publication =** ] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@frequency_type =** ] *frequency_type*  
- スナップショット エージェントの実行頻度を指定します。 *frequency_type*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_type = ] frequency_type` スナップショット エージェントを実行する頻度です。 *frequency_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -76,15 +70,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**2**|[要求時]|  
 |**4**|毎日。|  
 |**8**|毎週。|  
-|"**10**"|毎月。|  
+|**10**|毎月。|  
 |**20**|frequency_interval を基準とした月単位|  
 |**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- 設定した頻度に適用する値は、 *frequency_type*します。 *frequency_interval*は**int**、既定値はありません。  
+`[ @frequency_interval = ] frequency_interval` 設定した頻度に適用する値は、 *frequency_type*します。 *frequency_interval*は**int**、既定値はありません。  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- 単位*freq_subday_interval*します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_subday = ] frequency_subday` 単位*freq_subday_interval*します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -93,53 +85,39 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値はありません。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値はありません。  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- スナップショット エージェントを実行する日付を指定します。 *frequency_relative_interval*は**int**、既定値はありません。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` スナップショット エージェントを実行する日付です。 *frequency_relative_interval*は**int**、既定値はありません。  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値はありません。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値はありません。  
   
- [ **@active_start_date =** ] *active_start_date*  
- スナップショット エージェントを最初にスケジュール設定する日付を、YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値はありません。  
+`[ @active_start_date = ] active_start_date` スナップショット エージェントの最初の日付スケジュール設定を yyyymmdd 形式で指定として書式設定されます。 *active_start_date*は**int**、既定値はありません。  
   
- [ **@active_end_date =** ] *active_end_date*  
- スナップショット エージェントのスケジュール設定を停止する日付を、YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値はありません。  
+`[ @active_end_date = ] active_end_date` スナップショット エージェントが停止した日付、スケジュールに yyyymmdd です。 *active_end_date*は**int**、既定値はありません。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- スナップショット エージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値はありません。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` スナップショット エージェントを最初のスケジュール設定する時刻、hhmmss 形式で指定として書式設定します。 *active_start_time_of_day*は**int**、既定値はありません。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- スナップショット エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値はありません。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` スナップショット エージェントが停止する時刻 hhmmss 形式で指定として書式設定、スケジュール設定します。 *active_end_time_of_day*は**int**、既定値はありません。  
   
- [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
- 既存のジョブが使用されている場合、既存のスナップショット エージェントのジョブ名を指定します。 *snapshot_agent_name*は**nvarchar (100)**、既定値はありません。  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` 既存のジョブが使用されている場合、既存のスナップショット エージェント ジョブ名の名前です。 *snapshot_agent_name*は**nvarchar (100)** 、既定値はありません。  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**int**、既定値はありません。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` パブリッシャーに接続するときに、エージェントによって使用されるセキュリティ モード。 *publisher_security_mode*は**int**、既定値はありません。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'***publisher_login***'**  
- パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値はありません。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login*が NULL で publisher *_ * * security_mode*は**1**で指定した Windows アカウント*job_login*になりますパブリッシャーに接続するときに使用されます。  
+`[ @publisher_login = ] 'publisher_login'` パブリッシャーに接続するときに、ログインが使用されます。 *publisher_login*は**sysname**、既定値はありません。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login*が NULL で publisher *_ * * security_mode*は**1**で指定した Windows アカウント*job_login*になりますパブリッシャーに接続するときに使用されます。  
   
- [ **@publisher_password**=] **'***publisher_password***'**  
- パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**nvarchar (524)**、既定値はありません。  
+`[ @publisher_password = ] 'publisher_password'` パブリッシャーに接続するときに、パスワードが使用されます。 *publisher_password*は**nvarchar (524)** 、既定値はありません。  
   
 > [!IMPORTANT]  
->  スクリプト ファイルに認証情報を格納しないでください。 セキュリティを強化するため、実行時にログイン名とパスワードを指定することをお勧めします。  
+>  スクリプト ファイルでは、認証情報を格納しないでください。 セキュリティを向上させるには、実行時にログイン名とパスワードを指定することをお勧めします。  
   
- [ **@job_login**=] **'***job_login***'**  
- エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。 新しいスナップショット エージェント ジョブを作成するときにはこのパラメーターを指定する必要があります。 *これ以外は変更できません*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パブリッシャーです。*  
+`[ @job_login = ] 'job_login'` エージェントを実行する Windows アカウントのログインです。 *job_login*は**nvarchar (257)** 、既定値はありません。 この Windows アカウントは常に、ディストリビューターへのエージェント接続で使用します。 新しいスナップショット エージェント ジョブを作成するときに、このパラメーターを指定する必要があります。 *これ以外は変更できません*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パブリッシャーです。*  
   
- [ **@job_password**=] **'***job_password***'**  
- エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。 新しいスナップショット エージェント ジョブを作成するときにはこのパラメーターを指定する必要があります。  
+`[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードです。 *job_password* は **sysname** 、既定値はありません。 新しいスナップショット エージェント ジョブを作成するときに、このパラメーターを指定する必要があります。  
   
 > [!IMPORTANT]  
->  スクリプト ファイルに認証情報を格納しないでください。 セキュリティを強化するため、実行時にログイン名とパスワードを指定することをお勧めします。  
+>  スクリプト ファイルでは、認証情報を格納しないでください。 セキュリティを向上させるには、実行時にログイン名とパスワードを指定することをお勧めします。  
   
- [ **@publisher_type**=] **'***publisher_type***'**  
- パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで実行されていないときのパブリッシャーの種類を指定します。 *publisher_type*は**sysname**値は次のいずれかを指定できます。  
+`[ @publisher_type = ] 'publisher_type'` パブリッシャーがのインスタンスで実行されていない場合、パブリッシャーの種類を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 *publisher_type*は**sysname**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  

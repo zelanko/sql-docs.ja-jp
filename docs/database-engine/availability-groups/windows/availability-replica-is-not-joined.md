@@ -1,6 +1,7 @@
 ---
-title: 可用性レプリカが参加していない | Microsoft Docs
-ms.custom: ''
+title: 可用性レプリカが可用性グループに参加していない
+description: Always On 可用性グループにレプリカが参加していない理由を特定します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d05c100e13e59db4f65cc8dfc48f64b261e0e66c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: da14149b9518a14fa4b7a50072ba35c0b8dcefe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991369"
 ---
-# <a name="availability-replica-is-not-joined"></a>可用性レプリカが参加していない
+# <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>可用性レプリカが Always On 可用性グループに参加していない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>概要  

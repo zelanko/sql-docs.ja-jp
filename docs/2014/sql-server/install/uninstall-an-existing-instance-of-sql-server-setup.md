@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
@@ -17,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9961b074839559bca04d1860084d46fd94ce1b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990186"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
   ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスをアンインストールする方法について説明します。 また、このトピックの手順を実行してシステムを準備し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再インストールできるようにします。  
@@ -81,7 +80,7 @@ ms.locfileid: "48085912"
   
 1.  アンインストール プロセスを開始するには、 **コントロール パネル** で **[プログラムと機能]** をクリックします。  
   
-2.  右クリックして**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 選択**アンインストール**します。 次に、 **[削除]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
+2.  右クリックして **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 選択**アンインストール**します。 次に、 **[削除]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
   
      セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、 **[次へ]** をクリックします。  
   
@@ -99,13 +98,13 @@ ms.locfileid: "48085912"
   
 1.  アンインストール プロセスが正常に完了しない場合は、アンインストールが失敗した原因となる問題の解決を試みます。 アンインストールの失敗の原因を把握するには、次の記事が役立ちます。  
   
-    -   [セットアップ ログ ファイルで SQL Server 2008 のセットアップの問題を特定する方法](http://support.microsoft.com/kb/955396/en-us)  
+    -   [セットアップ ログ ファイルで SQL Server 2008 のセットアップの問題を特定する方法](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
 2.  アンインストールが失敗した原因を解決できない場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートに問い合わせてください。 重要なファイルを誤って削除した場合など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再インストールする前に、オペレーティング システムの再インストールが必要になる場合もあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

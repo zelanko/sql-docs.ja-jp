@@ -1,11 +1,10 @@
 ---
-title: '[パブリッシャーの設定] | Microsoft Docs'
+title: SQL Server レプリケーションの [パブリッシャーの設定] ダイアログ ボックス | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publishersettings.f1
@@ -15,14 +14,14 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098eb9610a07531249246970ac9cca71e449209f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f1100f1c19a658fa6fe4b90816dca948e640a76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63262304"
 ---
-# <a name="publisher-settings"></a>[パブリッシャーの設定]
+# <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server レプリケーションの [パブリッシャーの設定] ダイアログ ボックス
   **[パブリッシャーの設定]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに追加されているパブリッシャーの設定を変更できます。  
   
 ## <a name="options"></a>および  
@@ -47,7 +46,7 @@ ms.locfileid: "48135992"
  **[新しいグループ]**  
  クリックすると、新しいパブリッシャー グループを作成できます。 パブリッシャー グループを利用すると、レプリケーション モニター内でパブリッシャーを容易に整理できます。 グループは、データのレプリケーションや、レプリケーション トポロジ内のサーバー間のリレーションシップには影響を与えません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)  
   

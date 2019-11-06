@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01de6a3707ea2ed96399c678625f3e94c13fc5db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccd1f14b0cfbcbdbc675a142ebabf11932409832
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071907"
 ---
 # <a name="desktop-database-drivers-architecture"></a>デスクトップ データベース ドライバーのアーキテクチャ
 使用には、Microsoft Windows 95 以降、または Windows NT 4.0 と Windows 2000 は、これらのドライバーが設計されています。 Windows 95 以降; のみの 32 ビット アプリケーションがサポートされます。16 ビットおよび 32 ビット アプリケーションは、Windows NT 4.0 および Windows 2000 でサポートされます。  
@@ -32,17 +31,17 @@ ms.locfileid: "47649570"
   
  Windows 95 以降のアプリケーション/ドライバーのアーキテクチャを示します。  
   
- ![アプリ&#47;ドライバー アーキテクチャ: Windows 95 以降](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![アプリ&#47;ドライバー アーキテクチャ。Windows 95 以降](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  Windows 95 で 16 ビット アプリケーションでこれらのドライバーの使用がサポートされていません。  
   
  Windows NT 4.0 や Windows 2000 のアプリケーション/ドライバーのアーキテクチャを示します。  
   
- ![アプリ&#47;ドライバー アーキテクチャ: NT 4.0 および Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![アプリ&#47;ドライバー アーキテクチャ。NT 4.0 および Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
- デスクトップ データベース ドライバーは、2 階層のドライバーです。 2 層構成では、ドライバーは、解析、検証、最適化、およびクエリの実行のプロセスを実行しません。 代わりに、Microsoft Jet は、これらのタスクを実行します。 ODBC API 呼び出しを処理し、SQL エンジンとして機能します。 Microsoft Jet は、ドライバーの分離不可能整数部分になりました。 ドライバーが付属し、ドライバーが存在する場合でも、コンピューター上の他のアプリケーションが使用しなくします。  
+ デスクトップ データベース ドライバーは、2 階層のドライバーです。 2 層構成では、ドライバーは、解析、検証、最適化、およびクエリの実行のプロセスを実行しません。 代わりに、Microsoft Jet は、これらのタスクを実行します。 ODBC API 呼び出しを処理し、SQL エンジンとして機能します。 Microsoft Jet は、ドライバーの分離不可能整数部分になります。ドライバーが付属し、ドライバーが存在する場合でも、コンピューター上の他のアプリケーションが使用しなくします。  
   
- デスクトップ データベース ドライバーは、6 つの異なるドライバーで構成されている、または、1 つのドライバー ファイル (Odbcjt32.dll) の正確を ODBC[ドライバー マネージャー](../../odbc/reference/the-driver-manager.md) 6 つの異なる方法で使用します。 Odbcjt32.dll でドライバーをドライバー マネージャーを使用してデータ ソースのレジストリ エントリで DRIVERID フラグを決定します。 アプリケーションへの呼び出しに含まれる接続文字列でこのフラグを渡します**SQLDriverConnect**します。 既定では、フラグは、Microsoft Access ドライバーの ID です。  
+ デスクトップ データベース ドライバーは、6 つの異なるドライバー - またはより正確に 1 つで構成されているドライバー ファイル (Odbcjt32.dll) を ODBC[ドライバー マネージャー](../../odbc/reference/the-driver-manager.md) 6 つの異なる方法で使用します。 Odbcjt32.dll でドライバーをドライバー マネージャーを使用してデータ ソースのレジストリ エントリで DRIVERID フラグを決定します。 アプリケーションへの呼び出しに含まれる接続文字列でこのフラグを渡します**SQLDriverConnect**します。 既定では、フラグは、Microsoft Access ドライバーの ID です。  
   
  ドライバーのセットアップ ファイルは、セットアップ時に、DRIVERID フラグを変更します。 Microsoft Access ドライバーを除くすべてのドライバーでは、関連付けられたセットアップ DLL があります。 クリックすると**セットアップ**で、 [Microsoft ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md) ODBC インストーラー DLL (Odbcinst.dll) は、データ ソースのセットアップ DLL を読み込みます。 ODBC インストーラーの関数をエクスポートする DLL のセットアップ**SQLConfigDataSource**します。 ウィンドウ ハンドルが渡された場合**SQLConfigDataSource**、この関数は、セットアップ ウィンドウを表示し、ユーザー インターフェイスから選択したドライバーに従って DRIVERID フラグを変更します。  
   

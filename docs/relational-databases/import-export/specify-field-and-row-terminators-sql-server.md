@@ -14,22 +14,21 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062551"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  ネイティブ形式または Unicode ネイティブ形式を使用するときは、フィールド ターミネータではなくプレフィックス長を使用します。 ネイティブ形式のデータ ファイルは [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部バイナリ データ形式で格納されるので、ネイティブ形式のデータがターミネータと競合することがあります。  
   
 ## <a name="characters-supported-as-terminators"></a>ターミネータとしてサポートされる文字  
@@ -75,7 +74,7 @@ ms.locfileid: "52543805"
         > [!NOTE]  
         >  **-n** (ネイティブ データ) スイッチまたは **-N** (Unicode ネイティブ) スイッチを指定すると、ターミネータは挿入されません。  
   
-    -   対話的な **bcp** コマンドに、 **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合に、プレフィックス長とフィールド長の指定をしないと、各フィールドのフィールド ターミネータが要求されます。既定ではターミネータは "なし" になっています。  
+    -   対話的な **bcp** コマンドに、 **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ ( **-f**) またはデータ形式スイッチ ( **-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合に、プレフィックス長とフィールド長の指定をしないと、各フィールドのフィールド ターミネータが要求されます。既定ではターミネータは "なし" になっています。  
   
          `Enter field terminator [none]:`  
   
@@ -85,7 +84,7 @@ ms.locfileid: "52543805"
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
- 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例 :  
+ 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例:  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "52543805"
 
 ### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>`\n` を一括エクスポートの行ターミネータとして指定する
 
-`\n` を一括エクスポートの行ターミネータとして指定するか、既定の行ターミネータを暗黙的に使用する場合、bcp では復帰と改行の組み合わせ (CRLF) が行ターミネータとして出力されます。 行ターミネータとして改行文字のみ (LF) を出力する場合 (Unix および Linux コンピュータの標準)、16 進数表記を使用して LF 行ターミネータを指定します。 例 :
+`\n` を一括エクスポートの行ターミネータとして指定するか、既定の行ターミネータを暗黙的に使用する場合、bcp では復帰と改行の組み合わせ (CRLF) が行ターミネータとして出力されます。 行ターミネータとして改行文字のみ (LF) を出力する場合 (Unix および Linux コンピュータの標準)、16 進数表記を使用して LF 行ターミネータを指定します。 例:
 
 ```cmd
 bcp -r '0x0A'
@@ -187,8 +186,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |オプション|属性|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|データ フィールドが文字データとして読み込まれることを指定します。|  
-|FIELDTERMINATOR **='**`,`**'**|コンマ (`,`) をフィールド ターミネータとして指定します。|  
-|ROWTERMINATOR **='**`\n`**'**|改行文字を行ターミネータとして指定します。|  
+|FIELDTERMINATOR **='** `,` **'**|コンマ (`,`) をフィールド ターミネータとして指定します。|  
+|ROWTERMINATOR **='** `\n` **'**|改行文字を行ターミネータとして指定します。|  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
   

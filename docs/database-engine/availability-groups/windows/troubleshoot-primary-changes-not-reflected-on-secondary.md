@@ -1,6 +1,7 @@
 ---
-title: 'トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない (Always On 可用性グループ - SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: 可用性グループでセカンダリ レプリカに変更が反映されない理由を判断する - SQL Server
+ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+ms.custom: ag-guide,seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3604871a67e4d5f642015eab07ca11e301ae286c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bed83c98489d1622e97dd84c9f5c1994715b60fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013681"
 ---
-# <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない
+# <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>可用性グループでセカンダリ レプリカにプライマリ レプリカの変更が反映されない理由を判断する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。 この場合、可用性の同期状態は正常であると仮定します。 ほとんどの場合、この動作は、数分後に解決します。  
   

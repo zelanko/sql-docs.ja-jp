@@ -1,26 +1,26 @@
 ---
-title: T-SQL 関数 (SQL Server Machine Learning での Python) を使用してデータ機能の作成 |Microsoft Docs
-description: Python machine learning のモデルで使用するためのストアド プロシージャに計算を追加する方法を示すチュートリアル。
+title: T-sql 関数と Python を使用したデータ機能の作成
+description: Python 機械学習モデルで使用するために計算をストアドプロシージャに追加する方法を示すチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 1006f4baabeca97aafead784ce4d9bfc213aaad1
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3eafa7bf06739ba5802ea20caea61fbaaa2474ec
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032699"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715491"
 ---
-# <a name="create-data-features-using-t-sql"></a>T-SQL を使用してデータ機能を作成します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-data-features-using-t-sql"></a>T-sql を使用してデータ機能を作成する
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-データの探索の後に、データからインサイトが収集したおよび上に移動する準備が整いました*特徴エンジニア リング*します。 生データから機能を作成するには、このプロセスは、高度な分析のモデリングの重要なステップを指定できます。
+データ探索の後、データからいくつかの洞察を収集し、*特徴エンジニアリング*に進む準備ができました。 生データから機能を作成するこのプロセスは、高度な分析モデリングの重要な手順になります。
 
-この記事では、チュートリアルの一部[SQL 開発者向けの in-database Python analytics](sqldev-in-database-python-for-sql-developers.md)します。 
+この記事は、 [SQL 開発者向けのデータベース内 Python analytics](sqldev-in-database-python-for-sql-developers.md)のチュートリアルの一部です。 
 
 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を利用し、生データから機能を作成する方法について説明します。 その後、その関数をストアド プロシージャから呼び出し、機能の値を含むテーブルを作成します。
 
@@ -30,14 +30,14 @@ ms.locfileid: "51032699"
 
 1 つ目のカスタム T-SQL 関数、 _fnCalculateDistance_を利用し、Haversine 式で距離を計算し、2 つ目のカスタム T-SQL 関数、 _fnEngineerFeatures_を利用し、すべての機能を含むテーブルを作成します。
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>FnCalculateDistance を使用して、乗車距離を計算します。
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>FnCalculateDistance を使用した旅行距離の計算
 
-1.  このチュートリアルの準備の一環として関数 _fnCalculateDistance_ がダウンロードされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されているはずです。 時間がかかるコードを確認します。
+1.  このチュートリアルの準備の一環として関数 _fnCalculateDistance_ がダウンロードされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されているはずです。 少し時間をかけてコードを確認してください。
   
-    [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]** の順に展開します。
+    [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]** 、 **[関数]** 、 **[スカラー値関数]** の順に展開します。
     _fnCalculateDistance_を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function that calculates the direct distance between two geographical coordinates
     RETURNS float
@@ -67,13 +67,13 @@ ms.locfileid: "51032699"
 
 計算された値をモデルのトレーニングに利用できるテーブルに追加するには、別の関数、 _fnEngineerFeatures_を利用します。
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>使用して機能を保存_fnEngineerFeatures_
+### <a name="save-the-features-using-fnengineerfeatures"></a>_FnEngineerFeatures_を使用して機能を保存する
 
 1.  カスタム T-SQL 関数、 _fnEngineerFeatures_のコードを再確認します。この関数は、このチュートリアルの一環として自動的に作成されているはずです。
   
     この関数はテーブル値関数であり、複数の列を入力値として受け取り、複数の機能列を含むテーブルを出力します。  この関数の目的は、モデルの構築に利用する機能セットを作成することです。 関数 _fnEngineerFeatures_ は先に作成した T-SQL 関数 _fnCalculateDistance_を呼び出し、乗車場所と降車場所の間の直接距離を取得します。
   
-    ```
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (
     @passenger_count int = 0,
     @trip_distance float = 0,
@@ -98,7 +98,7 @@ ms.locfileid: "51032699"
   
 2. この関数が動作することを確認するために、それを利用し、メーター距離が 0 であったが、乗車場所と降車場所が異なっていた乗車の地理的距離を計算できます。
   
-    ```
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
@@ -107,16 +107,16 @@ ms.locfileid: "51032699"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    ご覧のとおり、メーターによって報告された距離と地理的距離は常に一致しているわけではありません。 これは、特徴エンジニア リングが重要な理由です。
+    ご覧のとおり、メーターによって報告された距離と地理的距離は常に一致しているわけではありません。 これは、特徴エンジニアリングが重要な理由です。
 
-次の手順では、これらのデータ機能を使用して作成および Python を使用して機械学習モデルをトレーニングする方法を学習します。
+次の手順では、これらのデータ機能を使用して、Python を使用して機械学習モデルを作成およびトレーニングする方法について説明します。
 
 ## <a name="next-step"></a>次の手順
 
-[トレーニングし、T-SQL を使用して Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[T-sql を使用した Python モデルのトレーニングと保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[探索し、データの視覚化](sqldev-py3-explore-and-visualize-the-data.md)
+[データの探索と視覚化](sqldev-py3-explore-and-visualize-the-data.md)
 
 

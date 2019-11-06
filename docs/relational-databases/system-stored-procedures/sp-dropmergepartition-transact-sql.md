@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergepartition_TSQL
@@ -16,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfaebe93d4d714fabcfc582d531366a4e075b9c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c7ac88631c481bb98515c3b4753e02b9f66b151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933942"
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +40,11 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**] = **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication] = 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- 値である、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数は、パーティションの定義に使用します。 *suser_sname*は**sysname**、既定値はありません。  
+`[ @suser_sname = ] 'suser_sname'` 値である、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数は、パーティションの定義に使用します。 *suser_sname*は**sysname**、既定値はありません。  
   
- [ **@host_name** =] **'***host_name***'**  
- 値である、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数は、パーティションの定義に使用します。 *host_name*は**sysname**、既定値はありません。  
+`[ @host_name = ] 'host_name'` 値である、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数は、パーティションの定義に使用します。 *host_name*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -60,7 +55,7 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergepartition**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)  
   
   

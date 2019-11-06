@@ -12,12 +12,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b01e23f282f4b39043f23e70a98dab633806090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62468498"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
   `IRow` インターフェイスでは、結果セット内の単一行の列に直接アクセスできます。 つまり、`IRow` では、1 つの行の結果セットから効率的に列を取得できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48228959"
 -   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体の場合は**pData** null と**cbMaxLen** 0 への呼び出しは、 `IRow` - `>GetColumns()`実際の列の長さだけを返します。 この場合、`IRow->GetColumns()` を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>IRow::GetColumns を使用して列をフェッチするには  
   
@@ -48,9 +48,9 @@ ms.locfileid: "48228959"
   
 -   列に 2 回アクセスする方法。初回に列の実際の幅を取得し、その後実際のデータにアクセスします。  
   
- DBCOLUMNACCESS 構造体では、pData が NULL で cbMaxLen が 0 の場合、IRow->GetColumns を呼び出すと、列の実際の長さだけが返されます。 この場合、IRow->GetColumns を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。 このサンプルは IA64 ではサポートされていません。  
+ DBCOLUMNACCESS 構造体の場合は、pData が NULL で cbMaxLen が 0、IRow への呼び出し]-> [GetColumns を返します。 実際の列の長さだけです。 この場合は、IRow]-> [GetColumns は、実際のデータを取得する同じ列に対してもう一度に呼び出すことが。 このサンプルは IA64 ではサポートされていません。  
   
- このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
+ このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するテーブルを作成します。  
   

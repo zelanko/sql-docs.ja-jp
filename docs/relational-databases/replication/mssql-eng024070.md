@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47aa6e40882e73d329bb0338d2742bea0da5a95d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c45c23cd93cfda524f9987ae8b2181aece99f9fa
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747930"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770292"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47747930"
   
 ## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [レプリケーションのログインとパスワードの管理](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [レプリケーションのログインとパスワードの管理](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)  
   
   

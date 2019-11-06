@@ -1,24 +1,23 @@
 ---
-title: '手順 3 : エラー フロー リダイレクトの追加 | Microsoft Docs'
+title: 手順 3:エラー フロー リダイレクトの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891404"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>手順 3 : エラー フロー リダイレクトの追加
+# <a name="step-3-adding-error-flow-redirection"></a>手順 3:エラー フロー リダイレクトの追加
   前の実習で学んだように、Lookup Currency Key 変換で壊れているサンプル フラット ファイルを処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
   
  エラー出力を使用し、失敗した行を別の処理パスにリダイレクトするようにコンポーネントを構成することで、変換の失敗を回避できます。 別のエラー処理パスを使用すると、さまざまな処理が可能になります。 たとえば、データを消去した後に失敗した行を再処理できます。 失敗した行を詳細なエラー情報と共に保存し、後の検証や再処理に役立てることも可能です。  
@@ -31,7 +30,7 @@ ms.locfileid: "48051312"
   
 ### <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   
-1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。**[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
+1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。 **[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
   
 2.  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスで、 **[変換]** をクリックし、 **[OK]** をクリックします。  
   
@@ -97,6 +96,6 @@ ms.locfileid: "48051312"
 13. **[OK]** をクリックして、 **[スクリプト変換エディター]** ダイアログ ボックスを閉じます。  
   
 ## <a name="next-steps"></a>次の手順  
- [手順 4: フラット ファイル変換先の追加](lesson-4-4-adding-a-flat-file-destination.md  
+ [手順 4。フラット ファイル変換先の追加] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

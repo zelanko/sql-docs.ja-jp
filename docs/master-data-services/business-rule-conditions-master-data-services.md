@@ -5,19 +5,17 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1081190332380b473af2b25615c962bece2bc8c1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.openlocfilehash: 4f7c48db940a192f1506fb1c6c8e371e9d5a7958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047471"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>ビジネス ルール条件 (マスター データ サービス)
 
@@ -30,7 +28,7 @@ ms.locfileid: "51700740"
   
 ## <a name="business-rule-conditions"></a>ビジネス ルール条件  
   
-|条件名|[説明]|  
+|条件名|説明|  
 |--------------------|-----------------|  
 |**が次の値に等しい**|選択した属性が特定の属性または属性**値に等しいか**、空白であることを示します。<br /><br /> この条件は、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**が次の値に等しくない**|選択した属性が特定の属性または属性**値に等しくないか**、空白であることを示します。<br /><br /> この条件は、文字列値、数値、データ値、およびリンク値に有効です。|  
@@ -56,7 +54,7 @@ ms.locfileid: "51700740"
 > [!NOTE]  
 >  ビジネス ルールに 2 つの値を比較する条件が含まれていて、そのルールが両方の値とも NULL であるメンバーに適用されている場合、そのメンバーは検証に失敗します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルール アクション (マスター データ サービス)](../master-data-services/business-rule-actions-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
  [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

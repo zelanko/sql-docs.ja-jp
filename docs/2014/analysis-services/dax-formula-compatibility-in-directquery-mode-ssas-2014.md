@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100323"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343896"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
 Analysis Services 表形式モデルでメジャーと使用するための他のカスタム式を作成する Data Analysis Expression (DAX) 言語を使用できます[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel ブックのデータ モデルと Power BI Desktop データ モデル。 多くの点では、これらの環境を作成するモデルが同じであり、同じメジャー、リレーションシップ、および Kpi を使用するなど。ただし、Analysis Services 表形式のモデルを作成して、DirectQuery モードで展開する場合は、使用できる数式に関していくつかの制限。 このトピックで、これらの違いの概要を説明します、互換性レベル 1100 または 1103 の SQL Server 2014 Analysis Services tabulars モデルおよび DirectQuery モードでは、サポートされていない関数を一覧表示およびサポートされている関数の一覧が可能性があります。異なる結果を返します。  
   
-このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)します。  
+このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)します。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>インメモリと DirectQuery モードの違い  
@@ -51,16 +49,16 @@ DirectQuery モードで配置されたモデルでのクエリは、同じモ�
 一般に、DAX はインメモリ モデルでの方がデータ型の不一致に対して寛容であり、このセクションで説明するように、最大で 2 回は値の暗黙のキャストを試みます。 一方、DirectQuery モードのリレーショナル データ ストアに送信される数式の方が、リレーショナル エンジンの規則に従ってより厳密に評価され、失敗する可能性が高くなります。  
   
 **文字列と数値の比較**  
-例: `“2” < 3`  
+例: `"2" < 3`  
   
 数式は文字列と数値を比較します。 式は、DirectQuery モードでもインメモリ モデルでも **true** になります。  
   
 インメモリ モデルでは、文字列としての数値が数値データ型に暗黙でキャストされて他の数値と比較されるため、結果は **true** です。 SQL も、数値データ型との比較のために、テキストの数値を数値として暗黙的にキャストします。  
   
-この動作は最初のバージョンの [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]から変わっていることに注意してください。最初のバージョンでは、テキスト "2" は常にすべての数値より大きいものと判断されるため、 **false**が返されます。  
+最初のバージョンからの動作が変更を表すこのことに注意してください。 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、返されます**false**テキスト"2"常にと思われる任意の数よりも大きいためです。  
   
 **テキストとブール値の比較**  
-例: `“VERDADERO” = TRUE`  
+例: `"VERDADERO" = TRUE`  
   
 この式は、テキスト文字列とブール値を比較します。 一般に、DirectQuery またはインメモリ モデルの場合、文字列値とブール値の比較の結果はエラーになります。 この規則に対する唯一の例外は、文字列に単語 **true** または **false**が含まれる場合です。この場合は、ブール型への変換が行われ、比較が実行されて論理的な結果が返されます。  
   
@@ -80,22 +78,22 @@ DAX のようなキャスト関数はありませんが、多くの比較演算�
 -   ブール値は、比較において、および EXACT、AND、OR、 &amp;&amp;、または || で使用されるときは、常に論理値として扱われます。  
   
 **文字列からブールへのキャスト**  
-インメモリおよび DirectQuery モデルでは、ブール値へのキャストは、文字列値 **""** (空の文字列)、 **"true"**、 **"false"** からの場合にのみ許可されます。空の文字列は false 値にキャストされます。  
+インメモリおよび DirectQuery モデルでは、キャストはこれらの文字列のみから許可をブール値には: **""** (空の文字列)、 **"true"** 、 **"false"** が空の文字列。false の値にキャストします。  
   
 他のすべての文字列からブール データ型へのキャストはエラーになります。  
   
 **文字列から日付/時刻へのキャスト**  
 DirectQuery モードでは、文字列表現の日時から実際の **datetime** 値へのキャストは、SQL Server と同じように行われます。  
   
-文字列からへのキャストに適用される規則については**datetime**データ型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]モデルを参照してください、 [DAX 構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)します。  
+文字列からへのキャストに適用される規則については**datetime**データ型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]モデルを参照してください、 [DAX 構文のリファレンス](/dax/dax-syntax-reference)します。
   
 インメモリ データ ストアを使用するモデルで日付に対してサポートされるテキスト形式の範囲は、SQL Server でサポートされる日付の文字列形式より制限されます。 ただし、DAX では日付と時刻のカスタム形式がサポートされます。  
   
 **文字列から他の非ブール値へのキャスト**  
-文字列から非ブール値へのキャストの場合、DirectQuery モードは SQL Server と同じように動作します。 詳細については、「 [CAST および CONVERT &#40;Transact-SQL&#41;](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)」を参照してください。  
+文字列から非ブール値へのキャストの場合、DirectQuery モードは SQL Server と同じように動作します。 詳細については、「 [CAST および CONVERT &#40;Transact-SQL&#41;](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)」を参照してください。  
   
 **認められない数値から文字列へのキャスト**  
-例: `CONCATENATE(102,”,345”)`  
+例: `CONCATENATE(102,",345")`  
   
 数値から文字列へのキャストは SQL Server では認められません。  
   
@@ -104,7 +102,7 @@ DirectQuery モードでは、文字列表現の日時から実際の **datetime
 **DirectQuery での 2 試行キャストの非サポート**  
 インメモリ モデルでは、通常、第 1 のキャストが失敗すると、第 2 のキャストが試みられます。 DirectQuery モードではこのようなことは行われません。  
   
-例: `TODAY() + “13:14:15”`  
+例: `TODAY() + "13:14:15"`  
   
 この式では、第 1 のパラメーターは **datetime** 型で、第 2 のパラメーターは **string**型です。 ただし、オペランドを結合するときのキャストの処理は異なります。 DAX は、 **string** から **double**への暗黙のキャストを実行します。 インメモリ モデルでは、数式エンジンは **double**への直接キャストを試み、それが失敗した場合は、文字列から **datetime**へのキャストを試みます。  
   
@@ -129,13 +127,13 @@ Transact-SQL では、数値オーバーフローになる演算ではオーバ�
 ただし、同じ数式をインメモリ モデルで使用すると、8 バイトの整数が返されます。 これは、数式エンジンが数値オーバーフローのチェックを実行しないためです。  
   
 **異なる結果を返すブランクの LOG 関数**  
-SQL Server では、NULL と空白の処理が xVelocity エンジンとは異なります。 その結果、次の式は、DirectQuery モードではエラーになりますが、インメモリ モードでは無限の (–inf) を返します。  
+SQL Server では、NULL と空白の処理が xVelocity エンジンとは異なります。 結果として、次の数式がエラーを返しますが、DirectQuery モードでは、無限の (-inf)、インメモリ モードでします。  
   
 `EXAMPLE: LOG(blank())`  
   
-同じ制限が、他の対数関数 LOG10 および LN にも適用されます。  
+他の対数関数に同じ制限が適用されます。LOG10 および LN にも適用されます。  
   
-DAX での **blank** データ型の詳細については、「 [DAX 構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)」を参照してください。  
+DAX での **blank** データ型の詳細については、「 [DAX 構文のリファレンス](/dax/dax-syntax-reference)」を参照してください。
   
 **0 での除算とブランクでの除算**  
 DirectQuery モードでは、ゼロ (0) による除算または BLANK による除算は常にエラーになります。 SQL Server は無限大の表記をサポートしていず、0 による除算の自然な結果は無限大なので、結果はエラーになります。 ただし、SQL Server は NULL による除算はサポートしており、結果は常に NULL になります。  
@@ -165,9 +163,9 @@ Excel モデルおよび [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] モデ
   
 一般に、Excel と SQL Server では許容される日付の範囲が異なるため、結果が一致することが保証されるのは、共通の日付範囲内の日付の場合だけです。これには、次の日付が含まれます。  
   
--   最も早い日付: 1990 年 3 月 1 日  
+-   最も早い日付:1990 年 3 月 1 日  
   
--   最も遅い日付: 9999 年 12 月 31 日  
+-   最も遅い日付:9999 年 12 月 31 日  
   
 数式で使用されるいずれかの日付がこの範囲内にない場合は、数式がエラーになるか、または結果が一致しません。  
   
@@ -226,7 +224,7 @@ DirectQuery モードでは、算術演算の結果が **Currency**型の場合�
   
 -   最小: -922337203685477.5808  
   
--   最大: 922337203685477.5807  
+-   最大:922337203685477.5807  
   
 **通貨データ型と REAL データ型の組み合わせ**  
 例: `Currency sample 1`  
@@ -259,18 +257,18 @@ DirectQuery モードでは、算術演算の結果が **Currency**型の場合�
 また、SQL Server の一部のテキスト関数は、Excel では提供されていない追加引数をサポートします。 足りない引数が数式で必要な場合、インメモリ モデルでは異なる結果またはエラーが発生する可能性があります。  
   
 **LEFT や RIGHT などを使用する文字を返す演算では正しい文字が返されますが、大文字と小文字の使用が異なったり、または結果を返さない場合があります。**  
-例: `LEFT([“text”], 2)`  
+例: `LEFT(["text"], 2)`  
   
 DirectQuery モードでは、返される文字の大文字と小文字の使い分けは、データベースに格納されている文字と常にまったく同じです。 ただし、xVelocity エンジンでは、パフォーマンスの向上のため、値の圧縮およびインデックス作成に使用されるアルゴリズムが異なります。  
   
 既定で使用される Latin1_General 照合順序では、大文字と小文字は区別されませんが、アクセントは区別されます。 したがって、小文字だけ、大文字だけ、または小文字と大文字の混合を使用する、同じテキスト文字列の複数のインスタンスが存在する場合、すべてのインスタンスが同じ文字列と見なされて、文字列の最初のインスタンスだけがインデックスに格納されます。 格納された文字列を使用するすべてのテキスト関数は、インデックス形式の指定された部分を取得します。 したがって、例の数式では、最初のインスタンスを入力として使用し、列全体に対して同じ値を返します。  
   
-[テーブル モデルの文字列ストレージと照合順序](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
+[テーブル モデルの文字列ストレージと照合順序](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 この動作は、RIGHT、MID などの他のテキスト関数にも適用されます。  
   
 **結果に影響を与える文字列の長さ**  
-例: `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+例: `SEARCH("within string", "sample target  text", 1, 1)`  
   
 SEARCH 関数を使用して文字列を検索し、ターゲットの文字列が内部の文字列より長い場合、DirectQuery モードではエラーが発生します。  
   
@@ -283,21 +281,21 @@ SEARCH 関数を使用して文字列を検索し、ターゲットの文字列�
 インメモリ モデルでは数式は Excel の動作に従い、元の文字列と置換文字列を結合して、CACalifornia を返します。  
   
 **文字列の途中での暗黙の TRIM**  
-例: `TRIM(“ A sample sentence with leading white space”)`  
+例: `TRIM(" A sample sentence with leading white space")`  
   
 DirectQuery モードでは、DAX の TRIM 関数は SQL ステートメント `LTRIM(RTRIM(<column>))`に変換されます。 この結果、先頭と末尾の空白文字だけが削除されます。  
   
 一方、インメモリ モデルでは、Excel の動作に従って、同じ数式により文字列内の空白文字が削除されます。  
   
 **LEN 関数を使用するときの暗黙的な RTRIM**  
-例: `LEN(‘string_column’)`  
+例: `LEN('string_column')`  
   
 SQL Server と同様に、DirectQuery モードでは、文字列の列の最後から空白文字が自動的に削除されます。つまり、暗黙的に RTRIM が実行されます。 したがって、LEN 関数を使用する数式は、文字列の末尾に空白文字がある場合に異なる値を返すことがあります。  
   
 **インメモリでサポートされる SUBSTITUTE の追加パラメーター**  
-例: `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+例: `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-例: `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+例: `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 DirectQuery モードでは、この関数のパラメーターが 3 つ (列の参照、古いテキスト、新しいテキスト) あるバージョンだけを使用できます。 2 番目の数式を使用するとエラーが発生します。  
   
@@ -429,7 +427,7 @@ RAND
   
 RANDBETWEEN  
   
-**タイム インテリジェンス関数: 開始と終了日**  
+**タイム インテリジェンス関数:開始と終了日**  
   
 DATESQTD  
   
@@ -453,7 +451,7 @@ SAMEPERIODLASTYEAR
   
 PARALLELPERIOD  
   
-**タイム インテリジェンス関数: 残高**  
+**タイム インテリジェンス関数:残高**  
   
 OPENINGBALANCEMONTH  
   
@@ -467,7 +465,7 @@ CLOSINGBALANCEQUARTER
   
 CLOSINGBALANCEYEAR  
   
-**タイム インテリジェンス関数: 前または次の期間**  
+**タイム インテリジェンス関数:前または次の期間**  
   
 PREVIOUSDAY  
   
@@ -485,7 +483,7 @@ NEXTQUARTER
   
 NEXTYEAR  
   
-**タイム インテリジェンス関数: 期間および期間に対する計算**  
+**タイム インテリジェンス関数:期間および期間に対する計算**  
   
 STARTOFMONTH  
   
@@ -506,6 +504,6 @@ LASTDATE
 [DATEADD]  
   
 ## <a name="see-also"></a>関連項目  
-[DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery モード (SSAS テーブル)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

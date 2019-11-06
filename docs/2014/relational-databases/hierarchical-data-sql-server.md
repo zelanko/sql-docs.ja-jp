@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -18,12 +17,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab581202049b9dab362de4278950e0597cf5b3b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63065707"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
   組み込み`hierarchyid`型では、階層データの格納とクエリ容易になります。 `hierarchyid` 階層データの最も一般的な種類のツリーを表すために最適化されます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48154758"
   
 -   Web ページ間のリンクのグラフ  
   
- 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) を使用します。 階層データのクエリや管理を実行するには、 [の](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) hierarchyid 関数 [!INCLUDE[tsql](../includes/tsql-md.md)] を使用します。  
+ 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) を使用します。 階層データのクエリや管理を実行するには、 [!INCLUDE[tsql](../includes/tsql-md.md)] の [hierarchyid 関数](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) を使用します。  
   
 ##  <a name="keyprops"></a> hierarchyid の主要な特性  
  値、`hierarchyid`データ型は、ツリー階層内の位置を表します。 `hierarchyid` の値には、以下の特性があります。  
@@ -61,11 +60,11 @@ ms.locfileid: "48154758"
 ##  <a name="limits"></a> hierarchyid の制限事項  
  `hierarchyid`データ型は、次の制限。  
   
--   型の列`hierarchyid`ツリーを自動的には表しません。 行と行の間に必要なリレーションシップが反映されるよう、`hierarchyid` 値を生成して割り当てるのは、アプリケーションの役割です。 アプリケーションによっては、別のテーブルに定義されている階層内の位置を示す `hierarchyid` 型の列を持つ場合もあります。  
+-   `hierarchyid` 型の列が自動的にツリーを表すことはありません。 行と行の間に必要なリレーションシップが反映されるよう、`hierarchyid` 値を生成して割り当てるのは、アプリケーションの役割です。 アプリケーションによっては、別のテーブルに定義されている階層内の位置を示す `hierarchyid` 型の列を持つ場合もあります。  
   
--   生成と割り当てにおいて同時実行を管理するアプリケーション依存`hierarchyid`値。 アプリケーションで一意キー制約を使用したり、独自のロジックで一意性を適用したりしない限り、列内の `hierarchyid` 値の一意性は保証されません。  
+-   `hierarchyid` 値の生成と割り当てにおいて、コンカレンシーを管理するのはアプリケーションの役割です。 アプリケーションで一意キー制約を使用したり、独自のロジックで一意性を適用したりしない限り、列内の `hierarchyid` 値の一意性は保証されません。  
   
--   によって表される階層リレーションシップ`hierarchyid`値は、外部キー リレーションシップとは適用されません。 階層リレーションシップでは、A に子 B があるとき、A だけを削除し、存在しないレコードに対するリレーションシップを B が引き続き保持することも可能であり、これが適切な場合もあります。 この動作を許容しない場合は、親を削除する前に、アプリケーションで子孫に対するクエリを実行する必要があります。  
+-   `hierarchyid` 値で表される階層リレーションシップは、外部キー リレーションシップとは適用方法が異なります。 階層リレーションシップでは、A に子 B があるとき、A だけを削除し、存在しないレコードに対するリレーションシップを B が引き続き保持することも可能であり、これが適切な場合もあります。 この動作を許容しない場合は、親を削除する前に、アプリケーションで子孫に対するクエリを実行する必要があります。  
   
   
 ##  <a name="alternatives"></a> hierarchyid に代わる方法を使用する場合  
@@ -95,17 +94,17 @@ GO
   
  一般的な操作に関する親/子と `hierarchyid` の比較  
   
--   サブツリーのクエリが大幅に高速`hierarchyid`します。  
+-   サブツリーのクエリは、`hierarchyid` を使用した方がはるかに高速です。  
   
 -   直接の子孫のクエリは、`hierarchyid` を使用するとわずかに遅くなります。  
   
--   低速で非リーフ ノードの移動は`hierarchyid`します。  
+-   非リーフ ノードの移動は、`hierarchyid` を使用すると遅くなります。  
   
 -   非リーフ ノードを挿入する場合、およびリーフ ノードを挿入または移動する場合も、`hierarchyid` を使用する場合と同様に複雑になります。  
   
  次の条件に当てはまるときは、親/子を使用した方がよい場合があります。  
   
--   キーのサイズが非常に重要なとき。 同じノード数に対して、`hierarchyid`値が整数系以上 (`smallint`、 `int`、 `bigint`) 値。 まれに親/子を使用する唯一の理由のためにこれは`hierarchyid`I/O と CPU の複雑さの親/子構造体を使用しているときに必要な共通テーブル式よりも大幅に向上のローカリティが。  
+-   キーのサイズが非常に重要なとき。 同じノード数に対して、`hierarchyid` 値が整数系 (`smallint`、`int`、`bigint`) の値以上であるとき。 これが、ごくまれに親/子を使用する場合の唯一の理由です。親/子構造の使用時に必要な共通テーブル式よりも、`hierarchyid` の方が、I/O の局所性と CPU の複雑さにおいてはるかに優れているためです。  
   
 -   階層の複数セクションにわたるクエリをめったに実行しないとき。 つまり、通常のクエリが、階層内の単一ポイントのみを対象とするとき。 このようなケースでは、同じ場所への配置は重要でありません。 たとえば、個々の従業員の給与処理のみに組織テーブルを使用する場合、親/子の方が優れています。  
   
@@ -160,7 +159,7 @@ GO
   
      幅優先のインデックスでは、ノードの直接の子すべてが同じ場所に配置されます。 このため、"この管理者に直属するすべての従業員を検索する" など、直下の子に関するクエリに応答するには、幅優先インデックスが効率的です。  
   
- 深さ優先、幅優先、またはこれらの両方を使用するか、また、どちらをクラスター化キーとするか (該当する場合) は、上記の種類のクエリの相対的重要度と、SELECT 操作と DML 操作の相対的重要度によって決まります。 インデックス作成方法の詳細な例については、「 [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」を参照してください。  
+ 深さ優先、幅優先、またはこれらの両方を使用するか、また、どちらをクラスター化キーとするか (該当する場合) は、上記の種類のクエリの相対的重要度と、SELECT 操作と DML 操作の相対的重要度によって決まります。 インデックス作成方法の詳細な例については、「[チュートリアル:hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」を参照してください。  
   
   
 ### <a name="creating-indexes"></a>インデックスの作成  
@@ -266,11 +265,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 関連タスク  
   
 ###  <a name="migrating"></a> 親/子から hierarchyid への移行  
- 現在、ほとんどのツリーは親/子を使用して表されます。 親/子構造からを使用してテーブルに移行する最も簡単な方法`hierarchyid`階層の各レベルのノードの数を追跡する一時列または一時テーブルを使用することです。 親/子テーブルの移行例については、「 [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」のレッスン 1 を参照してください。  
+ 現在、ほとんどのツリーは親/子を使用して表されます。 親/子構造からを使用してテーブルに移行する最も簡単な方法`hierarchyid`階層の各レベルのノードの数を追跡する一時列または一時テーブルを使用することです。 親/子テーブルの移行例については、「[チュートリアル:hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」」のレッスン 1 を参照してください。  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> hierarchyid を使用したツリーの管理  
- ただし、`hierarchyid`列の表示、ツリーが必ずしも表すが、アプリケーションは、これは、簡単に確保できます。  
+ 必ずしも `hierarchyid` 列がツリーを表すとは限りませんが、アプリケーションでは簡単に表すようにできます。  
   
 -   新しい値を生成する場合は、次のいずれかの操作を行います。  
   
@@ -320,7 +319,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>シリアル化可能なトランザクションの使用例  
- **Org_BreadthFirst** インデックスによって、**@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションでチェックできるその他のエラーの場合だけでなく、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を追加しようとしていることを示します。したがって、 **@last_child** を再計算する必要があります。 次のコードは、シリアル化可能なトランザクションと幅優先のインデックスを使用して、新しいノード値を計算します。  
+ **Org_BreadthFirst** インデックスによって、 **@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションでチェックできるその他のエラーの場合だけでなく、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を追加しようとしていることを示します。したがって、 **@last_child** を再計算する必要があります。 次のコードは、シリアル化可能なトランザクションと幅優先のインデックスを使用して、新しいノード値を計算します。  
   
 ```  
 CREATE TABLE Org_T2  
@@ -427,7 +426,7 @@ public partial class HierarchyId_Operations
 }  
 ```  
   
- 以下の **の例で** ListAncestor **メソッドおよび** CommonAncestor [!INCLUDE[tsql](../includes/tsql-md.md)] メソッドを使用するには、DLL をビルドし、次のようなコードを実行して **の** HierarchyId_Operations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アセンブリを作成します。  
+ 以下の [!INCLUDE[tsql](../includes/tsql-md.md)] の例で **ListAncestor** メソッドおよび **CommonAncestor** メソッドを使用するには、DLL をビルドし、次のようなコードを実行して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **HierarchyId_Operations** アセンブリを作成します。  
   
 ```  
 CREATE ASSEMBLY HierarchyId_Operations   
@@ -498,7 +497,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> サブツリーの移動  
- もう 1 つの一般的な操作は、サブツリーの移動です。 次の手順では、 **@oldMgr** のサブツリーを取得し、それ ( **@oldMgr**を含む) を **@newMgr**を使用した方がはるかに高速です。  
+ もう 1 つの一般的な操作は、サブツリーの移動です。 次の手順では、 **@oldMgr** のサブツリーを取得し、それ ( **@oldMgr** を含む) を **@newMgr** を使用した方がはるかに高速です。  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -526,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [hierarchyid データ型メソッド リファレンス](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [チュートリアル: hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

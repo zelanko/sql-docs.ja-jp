@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
@@ -18,12 +16,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a3f8fd68a103b66670051f18ceeb12e0e9f85f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721892"
 ---
 # <a name="replication-agent-executables-concepts"></a>レプリケーション エージェント実行可能ファイルの概念
   レプリケーション エージェントは、次のような方法でプログラムから制御できます。  
@@ -44,12 +42,12 @@ ms.locfileid: "48107232"
   
 -   [レプリケーション キュー リーダー エージェント](../agents/replication-queue-reader-agent.md)  
   
--   [Replication Snapshot Agent](../agents/replication-snapshot-agent.md)  
+-   [レプリケーション スナップショット エージェント](../agents/replication-snapshot-agent.md)  
   
- レプリケーション エージェントを呼び出す際、パフォーマンス プロファイルを使用することで、あらかじめ定義された一連のパラメーターを自動的にエージェント実行可能ファイルに渡すことができます。 詳しくは、「 [レプリケーション エージェント プロファイル](../agents/replication-agent-profiles.md)」をご覧ください。  
+ レプリケーション エージェントを呼び出す際、パフォーマンス プロファイルを使用することで、あらかじめ定義された一連のパラメーターを自動的にエージェント実行可能ファイルに渡すことができます。 詳しくは、「 [Replication Agent Profiles](../agents/replication-agent-profiles.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、レプリケーション エージェントをコマンド プロンプトから呼び出す方法を示しています。 レプリケーション エージェントは、レプリケーション管理オブジェクト (RMO) を使用して呼び出すこともできます。 詳細については、「[サブスクリプションの同期 &#40;レプリケーション&#41;](../synchronize-subscriptions-replication.md)」を参照してください。  
+ 次の例は、レプリケーション エージェントをコマンド プロンプトから呼び出す方法を示しています。 レプリケーション エージェントは、レプリケーション管理オブジェクト (RMO) を使用して呼び出すこともできます。 詳細については、「[サブスクリプションの同期 &#40;レプリケーション&#41;](../synchronize-data.md)」を参照してください。  
   
 > [!NOTE]  
 >  これらの例では、読みやすくするために、改行が追加されています。 バッチ ファイルの場合、コマンドは 1 行で入力する必要があります。  

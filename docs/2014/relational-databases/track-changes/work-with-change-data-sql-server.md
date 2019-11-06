@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881a32bbb21eeeef0e09eaedb98897f90a1c0d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269890"
 ---
 # <a name="work-with-change-data-sql-server"></a>変更データの処理 (SQL Server)
   変更データ キャプチャのコンシューマーは、テーブル値関数 (TVF) を使用することによって変更データを利用できるようになります。 これらの関数のすべてのクエリには、ログ シーケンス番号 (LSN) の範囲を定義する 2 つのパラメーターが必要です。これらのパラメーターは、返される結果セットを開発する際に検討の対象になります。 期間の両端を示す LSN の上限値と下限値は、期間内に含まれると見なされます。  
@@ -37,7 +36,7 @@ ms.locfileid: "48215672"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- に対して返される対応するエラーを`net changes`クエリは、次。  
+ `net changes` のクエリに対して返される対応するエラーは次のとおりです。  
   
  `Msg 313, Level 16, State 3, Line 1`  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48215672"
     > [!NOTE]  
     >  このオプションは、ソース テーブルで主キーが定義されている場合、または @index_name パラメーターを使用して一意のインデックスが特定されている場合にのみサポートされます。  
   
-     **netchanges** 関数は、ソース テーブルの変更された各行につき 1 つの変更を返します。 指定した期間に複数の変更が行に対して記録されていた場合は、列の値には行の最終的な内容が反映されます。 ターゲット環境の更新に必要な操作を正しく特定するには、その期間に行に対して行われた最初の操作と最後の操作の両方を TVF で考慮する必要があります。 行フィルター オプション 'all' を指定した場合、`net changes` のクエリで返される操作は、挿入、削除、または更新 (新しい値) になります。 このオプションでは、更新マスクは常に null として返されます。これは、集計マスクの計算に関連するコストのためです。 行に対するすべての変更が反映された集計マスクが必要な場合は、'all with mask' オプションを使用します。 下流の処理で挿入と更新を区別する必要がない場合は、"all with merge" オプションを使用します。 この場合、操作の値は、削除操作を表す 1 と、挿入または更新の操作を表す 5 の 2 つだけになります。 このオプションを使用すると、挿入と更新のどちらの操作を派生させるかを特定する追加処理が不要になるので、この区別が不要な場合にクエリのパフォーマンスが向上します。  
+     **netchanges** 関数は、ソース テーブルの変更された各行につき 1 つの変更を返します。 指定した期間に複数の変更が行に対して記録されていた場合は、列の値には行の最終的な内容が反映されます。 ターゲット環境の更新に必要な操作を正しく特定するには、その期間に行に対して行われた最初の操作と最後の操作の両方を TVF で考慮する必要があります。 行フィルター オプション 'all' を指定した場合、`net changes` のクエリで返される操作は、挿入、削除、または更新 (新しい値) になります。 このオプションでは、更新マスクは常に null として返されます。これは、集計マスクの計算に関連するコストのためです。 行に対するすべての変更が反映された集計マスクが必要な場合は、'all with mask' オプションを使用します。 下流の処理で挿入と更新を区別する必要がない場合は、"all with merge" オプションを使用します。 この場合、操作の値に指定される値は 2 つのみです。削除を表す 1 と、挿入または更新の操作を表す 5 です。 このオプションを使用すると、挿入と更新のどちらの操作を派生させるかを特定する追加処理が不要になるので、この区別が不要な場合にクエリのパフォーマンスが向上します。  
   
  クエリ関数から返される更新マスクは、変更データの行で変更されたすべての列を特定できるように簡潔に表現したものです。 通常、この情報が必要とされるのは、キャプチャ対象列の小さなサブセットを使用する場合のみです。 アプリケーションでより直接的に使用できる形式の情報をこのマスクから抽出するための関数も用意されています。 [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) 関数は、特定のキャプチャ インスタンスの指定した列の位置を表す序数を返します。一方、 [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) 関数は、関数呼び出しで指定した序数に基づいて、指定したマスクのビットのパリティを返します。 この 2 つの関数により、更新マスクから情報を効率的に抽出し、変更データの要求と共に返すことができます。 これらの関数の使用例については、"All With Mask を使用した差分変更の列挙" テンプレートを参照してください。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48215672"
  以降のセクションでは、クエリ関数の cdc.fn_cdc_get_all_changes_<capture_instance> および cdc.fn_cdc_get_net_changes_<capture_instance> を使用して変更データ キャプチャ データのクエリを実行するための一般的なシナリオについて説明します。  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>キャプチャ インスタンスの有効期間内のすべての変更のクエリ  
- 変更データのクエリで最も単純なのは、キャプチャ インスタンスの有効期間内の現在の変更データをすべて返すクエリです。 このクエリを実行するには、まず、有効期間の LSN の下限と上限を求めます。 次に、それらの値を使用して、クエリ関数 cdc.fn_cdc_get_all_changes_<capture_instance> または cdc.fn_cdc_get_net_changes_<capture_instance> に渡すパラメーター @from_lsn および @to_lsn を特定します。 下限を取得するには [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) 関数を使用し、上限を取得するには [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 関数を使用します。 クエリ関数 cdc.fn_cdc_get_all_changes_<capture_instance> を使用して現在のすべての有効な変更のクエリを実行するためのサンプル コードについては、"有効な範囲のすべての変更の列挙" テンプレートを参照してください。 cdc.fn_cdc_get_net_changes_<capture_instance> 関数を使用した類似の例については、"有効な範囲の差分変更の列挙" テンプレートを参照してください。  
+ 変更データに対する最も単純な要求は、キャプチャ インスタンスの有効期間内の現在の変更データをすべて返す要求です。 このクエリを実行するには、まず、有効期間の LSN の下限と上限を求めます。 次に、それらの値を使用して、クエリ関数 cdc.fn_cdc_get_all_changes_<capture_instance> または cdc.fn_cdc_get_net_changes_<capture_instance> に渡すパラメーター @from_lsn および @to_lsn を特定します。 下限を取得するには [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) 関数を使用し、上限を取得するには [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 関数を使用します。 クエリ関数 cdc.fn_cdc_get_all_changes_<capture_instance> を使用して現在のすべての有効な変更のクエリを実行するためのサンプル コードについては、"有効な範囲のすべての変更の列挙" テンプレートを参照してください。 cdc.fn_cdc_get_net_changes_<capture_instance> 関数を使用した類似の例については、"有効な範囲の差分変更の列挙" テンプレートを参照してください。  
   
 ### <a name="querying-for-all-new-changes-since-the-last-set-of-changes"></a>前回の変更セット以降に発生したすべての新しい変更のクエリ  
  一般的なアプリケーションの場合、変更データのクエリは継続的なプロセスであり、前回の要求以降に発生したすべての変更の要求が定期的に行われます。 そのようなクエリでは、 [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) 関数を使用して、前回のクエリの上限から現在のクエリの下限を求めることができます。 この方法では、クエリ範囲が常に両端の値を含む閉区間として扱われるため、行の重複が起こらないことが保証されます。 次に、 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 関数を使用して、新しい要求期間の上限を取得します。 クエリ期間を体系的に移動させて前回の要求以降に発生したすべての変更を取得するためのサンプル コードについては、"前回の要求以降に発生したすべての変更の列挙" テンプレートを参照してください。  
@@ -113,7 +112,7 @@ ms.locfileid: "48215672"
   
  すべての変更クエリをラップする関数の名前は、fn_all_changes_ の後にキャプチャ インスタンスの名前を付けた名前になります。 差分変更追跡のラッパーに使用されるプレフィックスは fn_net_changes です。 どちらの関数も、関連する変更データ キャプチャ TVF と同じように 3 つの引数を受け取ります。 ただし、ラッパーのクエリ範囲は、2 つの LSN 値ではなく 2 つの datetime 値で範囲指定されます。 @row_filter_option パラメーターはどちらの場合も同じです。  
   
- 生成されるラッパー関数は、変更データ キャプチャ タイムラインを体系的に進めるための規則をサポートしています。したがって、前の期間の @end_time パラメーターは、次の期間の @start_time パラメーターとして使用されるものと見なされます。 またラッパー関数は、datetime 値を LSN 値にマップし、この規則に従った場合にデータの欠落や重複が発生しないようにします。  
+ 生成されるラッパー関数は、変更データ キャプチャ タイムラインを体系的に進めるための規則をサポートしているため、前の期間の @end_time パラメーターは、次の期間の @start_time パラメーターとして使用されるものと見なされます。 またラッパー関数は、datetime 値を LSN 値にマップし、この規則に従った場合にデータの欠落や重複が発生しないようにします。  
   
  ラッパーは、指定のクエリ期間で閉じた上限をサポートするように生成することも、開いた上限をサポートするように生成することもできます。 つまり、抽出期間の上限とコミット時間が等しいエントリを、その期間に含めるかどうかを呼び出し元が指定できます。 既定では、上限が含まれます。  
   

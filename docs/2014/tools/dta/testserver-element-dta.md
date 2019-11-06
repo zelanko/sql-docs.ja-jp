@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87d446b5c65ff5e1660ea6bf6cb216b875416cd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63138704"
 ---
 # <a name="testserver-element-dta"></a>TestServer 要素 (DTA)
   実稼働サーバーのチューニング時に使用するテスト サーバーを指定します。  
@@ -41,19 +40,19 @@ ms.locfileid: "48080032"
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**既定値**|[なし] :|  
-|**個数**|任意。 ごとに 1 回使用できます`TuningOptions`要素。|  
+|**個数**|任意。 `TuningOptions` 要素につき 1 回使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[TuningOptions 要素&#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**親要素**|[TuningOptions 要素 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  
- この要素の使用例では、次を参照してください。 [実稼働サーバーのチューニング負荷を軽減](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)します。  
+ この要素の使用例では、[実稼働サーバーのチューニング負荷を軽減](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

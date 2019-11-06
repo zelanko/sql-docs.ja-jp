@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - auditing [Reporting Services]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - report processing [Reporting Services], verifying execution
 - checking report execution
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8bddd67dca8a97d0279b002784c74e9666e5a15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c11c57f7c5f67b2557f5637ad10658abc9f80606
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103139"
 ---
 # <a name="verifying-a-report-run"></a>レポート実行の確認
   レポート処理の状態に関する情報を表示するには、ログ ファイルを使用するか、またはレポート マネージャーでレポートと共に表示される状態の情報を参照します。  
@@ -47,7 +46,7 @@ ms.locfileid: "48076522"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
- [レポート処理プロパティを設定します。](set-report-processing-properties.md)   
+ [レポート処理プロパティの設定](set-report-processing-properties.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   
   

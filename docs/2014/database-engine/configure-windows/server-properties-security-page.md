@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.security.f1
@@ -13,12 +12,12 @@ ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb9d19b96350ebfc9eb2f3e047866c272e8d1e35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809006"
 ---
 # <a name="server-properties-security-page"></a>[サーバーのプロパティ] ([セキュリティ] ページ)
   このページを使用すると、サーバー セキュリティ オプションを表示したり変更したりできます。  
@@ -37,7 +36,7 @@ ms.locfileid: "48195272"
 >  セキュリティ構成を変更するには、サービスを再起動する必要があります。 [サーバー認証] を [SQL Server 認証モードと Windows 認証モード] に変更する場合、SA アカウントは自動的に有効にはなりません。 SA アカウントを使用するには、ENABLE オプションを指定して [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) を実行します。  
   
 ## <a name="login-auditing"></a>[ログインの監査]  
- **なし**  
+ **None**  
  ログインの監査をオフにします。  
   
  **[失敗したログインのみ]**  

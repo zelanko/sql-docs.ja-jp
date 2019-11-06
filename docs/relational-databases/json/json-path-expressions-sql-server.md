@@ -3,7 +3,7 @@ title: JSON パス式 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2017
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f7b2bcac47cc24f5de6f58d712708082eb17010
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bca9bcff4a622964d6f6e05fb46b458a1cd78ddf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676328"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909916"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   キー名。 たとえば、 `$.name` や `$."first name"`。 キー名がドル記号で始まるか、キー名にスペースなどの特殊文字が含まれている場合は、引用符で囲みます。   
   
-    -   配列の要素。 たとえば、`$.product[3]` のようにします。 配列は 0 から始まります。  
+    -   配列の要素。 たとえば、`$.product[3]` のようになります。 配列は 0 から始まります。  
   
     -   ドット演算子 (`.`) は、オブジェクトのメンバーを示します。 たとえば、`$.people[1].surname` では、`surname` は `people` の子です。
   
@@ -90,12 +89,12 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
  次の表に、パス式の例をいくつか示します。  
   
-|パス式|ReplTest1|  
+|パス式|[値]|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
-|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
+|$.people[1]|{ "name":"Jane",  "surname": null, "active": true }|  
 |$.people[1].surname|null|  
-|$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
+|$|{ "people": [ { "name":"John",  "surname":"Doe" },<br />   { "name":"Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>組み込み関数が重複するパスを処理する方法  
  たとえば、同じ名前の 2 つのキーが同じレベルにある場合など、JSON テキストに重複するプロパティが含まれる場合、**JSON_VALUE** および **JSON_QUERY** 関数はパスに一致する最初の値のみを返します。 重複するキーが含まれる JSON オブジェクトを解析してすべての値を取得するには、次の例に示すように **OPENJSON** を使用します。  
@@ -110,10 +109,6 @@ FROM OPENJSON(@json,'$.person.info')
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  
   
-### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
-  
-具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
-
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 
 SQL Server と Azure SQL Database に組み込まれている JSON のサポートの視覚的な紹介は、次のビデオをご覧ください。

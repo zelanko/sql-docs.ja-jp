@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d5ba084d6912d7f60b124b28ea8635aa37d8259f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102311"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>自分のコンピューターへのレポートの保存 (レポート ビルダー)
   レポート ビルダーでは、レポート定義を自分のコンピューターに保存できます。 ただし、コンピューターに保存した場合、他のユーザーはそのレポートを表示できません。また、共有データ ソースを参照したり、画像やサブレポートなどのレポート アイテムを外部に格納するレポートは実行できない場合があります。 レポートは、レポート サーバーまたは SharePoint サイトに保存することをお勧めします。  
   
 ### <a name="to-save-a-report"></a>レポートを保存するには  
   
-1.  レポート ビルダーのボタンの **[保存]** をクリックします。 **[Save As***\<Report Item]* (レポート アイテム> として保存***) ダイアログ ボックスが開きます。  
+1.  レポート ビルダーのボタンの **[保存]** をクリックします。 **[Save As** _\<Report Item>]\(<レポート アイテム> として保存\)_ ダイアログ ボックスが開きます。  
   
     > [!NOTE]  
     >  レポートを再保存すると、自動的に以前の場所に再保存されます。 場所を変更するには、 **[名前を付けて保存]** を使用します。  
@@ -36,7 +35,7 @@ ms.locfileid: "48222292"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>レポートを別の名前で保存するには  
   
-1.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。 **[Save As***\<Report Item]* (レポート アイテム> として保存***) ダイアログ ボックスが開きます。  
+1.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。 **[Save As** _\<Report Item>]\(<レポート アイテム> として保存\)_ ダイアログ ボックスが開きます。  
   
 2.  レポートを保存するコンピューター上の場所を参照します。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48222292"
 ## <a name="see-also"></a>参照  
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [レポートの保存&#40;レポート ビルダー&#41;](report-builder/saving-reports-report-builder.md)   
- [別の種類のファイルとしてレポートをエクスポートする &#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
+ [レポートの保存 (レポート ビルダー)](report-builder/saving-reports-report-builder.md)   
+ [別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

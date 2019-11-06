@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system objects [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9110f0a6d86bb4c64426d2340a6d3e9454f62e97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871109"
 ---
 # <a name="resource-database"></a>Resource データベース
   Resource データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に搭載されているすべてのシステム オブジェクトを格納する読み取り専用のデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム オブジェクト (sys.objects など) は、物理的には Resource データベースに保存されていますが、すべてのデータベースの sys スキーマに論理的に表示されます。 Resource データベースには、ユーザーのデータやユーザーのメタデータは保持されません。  
@@ -43,14 +42,14 @@ ms.locfileid: "48092422"
 ## <a name="accessing-the-resource-database"></a>Resource データベースへのアクセス  
  Resource データベースの変更は、マイクロソフト カスタマー サポート サービス (CSS) のサポート スタッフの指示がある場合にのみ行ってください。 Resource データベースの ID は、常に 32767 です。 Resource データベースに関する他の重要な値には、バージョン番号とデータベースの最終更新時刻があります。  
   
- Resource **データベースの****バージョン番号を確認するには、次のステートメントを使用します**。  
+ Resource **データベースの** **バージョン番号を確認するには、次のステートメントを使用します** 。  
   
 ```  
 SELECT SERVERPROPERTY('ResourceVersion');  
 GO  
 ```  
   
- Resource **データベースの****最終更新時刻を確認するには、次のステートメントを使用します**。  
+ Resource **データベースの** **最終更新時刻を確認するには、次のステートメントを使用します**。  
   
 ```  
 SELECT SERVERPROPERTY('ResourceLastUpdateDateTime');  

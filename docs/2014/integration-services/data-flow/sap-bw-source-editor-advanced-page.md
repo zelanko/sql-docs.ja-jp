@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67e45ef54da3d79d877882c94ee34fcaf0814514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80a3d1d0fa667821616909a327a946a4116d06de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901048"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>[SAP BW 変換元エディター] ([詳細設定] ページ)
   文字列の変換規則とタイムアウト期間を指定し、特定の要求 ID の状態をリセットするには、 **[SAP BW 変換元エディター]** の **[詳細設定]** ページを使用します。  
@@ -47,7 +46,7 @@ ms.locfileid: "48100712"
   
 |オプション|説明|  
 |------------|-----------------|  
-|**自動文字列変換**|すべての文字列に変換`nvarchar`SAP Netweaver BW システムが Unicode システムの場合。 それ以外の場合にすべての文字列を変換`varchar`します。|  
+|**自動文字列変換**|SAP Netweaver BW システムが Unicode システムの場合に、`nvarchar` にすべての文字列を変換します。 それ以外の場合は `varchar` にすべての文字列を変換します。|  
 |**文字列を varchar に変換**|`varchar` にすべての文字列を変換します。|  
 |**文字列を nvarchar に変換**|`nvarchar` にすべての文字列を変換します。|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48100712"
  ソースが待機する最大秒数を指定します。  
   
 > [!NOTE]  
->  このオプションは、エディターの **[接続マネージャー]** ページの **[実行モード]** の値として **[W - 通知を待機]** を選択した場合にのみ有効です。 詳細については、次を参照してください。 [SAP bw 変換元エディター&#40;接続マネージャー ページ&#41;](sap-bw-source-editor-connection-manager-page.md)します。  
+>  このオプションは、エディターの **[接続マネージャー]** ページの **[実行モード]** の値として **[W - 通知を待機]** を選択した場合にのみ有効です。 詳細については、「 [SAP BW ソース エディター ([接続マネージャー] ページ)](sap-bw-source-editor-connection-manager-page.md)」を参照してください。  
   
  **要求 ID**  
  **[リセット]** をクリックしたときに状態を "G - Green" にリセットする要求 ID を指定します。  
@@ -63,9 +62,9 @@ ms.locfileid: "48100712"
  **[リセット]**  
  確認後に、指定した要求 ID の状態を "G - Green" リセットできます。 これは、問題が発生し、SAP Netweaver BW システムが要求に黄色または赤の状態フラグを設定した便利です。  
   
-## <a name="see-also"></a>参照  
- [SAP bw 変換元エディター&#40;接続マネージャー ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [SAP bw 変換元エディター&#40;列 ページ&#41;](sap-bw-source-editor-columns-page.md)   
+## <a name="see-also"></a>関連項目  
+ [SAP BW 変換元エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW ソース エディター ([列] ページ)](sap-bw-source-editor-columns-page.md)   
  [SAP BW ソース エディター &#40;[エラー出力] ページ&#41;](sap-bw-source-editor-error-output-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   

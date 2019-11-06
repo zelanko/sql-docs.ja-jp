@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
@@ -14,12 +13,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3fd1101c41fd9963fecb3ae1f73bfcc7a2de338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db74bd7de8fcf3cdba6787fda18c510237d63372
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200762"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941081"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>データの変更をトランザクション アーティクルに反映する方法の設定
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、トランザクション アーティクルへのデータの変更の反映方法を設定する方法について説明します。  
@@ -49,27 +48,27 @@ ms.locfileid: "48200762"
   
 #### <a name="to-specify-the-propagation-method"></a>反映方法を指定するには  
   
-1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、**[アーティクルのプロパティ]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、 **[アーティクルのプロパティ]** をクリックします。  
   
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、**[INSERT 配信形式]**、**[UPDATE 配信形式]**、**[DELETE 配信形式]** の各メニューを使用して各操作の反映方法を指定します。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、 **[INSERT 配信形式]** 、 **[UPDATE 配信形式]** 、 **[DELETE 配信形式]** の各メニューを使用して各操作の反映方法を指定します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
+5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>カスタム ストアド プロシージャを生成して使用するには  
   
-1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、**[アーティクルのプロパティ]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、 **[アーティクルのプロパティ]** をクリックします。  
   
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-     **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、該当する配信形式メニュー (**[INSERT 配信形式]**、**[UPDATE 配信形式]**、または **[DELETE 配信形式]**) から CALL 構文を選択し、**[INSERT ストアド プロシージャ]**、**[DELETE ストアド プロシージャ]**、または **[UPDATE ストアド プロシージャ]** で使用するプロシージャ名を入力します。 CALL 構文の詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../transactional/transactional-articles-specify-how-changes-are-propagated.md)」の「ストアド プロシージャの呼び出し構文」を参照してください。  
+     **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、該当する配信形式メニュー ( **[INSERT 配信形式]** 、 **[UPDATE 配信形式]** 、または **[DELETE 配信形式]** ) から CALL 構文を選択し、 **[INSERT ストアド プロシージャ]** 、 **[DELETE ストアド プロシージャ]** 、または **[UPDATE ストアド プロシージャ]** で使用するプロシージャ名を入力します。 CALL 構文の詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../transactional/transactional-articles-specify-how-changes-are-propagated.md)」の「ストアド プロシージャの呼び出し構文」を参照してください。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
+4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 5.  パブリケーションのスナップショットが生成されると、そのスナップショットには前の手順で指定したプロシージャが含まれています。 このプロシージャは指定した CALL 構文を使用しますが、レプリケーションが使用する既定のロジックを含んでいます。  
   
@@ -85,13 +84,13 @@ ms.locfileid: "48200762"
   
 #### <a name="to-create-an-article-that-uses-transact-sql-commands-to-propagate-data-changes"></a>データ変更を Transact-SQL コマンドを使って反映するアーティクルを作成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定し、さらに、次のパラメーターの少なくとも 1 つに **SQL** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 パブリケーションのアーティクルが属し **\@**  **\@** ているパブリケーションの名前、アーティクルのアーティクル名、  **\@source_object**にパブリッシュされるデータベースオブジェクト、および値を指定します。次のパラメーターのうち少なくとも1つに対する**SQL**の。  
   
-    -   **@ins_cmd** - [INSERT](/sql/t-sql/statements/insert-transact-sql) コマンドのレプリケーションを制御します。  
+    -   ins_cmd- [INSERT](/sql/t-sql/statements/insert-transact-sql)コマンドのレプリケーションを制御します。  **\@**  
   
-    -   **@upd_cmd** - [UPDATE](/sql/t-sql/queries/update-transact-sql) コマンドのレプリケーションを制御します。  
+    -   upd_cmd- [UPDATE](/sql/t-sql/queries/update-transact-sql)コマンドのレプリケーションを制御します。  **\@**  
   
-    -   **@del_cmd** - [DELETE](/sql/t-sql/statements/delete-transact-sql) コマンドのレプリケーションを制御します。  
+    -   del_cmd- [DELETE](/sql/t-sql/statements/delete-transact-sql)コマンドのレプリケーションを制御します。  **\@**  
   
     > [!NOTE]  
     >  上記のパラメーターに対して **SQL** を指定すると、各種のコマンドが適切な [!INCLUDE[tsql](../../../includes/tsql-md.md)] コマンドとしてサブスクライバーにレプリケートされます。  
@@ -100,13 +99,13 @@ ms.locfileid: "48200762"
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>データ変更を反映しないアーティクルを作成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定し、さらに、次のパラメーターの少なくとも 1 つに **NONE** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 パブリケーションのアーティクルが属し **\@**  **\@** ているパブリケーションの名前、アーティクルのアーティクル名、  **\@source_object**にパブリッシュされるデータベースオブジェクト、および値を指定します。次のパラメーターの少なくとも1つではあり**ません**。  
   
-    -   **@ins_cmd** - [INSERT](/sql/t-sql/statements/insert-transact-sql) コマンドのレプリケーションを制御します。  
+    -   ins_cmd- [INSERT](/sql/t-sql/statements/insert-transact-sql)コマンドのレプリケーションを制御します。  **\@**  
   
-    -   **@upd_cmd** - [UPDATE](/sql/t-sql/queries/update-transact-sql) コマンドのレプリケーションを制御します。  
+    -   upd_cmd- [UPDATE](/sql/t-sql/queries/update-transact-sql)コマンドのレプリケーションを制御します。  **\@**  
   
-    -   **@del_cmd** - [DELETE](/sql/t-sql/statements/delete-transact-sql) コマンドのレプリケーションを制御します。  
+    -   del_cmd- [DELETE](/sql/t-sql/statements/delete-transact-sql)コマンドのレプリケーションを制御します。  **\@**  
   
     > [!NOTE]  
     >  上記のパラメーターに対して **NONE** を指定すると、対応するコマンドはサブスクライバーにレプリケートされません。  
@@ -115,13 +114,13 @@ ms.locfileid: "48200762"
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>ユーザーが変更したカスタム ストアド プロシージャを含むアーティクルを作成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、**@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 **\@**  **\@** **パブリケーションのアーティクルが属しているパブリケーションの名前、アーティクルのアーティクル、source_objectにパブリッシュするデータベースオブジェクト、の値を指定します。\@** 値**0x02** (カスタムストアドプロシージャの自動生成を有効にする) と、次のパラメーターの少なくとも1つを含む **schema_optionビット\@** マスク。  
   
-    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   ins_cmd- <strong>CALL sp_MSins_*article_name*</strong>の値を指定します。ここで、 **_article_name_** は **\@article**に指定された値です。  **\@**  
   
-    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **\@del_cmd** - <strong>CALL sp_MSdel_*article_name ** または ** XCALL sp_MSdel_</strong>article_name*** を指定します。ここで、<strong>article_name*は*</strong>article** に指定した値です。  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   upd_cmd- <strong>scall sp_MSupd_*article_name*</strong>、 <strong>CALL sp_MSupd_*article_name*</strong>、 <strong>XCALL sp_MSupd__article_name *</strong>、または<strong>MCALL sp_MSupd_* article_name *</strong>の値を指定します。  **\@** _**article_name**_ は、  **\@アーティクル**に指定された値です。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  
@@ -135,13 +134,13 @@ ms.locfileid: "48200762"
   
 #### <a name="to-create-an-article-with-custom-scripting-in-the-custom-stored-procedures-to-propagate-data-changes"></a>カスタム ストアド プロシージャにデータ変更を反映するカスタム スクリプトを含むアーティクルを作成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、**@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 **\@**  **\@** **パブリケーションのアーティクルが属しているパブリケーションの名前、アーティクルのアーティクル、source_objectにパブリッシュするデータベースオブジェクト、の値を指定します。\@** 値**0x02** (カスタムストアドプロシージャの自動生成を有効にする) と、次のパラメーターの少なくとも1つを含む **schema_optionビット\@** マスク。  
   
-    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   ins_cmd- <strong>CALL sp_MSins_*article_name*</strong>の値を指定します。ここで、 _**article_name**_ は **\@article**に指定された値です。  **\@**  
   
-    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **\@del_cmd** - <strong>CALL sp_MSdel_*article_name ** または ** XCALL sp_MSdel_</strong>article_name*** を指定します。ここで、<strong>article_name*は*</strong>article_ に指定した値です。  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **\@upd_cmd** - *<strong>SCALL sp_MSupd_*article_name***、** CALL sp_MSupd_</strong>article_name***、*<strong>XCALL sp_MSupd_*article_name***、** MCALL sp_MSupd_</strong>article_name*** を指定します。ここで、<strong>article_name*は*</strong>article<strong> に指定した値です。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  
@@ -155,12 +154,12 @@ ms.locfileid: "48200762"
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>既存のアーティクルの変更反映メソッドを変更するには  
   
-1.  パブリッシャーのパブリケーション データベースで [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)を実行します。 **@publication**、**@article**、**ins_cmd** の値、**upd_cmd**、または **del_cmd** を **@property** に対して指定し、適切な反映メソッドを **@value** に指定します。  
+1.  パブリッシャーのパブリケーション データベースで [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)を実行します。 **\@パブリケーション**、**アーティクル、値 ins_cmd、upd_cmd、または del_cmd をプロパティに指定し、適切な反映方法を指定します。 \@**  **\@**  **\@値**。  
   
 2.  変更対象の各反映メソッドについて、手順 1. を繰り返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション アーティクルに変更を反映する方法の指定](../transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [パブリケーションとアーティクルの作成、変更、および削除 &#40;レプリケーション&#41;](create-modify-and-delete-publications-and-articles-replication.md)  
+ [パブリケーションを作成する](create-a-publication.md)  
   
   

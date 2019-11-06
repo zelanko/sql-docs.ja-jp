@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab63604cbaad009cd92825df1f252a95c1f4e0fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525629"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907985"
 ---
 # <a name="oracle-subscribers"></a>Oracle サブスクライバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "52525629"
     |データベース リスナーを識別するホスト情報を指定する|ホストは、Oracle リスナーを実行中のコンピューターの名前または DNS 別名で、通常はデータベースが存在しているコンピューターです。 プロトコルによっては、追加情報を指定する必要があります。 たとえば、TCP を選択した場合は、リスナーが対象データベースへの接続要求を受信待ちしているポートを指定する必要があります。 既定の TCP 構成ではポート 1521 を使用します。|  
   
 3.  スナップショット パブリケーションまたはトランザクション パブリケーションを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して有効にしてから、サブスクライバーに対してプッシュ サブスクリプションを作成します。 詳細については、「 [SQL Server 以外のサブスクライバーのサブスクリプションの作成](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
-  
+
 ### <a name="setting-directory-permissions"></a>ディレクトリ権限の設定  
  ディストリビューター上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスが実行されるアカウントには、Oracle クライアント ネットワーク ソフトウェアがインストールされているディレクトリ (およびすべてのサブディレクトリ) に対する読み取り権限と実行権限を付与する必要があります。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "52525629"
   
     -   パブリッシュされたテーブルに空の文字列が列値として挿入されないようにする。  
   
-    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 (**-SkipErrors1400**) を指定します。  
+    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 ( **-SkipErrors1400**) を指定します。  
   
     -   生成されたテーブルの作成スクリプトを変更して、空の文字列が関連付けられている文字型の列から NOT NULL 属性を削除する。さらに、 @creation_script sp_addarticle [の](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)パラメーターを使用して、アーティクルのカスタム作成スクリプトとして変更済みスクリプトを指定する。  
   
@@ -106,12 +105,12 @@ ms.locfileid: "52525629"
 |**char(2001-4000)**|VARCHAR2(2001-4000)|  
 |**char(4001-8000)**|CLOB|  
 |**date**|[DATE]|  
-|**datetime**|[DATE]|  
+|**datetime**|DATE|  
 |**datetime2(0-7)**|Oracle 9 および Oracle 10 の場合は TIMESTAMP(7)、Oracle 8 の場合は VARCHAR(27)|  
 |**datetimeoffset(0-7)**|Oracle 9 および Oracle 10 の場合は TIMESTAMP(7) WITH TIME ZONE、Oracle 8 の場合は VARCHAR(34)|  
 |**decimal(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
-|**float(53)**|[FLOAT]|  
-|**float**|[FLOAT]|  
+|**float(53)**|FLOAT|  
+|**float**|FLOAT|  
 |**geography**|BLOB|  
 |**geometry**|BLOB|  
 |**hierarchyid**|BLOB|  
@@ -126,7 +125,7 @@ ms.locfileid: "52525629"
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
 |**real**|real|  
-|**smalldatetime**|[DATE]|  
+|**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
 |**sql_variant**|なし|  

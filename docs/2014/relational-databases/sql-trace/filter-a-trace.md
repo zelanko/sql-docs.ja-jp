@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
@@ -17,12 +16,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70654d0d256b311d5e15807a3ccf6b895f00ed52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714719"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
   フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 たとえば、トレースに出力する Windows ユーザーとして特定のユーザー名を指定すると、それらのユーザーのデータのみが出力されます。  
@@ -69,7 +68,7 @@ ms.locfileid: "48138122"
 |等しくない|<>|イベントのトレース データが入力した値と等しくあってはならないことを指定します。 複数の値を指定できます。|  
 |より大きい|>|イベントのトレース データが入力した値よりも大きくなければならないことを指定します。|  
 |以上|>=|イベントのトレース データが入力した値以上でなければならないことを指定します。|  
-|より小さい|<|イベントのトレース データが入力した値よりも小さくなければならないことを指定します。|  
+|次の値未満|<|イベントのトレース データが入力した値よりも小さくなければならないことを指定します。|  
 |以下|<=|イベントのトレース データが入力した値以下でなければならないことを指定します。|  
   
  次の表は、フィルターを適用できるデータ列と利用可能な関係演算子の一覧です。  
@@ -138,7 +137,7 @@ ms.locfileid: "48138122"
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   
- <sup>1</sup>からイベントをトレースしている場合、 **osql**ユーティリティまたは**sqlcmd**ユーティリティでは、常に追加**%** でフィルターする、 **TextData**データ列。  
+ <sup>1</sup>からイベントをトレースしている場合、 **osql**ユーティリティまたは**sqlcmd**ユーティリティでは、常に追加 **%** でフィルターする、 **TextData**データ列。  
   
  セキュリティ対策として、SQL トレースは、パスワードに影響を与えるセキュリティ関連ストアド プロシージャの情報をトレースの対象から自動的に除外します。 このセキュリティ メカニズムは変更不可能で、常に有効な状態になっています。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上でのすべての動作状況をトレースする権限を持たないユーザーがパスワードを取得するのを防ぎます。  
   

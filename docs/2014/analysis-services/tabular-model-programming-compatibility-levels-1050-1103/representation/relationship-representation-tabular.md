@@ -1,28 +1,26 @@
 ---
 title: リレーションシップ表現 (表形式) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5acdc8b4e265ee2ebf6d6ffa4e3cc3e65a9b73b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757730"
 ---
 # <a name="relationship-representation-tabular"></a>リレーションシップ表現 (テーブル)
   リレーションシップとは、2 つのデータ テーブルの間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。  
   
- 参照してください[Relationship Representation (Tabular)](relationship-representation-tabular.md)作成し、リレーションシップ表現を操作する方法の詳細についてはします。  
+ リレーションシップ表現の作成および操作方法の詳細については、「 [Relationship Representation (Tabular)](relationship-representation-tabular.md) 」を参照してください。  
   
 ## <a name="relationship-representation"></a>リレーションシップ表現  
  テーブル モデルでは、2 つのテーブル間に複数のリレーションシップを定義できます。 2 つのテーブル間に複数のリレーションシップを定義する場合、モデルの既定のリレーションシップとして定義できるのは 1 つのみで、アクティブなリレーションシップとして指定されます。その他のリレーションシップはすべて、非アクティブなリレーションシップに指定されます。  
@@ -32,8 +30,7 @@ ms.locfileid: "48058902"
   
  次のコード スニペットに、テーブル モデルでリレーションシップを作成する方法、リレーションシップをアクティブにする方法、およびテーブル内の主キーを定義する方法 ("RowNumber" 以外) を示します。 アクティブなリレーションシップを作成するには、リレーションシップの主キー テーブル (PKTableName) で主キーを定義する必要があります (リレーションシップの一方)。ここに示すサンプルでは、PKColumnName に主キーを作成します (この列に主キーが定義されていない場合)。 非アクティブなリレーションシップは、主キー列に主キーがなくても作成できます。  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

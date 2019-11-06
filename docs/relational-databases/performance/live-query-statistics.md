@@ -15,15 +15,14 @@ helpviewer_keywords:
 - lightweight query profiling
 - lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42c1612916ec1de69e02ce50febd6a2820cd9684
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051884"
 ---
 # <a name="live-query-statistics"></a>[ライブ クエリ統計]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ ms.locfileid: "52412609"
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>1 つのクエリのライブ クエリ統計を表示するには 
   
-1.  ライブ クエリ実行プランを表示するには、ツール メニューで、**[ライブ クエリ統計を含む]** アイコンをクリックします。  
+1.  ライブ クエリ実行プランを表示するには、ツール メニューで、 **[ライブ クエリ統計を含む]** アイコンをクリックします。  
   
      ![ツールバーの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatstoolbar.png "ツールバーの [ライブ クエリ統計] ボタン")  
   
-     [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で選択したクエリを右クリックし、**[ライブ クエリ統計を含める]** をクリックしてライブ クエリ実行プランを表示することもできます。  
+     [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で選択したクエリを右クリックし、 **[ライブ クエリ統計を含める]** をクリックしてライブ クエリ実行プランを表示することもできます。  
   
      ![ポップアップ メニューの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatsmenu.png "ポップアップ メニューの [ライブ クエリ統計] ボタン")  
   
@@ -55,7 +54,7 @@ ms.locfileid: "52412609"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>任意のクエリのライブ クエリ統計を表示するには 
 
-ライブ実行プランは、**[プロセス]** または **[アクティブなコストの高いクエリ]** テーブルの任意のクエリを右クリックすることで、**[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)** からもアクセスできます。  
+ライブ実行プランは、 **[プロセス]** または **[アクティブなコストの高いクエリ]** テーブルの任意のクエリを右クリックすることで、 **[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)** からもアクセスできます。  
   
  ![利用状況モニターの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatsactmon.png "利用状況モニターの [ライブ クエリ統計] ボタン")  
   
@@ -70,7 +69,7 @@ ms.locfileid: "52412609"
  [パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
  [利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)     
- [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    

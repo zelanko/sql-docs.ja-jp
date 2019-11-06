@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
@@ -17,12 +16,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d0e9e49a61bef168af2703e83d027feec1d9daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083838"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス
   Microsoft シーケンス クラスター アルゴリズムは、複合的なアルゴリズムです。このアルゴリズムでは、Markov 連鎖分析を使用して順序付けられたシーケンスを特定し、この分析結果とクラスタリング技法を組み合わせて、シーケンスおよびモデル内のその他の属性に基づいてクラスターを生成します。 このトピックでは、アルゴリズムの実装、アルゴリズムをカスタマイズする方法、およびシーケンス クラスター モデルの特別な要件について説明します。  
@@ -113,16 +112,16 @@ ms.locfileid: "48060432"
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 2 つの状態を持つものとして扱わ列があることを示します:`Missing`と`Existing`します。 Null として扱われます、`Missing`値。  
+ 列が、`Missing` および `Existing` の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は `Missing` 値として扱われます。  
   
  マイニング モデル列に適用されます。  
   
  マイニング モデルでの Missing 値の使用、および確率スコアへの Missing 値の影響の詳細については、「[不足値 (Analysis Services - データ マイニング)](missing-values-analysis-services-data-mining.md)」をご覧ください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ケース テーブルにはケース ID 列が必要です。 オプションで、ケースに関する属性を格納する他の列をケース テーブルに含めることができます。  
   
- Microsoft シーケンス クラスター アルゴリズムには、入れ子になったテーブルとして格納されるシーケンス情報が必要です。 入れ子になったテーブルには、1 つの Key Sequence 列が必要です。 A`Key Sequence`列は、任意の並べ替え可能な文字列データ型を含めたデータ型を含めることができますが、列は、各ケースの一意の値を含める必要があります。 さらに、モデルを処理する前に、ケース テーブルと入れ子になったテーブルの両方が、テーブルを関連付けるキーに基づいて昇順に並べ替えられていることを確認する必要があります。  
+ Microsoft シーケンス クラスター アルゴリズムには、入れ子になったテーブルとして格納されるシーケンス情報が必要です。 入れ子になったテーブルには、1 つの Key Sequence 列が必要です。 `Key Sequence` 列には、文字列データ型など、並べ替え可能な任意の型のデータを含めることができますが、ケースごとに一意の値を含める必要があります。 さらに、モデルを処理する前に、ケース テーブルと入れ子になったテーブルの両方が、テーブルを関連付けるキーに基づいて昇順に並べ替えられていることを確認する必要があります。  
   
 > [!NOTE]  
 >  Microsoft シーケンス アルゴリズムを使用するがシーケンス列は使用しないモデルを作成する場合、結果として得られるモデルでは、シーケンスが含まれるのではなく、モデルに含まれている他の属性に基づいてケースがクラスター化されるだけです。  
@@ -137,15 +136,15 @@ ms.locfileid: "48060432"
   
 ## <a name="remarks"></a>コメント  
   
--   シーケンスの予測には [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 関数を使用します。 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンス予測をサポートするを参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)します。  
+-   シーケンスの予測には [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 関数を使用します。 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンス予測をサポートするを参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) します。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、ドリルスルー、OLAP マイニング モデルの使用、およびデータ マイニング ディメンションの使用がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft シーケンス クラスタ リング アルゴリズム](microsoft-sequence-clustering-algorithm.md)   
- [シーケンス クラスター モデルのクエリ例](clustering-model-query-examples.md)   
- [シーケンス クラスター モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
+ [シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-sequence-clustering-models.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -18,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42af9ddf36f60980ae1bdf2b6152e91159178467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655492"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "48137072"
   
  トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
   
- トランザクション パブリケーションに対して更新可能なサブスクリプションを作成するを参照してください[Create an Updatable Subscription to Transactional Publication。](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「 [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)」をご覧ください。  
   
 ## <a name="switching-between-update-modes"></a>更新モードの切り替え  
  更新可能なサブスクリプションを使用する場合に、サブスクリプションに 1 つの更新モードを指定し、アプリケーションで別の更新モードが必要な場合はそちらに切り替えるように指定できます。 たとえば、サブスクリプションで即時更新を使用するが、システム障害でネットワークに接続できなくなった場合には、キュー更新に切り替えるように指定することができます。  
@@ -65,7 +64,7 @@ ms.locfileid: "48137072"
   
 -   データの再パブリッシュはサポートされていません。  
   
--   レプリケーションでは、追跡のため、パブリッシュされたテーブルに **msrepl_tran_version** 列を追加します。 この追加の列によりすべて`INSERT`ステートメントは、列リストを含める必要があります。  
+-   レプリケーションでは、追跡のため、パブリッシュされたテーブルに **msrepl_tran_version** 列を追加します。 追加したこの列により、すべての `INSERT` ステートメントには、列リストを含める必要があります。  
   
 -   更新サブスクリプションをサポートするパブリケーションのテーブルでスキーマ変更を行うには、パブリッシャーおよびサブスクライバーでのテーブルの利用をすべて停止し、スキーマ変更を行う前に、保留中のデータの変更をすべてのノードに反映させる必要があります。 これにより、未完了のトランザクションが保留中のスキーマ変更と競合しません。 スキーマ変更がすべてのノードに反映されたら、パブリッシュされたテーブルの操作を再開できます。 詳細については、「[レプリケーション トポロジの停止 &#40;レプリケーション Transact-SQL プログラミング&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)」を参照してください。  
   
@@ -77,13 +76,13 @@ ms.locfileid: "48137072"
   
 -   サブスクライバーでの更新は、サブスクリプションの有効期限が切れていたり、アクティブでない場合でも、パブリッシャーに反映されます。 そのようなサブスクリプションは、削除または再初期化してください。  
   
--   場合`TIMESTAMP`または`IDENTITY`列を使用して、基本データ型としてレプリケートされる、これらの列の値はサブスクライバーで更新しない必要があります。  
+-   `TIMESTAMP` または `IDENTITY` が使用され、これらの列が基本データ型としてレプリケートされる場合、列の値はサブスクライバーでは更新されません。  
   
--   サブスクライバーの更新または挿入できません`text`、`ntext`または`image`値ため、レプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることはできません。 同様に、サブスクライバーを更新または挿入できません`text`または`image`を使用して値`WRITETEXT`または`UPDATETEXT`データが、パブリッシャーによって上書きされるためです。 代わりに、パーティション、`text`と`image`を個別の列がテーブルし、トランザクション内で 2 つのテーブルを変更します。  
+-   `text`、`ntext` または `image` 値は、レプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることができないため、サブスクライバーはこれらを更新または挿入できません。 同様に、`WRITETEXT` や `UPDATETEXT` を使用すると、サブスクライバーは `text` 値や `image` 値を更新したり挿入したりすることができません。これらのデータはパブリッシャーによって上書きされるからです。 ただし、`text` 列と `image` 列を別々のテーブルに分けて、トランザクション内で 2 つのテーブルを変更することはできます。  
   
-     サブスクライバーでラージ オブジェクトを更新するデータ型を使用して、 `varchar(max)`、 `nvarchar(max)`、`varbinary(max)`の代わりに`text`、 `ntext`、および`image`それぞれのデータ型します。  
+     サブスクライバーで大きなオブジェクト更新するには、`text`、`ntext`、`image` のデータ型の代わりに、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` のデータ型をそれぞれに使用します。  
   
--   一意なキー (主キーを含む) に対する更新によって重複が生じる場合 (たとえば、 `UPDATE <column> SET <column> =<column>+1` などの形式による更新)、その更新を行うことはできません。その更新は一意性違反のため拒否されます。 これは、個人としてレプリケーションによって、サブスクライバーで行われた set 更新が反映される`UPDATE`の影響を受ける各行のステートメント。  
+-   一意なキー (主キーを含む) に対する更新によって重複が生じる場合 (たとえば、 `UPDATE <column> SET <column> =<column>+1` などの形式による更新)、その更新を行うことはできません。その更新は一意性違反のため拒否されます。 これは、サブスクライバーで行われた SET 更新が、レプリケーションによって、影響される各行に対する個々の `UPDATE` ステートメントとして反映されるからです。  
   
 -   サブスクライバー データベースが行方向にパーティション分割されていて、行を含むパーティションがサブスクライバーにはあっても、パブリッシャーにはない場合、この既存の行をサブスクライバーは更新できません。 これらの行を更新しようとすると、エラーが返されます。 この行は、テーブルから削除し、再び挿入する必要があります。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48137072"
   
 -   サブスクライバーでアプリケーションがトリガーを必要とする場合、パブリッシャーおよびサブスクライバーで `NOT FOR REPLICATION` オプションを使用してトリガーを定義する必要があります。 これにより、トリガーは元のデータの変更に対してのみ起動され、その変更がレプリケートされるときには起動されません。  
   
-     ユーザー定義トリガーは、レプリケーション トリガーがテーブルを更新するときには起動されません。 これは、プロシージャを呼び出す`sp_check_for_sync_trigger`ユーザー定義トリガーの本文にします。 詳細については、「[sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)」を参照してください。  
+     ユーザー定義トリガーは、レプリケーション トリガーがテーブルを更新するときには起動されません。 これは、ユーザー定義トリガーの本文で、プロシージャ `sp_check_for_sync_trigger` を呼び出すことにより実現されます。 詳細については、「[sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)」を参照してください。  
   
 ### <a name="immediate-updating"></a>即時更新  
   
@@ -107,11 +106,11 @@ ms.locfileid: "48137072"
   
 -   主キーはすべてのキューでレコードを見つけるために使用されるので、キュー更新では主キーの列を更新しないでください。 競合の解決方法がサブスクライバー優先であるとき、主キーの更新には注意が必要です。 主キーの更新をパブリッシャーとサブスクライバーの両方で行うと、その結果は 2 つの行がそれぞれ異なる主キーを持つことになります。  
   
--   データ型の列の`SQL_VARIANT`: データの挿入や更新サブスクライバーで、これは次のように、キュー リーダー エージェントによってするときにマップ、サブスクライバーからキューにコピーされます。  
+-   データ型 `SQL_VARIANT` の列については、サブスクライバーでデータが挿入または更新されると、データをサブスクライバーからキューにコピーするときに、キュー リーダー エージェントによって次のようにマップされます。  
   
-    -   `BIGINT`、 `DECIMAL`、 `NUMERIC`、 `MONEY`、および`SMALLMONEY`にマップされます`NUMERIC`します。  
+    -   `BIGINT`、`DECIMAL`、`NUMERIC`、`MONEY`、および `SMALLMONEY` は、`NUMERIC` にマップされます。  
   
-    -   `BINARY` `VARBINARY`にマップされます`VARBINARY`データ。  
+    -   `BINARY` および `VARBINARY` は、`VARBINARY` データにマップされます。  
   
 ### <a name="conflict-detection-and-resolution"></a>競合の検出と解決  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48137072"
   
 ## <a name="see-also"></a>参照  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [トランザクション レプリケーションで使用するパブリケーションの種類](publication-types-for-transactional-replication.md)   
+ [トランザクション レプリケーション](transactional-replication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../publish/publish-data-and-database-objects.md)   
  [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
   

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 658de328868d08e808ee4f5cafd0b903aa7c717f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948023"
 ---
 # <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,46 +58,44 @@ SET ANSI_WARNINGS ON
   
 -   ON に設定した場合、0 除算や演算オーバーフロー エラーが発生すると、ステートメントはロールバックされエラー メッセージが生成されます。 OFF に設定した場合、0 除算や演算オーバーフロー エラーが発生すると、NULL 値が返されます。 INSERT または UPDATE が **character**、Unicode、**binary** 型の列に対して実行され、新しい値の長さが列の最大サイズを超過すると、0 除算や演算オーバーフロー エラーが原因となって NULL 値が返されます。 SET ANSI_WARNINGS が ON の場合、INSERT または UPDATE は ISO 標準の指定に従って取り消されます。 文字型の列の末尾の空白文字とバイナリ列の末尾の NULL 値は無視されます。 OFF の場合、データは列のサイズに切り捨てられ、ステートメントは成功します。  
   
-    > [!NOTE]  
-    >  **binary** データと **varbinary** データの型変換で切り捨てが発生した場合は、SET オプションの設定に関係なく、警告やエラーは発生しません。  
+> [!NOTE]  
+> **binary** データと **varbinary** データの型変換で切り捨てが発生した場合は、SET オプションの設定に関係なく、警告やエラーは発生しません。  
   
-    > [!NOTE]  
-    >  ストアド プロシージャでパラメーターを引き渡す場合や、バッチ ステートメントで変数を宣言または設定する場合、またはユーザー定義関数においては、ANSI_WARNINGS は無視されます。 たとえば、変数を **char(3)** と定義し、これに 4 文字以上の値を設定すると、データが定義されたサイズに合わせて切り捨てられてから、INSERT または UPDATE ステートメントが成功します。  
+> [!NOTE]  
+> ストアド プロシージャでパラメーターを引き渡す場合や、バッチ ステートメントで変数を宣言または設定する場合、またはユーザー定義関数においては、ANSI_WARNINGS は無視されます。 たとえば、変数を **char(3)** と定義し、これに 4 文字以上の値を設定すると、データが定義されたサイズに合わせて切り捨てられてから、INSERT または UPDATE ステートメントが成功します。  
   
- sp_configure の user options オプションを使用すると、ANSI_WARNINGS の既定の設定をサーバーに対するすべての接続に適用できます。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。  
+sp_configure の user options オプションを使用すると、ANSI_WARNINGS の既定の設定をサーバーに対するすべての接続に適用できます。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。  
   
- 計算列やインデックス付きビューのインデックスを作成または操作するときには、SET ANSI_WARNINGS を ON に設定する必要があります。 SET ANSI_WARNINGS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、または DELETE ステートメントを実行すると失敗します。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)」の「SET ステートメントの使用に関する留意事項」を参照してください。  
+計算列やインデックス付きビューのインデックスを作成または操作するときには、ANSI_WARNINGS を ON に設定する必要があります。 SET ANSI_WARNINGS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、または DELETE ステートメントを実行すると失敗します。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)」の「SET ステートメントの使用に関する留意事項」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ANSI_WARNINGS データベース オプションが用意されています。 これは、SET ANSI_WARNINGS と同じです。 SET ANSI_WARNINGS が ON の場合、0 除算やデータベースの列のサイズを超える文字列、または同様のエラーが発生すると、エラーまたは警告が発生します。 SET ANSI_WARNINGS が OFF の場合、これらのエラーや警告は発生しません。 model データベースでは、SET ANSI_WARNINGS の既定の設定は OFF です。 指定しない場合は、ANSI_WARNINGS の設定が適用されます。 SET ANSI_WARNINGS を OFF に設定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの is_ansi_warnings_on 列の値が使用されます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ANSI_WARNINGS データベース オプションが用意されています。 これは、SET ANSI_WARNINGS と同じです。 SET ANSI_WARNINGS が ON の場合、0 除算やデータベースの列のサイズを超える文字列、または同様のエラーが発生すると、エラーまたは警告が発生します。 SET ANSI_WARNINGS が OFF の場合、これらのエラーや警告は発生しません。 model データベースでは、SET ANSI_WARNINGS の既定の設定は OFF です。 指定しない場合は、ANSI_WARNINGS の設定が適用されます。 SET ANSI_WARNINGS を OFF に設定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの is_ansi_warnings_on 列の値が使用されます。  
   
- 分散クエリを実行する場合は、ANSI_WARNINGS を ON に設定してください。  
+> [!IMPORTANT]
+> 分散クエリを実行する場合は、ANSI_WARNINGS を ON に設定してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_WARNINGS が ON に設定されます。 この構成は、ODBC データ ソースまたは ODBC 接続属性で定義され、接続前にアプリケーションで設定できます。 DB-Library アプリケーションからの接続に対しては、既定では SET ANSI_WARNINGS は OFF に設定されています。  
   
- SET ANSI_DEFAULTS が ON の場合は、SET ANSI_WARNINGS は有効になります。  
+ANSI_DEFAULTS が ON の場合は、ANSI_WARNINGS は有効になります。  
   
- SET ANSI_WARNINGS は、解析時ではなく実行時に設定されます。  
+ANSI_WARNINGS の設定は、解析時ではなく実行時に定義されます。  
   
- SET ARITHABORT と SET ARITHIGNORE のいずれかが OFF でも、SET ANSI_WARNINGS が ON の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で 0 除算やオーバーフロー エラーが検出されるとエラー メッセージが返されます。  
+SET ARITHABORT と SET ARITHIGNORE のいずれかが OFF でも、SET ANSI_WARNINGS が ON の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で 0 除算やオーバーフロー エラーが検出されるとエラー メッセージが返されます。  
   
- この設定の現在の設定を表示するには、次のクエリを実行します。  
+この設定の現在の設定を表示するには、次のクエリを実行します。  
   
-```  
+```sql  
 DECLARE @ANSI_WARN VARCHAR(3) = 'OFF';  
 IF ( (8 & @@OPTIONS) = 8 ) SET @ANSI_WARN = 'ON';  
 SELECT @ANSI_WARN AS ANSI_WARNINGS;  
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
- public ロールのメンバーシップが必要です。  
+ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、SET ANSI_WARNINGS が ON の場合と OFF の場合に分けて、上の 3 つの状況を示しています。  
+次の例では、SET ANSI_WARNINGS が ON の場合と OFF の場合に分けて、上の 3 つの状況を示しています。  
   
-```  
-USE AdventureWorks2012;  
-GO  
-  
+```sql  
 CREATE TABLE T1   
 (  
    a int,   
@@ -117,7 +114,11 @@ VALUES (1, NULL, '')
   
 SET NOCOUNT OFF;  
 GO  
-  
+```
+
+次に ANSI_WARNINGS を ON に設定し、テストします。
+
+```sql
 PRINT '**** Setting ANSI_WARNINGS ON';  
 GO  
   
@@ -142,7 +143,11 @@ GO
 SELECT a / b AS ab   
 FROM T1;  
 GO  
-  
+```
+
+次に ANSI_WARNINGS を OFF に設定し、テストします。
+
+```sql
 PRINT '**** Setting ANSI_WARNINGS OFF';  
 GO  
 SET ANSI_WARNINGS OFF;  
@@ -171,7 +176,7 @@ SELECT a / b AS ab
 FROM T1;  
 GO  
   
-DROP TABLE T1  
+DROP TABLE T1;  
 ```  
   
 ## <a name="see-also"></a>参照  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771220"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 このエンドポイントは `datetime` 値で、パッケージで後から使用するためにパッケージ変数に格納されます。  
@@ -101,12 +100,12 @@ ms.locfileid: "49119840"
 3.  **[SQL 実行タスク エディター]** の **[結果セット]** ページで、ExtractStartTime の結果を ExtractStartTime パッケージ変数に、ExtractEndTime の結果を ExtractEndTime パッケージ変数にマップします。  
   
     > [!NOTE]  
-    >  値を設定する式を使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]変数、式は、変数の値がアクセスするたびにします。  
+    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変数の値を設定する式を使用する場合は、変数の値にアクセスするたびに式が評価されます。  
   
 ## <a name="next-step"></a>次の手順  
  変更の範囲の開始時点と終了時点を計算したら、次の手順で、変更データが準備できているかどうかを判断します。  
   
- **次のトピック:** [データの変更の準備ができているかどうかを判断する](determine-whether-the-change-data-is-ready.md)  
+ **次のトピック:** [変更データの準備ができているかどうかを判断する](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>参照  
  [パッケージで変数を使用する](../use-variables-in-packages.md)   

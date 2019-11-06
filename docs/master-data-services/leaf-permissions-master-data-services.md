@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -15,15 +14,14 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 78c12d0b6595378acf382d53af6dbc807c4c2b84
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007194"
 ---
 # <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
 
@@ -39,7 +37,7 @@ ms.locfileid: "52416016"
   
 -   **Name** 属性および **Code** 属性に割り当てられる権限は適用されません。  
   
-|権限|[説明]|  
+|権限|説明|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーはリーフ メンバーと属性を読み取ることができます。|  
 |**作成**|ユーザーはリーフ メンバーを作成し、作成時に属性値を割り当てることができます。|  
@@ -52,28 +50,28 @@ ms.locfileid: "52416016"
 ## <a name="attribute-permissions"></a>属性の権限  
  属性の権限は、特定のエンティティの属性の値に適用されます。 属性の権限のみを持つユーザーは、メンバーを追加または削除できません。  
   
-|権限|[説明]|  
+|権限|説明|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーは属性の読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成するときに値を割り当てることができます。|  
 |**更新**|ユーザーは属性を更新できます。|  
 |**削除**|影響しません。|  
-|**拒否**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
+|**拒否**|属性が表示されません。<br /><br /> 注:Name および Code 属性へのアクセスを明示的に拒否することはできません。|  
   
 ### <a name="example"></a>例  
  Product エンティティの場合、Subcategory 属性に **更新** 権限を割り当てます。 他のすべての属性に対しては権限を拒否します。  
   
-|[オブジェクト名]|コード|Subcategory (更新)|  
+|名前|コード|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} マウンテン バイク|  
+|Mountain-100|BK-M201|{5} マウンテン バイク|  
   
  **[エクスプローラー]** では、Subcategory 列の属性値を更新できます。 属性に対する権限がない場合、その属性は表示されません。  
   
 > [!NOTE]  
 >  この例では、Subcategory は、SubcategoryList エンティティに基づくドメイン ベースの属性です。 Mountain-100 に対して別のサブカテゴリを選択することはできますが、SubcategoryList エンティティへのメンバーの追加または SubcategoryList エンティティからのメンバーの削除を行うことはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   

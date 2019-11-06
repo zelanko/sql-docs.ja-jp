@@ -9,11 +9,11 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294733"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 
@@ -44,7 +44,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
-    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、**[ファイル]** メニューで **[新規作成]** を選択します。  
+    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、 **[ファイル]** メニューで **[新規作成]** を選択します。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
@@ -101,7 +101,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  **[クエリのデザイン]** ページのメタデータ ペインで、**[ (...) ]** ボタンをクリックします。  
+1.  **[クエリのデザイン]** ページのメタデータ ペインで、 **[ (...) ]** ボタンをクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
@@ -157,7 +157,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  Product ディメンションから Product Subcategory Name をデータ ペインにドラッグして、Product Category Name の右側に配置します。  
   
-4.  メタデータ ペインで、 **[メジャー]**、Sales の順に展開します。  
+4.  メタデータ ペインで、 **[メジャー]** 、Sales の順に展開します。  
   
 5.  Sales Amount メジャーをデータ ペインにドラッグして、Product Subcategory Name の右側に配置します。  
   
@@ -261,7 +261,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 2.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-3.  「 **Sales and Returns for Category:**」と入力します。  
+3.  「 **Sales and Returns for Category:** 」と入力します。  
   
 4.  右クリックして **[プレースホルダーの作成]** をクリックします。  
   
@@ -286,7 +286,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 1.  レポート データ ペインで **[パラメーター]** を展開します。  
   
-2.  \@ProductProductCategoryName を右クリックし、**[パラメーターのプロパティ]** をクリックします。  
+2.  \@ProductProductCategoryName を右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
     > [!NOTE]  
     > 名前の横の \@ 文字は、これがパラメーターであることを示しています。  
@@ -344,7 +344,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
-    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、**[ファイル]** メニューで **[新規作成]** を選択します。  
+    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、 **[ファイル]** メニューで **[新規作成]** を選択します。  
  
 2.  **[作業の開始]** ダイアログ ボックスで、 **[新しいレポート]** が選択されていることを確認し、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
@@ -457,7 +457,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  **[計算されるメンバー]** を右クリックし、 **[新しい計算されるメンバー]** をクリックします。  
   
-6.  メタデータ ペインで、 **[メジャー]**、Sales の順に展開します。  
+6.  メタデータ ペインで、 **[メジャー]** 、Sales の順に展開します。  
   
 7.  Sales Amount メジャーを **[式]** ボックスにドラッグし、マイナス記号 (-) を入力します。次に、Sales Return Amount メジャーを **[式]** ボックスにドラッグして、マイナス記号の後に配置します。  
   
@@ -541,7 +541,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  **[アクション]** タブをクリックします。  
   
-4.   **[レポートに移動する]** を選択します。  
+4.  **[レポートに移動する]** を選択します。  
   
 5.  **[レポートの指定]** で、 **[参照]** をクリックして、ResellerVSOnlineDrillthrough という名前の詳細レポートを指定します。  
   
@@ -627,7 +627,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「 **2009 Product Category Sales: Online and Reseller Category:**」と入力します。  
+2.  「 **2009 Product Category Sales: Online and Reseller Category:** 」と入力します。  
   
 3.  入力したテキストを選択します。  
   

@@ -1,26 +1,23 @@
 ---
-title: 'タスク 8: は、クレンジングの出力を分割する変換を分割条件の追加 |Microsoft Docs'
+title: タスク 8:クレンジングの出力を分割する変換を分割する条件を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8e43f90743b2449b4be99a0169a061f76fdcf3fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489672"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>タスク 8: 条件分割変換を追加してクレンジング出力を分割する
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>タスク 8:条件分割変換を追加してクレンジング出力を分割する
   この変換では、データ フローに条件分割変換を追加します。 条件分割変換では、データの内容に応じて別の出力に行をルートできます。 このチュートリアルでは、使用して、**レコードの状態**DQS クレンジング変換からの出力列です。 このチュートリアルでは、適切なレコードまたは修正されたレコードのみを MDS サーバーにアップロードします。 場合を確認するため、**レコードの状態**は**修正**または**Corrected**とレコードを MDS にアップロードする前に、レコードを結合します。  
   
 1.  ドラッグ アンド ドロップ**条件分割変換**から**共通**セクション、 **SSIS ツールボックス**を**データ フロー** ] タブの [ **仕入先データ クレンジング**します。  
@@ -48,6 +45,6 @@ ms.locfileid: "48084592"
 10. クリックして**OK**を閉じる、**条件分割変換エディター**  ダイアログ ボックス。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 9: 全体結合変換を追加して適切なレコードと修正済みレコードを結合する](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [タスク 9:結合を追加してレコードと修正のレコードを結合するすべての変換](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

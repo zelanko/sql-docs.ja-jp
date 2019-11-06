@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -23,12 +21,12 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145667"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727598"
 ---
 # <a name="processing-objects-xmla"></a>オブジェクトの処理 (XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]処理は、手順、または、ビジネス分析のための情報に手順を有効にするデータを一連の。 処理内容はオブジェクトの種類によって異なりますが、データを情報に変換する処理の一部として必ず実行されます。  
@@ -120,7 +118,7 @@ ms.locfileid: "50145667"
 ### <a name="code"></a>コード  
   
 ```  
-<Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
   </Object>  
@@ -135,7 +133,7 @@ ms.locfileid: "50145667"
 ### <a name="code"></a>コード  
   
 ```  
-<Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process ProcessAffectedObjects="true" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
     <CubeID>Adventure Works DW</CubeID>  

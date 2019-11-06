@@ -4,20 +4,24 @@ hide_bc: true
 title: Microsoft Azure ドキュメント
 description: Microsoft Azure クラウド サービスを使用して強力なアプリケーションを構築および管理する方法について説明します。 ドキュメント、コード例、チュートリアルなどを取得します。
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 36bd708bfe57e775c479ee474f9f2e5028c00655
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697950"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176276"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +31,7 @@ ms.locfileid: "51697950"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server のダウンロード</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
                                 </div>
                             </div>
                         </div>
@@ -73,8 +77,8 @@ ms.locfileid: "51697950"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: 教育センター</h1>
-        <h2>クイック スタート</h2>
+        <h1>SQL Server:教育センター</h1>
+        <h2>クイックスタート</h2>
          <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
                         <li>
                             <a href="/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal" data-linktype="external">
@@ -124,6 +128,60 @@ ms.locfileid: "51697950"
                                         </div>
                                         <div class="cardText">
                                             <p>Linux 上での SQL Server の実行</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-single-database-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Database 単一データベース</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-managed-instance-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Database マネージド インスタンス</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                            <li>
+                            <a href="/azure/sql-data-warehouse/create-data-warehouse-portal" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Data Warehouse</p> 
                                         </div>
                                     </div>
                                 </div>
@@ -252,7 +310,7 @@ ms.locfileid: "51697950"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <p>Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元</p>
+                                            <p>Azure Blob Storage サービスへの SQL Server のバックアップと復元</p>
                                         </div>
                                     </div>
                                 </div>

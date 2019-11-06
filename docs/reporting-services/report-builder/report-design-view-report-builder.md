@@ -2,7 +2,7 @@
 title: レポート デザイン ビュー (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42fdd43e7e535452d01701fd7d230484ae30fcae
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577987"
 ---
 # <a name="report-design-view-report-builder"></a>レポート デザイン ビュー (レポート ビルダー)
   レポート ビルダーのウィンドウは、レポート リソースを整理しやすく、改ページ調整されたレポートをすばやく作成できるように設計されています。 デザイン画面はウィンドウの中央に位置し、その周辺にリボンとペインが配置されています。 デザイン画面は、レポート アイテムの追加や整理を行うための領域です。 この記事では、レポート リソースの追加、選択、整理や、レポート アイテムのプロパティの変更に使用するペインについて説明します。  
@@ -72,7 +72,7 @@ ms.locfileid: "52712163"
  デザイン画面のサイズは、レポートを印刷する際に指定するページ サイズの印刷領域とは異なる場合があります。 デザイン画面のサイズを変更しても、レポートの印刷領域は変わりません。 レポートの印刷領域に設定したサイズに関係なく、デザイン領域全体のサイズは変わりません。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
 > [!TIP]  
->  ルーラーを表示するには、**[表示]** タブの **[ルーラー]** チェック ボックスをオンにします。  
+>  ルーラーを表示するには、 **[表示]** タブの **[ルーラー]** チェック ボックスをオンにします。  
   
   
 ##  <a name="ReptDataPane"></a> The Report Data Pane  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 712bdce381d44153e8bf9b0e6c72292cfa1cef72
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f2b4864ac13d431c3507930abc1e774b4ac6adaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119720"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,14 +75,14 @@ len
   
 |新しいデータ型|戻り値のデータ長|  
 |--------------------|------------------------|  
-|**BITN**|**NULL:** *len* = 0、data = IG、RET = 0<br /><br /> **ZERO:** N/A<br /><br /> **>=255:** N/A<br /><br /> **<255:** N/A|  
-|**BIGVARCHAR**|**NULL:** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO:** *len* = IG、data = IG、RET = 0<br /><br /> **>=255:** *len* = max8k、data = valid、RET = 0<br /><br /> **<255:** *len* = <8k、data = valid、RET = 1|  
-|**BIGCHAR**|**NULL:** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO:** *len* = IG、data = IG、RET = 0<br /><br /> **>=255:** *len* = max8k、data = valid、RET = 0<br /><br /> **<255:** *len* = <8k、data = valid、RET = 1|  
-|**BIGBINARY**|**NULL:** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO:** *len* = IG、data = IG、RET = 0<br /><br /> **>=255:** *len* = max8k、data = valid、RET = 0<br /><br /> **<255:** *len* = <8k、data = valid、RET = 1|  
-|**BIGVARBINARY**|**NULL:** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO:** *len* = IG、data = IG、RET = 0<br /><br /> **>=255:** *len* = max8k、data = valid、RET = 0<br /><br /> **<255:** *len* = <8k、data = valid、RET = 1|  
-|NCHAR|**NULL:** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO:** *len* = IG、data = IG、RET = 0<br /><br /> **>=255:** *len* = max8k、data = valid、RET = 0<br /><br /> **<255:** *len* = <8k、data = valid、RET = 1|  
-|NVARCHAR|**NULL:** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO:** *len* = IG、data = IG、RET = 0<br /><br /> **>=255:** *len* = max8k、data = valid、RET = 0<br /><br /> **<255:** *len* = <8k、data = valid、RET = 1|  
-|**NTEXT**|**NULL:** *len* = IG、data = IG、RET = 0<br /><br /> **ZERO:** *len* = IG、data = IG、RET = 0<br /><br /> **>=255:** *len* = IG、data = IG、RET = 0<br /><br /> **\<255:** *len* = IG、data = IG、RET = 0|  
+|**BITN**|**NULL:** _len_ = 0、data = IG、RET = 0<br /><br /> **ZERO:** なし<br /><br /> **>=255:** なし<br /><br /> **<255:** なし|  
+|**BIGVARCHAR**|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
+|**BIGCHAR**|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
+|**BIGBINARY**|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
+|**BIGVARBINARY**|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
+|NCHAR|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
+|NVARCHAR|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
+|**NTEXT**|**NULL:** _len_ = IG、data = IG、RET = 0<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = IG、data = IG、RET = 0<br /><br /> **\<255:** _len_ = IG、data = IG、RET = 0|  
 |RET は srv_paramset の戻り値です。||  
 |IG は値が無視されることを示します。||  
 |valid はデータを指す任意の有効なポインターを示します。||  
@@ -98,7 +97,7 @@ len
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 エラーが発生しても SRV_RPC ハンドラーは呼び出されますが、パラメーターが存在しないと見なされ、**srv_rpcparams** は 0 を返します。  
   
 > [!IMPORTANT]  
->  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
+>  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://www.microsoft.com/en-us/msrc?rtc=1)をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [srv_paramsetoutput &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  

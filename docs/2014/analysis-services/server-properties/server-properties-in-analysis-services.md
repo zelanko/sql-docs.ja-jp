@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
@@ -19,12 +18,12 @@ ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c531faf5576c8d213026d7d200313b5f59464b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068898"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Analysis Services のサーバーのプロパティの構成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス用に既定のサーバー構成プロパティを変更できます。 各インスタンスには、同じサーバーの他のインスタンスとは別に設定できる固有の構成プロパティがあります。  
@@ -53,9 +52,9 @@ ms.locfileid: "48201862"
   
      サーバー プロパティの変更は、テーブル モードおよび多次元モードのサーバーについてのみサポートされます。 マイクロソフトの製品サポート エンジニアから別途指示された場合を除き、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールした場合は、必ず既定値を使用してください。  
   
-     運用上またはパフォーマンス上の問題をサーバーのプロパティを通じて解消する方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+     運用上またはパフォーマンス上の問題をサーバーのプロパティを通じて解消する方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
-     サーバーのプロパティについては、Microsoft ホワイト ペーパー「 [SQL Server 2005 Analysis Services (SSAS) サーバー プロパティ](http://go.microsoft.com/fwlink/?LinkID=199102)」も参照してください。サーバーのプロパティの多くは、過去数回のリリースにわたり変更されていません。  
+     サーバーのプロパティについては、Microsoft ホワイト ペーパー「 [SQL Server 2005 Analysis Services (SSAS) サーバー プロパティ](https://go.microsoft.com/fwlink/?LinkID=199102)」も参照してください。サーバーのプロパティの多くは、過去数回のリリースにわたり変更されていません。  
   
     > [!NOTE]  
     >  一部のプロパティの設定は、msmdrsrv.ini ファイルでのみ行うことができます。 詳細プロパティを表示しても設定する対象のプロパティが含まれていない場合は、msmdsrv.ini ファイルを直接編集する必要があります。  
@@ -76,7 +75,7 @@ ms.locfileid: "48201862"
 ##  <a name="bkmk_ref"></a> サーバー プロパティ リファレンス  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の構成プロパティは、システムを微調整するために重要です。 たとえば、クエリ ログ動作を必要条件に合わせるために、関連するプロパティを設定できます。  
   
- 次のトピックの説明、さまざまな[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]構成プロパティ。  
+ 次のトピックでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のさまざまな構成プロパティについて説明します。  
   
 |トピック|説明|  
 |-----------|-----------------|  

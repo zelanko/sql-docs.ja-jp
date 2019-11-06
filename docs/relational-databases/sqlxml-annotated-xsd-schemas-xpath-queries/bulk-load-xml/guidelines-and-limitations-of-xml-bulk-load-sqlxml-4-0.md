@@ -11,16 +11,15 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
 - bulk load [SQLXML], about bulk load
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3b9b66ee257cb3d82acb18112ed46d837a3468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eea06d8be4d826315235836d2a1d47846381caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005348"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みのガイドラインと制限 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47798575"
   
 -   XML ドキュメントが適切な形式であるかどうかはチェックされますが、検証は行われません。  
   
-     XML 一括読み込みでは、XML ドキュメントが適切な形式であるかどうか、つまり W3C (World Wide Web Consortium) の XML 1.0 で推奨されている構文要件を満たしているかどうかがチェックされます。 ドキュメントが適切な形式でない場合、XML 一括読み込みの処理は取り消され、エラーが返されます。 ただし、ドキュメントがフラグメントの場合 (ドキュメントに単一のルート要素がない場合) だけは、XML 一括読み込みでドキュメントが読み込まれます。  
+     XML 一括読み込みは、XML ドキュメントも整形式ことがあるかどうかを判断する場合は、XML が World Wide Web Consortium の XML 1.0 勧告の構文の要件に準拠していることを確認するかを確認します。 ドキュメントが適切な形式でない場合、XML 一括読み込みの処理は取り消され、エラーが返されます。 ただし、ドキュメントがフラグメントの場合 (ドキュメントに単一のルート要素がない場合) だけは、XML 一括読み込みでドキュメントが読み込まれます。  
   
      XML 一括読み込みでは、XML データ ファイル内で定義または参照されている XML-Data または DTD スキーマに関して、ドキュメントの検証は行われません。 さらに、XML 一括読み込みでは、指定されるマッピング スキーマに対して XML データ ファイルは検証されません。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47798575"
   
      この場合は、XML 一括読み込みは無視されます、  **\<AllCustomers >** 要素にマッピングして、 **\<顧客 >** 要素。 XML ドキュメントに存在していてもスキーマに記述されていない要素は無視されます。  
   
-     含む別の XML ソース データ ファイル**\<順序 >** 要素。 この要素はマッピング スキーマには記述されていません。  
+     含む別の XML ソース データ ファイル **\<順序 >** 要素。 この要素はマッピング スキーマには記述されていません。  
   
     ```  
     <AllCustomers>  
@@ -108,7 +107,7 @@ ms.locfileid: "47798575"
     </AllCustomers>  
     ```  
   
-     XML 一括読み込みでは、これらは無視されます**\<順序 >** 要素。 使用する場合は、 **sql:overflow-フィールド**注釈によりオーバーフロー列、XML 一括読み込み、列を識別するために、スキーマでは、このコラムですべての未使用データを格納します。  
+     XML 一括読み込みでは、これらは無視されます **\<順序 >** 要素。 使用する場合は、 **sql:overflow-フィールド**注釈によりオーバーフロー列、XML 一括読み込み、列を識別するために、スキーマでは、このコラムですべての未使用データを格納します。  
   
 -   CDATA セクションとエンティティ参照は、データベースに保存される前に、同等の文字列に変換されます。  
   
@@ -145,7 +144,7 @@ ms.locfileid: "47798575"
     </Schema>  
     ```  
   
-     この XML データで、 **HireDate**属性は、2 番目の見つからない**\<顧客 >** 要素。 XML 一括読み込みで 2 つ目を挿入するとき**\<顧客 >** 要素がデータベースに、スキーマで指定されている既定値を使用します。  
+     この XML データで、 **HireDate**属性は、2 番目の見つからない **\<顧客 >** 要素。 XML 一括読み込みで 2 つ目を挿入するとき **\<顧客 >** 要素がデータベースに、スキーマで指定されている既定値を使用します。  
   
     ```  
     <ROOT>  
@@ -160,7 +159,7 @@ ms.locfileid: "47798575"
   
      マッピング スキーマで指定されているテーブルは、新しく作成されます (データベースは存在する必要があります)。 1 つ以上のテーブルが既に存在するデータベースの場合 SGDropTables プロパティは、これらの既存のテーブルを削除して再作成するかどうかを決定します。  
   
--   SchemaGen プロパティを指定する場合 (たとえばを SchemaGen = true)、マッピング スキーマで指定されているテーブルが作成されます。 1 つの例外を SchemaGen がこれらのテーブル (PRIMARY KEY/FOREIGN KEY 制約) など、制約を作成できませんリレーションシップの主キーを構成する XML ノードが XML 型の ID を持つものとして定義されている場合 (つまり、**型 =。"xsd:ID"** XSD の) SGUseID プロパティを SchemaGen、True に設定しからの主キーの作成だけでなく、ID の入力ノードが、マッピング スキーマ リレーションシップから主キー/外部キーのリレーションシップが作成されます。  
+-   SchemaGen プロパティを指定する場合 (たとえばを SchemaGen = true)、マッピング スキーマで指定されているテーブルが作成されます。 ただし、SchemaGen が 1 つの例外でこれらのテーブル (PRIMARY KEY/FOREIGN KEY 制約) など、制約を作成できません。リレーションシップの主キーを構成する XML ノードが XML 型の ID を持つものとして定義されているかどうか (つまり、**型 ="xsd:ID"** XSD の) SGUseID プロパティを SchemaGen、True に設定しからの主キーの作成だけでなくID に、ノードが型指定は、マッピング スキーマ リレーションシップから主キー/外部キーのリレーションシップが作成されます。  
   
 -   SchemaGen は使いません XSD スキーマ ファセットと機能拡張、リレーショナルを生成する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]スキーマ。  
   

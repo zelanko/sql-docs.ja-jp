@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
@@ -16,12 +15,12 @@ ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2de2791ff4dcb52c50a57dbc91322756c10a7c13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096604"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime 型、xs:date 型、および xs:time 型のストレージ形式の変更
   XMLDATETIME ルールでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後に無効になる型指定された XML データがデータベースに含まれているかどうかが確認されます。  
@@ -43,14 +42,14 @@ ms.locfileid: "48110672"
   
  次に示すクエリでは、影響を受ける型を参照する XML スキーマ コレクション、および型指定された個々の XML 列を検索します。 これにより、負の年を値に持つインスタンスが存在するかどうかがわかります。  
   
-```  
+```sql
 CREATE PROCEDURE DateTimeInvestigation(@withdata bit)  
 -- @withdata = 0: only get the affected meta data information  
 -- @withdata = 1: get the affected meta data and instance information  
 AS  
 BEGIN  
 -- First get XML containing all schema collections containing affected element and attributes  
--- components (model groups????)   
+-- components (model groups?)   
 -- and columns that are affected by the schema collections.   
 CREATE table #_dt_collector(x xml);   
 ;with dttypes as  

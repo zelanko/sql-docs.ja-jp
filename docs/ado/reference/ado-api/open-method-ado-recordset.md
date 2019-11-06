@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931905"
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO Recordset)
 カーソルをオープンする[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -61,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  使用して、**オープン**メソッドを**レコード セット**オブジェクトのクエリ、または以前に保存した結果、ベース テーブルからレコードを表すカーソルを開き、**レコード セット**します。  
   
- オプションを使用して、*ソース*、次のいずれかを使用してデータ ソースを指定する引数:**コマンド**オブジェクト変数、SQL ステートメント、ストアド プロシージャ、テーブル名、URL、またはファイルの完全なパス名。 場合*ソース*ファイルのパス名は、完全なパス ("c:\dir\file.rst")、相対パスであることができます ("..\file.rst")、または URL ("https://files/file.rst")。  
+ オプションを使用して、*ソース*、次のいずれかを使用してデータ ソースを指定する引数:**コマンド**オブジェクト変数、SQL ステートメント、ストアド プロシージャ、テーブル名、URL、またはファイルの完全なパス名。 場合*ソース*ファイルのパス名は、完全なパス ("c:\dir\file.rst")、相対パスであることができます ("..\file.rst")、または URL ("<https://files/file.rst>")。  
   
  使用することはお勧めできません、*ソース*の引数、**オープン**メソッドを呼び出しが成功したかどうかを決定する簡単な方法がないためレコードを返さないアクション クエリを実行します。 **Recordset**などによって返されるクエリは閉じられます。 SQL の INSERT ステートメントなどのレコードを返さないクエリを実行して呼び出し、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)のメソッド、**コマンド**オブジェクトまたは[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) のメソッド[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの代わりにします。  
   

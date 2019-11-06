@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0019aa93459f2e46646cbbfb115b501fbf7eaff5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071457"
 ---
 # <a name="delete-powerpivot-gallery"></a>PowerPivot ギャラリーの削除
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを削除すると、ギャラリーのアイテムもすべて削除されます。削除されるアイテムには、スケジュール設定されたデータ更新が構成されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのデータ更新履歴が含まれます。  

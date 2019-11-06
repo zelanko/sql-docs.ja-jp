@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - pipes [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de562f78dbf2898267a909524226387096145bee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177174"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62911477"
 ---
 # <a name="named-pipes-properties"></a>[名前付きパイプのプロパティ] ダイアログ ボックス
   **[名前付きパイプのプロパティ]** ダイアログ ボックスの **[プロトコル]** ページでは、名前付きパイプ プロトコルを使用している場合に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンする名前付きパイプの表示や変更を行います。  
@@ -29,7 +28,7 @@ ms.locfileid: "48177174"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があるのは、プロトコルを有効または無効にする場合、または名前付きパイプを変更する場合です。  
   
 ## <a name="options"></a>および  
- **Enabled**  
+ **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   
  **[パイプ名]**  
@@ -43,7 +42,7 @@ ms.locfileid: "48177174"
   
  **\\\\acct** パイプでリッスンするには、 **.\pipe\acct** と入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー ネットワーク プロトコルの有効化または無効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [ネットワーク プロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [名前付きパイプを使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  

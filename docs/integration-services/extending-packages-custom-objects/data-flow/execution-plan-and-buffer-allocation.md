@@ -18,25 +18,28 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7ff691e764392c65a49dc5527f8a44f8d036ac59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dba5ae3bf996f469f18a9802dd8cc8232a5bc885
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853290"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297239"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>実行プランおよびバッファーの割り当て
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   実行前に、データ フロー タスクはそのコンポーネントを確認し、コンポーネントの各処理手順に応じて、実行プランを生成します。 このセクションでは、実行プラン、プランの表示方法、および実行プランに基づいて入力および出力バッファーを割り当てる方法に関する詳細について説明します。  
   
 ## <a name="understanding-the-execution-plan"></a>実行プランについて  
- 実行プランには、ソース スレッドと作業スレッドが含まれています。各スレッドには作業一覧が含まれており、ソース スレッドには出力作業一覧が、作業スレッドには入力と出力の作業一覧が指定されています。 実行プラン内のソース スレッドは、データ フロー内の変換元コンポーネントを表し、実行プラン内では *SourceThread**n* によって識別されます。ここで *n* は、0 から始まるソース スレッドの番号を示します。  
+ 実行プランには、ソース スレッドと作業スレッドが含まれています。各スレッドには作業一覧が含まれており、ソース スレッドには出力作業一覧が、作業スレッドには入力と出力の作業一覧が指定されています。 実行プラン内のソース スレッドは、データ フロー内の変換元コンポーネントを表し、実行プラン内では *SourceThreadn* によって識別されます。ここで *n* は、0 から始まるソース スレッドの番号を示します。  
   
  各ソース スレッドはバッファーを作成してリスナーを設定し、変換元コンポーネントで <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドを呼び出します。 ここで、実行が開始されてデータが生成され、データ フロー タスクによって用意された出力バッファーに、変換元コンポーネントが行を追加し始めます。 ソース スレッドが実行されると、作業スレッド間で作業の負荷が分散されます。  
   
- 作業スレッドは、入力および出力の両方の作業一覧を含む場合があり、実行プラン内では *WorkThread**n* によって識別されます。ここで *n* は、0 から始まる作業スレッドの番号を示します。 非同期出力型のコンポーネントがグラフに含まれている場合、このスレッドには出力作業一覧が含まれます。  
+ 作業スレッドは、入力および出力の両方の作業一覧を含む場合があり、実行プラン内では *WorkThreadn* によって識別されます。ここで *n* は、0 から始まる作業スレッドの番号を示します。 非同期出力型のコンポーネントがグラフに含まれている場合、このスレッドには出力作業一覧が含まれます。  
   
  次のサンプル実行プランは、変換元コンポーネントが非同期出力型の変換に連結され、その変換が変換先コンポーネントに連結されているデータ フローを示しています。 この例では、変換コンポーネントに非同期出力が含まれているので、WorkThread0 には出力作業一覧が含まれます。  
   

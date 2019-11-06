@@ -4,31 +4,30 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77ddc157323e7134c9e34ad79de459948635de19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062098"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62829599"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
-  XML ドキュメントを検証し、有効にすると詳細なエラー出力を取得、 `ValidationDetails` XML タスクのプロパティ。  
+  XML タスクの `ValidationDetails` プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。  
   
  次のスクリーン ショットは、 **XML タスク エディター** と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。  
   
  ![XML タスク エディターの XML タスク　プロパティ](../media/xmltaskproperties.jpg "XML タスク エディターの XML タスク プロパティ")  
   
- 前に、`ValidationDetails`プロパティが使用可能な XML タスクによる XML 検証にのみ、true または false の結果、エラーやその場所に関する情報が返されます。 次に、設定`ValidationDetails`を true に、出力ファイルに行番号と位置を含むすべてのエラーに関する詳細情報が含まれています。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。  
+ `ValidationDetails` プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 次に、設定`ValidationDetails`を true に、出力ファイルに行番号と位置を含むすべてのエラーに関する詳細情報が含まれています。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。  
   
  この XML 検証機能は、大きなサイズの XML ドキュメントや大量のエラーにも、簡単に規模を変更して対応できます。 出力ファイル自体が XML 形式なので、出力に対するクエリの実行と分析が可能です。 たとえば、出力に大量のエラーが含まれている場合、このトピックで説明する方法で [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して、エラーをグループ化することができます。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48062098"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>true</result>  
         <errors>0</errors>  
@@ -59,7 +58,7 @@ ms.locfileid: "48062098"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>false</result>  
         <errors>2</errors>  
@@ -81,7 +80,7 @@ ms.locfileid: "48062098"
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>XML 検証の出力を Transact-SQL クエリで分析する  
  XML 検証の出力に大量のエラーが含まれている場合、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に出力を読み込むことができます。 そのうえで、WHERE、GROUP BY、ORDER BY、JOINなどの T-SQL 言語の機能をフル活用して、エラー一覧を分析できます。  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     
@@ -89,7 +88,7 @@ FROM OPENROWSET (BULK N'C:\Temp\XMLValidation_2016-02-212T10-41-00.xml', SINGLE_
   
 -- Query # 1, flat list of errors  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -97,11 +96,11 @@ SELECT col.value('@line','INT') AS line
 FROM @XML.nodes('/root/messages/error') AS tab(col)  
 )  
 SELECT * FROM rs;  
--- WHERE error LIKE ‘%whatever_string%’  
+-- WHERE error LIKE '%whatever_string%'  
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -121,6 +120,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## <a name="see-also"></a>参照  
  [XML タスク](xml-task.md)   
- [XML タスク エディター &#40;[全般] ページ&#41;](../xml-task-editor-general-page.md)  
+ [XML タスク エディター ([全般] ページ)](../xml-task-editor-general-page.md)  
   
   

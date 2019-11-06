@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
@@ -14,12 +13,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32b0b350d7b23b41573a147f095705546b0d8b04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144598"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
@@ -46,14 +45,14 @@ ms.locfileid: "48214742"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定されたインスタンス上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルに関する情報を取得する方法について説明しています。)  
   
-##  <a name="BeforeYouBegin"></a> 権限  
+##  <a name="BeforeYouBegin"></a> Permissions  
  オフラインのログ ファイルに接続するには、ローカルおよびリモートの両方のコンピューターで次の権限が必要です。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。 詳細については、このセクションで後述する「WMI 権限を確認するには」を参照してください。  
   
 -   エラー ログ ファイルを含むフォルダーへの読み取り権限。 既定では、エラー ログ ファイルは、次のパスにあります (\<*Drive>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先ドライブ、\<*InstanceName*> は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名です)。  
   
-     **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL12 します。\<InstanceName > \MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL12.\<InstanceName>\MSSQL\Log**  
   
  WMI 名前空間のセキュリティ設定を確認するには、WMI コントロール スナップインを使用します。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48214742"
   
     3.  リモート コンピューター名を入力し、 **[OK]** をクリックします。  
   
-3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (***RemoteComputerName***)]** を右クリックして、**[プロパティ]** をクリックします。  
+3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (***RemoteComputerName***)]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 4.  **[WMI コントロールのプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "48214742"
     > [!NOTE]  
     >  ログ ファイルの読み込みに時間がかかりすぎる場合は、[ログ ファイルの表示] ツール バーの **[停止]** をクリックできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ ファイルの表示](log-file-viewer.md)  
   
   

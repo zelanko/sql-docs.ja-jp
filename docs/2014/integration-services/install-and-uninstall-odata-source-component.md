@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67bb3b093d63564c4eaae0144add029e569281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7c7edea5701fe784f34375c2ff218fc93e610e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058037"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>OData ソース コンポーネントのインストールと、アンインストール
   このトピックでは、コンピューターに OData ソース コンポーネントをインストールまたは削除する手順について説明します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48068112"
   
 -   SQL Server Integration Services (Visual Studio の外部でのパッケージ実行用)  
   
- OData ソース コンポーネントをインストールするには、ダウンロード[SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkId=391999)次の MSI ファイルのいずれかを実行します。  
+ OData ソース コンポーネントをインストールするには、ダウンロード[SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkId=391999)次の MSI ファイルのいずれかを実行します。  
   
 -   64 ビット プラットフォームでは ODataSourceForSQLServer2014-amd64.msi  
   

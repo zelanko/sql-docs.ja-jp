@@ -14,15 +14,14 @@ helpviewer_keywords:
 - simple recovery model [SQL Server]
 - restoring [SQL Server], database
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 883333afa39b971b9766fcc93e7e641e9bce7451
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: bb6b9d703d98eae5858cc37d865d81455c03f4f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081381"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>データベースの全体復元 (単純復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

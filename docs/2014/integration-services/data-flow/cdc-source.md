@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828128"
 ---
 # <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -29,7 +28,7 @@ ms.locfileid: "48063092"
   
  CDC ソースは、次の構成を使用します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにアクセスするための、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 接続マネージャー。 CDC ソース接続を構成する方法の詳細については、次を参照してください。 [CDC ソース エディター&#40;接続マネージャー ページ&#41;](../cdc-source-editor-connection-manager-page.md)します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにアクセスするための、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 接続マネージャー。 CDC ソース接続を構成する方法の詳細については、「 [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)」を参照してください。  
   
 -   CDC のために有効にされたテーブル。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48063092"
   
 -   **エラー行の列**: エラーの原因となったレコード データ。  
   
- CDC ソースは、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、次を参照してください。 [CDC ソース エディター&#40;エラー出力 ページ&#41;](../cdc-source-editor-error-output-page.md)します。  
+ CDC ソースは、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「 [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)」を参照してください。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
  Microsoft の CDC ソース コンポーネントはすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型をサポートし、SSIS データ型に正確にマッピングします。  
@@ -82,7 +81,7 @@ use <cdc-enabled-database-name>
   
 -   \<value-from-state-ce> は、CDC 状態変数に、CE/\<value-from-state-ce>/ として示される値です (CE は Current-processing-range-End (現在の処理範囲の終了) の略語です)。  
   
--   \<mode> は、CDC の処理モードです。 この処理モードは、 **[すべて]**、 **[古い値を含むすべて]**、 **[差分]**、 **[更新マスクを含む差分]**、 **[結合を含む差分]** のいずれかの値です。  
+-   \<mode> は、CDC の処理モードです。 この処理モードは、 **[すべて]** 、 **[古い値を含むすべて]** 、 **[差分]** 、 **[更新マスクを含む差分]** 、 **[結合を含む差分]** のいずれかの値です。  
   
  このスクリプトを実行すると、エラーの再現と特定を簡単に行うことができる [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で問題を再現することによって、問題を特定できます。  
   
@@ -98,11 +97,11 @@ use <cdc-enabled-database-name>
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [[CDC ソース エディター&#40;接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [[CDC ソース エディター&#40;列] ページ&#41;](../cdc-source-editor-columns-page.md)  
+-   [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
   
--   [[CDC ソース エディター&#40;エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
+-   [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
@@ -114,11 +113,11 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [[CDC ソース エディター&#40;接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [[CDC ソース エディター&#40;列] ページ&#41;](../cdc-source-editor-columns-page.md)  
+-   [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
   
--   [[CDC ソース エディター&#40;エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
+-   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
   
 -   [CDC ソースのカスタム プロパティ](cdc-source-custom-properties.md)  
   
@@ -126,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   mattmasson.com のブログ「[CDC ソースの処理モード](http://go.microsoft.com/fwlink/?LinkId=242541)」  
+-   mattmasson.com のブログ「[CDC ソースの処理モード](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
   
   

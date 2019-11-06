@@ -1,26 +1,22 @@
 ---
-title: SQL Server 2016 で廃止された SQL Server Reporting Services の機能 | Microsoft Docs
-ms.date: 07/02/2017
+title: 廃止された機能
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-helpviewer_keywords:
-- discontinued functionality [Reporting Services]
-- Reporting Services, backward compatibility
-- Rsactivate.exe
-- unsupported features [Reporting Services]
-ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f8e6f46f3a89cc26d2c683ebcf2f9a96cced17cd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: ''
+ms.custom: seodec18
+ms.date: 04/26/2019
+ms.openlocfilehash: 80ebf7b4857d5814f33f62d3f7d5d61be63a7e10
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028051"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262948"
 ---
-# <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 で廃止された SQL Server Reporting Services の機能
+# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) で廃止された機能
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -32,14 +28,12 @@ ms.locfileid: "50028051"
 
 |機能|置換または回避策|
 |-|-|
-|Web ポータルを介したレポート モデルのアップロード|SOAP API を介して引き続き実行できます。|
-|Web ポータルを介したレポート モデルの管理|SOAP API を介して引き続き実行できます。|
 |HTML ビューアーおよびレポート マネージャーのスタイル シートをカスタマイズする|[Web ポータルをブランド化](branding-the-web-portal.md)することもできます。|
 
 ## <a name="next-steps"></a>次の手順
 
-[Reporting Services の新機能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[SQL Server 2016 における SQL Server Reporting Services の動作変更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Reporting Services の新機能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [SQL Server 2016 における SQL Server Reporting Services の動作変更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

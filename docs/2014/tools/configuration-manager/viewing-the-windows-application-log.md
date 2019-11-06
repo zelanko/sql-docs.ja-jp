@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - application logs [SQL Server]
@@ -20,12 +19,12 @@ ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c962be67f3643d4a7a2d7e76ca5c7890c921f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 654d4adbd2e4baa97b16e83261089d8d78289af6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150760"
 ---
 # <a name="viewing-the-windows-application-log"></a>Windows アプリケーション ログの表示
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Microsoft Windows アプリケーション ログを使用するように構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各セッションでは新しいイベントが書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを開始するたびに新しいアプリケーション ログが作成されることはありません。  

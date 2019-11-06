@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - item properties [Reporting Services]
 - ItemNamespaceHeader SOAP header
 - GetProperties method
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f8c3926da14f0b00c0b62b8dd8597867186d0bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012277"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties メソッドのアイテム名前空間の設定
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で <xref:ReportService2010.ItemNamespaceHeader> SOAP ヘッダーを使用すると、アイテムの完全なパスとアイテムの ID という 2 つの異なる識別子に基づいてアイテムのプロパティを取得できます。  
@@ -122,7 +120,7 @@ class Sample
 ```  
   
 ## <a name="see-also"></a>参照  
- [テクニカル リファレンス (SSRS)](../technical-reference-ssrs.md)   
+ [テクニカル リファレンス &#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [Reporting Services SOAP ヘッダーの使用](using-reporting-services-soap-headers.md)  
   
   

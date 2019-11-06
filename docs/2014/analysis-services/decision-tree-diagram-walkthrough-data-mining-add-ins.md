@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - shapes, data mining
@@ -16,12 +15,12 @@ ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b98c237b7cc8aaf58c177ee151e7a1398a4fd5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082278"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>デシジョン ツリー ダイアグラムのチュートリアル (データ マイニング アドイン)
   デシジョン ツリー モデルを作成した場合、デシジョン ツリー図形または依存関係ネットワーク図形を使用して、カスタマイズしたダイアグラムを Visio で作成できます。 このトピックで説明を使用して実行できるカスタマイズ、**デシジョン ツリー**図形とこれらのコントロール。  
@@ -55,7 +54,7 @@ ms.locfileid: "48079712"
   
 6.  **デシジョン ツリーの選択**ページで、表示する個別のツリーを選択します。  
   
-     ツリーは、モデル化した特定の結果につながる相互作用をモデル化します。そのため、モデルが複数の結果を含んでいていも、一度に 1 つのツリーしか表示できません。  
+     ツリーがモデル化されている; 特定の結果につながる相互作用をモデル化します。そのため、モデルに複数の結果が含まれる場合でも、一度に 1 つだけのツリーを表示できます。  
   
 7.  **デシジョン ツリーの選択**ダイアログ ボックスで、これらの表示オプションも設定できます。  
   

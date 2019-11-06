@@ -14,12 +14,12 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d46a1874c530020f815d2854b4524dfb201d598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197748"
 ---
 # <a name="implement-event-notifications"></a>イベント通知の実装
   イベント通知を実装するには、最初にイベント通知を受け取る通知先サービスを作成してから、イベント通知を作成する必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "48124432"
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]には次の特定のメッセージ型とイベント通知用コントラクトがあるため、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって開始されるサービスを作成する必要はありません。  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  イベント通知を受け取る対象サービスは、この既存のコントラクトに従う必要があります。  
@@ -41,14 +41,14 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  メッセージを受信するキューを作成します。  
   
     > [!NOTE]  
-    >  キューでは、 `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`で定義されているメッセージ型が受信されます。  
+    >  キューでは、 `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`で定義されているメッセージ型が受信されます。  
   
 2.  このキューにイベント通知コントラクトを参照するサービスを作成します。  
   
 3.  サービスにルートを作成し、そのサービスに対するメッセージを [!INCLUDE[ssSB](../../includes/sssb-md.md)] から送信する送信先のアドレスを定義します。 イベント通知の送信先が同じデータベース内のサービスの場合は、 `ADDRESS = 'LOCAL'`を指定します。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のルーティングにより、通知メッセージを受け取るサービスが特定されます。 イベント通知の通知先がリモート サーバーのサービスの場合、通知側と通知先の両方のサーバーでルートを定義し、双方向の通信を確立する必要があります。  
+    >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のルーティングにより、通知メッセージを受け取るサービスが特定されます。 イベント通知の通知先がリモート サーバーのサービスの場合、ソース サーバーとターゲット サーバーの両方でルートを定義し、双方向の通信を確立する必要があります。  
   
  次に、キューを作成し、そのキューにサービスを作成し、そのサービスのルートを作成して、イベント通知コントラクトからのメッセージを処理する例を示します。  
   
@@ -58,7 +58,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  この場合イベント通知は、CREATE_SCHEMA イベントの発生時に 1 回、CREATE_TABLE イベントの発生時にもう 1 回、合計 2 回発生します。 CREATE_SCHEMA イベントと、対応するすべての CREATE SCHEMA 定義の <schema_element> テキストの両方でイベント通知が作成されないようにするか、または不要なイベント データのキャプチャを防止するためのロジックをアプリケーションに組み込むことをお勧めします。  
+>  この場合、イベント通知には、2 回が発生します。CREATE_SCHEMA イベントの発生時、Onne 時間し、もう一度、CREATE_TABLE イベントの発生時です。 CREATE_SCHEMA イベントと、対応するすべての CREATE SCHEMA 定義の <schema_element> テキストの両方でイベント通知が作成されないようにするか、または不要なイベント データのキャプチャを防止するためのロジックをアプリケーションに組み込むことをお勧めします。  
   
  **イベント通知を作成するには**  
   

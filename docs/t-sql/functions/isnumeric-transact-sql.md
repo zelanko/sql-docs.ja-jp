@@ -20,16 +20,15 @@ helpviewer_keywords:
 - valid numeric type [SQL Server]
 - checking valid numeric type
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b546d92bfed01d1b4b94b3a9e32fbf77c921612e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4771c6d611292157caf8247288f36648c8ad5179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109387"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +62,7 @@ ISNUMERIC ( expression )
 
   
 > [!NOTE]  
->  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください[ money および smallmoney & #40 です。TRANSACT-SQL と #41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください[ money および smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  この例では、`ISNUMERIC` を使用して数値型でないすべての郵便番号を返しています。  

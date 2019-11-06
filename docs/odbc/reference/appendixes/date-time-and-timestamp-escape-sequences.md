@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9131e5fa8f16a137461bde5ecea3fd793b2cf9be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6d7a35d0697d1dcbda8f9f64b7ac5a32307d5c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051138"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日付、時刻、およびタイムスタンプ エスケープ シーケンス
 ODBC では、日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスを定義します。 これらのエスケープ シーケンスの構文は次のとおりです。  

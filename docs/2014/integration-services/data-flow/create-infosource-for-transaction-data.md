@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d57bbdf7219561dfea45f338f463834e578e3138
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d99a357c754add722fb6d5b5d880d1c472a5989
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827939"
 ---
 # <a name="create-infosource-for-transaction-data"></a>[トランザクション データのインフォソースの作成]
-  SAP Netweaver BW システムでトランザクション データ用の新しいインフォソースを作成するには、**[トランザクション データのインフォソースの作成]** ダイアログ ボックスを使用します。  
+  SAP Netweaver BW システムでトランザクション データ用の新しいインフォソースを作成するには、 **[トランザクション データのインフォソースの作成]** ダイアログ ボックスを使用します。  
   
  **[トランザクション データのインフォソースの作成]** ダイアログ ボックスは、 **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページから開くことができます。 SAP BW 変換先の詳細については、「 [SAP BW Destination](sap-bw-destination.md)」を参照してください。  
   
@@ -92,8 +91,8 @@ ms.locfileid: "48203882"
  **単位フィールド**  
  InfoObject が使用する単位を指定します。  
   
-## <a name="see-also"></a>参照  
- [インフォ ソースを作成します。](create-infosource.md)   
+## <a name="see-also"></a>関連項目  
+ [[インフォソースの作成]](create-infosource.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

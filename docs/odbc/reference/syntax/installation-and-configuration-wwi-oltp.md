@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b886bdf5ce769201addacfdfe9e2f22c6e8a15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54e37940062427008e9b90f6cda4cec825a721ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915283"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 関数
 **準拠**  
- バージョンで導入されました ODBC 3.81 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
   
  **概要**  
  **SQLSetDriverConnectInfo**接続文字列をアプリケーションの接続情報のトークンに設定に使用される**SQLDriverConnect**呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
+  
 SQLRETURN SQLSetDriverConnectInfo(  
                 SQLHDBC_INFO_TOKEN   hDbcInfoToken,  
                 WCHAR *              InConnectionString,  

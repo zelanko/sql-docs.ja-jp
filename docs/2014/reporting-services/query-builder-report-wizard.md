@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
@@ -13,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6bf7bfb94237b34056502d08f5cec8e4d5b80bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107994"
 ---
 # <a name="query-builder-report-wizard"></a>クエリ ビルダー (レポート ウィザード)
   クエリ ビルダーを使用すると、レポートで使用する結果セットを取得するためのクエリを指定できます。 2 種類のクエリ ビルダーを選択できます。  

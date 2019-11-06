@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- converting int ACSII code to character
+- converting int ASCII code to character
 - control characters
 - tab
 - ASCII conversions
@@ -24,16 +24,15 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113701"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ CHAR ( integer_expression )
 ## <a name="remarks"></a>Remarks  
 文字列に制御文字を挿入するには `CHAR` を使用します。 次の表に、よく使用される制御文字の一部を示します。
   
-|制御文字|ReplTest1|  
+|制御文字|[値]|  
 |---|---|
 |タブ|**char(9)**|  
 |ライン フィード|**char(10)**|  

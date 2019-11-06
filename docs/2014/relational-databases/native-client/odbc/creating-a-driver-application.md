@@ -23,17 +23,17 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a37b10e3df4bad15aa2d9fdcb23157cd8a1456a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205267"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>SQL Server Native Client ODBC ドライバー アプリケーションの作成
   ODBC アーキテクチャには、次の機能を実行する 4 つのコンポーネントがあります。  
   
-|コンポーネント|機能|  
+|コンポーネント|関数|  
 |---------------|--------------|  
 |アプリケーション|ODBC 関数を呼び出して ODBC データ ソースと通信し、SQL ステートメントを送信して、結果セットを処理します。|  
 |ドライバー マネージャー|アプリケーションと、そのアプリケーションで使用されるすべての ODBC ドライバー間の通信を管理します。|  
@@ -66,7 +66,7 @@ ms.locfileid: "48192858"
   
 -   一括コピー操作を実行します。  
   
--   大規模なデータの管理 (**では**、 **nvarchar(max)**、および**varbinary(max)** 列) の操作  
+-   大規模なデータの管理 (**では**、 **nvarchar(max)** 、および**varbinary(max)** 列) の操作  
   
 -   データベース ミラーリングが構成されているときにフェールオーバーを容易にするための再接続ロジックの使用  
   
@@ -107,7 +107,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- アプリケーションで複数の ODBC 呼び出しが同時に未処理状態になる必要があるかどうかというデザイン上の決定を、アプリケーションのビルド処理の初期段階で行います。 複数の同時実行 ODBC 呼び出しをサポートするには 2 つの方法があり、このセクションの残りのトピックで説明されています。 詳細についてを参照してください、 [ODBC プログラマーズ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45250)。  
+ アプリケーションで複数の ODBC 呼び出しが同時に未処理状態になる必要があるかどうかというデザイン上の決定を、アプリケーションのビルド処理の初期段階で行います。 複数の同時実行 ODBC 呼び出しをサポートするには 2 つの方法があり、このセクションの残りのトピックで説明されています。 詳細についてを参照してください、 [ODBC プログラマーズ リファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -115,7 +115,7 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
 -   [マルチスレッド アプリケーション](creating-a-driver-application-multithreaded-applications.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
   
   

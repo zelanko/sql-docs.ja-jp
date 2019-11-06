@@ -1,29 +1,27 @@
 ---
-title: トラブルシューティングと SQL Server での machine learning に関する FAQ |Microsoft Docs
+title: Machine learning のトラブルシューティングと FAQ
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: dc04f74c4db5c05840795caea87efb9b0001171c
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1573c260c3d34ba3f733316fbae2672b2f9adfb1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877925"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715157"
 ---
-# <a name="troubleshoot-machine-learning-in-sql-server"></a>SQL Server での machine learning をトラブルシューティングします。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="troubleshoot-machine-learning-in-sql-server"></a>SQL Server での機械学習のトラブルシューティング
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-開始点としてこのページを使用して、既知の問題の全体を操作します。
-
-**適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning サービス (R および Python)
+このページは、既知の問題に対処するための出発点として使用します。
 
 ## <a name="known-issues"></a>既知の問題
 
-次の記事では、現在と以前のリリースに関する既知の問題について説明します。
+次の記事では、現在および以前のリリースに関する既知の問題について説明します。
 
 + [R Services の既知の問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 + [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)
@@ -31,26 +29,24 @@ ms.locfileid: "48877925"
 
 ## <a name="how-to-gather-system-information"></a>システム情報を収集する方法
 
-エラーが発生したするか、または環境内で問題を理解する必要がある場合は、体系的に関連する情報を収集することが重要です。 次の記事では、テクニカル サポートをトラブルシューティングするには、セルフヘルプを容易にする情報または要求の一覧を示します。
+エラーが発生した場合、または環境内の問題を理解する必要がある場合は、関連する情報を体系的に収集することが重要です。 次の記事では、セルフヘルプのトラブルシューティング、またはテクニカルサポートの要求を容易にする情報の一覧を示します。
 
-+ [Machine learning のトラブルシューティングのためのデータの収集](data-collection-ml-troubleshooting-process.md)
++ [Machine learning のトラブルシューティングのためのデータ収集](data-collection-ml-troubleshooting-process.md)
 
-## <a name="setup-and-configuration-guides"></a>セットアップと構成ガイド
+## <a name="setup-and-configuration-guides"></a>セットアップと構成のガイド
 
-SQL Server を使用した machine learning を設定していない場合、または機能を追加する場合は、ここから開始します。
+SQL Server で machine learning を設定していない場合、または機能を追加する場合は、ここから開始します。
 
-+ [SQL Server 2017 Machine Learning Services (In-database) をインストールします。](install/sql-machine-learning-services-windows-install.md)
-+ [SQL Server 2017 の Machine Learning Server (スタンドアロン) のインストールします。](install/sql-machine-learning-standalone-windows-install.md)
-+ [SQL Server 2016 R Services (In-database) をインストールします。](install/sql-r-services-windows-install.md)
-+ [SQL Server 2016 R Server (スタンドアロン) のインストールします。](install/sql-r-standalone-windows-install.md)
-+ [コマンド プロンプトのセットアップ](install/sql-ml-component-commandline-install.md)
++ [SQL Server Machine Learning Services のインストール (データベース内)](install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Server をインストールする (スタンドアロン)](install/sql-machine-learning-standalone-windows-install.md)
++ [コマンドプロンプトのセットアップ](install/sql-ml-component-commandline-install.md)
 + [オフラインのセットアップ (インターネットなし)](install/sql-ml-component-install-without-internet-access.md)
 
 ### <a name="configuration"></a>構成
 
-次の記事には、machine learning のインスタンス上の構成をカスタマイズする方法と、既定値についてが含まれます。
+次の記事には、既定の情報と、インスタンスで machine learning の構成をカスタマイズする方法に関する情報が含まれています。
 
-+ [SQL Server Machine Learning Services での外部スクリプトの同時実行のスケール](administration/modify-user-account-pool.md)   
-+ [構成し、高度な分析拡張機能の管理](r/configure-and-manage-advanced-analytics-extensions.md)  
-+ [リソース プールを作成する方法](r/how-to-create-a-resource-pool-for-r.md)
-+ [R のワークロードの最適化](r/operationalizing-your-r-code.md)
++ [SQL Server Machine Learning Services での外部スクリプトの同時実行のスケーリング](administration/modify-user-account-pool.md)   
++ [高度な分析拡張機能の構成と管理](r/configure-and-manage-advanced-analytics-extensions.md)  
++ [リソースプールを作成する方法](r/how-to-create-a-resource-pool-for-r.md)
++ [R ワークロードの最適化](r/operationalizing-your-r-code.md)

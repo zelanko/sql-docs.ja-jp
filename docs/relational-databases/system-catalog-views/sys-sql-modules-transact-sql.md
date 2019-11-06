@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108988"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,8 +46,8 @@ ms.locfileid: "51221538"
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力上で NULL 出力を生成するように宣言されました。|  
 |**execute_as_principal_id**|**Int**|EXECUTE AS データベース プリンシパルの ID です。<br /><br /> 既定値または EXECUTE AS CALLER の場合は、NULL になります。<br /><br /> 場合は、指定したプリンシパルの ID または EXECUTE AS SELF の実行\<プリンシパル >。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 0 = ネイティブでコンパイルされていない<br /><br /> 1 = ネイティブでコンパイルされている<br /><br /> 既定値は 0 です。|  
-|**is_inlineable**|**bit**|**適用対象**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降。<br/><br />かどうかには、モジュールが lineable いないかどうかを示します。 変換が指定された条件に基づいて[ここ](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)します。<br /><br /> 0 = inlineable しません<br /><br /> 1 = lineable ではありません。 <br /><br /> スカラー udf の場合、値は、UDF inlineable、および 0 それ以外の場合 1 になります。 インライン Tvf、およびその他のすべてのモジュール型の場合は 0 1 の値を常に含まれています。<br />|  
-|**inline_type**|**bit**|**適用対象**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降。<br /><br />示すインライン化するかどうか、モジュールの現在オンします。 <br /><br />0 = インライン化はオフになります<br /><br /> 1 = インライン展開がオンにします。<br /><br /> スカラー Udf は、値は 1 にインライン化 (明示的または暗黙的に) がオンします。 値は、インライン Tvf、1 およびその他のモジュール型の場合は 0 に常になります。<br />|  
+|**is_inlineable**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br/><br />かどうかには、モジュールが lineable いないかどうかを示します。 変換が指定された条件に基づいて[ここ](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)します。<br /><br /> 0 = inlineable しません<br /><br /> 1 = lineable ではありません。 <br /><br /> スカラー udf の場合、値は、UDF inlineable、および 0 それ以外の場合 1 になります。 インライン Tvf、およびその他のすべてのモジュール型の場合は 0 1 の値を常に含まれています。<br />|  
+|**inline_type**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br /><br />示すインライン化するかどうか、モジュールの現在オンします。 <br /><br />0 = インライン化はオフになります<br /><br /> 1 = インライン展開がオンにします。<br /><br /> スカラー Udf は、値は 1 にインライン化 (明示的または暗黙的に) がオンします。 値は、インライン Tvf、1 およびその他のモジュール型の場合は 0 に常になります。<br />|  
 
   
 ## <a name="remarks"></a>コメント  

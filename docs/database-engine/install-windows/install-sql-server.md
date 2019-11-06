@@ -14,16 +14,14 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d790ef532a66bf7f8e34f69b9f982bef3416d0a1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600892"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893986"
 ---
 # <a name="install-sql-server"></a>SQL Server をインストールする
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] は 64 ビット アプリケーションでのみ使用できるようになりました。 SQL Server の入手およびインストールの方法に関する重要な詳細情報を次に示します。
@@ -32,9 +30,9 @@ ms.locfileid: "51600892"
   
 *  **オプション**: インストール ウィザード、コマンド プロンプト、または sysprep でインストールします。
  
-*  **要件**: インストールする前に、「 [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **要件**: インストールする前に、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」に記載されているインストール要件、システム構成チェック、セキュリティ上の考慮事項を確認してください。 
 
-* **プロセス**: インストール プロセスの完全な手順については、「 [SQL Server のインストール](../../database-engine/install-windows/installation-for-sql-server-2016.md) 」を参照してください。
+* **プロセス**: インストール プロセスの完全な手順については、「[SQL Server のインストール](../../database-engine/install-windows/installation-for-sql-server-2016.md)」を参照してください。
 
 * **サンプル データベースとサンプル コード**: 
     * これらは、既定では SQL Server セットアップの一環としてインストールされません。 
@@ -80,7 +78,7 @@ ms.locfileid: "51600892"
 |-----------|-----------------|  
 |[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|この記事では、ファイアウォール構成の概要を示し、Windows ファイアウォールを構成する方法について説明します。|  
 |[SQL Server アクセス用のマルチホーム コンピューターの構成](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|この記事では、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。|  
-|[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|この記事で示す手順に従って、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint へのアクセスを許可するためにポートとファイアウォールの両方の設定を構成できます。|  
+|[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|この記事で示す手順に従って、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint へのアクセスを許可するためにポートとファイアウォールの両方の設定を構成できます。|  
   
 ## <a name="related-sections"></a>関連項目  
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の各エディションとサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  

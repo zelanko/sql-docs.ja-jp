@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1
 - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3553a338bf1d5a9263d1d4eadc5975784517a559
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108332"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>[マーカー] ([マップの埋め込みポイントのプロパティ] ダイアログ ボックス)
   **[埋め込みポイントのプロパティ]** ダイアログ ボックスの **[マーカー]** を選択すると、次のマップ要素のマーカーの種類およびマーカー サイズに関するオプションを変更できます。  

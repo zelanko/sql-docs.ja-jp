@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5e3c54e0e2eb4ad633d35159e1ff010c9388f5d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118713"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLColumnPrivileges**列と指定したテーブルに関連付けられている権限の一覧を返します。 ドライバーは結果セットとして、指定した情報を返します*StatementHandle*します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumnPrivileges(  
      SQLHSTMT      StatementHandle,  
@@ -143,7 +142,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|NULL 以外の Varchar|列名 ドライバーは、名前がない列の空の文字列を返します。|  
 |権限の許可者 (ODBC 1.0)|5|Varchar|特権を付与したユーザーの名前データ ソースに適用されない場合は NULL です。<br /><br /> 権限付与対象ユーザーの列の値をオブジェクトの所有者であるすべての行、GRANTOR 列は「(_s)」になります。|  
 |権限付与対象ユーザー (ODBC 1.0)|6|NULL 以外の Varchar|ユーザーに権限を与えられたユーザーの名前。|  
-|特権 (ODBC 1.0)|7|NULL 以外の Varchar|列の特権を識別します。 次のいずれかを指定することがあります (ソース データでサポートされている他のユーザーまたは実装で定義された)。<br /><br /> : 選択された列のデータを取得する、権限付与対象ユーザーが許可されます。<br /><br /> 挿入します。 関連付けられているテーブルに挿入された新しい行に列のデータを提供する、権限付与対象ユーザーが許可されます。<br /><br /> 更新: 列のデータを更新する、権限付与対象ユーザーが許可されます。<br /><br /> 参照: 制約内で列を参照する、権限付与対象ユーザーが許可されている (たとえば、一意な参照、またはテーブルが check 制約)。|  
+|特権 (ODBC 1.0)|7|NULL 以外の Varchar|列の特権を識別します。 次のいずれかを指定することがあります (ソース データでサポートされている他のユーザーまたは実装で定義された)。<br /><br /> 選択します。列のデータを取得する、権限付与対象ユーザーが許可されます。<br /><br /> 挿入します。関連付けられているテーブルに挿入された新しい行に列のデータを提供する、権限付与対象ユーザーが許可されます。<br /><br /> 更新プログラム:列のデータを更新する権限が許可されます。<br /><br /> 参照:制約内で列を参照する、権限付与対象ユーザーが許可されている (たとえば、一意、参照、またはテーブルが check 制約)。|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|他のユーザーに、特権を付与する権限が許可されたかどうかを示します"YES"、"NO"、または不明またはデータ ソースに適用されない場合は"NULL"です。<br /><br /> 特権はどちらかです付与できるまたは付与禁止両方は必要ありません。 によって返される結果セット**SQLColumnPrivileges** IS_GRANTABLE 列を除くすべての列が同じ値を含めることが 2 つの行が含まれません。|  
   
 ## <a name="code-example"></a>コード例  

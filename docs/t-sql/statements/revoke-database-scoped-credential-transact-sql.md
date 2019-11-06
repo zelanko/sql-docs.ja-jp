@@ -16,16 +16,15 @@ helpviewer_keywords:
 - REVOKE statements, database scoped credentials
 - revoking permissions [SQL Server], database scoped credentials
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed8697108ee88989e74721922731883538e9c0f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 680e944326046ea2fc7694257977c6bc15a4f959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082272"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を与える許可を取り消します。 権限自体は取り消されません。  
+ 指定した権限を与える許可を取り消すことを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
   
  *permission*  
- データベース スコープの資格情報で取り消すことができる権限を指定します。 下の表をご覧ください。  
+ データベース スコープの資格情報で取り消すことができる権限を指定します。 以下に一覧を示します。  
   
- ON CERTIFICATE **::**_credential_name_  
+ ON CERTIFICATE **::** _credential_name_  
  権限を取り消すデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

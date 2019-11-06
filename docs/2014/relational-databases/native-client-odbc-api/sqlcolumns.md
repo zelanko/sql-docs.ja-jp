@@ -14,12 +14,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067729"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` 値が存在するかどうかに関係なく SQL_SUCCESS を返します、 *CatalogName*、 *TableName*、または*ColumnName*パラメーター。 **SQLFetch** SQL_NO_DATA が返されるこれらのパラメーターに無効な値を使用する場合。  
@@ -29,7 +29,7 @@ ms.locfileid: "48181322"
   
  `SQLColumns` は静的サーバー カーソルで実行できます。 更新可能なカーソル (動的カーソルまたはキーセット カーソル) で `SQLColumns` を実行しようとすると、カーソルの種類が変更されていることを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター: *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター。*Linked_Server_Name.Catalog_Name*します。  
   
  ODBC 2。*x*でワイルドカードを使用していないアプリケーション*TableName*、`SQLColumns`テーブルの名前が一致をに関する情報を返します*TableName*が現在所有とユーザー。 現在のユーザーに名前が一致するテーブルが所有していないかどうか、 *TableName*パラメーター、`SQLColumns`テーブル名が一致する他のユーザーによって所有されているすべてのテーブルに関する情報を返します、 *TableName*パラメーター。 ODBC 2。*x* 、ワイルドカードを使用してアプリケーション`SQLColumns`すべて名前と一致するテーブルを返します*TableName*します。 ODBC 3。*x*アプリケーション`SQLColumns`すべて名前と一致するテーブルを返します*TableName*所有者またはワイルドカードを使用するかどうかに関係なく。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48181322"
 |列名|説明|  
 |-----------------|-----------------|  
 |DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)** データ型。|  
-|TYPE_NAME|"Varchar"、"varbinary"または"nvarchar"を返します、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** データ型。|  
+|TYPE_NAME|"Varchar"、"varbinary"または"nvarchar"を返します、 **varchar (max)** 、 **varbinary (max)** 、および**nvarchar (max)** データ型。|  
 |COLUMN_SIZE|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)** 列のサイズが制限されることを示すデータ型。|  
 |BUFFER_LENGTH|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)** バッファーのサイズが制限されることを示すデータ型。|  
 |SQL_DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)** データ型。|  
@@ -89,7 +89,7 @@ ms.locfileid: "48181322"
  ODBC のスパース列の詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLColumns 関数](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns 関数](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

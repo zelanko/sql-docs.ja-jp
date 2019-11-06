@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], consolidated member attribute permissions
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], consolidated members
 - members [Master Data Services], consolidated member permissions
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6fbc636a4dcf67b6bdeaa17088405ffe079e50d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054110"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>統合権限 (Master Data Services)
   統合権限は、エンティティのすべての統合メンバーの属性値に適用されます。  
@@ -47,13 +46,13 @@ ms.locfileid: "48096962"
 |----------------|-----------------|  
 |**読み取り専用です。**|属性が表示されますが、ユーザーは属性の値を変更できません。|  
 |**Update**|属性が表示され、ユーザーは属性の値を変更できます。|  
-|**Deny**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
+|**Deny**|属性が表示されません。<br /><br /> 注:Name および Code 属性へのアクセスを明示的に拒否することはできません。|  
   
-## <a name="see-also"></a>参照  
- [モデル オブジェクト権限を割り当てる&#40;マスター データ サービス&#41;](assign-model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>関連項目  
+ [モデル オブジェクト権限を割り当てる (マスター データ サービス)](assign-model-object-permissions-master-data-services.md)   
  [リーフ アクセス許可&#40;マスター データ サービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [モデル オブジェクト権限&#40;マスター データ サービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [モデル オブジェクト権限 (マスター データ サービス)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)   
- [属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

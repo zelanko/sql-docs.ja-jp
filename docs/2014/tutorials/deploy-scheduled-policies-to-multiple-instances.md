@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185814"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>スケジュールされたポリシーの複数インスタンスへの配置
   登録済みサーバーを使用すると、スケジュールされたポリシーを集中管理された場所からマネージド サーバーに配置できます。 スケジュールされたポリシーは、ローカル サーバー グループまたは中央管理サーバーから配置できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "48128272"
   
  これらの作業は、このレッスンの前の作業を完了したコンピューターで実行します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この作業には、次の前提条件があります。  
   
 -   このレッスンの前の作業を完了している必要があります。  
@@ -72,7 +71,7 @@ ms.locfileid: "48128272"
     > [!NOTE]  
     >  右クリックした場合**ローカル サーバー グループ**または中央管理サーバー自体、ポリシーはすべての管理対象サーバーに配置されます。 特定のサーバー グループを右クリックした場合、そのグループ内のサーバーだけにポリシーが配置されます。 特定の登録済みサーバーを右クリックした場合、そのサーバーだけにポリシーが配置されます。  
   
-3.  横に**ファイルをインポートする**、省略記号ボタンをクリックします (**.**).  
+3.  横に**ファイルをインポートする**、省略記号ボタンをクリックします ( **.** ).  
   
 4.  **ポリシーの選択** ダイアログ ボックスで、スケジュールされたポリシーを保存したフォルダーの場所を参照します。 この例では、場所を参照**C:\Scheduled_BP_Policies**します。  
   
@@ -90,15 +89,15 @@ ms.locfileid: "48128272"
     > [!NOTE]  
     >  スケジュールされたポリシーが実行された後に評価結果を表示するには、対象インスタンスのポリシー履歴ログを開きます。 ログを開くを右クリックして**ポリシーの管理**、 をクリックし、**履歴の表示**します。  
   
-## <a name="summary"></a>まとめ  
+## <a name="summary"></a>Summary  
  このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つ以上のインスタンスに対して、ベスト プラクティス ポリシーの評価を要求時および定期的に実行する方法について学習しました。  
   
 ## <a name="next"></a>Next  
- このチュートリアルはこれで終了です。 先頭に戻り、次を参照してください。[チュートリアル: ポリシー ベースの管理でのベスト プラクティスの評価](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)します。  
+ このチュートリアルはこれで終了です。 先頭に戻り、次を参照してください。[チュートリアル。ポリシー ベースの管理を使用して、ベスト プラクティスの評価](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)します。  
   
  一覧を表示する[!INCLUDE[ssDE](../includes/ssde-md.md)]チュートリアルでは、クリックして[データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

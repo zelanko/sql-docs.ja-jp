@@ -10,17 +10,17 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63157237"
 ---
 # <a name="supported-sql-server-features"></a>サポートされる SQL Server の機能
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の、メモリ最適化オブジェクトの使用に関してサポートされる機能またはサポートされない機能について説明します。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インメモリ OLTP に対してサポートされる機能  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能  
  次に示す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、(メモリ最適化ファイル グループを含む) メモリ最適化オブジェクトを持つデータベースでサポートされます。  
   
  サポートされるデータ型の詳細については、「 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)」を参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "48216673"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 詳細については、「[SQL Server Management Studio によるインメモリ OLTP のサポート](sql-server-management-studio-support-for-in-memory-oltp.md)」を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 詳細については、「 [SQL Server PowerShell の概要](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 詳細については、「 [SQL Server PowerShell の概要](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)」を参照してください。  
   
 -   bcp ユーティリティを使用した一括データのインポートとエクスポート。 詳細については、「[bcp ユーティリティを使用した一括データのインポートとエクスポート &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)」を参照してください。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48216673"
   
 -   インメモリ OLTP オブジェクトを格納し、目標復旧時間 (RTO) を削減するための、メモリ最適化データ ファイル グループ内の複数のコンテナー。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログ ブロック チェックサムを計算し、検証します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログ ブロックは、チェックサムを計算し、検証します。  
   
 -   新しい SNAPSHOT テーブル ヒント。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)」を参照してください。  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48216673"
   
 -   サービス ブローカー (制限付き)。 ネイティブ コンパイル ストアド プロシージャからキューにアクセスできません。 メモリ最適化テーブルにアクセスするトランザクションでリモート データベースのキューにアクセスできません。  
   
--   フェールオーバー クラスタリング: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 製品の一部として、AlwaysOn フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベルでの冗長性によるローカル高可用性を実現します (フェールオーバー クラスター インスタンス (FCI))。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
+-   フェールオーバー クラスタ リング:一部として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 製品、AlwaysOn フェールオーバー クラスター インスタンスは、サーバー インスタンス レベルではフェールオーバー クラスターでの冗長性によるローカル高可用性を提供する Windows Server フェールオーバー クラスタ リング (WSFC) 機能を活用して。インスタンス (FCI)。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
 -   AlwaysOn との統合: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サーバーやデータベースの高可用性を実現するために、AlwaysOn などの複数の方法が用意されています。 詳細については、「[高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)」を参照してください。  
   
--   ログ配布: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログ配布を使用すると、トランザクション ログ バックアップを、プライマリ サーバー インスタンスのプライマリ データベースから、別のセカンダリ サーバー インスタンスの 1 つ以上のセカンダリ データベースに自動的に送信できます。 詳細については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
+-   ログ配布:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布プライマリ サーバー インスタンスでプライマリ データベースから別のセカンダリ サーバー インスタンスで 1 つまたは複数のセカンダリ データベースにトランザクション ログ バックアップを自動的に送信することができます。 詳細については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
 -   サブスクライバー上でのメモリ最適化されたテーブルに対するトランザクション レプリケーションはサポートされていますが、いくつかの制限があります。 詳細については、「[メモリ最適化テーブル サブスクライバーへのレプリケーション](../replication/replication-to-memory-optimized-table-subscribers.md)」を参照してください。  
   
--   リソース ガバナー: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 リソース ガバナーを使用すると、受信するアプリケーション要求で使用可能な CPU、物理 IO、およびメモリの量に制限を指定できます。 詳細については、「 [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) 」および「 [Resource Governor](../resource-governor/resource-governor.md)」を参照してください。  
+-   リソース ガバナー:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーは、管理に使用できる機能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ワークロードとシステム リソースの消費します。 リソース ガバナーを使用すると、受信するアプリケーション要求で使用可能な CPU、物理 IO、およびメモリの量に制限を指定できます。 詳細については、「 [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) 」および「 [Resource Governor](../resource-governor/resource-governor.md)」を参照してください。  
   
 -   インメモリ OLTP には、メモリ最適化テーブルの (var)char 型の列のサポートされているコード ページと、インデックスおよびネイティブ コンパイル ストアド プロシージャで使用されるサポートされている照合順序に関して制限事項があります。 詳細については、「 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)」を参照してください。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48216673"
 |メモリ最適化テーブルに対するデータ圧縮。|データ圧縮機能を使用することにより、データベース内のデータを圧縮したり、データベースのサイズを小さくすることができます。 詳細については、「 [Data Compression](../data-compression/data-compression.md)」を参照してください。|  
 |メモリ最適化テーブルと HASH インデックスのパーティション分割。|パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 詳細については、「 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)」を参照してください。|  
 |データベースのメモリ最適化データ ファイル グループの透過的なデータ暗号化 (TDE)。|透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md)」を参照してください。<br /><br /> TDE は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができます。 TDE が有効な場合、インメモリ OLTP ログ レコードが暗号化されます。 持続性のあるテーブルのチェックポイント ファイルは、データベースで TDE が有効になっている場合でも暗号化されません。|  
-|レプリケーション|サブスクライバー上でのメモリ最適化されたテーブルに対するトランザクション レプリケーションを除き、他のレプリケーション構成は、メモリ最適化されたテーブルを参照するテーブルまたはビューと互換性がありません。 メモリ最適化ファイル グループがある場合、sync_mode='database snapshot' を使用したレプリケーションはサポートされません。 詳細については、「 [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md)」を参照してください。|  
+|レプリケーション|サブスクライバー上でのメモリ最適化されたテーブルに対するトランザクション レプリケーションを除き、他のレプリケーション構成は、メモリ最適化されたテーブルを参照するテーブルまたはビューと互換性がありません。 Sync_mode を使用してレプリケーションを = 'database snapshot' はメモリ最適化ファイル グループがある場合にサポートされていません。 詳細については、「[メモリ最適化テーブル サブスクライバーへのレプリケーション](../replication/replication-to-memory-optimized-table-subscribers.md)」を参照してください。|  
 |複数のアクティブな結果セット (MARS)|複数のアクティブな結果セット (MARS) は、メモリ最適化テーブルではサポートされていません。 また、このエラーは、リンク サーバーの使用を示します。 リンク サーバーは MARS を使用できます。 リンク サーバーは、メモリ最適化テーブルでサポートされていません。 代わりに、メモリ最適化テーブルをホストするサーバーとデータベースに直接接続してください。|  
 |ミラーリング|データベース ミラーリングは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの可用性を高めるためのソリューションです。 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。|  
 |ログの再構築|ログの再構築は、MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、アタッチと ALTER DATABASE のいずれによるものでもサポートされていません。|  
@@ -111,7 +111,7 @@ ms.locfileid: "48216673"
 |Resource データベース、および tempdb|はい|シングル ユーザー データベース以外に resource データベースと tempdb のみを使用する複数のデータベースにまたがるトランザクションに関する制限はありません。|  
 |master|読み取り専用|インメモリ OLTP と master データベースを使用する複数のデータベースにまたがるトランザクションは、master データベースへの書き込みが含まれる場合にコミットに失敗します。 master に対して読み取り操作のみを実行し、ユーザー データベースを 1 つだけ使用する複数のデータベースにまたがるトランザクションは許可されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server によるインメモリ OLTP のサポート](sql-server-support-for-in-memory-oltp.md)  
   
   

@@ -18,22 +18,18 @@ helpviewer_keywords:
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce7020eb7270ffb24f1926c165a71e8db33774e0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950358"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 一連の条件を評価して、考えられる結果式のうちの 1 つを返します。  
   
@@ -45,7 +41,7 @@ ms.locfileid: "52400726"
   
  どちらの形式も、ELSE 引数 (省略可) をサポートしています。  
   
- CASE は、有効な式を使用できる任意のステートメントや句で使用できます。 たとえば、SELECT、UPDATE、DELETE、SET などのステートメントや、select_list、IN、WHERE、ORDER BY、HAVING などの句で使用できます。  
+ CASE は、有効な式を使用できる任意のステートメントや句で使用できます。 たとえば、SELECT、UPDATE、DELETE、SET などのステートメントや、select_list、IN、WHERE、ORDER BY、HAVING などの句で CASE を使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -204,7 +200,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. UPDATE ステートメントで CASE を使用する  
- 次の例では、UPDATE ステートメントで CASE 式を使用して、`VacationHours` が 0 に設定されている従業員の `SalariedFlag` 列の値を決定しています。 10 時間差し引くと `VacationHours` 結果が負の値では、 `VacationHours` は 40 時間以外の `VacationHours` 20 時間が増加します。 OUTPUT 句は、この処理の前後の休暇の値を表示するために使用されています。  
+ 次の例では、UPDATE ステートメントで CASE 式を使用して、`SalariedFlag` が 0 に設定されている従業員の `VacationHours` 列の値を決定しています。 `VacationHours` の値を 10 時間差し引くと値がマイナスになる場合は `VacationHours` の値を 40 時間増やします。それ以外の場合は、`VacationHours` の値を 20 時間増やします。 OUTPUT 句は、この処理の前後の休暇の値を表示するために使用されています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -338,7 +334,7 @@ ORDER BY ProductKey;
 ```  
   
 ### <a name="h-using-case-in-an-update-statement"></a>H. UPDATE ステートメントで CASE を使用する  
- 次の例では、UPDATE ステートメントで CASE 式を使用して、`VacationHours` が 0 に設定されている従業員の `SalariedFlag` 列の値を決定しています。 `VacationHours` の値を 10 時間差し引くと値がマイナスになる場合は `VacationHours` の値を 40 時間増やします。それ以外の場合は、`VacationHours` の値を 20 時間増やします。  
+ 次の例では、UPDATE ステートメントで CASE 式を使用して、`SalariedFlag` が 0 に設定されている従業員の `VacationHours` 列の値を決定しています。 `VacationHours` の値を 10 時間差し引くと値がマイナスになる場合は `VacationHours` の値を 40 時間増やします。それ以外の場合は、`VacationHours` の値を 20 時間増やします。  
   
 ```  
 -- Uses AdventureWorks   

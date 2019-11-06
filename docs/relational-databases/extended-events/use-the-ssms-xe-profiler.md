@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - extended events [SQL Server], system health session
 - extended events [SQL Server], system_health session
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7548f79744f3a48633d42249da6f1946459571a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe3901465f1230de5eea3996adad499208f6619
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791800"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907419"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>SSMS XEvent Profiler の使用
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 XEvent Profiler は、拡張イベントのライブ ビューアー ウィンドウを表示する SQL Server Management Studio (SSMS) 機能です。 この概要では、このプロファイラーを使用する理由、主な機能、拡張イベントを初めて表示する場合の手順について説明します。
 
@@ -45,7 +45,7 @@ XEvent Profiler にアクセスするには、次の手順を実行します。
 
    ![XEProfiler メニュー](media/xevents-xe-profiler-menu.png)
 
-4. このセッションのすべての拡張イベントを表示する場合は、**[標準]** をダブルクリックします。 ログに記録されている SQL ステートメントを表示する場合は、**[T-SQL]** をクリックします。 セッションがまだ作成されていない場合は、セッションが自動的に作成されます。
+4. このセッションのすべての拡張イベントを表示する場合は、 **[標準]** をダブルクリックします。 ログに記録されている SQL ステートメントを表示する場合は、 **[T-SQL]** をクリックします。 セッションがまだ作成されていない場合は、セッションが自動的に作成されます。
 
    ![XEProfiler セッション](media/xevents-xe-profiler-start-session.png)
 

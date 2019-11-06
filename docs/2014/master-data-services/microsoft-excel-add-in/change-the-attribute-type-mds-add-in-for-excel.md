@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482765"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>属性の型の変更 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、許可される文字のデータ型または文字数が間違っている場合に、管理者が属性の型を変更することができます。  
@@ -31,7 +30,7 @@ ms.locfileid: "48056082"
   
 -   **[システム管理]** および **[エクスプローラー]** 機能領域に対する権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   既存のモデル、エンティティ、および属性が存在している必要があります。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48056082"
   
 -   属性のデータ型を変更します。  
   
--   "_old" サフィックスが付いた、何も値を格納していない属性のコピーを生成します。 これと呼ばれますが、**非推奨とされます**属性。  
+-   任意の値を含まない"_old"サフィックスを持つ属性のコピーを生成します。 これと呼ばれますが、**非推奨とされます**属性。  
   
  ただし、元の属性に対する既存の依存関係すべては、変更後の属性ではなく非推奨の属性を指します。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48056082"
 >  既存のデータと関連エンティティが存在する MDS 属性のデータ型を変更するのは面倒であり、エンティティに依存するビジネス ルールまたはサブスクリプション ビューが宣言されている場合は特にこのことが当てはまります。 ベスト プラクティスは、必要な値を保持できる十分な柔軟性を持つデータ型を使用して作業を開始することです。 たとえば、最初は文字列を小規模で開始できるとしても、時間の経過に伴って長くなる可能性があります。そのため、最悪のシナリオを考慮に入れてください。 一方、過度に長いテキスト文字列も負担になる可能性がある (たとえば、長い GUI テキスト ボックスは画面に収めるのが困難) ので、過度に長い文字列を避けてください。  
   
 ## <a name="see-also"></a>参照  
- [属性&#40;マスター データ サービス&#41;](../attributes-master-data-services.md)   
- [モデルの構築 &#40;Excel 用 MDS アドイン&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [属性 (マスター データ サービス)](../attributes-master-data-services.md)   
+ [モデルの構築 (Excel 用 MDS アドイン)](building-a-model-mds-add-in-for-excel.md)  
   
   

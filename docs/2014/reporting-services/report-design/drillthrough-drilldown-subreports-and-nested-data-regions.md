@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 764f4a6f84b710be9ac0b6a7c6a8f4989530ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6ab8c48b9c02f7bcf9f2c9457b56cb2533125756
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105976"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)
   データをさまざまな方法で整理して、概要と詳細の関係を示すことができます。  たとえば、すべてのデータをレポートに含めておき、最初は詳細データは非表示で、ユーザーがクリックすると表示するようにできます。この動作を *ドリルダウン* アクションといいます。 テーブルやグラフなどのデータ領域をテーブルやマトリックスなどの別のデータ領域内に *入れ子* にして、その入れ子になったデータ領域にデータを表示できます。 メイン レポート内に完全に含まれている *サブレポート* にデータを表示できます。 また、ユーザーがリンクをクリックすると表示される個別のレポートである *詳細* レポートに詳細データを含めることもできます。  
@@ -45,7 +44,7 @@ ms.locfileid: "48179542"
 |データの取得方法|メイン レポートと同時にデータを取得|詳細レポートごとにデータを取得|メイン レポートと同時にすべてのデータを取得|  
 |処理と表示のタイミング|メイン レポートと同時|リンクがクリックされたとき|メイン レポートと同時|  
 |パフォーマンス|低速 (メイン レポートと同時にすべてのデータを取得)|高速 (メイン レポートとは別にデータを取得)|高速 (メイン レポートと同時にすべてのデータを取得)|  
-|パラメーターを使用するかどうか|はい|はい|いいえ|  
+|パラメーターを使用するかどうか|[はい]|[はい]|いいえ|  
 |再利用できるかどうか|レポート、または他のレポートのサブレポートか詳細レポートとして再利用可|レポート、または他のレポートのサブレポートか詳細レポートとして再利用可|再利用不可|  
 |置かれる場所|メイン レポートの外部、同じまたは別のレポート サーバー|メイン レポートの外部、同じレポート サーバー|メイン レポートの内部|  
 |表示される場所|メイン レポート内|別のレポート内|メイン レポート内|  
@@ -83,22 +82,22 @@ ms.locfileid: "48179542"
 
   
 ##  <a name="InThisSection"></a> トピックの内容  
- [ドリルスルー レポート&#40;レポート ビルダーおよび SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [詳細レポート (レポート ビルダーおよび SSRS)](drillthrough-reports-report-builder-and-ssrs.md)  
  ユーザーがメイン レポート内のリンクをクリックすると開くレポートについて説明します。  
   
- [サブレポート&#40;レポート ビルダーおよび SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [サブレポート (レポート ビルダーおよび SSRS)](subreports-report-builder-and-ssrs.md)  
  メイン レポートの本文内に表示されるレポートについて説明します。  
   
- [入れ子になったデータ領域&#40;レポート ビルダーおよび SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)  
  マトリックス内に入れ子になっているグラフなど、データ領域を別のデータ領域に入れ子にする方法について説明します。  
   
- [ドリルダウン アクション&#40;レポート ビルダーおよび SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [ドリルダウン アクション (レポート ビルダーおよび SSRS)](drilldown-action-report-builder-and-ssrs.md)  
  ドリルダウン アクションによるレポート アイテムの表示と非表示の切り替えについて説明します。  
   
- [外部アイテムへのパスを指定する&#40;レポート ビルダーおよび SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  レポート定義ファイルの外部にあるアイテムを参照する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)  
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)  
   
   

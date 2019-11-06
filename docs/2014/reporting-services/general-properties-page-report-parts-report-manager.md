@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbf9f69b3e1df0471b731363387542ce1fb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109087"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>[全般] プロパティ ページ、レポート パーツ (レポート マネージャー)
   レポート パーツの全般プロパティを表示および管理するには、[プロパティ] ページを使用します。  
@@ -36,19 +35,19 @@ ms.locfileid: "48136249"
   
 ## <a name="options"></a>および  
  **変更された日付**  
- レポート パーツ プロパティがサーバー上で最後に変更された日付と時刻、またはレポート パーツの新しいバージョンがサーバーにパブリッシュされた日付と時刻です。 読み取り専用です。  
+ レポート パーツ プロパティがサーバー上で最後に変更された日付と時刻、またはレポート パーツの新しいバージョンがサーバーにパブリッシュされた日付と時刻です。 読み取り専用。  
   
  **によって変更されました。**  
- レポート パーツを最後に変更したユーザーの名前です。 読み取り専用です。  
+ レポート パーツを最後に変更したユーザーの名前です。 読み取り専用。  
   
  **作成日**  
- レポート パーツが最初にサーバーにパブリッシュされた日付と時刻です。 読み取り専用です。  
+ レポート パーツが最初にサーバーにパブリッシュされた日付と時刻です。 読み取り専用。  
   
  **によって作成されました。**  
- レポート パーツを最初に作成したユーザーの名前です。 読み取り専用です。  
+ レポート パーツを最初に作成したユーザーの名前です。 読み取り専用。  
   
  **Size**  
- レポート パーツのファイル サイズです。 読み取り専用です。  
+ レポート パーツのファイル サイズです。 読み取り専用。  
   
  **名前**  
  レポート パーツを識別する名前を入力します。  
@@ -60,7 +59,7 @@ ms.locfileid: "48136249"
  このオプションをオンにすると、レポート マネージャーでリスト ビュー モードを使用しているユーザーにレポート パーツが表示されません。 リスト ビュー モードは、レポート サーバー フォルダー階層を参照するときの既定のビュー形式です。 リスト ビューのアイテムは非表示にできますが、詳細ビューのアイテムは非表示にできません。 アイテムへのアクセスを制限する場合は、ロールの割り当てを作成する必要があります。  
   
  **型**  
- レポート パーツの種類です。 読み取り専用です。  
+ レポート パーツの種類です。 読み取り専用。  
   
  **[適用]**  
  変更を保存します。  
@@ -80,8 +79,8 @@ ms.locfileid: "48136249"
 ## <a name="see-also"></a>参照  
  [レポート パーツの管理](report-design/managing-report-parts.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
+ [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [レポート ビルダーのレポート パーツおよびデータセット](report-data/report-parts-and-datasets-in-report-builder.md)  
   

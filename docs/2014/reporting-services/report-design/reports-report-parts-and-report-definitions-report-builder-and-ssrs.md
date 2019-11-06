@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
@@ -13,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5ec066e467ba83c33b95d46b4ed3cc593ecc551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d22c8c22170ecef301eacd553f15c16091c9a6e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105050"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] さまざまな用語を使用して、ユーザーに表示される初期定義、パブリッシュされたレポート、およびレポートを含む、さまざまな状態でのレポートについて説明します。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、初期定義、パブリッシュされたレポート、ユーザーに表示される表示レポートなど、レポートの異なる状態を示すさまざまな用語が使用されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,7 +63,7 @@ ms.locfileid: "48220312"
  レポートをサブスクライブします。このレポートは、指定した出力形式で電子メールの受信トレイまたはファイル共有に配信されます。レポートの既定の表示形式は HTML 4.0 です。 HTML に加えて、Excel、Word、XML、PDF、TIFF、CSV などのさまざまな出力形式でレポートを表示できます。 パブリッシュされたレポートと同様に、表示レポートは、レポート サーバーに戻って編集したり保存することはできません。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
- [レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [SQL Server 2014 のレポート ビルダー](../report-builder/report-builder-in-sql-server-2016.md)   
  [インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

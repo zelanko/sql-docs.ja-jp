@@ -12,12 +12,12 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 222cb3cd5511d4c663e86ba847090cc35d84e2cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143090"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200485"
 ---
 # <a name="use-cursors-odbc"></a>カーソルの使用 (OLE DB)
     
@@ -27,23 +27,23 @@ ms.locfileid: "48143090"
   
      SQL_ATTR_CURSOR_TYPE および SQL_ATTR_CONCURRENCY 属性を設定します (これは推奨オプションです)。  
   
-     スイッチまたは  
+     または  
   
      SQL_CURSOR_SCROLLABLE および SQL_CURSOR_SENSITIVITY 属性を設定します。  
   
 2.  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、SQL_ATTR_ROW_ARRAY_SIZE 属性を使用して行セットのサイズを設定します。  
   
-3.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合は、[SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) を呼び出して、カーソル名を設定することもできます。  
+3.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合は、[SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を呼び出して、カーソル名を設定することもできます。  
   
 4.  SQL ステートメントを実行します。  
   
-5.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合、手順 3. で [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) を使用してカーソル名を指定していなかったときは、[SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) を呼び出してカーソル名を取得することもできます。  
+5.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合、手順 3. で [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を使用してカーソル名を指定していなかったときは、[SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) を呼び出してカーソル名を取得することもできます。  
   
 6.  [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md) を呼び出して、行セット内の列数 (C) を取得します。  
   
      列方向のバインドを使用します。  
   
-     \- または -  
+     \- - または -  
   
      行方向のバインドを使用します。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48143090"
   
     -   SQL_NO_DATA が返された場合は、他に使用できる結果セットはありません。  
   
-    -   SQL_SUCCESS_WITH_INFO または SQL_ERROR が返された場合は、[SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) を呼び出して、PRINT ステートメントまたは RAISERROR ステートメントからの出力が使用可能かどうかを確認します。  
+    -   SQL_SUCCESS_WITH_INFO または SQL_ERROR が返された場合は、[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出して、PRINT ステートメントまたは RAISERROR ステートメントからの出力が使用可能かどうかを確認します。  
   
      バインドされたステートメントのパラメーターが出力パラメーターまたはストアド プロシージャの戻り値に使用されている場合は、バインドされたパラメーターのバッファーでデータを使用できるようになります。  
   
-     バインドされたパラメーターが使用される場合は、[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) または [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) への各呼び出しで、SQL ステートメントが S 回実行されます。S は、バインドされたパラメーターの配列内にある要素数です。 つまり、処理する結果のセットが S 個あることを意味します。これらの結果の各セットには、結果セット、出力パラメーター、および通常 SQL ステートメントの 1 回の実行で返されるリターン コードがすべて含まれます。  
+     バインドされたパラメーターが使用される場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) または [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) への各呼び出しで、SQL ステートメントが S 回実行されます。S は、バインドされたパラメーターの配列内にある要素数です。 つまり、処理する結果のセットが S 個あることを意味します。これらの結果の各セットには、結果セット、出力パラメーター、および通常 SQL ステートメントの 1 回の実行で返されるリターン コードがすべて含まれます。  
   
      結果セットに計算行が含まれている場合、各計算行は個々の結果セットとして使用できるようになります。 これらの計算結果セットは標準行内に点在し、標準行は複数の結果セットに分割されます。  
   

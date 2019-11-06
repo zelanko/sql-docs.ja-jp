@@ -2,21 +2,22 @@
 title: Reporting Services の移行 (SharePoint モード) | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9352bd7a073701686961a2924a374d28d645748e
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ddc628ee8becd79d2039a03529576c41df22a76b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712533"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570922"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] (../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   このトピックでは、SharePoint モードで配置した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint 環境間で移行するために必要な手順の概要について説明します。 具体的な手順は、以降元の SharePoint のバージョンによって異なる場合があります。 SharePoint モードのアップグレードと移行のシナリオの詳細については、「 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。 1 つのサーバーから別のサーバーにのみレポート アイテムをコピーする場合は、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
@@ -60,11 +61,11 @@ ms.locfileid: "52712533"
   
 |データベース|名前の例||  
 |--------------|------------------|-|  
-|カタログ データベース|ReportingService_[service application GUID] **(\*)**|ユーザーが移行。|  
-|一時データベース|ReportingService_[service application GUID]TempDB **(\*)**|ユーザーが移行。|  
+|カタログ データベース|ReportingService_[service application GUID] **(&#42;)**|ユーザーが移行。|  
+|一時データベース|ReportingService_[service application GUID]TempDB **(&#42;)**|ユーザーが移行。|  
 |警告データベース|ReportingService_[service application GUID]_Alerting|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成時に作成。|  
   
- **(\*)** 表に示した名前の例は、新しい SSRS サービス アプリケーションを作成する際に SSRS によって使用される名前付け規則に従っています。 別のサーバーから移行する場合、カタログ データベースと一時データベースの名前は元のインストールと同じになります。  
+ **(&#42;)** 表に示した名前の例は、新しい SSRS サービス アプリケーションを作成する際に SSRS によって使用される名前付け規則に従っています。 別のサーバーから移行する場合、カタログ データベースと一時データベースの名前は元のインストールと同じになります。  
   
 ####  <a name="bkmk_backup_operations"></a> バックアップ操作  
  ここでは、移行に必要な情報の種類と、バックアップの実行に使用するツールやプロセスについて説明します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e4bd5e87f611d88c0ad2c6ce3e3e95aeb2f0fffa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843796"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
   [!INCLUDE[ssDE](../includes/ssde-md.md)]は、データの格納、処理、セキュリティ確保のための中心的なサービスです。 [!INCLUDE[ssDE](../includes/ssde-md.md)]は、アクセス制御と高速トランザクション処理を提供しており、これらを活用すれば、企業内で最も大規模なデータ処理アプリケーションの要件にも対応できます。  
@@ -42,6 +41,6 @@ ms.locfileid: "48056492"
  ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[への XQuery 参照](/sql/xquery/xquery-language-reference-sql-server)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server リソース センター](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [SQL Server リソース センター](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

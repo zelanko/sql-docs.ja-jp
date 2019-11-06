@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], free-form attributes
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b23f989190b4b164385e790b01cfad7d0f759b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480155"
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
   属性とは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] エンティティに含まれるオブジェクトです。 属性値はエンティティのメンバーを表します。 属性を使用してリーフ メンバー、統合メンバー、またはコレクションを表すことができます。  
@@ -43,7 +42,7 @@ ms.locfileid: "48129622"
   
 -   自由形式属性。テキスト、数値、日付、またはリンクを自由形式で入力できます。  
   
--   ドメイン ベースの属性。エンティティによって設定されます。 詳細については、「[ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)」を参照してください。  
+-   ドメイン ベースの属性。エンティティによって設定されます。 詳細については、「 [ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)」を参照してください。  
   
 -   ファイル属性。ファイル、ドキュメント、または画像を格納するために使用されます。 ファイル属性は、ファイルに特定の拡張子を付けることによって、データの一貫性を確保するためのものです。 悪意のあるユーザーによる異なる種類のファイルのアップロードを防ぐことを保証するものではありません。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48129622"
 -   浮動小数点数が含まれていると、値が " *ラウンド トリップ* " されない場合があります。 値のラウンド トリップとは、演算で元の浮動小数点数が別の形式に変換され、逆の演算で変換後の形式から浮動小数点数に戻されて、最終の浮動小数点数が元の浮動小数点数に等しくなる場合をいいます。 変換で最小有効数字が 1 桁以上失われるか、または変更された場合は、ラウンド トリップが失敗します。  
   
 ## <a name="attribute-examples"></a>属性の例  
- 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があります。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
  ![自転車製品エンティティ テーブル](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   
@@ -79,25 +78,25 @@ ms.locfileid: "48129622"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しい自由形式のテキスト属性を作成する。|[テキスト属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|新しい自由形式の数値属性を作成する。|[数値属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|新しい自由形式のリンク属性を作成する。|[リンク属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|新しいファイル属性を作成する。|[ファイル属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
-|新しいドメインベース属性を作成する。|[ドメイン ベースの属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|新しい自由形式のテキスト属性を作成する。|[テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|新しい自由形式の数値属性を作成する。|[数値属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|新しい自由形式のリンク属性を作成する。|[リンク属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|新しいファイル属性を作成する。|[ファイル属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|新しいドメインベース属性を作成する。|[ドメイン ベースの属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |既存の属性の名前を変更する。|[属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|変更の追跡グループに既存の属性を追加する。|[変更の追跡グループに属性を追加&#40;マスター データ サービス&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|既存の属性を削除する。|[属性を削除する&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
+|変更の追跡グループに既存の属性を追加する。|[変更の追跡グループに属性を追加する (マスター データ サービス)](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|既存の属性を削除する。|[属性を削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |属性の順序を変更する。|[属性の順序を変更する](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [ドメイン ベース属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [属性グループ&#40;マスター データ サービス&#41;](attribute-groups-master-data-services.md)  
+-   [属性グループ (マスター データ サービス)](attribute-groups-master-data-services.md)  
   
--   [メンバー&#40;マスター データ サービス&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)  
   
--   [リーフ アクセス許可&#40;マスター データ サービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [リーフ権限 (マスター データ サービス)](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [アクセス許可を統合&#40;マスター データ サービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

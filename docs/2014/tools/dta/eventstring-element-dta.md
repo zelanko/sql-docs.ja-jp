@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ecfed53ebcecf38bbd46a6d3b15d1a8a8c741fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211114"
 ---
 # <a name="eventstring-element-dta"></a>EventString 要素 (DTA)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ワークロードを XML 入力ファイルで直接指定します。  
@@ -40,7 +39,7 @@ ms.locfileid: "48156022"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Weight`|任意。 対象のイベントに関するクエリの重み係数 (重要度の係数) を指定します。 使用して、`float`重みを指定するデータ型。 たとえば、`Weight`="100.01" のようにします。 `Weight` に指定できる最小値は「0」です。|  
+|`Weight`|任意。 対象のイベントに関するクエリの重み係数 (重要度の係数) を指定します。 重み係数の指定には、`float` データ型を使用します。 たとえば、`Weight`="100.01" のようにします。 `Weight` に指定できる最小値は「0」です。|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
@@ -48,19 +47,19 @@ ms.locfileid: "48156022"
 |--------------------|-----------------|  
 |**データ型と長さ**|`string`、長さは制限されます。|  
 |**既定値**|[なし] :|  
-|**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 指定する必要があります、 `EventString`、 `File`、または`Database`の子要素、`Workload`親が 1 つだけの型を使用できます。 たとえば、ワークロードを指定する場合、`EventString`要素を使用してワークロードは指定できません、`File`同じ XML 入力ファイル内の要素。|  
+|**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 `EventString` 親要素に対しては、`File`、`Database`、または `Workload` 子要素を指定する必要がありますが、使用できるのは 1 種類だけです。 たとえば、`EventString` 要素を使用してワークロードを指定した場合は、同じ XML 入力ファイル内でワークロードを `File` 要素で指定することはできません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[Workload 要素&#40;DTA&#41;](workload-element-dta.md)|  
+|**親要素**|[Workload 要素 &#40;DTA&#41;](workload-element-dta.md)|  
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[インライン ワークロードを使用した XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

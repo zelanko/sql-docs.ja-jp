@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b554ec2044e95304c995a0dde7d67c444fa2dc05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 07934e74138f17317eb0258e2b3ad0fa6d26254a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106320"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、グラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  
@@ -30,7 +29,7 @@ ms.locfileid: "48166122"
   
 2.  **[3D オプション]** で、 **[3D の有効化]** チェック ボックスをオンにします。  
   
-3.  (省略可) **[3D オプション]** では、3D の角度とシーンのオプションに関連するさまざまなプロパティを設定できます。 これらのプロパティの詳細については、次を参照してください。 [3 d、傾斜、およびその他の効果をグラフ&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)します。  
+3.  (省略可) **[3D オプション]** では、3D の角度とシーンのオプションに関連するさまざまなプロパティを設定できます。 これらのプロパティの詳細については、「 [グラフに対する 3D、傾斜、およびその他の効果 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)をクリックします。  
   
 4.  **[OK]** をクリックします。  
   
@@ -85,8 +84,8 @@ ms.locfileid: "48166122"
     4.  **[DrawingStyle]** プロパティで、値に **[Cylinder]** を指定します。  
   
 ## <a name="see-also"></a>参照  
- [3 D、傾斜、およびその他の効果をグラフ&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [グラフに対する 3D、傾斜、およびその他の効果 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

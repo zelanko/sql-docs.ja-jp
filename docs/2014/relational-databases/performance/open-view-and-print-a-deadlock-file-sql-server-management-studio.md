@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - deadlocks [SQL Server], printing files
@@ -16,12 +15,12 @@ ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a45daf3d20da1b431ce31ef5d6756ee17ce264f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150693"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>デッドロック ファイルを開く、表示、および印刷する方法 (SQL Server Management Studio)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でデッドロックが発生したら、デッドロック情報をキャプチャしてファイルに保存できます。 保存したデッドロック ファイルは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で開いて表示または印刷できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "48155492"
   
 4.  **[ファイル]** メニューの **[印刷]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Deadlock Graph の保存 &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
   
   

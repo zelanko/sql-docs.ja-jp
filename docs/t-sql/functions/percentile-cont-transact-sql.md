@@ -16,18 +16,17 @@ helpviewer_keywords:
 - analytic functions, PERCENTILE_CONT
 - PERCENTILE_CONT function
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f7e82e8577269a206e0172f170a66e1b1250c5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5c52b80601f7b1e8e73cffe0a6cad255d91ff82
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674866"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172977"
 ---
-# <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
+# <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の列値の連続型分散に基づく百分位数を計算します。 結果には値が挿入され、列内の特定の値と一致しない可能性があります。  
@@ -46,11 +45,11 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  計算する百分位数です。 値は 0.0 ～ 1.0 で指定してください。  
   
- WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
- 並べ替える数値の一覧を指定し、百分位数を計算します。 *order_by_expression* は 1 つだけ許可されます。 式は、真数型 (**int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney**、**money**) または概数型 (**float**、**real**) として評価される必要があります。 他のデータ型は許可されません。 既定の並べ替え順は昇順です。  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ] **)**  
+ 並べ替える数値の一覧を指定し、百分位数を計算します。 *order_by_expression* は 1 つだけ許可されます。 式は、真数型または概数型に評価される必要があります。他のデータ型は使用できません。 真数型には、**int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney**、**money** があります。 概数型は **float** と **real** です。 既定の並べ替え順は昇順です。  
   
  OVER **(** \<partition_by_clause> **)**  
- FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md). OVER 構文の \<ORDER BY clause> と \<rows or range clause> は、PERCENTILE_CONT 関数では指定できません。  
+ FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。 OVER 構文の \<ORDER BY clause> と \<rows or range clause> は、PERCENTILE_CONT 関数では指定できません。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float(53)**  
@@ -66,7 +65,7 @@ PERCENTILE_CONT ( numeric_literal )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-basic-syntax-example"></a>A. 基本構文例  
- 次の例では、PERCENTILE_CONT と PERCENTILE_DISC を使用して、各部門の従業員給与の中央値を検索します。 これらの関数は同じ値を返さない可能性があります。 これは、データセットに存在するかどうかに関係なく PERCENTILE_CONT では適切な値が挿入されるためですが、PERCENTILE_DISC では常にセットから実際の値を返します。  
+ 次の例では、PERCENTILE_CONT と PERCENTILE_DISC を使用して、各部門の従業員給与の中央値を検索します。 これらの関数は同じ値を返さない可能性があります。 PERCENTILE_CONT ではデータセットに存在するかどうかに関係なく適切な値が挿入され、PERCENTILE_DISC では常にセットから実際の値を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -94,11 +93,9 @@ Engineering            34.375       32.6923
 Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
+
 ### <a name="b-basic-syntax-example"></a>B. 基本構文例  
- 次の例では、PERCENTILE_CONT と PERCENTILE_DISC を使用して、各部門の従業員給与の中央値を検索します。 これらの関数は同じ値を返さない可能性があります。 これは、データセットに存在するかどうかに関係なく PERCENTILE_CONT では適切な値が挿入されるためですが、PERCENTILE_DISC では常にセットから実際の値を返します。  
+ 次の例では、PERCENTILE_CONT と PERCENTILE_DISC を使用して、各部門の従業員給与の中央値を検索します。 これらの関数は同じ値を返さない可能性があります。 PERCENTILE_CONT ではデータセットに存在するかどうかに関係なく適切な値が挿入され、PERCENTILE_DISC では常にセットから実際の値を返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -124,8 +121,6 @@ Shipping and Receiving 9.250000      9.0000
 ```  
   
 ## <a name="see-also"></a>参照  
- [PERCENTILE_DISC (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percentile-disc-transact-sql.md)  
+ [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
-  
-
-
+ 

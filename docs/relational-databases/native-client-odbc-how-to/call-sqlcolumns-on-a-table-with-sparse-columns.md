@@ -11,14 +11,13 @@ ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73bd92ad269d8b5593c1245b30d44a9bb5728708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987588"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>スパース列を持つテーブルに対する SQLColumns の呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47685410"
   
  /EHsc /D、"UNICODE"、および odbc32.lib を使用してコンパイルします。  
   
- 2 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで作成したテーブルを削除します。  
+ 2 番目 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルによって作成されたテーブルを削除します。  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

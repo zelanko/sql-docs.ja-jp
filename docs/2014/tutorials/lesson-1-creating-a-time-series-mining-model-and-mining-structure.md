@@ -1,27 +1,26 @@
 ---
-title: 'レッスン 1: 時系列マイニング モデルとマイニング構造の作成 |Microsoft Docs'
+title: レッスン 1:タイム シリーズ マイニング モデルとマイニング構造の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678449"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>レッスン 1: 時系列マイニング モデルおよびマイニング構造の作成
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>レッスン 1:時系列マイニング モデルおよびマイニング構造の作成
   このレッスンでは、履歴データを基に時間の経過に応じて値を予測するためのマイニング モデルを作成します。 モデルを作成すると、基になる構造が自動的に生成され、追加のマイニング モデルのベースとして使用できるようになります。  
   
- このレッスンは、予測モデルおよび Microsoft タイム シリーズ アルゴリズムの要件について理解していることを前提としています。 詳細については、「 [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)」を参照してください。  
+ このレッスンは、予測モデルおよび Microsoft Time Series アルゴリズムの要件について理解していることを前提としています。 詳細については、「 [Microsoft Time Series アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)」を参照してください。  
   
 ## <a name="create-mining-model-statement"></a>マイニング モデルのステートメントを作成します。  
  使用するマイニング モデルを直接作成し、基になるマイニング構造を自動的に生成するために、 [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
@@ -60,7 +59,7 @@ CREATE MINING MODEL [Mining Model Name]
 <key columns>  
 ```  
   
- コードの次の行では、予測対象となるモデル内の列を定義します。 1 つのマイニング モデルに複数の予測可能な属性を含めることができます。 予測可能な属性が複数ある場合は、Microsoft タイム シリーズ アルゴリズムによって系列ごとに個別に分析が生成されます。  
+ コードの次の行では、予測対象となるモデル内の列を定義します。 1 つのマイニング モデルに複数の予測可能な属性を含めることができます。 予測可能な属性が複数ある場合は、Microsoft Time Series アルゴリズムによって系列ごとに個別に分析が生成されます。  
   
 ```  
 <predictable attribute columns>  
@@ -84,7 +83,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 2.  **サーバーへの接続** ダイアログ ボックスの**サーバーの種類**を選択します**Analysis Services**します。 **サーバー名**、型`LocalHost`のインスタンスの名前または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスンに接続します。 **[接続]** をクリックします。  
   
-3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -196,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  次のレッスンでは、マイニング モデルを追加します、 **Forecasting_MIXED**作成したマイニング構造です。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: 時系列マイニング構造へのマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [レッスン 2:時系列マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>参照  
  [タイム シリーズ モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

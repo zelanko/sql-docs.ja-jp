@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], remote servers
@@ -17,12 +16,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e2c7a12c45a0732014a20a7471d664e808b5883
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991165"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809790"
 ---
 # <a name="remote-servers"></a>リモート サーバー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、旧バージョンとの互換性を保つ目的でのみ、リモート サーバーがサポートされています。 新しいアプリケーションでは、リモート サーバーではなく、リンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
@@ -34,9 +33,9 @@ ms.locfileid: "49991165"
 ## <a name="remote-server-details"></a>リモート サーバーの詳細  
  リモート サーバーは、組で設定します。 1 組のリモート サーバーを設定するには、両方のサーバーが相互にリモート サーバーとして認識できるように構成します。  
   
- 通常は、リモート サーバーの構成オプションを設定する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ローカル コンピューターとリモート コンピューターの両方にリモート サーバー接続を可能にする既定値が設定されます。  
+ 通常は、リモート サーバーの構成オプションを設定する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、ローカル コンピューターとリモート コンピューターの両方にリモート サーバー接続を可能にする既定値が設定されます。  
   
- リモート サーバー アクセスが機能するには、ローカルとリモートの両方のコンピューターで **remote access** 構成オプションが 1 に設定されている必要があります。 (これは既定の設定です)。  **remote access** は、リモート サーバーからのログインを制御するオプションです。 この構成オプションを再設定するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** stored procedure or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してこのオプションを設定する場合は、 **[サーバーのプロパティ]** の [接続] ページで **[このサーバーへのリモート接続を許可する]** チェック ボックスをオンにします。 **[サーバーのプロパティ]** の [接続] ページにアクセスするには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** をクリックします。 **[サーバーのプロパティ]** ページで、 **[接続]** ページをクリックします。  
+ リモート サーバー アクセスが機能するには、ローカルとリモートの両方のコンピューターで **remote access** 構成オプションが 1 に設定されている必要があります。 (これは既定の設定です)。**remote access** は、リモート サーバーからのログインを制御するオプションです。 この構成オプションを再設定するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** ストアド プロシージャまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してこのオプションを設定する場合は、 **[サーバーのプロパティ]** の [接続] ページで **[このサーバーへのリモート接続を許可する]** チェック ボックスをオンにします。 **[サーバーのプロパティ]** の [接続] ページにアクセスするには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** をクリックします。 **[サーバーのプロパティ]** ページで、 **[接続]** ページをクリックします。  
   
  ローカル サーバーからリモート サーバー構成を無効にすると、組になっているリモート サーバー上のユーザーはそのローカル サーバーにアクセスできなくなります。  
   
@@ -47,10 +46,10 @@ ms.locfileid: "49991165"
  リモート ログインのマッピングは、リモート サーバーで設定する必要があります。 リモート サーバーはこれらのマッピングを使用して、指定のサーバーから RPC 接続用に受信したログインをローカル ログインにマップします。 リモート ログインのマッピングは、リモート サーバーで **sp_addremotelogin** ストアド プロシージャを使用して設定できます。  
   
 > [!NOTE]  
->  **では、** sp_remoteoption  **の** trusted [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションがサポートされていません。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **sp_remoteoption** の **trusted** オプションがサポートされていません。  
   
 ### <a name="setting-up-the-local-server"></a>ローカル サーバーのセットアップ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のローカル ログインの場合、ローカル サーバーでログインのマッピングを設定する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リモート サーバーへの接続にローカル ログインとパスワードが使用されます。 Windows 認証のログインの場合は、ローカル ログインのマッピングをローカル サーバーで設定します。このマッピングでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがリモート サーバーに RPC 接続する際に使用するログインとパスワードを定義します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のローカル ログインの場合、ローカル サーバーでログインのマッピングを設定する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、リモート サーバーへの接続にローカル ログインとパスワードが使用されます。 Windows 認証のログインの場合は、ローカル ログインのマッピングをローカル サーバーで設定します。このマッピングでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがリモート サーバーに RPC 接続する際に使用するログインとパスワードを定義します。  
   
  Windows 認証で作成されたログインの場合は、 **sp_addlinkedservlogin** ストアド プロシージャを使用して、ログイン名とパスワードへのマッピングを作成する必要があります。 このログイン名とパスワードは、 **sp_addremotelogin**によって作成され、リモート サーバーが予期していた受信ログイン名とパスワードに一致している必要があります。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "49991165"
 >  可能な場合は、Windows 認証を使用します。  
   
 ### <a name="remote-server-security-example"></a>リモート サーバーのセキュリティの例  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **と** serverReceive **という**インストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **の**Alice **という**認証のログインにマップするように構成されています。 **serverSend** から **Joe** という別のログインを受信すると、それは **serverReceive**** の **Joe** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインにマップされます。  
+ **serverSend** と **serverReceive** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 **serverReceive** の **Alice** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップするように構成されています。 **serverSend**からの **Joe**という別の受信ログインは、 **serverReceive**_の_ **Joe** という[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップされます。  
   
  次の Transact-SQL コードの例では、 `serverSend` に対して RPC を実行するように `serverReceive`を構成しています。  
   

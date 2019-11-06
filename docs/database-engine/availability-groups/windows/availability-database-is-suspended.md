@@ -1,6 +1,7 @@
 ---
-title: 可用性データベースが中断されている | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの可用性データベースの中断
+description: Always On 可用性グループ内のデータベースが中断されてしまった原因の可能性を特定します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0d87f43a7ec36af19cb141a2cb4c3724158f655f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a7a0a6d1fa10576eab5e515031e8233af95c2d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934913"
 ---
-# <a name="availability-database-is-suspended"></a>可用性データベースが中断されている
+# <a name="availability-database-is-suspended-for-an-availability-group"></a>可用性グループの可用性データベースの中断
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>概要  

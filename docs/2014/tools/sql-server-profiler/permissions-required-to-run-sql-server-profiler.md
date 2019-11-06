@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], permissions
@@ -17,12 +16,12 @@ ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 683fce95bca8a2e08b893031d88c46d8fe5de590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63240521"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server Profiler の実行に必要な権限
   既定では、[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] の実行には、トレースの作成に使用した Transact-SQL ストアド プロシージャと同じユーザー権限が必要です。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] を実行するには、ユーザーに ALTER TRACE アクセス権を許可する必要があります。 詳細については、「[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)」を参照してください。  
@@ -33,7 +32,7 @@ ms.locfileid: "48176082"
 ## <a name="permissions-used-to-replay-traces"></a>トレースの再生に使用される権限  
  トレースを再生するには、トレースを再生するユーザーに ALTER TRACE 権限が許可されている必要があります。  
   
- ただし、再生中に、再生されるトレース内で Audit Login イベントが検出されると、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] によって EXECUTE AS コマンドが使用されます。 ログイン イベントに関連付けられたユーザーの権限を借用するために、[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] によって EXECUTE AS コマンドが使用されます。  
+ ただし、再生中に、再生されるトレース内で Audit Login イベントが検出されると、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] によって EXECUTE AS コマンドが使用されます。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] はログイン イベントに関連付けられたユーザーの権限を借用するために、EXECUTE AS コマンドを使用します。  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] によって再生されるトレース内でログイン イベントが検出されると、次の権限のチェックが実行されます。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48176082"
   
 2.  再生されるトレースで、User2 のログイン イベントが検出されます。  
   
-3.  User2 の権限を借用するために、[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] によって EXECUTE AS コマンドが使用されます。  
+3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] は User2 の権限を借用するために、EXECUTE AS コマンドを使用します。  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は User2 の認証を試みます。認証の結果に応じて、次のいずれかが行われます。  
   
@@ -67,9 +66,9 @@ ms.locfileid: "48176082"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
- [トレースを再生します。](replay-traces.md)   
- [トレースを作成する&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
- [トレース テーブルを再生&#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [トレースの再生](replay-traces.md)   
+ [トレースの作成 &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
+ [トレース テーブルを再生する &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを再生する &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)  
   
   

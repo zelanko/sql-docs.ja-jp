@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c3f19fed072e693de6bbebb53354eae8c0bfaa0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbbbfbf442d36a5f78771e4d097888a86b441065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942142"
 ---
-# <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (TRANSACT-SQL)
+# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   高度な設定を構成します[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
@@ -48,10 +47,10 @@ EXEC managed_backup.sp_backup_config_advanced
   
 ##  <a name="Arguments"></a> 引数  
  @database_name  
- 有効にするためのデータベース名は、特定のデータベースでのバックアップを管理します。 NULL の場合、または *、し、この管理対象のバックアップは、サーバー上のすべてのデータベースに適用します。  
+ 特定のデータベースでマネージ バックアップを有効にするためのデータベース名。 NULL の場合、または *、この管理対象のバックアップは、サーバー上のすべてのデータベースに適用されます。  
   
  @encryption_algorithm  
- バックアップ中にバックアップ ファイルを暗号化するために使用する暗号化アルゴリズムの名前。 @encryption_algorithmは**SYSNAME**します。 データベースに対して初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成する場合の必須パラメーターです。 指定**NO_ENCRYPTION**バックアップ ファイルを暗号化したくない場合。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成設定を変更する場合、このパラメーターは省略可能です。パラメーターを指定しない場合は、既存の構成値が保持されます。 このパラメーターで許可される値は次のとおりです。  
+ バックアップ中にバックアップ ファイルを暗号化するために使用する暗号化アルゴリズムの名前。 @encryption_algorithmは **SYSNAME** します。 データベースに対して初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成する場合の必須パラメーターです。 指定**NO_ENCRYPTION**バックアップ ファイルを暗号化したくない場合。 変更するときに、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成設定では、このパラメーターは省略可能 - 既存の構成値を保持し、パラメーターが指定されていない場合。 このパラメーターに使用できる値は次のとおりです。  
   
 -   AES_128  
   
@@ -66,10 +65,10 @@ EXEC managed_backup.sp_backup_config_advanced
  暗号化アルゴリズムの詳細については、「 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)」をご覧ください。  
   
  @encryptor_type  
- '証明書' を指定できますが、暗号化機能の型または ' ASYMMETRIC_KEY"です。 @encryptor_typeは**nvarchar (32)** します。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
+ '証明書' を指定できますが、暗号化機能の型または ' ASYMMETRIC_KEY"です。 @encryptor_typeは **nvarchar (32)** します。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
   
  @encryptor_name  
- バックアップの暗号化に使用する既存の証明書または非対称キーの名前。 @encryptor_nameは**SYSNAME**します。 非対称キーを使用する場合は、拡張キー管理 (EKM) を使用して構成する必要があります。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
+ 既存の証明書またはバックアップの暗号化に使用する非対称キーの名前。 @encryptor_nameは **SYSNAME** します。 非対称キーを使用して場合拡張キー管理 (EKM) が構成する必要があります。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
   
  詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
@@ -97,7 +96,7 @@ Go
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [managed_backup.sp_backup_config_basic (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   

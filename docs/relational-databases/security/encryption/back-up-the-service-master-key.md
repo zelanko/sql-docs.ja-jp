@@ -1,7 +1,7 @@
 ---
 title: サービス マスター キーのバックアップ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,60 +11,49 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: a5eafe9bfc66dca1949d308b307addad059d3bef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ce0d7685c042e22e45cd85e05a8e7f779045ee6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856930"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902998"
 ---
 # <a name="back-up-the-service-master-key"></a>サービス マスター キーのバックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   この記事では、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用してサービス マスター キーをバックアップする方法について説明します。 サービス マスター キーは、暗号化階層のルートになります。 サービス マスター キーは、バックアップして安全な別の場所に保存してください。 このバックアップの作成は、サーバー管理操作の最初の段階で実行します。  
+
+## <a name="before-you-begin"></a>はじめに  
   
- **この記事の内容**  
+### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
+
+- マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 サービス マスター キーで暗号化されている場合は、マスター キーを明示的に開く必要はありません。ただし、マスター キーがパスワードのみで暗号化されている場合は、明示的に開く必要があります。  
   
--   **作業を開始する準備:**  
+- マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
   
-     [制限事項と制約事項](#Restrictions)  
+## <a name="security"></a>Security  
   
-     [Security](#Security)  
+### <a name="permissions"></a>アクセス許可
+データベースに対する CONTROL 権限が必要です。  
   
--   [サービス マスター キーをバックアップするには](#Procedure)  
+## <a name="using-transact-sql"></a>Transact-SQL の使用  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+### <a name="to-back-up-the-service-master-key"></a>サービス マスター キーをバックアップするには
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+1. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、バックアップするサービス マスター キーが格納されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
--   マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 サービス マスター キーで暗号化されている場合は、マスター キーを明示的に開く必要はありません。ただし、マスター キーがパスワードのみで暗号化されている場合は、明示的に開く必要があります。  
+2. バックアップ メディアでサービス マスター キーの暗号化に使用するパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。 詳細については、「 [Password Policy](../../../relational-databases/security/password-policy.md)」をご参照ください。  
   
--   マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
+3. バックアップしたキーのコピーを保存するためにリムーバブル バックアップ メディアを用意します。  
   
-###  <a name="Security"></a> セキュリティ  
+4. キーのバックアップを作成する NTFS ディレクトリを指定します。 このディレクトリは、次の手順で指定するファイルの作成先となります。 このディレクトリは、制限の厳しいアクセス制御リスト (ACL) で保護する必要があります。  
   
-####  <a name="Permissions"></a> Permissions  
- データベースに対する CONTROL 権限が必要です。  
+5. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-##  <a name="Procedure"></a> Transact-SQL の使用  
+6. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-#### <a name="to-back-up-the-service-master-key"></a>サービス マスター キーをバックアップするには  
+7. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、バックアップするサービス マスター キーが格納されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
-  
-2.  バックアップ メディアでサービス マスター キーの暗号化に使用するパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。 詳細については、「 [Password Policy](../../../relational-databases/security/password-policy.md)」をご参照ください。  
-  
-3.  バックアップしたキーのコピーを保存するためにリムーバブル バックアップ メディアを用意します。  
-  
-4.  キーのバックアップを作成する NTFS ディレクトリを指定します。 このディレクトリは、次の手順で指定するファイルの作成先となります。 このディレクトリは、制限の厳しいアクセス制御リスト (ACL) で保護する必要があります。  
-  
-5.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
-  
-6.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
-  
-7.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
-  
-    ```  
+    ```sql
     -- Creates a backup of the service master key.
     USE master;
     GO
@@ -74,12 +63,10 @@ ms.locfileid: "47856930"
     ```  
   
     > [!NOTE]  
-    >  キーのファイル パスとキーのパスワード (存在する場合) は、実際は上に示したものと異なります。 両方がサーバーとキーのセットアップで固有であることを確認してください。  
+    > キーのファイル パスとキーのパスワード (存在する場合) は、実際は上に示したものと異なります。 両方がサーバーとキーのセットアップで固有であることを確認してください。
   
-8.  ファイルをバックアップ メディアにコピーして、コピーしたファイルを確認します。  
+8. ファイルをバックアップ メディアにコピーして、コピーしたファイルを確認します。  
   
 9. バックアップを安全な場所に保存します。  
-  
+
  詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md)」と「[BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md)」を参照してください。  
-  
-  

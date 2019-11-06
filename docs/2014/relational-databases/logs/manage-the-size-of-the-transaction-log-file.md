@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
@@ -12,15 +12,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a681921eb1db363f8a2ddf7fc14836e0d9b781b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144333"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
-  場合によってはのトランザクション ログの物理ログ ファイルの展開、または物理的に圧縮する便利なことができますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のトランザクション ログ サイズの監視、トランザクション ログの圧縮、トランザクション ログ ファイルの追加と拡大、 **tempdb** トランザクション ログ増加率の最適化、トランザクション ログ ファイルのサイズ拡大の管理の方法について説明します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのトランザクション ログは、必要に応じて、その物理ログ ファイルを物理的に圧縮または展開することができます。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のトランザクション ログ サイズの監視、トランザクション ログの圧縮、トランザクション ログ ファイルの追加と拡大、 **tempdb** トランザクション ログ増加率の最適化、トランザクション ログ ファイルのサイズ拡大の管理の方法について説明します。  
   
   
 ##  <a name="MonitorSpaceUse"></a> モニターのログ領域の使用  
@@ -55,7 +55,7 @@ ms.locfileid: "48066762"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (ログ ファイルまたはファイルの **size**、**max_size**、**growth** 列を参照してください。)  
   
 > [!NOTE]  
->  データベースおよびログ ファイルの圧縮は、自動的に行われるように設定できます。 ただし、自動圧縮は推奨されず、`autoshrink` データベース プロパティは既定で FALSE に設定されています。 `autoshrink` を TRUE に設定すると、ファイル領域の 25% を超える領域が未使用の場合にのみ、自動圧縮によってファイルのサイズが縮小されます。 ファイルは、ファイル領域の 25% のみが未使用領域になるサイズ、またはファイルの元のサイズの、どちらか大きい方のサイズまで圧縮されます。 設定を変更する方法については、`autoshrink`プロパティを参照してください[データベースのプロパティ表示または変更](../databases/view-or-change-the-properties-of-a-database.md): を使用して、 **Auto Shrink**プロパティを**オプション**ページ、または[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options): AUTO_SHRINK オプションを使用します。  
+>  データベースおよびログ ファイルの圧縮は、自動的に行われるように設定できます。 ただし、自動圧縮は推奨されず、`autoshrink` データベース プロパティは既定で FALSE に設定されています。 `autoshrink` を TRUE に設定すると、ファイル領域の 25% を超える領域が未使用の場合にのみ、自動圧縮によってファイルのサイズが縮小されます。 ファイルは、ファイル領域の 25% のみが未使用領域になるサイズ、またはファイルの元のサイズの、どちらか大きい方のサイズまで圧縮されます。 設定を変更する方法については、`autoshrink`プロパティを参照してください[データベースのプロパティ表示または変更](../databases/view-or-change-the-properties-of-a-database.md)-を使用して、 **Auto Shrink**プロパティを**オプション**ページ、または[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-AUTO_SHRINK オプションを使用します。  
   
   
 ##  <a name="AddOrEnlarge"></a> 追加またはログ ファイルを拡大  
@@ -71,7 +71,7 @@ ms.locfileid: "48066762"
   
   
 ##  <a name="ControlGrowth"></a> トランザクション ログ ファイルのサイズ拡大を管理します。  
- トランザクション ログ ファイルのサイズの拡張を管理するには、[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) ステートメントを使用します。 次のことを考慮してください。  
+ トランザクション ログ ファイルのサイズの拡張を管理するには、[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) ステートメントを使用します。 次の点に注意してください。  
   
 -   現在のサイズを KB、MB、GB、および TB 単位で変更する場合は、SIZE オプションを使用します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48066762"
 -   ログ ファイルの最大サイズを KB、MB、GB、および TB 単位で制御するか、拡張値を UNLIMITED に設定するには、MAXSIZE オプションを使用します。  
   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   

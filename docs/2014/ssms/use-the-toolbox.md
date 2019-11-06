@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - adding controls
@@ -15,19 +15,19 @@ ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54942936f01c7702432b531a17566caa05fa8ecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280671"
 ---
 # <a name="use-the-toolbox"></a>ツールボックスの使用
   ツールボックスから、アイテム、テキスト、およびコントロールを選択してフォーム、ページ、およびデザイナーにドラッグできます。また、アイテムを後で再利用するために、ドラッグ先からツールボックスに戻すことができます。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、タスクをメンテナンス プラン上にドラッグできます。  
   
  ツールボックス内のアイテムは、タブと呼ばれるセクションにグループ分けされています。 よく使用されるツールボックスのタスクとその実行方法について、参照用一覧を次に示します。  
   
-|変換先|方法|  
+|目的|方法|  
 |--------|-------------|  
 |ツールボックスを開く|**[表示]** メニューの **[ツールボックス]** をクリックします。|  
 |ツールボックスを自動的に閉じる|ツールボックスを開きます。 **[ウィンドウ]** メニューの **[自動的に隠す]** をオンにします。|  

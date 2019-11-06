@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d6604a2fb40effa3fd419068ca2e604de4dde3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebdaa23db8602b608498b4012ffd71367bb99a0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084900"
 ---
-# <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
+# <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定したジョブのスケジュール設定を変更します。  
   
  **sp_update_jobschedule**旧バージョンとの互換性を保つのために提供されます。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Microsoft SQL Server の以前のバージョンで使用される構文の詳細については、TRANSACT-SQL Referencefor Microsoft SQL Server 2000 を参照してください。*します。*  
   
-## <a name="remarks"></a>Remarks  
- ジョブ スケジュールはジョブとは別々に管理できます。 スケジュールを更新する**sp_update_schedule**します。  
+## <a name="remarks"></a>コメント  
+ ジョブのスケジュールは、ジョブとは無関係に管理できるようにします。 スケジュールを更新する**sp_update_schedule**します。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  

@@ -1,24 +1,23 @@
 ---
-title: '手順 5: レッスン 4 のチュートリアル パッケージのテスト | Microsoft Docs'
+title: 手順 5:レッスン 4 のチュートリアル パッケージのテスト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c689797309d1a5cbad3d964514b45a3c824d576c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891292"
 ---
-# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>手順 5: レッスン 4 のチュートリアル パッケージのテスト
+# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>手順 5:レッスン 4 のチュートリアル パッケージのテスト
   壊れているファイル Currency_BAD.txt を実行すると、CurrencyKey 参照変換の照合結果の生成に失敗します。 ただし、CurrencyKey 参照変換のエラー出力は、失敗した行を新しい [Failed Rows] 変換先へリダイレクトするように構成されています。したがって、コンポーネント自体は失敗せず、パッケージは正常に実行されます。 エラーがある行はすべて、ErrorOutput.txt に書き込まれます。  
   
  この実習では、パッケージを実行して、変更したエラー出力構成をテストします。 パッケージが正常に実行されたら、ErrorOutput.txt ファイルの内容を確認します。  
@@ -45,7 +44,7 @@ ms.locfileid: "48073772"
   
 ### <a name="to-verify-the-contents-of-the-erroroutputtxt-file"></a>ErrorOutput.txt ファイルの内容を確認するには  
   
--   メモ帳などのテキスト エディターで ErrorOutput.txt ファイルを開きます。 既定の列の順序は、AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription です。  
+-   メモ帳などのテキスト エディターで ErrorOutput.txt ファイルを開きます。 既定の列の順序は次のとおりです。AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription です。  
   
      ファイルのすべての行には、一致しない CurrencyID 値 BAD、ErrorCode 値 -1071607778、ErrorColumn 値 0、ErrorDescription 値 "参照中に一致する行が見つかりませんでした" が含まれています。 エラーは列固有ではなく、ErrorColumn の値は 0 になっています。 これは失敗した参照操作を表します。 .  
   

@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性グループの拡張イベント (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性グループの拡張イベントを構成する
+description: SQL Server では、Always On 可用性グループに固有の拡張イベントが定義されています。 可用性グループのトラブルシューティングの際、セッション内のこのような拡張イベントを監視すれば、根本原因を容易に診断することができます。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,28 +10,21 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991556"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Always On 可用性グループの拡張イベント
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 可用性グループの拡張イベントを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server では、Always On 可用性グループに固有の拡張イベントが定義されています。 可用性グループのトラブルシューティングの際、セッション内のこのような拡張イベントを監視すれば、根本原因を容易に診断することができます。 可用性グループの拡張イベントは、次のクエリを使用して表示することができます。  
   
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Alwayson_health セッション](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [デバッグ用の拡張イベント](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Always On 可用性グループの拡張イベントのリファレンス](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health セッション  
  可用性グループを作成し、可用性グループ関連のイベントのサブセットをキャプチャすると、alwayson_health 拡張イベント セッションが自動的に作成されます。 このセッションは、可用性グループをトラブルシューティングする際にすぐに開始することができる有効かつ便利なツールとしてあらかじめ構成されています。 可用性グループの作成ウィザードでは、このウィザードで構成されたすべての参加中の可用性レプリカに対してセッションを自動的に開始します。  
   
@@ -39,9 +33,9 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  alwayson_health セッションの定義を表示するには:  
   
-1.  **オブジェクト エクスプローラー**で **[管理]**、**[拡張イベント]**、および **[セッション]** の順に展開します。  
+1.  **オブジェクト エクスプローラー**で **[管理]** 、 **[拡張イベント]** 、および **[セッション]** の順に展開します。  
   
-2.  **[Alwayson_health]** を右クリックし、**[セッションをスクリプト化]**、**[CREATE]** の順にポイントし、**[新しいクエリ エディター ウィンドウ]** をクリックします。  
+2.  **[Alwayson_health]** を右クリックし、 **[セッションをスクリプト化]** 、 **[CREATE]** の順にポイントし、 **[新しいクエリ エディター ウィンドウ]** をクリックします。  
 
 alwayson_health でカバーされているイベントの一部については、[拡張イベントのリファレンス](always-on-extended-events.md#BKMK_Reference)を参照してください。  
 
@@ -49,19 +43,19 @@ alwayson_health でカバーされているイベントの一部については�
 ##  <a name="BKMK_Debugging"></a> デバッグ用の拡張イベント  
  Alwayson_health セッションでカバーされている拡張イベントに加えて、SQL Server では可用性グループ用のさまざまなデバッグ イベントが定義されています。 このような追加の拡張イベントをセッションで利用するには、以下の手順に従います。  
   
-1.  **オブジェクト エクスプローラー**で **[管理]**、**[拡張イベント]**、および **[セッション]** の順に展開します。  
+1.  **オブジェクト エクスプローラー**で **[管理]** 、 **[拡張イベント]** 、および **[セッション]** の順に展開します。  
   
-2.  **[セッション]** を右クリックし、 **[新しいセッション]** をクリックします。 または、**[Alwayson_health]** を右クリックし、**[プロパティ]** を選択します。  
+2.  **[セッション]** を右クリックし、 **[新しいセッション]** をクリックします。 または、 **[Alwayson_health]** を右クリックし、 **[プロパティ]** を選択します。  
   
 3.  **[ページの選択]** ウィンドウで **[イベント]** をクリックします。  
   
 4.  イベント ライブラリの **[カテゴリ]** 列で **[alwayson]** を選択し、その他のカテゴリをすべてクリアします。  
   
-5.  **[チャネル]** 列で、**[デバッグ]** を選択します。 まだ選択されていない可用性グループの関連イベントがすべて、イベント ライブラリに表示されるようになります。  
+5.  **[チャネル]** 列で、 **[デバッグ]** を選択します。 まだ選択されていない可用性グループの関連イベントがすべて、イベント ライブラリに表示されるようになります。  
   
-6.  イベント ライブラリでイベントを強調表示し、**[>]** ボタンをクリックしてそのイベントをセッションのために選択します。  
+6.  イベント ライブラリでイベントを強調表示し、 **[>]** ボタンをクリックしてそのイベントをセッションのために選択します。  
   
-7.  セッションが終了したら、**[OK]** をクリックしてセッションを閉じます。 セッションが開始されると、選択したイベントがキャプチャされることを確認してください。  
+7.  セッションが終了したら、 **[OK]** をクリックしてセッションを閉じます。 セッションが開始されると、選択したイベントがキャプチャされることを確認してください。  
   
 ##  <a name="BKMK_Reference"></a> Always On 可用性グループの拡張イベントのリファレンス  
  このセクションでは、可用性グループを監視するために使用される一部の拡張イベントについて説明します。  
@@ -82,7 +76,7 @@ alwayson_health でカバーされているイベントの一部については�
   
  [error_reported (1480): データベース レプリカのロールの変更](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  可用性レプリカの状態が変化したときに発生します。 このイベントは、可用性グループの作成または可用性レプリカの追加によってトリガーすることができます。 失敗した自動フェールオーバーを診断する場合に便利です。 フェールオーバーの各手順をトレースするためにも使用できます。  
   
 #### <a name="event-information"></a>イベントに関する情報  
@@ -90,7 +84,7 @@ alwayson_health でカバーされているイベントの一部については�
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_replica_state_change|  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|運用|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -121,7 +115,7 @@ GO
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_group_lease_expired|  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|運用|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -149,7 +143,7 @@ GO
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |availability_replica_automatic_failover_validation||  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|分析|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -249,7 +243,7 @@ GO
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|data_movement_suspend_resume|  
-|カテゴリ|Alwayson|  
+|カテゴリ|Always on|  
 |Channel|運用|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -292,7 +286,7 @@ GO
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|alwayson_ddl_execution|  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|分析|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -301,8 +295,8 @@ GO
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
-|ddl_action|alwayson_ddl_action|REATE、ALTER、DROP といった DDL アクションの種類を示します。|  
-|ddl_phase|ddl_opcode|BEGIN、COMMIT、または ROLLBACK といった DDL 操作のフェーズを示しす。|  
+|ddl_action|alwayson_ddl_action|REATE、ALTER、DROP といった DDL アクションのCREATE、ALTER、または DROP。|  
+|ddl_phase|ddl_opcode|BEGIN、COMMIT、ROLLBACK といった DDL 操作のBEGIN、COMMIT、または ROLLBACK。|  
 |ステートメントから削除してください。|unicode_string|実行されたステートメントのテキスト。|  
   
 #### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
@@ -325,7 +319,7 @@ GO
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_replica_manager_state_change|  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|運用|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -383,5 +377,3 @@ GO
   
 ## <a name="next-steps"></a>次の手順  
  [イベント セッション データの表示](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

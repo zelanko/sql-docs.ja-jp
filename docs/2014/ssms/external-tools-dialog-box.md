@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - adding external tools
@@ -14,12 +14,12 @@ ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc4371de7ec5cda5ecf40aa86755ba936b6d04cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245629"
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
   **[外部ツール]** ダイアログ ボックスは、SQLCMD やメモ帳などの外部ツールを **[ツール]** メニューに追加するために使用します。 外部ツールを追加すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境で作業しながら、簡単に他のアプリケーションを起動できるようになります。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 また、一部のツールからの出力を **[出力]** ウィンドウに表示することもできます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
@@ -73,7 +73,7 @@ ms.locfileid: "48221472"
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**引数**|-A|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [外部ツールの引数](menu-help/external-tools.md)   
  [一般的なユーザー インターフェイス要素](general-user-interface-elements.md)  
   

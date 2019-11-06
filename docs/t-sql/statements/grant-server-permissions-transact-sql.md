@@ -15,15 +15,14 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - granting permissions [SQL Server], servers
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3262749d33b2fa5c371e7c950aeffeb42087b8f6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050793"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT (サーバーの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

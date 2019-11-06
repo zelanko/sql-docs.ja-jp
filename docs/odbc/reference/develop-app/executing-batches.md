@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901266"
 ---
 # <a name="executing-batches"></a>バッチの実行
-アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずおください。 これは、アプリケーション呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションは、行の数 – 生成および – セットを生成するステートメントが明示的なバッチおよび行の数と結果の可用性に関する情報を返しますの設定で後者の 2 つのオプションの中に、プロシージャでサポートされる結果がパラメーター化するかどうかを返します実行します。  
+アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずおください。 これは、アプリケーション呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションは、行の数を生成して、結果セットを生成するステートメントは明示的なバッチおよび行の数と結果の可用性に関する情報を返しますの設定で後者の 2 つのオプションの中に、プロシージャでサポートされてがパラメーター化するかどうかを返します実行します。  
   
  ステートメントのバッチがを通じて実行された**SQLExecute**または**SQLExecDirect**します。 たとえば、次の呼び出しは、明示的なバッチのステートメントを新しい販売注文を開くを実行します。  
   

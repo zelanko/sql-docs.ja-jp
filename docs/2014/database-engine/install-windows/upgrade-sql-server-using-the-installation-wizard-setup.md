@@ -13,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018317"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775408"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server 2014 へのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアップグレードできます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を以前のバージョンと並列でインストールすることもできます。または、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から既存データベース設定と構成の設定を移行し、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに適用することもできます。  
@@ -62,7 +62,7 @@ ms.locfileid: "51018317"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスをアップグレードするには、左側のナビゲーション領域の **[インストール]** をクリックし、**[[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からのアップグレード]** をクリックします。  
+2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスをアップグレードするには、左側のナビゲーション領域の **[インストール]** をクリックし、 **[[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からのアップグレード]** をクリックします。  
   
 3.  [プロダクト キー] ページで、オプションをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディションにアップグレードするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "51018317"
   
 6.  [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update] ページは、コントロール パネルの [すべてのコントロール パネル項目] で [Windows Update]、[設定の変更] の順にクリックし、[ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update] のチェック ボックスがオフになっている場合、次に表示されます。 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update] ページでチェック マークを付けると、Windows Update を調べるときに最新の更新プログラムが含まれるようにコンピューターの設定が変更されます。  
   
-7.  [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。  
+7.  [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。  
   
 8.  [セットアップ ファイルのインストール] ページのセットアップには、セットアップ ファイルのダウンロード、抽出、およびインストールの進行状況が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの更新プログラムが検出され、含まれるように指定されている場合は、その更新プログラムもインストールされます。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "51018317"
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
-     **[インストール済みのインスタンス]**  : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の名前付きインスタンスをインストールする必要があります。  
+     **[インストール済みのインスタンス]** : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の名前付きインスタンスをインストールする必要があります。  
   
 13. このトピックの残りの部分のワーク フローは、インストールするように指定した機能に応じて異なります。 選択した機能によっては、表示されないページもあります。  
   
-14. [サーバーの構成 - サービス アカウント] ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの既定のサービス アカウントが表示されます。 このページで実際に構成するサービスは、アップグレードする機能によって異なります。  
+14. [サーバーの構成 - サービス アカウント] ページには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの既定のサービス アカウントが表示されます。 このページで実際に構成するサービスは、アップグレードする機能によって異なります。  
   
      認証情報とログイン情報は、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスからそのまま移行されます。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、サービス アカウントを個別に構成して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに、サービスでのタスクの実行に必要な最小権限が付与されるようにすることをお勧めします。 詳細については、「 [Windows サービス アカウントと権限の構成](../configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "51018317"
 ## <a name="next-steps"></a>次の手順  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレード後は、次の作業を実行します。  
   
--   **サーバーの登録** : アップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのレジストリ設定が削除されます。 アップグレード後、サーバーを再登録する必要があります。  
+-   **サーバーの登録**: アップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのレジストリ設定が削除されます。 アップグレード後、サーバーを再登録する必要があります。  
   
--   **統計の更新** : クエリ パフォーマンスを最適化するため、アップグレードに続いてすべてのデータベース上で統計を更新することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー定義テーブル内の統計を更新するには、`sp_updatestats` ストアド プロシージャを使用します。  
+-   **統計の更新**: クエリ パフォーマンスを最適化するため、アップグレードに続いてすべてのデータベース上で統計を更新することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー定義テーブル内の統計を更新するには、`sp_updatestats` ストアド プロシージャを使用します。  
   
 -   **新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール内容の構成**: システムのセキュリティを向上させるため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、主要なサービスと機能を個別にインストールし、有効化できるようになっています。 外部からのアクセスの設定の詳細については、このリリースの Readme ファイルを参照してください。  
   

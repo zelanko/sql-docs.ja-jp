@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cfe743a7ae0f86477dbbb1b0cee8099d98784b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68fb0972c68378765a76cfc39e58f2056f554ff6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937463"
 ---
 # <a name="support-for-large-udts"></a>大きな UDT のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47623400"
 ## <a name="example"></a>例  
  1 つ目のコード リストは C# ソース コードです。 LargeStringUDT.cs という名前のファイルに貼り付けて、DLL にコンパイルします。 LargeStringUDT.dll を C ドライブのルート ディレクトリにコピーします。  
   
- 2 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは master データベースにアセンブリを作成します。  
+ 2 番目 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、master データベースにアセンブリを作成します。  
   
  odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "47623400"
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 4 つ目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、アセンブリを master データベースから削除します。  
+ 4 番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、master データベースからアセンブリを削除します。  
   
 ```  
 // LargeStringUDT.cs  

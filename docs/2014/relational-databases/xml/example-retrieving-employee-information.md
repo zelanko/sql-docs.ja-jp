@@ -1,5 +1,5 @@
 ---
-title: '例 : 従業員情報の取得 | Microsoft Docs'
+title: '例: 従業員情報の取得 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,24 +9,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b8a63758c6f2a3ebb9d04b02208266017f59ace
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63287838"
 ---
-# <a name="example-retrieving-employee-information"></a>例 : 従業員情報の取得
+# <a name="example-retrieving-employee-information"></a>例:従業員情報の取得
   この例では、各従業員の従業員 ID と名前を取得します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの場合、employeeID は Employee テーブルの BusinessEntityID 列から取得できます。 従業員名は、Person テーブルから取得できます。 これらのテーブルを結合する際には、BusinessEntityID 列を使用します。  
   
  FOR XML EXPLICIT 変換で、次に示す XML を生成するとします。  
   
 ```  
 <Employee EmpID="1" >  
-  <Name FName="Ken" LName="Sánchez" />  
+  <Name FName="Ken" LName="S??nchez" />  
 </Employee>  
 ...  
 ```  
@@ -87,7 +87,7 @@ FOR XML EXPLICIT;
   
  `<Employee EmpID="1">`  
   
- `<Name FName="Ken" LName="Sánchez" />`  
+ `<Name FName="Ken" LName="S??nchez" />`  
   
  `</Employee>`  
   
@@ -109,7 +109,7 @@ FOR XML EXPLICIT;
   
  `1   NULL    1                NULL         NULL`  
   
- `2   1       1                Ken          Sánchez`  
+ `2   1       1                Ken          S??nchez`  
   
  `1   NULL    2                NULL         NULL`  
   
@@ -129,7 +129,7 @@ FOR XML EXPLICIT;
   
  この処理が、行セット内の残りの行に対して繰り返されます。 FOR XML EXPLICIT で行セットを順に処理して、必要な XML を生成できるようにするには、ユニバーサル テーブル内の行の並び順が重要になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)  
   
   

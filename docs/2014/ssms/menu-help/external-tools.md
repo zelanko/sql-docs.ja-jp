@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cefca611c1f09db94c8e2df523121bdc9b2bf819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649697"
 ---
 # <a name="external-tools"></a>[外部ツール]
   このダイアログ ボックスを使用すると、SQL Server 構成マネージャーやメモ帳などの外部ツールを **[ツール]** メニューに追加できます。 外部ツールを追加することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で作業している間に他のアプリケーションを簡単に起動できます。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 さらに、一部のツールの出力は [出力] ウィンドウに表示できます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
@@ -78,5 +76,3 @@ ms.locfileid: "48227642"
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [スタート] **メニューで** ショートカットのプロパティを表示して、コンピューター上のファイルの場所を確認します。  
-  
-  

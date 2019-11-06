@@ -11,15 +11,14 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5bd71aa5fe43b953fc887e9cede1bab221bcc26c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986438"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の許可
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="AdditionalContactInfo" >  
   <xsd:complexType mixed="true" >  
@@ -155,7 +154,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -270,7 +269,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -296,7 +295,7 @@ SETUSER 'TestLogin1'
 GO  
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"   
 elementFormDefault="qualified">  
  <xsd:element name="pager" type="xsd:string"/>  
@@ -363,7 +362,7 @@ setuser 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -457,8 +456,8 @@ GO
 CREATE USER schemaUser WITH DEFAULT_SCHEMA=dbo  
 GO  
 CREATE XML SCHEMA COLLECTION MySC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns"  
-xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns"  
+xmlns:ns="http://ns">  
   
    <simpleType name="ListOfIntegers">  
       <list itemType="integer"/>  

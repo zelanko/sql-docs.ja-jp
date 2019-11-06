@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying registered server or server group names
@@ -16,12 +16,12 @@ ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 896caddd62add0d902b9083d6b69f06e87aa61dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7ac049dd49c447925a0205c50691465035abb5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150470"
 ---
 # <a name="change-the-name-of-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>登録済みサーバーまたは登録済みサーバー グループの名前の変更 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーまたは登録済みサーバー グループの名前を変更する方法について説明します。 この名前はいつでも変更できます。 [登録済みサーバー] でサーバーの名前を変更すると、名前の表示のみが変更されます。 別のサーバーに接続するには、登録済みサーバーの接続プロパティを編集する必要があります。  
@@ -30,13 +30,13 @@ ms.locfileid: "48066578"
   
 #### <a name="to-change-the-name-of-a-server"></a>サーバーの名前を変更するには  
   
-1.  [登録済みサーバー] でサーバーまたはサーバー グループを右クリックし、**[編集]** をポイントして、**[サーバーの登録プロパティ]** をクリックします。  
+1.  [登録済みサーバー] でサーバーまたはサーバー グループを右クリックし、 **[編集]** をポイントして、 **[サーバーの登録プロパティ]** をクリックします。  
   
 2.  **[登録済みサーバーの名前]** ボックスにサーバーの新しい登録名を入力し、 **[保存]** をクリックします。  
   
 #### <a name="to-change-the-name-of-a-server-group"></a>サーバー グループの名前を変更するには  
   
-1.  [登録済みサーバー] でサーバーまたはサーバー グループを右クリックし、**[編集]** をポイントして、**[サーバー グループのプロパティ]** をクリックします。  
+1.  [登録済みサーバー] でサーバーまたはサーバー グループを右クリックし、 **[編集]** をポイントして、 **[サーバー グループのプロパティ]** をクリックします。  
   
 2.  **[サーバー グループ名]** ボックスにサーバー グループの新しい名前を入力し、 **[保存]** をクリックします。  
   

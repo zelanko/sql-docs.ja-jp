@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b5124a091b59ec1669f5d77cbe989f780fee46c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107914"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  使用して作成した OLE オブジェクトのオブジェクト トークン**sp_OACreate**または null を指定します。 場合*objecttoken*が指定すると、そのオブジェクトのエラー情報が返されます。 NULL を指定した場合は、そのバッチ全体のエラー情報が返されます。  
   
- *ソース***出力**  
+ _ソース_**出力**  
  エラー情報のソースです。 指定する場合、ローカルがする必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**変数。 戻り値は必要に応じてローカル変数のサイズに切り捨てられます。  
   
- *説明***出力**  
+ _説明_**出力**  
  エラーの説明です。 指定する場合、ローカルがする必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**変数。 戻り値は必要に応じてローカル変数のサイズに切り捨てられます。  
   
- *helpfile* **出力**  
+ _helpfile_ **出力**  
  OLE オブジェクトのヘルプ ファイルです。 指定する場合、ローカルがする必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**変数。 戻り値は必要に応じてローカル変数のサイズに切り捨てられます。  
   
- *helpid* **出力**  
+ _helpid_ **出力**  
  ヘルプ ファイル コンテキスト ID です。 指定する場合、ローカルがする必要があります**int**変数。  
   
 > [!NOTE]  
@@ -91,12 +90,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**サーバーの実行に失敗しました (0x80080005)**|指定した OLE オブジェクトは、ローカル OLE サーバー (.exe ファイル) として登録されていますが、.exe ファイルが見つからないか、起動できません。|  
 |**指定されたモジュールは見つかりませんでした (0x8007007e)**|指定した OLE オブジェクトは、組み込み OLE サーバー (.dll ファイル) として登録されていますが、.dll ファイルが見つからないか、読み込むことができません。|  
 |**型が一致しません (0x80020005)**|プロパティ値またはメソッドの戻り値を格納するために使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ローカル変数のデータ型が、プロパティ値またはメソッドの戻り値の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型と一致しません。 または、プロパティやメソッドの戻り値を要求しましたが、そのプロパティやメソッドで戻り値が返されません。|  
-|**sp_OACreate の 'context' パラメーターのデータ型または値が無効です。(0x8004275B)**|コンテキスト パラメーターの値は 1、4、5 のいずれかであることが必要です。|  
+|**sp_OACreate の 'context' パラメーターのデータ型または値が無効です。(0x8004275B)**|コンテキスト パラメーターの値には、いずれかを指定する必要があります。1、4、または 5 です。|  
   
  HRESULT のリターン コードの処理に関する詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、OLE オートメーションのエラー情報を表示します。  

@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: eafa0e4260548ed90f039bcee71daea8a5b7ac9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: 57d174bbd24dea36470c4b8ca3e29f77dc4111f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935264"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>ナレッジ検出でドメインを Excel ファイルからインポートする
 
@@ -71,7 +70,7 @@ ms.locfileid: "52617382"
   
 14. ナレッジ ベースが発行されたことを確認し、 **[OK]** をクリックします。  
   
-##  <a name="FollowUp"></a> 補足情報: Excel ファイルからドメインをインポートした後  
+##  <a name="FollowUp"></a>補足情報: Excel ファイルからドメインをインポートした後  
  Excel ファイルからドメインをインポートした後で、ドメインのコンテンツに応じてナレッジをドメインに追加したり、ドメインをクレンジング プロジェクトや照合プロジェクトで使用したりすることができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」、「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」、「[データ クレンジング](../data-quality-services/data-cleansing.md)」、または「[データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
   
 ##  <a name="How"></a> インポートのしくみ  

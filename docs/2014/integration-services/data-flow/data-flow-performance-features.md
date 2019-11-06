@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828051"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -73,15 +72,15 @@ ms.locfileid: "48049512"
  ディスクへのページングが開始される大きさにまでバッファー サイズを増やさないでください。 ディスクへのページングが行われると、バッファー サイズが最適化されていない場合よりもパフォーマンスが低下します。 ページングが行われているかどうかを判断するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) のパフォーマンス スナップインで "Buffers spooled" パフォーマンス カウンターを監視します。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>並列実行用のパッケージの構成  
- 並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内に、さまざまなタスクの並列実行をサポートするために[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]2 つのプロパティを使用して:`MaxConcurrentExecutables`と`EngineThreads`します。  
+ 並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内で各種タスクの並列実行をサポートするには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で `MaxConcurrentExecutables` と `EngineThreads` の 2 つのプロパティを使用します。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables プロパティ  
- `MaxConcurrentExecutables`プロパティは、パッケージ自体のプロパティ。 このプロパティによって、同時に実行できるタスクの数が定義されます。 既定値は -1 です。これは、物理プロセッサまたは論理プロセッサの数に 2 を加えた数を示します。  
+ `MaxConcurrentExecutables` プロパティは、パッケージ自体のプロパティです。 このプロパティによって、同時に実行できるタスクの数が定義されます。 既定値は -1 です。これは、物理プロセッサまたは論理プロセッサの数に 2 を加えた数を示します。  
   
- このプロパティの動作を理解するために、3 つのデータ フロー タスクを含むサンプル パッケージについて考えてみます。 設定した場合`MaxConcurrentExecutables`3、3 つのデータ フロー タスクを同時に実行できます。 ただし、各データ フロー タスクに 10 個の変換元から変換先への実行ツリーが含まれているとすると、 `MaxConcurrentExecutables` を 3 に設定しても、各データ フロー タスク内の実行ツリーが並列実行されるかどうかは保証されません。  
+ このプロパティの動作を理解するために、3 つのデータ フロー タスクを含むサンプル パッケージについて考えてみます。 `MaxConcurrentExecutables` を 3 に設定すると、3 つすべてのデータ フロー タスクを同時に実行できます。 ただし、各データ フロー タスクに 10 個の変換元から変換先への実行ツリーが含まれているとすると、 `MaxConcurrentExecutables` を 3 に設定しても、各データ フロー タスク内の実行ツリーが並列実行されるかどうかは保証されません。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads プロパティ  
- `EngineThreads` プロパティは、各データ フロー タスクのプロパティです。 このプロパティによって、データ フロー エンジンが作成および並列実行できるスレッドの数が定義されます。 `EngineThreads`プロパティに当てはまります、両方のソース スレッドは、データ フロー エンジンがソースと変換および変換先用に作成するワーカー スレッドを作成します。 したがって、`EngineThreads` を 10 に設定すると、エンジンはソース スレッドとワーカー スレッドをそれぞれ 10 個まで作成できます。  
+ `EngineThreads` プロパティは、各データ フロー タスクのプロパティです。 このプロパティによって、データ フロー エンジンが作成および並列実行できるスレッドの数が定義されます。 `EngineThreads` プロパティは、データ フロー エンジンが変換元用に作成するソース スレッドと、変換および変換先用に作成するワーカー スレッドの両方に適用されます。 したがって、`EngineThreads` を 10 に設定すると、エンジンはソース スレッドとワーカー スレッドをそれぞれ 10 個まで作成できます。  
   
  このプロパティの動作を理解するために、3 つのデータ フロー タスクを含むサンプル パッケージについて考えてみます。 各データ フロー タスクには、10 個の変換元から変換先への実行ツリーが含まれています。 各データ フロー タスクで EngineThreads を 10 に設定すると、30 個すべての実行ツリーを同時に実行できます。  
   
@@ -100,14 +99,14 @@ ms.locfileid: "48049512"
  クエリを作成するには、手動で入力するか、クエリ ビルダーを使用することができます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを実行すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [進行状況] タブに警告が表示されます。 これには、データ フローで利用できるが、それに続く下流のデータ フロー コンポーネントでは使用されないデータ列を示す警告も含まれます。 使用することができます、`RunInOptimizedMode`これらの列を自動的に削除するプロパティ。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを実行すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [進行状況] タブに警告が表示されます。 これには、データ フローで利用できるが、それに続く下流のデータ フロー コンポーネントでは使用されないデータ列を示す警告も含まれます。 `RunInOptimizedMode` プロパティを使ってこのような列を自動的に削除できます。  
   
 #### <a name="avoid-unnecessary-sorting"></a>不必要な並べ替えの回避  
  並べ替えは本質的に低速な処理であり、不必要な並べ替えを回避することで、パッケージのデータ フローのパフォーマンスを向上させることができます。  
   
  ソース データは、下流コンポーネントで使用される前に既に並べ替えられている場合があります。 このような状況は、SELECT クエリで ORDER BY 句を使用した場合、またはデータが並べ替え順でソースに挿入された場合に発生することがあります。 このようにソース データが事前に並べ替えられている場合、データが並べ替え済みである旨のヒントを示すことで、並べ替え変換の使用を回避し、特定の下流変換の並べ替え要件を満たすことができます (たとえば、マージ変換およびマージ結合変換では、並べ替え済みの入力が必要です)。データが並べ替え済みである旨のヒントを示すには、次の作業を行う必要があります。  
   
--   設定、`IsSorted`プロパティに、アップ ストリームのデータ フロー コンポーネントの出力を`True`します。  
+-   上流データ フロー コンポーネントの出力の `IsSorted` プロパティを `True` に設定します。  
   
 -   データを並べ替える並べ替えキー列を指定します。  
   
@@ -131,20 +130,20 @@ ms.locfileid: "48049512"
  データ フロー内に複数の集計を作成する必要がある場合は、複数の変換を作成する代わりに、1 つの集計変換を使用した複数の集計を作成することを検討してください。 この方法は、集計が別の集計のサブセットである場合にパフォーマンスを向上させます。変換により内部ストレージを最適化でき、入力データのスキャンを一度だけ行えば済むためです。 たとえば、集計で GROUP BY 句と AVG 集計を使用する場合は、それらを 1 つの変換に結合することでパフォーマンスを向上させることができます。 ただし、1 つの集計変換内で複数の集計を実行すると集計操作がシリアル化されるので、複数の集計を個別に計算する必要がある場合は、パフォーマンスが向上しない可能性があります。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>あいまい参照変換とあいまいグループ化変換  
- あいまい参照変換とあいまいグループ化変換のパフォーマンスの最適化については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](http://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
+ あいまい参照変換とあいまいグループ化変換のパフォーマンスの最適化については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](https://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
   
 #### <a name="lookup-transformation"></a>参照変換  
  必要な列のみを参照する SELECT ステートメントを入力することによって、メモリ内の参照データのサイズを最小限に抑えます。 この方法は、テーブルまたはビュー全体を選択して大量の不要なデータを返す場合に比べてパフォーマンスに優れています。  
   
 #### <a name="merge-join-transformation"></a>Merge Join Transformation  
- 値を構成する必要が不要になった、`MaxBuffersPerInput`プロパティ マイクロソフトが行った変更がマージ結合変換で過剰なメモリを消費することのリスクを軽減するためです。 この問題は、マージ結合の複数の入力からデータが不均一なレートで生成される場合に発生することがありました。  
+ マイクロソフトが行った変更により、マージ結合変換によってメモリが過度に消費されるリスクが軽減したため、`MaxBuffersPerInput` プロパティの値を構成する必要はなくなりました。 この問題は、マージ結合の複数の入力からデータが不均一なレートで生成される場合に発生することがありました。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換  
  緩やかに変化するディメンション ウィザードおよび緩やかに変化するディメンション変換は、ほとんどのユーザーのニーズを満たす汎用ツールです。 ただし、ウィザードで生成されるデータ フローは、パフォーマンスのために最適化されていません。  
   
  通常、緩やかに変化するディメンション変換の中で最も低速なコンポーネントは、一度に 1 行に対して UPDATE を実行する OLE DB コマンド変換です。 したがって、緩やかに変化するディメンション変換のパフォーマンスを向上させる最も効果的な方法は、OLE DB コマンド変換を置き換えることです。 この変換は、更新するすべての行をステージング テーブルに保存する変換先コンポーネントに置き換えることができます。 その後、同時にすべての行に対して単一セット ベースの Transact-SQL UPDATE を実行する SQL 実行タスクを追加できます。  
   
- 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「 [プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](http://go.microsoft.com/fwlink/?LinkId=96602)」の「特有のディメンション シナリオ」を参照してください。  
+ 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「[Project REAL: Business Intelligence ETL Design Practices (プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法)](https://go.microsoft.com/fwlink/?LinkId=96602)」の「Unique dimension scenario, (固有のディメンション シナリオ)」をご覧ください。  
   
 ### <a name="destinations"></a>変換先  
  変換先のパフォーマンスを向上させるには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先の使用と、変換先のパフォーマンスのテストを検討してください。  
@@ -167,35 +166,35 @@ ms.locfileid: "48049512"
 ## <a name="related-content"></a>関連コンテンツ  
  **記事とブログ投稿**  
   
--   technet.microsoft.com の技術記事、「 [SQL Server 2005 Integration Services: パフォーマンスに関する戦略](http://go.microsoft.com/fwlink/?LinkId=98899)」。  
+-   technet.microsoft.com の技術記事、「[SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」  
   
--   technet.microsoft.com の技術記事、「 [Integration Services のパフォーマンス チューニング技法](http://go.microsoft.com/fwlink/?LinkId=98900)」。  
+-   technet.microsoft.com の技術記事、「[Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」  
   
 -   sqlcat.com の技術資料「 [同期変換を複数タスクに分割してパイプラインのスループットを向上](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)」  
   
--   msdn.microsoft.com の技術記事「 [Integration Services のパフォーマンス チューニング技法](http://go.microsoft.com/fwlink/?LinkId=220816)」  
+-   msdn.microsoft.com の技術記事「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)」  
   
--   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](http://go.microsoft.com/fwlink/?LinkId=220817)」  
+-   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](https://go.microsoft.com/fwlink/?LinkId=220817)」  
   
--   sqlcat.com の技術記事「 [SQL Server Integration Services のベスト プラクティス ベスト 10](http://go.microsoft.com/fwlink/?LinkId=220818)」  
+-   sqlcat.com の技術記事「 [SQL Server Integration Services のベスト プラクティス ベスト 10](https://go.microsoft.com/fwlink/?LinkId=220818)」  
   
--   sqlcat.com の技術記事とサンプル「 [SSIS の "Balanced Data Distributor"](http://go.microsoft.com/fwlink/?LinkId=220822)」  
+-   sqlcat.com の技術記事とサンプル「[SSIS の "Balanced Data Distributor"](https://go.microsoft.com/fwlink/?LinkId=220822)」  
   
--   blogs.msdn.com のブログ投稿「 [SSIS パッケージのパフォーマンスに関する問題のトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=238156)」  
+-   blogs.msdn.com のブログ投稿「 [SSIS パッケージのパフォーマンスに関する問題のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=238156)」  
   
  **ビデオ**  
   
--   ビデオ シリーズ [「Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series) (企業における SSIS パッケージの設計とパフォーマンス チューニング (SQL ビデオ シリーズ))](http://go.microsoft.com/fwlink/?LinkId=400878)」  
+-   ビデオ シリーズ [「Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series) (企業における SSIS パッケージの設計とパフォーマンス チューニング (SQL ビデオ シリーズ))](https://go.microsoft.com/fwlink/?LinkId=400878)」  
   
--   mssqltips.com のビデオ「 [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video) (企業での SSIS パッケージ データ フローのチューニング (SQL Server ビデオ))](http://technet.microsoft.com/sqlserver/ff686901.aspx)」  
+-   mssqltips.com のビデオ「 [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video) (企業での SSIS パッケージ データ フローのチューニング (SQL Server ビデオ))](https://technet.microsoft.com/sqlserver/ff686901.aspx)」  
   
--   mssqltips.com のビデオ「 [Understanding SSIS Data Flow Buffers (SQL Server Video) (SSIS データ フロー バッファーについて (SQL Server ビデオ))](http://technet.microsoft.com/sqlserver/ff686905.aspx)」  
+-   mssqltips.com のビデオ「 [Understanding SSIS Data Flow Buffers (SQL Server Video) (SSIS データ フロー バッファーについて (SQL Server ビデオ))](https://technet.microsoft.com/sqlserver/ff686905.aspx)」  
   
--   channel9.msdn.com のビデオ「 [Microsoft SQL Server Integration Services パフォーマンス デザイン パターン](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)」  
+-   channel9.msdn.com のビデオ「 [Microsoft SQL Server Integration Services パフォーマンス デザイン パターン](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)」  
   
--   sqlcat.com のプレゼンテーション「 [Microsoft IT による SQL Server 2008 SSIS データ フロー エンジンの機能強化の利用方法](http://go.microsoft.com/fwlink/?LinkId=217660)」  
+-   sqlcat.com のプレゼンテーション「 [Microsoft IT による SQL Server 2008 SSIS データ フロー エンジンの機能強化の利用方法](https://go.microsoft.com/fwlink/?LinkId=217660)」  
   
--   technet.microsoft.com のビデオ「 [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
+-   technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
 ## <a name="see-also"></a>参照  
  [パッケージ開発のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-development.md)   

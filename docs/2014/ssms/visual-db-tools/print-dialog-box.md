@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.Print
@@ -12,12 +12,12 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4692f5c0ceddea6f8a67ea9aacbcb1efe523db7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63313018"
 ---
 # <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス
   **[印刷]** ダイアログ ボックスのオプションを選択すると、ドキュメントの印刷方法を指定できます。  

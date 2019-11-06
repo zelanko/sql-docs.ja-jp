@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ff3112e552eb037f0f4c000cd0e62bbdfa952150
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7c9d5f86ba0be02ba21529aafc02897195ff4396
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032403"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481010"
 ---
 # <a name="create-a-linked-domain"></a>リンク ドメインの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのリンク ドメインを作成する方法について説明します。 リンク ドメインとは、既存の別のドメインから作成されるドメインで、リンク先のドメインから値、ルール、およびプロパティ (名前と説明を除く) をすべて継承します。 リンク ドメインは 1 つのセットとしてまとめて管理できます。 ドメインを別のドメインにリンクすることで、他のドメインの内容を継承するドメインを作成することができます。  
@@ -72,7 +72,7 @@ ms.locfileid: "51032403"
   
 4.  [ドメインの作成] ダイアログ ボックスで、ドメインの名前と説明を入力し、[OK] をクリックします。  
   
-##  <a name="FollowUp"></a> 補足情報: リンク ドメインの作成後  
+##  <a name="FollowUp"></a>補足情報: リンク ドメインの作成後  
  リンク ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Behavior"></a> リンク ドメインの動作  
@@ -80,7 +80,7 @@ ms.locfileid: "51032403"
   
 -   リンク ドメインの名前と説明を変更することができます。  
   
--   ドメインの **[データ型]**、 **[先頭の値を使用]**、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../../2014/data-quality-services/create-a-domain.md)」を参照してください。  
+-   ドメインの **[データ型]** 、 **[先頭の値を使用]** 、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../../2014/data-quality-services/create-a-domain.md)」を参照してください。  
   
 -   [ドメイン管理] ページの **[参照データ]** タブ、 **[ドメイン ルール]** タブ、 **[ドメイン値]** タブ、および **[用語ベースのリレーション]** タブの設定は、リンク ドメインとリンク先のドメインのどちらでも変更できます。一方を変更すると、もう一方に反映されます。  
   

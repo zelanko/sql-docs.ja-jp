@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bc86764dce10dfad5c25ca7a1bd7f3d2bc519c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678720"
 ---
 # <a name="workload-element-dta"></a>Workload 要素 (DTA)
   チューニング セッションで使用するワークロードを指定します。  
@@ -41,19 +40,19 @@ ms.locfileid: "48087302"
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|ごとに 1 回行えば済む`DTAInput`要素。|  
+|**個数**|`DTAInput` 要素につき 1 回の出現が必要です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**子要素**|[要素が&#40;DTA&#41;](file-element-dta.md)<br /><br /> [ワークロードの database 要素&#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString 要素&#40;DTA&#41;](eventstring-element-dta.md)|  
+|**子要素**|[File 要素 &#40;DTA&#41;](file-element-dta.md)<br /><br /> [Workload の Database 要素 &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString 要素 &#40;DTA&#41;](eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>コメント  
  ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 データベース エンジン チューニング アドバイザーは、ワークロードとして [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、トレース ファイル、およびトレース テーブルを使用できます。  
   
- XML 入力ファイルでワークロードを指定し、 **dta** ツールを使用してコマンド ラインでもワークロードを指定した場合、コマンド ラインで指定したワークロードがチューニングに使用されます。 コマンド ラインで指定したチューニング オプションはすべて、XML 入力ファイルで指定したオプションをオーバーライドします。 唯一の例外は、ユーザー定義の構成が XML 入力ファイルに評価モードで入力されている場合だけです。 たとえば、次の構成が入力、 `Configuration` XML 入力ファイルの要素と`EvaluateConfiguration`要素がチューニング オプションのいずれかとして指定されても、XML 入力ファイルで指定されたチューニング オプションで入力されたチューニング オプションが上書きされますコマンドライン。  
+ XML 入力ファイルでワークロードを指定し、 **dta** ツールを使用してコマンド ラインでもワークロードを指定した場合、コマンド ラインで指定したワークロードがチューニングに使用されます。 コマンド ラインで指定したチューニング オプションはすべて、XML 入力ファイルで指定したオプションをオーバーライドします。 唯一の例外は、ユーザー定義の構成が XML 入力ファイルに評価モードで入力されている場合だけです。 たとえば、XML 入力ファイルの `Configuration` 要素に構成が入力されていて、チューニング オプションの 1 つとして `EvaluateConfiguration` 要素も指定されている場合は、XML 入力ファイルで指定されたチューニング オプションがコマンド ラインで入力されたチューニング オプションをオーバーライドします。  
   
  各チューニング セッションには 1 つのワークロードを指定する必要があります。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48087302"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

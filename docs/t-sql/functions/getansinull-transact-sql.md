@@ -18,22 +18,21 @@ helpviewer_keywords:
 - default nullability
 - database nullability [SQL Server]
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: c8343a24f892c5b0058f1bd1a7c001221c8ff65f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940114"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   このセッションで使用するデータベースで NULL 値を許容するかどうかの既定の設定を返します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,13 +43,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>引数  
  '*database*'  
- NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 *データベース*は **char** または **nchar**です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar**です。  
+ NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 \* データベースは **char** または **nchar** です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- 指定したデータベースで NULL 値を許容するかどうかの設定で、NULL 値を許容し、列またはデータ型で NULL 値を許容するかどうかの設定が明示的に定義されていない場合、GETANSINULL は 1 を返します。 これは ANSI NULL の既定値です。  
+データベースの NULL 値の許容で null 値が許可されている場合、GETANSINULL は 1 を返します。 この戻り値には、列またはデータ型の NULL 値の許容が明示的に定義されていないことも必要です。 ANSI NULL の既定値は 1 です。 
   
  ANSI NULL の既定の動作を有効にするには、次のいずれかの条件を設定する必要があります。  
   

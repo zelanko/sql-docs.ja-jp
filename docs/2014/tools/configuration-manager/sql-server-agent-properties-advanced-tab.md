@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cb23239cde77810cae299f5c911889d21936194
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 898f16c0b0588fe61ae76e1e86e85713ba3f898a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137488"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
   既定では、5 つのプロパティが **[詳細設定]** タブに表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  

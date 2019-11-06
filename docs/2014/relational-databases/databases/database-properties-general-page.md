@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f80b9d8c2fb07928debc38077f05913eb6718fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916960"
 ---
 # <a name="database-properties-general-page"></a>[データベースのプロパティ] \([全般] ページ)
   このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
@@ -54,7 +53,7 @@ ms.locfileid: "48215502"
  **[照合順序名]**  
  データベースの照合順序を表示します。 照合順序は、 **[オプション]** ページで変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

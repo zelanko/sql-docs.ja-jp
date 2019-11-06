@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79324c99ead473c2212a30def597d88e0e408a18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 052e685615f654ad333ba441bb0c5cf5773a758b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017158"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access イベント クラス
   **Audit Schema Object Access** イベント クラスは、オブジェクト権限 (SELECT など) が使用されたときに発生します。  
@@ -43,7 +42,7 @@ ms.locfileid: "48050444"
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
-|**ObjectName**|**nvarchar**|権限がチェックされているオブジェクトの名前です。|34|はい|  
+|**ObjectName**|**nvarchar**|権限がチェックされているオブジェクトの名前です。|34|[はい]|  
 |**ObjectType**|**int**|イベントに関係するオブジェクトの種類を表す値。 この値は **sys.objects** カタログ ビューの type 列に対応します。 値については、「 [ObjectType トレース イベント列](objecttype-trace-event-column.md)」を参照してください。|28|はい|  
 |**OwnerName**|**nvarchar**|対象になっているオブジェクトの所有者のデータベース ユーザー名です。|37|はい|  
 |**ParentName**|**nvarchar**|オブジェクトを含むスキーマの名前です。|59|はい|  
@@ -58,7 +57,7 @@ ms.locfileid: "48050444"
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

@@ -19,29 +19,28 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c1c0c178fd1a448a86c5b5ce61fd12530eb4263
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94f823cdefe4b3e5a62beb62062356dad3a88a03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036117"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLCancel**ステートメントで処理を取り消します。  
   
  使用して、接続やステートメントの処理をキャンセルする[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLCancel(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -82,7 +81,7 @@ SQLRETURN SQLCancel(
 ## <a name="canceling-asynchronous-processing"></a>非同期処理のキャンセル  
  アプリケーションでは、関数を非同期的に呼び出す後、は、処理が終了したかどうか確認するには、繰り返し関数を呼び出します。 関数がまだ処理中、SQL_STILL_EXECUTING が返されます。 関数が処理を完了している場合は、さまざまなコードを返します。  
   
- すべての呼び出しを SQL_STILL_EXECUTING を返す関数に、アプリケーションを呼び出すことが**SQLCancel**関数をキャンセルします。 取り消し要求が成功した場合、ドライバーは SQL_SUCCESS を返します。 このメッセージは、関数が実際にキャンセルされたことを示していませんこれは、キャンセル要求が処理されたことを示します。 ときに、または関数が実際に取り消されたかどうかは、ドライバーに依存し、データ ソースによって異なります。 リターン コードが SQL_STILL_EXECUTING されるまで、元の関数を呼び出すアプリケーションを続行する必要があります。 関数が正常に取り消された場合、戻り値のコードは SQL_ERROR と SQLSTATE HY008 (操作が取り消されました)。 関数には、通常の処理が完了したら場合、戻り値のコードは SQL_SUCCESS や関数が成功した場合、SQL_SUCCESS_WITH_INFO または SQL_ERROR HY008 以外の SQLSTATE (操作が取り消されました)、関数が失敗した場合。  
+ すべての呼び出しを SQL_STILL_EXECUTING を返す関数に、アプリケーションを呼び出すことが**SQLCancel**関数をキャンセルします。 取り消し要求が成功した場合、ドライバーは SQL_SUCCESS を返します。 このメッセージは、関数が実際にキャンセルされたことを示していませんこれは、キャンセル要求が処理されたことを示します。 か、関数が実際に取り消されたかどうかは、ドライバーに依存し、データ ソースに依存します。 リターン コードが SQL_STILL_EXECUTING されるまで、元の関数を呼び出すアプリケーションを続行する必要があります。 関数が正常に取り消された場合、戻り値のコードは SQL_ERROR と SQLSTATE HY008 (操作が取り消されました)。 関数には、通常の処理が完了したら場合、戻り値のコードは SQL_SUCCESS や関数が成功した場合、SQL_SUCCESS_WITH_INFO または SQL_ERROR HY008 以外の SQLSTATE (操作が取り消されました)、関数が失敗した場合。  
   
 > [!NOTE]  
 >  ODBC 3.5 への呼び出しで**SQLCancel**と処理は行われません、ステートメントとして扱われません**SQLFreeStmt**が SQL_CLOSE のオプションで影響をまったくはありません。 カーソルを閉じるには、アプリケーションを呼び出す必要があります**SQLCloseCursor**ではなく、 **SQLCancel**します。  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f4e85c73beea1db9b3db7032492321556bb17253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818772"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263392"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47818772"
   
     後からアクセスしやすくするために、ユーザー トピックのブックマークを格納します。  
   
-[ヘルプに関するヘルプ] \([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。  
+[ヘルプに関するヘルプ] ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 可能な代替手段としては以下の方法があります。  
@@ -96,7 +95,7 @@ ms.locfileid: "47818772"
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>Management Studio のウィンドウ内でヘルプと SQL Server オンライン ブックを起動するための構成を行うには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]**、 **[ヘルプ]** の順に展開し、 **[全般]** をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** 、 **[ヘルプ]** の順に展開し、 **[全般]** をクリックします。  
   
 2.  **[次を使用してヘルプを表示する]** ボックスで **[統合ヘルプ ビューアー]** をクリックします。  
   

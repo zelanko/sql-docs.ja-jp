@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6654b7ec23e2aae071a7e4ce6cd360b7ef10e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63265143"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>カスタム レポート アイテムのデザイン時コンポーネントの作成
   カスタム レポート アイテムのデザイン時コンポーネントは、Visual Studio レポート デザイナー環境で使用できるコントロールです。 カスタム レポート アイテムのデザイン時コンポーネントは、ドラッグ アンド ドロップ操作を使用できるアクティブ化されたデザイン画面、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーとの統合、およびカスタム プロパティ エディター機能を提供します。  
@@ -29,9 +27,9 @@ ms.locfileid: "48107492"
  開発環境でデザイン時コンポーネントを使用して設定されるプロパティは、ホスト デザイン環境によってシリアル化およびシリアル化解除され、レポート定義言語 (RDL) ファイルに要素として格納されます。 レポート プロセッサによるレポートの実行時には、デザイン時コンポーネントを使用して設定されたプロパティが、レポート プロセッサによってカスタム レポート アイテムの実行時コンポーネントに渡されます。実行時コンポーネントは、カスタム レポート アイテムを表示してレポート プロセッサに返します。  
   
 > [!NOTE]  
->  カスタム レポート アイテムのデザイン時コンポーネントは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装されます。 ここでは、カスタム レポート アイテムのデザイン時コンポーネントに固有の実装詳細について説明します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用したコンポーネント開発の詳細については、MSDN ライブラリの「[Visual Studio のコンポーネント](http://go.microsoft.com/fwlink/?LinkId=116576)」を参照してください。  
+>  カスタム レポート アイテムのデザイン時コンポーネントは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装されます。 ここでは、カスタム レポート アイテムのデザイン時コンポーネントに固有の実装詳細について説明します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用したコンポーネント開発の詳細については、MSDN ライブラリの「[Visual Studio のコンポーネント](https://go.microsoft.com/fwlink/?LinkId=116576)」を参照してください。  
   
- 完全に実装されたカスタム レポート アイテムの例については、「[SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
+ 完全に実装されたカスタム レポート アイテムの例については、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
   
 ## <a name="implementing-a-design-time-component"></a>デザイン時コンポーネントの実装  
  カスタム レポート アイテムのデザイン時コンポーネントのメイン クラスは、`Microsoft.ReportDesigner.CustomReportItemDesigner` クラスから継承されます。 コンポーネント クラスには、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コントロールで使用される標準の属性に加えて、`CustomReportItem` 属性を定義してください。 この属性は、reportserver.config ファイルに定義されたカスタム レポート アイテム名と同じにする必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 属性の完全な一覧については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK ドキュメントの「属性」を参照してください。  
@@ -186,7 +184,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>装飾の使用  
- カスタム レポート アイテム クラスには、`Microsoft.ReportDesigner.Design.Adornment` クラスを実装することもできます。 装飾を使用すると、カスタム レポート アイテムのコントロールで、デザイン画面のメインの四角形の外に領域を作成できます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。 `Adornment`クラスで定義されている、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner`名前空間はのパススルー実装、<xref:System.Windows.Forms.Design.Behavior.Adorner>クラスは、Windows フォームで見つかりました。 完全なドキュメントについて、`Adorner`クラスを参照してください[動作サービスの概要](http://go.microsoft.com/fwlink/?LinkId=116673)MSDN ライブラリ。 実装するサンプル コードについては、`Microsoft.ReportDesigner.Design.Adornment`クラスを参照してください[SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)します。  
+ カスタム レポート アイテム クラスには、`Microsoft.ReportDesigner.Design.Adornment` クラスを実装することもできます。 装飾を使用すると、カスタム レポート アイテムのコントロールで、デザイン画面のメインの四角形の外に領域を作成できます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。 `Adornment`クラスで定義されている、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner`名前空間はのパススルー実装、<xref:System.Windows.Forms.Design.Behavior.Adorner>クラスは、Windows フォームで見つかりました。 完全なドキュメントについて、`Adorner`クラスを参照してください[動作サービスの概要](https://go.microsoft.com/fwlink/?LinkId=116673)MSDN ライブラリ。 実装するサンプル コードについては、`Microsoft.ReportDesigner.Design.Adornment`クラスを参照してください[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)します。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] での Windows フォームを使ったプログラミングの詳細については、MSDN ライブラリの次のトピックを参照してください。  
   
@@ -194,12 +192,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のコンポーネント  
   
--   チュートリアル : Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成  
+-   チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成  
   
 ## <a name="see-also"></a>参照  
  [カスタム レポート アイテムのアーキテクチャ](custom-report-item-architecture.md)   
  [カスタム レポート アイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)   
- [カスタム レポート アイテムを配置する方法](how-to-deploy-a-custom-report-item.md)  
+ [方法:カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
   
   

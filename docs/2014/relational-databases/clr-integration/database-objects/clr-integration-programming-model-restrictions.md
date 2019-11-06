@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7b7dfcbd9d7cc7407ed33cc0ea00e93df839b93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873820"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
   マネージ ストアド プロシージャやその他のマネージ データベース オブジェクトを作成する際はコードのチェックが実行される特定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が初めてデータベースに登録されたときに、マネージ コード アセンブリのチェックを実行を使用して、 `CREATE ASSEMBLY`ステートメント、および実行時にもします。 マネージド コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージ コードが満たす必要のある要件として、アセンブリが登録されているかどうかで異なります`SAFE`、 `EXTERNAL_ACCESS`、または`UNSAFE`、 `SAFE` 、厳密にされていると、以下に示します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48187942"
   
 -   サポートされているアセンブリの 1 つであること。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](supported-net-framework-libraries.md)します。  
   
--   使用している`CREATE ASSEMBLY FROM` *\<場所 >、* で使用できるすべての参照アセンブリとその依存関係と*\<場所 >* します。  
+-   使用している`CREATE ASSEMBLY FROM` *\<場所 >、* で使用できるすべての参照アセンブリとその依存関係と *\<場所 >* します。  
   
 -   使用している`CREATE ASSEMBLY FROM` *\<バイト... >、* 区切りのスペースを使用して、参照が指定のすべてのバイトとします。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48187942"
  コード アセンブリは、実行時に次の条件をチェックされます。 これらの条件のいずれかが見つからなかった場合、マネージド コードの実行が失敗し、例外がスローされます。  
   
 ### <a name="unsafe"></a>UNSAFE  
- `System.Reflection.Assembly.Load()` メソッドの呼び出しによるバイト列からのアセンブリの明示的な読み込み、および `Reflection.Emit` 名前空間を使用したアセンブリの暗黙的な読み込みは許可されません。  
+ 呼び出すことによって、アセンブリを明示的に読み込み、`System.Reflection.Assembly.Load()`メソッドからバイト配列、またはを使用して暗黙的に`Reflection.Emit`名前空間-は許可されていません。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  `UNSAFE` の条件がすべてチェックされていること。  

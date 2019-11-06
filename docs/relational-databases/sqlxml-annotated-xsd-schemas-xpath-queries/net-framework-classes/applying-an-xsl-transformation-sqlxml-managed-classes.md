@@ -1,5 +1,5 @@
 ---
-title: XSL 変換の適用 (SQLXML マネージ クラス) |マイクロソフトのドキュメント
+title: XSL 変換の適用 (SQLXML マネージクラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,21 @@ helpviewer_keywords:
 - SQLXML Managed Classes, applying XSL transformations
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edef83662d48ea7aa6dcfa1906946c3016d02b4c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 26a2cea817c7e1ca7855b48512f4bf645cf4dcc3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677541"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908496"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 変換の適用 (SQLXML マネージド クラス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   この例では、AdventureWorks データベースに対して SQL クエリを実行します。 クエリ結果には XSL 変換が適用され、従業員の名前と姓を示す 2 列のテーブルが生成されます。  
   
- SqlXmlCommand オブジェクトの XslPath プロパティは、XSL ファイルとディレクトリ パスを指定に使用されます。  
+ SqlXmlCommand オブジェクトの XslPath プロパティは、XSL ファイルとそのディレクトリパスを指定するために使用されます。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -66,7 +65,7 @@ class Test
   
 ```  
 <?xml version='1.0' encoding='UTF-8'?>  
- <xsl:stylesheet xmlns:xsl="https://www.w3.org/1999/XSL/Transform" version="1.0">   
+ <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">   
     <xsl:output method="html"/>  
     <xsl:template match = '*'>  
         <xsl:apply-templates />  
@@ -111,7 +110,7 @@ class Test
      これにより、実行可能ファイル (DocSample.exe) が作成されます。  
   
 4.  コマンド プロンプトで、DocSample.exe を実行します。  
-  
+
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>.NET Framework での XSL 変換の適用  
  前で示したように中間層で XSL 変換を適用する代わりに、クライアント側 (.NET Framework) で XSL 変換を適用することもできます。 次の C# コードは、.NET Framework で XSL 変換を適用するよう変更したものです。  
   

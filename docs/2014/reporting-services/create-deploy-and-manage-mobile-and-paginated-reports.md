@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b6837fdc076db7abfe4a085c2bb98201e1a298d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03a2965c837cc8842843c53b127323a1551ee08c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109640"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] すぐに使用できるツールとサービスを作成、展開、およびレポート組織を管理するための完全な範囲を提供します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、プログラミング機能を使用し、レポート作成機能を拡張したりカスタマイズしたりすることも可能です。  
@@ -66,7 +65,7 @@ ms.locfileid: "48055262"
   
  ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[機能リファレンス&#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server リソース センター](http://go.microsoft.com/fwlink/?linkID=219676)  
+## <a name="see-also"></a>参照  
+ [SQL Server リソース センター](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

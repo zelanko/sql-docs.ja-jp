@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fc5177fda3562efe4561f9d165629419f8a629b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111191"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC プログラマ&#39;リファレンス
 *ODBC プログラマ リファレンス*次のセクションが含まれています。  
@@ -40,7 +39,7 @@ ms.locfileid: "47850928"
 -   [ODBC の付録](../../odbc/reference/appendixes/odbc-appendixes.md)技術的な詳細を含み、ODBC エラー コード、データ型、および SQL 文法のテーブルを参照します。  
   
 ## <a name="working-with-the-odbc-documentation"></a>ODBC のドキュメントの操作  
- ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスの 3 つの領域にまたがる: SQL ステートメント、ODBC 関数呼び出し、C プログラミングします。 このドキュメントには、次の前提としています。  
+ ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスの使用では、3 つの領域に します。SQL ステートメント、ODBC 関数呼び出し、C プログラミングします。 このドキュメントには、次の前提としています。  
   
 -   C のプログラミング言語の知識。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "47850928"
   
  次の表記規則が使用されます。  
   
-|[形式]|使用目的|  
+|Format|使用目的|  
 |------------|--------------|  
 |選択 * から|大文字の文字は、SQL ステートメント、マクロ名、およびオペレーティング システム コマンド レベルで使用される用語を示します。|  
 |`RETCODE SQLFetch(hdbc)`|固定幅フォントは、コマンドラインのサンプルとプログラム コードに使用されます。|  
@@ -66,60 +65,60 @@ ms.locfileid: "47850928"
 ## <a name="recommended-reading"></a>推奨トピック  
  SQL の詳細については、次の標準を使用できます。  
   
--   データベース言語-SQL の整合性機能強化、ANSI、1989 ANSI X3.135 1989 にします。  
+-   データベースの整合性機能強化、ANSI、1989 ANSI X3.135 1989 と SQL の言語。  
   
--   データベースの言語: SQL: ANSI X3H2 および ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL 92)。  
+-   データベース表現言語 - SQL:ANSI X3H2 および ISO/IEC JTC1/SC21 WG3 9075:1992 (SQL 92)。  
   
--   グループを開く、データ管理: 構造化照会言語 (SQL) バージョン 2 (Open Group、1996)。  
+-   グループを開く、データ管理:構造化照会言語 (SQL) バージョン 2 (Open Group、1996)。  
   
  多くの書籍を標準とベンダー固有の SQL ガイドだけでなく、SQL をについて説明しますなど。  
   
--   日付、Darwen、Hugh での C. J.: *SQL Standard のガイド*(Addison-wesley、1993)。  
+-   C. J.、Darwen、Hugh での日付:*SQL Standard のガイド*(Addison-wesley、1993)。  
   
 -   Emerson、Sandra L.、Darnovsky、Marcy、および Bowman、Judith S.:*実際的な SQL Handbook* (Addison-wesley、1989)。  
   
--   Groff、James R. と Weinberg、Paul N.: *SQL を使用して*(Osborne Mcgraw-hill、1990)。  
+-   Groff、James R. と Weinberg、Paul N.:*SQL を使用して*(Osborne Mcgraw-hill、1990)。  
   
--   グルーバー、Martin: *SQL を理解する*(Sybex、1990)。  
+-   グルーバー、Martin:*SQL を理解する*(Sybex、1990)。  
   
--   回線のモジュラー ジャック L. および林さんの j.、Hursch: *SQL、構造化照会言語*(タブ書籍、1988)。  
+-   回線のモジュラー ジャック L. および林さんの j. Hursch:*SQL、構造化照会言語*(タブ書籍、1988)。  
   
--   Melton、Jim、および Simon、Alan R.:*新しい SQL を理解する: 完全なガイド*(Morgan Kaufmann 発行元、1993)。  
+-   Melton、Jim、および Simon、Alan R.:*新しい SQL をについて理解します。完全なガイド*(Morgan Kaufmann 発行元、1993)。  
   
--   Pascal 形式、Fabian: *SQL とリレーショナルの基礎*(M & T Books、1990)。  
+-   Fabian Pascal:*SQL とリレーショナルの基礎*(M & T Books、1990)。  
   
--   Trimble、J. Harvey、Jr. および Chappell、David: *SQL の概要*(Wiley、1989)。  
+-   Trimble、J. Harvey、Jr. および Chappell、David:*SQL の概要*(Wiley、1989)。  
   
--   Van der Lan、Rick F.: *SQL の概要*(Addison-wesley、1988)。  
+-   Van der Lan、Rick F.:*SQL の概要*(Addison-wesley、1988)。  
   
--   Vang、Soren: *SQL とリレーショナル データベース*(Microtrend 書籍、1990)。  
+-   Vang、Soren:*SQL とリレーショナル データベース*(Microtrend 書籍、1990)。  
   
--   Viescas、John: *SQL クイック リファレンス ガイド*(Microsoft Corp.、1989)。  
+-   Viescas、John:*SQL へのクイック リファレンス ガイド*(Microsoft Corp.、1989)。  
   
  トランザクション処理の詳細については、次を参照してください。  
   
--   グレーの場合、j. n. 最も、Andreas:*トランザクション処理: 概念と手法*(Morgan Kaufmann 発行元、1993)。  
+-   グレーの場合、j. n. 最も、Andreas:*トランザクションの処理:概念と手法*(Morgan Kaufmann 発行元、1993)。  
   
 -   Hackathorn、Richard D.:*エンタープライズ データベース接続*(Wiley & Sons、1993)。  
   
  コールレベル インターフェイスの詳細については、次の標準を使用できます。  
   
--   Open Group、*データ管理: SQL 呼び出しレベルのインターフェイス (CLI)、C451* (Open Group、1995)。  
+-   Open Group、*データ管理。SQL 呼び出しレベルのインターフェイス (CLI)、C451* (Open Group、1995)。  
   
 -   ISO/IEC 9075-3:1995、コールレベル インターフェイス (SQL/CLI)。  
   
  ODBC の詳細については、本の数はなどです。  
   
--   Geiger、Kyle: *ODBC 内*(Microsoft Press®、1995)。  
+-   Geiger、Kyle:*ODBC の内部*(Microsoft Press®、1995)。  
   
--   Gryphon、Robert、Charpentier、Luc、Oelschlager、Jon、Shoemaker、Andrew、Jim、クロスと Lilley、Albert W.: *ODBC 2 を使用して*(キュー、1994)。  
+-   Gryphon、Robert、Charpentier、Luc、Oelschlager、Jon、Shoemaker、Andrew、Jim、クロスと Lilley、Albert W.:*ODBC 2 を使用して*(キュー、1994)。  
   
--   Johnston、Tom および Osborne、マーク: *ODBC 開発者ガイド*(Howard W. Sams & 会社、1994)。  
+-   Johnston、Tom および Osborne、マークを付けます。*ODBC の開発者ガイド*(Howard W. Sams & 会社、1994)。  
   
--   北、Ken: *Windows マルチ DBMS プログラミング: C++、Visual Basic、ODBC、OLE 2 およびツールを使用して、プロジェクトの DBMS* (John Wiley & Sons, inc., 1995)。  
+-   北、Ken:*Windows のマルチ DBMS プログラミング:C++、Visual Basic、ODBC、OLE 2 およびツールを使用して、プロジェクトの DBMS* (John Wiley & Sons, inc., 1995)。  
   
--   Stegman、Michael O.、Signore、Robert、および Creamer、John: *ODBC ソリューション、Open Database Connectivity で分散環境*(Mcgraw-hill 刊、1995)。  
+-   Stegman、Michael O.、Signore、Robert、および Creamer、John:*ODBC ソリューション、Open Database Connectivity で分散環境*(Mcgraw-hill 刊、1995)。  
   
--   ウェルチ、Keith: *ODBC 2 を使用して*(キュー、1994)。  
+-   ウェルチ、Keith:*ODBC 2 を使用して*(キュー、1994)。  
   
--   Whiting、請求書: *Teach Yourself 21 日間に ODBC* (Howard W. Sams & 会社、1994)。
+-   Whiting、請求書:*Teach Yourself 21 日間に ODBC* (Howard W. Sams & 会社、1994)。

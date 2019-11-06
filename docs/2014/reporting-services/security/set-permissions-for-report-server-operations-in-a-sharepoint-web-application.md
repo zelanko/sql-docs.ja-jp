@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d9b9e174df4eef55a474e27613ac3101c3bfcaa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170995"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101546"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
   SharePoint 統合モードで動作しているレポート サーバーの場合、レポート、レポート モデル、および共有データ ソースの表示と管理の方法は、SharePoint サイトで定義されたセキュリティ設定で決定されます。 既定の SharePoint グループ、権限レベル、および権限の割り当てを使用している場合は、現在のセキュリティ設定を使用して、レポートやその他のドキュメントを操作できます。  
@@ -52,7 +51,7 @@ ms.locfileid: "48170995"
   
  あらかじめ定義された権限レベルを使用する場合、フル コントロール、デザイン、投稿、読み取り、および制限付きアクセスには既に上記の権限が含まれているので、必要な操作はありません。 ただし、カスタム権限レベルを使用したり、特定のユーザーまたはグループに割り当てた権限を編集したりする場合は、権限を手動で追加する必要があります。  
   
- "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 "参照操作におけるエラー : "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました” パブリッシュ操作におけるエラー: "ユーザー ‘\<domain>\\<user\>' には、この操作を行うのに必要なアクセス許可が与えられていません。"  
+ "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 参照操作エラーは次のとおりです。"レポート サーバーが SharePoint エラーを発生しました。 ---> System.UnauthorizedAccessException:アクセスが拒否されました。" パブリッシュ操作における、エラーします。"ユーザーに付与されるアクセス許可 '\<ドメイン >\\< ユーザー\>' 不十分なため、この操作を実行します"。  
   
 ##  <a name="permissionReports"></a> レポートの表示と管理の権限  
  レポート定義の権限は、レポートが含まれているライブラリのリスト権限によって定義されますが、個々のレポートに対して権限を設定してアクセスを制限することもできます。 次の表に、作業の一覧と、それぞれの作業をサポートする権限を示します。  

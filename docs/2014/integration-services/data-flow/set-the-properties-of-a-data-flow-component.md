@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f850c2420b4dbc28b4559e3d03ab36dbaafd08c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc360da93b905bed20f118812898b5c029c570cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770748"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
   変換元、変換先、変換などを含むデータ フロー コンポーネントのプロパティを設定するには、次の機能のいずれかを使用します。  
@@ -90,7 +89,7 @@ ms.locfileid: "48127472"
     -   使用できる入力列の一覧を表示して、出力列の名前を更新するには、 **[入力列]** タブをクリックします。  
   
         > [!NOTE]  
-        >  [入力列] タブは、変換または変換先を使用した作業でのみ使用できます。 詳しくは、「 [Integration Services の変換](transformations/integration-services-transformations.md)」をご覧ください。  
+        >  [入力列] タブは、変換または変換先を使用した作業でのみ使用できます。 詳細については、「 [Integration Services の変換](transformations/integration-services-transformations.md)」を参照してください。  
   
     -   入力、出力、およびエラー出力のプロパティや、列自体のプロパティを表示および変更するには、 **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48127472"
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services の変換](transformations/integration-services-transformations.md)  
   
   

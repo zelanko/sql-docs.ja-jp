@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9ba2b49bf53a95836923e8016b68e2fbf7c7bbb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a028fc4ee35caf1b4b0900a4042691188a05fb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855030"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908834"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>データベースを障害発生時点まで復元する - 完全復旧
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "47855030"
     ```  
   
 5.  次の RESTORE DATABASE ステートメントを実行して、データベースを復旧します。  
-  
+
     ```  
     RESTORE DATABASE <database_name>   
        WITH RECOVERY;  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
@@ -24,12 +23,12 @@ ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b32b1d1d6416c6a8c6097a79dcba18eb62a89d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140257"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211034"
 ---
 # <a name="start-a-trace"></a>トレースの開始
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して新しいトレース定義するか、テンプレートを作成したら、新しいトレース定義またはテンプレートを使用してデータのキャプチャを開始、一時停止、または停止することができます。  
@@ -44,8 +43,8 @@ ms.locfileid: "48140257"
 > [!NOTE]  
 >  既存のトレースを使用する場合、プロパティを参照できますが、変更できません。 プロパティを変更するには、トレースを停止または一時停止する必要があります。  
   
-## <a name="see-also"></a>参照  
- [サーバーへの接続後の自動的なトレースの開始&#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+## <a name="see-also"></a>関連項目  
+ [サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [トレースの一時停止 &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [トレースの停止 &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [トレース ウィンドウの消去 &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

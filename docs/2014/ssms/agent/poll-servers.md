@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - target servers [SQL Server], polling interval
@@ -16,20 +16,20 @@ ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde632ee5769a43daf29553213533afeac12d804
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63062210"
 ---
 # <a name="poll-servers"></a>サーバーのポーリング
-  マルチサーバー管理を実装している場合、対象サーバーからマスター サーバーに定期的にアクセスし、既に実行したジョブの情報をアップロードして新しいジョブをダウンロードします。 マスター サーバーにアクセスする処理は *サーバー ポーリング* と呼ばれ、定期的な *ポーリング間隔*で行われます。  
+  マルチサーバー管理を実装している場合、ターゲット サーバーからマスター サーバーに定期的にアクセスし、既に実行したジョブの情報をアップロードして新しいジョブをダウンロードします。 マスター サーバーにアクセスする処理は *サーバー ポーリング* と呼ばれ、定期的な *ポーリング間隔*で行われます。  
   
 ## <a name="polling-intervals"></a>ポーリング間隔  
- 対象サーバーからマスター サーバーに接続し、命令をダウンロードしてジョブの実行結果をアップロードする頻度をポーリング間隔 (既定値は 1 分) で制御します。  
+ ターゲット サーバーからマスター サーバーに接続し、命令をダウンロードしてジョブの実行結果をアップロードする頻度をポーリング間隔 (既定値は 1 分) で制御します。  
   
- 対象サーバーからマスター サーバーにポーリングするとき、対象サーバーに割り当てられる操作を **msdb** データベースの **sysdownloadlist** テーブルから読み取ります。 読み取った操作により、マルチサーバー ジョブや対象サーバーのさまざまな動作を制御します。 操作の例には、ジョブの削除、ジョブの挿入、ジョブの開始、対象サーバーのポーリング間隔の更新などがあります。  
+ ターゲット サーバーからマスター サーバーにポーリングするとき、ターゲット サーバーに割り当てられる操作を **msdb** データベースの **sysdownloadlist** テーブルから読み取ります。 読み取った操作により、マルチサーバー ジョブやターゲット サーバーのさまざまな動作を制御します。 操作の例には、ジョブの削除、ジョブの挿入、ジョブの開始、ターゲット サーバーのポーリング間隔の更新などがあります。  
   
  操作は次のいずれかの方法で **sysdownloadlist** テーブルに書き込まれます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48170772"
 EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
- このコマンドを実行すると、現在のジョブ定義が対象サーバーと同期されます。  
+ このコマンドを実行すると、現在のジョブ定義がターゲット サーバーと同期されます。  
   
  次の場合、操作を明示的に書き込む必要はありません。  
   

@@ -15,17 +15,16 @@ helpviewer_keywords:
 - system tables [Integration Services]
 - SSIS, system tables
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
-author: douglasl
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5b9f75adb3012394325c94b4ae2df8fcf644eb23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: lrtoyou1223
+ms.author: lle
+ms.openlocfilehash: 61379adc04eddaf276fae37879674b63833b76e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990141"
 ---
-# <a name="integration-services-tables-transact-sql"></a>Integration Services のテーブル (Transact-SQL)
+# <a name="integration-services-tables-transact-sql"></a>Integration Services のテーブル (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用される情報を格納する、msdb データベースのシステム テーブルについて説明します。  
@@ -37,7 +36,7 @@ ms.locfileid: "47747770"
  このテーブルは、パッケージで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログ プロバイダーが使用されている場合にのみ使用されます。  
   
  [sysssispackagefolders](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)  
- 論理フォルダーごとに 1 行が含まれている[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス パッケージを整理するために使用します。 列の値では、入れ子になったフォルダー間の親子リレーションシップが定義されます。  
+ 論理フォルダーごとに 1 行が含まれている[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス パッケージを整理するために使用します。 列の値は、入れ子になったフォルダー間の親/子リレーションシップを定義します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] サービスに接続した場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の階層ビューに、格納されているパッケージが表示されます。  

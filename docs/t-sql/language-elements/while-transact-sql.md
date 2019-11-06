@@ -19,19 +19,19 @@ helpviewer_keywords:
 - nested WHILE loops
 - WHILE keyword
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da3218e535ed93fab9eaee27e1f4849b74d9c0c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ae636e92d109ea8bc9f9ddd67f70a1657cb564
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840620"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388447"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
   SQL ステートメントまたはステートメント ブロックの実行を繰り返すための条件を設定します。 指定した条件が true の場合に限り、ステートメントは繰り返し実行します。 WHILE ループ内のステートメントの実行は、ループ内から BREAK キーワードおよび CONTINUE キーワードによって制御することができます。  
   
@@ -96,24 +96,29 @@ PRINT 'Too much for the market to bear';
  次の例では、`@@FETCH_STATUS` を使用して `WHILE` ループ内のカーソルの動作を制御します。  
   
 ```  
+DECLARE @EmployeeID as nvarchar(256)
+DECLARE @Title as nvarchar(50)
+
 DECLARE Employee_Cursor CURSOR FOR  
-SELECT EmployeeID, Title   
+SELECT LoginID, JobTitle   
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor;  
+FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
+      Print '   ' + @EmployeeID + '      '+  @Title 
       FETCH NEXT FROM Employee_Cursor;  
    END;  
 CLOSE Employee_Cursor;  
 DEALLOCATE Employee_Cursor;  
-GO  
+GO 
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: 単純な While ループ  
+### <a name="c-simple-while-loop"></a>C: シンプルな While ループ  
  次の例では、製品の平均表示価格が `$300` を下回る場合、`WHILE` ループが価格を倍にして、最高価格を選択します。 最高価格が `$500` 以下の場合は、`WHILE` ループが再開し、再び価格を倍にします。 このループは、最高価格が `$500` を超えるまで価格を倍増し続け、その後 `WHILE` ループから抜け出します。  
   
 ```  

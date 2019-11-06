@@ -1,12 +1,10 @@
 ---
-title: 作成、変更、およびテーブルの削除 |マイクロソフトのドキュメント
+title: テーブルの作成、変更、および削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,18 +14,18 @@ ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e423643374875063e348843d680b3219152af54a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a0d70b1748ddc597aa7a2676e5e2f938c235442
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214412"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782392"
 ---
 # <a name="creating-altering-and-removing-tables"></a>テーブルの作成、変更、および削除
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、テーブルは <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトによって表されます。 SMO オブジェクト階層では、<xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの下位にあります。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、プログラミング環境、テンプレート、およびアプリケーションを作成するプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、プログラミング環境、テンプレート、およびアプリケーションを作成するプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Visual Basic でのテーブルの作成、変更、および削除  
  このコード例では、型や目的の異なるさまざまな列があるテーブルを作成します。 また、ID フィールドの作成方法、主キーの作成方法、およびテーブル プロパティの変更方法の例を示します。  
@@ -37,7 +35,7 @@ ms.locfileid: "48214412"
 ## <a name="creating-altering-and-removing-a-table-in-visual-c"></a>Visual C# でのテーブルの作成、変更、および削除  
  このコード例では、型や目的の異なるさまざまな列があるテーブルを作成します。 また、ID フィールドの作成方法、主キーの作成方法、およびテーブル プロパティの変更方法の例を示します。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
         Server srv;   
@@ -84,7 +82,7 @@ ms.locfileid: "48214412"
 ## <a name="creating-altering-and-removing-a-table-in-powershell"></a>PowerShell でのテーブルの作成、変更、および削除  
  このコード例では、型や目的の異なるさまざまな列があるテーブルを作成します。 また、ID フィールドの作成方法、主キーの作成方法、およびテーブル プロパティの変更方法の例を示します。  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.Types")  
   
@@ -92,7 +90,7 @@ ms.locfileid: "48214412"
 CD \sql\localhost\default\Databases\  
   
 #And the database object corresponding to AdventureWorks2012.  
-$db = get-item AdventureWorks2012  
+$db = Get-Item AdventureWorks2012  
   
 #Create a SMO Table  
 $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlist $db, "Test_Table"  
@@ -109,16 +107,16 @@ $col2 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumen
 $col2.Identity = $true  
 $col2.IdentitySeed = 1  
 $col2.IdentityIncrement = 1  
-$tb.Columns.Add($col2)   
+$tb.Columns.Add($col2)
   
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Real  
 $col3 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Value", $Type  
-$tb.Columns.Add($col3)   
+$tb.Columns.Add($col3)
   
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $col4 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Date", $Type  
 $col4.Nullable = $false  
-$tb.Columns.Add($col4)   
+$tb.Columns.Add($col4)
   
 #Create the table  
 $tb.Create()  
@@ -126,17 +124,14 @@ $tb.Create()
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $col5 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"ExpiryDate", $Type  
 $col5.Nullable = $false  
-$tb.Columns.Add($col5)   
+$tb.Columns.Add($col5)
   
-#Run the Alter method to make the change on the instance of SQL Server.   
+#Run the Alter method to make the change on the instance of SQL Server.
 $tb.Alter()  
   
-#Remove the table from the database.   
+#Remove the table from the database.
 $tb.Drop()  
-  
 ```  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.SqlServer.Management.Smo.Table>  
-  
-  
+## <a name="see-also"></a>「  
+ <xref:Microsoft.SqlServer.Management.Smo.Table>

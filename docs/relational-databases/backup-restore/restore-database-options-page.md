@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3b590fa12fb2168a80c320068facb979702cd4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041570"
 ---
 # <a name="restore-database-options-page"></a>[データベースの復元] \([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47853920"
  復元操作の動作の特徴を変更するには、 **[復元オプション]** パネルのオプションを使用します。  
   
  **[既存のデータベースを上書きする [WITH REPLACE]]**  
- データベースの名前が、 **[データベースの復元]** ダイアログ ボックスの [[全般]](../../relational-databases/backup-restore/restore-database-general-page.md) ページにある **[復元先]** フィールドで指定した名前と同じ場合は、そのデータベースのファイルが上書きされます。 別のデータベースのバックアップを既存のデータベース名に復元する場合でも、既存のデータベースのファイルが上書きされます。 このオプションを選択することは、 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で REPLACE オプションを使用することと同じです。  
+ データベースの名前が、 **[データベースの復元]** ダイアログ ボックスの [[全般]](../../relational-databases/backup-restore/restore-database-general-page.md) ページにある **[復元先]** フィールドで指定した名前と同じ場合は、そのデータベースのファイルが上書きされます。 別のデータベースのバックアップを既存のデータベース名に復元する場合でも、既存のデータベースのファイルが上書きされます。 このオプションを選択することは、[RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で REPLACE オプションを使用することと同じです。  
   
 > [!CAUTION]  
 >  このオプションは、十分な検討を行った場合に限り使用してください。 詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
@@ -62,7 +61,7 @@ ms.locfileid: "47853920"
  復元操作後にデータベースの状態を確認するには、 **[復旧状態]** パネルのいずれかのオプションを選択する必要があります。  
   
  **RESTORE WITH RECOVERY**  
- **[全般]** ページの [[復元するバックアップ セット]](../../relational-databases/backup-restore/restore-database-general-page.md)グリッドでチェック ボックスがオンになっている最後のバックアップを復元した後に、データベースを復旧します。 これは既定のオプションで、 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH RECOVERY を指定することと同じです。  
+ **[全般]** ページの [[復元するバックアップ セット]](../../relational-databases/backup-restore/restore-database-general-page.md)グリッドでチェック ボックスがオンになっている最後のバックアップを復元した後に、データベースを復旧します。 これは既定のオプションで、[RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH RECOVERY を指定することと同じです。  
   
 > [!NOTE]  
 >  完全復旧モデルまたは一括ログ復旧モデルでは、すべてのログ ファイルを復元する場合にのみこのオプションを選択してください。  
@@ -110,7 +109,7 @@ ms.locfileid: "47853920"
   
 -   次のバックアップが完全バックアップまたは差分バックアップの場合は、 **[データベースの復元]** タスクを再度使用します。  
   
--   次のバックアップがファイル バックアップの場合は、**[ファイルおよびファイル グループの復元]** タスクを使用します。 詳細については、「[ファイルとファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)」を参照してください。  
+-   次のバックアップがファイル バックアップの場合は、 **[ファイルおよびファイル グループの復元]** タスクを使用します。 詳細については、「[ファイルとファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)」を参照してください。  
   
 -   次のバックアップがログ バックアップの場合は、 **[トランザクション ログの復元]** タスクを使用します。 トランザクション ログの復元による復元シーケンスの再開については、「 [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)」を参照してください。  
   

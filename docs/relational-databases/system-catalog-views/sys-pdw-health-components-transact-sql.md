@@ -3,21 +3,19 @@ title: sys.pdw_health_components (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8f0032eab0067f845ecc4f67a7b009d0ee1b676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5205c1ac6248f5aadee01410b4ba5e8f00332a73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127485"
 ---
 # <a name="syspdwhealthcomponents-transact-sql"></a>sys.pdw_health_components (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -26,7 +24,7 @@ ms.locfileid: "47731078"
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|component_id|**int**|コンポーネントまたはデバイスの一意の識別子。<br /><br /> このビューのキーです。|NOT NULL|  
+|component_id|**int**|コンポーネントまたはデバイスの一意の識別子。<br /><br /> このビューのキー。|NOT NULL|  
 |group_id|**Int**|このコンポーネントが所属するコンポーネントの論理グループです。 参照してください[sys.pdw_health_components (並列データ ウェアハウス)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)します。|NOT NULL|  
 |component_name|**nvarchar (255)**|コンポーネント名。|NOT NULL|  
   

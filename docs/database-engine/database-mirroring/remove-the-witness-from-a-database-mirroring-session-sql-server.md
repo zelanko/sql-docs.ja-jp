@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f33c5a51cbd49522e16bd72b63b5b416bb703d67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025272"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47773330"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ミラーリング監視サーバーの削除に使用するツール:**  
   
@@ -38,9 +37,9 @@ ms.locfileid: "47773330"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [ミラーリング監視サーバーを削除した後](#FollowUp)  
+-   **補足情報:** [ミラーリング監視サーバーを削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -82,7 +81,7 @@ ms.locfileid: "47773330"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> 補足情報: ミラーリング監視サーバーを削除した後  
+##  <a name="FollowUp"></a>補足情報: ミラーリング監視サーバーを削除した後  
  ミラーリング監視を無効にすると、 [動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)トランザクションの安全性の設定に応じて変更されます。  
   
 -   トランザクションの安全性の設定が FULL (既定値) の場合、セッションは自動フェールオーバーを伴わない高い安全性の同期モードで動作します。  

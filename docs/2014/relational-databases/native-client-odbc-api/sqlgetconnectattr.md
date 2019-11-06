@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectAttr |Microsoft Docs
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f62ec88ad7dc3ad7837a73b57abd215be29c3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128665"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 属性の一部が利用する`SQLGetConnectAttr`関数は、現在の設定をレポートに使用するとします。 これらの属性とは限りませんまで接続が確立されているかを使用して、属性が設定されている後に報告される値[SQLSetConnectAttr](sqlsetconnectattr.md)します。  
@@ -82,7 +82,7 @@ ms.locfileid: "48089422"
  Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetConnectAttr 関数](http://go.microsoft.com/fwlink/?LinkId=59347)   
+ [SQLGetConnectAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   

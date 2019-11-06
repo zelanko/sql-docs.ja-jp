@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924735"
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大規模な子を使用する場合**レコード セット**、特に、親のサイズと比較**レコード セット**、いくつかの子章のみにアクセスする必要がある場合がありますを使用する方が効率的、パラメーター化されたコマンド。  
@@ -36,7 +35,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 親と子テーブルに、一般的な cust_id で列名がある*します。* *子コマンド*が、"でしょうか"プレース ホルダー、RELATE 句で参照する (つまり、"…。パラメーター 0")。  
+ 親と子テーブルが共通の列名を含ま*cust_id*します。 *子コマンド*が、"でしょうか"プレース ホルダー、RELATE 句で参照する (つまり、"…。パラメーター 0")。  
   
 > [!NOTE]
 >  パラメーターの句は、shape コマンドの構文にのみ関連します。 ADO のいずれかに関連付けられてない[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトまたは[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。  
@@ -53,7 +52,7 @@ SHAPE {SELECT * FROM customer}
   
 5.  取得した子の行への参照 (子の章では、**レコード セット**) は、親の現在の行のチャプター列に配置されます**レコード セット**します。  
   
-6.  別の行のチャプター列にアクセスする場合は、手順 3 ~ 5 が繰り返されます。  
+6.  別の行のチャプター列にアクセスする場合は、3 ~ 5 の手順が繰り返されます。  
   
  **子行をキャッシュ**動的プロパティに設定されて**True**既定。 キャッシュの動作は、クエリのパラメーターの値によって異なります。 子の 1 つのパラメーターを持つクエリで**Recordset**その値を持つ子に対する要求間で特定のパラメーターの値がキャッシュされます。 次のコードでは、これを示しています。  
   
@@ -89,7 +88,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  WHERE 句を使用して、パラメーターは使用できません、SQL データ型 text、ntext および image またはエラーが発生する場合は、次の説明が含まれています:`Invalid operator for data type`します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

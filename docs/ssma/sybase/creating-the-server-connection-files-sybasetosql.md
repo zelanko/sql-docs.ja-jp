@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8cdb580a5a4221dd792d8d298ac4da3c4a333182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029362"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>サーバー接続ファイルの作成 (SybaseToSQL)
 スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバーの情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターがで`-c <serverconnectionfile>`します。 同じサーバー id がスクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
@@ -70,7 +69,7 @@ ms.locfileid: "47756160"
 ```  
   
 ```  
-2.<!—Sample of server connection file commands-->  
+2.<!-Sample of server connection file commands-->  
 <sybase name="<source-server-unique-name>">  
   
   <advanced-mode>  
@@ -108,6 +107,6 @@ ms.locfileid: "47756160"
 ## <a name="next-step"></a>次の手順  
 コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソールの実行](executing-the-ssma-console-sybasetosql.md)  
   

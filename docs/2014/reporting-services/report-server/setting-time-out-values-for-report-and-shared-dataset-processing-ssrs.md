@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - time-outs [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - report processing [Reporting Services], time-outs
 - report execution time-outs [Reporting Services]
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1ab4d3e1a5b251bb4ff2b311dc344dfad03b3ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103208"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)
   タイムアウト値を指定して、システム リソースの使用に制限を設定できます。 レポート サーバーでは、2 つのタイムアウト値がサポートされます。  
@@ -35,14 +34,14 @@ ms.locfileid: "48166262"
  タイムアウト エラーの大半は、クエリ処理中に発生します。 タイムアウト エラーが発生する場合は、クエリ タイムアウト値を増やしてください。 レポート実行タイムアウト値はクエリ タイムアウト値より大きい値になるように調整してください。レポート実行タイムアウト値には、クエリとレポート処理の両方が完了するのに十分な時間を設定する必要があります。  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>レポートの埋め込みデータセットに対するクエリ タイムアウトの設定  
- クエリ タイムアウト値は、レポートの作成中、埋め込みデータセットを定義するときに指定します。 レポートを使用するタイムアウト値が格納されている、`Timeout`レポート定義の要素。 既定では、この値は 30 秒に設定されます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
+ クエリ タイムアウト値は、レポートの作成中、埋め込みデータセットを定義するときに指定します。 タイムアウト値は、レポート定義の `Timeout` 要素の中にレポートと一緒に格納されます。 既定では、この値は 30 秒に設定されます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
  パブリッシュ済みレポートのプロパティを変更する権限を持っているユーザーは、レポート定義ファイルを編集することでこの値を再設定できます。  
   
  また、データ ドリブン サブスクリプションのクエリ タイムアウト値を指定することもできます。 クエリのタイムアウト値は、[データ ドリブン サブスクリプション] ページで指定します。 ここで指定した値によって、サブスクライバーのデータ ソースからデータを取得する際に、クエリ処理が完了するまでのレポート サーバーが待機する時間が決定されます。  
   
 ## <a name="setting-a-query-time-out-for-a-shared-dataset"></a>共有データセットに対するクエリ タイムアウトの設定  
- クエリ タイムアウト値は、共有データセットを作成または管理するときに、レポート サーバー上で秒単位で指定します。 既定でこの値は 0 秒に設定されています。0 秒を指定すると、タイムアウト値を指定していない場合と同じ意味になります。 詳細については、次を参照してください。[共有データセットの管理](../report-data/manage-shared-datasets.md)します。  
+ クエリ タイムアウト値は、共有データセットを作成または管理するときに、レポート サーバー上で秒単位で指定します。 既定でこの値は 0 秒に設定されています。0 秒を指定すると、タイムアウト値を指定していない場合と同じ意味になります。 詳細については、「 [共有データセットの管理](../report-data/manage-shared-datasets.md)」を参照してください。  
   
 ## <a name="setting-a-report-execution-time-out"></a>レポート実行タイムアウトの設定  
  レポート実行タイムアウト値を設定して、レポート サーバーがレポート処理に使用する時間を制限することができます。 レポート実行タイムアウト値は、レポート マネージャーで指定できます。 [サイトの設定] ページですべてのレポートの既定値を設定してから、特定のレポートの [実行] プロパティ ページでその値をオーバーライドできます。 既定では、この値は 1,800 秒に設定されます。 詳細については、「 [レポート処理プロパティの設定](set-report-processing-properties.md)」を参照してください。  
@@ -56,9 +55,9 @@ ms.locfileid: "48166262"
 >  RSReportServer.config ファイルの `RunningRequestsDbCycle` 設定で、実行中のジョブが評価される頻度を変更できます。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションを設定&#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](reporting-services-report-server-native-mode.md)   
- [実行中のプロセスを管理します。](../subscriptions/manage-a-running-process.md)   
+ [Manage a Running Process](../subscriptions/manage-a-running-process.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   
   

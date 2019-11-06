@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
@@ -15,12 +14,12 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bc7f87e7e648e81b4af7411a9f9474b6cc9818da
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812300"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、データベース エンジン アクセスのための Windows ファイアウォールを構成する方法について説明します。 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールを経由して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターで、アクセスを許可するようにファイアウォールを構成する必要があります。  
@@ -47,7 +46,7 @@ ms.locfileid: "48905918"
   
      [Security](#Security)  
   
--   **データベース エンジン アクセスのための Windows ファイアウォールの構成を使用します。**  
+-   **データベース エンジン アクセスを有効にするように Windows ファイアウォールを構成するには、次のものを使用します。**  
   
      [SQL Server 構成マネージャー](#SSMSProcedure)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48905918"
   
 3.  **[規則の種類]** ダイアログ ボックスで、 **[ポート]** をクリックし、 **[次へ]** をクリックします。  
   
-4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]** をクリックします。 選択**特定のローカル ポート**のインスタンスのポート番号を入力し、[!INCLUDE[ssDE](../../includes/ssde-md.md)]など`1433`の既定のインスタンス。 **[次へ]** をクリックします。  
+4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]** をクリックします。 選択**特定のローカル ポート**のインスタンスのポート番号を入力し、[!INCLUDE[ssDE](../../includes/ssde-md.md)]など`1433`の既定のインスタンス。 [**次へ**] をクリックします。  
   
 5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48905918"
   
 3.  **[規則の種類]** ダイアログ ボックスで、 **[プログラム]** をクリックし、 **[次へ]** をクリックします。  
   
-4.  **[プログラム]** ダイアログ ボックスで、 **[このプログラムのパス]** をクリックします。 **[参照]** をクリックし、ファイアウォール経由でアクセスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに移動して、 **[開く]** をクリックします。 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に**C:\Program files \microsoft SQL Server\MSSQL12 します。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**します。 **[次へ]** をクリックします。  
+4.  **[プログラム]** ダイアログ ボックスで、 **[このプログラムのパス]** をクリックします。 **[参照]** をクリックし、ファイアウォール経由でアクセスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに移動して、 **[開く]** をクリックします。 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に**C:\Program files \microsoft SQL Server\MSSQL12 します。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**します。 [**次へ**] をクリックします。  
   
 5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   

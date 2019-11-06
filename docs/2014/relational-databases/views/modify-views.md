@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f29dc88bf6298aebea60591034f0c7abc6765185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196397"
 ---
 # <a name="modify-views"></a>ビューの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ビューの定義後にビューの削除や再作成を行わずに、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューの名前または定義を変更できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "48167012"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48167012"
   
     3.  削除するテーブルのタイトル バーを右クリックし、 **[削除]** をクリックします。  
   
-4.  **[ファイル]** メニューの *[*view name の保存***]* をクリックします。  
+4.  **ファイル** メニューの **view name**_の保存_をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

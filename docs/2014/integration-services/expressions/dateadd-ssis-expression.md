@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8f49e6ebab115dd4d0363fd19ae477902389bd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769349"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 式)
   指定された日付要素に、日付または期間を示す数値を加算して、新しい DT_DBTIMESTAMP の値を返します。 数値のパラメーターは整数に、日付のパラメーターは有効な日付に評価される必要があります。  
@@ -97,6 +96,6 @@ DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")
  [DAY &#40;SSIS 式&#41;](day-ssis-expression.md)   
  [MONTH &#40;SSIS 式&#41;](month-ssis-expression.md)   
  [YEAR &#40;SSIS 式&#41;](year-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

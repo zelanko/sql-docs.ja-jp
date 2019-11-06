@@ -4,17 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -24,16 +13,32 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120479"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412691"
 ---
 # <a name="glossary"></a>用語集
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## <a name="terms"></a>用語  
   
 |項目|定義|  
@@ -175,10 +180,10 @@ ms.locfileid: "49120479"
 |証明書の発行者 (certificate issuer)|証明書をサブジェクトに発行した証明機関。|  
 |Certificate Lifecycle Manager Client (Certificate Lifecycle Manager Client)|スマート カードを管理するエンド ユーザーを支援する Certificate Lifecycle Manager (CLM) クライアント ツールのセット。 このツールは、Smart Card Self Service Control、Smart Card Personalization Control、および Certificate Profile Update Control で構成されます。 Smart Card Self-Service Control、Smart Card Personalization Control、および Certificate Profile Update Control の項をそれぞれ参照してください。|  
 |証明書管理者 (certificate manager)|他の Certificate Lifecycle Manager (CLM) ユーザーまたは CLM アプリケーションそのものを管理する適切な CLM 権限を持つ CLM ユーザー。|  
-|証明書管理者 Web ポータル (certificate manager Web portal)|Certificate Lifecycle Manager (CLM) サーバーで実行される Web アプリケーション。 証明書管理者は、このポータルを使用して他のユーザーの証明書とスマート カードを管理します。 証明書サブスクライバーと証明書管理者 Web ポータルは、同じ URL (Universal Resource Locator) でアクセスできますが、表示される内容はユーザーのロールと権限によって異なります。|  
+|証明書管理者 Web ポータル (certificate manager Web portal)|Certificate Lifecycle Manager (CLM) サーバーで実行される Web アプリケーション。 このポータルには、他のユーザーの証明書とスマート カードを管理する証明書管理者が使用できます。 証明書サブスクライバーと証明書管理者 Web ポータルは、同じ URL (Universal Resource Locator) でアクセスできますが、表示される内容はユーザーのロールと権限によって異なります。|  
 |Certificate Profile Update Control (Certificate Profile Update Control)|クライアント コンピューターでの Certificate Lifecycle Manager (CLM) プロファイルの更新を自動化する ActiveX コントロール。|  
 |証明書失効 (certificate revocation)|デジタル証明書を取り消す処理。|  
-|証明書サブスクライバー (certificate subscriber)|スマート カードの所持にかかわらず、証明書を必要とするユーザー。 証明書サブスクライバーは、ユーザー自身の証明書についてのみ実行される少数の機能にアクセスできます。|  
+|証明書サブスクライバー (certificate subscriber)|スマート カードの所持にかかわらず、証明書を必要とするユーザー。 証明書サブスクライバーは、少数のユーザーの証明書に対してのみ実行することができます関数にアクセスできます。|  
 |証明書サブスクライバー Web ポータル (certificate subscriber Web portal)|Certificate Lifecycle Manager (CLM) サーバーで実行される Web アプリケーション。 この CLM サーバーのコンポーネントは、セルフサービス モードではユーザーと直接対話します。 この特殊な機能は、Active Directory グループのメンバーと権限に基づいています。 証明書サブスクライバーと証明書管理者 Web ポータルは、同じ URL (Universal Resource Locator) でアクセスできますが、表示される内容はユーザーのロールと権限によって異なります。|  
 |証明書のテンプレート (certificate template)|目的の使用方法に基づいて証明書の書式と内容を指定する Windows のコンストラクト。 証明書の要求元は、Windows エンタープライズの証明機関 (CA) から証明書を要求するとき、証明書のテンプレートに基づいたさまざまな種類から証明書を選択できます。|  
 |change applier (change applier)|変更のバッチについて、競合検出、競合の処理、および変更の適用を実行するオブジェクト。|  
@@ -212,16 +217,16 @@ ms.locfileid: "49120479"
 |CLM Audit (CLM Audit)|Active Directory の Certificate Lifecycle Manager (CLM) 拡張アクセス許可で、CLM ポリシー テンプレートの生成と表示が可能になり、プロファイル テンプレート内で管理ポリシーを定義し、CLM レポートを生成できます。|  
 |CLM 資格情報 (CLM credentials)|Certificate Lifecycle Manager (CLM) に対するユーザーの認証に使用されるユーザー アカウント情報。 このような資格情報は、ドメインの資格情報またはワンタイム パスワードの形式で指定できます。|  
 |CLM Enroll (CLM Enroll)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、テンプレートを使用して証明書を発行する際にワークフローおよびデータを収集するように指定できます。 この拡張アクセス許可は、プロファイル テンプレートにのみ適用されます。|  
-|CLM Enrollment Agent (CLM Enrollment Agent)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、別のユーザーに代わってユーザーまたはグループによる証明書要求を実行できます。 発行された証明書のサブジェクトには、要求元の名前ではなく発信先ユーザーの名前が含まれます。|  
+|CLM Enrollment Agent (CLM Enrollment Agent)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、別のユーザーに代わってユーザーまたはグループによる証明書要求を実行できます。 要求元の名前ではなく、ターゲット ユーザーの名前、発行された証明書のサブジェクトが含まれます。|  
 |CLM Recover (CLM Recover)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、証明機関のデータベースからの暗号化キーの復元を開始できます。|  
-|CLM Renew (CLM Renew)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、登録要求を開始、実行、または完了できます。 更新要求によって、失効日が近いユーザーの証明書と新しい有効期間が指定された新しい証明書が置換されます。|  
+|CLM Renew (CLM Renew)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、登録要求を開始、実行、または完了できます。 書き換え要求には、新しい有効期間を持つ新しい証明書の有効期限の日付の近くにあるユーザーの証明書が置き換えられます。|  
 |CLM レポート (CLM reports)|Certificate Lifecycle Manager (CLM) 内の資格情報管理アクティビティに関する監査情報。|  
 |CLM Request Enroll (CLM Request Enroll)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、登録要求を開始、実行、または完了できます。|  
 |CLM Request Recover (CLM Request Recover)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、証明機関のデータベースからの暗号化キーの復元を開始できます。|  
-|CLM Request Renew (CLM Request Renew)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、登録要求を開始、実行、または完了できます。 更新要求によって、失効日が近いユーザーの証明書と新しい有効期間が指定された新しい証明書が置換されます。|  
-|CLM Request Revoke (CLM Request Revoke)|Active Directory を Certificate Lifecycle Manager (CLM) 拡張アクセス許可で、証明書の有効期限前に、証明書を取り消すことができます。 たとえば、ユーザーのコンピューターまたはスマート カードに障害が発生した場合 (盗用された場合) にこの機能を使用する必要があります。|  
-|CLM Request Unblock Smart Card (CLM Request Unblock Smart Card)|Active Directory の Certificate Lifecycle Manager (CLM) 拡張アクセス権で、スマート カードのキー マテリアルへのアクセスおよびキー マテリアルの再確立を可能にするためにスマート カードの User Personal Identification Number (PIN) のリセットを有効にします。|  
-|CLM Revoke (CLM Revoke)|Active Directory を Certificate Lifecycle Manager (CLM) 拡張アクセス許可で、証明書の有効期限前に、証明書を取り消すことができます。 たとえば、ユーザーのコンピューターまたはスマート カードに障害が発生した場合 (盗用された場合) にこの機能を使用する必要があります。|  
+|CLM Request Renew (CLM Request Renew)|Active Directory の Certificate Lifecycle Manager (CLM) の拡張アクセス許可で、登録要求を開始、実行、または完了できます。 書き換え要求には、新しい有効期間を持つ新しい証明書の有効期限の日付の近くにあるユーザーの証明書が置き換えられます。|  
+|CLM Request Revoke (CLM Request Revoke)|Certificate Lifecycle Manager (CLM) の拡張で Active Directory 証明書の有効期間の有効期限の前に証明書の失効を許可するアクセス許可。 これが必要な場合の例では、かどうか、ユーザーのコンピューターまたはスマート カードが侵害された (盗用された場合です)。|  
+|CLM Request Unblock Smart Card (CLM Request Unblock Smart Card)|Certificate Lifecycle Manager (CLM) の拡張により、スマート カードのユーザー暗証番号 (PIN) をリセットするには、Active Directory でのアクセス許可マテリアルの再確立して、スマート カードには、キー マテリアルへのアクセスを許可します。|  
+|CLM Revoke (CLM Revoke)|Certificate Lifecycle Manager (CLM) の拡張で Active Directory 証明書の有効期間の有効期限の前に証明書の失効を許可するアクセス許可。 これが必要な場合の例では、かどうか、ユーザーのコンピューターまたはスマート カードが侵害された (盗用された場合です)。|  
 |クロック ベクター (clock vector)|レプリカの更新を表すクロック ベクター要素のコレクション。 ベクターには、0 からティック数までの間に発生したすべての変更が含まれます。|  
 |クロック ベクター要素 (clock vector element)|レプリカの変更を表す、レプリカ キーとティック数で構成される値のペア。|  
 |CLR 関数 (CLR function)|SQL Server アセンブリに対して作成された関数のうち、その実装が .NET Framework 共通言語ランタイム (CLR) で作成されたアセンブリ内に定義されているもの。|  
@@ -543,7 +548,7 @@ ms.locfileid: "49120479"
 |ダンプ (dump)|アーカイブまたはファイルの保護のために作成されるプログラム、ディスク、またはデータの複製コピー。|  
 |ダンプ デバイス (dump device)|バックアップ メディアを収容するテープ ドライブまたはディスク ドライブ。|  
 |動的カーソル (dynamic cursor)|カーソルが開いている間に、カーソルの対象データに加えられたデータ変更を反映できるカーソル。|  
-|動的フィルター (dynamic filter)|マージ レプリケーションで使用できる行フィルター。この行フィルターを使用すると、システム関数またはユーザー定義関数に基づいてサブスクライバーにレプリケートされるデータを制限できます (たとえば SUSER_SNAME())。|  
+|動的フィルター (dynamic filter)|システム関数またはユーザー定義関数に基づいて、行のフィルターをサブスクライバーにレプリケートされたデータを制限することでマージ レプリケーションで使用できます (例。SUSER_SNAME() です。|  
 |動的ロック (dynamic locking)|任意の時点で最もコスト効果の高いロックを判断するために SQL Server で使用される処理。|  
 |動的管理関数 (dynamic management function)|SQL Server の値、オブジェクト、および設定に関するサーバーの状態情報を返す、組み込み関数のセットの 1 つ。|  
 |動的管理ビュー (dynamic management view)|SQL Server の値、オブジェクト、および設定に関するサーバーの状態情報を返す、組み込みビューのセット。|  
@@ -600,7 +605,7 @@ ms.locfileid: "49120479"
 |実行プラン ペイン (Execution Plan pane)|タブの 1 つ。SQLServer で使用される予測プランまたは実際の実行プランの出力が表示されます。|  
 |実行ツリー (execution tree)|変換元から変換を経由した変換先までの、SQL Server 2005 Integration Services パッケージのデータ フロー内のデータのパス。|  
 |終了モジュール (exit module)|発行された証明書の Active Directory へのパブリケーションなど、証明書の発効後の処理を実行する Certificate Services コンポーネント。|  
-|expiration |オブジェクトがキャッシュのタイムアウト値を超えるポイント。 オブジェクトは、期限切れになると削除されます。|  
+|expiration|オブジェクトがキャッシュのタイムアウト値を超えるポイント。 オブジェクトは、期限切れになると削除されます。|  
 |明示的なキャップ (explicit cap)|派生階層構造の最上位として使用される明示的階層。|  
 |明示的階層 (explicit hierarchy)|マスター データ サービスで、統合メンバーを使用して、その他の統合メンバーやリーフ メンバーをグループ化する階層。|  
 |明示的な読み込み (explicit loading)|読み込みのパターンの 1 つ。このパターンでは、関連するオブジェクトは、ナビゲーション プロパティの Load メソッドを使用して明示的に要求されるまで読み込まれません。|  
@@ -737,7 +742,7 @@ ms.locfileid: "49120479"
 |高ひげ (high whisker)|ボックス プロット グラフ上の外れ値でない最大値。|  
 |ヒント (hint)|SELECT、INSERT、UPDATE、または DELETE の各ステートメントについて、SQL Server クエリ プロセッサが実施するように指定したオプションまたは方法です。 ヒントは、クエリ オプティマイザーがクエリのために選択するどの実行プランをオーバーライドします。|  
 |履歴 (history)|オペレーティング システム シェルに入力されたコマンド、Gopher を使用して渡されたメニュー、Web ブラウザーを使用した後続リンクなど、プログラム内のユーザーのアクションのリスト。|  
-|保持可能性 (holdability)|処理の後に通常は閉じられる結果セットを開いたままにする ("保持する") ことができる能力を意味します。 たとえば、"SQL Server は、接続レベルでのみ保持可能性をサポートする" などのように使用します。|  
+|保持可能性 (holdability)|処理の後に通常は閉じられる結果セットを開いたままにする ("保持する") ことができる能力を意味します。 例えば：「SQL Server には、接続レベルのみで保持機能がサポートしています」。|  
 |提示されたデータ|データ マイニング モデルの構造の正確さを測定するために予約されたトレーニング データの割合。|  
 |予約データ (holdout data)|データ マイニング モデルの構造の正確さを測定するために予約されたトレーニング データの割合。|  
 |提示されたデータのストア (holdout store)|予約データのキャッシュに使用されるデータ マイニング構造。 予約データへの参照が含まれています。|  
@@ -782,7 +787,7 @@ ms.locfileid: "49120479"
 |最初のテープ (initial tape)|テープ バックアップ デバイスを使用するメディア セットでの、メディア ファミリの最初のテープ。|  
 |内部結合 (inner join)|テーブル間で共有されている列の値を比較して、複数のソース テーブルから行を取得する操作。 内部結合では、もう一方のソース テーブル内の行と一致しない行は選択されません。|  
 |個人認証 (in-person authentication)|証明書要求トランザクションを完了するための物理的認証。 たとえば、エンド ユーザーが自分の個人識別番号 (PIN) のブロック化解除を要求している場合、認証マネージャーに直接連絡を取り、従業員バッジや運転免許証などの ID と共に個人認証を提供します。|  
-|InProc (InProc)|COM オブジェクトのコードが DLL ファイルからロードされ、クライアントと同じプロセスに配置される状況。|  
+|InProc (InProc)|COM オブジェクトのコードが DLL ファイルから読み込まれると、クライアントと同じプロセスにある状況です。|  
 |入力アダプター (input adapter)|データベース、ファイル、ティッカー フィード、ネットワーク ポート、製造元デバイスなどの外部ソースから受信したイベント ストリームを受け入れるアダプター。|  
 |入力メンバー (input member)|値が他のデータから計算されるのではなく、データ ソースから直接読み込まれるメンバー。|  
 |入力セット (input set)|演算用に MDX (多次元式) の値式に指定されるデータのセット。|  
@@ -841,11 +846,11 @@ ms.locfileid: "49120479"
 |主要業績評価指標 (key performance indicator)|戦略的目的、目標、計画、イニシアチブ、またはビジネス処理のパフォーマンスを追跡するために使用される定義済みの方法。 KPI は、対象に対して評価されます。 データ ソースから直接取得された、明示的で測定可能な値。 主要業績評価指標 (KPI) は、顧客別の収益など、特定の領域でのパフォーマンスを測定するために使用されます。|  
 |キー範囲ロック (key range lock)|一連のレコードに対してファントムの追加や削除が行われないように、テーブル内のレコード範囲をロックすること。 この操作によってトランザクションがシリアル化可能になります。|  
 |キー復旧 (key recovery)|ユーザーの秘密キーを復旧させる処理。|  
-|キー復旧エージェント (Key Recovery Agent)|証明書管理者と共にユーザーの秘密キーを復旧するために作業する指定されたユーザー。 特定の証明書テンプレートは、キー復旧エージェントに適用されます。|  
+|キー復旧エージェント (Key Recovery Agent)|ユーザーの秘密キーを回復する証明書管理者と連携する指定されたユーザー。 特定の証明書テンプレートは、キー復旧エージェントに適用されます。|  
 |キーセット ドリブン カーソル (keyset-driven cursor)|カーソルが開いている間に、メンバーの行に加えられた更新を反映するカーソル。ただし、挿入や削除は反映されません。|  
 |ナレッジ (knowledge)|参加者が認識し、維持しているすべての変更に関するメタデータ。|  
 |KPI (KPI)|戦略的目的、目標、計画、イニシアチブ、またはビジネス処理のパフォーマンスを追跡するために使用される定義済みの方法。 KPI は、対象に対して評価されます。 データ ソースから直接取得された、明示的で測定可能な値。 主要業績評価指標 (KPI) は、顧客別の収益など、特定の領域でのパフォーマンスを測定するために使用されます。|  
-|KRA (KRA)|証明書管理者と共にユーザーの秘密キーを復旧するために作業する指定されたユーザー。 特定の証明書テンプレートは、キー復旧エージェントに適用されます。|  
+|KRA (KRA)|ユーザーの秘密キーを回復する証明書管理者と連携する指定されたユーザー。 特定の証明書テンプレートは、キー復旧エージェントに適用されます。|  
 |Unicode 対応でないプログラムの言語 (Language for non-Unicode programs)|地域と言語オプションの設定。特定のコンピューターに既定のコード ページと関連するビットマップ フォント ファイルを指定します。これはそのコンピューターのすべてのユーザーに影響します。 既定のコード ページとフォントを使用すると、オペレーティング システムの 1 言語バージョン用に書かれた Unicode 以外のアプリケーションが、オペレーティング システムの別の言語バージョンで正しく実行できるようになります。|  
 |言語サービス パーサー (language service parser)|ソース コード内のトークンの機能とスコープを記述するために使用されるコンポーネント。|  
 |言語サービス スキャナー (language service scanner)|ソース コード内のトークンの種類を特定するために使用されるコンポーネント。 この情報は、構文の強調表示に使用されたり、トークンの種類をすばやく特定して、かっこの照合のような他の操作を行うために使用されます。|  
@@ -969,7 +974,7 @@ ms.locfileid: "49120479"
 |Microsoft SQL Server|Microsoft リレーショナル データベース管理分析システムのファミリで、電子商取引、基幹業務、データ ウェアハウジングなどのソリューションで使用されています。|  
 |Microsoft SQL Server 2008 Express (Microsoft SQL Server 2008 Express)|Microsoft SQL Server 2008 の簡易埋め込みバージョンです。|  
 |Microsoft SQL Server 2008 Express with Advanced Services (Microsoft SQL Server 2008 Express with Advanced Services)|電子商取引、基幹業務、データ ウェアハウジングなどのソリューションで使用される、Microsoft リレーショナル データベース設計管理システムです。|  
-|Microsoft SQL Server 2008 Express with Tools (Microsoft SQL Server 2008 Express with Tools)|SQL Server Express データ プラットフォームの無償で使いやすいバージョンです。SQL Server Management Studio (SMSS) Express 用のグラフィカルな管理ツールを含んでいます。|  
+|Microsoft SQL Server 2008 Express with Tools (Microsoft SQL Server 2008 Express with Tools)|無料の使いやすいグラフィカル管理ツールを含む SQL Server Express データ プラットフォームのバージョン:SQL Server Management Studio (SMSS) Express。|  
 |Microsoft SQL Server オンライン ブック (Microsoft SQL Server Books Online)|Microsoft SQL Server に付属のドキュメントをすべて含む、一連の電子版ドキュメント。|  
 |Microsoft SQL Server Business Intelligence (Microsoft SQL Server Business Intelligence)|Microsoft SQL Server ベースのデータ インフラストラクチャおよびビジネス インテリジェンス プラットフォーム。Microsoft SQL Server Integration Services、リレーショナル エンジン、マスター データ サービス、Reporting Services、および Analysis Services で構成されます。|  
 |Microsoft SQL Server Compact (Microsoft SQL Server Compact)|電子商取引、基幹業務、データ ウェアハウジングなどのソリューションで使用される、Microsoft リレーショナル データベース管理分析システムです。|  
@@ -982,7 +987,7 @@ ms.locfileid: "49120479"
 |Microsoft SQL Server Reporting Services レポート ビルダー (Microsoft SQL Server Reporting Services Report Builder)|Microsoft Office と同様の作成環境を備えたレポート作成ツールです。新しいスパークライン、データ バー、インジケーター データの視覚化、レポート アイテムをレポート パーツとして保存する機能、マップを作成するためのウィザード、入れ子になった集計、式のサポート強化など、さまざまな機能を搭載しています。|  
 |Microsoft SQL Server Service Broker (Microsoft SQL Server Service Broker)|スケーラブルでセキュアなデータベース アプリケーションを開発者が構築するのに役立つテクノロジ。|  
 |Microsoft SQL Server System CLR Types (Microsoft SQL Server System CLR Types)|SQL Server 2008 R2 Feature Pack に含まれるスタンドアロン パッケージ。SQL Server に geometry 型、geography 型、および階層 ID 型を実装するコンポーネントが含まれています。|  
-|Microsoft タイム シリーズ アルゴリズム (Microsoft Time Series algorithm)|線形回帰デシジョン ツリー手法を使用して、時間に関するデータ (月間売上高や年間収益) を分析するアルゴリズム。 検出されたパターンを使用して、将来の期間の値を予測できます。|  
+|Microsoft Time Series アルゴリズム|線形回帰デシジョン ツリー手法を使用して、時間に関するデータ (月間売上高や年間収益) を分析するアルゴリズム。 検出されたパターンを使用して、将来の期間の値を予測できます。|  
 |ミドルウェア (middleware)|複数の種類のソフトウェア上に存在し、それらの間で情報を変換するソフトウェア。 ミドルウェアは多様なソフトウェアに対応し、一般に、アプリケーションとオペレーティング システム、ネットワーク オペレーティング システム、またはデータベース管理システムの間で機能します。|  
 |マイニング モデル|データ マイニング処理の定義とトレーニングの結果を保持するオブジェクト。 たとえば、データ マイニング モデルは、入力、出力、アルゴリズムなどのプロセスのプロパティを指定し、トレーニング中に収集されるデシジョン ツリーなどの情報を保持することができます。|  
 |マイニング構造 (mining structure)|マイニング モデルの作成の基になるデータ ドメインを定義するデータ マイニング オブジェクト。|  
@@ -1091,7 +1096,7 @@ ms.locfileid: "49120479"
 |並列処理 (parallel processing)|同時に動作する複数のプロセッサを搭載したコンピューターでのみ実行できる処理方法。 並列処理は、使用可能な複数のプロセッサにタスクが分散される方法が、多重処理と異なります。 多重処理では、場合によっては処理がシーケンシャル ブロックに分割され、1 つのプロセッサがデータベースへのアクセスを管理し、2 つ目がデータの分析、3 つ目のプロセッサが画面へのグラフィック出力を処理します。 システムを使用して並列処理を行うプログラマは、使用できるプロセッサ間でタスクをある程度等分に分散する方法を見つける必要があります。|  
 |パラメーター化クエリ (parameterized query)|パラメーターを使用して入力値を受け入れるクエリ。|  
 |パラメーター化されたレポート (parameterized report)|パラメーターを使用して入力値を受け入れるパブリッシュ済みレポート。|  
-|パラメーター化された行フィルター (parameterized row filter)|マージ レプリケーションで使用できる行フィルター。この行フィルターを使用すると、システム関数またはユーザー定義関数に基づいてサブスクライバーにレプリケートされるデータを制限できます (たとえば SUSER_SNAME())。|  
+|パラメーター化された行フィルター (parameterized row filter)|システム関数またはユーザー定義関数に基づいて、行のフィルターをサブスクライバーにレプリケートされたデータを制限することでマージ レプリケーションで使用できます (例。SUSER_SNAME() です。|  
 |部分バックアップ (partial backup)|プライマリ ファイル グループ、各読み書き可能ファイル グループ、および必要に応じて指定された任意のファイルに含まれる、すべてのデータのバックアップ。 読み取り専用データベースの部分バックアップには、プライマリ ファイル グループのみが含まれます。|  
 |データベースの部分復元 (partial database restore)|プライマリ ファイル グループと 1 つ以上のセカンダリ ファイル グループで構成されるデータベースの一部分だけの復元。 他のファイル グループは、後で復元できますが永久にオフラインのままです。|  
 |部分的な差分バックアップ (partial differential backup)|前回行った単一の部分バックアップ (ベース バックアップ) を基準にした差分の部分バックアップ。 読み取り専用データベースの部分的差分バックアップには、プライマリ ファイル グループのみが含まれます。|  
@@ -1186,7 +1191,7 @@ ms.locfileid: "49120479"
 |秘密キー (private key)|公開キー アルゴリズムで使用する暗号化キー ペアのうち、公開されない方のキー。 通常、秘密キーは、対称セッション キーの復号化、データのデジタル署名、または対応する公開キーで暗号化されたデータの復号化に使用されます。|  
 |プロアクティブ キャッシュ (proactive caching)|キューブにおけるデータの陳腐化を管理するシステム。クエリが ROLAP ストレージにリダイレクトされている間、MOLAP ストレージ内のオブジェクトが、キャッシュ内で自動的に更新され、処理されます。|  
 |プロシージャ キャッシュ (procedure cache)|Transact-SQL のバッチ、ストアド プロシージャ、およびトリガーの実行プランを格納するために使用される SQL Server メモリ プールの一部。|  
-|プロファイル テンプレート (profile template)|すべての Certificate Lifecycle Manager (CLM) 管理アクティビティの中心。 プロファイル テンプレートは、複数の証明書の管理に必要なすべての情報が含まれた単一の管理単位です。この情報は、証明書のライフサイクル全体を通じてユーザー コミュニティで必要となることがあります。 プロファイル テンプレートにはまた、それらの証明書の最終格納場所に関する情報も含まれています。最終格納場所は、ソフトウェアベース (ローカル コンピューター内に格納) でも、ハードウェアベース (スマートカード上に格納) でも指定できます。 プロファイル テンプレートには、ソフトウェアベースとスマート カードベースの両方の証明書を含めることはできません。|  
+|プロファイル テンプレート (profile template)|すべての Certificate Lifecycle Manager (CLM) 管理アクティビティの中心。 プロファイル テンプレートでは、証明書のライフ サイクル全体を通じてユーザー コミュニティで必要な複数の証明書を管理するために必要なすべての情報を含む単一の管理単位を提供します。 プロファイル テンプレートにはまた、それらの証明書の最終格納場所に関する情報も含まれています。最終格納場所は、ソフトウェアベース (ローカル コンピューター内に格納) でも、ハードウェアベース (スマートカード上に格納) でも指定できます。 プロファイル テンプレートには、ソフトウェアベースとスマート カードベースの両方の証明書を含めることはできません。|  
 |利益チャート|さまざまなデータ モデルの使用に関連した利益の理論上の増加を表示する図。|  
 |プログラミング可能 (programmable)|タスクまたは操作を実行するための命令を受け入れられること。 プログラム可能であることは、コンピューターの特性と考えられます。|  
 |プロパティ ページ (properties page)|オブジェクトに関する情報を表示するダイアログ ボックス。|  
@@ -1196,7 +1201,7 @@ ms.locfileid: "49120479"
 |保護されたコンピューター (protected computer)|保護グループのメンバーであるデータ ソースが格納されたコンピューター。|  
 |プロテクト メンバー (protected member)|保護グループ内のデータ ソース。|  
 |プロトコル (protocol)|コンピューターどうしで情報を交換できるようにするための、標準的な形式とプロシージャのセット。|  
-|プロバイダー (provider)|データベースへのアクセスを提供するインプロセス DLL (ダイナミック リンク ライブラリ)。|  
+|provider|データベースへのアクセスを提供するインプロセス DLL (ダイナミック リンク ライブラリ)。|  
 |provider|レプリカがデータを他のレプリカと同期できるようにするソフトウェア コンポーネント。|  
 |プロバイダー オブジェクト (provider object)|Oracle Provider for SQL Server など、データ プロバイダーの一部であるオブジェクト。|  
 |近接検索 (proximity search)|指定された複数の単語が相互に近接している箇所を検索するフルテキスト クエリ検索。|  
@@ -1337,7 +1342,7 @@ ms.locfileid: "49120479"
 |リパブリッシャー (republisher)|パブリッシャーから受け取ったデータをパブリッシュするサブスクライバー。|  
 |予約済み文字 (reserved character)|プログラムにとって特別な意味を持つため、通常、ファイル、ドキュメント、およびその他のユーザーによって生成されるツール (マクロなど) に名前を割り当てるときに使用できないキーボード文字。 文字よく特別な用途は、アスタリスク (*) を含めるために予約されたスラッシュ (/)、円記号 (\\)、疑問符 (?) と垂直バー (&#124;)。|  
 |解決方法 (resolution strategy)|複数のバージョンが存在し、呼び出し元プログラムでバージョン情報が指定されていない場合、オブジェクトを選択するときにリポジトリ エンジンが順番に評価する一連の条件。|  
-|リソース (resource)|データベース接続やステートメントへの参照を保持する特別な変数。|  
+|resource|データベース接続やステートメントへの参照を保持する特別な変数。|  
 |resource|レポート サーバー データベースのアイテムのうち、レポート、フォルダー、共有データ ソース以外のすべてのアイテム。|  
 |リソース データ (resource data)|データの一種で、共有され、操作に同時に読み書きされ、多数のトランザクションがアクセスするという特徴があります。 リソース データの例として、ユーザー アカウントやオークション品目があります。|  
 |リソース ガバナー (resource governor)|SQL Server 2008 の機能で、受け取った要求によるリソース消費を制限して、SQL Server の負荷とリソースを管理できます。|  
@@ -1464,10 +1469,10 @@ ms.locfileid: "49120479"
 |スリープ (sleep)|処理を終了しないで一時的に中断すること。|  
 |スライス (slice)|1 つ以上のディメンションをディメンションのメンバーに基づいて制限することで得られるキューブ内のデータのサブセット。|  
 |スライサー|表示するデータ セットの一部をワンクリックで絞り込むことのできるフィルター処理コントロールを提供する機能。|  
-|スライディング ウィンドウ (sliding window)|ストリームのイベントに応じて、タイムラインに沿って移動する固定長 L のウィンドウ。 タイムライン上のイベントごとに、イベントの開始時刻を起点として、新しいウィンドウが作成されます。|  
+|スライディング ウィンドウ (sliding window)|ストリームのイベントに応じて、タイムラインに沿って移動する固定長 L のウィンドウです。 タイムライン上のすべてのイベントを新しいウィンドウが作成される、イベントの開始時刻から始まります。|  
 |スリップストリーム (slipstream)|更新、パッチ、サービス パックなどを元のソフトウェアの基本インストール ファイルに統合し、そのファイルで更新ソフトウェアを一度にインストールできるようにすること。|  
 |スリップストリーム インストール (slipstream installation)|オペレーティング システムやプログラムの基本インストール ファイルにそのサービス パック、更新、パッチなどを統合して、それらを一度にインストールできるタイプのインストール。|  
-|スマート カード (smart card)|マイクロプロセッサと小容量のストレージを組み込んだプラスティック (クレジット カードのサイズより小さい) デバイス。アクセス コードと一緒に使用して、証明書ベースの認証を有効にします。 スマート カードは証明書、公開キーと秘密キー、パスワード、その他の個人情報などを安全に保管します。|  
+|スマート カード (smart card)|マイクロプロセッサと小容量ので使用される、アクセス コードでは、証明書ベースの認証を有効にするストレージを持つプラスチック (クレジット カード サイズまたはより小さい) デバイス。 スマート カードは証明書、公開キーと秘密キー、パスワード、その他の個人情報などを安全に保管します。|  
 |Smart Card Personalization Control (Smart Card Personalization Control)|クライアント コンピューターで Certificate Lifecycle Manager (CLM) スマート カード アプリケーションのすべての管理操作を実行する ActiveX のコントロール。|  
 |スマート カード プロファイル (smart card profile)|スマートカード ベースの証明書テンプレートのみを含むプロファイル テンプレートを使用して要求が実行されたときに作成される Certificate Lifecycle Manager (CLM) のプロファイル。|  
 |スマート カード リーダー (smart card reader)|セキュリティ機能を強化するスマート カードの使用を有効にするためにコンピューターにインストールされるデバイス。|  
@@ -1515,7 +1520,7 @@ ms.locfileid: "49120479"
 |SQL Server 2005 Express Edition|Microsoft リレーショナル データベース設計管理システムのエディションで、電子商取引、基幹業務、データ ウェアハウジングなどのソリューションで使用されています。|  
 |SQL Server 2005 Mobile Edition|SQL Server 製品名 (エディション)。|  
 |SQL Server エージェント|ジョブと呼ばれる管理タスクをスケジュールに従って実行し、情報を SQL Server に格納する Microsoft Windows サービスです。|  
-|SQL Server Analysis Services (SQL Server Analysis Services)|ビジネス インテリジェンス アプリケーションのオンライン分析処理 (OLAP) とデータ マイニング機能をサポートする Microsoft SQL Server の機能。 Analysis Services は、事前に計算済みの集計データを使用してデータ ウェアハウスのデータをキューブに編成して、複雑な分析的クエリに即答します。|  
+|SQL Server Analysis Services|ビジネス インテリジェンス アプリケーションのオンライン分析処理 (OLAP) とデータ マイニング機能をサポートする Microsoft SQL Server の機能。 Analysis Services は、事前に計算済みの集計データを使用してデータ ウェアハウスのデータをキューブに編成して、複雑な分析的クエリに即答します。|  
 |SQL Server Browser|Microsoft SQL Server の各種リソースに関する着信要求を受信し、コンピューターにインストールされている SQL Server インスタンスに関するクライアント情報を提供する Windows サービスです。|  
 |SQL Server Compact|電子商取引、基幹業務、データ ウェアハウジングなどのソリューションで使用される、Microsoft リレーショナル データベース管理分析システムです。|  
 |SQL Server のコンポーネント (SQL Server component)|データ変換、データ分析、レポートなどの特定のタスクを実行するように開発された SQL Server のプログラム モジュール。|  
@@ -1656,7 +1661,7 @@ ms.locfileid: "49120479"
 |ターゲット (target)|操作の対象となるデータベース。|  
 |対象パーティション (target partition)|Analysis Services のパーティション。このパーティションに別のパーティションがマージされ、マージ後には両方のパーティションのデータが格納された状態になります。|  
 |ターゲット キュー (target queue)|Service Broker では、メッセージの送信先となるサービスに関連付けられたキュー。|  
-|対象サーバー (target server)|マスター サーバーからジョブを受け取るサーバー。|  
+|ターゲット サーバー (target server)|マスター サーバーからジョブを受け取るサーバー。|  
 |対象になる種類 (target type)|一定の特性と動作を持つ、対象の種類。|  
 |タスク オブジェクト (task object)|データ変換プロセスの過程で実行される作業を定義しているデータ変換サービス (DTS) のオブジェクト。 たとえば、タスクが SQL ステートメントを実行したり、異種データを OLE DB ソースから OLE DB デスティネーションに移動して DTS データ ポンプで変換したりできます。|  
 |TDS (TDS)|SQL Server の内部的なクライアント/サーバー データ転送プロトコル。 TDS を使用すると、クライアント製品とサーバー製品は、オペレーティング システム プラットフォーム、サーバーのリリース、またはネットワーク トランスポートに関係なく通信できます。|  
@@ -1775,7 +1780,7 @@ ms.locfileid: "49120479"
 |ミラーリング監視サーバー (witness server)|データベース ミラーリングで、プリンシパル サーバーおよびミラー サーバーの状態を監視するサーバー インスタンス。プリンシパル サーバーで障害が発生すると、既定で自動フェールオーバーが開始されます。 データベース ミラーリング セッションは、オプションでミラーリング監視サーバーを 1 つだけ使用できます。|  
 |WMI (WMI)|Distributed Management Task Force (DMTF) Web ベースのエンタープライズ管理 (WBEM) イニシアチブをマイクロソフトが拡張したもの。|  
 |WMI Query Language (WMI Query Language)|ANSI SQL のサブセットです。WMI (Windows Management Instrumentation) に合わせた意味上の変更が行われています。|  
-|ブック (workbook)|表計算プログラムでは、関連するワークシートが多数含まれているファイル。|  
+|ブック|表計算プログラムでは、関連するワークシートが多数含まれているファイル。|  
 |ワークロード ガバナー (workload governor)|Microsoft SQL Server のツールで、8 を超える処理が同時にアクティブになると、データベース エンジンのインスタンスのパフォーマンスを制限するように設計されています。|  
 |ワークロード グループ (workload group)|リソース ガバナーでは、ワークロード グループは、各要求に適用される分類規則に従って、類似すると判断されたセッション要求のコンテナー。 ワークロード グループによって、リソース消費の全体的な監視、およびグループ内のすべての要求に対する一貫したポリシーの適用が可能となります。|  
 |ワークステーション (workstation)|ネットワークに接続しているマイクロコンピューターまたはターミナル。|  
@@ -1785,7 +1790,7 @@ ms.locfileid: "49120479"
 |x 軸 (x-axis)|水平方向と垂直方向があるグリッド、チャート、グラフなどの水平方向の参照行。|  
 |XML for Analysis (XML for Analysis)|World Wide Web 上に存在するデータ ソースへのアクセスをサポートするオープン スタンダードを規定した仕様。|  
 |XMLA|World Wide Web 上に存在するデータ ソースへのアクセスをサポートするオープン スタンダードを規定した仕様。|  
-|XQuery|Quilt、XPath、および XQL から派生したさまざまな XML データ型に幅広く適用できる機能的なクエリ言語。 Ipedo と Software AG は、W3C が XQuery 言語に提唱する仕様の独自のバージョンを実装しています。 XML Query、XQL とも呼ばれます。|  
+|XQuery|Quilt、XPath、および XQL から派生したさまざまな XML データ型に幅広く適用できる機能的なクエリ言語。 Ipedo と Software AG は、W3C が XQuery 言語に提唱する仕様の独自のバージョンを実装しています。 呼ばれます。XML クエリでは、XQL です。|  
 |XSL (XSL)|表現規則を定義するスタイル シートを使用して、XML データを別の形式 (HTML など) に変換するための XML 用語。|  
 |XSL 変換 (XSL Transformation)|XML ベースの宣言型の言語で、XML データの表示や変換に使用されます。|  
 |XSLT (XSLT)|XML ベースの宣言型の言語で、XML データの表示や変換に使用されます。|  

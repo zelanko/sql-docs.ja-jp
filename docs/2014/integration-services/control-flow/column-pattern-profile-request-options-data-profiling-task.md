@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832609"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列パターン プロファイル要求]** のオプションを設定できます。 列パターン プロファイルは、文字列型の列に含まれる指定された比率の値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、および \d{9} という正規表現が生成されます。 その他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれている可能性があります。  
@@ -40,7 +39,7 @@ ms.locfileid: "48097572"
  区切り記号はすべて、トークン化処理の一部として 1 つの空白文字に正規化されます。一方、記号はそのまま保持されます。  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>タグ テーブルの使用方法について  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に作成した特別なテーブルにタグと関連用語を保存することで、1 つのタグを持つ関連トークンを必要に応じてグループ化することができます。 タグ テーブルには、"Tag" および "Term" という名前の 2 つの文字列型の列が必要です。 種類のこれらの列ができる`char`、 `nchar`、 `varchar`、または`nvarchar`、なく`text`または`ntext`します。 1 つのテーブルで複数のタグと対応する用語を結合できます。 1 つの列パターン プロファイル要求で使用できるタグ テーブルは 1 つのみです。 タグ テーブルには個別の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して接続できます。 そのため、タグ テーブルは、ソース データとは異なるデータベースまたはサーバーに格納できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に作成した特別なテーブルにタグと関連用語を保存することで、1 つのタグを持つ関連トークンを必要に応じてグループ化することができます。 タグ テーブルには、"Tag" および "Term" という名前の 2 つの文字列型の列が必要です。 これらの列には、`char` 型、`nchar` 型、`varchar` 型、または `nvarchar` 型を指定できます。ただし、`text` 型と `ntext` 型は指定できません。 1 つのテーブルで複数のタグと対応する用語を結合できます。 1 つの列パターン プロファイル要求で使用できるタグ テーブルは 1 つのみです。 タグ テーブルには個別の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して接続できます。 そのため、タグ テーブルは、ソース データとは異なるデータベースまたはサーバーに格納できます。  
   
  たとえば、住所に含まれる可能性がある "East"、"West"、"North"、および "South" という値を、"Direction" という 1 つのタグでグループ化できます。 次の表に、このようなタグ テーブルの例を示します。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48097572"
   
  別のタグを使用して、住所の "通り" の概念を表すさまざまな単語をグループ化できます。  
   
-|タグ|項目|  
+|Tag|項目|  
 |---------|----------|  
 |Street|Street|  
 |Street|Avenue|  
@@ -143,8 +142,8 @@ ms.locfileid: "48097572"
   
  詳細については、このトピックの「タグ テーブルの使用方法について」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>関連項目  
+ [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
+ [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
   
   

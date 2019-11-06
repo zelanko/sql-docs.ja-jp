@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 569988ddc2f804d2b97ffd26286fdbdcf70b8d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc390d06ab21b295f0e5f7a2475d8c91671e843c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63298286"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>テキストによる注釈をダイアグラムに追加する方法 (Visual Database Tools)
   ダイアグラムに関するメモやコメントを記載するには、テキストによる注釈を追加します。  

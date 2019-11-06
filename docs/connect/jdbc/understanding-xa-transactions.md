@@ -1,7 +1,7 @@
 ---
 title: XA トランザクションについて |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,22 +10,21 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8231b574516c11995dc5f91e5cf59fcdcfb6dc04
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393836"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027226"
 ---
-# <a name="understanding-xa-transactions"></a>XA トランザクションについて」を参照してください。
+# <a name="understanding-xa-transactions"></a>XA トランザクションについて
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、Java Platform, Enterprise Edition /JDBC 2.0 のオプションの分散トランザクションをサポートします。 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスから取得される JDBC 接続は、Java Platform, Enterprise Edition (Java EE) アプリケーション サーバーなどの標準分散トランザクション処理の環境に参加できます。  
 
 > [!WARNING]  
-> Microsoft JDBC Driver 4.2 (以降) for SQL には、準備されていないトランザクションを自動ロールバックする既存の機能に関する新しいタイムアウト オプションが含まれています。 参照してください[準備されていないトランザクションが自動的にロールバックのサーバー側のタイムアウト設定を構成する](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide)詳細については、このトピックで後述します。  
+> Microsoft JDBC Driver 4.2 (以降) for SQL には、準備されていないトランザクションを自動ロールバックする既存の機能に関する新しいタイムアウト オプションが含まれています。 詳細については、このトピックで後述する「準備されていない[トランザクションの自動ロールバックに対するサーバー側のタイムアウト設定の構成](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide)」を参照してください。  
 
 ## <a name="remarks"></a>Remarks
 
@@ -45,9 +44,9 @@ ms.locfileid: "52393836"
 
 - XA トランザクションを Microsoft 分散トランザクション コーディネーター (MS DTC) と組み合わせて使用すると、現在のバージョンの MS DTC では、密に結合された XA ブランチ動作がサポートされない場合があります。 たとえば、MS DTC では、XA ブランチ トランザクション ID (XID) と MS DTC トランザクション ID とが一対一でマップされ、疎結合の XA ブランチによって実行される作業どうしが分離されます。  
   
-     「[MSDTC と密に結合されたトランザクション](https://support.microsoft.com/kb/938653) (英語ページの可能性があります)」の修正プログラムを適用すると、密に結合された XA ブランチのサポートが有効化され、同じグローバル トランザクション ID (GTRID) を持つ複数の XA ブランチが 1 つの MS DTC トランザクション ID にマップされるようになります。 このサポートにより、密に結合された複数の XA ブランチどうしが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのリソース マネージャーで相互の変更を認識できるようになります。  
+     [MSDTC と密に結合されたトランザクション](https://support.microsoft.com/kb/938653)に関するページの修正プログラムを適用すると、密に結合された XA ブランチのサポートが有効化され、同じグローバル トランザクション ID (GTRID) を持つ複数の XA ブランチが 1 つの MS DTC トランザクション ID にマップされるようになります。 このサポートにより、密に結合された複数の XA ブランチが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのリソース マネージャーで相互の変更を認識できるようになります。
   
-- アプリケーションは、[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) フラグによって、XA ブランチ トランザクション ID (BQUAL) が異なりグローバル トランザクション ID (GTRID) および形式 ID (FormatID) が同じである、密に結合された XA トランザクションを使用できるようになります。 その機能を使用するために設定する必要があります、 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start メソッドのフラグ パラメーター。  
+- アプリケーションは、[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) フラグによって、XA ブランチ トランザクション ID (BQUAL) が異なり、グローバル トランザクション ID (GTRID) および形式 ID (FormatID) が同じである、密に結合された XA トランザクションを使用できるようになります。 この機能を使用するには、XAResource. start メソッドの flags パラメーターで[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)を設定する必要があります。
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -61,11 +60,12 @@ ms.locfileid: "52393836"
 > JDBC 分散トランザクション コンポーネントは、JDBC Driver のインストール先の xa ディレクトリに含まれます。 これらのコンポーネントには、xa_install.sql および sqljdbc_xa.dll のファイルが含まれます。  
 
 > [!NOTE]  
-> SQL Server 2019 パブリック プレビュー CTP 2.0 以降では、分散トランザクション コンポーネントは、有効またはシステムで無効になっていることができる SQL Server エンジンに含まれる JDBC XA ストアド プロシージャを使用します。 JDBC ドライバーを使用して XA 分散トランザクションを実行する必要なコンポーネントを有効にするには、次のストアド プロシージャを実行します。
+> SQL Server 2019 public preview CTP 2.0 以降では、JDBC XA 分散トランザクションコンポーネントは SQL Server エンジンに含まれており、システムストアドプロシージャを使用して有効または無効にすることができます。
+> 必要なコンポーネントが JDBC ドライバーを使用して XA 分散トランザクションを実行できるようにするには、次のストアドプロシージャを実行します。
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> 以前にインストールされたコンポーネントを無効にするには、次のストアド プロシージャを実行します。 
+> 以前にインストールされたコンポーネントを無効にするには、次のストアドプロシージャを実行します。
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -73,17 +73,17 @@ ms.locfileid: "52393836"
 
 MS DTC サービスは、Service Manager で **[自動]** とマークされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始時に実行されている必要があります。 XA トランザクションで使用するために MS DTC を有効にするには、次の手順を実行する必要があります。  
   
-Windows Vista 以降の場合:   
+Windows Vista 以降の場合:  
   
-1. **[スタート]** ボタンをクリックして、**[検索の開始]** ボックスに「**dcomcnfg**」と入力し、Enter キーを押して、**[コンポーネント サービス]** を開きます。 **[検索の開始]** ボックスに「%windir%\system32\comexp.msc」と入力して **[コンポーネント サービス]** を開くこともできます。  
+1. **[スタート]** ボタンをクリックして、 **[検索の開始]** ボックスに「**dcomcnfg**」と入力し、Enter キーを押して、 **[コンポーネント サービス]** を開きます。 **[検索の開始]** ボックスに「%windir%\system32\comexp.msc」と入力して **[コンポーネント サービス]** を開くこともできます。  
   
 2. [コンポーネント サービス]、[コンピューター]、[マイ コンピューター]、[分散トランザクション コーディネーター] の順に展開します。  
   
-3. **[ローカル DTC]** を右クリックし、**[プロパティ]** を選択します。  
+3. **[ローカル DTC]** を右クリックし、 **[プロパティ]** を選択します。  
   
 4. **[ローカル DTC のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブをクリックします。  
   
-5. **[XA トランザクションを有効にする]** チェック ボックスをオンにし、**[OK]** をクリックします。 これにより、MS DTC サービスが再開されます。  
+5. **[XA トランザクションを有効にする]** チェック ボックスをオンにし、 **[OK]** をクリックします。 これにより、MS DTC サービスが再開されます。
   
 6. 再度 **[OK]** をクリックして **[プロパティ]** ダイアログ ボックスを閉じ、次に **[コンポーネント サービス]** を閉じます。  
   
@@ -104,11 +104,11 @@ Windows Vista 以降の場合:
   
 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して同時に構成できる sqljdbc_xa.dll アセンブリのバージョンは 1 つだけです。 アプリケーションで複数バージョンの JDBC Driver を使用し、XA 接続で、同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続する必要が生じる場合もあります。 そのような場合は、最新の JDBC Driver に付属する sqljdbc_xa.dll が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにインストールされている必要があります。  
   
-現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにインストールされている sqljdbc_xa.dll のバージョンは、次の 3 とおりの方法で確認できます。  
+現在、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにインストールされている sqljdbc_xa.dll のバージョンは、次の 3 とおりの方法で確認できます。
   
 1. 分散トランザクションに参加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターの LOG ディレクトリを開きます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の "ERRORLOG" ファイルを選択して開きます。 "ERRORLOG" ファイルで、"'SQLJDBC_XA.dll' バージョンを使用して..." というフレーズを探します。  
   
-2. 分散トランザクションに参加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターの Binn ディレクトリを開きます。 Sqljdbc_xa.dll アセンブリを選択します。  
+2. 分散トランザクションに参加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターの Binn ディレクトリを開きます。 Sqljdbc_xa アセンブリを選択します。
 
     - Windows Vista 以降の場合: sqljdbc_xa.dll を右クリックし、[プロパティ] を選択します。 次に **[詳細]** タブをクリックします。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに現在インストールされている sqljdbc_xa.dll のバージョンが **[ファイル バージョン]** フィールドに表示されます。  
   
@@ -117,22 +117,22 @@ Windows Vista 以降の場合:
 ### <a name="BKMK_ServerSide"></a> 準備されていないトランザクションを自動ロールバックするためのサーバー側のタイムアウト設定を構成します。  
 
 > [!WARNING]  
-> このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることをご確認ください。 クライアント側のタイムアウトの設定について詳しくは、「[XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」をご覧ください。  
+> このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることを確認してください。 クライアント側のタイムアウトの設定について詳しくは、「[XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」をご覧ください。  
 
 分散トランザクションのタイムアウトの動作を制御する 2 つのレジストリ設定 (DWORD 値) があります。  
   
-- **XADefaultTimeout** (単位: 秒): ユーザーが何らかのタイムアウトを指定しないときに使用される既定のタイムアウト値。 既定値は 0 です。  
+- **Xadefaulttimeout**(秒単位): ユーザーがタイムアウトを指定しない場合に使用される既定のタイムアウト値。 既定値は 0 です。  
   
-- **XAMaxTimeout** (単位: 秒): ユーザーが設定できるタイムアウトの最大値。 既定値は 0 です。  
+- **XAMaxTimeout**(秒単位): ユーザーが設定できるタイムアウトの最大値。 既定値は 0 です。  
   
 これらの設定は SQL Server インスタンス固有で、次のレジストリ キーの下に作成する必要があります。  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> 64 ビットのコンピューターで実行されている 32 ビットの SQL Server の場合、レジストリ設定は次のキーの下に作成する必要があります: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> 64 ビットのコンピューターで実行されている 32 ビットの SQL Server の場合、レジストリ設定は次のキーの下に作成する必要があります: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 各トランザクションが開始されるとタイムアウト値が設定され、タイムアウトになるとトランザクションは SQL Server からロールバックされます。 タイムアウトは、これらのレジストリ設定と、ユーザーによる XAResource.setTransactionTimeout() での指定によって決定されます。 これらのタイムアウト値の解釈のいくつかの例を以下に示します。  
   
@@ -146,20 +146,20 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     クライアントがタイムアウトを指定しない場合、すべてのトランザクションに 30 秒のタイムアウトが適用されることを意味します。 クライアントが何らかのタイムアウトを指定する場合、60 秒 (最大値) 以内であれば、クライアントのタイムアウト値が使用されます。  
+     クライアントがタイムアウトを指定しない場合、すべてのトランザクションに 30 秒のタイムアウトが適用されることを意味します。 クライアントが何らかのタイムアウトを指定する場合、60 秒 (最大値) 以内であれば、クライアントのタイムアウトが使用されます。  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     クライアントがタイムアウトを指定しない場合、すべてのトランザクションに 30 秒のタイムアウト (最大値) が適用されることを意味します。 クライアントが何らかのタイムアウトを指定する場合、30 秒 (最大値) 以内であれば、クライアントのタイムアウト値が使用されます。  
+     クライアントがタイムアウトを指定しない場合、すべてのトランザクションに 30 秒のタイムアウト (最大値) が適用されることを意味します。 クライアントが何らかのタイムアウトを指定する場合、30 秒 (最大値) 以内であれば、クライアントのタイムアウトが使用されます。  
   
-### <a name="upgrading-sqljdbcxadll"></a>sqljdbc_xa.dll のアップグレード
+### <a name="upgrading-sqljdbc_xadll"></a>sqljdbc_xa.dll のアップグレード
 
 新しいバージョンの JDBC Driver をインストールする場合は、新しいバージョンに含まれる sqljdbc_xa.dll を使用して、サーバー上の sqljdbc_xa.dll もアップグレードする必要があります。  
   
 > [!IMPORTANT]  
-> sqljdbc_xa.dll のアップグレードは、メンテナンス ウィンドウ内で行うか、進行中の MS DTC トランザクションがないときに行ってください。  
+> sqljdbc_xa.dll のアップグレードは、メンテナンス ウィンドウ内で行うか、進行中の MS DTC トランザクションがないときに行ってください。
   
-1. Sqljdbc_xa.dll を使用してアンロード、[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンド**DBCC sqljdbc_xa (無料)** します。  
+1. [!INCLUDE[tsql](../../includes/tsql-md.md)] **DBCC sqljdbc_xa (FREE)** コマンドを使用して sqljdbc_xa をアンロードします。  
   
 2. JDBC Driver のインストール ディレクトリにある新しい sqljdbc_xa.dll を、分散トランザクションに参加するすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターの Binn ディレクトリにコピーします。  
   

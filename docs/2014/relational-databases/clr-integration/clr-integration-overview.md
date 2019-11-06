@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 762c644690cb556ba316705f1e22e3673e811bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874978"
 ---
 # <a name="overview-of-clr-integration"></a>CLR 統合の概要
   CLR (共通言語ランタイム) は Microsoft .NET Framework の中核部分であり、あらゆる .NET Framework コードに対する実行環境を提供します。 CLR 内で実行されるコードを、マネージド コードと呼びます。 CLR では、JIT (Just-In-Time) コンパイル、メモリの割り当てと管理、タイプ セーフの確保、例外処理、スレッド管理、セキュリティなど、プログラムの実行に必要なさまざまな機能やサービスが提供されます。  詳細については、.NET Framework SDK を参照してください。  
@@ -56,7 +56,7 @@ ms.locfileid: "48077712"
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアド プロシージャの詳細については、次を参照してください。 [CLR 統合のパフォーマンス](clr-integration-architecture-performance.md)します。  
   
 ## <a name="see-also"></a>参照  
- [.NET Framework のインストール](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 統合のアーキテクチャ](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [CLR データベース オブジェクトからのデータ アクセス](data-access/data-access-from-clr-database-objects.md)   
  [CLR 統合の概要](database-objects/getting-started-with-clr-integration.md)  

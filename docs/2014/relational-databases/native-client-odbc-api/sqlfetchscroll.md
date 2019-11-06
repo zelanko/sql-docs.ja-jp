@@ -14,12 +14,12 @@ ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ee2297f01ef2cc0a4dc94beca66939bf6ae9030
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c9614a71c0015d17178a57d33c5fd0d9b62433c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63154690"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   **SQLFetchScroll**アプリケーションへのデータの 1 つの行セットを返します。 使用して、行セットのサイズを設定[SQLSetStmtAttr](sqlsetstmtattr.md)します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次の制限事項にすべての定義済みフェッチ命令 (SQL_FETCH_RELATIVE など) をサポートしています。  
@@ -37,7 +37,7 @@ ms.locfileid: "48145652"
  **SQLFetchScroll**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQLFetchScroll 関数](http://go.microsoft.com/fwlink/?LinkId=59343)   
+ [SQLFetchScroll 関数](https://go.microsoft.com/fwlink/?LinkId=59343)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

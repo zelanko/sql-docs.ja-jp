@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472847"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>アソシエーションの予測 (中級者向けデータ マイニング チュートリアル)
   モデルの処理が完了したら、モデルに格納されているアソシエーションに関する情報を使用して予測を作成できます。 このレッスンの最後の作業では、作成したアソシエーション モデルに対して予測クエリを作成する方法について学習します。 このレッスンは、予測クエリ ビルダーの使用方法について理解していることを前提に、アソシエーション モデルに対する予測クエリの作成方法について説明します。 詳細については予測クエリ ビルダーを使用する方法[データ マイニング クエリ インターフェイス](../../2014/analysis-services/data-mining/data-mining-query-tools.md)します。  
@@ -124,9 +123,9 @@ ms.locfileid: "48222808"
   
 |[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291.|0.252.|  
-|Water Bottle|2866|0.192.|0.175.|  
-|Patch Kit|2113|0.142.|0.132|  
+|Sport-100|4334|0.291...|0.252...|  
+|Water Bottle|2866|0.192...|0.175...|  
+|Patch Kit|2113|0.142...|0.132|  
   
 ## <a name="working-with-results"></a>結果の操作  
  結果に多数の入れ子になったテーブルが含まれている場合は、結果をフラット化して見やすくすることができます。 そのためには、クエリを手動で変更し、`FLATTENED` キーワードを追加します。  
@@ -209,7 +208,7 @@ ms.locfileid: "48222808"
  同様の予測クエリを複数のモデルに対して作成し、フィルター処理によって予測結果が変わるかどうかを確認してみてください。 予測やその他の種類のクエリを作成する方法の詳細については、次を参照してください。[アソシエーション モデルのクエリ例](../../2014/analysis-services/data-mining/association-model-query-examples.md)します。  
   
 ## <a name="see-also"></a>参照  
- [アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [予測クエリ ビルダーを使用した予測クエリの作成](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

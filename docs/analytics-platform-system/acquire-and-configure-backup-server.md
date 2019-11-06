@@ -2,19 +2,18 @@
 title: 取得し、Parallel Data Warehouse のバックアップ サーバーの構成 |Microsoft Docs
 description: この記事では、Analytics Platform System (APS) および並列データ ウェアハウス (PDW) のバックアップと復元機能で使用するためのバックアップ サーバーとして非アプライアンスの Windows システムを構成する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f79cb13658328927cab81bbf8d559066c5a4d5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961644"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>取得し、Parallel Data Warehouse のバックアップ サーバーを構成します。
 この記事では、Analytics Platform System (APS) および並列データ ウェアハウス (PDW) のバックアップと復元機能で使用するためのバックアップ サーバーとして非アプライアンスの Windows システムを構成する方法について説明します。  
@@ -35,12 +34,12 @@ ms.locfileid: "51696951"
   
 -   バックアップ ファイルの共有、サーバー メッセージ ブロック (SMB) のアプリケーション レベルのネットワーク プロトコルを使用している Windows ファイル共有をホストします。 バックアップ ファイルの共有アクセス許可の付与 (通常、これは、専用のバックアップのユーザー)、Windows ドメイン ユーザーのバックアップを実行し、復元操作は、共有で機能します。 PDW のバックアップを実行して復元操作でバックアップ ファイルの共有できるように、PDW の Windows ドメイン ユーザーのユーザー名とパスワードの資格情報が格納されます。  
   
-## <a name="Step1"></a>手順 1: 容量の要件を決定します。  
+## <a name="Step1"></a>手順 1:容量の要件を決定します。  
 Backup server のシステム要件は、独自のワークロードにほぼ完全に依存します。 購入またはバックアップ サーバーをプロビジョニングする前に、容量の要件を把握する必要があります。 Backup server は、ワークロードのパフォーマンスとストレージの要件を処理する限りにのみ、バックアップを専用にする必要はありません。 複数のバックアップ サーバーをバックアップし、複数のサーバーのいずれかに各データベースを復元するためにすることもできます。  
   
 使用して、[バックアップ サーバー容量の計画ワークシート](backup-capacity-planning-worksheet.md)容量の要件を確認するためです。  
   
-## <a name="Step2"></a>手順 2: サーバーのバックアップを取得します。  
+## <a name="Step2"></a>手順 2:サーバーのバックアップの取得します。  
 これで、容量の要件をより深く理解するには、サーバーとのネットワーク コンポーネントを購入またはプロビジョニングする必要がありますを計画できます。 次の要件の一覧を購入の計画に組み込むと、サーバーを購入するか、既存のサーバーをプロビジョニングします。  
   
 ### <a name="software-requirements"></a>ソフトウェア要件  
@@ -61,7 +60,7 @@ Windows Server 2012 をお勧めまたは超えるには。
   
 3.  デュアル ポート カードは、FDR InfiniBand 2 本のケーブルまたは 1 つのポートのカードの 1 の FDR InfiniBand ケーブルを購入します。 FDR InfiniBand ケーブルでは、読み込みのサーバーをアプライアンスの InfiniBand ネットワークに接続します。 ケーブルの長さは、環境に従ってに読み込み、サーバーとアプライアンスの InfiniBand スイッチ間の距離によって異なります。  
   
-## <a name="Step3"></a>手順 3: InfiniBand ネットワークにサーバーを接続します。  
+## <a name="Step3"></a>手順 3:サーバーの InfiniBand ネットワークに接続します。  
 読み込みサーバーの InfiniBand ネットワークを接続するのにには、次の手順を使用します。 サーバーが、InfiniBand ネットワークを使用していない場合は、この手順をスキップします。  
   
 1.  ラック、サーバーを閉じてアプライアンスに十分なために、アプライアンスの InfiniBand ネットワークに接続することができます。  
@@ -76,7 +75,7 @@ Windows Server 2012 をお勧めまたは超えるには。
   
 5.  ネットワーク アダプターの InfiniBand と DNS の設定を構成します。 構成手順については、次を参照してください。 [InfiniBand ネットワーク アダプターの構成](configure-infiniband-network-adapters.md)します。  
   
-## <a name="Step4"></a>手順 4: バックアップのファイル共有を構成します。  
+## <a name="Step4"></a>手順 4:バックアップ ファイル共有を構成します。  
 PDW は、UNC ファイル共有のバックアップ サーバーにアクセスします。 ファイル共有を設定します。  
   
 1.  バックアップを保存するバックアップ サーバー上のフォルダーを作成します。  
@@ -101,7 +100,7 @@ PDW は、UNC ファイル共有のバックアップ サーバーにアクセ�
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>手順 5: データのバックアップを開始します。  
+## <a name="Step5"></a>手順 5:データのバックアップを開始します。  
 バックアップ サーバーにデータのバックアップを開始する準備が整いました。  
   
 コマンドには、データのバックアップではクエリ クライアントを使用して SQL Server PDW に接続し、バックアップ データベースまたはデータベースの復元を送信します。 ディスクを使用して、バックアップ サーバーとバックアップの場所を指定する句を = です。  
@@ -122,7 +121,7 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 -   [データベースのバックアップ](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [データベースを復元します。](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>セキュリティ通知  
 サーバーのバックアップはアプライアンスのプライベート ドメインに参加していません。 独自のネットワークであり、独自のドメインとプライベートのアプライアンスのドメイン間に信頼関係はありません。  
@@ -147,8 +146,8 @@ PDW からネットワーク資格情報を削除するには、使用、 [sp_pd
 読み込みサーバーでの操作には、信頼されている内部ネットワークの外部からのデータをプルする UNC パスを使用できます。 攻撃者がネットワーク上または名前解決に影響する機能では、途中受信したり、PDW に送信されるデータを変更することができます。 これは、改ざんや情報漏えいのリスクを表示します。 改ざんのリスクを軽減するには。
 
 - 接続での署名が必要です。 
-- 読み込みサーバーのセキュリティ \ セキュリティ オプションで、次のグループ ポリシー オプションを設定: Microsoft ネットワーク クライアント: 常に通信にデジタル署名: 有効にします。  
+- 読み込みサーバーのセキュリティ \ セキュリティ オプションで、次のグループ ポリシー オプションを設定します。Microsoft ネットワーク クライアント:常に通信にデジタル署名します。有効になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [バックアップと復元](backup-and-restore-overview.md)  
   

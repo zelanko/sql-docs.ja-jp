@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -14,21 +13,21 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5a2ad8bfa15d8f6e487ba4fc3b28fa3c7796fbed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102188"
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) には、レポート サーバーに対してユーザーおよびクライアント アプリケーションを認証するための構成可能なオプションがいくつか用意されています。 既定では、レポート サーバーは Windows 統合認証を使用し、クライアントとネットワーク リソースが同じドメインまたは信頼されているドメインに属している場合は、信頼関係があると見なされます。 ネットワーク トポロジおよび組織のニーズに応じて、Windows 統合認証に使用される認証プロトコルをカスタマイズしたり、基本認証を使用したり、自分で提供したカスタムのフォームベースの認証拡張機能を使用したりすることができます。 認証の種類ごとに、個別にオンとオフを切り替えることができます。 レポート サーバーで複数の種類の要求を受け入れる場合は、複数の種類の認証を有効にすることができます。  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、すべての認証が IIS でサポートされていました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、IIS は使用されなくなり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] すべての認証要求を内部的に処理します。  
+>  以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、すべての認証が IIS でサポートされていました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、IIS は使用されなくなり、 すべての認証要求が [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で内部的に処理されます。  
   
  レポート サーバーのコンテンツまたは操作へのアクセスを要求するすべてのユーザーとアプリケーションは、事前に認証を受けないとアクセスを許可されません。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48192932"
 |RSWindowsNegotiate|ネゴシエート|はい|Windows 統合認証に対して Kerberos が最初に試行されますが、レポート サーバーへのクライアント要求に対して Active Directory でチケットを付与できない場合は NTLM に戻ります。 ネゴシエートは、チケットが使用できない場合にのみ NTLM に戻ります。 チケットがないのではなく、最初の試行でエラーになった場合は、レポート サーバーで 2 回目の試行は行われません。|  
 |RSWindowsNTLM|NTLM|はい|Windows 統合認証に NTLM を使用します。<br /><br /> 資格情報は、他の要求で委任または権限借用されません。 後続の要求は、新しい要求/応答シーケンスに従います。 ネットワークのセキュリティ設定によっては、ユーザーは資格情報または認証要求を透過的に処理するように要求される場合があります。|  
 |RSWindowsKerberos|Kerberos|いいえ|Windows 統合認証に Kerberos を使用します。 サービス アカウントのセットアップ サービス プリンシパル名 (SPN) を設定して、Kerberos を構成する必要があります。そのためには、ドメイン管理者権限が必要です。 Kerberos での ID 委任を設定した場合は、レポートを要求したユーザーのトークンを使用して、レポート データを提供する別の外部データ ソースに接続することもできます。<br /><br /> RSWindowsKerberos を指定する前に、使用しているブラウザーの種類で実際にサポートされていることを確認してください。 Internet Explorer を使用している場合、Kerberos 認証はネゴシエートを通してのみサポートされます。 Internet Explorer では、Kerberos を直接指定する認証要求は作成されません。|  
-|RSWindowsBasic|Basic|いいえ|基本認証は、HTTP プロトコルで定義され、レポート サーバーへの HTTP 要求の認証にのみ使用できます。<br /><br /> HTTP 要求で資格情報が base64 エンコードとして渡されます。 基本認証を使用した場合、ユーザー アカウント情報をネットワークで送信する前に Secure Sockets Layer (SSL) で暗号化できます。 SSL は、クライアントからレポート サーバーに接続要求を送信するための暗号化されたチャネルを HTTP TCP/IP 接続で提供します。 詳細については、 [TechNet Web サイトの「](http://go.microsoft.com/fwlink/?LinkId=71123) SSL を使用して資格情報データを暗号化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。|  
+|RSWindowsBasic|Basic|いいえ|基本認証は、HTTP プロトコルで定義され、レポート サーバーへの HTTP 要求の認証にのみ使用できます。<br /><br /> HTTP 要求で資格情報が base64 エンコードとして渡されます。 基本認証を使用した場合、ユーザー アカウント情報をネットワークで送信する前に Secure Sockets Layer (SSL) で暗号化できます。 SSL は、クライアントからレポート サーバーに接続要求を送信するための暗号化されたチャネルを HTTP TCP/IP 接続で提供します。 詳細については、 [TechNet Web サイトの「](https://go.microsoft.com/fwlink/?LinkId=71123) SSL を使用して資格情報データを暗号化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。|  
 |カスタム|(Anonymous)|いいえ|匿名認証は、HTTP 要求の認証ヘッダーを無視するようにレポート サーバーに指示します。 レポート サーバーですべての要求が受け入れられますが、ユーザーを認証する場合は、カスタムの [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] フォーム認証を指定する必要があります。<br /><br /> `Custom` は、レポート サーバーにすべての認証要求を処理するカスタム認証モジュールを配置している場合にのみ指定します。 カスタム認証は、既定の Windows 認証拡張機能と共に使用することはできません。|  
   
 ## <a name="unsupported-authentication-methods"></a>サポートされない認証方法  
@@ -86,8 +85,8 @@ ms.locfileid: "48192932"
  (作成-と-管理-ロール-assignments.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [セキュリティ拡張機能の実装](../extensions/security-extension/implementing-a-security-extension.md)   
- [ネイティブ モードのレポート サーバーで SSL 接続を構成します。](configure-ssl-connections-on-a-native-mode-report-server.md)   
- [レポート ビルダーへのアクセスを構成します。](../report-server/configure-report-builder-access.md)   
+ [ネイティブ モードのレポート サーバーでの SSL 接続の構成](configure-ssl-connections-on-a-native-mode-report-server.md)   
+ [レポート ビルダーへのアクセスの構成](../report-server/configure-report-builder-access.md)   
  [セキュリティ拡張機能の概要](../extensions/security-extension/security-extensions-overview.md)   
  [Reporting Services での認証](../extensions/security-extension/authentication-in-reporting-services.md)   
  [Reporting Services での承認](../extensions/security-extension/authorization-in-reporting-services.md)  

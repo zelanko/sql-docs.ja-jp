@@ -1,7 +1,7 @@
 ---
 title: ユーザー入力の検証 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cba6e20e1e2efbd17ca677f06c07ac0a4a27648c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b732f1f09d4852f30d3b086ea5d88ea1a71eca9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669920"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025592"
 ---
 # <a name="validating-user-input"></a>ユーザー入力の検証
 

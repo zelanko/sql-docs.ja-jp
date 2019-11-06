@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -35,12 +34,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917361"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)
   このトピックは、次の状況に関連しています。  
@@ -109,7 +108,7 @@ ms.locfileid: "48198502"
  この機能の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントの資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) システム テーブルを使用してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントでは資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) システム テーブルを使用してください。  
   
  [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
@@ -135,7 +134,7 @@ ms.locfileid: "48198502"
   
  サーバー インスタンスでデータベース マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してデータベース マスター キーのコピーを暗号化します。 この暗号化されたコピーをデータベースと **master**データベースの両方に格納します。 通常、 **master** に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、インスタンスのサービス マスター キーを使用して、データベース マスター キーの暗号化解除が最初に試行されます。 暗号化解除が失敗した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では資格情報ストア内で、マスター キーが必要なデータベースと同じファミリ GUID のマスター キー資格情報が検索されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。 サービス マスター キーによって暗号化されていないマスター キーは、OPEN MASTER KEY ステートメントとパスワードを使用して開かれている必要があります。  
   
- 暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'** ステートメントを実行します。 次に、ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
+ 暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、次のステートメントを実行します:OPEN MASTER KEY DECRYPTION BY PASSWORD **='***パスワード***'** します。 その後、次のステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします:ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
   
  ミラー データベースのデータベース マスター キーの自動暗号化解除を有効にする方法については、「[暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)」を参照してください。  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48198502"
   
  [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> イベント通知と Windows Management Instrumentation (WMI) イベント (サーバー レベル)  
   
 ### <a name="server-level-event-notifications"></a>サーバーレベルのイベント通知  
  サーバーレベルのイベント通知は **msdb**に格納されます。 したがって、データベース アプリケーションがサーバーレベルのイベント通知に依存している場合、そのイベント通知を対象のサーバー インスタンスで再作成する必要があります。 サーバー インスタンスでイベント通知を表示するには、 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) カタログ ビューを使用します。 詳しくは、「 [Event Notifications](../service-broker/event-notifications.md)」をご覧ください。  
@@ -353,7 +352,7 @@ ms.locfileid: "48198502"
   
  [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [包含データベース](contained-databases.md)   
  [他のサーバーへのデータベースのコピー](copy-databases-to-other-servers.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   

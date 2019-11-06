@@ -1,24 +1,24 @@
 ---
-title: Hardware and Software Requirements for Reporting Services の SharePoint モード |Microsoft Docs
+title: SharePoint モードの Reporting Services のハードウェアとソフトウェアの要件 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 27ca12268f34f116b4158533a12b75920265d179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d17e0087c2d2899178d15845f58e03265e9f6c47
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210532"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952200"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Reporting Services の SharePoint モードに関するハードウェアとソフトウェアの要件
+
   このトピックでは、SharePoint モードで実行している [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の前提条件、ハードウェアの要件、およびインストールに関する注意点について説明します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードには SharePoint Server が必要なため、要件のほとんどは SharePoint 環境に基づきます。 ネイティブ モード レポート サーバーの場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行するための最低限のハードウェア要件とソフトウェア要件をハードウェアが満たしている必要があります。 詳細については、「 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)」をご参照ください。  
   
 -   [前提条件](#bkmk_prereq)  
@@ -33,19 +33,19 @@ ms.locfileid: "48210532"
   
 -   ローカル インストールの場合は、SharePoint と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストール時にログインしたアカウントは、ローカルのオペレーティング システムの Administrators グループのメンバーである必要があります。 セットアップ アカウントは、SharePoint ファーム管理者グループのメンバーである必要はありません。  
   
-     詳細については、「 [SharePoint 2013 のアカウントのアクセス許可とセキュリティ設定](http://technet.microsoft.com/library/cc678863.aspx)」を参照してください。  
+     詳細については、「 [SharePoint 2013 のアカウントのアクセス許可とセキュリティ設定](https://technet.microsoft.com/library/cc678863.aspx)」を参照してください。  
   
 -   SharePoint モードで実行している [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、SharePoint サーバーが必要です。 SharePoint の要件および構成の詳細については、以下を参照してください。  
   
-    -   [ハードウェアおよびソフトウェア要件 (SharePoint 2013)](http://go.microsoft.com/fwlink/p/?LinkId=256365) (http://go.microsoft.com/fwlink/p/?LinkId=256365)  
+    -   [ハードウェアとソフトウェアの要件 (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=256365) (https://go.microsoft.com/fwlink/p/?LinkId=256365)  
   
-    -   [SharePoint Server 2013 の容量管理およびサイズ変更](http://technet.microsoft.com/library/cc261700.aspx)  
+    -   [SharePoint Server 2013 の容量管理およびサイズ変更](https://technet.microsoft.com/library/cc261700.aspx)  
   
-    -   [ビジネス インテリジェンスのソフトウェア要件 (SharePoint 2013)](http://go.microsoft.com/fwlink/p/?LinkId=256367)  
+    -   [ビジネス インテリジェンスのソフトウェア要件 (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=256367)  
   
-    -   [ハードウェア要件およびソフトウェア要件 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc262485\(v=office.14\))  
+    -   [ハードウェア要件およびソフトウェア要件 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc262485\(v=office.14\))  
   
-    -   [SharePoint Server 2010 の容量管理およびサイズ変更](http://technet.microsoft.com/library/cc261700.aspx\(v=office.14\))  
+    -   [SharePoint Server 2010 の容量管理およびサイズ変更](https://technet.microsoft.com/library/cc261700.aspx\(v=office.14\))  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を使用して既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SharePoint インストールをアップグレードまたは更新する場合は、「 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)を実行するための最低限のハードウェア要件とソフトウェア要件をハードウェアが満たしている必要があります。  
   
@@ -61,12 +61,14 @@ ms.locfileid: "48210532"
   
 -   レポート サーバー インスタンスの場合、データベースに SQL Server Express Edition を使用することはできません。 ただし、SharePoint 製品によってインストールされる SQL Server Express Edition インスタンスは、他のデータベース エンジン エディションと共存できます。  
   
-##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] の要件  
+##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] の要件
+
  Office.Microsoft.com で最新の [Power View 関連ドキュメント](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) を確認してください。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は Microsoft Excel 2013 の機能の 1 つであり、Microsoft SharePoint Server 2010 および 2013 の Enterprise Edition 用の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services アドインに含まれています。  
   
-##  <a name="bkmk_more_information"></a> その他の情報  
- SharePoint の変更点については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 への変更](http://technet.microsoft.com/library/ff607742\(office.15\).aspx)(http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx)します。  
+##  <a name="bkmk_more_information"></a> その他の情報
+
+ SharePoint の変更の詳細については、「 [sharepoint 2010 から sharepoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx) 」を参照してください。  
   
- [SQL Server 2014 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=296445).  
+ [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
   

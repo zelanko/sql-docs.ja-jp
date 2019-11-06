@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4cd58a535836a82dc6cca660ba745aed58e2c84c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986325"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) をインストールします。
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスは、Windows インストーラー ベースのウィザードを使用してインストールされます。 ここでは、インストールの前提条件についての情報、SSMA の最新バージョンへのリンクとインストール、ライセンス、アンインストール、および SSMA をアップグレードする方法について説明します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 SSMA をインストールする前に、システムが、次の要件を満たしていることを確認します。  
   
 -   Windows 7 または以降のバージョンまたは Windows Server 2008 またはそれ以降のバージョン。  
@@ -79,7 +78,7 @@ SSMA を使用してアンインストール**プログラム追加と削除**�
   
 **SSMA をアンインストールするには**  
   
-1.  クリックして**開始**、] をクリックして**コントロール パネルの [**、順にクリックします**プログラム追加と削除**します。  
+1.  クリックして**開始**、] をクリックして**コントロール パネルの [** 、順にクリックします**プログラム追加と削除**します。  
   
 2.  選択**Microsoft SQL Server Migration Assistant for Access**、 をクリックし、**削除**します。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], data formats
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12201091caba40e145e6848fe25eef3b02b6b06a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011971"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
     
@@ -55,10 +55,10 @@ ms.locfileid: "48221042"
 -   E. [XML データの一括エクスポート](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. バイナリ バイト ストリームとして XML の一括インポートを行う  
- 適用するエンコード宣言が含まれているファイルから XML データの一括インポートを行うときは、OPENROWSET(BULK...) 句で SINGLE_BLOB オプションを指定します。 SINGLE_BLOB オプションにより、XML パーサー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 宣言に指定されたエンコード体系に従ってデータをインポートします。  
+ 適用するエンコード宣言が含まれているファイルから XML データの一括インポートを行うときは、OPENROWSET(BULK...) 句で SINGLE_BLOB オプションを指定します。 SINGLE_BLOB オプションが指定されていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XML パーサーは XML 宣言で指定されたエンコード体系に従ってデータをインポートします。  
   
 #### <a name="sample-table"></a>サンプル テーブル  
- 例 A をテストするには、サンプル テーブルを作成する必要があります`T`します。  
+ 例 A をテストするには、サンプル テーブル `T` を作成する必要があります。  
   
 ```  
 USE tempdb  
@@ -151,7 +151,7 @@ GO
   
  この問題を回避するには、XML データを DTD を含むデータ ファイルからインポートする際に `OPENROWSET(BULK...)` 関数を使用し、コマンドの `CONVERT` 句内で `SELECT` オプションを指定します。 コマンドの基本構文を次に示します。  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>サンプル データ ファイル  
  一括インポートの例をテストする前に、次のサンプル インスタンスを含むファイル (`C:\temp\Dtdfile.xml`) を作成します。  

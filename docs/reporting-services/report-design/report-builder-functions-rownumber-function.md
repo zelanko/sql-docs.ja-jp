@@ -2,18 +2,18 @@
 title: RowNumber 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87860304b7d4ff235961046d0951032797a1da0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577187"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>レポート ビルダー関数 - RowNumber 関数
   指定されたスコープの実行中の行数を返します。  

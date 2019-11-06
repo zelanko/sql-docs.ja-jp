@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653785"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>レッスン 3 : Web サービスへのアクセス
-  レポート サーバー Web サービスへの参照をプロジェクトに追加したら、次は、Web サービスのプロキシ クラスのインスタンスを作成します。 その後、このプロキシ クラスのメソッドを呼び出すことによって、Web サービスのメソッドにアクセスできます。 プロキシ クラスによって生成されたコードのアプリケーションがこれらのメソッドを呼び出すときに[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]アプリケーションと Web サービスの間の通信を処理します。  
+# <a name="lesson-3-accessing-the-web-service"></a>レッスン 3: Web サービスへのアクセス
+  レポート サーバー Web サービスへの参照をプロジェクトに追加したら、次は、Web サービスのプロキシ クラスのインスタンスを作成します。 その後、このプロキシ クラスのメソッドを呼び出すことによって、Web サービスのメソッドにアクセスできます。 アプリケーションから Web サービスのメソッドが呼び出されると、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] によって生成されたプロキシ クラスのコードにより、アプリケーションと Web サービス間の通信が処理されます。  
   
- Web サービスのプロキシ クラスのインスタンスを作成する最初に、<xref:ReportService2010.ReportingService2010>します。 次に、このプロキシ クラスを使用して Web サービスの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを呼び出します。 この呼び出しを使用して、サンプル レポート Company Sales の名前と記述を取得します。  
+ まず、Web サービスのプロキシ クラス <xref:ReportService2010.ReportingService2010> のインスタンスを作成します。 次に、このプロキシ クラスを使用して Web サービスの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを呼び出します。 この呼び出しを使用して、サンプル レポート Company Sales の名前と記述を取得します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上で実行されている Web サービスにアクセスする場合は、"ReportServer" パスに "$SQLExpress" を追加する必要があります。 以下に例を示します。  
+>  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上で実行されている Web サービスにアクセスする場合は、"ReportServer" パスに "$SQLExpress" を追加する必要があります。 例 :  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   
@@ -114,17 +113,17 @@ ms.locfileid: "48108302"
   
 4.  ソリューションを保存します。  
   
- チュートリアルのサンプル コードを使用して、<xref:ReportService2010.ReportingService2010.GetProperties%2A>サンプル レポート Company Sales 2012 のプロパティを取得する Web サービスのメソッド。 <xref:ReportService2010.ReportingService2010.GetProperties%2A>メソッドは 2 つの引数を受け取ります。 プロパティ情報の配列を取得するレポートの名前**property[]** 値を取得するプロパティの名前を含むオブジェクト。 メソッドの配列を返しますも**property[]** 名前とプロパティの引数で指定したプロパティの値が含まれているオブジェクト。  
+ このチュートリアルのサンプル コードでは、Web サービスの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを使用して、サンプル レポート Company Sales 2012 のプロパティを取得しています。 <xref:ReportService2010.ReportingService2010.GetProperties%2A>メソッドは 2 つの引数を受け取ります。 プロパティ情報の配列を取得するレポートの名前**property[]** 値を取得するプロパティの名前を含むオブジェクト。 メソッドの配列を返しますも**property[]** 名前とプロパティの引数で指定したプロパティの値が含まれているオブジェクト。  
   
 > [!NOTE]  
 >  場合は、空を指定する**property[]** 配列プロパティの引数の使用可能なすべてのプロパティが返されます。  
   
  上記のサンプル コードでは、<xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを使用して、サンプル レポート Company Sales 2012 の名前と記述が返されています。 次に、`foreach` ループを使用して、プロパティと値をコンソールに書き込んでいます。  
   
- 作成して、レポート サーバー Web サービスのプロキシ クラスの使用の詳細については、次を参照してください。 [Web サービス プロキシの作成](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)です。  
+ レポート サーバー Web サービスのプロキシ クラスの作成と使用の詳細については、「 [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [レッスン 4: アプリケーションを実行する&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
+ [レッスン 4:アプリケーションを実行している&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
  [Visual Basic または Visual C を使用してレポート サーバー Web サービスにアクセスする&#35; &#40;SSRS チュートリアル&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62822781"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>入れ子になったテーブルを伴うデータ ソース ビューの追加 (中級者向けデータ マイニング チュートリアル)
   マーケット バスケット モデルを作成するには、結合データをサポートしているデータ ソース ビューを使用する必要があります。 このデータ ソース ビューは、シーケンス クラスター シナリオでも使用されます。  
@@ -82,7 +81,7 @@ ms.locfileid: "48068042"
   
 ## <a name="see-also"></a>参照  
  [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [マイニング モデル&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング モデル (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -22,15 +22,14 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 28078c267d7d4a6ec1b5601c5982b20db006e56c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 8d0fbe116eb10d89d52e1ec5ebdf7ada16ef53dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914352"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |2|0x2|UPDATE ALL|  
 |4|0x4|REFERENCES ALL|  
 |8|0x8|INSERT|  
-|16|0x10|Del|  
+|16|0x10|DELETE|  
 |32|0x20|EXECUTE (プロシージャのみ)|  
 |4096|0x1000|SELECT ANY (少なくとも 1 列)|  
 |8192|0x2000|UPDATE ANY|  
@@ -123,7 +122,7 @@ ELSE
    PRINT 'ERROR: The current user cannot create a table.';  
 ```  
   
-### <a name="b-using-the-permissions-function-with-object-permissions"></a>B. PERMISSIONS 関数をオブジェクト権限に対して用する  
+### <a name="b-using-the-permissions-function-with-object-permissions"></a>B. PERMISSIONS 関数をオブジェクト権限に対して使用する  
  次の例では、現在のユーザーが `Address` データベース内の `AdventureWorks2012` テーブルにデータ行を挿入できるかどうかを判定します。  
   
 ```  

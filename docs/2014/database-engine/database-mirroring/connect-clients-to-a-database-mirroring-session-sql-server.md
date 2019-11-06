@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62755341"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
   データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
@@ -83,9 +83,9 @@ Network=dbnmpntw;
 >  名前付きパイプでは TCP/IP の再試行アルゴリズムを使用しないので、多くの場合、名前付きパイプによる接続試行はミラー化されたデータベースに接続される前にタイムアウトします。  
   
 #### <a name="server-attribute"></a>Server 属性  
- 接続文字列を含める必要があります、`Server`現在のプリンシパル サーバー インスタンスを特定するイニシャル パートナー名を提供する属性。  
+ 接続文字列には、イニシャル パートナー名を指定する `Server` 属性を含める必要があります。この名前で現在のプリンシパル サーバー インスタンスを特定します。  
   
- サーバー インスタンスを特定する最も簡単な方法は、*<server_name>*[**\\***<SQL_Server_instance_name>*] の形式でインスタンス名を指定することです。 以下に例を示します。  
+ サーバー インスタンスを特定する最も簡単な方法は、*<server_name>*[**\\**_<SQL_Server_instance_name>_] の形式でインスタンス名を指定することです。 例:  
   
  `Server=Partner_A;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |ODBC ドライバー|`Failover_Partner`|  
 |ActiveX Data Objects (ADO)|`Failover Partner`|  
   
- サーバー インスタンスを特定する最も簡単な方法は、そのインスタンスのシステム名を *<server_name>*[**\\***<SQL_Server_instance_name>*] という形式で指定することです。  
+ サーバー インスタンスを特定する最も簡単な方法は、そのインスタンスのシステム名を *<server_name>*[**\\**_<SQL_Server_instance_name>_] という形式で指定することです。  
   
  また、`Failover Partner` 属性に IP アドレスとポート番号を指定することもできます。 これにより、最初の接続試行がデータベースへの最初の接続に失敗した場合、DNS と SQL Server Browser に依存しないでフェールオーバー パートナーへの接続を試行できます。 接続が確立されると、指定したフェールオーバー パートナー名が接続時のフェールオーバー パートナー名に上書きされるので、次にフェールオーバーが発生した場合、リダイレクトされた接続では DNS と SQL Server Browser が必要になります。  
   
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  イニシャル パートナー名のみを指定すると、アプリケーション開発者が操作を実行したり、再接続方法以外のコードを記述したりする必要はありません。  
   
 > [!NOTE]  
->  アプリケーション開発者はマネージ コードでフェールオーバー パートナー名を指定する、`ConnectionString`の`SqlConnection`オブジェクト。 この接続文字列の使用方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK に含まれている ADO.NET マニュアルの「Database Mirroring Support in the .NET Framework Data Provider for SQL Server」を参照してください。  
+>  マネージド コード アプリケーションの開発者は `ConnectionString` オブジェクトの `SqlConnection` でフェールオーバー パートナー名を指定します。 この接続文字列の使用方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK に含まれている ADO.NET マニュアルの「Database Mirroring Support in the .NET Framework Data Provider for SQL Server」を参照してください。  
   
 #### <a name="example-connection-string"></a>接続文字列の例  
  たとえば、TCP/IP を使用して Partner_A または Partner_B の **AdventureWorks** データベースに明示的に接続するには、ODBC ドライバーを使用するクライアント アプリケーションで次の接続文字列を指定します。  
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  再試行時間は、次の式を使用して計算されます。  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  ここでは、 *PreviousRetryTime* の初期値は 0 です。  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |四捨五入|*RetryTime* の計算|接続試行ごとの再試行時間|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1.2 秒|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2.4 秒|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3.6 秒|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4.8 秒|  
+|1|0 **+(** 0.08 **&#42;** 15 **)**|1.2 秒|  
+|2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4 秒|  
+|3|2.4 **+(** 0.08 **&#42;** 15 **)**|3.6 秒|  
+|4|3.6 **+(** 0.08 **&#42;** 15 **)**|4.8 秒|   
   
  次の図では、連続する接続試行のそれぞれがタイムアウトする再試行時間を示しています。  
   
@@ -241,7 +241,7 @@ Server=123.34.45.56,4724;
 |データベース管理者がミラー化を停止し (クライアントの接続を切断)、Partner_A を Partner_C に置き換えて、ミラー化を再開|Partner_B|Partner_C|クライアントは Partner_A への接続を試行して失敗します。その後、Partner_B (現在のプリンシパル サーバー) への接続を試行して成功します。 データ アクセス プロバイダーは現在のミラー サーバー名である Partner_C をダウンロードし、現在のフェールオーバー パートナー名としてキャッシュに保存します。|  
 |サービスを手動で Partner_C にフェールオーバー (クライアントの接続を切断)|Partner_C|Partner_B|クライアントはまず Partner_A に接続してから Partner_B に接続しようとします。 どちらの名前でも接続に失敗し、最終的には接続要求がタイムアウトになって失敗します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング中に発生する可能性のあるエラー](possible-failures-during-database-mirroring.md)  
   

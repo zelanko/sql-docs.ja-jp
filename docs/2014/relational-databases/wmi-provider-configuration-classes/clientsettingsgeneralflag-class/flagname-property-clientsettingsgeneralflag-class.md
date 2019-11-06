@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - FlagName Property (ClientSettingsGeneralFlag Class)
@@ -20,12 +18,12 @@ ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a441eea7b24b5427387613b9e5f4d390ec2c964c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2186cd3718241aa9d145de99da9e59360b0a6418
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63242971"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>FlagName プロパティ (ClientSettingsGeneralFlag クラス)
   フラグの名前を取得します。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

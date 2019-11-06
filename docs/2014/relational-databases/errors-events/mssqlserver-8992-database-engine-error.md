@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912546"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131942"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC3_CHECK_CATALOG|  
-|メッセージ テキスト|カタログ メッセージ ERROR Level LEVEL の確認、状態 STATE: MESSAGE|  
+|メッセージ テキスト|チェック カタログ メッセージ エラー レベル レベル状態の状態:メッセージ。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKCATALOG または DBCC CHECKDB により、指定されたオブジェクトの不整合がシステム メタデータ テーブルで検出されました。 つまり、記録されたオブジェクト ID とエラー メッセージで指定されたオブジェクトの間に不整合があります。  
@@ -74,7 +74,7 @@ ms.locfileid: "48131942"
 ### <a name="do-not-manually-update-system-tables"></a>システム テーブルを手動で更新しない  
  システム テーブルは手動で更新しないでください。 SQL Server では、システム テーブルを手動で変更することはサポートされていません。 SQL Server データベース内のシステム テーブルを更新すると、2 つのイベント (イベント ID 17659 とイベント ID 3859) がログに記録されます。 詳細については、サポート技術情報の資料 2688307「SQL Server データベース内のシステム テーブルを更新するとイベント ID 17659 とイベント ID 3859 がログに記録される」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [SQL Server データベース内のシステム テーブルを更新するとイベント ID 17659 とイベント ID 3859 がログに記録される](http://support.microsoft.com/kb/2688307/EN-US)  
+## <a name="see-also"></a>関連項目  
+ [SQL Server データベース内のシステム テーブルを更新するとイベント ID 17659 とイベント ID 3859 がログに記録される](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

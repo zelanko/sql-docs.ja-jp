@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e7f6cb865ec06e1031cd627316821ef4f666a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930575"
 ---
 # <a name="ado-md-objects"></a>ADO MD オブジェクト
+
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|1 つまたは複数のディメンションの選択したメンバーを含むセル セットのフィルター軸または位置指定を表します。|  

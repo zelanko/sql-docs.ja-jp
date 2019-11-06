@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5930a5fb03fdab282e575049cf026dd23f17c6f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aef51bd94bf7cffb3e9481b409477a3830fabffb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058601"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 関数の使用
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +128,7 @@ GO
 > [!NOTE]  
 >  イベント データを返す場合は、 **query()** メソッドの代わりに XQuery の **value()** を使用してください。 **query()** メソッドでは、XML およびアンパサンドでエスケープされる復帰と改行 (CRLF) インスタンスが出力に返されます。一方 **value()** メソッドでは、CRLF インスタンスが出力に返されますが、表示はされません。  
   
- 同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 **ddlDatabseTriggerLog** を右クリックし、 **[データベース トリガーをスクリプト化]** をクリックします。 既定では、DDL トリガー **ddlDatabseTriggerLog** は無効になっています。  
+ 同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 **ddlDatabaseTriggerLog** を右クリックし、 **[データベース トリガーをスクリプト化]** を選択します。 既定では、DDL トリガー **ddlDatabaseTriggerLog** は無効になっています。  
   
 ## <a name="see-also"></a>参照  
  [DDL イベント](../../relational-databases/triggers/ddl-events.md)   

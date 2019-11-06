@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
@@ -12,12 +12,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53d38505a07fe30ef22145f4ec8197092e7bc6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194986"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>パラメーター クエリ (Visual Database Tools)
   値を変えるだけで、繰り返し利用できるクエリを作成することが必要になる場合があります。 たとえば、ある著者によって書かれたすべての `title_ids` を検索するクエリを頻繁に実行するような場合です。 著者の ID または名前を変更するだけで、要求のたびに同じクエリを実行できます。  

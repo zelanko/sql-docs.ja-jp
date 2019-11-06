@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - database monitoring [SQL Server], disk usage
@@ -21,15 +21,14 @@ helpviewer_keywords:
 - database performance [SQL Server], disk usage
 - monitoring server performance [SQL Server], disk usage
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 586842219df99ca940ed4710c620b0b77a1074a7
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 60168c1622ebe7660bb10d421b9d35a6d41523f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091025"
 ---
 # <a name="monitor-disk-usage"></a>ディスクの使用量の監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +40,8 @@ ms.locfileid: "52158850"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で生成されるディスク利用状況の隔離  
   
- 詳細については、「 [ディスク使用量の監視](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)」を参照してください。  
+ 詳細については、「[ディスク使用量の監視](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)」を参照してください。 
+ 
+ SQL Server での I/O に関する問題を解決する方法については、「[Slow I/O - SQL Server and disk I/O performance (低速な I/O - SQL Server とディスク I/O のパフォーマンス)](https://techcommunity.microsoft.com/t5/SQL-Server-Support/Slow-I-O-SQL-Server-and-disk-I-O-performance/ba-p/333983)」を参照してください。
   
   

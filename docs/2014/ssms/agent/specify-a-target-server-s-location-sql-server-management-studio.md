@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
@@ -13,15 +13,15 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ffae4f02e598157215e1062863ffce05794983f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211333"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>対象サーバーの場所を指定する (SQL Server Management Studio)
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でマルチサーバー管理の構成で対象サーバーの場所を指定する方法について説明します。  
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のマルチサーバー管理の構成でターゲット サーバーの場所を指定する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48135372"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  このアクションを実行すると、レジストリが編集されます。 レジストリは手動で編集しないでください。不適切または不正確な変更を加えると、システム構成に重大な問題が生じる場合があります。 熟練したユーザーのみがレジストリ エディターを使用してレジストリを編集することをお勧めします。 詳細については、Microsoft Windows のドキュメントを参照してください。  
@@ -49,19 +49,19 @@ ms.locfileid: "48135372"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-specify-a-target-servers-location"></a>対象サーバーの場所を指定するには  
+#### <a name="to-specify-a-target-servers-location"></a>ターゲット サーバーの場所を指定するには  
   
 1.  **オブジェクト エクスプローラー**で、対象サーバーの場所として指定するマスター サーバーをプラス記号をクリックして展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーの管理]** を選択します。  
   
-3.  対象サーバーを右クリックし、 **[プロパティ]** をクリックします。  
+3.  ターゲット サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[場所]** ボックスにサーバーの場所を入力し、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-specify-a-target-servers-location"></a>対象サーバーの場所を指定するには  
+#### <a name="to-specify-a-target-servers-location"></a>ターゲット サーバーの場所を指定するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

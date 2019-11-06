@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9805f9b14222d8b12b052c3a340ec7ee7183d749
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42e06144f35ab2db8f124dddff74fb836b6d9c4c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150354"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>status オプション (Distributed Replay 管理ツール)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツール、 `DReplay.exe`、分散再生コント ローラーとの通信に使用できるコマンド ライン ツールです。 このトピックでは、 **status** コマンド ライン オプションとそれに対応する構文について説明します。  
@@ -46,7 +46,7 @@ dreplay status [-mcontroller] [-fstatus_interval]
  次の例では、現在の状態は 60 秒ごとに表示されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。  
   
 ```  
-dreplay status –m localhost -f 60  
+dreplay status -m localhost -f 60  
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -54,8 +54,8 @@ dreplay status –m localhost -f 60
   
  詳細については、「 [Distributed Replay Security](distributed-replay-security.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [SQL Server 分散再生](sql-server-distributed-replay.md)   
+## <a name="see-also"></a>関連項目  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

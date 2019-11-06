@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 54aa90739bb6f2d5d89afe33b6237b00a6c81a84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947950"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47628040"
   
     -   すべてのサーバー インスタンスで同じサービス アカウントを使用する場合は、これらのフィールドを空白のままにします。  
   
-    -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、 **[プリンシパル]**、 **[ミラー]**、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
+    -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、 **[プリンシパル]** 、 **[ミラー]** 、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
   
          *DOMAINNAME* **\\** *username*  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
@@ -12,12 +12,12 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f9c1845d756662addc3bab1c17c6189c1a1fc2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269894"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>クエリ結果のコピー (Visual Database Tools)
   結果セットは、 **[結果]** ペインからタブ区切りテキストとしてコピーできます。 結果セット全体をコピーすることも、任意の数の連続する行やセル、または連続しない行やセルをコピーすることもできます。  
@@ -50,7 +50,7 @@ ms.locfileid: "48098432"
   
 5.  右クリックして **[コピー]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結果ペインのデータの操作 (Visual Database Tools)](visual-database-tools.md)  
   
   

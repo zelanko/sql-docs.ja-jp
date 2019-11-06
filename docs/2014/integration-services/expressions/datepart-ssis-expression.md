@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0e5a5a8b8d9cb15761a35bc01e9d8fe80153b288
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769339"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 式)
   ある日付の、特定の日付要素を整数で返します。  
@@ -83,10 +82,10 @@ DATEPART("yy",GETDATE())
   
 ## <a name="see-also"></a>参照  
  [DATEADD &#40;SSIS 式&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS 式&#41;](datediff-ssis-expression.md)   
- [DAY &#40;SSIS 式&#41;](day-ssis-expression.md)   
+ [DATEDIFF (SSIS 式)](datediff-ssis-expression.md)   
+ [DAY (SSIS 式)](day-ssis-expression.md)   
  [MONTH &#40;SSIS 式&#41;](month-ssis-expression.md)   
  [YEAR &#40;SSIS 式&#41;](year-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

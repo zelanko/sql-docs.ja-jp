@@ -16,21 +16,21 @@ ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c8f5a510ca569f4dd24464abf176b2db772115
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62837522"
 ---
 # <a name="legal-notice-for-documentation"></a>ドキュメントの免責事項
-  このドキュメントは現状有姿で提供され、 このドキュメントに記載されている情報や見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 お客様は、その使用に関するリスクを負うものとします。  
+  このドキュメントは現状有姿で提供されます。 このドキュメントに記載されている情報や見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 お客様は、その使用に関するリスクを負うものとします。  
   
  ここで使用される例は架空のものであり、説明のためだけに使用されます。 実在するものとは一切関係ありません。  
   
  このドキュメントは、Microsoft 製品の無体財産権に関する法的な権利をお客さまに許諾するものではありません。 内部的な参照目的に限り、このドキュメントを複製して使用することができます。  
   
- © 2013 Microsoft.  All rights reserved.  
+ © 2013 Microsoft. All rights reserved.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server のサポートおよびアップグレードに関するドキュメント ポリシー  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ソフトウェア マニュアルには、マイクロソフトによって発行された [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の Microsoft オンライン ブック、インストール マニュアル、デベロッパー向けリファレンス マニュアル、チュートリアル、Readme ファイル、既知の問題、サンプル コード、サンプル データベース、サポート技術情報などがあり、それらすべてに SQL Server の特徴および機能に関する内容が含まれています。 このサポートおよびアップグレードに関するポリシーは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースおよびサービス パックの Readme ファイルを含む [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ドキュメントに適用されます。Readme は、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] オンライン ブックの追加ファイルとして扱われます。  

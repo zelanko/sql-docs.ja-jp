@@ -9,14 +9,13 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 961cf4a634f134f3bd41858a8157db0e8f6cb45f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0b088d7ed1f32661a9ca171eb5f889c09ae5d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012800"
 ---
 # <a name="column-encryption-enclave-type-server-configuration-option"></a>Column encryption enclave type サーバー構成オプション
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -25,10 +24,10 @@ ms.locfileid: "47782390"
 
  **column encryption enclave type** で指定できる値は次の表のとおりです。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-------------------|-----------------|  
 |0|**セキュア エンクレーブなし**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は Always Encrypted のセキュア エンクレーブを初期化しません。 そのため、セキュア エンクレーブを使用した Always Encrypted の機能は利用できなくなります。|  
-|1|**仮想化ベースのセキュリティ (VBS)**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は Always Encrypted のセキュア エンクレーブ (VBS セキュア メモリ エンクレーブ) を初期化します。|    
+|1|**仮想化ベースのセキュリティ (VBS)** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は Always Encrypted のセキュア エンクレーブ (VBS セキュア メモリ エンクレーブ) を初期化します。|    
 
 > [!IMPORTANT]
 > **column encryption enclave type** の変更は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するまで反映されません。

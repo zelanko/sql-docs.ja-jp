@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, modifying
@@ -16,12 +15,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa91f2910fabac44c4c434f70ae3d8bb0ae78c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211841"
 ---
 # <a name="modify-check-constraints"></a>CHECK 制約の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、制約式を変更するとき、または特定の条件の制約を有効または無効にするオプションを変更するときは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して CHECK 制約を変更できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "48114042"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48114042"
   
 4.  次の表の操作を完了します。  
   
-    |変換先|手順|  
+    |目的|手順|  
     |--------|------------------------|  
     |制約式を編集する。|**[式]** フィールドに新しい式を入力します。|  
     |制約名を変更する。|**[名前]** フィールドに新しい名前を入力します。|  
@@ -70,7 +69,7 @@ ms.locfileid: "48114042"
   
 5.  **[閉じる]** をクリックします。  
   
-6.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+6.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **CHECK 制約を変更するには**  

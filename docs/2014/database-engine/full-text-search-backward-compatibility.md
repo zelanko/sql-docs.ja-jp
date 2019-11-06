@@ -14,17 +14,17 @@ ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a9efee9d104c2f45eea728dc7b0ae30913e3ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779262"
 ---
 # <a name="full-text-search-backward-compatibility"></a>フルテキスト検索における旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の以前のバージョンと [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]におけるフルテキスト検索の動作の違いについて説明します。  
   
-|参照先|トピックの内容|  
+|「」を参照しています.|に関するトピックをしています.|  
 |----------|-----------------------|  
 |[SQL Server 2014 の非推奨のフルテキスト検索機能](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|このリリースで非推奨のフルテキスト検索機能。|  
 |[SQL Server 2014 で廃止されたフルテキスト検索機能](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|このリリースで廃止されたフルテキスト検索機能|  

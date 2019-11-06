@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebe649261a1f97093f40ad2aa3f20f96306fd1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076689"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>多次元データベースの互換性レベルの設定 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベース互換性レベル プロパティによって、データベースの機能レベルが決定されます。 互換性レベルは、各モデルの種類に固有です。 たとえば、互換性レベルの`1100`データベースが多次元か表形式かによって異なる意味を持ちます。  
@@ -24,7 +23,7 @@ ms.locfileid: "48219122"
  このトピックでは、多次元データベースの互換性レベルについてのみ説明します。 表形式ソリューションの詳細については、次を参照してください。[互換性レベル&#40;SSAS テーブル SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)します。  
   
 > [!NOTE]  
->  表形式モデルには、多次元モデルに適用できないデータベース互換性レベルが存在します。 互換性レベル`1103`の多次元モデルが存在しません。 参照してください[で SQL Server 2012 SP1 との互換性レベル表形式モデルの新](http://go.microsoft.com/fwlink/?LinkId=301727)の詳細については`1103`テーブル ソリューションの。  
+>  表形式モデルには、多次元モデルに適用できないデータベース互換性レベルが存在します。 互換性レベル `1103` は、多次元モデルには存在しません。 参照してください[で SQL Server 2012 SP1 との互換性レベル表形式モデルの新](https://go.microsoft.com/fwlink/?LinkId=301727)の詳細については`1103`テーブル ソリューションの。  
   
  **多次元データベースの互換性レベル**  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48219122"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>多次元データベースの既存のデータベース互換性レベルの確認  
  データベース互換性レベルを表示または変更するには、XMLA を使用するしかありません。 データベースを指定する XMLA スクリプトは、SQL Server Management Studio で表示または変更できます。  
   
- プロパティのデータベースの XMLA 定義を検索するかどうかは`CompatibilityLevel`が存在しないとは、ほとんどの場合にデータベースがある、`1050`レベル。  
+ データベースの XMLA 定義で `CompatibilityLevel` プロパティを検索し、それが存在しなかった場合、データベースが `1050` レベルになっている可能性が高いと考えられます。  
   
  XMLA スクリプトの表示と変更の方法については、次のセクションで説明します。  
   
@@ -90,9 +89,9 @@ ms.locfileid: "48219122"
 3.  サーバーの同期は、サーバーで同じバージョンとデータベース互換性レベルを共有している場合にのみサポートされます。  
   
 ## <a name="next-steps"></a>次の手順  
- 設定することができます、データベース互換性レベルを上げると、`StringStoresCompatibilityLevel`プロパティ[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]します。 これにより、メジャーとディメンションの文字列ストレージが大きくなります。 この機能の詳細については、「 [ディメンションおよびパーティションの文字列ストレージの構成](configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
+ データベース互換性レベルを上げると、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で `StringStoresCompatibilityLevel` プロパティを設定できるようになります。 これにより、メジャーとディメンションの文字列ストレージが大きくなります。 この機能の詳細については、「 [ディメンションおよびパーティションの文字列ストレージの構成](configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [バックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [データベースのバックアップ、復元、および同期 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

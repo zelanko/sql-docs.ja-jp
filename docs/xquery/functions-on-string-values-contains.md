@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f611fead43166972860436e7c3bc378ee8e44f38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899026"
 ---
 # <a name="functions-on-string-values---contains"></a>文字列値に使用する関数 - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
 ## <a name="arguments"></a>引数  
  *$arg1*  
- 評価対象の文字列の値。  
+ 文字列をテストする値。  
   
  *$arg2*  
  検索するサブストリング。  
@@ -57,10 +56,10 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照してください。 [SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。 参照してください[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)します。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、AdventureWorks データベース内のさまざまな xml 型列に格納されている XML インスタンスに対して XQuery の例を示します。  
+ このトピックでは、AdventureWorks データベースのさまざまな xml 型列に格納されている XML インスタンスに対して XQuery の例についてを説明します。  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. contains() XQuery 関数を使用した特定の文字列の検索  
- 次のクエリでは、概要説明に Aerodynamic という単語が含まれている製品を検索します。 クエリは、該当製品の ProductID と <`Summary`> 要素を返します。  
+ 次のクエリでは、概要説明に Aerodynamic という単語が含まれている製品を検索します。 ProductID が返されます、<`Summary`> 要素のような製品です。  
   
 ```  
 --The product model description document uses  
@@ -97,7 +96,7 @@ where CatalogDescription.exist('
   
  `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">`  
   
  `A TRUE multi-sport bike that offers streamlined riding and`  
   
@@ -109,7 +108,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -1,24 +1,23 @@
 ---
-title: '手順 8: レッスン 1 のパッケージをわかりやすくする作業 | Microsoft Docs'
+title: 手順 8:レッスン 1 のパッケージをわかりやすく |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e549018c7f0654ba40ddd486149059b37ddd46e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767594"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>手順 8: レッスン 1 のパッケージをわかりやすくする作業
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>手順 8:レッスン 1 のパッケージをわかりやすくする作業
   ここまでの作業で、レッスン 1 のパッケージの構成が完了しました。次は、パッケージのレイアウトを整理することをお勧めします。 制御フローやデータ フローのレイアウトの図形サイズがまちまちであったり、図形の整列やグループ化が行われていないと、パッケージの機能がわかりにくくなることがあります。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools には、パッケージのレイアウトをすばやく簡単に書式設定できるツールが用意されています。 この書式設定機能を使用すると、複数の図形を同じサイズにしたり、整列したり、図形間の上下左右の間隔を操作することができます。  
@@ -52,6 +51,6 @@ ms.locfileid: "48072532"
      注釈ボックスにテキストを追加しない場合は、注釈ボックスの外側をクリックするとボックスは表示されなくなります。  
   
 ## <a name="next-steps"></a>次の手順  
- [手順 9: レッスン 1 のチュートリアル パッケージのテスト](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [手順 9:レッスン 1 のチュートリアル パッケージのテスト](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

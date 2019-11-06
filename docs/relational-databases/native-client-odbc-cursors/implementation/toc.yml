@@ -1,8 +1,0 @@
-- name: カーソルの実装方法
-  href: how-cursors-are-implemented.md
-- name: ODBC カーソル ライブラリ
-  href: odbc-cursor-library.md
-- name: サーバー カーソルの使用
-  href: using-server-cursors.md
-- name: SQL Server の既定の結果セットの使用
-  href: using-sql-server-default-result-sets.md

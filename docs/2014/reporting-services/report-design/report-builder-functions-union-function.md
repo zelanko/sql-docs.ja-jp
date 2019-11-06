@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 37d858e465e67bfba98da5d4ad9a0c44fbf1e46b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105117"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の結合を、指定されたスコープで評価して返します。  
@@ -33,13 +32,13 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>パラメーター  
  *式 (expression)*  
- (`SqlGeometry`または`SqlGeography`) 集計関数の実行対象の式。  
+ (`SqlGeometry` または `SqlGeography`) この集計関数の実行対象の式です。  
   
  *スコープ (scope)*  
- (`String`) 省略可能です。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
+ (`String`) 省略可。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- (**列挙型**) 省略可。 `Simple` (既定値) または`RdlRecursive`します。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return"></a>戻り値  
  いずれかの空間オブジェクトを返します`SqlGeometry`または`SqlGeography`式の型に基づきます。 詳細については`SqlGeometry`と`SqlGeography`空間データ型を参照してください[空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)します。  
@@ -64,7 +63,7 @@ Union(expression, scope, recursive)
  再帰的集計については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の表の例を示します`SqlGeometry`式と`Union`空間データ用の WKT (Well Known Text) 形式の式の結果します。  
+ 次の表に、`SqlGeometry` 式の例と、それに `Union` 式を適用した結果を、空間データ用の WKT (Well Known Text) 形式で示します。  
   
 |空間データを含むフィールド|例|Union の結果|  
 |-----------------------------|-------------|------------------|  
@@ -78,10 +77,10 @@ Union(expression, scope, recursive)
 =Union(Fields!PolygonDefinition.Value, "Group1")  
 ```  
   
-## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

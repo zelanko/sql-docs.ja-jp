@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb940edad51f7d05effc7ba35534a25edddaf441
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: af1eccd0349d0ed204d595d32fdc35c76c3b2efa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104738"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>テーブル (レポート ビルダーおよび SSRS)
   テーブルを使用すると、詳細データまたはグループ化されたデータ、あるいはその両方を組み合わせて表示できます。 データは、1 つのフィールドまたは複数のフィールドでグループ化することも、独自の式を記述してグループ化することもできます。 入れ子になったグループまたは独立した隣接するグループを作成できます。 グループ化されたデータの集計値を表示するには、合計をグループに追加します。 行と列を書式設定して、強調するデータを強調表示します。 最初は詳細データまたはグループ化されたデータを非表示にして、ユーザーが表示するデータを対話的に選択できるドリルダウンの切り替えを含めることもできます。  
@@ -24,9 +23,9 @@ ms.locfileid: "48180672"
 > [!NOTE]  
 >  テーブルは、レポート パーツとしてレポートとは別にパブリッシュできます。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- テーブルの使用をすぐに開始するには、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
+ テーブルをすぐに使用するには、「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、テーブルを使用したレポートが多数含まれています。 テーブルに関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](http://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、テーブルを使用したレポートが多数含まれています。 テーブルに関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](https://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +46,7 @@ ms.locfileid: "48180672"
   
  ![デザイン画面上のテーブル テンプレート、選択](../media/rs-tabletemplatenewselected.gif "デザイン画面上のテーブル テンプレート、選択")  
   
- データ行の行ハンドルは、詳細シンボル (![詳細行の 3 本の平行線がある行ハンドル](../media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) を示します。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図に、Date、Order、Product、Qty、および Line Total フィールドを含むテーブル データ領域を示します。  
+ データ行の行ハンドルは、詳細シンボル (![詳細行の 3 本の平行線がある行ハンドル](../media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) を示します。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図は、次のフィールドを含むテーブル データ領域を示しています:Date、Order、Product、Qty、および Line Total です。  
   
  ![デザイン、列ヘッダーが太字のテーブル](../media/rs-basictabledetailsformatteddesign.gif "デザイン、列ヘッダーが太字のテーブル")  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48180672"
   
  ![列ヘッダーが太字になっているテーブルのプレビュー](../../tutorials/media/rs-basictabledetailsformattedpreview.gif "列ヘッダーが太字になっているテーブルのプレビュー")  
   
- 作業を開始したテーブルは、Tablix データ領域に基づいたテンプレートです。 基になる Tablix データ領域でサポートされている機能を追加することで、テーブルのデザインを整えることができます。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。 また、行グループや列グループの追加、詳細グループの追加や削除を行って、テーブルを改良することもできます。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 作業を開始したテーブルは、Tablix データ領域に基づいたテンプレートです。 基になる Tablix データ領域でサポートされている機能を追加することで、テーブルのデザインを整えることができます。 詳細については、「 [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。 また、行グループや列グループの追加、詳細グループの追加や削除を行って、テーブルを改良することもできます。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="adding-totals-for-detail-data"></a>詳細データの合計の追加  
  合計を追加するには、数値データを含むセルを選択し、数値フィールドの詳細データのラベルと合計を自動的に追加するショートカット メニューを使用します。 他のラベルおよび合計を手動で指定することもできます。 次の図に、合計を自動と手動の両方で指定した一般的な合計行を示します。  
@@ -114,11 +113,11 @@ ms.locfileid: "48180672"
   
  ![プレビュー、ドリル ダウン ノードが展開されているテーブル](../media/rs-basictablegroupsdrilldownpreview.gif "プレビュー、ドリル ダウン ノードが展開されているテーブル")  
   
- 詳細については、「[アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

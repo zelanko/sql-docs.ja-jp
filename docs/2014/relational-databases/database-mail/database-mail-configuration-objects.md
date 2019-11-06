@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -33,15 +32,15 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62872437"
 ---
 # <a name="database-mail-configuration-objects"></a>データベース メール構成オブジェクト
-  データベース メールには、2 つの構成オブジェクトがあります。データベース アプリケーションまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent から電子メールを送信する際、データベース メールによって使用される設定は、データベース構成オブジェクトを通じて構成することができます。  
+  データベース メールでは、2 つの構成オブジェクトがあります。データベース メールは、データベース アプリケーションから電子メールを送信するときに使用する設定を構成する方法を提供する、データベース構成オブジェクトまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。  
   
 -   データベース メール アカウント  
   
@@ -59,11 +58,11 @@ ms.locfileid: "48089672"
   
  データベース メールでは、SMTP サーバーとの通信に関して、次に示す 3 つの認証方法をサポートしています。  
   
--   Windows 認証 : SMTP サーバーの認証に [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用します。  
+-   Windows 認証:データベース メールの資格情報を使用して、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows サービス、SMTP サーバー認証アカウント。  
   
--   基本認証 : SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
+-   基本認証:データベース メールでは、ユーザー名とパスワードを指定する SMTP サーバーの認証を使用します。  
   
--   匿名認証 : SMTP サーバーでの認証を要求しません。  SMTP サーバーの認証には資格情報をまったく使用しません。  
+-   匿名認証:SMTP サーバーでは、任意の認証は必要ありません。  SMTP サーバーの認証には資格情報をまったく使用しません。  
   
  アカウント情報は、 **msdb** データベースに保存されます。 各アカウントを構成する情報は、次のとおりです。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48089672"
   
 -   電子メール サーバーの名前。  
   
--   電子メール サーバーの種類。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は、常に SMTP (簡易メール転送プロトコル) です。  
+-   電子メール サーバーの種類。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は、常に SMTP (簡易メール転送プロトコル) です。  
   
 -   電子メール サーバーのポート番号。  
   

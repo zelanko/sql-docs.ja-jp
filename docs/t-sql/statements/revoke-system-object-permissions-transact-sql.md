@@ -13,20 +13,19 @@ helpviewer_keywords:
 - REVOKE statement, system objects
 - permissions [SQL Server], system objects
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6009e17ed735ab9a2f8aa93bc460a78bbef06119
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 47428ffc2ab1074ec2b4ce1789e679c184607a05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914200"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限を、プリンシパルから取り消します。  
+  ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限が、プリンシパルから取り消されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +41,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  **sys** 修飾子は、カタログ ビューおよび動的カタログ ビューを指定する場合にのみ必要です。  
   
  *system_object*  
- 権限を取り消すオブジェクトを指定します。  
+ 権限を取り消すオブジェクトが指定されます。  
   
  *principal*  
  権限を取り消すプリンシパルを指定します。  

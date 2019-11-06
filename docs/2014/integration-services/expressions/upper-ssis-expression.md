@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - UPPER function
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7755a148583bac8af72b469156b3b4afee63bcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 278a85ddce309f276f61603961169529ffcdfe67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896344"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 式)
   小文字が大文字に変換された状態の文字式を返します。  
@@ -65,7 +64,7 @@ UPPER(@PostalCode)
 ```  
   
 ## <a name="see-also"></a>参照  
- [低い&#40;SSIS 式&#41;](lower-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [LOWER &#40;SSIS 式&#41;](lower-ssis-expression.md)   
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

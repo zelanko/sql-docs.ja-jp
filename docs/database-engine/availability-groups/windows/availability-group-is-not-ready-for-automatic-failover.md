@@ -1,6 +1,7 @@
 ---
-title: 可用性グループの自動フェールオーバーの準備ができていない | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの自動フェールオーバーの準備ができていない
+description: Always On 可用性グループでフェールオーバーの準備ができていない原因の可能性を特定します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec114e42921c7d7619ad3da6252d54e534826a9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 78f61b21ae2399a3aa5d0b5432a4047c3f4fd4b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991491"
 ---
-# <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性グループの自動フェールオーバーの準備ができていない
+# <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性グループで自動フェールオーバーの準備ができていない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>概要  

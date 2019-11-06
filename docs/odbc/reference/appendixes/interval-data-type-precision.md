@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98be3b4a7e4db30f394a2834364ecab9a20ef182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3424c58d25be69d2ddc42a3088aa457ebddf1d4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947603"
 ---
 # <a name="interval-data-type-precision"></a>Interval データ型の精度
 間隔のデータ型の有効桁数には、有効桁数、間隔の有効桁数、および秒の有効桁数を先頭の間隔が含まれています。  
   
- 間隔の先頭のフィールドは、符号付き数値です。 先頭のフィールドの最大桁数と呼ばれる数量によって決まります*間隔の先頭の有効桁数、* データ型の宣言の一部であります。 たとえば、宣言: 間隔 HOUR(5) 1 分間に先頭の有効桁数は 5 です間隔。1 時間フィールドには、99999 を通じて –99999 値を取ります。 先頭の有効桁数の間隔は、記述子のレコードの SQL_DESC_DATETIME_INTERVAL_PRECISION フィールドに含まれます。  
+ 間隔の先頭のフィールドは、符号付き数値です。 先頭のフィールドの最大桁数と呼ばれる数量によって決まります*間隔の先頭の有効桁数、* データ型の宣言の一部であります。 たとえば、次のような宣言があるとします。間隔 HOUR(5) 1 分間に、間隔に、5; の先頭有効桁数1 時間フィールドには、99999 を通じて-99999 値を取ります。 先頭の有効桁数の間隔は、記述子のレコードの SQL_DESC_DATETIME_INTERVAL_PRECISION フィールドに含まれます。  
   
  間隔のデータ型から成るフィールドの一覧と呼ばれる*間隔精度*します。 "Precision"という用語が示すように数値の値はありません。 2 つ目は日、時間、リストをなど、interval 型の有効桁数、INTERVAL DAY TO 分、秒。 この値を保持する記述子フィールドはありません。間隔の有効桁数は、interval データ型が常に判断できます。  
   

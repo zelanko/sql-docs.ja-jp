@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249402"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>予測モデルのカスタマイズと処理 (中級者向けデータ マイニング チュートリアル)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、モデルの作成方法と時間データの分析方法に影響するいくつかのパラメーターがあります。 これらのプロパティを変更すると、マイニング モデルでの予測の作成方法に大きく影響する場合があります。  
@@ -25,7 +24,7 @@ ms.locfileid: "48224482"
   
 1.  モデルの新しい値を追加することで時間間隔を処理する方法をカスタマイズ、 *PERIODICITY_HINT*パラメーター。  
   
-2.  Microsoft タイム シリーズ アルゴリズムの重要な 2 つのパラメーターについて理解します。FORECAST_METHOD では、予測に使用される方法を制御できます。PREDICTION_SMOOTHING では、長期予測と短期予測の組み合わせをカスタマイズできます。  
+2.  Microsoft タイム シリーズ アルゴリズムの他の 2 つの重要なパラメーターを学びます。FORECAST_METHOD で、予測に使用する方法を制御することができます、や PREDICTION_SMOOTHING では、することができます、長期間および短期間の予測の組み合わせをカスタマイズできます。  
   
 3.  必要に応じて、不足値を帰属させる方法を指定します。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224482"
 ## <a name="handling-missing-data-optional"></a>不足データの処理 (オプション)  
  売上データに NULL で埋められたギャップ (途切れ) が含まれていたり、店舗からのレポートが期限に間に合わなかったために系列の終了時点で空のセルが残されたりすることがよくあります。 このような場合は、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] から次のエラーが表示されてモデルが処理されません。  
   
- "エラー (データ マイニング): 同期されていないで始まるタイムスタンプ シリーズ\<系列名 >、マイニング モデルの\<モデル名 >。 すべての時系列は同一の時点で終了する必要があります。また、データ消失点をそれぞれが任意に持つこともできません。 MISSING_VALUE_SUBSTITUTION パラメーターを Previous または数値定数に設定すると、可能な場所にデータ消失点が自動的に設定されます。"  
+ "エラー (データ マイニング)。タイムスタンプが同期されていないシリーズ以降\<系列名 >、マイニング モデルの\<モデル名 >。 すべての時系列は同一の時点で終了する必要があります。また、データ消失点をそれぞれが任意に持つこともできません。 MISSING_VALUE_SUBSTITUTION パラメーターを Previous または数値定数に設定すると、可能な場所にデータ消失点が自動的に設定されます。"  
   
  このエラーを回避するには、次のいずれかの方法で、ギャップを埋めるための新しい値が [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] から自動的に提供されるように指定します。  
   
@@ -107,6 +106,6 @@ ms.locfileid: "48224482"
 ## <a name="see-also"></a>参照  
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [処理の要件および注意事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

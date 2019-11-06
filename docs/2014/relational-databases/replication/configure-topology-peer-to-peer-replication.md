@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721634"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] \(ピア ツー ピア レプリケーション)
   **[トポロジの構成]** ページを使用すると、新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加など、一般的な構成タスクを実行できます。 このウィザードの **[パブリケーション]** ページで選択したノードがデザイン画面に表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。  
@@ -63,7 +62,7 @@ ms.locfileid: "48208222"
   
 ### <a name="options-for-each-node"></a>各ノードのオプション  
  **[新しいピア接続の追加]**  
- 2 つのノード間の接続を追加します。 たとえば、ノード A とノード B 間の接続を追加すると、レプリケーションによって 2 つのサブスクリプションが追加されます。最初のサブスクリプションによってノード A がノード B のパブリケーションから変更を受信できるようになり、2 番目のサブスクリプションによってノード B がノード A のパブリケーションから変更を受信できるようになります。  
+ 2 つのノード間の接続を追加します。 たとえば、ノード A とノード B 間の接続を追加する場合のレプリケーションは 2 つのサブスクリプションを追加します。最初のノード A ノード b でパブリケーションからの変更を受信して、2 つ目は、ノード A のパブリケーションから変更を受信するノード B を可能  
   
  **[ピア ノードの削除]**  
  トポロジからノードを削除します。 たとえば、ノード C を削除すると、そのノードのパブリケーションが削除されます。 ノード A とノード C、およびノード B とノード C 間のサブスクリプションも削除されます。 ノード C のデータベースは削除されず、パブリッシングおよびディストリビューションは無効になりません。  

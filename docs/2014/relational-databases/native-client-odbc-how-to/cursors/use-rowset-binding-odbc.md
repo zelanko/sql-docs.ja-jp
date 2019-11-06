@@ -12,12 +12,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da0cfb6552153676b838d7df4d526e12def3f517
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200431"
 ---
 # <a name="use-rowset-binding-odbc"></a>行セットのバインドの使用 (ODBC)
     
@@ -43,7 +43,7 @@ ms.locfileid: "48180992"
   
 3.  ステートメントを実行します。  
   
-4.  呼び出しごとに[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) R の行を取得し、バインドされた列にデータを転送します。  
+4.  呼び出しごとに[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) R の行を取得し、バインドされた列にデータを転送します。  
   
 ### <a name="to-use-row-wise-binding"></a>行方向のバインドを使用するには  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48180992"
   
 4.  ステートメントを実行します。  
   
-5.  呼び出しごとに[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) R の行を取得し、バインドされた列にデータを転送します。  
+5.  呼び出しごとに[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) R の行を取得し、バインドされた列にデータを転送します。  
   
 ## <a name="see-also"></a>参照  
  [カーソルの操作方法に関するトピックを使用して&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   

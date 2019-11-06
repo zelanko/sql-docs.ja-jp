@@ -15,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - ORIGINAL_DB_NAME function
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee1644e34964a41a8e6ee97897bcce6a1783e536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914573"
 ---
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザーがデータベース接続文字列で指定したデータベース名を返します。 これは、データベースを使用して指定されている、 **sqlcmd * *-d*** オプション (使用 * *データベース*) または ODBC データ ソース式 (初期カタログ =*databasename*)。  
+  ユーザーがデータベース接続文字列で指定したデータベース名を返します。 このデータベースは、**sqlcmd-d** オプション (USE *database*) を使用して指定します。 Open Database Connectivity (ODBC) のデータ ソース式を使用して指定することもできます (initial catalog =*databasename*)。  
   
  このデータベースは、既定のユーザー データベースとは異なります。  
   
@@ -47,6 +46,6 @@ ORIGINAL_DB_NAME ()
 ## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
  [osql ユーティリティ](../../tools/osql-utility.md)   
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

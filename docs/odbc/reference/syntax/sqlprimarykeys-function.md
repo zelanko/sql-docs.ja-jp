@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e041c4152a2f2b02a57164dbe43d62ae54d09d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 022d19a291b4fab93925fd103620c4bc16839872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005749"
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLPrimaryKeys**プライマリを構成する列名がテーブルのキーを返します。 ドライバーは、その結果、情報を設定を返します。 この関数では、1 回の呼び出しで複数のテーブルから主キーを取得することはできません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLPrimaryKeys(  
      SQLHSTMT       StatementHandle,  

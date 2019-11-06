@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
@@ -16,17 +15,17 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196745"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
   主キーと外部キーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
- このトピックの内容は次のとおりです。  
+ このトピックは次のセクションで構成されます。  
   
  [主キー制約](../tables/primary-and-foreign-key-constraints.md#PKeys)  
   

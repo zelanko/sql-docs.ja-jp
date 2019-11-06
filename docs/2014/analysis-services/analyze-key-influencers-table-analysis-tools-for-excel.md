@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,12 +14,12 @@ ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49dc66cfeb9b6d30abd98563b995bcbead0de5d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062259"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>主要な影響元の分析 (Excel 用のテーブル分析ツール)
   ![リボンの [分析の主要な影響元ボタン](media/tat-aki.gif "リボンの分析の主要な影響元] ボタン")  
@@ -101,7 +100,7 @@ ms.locfileid: "48128778"
   
 -   信頼スコア順に並べ替えて、主要な影響元を記述したレポートを作成します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  ターゲット列に連続する数値が含まれている場合、このツールは自動的に数値をグループにセグメント化します。 これらのグループは、類似の特性を持つケースのクラスターを表します。 ただし、ユーザーにとってわかりやすいグループになるとは限りません。 など、レポートのようなグループには"\<12.85701" は、レポート ユーザーは通常 10 ~ 19 や 20 ~ 29 などの整数を使用するグループに対しします。  
   
  数値データを異なる方法でグループ化する場合は、分析を作成する前にデータを必要な形にセグメント化しておく必要があります。 たとえば、使用することができます、[ラベルの変更](relabel-sql-server-data-mining-add-ins.md)、個別の列でグループ化の新しいラベルを作成し、分析でその新しい列のみを使用する Excel 用データ マイニング クライアント ツールです。  

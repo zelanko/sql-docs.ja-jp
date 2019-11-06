@@ -2,19 +2,18 @@
 title: -WSUS を構成するには、Analytics Platform System |Microsoft Docs
 description: これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System のように WSUS を構成するための手順を説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961124"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System での Windows Server Update Services (WSUS) の構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System のように WSUS を構成するための手順を説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM 仮想マシンに既にインストールされています。  
@@ -55,7 +54,7 @@ WSUS を構成するには、する必要があります。
   
     1.  **サーバー マネージャー ダッシュ ボード**の**ツール** メニューのをクリックして**Windows Server Update Services**します。  
   
-    2.  左側のウィンドウで、 **Update Services**ウィンドウをクリックして、仮想マシンの管理ノード サーバーの展開 (***appliance_domain *-VMM**)、順にクリックします**オプション**します。  
+    2.  左側のウィンドウで、 **Update Services**ウィンドウをクリックして、仮想マシンの管理ノード サーバーの展開 ( **_appliance_domain_VMM**)、をクリックして**オプション**します。  
   
     3.  **オプション**ウィンドウで、をクリックして**WSUS サーバーの構成ウィザード**構成ウィザードを起動します。  
   

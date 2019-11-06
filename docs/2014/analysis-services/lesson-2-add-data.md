@@ -1,34 +1,33 @@
 ---
-title: 'レッスン 2: データの追加 |Microsoft Docs'
+title: レッスン 2:データの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2ffda70d3af46434886a7f2878ce238d3190905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078972"
 ---
-# <a name="lesson-2-add-data"></a>レッスン 2: データの追加
-  このレッスンでは、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] のテーブルのインポート ウィザードを使用して、AdventureWorksDW SQL データベースに接続し、データを選択し、プレビューして、データをフィルター処理した後、それらのデータをモデル ワークスペース内にインポートします。  
+# <a name="lesson-2-add-data"></a>レッスン 2:データを追加する
+  このレッスンでは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] のテーブルのインポート ウィザードを使用して、AdventureWorksDW SQL データベースに接続し、データを選択し、プレビューして、データをフィルター処理した後、それらのデータをモデル ワークスペース内にインポートします。  
   
- テーブルのインポート ウィザードを使用すると、Access、SQL、Oracle、Sybase、Informix、DB2、Teradata など、さまざまなリレーショナル ソースからデータをインポートできます。 それぞれのリレーショナル ソースからデータをインポートする手順は、以下で説明する手順とそれほど変わりません。 また、データはストアド プロシージャを使用して選択できます。  
+ テーブルのインポート ウィザードを使用すると、さまざまなリレーショナル ソースからデータをインポートできます。アクセス、SQL、Oracle、Sybase、Informix、DB2、Teradata、および詳細。 それぞれのリレーショナル ソースからデータをインポートする手順は、以下で説明する手順とそれほど変わりません。 また、データはストアド プロシージャを使用して選択できます。  
   
  データのインポートと、インポート可能なデータ ソースの種類に関する詳細については、「[データ ソース (SSAS テーブル)](data-sources-ssas-tabular.md)」を参照してください。  
   
- このレッスンの推定所要時間: **20 分**  
+ このレッスンを完了するまでに時間を推定するには。**20 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前の「 [レッスン 1: 新しいテーブル モデル プロジェクトの作成](lesson-1-create-a-new-tabular-model-project.md)」を完了している必要があります。  
+ このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 1:新しいテーブル モデル プロジェクト作成](lesson-1-create-a-new-tabular-model-project.md)です。  
   
 ## <a name="create-a-connection"></a>接続の作成  
   
@@ -51,11 +50,11 @@ ms.locfileid: "48049352"
     > [!NOTE]  
     >  Windows のユーザー アカウントとパスワードを使用することで、最も安全なデータ ソース接続方法が提供されます。 詳細については、「[権限借用 (SSAS テーブル)](tabular-models/impersonation-ssas-tabular.md)」を参照してください。  
   
-7.  **[データのインポート方法の選択]** ページで、**[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、 **[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
+7.  **[データのインポート方法の選択]** ページで、 **[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、 **[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
   
-8.  **[テーブルとビューの選択]** ページで、 **DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および **FactInternetSales**の各テーブルのチェック ボックスをオンにします。  
+8.  **テーブルおよびビュー**ページで、次のテーブルのチェック ボックスを選択します。**DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および**FactInternetSales**します。  
   
-9. モデル内のテーブルによりわかりやすい名前を付けましょう。 **DimCustomer** の **[表示名]** 列内にあるセルをクリックします。 DimCustomer から "Dim" を削除して、テーブル名を変更します。  
+9. モデル内のテーブルによりわかりやすい名前を付けましょう。 **DimCustomer** の **[表示名]** 列内にあるセルをクリックします。 DimCustomer から"Dim"を削除して、テーブルの名前を変更します。  
   
 10. その他のテーブルの名前を次のように変更します。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48049352"
     |-----------------|-------------------|  
     |DimDate|date|  
     |DimGeography|Geography|  
-    |DimProduct|Product|  
+    |DimProduct|製品|  
     |DimProductCategory|Product Category|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
@@ -73,11 +72,11 @@ ms.locfileid: "48049352"
  データベースに接続し、インポートするテーブルを選択し、テーブルに表示名を付けたので、次のセクション「 [インポート前のテーブル データに対するフィルターの適用](#FilterData)」に進んでください。  
   
 ##  <a name="FilterData"></a> テーブルのデータをフィルター処理します。  
- データベースからインポートしようとしている DimCustomer テーブルには、元の SQL Server Adventure Works データベースから取得されたデータのサブセットが含まれています。 ここでは、DimCustomer テーブルから一部の不要な列を除外します。 可能な場合は、モデルによって使用されるメモリ内領域を節約するために、使用されないデータを除外します。  
+ データベースからインポートしようとしている DimCustomer テーブルには、元の SQL Server Adventure Works データベースから取得されたデータのサブセットが含まれています。 一部の不要な DimCustomer テーブルから列をフィルター処理するされます。 可能な場合は、モデルによって使用されるメモリ内領域を節約するために、使用されないデータを除外します。  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>インポート前のテーブル データにフィルターを適用するには  
   
-1.  **Customer** テーブルの行を選択し、**[プレビューとフィルター]** をクリックします。 **[選択したテーブルのプレビュー]** ウィンドウが開き、DimCustomer ソース テーブルのすべての列が表示されます。  
+1.  **Customer** テーブルの行を選択し、 **[プレビューとフィルター]** をクリックします。 **[選択したテーブルのプレビュー]** ウィンドウが開き、DimCustomer ソース テーブルのすべての列が表示されます。  
   
 2.  次の列の上部にあるチェック ボックスをオフにします。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48049352"
   
 3.  他の列がすべてオンになっていることを確認し、 **[OK]** をクリックします。  
   
-     **Customer** 行の **[フィルターの詳細]** 列に **[適用されたフィルター]** と表示されます。そのリンクをクリックすると、適用したフィルターの説明テキストが表示されます。  
+     単語に注意してください**適用されたフィルター**に表示されるようになりました、**フィルターの詳細**内の列、**顧客**行のテキスト説明が表示されます、そのリンクをクリックすると、適用したフィルター。  
   
 4.  各テーブル内の次の列のチェック ボックスをオフにして、残りのテーブルをフィルター処理します。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "48049352"
     |**FrenchCountryRegionName**|  
     |**IpAddressLocator**|  
   
-    |Product|  
+    |製品|  
     |-------------|  
     |**SpanishProductName**|  
     |**FrenchProductName**|  
@@ -165,6 +164,6 @@ ms.locfileid: "48049352"
 -   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[ファイル]** メニューをクリックし、 **[すべてを保存]** をクリックします。  
   
 ## <a name="next-step"></a>次の手順  
- このチュートリアルを続行するには、次のレッスン「 [レッスン 3: 列名の変更](rename-columns.md)」に進んでください。  
+ このチュートリアルを続行するには、次のレッスンに移動します。[レッスン 3:列名の変更](rename-columns.md)します。  
   
   

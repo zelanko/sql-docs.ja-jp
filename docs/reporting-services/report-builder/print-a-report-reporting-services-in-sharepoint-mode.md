@@ -1,8 +1,8 @@
 ---
 title: レポートを印刷する (Reporting Services の SharePoint モード) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4a5339c18b724531609fe27f237157f1ae86116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 407d20b06c6dccdb63f5455ffe24a3505d8bd823
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65875208"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>レポートを印刷する (Reporting Services の SharePoint モード)
   SharePoint モードで実行されているレポート サーバーで SharePoint Web アプリケーションからレポートを印刷するには次の 3 つの方法があります。  

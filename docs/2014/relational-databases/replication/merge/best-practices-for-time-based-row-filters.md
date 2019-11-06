@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
@@ -13,12 +12,12 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145531"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210712"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>時間ベースの行フィルターの推奨事項
   アプリケーションのユーザーは、テーブルに対して時間ベースのデータ サブセットを要求することがよくあります。 たとえば、販売員が先週の注文データを必要としたり、イベント プランナーが次週のイベントのデータを必要とする場合などです。 多くの場合、アプリケーションでは、`GETDATE()` 関数を含むクエリを使用して、この処理を実行します。 次の行フィルター ステートメントについて考えてみましょう。  
@@ -50,13 +49,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>時間ベースの行フィルターを使用するための推奨事項  
  次に示す方法は、時間に基づいてフィルター処理を行う際の強力でわかりやすいアプローチです。  
   
--   データ型のテーブルに列を追加`bit`します。 この列は、行をレプリケートするかどうかを示すために使用します。  
+-   テーブルに、データ型 `bit` の列を追加する。 この列は、行をレプリケートするかどうかを示すために使用します。  
   
 -   時間ベースの列ではなく新しい列を参照する行フィルターを使用する。  
   
 -   スケジュールでマージ エージェントが実行される前に列を更新する SQL Server エージェント ジョブ (または別のメカニズムでスケジュールされたジョブ) を作成する。  
   
- このアプローチを使用しての欠点を補い、`GETDATE()`または別の時間ベースのメソッドをパーティションに対してフィルターが評価されるタイミングを判断する必要がある問題を回避できます。 **Events** テーブルの次の例を考えてみましょう。  
+ この方法を使用すると、`GETDATE()` などの時間ベースの方法を使用した場合の欠点を補い、パーティションに対してフィルターが評価されるタイミングを決める問題を回避できます。 **Events** テーブルの次の例を考えてみましょう。  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -91,7 +90,7 @@ GO
   
  次週のイベントは、レプリケート準備済みとしてフラグが付けられています。 イベント コーディネーター 112 が使用するサブスクリプションでマージ エージェントが次に実行されると、1 行目以外の行がサブスクライバーにダウンロードされ、1 行目がサブスクライバーから削除されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GETDATE (Transact-SQL)](/sql/t-sql/functions/getdate-transact-sql)   
  [ジョブの実装](../../../ssms/agent/implement-jobs.md)   
  [パラメーター化された行フィルター](parameterized-filters-parameterized-row-filters.md)  

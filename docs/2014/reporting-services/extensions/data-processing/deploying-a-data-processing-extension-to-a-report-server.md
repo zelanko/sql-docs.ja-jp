@@ -1,28 +1,26 @@
 ---
-title: データ処理拡張機能をレポート サーバーに配置する方法 | Microsoft Docs
+title: 操作方法:データ処理拡張機能をレポート サーバーに配置します |。Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164074"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>データ処理拡張機能をレポート サーバーに配置する方法
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>操作方法:データ処理拡張機能をレポート サーバーに配置する
   レポート サーバーは、表示レポートのデータを取得および処理するためにデータ処理拡張機能を使用します。 データ処理拡張機能のアセンブリは、プライベート アセンブリとしてレポート サーバーに配置してください。 また、レポート サーバーの構成ファイル RSReportServer.config にエントリを作成する必要もあります。  
   
 ## <a name="procedures"></a>手順  
@@ -36,7 +34,7 @@ ms.locfileid: "48160752"
   
 2.  アセンブリ ファイルをコピーした後、RSReportServer.config ファイルを開きます。 RSReportServer.config ファイルは、ReportServer ディレクトリにあります。 データ処理拡張機能アセンブリ ファイルの構成ファイルにエントリを作成する必要があります。 Visual Studio またはメモ帳などの簡単なテキスト エディターを使用して、構成ファイルを開くことができます。  
   
-3.  検索、 `Data` RSReportServer.config ファイル内の要素。 新しく作成したデータ処理拡張機能のエントリは、次の場所に作成する必要があります。  
+3.  RSReportServer.config ファイルで `Data` 要素を探します。 新しく作成したデータ処理拡張機能のエントリは、次の場所に作成する必要があります。  
   
     ```  
     <Extensions>  

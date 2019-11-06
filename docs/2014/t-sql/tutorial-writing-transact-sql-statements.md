@@ -1,10 +1,10 @@
 ---
-title: 'チュートリアル: Transact-SQL ステートメントの作成 | Microsoft Docs'
+title: チュートリアル:Transact-SQL ステートメントの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
@@ -14,14 +14,14 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9add0b2c75b00a5cf10a1da28c8dd9e30560f716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211198"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>チュートリアル: Transact-SQL ステートメントの作成
+# <a name="tutorial-writing-transact-sql-statements"></a>チュートリアル:Transact-SQL ステートメントの作成
   [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの作成チュートリアルへようこそ。 このチュートリアルは、SQL ステートメントを初めて作成するユーザーを対象としています。 ここでは初心者のユーザーを対象に、テーブルを作成し、データを挿入するための基本的なステートメントを紹介します。 このチュートリアルでは、 [!INCLUDE[tsql](../includes/tsql-md.md)]製品に実装されている SQL 規格の [!INCLUDE[msCoName](../includes/msconame-md.md)] を使用します。 このチュートリアルは、 [!INCLUDE[tsql](../includes/tsql-md.md)] 言語を簡単に紹介することを目的としています。 [!INCLUDE[tsql](../includes/tsql-md.md)] クラスの代わりとなるものではありません。 このチュートリアルで使用するステートメントは意図的に簡潔化されており、通常の実稼働データベースに見られる複雑性を表すものではありません。  
   
 > [!NOTE]  
@@ -35,16 +35,16 @@ ms.locfileid: "48061472"
   
  このチュートリアルは、次の 3 つのレッスンで構成されています。  
   
- [レッスン 1: データベース オブジェクトの作成](lesson-1-creating-database-objects.md)  
+ [レッスン 1:データベース オブジェクトの作成](lesson-1-creating-database-objects.md)  
  このレッスンでは、データベースを作成し、データベースにテーブルを作成し、データをテーブルに挿入します。さらに、データを更新し、読み取ります。  
   
- [レッスン 2: データベース オブジェクトに対するアクセス許可の構成](lesson-2-configuring-permissions-on-database-objects.md)  
+ [レッスン 2:データベース オブジェクトに対するアクセス許可の構成](lesson-2-configuring-permissions-on-database-objects.md)  
  このレッスンでは、ログインとユーザーを作成します。 また、ビューとストアド プロシージャも作成し、ストアド プロシージャにユーザー権限を与えます。  
   
- [レッスン 3: データベース オブジェクトの削除](lesson-3-1-deleting-database-objects.md)  
+ [レッスン 3:データベース オブジェクトの削除](lesson-3-1-deleting-database-objects.md)  
  このレッスンでは、データへのアクセス権を削除し、データをテーブルから削除し、テーブル、次にデータベースを削除します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルを完了するにあたって SQL 言語に関する知識は必要ありませんが、テーブルなどの基本的なデータベース概念は理解している必要があります。 このチュートリアルでは、データベースと Windows ユーザーを作成します。 これらのタスクには高レベルのアクセス許可が必要なので、コンピューターには管理者としてログインしてください。  
   
  システムには次のコンポーネントがインストールされている必要があります。  

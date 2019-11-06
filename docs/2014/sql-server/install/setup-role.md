@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092230"
 ---
 # <a name="setup-role"></a>セットアップ ロール
   [機能の選択] ページを使用して個々の機能を選択するか、セットアップ ロールを使用してインストールするかを指定するには、このページを使用します。  
@@ -32,7 +31,7 @@ ms.locfileid: "48130562"
   
  必要に応じて、SharePoint ファームでデータベースをホストするために必要なリレーショナル データベース エンジンのインスタンスをインストールに追加することもできます。 既にファームが構成されている場合は、このオプションをスキップできます。  
   
- セットアップが完了したら、PowerPivot 構成ツール、PowerShell コマンドレット、SharePoint 2010 サーバーの全体管理のいずれかの方法でソフトウェアを構成する必要があります。 以前のリリースとは異なり、セットアップでは PowerPivot インストールの構成タスクが実行されなくなりました。  
+ セットアップが完了すると、次の方法のいずれかを使用してソフトウェアを構成する必要があります。PowerPivot 構成ツール、PowerShell コマンドレット、または SharePoint 2010 サーバーの全体管理。 以前のリリースとは異なり、セットアップでは PowerPivot インストールの構成タスクが実行されなくなりました。  
   
  ロール ベースのインストールには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot for Excel クライアント アプリケーションは含まれません。 クライアント アプリケーションは個別にインストールします。  
   
@@ -43,9 +42,9 @@ ms.locfileid: "48130562"
   
  オペレーティング システムがドメイン コントローラーでない場合、既定ではデータベース エンジンおよび Reporting Services は NTAUTHORITY\NETWORK SERVICE アカウントを、Integration Services は NTAUTHORITY\NETWORK SERVICE アカウントを、SQL フルテキスト フィルター デーモン ランチャーは NTAUTHORITY\LOCAL SERVICE アカウントを使用します。  
   
-## <a name="see-also"></a>参照  
- [PowerPivot for SharePoint インストール](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [ハードウェアとソフトウェア要件 (PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+## <a name="see-also"></a>関連項目  
+ [PowerPivot for SharePoint インストール](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [ハードウェアとソフトウェア要件 (PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [機能の選択](../../../2014/sql-server/install/feature-selection.md)  
   
   

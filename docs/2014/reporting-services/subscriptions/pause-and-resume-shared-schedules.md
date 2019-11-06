@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
@@ -16,20 +15,20 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a35e16107d926bc9815e2e6de2d43a35172bd2e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c30dfdd78ed6f420bee7c6bbba449ba40a2a137a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100788"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
   使用中の共有スケジュールは、一時停止および再開することができます。 共有スケジュールを一時停止すると、レポート処理とサブスクリプションのトリガーとして使用しているスケジュールが一時的に無効になります。 一時停止や再開を行うことができるのは共有スケジュールだけです。 レポート固有のスケジュールは一時停止できません。  
   
- 実行中のレポート処理は、一時停止および再開することができません。 一時停止および再開できるのは、SQL Server エージェント サービスのスケジュール キューにあるスケジュールだけです。 進行中のジョブは、スケジュール エンジンの対象外です。 詳細については、次を参照してください[を実行しているプロセスを管理する。](manage-a-running-process.md)  
+ 実行中のレポート処理は、一時停止および再開することができません。 一時停止および再開できるのは、SQL Server エージェント サービスのスケジュール キューにあるスケジュールだけです。 進行中のジョブは、スケジュール エンジンの対象外です。 詳しくは、「 [実行中の処理を管理する](manage-a-running-process.md)」をご覧ください。  
   
  共有スケジュールを一時停止すると、その間に発生する予定の操作を無効にできます。 共有スケジュールを再開すると、サーバーのローカル時刻を使用して、次のスケジュール設定時刻にレポートおよびサブスクリプションの処理が実行されます。 ネイティブ モードのレポート サーバーまたは SharePoint サービス アプリケーションでは、スケジュールが一時停止されなければ実行される予定だった、スケジュールされていた操作については、埋め合わせるための実行は行われません。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48070282"
 -   [共有スケジュールの一時停止と再開 (SharePoint モード)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> 共有スケジュールの一時停止と再開 (ネイティブ モード)  
- 共有スケジュールを一時停止または再開するには、レポート マネージャーの [スケジュール] ページを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]は使用できません。これには、スケジュールを一時停止または再開するためのオプションは用意されていません。 詳細については、次を参照してください。 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)します。  
+ 共有スケジュールを一時停止または再開するには、レポート マネージャーの [スケジュール] ページを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]は使用できません。これには、スケジュールを一時停止または再開するためのオプションは用意されていません。 詳細については、「 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)」をご覧ください。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>共有スケジュールを一時停止または再開するには  
   

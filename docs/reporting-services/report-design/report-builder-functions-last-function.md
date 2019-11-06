@@ -2,18 +2,18 @@
 title: Last 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f89356f45f2b67baab231a357c8b7fbf32c4f41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579537"
 ---
 # <a name="report-builder-functions---last-function"></a>レポート ビルダー関数 - Last 関数
   指定された式の指定されたスコープの最後の値を返します。  

@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xs:QName type
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: af3643772287abfd92edce02a180645660cc5c2f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fd21cae531e41359c797bc3197e3e5bacce65a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078133"
 ---
 # <a name="the-xsqname-type"></a>The xs:QName Type
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "51677241"
   
 ```  
 CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:int xs:QName"/>  
     </xs:simpleType>  
@@ -37,7 +36,7 @@ CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'
 GO  
   
 CREATE XML SCHEMA COLLECTION QNameLimitation2 AS N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:integer">  
    <xs:simpleType>  

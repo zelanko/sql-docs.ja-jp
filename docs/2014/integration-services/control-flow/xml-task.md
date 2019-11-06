@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06fa137e5be6f664ae40e7c195e88a99bf87e9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62829357"
 ---
 # <a name="xml-task"></a>XML タスク
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  
@@ -71,7 +70,7 @@ ms.locfileid: "48204192"
 |オプション|説明|  
 |------------|-----------------|  
 |**[IgnoreComments]**|この値で、コメント ノードを比較するかどうかを指定します。|  
-|**[IgnoreNamespaces]**|この値で、要素名および属性名の名前空間の Uniform Resource Identifier (URI) を比較するかどうかを指定します。 このオプション設定されている場合`true`、別の名前空間が同じローカル名を持つ 2 つの要素は同一であると見なされます。|  
+|**[IgnoreNamespaces]**|この値で、要素名および属性名の名前空間の Uniform Resource Identifier (URI) を比較するかどうかを指定します。 このオプションを `true` に設定した場合、ローカル名が同じで、異なる名前空間を持つ 2 つの要素は、同一と見なされます。|  
 |**[IgnorePrefixes]**|この値で、要素名および属性名のプレフィックスを比較するかどうかを指定します。 このオプションを `true,` に設定した場合、ローカル名が同じで、異なる名前空間 URI とプレフィックスを持つ 2 つの要素は、同一と見なされます。|  
 |**[IgnoreXMLDeclaration]**|この値で、XML 宣言を比較するかどうかを指定します。|  
 |**IgnoreOrderOfChildElements**|この値で、子要素の順序を比較するかどうかを指定します。 このオプションを `true` に設定した場合、兄弟の一覧での位置だけが異なる子要素は同一と見なされます。|  
@@ -94,7 +93,7 @@ ms.locfileid: "48204192"
 ### <a name="validation-operation"></a>検証操作  
  検証操作は、文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマのどちらかを使用するように構成できます。  
   
- 有効にする`ValidationDetails`詳細なエラー出力を取得します。 詳細については、「 [Validate XML with the XML Task](xml-task.md)」を参照してください。  
+ `ValidationDetails` を有効にして、詳細なエラー出力を取得します。 詳細については、「 [Validate XML with the XML Task](xml-task.md)」を参照してください。  
   
 ## <a name="xml-document-encoding"></a>XML ドキュメントのエンコード  
  XML タスクでは、Unicode ドキュメントのマージのみがサポートされています。 つまり、このタスクによりマージ操作を適用できるのは、エンコードが Unicode のドキュメントのみです。 他のエンコードを使用すると、XML タスクが失敗する原因になります。  
@@ -120,9 +119,9 @@ ms.locfileid: "48204192"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [XML タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[XML タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [XML タスクを使った XML の検証](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

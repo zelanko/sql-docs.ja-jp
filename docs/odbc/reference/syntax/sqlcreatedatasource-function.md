@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e06c511debbcac9741e178ebfb5c1a8eae0a330
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b3a6fced096c779b5ab91bf4e5b6a3f0a66e5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121385"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource 関数
 **準拠**  
- バージョンが導入されています。 ODBC 2.0  
+ バージョンが導入されました。ODBC 2.0  
   
- **概要**  
+ **まとめ**  
  **SQLCreateDataSource**ユーザーがデータ ソースを追加する ダイアログ ボックスが表示されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLCreateDataSource(  
      HWND    hwnd,  

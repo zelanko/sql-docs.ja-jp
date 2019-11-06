@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -16,12 +15,12 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f7e1927d1b35c1f4a8e7b7aef8d8c3cbfaa0b33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126020"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server のフェールオーバー クラスター インスタンスの名前変更
   フェールオーバー クラスターに含まれる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの場合、仮想サーバーの名前を変更する手順は、スタンドアロン インスタンスでの手順とは異なります。 詳細については、 [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)を参照してください。  
@@ -45,7 +44,7 @@ ms.locfileid: "48128812"
 ## <a name="verify-the-renaming-operation"></a>名前の変更操作の確認  
  仮想サーバーの名前を変更したら、このサーバーの古い名前を使用している接続は、新しい名前を使用して接続するように変更する必要があります。  
   
- 名前の変更操作が完了したことを確認するには、いずれかから情報を選択`@@servername`または`sys.servers`します。 `@@servername` 関数は新しい仮想サーバー名を返し、`sys.servers` テーブルには新しい仮想サーバー名が表示されます。 また、フェールオーバー処理が新しい名前を使って正常に機能していることを確認するには、他のノードに対する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースのフェールオーバーが発生するように試行します。  
+ 名前の変更が完了していることを確認するには、`@@servername` または `sys.servers` のいずれかを使用して情報を取得します。 `@@servername` 関数は新しい仮想サーバー名を返し、`sys.servers` テーブルには新しい仮想サーバー名が表示されます。 また、フェールオーバー処理が新しい名前を使って正常に機能していることを確認するには、他のノードに対する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースのフェールオーバーが発生するように試行します。  
   
  クラスター内のノードからの接続については、新しい名前を直ちに使用できます。 ただし、クライアント コンピューターから新しい名前を使用して接続する場合は、クライアント コンピューターが新しい名前を認識できるようにならないと、新しい名前を使用してサーバーに接続することはできません。 新しい名前がネットワーク全体に伝達されるのに必要な時間は、ネットワークの構成により異なり、数秒で済むことも、3 ～ 5 分かかることもあります。ネットワークから古い仮想サーバー名が消去されるには、さらに時間がかかる場合があります。  
   
@@ -58,19 +57,19 @@ ms.locfileid: "48128812"
     ```  
     ipconfig /flushdns  
     ipconfig /registerdns  
-    nbtstat –RR  
+    nbtstat -RR  
     ```  
   
 ## <a name="additional-considerations-after-the-renaming-operation"></a>名前変更操作後のその他の考慮事項  
  フェールオーバー クラスターのネットワーク名を変更した後は、以下の点を検証および実行して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントと [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のすべてのシナリオを有効にする必要があります。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Windows クラスター アドミニストレーター ツールを使用して [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] フェールオーバー クラスターの名前を変更した後にアップグレードまたはアンインストールを実行すると、処理が失敗する場合があります。 この問題の更新を解決するのには、 **ClusterName**の解決方法」の指示に従い、レジストリ エントリ[この](http://go.microsoft.com/fwlink/?LinkId=244002)(http://go.microsoft.com/fwlink/?LinkId=244002)します。  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** ネットワーク名を変更した後、[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]フェールオーバー クラスター インスタンスのアップグレード、Windows クラスター アドミニストレーター ツールを使用またはアンインストール操作が失敗します。 この問題の更新を解決するのには、 **ClusterName**の解決方法」の指示に従い、レジストリ エントリ[この](https://go.microsoft.com/fwlink/?LinkId=244002)(https://go.microsoft.com/fwlink/?LinkId=244002) します。  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービス:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに推奨される以下の追加事項を検証および実行します。  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービス:** 検証および実行して、以下の追加事項[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エージェント サービス。  
   
 -   SQL エージェントがイベントの転送用に構成されている場合は、レジストリ設定を修正します。 詳細については、[イベントの転送先サーバーの指定 &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md) を参照してください。  
   
--   コンピューター/クラスターのネットワーク名が変更されている場合は、マスター サーバー (MSX) と対象サーバー (TSX) のインスタンス名を修正します。 詳細については、次の各トピックを参照してください。  
+-   コンピューター/クラスターのネットワーク名が変更されている場合は、マスター サーバー (MSX) とターゲット サーバー (TSX) のインスタンス名を修正します。 詳細については、次の各トピックを参照してください。  
   
     -   [マスター サーバーからの複数の対象サーバーの参加の解除](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   

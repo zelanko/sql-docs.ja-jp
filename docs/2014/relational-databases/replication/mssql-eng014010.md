@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014010 error
@@ -13,14 +12,14 @@ ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40d6284d5f392224152b6e96a22a35fcfea53281
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8af9ae77562cb8ece9cb23e32c4e4ce216987715
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106972"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811118"
 ---
-# <a name="mssqleng014010"></a>MSSQL_ENG014010
+# <a name="mssql_eng014010"></a>MSSQL_ENG014010
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48106972"
   
      10.193.17.129 inst1  
   
--   レプリケーションを削除し、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録して、レプリケーションを再設定します。 @@SERVERNAME の値が、クラスター化されていないインスタンスに対して適切でない場合は、次の手順を実行してください。  
+-   レプリケーションを削除し、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録して、レプリケーションを再設定します。 クラスター化されて@SERVERNAMEいないインスタンスに対して @ の値が正しくない場合は、次の手順を実行します。  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -60,7 +59,7 @@ ms.locfileid: "48106972"
   
      @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [@@SERVERNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/servername-transact-sql)   
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5264807fadf1d4cb343b737ca5bcc71c0edff70b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 435a20941a6827aea7e6e3709b5123b059d8735a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013461"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>トラブルシューティングに役立つツール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

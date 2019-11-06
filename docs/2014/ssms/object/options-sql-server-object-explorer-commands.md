@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
@@ -12,12 +12,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46f40b9da6e127ab295848aa67f9b8588e33fdb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999304"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>オプション (SQL Server オブジェクト エクスプ ローラーのコマンド)
   オブジェクト エクスプローラーでテーブルまたはビューを右クリックすると、テーブルでの行の表示に関する次の 2 つのオプションが表示されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "48172162"
  **Select Top の値\<n > 行のコマンド**  
  作成するクエリ エディター スクリプトで指定する、返す行数を指定します。 既定値は 1000 行です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

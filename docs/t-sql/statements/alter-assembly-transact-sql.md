@@ -23,20 +23,19 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c405884f8ff87cb0b37991dc5639bf69068a6ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066111"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   アセンブリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログ プロパティを変更することにより、アセンブリを変更します。 ALTER ASSEMBLY では、アセンブリの実装を保持する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] モジュールの最新コピーが反映されるようにアセンブリを更新し、アセンブリに関連付けられているファイルを追加または削除します。 アセンブリは、[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使用して作成されます。  
 
->  [!WARNING]
+> [!WARNING]
 >  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。  
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -70,7 +69,7 @@ ALTER ASSEMBLY assembly_name
   
 ## <a name="arguments"></a>引数  
  *assembly_name*  
- 変更するアセンブリの名前を指定します。 *assembly_name* がデータベースに既に存在する必要があります。  
+ 変更するアセンブリの名前です。 *assembly_name* がデータベースに既に存在する必要があります。  
   
  FROM \<client_assembly_specifier> | \<assembly_bits>  
  アセンブリを更新して、アセンブリの実装を保持する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] モジュールの最新コピーを反映させます。 このオプションを使用できるのは、指定したアセンブリに関連付けられているファイルが存在しない場合だけです。  
@@ -85,22 +84,22 @@ ALTER ASSEMBLY assembly_name
  更新も必要な依存アセンブリに対して、個別の ALTER ASSEMBLY ステートメントを実行する必要があります。  
   
  PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }   
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  `PERMISSION_SET` オプションは、開始の警告で説明されるように、`clr strict security` オプションの影響を受けます。 `clr strict security` が有効になっていると、すべてのアセンブリが `UNSAFE` として処理されます。  
- アセンブリの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コード アクセス権セットのプロパティを指定します。 このプロパティの詳細については、「[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)」を参照してください。  
-  
-> [!NOTE]  
+>  アセンブリの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コード アクセス権セットのプロパティを指定します。 このプロパティの詳細については、「[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)」を参照してください。  
+> 
+> [!NOTE]
 >  EXTERNAL_ACCESS および UNSAFE オプションは、包含データベースでは使用できません。  
   
- VISIBILITY = { ON | OFF }   
- アセンブリに対する共通言語ランタイム (CLR) 関数、ストアド プロシージャ、トリガー、ユーザー定義型、およびユーザー定義集計関数の作成時に、そのアセンブリが表示されるかどうかを指定します。 OFF に設定した場合、アセンブリは、他のアセンブリによってのみ呼び出されます。 アセンブリに対して既に作成された CLR データベース オブジェクトが存在する場合、そのアセンブリの表示は変更できません。 *assembly_name* によって参照されるアセンブリは、既定では非表示としてアップロードされます。  
+ VISIBILITY = { ON | OFF }  
+ アセンブリに対する共通言語ランタイム (CLR) 関数、ストアド プロシージャ、トリガー、ユーザー定義型、およびユーザー定義集計関数の作成時に、そのアセンブリが表示されるかどうかを指定します。 OFF に設定した場合、アセンブリは、他のアセンブリによってのみ呼び出されることが想定されます。 アセンブリに対して既に作成された CLR データベース オブジェクトが存在する場合、そのアセンブリの表示は変更できません。 *assembly_name* によって参照されるアセンブリは、既定では非表示としてアップロードされます。  
   
- UNCHECKED DATA   
- 既定では、個々のテーブル行の一貫性を検証する必要がある場合、ALTER ASSEMBLY は失敗します。 このオプションを指定すると、DBCC CHECKTABLE によって、この検証を延期することができます。 これを指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースのテーブルに次のデータが含まれていても、ALTER ASSEMBLY ステートメントが実行されます。  
+ UNCHECKED DATA  
+ 既定では、個々のテーブル行の一貫性を検証する必要がある場合、ALTER ASSEMBLY は失敗します。 このオプションを指定すると、DBCC CHECKTABLE を使用して、この検証を後に延期することができます。 これを指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースのテーブルに次のデータが含まれていても、ALTER ASSEMBLY ステートメントが実行されます。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数やメソッドから直接または間接的にアセンブリ内のメソッドを参照する、保存される計算列。  
   
--   直接または間接的にアセンブリ内のメソッドを参照する、CHECK 制約。  
+-   直接または間接的にアセンブリ内のメソッドを参照する CHECK 制約。  
   
 -   アセンブリに依存する CLR ユーザー定義型の列と、**UserDefined** (非**ネイティブ**) シリアル化形式を実装する型の列。  
   
@@ -114,7 +113,7 @@ ALTER ASSEMBLY assembly_name
   
  詳細については、「[アセンブリの実装](../../relational-databases/clr-integration/assemblies-implementing.md)」を参照してください。  
   
- [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
  アセンブリに関連付けられているファイル名、またはアセンブリに関連付けられているすべてのファイルを、データベースから削除します。 続けて ADD FILE を指定する場合は、最初に DROP FILE が実行されます。 このため、同じファイル名でファイルを置き換えることができます。  
   
 > [!NOTE]  
@@ -129,16 +128,16 @@ ALTER ASSEMBLY assembly_name
 ## <a name="remarks"></a>Remarks  
  変更するアセンブリ内のコードが、現在実行中のセッションで実行されている場合、ALTER ASSEMBLY でセッションは中断されません。 現在のセッションは、アセンブリの変更されていないビット列を使用して最後まで実行されます。  
   
- FROM 句を指定した場合、ALTER ASSEMBLY では、指定したモジュールの最新コピーが反映されるようにアセンブリが更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に CLR 関数、ストアド プロシージャ、トリガー、データ型、およびユーザー定義集計関数が存在し、これらがアセンブリに対して既に定義されている場合があるため、ALTER ASSEMBLY ステートメントでは、これらがアセンブリの最新の実装に再バインドされます。 この再バインドを適切に行うには、CLR 関数、ストアド プロシージャ、およびトリガーにマップされるメソッドが、同じ署名を持つ変更済みのアセンブリ内に存在している必要があります。 CLR ユーザー定義型とユーザー定義集計関数が実装されているクラスは、ユーザー定義型または集計の要件を満たしている必要があります。  
+ FROM 句を指定した場合、ALTER ASSEMBLY では、指定したモジュールの最新コピーが反映されるようにアセンブリが更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に CLR 関数、ストアド プロシージャ、トリガー、データ型、ユーザー定義集計関数が存在し、それらがアセンブリに対して既に定義されている可能性があるため、ALTER ASSEMBLY ステートメントでは、これらがアセンブリの最新の実装に再バインドされます。 この再バインドを適切に行うには、CLR 関数、ストアド プロシージャ、およびトリガーにマップされるメソッドが、同じ署名を持つ変更済みのアセンブリ内に存在している必要があります。 CLR ユーザー定義型とユーザー定義集計関数が実装されているクラスは、ユーザー定義型または集計の要件を満たしている必要があります。  
   
 > [!CAUTION]  
->  WITH UNCHECKED DATA を指定せず、新しいバージョンのアセンブリによってテーブルの既存のデータ、インデックス、または他の固有サイトに影響が生じる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ALTER ASSEMBLY の実行回避が試みられます。 ただし、CLR アセンブリが更新された場合、計算列、インデックス、インデックス付きビュー、または式と、基になるルーチンおよびデータ型との一貫性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では保証されません。 式の結果と、アセンブリに格納されている式に基づく値に不一致がないかどうかを ALTER ASSEMBLY で確認する場合は注意してください。  
+>  WITH UNCHECKED DATA を指定せず、新しいバージョンのアセンブリによってテーブルの既存のデータ、インデックス、または他の固有サイトに影響が生じる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ALTER ASSEMBLY の実行回避が試みられます。 ただし、CLR アセンブリが更新された場合、計算列、インデックス、インデックス付きビュー、式と、基になるルーチンとデータ型との一貫性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では保証されません。 式の結果と、アセンブリに格納されている式に基づく値に不一致がないかどうかを ALTER ASSEMBLY で確認する場合は注意してください。  
   
  ALTER ASSEMBLY ではアセンブリのバージョンが変更されます。 アセンブリのカルチャおよび公開キー トークンは変更されません。  
   
  ALTER ASSEMBLY ステートメントを使用しても、次の情報は変更できません。  
   
--   アセンブリを参照する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の CLR 関数、集計関数、ストアド プロシージャ、およびトリガーの署名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトを新しいバージョンのアセンブリに再バインドできない場合、ALTER ASSEMBLY は失敗します。  
+-   アセンブリを参照する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の CLR 関数、集計関数、ストアド プロシージャ、およびトリガーの署名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データベース オブジェクトを新しいバージョンのアセンブリに再バインドできない場合、ALTER ASSEMBLY は失敗します。  
   
 -   別のアセンブリから呼び出されるアセンブリ内のメソッドの署名。  
   
@@ -160,16 +159,16 @@ ALTER ASSEMBLY assembly_name
   
 -   新しいパブリック メソッドの追加。  
   
--   プライベート メソッドの変更。  
+-   任意の方法でのプライベート メソッドの変更。  
   
- データ メンバーやベース クラスなど、ネイティブでシリアル化されたユーザー定義型に含まれるフィールドは、ALTER ASSEMBLY では変更できません。 その他すべての変更はサポートされていません。  
+ データ メンバーやベース クラスなど、ネイティブでシリアル化されたユーザー定義型に含まれるフィールドは、ALTER ASSEMBLY では変更できません。 その他の変更はいずれもサポートされていません。  
   
- ADD FILE FROM を指定しない場合、ALTER ASSEMBLY ではそのアセンブリに関連付けられているファイルが削除されます。  
+ ADD FILE FROM を指定しない場合、ALTER ASSEMBLY ではそのアセンブリに関連付けられているファイルがいずれも削除されます。  
   
  UNCHECKED データ句を指定せずに ALTER ASSEMBLY を実行した場合は、新しいバージョンのアセンブリがテーブル内の既存のデータに影響しないかどうかを検証するためのチェックが行われます。 チェックの対象となるデータ量によっては、パフォーマンスが影響を受ける場合があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- アセンブリに対する ALTER 権限が必要です。 その他、次の追加要件があります。  
+ アセンブリに対する ALTER 権限が必要です。 その他に次の要件があります。  
   
 -   既存の権限セットが EXTERNAL_ACCESS になっているアセンブリを変更するには、サーバーに対する **EXTERNAL ACCESS ASSEMBLY** 権限が必要です。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099808"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)
   重要なレポート サーバー データを不正アクセスから保護するための対称キーを、抽出、復元、作成、および削除します。 また、このユーティリティは、レポート サーバー インスタンスをスケール アウト配置に追加する場合にも使用されます。 *レポート サーバーのスケール アウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
@@ -37,11 +36,11 @@ ms.locfileid: "48116894"
 ```  
   
       rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  
@@ -65,7 +64,7 @@ ms.locfileid: "48116894"
  **-a**  
  既存の対称キーを、パスワードで保護されたバックアップ ファイル内に作成したコピーと置き換えます。 対称キーのすべてのインスタンスが更新されます。  
   
- この引数は値を取りません。 ただし、適用するキーを含むファイルを選択するには、コマンド ラインに他の引数を追加する必要があります。 指定できる引数は、`-f`と`-p`します。  
+ この引数は値を取りません。 ただし、適用するキーを含むファイルを選択するには、コマンド ラインに他の引数を追加する必要があります。 指定できる引数は、`-f` および `-p` です。  
   
  **-d**  
  レポート サーバー データベース内にある、すべての対称キー インスタンスと暗号化されたデータを削除します。 この引数は値を取りません。  
@@ -90,19 +89,19 @@ ms.locfileid: "48116894"
  (`-f` を使用する場合は必須) 対称キーのバックアップや適用に使用されるパスワードを指定します。 この値は空にできません。  
   
  `-i`  
- ローカル レポート サーバー インスタンスを指定します。 この引数は、既定のレポート サーバーをインストールする場合は省略可能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス (既定値`-i`は MSSQLSERVER)。 レポート サーバーを名前付きインスタンスとしてインストールした場合`-i`が必要です。  
+ ローカル レポート サーバー インスタンスを指定します。 レポート サーバーを既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにインストールした場合、この引数は省略できます (`-i` の既定値は MSSQLSERVER)。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、`-i` は必須です。  
   
  `-m`  
  レポート サーバー インスタンスをレポート サーバーのスケール アウト配置に追加する場合、このレポート サーバー インスタンスをホストするリモート コンピューターの名前を指定します。 ネットワーク上で識別されるコンピューターの名前を使用します。  
   
  `-n`  
- リモート コンピューター上のレポート サーバー インスタンスの名前を指定します。 この引数は、既定のレポート サーバーをインストールする場合は省略可能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス (既定値`-n`は MSSQLSERVER)。 レポート サーバーを名前付きインスタンスとしてインストールした場合`-n`が必要です。  
+ リモート コンピューター上のレポート サーバー インスタンスの名前を指定します。 レポート サーバーを既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにインストールした場合、この引数は省略できます (`-n` の既定値は MSSQLSERVER)。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、`-n` は必須です。  
   
  `-u`  *ユーザーアキュン*  
  スケールアウト配置に追加するリモート コンピューター上の管理者アカウントを指定します。 アカウントが指定されない場合は、現在のユーザーの資格情報が使用されます。  
   
  `-v`  *パスワード*  
- (必要な`-u`) スケール アウト配置に参加するリモート コンピューターで管理者アカウントのパスワードを指定します。  
+ (`-u` を使用する場合は必須) スケールアウト配置に追加するリモート コンピューター上の管理者アカウントのパスワードを指定します。  
   
  **-t**  *trace*  
  エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)」を参照してください。  
@@ -148,9 +147,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  レポート サーバーのスケール アウト配置とは、複数のレポート サーバー インスタンスが同じレポート サーバー データベースを共有する配置モデルのことです。 対称キーをデータベースに格納するレポート サーバー インスタンスであれば、レポート サーバー データベースを使用することができます。 たとえば、レポート サーバー データベースが 3 つのレポート サーバー インスタンスに対するキー情報を含んでいる場合、3 つすべてのインスタンスは、同じスケール アウト配置のメンバーと見なされます。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>同じコンピューター上の複数のレポート サーバー インスタンスの追加  
- 同じコンピューターにインストールされている複数のレポート サーバー インスタンスから、スケール アウト配置を作成できます。 設定しないでください、`-u`と`-v`ローカルにインストールされているレポート サーバー インスタンスに参加する場合の引数。 `-u` および `-v` 引数は、リモート コンピューターからインスタンスを追加する場合にのみ使用します。 これらの引数を指定すると、"ユーザー資格情報はローカル接続には使用できません" というエラーが返されます。  
+ 同じコンピューターにインストールされている複数のレポート サーバー インスタンスから、スケール アウト配置を作成できます。 ローカルにインストールされているレポート サーバー インスタンスを追加する場合、`-u` および `-v` 引数は設定しないでください。 `-u` および `-v` 引数は、リモート コンピューターからインスタンスを追加する場合にのみ使用します。 引数を指定する場合は、次のエラーが表示されます。「ユーザーの資格情報は、ローカル接続に使用することはできません」。  
   
- 次の例は、複数のローカル インスタンスを使用してスケール アウト配置を作成する構文です。 この例で、<`initializedinstance`> は、レポート サーバー データベースを使用するために初期化済みのインスタンスの名前であり、<`newinstance`> は配置に追加するインスタンスの名前です。  
+ 次の例は、複数のローカル インスタンスを使用してスケール アウト配置を作成する構文です。 この例で <`initializedinstance`> に、レポート サーバー データベースを使用して、既に初期化されているインスタンスの名前を指定し、<`newinstance`> 展開に追加するインスタンスの名前を指定します。  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -159,7 +158,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 #### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>スケール アウト配置に含まれる 1 つのレポート サーバーに対する暗号化キーの削除  
  次の例では、レポート サーバーのスケール アウト配置に含まれている 1 つのレポート サーバーに対する暗号化キーを削除します。 これらのキーは、レポート サーバー データベースから削除されます。 レポート サーバー インスタンスに対するキーが削除されると、そのレポート サーバー インスタンスはデータベース内の暗号化されたデータにはアクセスできなくなるため、スケール アウト配置からの削除が効率的に行われます。  
   
- レポート サーバー インスタンスをスケールアウト配置から削除するには、インストール ID を指定する必要があります。 インストール ID とは、暗号化キーを削除するレポート サーバー インスタンスの RSReportserver.config ファイルに格納されている GUID のことです。 スケール アウト配置から削除するコンピューター上で次のコマンドを実行する必要があります。 場合は、レポート サーバーを名前付きインスタンスとしてインストールすると、使用、`-i`インスタンスを指定する引数。 詳しくは、「 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)」をご覧ください。  
+ レポート サーバー インスタンスをスケールアウト配置から削除するには、インストール ID を指定する必要があります。 インストール ID とは、暗号化キーを削除するレポート サーバー インスタンスの RSReportserver.config ファイルに格納されている GUID のことです。 スケール アウト配置から削除するコンピューター上で次のコマンドを実行する必要があります。 レポート サーバーが名前付きインスタンスとしてインストールされている場合は、`-i` 引数を使用してインスタンスを指定します。 詳しくは、「 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)」をご覧ください。  
   
 ```  
 rskeymgmt -r <installationID>  
@@ -178,7 +177,7 @@ rskeymgmt -r <installationID>
 ## <a name="see-also"></a>参照  
  [ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)   
- [レポート サーバーのコマンド プロンプト ユーティリティ&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [構成し、暗号化キーの管理&#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [レポート サーバーのコマンド プロンプト ユーティリティ (SSRS)](report-server-command-prompt-utilities-ssrs.md)   
+ [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

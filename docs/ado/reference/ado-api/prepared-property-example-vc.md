@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917584"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared プロパティの例 (VC++)
-この例では、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを開き、2 つ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト-準備および準備されていません。  
+この例では、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを 2 つを開いて[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの準備、および準備されていません。  
   
 ## <a name="example"></a>例  
   
@@ -142,8 +141,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **パフォーマンスの結果:**  
-**0.016 秒の準備ができていません。**  
-**0.016 秒を準備します。**   
-## <a name="see-also"></a>参照  
+**準備されていません。0.016 秒**  
+**準備。    0.016 秒**   
+## <a name="see-also"></a>関連項目  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared プロパティ (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

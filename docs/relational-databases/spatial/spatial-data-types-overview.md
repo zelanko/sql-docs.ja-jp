@@ -12,16 +12,15 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048519"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52535824"
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-図に示されているように、 **geometry** データ型と **geography** データ型のインスタンス化可能な型は **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**、および **GeometryCollection**の 10 種類です。 geography データ型には、もう 1 つ **FullGlobe**というインスタンス化可能な型があります。 **geometry** 型および **geography** 型は、特定のインスタンスが適切な形式のインスタンスである限り、明示的に定義されていない場合でも、そのインスタンスを認識できます。 たとえば、STPointFromText() メソッドを使用して **Point** インスタンスを明示的に定義した場合、そのインスタンスは、メソッドの入力が適切な形式である限り、 **geometry** と **geography** によって **Point**として認識されます。 `STGeomFromText()` メソッドを使用して同じインスタンスを定義した場合は、 **geometry** データ型と **geography** データ型の両方で **Point**として認識されます。  
+図に示されているように、 **geometry** データ型と **geography** データ型のインスタンス化可能な型は **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**、および **GeometryCollection**の 10 種類です。 geography データ型には、もう 1 つ次のインスタンス化可能な型があります:**FullGlobe**。 **geometry** 型および **geography** 型は、特定のインスタンスが適切な形式のインスタンスである限り、明示的に定義されていない場合でも、そのインスタンスを認識できます。 たとえば、STPointFromText() メソッドを使用して **Point** インスタンスを明示的に定義した場合、そのインスタンスは、メソッドの入力が適切な形式である限り、 **geometry** と **geography** によって **Point**として認識されます。 `STGeomFromText()` メソッドを使用して同じインスタンスを定義した場合は、 **geometry** データ型と **geography** データ型の両方で **Point**として認識されます。  
 
 geometry 型および geography 型のサブタイプには、単純型とコレクション型があります。  `STNumCurves()` などのメソッドは、単純型でのみ機能します。  
 
@@ -88,7 +87,7 @@ OGC の仕様の詳細については、以下を参照してください。
 -   [OGC の仕様、簡易機能アクセス Part 2 - SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> 円弧セグメント  
-円弧セグメントでは、 **CircularString**、 **CompoundCurve**、 **CurvePolygon**の 3 つのインスタンス化可能な型を使用できます。  円弧セグメントは、2 次元平面内の 3 つの点によって定義されます。3 番目のポイントを最初のポイントと同じにすることはできません。  
+円弧セグメントでは、次の 3 つのインスタンス化可能な型を使用できます:**CircularString**、**CompoundCurve**、**CurvePolygon**。  円弧セグメントは、2 次元平面内の 3 つの点によって定義されます。3 番目のポイントを最初のポイントと同じにすることはできません。  
 
 図 A と図 B は、一般的な円弧のセグメントを示します。 3 つの点が 1 つの円周上にあることに注意してください。  
 
@@ -96,10 +95,11 @@ OGC の仕様の詳細については、以下を参照してください。
 円弧型を操作するメソッドは、直線セグメントを使用して大まかな円弧を作成します。大まかな円を作成するために使用される直線セグメントの数は、円弧の長さと曲率によって異なります。Z 値はそれぞれの円弧型で格納できますが、メソッドは計算に Z 値を使用しません。  
 
 > [!NOTE]  
->  Z 値が円弧セグメントに指定されている場合、円弧セグメントが入力として許容されるようにするには、円弧セグメント内のすべての点で Z 値が同じである必要があります。 たとえば、 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` は許容されますが、 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` は許容されません。  
+> Z 値が円弧セグメントに指定されている場合、円弧セグメントが入力として許容されるようにするには、円弧セグメント内のすべての点で Z 値が同じである必要があります。 たとえば、 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` は許容されますが、 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` は許容されません。  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString と CircularString の比較  
 この例は、**LineString** インスタンスと **CircularString** インスタンスの両方を使用して同一の二等辺三角形を格納する方法を示しています。  
+
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -114,14 +114,16 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 **CircularString** インスタンスでは、三角形を定義するために 7 つの点が必要ですが、 **LineString** インスタンスでは、三角形を定義するために必要な点は 4 つだけです。 その理由は、 **CircularString** インスタンスは直線セグメントではなく円弧セグメントを格納するためです。 したがって、 **CircularString** インスタンスに格納される三角形の辺は ABC、CDE、および EFA であるのに対し、 **LineString** インスタンスに格納される三角形の辺は AC、CE、および EA です。  
 
-次のようなコード スニペットがあるとします。  
+次の例を参照してください。  
+
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-このスニペットの結果は、次のようになります。  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```
 LS LengthCS Length
 5.65685...6.28318...
@@ -131,15 +133,15 @@ LS LengthCS Length
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString と CompoundCurve の比較  
 次のコード例は、 **LineString** インスタンスと **CompoundCurve** インスタンスを使用して同じ図を格納する方法を示します。
+
 ```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-内の複数の  
-
 上の例では、 **LineString** インスタンスまたは **CompoundCurve** インスタンスで図を格納できます。  次の例では、 **CompoundCurve** を使用して円のスライスを格納します。  
+
 ```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
@@ -148,6 +150,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString と CompoundCurve の比較  
 次のコード例は、 **CircularString** インスタンスに円のスライスを格納する方法を示します。  
+
 ```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
@@ -168,7 +171,7 @@ SELECT @g.ToString(), @g.STLength();
 ```
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Polygon と CurvePolygon の比較  
-**CurvePolygon** インスタンスは、外部リングと内部リングを定義するときに **CircularString** インスタンスと **CompoundCurve** インスタンスを使用できます。  **Polygon** インスタンスは、 **CircularString** および **CompoundCurve**の円弧型を使用することはできません。  
+**CurvePolygon** インスタンスは、外部リングと内部リングを定義するときに **CircularString** インスタンスと **CompoundCurve** インスタンスを使用できます。  **Polygon** インスタンスは、次の円弧型を使用することはできません:**CircularString** および **CompoundCurve**。  
 
 ## <a name="see-also"></a>参照  
 - [空間データ (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 

@@ -1,25 +1,23 @@
 ---
 title: セマンティック検索のインストールと構成 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ffd79ef6abe6bd0e143d2ec84d72ebcc7476f3df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.openlocfilehash: c6bfd48773c066ffc29600156475495c0c2a6521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021146"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a> セマンティック検索のインストール  
- セマンティック検索をインストールするには、SQL Server のセットアップ時に、**[インストールする機能]** ページで **[検索のためのフルテキスト抽出とセマンティック抽出]** を選択します。  
+ セマンティック検索をインストールするには、SQL Server のセットアップ時に、 **[インストールする機能]** ページで **[検索のためのフルテキスト抽出とセマンティック抽出]** を選択します。  
   
  セマンティック検索はフルテキスト検索に依存します。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つのオプション機能は一緒にインストールされます。  
   

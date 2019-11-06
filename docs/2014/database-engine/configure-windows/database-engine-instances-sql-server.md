@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811233"
 ---
 # <a name="database-engine-instances-sql-server"></a>データベース エンジンのインスタンス (SQL Server)
-  インスタンス、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のコピーである、`sqlservr.exe`オペレーティング システム サービスとして実行される実行可能ファイルです。 各インスタンスは、いくつかのシステム データベースと、1 つまたは複数のユーザー データベースを管理します。 各コンピューターは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行できます。 アプリケーションはインスタンスに接続して、インスタンスに管理されているデータベースでの作業を実行します。  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスは、オペレーティング システム サービスとして実行される `sqlservr.exe` 実行可能ファイルのコピーです。 各インスタンスは、いくつかのシステム データベースと、1 つまたは複数のユーザー データベースを管理します。 各コンピューターは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行できます。 アプリケーションはインスタンスに接続して、インスタンスに管理されているデータベースでの作業を実行します。  
   
 ## <a name="instances"></a>インスタンス  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、そのインスタンスで管理されているいずれかのデータベースのデータを操作するすべてのアプリケーション要求を処理するサービスとして動作します。 アプリケーションからの接続要求 (ログイン) の送信先です。 アプリケーションとインスタンスが別のコンピューター上にある場合、接続はネットワーク接続を通じて確立されます。 アプリケーションとインスタンスが同じコンピューター上にある場合、SQL Server 接続はネットワーク接続としてもインメモリ接続としても確立できます。 接続が完了すると、アプリケーションは接続を通じてインスタンスに [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを送信します。 インスタンスは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをデータベース内のデータおよびオブジェクトに対する操作に解決して、必要な権限がログイン資格情報に付与されていれば、操作を実行します。 取得されたデータは、エラーなどのメッセージと共にアプリケーションに返されます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48157952"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受け取ったアプリケーション要求のトレースをキャプチャするために [!INCLUDE[ssDE](../../includes/ssde-md.md)]Profiler を使用する方法について説明します。 これらのトレースは、後でパフォーマンスのテストや問題の診断などの活動のために再生できます。|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |変更データ キャプチャ (CDC) 機能および変更の追跡機能について説明し、これらの機能を使用してデータベースのデータに対する変更を追跡する方法について説明します。|[データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |さまざまなログ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ジョブ履歴、SQL Server ログ、Windows イベント ログなど) 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラーやメッセージを検索および表示するために [ログ ファイルの表示] を使用する方法について説明します。|[ログ ファイルの表示](../../relational-databases/logs/log-file-viewer.md)|  
-|データベースを分析し、潜在的なパフォーマンスの問題に対処する提案を行うために [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを使用する方法について説明します。|[データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|データベースを分析し、潜在的なパフォーマンスの問題に対処する提案を行うために [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを使用する方法について説明します。|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |標準接続が受け入れられないときに実稼働データベース管理者がインスタンスへの診断接続を確立する方法について説明します。|[データベース管理者用の診断接続](diagnostic-connection-for-database-administrators.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] の 1 つのインスタンスから別のインスタンスにアクセスできるようにする、非推奨のリモート サーバー機能を使用する方法について説明します。 この機能のための推奨メカニズムは、リンク サーバーです。|[リモート サーバー](remote-servers.md)|  
 |メッセージング アプリケーションおよびキューイング アプリケーションのための Service Broker の機能について説明し、Service Broker のドキュメントを示します。|[Service Broker](sql-server-service-broker.md)|  

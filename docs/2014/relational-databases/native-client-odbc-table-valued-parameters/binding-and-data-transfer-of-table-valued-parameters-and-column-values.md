@@ -12,12 +12,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ff7549e5a892f6048d6f737382f489dd0bf2ab2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63199956"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>テーブル値パラメーターおよび列の値のバインドとデータ転送
   テーブル値パラメーターは、他のパラメーターと同様、サーバーに渡す前にバインドする必要があります。 アプリケーションがテーブル値パラメーターを他のパラメーターと同じ方法でバインド: SQLBindParameter または SQLSetDescField または SQLSetDescRec と同じ呼び出しを使用しています。 テーブル値パラメーター用のサーバーのデータ型は SQL_SS_TABLE です。 C 型は SQL_C_DEFAULT または SQL_C_BINARY として指定できます。  
@@ -26,11 +26,11 @@ ms.locfileid: "48131622"
   
  属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE を使用すると、テーブル値パラメーターのすべての列に既定値を割り当てることができます。 個々 のテーブル値パラメーター列の値、ただし、割り当てることができません既定値に SQL_DEFAULT_PARAM を使用して*StrLen_or_IndPtr* SQLBindParameter にします。 SQL_DEFAULT_PARAM を使用して、全体としてテーブル値パラメーターを既定値に設定することはできません*StrLen_or_IndPtr* SQLBindParameter にします。 これらの規則に従わない場合 SQLExecute、SQLExecDirect または SQL_ERROR を返します。 Sqlstate 診断レコードが生成されます = 07S01 メッセージ"パラメーターの既定のパラメーターが正しく使用\<p >"という\<p > クエリ ステートメントにおける TVP の序数します。  
   
- テーブル値パラメーターをバインドしたら、アプリケーションでは、次に、テーブル値パラメーターの各列をバインドする必要があります。 これを行うには、アプリケーションは最初、テーブル値パラメーターの序数に SQL_SOPT_SS_PARAM_FOCUS を設定する SQLSetStmtAttr を呼び出します。 アプリケーションは、次のルーチンへの呼び出しによって、テーブル値パラメーターの列をバインドし、: SQLBindParameter、SQLSetDescRec、および SQLSetDescField します。 正規の最上位パラメーターで動作している、SQL_SOPT_SS_PARAM_FOCUS を SQLBindParameter、SQLSetDescRec、および SQLSetDescField のと同じ効果 0 の復元に設定します。  
+ テーブル値パラメーターをバインドしたら、アプリケーションでは、次に、テーブル値パラメーターの各列をバインドする必要があります。 これを行うには、アプリケーションは最初、テーブル値パラメーターの序数に SQL_SOPT_SS_PARAM_FOCUS を設定する SQLSetStmtAttr を呼び出します。 アプリケーションでは、次のルーチンへの呼び出しによって、テーブル値パラメーターの列をバインドします。SQLBindParameter、SQLSetDescRec、および SQLSetDescField です。 正規の最上位パラメーターで動作している、SQL_SOPT_SS_PARAM_FOCUS を SQLBindParameter、SQLSetDescRec、および SQLSetDescField のと同じ効果 0 の復元に設定します。  
   
  テーブル値パラメーター自体の実際のデータは送受信されませんが、テーブル値パラメーターを構成する各列のデータは送受信されます。 テーブル値パラメーターは擬似列では、SQLBindParameter のパラメーターを使用して、次のように他のデータ型とは異なる属性を参照してください。  
   
-|パラメーター|テーブル値パラメーター以外のパラメーター (列など) に関連する属性|テーブル値パラメーターに関連する属性|  
+|パラメーター|非テーブル値パラメーターの型を使用して、列を含む関連する属性|テーブル値パラメーターに関連する属性|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|IPD の SQL_DESC_PARAMETER_TYPE。<br /><br /> テーブル値パラメーターの列の場合、これはテーブル値パラメーター自体の設定と同じである必要があります。|IPD の SQL_DESC_PARAMETER_TYPE。<br /><br /> これは SQL_PARAM_INPUT である必要があります。|  
 |*ValueType*|APD の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。|APD の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。<br /><br /> これは SQL_C_DEFAULT または SQL_C_BINARY である必要があります。|  

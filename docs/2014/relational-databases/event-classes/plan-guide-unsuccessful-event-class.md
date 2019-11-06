@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5355fc73acb76a65d81c142d57a826535b05ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6ce753ceaa0cc0ee16b395918390a4402cf5f39
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827386"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful イベント クラス
   Plan Guide Unsuccessful イベント クラスは、プラン ガイドを含むクエリまたはバッチに対する実行プランを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が生成できなかったことを示します。 この場合、プラン ガイドは使用されずにプランがコンパイルされています。 このイベントは、次の条件に該当する場合に発生します。  
@@ -46,7 +45,7 @@ ms.locfileid: "48075722"
 |EventClass|`int`|イベントの種類 = 218。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|IsSystem|`int`|イベントがシステム プロセスで発生したか、ユーザー プロセスで発生したかを示します。1 = システム、0 = ユーザーです。|60|はい|  
+|IsSystem|`int`|システム プロセスまたはユーザー プロセスのどちらでイベントが発生したのかを示します。1 はシステム、0 はユーザーです。|60|はい|  
 |LoginName|`nvarchar`|ユーザーのログイン名 (DOMAIN [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] username [!INCLUDE[msCoName](../../includes/msconame-md.md)] の形式で表された\\*セキュリティ ログインまたは*Windows ログイン資格情報)。|11|はい|  
 |LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) カタログ ビューまたは [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geography Data Type)
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a7a09c5653fe89528c49ade19e044066acfb34cd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042530"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "52403707"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  STBuffer() は、*tolerance* = abs(distance) \* .001 および *relative* = **false** を指定して [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) を呼び出すのと同じ方法でバッファーを計算します。  

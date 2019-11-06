@@ -1,5 +1,5 @@
 ---
-title: '例 : XML 型の列のクエリ | Microsoft Docs'
+title: '例: XML 型の列のクエリ | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3db0636b5bbc8dddde432d73a62b2e38d6e5427b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006814"
 ---
-# <a name="example-querying-xmltype-columns"></a>例 : XML 型の列のクエリ
+# <a name="example-querying-xmltype-columns"></a>例: XML 型の列のクエリ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   次のクエリには、 **xml** 型の列が含まれています。 クエリでは、 `Instructions` xml **型の** 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
   
@@ -96,7 +95,7 @@ go
  結果を次に示します。  
   
 ```  
-<MyRoot xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    ...  
   <ProductModelData>  
     <ProductModelID>6</ProductModelID>  

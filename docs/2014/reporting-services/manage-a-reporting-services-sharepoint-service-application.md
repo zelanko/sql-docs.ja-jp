@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: bc19a1813e81847912ac43f607cead8423850af5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135153"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796367"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint サーバーの全体管理で管理されます。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。  
@@ -91,10 +90,10 @@ ms.locfileid: "48135153"
   
 |設定|コメント|  
 |-------------|--------------|  
-|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 をクリックします。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、次を参照してください[レポート サーバー サービスのトレース ログ。](report-server/report-server-service-trace-log.md)|  
+|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 と呼ばれています。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。|  
 |実行ログの保持日数|既定の日数は 60 日です。|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> セキュリティ設定  
   
@@ -126,9 +125,9 @@ ms.locfileid: "48135153"
 > [!IMPORTANT]  
 >  セキュリティを高めるために、Reporting Services の暗号化キーは定期的に変更することをお勧めします。 キーを変更する推奨されるタイミングは、Reporting Services のメジャー バージョンのアップグレードの直後です。 アップグレード後であれば、アップグレード サイクル以外での Reporting Services の暗号化キーの変更に伴う他のサービスの中断を最小限に抑えることができます。  
   
-|ページ|説明|  
+|[ページ]|Description|  
 |----------|-----------------|  
-|暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 別のコンピューターを実行している 1 つからのキー ファイルを格納する必要があります[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]します。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
+|暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 キー ファイルは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を実行しているコンピューターとは別のコンピューター上に保存することをお勧めします。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
 |暗号化キーの復元|1) キー ファイルを入力するか、または **[ファイルの場所]** ボックスでファイルの場所を参照します。<br /><br /> 2) **[パスワード]** ボックスで、暗号化ファイルのバックアップに使用されたパスワードを入力します。<br /><br /> 3) **[OK]** をクリックします。|  
 |暗号化キーの変更|この操作を行うと、新しいキーが作成され、暗号化されたコンテンツが再暗号化されます。 コンテンツの量が多い場合は、この操作は数時間かかります。<br /><br /> 暗号化キーの変更操作が完了したら、新しいキーのバックアップを作成することをお勧めします。|  
 |削除された暗号化されたコンテンツ|削除されたコンテンツを復旧することはできません。<br /><br /> **\*\* 重要: \*\*** 対称キーの削除と再作成の操作は、取り消したり元に戻したりすることはできません。 キーを削除または再作成すると、現在のインストールに重大な影響を及ぼす可能性があります。 対称キーを削除すると、その対称キーを使用して暗号化されている既存のデータも削除されます。 たとえば、外部のレポート データ ソースへの接続文字列、保存されている接続文字列、サブスクリプション情報の一部が削除されることがあります。|  
@@ -150,20 +149,20 @@ ms.locfileid: "48135153"
   
  UEAccount プロパティを使用して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションの一覧を返す PowerShell コマンドの例を次に示します。  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
- 詳細については、次を参照してください。 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)します。  
+ 詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[データベースの復元]  
  **[実行アカウントの指定]**  
  アカウントを指定します。  
   
  **アカウント**  
  Windows のドメイン ユーザー アカウントを入力します。 *\<ドメイン>\\<ユーザー アカウント\>* の形式を使用します。  
   
- **Password**  
+ **[パスワード]**  
  パスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -172,7 +171,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> 電子メールの設定  
  このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[データベースの復元]  
  **[SMTP サーバーの使用]**  
  レポート サーバー電子メールが SMTP サーバーによってルーティングされるように指定します。  
   
@@ -192,7 +191,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  [サービス アプリケーションの関連付け] ページで、ビューを **[サービス アプリケーション]** に変更します。  
   
-3.  新しい名前をクリックを見つけて[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。 アプリケーション プロキシ グループ名 **[既定]** をクリックして、次の手順を完了せずに、プロキシを既定のグループに追加することもできます。  
+3.  新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前を探してクリックします。 アプリケーション プロキシ グループ名 **[既定]** をクリックして、次の手順を完了せずに、プロキシを既定のグループに追加することもできます。  
   
 4.  **[編集する接続グループ]** 選択ボックスで、 **[カスタム]** をクリックします。  
   

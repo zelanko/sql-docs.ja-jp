@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Objects, about SQL Server Management Objects
@@ -15,12 +13,12 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57cc3c9cdde3c13b47fe9719f26630e7def55484
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753159"
 ---
 # <a name="getting-started-in-smo"></a>SMO の概要
   このトピックでは、使用を開始に関する情報を格納[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO)。 SMO セクションは開発者を対象としています。 次のリストは、SMO オブジェクト階層、SMO でプログラムを作成するための準備方法、異なるプログラミング言語で SMO プログラムを作成する方法、一般的および特定のプログラミング タスクについての情報の記載場所を知るために役立ちます。  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 517d05b8edfbfe97d2dee7987e8cf29720a2e53a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd09d5d20b2a84050390c3e131265feddc09a409
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63285602"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   指定されたウィンドウ フレームを表示するかどうかを示すプロパティです。 ヘルパー メソッドは、マネージド コードから使用されます。  

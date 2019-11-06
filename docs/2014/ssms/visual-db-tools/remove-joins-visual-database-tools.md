@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - removing joins
@@ -14,12 +14,12 @@ ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a6440922c0257d87ad9fe07f7a5d037df4891bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253493"
 ---
 # <a name="remove-joins-visual-database-tools"></a>結合の削除 (Visual Database Tools)
   テーブルを内部結合または外部結合によって結合する必要がなくなった場合は、テーブル間の結合を削除できます。 たとえば、 [クエリおよびビュー デザイナー](visual-database-tools.md) が 2 つのテーブル間に自動的に作成した結合を削除できます。  

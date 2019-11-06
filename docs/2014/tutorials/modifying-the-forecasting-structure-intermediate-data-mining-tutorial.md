@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63301298"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Forecasting 構造の変更 (中級者向けデータ マイニング チュートリアル)
   前の作業で作成したマイニング構造には予測モデルが 1 つ存在します。 このモデルを処理して検証する前に、マイニング構造に少し手を加え、プロパティの 1 つを変更する必要があります。  
   
 ## <a name="modifying-the-mining-structure"></a>マイニング構造の修正  
- 使用して、マイニング構造を変更することができます、**マイニング構造**データ マイニング デザイナーのタブ。 データ マイニング ウィザードでモデルを作成するときは、ReportingDate 列、ModelRegion 列、Quantity 列の 3 つを使用しました。 ただし、 **Forecasting**テーブルには、売り上げ高を予測に使用する Amount 列も含まれています。 使用して、**マイニング構造** タブで、マイニング構造にデータ ソース ビューからこの列を追加することができます。  
+ 使用して、マイニング構造を変更することができます、**マイニング構造**データ マイニング デザイナーのタブ。 データ マイニング ウィザードを使用して、モデルを作成したときに、3 つの列を使用します。ReportingDate、ModelRegion、および数量。 ただし、 **Forecasting**テーブルには、売り上げ高を予測に使用する Amount 列も含まれています。 使用して、**マイニング構造** タブで、マイニング構造にデータ ソース ビューからこの列を追加することができます。  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>Amount 列を予測マイニング構造に追加するには  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48139532"
  [予測モデルの処理のカスタマイズと&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [マイニング モデル&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング モデル (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

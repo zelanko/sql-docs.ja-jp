@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -26,12 +25,12 @@ ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfaad106f7d2671dad24de87c64e02859b021769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211047"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するために使用する機能の豊富なインターフェイスです。 キャプチャされたイベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
@@ -68,7 +67,7 @@ ms.locfileid: "48138291"
 > [!NOTE]  
 >  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用するときは、SQL トレースを理解しておくと役に立ちます。 詳細については、「 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)」を参照してください。  
   
- **イベント**  
+ **Event**  
  イベントとは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンス内で発生するアクションです。 次に例を示します。  
   
 -   ログインの接続、失敗、および接続解除。  
@@ -120,7 +119,7 @@ ms.locfileid: "48138291"
   
  SQL Server では、SQL Server のインスタンスをトレースするために 2 とおりの方法が用意されています。つまり、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースする方法と、システム ストアド プロシージャを使用してトレースする方法です。  
   
- **Assert**  
+ **[フィルター]**  
  トレースまたはテンプレートを作成する際には、指定したイベントで収集されたデータをフィルターで選択する基準を定義できます。 トレースが大きくなりすぎないようにするためには、イベント データのサブセットだけが収集されるようにフィルターを適用します。 たとえば、トレースでキャプチャする Microsoft Windows のユーザー名を特定のユーザーに限定して出力データを絞り込むことができます。  
   
  フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。  
@@ -144,7 +143,7 @@ ms.locfileid: "48138291"
 |サーバーへの接続後、トレースを自動的に開始する方法について説明します。|[サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)|  
 |イベントの開始時刻に基づいてイベントをフィルター選択する方法について説明します。|[イベントの開始時刻に基づいたイベントのフィルター選択 &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
 |イベントの終了時刻に基づいてイベントをフィルター選択する方法について説明します。|[イベントの終了時刻に基づいたフィルターでのイベントの選択 &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
-|トレース内のサーバー プロセス ID (SPID) をフィルター選択する方法について説明します。|[トレースでのサーバー プロセス ID &#40;SPIDs&#41 のフィルター選択 &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
+|トレース内のサーバー プロセス ID (SPID) をフィルター選択する方法について説明します。|[トレースでのサーバー プロセス ID &#40;SPIDs &#41;のフィルター選択 &#40;SQL Server Profiler &#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
 |トレースを一時停止する方法について説明します。|[トレースの一時停止 &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)|  
 |トレースを停止する方法について説明します。|[トレースの停止 &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)|  
 |一時停止後または停止後にトレースを実行する方法について説明します。|[一時停止または停止したトレースの再開 &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)|  
@@ -184,7 +183,7 @@ ms.locfileid: "48138291"
 |SQL Server Profiler の状況依存ヘルプ トピックについて紹介します。|[SQL Server Profiler の F1 ヘルプ](sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でパフォーマンスと利用状況を監視する際に使用される一連のシステム ストアド プロシージャを紹介します。|[SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Locks イベント カテゴリ](../../relational-databases/event-classes/locks-event-category.md)   
  [Sessions イベント カテゴリ](../../relational-databases/event-classes/sessions-event-category.md)   
  [Stored Procedures イベント カテゴリ](../../relational-databases/event-classes/stored-procedures-event-category.md)   

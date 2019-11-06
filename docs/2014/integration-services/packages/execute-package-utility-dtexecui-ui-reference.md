@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
@@ -21,15 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890210"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>パッケージ実行ユーティリティ (DtExecUI) の UI リファレンス
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 開くことができます、このユーザー インターフェイス[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または」と入力して`dtexecui`を使用してパッケージを実行する代わりには、コマンド プロンプトで、 **DTExec**コマンド プロンプト ツールです。  
@@ -68,7 +67,7 @@ ms.locfileid: "49169334"
 |||  
 |-|-|  
 |値|説明|  
-|**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードは、 **/USER** *username* および **/PASSWORD** *password* options to the commおよび prompt.|  
+|**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードは、 **/USER** _username_ および **/PASSWORD** _password_ options to the commおよび prompt.|  
 |**ファイル システム**|パッケージがファイル システムに存在する場合は、このオプションを選択します。|  
 |**[SSIS パッケージ ストア]**|パッケージが [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに存在する場合は、このオプションを選択します。|  
   
@@ -228,7 +227,7 @@ ms.locfileid: "49169334"
  **[コンソールのイベント]**  
  レポートに記録するイベントとメッセージの種類を指定します。  
   
- **なし**  
+ **None**  
  レポートを作成しない場合に選択します。  
   
  **エラー**  
@@ -370,7 +369,7 @@ ms.locfileid: "49169334"
  **Close**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dtexec ユーティリティ](dtexec-utility.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.conc.subtopubs.f1
@@ -25,12 +24,12 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 573346dcd34691f9270e61592a25d8625d2af367
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62629693"
 ---
 # <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
   サブスクリプションとは、パブリケーションのデータとデータベース オブジェクトのコピーを要求することです。 サブスクリプションでは、受信するパブリケーションおよびパブリケーションの受信場所と受信時間が定義されます。 サブスクリプションを設計する場合は、エージェント処理を実行する場所を考慮してください。 選択するサブスクリプションの種類によって、エージェントが実行される場所が決まります。 プッシュ サブスクリプションではマージ エージェントまたはディストリビューション エージェントがディストリビューターで実行されるのに対し、プル サブスクリプションではサブスクライバーでエージェントが実行されます。 サブスクリプションの作成後にその種類を変更することはできません。  
@@ -73,14 +72,14 @@ ms.locfileid: "48207832"
   
  **プッシュ サブスクリプションを削除するには**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [プッシュ サブスクリプションの削除](delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[プッシュ サブスクリプションの削除](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  サブスクリプションを削除しても、パブリッシュされたオブジェクトはサブスクライバーから削除されません。  
   
  **プル サブスクリプションを作成するには**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [プル サブスクリプションの作成](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Create a Pull Subscription](create-a-pull-subscription.md)  
   
  **プル サブスクリプションのプロパティを表示または変更するには**  
   

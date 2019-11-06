@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - XML output file format [ssbdiagnose]
@@ -14,15 +13,15 @@ ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6644b8da77f8ebb6e4e8d6b6fc23ce5d9e356dd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 127e0b807e832272dc98270d811af310cc075bdd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63285676"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>XML 出力ファイルの形式 (ssbdiagnose)
-  **ssbdiagnose** ユーティリティは、**-XML** スイッチを指定して実行した場合、その出力を XML ファイルとして配布します。 XML 出力ファイルでは、ヘッダー情報と、分析された [!INCLUDE[ssSB](../../includes/sssb-md.md)] の構成またはメッセージ交換で検出されたエラーが示されます。 ファイルに示されたエラーを分析して報告するためのアプリケーションを作成することができます。 また、XML ファイルを XML Notepad などの一般的な XML エディターで表示することもできます。  
+  **ssbdiagnose** ユーティリティは、 **-XML** スイッチを指定して実行した場合、その出力を XML ファイルとして配布します。 XML 出力ファイルでは、ヘッダー情報と、分析された [!INCLUDE[ssSB](../../includes/sssb-md.md)] の構成またはメッセージ交換で検出されたエラーが示されます。 ファイルに示されたエラーを分析して報告するためのアプリケーションを作成することができます。 また、XML ファイルを XML Notepad などの一般的な XML エディターで表示することもできます。  
   
  **ssbdiangose** の出力ファイルには、2 種類の子を持つ DiagnosticInformation ルート要素が含まれます。  
   
@@ -32,15 +31,15 @@ ms.locfileid: "48070832"
   
 ## <a name="diagnosticinformation-root-element"></a>DiagnosticInformation ルート要素 (ssbdiagnose)  
   
--   [DiagnosticInformation 要素&#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)  
+-   [DiagnosticInformation 要素 &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)  
   
 ## <a name="banner-element"></a>Banner 要素  
   
--   [Banner 要素&#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)  
+-   [Banner 要素 &#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)  
   
 ## <a name="issue-element"></a>Issue 要素  
   
--   [Issue 要素&#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)  
+-   [Issue 要素 &#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)  
   
 ## <a name="see-also"></a>参照  
  [ssbdiagnose ユーティリティ &#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  

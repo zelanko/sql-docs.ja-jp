@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224595"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>デシジョン ツリー モデルの検証 (基本的なデータ マイニング チュートリアル)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、自転車の購入に影響する列をトレーニング セットのその他の列に基づいて予測します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48145912"
   
  ここでは、モデルは、1 つだけ表示されるツリーがあるために、自転車購入者のみに 1 つの列を予測します。 使用することが多くのツリーがある場合は、**ツリー**ボックスを別のツリーを選択します。  
   
- 表示すると、`TM_Decision_Tree`モデル、デシジョン ツリー ビューアーで、グラフの左側にある最も重要な属性を確認できます。 "最も重要" とは、これらの属性が結果に最も大きな影響を及ぼすことを意味します。 ツリーの下寄り (グラフの右側) にある属性は、あまり大きな効果を及ぼしません。  
+ 表示すると、`TM_Decision_Tree`モデル、デシジョン ツリー ビューアーで、グラフの左側にある最も重要な属性を確認できます。 「最も重要な」は、これらの属性が結果に最大の影響を与えることを意味します。 ツリーの下寄り (グラフの右側) にある属性は、あまり大きな効果を及ぼしません。  
   
  この例では、自転車購入の予測にとって最も重要な要素は年齢です。 このモデルは顧客を年齢でグループ化し、年齢グループごとに、次に重要な属性を示します。 たとえば、34 歳から 40 歳の顧客グループでは、年齢の次に強い予測子は所有している自動車の台数です。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48145912"
   
  ここでは、構造とモデルを作成したときにドリルスルーを有効にしてあるため、モデル ケースやマイニング構造から詳細情報を取得することができます。これには、マイニング モデルには含まれていなかった列 (emailAddress や FirstName など) も含まれます。  
   
- 詳細については、「[ドリルスルー クエリ &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)」を参照してください。  
+ 詳細については、「[ドリルスルー クエリ (データ マイニング)](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
   
 #### <a name="to-drill-through-to-case-data"></a>ケース データにドリルスルーするには  
   

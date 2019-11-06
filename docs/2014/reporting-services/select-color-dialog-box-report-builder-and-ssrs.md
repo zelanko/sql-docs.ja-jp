@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
@@ -13,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101383"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>[色の選択] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[色の選択]** ダイアログ ボックスを使用すると、データ領域やテキスト ボックスにある 1 つまたは複数のセルの背景色や、グラフの色のオプションを指定できます。  
@@ -80,6 +79,6 @@ ms.locfileid: "48184662"
   
 ## <a name="see-also"></a>参照  
  [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [テキストとプレース ホルダーの書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

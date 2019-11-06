@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc885112b28ff2a98e0c78ebcd200b2ec0cc6456
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 35cd84e1ffbdc3251565d99d05b2a9aef7ab66f5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758370"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770037"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>サブスクリプションの新規作成ウィザード (UI リファレンス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,8 +46,8 @@ ms.locfileid: "47758370"
   
 ## <a name="see-also"></a>参照  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [プロパティ リファレンス (レプリケーション)](../../relational-databases/replication/properties-reference-replication.md)  
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
+ [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
+
   
   

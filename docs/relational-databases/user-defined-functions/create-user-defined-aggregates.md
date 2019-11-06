@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 705c71cd3b6872bfa8fe08509ed3d46b2799c445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e4291cbe79bf0eea51fdf10e2c13fea7f1e23a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138349"
 ---
 # <a name="create-user-defined-aggregates"></a>ユーザー定義集計の作成
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +34,10 @@ ms.locfileid: "47848160"
   
 -   CREATE AGGREGATE ステートメントを使用して、登録済みのアセンブリを参照するユーザー定義集計を作成します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で SQL Server プロジェクトを配置すると、そのプロジェクトで指定されたデータベースにアセンブリが登録されます。 また、プロジェクトを配置することで、 **SqlUserDefinedAggregate** 属性で注釈が付けられたすべてのクラス定義に対応するユーザー定義集計がデータベースに作成されます。 詳細については、「 [CLR データベース オブジェクトの配置](../../relational-databases/clr-integration/deploying-clr-database-objects.md)」を参照してください。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、既定では無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [を使用して](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled オプション [を有効にしないと、](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)では、これらの参照が実行されません。  
   
  **アセンブリを作成、変更、または削除するには**  

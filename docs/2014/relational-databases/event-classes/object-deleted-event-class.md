@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: febb9b2d80911c1d2fcdc386a527323af0de6f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025828"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted イベント クラス
   Object:Deleted イベント クラスは、DROP INDEX ステートメントや DROP TABLE ステートメントなどによって、オブジェクトが削除されたことを示します。 たとえば、頻繁に一時ストアド プロシージャを作成する ODBC アプリケーションによって、オブジェクトが削除されているかどうかを判断するために使用できます。  

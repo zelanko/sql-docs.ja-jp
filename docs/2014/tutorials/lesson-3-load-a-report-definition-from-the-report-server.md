@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 3: レポート サーバーからレポート定義の読み込み |Microsoft Docs'
+title: 'レッスン 3: レポート サーバーからレポート定義を読み込む |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813875"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042518"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>レッスン 3 : レポート サーバーからのレポート定義の読み込み
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>レッスン 3: レポート サーバーからのレポート定義の読み込み
   プロジェクトを作成し、RDL スキーマからクラスを生成すると、レポート定義をレポート サーバーから読み込めるようになります。  
   
 ### <a name="to-load-a-report-definition"></a>レポート定義を読み込むには  
@@ -98,7 +97,7 @@ ms.locfileid: "51813875"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、レポート サーバーから読み込んだレポート定義を更新するコードを記述します。 参照してください[レッスン 4: レポート定義をプログラムで更新](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)します。  
+ 次のレッスンでは、レポート サーバーから読み込んだレポート定義を更新するコードを記述します。 「[レッスン 4:レポート定義をプログラムで更新](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)します。  
   
 ## <a name="see-also"></a>参照  
  [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

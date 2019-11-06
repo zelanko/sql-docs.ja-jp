@@ -1,5 +1,5 @@
 ---
-title: クライアント側の XML の処理 (SQLXML マネージ クラス) |マイクロソフトのドキュメント
+title: クライアント側での XML の処理 (SQLXML マネージクラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,22 +14,21 @@ helpviewer_keywords:
 - SQLXML Managed Classes, client-side XML formatting
 - ClientSideXml property
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da17c438af687851353cd99148f82759d68b3bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6133cbedb01dce5cb4d868e79e52e236e773f4b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746170"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909167"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>クライアント側での XML の処理 (SQLXML マネージド クラス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この例では、ClientSideXml プロパティの使用を示します。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  
+  この例は、ClientSideXml プロパティの使用方法を示しています。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  
   
- 次の GetContacts、ストアド プロシージャ**FirstName**と**LastName** AdventureWorks データベースの Person.Contact テーブル内の従業員のです。  
+ 次の GetContacts ストアドプロシージャは、AdventureWorks データベースの Person. Contact テーブルにある従業員の**FirstName**と**LastName**を返します。  
   
 ```  
 USE AdventureWorks  
@@ -41,7 +40,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- この c# アプリケーションでは、ストアド プロシージャを実行し、CommandText 値を指定するときに、FOR XML AUTO オプションを指定します。 SqlXmlCommand オブジェクトの ClientSideXml プロパティを設定するアプリケーションでは、true に設定します。 これにより、前から存在するストアド プロシージャを実行して行セットを返すことができ、クライアント側で XML 変換を適用することができます。  
+ このC#アプリケーションでは、ストアドプロシージャを実行し、CommandText 値を指定するときに FOR XML AUTO オプションを指定します。 アプリケーションでは、SqlXmlCommand オブジェクトの ClientSideXml プロパティが true に設定されています。 これにより、前から存在するストアド プロシージャを実行して行セットを返すことができ、クライアント側で XML 変換を適用することができます。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -84,7 +83,7 @@ public static int Main(String[] args)
   
 ### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
-1.  ストアド プロシージャを作成します。  
+1.  ストアドプロシージャを作成します。  
   
 2.  この例で提供される C# コード (DocSample.cs) をフォルダーに保存します。 コードを編集し、適切なログインおよびパスワード情報を指定します。  
   
@@ -97,5 +96,4 @@ public static int Main(String[] args)
      これにより、実行可能ファイル (DocSample.exe) が作成されます。  
   
 4.  コマンド プロンプトで、DocSample.exe を実行します。  
-  
-  
+

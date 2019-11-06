@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - global trace options [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f46ddc342a3b10a757215882b08032eaee1f0f44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267404"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>グローバル トレース オプションの設定 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]の特定のインスタンスで作成したすべてのトレースに適用するオプションの設定方法について説明します。  
@@ -68,7 +67,7 @@ ms.locfileid: "48219632"
         |**86400**|最大値です。 **86400** 秒 (1 日) に 1 回ブロック プロセスを呼び出します。|  
   
 ## <a name="see-also"></a>参照  
- [トレース表示の既定値を設定&#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
+ [トレース表示の既定値の設定 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

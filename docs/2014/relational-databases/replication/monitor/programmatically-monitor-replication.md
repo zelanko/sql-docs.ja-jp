@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667248"
 ---
 # <a name="programmatically-monitor-replication"></a>プログラムによるレプリケーションの監視
   レプリケーション モニターは、レプリケーション トポロジを監視するためのグラフィカル ツールです。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] レプリケーション ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用すると、同じ監視データにプログラムからアクセスできます。 このオブジェクトにより、次のタスクをプログラムできます。  
@@ -59,47 +58,47 @@ ms.locfileid: "48137288"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>ディストリビューターからパブリッシャー、パブリケーション、サブスクリプションを監視するには  
   
-1.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)を実行します。 これにより、このディストリビューターを利用している全パブリッシャーの監視情報が返されます。 結果セットを 1 つのパブリッシャーに限定するには、 **@publisher**を実行します。  
+1.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)を実行します。 これにより、このディストリビューターを利用している全パブリッシャーの監視情報が返されます。 結果セットを 1 つのパブリッシャーに限定するには、 **@publisher** を実行します。  
   
-2.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql)を実行します。 これにより、このディストリビューターを利用している全パブリケーションの監視情報が返されます。 結果セットを 1 つのパブリッシャー、パブリケーション、またはパブリッシュ済みデータベースに限定するには、それぞれ **@publisher**、 **@publication**、または **@publisher_db**を指定します。  
+2.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql)を実行します。 これにより、このディストリビューターを利用している全パブリケーションの監視情報が返されます。 結果セットを 1 つのパブリッシャー、パブリケーション、またはパブリッシュ済みデータベースに限定するには、それぞれ **@publisher** 、 **@publication** 、または **@publisher_db** を指定します。  
   
-3.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)を実行します。 これにより、このディストリビューターを利用しているすべてのサブスクリプションの監視情報が返されます。 結果セットを 1 つのパブリッシャー、パブリケーション、またはパブリッシュ済みデータベースに属するサブスクリプションに限定するには、それぞれ **@publisher**、 **@publication**、または **@publisher_db**を指定します。  
+3.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)を実行します。 これにより、このディストリビューターを利用しているすべてのサブスクリプションの監視情報が返されます。 結果セットを 1 つのパブリッシャー、パブリケーション、またはパブリッシュ済みデータベースに属するサブスクリプションに限定するには、それぞれ **@publisher** 、 **@publication** 、または **@publisher_db** を指定します。  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>サブスクライバーで適用を待機しているトランザクション コマンドを監視するには  
   
-1.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)を実行します。 これにより、このディストリビューターを利用しているすべてのサブスクリプションの、待機中の全コマンドに関する監視情報が返されます。 結果セットを 1 つのパブリッシャー、サブスクライバー、パブリケーション、またはパブリッシュ済みデータベースに属するサブスクリプションに適用される待機中コマンドに限定するには、それぞれ **@publisher**、 **@subscriber**、 **@publication**、または **@publisher_db**を指定します。  
+1.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)を実行します。 これにより、このディストリビューターを利用しているすべてのサブスクリプションの、待機中の全コマンドに関する監視情報が返されます。 結果セットを 1 つのパブリッシャー、サブスクライバー、パブリケーション、またはパブリッシュ済みデータベースに属するサブスクリプションに適用される待機中コマンドに限定するには、それぞれ **@publisher** 、 **@subscriber** 、 **@publication** 、または **@publisher_db** を指定します。  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>アップロードまたはダウンロードされるのを待機しているマージ変更を監視するには  
   
-1.  パブリッシャーのパブリケーション データベースで、 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)を実行します。 返される結果セットには、サブスクライバーへのレプリケートを待機している変更に関する情報が示されます。 結果セットを 1 つのパブリケーションまたはアーティクルに属する変更に限定するには、それぞれ **@publication** または **@article**を指定します。  
+1.  パブリッシャーのパブリケーション データベースで、 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)を実行します。 返される結果セットには、サブスクライバーへのレプリケートを待機している変更に関する情報が示されます。 結果セットを 1 つのパブリケーションまたはアーティクルに属する変更に限定するには、それぞれ **@publication** または **@article** を指定します。  
   
-2.  サブスクライバーのサブスクリプション データベースで、 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)を実行します。 返される結果セットには、パブリッシャーへのレプリケートを待機している変更に関する情報が示されます。 結果セットを 1 つのパブリケーションまたはアーティクルに属する変更に限定するには、それぞれ **@publication** または **@article**を指定します。  
+2.  サブスクライバーのサブスクリプション データベースで、 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)を実行します。 返される結果セットには、パブリッシャーへのレプリケートを待機している変更に関する情報が示されます。 結果セットを 1 つのパブリケーションまたはアーティクルに属する変更に限定するには、それぞれ **@publication** または **@article** を指定します。  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>マージ エージェント セッションを監視するには  
   
 1.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)を実行します。 これにより、このディストリビューターを利用する全サブスクリプションのすべてのマージ エージェント セッションに関する監視情報 ( **Session_id**を含む) が返されます。 また、 **MSmerge_sessions** システム テーブルにクエリを実行することでも、 [Session_id](/sql/relational-databases/system-tables/msmerge-sessions-transact-sql) を取得できます。  
   
-2.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)を実行します。 手順 1. で取得した **Session_id** の値を **@session_id**を実行します。 これにより、セッションに関する詳細な監視情報が表示されます。  
+2.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)を実行します。 手順 1. で取得した **Session_id** の値を **@session_id** を実行します。 これにより、セッションに関する詳細な監視情報が表示されます。  
   
 3.  目的の各セッションについて、手順 2. を実行します。  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>サブスクライバーからのプル サブスクリプションのマージ エージェント セッションを監視するには  
   
-1.  サブスクライバーのサブスクリプション データベースで、 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)を実行します。 サブスクリプションの **@publisher**、 **@publication**を指定し、パブリケーション データベースの名前を **@publisher_db**を実行します。 これにより、このサブスクリプションの過去 5 回のマージ エージェント セッションに関する監視情報が返されます。 結果セットで、目的のセッションの **Session_id** の値を確認します。  
+1.  サブスクライバーのサブスクリプション データベースで、 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)を実行します。 サブスクリプションの **@publisher** 、 **@publication** を指定し、パブリケーション データベースの名前を **@publisher_db** を実行します。 これにより、このサブスクリプションの過去 5 回のマージ エージェント セッションに関する監視情報が返されます。 結果セットで、目的のセッションの **Session_id** の値を確認します。  
   
-2.  サブスクライバーのサブスクリプション データベースで、 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)を実行します。 手順 1. で取得した **Session_id** の値を **@session_id**を実行します。 これにより、セッションに関する詳細な監視情報が表示されます。  
+2.  サブスクライバーのサブスクリプション データベースで、 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)を実行します。 手順 1. で取得した **Session_id** の値を **@session_id** を実行します。 これにより、セッションに関する詳細な監視情報が表示されます。  
   
 3.  目的の各セッションについて、手順 2. を実行します。  
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>パブリケーションのしきい値を表示して変更するには  
   
-1.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)を実行します。 これにより、このディストリビューターを利用している全パブリケーションの監視しきい値が返されます。 結果セットを 1 つのパブリッシャー、パブリッシュ済みデータベース、またはパブリケーションに属するパブリケーションに対する監視しきい値に限定するには、それぞれ **@publisher**、 **@publisher_db**、または **@publication**を指定します。 変更する必要があるしきい値に対応する **Metric_id** の値を確認します。 詳細については、「 [レプリケーション モニターのしきい値と警告の設定](set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
+1.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)を実行します。 これにより、このディストリビューターを利用している全パブリケーションの監視しきい値が返されます。 結果セットを 1 つのパブリッシャー、パブリッシュ済みデータベース、またはパブリケーションに属するパブリケーションに対する監視しきい値に限定するには、それぞれ **@publisher** 、 **@publisher_db** 、または **@publication** を指定します。 変更する必要があるしきい値に対応する **Metric_id** の値を確認します。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
 2.  ディストリビューターのディストリビューション データベースで、 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)を実行します。 必要に応じて、次の値を指定します。  
   
-    -   手順 1. で得た **Metric_id** の値を **@metric_id**を実行します。  
+    -   手順 1. で得た **Metric_id** の値を **@metric_id** を実行します。  
   
-    -   監視しきい値の新しい値を **@value**を実行します。  
+    -   監視しきい値の新しい値を **@value** を実行します。  
   
     -   このしきい値に到達したときに警告をログに記録するには、 **@shouldalert** に **@shouldalert** を指定します。警告が不要な場合には、 **0** を指定します。  
   
@@ -173,7 +172,7 @@ ms.locfileid: "48137288"
   
 2.  次のいずれかの方法で <xref:Microsoft.SqlServer.Replication.PublisherMonitor> オブジェクトを取得します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor> クラスのインスタンスを作成します。 パブリッシャーの <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、発行元名が正しく定義されていないか、パブリケーションが存在しません。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor> クラスのインスタンスを作成します。 パブリッシャーの <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、パブリッシャー名が正しく定義されていないか、パブリケーションが存在していません。  
   
     -   <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> から取得します。このコレクションには、既存の <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> プロパティを使用してアクセスできます。  
   
@@ -269,13 +268,13 @@ ms.locfileid: "48137288"
   
         |値|説明|  
         |-----------|-----------------|  
-        |1|`expiration` -トランザクション パブリケーションに対するサブスクリプションの期限が迫っていないか監視します。|  
-        |2|`latency` -トランザクション パブリケーションに対するサブスクリプションのパフォーマンスを監視します。|  
-        |4|`mergeexpiration` -マージ パブリケーションへのサブスクリプションが迫っていないか有効期限を監視します。|  
-        |5|`mergeslowrunduration` -低帯域 (ダイヤルアップ) 接続でのマージ同期の期間を監視します。|  
-        |6|`mergefastrunduration` -高帯域 (LAN) 接続でのマージ同期の期間を監視します。|  
+        |1|`expiration` - トランザクション パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
+        |2|`latency` - トランザクション パブリケーションへのサブスクリプションのパフォーマンスを監視します。|  
+        |4|`mergeexpiration` - マージ パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
+        |5|`mergeslowrunduration` - 低速回線 (ダイヤルアップ) 接続でのマージの同期時間を監視します。|  
+        |6|`mergefastrunduration` - 高帯域 (LAN) 接続でのマージ同期の期間を監視します。|  
         |7|`mergefastrunspeed` : 高帯域幅 (LAN) 接続経由でのマージ同期の同期速度を監視します。|  
-        |8|`mergeslowrunspeed` -低帯域 (ダイヤルアップ) 接続でのマージ同期の同期率を監視します。|  
+        |8|`mergeslowrunspeed` - 低速回線 (ダイヤルアップ) 接続でのマージの同期速度を監視します。|  
   
     -   *enable* - <xref:System.Boolean> 値です。  
   

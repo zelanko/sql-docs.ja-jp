@@ -16,14 +16,18 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642359"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262791"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降がコンピューターに現在インストールされている場合は、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]にアップグレードできます。  
   
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の以前のバージョンのいずれかがインストールされているコンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] にアップグレードすると、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は以前のバージョンに対してサイド バイ サイドでインストールされます。  
@@ -36,24 +40,24 @@ ms.locfileid: "51642359"
 ## <a name="before-upgrading-integration-services"></a>Integration Services をアップグレードする前に  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする前に、アップグレード アドバイザーを実行することをお勧めします。 アップグレード アドバイザーは、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で使用される新しいパッケージ形式に移行する場合に発生する可能性がある問題を報告します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL Server 2012 では、データ変換サービス (DTS) パッケージの移行または実行のサポートは廃止されました。 次の DTS 機能は廃止されました。  
->   
+> 
 >  -   DTS ランタイム  
 > -   DTS API  
 > -   DTS パッケージを次期バージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   DTS パッケージのメンテナンス機能のサポート [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   DTS 2000 パッケージ実行タスク  
 > -   アップグレード アドバイザーによる DTS パッケージのスキャン  
->   
+> 
 >  廃止されたその他の機能については、「 [SQL Server 2016 で提供が中止された Integration Services の機能](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)」をご覧ください。  
   
 ## <a name="upgrading-integration-services"></a>Integration Services のアップグレード  
  次の方法のいずれかを使用してアップグレードできます。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行し、**[SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] からのアップグレード]** を選択します。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行し、 **[SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] からのアップグレード]** を選択します。  
   
--   コマンド プロンプトで **setup.exe** を実行し、**/ACTION=upgrade** オプションを指定します。 詳細については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール スクリプト」セクションを参照してください。  
+-   コマンド プロンプトで **setup.exe** を実行し、 **/ACTION=upgrade** オプションを指定します。 詳細については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール スクリプト」セクションを参照してください。  
   
  アップグレードでは、次の操作は実行できません。  
   

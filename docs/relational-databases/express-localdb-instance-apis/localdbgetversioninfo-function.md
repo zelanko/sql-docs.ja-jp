@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 26560884319a1feff70db3900bc310cb1e651c2e
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 7030f26cb95b78a3cd2dde8520876f13acc4bc46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091201"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ HRESULT LocalDBGetVersionInfo(
   
 ```  
 LocalDBVersionInfo vi;  
-LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));  
+LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));  
   
 ```  
   

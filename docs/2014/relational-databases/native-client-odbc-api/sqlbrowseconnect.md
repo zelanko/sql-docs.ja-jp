@@ -14,12 +14,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208533"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067668"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**の接続情報の 3 つのレベルに分類できるキーワードを使用します。 次の表では、キーワードごとに、有効な値の一覧が返されるかどうか、およびそのキーワードが省略可能であるかどうかを示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "48208533"
 |Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|なし|いいえ|によって返されるデータ ソースの名前**SQLDataSources**。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
-|DRIVER|なし|いいえ|Microsoft®[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーの名前は、{[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント 11}。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
+|DRIVER|なし|いいえ|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー名は {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
   
 ## <a name="level-2"></a>[レベル 2]  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48208533"
 |SQL_COPT_SS_BROWSE_CACHE_DATA に関する記述を追加しました。|  
   
 ## <a name="see-also"></a>参照  
- [SQLBrowseConnect 関数](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect 関数](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

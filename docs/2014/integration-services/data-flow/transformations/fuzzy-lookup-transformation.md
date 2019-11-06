@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -28,21 +27,21 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106401"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900318"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
   
 > [!NOTE]  
->  パフォーマンスやメモリの制限など、あいまい参照変換に関する詳細については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](http://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
+>  パフォーマンスやメモリの制限など、あいまい参照変換に関する詳細については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](https://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
   
  あいまい参照変換は、あいまい一致を使用するという点が参照変換とは異なります。 参照変換では、等結合を使用して、参照テーブル内の一致レコードを検索します。 返されるのは、一致レコードを少なくとも 1 つ含むレコードと、一致レコードがないレコードです。 これに対して、あいまい参照変換では、あいまい一致を使用して、参照テーブル内の 1 つ以上の類似一致を返します。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48106401"
   
  類似性のしきい値は、コンポーネント レベルおよび結合レベルで設定できます。 結合レベルの類似性のしきい値は、入力と参照テーブルの列のあいまい一致を実行する場合にのみ使用できます。 類似性の範囲は 0 ～ 1 です。 しきい値が 1 に近いほど、行や列が一致していると判断される場合の類似性が高くなります。 類似性のしきい値は、コンポーネント レベルおよび結合レベルで MinSimilarity プロパティを設定して指定します。 コンポーネント レベルで指定された類似性を満たすには、すべての行がすべての一致に関して、指定された類似性のしきい値以上の類似性を持つ必要があります。 したがって、行レベルまたは結合レベルでの一致が均一に類似していない限り、コンポーネント レベルで非常に類似した一致を指定することはできません。  
   
- 一致には、類似スコアおよび信頼スコアが含まれます。 類似スコアは、入力レコードとあいまい参照変換が参照テーブルから返したレコードとのテキストの類似性を数値で表したものです。 信頼スコアは、特定の値が、参照テーブル内で見つかった一致の中で最適の一致である確率を表す数値です。 特定のレコードに割り当てられる信頼スコアは、返された他の一致レコードに依存します。 たとえば、 *St.* と *Saint* の一致の類似スコアは他の一致に関係なく低くなりますが、 *Saint* が返された唯一の一致の場合には、信頼スコアは高くなります。 参照テーブル内に *Saint* と *St.* の両方が存在した場合、 *St.* の信頼スコアが高く、 *Saint* の信頼スコアが低くなります。 ただし、類似スコアが高くても、信頼スコアが高いとは限りません。 たとえば、*Chapter 4* という値を検索した場合、*Chapter 1**Chapter 2* *Chapter 3* が結果として返されて、それぞれの類似スコアは高くなります。しかし、どの結果が最適の一致であるかがはっきりしないため、信頼スコアは低くなります。  
+ 一致には、類似スコアおよび信頼スコアが含まれます。 類似スコアは、入力レコードとあいまい参照変換が参照テーブルから返したレコードとのテキストの類似性を数値で表したものです。 信頼スコアは、特定の値が、参照テーブル内で見つかった一致の中で最適の一致である確率を表す数値です。 特定のレコードに割り当てられる信頼スコアは、返された他の一致レコードに依存します。 たとえば、 *St.* と *Saint* の一致の類似スコアは他の一致に関係なく低くなりますが、 *Saint* が返された唯一の一致の場合には、信頼スコアは高くなります。 参照テーブル内に *Saint* と *St.* の両方が存在した場合、 *St.* の信頼スコアが高く、 *Saint* の信頼スコアが低くなります。 ただし、類似スコアが高くても、信頼スコアが高いとは限りません。 たとえば、 *Chapter 4* という値を検索した場合、 *Chapter 1* *Chapter 2* *Chapter 3* が結果として返されて、それぞれの類似スコアは高くなります。しかし、どの結果が最適の一致であるかがはっきりしないため、信頼スコアは低くなります。  
   
  類似スコアは 0 ～ 1 の 10 進値で示されます。類似スコア 1 は、入力列の値と参照テーブルの値が完全に一致していることを表します。 信頼スコアも 0 ～ 1 の 10 進値で、一致の信頼性を表します。 使用できる一致が見つからない行には類似スコアおよび信頼スコアに 0 が割り当てられ、参照テーブルからコピーされる出力列は NULL 値になります。  
   
@@ -120,18 +119,18 @@ ms.locfileid: "48106401"
 ## <a name="temporary-tables-and-indexes"></a>一時テーブルおよびインデックス  
  あいまい参照変換の実行時には、変換の接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内に、テーブルやインデックスなどの一時オブジェクトが作成されます。 これらの一時テーブルとインデックスのサイズは、参照テーブルの行数とトークン数や、あいまい参照変換が作成するトークン数に比例します。したがって、膨大なディスク容量を消費する可能性もあります。 また、変換はこれらの一時テーブルに対してクエリを実行します。 このため、特に稼働サーバーのディスク容量が少ない場合は、あいまい参照変換を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースの非稼働インスタンスに接続することを検討してください。  
   
- この変換で使用するテーブルおよびインデックスがローカル コンピューター上にあると、変換のパフォーマンスが向上する可能性があります。 あいまい参照変換が使用する参照テーブルが稼働サーバー上にある場合は、テーブルを非稼働サーバーにコピーして、あいまい参照変換がこのコピーにアクセスするように設定することを検討してください。 こうすることで、参照クエリによって稼働サーバーのリソースが消費されるのを回避できます。 また、MatchIndexOptionsis が **GenerateAndMaintainNewIndex**に設定されていて、あいまい参照変換で一致インデックスが維持されている場合は、データ クリーン操作中に参照テーブルがロックされ、他のユーザーやアプリケーションはテーブルにアクセスできません。  
+ この変換で使用するテーブルおよびインデックスがローカル コンピューター上にあると、変換のパフォーマンスが向上する可能性があります。 あいまい参照変換が使用する参照テーブルが稼働サーバー上にある場合は、テーブルを非稼働サーバーにコピーして、あいまい参照変換がこのコピーにアクセスするように設定することを検討してください。 こうすることで、参照クエリによって稼働サーバーのリソースが消費されるのを回避できます。 また、MatchIndexOptionsis が **GenerateAndMaintainNewIndex** に設定されていて、あいまい参照変換で一致インデックスが維持されている場合は、データ クリーン操作中に参照テーブルがロックされ、他のユーザーやアプリケーションはテーブルにアクセスできません。  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>あいまい参照変換の設定  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  **[あいまい参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [あいまい参照変換エディター&#40;参照テーブル タブ&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [あいまい参照変換エディター ([参照テーブル] タブ)](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [あいまい参照変換エディター&#40;列 タブ&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [あいまい参照変換エディター ([列] タブ)](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [あいまい参照変換エディター&#40;詳細設定 タブ&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [あいまい参照変換エディター ([詳細設定] タブ)](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
@@ -142,7 +141,7 @@ ms.locfileid: "48106401"
 ## <a name="related-tasks"></a>Related Tasks  
  データ フロー コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [参照変換](lookup-transformation.md)   
  [あいまいグループ化変換](fuzzy-grouping-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)  

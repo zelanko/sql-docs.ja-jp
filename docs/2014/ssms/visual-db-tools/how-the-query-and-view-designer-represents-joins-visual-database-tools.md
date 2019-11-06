@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL pane [Visual Database Tools]
@@ -14,12 +14,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e03e7ef3899b4f01b0844d5d721fa3a86eb6d4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63155259"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>クエリおよびビュー デザイナーでの結合の表示方法 (Visual Database Tools)
   テーブルを結合すると、 [クエリおよびビュー デザイナー](visual-database-tools.md) は、 [ダイアグラム ペイン](diagram-pane-visual-database-tools.md) にその結合をグラフィカル表示します。また、SQL 構文を使用して [SQL ペイン](sql-pane-visual-database-tools.md)にも表示します。  

@@ -1,7 +1,7 @@
 ---
 title: メモリ最適化テーブルのテーブルと行のサイズ | Microsoft Docs
 ms.custom: ''
-ms.date: 10/27/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: in-memory-oltp
@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a21072b90c0e263e4ac561bdad23aea8f0b1fd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084582"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688898"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
   メモリ最適化テーブルは、行のコレクションと、行へのポインターを格納するインデックスで構成されています。 メモリ最適化テーブルでは、行を 8,060 バイトより長くすることはできません。 メモリ最適化テーブルのサイズを知ることで、コンピューターに十分なメモリがあるかどうかがわかります。  
@@ -40,7 +40,7 @@ ms.locfileid: "48084582"
  テーブルのメモリ内サイズ (バイト単位) は、次のように計算されます。  
   
 ```  
-[table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
+[table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
  ハッシュ インデックスのサイズはテーブルの作成時に固定され、実際のバケット数によって決まります。 インデックスの仕様で指定された bucket_count は、[実際のバケット数] (actual bucket count) を取得するために、最も近い 2 のべき乗の値に切り上げられます。 たとえば、指定された bucket_count が 100,000 の場合、インデックスの [実際のバケット数] (actual bucket count) は 131,072 になります。  
@@ -70,10 +70,10 @@ ms.locfileid: "48084582"
   
  [実際の行本文サイズ] = SUM([シャロー型のサイズ]) + 2 + 2 * [ディープ型の列の数] として指定した場合、行本文サイズの計算について、次の表で説明します。  
   
-|セクション|サイズ|コメント|  
+|セクション|[サイズ]|コメント|  
 |-------------|----------|--------------|  
-|シャロー型の列|SUM([シャロー型のサイズ] (size of shallow types))<br /><br /> **個別の型のサイズは次のとおりです。**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 数値 (有効桁数 < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
-|シャロー列のパディング|有効な値は次のとおりです。<br /><br /> ディープ型の列が存在し、シャロー列の合計データ サイズが奇数になる場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
+|シャロー型の列|SUM([シャロー型のサイズ] (size of shallow types))<br /><br /> **個々の型のサイズは次のとおりです。**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precision < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> 数値 (有効桁数 > 18 &#124; ) 16<br /><br /> Uniqueidentifier &#124; 16||  
+|シャロー列の余白|有効な値は次のとおりです。<br /><br /> ディープ型の列が存在し、シャロー列の合計データ サイズが奇数になる場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |ディープ型の列のオフセット配列|有効な値は次のとおりです。<br /><br /> ディープ型の列がない場合は 0<br /><br /> それ以外の場合は 2 + 2 * [ディープ型の列の数] (number of deep type columns)|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |NULL 配列|[NULL 値を許容する列の数] / 8 (完全なバイト数になるように切り上げ)。|配列は、NULL 値を許容する列ごとに 1 ビットを保持します。 これは、完全なバイト数になるように切り上げられます。|  
 |NULL 配列の余白|有効な値は次のとおりです。<br /><br /> ディープ型の列が存在し、NULL 配列のサイズのバイト数が奇数である場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
@@ -91,13 +91,13 @@ ms.locfileid: "48084582"
   
  次の図は、2 種類のインデックスを備えたテーブルの行構造を示したものです。  
   
- ![2 つのインデックスがあるテーブルの行構造。](../../database-engine/media/hekaton-tables-4.gif "2 つのインデックスがあるテーブルの行構造。")  
+ ![2つのインデックスがあるテーブルの行構造。](../../database-engine/media/hekaton-tables-4.gif "2つのインデックスがあるテーブルの行構造。")  
   
- 開始タイムスタンプおよび終了タイムスタンプは、特定の行バージョンが有効である期間を示します。 その期間内に開始されるトランザクションは、この行バージョンを認識できます。 詳細についてを参照してください[メモリ最適化テーブルでのトランザクション](memory-optimized-tables.md)です。  
+ 開始タイムスタンプおよび終了タイムスタンプは、特定の行バージョンが有効である期間を示します。 この間隔で開始されるトランザクションで、この行バージョンが使用されることがあります。 詳細については、「[メモリ最適化テーブルを使用するトランザクション](memory-optimized-tables.md)」を参照してください。  
   
  インデックス ポインターは、ハッシュ バケットに属しているチェーン内の次の行を参照します。 次の図は、(名前と都市の) 2 列があり、名前の列用と都市の列用にそれぞれ 1 つのインデックスを備えたテーブルの構造を示しています。  
   
- ![2 つの列とインデックスを持つテーブルの構造。](../../database-engine/media/hekaton-tables-5.gif "2 つの列とインデックスを持つテーブルの構造。")  
+ ![2つの列とインデックスを持つテーブルの構造。](../../database-engine/media/hekaton-tables-5.gif "2つの列とインデックスを持つテーブルの構造。")  
   
  この図では、John と Jane の名前がハッシュされ、最初のバケットに格納されます。 Susan は、ハッシュされて 2 番目のバケットに格納されます。 Beijing と Bogota の各都市は、ハッシュされて最初のバケットに格納されます。 Paris と Prague は、ハッシュされて 2 番目のバケットに格納されます。  
   
@@ -113,18 +113,18 @@ ms.locfileid: "48084582"
   
 -   2 番目のバケット: (John, Paris), (Jane, Prague)  
   
- 終了タイムスタンプの ∞ (無制限) は、これが現在有効になっている行バージョンであることを示します。 この行は、この行バージョンが書き込まれてから更新および削除されていません。  
+ 終了タイムスタンプ&#x221e; (無限大) は、これが現在有効なバージョンの行であることを示します。 この行は、この行バージョンが書き込まれてから更新および削除されていません。  
   
  時間が 200 より大きくなると、テーブルには次の行が含まれます。  
   
-|名前|City|  
+|NAME|City|  
 |----------|----------|  
 |John|Beijing|  
 |Jane|Prague|  
   
  ただし、開始時刻が 100 のアクティブなトランザクションでは、以下のバージョンのテーブルが表示されます。  
   
-|名前|City|  
+|NAME|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -135,7 +135,7 @@ ms.locfileid: "48084582"
   
  次の定義を含む Orders テーブルがあるとします。  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -147,7 +147,7 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
- このテーブルには 1 つのハッシュ インデックスと 1 つの非クラスター化インデックス (主キー) が含まれていることを注意してください。 さらに、3 個の固定長列および 1 個の可変長列があり、そのうちの 1 個の列は NULL 値を許容します (OrderDescription)。 Orders テーブルに 8,379 行が含まれ、OrderDescription 列の値の平均の長さが 78 文字であるとします。  
+ このテーブルには 1 つのハッシュ インデックスと 1 つの非クラスター化インデックス (主キー) が含まれていることを注意してください。 さらに、3 個の固定長列および 1 個の可変長列があり、そのうちの 1 個の列は NULL 値を許容します (OrderDescription)。 Orders テーブルに8379行あり、OrderDescription 列の値の平均の長さが78文字であるとします。  
   
  このテーブルのサイズを判断するには、最初にインデックスのサイズを調べます。 両方のインデックスの bucket_count は 10,000 と指定されています。 これは、最も近い 2 のべき乗 (16,384) に切り上げられます。 したがって、Orders テーブルのインデックスの合計サイズは次のとおりです。  
   
@@ -168,7 +168,7 @@ GO
 [row header size] = 24 + 8 * [number of indices] = 24 + 8 * 1 = 32 bytes  
 ```  
   
- ここで、[実際の行本文サイズ] (actual row body size) を計算します。  
+ ここで、[実際の行本文サイズ]を計算します。  
   
 -   シャロー型の列:  
   
@@ -196,7 +196,7 @@ GO
   
     -   最も近い 8 の倍数は 24 です。  
   
-    -   合計余白は 24 – 22 = 2 バイトです。  
+    -   合計余白は 24 - 22 = 2 バイトです。  
   
 -   固定長のディープ型の列はありません (固定長のディープ型の列は 0)。  
   
@@ -217,12 +217,12 @@ GO
   
  実際にこのテーブルおよびインデックスに割り当てられ、使用されるメモリは、次のクエリを使用して取得することができます。  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## <a name="see-also"></a>参照  
- [メモリ最適化テーブル](memory-optimized-tables.md)  
+## <a name="see-also"></a>「  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

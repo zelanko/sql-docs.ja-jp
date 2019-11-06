@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f99cba0597faad9da7250097f1ca8e866bd00e21
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560429"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909506"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +30,9 @@ ms.locfileid: "51560429"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **データベースをデータベース スナップショットに戻すには、**  [Transact-SQL](#TsqlProcedure)  
+-   **以下を使用して、データベースをデータベース スナップショットに戻す方法:** [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -91,7 +90,7 @@ ms.locfileid: "51560429"
 > [!NOTE]  
 >  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
-1.  データベースを戻す対象になるデータベース スナップショットを特定します。 データベース内のスナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で参照できます (詳細については、「 [データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)」を参照してください)。 また、 **sys.databases &#40;Transact-SQL&#41;** カタログ ビューの [sys.databases &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列から、ビューのソース データベースを特定することもできます。  
+1.  データベースを戻す対象になるデータベース スナップショットを特定します。 データベース内のスナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で参照できます (詳細については、「 [データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)」を参照してください)。 また、 **sys.databases &amp;#40;Transact-SQL&amp;#41;** カタログ ビューの [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列から、ビューのソース データベースを特定することもできます。  
   
 2.  他のデータベース スナップショットを削除します。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "51560429"
   
      データベースを戻す操作には、ソース データベースに対して RESTORE DATABASE 権限が必要です。 データベースを戻すには、次の Transact-SQL ステートメントを使用します。  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      *database_name* はソース データベースで、 *database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 このステートメントでは、バックアップ デバイスではなく、スナップショット名を指定する必要があることに注意してください。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "51560429"
 5.  データベースを起動します。  
   
 6.  必要に応じて (特に、完全 (または一括ログ) 復旧モデルを使用している場合)、戻したデータベースをバックアップします。 データベースをバックアップするには、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。  
-  
+
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  ここでは、データベースをデータベース スナップショットに戻す、次の例を示します。  
   

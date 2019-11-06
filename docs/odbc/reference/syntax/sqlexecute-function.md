@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df0021bf5b3ac905ddf63ede8d4dfd65710662aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12dffe315485aadc839654996f6af3a561161246
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003126"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLExecute**ステートメントですべてのパラメーター マーカーが存在しない場合は、パラメーター マーカーの変数の現在の値を使用して、準備されたステートメントを実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLExecute(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -60,7 +59,7 @@ SQLRETURN SQLExecute(
 |01004|文字列データで、右側が切り捨てられました|文字列またはバイナリ データが出力パラメーターに対して返される空白文字または NULL 以外のバイナリ データの切り捨てが発生しました。 文字列値がいた場合は、右側から切り捨てられますことでした。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01006|権限が失効していません。|関連付けられている、準備されたステートメント、 *StatementHandle*が、**取り消す**ステートメント、およびユーザーに指定した権限がないです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01007|特権は与えられません|関連付けられている、準備されたステートメント、 *StatementHandle*が、 **GRANT**ステートメント、およびユーザーは許可されませんでした特権を指定します。|  
-|01S02|オプション値が変更されました|指定したステートメント属性は、ような値が一時的に代用するための実装の動作状態のため無効でした。 (**SQLGetStmtAttr**一時的に置換された値を特定するということができます)。代替値が有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は、: SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_KEYSET_SIZE、SQL_ATTR_MAX_LENGTH、SQL_ATTR_MAX_ROWS、SQL_ATTR_QUERY_TIMEOUT、および SQL_ATTR_SIMULATE_CURSOR します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
+|01S02|オプション値が変更されました|指定したステートメント属性は、ような値が一時的に代用するための実装の動作状態のため無効でした。 (**SQLGetStmtAttr**一時的に置換された値を特定するということができます)。代替値が有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は次のとおりです。SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_KEYSET_SIZE、SQL_ATTR_MAX_LENGTH、SQL_ATTR_MAX_ROWS、SQL_ATTR_QUERY_TIMEOUT、および SQL_ATTR_SIMULATE_CURSOR します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S07|分数が切り捨てられました|入力/出力の返されるデータまたは数値データ型の小数部が切り捨てられましたや時刻、タイムスタンプ、またはその間隔のデータ型の時刻部分の小数部が切り捨てられたように、出力パラメーターが切り捨てられました。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |07002|COUNT フィールドが正しくありません。|指定されたパラメーターの数**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数より少なくなった\* *StatementText*します。<br /><br /> **SQLBindParameter**で呼び出されました*ParameterValuePtr*を null ポインターの場合は、設定*StrLen_or_IndPtr* SQL_NULL_DATA または SQL_DATA_AT_EXEC に設定されていないと*InputOutputType*パラメーターの数で指定できるように、SQL_PARAM_OUTPUT を未設定**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数よりも大きかった **StatementText*.|  
 |07006|制限付きのデータ型の属性違反|識別されるデータ値、 *ValueType*引数**SQLBindParameter**のバインドされたパラメーターがで識別されるデータ型に変換できませんでした、 *ParameterType*引数**SQLBindParameter**します。<br /><br /> SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT で識別されるデータ型に変換しないとしてバインドされたパラメーターのデータ値が返される、 *ValueType*引数**SQLBindParameter**します。<br /><br /> (1 つまたは複数の行のデータ値を変換できませんでした、1 つまたは複数の行が正常に返された場合は、この関数を返します SQL_SUCCESS_WITH_INFO。)|  
@@ -77,7 +76,7 @@ SQLRETURN SQLExecute(
 |22015|Interval フィールド オーバーフロー|*\*StatementText*正確な数値または間隔パラメーターに含まれている、間隔の SQL データ型に変換するときは、有効桁数の損失を原因となった。<br /><br /> *\*StatementText*は間隔パラメーターは、複数のフィールドに含まれる、列の数値データ型に変換するときになかった表現で数値データ型。<br /><br /> *\*StatementText*間隔 SQL 型に割り当てられたパラメーター データが含まれているし、SQL 型の間隔で C 型の値の表現はありませんでした。<br /><br /> 真数型または SQL 型の有効桁数が失われました C の間隔の種類の間隔、または入力/出力の出力パラメーターを割り当てます。<br /><br /> C interval 構造体を入力/出力または出力パラメーターが割り当てられると、間隔のデータ構造内のデータの表現はありませんでした。|  
 |22018|キャストの無効な文字の値|*\*StatementText* C 型が含まれている、真数または概数の数値、datetime、または間隔のデータ型があった; 列の SQL 型が文字データ型と列の値がバインドされた C 型の有効なリテラルではありませんでした。<br /><br /> SQL 型が、真数または概数の数値、datetime、または、interval データ型が、入力/出力または出力パラメーターが返されると、C 型が SQL_C_CHAR;列の値がバインドされた SQL 型の有効なリテラルではありませんでした。|  
 |22019|無効なエスケープ文字|関連付けられている、準備されたステートメント*StatementHandle*に含まれている、**など**() 述語が、**エスケープ**で、**場所**句、およびエスケープ文字の次の長さ**エスケープ**が 1 と等しくありません。|  
-|22025|無効なエスケープ シーケンス|関連付けられている、準備されたステートメント*StatementHandle*に含まれている"**など***パターン値***エスケープ***エスケープ文字*"で、**場所**句、およびパターンの値のエスケープ文字の後の文字が「%」または「_」のいずれか。|  
+|22025|無効なエスケープ シーケンス|関連付けられている、準備されたステートメント*StatementHandle*に含まれている"**など**_パターン値_**エスケープ**_エスケープ文字_"で、**場所**句、およびパターンの値のエスケープ文字の後の文字が「%」または「_」のいずれか。|  
 |23000|整合性制約違反|関連付けられている、準備されたステートメント、 *StatementHandle*パラメーターに含まれています。 パラメーターの値が NULL、関連付けられているテーブル列に NOT NULL として定義されている列、制約を一意の値のみを含む列の重複する値が指定されてまたはその他の整合性制約に違反していた。|  
 |24000|カーソル状態が無効|カーソルが配置されている、 *StatementHandle*によって**SQLFetch**または**SQLFetchScroll**します。 このエラーが返されますドライバー マネージャーによって**SQLFetch**または**SQLFetchScroll** 、SQL_NO_DATA が返されなかったと場合、ドライバーによって返される**SQLFetch**または**SQLFetchScroll** SQL_NO_DATA が返されます。<br /><br /> カーソルが開いて、 *StatementHandle*します。<br /><br /> 関連付けられている、準備されたステートメント、 *StatementHandle*位置指定更新に含まれているか、または結果セットの終了後に、結果セットの開始前に配置された削除 statemen、t、カーソル。|  
 |40001|シリアル化エラー|トランザクションが別のトランザクションでリソース デッドロックによりロールバックされました。|  
@@ -89,7 +88,7 @@ SQLRETURN SQLExecute(
 |HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*します。 後でもう一度関数が呼び出された、 *StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLExecute**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、 *StatementHandle*準備されていませんでした。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|パラメーターの値の設定で**SQLBindParameter**が null ポインターの場合、パラメーターの長さの値が 0、SQL_NULL_DATA、SQL_DATA_AT_EXEC、SQL_DEFAULT_PARAM SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> パラメーターの値の設定で**SQLBindParameter**、null ポインターでした; C データ型が SQL_C_BINARY または SQL_C_CHAR; およびパラメーターの長さの値が 0 未満の値がでした SQL_NTS、SQL_NULL_DATA、SQL_DEFAULT_PARAM、または SQL_DATA_AT_EXEC、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> パラメーターの長さの値制約を受けます**SQLBindParameter** SQL_DATA_AT_EXEC に設定されました SQL 型が SQL_LONGVARCHAR、SQL_LONGVARBINARY、または、長い形式のデータ ソース固有のデータ型および SQL_NEED_LONG_DATA_LEN 情報。入力**SQLGetInfo** "Y"でした。|  
+|HY090|文字列またはバッファーの長さが無効です。|パラメーターの値の設定で**SQLBindParameter**が null ポインターの場合、パラメーターの長さの値が 0、SQL_NULL_DATA、SQL_DATA_AT_EXEC、SQL_DEFAULT_PARAM SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> パラメーターの値の設定で**SQLBindParameter**、null ポインターでした; C データ型が SQL_C_BINARY または SQL_C_CHAR; およびパラメーターの長さの値が 0 未満の値がでした SQL_NTS、SQL_NULL_DATA、SQL_DEFAULT_PARAM、または SQL_DATA_AT_EXEC、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> パラメーターの長さの値制約を受けます**SQLBindParameter** SQL_DATA_AT_EXEC に設定されました SQL 型が SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型では; および SQL_NEED_LONG_DATA_LEN 情報。入力**SQLGetInfo** "Y"でした。|  
 |HY105|無効なパラメーターの型|引数が指定された値*InputOutputType*で**SQLBindParameter** SQL_PARAM_OUTPUT、パラメーターが入力パラメーターをでした。|  
 |HY109|無効なカーソルの位置|準備されたステートメントが位置指定の update または delete ステートメントと、カーソルが配置された (によって**SQLSetPos**または**SQLFetchScroll**) の行に削除されたかをフェッチできませんでした。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
@@ -120,7 +119,7 @@ SQLRETURN SQLExecute(
  ブックマークが有効になっており、クエリが実行されるブックマークをサポートすることはできません、ドライバーが属性値を変更し、SQLSTATE 01S02 を返すことでブックマークをサポートしている環境を強制的に試行する必要があります (オプションの値が変更されました)。 属性を変更できない場合、ドライバーは SQLSTATE HY024 を返す必要があります (無効な属性値)。  
   
 > [!NOTE]  
->  アプリケーションがなど、データベースまたはデータベースのコンテキストを変更する SQL ステートメントを実行する必要がありますいない接続プールを使用する場合、**使用***データベース*を変更する SQL Server 内のステートメントデータ ソースによって使用されるカタログ。  
+>  アプリケーションがなど、データベースまたはデータベースのコンテキストを変更する SQL ステートメントを実行する必要がありますいない接続プールを使用する場合、**使用**_データベース_を変更する SQL Server 内のステートメントデータ ソースによって使用されるカタログ。  
   
 ## <a name="code-example"></a>コード例  
  参照してください[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)、 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)、および[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  

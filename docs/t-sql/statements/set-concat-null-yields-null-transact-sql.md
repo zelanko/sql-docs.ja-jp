@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d21485f49b37640a24ffb74e3f3c60fd132b2ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdaa57594049ca9c7bd088120ae119ec7c58c151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041844"
 ---
 # <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -63,9 +62,9 @@ SET CONCAT_NULL_YIELDS_NULL ON
 > [!NOTE]  
 >  SET CONCAT_NULL_YIELDS_NULL は、ALTER DATABASE の CONCAT_NULL_YIELDS_NULL 設定と同じ設定です。  
   
- SET CONCAT_NULL_YIELDS_NULL は、解析時ではなく実行時に設定されます。  
-  
- 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET CONCAT_NULL_YIELDS_NULL を ON に設定する必要があります。 SET CONCAT_NULL_YIELDS_NULL が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)」の「SET ステートメントの使用に関する留意事項」を参照してください。  
+ SET CONCAT_NULL_YIELDS_NULL の設定は、解析時ではなく実行時に設定されます。  
+
+インデックス付きビュー、計算列のインデックス、フィルター選択されたインデックス、または空間インデックスを作成または変更する場合は、SET CONCAT_NULL_YIELDS_NULL を **ON** に設定する必要があります。 SET CONCAT_NULL_YIELDS_NULL が **OFF** の場合、計算列にインデックスが設定されているテーブル、フィルター選択されたインデックス、空間インデックス、またはインデックス付きビューに対する CREATE、UPDATE、INSERT、および DELETE ステートメントはすべて失敗します。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)」の「SET ステートメントの使用に関する留意事項」を参照してください。
   
  CONCAT_NULL_YIELDS_NULL を OFF に設定した場合、複数のサーバーにまたがって文字列を連結することはできません。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - DatabaseQueryTimeout Property
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b5d3115fd6d87152b09a12c3b5806c440d5c423e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 2e92e3e0f6752ea99fe89c962ebe96e343c0195b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097752"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>DatabaseQueryTimeout プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーで、コマンドが失敗した、または処理時間が長すぎると見なされるまでの、経過秒数を指定します。 レポート サーバーは、レポートのデータ ソースではなく、SQL カタログに対するクエリの時間を計測しています。 読み取りと書き込みが可能です。  
@@ -40,12 +39,12 @@ public UInt32 DatabaseQueryTimeout;
 ```  
   
 ## <a name="property-values"></a>プロパティ値  
- 32 ビットの符号なし`integer`クエリが実行を許可する秒数を表すオブジェクト。  
+ クエリを実行することが許されている秒数を表す 32 ビットの符号なし `integer` オブジェクト。  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

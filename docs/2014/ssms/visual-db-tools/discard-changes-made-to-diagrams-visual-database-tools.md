@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - discarding database diagram changes
@@ -14,12 +14,12 @@ ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef6a5ac623d8d0adf0dcd23ae6c435f0e215a59b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63125965"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>ダイアグラムに加えた変更の破棄 (Visual Database Tools)
   データベース ダイアグラムで加えた変更のうち、データベースに保存しない変更は破棄できます。  

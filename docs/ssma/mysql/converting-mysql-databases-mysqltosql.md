@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8b57e41a2435d37a3408459ae30050a854cdf71a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103050"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL データベースの変換 (MySQLToSQL)
 MySQL に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に MySQL データベースのオブジェクトを変換できる SQL Azure、およびプロジェクトの設定とデータ マッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのオブジェクト。  
@@ -109,6 +108,6 @@ MySQL の一部のオブジェクトを変換できません可能性があり�
 ## <a name="next-step"></a>次の手順  
 移行プロセスでは、次の手順は[を SQL Server に変換されたデータベース オブジェクトの読み込み&#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

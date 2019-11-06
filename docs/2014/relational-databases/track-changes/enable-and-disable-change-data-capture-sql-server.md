@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
@@ -16,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebbfd8c66737afb03564dee557757f4406a5c5a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670578"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>変更データ キャプチャの有効化と無効化 (SQL Server)
   このトピックでは、データベースおよびテーブルに対して変更データ キャプチャを有効または無効にする方法について説明します。  
@@ -29,7 +28,7 @@ ms.locfileid: "48057562"
 ## <a name="enable-change-data-capture-for-a-database"></a>データベースでの変更データ キャプチャの有効化  
  個々のテーブルに対してキャプチャ インスタンスを作成する前に、`sysadmin` 固定サーバー ロールのメンバーがデータベースで変更データ キャプチャを有効にする必要があります。 これは、データベース コンテキストでストアド プロシージャ [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) を実行することにより行われます。 この機能がデータベースで既に有効にされているかどうかを確認するには、`is_cdc_enabled` カタログ ビューの `sys.databases` 列をクエリします。  
   
- データベースが変更データ キャプチャを有効にすると、`cdc`スキーマ、`cdc`ユーザー、メタデータ テーブル、およびその他のシステム オブジェクトは、データベースを作成します。 `cdc`スキーマには、変更データ キャプチャ メタデータ テーブルが含まれていて、個々 の変更テーブルが変更データのリポジトリとして機能したら、ソース テーブルで変更データ キャプチャを有効にします。 `cdc`スキーマは、使用する関連のシステム関数も含まれています。 変更データを照会します。  
+ データベースで変更データ キャプチャを有効にすると、`cdc` スキーマ、`cdc` ユーザー、メタデータ テーブル、およびほかのシステム オブジェクトがデータベースに作成されます。 `cdc` スキーマには、変更データ キャプチャのメタデータ テーブルが含まれています。ソース テーブルで変更データ キャプチャを有効にした後には、変更データのリポジトリとして機能する個々の変更テーブルも含まれます。 `cdc` スキーマには変更データのクエリの実行に使用する関連のシステム関数も含まれています。  
   
  変更データ キャプチャでは、`cdc` スキーマと `cdc` ユーザーのある目的の使用がクエリされます *cdc* という名前のスキーマやデータベース ユーザーが現在データベースに存在する場合は、そのスキーマやユーザーを削除するか、名前を変更しないと、そのデータベースで変更データ キャプチャを有効にすることはできません。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48057562"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックし、 **[SQL Server テンプレート]** を選択します。 **Change Data Capture** はサブフォルダーです。 このトピックで参照したすべてのテンプレートは、このフォルダー内にあります。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -49,16 +48,16 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>データベースでの変更データ キャプチャの無効化  
- メンバー、`sysadmin`固定サーバー ロールは、ストアド プロシージャを実行できる[sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)データベースに対して変更データ キャプチャを無効にするデータベースのコンテキストでします。 データベースを無効にする前に個々のテーブルを無効にする必要はありません。 すべての関連する変更データ キャプチャ メタデータを削除するデータベースを無効にするなど、`cdc`ユーザーとスキーマの変更データ キャプチャ ジョブ。 ただし、変更データ キャプチャによって作成されたゲーティング ロールは自動的には削除されないので、明示的に削除する必要があります。 この機能がデータベースで有効にされているかどうかを確認するには、sys.databases カタログ ビューの `is_cdc_enabled` 列をクエリします。  
+ メンバー、`sysadmin`固定サーバー ロールは、ストアド プロシージャを実行できる[sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)データベースに対して変更データ キャプチャを無効にするデータベースのコンテキストでします。 データベースを無効にする前に個々のテーブルを無効にする必要はありません。 データベースを無効にすると、`cdc` ユーザー、スキーマ、および変更データ キャプチャ ジョブを含む関連するすべての変更データ キャプチャ メタデータが削除されます。 ただし、変更データ キャプチャによって作成されたゲーティング ロールは自動的には削除されないので、明示的に削除する必要があります。 この機能がデータベースで有効にされているかどうかを確認するには、sys.databases カタログ ビューの `is_cdc_enabled` 列をクエリします。  
   
  変更データ キャプチャが有効になっているデータベースを削除すると、変更データ キャプチャ ジョブも自動的に削除されます。  
   
  データベースの無効化の例については、データベースでの変更データ キャプチャの無効化のテンプレートを参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]**、 **[テンプレート エクスプローラー]**、 **[SQL Server テンプレート]** の順にクリックします。 **Change Data Capture** は、このトピックで参照されるすべてのテンプレートを含んだサブフォルダーです。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]** 、 **[テンプレート エクスプローラー]** 、 **[SQL Server テンプレート]** の順にクリックします。 **Change Data Capture** は、このトピックで参照されるすべてのテンプレートを含んだサブフォルダーです。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -69,7 +68,7 @@ GO
 ```  
   
 ## <a name="enable-change-data-capture-for-a-table"></a>テーブルでの変更データ キャプチャの有効化  
- 変更データ キャプチャのメンバー データベースを有効になっている、`db_owner`固定データベース ロールは、ストアド プロシージャを使用して個々 のソース テーブルに対してキャプチャ インスタンスを作成できます`sys.sp_cdc_enable_table`します。 ソース テーブルで変更データ キャプチャが既に有効にされているかどうかを確認するには、`sys.tables` カタログ ビューの is_tracked_by_cdc 列を調べます。  
+ データベースで変更データ キャプチャが有効にされると、`db_owner` 固定データベース ロールのメンバーはストアド プロシージャ `sys.sp_cdc_enable_table` を使用して個々のソース テーブルに対してキャプチャ インスタンスを作成できるようになります。 ソース テーブルで変更データ キャプチャが既に有効にされているかどうかを確認するには、`sys.tables` カタログ ビューの is_tracked_by_cdc 列を調べます。  
   
  キャプチャ インスタンスの作成時に、次のオプションを指定できます。  
   
@@ -79,9 +78,9 @@ GO
   
  `A filegroup to contain the change table.`  
   
- 既定では、変更テーブルはデータベースの既定のファイル グループにあります。 データベース所有者が個々の変更テーブルの場所を制御するには、 *@filegroup_name* パラメーターを使用して、キャプチャ インスタンスに関連付けられている変更テーブルに対して特定のファイル グループを指定します。 指定するファイル グループはあらかじめ存在している必要があります。 通常、変更テーブルはソース テーブルとは別のファイル グループに配置することをお勧めします。 参照してください、`Enable a Table Specifying Filegroup Option`テンプレートの使用方法を示す例については、 *@filegroup_name*パラメーター。  
+ 既定では、変更テーブルはデータベースの既定のファイル グループにあります。 データベース所有者が個々の変更テーブルの場所を制御するには、 *@filegroup_name* パラメーターを使用して、キャプチャ インスタンスに関連付けられている変更テーブルに対して特定のファイル グループを指定します。 指定するファイル グループはあらかじめ存在している必要があります。 通常、変更テーブルはソース テーブルとは別のファイル グループに配置することをお勧めします。 参照してください、`Enable a Table Specifying Filegroup Option`テンプレートの使用方法を示す例については、 *@filegroup_name* パラメーター。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -99,11 +98,11 @@ GO
   
  `A role for controlling access to a change table.`  
   
- 名前付きのロールの目的は、変更データへのアクセスを制御することです。 指定されるロールは、既存の固定サーバー ロールの場合もデータベース ロールの場合もあります。 指定のロールが存在しない場合は、その名前のデータベース ロールが自動的に作成されます。 `sysadmin` ロールのメンバーと `db_owner` ロールのメンバーには、変更テーブルのデータへのフル アクセス権が与えられます。 他のすべてのユーザーには、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。 さらに、ロールが指定されている場合、いずれかのメンバーではないユーザー、`sysadmin`または`db_owner`ロールは、指定されたロールのメンバーにもあります。  
+ 名前付きのロールの目的は、変更データへのアクセスを制御することです。 指定されるロールは、既存の固定サーバー ロールの場合もデータベース ロールの場合もあります。 指定のロールが存在しない場合は、その名前のデータベース ロールが自動的に作成されます。 `sysadmin` ロールのメンバーと `db_owner` ロールのメンバーには、変更テーブルのデータへのフル アクセス権が与えられます。 他のすべてのユーザーには、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。 さらに、ロールが指定されている場合、`sysadmin` ロールまたは `db_owner` ロールのいずれのメンバーでもないユーザーも、指定のロールのメンバーである必要があります。  
   
  ゲーティング ロールを使用しない場合は、 *@role_name* パラメーターを明示的に NULL に設定する必要があります。 ゲーティング ロールなしでテーブルを有効にする例については、`Enable a Table Without Using a Gating Role` のテンプレートを参照してください。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -128,7 +127,7 @@ GO
   
  両方のクエリ関数を使用したキャプチャ インスタンスの作成例については、`Enable a Table for All and Net Changes Queries`のテンプレートを参照してください。  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -142,17 +141,17 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  既存の主キーのあるテーブルで変更データ キャプチャが有効化され、代替となる一意のインデックスの識別に *@index_name* パラメーターが使用されていない場合、変更データ キャプチャ機能では主キーが使用されます。 その後は、テーブルの変更データ キャプチャを無効にしてからでなければ、主キーに変更を加えることはできません。 これは、変更データ キャプチャの構成時に差分変更のクエリのサポートが要求されたかどうかには関係ありません。 変更データ キャプチャが有効化された時点でテーブルに主キーがない場合、その後追加された主キーは変更データ キャプチャでは無視されます。 変更データ キャプチャでは、テーブルで変更データ キャプチャが有効化された後で作成された主キーは使用しないので、キーおよびキー列は制限なく削除できます。  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>テーブルでの変更データ キャプチャの無効化  
- メンバー、`db_owner`固定データベース ロールは、個々 のソース テーブルに対してキャプチャ インスタンスを削除するストアド プロシージャを使用して`sys.sp_cdc_disable_table`します。 ソース テーブルで変更データ キャプチャが現在有効にされているかどうかを確認するには、`is_tracked_by_cdc` カタログ ビューの `sys.tables` 列を調べます。 無効化の後、データベースに対して有効なテーブルがない場合は、変更データ キャプチャ ジョブも削除されます。  
+ `db_owner` 固定データベース ロールのメンバーは、ストアド プロシージャ `sys.sp_cdc_disable_table` を使用して個々のソース テーブルのキャプチャ インスタンスを削除できます。 ソース テーブルで変更データ キャプチャが現在有効にされているかどうかを確認するには、`is_tracked_by_cdc` カタログ ビューの `sys.tables` 列を調べます。 無効化の後、データベースに対して有効なテーブルがない場合は、変更データ キャプチャ ジョブも削除されます。  
   
  変更データ キャプチャが有効になっているテーブルを削除すると、そのテーブルに関連する変更データ キャプチャ メタデータも自動的に削除されます。  
   
  テーブルの無効化の例については、テーブルでのキャプチャ インスタンスの無効化のテンプレートを参照してください。  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

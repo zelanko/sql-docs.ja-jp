@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -15,24 +15,24 @@ ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0741180bb126d45ad99512a596fbab66c9a8047f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033581"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログをセットアップする方法について説明します。  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **作業を開始する準備:** [Security](#Security)  
   
--   **ジョブ履歴ログをセットアップする方法:**  [SQL Server Management Studio](#SSMS)  
+-   **ジョブ履歴ログをセットアップするには、次を使用します。** [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
- 詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)」をご覧ください。  
+ 詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
  **ジョブ履歴ログをセットアップするには**  

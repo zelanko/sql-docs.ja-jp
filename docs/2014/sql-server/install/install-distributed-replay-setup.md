@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9d81920e9e14dc745813795bcf98eb1d9ebdf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094626"
 ---
 # <a name="install-distributed-replay-setup"></a>分散再生のインストール (セットアップ)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
@@ -29,7 +28,7 @@ ms.locfileid: "48051405"
   
 -   分散再生コントローラー コンピューター上には、クライアント サービスのインスタンスを 1 つだけインストールできます。 分散再生環境に複数のクライアントを置く場合は、クライアント サービスをコントローラーと同じコンピューターにインストールすることはお勧めできません。 そのようにすると、分散再生の全体的な速度が低下します。  
   
--   パフォーマンスのテストのシナリオでは、管理ツール、Distributed Replay コントローラー サービス、またはクライアント サービスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対象インスタンスにインストールすることはお勧めしません。 これらのすべての機能を対象サーバーにインストールするのは、アプリケーションの互換性に関する機能テストを行うときだけに限定する必要があります。  
+-   パフォーマンスのテストのシナリオでは、管理ツール、Distributed Replay コントローラー サービス、またはクライアント サービスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対象インスタンスにインストールすることはお勧めしません。 これらのすべての機能をターゲット サーバーにインストールするのは、アプリケーションの互換性に関する機能テストを行うときだけに限定する必要があります。  
   
 -   インストール後は、クライアント上で 分散再生クライアント サービスを開始する前に、コントローラー サービスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーを実行する必要があります。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "48051405"
   
     -   クライアント サービスをインストールするには、 **[分散再生クライアント]** を選択します。  
   
-     **重要**: 分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
+     **重要な**:分散再生コント ローラーを構成するときに、分散再生クライアント サービスの実行に使用される 1 つまたは複数のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
     -   ドメイン ユーザー アカウント  
   
@@ -120,7 +119,7 @@ ms.locfileid: "48051405"
 14. **[プログラムインストールの準備完了]** ページで、 **[インストール]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  分散再生をインストールした後、コントローラー コンピューターとクライアント コンピューターのファイアウォール ルールを作成し、対象サーバー上で各クライアント コンピューターの権限を付与する必要があります。 詳細については、「 [インストール後の手順の実行](../../tools/distributed-replay/complete-the-post-installation-steps.md)」を参照してください。  
+    >  分散再生をインストールした後、コントローラー コンピューターとクライアント コンピューターのファイアウォール ルールを作成し、ターゲット サーバー上で各クライアント コンピューターの権限を付与する必要があります。 詳細については、「 [インストール後の手順の実行](../../tools/distributed-replay/complete-the-post-installation-steps.md)」を参照してください。  
   
  以下の追加のトピックでは、分散再生をインストールする他の方法が記載されています。  
   
@@ -136,6 +135,6 @@ ms.locfileid: "48051405"
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [分散再生の要件](../../tools/sql-server-profiler/replay-requirements.md)   
  [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Distributed Replay の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

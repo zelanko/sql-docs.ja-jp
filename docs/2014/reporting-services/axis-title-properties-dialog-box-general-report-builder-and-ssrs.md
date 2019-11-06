@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10146"
 - sql12.rtp.rptdesigner.axistitleproperties.general.f1
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3e20efdcc1d5ca2833896ae583583ed04449b996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109972"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([軸のタイトルのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[軸のタイトルのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、軸のタイトルを定義できます。 軸のタイトルは X 軸の下または Y 軸の横に表示されます。  
@@ -37,13 +36,13 @@ ms.locfileid: "48064932"
   
 -   **[遠く]** 2 つの軸の交点から離れた場所に軸のタイトルを表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [セカンダリ軸にデータをプロット&#40;レポート ビルダーおよび SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [軸のプロパティ ダイアログ ボックスで、軸のオプション&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

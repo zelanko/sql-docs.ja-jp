@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -15,12 +15,12 @@ ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 227674a9a06508a9daaa04350dbc8a50f558cb2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dfa6926d86fce5006e458b3738a28a8b5f467d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267388"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server エージェント エラー ログ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは、既定で、警告とエラーを記録するエラー ログが作成されます。 次の警告とエラーがログに表示されます。  

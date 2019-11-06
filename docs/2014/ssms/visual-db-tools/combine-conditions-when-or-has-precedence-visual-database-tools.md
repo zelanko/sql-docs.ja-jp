@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -16,12 +16,12 @@ ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056c47561a194604861ed7476630ec521f00db00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121489"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224502"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR が優先する場合の条件の結合 (Visual Database Tools)
   AND で結合した条件よりも OR で結合した条件を優先させるには、各 OR 条件に対して AND 条件を繰り返す必要があります。  

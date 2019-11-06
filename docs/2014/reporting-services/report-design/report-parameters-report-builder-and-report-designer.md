@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -17,20 +16,20 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9047073a39076fd246b14db26ca1d519fd2e1c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105067"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
   このトピックでは、SSRS レポート パラメーターの一般的な使用方法、設定できるプロパティ、およびパラメーターの詳細について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。  
   
-[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint モードとネイティブ モード
+[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint モードおよび ネイティブ モード
   
- レポートにパラメーターを追加する方法の例については、「 [チュートリアル: レポートにパラメーターを追加する (SSRS)](http://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)」をご覧ください。  
+ レポートにパラメーターを追加する方法のデモについては、次を参照してください。[チュートリアル。レポート (SSRS) へのパラメーターの追加](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
   
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> パラメーターの一般的な使用方法  
@@ -75,7 +74,7 @@ ms.locfileid: "48107338"
   
 3.  **@Subcategory パラメーター**パラメーター@Subcategoryデータ型は、`Text`します。 @Subcategory使用可能な値一覧が、有効な値がドロップダウン リストに表示されます。 値はその中から選択する必要があります。 @Subcategoryは複数値の**すべて選択**オプションでは、すべてをオフにし、一覧ですべての値を選択することができますが表示されます。  
   
-4.  **@ShowAllRows パラメーター**パラメーター@ShowAllRowsデータ型は、`Boolean`します。 指定するラジオ ボタンを使用して`True`または`False`します。  
+4.  **@ShowAllRows パラメーター**パラメーター@ShowAllRowsデータ型は、`Boolean`します。 オプション ボタンを使用して、`True` または `False` を指定します。  
   
 5.  **[パラメーター エリアの表示/非表示の切り替え] ハンドル** レポート ビューアー ツール バーでこの矢印をクリックすると、パラメーター ペインの表示/非表示を切り替えることができます。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "48107338"
   
 -   1 つのパラメーターのドロップダウン リストから値を選択する。この値は、別のパラメーターのドロップダウン リストで使用できる値を決定します。 これらはカスケード型パラメーターです。 カスケード型パラメーターを使用すると、何千ものパラメーター値を管理しやすい数まで連続的にフィルター処理することができます。  
   
-     詳細については、次を参照してください。[レポートにカスケード パラメーターを追加&#40;レポート ビルダーおよび SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)します。  
+     詳細については、「 [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)で作成するモバイル レポートで使用できます。  
   
 -   パラメーターの既定値は作成済みなので、パラメーター値を最初に選択しないでレポートを実行する。  
   
@@ -131,16 +130,16 @@ ms.locfileid: "48107338"
 |--------------|-----------------|  
 |名前|パラメーターの名前を入力します (大文字と小文字が区別されます)。 名前は文字で始まる必要があります。また、名前には、文字、数字、アンダースコア (_) を使用できます。 空白は使用しないでください。 自動的に生成されたパラメーターの名前は、データセット クエリのパラメーターと同じ名前になります。 既定では、手動で作成されたパラメーターの名前は、ReportParameter1 のようになります。|  
 |[プロンプト]|レポート ビューアー ツール バーでパラメーターの横に表示されるテキストです。|  
-|データ型|データ型が場合でも、ユーザーが、ドロップダウン リストから値を選択パラメーターの使用可能な値を定義したら、`DateTime`します。 レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> `Boolean`。 オプション ボタンから True または False を選択します。<br /><br /> `DateTime`。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]**。 テキスト ボックスに値を入力します。<br /><br /> **[Float]**。 テキスト ボックスに値を入力します。<br /><br /> `Text`。 テキスト ボックスに値を入力します。<br /><br /> レポートのデータ型の詳細については、次を参照してください。 [RDL データ型](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)します。|  
+|データ型|データ型が場合でも、ユーザーが、ドロップダウン リストから値を選択パラメーターの使用可能な値を定義したら、`DateTime`します。 レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> `Boolean`。 オプション ボタンから True または False を選択します。<br /><br /> `DateTime`。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]** 。 テキスト ボックスに値を入力します。<br /><br /> **[Float]** 。 テキスト ボックスに値を入力します。<br /><br /> `Text`。 テキスト ボックスに値を入力します。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
 |[空白の値を許可]|パラメーターの値に空の文字列 (空白) を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に空白を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に空白が有効な値に含まれるわけではありません。|  
 |[NULL 値を許可]|パラメーターの値に NULL 値を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に NULL を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に NULL が有効な値に含まれるわけではありません。|  
 |[複数の値を許可]|使用可能な値を指定して、ユーザーがドロップダウン リストから値を選択できるようにすると、 データセット クエリで有効な値のみが送信されるようにすることができます。<br /><br /> パラメーターの値に、ドロップダウン リストに表示される複数の値を指定できる場合に選択します。 NULL 値は許容されません。 このチェック ボックスがオンの場合、パラメーターのドロップダウン リストで、使用可能な値の一覧にチェック ボックスが追加されます。 一覧の一番上には、 **[すべて選択]** チェック ボックスが表示されます。 ユーザーは、必要な値のチェック ボックスをオンにすることができます。<br /><br /> 値を提供するデータが急速に変化する場合は、ユーザーに最新の一覧が表示されるとは限りません。|  
 |[表示]|レポートの実行時にレポートの上部にレポート パラメーターを表示する場合に選択します。 このオプションを選択すると、実行時にパラメーター値を選択できます。|  
 |[非表示]|パブリッシュ済みレポート内のレポート パラメーターを非表示にする場合に選択します。 このレポート パラメーターの値は、レポートの URL やサブスクリプション定義で設定できます。また、レポート サーバーで設定することもできます。|  
 |Internal|レポート パラメーターを非表示にする場合に選択します。 パブリッシュ済みレポートでは、レポート パラメーターはレポート定義でのみ参照できます。|  
-|[使用できる値]|パラメーターに使用できる値を指定した場合、それらの値は常にドロップダウン リストとして表示されます。 たとえば、使用可能な値を指定する場合、`DateTime`パラメーター、日付のドロップダウン リストは、予定表コントロールではなくパラメーター ペインに表示されます。 レポートとサブレポートの間で値の一覧の一貫性を確保するには、データ ソースのオプションを設定して、データ ソースに関連付けられているデータセットのすべてのクエリに対して 1 つのトランザクションが使用されるようにします。<br /><br /> **\*\* セキュリティに関する注意\* \*** データ型のパラメーターが含まれるレポートで`Text`、使用可能な値の一覧 (有効な値の一覧とも呼ばれます) を使用することを確認して、レポートを実行しているすべてのユーザーにのみがあることを確認しますレポートにデータを表示するために必要なアクセスを許可します。 詳細については、「[セキュリティ (レポート ビルダー)](../report-builder/security-report-builder.md)」を参照してください。|  
+|[使用できる値]|パラメーターに使用できる値を指定した場合、それらの値は常にドロップダウン リストとして表示されます。 たとえば、`DateTime` パラメーターに使用できる値を指定すると、カレンダー コントロールの代わりに日付のドロップダウン リストがパラメーター ペインに表示されます。 レポートとサブレポートの間で値の一覧の一貫性を確保するには、データ ソースのオプションを設定して、データ ソースに関連付けられているデータセットのすべてのクエリに対して 1 つのトランザクションが使用されるようにします。<br /><br /> **\*\* セキュリティに関する注意\* \*** データ型のパラメーターが含まれるレポートで`Text`、使用可能な値の一覧 (有効な値の一覧とも呼ばれます) を使用することを確認して、レポートを実行しているすべてのユーザーにのみがあることを確認しますレポートにデータを表示するために必要なアクセスを許可します。 詳細については、「 [セキュリティ (レポート ビルダー)](../report-builder/security-report-builder.md)で作成するモバイル レポートで使用できます。|  
 |[既定値]|クエリまたは静的な一覧から既定値を設定します。<br /><br /> 各パラメーターに既定値が指定されていれば、レポートは最初に表示したときに自動的に実行されます。|  
-|詳細設定|このパラメーターがレポートのデータに直接的または間接的に影響するかどうかを示す値、レポート定義属性 `UsedInQuery` を設定します。<br /><br /> **[更新のタイミングを自動的に決定する]**<br /> レポート プロセッサでこの値の設定が決定されるようにする場合に選択します。 このパラメーターへの直接参照または間接参照が含まれているデータセット クエリがレポート プロセッサで検出された場合、またはレポートにサブレポートがある場合は、この値が `True` になります。<br /><br /> **[常に更新する]**<br /> データセット クエリまたはパラメーター式でレポート パラメーターを直接的または間接的に使用する場合に選択します。 このオプションを選択すると、`UsedInQuery` が True に設定されます。<br /><br /> **[更新しない]**<br /> データセット クエリまたはパラメーター式でレポート パラメーターを直接的にも間接的にも使用しない場合に選択します。 このオプションは設定`UsedInQuery`を False にします。<br /><br /> **\*\* 注意 \*\*** **[更新しない]** は注意して使用してください。 レポート サーバーで`UsedInQuery`レポート データと、レンダリングされたレポートのキャッシュ オプションを制御およびスナップショット レポートのパラメーター オプションのために使用されます。 **[更新しない]** を正しく設定しないと、正しいレポート データまたはレポートがキャッシュされなかったり、スナップショット レポートのデータの一貫性が損なわれたりする可能性があります。 詳細については、「[レポート定義言語 (SSRS)](../reports/report-definition-language-ssrs.md)」を参照してください。|  
+|詳細設定|このパラメーターがレポートのデータに直接的または間接的に影響するかどうかを示す値、レポート定義属性 `UsedInQuery` を設定します。<br /><br /> **[更新のタイミングを自動的に決定する]**<br /> レポート プロセッサでこの値の設定が決定されるようにする場合に選択します。 このパラメーターへの直接参照または間接参照が含まれているデータセット クエリがレポート プロセッサで検出された場合、またはレポートにサブレポートがある場合は、この値が `True` になります。<br /><br /> **[常に更新する]**<br /> データセット クエリまたはパラメーター式でレポート パラメーターを直接的または間接的に使用する場合に選択します。 このオプションを選択すると、`UsedInQuery` が True に設定されます。<br /><br /> **[更新しない]**<br /> データセット クエリまたはパラメーター式でレポート パラメーターを直接的にも間接的にも使用しない場合に選択します。 このオプションを選択すると、`UsedInQuery` が False に設定されます。<br /><br /> **\*\* 注意 \*\*** **[更新しない]** は注意して使用してください。 レポート サーバーでは、`UsedInQuery` を使用してレポート データと表示レポートのキャッシュ オプション、およびスナップショット レポートのパラメーター オプションが制御されます。 **[更新しない]** を正しく設定しないと、正しいレポート データまたはレポートがキャッシュされなかったり、スナップショット レポートのデータの一貫性が損なわれたりする可能性があります。 詳細については、「[レポート定義言語 (SSRS)](../reports/report-definition-language-ssrs.md)」を参照してください。|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> データセット クエリ  
  データセット クエリのデータをフィルター処理するには、結果セットに追加するか、結果セットから除外する値を指定して、取得データを制限する制限句を含めることができます。  
@@ -164,7 +163,7 @@ ms.locfileid: "48107338"
   
 -   **リンク レポート。** さまざまな対象ユーザーのためにデータをフィルター処理するパラメーター値が事前に設定されたリンク レポートを作成できます。 詳細については、「 [リンク レポートを作成する](../reports/create-a-linked-report.md)」を参照してください。  
   
--   **レポート サブスクリプション。** データをフィルター処理してレポートをサブスクリプションで配信するためのパラメーター値を指定できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+-   **レポート サブスクリプション。** データをフィルター処理してレポートをサブスクリプションで配信するためのパラメーター値を指定できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 -   **URL アクセス。** レポートへの URL でパラメーター値を指定できます。 URL アクセスを使用して、レポートを実行したりパラメーター値を指定したりすることもできます。 詳細については、「[URL アクセス (SSRS)](../url-access-ssrs.md)」を参照してください。  
   
@@ -188,7 +187,7 @@ ms.locfileid: "48107338"
 > [!NOTE]  
 >  データ ドリブン サブスクリプションでは、サブスクライバー データ ソースから取得したパラメーター値を使用できます。 詳細については、「[サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)」を参照してください。  
   
- 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+ 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_Parameters_Security"></a> パラメーターとデータのセキュリティ保護  
  秘密性の高い情報を含むパラメーター化されたレポートを配布する際には注意が必要です。 レポート パラメーターは簡単に別の値に置き換えることができるので、予想外の情報が公開される可能性があるためです。  
@@ -196,7 +195,7 @@ ms.locfileid: "48107338"
  従業員データや個人データに対してパラメーターを使用する代わりに、Users コレクションの **UserID** フィールドを含む式に基づいてデータを選択すると、セキュリティを強化できます。 Users コレクションは、レポートを実行しているユーザーの ID を入手するための手段として利用できます。後は、その ID を使用して、ユーザー固有のデータを取得できます。  
   
 > [!IMPORTANT]  
->  型のパラメーターが含まれるレポートで`String`、使用可能な値の一覧 (有効な値の一覧とも呼ばれます) を使用することを確認して、レポートを実行しているすべてのユーザーがレポートにデータを表示するために必要な権限のみを持っていることを確認します。 型のパラメーターを定義するとき`String`、任意の値を使用できるテキスト ボックスで、ユーザーが表示されます。 使用可能な値の一覧を使用すると、入力できる値が制限されます。 データセット パラメーターにレポート パラメーターが関連付けられている場合に、使用可能な値の一覧を使用しないと、レポート ユーザーはテキスト ボックスに SQL 構文を入力できるため、レポートとサーバーで SQL インジェクション攻撃を受ける危険性が生じます。 さらに、ユーザーが新しい SQL ステートメントを実行するための十分な権限を持っている場合は、サーバーで予想外の結果が生じる可能性もあります。  
+>  `String` データ型のパラメーターが含まれるレポートでは、使用可能な値の一覧 (有効な値の一覧とも呼ばれる) を必ず使用してください。また、レポートを実行するすべてのユーザーに対して、レポートのデータ表示に必要な権限のみを与えてください。 `String` 型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 使用可能な値の一覧を使用すると、入力できる値が制限されます。 データセット パラメーターにレポート パラメーターが関連付けられている場合に、使用可能な値の一覧を使用しないと、レポート ユーザーはテキスト ボックスに SQL 構文を入力できるため、レポートとサーバーで SQL インジェクション攻撃を受ける危険性が生じます。 さらに、ユーザーが新しい SQL ステートメントを実行するための十分な権限を持っている場合は、サーバーで予想外の結果が生じる可能性もあります。  
 >   
 >  データセット パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれている場合、レポート ユーザーは、式の構文または URL をパラメーター値に入力して、このレポートを Excel または HTML に変換できます。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
 >   
@@ -205,44 +204,44 @@ ms.locfileid: "48107338"
 ##  <a name="bkmk_How_To_Topics"></a> 操作方法に関するトピック  
  パラメーターとフィルターを扱う際の詳細な手順を紹介しているトピックの一覧を次に示します。  
   
--   [レポート パラメーターを追加、変更、削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+-   [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [追加、変更、またはレポート パラメーターの使用可能な値を削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
+-   [レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
--   [追加、変更、またはレポート パラメーターの既定値を削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
+-   [レポート パラメーターの既定値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
--   [レポート パラメーターの順序を変更&#40;レポート ビルダーおよび SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+-   [レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [カスケード型パラメーターをレポートに追加&#40;レポート ビルダーおよび SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
+-   [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
 -   [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
--   [サブレポートおよびパラメーターの追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
+-   [サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [ストアド プロシージャで SSRS パラメーターを使用する方法](http://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [パラメーター化されたストアド プロシージャの SSRS レポート](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
   
-## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page) にコメントをお送りください  
+## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? 待ちしています  
+ どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツを向上させるためにお客様のフィードバックを受け付けています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page) にコメントをお送りください  
   
 ##  <a name="bkmk_Related_Topics"></a> 関連コンテンツ  
- [SSRS レポート パラメーターの構成 (クイズ)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [SSRS レポート パラメーターの構成 (クイズ)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [チュートリアル: レポートへのパラメーターの追加&#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [レポート サービスの InvalidReportParameterException の謎の解明](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [レポート サービスの InvalidReportParameterException の謎の解明](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
- [レポート サンプル (レポート ビルダーおよび SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
- [フィルター、グループ、およびデータの並べ替え&#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
- [セキュリティ&#40;レポート ビルダー&#41;](../report-builder/security-report-builder.md)  
+ [セキュリティ (レポート ビルダー)](../report-builder/security-report-builder.md)  
   
- [対話的な並べ替え、ドキュメント マップ、およびリンク&#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域&#40;レポート ビルダーおよび SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

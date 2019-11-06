@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_script_synctran_commands
@@ -16,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1be46487e189b7a3c468a5721b3c31a31f5c97ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7caca72f684dfb6428361a4550860b3bea3f273
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126409"
 ---
-# <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
+# <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   含むスクリプトを生成、 **sp_addsynctrigger**更新可能なサブスクリプションのサブスクライバーで適用される呼び出しです。 1 つである**sp_addsynctrigger**パブリケーション内の各アーティクルに対して呼び出します。 生成されるスクリプトにも含まれています、 **sp_addqueued_artinfo**作成の呼び出し、 **MSsubsciption_articles**キュー パブリケーションの処理に必要なテーブルです。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -40,11 +38,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication** =] **'***パブリケーション***'**  
- スクリプト作成の対象となるパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` スクリプトを生成するパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [ **@article** =] **'***記事***'**  
- スクリプト作成の対象となるアーティクルの名前を指定します。 *記事*は**sysname**、既定値は**すべて**、すべてのアーティクルがスクリプト化します。  
+`[ @article = ] 'article'` スクリプトを生成するアーティクルの名前です。 *記事*は**sysname**、既定値は**すべて**、すべてのアーティクルがスクリプト化します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -60,7 +56,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_script_synctran_commands**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addsynctriggers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
  [sp_addqueued_artinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

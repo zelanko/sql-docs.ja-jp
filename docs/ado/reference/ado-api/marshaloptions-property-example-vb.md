@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aced271d33f28a565f3ebf9976a325d215e23acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918241"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions プロパティの例 (VB)
-この例では、 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がサーバーに送信されますを指定する: すべての行または行の変更のみです。  
+この例では、 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がすべての行または変更された行のみのサーバーに送信されます。  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -132,6 +131,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MarshalOptions プロパティ (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

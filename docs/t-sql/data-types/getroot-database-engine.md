@@ -1,7 +1,7 @@
 ---
 title: GetRoot (データベース エンジン) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bb1a053c2f221716685be31e606c69f7f43b6e05
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077931"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ static SqlHierarchyId GetRoot ( )
 **CLR 戻り値の型:SqlHierarchyId**
   
 ## <a name="remarks"></a>Remarks  
-階層ツリーのルート ノードを確認するときに使用します。
+階層ツリー内のルート ノードを決定するために使用されます。
   
 ## <a name="examples"></a>使用例  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b0f0b2087471d8f0c905b1a173eff57a0be7fd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107694"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
   レポートをレポート サーバーに保存した後は、ブラウザーやレポート マネージャーのほか、エクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
@@ -34,25 +33,25 @@ ms.locfileid: "48096702"
 3.  エクスポートしたレポートでは、ほとんどの場合、レポートに表示されるすべての要素 (ユーザーがコンピューターの画面上で見るすべての要素) がレポートの印刷結果に含まれます。 レポート デザイン画面上の空白は保持されます。 水平方向の余分な空白ページを追加または削除するには、レポートのページの幅を変更します。  
   
 > [!NOTE]  
->  ブラウザーの印刷コマンドを使用して HTML レポートを印刷すると、最初のページの内容しか印刷されないことがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のクライアント側印刷機能を使用すると、より優れた HTML レポートの印刷結果を得ることができます。 詳細については、次を参照してください。[印刷コントロールを使用したブラウザーからのレポートの印刷&#40;レポート ビルダーおよび SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)します。  
+>  ブラウザーの印刷コマンドを使用して HTML レポートを印刷すると、最初のページの内容しか印刷されないことがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のクライアント側印刷機能を使用すると、より優れた HTML レポートの印刷結果を得ることができます。 詳細については、「 [印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [印刷コントロールを使用したブラウザーからレポートを印刷&#40;レポート ビルダーおよび SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  クライアント側印刷機能を使用して Web ブラウザーやレポート マネージャーからレポートを印刷する方法を説明します。  
   
- [他のアプリケーションからレポートを印刷&#40;レポート ビルダーおよび SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [他のアプリケーションからのレポートの印刷 (レポート ビルダーおよび SSRS)](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  別のアプリケーションにエクスポートされたレポートを印刷する方法を説明します。  
   
- [レポートを印刷する&#40;レポート ビルダーおよび SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- レポートを印刷する手順、ページの余白を制御する手順、およびハード改ページ レンダラー (PDF、画像、または印刷) によってレンダリングされるレポートの用紙サイズを指定する手順について説明します。  
+ [レポートの印刷 (レポート ビルダーおよび SSRS)](print-a-report-report-builder-and-ssrs.md)  
+ レポートを印刷する手順、ページの余白を制御する手順、およびハード改ページ レンダラーを使用してレンダリングされるレポートの用紙サイズを指定する手順について説明します(PDF、画像、または印刷のハード改ページレンダラー)。  
   
 ## <a name="see-also"></a>参照  
  [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [ページ ヘッダーとページ フッター&#40;レポート ビルダーおよび SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [イメージ&#40;レポート ビルダーおよび SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
- [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [画像 (レポート ビルダーおよび SSRS)](../report-design/images-report-builder-and-ssrs.md)   
+ [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

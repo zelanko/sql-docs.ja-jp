@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128762"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 ここでは、次の情報について説明します。  
@@ -92,25 +92,25 @@ ms.locfileid: "48141972"
      オブジェクトを参照する `WITH SCHEMABINDING` 句を含む関数またはビューを作成するには、そのオブジェクトに対する REFERENCES 権限が必要です。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのアクセス許可を示した pdf 形式のポスター サイズの一覧表については、[http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142) を参照してください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのアクセス許可を示した pdf 形式のポスター サイズの一覧表については、[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142) を参照してください。  
   
 ##  <a name="_securables"></a> 特定のセキュリティ保護可能なリソースに適用できる権限  
  次の表に、主な権限のクラスおよび各権限を適用できるセキュリティ保護可能なリソースの種類を示します。  
   
-|権限|適用対象|  
+|権限|対象|  
 |----------------|----------------|  
-|SELECT|シノニム<br /><br /> テーブル、列<br /><br /> テーブル値関数、[!INCLUDE[tsql](../../includes/tsql-md.md)] と共通言語ランタイム (CLR)、列<br /><br /> ビュー、列|  
+|SELECT|シノニム<br /><br /> テーブル、列<br /><br /> テーブル値関数、 [!INCLUDE[tsql](../../includes/tsql-md.md)] と共通言語ランタイム (CLR)、列<br /><br /> ビュー、列|  
 |VIEW CHANGE TRACKING|テーブル<br /><br /> スキーマ|  
 |UPDATE|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
-|REFERENCES|スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル、列<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)、および列<br /><br /> 型<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
+|REFERENCES|スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル、列<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、列<br /><br /> 型<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
 |INSERT|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列|  
 |Del|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列|  
-|EXECUTE|プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> シノニム<br /><br /> CLR 型|  
+|EXECUTE|プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シノニム<br /><br /> CLR 型|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー|  
-|VIEW DEFINITION|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
-|ALTER|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> シーケンス オブジェクト<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> ビュー|  
-|TAKE OWNERSHIP|可用性グループ<br /><br /> ロール<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> サーバー ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
-|CONTROL|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|VIEW DEFINITION|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|ALTER|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シーケンス オブジェクト<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー|  
+|TAKE OWNERSHIP|可用性グループ<br /><br /> ロール<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> サーバー ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|CONTROL|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
 |IMPERSONATE|ログイン、ユーザー|  
   
 > [!CAUTION]  
@@ -157,7 +157,7 @@ ms.locfileid: "48141972"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注: にのみ適用されます[!INCLUDE[ssSDS](../../includes/sssds-md.md)]します。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注:[!INCLUDE[ssSDS](../../includes/sssds-md.md)]だけに適用されます。|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "48141972"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 注: にのみ適用されます[!INCLUDE[ssSDS](../../includes/sssds-md.md)]します。|SERVER|CONTROL SERVER|  
+|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 注:[!INCLUDE[ssSDS](../../includes/sssds-md.md)]だけに適用されます。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "48141972"
 |DATABASE|Del|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注: にのみ適用されます[!INCLUDE[ssSDS](../../includes/sssds-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ALTER ANY CONNECTION を使用する。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注:[!INCLUDE[ssSDS](../../includes/sssds-md.md)]だけに適用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ALTER ANY CONNECTION を使用する。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -231,7 +231,7 @@ ms.locfileid: "48141972"
 |Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
 |Login|CONTROL|CL|SERVER|CONTROL SERVER|  
 |Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -432,7 +432,7 @@ SELECT * FROM sys.database_permissions
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [権限の階層 &#40;データベース エンジン&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   

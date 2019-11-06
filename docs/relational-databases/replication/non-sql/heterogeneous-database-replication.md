@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5d4660cd2d3ba5fd8ba19cab9aa8e4a396240af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c7393b7cad97c613bf288d2f9e49e5922842e0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900973"
 ---
 # <a name="heterogeneous-database-replication"></a>異種データベース レプリケーション  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,6 +29,7 @@ ms.locfileid: "47633500"
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーへのデータのパブリッシュ  
 
 -   Oracle に対するデータのパブリッシュには次の制限があります。  
+
   | |2016 以前 |2017 以降 |
   |-------|-------|--------|
   |Oracle からのレプリケーション |Oracle 10g 以前のみをサポート |Oracle 10g 以前のみをサポート |

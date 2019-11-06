@@ -2,19 +2,18 @@
 title: T-SQL ステートメント - Parallel Data Warehouse |Microsoft Docs
 description: T-SQL ステートメントの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 804f4cb744ad036978341de4eedcc3351d5f620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959947"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse の T-SQL ステートメント
 TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
@@ -25,11 +24,11 @@ TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム Syst
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [スキーマを変更します。](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
-* [列ストア インデックスを作成します。](../t-sql/statements/create-columnstore-index-transact-sql.md)
+* [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [作成するデータベース スコープ資格情報](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [外部データ ソースを作成します。](../t-sql/statements/create-external-data-source-transact-sql.md)
-* [外部ファイル形式を作成します。](../t-sql/statements/create-external-file-format-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [外部テーブルを作成します。](../t-sql/statements/create-external-table-transact-sql.md)
 * [関数を作成します。](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
@@ -85,7 +84,7 @@ TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム Syst
 * [サブクエリ](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>セキュリティ ステートメント
-* アクセス許可: [GRANT](../t-sql/statements/grant-transact-sql.md)、 [DENY](../t-sql/statements/deny-transact-sql.md)、[を取り消す](../t-sql/statements/revoke-transact-sql.md)
+* 権限:[GRANT](../t-sql/statements/grant-transact-sql.md)、 [DENY](../t-sql/statements/deny-transact-sql.md)、[を取り消す](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [証明書を変更します。](../t-sql/statements/alter-certificate-transact-sql.md)
 * [データベース暗号化キーを変更します](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
@@ -98,7 +97,7 @@ TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム Syst
 * [証明書を作成します。](../t-sql/statements/create-certificate-transact-sql.md)
 * [データベース暗号化キーを作成します。](../t-sql/statements/create-database-encryption-key-transact-sql.md)
 * [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
-* [マスター_キーを作成します。](../t-sql/statements/create-master-key-transact-sql.md)
+* [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [ロールを作成します。](../t-sql/statements/create-role-transact-sql.md)
 * [ユーザーを作成します。](../t-sql/statements/create-user-transact-sql.md)
 * [証明書を削除します。](../t-sql/statements/drop-certificate-transact-sql.md)

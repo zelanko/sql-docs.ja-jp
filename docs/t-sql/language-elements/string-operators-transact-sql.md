@@ -15,32 +15,35 @@ helpviewer_keywords:
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 22fa94df7bf1ed0b408e4a5b2ac388697f5939d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 345cb7d09b7b1356751eb8b8b69ecf737805f2c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121647"
 ---
 # <a name="string-operators-transact-sql"></a>文字列演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次の文字列演算子があります。 文字列連結演算子を使用すると、2 つ以上の文字列やバイナリ文字列、列、文字列と列名の組み合わせを 1 つの式に連結できます。 ワイルドカード文字列演算子は、LIKE や PATINDEX などの文字列比較操作で、1 つまたは複数の文字に一致します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次の文字列演算子があります。 文字列連結演算子は、次の 2 つまたはそれ以上のデータ型を 1 つの式として組み合わせることができます。 
+* 文字列またはバイナリ文字列
+* 列 
+* 文字列と列名の組み合わせ 
+
+ワイルドカード文字列演算子は、文字列比較演算の中で、1 つまたは複数の文字と一致します。 LIKE と PATINDEX は、これらの演算子の例です。  
   
 ## <a name="section-heading"></a>セクション見出し  
- [+ (文字列連結)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+[+ (文字列連結)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+= (文字列連結代入)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+[+= (文字列連結代入)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
- [% (ワイルドカード - 一致する文字列)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+[% (ワイルドカード - 一致する文字列)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; &#93; (ワイルドカード - 一致する文字列)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+[&#91; &#93; (ワイルドカード - 一致する文字列)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91;^&#93; (ワイルドカード - 一致しない文字列)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+[&#91;^&#93; (ワイルドカード - 一致しない文字列)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
- [_ (ワイルドカード - 一致する 1 文字)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
-  
+[_ (ワイルドカード - 一致する 1 文字)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

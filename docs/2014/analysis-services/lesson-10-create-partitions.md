@@ -1,30 +1,29 @@
 ---
-title: 'レッスン 11: パーティションの作成 |Microsoft Docs'
+title: レッスン 11:パーティションの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079200"
 ---
-# <a name="lesson-11-create-partitions"></a>レッスン 11: パーティションの作成
-  このレッスンでは、パーティションを作成して Internet Sales テーブルをより小さな論理部分に分割し、他のパーティションと分離して処理 (更新) できるようにします。 既定では、モデルに含めるすべてのテーブルにはパーティションが 1 つあり、テーブルのすべての列と行がその中に含まれます。 ここでは、Internet Sales テーブルに含まれる 5 年間のデータを、年ごとのパーティションに分割します。  これにより、各パーティションを個別に処理できるようにします。 詳細については、「[パーティション (SSAS テーブル)](tabular-models/partitions-ssas-tabular.md)」を参照してください。  
+# <a name="lesson-11-create-partitions"></a>レッスン 11:パーティションの作成
+  このレッスンでは、パーティションを作成して Internet Sales テーブルをより小さな論理部分に分割し、他のパーティションと分離して処理 (更新) できるようにします。 既定では、すべてのテーブル モデルに含めることは、すべてのテーブルの列と行が含まれる 1 つのパーティションを持っています。 Internet Sales テーブルの年間でデータを分割します。各テーブルの 5 年間の 1 つのパーティション。  これにより、各パーティションを個別に処理できるようにします。 詳細については、「[パーティション (SSAS テーブル)](tabular-models/partitions-ssas-tabular.md)」を参照してください。  
   
- このレッスンの推定所要時間: **15 分**  
+ このレッスンを完了するまでに時間を推定するには。**15 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「[レッスン 10: 階層の作成](lesson-9-create-hierarchies.md)」を完了している必要があります。  
+ このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 10:階層を作成する](lesson-9-create-hierarchies.md)します。  
   
 ## <a name="create-partitions"></a>パーティションの作成  
   
@@ -80,7 +79,7 @@ ms.locfileid: "48089650"
   
 6.  **[検証]** をクリックします。  
   
-     特定の列がソースに存在しないことを示す警告が表示されます。 これは、ために[レッスン 3: 列名の変更](rename-columns.md)ソースにある同じ列に異なるモデルでの Internet Sales テーブル内のそれらの列の名前を変更しました。  
+     特定の列がソースに存在しないことを示す警告が表示されます。 これは、ために[レッスン 3。列名の変更](rename-columns.md)ソースにある同じ列に異なるモデルでの Internet Sales テーブル内のそれらの列の名前を変更します。  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Internet Sales テーブル内に、2006 年のパーティションを作成するには  
   
@@ -137,7 +136,7 @@ ms.locfileid: "48089650"
     ```  
   
 ## <a name="process-partitions"></a>パーティションの処理  
- **[パーティション マネージャー]** ダイアログ ボックスで、新たに作成した各パーティションのパーティション名の隣にアスタリスク (**\***) が表示されます。 これは、パーティションがまだ処理 (更新) されていないことを示します。 新しいパーティションを作成したら、"パーティションの処理" または "テーブルの処理" 操作を実行して、それらのパーティション内のデータを更新する必要があります。  
+ **[パーティション マネージャー]** ダイアログ ボックスで、新たに作成した各パーティションのパーティション名の隣にアスタリスク ( **\*** ) が表示されます。 これは、パーティションがまだ処理 (更新) されていないことを示します。 新しいパーティションを作成したら、"パーティションの処理" または "テーブルの処理" 操作を実行して、それらのパーティション内のデータを更新する必要があります。  
   
 #### <a name="to-process-internet-sales-partitions"></a>Internet Sales パーティションを処理するには  
   
@@ -154,6 +153,6 @@ ms.locfileid: "48089650"
      **データ プロセス** ダイアログ ボックスが表示され、各パーティションのプロセスの詳細が表示されます。 転送される行数はパーティションごとに異なります。 これは、各パーティションに、SQL ステートメントの WHERE 句で指定された年の行が含められるためです。 2010 年についてはデータがありません。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルを続行するには、次のレッスン「[レッスン 12: ロールの作成](lesson-11-create-roles.md)」に進んでください。  
+ このチュートリアルを続行するには、次のレッスンに移動します。レッスン:[レッスン 12:ロールを作成](lesson-11-create-roles.md)です。  
   
   

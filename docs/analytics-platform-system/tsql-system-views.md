@@ -2,19 +2,18 @@
 title: Analytics Platform System Parallel Data Warehouse のシステム ビュー |Microsoft Docs
 description: システム ビューの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 826c3ca1faa58660efa3cf01781918fcc230bd6d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c459b3656f4b7a2d61cbe0109a78848894600fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959963"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System Parallel Data Warehouse のシステム ビュー
 システム ビューの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。

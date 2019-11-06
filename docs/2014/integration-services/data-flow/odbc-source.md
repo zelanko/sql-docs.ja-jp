@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2238676493cce8a732055dea853e7368fe817865
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901107"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
@@ -52,7 +51,7 @@ ms.locfileid: "48054362"
 ## <a name="extract-options"></a>抽出オプション  
  ODBC 入力元は、 **バッチ** または **行ごと** のどちらかのモードで動作します。 使用するモードは、 **FetchMethod** プロパティによって決まります。 以下に、モードの説明を示します。  
   
--   **バッチ**: コンポーネントは、把握した ODBC プロバイダーの機能に基づいて、最も効率的なフェッチ方法を使用します。 最新の ODBC プロバイダーの場合、これは配列バインドを使用する SQLFetchScroll です (このとき、配列のサイズは **BatchSize** プロパティによって決定します)。 ユーザーが **バッチ** を選択し、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **行ごと** のモードに切り替わります。  
+-   **バッチ**: コンポーネントは、把握した ODBC プロバイダーの機能に基づいて、最も効率的なフェッチ方法を使用します。 最新の ODBC プロバイダーの場合、これは配列バインドを使用する SQLFetchScroll です (このとき、配列のサイズは **BatchSize** プロパティによって決定します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
 -   **行ごと**: コンポーネントは SQLFetch を使用して、一度に 1 行ずつ取得します。  
   
@@ -71,11 +70,11 @@ ms.locfileid: "48054362"
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [Odbc 入力元エディター&#40;接続マネージャー ページ&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Odbc 入力元エディター&#40;列 ページ&#41;](../odbc-source-editor-columns-page.md)  
+-   [[ODBC ソース エディター] &#40;[列] ページ&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Odbc 入力元エディター&#40;エラー出力 ページ&#41;](../odbc-source-editor-error-output-page.md)  
+-   [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../odbc-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
@@ -87,14 +86,14 @@ ms.locfileid: "48054362"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [Odbc 入力元エディター&#40;エラー出力 ページ&#41;](../odbc-source-editor-error-output-page.md)  
+-   [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [Odbc 入力元エディター&#40;列 ページ&#41;](../odbc-source-editor-columns-page.md)  
+-   [[ODBC ソース エディター] &#40;[列] ページ&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Odbc 入力元エディター&#40;接続マネージャー ページ&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [ODBC 変換元を使用したデータ抽出](odbc-source.md)  
+-   [ODBC 入力元を使用したデータ抽出](odbc-source.md)  
   
--   [ODBC 変換元のカスタム プロパティ](odbc-source-custom-properties.md)  
+-   [ODBC 入力元のカスタム プロパティ](odbc-source-custom-properties.md)  
   
   

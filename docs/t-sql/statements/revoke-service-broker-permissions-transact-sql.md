@@ -19,15 +19,14 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e740cee45eb791f16548f6d98d714a943b9178a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914226"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (Service Broker の権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を他のプリンシパルに与えるための権限が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに付与する権限が取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -63,19 +62,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のセキュリティ保護可能なリソースに対して取り消せる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  権限を取り消すコントラクトを指定します。 スコープ修飾子 **::** が必要です。  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  権限を取り消すメッセージ型を指定します。 スコープ修飾子 **::** が必要です。  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  権限を取り消すリモート サービス バインドを指定します。 スコープ修飾子 **::** が必要です。  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  権限を取り消すルートを指定します。 スコープ修飾子 **::** が必要です。  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  権限を取り消すサービスを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  

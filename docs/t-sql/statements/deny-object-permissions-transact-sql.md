@@ -13,15 +13,14 @@ helpviewer_keywords:
 - DENY statement, objects
 - table permissions [SQL Server]
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 01c2e711b68cf8bd143c19be0567bb6de8265701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114802"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (オブジェクトの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,11 +60,11 @@ DENY <permission> [ ,...n ] ON
  ALL  
  ALL を指定しても、可能な権限がすべて拒否されるわけではありません。 ALL を指定すると、指定したオブジェクトに適用されるすべての ANSI-92 権限を拒否することになります。 ALL の意味は、状況に応じて次のようになります。  
   
- - スカラー関数の権限の場合は、EXECUTE、REFERENCES。  
- - テーブル値関数の権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - ストアド プロシージャの権限の場合は、EXECUTE。  
- - テーブルの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - ビューの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - スカラー関数の権限:EXECUTE、REFERENCES。  
+ - テーブル値関数の権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - ストアド プロシージャの権限:EXECUTE。  
+ - テーブルの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - ビューの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  ANSI-92 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -74,10 +73,10 @@ PRIVILEGES
  権限を拒否するテーブル、ビュー、またはテーブル値関数内の列の名前を指定します。 かっこ **( )** で囲む必要があります。 列で拒否できるのは、SELECT、REFERENCES、および UPDATE の各権限だけです。 *column* は permission 句内、またはセキュリティ保護可能なリソースの名前の後に指定できます。  
   
 > [!CAUTION]  
->  テーブル レベルの DENY ステートメントは列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。  
+>  テーブル レベルの DENY は列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- 権限を拒否するオブジェクトを指定します。 OBJECT 句は、*schema_name* を指定する場合は省略可能です。 OBJECT 句を使用する場合は、スコープ修飾子 (**::**) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (**.**) が必要です。  
+ 権限を拒否するオブジェクトを指定します。 OBJECT 句は、*schema_name* を指定する場合は省略可能です。 OBJECT 句を使用する場合は、スコープ修飾子 ( **::** ) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 ( **.** ) が必要です。  
   
  TO \<database_principal>  
  権限を拒否するプリンシパルを指定します。  
@@ -121,7 +120,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|Del|CONTROL|Del|  
+|DELETE|CONTROL|DELETE|  
 |EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4c762c16a15b4e6cee20598f87c5a9ca9955eac
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559899"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211255"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>データベース メールを使用するように SQL Server エージェント メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "51559899"
   
 -   [前提条件](#Prerequisites)  
   
--   [Security](#Security)  
+-   [セキュリティ](#Security)  
   
 -   [SQL Server Management Studio でデータベース メールを使用するように SQL Server エージェントを構成するには](#SSMSProcedure)  
   
@@ -37,13 +36,16 @@ ms.locfileid: "51559899"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
+  > [!NOTE]
+  > Managed Instance 上の SQL エージェントは常に、データベース メールを使用するように構成されます。そのため、このコンテンツはマネージド インスタンスには該当しません。 Managed Instance では、SQL エージェントとデータベース メールをバインドする目的でプロファイルを用意する必要があります。このプロファイルの名前は **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** という名前にする必要があります。 
+  
 ###  <a name="Prerequisites"></a> 前提条件  
   
 -   [データベース メールを有効にします](../../relational-databases/database-mail/configure-database-mail.md)。  
   
 -    使用する[エージェント サービス アカウントの](../../relational-databases/database-mail/create-a-database-mail-account.md) データベース メール アカウントを作成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
--   [エージェント サービス アカウントで使用する](../../relational-databases/database-mail/create-a-database-mail-profile.md) データベース メール プロファイルを作成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] し、ユーザーを **msdb** データベースの **DatabaseMailUserRole** に追加します。  
+-   [エージェント サービス アカウントで使用する](../../relational-databases/database-mail/create-a-database-mail-profile.md) データベース メール プロファイルを作成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] し、ユーザーを **msdb** データベースの **DatabaseMailUserRole** に追加します。
   
 -   作成したプロファイルを **msdb** データベースの既定のプロファイルに設定します。  
   
@@ -65,7 +67,7 @@ ms.locfileid: "51559899"
   
 -   **[メール システム]** ボックスの一覧で、 **[データベース メール]** を選択します。  
   
--   **[メール プロファイル]** ボックスの一覧で、データベース メールのメール プロファイルを選択します。  
+-   **[メール プロファイル]** ボックスの一覧で、データベース メールのメール プロファイルを選択します。 
   
 -   SQL Server エージェントを再起動します。  
   

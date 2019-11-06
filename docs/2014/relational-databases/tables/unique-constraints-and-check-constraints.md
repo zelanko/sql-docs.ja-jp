@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
@@ -14,17 +13,17 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8800491b0c4cb576b7255c1be0648b87daebfcc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196676"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
   UNIQUE 制約と CHECK 制約は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
- このトピックの内容は次のとおりです。  
+ このトピックは次のセクションで構成されます。  
   
  [UNIQUE 制約](#Unique)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "48082312"
   
  複数の CHECK 制約を 1 つの列に適用できます。 テーブル レベルで CHECK 制約を作成すると、1 つの CHECK 制約を複数の列に適用できます。 たとえば、複数列の CHECK 制約を使用して、 **country_region** 列の値が **USA** であるいずれかの行の **state** 列に 2 文字の値が格納されているかどうかを確認できます。 これにより、1 か所で複数の条件をチェックできるようになります。  
   
- CHECK 制約は、列に格納される値を制御するという点では FOREIGN KEY 制約に似ています。 異なる点は、有効な値を決定する方法です。FOREIGN KEY 制約では別のテーブルから有効な値の一覧が取得されますが、CHECK 制約では論理式によって有効な値が決定されます。  
+ CHECK 制約は、列に格納される値を制御するという点では FOREIGN KEY 制約に似ています。 違いは、有効な値を判断する方法には。FOREIGN KEY 制約は、CHECK 制約は、logical expression から有効な値を確認中に、別のテーブルから有効な値の一覧を取得します。  
   
 > [!CAUTION]  
 >  暗黙的または明示的なデータ型の変換が含まれる制約により、特定の操作が失敗することがあります。 たとえば、パーティションの切り替え元のテーブルに定義された制約により、ALTER TABLE...SWITCH 操作が失敗することがあります。 制約の定義ではデータ型を変換しないようにしてください。  
@@ -83,7 +82,7 @@ GO
 DELETE CheckTbl WHERE col1 = 10;  
 ```  
   
- `DELETE` 制約では、テーブル `CHECK` に `CheckTbl` 行以上が格納されていなければならないことを指定していますが、 `1` ステートメントは成功します。  
+ `CHECK` 制約では、テーブル `CheckTbl` に `1` 行以上が格納されていなければならないことを指定していますが、`DELETE` ステートメントは成功します。  
   
 ##  <a name="Tasks"></a> 関連タスク  
   

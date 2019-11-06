@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function
@@ -16,12 +15,12 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb9dfa664078e14f1daa8223379829b3d6b337ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63209735"
 ---
 # <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーの分類プロセスにより、着信セッションがセッションの特性に基づいてワークロード グループに割り当てられます。 分類ロジックは、分類子関数と呼ばれるユーザー定義関数を記述することで調整できます。  
@@ -86,8 +85,8 @@ ms.locfileid: "48190906"
 |----------------------|-----------|  
 |ユーザー定義の分類子関数を作成およびテストする方法について説明します。|[ユーザー定義の分類子関数の作成とテスト](create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>参照  
- [[リソース ガバナー]](resource-governor.md)   
+## <a name="see-also"></a>関連項目  
+ [リソース ガバナー](resource-governor.md)   
  [リソース ガバナーの有効化](enable-resource-governor.md)   
  [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   

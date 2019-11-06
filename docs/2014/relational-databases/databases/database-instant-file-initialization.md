@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing files [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53e2059dbbbd110b4be94ff96cb8ca235d24e4ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62872096"
 ---
 # <a name="database-instant-file-initialization"></a>データベースのファイルの瞬時初期化
   データおよびログ ファイルの初期化は、ディスクに以前削除したファイルのデータが残っている場合にそれを上書きするために行います。 データおよびログ ファイルは、次のいずれかの操作を実行したときに、ファイルを 0 で埋め込むことにより、まず初期化されます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48229452"
   
  アカウントに `Perform volume maintenance tasks` 権限を許可する方法。  
   
-1.  バックアップ ファイルを作成するコンピューターで開く、`Local Security Policy`アプリケーション (`secpol.msc`)。  
+1.  バックアップ ファイルを作成するコンピューター上で、`Local Security Policy` アプリケーション (`secpol.msc`) を開きます。  
   
 2.  左側のペインで **[ローカル ポリシー]** を展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   

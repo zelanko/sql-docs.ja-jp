@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec8edb82afec3c8437970c6d3b238b3f68172c46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63287781"
 ---
-# <a name="examples-using-path-mode"></a>例 : PATH モードの使用
+# <a name="examples-using-path-mode"></a>例 :PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>PATH モードの単純なクエリの指定  
@@ -186,12 +186,12 @@ GO
   
  `</Root>`  
   
- 次のクエリは、指定した製品モデルの ID および名前以外に、その製品モデルに対応する製造手順書の場所を返します。 Instructions 列であるため`xml`の種類、`query()`メソッドの`xml`場所を取得するデータ型を指定します。  
+ 次のクエリは、指定した製品モデルの ID および名前以外に、その製品モデルに対応する製造手順書の場所を返します。 Instructions 列が `xml` 型なので、`query()` データ型の `xml` メソッドを指定して場所を取得します。  
   
 ```  
 SELECT ProductModelID AS "@id",  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') AS ManuInstr  
 FROM Production.ProductModel  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 次に結果の一部を示します。 列名として ManuInstr が指定されているので、`query()` メソッドが返す XML は次に示すように <`ManuInstr`> タグで囲まれています。  
+ 次に結果の一部を示します。 XML がによって返される列名として ManuInstr が指定、ため、`query()`にメソッドがラップされて、<`ManuInstr`> タグを次に示すように。  
   
  `<Root>`  
   
@@ -210,7 +210,7 @@ GO
   
  `<ManuInstr>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `<MI:step>...</MI:step>...`  
   
@@ -232,7 +232,7 @@ GO
 WITH XMLNAMESPACES (  
    'uri1' AS ns1,    
    'uri2' AS ns2,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
 SELECT ProductModelID AS "ns1:ProductModelID",  
        Name           AS "ns1:Name",  
        Instructions.query('  
@@ -244,9 +244,9 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 結果として、`query()`のメソッド、`xml`指定された型で、クエリのプロローグでのプレフィックスが定義されていません。 結果を次に示します。  
+ `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 したがって、指定された `query()` 型の `xml` メソッドにおいて、クエリ プロローグでこのプレフィックスは定義されていません。 結果を次に示します。  
   
- `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
+ `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
  `<ns2:ProductInfo>`  
   
@@ -254,7 +254,7 @@ GO
   
  `<ns1:Name>HL Touring Frame</ns1:Name>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `LaborHours="2.5" LotSize="100" MachineHours="3" SetupHours="0.5" LocationID="10" xmlns="">`  
   

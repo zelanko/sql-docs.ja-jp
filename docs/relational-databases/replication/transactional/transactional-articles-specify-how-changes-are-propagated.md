@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683050"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769342"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>トランザクション アーティクル - 変更の反映方法の指定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   トランザクション レプリケーションを使用すると、パブリッシャーからサブスクライバーに変更を反映する方法を指定できます。 パブリッシュされた各テーブルに対して、次の 4 つの方法のいずれかを指定して、各操作 (INSERT、UPDATE、または DELETE) をサブスクライバーに反映できます。  
   
 -   トランザクション レプリケーションのスクリプトを作成し、その後、ストアド プロシージャを呼び出して変更をサブスクライバーに反映するように指定します (既定値)。  
@@ -39,13 +39,13 @@ ms.locfileid: "47683050"
 ## <a name="default-and-custom-stored-procedures"></a>既定のストアド プロシージャとカスタム ストアド プロシージャ  
  各テーブル アーティクルに対して、既定でレプリケーションによって作成されるのは、次の 3 つのプロシージャです。  
   
--   **sp_MSins_\<***tablename***>**。挿入処理を行います。  
+-   **sp_MSins_\<** *tablename* **>** 。挿入処理を行います。  
   
--   **sp_MSupd_\<***tablename***>**。更新処理を行います。  
+-   **sp_MSupd_\<** *tablename* **>** 。更新処理を行います。  
   
--   **sp_MSdel_\<***tablename***>**。削除処理を行います。  
+-   **sp_MSdel_\<** *tablename* **>** 。削除処理を行います。  
   
- このプロシージャで使用される **\<**_tablename_**>** は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプション データベースに所有者が異なる同じ名前のテーブルが含まれているかどうかに応じて異なります。  
+ このプロシージャで使用される **\<** _tablename_ **>** は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプション データベースに所有者が異なる同じ名前のテーブルが含まれているかどうかに応じて異なります。  
   
  これらのすべてのプロシージャは、パブリケーションにアーティクルを追加するときに指定したカスタム プロシージャと置き換えることができます。 カスタム プロシージャは、サブスクライバーでの行の更新時にデータを監査テーブルに挿入するなど、アプリケーションにカスタム ロジックが必要な場合に使用されます。 カスタム ストアド プロシージャの指定の詳細については、上記のトピックを参照してください。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47683050"
   
 -   スキーマの変更をパブリッシュされたテーブルに加える場合は、カスタム プロシージャを再生成する必要があります。 詳細については、「[カスタム トランザクション プロシージャの再生成によるスキーマ変更の反映](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)」を参照してください。  
   
--   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 例 :  
+-   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 例:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -118,7 +118,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>SCALL 構文  
  UPDATE ストアド プロシージャ  
- UPDATE ステートメントを処理するストアド プロシージャには、変更された列のみを更新する値、その後に主キー列の元の値、および変更された列を示すビットマスク (**binary(n)**) パラメーターが渡されます。 次の例では、列 2 (c2) は変更されていません。  
+ UPDATE ステートメントを処理するストアド プロシージャには、変更された列のみを更新する値、その後に主キー列の元の値、および変更された列を示すビットマスク (**binary(n)** ) パラメーターが渡されます。 次の例では、列 2 (c2) は変更されていません。  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -126,7 +126,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>MCALL 構文  
  UPDATE ストアド プロシージャ  
- UPDATE ステートメントを処理するストアド プロシージャには、アーティクルで定義されているすべての列を更新する値、その後に主キー列の元の値、および変更された列を示すビットマスク (**binary(n)**) パラメーターが渡されます。  
+ UPDATE ステートメントを処理するストアド プロシージャには、アーティクルで定義されているすべての列を更新する値、その後に主キー列の元の値、および変更された列を示すビットマスク (**binary(n)** ) パラメーターが渡されます。  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  

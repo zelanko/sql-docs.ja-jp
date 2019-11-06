@@ -24,20 +24,19 @@ helpviewer_keywords:
 - WAITFOR statement
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b4f4707f6f021d7395596bd1c1ab4af8230ac50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086111"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定された時間または期間に達するか、指定されたステートメントによって少なくとも 1 つの行が変更または返されるまで、バッチ、ストアド プロシージャ、またはトランザクションの実行をブロックします。  
+  指定された時間または期間が経過するか、指定されたステートメントによって少なくとも 1 つの行が変更または返されるまで、バッチ、ストアド プロシージャ、またはトランザクションの実行をブロックします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +58,13 @@ WAITFOR
  バッチ、ストアド プロシージャ、またはトランザクションを実行する前に経過する必要のある、最大 24 時間までの指定された時間です。  
   
  '*time_to_pass*'  
- 待機する時間の長さです。 *time_to_pass* は、**datetime** データに適合するいずれかの形式で指定することも、ローカル変数として指定することもできます。 日付を指定することはできません。したがって、**datetime** 値の日付の部分は許可されません。 これは hh:mm[[:ss].mss] として書式設定されます。
+ 待機する時間の長さです。 *time_to_pass* は、**datetime** データ形式で、またはローカル変数として、指定できます。 日付を指定することはできないため、**datetime** 値の日付の部分は許可されません。 *time_to_pass* は、hh:mm[[:ss].mss] として書式設定されます。
   
  TIME  
  バッチ、ストアド プロシージャ、またはトランザクションを実行するように指定された時間です。  
   
  '*time_to_execute*'  
- WAITFOR ステートメントが終了する時間です。 *time_to_execute* は、**datetime** データに適合するいずれかの形式で指定することも、ローカル変数として指定することもできます。 日付を指定することはできません。したがって、**datetime** 値の日付の部分は許可されません。 これは hh:mm[[:ss].mss] で書式設定され、必要に応じて、1900-01-01 の日付を含めることができます。
+ WAITFOR ステートメントが終了する時間です。 *time_to_execute* は、**datetime** データ形式で、またはローカル変数として指定できます。 日付を指定することはできないため、**datetime** 値の日付の部分は許可されません。 *time_to_execute* は hh:mm[[:ss].mss] で書式設定され、必要に応じて、1900-01-01 の日付を含めることができます。
   
  *receive_statement*  
  有効な RECEIVE ステートメントです。  
@@ -88,7 +87,7 @@ WAITFOR
 ## <a name="remarks"></a>Remarks  
  WAITFOR ステートメントを実行している間は、トランザクションが実行され、その他のリクエストは同じトランザクションの下で実行することはできません。  
   
- 実際の遅延時間は *time_to_pass*、*time_to_execute* または *timeout* で指定される時間によって異なり、サーバーの利用状況レベルにも依存します。 時間のカウンターは、WAITFOR ステートメントに関連付けられたスレッドがスケジュールされた時点から開始します。 サーバーがビジーの場合、スレッドはすぐにスケジュールされない場合があります。したがって遅延時間は指定した時間よりも長くなることがあります。  
+ 実際の遅延時間は *time_to_pass*、*time_to_execute* または *timeout* で指定される時間によって異なり、サーバーの利用状況レベルにも依存します。 時間のカウンターは、WAITFOR ステートメント スレッドがスケジュールされた時点から開始します。 サーバーがビジーの場合、スレッドはすぐにスケジュールされない場合があるので、遅延時間は指定した時間よりも長くなることがあります。  
   
  WAITFOR はクエリのセマンティクスを変更しません。 クエリが行を返すことができない場合、WAITFOR は待機状態のままか、TIMEOUT が指定されている場合は TIMEOUT に達するまで待機します。  
   
@@ -98,9 +97,9 @@ WAITFOR
   
  クエリが query wait オプションの値を超えると、WAITFOR ステートメントの引数を実行せずに完了できます。 構成オプションの詳細については、「[query wait サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)」を参照してください。 アクティブな待機中の処理を表示するには、[sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) を使用します。  
   
- 各 WAITFOR ステートメントには、それに関連付けられたスレッドがあります。 同じサーバーに多くの WAITFOR ステートメントが指定されている場合、これらのステートメントの実行を待機することを中止できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、WAITFOR ステートメントに関連付けられたスレッドの数を監視し、スレッドが不足し始めるとランダムにこれらのスレッドのいくつかを選択し、終了させます。  
+ 各 WAITFOR ステートメントには、それに関連付けられたスレッドがあります。 同じサーバーに多くの WAITFOR ステートメントが指定されている場合、これらのステートメントの実行を待機することを中止できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、WAITFOR ステートメント スレッドの数が監視され、サーバーでスレッドが不足し始めると、これらのスレッドの一部がランダムに選択されて終了されます。  
   
- WAITFOR ステートメントがアクセスしようとしている行セットが変更されないようにロックも設定されているトランザクション内で、WAITFOR のあるクエリを実行することにより、デッドロックを作成することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのシナリオを識別し、このようなデッドロックの機会が存在する場合は、空の結果セットを返します。  
+ WAITFOR ステートメントによってアクセスされている行セットの変更を禁止するロックも保持しているトランザクション内で、WAITFOR を含むクエリを実行すると、デッドロックが発生する可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのシナリオを識別し、このようなデッドロックの機会が存在する場合は、空の結果セットを返します。  
   
 > [!CAUTION]  
 >  WAITFOR を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの完了が遅くなり、その結果、アプリケーションでタイムアウト メッセージが表示される可能性があります。 必要に応じて、アプリケーション レベルで接続のタイムアウト設定を調整してください。  
@@ -132,7 +131,7 @@ GO
 ```  
   
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. ローカル変数と共に WAITFOR DELAY を使用する  
- 次の例では、`WAITFOR DELAY` オプションでローカル変数を使用する方法を示します。 ここでは、変更可能な時間が経過するまで待機し、経過した時間の時、分、秒の長さに関する情報をユーザーに返すストアド プロシージャを作成します。  
+ 次の例では、`WAITFOR DELAY` オプションでローカル変数を使用する方法を示します。 このストアド プロシージャは、可変の時間だけ待機してから、経過した時間数、分数、秒数に関する情報をユーザーに返します。  
   
 ```  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
@@ -173,5 +172,4 @@ GO
  [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
   

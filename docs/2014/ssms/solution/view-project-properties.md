@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], viewing properties
@@ -13,12 +13,12 @@ ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bd8d20b284c25d7d6a556b3279936a03cff49e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e8aaa92f02d1b26e23aad3c9ccffe52cd886ac2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63240115"
 ---
 # <a name="view-project-properties"></a>プロジェクトのプロパティの表示
   プロジェクトに関連するプロパティは、[プロパティ] ウィンドウに表示できます。  

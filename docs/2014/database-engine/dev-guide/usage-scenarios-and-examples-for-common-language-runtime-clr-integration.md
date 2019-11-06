@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - scenarios [CLR integration]
@@ -19,17 +17,17 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8144c1b4008f7c0a7d8280392ee421d5cb0f0a77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62780725"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR (共通言語ランタイム) 統合の使用シナリオと例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サンプル アプリケーション、パッケージ サンプル、およびさまざまなコーディング サンプルが含まれています。これらのサンプルを使用することで、CLR (共通言語ランタイム) 統合のプログラミング機能について理解することができます。  
   
- 完全な Visual Studio プロジェクトがこれらのサンプルと追加資料を実装する、次を参照してください。 [codeplex のサンプル (&)、Microsoft SQL Server コミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=193935)します。  
+ 完全な Visual Studio プロジェクトがこれらのサンプルと追加資料を実装する、次を参照してください。 [codeplex のサンプル (&)、Microsoft SQL Server コミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=193935)します。  
   
 |名前|説明|  
 |----------|-----------------|  

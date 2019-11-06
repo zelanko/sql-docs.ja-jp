@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873554"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 行ストア テーブルおよびインデックス、行とページの圧縮をサポートし、列ストア テーブルおよびインデックスの列ストア インデックスと列ストアの保存用圧縮をサポートしています。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、行ストア インデックスおよびテーブルのための行およびページの圧縮がサポートされます。また、列ストアと、列ストアおよびインデックスのための列ストアの保存用圧縮もサポートされます。  
   
  行ストア テーブルおよびインデックスについては、データベースのサイズを小さくするためにデータ圧縮機能を使用してください。 領域を削減するだけでなく、データ圧縮を使用すると、データを格納するページ数が少なくなり、クエリがディスクから読み取る必要のあるページが少なくなるため、大量の I/O が発生する作業のパフォーマンスを向上できます。 ただし、アプリケーションとの間でデータが交換される間は、データの圧縮と圧縮解除のためデータベース サーバーで追加の CPU リソースが必要になります。 次のデータベース オブジェクトで行とページの圧縮を構成することができます。  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204942"
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
 ### <a name="basics"></a>の基本操作  
  列ストア テーブルおよび列ストア インデックスは常に列ストア圧縮を使用して格納されます。 保存用圧縮と呼ばれる追加の圧縮機能を構成するによって、列ストアのデータ サイズをさらに小さくすることができます。  保存用圧縮を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータに対して Microsoft Xpress 圧縮アルゴリズムを実行します。 次の種類のデータ圧縮を使用して、保存用圧縮を追加または削除します。  
   
--   使用`COLUMNSTORE_ARCHIVE`保存用圧縮で列ストア データを圧縮するデータ圧縮。  
+-   保存用圧縮で列ストア データを圧縮するには、`COLUMNSTORE_ARCHIVE` データ圧縮を使用します。  
   
 -   保存用圧縮を解凍するには、 **COLUMNSTORE** データ圧縮を使用します。 この結果として生成されるデータは、引き続き列データの圧縮を使用して圧縮できます。  
   
@@ -159,7 +159,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>[パフォーマンス]  
+### <a name="performance"></a>パフォーマンス  
  保存用圧縮を使用して列ストア インデックスを圧縮すると、列ストア インデックスに保存用圧縮がない場合に比べて実行速度が遅くなります。  保存用圧縮は、データを圧縮および取得する時間と CPU リソースに余裕がある場合にのみ使用します。  
   
  パフォーマンスは低下しますがストレージが少なくてすむため、頻繁にアクセスしないデータには便利です。 たとえば、各月のデータ用のパーティションがある場合、ほとんどアクティビティは最新の月のデータに対して実行されるため、古い月のデータをアーカイブして必要なストレージを削減できます。  
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`と`type_desc`列に CLUSTERED COLUMNSTORE と NONCLUSTERED COLUMNSTORE が含まれています。  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) –`data_compression`と`data_compression_desc`列には、COLUMNSTORE と COLUMNSTORE_ARCHIVE が含まれています。  
+-   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -`data_compression`と`data_compression_desc`列には、COLUMNSTORE と COLUMNSTORE_ARCHIVE が含まれています。  
   
  プロシージャ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) は、列ストア インデックスに適用されません。  
   
@@ -251,7 +251,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   圧縮を有効にすると、クエリ プランが変更される可能性があります。データの格納に使用されるページ数とページあたりの行数が異なるためです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [行の圧縮の実装](row-compression-implementation.md)   
  [ページの圧縮の実装](page-compression-implementation.md)   
  [Unicode 圧縮の実装](unicode-compression-implementation.md)   

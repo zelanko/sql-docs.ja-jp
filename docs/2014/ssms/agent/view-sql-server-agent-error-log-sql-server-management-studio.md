@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -16,12 +16,12 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6369fc45ffd26bf28064735c23a1d9d7f75e37c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245605"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server エージェントのエラー ログの表示 (SQL Server Management Studio)
   このトピックでは、  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]エージェントのエラー ログを表示する方法について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "48073812"
   
 -   [SQL Server Management Studio を使用して SQL Server エージェントのエラー ログを表示するには](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  オブジェクト エクスプローラーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ノードが表示されるのは、このノードの使用権限がある場合に限られます。  
@@ -46,7 +46,7 @@ ms.locfileid: "48073812"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの機能を実行するには、 **の** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定サーバー ロールのメンバーであるアカウントの資格情報を使用するように構成する必要があります。 このアカウントには、次の Windows 権限が必要です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの機能を実行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定サーバー ロールの **sysadmin** のメンバーであるアカウントの資格情報を使用するように構成する必要があります。 このアカウントには、次の Windows 権限が必要です。  
   
 -   サービスとしてログオン (SeServiceLogonRight)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48073812"
   
 4.  表示するエラー ログを右クリックし、 **[エージェント ログの表示]** を選択します。  
   
-     *[ログ ファイルの表示 - <サーバー名>]* ダイアログ ボックスでは、次のオプションを使用できます。  
+     **[ログ ファイルの表示 -** _サーバー名_] ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **[ログの読み込み]**  
      読み込むログ ファイルを指定できるダイアログ ボックスが開きます。  
@@ -99,7 +99,7 @@ ms.locfileid: "48073812"
      **インスタンス**  
      イベントが発生したインスタンスの名前です。 これは、 *computer name*\\*instance name*と表示されます。  
   
-     **日付**  
+     **Date**  
      イベントの日付が表示されます。  
   
      **Source**  

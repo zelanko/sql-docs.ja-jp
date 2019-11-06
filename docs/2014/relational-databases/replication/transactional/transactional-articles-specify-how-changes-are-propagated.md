@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
@@ -13,12 +12,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 557820cc0e1832a5e80f3a66a4a4f67859f2a8d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655677"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>トランザクション アーティクルに変更を反映する方法の指定
   トランザクション レプリケーションを使用すると、パブリッシャーからサブスクライバーに変更を反映する方法を指定できます。 パブリッシュされた各テーブルに対して、次の 4 つの方法のいずれかを指定して、各操作 (INSERT、UPDATE、または DELETE) をサブスクライバーに反映できます。  
@@ -38,11 +37,11 @@ ms.locfileid: "48107692"
 ## <a name="default-and-custom-stored-procedures"></a>既定のストアド プロシージャとカスタム ストアド プロシージャ  
  各テーブル アーティクルに対して、既定でレプリケーションによって作成されるのは、次の 3 つのプロシージャです。  
   
--   **sp_MSins_\<***tablename***>**。挿入処理を行います。  
+-   **sp_MSins_\<** *tablename* **>** 。挿入処理を行います。  
   
--   **sp_MSupd_\<***tablename***>**。更新処理を行います。  
+-   **sp_MSupd_\<** *tablename* **>** 。更新処理を行います。  
   
--   **sp_MSdel_\<***tablename***>**。削除処理を行います。  
+-   **sp_MSdel_\<** *tablename* **>** 。削除処理を行います。  
   
  このプロシージャで使用される **\<***tablename***>** は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプション データベースに所有者が異なる同じ名前のテーブルが含まれているかどうかに応じて異なります。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48107692"
   
 -   スキーマの変更をパブリッシュされたテーブルに加える場合は、カスタム プロシージャを再生成する必要があります。 詳細については、「[カスタム トランザクション プロシージャの再生成によるスキーマ変更の反映](transactional-articles-regenerate-to-reflect-schema-changes.md)」を参照してください。  
   
--   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 以下に例を示します。  
+-   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 例 :  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

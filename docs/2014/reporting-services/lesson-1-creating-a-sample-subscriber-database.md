@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 1: サンプル サブスクライバー データベースの作成 | Microsoft Docs'
+title: レッスン 1:サンプル サブスクライバー データベースの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108535"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>レッスン 1 : サンプル サブスクライバー データベースの作成
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>レッスン 1:サンプル サブスクライバー データベースの作成
   データ ドリブン サブスクリプションを定義するには、その前に、サブスクリプション データを提供するデータ ソースを用意する必要があります。 ここでは、このチュートリアル用のサブスクリプション データを格納する簡単なデータベースを作成します。 後でサブスクリプションを処理する際、このデータがレポート サーバーにより取得され、レポート出力、配信オプション、およびレポート表示形式のカスタマイズに使用されます。  
   
  このレッスンでは、使用していることと[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を作成する、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]データベース。  
@@ -61,11 +60,11 @@ ms.locfileid: "48156042"
 7.  SELECT ステートメントを使用して、3 行のデータがあることを確認します。 例: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>次の手順  
- 以上の操作で、レポートを配信し、各サブスクライバーごとにレポート出力を変えるサブスクリプション データを作成できました。 次に、サブスクライバーに配信するレポートのデータ ソース プロパティを更新します。 データ ソース プロパティを更新する目的は、データ ドリブン サブスクリプション配信用のレポートを準備することです。 また、レポートのデザインを変更して、サブスクリプションがサブスクライバーのデータと共に使用するパラメーターを含めます。 [レッスン 2: レポート データ ソースのプロパティの変更](lesson-2-modifying-the-report-data-source-properties.md)  
+ 以上の操作で、レポートを配信し、各サブスクライバーごとにレポート出力を変えるサブスクリプション データを作成できました。 次に、サブスクライバーに配信するレポートのデータ ソース プロパティを更新します。 データ ソース プロパティを更新する目的は、データ ドリブン サブスクリプション配信用のレポートを準備することです。 また、レポートのデザインを変更して、サブスクリプションがサブスクライバーのデータと共に使用するパラメーターを含めます。 [レッスン 2:レポート データ ソースの変更プロパティ](lesson-2-modifying-the-report-data-source-properties.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [データベースを作成します。](../relational-databases/databases/create-a-database.md)   
- [基本的なテーブル レポートを作成する&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [基本的なテーブル レポートの作成 (SSRS チュートリアル)](create-a-basic-table-report-ssrs-tutorial.md)  
   
   
