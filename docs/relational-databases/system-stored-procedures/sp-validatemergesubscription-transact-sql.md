@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3341bf25e43f73143fa1dd0e66add9f4b86c22bb
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70155527"
@@ -67,6 +67,6 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [レプリケートされたデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_validatemergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
+ [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

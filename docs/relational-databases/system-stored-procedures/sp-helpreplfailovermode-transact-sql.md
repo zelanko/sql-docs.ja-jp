@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplfailovermode (Transact-sql) |Microsoft Docs
+title: sp_helpreplfailovermode (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
 ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73142846"
@@ -54,7 +54,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 |の値|Description|  
 |-----------|-----------------|  
-|**すばやい**|即時更新: サブスクライバーで行われた更新は、2フェーズコミットプロトコル (2PC) を使用してパブリッシャーに直ちに反映されます。|  
+|**immediate**|即時更新: サブスクライバーで行われた更新は、2 フェーズ コミット プロトコル (2PC) を使用してパブリッシャーに直ちに反映されます。|  
 |**queued**|キュー更新。サブスクライバーでの更新は、キューに格納されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -67,6 +67,6 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  **Sp_helpreplfailovermode**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>「  
- [sp_setreplfailovermode &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   
