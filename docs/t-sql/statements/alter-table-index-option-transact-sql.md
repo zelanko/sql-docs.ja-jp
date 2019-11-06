@@ -251,7 +251,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  このテーブルに対するブロック操作がなくなるとすぐに、**SWITCH** またはオンライン インデックス再構築が完了します。 *WAIT_AT_LOW_PRIORITY* は、**SWITCH** またはオンライン インデックス再構築の操作が直ちに完了できない場合は待機することを示します。 この操作は優先度の低いロックを保持し、DDL ステートメントと競合するロックを保持する他の操作が続行できるようにします。 **WAIT AT LOW PRIORITY** オプションを省略すると、`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` と同等になります。  
   
 MAX_DURATION = *time* **[MINUTES]**  
- 取得する必要がある、**SWITCH** またはオンライン インデックス再構築のロックが、DDL コマンドの実行時に待機する時間 (分単位で指定される整数値) です。 SWITCH またはオンライン インデックス再構築の操作は、直ちに完了しようとします。 操作が **MAX_DURATION** の期間ブロックされると、**ABORT_AFTER_WAIT** アクションのいずれかが実行されます。 **MAX_DURATION** の期間は常に分単位なので、**MINUTES** という単語は省略できます。  
+取得する必要がある、**SWITCH** またはオンライン インデックス再構築のロックが、DDL コマンドの実行時に待機する時間 (分単位で指定される整数値) です。SWITCH またはオンライン インデックス再構築の操作は、直ちに完了しようとします。操作が **MAX_DURATION** の期間ブロックされると、**ABORT_AFTER_WAIT** アクションのいずれかが実行されます。**MAX_DURATION** の期間は常に分単位なので、**MINUTES** という単語は省略できます。  
   
 ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  なし  
