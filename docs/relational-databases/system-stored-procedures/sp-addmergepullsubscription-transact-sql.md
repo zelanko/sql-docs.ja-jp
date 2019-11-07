@@ -49,11 +49,11 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**,、既定値は NULL です。  
   
-`[ @subscriber_type = ] 'subscriber_type'`サブスクライバーの種類を示します。 *subscriber_type*は**nvarchar (15)** ,、**global**,、**local**または**anonymous**にすることができます。 以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のバージョンでは、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
+`[ @subscriber_type = ] 'subscriber_type' サブスクライバーの種類を示します。 *subscriber_type* は **nvarchar (15)**、**global**、**local** または **anonymous** にすることができます。 以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のバージョンでは、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
   
 `[ @subscription_priority = ] subscription_priority`サブスクリプションの優先度です。 *subscription_priority*は**real**,、既定値は NULL です。 ローカルサブスクリプションと匿名サブスクリプションの場合、優先度は**0.0**です。 既定の競合回避モジュールでは、競合が検出された場合に優先される優先順位を使用します。 グローバルサブスクライバーの場合、サブスクリプションの優先度は、パブリッシャーの優先度である100未満である必要があります。  
   
-`[ @sync_type = ] 'sync_type'`サブスクリプションの同期の種類を示します。 *sync_type*は**nvarchar (15)** ,、既定値は**automatic**です。 **Automatic**または**none**を指定できます。 **automatic**の場合、パブリッシュされたテーブルのスキーマと初期データが最初にサブスクライバーに転送されます。 存在しない場合は、パブリッシュされたテーブルのスキーマと初期データがサブスクライバーに既に存在していると見なされます。 システム テーブルとデータは常に転送されます。  
+`[ @sync_type = ] 'sync_type'`サブスクリプションの同期の種類を示します。 *sync_type* は**nvarchar (15)**、既定値は **automatic** です。 **Automatic** または **none** を指定できます。 **automatic** の場合、パブリッシュされたテーブルのスキーマと初期データが最初にサブスクライバーに転送されます。 存在しない場合は、パブリッシュされたテーブルのスキーマと初期データがサブスクライバーに既に存在していると見なされます。 システム テーブルとデータは常に転送されます。  
   
 > [!NOTE]  
 >  値**none**を指定することはお勧めしません。  
