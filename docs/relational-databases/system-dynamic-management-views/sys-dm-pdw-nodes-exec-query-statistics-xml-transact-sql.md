@@ -1,5 +1,5 @@
 ---
-title: sys _pdw_nodes_exec_query_statistics_xml (Transact-sql) |Microsoft Docs
+title: sys.dm_pdw_nodes_exec_query_statistics_xml (Transact-sql) |Microsoft Docs
 description: インフライト要求のクエリ実行プランを返す動的管理ビュー。 この DMV を使用すると、一時的な統計情報を含む showplan XML を取得できます。
 ms.custom: ''
 ms.date: 10/14/2019
@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73145647"
 ---
-# <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-sql)
+# <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>sys.dm_pdw_nodes_exec_query_statistics_xml (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 インフライト要求のクエリ実行プランを返します。 この DMV を使用すると、一時的な統計情報を含む showplan XML を取得できます。
@@ -37,7 +37,7 @@ ms.locfileid: "73145647"
 |query_plan|**xml**|部分統計を含む*plan_handle*で指定されたクエリ実行プランのランタイム Showplan 表現を格納します。 Showplan は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアドプロシージャ呼び出し、ユーザー定義関数呼び出しなどを含むバッチごとに1つのプランが生成されます。 Nullable.|
 
 ## <a name="remarks"></a>備考
-[_Exec_query_statistics_xml](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql?view=sql-server-ver15)でも同じ解説が適用されます。   
+[sys.dm_exec_query_statistics_xml](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql?view=sql-server-ver15)でも同じ解説が適用されます。   
 
 ## <a name="permissions"></a>Permissions  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  

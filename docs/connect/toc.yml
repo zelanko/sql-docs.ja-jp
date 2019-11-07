@@ -12,7 +12,7 @@
   items:
     - name: Microsoft ADO.NET for SQL Server
       href: ../connect/ado-net/microsoft-ado-net-sql-server.md
-    - name: SqlClient ドライバーの概要
+    - name: SqlClient ドライバーの使用を開始する
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
         - name: '手順 1:ADO.NET 開発用に開発環境を構成する'

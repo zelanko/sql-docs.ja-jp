@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepublication (Transact-sql) |Microsoft Docs
+title: sp_addmergepublication (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72278352"
 ---
-# <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-sql)
+# <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   新しいマージパブリケーションを作成します。 このストアドプロシージャは、パブリッシャー側でパブリッシュされているデータベースに対して実行されます。  
@@ -218,9 +218,9 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 |値|説明|  
 |-----------|-----------------|  
-|**パブリッシャー**|競合レコードはパブリッシャーに格納されます。|  
-|**サブスクライバー**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーではサポートされません。|  
-|**両方**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
+|**publisher**|競合レコードはパブリッシャーに格納されます。|  
+|**subscriber**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーではサポートされません。|  
+|**both**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
 |NULL (既定値)|値*backward_comp_level*が**90rtm**で、他のすべての場合に**パブリッシャー**に対して、 *conflict_logging*が**自動的に設定**されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -247,7 +247,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

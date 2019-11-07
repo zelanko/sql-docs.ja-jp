@@ -27,12 +27,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca161710f302bf0cb8b7ea252d279f7c15f7a49b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81beacc9a78800c288964fcfc4a186b921a27608
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061171"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064598"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -191,7 +191,7 @@ CREATE CERTIFICATE certificate_name
 ### <a name="a-creating-a-self-signed-certificate"></a>A. 自己署名証明書を作成する  
  次の例では、`Shipping04` という証明書を作成します。 この証明書の秘密キーは、パスワードを使用して保護されます。  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
    WITH SUBJECT = 'Sammamish Shipping Records',   
@@ -202,7 +202,7 @@ GO
 ### <a name="b-creating-a-certificate-from-a-file"></a>B. ファイルから証明書を作成する  
  次の例では、データベースに証明書を作成し、ファイルからキー ペアを読み込みます。  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping11   
     FROM FILE = 'c:\Shipping\Certs\Shipping11.cer'   
     WITH PRIVATE KEY (FILE = 'c:\Shipping\Certs\Shipping11.pvk',   
@@ -215,7 +215,7 @@ GO
    
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. 署名付き実行可能ファイルから証明書を作成する  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping19   
     FROM EXECUTABLE FILE = 'c:\Shipping\Certs\Shipping19.dll';  
 GO  
@@ -223,7 +223,7 @@ GO
   
  `dll` ファイルからアセンブリを作成し、次にそのアセンブリから証明書を作成することもできます。  
   
-```  
+```sql  
 CREATE ASSEMBLY Shipping19   
     FROM ' c:\Shipping\Certs\Shipping19.dll'   
     WITH PERMISSION_SET = SAFE;  
@@ -240,7 +240,7 @@ GO
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 自己署名証明書を作成する  
  次の例では、暗号化パスワードを指定しないで、`Shipping04` という証明書を作成します。 この例は、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] で使用できます。
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  

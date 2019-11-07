@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.openlocfilehash: 22d90b2f2eeb569f5c6ef587bdbcc98e252c8957
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774205"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033040"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -78,6 +78,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DacApplicationName = (文字列)|DACPAC メタデータに格納されるアプリケーション名を定義します。 既定値は、データベース名です。|
 |**/p:**|DacMajorVersion = (INT32 ' 1 ')|DACPAC メタデータに格納されるメジャー バージョンを定義します。|
 |**/p:**|DacMinorVersion = (INT32 ' 0 ')|DACPAC メタデータに格納されるマイナー バージョンを定義します。|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには-1 を使用します。|
 |**/p:**|ExtractAllTableData = (ブール値)|すべてのユーザーテーブルのデータを抽出するかどうかを示します。 ' True ' の場合、すべてのユーザーテーブルのデータが抽出され、データを抽出するために個々のユーザーテーブルを指定することはできません。 ' False ' の場合は、データを抽出する1つ以上のユーザーテーブルを指定します。|
 |**/p:**|ExtractApplicationScopedObjectsOnly = (ブール値 ' True ')|true の場合、指定されたソースのアプリケーション スコープのオブジェクトのみを抽出します。 false の場合、指定されたソースのすべてのオブジェクトを抽出します。|
 |**/p:**|ExtractReferencedServerScopedElements=(BOOLEAN 'True')|true の場合、ソース データベース オブジェクトによって参照されるログイン オブジェクト、サーバー監査オブジェクト、および資格情報オブジェクトを抽出します。|
@@ -85,9 +86,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreExtendedProperties = (ブール値)|拡張プロパティを無視するかどうかを指定します。|
 |**/p:**|IgnorePermissions = (ブール値 ' True ')|アクセス許可を無視するかどうかを指定します。|
 |**/p:**|IgnoreUserLoginMappings = (BOOLEAN)|ユーザーとログイン間のリレーションシップを無視するかどうかを指定します。|
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには0を使用します。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
 |**/p:**|TableData = (STRING)|データの抽出元となるテーブルを示します。 名前の部分を角かっこで囲むか、schema_name の形式で指定します。 table_identifier の形式で指定します。|
-|**/p:**| TempDirectoryForTableData = (STRING)|パッケージファイルに書き込まれる前にテーブルデータをバッファーするために使用する一時ディレクトリを指定します。|
+|**/p:**| TempDirectoryForTableData = (STRING)|パッケージ ファイルに書き込む前にテーブル データをバッファーするために使用する、一時ディレクトリを指定します。|
 |**/p:**|VerifyExtraction = (ブール値)|抽出された DACPAC を検証するかどうかを指定します。|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>Publish のパラメーター、プロパティ、および SQLCMD 変数
@@ -139,6 +141,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments = (STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors = (文字列)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
+|**/p:**|AdditionalDeploymentContributorPaths = (STRING)| 追加の配置コントリビューターを読み込むパスを指定します。 複数の値を指定する場合は、セミコロンで区切ります。 | 
 |**/p:**|AllowDropBlockingAssemblies = (ブール値)|このプロパティは、ブロックしているアセンブリを配置計画から削除する際に SqlClr の配置によって使用されます。 既定では、参照しているアセンブリを削除する必要がある場合、ブロックまたは参照しているアセンブリによって、アセンブリの更新がブロックされます。|
 |**/p:**|AllowIncompatiblePlatform = (ブール値)|互換性がない SQL Server プラットフォームであっても操作を試行するかどうかを指定します。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement = (ブール値)|このプロパティが true に設定されている場合は、行レベル セキュリティを使用するテーブルに対するデータ モーションをブロックしません。 既定値は false です。|
@@ -149,7 +152,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|CommentOutSetVarDeclarations = (ブール値)|生成された公開スクリプトで SETVAR 変数の宣言をコメントアウトするかどうかを指定します。 このようなコメント アウトが必要になるのは、SQLCMD.EXE などのツールを使用して、公開時にコマンド ラインで値を指定する予定がある場合などです。|
 |**/p:**|Compareby Targetcollation = (BOOLEAN)|この設定では、配置の際にデータベースの照合順序をどのように処理するかを指定します。既定では、ソースで指定されている照合順序と異なる場合にターゲット データベースの照合順序が更新されます。 このオプションを設定した場合、ターゲット データベース (またはサーバー) の照合順序が使用されます。|
 |**/p:**|CreateNewDatabase = (ブール値)|データベースへの公開時に、ターゲット データベースを更新するか、削除して再作成するかを指定します。|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。|
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;汎用目的&#124;businesscritical&#124;hyperscale&#124;default} ' default ')|Azure SQL Database のエディションを定義します。|
 |**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')|SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには-1 を使用します。|
 |**/p:**|DatabaseMaximumSize = (INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。|
 |**/p:**|DatabaseServiceObjective = (文字列)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。|
@@ -269,9 +272,11 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 |プロパティ|[値]|[説明]|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには-1 を使用します。|
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには0を使用します。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
 |**/p:**|TableData = (STRING)|データの抽出元となるテーブルを示します。 名前の部分を角かっこで囲むか、schema_name の形式で指定します。 table_identifier の形式で指定します。|
-|**/p:**|TempDirectoryForTableData = (STRING)|パッケージファイルに書き込まれる前にテーブルデータをバッファーするために使用する一時ディレクトリを指定します。|
+|**/p:**|TempDirectoryForTableData = (STRING)|パッケージ ファイルに書き込む前にテーブル データをバッファーするために使用する、一時ディレクトリを指定します。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|予期されるターゲット エンジンのバージョンを指定します。 これは、生成された bacpac で、Azure SQL Database サーバーでサポートされているオブジェクト (メモリ最適化テーブルなど) を使用できるようにするかどうかに影響します。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12 のサポートされているフルテキスト ドキュメントの種類を確認するかどうかを指定します。|
   
@@ -307,11 +312,14 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |プロパティ|[値]|[説明]|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。|
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;汎用目的&#124;businesscritical&#124;hyperscale&#124;default} ' default ')|Azure SQL Database のエディションを定義します。|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには-1 を使用します。|
 |**/p:**|DatabaseMaximumSize = (INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。|
 |**/p:**|DatabaseServiceObjective = (文字列)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。|
 |**/p:**|ImportContributorArguments = (STRING)|配置コントリビューターに配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|ImportContributors = (文字列)|bacpac をインポートするときに実行する配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
+|**/p:**|ImportContributorPaths = (STRING)|追加の配置コントリビューターを読み込むパスを指定します。 複数の値を指定する場合は、セミコロンで区切ります。 |
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには0を使用します。|
 |**/p:**|Storage=({File&#124;Memory})|データベース モデルの構築時に要素をどのように格納するかを指定します。 パフォーマンス上の理由から、既定値は InMemory です。 大規模なデータベースの場合は、File バックアップ ストレージが必要です。|
   
 ## <a name="deployreport-parameters-and-properties"></a>DeployReport のパラメーターおよびプロパティ
@@ -360,6 +368,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments = (STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors = (文字列)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
+|**/p:**|AdditionalDeploymentContributorPaths = (STRING)| 追加の配置コントリビューターを読み込むパスを指定します。 複数の値を指定する場合は、セミコロンで区切ります。 | 
 |**/p:**|AllowDropBlocking アセンブリ = (ブール値)|このプロパティは、ブロックしているアセンブリを配置計画から削除する際に SqlClr の配置によって使用されます。 既定では、参照しているアセンブリを削除する必要がある場合、ブロックまたは参照しているアセンブリによって、アセンブリの更新がブロックされます。|
 |**/p:**|AllowIncompatiblePlatform = (ブール値)|互換性がない SQL Server プラットフォームであっても操作を試行するかどうかを指定します。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement = (ブール値)|このプロパティが true に設定されている場合は、行レベル セキュリティを使用するテーブルに対するデータ モーションをブロックしません。 既定値は false です。|
@@ -370,7 +379,8 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|CommentOutSetVarDeclarations = (ブール値)|生成された公開スクリプトで SETVAR 変数の宣言をコメントアウトするかどうかを指定します。 このようなコメント アウトが必要になるのは、SQLCMD.EXE などのツールを使用して、公開時にコマンド ラインで値を指定する予定がある場合などです。 |
 |**/p:**|Compareby Targetcollation = (BOOLEAN)|この設定では、配置の際にデータベースの照合順序をどのように処理するかを指定します。既定では、ソースで指定されている照合順序と異なる場合にターゲット データベースの照合順序が更新されます。 このオプションを設定した場合、ターゲット データベース (またはサーバー) の照合順序が使用されます。 |
 |**/p:**|CreateNewDatabase = (ブール値)|データベースへの公開時に、ターゲット データベースを更新するか、削除して再作成するかを指定します。 |
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。 |
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;汎用目的&#124;businesscritical&#124;hyperscale&#124;default} ' default ')|Azure SQL Database のエディションを定義します。|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには-1 を使用します。|
 |**/p:**|DatabaseMaximumSize = (INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。|
 |**/p:**|DatabaseServiceObjective = (文字列)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。 |
 |**/p:**|DeployDatabaseInSingleUserMode = (ブール値)|true の場合、データベースは配置前にシングル ユーザー モードに設定されます。 |
@@ -429,7 +439,8 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|IgnoreWithNocheckOnForeignKeys = (ブール値)|データベースに公開するとき、外部キーの WITH NOCHECK 句の値の相違を無視するか、更新するかを指定します。| 
 |**/p:**|IncludeCompositeObjects = (ブール値)|単一の公開操作の一部としてすべての複合要素を含めます。|
 |**/p:**|IncludeTransactionalScripts = (ブール値)|データベースに公開するとき、可能であればトランザクション ステートメントを使用するかどうかを指定します。|
- |**/p:**|NoAlterStatementsToChangeClrTypes = (ブール値)|公開で、相違がある場合に ALTER ASSEMBLY ステートメントを発行するのではなく、常にアセンブリを削除して再作成することを指定します。 |
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには0を使用します。|
+|**/p:**|NoAlterStatementsToChangeClrTypes = (ブール値)|公開で、相違がある場合に ALTER ASSEMBLY ステートメントを発行するのではなく、常にアセンブリを削除して再作成することを指定します。 |
 |**/p:**|PopulateFilesOnFileGroups = (ブール値 ' True ')|ターゲット データベースで新しい FileGroup が作成されたときに新しいファイルも作成するかどうかを指定します。 |
 |**/p:**|RegisterDataTierApplication = (ブール値)|スキーマがデータベース サーバーに登録されるかどうかを指定します。 
 |**/p:**|Rundeploymentplan エグゼキュータ = (ブール値)|他の操作が実行されるときに DeploymentPlanExecutor コントリビューターを実行する必要があるかどうかを指定します。|
@@ -521,6 +532,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments = (STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。
 |**/p:**|AdditionalDeploymentContributors = (文字列)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。
+|**/p:**|AdditionalDeploymentContributorPaths = (STRING)| 追加の配置コントリビューターを読み込むパスを指定します。 複数の値を指定する場合は、セミコロンで区切ります。 | 
 |**/p:**|AllowDropBlockingAssemblies = (ブール値)|このプロパティは、ブロックしているアセンブリを配置計画から削除する際に SqlClr の配置によって使用されます。 既定では、参照しているアセンブリを削除する必要がある場合、ブロックまたは参照しているアセンブリによって、アセンブリの更新がブロックされます。
 |**/p:**|AllowIncompatiblePlatform = (ブール値)|互換性がない SQL Server プラットフォームであっても操作を試行するかどうかを指定します。
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement = (ブール値)|このプロパティが true に設定されている場合は、行レベル セキュリティを使用するテーブルに対するデータ モーションをブロックしません。 既定値は false です。
@@ -531,7 +543,8 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|CommentOutSetVarDeclarations = (ブール値)|生成された公開スクリプトで SETVAR 変数の宣言をコメントアウトするかどうかを指定します。 このようなコメント アウトが必要になるのは、SQLCMD.EXE などのツールを使用して、公開時にコマンド ラインで値を指定する予定がある場合などです。
 |**/p:**|Compareby Targetcollation = (BOOLEAN)|この設定では、配置の際にデータベースの照合順序をどのように処理するかを指定します。既定では、ソースで指定されている照合順序と異なる場合にターゲット データベースの照合順序が更新されます。 このオプションを設定した場合、ターゲット データベース (またはサーバー) の照合順序が使用されます。|
 |**/p:**|CreateNewDatabase = (ブール値)|データベースへの公開時に、ターゲット データベースを更新するか、削除して再作成するかを指定します。
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;汎用目的&#124;businesscritical&#124;hyperscale&#124;default} ' default ')|Azure SQL Database のエディションを定義します。|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには-1 を使用します。|
 |**/p:**|DatabaseMaximumSize = (INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。
 |**/p:**|DatabaseServiceObjective = (文字列)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。
 |**/p:**|DeployDatabaseInSingleUserMode = (ブール値)|true の場合、データベースは配置前にシングル ユーザー モードに設定されます。
@@ -550,7 +563,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|DropStatisticsNotInSource = (ブール値 ' True ')|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しない統計をターゲット データベースから削除するかどうかを指定します。|
 |**/p:**|ExcludeObjectType = (STRING)|配置時に無視するオブジェクトの種類。 有効なオブジェクトの種類名は、Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers です。
 |**/p:**|ExcludeObjectTypes = (STRING)|配置時に無視するオブジェクトの種類のセミコロン区切りリスト。 有効なオブジェクトの種類名は、Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers です。
-|**/p:**|GenerateSmartDefaults = (ブール値)|NULL 値を許可しない列を使用してデータが含まれるテーブルを更新するときに自動的に既定値を指定します。
+|**/p:**|GenerateSmartDefaults = (ブール値)|null 値が許可されない列を含むデータが格納されているテーブルを更新する際に、自動的に既定値が設定されます。
 |**/p:**|IgnoreAnsiNulls = (ブール値 ' True ')|データベースに公開するとき、ANSI NULLS 設定の相違を無視するか、更新するかを指定します。
 |**/p:**|IgnoreAuthorizer = (ブール値)|データベースに公開するとき、Authorizer の相違を無視するか、更新するかを指定します。
 |**/p:**|IgnoreColumnCollation = (ブール値)|データベースに公開するとき、列の照合順序の相違を無視するか、更新するかを指定します。
@@ -590,6 +603,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|IgnoreWithNocheckOnForeignKeys = (ブール値)|データベースに公開するとき、外部キーの WITH NOCHECK 句の値の相違を無視するか、更新するかを指定します。|
 |**/p:**|IncludeCompositeObjects = (ブール値)|単一の公開操作の一部としてすべての複合要素を含めます。|
 |**/p:**|IncludeTransactionalScripts = (ブール値)|データベースに公開するとき、可能であればトランザクション ステートメントを使用するかどうかを指定します。|
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには0を使用します。|
 |**/p:**|NoAlterStatementsToChangeClrTypes = (ブール値)|公開で、相違がある場合に ALTER ASSEMBLY ステートメントを発行するのではなく、常にアセンブリを削除して再作成することを指定します。|
 |**/p:**|PopulateFilesOnFileGroups = (ブール値 ' True ')|ターゲット データベースで新しい FileGroup が作成されたときに新しいファイルも作成するかどうかを指定します。|
 |**/p:**|RegisterDataTierApplication = (ブール値)|スキーマがデータベース サーバーに登録されるかどうかを指定します。|

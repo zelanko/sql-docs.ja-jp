@@ -85,12 +85,16 @@ sp_addmergearticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**table** (既定値)|スキーマとデータを含むテーブル。 レプリケーションはテーブルを監視して、レプリケートするデータを特定します。|  
 |**func schema only**|スキーマのみを使用する関数。|  
+
 |**indexed view schema only**|スキーマのみを使用するインデックス付きビュー。|  
+
 |**proc schema only**|スキーマのみを使用するストアド プロシージャ。|  
 |**synonym schema only**|スキーマのみを使用するシノニム。|  
 |**view schema only**|スキーマのみを使用するビュー。|  
   
+
 `[ @description = ] 'description'` は、アーティクルの説明です。 *description* は **nvarchar (255)**、既定値は NULL です。  
+
   
 `[ @column_tracking = ] 'column_tracking'` は、列レベルの追跡の設定です。 *column_tracking*は**nvarchar (10)** ,、既定値は FALSE。 **true**列の追跡を有効にします。 **false**列の追跡をオフにし、競合の検出を行レベルで行います。 テーブルが他のマージ レプリケーションで既にパブリッシュされている場合は、このテーブルに基づく既存のアーティクルが使用しているものと同じ列追跡値を使用する必要があります。 このパラメーターは、テーブル アーティクルのみに固有のものです。  
   
@@ -331,11 +335,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |アーティクルの種類|スキーマ オプションの値|  
 |------------------|-------------------------|  
-|**func スキーマのみ**|**0x01**|  
+|**func schema only**|**0x01**|  
 |**インデックス付きビュースキーマのみ**|**0x01**|  
-|**proc スキーマのみ**|**0x01**|  
+|**proc schema only**|**0x01**|  
 |**table**|**0X0c034fd1** -  @ no__t 以降の互換性のあるパブリケーションとネイティブモードのスナップショット。<br /><br /> **0X08034ff1** -  @ no__t 以降の互換パブリケーションとキャラクターモードのスナップショット。|  
-|**スキーマのみを表示**|**0x01**|  
+|**view schema only**|**0x01**|  
   
 > [!NOTE]  
 >  パブリケーションで以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサポートされている場合、**テーブル**の既定のスキーマオプションは**0X30034ff1**になります。  
@@ -345,11 +349,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |アーティクルの種類|スキーマオプションの値|  
 |------------------|--------------------------|  
-|**func スキーマのみ**|**0x01**と**0x2000**|  
+|**func schema only**|**0x01**と**0x2000**|  
 |**インデックス付きビュースキーマのみ**|**0x01**、 **0x040,** 、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および**0x200000**|  
-|**proc スキーマのみ**|**0x01**と**0x2000**|  
+|**proc schema only**|**0x01**と**0x2000**|  
 |**table**|すべてのオプション。|  
-|**スキーマのみを表示**|**0x01**、 **0x040,** 、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および**0x200000**|  
+|**view schema only**|**0x01**、 **0x040,** 、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および**0x200000**|  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  

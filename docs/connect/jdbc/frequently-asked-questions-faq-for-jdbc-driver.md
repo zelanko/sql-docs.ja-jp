@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーのよくあるご質問 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2860034ae67fc7cc376e84251dbeebc5a123fade
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028072"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049818"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC ドライバーのよくあるご質問 (FAQ)
 
@@ -34,7 +34,7 @@ JDBC Driver はオープンソースであり、[GitHub](https://github.com/micr
 **Microsoft ダウンロード センターで入手できる JDBC ドライバー パッケージと GitHub で入手できる JDBC ドライバーは何が違いますか。**  
 Microsoft JDBC ドライバー用の GitHub リポジトリで入手できる JDBC ドライバー ファイルは JDBC ドライバーの中核であり、リポジトリに示されているオープンソース ライセンスの対象です。 Microsoft ダウンロード センターのドライバー パッケージには、Windows に統合された認証と JDBC ドライバーとの XA トランザクションを可能にするための追加ライブラリが含まれています。 これらの追加ライブラリは、ダウンロード可能パッケージに含まれているライセンスの対象です。
 
-**ドライバーをアップグレードする場合に知っておく必要があることは何ですか。**
+**ドライバーをアップグレードする場合に知っておく必要があることは何ですか。**  
 Microsoft JDBC Driver 7.4 では、DBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 3 つの JAR クラス ライブラリが含まれます。
 
 | JAR                        | JDBC 仕様            | JDK のバージョン |
@@ -42,20 +42,23 @@ Microsoft JDBC Driver 7.4 では、DBC 4.2 および 4.3 (一部) 仕様がサ�
 | mssql-jdbc-7.4.1. jre12 | JDBC 4.3 (一部) および 4.2 | JDK 12.0    |
 | mssql-jdbc-7.4.1. jre11 | JDBC 4.3 (一部) および 4.2 | JDK 11.0    |
 | mssql-jdbc-7.4.1. jre8  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- Microsoft JDBC Driver 7.2 では、JDBC 4.2 および 4.3 (一部) の仕様がサポートされ、インストール パッケージには次に示す 2 つの JAR クラス ライブラリが含まれます。
+Microsoft JDBC Driver 7.2 では、JDBC 4.2 および 4.3 (一部) の仕様がサポートされ、インストール パッケージには次に示す 2 つの JAR クラス ライブラリが含まれます。
 
 | JAR                        | JDBC 仕様            | JDK のバージョン |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3 (一部) および 4.2 | JDK 11.0    |
 | mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- Microsoft JDBC Driver 7.0 では、JDBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 2 つの JAR クラス ライブラリが含まれます。
+Microsoft JDBC Driver 7.0 では、JDBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 2 つの JAR クラス ライブラリが含まれます。
 
 | JAR                        | JDBC 仕様            | JDK のバージョン |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 (一部) および 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 6.4 では、DBC 4.1、4.2、および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 3 つの JAR クラス ライブラリが含まれます。
 
@@ -64,6 +67,7 @@ Microsoft JDBC Driver 6.4 では、DBC 4.1、4.2、および 4.3 (一部) 仕様
 | mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3 (一部)、4.2、4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2、4.1                  | JDK 8.0     |
 | mssql-jdbc-6.4.0.jre7.jar | JDBC 4.1                           | JDK 7.0     |
+| &nbsp;                    | &nbsp;                             | &nbsp;      |
 
 Microsoft JDBC Driver 6.2 では、DBC 4.0、4.1、および 4.2 仕様がサポートされ、インストール パッケージには次に示す 2 つの JAR クラス ライブラリが含まれます。
 
@@ -71,6 +75,7 @@ Microsoft JDBC Driver 6.2 では、DBC 4.0、4.1、および 4.2 仕様がサポ
 | ------------------------- | ---------------------- | ----------- |
 | mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2、4.1、4.0 | JDK 8.0     |
 | mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1、4.0       | JDK 7.0     |
+| &nbsp;                    | &nbsp;                 | &nbsp;      |
 
 Microsoft JDBC Drivers 6.0 および 4.2 for SQL Server では、DBC 4.0、4.1、および 4.2 仕様がサポートされ、インストール パッケージには次に示す 2 つの JAR クラス ライブラリが含まれます。
 
@@ -78,12 +83,14 @@ Microsoft JDBC Drivers 6.0 および 4.2 for SQL Server では、DBC 4.0、4.1�
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.2、4.1、4.0 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1、4.0       | JDK 7.0     |
+| &nbsp;        | &nbsp;                 | &nbsp;      |
 
 Microsoft JDBC Driver 4.1 for SQL Server では、DBC 4.0 仕様がサポートされ、インストール パッケージには次に示す 1 つの JAR クラス ライブラリが含まれます。
 
 | JAR           | JDBC 仕様 | JDK のバージョン     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0、6.0 |
+| &nbsp;        | &nbsp;             | &nbsp;      |
 
 **既存の SQL Server のバージョンで最新のドライバーを使用するには、アプリケーションのコードを変更する必要がありますか。**  
 通常、ドライバーは下位互換性を持つよう設計されているため、ドライバーをアップグレードする際に既存のアプリケーションを変更する必要はありません。 ドライバーの新しいバージョンに破壊的変更が導入された場合は、「[Microsoft JDBC Driver のリリース ノート](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)」セクションに、変更に関する詳細と既存のアプリケーションへの影響が記載されます。 さらに、そのリリースと既知の問題で修正されたバグの一覧については、ドライバーに付属のリリース ノートをご覧ください。
@@ -91,21 +98,20 @@ Microsoft JDBC Driver 4.1 for SQL Server では、DBC 4.0 仕様がサポート�
 **ドライバーの料金はいくらですか。**  
 Microsoft SQL Server 用 JDBC Driver は、追加料金なしでご利用いただけます。
 
-**ドライバーを個人で再配布できますか。**
-JDBC Driver 4.1、4.2、6.0、6.2、6.4、および 7.0 を再配布できます。 ライセンス契約の「再頒布可能コード」の条項を見直してください。
+**ドライバーを個人で再配布できますか。**  
+JDBC Driver 6.0、6.2、6.4、および 7.0 は再配布可能です。 ライセンス契約の「再頒布可能コード」の条項を見直してください。
 
-**ドライバーを使用して Linux コンピューターから Microsoft SQL Server にアクセスできますか。**
+**ドライバーを使用して Linux コンピューターから Microsoft SQL Server にアクセスできますか。**  
 はい。 ドライバーを使用して、Linux、Unix、他の Windows 以外のプラットフォームから SQL Server にアクセスできます。 詳細については、「[Microsoft SQL Server 用 JDBC Driver のサポート表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)」をご覧ください。
 
-**ドライバーは Secure Sockets Layer (SSL) 暗号化をサポートしていますか。**
+**ドライバーは Secure Sockets Layer (SSL) 暗号化をサポートしていますか。**  
 バージョン 1.2 以降のドライバーは、Secure Sockets Layer (SSL) 暗号化をサポートしています。 詳細については、「[SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)」をご覧ください。
 
 **Microsoft SQL Server 用 JDBC Driver ではどのような認証がサポートされていますか。**  
 次の表は、使用可能な認証オプションを示しています。 4\.0 リリース以降のドライバーでは、ピュア Java Kerberos 認証が使用可能です。
 
-|             |                                       |
+| プラットフォーム    | 認証                        |
 | ----------- | ------------------------------------- |
-| プラットフォーム    | [認証]                        |
 | Windows 以外 | ピュア Java Kerberos                    |
 | Windows 以外 | SQL Server                            |
 | Windows 以外 | Azure Active Directory 認証 |
@@ -114,6 +120,7 @@ JDBC Driver 4.1、4.2、6.0、6.2、6.4、および 7.0 を再配布できます
 | Windows     | Kerberos と NTLM バックアップ             |
 | Windows     | NTLM                                  |
 | Windows     | Azure Active Directory 認証 |
+| &nbsp;      | &nbsp;                                |
 
 **ドライバーは、インターネット プロトコル バージョン 6 (IPv6) のアドレスをサポートしていますか。**  
 可能。 ドライバーでは、IPv6 アドレスの使用がサポートされます。 接続プロパティのコレクションと serverName 接続文字列のプロパティを使用します。 詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」をご覧ください。
@@ -127,7 +134,7 @@ JDBC Driver 4.1、4.2、6.0、6.2、6.4、および 7.0 を再配布できます
 **ドライバーのサポートを利用できますか。**  
 さまざまなサポート オプションをご利用いただけます。 Microsoft が監視している [GitHub リポジトリ](https://github.com/microsoft/mssql-jdbc)に質問や問題を投稿できます。 [フォーラム](https://go.microsoft.com/fwlink/?LinkID=246673)は、Microsoft、MVP、およびコミュニティによって監視されています。 マイクロソフト カスタマー サポートにお問い合わせいただくこともできます。 開発チームは、サードパーティのアプリケーション サーバーの外部で問題の再現をお客様にお願いする場合があります。 ホストしている Java コンテナー環境の外部で問題を再現できない場合は、チームが引き続きお客様を支援できるよう、関連するサードパーティを介入させる必要があります。 チームは、Windows などのオペレーティング システムで問題を再現することをお客様にお願いする場合もあります。
 
-**ドライバーは、サードパーティのアプリケーション サーバーでの使用が認定されていますか。**
+**ドライバーは、サードパーティのアプリケーション サーバーでの使用が認定されていますか。**  
 ドライバーは、IBM WebSphere、SAP NetWeaver などのさまざまなアプリケーション サーバーに対してテスト済みです。
 
 **どのようにしてトレースを有効にできますか。**  

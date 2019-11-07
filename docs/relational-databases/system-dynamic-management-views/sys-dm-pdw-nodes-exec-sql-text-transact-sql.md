@@ -1,5 +1,5 @@
 ---
-title: sys _pdw_nodes_exec_sql_text (Transact-sql) |Microsoft Docs
+title: sys.dm_pdw_nodes_exec_sql_text (Transact-sql) |Microsoft Docs
 description: 指定された sql_handle によって識別される SQL バッチのテキストを返す動的管理ビュー。
 ms.custom: ''
 ms.date: 10/14/2019
@@ -31,12 +31,12 @@ ms.locfileid: "73145677"
 |**pdw_node_id**|**int**|ノードに関連付けられている一意の数値 ID。|
 |**dbid**|**smallint**|データベースの ID。<br /><br /> 計画外および準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。|  
 |**objectid**|**int**|オブジェクトの ID。<br /><br /> アドホックおよび準備された SQL ステートメントの場合は NULL です。|  
-|**number**|**smallint**|番号付きストアドプロシージャの場合、この列にはストアドプロシージャの数が返されます。 詳細については、「 [numbered_procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)」を参照してください。<br /><br /> アドホックおよび準備された SQL ステートメントの場合は NULL です。|  
-|**暗号**|**bit**|1: SQL テキストは暗号化されています。<br /><br /> 0: SQL テキストは暗号化されていません。|  
+|**number**|**smallint**|番号付きストアドプロシージャの場合、この列にはストアドプロシージャの数が返されます。 詳細については、「[sys.numbered_procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)」を参照してください。<br /><br /> アドホックおよび準備された SQL ステートメントの場合は NULL です。|  
+|**encrypted**|**bit**|1: SQL テキストは暗号化されています。<br /><br /> 0: SQL テキストは暗号化されていません。|  
 |**text**|**nvarchar(max)**|SQL クエリのテキスト。<br /><br /> 暗号化されたオブジェクトの場合は NULL です。|  
 
 ## <a name="remarks"></a>備考  
-[_Exec_sql_text](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=sql-server-ver15)でも同じ解説が適用されます。  
+[sys.dm_exec_sql_text](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=sql-server-ver15)でも同じ解説が適用されます。  
   
 ## <a name="permissions"></a>Permissions  
  **Sysadmin**サーバーロールが必要です。または、サーバーに対する `VIEW SERVER STATE` 権限が必要です。  

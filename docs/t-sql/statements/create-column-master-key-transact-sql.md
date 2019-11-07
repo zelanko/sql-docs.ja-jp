@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064562"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ WITH (
   
 列マスター キーの列マスター キー メタデータ エントリを作成します。 MSSQL_CNG_STORE プロバイダーを使用するクライアント アプリケーションが、列マスター キーにアクセスします。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 列マスター キーの列マスター キー メタデータ エントリを作成します。 列マスター キーは、AZURE_KEY_VAULT プロバイダーを使用して列マスター キーにアクセスするクライアント アプリケーション用に、Azure キー コンテナーに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 列マスター キーの列マスター キー メタデータ エントリを作成します。 列マスター キーは、カスタム列マスター キー ストアに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. エンクレーブ対応の列マスター キーを作成します  
 次の例では、エンクレーブ対応の列マスター キーに対する列マスター キー メタデータ エントリを作成します。 エンクレーブ対応の列マスター キーは、MSSQL_CERTIFICATE_STORE プロバイダーを使用して列マスター キーにアクセスするクライアント アプリケーションの証明書ストアに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 エンクレーブ対応の列マスター キーに対する列マスター キー メタデータ エントリを作成します。 エンクレーブ対応の列マスター キーは、AZURE_KEY_VAULT プロバイダーを使用して列マスター キーにアクセスするクライアント アプリケーション用に、Azure キー コンテナーに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
