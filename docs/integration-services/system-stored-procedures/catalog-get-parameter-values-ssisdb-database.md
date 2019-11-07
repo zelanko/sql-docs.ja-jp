@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc2237ff2f7e7e5610a88288c386359c57937f90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296804"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049949"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB データベース)
 
@@ -44,7 +44,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  パラメーターが存在するプロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
  [ @package_name = ] *package_name*  
- パッケージの名前です。 パッケージ名を指定して、すべてのプロジェクト パラメーターと指定されたパッケージのパラメーターを取得します。 NULL を使用すると、すべてのプロジェクト パラメーターとすべてのパッケージのパラメーターを取得します。 *package_name* は **nvarchar (260)** です。  
+ パッケージの名前です。 パッケージ名を指定して、すべてのプロジェクト パラメーターと指定されたパッケージのパラメーターを取得します。 *package_name* は **nvarchar (260)** です。  
   
  [ @reference_id = ] *reference_id*  
  環境参照の一意識別子。 このパラメーターはオプションです。 *reference_id* は **bigint** です。  

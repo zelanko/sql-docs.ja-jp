@@ -14,13 +14,6 @@
           href: sql-server/what-s-new-in-sql-server-2017.md
         - name: SQL Server 2016
           href: sql-server/what-s-new-in-sql-server-2016.md
-    - name: データベース エンジンの新機能
-      href: database-engine/sql-server-database-engine-overview.md
-      items:
-        - name: SQL Server 2017
-          href: database-engine/whats-new-in-sql-server-2017.md
-        - name: SQL Server 2016
-          href: database-engine/whats-new-in-sql-server-2016.md
     - name: エディションと機能
       items:
         - name: SQL Server 2019
@@ -32,7 +25,7 @@
     - name: リリース ノート
       items:
         - name: SQL Server 2019
-          href: sql-server/sql-server-ver15-release-notes.md
+          href: sql-server/sql-server-version-15-release-notes.md
         - name: SQL Server 2017
           href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: SQL Server 2016
@@ -57,7 +50,7 @@
       items:
         - name: 開始するには
           items:
-            - name: ビッグ データ クラスターをデプロイする
+            - name: 配置
               href: big-data-cluster/deploy-get-started.md
             - name: サンプル データを読み込む
               href: big-data-cluster/tutorial-load-sample-data.md
@@ -67,6 +60,8 @@
               href: big-data-cluster/deploy-big-data-tools.md
             - name: azdata をインストールする
               items:
+                - name: Windows インストーラーを使う
+                  href: big-data-cluster/deploy-install-azdata-installer.md
                 - name: Linux パッケージ マネージャーを使う
                   href: big-data-cluster/deploy-install-azdata-linux-package.md
                 - name: pip を使う
@@ -83,8 +78,14 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: オフライン展開
               href: big-data-cluster/deploy-offline.md
+            - name: Active Directory モード
+              href: big-data-cluster/deploy-active-directory.md
             - name: 高可用性で展開する
-              href: big-data-cluster/deployment-high-availability.md
+              items:
+                - name: マスター インスタンス
+                  href: big-data-cluster/deployment-high-availability.md
+                - name: HDFS のノード名と Spark
+                  href: big-data-cluster/deployment-high-availability-hdfs-spark.md
             - name: Kubernetes クラスター
               items:
                 - name: Azure Kubernetes Service
@@ -117,6 +118,10 @@
           href: big-data-cluster/concept-security.md
     - name: 操作方法ガイド
       items:
+        - name: 構成
+          items:
+            - name: SQL Server マスター インスタンス
+              href: big-data-cluster/configure-sql-server-master-instance.md
         - name: データの仮想化
           items:
             - name: リレーショナル データ
@@ -137,6 +142,8 @@
                   href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
                 - name: HDFS の階層制御の S3 のマウント
                   href: big-data-cluster/hdfs-tiering-mount-s3.md
+                - name: HDFS のアクセス許可の管理
+                  href: big-data-cluster/hdfs-tiering-manage-permissions.md
         - name: データ インジェスト
           items:
             - name: CURL を使用したデータの読み込み
@@ -157,6 +164,8 @@
               href: big-data-cluster/big-data-cluster-consume-apps.md
         - name: ビッグ データ/Machine Learning
           items:
+            - name: Machine Learning Services (Python、R) の使用
+              href: big-data-cluster/machine-learning-services.md
             - name: PROSE コード アクセラレータを使用したデータ ラングリング
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: MLeap での Spark の機械学習モデル
@@ -165,9 +174,9 @@
               href: big-data-cluster/sparklyr-from-RStudio.md
             - name: SQL Server での Spark を統合する
               href: big-data-cluster/spark-mssql-connector.md
-        - name: SQL Server ビッグ データ クラスターを管理する
+        - name: 管理する
           items:
-            - name: ビッグ データ クラスターに接続する
+            - name: 接続する
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: クラスターの状態を表示する
               href: big-data-cluster/view-cluster-status.md
@@ -245,10 +254,6 @@
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs status
                   href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-                - name: bdc プール
-                  href: big-data-cluster/reference-azdata-bdc-pool.md
-                - name: bdc プールの状態
-                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
                 - name: bdc spark
                   href: big-data-cluster/reference-azdata-bdc-spark.md
                 - name: bdc spark バッチ
@@ -4168,7 +4173,11 @@
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
         - name: ハードウェアとソフトウェアの要件
-          href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+          items:
+            - name: SQL Server 2019
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+            - name: SQL Server 2017 以前
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: セキュリティに関する考慮事項
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
         - name: ネットワーク プロトコルとネットワーク ライブラリ
@@ -4247,6 +4256,8 @@
       items:
         - name: 互換性証明書
           href: database-engine/install-windows/compatibility-certification.md
+        - name: サポートされているバージョンとエディションのアップグレード SQL Server 2019
+          href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
         - name: サポートされているバージョンとエディションのアップグレード SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: サポートされているバージョンとエディションのアップグレード SQL Server 2016
@@ -8125,29 +8136,91 @@
               href: relational-databases/security/authentication-access/create-a-credential.md
         - name: 暗号化
           items:
+            - name: Always Encrypted
+              items:
+                - name: Configure Always Encrypted using PowerShell
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                - name: SSMS を使用した Always Encrypted の構成
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
+                - name: Always Encrypted キーのプロビジョニング
+                  items:
+                    - name: 列マスター キーの作成と保存
+                      href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
+                    - name: SSMS を使用した Always Encrypted キーのプロビジョニング
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
+                    - name: PowerShell を使用した Always Encrypted キーのプロビジョニング
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                - name: Always Encrypted キーの交換
+                  items:
+                    - name: SSMS を使用した Always Encrypted キーの交換
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
+                    - name: PowerShell を使用した Always Encrypted キーの交換
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                - name: Always Encrypted を使用した列の構成
+                  items:
+                    - name: Always Encrypted ウィザードを使用した列暗号化の構成
+                      href: relational-databases/security/encryption/always-encrypted-wizard.md
+                    - name: PowerShell での Always Encrypted を使用した列暗号化の構成
+                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
+                    - name: DAC パッケージでの Always Encrypted を使用した列暗号化の構成
+                      href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
+                - name: Always Encrypted を使用した列のクエリ
+                  items:
+                    - name: SSMS での Always Encrypted を使用した列のクエリ
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                - name: Always Encrypted で保護された機密データの移行
+                  items:
+                    - name: Always Encrypted を使用したデータベースのエクスポートとインポート
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
+                    - name: Always Encrypted を使用したデータベースのバックアップと復元
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
+                    - name: インポートおよびエクスポート ウィザードを使用したデータの移行
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
+                    - name: Always Encrypted を使用した暗号化データの列への一括読み込み
+                      href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+                - name: Always Encrypted を使用したアプリケーションの開発
+                  items:
+                    - name: Always Encrypted を使用したアプリケーションの開発
+                      href: relational-databases/security/encryption/always-encrypted-client-development.md
+                    - name: .NET Framework でのアプリケーションの開発
+                      href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+            - name: セキュア エンクレーブを使用する Always Encrypted
+              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+              items:
+                - name: エンクレーブと構成証明をサポートする環境の設定
+                  items:
+                    - name: ホスト ガーディアン サービスの構成証明を使用した VBS エンクレーブの設定
+                      items:
+                        - name: ホスト ガーディアン サービスの構成証明の計画
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーの管理
+                  items:
+                    - name: エンクレーブ対応キーの管理
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
+                    - name: エンクレーブ対応キーをプロビジョニングする
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
+                    - name: エンクレーブ対応キーの交換
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted による列の構成
+                  items:
+                    - name: 列暗号化の構成
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+                    - name: Transact-SQL を使用した列暗号化の構成
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
+                    - name: 既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted の有効化
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリ
+                  items:
+                    - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリ
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                    - name: SSMS によりセキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリ
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: エンクレーブ対応の列でのインデックスの作成および使用
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションの開発
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md
             - name: TDE のトラブルシューティング
               href: relational-databases/security/encryption/troubleshoot-tde.md
-            - name: Always Encrypted の構成
-              items:
-                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
-                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
-                - name: SQL Server Management Studio での構成
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: PowerShell での構成
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
-                  items:
-                    - name: Always Encrypted キーの構成
-                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                    - name: Always Encrypted キーの交換
-                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                    - name: 列暗号化の構成
-                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                - name: 列マスター キーの作成と保存
-                  href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: 機密データの移行
-                  href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-                - name: .NET Framework でのアプリケーションの開発
-                  href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: TDE で保護されたデータベースの移動
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
             - name: 拡張キー管理
@@ -8255,14 +8328,12 @@
             - name: Always Encrypted
               href: relational-databases/security/encryption/always-encrypted-database-engine.md
               items:
-                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted
-                  href: relational-databases/security/encryption/always-encrypted-enclaves.md
-                - name: キー管理
+                - name: Always Encrypted のキー管理の概要
                   href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
-                - name: Cryptography
+                - name: Always Encrypted による暗号
                   href: relational-databases/security/encryption/always-encrypted-cryptography.md
-                - name: クライアント開発
-                  href: relational-databases/security/encryption/always-encrypted-client-development.md
+            - name: セキュア エンクレーブを使用する Always Encrypted
+              href: relational-databases/security/encryption/always-encrypted-enclaves.md
             - name: 暗号化キー
               href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
@@ -8279,16 +8350,24 @@
               href: relational-databases/security/auditing/sql-server-audit-records.md
     - name: チュートリアル
       items:
-        - name: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
-          href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-        - name: セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用
-          href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+        - name: Always Encrypted
+          items:
+            - name: Windows 証明書ストアでの機密データの保護と暗号化キーの格納 >
+              href: /azure/sql-database/sql-database-always-encrypted
+            - name: Azure Key Vault での機密データの保護と暗号化キーの格納 >
+              href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+        - name: セキュア エンクレーブを使用する Always Encrypted
+          items:
+            - name: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
+              href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用
+              href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+            - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発
+              href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
     - name: リファレンス
       items:
         - name: '[権限] ページまたは [セキュリティ保護可能なリソース] ページ'
           href: relational-databases/security/permissions-or-securables-page.md
-        - name: Always Encrypted ウイザード
-          href: relational-databases/security/encryption/always-encrypted-wizard.md
 - name: ツール
   href: tools/overview-sql-tools.md
   items:
@@ -8350,8 +8429,8 @@
           items:
             - name: PostgreSQL の拡張機能
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019
-              href: azure-data-studio/sql-server-2019-extension.md
+            - name: データの仮想化の拡張機能
+              href: azure-data-studio/data-virtualization-extension.md
             - name: SQL Server エージェント
               href: azure-data-studio/sql-server-agent-extension.md
             - name: SQL Server 中央管理サーバーの拡張機能
@@ -10255,6 +10334,10 @@
           href: relational-databases/sqltoolsvsnativehelpers.md
         - name: FrameWindowVisible
           href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+    - name: 拡張された機能
+      items:
+        - name: 拡張された機能およびツール
+          href: tools/download-sql-feature-packs.md
 - name: チュートリアル
   items:
     - name: SQL Server
@@ -10352,8 +10435,6 @@
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: レプリケーションの設定
           href: linux/sql-server-linux-replication-tutorial-tsql.md
-        - name: コンテナーでの機械学習
-          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: 概念
       items:
         - name: インストール
@@ -12479,6 +12560,12 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
             - name: sys.dm_tcp_listener_states
               href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+        - name: ビッグ データ クラスター
+          items:
+            - name: sys.dm_cluster_endpoints
+              href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+            - name: sys.dm_exec_compute_pools
+              href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
         - name: 変更データ キャプチャ
           items:
             - name: sys.dm_cdc_errors
@@ -12835,6 +12922,8 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md
             - name: sys.dm_audit_class_type_map
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md
+            - name: sys.dm_column_encryption_enclave
+              href: relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md
             - name: sys.dm_cryptographic_provider_algorithms
               href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md
             - name: sys.dm_cryptographic_provider_keys
@@ -12896,6 +12985,16 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md
             - name: sys.dm_pdw_exec_sessions
               href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_query_plan
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_query_profiles
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_query_statistics_xml
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_sql_text
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_text_query_plan
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md
             - name: sys.dm_pdw_hadoop_operations
               href: relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md
             - name: sys.dm_pdw_lock_waits

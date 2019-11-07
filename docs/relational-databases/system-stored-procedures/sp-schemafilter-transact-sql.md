@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68126403"
 ---
-# <a name="spschemafilter-transact-sql"></a>sp_schemafilter (TRANSACT-SQL)
+# <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   変更され、パブリッシュできる Oracle テーブルを一覧表示するときに除外されているスキーマ情報が表示されます。  
@@ -46,7 +46,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
  スキーマの名前です。 *スキーマ*は**sysname**既定値は NULL です。  
   
  [ **@operation** =] **'***操作***'**  
- このスキーマで実行されるアクションです。 *操作*は**nvarchar (4)** 値は次のいずれかを指定できます。  
+ このスキーマで実行されるアクションです。 *operation* は **nvarchar (4)** で、次の値のいずれかを指定できます。  
   
 |[値]|説明|  
 |-----------|-----------------|  

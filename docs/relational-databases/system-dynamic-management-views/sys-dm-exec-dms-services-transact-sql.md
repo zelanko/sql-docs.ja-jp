@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_dms_services (TRANSACT-SQL) |Microsoft Docs
+title: sys _exec_dms_services (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,27 +22,28 @@ ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14abc2b77a042b104e47ff6cc578a7ba64cac44e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11e353af23c2331cd8f2bef5b439c967512e7323
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097766"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532931"
 ---
-# <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (TRANSACT-SQL)
+# <a name="sysdm_exec_dms_services-transact-sql"></a>sys _exec_dms_services (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  すべての PolyBase コンピューティング ノードで実行されている DMS サービスに関する情報を保持します。 サービス インスタンスごとに 1 行が一覧表示します。  
+  PolyBase コンピューティングノードで実行されているすべての DMS サービスに関する情報を保持します。 サービスインスタンスごとに1つの行が表示されます。  
   
-|列名|データ型|説明|範囲|  
+|列名|[データ型]|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|dms_core_id|**int**|DMS コアに関連付けられている一意の数値 id です。 このビューのキー。|一意の id。|  
-|compute_node_id|**int**|この DMS サービスが実行されているノードの ID|参照してください*compute_node_id*で[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)します。|  
-|status|**nvarchar(32)**|DMS サービスの現在の状態||  
-  
-## <a name="see-also"></a>関連項目  
- [PolyBase 動的管理ビューでのトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+|dms_core_id|`int`|DMS コアに関連付けられている一意の数値 id。 このビューのキー。|一意の ID。|  
+|compute_node_id|`int`|この DMS サービスが実行されているノードの ID|「 *Compute_node_id* in [_exec_compute_nodes &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)」 (transact-sql の詳細) を参照してください。|  
+|ステータス|`nvarchar(32)`|DMS サービスの現在の状態||
+|compute_pool_id|`int`|プールの一意の識別子。|
+
+## <a name="see-also"></a>参照  
+ [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [データベース関連の動的管理&#40;ビュー transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

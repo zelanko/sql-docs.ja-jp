@@ -57,7 +57,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @data_folder = ] 'data_folder'_`ディストリビューションデータベースのデータファイルを格納するために使用するディレクトリの名前を指定します。 *data_folder*は**nvarchar (255)** ,、既定値は NULL です。 NULL の場合、その [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
   
-`[ @data_file = ] 'data_file'`データベースファイルの名前を指定します。 *data_file*は**nvarchar (255)** ,、既定値は**データベース**です。 NULL の場合、ストアドプロシージャはデータベース名を使用してファイル名を構築します。  
+`[ @data_file = ] 'data_file'`データベースファイルの名前を指定します。 *data_file*は**nvarchar (255)** ,、既定値は**database**です。 NULL の場合、ストアドプロシージャはデータベース名を使用してファイル名を構築します。  
   
 `[ @data_file_size = ] data_file_size`初期データファイルのサイズをメガバイト (MB) 単位で示します。 *data_file_size i*s **int**,、既定値は 5 mb です。  
   
