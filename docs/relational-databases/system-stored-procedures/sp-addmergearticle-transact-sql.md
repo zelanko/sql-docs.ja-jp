@@ -90,7 +90,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**synonym schema only**|スキーマのみを使用するシノニム。|  
 |**view schema only**|スキーマのみを使用するビュー。|  
   
-`[ @description = ] 'description'` は、アーティクルの説明です。 *description*は**nvarchar (255)** ,、既定値は NULL です。  
+`[ @description = ] 'description'` は、アーティクルの説明です。 *description* は **nvarchar (255)**、既定値は NULL です。  
   
 `[ @column_tracking = ] 'column_tracking'` は、列レベルの追跡の設定です。 *column_tracking*は**nvarchar (10)** ,、既定値は FALSE。 **true**列の追跡を有効にします。 **false**列の追跡をオフにし、競合の検出を行レベルで行います。 テーブルが他のマージ レプリケーションで既にパブリッシュされている場合は、このテーブルに基づく既存のアーティクルが使用しているものと同じ列追跡値を使用する必要があります。 このパラメーターは、テーブル アーティクルのみに固有のものです。  
   
