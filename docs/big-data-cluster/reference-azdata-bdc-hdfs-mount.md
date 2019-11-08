@@ -5,22 +5,22 @@ description: azdata bdc hdfs mount コマンドのリファレンス記事です
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1d0e248c3a19a032571e77e1250faf82d331630e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 43796ca3dc02804472298b17f8ddaeed946df5bb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155239"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531837"
 ---
 # <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-この記事は、 **azdata**のリファレンス記事です。 
+以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -59,17 +59,16 @@ azdata bdc hdfs mount create --remote-uri hdfs://namenode1:8080/ --mount-path /m
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-hdfs-mount-delete"></a>azdata bdc hdfs mount delete
 HDFS 内のリモート ストアのマウントを削除します。
 ```bash
 azdata bdc hdfs mount delete --mount-path -m 
-                             
-```
-### <a name="examples"></a>使用例
-/mounts/adlsv2/data に作成された ADLS Gen 2 ストレージ アカウント用のマウントを削除します。
+           ```
+### Examples
+Delete mount created at /mounts/adlsv2/data for a ADLS Gen 2 storage account.
 ```bash
 azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 ```
@@ -84,17 +83,16 @@ azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-hdfs-mount-status"></a>azdata bdc hdfs mount status
 マウントの状態。
 ```bash
 azdata bdc hdfs mount status [--mount-path -m] 
-                             
-```
-### <a name="examples"></a>使用例
-パスによってマウントの状態を取得します
+           ```
+### Examples
+Get mount status by path
 ```bash
 azdata bdc hdfs mount status --mount-path /mounts/hdfs
 ```
@@ -113,17 +111,16 @@ azdata bdc hdfs mount status
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-hdfs-mount-refresh"></a>azdata bdc hdfs mount refresh
 HDFS 内のマウントの内容を更新します。
 ```bash
 azdata bdc hdfs mount refresh --mount-path -m 
-                              
-```
-### <a name="examples"></a>使用例
-/mounts/adlsv2/data に作成されたマウントを更新します。
+            ```
+### Examples
+Refresh mount created at /mounts/adlsv2/data.
 ```bash
 azdata bdc hdfs mount refresh --mount-path /mounts/adlsv2/data
 ```
@@ -138,12 +135,10 @@ azdata bdc hdfs mount refresh --mount-path /mounts/adlsv2/data
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-- 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
-
-- **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。
+`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

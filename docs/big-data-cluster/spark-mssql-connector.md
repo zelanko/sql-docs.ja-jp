@@ -5,16 +5,16 @@ description: Spark で MSSQL Spark コネクタを使用して、SQL Server に�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653302"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531609"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark コネクタを使用して Spark から SQL Server に対する読み取りと書き込みを行う方法
 
@@ -35,21 +35,21 @@ ms.locfileid: "69653302"
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark コネクタ インターフェイス
 
-SQL Server 2019 Preview では、Spark から SQL への書き込みに SQL Server 一括書き込み API を使用する、ビッグ データ クラスター用の **MSSQL Spark コネクタ**を提供します。 MSSQL Spark コネクタは Spark データ ソース API に基づいており、使い慣れた Spark JDBC コネクタ インターフェイスを備えています。 インターフェイス パラメーターについては、[Apache Spark のドキュメント](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)を参照してください。 MSSQL Spark コネクタは、**com.microsoft.sqlserver.jdbc.spark** という名前で参照されます。
+SQL Server 2019 では、Spark から SQL への書き込みに SQL Server 一括書き込み API を使用する、ビッグ データ クラスター用の **MSSQL Spark コネクタ**を提供します。 MSSQL Spark コネクタは Spark データ ソース API に基づいており、使い慣れた Spark JDBC コネクタ インターフェイスを備えています。 インターフェイス パラメーターについては、[Apache Spark のドキュメント](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)を参照してください。 MSSQL Spark コネクタは、**com.microsoft.sqlserver.jdbc.spark** という名前で参照されます。
 
 次の表では、変更された、または新しくなったインターフェイス パラメーターについて説明します。
 
-| プロパティ名 | 省略可 | 説明 |
+| プロパティ名 | 省略可 | [説明] |
 |---|---|---|
 | **isolationLevel** | はい | これにより、接続の分離レベルが記述されます。 MSSQL Spark コネクタの既定値は、**READ_COMMITTED** です。 |
 
 このコネクタでは、SQL Server 一括書き込み API を使用します。 任意の一括書き込みパラメーターは、任意のパラメーターとして渡される場合があり、コネクタによって基になる API にそのまま渡されます。 一括書き込み操作の詳細については、「[SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server ビッグ データ クラスター](deploy-get-started.md)
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders)
+- [Azure Data Studio](https://aka.ms/getazuredatastudio)
 
 ## <a name="create-the-target-database"></a>ターゲット データベースを作成する
 
@@ -90,4 +90,4 @@ SQL Server 2019 Preview では、Spark から SQL への書き込みに SQL Serv
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグデータクラスターの詳細については、「 [How [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to deploy on Kubernetes](deployment-guidance.md) 」を参照してください。
+ビッグ データ クラスターの詳細については、[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する方法](deployment-guidance.md)に関するページを参照してください

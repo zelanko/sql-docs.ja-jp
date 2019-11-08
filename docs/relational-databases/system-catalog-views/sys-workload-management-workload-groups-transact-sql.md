@@ -1,5 +1,5 @@
 ---
-title: workload_management_workload_groups (Transact-sql) |Microsoft Docs
+title: sys.workload_management_workload_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73633446"
 ---
-# <a name="sysworkload_management_workload_groups-transact-sql"></a>workload_management_workload_groups (Transact-sql)
+# <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
