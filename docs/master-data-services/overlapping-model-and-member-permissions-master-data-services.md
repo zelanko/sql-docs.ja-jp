@@ -1,5 +1,5 @@
 ---
-title: モデル アクセス許可とメンバー アクセス許可の重複 (Master Data Services) | Microsoft Docs
+title: モデル権限とメンバー権限の重複
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 06767cbc1550ed7c1e9146a69e5e0f3932db10c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904041"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728983"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>モデル権限とメンバー権限の重複 (Master Data Services)
 
@@ -74,7 +74,7 @@ ms.locfileid: "67904041"
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [ユーザー アクセス許可とグループ アクセス許可の重複 (マスター データ サービス)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   

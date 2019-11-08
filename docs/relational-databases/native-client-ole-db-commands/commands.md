@@ -14,18 +14,17 @@ ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b88470ed7d60dadbcf9200a3cac396f4dfd6b262
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f2f603a610291b9b0ad70b2960302a73e16e759
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128701"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790435"
 ---
-# <a name="commands"></a>コマンド
+# <a name="commands"></a>[コマンド]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **ICommand**インターフェイスとコマンド オブジェクトのこのセクションで説明されています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、このセクションで説明されている**ICommand**インターフェイスとコマンドオブジェクトを公開します。  
   
 -   [コマンドの構文](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   
@@ -35,7 +34,7 @@ ms.locfileid: "68128701"
   
 -   [複数行セットの結果を生成するコマンド](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

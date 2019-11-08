@@ -1,5 +1,5 @@
 ---
-title: マスター データ サービスのイントールと構成 | Microsoft Docs
+title: インストールと構成
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176295"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728069"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -27,11 +27,11 @@ ms.locfileid: "70176295"
 > [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] をサポートするようになった Developer Edition を使用しているときに Windows 10 マシン上に [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] をインストールすることができます。 
 >>さまざまな [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] エディションのオペレーティング システムのサポートの詳細については、「[SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。 
 
-[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のデータを整理する方法の概要については、 [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)を参照してください。     
+[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のデータを整理する方法の概要については、「[マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)」を参照してください。     
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の新機能については、「[マスター データ サービス (MDS) の新機能](../master-data-services/what-s-new-in-master-data-services-mds.md)」を参照してください。  
  
-[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を学習するためのビデオと他のトレーニング リソースへのリンクについては、「[マスター データ サービスについて学習する](../master-data-services/learn-sql-server-master-data-services.md)」をご覧ください。 
+[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を学習するためのビデオと他のトレーニング リソースへのリンクについては、「 [マスター データ サービスについて学習する](../master-data-services/learn-sql-server-master-data-services.md)」をご覧ください。 
   
 > **ダウンロード**  
 > -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
@@ -46,7 +46,7 @@ ms.locfileid: "70176295"
 - Web アプリケーションで作業するには、Silverlight 5 をクライアント コンピューターにインストールする必要があります。 Silverlight の必要なバージョンがない場合、Web アプリケーションで Silverlight を使用する部分に移動したときに、Silverlight をインストールするよう要求されます。 Silverlight 5 は **[ここ](https://www.microsoft.com/silverlight/)** からインストールできます。
 
 ## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 仮想マシン上の [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-既定では、が[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]既にインストールされている Azure 仮想マシンを起動すると、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]もインストールされます。 
+既定では、[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] が既にインストールされている Azure 仮想マシンを起動すると、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] もインストールされます。 
 
 次の手順として、インターネット インフォメーション サービス (IIS) をインストールします。 「[IIS のインストールと構成](#InstallIIS)」を参照してください。 
 
@@ -55,7 +55,7 @@ ms.locfileid: "70176295"
 ## <a name="InstallMDS"></a> Master Data Services のインストール  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセットアップ インストール ウィザードまたはコマンド プロンプトを使用して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]をインストールします。  
   
- **Windows Server 2012 R2 コンピューター上で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを使用して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] をインストールするには**  
+ **Windows Server 2012 R2 コンピューター上で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] セットアップを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をインストールするには**  
   
 1.  Setup.exe をダブルクリックして、インストール ウィザードの手順を実行します。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "70176295"
   
 1.  [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]で、 **デスクトップ** のタスクバーにある **[サーバー マネージャー]** アイコンをクリックします。  
   
-     ![Windows Server 2012 のタスク バーのサーバー マネージャーのアイコン](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Windows Server 2012 のタスク バーのサーバー マネージャーのアイコン")  
+     ![Windows Server 2012 タスクバーのサーバーマネージャーのアイコン](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Windows Server 2012 タスクバーのサーバーマネージャーのアイコン")  
   
 5.  **サーバー マネージャー**で、 **[管理]** メニューの **[役割と機能の追加]** をクリックします。  
    
-     ![サーバーの管理の [役割と機能の追加] メニュー コマンド](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "サーバーの管理の [役割と機能の追加] メニュー コマンド")  
+     ![[サーバー管理] の [役割と機能の追加] メニューコマンド](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "[サーバー管理] の [役割と機能の追加] メニューコマンド")  
   
 6.  **役割と機能の追加ウィザード** の **[インストールの種類]** ページで、既定値 (**役割ベースまたは機能ベースのインストール**) を承諾して、 **[次へ]** をクリックします。  
   
@@ -87,14 +87,14 @@ ms.locfileid: "70176295"
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. **[機能]** ページで、次の機能が選択されていることを確認し、 **[次へ]** をクリックします。 これらの機能は、[!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] の [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] に必要です。
+9. **[機能]** ページで、次の機能が選択されていることを確認し、 **[次へ]** をクリックします。 これらの機能は、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] の [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] に必要です。
   
     |機能|機能|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
 10. 左側のウィンドウで **[Web サーバーの役割 (IIS)]** をクリックし、 **[役割サービス]** をクリックします。
-11. **[役割サービス]** ページで、次の機能が選択されていることを確認し、 **[次へ]** をクリックします。 これらのサービスは、[!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] に必要です。
+11. **[役割サービス]** ページで、次の機能が選択されていることを確認し、 **[次へ]** をクリックします。 これらのサービスは、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] に必要です。
 
     > [!WARNING]  
     >  [WebDAV 発行] 役割サービスをインストールしないでください。 WebDAV 発行は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]と互換性がありません。  
@@ -109,36 +109,36 @@ ms.locfileid: "70176295"
   
  セットアップを使用した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールの詳細については、「[インストール ウィザードからの SQL Server 2016 のインストール (セットアップ)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」を参照してください。  
   
- コマンド プロンプトを使用した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールの詳細については、「[コマンド プロンプトから SQL Server 2016 をインストール](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。 コマンド プロンプトを使用する場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は機能パラメーターとして使用できるようになります。  
+ コマンド プロンプトを使用した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールの詳細については、「 [コマンド プロンプトから SQL Server 2016 をインストール](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。 コマンド プロンプトを使用する場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は機能パラメーターとして使用できるようになります。  
   
- インストール前のタスクに関する追加情報へのリンクの簡単な説明については、「 [マスター データ サービスをインストールする](../master-data-services/install-windows/install-master-data-services.md)」を参照してください。  
+ インストール前のタスクに関する追加情報へのリンクの簡単な説明については、「[マスター データ サービスをインストールする](../master-data-services/install-windows/install-master-data-services.md)」を参照してください。  
   
 ##  <a name="SetUpWeb"></a> データベースと Web サイトを設定する  
  **[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、データベースと Web サイトを設定するには**  
 
  
 > [!WARNING]
->  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager を起動する前に [IIS をインストール](#InstallIIS)する必要があります。 それ以外の場合、Configuration Manager にインターネット インフォメーション サービス エラーが表示され、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web アプリケーションを作成できなくなります。  
+>  [ Configuration Manager を起動する前に ](#InstallIIS)IIS をインストール[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]する必要があります。 それ以外の場合、Configuration Manager にインターネット インフォメーション サービス エラーが表示され、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web アプリケーションを作成できなくなります。  
 > 
 > **ブラウザーの要件**
 > >[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web アプリケーションは、Internet Explorer (IE) 9 以降でのみ動作します。 IE 8 以前のバージョン、Microsoft Edge、Chrome はサポートされていません。    
   
-1.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]を起動して、 **[データベース構成]** をクリックします。  
+1.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を起動して、 **[データベース構成]** をクリックします。  
   
 2.  **[データベースの作成]** をクリックして、 **データベースの作成ウィザード** で **[次へ]** をクリックします。  
   
 3.  **[データベースサーバー]** ページで、SQL Server インスタンスを指定します。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス**の値を、Azure SQL Database マネージインスタンスのホストに設定します。 たとえば、`xxxxxx.xxxxxx.database.windows.net` のようにします。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] では SQL Server Managed Instance のサポートが追加されます。 **SQL Server インスタンス**の値を、Azure SQL Database マネージインスタンスのホストに設定します。 たとえば、 `xxxxxx.xxxxxx.database.windows.net`のようにします。
 
 4. 認証の**種類**を選択し、 **[接続のテスト]** をクリックして、選択した認証の種類の資格情報を使用してデータベースに接続できることを確認します。 **[次へ]** をクリックします。
 
-    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]で Azure SQL Database マネージインスタンスに接続するには、次のいずれかの認証の種類を使用します。
+    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]の場合、Azure SQL Database マネージインスタンスに接続するには、次のいずれかの認証の種類を使用します。
     >
     >- Azure Active Directory 統合認証:**現在のユーザー– Active Directory 統合**
-    >- 認証の SQL Server:**SQL Server アカウント**。
+    >- SQL Server 認証: **SQL Server アカウント**。
     >
-    >Azure SQL Database マネージインスタンスでは、ユーザーは`sysadmin`固定サーバーロールのメンバーである必要があります。
+    >Azure SQL Database マネージインスタンスでは、ユーザーは `sysadmin` 固定サーバーロールのメンバーである必要があります。
 
     > [!NOTE]  
     >  認証の種類に **[現在のユーザー - 統合セキュリティ]** を選択すると、 **[ユーザー名]** ボックスは読み取り専用で、コンピューターにログオンした Windows ユーザー アカウント名が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、 **[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
@@ -161,7 +161,7 @@ ms.locfileid: "70176295"
   
      **データベースの作成ウィザード**の設定の詳細については、「[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
   
-7.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の **[データベース構成]** ページで、 **[データベースの選択]** をクリックします。  
+7.  **の** [データベース構成][!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ページで、 **[データベースの選択]** をクリックします。  
   
 8.  **[接続]** をクリックして、手順 7 で作成した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、 **[OK]** をクリックします。 
 
@@ -171,7 +171,7 @@ ms.locfileid: "70176295"
 
     ![mds_2016ConfigManager_DatabaseConfig_Completed](../master-data-services/media/mds-2016configmanager-databaseconfig-completed.png)   
   
-9. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の左ペインで、 **[Web の構成]** をクリックします。  
+9. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] の左ペインで、 **[Web の構成]** をクリックします。  
   
 10. **[Web サイト]** リスト ボックスで、 **[既定の Web サイト]** **[作成]** の順にクリックして、Web アプリケーションを作成します。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "70176295"
   
 11. **[アプリケーション プール]** セクションで、次のいずれかを実行します。  
   
-    -   **管理者アカウント**データベースに対して、手順 5 で入力したのと同じユーザー名を入力し、パスワードを入力して、 **[OK]** をクリックします。  
+    -   **管理者アカウント** データベースに対して、手順 5 で入力したのと同じユーザー名を入力し、パスワードを入力して、 **[OK]** をクリックします。  
   
          **- または -**  
   
@@ -194,7 +194,7 @@ ms.locfileid: "70176295"
   
      **[Web アプリケーションの作成]** ダイアログ ボックスの詳細については、「[[Web アプリケーションの作成] ダイアログ ボックス (マスター データ サービス構成マネージャー)](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)」を参照してください。  
   
-12. **[Web アプリケーション]** ボックスの **[Web 構成]** ページで、作成したアプリケーションをクリックして、 **[アプリケーションとデータベースの関連付け]** セクションで **[選択]** をクリックします。  
+12. **[Web アプリケーション]** ボックスの **[Web 構成]** ページで、作成したアプリケーションをクリックして、 **[アプリケーションとデータベースの関連付け]** セクションで  **[選択]** をクリックします。  
   
 13. **[接続]** をクリックして、Web アプリケーションと関連付けする必要がある [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、 **[OK]** をクリックします。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "70176295"
   
      For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
- また、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに関連付けられている Web アプリケーションとサービスのその他の設定値も指定できます。 たとえば、データの読み込み頻度や検証メールの送信頻度を指定できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
+ また、[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに関連付けられている Web アプリケーションとサービスのその他の設定値も指定できます。 たとえば、データの読み込み頻度や検証メールの送信頻度を指定できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
 ##  <a name="deploySample"></a> サンプル モデルとデータを配置する  
  次の 3 つのサンプル モデル パッケージは、  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]に付属しています。   これらのサンプル モデルには、データが含まれます。 **サンプル モデル パッケージの既定の場所は、%programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages です。**
@@ -223,9 +223,9 @@ ms.locfileid: "70176295"
   
  このパッケージは、MDSModelDeploy ツールを使用して配置します。 MDSModelDeploy ツールの既定の場所は、 *drive*\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration にあります。  
   
- このツールを実行するための前提条件については、「 [MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
+ このツールを実行するための前提条件については、「[MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の新機能をサポートするためにデータに加えられた更新については、「[SQL Server のサンプル: モデルの配置パッケージ (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の新機能をサポートするためにデータに加えられた更新については、「[SQL Server のサンプル: モデル配置パッケージ(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
   
  **サンプル モデルを配置するには**  
   
@@ -275,7 +275,7 @@ ms.locfileid: "70176295"
   
      次の図は、product_en.pkg サンプル モデルを配置するためのコマンドを示します。  
   
-     ![製品サンプル モデルを配置するためのコマンド ライン](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "製品サンプル モデルを配置するためのコマンド ライン")  
+     ![製品サンプルモデルを配置するためのコマンドライン](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "製品サンプルモデルを配置するためのコマンドライン")  
   
 4.  サンプル モデルを表示するには、次を実行します。  
   
@@ -285,14 +285,14 @@ ms.locfileid: "70176295"
   
     2.  **[モデル]** リスト ボックスからモデルを選択して、 **[エクスプローラー]** をクリックします。  
   
-         ![MDS Web サイト、ホーム ページ。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS Web サイト、ホーム ページ。")  
+         ![MDS Web サイト、ホームページ。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS Web サイト、ホームページ。")  
   
 ## <a name="next-step"></a>次の手順  
  自分のデータ用に新しいモデルとエンティティを作成します。 「[モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)」と「[エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)」を参照してください。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータの構造を構築するモデルとエンティティを使用する方法の概要については、「[マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
     
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービス データベース](../master-data-services/master-data-services-database.md)   
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)   
  [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

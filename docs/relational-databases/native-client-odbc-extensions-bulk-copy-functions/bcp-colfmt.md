@@ -18,18 +18,17 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a08973bcfadb88750129fd440eeabb3f69bb2ddb
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707720"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783143"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ユーザー ファイルのデータのコピー元またはコピー先の形式を指定します。 ソース形式として使用する場合、 **bcp_colfmt**テーブル @no__t への一括コピーのデータソースとして使用される既存のデータファイルの形式を指定します。 ターゲット形式として使用する場合は、 **bcp_colfmt**で指定された列形式を使用してデータファイルが作成されます。  
+  ユーザー ファイルのデータのコピー元またはコピー先の形式を指定します。 ソース形式として使用する場合、 **bcp_colfmt**は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルへの一括コピーのデータソースとして使用される既存のデータファイルの形式を指定します。 ターゲット形式として使用する場合は、 **bcp_colfmt**で指定された列形式を使用してデータファイルが作成されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,11 +57,11 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、 *Euserdatatype*パラメーターでの SQLXML および sqludt データ型のトークンのサポートが導入されました。  
   
- *Euserdatatype*パラメーターは、ODBC C データ型の列挙子ではなく、sqlncli 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型トークンによって列挙されます。 たとえば、@no__t 横-0 固有の SQLCHARACTER 型を使用して、ODBC 型の文字列 SQL_C_CHAR を指定できます。  
+ *Euserdatatype*パラメーターは、ODBC C データ型の列挙子ではなく、sqlncli 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型トークンによって列挙されます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固有の SQLCHARACTER 型を使用して、文字列、ODBC 型 SQL_C_CHAR を指定できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型に対して既定のデータ表現を指定するには、このパラメーターに 0 を設定します。  
   
- @No__t 0 からファイルへの一括コピーでは、 *Euserdatatype*が sqldecimal または sqldecimal の場合、次のようになります。  
+ ファイルへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括コピーを行う場合、 *Euserdatatype*が sqldecimal または sqldecimal の場合は、次のようになります。  
   
 -   ソース列が**decimal**または**numeric**でない場合は、既定の有効桁数と小数点以下桁数が使用されます。  
   
@@ -82,11 +81,11 @@ RETCODE bcp_colfmt (
  *cbUserData*  
  ユーザー ファイル内にある列データの最大長 (バイト単位)。長さのインジケーターやターミネータの長さは含まれません。  
   
- *Cbuserdata*を SQL_NULL_DATA に設定すると、データファイルの列のすべての値がであるか、NULL に設定される必要があることを示します。  
+ *Cbuserdata*を SQL_NULL_DATA に設定すると、データファイルの列のすべての値がであるか、NULL に設定する必要があることを示します。  
   
- *Cbuserdata*を SQL_VARLEN_DATA に設定すると、システムが各列のデータの長さを決定する必要があることを示します。 これは、列によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
+ *Cbuserdata*を SQL_VARLEN_DATA に設定すると、各列のデータの長さがシステムによって決定されることになります。 これは、列によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
   
- @No__t 0 文字とバイナリデータ型の場合、 *Cbuserdata*には SQL_VARLEN_DATA、SQL_NULL_DATA、0、または正の値を指定できます。 *Cbuserdata*が SQL_VARLEN_DATA の場合、システムは長さインジケーター (存在する場合) またはターミネータシーケンスを使用してデータの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 *Cbuserdata*が SQL_VARLEN_DATA の場合、データ型は @no__t 1 文字またはバイナリ型であり、長さのインジケーターもターミネータシーケンスも指定されていない場合、システムはエラーメッセージを返します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字とバイナリデータ型の場合、 *Cbuserdata*には、SQL_VARLEN_DATA、SQL_NULL_DATA、0、または正の値を指定できます。 *Cbuserdata*が SQL_VARLEN_DATA 場合、システムは長さインジケーター (存在する場合) またはターミネータシーケンスを使用してデータの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 *Cbuserdata*が SQL_VARLEN_DATA 場合、データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字またはバイナリ型で、長さのインジケーターもターミネータシーケンスも指定されていないと、システムはエラーメッセージを返します。  
   
  *cbUserData* が 0 または正の値の場合、システムは最大データ長として *cbUserData* を使用します。 ただし、*cbUserData* に正の値を指定し、長さのインジケーターやターミネータ シーケンスを指定した場合、システムはコピーするデータ量が少なくなる方法を使用してデータ長を決定します。  
   
@@ -112,7 +111,7 @@ RETCODE bcp_colfmt (
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Bcp_colfmt**関数を使用すると、一括コピーのユーザーファイル形式を指定できます。 次に、一括コピーに使用するフォーマットの内容を示します。  
   
 -   ユーザー ファイルの列からデータベース列へのマッピング  
@@ -127,15 +126,15 @@ RETCODE bcp_colfmt (
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- **Bcp_colfmt**を呼び出すたびに、1つのユーザーファイル列の形式が指定されます。 たとえば、5つの列から構成されるユーザーデータファイルの3つの列の既定の設定を変更するには、まず[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** を呼び出してから、 **bcp_colfmt**を5回呼び出します。これらの呼び出しのうち3つを使用して、カスタム形式を設定します。 残りの2つの呼び出しでは、 *Euserdatatype*を0に設定し、 *cbindicator*、 *Cbuserdata*、および*CBUSERDATATERM*をそれぞれ0、SQL_VARLEN_DATA、および0に設定します。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ **Bcp_colfmt**を呼び出すたびに、1つのユーザーファイル列の形式が指定されます。 たとえば、5つの列から構成されるユーザーデータファイルの3つの列の既定の設定を変更するには、まず[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** を呼び出し、 **bcp_colfmt**次に5回呼び出します。これらの呼び出しのうち3つを使用して、カスタム形式を設定します。 残りの2つの呼び出しでは、 *Euserdatatype*を0に設定し、 *cbindicator*、 *Cbuserdata*、および*cbuserdataterm*をそれぞれ0、SQL_VARLEN_DATA、および0に設定します。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
  *Cbindicator*の場合、大きな値の型が有効であることを示す値8。 フィールドにプレフィックスを指定し、そのフィールドに対応する列が新しい max 型である場合、この値は 8 にしか設定できません。 詳細については、「 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)」を参照してください。  
   
  **Bcp_colfmt**を呼び出す前に、 **bcp_columns**関数を呼び出す必要があります。  
   
- **Bcp_colfmt**は、ユーザーファイル内の列ごとに1回呼び出す必要があります。  
+ ユーザーファイルの各列に対して**bcp_colfmt**を1回呼び出す必要があります。  
   
- ユーザーファイルの列に対して**bcp_colfmt**を複数回呼び出すと、エラーが発生します。  
+ ユーザーファイルの列に対して複数回**bcp_colfmt**を呼び出すと、エラーが発生します。  
   
  ユーザー ファイル内のすべてのデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにコピーする必要はありません。 列をスキップするには、列のデータの形式を指定し、 *Idxservercol*パラメーターを0に設定します。 列をスキップする場合でも、その列の型を指定する必要があります。  
   
