@@ -17,12 +17,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 537537ef2f3dd07a27ffcb4d092be2f8719f6ee1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0b01e47f81f153b73c8a57d23c9a75fc8b57ef66
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907380"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761072"
 ---
 # <a name="create-a-distributed-transaction"></a>分散トランザクションの作成
 
@@ -33,7 +33,6 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 /includes/snac-deprecated.md
 -->
 
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
 分散トランザクションは、さまざまな方法でさまざまな Microsoft SQL システムに対して作成できます。
 
@@ -52,7 +51,7 @@ MSDTC は、 C++プログラムが分散トランザクションを管理する�
 3. アプリケーションは、コンピューター B 上の SQL Server Y の一部のデータを更新します。
     - SQL Server Y で更新が失敗した場合、両方の SQL Server インスタンスのすべてのコミットされていない更新がロールバックされます。
 
-4. 最後に、アプリケーションは、SQL_COMMIT オプションまたは SQL_ROLLBACK オプションを指定して[SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)を呼び出してトランザクションを終了します。
+4. 最後に、SQL_COMMIT または SQL_ROLLBACK オプションを使用して、 [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)を呼び出すことによってトランザクションを終了します。
 
 _(1)_ ODBC を使用せずに MSDTC を呼び出すことができます。 このような場合、MSDTC はトランザクションマネージャーになり、アプリケーションは**SQLEndTran**を使用しなくなります。
 
