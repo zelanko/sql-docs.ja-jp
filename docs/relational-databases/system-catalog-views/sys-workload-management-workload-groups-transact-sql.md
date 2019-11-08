@@ -1,5 +1,5 @@
 ---
-title: workload_management_workload_groups (Transact-sql) |Microsoft Docs
+title: sys.workload_management_workload_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73633446"
 ---
-# <a name="sysworkload_management_workload_groups-transact-sql"></a>workload_management_workload_groups (Transact-sql)
+# <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "73633446"
 |request_min_resource_grant_percent|**decimal (5, 2)**|要求に割り当てられるリソースの最小量を指定します。 値の許容範囲は 0.75 ~ 100 です。||
 |request_max_resource_grant_percent |**decimal (5, 2)**|要求に割り当てられるリソースの最大量を指定します。||
 |query_execution_timeout_sec|**int**|クエリが取り消されるまでの実行時間の長さ (秒単位)。  実行の戻りフェーズに達した後は、クエリを取り消すことはできません。  query_execution_timeout_sec には、キューに置かれた時間は含まれません。|
-|query_wait_timeout_sec|**int**|イントラネット||
+|query_wait_timeout_sec|**int**|内部使用||
 |create_time|**datetime**|ワークロードグループが作成された時刻。 NULL 値は許可されません。||
 modify_time|**datetime**|ワークロードグループが最後に変更された時刻。 NULL 値は許可されません。||
 |&nbsp;||||
