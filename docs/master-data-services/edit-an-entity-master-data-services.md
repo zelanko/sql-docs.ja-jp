@@ -1,5 +1,5 @@
 ---
-title: エンティティを編集する (マスター データ サービス) | Microsoft Docs
+title: エンティティを編集する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88a4850c80404ebeb002c5d17af69b0f10dc5bf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086480"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729301"
 ---
 # <a name="edit-an-entity-master-data-services"></a>エンティティを編集する (マスター データ サービス)
 
@@ -25,12 +25,12 @@ ms.locfileid: "68086480"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、エンティティを編集することができます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-edit-an-entity"></a>エンティティを編集するには  
   
@@ -58,10 +58,10 @@ ms.locfileid: "68086480"
   
      詳細については、「 [Data Compression](../relational-databases/data-compression/data-compression.md)」をご覧ください。  
   
-## <a name="status"></a>状態  
+## <a name="status"></a>[状態]  
  グリッドの状態列には、エンティティに対する操作の状態が示されます。 **[エンティティの保存]** をクリックすると、エンティティが更新中であることを示す次の画像が表示されます。  
   
- ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン")  
+ ![状態を更新するためのアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")  
   
  エンティティの作成または編集中にエラーが発生すると、次の画像が表示されます。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "68086480"
   
  適切な状態のときは、次の画像が表示されます。  
   
- ![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン")  
+ ![OK 状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [エンティティを削除する (マスター データ サービス)](../master-data-services/delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  

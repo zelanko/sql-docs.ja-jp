@@ -1,5 +1,5 @@
 ---
-title: SecurityCertificate クラス |Microsoft Docs
+title: SecurityCertificate クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 202e91d9fee69ddc74edbd352a7d018151f70a14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058561"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660449"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)セキュリティ証明書を表します。 証明書の公開キーの値のインスタンスにバインドするデジタル署名されたステートメントは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、対応する秘密キーが格納されます。 証明書は証明機関から発行されます。  
+  [Securitycertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)は、セキュリティ証明書を表します。 証明書は、公開キーの値を、対応する秘密キーを保持する [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスにバインドする、デジタル署名されたステートメントです。 証明書は証明機関から発行されます。  
   
- [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)、次のタスクを実行することができます。  
+ [Securitycertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)を使用すると、次のタスクを実行できます。  
   
 -   セキュリティ証明書のプロパティの表示  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68058561"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、SHA サムプリントの検証  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [暗号化階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

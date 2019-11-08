@@ -1,5 +1,5 @@
 ---
-title: マスター データ マネージャー Web サービス プロキシ クラスの作成 | Microsoft Docs
+title: マスター データ マネージャー Web サービス プロキシ クラスの作成
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 062a3bc03c85a4dc0d4fe5c6cca08b30429cd284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1096da19a45e15ab2216cea2f4a4a38ecb05233e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006322"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729321"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>マスター データ マネージャー Web サービス プロキシ クラスの作成
 
@@ -28,7 +28,7 @@ ms.locfileid: "68006322"
   
 1.  テキスト エディターで [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config ファイルを開きます。 このファイルは、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] インストール パスの WebApplication フォルダーにあります。  
   
-2.  **\<serviceBehaviors>** の下で **mdsWsHttpBehavior** セクションを見つけます。 **\<serviceMetadata>** 要素の場合、**httpGetEnabled** を **true** に設定します。  
+2.  serviceBehaviors> **の下で \<mdsWsHttpBehavior** セクションを見つけます。 **\<serviceMetadata>** 要素の場合、**httpGetEnabled** を **true** に設定します。  
   
     > [!NOTE]  
     >  Web サービスを SSL (Secure Sockets Layer) を介して有効にするには、web.config ファイルの **mdsWsHttpBehavior** セクションで、**httpsGetEnabled** を **true** に設定します。 さらに、SSL 用に構成されるように **mdsWsHTTPBinding** を変更し、非 SSL セクションをコメント アウトする必要もあります。  
@@ -39,7 +39,7 @@ ms.locfileid: "68006322"
     "サービスを作成しました。" で始まるページが表示されます。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Visual Studio を使用してプロキシ クラスを作成する  
- Visual Studio 2010 がインストールされている場合、プロキシ クラスを生成する最もシンプルな方法は、プロジェクトに**サービス参照**を追加することです。 サービス参照のアドレスは、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの URL に、/service/service.svc を付加したものです。 たとえば、「 `https://yourserver/MDS/service/service.svc`」のように入力します。 詳細については、「[方法 :追加、更新、またはサービス参照の削除](https://go.microsoft.com/fwlink/?LinkId=221167)します。  
+ Visual Studio 2010 がインストールされている場合、プロキシ クラスを生成する最もシンプルな方法は、プロジェクトに**サービス参照**を追加することです。 サービス参照のアドレスは、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの URL に、/service/service.svc を付加したものです。 たとえば、 `https://yourserver/MDS/service/service.svc`のようにします。 詳細については、「[方法: サービス参照を追加、更新、または削除する](https://go.microsoft.com/fwlink/?LinkId=221167)」を参照してください。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Svcutil.exe を使用してプロキシ クラスを作成する  
  Svcutil.exe を使用するには、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK がインストールされている必要があります。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コマンド プロンプトでコマンドを実行する必要があります。 詳細については、「[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027)」および「[サービス メタデータからの WCF クライアントの生成](https://go.microsoft.com/fwlink/?LinkId=164821)」を参照してください。  
@@ -53,7 +53,7 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
 /namespace:*,Microsoft.MasterDataServices  
 ```  
   
- 各項目の意味は次のとおりです。  
+ 各要素の説明は次のとおりです。  
   
 -   *servername*:*port* は、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] をホストするコンピューターのコンピューター名およびポート番号を指定します。  
   
@@ -61,7 +61,7 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
   
 -   *proxy_name* には、生成されるプロキシ ファイルの名前を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web サービス操作の分類 &#40;マスター データ サービス&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   
