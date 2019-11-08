@@ -1,6 +1,6 @@
 ---
-title: IpAddresses プロパティ (ServerNetworkProtocol クラス) |Microsoft Docs
-ms.custom: ''
+title: IpAddresses プロパティ (ServerNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f1962af350c7349b58c2a617f23017a70309d7ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad88dbca2f3e71c6a68398e0f57748b8b517414b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933731"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660349"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses プロパティ (ServerNetworkProtocol クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ object.IpAddresses [= value]
   
 ## <a name="parts"></a>要素  
  *object*  
- A **ServerNetworkProtocol**のインスタンスによって使用されるネットワーク プロトコルを表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスによって使用されるネットワークプロトコルを表す**Servernetworkprotocol**オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 配列の[ServerNetworkProtocolIPAdress クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)サーバー ネットワーク プロトコルによってサポートされる IP アドレスを表すオブジェクト。  
+ サーバーネットワークプロトコルによってサポートされる IP アドレスを表す[ServerNetworkProtocolIPAdress クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)オブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

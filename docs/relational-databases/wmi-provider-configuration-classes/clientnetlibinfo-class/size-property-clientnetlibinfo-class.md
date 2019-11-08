@@ -1,6 +1,6 @@
 ---
-title: Size プロパティ (ClientNetLibInfo クラス) |Microsoft Docs
-ms.custom: ''
+title: Size プロパティ (ClientNetLibInfo)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3d6827bd88172cb24e42cf3b3b63ae6f7ba2317
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eda80b5efcee562050539bf9d50f46cc507f280e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995426"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659153"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size プロパティ (ClientNetLibInfo クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ object.Size [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク ライブラリのサイズ (KB 単位) を指定する uint32 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

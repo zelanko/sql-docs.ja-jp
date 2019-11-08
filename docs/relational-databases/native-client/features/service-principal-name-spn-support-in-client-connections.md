@@ -15,16 +15,15 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1737524acd1397a30299e7c5147ae9a6cb10efc6
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: b081b9951ff9a58253d8a842d971ad126f1960e6
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173686"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761362"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>クライアント接続でのサービス プリンシパル名 (SPN) のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]以降では、サービス プリンシパル名 (SPN) のサポートが強化されて、あらゆるプロトコルでの相互認証が可能になりました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの既定の SPN が Active Directory に登録されているときに、Kerberos over TCP に対してのみ SPN がサポートされていました。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "72173686"
 ## <a name="usage"></a>使用方法  
  次の表では、セキュリティで保護された認証をクライアント アプリケーションで使用するための、最も一般的なシナリオについて説明します。  
   
-|シナリオ|説明|  
+|Scenario|説明|  
 |--------------|-----------------|  
 |レガシ アプリケーションで SPN が指定されない。|この互換性のシナリオでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で作成されたアプリケーションの動作が変更されないことが保証されます。 SPN が指定されていない場合、アプリケーションは生成された SPN を使用し、どの認証方法が使用されるかは認識しません。|  
 |現在のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用するクライアント アプリケーションで、接続文字列に含まれる SPN が、ドメイン ユーザー アカウント、コンピューター アカウント、インスタンス固有の SPN、またはユーザー定義文字列として指定される。|プロバイダー文字列、初期化文字列、または接続文字列で **ServerSPN** キーワードを使用することで、次の操作が可能になります。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが接続に使用するアカウントを指定できます。 これにより、Kerberos 認証へのアクセスが簡単になります。 Kerberos キー配布センター (KDC) が存在し、かつ正しいアカウントが指定された場合は、NTLM よりも Kerberos 認証が使用される可能性が高くなります。 KDC は通常、ドメイン コントローラーと同じコンピューターに存在します。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するための SPN を指定できます。 この目的で使用できる既定の SPN が、すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに 2 つずつ生成されます。 ただし、これらのキーが Active Directory に存在することは保証されないため、この状況では Kerberos 認証は保証されません。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するために使用される SPN を指定できます。 これは、サービス アカウントにマップされる任意のユーザー定義文字列でかまいません。 この場合は、キーを手動で KDC に登録する必要があり、キーがユーザー定義 SPN の規則を満たしていることも必要です。<br /><br /> **FailoverPartnerSPN** キーワードを使用すると、フェールオーバー パートナー サーバーの SPN を指定できます。 アカウントおよび Active Directory キーの値の範囲は、プリンシパル サーバーに指定できる値と同じです。|  
@@ -72,18 +71,18 @@ ms.locfileid: "72173686"
  新しい接続動作はクライアントで実装されるため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のバージョンに固有ではありません。  
   
 ## <a name="linked-servers-and-delegation"></a>リンク サーバーと委任  
- リンクサーバーを作成すると、 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)の **\@provstr**パラメーターを使用して、サーバーおよびフェールオーバーパートナーの spn を指定できます。 これを実行する利点は、以下のように、クライアント接続文字列で SPN を指定するのと同じです。Kerberos 認証を使用する接続を確立すると、より簡単で信頼性が高くなります。  
+ リンクサーバーを作成すると、 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)の **\@provstr**パラメーターを使用して、サーバーおよびフェールオーバーパートナーの spn を指定できます。 これを実行するメリットは、クライアント接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使う接続を確立する方が、より簡単でより信頼性が高くなります。  
   
  リンク サーバーでの委任には、Kerberos 認証が必要です。  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>アプリケーションによって指定される SPN の管理上の考慮事項  
  SPN をアプリケーションで接続文字列を通じて指定するか、プログラムで接続プロパティを通じて指定するか (プロバイダーが生成した既定の SPN を使用しない) を選択する際には、次の事項を検討してください。  
   
--   セキュリティ:指定された SPN は、保護されている情報を開示していますか。  
+-   セキュリティ : 指定した SPN が保護されている情報を開示する可能性。  
   
--   信頼性既定の Spn を使用できるようにするには、@no__t 0 のインスタンスを実行するサービスアカウントに、KDC 上の Active Directory を更新するための十分な特権が必要です。  
+-   信頼性 : 既定の SPN の使用。既定の SPN を使用できるようにするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを実行するサービス アカウントに、KDC 上の Active Directory を更新するための十分な権限が必要です。  
   
--   利便性と場所の透過性:データベースが別の @no__t 0 インスタンスに移動した場合、アプリケーションの Spn はどのように影響を受けますか。 データベース ミラーリングを使用する場合は、プリンシパル サーバーとそのフェールオーバー パートナーの両方について、この事項を検討する必要があります。 また、サーバーの変更に伴って SPN を変更する場合のアプリケーションに対する影響や、 すべての変更に関する管理の有無についても検討してください。  
+-   利便性と場所の透過性 : アプリケーションのデータベースを別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに移した場合の、アプリケーションの SPN に対する影響。 データベース ミラーリングを使用する場合は、プリンシパル サーバーとそのフェールオーバー パートナーの両方について、この事項を検討する必要があります。 また、サーバーの変更に伴って SPN を変更する場合のアプリケーションに対する影響や、 すべての変更に関する管理の有無についても検討してください。  
   
 ## <a name="specifying-the-spn"></a>SPN の指定  
  SPN は、ダイアログ ボックスおよびコードで指定できます。 ここでは、SPN を指定する方法について説明します。  
@@ -96,7 +95,7 @@ ms.locfileid: "72173686"
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *fqdn* は、完全修飾ドメイン名です。|  
 |MSSQLSvc/*fqdn*:*port*|TCP が使用される場合にプロバイダーが生成する既定の SPN。<br /><br /> *port* は、TCP ポート番号です。|  
-|MSSQLSvc/*fqdn*:*InstanceName*|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *InstanceName* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前です。|  
+|MSSQLSvc/*fqdn*:*InstanceName*|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *InstanceName* は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前です。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Windows で自動的に登録されるビルトイン コンピューター アカウントにマップされる SPN。|  
 |*Username*@*Domain*|ドメイン アカウントの直接指定。<br /><br /> *Username* は、Windows ユーザー アカウントの名前です。<br /><br /> *Domain* は、Windows ドメイン名または完全修飾ドメイン名です。|  
 |*MachineName*$@*Domain*|コンピューター アカウントの直接指定。<br /><br /> (接続先のサーバーが、LOCAL SYSTEM または NETWORK SERVICE アカウントで実行されている場合に Kerberos 認証を使用するには、 **ServerSPN** を *MachineName*$@*Domain* の形式で指定できます。)|  
@@ -111,7 +110,7 @@ ms.locfileid: "72173686"
   
  この機能を説明するサンプル アプリケーションについては、「 [SQL Server データ プログラミング サンプル](https://msftdpprodsamples.codeplex.com/)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
 [Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

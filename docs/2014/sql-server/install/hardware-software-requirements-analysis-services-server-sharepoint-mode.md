@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 58ed4735bf44e1afe62fdc3a8ed64385087c03df
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 425639d6e22491028f552bc97990267b2b33e799
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952472"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637813"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>SharePoint モードの Analysis Services サーバーのハードウェアとソフトウェアの要件 (SQL Server 2014)
 
@@ -34,9 +34,9 @@ ms.locfileid: "71952472"
 ##  <a name="bkmk_sqllicense"></a>SQL Server ライセンス  
  SQL Server のライセンスの詳細については、以下を参照してください。  
   
--   [SQL Server 2014 ライセンスデータシート](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)(https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) )。  
+-   [SQL Server 2014 ライセンスデータシート](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)(https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)。  
   
--   [How 方法:SQL Server のライセンスモデルでは、@ no__t-0 (https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) をサポートしています。  
+-   [購入方法: SQL Server のライセンスモデルのサポート](https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2)(https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2)。  
   
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>SharePoint 2013 にインストールされた Analysis Services  
  Analysis Services サーバーだけを SharePoint モードでサーバーにインストールする場合、最小システム要件は、SharePoint サーバーの要件ではなく [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に基づきます。  
@@ -70,12 +70,12 @@ ms.locfileid: "71952472"
 |コンポーネント|要件|  
 |---------------|-----------------|  
 |SharePoint バージョン|同じサーバー ファーム内で Excel Services、Secure Store Service、および Claims to Windows Token Service が構成された SharePoint 2010 Enterprise。<br /><br /> SharePoint は、SharePoint セットアップでサーバー ファーム オプションを使用してインストールされている必要があります (SharePoint のスタンドアロン インストール オプションはサポートされていません)。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] には、管理アクセスおよびデータ アクセスをサポートするサーバー ファーム インフラストラクチャが必要です。 スタンドアロン インストールではこれらのサービスは提供されません。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーのインストールでは、Windows 7 または Windows Vista 上で動作する Developer Edition はサポートされません。|  
-|サービス パック|SharePoint Server 2010 Service Pack 1 (SP1) が必要です。<br /><br /> @No__t 0 の @ no__t-1 機能には、SharePoint 2010 Service Pack 1 が必要です。<br /><br /> 以前のバージョンの [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] から [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードする場合は、SharePoint 2010 の 2010 年 8 月の累積的な更新プログラム、またはそれ以降の更新プログラムが必要です。 2010 年 8 月の累積的な更新プログラム、またはそれ以降の更新プログラムは、SharePoint Service Pack 1 のインストール後にインストールする必要があります。 @No__t-0 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の新規インストールでは、累積的な更新プログラムは必要ありません。 詳細については、「 [2010 年8月の SharePoint の累積的な更新プログラムのリリース](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)」を参照してください。|  
+|サービス パック|SharePoint Server 2010 Service Pack 1 (SP1) が必要です。<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 機能には、SharePoint 2010 Service Pack 1 が必要です。<br /><br /> 以前のバージョンの [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] から [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードする場合は、SharePoint 2010 の 2010 年 8 月の累積的な更新プログラム、またはそれ以降の更新プログラムが必要です。 2010 年 8 月の累積的な更新プログラム、またはそれ以降の更新プログラムは、SharePoint Service Pack 1 のインストール後にインストールする必要があります。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の新規インストールでは、累積的な更新プログラムは必要ありません。 詳細については、「 [2010 年8月の SharePoint の累積的な更新プログラムのリリース](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)」を参照してください。|  
 |SharePoint web アプリケーション|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2010 は、クラシック モード認証用に構成された SharePoint Web アプリケーションのみをサポートします。 既存のファームに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を追加する場合は、使用する予定の Web アプリケーションがクラシック モード認証用に構成されていることを確認してください。 認証モードを確認する方法については、「 [SharePoint への PowerPivot ソリューションの配置](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)」の「Web アプリケーションでクラシックモード認証が使用されていることを確認する」を参照してください。|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー側のデータ更新に必要なデータ プロバイダー|サーバー側のデータの更新を行うと、最初にデータをインポートするために使用したのと同じデータ取得手順が繰り返されます。 これは、クライアント ワークステーションでデータのインポートに使用されるデータ プロバイダーが、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーにも存在する必要があることを示します。<br /><br /> また、SharePoint サーバー上のデータ フィードを使用するには、ADO.NET Data Services が必要です。 SharePoint の必須コンポーネントのインストーラー プログラムでは、このコンポーネントはインストールされません。 次のソフトウェアを手動でインストールする必要があります。<br /><br /> ADO.NET Data Services 3.5 SP1 ランタイム アセンブリ。このアセンブリは、SharePoint リストをデータ フィードとしてエクスポートするために使用します。 使用しているオペレーティング システムに対応するバージョンをダウンロードしてインストールしてください。<br /><br /> Windows Server 2008 R2 の場合は、 [windows 7 および Windows server 2008 R2 の .NET Framework 3.5 SP1 に対して ADO.NET Data Services Update を使用します (https://go.microsoft.com/fwlink/?LinkId=182557)](https://go.microsoft.com/fwlink/?LinkId=182557)。 Windows Server 2008 R2 **SP1**には、更新されたプロバイダーが既に含まれています。<br /><br /> Windows Server 2008 の場合は、 [windows 2000、Windows server 2003、WINDOWS XP、Windows Vista、および Windows Server 2008 用の .NET Framework 3.5 SP1 に対して ADO.NET Data Services Update を使用します (https://go.microsoft.com/fwlink/?LinkId=158125)](https://www.microsoft.com/download/details.aspx?id=22734))。|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー側のデータ更新に必要なデータ プロバイダー|サーバー側のデータの更新を行うと、最初にデータをインポートするために使用したのと同じデータ取得手順が繰り返されます。 これは、クライアント ワークステーションでデータのインポートに使用されるデータ プロバイダーが、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーにも存在する必要があることを示します。<br /><br /> また、SharePoint サーバー上のデータ フィードを使用するには、ADO.NET Data Services が必要です。 SharePoint の必須コンポーネントのインストーラー プログラムでは、このコンポーネントはインストールされません。 次のソフトウェアを手動でインストールする必要があります。<br /><br /> ADO.NET Data Services 3.5 SP1 ランタイム アセンブリ。このアセンブリは、SharePoint リストをデータ フィードとしてエクスポートするために使用します。 使用しているオペレーティング システムに対応するバージョンをダウンロードしてインストールしてください。<br /><br /> Windows Server 2008 R2 の場合は、 [windows 7 および Windows server 2008 r2 用の .NET Framework 3.5 SP1 用に ADO.NET Data Services Update](https://www.microsoft.com/download/details.aspx?id=2343)を使用します。 Windows Server 2008 R2 **SP1**には、更新されたプロバイダーが既に含まれています。<br /><br /> Windows Server 2008 では、 [windows 2000、Windows server 2003、WINDOWS XP、Windows Vista、および Windows Server 2008 (https://go.microsoft.com/fwlink/?LinkId=158125)の場合は、.NET Framework 3.5 SP1 に対して ADO.NET Data Services Update](https://www.microsoft.com/download/details.aspx?id=22734)を使用します。|  
   
  [ハードウェアとソフトウェアの要件の決定 (SharePoint 2010) (https://go.microsoft.com/fwlink/?LinkId=169734)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
 ## <a name="additional-information"></a>追加情報  
 
-SharePoint の変更の詳細については、「 [sharepoint 2010 から sharepoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx) 」を参照してください。
+SharePoint の変更の詳細については、「 [sharepoint 2010 から sharepoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)」 (https://technet.microsoft.com/library/ff607742(office.15).aspx)を参照してください。

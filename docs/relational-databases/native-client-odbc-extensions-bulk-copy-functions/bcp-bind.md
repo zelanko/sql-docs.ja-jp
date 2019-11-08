@@ -18,17 +18,16 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99da52886b15cf89b693fdfb5f1cc5d039e64905
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 601a584a315eba7013c086dc59c9fb5bfeff8693
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707745"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783218"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に一括コピーするために、プログラム変数からテーブル列にデータをバインドします。  
 
@@ -53,7 +52,7 @@ RETCODE bcp_bind (
  一括コピーが有効な ODBC 接続ハンドルです。  
   
  *pData*  
- コピーされたデータへのポインターです。 *Edatatype*が SQLTEXT、SQLNTEXT、SQLXML、sqlntext、sqlntext、sqlntext、sqlntext、SQLNTEXT、sqlntext、または SQLIMAGE の場合は、 *pData*を NULL にすることができます。 NULL *pData*は、 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を使用して、長いデータ値がチャンク内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されることを示します。 ユーザーは、ユーザーバインドフィールドに対応する列が BLOB 列の場合、 *pData*を NULL に設定する必要があります。それ以外の場合、 **bcp_bind**は失敗します。  
+ コピーされたデータへのポインターです。 *Edatatype*が SQLTEXT、SQLNTEXT、SQLXML、sqlntext、sqlntext、sqlntext、sqlntext、SQLNTEXT、sqlntext、または SQLIMAGE の場合は、 *pData*を NULL にすることができます。 NULL *pData*は、長いデータ値が[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を使用してチャンク内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されることを示します。 ユーザーは、ユーザーバインドフィールドに対応する列が BLOB 列の場合、 *pData*を NULL に設定する必要があります。それ以外の場合、 **bcp_bind**は失敗します。  
   
  データ内にインジケーターが存在する場合、それらのインジケーターはメモリ内ではデータの直前にあります。 この場合、 *pData*パラメーターはインジケーター変数を指します。インジケーターの幅 ( *cbindicator*パラメーター) は、一括コピーによってユーザーデータを正しくアドレス指定するために使用されます。  
   
@@ -75,11 +74,11 @@ typedef struct tagBCPBOUNDINT
   
  *Cbdata*を SQL_NULL_DATA に設定すると、サーバーにコピーされるすべての行に列の NULL 値が格納されます。  
   
- *Cbdata*を SQL_VARLEN_DATA に設定すると、システムは文字列ターミネータ (またはその他の方法) を使用して、コピーされるデータの長さを決定します。  
+ *Cbdata*を SQL_VARLEN_DATA に設定すると、システムは、文字列ターミネータ (またはその他の方法) を使用してコピーされるデータの長さを決定します。  
   
- 整数などの固定長データ型の場合、データ型によってデータの長さがシステムに示されます。 そのため、固定長データ型の場合は、 *Cbdata*を安全に SQL_VARLEN_DATA またはデータの長さにすることができます。  
+ 整数などの固定長データ型の場合、データ型によってデータの長さがシステムに示されます。 したがって、固定長データ型の場合は、 *Cbdata*を安全に SQL_VARLEN_DATA することも、データの長さを指定することもできます。  
   
- @No__t 0 文字およびバイナリデータ型の場合、 *Cbdata*には SQL_VARLEN_DATA、SQL_NULL_DATA、正の値、または0を指定できます。 *Cbdata*が SQL_VARLEN_DATA の場合、システムは長さ/null インジケーター (存在する場合) またはターミネータシーケンスを使用してデータの長さを決定します。 インジケーターとターミネータ シーケンスの両方を指定した場合、システムでは、コピーされるデータ量が少なくなる方法が使用されます。 *Cbdata*が SQL_VARLEN_DATA の場合、列のデータ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字またはバイナリ型で、長さのインジケーターもターミネータシーケンスも指定されていないため、システムはエラーメッセージを返します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字データ型およびバイナリデータ型の場合、 *Cbdata*には、SQL_VARLEN_DATA、SQL_NULL_DATA、正の値、または0を指定できます。 *Cbdata*が SQL_VARLEN_DATA 場合、システムは長さ/null インジケーター (存在する場合) またはターミネータシーケンスを使用してデータの長さを決定します。 インジケーターとターミネータ シーケンスの両方を指定した場合、システムでは、コピーされるデータ量が少なくなる方法が使用されます。 *Cbdata*が SQL_VARLEN_DATA 場合、列のデータ型が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字またはバイナリ型であり、長さのインジケーターもターミネータシーケンスも指定されていないと、システムはエラーメッセージを返します。  
   
  *Cbdata*が0または正の値の場合、システムではデータ長として*cbdata*が使用されます。 ただし、正の*Cbdata*値に加えて、長さのインジケーターまたはターミネータシーケンスが指定されている場合、システムは、コピーされるデータ量が最小になるメソッドを使用してデータ長を決定します。  
   
@@ -113,7 +112,7 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- バインドされた @no__t 0 列がワイド文字の場合、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)で変換は実行されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列が MBCS 文字型の場合、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されるときに、ワイド文字がマルチバイト文字に変換されます。  
+ バインドされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列がワイド文字の場合、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)に対して変換は実行されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列が MBCS 文字型の場合、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されるときに、ワイド文字がマルチバイト文字に変換されます。  
   
  *cbTerm*  
  プログラム変数にターミネータがある場合は、そのターミネータを構成するバイト数です。 変数にターミネータがない場合は、 *Cbterm*を0に設定します。  
@@ -146,20 +145,20 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT2|short int|  
 |SQLINT4|int|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1:SQLINT1<br /> 2:SQLINT2<br /> 4:SQLINT4<br /> 8SQLINT8|  
-|SQLFLT4|FLOAT|  
-|SQLFLT8|FLOAT|  
-|SQLFLTN|*cbIndicator*<br /> 4:SQLFLT4<br /> 8SQLFLT8|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
 |SQLMONEY|DBMONEY|  
 |SQLMONEY4|DBMONEY4|  
-|SQLMONEYN|*cbIndicator*<br /> 4:SQLMONEY4<br /> 8SQLMONEY|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
 |SQLTIMEN|SQL_SS_TIME2_STRUCT|  
 |SQLDATEN|SQL_DATE_STRUCT|  
 |SQLDATETIM4|DBDATETIM4|  
 |SQLDATETIME|DBDATETIME|  
-|SQLDATETIMN|*cbIndicator*<br /> 4:SQLDATETIM4<br /> 8SQLDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
 |SQLIMAGE|unsigned char *|  
@@ -174,25 +173,25 @@ bcp_bind(hdbc, szName, 0,
 
  SUCCEED または FAIL。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-**Bcp_bind**を使用すると、プログラム変数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにデータをすばやく効率的にコピーできます。  
+プログラム変数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のテーブルにデータをコピーする高速で効率的な方法には、 **bcp_bind**を使用します。  
 
-このまたはその他の一括コピー関数を呼び出す前に、 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出してください。 **Bcp_init**を呼び出すと、一括コピー用に @no__t 1 つのターゲットテーブルが設定されます。 **Bcp_bind**と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)で使用するために**bcp_init**を呼び出すと、データファイルを示す**bcp_init** _szdatafile_ファイルパラメーターが NULL に設定されます。**bcp_init**_EDIRECTION_パラメーターは DB_IN に設定されています。  
+このまたはその他の一括コピー関数を呼び出す前に[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出してください。 **Bcp_init**を呼び出すと、一括コピー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 対象テーブルが設定されます。 **Bcp_bind**と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)で使用するために**bcp_init**を呼び出すと、データファイルを示す**BCP_INIT**の_szdatafile_ファイルパラメーターが NULL に設定されます。**bcp_init**_edirection_パラメーターが DB_IN に設定されています。  
 
-コピー先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のすべての列に対して、個別の**bcp_bind**呼び出しを作成します。 必要な**bcp_bind**呼び出しが行われた後、 **bcp_sendrow**を呼び出して、プログラム変数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータ行を送信します。 列の再バインドはサポートされていません。
+コピーする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のすべての列に対して、個別の**bcp_bind**呼び出しを作成します。 必要な**bcp_bind**の呼び出しが行われたら、 **bcp_sendrow**を呼び出して、プログラム変数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータの行を送信します。 列の再バインドはサポートされていません。
 
-@No__t-0 を使用して、既に受信した行をコミットする場合は、 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)を呼び出します。 たとえば、1000行が挿入されるたび、またはその他の間隔で**bcp_batch**を1回呼び出します。  
+既に受信した行をコミットする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] する場合は、 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)を呼び出します。 たとえば、1000行が挿入されるたびに、またはその他の間隔で1回**bcp_batch**を呼び出します。  
 
 挿入する行がなくなった場合は、 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)を呼び出します。 この操作を行わないと、エラーが発生します。
 
 [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)で指定されたコントロールパラメーターの設定は、 **bcp_bind**の行転送には影響しません。  
 
-列の値が NULL に設定さ*れている場合、* その値は[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)への呼び出しによって指定されます。その後、 *EDATATYPE*が SQLTEXT、SQLNTEXT、SQLXML、SQLNTEXT、SQLNTEXT、SQLNTEXT、sqlntext、sqlntext、また、SQLNCHAR または SQLIMAGE を NULL に*設定し*、その値を**bcp_moretext**の呼び出しによっても指定する必要があります。  
+列の*pData*が NULL に設定されている場合、その値は[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)の呼び出しによって指定されます。その後、 *EDATATYPE*が SQLTEXT、SQLNTEXT、SQLXML、SQLNTEXT、SQLNTEXT、SQLNTEXT、sqlntext、sqlntext、また、SQLNCHAR または SQLIMAGE を NULL に*設定し、それらの値*も、 **bcp_moretext**の呼び出しによって指定する必要があります。  
 
 **Varchar (max)** 、 **varbinary (max)** 、 **nvarchar (max)** などの新しい大きな値型の場合は、 *edatatype*パラメーターで型インジケーターとして SQLCHARACTER、sqlcharacter、SQLCHARACTER、sqlcharacter、および sqlcharacter を使用できます。  
 
-*Cbterm*が0でない場合は、すべての値 (1、2、4、または 8) がプレフィックス (*cbterm*) に対して有効です。 この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client はターミネータを検索し、ターミネータ (*i*) に対してデータの長さを計算し、 *cbdata*を i の小さい値と prefix の値に設定します。  
+*Cbterm*が0でない場合は、すべての値 (1、2、4、または 8) がプレフィックス (*cbterm*) に対して有効です。 このような状況では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Native Client はターミネータを検索し、ターミネータ (*i*) に対してデータ長を計算し、 *cbdata*を i の小さい値と prefix の値に設定します。  
 
 *Cbterm*が0で、 *cbterm* (プレフィックス) が0でない場合、 *cbterm*は8である必要があります。 8バイトのプレフィックスは、次の値を取ることができます。  
 
@@ -200,7 +199,7 @@ bcp_bind(hdbc, szName, 0,
 
 - 0xFFFFFFFFFFFFFFFE は、データをサーバーに効率的に送信するために使用される特別なプレフィックス値として扱われます。 この特別なプレフィックス値を含むデータは、次のような形式になります。  
 
-- < SPECIAL_PREFIX > \<0 以上のデータチャンク > < ZERO_CHUNK > 場所:  
+- < SPECIAL_PREFIX > \<0 個以上のデータチャンク > < ZERO_CHUNK > 次のようになります。  
 
 - SPECIAL_PREFIX には 0xFFFFFFFFFFFFFFFE を指定します。  
 

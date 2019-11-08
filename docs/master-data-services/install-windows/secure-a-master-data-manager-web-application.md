@@ -1,5 +1,5 @@
 ---
-title: マスター データ マネージャー Web アプリケーションのセキュリティ保護 | Microsoft Docs
+title: マスター データ マネージャー Web アプリケーションのセキュリティ保護
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028803"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729175"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーションのセキュリティ保護
 
@@ -25,7 +25,7 @@ ms.locfileid: "69028803"
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションは、HTTP または HTTPS のいずれかを使用できますが、両方を使用することはできません。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がインストールされている Web サーバーの管理者である必要があります。  
@@ -48,7 +48,7 @@ ms.locfileid: "69028803"
   
 7.  **[OK]** をクリックします。  
   
-8.  任意。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]** の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]** をクリックします。  
+8.  省略可。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]** の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]** をクリックします。  
   
     > [!IMPORTANT]  
     >  HTTP を削除した後に basicHttp 構成および wsHttpBinding 構成を変更する必要があります。  
@@ -64,7 +64,7 @@ ms.locfileid: "69028803"
 13. ファイルを保存して閉じます。 エラーが発生した場合は、UAC が有効になっている可能性があります。 これで、ユーザーが HTTPS を使用してサイトにアクセスできるようになりました。  
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

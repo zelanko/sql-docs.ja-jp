@@ -1,5 +1,5 @@
 ---
-title: マスター データ サービス (MDS) の新機能 | Microsoft Docs
+title: 新機能
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810502"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727791"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]リリースのマスター データ サービスの変更と更新の概要を説明します。 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]このトピックでは、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] リリースのマスター データ サービスの変更と更新の概要を説明します。 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のデータを整理する方法の概要については、[マスター データ サービスの概要](../master-data-services/master-data-services-overview-mds.md)を参照してください。 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のデータを整理する方法の概要については、 [マスター データ サービスの概要](../master-data-services/master-data-services-overview-mds.md)を参照してください。 
   
  **マスター データ サービスをインストールし、データベースと Web サイトをセットアップして、サンプル モデルをデプロイするには、「** [Master Data Services Overview (MDS) (マスター データ サービスの概要 (MDS))](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68810502"
   
  パフォーマンスが向上したことで、さらに大きなモデルを作成できます。また、データ読み込みの効率性と全体的なパフォーマンスも向上しました。 たとえば、Microsoft Excel 用アドインのパフォーマンスが改善したことでデータの読み込み時間が短縮され、より大きなエンティティをアドインが処理できます。  
   
- Microsoft Excel 用アドインの詳細については、「 [Microsoft Excel 用マスター データ サービス アドイン](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)」を参照してください。  
+ Microsoft Excel 用アドインの詳細については、「 [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)」を参照してください。  
   
  強化された機能を次に示します。  
   
@@ -225,13 +225,13 @@ ms.locfileid: "68810502"
    
  **モデル配置パッケージ サンプルの更新**  
   
- 新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「[SQL Server の例: モデルの配置パッケージ (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
+ 新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「[SQL Server サンプル: モデルの配置パッケージ (マスター データ サービス)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)  
  [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)
