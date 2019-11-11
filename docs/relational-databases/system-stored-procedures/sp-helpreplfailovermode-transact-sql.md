@@ -49,12 +49,12 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` は、フェールオーバーモードの整数値を返し、は**出力**パラメーターです。 *failover_mode_id*は**tinyint**で、既定値は**0**です。 即時更新の場合は**0** 、キュー更新の場合は**1**を返します。  
   
-`[ @failover_mode = ] 'failover_mode' OUTPUT`
+[ **\@failover_mode =** ] **'***failover_mode***' 出力**
  サブスクライバーでデータ変更が行われるモードを返します。 *failover_mode*は**nvarchar (10)** で、既定値は NULL です。 は**出力**パラメーターです。  
   
 |の値|Description|  
 |-----------|-----------------|  
-|**immediate**|即時更新: サブスクライバーで行われた更新は、2フェーズコミットプロトコル (2PC) を使用してパブリッシャーに直ちに反映されます。|  
+|**immediate**|即時更新: サブスクライバーで行われた更新は、2 フェーズ コミット プロトコル (2PC) を使用してパブリッシャーに直ちに反映されます。|  
 |**queued**|キュー更新。サブスクライバーでの更新は、キューに格納されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
