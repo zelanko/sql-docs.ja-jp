@@ -1,5 +1,5 @@
 ---
-title: エンティティ アクセス許可 (Master Data Services) | Microsoft Docs
+title: エンティティ権限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e50c4ff0b3c69d1f943c0cff266520a2fabc9bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051985"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728175"
 ---
 # <a name="entity-permissions-master-data-services"></a>エンティティ権限 (Master Data Services)
 
@@ -42,12 +42,12 @@ ms.locfileid: "68051985"
 |**読み取り**|ユーザーは、メンバー、属性、階層メンバーシップ、コレクション メンバーシップを読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成し、作成時に属性値を割り当てることができます。|  
 |**Update**|ユーザーは、メンバー、属性、階層メンバーシップ、コレクション メンバーシップを更新できます。|  
-|**削除**|ユーザーはメンバーを削除できます。|  
+|**Del**|ユーザーはメンバーを削除できます。|  
 |**Deny**|エンティティに対するすべてのアクセスを拒否します。|  
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除の各権限を割り当てた場合は、読み取り権限が自動的に割り当てられます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  

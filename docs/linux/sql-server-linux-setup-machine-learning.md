@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 09/23/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271975"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531247"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -35,9 +35,11 @@ Python と R の拡張機能のパッケージは、SQL Server Linux ソース �
 
 Machine Learning Services は Linux コンテナーでもサポートされています。 Machine Learning Services は、ビルド済みのコンテナーに付属していませんが、[GitHub 上で入手できるサンプル テンプレート](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)を使用して、SQL Server コンテナーから作成できます。
 
-## <a name="uninstall-previous-ctp"></a>以前の CTP をアンインストールする
+Machine Learning Services は、SQL Server ビッグ データ クラスターに既定でインストールされています。この場合、手順に従う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 
-パッケージ一覧は、最新のいくつかの CTP リリースによって変更されており、パッケージ数は減少しています。 CTP 3.2 をインストールする前に、以前のすべてのパッケージを削除するために、CTP 2.x をアンインストールすることをお勧めします。 複数のバージョンの並列インストールはサポートされていません。
+## <a name="uninstall-preview-release"></a>プレビューリリースをアンインストールする
+
+プレビュー リリース (Community Technical Preview (CTP) またはリリース候補) をインストールしている場合は、SQL Server 2019 をインストールする前に、このバージョンをアンインストールして以前のすべてのパッケージを削除することをお勧めします。 複数のバージョンのサイド バイ サイド インストールはサポートされていません。また、パッケージ一覧は、最新のいくつかのプレビュー (CTP/RC) リリースで変更されています。
 
 ### <a name="1-confirm-package-installation"></a>1.パッケージのインストールを確認する
 
@@ -47,7 +49,7 @@ Machine Learning Services は Linux コンテナーでもサポートされて�
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.以前の CTP 2.x パッケージをアンインストールする
+### <a name="2-uninstall-ctprc-packages"></a>2.CTP/RC パッケージをアンインストールする
 
 最下位のパッケージ レベルでアンインストールを行います。 より下位のパッケージに依存しているアップストリーム パッケージが、自動的にアンインストールされます。
 
@@ -63,14 +65,14 @@ ls /opt/microsoft/mssql/bin
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open 3.4.4 は、以前にインストールした CTP リリースに応じて、2 つまたは 3 つのパッケージで構成されています。 (foreachiterators パッケージは、CTP 2.2 のメインの mro パッケージに結合されました。)microsoft-r-open-mro-3.4.4 を削除した後にこれらのパッケージのいずれかが残っている場合は、それらを個別に削除する必要があります。
+> Microsoft R Open 3.4.4 は、以前にインストールした CTP リリースに応じて、2 つのパッケージで構成されています。 (foreachiterators パッケージは、CTP 2.2 のメインの mro パッケージに結合されました。)microsoft-r-open-mro-3.4.4 を削除した後にこれらのパッケージのいずれかが残っている場合は、それらを個別に削除する必要があります。
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-32-install"></a>3.CTP 3.2 のインストールを続行する
+### <a name="3-proceed-with-install"></a>3.インストールを続行する
 
 この記事の手順を使用して、お使いのオペレーティング システムに最上位のパッケージ レベルでインストールを行います。
 
@@ -178,8 +180,6 @@ zypper update
 | [microsoft-r-open*](#mro) | R | R のオープンソース ディストリビューション。3 つのパッケージで構成されています。 |
 |mssql-mlservices-mlm-r  | R | *完全インストール*。 イメージの特性付けとテキストのセンチメント分析のための、RevoScaleR、MicrosoftML、sqlRUtils、olapR、事前トレーニング済みのモデルを提供します。| 
 |mssql-mlservices-packages-r  | R | *最小インストール*。 RevoScaleR、sqlRUtils、MicrosoftML、olapR を提供します。 <br/>事前トレーニング済みモデルは除外されます。 | 
-|mssql-mlservices-mml-py  | CTP 2.0-2.1 のみ | Python パッケージを mssql-mslservices-python に統合することにより、CTP 2.2 で廃止されました。 revoscalepy を提供します。 事前トレーニング済みのモデルと microsoftml は除外されます。| 
-|mssql-mlservices-mml-r  | CTP 2.0-2.1 のみ | R パッケージを mssql-mslservices-python に統合することにより、CTP 2.2 で廃止されました。 RevoScaleR、sqlRUtils、olapR を提供します。 事前トレーニング済みのモデルと MicrosoftML は除外されます。  |
 
 <a name="RHEL"></a>
 
@@ -420,7 +420,7 @@ EULA の同意に関するすべての可能な順列は、「[Configure SQL Ser
 
 #### <a name="download-site"></a>ダウンロード サイト
 
-[https://packages.microsoft.com/](https://packages.microsoft.com/) からパッケージをダウンロードできます。 R および Python 用の mlservices パッケージはすべて、データベース エンジン パッケージと併置されています。 mlservices パッケージの基本バージョンは、9.4.5 (CTP 2.0 の場合) または 9.4.6 (CTP 2.1 以降の場合) です。 microsoft-r-open パッケージが[別のリポジトリ](#mro)にあることを思い出してください。
+[https://packages.microsoft.com/](https://packages.microsoft.com/) からパッケージをダウンロードできます。 R および Python 用の mlservices パッケージはすべて、データベース エンジン パッケージと併置されています。 mlservices パッケージの基本バージョンは、9.4.6 です。 microsoft-r-open パッケージが[別のリポジトリ](#mro)にあることを思い出してください。
 
 #### <a name="rhel7-paths"></a>RHEL/7 パス
 
@@ -515,24 +515,87 @@ mssql-mlservices-mlm-py-9.4.7.64
    @script = N'import httpie' 
    ```
 
-## <a name="limitations-in-ctp-releases"></a>CTP リリースにおける制限事項
+## <a name="run-in-a-container"></a>コンテナー内で実行する
 
-Linux の R および Python の統合は、まだアクティブな開発中です。 プレビュー バージョンでは、次の機能がまだ有効になっていません。
+下記の手順に従い、Docker コンテナー内で SQL Server Machine Learning Services をビルドして実行します。 詳細については、「[Docker で SQL Server コンテナーイメージを構成する](sql-server-linux-configure-docker.md)」を参照してください。
 
-+ 現時点では、暗黙的な認証は Linux の Machine Learning Services では使用できません。つまり、データやその他のリソースにアクセスするために、進行中の R または Python スクリプトからサーバーに接続することはできません。 
+### <a name="prerequisites"></a>Prerequisites
 
-### <a name="resource-governance"></a>リソース管理
+- Git のコマンド ライン インターフェイス。
+- サポートされているいずれかの Linux ディストリビューションの Docker エンジン 1.8 以降 または Mac/Windows 用 Docker。 詳細については、「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker をインストールする) を参照してください。
+- 2 ギガバイト (GB) 以上のディスク領域。
+- 2 GB 以上の RAM。
+- [SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)。
 
-外部リソース プールに対する[リソースのガバナンス](../t-sql/statements/create-external-resource-pool-transact-sql.md)では、Linux と Windows 間に一致がありますが、[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) の統計では、現在は Linux 上に異なるユニットがあります。 今後の CTP では、ユニットが調整される予定です。
- 
-| 列名   | [説明] | Linux 上の値 | 
-|---------------|--------------|---------------|
-|peak_memory_kb | リソース プールに使用されているメモリの最大量。 | Linux では、この統計は CGroups メモリ サブシステムから提供され、値は memory.max_usage_in_bytes になります |
-|write_io_count | Resource Governor の統計がリセットされてから発行された書き込み IO の合計。 | Linux では、この統計は CGroups blkio サブシステムから提供され、書き込み行での値は blkio.throttle.io_serviced になります | 
-|read_io_count | Resource Governor の統計がリセットされてから発行された読み取り IO の合計。 | Linux では、この統計は CGroups blkio サブシステムから提供され、読み取り行での値は blkio.throttle.io_serviced になります | 
-|total_cpu_kernel_ms | Resource Governor の統計がリセットされてからの累積 CPU ユーザー カーネル時間 (ミリ秒単位)。 | Linux では、この統計は CGroups cpuacct サブシステムから提供され、ユーザー行での値は cpuacct.stat になります |  
-|total_cpu_user_ms | Resource Governor の統計がリセットされてからの累積 CPU ユーザー時間 (ミリ秒単位)。| Linux では、この統計は CGroups cpuacct サブシステムから提供され、システム行での値は cpuacct.stat になります | 
-|active_processes_count | 要求の時点で実行されている外部プロセスの数。| Linux では、この統計は CGroups pids サブシステムから提供され、値は pids.current になります | 
+### <a name="clone-the-mssql-docker-repository"></a>mssql-docker リポジトリをクローンする
+
+1. Linux または Mac で Bash ターミナルを開くか、または Windows で WSL ターミナルを開きます。
+
+1. mssql-docker リポジトリのローカル コピーを保持するローカル ディレクトリを作成します。
+
+1. git clone コマンドを実行して、mssql-docker リポジトリを複製します。
+
+    ```bash
+    git clone https://github.com/microsoft/mssql-docker mssql-docker
+    ```
+
+### <a name="build-a-sql-server-linux-container-image-with-machine-learning-services"></a>Machine Learning Services を使用して SQL Server Linux コンテナー イメージをビルドする
+
+1. ディレクトリを mssql-mlservices ディレクトリに変更します。
+
+    ```bash
+    cd mssql-docker/linux/preview/examples/mssql-mlservices
+    ```
+
+1. build.sh スクリプトを実行します。
+
+   ```bash
+   ./build.sh
+   ```
+
+   > [!NOTE]
+   > Docker イメージをビルドするには、サイズが数 GB のパッケージをいくつかインストールする必要があります。 このスクリプトは、ネットワークの帯域幅によって、完了までに最大 20 分かかります。
+
+### <a name="run-the-sql-server-linux-container-image-with-machine-learning-services"></a>Machine Learning Services を使用して SQL Server Linux コンテナー イメージを実行する
+
+1. コンテナーを実行する前に環境変数を設定します。 PATH_TO_MSSQL 環境変数をホスト ディレクトリに設定します。
+
+   ```bash
+    export MSSQL_PID='Developer'
+    export ACCEPT_EULA='Y'
+    export ACCEPT_EULA_ML='Y'
+    export PATH_TO_MSSQL='/home/mssql/'
+   ```
+
+1. run.sh スクリプトを実行します。
+
+   ```bash
+   ./run.sh
+   ```
+
+   このコマンドでは、Developer エディション (既定) を使用して、Machine Learning Services を含む SQL Server コンテナーが作成されます。 SQL Server のポート **1433** は、ホスト上ではポート **1401** として公開されています。
+
+   > [!NOTE]
+   > SQL Server の実稼働エディションをコンテナーで実行するプロセスは、若干異なります。 詳細については、「[Docker で SQL Server コンテナーイメージを構成する](sql-server-linux-configure-docker.md)」を参照してください。 同じコンテナー名とポートを使う場合でも、このチュートリアルの残りの部分は実稼働のコンテナーで機能します。
+
+1. Docker コンテナーを表示するには、`docker ps` コマンドを実行します。
+
+   ```bash
+   sudo docker ps -a
+   ```
+
+1. **[STATUS]** 列に表示されている状態が **[Up]** の場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列で指定されているポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
+
+   ```bash
+   $ sudo docker ps -a
+   ```
+
+    出力結果: 
+    
+    ```
+    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
+    ```
 
 ## <a name="next-steps"></a>次の手順
 

@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769160"
 ---
-# <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-sql)
+# <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   マージパブリケーションに対するプッシュサブスクリプションの同期をスケジュールするために使用する、新しいエージェントジョブを追加します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -133,9 +133,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|第 2 週|  
-|**4**|サードパーティ|  
-|**8**|4 番目|  
+|**2**|Second|  
+|**4**|Third|  
+|**8**|Fourth|  
 |**16**|Last|  
 |NULL (既定値)||  
   
@@ -145,8 +145,8 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**1**|1 回。|  
-|**2**|第 2 週|  
+|**1**|Once|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hour|  
 |NULL (既定値)||  

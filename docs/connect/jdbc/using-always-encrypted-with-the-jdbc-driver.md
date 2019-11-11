@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 31f81cb2e12360956d14d1706b119233add94a35
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026639"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594090"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,9 +56,9 @@ Microsoft JDBC Driver for SQL Server には、次の組み込み列マスター�
 これらのキーストアプロバイダーについては、以降のセクションで詳しく説明します。 Always Encrypted を使用するには、キーストアプロバイダーを1つだけ実装する必要があります。
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
-Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Microsoft JDBC Driver for SQL Server には、Azure Key Vault にキーが格納されているアプリケーション用の組み込みプロバイダー SQLServerColumnEncryptionAzureKeyVaultProvider が含まれています。 このプロバイダーの名前は AZURE_KEY_VAULT です。 Azure Key Vault ストアプロバイダーを使用するには、アプリケーション開発者が Azure Key Vault でコンテナーとキーを作成し、Azure Active Directory でアプリの登録を作成する必要があります。 登録されたアプリケーションには、Always Encrypted で使用するために作成されたキーコンテナーに対して定義されているアクセスポリシーで、Get、Encrypt、Encrypt、Wrap キー、Wrap キー、および Verify アクセス許可が付与されている必要があります。 キーコンテナーを設定し、列マスターキーを作成する方法の詳細については、「 [Azure Key Vault-](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)ステップバイステップ」と「 [Azure Key Vault での列マスターキーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)」を参照してください。
+Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Microsoft JDBC Driver for SQL Server には、Azure Key Vault にキーが格納されているアプリケーション用の組み込みプロバイダー SQLServerColumnEncryptionAzureKeyVaultProvider が含まれています。 このプロバイダーの名前は AZURE_KEY_VAULT。 Azure Key Vault ストアプロバイダーを使用するには、アプリケーション開発者が Azure Key Vault でコンテナーとキーを作成し、Azure Active Directory でアプリの登録を作成する必要があります。 登録されたアプリケーションには、Always Encrypted で使用するために作成されたキーコンテナーに対して定義されているアクセスポリシーで、Get、Encrypt、Encrypt、Wrap キー、Wrap キー、および Verify アクセス許可が付与されている必要があります。 キーコンテナーを設定し、列マスターキーを作成する方法の詳細については、「 [Azure Key Vault-](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)ステップバイステップ」と「 [Azure Key Vault での列マスターキーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)」を参照してください。
 
-このページの例では、SQL Server Management Studio を使用して Azure Key Vault ベースの列マスターキーと列暗号化キーを作成した場合、それらを再作成するための T-sql スクリプトは、次の例のように、独自の**KEY_PATH**を指定することで、この例のようになります。**ENCRYPTED_VALUE**:
+このページの例では、SQL Server Management Studio を使用して Azure Key Vault ベースの列マスターキーと列暗号化キーを作成した場合、それらを再作成する T-sql スクリプトは、次の例のように、独自の特定の**KEY_PATH**および**ENCRYPTED_VALUE**を使用して作成することができます。
 
 ```sql
 CREATE COLUMN MASTER KEY [MyCMK]
@@ -87,7 +87,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 **clientID**は、Azure Active Directory インスタンスのアプリ登録のアプリケーション ID です。 **clientkey**は、そのアプリケーションに登録されているキーパスワードであり、Azure Key Vault への API アクセスを提供します。
 
-アプリケーションで SQLServerColumnEncryptionAzureKeyVaultProvider のインスタンスを作成した後、アプリケーションは SQLServerConnection () メソッドを使用して、インスタンスをドライバーに登録する必要があります。 インスタンスは、既定の参照名 AZURE_KEY_VAULT を使用して登録することを強くお勧めします。この名前は、SQLServerColumnEncryptionAzureKeyVaultProvider () API を呼び出すことによって取得できます。 既定の名前を使用すると、SQL Server Management Studio や PowerShell などのツールを使用して Always Encrypted キーをプロビジョニングして管理することができます (ツールでは、既定の名前を使用してメタデータオブジェクトを列マスターキーに生成します)。 次の例は、Azure Key Vault プロバイダーの登録を示しています。 SQLServerConnection () メソッドの詳細については、「 [JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)」を参照してください。
+アプリケーションで SQLServerColumnEncryptionAzureKeyVaultProvider のインスタンスを作成した後、アプリケーションは SQLServerConnection () メソッドを使用して、インスタンスをドライバーに登録する必要があります。 インスタンスは、既定のルックアップ名 AZURE_KEY_VAULT を使用して登録することを強くお勧めします。この名前は、SQLServerColumnEncryptionAzureKeyVaultProvider () API を呼び出すことによって取得できます。 既定の名前を使用すると、SQL Server Management Studio や PowerShell などのツールを使用して Always Encrypted キーをプロビジョニングして管理することができます (ツールでは、既定の名前を使用してメタデータオブジェクトを列マスターキーに生成します)。 次の例は、Azure Key Vault プロバイダーの登録を示しています。 SQLServerConnection () メソッドの詳細については、「 [JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)」を参照してください。
 
 ```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
@@ -109,7 +109,7 @@ SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キー�
 
 SQLServerColumnEncryptionCertificateStoreProvider の名前は MSSQL_CERTIFICATE_STORE であり、プロバイダーオブジェクトの getName () API によってクエリを実行できます。 これはドライバーによって自動的に登録され、アプリケーションを変更することなくシームレスに使用できます。
 
-このページの例では、SQL Server Management Studio を使用して Windows 証明書ストアベースの列マスターキーと列暗号化キーを作成した場合、T-sql スクリプトを再作成するには、次の例のように、独自の KEY_ を使用します。 **パス**と**ENCRYPTED_VALUE**:
+このページの例では、SQL Server Management Studio を使用して Windows 証明書ストアベースの列マスターキーと列暗号化キーを作成した場合、T-sql スクリプトを再作成するには、次の例のように、独自の**KEY_PATH**と**ENCRYPTED_VALUE**を使用します。
 
 ```sql
 CREATE COLUMN MASTER KEY [MyCMK]
@@ -129,14 +129,14 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> この記事の他のキーストアプロバイダーは、ドライバーでサポートされているすべてのプラットフォームで利用できますが、JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は、Windows オペレーティングシステムでのみ使用できます。 このファイルは、ドライバーパッケージで使用できる sqljdbc_auth に依存しています。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。 または、java.library.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用していて、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> この記事の他のキーストアプロバイダーは、ドライバーでサポートされているすべてのプラットフォームで利用できますが、JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は、Windows オペレーティングシステムでのみ使用できます。 このファイルは、ドライバーパッケージで使用可能な sqljdbc_auth に依存しています。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。 または、java.library.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用していて、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Java キーストアプロバイダーの使用
-JDBC ドライバーには、Java キー ストアの組み込みキー ストア プロバイダー実装が含まれています。 接続文字列に**keyStoreAuthentication**接続文字列プロパティが存在し、それが "JavaKeyStorePassword" に設定されている場合、ドライバーは自動的に Java キーストアのプロバイダーをインスタンス化して登録します。 Java キーストアプロバイダーの名前は MSSQL_JAVA_KEYSTORE です。 この名前は、SQLServerColumnEncryptionJavaKeyStoreProvider () API を使用して照会することもできます。 
+JDBC ドライバーには、Java キー ストアの組み込みキー ストア プロバイダー実装が含まれています。 接続文字列に**keyStoreAuthentication**接続文字列プロパティが存在し、それが "JavaKeyStorePassword" に設定されている場合、ドライバーは自動的に Java キーストアのプロバイダーをインスタンス化して登録します。 Java キーストアプロバイダーの名前は MSSQL_JAVA_KEYSTORE。 この名前は、SQLServerColumnEncryptionJavaKeyStoreProvider () API を使用して照会することもできます。 
 
 クライアントアプリケーションが Java キーストアに対する認証に必要な資格情報を指定できる接続文字列プロパティは3つあります。 ドライバーは、接続文字列のこれら3つのプロパティの値に基づいて、プロバイダーを初期化します。
 
-**keyStoreAuthentication:** 使用する Java キーストアを識別します。 SQL Server 用に Microsoft JDBC Driver 6.0 以降を使用している場合は、このプロパティを介してのみ Java キーストアに対して認証を行うことができます。 Java キーストアの場合、このプロパティの値はで`JavaKeyStorePassword`ある必要があります。
+**keyStoreAuthentication:** 使用する Java キーストアを識別します。 SQL Server 用に Microsoft JDBC Driver 6.0 以降を使用している場合は、このプロパティを介してのみ Java キーストアに対して認証を行うことができます。 Java キーストアの場合、このプロパティの値は `JavaKeyStorePassword`である必要があります。
 
 **keyStoreLocation:** 列マスターキーを格納する Java キーストアファイルへのパス。 パスには、キーストアファイル名が含まれます。
 
@@ -383,8 +383,8 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 | クエリの特性                                                                           | Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる                                                                                                                        | Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない | Always Encrypted が無効になっている                                                                                        |
 | :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
-| 暗号化された列をターゲットとするパラメーターを含むクエリ。                                           | パラメーター値は透過的に暗号化されます。                                                                                                                                                           | Error                                                                             | Error                                                                                                               |
-| 暗号化された列をターゲットとするパラメーターを含まず、暗号化された列からデータを取得するクエリ。 | 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションは、暗号化された列用に構成された SQL Server 型に対応する、JDBC データ型のプレーンテキスト値を受け取ります。 | Error                                                                             | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列 (byte[]) として受け取ります。 |
+| 暗号化された列をターゲットとするパラメーターを含むクエリ。                                           | パラメーター値は透過的に暗号化されます。                                                                                                                                                           | エラー                                                                             | エラー                                                                                                               |
+| 暗号化された列をターゲットとするパラメーターを含まず、暗号化された列からデータを取得するクエリ。 | 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションは、暗号化された列用に構成された SQL Server 型に対応する、JDBC データ型のプレーンテキスト値を受け取ります。 | エラー                                                                             | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列 (byte[]) として受け取ります。 |
 
 ### <a name="inserting-and-retrieving-encrypted-data-examples"></a>暗号化されたデータの例の挿入と取得
 
@@ -524,7 +524,7 @@ Always Encrypted では、暗号化されたデータ型に対するいくつか
 
 - 暗号化された列をターゲットとするパラメーターの値を渡すときは、適切な setter メソッドを使用します。 パラメーターの SQL Server データ型が、ターゲット列の型とまったく同じであること、またはパラメーターの SQL Server データ型を列の対象の型に変換することがサポートされていることを確認してください。 特定の SQL Server データ型に対応するパラメーターを渡すために、API メソッドが SQLServerPreparedStatement、SQLServerCallableStatement、および SQLServerResultSet クラスに追加されました。 たとえば、列が暗号化されていない場合は、setTimestamp () メソッドを使用して、パラメーターを datetime2 または datetime 列に渡すことができます。 ただし、列が暗号化されている場合は、データベース内の列の型を表す正確なメソッドを使用する必要があります。 たとえば、setTimestamp () を使用して、暗号化された datetime2 列に値を渡し、Settimestamp () を使用して、暗号化された datetime 列に値を渡すことができます。 新しい Api の完全な一覧については[、JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)を参照してください。
 - 10 進数と数値の SQL Server データ型の列をターゲットとするパラメーターの有効桁数と小数点以下桁数が、ターゲット列に対して構成された有効桁数と小数点と同じである。 API メソッドが SQLServerPreparedStatement、SQLServerCallableStatement、および SQLServerResultSet クラスに追加され、decimal および numeric データ型を表すパラメーターまたは列のデータ値と共に、有効桁数と小数点以下桁数を受け入れるようになりました。 新しい Api とオーバーロードされた Api の完全な一覧については[、「JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)」を参照してください。  
-- datetime2、datetimeoffset、または time SQL Server の列をターゲットとするパラメーターの秒の小数部の有効桁数/小数点以下桁数が、ターゲット列の値を変更するクエリの対象列の秒の小数部の有効桁数/小数点以下桁数よりも大きくありません。. API メソッドは、SQLServerPreparedStatement、SQLServerCallableStatement、および SQLServerResultSet クラスに追加され、秒の小数部の有効桁数/小数点以下桁数と、これらのデータ型を表すパラメーターのデータ値を受け入れるようになりました。 新しい/オーバーロードされた Api の完全な一覧については、 [JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)を参照してください。
+- datetime2、datetimeoffset、または time SQL Server データ型の列をターゲットとするパラメーターの秒の小数部の有効桁数/小数点以下桁数が、ターゲット列の値を変更するクエリで、対象になる列の秒の小数部の有効桁数/小数点以下桁数を超えていません。 API メソッドは、SQLServerPreparedStatement、SQLServerCallableStatement、および SQLServerResultSet クラスに追加され、秒の小数部の有効桁数/小数点以下桁数と、これらのデータ型を表すパラメーターのデータ値を受け入れるようになりました。 新しい/オーバーロードされた Api の完全な一覧については、 [JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)を参照してください。
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>接続プロパティが正しくないために発生するエラー
 
@@ -552,7 +552,7 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 
 ## <a name="force-encryption-on-input-parameters"></a>入力パラメーターの暗号化を強制する
 
-強制暗号化機能では、Always Encrypted を使用する場合に、パラメーターの暗号化が適用されます。 強制的な暗号化が使用され、パラメーターの暗号化が不要であることが SQL Server からドライバーに通知された場合、このパラメーターを使用するクエリは失敗します。 攻撃を受けた SQL Server がクライアントに不正な暗号化メタデータを提供すると、データ漏えいが引き起こされる可能性がありますが、このプロパティは、そのようなセキュリティ攻撃に対する保護を強化します。 SQLServerPreparedStatement クラスと SQLServerCallableStatement クラスの set * メソッドと SQLServerResultSet クラスの\* update メソッドは、ブール型の引数を受け取り、force encryption 設定を指定するようにオーバーロードされています。 この引数の値が false の場合、ドライバーはパラメーターの暗号化を強制しません。 Force encryption が true に設定されている場合、クエリパラメーターは、送信先列が暗号化され、接続またはステートメントで Always Encrypted が有効になっている場合にのみ送信されます。 このプロパティを使用すると、セキュリティがさらに強化され、暗号化されることが予想される場合に、ドライバーがプレーンテキストとして SQL Server に誤ってデータを送信することがなくなります。
+強制暗号化機能では、Always Encrypted を使用する場合に、パラメーターの暗号化が適用されます。 強制的な暗号化が使用され、パラメーターの暗号化が不要であることが SQL Server からドライバーに通知された場合、このパラメーターを使用するクエリは失敗します。 攻撃を受けた SQL Server がクライアントに不正な暗号化メタデータを提供すると、データ漏えいが引き起こされる可能性がありますが、このプロパティは、そのようなセキュリティ攻撃に対する保護を強化します。 SQLServerPreparedStatement クラスと SQLServerCallableStatement クラスの set * メソッドと SQLServerResultSet クラスの update\* メソッドは、ブール型の引数を受け取り、force encryption 設定を指定するようにオーバーロードされています。 この引数の値が false の場合、ドライバーはパラメーターの暗号化を強制しません。 Force encryption が true に設定されている場合、クエリパラメーターは、送信先列が暗号化され、接続またはステートメントで Always Encrypted が有効になっている場合にのみ送信されます。 このプロパティを使用すると、セキュリティがさらに強化され、暗号化されることが予想される場合に、ドライバーがプレーンテキストとして SQL Server に誤ってデータを送信することがなくなります。
 
 強制暗号化設定でオーバーロードされる SQLServerPreparedStatement メソッドと SQLServerCallableStatement メソッドの詳細については、「 [JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)」を参照してください。  
 

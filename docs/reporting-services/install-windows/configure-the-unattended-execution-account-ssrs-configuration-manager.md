@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502927"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593303"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
   
--   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、SQL Server オンライン ブックの「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」を参照してください。  
-  
+-   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。
+
 -   レポートに使用する外部の画像ファイルの取得。 匿名アクセスでアクセスできない画像ファイルを使用する場合は、自動レポート処理アカウントを構成し、アカウントに対してファイルへのアクセス許可を与えます。  
   
  自動レポート処理とは、ユーザーの要求ではなく、イベント (スケジュール ドリブンのイベントまたはデータ更新イベント) によって起動されたレポート実行処理を示します。 レポート サーバーは、自動レポート処理アカウントを使用して、外部データ ソースをホストしているコンピューターにログオンします。 レポート サーバー サービス アカウントの資格情報は他のコンピューターへの接続に使用されないため、このアカウントは必要です。  
@@ -56,8 +56,8 @@ ms.locfileid: "65502927"
   
      **rsconfig -e -u\<ドメイン/ユーザー名> -p\<パスワード>**  
   
- **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例については、SQL Server オンライン ブックの「[rsconfig ユーティリティ (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。  
-  
+ **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例の表示方法については、「[rsconfig ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。
+ 
 ### <a name="how-account-information-is-stored"></a>アカウント情報の保存方法  
  アカウントを設定すると、ローカルまたはリモートのレポート サーバー インスタンス上の RSreportserver.config ファイル内で、暗号化された値として次の設定が指定されます。  
   
@@ -104,6 +104,6 @@ ms.locfileid: "65502927"
  アカウント情報が RSReportServer.config ファイルから削除されます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー (SSRS ネイティブ モード)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services 構成マネージャー (SSRS ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

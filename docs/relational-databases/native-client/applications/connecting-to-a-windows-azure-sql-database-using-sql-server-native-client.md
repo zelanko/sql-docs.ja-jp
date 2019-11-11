@@ -10,18 +10,17 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b7360fdb5cc5e36a9d21b4821a2bf1e176ad97
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 4aa573374b02b193e6b1dcf94f9ae86c1c232a00
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176318"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761566"
 ---
-# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client を使用した Azure SQL Database への接続
+# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client を使用した Azure SQL データベースへの接続
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Native Client を[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続する方法を示すサンプルについ[ては、「開発:操作方法に関するトピック (Azure SQL Database](https://msdn.microsoft.com/library/ee621787.aspx))。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用して [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] に接続する方法を示すサンプルについては、「[開発: 操作方法に関するトピック (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)」を参照してください。  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>SQL データベースに接続するときの既知の問題  
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する場合、次のような既知の問題があります。  
@@ -32,7 +31,7 @@ ms.locfileid: "70176318"
     [Microsoft][SQL Server Native Client 11.0][SQL Server]USE statement is not supported to switch between databases. Use a new connection to connect to a different Database.  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: このクイックスタートでは、Red Hat Enterprise Linux に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 38df65ffefbc0ed264d631214025059449d84b35
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b94ea0ef8956e7807f075da548ae817dc6a205df
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910506"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531371"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート: Red Hat に SQL Server をインストールし、データベースを作成する
 
@@ -29,7 +29,7 @@ ms.locfileid: "67910506"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-このクイックスタートでは、Red Hat Enterprise Linux (RHEL) 7.3+ に SQL Server 2019 プレビューをインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
+このクイックスタートでは、Red Hat Enterprise Linux (RHEL) 7.3+ に SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 
@@ -42,7 +42,7 @@ RHEL 7.3、7.4、7.5、7.6 コンピューターには**少なくとも 2 GB** �
 
 自分のコンピューターに Red Hat Enterprise Linux をインストールする方法については、[https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) にお進みください。 Azure で RHEL 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照し、`az vm create` の呼び出しで `--image RHEL` を使用します。
 
-SQL Server 2017 の CTP または RC リリースを前にインストールしている場合、この手順を実行する前に、古いリポジトリを削除する必要があります。 詳細は、[SQL Server 2017 と 2019 に Linux リポジトリを構成する](sql-server-linux-change-repo.md)方法に関するページを参照してください。
+SQL Server の CTP または RC リリースを以前インストールしている場合、この手順を行う前に、古いリポジトリを削除する必要があります。 詳細は、[SQL Server 2017 と 2019 に Linux リポジトリを構成する](sql-server-linux-change-repo.md)方法に関するページを参照してください。
 
 他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)に関する記事を参照してください。
 
@@ -60,10 +60,10 @@ RHEL 上で SQL Server を構成するには、ターミナルで次のコマン
    ```
 
    > [!TIP]
-   > SQL Server 2019 を試す場合は、代わりに **Preview (2019)** リポジトリを登録する必要があります。 SQL Server 2019 のインストールには、次のコマンドを使用します。
+   > SQL Server 2019 をインストールする場合は、代わりに SQL Server 2019 リポジトリを登録する必要があります。 SQL Server 2019 のインストールには、次のコマンドを使用します。
    >
    > ```bash
-   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    > ```
 
 2. 次のコマンドを実行して SQL Server をインストールします。
@@ -107,10 +107,10 @@ RHEL 上で SQL Server を構成するには、ターミナルで次のコマン
 
 RHEL 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
-1. Microsoft SQL Server 2019 プレビュー Red Hat リポジトリ構成ファイルをダウンロードします。
+1. Microsoft SQL Server 2019 Red Hat リポジトリ構成ファイルをダウンロードします。
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    ```
 
 2. 次のコマンドを実行して SQL Server をインストールします。
@@ -141,7 +141,7 @@ RHEL 上で SQL Server を構成するには、ターミナルで次のコマン
    sudo firewall-cmd --reload
    ```
 
-この時点で、SQL Server 2019 プレビューは RHEL マシン上で動作しており、使用する準備ができています。
+この時点で、SQL Server 2019 は RHEL コンピューター上で動作しており、使用する準備ができています。
 
 ::: moniker-end
 

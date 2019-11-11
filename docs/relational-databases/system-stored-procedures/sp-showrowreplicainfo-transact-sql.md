@@ -1,5 +1,5 @@
 ---
-title: sp_showrowreplicainfo (TRANSACT-SQL) |Microsoft Docs
+title: sp_showrowreplicainfo (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -81,7 +81,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  **sp_showrowreplicainfo**のメンバーによってのみ実行されることができます、 **db_owner**のパブリケーション データベースのパブリケーション アクセス リスト (PAL) のメンバー、またはパブリケーション データベースの固定データベース ロール。  
   
 ## <a name="see-also"></a>関連項目  
- [検出およびマージ レプリケーションの競合を解決します。](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [マージ レプリケーションの詳細 - 競合の検出および解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

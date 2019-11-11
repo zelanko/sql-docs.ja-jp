@@ -10,12 +10,12 @@ ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 824a722c527b600fd09c8f68725ad033ab1a1b8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780169"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637622"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 文字列ユーザー定義データ型 (UDT)
   SQL Server の UTF8String サンプルでは、ユーザー定義データ型の実装について示しています。 このサンプルでは、データベースの型システムを拡張して UTF-8 でエンコードされた値のストレージを提供する UTF-8 ユーザー定義データ型の実装について示します。 このデータ型では、Unicode 文字列と UTF-8 との変換を行うコードの実装も行います。  
@@ -23,7 +23,7 @@ ms.locfileid: "62780169"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62780169"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にするには、`ALTER SETTINGS` サーバーレベルの権限を持っている必要があります。この権限は、固定サーバーロール `sysadmin` と `serveradmin` のメンバーによって暗黙的に保持されます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62780169"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
+10. テストコマンドスクリプトをファイルにコピー [!INCLUDE[tsql](../../includes/tsql-md.md)]、`test.sql` としてサンプルディレクトリに保存します。  
   
 11. 次のコマンドを使用してテスト スクリプトを実行します。  
   

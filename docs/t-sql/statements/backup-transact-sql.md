@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028962"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659094"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -608,7 +608,7 @@ DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
 GO
 ```
 
@@ -1021,8 +1021,6 @@ COPY_ONLY: バックアップが、通常のバックアップの順序には影
 
 既定の動作では、バックアップの圧縮は行われません。 ただし、この既定の動作は、[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) サーバー構成オプションを設定することで変更できます。 このオプションの現在の値の表示については、「[サーバー プロパティの表示または変更](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)」をご覧ください。
 
-[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースでのバックアップの圧縮の使用については、「[解説](#general-remarks)」セクションを参照してください。
-
 COMPRESSION: バックアップの圧縮を明示的に有効にします。
 
 NO_COMPRESSION: バックアップの圧縮を明示的に無効にします。
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > 単一のデータ ファイルを含む、[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースの場合、既定の `MAXTRANSFERSIZE` は 65536 (64 KB) です。 TDE で暗号化されていないデータベースでは、ディスクへのバックアップを使用する場合は既定の `MAXTRANSFERSIZE` が 1048576 (1 MB) となり、VDI または TAPE を使用する場合は 65536 (64 KB) となります。
-> TDE で暗号化されたデータベースでのバックアップの圧縮の使用の詳細については、「[解説](#general-remarks)」セクションを参照してください。
 
 **エラー管理オプション**
 
@@ -1205,6 +1202,8 @@ DIFFERENTIAL: ユーザー データベースの差分バックアップを実�
 - ターゲット ネットワーク共有には、バックアップのための領域が十分にありません。 BACKUP DATABASE コマンドは、バックアップの開始前に十分なディスク領域があることを確認しません。BACKUP DATABASE の実行中、ディスク容量不足エラーが生成されます。 ディスク容量不足が発生すると、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は BACKUP DATABASE コマンドをロールバックします。 データベースのサイズを減らすには、[DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) を実行します。
 - トランザクション内でバックアップを開始しようとします。
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>全般的な解説
 
 データベース バックアップを実行する前に、[DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) を使用し、データベースのサイズを減らします。
@@ -1217,6 +1216,8 @@ BACKUP コマンドをキャンセルした場合、[!INCLUDE[ssPDW](../../inclu
 
 完全バックアップと差分バックアップは別々のディレクトリに保存されます。 完全バックアップと差分バックアップが同じバックアップに属することを指定するために名前付け規則が強制されることはありません。 独自の名前付け規則で追跡できます。 あるいは、WITH DESCRIPTION オプションで説明を追加し、RESTORE HEADERONLY ステートメントで説明を取得するという方法でも追跡できます。
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
 master データベースは差分バックアップできません。 master データベースでは、完全バックアップのみ可能です。

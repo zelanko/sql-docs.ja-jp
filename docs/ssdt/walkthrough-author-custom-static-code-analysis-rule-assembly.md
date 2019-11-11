@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e2f103303a90837a899330952b6f69544b4c496
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140938"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659539"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>チュートリアル: SQL Server のカスタムの静的コード分析ルール アセンブリを作成する
 このチュートリアルでは、SQL Server のコード分析ルールを作成する手順について説明します。 このチュートリアルで作成するルールは、ストアド プロシージャ、トリガー、および関数で WAITFOR DELAY ステートメントを回避する場合に使用します。  
@@ -67,7 +67,7 @@ ms.locfileid: "68140938"
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>カスタム コード分析ルールのサポート クラスを作成する  
 ルール用のクラスを作成する前に、ビジター クラスと属性クラスをプロジェクトに追加します。 これらのクラスは、追加のカスタム ルールを作成するときに便利なことがあります。  
   
-最初に定義する必要があるクラスは、WaitForDelayVisitor クラスです。このクラスは、[TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) から派生します。 このクラスを使用すると、モデル内の WAITFOR DELAY ステートメントにアクセスできます。 ビジター クラスは、SQL Server で提供される [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API を利用します。 この API の Transact\-SQL コードは、抽象構文ツリー (AST) として表されます。ビジター クラスは、WAITFORDELAY ステートメントなど、特定の構文オブジェクトを探すときに便利です。 構文オブジェクトは、特定のオブジェクト プロパティや関係に関連付けられていないので、オブジェクト モデルを使用して見つけるのは難しいことがありますが、ビジター パターンと [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API を使用すると、簡単に見つかります。  
+最初に定義する必要があるクラスは、WaitForDelayVisitor クラスです。このクラスは、[TSqlConcreteFragmentVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor) から派生します。 このクラスを使用すると、モデル内の WAITFOR DELAY ステートメントにアクセスできます。 ビジター クラスは、SQL Server で提供される [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API を利用します。 この API の Transact\-SQL コードは、抽象構文ツリー (AST) として表されます。ビジター クラスは、WAITFORDELAY ステートメントなど、特定の構文オブジェクトを探すときに便利です。 構文オブジェクトは、特定のオブジェクト プロパティや関係に関連付けられていないので、オブジェクト モデルを使用して見つけるのは難しいことがありますが、ビジター パターンと [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API を使用すると、簡単に見つかります。  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>WaitForDelayVisitor クラスを定義する  
   

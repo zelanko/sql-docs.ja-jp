@@ -19,16 +19,15 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d10c8d721b44fc372ee5a17a39c653797925dd46
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707562"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782689"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
 一括コピー操作を初期化します。  
 
@@ -54,9 +53,9 @@ Unicode および ANSI 名:
  *szTable*  
  コピー操作の対象になるデータベース テーブルの名前です。 この名前には、データベース名または所有者名を含めることもできます。 たとえば、 **gracie**のようになります。 **タイトル**、 **gracie**、**タイトル**は、すべて有効なテーブル名です。  
   
- *Edirection*が DB_OUT の場合、 *sztable*はデータベースビューの名前にすることもできます。  
+ *Edirection*が DB_OUT の場合、 *sztable*をデータベースビューの名前にすることもできます。  
   
- *Edirection*が DB_OUT で、 [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)が呼び出される前に[BCP_CONTROL](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して select ステートメントが指定されている場合は、 **bcp_init** *sztable*を NULL に設定する必要があります。  
+ *Edirection*が DB_OUT で、 [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を呼び出す前に[BCP_CONTROL](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して select ステートメントを指定した場合は、 **bcp_init** *sztable*を NULL に設定する必要があります。  
   
  *szDataFile*  
  コピー操作の対象になるユーザー ファイルの名前です。 [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を使用して変数からデータを直接コピーする場合は、 *SZDATAFILE ファイル*を NULL に設定します。  
@@ -70,12 +69,12 @@ Unicode および ANSI 名:
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
- 他の一括コピー関数を呼び出す前に、 **bcp_init**を呼び出してください。 **bcp_init**は、ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間のデータの一括コピーに必要な初期化を実行します。  
+## <a name="remarks"></a>解説  
+ 他の一括コピー関数を呼び出す前に**bcp_init**を呼び出します。 **bcp_init**は、ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]間でデータの一括コピーを行うために必要な初期化を実行します。  
   
- **Bcp_init**関数は、一括コピー関数で使用できるように ODBC 接続ハンドルが有効になっている必要があります。 ハンドルを有効にするには、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を SQL_COPT_SS_BCP に設定し、割り当てられているが接続されていない接続ハンドルを SQL_BCP_ON に設定します。 接続済みのハンドルの属性を割り当てようとすると、エラーが発生します。  
+ **Bcp_init**関数は、一括コピー関数で使用できるように ODBC 接続ハンドルが有効になっている必要があります。 ハンドルを有効にするには、SQL_COPT_SS_BCP が割り当てられていて、接続されていない接続ハンドルで SQL_BCP_ON に設定されている[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を使用します。 接続済みのハンドルの属性を割り当てようとすると、エラーが発生します。  
   
- データファイルを指定すると、 **bcp_init**は、データファイルではなく、データベースのソースまたは対象のテーブルの構造を調べます。 **bcp_init**は、データベーステーブル、ビュー、または SELECT 結果セットの各列に基づいて、データファイルのデータ形式値を指定します。 このデータ形式値には、各列のデータ型、長さや NULL のインジケーターとターミネータのバイト文字列がデータ内に存在するかどうか、および固定長データ型の幅の指定などが含まれます。 **bcp_init**は、これらの値を次のように設定します。  
+ データファイルを指定すると、 **bcp_init**によって、データファイルではなく、データベースのソースまたは対象のテーブルの構造が調べられます。 **bcp_init**は、データベーステーブル、ビュー、または SELECT 結果セットの各列に基づいて、データファイルのデータ形式値を指定します。 このデータ形式値には、各列のデータ型、長さや NULL のインジケーターとターミネータのバイト文字列がデータ内に存在するかどうか、および固定長データ型の幅の指定などが含まれます。 **bcp_init**は、次のように値を設定します。  
   
 -   指定するデータ型は、データベース テーブル、ビュー、または SELECT 結果セット内の列のデータ型です。 データ型は、sqlncli.h に指定されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブ データ型によって列挙されます。 データ自体はそのコンピューターの形式で表されます。 つまり、**整数**データ型の列のデータは、データファイルを作成したコンピューターに基づいて、ビッグエンディアンまたはリトルエンディアンの4バイトのシーケンスによって表されます。  
   
@@ -85,11 +84,11 @@ Unicode および ANSI 名:
   
 -   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイルにデータベース テーブル内の各列に格納するデータが含まれている必要があります。 データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーするときは、データベース テーブル、ビュー、または SELECT 結果セット内のすべての列のデータがデータ ファイルにコピーされます。  
   
--   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイル内の列の序数位置がデータベース テーブル内の列の序数位置と同じであることが必要です。 @No__t-0 からコピーする場合、 **bcp_exec**では、データベーステーブル内の列の序数位置に基づいてデータが配置されます。  
+-   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイル内の列の序数位置がデータベース テーブル内の列の序数位置と同じであることが必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からコピーする場合、 **bcp_exec**は、データベーステーブル内の列の序数位置に基づいてデータを格納します。  
   
 -   データベースのデータ型が可変長 (たとえば、 **varbinary (22)** ) の場合、またはデータベース列に null 値を含めることができる場合は、データファイル内のデータの先頭に長さ/null インジケーターが付きます。 インジケーターの幅は、データ型と一括コピーのバージョンによって異なります。  
   
- データファイルに対して指定されたデータ形式の値を変更するには、 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)と[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)を呼び出します。  
+ データファイルに対して指定されたデータ形式の値を変更するには、 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)を呼び出し、 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)します。  
   
  インデックスを含まないテーブルの場合は、データベース復旧モデルを SIMPLE または BULK_LOGGED に設定することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」および「 [ALTER database](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

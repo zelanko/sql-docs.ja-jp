@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 680d4e62838ed49c72c8b637c19cc00af804c763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064549"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ DML トリガーを有効化するには、少なくとも、そのトリガー�
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. テーブル上の DML トリガーを有効化する  
 次の例では、AdventureWorks データベースのテーブル `Address` 上に作成されたトリガー `uAddress` を無効化し、次に有効化します。  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-enabling-a-ddl-trigger"></a>B. DDL トリガーを有効化する  
 次の例では、データベース スコープの DDL トリガー `safety` を作成し、無効にします。  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -109,7 +109,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

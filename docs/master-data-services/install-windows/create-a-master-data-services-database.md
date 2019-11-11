@@ -1,5 +1,5 @@
 ---
-title: マスター データ サービス データベースの作成 | Microsoft Docs
+title: マスター データ サービス データベースの作成
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b94e7e34bb53d15bbb7466a5ff3e32df634e0f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945042"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728120"
 ---
 # <a name="create-a-master-data-services-database"></a>マスター データ サービス データベースの作成
 
@@ -23,7 +23,7 @@ ms.locfileid: "67945042"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションと [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web サービスをサポートする新しいデータベースが必要な場合は、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
   
 -   データベースをホストするコンピューターの要件の詳細については、「[データベース要件 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)」を参照してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67945042"
   
 3.  **[データベース構成]** ページで **[データベースの作成]** をクリックします。  
   
-4.  データベースを作成および構成する**データベースの作成** ウィザードを完了します。 ウィザードのユーザー インターフェイス (UI) オプションの詳細については、「[データベースの作成ウィザード &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
+4.  データベースを作成および構成する **データベースの作成** ウィザードを完了します。 ウィザードのユーザー インターフェイス (UI) オプションの詳細については、「[データベースの作成ウィザード &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
   
 ## <a name="next-steps"></a>次の手順  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67945042"
   
 -   データベースとトランザクション ログをバックアップするように、メンテナンス プランを構成します。 詳細については、「[データベース要件 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

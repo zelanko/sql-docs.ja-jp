@@ -93,7 +93,7 @@ ms.locfileid: "72908607"
 |OPENROWSET|なし|フォーマット ファイルを使用する必要があります|
 
   
- \** ネイティブ ( **-n**) データを、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントと互換性のある形式のテーブルに読み込むには、 **-V** スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
+ \* ネイティブ ( **-n**) データを、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントと互換性のある形式のテーブルに読み込むには、 **-V** スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
   
 > [!NOTE]
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。

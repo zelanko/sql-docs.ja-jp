@@ -1,5 +1,5 @@
 ---
-title: 派生階層名を変更する (マスター データ サービス) | Microsoft Docs
+title: 派生階層名を変更する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec27caad2ee9241701d23795d57a89af9809ffa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac272f3087d970c22d30fd3d4b9f105855d783f9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047361"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728664"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>派生階層名を変更する (マスター データ サービス)
 
@@ -25,12 +25,12 @@ ms.locfileid: "68047361"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、派生階層の名前を変更できます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-a-derived-hierarchy-name"></a>派生階層名を変更するには  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68047361"
   
 8.  **[派生階層の保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)   
  [派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [派生階層を削除する (マスター データ サービス)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  

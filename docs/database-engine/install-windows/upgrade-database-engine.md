@@ -1,7 +1,7 @@
 ---
 title: データベース エンジンのアップグレード | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122959"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531559"
 ---
 # <a name="upgrade-database-engine"></a>データベース エンジンのアップグレード
 
@@ -41,6 +41,6 @@ ms.locfileid: "70122959"
 
     データベース互換性レベルの変更後に利用できる新しい機能と改善された動作については、[互換性レベル間の違い](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures)に関するページを参照してください。
 
-5.  [SQL Server の新機能を利用する](https://www.microsoft.com/sql-server/sql-server-2017) 最後に、前の手順を完了した時点で、新しいデータベース エンジンの特定の拡張機能を利用できる状態になっています。 この記事では、これらの拡張機能のいくつかを提案し、詳細情報へのリンクを示します。  
+5.  [SQL Server の新機能を利用する](https://www.microsoft.com/sql-server/sql-server-2019) 最後に、前の手順を完了した時点で、新しいデータベース エンジンの特定の拡張機能を利用できる状態になっています。 この記事では、これらの拡張機能のいくつかを提案し、詳細情報へのリンクを示します。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: トランザクション (マスター データ サービス) | Microsoft Docs
+title: トランザクション
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a06c23b5e6860886f98c3505f711f76a12cfbb15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102608"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728903"
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
 
@@ -86,7 +86,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  トランザクションが有効になっているにもかかわらず、複数のユーザーがエラーなく、同じエンティティの値を更新できます。 通常、時間順で最後に編集した値が優先されます。 トランザクションの履歴で、重複する編集の競合を手動で観察することができ、管理者によって手動で取り消すことができます。 トランザクションの履歴は、各セッションの問題の属性に対する **[以前の値]** と **[新しい値]** の個々のトランザクションを表示しますが、複数の **[新しい値]** が同一の古い値に対して存在しても、競合を自動的には解決しません。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

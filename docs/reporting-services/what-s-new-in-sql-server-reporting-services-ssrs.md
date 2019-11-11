@@ -8,33 +8,29 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 08/27/2019
-ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 10/30/2019
+ms.openlocfilehash: 0fea81e009d4d281c36d1882ac41835af609294b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123109"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536282"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の新機能について説明します。 この記事では、主要な機能領域を扱います。新しいアイテムがリリースされた場合は更新されます。
-
-最新のリリース ノートについては、「[SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)」を参照してください。 
+SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のさまざまなバージョンの新機能について説明します。 この記事では、主要な機能領域を扱います。新しいアイテムがリリースされた場合は更新されます。
 
 Power BI Report Server については、「[Power BI Report Server とは](https://docs.microsoft.com/power-bi/report-server/get-started)」を参照してください。
 
-**ダウンロード** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-SQL Server 2017 Reporting Services をダウンロードするには、「 **[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)** 」に移動します。
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-reporting-services-preview"></a>SQL Server 2019 Reporting Services プレビュー
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Reporting Services プレビューは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=100122)からダウンロードできます。
+**ダウンロードの**![ダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)は、Microsoft ダウンロードセンターからダウンロードできます。
 
 ### <a name="azure-sql-managed-instance-support"></a>Azure SQL Managed Instance のサポート
 
@@ -48,11 +44,27 @@ Microsoft レポートビルダーまたは SQL Server Data Tools (SSDT) を使�
 
 レポート作成時に、ツールヒントを使用してレポートの各要素のテキストを指定できます。 スクリーンリーダーテクノロジは、これらのヒントを適切に識別します。
 
+### <a name="azure-active-directory-application-proxy-support"></a>Azure Active Directory アプリケーション プロキシのサポート
+
+Azure Active Directory アプリケーションプロキシでは、web アプリまたはモバイルアプリを使用してセキュリティで保護されたアクセスを可能にするために、独自の web アプリケーションプロキシを管理する必要がなくなりました。
+
+### <a name="transparent-database-encryption"></a>Transparent Database Encryption
+
+SQL Server 2019 では、Enterprise edition と Standard edition で、SSRS カタログデータベースの Transparent Database Encryption がサポートされるようになりました。 
+
+### <a name="microsoft-report-builder-update"></a>Microsoft レポート ビルダーの更新プログラム
+
+新しくリリースされたバージョンのレポートビルダーは、Reporting Services の2016、2017、2019の各バージョンと完全に互換性があります。 また、すべてのリリースバージョンとサポートされているバージョンの Power BI Report Server とも互換性があります。
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="ssrs-2017"></a>SSRS 2017
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+**ダウンロードの**![ダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+
+SQL Server 2017 Reporting Services をダウンロードするには、「 **[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)** 」に移動します。
 
 ### <a name="comments-on-reports"></a>レポートのコメント
 
@@ -129,7 +141,7 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
 
 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
 
-![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
+![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "|::ref4::|")  
 
 詳細については、「 [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)」をご覧ください。  
 
@@ -137,7 +149,7 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
 
 iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ローカル レポート サーバーでホストされている SQL Server モバイル レポートを表示できるようになりました。  
 
-![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
+![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "|::ref5::|")  
 
 一部の構成を変更しないと、既定では接続できません。 Power BI モバイル アプリがレポート サーバーに接続できるようにする方法の詳細については、「 [Power BI モバイル アクセス用のレポート サーバーを有効にする](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)」をご覧ください。
 
@@ -165,7 +177,7 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 
 **最新のページ分割されたレポート:** グラフ、ゲージ、マップ、その他のデータ ビジュアル化のための最新スタイルで改ページ調整されたレポートを美しくデザインします。
 
-**ツリー マップとサンバースト グラフ:** ツリーマップ ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") とサンバースト グラフ ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") を使用してレポートを強化できます。これらは、階層データを表示する優れた方法です。 詳細については、「 [Reporting Services のツリー マップとサンバースト グラフ](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)」を参照してください。  
+**ツリー マップとサンバースト グラフ:** ツリーマップ ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "|::ref6::|") とサンバースト グラフ ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "|::ref7::|") を使用してレポートを強化できます。これらは、階層データを表示する優れた方法です。 詳細については、「 [Reporting Services のツリー マップとサンバースト グラフ](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)」を参照してください。  
 
 **レポートの埋め込み:** モバイルおよびページ分割されたレポートを、URL パラメーターと共に、他の Web ページに (また、iframe を使ってアプリケーションに) 埋め込むことができるようになりました。  
 
@@ -175,7 +187,7 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 2. アイテムをピン留めするダッシュボードを選択します。
 3. ダッシュボードのタイルをどのくらいの頻度で更新するかを選択します。
 
-![注:](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
+![注](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -219,11 +231,11 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |||  
 |-|-|  
 |ボタンを使用して新しい|Previous|  
-|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
+|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "|::ref9::|")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "|::ref10::|")|  
 
 **カスタム パラメーター ペイン:** ペインをカスタマイズできるようになりました。 レポート ビルダーのデザイン サーフェイスを使用して、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。 詳細については、「 [レポートのパラメーター ペインをカスタマイズする (レポート ビルダー)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)で作成するモバイル レポートで使用できます。  
 
-![レポート データ ペインとパラメーター ペインのパラメーター リスト](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "レポート データ ペインとパラメーター ペインのパラメーター リスト")  
+![レポートデータペインとパラメーターペインのパラメーターリスト](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "|::ref11::|")  
 
 **高 DPI のサポート:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] では、高 DPI (インチあたりのドット数) スケーリングと高 DPI デバイスがサポートされます。  高 DPI の詳細については、次の記事をご覧ください。  
 

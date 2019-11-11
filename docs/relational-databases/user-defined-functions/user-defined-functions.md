@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783298"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843839"
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "72783298"
  ユーザー定義テーブル値関数は、**table** データ型を返します。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。 **[使用例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)**
   
 **システム関数**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ##  <a name="Guidelines"></a> ガイドライン  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが取り消されて、モジュール (トリガーやストアド プロシージャ) 内の次のステートメントが続行されるようなエラーについては、関数内では扱いが異なります。 関数内では、このようなエラーによって関数自体の実行が停止されます。 そのため、次に関数を呼び出したステートメントも取り消されることになります。  

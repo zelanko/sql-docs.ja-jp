@@ -10,12 +10,12 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780219"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637729"
 ---
 # <a name="udt-utilities"></a>UDT ユーティリティ
   UDT Utilities サンプルには、さまざまなユーティリティ関数が含まれています。 Transact-SQL へアセンブリ メタデータを公開するための関数、アセンブリ内の型をテーブルとして返すサンプル ストリーミング テーブル値関数、およびユーザー定義データ型のフィールド、メソッド、プロパティを返す関数などがあります。 例示されているテクノロジは、ストリーミング テーブル値関数、.NET Framework リフレクション API、Transact-SQL からのテーブル値関数の呼び出しなどです。  
@@ -23,9 +23,9 @@ ms.locfileid: "62780219"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
   
--   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 、Codeplex で使用できるデータベースが[Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)  
+-   Codeplex [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)で提供されている [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62780219"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にするには、`ALTER SETTINGS` サーバーレベルの権限を持っている必要があります。この権限は、固定サーバーロール `sysadmin` と `serveradmin` のメンバーによって暗黙的に保持されます。  
   
 -   使用している [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] インスタンスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースがインストールされている必要があります。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62780219"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
+7.  テストコマンドスクリプトをファイルにコピー [!INCLUDE[tsql](../../includes/tsql-md.md)]、`test.sql` としてサンプルディレクトリに保存します。  
   
 8.  次のコマンドを使用してテスト スクリプトを実行します。  
   
@@ -1596,7 +1596,7 @@ USE AdventureWorks2012;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

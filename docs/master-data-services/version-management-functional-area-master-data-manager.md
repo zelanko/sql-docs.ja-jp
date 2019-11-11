@@ -1,5 +1,5 @@
 ---
-title: '[バージョン管理] 機能領域 (マスター データ マネージャー) | Microsoft Docs'
+title: '[バージョン管理] 機能領域'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac5d1cee329f1de8c838aede004cb44f03cc0d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b2421d38401b3d0ff6b1e33a7b07bd86a1ab22e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017332"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728878"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>[バージョン管理] 機能領域 (マスター データ マネージャー)
 
@@ -43,14 +43,14 @@ ms.locfileid: "68017332"
   
  [バージョン フラグ名を変更する (マスター データ サービス)](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
-## <a name="validation"></a>［確認］  
+## <a name="validation"></a>検証  
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   
  [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
  [トランザクションを破棄する (マスター データ サービス)](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)  
   
   

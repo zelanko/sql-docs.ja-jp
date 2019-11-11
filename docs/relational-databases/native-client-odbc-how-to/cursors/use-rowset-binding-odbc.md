@@ -13,16 +13,15 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99c2f54ce648358cdbb47cda9893078d69087ad2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 542834d73cdea5a985ea6926d011f1db4711f3e5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908230"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781514"
 ---
 # <a name="use-rowset-binding-odbc"></a>行セットのバインドの使用 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-column-wise-binding"></a>列方向のバインドを使用するには  
@@ -73,7 +72,7 @@ ms.locfileid: "72908230"
   
 5.  [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[sqlfetchscroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)を呼び出すたびに R 行が取得され、データがバインドされた列に転送されます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [カーソルの使用方法に関する&#40;トピック&#41; ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [カーソルの実装方法](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [カーソル&#40;を使用する ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  

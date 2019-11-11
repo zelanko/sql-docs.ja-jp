@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fc839390b89cb133bb51ae8c76552df1804c59b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: edff69f8dfae4047cf935a290c56d1192a03a41e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783230"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659552"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -524,6 +524,9 @@ ALTER USER userName
 
 次の解説は、Azure AD とのフェデレーションおよび同期を行った Windows ユーザーとしての認証に適用されます。
 
+> [!NOTE]
+> 作成後にマネージド インスタンス機能の Azure AD 管理者が変更されました。 詳しくは、「[マネージド インスタンス用の新しい Azure AD 管理機能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)」をご覧ください。
+
 - Azure AD にマップされる Windows ユーザーまたはグループの検証は、既定では、移行の目的で使用されるすべてのバージョンの ALTER USER 構文で、Graph API によって実行されます。
 - 別名が設定された (元の Windows アカウントとは異なる名前を使用する) オンプレミスのユーザーは、別名が設定された名前を保持します。
 - Azure AD 認証では、LOGIN パラメーターはマネージド インスタンスにのみ適用され、SQL DB では使用できません。
@@ -642,7 +645,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
  - [包含データベース](../../relational-databases/databases/contained-databases.md)
  - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
  - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
- - [チュートリアル: T-SQL DDL 構文を使用して、SQL Server オンプレミスの Windows ユーザーとグループを Azure SQL Database マネージド インスタンスに移行する](/azure/sql-database/sql-database-managed-instance-aad-migration-tutorial)
+ - [チュートリアル: T-SQL DDL 構文を使用して、SQL Server オンプレミスの Windows ユーザーとグループを Azure SQL Database マネージド インスタンスに移行する](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

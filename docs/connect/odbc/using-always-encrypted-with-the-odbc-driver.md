@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702704"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594379"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "68702704"
 - ODBC Driver 13.1 for SQL Server
 - ODBC Driver 17 for SQL Server
 
-### <a name="introduction"></a>概要
+### <a name="introduction"></a>はじめに
 
 この記事では、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) と [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) を使用して ODBC アプリケーションを開発する方法について説明します。
 
@@ -59,7 +59,7 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
 
-バージョン17.4 以降では、ドライバーは Secure Enclaves の Always Encrypted をサポートしています。 SQL Server 2019 以降に接続するときにエンクレーブを使用できるようにするに`ColumnEncryption`は、DSN、接続文字列、または接続属性をエンクレーブの種類と構成証明プロトコルの名前に設定し、関連する構成証明データをコンマで区切って設定します。 バージョン17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)エンクレーブの種類と[ホストガーディアンサービス](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)の構成証明`VBS-HGS`プロトコル (で示される) のみがサポートされています。これを使用するには、構成証明サーバーの URL を指定します。次に例を示します。
+バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 SQL Server 2019 以降に接続するときにエンクレーブを使用できるようにするには、`ColumnEncryption` DSN、接続文字列、または接続属性を、エンクレーブの種類と構成証明プロトコルの名前、および関連する構成証明書のデータをコンマで区切って設定します。 バージョン17.4 では、`VBS-HGS`によって示される、[仮想化ベースの Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)エンクレーブ Type と[Host Guardian Service](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)構成証明プロトコルのみがサポートされています。これを使用するには、構成証明サーバーの URL を指定します。次に例を示します。
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -83,8 +83,8 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 |クエリの特性 | Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる|Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない | Always Encrypted が無効になっている|
 |:---|:---|:---|:---|
-| 暗号化された列をターゲットとするパラメーター。 | パラメーター値は透過的に暗号化されます。 | Error | Error|
-| 暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 | Error | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。
+| 暗号化された列をターゲットとするパラメーター。 | パラメーター値は透過的に暗号化されます。 | エラー | エラー|
+| 暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 | エラー | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。
 
 次の例は、暗号化された列のデータを取得および変更する方法を示しています。 この例では、次のスキーマを持つテーブルを想定しています。 SSN 列と BirthDate 列が暗号化されていることに注意してください。
 
@@ -391,7 +391,7 @@ Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納�
 
 |[資格情報の種類]| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|ユーザー名/パスワード| `KeyVaultPassword`|ユーザー プリンシパル名|パスワード|
+|ユーザー名/パスワード| `KeyVaultPassword`|ユーザー プリンシパル名|Password|
 |クライアント ID/シークレット| `KeyVaultClientSecret`|クライアント ID|シークレット|
 
 #### <a name="example-connection-strings"></a>接続文字列の例
@@ -445,7 +445,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ドライバーは、プラットフォーム定義の動的なライブラリー読み込みメカニズム (Linux および macOS の場合は `dlopen()`、Windows の場合は `LoadLibrary()`) を使用して ValuePtr パラメーターで識別されたライブラリーの読み込みを試み、そこで定義されているプロバイダーを自身が認識しているプロバイダーのリストに追加します。 次のエラーが発生することがあります。
 
-| Error | [説明] |
+| エラー | [説明] |
 |:--|:--|
 |`CE203`|動的なライブラリを読み込めませんでした。|
 |`CE203`|"CEKeyStoreProvider" エクスポート シンボルがライブラリ内で見つかりませんでした。|
@@ -456,7 +456,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 > [!NOTE]
 > アプリケーション プログラマーは、任意のカスタム プロバイダーを必要とする任意のクエリを任意の接続を介して送信する前に、そのカスタム プロバイダーを確実に読み込んでおく必要があります。 このようにしないと、エラーが発生します。
 
-| Error | [説明] |
+| エラー | [説明] |
 |:--|:--|
 |`CE200`|キーストア プロバイダー %1 が見つかりません。 適切なキーストア プロバイダー ライブラリが読み込まれていることを確認します。|
 
@@ -631,4 +631,3 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 - [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Always Encrypted 関連のブログ](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

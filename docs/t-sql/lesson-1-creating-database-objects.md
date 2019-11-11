@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa027f58bd673539dd09f118ea1b9433c42c7990
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000277"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632905"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>レッスン 1: データベース オブジェクトの作成とクエリ
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68000277"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは次の方法で作成して [!INCLUDE[ssDE](../includes/ssde-md.md)] に送信できます。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=67359)から無料でダウンロードできます。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=7593)から無料でダウンロードできます。  
   
 -   [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用する。  
   

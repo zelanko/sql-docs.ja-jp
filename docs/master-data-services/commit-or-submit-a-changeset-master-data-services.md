@@ -1,5 +1,5 @@
 ---
-title: 変更セットのコミットまたは送信 (マスター データ サービス) | Microsoft Docs
+title: 変更セットのコミットまたは送信
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fdd5667d0125eca7fb774340fcdf163def9a59b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f45d9ced6b22ec2b0cf7007eee4549e595ec697
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941076"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728569"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>変更セットのコミットまたは送信 (マスター データ サービス)
 
@@ -23,7 +23,7 @@ ms.locfileid: "67941076"
 
   変更セットは、マスター データに対する保留中の変更のコレクションです。 エンティティの変更が管理者の承認を必要としない場合は、変更セットをコミットできます。 エンティティの変更が管理者の承認を必要とする場合は、承認を受けるために変更セットを送信できます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67941076"
 ## <a name="next-steps"></a>次の手順  
  [変更セットの承認または拒否 (マスター データ サービス)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)   
  [変更セットの適用および更新 &#40;マスター データ サービス&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [変更セットの承認または拒否 (マスター データ サービス)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  

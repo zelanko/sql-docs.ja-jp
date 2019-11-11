@@ -1,31 +1,29 @@
 ---
 title: スキーマ比較の拡張機能
 titleSuffix: Azure Data Studio
-description: Azure Data Studio 用のスキーマ比較の拡張機能 (プレビュー) をインストールして使用します
+description: Azure Data Studio 用のスキーマ比較の拡張機能をインストールして使用します
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381818"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532541"
 ---
-# <a name="schema-compare-extension-preview"></a>スキーマ比較の拡張機能 (プレビュー)
+# <a name="schema-compare-extension"></a>スキーマ比較の拡張機能
 スキーマ比較の拡張機能では、2 つのデータベース定義を比較して、ソースとターゲットの相違を適用するための使いやすいエクスペリエンスが提供されます。
-
-このエクスペリエンスは、現在、初期のプレビュー段階にあります。 問題の報告や機能の要求を行うには、[ここ](https://github.com/microsoft/azuredatastudio/issues)にアクセスしてください。
 
 
 ## <a name="features"></a>[機能]
 
-* 2 つの .dacpac ファイルまたはデータベースのスキーマを比較する
+* 2 つの dacpac ファイルまたはデータベースのスキーマを比較する
 * ソースと一致させるためにターゲットに対して実行する必要がある一連のアクションとして結果を表示する
 * 結果に一覧表示されるアクションを選択的に除外する
 * 比較のスコープを制御するオプションを設定する
@@ -72,3 +70,4 @@ ms.locfileid: "72381818"
 ## <a name="next-steps"></a>次の手順
 
 スキーマ比較の詳細については、[Microsoft のドキュメントを参照してください。](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+問題の報告や機能の要求を行うには、[ここ](https://github.com/microsoft/azuredatastudio/issues)にアクセスしてください。

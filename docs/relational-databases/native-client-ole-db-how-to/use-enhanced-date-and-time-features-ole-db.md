@@ -1,5 +1,5 @@
 ---
-title: 強化された日付と時刻の機能 (OLE DB) の使用 |Microsoft Docs
+title: 強化された日付と時刻の機能を使用する (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,17 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14790203925575ef08f2ab84e2b1f355d970448d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbb7d307bfe1e57b0ad5a73580f12535bb7ffd92
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110009"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789754"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>強化された日付/時刻機能の使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で導入された日付/時刻機能を使用する方法を示します。 サンプルは、次の 4 つの新しい日付と時刻型を使用 (**日付**、**時間**、 **datetime2**、および**datetimeoffset**) のコマンドを実行するにはパラメーターと行セットの結果を取得します。  
+  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で導入された日付/時刻機能を使用する方法を示します。 このサンプルでは、4つの新しい日付/時刻型 (**date**、 **time**、 **datetime2**、および**datetimeoffset**) を使用して、パラメーターを持つコマンドを実行し、行セットの結果を取得します。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "68110009"
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するストアド プロシージャを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用したストアド プロシージャを削除します。  
   

@@ -5,22 +5,22 @@ description: azdata bdc status コマンドに関するリファレンス記事�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 712a5ac51f13450fe5cf6b8cc13400d5666eb4a0
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 974b9587f506e11ccf80d3ea9af04bc1dfa0be86
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155196"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531704"
 ---
 # <a name="azdata-bdc-status"></a>azdata bdc status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-この記事は、 **azdata**のリファレンス記事です。 
+以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -37,11 +37,11 @@ azdata bdc status show [--resource -r]
 ```bash
 azdata bdc status show
 ```
-すべてのリソースのインスタンスを含む BDC の状態。
+リソースのすべてのインスタンスを含む BDC の状態。
 ```bash
 azdata bdc status show --all
 ```
-制御リソースを含むサービスの BDC の状態。
+制御リソースが含まれるサービスの BDC の状態。
 ```bash
 azdata bdc status show --resource control
 ```
@@ -58,12 +58,10 @@ azdata bdc status show --resource control
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-- 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
-
-- **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。
+`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

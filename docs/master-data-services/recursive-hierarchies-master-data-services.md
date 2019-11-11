@@ -1,5 +1,5 @@
 ---
-title: 再帰型階層 (マスター データ サービス) | Microsoft Docs
+title: 再帰型階層
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c0f2770665a27db226b9da9f7253d602c90afd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac3df398e486f143b871c736e6f2fee643092b7f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910030"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728965"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>再帰型階層 (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の再帰型階層は、再帰リレーションシップを含む派生階層です。 再帰リレーションシップは、エンティティ自体に基づくドメインベースの属性がエンティティにある場合に存在します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の再帰型階層は、再帰リレーションシップを含む派生階層です。 再帰リレーションシップは、エンティティ自体に基づくドメインベースの属性がエンティティにある場合に存在します。  
   
 ## <a name="recursive-hierarchy-example"></a>再帰型階層の例  
  再帰型階層の典型的な例は、組織構造です。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、Manager というドメイン ベースの属性を持つ Employee エンティティを作成します。 Manager 属性は、従業員 (employee) のリストから設定されます。 このサンプル組織では、すべての従業員がマネージャーである可能性があります。  
@@ -53,7 +53,7 @@ ms.locfileid: "67910030"
   
 -   再帰的階層は循環リレーションシップを含むことはできません。 たとえば、Sandeep が Katherine のマネージャーである場合、Katherine を Sandeep のマネージャーにすることはできません。 また、Katherine は Katherine 自身のマネージャーになることもできません。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

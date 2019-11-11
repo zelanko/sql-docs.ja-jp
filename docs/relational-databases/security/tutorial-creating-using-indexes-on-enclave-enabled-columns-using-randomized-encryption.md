@@ -1,7 +1,7 @@
 ---
 title: チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126795"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592323"
 ---
-# <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 このチュートリアルでは、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](encryption/always-encrypted-enclaves.md) でサポートされているランダム化された暗号化を使用して、エンクレーブ対応の列にインデックスを作成して使用する方法を説明します。 次のことを示します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "68126795"
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>手順 1:データベースで高速データベース復旧 (ADR) を有効にする
 
-ランダム化された暗号化を使用してエンクレーブ対応の列で最初のインデックスを作成する前に、データベースで ADR を有効にすることを強くお勧めします。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](./encryption/always-encrypted-enclaves.md)」の「[Database Recovery (データベースの復旧)](./encryption/always-encrypted-enclaves.md##database-recovery)」セクションをご覧ください。
+ランダム化された暗号化を使用してエンクレーブ対応の列で最初のインデックスを作成する前に、データベースで ADR を有効にすることを強くお勧めします。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](./encryption/always-encrypted-enclaves.md)」の「[データベース復旧](./encryption/always-encrypted-enclaves.md##database-recovery)」セクションを参照してください。
 
 1. 前のチュートリアルで使ったすべての SSMS インスタンスを閉じます。 これにより、開いたデータベース接続が閉じられます。ADR を有効にするにはこうする必要があります。
 1. SSMS の新しいインスタンスを開き、データベース接続の Always Encrypted を有効に**しないで**、sysadmin として SQL Server インスタンスに接続します。
@@ -172,5 +172,7 @@ ms.locfileid: "68126795"
    1. **[ライブ クエリ統計]** (クエリ ウィンドウの下部) で、クエリによりインデックスが使われていることを確認します。
 
 ## <a name="next-steps"></a>次の手順
+- [チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- セキュリティで保護されたエンクレーブが設定された Always Encrypted の他のユース ケースについては、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する](encryption/configure-always-encrypted-enclaves.md)」をご覧ください。
+## <a name="see-also"></a>参照
+- [セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用](encryption/always-encrypted-enclaves-create-use-indexes.md)

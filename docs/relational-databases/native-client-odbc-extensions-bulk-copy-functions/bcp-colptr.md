@@ -18,16 +18,15 @@ ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dcc08890a230155c4ffefc3cf4a20dd72dd746f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0bb4e1011448ef4ea98179c3de49c43e66b811e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707753"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783012"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への現在のコピー操作に関するプログラム変数のデータ アドレスを設定します。  
   
@@ -46,9 +45,9 @@ RETCODE bcp_colptr (
  一括コピーが有効な ODBC 接続ハンドルです。  
   
  *pData*  
- コピーするデータを指すポインターです。 バインドされたデータ型が大きな値の型 (SQLTEXT や SQLIMAGE など) の場合は、 *pData*を NULL にすることができます。 NULL *pData*は、 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を使用してチャンク内の SQL Server に長いデータ値が送信されることを示します。  
+ コピーするデータを指すポインターです。 バインドされたデータ型が大きな値の型 (SQLTEXT や SQLIMAGE など) の場合は、 *pData*を NULL にすることができます。 NULL *pData*は、長いデータ値が[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を使用してチャンク内の SQL Server に送信されることを示します。  
   
- *pData*がNULLに設定されており、バインドされたフィールドに対応する列が大きな値型ではない場合、**bcp_colptr**は失敗します。  
+ *PData*が NULL に設定されていて、バインドされたフィールドに対応する列が大きな値型ではない場合、 **bcp_colptr**は失敗します。  
   
  大きな値の型の詳細については、「 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)」を参照してください **。**  
   
@@ -58,8 +57,8 @@ RETCODE bcp_colptr (
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
- **Bcp_colptr**関数を使用すると、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を使用して SQL Server にデータをコピーするときに、特定の列のソースデータのアドレスを変更できます。  
+## <a name="remarks"></a>解説  
+ **Bcp_colptr**関数を使用すると[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)で SQL Server にデータをコピーするときに、特定の列のソースデータのアドレスを変更できます。  
   
  初期状態では、ユーザーデータへのポインターは**bcp_bind**を呼び出すことによって設定されます。 **Bcp_sendrow**の呼び出しの間でプログラム変数のデータアドレスが変更された場合は、 **bcp_colptr**を呼び出して、データへのポインターをリセットできます。 次に**bcp_sendrow**を呼び出すと、 **bcp_colptr**への呼び出しによってアドレス指定されたデータが送信されます。  
   

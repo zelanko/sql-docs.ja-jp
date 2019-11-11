@@ -1,5 +1,5 @@
 ---
-title: SQL Server マスター データ サービスについて | Microsoft Docs
+title: SQL Server マスター データ サービスについて
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007187"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729080"
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server マスター データ サービスについて
 
@@ -26,16 +26,16 @@ ms.locfileid: "68007187"
   
   
 ## <a name="training"></a>トレーニング  
-* 導入された機能、新しい機能を探索する[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]、試し、 [Self-paced ラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)(Microsoft アカウントでサインインが必要です)。  
-* 開発する、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を格納および Excel 用アドインを使用して、地理的なデータのマスター リストの管理ソリューションと[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]、試し、 [Self-paced ラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 エンティティと階層を作成し、 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] を使用してディメンション テーブルに入力します。  
+* [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]で導入された新機能については、自習形式の[ラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)をお試しください (Microsoft アカウントでサインインする必要があります)。  
+* Excel 用のアドインと [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]を使用して地理データのマスターリストを格納および管理する [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] ソリューションを開発するには、自習形式の[ラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)を試してみてください。 エンティティと階層を作成し、 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] を使用してディメンション テーブルに入力します。  
   
 ## <a name="videos"></a>ビデオ  
-* [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] リリースの [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]の新しい機能の詳細についてはは、 [**こちらのビデオを視聴**](https://www.youtube.com/watch?v=cKA72FpOVxI)してください。  
+* [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] リリースの [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] の新しい機能の詳細についてはは、[**こちらのビデオを視聴**](https://www.youtube.com/watch?v=cKA72FpOVxI)してください。  
   
 ## <a name="samples"></a>サンプル  
 * モデル、エンティティ、および階層を使用して [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 内のデータを構造化する方法について詳しく知るには、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のインストールに含まれているサンプル モデルを試してみてください。 サンプルを配置する手順については、「 [サンプル モデルとデータを配置する](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)」を参照してください。   
   
-    サンプル モデルの [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新プログラムについては、「[SQL Server のサンプル: モデル配置パッケージ](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
+    サンプル モデルの [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新プログラムについては、「[SQL Server のサンプル: モデル配置パッケージ (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
   
 * 管理者およびユーザーによる [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]の対話型操作をカスタマイズする方法の例については、SQL Server のサンプルに含まれている MDS C# コンソール アプリケーション サンプルを参照してください。 SQL Server のサンプルは、こちらの [GitHub リポジトリ](https://github.com/Microsoft/sql-server-samples)から .zip ファイルとしてダウンロードできます。  
   

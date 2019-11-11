@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/11/2019
-ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.date: 11/04/2019
+ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313621"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532527"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="november-2019"></a>2019 年 11 月
+
+2019 年 11 月 4 日 &nbsp; / &nbsp; バージョン:1.13.0 
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| 新しい SQL Server 2019 のサポート | &bull; &nbsp; BDC 展開ウィザードを使用して、SQL Server 2019 ビッグ データ クラスターを展開する <br/>&bull; &nbsp; コントローラー ダッシュボードを使用してクラスターの正常性を管理する <br/>&bull; &nbsp; [Security ACLs]\(セキュリティ ACL)\ ダイアログを使用して HDFS アクセス制御リストを管理する <br/> &bull; &nbsp; [HDFS Tiering]\(HDFS 階層\) ダイアログを使用してマウントを追加する <br/> &bull; &nbsp; 組み込みの Jupyter Book、SQL Server 2019 ガイドを使用してトラブルシューティングを行う <br/> &bull; &nbsp; SQL vNext 拡張データ仮想化の拡張機能に名前変更された <br/> &bull; &nbsp; 外部テーブル ウィザードに Teradata および Mongo サポートが追加された|
+| ノートブックの新機能 | &bull; &nbsp; Powershell ノートブックの発表 &bull; &nbsp; 折りたたみ可能なコード セルの発表 <br/>&bull; &nbsp; ノートブックのパフォーマンスが向上 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)を参照してください |
+| Jupyter Books の発表  | Jupyter Books は、目次に整理されたノートブック ファイルとマークダウン ファイルのコレクションです。 |
+| 新しい SQL Server 展開ウィザード  | 以下の展開のサポートが追加されました。 <br/> &bull; &nbsp; Windows 上の SQL Server 2019 <br/> &bull; &nbsp; Windows 上の SQL Server 2017 <br/> &bull; &nbsp; Docker 上の SQL Server 2019 <br/> &bull; &nbsp; Docker 上の SQL Server 2017 |
+| スキーマ比較拡張機能の GA の発表| &bull; &nbsp; SQLCMD モード <br/> &bull; &nbsp; ローカライズ サポート <br/> &bull; &nbsp; アクセシビリティに関する修正 <br/> &bull; &nbsp; セキュリティに関するバグ  |
+| SQL Server Dacpac 拡張機能の GA の発表| <br/> &bull; &nbsp; ローカライズ サポート <br/> &bull; &nbsp; アクセシビリティに関する修正 <br/> &bull; &nbsp; セキュリティに関するバグ |
+| Visual Studio IntelliCode 拡張機能の発表 | Visual Studio IntelliCode では、SQL がサポートされるようになりました。これにより、予約キーワードをよりスマートに提示できます。 |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed)を参照してください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix-2"></a>2019 年 10 月 (修正プログラム x 2)
 
@@ -228,7 +246,7 @@ ms.locfileid: "72313621"
 | プロファイラー拡張機能に、拡張イベントのフィルター処理のサポートが追加されました。 | &nbsp; |
 | T-SQL の結果を XML として保存できる "XML として保存" 機能が追加されました。 | &nbsp; |
 | データ層アプリケーション ウィザードの機能強化が追加されました。 | &bull; &nbsp; [スクリプトの生成] ボタンが追加されました<br/>&bull; &nbsp; デプロイ中にデータ損失の可能性があることを警告するためのビューが追加されました。 |
-| SQL Server 2019 Preview 拡張機能が更新されました。 | 「[SQL Server 2019 Preview 拡張機能](sql-server-2019-extension.md?view=sql-server-ver15)」を参照してください。 |
+| SQL Server 2019 Preview 拡張機能が更新されました。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md?view=sql-server-ver15)」を参照してください。 |
 | 実行時間の長いクエリでは、結果のストリーミングが既定で有効になります。 | &nbsp; |
 | バグと問題が解決されました。 | [GitHub の「バグと問題」](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)を参照してください。 |
 | &nbsp; | &nbsp; |
@@ -256,7 +274,7 @@ ms.locfileid: "72313621"
 | Azure Active Directory 認証のサポートが追加されました。 | &nbsp; |
 | Idera SQL DM Performance Insights (プレビュー) の発表。 | &nbsp; |
 | SQL Server インポート拡張機能でのデータ層アプリケーション ウィザードのサポート。 | &nbsp; |
-| SQL Server 2019 Preview 拡張機能への更新。 | 「[SQL Server 2019 Preview 拡張機能](sql-server-2019-extension.md?view=sql-server-ver15)」を参照してください。 |
+| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md?view=sql-server-ver15)」を参照してください。 |
 | SQL Server プロファイラーの機能強化。 | &nbsp; |
 | 大規模なクエリの結果のストリーミング (プレビュー)。 | &nbsp; |
 | コミュニティ拡張機能: sp_executesql から sql および新規データベースへ。 | &nbsp; |
@@ -271,7 +289,7 @@ ms.locfileid: "72313621"
 
 | [変更] | 詳細 |
 | :----- | :------ |
-| SQL Server 2019 Preview 拡張機能への更新。 | 「[SQL Server 2019 Preview 拡張機能](sql-server-2019-extension.md?view=sql-server-ver15)」を参照してください。 |
+| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md?view=sql-server-ver15)」を参照してください。 |
 | Paste the Plan 拡張機能の導入。 | &nbsp; |
 | High Color クエリ拡張機能の導入 (SSMS エディター テーマを含む)。 | &nbsp; |
 | SQL Server エージェント、プロファイラー、およびインポート拡張機能の修正。 | &nbsp; |
@@ -301,7 +319,7 @@ ms.locfileid: "72313621"
 | Azure SQL データベースを参照するための Azure Resource Explorer の導入。 | &nbsp; |
 | オブジェクト エクスプローラーとクエリ エディターの接続性の堅牢性が向上しました。 | &nbsp; |
 | SQL エージェント拡張機能の強化。 | &nbsp; |
-| SQL Server 2019 Preview 拡張機能への更新。 | 「[SQL Server 2019 Preview 拡張機能](sql-server-2019-extension.md?view=sql-server-ver15)」を参照してください。 |
+| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md?view=sql-server-ver15)」を参照してください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>バグの修正、2018 年 10 月

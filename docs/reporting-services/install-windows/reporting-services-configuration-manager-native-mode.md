@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503626"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593780"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 構成マネージャー (ネイティブ モード)
 
@@ -60,7 +60,7 @@ ms.locfileid: "65503626"
 
 - 構成対象のレポート サーバー上で、Windows Management Instrumentation (WMI) サービスが有効化および実行されている必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、レポート サーバーの WMI プロバイダーを使用して、ローカルおよびリモートのレポート サーバーに接続します。 リモートのレポート サーバーを構成する場合は、そのコンピューターでリモートの WMI アクセスが許可されている必要があります。 詳細については、「 [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。  
 
-- リモートのレポート サーバー インスタンスに接続して構成するには、リモートの WMI (Windows Management Instrumentation) 呼び出しを有効にして Windows ファイアウォールを通過できるようにしておく必要があります。 詳細については、 [オンライン ブックの「](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) リモート管理用のレポート サーバーの構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。
+- リモートのレポート サーバー インスタンスに接続して構成するには、リモートの WMI (Windows Management Instrumentation) 呼び出しを有効にして Windows ファイアウォールを通過できるようにしておく必要があります。 詳細については、「 [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。
 
 Reporting Services 構成マネージャーは、SQL Server Reporting Services をインストールするときに自動的にインストールされます。
 

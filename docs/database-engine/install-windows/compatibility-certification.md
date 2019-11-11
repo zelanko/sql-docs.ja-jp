@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bc4ed369b51187a86e9436e6612522d6707a3d54
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: a133f41fb429a2cfe910020e1fefb768436888c4
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142790"
 ---
 # <a name="compatibility-certification"></a>互換性証明書
 
@@ -45,7 +45,7 @@ ms.locfileid: "71682040"
 
 機能性とパフォーマンスに悪影響を与える可能性は、いかなるアップグレードにおいても主要なリスク要因です。 互換性証明書は、そのようなアップグレード リスクの管理に安心を与えます。
 
--  [!INCLUDE[tsql](../../includes/tsql-md.md)] の動作に関連するものにおいて、あらゆる変更は、あるアプリケーションが正しいことを再認定する必要があることを意味します。 しかしながら、[データベース互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)設定は、サーバー全体ではなく、指定のデータベースに対してのみ、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との下位互換性を与えます。 データベース互換性レベルを現状のまま維持することで、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] アップグレードの前後で、既存のアプリケーション クエリは引き続き同じ動作を示します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の動作と互換性レベルについては、「[旧バージョンとの互換性を維持するための互換性レベルの使用](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility)」を参照してください。
+-  [!INCLUDE[tsql](../../includes/tsql-md.md)] の動作に関連するものにおいて、あらゆる変更は、あるアプリケーションが正しいことを再認定する必要があることを意味します。 しかしながら、[データベース互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)設定は、サーバー全体ではなく、指定のデータベースに対してのみ、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との下位互換性を与えます。 データベース互換性レベルを現状のまま維持することで、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] アップグレードの前後で、既存のアプリケーション クエリは引き続き同じ動作を示します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の動作と互換性レベルについては、「[旧バージョンとの互換性を維持するための互換性レベルの使用](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)」を参照してください。
 
 -  パフォーマンスに関連するものにおいて、クエリ オプティマイザーの機能拡張がすべてのバージョンで導入されるため、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] のバージョンが異なれば、クエリ プランが異なることが予想される可能性があります。 一部の変更が特定のクエリまたはワークロードにとって害になる可能性がある場合、1 つのアップグレードの範囲におけるクエリ プランの違いは通常、リスクとなります。 裏を返せば、このリスクは再認定の動機であり、アップグレードを遅らせ、ライフサイクルやサポートに問題を与えることがあります。 
    アップグレード リスクの軽減は、クエリ オプティマイザーの機能拡張が新しいリリースの既定互換性レベルに制限される理由です。 互換性証明書には、**クエリ プラン シェイプ保護**が含まれます。[!INCLUDE[ssde_md](../../includes/ssde_md.md)] アップグレードの直後、データベース互換性レベルを現状のまま維持するという考えは、新しいバージョンでクエリ プランを作成する目的で使用されるクエリ最適化モデルがアップグレード前のものと同じになり、クエリ プラン シェイプは変更されないことを意味します。 
@@ -53,7 +53,7 @@ ms.locfileid: "71682040"
    > [!NOTE]
    > **クエリ プラン シェイプ**は、クエリ プランを構成するさまざまな演算子の視覚的表現を指します。 これには、シーク、スキャン、結合、並べ替えなどの演算子に加えて、データのフローと操作の順序を示す接続が含まれます。 クエリ プラン シェイプは、クエリ オプティマイザーによって決定されます。 詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)」をご覧ください。
    
-   詳細については、「[旧バージョンとの互換性を維持するための互換性レベルの使用](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility)」を参照してください。
+   詳細については、「[旧バージョンとの互換性を維持するための互換性レベルの使用](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)」を参照してください。
    
 上位のデータベース互換性レベルでのみ利用できる機能拡張をアプリケーションが活用する必要がない限り、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] をアップグレードし、同時に前のデータベース互換性レベルを維持することは有効なアプローチであり、アプリケーションを再認定する必要がありません。 詳細については、この記事の後半に出てくる「[互換性レベルとデータベース エンジンのアップグレード](#compatibility-levels-and-database-engine-upgrades)」を参照してください。
 

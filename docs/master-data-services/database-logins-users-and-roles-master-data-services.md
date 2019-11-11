@@ -1,5 +1,5 @@
 ---
-title: データベース ログイン、ユーザー、およびロール (マスター データ サービス) | Microsoft Docs
+title: データベース ログイン、ユーザー、およびロール
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b12e077e337cedcdcdd3bb23b12e1fb8dc6f704e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094409"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729484"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>データベース ログイン、ユーザー、およびロール (マスター データ サービス)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68094409"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストする [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに自動的にインストールされるログイン、ユーザー、およびロールがあります。 これらのログイン、ユーザー、およびロールは変更しないでください。  
   
-## <a name="logins"></a>Login  
+## <a name="logins"></a>ログイン  
   
 |Login|説明|  
 |-----------|-----------------|  
@@ -64,9 +64,9 @@ ms.locfileid: "68094409"
 |----------|-----------------|  
 |**mdm**|mdq スキーマに含まれている関数以外のすべての [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース オブジェクトおよび Service Broker オブジェクトが含まれます。|  
 |**mdq**|正規表現または類似性に基づくメンバーの結果のフィルター処理や書式設定通知電子メールに関連する [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース関数が含まれます。|  
-|**stg**|ステージング処理に関連する [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース テーブル、ストアド プロシージャ、およびビューが含まれます。 これらのオブジェクトは削除しないでください。 ステージング処理の詳細については、「[概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。|  
+|**stg**|ステージング処理に関連する [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース テーブル、ストアド プロシージャ、およびビューが含まれます。 これらのオブジェクトは削除しないでください。 ステージング処理の詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース オブジェクト セキュリティ (マスター データ サービス)](../master-data-services/database-object-security-master-data-services.md)  
   
   

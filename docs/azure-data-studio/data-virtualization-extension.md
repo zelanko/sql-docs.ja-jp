@@ -1,50 +1,35 @@
 ---
-title: SQL Server 2019 の拡張機能 (プレビュー)
+title: データ仮想化の拡張機能
 titleSuffix: Azure Data Studio
-description: Azure Data Studio 用の SQL Server 2019 プレビューの拡張機能
+description: Azure Data Studio 用のデータ仮想化の拡張機能
 ms.custom: seodec18
-ms.date: 09/11/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: yualan
-ms.author: alayu
-ms.openlocfilehash: 17a618fb10f234d839243b0523260d19d0a2b599
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+author: rajmera3
+ms.author: raajmera
+ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381783"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532552"
 ---
-# <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Azure Data Studio 用の SQL Server 2019 の拡張機能 (プレビュー)
+# <a name="data-virtualization-extension-for-azure-data-studio"></a>Azure Data Studio 用のデータ仮想化の拡張機能
 
-Azure Data Studio 用の SQL Server 2019 の拡張機能 (プレビュー) では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のサポートで提供される新しい機能とツールに対してプレビュー サポートを提供します。 サポートには、[SQL Server 2019 ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)、統合された[ノートブック エクスペリエンス](../big-data-cluster/notebooks-guidance.md)、PolyBase の [[Create External Table]\(外部テーブルの作成\) ウィザード](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)のプレビュー サポートが含まれます。
+Azure Data Studio 用のデータ仮想化の拡張機能では、PolyBase [[Create External Table]\(外部テーブルの作成\) ウィザード](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)がサポートされています。
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 の拡張機能 (プレビュー) をインストールする
+## <a name="install-the-data-virtualization-extension"></a>データ仮想化の拡張機能のインストール
 
-SQL Server 2019 の拡張機能 (プレビュー) をインストールするには、関連付けられた .vsix ファイルをダウンロードしてインストールします。
+データ仮想化の拡張機能をインストールするには、Azure Data Studio を開き、[拡張機能] タブからダウンロードします。[こちら](extensions.md)の指示に従います。
 
-1. SQL Server 2019 の拡張機能 (プレビュー) の .vsix ファイルをローカル ディレクトリにダウンロードします。
-
-   |プラットフォーム|ダウンロード|リリース日|Version
-   |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019 年 9 月 11 日 |0.16.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019 年 9 月 11 日 |0.16.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019 年 9 月 11 日 |0.16.0
-
-   > [!NOTE]
-   > Internet Explorer には、VSIX が zip ファイルとしてダウンロードされるという既知の問題があります。 Edge または別のブラウザーを使用して、VSIX を正しくダウンロードします。 
-
-1. Azure Data Studio では、 **[ファイル]** メニューから **[Install Extension from VSIX Package]\(VSIX パッケージから拡張機能をインストールする)** を選択し、ダウンロードした .vsix ファイルを選択します。
-
-1. インストールの確認を求めるメッセージが表示されたら、 **[はい]** を選択し、インストールが成功したことを示す通知を待ちます。
-
-1. **[再読み込み]** を選択して拡張機能を有効にします (拡張機能を初めてインストールするときにのみ必要です)。
-
-1. 再読み込み後、拡張機能によって依存関係がインストールされます。 [出力] ウィンドウに進行状況が表示され、数分かかることがあります。
-
-1. 依存関係のインストールが完了したら、Azure Data Studio を閉じてから再度開きます。 **SQL Server ビッグ データ クラスター**の接続の種類は、Azure Data Studio を再起動するまで使用できません。
+## <a name="changes-in-release-10"></a>リリース 1.0 での変更点
+* 拡張機能名がデータ仮想化に変更されました。
+* [Create External Table]\(外部テーブルの作成\) ウィザード:
+    * 仮想化 MongoDB および Teradata ソース用のガイド付きノートブックが含まれています。
+    * MongoDB および Teradata 仮想化ノートブックに変数を入力するためのダイアログが追加されました。 
 
 ## <a name="changes-in-release-016"></a>リリース 0.16 での変更点
 * [Create External Table]\(外部テーブルの作成\) ウィザード:

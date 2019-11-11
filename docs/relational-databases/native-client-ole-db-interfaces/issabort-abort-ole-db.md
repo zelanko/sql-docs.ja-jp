@@ -1,5 +1,5 @@
 ---
-title: Issabort::abort (OLE DB) |マイクロソフトのドキュメント
+title: 'ISSAbort:: Abort (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,22 +16,21 @@ ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 473b86ad265c259426527fcd0cd67b8199a8350e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d66d37da3ba2de7f12cefb8f806c44d5dd967003
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051042"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73763175"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   現在の行セットと、現在のコマンドに関連付けられているバッチ コマンドを取り消します。  
   
-**ISSAbort**で公開される、インターフェイス、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、提供、 **issabort::abort**現在の行セットと任意のコマンドをキャンセルするために使用するメソッドがバッチ処理最初に、行セットを生成してをまだ完了していない実行コマンド。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで公開されている**issabort**インターフェイスは、 **Issabort:: Abort**メソッドを提供します。このメソッドは、現在の行セットを取り消すために使用され、最初に生成されたコマンドを使用してバッチ処理されたコマンドを実行します。行セット、およびまだ実行が完了していない。  
   
- **ISSAbort**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーに固有のインターフェイスを使用して利用可能な**QueryInterface**上、 **IMultipleResults**によって返されるオブジェクト**Icommand::execute**または**iopenrowset::openrowset**します。  
+ **Issabort**は、 **ICommand:: Execute**または**IOpenRowset:: OpenRowset**によって返される**IMultipleResults**オブジェクトに対して**QueryInterface**を使用して使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブクライアントプロバイダー固有のインターフェイスです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,10 +39,10 @@ ms.locfileid: "68051042"
 HRESULT Abort(void);  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  中止されるコマンドがストアド プロシージャの場合、ストアド プロシージャ (およびそのプロシージャを呼び出したすべてのプロシージャ) の実行と、そのストアド プロシージャの呼び出しが含まれるコマンド バッチの実行が終了します。 サーバーがクライアントに結果セットを転送中の場合、この処理も停止します。 クライアントが結果セットを使用しない場合、行セットを解放する前に **ISSAbort::Abort** を呼び出すと、行セットの解放が高速になります。ただし、開いているトランザクションがあり、XACT_ABORT が ON の場合、**ISSAbort::Abort** が呼び出されたときに、トランザクションがロールバックされます。  
   
- 後**issabort::abort** 、関連付けられている S_OK を返す**IMultipleResults**インターフェイスが使用できない状態に入るし、すべてのメソッド呼び出しに DB_E_CANCELED が返されます (、によって定義されたメソッドを除く**IUnknown**インターフェイス) が解放されるまでです。 **Abort** を呼び出す前に、**IMultipleResults** から **IRowset** を取得している場合、これも使用できない状態になり、**ISSAbort::Abort** の正常な呼び出し後にこのインターフェイスが解放されるまでは、すべてのメソッド呼び出しで DB_E_CANCELED が返されます (ただし、**IUnknown** インターフェイスと **IRowset::ReleaseRows** で定義されたメソッドは除きます)。  
+ **Issabort:: Abort**が S_OK を返すと、関連付けられた**IMultipleResults**インターフェイスは使用できない状態になり、解放されるまで、すべてのメソッド呼び出し ( **IUnknown**インターフェイスによって定義されるメソッドを除く) に DB_E_CANCELED を返します。 **Abort** を呼び出す前に、**IMultipleResults** から **IRowset** を取得している場合、これも使用できない状態になり、**ISSAbort::Abort** の正常な呼び出し後にこのインターフェイスが解放されるまでは、すべてのメソッド呼び出しで DB_E_CANCELED が返されます (ただし、**IUnknown** インターフェイスと **IRowset::ReleaseRows** で定義されたメソッドは除きます)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、サーバーの XACT_ABORT 状態が ON の場合、**ISSAbort::Abort** を実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに、現在のすべての暗黙的または明示的なトランザクションが終了し、ロールバックされます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、現在のトランザクションは中止されません。  
@@ -62,7 +61,7 @@ HRESULT Abort(void);
  バッチは取り消されませんでした。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細については、使用、 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイス。  
+ プロバイダー固有のエラーが発生しました。詳細については、 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイスを使用してください。  
   
  E_UNEXPECTED  
  メソッドの呼び出しが予期されませんでした。 たとえば、**ISSAbort::Abort** が既に呼び出されていたために、オブジェクトがゾンビ状態になっている場合などです。  
@@ -70,7 +69,7 @@ HRESULT Abort(void);
  E_OUTOFMEMORY  
  メモリ不足エラー。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ISSAbort &#40;OLE DB&#41;](https://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
   
   

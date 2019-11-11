@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 4cda96435d1b6f3732446295d17b360033e4a17f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155656"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659365"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -397,9 +397,6 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
     | DEFAULT_LANGUAGE = language
 ```
 
-> [!IMPORTANT]
-> SQL Database マネージド インスタンスの Azure AD ログインは**パブリック プレビュー**段階です。 これは **FROM EXTERNAL PROVIDER** 構文で導入されています。
-
 ## <a name="arguments"></a>引数
 
 *login_name*: **FROM EXTERNAL PROVIDER** 句と共に使用すると、ログインで Azure Active Directory (AD) プリンシパル (Azure AD ユーザー、グループ、またはアプリケーション) が指定されます。 それ以外の場合、ログインは作成された SQL ログインの名前を示します。
@@ -423,12 +420,6 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
     - Azure AD ユーザー用の Azure AD オブジェクトの UserPrincipalName。
     - Azure AD のグループと Azure AD アプリケーション用の Azure AD オブジェクトの DisplayName。
   - **PASSWORD** オプションは使用できません。
-  - 現在、最初の Azure AD ログインは、上記の構文を使用して、`sysadmin` の標準 SQL Server アカウント (Azure AD 以外) で作成する必要があります。
-  - SQL Database マネージド インスタンスの Azure AD 管理者を使用して Azure AD ログインを作成すると、次のエラーが発生します。</br>
-      `Msg 15247, Level 16, State 1, Line 1
-      User does not have permission to perform this action.`
-  - これは**パブリック プレビュー**の既知の制限であり、今後修正される予定です。
-  - 最初の Azure AD ログインが作成され、必要なアクセス許可が付与されると、このログインで他の Azure AD ログインを作成できます。
 - **FROM EXTERNAL PROVIDER** 句を省略すると、既定で通常の SQL ログインが作成されます。
 - Azure AD ログインは sys.server_principals で表示することができます。Azure AD ユーザーにマップされたログインの場合、type 列の値は **E** に設定され、type_desc は **EXTERNAL_LOGIN** に設定されます。Azure AD グループにマップされたログインの場合、type 列の値は **X** に設定され、type_desc 値は **EXTERNAL_GROUP** に設定されます。
 - スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](https://support.microsoft.com/kb/918992)」を参照してください。
@@ -448,6 +439,9 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
 
 ## <a name="after-creating-a-login"></a>ログインを作成した後
 
+> [!NOTE]
+> 作成後にマネージド インスタンス機能の Azure AD 管理者が変更されました。 詳しくは、「[マネージド インスタンス用の新しい Azure AD 管理機能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)」をご覧ください。
+
 ログインが作成されたら、ログインは SQL Database マネージド インスタンスに接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。
 
 - Azure AD ログインから Azure AD ユーザーを作成するには、「[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。
@@ -463,6 +457,7 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
 - Azure AD プリンシパルを対象とした次の操作を実行できるのは、`sysadmin` ロールの一部である SQL サーバーレベルのプリンシパル (ログイン) のみです。
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
+- 別の Azure AD ディレクトリからインポートされた外部 (ゲスト) ユーザーを、マネージド インスタンスの Azure AD 管理者として直接構成することはできません。 代わりに、外部ユーザーを Azure AD のセキュリティが有効なグループに参加させ、そのグループをインスタンス管理者として構成します。
 
 ## <a name="examples"></a>使用例
 

@@ -18,16 +18,15 @@ ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ea8cb10227ccebe10e350ce82b0887eb8a8bacf
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707520"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782621"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   長い可変長データ型の値の一部を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信します。  
   
@@ -54,20 +53,20 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
- この関数を[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)および[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)と組み合わせて使用すると、長い可変長のデータ値を複数の小さなチャンクで SQL Server にコピーできます。 **bcp_moretext**は、 **text**、 **ntext**、 **image**、 **varchar (max)** 、 **nvarchar (max)** 、 **VARBINARY (max)** 、ユーザー定義型 (UDT)、および XML の SQL Server データ型の列で使用できます。 **bcp_moretext**は、データ変換をサポートしていません。指定されたデータは、ターゲット列のデータ型と一致している必要があります。  
+## <a name="remarks"></a>解説  
+ この関数を[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)および[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)と組み合わせて使用すると、長い可変長のデータ値を多数の小さなチャンクで SQL Server にコピーできます。 **bcp_moretext**は、 **text**、 **ntext**、 **image**、 **varchar (max)** 、 **nvarchar (max)** 、 **VARBINARY (max)** 、ユーザー定義型 (UDT)、および XML の SQL Server 各データ型を持つ列で使用できます。 **bcp_moretext**は、データ変換をサポートしていません。指定されたデータは、ターゲット列のデータ型と一致している必要があります。  
   
- **Bcp_moretext**でサポートされているデータ型に対して、NULL 以外の*pData*パラメーターを使用して**bcp_bind**が呼び出された場合、 **bcp_sendrow**は長さに関係なくデータ値全体を送信します。 ただし、 **bcp_bind**がサポートされるデータ型に対して NULL の*pData*パラメーターを持っている場合、 **bcp_moretext**を使用して、データを含むバインド列があることを示す**bcp_sendrow**から正常に返された直後にデータをコピーできます。処理されました。  
+ **Bcp_moretext**でサポートされているデータ型に対して NULL 以外の*pData*パラメーターを使用して**bcp_bind**が呼び出された場合、 **bcp_sendrow**は長さに関係なくデータ値全体を送信します。 ただし、 **bcp_bind**がサポートされているデータ型に対して NULL の*pData*パラメーターを持っている場合、 **bcp_moretext**を使用して、データを含むバインド列があることを示す**bcp_sendrow**から正常に返された直後にデータをコピーできます。処理されました。  
   
  **Bcp_moretext**を使用して、サポートされているデータ型の列を1つの行で送信する場合は、その行でサポートされている他のすべてのデータ型の列を送信するためにも使用する必要があります。 列はスキップされません。 サポートされるデータ型は、SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT、および SQLXML です。 列の型が varchar(max)、nvarchar(max)、または varbinary(max) の場合、SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY、SQLVARBINARY も、サポート対象となります。  
   
- **Bcp_bind**または[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)のいずれかを呼び出すと、SQL Server 列にコピーされるすべてのデータ部分の合計長が設定されます。 **Bcp_bind**または**bcp_collen**の呼び出しで指定されているよりも多くのバイトを SQL Server 送信しようとすると、エラーが生成されます。 このエラーが発生するのは、たとえば、 **bcp_collen**を使用して SQL Server**テキスト**列の使用可能なデータの長さを4500に設定した後、 **bcp_moretext**を5回呼び出し、データバッファーを呼び出すたびにこのエラーが発生した場合などです。長さは1000バイト長でした。  
+ **Bcp_bind**または[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)のいずれかを呼び出すと、SQL Server 列にコピーされるすべてのデータパーツの合計長が設定されます。 **Bcp_bind**または**bcp_collen**の呼び出しで指定されているよりも多くのバイトを SQL Server 送信しようとすると、エラーが発生します。 このエラーが発生するのは、たとえば、SQL Server**テキスト**列の使用可能なデータの長さを4500に設定するために**bcp_collen**を使用し、データバッファーを呼び出すたびに**bcp_moretext** 5 回呼び出された場合などです。長さは1000バイト長でした。  
   
- コピーした行に複数の long 型の可変長列が含まれている場合、 **bcp_moretext**は、最初にそのデータを最も低い順序の列に送信し、次に、その後に最も低い2番目の数字の付いた列を返します。 コピーするデータの合計長を正しく設定することが重要です。 長さの設定以外に、一括コピーによって列のすべてのデータを受け取ったことを示す方法はありません。  
+ コピーされた行に複数の長い可変長列が含まれている場合、 **bcp_moretext**は最初にそのデータを最も低い順序の列に送信し、次に、その後に最も低い2番目の列に番号が付けられます。 コピーするデータの合計長を正しく設定することが重要です。 長さの設定以外に、一括コピーによって列のすべてのデータを受け取ったことを示す方法はありません。  
   
- Bcp_sendrow と bcp_moretext を使用して**var (max)** 値がサーバーに送信される場合、列の長さを設定するために bcp_collen を呼び出す必要はありません。 代わりに、これらの型に対してのみ、長さが0の bcp_sendrow を呼び出すことによって値が終了します。  
+ Bcp_sendrow と bcp_moretext を使用して**var (max)** 値がサーバーに送信されるときに、列の長さを設定するために bcp_collen を呼び出す必要はありません。 代わりに、これらの型に対してのみ、長さ0の bcp_sendrow を呼び出すことによって値が終了します。  
   
- 通常、アプリケーションは、ループ内で**bcp_sendrow**と**bcp_moretext**を呼び出して、多数のデータ行を送信します。 2つの**テキスト**列を含むテーブルに対してこれを行う方法の概要を次に示します。  
+ 通常、アプリケーションは、ループ内で**bcp_sendrow**および**bcp_moretext**を呼び出して、多数のデータ行を送信します。 2つの**テキスト**列を含むテーブルに対してこれを行う方法の概要を次に示します。  
   
 ```  
 while (there are still rows to send)  
@@ -166,7 +165,7 @@ nRowsProcessed = bcp_done(hdbc);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

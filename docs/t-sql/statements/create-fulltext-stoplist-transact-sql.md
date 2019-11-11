@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912758"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064651"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### <a name="a-creating-a-new-full-text-stoplist"></a>A. 新しいフルテキスト ストップリストを作成する  
  次の例では、`myStoplist` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -94,7 +94,7 @@ GO
 ### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>B. 既存のフルテキスト ストップリストからフルテキスト ストップリストをコピーする  
  次の例では、`myStoplist2` という名前の既存の AdventureWorks ストップリストをコピーして、`Customers.otherStoplist` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -102,7 +102,7 @@ GO
 ### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>C. システムのフルテキスト ストップリストからフルテキスト ストップリストをコピーする  
  次の例では、システム ストップリストをコピーして、`myStoplist3` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

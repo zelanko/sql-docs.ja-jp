@@ -1,5 +1,5 @@
 ---
-title: 属性の順序の変更 | Microsoft Docs
+title: 属性の順序の変更
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2b95e3200a797ccd078731618ea9da643afacaad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a62ad36e17fd25a922615ed4d7b8a49c12a14adf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052093"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728613"
 ---
 # <a name="change-the-order-of-attributes"></a>属性の順序の変更
 
@@ -23,12 +23,12 @@ ms.locfileid: "68052093"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の順序を変更できます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>属性の順序を変更するには  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68052093"
   
 7.  **[上へ移動]** または **[下へ移動]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
   

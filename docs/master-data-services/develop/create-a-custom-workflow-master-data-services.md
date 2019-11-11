@@ -1,5 +1,5 @@
 ---
-title: カスタム ワークフローの作成 (Master Data Services) | Microsoft Docs
+title: カスタム ワークフローの作成
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033948"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729323"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>カスタム ワークフローの作成 (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68033948"
 5.  SQL Server MDS Workflow Integration Services は、それらのデータをワークフロー ハンドラー アセンブリにルーティングします。  
   
 > [!NOTE]  
->  注:SQL Server MDS Workflow Integration Service は、単純なプロセスをトリガーします。 カスタム コードで複雑な処理を行う必要がある場合は、個別のスレッド内か、またはワークフロー プロセスの外部で処理を完了してください。  
+>  注: SQL Server MDS Workflow Integration Service は単純な処理をトリガーするためのものです。 カスタム コードで複雑な処理を行う必要がある場合は、個別のスレッド内か、またはワークフロー プロセスの外部で処理を完了してください。  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>カスタム ワークフロー向けの Master Data Services の構成  
  カスタム ワークフローを作成するには、カスタム コードの記述と [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] の構成を行って、ワークフロー データをワークフロー ハンドラーに渡す必要があります。 カスタム ワークフロー処理を有効にするには、次の手順を実行します。  
@@ -63,7 +63,7 @@ ms.locfileid: "68033948"
   
 3.  C# コード ファイルに、'using Microsoft.MasterDataServices.Core.Workflow;' を追加します。  
   
-4.  クラス宣言で、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> を継承します。 クラス宣言のようになります ' public class WorkflowTester:。IWorkflowTypeExtender'。  
+4.  クラス宣言で、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> を継承します。 クラス宣言は次のようになります: 'public class WorkflowTester : IWorkflowTypeExtender'  
   
 5.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> インターフェイスを実装します。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> メソッドは、ワークフローを開始するために SQL Server MDS Workflow Integration Service によって呼び出されます。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68033948"
   
 3.  mds_workflow_service ユーザーに、ワークフロー ハンドラー アセンブリを実行する権限を付与します。 これを行うには、ワークフロー ハンドラー アセンブリの **[プロパティ]** の **[セキュリティ]** タブに mds_workflow_service ユーザーを追加し、その mds_workflow_service ユーザーに、READ および EXECUTE アクセス許可を付与します。  
   
-4.  mds_workflow_service ユーザーに、SQL Server MDS Workflow Integration Service 実行可能ファイルを実行する権限を付与します。 これを行うには、Microsoft.MasterDataServices.Workflow.exe (\<インストール フォルダー>\Master Data Services\WebApplication\bin 内) の **[プロパティ]** の **[セキュリティ]** タブに mds_workflow_service ユーザーを追加し、その mds_workflow_service ユーザーに READ および EXECUTE アクセス許可を付与します。  
+4.  mds_workflow_service ユーザーに、SQL Server MDS Workflow Integration Service 実行可能ファイルを実行する権限を付与します。 これを行うには、Microsoft.MasterDataServices.Workflow.exe (**インストール フォルダー>\Master Data Services\WebApplication\bin 内) の** [プロパティ]**の**[セキュリティ]\< タブに mds_workflow_service ユーザーを追加し、その mds_workflow_service ユーザーに READ および EXECUTE アクセス許可を付与します。  
   
 5.  .NET インストール ユーティリティ (InstallUtil.exe) を使用して、SQL Server MDS Workflow Integration Service をインストールします。 InstallUtil.exe は、.NET インストール フォルダー (C:\Windows\Microsoft.NET\Framework\v4.0.30319\\ など) にあります。 SQL Server MDS Workflow Integration Service は、管理者特権のコマンド プロンプトで次のコマンドを入力してインストールします。  
   
@@ -144,14 +144,14 @@ ms.locfileid: "68033948"
   
 1.  サービス スナップインを使用して、サービスを停止します。  
   
-2.  コマンド プロンプトを開き、サービスの場所に移動を入力して、コンソール モードでサービスを実行します。Microsoft.MasterDataServices.Workflow.exe-コンソールです。  
+2.  コマンド プロンプトを開き、サービスの場所に移動した後、コマンド Microsoft.MasterDataServices.Workflow.exe -console を入力してサービスをコンソール モードで実行します。  
   
 3.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で、メンバーを更新し、ビジネス ルールを再度適用します。 詳細なログがコンソール ウィンドウに表示されます。  
   
 ### <a name="view-the-service-broker-queue"></a>Service Broker キューの表示  
  ワークフローの一部として渡されるマスター データを含んだ Service Broker キューは、mdm.microsoft/mdm/queue/externalaction です。 キューは、SQL Management Studio の **[オブジェクト エクスプローラー]** で、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの Service Broker ノードに表示されます。 ただし、サービスがキューを適切にクリアした場合、このキューは空になります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム ワークフローの例 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [カスタム ワークフロー XML の説明 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
