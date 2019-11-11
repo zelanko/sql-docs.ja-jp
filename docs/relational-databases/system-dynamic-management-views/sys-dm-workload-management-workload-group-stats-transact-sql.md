@@ -1,5 +1,5 @@
 ---
-title: dm_workload_management_workload_groups_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_workload_management_workload_groups_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2019
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73633436"
 ---
-# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>dm_workload_management_workload_groups_stats (Transact-sql)
+# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 ワークロードグループの統計と、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]内のワークロードグループの有効な値を返します。  
