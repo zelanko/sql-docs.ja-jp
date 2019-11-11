@@ -1,5 +1,5 @@
 ---
-title: dm_column_encryption_enclave (Transact-sql) |Microsoft Docs
+title: sys.dm_column_encryption_enclave (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73599245"
 ---
-# <a name="sysdm_column_encryption_enclave-transact-sql"></a>dm_column_encryption_enclave (Transact-sql)
+# <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-sql)
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Always Encrypted の secure エンクレーブのパフォーマンスカウンターを返します。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../security/encryption/always-encrypted-enclaves.md)」を参照してください。
