@@ -5,16 +5,16 @@ description: この記事では、外部の Azure Data Lake Storage ファイル
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/01/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c2c2a6510688f8adf74e50ae76a626a00955019d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531899"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632780"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
@@ -76,11 +76,8 @@ OAuth 資格情報を使用してマウントするには、次の手順に従�
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
     fs.azure.account.oauth2.client.endpoint=[token endpoint],
     fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret],
-    fs.abfs.impl.disable.cache=true
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
-   
-ADLS ドライバーの既定の動作では、資格情報がキャッシュされます。 つまり、間違った資格情報もキャッシュされ、最初にマウントしようとしたときに間違った資格情報を入力すると、問題が発生する可能性があります。 上の資格情報の最後の部分 (fs.abfs.impl.disable.cache=true) は、このキャッシュを無効にします。
 
 ## <a name="use-access-keys-to-mount"></a>アクセス キーを使用してマウントする
 
@@ -99,11 +96,8 @@ Azure portal で ADLS アカウント用に取得できるアクセス キーを
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
-   fs.abfs.impl.disable.cache=true
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
-   
-ADLS ドライバーの既定の動作では、資格情報がキャッシュされます。 つまり、間違った資格情報もキャッシュされ、最初にマウントしようとしたときに間違った資格情報を入力すると、問題が発生する可能性があります。 上の資格情報の最後の部分 (fs.abfs.impl.disable.cache=true) は、このキャッシュを無効にします。
 
 ## <a id="mount"></a> リモート HDFS ストレージをマウントする
 

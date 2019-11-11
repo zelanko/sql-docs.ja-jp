@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: v-mabarw
-ms.openlocfilehash: 08165bf0f60265e34f6b8022fd00e11dda47f672
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 60f4ee3839b91b60b950c1f3a6a351592a9581b2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258638"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593626"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68258638"
 ## <a name="applicable-to"></a>適用対象
  -   Microsoft SQL Server 用 Drivers 5.2 for PHP
  
-## <a name="introduction"></a>概要
+## <a name="introduction"></a>はじめに
 
 この記事では、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と [SQL Server 用 PHP ドライバー](../../connect/php/Microsoft-php-driver-for-sql-server.md)を使用して PHP アプリケーションを開発する方法について説明します。
 
@@ -55,7 +55,7 @@ $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 
-接続で Always Encrypted を有効にすると、標準の SQLSRV Api ( [Sqlsrv DRIVER Api リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)を参照) または PDO_SQLSRV api (「 [PDO_SQLSRV driver api reference](../../connect/php/pdo-sqlsrv-driver-reference.md)」を参照) を使用して、暗号化されたデータベース列のデータを取得または変更できます。 ご利用のアプリケーションが必要なデータベース権限を備えていて、列マスター キーにアクセスできると仮定すると、ドライバーによって、暗号化された列をターゲットとするクエリ パラメータが暗号化され、暗号化された列から取得したデータの暗号化が解除されます。これらの動作は列が暗号化されていないかのようにアプリケーションに対して透過的に行われます。
+接続で Always Encrypted を有効にすると、標準の SQLSRV Api ( [Sqlsrv DRIVER Api リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)を参照) または PDO_SQLSRV api (「 [PDO_SQLSRV Driver api reference](../../connect/php/pdo-sqlsrv-driver-reference.md)」を参照) を使用して、暗号化されたデータベース列のデータを取得または変更できます。 ご利用のアプリケーションが必要なデータベース権限を備えていて、列マスター キーにアクセスできると仮定すると、ドライバーによって、暗号化された列をターゲットとするクエリ パラメータが暗号化され、暗号化された列から取得したデータの暗号化が解除されます。これらの動作は列が暗号化されていないかのようにアプリケーションに対して透過的に行われます。
 
 Always Encrypted が有効でない場合、暗号化された列をターゲットとするパラメーターを含むクエリは失敗します。 暗号化された列をターゲットとするパラメーターがクエリにない場合は、暗号化された列からデータを取得できます。 ただし、ドライバーによって暗号化の解除は試みられず、アプリケーションでは暗号化されたバイナリ データを (バイト配列として) 受け取ることになります。
 
@@ -63,8 +63,8 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 |クエリの特性|Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる|Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない|Always Encrypted が無効になっている|
 |---|---|---|---|
-|暗号化された列をターゲットとするパラメーター。|パラメーター値は透過的に暗号化されます。|Error|Error|
-|暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。|暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 |Error|暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。|
+|暗号化された列をターゲットとするパラメーター。|パラメーター値は透過的に暗号化されます。|エラー|エラー|
+|暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。|暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 |エラー|暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。|
  
 次の例は、暗号化された列のデータを取得および変更する方法を示しています。 この例では、次のスキーマを持つテーブルを想定しています。 SSN 列と BirthDate 列は暗号化されています。
 ```
@@ -89,20 +89,20 @@ CREATE TABLE [dbo].[Patients](
 次の例では、SQLSRV および PDO_SQLSRV ドライバーを使用して、患者のテーブルに行を挿入する方法を示します。 次の点に注意してください。
  -   このサンプル コードの暗号化に固有のものは何もありません。 暗号化された列をターゲットとする SSN および BirthDate パラメーターの値が、ドライバーによって自動的に検出されて、暗号化されます。 このメカニズムにより、アプリケーションに対して暗号化が透過的に実行されます。
  -   暗号化された列を含め、データベース列に挿入された値は、バインドされたパラメーターとして渡されます。 暗号化されていない列に値を送信する場合、パラメーターの使用は省略可能です (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします) が、暗号化された列をターゲットとする値に対しては必須です。 SSN 列または BirthDate 列に挿入された値がクエリ ステートメントに埋め込まれたリテラルとして渡された場合、ドライバーではクエリ内のリテラルの暗号化または処理が試行されないため、クエリは失敗します。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
- -   バインドパラメーターを使用して値を挿入する場合は、ターゲット列のデータ型と同一の SQL 型、またはターゲット列のデータ型への変換がサポートされている必要があります。 これは Always Encrypted でサポートされる型変換の数が少ないためです (詳細については、「 [Always Encrypted (データベースエンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください)。 2つの PHP ドライバー (SQLSRV と PDO_SQLSRV) には、ユーザーが値の SQL 型を決定するのに役立つ機構があります。 そのため、ユーザーは SQL 型を明示的に指定する必要はありません。
+ -   バインドパラメーターを使用して値を挿入する場合は、ターゲット列のデータ型と同一の SQL 型、またはターゲット列のデータ型への変換がサポートされている必要があります。 これは Always Encrypted でサポートされる型変換の数が少ないためです (詳細については、「 [Always Encrypted (データベースエンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください)。 2つの PHP ドライバー (SQLSRV と PDO_SQLSRV) には、ユーザーが値の SQL 型を決定するための機構が用意されています。 そのため、ユーザーは SQL 型を明示的に指定する必要はありません。
   -   SQLSRV ドライバーの場合、ユーザーには次の2つのオプションがあります。
-   -   PHP ドライバーを使用して、適切な SQL の種類を決定し、設定します。 この場合、ユーザーはおよびを使用`sqlsrv_prepare`し`sqlsrv_execute`て、パラメーター化クエリを実行する必要があります。
+   -   PHP ドライバーを使用して、適切な SQL の種類を決定し、設定します。 この場合、ユーザーは `sqlsrv_prepare` と `sqlsrv_execute` を使用して、パラメーター化クエリを実行する必要があります。
    -   SQL 型を明示的に設定します。
   -   PDO_SQLSRV ドライバーの場合、ユーザーには、パラメーターの SQL 型を明示的に設定するオプションはありません。 PDO_SQLSRV ドライバーは、パラメーターをバインドするときに、ユーザーが自動的に SQL 型を決定するのに役立ちます。
  -   ドライバーで SQL 型を特定するには、いくつかの制限が適用されます。
   -   SQLSRV ドライバー:
-   -   ユーザーが暗号化された列の SQL 型を決定する必要がある場合は、と`sqlsrv_prepare`を`sqlsrv_execute`使用する必要があります。
-   -   が`sqlsrv_query`推奨される場合、ユーザーはすべてのパラメーターに SQL 型を指定する必要があります。 指定された SQL 型には、文字列型の文字列の長さ、および decimal 型の小数点以下桁数と有効桁数が含まれている必要があります。
+   -   ユーザーが暗号化された列の SQL 型を決定する必要がある場合、ユーザーは `sqlsrv_prepare` と `sqlsrv_execute`を使用する必要があります。
+   -   `sqlsrv_query` が推奨される場合、ユーザーはすべてのパラメーターに SQL 型を指定する必要があります。 指定された SQL 型には、文字列型の文字列の長さ、および decimal 型の小数点以下桁数と有効桁数が含まれている必要があります。
   -   PDO_SQLSRV ドライバー:
-   -   ステートメント属性`PDO::SQLSRV_ATTR_DIRECT_QUERY`は、パラメーター化クエリではサポートされていません。
-   -   ステートメント属性`PDO::ATTR_EMULATE_PREPARES`は、パラメーター化クエリではサポートされていません。
+   -   ステートメント属性 `PDO::SQLSRV_ATTR_DIRECT_QUERY` は、パラメーター化クエリではサポートされていません。
+   -   ステートメント属性 `PDO::ATTR_EMULATE_PREPARES` は、パラメーター化クエリではサポートされていません。
    
-SQLSRV driver および[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md):
+SQLSRV ドライバーと[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md):
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -116,7 +116,7 @@ $stmt = sqlsrv_prepare($conn, $query, $params);
 sqlsrv_execute($stmt);
 ```
 
-SQLSRV driver および[sqlsrv_query](../../connect/php/sqlsrv-query.md):
+SQLSRV ドライバーと[sqlsrv_query](../../connect/php/sqlsrv-query.md):
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -133,7 +133,7 @@ $params = array(array(&$ssn, null, null, SQLSRV_SQLTYPE_CHAR(11)),
 sqlsrv_query($conn, $query, $params);
 ```
 
-PDO_SQLSRV driver and [PDO::p repare](../../connect/php/pdo-prepare.md):
+PDO_SQLSRV ドライバーと[PDO::p repare](../../connect/php/pdo-prepare.md):
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -188,7 +188,7 @@ $row = $stmt->fetch();
 
 Always Encrypted が有効になっていない場合でも、暗号化された列をターゲットとするパラメーターがクエリになければ、クエリでは、暗号化された列からデータを取得できます。
 
-次の例は、SQLSRV および PDO_SQLSRV ドライバーを使用して、暗号化された列からバイナリ暗号化データを取得する方法を示しています。 次の点に注意してください。
+次の例では、SQLSRV および PDO_SQLSRV ドライバーを使用して、暗号化された列からバイナリ暗号化データを取得する方法を示します。 次の点に注意してください。
  -   接続文字列で Always Encrypted が有効になっていないので、クエリは、SSN と BirthDate の暗号化された値をバイト配列として返します (プログラムによって値が文字列に変換されます)。
  -   Always Encrypted が無効の状態で、暗号化された列からデータを取得するクエリは、暗号化された列をターゲットとするパラメーターがない場合に限り、パラメーターを含むことができます。 次のクエリは、データベースで暗号化されない LastName によってフィルター処理を行います。 クエリが SSN または BirthDate によってフィルター処理を行った場合、クエリは失敗します。
  
@@ -218,18 +218,18 @@ $row = $stmt->fetch();
 #### <a name="unsupported-data-type-conversion-errors"></a>サポートされていないデータ型の変換エラー
 
 Always Encrypted では、暗号化されたデータ型に対するいくつかの変換がサポートされています。 サポートされている型の変換の詳細な一覧については、「[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 データ型の変換エラーを回避するには、次の操作を行います。
- -   SQLSRV ドライバー `sqlsrv_prepare`をおよび`sqlsrv_execute` SQL 型と共に使用する場合、列のサイズとパラメーターの小数点以下桁数が自動的に決定されます。
- -   PDO_SQLSRV ドライバーを使用してクエリを実行する場合、列サイズの SQL 型と、パラメーターの小数点以下桁数が自動的に決定されます。
- -   SQLSRV ドライバーをと共`sqlsrv_query`に使用してクエリを実行する場合は、次のようになります。
+ -   SQLSRV ドライバーを `sqlsrv_prepare` と共に使用して SQL 型を `sqlsrv_execute` すると、列のサイズとパラメーターの小数点以下桁数が自動的に決定されます。
+ -   PDO_SQLSRV ドライバーを使用してクエリを実行する場合、列サイズの SQL 型と、パラメーターの小数点以下桁数も自動的に決定されます。
+ -   `sqlsrv_query` で SQLSRV ドライバーを使用してクエリを実行する場合:
   -   パラメーターの SQL 型については、ターゲットとする列の型とまったく同じであるか、または SQL 型から列の型への変換がサポートされている。
   -   `decimal` と `numeric` の SQL Server データ型の列をターゲットとするパラメーターの有効桁数と小数点以下桁数が、ターゲット列に対して構成する有効桁数と小数点と同じである。
   -   ターゲット列を変更するクエリで、`datetime2`、`datetimeoffset`、または `time` の SQL Server データ型の列をターゲットとするパラメーターの有効桁数が、ターゲット列の有効桁数以下である。
- -   PDO_SQLSRV statement 属性`PDO::SQLSRV_ATTR_DIRECT_QUERY`またはパラメーター化`PDO::ATTR_EMULATE_PREPARES`クエリでは使用しない
+ -   パラメーター化されたクエリで PDO_SQLSRV ステートメント属性 `PDO::SQLSRV_ATTR_DIRECT_QUERY` または `PDO::ATTR_EMULATE_PREPARES` を使用しない
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>暗号化された値の代わりにプレーンテキストを渡すことによるエラー
 
 暗号化された列をターゲットとする値はいずれも、サーバーに送信する前に暗号化する必要があります。 暗号化された列でプレーンテキスト値の挿入、変更、フィルター処理を行おうとすると、エラーになります。 このようなエラーを防ぐには、次のことを確認してください。
- -   Always Encrypted が有効になっている (接続文字列で`ColumnEncryption`は、 `Enabled`キーワードをに設定します)。
+ -   Always Encrypted が有効になっている (接続文字列では、`ColumnEncryption` キーワードを `Enabled`) に設定します。
  -   バインド パラメーターを使用して、暗号化された列をターゲットとするデータを送信すること。 次の例は、暗号化された列 (SSN) でリテラル/定数によって誤ってフィルター処理を行うクエリを示しています。
 ```
 $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
@@ -245,7 +245,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 既定では、接続に対して Always Encrypted が有効になっている場合、ODBC Driver は、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 このストアド プロシージャでは、クエリ ステートメントを分析して、パラメーターを暗号化する必要があるかどうかが判断され、必要がある場合は、ドライバーでパラメーターを暗号化できるようにするため、パラメーターごとに暗号化関連の情報が返されます。
 
-PHP ドライバーを使用すると、ユーザーは SQL 型を指定せずに準備されたステートメントでパラメーターをバインドできるため、Always Encrypted 有効な接続でパラメーターをバインドするときに、PHP ドライバーはパラメーターで[SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md)を呼び出して sql 型を取得します。列のサイズと小数点以下の桁数。 次に、メタデータを使用して[SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)を呼び出します。 これらの`SQLDescribeParam`余分な呼び出しでは、が呼び出されたとき`sys.sp_describe_parameter_encryption`に、ODBC ドライバーによってクライアント側に情報が既に格納されているため、データベースへの追加のラウンドトリップは必要ありません。
+PHP ドライバーを使用すると、ユーザーは SQL 型を指定せずに準備されたステートメントでパラメーターをバインドできるため、Always Encrypted 有効な接続でパラメーターをバインドすると、PHP ドライバーはパラメーターの[SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md)を呼び出して、sql の型、列のサイズ、および10進数を取得します。 次に、メタデータを使用して[SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)を呼び出します。 これらの追加の `SQLDescribeParam` 呼び出しでは、`sys.sp_describe_parameter_encryption` の呼び出し時に ODBC ドライバーがクライアント側に情報を既に格納しているため、データベースへの追加のラウンドトリップは必要ありません。
 
 前述の動作により、次のような高度な透過性が確保されます: 暗号化された列をターゲットとする値がパラメーターでドライバーに渡される限り、クライアント アプリケーション (およびアプリケーション開発者) は、どのクエリが暗号化された列にアクセスするかを認識する必要がありません。
 
@@ -271,16 +271,16 @@ Windows 用の ODBC Driver for SQL Server には、`MSSQL_CERTIFICATE_STORE` と
 
 ### <a name="using-azure-key-vault"></a>Azure Key Vault の使用
 
-Azure Key Vault には、Azure を使用して暗号化キー、パスワード、およびその他のシークレットを格納する方法が用意されており、Always Encrypted のキーを格納するために使用できます。 ODBC Driver for SQL Server (バージョン17以降) には、Azure Key Vault 用の組み込みのマスターキーストアプロバイダーが含まれています。 Azure Key Vault 構成`KeyStoreAuthentication`を`KeyStorePrincipalId`処理する接続オプションは、、、 `KeyStoreSecret`およびです。 
- -   `KeyStoreAuthentication`には`KeyVaultPassword` 、と`KeyVaultClientSecret`の2つの文字列値のいずれかを指定できます。 これらの値は、他の2つのキーワードで使用される認証資格情報の種類を制御します。
- -   `KeyStorePrincipalId`Azure Key Vault にアクセスするためにシークするアカウントの識別子を表す文字列を取得します。 
-     -   が`KeyStoreAuthentication`に`KeyVaultPassword`設定されて`KeyStorePrincipalId`いる場合は、を Azure active directory ユーザーの名前にする必要があります。
-     -   が`KeyStoreAuthentication`に`KeyVaultClientSecret`設定されて`KeyStorePrincipalId`いる場合、はアプリケーションクライアント ID である必要があります。
- -   `KeyStoreSecret`資格情報のシークレットを表す文字列を取得します。 
-     -   が`KeyStoreAuthentication`に`KeyVaultPassword`設定されて`KeyStoreSecret`いる場合、はユーザーのパスワードである必要があります。 
-     -   が`KeyStoreAuthentication`に`KeyVaultClientSecret`設定されて`KeyStoreSecret`いる場合、はアプリケーションのクライアント ID に関連付けられているアプリケーションシークレットである必要があります。
+Azure Key Vault には、Azure を使用して暗号化キー、パスワード、およびその他のシークレットを格納する方法が用意されており、Always Encrypted のキーを格納するために使用できます。 ODBC Driver for SQL Server (バージョン17以降) には、Azure Key Vault 用の組み込みのマスターキーストアプロバイダーが含まれています。 次の接続オプションは、`KeyStoreAuthentication`、`KeyStorePrincipalId`、および `KeyStoreSecret`の構成 Azure Key Vault 処理します。 
+ -   `KeyStoreAuthentication` は、`KeyVaultPassword` と `KeyVaultClientSecret`の2つの文字列値のいずれかを取ることができます。 これらの値は、他の2つのキーワードで使用される認証資格情報の種類を制御します。
+ -   `KeyStorePrincipalId` は、Azure Key Vault へのアクセスを求めるアカウントの識別子を表す文字列を受け取ります。 
+     -   `KeyStoreAuthentication` が `KeyVaultPassword`に設定されている場合、`KeyStorePrincipalId` は Azure Active Directory ユーザーの名前である必要があります。
+     -   `KeyStoreAuthentication` が `KeyVaultClientSecret`に設定されている場合は、`KeyStorePrincipalId` アプリケーションクライアント ID である必要があります。
+ -   `KeyStoreSecret` は、資格情報のシークレットを表す文字列を受け取ります。 
+     -   `KeyStoreAuthentication` が `KeyVaultPassword`に設定されている場合は、`KeyStoreSecret` ユーザーのパスワードである必要があります。 
+     -   `KeyStoreAuthentication` が `KeyVaultClientSecret`に設定されている場合は、`KeyStoreSecret` アプリケーションクライアント ID に関連付けられているアプリケーションシークレットである必要があります。
 
-Azure Key Vault を使用するには、3つのオプションすべてが接続文字列に存在する必要があります。 さらに、 `ColumnEncryption`をに`Enabled`設定する必要があります。 が`ColumnEncryption`に設定さ`Disabled`れていても Azure Key Vault オプションが存在する場合、スクリプトはエラーなしで続行されますが、暗号化は実行されません。
+Azure Key Vault を使用するには、3つのオプションすべてが接続文字列に存在する必要があります。 また、`ColumnEncryption` を `Enabled`に設定する必要があります。 `ColumnEncryption` が `Disabled` に設定されていても、Azure Key Vault オプションが存在する場合、スクリプトはエラーなしで続行されますが、暗号化は実行されません。
 
 次の例は、Azure Key Vault を使用して SQL Server に接続する方法を示しています。
 
@@ -297,7 +297,7 @@ $connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "Co
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV: Azure Active Directory アカウントの使用:
+PDO_SQLSRV: Azure Active Directory アカウントを使用する:
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
@@ -314,15 +314,15 @@ SQLSRV と PDO_SQLSRV:
  -   Linux/macOS は Windows 証明書ストアプロバイダーをサポートしていません
  -   パラメーターの暗号化の強制適用
  -   ステートメントレベルでの Always Encrypted の有効化 
- -   Linux と macOS で Always Encrypted 機能と UTF8 以外のロケールを使用する場合 ("en_US" など)。ISO-8859-1 ")、暗号化された char (n) 列に null データまたは空の文字列を挿入すると、システムにコードページ1252がインストールされていないと機能しないことがある
+ -   Linux と macOS で Always Encrypted 機能と UTF8 以外のロケール ("en_US を使用する場合。ISO-8859-1 ")、暗号化された char (n) 列に null データまたは空の文字列を挿入すると、システムにコードページ1252がインストールされていないと機能しないことがある
  
 SQLSRV のみ:
- -   SQL `sqlsrv_query`型を指定せずにバインドパラメーターにを使用する
- -   SQL `sqlsrv_prepare`ステートメントのバッチでパラメーターをバインドするためのの使用  
+ -   SQL 型を指定せずにバインドパラメーターに `sqlsrv_query` を使用する
+ -   SQL ステートメントのバッチでパラメーターをバインドするための `sqlsrv_prepare` の使用  
  
 PDO_SQLSRV のみ:
- -   `PDO::SQLSRV_ATTR_DIRECT_QUERY`パラメーター化クエリで指定されたステートメント属性
- -   `PDO::ATTR_EMULATE_PREPARE`パラメーター化クエリで指定されたステートメント属性
+ -   パラメーター化クエリで指定された `PDO::SQLSRV_ATTR_DIRECT_QUERY` statement 属性
+ -   パラメーター化クエリで指定された `PDO::ATTR_EMULATE_PREPARE` statement 属性
  -   SQL ステートメントのバッチ内でのパラメーターのバインド
  
 PHP ドライバーは、SQL Server とデータベースの ODBC ドライバーによって課される制限も継承します。 Always Encrypted と[Always Encrypted 機能の詳細](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details)[については、「ODBC ドライバーの制限事項](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)」を参照してください。  

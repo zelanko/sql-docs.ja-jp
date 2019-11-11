@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: de0ea61c93de1464ebde068ef47d85e89b8a1587
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261601"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594080"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68261601"
   
 - レポート サーバー データベースをホストするために使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスのログイン権限を自動的に更新します。 新しいアカウントは **RSExecRole**に追加されます。  
   
-     古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、SQL Server オンラインブックの「[レポート サーバー データベースの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)」を参照してください。  
+     古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、「[レポートサーバーデータベース&#40;の SSRS ネイティブ&#41;モードの管理](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)」を参照してください。  
   
      新しいサービス アカウントにデータベース権限が与えられるのは、そのサービス アカウントを最初に使用するようにレポート サーバー データベース接続を構成した場合に限られます。 ドメイン ユーザー アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用するようにレポート サーバー データベース接続を構成した場合は、サービス アカウントを更新しても接続情報には影響しません。  
   
