@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142862"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659094"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY: バックアップが、通常のバックアップの順序には影
 
 既定の動作では、バックアップの圧縮は行われません。 ただし、この既定の動作は、[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) サーバー構成オプションを設定することで変更できます。 このオプションの現在の値の表示については、「[サーバー プロパティの表示または変更](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)」をご覧ください。
 
-[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースでのバックアップの圧縮の使用については、「[解説](#general-remarks)」セクションを参照してください。
-
 COMPRESSION: バックアップの圧縮を明示的に有効にします。
 
 NO_COMPRESSION: バックアップの圧縮を明示的に無効にします。
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > 単一のデータ ファイルを含む、[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースの場合、既定の `MAXTRANSFERSIZE` は 65536 (64 KB) です。 TDE で暗号化されていないデータベースでは、ディスクへのバックアップを使用する場合は既定の `MAXTRANSFERSIZE` が 1048576 (1 MB) となり、VDI または TAPE を使用する場合は 65536 (64 KB) となります。
-> TDE で暗号化されたデータベースでのバックアップの圧縮の使用の詳細については、「[解説](#general-remarks)」セクションを参照してください。
 
 **エラー管理オプション**
 

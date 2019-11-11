@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988422"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593478"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS の暗号化キー - 暗号化されたレポート サーバー データの保存
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化された値がレポート サーバー データベースおよび構成ファイルに保存されます。 暗号化された値の大部分は資格情報です。これらの資格情報は、レポートにデータを提供する外部データ ソースへのアクセスに使用されます。 このトピックでは、暗号化される値、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で使用される暗号化機能、および理解が必要な他の種類の保存された機密データについて説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "72988422"
   
 -   レポートにデータを提供する外部データ ソースに接続するためにレポート サーバーで使用される保存された資格情報。  
   
-     これらの値は、レポートのデータ ソース情報を構成する際に定義され、暗号化された値としてレポート サーバー データベースに保存されます。 レポート サーバーは対称キーを使用して、このデータの暗号化および暗号化解除を行います。 保存された資格情報の詳細については、 [オンライン ブックの「](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) レポート データ ソースに関する資格情報と接続情報を指定する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+     これらの値は、レポートのデータ ソース情報を構成する際に定義され、暗号化された値としてレポート サーバー データベースに保存されます。 レポート サーバーは対称キーを使用して、このデータの暗号化および暗号化解除を行います。 格納されている資格情報の詳細については、「[レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
 -   レポートで使用される外部画像ファイルまたは外部データを取得するために、レポート サーバーが他のコンピューターに接続するときに使用する自動実行用ユーザー アカウント。  
   
