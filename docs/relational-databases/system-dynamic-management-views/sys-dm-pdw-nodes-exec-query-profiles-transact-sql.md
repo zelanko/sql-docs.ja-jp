@@ -1,5 +1,5 @@
 ---
-title: sys _pdw_nodes_exec_query_profiles (Transact-sql) |Microsoft Docs
+title: sys.dm_pdw_nodes_exec_query_profiles (Transact-sql) |Microsoft Docs
 description: クエリの実行中にリアルタイムのデータウェアハウスのクエリの進行状況を監視するために使用できる動的管理ビュー。
 ms.custom: ''
 ms.date: 10/14/2019
@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73145657"
 ---
-# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys _pdw_nodes_exec_query_profiles (Transact-sql)
+# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 クエリの実行中にリアルタイムのデータウェアハウスのクエリの進行状況を監視します。   
@@ -69,7 +69,7 @@ ms.locfileid: "73145657"
 |estimated_read_row_count|**bigint**|**適用対象:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 以降。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
 ## <a name="remarks"></a>備考  
-[_Exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15)でも同じ解説が適用されます。  
+[sys.dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15)でも同じ解説が適用されます。  
 
 ## <a name="permissions"></a>Permissions  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  

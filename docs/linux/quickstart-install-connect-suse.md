@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: このクイックスタートでは、SUSE Linux Enterprise Server に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: b878e76546642ee9b9792ece31029c0640eb8864
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910492"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594532"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート: SUSE Linux Enterprise Server で SQL Server をインストールし、データベースを作成する
 
@@ -23,13 +23,16 @@ ms.locfileid: "67910492"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-このクイックスタートでは、SQL Server 2017 または SQL Server 2019 プレビューを SUSE Linux Enterprise Server (SLES) v12 SP2 にインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
+このクイックスタートでは、SQL Server 2017 または SQL Server 2019 を SUSE Linux Enterprise Server (SLES) v12 SP2 にインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-このクイックスタートでは、SQL Server 2019 プレビューを SUSE Linux Enterprise Server (SLES) v12 SP2 にインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
+このクイックスタートでは、SQL Server 2019 を SUSE Linux Enterprise Server (SLES) v12 にインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
+
+> [!IMPORTANT]
+> SQL Server 2019 は、SUSE Enterprise Linux Server v12 SP2、SP3、または SP4 でサポートされています。
 
 ::: moniker-end
 
@@ -38,11 +41,23 @@ ms.locfileid: "67910492"
 
 ## <a name="prerequisites"></a>Prerequisites
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 SLES v12 SP2 コンピューターには**少なくとも 2 GB** のメモリが必要です。 ファイル システムは **XFS** または **EXT4** である必要があります。 **BTRFS** などの他のファイル システムはサポートされていません。
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+SLES v12 SP2、SP3、または SP4 のコンピューターには、**少なくとも 2 GB** のメモリが必要です。 ファイル システムは **XFS** または **EXT4** である必要があります。 **BTRFS** などの他のファイル システムはサポートされていません。
+
+::: moniker-end
 
 自分のコンピューターに SUSE Linux Enterprise Server をインストールする方法については、[https://www.suse.com/products/server](https://www.suse.com/products/server) にお進みください。 Azure で SLES 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照し、`az vm create` の呼び出しで `--image SLES` を使用します。
 
-SQL Server 2017 の CTP または RC リリースを前にインストールしている場合、この手順を実行する前に、古いリポジトリを削除する必要があります。 詳細は、[SQL Server 2017 と 2019 に Linux リポジトリを構成する](sql-server-linux-change-repo.md)方法に関するページを参照してください。
+SQL Server の CTP または RC リリースを以前インストールしている場合、この手順を行う前に、古いリポジトリを削除する必要があります。 詳細は、[SQL Server 2017 と 2019 に Linux リポジトリを構成する](sql-server-linux-change-repo.md)方法に関するページを参照してください。
 
 > [!NOTE]
 > 現時点では、Windows 10 用の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) はインストール先としてサポートされていません。
@@ -63,10 +78,10 @@ SLES 上で SQL Server を構成するには、ターミナルで次のコマン
    ```
 
    > [!TIP]
-   > SQL Server 2019 を試す場合は、代わりに **Preview (2019)** リポジトリを登録する必要があります。 SQL Server 2019 のインストールには、次のコマンドを使用します。
+   > SQL Server 2019 をインストールする場合は、代わりに SQL Server 2019 リポジトリを登録する必要があります。 SQL Server 2019 のインストールには、次のコマンドを使用します。
    >
    > ```bash
-   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    > ```
 
 2. リポジトリを最新の情報に更新します。
@@ -115,10 +130,10 @@ SLES 上で SQL Server を構成するには、ターミナルで次のコマン
 
 SLES 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
-1. Microsoft SQL Server 2019 プレビュー SLES リポジトリ構成ファイルをダウンロードします。
+1. Microsoft SQL Server 2019 SLES リポジトリ構成ファイルをダウンロードします。
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    ```
 
 2. リポジトリを最新の情報に更新します。
@@ -154,7 +169,7 @@ SLES 上で SQL Server を構成するには、ターミナルで次のコマン
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-この時点で、SQL Server 2019 プレビューは SLES マシン上で動作しており、使用する準備ができています。
+この時点で、SQL Server 2019 は SLES コンピューター上で動作しており、使用する準備ができています。
 
 ::: moniker-end
 

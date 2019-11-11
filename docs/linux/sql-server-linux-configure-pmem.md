@@ -4,23 +4,23 @@ description: この記事では、Linux で PMEM を構成する手順につい�
 author: briancarrig
 ms.author: brcarrig
 ms.reviewer: vanto
-ms.date: 11/06/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f9a5d8c6b2db65bd237f0a3a267638a8cc16b68
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923826"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531301"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux 用に永続メモリ (PMEM) を構成する方法
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、SQL Server on Linux 用に永続メモリ (PMEM) を構成する方法について説明します。 Linux での PMEM のサポートは SQL Server 2019 プレビューで導入されました。
+この記事では、SQL Server on Linux 用に永続メモリ (PMEM) を構成する方法について説明します。 Linux での PMEM のサポートは SQL Server 2019 で導入されました。
 
 ## <a name="overview"></a>概要
 

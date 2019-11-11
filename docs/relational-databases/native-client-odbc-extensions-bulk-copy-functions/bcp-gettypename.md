@@ -18,16 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707464"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782656"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   指定された BCP 型トークンの SQL 型名を返します。  
   
@@ -50,12 +49,12 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>戻り値  
  BCP 型に対応する SQL 型名を含む文字列を返します。 無効な BCP 型が指定されると、空文字列を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  BCP 型トークンは、sqlncli.h ヘッダー ファイルと sqlncli11.lib ライブラリで定義されています。  
   
  次の表では、指定できる BCP 型、それらの BCP 型が max 型かどうか、および予想される出力を示しています。  
   
-|BCP 型名|MaxType|[出力]|  
+|BCP 型名|MaxType|出力|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|接続前/接続後|**decimal**|  
 |**SQLNUMERIC**|接続前/接続後|**numeric**|  
@@ -65,7 +64,7 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|接続前/接続後|**money**|  
 |**SQLFLT8**|接続前/接続後|**float**|  
 |**SQLDATETIME**|接続前/接続後|**datetime**|  
-|**SQLBITN**|接続前/接続後|**bit-null**|  
+|**SQLBITN**|接続前/接続後|**ビット-null**|  
 |**SQLBIT**|接続前/接続後|**bit**|  
 |**SQLBIGCHAR**|いいえ|**char**|  
 |**SQLCHARACTER**|いいえ|**char**|  

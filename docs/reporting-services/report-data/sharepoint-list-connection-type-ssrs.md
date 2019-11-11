@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499982"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593954"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint リストの接続の種類 (SSRS)
 
@@ -90,7 +90,7 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
  複数のリストからフィールドを選択することはできません。 各リストのデータセットを作成し、各データセットからフィールドを選択できます。 リストに共通のフィールドが含まれている場合、一方のデータセットにバインドされている Tablix データ領域で Lookup 関数を使用し、データ領域にバインドされていない他方のデータセットから値を抽出することができます。 詳細については、「[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)」を参照してください。  
   
--   **選択されたフィールド**  選択したフィールドが表示されます。 このペインのフィールドの名前は、SharePoint ユーザーが指定した表示名になります。 クエリ デザイナーを閉じると、レポート データ ペインのデータセット フィールド コレクションにこれらの名前が表示されます。 一意の名前と表示名の関係については、「[[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)」を参照してください。  
+-   **選択されたフィールド**  選択したフィールドが表示されます。 このペインのフィールドの名前は、SharePoint ユーザーが指定した表示名になります。 クエリ デザイナーを閉じると、レポート データ ペインのデータセット フィールド コレクションにこれらの名前が表示されます。 一意の名前と表示名の関係については、「[[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **適用されたフィルター**  SharePoint リストから返されたデータがレポートに返される前に、このデータを制限します。 使用するフィールド名、演算子、および値を選択して、リストに取得されるデータを制限します。 演算子は、選択した値のデータ型によって異なります。  
   
@@ -98,7 +98,7 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
 -   **クエリ結果**  クエリの実行時に返される行のサンプルが表示されます。 SharePoint リストの値が SharePoint サイトで頻繁に変更されると、クエリ結果ペインに表示される値とレポートの値が異なる場合があります。  
   
--   **選択されたフィールド**  選択したフィールドが表示されます。 このペインのフィールドの名前は、SharePoint ユーザーが指定した表示名になります。 クエリ デザイナーを閉じると、レポート データ ペインのデータセット フィールド コレクションにこれらの名前が表示されます。 一意の名前と表示名の関係については、「[[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)」を参照してください。  
+-   **選択されたフィールド**  選択したフィールドが表示されます。 このペインのフィールドの名前は、SharePoint ユーザーが指定した表示名になります。 クエリ デザイナーを閉じると、レポート データ ペインのデータセット フィールド コレクションにこれらの名前が表示されます。 一意の名前と表示名の関係については、「[[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **適用されたフィルター**  SharePoint リストから返されたデータがレポートに返される前に、このデータを制限します。 使用するフィールド名、演算子、および値を選択して、リストに取得されるデータを制限します。 演算子は、選択した値のデータ型によって異なります。  
   
@@ -178,7 +178,7 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
  [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  クエリによって生成されるデータセット フィールド コレクションについて説明します。  
   
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312))。  
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
  各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
 
 ## <a name="see-also"></a>参照

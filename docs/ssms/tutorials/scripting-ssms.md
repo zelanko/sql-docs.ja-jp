@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263360"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988414"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でオブジェクトのスクリプトを作成する
 
@@ -209,7 +209,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 4. **[セッション]** ノードを展開します。
 
-5. 対象の拡張セッションを右クリックして、 **[Script Session As]\(セッションをスクリプト化\)**  >  **[新しいクエリ エディター ウィンドウ]** を選択します。
+5. 対象の拡張セッションを右クリックして、 **[セッションをスクリプト化]**  >  **[新規作成]**  >  **[新しいクエリ エディター ウィンドウ]** を選択します。
 
     ![[新しいクエリ エディター ウィンドウ] セッションを展開します。](media/scripting-ssms/scriptxevents.png)
 

@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepullsubscription (Transact-sql) |Microsoft Docs
+title: sp_addmergepullsubscription (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769140"
 ---
-# <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-sql)
+
+# <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   マージパブリケーションにプルサブスクリプションを追加します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
@@ -49,11 +51,11 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**,、既定値は NULL です。  
   
-`[ @subscriber_type = ] 'subscriber_type'`サブスクライバーの種類を示します。 *subscriber_type*は**nvarchar (15)** ,、**グローバル**,、**ローカル**または**匿名**にすることができます。 以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のバージョンでは、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
+`[ @subscriber_type = ] 'subscriber_type' サブスクライバーの種類を示します。 *subscriber_type* は **nvarchar (15)**、**global**、**local** または **anonymous** にすることができます。 以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のバージョンでは、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
   
 `[ @subscription_priority = ] subscription_priority`サブスクリプションの優先度です。 *subscription_priority*は**real**,、既定値は NULL です。 ローカルサブスクリプションと匿名サブスクリプションの場合、優先度は**0.0**です。 既定の競合回避モジュールでは、競合が検出された場合に優先される優先順位を使用します。 グローバルサブスクライバーの場合、サブスクリプションの優先度は、パブリッシャーの優先度である100未満である必要があります。  
   
-`[ @sync_type = ] 'sync_type'`サブスクリプションの同期の種類を示します。 *sync_type*は**nvarchar (15)** ,、既定値は**automatic**です。 **Automatic**または**none**を指定できます。 **自動**の場合、パブリッシュされたテーブルのスキーマと初期データが最初にサブスクライバーに転送されます。 存在しない場合は、パブリッシュされたテーブルのスキーマと初期データがサブスクライバーに既に存在していると見なされます。 システム テーブルとデータは常に転送されます。  
+`[ @sync_type = ] 'sync_type'`サブスクリプションの同期の種類を示します。 *sync_type* は**nvarchar (15)**、既定値は **automatic** です。 **Automatic** または **none** を指定できます。 **automatic** の場合、パブリッシュされたテーブルのスキーマと初期データが最初にサブスクライバーに転送されます。 存在しない場合は、パブリッシュされたテーブルのスキーマと初期データがサブスクライバーに既に存在していると見なされます。 システム テーブルとデータは常に転送されます。  
   
 > [!NOTE]  
 >  値**none**を指定することはお勧めしません。  
@@ -79,10 +81,10 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="see-also"></a>関連項目  
  [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription_agent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_changemergepullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

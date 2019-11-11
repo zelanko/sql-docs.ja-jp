@@ -1,6 +1,6 @@
 ---
-title: ErrorControl プロパティ (SqlService クラス) |Microsoft Docs
-ms.custom: ''
+title: ErrorControl プロパティ (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad022b2c0a4b2dda7a5de2265c67dd3608b5389
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929684"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659657"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ object.ErrorControl [= value]
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表に、設定可能な値を示します。  
+ 起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表に、使用可能な値を示します。  
   
- 無視  
+ Ignore  
  ユーザーへの通知が行われません。  
   
  標準  
  ユーザーへの通知が行われます。  
   
- 重大  
+ Severe  
  システムは最後の正しい構成で再起動されます。  
   
  重大  
@@ -57,10 +57,10 @@ object.ErrorControl [= value]
  Unknown  
  重大度が不明です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  値は、失敗が発生した場合に、起動プログラムによって行われるアクションを示しています。 すべてのエラーは、コンピューター システムによって記録されます。  
   
-## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>参照  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

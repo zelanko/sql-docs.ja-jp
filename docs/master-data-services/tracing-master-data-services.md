@@ -1,5 +1,5 @@
 ---
-title: トレース (マスター データ サービス) | Microsoft Docs
+title: 追跡
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263983"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727847"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
 
@@ -62,10 +62,10 @@ ms.locfileid: "68263983"
   
     |要素|説明|  
     |-------------|-----------------|  
-    |Time|トレースのエントリが発生した時刻。|  
+    |[時刻]|トレースのエントリが発生した時刻。|  
     |CorrelationID|要求ごとに 1 つの関連付け ID が割り当てられます。 この要求によってトリガーされるすべてのトレースは、同じ関連付け ID を共有します。<br /><br /> UI でエラーが発生すると、エラー メッセージに関連付け ID が表示されます。|  
     |操作|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
-    |Level|このトレース エントリのレベル。|  
+    |レベル|このトレース エントリのレベル。|  
     |メッセージ|トレースのメッセージ本文。|  
   
 ## <a name="external-resources"></a>外部リソース  

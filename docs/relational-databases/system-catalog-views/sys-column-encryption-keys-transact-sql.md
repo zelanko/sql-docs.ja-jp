@@ -1,7 +1,7 @@
 ---
-title: sys.column_encryption_keys (TRANSACT-SQL) |Microsoft Docs
+title: column_encryption_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: ''
@@ -17,40 +17,44 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_encryption_keys catalog view
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8fd9177ad646a8086e00f9494e7e73488aace53d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cd6b4a4cb8eeed0dd0a2a78adc2d39c6a2e895d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140095"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593728"
 ---
-# <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys (TRANSACT-SQL)
+# <a name="syscolumn_encryption_keys--transact-sql"></a>column_encryption_keys (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  作成された列の暗号化キー (CEKs) に関する情報を返す、[列の暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)ステートメントです。 各行は、CEK を表します。  
+  [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)ステートメントで作成された列暗号化キー (ceks) に関する情報を返します。 各行は CEK を表します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK の名前。|  
-|**column_encryption_key_id**|**int**|CEK の ID です。|  
+|**column_encryption_key_id**|**int**|CEK の ID。|  
 |**create_date**|**datetime**|CEK が作成された日付。|  
-|**modify_date**|**datetime**|CEK が最後に修正された日付。|  
+|**modify_date**|**datetime**|CEK が最後に変更された日付。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 必要です、**ビューの列の暗号化キー**のアクセス許可。  
+ **VIEW ANY COLUMN ENCRYPTION KEY**権限が必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Secure enclaves  での Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)  
+ [Always Encrypted  のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+ [Secure enclaves を使用して Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+
   
   

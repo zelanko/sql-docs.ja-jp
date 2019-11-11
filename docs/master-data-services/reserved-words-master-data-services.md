@@ -1,5 +1,5 @@
 ---
-title: 予約語 (マスター データ サービス) | Microsoft Docs
+title: 予約語
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c33bf34a99addae8a94fb92222eb3265cc6a52a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085692"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727915"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68085692"
   
 -   [モデル](../master-data-services/reserved-words-master-data-services.md#models)  
   
--   [[エンティティ]](../master-data-services/reserved-words-master-data-services.md#entities)  
+-   [エンティティ](../master-data-services/reserved-words-master-data-services.md#entities)  
   
 -   [明示的階層](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68085692"
   
 -   **ID**  
   
--   **Code**  
+-   **コード**  
   
 -   **EnterUserName**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68085692"
 ##  <a name="members"></a> メンバー  
  メンバーの場合、 **MDMMemberStatus**、 **MDMUnused**、または **ROOT** を **Code** 属性値として使用することはできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

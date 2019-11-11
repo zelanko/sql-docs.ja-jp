@@ -1,5 +1,5 @@
 ---
-title: 階層メンバーのアクセス許可 (マスター データ サービス) | Microsoft Docs
+title: 階層メンバーの権限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e60af25238f52e9a1f6245fc938cee1aabec0bab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945204"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729239"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限 (マスター データ サービス)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67945204"
 
   階層メンバーの権限はオプションであり、特定のメンバーに対するユーザーのアクセスを制限する場合にのみ使用します。 **[階層メンバー]** タブで権限を割り当てていなければ、ユーザーの権限は、 **[モデル]** タブで割り当てられた権限のみに基づいて決定されます。  
   
- 階層メンバーの権限は、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のユーザー インターフェイス (UI) を使用して、 **[ユーザー/グループの権限]** 機能領域の **[階層メンバー]** タブで割り当てられます。これらの権限によって、UI の **[エクスプローラー]** 機能領域でユーザーがアクセスできるメンバーが決まります。  
+ 階層メンバーの権限は、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のユーザーインターフェイス (UI) で、 **[階層メンバー]** タブの **[ユーザー/グループの権限]** 機能領域に割り当てられます。これらのアクセス許可によって、ユーザーが UI の **[エクスプローラー]** 機能領域でアクセスできるメンバーが決まります。  
   
  **[階層メンバー]** タブでは、各階層がツリー構造として表されます。 ツリー内のノードに権限を割り当てると、下位レベルで権限が明示的に割り当てられていない限り、すべての子がその権限を継承します。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "67945204"
   
 |権限|説明|  
 |----------------|-----------------|  
-|**Read**|メンバーが表示されます。<br /><br /> <br /><br /> 注:**読み取り** 権限を **ルート** に割り当てた場合、**ルート** の下のメンバーは読み取り専用になります。ただし、明示的階層およびコレクションでは、ユーザーはメンバーを **ルート** に移動したり、新しいメンバーを **ルート** に追加したりできます。|  
+|**読み取り**|メンバーが表示されます。<br /><br /> <br /><br /> 注: **読み取り** 権限を **ルート**に割り当てた場合、 **ルート** の下のメンバーは読み取り専用になります。ただし、明示的階層およびコレクションでは、ユーザーはメンバーを **ルート** に移動したり、新しいメンバーを **ルート**に追加したりできます。|  
 |**作成**|作成権限は、階層メンバー権限では使用できません。|  
 |**Update**|メンバーが表示され、ユーザーはメンバーを変更できます。 また、メンバーが属する明示的階層またはコレクションでメンバーを移動することもできます。|  
-|**削除**|メンバーが表示され、ユーザーがそれらを削除できます。|  
+|**Del**|メンバーが表示され、ユーザーがそれらを削除できます。|  
 |**Deny**|メンバーが表示されません。|  
   
- **[階層メンバー]** タブでは、権限を割り当ててもすぐには有効になりません。 権限が適用される頻度は、 **データベースの System Settings テーブルの** [メンバーのセキュリティ処理間隔の設定] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の値に応じて異なります。 メンバー権限を直ちに適用するには、「 [メンバー権限を直ちに適用する (マスター データ サービス)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)に追加したりできます。  
+ **[階層メンバー]** タブでは、権限を割り当ててもすぐには有効になりません。 権限が適用される頻度は、 **データベースの System Settings テーブルの** [メンバーのセキュリティ処理間隔の設定] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の値に応じて異なります。 メンバー権限を直ちに適用するには、「[メンバー権限を直ちに適用する方法 (マスター データ サービス)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  階層メンバーの権限は、再帰型階層、明示的なキャップを持つ派生階層、およびレベルを非表示にした階層に割り当てることはできません。  
@@ -65,7 +65,7 @@ ms.locfileid: "67945204"
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [階層メンバーの権限を割り当てる (マスター データ サービス)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   

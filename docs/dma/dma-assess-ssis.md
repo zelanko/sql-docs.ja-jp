@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14e53b3820e784916484cbe6a15ba82cd2ed5c8e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70001374"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632866"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
 
@@ -37,26 +37,31 @@ ms.locfileid: "70001374"
 
     ![評価の作成](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
-## <a name="add-sources-to-assess"></a>評価するソースの追加
+## <a name="connect-to-a-server"></a>サーバーへの接続
 
 1. 既定のオプションに従い、ソースの **[選択]** の横にある **[次へ]** をクリックします。
-
 1. SQL server インスタンス名を入力し、認証の種類を選択して、適切な接続プロパティを設定します。
-1. SSIS パッケージを含むフォルダーパスを入力してください
-1. 該当する場合は、パッケージ暗号化パスワードを入力し、 **[接続]** をクリックします。
-1. 評価するファイルシステムを選択し、 **[追加]** を選択します。
-  ![ソースの追加](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+1. OptionalSSIS パッケージが格納されているフォルダーパスを入力します。
+1. Optional該当する場合は、パッケージ暗号化パスワードを入力します。
+1. [転送元の SQL server に**接続**する] をクリックします。
+  ソース](media/dma-assess-ssis/dma-assess-ssis-addsource.png) の追加 ![
+
+## <a name="add-sources-to-assess"></a>評価するソースの追加
+
+1. 評価する SSIS パッケージのストレージの種類を選択し、 **[追加]** を選択します。
+ソース](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png) の追加 ![
 1. **[ソースの追加]** を選択して接続のフライアウトメニューを開きます (複数のフォルダーを評価する必要がある場合)。
 1. **[評価の開始]** をクリックします。
   ![評価の開始](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>結果の表示
 
-互換性の問題カテゴリには、オンプレミスの SSIS パッケージを Azure SSIS Integration Runtime に移行できない部分的にサポートされている機能やサポートされていない機能があります。 その後、これらの問題に対処するための推奨事項を提供します。
+互換性の問題カテゴリでは、オンプレミスの SSIS パッケージの Azure-SSIS Integration Runtime への移行をブロックする、部分的にサポートされている機能またはサポートされていない機能が提供 その後、これらの問題に対処するための推奨事項を提供します。
 
 ![結果の表示](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
 ## <a name="next-steps"></a>次の手順
 
-- [SQL Server Integration Services パッケージを Azure SQL Database マネージドインスタンスに移行する](https://docs.microsoft.com/en-us/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [SQL Server Integration Services パッケージを Azure SQL Database に再展開する](https://docs.microsoft.com/en-us/azure/dms/how-to-migrate-ssis-packages)
+- [オンプレミスの SSIS ワークロードを ADF の SSIS に移行する方法の概要](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
+- [SQL Server Integration Services パッケージを Azure SQL Database マネージドインスタンスに移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SQL Server Integration Services パッケージを Azure SQL Database に再展開する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

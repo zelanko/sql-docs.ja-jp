@@ -1,6 +1,6 @@
 ---
-title: サンプル:.NET Framework で WMI イベント プロバイダーを使用して |Microsoft Docs
-ms.custom: ''
+title: 'サンプル: .NET での WMI イベントプロバイダーの使用'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 727cacbbe0c69b25af7df15660b7adb64268c861
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c942954d43c40dd4461237f2692afaa65ea87c4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139228"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660587"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>サンプル:.NET Framework での WMI イベント プロバイダーの使用
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>サンプル: .NET Framework での WMI イベント プロバイダーの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   次のサンプルでは、C# でアプリケーションを作成しています。WMI イベント プロバイダーを使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定のインストールで発生したすべての DDL (データ定義言語) イベントに対応するイベント データを返します。  
   
@@ -76,7 +76,7 @@ class SQLWEPExample
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

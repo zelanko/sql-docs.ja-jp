@@ -1,5 +1,5 @@
 ---
-title: フォルダーとファイルのアクセス許可 (マスター データ サービス) | Microsoft Docs
+title: フォルダーとファイルの権限
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8504dde4c5d86de50fd110d57675df269f659ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945264"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728200"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>フォルダーとファイルの権限 (マスター データ サービス)
 
@@ -40,7 +40,7 @@ ms.locfileid: "67945264"
 |CREATOR OWNER|特別な権限|  
 |SYSTEM|特別な権限|  
 |管理者|特別な権限|  
-|Users|読み取りと実行、フォルダー内容の一覧表示、読み取り|  
+|ユーザー|読み取りと実行、フォルダー内容の一覧表示、読み取り|  
 |TrustedInstaller|フォルダー内容の一覧表示、特別な権限|  
   
 ## <a name="explicit-permissions"></a>明示的権限  
@@ -64,7 +64,7 @@ ms.locfileid: "67945264"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config ファイルのコンテンツの詳細については、「[Web 設定リファレンス (マスター データ サービス)](../master-data-services/web-configuration-reference-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../master-data-services/install-windows/install-master-data-services.md)  
   
   

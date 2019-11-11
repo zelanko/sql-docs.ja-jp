@@ -10,12 +10,12 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: af27b58b2e4dd1f5e5b743e4a905dfee8cebc497
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542191"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659419"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
@@ -80,7 +80,6 @@ SQL ステートメントのパフォーマンスを最適化するための推�
 |操作の種類|コンテンツ|例|  
 |--------------------|-------------|-------------|  
 |BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE、および TRIM_MOVE|これらの属性を持つ `<operation_cost>` 要素。 値には、ローカル操作のみが反映されます。<br /><br /> -   *cost* は、ローカル オペレーター コストで、実行する操作の推定所要時間 (ミリ秒) を示します。<br />-   *accumulative_cost* は、プランで見られるすべての操作 (並列処理の合計値を含む) の合計です (ミリ秒)。<br />-   *average_rowsize*は、操作中に取得されて渡される行の推定平均サイズ (バイト) です。<br />-   *output_rows* は、出力 (ノード) カーディナリティで、出力行の数を示します。<br /><br /> `<location>`:操作が実行されるノードまたはディストリビューション。 オプション:"Control"、"ComputeNode"、"AllComputeNodes"、"AllDistributions"、"SubsetDistributions"、"Distribution"、"SubsetNodes"。<br /><br /> `<source_statement>`:SHUFFLE_MOVE のソース データ。<br /><br /> `<destination_table>`:データの移動先となる内部の一時テーブル。<br /><br /> `<shuffle_columns>`:(SHUFFLE_MOVE 操作にのみ適用可能)。 一時テーブルのディストリビューション列として使用される 1 つまたは複数の列。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`:上記の `<operation_cost>` を参照。<br /><br /> `<DestinationCatalog>`:宛先ノード。<br /><br /> `<DestinationSchema>`:DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`:宛先テーブルの名前または "TableName"。<br /><br /> `<DestinationDatasource>`:宛先データベースの接続の名前または情報。<br /><br /> `<Username>` および `<Password>`:これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<BatchSize>`:コピー操作のバッチ サイズ。<br /><br /> `<SelectStatement>`:コピーを実行するために使用される Select ステートメント。<br /><br /> `<distribution>`:コピーが実行されるディストリビューション。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
 |MetaDataCreate_Operation|`<source_table>`:操作のソース テーブル。<br /><br /> `<destination_table>`:操作の宛先テーブル。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
 |ON|`<location>`:上記の `<location>` を参照。<br /><br /> `<sql_operation>`:ノードで実行される SQL コマンドを識別します。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
 |RemoteOnOperation|`<DestinationCatalog>`:宛先カタログ。<br /><br /> `<DestinationSchema>`:DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`:宛先テーブルの名前または "TableName"。<br /><br /> `<DestinationDatasource>`:宛先データソースの名前。<br /><br /> `<Username>` および `<Password>`:これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<CreateStatement>`:宛先データベースのテーブルの作成ステートメント。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  

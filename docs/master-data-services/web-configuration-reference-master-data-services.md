@@ -1,5 +1,5 @@
 ---
-title: Web 設定リファレンス (Master Data Services) | Microsoft Docs
+title: Web 設定リファレンス
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9d3cd20fc219a7159de0b271dafcc0e9fb2c3ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017269"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728834"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 設定リファレンス (Master Data Services)
 
@@ -58,10 +58,10 @@ ms.locfileid: "68017269"
 |アイテム|説明|  
 |----------|-----------------|  
 |**インスタンス (instance)**|子要素。 Web サービスとデータベース接続文字列の情報を指定する属性を含みます。|  
-|**virtualPath**|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスの仮想パスを指定します。 これは、IIS ApplicationHost.config ファイルの **\<site>** 要素にある **\<application>** 要素の **path** 属性に対応します。|  
-|**SiteName**|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスをホストするサイトの名前を指定します。 これは、IIS ApplicationHost.config ファイルの **\<sites>** にある **\<site>** 要素の **name** 属性に対応します。|  
-|**connectionName**|Attribute。 使用する接続の名前を指定します。 これは、Web.config の **\<connectionStrings>** 要素にある **\<add>** 要素の **name** 属性に対応します。|  
-|**serviceName**|Attribute。 Web サービスの名前を指定します。 これは、Web.config の **\<services>** 要素にある **\<service>** 要素の **name** 属性に対応します。|  
+|**virtualPath**|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスの仮想パスを指定します。 これは、IIS ApplicationHost.config ファイルのsite> **要素にある \<** application> **要素の \<path** 属性に対応します。|  
+|**SiteName**|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスをホストするサイトの名前を指定します。 これは、IIS ApplicationHost.config ファイルのsites> **にある \<** site> **要素の \<name** 属性に対応します。|  
+|**connectionName**|Attribute。 使用する接続の名前を指定します。 これは、Web.config のconnectionStrings> **要素にある \<** add> **要素の \<name** 属性に対応します。|  
+|**serviceName**|Attribute。 Web サービスの名前を指定します。 これは、Web.config のservices> **要素にある \<** service> **要素の \<name** 属性に対応します。|  
   
 ### <a name="example"></a>例  
  次の例は、Contoso サイト上の MDS1 という名前のサービスと、MDSDB によって指定された接続文字列を使用した /MDS パスを示しています。  

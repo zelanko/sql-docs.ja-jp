@@ -1,5 +1,5 @@
 ---
-title: インデックスを作成する (マスター データ サービス) | Microsoft Docs
+title: インデックスを作成する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896862"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728422"
 ---
 # <a name="create-an-index-master-data-services"></a>インデックスを作成する (マスター データ サービス)
 
@@ -23,12 +23,12 @@ ms.locfileid: "67896862"
 
   頻繁にクエリを実行する属性の一覧にカスタム インデックスを作成して、クエリのパフォーマンスを高めます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
  **インデックスを作成するには**  
   
@@ -52,25 +52,25 @@ ms.locfileid: "67896862"
   
 |列名|説明|  
 |-----------------|-----------------|  
-|状態|インデックスの状態。<br /><br /> **[保存]** をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、インデックスが更新中であることを示します。<br /><br /> インデックスの作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") 画像が表示されます。|  
-|名前|インデックス名。|  
-|[Is Unique]|インデックスが一意かどうかを示します。|  
+|[状態]|インデックスの状態。<br /><br /> **[保存]** をクリックすると、![更新中の状態の](../master-data-services/media/mds-statusicon-updating.png "I状態を更新するための con)画像を示すアイコンが表示され、インデックスが更新中であることを示します。<br /><br /> インデックスの作成中または編集中にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "Iエラー状態のための con)が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] ステータスイメージのアイコン](../master-data-services/media/mds-statusicon-ok.png "I"OK" 状態の con ")が表示されます。|  
+|[名前]|インデックス名。|  
+|[UNIQUE]|インデックスが一意かどうかを示します。|  
 |[On Attributes] (属性)|インデックスが定義されている属性の表示名を示します。|  
   
  インデックスをクリックすると、次の情報が表示されます。  
   
--   **作成者**:インデックスを作成したユーザーの名前。  
+-   **作成者**: インデックスを作成したユーザーの名前。  
   
--   **作成日時**:インデックスが作成された日時。  
+-   **作成日時**: インデックスが作成された日時。  
   
--   **更新者**:インデックスを最後に更新したユーザーの名前。  
+-   **更新者**: インデックスを最後に更新したユーザーの名前。  
   
--   **更新日時**:インデックスが最後に更新された日時。  
+-   **更新日時**: インデックスが最後に更新された日時。  
   
 ## <a name="next-steps"></a>次の手順  
  [インデックスの編集と削除 (マスター データ サービス)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)  
   
   
