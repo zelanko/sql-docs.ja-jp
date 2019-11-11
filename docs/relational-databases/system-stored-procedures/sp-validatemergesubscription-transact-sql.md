@@ -40,7 +40,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`
+**[\@publication =** ] **'***パブリケーション***'**
  パブリケーションの名前です。 *publication* は **sysname** 、既定値はありません。  
   
 `[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *subscriber*は**sysname**、既定値はありません。  
