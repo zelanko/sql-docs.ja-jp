@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ca8d93135a0034300bac4f5f5542350df25e866
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049846"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706223"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "73049846"
 
 ![分散型可用性グループとそのデータ移動](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
-AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)」を参照してください。
+AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする](configure-distributed-availability-groups.md#failover)」を参照してください。
 
 > [!NOTE]
 > SQL Server 2016 の分散型可用性グループは、FORCE_FAILOVER_ALLOW_DATA_LOSS オプションを使った可用性グループ間のフェールオーバーのみをサポートします。

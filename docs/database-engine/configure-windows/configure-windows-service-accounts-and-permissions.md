@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e6215199f10eeec216d1a701755b49b12f576a69
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893162"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660278"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ ms.locfileid: "68893162"
  サービス構成に応じて、インストール時またはアップグレード時にサービスまたはサービス SID のサービス アカウントが、サービス グループのメンバーとして追加されます。
   
 ###  <a name="Windows"></a> Windows の特権および権限  
- サービスを開始するために割り当てられているアカウントには、サービスを**開始、停止、および一時停止するための権限が必要です**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムはこれを自動的に割り当てます。  最初にリモート サーバー管理ツール (RSAT) をインストールします。 「 [Windows 7 用のリモート サーバー管理ツール](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)」を参照してください。
+ サービスを開始するために割り当てられているアカウントには、サービスを**開始、停止、および一時停止するための権限が必要です**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムはこれを自動的に割り当てます。  最初にリモート サーバー管理ツール (RSAT) をインストールします。 「 [Windows 7 用のリモート サーバー管理ツール](https://www.microsoft.com/download/details.aspx?id=7887)」を参照してください。
   
  次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが使用するサービスごとの SID またはローカル Windows グループに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが要求する権限を示します。
   
