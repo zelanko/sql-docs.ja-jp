@@ -36,7 +36,7 @@ ms.locfileid: "73633446"
 |request_min_resource_grant_percent|**decimal (5, 2)**|要求に割り当てられるリソースの最小量を指定します。 値の許容範囲は 0.75 ~ 100 です。||
 |request_max_resource_grant_percent |**decimal (5, 2)**|要求に割り当てられるリソースの最大量を指定します。||
 |query_execution_timeout_sec|**int**|クエリが取り消されるまでの実行時間の長さ (秒単位)。  実行の戻りフェーズに達した後は、クエリを取り消すことはできません。  query_execution_timeout_sec には、キューに置かれた時間は含まれません。|
-|query_wait_timeout_sec|**int**|イントラネット||
+|query_wait_timeout_sec|**int**|内部使用||
 |create_time|**datetime**|ワークロードグループが作成された時刻。 NULL 値は許可されません。||
 modify_time|**datetime**|ワークロードグループが最後に変更された時刻。 NULL 値は許可されません。||
 |&nbsp;||||
