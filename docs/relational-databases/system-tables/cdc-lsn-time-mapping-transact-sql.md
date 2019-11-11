@@ -1,5 +1,5 @@
 ---
-title: cdc.lsn_time_mapping (TRANSACT-SQL) |Microsoft Docs
+title: cdc.lsn_time_mapping (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,12 +24,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68066669"
 ---
-# <a name="cdclsntimemapping-transact-sql"></a>cdc.lsn_time_mapping (TRANSACT-SQL)
+# <a name="cdclsntimemapping-transact-sql"></a>cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   変更テーブルの行を持つトランザクションごとに 1 つの行を返します。 このテーブルは、トランザクションのコミット ログ シーケンス番号 (LSN) コミットの値と時刻の間でマップを使用します。 エントリが記録されますの変更テーブル エントリはありません。 これにより、変更アクティビティが少ないか、まったくない場合に、LSN 処理の完了をテーブルに記録できます。  
   
- システム テーブルに対して直接クエリを実行することは、できるだけ避けてください。 代わりに、実行、 [sys.fn_cdc_map_lsn_to_time &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)と[sys.fn_cdc_map_time_to_lsn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)システム関数。  
+ システム テーブルに対して直接クエリを実行することは、できるだけ避けてください。 代わりに、実行、 [sys.fn_cdc_map_lsn_to_time &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)と[sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)システム関数。  
     
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -40,6 +40,6 @@ ms.locfileid: "68066669"
   
 ## <a name="see-also"></a>関連項目  
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [cdc です。&#60;capture_instance&#62;_CT &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
+ [cdc.&#60;capture_instance&#62;_CT &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
   
   
