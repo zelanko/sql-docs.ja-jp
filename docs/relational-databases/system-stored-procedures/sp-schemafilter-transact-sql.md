@@ -39,14 +39,14 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`
- 以外の名前を指定します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *publisher* は **sysname** 、既定値はありません。  
+[ **@publisher** =] **'***パブリッシャー***'**
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft SQL Server Publisher 以外の名前です。*publisher* は **sysname** で、既定値はありません。  
   
-`[ @schema = ] 'schema'`
- スキーマの名前です。 *schema*は**sysname**既定値は NULL です。  
+[ **@schema** =] **'***スキーマ***'**
+スキーマの名前です。*schema* は **sysname** で、既定値は NULL です。
   
-`[ @operation = ] 'operation'`
- このスキーマで実行されるアクションです。 *operation*は**nvarchar (4)** 値は次のいずれかを指定できます。  
+[ **@operation** =] **'***操作***'**
+ このスキーマで実行されるアクションです。*operation* は **nvarchar (4)** で、次の値のいずれかを指定できます。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**schemaname**|**sysname**|スキーマの名前パブリケーションに適さない。|  
+|**schemaname**|**sysname**|公開に適していないスキーマの名前です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
