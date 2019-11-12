@@ -14,20 +14,19 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f950c85ec3aa8200fc160bff73eb722555f770c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908167"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780651"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>ストアド プロシージャの実行 - リターン コードと出力パラメーターの処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは、リモート ストアド プロシージャとしてのストアド プロシージャの実行をサポートします。 ストアド プロシージャをリモート ストアド プロシージャとして実行すると、ドライバーとサーバーでプロシージャ実行のパフォーマンスが最適化されます。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターンコードと出力パラメーターは、サーバーからの最後のパケットで送信されます。 [Sqlmoreresults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)から SQL_NO_DATA が返されるまで、アプリケーションでは使用できません。 ストアドプロシージャからエラーが返された場合は、SQLMoreResults を呼び出して、SQL_NO_DATA が返されるまで次の結果に進みます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターンコードと出力パラメーターはサーバーからの最後のパケットで送信され、 [Sqlmoreresults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)が SQL_NO_DATA を返すまではアプリケーションで使用できません。 ストアドプロシージャからエラーが返された場合は、SQLMoreResults を呼び出して、SQL_NO_DATA が返されるまで次の結果に進みます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -40,7 +39,7 @@ ms.locfileid: "72908167"
   
 3.  **SQLExecDirect**を使用してステートメントを実行します。  
   
-4.  結果セットの処理は、 **Sqlfetch**または**sqlfetchscroll**が最後の結果セットの処理中、または**sqlmoreresults**が SQL_NO_DATA を返すまで、SQL_NO_DATA を返します。 この時点で、リターン コードと出力パラメーターにバインドされた変数に、返されたデータ値が格納されています。  
+4.  結果セットの処理は、最後の結果セットの処理中、または**Sqlmoreresults**が SQL_NO_DATA を返すまで、 **Sqlfetch**または**sqlfetchscroll**によって SQL_NO_DATA が返されるまで実行されます。 この時点で、リターン コードと出力パラメーターにバインドされた変数に、返されたデータ値が格納されています。  
 
 ## <a name="example"></a>例  
  このサンプルでは、リターン コードおよび出力パラメーターの処理を示します。 このサンプルは IA64 ではサポートされていません。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
@@ -194,7 +193,7 @@ DROP PROCEDURE TestParm
 GO  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
 [ストアドプロシージャ&#40;の呼び出し ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

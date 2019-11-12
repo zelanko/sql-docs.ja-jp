@@ -1,5 +1,5 @@
 ---
-title: 属性を削除する (マスター データ サービス) | Microsoft Docs
+title: 属性を削除する
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab9f0266120a298ab6f033c7d2e2a4b4fe4903fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906372"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728334"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>属性を削除する (マスター データ サービス)
 
@@ -26,12 +26,12 @@ ms.locfileid: "67906372"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性とそれに関連付けられたすべての属性値を完全に削除するには、属性を削除します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-an-attribute"></a>属性を削除するには  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67906372"
   
 8.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
  [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)   
  [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)   

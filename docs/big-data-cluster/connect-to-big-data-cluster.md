@@ -1,57 +1,60 @@
 ---
-title: Master および HDFS ビッグデータクラスターへの接続
-description: の SQL Server マスターインスタンスと HDFS/Spark ゲートウェイに接続する方法について説明[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]します。
+title: マスターおよび HDFS ビッグ データ クラスターに接続する
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の SQL Server マスター インスタンスと HDFS/Spark ゲートウェイに接続する方法について説明します。'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 0717226ee785df568d4cea75511e65acb728c592
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652420"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532238"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio を使用して SQL Server ビッグ データ クラスターに接続する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Data Studio からに接続する方法について説明します。
+この記事では、Azure Data Studio から [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に接続する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - 展開済みの [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)。
 - [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
    - **kubectl**
+   - **azdata**
 
 ## <a id="master"></a> クラスターに接続する
 
 Azure Data Studio を使用してビッグ データ クラスターに接続するには、クラスター内の SQL Server マスター インスタンスへの新しい接続を作成します。 以下の手順では、Azure Data Studio を使用してマスター インスタンスに接続する方法について説明します。
 
-1. コマンド ラインから、次のコマンドを使用してマスター インスタンスの IP を調べます。
+1. SQL Server マスター インスタンス エンドポイントを探します。
 
    ```
-   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
+   azdata bdc endpoint list -e sql-server-master
    ```
 
    > [!TIP]
-   > 展開構成ファイルで名前をカスタマイズしていない限り、ビッグ データ クラスター名は既定で **mssql-cluster** になります。 詳細については、「[ビッグ データ クラスターの展開設定を構成する](deployment-custom-configuration.md#clustername)」を参照してください。
+   > エンドポイントを取得する方法の詳細については、「[エンドポイントを取得する](deployment-guidance.md#endpoints)」を参照してください。
 
 1. Azure Data Studio で、**F1 キー** >  **[新しい接続]** から新しい接続を作成します。
 
 1. **[接続の種類]** で **[Microsoft SQL Server]** を選択します。
 
-1. **[サーバー名]** に SQL Server マスター インスタンスの IP アドレスを入力します (例: **\<IP アドレス\>,31433**)。
+1. SQL Server マスター インスタンスに対して見つかったエンドポイント名を **[サーバー名]** テキスト ボックスに入力します (例: **\<IP_Address\>,31433**)。 
 
-1. SQL ログインの **[ユーザー名]** と **[パスワード]** を入力します。
+1. 認証の種類を選択します。 ビッグ データ クラスターで実行されている SQL Server マスター インスタンスの場合は、**Windows 認証**と **SQL ログイン**のみがサポートされます。 
+
+1. SQL ログインの **[ユーザー名]** と **[パスワード]** を入力します。 Windows 認証を使用している場合は、これは不要です。
 
    > [!TIP]
-   > 既定では、ユーザー名は **SA** であり、変更されていない限り、パスワードは展開時に使用される **MSSQL_SA_PASSWORD** 環境変数に対応します。
+   > 既定では、ユーザー名 **SA** は、ビッグ データ クラスターの展開の間に無効になります。 新しい sysadmin ユーザーは、展開時に使用される、**AZDATA_USERNAME** 環境変数に対応する名前と **AZDATA_PASSWORD** 環境変数に対応するパスワードを使用して、展開中にプロビジョニングされます。
 
 1. ターゲットの **[データベース名]** を、使用しているリレーショナル データベースのいずれかに変更します。
 
@@ -69,4 +72,4 @@ Azure Data Studio の 2019 年 2 月リリースでは、SQL Server マスター
 
 ## <a name="next-steps"></a>次の手順
 
-の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)、「」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。

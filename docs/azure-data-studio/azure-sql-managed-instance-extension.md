@@ -1,5 +1,5 @@
 ---
-title: Azure SQL Managed Instance 拡張機能
+title: Azure SQL Database Managed Instance 拡張機能
 titleSuffix: Azure Data Studio
 description: Azure SQL Managed Instance で Azure Data Studio を使用します
 ms.custom: seodec18
@@ -11,90 +11,91 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: d443292fb091679d3d6a18d557a5a7aac464fdec
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041141"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594013"
 ---
-# <a name="managed-instance-support-for-azure-data-studio-preview"></a>Azure Data Studio に対する Managed Instance のサポート (プレビュー)
+# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio 用の Azure SQL Database Managed Instance ダッシュボード (プレビュー)
 
-この拡張機能を使用すると、[Azure Data Studio](https://github.com/Microsoft/azuredatastudio) で [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) を使用できるようになります。 この拡張機能には次の機能があります。
+Azure SQL Database Managed Instance 拡張機能により、[Azure Data Studio](https://github.com/Microsoft/azuredatastudio) で [Azure SQL Database マネージド インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)を操作するためのダッシュボードが提供されます。 この拡張機能には次の機能があります。
 
-- Managed Instance のプロパティの表示 (仮想コア、使用済みストレージ)。
-- 過去 2 時間の CPU およびストレージの使用量の監視。
-- 構成に関する警告およびチューニングの推奨事項の表示。
-- データベース レプリカの状態の表示。
-- フィルター処理されたエラー ログの表示。
+- 仮想コアや使用済みストレージなど、マネージド インスタンスのプロパティを表示する
+- 過去 2 時間の CPU とストレージの利用状況を監視する
+- 構成に関する警告およびチューニングの推奨事項を表示する
+- データベース レプリカの状態を表示する
+- フィルター処理されたエラー ログを表示する
 
-## <a name="installations"></a>インストール
+## <a name="install"></a>インストール
 
-Managed Instance 拡張機能の公式リリースをインストールするには、[Azure Data Studio のドキュメント](https://docs.microsoft.com/sql/azure-data-studio/extensions)の手順に従います。
-[機能拡張] ウィンドウで「Managed Instance」拡張機能を検索し、そこでインストールします。  今後、拡張機能の更新があれば、自動的に通知されます。
+この拡張機能の正式なリリースをインストールすることができます。 [Azure Data Studio のドキュメント](https://docs.microsoft.com/sql/azure-data-studio/extensions)の手順に従ってください。
+**[機能拡張]** ウィンドウで「Managed Instance」を検索し、そこでインストールします。 インストールされた後は、拡張機能の更新があれば、自動的に通知されます。
 
-Managed Instance 拡張機能をインストールすると、Azure Data Studio に [`Managed Instance`] タブが表示されます。 このタブでは、Managed Instance に固有の情報を確認できます。
+拡張機能をインストールすると、Azure Data Studio に **[Managed Instance]\(マネージド インスタンス\)** タブが表示されます。 ここでは、お使いのマネージド インスタンスに固有の情報を確認できます。
 
 ## <a name="properties"></a>Properties
 
-この拡張機能を使用すると、Managed Instance の技術的特性といくつかのリソース使用量を見ることができます。
+拡張機能により、お使いのマネージド インスタンスの技術的特性といくつかのリソース使用量が表示されます。
 
-![Managed Instance のプロパティ](media/azure-sql-mi-extension/ads-mi-tab1.png)
+[ ![マネージド インスタンスのプロパティ](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
-最初のブレードでは、次の詳細を見ることができます。
+上部のウィンドウには、次の詳細が表示されます。
 
-- **基本的なプロパティ**: 使用可能な仮想コア数、メモリ、ストレージ、現在のサービス レベルとハードウェアの世代、インスタンス ログ書き込みスループットやファイル IO/スループットなどの IO 特性。
-- **ローカル SSD ストレージの使用量**: General Purpose サービス レベルでは **TEMPDB** ファイルだけがローカル環境に配置されますが、Business Critical レベルではすべてのデータベース ファイルがローカル SSD ストレージに配置されます。 このセクションでは、Managed Instance によって使用されているローカル ストレージの容量を確認できます。
-- **Azure Premium Disk Storage の使用量**: General Purpose サービス レベルのユーザー データベースとシステム データベースは、Azure Premium Storage に配置されます。 ここでは、使用したデータの量と、残っているストレージとファイルの数を確認できます。 Business Critical サービス レベルでは、このセクションには何も表示されません。
-- **リソース使用量**: 過去 2 時間以内にインスタンスで使用されたストレージと CPU の量が表示されます。 制限に達している場合は、インスタンスのサイズを増やします。
+- **[プロパティ]** 。 使用可能な仮想コア数、メモリ、ストレージなど、お使いのマネージド インスタンスに関する基本的な情報を取得します。 また、現在のサービス レベル、ハードウェアの世代、および IO 特性 (インスタンス ログ書き込みスループットやファイル I/O スループット特性など) も検出されます。
+- **[Local SSD storage]\(ローカル SSD ストレージ\)** 。 General Purpose サービス レベルでは、**TempDB** ファイルはローカル環境に格納されます。 Business Critical サービス レベルでは、"_すべての_" データベース ファイルがローカル SSD ストレージに配置されます。 このセクションでは、お使いのマネージド インスタンスによって使用されているローカル ストレージの容量を確認できます。
+- **[Azure Premium Disk Storage]** 。 General Purpose サービス レベルをお使いの場合、ユーザーとシステム両方のデータベース ファイルが、Azure Premium Storage に配置されます。 このセクションでは、使用済みデータ量、ファイルの数、および使用可能なストレージを確認できます。 Business Critical サービス レベルでは、このセクションには何も表示されません。
+- **[Resource usage]\(リソース使用状況\)** 。 お使いのマネージド インスタンスによって過去 2 時間に使用されたストレージと CPU の割合が表示されます。 これにより、限界に近づいている場合はインスタンス サイズを増やすことができます。
 
 ## <a name="recommendations"></a>推奨事項
 
-この拡張機能で提供される推奨事項とアラートは、Managed Instance の最適化に役立ちます。
+**[Managed Instance]\(マネージド インスタンス\)** タブで 2 番目のウィンドウを選択すると、マネージド インスタンスの最適化に役立つ推奨事項とアラートが表示されます。
 
-![Managed Instance の推奨事項](media/azure-sql-mi-extension/ads-mi-tab2.png)
+[ ![マネージド インスタンスの推奨事項](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
-このテーブルに示される推奨事項の一部を次に示します。
+次の推奨事項のいくつかが表示される場合があります。
 
-- ストレージ領域の制限に到達 - データベースがストレージの制限に達した場合、読み取りクエリでさえ処理できない可能性があるため、不要なデータを削除するか、インスタンスのストレージ サイズを増やす必要があります。
-- インスタンスのスループット制限に到達 - 読み込みが GP で 22 MB/秒、BC で 48 MB/秒になった場合は、バックアップを実行できるように、Managed Instance によって負荷が制限されます。
-- メモリ不足 - ページの予測保持期間が低い場合、または `PAGEIOLATCH` 待機統計が高い場合は、インスタンスでページがメモリから削除され、定常的にディスクから多くのページの読み込みが試みられていることを示している可能性があります。
-- ログ ファイルの制限 - ログが [General Purpose サービス レベルのファイル IO 制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に達している場合、パフォーマンスを向上させるにはファイル サイズを増やすことが必要な場合があります。
-- データ ファイルの制限 - データ ファイルが [General Purpose サービス レベルのファイル IO 制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に達している場合、パフォーマンスを向上させるにはファイル サイズを増やすことが必要な場合があります。 この問題によって、メモリ不足が発生し、バックアップの速度が低下している可能性があります。
-- 可用性の問題 - 仮想ログ ファイルの数が多いと、パフォーマンスに影響があり、プロセスで障害が発生した場合に、General Purpose サービス レベルでのデータベース復旧に時間がかかる可能性があります。
+- **ストレージ スペースの制限に到達**。 不要なデータを削除するか、インスタンスのストレージ サイズを増やします。 ストレージの上限に達したデータベースでは、読み取りクエリさえ処理できない場合があります。
+- **インスタンスのスループット制限に到達**。 サービス レベルの上限近くで読み取りが行われていることをユーザーに通知します: General Purpose では 22 MB/秒、Business Critical では 48 MB/秒。 バックアップを確実に実行できるように、マネージド インスタンスによって負荷が制限されることに注意してください。
+- **メモリ不足**。 ページの予測保持期間が低い場合、または `PAGEIOLATCH` 待機統計が高い場合は、インスタンスでページがメモリから削除され、定常的にディスクから多くのページの読み込みが試みられていることを示している可能性があります。
+- **ログ ファイルの制限**。 ログ ファイルが [General Purpose サービス レベルのファイル IO 制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に近づいている場合、パフォーマンスを向上させるにはログ ファイル サイズを増やすことが必要な場合があります。
+- **データ ファイルの制限**。 データ ファイルが [General Purpose サービス レベルのファイル IO 制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に近づいている場合、パフォーマンスを向上させるにはファイル サイズを増やすことが必要な場合があります。 この問題によって、メモリ不足が発生し、バックアップの速度が低下している可能性があります。
+- **可用性の問題**。 仮想ログ ファイルの数が多いと、パフォーマンスに影響することがあります。 ロセスで障害が発生した場合、そのような問題のため、General Purpose サービス レベルでのデータベース復旧に時間がかかる可能性があります。
 
-これらの推奨事項を定期的に確認し、根本原因を調査して、是正措置を講じる必要があります。 Managed Instance 拡張機能では、報告された問題の一部を軽減するために実行できるスクリプトが提供されています。
+これらの推奨事項を定期的に確認し、根本原因を調査して、問題を修正するアクションを講じます。 Azure SQL Database Managed Instance 拡張機能を使うと、報告された問題の一部を軽減するために実行できるスクリプトが提供されます。
 
 ## <a name="replicas"></a>レプリカ
 
-Managed Instance 拡張機能を使用すると、お使いのマネージド インスタンス内のデータベース レプリカの状態を確認できます。
+**[Managed Instance]\(マネージド インスタンス\)** タブの 3 番目のウィンドウには、お使いのマネージド インスタンス内のデータベース レプリカの状態が表示されます。
 
-![Managed Instance のレプリカ](media/azure-sql-mi-extension/ads-mi-tab3.png)
+[ ![マネージド インスタンスのレプリカ](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
-General Purpose サービス レベルでは、すべてのデータベースに 1 つの (プライマリ) レプリカがあります。Business Critical のインスタンスでは、すべてのデータベースに 1 つのプライマリ レプリカと 3 つのセカンダリ レプリカがあります (1 つは読み取り専用ワークロードに使用されます)。 ここでは、同期プロセスを監視し、すべてのセカンダリ レプリカがプライマリ レプリカと同期されていることを確認できます。
+General Purpose サービス レベルでは、すべてのデータベースに 1 つの (プライマリ) レプリカがあります。 Business Critical レベルのインスタンスでは、すべてのデータベースに 1 つのプライマリ レプリカと 3 つのセカンダリ レプリカがあり、そのうち 1 つは読み取り専用ワークロードに使用されます。 **[Replicas]\(レプリカ\)** ウィンドウでは、同期プロセスを監視し、すべてのセカンダリ レプリカがプライマリ レプリカと同期されていることを確認できます。
 
 ## <a name="logs"></a>ログ
 
-Managed Instance 拡張機能では、最も関連性の高い最新の SQL エラー ログ エントリが表示されます。
+**[Managed Instance]\(マネージド インスタンス\)** の 4 番目のウィンドウには、最新の関連する SQL エラー ログ エントリが表示されます。
 
-![Managed Instance のログ エントリ](media/azure-sql-mi-extension/ads-mi-tab4.png)
+[ ![マネージド インスタンスのログ エントリ](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
-Managed Instance では大量のログ エントリが出力され、そのほとんどは内部/システムの情報です。 一部のログ エントリでは、実際の論理データベース名ではなく、物理データベース名 (`GUID` の値) が示されます。
+マネージド インスタンスでによって大量のログ エントリが生成されますが、そのほとんどは内部/システムの情報です。 また、一部のログ エントリでは、実際の論理データベース名ではなく、物理データベース名 (`GUID` の値) が示されます。
 
-Managed Instance 拡張機能では、[Dimitri Furman 法](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)に基づいて不要なログ エントリが除外され、物理名ではなく実際の論理ファイル名が表示されます。
+Azure SQL Database Managed Instance 拡張機能を使うと、[Dimitri Furman 法](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)に基づいて不要なログ エントリを除外できます。 また、物理名ではなく実際の論理ファイル名が表示されます。
 
 ## <a name="reporting-problems"></a>問題の報告
 
-Managed Instance 拡張機能に関して問題が発生した場合は、[Extension GitHub プロジェクト](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues)で問題を報告してください。
-
-## <a name="maintainers"></a>保守担当者
-
-- [Jovan Popovic (MSFT)](https://github.com/jovanpop_msft) - [@jovanpop_msft](https://twitter.com/JovanPop_MSFT)
+Azure SQL Database Managed Instance 拡張機能に関して問題が発生した場合は、[Extension GitHub プロジェクト](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues)にアクセスし、問題を報告してください。
 
 ## <a name="code-of-conduct"></a>倫理規定
 
 このプロジェクトは、「[Microsoft のオープン ソースの倫理規定][conduct-code]」を採用しています。
+
 詳細については、[倫理規定の FAQ][conduct-FAQ] のページを参照してください。また、追加の質問やコメントがある場合は [opencode@microsoft.com][conduct-email] にお問い合わせください。
+
+## <a name="next-steps"></a>次の手順
+
+詳細については、[GitHub プロジェクト](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/)を参照してください。
 
 [conduct-code]: http://opensource.microsoft.com/codeofconduct/
 [conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/

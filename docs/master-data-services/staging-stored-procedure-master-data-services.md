@@ -1,5 +1,5 @@
 ---
-title: ステージング ストアド プロシージャ (マスター データ サービス) | Microsoft Docs
+title: ステージング ストアド プロシージャ
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db04bda1a2147c226fb33db12ba829350aac77a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085618"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727883"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>ステージング ストアド プロシージャ (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]からステージング処理を開始する場合、次の 3 つのストアド プロシージャのいずれかを使用します。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] からステージング処理を開始する場合、次の 3 つのストアド プロシージャのいずれかを使用します。  
   
 -   stg.udp_\<name>_Leaf  
   
@@ -37,11 +37,11 @@ ms.locfileid: "68085618"
 |パラメーター|説明|  
 |---------------|-----------------|  
 |**VersionName**<br /><br /> 必須|バージョンの名前。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コレクションの設定に応じて、このパラメーターは大文字と小文字が区別される場合とされない場合があります。|  
-|**LogFlag**<br /><br /> 必須|ステージング処理中にトランザクションをログに記録するかどうかを決定します。 設定可能な値は、次のとおりです。<br /><br /> **0**:トランザクションをログに記録しない。<br /><br /> **1**:トランザクションをログに記録する。<br /><br /> <br /><br /> 詳細については、「[トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)」を参照してください。|  
+|**LogFlag**<br /><br /> 必須|ステージング処理中にトランザクションをログに記録するかどうかを決定します。 有効な値は次のとおりです。<br /><br /> **0**: トランザクションをログに記録しない。<br /><br /> **1**: トランザクションをログに記録する。<br /><br /> <br /><br /> 詳細については、「[トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)」を参照してください。|  
 |**BatchTag**<br /><br /> Web サービス以外は必須|ステージング テーブルに指定した **BatchTag** の値。|  
 |**Batch_ID**<br /><br /> Web サービスでのみ必須|ステージング テーブルに指定した **Batch_ID** の値。|  
 |**[ユーザー名]**|省略可能なパラメーター|  
-|**[ユーザー ID]**|省略可能なパラメーター|  
+|**ユーザー ID**|省略可能なパラメーター|  
   
 ### <a name="staging-process-stored-procedure-example"></a>ステージング処理ストアド プロシージャの例  
  次の例は、ステージング ストアド プロシージャを使用してステージング処理を開始する方法を示します。  
@@ -60,7 +60,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [ステージング中に発生したエラーの表示 (マスター データ サービス)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   

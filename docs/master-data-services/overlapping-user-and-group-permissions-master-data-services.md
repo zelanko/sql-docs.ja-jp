@@ -1,5 +1,5 @@
 ---
-title: ユーザー アクセス許可とグループ アクセス許可の重複 (マスター データ サービス) | Microsoft Docs
+title: ユーザー権限とグループ権限の重複
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44c4374e2c1304f381775be5a37f42ec3c88afc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904008"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727935"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>ユーザー権限とグループ権限の重複 (Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "67904008"
   
  グループ 2 には、Product エンティティに対する **読み取り** 権限が与えられています。  
   
- 結果:ユーザーの有効な権限は、Product エンティティに対する **更新** 権限となります。  
+ 結果: ユーザーの有効な権限は、Product エンティティに対する **更新** 権限となります。  
   
 ## <a name="example-2"></a>例 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -66,7 +66,7 @@ ms.locfileid: "67904008"
   
  グループ 2 には、Product エンティティに対する **拒否** 権限が与えられています。  
   
- 結果:ユーザーの有効な権限は、Product エンティティに対する **拒否** 権限となります。  
+ 結果: ユーザーの有効な権限は、Product エンティティに対する **拒否** 権限となります。  
   
 ## <a name="example-3"></a>例 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -79,9 +79,9 @@ ms.locfileid: "67904008"
   
  グループ 2 には、階層ノードのメンバーのグループに対する **読み取り** 権限が与えられています。  
   
- 結果:ユーザーの有効な権限は、メンバーに対する **更新** 権限となります。  
+ 結果: ユーザーの有効な権限は、メンバーに対する **更新** 権限となります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [モデル権限とメンバー権限の重複 (マスター データ サービス)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

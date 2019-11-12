@@ -1,6 +1,6 @@
 ---
-title: SetValue メソッド (ServerSettingsGeneralFlag クラス) |Microsoft Docs
-ms.custom: ''
+title: SetValue メソッド (ServerSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec0a215db84b8b1d8dbd2d12e603a365f6a54023
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70d0965a127d8eeea22e6eedc448bab68d0bf312
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052670"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659744"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue メソッド (ServerSettingsGeneralFlag クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ object.SetValue(Value)
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*[値]*|フラグの値を指定するブール値|  
+|*Value*|フラグの値を指定するブール値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **uint32** 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

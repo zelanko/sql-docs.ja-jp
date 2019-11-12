@@ -1,5 +1,5 @@
 ---
-title: バージョン (マスター データ サービス) | Microsoft Docs
+title: バージョン
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fd9ed184d56cf85487d1f8833f7ec22acf60635c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017308"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727796"
 ---
 # <a name="versions-master-data-services"></a>バージョン (マスター データ サービス)
 
@@ -50,7 +50,7 @@ ms.locfileid: "68017308"
   
 1.  最初のバージョンは、モデルを作成して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに会社のマスター データを入力すると、自動的に作成されます。 ユーザーは権限に基づいて、必要に応じてこのバージョンを変更できます。  
   
-2.  モデルのバージョンをコミットする場合は、モデル管理者のみがデータを更新できるように、バージョンをロックします。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。 通知が構成されている場合、バージョンのステータスが変更されるたびに電子メール通知がモデル管理者に送信されます。 詳細については、「[電子メール通知を構成する (マスター データ サービス)](../master-data-services/configure-email-notifications-master-data-services.md)」を参照してください。  
+2.  モデルのバージョンをコミットする場合は、モデル管理者のみがデータを更新できるように、バージョンをロックします。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。 通知が構成されている場合、バージョンのステータスが変更されるたびに電子メール通知がモデル管理者に送信されます。 詳細については、「[電子メール通知を構成する (マスター データ サービス)](../master-data-services/configure-email-notifications-master-data-services.md)」を参照してください。  
   
 3.  ロックしたバージョンのデータにビジネス ルールを適用し、検証の問題がないか確認します。 必要に応じて、不足している情報を入力したり、問題の原因となったトランザクションを破棄したりできます。 ユーザーが変更できるように、バージョンのロックを解除することもできます。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68017308"
     > [!NOTE]  
     >  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] の設定によって、すべてのバージョンをコピーできるか、またはコミットされたバージョンのみをコピーできるかが決まります。 同時バージョンを作成するには、すべてのバージョンをコピーできるように [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を構成する必要があります。 この設定は、System Settings テーブルでも行うことができます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

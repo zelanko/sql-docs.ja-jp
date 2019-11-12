@@ -1,5 +1,5 @@
 ---
-title: sp_changereplicationserverpasswords (Transact-sql) |Microsoft Docs
+title: sp_changereplicationserverpasswords (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -57,10 +57,10 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 |値|説明|  
 |-----------|-----------------|  
-|**ディストリビューター**|ディストリビューターへのすべてのエージェント接続。|  
-|**パブリッシャー**|パブリッシャーへのすべてのエージェント接続。|  
-|**サブスクライバー**|サブスクライバーへのすべてのエージェント接続。|  
-|**%** 標準|レプリケーション トポロジ内のすべてのサーバーへのすべてのエージェント接続です。|  
+|**distributor**|ディストリビューターへのすべてのエージェント接続。|  
+|**publisher**|パブリッシャーへのすべてのエージェント接続。|  
+|**subscriber**|サブスクライバーへのすべてのエージェント接続。|  
+|**%** (既定値)|レプリケーション トポロジ内のすべてのサーバーへのすべてのエージェント接続です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

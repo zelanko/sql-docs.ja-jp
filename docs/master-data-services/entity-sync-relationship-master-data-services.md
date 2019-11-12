@@ -1,5 +1,5 @@
 ---
-title: エンティティの同期関係 (マスター データ サービス) | Microsoft Docs
+title: エンティティの同期関係
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f0b989693c92bbecae3221f98a2ccc413700b994
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fde11c6b106a9e559d74504b77d975d096c1f3d0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915976"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729270"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>エンティティの同期関係 [マスター データ サービス]
 
@@ -29,7 +29,7 @@ ms.locfileid: "67915976"
   
  一度同期関係が確立されると、ターゲット エンティティは同期プロセスによってのみ変更できます。 同期関係はいつでも削除して、ターゲット エンティティを編集可能にできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エンティティの同期関係の作成と実行 (マスター データ サービス)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [エンティティの同期関係の編集と削除 (マスター データ サービス)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   

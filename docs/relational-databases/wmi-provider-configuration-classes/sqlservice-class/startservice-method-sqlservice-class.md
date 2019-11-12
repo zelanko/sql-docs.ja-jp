@@ -1,6 +1,6 @@
 ---
-title: StartService メソッド (SqlService クラス) |Microsoft Docs
-ms.custom: ''
+title: StartService メソッド (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc901f2ccd68fbdee19fc7887638f7f89ff04efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67297de6badb15b493a5f17cbfe63bacc940a882
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006849"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660839"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ object.StartService()
  次のスタートアップ状態のうちの 1 つを指定する uint32 値。  
   
  0  
- 成功。 要求が受け入れられました。  
+ 正常終了しました。 要求が受け入れられました。  
   
  1  
  サポートされていません。 要求はサポートされていません。  
@@ -67,7 +67,7 @@ object.StartService()
  サービス要求タイムアウト。 サービスは適切な時間内に開始要求に応答しませんでした。  
   
  8  
- 不明なエラー。 サービスの開始時に不明なエラーが発生しました。  
+ 不明なエラーです。 サービスの開始時に不明なエラーが発生しました。  
   
  9  
  パスが見つかりません。 サービス実行可能ファイルへのディレクトリ パスが見つかりませんでした。  
@@ -117,9 +117,9 @@ object.StartService()
  24  
  サービスは既に一時停止しています。 サービスは現在システムで一時停止されています。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>参照  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

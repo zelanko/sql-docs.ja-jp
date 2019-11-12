@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplfailovermode (Transact-sql) |Microsoft Docs
+title: sp_helpreplfailovermode (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: b998a11acd71175e8868b669d9491822f60d2b33
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142846"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632755"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,33 +40,32 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
     [ , [ @failover_mode = ] 'failover_mode'OUTPUT]   
 ```  
   
-## <a name="arguments"></a>[引数]  
+## <a name="arguments"></a>引数  
 `[ @publisher = ] 'publisher'` は、このサブスクライバーの更新に参加しているパブリッシャーの名前です。 *publisher*は**sysname**で、既定値はありません。 パブリッシャーは、既に発行用に構成されている必要があります。  
   
-`[ @publisher_db = ] 'publisher_db'` は、パブリケーションデータベースの名前です。 *publisher_db*は**sysname**,、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` は、パブリケーションデータベースの名前です。 *publisher_db*は**sysname**であり、既定値はありません。  
   
 `[ @publication = ] 'publication'` は、このサブスクライバーの更新に参加しているパブリケーションの名前です。 *publication*は**sysname**,、既定値はありません。  
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` は、フェールオーバーモードの整数値を返し、は**出力**パラメーターです。 *failover_mode_id*は**tinyint**で、既定値は**0**です。 即時更新の場合は**0** 、キュー更新の場合は**1**を返します。  
   
- [ **\@failover_mode =** ] **'***failover_mode***' 出力**  
- サブスクライバーでデータ変更が行われるモードを返します。 *failover_mode*は**nvarchar (10)** で、既定値は NULL です。 は**出力**パラメーターです。  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` は、サブスクライバーでデータ変更が行われるモードを返します。 *failover_mode*は**nvarchar (10)** で、既定値は NULL です。 は**出力**パラメーターです。  
   
-|の値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**すばやい**|即時更新: サブスクライバーで行われた更新は、2フェーズコミットプロトコル (2PC) を使用してパブリッシャーに直ちに反映されます。|  
+|**immediate**|即時更新します。 サブスクライバーで更新プログラムはすぐに 2 フェーズ コミット プロトコル (2 pc) を使用してパブリッシャーに反映されます。|  
 |**queued**|キュー更新。サブスクライバーでの更新は、キューに格納されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>備考  
- **sp_helpreplfailovermode**は、失敗した場合に、フェールオーバーとしてキュー更新を使用する即時更新が有効になっているスナップショットレプリケーションまたはトランザクションレプリケーションで使用されます。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpreplfailovermode**は、フェールオーバーとしてキュー更新を使用した即時更新が有効になっているスナップショットレプリケーションまたはトランザクションレプリケーションで、障害が発生した場合に使用されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  **Sp_helpreplfailovermode**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>「  
- [sp_setreplfailovermode &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: State プロパティ (SqlService クラス) |Microsoft Docs
-ms.custom: ''
+title: State プロパティ (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06193b774484afd6e6f7f47f286498c0698ab7c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbccc720f30bd98660e48d7c82a132f76dcf1a26
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094732"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660844"
 ---
 # <a name="state-property-sqlservice-class"></a>State プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ object.State [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サービスの状態を指定する uint32 値。  
   
- 値は、次のいずれかを指定できます。  
+ 値には、次のいずれかを指定できます。  
   
  1  
- 停止中。 サービスが停止します。  
+ 停止中。 サービスは停止されています。  
   
  2  
  開始保留中。 サービスは開始を待機しています。  
@@ -54,7 +54,7 @@ object.State [= value]
  停止保留中。 サービスは停止を待機しています。  
   
  4  
- 実行中です。 サービスは実行中です。  
+ 起動. サービスは実行中です。  
   
  5  
  継続保留中。 サービスは継続を待機しています。  
@@ -65,9 +65,9 @@ object.State [= value]
  7  
  一時停止。 サービスは一時停止しています。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>参照  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

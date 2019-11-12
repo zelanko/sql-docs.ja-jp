@@ -19,16 +19,15 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 969d4b7218ae7a6b1f04ee75ad95c8ee8ba54690
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907367"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759042"
 ---
 # <a name="stored-procedures---calling"></a>ストアド プロシージャ - 呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   ストアド プロシージャは、0 個以上のパラメーターを受け取ることができます。 また、値を返すこともできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用する場合、ストアドプロシージャのパラメーターは次の方法で渡すことができます。  
   
@@ -95,9 +94,9 @@ ms.locfileid: "72907367"
   
  ODBC CALL エスケープ シーケンスを使用してプロシージャを呼び出す場合の一般的な構文は、次のとおりです。  
   
- { **[? =]** **call**_procedure_name_[ **(** [*parameter*] [ **,** [*parameter*]]... **)** ]}  
+ { **[? =]** **呼び出し**_procedure_name_[ **(** [*parameter*] [ **,** [*parameter*]]... **)** ]}  
   
- 例 :  
+ 例:  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
@@ -129,7 +128,7 @@ ms.locfileid: "72907367"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ストアド プロシージャ](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

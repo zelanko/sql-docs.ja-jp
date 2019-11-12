@@ -11,23 +11,22 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a007e0c3421a6d2892c3757a6bf423ccaed517f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c32630be13f643276ac2767953f91b541eef3b1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110154"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790092"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>ISequentialStream を使用した FILESTREAM 列からのデータの取得 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   このサンプルでは、ICommandText インターフェイス内で ISequentialStream インターフェイスを使用して、Filestream 列から単一のレコードを取得する方法を示します。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)します。  
+ Filestream 機能の詳細については、「 [Filestream &#40;Support&#41;OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  次のいずれかのサンプルを使用して、このサンプルで読み取るテーブルを作成します。  
   

@@ -1,6 +1,6 @@
 ---
-title: sp_set_database_firewall_rule (Azure SQL データベース) |Microsoft Docs
-ms.custom: ''
+title: sp_set_database_firewall_rule
+titleSuffix: Azure SQL Database
 ms.date: 08/04/2017
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -20,17 +20,18 @@ ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e5363e741c827a0fb16528a8b617e26a5b95f8a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 2a465e03c3b77b8d05437fa0cfaf3354434ce973
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025691"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843852"
 ---
-# <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL データベース)
+# <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  作成または更新のデータベース レベルのファイアウォール規則、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。 データベースのファイアウォール規則を構成することができます、**マスター**データベース、およびユーザー データベースで[!INCLUDE[ssSDS](../../includes/sssds-md.md)]します。 データベース ファイアウォール規則は、包含データベース ユーザーを使用するときに特に便利です。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]のデータベースレベルのファイアウォール規則を作成または更新します。 データベースファイアウォール規則は、 **master**データベースと、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のユーザーデータベースに対して構成できます。 データベースファイアウォールルールは、包含データベースユーザーを使用する場合に特に便利です。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,30 +44,30 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- **[@name**  =] [N]'*名前*'  
- データベース レベルのファイアウォール設定を説明し、区別するために使用される名前。 *名前*は**nvarchar (128)** で既定値はありません。 Unicode 識別子`N`は省略可能です[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]します。 
+ **[@name** =] [N] '*名前*'  
+ データベース レベルのファイアウォール設定を説明し、区別するために使用される名前。 *名前*は**nvarchar (128)** で、既定値はありません。 Unicode 識別子 `N` は [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]では省略可能です。 
   
- **[@start_ip_address**  =] '*start_ip_address*'  
- データベース レベルのファイアウォール設定の範囲の最下位の IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 最下位の IP アドレスは`0.0.0.0`します。 *start_ip_address*は**varchar (50)** で既定値はありません。  
+ **[@start_ip_address** =]'*start_ip_address*'  
+ データベースレベルのファイアウォール設定の範囲の最小の IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 使用可能な最小 IP アドレスは `0.0.0.0`です。 *start_ip_address*は**varchar (50)** で、既定値はありません。  
   
- [ **@end_ip_address** =] '*end_ip_address*'  
- データベース レベルのファイアウォール設定の範囲の最上位の IP アドレス。 IP アドレス以下への接続にこれを試みる、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]インスタンス。 最上位の IP アドレスは`255.255.255.255`します。 *end_ip_address*は**varchar (50)** で既定値はありません。  
+ [ **@end_ip_address** =]'*end_ip_address*'  
+ データベースレベルのファイアウォール設定の範囲の最上位の IP アドレス。 IP アドレスが次の値以下である場合は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスに接続しようとする可能性があります。 可能な最大 IP アドレスは `255.255.255.255`です。 *end_ip_address*は**varchar (50)** で、既定値はありません。  
   
- 次の表は、サポートされている引数を示していて、オプション[!INCLUDE[ssSDS](../../includes/sssds-md.md)]します。  
+ 次の表は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]でサポートされている引数とオプションを示しています。  
   
 > [!NOTE]  
->  Azure の接続試行が許可されますこの両方のフィールドと*start_ip_address* equals をフィールド`0.0.0.0`します。  
+>  Azure の接続試行は、このフィールドと*start_ip_address*フィールドの両方が `0.0.0.0`と等しい場合に許可されます。  
   
-## <a name="remarks"></a>コメント  
- データベースのデータベース レベルのファイアウォール設定の名前は一意である必要があります。 ストアド プロシージャに提供されるデータベース レベルのファイアウォール設定の名前がデータベース レベルのファイアウォール設定のテーブルに既に存在する場合は、開始 IP アドレスと終了 IP アドレスが更新されます。 それ以外の場合は新しいデータベース レベルのファイアウォール設定が作成されます。  
+## <a name="remarks"></a>解説  
+ データベースレベルのファイアウォール設定の名前は、一意である必要があります。 ストアド プロシージャに提供されるデータベース レベルのファイアウォール設定の名前がデータベース レベルのファイアウォール設定のテーブルに既に存在する場合は、開始 IP アドレスと終了 IP アドレスが更新されます。 それ以外の場合は、新しいデータベースレベルのファイアウォール設定が作成されます。  
   
- 開始と終了 IP アドレスと等しいデータベース レベルのファイアウォール設定を追加すると`0.0.0.0`、内のデータベースにアクセスを有効にする、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]任意の Azure リソースからのサーバー。 値を指定、*名前*パラメーターするのに役立つは、ファイアウォール設定に注意してください。  
+ 開始 IP アドレスと終了 IP アドレスが `0.0.0.0`に等しいデータベースレベルのファイアウォール設定を追加すると、任意の Azure リソースから [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバー内のデータベースにアクセスできるようになります。 *名前*パラメーターに値を指定すると、ファイアウォール設定の内容を覚えやすくなります。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する **CONTROL** 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次のコード作成、データベース レベルのファイアウォール設定と呼ばれる`Allow Azure`Azure からデータベースにアクセスできるようにします。  
+ 次のコードでは、Azure からデータベースにアクセスできるようにする `Allow Azure` というデータベースレベルのファイアウォール設定を作成します。  
   
 ```  
 -- Enable Azure connections.  
@@ -74,7 +75,7 @@ EXECUTE sp_set_database_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- 次のコード作成、データベース レベルのファイアウォール設定と呼ばれる`Example DB Setting 1`の IP アドレスのみ`0.0.0.4`します。 次に、`sp_set_database firewall_rule`に終了 IP アドレスを更新するストアド プロシージャが再度呼び出される`0.0.0.6`点で、ファイアウォールの設定。 により、IP アドレス範囲が作成されます`0.0.0.4`、 `0.0.0.5`、および`0.0.0.6`データベースにアクセスします。
+ 次のコードでは、IP アドレス `0.0.0.4`に対してのみ `Example DB Setting 1` というデータベースレベルのファイアウォール設定を作成します。 次に、`sp_set_database firewall_rule` のストアドプロシージャを再度呼び出して、そのファイアウォール設定で `0.0.0.6`に終了 IP アドレスを更新します。 これにより、`0.0.0.4`、`0.0.0.5`、および `0.0.0.6` の IP アドレスがデータベースにアクセスできるようになる範囲が作成されます。
   
 ```  
 -- Create database-level firewall setting for only IP 0.0.0.4  
@@ -85,11 +86,11 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Azure SQL Database ファイアウォール](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [方法:ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [方法: ファイアウォール設定を構成する (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [sp_set_firewall_rule &#40;Azure SQL Database&#41; ](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41; ](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
+ [database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   

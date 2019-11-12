@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278193"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988436"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,19 +119,15 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>week および weekday (datepart 引数)
 **week** (**wk**、**ww**) または **weekday** (**dw**) *datepart* の場合、`DATEPART` の戻り値は、[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) で設定された値によって変わります。
   
-任意の年の 1 月 1 日が、**week**_datepart_ の開始番号と定義されます。 例:
+任意の年の 1 月 1 日が、**week** _datepart_ の開始番号と定義されます。 例:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
 この *xxxx* は任意の年です。
   
-この表は、次の場合の **week** および **weekday** *datepart* の戻り値を示しています。
+この表は、**week** と **weekday** の *datepart* の戻り値を示しています。SET DATEFIRST 引数には、それぞれ '2007-04-21' が指定されています。 2007 年 1 月 1 日は月曜日です。 2007 年 4 月 21 日は土曜日です。 米国英語の場合、
 
-'2007-04-21 '
-
-各 SET DATEFIRST 引数の戻り値です。 2007 年 1 月 1 日は月曜日です。 2007 年 4 月 21 日は土曜日です。 米国英語の場合、
-
-SET DATEFIRST 7 -- ( Sunday )
+`SET DATEFIRST 7 -- ( Sunday )`
 
 が既定として使用されます。 DATEFIRST を設定した後、datepart テーブル値に次の推奨される SQL ステートメントを使用します。
 

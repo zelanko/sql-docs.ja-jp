@@ -1,5 +1,5 @@
 ---
-title: 承認が必要 (マスター データ サービス) | Microsoft Docs
+title: 承認が必要
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f8d15e06a9a832d28e9314f6dc0cb1c80daf3207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047761"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729758"
 ---
 # <a name="approval-required-master-data-services"></a>承認が必要 (マスター データ サービス)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68047761"
 >   
 >  ビジネス ルールによって行われた変更は、承認がバイパスされます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。  
@@ -49,7 +49,7 @@ ms.locfileid: "68047761"
   
 4.  **[編集]** をクリックし、 **[承認が必要]** を選択して **[保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [変更セット (マスター データ サービス)](../master-data-services/changesets-master-data-services.md)  
   
   

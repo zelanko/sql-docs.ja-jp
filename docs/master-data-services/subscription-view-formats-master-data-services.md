@@ -1,5 +1,5 @@
 ---
-title: サブスクリプション ビュー形式 (マスター データ サービス) | Microsoft Docs
+title: サブスクリプション ビュー形式
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ba0152d37b1a050c1e46594ab8a5820606b116c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085613"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728890"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>サブスクリプション ビュー形式 (マスター データ サービス)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68085613"
   
 ## <a name="subscription-view-formats"></a>サブスクリプション ビュー形式  
   
-|名前|説明|  
+|[名前]|説明|  
 |----------|-----------------|  
 |**リーフ メンバー**|リーフ メンバーとそのメンバーに関連付けられた属性値を含みます。|  
 |**リーフ メンバー履歴**|リーフ メンバーの履歴データと関連付けられた属性値を含みます。 表示形式は、緩やかに変化を変更するディメンション タイプ 4 スタイルです。|  
@@ -42,8 +42,8 @@ ms.locfileid: "68085613"
 |**派生親子関係 (派生階層ビュー)**|派生階層構造を親子形式で含みます。|  
 |**派生レベル (派生階層ビュー)**|派生階層構造をレベル形式で含みます。|  
   
-## <a name="see-also"></a>関連項目  
- [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [概要: データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

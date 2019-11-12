@@ -5,22 +5,22 @@ description: azdata notebook コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
-ms.translationtype: MT
+ms.openlocfilehash: 3d9b5538170e57b09a1cf8bc4360a68187595ac2
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118156"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531672"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-この記事は、 **azdata**のリファレンス記事です。 
+以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -56,22 +56,19 @@ azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-e
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 このコマンドで、一時ディレクトリが作成され、作業ディレクトリとして指定されたノートブックが実行されます。
-
->[!NOTE]
->Azdata v 15.0.1900: Python 3 notebook でのみサポートされている run コマンドを検証しました。
-
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
                     [--output-html]  
                     [--arguments -a]  
                     [--interactive -i]  
-                    [--clear -c]
+                    [--clear -c]  
+                    [--timeout -t]
 ```
 ### <a name="examples"></a>使用例
 ノートブックを実行します。
@@ -85,13 +82,16 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output-path`
 ノートブックの出力に使用するディレクトリ パス。  出力データを含むノートブックと、ノートブックによって生成されるファイルは、このディレクトリに対して相対的に生成されます。
 #### `--output-html`
-出力ノートブックを HTML 形式にさらに変換するかどうかを示す省略可能なフラグです。  2 つ目の出力ファイルを作成します。
+さらに出力ノートブックを HTML 形式に変換するかどうかを示す省略可能なフラグ。  2 つ目の出力ファイルを作成します。
 #### `--arguments -a`
-Notebook の実行に挿入する notebook 引数のオプションの一覧です。  JSON ディクショナリとしてエンコードされます。  例: ' {"name": "value", "name2": "value2"} '
+ノートブックの実行に挿入するノートブック引数のオプションの省略可能なリスト。  JSON ディクショナリとしてエンコードされます。  例: '{"name":"value", "name2":"value2"}'
 #### `--interactive -i`
 ノートブックを対話モードで実行します。
 #### `--clear -c`
-対話モードでは、セルを表示する前にコンソールをクリアします。
+対話モードでは、セルをレンダリングする前にコンソールをクリアします。
+#### `--timeout -t`
+実行が完了するまで待機する秒数。 値 -1 は、無期限に待機することを示します。
+`600`
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
@@ -106,6 +106,4 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 
 ## <a name="next-steps"></a>次の手順
 
-- 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
-
-- **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。
+`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

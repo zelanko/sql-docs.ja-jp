@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーの展開 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028107"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049833"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC ドライバーの展開
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,13 @@ ms.locfileid: "69028107"
  tar ファイルをアンパックするには、ドライバーをインストールするディレクトリに tar ファイルを移動し、次のコマンドを入力します。  
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
-  
+
+## <a name="legalities-of-driver-redistribution"></a>ドライバーの再配布の Legalities
+
+JDBC Driver のバージョン6.0、6.2、6.4、および7.0 は再頒布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
+
+JDBC Driver バージョン4.x は、古いバージョンと互換性のために残されています。 4\.x のサポートは2018より前に有効期限が切れました。
+
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

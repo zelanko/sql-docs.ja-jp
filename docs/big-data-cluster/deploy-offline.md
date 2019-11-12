@@ -5,26 +5,24 @@ description: SQL Server ビッグ データ クラスターのオフライン展
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155269"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531983"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのオフライン展開を実行する
 
-この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のオフライン展開を実行する方法について説明します。 ビッグ データ クラスターには、コンテナー イメージをプルする Docker リポジトリへのアクセス権が必要です。 オフライン インストールでは、必要なイメージがプライベート Docker リポジトリに配置されています。 そのプライベート リポジトリはその後、新しい展開のイメージ ソースとして使用されます。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のオフライン展開を実行する方法について説明します。 ビッグ データ クラスターには、コンテナー イメージをプルする Docker リポジトリへのアクセス権が必要です。 オフライン インストールでは、必要なイメージがプライベート Docker リポジトリに配置されています。 そのプライベート リポジトリはその後、新しい展開のイメージ ソースとして使用されます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-- サポートされている任意の Linux ディストリビューションの Docker エンジン 1.8 + または Docker for Mac/Windows。 詳細については「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker のインストール) を参照してください。
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+- サポートされているいずれかの Linux ディストリビューションの Docker エンジン 1.8+ または Mac/Windows 用 Docker。 詳細については、「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker をインストールする) を参照してください。
 
 ## <a name="load-images-into-a-private-repository"></a>プライベート リポジトリにイメージを読み込む
 
@@ -33,7 +31,7 @@ ms.locfileid: "70155269"
 > [!TIP]
 > 次の手順では、このプロセスについて説明します。 ただし、タスクを簡略化するために、これらのコマンドを手動で実行する代わりに、[自動スクリプト](#automated)を使用できます。
 
-1. 次のコマンドを繰り返して、ビッグ データ クラスター コンテナー イメージをプルします。 `<SOURCE_IMAGE_NAME>` をそれぞれの[イメージ名](#images)で置き換えます。 `<SOURCE_DOCKER_TAG>` **2019-RC1-ubuntu**など、ビッグデータクラスターのリリースのタグで置き換えます。  
+1. 次のコマンドを繰り返して、ビッグ データ クラスター コンテナー イメージをプルします。 `<SOURCE_IMAGE_NAME>` をそれぞれの[イメージ名](#images)で置き換えます。 `<SOURCE_DOCKER_TAG>` をビッグ データ クラスター リリースのタグ (**2019-GDR1-ubuntu-16.04** など) で置き換えます。  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -61,7 +59,7 @@ ms.locfileid: "70155269"
 
 オフライン インストールには、次のビッグ データ クラスター コンテナー イメージが必要です。
 - **mssql-app-service-proxy**
-- **mssql-コントロール-ウォッチドッグ**
+- **mssql-control-watchdog**
 - **mssql-controller**
 - **mssql-dns**
 - **mssql-hadoop**
@@ -81,7 +79,8 @@ ms.locfileid: "70155269"
 - **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
-- **mssql-サーバー-ha**
+- **mssql-ha-operator**
+- **mssql-ha-supervisor**
 - **mssql-service-proxy**
 - **mssql-ssis-app-runtime**
 
@@ -104,20 +103,22 @@ ms.locfileid: "70155269"
    **Windows:**
 
    ```PowerShell
-   python deploy-sql-big-data-aks.py
+   python push-bdc-images-to-custom-private-repo.py
    ```
 
    **Linux:**
 
    ```bash
-   sudo python deploy-sql-big-data-aks.py
+   sudo python push-bdc-images-to-custom-private-repo.py
    ```
 
 1. 画面の指示に従って、Microsoft リポジトリとご自分のプライベート リポジトリの情報を入力します。 スクリプトを完了すると、必要なすべてのイメージがプライベート リポジトリに配置されているはずです。
 
+1. [この](deployment-custom-configuration.md#docker)手順に従って、コンテナー レジストリとリポジトリを利用するように `control.json` 展開構成ファイルをカスタマイズする方法を学習します。 プライベート リポジトリへのアクセスを有効にするには、展開の前に `DOCKER_USERNAME` および `DOCKER_PASSWORD` 環境変数を設定する必要があることに注意してください。
+
 ## <a name="install-tools-offline"></a>ツールをオフラインでインストールする
 
-ビッグデータクラスターのデプロイには、 **Python**、 `azdata`、 **kubectl**など、いくつかのツールが必要です。 これらのツールをオフライン サーバーにインストールするには、次の手順に従います。
+ビッグ データ クラスターの展開には、**Python**、`azdata`、および **kubectl** など、いくつかのツールが必要です。 これらのツールをオフライン サーバーにインストールするには、次の手順に従います。
 
 ### <a id="python"></a> Python をオフラインでインストールする
 
@@ -139,13 +140,13 @@ ms.locfileid: "70155269"
 
 ### <a id="azdata"></a> azdata をオフラインでインストールする
 
-1. インターネットアクセスと[Python](https://wiki.python.org/moin/BeginnersGuide/Download)が搭載されたコンピューターで、次のコマンドを実行し`azdata`て、すべてのパッケージを現在のフォルダーにダウンロードします。
+1. インターネットにアクセスでき、[Python](https://wiki.python.org/moin/BeginnersGuide/Download) があるコンピューターで、次のコマンドを実行し、すべての `azdata` パッケージを現在のフォルダーにダウンロードします。
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. ダウンロードしたパッケージと`requirements.txt`ファイルをターゲットコンピューターにコピーします。
+1. ダウンロードされたパッケージと `requirements.txt` ファイルをターゲット コンピューターにコピーします。
 
 1. ターゲット コンピューターで、前のファイルをコピーしたフォルダーを指定して次のコマンドを実行します。
 
@@ -163,7 +164,7 @@ ms.locfileid: "70155269"
 
 ## <a name="deploy-from-private-repository"></a>プライベート リポジトリから展開する
 
-プライベート リポジトリから展開するには、[展開ガイド](deployment-guidance.md)に記載されている手順を使用しますが、プライベート Docker リポジトリ情報を指定するカスタムの展開構成ファイルを使用します。 次`azdata`のコマンドは、という名前`control.json`のカスタム展開構成ファイルの Docker 設定を変更する方法を示しています。
+プライベート リポジトリから展開するには、[展開ガイド](deployment-guidance.md)に記載されている手順を使用しますが、プライベート Docker リポジトリ情報を指定するカスタムの展開構成ファイルを使用します。 次の `azdata` コマンドは、`control.json` という名前のカスタム展開構成ファイルの Docker 設定を変更する方法を示しています。
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -171,8 +172,8 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-デプロイによって、docker のユーザー名とパスワードの入力が求められます`DOCKER_USERNAME` 。 `DOCKER_PASSWORD`また、との環境変数で指定することもできます。
+展開により、docker のユーザー名とパスワードの入力が求められます。`DOCKER_USERNAME` および `DOCKER_PASSWORD` 環境変数でこれらを指定することもできます。
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグデータクラスターの展開の詳細については、「 [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)」を参照してください。
+ビッグ データ クラスターの展開の詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md)」を参照してください。
