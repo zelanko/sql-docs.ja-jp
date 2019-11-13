@@ -53,7 +53,7 @@ ms.locfileid: "71952638"
 ##  <a name="bkmk_example_deployments_2013"></a>SharePoint 2013 配置トポロジの例  
  SQL Server のセットアップ オプション **[PowerPivot for SharePoint]** には SharePoint との依存関係がなく、 統合をサポートする SharePoint オブジェクト モデルやインターフェイスは使用されません。 そのため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、Windows Server 2008 R2 以降のバージョンを実行する任意のコンピューターにインストールできます。 Analysis Services を SharePoint ファーム内のアプリケーション サーバーにすることもできますが、強制ではありません。 手順の 1 つは、Excel Services が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を実行しているサーバーを指すように構成することです。 負荷分散およびフォールト トレランスに関しては、SharePoint モードで実行している複数の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーをインストールし、登録することをお勧めします。  
   
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sharepoint モード**では sharepoint server 2013 が必要であり、Sharepoint サービスアプリケーションアーキテクチャを利用します。  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sharepoint モード**では、sharepoint server 2013 が必要であり、Sharepoint サービスアプリケーションアーキテクチャを利用します。  
   
  次のセクションでは、一般的な配置トポロジについて説明します。  
   
@@ -65,14 +65,14 @@ ms.locfileid: "71952638"
 |||  
 |-|-|  
 |**(1)**|Excel Services アプリケーション。 このサービス アプリケーションは、SharePoint インストールの一部として作成されます。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスアプリケーション。 既定の名前は、 **"既定の PowerPivot サービス アプリケーション"** です。|  
+|**(2)**|サービスアプリケーションを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] します。 既定の名前は、 **"既定の PowerPivot サービス アプリケーション"** です。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成など) をこのトピックで確認することもできます。|  
 |**(4)**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール メディアまたは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack から、SharePoint 用 Reporting Services アドインをインストールします。|  
 |**(5)**|**spPowerPivot.msi** を実行し、データ プロバイダー、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー、およびデータ更新スケジュールをインストールします。|  
-|**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー (SharePoint モード)。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
+|**(6)**|SharePoint モードのサーバーを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] します。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
 |**(7)**|SharePoint コンテンツ データベース、構成データベース、およびサービス アプリケーション データベース。|  
   
- ![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")は[Microsoft SQL Server Connect (@no__t からフィードバックと連絡先情報を送信し](https://connect.microsoft.com/SQLServer/Feedback)ます。  
+ ![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")は Microsoft SQL Server Connect (https://connect.microsoft.com/SQLServer/Feedback)を[通じてフィードバックと連絡先情報を送信し](https://connect.microsoft.com/SQLServer/Feedback)ます。  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a>PowerPivot for SharePoint 2013 のシングルサーバー配置  
  シングル サーバー配置は、テスト目的には役立ちますが、運用環境の配置にはお勧めしません。  
@@ -84,7 +84,7 @@ ms.locfileid: "71952638"
 |||  
 |-|-|  
 |**(1)**|Excel Services アプリケーション。 このサービス アプリケーションは、SharePoint インストールの一部として作成されます。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスアプリケーション。 既定の名前は、 **"既定の PowerPivot サービス アプリケーション"** です。|  
+|**(2)**|サービスアプリケーションを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] します。 既定の名前は、 **"既定の PowerPivot サービス アプリケーション"** です。|  
 |**(3)**|SharePoint コンテンツ データベース、構成データベース、およびサービス アプリケーション データベース。|  
 |**(4)**|SharePoint モードの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
   
@@ -93,14 +93,14 @@ ms.locfileid: "71952638"
   
  [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] によって、SharePoint Server 2013 が拡張され、サーバー側のデータ更新処理、データ プロバイダー、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーが追加され、高度なデータ モデルを使用した [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックや Excel ブックの管理がサポートされるようになりました。  
   
- インストーラー パッケージは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 機能パックに付属しています。 Feature pack は [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロードセンターの microsoft [® SQL Server® 2014 PowerPivot® For microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>) からダウンロードできます。  
+ インストーラー パッケージは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 機能パックに付属しています。 Feature pack は、microsoft®2014® SQL Server [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロードセンターからダウンロードできます。また、 [microsoft® SharePoint®用の PowerPivot®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>) からダウンロードできます。  
   
  ![SSAS PowerPivot モード2サーバー配置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot モード2サーバー配置")  
   
 |||  
 |-|-|  
 |**(1)**|Excel Services アプリケーション。 このサービス アプリケーションは、SharePoint インストールの一部として作成されます。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスアプリケーション。 既定の名前は、 **"既定の PowerPivot サービス アプリケーション"** です。|  
+|**(2)**|サービスアプリケーションを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] します。 既定の名前は、 **"既定の PowerPivot サービス アプリケーション"** です。|  
 |**(3)**|**spPowerPivot.msi** を実行し、データ プロバイダー、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー、およびデータ更新スケジュールをインストールします。|  
 |**(4)**|SharePoint モードの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
 |**(5)**|SharePoint コンテンツ データベース、構成データベース、およびサービス アプリケーション データベース。|  
@@ -113,7 +113,7 @@ ms.locfileid: "71952638"
 |||  
 |-|-|  
 |**(1)**|Excel Services アプリケーション。 このサービス アプリケーションは、SharePoint インストールの一部として作成されます。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスアプリケーション。 既定の名前は、 **"既定の PowerPivot サービス アプリケーション"** です。|  
+|**(2)**|サービスアプリケーションを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] します。 既定の名前は、 **"既定の PowerPivot サービス アプリケーション"** です。|  
 |**(3)**|spPowerPivot.msi を実行し、データ プロバイダー、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー、およびデータ更新スケジュールをインストールします。|  
 |**(4)**|SharePoint モードの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
 |**(5)**|SharePoint コンテンツ データベース、構成データベース、およびサービス アプリケーション データベース。|  
@@ -130,7 +130,7 @@ ms.locfileid: "71952638"
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成など) をこのトピックで確認することもできます。|  
 |**(4)**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール メディアまたは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack から、SharePoint 用 Reporting Services アドインをインストールします。|  
 |**(5)**|SharePoint コンテンツ データベース、構成データベース、およびサービス アプリケーション データベース。|  
-|**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー (SharePoint モード)。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
+|**(6)**|SharePoint モードのサーバーを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] します。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
   
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_2server"></a>PowerPivot for SharePoint 2013 と Reporting Services 2 台のサーバー配置  
  次のような 2 台のサーバー配置では、SQL Server データベース エンジンと SharePoint モードで実行している Analysis Services サーバーを、SharePoint とは別のサーバーで実行します。 PowerPivot for SharePoint 2013 インストーラーパッケージ **(Sppowerpivot .msi)** を SharePoint サーバーで実行する必要があります。  
@@ -144,7 +144,7 @@ ms.locfileid: "71952638"
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成など) をこのトピックで確認することもできます。|  
 |**(4)**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール メディアまたは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack から、SharePoint 用 Reporting Services アドインをインストールします。|  
 |**(5)**|**spPowerPivot.msi** を実行し、データ プロバイダー、PowerPivot 構成ツール、PowerPivot ギャラリーをインストールして、データ更新をスケジュールします。|  
-|**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー (SharePoint モード)。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
+|**(6)**|SharePoint モードのサーバーを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] します。 **[データ モデルの設定]** で、このサーバーを使用するように Excel Services アプリケーションを構成します。|  
 |**(7)**|SharePoint コンテンツ データベース、構成データベース、およびサービス アプリケーション データベース。|  
   
 ##  <a name="bkmk_example_deployments_2010"></a>SharePoint 2010 配置トポロジの例  
@@ -172,9 +172,9 @@ ms.locfileid: "71952638"
   
  ![5-サーバートポロジ](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-サーバートポロジ")  
   
-## <a name="see-also"></a>「  
- [Reporting Services sharepoint モードの&#40;インストール sharepoint 2010 および sharepoint&#41;2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
- [PowerPivot for SharePoint 2013 のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
+## <a name="see-also"></a>参照  
+ [Reporting Services sharepoint モードの&#40;インストール sharepoint 2010 および sharepoint&#41; 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+ [PowerPivot for SharePoint 2013 インストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [PowerPivot for SharePoint 2010 のインストール](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

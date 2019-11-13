@@ -25,11 +25,11 @@ ms.locfileid: "71952051"
 >   
 >  -   「 [SQL Server サービスのインストールの概要](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md)」の「SQL SERVER 2012 SP1」セクション。  
   
- Analysis Services は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含む Excel ブックにサーバー側の処理を提供します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスは Analysis Services と連動して、SharePoint 統合、負荷分散、および接続管理を追加します。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を使用すると、大規模なデータ処理機能と Excel が提供するデータレンダリングサービスを組み合わせることで、Excel Services が拡張されます。  
+ Analysis Services は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含む Excel ブックにサーバー側の処理を提供します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスは Analysis Services と連動して、SharePoint 統合、負荷分散、および接続管理を追加します。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] では、大規模なデータ処理機能と Excel が提供するデータレンダリングサービスを組み合わせることで、Excel Services を拡張します。  
   
- @No__t 0 をインストールするには、@no__t のインストールメディアを使用します。  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]をインストールするには、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]のインストールメディアを使用します。  
   
- 高度な展開シナリオの手順については、「[Deployment のチェックリスト:Reporting Services、Power View、PowerPivot for SharePoint @ no__t-0 および [ 展開チェックリスト:PowerPivot サーバーを SharePoint 2010 ファーム @ no__t に追加してスケールアウトします。  
+ 高度な配置シナリオの手順については、「[配置のチェックリスト: Reporting Services、Power View、および PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)と[配置のチェックリスト: PowerPivot サーバーを SharePoint 2010 ファームに追加することによるスケールアウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [PowerPivot for SharePoint 2010 をインストールする](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "71952051"
   
  [初期構成&#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   
