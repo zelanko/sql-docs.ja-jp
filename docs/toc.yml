@@ -1759,7 +1759,7 @@
               href: relational-databases/tables/table-properties-ssms.md
             - name: 列のプロパティ
               href: relational-databases/tables/column-properties-general-page.md
-    - name: 変更の追跡
+    - name: 変更を追跡する
       href: relational-databases/track-changes/track-data-changes-sql-server.md
       items:
         - name: 変更データ キャプチャ
