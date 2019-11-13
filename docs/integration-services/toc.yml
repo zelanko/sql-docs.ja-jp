@@ -1466,7 +1466,7 @@
     - name: Oracle 接続マネージャー
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Oracle 変換元
-      ref: ../integration-services/data-flow/oracle-source.md
+      href: ../integration-services/data-flow/oracle-source.md
     - name: Oracle 変換先
       href: ../integration-services/data-flow/oracle-destination.md
     - name: データ型のサポート
