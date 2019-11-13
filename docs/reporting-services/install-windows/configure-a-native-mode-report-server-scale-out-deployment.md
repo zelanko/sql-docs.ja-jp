@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500580"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593862"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成
 
@@ -93,9 +93,9 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動します。  
   
-3.  レポート サーバー Web サービスの URL、Web ポータルの URL、およびレポート サーバー データベースを構成します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[レポート サーバーの構成 &#40;Reporting Services ネイティブ モード&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)」を参照してください。  
+3.  レポート サーバー Web サービスの URL、Web ポータルの URL、およびレポート サーバー データベースを構成します。 詳細については、「[レポート サーバーの構成 &#40;Reporting Services ネイティブ モード&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)」を参照してください。
   
-4.  レポート サーバーが稼働することを確認します。 詳細については、 [オンライン ブックの「](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services のインストール状態の検証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+4.  レポート サーバーが稼働することを確認します。 詳細については、「 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」をご覧ください。  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>2 番目のレポート サーバー インスタンスをインストールして構成するには  
   
@@ -131,7 +131,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  **[スケールアウト配置]** をクリックして、[スケールアウト配置] ページを開きます。 レポート サーバー データベースに接続されている各レポート サーバーに対応する 2 つのエントリが表示されます。 最初のレポート サーバー インスタンスは既に参加済みで、 2 番目のレポート サーバー インスタンスは "参加を待っています" になっているはずです。 このようなエントリが表示されない場合は、レポート サーバー データベースを使用するように構成および初期化されている最初のレポート サーバーに接続していることを確認してください。  
   
-     ![[スケール アウト配置] ページの部分的なスクリーン ショット](../../reporting-services/install-windows/media/scaloutscreen.gif "[スケール アウト配置] ページの部分的なスクリーン ショット")  
+     ![[スケールアウト配置] ページの部分的なスクリーンショット](../../reporting-services/install-windows/media/scaloutscreen.gif "[スケールアウト配置] ページの部分的なスクリーンショット")  
   
 3.  [スケールアウト配置] ページで、配置への参加を待機しているレポート サーバー インスタンスを選択し、 **[サーバーの追加]** をクリックします。  
   
@@ -146,8 +146,8 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>次の手順
 
-[サービス アカウントを構成](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-[URL の構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[URL  を構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+[サービスアカウントを構成](configure-the-report-server-service-account-ssrs-configuration-manager.md)する  
 [ネイティブ モードのレポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [レポート サーバーの URL の構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
