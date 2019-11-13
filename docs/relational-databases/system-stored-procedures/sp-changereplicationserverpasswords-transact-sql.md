@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68762253"
 ---
-# <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
+# <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   レプリケーショントポロジ内のサーバー [!INCLUDE[msCoName](../../includes/msconame-md.md)]に接続する[!INCLUDE[msCoName](../../includes/msconame-md.md)]ときに、レプリケーションエージェントによって使用される Windows アカウントまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインのために保存されたパスワードを変更します。 通常は、サーバーで実行中のエージェントがすべて同じログインまたはアカウントを使用している場合でも、個々のエージェントごとにパスワードを変更する必要があります。 このストアド プロシージャにより、サーバーで実行中のすべてのレプリケーション エージェントが使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows アカウントのすべてのインスタンスに対するパスワードを変更することができます。 このストアドプロシージャは、master データベースのレプリケーショントポロジ内の任意のサーバーで実行されます。  
@@ -60,7 +60,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 |**distributor**|ディストリビューターへのすべてのエージェント接続。|  
 |**publisher**|パブリッシャーへのすべてのエージェント接続。|  
 |**subscriber**|サブスクライバーへのすべてのエージェント接続。|  
-|**%** (既定値)|レプリケーション トポロジ内のすべてのサーバーへのすべてのエージェント接続です。|  
+|**%** 標準|レプリケーション トポロジ内のすべてのサーバーへのすべてのエージェント接続です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
