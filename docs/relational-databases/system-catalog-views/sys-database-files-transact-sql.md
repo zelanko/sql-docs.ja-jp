@@ -20,24 +20,24 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c314c00931e24049551e4a630c56001b14792ece
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313730"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983183"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベース自体に保存されているデータベースのファイルごとに 1 行のデータを格納します。 これはデータベース単位のビューです。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|データベース内のファイルの ID。|  
 |**file_guid**|**uniqueidentifier**|ファイルの GUID。<br /><br /> NULL = データベースは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされました (SQL Server 2005 以前では有効)。|  
-|**type**|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードまたは作成されたフルテキストカタログのファイルが含まれます)<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
-|**type_desc**|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードまたは作成されたフルテキストカタログのファイルが含まれます)。<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。)|  
+|**型**|**tinyint**|ファイルの種類です。<br/><br /> 0 = 行<br /><br/> 1 = ログ<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト|  
+|**type_desc**|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|値には0または0より大きい値を指定できます。 値0はデータベースログファイルを表し、0より大きい値はこのデータファイルが格納されているファイルグループの ID を表します。|  
 |**name**|**sysname**|データベース内のファイルの論理名。|  
 |**physical_name**|**nvarchar(260)**|オペレーティングシステムのファイル名。 データベースが AlwaysOn の[読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)によってホストされている場合、 **physical_name**は、プライマリレプリカデータベースのファイルの場所を示します。 読み取り可能なセカンダリデータベースの正しいファイルの場所については、 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)をクエリします。|  
@@ -50,7 +50,7 @@ ms.locfileid: "72313730"
 |**is_read_only**|**bit**|1 = ファイルは読み取り専用に設定されています。<br /><br /> 0 = ファイルは読み取り/書き込み用としてマークされています。|  
 |**is_sparse**|**bit**|1 = ファイルはスパース ファイルです。<br /><br /> 0 = ファイルはスパース ファイルではありません。<br /><br /> 詳細については、「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」を参照してください。|  
 |**is_percent_growth**|**bit**|1 = ファイルの拡張はパーセンテージで表されます。<br /><br /> 0 = ページ単位の絶対拡張サイズ。|  
-|**is_name_reserved**|**bit**|1 = 削除されたファイル名 (name または physical_name) は、次のログバックアップの後にのみ再利用できます。 ファイルがデータベースから削除されると、ファイルの論理名は次回のログ バックアップまで予約された状態になります。 この列は完全復旧モデルと一括ログ復旧モデルにのみ関係します。|  
+|**is_name_reserved**|**bit**|1 = 削除されたファイル名 (名前または physical_name) は、次のログバックアップの後でのみ再利用できます。 ファイルがデータベースから削除されると、ファイルの論理名は次回のログ バックアップまで予約された状態になります。 この列は完全復旧モデルと一括ログ復旧モデルにのみ関係します。|  
 |**create_lsn**|**numeric(25,0)**|ファイルが作成されたログ シーケンス番号 (LSN) です。|  
 |**drop_lsn**|**numeric(25,0)**|ファイルが削除された LSN。<br /><br /> 0 = ファイル名は再利用できません。|  
 |**read_only_lsn**|**numeric(25,0)**|ファイルを含むファイルグループが読み取り/書き込みから読み取り専用 (最新の変更) に変更された LSN。|  
@@ -65,7 +65,7 @@ ms.locfileid: "72313730"
 |**backup_lsn**|**numeric(25,0)**|ファイルの最新のデータまたは差分バックアップの LSN。|  
   
 > [!NOTE]  
->  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、@no__t 0 は、トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連するロックを延期します。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージオブジェクトを削除または切り捨てた直後に database_files によって返された値は、実際に使用可能なディスク領域を反映していない可能性があります。  
+>  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は、トランザクションがコミットされるまで、実際のページ割り当て解除とそれに関連付けられているロックを延期します。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージオブジェクトを削除または切り捨てた直後に、sys. database_files によって返された値は、実際に使用可能なディスク領域を反映していない可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
@@ -79,9 +79,9 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-@No__t-0 を使用する場合の詳細については、SQL Customer アドバイザリチームブログの「 [Azure SQL Database V12 でのデータベースサイズの決定](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/)」を参照してください。
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]を使用する場合の詳細については、SQL カスタマーアドバイザリチームブログの「 [Azure SQL Database V12 でのデータベースサイズの決定](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/)」を参照してください。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [ファイルの状態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

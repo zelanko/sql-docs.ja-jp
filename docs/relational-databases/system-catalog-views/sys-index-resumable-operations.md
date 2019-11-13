@@ -1,7 +1,7 @@
 ---
 title: index_resumable_operations (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,26 +19,26 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227194"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980301"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>index_resumable_operations (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**index_resumable_operations**は、再開可能なインデックス再構築の現在の実行状態を監視および確認するシステムビューです。  
-**適用対象**:SQL Server 2017 と Azure SQL Database
+**index_resumable_operations**は、再開可能なインデックスの再構築または作成のために現在の実行状態を監視して確認するシステムビューです。  
+**適用対象**: SQL Server (2017 以降)、および Azure SQL Database
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このインデックスが所属するオブジェクトの ID (null 値は許容されません)。|  
 |**index_id**|**int**|インデックスの ID (null 値は許容されません)。 **index_id**は、オブジェクト内でのみ一意です。|
-|**name**|**sysname**|インデックスの名前です。 **name**は、オブジェクト内でのみ一意です。|  
+|**name**|**sysname**|インデックスの名前。 **name**は、オブジェクト内でのみ一意です。|  
 |**sql_text**|**nvarchar(max)**|DDL T-sql ステートメントのテキスト|
-|**last_max_dop**|**smallint**|最後に使用された MAX_DOP (既定値 = 0)|
+|**last_max_dop**|**smallint**|最後に使用された MAX_DOP (既定 = 0)|
 |**partition_number**|**int**|所有しているインデックスまたはヒープ内のパーティション番号。 パーティション分割されていないテーブルとインデックスの場合、またはすべてのパーティションが再構築される場合は、この列の値が NULL になります。|
 |**state**|**tinyint**|再開可能なインデックスの動作状態:<br /><br />0 = 実行中<br /><br />1 = 一時停止|
 |**state_desc**|**nvarchar(60)**|再開可能なインデックスの動作状態の説明 (実行中または一時停止)|  
@@ -50,17 +50,17 @@ ms.locfileid: "71227194"
 
 ## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
 
 ## <a name="example"></a>例
 
- 一時停止状態にある再開可能なインデックス再構築操作をすべて一覧表示します。
+ 一時停止状態のすべての再開可能なインデックス作成または再構築操作を一覧表示します。
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
