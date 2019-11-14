@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653528"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531229"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>SQL Server 2019 の言語拡張 (Java) を Linux 上にインストールする
 
@@ -29,9 +29,11 @@ Java 拡張機能のパッケージは、SQL Server Linux ソース リポジト
 
 また、言語拡張は Linux コンテナー上でもサポートされます。 言語拡張には、ビルド済みのコンテナーは付属していませんが、[GitHub 上で入手できるサンプル テンプレート](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)を使用して、SQL Server コンテナーから作成できます。
 
-## <a name="uninstall-previous-ctp-version"></a>CTP の以前のバージョンをアンインストールする
+言語拡張と [Machine Learning Services](../advanced-analytics/index.yml) は、既定では、SQL Server ビッグ データ クラスターにインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を行う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 
-パッケージ一覧は、最新のいくつかの CTP リリースによって変更されており、パッケージ数は減少しています。 RC 1 をインストールする前に、以前のすべてのパッケージを削除するために、CTP バージョンをアンインストールすることをお勧めします。 複数のバージョンの並列インストールはサポートされていません。
+## <a name="uninstall-preview-version"></a>プレビュー バージョンをアンインストールする
+
+プレビュー リリース (Community Technical Preview (CTP) またはリリース候補 (RC)) をインストールしている場合は、SQL Server 2019 をインストールする前に、このバージョンをアンインストールして以前のすべてのパッケージを削除することをお勧めします。 複数のバージョンのサイド バイ サイド インストールはサポートされていません。また、パッケージ一覧は、最新のいくつかのプレビュー (CTP/RC) リリースで変更されています。
 
 ### <a name="1-confirm-package-installation"></a>1.パッケージのインストールを確認する
 
@@ -41,7 +43,7 @@ Java 拡張機能のパッケージは、SQL Server Linux ソース リポジト
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-packages"></a>2.以前の CTP パッケージをアンインストールする
+### <a name="2-uninstall-previous-ctprc-packages"></a>2.以前の CTP/RC パッケージをアンインストールする
 
 最下位のパッケージ レベルでアンインストールを行います。 より下位のパッケージに依存しているアップストリーム パッケージがすべて、自動的にアンインストールされます。
 
@@ -55,7 +57,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-install-release-candidate-1-rc-1"></a>3.リリース候補 1 (RC 1) をインストールする
+### <a name="3-install-sql-server-2019"></a>3.SQL Server 2019 をインストールする
 
 この記事の手順を使用して、お使いのオペレーティング システムに最上位のパッケージ レベルでインストールを行います。
 
@@ -286,12 +288,9 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-the-rc-1-release"></a>RC 1 リリースでの制限事項
-
-Linux 上での言語拡張と Java 拡張機能は、今も開発が進められています。 プレビュー バージョンでは、次の機能がまだ有効になっていません。
+## <a name="limitations"></a>制限事項
 
 + 現時点では、暗黙の認証は Linux 上では使用できません。つまり、データやその他のリソースにアクセスするために、実行中の Java からサーバーへ接続することはできません。
-
 
 ### <a name="resource-governance"></a>リソース管理
 

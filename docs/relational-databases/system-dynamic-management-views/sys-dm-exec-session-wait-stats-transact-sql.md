@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_session_wait_stats (TRANSACT-SQL) |Microsoft Docs
+title: dm_exec_session_wait_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -16,39 +16,39 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f04f959a55e183185796360476e7dc59a6889937
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fc51bec78cf01522e6731648bdb7870ea7d9fb0
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936918"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982606"
 ---
-# <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (TRANSACT-SQL)
+# <a name="sysdm_exec_session_wait_stats-transact-sql"></a>dm_exec_session_wait_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  セッションごとに実行されたスレッドにより検出されたすべての待機に関する情報を返します。 このビューを使用すると、SQL Serverセッション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパフォーマンスの問題や特定のクエリやバッチを診断することができます。  このビューは [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) に集計されたものと同じ情報を返しますが、 **session_id** 番号もあわせて提供します。  
+  各セッションで実行されたスレッドによって検出されたすべての待機に関する情報を返します。 このビューを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セッションおよび特定のクエリとバッチに関するパフォーマンスの問題を診断できます。  このビューでは、 [ &#40;&#41; transact-sql dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)に対して集計されたのと同じ情報が返されますが、 **session_id**番号も提供されます。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|session_id|**smallint**|セッションの id です。|  
+|session_id|**smallint**|セッションの id。|  
 |wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
-|waiting_tasks_count|**bigint**|この待機の種類における待機の数。 このカウンターは、待機が開始するたび増加します。|  
-|wait_time_ms|**bigint**|この待機の種類 (ミリ秒単位) の合計待機時間。 この時間には signal_wait_time_ms が含まれます。|  
-|max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
-|signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
+|waiting_tasks_count|**bigint**|この待機の種類での待機の数。 このカウンターは、待機が開始されるたびにインクリメントされます。|  
+|wait_time_ms|**bigint**|この待機の種類の合計待機時間 (ミリ秒単位)。 この時間には signal_wait_time_ms が含まれます。|  
+|max_wait_time_ms|**bigint**|この待機の種類の最大待機時間。|  
+|signal_wait_time_ms|**bigint**|待機中のスレッドがシグナル状態になってから実行を開始した時刻の差。|  
   
-## <a name="remarks"></a>コメント  
- この DMV は、セッションが開かれると、または、セッションがリセットされたときにセッションの情報をリセット (場合接続プール)、  
+## <a name="remarks"></a>Remarks  
+ この DMV は、セッションが開かれたとき、またはセッションがリセットされたとき (接続プールがある場合) に、セッションの情報をリセットします。  
   
- 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)します。  
+ 待機の種類の詳細については、「 [sys. &#40;dm_os_wait_stats&#41;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- ある場合、ユーザーは**VIEW SERVER STATE**サーバーに対する権限を実行中のすべてのセッションを表示のインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。  
+ ユーザーがサーバーに対する**VIEW SERVER STATE**権限を持っている場合、ユーザーには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには現在のセッションのみが表示されます。  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [オペレーティングシステム関連の動的管理ビュー &#40;の SQL Server transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
  

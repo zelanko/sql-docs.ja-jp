@@ -23,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828051"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637821"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -110,7 +110,7 @@ ms.locfileid: "62828051"
   
 -   データを並べ替える並べ替えキー列を指定します。  
   
- 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
+ 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。  
   
  データ フロー内でデータを並べ替える必要がある場合は、並べ替え処理の回数を可能な限り少なくしたデータ フローをデザインすることで、パフォーマンスを向上させることができます。 たとえば、データ フローでマルチキャスト変換を使用してデータセットをコピーするとします。 この場合、変換後の複数の出力に対して並べ替えを行うのではなく、マルチキャスト変換の実行前に一度だけデータセットの並べ替えを行います。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "62828051"
  このセクションの推奨事項に従うと、集計変換、あいまい参照変換、あいまいグループ化変換、参照変換、マージ結合変換、および緩やかに変化するディメンション変換のパフォーマンスが向上します。  
   
 #### <a name="aggregate-transformation"></a>集計変換  
- 集計変換には、`Keys`、`KeysScale`、`CountDistinctKeys`、および `CountDistinctScale` プロパティがあります。 これらのプロパティを使用すると、変換時にキャッシュされるデータに必要な量のメモリが事前に割り当てられるようになるため、パフォーマンスが向上します。 真数または概数値の結果として予想されるグループ数がわかっている場合、 **Group by**操作、設定、`Keys`と`KeysScale`プロパティ、それぞれします。 結果として予想される個別の値の真数または概数値の数がわかっている場合、**個別のカウント**操作、設定、`CountDistinctKeys`と`CountDistinctScale`プロパティ、それぞれします。  
+ 集計変換には、`Keys`、`KeysScale`、`CountDistinctKeys`、および `CountDistinctScale` プロパティがあります。 これらのプロパティを使用すると、変換時にキャッシュされるデータに必要な量のメモリが事前に割り当てられるようになるため、パフォーマンスが向上します。 **グループ化**操作の結果として予想されるグループの正確な数または概数がわかっている場合は、`Keys` プロパティと `KeysScale` プロパティをそれぞれ設定します。 **個別のカウント**操作の結果として予想される個別の値の正確な数または概数がわかっている場合は、`CountDistinctKeys` プロパティと `CountDistinctScale` プロパティをそれぞれ設定します。  
   
  データ フロー内に複数の集計を作成する必要がある場合は、複数の変換を作成する代わりに、1 つの集計変換を使用した複数の集計を作成することを検討してください。 この方法は、集計が別の集計のサブセットである場合にパフォーマンスを向上させます。変換により内部ストレージを最適化でき、入力データのスキャンを一度だけ行えば済むためです。 たとえば、集計で GROUP BY 句と AVG 集計を使用する場合は、それらを 1 つの変換に結合することでパフォーマンスを向上させることができます。 ただし、1 つの集計変換内で複数の集計を実行すると集計操作がシリアル化されるので、複数の集計を個別に計算する必要がある場合は、パフォーマンスが向上しない可能性があります。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828051"
 #### <a name="lookup-transformation"></a>参照変換  
  必要な列のみを参照する SELECT ステートメントを入力することによって、メモリ内の参照データのサイズを最小限に抑えます。 この方法は、テーブルまたはビュー全体を選択して大量の不要なデータを返す場合に比べてパフォーマンスに優れています。  
   
-#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+#### <a name="merge-join-transformation"></a>マージ結合変換  
  マイクロソフトが行った変更により、マージ結合変換によってメモリが過度に消費されるリスクが軽減したため、`MaxBuffersPerInput` プロパティの値を構成する必要はなくなりました。 この問題は、マージ結合の複数の入力からデータが不均一なレートで生成される場合に発生することがありました。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換  
@@ -143,7 +143,7 @@ ms.locfileid: "62828051"
   
  通常、緩やかに変化するディメンション変換の中で最も低速なコンポーネントは、一度に 1 行に対して UPDATE を実行する OLE DB コマンド変換です。 したがって、緩やかに変化するディメンション変換のパフォーマンスを向上させる最も効果的な方法は、OLE DB コマンド変換を置き換えることです。 この変換は、更新するすべての行をステージング テーブルに保存する変換先コンポーネントに置き換えることができます。 その後、同時にすべての行に対して単一セット ベースの Transact-SQL UPDATE を実行する SQL 実行タスクを追加できます。  
   
- 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「[Project REAL: Business Intelligence ETL Design Practices (プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法)](https://go.microsoft.com/fwlink/?LinkId=96602)」の「Unique dimension scenario, (固有のディメンション シナリオ)」をご覧ください。  
+ 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「 [プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](https://www.microsoft.com/download/details.aspx?id=14582)」の「特有のディメンション シナリオ」を参照してください。  
   
 ### <a name="destinations"></a>変換先  
  変換先のパフォーマンスを向上させるには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先の使用と、変換先のパフォーマンスのテストを検討してください。  
@@ -159,16 +159,16 @@ ms.locfileid: "62828051"
   
  **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。 進行状況レポートを無効にすると、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で複雑なパッケージを実行する際のパフォーマンスを向上させることができます。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 -   [マージ変換およびマージ結合変換用にデータを並べ替える](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
  **記事とブログ投稿**  
   
--   technet.microsoft.com の技術記事、「[SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」  
+-   technet.microsoft.com の技術記事、「 [SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」。  
   
--   technet.microsoft.com の技術記事、「[Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」  
+-   technet.microsoft.com の技術記事、「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」。  
   
 -   sqlcat.com の技術資料「 [同期変換を複数タスクに分割してパイプラインのスループットを向上](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)」  
   

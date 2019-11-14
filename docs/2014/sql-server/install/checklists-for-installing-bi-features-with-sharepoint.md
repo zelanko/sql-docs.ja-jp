@@ -21,12 +21,12 @@ ms.locfileid: "71952614"
   ここでは、SQL Server BI 機能をさまざまな組み合わせで、またはスケールアウト トポロジでインストールする場合のチェック リストを示します。 セットアップ プログラムを実行して BI 機能をインストールする方法が既にわかっている場合は、推奨されるインストールの順序を確認し、機能統合シナリオの実現に追加の構成変更が必要かどうかを判断するためにチェックリストを使用するのが次のステップになります。  
   
 ## <a name="checklists-in-this-section"></a>このセクションのチェック リスト  
- @no__t 0Deployment のチェックリスト:Reporting Services、Power View、PowerPivot for SharePoint @ no__t-0  
+ [展開チェックリスト: Reporting Services、Power View、および PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)  
   
- @no__t 0Deployment のチェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト @ no__t-0  
+ [配置のチェックリスト: SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
- @no__t 0Deployment のチェックリスト:PowerPivot for SharePoint 2010 のマルチサーバーインストール @ no__t-0  
+ [展開チェックリスト: PowerPivot for SharePoint 2010 のマルチサーバーインストール](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- @no__t 0Deployment のチェックリスト:既存の SharePoint ファームに Reporting Services をインストールする @ no__t-0  
+ [配置のチェック リスト: 既存の SharePoint ファームへの Reporting Services のインストール](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

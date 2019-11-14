@@ -20,7 +20,7 @@ ms.locfileid: "71952258"
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイド
   このトピックでは、使用しているソフトウェアの各バージョンやエディションで利用可能な機能の概要を説明します。 また、特定の SQL Server 機能を使用するために必要な SharePoint 2010 インストールについても説明します。 SharePoint 2013 に関連する情報については、「 [sharepoint の SQL SERVER BI 機能の配置トポロジ](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)」を参照してください。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [SharePoint 2010 の一般的な要件](#bkmk_generalsharepoint)  
   
@@ -38,15 +38,15 @@ ms.locfileid: "71952258"
   
 -   Reporting Services には、SharePoint 製品用のアドインが含まれています。 このアドインとレポート サーバーに対してサポートされる構成については、ここに示す情報よりも詳細な情報が提供されています。 詳細については、「[サポートされている SharePoint と Reporting Services Server &#40;およびアドイン&#41;SQL Server 2014](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)」を参照してください。  
   
--   SharePoint 開発者ツールのみ SharePoint スタンドアロン構成をサポートします。  詳細については、SharePoint のドキュメントを参照してください。[SharePoint ソリューションを開発するための要件](https://msdn.microsoft.com/library/ee231582.aspx)。  
+-   SharePoint 開発者ツールのみ SharePoint スタンドアロン構成をサポートします。  詳細については、SharePoint のドキュメント「 [Sharepoint ソリューションを開発するための要件](https://msdn.microsoft.com/library/ee231582.aspx)」を参照してください。  
   
 ##  <a name="bkmk_vers"></a>SharePoint のエディションと BI 機能のサポート  
  いくつかの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ビジネス インテリジェンス機能は、SharePoint 製品の特定のエディションでのみサポートされます。  
   
 |サポートされている機能|SharePoint 製品|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t-4 Enterprise Edition の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @ no__t アドインの機能です。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ警告<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|  
-|一般的な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートの表示と SharePoint との機能統合|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard Edition と Enterprise Edition<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 。|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition 用の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインの機能です。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ警告<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|  
+|一般的な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートの表示と SharePoint との機能統合|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard Edition と Enterprise Edition<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]。|  
   
  詳細については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」を参照してください。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71952258"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] および [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用します。  
   
- SP1 が @no__t で実行されている SharePoint のインストールで必要とされる主な理由の1つは、データベースエンジン機能の**sp_dboption**(以前のリリースで非推奨とされていた) が @no__t 2 リリースで廃止されたことです。 詳細については、「 [SQL Server 2014 で廃止されたデータベースエンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で実行されている SharePoint インストールに SP1 が必要な主な理由の1つは、以前のリリースで非推奨とされたデータベースエンジンの機能**sp_dboption**が [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリースで廃止されたことです。 詳細については、「 [SQL Server 2014 で廃止されたデータベースエンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>SharePoint 2010 SP1 インストール ガイド  
  [SharePoint Server 2010 SP1 をダウンロード](https://go.microsoft.com/fwlink/?LinkID=219697)し、ファーム内のすべてのサーバーに適用します。  
@@ -65,20 +65,20 @@ ms.locfileid: "71952258"
 > [!NOTE]  
 >  既存のファームで、SharePoint SP1 のアップグレードを完了するには、次の**追加**の手順のいずれかを使用する必要があります。 詳細については、「 [Office 2010 sp1 および sharepoint 2010 sp1 のインストール時の既知の問題](https://support.microsoft.com/kb/2532126)」と「 [SHAREPOINT Server 2010 SP1 の説明](https://support.microsoft.com/kb/2460045)」を参照してください。  
   
--   **SharePoint 製品構成ウィザード:** ウィザードを実行し、SP1 のアップグレードと構成を実行します。  
+-   **SharePoint 製品構成ウィザード:** ウィザードを実行して、SP1 のアップグレードと構成を完了します。  
   
--   **Psconfig.exe を使用したアップグレードを完了します。** コマンド `psconfig -upgrade` を実行し、SP1 アップグレードを実行します。  
+-   **Psconfig.exe を使用したアップグレードを完了します。** コマンド `psconfig -upgrade` を実行して SP1 のアップグレードを完了します。  
   
- 詳細については、「」 [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx)と [ resource center のアップグレードに関するセクションを参照してください。SharePoint 2010 製品の更新プログラム @ no__t-0  
+ 詳細については、「 [(Sharepoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) 」および「 [Resource center: sharepoint 2010 製品用の更新プログラム](https://technet.microsoft.com/sharepoint/ff800847.aspx)」の「アップグレード」セクションを参照してください。  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>SQL Server BI 機能による SharePoint のインストール  
   
 ###  <a name="bkmk_prereq"></a>SharePoint 2010 製品準備ツール  
  SharePoint 製品準備ツールは、オペレーティング システム内のサーバー ロールを有効化し、SharePoint インストールに必要なその他の前提要件ソフトウェアをインストールします。 次の表は、サーバーを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用に構成するための追加手順を示したものです。  
   
-|コンポーネント|アクション|  
+|コンポーネント|操作|  
 |---------------|------------|  
-|Reporting Services アドイン|SharePoint 2010 製品準備ツールは、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンの Reporting Services アドインをインストールします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の機能に必要な新しいバージョンのアドインが含まれます。 アドインは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用してインストールすることも、MSDN からダウンロードすることもできます。 現在のバージョンのアドインを取得する場所とそのインストール方法の詳細については、「 [Sharepoint 製品用の Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」と「 [ &#40; Sharepoint 用 Reporting Services アドインのインストールまたはアンインストール」を参照してください。SharePoint 2010 および SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。|  
+|Reporting Services アドイン|SharePoint 2010 製品準備ツールは、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンの Reporting Services アドインをインストールします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の機能に必要な新しいバージョンのアドインが含まれます。 アドインは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用してインストールすることも、MSDN からダウンロードすることもできます。 現在のバージョンのアドインを取得する場所とそのインストール方法の詳細については、「sharepoint[製品用の Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」と「sharepoint [2010 および sharepoint 2013 &#40;&#41;用の Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。|  
 |Analysis Services OLE DB Provider (MSOLAP)|SharePoint 2010 は、SQL Server 2008 バージョンの OLE DB プロバイダーを Excel Services の一部としてインストールします。 このバージョンでは、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスはサポートされません。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ接続をサポートする SharePoint サーバーに最新バージョンのプロバイダーをインストールする必要があります。 詳細については、「 [SharePoint サーバーに Analysis Services OLE DB Provider をインストールする](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。|  
 |ADO.NET Services|SharePoint 2010 では、前提要件のリストに ADO.NET サービスが含まれていますが、このサービスは Prerequisite インストーラーではインストールされません。 ADO.NET サービスを追加するには、手動でインストールする必要があります。 ADO.NET サービスのインストールは、SharePoint リストを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックまたは Reporting Services レポートへのデータ フィードとして使用する場合に必要です。 手順については、「 [SharePoint リストのデータフィードのエクスポートをサポートするための ADO.NET Data Services のインストール」を](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)参照してください。|  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71952258"
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
 ## <a name="see-also"></a>参照  
- [SharePoint Server 2010 のインストールと展開](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
+ [SharePoint Server 2010  のインストールと配置](https://technet.microsoft.com/sharepoint/ee518643.aspx)  
  [3層ファーム用の複数サーバー (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   
   

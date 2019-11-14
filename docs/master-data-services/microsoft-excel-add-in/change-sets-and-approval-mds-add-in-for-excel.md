@@ -1,5 +1,5 @@
 ---
-title: 変更セットと承認 (Excel 用 MDS アドイン) | Microsoft Docs
+title: 変更セットと承認
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6239949729ba443d1b6d60b99bd4e888d72b20eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092475"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728020"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>変更セットと承認 (Excel 用 MDS アドイン)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68092475"
   
  エンティティの変更に承認が必要な場合は、保留中の変更を変更セットに保存して送信し、承認を受ける必要があります。 詳細については、「[承認が必要 (マスター データ サービス)](../../master-data-services/approval-required-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [変更セット (マスター データ サービス)](../../master-data-services/changesets-master-data-services.md)  
   
   

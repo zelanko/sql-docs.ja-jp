@@ -1,5 +1,5 @@
 ---
-title: Web サービス操作の分類 (Master Data Services) | Microsoft Docs
+title: Web サービス操作の分類
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ad01ae5dd8407fda8d7802681695200bf25b167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098603"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728294"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
 
@@ -121,7 +121,7 @@ ms.locfileid: "68098603"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>データ インポートの操作  
- これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースにデータをインポートするために使用されます。 詳細については、「[概要:テーブルからデータをインポートする &#40;マスター データ サービス&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+ これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースにデータをインポートするために使用されます。 詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "68098603"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>データ エクスポートの操作  
- これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、「[概要:データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)  
+ これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、「[概要: データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  

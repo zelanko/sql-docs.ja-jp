@@ -1,5 +1,5 @@
 ---
-title: 明示的階層 (Master Data Services) | Microsoft Docs
+title: 明示的階層
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e54ac7b6329a678d2965f135dadf5870ca19010b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915950"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729258"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明示的階層 (Master Data Services)
 
@@ -75,15 +75,15 @@ ms.locfileid: "67915950"
 |不規則になる場合がある|常に一定のレベル数を含む|  
   
 ## <a name="explicit-hierarchy-example"></a>明示的階層の例  
- 次の例では、Product エンティティに以下のリーフ メンバーが含まれています。BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450}、BK-R650 {Road-650}。  
+ 次の例では、Product エンティティは、BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450}、および BK-R650 {Road-650} のリーフ メンバーを含みます。  
   
  これらのリーフ メンバーを特定の統合ポイントで集計するには、Product エンティティに統合メンバーを作成します。 リーフ メンバーを集計する階層ツリー内のレベルに、統合メンバーを挿入します。 統合メンバーを挿入するレベルについての制限はありませんが、各メンバー (リーフまたは統合) を使用できるのは 1 回のみです。  
   
- ![マウンテン バイク明示的階層の例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "マウンテン バイク明示的階層の例")  
+ ![マウンテンバイク明示的階層の例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "マウンテンバイク明示的階層の例")  
   
  統合メンバーを使用して任意のレベルでメンバーをグループ化したり、リーフ メンバーと統合メンバーを特定の順序で並べ替えたりすることができます。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

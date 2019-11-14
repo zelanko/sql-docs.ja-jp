@@ -1,5 +1,5 @@
 ---
-title: '[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス | Microsoft Docs'
+title: '[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス'
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 995d39887aa6357519ce0cbf4771ae796b1ece69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b08dcb47303d6198bb30d4415d2c00110fd7ab04
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094502"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729542"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス
 
@@ -55,12 +55,12 @@ ms.locfileid: "68094502"
 |**[データベース エンジン サービスの資格情報を使用する Windows 認証]**|データベース メールでは、SMTP サーバーの認証に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用することを指定します。|  
 |**[基本認証]**|データベース メールでは、SMTP サーバーの認証に特定のユーザー名とパスワードを使用することを指定します。 この情報は、電子メール サーバーとの認証だけに使用されるため、アカウントは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を実行しているコンピューターのユーザーに対応している必要はありません。|  
 |**ユーザー名**|データベース メールで SMTP サーバーへのログオンに使用されるユーザー アカウントの名前を入力します。 SMTP サーバーで基本認証が求められる場合、ユーザー名が必要になります。|  
-|**Password**|データベース メールで SMTP サーバーへのログオンに使用されるパスワードを入力します。 SMTP サーバーで基本認証が求められる場合、パスワードが必要になります。|  
+|**パスワード**|データベース メールで SMTP サーバーへのログオンに使用されるパスワードを入力します。 SMTP サーバーで基本認証が求められる場合、パスワードが必要になります。|  
 |**[パスワードの確認入力]**|パスワードに間違いがないことを確認するために、設定したパスワードをもう一度入力します。|  
 |**[匿名認証]**|SMTP サーバーで認証を要求しないことを指定します。 SMTP サーバーの認証には資格情報をまったく使用しません。|  
   
-## <a name="see-also"></a>関連項目  
- [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+## <a name="see-also"></a>参照  
+ [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: IRowsetFind での |Microsoft Docs
+title: 比較 IRowsetFind |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc1c6e78c533d46d1a101ef8c536d326e8646a73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0d03a6534aab14bb2427586c4e245010b0ac09c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128472"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73774206"
 ---
 # <a name="comparability-for-irowsetfind"></a>IRowsetFind での比較
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   日付型または時刻型の場合のみ、IRowsetFind では、次の比較がサポートされます。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "68128472"
   
  その他の比較を試みると、DB_E_BADCOMPAREOP が返されます。 これは OLE DB 仕様に従っています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

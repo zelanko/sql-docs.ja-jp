@@ -1,5 +1,5 @@
 ---
-title: cdc.lsn_time_mapping (TRANSACT-SQL) |Microsoft Docs
+title: cdc.lsn_time_mapping (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68066669"
 ---
-# <a name="cdclsntimemapping-transact-sql"></a>cdc.lsn_time_mapping (TRANSACT-SQL)
+# <a name="cdclsn_time_mapping-transact-sql"></a>cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   変更テーブルの行を持つトランザクションごとに 1 つの行を返します。 このテーブルは、トランザクションのコミット ログ シーケンス番号 (LSN) コミットの値と時刻の間でマップを使用します。 エントリが記録されますの変更テーブル エントリはありません。 これにより、変更アクティビティが少ないか、まったくない場合に、LSN 処理の完了をテーブルに記録できます。  

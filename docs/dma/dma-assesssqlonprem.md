@@ -1,7 +1,8 @@
 ---
-title: SQL Server 移行の評価を実行する (Data Migration Assistant) |Microsoft Docs
+title: SQL Server 移行の評価を実行する
+titleSuffix: Data Migration Assistant
 description: Data Migration Assistant を使用して、別の SQL Server またはに移行する前に、オンプレミスの SQL Server を評価する方法について説明し Azure SQL Database
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e14fc009944f28adb793ef3f89bb93f716a9ac58
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892652"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056632"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 移行評価を実行する
 
@@ -140,7 +141,7 @@ Azure SQL Database の場合、評価によって、移行のブロックの問�
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>ターゲット準備のためにデータ資産を評価する
 
-これらの評価をデータ資産全体にさらに拡張し、Azure SQL Database への移行用に SQL Server インスタンスとデータベースの相対的な準備を確認する場合は、 **[アップロード先]** を選択して Azure migrate ハブに結果をアップロード Azure Migrate.
+これらの評価をデータ資産全体にさらに拡張し、Azure SQL Database への移行用に SQL Server インスタンスとデータベースの相対的な準備を確認する場合は、 **[Azure Migrate にアップロードする]** を選択して、結果を Azure migrate hub にアップロードします。
 
 これにより、Azure migrate hub プロジェクトで統合された結果を表示できるようになります。
 

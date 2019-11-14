@@ -1,5 +1,5 @@
 ---
-title: 配置のチェック リスト:PowerPivot for SharePoint 2010 | のマルチサーバーインストールMicrosoft Docs
+title: '展開チェックリスト: PowerPivot for SharePoint のマルチサーバーインストール 2010 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,8 +17,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952240"
 ---
-# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト:PowerPivot for SharePoint 2010 のマルチサーバー インストール
-  このチェックリストでは、最初から構築した3層の SharePoint 2010 ファームに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を追加する手順について説明します。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 このトポロジに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を追加するには SQL Server セットアップを実行して、アプリケーション層に [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールする必要があります。 PowerPivot プログラムファイルは web 層に追加されますが、web アプリケーションソリューションを配置する場合は、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 実行する必要があるインストール手順は、アプリケーションサーバーに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールすることだけです。  
+# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト: PowerPivot for SharePoint 2010 のマルチサーバー インストール
+  このチェックリストでは、最初から構築した3層の SharePoint 2010 ファームに SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を追加する手順について説明します。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 このトポロジに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を追加するには SQL Server セットアップを実行してアプリケーション層に [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールする必要があります。 PowerPivot プログラムファイルは web 層に追加されますが、web アプリケーションソリューションを配置する場合は、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 実行する必要があるインストール手順は、アプリケーションサーバーに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールすることだけです。  
   
 ||  
 |-|  
@@ -26,7 +26,7 @@ ms.locfileid: "71952240"
   
   
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  SQL Server および SharePoint 2010 をインストールするには、ローカル管理者である必要があります。  
   
  SharePoint のインストール担当者は、ファームも構成する必要があります。 ファームを構成するには、データベース サーバーに対する SQL Server ログイン権限が必要です。 ログインは、`dbcreator`、`securityadmin`、および `public` のロールに割り当てる必要があります。  
@@ -148,7 +148,7 @@ ms.locfileid: "71952240"
   
  アプリケーション サーバーには常に PowerPivot for SharePoint をインストールします。 PowerPivot for SharePoint サーバー コンポーネントは Web フロントエンド サーバーでも実行されますが、Web フロントエンドで実行されるコンポーネントは、PowerPivot for SharePoint の構成手順で、ファームにソリューションを配置するときにインストールされます。 セットアップの詳細については、「 [Install PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)」を参照してください。  
   
- 配置トポロジに 2 つの PowerPivot for SharePoint インスタンスが必要な場合は、各アプリケーション サーバーで SQL Server セットアップを実行します。 1 台のコンピューターには PowerPivot for SharePoint のインスタンスを 1 つだけインストールできます。 複数のインスタンスが必要な場合は、追加のサーバーを使用する必要があります。 複数の PowerPivot for SharePoint サーバーを同じファームに追加する方法の詳細については、「@no__t の展開チェックリスト:PowerPivot サーバーを SharePoint 2010 ファーム @ no__t に追加してスケールアウトします。  
+ 配置トポロジに 2 つの PowerPivot for SharePoint インスタンスが必要な場合は、各アプリケーション サーバーで SQL Server セットアップを実行します。 1 台のコンピューターには PowerPivot for SharePoint のインスタンスを 1 つだけインストールできます。 複数のインスタンスが必要な場合は、追加のサーバーを使用する必要があります。 複数の PowerPivot for SharePoint サーバーを同じファームに追加する方法の詳細については、「[配置チェックリスト: SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)」を参照してください。  
   
 ##  <a name="installclientlib"></a>PowerPivot for SharePoint がインストールされていない SharePoint アプリケーションサーバーに Analysis Services クライアントライブラリをインストールする  
  同じコンピューターに PowerPivot for SharePoint がインストールされておらず、次のアプリケーションを実行している Web フロントエンドまたはアプリケーション サーバーを含むファーム トポロジには、PowerPivot データ アクセスおよび機能をサポートするための追加ソフトウェアが必要になります。  
@@ -159,7 +159,7 @@ ms.locfileid: "71952240"
   
  Excel Services と PerformancePoint Services には、PowerPivot データ アクセスをサポートするための新しいバージョンの Analysis Services OLE DB プロバイダーが必要です。 最新の OLE DB プロバイダーがインストールされていないコンピューターでいずれかのアプリケーションを実行する場合、プロバイダーを手動でインストールする必要があります。 詳細については、「 [SharePoint サーバーに Analysis Services OLE DB Provider をインストールする](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。  
   
- 同様に、サーバーの全体管理だけがインストールされていて、PowerPivot for SharePoint がインストールされていないコンピューターは、ADOMD.NET クライアント ライブラリが必要になります。 PowerPivot 管理ダッシュボードはこのライブラリを使用して内部データにアクセスし、このデータを使ってダッシュボードを設定します。 詳細については、「 [サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする方法](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)」を参照してください。  
+ 同様に、サーバーの全体管理だけがインストールされていて、PowerPivot for SharePoint がインストールされていないコンピューターは、ADOMD.NET クライアント ライブラリが必要になります。 PowerPivot 管理ダッシュボードはこのライブラリを使用して内部データにアクセスし、このデータを使ってダッシュボードを設定します。 詳細については、「 [Install ADOMD.NET on Web Front-End Servers Running Central Administration](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)」を参照してください。  
   
 ##  <a name="configsrvr"></a>サーバーを構成する  
  PowerPivot 構成ツールを使用して PowerPivot for SharePoint を構成します。 このツールは、ファームの既存の構成をスキャンし、PowerPivot for SharePoint に必要な SharePoint 機能をインストールまたはアクティブ化するためのオプションを提供します。 このステップで、Claims to Windows Token Service が開始されます。 さらに、その他の必要な SharePoint 機能がまだ有効になっていない場合は、構成ツールによってそれらが一覧に追加され、機能を有効にするためのアクションが組み込まれます。  
@@ -189,7 +189,7 @@ ms.locfileid: "71952240"
   
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL アドレスに http://\<your name > を指定できます。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL アドレスで > コンピューター名\<http://を指定できます。  
   
 2.  PowerPivot データ アクセス機能と PowerPivot データ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、PowerPivot によって提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "71952240"
   
 6.  [サーバーの種類] で **[Analysis Services]** を選択します。  
   
-7.  サーバー名 に、 **\<server-name >** を入力します。ここで **\<server-name >** は、PowerPivot for SharePoint インストールされているコンピューターの名前です。  
+7.  [サーバー名] に、 **\<サーバー名 >** を入力します。ここで **\<サーバー名 >** は、PowerPivot for SharePoint がインストールされているコンピューターの名前です。  
   
 8.  **[接続]** をクリックします。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "71952240"
  ディスクにキャッシュされる PowerPivot データ ファイルに使用されるディスク容量の最大制限を設定できます。 既定では、使用可能なすべてのディスク領域が使用されます。 ディスク領域の使用量を制限する方法については、「 [ &#40;PowerPivot for SharePoint&#41;のディスク領域使用量の構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint)」を参照してください。  
   
 ####  <a name="Upload"></a>SharePoint Web アプリケーションのファイルの最大アップロードサイズを増やす  
- PowerPivot ブックはサイズが大きくなる可能性があるため、ファイルの最大アップロード サイズを増やしたい場合があります。 構成する 2 つのファイル サイズの設定として、Web アプリケーションには [アップロードの最大サイズ]、Excel Services には [ブックの最大サイズ] があります。 最大ファイル サイズは、両方のアプリケーションで同じ値に設定してください。 手順については、「 [PowerPivot for SharePoint&#41;最大&#40;ファイルアップロードサイズの構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)」を参照してください。  
+ PowerPivot ブックはサイズが大きくなる可能性があるため、ファイルの最大アップロード サイズを増やしたい場合があります。 2 つのファイル サイズの設定として、Web アプリケーションには [アップロードの最大サイズ]、Excel Services には [ブックの最大サイズ] の設定を構成します。 最大ファイル サイズは、両方のアプリケーションで同じ値に設定してください。 手順については、「 [PowerPivot for SharePoint&#41;最大&#40;ファイルアップロードサイズの構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)」を参照してください。  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>ブックのユーザーへの SharePoint 権限の付与  
  ユーザーがブックをパブリッシュまたは表示するには、SharePoint 権限が必要です。 パブリッシュされたブックを表示する必要があるユーザーには**表示**権限を付与し、ブックをパブリッシュまたは管理するユーザーには**投稿**権限を与えるようにしてください。 権限を付与するには、サイト コレクションの管理者である必要があります。  
@@ -241,7 +241,7 @@ ms.locfileid: "71952240"
   
 5.  ドキュメントを追加または削除する権限を必要とする Windows ドメインのユーザー アカウントまたはグループ アカウントを入力します。  
   
-6.  **[OK]** をクリックします。  
+6.  クリックして **OK**です。  
   
 7.  サイトコレクションの**閲覧**者グループのチェックボックスをオンにします。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "71952240"
   
 9. ドキュメントを表示する権限を必要とする Windows ドメインのユーザー アカウントまたはグループ アカウントを入力します。 上で説明した手順と同様に、アプリケーションで従来の認証が構成されている場合は、電子メール アドレスまたは配布グループを使用しないでください。  
   
-10. **[OK]** をクリックします。  
+10. クリックして **OK**です。  
   
 #### <a name="install-adonet-data-services-35-sp1"></a>ADO.NET Data Services 3.5 SP1 のインストール  
  ADO.NET Data Services は、SharePoint リストのデータ フィードのエクスポートに必要です。 SharePoint 2010 では、このコンポーネントは PrerequisiteInstaller プログラムに含まれていないため、手動でインストールする必要があります。 ADO.NET Data Services のインストール方法の詳細については、「 [SharePoint リストのデータフィードのエクスポートをサポートするための ADO.NET Data Services のインストール](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)」を参照してください。  
@@ -264,8 +264,8 @@ ms.locfileid: "71952240"
  PowerPivot サービス アプリケーションは、既定のプロパティと値を使用して作成されますが、 個々のサービス アプリケーションの構成設定を変更して、要求の割り当て方法を変更したり、サーバー タイムアウトを設定したり、クエリ応答レポート イベントのしきい値を変更したり、使用状況データを保持する期間を指定したりすることもできます。 サーバーの全体管理での構成、または SharePoint Web アプリケーションでの PowerPivot 機能の使用に関する詳細については、「[サーバーの全体管理での Powerpivot サーバーの管理と構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)   
- [PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  をインストールします。  
- @no__t 0Deployment のチェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト @ no__t-0  
+ [SQL Server 2012  の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)  
+ [PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  のインストール  
+ [配置のチェックリスト: SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: コレクションを作成する (マスター データ サービス) | Microsoft Docs
+title: コレクションを作成する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f8d770d32ee60c2ec2407b5f0bc805b2ee3a5aa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079757"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728522"
 ---
 # <a name="create-a-collection-master-data-services"></a>コレクションを作成する (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーまたは統合メンバーの一覧表示を作成する必要があるときは、コレクションを作成します。 コレクションは、エンティティのすべてのメンバーを含む必要はありません。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、リーフ メンバーまたは統合メンバーの一覧表示を作成する必要があるときは、コレクションを作成します。 コレクションは、エンティティのすべてのメンバーを含む必要はありません。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  

@@ -16,20 +16,19 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 973d298bc9bda347afab49df0745092e0da64143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52bf85ba17630cc9bd76865e759a55d9c4864afc
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128711"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758219"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>IMultipleResults を使用した複数の結果セットの処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  コンシューマーを使用して、 **IMultipleResults**インターフェイスによって返される結果を処理する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー コマンドを実行します。 ときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、実行するためのコマンドを送信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメントを実行し、結果が返されます。  
+  コンシューマーは、 **IMultipleResults**インターフェイスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーコマンドの実行によって返される結果を処理します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが実行するコマンドを送信すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ステートメントが実行され、結果が返されます。  
   
- クライアントはコマンドの実行結果をすべて処理する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコマンドの実行が結果として複数の行セット オブジェクトを作成、使用、 **IMultipleResults**アプリケーション データの取得が完了したことを確認するインターフェイス、クライアントが開始したラウンド トリップします。  
+ クライアントはコマンドの実行結果をすべて処理する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーコマンドを実行すると、複数行セットオブジェクトが結果として生成される可能性があるため、 **IMultipleResults**インターフェイスを使用して、アプリケーションデータの取得がクライアントによって開始されたラウンドトリップを完了するようにします。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行すると複数の行セットが生成されます。行セットには、**OrderDetails** テーブルの行データを含むものや、COMPUTE BY 句の結果を含むものがあります。  
   
@@ -43,9 +42,9 @@ COMPUTE
     BY OrderID  
 ```  
   
- このテキストを含んだコマンドを実行し、返される結果のインターフェイスとして行セットを要求した場合、最初の行セットのみが返されます。 コンシューマーでは、返された行セットのすべての行を処理できます。 DBPROP_MULTIPLECONNECTIONS データ ソースのプロパティ設定されている場合が VARIANT_FALSE の場合、および MARS が有効でない接続で、セッション オブジェクトでないその他のコマンドを実行することができますが、(、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが別に作成することはできません接続の場合)、コマンドが取り消されるまでです。 接続で MARS が有効でない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBPROP_MULTIPLECONNECTIONS が VARIANT_FALSE で、E_FAIL が返された場合は、アクティブなトランザクションがある場合、Native Client OLE DB プロバイダーは DB_E_OBJECTOPEN エラーを返します。  
+ このテキストを含んだコマンドを実行し、返される結果のインターフェイスとして行セットを要求した場合、最初の行セットのみが返されます。 コンシューマーでは、返された行セットのすべての行を処理できます。 ただし、[データソースの DBPROP_MULTIPLECONNECTIONS] プロパティが [VARIANT_FALSE] に設定されていて、その接続で MARS が有効になっていない場合、セッションオブジェクトで他のコマンドを実行することはできません ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが別の接続を作成することはありません)。コマンドが取り消されるまで、 MARS が接続で有効になっていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBPROP_MULTIPLECONNECTIONS が VARIANT_FALSE 場合に DB_E_OBJECTOPEN エラーを返し、アクティブなトランザクションがある場合は E_FAIL を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから DB_E_OBJECTOPEN を使用する場合に、出力パラメーターがストリーム送信され、アプリケーションが呼び出す前にすべての返された出力パラメーターの値を使用していないが返さも **:getresults**を次の結果セットを取得します。 MARS が有効でないと、接続がビジー状態の行セットを生成しないか、サーバー カーソルではない行セットを生成するコマンドを実行している場合と、DBPROP_MULTIPLECONNECTIONS データ ソースのプロパティが VARIANT_TRUE に設定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native ClientOLE DB プロバイダー作成コマンドの同時実行のオブジェクトをサポートする追加の接続、トランザクションがアクティブでを返します。 この場合、エラーされます。 トランザクションとロックは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって接続ごとに管理されます。 他の接続が作成されている場合でも、個別の接続のコマンドはロックを共有しません。 コマンドによって要求された行にロックを設定することで、そのコマンドが別のコマンドによってブロックされないようにする必要があります。 MARS を有効にしている場合、その接続では複数のコマンドをアクティブにできます。明示的なトランザクションを使用している場合、すべてのコマンドが共通のトランザクションを共有します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、ストリーミングされた出力パラメーターを使用する場合に DB_E_OBJECTOPEN を返します。また、 **IMultipleResults:: GetResults**を呼び出すために、返された出力パラメーター値をアプリケーションがすべて使用していません。次の結果セット。 MARS が有効になっておらず、行セットを生成しないコマンドまたはサーバーカーソルではない行セットを生成するコマンドを実行しているときに接続がビジー状態になっている場合、および DBPROP_MULTIPLECONNECTIONS データソースプロパティが VARIANT_TRUE に設定されている場合、Native Client は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DBプロバイダーは、トランザクションがアクティブな場合を除き、同時実行コマンドオブジェクトをサポートするために追加の接続を作成し、その場合はエラーを返します。 トランザクションとロックは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって接続ごとに管理されます。 他の接続が作成されている場合でも、個別の接続のコマンドはロックを共有しません。 コマンドによって要求された行にロックを設定することで、そのコマンドが別のコマンドによってブロックされないようにする必要があります。 MARS を有効にしている場合、その接続では複数のコマンドをアクティブにできます。明示的なトランザクションを使用している場合、すべてのコマンドが共通のトランザクションを共有します。  
   
  コマンドを取り消すには、[ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) を使用するか、コマンド オブジェクトおよび派生行セットのすべての参照を解放します。  
   
@@ -54,7 +53,7 @@ COMPUTE
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルを使用するときは、コマンドを実行するとカーソルが作成されます。 カーソルを作成するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は成功か失敗を返します。したがって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへのラウンド トリップが完了するのはコマンドを実行した結果が返ってきたときです。 その後、**GetNextRows** 呼び出しはそれぞれがラウンド トリップになります。 このようなしくみによって、サーバー カーソルからのフェッチの結果である行セットを処理する、複数のアクティブなコマンド オブジェクトが存在できます。 詳細については、「[行セットと SQL Server カーソル](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[コマンド]](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

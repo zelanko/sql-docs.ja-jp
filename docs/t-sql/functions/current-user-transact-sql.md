@@ -22,14 +22,14 @@ ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf0046f4b0fac91c8b6d44b13c1c844578c81f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026311"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844623"
 ---
-# <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
+# <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 この関数によって、現在のユーザーの名前が返されます。 この関数は `USER_NAME()` に相当します。
@@ -52,7 +52,7 @@ CURRENT_USER
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-currentuser-to-return-the-current-user-name"></a>A. CURRENT_USER を使用して現在のユーザー名を返す  
+### <a name="a-using-current_user-to-return-the-current-user-name"></a>A. CURRENT_USER を使用して現在のユーザー名を返す  
 この例では、現在のユーザー名を返します。
   
 ```sql
@@ -60,7 +60,7 @@ SELECT CURRENT_USER;
 GO  
 ```  
   
-### <a name="b-using-currentuser-as-a-default-constraint"></a>B. DEFAULT 制約として CURRENT_USER を使用する  
+### <a name="b-using-current_user-as-a-default-constraint"></a>B. DEFAULT 制約として CURRENT_USER を使用する  
 この例では、sales 行の `order_person` 列に対する `DEFAULT` 制約として `CURRENT_USER` を使用するテーブルを作成します。
   
 ```sql
@@ -109,7 +109,7 @@ order_id    cust_id     order_date           order_amt    order_person
 (1 row(s) affected)
 ```
   
-### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. 権限を借用したコンテキストから CURRENT_USER を使用する  
+### <a name="c-using-current_user-from-an-impersonated-context"></a>C. 権限を借用したコンテキストから CURRENT_USER を使用する  
 この例では、ユーザー `Wanida` が次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行し、ユーザー 'Arnalfo' になりすまします。
   
 ```sql
@@ -139,7 +139,7 @@ Wanida
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
   
   
 

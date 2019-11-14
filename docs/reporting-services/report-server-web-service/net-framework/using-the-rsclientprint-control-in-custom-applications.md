@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155730"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593778"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>カスタム アプリケーション内での RSClientPrint コントロールの使用
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX コントロールである **RSPrintClient** を使用すると、HTML ビューアーで表示されたレポートをクライアント側で印刷することができます。 このコントロールには **[印刷]** ダイアログ ボックスがあり、印刷ジョブの開始、レポートのプレビュー、印刷するページの指定、余白の変更を行うことができます。 クライアント側での印刷操作の間、レポート サーバーが画像 (EMF) 表示拡張機能でレポートを表示し、オペレーティング システムの印刷機能を使用して印刷ジョブを作成し、そのジョブをプリンターに送ります。  
@@ -29,15 +29,14 @@ ms.locfileid: "70155730"
   
 -   コントロールを使用して、Web ベースのレポートの印刷を強化することができます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] と互換性のある任意のプログラミング言語またはスクリプトからオブジェクトを指定できます。 このコントロールは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows フォーム アプリケーションからの利用は想定していません。  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] プログラム ファイルに含まれている .cab ファイルをコピーし、カスタム アプリケーションのコード ベースに追加します。  
-  
+-   [!INCLUDE[ssRSNoVersion](../../../includes/ssrsnoversion-md.md)] プログラム ファイルに含まれている .cab ファイルをコピーし、カスタム アプリケーションのコード ベースに追加します。  
+ 
 -   \<OBJECT> タグを使用してコントロールを指定します。  
   
 -   OBJECT CODEBASE 属性では、.cab ファイルに対する相対 URL または完全修飾 URL を指定します。  
   
 -   アプリケーションで使用しているバージョンを追跡するため、.cab ファイルに対する固有のアプリケーション バージョン情報を指定します。  
-  
--   オンライン ブックの画像 (EMF) 表示に関するトピックを参照し、印刷プレビューおよび出力用にページを表示する方法を確認します。  
+    
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient の概要  
  このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなど、一般的な印刷ダイアログ ボックスの機能がサポートされています。 コントロールは CAB ファイルとしてパッケージ化されています。 **[印刷]** ダイアログ ボックス内のテキストは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートするすべての言語に向けてローカライズされています。 **RSPrintClient** ActiveX コントロールでは、画像表示拡張機能 (EMF) を使用してレポートが印刷されます。 EMF デバイス情報として StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight、および PageWidth が使用されます。 画像表示に対するその他のデバイス情報の設定はサポートされません。  

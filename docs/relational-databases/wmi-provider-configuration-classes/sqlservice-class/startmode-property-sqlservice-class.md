@@ -1,6 +1,6 @@
 ---
-title: StartMode プロパティ (SqlService クラス) |Microsoft Docs
-ms.custom: ''
+title: StartMode プロパティ (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e1e8102591eef3976d893ddf0c218b71aa763914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006857"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660865"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +42,26 @@ object.StartMode [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サービスのモードを指定する uint32 値。  
   
- 値は、次のいずれかを指定できます。  
+ 値には、次のいずれかを指定できます。  
   
  Boot  
  値 = 0。 オペレーティング システム ローダーによって開始されるサービスです。 このオプションは、ドライバー サービスにのみ有効です。  
   
- System  
- 値 = 1。 サービスを開始して、 **IoInitSystem**メソッド。 このオプションは、ドライバー サービスにのみ有効です。  
+ システム  
+ 値 = 1。 **Ioinitsystem**メソッドによって開始されたサービス。 このオプションは、ドライバー サービスにのみ有効です。  
   
  Automatic  
  値 = 2。 システムの起動時にサービス コントロール マネージャーによって自動的に開始されるサービスです。  
   
  手動  
- 値 = 3。 プロセスを呼び出すとき、コンピューター マネージャーによって開始されるサービス、 **StartService**メソッド。  
+ 値 = 3。 プロセスが**Startservice**メソッドを呼び出すときに、コンピューターマネージャーによって開始されるサービス。  
   
  Disabled  
  値 = 4。 サービスを開始できません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>参照  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
