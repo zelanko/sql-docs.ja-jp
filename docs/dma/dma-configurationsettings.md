@@ -1,7 +1,7 @@
 ---
-title: Data Migration Assistant の設定を構成する (SQL Server) |Microsoft Docs
+title: Data Migration Assistant の設定を構成する
 description: 構成ファイルの値を更新して Data Migration Assistant の設定を構成する方法について説明します。
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345238"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056542"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant の設定を構成する
 
@@ -29,7 +29,7 @@ Data Migration Assistant の特定の動作を微調整するには、machine.co
 
 - デスクトップアプリケーション
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dma. .config
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\の machine.config. .config
 
 - コマンドラインユーティリティ
 
@@ -82,7 +82,7 @@ Data Migration Assistant v2.0 以降では、この問題が発生した場合�
 評価時に、Data Migration Assistant はデータ層アプリケーション (dacpac) を抽出してデータベーススキーマを理解します。 この操作は、非常に大規模なデータベースのタイムアウトが発生した場合、またはサーバーに負荷がかかっている場合に失敗することがあります。 Data Migration v1.0 以降では、エラーを回避するために、次の構成値を変更できます。 
 
 > [!NOTE]
-> 既定で&lt;は、&gt; dacfx エントリ全体にコメントが付いています。 コメントを削除し、必要に応じて値を変更します。
+> 既定では、&lt;dacfx&gt; エントリ全体にコメントが付いています。 コメントを削除し、必要に応じて値を変更します。
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Data Migration Assistant v2.0 以降では、この問題が発生した場合�
 
 - databaseLockTimeout
 
-   このパラメーターは、 [SET LOCK\_timeout\_timeout 期間](../t-sql/statements/set-lock-timeout-transact-sql.md) *(ミリ秒単位)* に相当します。 (既定値は 5000)
+   このパラメーターは、 [SET LOCK\_timeout timeout\_の期間](../t-sql/statements/set-lock-timeout-transact-sql.md) *(ミリ秒単位)* に相当します。 (既定値は 5000)
 
 - maxDataReaderDegreeOfParallelism
 
@@ -109,7 +109,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database:推奨しきい値
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 推奨設定のしきい値
 
 [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)を使用すると、Microsoft SQL Server 2016 から Azure にウォームおよびコールドトランザクションデータを動的に拡張できます。 Stretch Database は、大量のコールドデータを含むトランザクションデータベースを対象としています。 Stretch Database 推奨事項では、ストレージ機能の推奨事項の下で、この機能によってメリットが得られるテーブルを特定し、この機能のためにテーブルを有効にするために必要な変更を特定します。
 
@@ -152,6 +152,6 @@ Data Migration Assistant v2.0 以降では、recommendedNumberOfRows 構成値�
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Data Migration Assistant のダウンロード](https://www.microsoft.com/download/details.aspx?id=53595)

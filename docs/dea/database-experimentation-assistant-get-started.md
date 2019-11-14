@@ -1,7 +1,6 @@
 ---
-title: SQL Server アップグレードの Database Experimentation Assistant の概要
-description: Database Experimentation Assistant を使ってみる
-ms.custom: ''
+title: Database Experimentation Assistant を使ってみる
+description: Database Experimentation Assistant (DEA) は、アップグレードや新しいインデックスなど、SQL Server 環境で変更を行うための A/B テストソリューションです。
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381769"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056714"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>Database Experimentation Assistant を使ってみる
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>Database Experimentation Assistant (SQL Server) を使ってみる
 
 Database Experimentation Assistant (DEA) は、アップグレードや新しいインデックスなど、SQL Server 環境で変更を行うための A/B テストソリューションです。 DEA は、新しい環境でソースサーバー (現在の環境で) のワークロードがどのように動作するかを評価するのに役立ちます。 次の3つの手順を実行して A/B テストを実行する手順について説明します。 
 
@@ -48,7 +48,7 @@ A/B テスト SQL Server の最初の手順は、移行元サーバーでトレ�
 
 1. 次の情報を入力または選択します。
 
-   - **トレース名**: 作成中の新しいトレースファイルのファイル名。 ロールオーバーファイルの名前付け規則を使用するトレース名 (たとえば、CaptureName @ no__t-0NNN) は避けてください。
+   - **トレース名**: 作成中の新しいトレースファイルのファイル名。 ロールオーバーファイルの名前付け規則 (たとえば、CaptureName\_NNN) を使用するトレース名は避けてください。
    - **Duration**: キャプチャの期間。
    - **SQL Server インスタンス名**: トレースをキャプチャする SQL Server インスタンス。
    - **データベース名**: トレースをキャプチャする SQL Server を実行しているコンピューター上のデータベースの名前。 空のままにすると、サーバー上のすべてのデータベースからトレースがキャプチャされます。
@@ -152,11 +152,11 @@ A/B テストを SQL Server する2番目の手順では、対象サーバーに
 
 クエリがエラークエリの場合、エラーに関する詳細情報が **[エラー情報]** タブに表示されます。 **[クエリプラン情報]** タブには、ターゲット1およびターゲット2でのクエリに使用されるクエリプランに関する情報が表示されます。
 
-![クエリプラン](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
+![クエリ プラン](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
 
 分析レポートの任意のページで、右上にある **[印刷]** ボタンを選択して、表示されているすべてのものを印刷します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - サーバーで発生するイベントのログが記録されたトレースファイルを生成する方法については、「 [Capture trace](database-experimentation-assistant-capture-trace.md)」を参照してください。
 

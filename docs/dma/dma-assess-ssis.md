@@ -1,7 +1,6 @@
 ---
-title: SQL Server 統合サービスの移行評価を実行する (Data Migration Assistant) |Microsoft Docs
-description: Azure SQL Database または Azure SQL Database マネージインスタンスに移行する前に、Data Migration Assistant を使用してオンプレミスの SQL Server 統合サービスを評価する方法について説明します。
-ms.custom: ''
+title: Data Migration Assistant を使用して SSIS 移行評価を作成する
+description: Azure SQL Database または Azure SQL Database マネージインスタンスに移行する前に、Data Migration Assistant を使用してオンプレミスの SQL Server 統合サービス (SSIS) を評価する方法について説明します。
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632866"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056645"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
 

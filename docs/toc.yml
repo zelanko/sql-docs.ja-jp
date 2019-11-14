@@ -745,8 +745,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: フェールオーバーとフェールオーバー モード
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: 自動フェールオーバーのための柔軟なフェールオーバー ポリシー
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: 読み取りスケールのみ
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: 読み取り/書き込み接続のリダイレクト
@@ -4157,14 +4155,16 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: リリース ノート
       items:
-        - name: 旧バージョンとの互換性
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: SQL Server で廃止された機能
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: SQL Server 2019 の非推奨の機能
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: SQL Server 2017 の非推奨の機能
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016 の非推奨の機能
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: SQL Server で廃止された機能
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: SQL Server 2019 における重大な変更
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: SQL Server 2017 における重大な変更
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016 における重大な変更
@@ -4779,7 +4779,7 @@
         - name: 概要
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: 旧バージョンとの互換性
               href: relational-databases/replication/replication-backward-compatibility.md
             - name: 非推奨の機能
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md

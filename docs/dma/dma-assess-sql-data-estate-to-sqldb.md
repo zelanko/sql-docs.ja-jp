@@ -1,7 +1,7 @@
 ---
-title: Azure SQL Database に移行する SQL Server データ資産の準備を評価する |Microsoft Docs
+title: Azure SQL Database への移行の準備 SQL Server を評価する
+titleSuffix: Data Migration Assistant
 description: Data Migration Assistant を使用して、に移行するための SQL Server データ資産を移行する方法について説明し Azure SQL Database
-ms.custom: ''
 ms.date: 07/16/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -15,12 +15,13 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: b3f47cee5cc091c52faa98438d22b88a18a06f03
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8261b38d57502584efbeee8d6bbcd0b1823d3786
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702824"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056689"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
 
@@ -59,10 +60,10 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
     | **Geography**  | **ストレージの場所のリージョン** |
     | ------------- | ------------- |
-    | アジア | 東南アジアまたは東アジア |
+    | Asia | 東南アジアまたは東アジア |
     | Europe | 南ヨーロッパまたは西ヨーロッパ |
     | イギリス | 英国南部または英国西部 |
-    | 米国 | 米国中部または米国西部2 |
+    | United States | 米国中部または米国西部2 |
 
     プロジェクトに指定された geography は、オンプレミスの Vm から収集されたメタデータを格納するためにのみ使用されます。 実際の移行では、任意のターゲットリージョンを選択できます。
 
@@ -71,11 +72,11 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
    > [!NOTE]
    > プロジェクトを作成するときは、少なくとも1つのアセスメントツールまたは移行ツールを追加する必要があります。
 
-8. **[評価ツールの選択]** タブ**で、次の Azure Migrate ます。データベース評価**は、追加する評価ツールとして表示されます。 現在評価ツールが必要ない場合は、[**今すぐの評価ツールの追加をスキップ**する] チェックボックスをオンにします。 **[次へ]** を選択します。
+8. **評価ツールの選択** タブの  **Azure Migrate: データベース評価**は、追加する評価ツールとして表示されます。 現在評価ツールが必要ない場合は、[**今すぐの評価ツールの追加をスキップ**する] チェックボックスをオンにします。 **[次へ]** を選択します。
 
     ![Azure Migrate-[評価ツール] タブの選択](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. **[移行ツールの選択]** タブ**で、次の Azure Migrate します。データベースの**移行は、追加する移行ツールとして表示されます。 移行ツールを現在必要としていない場合は、**今すぐ移行ツールの追加をスキップ**します。 **[次へ]** を選択します。
+9. **[移行ツールの選択]** タブの**Azure Migrate: [データベースの移行**] が、追加する移行ツールとして表示されます。 移行ツールを現在必要としていない場合は、**今すぐ移行ツールの追加をスキップ**します。 **[次へ]** を選択します。
 
     ![Azure Migrate-[移行ツール] タブの選択](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -87,7 +88,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
 ## <a name="assess-and-upload-assessment-results"></a>評価結果の評価とアップロード
 
-移行プロジェクトが正常に作成され **たら、**評価ツール** の Azure Migrate:データベース** 評価 ボックス。 Data Migration Assistant ツールの表示をダウンロードして使用するための手順です。
+移行プロジェクトを正常に作成した後、 **[評価ツール]** の **[Azure Migrate: データベース評価]** ボックスで、Data Migration Assistant ツールをダウンロードして使用するための手順を説明します。
 
    ![Azure Migrate 評価ツールが追加されました](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
@@ -96,7 +97,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
 ### <a name="create-an-assessment"></a>評価を作成する
 
-1. 左側で **+** アイコンを選択し、[評価]**プロジェクトタイプ**を選択します。
+1. 左側で、[ **+** ] アイコンを選択し、評価プロジェクトの**種類**を選択します。
 2. プロジェクト名を指定し、移行元サーバーと移行先サーバーの種類を選択します。
 
     オンプレミスの SQL Server インスタンスを SQL Server の新しいバージョンまたは Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。 Azure SQL Database (PaaS) ターゲット準備の評価の対象サーバーの種類を**Azure SQL Database Managed Instance**に設定します。
@@ -158,9 +159,9 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
    ![Azure Migrate-準備の結果を確認する](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
-    **評価済みのデータベースインスタンス**:これまでに評価された SQL Server インスタンスの数。
-    **評価済みデータベース**:1つ以上の SQL Server インスタンスで評価したデータベースの総数: **SQL DB の準備完了のデータベース**:Azure SQL Database (PaaS) に移行する準備ができているデータベースの数。
-    **AZURE SQL VM の準備ができているデータベース**:データベースの数は、Azure SQL Database (PaaS) に1つ以上の移行ブロックを構成しますが、Azure SQL Server Vm に移行する準備ができています。
+    評価された**データベースインスタンス**: これまでに評価された SQL Server インスタンスの数。
+    **評価**されたデータベース: 1 つ以上の SQL Server インスタンスで評価されたデータベースの総数: **SQL DB の準備ができて**いるデータベースの数: Azure SQL Database (PaaS) に移行する準備ができているデータベースの数。
+    **AZURE SQL VM の準備ができているデータベース**: データベースの数は、Azure SQL Database (PaaS) に1つ以上の移行ブロックを構成しますが、Azure SQL Server vm に移行する準備ができています。
 
 3. [評価された**データベースインスタンス**] を選択して SQL Server インスタンスレベルビューに移動します。
 
@@ -178,8 +179,8 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
    ![Azure Migrate-移行ブロックの確認](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-* [Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)
-* [Data Migration Assistant:ベストプラクティス](../dma/dma-bestpractices.md)
+* [Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)
+* [Data Migration Assistant: ベストプラクティス](../dma/dma-bestpractices.md)
