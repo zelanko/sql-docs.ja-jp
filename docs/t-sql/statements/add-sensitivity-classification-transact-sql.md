@@ -23,39 +23,44 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+- rank
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712366"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882405"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-1 つ以上のデータベース列に秘密度の分類に関するメタデータを追加します。 分類には、機密ラベルと情報の種類を含めることができます。  
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+
+1 つ以上のデータベース列に秘密度の分類に関するメタデータを追加します。 分類には、機密ラベルと情報の種類を含めることができます。
+
+SQL Server では、これは SQL Server 2019 で導入されました。
 
 データベース環境で機密データを分類すると、可視性の拡張と保護の強化が実現します。 詳しくは、[SQL Information Protection の概要](https://aka.ms/sqlip)に関する記事をご覧ください。
 
 ## <a name="syntax"></a>構文  
 
-```sql
+```
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_label_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )     
 
 <object_name> ::=
 {
     [schema_name.]table_name.column_name
 }
 
-<sensitivity_label_option> ::=  
+<sensitivity_option> ::=  
 {   
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString  
+    INFORMATION_TYPE_ID = guidOrString | 
+    RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```  
 
@@ -83,6 +88,10 @@ ADD SENSITIVITY CLASSIFICATION TO
 *INFORMATION_TYPE_ID*
 
 情報の種類に関連付けられている識別子です。 多くの場合、システムにおいて情報の種類を一意に識別するために、一元的な情報保護プラットフォームで使用されます。
+
+*RANK*
+
+感度の順位を定義する事前定義された値セットに基づく識別子です。 Advanced Threat Protection などの他のサービスによって使用され、順位に基づいて異常を検出します。
 
 
 ## <a name="remarks"></a>Remarks  

@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961789"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729868"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -29,7 +29,7 @@ ms.locfileid: "71961789"
 > [!NOTE]
 >  この記事での SQL Data Warehouse に関する説明は、特に明記がない限り、SQL Data Warehouse および Parallel Data Warehouse の両方に適用されます。
 
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>
 
@@ -162,11 +162,15 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  「例」セクションの「[パーティション テーブルの作成](#PartitionedTable)」を参照してください。
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>クラスター化列ストア インデックスの順序付けオプション (Azure SQL Data Warehouse のプレビュー)
+### <a name="ordered-clustered-columnstore-index-option"></a>クラスター化列ストア インデックスの順序付けオプション 
 
-クラスター化列ストア インデックス (CCI) は、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  CCI 内のデータは、列ストアセグメントに圧縮される前に並べ替えられることはありません。  ORDER を指定して CCI を作成すると、データは並べ替えられてからインデックス セグメントに追加されるため、パフォーマンスが向上することがあります。 詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci)」を参照してください。  
+クラスター化列ストア インデックス (CCI) は、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  CCI 内のデータは、列ストアセグメントに圧縮される前に並べ替えられることはありません。  ORDER を指定して CCI を作成すると、データは並べ替えられてからインデックス セグメントに追加されるため、パフォーマンスが向上することがあります。 詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)」を参照してください。  
 
-ユーザーは、sys.index_columns の column_store_order_ordinal 列に対して、テーブルが順序付けられている列とその順序でクエリを実行できます。  
+順序付けされた CCI は、文字列型の列を除く Azure SQL Data Warehouse でサポートされている任意のデータ型の列に作成できます。  
+
+ユーザーは、**sys.index_columns** の **column_store_order_ordinal** 列に対して、テーブルが順序付けられている列とその順序でクエリを実行できます。  
+
+詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)」を参照してください。   
 
 ### <a name="DataTypes"></a> データ型
 

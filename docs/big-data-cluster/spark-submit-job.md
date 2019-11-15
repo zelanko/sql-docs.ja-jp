@@ -1,7 +1,7 @@
 ---
 title: SQL Server ビッグ データ クラスター上の Azure Data Studio で Spark ジョブを送信する
 titleSuffix: SQL Server big data clusters
-description: Azure Data Studio で Spark ジョブ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を送信します。
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上の Azure Data Studio で Spark ジョブを送信します。'
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccaa9fbb10359791eb1d07ef8392a11977ae31db
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 3c7d346148d7967543e334af07d6f06402d72a0d
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653332"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844248"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>Azure Data Studio で Spark ジョブ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を送信する
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上の Azure Data Studio で Spark ジョブを送信する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-ビッグ データ クラスターの主なシナリオの 1 つに、SQL Server 2019 プレビュー用の Spark ジョブを送信する機能があります。 Spark ジョブ送信機能を使用すると、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar ファイルまたは Py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
+ビッグ データ クラスターの主なシナリオの 1 つに、SQL Server 用の Spark ジョブを送信する機能があります。 Spark ジョブ送信機能を使用すると、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar ファイルまたは Py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
    - **Azure Data Studio**

@@ -1,7 +1,7 @@
 ---
 title: サンプルのノートブックを実行する | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]でサンプル Spark notebook の実行を読み込む方法について説明します。
+description: このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] でサンプルの Spark ノートブックを読み込んで実行する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 18e182a251e0f93127ffc376648a29c3e2d9cd02
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653269"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844242"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターでサンプルのノートブックを実行する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]で Azure Data Studio で notebook を読み込んで実行する方法について説明します。 これにより、データ サイエンティストやデータ エンジニアは、クラスターに対して Python、R、または Scala コードを実行することができます。
+このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] で Azure Data Studio にノートブックを読み込んで実行する方法について説明します。 これにより、データ サイエンティストやデータ エンジニアは、クラスターに対して Python、R、または Scala コードを実行することができます。
 
 > [!TIP]
 > 必要に応じて、このチュートリアルのコマンド用のスクリプトをダウンロードして実行できます。 手順については、GitHub の [Spark サンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)を参照してください。
@@ -67,9 +67,9 @@ ms.locfileid: "69653269"
 
 ![ノートブック セルを実行する](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-サンプル ノートブック内の各セルを続けて実行します。 で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]notebook を使用する方法の詳細については、次のリソースを参照してください。
+サンプル ノートブック内の各セルを続けて実行します。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] でノートブックを使用する方法の詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 プレビューでノートブックを使用する方法](notebooks-guidance.md)
+- [SQL Server でノートブックを使用する方法](notebooks-guidance.md)
 - [Azure Data Studio でノートブックを管理する方法](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>次の手順

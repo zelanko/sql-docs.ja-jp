@@ -9,22 +9,22 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958289"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844271"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを管理する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 Preview を使用して Azure Data Studio でノートブック ファイルを開いて保存する方法について示します。 また、SQL Server ビッグ データ クラスターへの接続を変更する方法も示します。
+この記事では、SQL Server を使用して Azure Data Studio でノートブック ファイルを開いて保存する方法について示します。 また、SQL Server ビッグ データ クラスターへの接続を変更する方法も示します。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-この記事では、Azure Data Studio で使用するノートブックが既にあることを前提としています。 ノートブックを作成する場合は、「[SQL Server 2019 Preview でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。 Azure Data Studio でノートブックを使用するには、次の前提条件を満たしている必要があります。
+この記事では、Azure Data Studio で使用するノートブックが既にあることを前提としています。 ノートブックを作成する場合は、「[SQL Server でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。 Azure Data Studio でノートブックを使用するには、次の前提条件を満たしている必要があります。
 
 - [ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
 - [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
@@ -80,4 +80,4 @@ ms.locfileid: "67958289"
 
 ## <a name="next-steps"></a>次の手順
 
-Azure Data Studio のノードブックの詳細については、「[SQL Server 2019 Preview でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。
+Azure Data Studio のノードブックの詳細については、「[SQL Server 2019 でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。

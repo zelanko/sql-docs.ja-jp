@@ -1,5 +1,5 @@
 ---
-title: まずはデータベースのストレッチの有効化ウィザードを実行する | Microsoft Docs
+title: まずはデータベースのストレッチの有効化ウィザードを実行する
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -20,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b4239a8f6aefc9160171c1a700aa37733a66de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136128"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843798"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>まずはデータベースのストレッチの有効化ウィザードを実行する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68136128"
  -   Microsoft Azure のサブスクリプションが必要です。
  -   SQL Server がリモートの Azure サーバーと通信できる必要があります。
   
- ![Stretch Database ウィザードの [概要] ページ](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database ウィザードの [概要] ページ")  
+ ![Stretch Database ウィザードの概要ページ](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database ウィザードの概要ページ")  
   
 ##  <a name="Tables"></a> [テーブルの選択]  
  ストレッチを有効にするテーブルを選択します。  
@@ -76,7 +77,7 @@ ms.locfileid: "68136128"
   
 1.  **[拡張するテーブルを選択します。]** リスト内のテーブルの行で、 **[テーブル全体]** をクリックします。 **[拡張する行の選択]** ダイアログ ボックスが開きます。  
   
-     ![日付ベースのフィルター述語を定義](../../sql-server/stretch-database/media/stretch-wizard-2a.png "日付ベースのフィルター述語を定義")  
+     ![日付ベースのフィルター述語を定義する](../../sql-server/stretch-database/media/stretch-wizard-2a.png "日付ベースのフィルター述語を定義する")  
   
 2.  **[拡張する行の選択]** ダイアログ ボックスで **[行の選択]** を選択します。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "68136128"
 > [!NOTE] 
 > フィルター クエリを表示するテキストボックスは読み取り専用です。 テキストボックスのクエリは編集できません。
   
-6.  [終了] をクリックして **[テーブルの選択]** 画面に戻ります。  
+6.  終了 をクリックして  **テーブルの選択** 画面に戻ります。  
 
 フィルター関数は、ウィザードを終了した場合にのみ、SQL Server に作成されます。 それまでは、 **[テーブルの選択]** ページに戻って、フィルター関数を変更したり、名前を変更したりすることができます。
 
@@ -105,7 +106,7 @@ ms.locfileid: "68136128"
   
 1.  Microsoft アカウントを使用して Microsoft Azure にサインインします。  
   
-     ![Azure にサインイン- Stretch Database ウィザード](../../sql-server/stretch-database/media/stretch-wizard-3.png "Azure にサインイン- Stretch Database ウィザード")  
+     ![Azure にサインインする - Stretch Database ウィザード](../../sql-server/stretch-database/media/stretch-wizard-3.png "Azure にサインインする - Stretch Database ウィザード")  
   
 2.  Stretch Database で使用する既存の Azure サブスクリプションを選択します。 
 
@@ -165,7 +166,7 @@ ms.locfileid: "68136128"
 ##  <a name="Summary"></a> 概要  
  入力した値、ウィザードで選択したオプション、Azure の推定コストを確認します。 次に、 **[完了]** を選択してストレッチを有効にします。  
   
- ![Stretch Database ウィザードの [概要] ページ](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database ウィザードの [概要] ページ")  
+ ![Stretch Database ウィザードの概要ページ](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database ウィザードの概要ページ")  
   
 ##  <a name="Results"></a> [結果]  
  結果を確認します。  

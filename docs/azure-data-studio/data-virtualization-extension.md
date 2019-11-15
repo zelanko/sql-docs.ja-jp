@@ -2,20 +2,20 @@
 title: データ仮想化の拡張機能
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用のデータ仮想化の拡張機能
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532552"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801128"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Azure Data Studio 用のデータ仮想化の拡張機能
 
@@ -70,13 +70,13 @@ Azure Data Studio 用のデータ仮想化の拡張機能では、PolyBase [[Cre
 
 ## <a name="release-notes-v0102"></a>リリース ノート (v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 のサポート
-SQL Server 2019 のサポートが更新されました。 SQL Server ビッグ データ クラスター インスタンスに接続すると、新しい _Data Services_ フォルダーがエクスプローラー ツリーに表示されます。 このフォルダーには、接続に対して新しいノートブックを開く、Spark ジョブを送信する、HDFS を操作するといったアクション用の起動ポイントが用意されています。 HDFS ファイル/フォルダーに対する_外部データの作成_などの一部の操作については、_SQL Server 2019 プレビュー_の拡張機能をインストールする必要があります。
+SQL Server 2019 のサポートが更新されました。 SQL Server ビッグ データ クラスター インスタンスに接続すると、新しい _Data Services_ フォルダーがエクスプローラー ツリーに表示されます。 このフォルダーには、接続に対して新しいノートブックを開く、Spark ジョブを送信する、HDFS を操作するといったアクション用の起動ポイントが用意されています。 HDFS ファイル/フォルダーに対する_外部データの作成_などの一部の操作については、_SQL Server 2019_ の拡張機能をインストールする必要があります。
 
 ### <a name="notebook-support"></a>Notebook のサポート
 このリリースでは、Notebook ユーザー インターフェイスを大幅に更新しました。 Microsoft は、お客様と共有している Notebooks を読みやすくすることに重点を置きました。 つまり、選択されていない場合またはマウス ポインターが置かれていない場合にセルの周囲のすべてのアウトライン ボックスが削除されます。また、ホバー サポートの追加により、セルを選択することなく、セル レベルのアクションが簡単に行えます。さらに、実行カウントやアニメーション化された_実行停止ボタン_の追加などにより、実行状態が明確に示されます。 _新しいノートブック_ (`Ctrl+Shift+N`)、_セルの実行_ (`F5`)、_新しいコード セル_ (`Ctrl+Shift+C`)、_新しいテキスト セル_ (`Ctrl+Shift+T`) として、キーボード ショートカットを追加しました。 今後、Microsoft はすべての主要なアクションをショートカットで起動できるようにすることを目指していますので、不足しているものをお知らせください。
 
 その他の機能強化と修正には次のようなものがあります。
-* SQL Server _2019 プレビュー_の拡張機能では、Python 依存関係用のインストール ディレクトリを選択するように求めるメッセージが表示されるようになりました。 また、`.vsix file` に Python が含まれなくなり、拡張機能の全体的なサイズが小さくなりました。 Python の依存関係では、Spark カーネルと Python3 カーネルがサポートされます。
+* _SQL Server 2019_ の拡張機能では、Python 依存関係用のインストール ディレクトリを選択するように求めるメッセージが表示されるようになりました。 また、`.vsix file` に Python が含まれなくなり、拡張機能の全体的なサイズが小さくなりました。 Python の依存関係では、Spark カーネルと Python3 カーネルがサポートされます。
 * コマンドラインから新しいノートブックを起動するためのサポートが追加されました。 引数 `--command=notebook.command.new --server=myservername` を指定して起動すると、新しいノートブックが開き、このサーバーに接続します。
 * ノートブックにおいてセル内のコードが長い場合のパフォーマンスの修正。 コード セルが 250 行を超えると、スクロールバーが追加されます。
 * 改善された .ipynb ファイルのサポート。 バージョン 3 以降がサポートされるようになりました。 保存時にファイルのバージョンが 4 以上に更新されることに注意してください。

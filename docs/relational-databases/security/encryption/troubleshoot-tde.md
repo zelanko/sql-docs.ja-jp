@@ -10,30 +10,29 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903619"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727767"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault のカスタマー マネージド キーを使った透過的なデータ暗号化に関する一般的なエラー
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 この記事では、[Azure Key Vault のカスタマー マネージド キーで Transparent Data Encryption (TDE)](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) を使用するように構成されたデータベースがアクセスできなくなる原因となった、Azure Key Vault キーのアクセスに関する問題を特定して解決する方法について説明します。
 
-## <a name="introduction"></a>概要
-Azure Key Vault のカスタマー マネージド キーを使用するように TDE が構成されている場合、データベースをオンラインに保つには、この TDE 保護機能への継続的なアクセスが必要です。  論理 SQL サーバーが Azure Key Vault のカスタマー マネージド TDE 保護機能にアクセスできなくなった場合、データベースではすべての接続が拒否され、Azure portal でデータベースにアクセスできない状態になります。
+## <a name="introduction"></a>はじめに
+Azure Key Vault のカスタマー マネージド キーを使用するように TDE が構成されている場合、データベースをオンラインに保つには、この TDE 保護機能への継続的なアクセスが必要です。  論理 SQL サーバーが Azure Key Vault のカスタマー マネージド TDE 保護機能にアクセスできなくなった場合、データベースでは該当するエラー メッセージが表示されてすべての接続の拒否が始まり、Azure portal でその状態が *Inaccessible* になります。
 
-最初の 48 時間以内に基になっている Azure Key Vault のキー アクセスの問題が解決されると、データベースは自動修復され、自動的にオンラインになります。  つまり、間欠的および一時的なネットワーク停止のシナリオでは、ユーザーによる対応は必要なく、データベースは自動的にオンラインになります。  ほとんどの場合、基になっている Key Vault のキー アクセスの問題を解決するには、ユーザーによる対応が必要です。 
+最初の 8 時間以内に基になっている Azure Key Vault のキー アクセスの問題が解決されると、データベースは自動修復され、自動的にオンラインになります。 つまり、間欠的および一時的なネットワーク停止のシナリオでは、ユーザーによる対応は必要なく、データベースは自動的にオンラインになります。 ほとんどの場合、基になっている Key Vault のキー アクセスの問題を解決するには、ユーザーによる対応が必要です。 
 
-アクセスできないデータベースがもう必要ない場合は、すぐに削除してコストを抑えることができます。  Azure Key Vault キーへのアクセスが復元され、データベースがオンラインに戻るまで、データベースに対する他のすべての操作は許可されません。   カスタマー マネージド キーで暗号化されたデータベースにアクセスできない間は、サーバーで TDE のオプションをカスタマー マネージド キーからサービス マネージド キーに変更することもできません。 これは、TDE 保護機能へのアクセス許可が取り消されているときに、データを不正アクセスから保護するために必要です。 
+アクセスできないデータベースがもう必要ない場合は、すぐに削除してコストを抑えることができます。 Azure Key Vault キーへのアクセスが復元され、データベースがオンラインに戻るまで、データベースに対する他のすべての操作は許可されません。 カスタマー マネージド キーで暗号化されたデータベースにアクセスできない間は、サーバーで TDE のオプションをカスタマー マネージド キーからサービス マネージド キーに変更することもできません。 これは、TDE 保護機能へのアクセス許可が取り消されているときに、データを不正アクセスから保護するために必要です。 
 
-データベースにアクセスできない期間が 48 時間を超えると、自動修復は行われなくなります。  必要な Azure Key Vault のキー アクセスが復元された場合は、手動でアクセスを再検証して、データベースをオンラインに戻す必要があります。  48 時間より長くアクセス不能になった後でデータベースをオンラインに戻す場合は、データベースのサイズによってはかなり時間がかかることがあり、現在はサポート チケットが必要になります。 データベースがオンラインに戻ると、Geo-DR が構成されていた場合の geo リンク、PITR 履歴、タグなどの以前に構成した設定は失われます。  そのため、基になっている Key Vault の問題を 48 時間以内に解決できるように、[アクション グループ](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)を使用して通知システムを実装することをお勧めします。 
-
+データベースにアクセスできない期間が 8 時間を超えると、自動修復は行われなくなります。 この期間の後に必要な Azure Key Vault のキー アクセスが復元された場合は、手動でアクセスを再検証して、データベースをオンラインに戻す必要があります。 この状況でデータベースをオンラインに戻す場合は、データベースのサイズによってはかなり時間がかかることがあり、現在はサポート チケットが必要になります。 データベースがオンラインに戻ると、Geo-DR が構成されていた場合の geo リンク、PITR 履歴、タグなどの以前に構成した設定は失われます。 そのため、基になっている Key Vault のキー アクセスの問題にできる限り早く気付き、対処できるように、[アクション グループ](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)を使用して通知システムを実装することをお勧めします。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>データベースにアクセスできなくなる原因となる一般的なエラー
 
@@ -176,13 +175,13 @@ Azure Key Vault のキー アクセスの問題によるデータベースの状
 
  
 
-**自己修復の 48 時間の待機時間が開始したときのイベント** 
+**自己修復の 8 時間の待機時間が開始したときのイベント** 
 
 イベント名: MakeDatabaseInaccessible 
 
 状態:InProgress 
 
-説明:データベースは、48 時間以内にユーザーによって Azure Key Vault のキー アクセスが再確立されるのを待機しています。   
+説明:データベースは、8 時間以内にユーザーによって Azure Key Vault のキー アクセスが再確立されるのを待機しています。   
 
  
 
@@ -196,7 +195,7 @@ Azure Key Vault のキー アクセスの問題によるデータベースの状
 
  
 
-**48 時間以内に問題が解決されず、Azure Key Vault のキーのアクセスを手動で検証する必要がある場合のイベント** 
+**8 時間以内に問題が解決されず、Azure Key Vault のキー アクセスを手動で検証する必要がある場合のイベント** 
 
 イベント名: MakeDatabaseInaccessible 
 

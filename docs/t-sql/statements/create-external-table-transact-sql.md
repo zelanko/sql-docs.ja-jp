@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227145"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882381"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -580,9 +580,7 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>概要:Azure SQL データベース
 
-Azure SQL Database で、Azure SQL Database と共に使用するための[エラスティック クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)用外部テーブルを作成します。
-
-外部テーブルを使用し、エラスティック クエリで使用するための外部テーブルを作成します。
+Azure SQL Database で、[エラスティック クエリ (プレビュー)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) 用外部テーブルを作成します。
 
 「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」を参照してください。
 
@@ -661,7 +659,7 @@ SELECT FROM EXTERNAL TABLE などのアドホック クエリのシナリオの�
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-外部テーブルのデータは別の SQL Database にあるため、いつでも変更したり、削除したりできます。 その結果、外部のテーブルに対するクエリの結果は確定的であることが保証されません。 同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
+外部テーブルを使用したデータへのアクセスは、SQL Server 内の分離セマンティクスに準拠しません。 つまり、外部のクエリによってロックやスナップショットの分離が行われないため、外部データ ソースのデータが変更されると、返されるデータが変更される可能性があります。  同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
 
 それぞれが異なる外部データ ソースを参照する複数の外部テーブルを作成できます。
 
@@ -674,6 +672,24 @@ SELECT FROM EXTERNAL TABLE などのアドホック クエリのシナリオの�
 
 - 外部テーブルの列に対する DEFAULT 制約
 - データ操作言語 (DML) の削除、挿入、更新の操作
+
+外部データ ソースにプッシュ ダウンできるのは、クエリで定義されたリテラル述語のみです。 これはリンク サーバーとは異なり、クエリ実行中に決定された述語を使用できる場合、つまりクエリ プランで入れ子になったループと組み合わせて使用されるときにアクセスします。 この動作により、多くの場合、外部テーブル全体がローカルにコピーされてから結合されます。    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+                         WHERE CustomerName = 'MyCompany')
+```
+
+外部テーブルを使用すると、クエリ プランで並列処理を使用できなくなります。
+
+外部テーブルはリモート クエリとして実装されます。そのため、返される推定行数は通常 1000 です。外部テーブルのフィルター処理に使用される述語の種類に基づいて他のルールがあります。 これらは、外部テーブルの実際のデータに基づく推定ではなく、ルールベースの推定です。 Optimiser は、リモート データ ソースにアクセスせず、より正確な推定を取得します。
 
 ## <a name="locking"></a>ロック
 

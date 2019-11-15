@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890462"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729910"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -450,7 +450,7 @@ OFF
 データベースの包含オプションを制御します。
 
 CONTAINMENT = { **NONE** | PARTIAL}        
-なし        
+NONE        
 データベースは非包含データベースです。
 
 PARTIAL        
@@ -789,7 +789,7 @@ ALL
 AUTO        
 実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の既定の構成値です。
 
-なし        
+NONE        
 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
 CUSTOM        
@@ -861,7 +861,7 @@ TORN_PAGE_DETECTION
 
 値が一致しない場合は、ページの一部だけがディスクに書き込まれています。 この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログと Windows イベント ログの両方に、エラー メッセージ 824 (破損ページ エラーを示す) がレポートされます。 ページの不完全書き込みにより破損したページは、通常はデータベース復旧時に検出されます。 ただし、その他の I/O パス障害によっても、破損ページが発生する可能性があります。
 
-なし        
+NONE        
 データベース ページの書き込み時に CHECKSUM 値または TORN_PAGE_DETECTION 値は生成されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ページ ヘッダーに CHECKSUM 値や TORN_PAGE_DETECTION 値が存在する場合でも、読み取り中にチェックサムや破損ページを確認しません。
 
 PAGE_VERIFY オプションを使用する場合は、次に示す重要な点を考慮してください。
@@ -1840,7 +1840,7 @@ ALL
 AUTO        
 実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。 これは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の既定の構成値です。
 
-なし        
+NONE        
 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
 QUERY_CAPTURE_MODE は **nvarchar** 型です。
@@ -2575,7 +2575,7 @@ ALL
 AUTO        
 実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。 これは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の既定の構成値です。
 
-なし        
+NONE        
 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
 QUERY_CAPTURE_MODE は **nvarchar** 型です。
@@ -3049,16 +3049,20 @@ WHERE name = <'Your_Database_Name'>
 
 ```sql
 
-SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests 
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+> [!IMPORTANT]
+> 結果セットのキャッシュを作成し、キャッシュからデータを取得する操作は、データ ウェアハウス インスタンスの制御ノードで行われます。 結果セットのキャッシュが ON になっているときに、大きな結果セット (100 万行超など) を返すクエリを実行すると、制御ノードで CPU 使用率が高くなり、インスタンスでのクエリ応答全体が遅くなる可能性があります。 これらのクエリは、通常、データの探索または ETL 操作で使用されます。 制御ノードに負荷がかかってパフォーマンスの問題が発生する状況を回避するには、ユーザーは、これらの種類のクエリを実行する前に、データベースの結果セットのキャッシュを OFF にする必要があります。  
+
+結果セットのキャッシュによるパフォーマンス チューニングの詳細については、「[パフォーマンス チューニング ガイダンス](/azure/sql-data-warehouse/performance-tuning-result-set-caching)」を確認してください。
+
 ### <a name="permissions"></a>アクセス許可
 RESULT_SET_CACHING オプションを設定するには、ユーザーにサーバーレベルのプリンシプル ログインを与えるか (プロビジョニング プロセスで作成されるもの)、ユーザーが `dbmanager` データベース ロールのメンバーになる必要があります。  
 
-
 **<snapshot_option> ::=**         
-**適用対象**:Azure SQL Data Warehouse (プレビュー)
+**適用対象**:Azure SQL Data Warehouse 
 
 データベースのトランザクション分離レベルを制御します。
 
@@ -3115,7 +3119,6 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>参照
 
-- [結果セットのキャッシュを使用したパフォーマンス チューニング](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

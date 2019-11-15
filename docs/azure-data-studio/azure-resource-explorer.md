@@ -5,28 +5,27 @@ description: Azure Resource Explorer を使用して、Azure SQL Server、Azure 
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 09/24/2018
+ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959712"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801136"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Azure Resource Explorer を使用して Azure SQL リソースを調査および管理する
 
 このドキュメントでは、[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] の Azure Resource Explorer を使用して、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance のリソースを調査し、管理する方法について学習します。
 
 >[!NOTE]
->Azure Resource Explorer は、10 月の SQL Server 2019 プレビューでサポートされる予定です。 その後、[拡張機能マネージャー](extensions.md)または **[ファイル]**  >  **[Install Package from VSIX Package]\(VSIX パッケージからパッケージをインストールする\)** を使用して、プレビュー拡張機能をインストールすることができます。
-
+>Azure Resource Explorer は SQL Server 2019 でサポートされています。 その後、[拡張機能マネージャー](extensions.md)または **[ファイル]**  >  **[Install Package from VSIX Package]\(VSIX パッケージからパッケージをインストールする\)** を使用して、拡張機能をインストールできます。
 
 ## <a name="connect-to-azure"></a>Azure に接続する
 
-SQL プレビュー プラグインをインストールした後、Azure アイコンが左側のメニュー バーに表示されます。 アイコンをクリックして Azure Resource Explorer を開きます。 Azure アイコンが表示されない場合は、左側のメニュー バーを右クリックし、 **[Azure Resource Explorer]** を選択します。
+SQL プラグインをインストールした後、Azure アイコンが左側のメニュー バーに表示されます。 アイコンをクリックして Azure Resource Explorer を開きます。 Azure アイコンが表示されない場合は、左側のメニュー バーを右クリックし、 **[Azure Resource Explorer]** を選択します。
 
 ### <a name="add-an-azure-account"></a>Azure アカウントを追加する
 
@@ -87,7 +86,7 @@ Azure Resource Explorer で Azure SQL リソースを移動するには、Azure 
 
 ## <a name="connect-to-azure-sql-resources"></a>Azure SQL リソースに接続する
 
-Azure Resource Explorer では、クエリおよび管理のために SQL Server およびデータベースに接続する際に役立つクイック アクセスが提供されます。 
+Azure Resource Explorer では、クエリおよび管理のために SQL Server およびデータベースに接続する際に役立つクイック アクセスが提供されます。
 
 1. ツリー ビューから、接続する SQL リソースを探索します。
 2. リソースを右クリックして **[接続]** を選択し、リソースの右側にある [接続] ボタンを見つけることもできます。

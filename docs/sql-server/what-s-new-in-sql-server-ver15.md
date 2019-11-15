@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a24d5e25bfbeb7aed32257b22dd3dac5d1c53f7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593886"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844563"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -153,6 +153,7 @@ ms.locfileid: "73593886"
 |:---|:---|
 |セキュア エンクレーブを使用する Always Encrypted|Always Encrypted、インプレース暗号化、さまざまな計算法を基盤に拡張し、サーバー側のセキュア エンクレーブ内でプレーンテキスト データの計算を可能にします。 インプレース暗号化では、データをデータベースの外に移動することが回避されるため、暗号操作 (列の暗号化、列のローテーション、暗号化鍵など) の性能と信頼度が上がります。<br><br> さまざまな計算法 (パターン一致や比較演算) がサポートされることで、機密データの保護が求められ、同時に Transact-SQL クエリで豊富な機能性が求められる幅広いシナリオや用途に Always Encrypted が対応できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)」をご覧ください。|
 |SQL Server 構成マネージャーでの証明書管理|[証明書の管理 (SQL Server 構成マネージャー)](../database-engine/configure-windows/manage-certificates.md) に関するページを参照してください。|
+|データの検出と分類|データの検出と分類には、データベース内の機密データを分類、ラベル付け、および保護するために、SQL Server にネイティブに組み込まれている高度な機能が用意されています。 最も機密性の高いデータ (ビジネス、財務、医療、PII など) の分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。 次のような場合にインフラストラクチャとして使用できます。<ul><li>データのプライバシー基準と規制のコンプライアンス要件を満たせるようにする。</li><li>監視 (監査) や、機密データへの異常アクセスに対するアラートなど、さまざまなセキュリティ シナリオ。</li><li>管理者がデータベースをセキュリティで保護する適切な手順を実行できるように、企業内で機密データが存在する場所を識別しやすくする。</li></ul>[監査](../relational-databases/security/auditing/sql-server-audit-database-engine.md)も、新しいフィールド `data_sensitivity_information` が監査ログに追加されて強化されました。このフィールドには、クエリによって返された実際のデータの機密度の分類 (ラベル) が記録されます。 詳細と例については、「[ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md)」をご覧ください。|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>高可用性
@@ -226,14 +227,6 @@ ms.locfileid: "73593886"
 |Windows Server フェールオーバー クラスター| Windows Server フェールオーバー クラスター上の Machine Learning Services に高可用性を構成できます。|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| 新機能または更新 | 詳細 |
-|:---|:---|
-|Azure SQL Database Managed Instance データベースのサポート| マネージド インスタンス上で [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] をホストします。 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] のインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)に関するページを参照してください。|
-|新しい HTML コントロール| HTML コントロールでは、以前の Silverlight コンポーネントがすべて置き換えられます。 Silverlight の依存関係が削除されました。|
-| &nbsp; | &nbsp; |
-
 ## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services (SQL Server Analysis Services)
 
 このリリースでは、パフォーマンス、リソース ガバナンス、およびクライアント サポートの新機能と機能強化が導入されました。
@@ -246,6 +239,23 @@ ms.locfileid: "73593886"
 |リソース ガバナンス用のプロパティ設定| このリリースでは、新しいメモリ設定が追加されました: リソース ガバナンス用の Memory\QueryMemoryLimit、DbpropMsmdRequestMemoryLimit、OLAP\Query\RowsetSerializationLimit。 詳細については、[メモリの設定](/analysis-services/server-properties/memory-properties)に関する記事を参照してください。|
 |Power BI キャッシュの更新に対するガバナンス設定 | このリリースでは、ClientCacheRefreshPolicy プロパティが導入されました。これを使うと、Power BI サービスによるライブ接続レポートの初期読み込み時に、ダッシュボード タイル データとレポート データのキャッシュがオーバーライドされます。 詳細については、「[全般プロパティ](/analysis-services/server-properties/general-properties)」を参照してください。 |
 | オンラインのアタッチ  | オンラインのアタッチは、オンプレミスのクエリ スケールアウト環境で読み取り専用レプリカを同期するために使用できます。 詳細については、「[オンラインのアタッチ](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach)」を参照してください。 |
+| &nbsp; | &nbsp; |
+
+## <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+このリリースでは、ファイル操作を改善する新機能が導入されています。
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+|柔軟なファイル タスク |ローカルファイルシステム、Azure Blob Storage、および Azure Data Lake Storage Gen2 でファイル操作を実行します。 「[柔軟なファイル タスク](../integration-services/control-flow/flexible-file-task.md)」を参照してください。|
+|柔軟なファイルの変換元と変換先 |Azure Blob Storage、および Azure Data Lake Storage Gen2 のデータの読み取りと書き込みを行います。 「[柔軟なファイルの変換元](../integration-services/data-flow/flexible-file-source.md)」と「[柔軟なファイルの変換先](../integration-services/data-flow/flexible-file-destination.md)」を参照してください。 |
+
+## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+|Azure SQL Database Managed Instance データベースのサポート| マネージド インスタンス上で [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] をホストします。 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] のインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)に関するページを参照してください。|
+|新しい HTML コントロール| HTML コントロールでは、以前の Silverlight コンポーネントがすべて置き換えられます。 Silverlight の依存関係が削除されました。|
 | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-reporting-services"></a>SQL Server Reporting Services (SQL Server Reporting Services)
