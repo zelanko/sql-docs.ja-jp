@@ -1,52 +1,53 @@
 ---
-title: Python モデルを使用して潜在的な結果を予測する
-description: T-sql 関数を使用し SQL Server ストアドプロシージャに埋め込まれた PYthon スクリプトを運用化する方法を示すチュートリアル
+title: Python + T-SQL:予測の実行
+description: T-SQL 関数を使用し SQL Server ストアド プロシージャに埋め込まれた PYthon スクリプトを運用する方法を示すチュートリアル
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: be80892db818bafdb45da974a064a0c5cf1fdc3f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 6ac6abe2ea0f04ee0778b80b98bf28f3f12c2f6e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715349"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724713"
 ---
-# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>ストアドプロシージャに埋め込まれた Python を使用した予測の実行
+# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>ストアド プロシージャに埋め込まれた Python を使用した予測の実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事は、 [SQL 開発者向けのデータベース内 Python analytics](sqldev-in-database-python-for-sql-developers.md)のチュートリアルの一部です。 
+この記事は、[SQL 開発者向けのデータベース内 Python 分析チュートリアルの一部です](sqldev-in-database-python-for-sql-developers.md)。 
 
-この手順では、前の手順でトレーニングして保存したモデルを*運用化*する方法を学習します。
+この手順では、前の手順でトレーニングして保存したモデルを*運用する*方法について説明します。
 
-このシナリオでは、運用化とは、スコア付けのためにモデルを運用環境にデプロイすることを意味します。 SQL Server との統合により、Python コードをストアドプロシージャに埋め込むことができるため、これは非常に簡単になります。 新しい入力に基づいてモデルから予測を取得するには、アプリケーションからストアドプロシージャを呼び出し、新しいデータを渡します。
+このシナリオでは、運用とは、スコアリングのためにモデルを実稼働環境にデプロイすることを意味します。 SQL Server との統合により、Python コードをストアド プロシージャに埋め込むことができるため、これは非常に簡単になります。 新しい入力に基づき、モデルから予測を取得するには、アプリケーションからストアド プロシージャを呼び出し、新しいデータを渡します。
 
-このレッスンでは、1つの Python モデルに基づいて予測を作成する2つの方法を示します。バッチスコアリングと、行ごとのスコア付けです。
+このレッスンでは、Python モデルに基づいて予測を作成する、バッチ スコアリングと、行ごとのスコアリングの、2 つの方法を説明します。
 
-- **バッチスコアリング:** 入力データの複数の行を指定するには、SELECT クエリを引数としてストアドプロシージャに渡します。 結果は、入力したケースに対応する観測のテーブルになります。
-- **個々のスコア付け:** 個別のパラメーター値のセットを入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
+- **バッチ スコアリング:** 入力データの複数の行を指定するには、SELECT クエリを引数としてストアド プロシージャに渡します。 結果は、入力ケースに対応する観察のテーブルを返します。
+- **個別のスコアリング**:個々のパラメーター値のセットを入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
 
-スコアリングに必要なすべての Python コードは、ストアドプロシージャの一部として提供されています。
+スコアリングに必要なすべての Python コードは、ストアド プロシージャの一部として提供されています。
 
-## <a name="batch-scoring"></a>バッチスコアリング
+## <a name="batch-scoring"></a>バッチ スコアリング
 
-最初の2つのストアドプロシージャは、ストアドプロシージャで Python 予測呼び出しをラップするための基本的な構文を示しています。 どちらのストアドプロシージャでも、入力としてデータのテーブルが必要です。
+最初の2つのストアド プロシージャは、ストアド プロシージャで Python 予測呼び出しをラップするための基本的な構文を示します。 どちらのストアドプロシージャでも、入力としてデータのテーブルが必要です。
 
-- 使用するモデルの正確な名前は、ストアドプロシージャへの入力パラメーターとして提供されます。 ストアドプロシージャは、ストアドプロシージャの SELECT ステートメントを使用`nyc_taxi_models`して、データベーステーブルからシリアル化されたモデルを読み込みます。
-- シリアル化されたモデルは python 変数`mod`に格納され、python を使用してさらに処理を行うことができます。
-- スコア付けが必要な新しいケースは、「」で[!INCLUDE[tsql](../../includes/tsql-md.md)] `@input_data_1`指定されたクエリから取得されます。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。
-- どちらのストアドプロシージャも、 `sklearn`の関数を使用して精度メトリック ([曲線] の下の領域) を計算します。 # C などの精度メトリックは、ターゲットラベル (_キャッチ_された列) も指定する場合にのみ生成できます。 予測にはターゲットラベル (変数`y`) は必要ありませんが、精度メトリックの計算では、
+- 使用するモデルの正確な名前は、ストアド プロシージャへの入力パラメーターとして提供されます。 ストアド プロシージャは、ストアド プロシージャの SELECT ステートメントを使用して、データベーステーブル `nyc_taxi_models`.table から、シリアル化されたモデルを読み込みます。
+- シリアル化されたモデルは、Python を使用して`mod`さらに処理するために、Python 変数に格納されます。
+- スコア付けが必要な新しいケースは、`@input_data_1` で指定された [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリから取得されます。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。
+- どちらのストアド プロシージャも、`sklearn` の関数を使用して精度メトリック (曲線の下の領域) を計算します。 AUC などの精度メトリックは、ターゲットラベル (_チップ_列) も指定する場合にのみ生成できます。 予測には、ターゲット ラベル (変数 `y`) は必要ありませんが、精度メトリックの計算には必要です。
 
-    したがって、スコア付けするデータのターゲットラベルがない場合は、ストアドプロシージャを変更して、c の計算を削除し、特徴 (ストアドプロシージャの変数`X` ) からチップの確率のみを返すことができます。
+    したがって、スコア付けされるデータのターゲット ラベルがない場合は、ストアド プロシージャを変更して、AUC の計算を削除し、特徴 (ストアド プロシージャの変数 `X`) からチップを得る確率のみを返すことができます。
 
 ### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
 
-次の T-sql ステートメントを実行して、ストアドプロシージャを作成します。 このストアドプロシージャでは、そのパッケージに固有の関数が使用されるため、scikit-learn パッケージに基づくモデルが必要です。
+次の T-SQL ステートメントを実行して、ストアド プロシージャを作成します。 このストアド プロシージャでは、そのパッケージに固有の関数が使用されるため、scikit-learn パッケージに基づくモデルが必要です。
 
-+ 入力を含むデータフレームは、ロジスティック回帰`predict_proba` `mod`モデルの関数に渡されます。 関数 (`probArray = mod.predict_proba(X)`) は、チップ (任意の金額) が指定される確率を表す float を返します。 `predict_proba`
++ 入力を含むデータフレームは、ロジスティック回帰モデルの`predict_proba`関数`mod`に渡されます。 `predict_proba`関数（`probArray = mod.predict_proba(X)`）は、(金額を問わず) チップを得えられる確率を表す**浮動**を返します。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
@@ -90,7 +91,7 @@ GO
 
 ### <a name="predicttiprxpy"></a>PredictTipRxPy
 
-このストアドプロシージャは同じ入力を使用し、前のストアドプロシージャと同じ種類のスコアを作成しますが、SQL Server machine learning で提供される**revoscalepy**パッケージの関数を使用します。
+このストアド プロシージャは同じ入力を使用し、前のストアド プロシージャと同じ種類のスコアを作成しますが、SQL Server Machine Learning で提供されている **revoscalepy** パッケージの関数を使用します。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
@@ -131,16 +132,16 @@ END
 GO
 ```
 
-## <a name="run-batch-scoring-using-a-select-query"></a>SELECT クエリを使用したバッチスコアリングの実行
+## <a name="run-batch-scoring-using-a-select-query"></a>SELECT クエリを利用したバッチ スコアリング
 
-ストアドプロシージャ**PredictTipSciKitPy**と**PredictTipRxPy**には、次の2つの入力パラメーターが必要です。 
+ストアド プロシージャ **PredictTipSciKitPy** と **PredictTipRxPy** には、次の2つの入力パラメーターが必要です。 
 
 - スコアリングのためにデータを取得するクエリ
 - トレーニング済みのモデルの名前
 
-これらの引数をストアドプロシージャに渡すことで、特定のモデルを選択したり、スコアリングに使用するデータを変更したりできます。
+これらの引数をストアド プロシージャに渡すことで、特定のモデルを選択したり、スコアリングに使用するデータを変更したりできます。
 
-1. スコアリングに**scikit-learn**モデルを使用するには、ストアドプロシージャ**PredictTipSciKitPy**を呼び出して、モデル名とクエリ文字列を入力として渡します。
+1. スコアリングに **scikit-learn** モデルを使用するには、ストアド プロシージャ **PredictTipSciKitPy** を呼び出して、モデル名とクエリ文字列を入力として渡します。
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -151,11 +152,11 @@ GO
     EXEC [dbo].[PredictTipSciKitPy] 'SciKit_model', @query_string;
     ```
 
-    このストアドプロシージャは、入力クエリの一部として渡された各トリップの予測確率を返します。 
+    このストアド プロシージャは、入力クエリの一部として渡された各乗車について予測確率を返します。 
     
-    クエリの実行に SSMS (SQL Server Management Studio) を使用している場合、確率は**結果**ペインにテーブルとして表示されます。 **メッセージ** ウィンドウには、精度のメトリック (曲線 の下にある 領域) が出力され、0.56 の値が表示されます。
+    クエリの実行に SSMS (SQL Server Management Studio) を使用している場合、確率は **[結果]** の ペインにテーブルとして表示されます。 **[メッセージ]** ペインには、精度メトリック (AUC または曲線の下の面積) が出力され、0.56 に近い値が表示されます。
 
-2. スコアリングに**revoscalepy**モデルを使用するには、ストアドプロシージャ**PredictTipRxPy**を呼び出して、モデル名とクエリ文字列を入力として渡します。
+2. スコアリングに **revoscalepy** モデルを使用するには、ストアド プロシージャ **PredictTipRxPy** を呼び出して、モデル名とクエリ文字列を入力として渡します。
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -168,25 +169,25 @@ GO
 
 ## <a name="single-row-scoring"></a>単一行のスコアリング
 
-バッチスコアリングではなく、1つのケースを渡し、アプリケーションから値を取得し、それらの値に基づいて1つの結果を返すことが必要になる場合があります。 たとえば、Excel ワークシート、web アプリケーション、またはレポートを設定して、ストアドプロシージャを呼び出し、ユーザーが入力または選択した入力に渡すことができます。
+バッチ スコアリングではなく、アプリケーションから値を取得し、単一のケースを渡し、それらの値に基づいて単一の結果を返すことが必要になる場合があります。 たとえば、Excel ワークシート、web アプリケーション、またはレポートを設定して、ストアド プロシージャを呼び出し、ユーザーが入力または選択した入力に渡すことができます。
 
-このセクションでは、次の2つのストアドプロシージャを呼び出して単一の予測を作成する方法について説明します。
+このセクションでは、次の2つのストアド プロシージャを呼び出して単一の予測を作成する方法について説明します。
 
-+ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy)は、scikit-learn モデルを使用して単一行スコアリングを目的として設計されています。
-+ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy)は、revoscalepy モデルを使用して単一行スコアリングを目的として設計されています。
-+ まだモデルをトレーニングしていない場合は、[手順 5](sqldev-py5-train-and-save-a-model-using-t-sql.md). に戻ります。
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) は、scikit-learn モデルを使用して単一行スコアリングを目的として設計されています。
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) は、revoscalepy モデルを使用して単一行スコアリングを目的として設計されています。
++ まだモデルをトレーニングしていない場合は、[ステップ 5](sqldev-py5-train-and-save-a-model-using-t-sql.md) に戻ってください。
 
-どちらのモデルも、乗客数、旅行距離などの一連の単一値を入力として受け取ります。 テーブル値関数`fnEngineerFeatures`は、緯度と経度の値を入力から新しい特徴である直行距離に変換するために使用されます。 [レッスン 4](sqldev-py4-create-data-features-using-t-sql.md)には、このテーブル値関数の説明が含まれています。
+どちらのモデルも、乗客数、走行距離などの一連の単一値を入力として受け取ります。 テーブル値関数の `fnEngineerFeatures` は、入力から緯度と経度の値を使用して、新しい機能 (直線距離) に変換します。 [レッスン 4](sqldev-py4-create-data-features-using-t-sql.md) には、このテーブル値関数の説明が含まれています。
 
-どちらのストアドプロシージャも、Python モデルに基づいてスコアを作成します。
+どちらのストアド プロシージャも、Python モデルに基づいてスコアを作成します。
 
 > [!NOTE]
 > 
-> 外部アプリケーションからストアドプロシージャを呼び出すときに、Python モデルに必要なすべての入力機能を提供することが重要です。 エラーを回避するには、データ型とデータ長を検証するだけでなく、入力データを Python データ型にキャストまたは変換することが必要になる場合があります。
+> 外部アプリケーションからストアド プロシージャを呼び出すときに、Python モデルに必要なすべての入力機能を提供することが重要です。 エラーを回避するには、データ型とデータ長を検証するだけでなく、入力データを Python データ型にキャストまたは変換することが必要になる場合があります。
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
-**Scikit-learn**モデルを使用してスコアリングを実行するストアドプロシージャのコードを確認します。
+少し時間を取って、**scikit-learn** モデルを使用してスコアリングを実行するストアド プロシージャのコードをレビューします。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
@@ -253,7 +254,7 @@ GO
 
 ### <a name="predicttipsinglemoderxpy"></a>PredictTipSingleModeRxPy
 
-次のストアドプロシージャは、 **revoscalepy**モデルを使用してスコアリングを実行します。
+次のストアド プロシージャは、**revoscalepy** モデルを使用してスコアリングを実行します。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
@@ -324,7 +325,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>モデルからスコアを生成する
 
-ストアドプロシージャを作成した後は、どちらのモデルに基づいても簡単にスコアを生成できます。 新しい**クエリ**ウィンドウを開き、各機能列のパラメーターを入力するか貼り付けます。 これらの特徴列の7つの必須値は、次の順序で指定します。
+ストアド プロシージャが作成されれば、どちらのモデルに基づいても簡単にスコアを生成できます。 新しい**クエリ** ウィンドウを開き、ストアド プロシージャを呼び出します。機能列のそれぞれにパラメーターを入力または貼り付けます。 値は次の機能に利用され、次の順序で並んでいます。
     
 + *passenger_count*
 + *trip_distance* v*trip_time_in_secs*
@@ -333,28 +334,28 @@ GO
 + *dropoff_latitude*
 + *dropoff_longitude*
 
-1. **Revoscalepy**モデルを使用して予測を生成するには、次のステートメントを実行します。
+1. **revoscalepy** モデルを使用して予測を生成するには、次のステートメントを実行します。
   
     ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-2. **Scikit-learn**モデルを使用してスコアを生成するには、次のステートメントを実行します。
+2. **scikit-learn** モデルを使用してスコアを生成するには、次のステートメントを実行します。
 
     ```sql
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-両方の手順からの出力は、指定されたパラメーターまたは特徴を使用してタクシー旅行に支払われるチップの確率です。
+両方のプロシージャからの出力結果は、指定されたパラメーターまたは特徴を使用したときの、タクシー乗車で支払われるチップの確率です。
 
-## <a name="conclusions"></a>まとめ
+## <a name="conclusions"></a>結論
 
-このチュートリアルでは、ストアドプロシージャに埋め込まれた Python コードを使用する方法について学習しました。 と[!INCLUDE[tsql](../../includes/tsql-md.md)]の統合により、予測のための Python モデルのデプロイが非常に簡単になり、エンタープライズデータワークフローの一部としてモデルの再トレーニングを組み込むことができます。
+このチュートリアルでは、ストアド プロシージャに埋め込まれた Python コードを操作する方法について説明しました。 [!INCLUDE[tsql](../../includes/tsql-md.md)] との統合により、Python モデルを展開して予測することと、エンタープライズ データ ワークフローの一部としてモデルを組み込み、維持することが簡単になります。
 
 ## <a name="previous-step"></a>前の手順
 
 [Python モデルのトレーニングと保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [SQL Server の Python 拡張機能](../concepts/extension-python.md)

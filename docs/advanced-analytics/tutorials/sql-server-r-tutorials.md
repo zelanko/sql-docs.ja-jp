@@ -1,52 +1,53 @@
 ---
-title: SQL Server R のチュートリアルの概要
-description: SQL Server database analytics の R 言語チュートリアルの概要。
+title: R のチュートリアル
+description: SQL Server のデータベース内分析に関する R 言語のチュートリアルについて。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc0cde616bc03be4a984d8de518770b490e4a89a
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: 94572fb70e511cb99fc19deb77a86b4efb69673a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199342"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725930"
 ---
-# <a name="sql-server-r-language-tutorials"></a>SQL Server R 言語のチュートリアル
+# <a name="sql-server-r-language-tutorials"></a>SQL Server の R 言語のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、 [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md)または[SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)でのデータベース内分析の r 言語チュートリアルについて説明します。
+この記事では、[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) または [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) のデータベース内分析に関する R 言語のチュートリアルについて説明します。
 
-+ ストアドプロシージャで R コードをラップして実行する方法について説明します。
++ ストアド プロシージャで R コードをラップして実行する方法について説明します。
 + R ベースのモデルをシリアル化し、SQL Server データベースに保存します。
-+ リモートとローカルの計算コンテキスト、およびそれらを使用するタイミングについて説明します。
-+ データサイエンスと機械学習のタスクについては、Microsoft R ライブラリを参照してください。
++ リモートおよびローカルの計算コンテキストについて、およびそれらを使用するタイミングについて説明します。
++ データ サイエンスと機械学習のための Microsoft R ライブラリについて検討します。
 
 <a name="bkmk_sqltutorials"></a>
 
 ## <a name="r-quickstarts-and-tutorials"></a>R のクイックスタートとチュートリアル
 
-| リンク | 説明 |
+| リンク | [説明] |
 |------|-------------|
-| [クイック スタート:単純な R スクリプトを作成して実行する](quickstart-r-create-script.md) | まず、いくつかのクイックスタートでは、SQL Server Management Studio などの T-sql クエリエディターを使用して R 関数を呼び出すための基本的な構文を紹介します。 |
-| [チュートリアル: データ科学者向けのデータベース内 R 分析について学習する](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | SQL Server を初めて使用する R 開発者向けに、このチュートリアルでは SQL Server で一般的なデータサイエンスタスクを実行する方法について説明します。 データを読み込んで視覚化し、モデルをトレーニングして SQL Server に保存し、予測分析にモデルを使用します。 |
-| [チュートリアル: SQL 開発者向けのデータベース内 R 分析について学習する](../tutorials/sqldev-in-database-r-for-sql-developers.md) | ツールのみ[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、完全な R ソリューションを構築してデプロイします。 ソリューションを運用環境に移行することに重点を置いています。 ストアド プロシージャに R コードをラップし、R モデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに保存し、パラメーター化された呼び出しを R モデルに行い、予測を実行する方法について学習します。 |
-| [チュートリアル: RevoScalepR の詳細](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | RevoScaleR パッケージで関数を使用する方法について説明します。 R と SQL Server 間でデータを移動し、特定のタスクに合わせて計算コンテキストを切り替えます。 モデルとプロットを作成し、開発環境とデータベースサーバーの間で移動します。 |
+| [クイックスタート: R スクリプトを作成して実行する](quickstart-r-create-script.md) | いくつかのクイックスタートの始めに、これを使用して、SQL Server Management Studio などの T-SQL クエリ エディターを使用して R 関数を呼び出すための基本的な構文を示します。 |
+| [チュートリアル: データ サイエンティスト向けのデータベース内分析に関する説明](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | SQL Server を初めて使用する R 開発者向けに、このチュートリアルでは SQL Server で一般的なデータ サイエンス タスクを実行する方法について説明します。 データを読み込んで視覚化し、モデルをトレーニングして SQL Server に保存し、予測分析にモデルを使用します。 |
+| [チュートリアル: SQL 開発者向けのデータベース内分析に関する説明](../tutorials/sqldev-in-database-r-for-sql-developers.md) | [!INCLUDE[tsql](../../includes/tsql-md.md)] ツールのみを使用して、完全な R ソリューションを構築し、展開します。 ソリューションを運用環境に移行することに重点を置いています。 ストアド プロシージャに R コードをラップし、R モデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに保存し、パラメーター化された呼び出しを R モデルに行い、予測を実行する方法について学習します。 |
+| [チュートリアル: RevoScaleR の詳細情報](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | RevoScaleR パッケージでこの関数を使用する方法について説明します。 R と SQL Server 間でデータを移動し、特定のタスクに合わせて計算コンテキストを切り替えます。 モデルとプロットを作成し、それらを開発環境とデータベース サーバーの間で移行します。 |
 
 <a name ="bkmk_samples"></a>
 
 ## <a name="code-samples"></a>コード サンプル
 
-| リンク | 説明 |
+| リンク | [説明] |
 |------|-------------|
-| [R と SQL Server を使用した予測モデルの作成](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Ski レンタル企業が機械学習を使用して将来のレンタルを予測する方法について説明します。これにより、ビジネスプランやスタッフが将来の需要に対応できるようになります。 |
-| [R と SQL Server を使用して顧客のクラスタリングを実行する](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 教師なし learning を使用して、売上データに基づいて顧客をセグメント化します。 |
+| [R と SQL Server を使用して予測モデルを作成する](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | スキー レンタル ビジネスで機械学習を使用して、今後のレンタルを予測する方法を学習します。これは、今後の需要に合わせた事業計画と人員配置に役立ちます。 |
+| [R と SQL Server を使用して顧客のクラスタリングを実行する](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 教師なし学習を使用して、売上データに基づいて顧客をセグメント化します。 |
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-+ [R 拡張機能を SQL Server](../concepts/extension-r.md)
++ [SQL Server の R 拡張機能](../concepts/extension-r.md)
 + [SQL Server Machine Learning Services チュートリアル](machine-learning-services-tutorials.md)
 
