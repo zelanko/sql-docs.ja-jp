@@ -1,6 +1,5 @@
 ---
-title: サーバーからクライアントへの変換 |Microsoft Docs
-ms.custom: ''
+title: サーバーからクライアントへの変換
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fb089ab1e28965166f3690a96e3082e9b785422
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 1a00acbda8626813faf77e3876f78abe60c6febc
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73769939"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095626"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,27 +30,27 @@ ms.locfileid: "73769939"
   
 |To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日付|1、7|[OK]|-|-|1|1、3|1、7|-|[OK]\ (VT_BSTR)|[OK]|[OK]|4|4|  
-|[時刻]|5、6、7|-|9|[OK]|6|3、6|5、6|-|[OK]\ (VT_BSTR)|[OK]|[OK]|4|4|  
-|Smalldatetime|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|DateTime|5、7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK]\ (VT_BSTR)|[OK]|[OK]|4|4|  
-|Datetimeoffset|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|[OK]\ (VT_BSTR)|[OK]|[OK]|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12、9|12|12|12|7、13|なし|なし|なし|なし|なし|なし|  
-|Sql_variant<br /><br /> (datetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (date)|1、7|[OK]|2|2|1|1、3|1、7|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (time)|5、6、7|2|6|[OK]|6|3、6|5、6|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5、7|8|9、10|10|[OK]|3|5、7|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
+|[日付]|1,7|OK|-|-|@shouldalert|1,3|1,7|-|[OK]\ (VT_BSTR)|OK|OK|4|4|  
+|time|5,6,7|-|9|OK|6|3,6|5,6|-|[OK]\ (VT_BSTR)|OK|OK|4|4|  
+|Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|DateTime|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Datetime2|5,7|8|9,10|10|7|3|5,7|-|[OK]\ (VT_BSTR)|OK|OK|4|4|  
+|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|[OK]\ (VT_BSTR)|OK|OK|4|4|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12,9|12|12|12|7,13|なし|なし|なし|なし|なし|なし|  
+|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|OK|2|2|@shouldalert|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (time)|5,6,7|2|6|OK|6|3,6|5,6|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5,7|8|9,10|10|OK|3|5,7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|OK (VT_BSTR)|OK|OK|4|4|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
 |記号|意味|  
 |------------|-------------|  
-|[OK]|変換は必要ありません。|  
+|OK|変換は必要ありません。|  
 |-|変換はサポートされていません。 IAccessor:: CreateAccessor が呼び出されたときにバインディングが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION が*rgStatus*に返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
-|1|時刻フィールドに 0 が設定されます。|  
+|@shouldalert|時刻フィールドに 0 が設定されます。|  
 |2|DBSTATUS_E_CANTCONVERTVALUE が設定されます。|  
 |3|タイムゾーンは 0 に設定されます。|  
 |4|クライアント バッファーのサイズが十分でない場合、DBSTATUS_S_TRUNCATED が設定されます。 サーバーの型に秒の小数部が含まれている場合、結果文字列の桁数はサーバーの型の小数点以下桁数と完全に一致します。|  

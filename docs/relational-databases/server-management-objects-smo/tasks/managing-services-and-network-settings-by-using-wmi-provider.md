@@ -1,6 +1,6 @@
 ---
-title: WMI プロバイダーを使用したサービスとネットワーク設定の管理 |Microsoft Docs
-ms.custom: ''
+title: WMI プロバイダーを使用したサービスの管理とネットワーク設定
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb8cb65fdfac26226888682342eed31fd5e9c3c8
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148416"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095152"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI プロバイダーを使用したサービスの管理とネットワーク設定
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "70148416"
 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
 
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wmi プロバイダーを使用するプログラムの場合は、wmi 名前空間を修飾する**Imports**ステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の **Imports** ステートメントの後に、次のようにステートメントを挿入します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI プロバイダーを使用するプログラムでは、WMI 名前空間を修飾する**Imports**ステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の **Imports** ステートメントの後に、次のようにステートメントを挿入します。  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

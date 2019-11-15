@@ -1,6 +1,6 @@
 ---
-title: インデックスの作成、変更、および削除 |Microsoft Docs
-ms.custom: ''
+title: インデックスの作成、変更、および削除
+ms.custom: seo-dt-2019
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 566cec97b8c26f21602807b3dd36c307864f62ec
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148475"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095518"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>インデックスの作成、変更、および削除
 
@@ -32,7 +32,7 @@ ms.locfileid: "70148475"
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Visual Basic での非クラスター化複合インデックスの作成  
- このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスのプロパティをFalseに設定し<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>ます。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスの場合は、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティを**False**に設定します。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Visual C# での非クラスター化複合インデックスの作成  
- このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスのプロパティをFalseに設定し<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>ます。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスの場合は、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティを**False**に設定します。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>PowerShell での非クラスター化複合インデックスの作成  
- このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスのプロパティをFalseに設定し<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>ます。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスの場合は、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティを**False**に設定します。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

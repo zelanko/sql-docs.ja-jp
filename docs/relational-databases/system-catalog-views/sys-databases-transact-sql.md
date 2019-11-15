@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981856"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095868"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "73981856"
 |**is_read_only**|**bit**|1 = データベースは READ_ONLY<br /> 0 = データベースは READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE は ON です。<br /> 0 = AUTO_CLOSE はオフです。|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK は ON です。<br /> 0 = AUTO_SHRINK はオフです。|  
-|**state**|**tinyint**|**値&#124;の適用先**<br /> 0 = ONLINE <br /> 1 = 復元中 <br /> 2 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] &#124;以降の回復<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降<br /> 4 = 問題あり <br /> 5 = 緊急&#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降<br /> 6 = オフライン&#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降<br /> 7 = [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] &#124; [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] のコピー <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注:** Always On データベースの場合は、`database_state` または `database_state_desc` の列に対してクエリを実行[dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)ます。|  
+|**state**|**tinyint**|**値&#124;の適用先**<br /> 0 = ONLINE <br /> 1 = 復元中 <br /> 2 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] &#124;以降の回復<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降<br /> 4 = 問題あり <br /> 5 = 緊急&#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降<br /> 6 = オフライン&#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降<br /> 7 = COPYING &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注:** Always On データベースの場合は、`database_state` または `database_state_desc` の列に対してクエリを実行[dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)ます。|  
 |**state_desc**|**nvarchar(60)**|データベースの状態の説明。 「状態」を参照してください。|  
 |**is_in_standby**|**bit**|データベースは、復元ログに対し、読み取り専用です。|  
 |**is_cleanly_shutdown**|**bit**|1 = データベースが正常にシャットダウンしました。スタートアップ時に回復は必要ありません<br /> 0 = データベースはクリーンにシャットダウンされなかったため、起動時に復旧処理が必要です。|  
@@ -58,7 +58,7 @@ ms.locfileid: "73981856"
 |**is_read_committed_snapshot_on**|**bit**|1 = READ_COMMITTED_SNAPSHOT オプションは ON です。 READ COMMITTED 分離レベルでの読み取り操作は、スナップショット スキャンに基づいており、ロックを取得しません。<br /> 0 = READ_COMMITTED_SNAPSHOT オプションは OFF です (既定)。 Read committed 分離レベルでの読み取り操作では、共有ロックが使用されます。|  
 |**recovery_model**|**tinyint**|選択された復旧モデル:<br /> 1 = 完全<br /> 2 = BULK_LOGGED<br /> 3 = SIMPLE|  
 |**recovery_model_desc**|**nvarchar(60)**|選択された復旧モデルの説明です。|  
-|**page_verify_option**|**tinyint**|PAGE_VERIFY オプションの設定:<br /> 0 = なし<br /> 1 = TORN_PAGE_DETECTION<br /> 2 = チェックサム|  
+|**page_verify_option**|**tinyint**|PAGE_VERIFY オプションの設定:<br /> 0 = NONE<br /> 1 = TORN_PAGE_DETECTION<br /> 2 = チェックサム|  
 |**page_verify_option_desc**|**nvarchar(60)**|PAGE_VERIFY オプション設定の説明です。|  
 |**is_auto_create_stats_on**|**bit**|1 = AUTO_CREATE_STATISTICS は ON です。<br /> 0 = AUTO_CREATE_STATISTICS は OFF です。|  
 |**is_auto_create_stats_incremental_on**|**bit**|自動統計の増分オプションの既定の設定を示します。<br /> 0 = 自動作成の統計は非増分です。<br /> 1 = 可能な場合は、自動作成の統計情報は増分されます。<br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
@@ -73,10 +73,10 @@ ms.locfileid: "73981856"
 |**is_numeric_roundabort_on**|**bit**|1 = NUMERIC_ROUNDABORT は ON です。<br /> 0 = NUMERIC_ROUNDABORT はオフです。|  
 |**is_quoted_identifier_on**|**bit**|1 = QUOTED_IDENTIFIER は ON です。<br /> 0 = QUOTED_IDENTIFIER はオフです。|  
 |**is_recursive_triggers_on**|**bit**|1 = RECURSIVE_TRIGGERS は ON です。<br /> 0 = RECURSIVE_TRIGGERS はオフです。|  
-|**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT は ON です。<br /> 0 = CURSOR_CLOSE_ON_COMMIT はオフです。|  
+|**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT is ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT はオフです。|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT はローカルです。<br /> 0 = CURSOR_DEFAULT はグローバルです。|  
 |**is_fulltext_enabled**|**bit**|1 = データベースに対してフルテキストが有効です。<br /> 0 = データベースに対してフルテキストが無効です。|  
-|**is_trustworthy_on**|**bit**|1 = データベースは信頼できるとマークされています<br /> 0 = データベースは信頼できるとマークされていません|  
+|**is_trustworthy_on**|**bit**|1 = データベースは信頼できるとマークされています<br /> 0 = データベースは信頼できるとマークされていません<br /> 既定では、復元またはアタッチされたデータベースでは、ブローカーが無効になっています。 ただし、フェールオーバー後にブローカーが有効になるデータベース ミラーリングは例外です。|  
 |**is_db_chaining_on**|**bit**|1 = 複数データベースの組み合わせ所有権は ON です。<br /> 0 = 複数データベースの組み合わせ所有権は OFF です。|  
 |**is_parameterization_forced**|**bit**|1 = パラメーター化は FORCED です。<br /> 0 = パラメーター化は単純です。|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = データベースには、暗号化されたマスターキーがあります。<br /> 0 = データベースは暗号化されたマスター キーを保有していません。|  
@@ -93,7 +93,7 @@ ms.locfileid: "73981856"
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION は ON です。<br /> 0 = DATE_CORRELATION_OPTIMIZATION はオフです。|  
 |**is_cdc_enabled**|**bit**|1 = データベースで変更データキャプチャが有効になっています。 詳細については、「 [sys &#40;. sp_cdc_enable_db transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)」を参照してください。|  
 |**is_encrypted**|**bit**|データベースが暗号化されているかどうかを示します (`ALTER DATABASE SET ENCRYPTION` 句を使用して最後に設定された状態を反映します)。 次の値のいずれかです。<br /> 1 = 暗号化<br /> 0 = 暗号化されていない<br /> データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。<br /> データベースの暗号化が解除されている場合、`is_encrypted` には値0が表示されます。 [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動的管理ビューを使用すると、暗号化プロセスの状態を確認できます。|  
-|**is_honor_broker_priority_on**|**bit**|データベースがメッセージ交換の優先度を優先するかどうかを示します (`ALTER DATABASE SET HONOR_BROKER_PRIORITY` 句を使用して最後に設定された状態を反映します)。 次の値のいずれかです。<br /> 1 = HONOR_BROKER_PRIORITY は ON です。<br /> 0 = HONOR_BROKER_PRIORITY は OFF です。|  
+|**is_honor_broker_priority_on**|**bit**|データベースがメッセージ交換の優先度を優先するかどうかを示します (`ALTER DATABASE SET HONOR_BROKER_PRIORITY` 句を使用して最後に設定された状態を反映します)。 次の値のいずれかです。<br /> 1 = HONOR_BROKER_PRIORITY は ON です。<br /> 0 = HONOR_BROKER_PRIORITY は OFF です。<br /> 既定では、復元またはアタッチされたデータベースでは、ブローカーが無効になっています。 ただし、フェールオーバー後にブローカーが有効になるデータベース ミラーリングは例外です。|  
 |**replica_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) のローカル [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性レプリカの一意の識別子です。<br /> NULL = データベースは、可用性グループ内の可用性レプリカの一部ではありません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|データベースが参加している Always On 可用性グループ (存在する場合) 内のデータベースの一意識別子。 **group_database_id**は、プライマリレプリカのこのデータベースと、データベースが可用性グループに参加しているすべてのセカンダリレプリカで同じです。<br /> NULL = データベースは、可用性グループの可用性レプリカの一部ではありません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|このデータベースにマップされているリソースプールの id。 このリソースプールは、このデータベース内のメモリ最適化テーブルで使用できるメモリの合計を制御します。<br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降|  

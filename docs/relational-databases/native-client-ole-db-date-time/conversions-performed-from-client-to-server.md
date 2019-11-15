@@ -1,6 +1,5 @@
 ---
-title: クライアントからサーバーへの変換 |Microsoft Docs
-ms.custom: ''
+title: クライアントからサーバーへの変換
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0ab830283c09780791f2c82cbdda15fe1a28f6e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73773047"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096009"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,19 +32,19 @@ ms.locfileid: "73773047"
   
 |To -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
-|DATE|1、2|1、3、4|4、12|1、12|1、12|1、12|1、5、12|1、12|1、12|1、12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1、6|1、6|1、6|1、5、6|1、10|1、10|1<br /><br /> date|  
-|DBTIME|-|1|1|1、7|1、7|1、7|1、5、7|1、10|1、10|1<br /><br /> Time(0)|  
-|DBTIME2|-|1、3|1|1、7、10、14|1、7、10、15|1、7、10|1、5、7、10|1、10、11|1、10、11|1<br /><br /> Time(7)|  
-|DBTIMESTAMP|1、2|1、3、4|1、4、10|1、10、14|1、10、15|1、10|1、5、10|1、10、11|1、10、11|1、10<br /><br /> datetime2(7)|  
-|DBTIMESTAMPOFFSET|1、2、8|1、3、4、8|1、4、8、10|1、8、10、14|1、8、10、15|1、8、10|1、10|1、10、11|1、10、11|1、10<br /><br /> datetimeoffset(7)|  
-|FILETIME|1、2|1、3、4|1、4、13|1、13|1、13|1、13|1、5、13|1、13|1、10|1、13<br /><br /> datetime2(3)|  
+|DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
+|DBDATE|@shouldalert|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|@shouldalert<br /><br /> date|  
+|DBTIME|-|@shouldalert|@shouldalert|1,7|1,7|1,7|1,5, 7|1,10|1,10|@shouldalert<br /><br /> Time(0)|  
+|DBTIME2|-|1,3|@shouldalert|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|@shouldalert<br /><br /> Time(7)|  
+|DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
+|DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
+|FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|なし|なし|なし|  
-|VARIANT|1|1|1|1、10|1、10|1、10|1、10|なし|なし|1、10|  
-|SSVARIANT|1、16|1、16|1、16|1、10、16|1、10、16|1、10、16|1、10、16|なし|なし|1、16|  
-|BSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|なし|なし|なし|  
-|STR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|なし|なし|なし|  
-|WSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|なし|なし|なし|  
+|VARIANT|@shouldalert|@shouldalert|@shouldalert|1,10|1,10|1,10|1,10|なし|なし|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|なし|なし|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|なし|なし|なし|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|なし|なし|なし|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|なし|なし|なし|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73773047"
 |------------|-------------|  
 |-|変換はサポートされていません。 IAccessor:: CreateAccessor が呼び出されたときにバインディングが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION が*rgStatus*に返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
 |なし|該当なし。|  
-|1|指定されたデータが有効でない場合、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 入力データが検証されてから変換が適用されるので、コンポーネントは後続の変換で無視されることがあっても、変換を成功させるには有効である必要があります。|  
+|@shouldalert|指定されたデータが有効でない場合、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 入力データが検証されてから変換が適用されるので、コンポーネントは後続の変換で無視されることがあっても、変換を成功させるには有効である必要があります。|  
 |2|時刻フィールドは無視されます。|  
 |3|秒の小数部は 0 である必要があります。そうでなければ、DBSTATUS_E_DATAOVERFLOW が設定されます。|  
 |4|日付部分は無視されます。|  
@@ -71,7 +71,7 @@ ms.locfileid: "73773047"
   
 ||||  
 |-|-|-|  
-|型|長さ (文字数)|Scale|  
+|[型]|長さ (文字数)|Scale|  
 |DBTIME2|8、10..18|0、1..9|  
 |DBTIMESTAMP|19、21..29|0、1..9|  
 |DBTIMESTAMPOFFSET|26、28..36|0、1..9|  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server エージェントでの自動管理タスクのスケジュール設定 |Microsoft Docs
-ms.custom: ''
+title: SQL Server エージェントでの自動管理タスクのスケジュール設定
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148329"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094386"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server エージェントでの自動管理タスクのスケジュール設定
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "70148329"
 ## <a name="examples"></a>使用例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
-エージェントを使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するプログラムの場合、エージェントの名前空間を修飾するには、 **using**ステートメントを含める必要があります。 次のように、アプリケーションの宣言の前に、ステートメントを他の**using**ステートメントの後に挿入します。
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを使用するプログラムの場合、エージェントの名前空間を修飾するには、 **using**ステートメントを含める必要があります。 次のように、アプリケーションの宣言の前に、ステートメントを他の**using**ステートメントの後に挿入します。
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 **演算子は** <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> キーワードであるため、型には角かっこが必要です。[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ 警告の通知にはオペレーターが必要です。 **Operator**は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 **演算子は** <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> キーワードであるため、型には角かっこが必要です。[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ 警告の通知にはオペレーターが必要です。 **Operator**は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

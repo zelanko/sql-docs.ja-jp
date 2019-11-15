@@ -1,6 +1,6 @@
 ---
-title: ユーザー、ロール、およびログインの管理 |Microsoft Docs
-ms.custom: ''
+title: ユーザー、ロール、およびログインの管理
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fda8d8345b48853285db8c5d09754ed161420767
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: d061fbb3065f16f7b4d64aa11cf4363738e93088
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148412"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095149"
 ---
 # <a name="managing-users-roles-and-logins"></a>ユーザー、ロール、およびログインの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO では、<xref:Microsoft.SqlServer.Management.Smo.Login> オブジェクトでログインが表現されます。 ログオンが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に存在する場合、サーバー ロールに追加することができます。 サーバー ロールは、<xref:Microsoft.SqlServer.Management.Smo.ServerRole> オブジェクトで表現されます。 データベース ロールは <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> オブジェクトで表現され、アプリケーション ロールは <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> オブジェクトで表現されます。  
+  SMO では、<xref:Microsoft.SqlServer.Management.Smo.Login> オブジェクトでログインが表現されます。 ログオンが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在する場合、サーバー ロールに追加することができます。 サーバー ロールは、<xref:Microsoft.SqlServer.Management.Smo.ServerRole> オブジェクトで表現されます。 データベース ロールは <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> オブジェクトで表現され、アプリケーション ロールは <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> オブジェクトで表現されます。  
   
  サーバー レベルに関連付けられた権限は、<xref:Microsoft.SqlServer.Management.Smo.ServerPermission> オブジェクトのプロパティとしてリストされます。 サーバー レベル権限は、個々のログオン アカウントに対して、許可、拒否、取り消しを行うことができます。  
   

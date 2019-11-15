@@ -1,6 +1,6 @@
 ---
-title: SMO で SQL Server を構成する |Microsoft Docs
-ms.custom: ''
+title: SMO での SQL Server の構成
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,17 +14,17 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06983754193d8857701d9ad90a2bd522fe3e4b2d
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: f973b47d4b55624e0f78658f7dfa13ec1aebd80c
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148536"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095953"
 ---
 # <a name="configuring-sql-server-in-smo"></a>SMO での SQL Server の構成
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO <xref:Microsoft.SqlServer.Management.Smo.Information> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Configuration> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、オブジェクト、 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> オブジェクト、オブジェクト、およびオブジェクトに、のインスタンスの設定と情報が含まれています。<xref:Microsoft.SqlServer.Management.Smo.Settings>  
+  SMO では、<xref:Microsoft.SqlServer.Management.Smo.Information> オブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Settings> オブジェクト、<xref:Microsoft.SqlServer.Management.Smo.UserOptions> オブジェクト、および <xref:Microsoft.SqlServer.Management.Smo.Configuration> オブジェクトに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの設定と情報が含まれています。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、インストールされたインスタンスの動作を記述する複数のプロパティがあります。 これらのプロパティでは、スタートアップ オプション、サーバーの既定、ファイルとディレクトリ、システムとプロセッサの情報、製品とバージョン、接続情報、メモリ オプション、言語と照合順序の選択、および認証モードについて記述します。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "70148536"
   
  <xref:Microsoft.SqlServer.Management.Smo.UserOptions> オブジェクト プロパティには、算術、ANSI 規格、およびトランザクションに関連する現在の接続の動作に関する情報が含まれています。  
   
- また、<xref:Microsoft.SqlServer.Management.Smo.Configuration> オブジェクトで表現される構成オプションのセットもあります。 これには、 **sp_configure** ストアド プロシージャによって変更可能なオプションを表すプロパティのセットが含まれています。 **優先度ブースト**、 **Recovery Interval** 、 **Network Packet Size**などのオプションは、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスのパフォーマンスを制御します。 これらのオプションの多くは動的に変更できますが、場合によっては、構成した値が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの再起動時に変更されることもあります。  
+ また、<xref:Microsoft.SqlServer.Management.Smo.Configuration> オブジェクトで表現される構成オプションのセットもあります。 これには、 **sp_configure** ストアド プロシージャによって変更可能なオプションを表すプロパティのセットが含まれています。 **優先度ブースト**、 **Recovery Interval** 、 **Network Packet Size**などのオプションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスのパフォーマンスを制御します。 これらのオプションの多くは動的に変更できますが、場合によっては、構成した値が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの再起動時に変更されることもあります。  
   
- 構成オプションごとに <xref:Microsoft.SqlServer.Management.Smo.Configuration> オブジェクト プロパティがあります。 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> オブジェクトを使用すると、グローバル構成設定を変更することができます。 多くのプロパティには、最大値および最小値が設定されており、これらも <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> プロパティとして格納されます。 これらのプロパティに<xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A>は、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに変更をコミットするメソッドが必要です。  
+ 構成オプションごとに <xref:Microsoft.SqlServer.Management.Smo.Configuration> オブジェクト プロパティがあります。 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> オブジェクトを使用すると、グローバル構成設定を変更することができます。 多くのプロパティには、最大値および最小値が設定されており、これらも <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> プロパティとして格納されます。 これらのプロパティを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに変更をコミットするには、<xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> メソッドが必要です。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> オブジェクトの構成オプションの変更はすべて、システム管理者が行う必要があります。  
   
@@ -75,7 +75,7 @@ End If
 ``` 
   
 ## <a name="modifying-sql-server-settings-in-visual-basic"></a>Visual Basic での SQL Server 設定の変更  
- このコード例では、および[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Settings>で<xref:Microsoft.SqlServer.Management.Smo.Information>のインスタンスに関する情報を表示し<xref:Microsoft.SqlServer.Management.Smo.Settings> 、 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>およびオブジェクトのプロパティの設定を変更します。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Smo.Settings>での [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに関する情報を表示し、<xref:Microsoft.SqlServer.Management.Smo.Settings> および <xref:Microsoft.SqlServer.Management.Smo.UserOptions>オブジェクトのプロパティの設定を変更します。  
   
  この例では、<xref:Microsoft.SqlServer.Management.Smo.UserOptions> オブジェクトと <xref:Microsoft.SqlServer.Management.Smo.Settings> オブジェクトの両方に <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> メソッドがあります。 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> メソッドは、これらのオブジェクトに対して個別に実行できます。  
   
@@ -98,7 +98,7 @@ srv.Alter()
 ```
   
 ## <a name="modifying-sql-server-settings-in-visual-c"></a>Visual C# での SQL Server 設定の変更  
- このコード例では、および[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Settings>で<xref:Microsoft.SqlServer.Management.Smo.Information>のインスタンスに関する情報を表示し<xref:Microsoft.SqlServer.Management.Smo.Settings> 、 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>およびオブジェクトのプロパティの設定を変更します。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Smo.Settings>での [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに関する情報を表示し、<xref:Microsoft.SqlServer.Management.Smo.Settings> および <xref:Microsoft.SqlServer.Management.Smo.UserOptions>オブジェクトのプロパティの設定を変更します。  
   
  この例では、<xref:Microsoft.SqlServer.Management.Smo.UserOptions> オブジェクトと <xref:Microsoft.SqlServer.Management.Smo.Settings> オブジェクトの両方に <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> メソッドがあります。 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> メソッドは、これらのオブジェクトに対して個別に実行できます。  
   
@@ -136,7 +136,7 @@ srv.Alter()
 ```  
   
 ## <a name="modifying-sql-server-settings-in-powershell"></a>PowerShell での SQL Server 設定の変更  
- このコード例では、および[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Settings>で<xref:Microsoft.SqlServer.Management.Smo.Information>のインスタンスに関する情報を表示し<xref:Microsoft.SqlServer.Management.Smo.Settings> 、 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>およびオブジェクトのプロパティの設定を変更します。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Smo.Settings>での [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに関する情報を表示し、<xref:Microsoft.SqlServer.Management.Smo.Settings> および <xref:Microsoft.SqlServer.Management.Smo.UserOptions>オブジェクトのプロパティの設定を変更します。  
   
  この例では、<xref:Microsoft.SqlServer.Management.Smo.UserOptions> オブジェクトと <xref:Microsoft.SqlServer.Management.Smo.Settings> オブジェクトの両方に <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> メソッドがあります。 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> メソッドは、これらのオブジェクトに対して個別に実行できます。  
   

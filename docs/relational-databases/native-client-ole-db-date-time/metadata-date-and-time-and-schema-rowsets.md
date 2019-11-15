@@ -1,6 +1,5 @@
 ---
-title: 日付と時刻およびスキーマ行セット |Microsoft Docs
-ms.custom: ''
+title: 日付と時刻およびスキーマ行セット
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7290c9e7a55e27a829a943157e1b0bea00f42d2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 36ba34985cde2f88606a13a4f07f6afb7af5dc7a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73773506"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095362"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>メタデータ - 日付、時刻、スキーマ行セット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73773506"
 |date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|オン|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
+|DateTime|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|オン|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|オン|0..7|  
   
@@ -67,9 +67,9 @@ ms.locfileid: "73773506"
 ## <a name="provider_types-rowset"></a>PROVIDER_TYPES 行セット  
  日付/時刻型に対して返される行を次に示します。  
   
-|型 -><br /><br /> 列|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|型 -><br /><br /> 列|date|time|smalldatetime|DateTime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DateTime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -81,7 +81,7 @@ ms.locfileid: "73773506"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DateTime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

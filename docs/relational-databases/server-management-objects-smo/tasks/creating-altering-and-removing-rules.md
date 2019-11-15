@@ -1,6 +1,6 @@
 ---
-title: ルールの作成、変更、および削除 |Microsoft Docs
-ms.custom: ''
+title: ルールの作成、変更、および削除
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,19 +13,19 @@ ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b96824bf3f79e2166a0198b0a56a60f8e7a3cf3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: b2f918e611a4bc88c1a77ad7d539a9101f3f8dac
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911135"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095526"
 ---
 # <a name="creating-altering-and-removing-rules"></a>ルールの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトでルールが表現されます。 ルールは、<xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティによって定義されます。このプロパティは、IN、LIKE、または BETWEEN などの演算子や述語を使用した条件式を格納したテキスト文字列です。 ルールでは、列や別のデータベース オブジェクトを参照することはできません。 データベース オブジェクトを参照しない組み込み関数は含めることができます。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティでの定義には、入力されたデータ値を参照する変数が含まれている必要があります。 ルールを作成するときに、任意の名前または記号を使用して値を表すことができ\@ますが、最初の文字は記号である必要があります。  
+ <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティでの定義には、入力されたデータ値を参照する変数が含まれている必要があります。 ルールを作成するときに、任意の名前またはシンボルを使用して値を表すことができますが、最初の文字は \@ 記号である必要があります。  
   
 ## <a name="example"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
@@ -33,7 +33,7 @@ ms.locfileid: "70911135"
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Visual Basic でのルールの作成、変更、および削除  
  このコード例では、ルールの作成、作成したルールの列へのアタッチ、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトのプロパティの修正、列からのデタッチ、および削除を行う方法を示します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Rule> System.object アセンブリ内の<xref:Microsoft.SqlServer.Management.Smo.Rule>オブジェクトがあいまいにならないように、オブジェクトの**Dim**ステートメントは完全なアセンブリパスで指定されています。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトの**Dim**ステートメントは、System. Data アセンブリ内の <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトがあいまいになるのを避けるために、完全なアセンブリパスで指定されます。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -65,7 +65,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>Visual C# でのルールの作成、変更、および削除  
  このコード例では、ルールの作成、作成したルールの列へのアタッチ、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトのプロパティの修正、列からのデタッチ、および削除を行う方法を示します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Rule> System.object アセンブリ内の<xref:Microsoft.SqlServer.Management.Smo.Rule>オブジェクトがあいまいにならないように、オブジェクトの**Dim**ステートメントは完全なアセンブリパスで指定されています。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトの**Dim**ステートメントは、System. Data アセンブリ内の <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトがあいまいになるのを避けるために、完全なアセンブリパスで指定されます。  
   
 ```csharp  
 {  
@@ -98,7 +98,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>PowerShell でのルールの作成、変更、および削除  
  このコード例では、ルールの作成、作成したルールの列へのアタッチ、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトのプロパティの修正、列からのデタッチ、および削除を行う方法を示します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Rule> System.object アセンブリ内の<xref:Microsoft.SqlServer.Management.Smo.Rule>オブジェクトがあいまいにならないように、オブジェクトの**Dim**ステートメントは完全なアセンブリパスで指定されています。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトの**Dim**ステートメントは、System. Data アセンブリ内の <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトがあいまいになるのを避けるために、完全なアセンブリパスで指定されます。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

@@ -1,6 +1,6 @@
 ---
-title: ユーザー定義関数の作成、変更、および削除 |Microsoft Docs
-ms.custom: ''
+title: ユーザー定義関数の作成、変更、および削除
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +13,16 @@ ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd6a7b8817e86207e9e8c8df2270344d5106ead3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 8fc10bd6ebb44e0f8b45edb3c669e8216cc313b1
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148489"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095568"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>ユーザー定義関数の作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  オブジェクト<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>は、ユーザーがのユーザー定義関数をプログラムで[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理できるようにする機能を提供します。 ユーザー定義関数では、入力パラメーターおよび出力パラメーターに加えて、テーブル列への直接参照もサポートされます。  
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> オブジェクトは、ユーザーが [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でユーザー定義関数をプログラムで管理できるようにする機能を提供します。 ユーザー定義関数では、入力パラメーターおよび出力パラメーターに加えて、テーブル列への直接参照もサポートされます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ストアド プロシージャ、ユーザー定義関数、トリガー、およびユーザー定義データ型内でアセンブリを使用できるようにするには、アセンブリがデータベース内に登録される必要があります。 SMO は、<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> オブジェクトを使用してこの機能をサポートします。  
   

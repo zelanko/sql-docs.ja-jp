@@ -19,12 +19,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 49311ac52d9dba7c31e48f68b4363ead5a2c0b2a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304766"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095336"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @sequence_name = ] N'sequence'` シーケンスオブジェクトの名前。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** です。  
+シーケンスオブジェクトの名前 `[ @sequence_name = ] N'sequence'` ます。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** です。  
   
-`[ @range_size = ] range_size` シーケンスからフェッチする値の数。 **\@rangesize**は**bigint**です。  
+シーケンスからフェッチする値の数を `[ @range_size = ] range_size` します。 **\@range_size**は**bigint**です。  
   
-`[ @range_first_value = ] range_first_value` の出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトの最初 (最小値または最大値) の値を返します。 **\@range_first_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を持つ**sql_variant**です。  
+`[ @range_first_value = ] range_first_value` 出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトの最初 (最小値または最大値) の値を返します。 **\@range_first_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
   
-`[ @range_last_value = ] range_last_value` 省略可能な出力パラメーターは、要求された範囲の最後の値を返します。 **\@range_last_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を持つ**sql_variant**です。  
+`[ @range_last_value = ] range_last_value` 省略可能な出力パラメーターを指定すると、要求された範囲の最後の値が返されます。 **\@range_last_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
   
 `[ @range_cycle_count = ] range_cycle_count` 省略可能な出力パラメーターは、要求された範囲を返すためにシーケンスオブジェクトが循環した回数を返します。 **\@range_cycle_count**は**int**です。  
   
-`[ @sequence_increment = ] sequence_increment` 省略可能な出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトのインクリメントを返します。 **\@ の sequenceincrement**は、要求で使用されているシーケンスオブジェクトと同じ基本型を持つ**sql_variant**です。  
+`[ @sequence_increment = ] sequence_increment` 省略可能な出力パラメーターを指定すると、要求された範囲の計算に使用されるシーケンスオブジェクトのインクリメントが返されます。 **\@sequence_increment**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
   
-`[ @sequence_min_value = ] sequence_min_value` 省略可能な出力パラメーターは、シーケンスオブジェクトの最小値を返します。 **\@sequence_min_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を持つ**sql_variant**です。  
+`[ @sequence_min_value = ] sequence_min_value` 省略可能な出力パラメーターを指定すると、シーケンスオブジェクトの最小値が返されます。 **\@sequence_min_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
   
-`[ @sequence_max_value = ] sequence_max_value` 省略可能な出力パラメーターは、シーケンスオブジェクトの最大値を返します。 **\@sequence_max_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を持つ**sql_variant**です。  
+`[ @sequence_max_value = ] sequence_max_value` 省略可能な出力パラメーターを指定すると、シーケンスオブジェクトの最大値が返されます。 **\@sequence_max_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- sp_sequence_get_rangeis にあります。 スキーマとは、sp_sequence_get_range として参照できます。  
+## <a name="remarks"></a>Remarks  
+ sys で sp_sequence_get_rangeis します。 スキーマとは、sys. sp_sequence_get_range として参照できます。  
   
 ### <a name="cycling-sequences"></a>シーケンスの循環  
  必要に応じて、シーケンスオブジェクトは、要求された範囲にサービスを実行するための適切な回数を繰り返します。 循環した回数は、`@range_cycle_count` パラメーターを通じて、呼び出し元に返されます。  
@@ -109,8 +109,7 @@ CREATE SEQUENCE Test.RangeSeq
  次のステートメントは、テスト RangeSeq シーケンスオブジェクトから4つのシーケンス番号を取得し、最初の番号をユーザーに返します。  
   
 ```  
-DECLARE @range_first_value sql_variant ,   
-        @range_first_value_output sql_variant ;  
+DECLARE @range_first_value_output sql_variant ;  
   
 EXEC sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
@@ -121,8 +120,8 @@ SELECT @range_first_value_output AS FirstNumber ;
   
 ```  
   
-### <a name="b-returning-all-output-parameters"></a>B. すべての出力パラメーターを返す  
- 次の例では、sp_sequence_get_range プロシージャからすべての出力値を返します。  
+### <a name="b-returning-all-output-parameters"></a>b. すべての出力パラメーターを返す  
+ 次の例では、sp_sequence_get_range プロシージャからのすべての出力値を返します。  
   
 ```  
 DECLARE    
