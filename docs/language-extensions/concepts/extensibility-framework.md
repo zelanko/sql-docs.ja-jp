@@ -54,7 +54,7 @@ The following diagram visually describes opportunities and benefits of the exten
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] は、スクリプトの実行を担当する外部プロセスのライフタイム、リソース、およびセキュリティ境界を管理するサービスです。 これは、フルテキスト インデックス作成およびクエリ サービスがフルテキスト クエリを処理する際に別のホストを起動する方法と似ています。 スタート パッド サービスでは、Microsoft によって公開された信頼できるランチャーか、パフォーマンスとリソース管理の要件を満たしているものとして Microsoft に認定されたランチャーのみを起動できます。
 
-| 信頼できるランチャー | 拡張子 | SQL Server のバージョン |
+| 信頼できるランチャー | 拡張機能 | SQL Server のバージョン |
 |-------------------|-----------|---------------------|
 | Java 用 JavaLauncher.dll | Java 拡張機能 | SQL Server 2019 |
 
