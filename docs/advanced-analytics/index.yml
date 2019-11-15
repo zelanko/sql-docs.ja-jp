@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: SQL Server Machine Learning Services (Python および R) ドキュメント
-summary: SQL Server Machine Learning Services を使用して、リレーショナルデータに対して Python および R スクリプトを実行する方法について説明します。 チュートリアル、コード例、インストールガイドなどのドキュメントでは、その方法を紹介します。
+title: SQL Server Machine Learning Services (Python と R) のドキュメント
+summary: SQL Server Machine Learning Services を使用してリレーショナル データで Python および R スクリプトを実行する方法について説明します。 チュートリアル、コード例、インストール ガイドなどのドキュメントでその方法が紹介されています。
 metadata:
-  title: SQL Server Machine Learning Services (Python、R) のドキュメント-チュートリアル、クイックスタート、およびインストールガイド
-  description: SQL Server Machine Learning Services を使用して、リレーショナルデータに対して Python および R スクリプトを実行する方法について説明します。 チュートリアル、コード例、インストールガイドなどのドキュメントでは、その方法を紹介します。
+  title: SQL Server Machine Learning Services (Python、R) のドキュメント - チュートリアル、クイックスタート、およびインストール ガイド
+  description: SQL Server Machine Learning Services を使用してリレーショナル データで Python および R スクリプトを実行する方法について説明します。 チュートリアル、コード例、インストール ガイドなどのドキュメントでその方法が紹介されています。
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
@@ -12,7 +12,7 @@ metadata:
   ms.date: 09/12/2019
   ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
   ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: ja-JP
   ms.lasthandoff: 09/23/2019
   ms.locfileid: "71199391"
@@ -21,7 +21,7 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: SQL Server Machine Learning Services (Python と R) とは何ですか?
+    - text: SQL Server Machine Learning Services とは (Python と R)
       url: what-is-sql-server-machine-learning.md
   - linkListType: whats-new
     links:
@@ -31,29 +31,29 @@ landingContent:
     links:
     - text: Machine Learning Services を使用して SQL Server で R/Python を実行する方法
       url: https://www.youtube.com/watch?v=ACejZ9optCQ
-- title: Python を使ってみる
+- title: Python を使い始める
   linkLists:
   - linkListType: quickstart
     links:
-    - text: SQL Server で "Hello world" Python スクリプトを実行する
+    - text: SQL Server での "Hello world" Python スクリプトの実行
       url: tutorials/quickstart-python-create-script.md
     - text: 入力と出力の処理
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
-    - text: SQL Server で Python データ構造を使用する
+    - text: SQL Server での Python データ構造の使用
       url: tutorials/quickstart-python-data-structures.md
     - text: 最初のモデルのトレーニングと使用
       url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: 線形回帰による ski レンタルの予測
+    - text: 線形回帰によるスキー レンタルの予測
       url: tutorials/python-ski-rental-linear-regression.md
-    - text: K-Means クラスタリングを使用して顧客を分類する方法
+    - text: K-Means クラスタリングを使用した顧客の分類
       url: tutorials/python-clustering-model.md
-- title: R を使ってみる
+- title: R を使い始める
   linkLists:
   - linkListType: quickstart
     links:
-    - text: SQL Server で "Hello world" R スクリプトを実行する
+    - text: SQL Server での "Hello world" R スクリプトの実行
       url: tutorials/quickstart-r-create-script.md
     - text: 入力と出力の処理
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
@@ -71,7 +71,7 @@ landingContent:
   linkLists:
   - linkListType: get-started
     links:
-    - text: Windows に Machine Learning Services をインストールする
+    - text: Windows への Machine Learning Services のインストール
       url: install/sql-machine-learning-services-windows-install.md
     - text: Linux への Machine Learning Services のインストール
       url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
@@ -101,9 +101,9 @@ landingContent:
     links:
     - text: Python パッケージ情報の取得
       url: package-management/python-package-information.md
-    - text: Sqlmlutils を使用して Python パッケージをインストールする
+    - text: sqlmlutils を使用した Python パッケージのインストール
       url: package-management/install-additional-python-packages-on-sql-server.md
     - text: R パッケージ情報の取得
       url: package-management/r-package-information.md
-    - text: Sqlmlutils を使用して新しい R パッケージをインストールする
+    - text: sqlmlutils を使用した新しい R パッケージのインストール
       url: package-management/install-additional-r-packages-on-sql-server.md

@@ -1,7 +1,7 @@
 ---
 title: ビッグ データ クラスターとは
 titleSuffix: SQL Server Big Data Clusters
-description: Kubernetes 上で動作し、リレーショナル データと HDFS データの両方にスケールアウト オプションを提供する [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) について説明します。
+description: Kubernetes 上で動作し、リレーショナル データと HDFS データの両方にスケールアウト オプションを提供する SQL Server ビッグ データ クラスターについて説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532505"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706663"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
 
@@ -56,7 +56,7 @@ SQL Server ビッグ データ クラスターには、スケーラブルな HDF
 
 管理と監視は、コマンド ライン ツール、API、ポータル、および動的管理ビューを組み合わせて実行できます。
 
-Azure Data Studio を使用すると、ビッグ データ クラスターに対してさまざまなタスクを実行できます。 これは、新しい **SQL Server 2019 拡張機能 (プレビュー)** によって実現します。 この拡張機能には、次の機能があります。
+Azure Data Studio を使用すると、ビッグ データ クラスターに対してさまざまなタスクを実行できます。 これは、新しい **SQL Server 2019 拡張機能**によって実現します。 この拡張機能には、次の機能があります。
 
 - 一般的な管理タスク用の組み込みスニペット。
 - HDFS の参照、ファイルのアップロード、ファイルのプレビュー、およびディレクトリの作成を行う機能。
@@ -88,8 +88,7 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 
 ### <a id="controlplane"></a> コントローラー
 
-コントローラーには、クラスターの管理とセキュリティ機能があります。 これには、制御サービス、構成ストア、および Kibana、Grafana、Elasticsearch などのその他のクラスターレベルサービスが含まれています。
-
+コントローラーには、クラスターの管理とセキュリティ機能があります。 これには、制御サービス、構成ストア、およびその他のクラスターレベル サービス (Kibana、Grafana、Elastic Search など) が含まれます。
 
 ### <a id="computeplane"></a> コンピューティング プール
 

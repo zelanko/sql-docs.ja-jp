@@ -1,7 +1,7 @@
 ---
 title: Spark アプリケーションのデバッグと診断
 titleSuffix: SQL Server big data clusters
-description: Spark History Server を使用して、で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]実行されている spark アプリケーションをデバッグおよび診断します。
+description: Spark History Server を使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上で実行されている Spark アプリケーションをデバッグおよび診断します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,25 +9,25 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
-ms.translationtype: MT
+ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878695"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706118"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Spark History Server での spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]アプリケーションのデバッグと診断
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の Spark History Server の Spark アプリケーションのデバッグと診断
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、拡張 Spark History Server を使用して、SQL Server 2019 (プレビュー) ビッグ データ クラスターで Spark アプリケーションをデバッグおよび診断する方法に関するガイダンスを提供します。 これらのデバッグ機能と診断機能は、Microsoft が提供する Spark History Server に組み込まれています。 拡張機能には、データ タブ、グラフ タブ、診断タブがあります。データ タブで、ユーザーは Spark ジョブの入力データと出力データを確認できます。 グラフ タブで、ユーザーはデータフローを確認し、ジョブ グラフを再生できます。 診断タブで、ユーザーはデータ スキュー、時間のずれ、および実行プログラムの使用状況の分析を参照できます。
+この記事では、拡張 Spark History Server を使用して、SQL Server ビッグ データ クラスターで Spark アプリケーションをデバッグおよび診断する方法に関するガイダンスを提供します。 これらのデバッグ機能と診断機能は、Microsoft が提供する Spark History Server に組み込まれています。 拡張機能には、データ タブ、グラフ タブ、診断タブがあります。データ タブで、ユーザーは Spark ジョブの入力データと出力データを確認できます。 グラフ タブで、ユーザーはデータフローを確認し、ジョブ グラフを再生できます。 診断タブで、ユーザーはデータ スキュー、時間のずれ、および実行プログラムの使用状況の分析を参照できます。
 
 ## <a name="get-access-to-spark-history-server"></a>Spark History Server へのアクセスを取得する
 
 オープン ソースの Spark History Server ユーザー エクスペリエンスは、ジョブ固有のデータや、ビッグ データ クラスターのジョブ グラフとデータ フローの対話型の視覚化などの情報によって強化されています。 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>URL を指定して Spark History Server Web UI を開く
-次の URL を参照して Spark History Server を開き、`<Ipaddress>` と `<Port>` をビッグ データ クラスター固有の情報に置き換えます。 基本認証 (ユーザー名/パスワード) ビッグデータクラスターのセットアップでは、ゲートウェイ (Knox) エンドポイントへのログインを求めるメッセージが表示されたら、ユーザー**ルート**を提供する必要があることに注意してください。 詳細については、次の情報を参照してください。[SQL Server ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
+次の URL を参照して Spark History Server を開き、`<Ipaddress>` と `<Port>` をビッグ データ クラスター固有の情報に置き換えます。 基本認証 (ユーザー名/パスワード) のビッグ クラスター セットアップでは、ゲートウェイ (Knox) エンドポイントにログインするように求められたとき、ユーザー **root** を指定する必要があります。 詳細については、次の情報を参照してください。[SQL Server ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +91,7 @@ Spark History Server Web UI は次のような外観です。
 
     ![グラフのジョブ ID](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ **[Progress]\(進行状況\)** は既定値のままにします。 ユーザーは、**表示**のドロップダウンリストで **[読み取り]** または **[書き込み]** を選択して、データフローを確認できます。
++ **[Progress]\(進行状況\)** は既定値のままにします。 ユーザーがデータ フローを確認するには、 **[Display]\(表示\)** のドロップダウン リストで **[Read]\(読み取り\)** または **[Written]\(書き込み\)** を選択します。
 
     ![グラフの表示](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -203,5 +203,6 @@ Spark History Server には、次の既知の問題があります。
 
 ## <a name="next-steps"></a>次の手順
 
-* [使用を開始する[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Spark の設定を構成する](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [SQL Server ビッグ データ クラスターの概要](../big-data-cluster/deploy-get-started.md)
+* Spark の設定を構成する
+* [Spark の設定を構成する](/azure/hdinsight/spark/apache-spark-settings/)

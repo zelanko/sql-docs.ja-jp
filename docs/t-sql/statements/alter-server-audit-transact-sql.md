@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2ff1981757af05b97bdc90ff3e79fdc3bebf823
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070309"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049965"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,9 @@ SHUTDOWN
  監査仕様の追加、変更、および削除は、監査を停止せずに実行できます。  
   
  監査を作成した後で、監査の GUID を変更することはできません。  
-  
+ 
+ **ALTER SERVER AUDIT** ステートメントはユーザー トランザクション内では使用できません。
+ 
 ## <a name="permissions"></a>アクセス許可  
  サーバー監査のプリンシパルを作成、変更、または削除するには、ALTER ANY SERVER AUDIT 権限または CONTROL SERVER 権限を持っている必要があります。  
   

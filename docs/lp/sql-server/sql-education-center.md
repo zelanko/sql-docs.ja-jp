@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure ドキュメント
-description: Microsoft Azure クラウド サービスを使用して強力なアプリケーションを構築および管理する方法について説明します。 ドキュメント、コード例、チュートリアルなどを取得します。
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: SQL Server 教育センター
+description: SQL Server と Azure SQL Database について学習するために使用できるリソースの概要。 クイックスタートやチュートリアルから Microsoft Learn や LinkedIn Learning まで。
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176276"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637927"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -31,7 +33,7 @@ ms.locfileid: "70176276"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) を試す</span>
                                 </div>
                             </div>
                         </div>

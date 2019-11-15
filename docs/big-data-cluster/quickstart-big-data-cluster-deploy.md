@@ -1,7 +1,7 @@
 ---
 title: Python スクリプトを使用した展開
-titleSuffix: SQL Server big data clusters
-description: 展開スクリプトを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]を Azure Kubernetes Service (AKS) に展開する方法について説明します。
+titleSuffix: SQL Server Big Data Clusters
+description: 展開スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Kubernetes Service (AKS) に展開する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531928"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706348"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Python スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Kubernetes Service (AKS) に展開する
 
@@ -80,8 +80,6 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **[Cluster name]\(クラスター名\)** | AKS クラスターとビッグ データ クラスターの両方の名前。 ビッグ データ クラスターの名前は、小文字の英数字のみを使用し、スペースを含めない必要があります (既定値は **sqlbigdata**)。 |
    | **パスワード** | コントローラー、HDFS/Spark ゲートウェイ、およびマスター インスタンスのパスワード (既定値は **MySQLBigData2019**)。 |
    | **ユーザー名** | コントローラー ユーザーのユーザー名 (既定値: **admin**)。 |
-
-SQL Server 2019 ビッグ データ クラスターの早期導入プログラムの参加者の場合は、次のパラメーターが必要でした。 **[Docker username]\(Docker ユーザー名\)** と **[Docker password]\(Docker パスワード\)** 。 CTP 3.2 以降、これらは必須ではなくなりました。
 
    > [!IMPORTANT]
    > 既定の **Standard_L8s** マシン サイズは、すべての Azure リージョンで使用できるとは限りません。 別のマシン サイズを選択する場合は、クラスター内のノード間で接続できるディスクの合計数が 24 以上であることを確認します。 クラスター内の各永続ボリューム要求には、接続されたディスクが必要です。 現在、ビッグ データ クラスターには 24 個の永続的なボリューム要求が必要です。 たとえば、[Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) マシン サイズでは、32 個の接続ディスクがサポートされているため、このマシン サイズの 1 つのノードでビッグ データ クラスターを評価することができます。

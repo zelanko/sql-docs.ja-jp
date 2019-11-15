@@ -7,12 +7,12 @@ ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032201"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240706"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux でのログ配布の概要
 
@@ -305,6 +305,13 @@ SQL Server のログ配布は、プライマリ サーバーのデータベー�
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    ```
+ - 次のコマンドを実行して、ログ配布フェールオーバーが機能することを確認します
+ 
+    > [!WARNING]
+    > このコマンドを実行すると、セカンダリ データベースがオンラインになり、ログ配布構成が中断されます。 このコマンドを実行した後、ログ配布を再構成する必要があります。
+ 
+    ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 

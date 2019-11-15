@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b381b8a980d1f50802d024ce377a7de0bfbc6e7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909455"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632994"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>既存のトレースの変更 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "72909455"
   
 2.  トレース イベントを変更するには、パラメーターを使用して変更を指定し、 **sp_trace_setevent** を実行します。 パラメーターは次の順序で指定します。  
 
-    -   **@traceid** (トレース ID)  
+    -   **\@traceid** (トレース ID)  
   
-    -   **@eventid** (イベント ID)  
+    -   **\@eventid** (イベント ID)  
   
-    -   **@columnid** (列 ID)  
+    -   **\@columnid** (列 ID)  
   
-    -   **@on** (ON)  
+    -   **\@on** (ON)  
   
-     **@on** パラメーターを変更する場合は、 **@columnid** パラメーターとの相互作用を考慮してください。  
+     **\@on** パラメーターを変更する場合は、 **\@columnid** パラメーターとの相互作用を考慮してください。  
   
     |ON|列 ID|結果|  
     |--------|---------------|------------|  

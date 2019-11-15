@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974268"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142777"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "71974268"
 ##  <a name="Configure"></a> ワークロードに合わせてクエリ ストアを調整する  
  ワークロードとパフォーマンスのトラブルシューティングの要件に基づいて、クエリ ストアを構成します。 始めは既定のパラメーターで十分ですが、時間の経過と共にクエリ ストアがどのように動作するかを監視し、それに応じて構成を調整する必要があります。  
   
- ![クエリ ストアのプロパティ](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
+ ![クエリ ストアのプロパティ](../../relational-databases/performance/media/query-store-properties.png "クエリ-ストア-プロパティ")  
   
  次に、パラメーター値を設定する際のガイドラインを示します。
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **データのフラッシュ間隔 (分)** :収集されたランタイム統計をディスクに保存する間隔 (秒単位) を定義します。 既定値は 900 秒 (15 分) です。 ワークロードで生成される異なるクエリとプランの数が多くない場合、またはデータベースをシャットダウンする前にデータを長時間保持できる場合は、大きい値を使用することを検討してください。
+ **データのフラッシュ間隔 (分)** :収集された実行時統計情報をディスクに保存する間隔を定義します。 グラフィカル ユーザー インターフェイス (GUI) では分単位で表されますが、[!INCLUDE[tsql](../../includes/tsql-md.md)] では秒単位で表されます。 既定値は 900 秒です。これは、グラフィカル ユーザー インターフェイスでは 15 分です。 ワークロードで生成される異なるクエリとプランの数が多くない場合、またはデータベースをシャットダウンする前にデータを長時間保持できる場合は、大きい値を使用することを検討してください。
  
 > [!NOTE]
 > トレース フラグ 7745 を使用すると、フェールオーバーまたはシャットダウン コマンドが発生した場合に、クエリ ストアのデータはディスクに書き込まれません。 詳しくは、「[ミッション クリティカルなサーバーにトレース フラグを使用して、障害からの回復を向上させる](#Recovery)」セクションをご覧ください。
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **統計情報の収集間隔**:収集される実行時統計情報に対する粒度のレベルを定義します。 既定値は 60 分です。 より細かい粒度が必要な場合、または問題を検出して軽減するための時間を短くする場合は、小さい値を使用することを検討してください。 値はクエリ ストア データのサイズに直接影響することに注意してください。 **[統計情報の収集間隔]** に別の値を設定するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
+ **統計情報の収集間隔**:収集された実行時統計情報に対する粒度のレベルを定義します (分単位)。 既定値は 60 分です。 より細かい粒度が必要な場合、または問題を検出して軽減するための時間を短くする場合は、小さい値を使用することを検討してください。 値はクエリ ストア データのサイズに直接影響することに注意してください。 **[統計情報の収集間隔]** に別の値を設定するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **古いクエリのしきい値 (日)** :保存する実行時統計と非アクティブ クエリの保有期間を制御する、時間ベースのクリーンアップ ポリシーです。 既定では、クエリ ストアはデータを 30 日間保持するよう構成されていますが、シナリオによっては必要以上に長い場合があります。  
+ **古いクエリのしきい値 (日)** :保存する実行時統計と非アクティブ クエリの保有期間を制御する、時間ベースのクリーンアップ ポリシーです (日単位)。 既定では、クエリ ストアはデータを 30 日間保持するよう構成されていますが、シナリオによっては必要以上に長い場合があります。  
   
  使用予定のない履歴データは保持しないようにしてください。 これにより、読み取り専用状態への移行を減らすことができます。 クエリ ストアのデータのサイズと、問題を検出して軽減するまでの時間を予測しやすくなります。 時間ベースのクリーンアップ ポリシーを構成するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または次のスクリプトを使用します。  
   
@@ -180,7 +180,7 @@ SET QUERY_STORE = ON
 ## <a name="start-with-query-performance-troubleshooting"></a>クエリ パフォーマンスのトラブルシューティングを開始する  
  次の図に示すように、クエリ ストアでのトラブルシューティングのワークフローはシンプルです。  
   
- ![クエリ ストアのトラブルシューティング](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
+ ![クエリ ストアのトラブルシューティング](../../relational-databases/performance/media/query-store-troubleshooting.png "クエリ-ストア-トラブルシューティング")  
   
  前のセクションで説明したように、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してクエリ ストアを有効にするか、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
@@ -220,7 +220,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   クエリの実行プランが複数あり、最後のプランのパフォーマンスが前のプランよりも大幅に悪いような場合は、プランの強制適用メカニズムを使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がオプティマイザーのプランを強制しようとします。 プランの適用に失敗した場合、XEvent が発生し、オプティマイザーは通常の方法で最適化するように指示します。
   
-       ![クエリ ストアのプラン強制](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
+       ![クエリ ストアの適用プラン](../../relational-databases/performance/media/query-store-force-plan.png "クエリ-ストア-適用-プラン")  
 
        > [!NOTE]
        > 前の図では特定のクエリ プランに異なる図形が使われている場合があり、考えられる各状態の意味を次に示します。<br />  
@@ -235,7 +235,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 
 -   クエリに最適な実行のためのインデックスが欠落している場合があります。 この情報は、クエリの実行プラン内で確認できます。 欠落しているインデックスを作成し、クエリ ストアを使用してクエリのパフォーマンスを確認します。  
   
-       ![クエリ ストアのプラン表示](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+       ![クエリ ストアの表示プラン](../../relational-databases/performance/media/query-store-show-plan.png "クエリ-ストア-表示-プラン")
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]でワークロードを実行している場合、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Index Advisor にサインアップすると、推奨されるインデックスを自動的に取得できます。
   

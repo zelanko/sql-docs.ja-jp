@@ -1,23 +1,24 @@
 ---
-title: SQL Server の言語拡張 (Java) を Linux 上にインストールする
-description: Red Hat、Ubuntu、SUSE 上に SQL Server の言語拡張 (Java) をインストールする方法について説明します。
+title: SQL Server の言語拡張を Linux にインストールする
+titleSuffix: ''
+description: Red Hat、Ubuntu、SUSE 上に SQL Server の言語拡張をインストールする方法について説明します。
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531229"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660778"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>SQL Server 2019 の言語拡張 (Java) を Linux 上にインストールする
+# <a name="install-sql-server-language-extensions-on-linux"></a>SQL Server の言語拡張を Linux にインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

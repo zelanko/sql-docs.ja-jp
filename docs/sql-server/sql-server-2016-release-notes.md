@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874922"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632918"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70874922"
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 には、2016 SP1 より後にリリースされた、CU8 まで (CU8 を含む) の累積的な更新プログラムがすべて含まれています。
 
-- [![Microsoft ダウンロード センター](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [SQL Server 2016 Service Pack 2 (SP2) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=869608)
+- [![Microsoft ダウンロード センター](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [SQL Server 2016 Service Pack 2 (SP2) をダウンロードする](https://www.microsoft.com/download/details.aspx?id=56836)
 - 更新プログラムの完全な一覧については、「[SQL Server 2016 Service Pack 2 リリース情報 ](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)」を参照してください。
 
 SQL Server 2016 SP2 のインストールでは、インストール後に再起動が必要な場合があります。 ベスト プラクティスとして、SQL Server 2016 SP2 インストール後の再起動を計画して実行することをお勧めします。

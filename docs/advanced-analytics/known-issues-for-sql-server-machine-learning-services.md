@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b0374e6e6fe620c4f43e26aa9bd4494746da36e4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532597"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706848"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ R_SERVER で条件付きの数値が確実に再現されるようにするに�
 3. R_SERVER を再起動します。 SQL Server では、SQL Server Launchpad サービスを再起動できます。
 
 > [!NOTE]
-> Linux で SQL Server 2019 Preview を実行している場合は、ユーザー ホーム ディレクトリの *.bash_profile* を編集または作成し、`export MKL_CBWR="AUTO"` という行を追加します。 bash コマンド プロンプトで「`source .bash_profile`」と入力して、このファイルを実行します。 R のコマンド プロンプトで「`Sys.getenv()`」と入力して、R_SERVER を再起動します。
+> Linux で SQL Server 2019 を実行している場合は、ユーザー ホーム ディレクトリの *.bash_profile* を編集または作成し、`export MKL_CBWR="AUTO"` という行を追加します。 bash コマンド プロンプトで「`source .bash_profile`」と入力して、このファイルを実行します。 R のコマンド プロンプトで「`Sys.getenv()`」と入力して、R_SERVER を再起動します。
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2.R スクリプトのランタイム エラー (SQL Server 2017 CU5-CU7 の回帰)
 

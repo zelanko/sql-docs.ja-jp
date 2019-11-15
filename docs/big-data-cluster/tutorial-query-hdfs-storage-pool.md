@@ -1,7 +1,7 @@
 ---
 title: 記憶域プール内の HDFS データにクエリを実行する
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]で HDFS データを照会する方法について説明します。 記憶域プール内のデータに対して外部テーブルを作成し、クエリを実行します。
+description: このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]内の HDFS データにクエリを実行する方法について説明します。 記憶域プール内のデータに対して外部テーブルを作成し、クエリを実行します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652442"
@@ -20,9 +20,9 @@ ms.locfileid: "69652442"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]で HDFS データを照会する方法について説明します。
+このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の HDFS データにクエリを実行する方法について説明します。
 
-このチュートリアルでは、次の作業を行う方法について説明します。
+このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
 > * ビッグ データ クラスター内の HDFS データを指す外部テーブルを作成する。
@@ -127,7 +127,7 @@ DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
 GO
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 次の記事に進み、ビッグ データ クラスターから Oracle にクエリを実行する方法を学習します。
 > [!div class="nextstepaction"]

@@ -1,7 +1,7 @@
 ---
-title: データベースの復元
+title: データベースを復元する
 titleSuffix: SQL Server big data clusters
-description: この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のマスターインスタンスにデータベースを復元する方法について説明します。
+description: この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のマスター インスタンスにデータベースを復元する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652234"
@@ -20,7 +20,7 @@ ms.locfileid: "69652234"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、のマスターインスタンスに既存の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]データベースを復元する方法について説明します。 バックアップ、コピー、復元の方法を使用することをお勧めします。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のマスター インスタンスに既存のデータベースを復元する方法について説明します。 バックアップ、コピー、復元の方法を使用することをお勧めします。
 
 ## <a name="backup-your-existing-database"></a>既存のデータベースをバックアップする
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>次の手順
 
-の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]詳細については、次の概要を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、次の概要を参照してください。
 
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]概要](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)

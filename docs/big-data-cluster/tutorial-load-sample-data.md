@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653288"
@@ -20,12 +20,12 @@ ms.locfileid: "69653288"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]スクリプトを使用してにサンプルデータを読み込む方法について説明します。 ドキュメントに記載されている他のチュートリアルの多くで、このサンプル データが使用されています。
+このチュートリアルでは、スクリプトを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]にサンプル データを読み込む方法について説明します。 ドキュメントに記載されている他のチュートリアルの多くで、このサンプル データが使用されています。
 
 > [!TIP]
-> のその他のサンプルに[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ついては、「 [sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub リポジトリ」を参照してください。 それらは、パス **sql-server-samples/samples/features/sql-big-data-cluster/** に置かれています。
+> [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の追加のサンプルは、[sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub リポジトリにあります。 それらは、パス **sql-server-samples/samples/features/sql-big-data-cluster/** に置かれています。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - [展開済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -61,7 +61,7 @@ ms.locfileid: "69653288"
 
 1. ブートストラップ スクリプトでは、ご利用のビッグ データ クラスターに関する次の位置指定パラメーターが必要です。
 
-   | パラメーター | 説明 |
+   | パラメーター | [説明] |
    |---|---|
    | <CLUSTER_NAMESPACE> | ビッグ データ クラスターに付ける名前。 |
    | <SQL_MASTER_IP> | マスター インスタンスの IP アドレス。 |
@@ -97,7 +97,7 @@ ms.locfileid: "69653288"
 
 1. ブートストラップ スクリプトでは、ご利用のビッグ データ クラスターに関する次の位置指定パラメーターが必要です。
 
-   | パラメーター | 説明 |
+   | パラメーター | [説明] |
    |---|---|
    | <CLUSTER_NAMESPACE> | ビッグ データ クラスターに付ける名前。 |
    | <SQL_MASTER_IP> | マスター インスタンスの IP アドレス。 |

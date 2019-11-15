@@ -1,26 +1,26 @@
 ---
 title: SQL Server の言語拡張を Windows にインストールする
-titleSuffix: SQL Server Language Extensions
-description: Windows で SQL Server 2019 用の言語拡張をインストールする手順。
+titleSuffix: ''
+description: SQL Server の言語拡張を Windows にインストールする方法について説明します。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589066"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658841"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>SQL Server の言語拡張を Windows にインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 2019 以降では、言語拡張と Java のサポートが提供されるようになっています。 この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ウィザードを実行することにより言語拡張コンポーネントをインストールする方法について説明します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ウィザードを実行することにより SQL Server に言語拡張コンポーネントをインストールする方法について説明します。
 
 > [!NOTE]
 > この記事は、Windows への SQL Server 言語拡張のインストールに関するものです。 Linux については、「[SQL Server 2019 の言語拡張 (Java) を Linux 上にインストールする](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)」をご覧ください
@@ -61,11 +61,8 @@ SQL Server 2019 Release Candidate 1 に Java をインストールして使用�
     
 ## <a name="get-the-installation-media"></a>インストール メディアを入手する
 
-SQL Server 2019 のプレビュー バージョンは、[SQL Server 2019 のインストール サイト](https://www.microsoft.com/sql-server/sql-server-2019#Install)で入手できます。
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>セットアップの実行
 
 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。
@@ -256,7 +253,7 @@ GO
 
 言語拡張ジョブが適切に優先順位を設定されて、リソースを提供されるようにするため、SQL Server Resource Governor を使って外部リソース プールを構成することをお勧めします。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンに割り当てられるメモリの量を変更したり、[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスで実行するアカウントの数を増やしたりすることもできます。
 
-- 外部リソースを管理するためのリソース プールを構成するには、「[CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md)」を参照してください。
+- 外部リソースを管理するためのリソース プールを構成するには、[CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md) に関するページを参照してください。
   
 - データベース用に予約されているメモリの量を変更するには、「[サーバー メモリの構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。
   

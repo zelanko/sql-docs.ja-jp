@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service の構成
 titleSuffix: SQL Server big data clusters
-description: デプロイ用に Azure Kubernetes Service (AKS) を構成[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]する方法について説明します。
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデプロイ用に Azure Kubernetes Service (AKS) を構成する方法について説明します。'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
 ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/16/2019
 ms.locfileid: "71016889"
@@ -20,7 +20,7 @@ ms.locfileid: "71016889"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、デプロイ用に[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Kubernetes Service (AKS) を構成する方法について説明します。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデプロイ用に Azure Kubernetes Service (AKS) を構成する方法について説明します。
 
 AKS を使用すると、コンテナー化されたアプリケーションを実行するために、Kubernetes クラスターを利用して事前に構成された仮想マシンのクラスターを簡単に作成、構成、管理できます。 これにより、既存のスキルを使用したり、規模が拡大している専門知識コミュニティを利用したりして、コンテナー ベースのアプリケーションを Microsoft Azure 上に展開して管理することができます。
 
@@ -29,7 +29,7 @@ AKS を使用すると、コンテナー化されたアプリケーションを�
 > [!TIP]
 > また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](deploy-notebooks.md)において、この操作を行う方法を確認してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server 2019 ビッグ データ ツールを展開する](deploy-big-data-tools.md):
    - **kubectl**
@@ -37,11 +37,11 @@ AKS を使用すると、コンテナー化されたアプリケーションを�
    - **SQL Server 2019 の拡張機能**
    - **Azure CLI**
 
-- Kubernetes server の最小1.13 バージョン。 AKS の場合、`--kubernetes-version` パラメータ―を使用して、既定値とは異なるバージョンを指定する必要があります。
+- Kubernetes サーバーでの最小の 1.13 バージョン。 AKS の場合、`--kubernetes-version` パラメータ―を使用して、既定値とは異なるバージョンを指定する必要があります。
 
-- AKS の基本的なシナリオを検証しながら、デプロイを成功させ、最適なエクスペリエンスを確保するために、次のリソースを使用して、単一ノードまたはマルチノードの AKS クラスターを使用できます。
+- AKS の基本的なシナリオを検証しながら、正常なデプロイと最適なエクスペリエンスを確保するために、次のリソースを使用可能な単一ノードまたはマルチノードの AKS クラスターを使用できます。
    - すべてのノード全体で 8個の vCPU
-   - 64 GB のメモリ (VM あたり)
+   - VM ごとに 64 GB のメモリ
    - すべてのノード全体で 24 個以上の接続されたディスク
 
    > [!TIP]
@@ -165,4 +165,4 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 この記事の手順では、AKS に Kubernetes クラスターを構成しました。 次のステップとして、AKS Kubernetes クラスター上に SQL Server 2019 ビッグ データ クラスターを展開します。 ビッグ データ クラスターを展開する方法の詳細については、次の記事を参照してください。
 
-[Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]する方法](deployment-guidance.md)
+[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する方法](deployment-guidance.md)

@@ -1,7 +1,7 @@
 ---
 title: 監視とトラブルシューティング
 titleSuffix: SQL Server big data clusters
-description: この記事では、の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]監視とトラブルシューティングに役立つコマンドについて説明します。
+description: この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の監視とトラブルシューティングに役立つコマンドについて説明します。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -11,19 +11,19 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70153633"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視とトラブルシューティング[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の監視とトラブルシューティング
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、の監視とトラブルシューティングに使用できる、いくつか[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の便利な Kubernetes コマンドについて説明します。 ビッグ データ クラスター内に存在するポッドまたは他の Kubernetes アーティファクトの詳細を表示する方法を示します。 この記事では、SQL Server ビッグ データ クラスター サービスのいずれかが実行されているコンテナーとの間でのファイルのコピーなど、一般的なタスクについても説明します。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の監視とトラブルシューティングに使用できる、いくつかの便利な Kubernetes コマンドについて説明します。 ビッグ データ クラスター内に存在するポッドまたは他の Kubernetes アーティファクトの詳細を表示する方法を示します。 この記事では、SQL Server ビッグ データ クラスター サービスのいずれかが実行されているコンテナーとの間でのファイルのコピーなど、一般的なタスクについても説明します。
 
 > [!TIP]
-> ビッグデータクラスターのコンポーネントの状態を監視するために、 [**azdata bdc のステータス**](deployment-guidance.md#status)コマンドまたは Azure Data Studio で提供されている組み込みの[トラブルシューティングノートブック](manage-notebooks.md)を使用できます。
+> ビッグ データ クラスターのコンポーネントの状態を監視するには、[**azdata bdc status**](deployment-guidance.md#status) のコマンドを使用するか、Azure Data Studio に組み込まれている[トラブルシューティングのノートブック](manage-notebooks.md)を使用します。
 
 > [!TIP]
 > Windows (cmd または PS) または Linux (bash) のクライアント コンピューターで、次の **kubectl** コマンドを実行します。 それらには、クラスターでの以前の認証と、実行対象のクラスター コンテキストが必要です。 たとえば、以前に作成された AKS クラスターでは、`az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` を実行して Kubernetes クラスター構成ファイルをダウンロードし、クラスター コンテキストを設定できます。
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 次のサービスでは、ビッグ データ クラスターへの外部接続がサポートされています。
 
-| サービス | 説明 |
+| サービス | [説明] |
 |---|---|
 | **master-svc-external** | マスター インスタンスへのアクセスが提供されます。<br/>(**EXTERNAL-IP,31433** および **SA** ユーザー) |
 | **controller-svc-external** | クラスターを管理するツールとクライアントがサポートされます。 |
@@ -227,4 +227,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグデータクラスターの詳細について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)、「」を参照してください。
+ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] とは](big-data-cluster-overview.md)の概要に関するページを参照してください。

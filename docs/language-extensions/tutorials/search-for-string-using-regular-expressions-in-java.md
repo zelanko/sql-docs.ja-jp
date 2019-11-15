@@ -1,20 +1,19 @@
 ---
-title: チュートリアル:Java での正規表現 (regex) を使用した文字列の検索
-titleSuffix: SQL Server Language Extensions
-description: このチュートリアルでは、SQL Server の言語拡張を使用し、正規表現を使用して文字列を検索する Java コードを実行する方法について説明します。
+title: チュートリアル:Java での regex 文字列検索
+description: このチュートリアルでは、SQL Server の言語拡張を使用し、正規表現 (regex) を使用して文字列を検索する Java コードを実行する方法について説明します。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746706c1ef1ee8f9ed393ac57497ffb570bef50c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589006"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658793"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>チュートリアル:Java での正規表現 (regex) を使用した文字列の検索
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "73589006"
 
 Java クラスに送信されるテキスト列内の指定のテキストが、指定した正規表現を満たしているかどうかをコードが確認し、元の ID と共にそのテキストが返されます。
 
-このサンプルの正規表現では、具体的に "Java" または "java" という語がテキストに含まれていることを確認しています。
+このサンプル コードでは、テキストに "Java" または "java" の単語が含まれているかどうかを確認する正規表現を使用しています。
 
 ## <a name="prerequisites"></a>Prerequisites
 

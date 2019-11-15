@@ -1,7 +1,7 @@
 ---
 title: curl を使用して HDFS にデータを読み込む |Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: Curl を使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上の HDFS にデータを読み込みます。
+description: curl を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上の HDFS にデータを読み込む。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c65ce7fb6752240f0dd23a6dab195539146e7933
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049877"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706631"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Curl を使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の HDFS にデータを読み込みます
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>curl を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の HDFS にデータを読み込む
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、 **curl**を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) で HDFS にデータを読み込む方法について説明します。
+この記事では、**curl** を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上の HDFS にデータを読み込む方法について説明します。
 
-## <a id="prereqs"></a> Prerequisites
+## <a id="prereqs"></a> 前提条件
 
 - [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
@@ -43,13 +43,13 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-例 :
+例:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
 ## <a name="list-a-file"></a>ファイルの一覧表示
 
-**Hdfs:///product_review_data**の下のファイルを一覧表示するには、次の curl コマンドを使用します。
+**hdfs:///product_review_data** の下のファイルを一覧表示するには、次の curl コマンドを使用します。
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP extern
 
 ## <a name="put-a-local-file-into-hdfs"></a>ローカル ファイルを HDFS に配置する
 
-新しいファイル product_review_data をローカルディレクトリからディレクトリに配置するには、次の curl コマンドを使用**します (** **content-type**パラメーターは必須です)。
+**test.csv** という新しいファイルをローカル ディレクトリから product_review_data ディレクトリに配置するには、次の curl コマンドを使用します (**Content-Type** パラメーターは必須です)。
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
@@ -71,6 +71,6 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 SQL Server ビッグ データ クラスターの詳細については、「[SQL Server ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。

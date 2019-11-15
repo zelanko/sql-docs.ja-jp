@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909755"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032997"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1:データベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "72909755"
 ここまでの作業で、管理者として [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続できました。次に行う最初の作業の 1 つに、他のユーザーの接続の認証があります。 これには、ログインを作成し、そのログインに対し、ユーザーとしてデータベースにアクセスすることを認証します。 ログインは Windows 認証ログインまたは SQL Server 認証ログインです。Windows 認証ログインには Windows の資格情報が使用されます。SQL Server 認証ログインは Windows の資格情報に依存せず、認証情報は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に保存されます。 可能であれば、Windows 認証を使用します。
 
 > [!TIP]
-> ほとんどの組織では、ドメイン ユーザーが採用されており、Windows 認証が使用されます。 コンピューター上の他のローカル ユーザーを作成することで、自分で試してみることができます。 ローカル ユーザーは、コンピューターによって認証されるため、ドメインはコンピューター名です。 たとえば、ユーザーのコンピューター名が `MyComputer` であり、 `Test`という名前のユーザーを作成する場合、Windows ではこのユーザーは `Mycomputer\Test`と表されます。  
+> ほとんどの組織では、ドメイン ユーザーが採用されており、Windows 認証が使用されます。 コンピューター上の他のローカル ユーザーを作成することで、自分で試してみることができます。 ローカル ユーザーは、コンピューターによって認証されるため、ドメインはコンピューター名です。 たとえば、ユーザーのコンピューター名が `MyComputer` であり、`Test` という名前のユーザーを作成する場合、Windows ではこのユーザーは `Mycomputer\Test` と表されます。  
 
 ##### <a name="create-a-windows-authentication-login"></a>Windows 認証ログインを作成するには 
 

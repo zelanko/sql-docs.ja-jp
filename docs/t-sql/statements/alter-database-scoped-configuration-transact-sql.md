@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589993"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240697"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -50,6 +50,7 @@ ms.locfileid: "72589993"
 - [軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にします。
 - 新しい `String or binary data would be truncated` のエラー メッセージを有効または無効にします。
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) の最後の実際の実行プランのコレクションを有効または無効にします。
+- 再開可能なインデックス操作を一時停止してから、SQL Server エンジンによって自動的に中止されるまでの一時停止される時間を分単位で指定します。
 
 ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -58,9 +59,9 @@ ms.locfileid: "72589993"
 ```
 ALTER DATABASE SCOPED CONFIGURATION
 {
-     {  [ FOR SECONDARY] SET <set_options>}
+    { [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE  [plan_handle]
+| CLEAR PROCEDURE_CACHE [plan_handle]
 | SET < set_options >
 [;]
 
@@ -88,6 +89,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
+    | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
 }
 ```
 
@@ -105,12 +107,11 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 CLEAR PROCEDURE_CACHE [plan_handle]
 
-データベースのプロシージャ (プラン) キャッシュがクリアされ、プライマリとセカンダリの両方で実行することができます。  
+データベースのプロシージャ (プラン) キャッシュがクリアされ、プライマリとセカンダリの両方で実行することができます。
 
 プラン キャッシュから 1 つのクエリ プランをクリアするクエリ プラン ハンドルを指定します。
 
-> [!NOTE]
-> クエリ プラン ハンドルの指定は、Azure SQL Database と SQL Server 2019 以降で利用できます。
+**適用対象**:クエリ プラン ハンドルの指定は、Azure SQL Database と SQL Server 2019 以降で利用できます。
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -171,7 +172,7 @@ PRIMARY
 
 データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリでこの設定の値がプライマリに設定されている値になることを示します。 プライマリの構成が変更されると、セカンダリの値も適宜変更されます。セカンダリの値を明示的に設定する必要はありません。 PRIMARY はセカンダリの既定の設定です。
 
-IDENTITY_CACHE **=** { **ON** | OFF }      
+IDENTITY_CACHE **=** { **ON** | OFF }
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -180,7 +181,7 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 > [!NOTE]
 > このオプションはプライマリにのみ設定できます。 詳細については、「[ID 列](create-table-transact-sql-identity-property.md)」を参照してください。
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -191,7 +192,7 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 >
 > SQL Server 2017 (14.x) のみでの、オプション INTERLEAVED_EXECUTION_TVF には **DISABLE**_INTERLEAVED_EXECUTION_TVF の古い名前があります。
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -200,7 +201,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 > [!NOTE]
 > データベース互換性レベルが 130 以下である場合は、このデータベース スコープの構成に影響がありません。
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -333,9 +334,9 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-新しい `String or binary data would be truncated` のエラー メッセージの有効と無効が切り替えられるようになります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、次のシナリオに対してより具体的な新しいエラー メッセージ (2628) が導入されています。  
+新しい `String or binary data would be truncated` のエラー メッセージの有効と無効が切り替えられるようになります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、次のシナリオに対してより具体的な新しいエラー メッセージ (2628) が導入されています。
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -351,11 +352,25 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) の最後の実際の実行プラン (実際の実行プランに相当) のコレクションを有効または無効にすることができます。
 
+PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
+
+**適用対象**:Azure SQL Database のみ
+
+`PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` オプションでは、エンジンによって自動的に中止される前に、再開可能なインデックスが一時停止される期間 (分単位) を決定します。
+
+- 既定値は、1 日 (1440 分) に設定されています。
+- 最小期間は 1 分に設定されています。
+- 最大期間は 71582 分です。
+- 0 に設定すると、一時停止された操作が自動的に中止されることはありません
+
+このオプションの現在の値は、[sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) に表示されます。
+
 ## <a name="Permissions"></a> Permissions
 
 データベースに対する `ALTER ANY DATABASE SCOPE CONFIGURATION` が必要です。 この権限は、データベース上で CONTROL 権限を持つユーザーが付与できます。
 
 ## <a name="general-remarks"></a>全般的な解説
+
 セカンダリ データベースにはプライマリとは異なるスコープ構成を設定できますが、すべてのセカンダリ データベースで同じ構成が使用されます。 個々のセカンダリに異なる設定を構成することはできません。
 
 このステートメントを実行すると、現在のデータベースのプロシージャ キャッシュが消去されます。つまり、すべてのクエリを再コンパイルする必要があります。
@@ -374,6 +389,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
 ### <a name="maxdop"></a>MAXDOP
+
 詳細設定はグローバル設定をオーバーライドします。その Resource Governor が他のすべての MAXDOP 設定の上限となります。 MAXDOP 設定のロジックは次のようになります。
 
 - クエリ ヒントは `sp_configure` とデータベース スコープ構成の両方をオーバーライドします。 ワークロード グループにリソース グループ MAXDOP が設定されている場合:
@@ -411,9 +427,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) システム ビューには、データベース内のスコープ構成に関する情報が表示されます。 データベース スコープ構成オプションはサーバー全体の初期設定にオーバーライドするため、sys.database_scoped_configurations にのみ表示されます。 [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) システム ビューは、サーバー全体の設定にのみ表示されます。
 
 ## <a name="examples"></a>使用例
+
 以下は ALTER DATABASE SCOPED CONFIGURATION の使用例です
 
 ### <a name="a-grant-permission"></a>A. 権限の付与
+
 この例では、ALTER DATABASE SCOPED CONFIGURATION の実行に必要な権限をユーザー Joe に与えています。
 
 ```sql
@@ -421,6 +439,7 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>B. MAXDOP の設定
+
 この例では、geo レプリケーション シナリオでプライマリ データベースに MAXDOP = 1 を、セカンダリ データベースに MAXDOP = 4 を設定します。
 
 ```sql
@@ -435,6 +454,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
 ### <a name="c-set-legacy_cardinality_estimation"></a>C. LEGACY_CARDINALITY_ESTIMATION の設定
+
 この例では、geo レプリケーション シナリオで、セカンダリ データベースの LEGACY_CARDINALITY_ESTIMATION を ON に設定します。
 
 ```sql
@@ -448,6 +468,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parameter_sniffing"></a>D. PARAMETER_SNIFFING の設定
+
 この例では、geo レプリケーション シナリオで、プライマリ データベースの PARAMETER_SNIFFING を OFF に設定します。
 
 ```sql
@@ -467,6 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMA
 ```
 
 ### <a name="e-set-query_optimizer_hotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES の設定
+
 geo レプリケーション シナリオで、プライマリ データベースの QUERY_OPTIMIZER_HOTFIXES を ON に設定します。
 
 ```sql
@@ -474,6 +496,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. プロシージャ キャッシュの消去
+
 この例では、プロシージャ キャッシュを消去します (プライマリ データベースのみ可能)。
 
 ```sql
@@ -481,6 +504,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identity_cache"></a>G. IDENTITY_CACHE の設定
+
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 この例では、ID キャッシュを無効にします。
@@ -490,7 +514,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS の設定
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 この例では、バッチが初めてコンパイルされるとき、コンパイルしたプラン スタブのキャッシュ保存を有効にします。
 
@@ -499,6 +524,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevate_online"></a>I. ELEVATE_ONLINE を設定する
+
 **適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 この例では、ELEVATE_ONLINE が FAIL_UNSUPPORTED に設定されます。
@@ -508,6 +534,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevate_resumable"></a>J. ELEVATE_RESUMABLE を設定する
+
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
 
 この例では、ELEVATE_RESUMABLE が WHEN_SUPPORTED に設定されます。
@@ -517,12 +544,24 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. プラン キャッシュからクエリ プランを削除する
+
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-この例では、プロシージャ キャッシュから特定のプランを削除します。 
+この例では、プロシージャ キャッシュから特定のプランを削除します。
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
+### <a name="l-set-paused-duration"></a>L. 一時停止される期間を設定する
+
+**適用対象**:Azure SQL Database のみ
+
+この例では、再開可能なインデックスの一時停止される期間を 60 分に設定します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ```
 
 ## <a name="additional-resources"></a>その他のリソース

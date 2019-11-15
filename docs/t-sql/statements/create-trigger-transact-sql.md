@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190366"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168764"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,9 +206,7 @@ SCHEMABINDING
 このオプションは、メモリ最適化テーブルのトリガーで必要であり、従来のテーブルのトリガーではサポートされていません。  
   
 FOR | AFTER  
-AFTER を指定した場合は、トリガー元の SQL ステートメントで指定したすべての処理が正常に開始された場合のみ、DML トリガーが起動されます。 このトリガーの実行前に、すべての連鎖参照操作と制約チェックも成功している必要があります。  
-  
-指定したキーワードが FOR だけの場合は、AFTER が既定値になります。  
+FOR または AFTER を指定した場合は、トリガー元の SQL ステートメントで指定したすべての操作が正常に開始された場合のみ、DML トリガーが起動されます。 このトリガーの実行前に、すべての連鎖参照操作と制約チェックも成功している必要があります。  
   
 ビューに AFTER トリガーを定義することはできません。  
   

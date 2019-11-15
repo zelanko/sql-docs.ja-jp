@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653498"
@@ -453,4 +453,4 @@ ms.locfileid: "69653498"
 
 ## <a name="next-steps"></a>次の手順
 
-展開構成ファイルを使用およびカスタマイズする方法の詳細については、「 [how to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile)」を参照してください。
+展開構成ファイルを使用およびカスタマイズする方法の詳細については、[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md#configfile)に関する記事を参照してください。

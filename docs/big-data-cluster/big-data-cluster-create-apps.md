@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532524"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706694"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] にアプリを展開する方法
 
@@ -26,7 +26,7 @@ ms.locfileid: "73532524"
 
 - クラスターとアプリを管理する 1 つのコマンドライン ユーティリティ。
 - アプリの展開が簡単になり、さらに仕様ファイルを細かく制御できるようになりました。
-- ホストされるアプリケーションの種類が増えました (SSIS と MLeap) (CTP 2.3 の新機能)。
+- ホストされるアプリケーションの種類が増えました (SSIS と MLeap)。
 - アプリケーションの展開を管理する [Visual Studio Code 拡張機能](app-deployment-extension.md)。
 
 アプリケーションは、`azdata` コマンドライン ユーティリティを使用して展開および管理されます。 この記事では、コマンド ラインからアプリを展開する方法の例を示します。 Visual Studio Code でこれを使用する方法については、[Visual Studio Code 拡張機能](app-deployment-extension.md)に関する記事を参照してください。
@@ -43,7 +43,7 @@ ms.locfileid: "73532524"
 
 ## <a name="capabilities"></a>Capabilities
 
-SQL Server 2019 (プレビュー) では、アプリケーションの作成、削除、説明、初期化、一覧の実行、および更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
+SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
 |コマンド |[説明] |
 |:---|:---|

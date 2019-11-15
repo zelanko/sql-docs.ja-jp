@@ -1,26 +1,26 @@
 ---
 title: SQL Server 言語拡張の機能拡張アーキテクチャ
-titleSuffix: SQL Server Language Extensions
-description: リレーショナル データに対して外部言語を実行するためのデュアル アーキテクチャを備えた、SQL Server データベース エンジンの外部コードのサポート。
+titleSuffix: ''
+description: SQL Server 言語拡張機能に使用される機能拡張アーキテクチャについて説明します。これにより、SQL Server で外部コードを実行できるようになります。 SQL Server 2019 では、Java がサポートされています。 このコードは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589086"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658869"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 言語拡張の機能拡張アーキテクチャ
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 言語拡張には、サーバー上で Java などの外部コードを実行するための機能拡張フレームワークがあります。 このコードは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
+SQL Server 言語拡張機能に使用される機能拡張アーキテクチャについて説明します。これにより、SQL Server で外部コードを実行できるようになります。 SQL Server 2019 では、Java がサポートされています。 このコードは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 
 ## <a name="background"></a>背景情報
 

@@ -1,7 +1,7 @@
 ---
 title: Kubeadm を使用して Kubernetes を構成する
-titleSuffix: SQL Server big data clusters
-description: 複数の Ubuntu 16.04 または18.04 マシン (物理または仮想) でデプロイ用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に Kubernetes を構成する方法について説明します。
+titleSuffix: SQL Server Big Data Clusters
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] の展開のために、複数の Ubuntu 16.04 または 18.04 マシン (物理または仮想) 上に Kubernetes を構成する方法について説明します。'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,24 +9,24 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688301"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706365"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために複数のマシン上に Kubernetes を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、 **kubeadm**を使用して複数の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]コンピューターで Kubernetes を構成する方法の例について説明します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想) を対象とします。 別の Linux プラットフォームに展開する場合は、お使いのシステムに合わせてコマンドの一部を変更する必要があります。  
+この記事では、**kubeadm** を使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] の展開のために複数のコンピューター上に Kubernetes を構成する方法の例を示します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想) を対象とします。 別の Linux プラットフォームに展開する場合は、お使いのシステムに合わせてコマンドの一部を変更する必要があります。  
 
 > [!TIP] 
 > Kubernetes を構成するサンプル スクリプトについては、「[Ubuntu 16.04 LTS または 18.04 LTS 上で Kubeadm を使用して Kubernetes クラスターを作成する](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)」を参照してください。
 また、VM 上での単一ノードの kubeadm の展開を自動化して、その上にビッグ データ クラスターの既定の構成を展開するサンプル スクリプトについては、[こちら](deployment-script-single-node-kubeadm.md)のトピックを参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - 最低 3 台の Linux 物理マシンまたは仮想マシン
 - マシンごとに推奨される構成:
@@ -35,7 +35,7 @@ ms.locfileid: "71688301"
    - 100 GB のストレージ
  
 > [!Important] 
-> ビッグデータクラスターのデプロイを開始する前に、デプロイが対象としているすべての Kubernetes ノード間でクロックが同期されていることを確認します。 ビッグデータクラスターには、時間の影響を受けるさまざまなサービスの正常性プロパティが組み込まれており、時計の傾斜によって状態が正しくないことがあります。
+> ビッグ データ クラスターの展開を開始する前に、展開の対象となっているすべての Kubernetes ノード間でクロックが同期されていることを確認します。 ビッグ データ クラスターには、時間の影響を受け、時計のずれが原因で不正な状態になる可能性があるさまざまなサービス用に、正常性プロパティが組み込まれています。
 
 ## <a name="prepare-the-machines"></a>マシンを準備する
 
@@ -149,7 +149,7 @@ ms.locfileid: "71688301"
 kubectl get nodes
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 この記事の手順では、複数の Ubuntu マシン上に Kubernetes クラスターを構成しました。 次のステップとして、SQL Server 2019 ビッグ データ クラスターを展開します。 手順については、次の記事を参照してください。
 

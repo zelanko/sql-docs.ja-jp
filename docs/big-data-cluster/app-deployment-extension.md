@@ -1,7 +1,7 @@
 ---
 title: アプリ展開の拡張機能
 titleSuffix: SQL Server big data clusters
-description: Python または R スクリプトをアプリケーションとして[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) にデプロイします。
+description: SQL Server ビッグ データ クラスターに、Python または R スクリプトをアプリケーションとして展開します。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -9,23 +9,23 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49a59650c406e3b48394da45ad0eeb4589fc4374
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653602"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707140"
 ---
-# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Visual Studio Code を使用してアプリケーションを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Visual Studio Code を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]にアプリケーションを展開する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、アプリ展開拡張機能で Microsoft Visual Studio コードを使用して SQL Server ビッグデータクラスターにアプリケーションをデプロイする方法について説明します。 この機能は CTP 2.3 で導入されました。 
+この記事では、Microsoft Visual Studio Code とアプリ展開拡張機能を使用して SQL Server ビッグ データ クラスターにアプリケーションを展開する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [ビッグデータクラスターの SQL Server](big-data-cluster-overview.md)CTP 2.3 以降
+- [SQL Server ビッグ データ クラスター](big-data-cluster-overview.md)
 
 ## <a name="capabilities"></a>Capabilities
 
@@ -44,11 +44,11 @@ ms.locfileid: "69653602"
 
 ### <a name="install"></a>インストール
 
-まず、Visual Studio Code にアプリ展開拡張機能をインストールします。
+まず、Visual Studio Code にアプリ展開の拡張機能をインストールします。
 
-1. [アプリのデプロイ拡張機能](https://aka.ms/app-deploy-vscode)をダウンロードして、Visual Studio Code の一部として拡張機能をインストールします。
+1. [アプリ展開の拡張機能](https://aka.ms/app-deploy-vscode)をダウンロードし、Visual Studio Code の一部として拡張機能をインストールします。
 
-1. Visual Studio Code を起動し、[拡張機能] サイドバーに移動します。
+1. Visual Studio Code を起動し、[拡張機能] サイド バーに移動します。
 
 1. サイド バーの上部にある [`…`] コンテキスト メニューをクリックし、[`Install from vsix`]\(vsix からのインストール\) を選択します。
 
@@ -56,7 +56,7 @@ ms.locfileid: "69653602"
 
 1. ダウンロードした `sqlservbdc-app-deploy.vsix` ファイルを検索し、それを選択してインストールします。
 
-SQL Server ビッグデータクラスターアプリ展開拡張機能がインストールされると、Visual Studio Code の再読み込みを求めるメッセージが表示されます。 Visual Studio Code サイドバーに SQL Server BDC アプリエクスプローラーが表示されます。
+SQL Server ビッグ データ クラスターのアプリ展開拡張機能がインストールされると、Visual Studio Code の再読み込みを求めるメッセージが表示されます。 Visual Studio Code サイド バーに SQL Server BDC アプリ エクスプローラーが表示されます。
 
 ### <a name="app-explorer"></a>アプリ エクスプローラー
 
@@ -64,7 +64,7 @@ SQL Server ビッグデータクラスターアプリ展開拡張機能がイン
 
 ![アプリ エクスプローラー](media/vs-extension/app_explorer.png)
 
-#### <a name="connect-to-cluster"></a>クラスターへの接続
+#### <a name="connect-to-cluster"></a>クラスターに接続する
 
 クラスター エンドポイントに接続するには、次のいずれかの方法を使用します。
 
@@ -73,31 +73,31 @@ SQL Server ビッグデータクラスターアプリ展開拡張機能がイン
 
 Visual Studio Code、適切なエンドポイント、ユーザー名、およびパスワードの入力を求められます。
 
-接続するエンドポイントは、 `Cluster Management Service`ポート30080のエンドポイントです。
+接続するエンドポイントは、ポート 30080 の `Cluster Management Service` エンドポイントです。
 
-このエンドポイントは、コマンドラインから 
+このエンドポイントは、次のようにコマンド ラインで見つけることもできます。 
 
 ```
 azdata bdc endpoint list
 ```
 
-この情報を取得する他の方法の1つとして、Azure Data Studio でサーバーの **[管理]** を右クリックして、一覧表示されているサービスのエンドポイントを確認する方法があります。
+この情報を取得する他の方法の 1 つとして、Azure Data Studio でサーバー上の **[管理]** を右クリックする方法があります。ここで、一覧表示されているサービスのエンドポイントを確認できます。
 
-![広告エンドポイント](media/vs-extension/ads_end_point.png)
+![ADS エンドポイント](media/vs-extension/ads_end_point.png)
 
 使用するエンドポイントが見つかったら、クラスターに接続します。
 
 ![新しい接続](media/vs-extension/connect_to_cluster.png)
 
- 正しい資格情報とアプリエンドポイントが指定されている場合、Visual Studio Code はクラスターに接続されたことを通知し、展開されたアプリがサイドバーに表示されることを確認します。 正常に接続すると、エンドポイントとユーザー名がユーザー プロファイルの一部として `./sqldbc` に保存されます。 パスワードやトークンは保存されません。 もう一度ログインすると、保存されているホストとユーザー名がプロンプトに事前に入力されますが、パスワードは常に入力する必要があります。 別のクラスター エンドポイントに接続する場合は、`New Connection` [新しい接続] をもう一度クリックします。 Visual Studio Code を閉じるか、別のワークスペースを開いて再接続する必要がある場合、接続は自動的に閉じられます。
+ 正しい資格情報とアプリ エンドポイントが指定された場合、クラスターに接続されたことが Visual Studio Code によって通知され、展開されたアプリがサイド バーに表示されます。 正常に接続すると、エンドポイントとユーザー名がユーザー プロファイルの一部として `./sqldbc` に保存されます。 パスワードやトークンは保存されません。 もう一度ログインすると、保存されているホストとユーザー名がプロンプトに事前に入力されますが、パスワードは常に入力する必要があります。 別のクラスター エンドポイントに接続する場合は、`New Connection` [新しい接続] をもう一度クリックします。 Visual Studio Code を閉じた場合、または別のワークスペースを開いた場合、接続は自動的に閉じられるので、再接続する必要があります。
 
 ### <a name="app-template"></a>アプリ テンプレート
 
-アプリのアーティファクトを保存する Visual Studio Code で*ワークスペースを開く*必要があります。
+Visual Studio Code 内で、アプリの成果物を保存する*ワークスペースを開く*必要があります。
 
-いずれかのテンプレートから新しいアプリを展開するには、[`App Specifications`]\(アプリの仕様\) ウィンドウの [`New App Template`]\(新しいアプリ テンプレート\) ボタンをクリックします。このボタンをクリックすると、名前、ランタイム、およびローカル コンピューターで新しいアプリを配置する場所を入力するように求められます。 指定する名前とバージョンは、DNS-1035 ラベルであり、小文字の英数字または '-' で構成されている必要があります。また、アルファベット文字で始まり、英数字で終わる必要があります。
+いずれかのテンプレートから新しいアプリを展開するには、[`App Specifications`]\(アプリの仕様\) ウィンドウの [`New App Template`]\(新しいアプリ テンプレート\) ボタンをクリックします。このボタンをクリックすると、名前、ランタイム、およびローカル コンピューターで新しいアプリを配置する場所を入力するように求められます。 指定する名前とバージョンは、DNS-1035 ラベルとする必要があります。また、小文字の英数字または '-' で構成され、アルファベット文字で始まり、英数字で終わる必要があります。
 
-拡張機能のすべての機能を使用できるように、現在の Visual Studio Code ワークスペースに配置することをお勧めしますが、ローカルファイルシステムの任意の場所に配置することもできます。
+拡張機能のすべての機能を使用できるように、現在の Visual Studio Code ワークスペースに配置することをお勧めしますが、ローカル ファイル システムの任意の場所に配置できます。
 
 ![新しいアプリ テンプレート](media/vs-extension/new_app_template.png)
 
@@ -105,16 +105,16 @@ azdata bdc endpoint list
 
 ![読み込まれたアプリ テンプレート](media/vs-extension/loading_app_template.png)
 
-このテンプレートは、[ `helloworld`アプリの仕様] ウィンドウで次のようにレイアウトされた単純なアプリです。
+このテンプレートは、[App Specifications]\(アプリの仕様\) ウィンドウで次のようにレイアウトされるシンプルな `helloworld` アプリです。
 
 - **spec. yaml**
    - アプリの展開方法をクラスターに指示します
 - **run-spec.yaml**
    - アプリの呼び出し方法をクラスターに指示します
 
-アプリのソースコードは、ワークスペースフォルダーにあります。
+アプリのソース コードは、[Workspace] フォルダーにあります。
 
-- **ソースファイル名**
+- **ソース ファイル名**
    - これは、`spec.yaml` で `src` に指定されているソース コード ファイルです。
    - `spec.yaml` に示されているように、アプリの `entrypoint` と見なされる `handler` という 1 つの関数があります。 `msg` という文字列の入力を受け取り、`out` という文字列の出力を返します。 これらは `spec.yaml` の `inputs` と `outputs` で指定されます。
 
@@ -151,7 +151,7 @@ azdata bdc endpoint list
   - Swagger
   - 詳細
 
-をクリック`Links`すると、デプロイされたアプリのに`swagger.json`アクセスできることがわかります。これにより、アプリを呼び出す独自のクライアントを作成できます。
+`Links` をクリックすると、展開されたアプリの `swagger.json` にアクセスできることがわかります。これにより、アプリを呼び出す独自のクライアントを作成できます。
 
 ![Swagger](media/vs-extension/swagger.png)
 
@@ -187,7 +187,7 @@ azdata bdc endpoint list
 - マトリックス
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
-- オブジェクト
+- Object
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 
@@ -199,9 +199,9 @@ azdata bdc endpoint list
 
 ## <a name="next-steps"></a>次の手順
 
-「[ビッグデータクラスターでアプリケーション](big-data-cluster-consume-apps.md)を[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]使用する」で、独自のアプリケーションにデプロイされているアプリを統合する方法について詳しく説明します。 「[アプリ展開のサンプル](https://aka.ms/sql-app-deploy)」にある追加のサンプルを参照して、拡張機能を試してみることもできます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されているアプリを独自のアプリケーションに統合する方法の詳細については、[ビッグ データ クラスター上でのアプリケーションの使用](big-data-cluster-consume-apps.md)に関するページを参照してください。 「[アプリ展開のサンプル](https://aka.ms/sql-app-deploy)」にある追加のサンプルを参照して、拡張機能を試してみることもできます。
 
-の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)」を参照してください。
 
 
 私たちの目標は、この拡張機能をお客様にとって有益なものにすることです。フィードバックをお待ちしております。 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] チーム](https://aka.ms/sqlfeedback)までお送りください。

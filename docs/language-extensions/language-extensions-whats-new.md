@@ -1,22 +1,22 @@
 ---
-title: 言語拡張の新機能
-titleSuffix: SQL Server Language Extensions
-description: SQL Server 2019 の言語拡張の新機能について説明します。
+title: SQL Server 言語拡張の新機能
+titleSuffix: ''
+description: SQL Server の言語拡張の新機能について説明します。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13a6a0181297fcb05274ba4be726c4e10a445064
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3bcf60c390b06695c4913bd1347045b807c1ae9d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589016"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658805"
 ---
-# <a name="what-new-in-sql-server-language-extensions"></a>SQL Server 言語拡張の新機能
+# <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 言語拡張の新機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 外部言語とデータ プラットフォーム間の統合が継続的に拡大、拡張、および強化されており、各リリースで[言語拡張](language-extensions-overview.md)機能が SQL Server に追加されています。 

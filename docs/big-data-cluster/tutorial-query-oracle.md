@@ -1,7 +1,7 @@
 ---
 title: Oracle の外部データにクエリを実行する
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、@no__t 0 から Oracle データを照会する方法について説明します。 Oracle のデータに対する外部テーブルを作成し、クエリを実行します。
+description: このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の Oracle データにクエリを実行する方法について説明します。 Oracle のデータに対する外部テーブルを作成し、クエリを実行します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
 ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71708367"
@@ -132,7 +132,7 @@ DROP EXTERNAL DATA SOURCE [OracleSalesSrvr] ;
 DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 データ プールにデータを取り込む方法を学習します:
 > [!div class="nextstepaction"]

@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961802"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660790"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -137,6 +137,8 @@ CTAS には、*select_criteria* で参照されるすべてのオブジェクト
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
 Azure SQL Data Warehouse では、統計の自動作成や自動更新はまだサポートされていません。  クエリから最高のパフォーマンスを得るには、CTAS を実行した後と、データで大幅な変更が発生した後に、すべてのテーブルのすべての列の統計を作成することが重要です。 詳細については、「 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
+
+順序付けされたクラスター化列ストア インデックスは、文字列型の列を除く Azure SQL Data Warehouse でサポートされている任意のデータ型の列に作成できます。  
 
 CTAS では [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) の効果はありません。 同様の動作を実現するには、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) を使用します。  
  

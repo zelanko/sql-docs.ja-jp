@@ -1,7 +1,7 @@
 ---
 title: HDFS の階層化を構成する
 titleSuffix: SQL Server big data clusters
-description: この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上の hdfs に外部 Azure Data Lake Storage ファイルシステムをマウントするように hdfs 階層を構成する方法について説明します。
+description: この記事では、外部の Azure Data Lake Storage ファイル システムを [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上の HDFS にマウントするように、HDFS の階層化を構成する方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652327"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706053"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>HDFS 階層化の構成[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で HDFS の階層化を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS の階層化により、HDFS に外部の HDFS と互換性のあるファイル システムをマウントする機能が提供されます。 この記事では、(プレビュー) の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] HDFS 階層を構成する方法について説明します。 現時点では、Azure Data Lake Storage Gen2 および Amazon S3 への接続がサポートされています。 
+HDFS の階層化により、HDFS に外部の HDFS と互換性のあるファイル システムをマウントする機能が提供されます。 この記事では、SQL Server ビッグ データ クラスターで HDFS の階層化を構成する方法について説明します。 現時点では、Azure Data Lake Storage Gen2 および Amazon S3 への接続がサポートされています。 
 
 ## <a name="hdfs-tiering-overview"></a>HDFS の階層化の概要
 
@@ -34,11 +34,11 @@ HDFS の階層化により、HDFS に外部の HDFS と互換性のあるファ�
 
 以降のセクションでは、Azure Data Lake Storage Gen2 データソースを使用して HDFS 階層制御を構成する方法の例を示します。
 
-## <a name="refresh"></a>Refresh
+## <a name="refresh"></a>更新
 
 HDFS の階層化は更新をサポートします。 既存のマウントを更新して、リモート データの最新のスナップショットを入手します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - [展開済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -54,7 +54,7 @@ Azure Data Lake Storage Gen2 および Amazon S3 への接続がサポートさ�
 
 ## <a id="issues"></a> 既知の問題と制限事項
 
-次の一覧では、で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]HDFS 階層を使用する際の既知の問題と現在の制限事項について説明します。
+次の一覧に、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で HDFS の階層化を使用する場合の既知の問題と現在の制限事項を示します。
 
 - マウントが `CREATING` 状態で長時間停止している場合は、ほとんどの場合、失敗しています。 このような場合は、コマンドを取り消し、必要に応じてマウントを削除します。 パラメーターと資格情報が正しいことを確認してから、再試行してください。
 
@@ -76,4 +76,4 @@ Azure Data Lake Storage Gen2 および Amazon S3 への接続がサポートさ�
 
 ## <a name="next-steps"></a>次の手順
 
-の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)」を参照してください。

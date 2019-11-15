@@ -10,19 +10,19 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 49d6b08401d8974994daec507b5222387a0dfff1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 297d28166b8c9fa7432bf6978e887280d1f18879
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532559"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706606"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio をダウンロードしてインストールする
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] は、Windows、macOS、Linux 上で実行されます。
 
 
-最新リリース (*10 月のリリース*) をダウンロードしてインストールします。
+最新リリースのダウンロードとインストール:
 
 > [!NOTE]
 > SQL Operations Studio から更新していて、設定、キーボード ショートカット、またはコード スニペットを保持する場合は、「[ユーザー設定を移動する](#move-user-settings)」を参照してください。

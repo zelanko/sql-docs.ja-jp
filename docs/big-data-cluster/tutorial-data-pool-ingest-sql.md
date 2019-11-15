@@ -1,7 +1,7 @@
 ---
 title: SQL Server のデータ プールにデータを取り込む
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のデータプールにデータを取り込む方法について説明します。
+description: このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のデータ プールにデータを取り込む方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653312"
@@ -20,9 +20,9 @@ ms.locfileid: "69653312"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]transact-sql を使用しての[データプール](concept-data-pool.md)にデータを読み込む方法について説明します。 で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]は、さまざまなソースからのデータを取り込まれたし、データプールのインスタンス間で分散することができます。
+このチュートリアルでは、Transact-SQL を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を使用すると、さまざまなソースからデータを取り込み、それをデータ プールのインスタンス間で分散することができます。
 
-このチュートリアルでは、次の作業を行う方法について説明します。
+このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
 > * データ プールに外部テーブルを作成する。
@@ -134,7 +134,7 @@ GROUP BY w.wcs_user_sk;
 DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Spark ジョブを使用してデータ プールにデータを取り込む方法について説明します。
 > [!div class="nextstepaction"]

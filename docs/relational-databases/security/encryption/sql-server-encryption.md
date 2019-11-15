@@ -15,12 +15,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bed5524bbc7326357200841fd0d6a4045566a902
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: a445da2fe9474fe5215edf5aa50d56dc252a812d
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713261"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632720"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "71713261"
 >  暗号化は、セキュリティの強化に役立つ便利なツールですが、すべてのデータまたは接続に対して考慮すべきものではありません。 暗号化を実装するかどうかを検討する際は、ユーザーがデータにどのようにアクセスするかを考慮する必要があります。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにデータの暗号化が必要になると考えられます。 一方、すべてのアクセスにセキュリティで保護されたイントラネット構成が使用される場合には、暗号化は必ずしも必要ありません。 暗号化を使用する場合は、それに伴ってパスワード、キー、および証明書のメンテナンス計画が必要になります。  
   
 > [!NOTE]  
->  トランスポート層セキュリティ (TLS1.2) に関する最新情報は、「 [Microsoft SQL Server 用の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)」から入手できます。  
+>  トランスポート層セキュリティ (TLS1.2) に関する最新情報は、「[Microsoft SQL Server 用の TLS 1.2 のサポート](https://support.microsoft.com/kb/3135244)」から入手できます。  
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、接続、データ、およびストアド プロシージャに対して暗号化を使用できます。 次のトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] での暗号化の詳細が説明されています。  
 

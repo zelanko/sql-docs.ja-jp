@@ -1,7 +1,7 @@
 ---
 title: 新しいリリースにアップグレードする
-titleSuffix: SQL Server big data clusters
-description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) を新しいリリースにアップグレードする方法について説明します。'
+titleSuffix: SQL Server Big Data Clusters
+description: SQL Server ビッグ データ クラスターを新しいリリースにアップグレードする方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90bfaaa1a8cb6fd42081d8afa5feff13f9aec37c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f44ef17a712d0d5a19707cf94e7d3e4196a2aba3
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531959"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706307"
 ---
 # <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法
 
@@ -77,4 +77,4 @@ azdata --version
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターの詳細については、[SQL Server ビッグ データ クラスターの概要[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md)に関するページを参照してください。
+ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] とは](big-data-cluster-overview.md)の概要に関するページを参照してください。

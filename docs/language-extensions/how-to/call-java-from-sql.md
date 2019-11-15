@@ -1,22 +1,22 @@
 ---
-title: SQL Server から Java を呼び出す
+title: Java ランタイムを呼び出す
 titleSuffix: SQL Server Language Extensions
-description: SQL Server 2019 の Java プログラミング言語拡張を使用して、SQL Server ストアド プロシージャから Java クラスを呼び出す方法について説明します。
+description: SQL Server 言語拡張を使用し、SQL Server ストアド プロシージャから Java クラスを呼び出す方法について説明します。
 author: dphansen
 ms.author: davidph
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34d8162961a9e6bbc850e8a80a96910e5aa41d7b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588806"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658894"
 ---
-# <a name="how-to-call-java-from-sql-server"></a>SQL Server から Java を呼び出す方法
+# <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>SQL Server 言語拡張で Java ランタイムを呼び出す方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [SQL Server 言語拡張](../language-extensions-overview.md)には、Java ランタイムを呼び出すインターフェイスとして [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) システム ストアド プロシージャが使用されます。 
@@ -29,10 +29,10 @@ SQL Server で Java クラスを呼び出すには、次の 2 つの方法があ
 
 1. **.class** または **.jar** ファイルを [Java クラスパス](#classpath)に配置します。 
 
-2. [外部ライブラリ](#external-library) DDL を使用して、**.jar** ファイルのコンパイル済みクラスおよびその他の依存関係をデータベースにアップロードします。 
+2. [外部ライブラリ](#external-library) DDL を使用して、 **.jar** ファイルのコンパイル済みクラスおよびその他の依存関係をデータベースにアップロードします。 
 
 > [!NOTE]
-> 一般的な推奨事項として、個別の **.class** ファイルではなく、**.jar** ファイルを使用してください。 これは Java での一般的な方法であり、全体的なエクスペリエンスが簡単になります。 [クラス ファイルから jar ファイルを作成する方法](create-a-java-jar-file-from-class-files.md)に関する記事を参照してください。
+> 一般的な推奨事項として、個別の **.class** ファイルではなく、 **.jar** ファイルを使用してください。 これは Java での一般的な方法であり、全体的なエクスペリエンスが簡単になります。 [クラス ファイルから jar ファイルを作成する方法](create-a-java-jar-file-from-class-files.md)に関する記事を参照してください。
 
 <a name="classpath"></a>
 
