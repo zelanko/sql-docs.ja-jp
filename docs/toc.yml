@@ -1702,7 +1702,7 @@
         - name: テンポラル テーブル
           href: relational-databases/tables/temporal-tables.md
           items:
-            - name: 管理する
+            - name: 作成と管理
               items:
                 - name: 作業の開始
                   href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1730,17 +1730,17 @@
                   href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
                 - name: メタデータのビューと関数
                   href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-        - name: メモリ最適化テーブル
-          href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-          items:
-            - name: 作成
-              href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-            - name: 操作
-              href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-            - name: モニター
-              href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-            - name: パフォーマンスに関する考慮事項
-              href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+            - name: メモリ最適化されたテンポラル テーブル
+              href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+              items:
+                - name: 作成
+                  href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+                - name: 操作
+                  href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+                - name: モニター
+                  href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+                - name: パフォーマンスに関する考慮事項
+                  href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
         - name: チュートリアル
           items:
             - name: hierarchyid データ型の使用
