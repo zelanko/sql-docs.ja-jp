@@ -1,36 +1,37 @@
 ---
-title: レッスン 4 R モデルを使用して潜在的な結果を予測する
-description: T-sql 関数を使用して SQL Server ストアドプロシージャに埋め込まれた R スクリプトを運用化する方法を示すチュートリアル
+title: R + T-SQL チュートリアル:予測の実行
+description: このチュートリアルでは、T-SQL 関数を使用して SQL Server ストアド プロシージャに埋め込まれた R スクリプトを運用化する方法を学びます
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abacf3c384430417dbf0630f2f8dcd8adff68259
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4b8e516d2e96c1cc4812a36800fd22371729445d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714736"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724866"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>レッスン 4:ストアドプロシージャに埋め込まれた R を使用して予測を実行する
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>レッスン 4:ストアド プロシージャに埋め込まれた R を使用して予測を実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事は、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
 
-このステップでは、新しい観測にモデルを使用して潜在的な結果を予測する方法について学習します。 モデルは、他のアプリケーションから直接呼び出すことができるストアドプロシージャにラップされます。 このチュートリアルでは、スコア付けを実行するいくつかの方法を示します。
+このステップでは、新しい観測に対してモデルを使用し、潜在的な結果を予測する方法について学習します。 モデルは、他のアプリケーションから直接呼び出すことができるストアド プロシージャにラップされます。 このチュートリアルでは、スコア付けを実行するいくつかの方法を示します。
 
-- **バッチスコアリングモード**:ストアドプロシージャへの入力として SELECT クエリを使用します。 このストアド プロシージャは、入力ケースに対応する観察のテーブルを返します。
+- **バッチ スコアリング モード**:ストアド プロシージャへの入力には SELECT クエリを使用します。 このストアド プロシージャは、入力ケースに対応する観察のテーブルを返します。
 
-- **個々のスコア付けモード**:個別のパラメーター値のセットを入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
+- **個々のスコアリング モード**:個々のパラメーター セットを入力パラメーターとして渡します。  このストアド プロシージャは、1 つの行または値を返します。
 
 まず、一般的なスコア付け方法を見てみましょう。
 
-## <a name="basic-scoring"></a>基本スコア付け
+## <a name="basic-scoring"></a>基本のスコアリング
 
-ストアドプロシージャ**RxPredict**は、ストアドプロシージャで RevoScaleR RxPredict 呼び出しをラップするための基本構文を示しています。
+ストアド プロシージャ **RxPredict** は、ストアド プロシージャで RevoScaleR rxPredict 呼び出しをラップするための基本的な構文を示しています。
 
 ```sql
 CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
@@ -54,19 +55,19 @@ END
 GO
 ```
 
-+ SELECT ステートメントは、シリアル化されたモデルをデータベースから取得し、r を使用`mod`してさらに処理するために r 変数にモデルを格納します。
++ SELECT ステートメントは、シリアル化されたモデルをデータベースから取得し、R を利用してさらに処理するために R 変数 `mod` にモデルを保存します。
 
-+ スコアリングの新しいケースは、ストアドプロシージャの[!INCLUDE[tsql](../../includes/tsql-md.md)]最初のパラメーター `@inquery`であるで指定されたクエリから取得されます。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータフレームは、スコアを生成する[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)の[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)関数に渡されます。
++ スコア付けの新しいケースは、ストアド プロシージャの最初のパラメーター、`@inquery`で指定された [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリから取得されます。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームは [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) の [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 関数に渡され、スコアが生成されます。
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     data.frame には 1 つの行を含めることができるため、一括または 1 回のスコア付けに同じコードを利用できます。
   
-+ `rxPredict`関数によって返される値は、ドライバーが任意の量のチップを取得する確率を表す**float**です。
++ `rxPredict` 関数により返される値は、ドライバーに任意の金額のチップが与えられる確率を表す **float** です。
 
-## <a name="batch-scoring-a-list-of-predictions"></a>バッチスコアリング (予測の一覧)
+## <a name="batch-scoring-a-list-of-predictions"></a>バッチ スコアリング (予測の一覧)
 
-より一般的なシナリオは、バッチモードで複数の観測の予測を生成することです。 この手順では、バッチスコアリングのしくみを見てみましょう。
+より一般的なシナリオは、バッチ モードで複数の観測の予測を生成することです。 この手順では、バッチ スコアリングのしくみを見てみましょう。
 
 1.  最初に、使用する入力データの小さなセットを取得します。 このクエリは、予測に必要な乗客数とその他の機能を利用し、乗車の "上位 10" 一覧を作成します。
   
@@ -93,7 +94,7 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-2. で[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **RxPredictBatchOutput**というストアドプロシージャを作成します。
+2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で **RxPredictBatchOutput** というストアド プロシージャを作成します。
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
@@ -116,7 +117,7 @@ GO
     END
     ```
 
-3.  変数にクエリテキストを指定し、それをパラメーターとしてストアドプロシージャに渡します。
+3.  変数にクエリ テキストを指定し、それをパラメーターとしてストアド プロシージャに渡します。
 
     ```sql
     -- Define the input data
@@ -127,22 +128,22 @@ GO
     EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
-このストアドプロシージャは、上位10回の各トリップの予測を表す一連の値を返します。 ただし、上位のトリップは、比較的短いトリップ距離を持つ1つの乗客の旅行でもあり、その場合、ドライバーがヒントを得られる可能性はほとんどありません。
+このストアド プロシージャは、上位 10 の各乗車の予測を表す一連の値を返します。 ただし、上位の乗車は、比較的短い乗車距離の一人の乗客でもあり、その場合、ドライバーがチップを得られる可能性はほとんどありません。
   
 
 > [!TIP]
 > 
-> "Yes-tip" と "no tip" の結果のみを返すのではなく、予測の確率スコアを返した後、WHERE 句を_スコア_列の値に適用して、スコアを "チップになる可能性がある" または "ヒント" のように分類することもできます。0.5 や0.7 などのしきい値。 この手順はストアド プロシージャに含まれていませんが、導入は簡単です。
+> "チップあり" と "チップなし" の結果のみを返すのではなく、予測の確率スコアを返し、WHERE 句を _Score_ 列の値に適用します。0.5 や 0.7 などのしきい値を使用すると、スコアを "チップを得る確率が高い" または "チップを得る確率が低い" として分類することもできます。 この手順はストアド プロシージャに含まれていませんが、導入は簡単です。
 
-## <a name="single-row-scoring-of-multiple-inputs"></a>複数の入力の単一行スコアリング
+## <a name="single-row-scoring-of-multiple-inputs"></a>複数の入力による単一行のスコア付け
 
-場合によっては、複数の入力値を渡し、それらの値に基づいて1つの予測を取得する必要があります。 たとえば、Excel ワークシート、web アプリケーション、または Reporting Services レポートを設定して、ストアドプロシージャを呼び出し、それらのアプリケーションからユーザーが入力または選択した入力を提供することができます。
+場合によっては、複数の入力値を渡し、それらの値に基づいて1つの予測を得ることがあります。 たとえば、Excel ワークシート、Web アプリケーション、または Reporting Services レポートを設定して、ストアド プロシージャを呼び出し、それらのアプリケーションからユーザーが入力または選択した入力を提供することができます。
 
-このセクションでは、乗客数、旅行距離など、複数の入力を受け取るストアドプロシージャを使用して単一の予測を作成する方法について説明します。 ストアドプロシージャは、以前に格納された R モデルに基づいてスコアを作成します。
+このセクションでは、乗客数、乗車距離など、複数の入力を受け取るストアド プロシージャを使用して 1 つの予測を作成する方法について説明します。 ストアド プロシージャは、以前に格納された R モデルに基づいてスコアを作成します。
   
-外部アプリケーションからストアドプロシージャを呼び出す場合は、データが R モデルの要件と一致していることを確認してください。 場合によっては、入力データを R データ型にキャストまたは変換できなければなりません。あるいは、データ型やデータ長を検証する必要があります。 
+外部アプリケーションからストアド プロシージャを呼び出す場合は、データが R モデルの要件と一致していることを確認してください。 場合によっては、入力データを R データ型にキャストまたは変換できなければなりません。あるいは、データ型やデータ長を検証する必要があります。 
 
-1. ストアドプロシージャ**RxPredictSingleRow**を作成します。
+1. **RxPredictSingleRow** ストアド プロシージャを作成します。
   
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -167,7 +168,7 @@ GO
 
 2. 手動で値を指定し、お試しください。
   
-    新しい**クエリ**ウィンドウを開き、ストアドプロシージャを呼び出して、各パラメーターの値を指定します。 パラメーターは、モデルで使用される特徴列を表し、必須です。
+    新しい **クエリ** ウィンドウを開き、ストアド プロシージャを呼び出して、各パラメーターの値を指定します。 パラメーターは、モデルで使用される特徴列を表し、必須です。
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
@@ -180,18 +181,18 @@ GO
     @dropoff_longitude = -73.977303
     ```
 
-    または、[ストアドプロシージャのパラメーター](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)に対してサポートされている短い形式を使用します。
+    または、ストアド プロシージャの [パラメーターでサポー](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)トされている短い形式を使用します。
   
     ```sql
     EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. この結果は、これらの上位10回のトリップで、ヒントを取得する確率が低い (ゼロ) ことを示しています。これは、すべてが比較的短い距離での単一の乗客のトリップであるためです。
+3. この結果は、これらの上位 10 の乗車ではチップが与えられる確率が低い (ゼロ) ことを示しています。これは、すべてが比較的短い乗車距離の一人の乗客であるためです。
 
-## <a name="conclusions"></a>まとめ
+## <a name="conclusions"></a>結論
 
-これでチュートリアルは終わりです。 これで、ストアドプロシージャに R コードを埋め込む方法を学習できました。次は、これらのプラクティスを拡張して独自のモデルを構築することができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] との統合により、R モデルを展開して予測することと、企業データ ワークフローの一部としてモデルを組み込み、維持することが簡単になります。
+これでチュートリアルは終わりです。 これで、ストアド プロシージャに R コードを埋め込む方法を学習できました。これらのプラクティスを拡張して独自のモデルを構築することができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] との統合により、R モデルを展開して予測することと、企業データ ワークフローの一部としてモデルを組み込み、維持することが簡単になります。
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 3:T-sql を使用した R モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)
+[レッスン 3:T-SQL を使用した R モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)
