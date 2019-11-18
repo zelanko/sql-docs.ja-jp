@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809713"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981802"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 「[データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)」を参照してください。
  ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
 
   
  **-fk** _keep_existing_option_  
@@ -189,7 +189,7 @@ dta -d AdventureWorks2012 ...
   
 |[値]|[説明]|  
 |-----------|-----------------|  
-|なし|既存の構造なし|  
+|NONE|既存の構造なし|  
 |ALL|既存のすべての構造|  
 |ALIGNED|パーティションで固定された構造をすべて保持します。|  
 |CL_IDX|テーブル上にあるクラスター化されたすべてのインデックス|  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  クエリストアワークロードとして使用することを指定します。 明示的に選択されたデータベースのクエリストアから上位の1000イベントが分析されます。 この値は **-n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
  ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
      
   
  **-if** _workload_file_  
@@ -273,7 +273,7 @@ dta -iq -I 48
 この場合、DTA はクエリストアをワークロードのソースとして使用し、過去48時間に実行されたクエリのみを検討します。  
   ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
 
 
   

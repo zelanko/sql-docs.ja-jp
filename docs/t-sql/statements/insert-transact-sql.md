@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e67b6e058304cf898d2818ab5a6ea2675e0c9825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071121"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982224"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,14 +143,14 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  INSERT キーワードと対象のテーブルとの間で使用できるキーワードで、省略可能です。  
   
  *server_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  テーブルまたはビューが配置されているリンク サーバーの名前です。 *server_name* は、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名として指定することも、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用して指定することもできます。  
   
  *server_name* をリンク サーバーとして指定する場合は、*database_name* と *schema_name* が必要です。 *server_name* を OPENDATASOURCE で指定する場合は、*database_name* および *schema_name* がすべてのデータ ソースに適用されるとは限らず、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能により制限されます。  
   
  *database_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  データベースの名前です。  
   
@@ -165,7 +165,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  *table_or_view_name* によって参照されるビューは更新可能であることが必要です。また、そのビューの FROM 句ではベース テーブルを 1 つだけ参照している必要があります。 たとえば、複数のテーブルを参照するビューに対して INSERT を実行するには、1 つのベース テーブルの列のみを参照する *column_list* を使用する必要があります。 更新可能なビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
   
  *rowset_function_limited*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 関数または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 関数を指定します。 これらの関数の使用は、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能により制限されます。  
   
@@ -260,27 +260,27 @@ OUTPUT 句
  \<dml_statement_with_output_clause> で返された行をフィルター処理する有効な \<search_condition> を含んだ WHERE 句です。 詳しくは、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」をご覧ください。 このコンテキストで使用される \<search_condition> には、サブクエリ、データにアクセスするスカラー ユーザー定義関数、集計関数、TEXTPTR、またはフルテキスト検索述語を含めることができません。 
   
  DEFAULT VALUES  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  新しい行が、各列に対して定義されている既定値で構成されることを指定します。  
   
  BULK  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  外部ツールでバイナリ データ ストリームをアップロードする際に使用されます。 このオプションは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQLCMD、OSQL などのツールや、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client などのデータ アクセス アプリケーション プログラミング インターフェイスで使用することは想定されていません。  
   
  FIRE_TRIGGERS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、変換先テーブルで定義されている挿入トリガーを実行することを指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
  CHECK_CONSTRAINTS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、対象テーブルまたはビューに対するすべての制約を検証します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
  KEEPNULLS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、空の列の NULL 値を保持します。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
   
@@ -288,7 +288,7 @@ OUTPUT 句
  バッチあたりのデータの概算キロバイト数 (KB) を *kilobytes_per_batch* として指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
  ROWS_PER_BATCH =*rows_per_batch*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリーム内のデータ行の概算数を指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
@@ -718,7 +718,7 @@ GO
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. リンク サーバーを使用してリモート テーブルにデータを挿入する  
  次の例では、リモート テーブルに行を挿入します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 USE master;  
@@ -747,7 +747,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. OPENQUERY 関数を使用してリモート テーブルにデータを挿入する  
  次の例では、[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行セット関数を指定してリモート テーブルに行を挿入します。 この例では、前の例で作成したリンク サーバー名を使用します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -760,7 +760,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. OPENDATASOURCE 関数を使用してリモート テーブルにデータを挿入する  
  次の例では、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行セット関数を指定してリモート テーブルに行を挿入します。 *server_name* または *server_name\instance_name* という形式を使用して、データ ソースの有効なサーバー名を指定します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -853,7 +853,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. OPENROWSET 関数を BULK を指定して使用し、テーブルにデータを一括読み込みする  
  次の例は、OPENROWSET 関数を指定することによって、テーブルにデータ ファイルからの行を挿入します。 パフォーマンスを最適化するために、IGNORE_TRIGGERS テーブル ヒントを指定しています。 他の例については、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  

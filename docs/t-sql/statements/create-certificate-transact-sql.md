@@ -27,12 +27,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81beacc9a78800c288964fcfc4a186b921a27608
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064598"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982782"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -127,7 +127,7 @@ CREATE CERTIFICATE certificate_name
   
  BINARY =*asn_encoded_certificate*  
  バイナリ定数として指定された、ASN でエンコードされた証明書バイト。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  WITH PRIVATE KEY  
  証明書の秘密キーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むように指定します。 この句は、アセンブリから証明書を作成する場合には無効です。 アセンブリから作成された証明書の秘密キーを読み込むには、[ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) を使用します。  
@@ -139,7 +139,7 @@ CREATE CERTIFICATE certificate_name
 >  このオプションは、包含データベースまたは Azure SQL Database では使用できません。  
   
  BINARY =*private_key_bits*  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  バイナリ定数として指定された秘密キーのビット。 これらのビットは暗号化された形式でもかまいません。 暗号化されている場合は、ユーザーは暗号化解除パスワードを指定する必要があります。 パスワード ポリシーのチェックは、このパスワードに対しては実行されません。 秘密キーのビットは PVK ファイル形式にする必要があります。  
   

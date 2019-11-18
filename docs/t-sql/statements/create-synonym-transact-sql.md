@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e8476ef7fafde1d891736938e1cdedd6933f697
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383829"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982578"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  新しいシノニムの名前です。  
   
  *server_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  ベース オブジェクトがあるサーバーの名前です。  
   
@@ -150,7 +150,7 @@ GO
 ### <a name="b-creating-a-synonym-to-remote-object"></a>B. リモート オブジェクトに対してシノニムを作成する  
  次の例では、ベース オブジェクト `Contact` は、`Server_Remote` というリモート サーバー上にあります。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```  
 EXEC sp_addlinkedserver Server_Remote;  
