@@ -5818,7 +5818,7 @@
           href: dea/database-experimentation-assistant-replay-trace.md
         - name: レポートを作成します
           href: dea/database-experimentation-assistant-create-report.md
-        - name: レポートの表示
+        - name: レポートの確認
           href: dea/database-experimentation-assistant-view-report.md
         - name: コマンド プロンプトでの実行
           href: dea/database-experimentation-assistant-run-command-prompt.md
