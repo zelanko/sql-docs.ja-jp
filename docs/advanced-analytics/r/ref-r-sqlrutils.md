@@ -1,6 +1,6 @@
 ---
 title: sqlrutils ヘルパー関数
-description: SQL Server 2016 R Services の sqlrutils 関数ライブラリを使用し、r を Machine Learning Services SQL Server して、R スクリプトを含むストアドプロシージャを生成します。
+description: SQL Server 2016 R Services および SQL Server Machine Learning Services (R 付属) の sqlrutils 関数ライブラリを使用して、R スクリプトを含むストアド プロシージャを生成します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68715029"
@@ -33,43 +33,43 @@ R コードを変換して 1 つのストアド プロシージャ内で実行�
   > [!NOTE]
   > *executeStoredProcedure* 関数を呼び出し、R 環境からストアド プロシージャを実行する場合、SQL Server 用 ODBC ドライバー 13 など、ODBC 3.8 プロバイダーを使用する必要があります。  
   
-## <a name="full-reference-documentation"></a>完全なリファレンスドキュメント
+## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**Sqlrutils**ライブラリは複数の Microsoft 製品に配布されていますが、SQL Server または別の製品でライブラリを入手したとしても、使用方法は同じです。 関数は同じであるため、[個々の sqlrutils 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)は、Microsoft Machine Learning Server の[R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下にある1つの場所にのみ発行されます。 製品固有の動作が存在する場合、関数のヘルプページには相違点が示されます。
+**sqlrutils** ライブラリは複数の Microsoft 製品で配布されていますが、SQL Server または別の製品のどちらから取得したライブラリでも、使用方法は同じです。 これらの関数は同じであるため、[個々の sqlrutils 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)は Microsoft Machine Learning Server の [R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="functions-list"></a>関数の一覧
 
-次のセクションでは、 **sqlrutils**パッケージから呼び出して、埋め込み R コードを含むストアドプロシージャを開発できる関数の概要を説明します。 各メソッドまたは関数のパラメーターの詳細については、パッケージの R のヘルプを参照してください。`help(package="sqlrutils")`
+次のセクションでは、**sqlrutils** パッケージから呼び出すことができる関数の概要を説明します。この関数を使用すると、埋め込みの R コードを含むストアド プロシージャを作成できます。 各メソッドまたは関数のパラメーターの詳細については、パッケージの R のヘルプを参照してください。 `help(package="sqlrutils")`
 
-|関数 | 説明 |
+|機能 | [説明] |
 |------|-------------|
-|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL ストアドプロシージャを実行します。|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| ストアドプロシージャへの入力パラメーターの一覧を取得します。| 
+|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL ストアド プロシージャを実行します。|
+|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| ストアド プロシージャへの入力パラメーターの一覧を取得します。| 
 |[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| R データ フレームで使用されるデータ ソースを SQL Server に定義します。 入力データを保存する data.frame 名、データまたは既定値を取得するクエリを指定します。 単純な SELECT クエリのみがサポートされています。 | 
 |[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| T-SQL スクリプトに埋め込まれる単一の入力パラメーターを定義します。 パラメーター名とその R データ型を指定する必要があります。| 
 |[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| R 関数で data.frame を含むリストが返される場合に必要な中間のデータ オブジェクトを生成します。 *OutputData* オブジェクトは、リストから取得された単一の data.frame の名前を格納するために使用されます。| 
 |[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | R 関数でリストが返される場合に必要な中間のデータ オブジェクトを生成します。 *OutputParameter* オブジェクトは、メンバーがデータ フレームでは **ない** ことを想定し、リストの単一のメンバーの名前とデータ型を格納します。 |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | ストアドプロシージャをデータベースに登録します。|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| ストアドプロシージャの入力データパラメーターにクエリを割り当てます。| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| ストアドプロシージャの入力パラメーターに値を代入します。| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| ストアドプロシージャオブジェクトです。|
+|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | ストアド プロシージャをデータベースに登録します。|
+|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| ストアド プロシージャの入力データ パラメーターにクエリを割り当てます。| 
+|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| ストアド プロシージャの入力パラメーターに値を割り当てます。| 
+|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| ストアド プロシージャ オブジェクト。|
 
 
 ## <a name="how-to-use-sqlrutils"></a>Sqlrutils の使用方法
 
-**Sqlrutils**ライブラリ関数は、R で SQL Server Machine Learning を持つコンピューター上で実行する必要があります。クライアントワークステーションで作業している場合は、リモートの計算コンテキストを設定して、実行を SQL Server に切り替えます。 このパッケージを使用するためのワークフローには、次の手順が含まれます。
+**sqlrutils** ライブラリ関数は、SQL Server Machine Learning (R 付属) を備えているコンピューターで実行する必要があります。クライアント ワークステーションで作業している場合は、リモートのコンピューティング コンテキストを設定して、実行を SQL Server に切り替えます。 このパッケージを使用するためのワークフローには、次の手順が含まれます。
 
-+ ストアドプロシージャのパラメーター (入力、出力、またはその両方) を定義します。 
-+ ストアドプロシージャの生成と登録    
++ ストアド プロシージャのパラメーター (入力、出力、またはその両方) の定義 
++ ストアド プロシージャの生成と登録    
 + ストアド プロシージャを実行する  
 
-R セッションで、「」と入力`library(sqlrutils)`してコマンドラインから sqlrutils を読み込みます。
+R セッションで、コマンドラインから「`library(sqlrutils)`」と入力して **sqlrutils** を読み込みます。
 
 > [!Note]
-> このライブラリは、コンピューティングコンテキストを SQL Server に変更し、その計算コンテキストでコードを実行する場合に、SQL Server がない (たとえば、R クライアントインスタンス上に) コンピューターに読み込むことができます。
+> もしコンピューティング コンテキストを SQL Server に変更し、そのコンピューティング コンテキストでコードを実行する場合には、本ライブラリは SQL Server がないコンピューター (たとえば R クライアント インスタンス) 上で読み込むことができます。
 
 
-### <a name="define-stored-procedure-parameters-and-inputs"></a>ストアドプロシージャのパラメーターと入力の定義
+### <a name="define-stored-procedure-parameters-and-inputs"></a>ストアド プロシージャのパラメーターと入力の定義
 
 `StoredProcedure` はストアド プロシージャの構築に使用されるメインのコンストラクターです。 このコンストラクターは、 *SQL Server ストアド プロシージャ* オブジェクトを生成し、オプションで T-SQL コマンドを使用したストアド プロシージャの生成に使用できるクエリを含むテキスト ファイルを作成します。 
 
@@ -104,7 +104,7 @@ R セッションで、「」と入力`library(sqlrutils)`してコマンドラ�
 > [!NOTE]
 > *executeStoredProcedure* 関数には、SQL Server 用の ODBC ドライバー 13 などの ODBC 3.8 プロバイダーが必要です。  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Sqlrutils を使用してストアドプロシージャを作成する方法](how-to-create-a-stored-procedure-using-sqlrutils.md)
+[sqlrutils を使用してストアド プロシージャを作成する方法](how-to-create-a-stored-procedure-using-sqlrutils.md)
 
