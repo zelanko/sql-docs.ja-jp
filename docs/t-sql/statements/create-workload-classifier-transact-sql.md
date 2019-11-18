@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632895"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056495"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -62,7 +62,7 @@ WITH
  *WORKLOAD_GROUP* =  *'name'*    
  分類子の規則によって条件が満たされると、name によって要求がワークロード グループにマップされます。  name は sysname です。  これは長さを最大で 128 文字とすることができ、分類子作成時には有効なワークロード グループ名とする必要があります。
 
- 使用可能なワークロード グループは、[sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest) カタログ ビューで見つけることができます。
+ 使用可能なワークロード グループは、[sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) カタログ ビューで見つけることができます。
 
  *MEMBERNAME* ='security_account'*    
  これはロールに追加されるセキュリティ アカウントです。  security_account は sysname です。既定値はありません。 security_account は、データベース ユーザー、データベース ロール、Azure Active Directory ログイン、または Azure Active Directory グループとすることができます。

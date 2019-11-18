@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843589"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981741"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>引数  
  **'** *login* **'**  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  ユーザーのログイン名を指定します。 *login* は **sysname** です。 *login* は省略可能で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインか、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーまたはグループを指定できます。 *login* の指定を省略すると、現在のセキュリティ コンテキストについての情報が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
  *Param2*  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
  ログイン名を検証するかどうかを指定します。 *Param2* のデータ型は **int** で、省略可能です。 *Param2* が 0 の場合、ログイン名は検証されません。 *Param2* で 0 が指定されていない場合、Windows ログイン名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されたログイン名がまったく同じであるかどうかが確認されます。  
   
@@ -80,7 +80,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. SUSER_SID を特定のログインと共に使用する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における `sa` というログインのセキュリティ ID 番号を返します。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -90,7 +90,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. SUSER_SID を Windows ユーザー名と共に使用する  
  次の例では、Windows ユーザーである `London\Workstation1` のセキュリティ ID 番号を返します。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -118,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Windows ログイン名と SQL Server に格納されたログイン名を比較する  
  次の例は、*Param2* を使用して Windows から SID を取得する方法を示しています。この例では、その SID を `SUSER_SNAME` 関数への入力として使用しています。 Windows に格納された形式 (`TestComputer\User`) でログインを指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納された形式 (`TESTCOMPUTER\User`) のログインを取得しています。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

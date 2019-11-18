@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095121"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926030"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 監査レコード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68095121"
 |**session_id**|イベントが発生したセッションの ID。|**int**|はい|  
 |**server_principal_id**|アクションが実行されるログイン コンテキストの ID。|**int**|はい|  
 |**database_principal_id**|アクションが実行されるデータベース ユーザー コンテキストの ID。|**int**|いいえ|  
-|**object_ id**|監査が発生したエンティティのプライマリ ID。 この ID には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> データベース<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト|**int**|いいえ|  
+|**object_id**|監査が発生したエンティティのプライマリ ID。 この ID には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> データベース<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト|**int**|いいえ|  
 |**target_server_principal_id**|監査可能なアクションが適用されるサーバー プリンシパル。|**int**|はい|  
 |**target_database_principal_id**|監査可能なアクションが適用されるデータベース プリンシパル。|**int**|いいえ|  
 |**class_type**|監査が発生する監査可能なエンティティの種類。|**varchar(2)**|はい|  

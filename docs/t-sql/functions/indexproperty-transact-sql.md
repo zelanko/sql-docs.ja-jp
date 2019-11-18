@@ -20,12 +20,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a2731f569ecf602c4aaa21e233ec671596e16ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024278"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982935"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,14 +61,14 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|ALTER DATABASE の AUTO_CREATE_STATISTICS オプションによって生成された統計です。|1 = True<br /><br /> 0 = False または XML インデックス。|  
 |**IsClustered**|インデックスはクラスター化されています。|1 = True<br /><br /> 0 = False または XML インデックス。|  
 |**IsDisabled**|インデックスは無効です。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 入力は無効です。|  
-|**IsFulltextKey**|インデックスは、テーブルのフルテキストおよびセマンティック インデックス作成のキーです。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = True<br /><br /> 0 = False または XML インデックス。<br /><br /> NULL = 入力は無効です。|  
+|**IsFulltextKey**|インデックスは、テーブルのフルテキストおよびセマンティック インデックス作成のキーです。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> 1 = True<br /><br /> 0 = False または XML インデックス。<br /><br /> NULL = 入力は無効です。|  
 |**IsHypothetical**|インデックスは仮想的であり、データへのアクセス パスとして直接使用することはできません。 仮想インデックスは、列レベルの統計を保持し、データベース エンジン チューニング アドバイザーによって管理および使用されます。|1 = True<br /><br /> 0 = False または XML インデックス<br /><br /> NULL = 入力は無効です。|  
-|**IsPadIndex**|インデックスは各内部ノード上で空けておく領域を指定します。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = True<br /><br /> 0 = False または XML インデックス。|  
-|**IsPageLockDisallowed**|ALTER INDEX の ALLOW_PAGE_LOCKS オプションによって設定されたページ ロックの値です。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = ページ ロックの禁止<br /><br /> 0 = ページ ロックの許可<br /><br /> NULL = 入力は無効です。|  
-|**IsRowLockDisallowed**|ALTER INDEX の ALLOW_ROW_LOCKS オプションによって設定された行ロックの値です。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = 行ロックの禁止。<br /><br /> 0 = 行ロックの許可<br /><br /> NULL = 入力は無効です。|  
+|**IsPadIndex**|インデックスは各内部ノード上で空けておく領域を指定します。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> 1 = True<br /><br /> 0 = False または XML インデックス。|  
+|**IsPageLockDisallowed**|ALTER INDEX の ALLOW_PAGE_LOCKS オプションによって設定されたページ ロックの値です。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> 1 = ページ ロックの禁止<br /><br /> 0 = ページ ロックの許可<br /><br /> NULL = 入力は無効です。|  
+|**IsRowLockDisallowed**|ALTER INDEX の ALLOW_ROW_LOCKS オプションによって設定された行ロックの値です。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> 1 = 行ロックの禁止。<br /><br /> 0 = 行ロックの許可<br /><br /> NULL = 入力は無効です。|  
 |**IsStatistics**|*index_or_statistics_name* は、CREATE STATISTICS ステートメントまたは ALTER DATABASE の AUTO_CREATE_STATISTICS オプションによって作成された統計です。|1 = True<br /><br /> 0 = False または XML インデックス。|  
 |**IsUnique**|インデックスは一意です。|1 = True<br /><br /> 0 = False または XML インデックス。|  
-|**IsColumnstore**|インデックスは xVelocity メモリ最適化列ストア インデックスです。|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsColumnstore**|インデックスは xVelocity メモリ最適化列ストア インデックスです。|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|インデックスには、最終ページ挿入が有効になっている場合の最適化があります。|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。 <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>戻り値の型  

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902124"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982832"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ CONTAINS (
  検索条件の FROM 句で指定したテーブルのすべてのフルテキスト インデックス付きの列が検索対象になります。 CONTAINS 句内の列は、フルテキスト インデックスがある単一テーブルから取得する必要があります。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  指定した検索条件を検索するドキュメント プロパティを指定します。  
   
@@ -246,7 +246,7 @@ WHERE CONTAINS(Description, @SearchWord);
  汎用近接語句の詳細については、「[NEAR による他の単語の近くにある単語の検索](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)」を参照してください。  
   
  \<custom_proximity_term>  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
   
  一致させる単語または語句と、必要に応じて検索語句間の許容最大距離を指定します。 また、検索語句を指定したとおりの順序で検索するように指定することもできます (\<match_order>)。  
   
@@ -263,7 +263,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
  \<maximum_distance>  
  文字列と一致すると見なされるための、その文字列の先頭と末尾にある検索語句間の許容最大距離を指定します。  
   
- *整数 (integer)*  
+ *integer*  
  0 から 4294967295 の正の整数を指定します。 この値により、指定した他の検索用語を除く最初と最後の検索語句間にある非検索語句の数を制御できます。  
   
  たとえば、次のクエリでは、最大距離が 5 語以内で `AA` と `BB` を任意の順序で検索します。  
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. CONTAINS を \<simple_term> と共に使用する  
+### <a name="a-using-contains-with-simple_term"></a>A. CONTAINS を \<simple_term> と共に使用する  
  次の例では、 `Mountain` という単語を含み、価格が `$80.99` であるすべての製品を検索します。  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. CONTAINS と語句を \<simple_term> と共に使用する  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. CONTAINS と語句を \<simple_term> と共に使用する  
  次の例では、`Mountain` または `Road` のいずれかの語句が含まれている、すべての製品を返します。  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. CONTAINS を \<prefix_term> と共に使用する  
+### <a name="c-using-contains-with-prefix_term"></a>C. CONTAINS を \<prefix_term> と共に使用する  
  次の例では、`Name` 列の中で、chain というプレフィックスで始まる 1 つ以上の単語が含まれている、すべての製品名を返します。  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. CONTAINS および OR を \<prefix_term> と共に使用する  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. CONTAINS および OR を \<prefix_term> と共に使用する  
  次の例では、`chain` または `full` のいずれかのプレフィックスを持つ文字列が含まれている、すべてのカテゴリ説明を返します。  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. CONTAINS を \<proximity_term> と共に使用する  
+### <a name="e-using-contains-with-proximity_term"></a>E. CONTAINS を \<proximity_term> と共に使用する  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  次の例では、`Production.ProductReview` テーブルを対象として、10 語以内の距離で `bike` と "`control`" という単語を含むすべてのコメントを、指定した順序 (つまり、"`bike`"、"`control`" の順) で検索します。  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. CONTAINS を \<generation_term> と共に使用する  
+### <a name="f-using-contains-with-generation_term"></a>F. CONTAINS を \<generation_term> と共に使用する  
  次の例では、`ride` を原型とする riding、ridden などの単語が含まれている、すべての製品を検索します。  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. CONTAINS を \<weighted_term> と共に使用する  
+### <a name="g-using-contains-with-weighted_term"></a>G. CONTAINS を \<weighted_term> と共に使用する  
  次の例では、`performance`、`comfortable`、または `smooth` という単語を含むすべての製品名を検索します。各単語にはそれぞれ異なる重み付けが割り当てられています。  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. ドキュメント プロパティに対してクエリを実行する  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  次のクエリでは、`Production.Document` テーブルの `Document` 列内で、インデックス化されたプロパティ `Title` を検索します。 このクエリは、`Title` または `Maintenance` という文字列が `Repair` プロパティに含まれているドキュメントのみを返します。  
   

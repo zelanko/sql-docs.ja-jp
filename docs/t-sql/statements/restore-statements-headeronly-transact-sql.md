@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742969"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983030"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|バックアップの種類を表す文字列。次のいずれかになります。<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|メディア上のバックアップ セットを識別する、バックアップ セットの一意識別番号。|  
 |**CompressedBackupSize**|**bigint**|バックアップ セットのバイト数。 圧縮されていないバックアップの場合、この値は **BackupSize** と同じです。<br /><br /> 圧縮比率を計算するには、**CompressedBackupSize** と **BackupSize** を使用します。<br /><br /> この値は、**msdb** のアップグレード中に、**BackupSize** 列の値と一致するように設定されます。|  
-|**containment**|**tinyint** not NULL|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> データベースの包含状態を示します。<br /><br /> 0 = データベースの包含がオフ<br /><br /> 1 = データベースは部分的な包含|  
+|**containment**|**tinyint** not NULL|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> データベースの包含状態を示します。<br /><br /> 0 = データベースの包含がオフ<br /><br /> 1 = データベースは部分的な包含|  
 |**KeyAlgorithm**|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> バックアップの暗号化に使用される暗号化アルゴリズム。 NO_Encryption では、バックアップが暗号化されていないことを示します。 システムに正しい値を特定できない場合、値は NULL になります。|  
 |**EncryptorThumbprint**|**varbinary(20)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> データベースに保存されている証明書や非対称キーを検索するために使用される暗号化機能の拇印。 バックアップが暗号化されていない場合、この値は NULL となります。|  
 |**EncryptorType**|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> 使用される暗号化の種類:証明書キーまたは非対称キー。 バックアップが暗号化されていない場合、この値は NULL となります。|  

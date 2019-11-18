@@ -27,14 +27,14 @@ ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c75bd121f799a9612a0f2857478d6c71055b080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086717"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982918"
 ---
-# <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
+# <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在のユーザーが、指定された [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows グループまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールのメンバーであるかどうかを示します。 IS_MEMBER 関数は、Azure Active Directory グループに対してはサポートされません。  
@@ -50,7 +50,7 @@ IS_MEMBER ( { 'group' | 'role' } )
   
 ## <a name="arguments"></a>引数  
  **'** *group* **'**  
-**に適用されます**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] を通じて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  確認する Windows グループの名前です。*Domain*\\*Group* という形式にする必要があります。 *グループ* は **sysname**です。  
   

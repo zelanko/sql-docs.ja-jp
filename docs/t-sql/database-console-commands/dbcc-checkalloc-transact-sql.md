@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102135"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056349"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ DBCC CHECKALLOC
  TABLOCK  
  DBCC コマンドでデータベースを排他的にロックします。
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  他のすべてのオプションを指定したときに、DBCC CHECKALLOC の実行に必要な tempdb 領域の予測サイズを表示します。
   
 ## <a name="remarks"></a>Remarks  

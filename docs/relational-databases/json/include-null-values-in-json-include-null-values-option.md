@@ -1,6 +1,5 @@
 ---
-title: JSON に Null 値を含める - INCLUDE_NULL_VALUES オプション | Microsoft Docs
-ms.custom: ''
+title: JSON に Null 値を含める - INCLUDE_NULL_VALUES オプション
 ms.date: 06/02/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,15 +10,16 @@ helpviewer_keywords:
 ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6abe1bbad1f1c6e5c1f2e200c58e4ae865c1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2cbb9f2dc30ab02f77fafadf39d8c1c6426de708
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909303"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095760"
 ---
-# <a name="include-null-values-in-json---includenullvalues-option"></a>JSON に Null 値を含める - INCLUDE_NULL_VALUES オプション
+# <a name="include-null-values-in-json---include_null_values-option"></a>JSON に Null 値を含める - INCLUDE_NULL_VALUES オプション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   **FOR JSON** 句の JSON の出力に null 値を含めるには、 **INCLUDE_NULL_VALUES** オプションを指定します。  
