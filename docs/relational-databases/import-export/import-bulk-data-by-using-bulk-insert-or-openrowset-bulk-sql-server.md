@@ -1,5 +1,5 @@
 ---
-title: BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server) | Microsoft Docs
+title: BULK INSERT または OPENROWSET(BULK...) を使用して SQL Server にデータをインポートする
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,17 +20,17 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 manager: jroth
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30eb6969c480cb4e3c326da01c3cb0cc2f96c682
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: deaaa783f465c5cfecb940df4b9dd56e10590bc5
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708275"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056389"
 ---
-# <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server)
+# <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>BULK INSERT または OPENROWSET(BULK...) を使用して SQL Server にデータをインポートする
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -111,7 +111,7 @@ Azure Blob Storage からパブリック (匿名アクセス) ではないデー
 
 ### <a name="using-bulk-insert"></a>BULK INSERT の使用
 
-次の例では、BULK INSERT コマンドを使用して、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示します。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスターキーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
+次の例では、BULK INSERT コマンドを使用して、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示します。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスター キーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
 
 ```sql
 --> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -142,7 +142,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 
 ### <a name="using-openrowset"></a>OPENROWSET の使用
 
-次の例では、OPENROWSET コマンドを使用して、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示します。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスターキーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
+次の例では、OPENROWSET コマンドを使用して、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示します。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスター キーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
 
 ```sql
 --> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

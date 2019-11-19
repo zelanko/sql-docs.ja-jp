@@ -24,7 +24,7 @@ ms.locfileid: "72798120"
   
  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>Prerequisites  
  SharePoint サーバーは、SharePoint セットアップでサーバー ファーム インストール オプションを使用してインストールされたものである必要があります。 組み込みのデータベースを使用するスタンドアロン SharePoint サーバーはサポートされません。 詳細については、「 [SharePoint 2010 ファームで SQL SERVER BI 機能を使用するためのガイダンス](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "72798120"
   
 6.  **[データベースサーバー]** で、サービスアプリケーションデータベースを作成するデータベースサーバーを選択します。 既定値は、ファーム構成データベースをホストする SQL Server データベース エンジン インスタンスです。  
   
-7.  **[データベース名]** の既定値は、PowerPivotServiceApplication1_\<guid > です。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
+7.  **[データベース名]** の既定値は PowerPivotServiceApplication1_\<guid > です。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
 8.  **[データベース認証]** の既定値は、"Windows 認証" です。 **[SQL 認証]** を選択する場合は、SharePoint 管理者ガイドを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "72798120"
   
 5.  **[データベース]** で、このサービスアプリケーションのデータベースをホストする SQL Server インスタンスを指定します。 既定値は、ファーム構成データベースをホストする SQL Server データベース エンジン インスタンスです。  
   
-6.  **[データベース名]** に、サービスアプリケーションデータベースの名前を入力します。 既定値は、Secure_Store_Service_DB_\<guid > です。 既定の名前は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
+6.  **[データベース名]** に、サービスアプリケーションデータベースの名前を入力します。 既定値は\<guid > Secure_Store_Service_DB_ です。 既定の名前は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
 7.  **[データベース認証]** の既定値は、"Windows 認証" です。 "SQL 認証" を選択する場合は、SharePoint 管理者ガイドを参照して、ファームでその認証の種類を使用する方法を確認してください。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "72798120"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>作業 3: 自動 PowerPivot データ更新アカウントの構成  
  データ更新時の外部データ アクセスのために、PowerPivot データ アクセスに対する自動データ更新アカウントの作成が必要になることがよくあります。 たとえば、Kerberos が有効になっていない場合、外部データ ソースに接続するには、PowerPivot サービスで使用できる自動アカウントを作成する必要があります。  
   
- データ更新で使用される自動 PowerPivot データ更新アカウントまたはその他の保存された資格情報を作成する方法については、「 [Powerpivot 自動データ更新&#40;アカウントの構成&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 」を参照してください PowerPivot for SharePointまた、 [PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;用に保存された資格情報を構成](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)します。  
+ データ更新で使用される自動 powerpivot データ更新アカウントまたはその他の保存された資格情報を作成する方法については、「powerpivot データ更新[アカウント&#40;の構成 PowerPivot for SharePoint&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 」および「 [powerpivot データ更新&#40;PowerPivot for SharePoint&#41;用の保存された資格情報の構成](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)」を参照してください。  
   
 ##  <a name="Usage"></a>手順 6: 使用状況データ収集を有効にする  
  PowerPivot for SharePoint は、SharePoint の使用状況データ収集インフラストラクチャを使用して、PowerPivot の使用状況に関する情報をファーム全体で収集します。 使用状況データは常に SharePoint のインストールに含まれますが、使用する前に有効にする必要がある場合があります。 手順については、「 [PowerPivot for SharePoint の&#40;使用状況データ収集の構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)」を参照してください。  
@@ -240,7 +240,7 @@ ms.locfileid: "72798120"
   
 2.  PowerPivot データ アクセス機能と PowerPivot データ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、PowerPivot によって提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
-    1.  サイトの操作 の **その他のオプション** をクリックします。  
+    1.  サイトの操作をクリックします**オプション**。  
   
     2.  ライブラリでは、 **[データフィードライブラリ]** と **[PowerPivot ギャラリー]** が表示されます。 これらのライブラリ テンプレートは PowerPivot 機能によって提供されるものであり、PowerPivot 機能が正しく統合されている場合に [ライブラリ] に表示されます。  
   
@@ -292,8 +292,8 @@ ms.locfileid: "72798120"
   
  後でデータ ストレージや処理能力を追加する必要が生じた場合は、ファームに 2 つ目の PowerPivot for SharePoint サーバー インスタンスを追加することができます。 インストールの手順は、最初のサーバーを追加したときの手順とほとんど同じですが、インスタンス名とサービス アカウント情報の指定についての要件が異なります。 手順については、「[配置のチェックリスト: SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)」を参照してください。  
   
-## <a name="see-also"></a>「  
- [SQL Server 2014   の各エディションがサポートする機能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+## <a name="see-also"></a>参照  
+ [SQL Server 2014  の各エディションがサポートする機能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
  [PowerPivot サービスアカウントの構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [サーバーの全体管理で PowerPivot サービスアプリケーションを作成および構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
  [PowerPivot ソリューションを SharePoint  に配置する](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)  

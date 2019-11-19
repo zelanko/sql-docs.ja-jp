@@ -10,25 +10,25 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149992"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056756"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアップグレードを計画している場合、ダウンタイムとリスクを最小限に抑えるために、考慮すべきいくつかのアプローチがあります。 インプレース アップグレードの実行、新規インストールへの移行、またはローリング アップグレードの実行が可能です。 次の図は、これらのアプローチから選択する場合に役立ちます。 図の各アプローチについては、下でも説明しています。 図の意思決定ポイントに役立てるため、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」も参照してください。  
   
- ![データベース エンジンのアップグレード方法のデシジョン ツリー](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "データベース エンジンのアップグレード方法のデシジョン ツリー")  
+ ![データベース エンジンのアップグレード方法デシジョン ツリー](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "データベース エンジンのアップグレード方法デシジョン ツリー")  
   
  **ダウンロード**  
   
 -   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server)** に移動してください。  
   
--   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** にアクセスして、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition がインストール済みの仮想マシンをすぐにご利用いただけます。  
+-   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** にアクセスして、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 > [!NOTE]  
 >  また、アップグレード計画の一環として、Azure SQL Database のアップグレードや SQL Server 環境の仮想化を考慮する場合もあります。 これらの記事はここでは範囲外ですが、いくつかのリンクを示します。
@@ -57,7 +57,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
   
  次の図に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインプレース アップグレードに必要な手順の概要を示します。  
   
- ![非 HA データベース エンジンのインプレ―ス アップグレード](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "非 HA データベース エンジンのインプレ―ス アップグレード")  
+ ![非 HA インプレース アップグレードのデータベース エンジン アップグレード](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "非 HA インプレース アップグレードのデータベース エンジン アップグレード")  
   
  詳細な手順については、「[Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)」(インストール ウィザードを使用した SQL Server のアップグレード &#40;セットアップ&#41;) を参照してください。  
   
@@ -95,11 +95,11 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
   
 -   **アタッチされたストレージ環境:** アタッチされたストレージを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境がある場合、次の図と図内のリンクで、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新規インストール アップグレードに必要な手順を示しています。  
   
-     ![アタッチされたストレージのバックアップと復元を使用した新しいインストール アップグレードの方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "アタッチされたストレージのバックアップと復元を使用した新しいインストール アップグレードの方法")  
+     ![アタッチされた記憶域のバックアップと復元を使用した新規インストール アップグレード方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "アタッチされた記憶域のバックアップと復元を使用した新規インストール アップグレード方法")  
   
 -   **SAN ストレージ環境:** SAN ストレージを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境がある場合、次の図と図内のリンクで、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新規インストール アップグレードに必要な手順を示しています。  
   
-     ![SAN ストレージのデタッチとアタッチを使用した新しいインストール アップグレードの方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN ストレージのデタッチとアタッチを使用した新しいインストール アップグレードの方法")  
+     ![SAN ストレージのアタッチとデタッチを使用した新規インストール アップグレード方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN ストレージのアタッチとデタッチを使用した新規インストール アップグレード方法")  
   
 ## <a name="rolling-upgrade"></a>ローリング アップグレード  
  ローリング アップグレードは、特定の順序でアップグレードする必要がある複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを含む SQL Server ソリューション環境で、アップタイムを最大にし、リスクを最小にして、機能を維持するために必要です。 ローリング アップグレードは、基本的に特定の順序での複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのアップグレードであり、既存の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対してインプレース アップグレードを実行するか、またはアップグレード プロジェクトの一環としてハードウェアやオペレーティング システムのアップグレードを容易にするために、新規インストール アップグレードを実行します。 ローリング アップグレード アプローチを使用する必要がある多くのシナリオがあります。 これらを以下の各記事で説明します。  

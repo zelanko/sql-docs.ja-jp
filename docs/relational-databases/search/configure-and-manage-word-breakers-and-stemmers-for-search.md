@@ -1,5 +1,5 @@
 ---
-title: 検索用のワード ブレーカーとステマーの構成と管理 | Microsoft Docs
+title: 検索用のワード ブレーカーとステミング機能の構成と管理
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -20,14 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388336"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056261"
 ---
-# <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>検索用のワード ブレーカーとステミング機能の構成と管理
+# <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>検索用のワード ブレーカーとステミング機能の構成と管理 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 ワード ブレーカーとステミング機能は、すべてのフルテキスト インデックス データに対して言語分析を実行します。 言語分析では、次の 2 つを行います。
 
@@ -92,7 +93,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ##  <a name="tshoot"></a> 単語区切りのタイムアウト エラーのトラブルシューティング  
  単語区切りのタイムアウト エラーは、さまざまな状況で発生する可能性があります。 エラーが発生する状況とその対処方法については、「[MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)」をご覧ください。
 
-### <a name="info-about-the-mssqlserver30053-error"></a>MSSQLSERVER_30053 エラーに関する情報
+### <a name="info-about-the-mssqlserver_30053-error"></a>MSSQLSERVER_30053 エラーに関する情報
   
 |プロパティ|[値]|
 |-|-|

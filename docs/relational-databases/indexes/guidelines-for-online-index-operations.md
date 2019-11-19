@@ -1,7 +1,7 @@
 ---
 title: オンライン インデックス操作のガイドライン | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909788"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981797"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 
@@ -93,7 +93,7 @@ S-Lock または Sch-M ロックはインデックス操作の最後のフェー
 ## <a name="resumable-index-considerations"></a>再開可能なインデックスに関する考慮事項
 
 > [!NOTE]
-> 再開可能なインデックス オプションは、SQL Server (SQL Server 2017 以降) (インデックスの再構築のみ) と SQL Database (CREATE INDEX およびインデックスの再構築) に該当します。 「[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)」 ([!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] で現在パブリック プレビュー) および「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。
+> インデックス作成とインデックス再構築の再開可能インデックス オプションは SQL Server と SQL Database で利用できます (インデックス再構築は SQL Server 2017 以降。インデックス作成は SQL Server 2019 でもサポートされています)。 「[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)」および「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。
 
 再開可能なオンライン インデックスの作成または再構築を実行するときは、次のガイドラインが適用されます。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141235"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982459"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ LOADHISTORY
   
  復元操作で情報が **msdb** 履歴テーブルに読み込まれることを指定します。 LOADHISTORY オプションを指定した場合は、確認中の 1 つのバックアップ セットに対して、メディア セットに格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに関する情報が、**msdb** データベース内のバックアップおよび復元履歴テーブルに読み込まれます。 履歴テーブルの詳細については、「[システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)」を参照してください。  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  RESTORE DATABASE および RESTORE LOG ステートメントでは、一般的な WITH オプションをすべて使用できます。 これらのオプションの一部は、以下で説明するように 1 つ以上の補助ステートメントでもサポートされます。  
   
 ##### <a name="restore-operation-options"></a>復元操作オプション  
@@ -247,7 +247,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **サポートしているステートメント:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-**適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 以降
   
  Microsoft Azure Blob ストレージ サービスからバックアップを復元する場合にのみ使用されます。  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **サポートしているステートメント:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
  Windows と互換性のあるディレクトリ名です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベース レベルの FILESTREAM ディレクトリ名の間で一意である必要があります。 一意性の比較では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序の設定とは関係なく、大文字と小文字は区別されません。  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  RESTORE 操作の後、テープ ドライブにテープを読み込んだままにすることを指定します。  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  このオプションは、バックアップ作成時にデータベースがレプリケートされた場合にのみ使用します。  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
 -   ウォーム スタンバイ サーバーの名前が、プライマリ サーバーと同じ名前に変更されていること。  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  このオプションは、バックアップ作成時にデータベースで変更データ キャプチャが有効になっていた場合にのみ使用します。  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
  データベース ミラーリングでの変更データ キャプチャの使用については、「[変更データ キャプチャとその他の SQL Server 機能](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)」を参照してください。  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ配信を有効または無効にするか、新しい [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子を設定します。 このオプションは、バックアップ作成時にデータベースに対して [!INCLUDE[ssSB](../../includes/sssb-md.md)] が有効 (アクティブ) になっていた場合にのみ使用します。  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
  NEW_BROKER  
  データベースに新しい Service Broker 識別子を割り当てることを指定します。 データベースは新しい Service Broker と見なされるため、データベースにおける既存のメッセージ交換は、終了ダイアログ メッセージを生成せずに、直ちに削除されます。 古い Service Broker 識別子を参照するルートは、新しい識別子を使用して作成し直す必要があります。  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  **サポートしているステートメント:** [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) および完全または一括ログ復旧モデルの場合のみ。  
   
  STOPAT、STOPATMARK、または STOPBEFOREMARK 句で目的の復旧ポイントを指定することで、特定の時点またはトランザクションにデータベースを復元できます。 指定された時間またはトランザクションへの復元は、常にログ バックアップから行われます。 復元シーケンスのすべての RESTORE ステートメントで、同一の STOPAT、STOPATMARK、STOPBEFOREMARK のいずれかの句で目的の時間またはトランザクションを指定する必要があります。  

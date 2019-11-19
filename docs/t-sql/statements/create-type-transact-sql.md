@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809821"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982717"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ column_name <data_type>
  型が NULL 値を保持できるかどうかを指定します。 指定しない場合は、NULL が既定値です。  
   
  *assembly_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  共通言語ランタイム内のユーザー定義型の実装を参照する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアセンブリを指定します。 *assembly_name* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のデータベース内の既存のアセンブリに一致している必要があります。  
   
@@ -205,7 +205,7 @@ column_name <data_type>
 >  EXTERNAL_NAME は、包含データベースでは使用できません。  
   
  **[.** *class_name*  **]**  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  ユーザー定義型を実装するアセンブリ内のクラスを指定します。 *class_name* は有効な識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 *class_name* は、対応するアセンブリ内のクラス名に正確に一致している必要があります。大文字と小文字は、データベース照合順序に関係なく区別されます。 クラスの記述に使用されている C# などのプログラミング言語が、名前空間の概念を使用している場合、クラス名は、角かっこ ( **[ ]** ) で囲まれた名前空間で修飾された名前にすることができます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって *type_name* と同じであると見なされます。  
   
@@ -229,7 +229,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 テーブル上にインデックスを作成することを指定します。 これには、クラスター化インデックスまたは非クラスター化インデックスを指定できます。 インデックスには一覧表示される列が含まれ、昇順、降順のいずれかでデータが並べ替えられます。
   
@@ -237,17 +237,17 @@ column_name <data_type>
  CREATE TABLE ステートメントの一部として列インデックスとテーブル インデックスを指定する必要があります。 メモリ最適化テーブルでは、CREATE INDEX および DROP INDEX はサポートされません。  
   
  MEMORY_OPTIMIZED  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  テーブル型がメモリ最適化かどうかを示します。 既定では、このオプションはオフになっています。テーブル (型) は、メモリ最適化テーブル (型) ではありません。 メモリ最適化テーブル型は、他のユーザー テーブルと同様にスキーマがディスク上に保存されるメモリ最適化ユーザー テーブルです。  
   
  BUCKET_COUNT  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ハッシュ インデックスに作成されるバケットの数を示します。 ハッシュ インデックスの BUCKET_COUNT の最大値は 1,073,741,824 です。 バケット数について詳しくは、「[メモリ最適化テーブルのインデックス](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」をご覧ください。 *bucket_count* は必須の引数です。  
   
  HASH  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ハッシュ インデックスを作成することを示します。 ハッシュ インデックスは、メモリ最適化テーブルでのみサポートされます。  
   
@@ -297,7 +297,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>B. ユーザー定義型を作成する  
  次の例では、アセンブリ `utf8string` 内のクラス `utf8string` を参照する型 `Utf8String` を作成します。 型を作成する前に、アセンブリ `utf8string` がローカル データベースに登録されます。 CREATE ASSEMBLY ステートメントのバイナリ部分を有効な記述と置き換えます。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```  
 CREATE ASSEMBLY utf8string  

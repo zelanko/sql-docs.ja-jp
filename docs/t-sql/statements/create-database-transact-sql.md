@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a668b876e97f70ff0324f53689f0d5dfae8f225
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b1e761aded3b34942f5a49aa2b4c085fe1bd4225
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536257"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983219"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -172,7 +172,7 @@ CREATE DATABASE database_snapshot_name
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
 データベースの包含状態を指定します。 NONE = 非包含データベース。 PARTIAL = 部分的包含データベース。
 
@@ -202,7 +202,7 @@ Windows 照合順序名および SQL 照合順序名について詳しくは、�
 WITH \<option>      
 **\<filestream_options>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
 データベースに対する非トランザクション FILESTREAM アクセスのレベルを指定します。
 
@@ -213,7 +213,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象**: [!INCLU
 |FULL|FILESTREAM FileTable に対する完全な非トランザクション アクセスは有効です。|
 
 DIRECTORY_NAME = \<directory_name>     
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
 Windows と互換性のあるディレクトリ名です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべての Database_Directory 名の中で一意である必要があります。 一意性の比較では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の設定とは関係なく、大文字と小文字は区別されません。 このオプションは、このデータベース内に FileTable を作成する前に設定する必要があります。
 
@@ -221,25 +221,25 @@ Windows と互換性のあるディレクトリ名です。 この名前は、[!
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
   このオプションの詳細については、「[default full-text language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)」を参照してください。
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
   このオプションの詳細については、「[default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)」を参照してください。
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
   このオプションの詳細については、「[nested triggers サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)」を参照してください。
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
   このオプションの詳細については、「[transform noise words サーバー構成オプション](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)」を参照してください。
 
@@ -428,7 +428,7 @@ CONTAINS FILESTREAM
 
 CONTAINS MEMORY_OPTIMIZED_DATA     
 
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降
 
 ファイル グループで memory_optimized データをファイル システムに格納することを指定します。 詳細については、[インメモリ OLTP - インメモリ最適化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)に関するページを参照してください。 MEMORY_OPTIMIZED_DATA ファイル グループは、1 つのデータベースにつき 1 つしか許可されません。 メモリ最適化データを格納するファイルグループを作成するコード サンプルについては、「[メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。
 

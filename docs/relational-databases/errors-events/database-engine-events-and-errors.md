@@ -1,24 +1,24 @@
 ---
-title: データベース エンジンのイベントとエラー | Microsoft Docs
+title: データベース エンジンのイベントとエラー
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127358"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119433"
 ---
 # <a name="database-engine-errors"></a>データベース エンジンのエラー
 
-以下の表では、エラー メッセージ番号とその説明 (sys.messages カタログ ビューのエラー メッセージのテキスト) を示します。
+以下の表では、エラー メッセージ番号とその説明 (sys.messages カタログ ビューのエラー メッセージのテキスト) を示します。 当てはまる場合、エラー番号は詳細情報のリンクとなっています。
 
 ## <a name="errors--2-to-999"></a>エラー -2 から 999
 

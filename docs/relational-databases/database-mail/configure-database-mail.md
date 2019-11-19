@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909498"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095701"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909498"
  アカウントの説明を表示または更新します。 説明はオプションです。  
   
  **[電子メール アドレス]**  
- アカウントの電子メール アドレスの名前を表示または更新します。 これは、電子メールの送信元の電子メール アドレスです。 たとえば、Microsoft SQL Server エージェントのアカウントは、 **SqlAgent@Adventure-Works.com** をクリックします。  
+ アカウントの電子メール アドレスの名前を表示または更新します。 これは、電子メールの送信元の電子メール アドレスです。 たとえば、Microsoft SQL Server エージェントのアカウントは、**SqlAgent\@Adventure-Works.com** というアドレスから電子メールを送信できます。  
   
  **表示名**  
  このアカウントから送信する電子メール メッセージに表示する名前を表示または更新します。 表示名はオプションです。 これは、このアカウントから送信されたメッセージに表示されます。 たとえば、SQL Server エージェントのアカウントは、電子メールのメッセージに " **SQL Server Agent Automated Mailer** " という名前を表示できます。  
   
  **[電子メールの返信]**  
- このアカウントから送信された電子メール メッセージへの返信に使用される電子メール アドレスを表示または更新します。 電子メールの返信はオプションです。 たとえば、SQL Server エージェントのアカウントへの返信は、データベース管理者 **danw@Adventure-Works.com** をクリックします。  
+ このアカウントから送信された電子メール メッセージへの返信に使用される電子メール アドレスを表示または更新します。 電子メールの返信はオプションです。 たとえば、SQL Server エージェントのアカウントへの返信は、データベース管理者 **danw\@Adventure-Works.com** に送信できます。  
   
  **サーバー名**  
  アカウントが電子メールの送信に使用する SMTP サーバーの名前を表示または更新します。 通常、これは **smtp.<your_company>.com** のような形式になります。 詳細については、電子メールの管理者に問い合わせてください。  

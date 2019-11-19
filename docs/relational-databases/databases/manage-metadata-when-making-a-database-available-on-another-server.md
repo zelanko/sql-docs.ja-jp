@@ -1,6 +1,6 @@
 ---
-title: データベースを別のサーバーで使用できるようにするときのメタデータの管理 | Microsoft Docs
-ms.custom: ''
+title: データベースを別のサーバーで使用できるようにするときのメタデータの管理
+ms.custom: seo-dt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940725"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119457"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

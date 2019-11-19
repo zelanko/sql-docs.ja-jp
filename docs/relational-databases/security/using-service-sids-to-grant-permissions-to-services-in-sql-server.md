@@ -1,17 +1,18 @@
 ---
-title: サービスの SID を使用して SQL Server のサービスにアクセス許可を付与する | Microsoft Docs
+title: サービスの SID を使用してサービスにアクセス許可を付与する
+ms.custom: seo-dt-2019
 author: randomnote1
 ms.author: dareist
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888591"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095598"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>サービスの SID を使用して SQL Server のサービスにアクセス許可を付与する
 

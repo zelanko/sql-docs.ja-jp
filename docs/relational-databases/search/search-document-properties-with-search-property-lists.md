@@ -1,5 +1,5 @@
 ---
-title: 検索プロパティ リストを使用したドキュメント プロパティの検索 | Microsoft Docs
+title: 検索プロパティ リストを使用したドキュメント プロパティの検索
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -18,12 +18,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f105b175cf2a9673fff0626fba726d6b7f68b50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912987"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056098"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "67912987"
   
  次の図は、Title と Keywords の 2 つのプロパティを指定する検索プロパティ リストの論理的なビューを示しています。 Keywords のプロパティ リスト名は "Tags" です。 これらのプロパティは、F29F85E0-4FF9-1068-AB91-08002B27B3D9 という GUID を持つ同じプロパティ セットに属します。 Title のプロパティ整数識別子は 2、Tags (Keywords) のプロパティ整数識別子は 5 です。 Full-Text Engine は、各プロパティを、検索プロパティ リストで一意となる内部プロパティ ID に適宜関連付けます。 Title プロパティの内部プロパティ ID は 1、Tags プロパティの内部プロパティ ID は 2 になります。  
   
- ![内部テーブルへの検索プロパティ リストのマッピング](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "内部テーブルへの検索プロパティ リストのマッピング")  
+ ![検索プロパティ リストを内部テーブルにマッピングする](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "検索プロパティ リストを内部テーブルにマッピングする")  
   
  内部プロパティ ID は、プロパティのプロパティ整数識別子とは異なる場合があります。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。 たとえば、ある検索プロパティ リストでは内部プロパティ ID が 4 である一方で、別の検索プロパティ リストでは内部プロパティ ID が 1 であったり 3 であったりする場合があります。 これに対し、プロパティ整数識別子はプロパティに固有な識別子であるため、プロパティがどこで使用されるかに関係なく同じ値になります。  
   

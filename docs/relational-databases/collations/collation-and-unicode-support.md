@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680787"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982819"
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ Unicode は、コード ポイントを文字にマップするための標準�
 世界中のユーザーが要求するすべての文字をサポートする文字データ型のコード ページを 1 つ選択することは困難です。 国をまたぐデータベースで文字データを管理する最も簡単な方法は、Unicode をサポートするデータ型を常に使用することです。 
 
 ### <a name="unicode-data-types"></a>Unicode データ型
-複数の言語を反映する文字データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) に格納する場合は、非 Unicode データ型 (**char**、**varchar**、**text**) ではなく、Unicode データ型 (**nchar**、**nvarchar**、**ntext**) を使用してください。 
+複数の言語を反映する文字データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降) に格納する場合は、非 Unicode データ型 (**char**、**varchar**、**text**) ではなく、Unicode データ型 (**nchar**、**nvarchar**、**ntext**) を使用してください。 
 
 > [!NOTE]
 > Unicode データ型の場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]では、UCS-2 を使うと最大 65,535 文字を表すことができ、補助文字を使った場合は Unicode の全範囲 (1,114,111 文字) を表すことができます。 補助文字の有効化について詳しくは、「[補助文字](#Supplementary_Characters)」をご覧ください。
@@ -473,7 +473,7 @@ Unicode は、コード ポイントを文字にマップするための標準�
 > [!TIP]
 > また、サーバー上のデータに異なる照合順序を使用してみることもできます。 クライアントのコード ページにマップする照合順序を選択します。    
 >
-> 一部の Unicode 文字の検索と並べ替えの機能を向上させるために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) で使用可能な UTF-16 照合順序を使用するには (Windows 照合順序のみ)、補助文字 (\_SC) の照合順序の 1 つ、またはバージョン 140 の照合順序の 1 つを選択できます。    
+> 一部の Unicode 文字の検索と並べ替えの機能を向上させるために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) で使用可能な UTF-16 照合順序を使用するには (Windows 照合順序のみ)、補助文字 (\_SC) の照合順序の 1 つ、またはバージョン 140 の照合順序の 1 つを選択できます。    
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で使用可能な UTF-8 照合順序を使用し、一部の Unicode 文字の検索と並べ替えの機能を向上させるには (Windows 照合順序のみ)、UTF-8 エンコード対応の照合順序 (\_UTF8) を選択する必要があります。
  

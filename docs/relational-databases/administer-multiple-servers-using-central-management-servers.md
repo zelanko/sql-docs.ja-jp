@@ -1,5 +1,5 @@
 ---
-title: 中央管理サーバーを使用した複数のサーバーの管理 | Microsoft Docs
+title: 中央管理サーバーを使用した複数のサーバーの管理
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 967f2f582b3d0bc5b5a7b6277b97f6557e19e7cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a2e2da55bd04ba29cf1c6ef81757488f8d50fd24
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934560"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055618"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>中央管理サーバーを使用した複数のサーバーの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67934560"
  [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは、登録済みサーバー内のローカル サーバー グループに対しても実行できます。  
   
 ## <a name="create-central-management-server-and-server-groups"></a>中央管理サーバーおよびサーバー グループを作成する 
- 中央管理サーバーとサーバー グループを作成するには、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の [登録済みサーバー] ウィンドウを使用します。 中央管理サーバーを、それ自体が管理するグループのメンバーにすることはできません。 
+ 中央管理サーバーとサーバー グループを作成するには、 **の** [登録済みサーバー] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ウィンドウを使用します。 中央管理サーバーを、それ自体が管理するグループのメンバーにすることはできません。 
  
  中央管理サーバーとサーバー グループの作成方法については、「[中央管理サーバーおよびサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)」をご覧ください。  
   

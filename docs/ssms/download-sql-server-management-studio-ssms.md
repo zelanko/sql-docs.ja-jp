@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843737"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097863"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -40,7 +40,9 @@ SSMS を使用すると、データベースとデータ ウェアハウスが�
 
 SSMS は無料です。
 
-## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[SSMS のダウンロード](https://aka.ms/ssmsfullsetup)
+## <a name="download-ssms"></a>SSMS のダウンロード
+
+**[![ダウンロード](media/download-icon.png) SQL Server Management Studio (SSMS) のダウンロード](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.4 は SSMS の GA (一般提供) 最新版です。 以前の GA バージョンの SSMS 18 がインストールされている場合、SSMS 18.4 をインストールすると、18.4 にアップグレードされます。 以前の "*プレビュー*" 版の SSMS 18.x がインストールされている場合は、それをアンインストールしてから SSMS 18.4 をインストールしてください。
 

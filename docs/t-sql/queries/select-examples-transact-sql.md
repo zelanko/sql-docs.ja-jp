@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017612"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119206"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT の例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017612"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. 相関サブクエリを使用する  
+## <a name="e-using-correlated-subqueries"></a>E. 相関サブクエリを使用する
+相関サブクエリは、外側のクエリによって値が決まるクエリです。 このクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行できます。
+
  次の例では、`EXISTS` キーワードと `IN` キーワードを使用した意味的に等しいクエリと、それらの違いを示します。 いずれも、製品モデルが長袖ジャージで、`ProductModelID` テーブルと `Product` テーブルの間で `ProductModel` 番号が一致する各製品名の 1 つのインスタンスを取得する有効なサブクエリの例です。  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- 次の例では、相関または繰り返しサブクエリ内で `IN` を使用しています。 これは、外側のクエリによって値が決まるクエリです。 このクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行されます。 このクエリは、`SalesPerson` テーブルのボーナス額が `5000.00` で、従業員の ID 番号が `Employee` テーブルと `SalesPerson` テーブルで一致する各従業員の姓名のインスタンスを 1 つ取得します。  
+ 次の例では、`IN` が使用され、`SalesPerson` テーブルのボーナス額が `5000.00` で、従業員の ID 番号が `Employee` テーブルと `SalesPerson` テーブルで一致する各従業員の姓名のインスタンスを 1 つ取得します。  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

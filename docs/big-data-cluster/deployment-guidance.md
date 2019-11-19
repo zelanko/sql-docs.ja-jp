@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532047"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127375"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes 上に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法
 
@@ -68,6 +68,12 @@ kubectl config view
 > `kubeadm` を使用してブートストラップしたマルチ ノード Kuberntes クラスターに展開する場合は、ビッグ データ クラスターの展開を開始する前に、展開の対象となっているすべての Kubernetes ノード間でクロックが同期されていることを確認します。 ビッグ データ クラスターには、時間の影響を受け、時計のずれが原因で不正な状態になる可能性があるさまざまなサービス用に、正常性プロパティが組み込まれています。
 
 Kubernetes クラスターを構成したら、新しい SQL Server ビッグ データ クラスターの展開に進むことができます。 以前のリリースからアップグレードする場合は、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法](deployment-upgrade.md)」を参照してください。
+
+## <a name="ensure-you-have-storage-configured"></a>ストレージを構成していることを確認する
+
+ほとんどのビッグ データの場合、クラスターの展開のために永続ストレージを用意します。 この段階では、BDC を展開する前に、Kubernetes クラスターに永続ストレージを与える方法を計画しておく必要があります。
+
+AKS で展開する場合、ストレージ セットアップは必要ありません。 AKS には、動的にプロビジョニングするためのストレージ クラスが組み込まれています。 ストレージクラス (`default` または `managed-premium`) は、展開構成ファイルでカスタマイズできます。 組み込みプロファイルでは、`default` ストレージ クラスが使用されます。 `kubeadm` を使用して展開した Kubernetes クラスターで展開する場合、望ましいスケールのクラスターのために十分なストレージがあることを確認し、使用できるように構成しておく必要があります。 ストレージの使用方法をカスタマイズする場合、続行前にそれを行ってください。 「[Kubernetes 上の SQL Server ビッグ データ クラスターでのデータ永続化](concept-data-persistence.md)」を参照してください。
 
 ## <a id="deploy"></a> 展開の概要
 

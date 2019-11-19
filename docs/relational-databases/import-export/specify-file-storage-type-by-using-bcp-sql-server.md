@@ -1,6 +1,5 @@
 ---
-title: bcp を使用したファイル ストレージ型の指定 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: bcp を使用したファイル ストレージ型の指定
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +16,15 @@ ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aeae859d86f33e264234c38e0d398e772c537ddf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062524"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056378"
 ---
-# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
+# <a name="specify-file-storage-type-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、 **smallint** は **int**としてコピーされます。ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68062524"
     |**nvarchar**|**w**|  
     |**text**|**T** **[ext]**|  
     |**ntext2**|**W**|  
-    |**binary**|**x**|  
+    |**[バイナリ]**|**x**|  
     |**varbinary**|**x**|  
     |**image**|**I** **[mage]**|  
     |**datetime**|**d[ate]**|  

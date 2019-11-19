@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87f0e82d0e12656bb7a06be1951874b656dbf4b0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 4671bc07dd21a769746257339ea7903e3dda4701
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532391"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74063973"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server ビッグ データ クラスターでのデータ永続化
 
@@ -87,8 +87,10 @@ AKS には、対応する動的プロビジョナーを備えた [2 つの組み
 
 `kubeadm` を使用して展開された Kubernetes クラスターには、組み込みのストレージ クラスはありません。 ローカル ストレージまたは [Rook](https://github.com/rook/rook) などの推奨のプロビジョナーを使用して、独自のストレージ クラスと永続ボリュームを作成する必要があります。 その場合は、構成したストレージ クラスを `className` に設定します。 
 
-> [!NOTE]
->  kubeadm 用の組み込みの展開構成ファイル (`kubeadm-dev-test` または `kubeadm-prod`) では、データおよびログのストレージ用のストレージ クラス名は指定されていません。 展開の前に、構成ファイルをカスタマイズして className に値を設定する必要があります。そうしないと、展開前の検証でエラーになります。 また、展開には、ストレージ クラスの存在について確認する検証手順が含まれますが、必要な永続ボリュームについては含まれません。 クラスターのスケールに応じた十分なボリュームを確実に作成しておく必要があります。 既定の最小クラスター サイズ (既定のスケール、高可用性なし) では、少なくとも 24 個の永続ボリュームを作成する必要があります。 ローカル プロビジョナーを使用して永続ボリュームを作成する方法の例を、[こちら](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)に示しています。
+> [!IMPORTANT]
+>  kubeadm 用の組み込みの展開構成ファイル (`kubeadm-dev-test` または `kubeadm-prod`) では、データおよびログのストレージ用のストレージ クラス名は指定されていません。 展開の前に、構成ファイルをカスタマイズして `className` に値を設定する必要があります。そうしないと、展開前の検証でエラーになります。 また、展開には、ストレージ クラスの存在について確認する検証手順が含まれますが、必要な永続ボリュームについては含まれません。 クラスターのスケールに応じた十分なボリュームを確実に作成しておく必要があります。 既定の最小クラスター サイズ (既定のスケール、高可用性なし) では、少なくとも 24 個の永続ボリュームを作成する必要があります。
+>
+>「[Kubernetes クラスターを作成する](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)」には、ローカル プロビジョナーを利用した永続ボリューム作成の例があります。 この例では、Kubernetes ストレージが利用されています。
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>各プール用のストレージ構成をカスタマイズする

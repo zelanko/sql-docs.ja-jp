@@ -24,17 +24,17 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c65d0a8f7e435bb82bcbce43aa1fc27523e006cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094974"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981937"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  このトピックでは、最も一般的な種類のデータベース ユーザーを作成する方法について説明します。 ユーザーには、次の 7 種類があります。 完全な一覧については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 すべての種類の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではデータベース ユーザーがサポートされますが、すべての種類のユーザーがサポートされているとは限りません。  
+  このトピックでは、最も一般的な種類のデータベース ユーザーを作成する方法について説明します。 ユーザーには種類が 7 つあります。 完全な一覧については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 すべての種類の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではデータベース ユーザーがサポートされますが、すべての種類のユーザーがサポートされているとは限りません。  
   
  データベース ユーザーを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用します。  
   

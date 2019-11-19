@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 21737a329fdd6bf68f1bf7df5f4df4511b26cfd9
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688324"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127478"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM サービス - SQL Server エラー ログを構成する
 
@@ -38,7 +38,7 @@ ms.locfileid: "71688324"
   
       **[エラー ログ ファイルの最大数]**
 
-      再利用されるまでに作成されるエラー ログ ファイルの最大数を指定します。 既定値は 6 で、1 つは現在のバックアップ ログで、5 つは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再利用するまで保有している以前のバックアップ ログです。
+      再利用されるまでに作成されるアーカイブ済みエラー ログ ファイルの最大数を指定します。 既定値は 6 です。現在のファイルは含まれません。 この値により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再利用するまで保有している以前のバックアップ ログの数が決定されます。
 
     B. ログ ファイルのサイズ
 

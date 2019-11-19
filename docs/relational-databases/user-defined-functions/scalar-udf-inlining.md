@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882427"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926047"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)機能スイートに含まれる機能であるスカラー UDF のインライン化について説明します。 この機能により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でスカラー UDF を呼び出すクエリのパフォーマンスが向上します。
+この記事では、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)機能スイートに含まれる機能であるスカラー UDF のインライン化について説明します。 この機能により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でスカラー UDF を呼び出すクエリのパフォーマンスが向上します。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL スカラー ユーザー定義関数
 [!INCLUDE[tsql](../../includes/tsql-md.md)] で実装されていて単一のデータ値を返すユーザー定義関数は、T-SQL スカラー ユーザー定義関数と呼ばれます。 T-SQL の UDF は、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ間でコードの再利用とモジュール性を実現するための洗練された方法です。 一部の計算 (複雑なビジネス ルールなど) は、命令型の UDF 形式で表した方が簡単です。 UDF は、複雑な SQL クエリの作成に関する専門知識を必要とせずに、複雑なロジックを構築するのに役立ちます。
@@ -134,7 +134,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 UDF 内のロジックの複雑さによっては、結果として得られるクエリ プランがさらに大きくて複雑になる可能性があります。 ご覧のように、UDF の内部の演算がブラック ボックス化されなくなっており、そのため、クエリ オプティマイザーでコストを計算でき、これらの演算を最適化できます。 また、UDF がプランに含まれなくなったため、反復的な UDF の呼び出しは、関数呼び出しのオーバーヘッドがまったくないプランに置き換えられています。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>インライン化可能なスカラー UDF の要件
-以下のすべての条件に該当する場合、そのスカラー T-SQL UDF はインライン化できます。
+<a name="requirements"></a> 以下のすべての条件に該当する場合、そのスカラー T-SQL UDF はインライン化できます。
 
 - UDF が、次のコンストラクトを使用して書かれている。
     - `DECLARE`、`SET`:変数の宣言と代入。
@@ -165,7 +165,7 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 すべての T-SQL スカラー UDF について、[sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) カタログ ビューに `is_inlineable` という名前のプロパティが含まれており、これは UDF がインライン化可能かどうかを示します。 
 
 > [!NOTE]
-> `is_inlineable` プロパティは、UDF 定義内にあるコンストラクトから派生します。 コンパイル時に UDF が実際にインライン化可能かどうかは確認されません。 詳細については、以下のインライン化の条件を参照してください。
+> `is_inlineable` プロパティは、UDF 定義内にあるコンストラクトから派生します。 コンパイル時に UDF が実際にインライン化可能かどうかは確認されません。 詳細については、[インライン化の条件](#requirements)を参照してください。
 
 値 1 はインライン化可能であることを示し、0 はそれ以外を示します。 すべてのインライン TVF についても、このプロパティの値は 1 になります。 他のすべてのモジュールでは、値は 0 になります。
 
@@ -258,7 +258,7 @@ END
 1. インライン化によって新しい結合が導入される場合があるため、クエリ レベルの結合ヒントが有効ではなくなる可能性があります。 代わりに、ローカル結合ヒントを使用する必要があります。
 1. インライン スカラー UDF を参照するビューに、インデックスを付けることはできません。 そのようなビューにインデックスを付ける必要がある場合は、参照されている UDF のインライン化を無効にします。
 1. UDF をインライン化すると、[動的データ マスク](../security/dynamic-data-masking.md)の動作が変化する可能性があります。 特定の状況では (UDF のロジックに応じて)、出力列のマスキングに関してインライン化がより控え目になる場合があります。 UDF で参照されている列が出力列ではない場合、それらはマスクされません。 
-1. UDF で `SCOPE_IDENTITY()` などの組み込み関数が参照されている場合、組み込み関数によって返される値はインライン化によって変化します。 このような動作の変化は、UDF 内のステートメントのスコープがインライン化によって変化するためです。
+1. UDF で `SCOPE_IDENTITY()`、`@@ROWCOUNT`、`@@ERROR` などの組み込み関数が参照されている場合、組み込み関数によって返される値はインライン化によって変化します。 このような動作の変化は、UDF 内のステートメントのスコープがインライン化によって変化するためです。
 
 ## <a name="see-also"></a>参照
 [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

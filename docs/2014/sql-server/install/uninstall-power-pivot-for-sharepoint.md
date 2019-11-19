@@ -38,7 +38,7 @@ ms.locfileid: "72798130"
   
 -   [手順 6. アンインストール後のチェック リスト](#bkmk_post)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> の前提条件  
   
 -   ファームの機能とソリューションをアンインストールするには、SharePoint ファームの管理者またはサービス アプリケーションの管理者である必要があります。  
   
@@ -187,6 +187,6 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
      Analysis Services OLE DB プロバイダーはアンインストールしないでください。 SharePoint では、Analysis Services データベースに接続する Excel ブックの前提条件として OLE DB プロバイダーがインストールされます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] では、より新しいバージョンがインストールされますが、このバージョンは下位互換性があるため、後でデータ接続の問題が発生するのを避けるためにシステムに残しておく必要があります。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [PowerPivot for SharePoint &#40;アドイン SharePoint 2013&#41;をインストールまたはアンインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [PowerPivot 構成ツール](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
