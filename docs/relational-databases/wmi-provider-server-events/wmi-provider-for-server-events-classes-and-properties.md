@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3db7139105b331c1e9fac831330a04cd2a0939a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660503"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164910"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>WMI Provider for Server Events のクラスとプロパティ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73660503"
  たとえば、ALTER_DATABASE イベントを参照すると、その親イベントが DDL_SERVER_LEVEL_EVENTS、そのプロパティが**Tsqlcommand**および**DatabaseName**であることがわかります。 イベントは、 **SQLInstance**、 **posttime**、 **ComputerName**、 **SPID**、および**loginの**各プロパティも継承します。 イベントには、子イベントはありません。  
   
 > [!NOTE]  
->  DDL と同様の操作を実行するシステム ストアド プロシージャもイベント通知を起動できます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**ストアドプロシージャはどちらも、CREATE_TYPE イベントで作成されたイベント通知を起動します。 詳細については、「[DDL イベント](../../relational-databases/triggers/ddl-events.md)」を参照してください。  
+>  DDL と同様の操作を実行するシステム ストアド プロシージャもイベント通知を起動できます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**ストアドプロシージャはどちらも、CREATE_TYPE イベントで作成されたイベント通知を起動します。 詳細については、「 [DDL イベント](../../relational-databases/triggers/ddl-events.md)」を参照してください。  
   
  **データ定義言語イベントとイベントグループ**  
   

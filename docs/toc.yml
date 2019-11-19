@@ -5808,7 +5808,7 @@
     - name: Database Experimentation Assistant (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: はじめに
+        - name: ワークロードの比較の概要
           href: dea/database-experimentation-assistant-get-started.md
         - name: トレースのキャプチャ
           href: dea/database-experimentation-assistant-capture-trace.md

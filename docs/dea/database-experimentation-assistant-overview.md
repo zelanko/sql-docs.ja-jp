@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127370"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165555"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Database Experimentation Assistant の概要
 
@@ -102,13 +102,13 @@ DEA にはインターネット対応の機能があり、製品のエクスペ�
 テレメトリデータの収集と送信は任意です。 収集されるイベントと収集されるイベントを指定するには、次の手順を実行します。
 
 1. DEA がインストールされている場所に移動します (たとえば、C:\\Program Files (x86)\\Microsoft Corporation\\Database Experimentation Assistant)。
-2. 次のように、2つの **.config ファイル (** アプリケーションの場合) と**DEACMD .exe** (CLI の場合) を開き、変更します。
+2. 必要に応じて、**構成ファイル (** アプリケーションの場合) と**DEACMD .exe** (CLI の場合) を開いて変更し、シナリオに対処します。
     - イベントの種類の収集を停止するには、*イベント*の値 ( **traceevent**など) を**false**に設定します。 イベントの収集を再開するには、値を**true**に設定します。
     - イベントのローカルコピーの保存を停止するには、 **TraceLoggerEnabled**の値を**false**に設定します。 ローカルコピーの保存を再び開始するには、値を**true**に設定します。
     - Microsoft へのイベントの送信を停止するには、 **AppInsightsLoggerEnabled**の値を**false**に設定します。 再度 Microsoft へのイベント送信を開始するには、値を**true**に設定します。
 
 DEA は、Microsoft の[プライバシー](https://aka.ms/dea-privacy)に関する声明によって管理されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="see-also"></a>参照
 
-[まず、](database-experimentation-assistant-get-started.md)トレースをキャプチャ、再生、および分析するために必要な手順について説明します。
+2つの環境のワークロードの比較に関連するプロセスについて説明する、[ワークロード比較プロセスの概要](database-experimentation-assistant-get-started.md)。

@@ -53,7 +53,7 @@ ALTER MESSAGE TYPE message_type_name
  VALIDATION  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、この型のメッセージの本文が検証される方法を指定します。  
   
- NONE
+ NONE  
  検証が実行されません。 メッセージ本文には何らかのデータが含まれることがあれば、NULL の場合もあります。  
   
  EMPTY  

@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/14/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095868"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165946"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに、データベースごとに 1 行のデータを保持します。  
@@ -76,7 +77,7 @@ ms.locfileid: "74095868"
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT is ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT はオフです。|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT はローカルです。<br /> 0 = CURSOR_DEFAULT はグローバルです。|  
 |**is_fulltext_enabled**|**bit**|1 = データベースに対してフルテキストが有効です。<br /> 0 = データベースに対してフルテキストが無効です。|  
-|**is_trustworthy_on**|**bit**|1 = データベースは信頼できるとマークされています<br /> 0 = データベースは信頼できるとマークされていません<br /> 既定では、復元またはアタッチされたデータベースでは、ブローカーが無効になっています。 ただし、フェールオーバー後にブローカーが有効になるデータベース ミラーリングは例外です。|  
+|**is_trustworthy_on**|**bit**|1 = データベースは信頼できるとマークされています<br /> 0 = データベースは信頼できるとマークされていません<br /> 既定では、復元またはアタッチされたデータベースの信頼が有効になっていません。|  
 |**is_db_chaining_on**|**bit**|1 = 複数データベースの組み合わせ所有権は ON です。<br /> 0 = 複数データベースの組み合わせ所有権は OFF です。|  
 |**is_parameterization_forced**|**bit**|1 = パラメーター化は FORCED です。<br /> 0 = パラメーター化は単純です。|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = データベースには、暗号化されたマスターキーがあります。<br /> 0 = データベースは暗号化されたマスター キーを保有していません。|  
@@ -93,7 +94,7 @@ ms.locfileid: "74095868"
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION は ON です。<br /> 0 = DATE_CORRELATION_OPTIMIZATION はオフです。|  
 |**is_cdc_enabled**|**bit**|1 = データベースで変更データキャプチャが有効になっています。 詳細については、「 [sys &#40;. sp_cdc_enable_db transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)」を参照してください。|  
 |**is_encrypted**|**bit**|データベースが暗号化されているかどうかを示します (`ALTER DATABASE SET ENCRYPTION` 句を使用して最後に設定された状態を反映します)。 次の値のいずれかです。<br /> 1 = 暗号化<br /> 0 = 暗号化されていない<br /> データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。<br /> データベースの暗号化が解除されている場合、`is_encrypted` には値0が表示されます。 [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動的管理ビューを使用すると、暗号化プロセスの状態を確認できます。|  
-|**is_honor_broker_priority_on**|**bit**|データベースがメッセージ交換の優先度を優先するかどうかを示します (`ALTER DATABASE SET HONOR_BROKER_PRIORITY` 句を使用して最後に設定された状態を反映します)。 次の値のいずれかです。<br /> 1 = HONOR_BROKER_PRIORITY は ON です。<br /> 0 = HONOR_BROKER_PRIORITY は OFF です。<br /> 既定では、復元またはアタッチされたデータベースでは、ブローカーが無効になっています。 ただし、フェールオーバー後にブローカーが有効になるデータベース ミラーリングは例外です。|  
+|**is_honor_broker_priority_on**|**bit**|データベースがメッセージ交換の優先度を優先するかどうかを示します (`ALTER DATABASE SET HONOR_BROKER_PRIORITY` 句を使用して最後に設定された状態を反映します)。 次の値のいずれかです。<br /> 1 = HONOR_BROKER_PRIORITY は ON です。<br /> 0 = HONOR_BROKER_PRIORITY は OFF です。<br /> 既定では、復元またはアタッチされたデータベースの broker の優先度はオフになっています。|  
 |**replica_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) のローカル [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性レプリカの一意の識別子です。<br /> NULL = データベースは、可用性グループ内の可用性レプリカの一部ではありません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|データベースが参加している Always On 可用性グループ (存在する場合) 内のデータベースの一意識別子。 **group_database_id**は、プライマリレプリカのこのデータベースと、データベースが可用性グループに参加しているすべてのセカンダリレプリカで同じです。<br /> NULL = データベースは、可用性グループの可用性レプリカの一部ではありません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|このデータベースにマップされているリソースプールの id。 このリソースプールは、このデータベース内のメモリ最適化テーブルで使用できるメモリの合計を制御します。<br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降|  
@@ -118,41 +119,47 @@ ms.locfileid: "74095868"
 |**catalog_collation_type_desc**|**nvarchar(60)**|カタログの照合順序の設定:<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on は on です。</br>0 = is_result_set_caching_on はオフです。</br>**適用対象**: Azure SQL Data Warehouse Gen2。 この機能はすべてのリージョンにロールアウトされていますが、ご使用のインスタンスにデプロイされているバージョンと、利用可能な機能に関する最新の[AZURE SQL DW リリースノート](/azure/sql-data-warehouse/release-notes-10-0-10106-0)を確認してください。|
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
  `sys.databases` の呼び出し元がデータベースの所有者ではなく、データベースが `master` または `tempdb`でない場合は、対応する行を表示するために必要な最小限の権限が `ALTER ANY DATABASE` または `VIEW ANY DATABASE` のサーバーレベルの権限、または `CREATE DATABASE` データベースの `master` 権限です。 呼び出し元が接続されているデータベースは、常に `sys.databases`で表示できます。  
   
 > [!IMPORTANT]  
 > 既定では、public ロールには `VIEW ANY DATABASE` の権限が与えられており、すべてのログインでデータベース情報を参照できます。 データベースの検出機能からのログインをブロックするには、`public`から `VIEW ANY DATABASE` のアクセス許可を `REVOKE` するか、個々のログインに対する `VIEW ANY DATABASE` のアクセス許可を `DENY` します。  
   
-## <a name="azure-sql-database-remarks"></a>Azure SQL Database 解説  
+## <a name="azure-sql-database-remarks"></a>Azure SQL Database 解説
+
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] このビューは、`master` データベースとユーザーデータベースで使用できます。 `master` データベースでは、このビューは、サーバー上の `master` データベースとすべてのユーザーデータベースに関する情報を返します。 ユーザー データベースでは、このビューには、現在のデータベースと master データベースのみの情報が返されます。  
   
  新しいデータベースが作成される `sys.databases` サーバーの `master` データベースの [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ビューを使用します。 データベースのコピーが開始された後、コピー先サーバーの `master` データベースから `sys.databases` および `sys.dm_database_copies` ビューに対してクエリを実行し、コピーの進行状況に関する詳細情報を取得できます。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-query-the-sysdatabases-view"></a>A. sys.databases ビューに対するクエリ  
- 次の例では、`sys.databases` ビューで使用できるいくつかの列が返されます。  
+### <a name="a-query-the-sysdatabases-view"></a>A. sys.databases ビューに対するクエリ
+
+次の例では、`sys.databases` ビューで使用できるいくつかの列が返されます。  
   
 ```sql  
 SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc  
 FROM sys.databases;  
 ```  
   
-### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>b. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのコピーの進行状況を確認します。  
- 次の例では、`sys.databases` および `sys.dm_database_copies` ビューに対してクエリを実行し、データベースのコピー操作に関する情報を返します。  
+### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>b. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのコピーの進行状況を確認します。
+
+次の例では、`sys.databases` および `sys.dm_database_copies` ビューに対してクエリを実行し、データベースのコピー操作に関する情報を返します。  
   
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
-```sql  
+```sql
 -- Execute from the master database.  
 SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
-```  
-### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の一時リテンション期間ポリシーの状態を確認します。  
- 次の例では、`sys.databases` に対してクエリを行い、テンポラル保持クリーンアップタスクが有効になっているかどうかの情報を返します。 復元操作の後、テンポラルリテンション期間は既定で無効になっていることに注意してください。 `ALTER DATABASE` を使用して、明示的に有効にします。
+```
+
+### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の一時リテンション期間ポリシーの状態を確認します。
+
+次の例では、`sys.databases` に対してクエリを行い、テンポラル保持クリーンアップタスクが有効になっているかどうかの情報を返します。 復元操作の後、テンポラルリテンション期間は既定で無効になっていることに注意してください。 `ALTER DATABASE` を使用して、明示的に有効にします。
   
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -162,11 +169,10 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [database_recovery_status &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)   
- [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
-  
-  
+## <a name="next-steps"></a>次の手順
+
+- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
+- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [database_recovery_status &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
+- [データベースとファイルのカタログ&#40;ビュー transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
+- [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
