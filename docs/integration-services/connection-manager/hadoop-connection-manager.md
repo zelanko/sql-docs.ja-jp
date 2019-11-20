@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298536"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096130"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 接続マネージャー
 
@@ -40,9 +40,9 @@ ms.locfileid: "71298536"
   
     3.  WebHCat サービスにアクセスするときに使用する **認証** 方法を選択します。 使用できる値は、 **[基本]** と **[Kerberos]** です。  
   
-         ![基本認証が指定された Hadoop 接続マネージャー エディターのスクリーンショット](../../integration-services/connection-manager/media/hadoop-cm-basic.png "基本認証が指定された Hadoop 接続マネージャー エディター")  
+         ![Hadoop 接続マネージャー エディターと基本認証のスクリーンショット](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop 接続マネージャー エディターと基本認証")  
   
-         ![Kerberos 認証が指定された Hadoop 接続マネージャー エディターのスクリーンショット](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Kerberos 認証が指定された Hadoop 接続マネージャー エディター")  
+         ![Hadoop 接続マネージャー エディターと Kerberos 認証のスクリーンショット](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop 接続マネージャー エディターと Kerberos 認証")  
   
     4.  **[WebHCat User]** (WebHCat ユーザー) に、WebHCat へのアクセスが許可されている **ユーザー** を入力します。  
   
@@ -152,7 +152,7 @@ KDC サーバー:
 
     構成が完了したら、KDC サービスを再起動します。
 
-2.  KDC サーバー上の **krbtgt/REALM.COM@AD.COM** というプリンシパルを準備します。 次のコマンドを実行します。
+2.  KDC サーバーで **krbtgt/REALM.COM\@AD.COM** という名前のプリンシパルを準備します。 次のコマンドを実行します。
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,7 +167,7 @@ KDC サーバー:
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Windows ドメインから Kerberos 領域への信頼関係を確立します。 次の例で、`[password]` はプリンシパル **krbtgt/REALM.COM@AD.COM** のパスワードです。
+2.  Windows ドメインから Kerberos 領域への信頼関係を確立します。 次の例で、`[password]` はプリンシパル **krbtgt/REALM.COM\@AD.COM** のパスワードです。
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

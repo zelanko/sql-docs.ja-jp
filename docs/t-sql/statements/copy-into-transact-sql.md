@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fc26cc0862c7dfb02276738d9424b860d98644e7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882413"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055142"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -131,10 +131,10 @@ WITH
 AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
 
 - Shared Access Signatures (SAS) を使用した認証 *IDENTITY: *"Shared Access Signature" の値が含まれている定数 
-  *SECRET: *[*Shared Access Signature*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature) を使用して、お使いのストレージ アカウントのリソースへの委任アクセスを提供します。 **
+  *SECRET: *[*Shared Access Signature*](/azure/storage/common/storage-sas-overview) *を使用して、お使いのストレージ アカウントのリソースへの委任アクセスを提供します。*
   最低限必要な権限: READ および LIST
 
-- [サービス プリンシパル ** ](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
+- [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
 
   *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint> *
   *SECRET: *AAD アプリケーション サービス プリンシパルキー。最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
@@ -147,7 +147,7 @@ AAD またはパブリック ストレージ アカウントを使用して認�
   
 - [マネージド ID ](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet サービス エンドポイント) を使用した認証 *IDENTITY:* "マネージド ID" の値が含まれている定数。最低限必要な RBAC ロール: AAD 登録済み SQL Database サーバーに対するストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者 
   
-- AAD ユーザーを使用した認証 ** CREDENTIAL は必須ではありません。最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
+- AAD ユーザーを使用した認証 *CREDENTIAL は必須ではありません*。最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
 
 *ERRORFILE = Directory Location*</br>
 *ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
@@ -164,10 +164,10 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
   
 - Shared Access Signatures (SAS) を使用した認証
   - *IDENTITY:* "Shared Access Signature" の値が含まれている定数
-  - *SECRET:* [*Shared Access Signature*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) を使用して、お使いのストレージ アカウントのリソースへの委任アクセスを提供します。 **
+  - *SECRET:* [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) *を使用して、お使いのストレージ アカウントのリソースへの委任アクセスを提供します。*
   - 最低限必要な権限: READ、LIST、WRITE、CREATE、DELETE
   
-- [サービス プリンシパル ** ](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
+- [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
   - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET:* AAD サービス プリンシパル アプリケーション キー
   - 最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
@@ -184,7 +184,7 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
   - 最低限必要な RBAC ロール: AAD 登録済み SQL Database サーバーに対するストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
   
 - AAD ユーザーを使用した認証
-  - CREDENTIAL は必須ではありません **
+  - *CREDENTIAL は必須ではありません*
   - 最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
 
 > [!NOTE]  
@@ -277,7 +277,7 @@ COPY コマンドの既定値を次に示します。
 - ROWTERMINATOR = ‘\n'
 
 > [!IMPORTANT]
-> 内部的には COPY では ' \n ' が ' \r\n ' として処理されます。 詳細については、[ROWTERMINATOR]() セクションを参照してください。
+> 内部的には COPY では ' \n ' が ' \r\n ' として処理されます。 詳細については、ROWTERMINATOR セクションを参照してください。
 
 - FIRSTROW = 1
 
@@ -360,4 +360,4 @@ WITH (
 
 ## <a name="see-also"></a>参照  
 
- [SQL Data Warehouse を使用した読み込みの概要](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [SQL Data Warehouse を使用した読み込みの概要](/azure/sql-data-warehouse/design-elt-data-loading)

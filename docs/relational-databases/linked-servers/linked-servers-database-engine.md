@@ -1,6 +1,5 @@
 ---
-title: リンク サーバー (データベース エンジン) | Microsoft Docs
-ms.custom: ''
+title: リンク サーバー
 ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
@@ -19,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a7dc1d67e45bb8d67cebff9deb3a694b09038154
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073663"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094775"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
 
@@ -64,7 +64,7 @@ ms.locfileid: "68073663"
 ## <a name="linked-server-details"></a>リンク サーバーの詳細  
  次の図に、基本的なリンク サーバー構成を示します。  
   
- ![クライアント層、サーバー層、およびデータベース サーバー層](../../relational-databases/linked-servers/media/lsvr.gif "クライアント層、サーバー層、およびデータベース サーバー層")  
+ ![クライアント層、サーバー層、データベース サーバー層](../../relational-databases/linked-servers/media/lsvr.gif "クライアント層、サーバー層、データベース サーバー層")  
   
 リンク サーバーは、通常は分散クエリの処理に使用します。 クライアント アプリケーションからリンク サーバー経由で分散クエリが実行されるときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でコマンドが解析され、OLE DB に要求が送信されます。 行セット要求は、プロバイダーに対するクエリの実行や、プロバイダーのベース テーブルを開くなどの形式をとります。  
   
