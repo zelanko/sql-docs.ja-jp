@@ -1,6 +1,6 @@
 ---
-title: チュートリアル:Python で顧客を分類するためのデータの準備
-description: この4部構成のチュートリアルシリーズの第2部では、SQL Server データベースからデータを準備し、SQL Server Machine Learning Services で Python のクラスタリングを実行します。
+title: Python のチュートリアル:クラスター データを準備する
+description: この 4 部構成のチュートリアル シリーズの第 2 部では、SQL Server データベースからデータを準備し、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,44 +9,45 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d91f3b9f1e3d1abe53d677d9f9058058d321d985
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294347"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727085"
 ---
 # <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>チュートリアル:SQL Server Machine Learning Services を使用して Python で顧客を分類するためのデータを準備する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この4部構成のチュートリアルシリーズの第2部では、Python を使用して SQL database からデータを復元し、準備します。 このシリーズの後半で、このデータを使用して、SQL Server Machine Learning Services を使用した Python でのクラスターモデルのトレーニングとデプロイを行います。
+この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用して SQL データベースからデータを復元して準備します。 このシリーズの後半では、本データを使用して、SQL Server Machine Learning Services とともに Python でクラスタリング モデルをトレーニングし、デプロイします。
 
-この記事では、次の方法について説明します。
+この記事では以下の方法について学習します。
 
 > [!div class="checklist"]
 > * Python を使用して異なるディメンションに沿って顧客を分離する
-> * SQL データベースから Python データフレームにデータを読み込む
+> * SQL データベースから Python データ フレームにデータを読み込む
 
-[パート 1](python-clustering-model.md)では、前提条件をインストールし、サンプルデータベースを復元しました。
+[第 1 部](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
-[パート 3](python-clustering-model-build.md) では、Python で K-Means クラスターモデルを作成してトレーニングする方法について説明します。
+[第 3 部](python-clustering-model-build.md)では、Python で K-Means クラスタリング モデルを作成し、トレーニングする方法を学びました。
 
-[パート 4](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できる SQL データベースにストアドプロシージャを作成する方法について説明します。
+[第 4 部](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャを SQL データベースに作成する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-* このチュートリアルのパート2では、[**パート 1**](python-clustering-model.md)の前提条件を満たしていることを前提としています。
+* このチュートリアルの第 2 部は、[**第 1 部**](python-clustering-model.md)の前提条件を完了していることを前提としています。
 
-## <a name="separate-customers"></a>個別の顧客
+## <a name="separate-customers"></a>顧客を分離する
 
-クラスタリングの顧客を準備するには、まず次のディメンションに従って顧客を分離します。
+顧客のクラスタリングを準備するには、まず次のディメンションに従って顧客を分離します。
 
-* **orderRatio** = 返品順序の比率 (部分的または完全に返された注文の総数と注文の合計数)
-* **Itemsratio** = 返される項目の比率 (返された項目の合計数と購入した項目の数)
-* **Monetaryratio** = 返品金額の比率 (返される品目の合計金額と購入金額の合計金額)
-* **frequency** = 返される頻度
+* **orderRatio** = 注文返品率 (注文の総数に対する部分的または完全に返品された注文の総数)
+* **itemsRatio** = アイテム返品率 (購入されたアイテムの総数に対する返品されたアイテムの総数)
+* **monetaryRatio** = 返品金額率 (合計購入金額に対する返されたアイテムの合計金額)
+* **frequency** = 返品の頻度
 
 Azure Data Studio で新しいノートブックを開き、次のスクリプトを入力します。
 
@@ -112,9 +113,9 @@ column_info = {
 }
 ```
 
-## <a name="load-the-data-into-a-data-frame"></a>データをデータフレームに読み込む
+## <a name="load-the-data-into-a-data-frame"></a>データをデータ フレームに読み込む
 
-クエリの結果は、revoscalepy **RxSqlServerData**関数を使用して Python に返されます。 プロセスの一部として、前のスクリプトで定義した列情報を使用します。
+クエリの結果は、revoscalepy **RxSqlServerData** 関数を使用して Python に返されます。 プロセスの一部として、前のスクリプトで定義した列情報を使用します。
 
 ```python
 data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
@@ -124,7 +125,7 @@ revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=Fa
 customer_data = pd.DataFrame(revoscale.rx_import(data_source))
 ```
 
-次に、データフレームの先頭を表示して、正しいかどうかを確認します。
+次に、データ フレームの先頭を表示して、正しく表示されているかどうかを確認します。
 
 ```python
 print("Data frame:", customer_data.head(n=5))
@@ -146,12 +147,12 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルシリーズの第2部では、次の手順を完了しました。
+このチュートリアル シリーズの第 2 部では、次の手順を完了しました。
 
 * Python を使用して異なるディメンションに沿って顧客を分離する
-* SQL データベースから Python データフレームにデータを読み込む
+* SQL データベースから Python データ フレームにデータを読み込む
 
-この顧客データを使用する機械学習モデルを作成するには、このチュートリアルシリーズの第3部に従います。
+顧客データを使用する機械学習モデルをトレーニングするには、このチュートリアル シリーズの第 3 部に従ってください。
 
 > [!div class="nextstepaction"]
 > [チュートリアル: SQL Server Machine Learning Services を使用して Python で予測モデルを作成する](python-clustering-model-build.md)

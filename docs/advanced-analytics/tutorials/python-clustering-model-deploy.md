@@ -1,6 +1,6 @@
 ---
-title: チュートリアル:Python でモデルをデプロイして顧客を分類する
-description: この4部構成のチュートリアルシリーズの第4部では、SQL Server Machine Learning Services を含むクラスターモデルを Python にデプロイします。
+title: Python のチュートリアル:クラスター モデルのデプロイ
+description: この 4 部構成チュートリアル シリーズの第 4 部では、SQL Server Machine Learning Services などのクラスター モデルを Python にデプロイします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,47 +9,48 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eef8a0f0f11e6d9085a1685145e4c6815979470d
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199353"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727139"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>チュートリアル:モデルを Python にデプロイして、SQL Server Machine Learning Services で顧客を分類する
+# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>チュートリアル:モデルを Python に配置し、SQL Server Machine Learning Services で顧客を分類する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この4部構成のチュートリアルシリーズの第4部では、SQL Server Machine Learning Services を使用して、Python で開発されたクラスターモデルを SQL database にデプロイします。
+この 4 部構成チュートリアルシリーズの第 4 部では、SQL Server Machine Learning Services を使用して、Python で開発されたクラスター モデルを SQL データベースにデプロイします。
 
-クラスターを定期的に実行するには、新しい顧客が登録するときに、任意のアプリから Python スクリプトを呼び出すことができる必要があります。 これを行うには、データベースの SQL ストアドプロシージャ内に Python スクリプトを配置して、SQL Server に Python スクリプトを配置します。 モデルは SQL database で実行されるため、データベースに格納されているデータに対して簡単にトレーニングできます。
+新しい顧客が登録する際、クラスターを定期的に実行するには、どのアプリからでも Python スクリプトを呼び出せる必要があります。 これを行うには、データベースの SQL ストアドプロシージャ内に Python スクリプトを置き、SQL Server に Python スクリプトをデプロイします。 モデルは SQL database で実行されるため、データベースに格納されているデータに対して、容易にトレーニングできます。
 
-このセクションでは、SQL Server に書き込んだ Python コードを移動し、SQL Server Machine Learning Services のヘルプを使用してクラスタリングを展開します。
+このセクションでは、SQL Server に先ほど書き込んだ Python コードを移動し、SQL Server Machine Learning Services を使用して、クラスタリングをデプロイします。
 
-この記事では、次の方法について説明します。
+この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
-> * モデルを生成するストアドプロシージャを作成する
-> * SQL Server でクラスタリングを実行する
-> * クラスタリング情報を使用する
+> * モデルを生成するストアド プロシージャの作成
+> * SQL Server でのクラスタリング
+> * クラスタリング情報の使用
 
-[パート 1](python-clustering-model.md)では、前提条件をインストールし、サンプルデータベースを復元しました。
+[第 1 部](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
-[パート 2](python-clustering-model-prepare-data.md) では、クラスタリングを実行するために SQL データベースからデータを準備する方法を学習しました。
+[第 2 部](python-clustering-model-prepare-data.md)では、SQL データベースからデータを準備してクラスタリングを実行する方法を学びました。
 
-[パート 3](python-clustering-model-build.md) では、Python で K-Means クラスタリング モデルを作成してトレーニングする方法について学習しました。
+[第 3 部](python-clustering-model-build.md)では、Python で K-Means クラスタリング モデルを作成し、トレーニングする方法を学びました。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-* このチュートリアルシリーズのパート 4 では、[**パート 1**](python-clustering-model.md) の前提条件を満たしていること、[**パート 2**](python-clustering-model-prepare-data.md) と[**パート 3**](python-clustering-model-build.md) の手順を完了していることを前提としています。
+* このチュートリアルシリーズの第 4 部は、第 1 部**](python-clustering-model.md)の前提条件を満たし、第 2 部および第 3 部](python-clustering-model-build.md)の手順を完了していることを前提としています。
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>モデルを生成するストアドプロシージャを作成する
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>モデルを生成するストアド プロシージャの作成
 
-次の T-sql スクリプトを実行して、ストアドプロシージャを作成します。 この手順では、パート1とこのチュートリアルシリーズで開発した手順を再作成します。
+以下の T-SQL スクリプトを実行して、ストアド プロシージャを作成します。 このプロシージャでは、本チュートリアル シリーズの第 1 部・2 部で作成した手順を再作成します。
 
-* 購入と返却履歴に基づいて顧客を分類する
-* K-Means アルゴリズムを使用して 4 つの顧客のクラスターを生成する
+* 購入・返却履歴に基づく顧客の分類
+* K-Means アルゴリズムを使用した、4 つの顧客クラスターの生成
 
 ```sql
 USE [tpcxbb_1gb]
@@ -124,9 +125,9 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>SQL Database でクラスタリングを実行する
+## <a name="perform-clustering-in-sql-database"></a>SQL Database 上でのクラスタリング実行
 
-ストアドプロシージャを作成したので、次のスクリプトを実行して、プロシージャを使用してクラスタリングを実行します。
+ストアド プロシージャが作成されたので、以下のスクリプトを実行し、プロシージャを使ってクラスタリングを実行します。
 
 ```sql
 --Create a table to store the predictions in
@@ -153,11 +154,11 @@ EXEC [dbo].[py_generate_customer_return_clusters];
 SELECT * FROM py_customer_clusters;
 ```
 
-## <a name="use-the-clustering-information"></a>クラスタリング情報を使用する
+## <a name="use-the-clustering-information"></a>クラスタリング情報の使用
 
-クラスター化の手順はデータベースに格納されているため、同じデータベースに格納されている顧客データに対して効率的にクラスタリングを実行できます。 顧客データが更新されるたびにプロシージャを実行し、更新されたクラスタリング情報を使用することができます。
+クラスタリングのプロシージャはデータベースに格納されているため、同じデータベースに格納されている顧客データに対し、効率的にクラスタリングを実行できます。 顧客データが更新されるたびにプロシージャを実行し、更新されたクラスタリング情報を利用できます。
 
-(このチュートリアルの[第3部](python-clustering-model-build.md#analyze-the-results)では4つのクラスターがどのように記述されているかを確認できます)、非アクティブなグループであるクラスター0の顧客にプロモーション電子メールを送信するとします。 次のコードは、クラスター0の顧客の電子メールアドレスを選択します。
+たとえば、クラスター 0 (非アクティブなグループ) の顧客にプロモーションメールを送るとします (本チュートリアルの第 3 部](python-clustering-model-build.md#analyze-the-results)で 4 つのクラスターについて説明しています)。 以下のコードは、クラスター 0 の顧客のメール アドレスを選択します。
 
 ```sql
 USE [tpcxbb_1gb]
@@ -170,23 +171,23 @@ SELECT customer.[c_email_address], customer.c_customer_sk
   WHERE c.cluster = 0
 ```
 
-**C. クラスター**の値を変更して、他のクラスターの顧客の電子メールアドレスを返すことができます。
+**c. cluster** 値を変更して、他のクラスターの顧客のメール アドレスを返すことができます。
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-このチュートリアルを終了すると、SQL Server から tpcxbb_1gb データベースを削除できます。
+このチュートリアルの終了後は、SQL Server から tpcxbb_1gb データベースを削除してかまいません。
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルシリーズの第4部では、次の手順を完了しました。
+本チュートリアル シリーズの第 4 部では、以下の手順を完了しました。
 
-* モデルを生成するストアドプロシージャを作成する
-* SQL Server でクラスタリングを実行する
-* クラスタリング情報を使用する
+* モデルを生成するストアド プロシージャの作成
+* SQL Server でのクラスタリング
+* クラスタリング情報の使用
 
-SQL Server Machine Learning Services での Python の使用の詳細については、次のページを参照してください。
+SQL Server Machine Learning Services における Pythonの使用について、詳しくは以下の記事を参照してください。
 
-* [クイック スタート:SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](quickstart-python-create-script.md)
-* [SQL Server Machine Learning Services のその他の Python チュートリアル](sql-server-python-tutorials.md)
-* [Sqlmlutils を使用して Python パッケージをインストールする](../package-management/install-additional-python-packages-on-sql-server.md)
+* [クイックスタート: SQL Server Machine Learning Services で簡単な Python スクリプトを作成して実行する](quickstart-python-create-script.md)
+* [SQL Server Machine Learning Services 用の、その他の Python チュートリアル](sql-server-python-tutorials.md)
+* [sqlmlutils を使用した Python パッケージのインストール](../package-management/install-additional-python-packages-on-sql-server.md)
 

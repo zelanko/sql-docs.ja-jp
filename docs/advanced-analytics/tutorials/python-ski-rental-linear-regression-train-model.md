@@ -1,46 +1,47 @@
 ---
-title: Python のチュートリアル:モデルのトレーニング (線形回帰)
-description: このチュートリアルでは、SQL Server Machine Learning Services で Python と線形回帰を使用して、ski のレンタル数を予測します。 Python で線形回帰モデルをトレーニングします。
+title: Python のチュートリアル:モデルのトレーニング
+description: このチュートリアルでは、SQL Server Machine Learning Services で Python と線形回帰を使用して、スキーのレンタル数を予測します。 Python で線形回帰モデルをトレーニングします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30f390681dc63d6de9a95e805b6cc8f273b2b8d7
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: e5f83fe37890c997865c44198cbe30bc13cdea4e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242550"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727049"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python のチュートリアル:SQL Server Machine Learning Services で線形回帰モデルをトレーニングする
+# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python のチュートリアル:SQL Server Machine Learning Services で線形回帰モデルをトレーニングします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この4部構成のチュートリアルシリーズのパート3では、Python で線形回帰モデルをトレーニングします。 このシリーズの次のパートでは、Machine Learning Services を使用して、このモデルを SQL Server データベースにデプロイします。
+この 4 部構成のチュートリアル シリーズの第 3 部では、Python で線形回帰モデルをトレーニングします。 このシリーズの次の部では、Machine Learning Services を使用して、このモデルを SQL Server データベースにデプロイします。
 
-この記事では、次の方法について説明します。
+この記事では以下の方法について学習します。
 
 > [!div class="checklist"]
 > * 線形回帰モデルをトレーニングする
-> * 線形回帰モデルを使用して予測を行う
+> * 線形回帰モデルを使用して予測を作成する
 
-[パート 1](python-ski-rental-linear-regression.md)では、サンプルデータベースを復元する方法を学習しました。
+[第 1 部](python-ski-rental-linear-regression.md)では、サンプル データベースを復元する方法を学習しました。
 
-[パート 2](python-ski-rental-linear-regression-prepare-data.md)では、SQL Server から python データフレームにデータを読み込み、python でデータを準備する方法を学習しました。
+[第 2 部](python-ski-rental-linear-regression-prepare-data.md)では、SQL Server から Python データ フレームにデータを読み込み、Python でデータを準備する方法を学習しました。
 
-[パート 4](python-ski-rental-linear-regression-deploy-model.md)では、モデルを SQL Server に格納する方法について学習した後、パート2と3で開発した Python スクリプトからストアドプロシージャを作成します。 ストアドプロシージャは、新しいデータに基づいて予測を行うために SQL Server で実行されます。
+[第 4 部](python-ski-rental-linear-regression-deploy-model.md)では、モデルを SQL Server に格納し、そして第 2 部と第 3 部で開発した Python スクリプトからストアド プロシージャを作成する方法について学習します。 ストアド プロシージャは、新しいデータに基づいて予測を行うために SQL Server で実行されます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-* このチュートリアルのパート3では、[パート 1](python-ski-rental-linear-regression.md)とその前提条件を完了していることを前提としています。
+* このチュートリアルの第 3 部は、[第 1 部](python-ski-rental-linear-regression.md)とその前提条件を完了していることを前提としています。
 
-## <a name="train-the-model"></a>モデルのトレーニング
+## <a name="train-the-model"></a>モデルをトレーニングする
 
-予測するには、データセット内の変数間の依存関係を最もよく説明する関数 (モデル) を見つける必要があります。 これは、モデルのトレーニングと呼ばれます。 トレーニングデータセットは、このシリーズの第2部で作成した pandas のデータフレーム**df**のデータセット全体のサブセットになります。
+予測するには、データセット内の変数間の依存関係を最も適切に説明する関数 (モデル) を見つける必要があります。 これは、モデルのトレーニングと呼ばれます。 トレーニング データセットは、このシリーズの第 2 部で作成した、pandas データ フレーム **df** のデータセット全体のサブセットになります。
 
-モデル**lin_model**は線形回帰アルゴリズムを使用してトレーニングします。
+線形回帰アルゴリズムを使用して、モデル **lin_model** をトレーニングします。
 
 ```python
 # Store the variable we'll be predicting on.
@@ -70,9 +71,9 @@ Training set shape: (362, 7)
 Testing set shape: (91, 7)
 ```
 
-## <a name="make-predictions"></a>予測の作成
+## <a name="make-predictions"></a>予測を作成します
 
-モデル**lin_model**を使用してレンタルカウントを予測するには、predict 関数を使用します。
+モデル **lin_model** を使用してレンタル カウントを予測するには、predict 関数を使用します。
 
 ```python
 # Generate our predictions for the test set.
@@ -97,12 +98,12 @@ Computed error: 3.59831533436e-26
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルシリーズの第3部では、次の手順を完了しました。
+このチュートリアル シリーズの第 3 部では、次の手順を完了しました。
 
 * 線形回帰モデルをトレーニングする
-* 線形回帰モデルを使用して予測を行う
+* 線形回帰モデルを使用して予測を作成する
 
-作成した機械学習モデルをデプロイするには、このチュートリアルシリーズの第4部に従います。
+作成した機械学習モデルをデプロイするには、このチュートリアル シリーズの第 4 部の手順に従います。
 
 > [!div class="nextstepaction"]
-> [Python のチュートリアル:Machine learning モデルをデプロイする](python-ski-rental-linear-regression-deploy-model.md)
+> [Python のチュートリアル:機械学習モデルのデプロイ](python-ski-rental-linear-regression-deploy-model.md)

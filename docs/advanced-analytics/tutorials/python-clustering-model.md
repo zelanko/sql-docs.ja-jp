@@ -1,6 +1,6 @@
 ---
-title: K-Means クラスタリングを使用して顧客を分類する方法
-description: この 4 部構成のチュートリアルシリーズでは、SQL Server Machine Learning Services で Python を使用した SQL database で K-Means アルゴリズムを使用して、顧客のクラスタリングを実行します。
+title: Python のチュートリアル:ユーザーのカテゴリー化
+description: この 4 部構成のチュートリアル シリーズでは、SQL Server Machine Learning Services で Python を使用した SQL データベースで K-Means アルゴリズムを使用して、顧客のクラスタリングを実行します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,60 +9,61 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 78a5999bc0c00a72edcc631877fdfed647024bc5
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 245a1566bfbbf19821323d0b474669eaba1d2e6e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294367"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727075"
 ---
-# <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>チュートリアル:K-Means クラスタリングを使用した顧客の分類 - SQL Server Machine Learning Services
+# <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>チュートリアル:SQL Server Machine Learning Services と K-Means クラスタリングを使用して顧客を分類する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この 4 部構成のチュートリアルシリーズでは、お客様のデータをクラスター化するために、Python を使用して、 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) で K-Means クラスターモデルを開発およびデプロイします。
+この 4 部構成のチュートリアル シリーズでは、Python を使用して、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) で K-Means クラスタリング モデルを開発および展開して、顧客データをクラスター化します。
 
-このシリーズの第1部では、チュートリアルの前提条件を設定してから、サンプルデータセットを SQL database に復元します。 このシリーズの後半で、このデータを使用して、SQL Server Machine Learning Services を使用した Python でのクラスターモデルのトレーニングとデプロイを行います。
+このシリーズの第 1 部では、チュートリアルの前提条件を設定してから、サンプル データセットを SQL データベースに復元します。 このシリーズの後半では、このデータを使用して、SQL Server Machine Learning Services を使用する Python でクラスタリング モデルをトレーニングし展開します。
 
-このシリーズのパート2と3では、データを分析および準備し、機械学習モデルをトレーニングするために、Azure Data Studio notebook でいくつかの Python スクリプトを開発します。 次に、第4部では、ストアドプロシージャを使用して、これらの Python スクリプトを SQL database 内で実行します。
+このシリーズの第 2 部と第 3 部では、Azure Data Studio ノートブックでいくつかの Python スクリプトを開発して、データを準備し、機械学習モデルをトレーニングします。 次に第 4 部では、ストアド プロシージャを使用して、SQL データベース内でこれらの Python スクリプトを実行します。
 
-*クラスタリング* は、グループのメンバーが何らかの方法で類似しているグループにデータの編成することとして説明できます。 このチュートリアルシリーズでは、小売事業を所有しているとします。 **K-Means** アルゴリズムを使用して、製品の購入と返品のデータセットで顧客のクラスタリングを実行します。 顧客をクラスタリングすることで、特定のグループをターゲットにし、マーケティングの取り組みをより効果的に進めることができます。
-K-Means クラスタリングは、類似性に基づいてデータのパターンを検索する *教師なし学習* アルゴリズムです。
+*クラスター化*は、グループのメンバーにある意味で類似点があるグループにデータを編成すること、として説明できます。 このチュートリアル シリーズでは、小売事業を営んでいる場合を想定しています。 **K-Means** アルゴリズムを使用して、製品の購入と返品のデータセット内で、顧客のクラスタリングを実行します。 顧客をクラスタリングすることで、特定のグループをターゲットして、マーケティングの取り組みをより効果的に進めることができます。
+K-Means クラスタリングは、類似性に基づいてデータのパターンを探す*教師なし学習*アルゴリズムです。
 
-この記事では、次の方法について説明します。
+この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
-> * サンプルデータベースを SQL Server インスタンスに復元する
+> * サンプル データベースを SQL Server インスタンスに復元する
 
-[パート 2](python-clustering-model-prepare-data.md) では、クラスタリングを実行するために SQL データベースからデータを準備する方法について説明します。
+[第 2 部](python-clustering-model-prepare-data.md)では、SQL データベースからデータを準備してクラスタリングを実行する方法を学びます。
 
-[パート 3](python-clustering-model-build.md) では、Python で K-Means クラスターモデルを作成してトレーニングする方法について説明します。
+[第 3 部](python-clustering-model-build.md)では、Python で K-Means クラスタリング モデルを作成し、トレーニングする方法を学びます。
 
-[パート 4](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できる SQL データベースにストアドプロシージャを作成する方法について説明します。
+[第 4 部](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャを SQL データベースに作成する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-* Python 言語オプションを使用して[Machine Learning Services を SQL Server](../what-is-sql-server-machine-learning.md)には、 [Windows インストールガイド](../install/sql-machine-learning-services-windows-install.md)または[Linux インストールガイド](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15)に記載されているインストール手順に従ってください。
+* [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) に Python 言語オプションがあること。[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15)に記載されているインストール手順に従ってください。
 
-* Python IDE-このチュートリアルでは、 [Azure Data Studio](../../azure-data-studio/what-is.md)の python notebook を使用します。 詳細については、「 [Azure Data Studio で notebook を使用する方法](../../azure-data-studio/sql-notebooks.md)」を参照してください。 Jupyter notebook や、 [python 拡張](https://marketplace.visualstudio.com/items?itemName=ms-python.python)機能と[mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)を使用した[Visual Studio Code](https://code.visualstudio.com/docs)など、独自の python IDE を使用することもできます。
+* Python IDE - このチュートリアルは、[Azure Data Studio](../../azure-data-studio/what-is.md) で Python のノートブックを使用します。 詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/sql-notebooks.md)」を参照してください。 Jupyter Notebook や [Visual Studio Code](https://code.visualstudio.com/docs) などの独自の Python IDE を使用することもできます。これには [Python 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python)と [MSSQL 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)を使用します。
 
-* [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) package- **revoscalepy**パッケージは SQL Server Machine Learning Services に含まれています。 クライアントコンピューターでパッケージを使用するには、「 [Python 開発用のデータサイエンスクライアントを設定](../python/setup-python-client-tools-sql.md)する」を参照して、このパッケージをローカルにインストールするオプションを選択してください。
+* [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) パッケージ - **revoscalepy** パッケージは SQL Server Machine Learning Services に含まれています。 クライアント コンピューターでパッケージを使用するには、このパッケージをローカルにインストールするオプションについて、「[Python 開発用のデータ サイエンス クライアントのセットアップ](../python/setup-python-client-tools-sql.md)」を参照してください。
 
-  Azure Data Studio で Python notebook を使用している場合は、次の追加の手順に従って**revoscalepy**を使用します。
+  Azure Data Studio で Python のノートブックを使用している場合は、**revoscalepy** を使用するために次の追加の手順に従います。
 
-  1. Azure Data Studio を開く
-  1. **[ファイル]** メニューの **[基本設定]** を選択し、 **[設定]** をクリックします。
-  1. **拡張機能**を展開し、 **Notebook 構成**を選択します
-  1. **[Python パス]** で、ライブラリをインストールしたパスを入力します`C:\path-to-python-for-mls`(たとえば、)。
-  1. 既存の**Python を使用する**ことを確認する
-  1. 再起動 Azure Data Studio
+  1. Azure Data Studio を開きます
+  1. **[ファイル]** メニューから、 **[基本設定]** を選択し、次に **[設定]** を選択します
+  1. **[拡張機能]** を展開し、 **[Notebook の構成]** を選択します
+  1. **[Python パス]** に、ライブラリをインストールしたパス (たとえば `C:\path-to-python-for-mls`) を入力します
+  1. **[既存の Python を使用]** がチェックされていることを確認してください
+  1. Azure Data Studio を再起動します
 
-  別の Python IDE を使用している場合は、IDE の同様の手順に従います。
+  別の Python IDE を使用している場合は、IDE に対して同様の手順を踏んでください。
 
-* SQL クエリツール-このチュートリアルでは、 [Azure Data Studio](../../azure-data-studio/what-is.md)を使用していることを前提としています。 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS) を使用することもできます。
+* SQL クエリ ツール - このチュートリアルでは、[Azure Data Studio](../../azure-data-studio/what-is.md) を使用していることを前提としています。 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS) を使用することもできます。
 
-* 追加の Python パッケージ-このチュートリアルシリーズの例では、インストールされている可能性のある Python パッケージを使用します。 必要に応じて、次の**pip**コマンドを使用してこれらのパッケージをインストールします。
+* 追加の Python パッケージ - このチュートリアル シリーズの例では、インストールされていない Python パッケージを使用する可能性があります。 次の **pip** コマンドを使用して、必要に応じてこれらのパッケージをインストールします。
 
   ```console
   pip install matplotlib
@@ -70,18 +71,18 @@ K-Means クラスタリングは、類似性に基づいてデータのパター
   pip install sklearn
   ```
 
-## <a name="restore-the-sample-database"></a>サンプルデータベースを復元する
+## <a name="restore-the-sample-database"></a>サンプル データベースを復元する
 
-このチュートリアルで使用されているサンプルデータセットは、ダウンロードして使用するための **.bak**データベースバックアップファイルに保存されています。 このデータセットは、[トランザクション処理パフォーマンス協議会 (TPC)](http://www.tpc.org/default.asp)によって提供される[tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp)データセットから派生します。
+このチュートリアルで使用するサンプル データセットは、ダウンロードして使用できるように **.bak** データベース バックアップ ファイルに保存されています。 このデータセットは、[トランザクション処理性能評議会 (TPC)](http://www.tpc.org/default.asp) によって提供される [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) データセットから派生しています。
 
-1. [Tpcxbb_1gb](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak)ファイルをダウンロードします。
+1. [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) ファイルをダウンロードします。
 
-1. 次の詳細を使用して、「Azure Data Studio で[バックアップファイルからデータベースを復元](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)する」の手順に従います。
+1. Azure Data Studio で、以下の詳細情報を使用して、「[バックアップ ファイルからデータベースを復元する](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)」に記載されている手順に従います。
 
-   * ダウンロードした tpcxbb_1gb ファイルからインポートし**ます。**
-   * ターゲットデータベースに "tpcxbb_1gb" という名前を指定します。
+   * ダウンロードした **tpcxbb_1gb.bak** ファイルからインポートします
+   * ターゲット データベースに "tpcxbb_1gb" という名前を指定します
 
-1. データベースを復元した後、 **dbo. customer**テーブルに対してクエリを実行することで、データセットが存在することを確認できます。
+1. **dbo.customer** テーブルに対してクエリを実行することで、データベースを復元した後にデータセットが存在することを確認できます。
 
     ```sql
     USE tpcxbb_1gb;
@@ -94,11 +95,11 @@ K-Means クラスタリングは、類似性に基づいてデータのパター
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルシリーズの第1部では、次の手順を完了しました。
+このチュートリアル シリーズの第 1 部では、これらの手順を完了しました。
 
-* サンプルデータベースを SQL Server インスタンスに復元する
+* サンプル データベースを SQL Server インスタンスに復元する
 
-機械学習モデルのデータを準備するには、このチュートリアルシリーズのパート 2 に従います。
+機械学習モデル用にデータを準備するには、このチュートリアル シリーズの第 2 部の手順を実行します。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: SQL Server Machine Learning Services を使用した Python でのクラスタリングを実行するためのデータを準備する](python-clustering-model-prepare-data.md)
+> [チュートリアル: SQL Server Machine Learning Services を使用して Python でクラスター化を実行するためのデータを準備する](python-clustering-model-prepare-data.md)

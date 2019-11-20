@@ -1,59 +1,60 @@
 ---
-title: Compute summary statistics RevoScaleR のチュートリアル
-description: SQL Server で R 言語を使用して統計概要統計を計算する方法に関するチュートリアルチュートリアルです。
+title: RevoScaleR の概要の統計情報
+description: SQL Server で R 言語を使用して概要の統計情報を計算する方法を説明するチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 90a674057845427fe60fd3c62268bf0fb3d18688
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715572"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727299"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R の計算概要統計 (SQL Server および RevoScaleR チュートリアル)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R での概要統計情報の計算 (SQL Server および RevoScaleR チュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法に関する[RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-前のレッスンで作成した、確立されたデータソースと計算コンテキストを使用して、高電力の R スクリプトを実行します。 このレッスンでは、次のタスクのために、ローカルとリモートのサーバーコンピューティングコンテキストを使用します。
+前のレッスンで作成した確立したデータ ソースとコンピューティング コンテキストを使用して、高性能な R スクリプトを実行します。 このレッスンでは、次のタスクのために、ローカルとリモートのサーバー コンピューティング コンテキストを使用します。
 
 > [!div class="checklist"]
-> * コンピューティングコンテキストを SQL Server に切り替えます
-> * リモートデータオブジェクトの概要統計情報の取得
-> * ローカルの概要を計算する
+> * コンピューティング コンテキストを SQL Server に切り替える
+> * リモート データ オブジェクトに関する概要の統計情報を取得する
+> * ローカル 概要を計算する
 
-前のレッスンを完了している場合は、sqlCompute および sqlComputeTrace というリモート計算コンテキストが必要です。 今後のレッスンでは、sqlCompute とローカルコンピューティングコンテキストを使用します。
+前のレッスンを完了している場合は、sqlCompute および sqlComputeTrace というリモート コンピューティング コンテキストがあるはずです。 この後のレッスンで、sqlCompute とローカル コンピューティング コンテキストを使用します。
 
-このレッスンでは、r IDE または**Rgui**を使用して r スクリプトを実行します。
+このレッスンでは、R IDE または **Rgui** を使用して R スクリプトを実行します。
 
-## <a name="compute-summary-statistics-on-remote-data"></a>リモートデータの計算概要統計
+## <a name="compute-summary-statistics-on-remote-data"></a>リモート データに関する概要の統計情報を計算する
 
-R コードをリモートで実行するには、リモートの計算コンテキストを指定する必要があります。 後続のすべての計算は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *sqlcompute*パラメーターに指定されたコンピューター上で行われます。
+R コードをリモートで実行する前に、リモート コンピューティング コンテキストを指定する必要があります。 *sqlCompute* パラメーターに指定されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターで後続のすべての計算が行われます。
 
-コンピューティングコンテキストは、変更するまでアクティブなままです。 ただし、リモートサーバーコンテキストで実行*できない*すべての R スクリプトは、自動的にローカルで実行されます。
+コンピューティング コンテキストは、変更するまでアクティブな状態が維持されます。 ただし、リモート サーバー コンテキストで実行*できない* R スクリプトは自動的にローカルで実行されます。
 
-コンピューティングコンテキストがどのように動作するかを確認するには、リモート SQL Server の sqlFraudDS データソースに関する概要統計情報を生成します。 このデータソースオブジェクトは[レッスン 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)で作成され、RevoDeepDive データベースの ccFraudSmall テーブルを表しています。 
+コンピューティング コンテキストがどのように動作するかを確認するには、リモート SQL Server で sqlFraudDS データ ソースに関する概要の統計情報を生成します。 このデータ ソース オブジェクトは[レッスン 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) で作成され、RevoDeepDive データベースの ccFraudSmall テーブルを表しています。 
 
-1. 前のレッスンで作成した sqlCompute にコンピューティングコンテキストを切り替えます。
+1. 前のレッスンで作成した sqlCompute にコンピューティング コンテキストを切り替えます。
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-2. [RxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)関数を呼び出し、式やデータソースなどの必須の引数を渡して、結果を変数`sumOut`に代入します。
+2. [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) 関数を呼び出し、式やデータ ソースなど、必須の引数を渡し、結果を変数 `sumOut` に代入します。
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 言語には多くの概要関数が用意されていますが、 **RevoScaleR**の**rxSummary**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、などのさまざまなリモート計算コンテキストでの実行をサポートしています。 同様の関数の詳細については、「 [RevoScaleR を使用したデータの概要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)」を参照してください。
+    R 言語はさまざまな概要関数を提供しますが、**RevoScaleR** の **rxSummary** は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を含む、さまざまなリモート コンピューティング コンテキストでの実行をサポートします。 同様の関数に関する詳細については、[RevoScaleR を使用したデータの概要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)を参照してください。
   
-3. SumOut の内容をコンソールに出力します。
+3. SumOut の内容をコンソールに印刷します。
   
     ```R
     sumOut
@@ -84,7 +85,7 @@ Number of valid observations: 10000
   Female 3846
 ```
 
-## <a name="create-a-local-summary"></a>ローカルの概要を作成する
+## <a name="create-a-local-summary"></a>ローカル 概要を作成する
 
 1. すべての作業をローカルに行うように計算コンテキストを変更します。
   
@@ -92,7 +93,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. SQL Server からデータを抽出するときに、多くの場合、読み取りごとに抽出される行の数を増やすことで、パフォーマンスを向上させることができます。これは、増加したブロックサイズをメモリ内に確保できることを前提としています。 次のコマンドを実行して、データソースの*Rowsperread*パラメーターの値を増やします。 これまでは、 *rowsPerRead* の値は 5000 に設定されていました。
+2. SQL Server からデータを抽出するときに、多くの場合、読み取りごとに抽出される行の数を増やすことで、パフォーマンスを向上させることができます。これは、増加したブロック サイズをメモリ内に確保できることを前提としています。 次のコマンドを実行して、データ ソースで *rowsPerRead* パラメーターの値を大きくします。 これまでは、 *rowsPerRead* の値は 5000 に設定されていました。
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -102,7 +103,7 @@ Number of valid observations: 10000
        rowsPerRead = 10000)
     ```
 
-3. 新しいデータソースで**rxSummary**を呼び出します。
+3. 新しいデータ ソースに対して **rxSummary** を呼び出します。
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
@@ -110,13 +111,13 @@ Number of valid observations: 10000
   
    実際の結果は、 **コンピューターのコンテキストで** rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行した場合と同じになるはずです。 ただし、処理は速くなる場合と遅くなる場合があります。 データは分析のためのローカル コンピューターに転送されるので、処理速度はデータベースへの接続に左右されます。
 
-4. 次のいくつかのレッスンでは、リモートコンピューティングコンテキストに戻ります。
+4. 次のいくつかのレッスンでは、リモート コンピューティング コンテキストに戻ります。
 
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [R を使用して SQL Server のデータを表示する](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

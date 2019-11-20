@@ -1,45 +1,46 @@
 ---
-title: 予測 T-sql ステートメントを使用したネイティブスコアリング
-description: 予測を生成します。この関数では、R または Python で記述された事前トレーニング済みのモデルに対して dta 入力をスコア付けして SQL Server します。
+title: T-SQL PREDICT を使用するネイティブ スコアリング
+description: PREDICT T-SQL 関数を使用して予測を生成します。SQL Server 上で、R または Python で記述された事前にトレーニング済みのモデルに対するデータ入力をスコアリングします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714951"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727286"
 ---
-# <a name="native-scoring-using-the-predict-t-sql-function"></a>予測 T-sql 関数を使用したネイティブスコアリング
+# <a name="native-scoring-using-the-predict-t-sql-function"></a>PREDICT T-SQL 関数を使用したネイティブ スコアリング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-ネイティブスコアリングでは、予測値または新しいデータC++入力の*スコア*をほぼリアルタイムで生成するために SQL Server 2017 の[予測 t-sql 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)とネイティブ拡張機能を使用します。 この方法では、予測と予測のワークロードの処理速度が最速になりますが、プラットフォームとライブラリの要件がありますC++ 。 RevoScaleR と revoscalepy の関数のみが実装されています。
+ネイティブ スコアリングでは、[PREDICT T-SQL 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)と SQL Server 2017 のネイティブ C++ 拡張機能を使用して、ほぼリアルタイムで新しいデータ入力の予測値または*スコア*を生成します。 この方法では、予測と予測のワークロードの可能な処理速度が最速になりますが、次のプラットフォームとライブラリの要件があります。RevoScaleR と revoscalepy からの関数のみが C++ を実装していることです。
 
-ネイティブスコアリングを使用するには、既にトレーニング済みのモデルが必要です。 SQL Server 2017 の Windows または Linux、または Azure SQL Database では、Transact-sql で PREDICT 関数を呼び出して、入力パラメーターとして指定した新しいデータに対してネイティブスコアリングを呼び出すことができます。 PREDICT 関数は、指定されたデータ入力のスコアを返します。
+ネイティブ スコアリングには、既にトレーニング済みのモデルが必要です。 SQL Server 2017 の Windows または Linux、または Azure SQL Database では、Transact-SQL で PREDICT 関数を呼び出して、入力パラメーターとして指定した新しいデータに対してネイティブ スコアリングを呼び出すことができます。 PREDICT 関数は、指定されたデータ入力に対してスコアを返します。
 
-## <a name="how-native-scoring-works"></a>ネイティブスコアリングのしくみ
+## <a name="how-native-scoring-works"></a>ネイティブ スコアリングのしくみ
 
-ネイティブスコアリングではC++ 、以前に特別なバイナリ形式で保存された、または raw バイトストリームとしてディスクに保存された、既にトレーニング済みのモデルを読み取ることができる Microsoft のネイティブライブラリを使用して、指定した新しいデータ入力のスコアを生成します。 モデルはトレーニング、発行、および保存されるため、R または Python インタープリターを呼び出さなくてもスコアリングに使用できます。 そのため、複数のプロセス相互作用のオーバーヘッドが軽減されるため、エンタープライズ運用環境では、予測パフォーマンスが格段に速くなります。
+ネイティブ スコアリングでは、事前に特別なバイナリ形式で保存されたか、RAW 型バイト ストリームとしてディスクに保存された、既にトレーニング済みのモデルを読み取ることができる Microsoft のネイティブ C++ ライブラリを使用し、指定した新しいデータ入力に対してスコアを生成します。 モデルはトレーニング、発行、および保存されるため、R または Python インタープリターを呼び出す必要なくスコアリングに使用できます。 そのため、複数のプロセス相互作用のオーバーヘッドが軽減されるため、エンタープライズの実稼働シナリオでは、予測パフォーマンスが格段に速くなります。
 
-ネイティブスコアリングを使用するには、予測 T-sql 関数を呼び出し、次の必須の入力を渡します。
+ネイティブ スコアリングを使用するには、予測 PREDICT T-SQL 関数を呼び出し、次の必須の入力を渡します。
 
 + サポートされているアルゴリズムに基づく互換性のあるモデル。
-+ 入力データ。通常は SQL クエリとして定義されます。
++ 入力データ (通常は SQL クエリとして定義される)。
 
-関数は、入力データの予測を、パススルーするソースデータの列と共に返します。
+この関数は、入力データの予測を、パス スルーしたいソース データの任意の列と一緒に返します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>Prerequisites
 
-PREDICT は SQL Server 2017 データベースエンジンのすべてのエディションで使用でき、Windows、SQL Server 2017 (Windows)、SQL Server 2017 (Linux)、Azure SQL Database の SQL Server Machine Learning Services を含め、既定で有効になっています。 R や Python をインストールしたり、追加機能を有効にしたりする必要はありません。
+PREDICT は、SQL Server 2017 データベース エンジンのすべてのエディションで使用でき、既定で有効になっています。これには、Windows の SQL Server Machine Learning Services、SQL Server 2017 (Windows)、SQL Server 2017 (Linux)、または Azure SQL Database が含まれます。 R や Python をインストールしたり、追加機能を有効にしたりする必要はありません。
 
-+ モデルは、下記のサポートされている**rx**アルゴリズムのいずれかを使用して事前にトレーニングする必要があります。
++ このモデルは、下記に一覧表示されているサポートされる **rx** アルゴリズムのいずれかを使用して、事前にトレーニングされる必要があります。
 
-+ R の場合は[rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)を、Python の場合は[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)を使用してモデルをシリアル化します。 これらのシリアル化関数は、高速スコア付けをサポートするように最適化されています。
++ R の場合は [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)、Python の場合は [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) を使用して、モデルをシリアル化します。 これらのシリアル化関数は、高速スコアリングをサポートするように最適化されています。
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -61,22 +62,22 @@ PREDICT は SQL Server 2017 データベースエンジンのすべてのエデ�
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-Microsoft Ml または microsoft ml のモデルを使用する必要がある場合は、 [sp_rxPredict でリアルタイムスコアリング](real-time-scoring.md)を使用します。
+MicrosoftML または microsoftml からのモデルを使用する必要がある場合は、[sp_rxPredict でリアルタイムのスコアリング](real-time-scoring.md)を使用します。
 
-サポートされていないモデルの種類には、次の種類があります。
+サポートされていないモデル タイプには、次のタイプが含まれます。
 
 + 他の変換を含むモデル
-+ RevoScaleR または`rxGlm` revoscalepy `rxNaiveBayes`に同等のアルゴリズムまたはアルゴリズムを使用するモデル
++ RevoScaleR または revoscalepy の同等の `rxGlm` または `rxNaiveBayes` アルゴリズムを使用するモデル
 + PMML モデル
-+ 他のオープンソースライブラリまたはサードパーティライブラリを使用して作成されたモデル
++ 他のオープンソース ライブラリまたはサードパーティ ライブラリを使用して作成されたモデル
 
 ## <a name="example-predict-t-sql"></a>例:PREDICT (T-SQL)
 
-この例では、モデルを作成し、T-sql からリアルタイムの予測関数を呼び出します。
+この例では、モデルを作成してから、T-SQL からリアルタイムの予測関数を呼び出します。
 
-### <a name="step-1-prepare-and-save-the-model"></a>手順 1. モデルの準備と保存
+### <a name="step-1-prepare-and-save-the-model"></a>手順 1. モデルを構築して保存する
 
-次のコードを実行して、サンプルデータベースと必要なテーブルを作成します。
+次のコードを実行して、サンプル データベースと必要なテーブルを作成します。
 
 ```sql
 CREATE DATABASE NativeScoringTest;
@@ -93,7 +94,7 @@ CREATE TABLE iris_rx_data (
 GO
 ```
 
-次のステートメントを使用して、**虹彩**データセットのデータをデータテーブルに設定します。
+次のステートメントを使用して、データ テーブルに**アヤメ** データセットのデータを設定します。
 
 ```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
@@ -105,7 +106,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-次に、モデルを格納するテーブルを作成します。
+ここで、モデルを格納するテーブルを作成します。
 
 ```sql
 DROP TABLE IF EXISTS ml_models;
@@ -116,7 +117,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-次のコードでは、**虹彩**データセットに基づいてモデルを作成し、モデル**という名前**のテーブルに保存します。
+次のコードでは、**アヤメ** データセットに基づいてモデルを作成し、それを **models** という名前のテーブルに保存します。
 
 ```sql
 DECLARE @model varbinary(max);
@@ -134,7 +135,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> RevoScaleR の[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)関数を使用して、モデルを保存してください。 標準の R `serialize`関数では、必要な形式を生成できません。
+> RevoScaleR からの [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) 関数を使用して、モデルを保存してください。 標準の R `serialize` 関数では、必要な形式を生成できません。
 
 次のようなステートメントを実行すると、格納されているモデルをバイナリ形式で表示できます。
 
@@ -143,9 +144,9 @@ SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### <a name="step-2-run-predict-on-the-model"></a>手順 2. モデルに対して PREDICT を実行する
+### <a name="step-2-run-predict-on-the-model"></a>手順 2. モデルで PREDICT を実行する
 
-次の単純な PREDICT ステートメントは、**ネイティブスコアリング**関数を使用してデシジョンツリーモデルから分類を取得します。 指定した属性に基づいて虹彩の数が予測されます。花弁の長さと幅です。
+次の単純な PREDICT ステートメントでは、**ネイティブ スコアリング**関数を使用して、デシジョン ツリー モデルから分類を取得します。 指定した属性に基づいてアヤメの種類、花弁の長さと幅が予測されます。
 
 ```sql
 DECLARE @model varbinary(max) = (
@@ -159,14 +160,14 @@ SELECT d.*, p.*
 go
 ```
 
-エラーが発生した場合は、関数 PREDICT の実行中にエラーが発生しました。 モデルが破損しているか無効です。通常は、クエリがモデルを返さなかったことを意味します。 モデル名を正しく入力したかどうか、またはモデルテーブルが空であるかどうかを確認します。
+"PREDICT 関数の実行中にエラーが発生しました。 モデルが破損しているか無効です" というエラーを受け取った場合、通常は、クエリがモデルを返さなかったことを意味します。 モデル名を正しく入力したかどうか、またはモデル テーブルが空であるかどうかを確認します。
 
 > [!NOTE]
-> **予測**によって返される列と値は、モデルの種類によって異なる場合があるため、 **WITH**句を使用して、返されるデータのスキーマを定義する必要があります。
+> **PREDICT** によって返される列と値は、モデルの種類によって異なる場合があるため、**WITH** 句を使用して、返されるデータのスキーマを定義する必要があります。
 
 ## <a name="next-steps"></a>次の手順
 
-ネイティブスコアリングを含む完全なソリューションについては、SQL Server 開発チームの次のサンプルを参照してください。
+ネイティブ スコアリングを含む完全なソリューションについては、SQL Server 開発チームのこれらのサンプルを参照してください。
 
 + ML スクリプトをデプロイします。[Python モデルの使用](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ ML スクリプトをデプロイします。[R モデルの使用](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ ML スクリプトをデプロイします。[R モデルの作成](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

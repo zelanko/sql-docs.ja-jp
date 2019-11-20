@@ -1,6 +1,6 @@
 ---
-title: チュートリアル:Python でモデルを構築して顧客を分類する
-description: この 4 部構成のチュートリアルシリーズの第 3 部では、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行する K-Means モデルを構築します。
+title: Python のチュートリアル:クラスター モデルをビルドする
+description: この 4 部構成のチュートリアル シリーズのパート 3 では、K-Means モデルをビルドして、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,48 +9,49 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8707d14b1e332ae6ecebf83213ed53701343bcd3
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294407"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727103"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>チュートリアル:SQL Server Machine Learning Services で顧客を分類するために、Python でモデルを構築する
+# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>チュートリアル:モデルを Python にビルドし、SQL Server Machine Learning Services で顧客を分類する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この 4 部構成のチュートリアルシリーズの第 3 部では、クラスタリングを実行するために、Python で K-Means モデルを構築します。 このシリーズの次のパートでは、SQL Server Machine Learning Services を使用して、このモデルを SQL database にデプロイします。
+この 4 部構成のチュートリアル シリーズのパート 3 では、クラスタリングを実行するために、Python で K-Means モデルをビルドします。 このシリーズの次の部では、SQL Server Machine Learning Services を使用して、このモデルを SQL データベースにデプロイします。
 
-この記事では、次の方法について説明します。
+この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
-> * K-Means アルゴリズムのクラスター数を定義します。
+> * K-Means アルゴリズムのクラスター数を定義する
 > * クラスタリングを実行する
-> * 結果の分析
+> * 結果を分析する
 
-[パート 1](python-clustering-model.md)では、前提条件をインストールし、サンプルデータベースを復元しました。
+[パート 1 ](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
-[パート 2](python-clustering-model-prepare-data.md)では、クラスタリングを実行するために SQL データベースからデータを準備する方法を学習しました。
+[パート 2 ](python-clustering-model-prepare-data.md)では、SQL データベースからデータを準備してクラスタリングを実行する方法を学びました。
 
-[パート 4](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できる SQL データベースにストアドプロシージャを作成する方法について説明します。
+[パート 4 ](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャを SQL データベースに作成する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-* このチュートリアルのパート3では、[**パート 1**](python-clustering-model.md)の前提条件を満たし、[**パート 2**](python-clustering-model-prepare-data.md)の手順を完了していることを前提としています。
+* このチュートリアルのパート 3 は、[**パート 1** ](python-clustering-model.md)の前提条件を満たし、[**パート 2** ](python-clustering-model-prepare-data.md)の手順を完了していることを前提としています。
 
 ## <a name="define-the-number-of-clusters"></a>クラスターの数を定義する
 
-顧客データをクラスター化するには、 **K-Means** クラスタリングアルゴリズムを使用します。これは、データをグループ化する最も簡単でよく知られている方法の 1 つです。
-K-Means の詳細については、[K-Means クラスターアルゴリズムの完全なガイド](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html) を参照してください。
+顧客データのクラスター化には、データをグループ化する最も単純かつ有名な方法の 1 つ、**K-Means** クラスタリング アルゴリズムを使用します。
+K-Means の詳細については、[K-means クラスタリング アルゴリズムの詳細ガイド](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html)に関するページを参照してください。
 
-このアルゴリズムでは、次の2つの入力を受け取ります。データ自体、および生成するクラスターの数を表す定義済みの番号 "*k*"。
-出力は、クラスター間でパーティション分割された入力データを持つ*k*クラスターです。
+このアルゴリズムでは、次の 2 つの入力を受け取ります。データ自体、および定義済みの数値 "*k*" は、生成するクラスターの数を表します。
+出力は、クラスター間でパーティション分割された入力データを持つ *k* クラスターとなっています。
 
-K-Means の目標は、項目を k クラスターにグループ化して、同じクラスター内のすべての項目が互いに類似していること、および他のクラスター内の項目とは可能な限り異なるようにすることです。
+K-means が目指すのは、項目を k クラスターにグループ化して、同じクラスター内のすべての項目が互いに類似し、他のクラスター内の項目とは可能な限り異なるようにすることです。
 
-アルゴリズムで使用するクラスターの数を決定するには、抽出されたクラスターの数によって、グループ内の平方和のプロットを使用します。 使用するクラスターの数は、プロットのベンドまたは "肘" になります。
+アルゴリズムで使用するクラスターの数を決定するには、抽出されたクラスターの数によって、グループ内の平方和のプロットを使用します。 使用するクラスターの数は、プロットの曲がっている部分または "カギ" の部分になります。
 
 ```python
 ################################################################################################
@@ -75,11 +76,11 @@ plt.show()
 
 ![カギ線グラフ](./media/python-tutorial-elbow-graph.png)
 
-グラフに基づいて、 *k = 4*は試してみることをお勧めします。 この*k*値を指定すると、顧客が4つのクラスターにグループ化されます。
+グラフに基づいて、*k = 4* の値をまず試します。 *k* 値は、顧客を 4 つのクラスターにグループ化します。
 
 ## <a name="perform-clustering"></a>クラスタリングを実行する
 
-次の Python スクリプトでは、spark-sklearn パッケージの KMeans 関数を使用します。
+次の Python スクリプトでは、sklearn パッケージの KMeans 関数を使用します。
 
 ```python
 ################################################################################################
@@ -105,11 +106,11 @@ for c in range(n_clusters):
 print(customer_data.groupby(['cluster']).mean())
 ```
 
-## <a name="analyze-the-results"></a>結果の分析
+## <a name="analyze-the-results"></a>結果を分析する
 
-K-Means を使用してクラスタリングを実行したので、次の手順では結果を分析して、実行可能な情報を見つけられるかどうかを確認します。
+K-Means を使用したクラスタリングが完了したため、次の手順では結果を分析して、実行可能な情報を見つけられるかどうかを確認します。
 
-前のスクリプトから出力されたクラスタリングの平均値とクラスターサイズを確認します。
+前のスクリプトから出力されたクラスタリングの平均値とクラスター サイズを確認します。
 
 ```results
 Cluster0(n=31675):
@@ -129,20 +130,20 @@ cluster
 3        48516.023845    0.136277    0.078346       0.044497   4.271237
 ```
 
-4つのクラスターは、[パート 1](python-clustering-model-prepare-data.md#separate-customers)で定義されている変数を使用して与えられます。
+4 つのクラスターは、[パート 1 ](python-clustering-model-prepare-data.md#separate-customers)で定義した変数を使用して指定されます。
 
-* *orderRatio* = 返品順序の比率 (部分的または完全に返された注文の総数と注文の合計数)
-* *Itemsratio* = 返される項目の比率 (返された項目の合計数と購入した項目の数)
-* *Monetaryratio* = 返品金額の比率 (返される品目の合計金額と購入金額の合計金額)
-* *frequency* = 返される頻度
+* *orderRatio* = 注文返品率 (注文の総数に対する部分的または完全に返品された注文の総数)
+* *itemsRatio* = アイテム返品率 (購入されたアイテムの総数に対する返品されたアイテムの総数)
+* *monetaryRatio* = 返品金額率 (合計購入金額に対する返されたアイテムの合計金額)
+* *frequency* = 返品の頻度
 
-K-Means を使用したデータマイニングでは、多くの場合、結果をさらに詳しく分析する必要があります。また、各クラスターについて理解を深めるためにさらに手順を進める必要がありますが、優れた潜在顧客を提供できます
+多くの場合、K-Means を使用したデータ マイニングでは結果をさらに詳しく分析し、各クラスターについて理解を深めるためにさらに手順を進める必要がありますが、これにより良いスタートを切ることができるようになります。
 これらの結果を解釈するいくつかの方法を次に示します。
 
-* クラスター0は、アクティブでない (すべての値が0である) 顧客のグループである可能性があります。
-* クラスター3は、戻り動作の観点から見たグループであるように見えます。
+* クラスター 0 は、アクティブでない (すべての値が 0 である) 顧客のグループである可能性があります。
+* クラスター 3 は、戻り値の動作の観点では目立つグループであるように見えます。
 
-クラスター0は、アクティブでないことが明らかな顧客のセットです。 場合によっては、このグループに対するマーケティング作業を対象として、購入に関心を出すことができます。 次の手順では、クラスター0の顧客の電子メールアドレスをデータベースに照会して、マーケティング用電子メールを送信できるようにします。
+クラスター 0 は、アクティブでないことが明らかな顧客のセットです。 場合によっては、このグループをターゲットにしたマーケティング策を講じることで、購買を促すことができるかもしれません。 次の手順では、クラスター 0 の顧客の電子メールアドレスをデータベースに照会して、マーケティング メールを送信できるようにします。
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
@@ -150,13 +151,13 @@ K-Means を使用したデータマイニングでは、多くの場合、結果
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルシリーズの第3部では、次の手順を完了しました。
+このチュートリアル シリーズのパート 3 では、次の手順を完了しました。
 
-* K-Means アルゴリズムのクラスター数を定義します。
+* K-Means アルゴリズムのクラスター数を定義する
 * クラスタリングを実行する
-* 結果の分析
+* 結果を分析する
 
-作成した機械学習モデルをデプロイするには、このチュートリアルシリーズの第4部に従います。
+作成した機械学習モデルをデプロイするには、このチュートリアル シリーズのパート 4 の手順に従います。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: SQL Server Machine Learning Services を使用して Python にクラスターモデルをデプロイする](python-clustering-model-deploy.md)
+> [チュートリアル: SQL Server Machine Learning Services を使用して Python でクラスタリング モデルをデプロイする](python-clustering-model-deploy.md)

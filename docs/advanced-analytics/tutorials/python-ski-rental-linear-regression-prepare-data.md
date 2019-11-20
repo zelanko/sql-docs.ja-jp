@@ -1,48 +1,49 @@
 ---
-title: Python のチュートリアル:データの準備 (線形回帰)
-description: このチュートリアルでは、SQL Server Machine Learning Services で Python と線形回帰を使用して、ski のレンタル数を予測します。 Python を使用して SQL Server データベースからデータを準備します。
+title: Python のチュートリアル:データの準備
+description: このチュートリアルでは、SQL Server Machine Learning Services で Python と線形回帰を使用して、スキーのレンタル数を予測します。 Python を使用して SQL Server データベースからデータを準備します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c4d5fb4ffc5049f7e1325267b7623dc195e9d8
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 6424a453bff2f0f6d62caa8c9870ccc2ec10d578
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242500"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727056"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python のチュートリアル:SQL Server Machine Learning Services で線形回帰モデルをトレーニングするためのデータを準備する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この4部構成のチュートリアルシリーズの第2部では、Python を使用して SQL Server データベースからデータを準備します。 このシリーズの後半で、このデータを使用して、SQL Server Machine Learning Services を含む Python で線形回帰モデルをトレーニングし、デプロイします。
+この 4 部構成のチュートリアル シリーズのパート 2 では、Python を使用して SQL Server データベースからデータを準備します。 このシリーズの後半では、本データを使用して、SQL Server Machine Learning Services とともに Python で線形回帰モデルをトレーニングし、デプロイします。
 
-この記事では、次の方法について説明します。
+この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
-> * SQL Server データベースから **pandas** のデータフレームにデータを読み込む
+> * SQL Server データベースから **pandas** データ フレームにデータを読み込む
 > * いくつかの列を削除して Python でデータを準備する
 
-[パート 1](python-ski-rental-linear-regression.md)では、サンプルデータベースを復元する方法を学習しました。
+[パート 1](python-ski-rental-linear-regression.md) では、サンプル データベースを復元する方法を学習しました。
 
-[パート 3](python-ski-rental-linear-regression-train-model.md)では、Python で線形回帰機械学習モデルをトレーニングする方法について説明します。
+[パート 3](python-ski-rental-linear-regression-train-model.md) では、Python で線形回帰機械学習モデルをトレーニングする方法について学習します。
 
-[パート 4](python-ski-rental-linear-regression-deploy-model.md)では、モデルを SQL Server に格納する方法について学習した後、パート2と3で開発した Python スクリプトからストアドプロシージャを作成します。 ストアドプロシージャは、新しいデータに基づいて予測を行うために SQL Server で実行されます。
+[パート 4](python-ski-rental-linear-regression-deploy-model.md) では、モデルを SQL Server に格納し、そしてパート 2 と 3 で開発した Python スクリプトからストアド プロシージャを作成する方法について学習します。 ストアド プロシージャは、新しいデータに基づいて予測を行うために SQL Server で実行されます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-* このチュートリアルのパート2では、[パート 1](python-ski-rental-linear-regression.md)とその前提条件を完了していることを前提としています。
+* このチュートリアルのパート 2 は、[パート 1](python-ski-rental-linear-regression.md) とその前提条件を完了していることを前提としています。
 
 ## <a name="explore-and-prepare-the-data"></a>データの探索と準備
 
-Python でデータを使用するには、SQL Server データベースから、pandas のデータフレームにデータを読み込みます。
+Python でデータを使用するには、SQL Server データベースから、pandas データ フレームにデータを読み込みます。
 
-Azure Data Studio で新しい Python notebook を作成し、次のスクリプトを実行します。 を`<SQL Server>`独自の SQL Server 名に置き換えます。
+Azure Data Studio で新しい Python notebook を作成し、次のスクリプトを実行します。 `<SQL Server>` を独自の SQL Server 名に置換します。
 
-次の Python スクリプトでは、データベースの**rental_data**テーブルから、pandas のデータフレーム**df**にデータセットをインポートします。
+次の Python スクリプトでは、データベースの **dbo.rental_data** テーブルから、データセットを pandas データ フレーム **df** にインポートします。
 
 ```python
 import pandas as pd
@@ -114,12 +115,12 @@ Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルシリーズの第2部では、次の手順を完了しました。
+このチュートリアル シリーズのパート 2 では、次の手順を完了しました。
 
-* SQL Server データベースから **pandas** のデータフレームにデータを読み込む
+* SQL Server データベースから **pandas** データ フレームにデータを読み込む
 * いくつかの列を削除して Python でデータを準備する
 
-TutorialDB データベースのデータを使用する機械学習モデルをトレーニングするには、このチュートリアルシリーズの第3部に従います。
+TutorialDB データベースのデータを使用する機械学習モデルをトレーニングするには、このチュートリアル シリーズのパート 3 に従ってください。
 
 > [!div class="nextstepaction"]
 > [Python のチュートリアル:線形回帰モデルをトレーニングする](python-ski-rental-linear-regression-train-model.md)
