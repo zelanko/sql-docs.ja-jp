@@ -1,5 +1,5 @@
 ---
-title: R プログラミング言語拡張機能
+title: R 言語拡張機能
 description: SQL Server R Services または SQL Server Machine Learning Services での R コードの実行と組み込み R ライブラリについて学習します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 802e5d6c5e769d59f255554f4f598d832160bbfa
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532653"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727661"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server の R 言語拡張機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: SQL Server セットアップを使用して R Server または Machine Learning Server (スタンドアロン) をインストールする
+title: Machine Learning Server のインストール (スタンドアロン)
 description: RevoScaleR、revoscalepy、MicrosoftML、およびその他のパッケージを使用した R および Python 開発用に、インスタンス対応でないスタンドアロンの機械学習サーバーをセットアップします。
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 14b0fc05a570a14c5ed613b438e2672098b67d4b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532674"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727641"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server セットアップを使用して Machine Learning Server (スタンドアロン) または R Server (スタンドアロン) をインストールする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -146,7 +147,7 @@ SQL Server 2016 の場合のみ:SQL Server の前提条件としてインスト�
 
 ## <a name="set-environment-variables"></a>環境変数の設定
 
-R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの[一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)します。
+R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの[一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
 
 1. コントロール パネルで、 **[システムとセキュリティ]**  >  **[システム]**  >  **[システムの詳細設定]**  >  **[環境変数]** の順にクリックします。
 

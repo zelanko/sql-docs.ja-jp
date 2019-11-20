@@ -1,5 +1,5 @@
 ---
-title: 外部スクリプトの機能拡張アーキテクチャ
+title: 機能拡張アーキテクチャ
 description: この記事では、SQL Server で R や Python などの外部スクリプトを実行するための機能拡張フレームワークのアーキテクチャについて説明します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,14 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f2f61208f9c43ce827cb65a4f7107ced62b9219
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532726"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727691"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張アーキテクチャ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,11 +114,11 @@ SQL サテライトは、Windows 拡張イベント (xEvent) を使用して監�
 
 + **ODBC**
 
-  外部データ サイエンス クライアントとリモート SQL Serve インスタンス間の通信には、ODBC が使用されます。 SQL Server にスクリプト ジョブを送信するアカウントには、インスタンスへの接続権限と、外部スクリプトの実行権限の両方が付与されている必要があります。
+  外部データ サイエンス クライアントとリモート SQL Server インスタンス間の通信には、ODBC が使用されます。 SQL Server にスクリプト ジョブを送信するアカウントには、インスタンスへの接続権限と、外部スクリプトの実行権限の両方が付与されている必要があります。
 
   また、タスクによっては、アカウントに次の権限が必要になる場合があります。
 
-  + ジョブによって使用されるデータの読み取り
+  + ジョブによって使用されるデータを読み取る
   + テーブルへのデータの書き込み (たとえば、テーブルに結果を保存する場合)
   + データベース オブジェクトの作成 (たとえば、外部スクリプトを新しいストアド プロシージャの一部として保存する場合)
 
