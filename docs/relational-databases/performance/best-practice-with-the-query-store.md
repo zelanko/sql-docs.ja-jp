@@ -214,7 +214,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |**追跡対象のクエリ**|最も重要なクエリの実行をリアルタイムで追跡します。 このビューは通常、強制適用されたプランを持つクエリがあり、クエリのパフォーマンスを安定させる必要がある場合に使用します。|
   
 > [!TIP]
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[Azure ブログのクエリ ストアに関する記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。@Azure
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[Azure ブログのクエリ ストアに関する記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。\@Azure
   
  パフォーマンスが最適ではないクエリを特定する際のアクションは、問題の性質によって異なります。  
   
