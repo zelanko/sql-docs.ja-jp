@@ -33,21 +33,21 @@ ms.locfileid: "70874875"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに存在する言語ごとに、1 行のデータを格納します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|一意の言語 ID。|  
 |dateformat|**nchar(3)**|日付の順序 (例、DMY)。|  
-|datefirst|**tinyint**|週の最初の曜日:月曜日の場合は1、火曜日の場合は2、日曜日の場合は7です。|  
+|datefirst|**tinyint**|週の最初の曜日: 1 の場合は1、火曜日の場合は2、日曜日の場合は7です。|  
 |増設|**int**|システム用に予約されています。|  
-|NAME|**sysname**|公式言語名 (たとえば、フランス語)。|  
+|name|**sysname**|公式言語名 (たとえば、フランス語)。|  
 |別名 (alias)|**sysname**|言語の別名 (例 : French)。|  
 |months|**nvarchar(372)**|1月から12月までの完全な長さの月名のコンマ区切りのリスト。各名前は最大20文字です。|  
 |shortmonths|**nvarchar(132)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形で、それぞれ 9 文字までです。|  
 |日時|**nvarchar(217)**|曜日の名前のコンマ区切りリスト。各名前は最大30文字で指定します。|  
 |lcid|**int**|この言語を使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のロケール ID。|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]メッセージグループ ID。|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージグループ ID。|  
   
- に[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、インストールされている次の言語が含まれています。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] には、インストールされている次の言語が含まれています。  
   
 |英語での名前|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージ グループ ID|  
 |---------------------|------------------|-----------------------------------------|  
@@ -81,12 +81,12 @@ ms.locfileid: "70874875"
 |ポルトガル語 (ブラジル)|1046|1046|  
 |繁体字中国語|1028|1028|  
 |韓国語|1042|1042|  
-|簡体中国語|2052|2052|  
+|Simplified Chinese|2052|2052|  
 |アラビア語|1025|1025|  
 |タイ語|1054|1054|  
   
-## <a name="see-also"></a>関連項目  
- [互換性ビュー &#40;transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [互換性ビュー &#40;transact-sql&#41; ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [システムビュー &#40;へのシステムテーブルのマッピング transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

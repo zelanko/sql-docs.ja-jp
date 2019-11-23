@@ -27,9 +27,9 @@ ms.locfileid: "73729825"
 
 列 physical_name および object_id は、このカタログビューのキーを形成します。
   
-|列名|[データ型]|説明|  
+|列名|[データ型]|[説明]|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar (36)**|具体化されたビューの物理名。|  
+|physical_name |**nvarchar(36)**|具体化されたビューの物理名。|  
 |object_id  |**int**|具体化されたビューのオブジェクト ID。 「 [Sys (transact-sql)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)」を参照してください。| 
 
 ## <a name="permissions"></a>アクセス許可
@@ -38,7 +38,7 @@ VIEW DATABASE STATE 権限が必要です。
   
 ## <a name="see-also"></a>参照
 
-[具体化されるビュー  によるパフォーマンスチューニング](/azure/sql-data-warehouse/performance-tuning-materialized-views)  
+[具体化されたビューを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

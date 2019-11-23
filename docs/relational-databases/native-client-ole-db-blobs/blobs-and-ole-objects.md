@@ -45,7 +45,7 @@ ms.locfileid: "73790630"
   
 -   DBTYPE_IUNKNOWN としてバインドし、ストリーミングを使用します。  
   
- DBTYPE_IUNKNOWN にバインドすると、ISequentialStream ストリーム機能が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、大きな値のデータ型に対して DBTYPE_IUNKNOWN として出力パラメーターをバインドし、ストアドプロシージャがこれらのデータ型を戻り値として返すシナリオを容易にします。これは、DBTYPE_IUNKNOWN として公開されます。client.  
+ DBTYPE_IUNKNOWN にバインドすると、ISequentialStream ストリーム機能が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、大きな値のデータ型に対して DBTYPE_IUNKNOWN として出力パラメーターをバインドすることがサポートされています。これにより、ストアドプロシージャがこれらのデータ型を、DBTYPE_IUNKNOWN としてクライアントに公開される戻り値として返すシナリオが容易になります。  
   
 ## <a name="storage-object-limitations"></a>ストレージ オブジェクトの制限事項  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73790630"
   
 -   コンシューマーによって実装されたストレージオブジェクトによって示されるデータの長さは、ストレージオブジェクトを参照する行アクセサーが作成されるときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに認識される必要があります。 コンシューマー側では、アクセサーの作成に使用する DBBINDING 構造体に長さのインジケーターをバインドする必要があります。  
   
--   行に1つ以上の大きなデータ値が含まれていて DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM ない場合、コンシューマーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーカーソルでサポートされている行セットを使用して行データを取得するか、すべての大きなデータ値を処理する必要があります。その他の行の値を取得しています。 DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、すべての xml データ型をバイナリラージオブジェクト (Blob) としてキャッシュし、任意の順序でアクセスできるようにします。  
+-   行に1つ以上の大きなデータ値が含まれていて DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM ない場合、コンシューマーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーカーソルでサポートされている行セットを使用して行データを取得するか、すべての大きなデータ値を処理してから、他の行の値を取得する必要があります。 DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、すべての xml データ型をバイナリラージオブジェクト (Blob) としてキャッシュし、任意の順序でアクセスできるようにします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -71,13 +71,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   ネットワーク  
   
--   [時刻]  
+-   time  
   
  次の表では、SQLPERF データ構造体のフィールドについて説明します。この説明は、パフォーマンス ログ ファイルに記録される統計情報にも適用されます。  
   
 ### <a name="application-profile-statistics"></a>アプリケーション プロファイル統計情報  
   
-|SQLPERF のフィールド|説明|  
+|SQLPERF のフィールド|[説明]|  
 |-------------------|-----------------|  
 |TimerResolution|ミリ秒単位で表されたサーバーのクロック時間の最小単位。 通常は 0 (ゼロ) が報告されます。大きな値が報告される場合のみ考慮する必要があります。 サーバー クロックの最小単位が、タイマベースの一部の統計で予想される間隔よりも大きい場合は、統計値が増加する可能性があります。|  
 |SQLidu|SQL_PERF_START 以降に処理された INSERT、DELETE、または UPDATE ステートメントの数。|  
@@ -115,7 +115,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>時間統計情報  
   
-|SQLPERF フィールド|説明|  
+|SQLPERF フィールド|[説明]|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 以降、ドライバーが処理に要した累積時間。サーバーからの応答の待ち時間も含まれます。|  
 |msNetworkServerTime|ドライバーがサーバーからの応答待ちに要した累積時間。|  

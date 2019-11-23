@@ -23,9 +23,9 @@ ms.locfileid: "73729696"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で組織に合わせてバージョン名を変更してカスタマイズします。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で組織に合わせてバージョン名を変更してカスタマイズします。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
@@ -46,8 +46,8 @@ ms.locfileid: "73729696"
   
 ## <a name="see-also"></a>参照  
  [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [バージョンをロックする &#40;マスター データ サービス&#41;](../master-data-services/lock-a-version-master-data-services.md)   
- [バージョンをコミットする &#40;マスター データ サービス&#41;](../master-data-services/commit-a-version-master-data-services.md)   
+ [バージョンをロックする (マスター データ サービス)](../master-data-services/lock-a-version-master-data-services.md)   
+ [バージョンをコミットする (マスター データ サービス)](../master-data-services/commit-a-version-master-data-services.md)   
  [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   
   

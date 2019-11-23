@@ -41,24 +41,24 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_name = ] 'profile\_name'`新しいプロファイルの名前。 *profile_name*は**sysname**,、既定値はありません。  
+新しいプロファイルの名前 `[ @profile_name = ] 'profile\_name'` ます。 *profile_name*は**sysname**であり、既定値はありません。  
  
    > [!NOTE]
-   > Azure SQL Managed Instance SQL エージェントを使用するプロファイル名は、 **AzureManagedInstance_dbmail_profile**という名前である必要があります。
+   > Azure SQL Managed Instance SQL エージェントを使用するプロファイル名を呼び出す必要があり**AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`新しいプロファイルの説明です (省略可能)。 *説明*は**nvarchar (256)** ,、既定値はありません。  
+新しいプロファイルのオプションの説明 `[ @description = ] 'description'` ます。 *説明*は**nvarchar (256)** ,、既定値はありません。  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`新しいプロファイルの ID を返します。 *new_profile_id*は**int**,、既定値は NULL です。  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` は、新しいプロファイルの ID を返します。 *new_profile_id*は**int**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- データベースメールプロファイルには、任意の数のデータベースメールアカウントが保持されます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、「 [ &#40;sysmail_add_profileaccount_sp&#41;transact-sql](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ データベースメールプロファイルには、任意の数のデータベースメールアカウントが保持されます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、「 [ &#40;transact-sql&#41;の sysmail_add_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)」を参照してください。  
   
- プロファイルの名前と説明はストアドプロシージャ**sysmail_update_profile_sp**を使用して変更できますが、プロファイル id はプロファイルの有効期間中は一定のままです。  
+ プロファイルの名前と説明はストアドプロシージャ**sysmail_update_profile_sp**で変更できますが、プロファイル id はプロファイルの有効期間中は一定のままです。  
   
- プロファイル名は Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に対して一意である必要があります。または、ストアドプロシージャからエラーが返されます。  
+ プロファイル名は Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で一意である必要があります。指定しないと、ストアドプロシージャからエラーが返されます。  
   
  ストアドプロシージャ**sysmail_add_profile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
@@ -66,7 +66,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>使用例  
- **A.新しいプロファイルを作成しています**  
+ **A. 新しいプロファイルを作成する**  
   
  次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。  
   
@@ -76,9 +76,9 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B.新しいプロファイルを作成し、プロファイル id を変数に保存する**  
+ **B. 新しいプロファイルを作成し、プロファイル id を変数に保存する**  
   
- 次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。 この例では、プロファイル id 番号を変数`@profileId`に格納し、新しいプロファイルのプロファイル id 番号を含む結果セットを返します。  
+ 次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。 この例では、プロファイル id 番号を変数 `@profileId` に格納し、新しいプロファイルのプロファイル id 番号を含む結果セットを返します。  
   
 ```  
 DECLARE @profileId INT ;  
@@ -93,8 +93,8 @@ SELECT @profileId ;
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [データベースメールアカウントの作成](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [構成オブジェクトのデータベースメール](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [ストアドプロシージャ&#40;のデータベースメール transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

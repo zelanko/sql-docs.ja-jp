@@ -38,7 +38,7 @@ ms.locfileid: "70154480"
   
  ロックされたナレッジ ベースを開いて編集できるのは、自分でロックした場合だけです。 その場合、ナレッジ ベースは閉じたときの状態で開かれます。状態はかっこの中に表示されます。 ナレッジ ベースがロックされていて、自分でロックしたのではない場合は、読み取り専用としてのみ開くことができます。  
   
-### <a name="data-quality-projects"></a>データ品質プロジェクト  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  データ品質プロジェクトは、コンピューター支援型のデータ修正とインタラクティブなデータ クレンジングの両方を通じて、DQS がデータ クレンジングとデータ照合を実行するプロセスです。  
   
  **[新しいデータ品質プロジェクト]**  
@@ -56,10 +56,10 @@ ms.locfileid: "70154480"
  **[アクティビティ監視]**  
  接続されている [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]に関連するすべてのアクティビティ (現在のアクティビティと履歴アクティビティの両方) の状態のビューが表示されます。 監視対象となるアクティビティの種類は、ナレッジ マネージメント、データ品質プロジェクト、および SSIS ベースのデータ修正です。  
   
- **Configuration**  
+ **構成**  
  参照データサービスアカウントの構成プロパティ (Azure Marketplace を通じて、参照データサービスに直接)、全般設定 (インタラクティブなクレンジング、照合、プロファイル)、およびログの重大度設定を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS のナレッジ ベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [データ品質プロジェクト &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
  [DQS 管理](../../2014/data-quality-services/dqs-administration.md)  

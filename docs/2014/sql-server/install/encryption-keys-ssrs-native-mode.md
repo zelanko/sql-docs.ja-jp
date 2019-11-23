@@ -48,7 +48,7 @@ ms.locfileid: "71952174"
  **Backup**  
  指定したファイルに対称キーをコピーします。 対称キーはプレーン テキストのまま保存しないでください。 パスワードを入力してファイルを保護する必要があります。  
   
- **復元**  
+ **[復元]**  
  以前に保存された対称キーのコピーを、レポート サーバー データベースに適用します。 ファイルのロックを解除するパスワードを入力する必要があります。  
   
  現在接続しているレポート サーバー インスタンスの以前の対称キーは、復元された対称キーによって上書きされます。 対称キーを復元した後、そのレポート サーバー データベースを利用するレポート サーバーをすべて初期化する必要があります。 レポートサーバーの初期化の詳細については、「[レポート&#40;サーバーの&#41;SSRS Configuration Manager の初期化](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
@@ -60,7 +60,7 @@ ms.locfileid: "71952174"
   
  データ ソースとサブスクリプションが多数存在する場合、対称キーの再作成に長い時間がかかることがあります。  
   
- **削除**  
+ **[削除]**  
  接続文字列や保存されている資格情報を含むすべての暗号化コンテンツと、対称キーを削除します。 対称キーは、復元できない場合にのみ削除してください。  
   
  対称キーを削除すると、レポートおよび共有データ ソース内に接続文字列や保存されている資格情報が存在しなくなるため、その値を再入力する必要があります。 さらに、暗号化データを保存する配信拡張機能が使用されるサブスクリプションをすべて更新する必要があります。 これには、ファイル共有配信拡張機能や、暗号化された値を使用するサード パーティの拡張機能が含まれます。  
@@ -70,7 +70,7 @@ ms.locfileid: "71952174"
 ## <a name="see-also"></a>参照  
  [Reporting Services Configuration Manager の F1 ヘルプ&#40;トピック SSRS ネイティブ&#41;モード](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [暗号化キーの削除と再作成  &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [暗号化キーの削除と再作成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   

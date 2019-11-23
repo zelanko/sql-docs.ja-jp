@@ -44,14 +44,14 @@ ms.locfileid: "73982728"
 |**grantee_principal_id**|**int**|権限が許可されるデータベースプリンシパル ID。|  
 |**grantor_principal_id**|**int**|これらのアクセス許可の権限の許可のあるデータベースプリンシパル ID。|  
 |**型**|**char (4)**|データベース権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
-|**permission_name**|**nvarchar(128)**|アクセス許可の名前。|  
+|**permission_name**|**nvarchar(128)**|権限名。|  
 |**state**|**char(1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = 許可の許可オプション|  
 |**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>データベース権限   
 次の種類のアクセス許可が可能です。
   
-|アクセス許可の種類|アクセス許可名|適用されるセキュリティ保護可能なリソース|  
+|権限の種類|アクセス許可名|適用されるセキュリティ保護可能なリソース|  
 |---------------------|---------------------|--------------------------|  
 |AADS |ALTER ANY DATABASE EVENT SESSION |DATABASE |  
 |AAMK |任意のマスクを変更します。 |DATABASE |  

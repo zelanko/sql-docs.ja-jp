@@ -28,24 +28,24 @@ ms.locfileid: "73787663"
   
 ## <a name="level-1"></a>[レベル 1]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|Keyword|一覧が返されるかどうか|省略できるかどうか|[説明]|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN (DSN)|なし|いいえ|**Sqldatasources**ソースによって返されるデータソースの名前。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
-|DRIVER|なし|いいえ|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー名は {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
+|DSN|なし|[いいえ]|**Sqldatasources**ソースによって返されるデータソースの名前。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
+|DRIVER|なし|[いいえ]|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー名は {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
   
 ## <a name="level-2"></a>[レベル 2]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|Keyword|一覧が返されるかどうか|省略できるかどうか|[説明]|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|はい|いいえ|データ ソースがあるネットワーク上のサーバー名。 サーバー名には「(local)」と入力することもできます。これは、ネットワークに接続されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーも使用できることを意味します。|  
-|UID|いいえ|はい|ユーザー ログイン ID。|  
-|PWD|いいえ|はい (ユーザーによって異なります)|ユーザーが指定したパスワード。|  
-|APP|いいえ|はい|**SQLBrowseConnect**を呼び出すアプリケーションの名前。|  
-|WSID|いいえ|はい|ワークステーション ID。 通常は、アプリケーションが実行されているコンピューターのネットワーク名です。|  
+|SERVER|はい|[いいえ]|データ ソースがあるネットワーク上のサーバー名。 サーバー名には「(local)」と入力することもできます。これは、ネットワークに接続されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーも使用できることを意味します。|  
+|UID|[いいえ]|はい|ユーザー ログイン ID。|  
+|PWD|[いいえ]|はい (ユーザーによって異なります)|ユーザーが指定したパスワード。|  
+|APP|[いいえ]|はい|**SQLBrowseConnect**を呼び出すアプリケーションの名前。|  
+|WSID|[いいえ]|はい|ワークステーション ID。 通常は、アプリケーションが実行されているコンピューターのネットワーク名です。|  
   
 ## <a name="level-3"></a>[レベル 3]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|Keyword|一覧が返されるかどうか|省略できるかどうか|[説明]|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの名前。|  
 |LANGUAGE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  
@@ -54,7 +54,7 @@ ms.locfileid: "73787663"
   
  [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出すことによって設定される次の属性は、 **SQLBrowseConnect**によって返される結果セットを決定します。  
   
-|属性|説明|  
+|[属性]|[説明]|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|SQL_MORE_INFO_YES に設定されている場合、 **SQLBrowseConnect**はサーバープロパティの拡張文字列を返します。<br /><br /> **SQLBrowseConnect**によって返される拡張文字列の例を次に示します。<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> この文字列では、サーバーに関するさまざまな情報がセミコロンで区切られます。 コンマは、異なるサーバー インスタンスを区切るために使用します。|  
 |SQL_COPT_SS_BROWSE_SERVER|サーバー名が指定されている場合、 **SQLBrowseConnect**は指定されたサーバーの情報を返します。 SQL_COPT_SS_BROWSE_SERVER が NULL に設定されている場合、 **SQLBrowseConnect**はドメイン内のすべてのサーバーに関する情報を返します。<br /><br /> <br /><br /> ネットワークの問題のため、 **SQLBrowseConnect**は、すべてのサーバーからタイムリーな応答を受信できない可能性があります。 したがって、要求ごとに返されるサーバーの一覧が異なる可能性があります。|  

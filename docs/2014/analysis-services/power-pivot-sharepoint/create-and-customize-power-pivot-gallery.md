@@ -34,7 +34,7 @@ ms.locfileid: "70874403"
   
 -   [シアター ビューまたはギャラリー ビューへの切り替え](#switch)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> の前提条件  
   
 -   Silverlight が必要です。 Silverlight は、Microsoft Update でダウンロードし、インストールできます。 Silverlight がインストールされていない状態でブラウザーを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリを表示する場合は、Silverlight をインストールするためのページ上のリンクをクリックします。 Silverlight をインストールしたら、ブラウザーを閉じてもう一度開く必要があります。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70874403"
   
  プレビューした各ページのサムネイル スケッチを表示する各種レイアウトの説明を次の表に示します。  
   
-|[表示]|Description|  
+|[表示]|[説明]|  
 |----------|-----------------|  
 |ギャラリー ビュー (既定)|ギャラリーは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーの既定のビューです。 プレビューは左側に表示されます。 その横に、各ワークシートの小さいサムネイルが左から右の順に表示されます。|  
 |[すべてのドキュメント]|これはドキュメント ライブラリの標準のレイアウトです。 個々のドキュメントを管理する場合、またはライブラリ コンテンツを一覧形式で表示する場合にこのビューを選択できます。<br /><br /> プロパティを編集したり、個々のドキュメントを削除または移動するには、このビューを使用します。<br /><br /> バージョン管理を有効にしている場合は、このビューを使用して、ライブラリでドキュメントをチェックインまたはチェックアウトする必要があります。|  
@@ -146,9 +146,9 @@ ms.locfileid: "70874403"
   
 3.  [ビューの管理] の [現在のビュー] で、使用するビューを一覧から選択します。 デザイン済みのビューは、ギャラリー ビュー、シアター ビュー、およびカルーセル ビューです。 また、ライブラリのドキュメントを移動、削除、管理する場合は、[すべてのドキュメント] を選択することもできます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [PowerPivot for SharePoint インストールのトラブルシューティング](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
- [PowerPivot ギャラリーの   を使用する](use-power-pivot-gallery.md)  
+ [PowerPivot ギャラリーの  を使用する](use-power-pivot-gallery.md)  
  [サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [PowerPivot ギャラリーの削除](delete-power-pivot-gallery.md)  
   

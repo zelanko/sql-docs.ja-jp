@@ -37,14 +37,14 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BCPControl** メソッドでは、一括コピー操作のさまざまな制御パラメーターを設定します。たとえば、一括コピーが取り消されるまでに発生してもかまわないエラーの数、データ ファイルから最初にコピーする行番号や最後にコピーする行番号、バッチ サイズなどを設定します。  
   
  また、このメソッドを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括コピーするときに使用される SELECT ステートメントを指定することもできます。 **eOption** 引数を BCP_OPTION_HINTS に設定し、SELECT ステートメントを含むワイド文字列へのポインターを保持する **iValue** 引数を設定することができます。  
   
  *EOption*に指定できる値は次のとおりです。  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|既に実行中の一括コピー操作を停止します。 別のスレッドから **eOption** 引数に BCP_OPTION_ABORT を指定して *BCPControl* メソッドを呼び出し、実行中の一括コピー操作を停止できます。 *Ivalue*引数は無視されます。|  
 |BCP_OPTION_BATCH|バッチごとの行数を指定します。 既定値は 0 です。これは、データを抽出するときはテーブル内のすべての行が抽出されることを示し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときはユーザー データ ファイル内のすべての行がコピーされることを示します。 BCP_OPTION_BATCH に 1 未満の値を指定すると、既定値にリセットされます。|  

@@ -1,5 +1,5 @@
 ---
-title: 'ADO イベントのインスタンス化: ADO と WFC |Microsoft Docs'
+title: 'ADO イベントのインスタンス化: ADO および WFC |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -60,7 +60,7 @@ Windows Foundation クラス用の ADO (ADO/WFC) は ADO イベントモデル�
   
 7.  処理が完了したら、ADO/WFC イベントハンドラーの一覧からハンドラーを削除します。 メソッドに**Removeon**_EventName_(*handler*) などの名前を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO-WFC 構文のインデックス](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [イベントパラメーター](../../../ado/guide/data/event-parameters.md)   

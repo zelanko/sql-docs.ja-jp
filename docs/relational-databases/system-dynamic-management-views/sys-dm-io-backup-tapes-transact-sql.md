@@ -30,14 +30,14 @@ ms.locfileid: "70874154"
 
   テープ デバイスの一覧、およびバックアップのマウント要求の状態を返します。   
  
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|バックアップを実行できる実際の物理デバイスの名前。 NULL 値は許可されません。|  
-|**logical_device_name**|**nvarchar (256)**|ドライブのユーザー指定の名前 ( **backup_devices**から)。 ユーザー指定の名前が使用できない場合は NULL です。 NULL 値が許可されます。|  
-|**status**|**int**|テープの状態。<br /><br /> 1 = オープン、使用可能<br /><br /> 2 = マウント保留<br /><br /> 3 = 使用中<br /><br /> 4 = 読み込み中<br /><br /> **注:** テープが読み込まれている間 (**status = 4**)、メディアラベルはまだ読み取られていません。 **Media_sequence_number**など、メディアラベルの値をコピーする列には、予測される値が表示されます。これは、テープの実際の値とは異なる場合があります。 ラベルが読み取られると、 **[status]** が**3** (使用中) に変わり、メディアラベルの列には、読み込まれた実際のテープが反映されます。<br /><br /> NULL 値は許可されません。|  
+|**logical_device_name**|**nvarchar (256)**|ドライブのユーザー指定の名前 ( **sys. backup_devices**)。 ユーザー指定の名前が使用できない場合は NULL です。 NULL 値が許可されます。|  
+|**ステータス**|**int**|テープの状態。<br /><br /> 1 = オープン、使用可能<br /><br /> 2 = マウント保留<br /><br /> 3 = 使用中<br /><br /> 4 = 読み込み中<br /><br /> **注:** テープが読み込まれている間 (**status = 4**)、メディアラベルはまだ読み取られていません。 **Media_sequence_number**など、メディアラベルの値をコピーする列には、予測される値が表示されます。これは、テープの実際の値とは異なる場合があります。 ラベルが読み取られた後**status**への変更**3** (使用) 中、メディア ラベル列が読み込まれている実際のテープを反映します。<br /><br /> NULL 値は許可されません。|  
 |**status_desc**|**nvarchar(520)**|テープの状態の説明。<br /><br /> AVAILABLE<br /><br /> マウントが保留中です<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> NULL 値は許可されません。|  
-|**mount_request_time**|**datetime**|マウントが要求された時刻。 マウントが保留中でない場合は NULL (**status! = 2**)。 NULL 値が許可されます。|  
-|**mount_expiration_time**|**datetime**|マウント要求の有効期限が切れる時刻 (タイムアウト)。 マウントが保留中でない場合は NULL (**status! = 2**)。 NULL 値が許可されます。|  
+|**mount_request_time**|**datetime**|マウントが要求された時刻。 保留中マウントがない場合は NULL (**status! = 2**)。 NULL 値が許可されます。|  
+|**mount_expiration_time**|**datetime**|マウント要求の有効期限が切れる時刻 (タイムアウト)。 保留中マウントがない場合は NULL (**status! = 2**)。 NULL 値が許可されます。|  
 |**database_name**|**nvarchar (256)**|このデバイスにバックアップされるデータベース。 NULL 値が許可されます。|  
 |**spid**|**int**|セッション ID。 これにより、テープのユーザーが識別されます。 NULL 値が許可されます。|  
 |**command**|**int**|バックアップを実行するコマンド。 NULL 値が許可されます。|  
@@ -54,7 +54,7 @@ ms.locfileid: "70874154"
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、サーバーに対する VIEW SERVER STATE 権限を持っている必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/O 関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   

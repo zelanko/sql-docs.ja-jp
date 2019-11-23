@@ -46,14 +46,14 @@ ms.locfileid: "70154439"
 ### <a name="activity-monitoring"></a>[アクティビティ監視]  
  **の** [アクティビティ監視] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 画面には、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]で実行されている各アクティビティについての詳細な情報が表示されます。 この画面は、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] アプリケーションが接続されている [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 上で実行されているすべてのアクティビティに関する高レベルの監視を実行するために主にデータ スチュワードによって使用されます。 この画面では、システム レベルの監視は提供されません。 また、この画面を使用すると、DQS 管理者は、必要に応じて、実行中のアクティビティを終了したり、アクティビティ内で実行中のプロセスを停止したりして、アクティビティまたはアクティビティ内のプロセスを制御できます。 ナレッジの検出、ドメインの管理、照合ポリシー、クレンジング、照合、および SQL Server Integration Services (SSIS) ベースのクレンジングに関するデータが表示されます。  
   
-### <a name="configuration"></a>構成  
+### <a name="configuration"></a>Configuration  
  **の** [構成] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 画面では、DQS 管理者は次のことを行うことができます。  
   
--   **[参照データ]** : 参照データ サービス プロバイダーAzure Marketplace またはダイレクト参照データサービスプロバイダー。 参照データ サービス プロバイダーを設定した後は、ナレッジ ベースでのドメイン管理アクティビティの間にドメイン/複合ドメインと参照データをマップし、データ品質プロジェクトでのクレンジング アクティビティに同じナレッジ ベースを使用できます。 また、Azure Marketplace を使用するためにインターネットに接続するためのプロキシ設定を指定することもできます。  
+-   **参照データ**: 参照データサービスプロバイダーを構成する: Azure Marketplace またはダイレクト参照データサービスプロバイダー。 参照データ サービス プロバイダーを設定した後は、ナレッジ ベースでのドメイン管理アクティビティの間にドメイン/複合ドメインと参照データをマップし、データ品質プロジェクトでのクレンジング アクティビティに同じナレッジ ベースを使用できます。 また、Azure Marketplace を使用するためにインターネットに接続するためのプロキシ設定を指定することもできます。  
   
--   **[全般設定]** :データ クレンジングおよびデータ照合のしきい値、および [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] でのプロファイリングに対する通知を有効にするかどうかを指定できます。 これらのしきい値は、データ品質プロジェクトでのコンピューター支援型のクレンジングおよび照合アクティビティの間に、DQS によって使用されます。  
+-   **[全般設定]** : データ クレンジングおよびデータ照合のしきい値、および [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]でのプロファイリングに対する通知を有効にするかどうかを指定できます。 これらのしきい値は、データ品質プロジェクトでのコンピューター支援型のクレンジングおよび照合アクティビティの間に、DQS によって使用されます。  
   
--   **[ログの設定]** :DQS のログ ファイルには DQS で実行されたアクティビティが記録され、メンテナンスおよびトラブルシューティングの間に運用上の問題を追跡するのに役立ちます。 さまざまな DQS 機能 (ドメイン管理、ナレッジ検出、クレンジング、照合、参照データ サービス) および DQS モジュールに関してログに記録するメッセージを、イベントの重大度レベルに基づいてフィルターできます。  
+-   **[ログの設定]** : DQS のログ ファイルには DQS で実行されたアクティビティが記録され、メンテナンスおよびトラブルシューティングの間に運用上の問題を追跡するのに役立ちます。 さまざまな DQS 機能 (ドメイン管理、ナレッジ検出、クレンジング、照合、参照データ サービス) および DQS モジュールに関してログに記録するメッセージを、イベントの重大度レベルに基づいてフィルターできます。  
   
 > [!NOTE]  
 >  **[構成]** 画面は、DQS_MAIN データベースの dqs_administrator ロールを持つユーザーのみ使用できます。  
@@ -61,9 +61,9 @@ ms.locfileid: "70154439"
 ##  <a name="AdminOutsideClient"></a> Data Quality Client の外部での管理アクティビティ  
  アクティビティは Data Quality Client の外部で実行されます。  
   
--   **DQS データベースのバックアップと復元**:DQS データベースのバックアップと復元は、他の SQL Server データベースのバックアップおよび復元と同じですが、DQS に固有の考慮事項がいくつかあります。  
+-   **DQS データベースのバックアップと復元**: DQS データベースのバックアップと復元は、他の SQL Server データベースのバックアップおよび復元と同じですが、DQS に固有の考慮事項がいくつかあります。  
   
--   **DQS のデータベースのデタッチとアタッチ**:DQS データベースをデタッチおよびアタッチする手順は、他の SQL Server データベースのデタッチおよびアタッチと同じですが、DQS に固有の考慮事項がいくつかあります。  
+-   **DQS のデータベースのデタッチとアタッチ**: DQS データベースをデタッチおよびアタッチする手順は、他の SQL Server データベースのデタッチおよびアタッチと同じですが、DQS に固有の考慮事項がいくつかあります。  
   
  詳細については、「 [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)」を参照してください。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "70154439"
 |DQS データベースのバックアップと復元の方法について説明します。|[DQS データベースのバックアップと復元](../../2014/data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS データベースをデタッチおよびアタッチする方法について説明します。|[DQS データベースのデタッチとアタッチ](../../2014/data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS の参照データ サービス](../../2014/data-quality-services/reference-data-services-in-dqs.md)   
  [DQS ログ ファイルの管理](../../2014/data-quality-services/manage-dqs-log-files.md)   
- [DQS データベースの管理](../../2014/data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

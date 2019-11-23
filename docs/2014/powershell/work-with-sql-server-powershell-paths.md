@@ -46,7 +46,7 @@ $MyDBVar | Get-Member -Type Methods
 $MyDBVar | Get-Member -Type Properties  
 ```  
   
- また、**Get-Member** を使用して、Windows PowerShell パスの終了ノードに関連付けられているメソッドとプロパティを一覧表示することもできます。  
+ また、 **Get-Member** を使用して、Windows PowerShell パスの終了ノードに関連付けられているメソッドとプロパティを一覧表示することもできます。  
   
  次の例では、SQLSERVER: パスで Databases ノードに移動し、コレクションのプロパティを一覧表示します。  
   
@@ -93,8 +93,8 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>「  
- [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>参照  
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの移動](navigate-sql-server-powershell-paths.md)   
  [URN から SQL Server プロバイダー パスへの変換](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

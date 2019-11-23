@@ -36,7 +36,7 @@ ms.locfileid: "73780663"
   
 3.  パフォーマンスのログを記録するデータ ソースをクリックします。  
   
-4.  **[構成]** をクリックします。  
+4.  をクリックして**構成**です。  
   
 5.  Microsoft SQL Server DSN の構成ウィザードで、ログ**ファイルに ODBC ドライバーの統計情報が記録**されたページに移動します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73780663"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>ドライバーのパフォーマンス データをプログラムを使用してログに記録するには  
   
-1.  SQL_COPT_SS_PERF_DATA_LOG と、パフォーマンスデータログファイルの完全なパスとファイル名を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。 例:  
+1.  SQL_COPT_SS_PERF_DATA_LOG と、パフォーマンスデータログファイルの完全なパスとファイル名を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。 例 :  
   
     ```  
     "C:\\Odbcperf.log"  

@@ -41,7 +41,7 @@ ms.locfileid: "73982795"
 |hobt_id|**bigint**|このパーティションの行を含むデータヒープまたは B ツリー (HoBT) の ID を示します。|  
 |rows|**bigint**|このパーティション内の行の概数を示します。|  
 |filestream_filegroup_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このパーティションに格納されている FILESTREAM ファイルグループの ID を示します。|  
-|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = なし <br />1 = 行 <br />2 = ページ <br />3 = 列ストア:**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降<br />4 = COLUMNSTORE_ARCHIVE:**に適用さ**れます: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降<br /><br /> **注:** フルテキストインデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の任意のエディションで圧縮されます。|  
+|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = 行 <br />2 = ページ <br />3 = 列ストア:**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降<br />4 = COLUMNSTORE_ARCHIVE:**に適用さ**れます: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降<br /><br /> **注:** フルテキストインデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の任意のエディションで圧縮されます。|  
 |data_compression_desc|**nvarchar(60)**|各パーティションの圧縮の状態を示します。 行ストア テーブルに指定できる値は、NONE、ROW、および PAGE です。 列ストアテーブルに指定できる値は、列ストアと COLUMNSTORE_ARCHIVE です。|  
   
 ## <a name="permissions"></a>アクセス許可  

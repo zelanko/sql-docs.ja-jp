@@ -26,7 +26,7 @@ ms.locfileid: "73728462"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でエンティティを作成して、メンバーおよびその属性を含めます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -67,13 +67,13 @@ ms.locfileid: "73728462"
 10. **[保存]** をクリックします。  
   
 ## <a name="grid-columns"></a>グリッド列  
- 作成されたエンティティごとに、13 列の行がグリッドに追加されます。 その列を次に示します。  
+ 作成されたエンティティごとに、13 列の行がグリッドに追加されます。 次の列が追加されます。  
   
-|[名前]|説明|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[状態]|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![状態を更新するためのアイコン](../master-data-services/media/mds-statusicon-updating.png "I状態を更新するための con)<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "Iエラー状態のための con)<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![OK 状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "I"OK" 状態の con ")|  
-|[名前]|エンティティ名。|  
-|説明|エンティティの説明。|  
+|[オブジェクト名]|エンティティ名。|  
+|[説明]|エンティティの説明。|  
 |ステージング テーブル|データを格納するために使用されるテーブルのプレフィックス名。|  
 |トランザクション ログの種類|エンティティのトランザクション ログの種類。|  
 |コードの自動作成|コードの自動作成が有効かどうかを示します。|  
@@ -81,11 +81,11 @@ ms.locfileid: "73728462"
 |同期ターゲット|エンティティが同期関係のターゲットかどうかを示します。|  
 |階層が有効|明示的階層に対してエンティティが有効かどうかを示します。 エンティティに対して少なくとも 1 つの明示的階層が作成されている場合は、[はい] になります。|  
 |[作成者]|エンティティを作成したユーザーの名前。|  
-|作成日時|エンティティが作成された日付と時刻。|  
+|作成日|エンティティが作成された日付と時刻。|  
 |更新者|エンティティを最後に更新したユーザーの名前。|  
-|更新日時|エンティティが最後に更新された日時。|  
+|更新日|エンティティが最後に更新された日時。|  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
   
 -   [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "73728462"
 ## <a name="see-also"></a>参照  
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [エンティティを編集する &#40;マスター データ サービス&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [エンティティを編集する (マスター データ サービス)](../master-data-services/edit-an-entity-master-data-services.md)   
  [エンティティを削除する (マスター データ サービス)](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

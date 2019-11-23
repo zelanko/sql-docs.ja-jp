@@ -26,7 +26,7 @@ ms.locfileid: "73729445"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データの精度を保証するためにビジネス ルールを作成します。 ルールを作成した後、データに適用する前に、そのルールをパブリッシュする必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -69,7 +69,7 @@ ms.locfileid: "73729445"
     > [!TIP]  
     >  ビジネス ルールからアイテムを削除するには、各項目を右クリックして **[削除]** をクリックします。  
   
-15. オプションで、ビジネス ルールに複数の条件を追加します。 詳細については、「 [ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)」を参照してください。  
+15. オプションで、ビジネス ルールに複数の条件を追加します。 詳細については、「[ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)」を参照してください。  
   
 16. **Then** ブロックの下で **[追加]** をクリックします。 パネルが表示されます。  
   
@@ -100,18 +100,18 @@ ms.locfileid: "73729445"
 24. 確認のダイアログ ボックスで **[OK]** をクリックします。 **[ビジネス ルールの状態]** 列の値は **[アクティブ]** です。  
   
 ## <a name="grid-columns"></a>グリッド列  
- 作成されたビジネス ルールごとに、6 列の行がグリッドに追加されます。 その列を次に示します。  
+ 作成されたビジネス ルールごとに、6 列の行がグリッドに追加されます。 次の列が追加されます。  
   
-|[名前]|説明|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[状態]|**[保存]** をクリックすると、ビジネス ルールが更新中であることを示す次のイメージが表示されます。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> ビジネス ルールの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
-|[名前]|ビジネス ルール名。|  
-|説明|ビジネス ルールの説明。|  
+|[オブジェクト名]|ビジネス ルール名。|  
+|[説明]|ビジネス ルールの説明。|  
 |[ビジネス ルールの状態]|次のビジネス ルールの状態のいずれか: ルール未定義、アクティブ、除外、保留中の変更、保留中の実行、保留中の削除。|  
 |除外|ビジネス ルールを除外するかどうかを指定します。|  
 |Notification|電子メール通知を送信するユーザーまたはグループを指定します。|  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
   
 -   以下のいずれかの手順でビジネス ルールをデータに適用します。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "73729445"
 ## <a name="see-also"></a>参照  
  [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [ビジネス ルールの名前を変更する (マスター データ サービス)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [ビジネス ルールに複数の条件を追加する &#40;マスター データ サービス&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

@@ -21,14 +21,14 @@ ms.locfileid: "73728139"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  マスター データはすべて [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに格納されます。 このデータベースをホストするコンピューターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスを実行する必要があります。  
+  マスター データはすべて [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに格納されます。 このデータベースをホストするコンピューターでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  インスタンスを実行する必要があります。  
   
- ローカル コンピューターまたはリモート コンピューターで [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] データベースを作成および構成するには、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を使用します。 環境間でデータベースを移動する場合、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスと[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]を新しい場所のデータベースに関連付けることにより、新しい環境で情報を維持できます。  
+ ローカル コンピューターまたはリモート コンピューターで [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] データベースを作成および構成するには、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]を使用します。 環境間でデータベースを移動する場合、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスと[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]を新しい場所のデータベースに関連付けることにより、新しい環境で情報を維持できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のコンポーネントをインストールするコンピューターはすべてライセンス供与を受けている必要があります。 詳細については、使用許諾契約書 (EULA) を参照してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>の要件  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成する前に、次の要件が満たされていることを確認してください。  
   
 ### <a name="sql-server-edition"></a>SQL Server のエディション  
@@ -55,14 +55,14 @@ ms.locfileid: "73728139"
   
 -   Microsoft SQL Server 2008 R2 Developer (64 ビット) x64  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションでサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 
   
 ### <a name="operating-system"></a>オペレーティング システム  
  サポートされている Windows オペレーティング システムおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]に関する他の要件の詳細については、「[SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
   
 ### <a name="accounts-and-permissions"></a>アカウントと権限  
   
-|型|説明|  
+|[型]|[説明]|  
 |----------|-----------------|  
 |ユーザー アカウント|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]では、Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースをホストできます。 このユーザー アカウントは、のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin[!INCLUDE[ssDE](../../includes/ssde-md.md)] サーバー ロールに属している必要があります。 **sysadmin** ロールの詳細については、「[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 管理者アカウント|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成する場合、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] システム管理者となるドメイン ユーザー アカウントを指定する必要があります。 このユーザーは、このデータベースに関連付けられているすべての[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションについて、すべての機能領域のすべてのモデルおよびすべてのデータを更新できます。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../../master-data-services/administrators-master-data-services.md)」を参照してください。|  

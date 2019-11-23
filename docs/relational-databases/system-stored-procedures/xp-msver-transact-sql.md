@@ -42,11 +42,11 @@ xp_msver [ optname ]
  *optname*  
  オプション名を指定します。次のいずれかの値を指定できます。  
   
-|オプション/列名|説明|  
+|オプション/列名|[説明]|  
 |-------------------------|-----------------|  
 |**ProductName**|製品名;たとえば、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |**ProductVersion**|製品バージョン。|  
-|**言語**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
+|**[言語]**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
 |**プラットフォーム**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターのオペレーティングシステム名、製造元名、およびチップファミリ名。|  
 |**コメント**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に関するその他の情報。|  
 |**仕入**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を生成する会社名たとえば、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation のようになります。|  

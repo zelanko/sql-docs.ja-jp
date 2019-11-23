@@ -46,17 +46,17 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @collection_set_id = ] collection_set_id` は、コレクションセットの一意のローカル識別子です。 *collection_set_id*は**int**で、*名前*が NULL の場合は値を持つ必要があります。  
+`[ @collection_set_id = ] collection_set_id` は、コレクションセットの一意のローカル識別子です。 *collection_set_id*は**int**で、 *name*が NULL の場合は値が必要です。  
   
-`[ @name = ] 'name'` はコレクションセットの名前です。 *名前*は**sysname**で、 *collection_set_id*が NULL の場合は値を持つ必要があります。  
+`[ @name = ] 'name'` コレクションセットの名前を指定します。 *名前*は**sysname**であり、 *collection_set_id*が NULL の場合は値を持つ必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- *Collection_set_id*または*name*のいずれかに値を指定する必要があります。どちらも NULL にすることはできません。  
+## <a name="remarks"></a>Remarks  
+ *Collection_set_id*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。  
   
- この手順では、コレクションを開始し、指定されたコレクションセットのジョブをアップロードします。また、コレクションセットの **@no__t**が "非キャッシュ" (1) に設定されている場合は、直ちにコレクションエージェントジョブを開始します。 詳細については、「 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)」を参照してください。  
+ この手順では、コレクションを開始し、指定されたコレクションセットのジョブをアップロードします。また、コレクションセットの **\@collection_mode**が非キャッシュ (1) に設定されている場合は、直ちにコレクションエージェントジョブを開始します。 詳細については、「 [transact-sql &#40;&#41;の sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)」を参照してください。  
   
  sp_sycollector_run_collection_set は、スケジュールを持たないコレクション セットの実行にも使用できます。  
   
@@ -72,7 +72,7 @@ GO
 EXEC sp_syscollector_run_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   

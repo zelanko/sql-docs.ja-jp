@@ -34,7 +34,7 @@ ms.locfileid: "73728069"
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を学習するためのビデオと他のトレーニング リソースへのリンクについては、「 [マスター データ サービスについて学習する](../master-data-services/learn-sql-server-master-data-services.md)」をご覧ください。 
   
 > **ダウンロード**  
-> -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
+> -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** にアクセスしてください。  
 > -   Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server がインストール済みの仮想マシンをすぐにご利用いただけます。  
 > 
 > **MDS Web サイトを作成できませんか?**
@@ -53,7 +53,7 @@ ms.locfileid: "73728069"
 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] のインストールを変更する場合は、既定の場所 (`<drive>`: \SQLServer_13.0_Full) にある setup.exe ファイルを見つけます。
   
 ## <a name="InstallMDS"></a> Master Data Services のインストール  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセットアップ インストール ウィザードまたはコマンド プロンプトを使用して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]をインストールします。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセットアップ インストール ウィザードまたはコマンド プロンプトを使用して、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] をインストールします。  
   
  **Windows Server 2012 R2 コンピューター上で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] セットアップを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をインストールするには**  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73728069"
    
 9. **[機能]** ページで、次の機能が選択されていることを確認し、 **[次へ]** をクリックします。 これらの機能は、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] の [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] に必要です。
   
-    |機能|機能|  
+    |機能のインストール|機能のインストール|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -171,7 +171,7 @@ ms.locfileid: "73728069"
 
     ![mds_2016ConfigManager_DatabaseConfig_Completed](../master-data-services/media/mds-2016configmanager-databaseconfig-completed.png)   
   
-9. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] の左ペインで、 **[Web の構成]** をクリックします。  
+9. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の左ペインで、 **[Web の構成]** をクリックします。  
   
 10. **[Web サイト]** リスト ボックスで、 **[既定の Web サイト]** **[作成]** の順にクリックして、Web アプリケーションを作成します。  
   
@@ -210,10 +210,10 @@ ms.locfileid: "73728069"
   
      For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
- また、[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに関連付けられている Web アプリケーションとサービスのその他の設定値も指定できます。 たとえば、データの読み込み頻度や検証メールの送信頻度を指定できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
+ また、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに関連付けられている Web アプリケーションとサービスのその他の設定値も指定できます。 たとえば、データの読み込み頻度や検証メールの送信頻度を指定できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
 ##  <a name="deploySample"></a> サンプル モデルとデータを配置する  
- 次の 3 つのサンプル モデル パッケージは、  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]に付属しています。   これらのサンプル モデルには、データが含まれます。 **サンプル モデル パッケージの既定の場所は、%programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages です。**
+ 次の 3 つのサンプル モデル パッケージは、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] に付属しています。   これらのサンプル モデルには、データが含まれます。 **サンプル モデル パッケージの既定の場所は、%programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages です。**
   
 -   chartofaccounts_en.pkg  
   
@@ -271,7 +271,7 @@ ms.locfileid: "73728069"
   
     ```  
   
-     モデルが正常に配置されると、" **MDSModelDeploy 操作は完了しました** " というメッセージが表示されます。  
+     モデルが正常に配置されると、"**MDSModelDeploy 操作は完了しました**" というメッセージが表示されます。  
   
      次の図は、product_en.pkg サンプル モデルを配置するためのコマンドを示します。  
   
@@ -295,7 +295,7 @@ ms.locfileid: "73728069"
 ## <a name="see-also"></a>参照  
  [マスター データ サービス データベース](../master-data-services/master-data-services-database.md)   
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)   
- [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [マスター データ サービス &#40;MDS&#41; の新機能](../master-data-services/what-s-new-in-master-data-services-mds.md)  
   
   

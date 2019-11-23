@@ -34,23 +34,23 @@ ms.locfileid: "73980228"
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|このインデックスが所属するオブジェクトの ID。|  
-|**name**|**sysname**|インデックスの名前。 **name**は、オブジェクト内でのみ一意です。<br /><br /> NULL = ヒープ|  
+|**object_id**|**int**|インデックスが属しているオブジェクトの ID。|  
+|**name**|**sysname**|インデックスの名前です。 **name**は、オブジェクト内でのみ一意です。<br /><br /> NULL = ヒープ|  
 |**index_id**|**int**|インデックスの ID。 **index_id**は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス|  
 |**型**|**tinyint**|インデックスの種類:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = 非クラスター化<br /><br /> 3 = XML<br /><br /> 4 = 空間<br /><br /> 5 = クラスター化列ストアインデックス。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> 6 = 非クラスター化列ストアインデックス。 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 7 = 非クラスター化ハッシュインデックス。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
-|**type_desc**|**nvarchar(60)**|インデックスの種類の説明:<br /><br /> ヒープ<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> 許容<br /><br /> クラスター化列ストア: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降**に適用さ**れます。<br /><br /> 非クラスター化列ストア: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降**に適用さ**れます。<br /><br /> 非クラスター化ハッシュ: 非クラスター化ハッシュインデックスは、メモリ最適化テーブルでのみサポートされています。 sys.hash_indexes ビューでは、現在のハッシュ インデックスとハッシュ プロパティが表示されます。 詳細については、「 [sys &#40;. hash_indexes transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
+|**type_desc**|**nvarchar(60)**|インデックスの種類の説明。<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> クラスター化列ストア: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降**に適用さ**れます。<br /><br /> 非クラスター化列ストア: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降**に適用さ**れます。<br /><br /> 非クラスター化ハッシュ: 非クラスター化ハッシュインデックスは、メモリ最適化テーブルでのみサポートされています。 sys.hash_indexes ビューでは、現在のハッシュ インデックスとハッシュ プロパティが表示されます。 詳細については、「 [sys &#40;. hash_indexes transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
 |**is_unique**|**bit**|1 = インデックスは一意です。<br /><br /> 0 = インデックスは一意ではありません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
 |**data_space_id**|**int**|インデックスのデータ領域の ID。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = **object_id**はテーブル値関数またはメモリ内インデックスです。|  
-|**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY は ON です。<br /><br /> 0 = IGNORE_DUP_KEY はオフです。|  
+|**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY はオンです。<br /><br /> 0 = IGNORE_DUP_KEY はオフです。|  
 |**is_primary_key**|**bit**|1 = インデックスは PRIMARY KEY 制約の一部です。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
 |**is_unique_constraint**|**bit**|1 = インデックスは UNIQUE 制約の一部です。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
-|**fill_factor**|**tinyint**|> 0 = インデックスが作成または再構築されたときに使用される FILLFACTOR のパーセンテージ。<br /><br /> 0 = 既定値<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
-|**is_padded**|**bit**|1 = PADINDEX はオンです。<br /><br /> 0 = PADINDEX はオフです。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
-|**is_disabled**|**bit**|1 = インデックスは無効です。<br /><br /> 0 = インデックスは無効になっていません。|  
+|**fill_factor**|**tinyint**|> 0 = インデックスが作成または再構築された場合に使用される FILLFACTOR のパーセンテージです。<br /><br /> 0 = 既定値<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
+|**is_padded**|**bit**|1 = PADINDEX がオンです。<br /><br /> 0 = PADINDEX がオフです。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
+|**is_disabled**|**bit**|1 = インデックスは無効です。<br /><br /> 0 = インデックスは無効ではありません。|  
 |**is_hypothetical**|**bit**|1 = インデックスは仮想的であり、データへのアクセス パスとして直接使用することはできません。 仮想インデックスは、列レベルの統計を保持しています。<br /><br /> 0 = インデックスは仮想的ではありません。|  
 |**allow_row_locks**|**bit**|1 = インデックスは行ロックを許可します。<br /><br /> 0 = インデックスは行ロックを許可しません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
-|**allow_page_locks**|**bit**|1 = インデックスはページロックを許可します。<br /><br /> 0 = インデックスはページロックを許可しません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
-|**has_filter**|**bit**|1 = インデックスにはフィルターがあり、フィルター定義を満たす行のみが含まれます。<br /><br /> 0 = インデックスにフィルターがありません。|  
+|**allow_page_locks**|**bit**|1 = インデックスはページ ロックを許可します。<br /><br /> 0 = インデックスはページ ロックを許可しません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
+|**has_filter**|**bit**|1 = インデックスにフィルターがあり、フィルター定義を満たす行だけが含まれます。<br /><br /> 0 = インデックスにフィルターはありません。|  
 |**filter_definition**|**nvarchar(max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。<br /><br /> ヒープまたはフィルター選択されたインデックス以外のインデックスの場合は、NULL です。|  
 |**auto_created**|**bit**|1 = インデックスは自動チューニングによって作成されました。<br /><br />0 = インデックスはユーザーによって作成されました。
 |**optimize_for_sequential_key**|**bit**|1 = インデックスの最後のページ挿入最適化が有効になっています。<br><br>0 = 既定値。 インデックスの最後のページ挿入最適化が無効になっています。|

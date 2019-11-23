@@ -42,9 +42,9 @@ ms.locfileid: "71952151"
   
 3.  **[バージョン]** をクリックします。  
   
-4.  バージョンに12.00 が含まれていることと、説明が Microsoft.analysisservice.adomdclient > であることを確認し @no__t ます。  
+4.  バージョンに12.00 が含まれていることを確認します。ビルド番号 >\<、説明が Microsoft.analysisservice.adomdclient になります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [PowerPivot 管理ダッシュボードと使用状況データ](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
   
   

@@ -31,7 +31,7 @@ ms.locfileid: "73844403"
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +44,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
  [@target_server =]' server_name '  
  アクティブなセカンダリ データベースをホストする SQL データベース サーバーの名前。 server_name は sysname であり、既定値はありません。  
   
- [@target_database =]' database_name '  
+ [ @target_database = ] 'database_name'  
  アクティブなセカンダリデータベースの名前。 database_name は sysname であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>アクセス許可  
  プライマリ データベース内のすべてのユーザーが、このシステム ストアド プロシージャを呼び出すことができます。 ログインは、プライマリデータベースとアクティブセカンダリデータベースの両方のユーザーである必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_wait_for_database_copy_sync**呼び出しの前にコミットされたすべてのトランザクションが、アクティブなセカンダリデータベースに送信されます。  
   
 ## <a name="examples"></a>使用例  

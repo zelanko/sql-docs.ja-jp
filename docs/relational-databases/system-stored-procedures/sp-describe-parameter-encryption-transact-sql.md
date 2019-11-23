@@ -41,12 +41,12 @@ sp_describe_parameter_encryption
   
 ## <a name="arguments"></a>引数  
  [\@tsql =]' Transact SQL_batch '  
- 1つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。 Transact-sql SQL_batch は nvarchar (n) または nvarchar (max) です。  
+ 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 Transact-sql SQL_batch は nvarchar (n) または nvarchar (max) です。  
   
  [\@params =]N'parameters'  
  *\@params*は、transact-sql バッチのパラメーターの宣言文字列を提供します。これは sp_executesql に似ています。 パラメーターには、nvarchar (n) または nvarchar (max) を指定できます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch に埋め込まれているすべてのパラメーターの定義を含む1つの文字列です。 文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 ステートメントで指定するすべてのパラメーターは *\@params*で定義する必要があります。 ステートメント内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはバッチにパラメーターが含まれていない場合、 *\@params*は必要ありません。 このパラメーターの既定値は NULL です。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch に埋め込まれているすべてのパラメーターの定義を含む1つの文字列です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 ステートメントで指定するすべてのパラメーターは *\@params*で定義する必要があります。 ステートメント内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはバッチにパラメーターが含まれていない場合、 *\@params*は必要ありません。 このパラメーターの既定値は NULL です。  
   
 ## <a name="return-value"></a>戻り値  
  0は成功を示します。 それ以外の場合は、失敗を示します。  
@@ -60,21 +60,21 @@ sp_describe_parameter_encryption
   
  最初の結果セットの各行には、キーのペアが記述されています。暗号化された列暗号化キーとそれに対応する列マスターキー。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|Resultset 内の行の Id。|  
 |**database_id**|**int**|データベース id。|  
 |**column_encryption_key_id**|**int**|列の暗号化キー id。注: この id は、 [column_encryption_keys &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)カタログビューの行を表します。|  
-|**column_encryption_key_version**|**int**|将来の使用のために予約されています。 現在、には常に1が含まれています。|  
-|**column_encryption_key_metadata_version**|**binary (8)**|列暗号化キーの作成時刻を表すタイムスタンプ。|  
-|**column_encryption_key_encrypted_value**|**varbinary (4000)**|列暗号化キーの暗号化された値。|  
+|**column_encryption_key_version**|**int**|将来使用するために予約されています。 現在、には常に1が含まれています。|  
+|**column_encryption_key_metadata_version**|**binary(8)**|列暗号化キーの作成時刻を表すタイムスタンプ。|  
+|**column_encryption_key_encrypted_value**|**varbinary(4000)**|列暗号化キーの暗号化された値。|  
 |**column_master_key_store_provider_name**|**sysname**|列暗号化キーの暗号化された値を生成するために使用された、列マスターキーを含むキーストアのプロバイダーの名前。|  
 |**column_master_key_path**|**nvarchar (4000)**|列暗号化キーの暗号化された値を生成するために使用された列マスターキーのキーパス。|  
 |**column_encryption_key_encryption_algorithm_name**|**sysname**|列暗号化キーの暗号化値を生成するために使用される暗号化アルゴリズムの名前。|  
   
  2番目の結果セットの各行には、1つのパラメーターの暗号化メタデータが含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|結果セットの行の Id。|  
 |**parameter_name**|**sysname**|*\@params*引数に指定されたパラメーターの1つの名前。|  
@@ -83,7 +83,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|最初の結果セットの行のコード。 参照先の行では、列に対して構成されている列暗号化キーが記述され、パラメーターはに対応します。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|型の正規化アルゴリズムのバージョン番号。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Always Encrypted をサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントドライバーは、アプリケーションによって発行されたパラメーター化クエリの暗号化メタデータを取得するために、 **sp_describe_parameter_encryption**を自動的に呼び出します。 その後、ドライバーは、暗号化メタデータを使用して、Always Encrypted で保護されているデータベース列に対応するパラメーターの値を暗号化し、アプリケーションによって送信されたプレーンテキストパラメーター値を暗号化されたで置き換えます。パラメーター値。データベースエンジンにクエリを送信する前に指定します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -143,7 +143,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |column_encryption_key_ordinal|database_id|column_encryption_key_id|column_encryption_key_version|column_encryption_key_metadata_version|column_encryption_key_encrypted_value|  
 |--------------------------------------|------------------|---------------------------------|--------------------------------------|------------------------------------------------|-----------------------------------------------|  
-|1|5|1|1|0x99EDA60083A50000|0x016E000001630075007200720065006E00740075007300650072002F006D0079002F006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500CA0D0CEC74ECADD1804CF99137B4BD06BBAB15D7EA74E0C249A779C7768A5B659E0125D24FF827F5EA8CA517A8E197ECA1353BA814C2B0B2E6C8AB36E3AE6A1E972D69C3C573A963ADAB6686CF5D24F95FE43140C4F9AF48FBA7DF2D053F3B4A1F5693A1F905440F8015BDB43AF8A04BE4E045B89876A0097E5FBC4E6A3B9C3C0D278C540E46C53938B8C957B689C4DC095821C465C73117CBA95B758232F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE24392D801ECAA684DE344FECE05812D12CD72254A014D42D0EABDA41C89FC4F545E88B4B8781E5FAF40D7199D4842D2BFE904D209728ED4F527CBC169E2904F6E711FF81A8F4C25382A2E778DD2A58552ED031AFFDA9D9D891D98AD82155F93C58202FC24A77F415D4F8EF22419D62E188AC609330CCBD97CEE1AEF8A18B01958833604707FDF03B2B386487CC679D7E352D0B69F9FB002E51BCD814D077E82A09C14E9892C1F8E0C559CFD5FA841CEF647DAB03C8191DC46B772E94D579D8C80FE93C3827C9F0AE04D5325BC73111E07EEEDBE67F1E2A73580085|  
+|@shouldalert|5|@shouldalert|@shouldalert|0x99EDA60083A50000|0x016E000001630075007200720065006E00740075007300650072002F006D0079002F006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500CA0D0CEC74ECADD1804CF99137B4BD06BBAB15D7EA74E0C249A779C7768A5B659E0125D24FF827F5EA8CA517A8E197ECA1353BA814C2B0B2E6C8AB36E3AE6A1E972D69C3C573A963ADAB6686CF5D24F95FE43140C4F9AF48FBA7DF2D053F3B4A1F5693A1F905440F8015BDB43AF8A04BE4E045B89876A0097E5FBC4E6A3B9C3C0D278C540E46C53938B8C957B689C4DC095821C465C73117CBA95B758232F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE24392D801ECAA684DE344FECE05812D12CD72254A014D42D0EABDA41C89FC4F545E88B4B8781E5FAF40D7199D4842D2BFE904D209728ED4F527CBC169E2904F6E711FF81A8F4C25382A2E778DD2A58552ED031AFFDA9D9D891D98AD82155F93C58202FC24A77F415D4F8EF22419D62E188AC609330CCBD97CEE1AEF8A18B01958833604707FDF03B2B386487CC679D7E352D0B69F9FB002E51BCD814D077E82A09C14E9892C1F8E0C559CFD5FA841CEF647DAB03C8191DC46B772E94D579D8C80FE93C3827C9F0AE04D5325BC73111E07EEEDBE67F1E2A73580085|  
   
  (結果は続行します。)  
   
@@ -155,13 +155,13 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|\@c1|1|1|  
+|@shouldalert|\@c1|@shouldalert|@shouldalert|  
   
  (結果は続行します。)  
   
 |column_encryption_key_ordinal|column_encryption_normalization_rule_version|  
 |--------------------------------------|------------------------------------------------------|  
-|1|1|  
+|@shouldalert|@shouldalert|  
   
 ## <a name="see-also"></a>参照  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

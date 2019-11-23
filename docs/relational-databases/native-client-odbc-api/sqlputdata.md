@@ -24,7 +24,7 @@ ms.locfileid: "73785747"
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  SQLPutData を使用して65535バイトを超えるデータを送信する場合 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン 4.21 a の場合) または 400 KB のデータ (SQL Server バージョン6.0 以降の場合) の場合、SQL_LONGVARCHAR (**テキスト**)、SQL_WLONGVARCHAR (**ntext**)、または SQL_ には、次の制限が適用されます。LONGVARBINARY (**イメージ**) 列:  
+  SQLPutData を使用して65535バイトを超えるデータを送信する場合 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン 4.21 a の場合) または 400 KB のデータ (SQL Server バージョン6.0 以降) の場合は、次の制限が適用されます。これは、SQL_LONGVARCHAR (**テキスト**)、SQL_WLONGVARCHAR (**ntext**)、または SQL_LONGVARBINARY (**イメージ**) 列です。  
   
 -   参照されるパラメーターには、INSERT ステートメント内の*insert_value*を指定できます。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785747"
 ## <a name="diagnostics"></a>診断  
  SQLPutData には、Native Client 固有の SQLSTATE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が1つあります。  
   
-|SQLSTATE|エラー|説明|  
+|SQLSTATE|エラー|[説明]|  
 |--------------|-----------|-----------------|  
 |22026|文字列データの長さが合致しません|たとえば SQL_LEN_DATA_AT_EXEC (*n*) を使用して、送信されるデータの長さ (バイト単位) がアプリケーションによって指定されている場合 ( *n*が0を超える場合)、sqlputdata を使用してアプリケーションで指定されたバイト数の合計が、指定された長さと一致している必要があります。|  
   

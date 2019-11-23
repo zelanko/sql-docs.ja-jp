@@ -39,7 +39,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` は異種パブリッシャーの名前です。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` は異種パブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
 `[ @propertyname = ] 'propertyname'` は、設定するプロパティの名前です。 *propertyname*は**sysname**で、次のいずれかの値を指定できます。  
   

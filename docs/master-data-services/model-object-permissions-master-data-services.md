@@ -44,8 +44,8 @@ ms.locfileid: "73727978"
   
 ## <a name="see-also"></a>参照  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [モデル アクセス許可 (マスター データ サービス)](../master-data-services/model-permissions-master-data-services.md)   
- [機能領域アクセス許可 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [モデル権限 (マスター データ サービス)](../master-data-services/model-permissions-master-data-services.md)   
+ [機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)   
  [階層メンバーの権限 (マスター データ サービス)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   

@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73632827"
 ---
-# <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-sql)
+# <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーションエージェントによって使用されるプロファイルを更新します。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
+  レプリケーション エージェントにより使用されるプロファイルを更新します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,13 +39,13 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="arguments"></a>引数  
 `[ @agent_type = ] 'agent_type'` はエージェントの種類です。 *agent_type*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**1**|スナップショット エージェント。|  
-|**2**|ログ リーダー エージェント。|  
+|**2**|ログ リーダー エージェント|  
 |**3**|ディストリビューション エージェント。|  
 |**4**|マージ エージェント。|  
-|**ませ**|キュー リーダー エージェント|  
+|**9**|キュー リーダー エージェント|  
   
 `[ @agent_id = ] 'agent_id'` は、エージェントの ID です。 *agent_id*は**int**,、既定値はありません。  
   
@@ -54,7 +54,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_update_agent_profile**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

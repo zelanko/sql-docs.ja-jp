@@ -35,7 +35,7 @@ ms.locfileid: "73844500"
 SQL Database V12 を使用している場合は、 [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)を使用する必要があります ( *Sys は dm_continuous_copy_status* V11 にのみ適用されるため)。
 
   
-|列名|[データ型]|説明|  
+|列名|[データ型]|[説明]|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|レプリカデータベースの一意の ID。|  
 |**partner_server**|**sysname**|リンクされた SQL データベース サーバーの名前。|  
@@ -51,7 +51,7 @@ SQL Database V12 を使用している場合は、 [dm_geo_replication_link_stat
 ## <a name="permissions"></a>アクセス許可  
  データを取得するには、 **db_owner**データベースロールのメンバーシップが必要です。 Dbo ユーザー、 **dbmanager**データベースロールのメンバー、および sa ログインでも、このビューに対してクエリを実行できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Dm_continuous_copy_status ビューは**リソース**データベースに作成され、論理マスターを含むすべてのデータベースで表示**でき**ます。 ただし、論理マスターでこのビューにクエリを実行すると、空のセットが返されます。  
   
  連続コピーリレーションシップがデータベースで終了した場合、そのデータベースの行は**dm_continuous_copy_status**ビューに表示されなくなります。  

@@ -30,7 +30,7 @@ ms.locfileid: "73761334"
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用します。  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータベース ミラーリングは、データベースの可用性とデータの冗長性を高めるためのソリューションです。 Native Client では、データベースミラーリングの暗黙的なサポートが提供されるため、開発者は、データベースに対して構成されたコードを記述したり、他のアクションを実行したりする必要はありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   

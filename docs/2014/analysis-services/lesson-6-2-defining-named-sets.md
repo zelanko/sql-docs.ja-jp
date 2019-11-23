@@ -49,7 +49,7 @@ ms.locfileid: "69493894"
   
 1.  **[スクリプトオーガナイザー]** ペインで `[Core Products]` を右クリックし、 **[新しい名前付きセット]** をクリックします。  
   
-2.  **[名前]** ボックスで、この名前付きセットの名前を `[Large Resellers]` に変更します。  
+2.  **[名前]** ボックスで、この名前付きセットの名前を `[Large Resellers]`に変更します。  
   
 3.  **[式]** ボックスに「`Exists()`」と入力します。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "69493894"
   
 8.  **Reseller** ディメンションのディメンション デザイナーを開いて、 **[属性]** ペインの **[Number of Employees]** をクリックします。  
   
-9. プロパティウィンドウで、`DiscretizationMethod` プロパティを**Automatic**に変更し、`DiscretizationBucketCount` プロパティを `5` に変更します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
+9. プロパティウィンドウで、`DiscretizationMethod` プロパティを**Automatic**に変更し、`DiscretizationBucketCount` プロパティを `5`に変更します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
-10. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、 **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+10. **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 11. 配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[計算]** タブのツール バーで **[再接続]** をクリックします。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69493894"
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>新しい名前付きセットを使用したキューブの表示  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **[ブラウザー]** タブをクリックして、 **[再接続]** をクリックします。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "69493894"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [レッスン 7: 主要業績評価指標 (KPI) の定義](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [名前付きセットの作成](multidimensional-models/create-named-sets.md)  
   

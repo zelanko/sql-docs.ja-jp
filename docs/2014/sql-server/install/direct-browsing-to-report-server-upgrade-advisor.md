@@ -18,22 +18,22 @@ ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952211"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>レポート サーバーの直接参照 (アップグレード アドバイザー)
-  アップグレードアドバイザーによって @no__t の現在のインストールが検出されました-0 @no__t レポートサーバーの仮想ディレクトリを直接参照しています。  
+  アップグレードアドバイザーによって、レポートサーバーの仮想ディレクトリを直接参照している [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の現在のインストールが検出されました。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|SharePoint モード[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** ます。|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>説明  
- アップグレードアドバイザーによって @no__t の現在のインストールが検出されました-0 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はレポートサーバーの仮想ディレクトリを直接参照しています (例: **http://\<server name >/ReportServer**)。 このような直接参照は現在のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ではサポートされていません。  
+## <a name="description"></a>[説明]  
+ アップグレードアドバイザーによって、レポートサーバーの仮想ディレクトリを直接参照している [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の現在のインストールが検出されました。たとえば、 **http://\<server name >/ReportServer**などです。 このような直接参照は現在のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ではサポートされていません。  
   
 > [!NOTE]  
 >  この規則は警告であり、アップグレードはブロックされません。  
   
 ## <a name="corrective-action"></a>修正措置  
- ドキュメントライブラリの SharePoint ユーザーインターフェイスを使用して参照するか、 **http://\< サーバー名 >/SharePoint サイト >/_vti_bin/reportserver**を使用します。  
+ ドキュメントライブラリの SharePoint ユーザーインターフェイスを使用して参照するか、 **http://\<サーバー名 >/SharePoint サイト >/_vti_bin/reportserver**を使用します。  
   
   

@@ -26,7 +26,7 @@ ms.locfileid: "71952432"
 ## <a name="options"></a>および  
  **[次へ]** ボタンは **[アップグレードを続行する]** チェック ボックスをオンにした場合にのみ利用できます。 チェック ボックスがオフの場合、アップグレードは続行できません。  
   
- 詳細については、「 [Reporting Services のアップグレードと移行](https://go.microsoft.com/fwlink/?LinkID=245628)」 (https://go.microsoft.com/fwlink/?LinkID=245628) を参照してください。  
+ 詳細については、「 [Reporting Services のアップグレードと移行](https://go.microsoft.com/fwlink/?LinkID=245628)」 (https://go.microsoft.com/fwlink/?LinkID=245628)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   

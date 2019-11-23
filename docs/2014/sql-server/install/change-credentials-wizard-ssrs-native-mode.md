@@ -25,7 +25,7 @@ ms.locfileid: "71952324"
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>資格情報の変更ウィザード (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャー ツールの資格情報の変更ウィザードを使用して、レポート サーバーがレポート サーバー データベースへの接続に使用するアカウントを再構成することができます。 資格情報を変更すると、構成マネージャーによって、レポート サーバーで使用中のレポート サーバー データベースのデータベース サーバー上のすべての権限とデータベース ログイン情報が更新されます。  
   
- このウィザードを起動するには、 **構成マネージャーの [データベース] ページにある** [資格情報の変更] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をクリックします。 @No__t 0 Configuration Manager を開始する方法の手順については、「 [ &#40;ネイティブ&#41;モードの Reporting Services Configuration Manager](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+ このウィザードを起動するには、 **構成マネージャーの [データベース] ページにある** [資格情報の変更] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をクリックします。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager を開始する方法の手順については、「[ネイティブモード&#40;&#41;の Reporting Services Configuration Manager](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
   
@@ -37,8 +37,8 @@ ms.locfileid: "71952324"
   
  別の Windows 資格情報を指定することはできません。 別の Windows ユーザーとして接続する場合は、ユーザーとしてログインし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動します。  
   
- **資格情報**  
- レポート サーバーがレポート サーバー データベースへの接続に使用するアカウントを指定します。 指定できる値は、レポート サーバー Web サービスのサービス アカウント、レポート サーバーのホストに使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで定義されている [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベース ログイン、または Windows アカウントです。 Windows アカウントを使用している場合は、レポートサーバーとデータベースが同じコンピューターに存在する場合はローカルアカウント ( *\<computername > \\ < username @ no__t-3*) を指定できます。または、ドメインユーザーアカウント ( *\<domain > \\ <username @ no__t*) が同じドメイン内の異なるコンピューター上にある場合。  
+ **[資格情報]**  
+ レポート サーバーがレポート サーバー データベースへの接続に使用するアカウントを指定します。 指定できる値は、レポート サーバー Web サービスのサービス アカウント、レポート サーバーのホストに使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで定義されている [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベース ログイン、または Windows アカウントです。 Windows アカウントを使用している場合は、レポートサーバーとデータベースが同じコンピューター上に存在する場合はローカルアカウント ( *\<computername >\\< username\>* ) を指定できます。同じドメイン内の異なるコンピューター上にある場合は、ドメインユーザーアカウント ( *\<ドメイン >\\ユーザー名 <* ) を指定できます。\>  
   
  レポート サーバーはデータベース ログインを作成し、指定したアカウントにデータベース権限を割り当てます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71952324"
  各タスクの進行状況を監視します。  
   
 ## <a name="see-also"></a>参照  
- [データベース&#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
+ [データベース&#40;SSRS ネイティブモード&#41; ](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
  [データベースの変更&#40;ウィザード SSRS ネイティブ&#41;モード](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Reporting Services Configuration Manager の F1 ヘルプ&#40;トピック SSRS ネイティブ&#41;モード](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

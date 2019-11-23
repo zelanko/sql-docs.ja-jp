@@ -20,7 +20,7 @@ ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952372"
 ---
 # <a name="sql-server-2005-report-server-web-service-group-detected-upgrade-advisor"></a>SQL Server 2005 レポート サーバー Web サービス グループが検出された (アップグレード アドバイザー)
-  アップグレードアドバイザーによって、@no__t 0 のインスタンスが @no__t 1 のレポートサーバー Web サービスグループに関連付けられていることが検出されました。  
+  アップグレードアドバイザーによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] レポートサーバー Web サービスグループに関連付けられていることが検出されました。  
   
 ||  
 |-|  
@@ -29,13 +29,13 @@ ms.locfileid: "71952372"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>説明  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の場合、@no__t 2 レポートサーバー Web サービスグループは使用されません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするときに、このサービス グループは削除され、このグループまたはグループに属するユーザーのカスタムのアクセス制御リスト (ACL) はアップグレード中に保持されません。  
+## <a name="description"></a>[説明]  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] レポートサーバー Web サービスグループは使用されません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするときに、このサービス グループは削除され、このグループまたはグループに属するユーザーのカスタムのアクセス制御リスト (ACL) はアップグレード中に保持されません。  
   
 ## <a name="corrective-action"></a>修正措置  
- アップグレードする前に、すべてのカスタムの ACL または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] レポート サーバー Web サービス グループに属するユーザーをバックアップします。 これを行うには、[!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] SP2 以降の**Icacls**コマンドラインツール、または @no__t sp2 より前の Windows オペレーティングシステムの cacls.exe コマンドラインツールを使用できます。 これらのツールの構文の詳細については、Windows の製品マニュアルを参照してください。 セットアップが正常に完了した後、カスタムの ACL またはユーザーを、レポート サーバー インスタンスの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバー Windows グループに適用します。 @No__t 0 のレポートサーバー Windows グループは、SQLServerReportServerUser $ @no__t *-1 サーバー*名 >$ @ no__t*instance_name*> の形式になります。  
+ アップグレードする前に、すべてのカスタムの ACL または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] レポート サーバー Web サービス グループに属するユーザーをバックアップします。 これを行うには、[!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] SP2 以降の**Icacls**コマンドラインツール、または [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] sp2 より前の Windows オペレーティングシステムの cacls.exe コマンドラインツールを使用できます。 これらのツールの構文の詳細については、Windows の製品マニュアルを参照してください。 セットアップが正常に完了した後、カスタムの ACL またはユーザーを、レポート サーバー インスタンスの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバー Windows グループに適用します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポートサーバー Windows グループは、SQLServerReportServerUser $\<*computer_name* *>$\<instance_name > の*形式を取ります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アップグレードに関する&#40;問題の Reporting Services アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

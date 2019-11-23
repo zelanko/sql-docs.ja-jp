@@ -69,11 +69,11 @@ ms.locfileid: "73758338"
 |データ型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC、<br /><br /> DataTypeCompatibility=80 が設定された SQL Server Native Client OLE DB アプリケーション|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|[イメージ]|  
+|varbinary(max)|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|テキスト|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
-|XML|XML|XML|Ntext|  
-|CLR UDT (> 8 Kb)|udt|varbinary|[イメージ]|  
+|xml|xml|xml|Ntext|  
+|CLR UDT (8 KB を超える)|udt|varbinary|image|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

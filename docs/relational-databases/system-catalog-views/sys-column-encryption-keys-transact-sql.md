@@ -32,10 +32,10 @@ ms.locfileid: "73593728"
 
   [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)ステートメントで作成された列暗号化キー (ceks) に関する情報を返します。 各行は CEK を表します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK の名前。|  
-|**column_encryption_key_id**|**int**|CEK の ID。|  
+|**column_encryption_key_id**|**int**|CEK の ID です。|  
 |**create_date**|**datetime**|CEK が作成された日付。|  
 |**modify_date**|**datetime**|CEK が最後に変更された日付。|  
   
@@ -52,9 +52,9 @@ ms.locfileid: "73593728"
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Secure enclaves  での Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)  
- [Always Encrypted  のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
- [Secure enclaves を使用して Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+ [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
 
   
   
