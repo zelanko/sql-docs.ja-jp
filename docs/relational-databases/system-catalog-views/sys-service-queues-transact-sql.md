@@ -35,12 +35,12 @@ ms.locfileid: "73982604"
 |-----------------|---------------|-----------------|  
 |**\<継承された列 >**||このビューが継承する列の一覧については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |**max_readers**|**smallint**|キューで許可される同時読み取りの最大数です。|  
-|**activation_procedure**|**nvarchar (776)**|3 つの要素で構成されるアクティブ化プロシージャの名前です。|  
-|**execute_as_principal_id**|**int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> \<プリンシパル > として実行する場合は、指定されたプリンシパルの ID。<br /><br /> -2 = EXECUTE AS OWNER。|  
-|**is_activation_enabled**|**bit**|1 = アクティブ化が有効になっています。|  
-|**is_receive_enabled**|**bit**|1 = 受信は有効になっています。|  
+|**activation_procedure**|**nvarchar(776)**|3 つの要素で構成されるアクティブ化プロシージャの名前です。|  
+|**execute_as_principal_id**|**int**|EXECUTE AS データベース プリンシパルの ID です。<br /><br /> 既定値または EXECUTE AS CALLER の場合は、NULL になります。<br /><br /> \<プリンシパル > として実行する場合は、指定されたプリンシパルの ID。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**is_activation_enabled**|**bit**|1 = アクティブ化は有効です。|  
+|**is_receive_enabled**|**bit**|1 = 受信は有効です。|  
 |**is_enqueue_enabled**|**bit**|1 = エンキューは有効です。|  
-|**is_retention_enabled**|**bit**|1 = メッセージは、ダイアログが終了するまで保持されます。|  
+|**is_retention_enabled**|**bit**|1 = ダイアログが終了するまでメッセージは保持されます。|  
 |**is_poison_message_handling_enabled**|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 1 = 有害なメッセージの処理が有効です。|  
   
 ## <a name="permissions"></a>アクセス許可  

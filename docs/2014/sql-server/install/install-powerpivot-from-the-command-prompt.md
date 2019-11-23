@@ -20,7 +20,7 @@ ms.locfileid: "72798331"
 # <a name="install-powerpivot-from-the-command-prompt"></a>コマンド プロンプトからの PowerPivot のインストール
   コマンド ラインからセットアップを実行して、SQL Server PowerPivot for SharePoint をインストールすることができます。 コマンドには `/ROLE` パラメーターを含め、`/FEATURES` パラメーターを除外する必要があります。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>Prerequisites  
  SharePoint Server 2010 Enterprise Edition Service Pack 1 (SP1) をインストールする必要があります。  
   
  Analysis Services を準備するには、ドメイン アカウントを使用する必要があります。  
@@ -102,6 +102,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 11. サーバーを構成します。 少なくとも、ソリューションを配置し、サービス アプリケーションを作成して、各サイト コレクションで PowerPivot 機能を有効化する必要があります。 詳細については、「サーバーの全体管理での[PowerPivot for SharePoint &#40;2010 powerpivot 構成ツール&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)または[powerpivot サーバーの管理と構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)の構成または修復」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [PowerPivot サービスアカウントの構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [PowerPivot for SharePoint 2010 のインストール](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

@@ -20,15 +20,15 @@ ms.locfileid: "72890498"
 
   次の表に、データマイニング拡張機能 (DMX) のデータマイニングデータ操作言語 (DML) に含まれるステートメントの一覧を示します。  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[DMX &#40;の削除&#41;](../dmx/delete-dmx.md)|マイニングモデルからトレーニング済みコンテンツを削除します。|  
-|[DMX に&#40;挿入&#41;](../dmx/insert-into-dmx.md)|マイニング モデルを学習します。|  
-|[DMX &#40;の選択&#41;](../dmx/select-dmx.md)|マイニングモデルを参照します。|  
-|[&#60;ソースデータクエリ&#62;](../dmx/source-data-query.md)|**INSERT INTO**および**SELECT**ステートメントの両方のデータソースを照会します。|  
-|[DMX &#40;の更新&#41;](../dmx/update-dmx.md)|マイニング モデルの内容を変更します。|  
+|[削除&#40;DMX&#41;](../dmx/delete-dmx.md)|マイニング モデルからトレーニング済みのコンテンツを消去します。|  
+|[挿入&#40;DMX&#41;](../dmx/insert-into-dmx.md)|マイニング モデルを学習します。|  
+|[SELECT&#40;DMX&#41;](../dmx/select-dmx.md)|マイニング モデルを参照します。|  
+|[&#60;ソースデータクエリ&#62;](../dmx/source-data-query.md)|両方のデータ ソースにクエリ**INSERT INTO**と**SELECT**ステートメント。|  
+|[UPDATE &#40;DMX&#41;](../dmx/update-dmx.md)|マイニング モデルの内容を変更します。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [データマイニング拡張&#40;機能&#41; DMX データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   

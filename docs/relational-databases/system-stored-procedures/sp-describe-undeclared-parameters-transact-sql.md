@@ -41,40 +41,40 @@ sp_describe_undeclared_parameters
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
   
-## <a name="arguments"></a>[引数]  
-1つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを `[ \@tsql = ] 'Transact-SQL\_batch'` します。 *SQL_batch に*は、 **nvarchar (** _n_ **)** または**nvarchar (max)** を指定できます。  
+## <a name="arguments"></a>引数  
+1つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを `[ \@tsql = ] 'Transact-SQL\_batch'` します。 *Transact-sql SQL_batch*は**nvarchar (** _n_ **)** または**nvarchar (max)** です。  
   
-`[ \@params = ] N'parameters'` \@params は、sp_executesql の動作と同様に、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチのパラメーターの宣言文字列を提供します。 *パラメーター*には、 **nvarchar (** _n_ **)** または**nvarchar (max)** を指定できます。  
+`[ \@params = ] N'parameters'` \@params は sp_executesql の動作と同様に、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチのパラメーターの宣言文字列を提供します。 *パラメーター*には、 **nvarchar (** _n_ **)** または**nvarchar (max)** を指定できます。  
   
- *SQL_batch*に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定します。 文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 ステートメント内の Transact-sql ステートメントまたはバッチにパラメーターが含まれていない場合、\@params は必要ありません。 このパラメーターの既定値は NULL です。  
+ は、 *Transact SQL_batch*に埋め込まれているすべてのパラメーターの定義を含む1つの文字列です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 ステートメント内の Transact-sql ステートメントまたはバッチにパラメーターが含まれていない場合、\@params は必要ありません。 このパラメーターの既定値は NULL です。  
   
  Datatype  
  パラメーターのデータ型です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **sp_describe_undeclared_parameters**は、成功した場合、常に戻り値0を返します。 プロシージャがエラーをスローし、プロシージャが RPC として呼び出された場合、返される状態は、error_type の _exec_describe_first_result_set 列に記述されているエラーの種類によって設定されます。 プロシージャが [!INCLUDE[tsql](../../includes/tsql-md.md)]から呼び出された場合、エラーが発生した場合でも、戻り値は常に0になります。  
+ 成功した場合、 **sp_describe_undeclared_parameters**は常に戻り値0を返します。 プロシージャがエラーをスローし、プロシージャが RPC として呼び出された場合、返される状態は、dm_exec_describe_first_result_set の error_type 列で説明されているエラーの種類によって設定されます。 プロシージャが [!INCLUDE[tsql](../../includes/tsql-md.md)]から呼び出された場合、エラーが発生した場合でも、戻り値は常に0になります。  
   
 ## <a name="result-sets"></a>結果セット  
  **sp_describe_undeclared_parameters**は、次の結果セットを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|結果セット内のパラメーターの位置を表す序数を格納します。 最初のパラメーターの位置は 1 で指定されます。|  
 |**name**|**sysname NOT NULL**|パラメーターの名前を格納します。|  
-|**suggested_system_type_id**|**int NOT NULL**|**System_type_id**で指定されたパラメーターのデータ型のデータ型のデータ型を格納します。<br /><br /> CLR 型の場合、 **system_type_name**列が NULL を返す場合でも、この列は値240を返します。|  
-|**suggested_system_type_name**|**nvarchar (256) NULL**|データ型の名前を格納します。 パラメーターのデータ型に対して指定された引数 (長さ、有効桁数、小数点以下桁数など) を含めます。 データ型がユーザー定義の別名型である場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義データ型である場合は、この列に NULL が返されます。 パラメーターの型を推測できない場合は、NULL が返されます。|  
+|**suggested_system_type_id**|**int NOT NULL**|に指定されているパラメーターのデータ型の**system_type_id**を格納します。<br /><br /> CLR 型の場合、 **system_type_name**列が NULL を返す場合でも、この列は値240を返します。|  
+|**suggested_system_type_name**|**nvarchar (256) NULL**|データ型の名前を格納します。 パラメーターのデータ型に対して指定された引数 (長さ、有効桁数、小数点以下桁数など) を含めます。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義データ型である場合は、この列に NULL が返されます。 パラメーターの型を推測できない場合は、NULL が返されます。|  
 |**suggested_max_length**|**smallint NOT NULL**|「Sys. 列」を参照してください。 **max_length**列の説明。|  
 |**suggested_precision**|**tinyint NOT NULL**|「Sys. 列」を参照してください。 有効桁数列の説明。|  
 |**suggested_scale**|**tinyint NOT NULL**|「Sys. 列」を参照してください。 スケール列の説明。|  
-|**suggested_user_type_id**|**int NULL**|CLR 型と別名型の場合は、user_type_id で指定されている列のデータ型のデータ型を格納します。 それ以外の場合は NULL です。|  
-|**suggested_user_type_database**|**sysname NULL**|CLR 型と別名型の場合は、型が定義されているデータベースの名前を格納します。 それ以外の場合は NULL です。|  
-|**suggested_user_type_schema**|**sysname NULL**|CLR 型と別名型の場合は、型が定義されているスキーマの名前を格納します。 それ以外の場合は NULL です。|  
-|**suggested_user_type_name**|**sysname NULL**|CLR 型と別名型の場合は、型の名前を格納します。 それ以外の場合は NULL です。|  
+|**suggested_user_type_id**|**int NULL**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
+|**suggested_user_type_database**|**sysname NULL**|CLR 型と別名型の場合、その型が定義されたデータベースの名前を格納します。 それ以外の場合は NULL です。|  
+|**suggested_user_type_schema**|**sysname NULL**|CLR 型と別名型の場合、その型が定義されたスキーマの名前を格納します。 それ以外の場合は NULL です。|  
+|**suggested_user_type_name**|**sysname NULL**|CLR 型と別名型の場合、その型の名前を格納します。 それ以外の場合は NULL です。|  
 |**suggested_assembly_qualified_type_name**|**nvarchar (4000) NULL**|CLR 型の場合は、型を定義するアセンブリおよびクラスの名前を返します。 それ以外の場合は NULL です。|  
-|**suggested_xml_collection_id**|**int NULL**|Xml_collection_id に指定されているパラメーターのデータ型のデータ型を格納します。 返される型が XML スキーマコレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**suggested_xml_collection_database**|**sysname NULL**|この型に関連付けられている XML スキーマコレクションが定義されているデータベースが含まれます。 返される型が XML スキーマコレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**suggested_xml_collection_schema**|**sysname NULL**|この型に関連付けられている XML スキーマコレクションが定義されているスキーマを格納します。 返される型が XML スキーマコレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**suggested_xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 返される型が XML スキーマコレクションに関連付けられていない場合、この列は NULL を返します。|  
+|**suggested_xml_collection_id**|**int NULL**|パラメーターのデータ型の xml_collection_id を格納します。これは、sys. columns で指定されています。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**suggested_xml_collection_database**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているデータベースを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**suggested_xml_collection_schema**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているスキーマを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**suggested_xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**suggested_is_xml_document**|**bit NOT NULL**|返される型が XML であり、その型が XML ドキュメントであることが保証されている場合は1を返します。 それ以外の場合は0を返します。|  
 |**suggested_is_case_sensitive**|**bit NOT NULL**|列が大文字と小文字を区別する文字列型の場合は1、それ以外の場合は0を返します。|  
 |**suggested_is_fixed_length_clr_type**|**bit NOT NULL**|この列が固定長の CLR 型の場合は 1、それ以外の場合は 0 を返します。|  
@@ -84,7 +84,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|内部使用です。|  
 |**suggested_tds_length**|**int NOT NULL**|内部使用です。|  
   
-## <a name="remarks"></a>備考  
+## <a name="remarks"></a>Remarks  
  **sp_describe_undeclared_parameters**は常に0の戻り値の状態を返します。  
   
  最も一般的な使用方法は、パラメーターを含み、それらのパラメーターを任意の方法で処理する必要がある [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがアプリケーションで指定される場合です。 例としては、ユーザーが ODBC パラメーター構文を使用してクエリを提供するユーザーインターフェイス (ODBCTest や RowsetViewer など) があります。 アプリケーションは、パラメーターの数を動的に検出し、各パラメーターの入力をユーザーに求める必要があります。  
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  たとえば、クエリ `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`を考えてみます。 次に、E (\@p1) = \@p1、E (\@p2) = \@p2 + c1、TT (\@p1) は、宣言された戻り値のデータ型は dbo です。 TT (\@p2) は、dbo. データ型の宣言されたパラメーターのデータ型です。  
   
- \@p が手順 2. の先頭に示されている式に含まれていない場合、型推論アルゴリズムは、E (\@p) が \@p を含む最大のスカラー式であると判断し、型推論アルゴリズムはターゲットデータを計算しません。E (\@p) に「TT (\@p)」と入力します。 たとえば、クエリが SELECT `@p + 2` の場合、E (\@p) = \@p + 2,、TT (\@p) はありません。  
+ \@p が手順2の先頭に記載されている式に含まれていない場合、型推論アルゴリズムは、E (\@p) が \@p を含む最大のスカラー式であると判断し、型推論アルゴリズムは E (\@p) のターゲットデータ型 TT (\@p) を計算しません。 たとえば、クエリが SELECT `@p + 2` の場合、E (\@p) = \@p + 2,、TT (\@p) はありません。  
   
  **手順 3.**  
   
@@ -166,7 +166,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   単純な推論  
   
-     E (\@p) = \@p および TT (\@p) が存在する場合、つまり、p が手順 2. の先頭に示されているいずれかの式に直接引数として指定されて \@いる場合、型推論アルゴリズムによって、\@p のデータ型が TT に推測されます。\@p)。 例 :  
+     E (\@p) = \@p と TT (\@p) が存在する場合、\@つまり、p が手順 2. の先頭に記載されているいずれかの式に直接引数として指定されていると、型推論アルゴリズムによって \@p のデータ型が TT (\@p) に推測されます。 例 :  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -248,7 +248,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  最後の例として、クエリ `SELECT NULL + @p`を指定した場合は、int が型 (c) に変換されるため、\@p に対して**int**が選択されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  \@tsql 引数を実行する権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -273,7 +273,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>「  
- [sp_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [_exec_describe_first_result_set &#40;transact-sql の&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [_exec_describe_first_result_set_for_object &#40;transact-sql (dm)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+## <a name="see-also"></a>参照  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [dm_exec_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

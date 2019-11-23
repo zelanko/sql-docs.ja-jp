@@ -32,7 +32,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70176188"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
-  このトピックでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールの中心となるコンポーネントである [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーの概要を説明します。 処理エンジンのペアと、認証、データ処理、表示、配信の各操作を行う用途別拡張機能の集合で構成されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport) 」セクションを参照してください。  
+  このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インストールの中心となるコンポーネントである [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーの概要を説明します。 処理エンジンのペアと、認証、データ処理、表示、配信の各操作を行う用途別拡張機能の集合で構成されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport) 」セクションを参照してください。  
   
  **インストール:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストールの詳細については、以下を参照してください。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70176188"
   
 -   [SharePoint &#40;PowerPivot と Reporting Services を使用した SQL Server BI 機能のインストール&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Azure**:Azure Virtual Machines での[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の使用の詳細については、次を参照してください。  
+ **Azure**: azure Virtual Machines で [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用する方法の詳細については、次を参照してください。  
   
 -   [Azure Virtual Machines のビジネスインテリジェンスを SQL Server](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)します。  
   
@@ -89,17 +89,17 @@ ms.locfileid: "70176188"
 |**カスタム セキュリティ拡張機能**|はい|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のカスタム セキュリティ拡張機能は、レポート サーバーに配置したり使用することはできません。 レポート サーバーには特別な用途のセキュリティ拡張機能が用意されており、SharePoint 統合モードで動作するようにレポート サーバーを構成するときは常に使用されます。 このセキュリティ拡張機能は内部コンポーネントで、統合操作に必要です。|  
 |**構成マネージャー**|はい|**\*\* 重要 \*\*** 構成マネージャーは、SharePoint モードのレポート サーバーの管理には使用できません。 代わりに、SharePoint サーバーの全体管理を使用してください。|  
 |**レポート マネージャー**|はい|レポート マネージャーは、SharePoint モードの管理には使用できません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。|  
-|**リンク レポート**|はい|No.|  
-|**個人用レポート**|はい|いいえ|  
-|**個人用サブスクリプション** とバッチ処理方式|はい|いいえ|  
-|**データ警告**|いいえ|はい|  
-|**Power View**|いいえ|はい<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、「 [Planning for Reporting Services and &#40;Power View browser&#41; Support Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md) 」を参照してください。|  
+|**リンク レポート**|はい|不可。|  
+|**個人用レポート**|はい|[いいえ]|  
+|**個人用サブスクリプション** とバッチ処理方式|はい|[いいえ]|  
+|**データ警告**|[いいえ]|はい|  
+|**Power View**|[いいえ]|はい<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、「 [Planning for Reporting Services and &#40;Power View browser&#41; Support Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md) 」を参照してください。|  
 |**.RDL レポート**|はい|はい<br /><br /> .RDL レポートは、ネイティブ モードまたは SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーで実行できます。|  
-|**.RDLX レポート**|いいえ|はい<br /><br /> Power View .RDLX レポートは、SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでのみ実行できます。|  
-|**SharePoint リストの拡張機能用の SharePoint ユーザー トークン資格情報**|いいえ|はい|  
-|**インターネットに直接つながっている配置の AAM 領域**|いいえ|はい|  
-|**SharePoint のバックアップと回復**|いいえ|はい|  
-|**ULS ログのサポート**|いいえ|はい|  
+|**.RDLX レポート**|[いいえ]|はい<br /><br /> Power View .RDLX レポートは、SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでのみ実行できます。|  
+|**SharePoint リストの拡張機能用の SharePoint ユーザー トークン資格情報**|[いいえ]|はい|  
+|**インターネットに直接つながっている配置の AAM 領域**|[いいえ]|はい|  
+|**SharePoint のバックアップと回復**|[いいえ]|はい|  
+|**ULS ログのサポート**|[いいえ]|はい|  
   
 ##  <a name="bkmk_nativemode"></a>ネイティブモード  
  ネイティブ モードでは、レポート サーバーはスタンドアロンのアプリケーション サーバーとして、レポートとレポート モデルの表示、管理、処理、配信の機能をすべて提供します。 これはレポート サーバー インスタンスの既定のモードです。 セットアップ時にネイティブ モードのレポート サーバーを構成してインストールすることも、セットアップの完了後にレポート サーバーを構成してネイティブ モードで操作できるようにすることもできます。  
@@ -113,7 +113,7 @@ ms.locfileid: "70176188"
  サード パーティの開発者は、追加の拡張機能を作成して、レポート サーバーの処理能力を置き換えたり、拡張したりできます。 アプリケーション開発者が利用できるプログラマティック インターフェイスの詳細については、「 [テクニカル リファレンス](../../2014/reporting-services/technical-reference-ssrs.md)」を参照してください。  
   
 ###  <a name="bkmk_nativewithwebparts"></a>SharePoint Web パーツでのネイティブモード  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]には、2.0 以降、または SharePoint Portal Server 2003 以降[!INCLUDE[winSPServ](../includes/winspserv-md.md)]のインスタンスにインストールして登録できる2つの Web パーツが用意されています。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の前のリリースで導入されたものです。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、2.0 以降、または SharePoint Portal Server 2003 以降 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] のインスタンスにインストールして登録できる Web パーツが2つ用意されています。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の前のリリースで導入されたものです。  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint モード  
  SharePoint モードでは、レポート サーバーが SharePoint サーバー ファーム内で実行される必要があります。 レポート サーバーの処理、表示、および管理機能は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスを実行する SharePoint アプリケーション サーバーおよび 1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションから提供されます。 レポート サーバーのコンテンツや操作へのフロントエンド アクセスを、SharePoint サイトが提供します。  
@@ -130,7 +130,7 @@ ms.locfileid: "70176188"
   
  ![SSRS SharePoint の機能のアーキテクチャ](media/rs-sharepoint-architecture.gif "SSRS SharePoint の機能のアーキテクチャ")  
   
-||説明|  
+||[説明]|  
 |-|-----------------|  
 |**(1)**|Web サーバーまたは Web フロントエンド (WFE)。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインは、レポートや [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理ページの表示などの Web アプリケーション機能を使用してデータ ソースやサブスクリプションの管理などのタスクを実行する場合に、それらの機能を使用する各 Web サーバーにインストールする必要があります。|  
 |**(2)**|アドインによってインストールされる URL と SOAP エンドポイントによって、クライアントが [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス プロキシ経由でアプリケーション サーバーと通信できるようになります。|  
@@ -150,9 +150,9 @@ ms.locfileid: "70176188"
   
  Reporting Services が提供する既定の拡張機能を使用すると、カスタム コンポーネントを開発することなく、すべてのサーバー機能を使用できます。 次の表に示す既定の拡張機能は、完全なレポート サーバー インスタンスの一部であり、すぐに使用できる機能を提供します。  
   
-|型|既定値|  
+|[型]|既定値|  
 |----------|-------------|  
-|認証|既定のレポート サーバー インスタンスでは、Windows 認証がサポートされます。ドメインで有効になっていれば、権限の借用機能や委任機能もサポートされます。|  
+|[認証]|既定のレポート サーバー インスタンスでは、Windows 認証がサポートされます。ドメインで有効になっていれば、権限の借用機能や委任機能もサポートされます。|  
 |データ処理|既定のレポート サーバー インスタンスには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、Hyperion Essbase、SAPBW、OLE DB、並列データ ウェアハウス、ODBC の各データ ソース用のデータ処理拡張機能があります。|  
 |表示|既定のレポート サーバー インスタンスには、HTML、Excel、CSV、XML、Image、Word、SharePoint リスト、および PDF 用の表示拡張機能があります。|  
 |Delivery|既定のレポート サーバー インスタンスには、電子メールの配信拡張機能とファイル共有の配信拡張機能があります。 レポート サーバーが SharePoint 統合用に構成されている場合は、レポートを SharePoint ライブラリに保存する配信拡張機能を使用できます。|  
@@ -181,7 +181,7 @@ ms.locfileid: "70176188"
  [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](report-server/report-server-database-ssrs-native-mode.md)   
  [セキュリティ拡張機能の実装](extensions/security-extension/implementing-a-security-extension.md)   
  [データ処理拡張機能の実装](extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services でサポートされるデータ ソース (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [PowerShell を使用して SSRS を管理する方法](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

@@ -83,7 +83,7 @@ WHERE where_condition
   
  **DatabaseName**、 **SchemaName**、および**ObjectName**と共に使用できるのは、`=` のオペランドだけです。 その他の式は、これらのイベント プロパティと共に使用することはできません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  WMI Provider for Server Events 構文の*where_condition*によって、次のことが決定されます。  
   
 -   プロバイダーが指定された*event_type*を取得しようとするスコープ。サーバーレベル、データベースレベル、またはオブジェクトレベル (現在サポートされている唯一のオブジェクトは queue) です。 最終的に、このスコープは対象データベースで作成されたイベント通知の種類を決定します。 このプロセスは、イベント通知登録と呼ばれます。  
@@ -123,7 +123,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>B. データベース スコープのイベントを照会する  
+### <a name="b-querying-for-events-at-the-database-scope"></a>b. データベース スコープのイベントを照会する  
  次の WQL クエリは、`AdventureWorks` データベース内で発生し、`DDL_DATABASE_LEVEL_EVENTS` イベント グループに存在するイベントの特定のイベント プロパティを取得します。  
   
 ```  

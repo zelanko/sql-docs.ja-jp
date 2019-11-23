@@ -21,7 +21,7 @@ ms.locfileid: "72688681"
   `CompoundCurve` は、geometry 型または geography 型の 0 個以上の連続する `CircularString` インスタンスあるいは  `LineString` インスタンスのコレクションです。  
   
 > [!IMPORTANT]  
->  @No__t_0 サブタイプを含め、このリリースの新しい空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能」](https://go.microsoft.com/fwlink/?LinkId=226407)をダウンロードしてください。  
+>  `CompoundCurve` サブタイプを含め、このリリースの新しい空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能」](https://go.microsoft.com/fwlink/?LinkId=226407)をダウンロードしてください。  
   
  空の `CompoundCurve` インスタンスをインスタンス化することはできますが、`CompoundCurve` を有効にするには、次の条件を満たす必要があります。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "72688681"
   
 2.  `CircularString` インスタンスまたは `LineString` インスタンスのシーケンスが連続している。  
   
- @No__t_0 に複数の `CircularString` と `LineString` インスタンスのシーケンスが含まれている場合、最後のインスタンスを除くすべてのインスタンスの終了エンドポイントは、シーケンス内の次のインスタンスの開始エンドポイントである必要があります。 これは、シーケンス内の前のインスタンスの終点が (4 3 7 2) である場合は、シーケンス内の次のインスタンスの始点が (4 3 7 2) になる必要があることを意味します。 点の Z (標高) 値および M (メジャー) 値も同じである必要があることに注意してください。 これら 2 つの点が異なる場合は、 `System.FormatException` がスローされます。 `CircularString` の点は、Z 値または M 値を持つ必要はありません。 前のインスタンスの終点に対して Z 値または M 値が指定されていない場合、次のインスタンスの始点には Z 値または M 値を含めることはできません。 前のシーケンスの終点が (4 3) である場合、次のシーケンスの始点は (4 3) となり、(4 3 7 2) を設定することはできません。 `CompoundCurve` インスタンスのすべての点は、Z 値をまったく持たないか、または同じ Z 値を持つ必要があります。  
+ `CompoundCurve` に複数の `CircularString` と `LineString` インスタンスのシーケンスが含まれている場合、最後のインスタンスを除くすべてのインスタンスの終了エンドポイントは、シーケンス内の次のインスタンスの開始エンドポイントである必要があります。 これは、シーケンス内の前のインスタンスの終点が (4 3 7 2) である場合は、シーケンス内の次のインスタンスの始点が (4 3 7 2) になる必要があることを意味します。 点の Z (標高) 値および M (メジャー) 値も同じである必要があることに注意してください。 これら 2 つの点が異なる場合は、 `System.FormatException` がスローされます。 `CircularString` の点は、Z 値または M 値を持つ必要はありません。 前のインスタンスの終点に対して Z 値または M 値が指定されていない場合、次のインスタンスの始点には Z 値または M 値を含めることはできません。 前のシーケンスの終点が (4 3) である場合、次のシーケンスの始点は (4 3) となり、(4 3 7 2) を設定することはできません。 `CompoundCurve` インスタンスのすべての点は、Z 値をまったく持たないか、または同じ Z 値を持つ必要があります。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
  次の図は、有効な `CompoundCurve` 型を示しています。  
@@ -79,7 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ```  
   
- `@g3` は、`CircularString` インスタンスが有効であるため、有効です。 @No__t_0 インスタンスの有効性の詳細については、「 [CircularString](circularstring.md)」を参照してください。  
+ `@g3` は、`CircularString` インスタンスが有効であるため、有効です。 `CircularString` インスタンスの有効性の詳細については、「 [CircularString](circularstring.md)」を参照してください。  
   
  次の例は、無効な `CompoundCurve` インスタンスを示しています。  
   
@@ -110,7 +110,7 @@ DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>C. CompoundCurve を使用して geography インスタンスをインスタンス化する  
- 次の例は、`CompoundCurve` を使用して `geography` インスタンスを宣言およびインスタンス化する方法を示しています。  
+ 次の例は、`geography` を使用して `CompoundCurve` インスタンスを宣言およびインスタンス化する方法を示しています。  
   
 ```sql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -129,7 +129,7 @@ SELECT @g1.STLength(), @g2.STLength();
  `@g1` と `@g2` の長さは同じです。 この例に示すように、`CompoundCurve` インスタンスは、1 つまたは複数の `LineString` インスタンスを格納できます。  
   
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. 複数の CircularString を含む CompoundCurve を使用して geometry インスタンスをインスタンス化する  
- 次の例は、2 つの異なる `CircularString` インスタンスを使用して `CompoundCurve`を初期化する方法を示しています。  
+ 次の例は、2 つの異なる `CircularString` インスタンスを使用して `CompoundCurve` を初期化する方法を示しています。  
   
 ```sql  
 DECLARE @g geometry;  
@@ -185,14 +185,14 @@ Circle Two12.566370...
   
  円2の境界は約 4&#x03c0; (4 * pi) です。これは、境界の実際の値です。 ただし、Circle One の境界はきわめて不正確です。 Circle One の `CompoundCurve` インスタンスは、1 つの円弧 (ABC) と 2 つの線分 (CD、DA) を格納します。 `CompoundCurve` インスタンスは、円を定義するために 2 つの円弧 (ABC、CDA) を格納する必要があります。 `LineString` インスタンスは、2 番目の点のセット (4 2, 2 4, 0 2) を Circle One の `CompoundCurve` インスタンスに定義します。 ここで、 `CircularString` 内の `CompoundCurve`インスタンスを明示的に宣言する必要があります。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [STIsValid &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
  [STLength &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
  [STEndpoint &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
- [MultiLineString](linestring.md)   
+ [LineString](linestring.md)   
  [CircularString](circularstring.md)   
  [空間データ型の概要](spatial-data-types-overview.md)   
- [Point](point.md)  
+ [ポイント](point.md)  
   
   

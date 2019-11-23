@@ -39,7 +39,7 @@ ms.locfileid: "72797780"
   
 5.  検証に成功しますが、登録に失敗します。  
   
- 上記の例を使用して、この問題の回避策として、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続し、"sa" を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに登録し、"Domain_1" からプロキシアカウントを指定します。  
+ 上記の例を使用してこの問題の回避策として、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続し、"sa" を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに登録し、"Domain_1" からプロキシアカウントを指定します。  
   
 ## <a name="failed-wmi-validation"></a>WMI 検証の失敗  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスで WMI が正しく構成されていない場合は、UCP の作成操作とマネージド インスタンスの登録操作で警告が表示されますが、操作はブロックされません。 また、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントが目的の WMI クラスに対する権限を持たないように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント アカウントの構成を変更した場合、影響を受ける [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスでデータ収集を行うと UCP へのアップロードに失敗します。 この結果、UCP に灰色のアイコンが表示されます。  
@@ -114,7 +114,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  SSMS の **オブジェクト エクスプローラー**で、 **[セキュリティ]** ノードを展開し、 **[資格情報]** ノードを展開します。  
   
-    2.  **UtilityAgentProxyCredential_\<GUID >** を右クリックし、**プロパティ** を選択します。  
+    2.  **UtilityAgentProxyCredential_\<GUID >** を右クリックし、 **[プロパティ]** を選択します。  
   
     3.  [資格情報のプロパティ] ダイアログボックスで、必要に応じて**UtilityAgentProxyCredential_\<GUID >** 資格情報を更新します。  
   
@@ -164,6 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  ユーザーをこのグループに追加する前に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスが既に UCP に登録されている場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスを再起動します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server のリソース正常性のトラブルシューティング &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

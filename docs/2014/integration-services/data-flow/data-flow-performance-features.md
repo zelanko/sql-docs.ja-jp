@@ -110,7 +110,7 @@ ms.locfileid: "73637821"
   
 -   データを並べ替える並べ替えキー列を指定します。  
   
- 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。  
+ 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
   
  データ フロー内でデータを並べ替える必要がある場合は、並べ替え処理の回数を可能な限り少なくしたデータ フローをデザインすることで、パフォーマンスを向上させることができます。 たとえば、データ フローでマルチキャスト変換を使用してデータセットをコピーするとします。 この場合、変換後の複数の出力に対して並べ替えを行うのではなく、マルチキャスト変換の実行前に一度だけデータセットの並べ替えを行います。  
   
@@ -132,13 +132,13 @@ ms.locfileid: "73637821"
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>あいまい参照変換とあいまいグループ化変換  
  あいまい参照変換とあいまいグループ化変換のパフォーマンスの最適化については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](https://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
   
-#### <a name="lookup-transformation"></a>参照変換  
+#### <a name="lookup-transformation"></a>Lookup Transformation  
  必要な列のみを参照する SELECT ステートメントを入力することによって、メモリ内の参照データのサイズを最小限に抑えます。 この方法は、テーブルまたはビュー全体を選択して大量の不要なデータを返す場合に比べてパフォーマンスに優れています。  
   
 #### <a name="merge-join-transformation"></a>マージ結合変換  
  マイクロソフトが行った変更により、マージ結合変換によってメモリが過度に消費されるリスクが軽減したため、`MaxBuffersPerInput` プロパティの値を構成する必要はなくなりました。 この問題は、マージ結合の複数の入力からデータが不均一なレートで生成される場合に発生することがありました。  
   
-#### <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換  
+#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
  緩やかに変化するディメンション ウィザードおよび緩やかに変化するディメンション変換は、ほとんどのユーザーのニーズを満たす汎用ツールです。 ただし、ウィザードで生成されるデータ フローは、パフォーマンスのために最適化されていません。  
   
  通常、緩やかに変化するディメンション変換の中で最も低速なコンポーネントは、一度に 1 行に対して UPDATE を実行する OLE DB コマンド変換です。 したがって、緩やかに変化するディメンション変換のパフォーマンスを向上させる最も効果的な方法は、OLE DB コマンド変換を置き換えることです。 この変換は、更新するすべての行をステージング テーブルに保存する変換先コンポーネントに置き換えることができます。 その後、同時にすべての行に対して単一セット ベースの Transact-SQL UPDATE を実行する SQL 実行タスクを追加できます。  
@@ -159,7 +159,7 @@ ms.locfileid: "73637821"
   
  **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。 進行状況レポートを無効にすると、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で複雑なパッケージを実行する際のパフォーマンスを向上させることができます。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [マージ変換およびマージ結合変換用にデータを並べ替える](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
@@ -172,7 +172,7 @@ ms.locfileid: "73637821"
   
 -   sqlcat.com の技術資料「 [同期変換を複数タスクに分割してパイプラインのスループットを向上](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)」  
   
--   msdn.microsoft.com の技術記事「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)」  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)  
   
 -   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](https://go.microsoft.com/fwlink/?LinkId=220817)」  
   

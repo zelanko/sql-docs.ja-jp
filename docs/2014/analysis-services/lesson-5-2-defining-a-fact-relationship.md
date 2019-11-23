@@ -69,7 +69,7 @@ ms.locfileid: "69493863"
   
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。  
   
-17. 新しい**Sales Order Number**属性の**Name**プロパティを `Order Number` に変更し、 **OrderBy**プロパティを**Key**に変更します。  
+17. 新しい**Sales Order Number**属性の**Name**プロパティを `Order Number`に変更し、 **OrderBy**プロパティを**Key**に変更します。  
   
 18. **[階層]** ペインで、`Order Number` と**項目の説明**のレベルを含む**Internet Sales Orders**ユーザー階層をこの順序で作成します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69493863"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [多対多関係の定義](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

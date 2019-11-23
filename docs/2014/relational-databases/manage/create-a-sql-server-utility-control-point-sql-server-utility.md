@@ -225,6 +225,6 @@ $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.Sq
 $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)   
  [SQL Server ユーティリティのトラブルシューティング](../../database-engine/troubleshoot-the-sql-server-utility.md)  

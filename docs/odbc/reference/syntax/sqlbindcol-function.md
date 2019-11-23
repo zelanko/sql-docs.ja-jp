@@ -114,7 +114,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>診断  
  **SQLBindCol**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLBindCol**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|[エラー]|[説明]|  
+|SQLSTATE|エラー|[説明]|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限されたデータ型の属性違反|(DM) *Columnnumber*引数が0で、 *TargetType*引数が SQL_C_BOOKMARK または SQL_C_VARBOOKMARK ではありませんでした。|  

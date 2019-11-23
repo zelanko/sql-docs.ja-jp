@@ -32,7 +32,7 @@ ms.locfileid: "73785958"
   
  次の表に、結果セットによって返される列と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用して**udt**データ型および**xml**データ型を処理するように拡張された列を示します。  
   
-|列名|説明|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|UDT (ユーザー定義型) を含むカタログの名前を返します。|  
 |SS_UDT_SCHEMA_NAME|UDT を含むスキーマの名前を返します。|  

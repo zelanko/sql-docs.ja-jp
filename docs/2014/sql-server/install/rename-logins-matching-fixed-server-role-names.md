@@ -28,7 +28,7 @@ ms.locfileid: "72278215"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>[説明]  
  以下の固定サーバー ロール名は予約されているため、ユーザー定義ログイン名として使用できません。  
   
 -   **sysadmin**  
@@ -60,9 +60,9 @@ ms.locfileid: "72278215"
   
 2.  ログイン名を削除します。  
   
-3.  新しいログインを作成するには、 **sp_addlogin**システムプロシージャを使用します。 対応するログインごとに、手順 1. で返された SID を **\@sid**パラメーターに指定します。  
+3.  新しいログインを作成するには、 **sp_addlogin**システムプロシージャを使用します。 対応する各ログインの **\@sid**パラメーターで、手順 1. で返された sid を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 Upgrade Advisor &#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   

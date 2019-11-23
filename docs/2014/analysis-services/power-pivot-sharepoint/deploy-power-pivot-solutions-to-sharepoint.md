@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  最初に Web アプリケーション ソリューションをサーバーの全体管理に配置し、その後で、PowerPivot データに対する要求をサポートする追加の Web アプリケーションに後のソリューションを配置します。 サーバーの全体管理に web アプリケーションソリューションを配置するには、PowerPivot 構成ツールまたは PowerShell コマンドレットを使用する必要があります。 その他すべての Web アプリケーションには、サーバーの全体管理または PowerShell を使用して、Web アプリケーション ソリューションを手動で配置できます。  
   
-|解決方法|Description|  
+|解決方法|[説明]|  
 |--------------|-----------------|  
 |powerpivotfarm.wsp|Microsoft.AnalysisServices.SharePoint.Integration.dll をグローバル アセンブリに追加する。<br /><br /> Microsoft.AnalysisServices.ChannelTransport.dll をグローバル アセンブリに追加する。<br /><br /> 機能とリソース ファイルをインストールし、コンテンツ タイプを登録する。<br /><br /> PowerPivot ギャラリー ライブラリやデータ フィード ライブラリのライブラリ テンプレートを追加する。<br /><br /> サービス アプリケーションの構成、PowerPivot 管理ダッシュボード、データ更新、および PowerPivot ギャラリー用のアプリケーション ページを追加する。|  
 |[powerpivotwebapp.wsp]|Web フロントエンドの Web サーバー拡張機能フォルダーに Microsoft.AnalysisServices.SharePoint.Integration.dll リソース ファイルを追加する。<br /><br /> Web フロントエンドに PowerPivot Web サービスを追加する。<br /><br /> PowerPivot ギャラリーのサムネイル画像生成を追加する。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [アップグレード PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Windows PowerShell を使用した PowerPivot の構成](power-pivot-configuration-using-windows-powershell.md)  

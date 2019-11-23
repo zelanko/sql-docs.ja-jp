@@ -30,11 +30,11 @@ ms.locfileid: "72782823"
 > [!NOTE]  
 >  これらのパフォーマンス オブジェクトは、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置ではなく、現在のサーバーに適用されます。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モード  
   
  パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルの「[ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx)」(https://msdn.microsoft.com/library/w4bz2147.aspx) を参照してください。  
   
- SharePoint モードのパフォーマンスカウンタに関連する情報については、「 [msrs 2014 Web Service Sharepoint モードのパフォーマンスカウンター」および「msrs 2014 Windows &#40;Service Sharepoint&#41;mode performance Objects sharepoint mode](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)」を参照してください。  
+ SharePoint モードのパフォーマンス カウンターに関連する情報は、次を参照してください[MSRS 2014 Web Service SharePoint Mode と MSRS 2014 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)。  
   
  **このトピックの内容:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72782823"
   
  次の表に、`MSRS 2014 Web Service` パフォーマンスオブジェクトに含まれているカウンターの一覧を示します。  
   
-|カウンター|Description|  
+|カウンター|[説明]|  
 |-------------|-----------------|  
 |`Active Sessions`|アクティブなセッションの数。 このカウンターは、レポートの実行によって生成されたすべてのブラウザー セッション (アクティブであるかどうかにかかわらず) の累積数を表示します。<br /><br /> セッション レコードが削除されると、カウンターの値は減少します。 既定では、セッションは利用されない状態が 10 分間続くと削除されます。|  
 |`Cache Hits/Sec`|キャッシュされたレポートに対する 1 秒あたりの要求数。 これはレポートの再表示の要求であり、キャッシュから直接処理されるレポートの要求ではありません (このトピックの `Total Cache Hits` を参照してください)。|  
@@ -79,7 +79,7 @@ ms.locfileid: "72782823"
   
  次の表は、`MSRS 2014 Windows Service` パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
-|カウンター|Description|  
+|カウンター|[説明]|  
 |-------------|-----------------|  
 |`Active Sessions`|レポート サーバー データベースに格納されるアクティブ セッションの数です。 このカウンターは、レポート サブスクリプションから生成される使用可能なすべてのブラウザー セッションの累積数と、セッションがまだアクティブかどうかを示します。|  
 |`Cache Flushes/Sec`|1 秒あたりのキャッシュ フラッシュ回数。|  
@@ -126,7 +126,7 @@ Get-Counter -ListSet msr*
 (Get-Counter -ListSet "MSRS 2014 Windows Service").Paths  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [レポート サーバーのパフォーマンスの監視](monitoring-report-server-performance.md)   
  [Msrs 2014 Web Service sharepoint モードおよび msrs 2014 Windows service sharepoint mode パフォーマンスオブジェクト&#40;のパフォーマンスカウンター (sharepoint モード&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](performance-counters-reportserver-service-performance-objects.md)  
+ [ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター](performance-counters-reportserver-service-performance-objects.md)  

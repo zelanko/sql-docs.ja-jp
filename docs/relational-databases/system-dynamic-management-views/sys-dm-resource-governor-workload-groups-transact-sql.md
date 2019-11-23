@@ -38,7 +38,7 @@ ms.locfileid: "73982290"
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ワークロードグループの ID。 NULL 値は許可されません。|  
-|name|**sysname**|ワークロードグループの名前。 NULL 値は許可されません。|  
+|name|**sysname**|ワークロード グループの名前。 NULL 値は許可されません。|  
 |pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。|  
 |external_pool_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> 外部リソースプールの ID。 NULL 値は許可されません。|  
 |statistics_start_time|**datetime**|ワークロードグループの統計コレクションがリセットされた時刻。 NULL 値は許可されません。|  
@@ -62,7 +62,7 @@ ms.locfileid: "73982290"
 |request_max_cpu_time_sec|**int**|1 つの要求に対する最大 CPU 使用制限の現在の設定 (秒単位)。 NULL 値は許可されません。|  
 |request_memory_grant_timeout_sec|**int**|1つの要求に対するメモリ許可のタイムアウト (秒単位) の現在の設定。 NULL 値は許可されません。|  
 |group_max_requests|**int**|同時要求の最大数の現在の設定です。 NULL 値は許可されません。|  
-|max_dop|**int**|ワークロード グループの並列処理の最大限度。 既定値は0で、グローバル設定が使用されます。 NULL 値は許可されません。|  
+|max_dop|**int**|ワークロード グループの並列処理の最大限度。 既定値は 0 で、グローバル設定が使用されます。 NULL 値は許可されません。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="remarks"></a>Remarks  

@@ -54,7 +54,7 @@ ms.locfileid: "73882244"
 -   ALTER TABLE...DROP COLUMN ステートメントは、スキーマ変更のレプリケーションを無効にした場合でも、サブスクリプションに削除対象の列が含まれているすべてのサブスクライバーに対して常にレプリケートされます。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションに対するスキーマ変更をレプリケートしない場合は、 **[パブリケーションのプロパティ - \<パブリケーション>]** ダイアログ ボックスでスキーマ変更のレプリケーションを無効にします。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Publication Properties](view-and-modify-publication-properties.md)」を参照してください。  
+ パブリケーションに対するスキーマ変更をレプリケートしない場合は、 **[パブリケーションのプロパティ - \<パブリケーション>]** ダイアログ ボックスでスキーマ変更のレプリケーションを無効にします。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>スキーマ変更のレプリケーションを無効にするには  
   
@@ -69,11 +69,11 @@ ms.locfileid: "73882244"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>スキーマ変更をレプリケートしないスナップショット パブリケーションまたはトランザクション パブリケーションを作成するには  
   
-1.  パブリッシャー側のパブリケーションデータベースに対して、 **\@replicate_ddl**に**0**を指定して[sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。 詳しくは、「 [Create a Publication](create-a-publication.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーションデータベースに対して、 **\@replicate_ddl**に**0**を指定して[sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。 詳細については、「 [Create a Publication](create-a-publication.md)」を参照してください。  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>スキーマ変更をレプリケートしないマージ パブリケーションを作成するには  
   
-1.  パブリッシャー側のパブリケーションデータベースに対して、 **\@replicate_ddl**に**0**を指定して[sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 詳しくは、「 [Create a Publication](create-a-publication.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーションデータベースに対して、 **\@replicate_ddl**に**0**を指定して[sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 詳細については、「 [Create a Publication](create-a-publication.md)」を参照してください。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションでスキーマ変更のレプリケートを一時的に無効化するには  
   

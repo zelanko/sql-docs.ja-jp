@@ -39,9 +39,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @account_id = ] account_id` 情報を一覧表示するアカウントのアカウント ID。 *account_id*は**int**,、既定値は NULL です。  
+情報を一覧表示するアカウントのアカウント ID を `[ @account_id = ] account_id` します。 *account_id*は**int**,、既定値は NULL です。  
   
-`[ @account_name = ] 'account_name'` 情報を一覧表示するアカウントの名前。 *account_name*は**sysname**,、既定値は NULL です。  
+情報を一覧表示するアカウントの名前 `[ @account_name = ] 'account_name'` ます。 *account_name*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -51,7 +51,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
 ||||  
 |-|-|-|  
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |**account_id**|**int**|アカウントの ID。|  
 |**name**|**sysname**|アカウントの名前。|  
 |**description**|**nvarchar (256)**|アカウントの説明。|  
@@ -62,10 +62,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servername**|**sysname**|アカウントの電子メールサーバーの名前。|  
 |**port**|**int**|電子メールサーバーが使用するポート番号。|  
 |**username**|**nvarchar(128)**|電子メールサーバーが認証を使用する場合は、電子メールサーバーへのサインインに使用するユーザー名。 **Username**が NULL の場合、データベースメールはこのアカウントに対して認証を使用しません。|  
-|**use_default_credentials**|**bit**|@No__t-0 の資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールは [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用します。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に **\@username**と **\@password**を使用します。 **@No__t-1 ユーザー名**と **\@PASSWORD**が NULL の場合、データベースメールは匿名認証を使用します。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。|  
+|**use_default_credentials**|**bit**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールは [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用します。 このパラメーターが0の場合、データベースメールは **\@ユーザー名**と **\@パスワード**を使用して、SMTP サーバーの認証を行います。 **\@ユーザー名**と **\@パスワード**が NULL の場合、データベースメールは匿名認証を使用します。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。|  
 |**enable_ssl**|**bit**|データベースメールが Secure Sockets Layer (SSL) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**はビット,、既定値はありません。 1 の場合、データベース メールでは SSL を使用して通信を暗号化することを示します。 0 の場合、データベース メールでは SSL 暗号化を使用せずにメールを送信することを示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  *Account_id*または*account_name*が指定されていない場合、 **sysmail_help_account**は、Microsoft SQL Server インスタンス内のすべてのデータベースメールアカウントに関する情報を一覧表示します。  
   
  ストアドプロシージャ**sysmail_help_account_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
@@ -74,7 +74,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>使用例  
- **A.すべてのアカウントの情報を一覧表示する @ no__t-0  
+ **A. すべてのアカウントの情報を一覧表示する**  
   
  次の例では、インスタンス内のすべてのアカウントのアカウント情報を一覧表示します。  
   
@@ -91,7 +91,7 @@ account_id  name                         description                            
 149         Audit Account                Account for audit e-mail.               audit@Adventure-Works.com Automated Mailer (Audit)         NULL            SMTP       smtp.Adventure-Works.com  25          NULL 0                          0        
 ```  
   
- **B.特定のアカウントの情報を一覧表示する @ no__t-0  
+ **B. 特定のアカウントの情報を一覧表示する**  
   
  次の例では、`AdventureWorks Administrator` というアカウントについて、アカウント情報を一覧表示します。  
   
@@ -108,9 +108,9 @@ account_id  name                         description                            
 148         AdventureWorks Administrator Mail account for administrative e-mail. dba@Adventure-Works.com   AdventureWorks Automated Mailer  NULL            SMTP       smtp.Adventure-Works.com  25          NULL     0                       0       
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベースメールアカウント   を作成し](../../relational-databases/database-mail/create-a-database-mail-account.md)ます。  
+ [データベースメールアカウントの作成](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [ストアドプロシージャ&#40;のデータベースメール transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

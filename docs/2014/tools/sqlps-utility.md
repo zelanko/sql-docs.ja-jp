@@ -43,7 +43,7 @@ ms.locfileid: "72798137"
 [ -? | -Help ]  
 ```  
   
-## <a name="arguments"></a>[引数]  
+## <a name="arguments"></a>引数  
  **-NoLogo**  
  `sqlps` ユーティリティの起動時に著作権画面を表示しないように指定します。  
   
@@ -66,15 +66,15 @@ ms.locfileid: "72798137"
  **-Command-** `sqlps` ユーティリティが標準入力からの入力を読み取ることを指定します。  
   
  *script_block* [ **-args**_argument_array_ ]  
- 実行する PowerShell コマンドのブロックを指定します。ブロックは中かっこ {} で囲む必要があります。 *Script_block*は、 **PowerShell**または別の `sqlps` ユーティリティセッションから `sqlps` ユーティリティが呼び出された場合にのみ指定できます。 *argument_array* は、 *script_block*内の PowerShell コマンドの引数を含む PowerShell 変数の配列です。  
+ 実行する PowerShell コマンドのブロックを指定します。ブロックは中かっこ {} で囲む必要があります。 *Script_block*は、`sqlps` ユーティリティを**PowerShell**または別の `sqlps` ユーティリティセッションから呼び出すときにのみ指定できます。 *argument_array* は、 *script_block*内の PowerShell コマンドの引数を含む PowerShell 変数の配列です。  
   
  *string* [ *command_parameters* ]  
- 実行する PowerShell コマンドを含む文字列を指定します。 **"& {*`command`*}"** という形式を使用します。 引用符は文字列を示し、invoke 演算子 (&) によって `sqlps` ユーティリティによってコマンドが実行されます。  
+ 実行する PowerShell コマンドを含む文字列を指定します。 **"& { *`command`* }"** という形式を使用します。 引用符は文字列を示し、invoke 演算子 (&) によって `sqlps` ユーティリティによってコマンドが実行されます。  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  `sqlps` ユーティリティ オプションの構文の概要を表示します。  
   
-## <a name="remarks"></a>備考  
+## <a name="remarks"></a>Remarks  
  `sqlps` ユーティリティは、PowerShell 環境 (PowerShell .exe) を起動し、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell モジュールを読み込みます。 モジュールは `sqlps`とも呼ばれ、これらの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインを読み込んで登録します。  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -97,7 +97,7 @@ ms.locfileid: "72798137"
   
  既定では、`sqlps` ユーティリティは、スクリプト実行ポリシーが**制限付き**に設定された状態で実行されます。 これにより、PowerShell スクリプトの実行が防止されます。 **Set-ExecutionPolicy** コマンドレットを使用すると、署名されたスクリプトまたは任意のスクリプトの実行を有効にすることができます。 信頼できるソースからのスクリプト以外は実行しないでください。また、適切な NTFS 権限を使用して、すべての入力ファイルと出力ファイルのセキュリティを保護してください。 PowerShell スクリプトの有効化の詳細については、「 [Windows PowerShell スクリプトの実行](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/)」を参照してください。  
   
- [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] に採用されていたバージョンの `sqlps` ユーティリティは、Windows PowerShell 1.0 のミニシェルとして実装されていました。 ミニシェルには特定の制限があります。たとえば、ミニシェルによって読み込まれているスナップイン以外、ユーザーは読み込むことができません。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のバージョンのユーティリティは、`sqlps` モジュールを使用するように変更されており、このような制限は適用されません。  
+ `sqlps` および [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] に採用されていたバージョンの [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ユーティリティは、Windows PowerShell 1.0 のミニシェルとして実装されていました。 ミニシェルには特定の制限があります。たとえば、ミニシェルによって読み込まれているスナップイン以外、ユーザーは読み込むことができません。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のバージョンのユーティリティは、`sqlps` モジュールを使用するように変更されており、このような制限は適用されません。  
   
 ## <a name="examples"></a>使用例  
 
@@ -119,6 +119,6 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [サーバー ネットワーク プロトコルの有効化または無効化](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

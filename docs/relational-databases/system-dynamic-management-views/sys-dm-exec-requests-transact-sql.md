@@ -22,7 +22,7 @@ ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 88ce0a3899bc637de6d94cce7dad71e47247a67f
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73982630"
@@ -48,9 +48,9 @@ ms.locfileid: "73982630"
 |user_id|**int**|要求を送信したユーザーの ID。 NULL 値は許可されません。|  
 |connection_id|**uniqueidentifier**|要求を受信した接続の ID。 NULL 値が許可されます。|  
 |blocking_session_id|**smallint**|要求をブロックしているセッションの ID。 この列が NULL または0に等しい場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用できない (または識別できません)。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションによって所有されています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を現時点で特定できませんでした。|  
-|wait_type|**nvarchar(60)**|要求が現在ブロックされている場合、この列は待機の種類を返します。 NULL 値が許可されます。<br /><br /> 待機の種類の詳細については、「 [sys. &#40;dm_os_wait_stats&#41;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
+|wait_type|**nvarchar(60)**|要求が現在ブロックされている場合の待機の種類。 NULL 値が許可されます。<br /><br /> 待機の種類の詳細については、「 [sys. &#40;dm_os_wait_stats&#41;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
 |wait_time|**int**|要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。|  
-|last_wait_type|**nvarchar(60)**|この要求が既にブロックされている場合、この列は最後の待機の種類を返します。 NULL 値は許可されません。|  
+|last_wait_type|**nvarchar(60)**|要求がブロックされていた場合の最後の待機の種類。 NULL 値は許可されません。|  
 |wait_resource|**nvarchar (256)**|要求が現在ブロックされている場合の現在待機中のリソース。 NULL 値は許可されません。|  
 |open_transaction_count|**int**|この要求に対して開いているトランザクションの数。 NULL 値は許可されません。|  
 |open_resultset_count|**int**|この要求に対して開いている結果セットの数。 NULL 値は許可されません。|  
@@ -58,16 +58,16 @@ ms.locfileid: "73982630"
 |context_info|**varbinary (128)**|セッションの CONTEXT_INFO 値。 NULL 値が許可されます。|  
 |percent_complete|**real**|次のコマンドで完了した作業の割合。<br /><br /> ALTER INDEX REORGANIZE<br />ALTER DATABASE の AUTO_SHRINK オプション<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE の暗号化<br /><br /> NULL 値は許可されません。|  
 |estimated_completion_time|**bigint**|内部のみ。 NULL 値は許可されません。|  
-|cpu_time|**int**|要求で使用された CPU 時間 (ミリ秒単位)。 NULL 値は許可されません。|  
-|total_elapsed_time|**int**|要求が到着してから経過した合計時間 (ミリ秒単位)。 NULL 値は許可されません。|  
+|cpu_time|**int**|要求で使用される CPU 時間 (ミリ秒単位)。 NULL 値は許可されません。|  
+|total_elapsed_time|**int**|要求を受信してから経過した総時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |scheduler_id|**int**|この要求のスケジュールを設定しているスケジューラの ID。 NULL 値は許可されません。|  
-|task_address|**varbinary (8)**|この要求に関連付けられているタスクに割り当てられたメモリアドレス。 NULL 値が許可されます。|  
-|読ん|**bigint**|この要求で実行された読み取りの数。 NULL 値は許可されません。|  
-|よる|**bigint**|この要求で実行された書き込みの数。 NULL 値は許可されません。|  
-|logical_reads|**bigint**|要求によって実行された論理読み取りの数。 NULL 値は許可されません。|  
+|task_address|**varbinary(8)**|この要求に関連付けられているタスクに割り当てられたメモリアドレス。 NULL 値が許可されます。|  
+|reads|**bigint**|要求で実行された読み取りの数。 NULL 値は許可されません。|  
+|writes|**bigint**|要求で実行された書き込みの数。 NULL 値は許可されません。|  
+|logical_reads|**bigint**|要求で実行された論理読み取りの数。 NULL 値は許可されません。|  
 |text_size|**int**|要求の TEXTSIZE 設定。 NULL 値は許可されません。|  
-|の言語|**nvarchar(128)**|要求の言語設定。 NULL 値が許可されます。|  
-|date_format|**nvarchar (3)**|要求の DATEFORMAT 設定。 NULL 値が許可されます。|  
+|language|**nvarchar(128)**|要求の言語設定。 NULL 値が許可されます。|  
+|date_format|**nvarchar(3)**|要求の DATEFORMAT 設定。 NULL 値が許可されます。|  
 |date_first|**smallint**|要求の DATEFIRST 設定。 NULL 値は許可されません。|  
 |quoted_identifier|**bit**|1 = 要求に対して QUOTED_IDENTIFIER が ON です。 それ以外の場合は0になります。<br /><br /> NULL 値は許可されません。|  
 |arithabort|**bit**|1 = 要求に対して ARITHABORT 設定が ON です。 それ以外の場合は0になります。<br /><br /> NULL 値は許可されません。|  
@@ -77,7 +77,7 @@ ms.locfileid: "73982630"
 |ansi_padding|**bit**|1 = 要求に対して ANSI_PADDING 設定が ON です。<br /><br /> それ以外の場合は0になります。<br /><br /> NULL 値は許可されません。|  
 |ansi_nulls|**bit**|1 = 要求に対して ANSI_NULLS 設定が ON です。 それ以外の場合は0になります。<br /><br /> NULL 値は許可されません。|  
 |concat_null_yields_null|**bit**|1 = 要求に対して CONCAT_NULL_YIELDS_NULL 設定が ON です。 それ以外の場合は0になります。<br /><br /> NULL 値は許可されません。|  
-|transaction_isolation_level|**smallint**|この要求に対するトランザクションの作成に使用された分離レベル。 NULL 値は許可されません。<br /> 0 = Unspecified<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = 反復可能<br /> 4 = Serializable<br /> 5 = Snapshot|  
+|transaction_isolation_level|**smallint**|この要求に対するトランザクションの作成に使用された分離レベル。 NULL 値は許可されません。<br /> 0 = Unspecified<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Snapshot|  
 |lock_timeout|**int**|要求のロック タイムアウトまでの時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |deadlock_priority|**int**|要求の DEADLOCK_PRIORITY 設定。 NULL 値は許可されません。|  
 |row_count|**bigint**|この要求によってクライアントに返された行の数。 NULL 値は許可されません。|  
@@ -86,15 +86,15 @@ ms.locfileid: "73982630"
 |granted_query_memory|**int**|要求でのクエリの実行に割り当てられたページ数。 NULL 値は許可されません。|  
 |executing_managed_code|**bit**|特定の要求で、ルーチン、データ型、トリガーなどの共通言語ランタイム オブジェクトが現在実行されているかどうかを示します。 共通言語ランタイム オブジェクトが共通言語ランタイム内から [!INCLUDE[tsql](../../includes/tsql-md.md)] を実行した場合でも、共通言語ランタイム オブジェクトがスタックにある間は、このパラメーターが必ず設定されます。 NULL 値は許可されません。|  
 |group_id|**int**|このクエリが属しているワークロードグループの ID。 NULL 値は許可されません。|  
-|query_hash|**binary (8)**|クエリで計算され、同様のロジックを持つクエリを識別するために使用される、バイナリのハッシュ値です。 クエリ ハッシュを使用して、リテラル値だけが異なるクエリの全体的なリソース使用率を決定できます。|  
-|query_plan_hash|**binary (8)**|クエリ実行プランで計算され、同様のクエリ実行プランを識別するために使用される、バイナリのハッシュ値です。 クエリ プラン ハッシュを使用して、同様の実行プランを持つクエリの累積コストを確認できます。|  
+|query_hash|**binary(8)**|クエリで計算され、同様のロジックを持つクエリを識別するために使用される、バイナリのハッシュ値です。 クエリ ハッシュを使用して、リテラル値だけが異なるクエリの全体的なリソース使用率を決定できます。|  
+|query_plan_hash|**binary(8)**|クエリ実行プランで計算され、同様のクエリ実行プランを識別するために使用される、バイナリのハッシュ値です。 クエリ プラン ハッシュを使用して、同様の実行プランを持つクエリの累積コストを確認できます。|  
 |statement_sql_handle|**varbinary(64)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> 個々のクエリの SQL ハンドル。<br /><br />データベースに対してクエリストアが有効になっていない場合、この列は NULL になります。 |  
 |statement_context_id|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> Query_context_settings の外部キー (省略可能)。<br /><br />データベースに対してクエリストアが有効になっていない場合、この列は NULL になります。 |  
 |dop |**int** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> クエリの並列処理の次数。 |  
 |parallel_worker_count |**int** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> 並列クエリの場合は、予約済みの並列ワーカーの数。  |  
 |external_script_request_id |**uniqueidentifier** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> 現在の要求に関連付けられている外部スクリプト要求 ID。 |  
 |is_resumable |**bit** |**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降。<br /><br /> 要求が再開可能なインデックス操作であるかどうかを示します。 |  
-|page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> `wait_resource` 列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 詳細については、「 [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)」を参照してください。 |  
+|page_resource |**binary(8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> `wait_resource` 列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 詳細については、「 [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)」を参照してください。 |  
 |page_server_reads|**bigint**|**適用対象**: Azure SQL Database ハイパースケール<br /><br /> この要求によって実行されたページサーバーの読み取り回数。 NULL 値は許可されません。|  
 | &nbsp; | &nbsp; | &nbsp; |
 

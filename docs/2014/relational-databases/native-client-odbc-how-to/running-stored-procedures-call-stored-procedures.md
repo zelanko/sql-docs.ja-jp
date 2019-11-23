@@ -39,11 +39,11 @@ ms.locfileid: "72688662"
 > [!NOTE]  
 >  アプリケーションでプロシージャの送信に (ODBC CALL エスケープ シーケンスではなく) Transact-SQL の EXECUTE 構文を使用した場合、プロシージャ コールは、SQL Server ODBC ドライバーから SQL Server に、RPC ではなく SQL ステートメントとして渡されます。 また、Transact-SQL の EXECUTE ステートメントを使用した場合、出力パラメーターは返されません。  
   
-## <a name="see-also"></a>「  
- [ストアドプロシージャの実行方法に関する&#40;トピック&#41; ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)    
+## <a name="see-also"></a>参照  
+ [ストアドプロシージャの実行方法に関する&#40;トピック&#41; ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [ストアドプロシージャ呼び出しのバッチ処理](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [ストアドプロシージャの実行](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [ストアドプロシージャ   の呼び出し](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
+ [ストアドプロシージャ  の呼び出し](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
  [手順](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

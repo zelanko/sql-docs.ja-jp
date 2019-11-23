@@ -32,22 +32,22 @@ ms.locfileid: "71163932"
 
   サーバーレベルの権限ごとに1行の値を返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|権限が存在するリソースのクラスの識別子。<br /><br /> 100 = サーバー<br /><br /> 101 = サーバープリンシパル<br /><br /> 105 = エンドポイント|  
-|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。 次のいずれかの値です。<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。 次の値のいずれかになります。<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|権限が存在するセキュリティ保護可能なリソースの ID。クラスに基づいて解釈されます。 ほとんどの場合、これはクラスが表すものに適用される ID の種類にすぎません。 標準以外のリソースに対する解釈は、次のようになります。<br /><br /> 100 = 常に0|  
 |**minor_id**|**int**|権限が存在するセカンダリ ID。クラスに従って解釈されます。|  
 |**grantee_principal_id**|**int**|権限が付与されているサーバープリンシパル ID。|  
 |**grantor_principal_id**|**int**|サーバープリンシパル-これらのアクセス許可の権限の許可の付与の ID。|  
-|**type**|**char (4)**|サーバー権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
+|**型**|**char (4)**|サーバー権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
 |**permission_name**|**nvarchar(128)**|権限名。|  
 |**state**|**char(1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = grant With Grant option|  
 |**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |権限の種類|アクセス許可名|適用されるセキュリティ保護可能なリソース|  
 |---------------------|---------------------|--------------------------|  
-|AAES|ALTER ANY EVENT SESSION|SERVER|
+|AAES|サーバー アクセス許可|SERVER|
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
 |AL|ALTER|エンドポイント、ログイン|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|
@@ -91,7 +91,7 @@ ms.locfileid: "71163932"
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは自分の権限を参照できます。 他のログインの権限を表示するには、VIEW DEFINITION、ALTER ANY LOGIN、またはログインに対する権限が必要です。 ユーザー定義サーバーロールを表示するには、ALTER ANY SERVER ROLE または ROLE のメンバーシップが必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
  次のクエリは、サーバープリンシパルに対して明示的に許可または拒否された権限を一覧表示します。  
@@ -107,7 +107,7 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

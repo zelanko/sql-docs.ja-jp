@@ -50,7 +50,7 @@ ms.locfileid: "73882175"
     -   サブスクリプションの期限が切れないように指定することは可能ですが、メタデータをクリーンアップできなくなるため、この値は使用しないことを強くお勧めします。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[全般]** ページで、サブスクリプションの有効期限を設定します。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Publication Properties](view-and-modify-publication-properties.md)」を参照してください。  
+ **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[全般]** ページで、サブスクリプションの有効期限を設定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>サブスクリプションの有効期限を設定するには  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882175"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショットまたはトランザクション パブリケーションのサブスクリプションに対して有効期限を設定するには  
   
-1.  パブリッシャーで [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。 **\@retention** にサブスクリプションの有効期限を時間単位で指定します。 既定の有効期限は 336 時間です。 詳しくは、「 [Create a Publication](create-a-publication.md)」をご覧ください。  
+1.  パブリッシャーで [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。 **\@retention** にサブスクリプションの有効期限を時間単位で指定します。 既定の有効期限は 336 時間です。 詳細については、「 [Create a Publication](create-a-publication.md)」を参照してください。  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>マージ パブリケーションのサブスクリプションに対して有効期限を設定するには  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73882175"
   
     -   **3** = 年  
   
-     既定の有効期限は 14 日です。 詳しくは、「 [Create a Publication](create-a-publication.md)」をご覧ください。  
+     既定の有効期限は 14 日です。 詳細については、「 [Create a Publication](create-a-publication.md)」を参照してください。  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショットまたはトランザクション パブリケーションのサブスクリプションに対して有効期限を変更するには  
   

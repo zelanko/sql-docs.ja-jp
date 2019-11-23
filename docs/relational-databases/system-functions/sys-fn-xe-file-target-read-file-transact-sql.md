@@ -75,7 +75,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|イベントの内容 (XML 形式)。 NULL 値は許可されません。|  
 |file_name|**nvarchar(260)**|イベントが格納されているファイルの名前。 NULL 値は許可されません。|  
 |file_offset|**bigint**|イベントを格納しているファイル内のブロックのオフセット。 NULL 値は許可されません。|  
-|timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />イベントの日付と時刻 (UTC タイムゾーン)。 NULL 値は許可されません。|  
+|timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />イベントの日付と時刻 (UTC タイムゾーン)。 NULL 値は許可されません。|  
 
   
 ## <a name="remarks"></a>Remarks  

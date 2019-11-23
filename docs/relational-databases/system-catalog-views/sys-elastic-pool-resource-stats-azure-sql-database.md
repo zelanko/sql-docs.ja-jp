@@ -34,7 +34,7 @@ ms.locfileid: "73843869"
 |-|  
 |**適用対象**: V12 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|15秒のレポート間隔の開始を示す UTC 時刻。|  
 |**end_time**|**datetime2**|15秒のレポート間隔の終了を示す UTC 時刻。|  
@@ -49,7 +49,7 @@ ms.locfileid: "73843869"
 |**elastic_pool_storage_limit_mb**|**bigint**|この時間内に、このエラスティックプールの現在の最大エラスティックプールのストレージの上限をメガバイト単位で設定します。|
 |**avg_allocated_storage_percent**|**decimal (5, 2)**|エラスティックプール内のすべてのデータベースによって割り当てられたデータ領域の割合。  これは、エラスティックプールのデータの最大サイズに割り当てられたデータ領域の比率です。  詳細については、「 [SQL DB でのファイル領域の管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
  このビューは、SQL Database サーバーの master データベースに存在します。 **Elastic_pool_resource_stats**を照会するには、master データベースに接続している必要があります。  
   

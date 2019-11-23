@@ -21,7 +21,7 @@ ms.locfileid: "72688704"
   `CircularString` は、0 個以上の連続する円弧セグメントのコレクションです。 円弧セグメントは、2 次元平面内の 3 つの点によって定義された曲線セグメントです。最初のポイントを 3 番目のポイントと同じにすることはできません。 円弧セグメントの 3 つのポイントすべてが同一線上にある場合は、円弧セグメントが直線セグメントとして扱われます。  
   
 > [!IMPORTANT]  
->  @No__t_1 サブタイプを含む、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された新しい空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能」](https://go.microsoft.com/fwlink/?LinkId=226407)をダウンロードしてください。  
+>  `CircularString` サブタイプを含む、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された新しい空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能」](https://go.microsoft.com/fwlink/?LinkId=226407)をダウンロードしてください。  
   
 ## <a name="circularstring-instances"></a>CircularString インスタンス  
  次の図は有効な `CircularString` インスタンスを示しています。  
@@ -29,7 +29,7 @@ ms.locfileid: "72688704"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- @No__t_0 インスタンスは、空であるか、または奇数 (n > 1) である場合に許容されます。 次の `CircularString` インスタンスが受け入れられます。  
+ `CircularString` インスタンスは、空であるか、または奇数 (n > 1) である場合に許容されます。 次の `CircularString` インスタンスが受け入れられます。  
   
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- @No__t_0 の例の値は、円の実際の円周&#x03c0;である 2 (2 * pi) に近いことに注意してください。  
+ `CircularString` の例の値は、円の実際の円周&#x03c0;である 2 (2 * pi) に近いことに注意してください。  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. CircularString を同じステートメント内で使用して geometry インスタンスを宣言およびインスタンス化する  
  このコード スニペットは、`geometry` を同じステートメント内で使用して `CircularString` インスタンスを宣言およびインスタンス化する方法を示しています。  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [空間データ型の概要](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   

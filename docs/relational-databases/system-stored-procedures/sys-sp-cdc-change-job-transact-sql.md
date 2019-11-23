@@ -47,7 +47,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_type = ] 'job_type'` 変更するジョブの種類。 *job_type*は**nvarchar (20)** で、既定値は ' capture ' です。 有効な入力は ' capture ' と ' cleanup ' です。  
+変更するジョブの種類 `[ @job_type = ] 'job_type'` ます。 *job_type*は**nvarchar (20)** で、既定値は ' capture ' です。 有効な入力は ' capture ' と ' cleanup ' です。  
   
 各スキャンサイクルで処理するトランザクションの最大数 `[ @maxtrans ] = max_trans_` します。 *max_trans*は**int**で、既定値は NULL です。これは、このパラメーターに変更がないことを示します。 指定する場合、値は正の整数である必要があります。  
   
@@ -75,7 +75,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 変更行が変更テーブルに保持される `[ @retention ] = retention_` 時間 (分単位)。 *retention*は**bigint**であり、既定値は NULL です。これは、このパラメーターに変更がないことを示します。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数である必要があります。  
   
- *リテンション期間*はクリーンアップジョブに対してのみ有効です。  
+ *retention*はクリーンアップ ジョブでのみ有効です。  
   
 クリーンアップ時に1つのステートメントを使用して削除できる削除エントリの最大数 `[ @threshold = ] 'delete threshold'` ます。 *delete threshold*は**bigint**であり、既定値は NULL です。これは、このパラメーターに変更がないことを示します。 *削除のしきい値*は、クリーンアップジョブに対してのみ有効です。  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-a-capture-job"></a>A. キャプチャ ジョブを変更する  
- 次の例では、`AdventureWorks2012` データベースのキャプチャジョブの `@job_type`、`@maxscans`、および `@maxtrans` パラメーターを更新します。 キャプチャジョブに対して有効な他のパラメーター (`@continuous` と `@pollinginterval`) は省略されています。これらの値は変更されません。  
+ 次の例では、`AdventureWorks2012` データベースのキャプチャジョブの `@job_type`、`@maxscans`、および `@maxtrans` パラメーターを更新します。 キャプチャジョブのその他の有効なパラメーターである `@continuous` と `@pollinginterval`は省略されます。これらの値は変更されません。  
   
 ```  
 USE AdventureWorks2012;  
