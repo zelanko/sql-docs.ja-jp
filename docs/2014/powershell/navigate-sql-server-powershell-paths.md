@@ -25,7 +25,7 @@ ms.locfileid: "72797813"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、次の表に示すように、プロバイダーのコマンドレットのサブセットを実装します。  
   
-|コマンドレット|標準の別名|コマンドの別名|UNIX シェルの別名|Description|  
+|コマンドレット|標準の別名|コマンドの別名|UNIX シェルの別名|[説明]|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|現在のノードを取得します。|  
 |`Set-Location`|**sl**|**cd、chdir**|**cd、chdir**|現在のノードを変更します。|  
@@ -130,8 +130,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>「  
- [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>参照  
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの操作](work-with-sql-server-powershell-paths.md)   
  [URN から SQL Server プロバイダー パスへの変換](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

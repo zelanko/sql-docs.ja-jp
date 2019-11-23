@@ -30,11 +30,11 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70176027"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。  
+  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元コンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている大切なデータを保護するうえで不可欠な保護対策を提供します。 致命的なデータ損失のリスクを最小限に抑えるには、データベースをバックアップして、データに対する変更内容を定期的に保存しておく必要があります。 バックアップと復元方法を十分に計画することで、さまざまな障害に起因するデータの損失からデータベースを保護できます。 バックアップを復元し、データベースを復旧するテストを実施することで、障害発生時に適切に対応できるようになります。  
   
- バックアップを格納するためのローカルストレージに加えて、SQL Server は、Azure Blob Storage サービスからのバックアップと復元もサポートします。 詳細については、「 [Azure Blob Storage サービスを使用したバックアップと復元の SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
+ バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Azure Blob Storage サービスからの復元がサポートされます。 詳細については、「 [Azure Blob Storage サービスを使用したバックアップと復元の SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "70176027"
   
     -   ハードウェア障害 (ディスク ドライブの損傷や、復旧の可能性のないサーバー障害など)  
   
-    -   自然災害。 Azure Blob ストレージサービスへの SQL Server バックアップを使用すると、オンプレミスの場所とは異なるリージョンにオフサイトのバックアップを作成し、オンプレミスの場所に影響する自然災害が発生した場合に使用することができます。  
+    -   自然災害。 Azure Blob Storage サービスへの SQL Server バックアップを使用すると、オンプレミスの場所に影響する自然災害が発生した場合に使用できるように、オンプレミスの場所とは異なるリージョンにオフサイト バックアップを作成できます。  
   
 -   また、データベースのバックアップは、サーバー間でのデータベースのコピー、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] やデータベース ミラーリングのセットアップ、およびアーカイブなど、日常的な管理作業を行ううえでも便利です。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70176027"
  障害の発生後、データの復元と復旧に使用できるデータのコピー。 データベースのバックアップを使用して、コピー (データベース) を新しい場所に復元することもできます。  
   
  バックアップ デバイス (backup device)  
- SQL Server のバックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server バックアップを Azure Blob ストレージサービスに書き込むこともできます。 **URL**形式を使用して、バックアップ先とバックアップファイルの名前を指定します。 詳細については、「 [Azure Blob Storage サービスを使用したバックアップと復元の SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
+ SQL Server のバックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Azure Blob Storage サービスに書き込むこともできます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳細については、「 [Azure Blob Storage サービスを使用したバックアップと復元の SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
  バックアップ メディア (backup media)  
  バックアップの書き込み先となる 1 つまたは複数のテープまたはディスク ファイル。  
@@ -109,7 +109,7 @@ ms.locfileid: "70176027"
   
  バックアップと復元のストラテジには、バックアップに関する部分と復元に関する部分があります。 ストラテジで扱うバックアップ部分では、バックアップの種類と頻度、バックアップに必要なハードウェアの性質と速度、バックアップのテスト方法、およびバックアップ メディアの保管場所と保管方法 (セキュリティ上の考慮事項も含む) を定義します。 ストラテジで扱う復元部分では、復元の実行責任者と、データベースの可用性とデータ損失の最小化という目標を達成するためにどのように復元を実行するのかを定義します。 バックアップと復元の手順をドキュメント化し、そのドキュメントを運用手順書に含めて保管することをお勧めします。  
   
- バックアップと復元について効果的なストラテジをデザインするには、慎重に計画、実装、およびテストする必要があります。 テストは必ず行ってください。 復元ストラテジに含まれるすべての組み合わせでバックアップを正常に復元できるようになって初めて、バックアップ ストラテジは完成します。 さまざまな要因を検討する必要があります。 次に例を示します。  
+ バックアップと復元について効果的なストラテジをデザインするには、慎重に計画、実装、およびテストする必要があります。 テストは必ず行ってください。 復元ストラテジに含まれるすべての組み合わせでバックアップを正常に復元できるようになって初めて、バックアップ ストラテジは完成します。 さまざまな要因を検討する必要があります。 その一部を次に示します。  
   
 -   組織がそのデータベースに求める生産目標。特に、可用性とデータ損失からの保護に関する要件。  
   
@@ -248,18 +248,18 @@ ms.locfileid: "70176027"
   
 
   
-### <a name="restoring-transaction-logs-full-recovery-model"></a>トランザクション ログを復元する (完全復旧モデル)  
+### <a name="restoring-transaction-logs-full-recovery-model"></a>トランザクション ログの復元 (完全復旧モデル)  
  **SQL Server Management Studio の使用**  
   
 -   [マークされたトランザクションへのデータベースの復元 &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
--   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
  **Transact-SQL の使用**  
   
--   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
@@ -272,7 +272,7 @@ ms.locfileid: "70176027"
   
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

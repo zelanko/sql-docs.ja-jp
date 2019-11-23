@@ -77,7 +77,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   &、\<、> の文字が属性値や要素のコンテンツ内に出現する場合、常に、それぞれ &amp;、&lt;、&gt; にエンティティ変換されます。  
   
--   SQL Server では属性値を囲むために引用符 (U+0022) が使用されるので、属性値の引用符は &quot;にエンティティ変換されます。  
+-   SQL Server では属性値を囲むために引用符 (U+0022) が使用されるので、属性値の引用符は &quot; にエンティティ変換されます。  
   
 -   サーバーのみでキャストする場合は、サロゲート ペアが 1 つの数字参照としてエンティティ変換されます。 たとえば、サロゲート ペア U+D800 U+DF00 は、数字参照 &\#x00010300; にエンティティ変換されます。  
   
@@ -149,8 +149,8 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  これは、文字列値 13.4 を返します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [XQuery での型キャストの規則](/sql/xquery/type-casting-rules-in-xquery)   
- [CAST と CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
+ [CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

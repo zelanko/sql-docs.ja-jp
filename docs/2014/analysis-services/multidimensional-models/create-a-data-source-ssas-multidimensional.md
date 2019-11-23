@@ -82,11 +82,11 @@ ms.locfileid: "70175916"
   
      新しい接続の既定のプロバイダーは、ネイティブ OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーです。 このプロバイダーは、OLE DB を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続するために使用します。 SQL Server リレーショナル データベースに接続する場合、通常は、Native OLE DB\SQL Server Native Client 11.0 を使用する方が、代替プロバイダーを使用するより高速です。  
   
-     他のデータ ソースにアクセスするために、別のプロバイダーを選択できます。 で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サポートされているプロバイダーとリレーショナルデータベースの一覧については、「[サポートされて&#40;いる SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)」を参照してください。  
+     他のデータ ソースにアクセスするために、別のプロバイダーを選択できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によってサポートされるプロバイダーとリレーショナルデータベースの一覧については、「[サポートされて&#40;いる SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)」を参照してください。  
   
 5.  選択したプロバイダーから要求される情報を入力して、基になるデータ ソースに接続します。 **[ネイティブ OLE DB\SQL Server Native Client]** プロバイダーを選択した場合は、次の情報を入力します。  
   
-    1.  **[サーバー名]** は、データベース エンジン インスタンスのネットワーク名です。 IP アドレス、コンピューターの NETBIOS 名、または完全修飾ドメイン名として指定できます。 サーバーが名前付きインスタンスとしてインストールされている場合は、インスタンス名 (たとえば\<、computername\\> <\>instancename) を含める必要があります。  
+    1.  **[サーバー名]** は、データベース エンジン インスタンスのネットワーク名です。 IP アドレス、コンピューターの NETBIOS 名、または完全修飾ドメイン名として指定できます。 サーバーが名前付きインスタンスとしてインストールされている場合は、インスタンス名を含める必要があります (たとえば、\<computername >\\< instancename\>)。  
   
     2.  **[サーバー ログオン]** は、接続の認証方法を指定します。 **[Windows 認証を使用する]** では、Windows 認証が使用されます。 **SQL Server 認証を使用**する Azure SQL データベースまたは混合モード認証をサポートする SQL Server インスタンスのデータベースユーザーログインを指定します。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "70175916"
  追加のデータ ソースへの接続をサポートするために、複数のデータ ソース オブジェクトを作成できます。 各データ ソースには、リレーションシップを作成するために使用できる列が必要です。  
   
 > [!NOTE]  
->  複数のデータソースが定義されており、1つのクエリで複数のソースからデータを照会する場合 (たとえば、(スノーフレークディメンションの場合)、を使用し`OpenRowset`てリモートクエリをサポートするデータソースを定義する必要があります。 通常、これは Microsoft SQL Server データ ソースになります。  
+>  複数のデータソースが定義されていて、1つのクエリで複数のソースからデータを照会する場合 ((スノーフレークディメンションの場合など) は、`OpenRowset`を使用したリモートクエリをサポートするデータソースを定義する必要があります。 通常、これは Microsoft SQL Server データ ソースになります。  
   
  複数のデータ ソースを使用するための要件には、次のようなものがあります。  
   
@@ -171,8 +171,8 @@ ms.locfileid: "70175916"
   
 5.  追加したテーブルを探し、選択します。 テーブルを右クリックし、 **[新しいリレーションシップ]** を選択します。 一致するデータを含む、基になる列と対象になる列を選択します。  
   
-## <a name="see-also"></a>関連項目  
- [サポートされ&#40;ている SSAS 多次元のデータソース&#41;](supported-data-sources-ssas-multidimensional.md)   
+## <a name="see-also"></a>参照  
+ [サポートされ&#40;ている&#41;データソース SSAS 多次元](supported-data-sources-ssas-multidimensional.md)   
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)  
   
   

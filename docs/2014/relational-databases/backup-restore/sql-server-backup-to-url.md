@@ -23,7 +23,7 @@ ms.locfileid: "72798000"
 ## <a name="requirements-components-and-concepts"></a>要件、コンポーネント、および概念  
  **このセクションの内容:**  
   
--   [Security](#security)  
+-   [セキュリティ](#security)  
   
 -   [主なコンポーネントと概念の概要](#intorkeyconcepts)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798000"
   
 -   [SQL Server Management Studio を使用した Azure ストレージからの復元](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a> Security  
+###  <a name="security"></a> セキュリティ  
  次に、Azure Blob ストレージサービスとの間でバックアップまたは復元を行う際のセキュリティに関する考慮事項と要件を示します。  
   
 -   Azure Blob ストレージサービスのコンテナーを作成するときは、アクセス権を**private**に設定することをお勧めします。 アクセス権を private に設定すると、Azure アカウントの認証に必要な情報を指定できるユーザーまたはアカウントだけがアクセスできるようになります。  
@@ -49,7 +49,7 @@ ms.locfileid: "72798000"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用するには、Azure アカウント名とアクセスキー認証が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の資格情報に格納されている必要があります。 この情報は、バックアップ操作または復元操作の実行時に Azure アカウントに対して認証を行うために使用されます。  
   
--   BACKUP コマンドまたは RESTORE コマンドの発行に使用するユーザー アカウントは、 **資格情報の変更** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。  
+-   BACKUP コマンドまたは RESTORE コマンドの発行に使用するユーザー アカウントは、**資格情報の変更**権限を持つ **db_backup operator** データベース ロールに属している必要があります。  
   
 ###  <a name="intorkeyconcepts"></a> 主なコンポーネントと概念の概要  
  次の2つのセクションでは、azure Blob ストレージサービスと、Azure Blob ストレージサービスとの間でバックアップまたは復元を行うときに使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントについて説明します。 Azure Blob ストレージサービスとの間でバックアップまたは復元を実行するには、コンポーネントと、コンポーネント間のやり取りを理解しておくことが重要です。  
@@ -63,11 +63,11 @@ ms.locfileid: "72798000"
   
  **コンテナー:** コンテナーは、一連の BLOB をグループ化するコンテナーで、BLOB を無制限に格納できます。 Azure Blob service に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを書き込むには、少なくともルートコンテナーが作成されている必要があります。  
   
- **BLOB:** 任意の種類とサイズのファイルです。 Azure Blob ストレージサービスに格納できる blob には、ブロック blob とページ blob の2種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、BLOB の種類としてページ BLOB を使用します。 Blob は、次の URL 形式を使用してアドレス指定できます: https://\<storage account >、\<container >/\<blob >  
+ **BLOB:** 任意の種類とサイズのファイルです。 Azure Blob ストレージサービスに格納できる blob には、ブロック blob とページ blob の2種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、BLOB の種類としてページ BLOB を使用します。 Blob は、次の URL 形式を使用してアドレス指定できます: https://\<ストレージアカウント >。 blob. core. windows .net/\<コンテナー >/\<blob >  
   
- ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
+ ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure BLOB ストレージ")  
   
- Azure Blob ストレージサービスの詳細については、「 [How to use the Azure Blob Storage service](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) 」を参照してください。  
+ Azure Blob ストレージサービスの詳細については、「 [クイック スタート:.NET 用 Azure Blob Storage クライアント ライブラリ](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) 」を参照してください。  
   
  ページ BLOB の詳細については、「 [ブロック BLOB およびページ BLOB について](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)」を参照してください。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72798000"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を作成する方法の詳細な手順については、このトピックの「[資格情報の作成の](#credential)例」を参照してください。  
   
- 資格情報の全般的な情報については、「 [資格情報](../security/authentication-access/credentials-database-engine.md)」をご覧ください。  
+ 資格情報の全般的な情報については、「 [資格情報](../security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
  資格情報が使用されるその他の例については、「 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)」参照してください。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "72798000"
   
 -   バックアップセットのオプション (`RETAINDAYS` および `EXPIREDATE`) を指定することはサポートされていません。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、バックアップ デバイス名に最大 259 文字の制限があります。 BACKUP TO URL では、URL の指定に使用する必須要素に 'https://.blob.core.windows.net//.bak ' の 36 文字が使用されるため、アカウント、コンテナー、および BLOB の名前は残りの 223 文字で構成します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、バックアップ デバイス名に最大 259 文字の制限があります。 BACKUP TO URL では、URL の指定に使用する必須要素に 'https://.blob.core.windows.net//.bak' の 36 文字が使用されるため、アカウント、コンテナー、および BLOB の名前は残りの 223 文字で構成します。  
   
 ###  <a name="Support"></a> BACKUP/RESTORE ステートメントのサポート  
   
@@ -139,7 +139,7 @@ ms.locfileid: "72798000"
   
 |||||  
 |-|-|-|-|  
-|引数|Supported|Exception|コメント|  
+|引数|Supported|例外|コメント|  
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 ||  
@@ -150,7 +150,7 @@ ms.locfileid: "72798000"
 |DIFFERENTIAL|&#x2713;|||  
 |COPY_ONLY|&#x2713;|||  
 |COMPRESSION&#124;NO_COMPRESSION|&#x2713;|||  
-|DESCRIPTION|&#x2713;|||  
+|Description|&#x2713;|||  
 |NAME|&#x2713;|||  
 |EXPIREDATE &#124; RETAINDAYS|&#x2713;|||  
 |NOINIT &#124; INIT|&#x2713;||このオプションは使用しても無視されます。<br /><br /> BLOB に追加することはできません。 バックアップを上書きするには、FORMAT 引数を使用します。|  
@@ -241,7 +241,7 @@ ms.locfileid: "72798000"
  [資格情報の作成 - Azure ストレージに対する認証](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> メンテナンス プラン ウィザードを使用した SQL Server Backup to URL  
- 前に説明したバックアップタスクと同様に、SQL Server Management Studio のメンテナンスプランウィザードが拡張され、ターゲットオプションの1つとして**URL**が含まれるようになりました。また、SQL のような Azure storage へのバックアップに必要な他のサポートオブジェクトも追加されました。証明. 詳細については、「 **Using Maintenance Plan Wizard** 」の「 [バックアップ タスクを定義する](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)」を参照してください。  
+ 前に説明したバックアップタスクと同様に、SQL Server Management Studio のメンテナンスプランウィザードが拡張され、ターゲットオプションの1つとして**URL**が含められるようになりました。また、SQL 資格情報などの Azure storage へのバックアップに必要なその他のサポートオブジェクトも追加されました。 詳細については、「 **Using Maintenance Plan Wizard** 」の「 [バックアップ タスクを定義する](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)」を参照してください。  
   
 ##  <a name="RestoreSSMS"></a>SQL Server Management Studio を使用した Azure storage からの復元  
  データベースを復元する場合、復元元のデバイスとして **[URL]** が用意されています。 次の手順では、Azure storage からの復元を可能にする復元タスクの変更について説明します。  
@@ -799,7 +799,7 @@ ms.locfileid: "72798000"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backuplogFile  -ToPointInTime (Get-Date).ToString()
    ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [システム データベースのバックアップと復元 &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [チュートリアル: SQL Server Azure Blob Storage サービスへのバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  

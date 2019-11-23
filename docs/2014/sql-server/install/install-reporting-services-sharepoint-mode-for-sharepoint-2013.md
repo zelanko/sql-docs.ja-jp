@@ -22,7 +22,7 @@ ms.locfileid: "72798340"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; **注:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]sharepoint モードでは、sharepoint Server マルチテナントはサポート**されていません**。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; **注:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sharepoint モードでは、sharepoint Server マルチテナントはサポート**されていません**。|  
   
  既存のファームへの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーの追加については、以下を参照してください。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72798340"
   
  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成:**  
   
--   インストールと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの登録の後、1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成します。 Reporting Services サービス アプリケーションを作成できるように、"SharePoint ファーム サービス アカウント" を一時的にローカルの Administrators グループのメンバーにする必要があります。 SharePoint 2013 アカウントのアクセス許可の詳細については、「 [sharepoint 2013 のアカウントのアクセス許可とセキュリティ設定](https://technet.microsoft.com/library/cc678863.aspx)」 (https://technet.microsoft.com/library/cc678863.aspx) を参照してください。  
+-   インストールと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの登録の後、1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成します。 Reporting Services サービス アプリケーションを作成できるように、"SharePoint ファーム サービス アカウント" を一時的にローカルの Administrators グループのメンバーにする必要があります。 SharePoint 2013 アカウントのアクセス許可の詳細については、「 [sharepoint 2013 のアカウントのアクセス許可とセキュリティ設定](https://technet.microsoft.com/library/cc678863.aspx)」 (https://technet.microsoft.com/library/cc678863.aspx)を参照してください。  
   
      セキュリティ上、SharePoint ファーム管理者アカウントがローカル オペレーティング システムの管理者アカウントを兼ねないことをお勧めします。 インストール プロセスの一環としてファーム管理者アカウントをローカルの Administrators グループに追加する場合は、インストールの完了後にローカルの Administrators グループからそのアカウントを削除することをお勧めします。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "72798340"
   
     -   **Reporting Services - SharePoint**  
   
-    -   **SharePoint 製品用 Reporting Services アドイン**  
+    -   **SharePoint 製品用 Reporting Services アドイン**。  
   
-         ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "付箋")アドインをインストールするためのインストールウィザードオプションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースで新しく追加されました。  
+         ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "note")アドインをインストールするためのインストールウィザードオプションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースで新しく追加されました。  
   
     -   SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスがまだインストールされていない場合は、 **[データベース エンジン サービス]** および **[管理ツール - 完全]** をクリックして完全な環境をインストールすることもできます。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "72798340"
   
 12. データベース エンジン サービスを選択した場合は、 **[インスタンスの構成]** ページで **MSSQLSERVER** の既定のインスタンスを受け入れて、 **[次へ]** をクリックします。  
   
-     ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "付箋")Reporting Services SharePoint サービスアーキテクチャは、以前の Reporting Services アーキテクチャとは異なり、SQL Server の "インスタンス" に基づいていません。  
+     ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "note")Reporting Services SharePoint サービスアーキテクチャは、以前の Reporting Services アーキテクチャとは異なり、SQL Server の "インスタンス" に基づいていません。  
   
 13. **[必要なディスク領域]** ページを確認し、 **[次へ]** をクリックします。  
   
@@ -291,13 +291,13 @@ ms.locfileid: "72798340"
   
 -   サイト コレクションに対応する [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 機能を有効にします。  
   
- Parameters  
+ パラメーター  
   
 -   サービス プロキシに合わせて **-Account** を更新します。 このアカウントは、SharePoint ファーム内で管理されるサービス アカウントであることが必要です。 詳細については、SharePoint のトピック「 [SharePoint 2013 の管理アカウントとサービス アカウントを計画する](https://technet.microsoft.com/library/cc263445.aspx)」を参照してください。  
   
 -   サービス アプリケーションに合わせて **-DatabaseServer** パラメーターを更新します。 このパラメーターは、データベース エンジンのインスタンスを意味します  
   
--   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] の機能を有効にするサイトの **-url** パラメーターを更新します。  
+-   **の機能を有効にするサイトの**-url[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] パラメーターを更新します。  
   
  **スクリプトを使用するには**  
   
@@ -407,11 +407,11 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 -   SharePoint ドキュメント ライブラリ内で、タイトルなどに使用するテキスト ボックスのみを含む基本的な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを作成します。 このレポートには、データ ソースやデータセットは何も含めません。 目標は、レポート ビルダーを開き、基本的なレポートを作成し、そのレポートをプレビューできることの確認です。  
   
-     レポートをドキュメント ライブラリに保存し、ライブラリからレポートを実行します。 レポート ビルダーでレポートを作成する方法の詳細については、「 [レポート ビルダーの起動 (レポート ビルダー)](https://technet.microsoft.com/library/ms159221.aspx)」を参照してください。  
+     レポートをドキュメント ライブラリに保存し、ライブラリからレポートを実行します。 レポート ビルダーでレポートを作成する方法の詳細については、「[レポート ビルダーの起動 (レポート ビルダー)](https://technet.microsoft.com/library/ms159221.aspx)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [コンテンツロードマップ: SharePoint Server と SQL SERVER BI  のセットアップと構成](https://technet.microsoft.com/library/dn205112.aspx)  
- [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [SQL Server 2012  の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)  
  [Reporting Services の SharePoint サービスとサービス アプリケーション](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

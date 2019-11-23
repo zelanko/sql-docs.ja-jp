@@ -50,7 +50,7 @@ sp_change_log_shipping_secondary_database
 [, [ @history_retention_period = ] 'history_retention_period']  
 ```  
   
-## <a name="arguments"></a>[引数]  
+## <a name="arguments"></a>引数  
 指定されたバックアップファイルを復元する前に、セカンダリサーバーが待機する時間を分単位で `[ @restore_delay = ] 'restore_delay'` します。 *restore_delay*は**int**であり、NULL にすることはできません。 既定値は 0 です。  
   
 `[ @restore_all = ] 'restore_all'` が1に設定されている場合、セカンダリサーバーは、復元ジョブの実行時に使用可能なすべてのトランザクションログバックアップを復元します。 それ以外の場合は、1つのファイルが復元された後に停止します。 *restore_all*は**ビット**であり、NULL にすることはできません。  
@@ -75,7 +75,7 @@ sp_change_log_shipping_secondary_database
   
 `[ @threshold_alert = ] 'threshold_alert'` は、復元のしきい値を超えたときに発生するアラートです。 *threshold_alert*は**int**,、既定値は14420です。  
   
-*restore_threshold*を超えたときにアラートを生成するかどうかを指定します。 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` 1 = 有効。0 = 無効です。 *threshold_alert_enabled*は**ビット**であり、NULL にすることはできません。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` *restore_threshold*を超過したときにアラートを生成するかどうかを指定します。 1 = 有効。0 = 無効です。 *threshold_alert_enabled*は**ビット**であり、NULL にすることはできません。  
   
 `[ @history_retention_period = ] 'history_retention_period'` は、履歴を保持する時間 (分単位) です。 *history_retention_period*は**int**です。値が指定されていない場合は、1440の値が使用されます。  
   
@@ -85,18 +85,18 @@ sp_change_log_shipping_secondary_database
 ## <a name="result-sets"></a>結果セット  
  [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>備考  
+## <a name="remarks"></a>Remarks  
  **sp_change_log_shipping_secondary_database**は、セカンダリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
-1.  必要に応じて、 **log_shipping_secondary_database**レコードの設定を変更します。  
+1.  必要に応じて**log_shipping_secondary_database**レコードの設定を変更します。  
   
 2.  必要に応じて、指定された引数を使用して、セカンダリサーバー上の**log_shipping_monitor_secondary**のローカル監視レコードを変更します。  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- この例では、 **sp_change_log_shipping_secondary_database**を使用して、データベース**LogShipAdventureWorks**のセカンダリデータベースパラメーターを更新しています。  
+ この例では、 **sp_change_log_shipping_secondary_database**を使用してデータベース**LogShipAdventureWorks**のセカンダリデータベースパラメーターを更新する方法を示します。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   
@@ -110,7 +110,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ,  @history_retention_period = 14420;  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

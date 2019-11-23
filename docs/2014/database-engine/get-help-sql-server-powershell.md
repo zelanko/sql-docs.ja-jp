@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797877"
 ---
-# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>SQL Server PowerShell のヘルプの参照
   Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーおよびコマンドレットの使用方法に関していくつかの情報源が用意されています。 これには、Windows PowerShell 環境で参照できるヘルプが含まれます。  
   
 ## <a name="before-you-begin"></a>作業を開始する準備  
@@ -122,6 +122,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>「  
- [SQL Server PowerShell プロバイダー](../powershell/sql-server-powershell-provider.md)   
+## <a name="see-also"></a>参照  
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [データベース エンジン コマンドレットの使用](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

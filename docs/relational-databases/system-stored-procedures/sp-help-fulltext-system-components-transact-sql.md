@@ -49,7 +49,7 @@ sp_help_fulltext_system_components
   
 -   **wordbreaker**  
   
--   **filter**  
+-   **フィルター (filter)**  
   
 -   **プロトコルハンドラー**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  完全なパスが指定されている場合は、コンポーネント DLL への完全パスで*param*も指定する必要があります。指定しない場合、エラーメッセージが返されます。  
   
-`[ @param = ] param` は、コンポーネントの種類に応じて、ロケール識別子 (LCID)、"." プレフィックスが付いたファイル拡張子、プロトコルハンドラーの完全なコンポーネント名、またはコンポーネント DLL への完全なパスのいずれかになります。  
+`[ @param = ] param` コンポーネントの種類に応じて、次のいずれかになります。ロケール識別子 (LCID)、"." プレフィックスが付いたファイル拡張子、プロトコルハンドラーの完全なコンポーネント名、またはコンポーネント DLL への完全パス。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) エラー  
@@ -65,7 +65,7 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>結果セット  
  システム コンポーネントについて、次の結果セットが返されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|コンポーネントの種類。 次のいずれかです。<br /><br /> フィルター (filter)<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|コンポーネント名。|  
@@ -76,7 +76,7 @@ sp_help_fulltext_system_components
   
  *Component_type*を使用するフルテキストカタログが1つ以上存在する場合にのみ、次の結果セットが返されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|データベースの ID です。|  
 |**ftcatid**|**int**|フルテキストカタログの ID。|  
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>アクセス許可  
  **Public**ロールのメンバーシップが必要です。ただし、ユーザーは、VIEW DEFINITION 権限を持つフルテキストカタログに関する情報のみを表示できます。 **Serveradmin**固定サーバーロールのメンバーだけが、 **fullpath**列の値を参照できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この方法は、アップグレードを準備するときに特に重要です。 特定のデータベース内でストアドプロシージャを実行し、その出力を使用して、アップグレードによって特定のカタログが影響を受けるかどうかを判断します。  
   
 ## <a name="examples"></a>使用例  
@@ -97,7 +97,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>B. ワード ブレーカーを一覧表示する  
+### <a name="b-listing-word-breakers"></a>b. ワード ブレーカーを一覧表示する  
  次の例では、サービスインスタンスに登録されているすべてのワードブレーカーを一覧表示します。  
   
 ```  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 特定のワード ブレーカーが登録されているかどうかを確認する  
- 次の例では、トルコ語 (LCID = 1055) がシステムにインストールされ、サービス インスタンスに登録されている場合のトルコ語のワード ブレーカーを一覧表示します。 この例 @no__t では、パラメーター名**1component_type**と **\@param**を指定します。  
+ 次の例では、トルコ語 (LCID = 1055) がシステムにインストールされ、サービス インスタンスに登録されている場合のトルコ語のワード ブレーカーを一覧表示します。 この例では、パラメーター名 **\@component_type**と **\@param**を指定します。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -135,7 +135,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [登録されているフィルターとワードブレーカーを表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)   

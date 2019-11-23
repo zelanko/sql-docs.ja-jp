@@ -74,7 +74,7 @@ ms.locfileid: "72797896"
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>データベース ミラーリング エンドポイントを構成するには
   
--   [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -93,8 +93,8 @@ ms.locfileid: "72797896"
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [データベースミラーリングと AlwaysOn 可用性グループ&#40;SQL Server&#41;のトランスポートセキュリティ](transport-security-database-mirroring-always-on-availability.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [_hadr_availability_replica_states &#40;transact-sql の&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [_db_mirroring_connections &#40;transact-sql (dm)&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [dm_hadr_availability_replica_states &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [dm_db_mirroring_connections &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

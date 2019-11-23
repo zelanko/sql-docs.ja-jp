@@ -31,7 +31,7 @@ ms.locfileid: "72304865"
   現在のデータベースにデータベース ユーザーを追加します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)を使用します。  
+>  代わりに[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)を使用 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,15 +43,15 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login_ '` は、新しいデータベースユーザーにマップされる Windows グループ、Windows ログイン、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前です。 Windows グループと Windows ログインの名前は、*ドメイン*\\*ログイン*の形式の windows ドメイン名で修飾する必要があります。たとえば、 **LONDON\Joeb**のようになります。 ログインをデータベース内のユーザーにマップすることはできません。 *login*は**sysname**であり、既定値はありません。  
+`[ @loginame = ] 'login_ '` には、新しいデータベースユーザーにマップされる Windows グループ、Windows ログイン、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。 Windows グループと Windows ログインの名前は、*ドメイン*\\*ログイン*の形式の windows ドメイン名で修飾する必要があります。たとえば、 **LONDON\Joeb**のようになります。 ログインをデータベース内のユーザーにマップすることはできません。 *login*は**sysname**であり、既定値はありません。  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` は、新しいデータベースユーザーの名前です。 *name_in_db*は、データ型が**sysname**で、既定値が NULL の出力変数です。 指定しない場合は、*ログイン*が使用されます。 値が NULL の出力変数として指定した場合、 **\@** は*ログイン*に設定されます。 *name_in_db*は、現在のデータベースに既に存在していてはなりません。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` には、新しいデータベースユーザーの名前を指定します。 *name_in_db*のデータ型は**sysname**で、既定値は NULL です。 指定しない場合は、*ログイン*が使用されます。 値が NULL の出力変数として指定した場合、 **\@name_in_db**は*login*に設定されます。 *name_in_db*は、現在のデータベースに存在していない必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_grantdbaccess**は、追加オプションをサポートする CREATE USER を呼び出します。 データベースユーザーの作成の詳細については、「 [ &#40;CREATE&#41;USER transact-sql](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 データベースからデータベースユーザーを削除するには、 [DROP user](../../t-sql/statements/drop-user-transact-sql.md)を使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_grantdbaccess**は、追加のオプションをサポートする CREATE USER を呼び出します。 データベースユーザーの作成の詳細については、「 [ &#40;CREATE&#41;USER transact-sql](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 データベースからデータベースユーザーを削除するには、 [DROP user](../../t-sql/statements/drop-user-transact-sql.md)を使用します。  
   
  **sp_grantdbaccess**は、ユーザー定義のトランザクション内では実行できません。  
   
@@ -59,7 +59,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  **Db_owner**固定データベースロールまたは**db_accessadmin**固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では `CREATE USER` を使用して、Windows ログインのデータベースユーザーを現在のデータベースに追加 @no__t ます。 新しいユーザーの名前は `Lolan` です。 これは、データベースユーザーを作成するための推奨される方法です。  
+ 次の例では、`CREATE USER` を使用して、Windows ログイン `Edmonds\LolanSo` のデータベースユーザーを現在のデータベースに追加します。 新しいユーザーの名前は `Lolan` です。 これは、データベースユーザーを作成するための推奨される方法です。  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

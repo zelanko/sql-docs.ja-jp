@@ -33,18 +33,18 @@ ms.locfileid: "72782907"
     > [!NOTE]  
     >  PowerShell は、 **[拡張イベント]** の下の任意のノードから起動できます。 たとえば、 **[Sessions]** を右クリックし、 **[PowerShell の起動]** をクリックできます。 これにより、1 レベル深い Sessions フォルダーで PowerShell が起動します。  
   
- XEvent フォルダー ツリーを参照して、既存の拡張イベント セッションと、関連するイベント、ターゲット、および述語を表示できます。 たとえば、PS SQLSERVER: \ XEvent \\*ServerName* \\*InstanceName*> パスで、「`cd sessions`」と入力し、enter キーを押して「`dir`」と入力し、enter キーを押すと、そのインスタンスに格納されているセッションの一覧が表示されます。 また、セッションが実行中かどうか (および実行中の場合は実行時間)、およびセッションがインスタンスの起動時に開始されるように構成されているかどうかも表示されます。  
+ XEvent フォルダー ツリーを参照して、既存の拡張イベント セッションと、関連するイベント、ターゲット、および述語を表示できます。 たとえば、PS SQLSERVER: \ XEvent\\*ServerName*\\*InstanceName*> パスで、「`cd sessions`」と入力し、enter キーを押して「`dir`」と入力し、enter キーを押すと、そのインスタンスに格納されているセッションの一覧が表示されます。 また、セッションが実行中かどうか (および実行中の場合は実行時間)、およびセッションがインスタンスの起動時に開始されるように構成されているかどうかも表示されます。  
   
- セッションに関連付けられているイベント、述語、およびターゲットを表示するには、ディレクトリをセッション名に変更してから、events フォルダーまたは targets フォルダーを表示します。 たとえば、既定のシステム正常性セッションに関連付けられているイベントとその述語を表示するには、PS SQLSERVER:\ XEvent \\*ServerName* \\*InstanceName*\ Sessions > パスで、「」と入力 `cd system_health\events,` enter キー @no を押します。__ 5 を入力し、enter キーを押します。  
+ セッションに関連付けられているイベント、述語、およびターゲットを表示するには、ディレクトリをセッション名に変更してから、events フォルダーまたは targets フォルダーを表示します。 たとえば、既定のシステム正常性セッションに関連付けられているイベントとその述語を表示するには、PS SQLSERVER:\ XEvent\\*ServerName*\\*InstanceName*\ Sessions > パスで、「」と入力 `cd system_health\events,` enter キーを押し、「`dir`」と入力して、enter キーを押します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーは、拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 次のセクションでは、拡張イベントに PowerShell スクリプトを使用する基本的な例をいくつか紹介します。  
   
 ## <a name="examples"></a>使用例  
  以下の例では、次の点に注意してください。  
   
--   スクリプトは、PS SQLSERVER: \\ > プロンプトから実行する必要があります (コマンドプロンプトで「`sqlps`」と入力すると使用できます)。  
+-   スクリプトは、PS SQLSERVER:\\> プロンプトから実行する必要があります (コマンドプロンプトで「`sqlps`」と入力すると使用できます)。  
   
--   スクリプトでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスを使用します。  
+-   スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスを使用します。  
   
 -   スクリプトは、.ps1 拡張子を付けて保存してください。  
   
@@ -106,10 +106,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  拡張イベント セッションを作成、変更、または削除するには、ALTER ANY EVENT SESSION 権限が必要です。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [system_health セッションの使用](use-the-ssms-xe-profiler.md)   
  [拡張イベントのツール](extended-events-tools.md)  

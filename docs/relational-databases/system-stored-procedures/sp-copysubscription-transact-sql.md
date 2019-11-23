@@ -47,12 +47,12 @@ sp_copysubscription [ @filename = ] 'file_name'
   
 `[ @temp_dir = ] 'temp_dir'` は、一時ファイルが格納されているディレクトリの名前です。 *temp_dir*は**nvarchar (260)** ,、既定値は NULL です。 NULL の場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のデータディレクトリが使用されます。 このディレクトリは、すべてのサブスクライバー データベース ファイルを合わせたファイル サイズを格納できるだけの領域を備えている必要があります。  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` は、 **\@filename**で指定された同じ名前の既存のファイルを上書きするかどうかを指定する、省略可能なブールフラグです。 *overwrite_existing_file*は**ビット**,、既定値は**0**です。 **1**の場合、 **\@filename**によって指定されたファイルを上書きします (存在する場合)。 **0**の場合、ファイルが存在する場合、ストアドプロシージャは失敗し、ファイルは上書きされません。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` は、 **\@filename**に指定されているものと同じ名前の既存のファイルを上書きするかどうかを指定する、省略可能なブールフラグです。 *overwrite_existing_file*は**ビット**,、既定値は**0**です。 **1**の場合、 **\@filename**によって指定されたファイルを上書きします (存在する場合)。 **0**の場合、ファイルが存在する場合、ストアドプロシージャは失敗し、ファイルは上書きされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_copysubscription**は、サブスクライバーでスナップショットを適用する代わりに、サブスクリプションデータベースをファイルにコピーするために、すべての種類のレプリケーションで使用されます。 プルサブスクリプションのみをサポートするようにデータベースを構成する必要があります。 適切な権限を持つユーザーは、サブスクリプションデータベースのコピーを作成し、サブスクリプションファイル (msf) を別のサブスクライバーに電子メール、コピー、または転送することができます。その後、サブスクリプションとしてアタッチできます。  
   
  コピーするサブスクリプションデータベースのサイズは 2 gb 未満である必要があります。  
@@ -62,7 +62,7 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_copysubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スナップショット フォルダーの代替位置](../../relational-databases/replication/snapshot-options.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -43,27 +43,27 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @alert_name = ] 'alert_name'` アラートの名前。 *alert_name*は**nvarchar (128)** です。 場合*alert_name*が指定されていない、すべてのアラートに関する情報が返されます。  
+アラート名を `[ @alert_name = ] 'alert_name'` します。 *alert_name*は**nvarchar (128)** です。 *Alert_name*が指定されていない場合は、すべてのアラートに関する情報が返されます。  
   
-`[ @order_by = ] 'order_by'` の結果を生成するために使用する並べ替え順。 *order_by*は**sysname**,、既定値は N '*name*' です。  
+結果の生成に使用する並べ替え順序を `[ @order_by = ] 'order_by'` します。 *order_by*は**sysname**で、既定値は N '*name*' です。  
   
-`[ @alert_id = ] alert_id` 情報を報告する警告の識別番号。 *alert_id*は**int**,、既定値は NULL です。  
+情報を報告する警告の識別番号を `[ @alert_id = ] alert_id` します。 *alert_id*は**int**,、既定値は NULL です。  
   
-`[ @category_name = ] 'category'` アラートのカテゴリ。 *category*は**sysname**,、既定値は NULL です。  
+アラートのカテゴリを `[ @category_name = ] 'category'` します。 *category*は**sysname**,、既定値は NULL です。  
   
-`[ @legacy_format = ] legacy_format` は、従来の結果セットを生成するかどうかを指定します。 *legacy_format*は**ビット**,、既定値は**0**です。 *Legacy_format*が**1**の場合、 **sp_help_alert**は Microsoft SQL Server 2000 で**sp_help_alert**によって返された結果セットを返します。  
+`[ @legacy_format = ] legacy_format` は、従来の結果セットを生成するかどうかを示します。 *legacy_format*は**ビット**,、既定値は**0**です。 *Legacy_format*が**1**の場合、 **sp_help_alert** Microsoft SQL Server 2000 で**sp_help_alert**によって返された結果セットを返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 1legacy_format が**0**の **@no__t**場合、 **sp_help_alert**は次の結果セットを生成します。  
+ **\@legacy_format**が**0**の場合、 **sp_help_alert**によって次の結果セットが生成されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|システムによって割り当てられた一意な整数識別子。|  
-|**name**|**sysname**|アラート名 (例: デモ:完全な**msdb**ログ)。|  
-|**event_source**|**nvarchar(100)**|イベントのソース。 @No__t-1 @no__t 2 バージョン7.0 の場合は、常に**MSSQLServer**になります。|  
+|**name**|**sysname**|アラート名 (例: Demo: Full **msdb** log)。|  
+|**event_source**|**nvarchar(100)**|イベントのソース。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 の場合は、常に**MSSQLServer**になります。|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|警告を定義するメッセージエラー番号。 (通常、 **sysmessages**テーブルのエラー番号に対応します)。 重大度を使用して警告を定義する場合、 **message_id**は**0**または NULL になります。|  
@@ -89,15 +89,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 の場合は常に '[Uncategorized]' となります。|  
 |**wmi_namespace**|**sysname**|**Type**が**3**の場合、この列には WMI イベントの名前空間が表示されます。|  
 |**wmi_query**|**nvarchar(512)**|**Type**が**3**の場合、この列には WMI イベントのクエリが表示されます。|  
-|**type**|**int**|イベントの種類。<br /><br /> **1** =  @ no__t イベントアラート<br /><br /> **2** =  @ no__t-2 パフォーマンスアラート<br /><br /> **3** = WMI イベント警告|  
+|**型**|**int**|イベントの種類。<br /><br /> **1** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントの警告<br /><br /> **2** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンスの警告<br /><br /> **3** = WMI イベント警告|  
   
- 1legacy_format が**1**の **@no__t**場合、 **sp_help_alert**は次の結果セットを生成します。  
+ **\@legacy_format**が**1**の場合、 **sp_help_alert**によって次の結果セットが生成されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|システムによって割り当てられた一意な整数識別子。|  
-|**name**|**sysname**|アラート名 (例: デモ:完全な**msdb**ログ)。|  
-|**event_source**|**nvarchar(100)**|イベントのソース。 @No__t-1 バージョン7.0 の場合は、常に**MSSQLServer**になります。|  
+|**name**|**sysname**|アラート名 (例: Demo: Full **msdb** log)。|  
+|**event_source**|**nvarchar(100)**|イベントのソース。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 の場合、常に**MSSQLServer**になります。|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|警告を定義するメッセージエラー番号。 (通常、 **sysmessages**テーブルのエラー番号に対応します)。 重大度を使用して警告を定義する場合、 **message_id**は**0**または NULL になります。|  
@@ -120,10 +120,10 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|この警告について1つ以上のオペレーターに通知される場合は0以外。 値は次のとおりです。複数の場合は OR で表されます。<br /><br /> **1**= 電子メール通知<br /><br /> **2**= ポケットベルによる通知<br /><br /> **4**= **net send**通知があります。|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
 |**performance_condition**|**nvarchar(512)**|**Type**が**2**の場合、この列にはパフォーマンス条件の定義が表示されます。 **Type**が**3**の場合、この列には WMI イベントのクエリが表示されます。 それ以外の場合、列は NULL になります。|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] は、@no__t 7.0 の場合は常に ' **[未カテゴリ化]** ' になります。|  
-|**type**|**int**|アラートの種類:<br /><br /> **1** =  @ no__t イベントアラート<br /><br /> **2** =  @ no__t-2 パフォーマンスアラート<br /><br /> **3** = WMI イベント警告|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 に対して常に ' **[未カテゴリ化]** ' になります。|  
+|**型**|**int**|アラートの種類:<br /><br /> **1** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントの警告<br /><br /> **2** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンスの警告<br /><br /> **3** = WMI イベント警告|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_help_alert**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -142,9 +142,9 @@ EXEC sp_help_alert @alert_name = 'Demo: Sev. 25 Errors';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_update_alert &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sp_update_alert](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

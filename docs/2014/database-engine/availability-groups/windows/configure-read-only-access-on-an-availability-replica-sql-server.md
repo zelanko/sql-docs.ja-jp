@@ -36,11 +36,11 @@ ms.locfileid: "72797739"
   
 -   別の接続アクセスを構成するには、プライマリ レプリカをホストするサーバー インスタンスに接続している必要があります。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
   
-|タスク|Permissions|  
+|タスク|アクセス許可|  
 |----------|-----------------|  
 |可用性グループの作成時にレプリカを構成する|**sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。|  
 |可用性レプリカを変更する|可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。|  
@@ -61,7 +61,7 @@ ms.locfileid: "72797739"
   
     -   セカンダリ ロールの場合は、 **[読み取り可能セカンダリ]** ボックスの一覧から新しい値を選択します。値は次のとおりです。  
   
-         **[いいえ]**  
+         **いいえ**  
          このレプリカのセカンダリ データベースに対するユーザー接続は禁止されます。 読み取りアクセスで利用することはできません。 これが既定の設定です。  
   
          **[読み取り目的のみ]**  
@@ -83,7 +83,7 @@ ms.locfileid: "72797739"
  **可用性レプリカに対してアクセスを構成するには**  
   
 > [!NOTE]  
->  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
+>  この手順の例については、このセクションの後半の「[例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797739"
   
          パラメーターの説明  
   
-         NO  
+         いいえ  
          このレプリカのセカンダリ データベースに対する直接接続は禁止されます。 読み取りアクセスで利用することはできません。 これが既定の設定です。  
   
          READ_ONLY  
@@ -154,7 +154,7 @@ GO
          `AllowAllConnections`  
          読み取り専用アクセスに限り、セカンダリ レプリカのデータベースに対するすべての接続が許可されます。  
   
-    -   プライマリロールの接続アクセスを構成するには `ConnectionModeInPrimaryRole`*primary_role_keyword*を指定します。 *primary_role_keyword*は次のいずれかの値になります。  
+    -   プライマリロールの接続アクセスを構成するには、`ConnectionModeInPrimaryRole`*primary_role_keyword*を指定します。 *primary_role_keyword*は次のいずれかの値になります。  
   
          `AllowReadWriteConnections`  
          Application Intent 接続プロパティが ReadOnly に設定されている接続は許可されません。 Application Intent プロパティが ReadWrite に設定されている場合、または Application Intent 接続プロパティが設定されていない場合は、接続が許可されます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
@@ -163,7 +163,7 @@ GO
          プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 SQL Server PowerShell プロバイダーを設定して使用する方法については、「 [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)」を参照してください。
   
@@ -232,7 +232,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
 -   [AlwaysOn: 読み取り可能なセカンダリとデータ待機時間](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [アクティブなセカンダリ: 読み取り可能&#40;なセカンダリレプリカ AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

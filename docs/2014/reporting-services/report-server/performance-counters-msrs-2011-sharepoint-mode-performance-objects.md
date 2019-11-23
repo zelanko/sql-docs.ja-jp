@@ -25,7 +25,7 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72782841"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>MSRS 2014 Web Service SharePoint Mode と MSRS 2014 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)
-  このトピックでは、SharePoint モードで配置した [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] に含まれる `MSRS 2014 Web Service SharePoint Mode` および `MSRS 2014 Windows Service SharePoint Mode` パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
+  このトピックでは、SharePoint モードで配置した `MSRS 2014 Web Service SharePoint Mode` に含まれる `MSRS 2014 Windows Service SharePoint Mode` および [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
   
 > [!NOTE]  
 >  このパフォーマンス オブジェクトは、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置全体ではなく、現在のサーバーに適用されます。  
@@ -47,7 +47,7 @@ ms.locfileid: "72782841"
   
  次の表に、`MSRS 2014 Web Service SharePoint Mode` パフォーマンスオブジェクトに含まれているカウンターの一覧を示します。  
   
-|カウンター|Description|  
+|カウンター|[説明]|  
 |-------------|-----------------|  
 |`Active Sessions`|アクティブなセッションの数。 このカウンターは、レポートの実行によって生成されたすべてのブラウザー セッション (アクティブであるかどうかにかかわらず) の累積数を表示します。<br /><br /> セッション レコードが削除されると、カウンターの値は減少します。 既定では、セッションは利用されない状態が 10 分間続くと削除されます。|  
 |`Cache Hits/Sec`|キャッシュされたレポートに対する 1 秒あたりの要求数。 これはレポートの再表示の要求であり、キャッシュから直接処理されるレポートの要求ではありません (このトピックの `Total Cache Hits` を参照してください)。|  
@@ -77,7 +77,7 @@ ms.locfileid: "72782841"
   
  次の表は、`MSRS 2014 Windows Service SharePoint mode` パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
-|カウンター|Description|  
+|カウンター|[説明]|  
 |-------------|-----------------|  
 |`Active Sessions`|レポート サーバー データベースに格納されるアクティブ セッションの数です。 このカウンターは、レポート サブスクリプションから生成される使用可能なすべてのブラウザー セッションの累積数と、セッションがまだアクティブかどうかを示します。|  
 |`Alerting: event queue length`||  
@@ -139,6 +139,6 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 (Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [レポート サーバーのパフォーマンスの監視](monitoring-report-server-performance.md)   
  [MSRS 2014 Web サービスおよび MSRS 2014 Windows Service パフォーマンスオブジェクト&#40;のネイティブモードのパフォーマンスカウンター&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

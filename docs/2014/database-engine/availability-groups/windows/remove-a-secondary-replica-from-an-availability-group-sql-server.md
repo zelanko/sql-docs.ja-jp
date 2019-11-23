@@ -31,7 +31,7 @@ ms.locfileid: "72782941"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **セカンダリ レプリカを削除する方法:**  
   
@@ -51,11 +51,11 @@ ms.locfileid: "72782941"
   
 -   セカンダリ レプリカのみを可用性グループから削除できます。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> の前提条件  
   
 -   可用性グループのプライマリ レプリカをホストするサーバー インスタンスに接続している。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
@@ -110,7 +110,7 @@ ms.locfileid: "72782941"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "72782941"
   
  レプリカの削除により、データの受信が停止します。 セカンダリ レプリカがグローバル ストアから削除されたことが確認されると、RECOVERING 状態でローカル サーバー インスタンスに残っている可用性グループ設定がデータベースから削除されます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [可用性グループの削除 &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  

@@ -50,11 +50,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  プロシージャにアクセスするには、ユーザーに PUBLIC ロールが割り当てられている必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="example"></a>例  
- 次の例では `sp_help_spatial_geometry_index` を使用して、テーブル**geometry_col**で定義されている空間インデックス**SIndx_SpatialTable_geometry_col2**を調査しています。このクエリサンプルについては、 **\@qs**をご確認ください。 この例では、指定したインデックスのコアプロパティのみが返されます。  
+ 次の例では、`sp_help_spatial_geometry_index` を使用して、 **\@qs**で指定されたクエリサンプルのテーブル**geometry_col**で定義されている空間インデックス**SIndx_SpatialTable_geometry_col2**を調査します。 この例では、指定したインデックスのコアプロパティのみが返されます。  
   
 ```  
 declare @qs geometry  
@@ -62,7 +62,7 @@ declare @qs geometry
 exec sp_help_spatial_geometry_index 'geometry_col', 'SIndx_SpatialTable_geometry_col2', 0, @qs;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   

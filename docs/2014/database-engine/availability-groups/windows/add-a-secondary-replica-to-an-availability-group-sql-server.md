@@ -27,7 +27,7 @@ ms.locfileid: "72783010"
   
      [前提条件と制限](#PrerequisitesRestrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **レプリカを追加するには (次を使用):**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72783010"
   
  詳細については、「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-##  <a name="Security"></a> Security  
+##  <a name="Security"></a> セキュリティ  
   
 ###  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
@@ -62,7 +62,7 @@ ms.locfileid: "72783010"
   
 3.  可用性グループを右クリックし、次のコマンドのどちらかを選択します。  
   
-    -   可用性グループへのレプリカ追加ウィザードを起動するには、 **[レプリカの追加]** をクリックします。 詳細については、「[可用性グループへのレプリカ追加ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)」を参照してください。  
+    -   可用性グループへのレプリカ追加ウィザードを起動するには、 **[レプリカの追加]** をクリックします。 詳細については、「[可用性グループへのレプリカ追加ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md) を参照してください。  
   
     -   または、 **[可用性グループのプロパティ]** ダイアログ ボックスで、 **[プロパティ]** をクリックします。 このダイアログ ボックスでレプリカを追加する手順は以下のとおりです。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72783010"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -126,11 +126,11 @@ ms.locfileid: "72783010"
   
 1.  新しいセカンダリ レプリカをホストする予定のサーバー インスタンスに接続します。  
   
-2.  新しいセカンダリ レプリカを可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
+2.  新しいセカンダリ レプリカを可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
-3.  可用性グループ内の各データベースについて、セカンダリ レプリカをホストしているサーバー インスタンス上でセカンダリ データベースを作成します。 詳細については、「 [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)で Always On 可用性グループを作成および構成する方法について説明します。  
+3.  可用性グループ内の各データベースについて、セカンダリ レプリカをホストしているサーバー インスタンス上でセカンダリ データベースを作成します。 詳細については、「[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)」を参照してください。  
   
-4.  新しいセカンダリ データベースのそれぞれを可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
+4.  新しいセカンダリ データベースのそれぞれを可用性グループに参加させます。 詳細については、「[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)」をご覧ください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **可用性レプリカを管理するには**  
@@ -149,7 +149,7 @@ ms.locfileid: "72783010"
   
 -   [可用性レプリカのセッション タイムアウト期間の変更 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの作成と構成 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   

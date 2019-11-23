@@ -20,7 +20,7 @@ ms.locfileid: "72797770"
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
   SQL Server の区切られた識別子には、Windows PowerShell パスでサポートされない文字が含まれる場合があります。 これらの文字は、16 進数値にエンコードすることによって指定できます。  
   
-1.  **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
 2.  **特殊文字を処理する方法:**  [識別子のエンコード](#EncodeIdent)、 [識別子のデコード](#DecodeIdent)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "72797770"
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**文字**|\ |/|[ ] :|%|\<|>|*|?|[|]|&#124;|  
+|**文字**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**16 進エンコード**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> 識別子のエンコード  
@@ -71,7 +71,7 @@ Set-Location (Encode-SqlName "Table:Test")
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

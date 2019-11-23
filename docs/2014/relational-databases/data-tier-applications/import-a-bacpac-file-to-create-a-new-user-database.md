@@ -36,7 +36,7 @@ ms.locfileid: "70175934"
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
   データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
   
-## <a name="before-you-begin"></a>はじめに  
+## <a name="before-you-begin"></a>作業を開始する準備  
  インポート プロセスでは、2 つの段階を経て新しい DAC が構築されます。  
   
 1.  エクスポート ファイルに格納されている DAC 定義を使用して、新しい DAC および関連するデータベースを作成します。DAC の配置時には、DAC パッケージ ファイル内の定義から新しい DAC が作成されますが、その場合と同じ方法で作成されます。  
@@ -44,8 +44,8 @@ ms.locfileid: "70175934"
 2.  エクスポート ファイルからデータを一括コピーします。  
   
  
-## <a name="sql-server-utility"></a>SQL Server ユーティリティ (SQL Server Utility)  
- データベース エンジンのマネージド インスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **の** details page.  
+## <a name="sql-server-utility"></a>SQL Server ユーティリティ  
+ データベース エンジンのマネージド インスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[配置済みのデータ層アプリケーション]** ノードに表示され、 **の** 詳細ページで報告されます。  
   
 ## <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、インポート時に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定がすべて適用されます。ただし、データベースの照合順序および互換性レベルは、DAC のエクスポート ファイルで定義された値に設定されます。 DAC のエクスポート ファイルには、元のデータベースに基づく値が使用されます。  
@@ -55,10 +55,10 @@ ms.locfileid: "70175934"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DAC は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]にインポートできるほか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスにインポートすることができます。 新しいバージョンから DAC をエクスポートした場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  ソースが不明または信頼されていない DAC エクスポート ファイルはインポートしないことをお勧めします。 こうしたファイルには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 エクスポート ファイルのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードも確認してください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  セキュリティを強化するために、SQL Server 認証のログインは、パスワードなしで DAC エクスポート ファイルに格納されます。 ファイルがインポートされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限を持つユーザーとしてログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -101,7 +101,7 @@ ms.locfileid: "70175934"
   
 -   **[ローカル ディスクからインポート]** : **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
   
--   **Azure からインポート**-BACPAC ファイルを azure コンテナーからインポートします。 このオプションを検証するには、Azure コンテナーに接続する必要があります。 このオプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
+-   **Azure からインポート**-BACPAC ファイルを azure コンテナーからインポートします。 このオプションを検証するためには、Azure コンテナーに接続する必要があります。 このオプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
   
      Azure を参照するときに、1 つのアカウント内のコンテナーを切り替えることができます。 インポート操作を続行するには、1 つの .bacpac ファイルを指定する必要があります。 列は、 **名前**、 **サイズ**、または **更新日時**で並べ替えることができます。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "70175934"
   
 -   **[新しいデータベース名]** : インポートするデータベースの名前を指定します。  
   
--   エディション-Business また[!INCLUDE[ssSDS](../../includes/sssds-md.md)]は[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web を指定します。 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](http://www.windowsazure.com/home/tour/database/) 」を参照してください。  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディション**-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] ビジネスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web を指定します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](http://www.windowsazure.com/home/tour/database/) 」を参照してください。  
   
 -   **[データベースの最大サイズ (GB)]** : ドロップダウンメニューを使用して、データベースの最大サイズを指定します。  
   
@@ -148,8 +148,8 @@ ms.locfileid: "70175934"
   
  **[閉じる]** をクリックしてウィザードを閉じます。  
   
-## <a name="see-also"></a>関連項目  
- [[データ層アプリケーション]](data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [データ層アプリケーション](data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](export-a-data-tier-application.md)  
   
   

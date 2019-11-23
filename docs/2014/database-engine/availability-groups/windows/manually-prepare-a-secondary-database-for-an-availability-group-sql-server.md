@@ -37,7 +37,7 @@ ms.locfileid: "72797653"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してセカンダリ データベースを準備するには:**  
   
@@ -73,13 +73,13 @@ ms.locfileid: "72797653"
   
 -   セカンダリ データベースを準備する場合は、セカンダリ レプリカの初期化が完了するまでの間、可用性グループ内のデータベースでスケジュールされているログ パックアップを一時停止することを強くお勧めします。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
  データベースをバックアップするときに、 [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md) は OFF に設定されます。 したがって、新たに復元されたデータベースでは TRUSTWORTHY は常に OFF です。  
   
 ####  <a name="Permissions"></a> アクセス許可  
- BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  
+ BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。 詳細については、「[BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  
   
- 復元するデータベースがサーバー インスタンスに存在しない場合、RESTORE ステートメントに CREATE DATABASE 権限が必要です。 詳細については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
+ 復元するデータベースがサーバー インスタンスに存在しない場合、RESTORE ステートメントに CREATE DATABASE 権限が必要です。 詳細については、「[RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72797653"
 4.  セカンダリ データベースの構成を完了するには、セカンダリ データベースを可用性グループに参加させる必要があります。 詳細については、「[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  これらのバックアップ操作および復元操作の実行方法については、このセクションの「[関連するバックアップおよび復元のタスク](#RelatedTasks)」を参照してください。  
+>  これらのバックアップ操作および復元操作の実行方法については、このセクションの「 [関連するバックアップおよび復元のタスク](#RelatedTasks)」を参照してください。  
   
 ###  <a name="RelatedTasks"></a> 関連するバックアップおよび復元のタスク  
  **データベースのバックアップを作成するには**  
@@ -144,7 +144,7 @@ ms.locfileid: "72797653"
 4.  セカンダリ データベースの構成を完了するには、セカンダリ データベースを可用性グループに参加させる必要があります。 詳細については、「[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  これらのバックアップ操作および復元操作の実行方法については、このトピックの「 [関連するバックアップおよび復元のタスク](#RelatedTasks)」を参照してください。  
+>  これらのバックアップ操作および復元操作の実行方法については、このトピックの「[関連するバックアップおよび復元のタスク](#RelatedTasks)」を参照してください。  
   
 ###  <a name="ExampleTsql"></a> Transact-SQL の例  
  次の例では、セカンダリ データベースを準備します。 この例では、既定で単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。  
@@ -254,7 +254,7 @@ ms.locfileid: "72797653"
 4.  各プライマリ データベースのデータベースおよびログ バックアップを復元するには、`restore-SqlDatabase` コマンドレットを使用して、`NoRecovery` 復元パラメーターを指定します。 プライマリ レプリカをホストするコンピューターとターゲット セカンダリ レプリカをホストするコンピューターとでファイル パスが異なる場合は、`RelocateFile` 復元パラメーターも使用します。  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 5.  セカンダリ データベースの構成を完了するには、セカンダリ データベースを可用性グループに参加させる必要があります。 詳細については、「[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)」を参照してください。  
   
@@ -277,9 +277,9 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ```  
   
 ##  <a name="FollowUp"></a> 補足情報: セカンダリ データベースを準備した後  
- セカンダリ データベースの構成を完了するには、新たに復元したデータベースを可用性グループに参加させる必要があります。 詳細については、「 [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
+ セカンダリ データベースの構成を完了するには、新たに復元したデータベースを可用性グループに参加させる必要があります。 詳細については、「[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)」をご覧ください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE の引数 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   

@@ -30,7 +30,7 @@ ms.locfileid: "72782743"
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
   データ層アプリケーションの削除ウィザードまたは Windows PowerShell スクリプトを使用して、データ層アプリケーションを削除できます。 関連付けられたデータベースの保持、デタッチ、または削除を指定することができます。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
   
 -   **DAC のアップグレード:**  [データ層アプリケーションの登録ウィザードの使用](#UsingDeleteDACWizard)、 [PowerShell の使用](#DeleteDACPowerShell)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "72782743"
   
  **\< [戻る]** : **概要** ページに進みます。  
   
- **[次へ]** : **[概要]** ページに進みます。  
+ **[次へ >]** : **[概要]** ページに進みます。  
   
  **[キャンセル]** : DAC もデータベースも削除することなくウィザードを終了します。  
   
@@ -218,9 +218,9 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>「  
- [オブジェクト エクスプローラー](data-tier-applications.md)   
- [オブジェクト エクスプローラー](data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [データ層アプリケーション](data-tier-applications.md)   
+ [データ層アプリケーション](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)   
  [データベースを DAC として登録する方法](register-a-database-as-a-dac.md)   
  [SQL Server データベースのバックアップと復元](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   

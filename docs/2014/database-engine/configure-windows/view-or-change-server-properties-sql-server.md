@@ -31,7 +31,7 @@ ms.locfileid: "72783126"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **サーバーのプロパティを表示または変更するために使用するもの:**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "72783126"
   
 -   一部のプロパティ ページには、Windows Management Instrumentation (WMI) から取得した情報が表示されます。 これらのページを表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を実行しているコンピューターに WMI をインストールする必要があります。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。  
@@ -137,7 +137,7 @@ RECONFIGURE;
 GO  
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
+ 詳細については、「 [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server 構成マネージャーの使用  
  いくつかのサーバー プロパティは、SQL Server 構成マネージャーを使用して表示または変更できます。 たとえば、SQL Server のインスタンスのバージョンおよびエディションを表示したり、エラー ログ ファイルの格納場所を変更したりできます。 これらのプロパティは、 [サーバー関連の動的管理ビューおよび関数](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)をクエリして表示することもできます。  
@@ -155,7 +155,7 @@ GO
 ##  <a name="FollowUp"></a> フォロー アップ: サーバーのプロパティを変更した後  
  いくつかのプロパティでは、変更を有効にするためにサーバーを再起動する必要があります。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [SET Statements &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   

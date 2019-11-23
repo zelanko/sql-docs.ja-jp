@@ -39,7 +39,7 @@ ms.locfileid: "72797943"
 Get-Help Convert-UrnToPath -Examples  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [クエリ式と Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md)   
- [SQL Server PowerShell プロバイダー](../powershell/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

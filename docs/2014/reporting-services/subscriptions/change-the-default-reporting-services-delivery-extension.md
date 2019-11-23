@@ -22,7 +22,7 @@ ms.locfileid: "72783253"
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Reporting Services の既定の配信拡張機能を変更する
   サブスクリプション定義ページの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [配信者] **リストに表示される既定の配信拡張機能は** の構成設定で変更できます。 たとえば、ユーザーが新しいサブスクリプションを作成したときに電子メール配信ではなくファイル共有配信が既定で選択されるように構成を変更することができます。 また、ユーザー インターフェイスにおける配信拡張機能の表示順を変更することもできます。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モード  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には、電子メールの配信拡張機能と Windows ファイル共有の配信拡張機能があります。 カスタム配信をサポートするため、独自の拡張機能またはサード パーティの拡張機能を配置している場合は、これら以外の配信拡張機能もレポート サーバーに含まれている可能性があります。 配信拡張機能を使用できるかどうかは、配信拡張機能がレポート サーバーに配置されているかどうかによって決まります。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72783253"
     Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [Rsreportserver 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
  [Rsreportserver 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services でのファイル共有の配信](file-share-delivery-in-reporting-services.md)   

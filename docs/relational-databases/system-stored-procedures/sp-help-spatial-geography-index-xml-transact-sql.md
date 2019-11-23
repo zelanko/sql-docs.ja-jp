@@ -47,17 +47,17 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="arguments"></a>引数  
  「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  プロシージャにアクセスするには、ユーザーに PUBLIC ロールが割り当てられている必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="example"></a>例  
- 次の例では `sp_help_spatial_geography_index_xml` を使用して、テーブル**geography_col**で定義されている空間インデックス**SIndx_SpatialTable_geography_col2**を調査しています。このクエリサンプルについては、 **\@qs**をご確認ください。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
+ 次の例では、`sp_help_spatial_geography_index_xml` を使用して、 **\@qs**で指定されたクエリサンプルのテーブル**geography_col**で定義されている空間インデックス**SIndx_SpatialTable_geography_col2**を調査します。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
   
  その後、 [XQuery](../../xquery/xquery-basics.md)が結果セットで実行され、特定のプロパティが返されます。  
   
@@ -69,13 +69,13 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- [Sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)と同様に、このストアドプロシージャは、**地理**空間インデックスのプロパティにプログラムで簡単にアクセスできるようにし、結果セットを XML で報告します。  
+ [Sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)と同様に、このストアドプロシージャを使用すると、**地理**空間インデックスのプロパティにプログラムで簡単にアクセスして、XML 形式で結果セットを報告できます。  
   
  **Geography**の境界ボックスは、地球全体です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>の要件  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   

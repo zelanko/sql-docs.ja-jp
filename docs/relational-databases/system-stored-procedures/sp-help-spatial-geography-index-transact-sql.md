@@ -44,16 +44,16 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="arguments"></a>引数  
  「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  プロシージャにアクセスするには、ユーザーに PUBLIC ロールが割り当てられている必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>例  
- 次の例では `sp_help_spatial_geography_index` を使用して、 **\@qs**で指定されたクエリサンプルのテーブル**geography_col**で定義されている**geography**空間インデックス**SIndx_SpatialTable_geography_col2**を調査します。 この例では、指定したインデックスのコアプロパティのみが返されます。  
+ 次の例では、`sp_help_spatial_geography_index` を使用して、 **\@qs**で指定されたクエリサンプルのテーブル**geography_col**で定義されている**geography**空間インデックス**SIndx_SpatialTable_geography_col2**を調査します。 この例では、指定したインデックスのコアプロパティのみが返されます。  
   
 ```  
 declare @qs geography  
@@ -63,9 +63,9 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
   
  **Geography**インスタンスの境界ボックスは、地球全体です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>の要件  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   

@@ -37,7 +37,7 @@ ms.locfileid: "72797931"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
  サーバー インスタンスの認証方法と暗号化方法は、システム管理者が設定します。  
   
 > [!IMPORTANT]  
@@ -65,33 +65,33 @@ ms.locfileid: "72797931"
   
 4.  Transact-SQL を使用して、Windows 認証を使用するエンドポイントを作成するには、CREATE ENDPOINT ステートメントを使用します。 ステートメントは、通常、次のような形式になります。  
   
-     CREATE ENDPOINT \<*endpointName*>  
+     CREATE ENDPOINT *\<endpointName*>  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = \<*listenerPortList*> )  
+     AS TCP ( LISTENER_PORT = *\<listenerPortList*> )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = **WINDOWS** [ \<*authorizationMethod*> ]  
+     [ AUTHENTICATION = **WINDOWS** [ *\<authorizationMethod*> ]  
   
      ]  
   
      [ **[,]** ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { \<*algorithm*> } ]  
+     [ ALGORITHM { *\<algorithm*> } ]  
   
      ]  
   
-     **[,]** ROLE = \<*role*>  
+     **[,]** ROLE = *\<role*>  
   
-     」を参照)。  
+     )  
   
      パラメーターの説明  
   
-    -   \<*endpointName*> は、サーバー インスタンスのデータベース ミラーリング エンドポイントの一意名です。  
+    -   *\<endpointName*> は、サーバー インスタンスのデータベース ミラーリング エンドポイントの一意名です。  
   
     -   STARTED によって、エンドポイントが開始され、接続のリッスンが開始されることを指定します。 データベース ミラーリング エンドポイントは、通常、STARTED 状態で作成されます。 STOPPED 状態 (既定) または DISABLED 状態でセッションを開始することもできます。  
   
@@ -106,11 +106,11 @@ ms.locfileid: "72797931"
         > [!IMPORTANT]  
         >  各サーバー インスタンスには、一意のリスナー ポートが 1 つだけ必要です。  
   
-    -   Windows 認証の場合、エンドポイントで接続の認証に NTLM または Kerberos だけを使用する場合を除き、AUTHENTICATION オプションは省略可能です。 \<*authorizationMethod*> では、NTLM、KERBEROS、NEGOTIATE のいずれかで、接続の認証に使用する方法を指定します。 既定値の NEGOTIATE を使用すると、エンドポイントでは、使用する Windows ネゴシエーション プロトコルに NTLM または Kerberos のいずれかが選択されます。 ネゴシエーションでは、相手側のエンドポイントの認証レベルに応じて、認証ありまたは認証なしの接続が可能になります。  
+    -   Windows 認証の場合、エンドポイントで接続の認証に NTLM または Kerberos だけを使用する場合を除き、AUTHENTICATION オプションは省略可能です。 *\<authorizationMethod*> では、NTLM、KERBEROS、NEGOTIATE のいずれかで、接続の認証に使用する方法を指定します。 既定値の NEGOTIATE を使用すると、エンドポイントでは、使用する Windows ネゴシエーション プロトコルに NTLM または Kerberos のいずれかが選択されます。 ネゴシエーションでは、相手側のエンドポイントの認証レベルに応じて、認証ありまたは認証なしの接続が可能になります。  
   
     -   既定では、ENCRYPTION は REQUIRED に設定されます。 これは、このエンドポイントへのすべての接続に暗号化を使用する必要があることを意味します。 ただし、エンドポイントで暗号化を無効にしたり、オプションにできます。 選択肢は次のとおりです。  
   
-        |の値|[定義]|  
+        |ReplTest1|[定義]|  
         |-----------|----------------|  
         |DISABLED|接続を経由して送信されたデータが暗号化されないことを指定します。|  
         |SUPPORTED|反対側のエンドポイントで SUPPORTED または REQUIRED が指定されている場合に限り、データを暗号化することを指定します。|  
@@ -118,14 +118,14 @@ ms.locfileid: "72797931"
   
          あるエンドポイントで暗号化が必要な場合は、他のエンドポイントで ENCRYPTION が SUPPORTED または REQUIRED に設定されている必要があります。  
   
-    -   \<*algorithm*> には、エンドポイントの暗号化標準を指定するオプションが用意されています。 \<*algorithm*> の値は、RC4、AES、AES RC4、または RC4 AES の各アルゴリズムまたはそれらの組み合わせになります。  
+    -   *\<algorithm*> には、エンドポイントの暗号化標準を指定するオプションが用意されています。 *\<algorithm*> の値は、RC4、AES、AES RC4、または RC4 AES の各アルゴリズムまたはそれらの組み合わせになります。  
   
          AES RC4 では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、AES アルゴリズムを優先することが示されます。 RC4 AES では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、RC4 アルゴリズムを優先することが示されます。 両方のエンドポイントで両方のアルゴリズムを異なる順序で指定した場合、接続を受け入れた方のエンドポイントが優先されます。  
   
         > [!NOTE]  
         >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
-    -   \<*role*> では、サーバーが実行できるロールが定義されます。 ROLE の指定は必須です。 ただし、エンドポイントのロールが適用されるのは、データベース ミラーリングの場合のみです。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、エンドポイントのロールが無視されます。  
+    -   *\<role*> では、サーバーが実行できるロールが定義されます。 ROLE の指定は必須です。 ただし、エンドポイントのロールが適用されるのは、データベース ミラーリングの場合のみです。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、エンドポイントのロールが無視されます。  
   
          サーバー インスタンスが、あるデータベース ミラーリング セッションではあるロールを使用し、他のセッションでは別のロールを使用できるようにするには、ROLE=ALL を指定します。 パートナーまたはミラーリング監視サーバーのいずれかになるようにサーバー インスタンスを制限するには、ROLE=PARTNER または ROLE=WITNESS をそれぞれ指定します。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "72797931"
      CREATE ENDPOINT 構文の詳細な説明については、「 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)で作成する方法について説明します。  
   
     > [!NOTE]  
-    >  既存のエンドポイントを変更するには、「 [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)で作成する方法について説明します。  
+    >  既存のエンドポイントを変更するには、「[ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)」を使用します。  
   
 ###  <a name="TsqlExample"></a> 例: データベース ミラーリングをサポートするエンドポイントの作成 (Transact-SQL)  
  次の例では、3 台の異なるコンピューター システムに既定のサーバー インスタンスのデータベース ミラーリング エンドポイントを作成します。  
@@ -197,7 +197,7 @@ GO
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   

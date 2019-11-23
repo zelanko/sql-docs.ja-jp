@@ -48,7 +48,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797948"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動
-  このトピックでは、コマンドプロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンドを使用して、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを開始、停止、一時停止、再開、または再起動する方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)]、、または PowerShell。  
+  このトピックでは、コマンドプロンプト、Configuration Manager、または PowerShell から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、 **net**コマンドを使用して、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを開始、停止、一時停止、再開、または再起動する方法について説明します。  
   
 -   **作業を開始する準備:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72797948"
   
     -   [追加情報](#MoreInformation)  
   
-    -   [Security](#Security)  
+    -   [セキュリティ](#Security)  
   
 -   **使用の手順:**  
   
@@ -112,12 +112,12 @@ ms.locfileid: "72797948"
   
 -   クラスターで実行中の [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスを管理するには、クラスター アドミニストレーターを使用するのが最適です。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](https://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` コマンドを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには、 **sysadmin**または**serveradmin**固定サーバーロールのメンバーシップが必要ですが、譲渡できません。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを使用して `SHUTDOWN` を停止するには、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限は譲渡できません。  
   
 ##  <a name="SSCMProcedure"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの使用  
   
@@ -172,7 +172,7 @@ ms.locfileid: "72797948"
 3.  アクションを実行するかどうかを確認するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ##  <a name="CommandPrompt"></a> コマンド プロンプト ウィンドウからの net コマンドの使用  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] コマンドを使用して、 **、** サービスを開始、停止、または一時停止できます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]net[!INCLUDE[msCoName](../../includes/msconame-md.md)] コマンドを使用して、 のサービスを開始、停止、または一時停止できます。  
   
 ###  <a name="dbDefault"></a> 既定のインスタンスを開始するには [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -180,7 +180,7 @@ ms.locfileid: "72797948"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -または-  
+     \- または -  
   
      **net start MSSQLSERVER**  
   
@@ -190,7 +190,7 @@ ms.locfileid: "72797948"
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     -または-  
+     \- または -  
   
      **net start MSSQL$** *instancename*  
   
@@ -200,7 +200,7 @@ ms.locfileid: "72797948"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -または-  
+     \- または -  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -213,7 +213,7 @@ ms.locfileid: "72797948"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     -または-  
+     \- または -  
   
      **net start SQLSERVERAGENT**  
   
@@ -223,7 +223,7 @@ ms.locfileid: "72797948"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     -または-  
+     \- または -  
   
      **net start SQLAgent$** *instancename*  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72797948"
   
      **net start "SQL Server Browser"**  
   
-     -または-  
+     \- または -  
   
      **net start SQLBrowser**  
   
@@ -248,9 +248,9 @@ ms.locfileid: "72797948"
     -   サービスを停止するには、 **net start** を **net stop**に置き換えます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- `SHUTDOWN` ステートメントを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を停止できます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを使用して、`SHUTDOWN`を停止できます。  
   
-#### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには  
+#### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 -   現在実行中の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびストアド プロシージャが終了するまで待機してから [!INCLUDE[ssDE](../../includes/ssde-md.md)]を停止するには、次のステートメントを実行します。  
   
@@ -337,6 +337,6 @@ ms.locfileid: "72797948"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [最小構成での SQL Server の起動](start-sql-server-with-minimal-configuration.md)   
  [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

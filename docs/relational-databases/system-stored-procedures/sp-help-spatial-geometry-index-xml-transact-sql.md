@@ -47,17 +47,17 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="arguments"></a>引数  
  「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  NULL 値を含むプロパティは、XML の戻り値のセットに含まれません。  
   
 ## <a name="example"></a>例  
- 次の例では `sp_help_spatial_geometry_index_xml` を使用して、テーブル**geometry_col**で定義されている空間インデックス**SIndx_SpatialTable_geometry_col2**を調査しています。このクエリサンプルについては、 **\@qs**をご確認ください。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
+ 次の例では、`sp_help_spatial_geometry_index_xml` を使用して、 **\@qs**で指定されたクエリサンプルのテーブル**geometry_col**で定義されている空間インデックス**SIndx_SpatialTable_geometry_col2**を調査します。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
   
  その後、 [XQuery](../../xquery/xquery-basics.md)が結果セットで実行され、特定のプロパティが返されます。  
   
@@ -71,9 +71,9 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
  [Sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)と同様に、このストアドプロシージャを使用すると、空間インデックスのプロパティにプログラムで簡単にアクセスして、XML 形式で結果セットを報告できます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>の要件  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャの引数とプロパティ](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   

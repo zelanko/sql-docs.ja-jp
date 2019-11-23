@@ -120,7 +120,7 @@ Public Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [GenerateDatabaseCreationScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
  [GenerateDatabaseRightsScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
  [GenerateDatabaseUpgradeScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
@@ -128,5 +128,5 @@ End Sub
  [Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)   
  [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Reporting Services と Power View のブラウザーサポート&#40;の計画 Reporting Services&#41; 2014](../browser-support-for-reporting-services-and-power-view.md)    
+ [Reporting Services と Power View のブラウザーサポート&#40;の計画 Reporting Services&#41; 2014](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services ツール](reporting-services-tools.md)  

@@ -37,15 +37,15 @@ ms.locfileid: "72797753"
   
 -   WSFC クラスターでは、可用性グループが WSFC のエラーしきい値を超えると、自動フェールオーバーはその可用性グループに対して実行されません。 また、クラスター管理者が失敗したリソース グループを手動でオンラインにするか、データベース管理者が可用性グループの手動フェールオーバーを実行するまで、可用性グループの WSFC リソース グループはエラー状態のままになります。 *WSFC のエラーしきい値* は、特定の期間に可用性グループに対して許容されるエラーの最大数として定義されています。 既定の期間は 6 時間であり、この期間のエラーの最大数の既定値は *n*-1 です ( *n* は WSFC ノードの数です)。 特定の可用性グループのエラーしきい値を変更するには、WSFC フェールオーバー マネージャー コンソールを使用します。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> の前提条件  
   
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
   
-|タスク|Permissions|  
+|タスク|アクセス許可|  
 |----------|-----------------|  
 |新しい可用性グループの柔軟なフェールオーバー ポリシーを構成する|**sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。|  
 |既存の可用性グループのポリシーを変更する|可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。|  
@@ -67,7 +67,7 @@ ms.locfileid: "72797753"
   
          これらの整数値とエラー条件レベルの関係は次のとおりです。  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] の値|level|自動フェールオーバーが開始される条件|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] の値|Level|自動フェールオーバーが開始される条件|  
         |------------------------------|-----------|-------------------------------------------|  
         |@shouldalert|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
         |2|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
@@ -95,7 +95,7 @@ ms.locfileid: "72797753"
   
     -   フェールオーバーの条件レベルを設定するには、`FailureConditionLevel`*レベル*のパラメーターを使用します。ここで、 *level*は次の値のいずれかになります。  
   
-        |の値|level|自動フェールオーバーが開始される条件|  
+        |ReplTest1|Level|自動フェールオーバーが開始される条件|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
         |`OnServerUnresponsive`|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
@@ -105,7 +105,7 @@ ms.locfileid: "72797753"
   
          詳細については、「[可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)」を参照してください。  
   
-         たとえば、次のコマンドでは、既存の可用性グループ `AG1`のエラー条件レベルをレベル 1 に変更します。  
+         たとえば、次のコマンドでは、既存の可用性グループ `AG1` のエラー条件レベルをレベル 1 に変更します。  
   
         ```powershell
         Set-SqlAvailabilityGroup `
@@ -124,17 +124,17 @@ ms.locfileid: "72797753"
         ```  
   
 > [!NOTE]  
->  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+>  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
--   [SQL Server PowerShell のヘルプの参照](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)    
+ [可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)   
  [フェールオーバーとフェール&#40;オーバー&#41;モード AlwaysOn 可用性グループ](failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   

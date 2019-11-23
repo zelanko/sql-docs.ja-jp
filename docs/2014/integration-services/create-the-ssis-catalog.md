@@ -18,7 +18,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798019"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS カタログの作成
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置できます。 プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置するには、まずサーバーに `SSISDB` カタログを含める必要があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインストール プログラムでは、カタログは自動的に作成されません。次の手順を使用して、カタログを手動で作成する必要があります。  
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置できます。 プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置するには、まずサーバーに `SSISDB` カタログを含める必要があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインストール プログラムでは、カタログは自動的に作成されません。次の手順を使用して、カタログを手動で作成する必要があります。  
   
  SSISDB カタログは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で作成できます。 Windows PowerShell を使用して、カタログをプログラムから作成することもできます。  
   
@@ -69,6 +69,6 @@ ms.locfileid: "72798019"
   
      Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。 名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=254267)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [SSIS カタログ](catalog/ssis-catalog.md)   
  [SSIS カタログのバックアップ、復元、および移動](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
