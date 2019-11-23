@@ -34,7 +34,7 @@ ms.locfileid: "73982638"
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|リソース プールの一意の ID。 NULL 値は許可されません。|  
-|name|**sysname**|リソースプールの名前。 NULL 値は許可されません。|  
+|name|**sysname**|リソース プールの名前。 NULL 値は許可されません。|  
 |min_cpu_percent|**int**|CPU の競合がある場合にリソース プールのすべての要求に保証される平均 CPU 帯域幅。 NULL 値は許可されません。|  
 |max_cpu_percent|**int**|CPU の競合がある場合に、リソースプール内のすべての要求で許容される最大平均 CPU 帯域幅。 NULL 値は許可されません。|  
 |min_memory_percent|**int**|リソースプール内のすべての要求に対して保証されるメモリの量。 これは、他のリソース プールとは共有されません。 NULL 値は許可されません。|  
@@ -44,10 +44,10 @@ ms.locfileid: "73982638"
 |max_iops_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> このプールのボリューム設定ごとの、1 秒あたりの最大 I/O 操作 (IOPS)。 0 = 無制限。 null にすることはできません。|  
   
 ## <a name="remarks"></a>Remarks  
- カタログビューには、格納されているメタデータが表示されます。 メモリ内の構成を表示するには、対応する動的管理ビュー ( [sys. &#40;dm_resource_governor_resource_pools transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)) を使用します。  
+ カタログ ビューには、格納されているメタデータが表示されます。 メモリ内の構成を表示するには、対応する動的管理ビュー ( [sys. &#40;dm_resource_governor_resource_pools transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)) を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- コンテンツを表示するには VIEW ANY DEFINITION 権限が必要です。コンテンツを変更するには CONTROL SERVER 権限が必要です。  
+ 内容を表示するには VIEW ANY DEFINITION 権限が必要です。内容を変更するには CONTROL SERVER 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [Resource Governor カタログビュー &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   

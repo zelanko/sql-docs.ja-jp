@@ -42,47 +42,47 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'` 情報を要求するクラス。 *クラス*は**varchar (8)** ,、既定値は**JOB**です。 *クラス*には、次のいずれかの値を指定できます。  
+要求される情報についてのクラスを `[ @class = ] 'class'` します。 *クラス*は**varchar (8)** ,、既定値は**JOB**です。 *クラス*には、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**JOB**|ジョブカテゴリに関する情報を提供します。|  
 |**アラート**|アラートカテゴリに関する情報を提供します。|  
 |**OPERATOR**|オペレーター カテゴリに関する情報|  
   
-`[ @type = ] 'type'` 情報が要求されるカテゴリの種類。 *型*は**varchar (12)** ,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
+情報を要求するカテゴリの種類 `[ @type = ] 'type'` ます。 *型*は**varchar (12)** ,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**LOCAL**|ローカルジョブカテゴリ。|  
 |**マルチサーバー**|マルチサーバージョブカテゴリ。|  
 |**NONE**|**JOB**以外のクラスのカテゴリ。|  
   
-`[ @name = ] 'name'` 情報が要求されるカテゴリの名前。 *名前* は **sysname** 、既定値は NULL です。  
+情報が要求されるカテゴリの名前 `[ @name = ] 'name'` ます。 *名前* は **sysname** 、既定値は NULL です。  
   
-`[ @suffix = ] suffix` は、結果セットの**category_type**列が ID と名前のどちらであるかを指定します。 *サフィックス*は**ビット**,、既定値は**0**です。 **1**は**category_type**を名前として示し、 **0**は ID として表示します。  
+`[ @suffix = ] suffix` 結果セットの**category_type**列が ID と名前のどちらであるかを指定します。 *サフィックス*は**ビット**,、既定値は**0**です。 **1**は**category_type**を名前として示し、 **0**は ID として表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **@No__t-1suffix**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
+ **\@suffix**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチサーバー<br /><br /> **3** = なし|  
 |**name**|**sysname**|カテゴリ名|  
   
- **@No__t-1suffix**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
+ **\@サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**sysname**|カテゴリの種類。 **LOCAL**、 **MULTI SERVER**、または**NONE**のいずれか|  
 |**name**|**sysname**|カテゴリ名|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_help_category**は、 **msdb**データベースから実行する必要があります。  
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
@@ -96,7 +96,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
+ これらのロールの権限の詳細については、「[SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>B. アラート情報を返す  
+### <a name="b-returning-alert-information"></a>b. アラート情報を返す  
  次の例では、レプリケーションの警告カテゴリに関する情報を返します。  
   
 ```  
@@ -125,10 +125,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [transact-sql &#40;  の&#41; sp_add_category](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

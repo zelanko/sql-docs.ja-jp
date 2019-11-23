@@ -34,9 +34,9 @@ ms.locfileid: "72797981"
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
   
--   **作業を開始する準備:** [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、[制限事項と制約事項](#LimitationsRestrictions)、[前提条件](#Prerequisites)、[セキュリティ](#Security)、[権限](#Permissions)  
+-   **作業を開始する準備:**  [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
   
--   **DAC のアップグレード:** [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、[PowerShell の使用](#UpgradeDACPowerShell)  
+-   **DAC のアップグレード:**  [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、 [PowerShell の使用](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  DAC アップグレードは、既存のデータベースのスキーマを新しい DAC バージョンで定義されているスキーマに一致するように変更するインプレース アップグレードです。 新しい DAC バージョンは、DAC パッケージ ファイルで提供されます。 DAC パッケージの作成の詳細については、「 [データ層アプリケーション](data-tier-applications.md)」を参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "72797981"
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC アップグレードは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降でのみ実行できます。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="Prerequisites"></a> の前提条件  
  アップグレードを開始する前に、データベースの完全バックアップを実行することをお勧めします。 アップグレード時にエラーが発生し、すべての変更をロールバックできない場合は、バックアップの復元が必要になる場合があります。  
   
  アップグレードを開始する前に、DAC パッケージとアップグレード処理を検証するには、いくつかの操作を行う必要があります。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
@@ -73,7 +73,7 @@ ms.locfileid: "72797981"
 ###  <a name="Security"></a> セキュリティ  
  セキュリティを強化するために、SQL Server 認証のログインは、パスワードなしで DAC パッケージに格納されます。 パッケージが配置またはアップグレードされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限を持つユーザーとしてログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  DAC をアップグレードできるのは、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、 **dbcreator** 固定サーバー ロールに存在する ALTER ANY LOGIN 権限を持つログインのみです。 ログインは既存のデータベースの所有者である必要があります。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント ( **sa** ) も DAC をアップグレードできます。  
   
 ##  <a name="UsingDACUpgradeWizard"></a> データ層アプリケーションのアップグレード ウィザードの使用  
@@ -126,7 +126,7 @@ ms.locfileid: "72797981"
   
  **\< [戻る]** : **概要** ページに進みます。  
   
- **[次へ]** : 選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。  
+ **[次へ >]** : 選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。  
   
  **[キャンセル]** : DAC をアップグレードせずにウィザードを終了します。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "72797981"
   
  **\< Previous** -[変更の**検出**] ページに戻ります。  
   
- **[次へ]** : **[概要]** ページに進みます。  
+ **[次へ >]** : **[概要]** ページに進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -284,6 +284,6 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [[データ層アプリケーション]](data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [データ層アプリケーション](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
