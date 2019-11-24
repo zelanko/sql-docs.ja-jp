@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_targets (TRANSACT-SQL) |Microsoft Docs
+title: sys.server_event_session_targets (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -36,9 +36,9 @@ ms.locfileid: "68133189"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
 |target_id|**int**|ターゲットの ID。 ID、イベント セッション オブジェクト内で一意です。 NULL 値は許可されません。|  
-|NAME|**sysname**|イベント ターゲットの名前。 NULL 値は許可されません。|  
-|パッケージ (package)|**sysname**|イベント ターゲットを含むイベント パッケージの名前。 NULL 値は許可されません。|  
-|モジュール|**sysname**|イベント ターゲットを含むモジュールの名前。 NULL 値は許可されません。|  
+|name|**sysname**|イベント ターゲットの名前。 NULL 値は許可されません。|  
+|package|**sysname**|イベント ターゲットを含むイベント パッケージの名前。 NULL 値は許可されません。|  
+|module|**sysname**|イベント ターゲットを含むモジュールの名前。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
