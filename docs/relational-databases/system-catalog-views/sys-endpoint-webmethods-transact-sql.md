@@ -1,5 +1,5 @@
 ---
-title: sys.endpoint_webmethods (TRANSACT-SQL) |Microsoft Docs
+title: sys.endpoint_webmethods (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -38,7 +38,7 @@ ms.locfileid: "68079253"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|Web メソッドが定義されているエンドポイントの ID です。|  
-|名前空間|**nvarchar(384)**|Web メソッドの Namespace です。|  
+|namespace|**nvarchar(384)**|Web メソッドの Namespace です。|  
 |method_alias|**nvarchar(64)**|メソッドの別名です。<br /><br /> 注:[!INCLUDE[tsql](../../includes/tsql-md.md)]識別子は、WSDL メソッド名では無効な文字を許可します。<br /><br /> 実際の基になるエンドポイントの WSDL の説明で公開されている名前にマップするエイリアスが使用される[!INCLUDE[tsql](../../includes/tsql-md.md)]web メソッドが呼び出されたときに呼び出される実行可能オブジェクト。|  
 |object_name|**nvarchar(776)**|NAME = オプションで指定された、Web メソッドのリダイレクト先のオブジェクト名です。 名前の部分がピリオド (.) で区切られ、角かっこを使用して区切られた`[``]`します。<br /><br /> オブジェクト名は WSDL オプションで指定されている、3 つの部分から成る名前でなければなりません。|  
 |result_schema|**tinyint**|XSD (ある場合) を応答と共に返送するかどうかを指定するオプションです。<br /><br /> 0 = なし<br /><br /> 1 = 標準<br /><br /> 2 = 既定値|  
