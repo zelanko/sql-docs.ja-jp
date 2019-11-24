@@ -1,5 +1,5 @@
 ---
-title: sys.asymmetric_keys (TRANSACT-SQL) |Microsoft Docs
+title: sys.asymmetric_keys (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -39,8 +39,8 @@ ms.locfileid: "68070473"
 |**asymmetric_key_id**|**int**|キーの ID。 データベース内で一意です。|  
 |**pvt_key_encryption_type**|**char(2)**|キーの暗号化方法。<br /><br /> NA = 暗号化されていません。<br /><br /> MK = キーはマスター キーにより暗号化されています。<br /><br /> PW = キーはユーザー定義パスワードにより暗号化<br /><br /> SK = キーはサービス マスター キーにより暗号化されています。|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|秘密キーを暗号化する方法の説明です。<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**拇印**|**varbinary(32)**|キーの sha-1 ハッシュ。 ハッシュはグローバルに一意です。|  
-|**アルゴリズム**|**char(2)**|キーと一緒に使用されるアルゴリズム。<br /><br /> 1R = 512 ビット RSA<br /><br /> 2R = 1024 ビット RSA<br /><br /> 3R = 2048 ビット RSA|  
+|**thumbprint**|**varbinary(32)**|キーの sha-1 ハッシュ。 ハッシュはグローバルに一意です。|  
+|**algorithm**|**char(2)**|キーと一緒に使用されるアルゴリズム。<br /><br /> 1R = 512 ビット RSA<br /><br /> 2R = 1024 ビット RSA<br /><br /> 3R = 2048 ビット RSA|  
 |**algorithm_desc**|**nvarchar(60)**|キーで使用されるアルゴリズムの説明です。<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|キーのビット長。|  
 |**sid**|**varbinary(85)**|このキーに対するログイン SID。 拡張キー管理キーには、この値を NULL となります。|  
