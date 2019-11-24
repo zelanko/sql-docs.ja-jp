@@ -1,5 +1,5 @@
 ---
-title: sys.types (TRANSACT-SQL) |Microsoft Docs
+title: sys.types (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -41,7 +41,7 @@ ms.locfileid: "68095572"
 |**schema_id**|**int**|型が所属するスキーマの ID。|  
 |**principal_id**|**int**|スキーマの所有者と異なる場合は、個々 の所有者の ID。 既定では、スキーマに含まれるオブジェクトは、スキーマの所有者によって所有されます。 ただし、所有権を変更する ALTER AUTHORIZATION ステートメントを使用して、別の所有者を指定できます。<br /><br /> 別の所有者がいない場合は NULL になります。|  
 |**max_length**|**smallint**|型のバイト単位で最大長。<br /><br /> -1 = 列のデータ型は**varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、または**xml**します。<br /><br /> **テキスト**、列、 **max_length**値は 16 になります。|  
-|**有効桁数 (precision)**|**tinyint**|型の数値に基づく場合の最大有効桁数それ以外の場合、0 を返します。|  
+|**precision**|**tinyint**|型の数値に基づく場合の最大有効桁数それ以外の場合、0 を返します。|  
 |**scale**|**tinyint**|型の数値に基づく場合の最大スケールそれ以外の場合、0 を返します。|  
 |**collation_name**|**sysname**|文字ベース以外の場合、型の照合順序の名前その他の賢明では、NULL。|  
 |**is_nullable**|**bit**|型は、null 値は。|  
@@ -56,7 +56,7 @@ ms.locfileid: "68095572"
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [スカラー型カタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
+ [スカラー型カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよくあるご質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
