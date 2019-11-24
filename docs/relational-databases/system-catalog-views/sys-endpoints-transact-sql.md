@@ -1,5 +1,5 @@
 ---
-title: sys.endpoints (TRANSACT-SQL) |Microsoft Docs
+title: sys.endpoints (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -36,7 +36,7 @@ ms.locfileid: "68061409"
 |**name**|**sysname**|エンドポイントの名前。 サーバー内で一意です。 NULL 値は許可されません。|  
 |**endpoint_id**|**int**|エンドポイントの ID。 サーバー内で一意です。 65536 より小さい ID のエンドポイントは、システム エンドポイントです。 NULL 値は許可されません。|  
 |**principal_id**|**int**|作成してこのエンドポイントを所有しているサーバー プリンシパルの ID。 NULL 値が許可されます。|  
-|**プロトコル**|**tinyint**|エンドポイントのプロトコル。<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 名前付きパイプ<br /><br /> 4 = 共有メモリ<br /><br /> 5 = 仮想インターフェイス アダプター (VIA)<br /><br /> NULL 値は許可されません。|  
+|**protocol**|**tinyint**|エンドポイントのプロトコル。<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 名前付きパイプ<br /><br /> 4 = 共有メモリ<br /><br /> 5 = 仮想インターフェイス アダプター (VIA)<br /><br /> NULL 値は許可されません。|  
 |**protocol_desc**|**nvarchar(60)**|エンドポイントのプロトコルの説明です。 NULL 値を許容します。 次のいずれかの値です。<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **使用して**に注意してください。VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|エンドポイントのペイロードの種類。<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> NULL 値は許可されません。|  
 |**type_desc**|**nvarchar(60)**|エンドポイント ペイロードの種類の説明です。 NULL 値が許可されます。 次のいずれかの値です。<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
