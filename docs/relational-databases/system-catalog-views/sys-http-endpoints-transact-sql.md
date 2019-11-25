@@ -1,5 +1,5 @@
 ---
-title: sys.http_endpoints (TRANSACT-SQL) |Microsoft Docs
+title: sys.http_endpoints (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -34,7 +34,7 @@ ms.locfileid: "68122732"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**< 継承された列 >**||列を継承[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)します。|  
-|**サイト**|**nvarchar(128)**|サイトのホスト コンピューターの名前、サイトで指定されているオプションを = です。|  
+|**site**|**nvarchar(128)**|サイトのホスト コンピューターの名前、サイトで指定されているオプションを = です。|  
 |**url_path**|**nvarchar (4000)**|この HTTP エンドポイントの URL のパスのみの部分のパスで指定されたオプションを = です。|  
 |**is_clear_port_enabled**|**bit**|1 = クリア ポートはポートを使用して有効になっている = CLEAR オプション。|  
 |**clear_port**|**int**|CLEAR PORT = オプションで指定されたポート番号です。<br /><br /> NULL = 指定されていません。|  
@@ -55,6 +55,6 @@ ms.locfileid: "68122732"
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [エンドポイントのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   
