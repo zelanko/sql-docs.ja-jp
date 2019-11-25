@@ -1,5 +1,5 @@
 ---
-title: sys.filetables (TRANSACT-SQL) |Microsoft Docs
+title: sys.filetables (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_fields (TRANSACT-SQL) |Microsoft Docs
+title: sys.server_event_session_fields (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68133222"
 ---
-# <a name="sysservereventsessionfields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
+# <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   イベントおよびターゲットに明示的に設定されたカスタマイズ可能な列ごとに 1 行のデータを返します。  

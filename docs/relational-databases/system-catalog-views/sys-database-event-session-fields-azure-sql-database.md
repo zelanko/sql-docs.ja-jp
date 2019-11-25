@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67915124"
 ---
-# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
+# <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   イベントおよびターゲットに明示的に設定されたカスタマイズ可能な列ごとに 1 行のデータを返します。  
@@ -31,7 +31,7 @@ ms.locfileid: "67915124"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
 |object_id|**int**|このフィールドが関連付けられているオブジェクトの ID。 NULL 値は許可されません。|  
-|NAME|**sysname**|フィールドの名前。 NULL 値は許可されません。|  
+|name|**sysname**|フィールドの名前。 NULL 値は許可されません。|  
 |value|**sql_variant**|フィールドの値。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  

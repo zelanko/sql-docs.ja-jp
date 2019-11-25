@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67915098"
 ---
-# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
+# <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   イベント セッションのイベント ターゲットごとに 1 行のデータを返します。  
@@ -31,9 +31,9 @@ ms.locfileid: "67915098"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
 |target_id|**int**|ターゲットの ID。 ID、イベント セッション オブジェクト内で一意です。 NULL 値は許可されません。|  
-|NAME|**sysname**|イベント ターゲットの名前。 NULL 値は許可されません。|  
-|パッケージ (package)|**sysname**|イベント ターゲットを含むイベント パッケージの名前。 NULL 値は許可されません。|  
-|モジュール|**sysname**|イベント ターゲットを含むモジュールの名前。 NULL 値は許可されません。|  
+|name|**sysname**|イベント ターゲットの名前。 NULL 値は許可されません。|  
+|package|**sysname**|イベント ターゲットを含むイベント パッケージの名前。 NULL 値は許可されません。|  
+|module|**sysname**|イベント ターゲットを含むモジュールの名前。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  

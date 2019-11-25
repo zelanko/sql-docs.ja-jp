@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67915131"
 ---
-# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
+# <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   イベント セッションのイベントごとに 1 行のデータを返します。  
@@ -32,9 +32,9 @@ ms.locfileid: "67915131"
 |event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
 |event_id|**int**|イベントの ID。 この ID は、イベント セッション オブジェクト内で一意です。 NULL 値は許可されません。|  
 |NAME|**sysname**|イベントの名前です。 NULL 値は許可されません。|  
-|パッケージ (package)|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値は許可されません。|  
-|モジュール|**sysname**|イベントを含むモジュールの名前。 NULL 値は許可されません。|  
-|述語|**nvarchar(3000)**|イベントに適用される述語式。 NULL 値が許可されます。|  
+|package|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値は許可されません。|  
+|module|**sysname**|イベントを含むモジュールの名前。 NULL 値は許可されません。|  
+|predicate|**nvarchar(3000)**|イベントに適用される述語式。 NULL 値が許可されます。|  
 |predicate_xml|**nvarchar(3000)**|イベントに適用される XML 述語式。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  

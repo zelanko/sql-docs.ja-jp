@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68133225"
 ---
-# <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
+# <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   イベント セッションのイベントごとに 1 行のデータを返します。  
@@ -36,10 +36,10 @@ ms.locfileid: "68133225"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
 |event_id|**int**|イベントの ID。 この ID は、イベント セッション オブジェクト内で一意です。 NULL 値は許可されません。|  
-|NAME|**sysname**|イベントの名前です。 NULL 値は許可されません。|  
-|パッケージ (package)|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値は許可されません。|  
-|モジュール|**sysname**|イベントを含むモジュールの名前。 NULL 値は許可されません。|  
-|述語|**nvarchar(3000)**|イベントに適用される述語式。 NULL 値が許可されます。|  
+|name|**sysname**|イベントの名前です。 NULL 値は許可されません。|  
+|package|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値は許可されません。|  
+|module|**sysname**|イベントを含むモジュールの名前。 NULL 値は許可されません。|  
+|predicate|**nvarchar(3000)**|イベントに適用される述語式。 NULL 値が許可されます。|  
 |predicate_xml|**nvarchar(3000)**|イベントに適用される XML 述語式。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
