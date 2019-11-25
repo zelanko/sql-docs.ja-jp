@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_fields (TRANSACT-SQL) |Microsoft Docs
+title: sys.server_event_session_fields (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ ms.locfileid: "68133222"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
 |object_id|**int**|このフィールドが関連付けられているオブジェクトの ID。 NULL 値は許可されません。|  
-|NAME|**sysname**|フィールドの名前。 NULL 値は許可されません。|  
+|name|**sysname**|フィールドの名前。 NULL 値は許可されません。|  
 |value|**sql_variant**|フィールドの値。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
