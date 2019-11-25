@@ -31,9 +31,9 @@ ms.locfileid: "67915142"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
 |event_id|**int**|イベントの ID。 この ID は、イベント セッション オブジェクト内で一意です。 NULL 値は許可されません。|  
-|NAME|**sysname**|アクションの名前。 NULL 値が許可されます。|  
-|パッケージ (package)|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値が許可されます。|  
-|モジュール|**sysname**|イベントを含むモジュールの名前。 NULL 値が許可されます。|  
+|name|**sysname**|アクションの名前。 NULL 値が許可されます。|  
+|package|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値が許可されます。|  
+|module|**sysname**|イベントを含むモジュールの名前。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
