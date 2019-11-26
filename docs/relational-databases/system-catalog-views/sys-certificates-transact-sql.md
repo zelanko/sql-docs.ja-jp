@@ -1,5 +1,5 @@
 ---
-title: sys.certificates (TRANSACT-SQL) |Microsoft Docs
+title: sys.certificates (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67942566"
 ---
-# <a name="syscertificates-transact-sql"></a>sys.certificates (TRANSACT-SQL)
+# <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベース内の各証明書の行を返します。  
@@ -47,9 +47,9 @@ ms.locfileid: "67942566"
 |**subject**|**nvarchar (4000)**|証明書のサブジェクト。|  
 |**expiry_date**|**datetime**|証明書が期限切れにします。|  
 |**start_date**|**datetime**|ときに証明書が無効です。|  
-|**拇印**|**varbinary(32)**|証明書の SHA-1 ハッシュ。 Sha-1 ハッシュはグローバルに一意です。|  
+|**thumbprint**|**varbinary(32)**|証明書の SHA-1 ハッシュ。 Sha-1 ハッシュはグローバルに一意です。|  
 |**attested_by**|**nvarchar(260)**|システムでのみ使用します。|  
-|pvt_key_last_backup_date|**datetime**|日付と時刻の証明書の秘密キーが前回エクスポートされました。|  
+|**pvt_key_last_backup_date**|**datetime**|日付と時刻の証明書の秘密キーが前回エクスポートされました。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
