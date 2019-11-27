@@ -40,7 +40,7 @@ ms.locfileid: "68134002"
 |**filename_collation_name**||照合順序名は、FileTable に対して定義されます。|  
   
 ## <a name="see-also"></a>関連項目  
- [Filetable を管理します。](../../relational-databases/blob/manage-filetables.md)   
+ [FileTable の管理](../../relational-databases/blob/manage-filetables.md)   
  [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  
   
   
