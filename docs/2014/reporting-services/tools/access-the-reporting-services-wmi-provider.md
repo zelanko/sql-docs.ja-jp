@@ -32,10 +32,10 @@ ms.locfileid: "72783212"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリース以降では、WMI プロバイダーはネイティブ モードのレポート サーバーに対してのみサポートされています。 SharePoint モードのレポート サーバーは、SharePoint サーバーの全体管理ページおよび PowerShell スクリプトを使用して管理できます。  
   
-|クラス|Namespace|Description|  
+|クラス|名前空間|[説明]|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName >* \ v11|インストールされているレポート サーバーに接続するための基本情報をクライアントに提供します。|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName >* /V11\ Admin|レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。<br /><br /> **\*\* 重要 \*\*** このクラスは管理者権限でのみアクセス可能です。|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v11|インストールされているレポート サーバーに接続するための基本情報をクライアントに提供します。|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v11\Admin|レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。<br /><br /> **\*\* 重要 \*\*** このクラスは管理者権限でのみアクセス可能です。|  
   
  上記のクラスの各インスタンスは、レポート サーバー インスタンスごとに作成されます。 レポート サーバーによって公開されている WMI オブジェクト (.NET Framework 自体によって公開されている WMI プログラミング インターフェイスを含む) へは、Microsoft またはサード パーティの任意のツールを使用してアクセスできます。 このトピックでは、PowerShell コマンド [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)を使用した、WMI クラスのインスタンスに対するアクセス方法と使用方法について説明します。  
   
@@ -86,6 +86,6 @@ $rsconfig = Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_M
 $rsconfig.GetAdminSiteUrl()  
 ```  
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>参照
  [Reporting Services WMI プロバイダー ライブラリ リファレンス (SSRS)](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)  

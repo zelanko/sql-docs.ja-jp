@@ -21,7 +21,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797909"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 の Server Core インストールで [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] を構成する方法について詳しく説明します。 
+  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 の Server Core インストールで [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] を構成する方法について詳しく説明します。 
   
 ##  <a name="configure-and-manage-server-core-on-windows-server"></a>Windows Server の Server Core の構成と管理  
  ここでは、Server Core インストールの構成および管理に役立つトピックへのリンクを示します。  
@@ -90,12 +90,12 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
     ```  
   
 ##  <a name="startstop-sql-server-service"></a>サービスの開始/停止 SQL Server  
- コマンド プロンプトから [sqlservr アプリケーション](../../tools/sqlservr-application.md) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動、停止、一時停止、または続行します。  
+ コマンド プロンプトから [sqlservr アプリケーション](../../tools/sqlservr-application.md)を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動、停止、一時停止、または続行します。  
   
  また、Net サービスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを起動および停止することもできます。  
   
 ## <a name="enable-alwayson-availability-groups"></a>[AlwaysOn 可用性グループを有効にする]  
- AlwaysOn 可用性グループが有効になっていることは、サーバー インスタンスが High Availability and Disaster Recovery ソリューションとして可用性グループを使用するための前提条件です。 AlwaysOn 可用性グループの管理に関する詳細については、「[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」参照してください。  
+ AlwaysOn 可用性グループが有効になっていることは、サーバー インスタンスが高可用性ディザスター リカバリー ソリューションとして可用性グループを使用するための前提条件です。 AlwaysOn 可用性グループの管理に関する詳細については、「[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」参照してください。  
   
 ### <a name="using-sql-server-configuration-manager-remotely"></a>リモートでの SQL Server 構成マネージャーの使用  
  次の手順は、[!INCLUDE[win7](../../includes/win7-md.md)] 以降のクライアント エディションを実行している PC、またはサーバー グラフィック シェルがインストールされている別のサーバー ([!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の完全インストールやサーバー グラフィック シェル機能を有効にした Windows Server 8 インストールなど) に対して実行してください。  
@@ -122,7 +122,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー] をダブルクリックします。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager で、[サービスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]] をクリックし、[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<インスタンス名 >)] を右クリックします。ここで \<インスタンス名 > は、AlwaysOn 可用性グループを有効にするローカルサーバーインスタンスの名前です。 [] をクリックします。属性.  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration manager、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスを右クリックして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<インスタンス名 >) ここで、\<インスタンス名 > AlwaysOn を有効にするローカル サーバー インスタンスの名前を指定します可用性グループのプロパティ をクリックします。  
   
 7.  [AlwaysOn 高可用性] タブを選択します。  
   
@@ -156,7 +156,7 @@ Enable-SqlAlwaysOn -InputObject <Server> [-Credential <PSCredential>] [-Force] [
 Enable-SqlAlwaysOn [-ServerInstance <string>] [-Credential <PSCredential>] [-Force] [-NoServiceRestart] [-Confirm] [-WhatIf] [<Commom Parameters>]  
 ```  
   
- 次の PowerShell コマンドは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス (Machine\Instance) の AlwaysOn 可用性グループを有効にします。  
+ 次の PowerShell コマンドは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス (Machine\Instance) の AlwaysOn 可用性グループを有効にします。  
   
 ```powershell
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance  
@@ -186,10 +186,10 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  `net start SQLBROWSER`  
   
 ### <a name="create-exceptions-in-windows-firewall"></a>Windows ファイアウォールで例外を作成する  
- Windows ファイアウォールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスの例外を作成するには、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」で指定されている手順に従います。  
+ Windows ファイアウォールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスの例外を作成するには、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」で指定されている手順に従います。  
   
 ### <a name="enable-tcpip-on-an-instance-of-sql-server"></a>SQL Server のインスタンスで TCP/IP を有効にする
- Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 以下の操作を行ってください。  
+ Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 次の手順に従います。  
   
 1.  Windows Server 2008 R2 Server Core SP1 を搭載しているコンピューターで、タスク マネージャーを起動します。  
   
@@ -197,7 +197,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[開く]** フィールドに **sqlps.exe** と入力して、 **[OK]** をクリックします。 **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウが開きます。  
   
-4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
+4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   
 ```powershell
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
@@ -211,36 +211,36 @@ $Tcp
 ```  
   
 ##  <a name="sql-server-profiler"></a>[SQL Server Profiler]  
- リモート コンピューターで、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動し、[ファイル] メニューの [新しいトレース] をクリックすると、[サーバーへの接続] ダイアログ ボックスが表示されます。このダイアログ ボックスでは、Server Core コンピューター上にある接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定できます。 詳細については、「 [SQL Server Profiler の起動](../../tools/sql-server-profiler/start-sql-server-profiler.md)」を参照してください。  
+ リモート コンピューターで、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動し、[ファイル] メニューの [新しいトレース] をクリックすると、[サーバーへの接続] ダイアログ ボックスが表示されます。このダイアログ ボックスでは、Server Core コンピューター上にある接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定できます。 詳細については、「 [SQL Server Profiler の起動](../../tools/sql-server-profiler/start-sql-server-profiler.md)」を参照してください。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]の実行に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]の詳細については、「 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)」を参照してください。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の詳細については、「[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)」を参照してください。  
   
 ##  <a name="sql-server-auditing"></a>SQL Server 監査  
- 監査は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] をリモートで使用して定義できます。 監査を作成して有効にすると、ターゲットがエントリを受け取るようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査の作成および管理の詳細については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
+ 監査は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] をリモートで使用して定義できます。 監査を作成して有効にすると、ターゲットがエントリを受け取るようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査の作成および管理の詳細については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
 ##  <a name="sql-servevr-command-prompt-utilities"></a>SQL server のコマンドプロンプトユーティリティ  
- 次のコマンド プロンプト ユーティリティを使用すると、Server Core コンピューターでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作のスクリプトを作成できます。 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属する、Server Core 用のコマンド プロンプト ユーティリティの一覧です。  
+ 次のコマンド プロンプト ユーティリティを使用すると、Server Core コンピューターでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作のスクリプトを作成できます。 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属する、Server Core 用のコマンド プロンプト ユーティリティの一覧です。  
   
-|**Utility**|**[説明]**|**インストール先**|  
+|**Utility**|**説明**|**インストール先**|  
 |-----------------|---------------------|----------------------|  
 |[bcp ユーティリティ](../../tools/bcp-utility.md)|ユーザー指定の形式で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとデータ ファイルとの間でデータをコピーします。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを構成および実行します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[dtutil ユーティリティ](../../integration-services/dtutil-utility.md)|SSIS パッケージを管理します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[Encrypt](../../integration-services/dtutil-utility.md)|SSIS パッケージを管理します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql ユーティリティ](../../tools/osql-utility.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトで入力できるようになります。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlagent90 アプリケーション](../../tools/sqlagent90-application.md)|コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを開始します。|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
-|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトで入力できるようになります。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトで入力できるようになります。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag ユーティリティ](../../tools/sqldiag-utility.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス用の診断情報を収集します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)|以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたデータベース メンテナンス プランを実行します。|\<drive >: \MSSQL12.\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)|以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。|\<drive >: \MSSQL12.\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER\MSSQL\Binn|  
 |[sqlps ユーティリティ](../../tools/sqlps-utility.md)|PowerShell コマンドおよびスクリプトを実行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットの読み込みと登録を行います。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr アプリケーション](../../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを開始および停止します。|\<drive >: \MSSQL12.\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr アプリケーション](../../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを開始および停止します。|\<drive >: \MSSQL12.\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="use-troubleshooting-tools"></a>トラブルシューティング ツールの使用  
- [SQLdiag ユーティリティ](../../tools/sqldiag-utility.md) を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 SQLdiag は、マイクロソフト カスタマー サポート サービスによる診断情報収集の高速化と簡素化を目的としたユーティリティです。  
+ [SQLdiag ユーティリティ](../../tools/sqldiag-utility.md)を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 SQLdiag は、マイクロソフト カスタマー サポート サービスによる診断情報収集の高速化と簡素化を目的としたユーティリティです。  
   
  このユーティリティは、「 [SQLdiag ユーティリティ](../../tools/sqldiag-utility.md)」で指定されている構文を使用して、Server Core の管理者のコマンド プロンプトで起動できます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [Server Core  に SQL Server 2014 をインストール](install-sql-server-on-server-core.md)する  
  [インストール方法に関するトピック](../../sql-server/install/installation-how-to-topics.md)  

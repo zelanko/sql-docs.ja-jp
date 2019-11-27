@@ -78,7 +78,7 @@ ON
 > [!IMPORTANT]
 > コンテナーのデータ ファイルに対するアクティブな参照が存在する場合、対応する SQL Server 資格情報を削除しようとすると失敗します。  
   
-### <a name="security"></a>セキュリティ  
+### <a name="security"></a>Security  
  Azure Storage に SQL Server データ ファイルを格納する場合のセキュリティに関する考慮事項と要件は次のとおりです。  
   
 -   Azure BLOB ストレージ サービスのコンテナーを作成する際は、アクセス権を private に設定することをお勧めします。 アクセス権を private に設定すると、コンテナーと BLOB データを読み取ることができるのは Azure アカウントの所有者だけになります。  
@@ -127,7 +127,7 @@ ON
  SQL Server Management Studio では、複数のダイアログ ウィンドウでこの機能を使用することができます。 たとえば、 `https://teststorageaccnt.blob.core.windows.net/testcontainer/` [新しいデータベース] **、** [データベースのアタッチ] **、** [データベースの復元] **など複数のダイアログ ウィンドウの**[パス] **として、ストレージ コンテナーの URL パス (** など) を入力できます。 詳細については、「[チュートリアル: Azure Storage サービスでのデータファイルの SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」を参照してください。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理オブジェクトのサポート  
- Azure 機能で SQL Server データ ファイルを使用する場合は、すべての SQL Server 管理オブジェクト (SMO) がサポートされます。 SMO オブジェクトにファイル パスが必要であれば、ローカル ファイル パスの代わりに BLOB の URL 形式 ( `https://teststorageaccnt.blob.core.windows.net/testcontainer/`など) を使用します。 SQL Server 管理オブジェクト (SMO) の詳細については、SQL Server オンライン ブックの「[SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) 」をご覧ください。  
+ Azure 機能で SQL Server データ ファイルを使用する場合は、すべての SQL Server 管理オブジェクト (SMO) がサポートされます。 SMO オブジェクトにファイル パスが必要であれば、ローカル ファイル パスの代わりに BLOB の URL 形式 (`https://teststorageaccnt.blob.core.windows.net/testcontainer/` など) を使用します。 SQL Server 管理オブジェクト (SMO) の詳細については、SQL Server オンライン ブックの「[SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) 」をご覧ください。  
   
 ### <a name="transact-sql-support"></a>Transact-SQL のサポート  
  この新しい機能により、Transact-SQL の表層のセキュリティ構成が次のように変更されました。  
@@ -175,5 +175,5 @@ ON
   
     4.  データベースをオンラインに設定します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [チュートリアル: Azure Storage サービスのデータファイルの SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

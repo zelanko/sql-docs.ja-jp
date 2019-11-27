@@ -27,7 +27,7 @@ ms.locfileid: "73728211"
   
  詳細については、「[トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -54,7 +54,7 @@ ms.locfileid: "73728211"
   
 8.  **[モデルの保存]** をクリックします。  
   
- グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 **[モデルの保存]** ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "[OK]")のイメージが表示されます。  
+ グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 **[モデルの保存]** ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "OK")のイメージが表示されます。  
   
 ## <a name="see-also"></a>参照  
  [モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)   

@@ -39,33 +39,33 @@ sp_delete_log_shipping_primary_database
 [ @database = ] 'database'  
 ```  
   
-## <a name="arguments"></a>[引数]  
+## <a name="arguments"></a>引数  
 `[ @database = ] 'database'` は、ログ配布プライマリデータベースの名前です。 *データベースのデータ*型は**sysname**で、既定値はありません。 NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- [なし] :  
+ なし。  
   
-## <a name="remarks"></a>備考  
+## <a name="remarks"></a>Remarks  
  **sp_delete_log_shipping_primary_database**は、プライマリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  指定されたプライマリデータベースのバックアップジョブを削除します。  
   
-2.  プライマリサーバーの**log_shipping_monitor_primary**にあるローカル監視レコードを削除します。  
+2.  プライマリサーバー上の**log_shipping_monitor_primary**のローカル監視レコードを削除します。  
   
-3.  **Log_shipping_monitor_history_detail**と**log_shipping_monitor_error_detail**の対応するエントリを削除します。  
+3.  **Log_shipping_monitor_history_detail**と**log_shipping_monitor_error_detail**内の対応するエントリを削除します。  
   
 4.  監視サーバーがプライマリサーバーと異なる場合は、監視サーバーの**log_shipping_monitor_primary**の監視レコードを削除します。  
   
-5.  監視サーバー上の**log_shipping_monitor_history_detail**と**log_shipping_monitor_error_detail**の対応するエントリを削除します。  
+5.  監視サーバー上の**log_shipping_monitor_history_detail**と**log_shipping_monitor_error_detail**内の対応するエントリを削除します。  
   
 6.  このプライマリデータベースの**log_shipping_primary_databases**のエントリを削除します。  
   
 7.  監視サーバーで**sp_delete_log_shipping_alert_job**を呼び出します。  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
@@ -76,7 +76,7 @@ EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureW
 GO  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

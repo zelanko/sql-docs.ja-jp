@@ -32,7 +32,7 @@ ms.locfileid: "70154739"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **デバイスからバックアップを復元する方法:**  
   
@@ -44,10 +44,10 @@ ms.locfileid: "70154739"
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
- RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
+ RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、**db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -85,13 +85,13 @@ RESTORE DATABASE AdventureWorks2012
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)   
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [単純復旧モデルでのデータベース バックアップの復元 &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
- [データベースバックアップ&#40;の復元 SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+ [データベースバックアップ&#40;の復元 SQL Server Management Studio&#41; ](restore-a-database-backup-using-ssms.md)   
  [データベースの差分バックアップの復元 &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)   
  [データベースを新しい場所に復元する &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

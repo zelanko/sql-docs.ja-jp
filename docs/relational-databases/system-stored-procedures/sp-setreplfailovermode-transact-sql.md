@@ -41,18 +41,18 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` はパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。 パブリケーションは既に存在している必要があります。  
+`[ @publisher = ] 'publisher'` パブリケーションの名前を指定します。 *publication* は **sysname** 、既定値はありません。 パブリケーションは既に存在している必要があります。  
   
 `[ @publisher_db = ] 'publisher_db'` は、パブリケーションデータベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
-`[ @publication = ] 'publication'` はパブリケーションの名前です。 *publication* は **sysname** 、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname** 、既定値はありません。  
   
 `[ @failover_mode = ] 'failover_mode'` は、サブスクリプションのフェールオーバーモードです。 *failover_mode*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**immediate**または**sync**|サブスクライバーで行われたデータ変更は、変更の発生時にパブリッシャーに一括コピーされます。|  
-|**queued**|データの変更は、@no__t 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のキューに格納されます。|  
+|**queued**|データの変更は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キューに格納されます。|  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューは非推奨とされており、サポートされなくなりました。  
@@ -62,14 +62,14 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_setreplfailovermode**は、サブスクリプションが有効になっているスナップショットレプリケーションまたはトランザクションレプリケーションで、即時更新へのフェールオーバーを伴うキュー更新、または即時更新 (キュー更新を使用した即時更新) のいずれかに使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_setreplfailovermode**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [更新可能なトランザクションサブスクリプションの更新モードを切り替える](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)-1 @no__t  
+ [更新可能なトランザクションサブスクリプションの更新モードを切り替える](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

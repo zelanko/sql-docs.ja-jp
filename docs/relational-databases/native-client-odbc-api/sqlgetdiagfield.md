@@ -26,7 +26,7 @@ ms.locfileid: "73786475"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 **SQLGetDiagField**用に次の追加の診断フィールドが指定されています。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
   
-|診断レコードのフィールド|説明|  
+|診断レコードのフィールド|[説明]|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|ストアド プロシージャのエラーが発生した行番号を報告します。 SQL_DIAG_SS_LINE の値は、SQL_DIAG_SS_PROCNAME に値が返される場合にのみ意味があります。 この値は、16 ビットの符号なし整数で返されます。|  
 |SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラーメッセージの状態の詳細については、「 [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)」を参照してください。 この値は、32 ビットの符号付き整数で返されます。|  
@@ -82,7 +82,7 @@ ms.locfileid: "73786475"
 |SQL_DIAG_DFC_SS_SET_STATISTICS|SET STATISTICS IO ステートメントまたは SET STATISTICS TIME ステートメント|  
 |SQL_DIAG_DFC_SS_SET_TEXTSIZE|SET TEXTSIZE ステートメント|  
 |SQL_DIAG_DFC_SS_SETUSER|SETUSER ステートメント|  
-|SQL_DIAG_DFC_SS_SET_XCTLVL|SET TRANSACTION 分離レベルステートメント|  
+|SQL_DIAG_DFC_SS_SET_XCTLVL|SET TRANSACTION ISOLATION LEVEL ステートメント|  
 |SQL_DIAG_DFC_SS_SHUTDOWN|SHUTDOWN ステートメント|  
 |SQL_DIAG_DFC_SS_TRANS_BEGIN|BEGIN TRAN ステートメント|  
 |SQL_DIAG_DFC_SS_TRANS_COMMIT|COMMIT TRAN ステートメント|  

@@ -23,7 +23,7 @@ ms.locfileid: "73728216"
 
   作成したインデックスの属性の編集と、インデックスの削除を実行できます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  

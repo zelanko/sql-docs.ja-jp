@@ -41,7 +41,7 @@ ms.locfileid: "72798009"
  コピーのみのバックアップは、 **backupset** テーブルの [is_copy_only](/sql/relational-databases/system-tables/backupset-transact-sql) 列に記録されます。  
   
 ## <a name="to-create-a-copy-only-backup"></a>コピーのみのバックアップを作成するには  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してコピーのみのバックアップを作成できます。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してコピーのみのバックアップを作成できます。  
   
 ###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -52,14 +52,14 @@ ms.locfileid: "72798009"
   
 -   コピーのみの完全バックアップの場合:  
   
-     BACKUP DATABASE *database_name* TO \<backup_device *>* ...WITH COPY_ONLY...  
+     データベース*database_name*を \<backup_device *>* にバックアップしています...COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY は、DIFFERENTIAL オプションと共に指定した場合には機能しません。  
   
 -   コピーのみのログ バックアップの場合:  
   
-     BACKUP LOG *database_name* TO *\<* backup_device *>* ...WITH COPY_ONLY...  
+     BACKUP LOG *database_name* *\<* backup_device *>* ...COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72798009"
   
 -   [SQL Server PowerShell プロバイダー](../../powershell/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [バックアップと復元によるデータベースのコピー](../databases/copy-databases-with-backup-and-restore.md)   

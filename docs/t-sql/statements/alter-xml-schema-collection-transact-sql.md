@@ -1,4 +1,4 @@
----
+﻿---
 title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -56,7 +56,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  *sql_identifier*  
  XML スキーマ コレクションの SQL 識別子を指定します。  
   
-**'** *Schema Component* **'**  
+ **'** *Schema Component* **'**  
  挿入するスキーマ コンポーネントを指定します。  
   
 ## <a name="remarks"></a>Remarks  

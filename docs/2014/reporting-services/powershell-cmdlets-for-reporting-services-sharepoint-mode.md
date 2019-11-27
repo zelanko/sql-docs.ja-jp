@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783304"
 ---
-# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードの PowerShell コマンドレット
+# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
   
 -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスおよびプロキシのインストール。  
@@ -74,7 +74,7 @@ ms.locfileid: "72783304"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 詳細については、「 [Windows PowerShell を使用して SharePoint 2013 を管理する](https://technet.microsoft.com/library/ee806878.aspx)」 (https://technet.microsoft.com/library/ee806878.aspx) を参照してください。  
+ 詳細については、「 [Windows PowerShell を使用して SharePoint 2013 を管理する](https://technet.microsoft.com/library/ee806878.aspx)」 (https://technet.microsoft.com/library/ee806878.aspx)を参照してください。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行するには  
   
@@ -91,7 +91,7 @@ ms.locfileid: "72783304"
 ###  <a name="bkmk_sharedservice_cmdlets"></a> 共有サービスとプロキシ コマンドレット  
  次の表に、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービス用の PowerShell コマンドレットを示します。  
   
-|Cmdlet|Description|  
+|コマンドレット|[説明]|  
 |------------|-----------------|  
 |Install-SPRSService|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> 1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスがファームにインストールされています。<br /><br /> 2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスインスタンスが現在のコンピューターにインストールされています。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br />1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスは、現在のコンピューターからアンインストールされます。<br />2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスはファームからアンインストールされます。<br /><br /> <br /><br /> メモ: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスがインストールされているファーム内に他のコンピューターが存在する場合や [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションがファーム内で引き続き実行されている場合は、警告メッセージが表示されます。|  
 |Install-SPRSServiceProxy|SharePoint ファーム内で Reporting Services サービス プロキシをインストールして登録するか、アンインストールします。|  
@@ -101,7 +101,7 @@ ms.locfileid: "72783304"
 ###  <a name="bkmk_serviceapp_cmdlets"></a> サービス アプリケーションとプロキシ コマンドレット  
  次の表には、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションとそれらに関連付けられたプロキシ用の PowerShell コマンドレットが含まれています。  
   
-|コマンドレット|Description|  
+|コマンドレット|[説明]|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション オブジェクトを取得します。|  
 |New-SPRSServiceApplication|新しい Reporting Services サービス アプリケーションと、それに関連付けられたデータベースを作成します。<br /><br /> LogonType パラメーター: レポート サーバーが、レポート サーバー データベースへのアクセスに SSRS Application Pool アカウントと SQL Server ログインのどちらを使用するかを指定します。 次のいずれかを指定できます。<br /><br /> 0 Windows 認証<br /><br /> 1 SQL Server<br /><br /> 2 アプリケーション プール アカウント (既定)|  
@@ -121,7 +121,7 @@ ms.locfileid: "72783304"
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services カスタム機能コマンドレット  
   
-|Cmdlet|Description|  
+|コマンドレット|[説明]|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|指定した Reporting Services サービス アプリケーションの暗号化キーを更新し、そのデータを再暗号化します。|  
 |Restore-SPRSEncryptionKey|以前にバックアップした、Reporting Services サービス アプリケーションの暗号化キーを復元します。|  
@@ -130,7 +130,7 @@ ms.locfileid: "72783304"
 |New-SPRSExtension|新しい拡張機能を Reporting Services サービス アプリケーションに登録します。|  
 |Set-SPRSExtension|既存の Reporting Services 拡張機能のプロパティを設定します。|  
 |Remove-SPRSExtension|Reporting Services サービス アプリケーションから拡張機能を削除します。|  
-|Get-SPRSExtension|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション用の、1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 拡張機能を取得します。<br /><br /> 以下の値が有効です。<br /><br /> **伝達**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **[認証]**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション用の、1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 拡張機能を取得します。<br /><br /> 以下の値が有効です。<br /><br /> **伝達**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **データ**<br /><br /> **セキュリティ**<br /><br /> **認証**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|"ReportingService" 機能が有効になっているかどうかに基づいて SharePoint サイトを取得します。 既定では、"ReportingService" 機能が有効になっているサイトが返されます。|  
   
 ##  <a name="bkmk_basic_samples"></a>基本的なサンプル  
@@ -300,8 +300,8 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name, extensiont
 ###  <a name="bkmk_change_subscription_owner"></a>サブスクリプション所有者の変更と一覧表示  
  「 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [チェックリスト: PowerShell を使用して PowerPivot for SharePoint の   を確認する](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)  
+ [チェックリスト: PowerShell を使用して PowerPivot for SharePoint の  を確認する](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)  
  [CodePlex SharePoint 管理 PowerShell スクリプト](http://sharepointpsscripts.codeplex.com/)   
  [PowerShell を使用して SSRS を管理する方法](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  

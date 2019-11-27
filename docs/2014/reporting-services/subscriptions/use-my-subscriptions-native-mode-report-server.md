@@ -25,7 +25,7 @@ ms.locfileid: "72783144"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モード|  
   
  [個人用サブスクリプション] 内では、フォルダー、レポート、説明、トリガー、最後に実行された日時、状態によるサブスクリプションの並べ替えが可能です。 日時順に並べ替えられる [最終実行] を除いて、すべての値はアルファベット順に並べ替えられます。  
   
@@ -52,7 +52,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 #$subscriptions
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../create-manage-subscriptions-native-mode-report-servers.md)  

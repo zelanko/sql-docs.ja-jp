@@ -68,9 +68,9 @@ ms.locfileid: "70874415"
   
      中華人民共和国およびシンガポールでは、Microsoft サポートの観察によると、ピンイン付きの簡体字国語の並べ替え順序がよく使用されています。 推奨される照合順序は、Chinese_PRC (SQL Server 2000 の場合)、Chinese_PRC_90 (SQL Server 2005 の場合)、または Chinese_Simplified_Pinyin_100 (SQL Server 2008 以降の場合) です。  
   
-     台湾では、繁体字中国語を使用する方が一般的ですが、推奨される並べ替え順序はストローク数に基づいています。Chinese_Taiwan_Stroke (SQL Server 2000 の場合)、Chinese_Taiwan_Stroke_90 (SQL Server 2005 の場合)、または Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降の場合)。  
+     台湾では、繁体字中国語のほうが一般的で、お勧めする並べ替え順序は画数に基づく次のものです。Chinese_Taiwan_Stroke (SQL Server 2000 の場合)、Chinese_Taiwan_Stroke_90 (SQL Server 2005 の場合)、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降の場合)。  
   
-     その他の地域 (香港特別行政区やマカオなど) でも、繁体字中国語が使用されます。 香港特別行政区では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、Chinese_Traditional_Stroke_Count_100 (2008 以降) が非常 SQL Server に頻繁に使用されています。  
+     その他の地域 (香港やマカオなど) でも、繁体字中国語が使用されます。 香港では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降) が非常に頻繁に使用されています。  
   
 -   日本語では、最もよく使用される照合順序は Japanese_CI_AS です。 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)をサポートするシステムでは、Japanese_XJIS_100 が使用されます。 Japanese_BIN2 は、通常、Windows 以外のプラットフォームからのデータ、または SQL Server リレーショナル データベース エンジン以外のデータ ソースからのデータを移行するプロジェクトで使用されるのが一般的です。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "70874415"
   
 |言語セット|大文字と小文字の区別|  
 |---------------------|----------------------|  
-|**基本的なラテン アルファベット**|ラテン文字 (任意の 26 個の英語大文字小文字) で表されるオブジェクト ID は、照合順序に関係なく、大文字小文字の区別なしで処理されます。 たとえば、次のオブジェクト Id は同一であると見なされます。54321**abcdef**、54321**Abcdef**、54321**abcdef**。 Analysis Services はこうした文字列内の文字を内部的には大文字として処理し、言語に関係なく単純なバイト比較を実行します。<br /><br /> 26 文字だけが影響を受けることに注意してください。 言語が西ヨーロッパ言語で、スカンジナビア語の文字を使用している場合、追加の文字は大文字に変換されません。|  
+|**基本的なラテン アルファベット**|ラテン文字 (任意の 26 個の英語大文字小文字) で表されるオブジェクト ID は、照合順序に関係なく、大文字小文字の区別なしで処理されます。 たとえば、次のオブジェクト ID は同じであると見なされます。54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**。 Analysis Services はこうした文字列内の文字を内部的には大文字として処理し、言語に関係なく単純なバイト比較を実行します。<br /><br /> 26 文字だけが影響を受けることに注意してください。 言語が西ヨーロッパ言語で、スカンジナビア語の文字を使用している場合、追加の文字は大文字に変換されません。|  
 |**キリル語、ギリシャ語、コプト語、アルメニア語**|キリル語など、ラテン語以外の大文字小文字の区別がある言語のオブジェクト ID では、常に大文字小文字が区別されます。 たとえば、Измерение と измерение の違いは最初の文字の大文字小文字だけですが、この場合も 2 つの異なる値であると見なされます。|  
   
  **オブジェクト ID の大文字小文字の区別の影響**  
@@ -106,7 +106,7 @@ ms.locfileid: "70874415"
   
      Adventure Works サンプル データベースのフランス語翻訳が表示されるはずです。  
   
-     ![フランス語翻訳を使用した Excel ピボットテーブル](media/ssas-localetest-excel.png "フランス語翻訳を使用した Excel ピボットテーブル")  
+     フランス語翻訳を![使用した Excel ピボットテーブル]と(media/ssas-localetest-excel.png "フランス語翻訳")  
   
  その後、SQL Server Profiler を使用してロケールを確認できます。 `Session Initialize` イベントをクリックし、下に表示されるテキスト領域のプロパティ リストを探して `<localeidentifier>1036</localeidentifier>`を見つけます。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "70874415"
   
 -   Adventure Works データベースに対して、MDX クエリを実行します。 クエリ結果は、フランス語翻訳になるはずです。  
   
-     ![SSMS でのフランス語翻訳を使用した MDX クエリ](media/ssas-localetest-ssms.png "SSMS でのフランス語翻訳を使用した MDX クエリ")  
+     Ssms での![フランス語翻訳による mdx クエリ](media/ssas-localetest-ssms.png "Ssms でのフランス語翻訳を使用した mdx クエリ")  
   
 ##  <a name="bkmk_mdx"></a> 翻訳が含まれるソリューションにおける MDX クエリの作成  
  翻訳では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトの名前の表示情報が提供されますが、同じオブジェクトの識別子は翻訳されません。 可能であれば必ず、翻訳されたキャプションと名前ではなく、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトの識別子とキーを使用してください。 たとえば、多次元式 (MDX) ステートメントおよびスクリプトのメンバー名ではなく、メンバー キーを使用して、複数の言語間での移植性を確保します。  
@@ -139,13 +139,13 @@ ms.locfileid: "70874415"
   
 3.  **ユニバーサルの日時情報に対する ISO 日付形式の使用**  
   
-     この推奨事項は、1 [Analysis Services の専門家](http://geekswithblogs.net/darrengosbell/Default.aspx)にあります。"SQL または MDX でクエリに渡す日付文字列には常に ISO 日付形式 yyyy-mm-dd を使用します。これは明確で、クライアントまたはサーバーの地域設定に関係なく機能するためです。 サーバーでは、あいまいな日付形式を解析する場合にこの地域設定に従う必要があるとは思いますが、どのような場合であってもそれが最善の選択肢であると考える必要はないとも思います」。  
+     1 人の [Analysis Services の専門家](http://geekswithblogs.net/darrengosbell/Default.aspx) は次のように勧めています。「SQL または MDX でクエリに渡す日付文字列には ISO 日付形式 yyyy-mm-dd を必ず使います。この形式にはあいまいさがなく、クライアントまたはサーバーの地域設定に関係なく作動するためです。 サーバーでは、あいまいな日付形式を解析する場合にこの地域設定に従う必要があるとは思いますが、どのような場合であってもそれが最善の選択肢であると考える必要はないとも思います」。  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
      フォーラム投稿から借用している以下の MDX クエリは、基礎となる地域設定とは無関係に、特定の形式で日付を返すための Format の使用法を示しています。  
   
-     元々の投稿内容については、「 [SSAS 2012 によって生成される無効な日付 (Network Steve でのフォーラム投稿)](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) 」を参照してください。  
+     元々の投稿内容については、「 [SSAS 2012 によって生成される無効な日付 (Network Steve でのフォーラム投稿)](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) 」をご覧ください。  
   
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
@@ -159,8 +159,8 @@ ms.locfileid: "70874415"
   
     ```  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services Multiidimensional のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+## <a name="see-also"></a>参照  
+ [Analysis Services Multiidimensional  のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)  
  [国際化に対応した Transact-SQL ステートメントの記述](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

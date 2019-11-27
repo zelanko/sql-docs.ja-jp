@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67915142"
 ---
-# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL Database)
+# <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   イベント セッションの各イベントのアクションごとに 1 行のデータを返します。  

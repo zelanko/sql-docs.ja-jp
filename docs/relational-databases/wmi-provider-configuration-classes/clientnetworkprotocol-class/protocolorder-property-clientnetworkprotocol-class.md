@@ -35,14 +35,14 @@ ms.locfileid: "73660207"
 object.ProtocolOrder [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *object*  
+## <a name="parts"></a>指定項目  
+ *オブジェクト (object)*  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントによって使用されるネットワークプロトコルを表す[Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **Ordervalue**メソッドによって設定された、現在参照されているクライアントネットワークプロトコルの順序番号を指定する**uint32**値。 クライアント ネットワーク プロトコルが無効の場合、この値は 0 になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアントプロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)   

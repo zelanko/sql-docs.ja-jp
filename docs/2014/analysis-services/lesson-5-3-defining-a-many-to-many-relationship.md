@@ -47,13 +47,13 @@ ms.locfileid: "69493877"
   
 6.  **[書式]** メニューで **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
-7.  プロパティウィンドウで、 **DimSalesReason**テーブルの**friendlyname**プロパティを `SalesReason` に変更し、 **FactInternetSalesReason**テーブルの**friendlyname**プロパティを `InternetSalesReason` に変更します。  
+7.  プロパティウィンドウで、 **DimSalesReason**テーブルの**friendlyname**プロパティを `SalesReason`に変更し、 **FactInternetSalesReason**テーブルの**friendlyname**プロパティを `InternetSalesReason`に変更します。  
   
 8.  **[テーブル]** ペインで **[InternetSalesReason (dbo.FactInternetSalesReason)]** を展開し、 **[SalesOrderNumber]** をクリックします。次に、[プロパティ] ウィンドウで、このデータ列の **DataType** プロパティを確認します。  
   
      **[SalesOrderNumber]** 列のデータ型は文字列になっています。  
   
-9. @No__t_0 テーブル内の他の列のデータ型を確認します。  
+9. `InternetSalesReason` テーブル内の他の列のデータ型を確認します。  
   
      このテーブルでは、他の 2 つの列のデータ型が数値型になっています。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69493877"
   
 8.  **[次へ]** をクリックします。  
   
-9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type**属性の横にあるチェックボックスをオンにし、名前を `Sales Reason Type` に変更して、 **[次へ]** をクリックします。  
+9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type**属性の横にあるチェックボックスをオンにし、名前を `Sales Reason Type`に変更して、 **[次へ]** をクリックします。  
   
 10. **[ウィザードの完了]** ページで **[完了]** をクリックすると、Sales Reason ディメンションが作成されます。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "69493877"
   
 5.  メタデータ ペインで、 **[Customer]** 、 **[Location]** 、 **[Customer Geography]** 、 **[Members]** 、 **[All Customers]** 、 **[Australia]** の順にクリックし、 **[Queensland]** を右クリックして **[フィルターに追加]** をクリックします。  
   
-6.  @No__t_0 レベルの各メンバーを展開し、Queensland の顧客がインターネット経由で [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 製品を購入するために使用した各理由に関連付けられているドル値を確認します。  
+6.  `Sales Reason Type` レベルの各メンバーを展開し、Queensland の顧客がインターネット経由で [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 製品を購入するために使用した各理由に関連付けられているドル値を確認します。  
   
      購入理由に関連付けられている売上金額をすべて加算すると、総売上額を上回ります。 これは、製品の購入理由を複数選択した顧客がいたためです。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "69493877"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [メジャー グループでのディメンション粒度の定義](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [多対多のリレーションシップと多対多のリレーションシップのプロパティの定義](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  

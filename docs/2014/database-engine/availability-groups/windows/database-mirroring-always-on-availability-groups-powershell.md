@@ -22,7 +22,7 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72782989"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 (SQLServer PowerShell)
-  このトピックでは、PowerShell を使用して、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で使用するデータベース ミラーリング エンドポイントを作成する方法について説明します。  
+  このトピックでは、PowerShell を使用して、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用するデータベース ミラーリング エンドポイントを作成する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "72782989"
   
 ## <a name="before-you-begin"></a>作業を開始する準備  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
@@ -64,7 +64,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **データベース ミラーリング エンドポイントを構成するには**  
   
--   [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -80,6 +80,6 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [可用性グループの作成 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)   
  [AlwaysOn 可用性グループ&#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)  

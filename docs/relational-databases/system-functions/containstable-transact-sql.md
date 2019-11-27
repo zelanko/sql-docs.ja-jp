@@ -43,11 +43,11 @@ ms.locfileid: "73983208"
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  1つの単語や語句に対する完全一致またはあいまいな一致を含む列に対して、0行、1行、または複数の行から成るテーブルを返します。特定の範囲内での近接語句、または重み付け一致が含まれます。 CONTAINSTABLE は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの[from 句](../../t-sql/queries/from-transact-sql.md)で使用され、通常のテーブル名のように参照されます。 このメソッドは、文字ベースのデータ型を含むフルテキストインデックス列に対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。  
+  単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での近接検索、または重み付き検索を行う列に対して、0 行以上の行を含むテーブルを返します。 CONTAINSTABLE は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの[from 句](../../t-sql/queries/from-transact-sql.md)で使用され、通常のテーブル名のように参照されます。 このメソッドは、文字ベースのデータ型を含むフルテキストインデックス列に対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。  
   
  CONTAINSTABLE は、 [contains 述語](../../t-sql/queries/contains-transact-sql.md)と同じ種類の一致に便利であり、contains と同じ検索条件を使用します。  
   
- ただし、CONTAINS とは異なり、CONTAINSTABLE を使用するクエリでは、各行の関連順位値 (RANK) とフルテキストキー (キー) が返されます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
+ ただし、CONTAINS とは異なり、CONTAINSTABLE を使用するクエリでは、各行の関連順位値 (RANK) とフルテキスト キー (KEY) が返されます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -114,7 +114,7 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>引数  
  *テーブル*  
- フルテキストインデックスが作成されているテーブルの名前を指定します。 *テーブル*には、1、2、3、または4つの要素で構成されるデータベースオブジェクト名を指定できます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
+ フルテキスト インデックスが作成されているテーブルの名前を指定します。 *テーブル*には、1、2、3、または4つの要素で構成されるデータベースオブジェクト名を指定できます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
   
  *テーブル*にサーバー名を指定することはできません。また、リンクサーバーに対するクエリでは使用できません。  
   
@@ -141,7 +141,7 @@ CONTAINSTABLE
  *top_n_by_rank*  
  一致したものの中から、降順で順位の高い方から*n 個*だけを返すことを指定します。 整数値*n*が指定されている場合にのみ適用されます。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*を使用すると、最も関連性の高いヒットだけを再度呼び出すことで、クエリのパフォーマンスを向上させることができます。  
   
- < contains_search_condition >  
+ <contains_search_condition>  
  *column_name* で検索するテキストと、その一致条件を指定します。 検索条件の詳細については、「 [ &#40;CONTAINS&#41;transact-sql](../../t-sql/queries/contains-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
@@ -158,19 +158,19 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- CONTAINSTABLE によって生成されるテーブルには、 **RANK**という名前の列が含まれています。 **RANK**列は、行が選択基準にどの程度一致しているかを示す値 (0 ~ 1000) です。 この順位値は、通常、SELECT ステートメント内の次のいずれかの方法で使用されます。  
+ CONTAINSTABLE によって生成されるテーブルには、 **RANK**という名前の列が含まれています。 **RANK**列は、行が選択基準にどの程度一致しているかを示す値 (0 ~ 1000) です。 通常、順位値は SELECT ステートメント内で次のいずれかの方法で使用します。  
   
--   ORDER BY 句で、テーブルの最初の行として最も順位の高い行を返します。  
+-   ORDER BY 句で使用し、最も順位値の高い行をテーブルの最初の行に返す。  
   
--   選択リストで、各行に割り当てられた順位値を表示します。  
+-   選択リストで使用し、それぞれの行に割り当てられている順位値を表示する。  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行権限は、テーブルまたは参照先テーブルの列に対する適切な SELECT 権限を持つユーザーのみが使用できます。  
+ 実行権限は、対象テーブルまたは参照されるテーブル内の列に対して SELECT 特権を持っているユーザーにだけ与えられます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-simple-example"></a>A. 簡単な例  
- 次の例では、2つの列からなる単純なテーブルを作成し、そのフラグの3つの市区郡と色を一覧表示します。 このメソッドは、テーブルにフルテキストカタログとインデックスを作成して設定します。 次に、 **CONTAINSTABLE**構文を示します。 この例では、検索値が複数回満たされたときに順位値がどのように増加するかを示します。 最後のクエリでは、"緑" と "黒" の両方が含まれているタンザニアは、クエリされた色の1つのみを含む、イタリアよりも高いランクを持ちます。  
+ 次の例では、作成し、3 つの郡およびそのフラグの色の一覧を表示する 2 つの列の単純なテーブルを入力します。 It では、作成し、テーブルのインデックス、フルテキスト カタログを設定します。 次に、 **CONTAINSTABLE**構文を示します。 この例では、検索値を複数回を満たす場合に順位値が高いに拡張する方法を示します。 前回のクエリでは、タンザニア緑と黒の両方が含まれています。 これは、順位の高いクエリの色の 1 つだけが含まれているイタリアよりもにあります。  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -191,7 +191,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK 
 ```  
   
 ### <a name="b-returning-rank-values"></a>b. 順位値を返す  
- 次の例では、"frame"、"wheel"、または "tire" という単語を含むすべての製品名を検索します。各単語にはさまざまな重みが割り当てられています。 これらの検索条件に一致する行が返されるたびに、一致の相対的な近さ (順位付け値) が表示されます。 また、最も順位値の高い行を最初に返します。  
+ 次の例では、"frame"、"wheel"、または "tire" という単語を含むすべての製品名を検索します。各単語にはそれぞれ異なる重みが割り当てられています。 これらの検索基準に一致し、返された行に対して、相対的な近似度合い (順位値) を表示します。 また、最も順位値の高い行を最初に返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -207,7 +207,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-### <a name="c-returning-rank-values-greater-than-a-specified-value"></a>C. 指定された値より大きい順位値を返す  
+### <a name="c-returning-rank-values-greater-than-a-specified-value"></a>C. 指定した値を超える順位値を返す  
   
 ||  
 |-|  
@@ -230,7 +230,7 @@ GO
 ```  
   
 > [!NOTE]  
->  フルテキストクエリで最大距離として整数が指定されていない場合、ギャップが100の論理用語を超えるヒットのみを含むドキュメントは、NEAR の要件を満たしておらず、順位が0になります。  
+>  フルテキスト クエリで最大距離の整数が指定されていない場合、論理語の間隔が 100 を超えるヒットのみが含まれるドキュメントは NEAR の要件を満たさず、その順位は 0 になります。  
   
 ### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D. top_n_by_rank を使用して上位 5 個の結果を返す  
  次の例では、`Description` 列内で "light" または "lightweight" という単語の近くに "aluminum" という語句を含んでいる、上位 5 種の製品の説明を返します。  
@@ -256,7 +256,7 @@ GO
  `GO`  
   
 ### <a name="e-specifying-the-language-argument"></a>E. LANGUAGE 引数を指定する  
- 次の例は、`LANGUAGE` 引数の使用方法を示しています。  
+ 次の例では、`LANGUAGE` 引数の使用法を示します。  
   
 ```  
 USE AdventureWorks2012;  

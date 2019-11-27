@@ -24,9 +24,9 @@ ms.locfileid: "73728756"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  機能領域の権限を割り当てて、ユーザーまたはグループに [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の機能領域へのアクセス権を付与します。  
+  機能領域の権限を割り当てて、ユーザーまたはグループに[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の機能領域へのアクセス権を付与します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
@@ -47,12 +47,12 @@ ms.locfileid: "73728756"
   
 7.  終了したら **[保存]** をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
   
 -   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
+ [セキュリティ &#40;マスター データ サービス&#41;](../master-data-services/security-master-data-services.md)  
   
   

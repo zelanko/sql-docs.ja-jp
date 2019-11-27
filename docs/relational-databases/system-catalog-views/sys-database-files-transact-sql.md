@@ -1,4 +1,4 @@
----
+﻿---
 title: database_files (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
@@ -35,7 +35,7 @@ ms.locfileid: "73983183"
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|データベース内のファイルの ID。|  
-|**file_guid**|**uniqueidentifier**|ファイルの GUID。<br /><br /> NULL = データベースは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされました (SQL Server 2005 以前では有効)。|  
+|**file_guid**|**uniqueidentifier**|ファイルの GUID。<br /><br /> NULL = データベースは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされました (SQL Server 2005 以前で有効)。|  
 |**type**|**tinyint**|ファイルの種類です。<br/><br /> 0 = 行<br /><br/> 1 = ログ<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト|  
 |**type_desc**|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|値には0または0より大きい値を指定できます。 値0はデータベースログファイルを表し、0より大きい値はこのデータファイルが格納されているファイルグループの ID を表します。|  

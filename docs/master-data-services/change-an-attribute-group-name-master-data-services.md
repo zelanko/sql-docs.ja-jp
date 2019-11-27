@@ -25,7 +25,7 @@ ms.locfileid: "73729704"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループ名を変更できます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  

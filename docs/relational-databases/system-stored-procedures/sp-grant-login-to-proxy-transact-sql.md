@@ -44,20 +44,20 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @login_name = ] 'login_name'` へのアクセスを許可するログイン名。 *Login_name*は**nvarchar (256)** ,、既定値は NULL です。 **@No__t**、 **@no__t**、または **\@msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
+アクセス権を付与するログイン名 `[ @login_name = ] 'login_name'` ます。 *Login_name*は**nvarchar (256)** ,、既定値は NULL です。 **\@login_name**、 **\@fixed_server_role**、または **\@msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` にアクセスを許可する固定サーバーロール。 *Fixed_server_role*は**nvarchar (256)** 、既定値は NULL です。 **@No__t**、 **@no__t**、または **\@msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
+へのアクセスを許可する固定サーバーロールを `[ @fixed_server_role = ] 'fixed_server_role'` します。 *Fixed_server_role*は**nvarchar (256)** 、既定値は NULL です。 **\@login_name**、 **\@fixed_server_role**、または **\@msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
   
-`[ @msdb_role = ] 'msdb_role'` にアクセスを許可する**msdb**データベース内のデータベースロール。 *Msdb_role*は**nvarchar (256)** ,、既定値は NULL です。 **@No__t**、 **@no__t**、または **\@msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
+アクセスを許可する**msdb**データベースのデータベースロールを `[ @msdb_role = ] 'msdb_role'` します。 *Msdb_role*は**nvarchar (256)** ,、既定値は NULL です。 **\@login_name**、 **\@fixed_server_role**、または **\@msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
   
-`[ @proxy_id = ] id` アクセス権を付与するプロキシの識別子。 *Id*は**int**,、既定値は NULL です。 1proxy_id または **@no__t** **@no__t**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
+アクセス権を付与するプロキシの識別子を `[ @proxy_id = ] id` します。 *Id*は**int**,、既定値は NULL です。 **\@proxy_id**または **\@proxy_name**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
   
-`[ @proxy_name = ] 'proxy_name'` アクセス権を付与するプロキシの名前。 *Proxy_name*は**nvarchar (256)** ,、既定値は NULL です。 1proxy_id または **@no__t** **@no__t**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
+`[ @proxy_name = ] 'proxy_name'` アクセス権を付与するプロキシの名前を指定します。 *Proxy_name*は**nvarchar (256)** ,、既定値は NULL です。 **\@proxy_id**または **\@proxy_name**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_grant_login_to_proxy**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -76,9 +76,9 @@ EXEC dbo.sp_grant_login_to_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_add_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sp_add_proxy](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
  [sp_revoke_login_from_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

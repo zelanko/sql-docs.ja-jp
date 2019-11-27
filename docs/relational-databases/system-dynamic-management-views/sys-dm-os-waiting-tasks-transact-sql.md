@@ -1,5 +1,5 @@
 ---
-title: sys _os_waiting_tasks (Transact-sql) |Microsoft Docs
+title: dm_os_waiting_tasks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -33,14 +33,14 @@ ms.locfileid: "72260379"
   あるリソースで待機しているタスクの待機キューに関する情報を返します。 タスクの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
    
 > [!NOTE]  
->  @No__t-0 または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] から呼び出すには、 **_pdw_nodes_os_waiting_tasks**という名前を使用します。  
+>  [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]から呼び出すには、「 **sys. dm_pdw_nodes_os_waiting_tasks**」という名前を使用します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|待機中のタスクのアドレス。|  
 |**session_id**|**smallint**|タスクに関連付けられているセッションの ID。|  
 |**exec_context_id**|**int**|タスクに関連付けられている実行コンテキストの ID。|  
-|**wait_duration_ms**|**bigint**|この待機の種類の合計待機時間 (ミリ秒単位)。 この時間は**signal_wait_time**を含みます。|  
+|**wait_duration_ms**|**bigint**|この待機の種類の合計待機時間 (ミリ秒単位)。 この時間には**signal_wait_time**が含まれます。|  
 |**wait_type**|**nvarchar(60)**|待機の種類の名前。|  
 |**resource_address**|**varbinary(8)**|タスクが待機しているリソースのアドレス。|  
 |**blocking_task_address**|**varbinary(8)**|このリソースを現在保持しているタスク|  
@@ -58,7 +58,7 @@ ms.locfileid: "72260379"
   
  **並列クエリリソース所有者:**  
   
--   exchangeEvent id = {Port |パイプ} \<hex-address > WaitType = \<exchange-wait-type > nodeId = \<exchange-node-id >  
+-   exchangeEvent id = {Port |パイプ}\<16 進数アドレス > WaitType =\<exchange-待機の種類 > nodeId =\<exchange-ノード id >  
   
  **Exchange-wait-type:**  
   
@@ -78,33 +78,33 @@ ms.locfileid: "72260379"
   
  **リソース所有者のロック:**  
   
--   \<type-description > id = lock @ no__t-1 lock-hex-hex > mode = \<mode > associatedObjectId = \<associated 関連付けられている-obj-id >  
+-   \<の種類に固有の説明 > id = ロック\<ロック-16 進数 > mode =\<mode > associatedObjectId =\<関連付けられた .obj-id >  
   
-     **\<type 固有の説明 > は次のようになります。**  
+     **\<種類固有の説明 > は次のようになります。**  
   
-    -   データベースの場合: databaselock subresource = \<databaselock-subresource > dbid = \< db id >  
+    -   データベースの場合: databaselock subresource =\<databaselock-subresource > dbid =\<db id >  
   
-    -   ファイルの場合: filelock fileid = \<file-id > subresource = \<filelock-subresource > dbid = \<db-id >  
+    -   ファイルの場合: filelock fileid =\<ファイル id > subresource =\<filelock-subresource > dbid =\<db id >  
   
-    -   オブジェクトの場合: objectlock lockPartition = \<lock-partition > objid = \<obj-id > subresource = \<objectlock-subresource > dbid = \<db-id >  
+    -   オブジェクトの場合: objectlock lockPartition =\<ロックパーティション id > objid =\<obj-id > subresource =\<objectlock-subresource > dbid =\<db-id >  
   
-    -   PAGE の場合: pagelock fileid = \<file-id > ページ id = \<page-id > dbid = \<db-id > subresource = \<pagelock-subresource >  
+    -   ページの場合: pagelock fileid =\<ファイル id > ページ id =\<ページ id > dbid =\<db id > subresource =\<pagelock-subresource >  
   
-    -   キーの場合: キーロック hobtid = \<hobt > dbid = \< db id >  
+    -   キーの場合: キーロック hobtid =\<hobt > dbid =\<db id >  
   
-    -   エクステント: extentlock fileid = \<file-id > ページ id = \< ページ id > dbid = \<db-id >  
+    -   エクステントの場合: extentlock fileid =\<ファイル id > ページ id =\<ページ id > dbid =\<db id >  
   
-    -   RID の場合: ridlock fileid = \<file-id > ページ id = \< ページ id > dbid = \<db-id >  
+    -   RID の場合: ridlock fileid =\<ファイル id > ページ id =\<ページ id > dbid =\<db id >  
   
-    -   アプリケーションの場合: applicationlock hash = \<hash > databasePrincipalId = \<role-id > dbid = \<db-id >  
+    -   アプリケーションの場合: applicationlock hash =\<hash > databasePrincipalId =\<ロール id > dbid =\<db id >  
   
-    -   メタデータの場合: metadatalock subresource = \<metadata-subresource > classid = @no__t-description > dbid = \<db-id >  
+    -   メタデータの場合: metadatalock subresource =\<metadata-subresource > classid =\<metadatalock > dbid =\<db id >  
   
-    -   HOBT の場合: hobtlock hobtid = \<hobt > subresource = \<hobt-subresource > dbid = \<db-id >  
+    -   HOBT の場合: hobtlock hobtid =\<HOBT > subresource =\<HOBT-subresource > dbid =\<db-id >  
   
-    -   ALLOCATION_UNIT の場合: allocunitlock hobtid = \<hobt > subresource = \< alloc-UNIT-subresource > dbid = \<db-id >  
+    -   ALLOCATION_UNIT の場合: allocunitlock hobtid =\<hobt > subresource =\<alloc-UNIT-subresource > dbid =\<db id >  
   
-     **\<mode > は次のようになります。**  
+     **\<モード > は次のようになります。**  
   
      Sch-m-S、Sch-m、S、U、X、IS、IU、IX、SIU、6、UIX、BU、範囲-S、範囲-U、RangeI-N、RangeI-S、RangeI-U、RangeI-X、RangeX-、RangeX-U、RangeX-X  
   
@@ -114,7 +114,7 @@ ms.locfileid: "72260379"
   
  **汎用リソース所有者:**  
   
--   TransactionMutex Transactionmutex Workspace = \<workspace-id >  
+-   TransactionMutex Transactionmutex Workspace =\<ワークスペース id >  
   
 -   Mutex  
   
@@ -136,19 +136,19 @@ ms.locfileid: "72260379"
   
 ## <a name="permissions"></a>アクセス許可
 
-@No__t-0 の場合は、`VIEW SERVER STATE` のアクセス許可が必要です。   
-@No__t-0 Premium レベルでは、データベースの `VIEW DATABASE STATE` 権限が必要です。 @No__t-0 Standard レベルと Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]では、`VIEW SERVER STATE` のアクセス許可が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、データベースの `VIEW DATABASE STATE` アクセス許可が必要です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard レベルと Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
  
 ## <a name="example"></a>例
-この例では、ブロックされているセッションを識別します。 @No__t-1 で [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行します。
+この例では、ブロックされているセッションを識別します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行します。
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 
   
-## <a name="see-also"></a>関連項目  
-[オペレーティングシステム関連の動的管理ビュー &#40;の SQL Server transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
+## <a name="see-also"></a>参照  
+[オペレーティングシステム関連の動的管理ビュー &#40;の SQL Server transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
 [スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  

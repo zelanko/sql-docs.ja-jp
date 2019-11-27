@@ -44,16 +44,16 @@ sys.sp_cdc_cleanup_change_table
   [ @threshold = ]'delete threshold'  
 ```  
   
-## <a name="arguments"></a>[引数]  
+## <a name="arguments"></a>引数  
  [@capture_instance =]'*capture_instance*'  
- 変更テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance*の型は**sysname**で、既定値はありません。 NULL にすることはできません。  
+ 変更テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
  *capture_instance*は、現在のデータベースに存在するキャプチャインスタンスに名前を指定する必要があります。  
   
- [@low_water_mark =]*low_water_mark*  
+ [ @low_water_mark = ] *low_water_mark*  
  *キャプチャインスタンス*の新しい低レベルのウォーターマークとして使用するログシーケンス番号 (LSN) を指定します。 *low_water_mark*は**binary (10)** ,、既定値はありません。  
   
- 値が null 以外の場合は、start_lsn [_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の現在のエントリの値として表示される必要があります。 cdc.lsn_time_mapping の他のエントリが、新しい低レベルのウォーターマークで識別されたエントリと同じコミット時間を共有する場合、そのグループのエントリに関連付けられた最小 LSN が低レベルのウォーターマークとして選択されます。  
+ 値が null 以外の場合は、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の現在のエントリの start_lsn 値として表示される必要があります。 cdc.lsn_time_mapping の他のエントリが、新しい低レベルのウォーターマークで識別されたエントリと同じコミット時間を共有する場合、そのグループのエントリに関連付けられた最小 LSN が低レベルのウォーターマークとして選択されます。  
   
  値が明示的に NULL に設定されている場合、*キャプチャインスタンス*の現在の*低レベルのウォーターマーク*は、クリーンアップ操作の上限を定義するために使用されます。  
   
@@ -66,7 +66,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="result-sets"></a>結果セット  
  [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>備考  
+## <a name="remarks"></a>Remarks  
  sys.sp_cdc_cleanup_change_table は次の操作を実行します。  
   
 1.  @low_water_mark パラメーターが NULL でない場合は、*キャプチャインスタンス*の start_lsn の値を新しい*低レベルのウォーターマーク*に設定します。  
@@ -86,11 +86,11 @@ sys.sp_cdc_cleanup_change_table
   
      このストアドプロシージャは、1つのキャプチャインスタンスに対してクリーンアップを実行するため、個々のキャプチャインスタンスに対するクリーンアップルールをカスタマイズするカスタムクリーンアップ戦略を作成するために使用できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>「  
- [fn_cdc_get_all_changes_&#60;&#62;capture_instance&#40;transact-sql&#41;   ](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;&#40;transact-sql&#41;   ](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [fn_cdc_get_min_lsn &#40;transact-sql&#41; ](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [fn_cdc_increment_lsn &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   

@@ -36,7 +36,7 @@ HRESULT BCPColumns(
       DBCOUNTITEM nColumns);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドは、内部的に [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) を呼び出して、フィールド データの既定値を設定します。 これらの既定値は、[IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) を使用してテーブル名を指定するときに、プロバイダーが内部的に取得する SQL Server の列情報を基に設定されます。  
   
 > [!NOTE]  

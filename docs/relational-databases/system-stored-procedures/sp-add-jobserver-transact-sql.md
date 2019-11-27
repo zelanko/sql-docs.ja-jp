@@ -40,23 +40,23 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` ジョブの識別番号。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
+ジョブの識別番号を `[ @job_id = ] job_id` します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**,、既定値は NULL です。  
+ジョブの名前 `[ @job_name = ] 'job_name'` ます。 *job_name*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @server_name = ] 'server'` ジョブを対象とするサーバーの名前。 *サーバー*は**nvarchar (30)** ,、既定値は N ' (LOCAL) ' です。 *サーバー*には、ローカルサーバーの場合は **(local)** 、または既存の対象サーバーの名前を指定できます。  
+ジョブを対象とするサーバーの名前を `[ @server_name = ] 'server'` します。 *サーバー*は**nvarchar (30)** ,、既定値は N ' (LOCAL) ' です。 *サーバー*には、ローカルサーバーの場合は **(local)** 、または既存の対象サーバーの名前を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>コメント  
- **1automatic_post**は**sp_add_jobserver**に存在しますが、[引数] の下には表示されません。 @no__t **\@automatic_post は、** 内部で使用するために予約されています。  
+## <a name="remarks"></a>Remarks  
+ **\@automatic_post**は**sp_add_jobserver**に存在しますが、[引数] の下には表示されません。 **\@automatic_post**は、内部使用のために予約されています。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
@@ -69,14 +69,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
+ これらのロールの権限の詳細については、「[SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- **Sysadmin**固定サーバーロールのメンバーだけが、複数のサーバーを含むジョブに対して**sp_add_jobserver**を実行できます。  
+ 複数のサーバーを含むジョブの**sp_add_jobserver**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-assigning-a-job-to-the-local-server"></a>A. ローカル サーバーにジョブを割り当てる  
- 次の例では、ジョブ `NightlyBackups` を割り当ててローカルサーバーで実行します。  
+ 次の例では、ジョブ `NightlyBackups` をローカルサーバーで実行するように割り当てます。  
   
 > [!NOTE]  
 >  この例では、`NightlyBackups` ジョブが既に存在していることを前提としています。  
@@ -90,8 +90,8 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. 異なるサーバーで実行するようジョブを割り当てる  
- 次の例では、マルチサーバージョブ `Weekly Sales Backups` をサーバー `SEATTLE2` に割り当てます。  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>b. 異なるサーバーで実行するようジョブを割り当てる  
+ 次の例では、マルチサーバージョブ `Weekly Sales Backups` をサーバー `SEATTLE2`に割り当てます。  
   
 > [!NOTE]  
 >  この例では、`Weekly Sales Backups` ジョブが既に存在し、`SEATTLE2` が現在のインスタンスに対するターゲット サーバーとして登録されていることを前提としています。  
@@ -107,8 +107,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_apply_job_to_targets &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

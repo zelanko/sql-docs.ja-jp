@@ -104,11 +104,11 @@ ms.locfileid: "73705298"
 > [!WARNING]  
 >  データのフィルター選択はデータ ソース ビューで行うことができますが、マイニング モデルのレベルでデータに対するフィルターを作成することもできます。 フィルターの定義はマイニング モデルと共に格納されるため、モデル フィルターを使用すると、モデルのトレーニングに使用したデータを簡単に特定できます。 また、さまざまなフィルター条件を使用して、複数の関連モデルを作成することもできます。 詳細については、「[マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)」を参照してください。  
   
- 作成したデータ ソース ビューには、分析に直接使用されない追加のデータを含めることができます。 たとえば、テスト、予測、またはドリルスルーに使用するデータをデータ ソース ビューに追加できます。 これらの使用方法の詳細については、「 [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md) 」と「 [ドリルスルー](drillthrough-queries-data-mining.md)" テンプレートを使用して、データ マイニング プロジェクトを作成します。  
+ 作成したデータ ソース ビューには、分析に直接使用されない追加のデータを含めることができます。 たとえば、テスト、予測、またはドリルスルーに使用するデータをデータ ソース ビューに追加できます。 これらの使用方法の詳細については、「[テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)」と「[ドリルスルー](drillthrough-queries-data-mining.md)」を参照してください。  
   
 
   
-###  <a name="bkmk_Structures"></a> Mining Structures  
+###  <a name="bkmk_Structures"></a> マイニング構造  
  データ ソースとデータ ソース ビューを作成したら、プロジェクト内に *マイニング構造* を定義して、ビジネス上の問題に最も関連するデータの列を選択する必要があります。 マイニング構造によって、モデリング、トレーニング、およびテストに実際に使用するデータ ソース ビューのデータの列をプロジェクトに指示します。  
   
  新しいマイニング構造を追加するには、データ マイニング ウィザードを起動します。 ウィザードでは、自動的にマイニング構造が定義されます。手順に従ってデータを選択しますが、必要に応じて初期マイニング モデルを構造に追加することもできます。 マイニング構造内で、データ ソース ビューまたは OLAP キューブのテーブルおよび列を選択し、データに入れ子になったテーブルが含まれている場合は、テーブル間のリレーションシップを定義します。  
@@ -132,7 +132,7 @@ ms.locfileid: "73705298"
   
   
   
-###  <a name="bkmk_Models"></a> Mining Models  
+###  <a name="bkmk_Models"></a> [マイニング モデル]  
  マイニング モデルでは、アルゴリズム、つまりデータに対して使用する分析の方法を定義します。 それぞれのマイニング構造に、1 つ以上のマイニング モデルを追加します。  
   
  必要に応じて、複数のモデルを 1 つのプロジェクトにまとめることや、モデルや分析タスクの種類ごとに別々のプロジェクトを作成することができます。  
@@ -189,22 +189,22 @@ ms.locfileid: "73705298"
   
   
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  次のトピックでは、データ マイニング ウィザードを使用して、データ マイニング プロジェクトおよび関連するオブジェクトを作成する方法について説明しています。  
   
 |処理手順|トピック|  
 |-----------|------------|  
-|マイニング構造列を操作する方法について説明します。|[リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)|  
-|新しいマイニング モデルを追加し、構造とモデルを処理する方法について詳しく説明します。|[マイニング モデルを構造に追加する &#40;Analysis Services - データ マイニング&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|マイニング構造列を操作する方法について説明します。|[Create a Relational Mining Structure](create-a-relational-mining-structure.md)|  
+|新しいマイニング モデルを追加し、構造とモデルを処理する方法について詳しく説明します。|[マイニング モデルを構造に追加する (Analysis Services - データ マイニング)](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |マイニング モデルを作成するアルゴリズムのカスタマイズに役立つリソースへのリンクを提供します。|[マイニング モデルとマイニング構造のカスタマイズ](customize-mining-models-and-structure.md)|  
 |各マイニング モデル ビューアーに関する情報へのリンクを提供します。|[データ マイニング モデル ビューアー](data-mining-model-viewers.md)|  
 |リフト チャート、利益チャート、または分類マトリックスを作成する方法、またはマイニング構造をテストする方法について説明します。|[テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)|  
 |処理オプションと権限について説明します。|[データ マイニング オブジェクトの処理](processing-data-mining-objects.md)|  
-|Analysis Services について詳しく説明します。|[多次元モデル データベース (SSAS)](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services について詳しく説明します。|[多次元モデル データベース &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](data-mining-designer.md)   
- [SQL Server データ ツール &#40;SSDT&#41; を使用した多次元モデルの作成](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [ワークスペース データベース (SSAS テーブル)](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

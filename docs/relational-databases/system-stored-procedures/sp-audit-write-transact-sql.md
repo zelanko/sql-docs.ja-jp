@@ -42,7 +42,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>引数  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- ユーザーによって定義され、監査ログの**user_defined_event_id**列に記録されるパラメーター。 *@no__t 1user_defined_event_id*は型**smallint**です。  
+ ユーザーによって定義され、監査ログの**user_defined_event_id**列に記録されるパラメーター。 *\@user_defined_event_id*は型**smallint**です。  
   
  `[ @succeeded = ] succeeded`  
  イベントが成功したかどうかを示すためにユーザーによって渡されるパラメーター。 これは、監査ログの succeeded 列に表示されます。 `@succeeded` は**ビット**です。  
@@ -55,7 +55,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  失敗の原因となるのは、正しくない入力パラメーターや、監査ログへの書き込みのエラーです。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **USER_DEFINED_AUDIT_GROUP**がサーバー監査の仕様またはデータベース監査の仕様のいずれかに追加されると、 **sp_audit_write**によってトリガーされたイベントが監査ログに含まれます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -72,7 +72,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>B.  ユーザー定義の監査イベントを情報テキストなしで作成する  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>b.  ユーザー定義の監査イベントを情報テキストなしで作成する  
  次の例では、ID が 27、成功時の値が 0 で、オプションの情報テキストまたはオプションのパラメーター名を含まない監査イベントを作成します。  
   
 ```  
@@ -80,7 +80,7 @@ EXEC sp_audit_write 27, 0;
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   

@@ -54,7 +54,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 `[ @value = ] 'value'` は、指定されたレプリケーションデータベースオプションを有効または無効にするかどうかを指定します。 *値*は**sysname**で、 **true**または**false**を指定できます。 この値が**false**で、 *optname*が**merge publish**の場合、マージパブリッシュされたデータベースに対するサブスクリプションも削除されます。  
   
-`[ @ignore_distributor = ] ignore_distributor` は、このストアドプロシージャがディストリビューターに接続せずに実行されるかどうかを示します。 *ignore_distributor*のデータ型は**bit**で、既定値は**0**です。この場合、ディストリビューターは、パブリッシングデータベースの新しい状態に接続して更新する必要があります。 値**1**は、ディストリビューターにアクセスできない場合にのみ指定し、パブリッシングを無効にするために**sp_replicationdboption**を使用する必要があります。  
+`[ @ignore_distributor = ] ignore_distributor` は、ディストリビューターに接続せずにこのストアドプロシージャを実行するかどうかを示します。 *ignore_distributor*のデータ型は**bit**で、既定値は**0**です。この場合、ディストリビューターは、パブリッシングデータベースの新しい状態に接続して更新する必要があります。 値**1**は、ディストリビューターにアクセスできない場合にのみ指定し、パブリッシングを無効にするために**sp_replicationdboption**を使用する必要があります。  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

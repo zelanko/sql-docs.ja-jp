@@ -20,9 +20,9 @@ ms.locfileid: "72797755"
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーでのインスタンスの指定
   SQL Server PowerShell プロバイダーに指定するパスでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスと、それが実行されているコンピューターを示す必要があります。 コンピューターおよびインスタンスを指定する構文は、SQL Server 識別子と Windows PowerShell パスの両方の規則に準拠している必要があります。  
   
-1.  **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **インスタンスの指定方法:**  [使用例](#Examples)  
+2.  **To specify an instance:**  [Examples](#Examples)  
   
 ## <a name="before-you-begin"></a>作業を開始する準備  
  SQL Server プロバイダーのパスで SQLSERVER:\SQL に続く最初のノードは、たとえば次のような、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスが実行されているコンピューターの名前です。  
@@ -75,7 +75,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

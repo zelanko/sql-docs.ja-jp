@@ -108,7 +108,7 @@ HRESULT GetStatus(
  E_FAIL  
  プロバイダー固有のエラーが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus::GetStatus** メソッドの動作は、**IDBAsynchStatus::GetStatus** メソッドとまったく同じです。ただし、データ ソース オブジェクトの初期化が中止された場合は、DB_E_CANCELED ではなく E_UNEXPECTED が返されます ([ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) の場合は DB_E_CANCELED が返されます)。 これは、初期化の中止後、追加の初期化操作が試行される場合に備えて、データ ソース オブジェクトの状態が通常のゾンビ状態のままにならないためです。  
   
  行セットを初期化またはデータ設定する非同期操作では、このメソッドをサポートする必要があります。  

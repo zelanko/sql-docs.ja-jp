@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882271"
 ---
-# <a name="delete-an-article"></a>アーティクルの削除
+# <a name="delete-an-article"></a>Delete an Article
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] またはレプリケーション管理オブジェクト (RMO) を使用して、アーティクルを削除する方法について説明します。 アーティクルを削除できる条件と、アーティクルを削除するために新しいスナップショットやサブスクリプションの再初期化が必要かどうかについては、「[Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)」(既存のパブリケーションでのアーティクルの追加と削除) をご覧ください。  
   
   

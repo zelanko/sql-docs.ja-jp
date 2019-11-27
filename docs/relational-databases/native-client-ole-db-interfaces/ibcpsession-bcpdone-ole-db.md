@@ -35,7 +35,7 @@ ms.locfileid: "73789614"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [BCPDone](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) メソッドを呼び出すと、それ以後は **IBCPSession** インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

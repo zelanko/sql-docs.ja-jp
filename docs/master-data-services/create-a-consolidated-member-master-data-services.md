@@ -27,7 +27,7 @@ ms.locfileid: "73729602"
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で明示的階層の親ノードが必要な場合、統合メンバーを作成します。 データを一括で追加する場合は、ステージング テーブルを使用します。 詳細については、「[テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -54,11 +54,11 @@ ms.locfileid: "73729602"
   
 9. 省略可。 **[注釈]** ボックスに、メンバーを追加した理由についてのコメントを入力します。 そのメンバーにアクセスできるすべてのユーザーが、その注釈を表示できます。  
   
-10. **[OK]** をクリックします。  
+10. クリックして **OK**です。  
   
 ## <a name="see-also"></a>参照  
  [明示的階層を作成する (マスター データ サービス)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [リーフ メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-leaf-member-master-data-services.md)   
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   

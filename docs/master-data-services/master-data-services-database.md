@@ -24,7 +24,7 @@ ms.locfileid: "73729040"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  データベースには、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システムに関するすべての情報が含まれています。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 配置の中心となる要素です。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの機能は次のとおりです。  
+  データベースには、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システムに関するすべての情報が含まれています。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 配置の中心となる要素です。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの機能は次のとおりです。  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システムで必要となる設定、データベース オブジェクト、およびデータを格納します。  
   

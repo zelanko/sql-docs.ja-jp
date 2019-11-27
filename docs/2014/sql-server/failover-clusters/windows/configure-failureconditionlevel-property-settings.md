@@ -20,7 +20,7 @@ ms.locfileid: "72797497"
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel プロパティ設定の構成
   FailureConditionLevel プロパティを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) がフェールオーバーまたは再起動するための状態を設定します。 このプロパティへの変更はすぐに適用され、Windows Server フェールオーバー クラスター サービス (WSFC) または FCI リソースの再起動を必要としません。  
   
--   **作業を開始する準備:**  [FailureConditionLevel プロパティの設定](#Restrictions)、 [セキュリティ](#Security)  
+-   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
 -   **FailureConditionLevel プロパティ設定の構成に使用する機能:** [PowerShell](#PowerShellProcedure)、[フェールオーバー クラスター マネージャー](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
@@ -29,7 +29,7 @@ ms.locfileid: "72797497"
 ###  <a name="Restrictions"></a> FailureConditionLevel プロパティの設定  
  エラー状態にはレベルが設定されています。 レベル 1 ～ 5 の各レベルには、前のレベルのすべての状態に加えて独自の状態が含まれています。 これは、それぞれのレベルで、フェールオーバーまたは再起動の可能性が増加することを意味します。  詳細については、この「 [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md) 」の「フェールオーバーの特定」セクションを参照してください。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  ALTER SETTINGS 権限および VIEW SERVER STATE 権限が必要です。  
@@ -89,6 +89,6 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel = 0;  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)   
- [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  

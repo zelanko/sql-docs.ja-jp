@@ -44,7 +44,7 @@ ms.locfileid: "73761346"
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
  次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを介して DBTYPE_UDT として公開されます。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
   
-|データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外から**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外から**|  
+|データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外へ**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外へ**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|サポートされて<sup>6</sup>|エラー<sup>1</sup>|サポートされて<sup>6</sup>|エラー<sup>5</sup>|  
 |DBTYPE_BYTES|サポートされて<sup>6</sup>|N/A<sup>2</sup>|サポートされて<sup>6</sup>|N/A<sup>2</sup>|  
@@ -84,7 +84,7 @@ ms.locfileid: "73761346"
 #### <a name="the-procedure_parameters-schema-rowset"></a>PROCEDURE_PARAMETERS スキーマ行セット  
  PROCEDURE_PARAMETERS スキーマ行セットには、次の列が追加されました。  
   
-|列名|型|説明|  
+|列名|[型]|[説明]|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
@@ -94,7 +94,7 @@ ms.locfileid: "73761346"
 #### <a name="the-sql_assemblies-schema-rowset"></a>SQL_ASSEMBLIES スキーマ行セット  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、登録されている Udt を記述する新しいプロバイダー固有のスキーマ行セットを公開します。 ASSEMBLY_SERVER を DBTYPE_WSTR 型として指定することはできますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLIES スキーマ行セットの定義を示します。  
   
-|列名|型|説明|  
+|列名|[型]|[説明]|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|このデータ型を含むアセンブリのカタログ名。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはスキーマではなくデータベースによって決まりますが、アセンブリには依然として所有者が存在します。|  
@@ -106,7 +106,7 @@ ms.locfileid: "73761346"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES スキーマ行セット  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、指定されたサーバーのアセンブリの依存関係を記述する、プロバイダー固有の新しいスキーマ行セットを公開します。 ASSEMBLY_SERVER は呼び出し元により DBTYPE_WSTR 型として指定することができますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLY_DEPENDENCIES スキーマ行セットの定義を示します。  
   
-|列名|型|説明|  
+|列名|[型]|[説明]|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|このデータ型を含むアセンブリのカタログ名。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはスキーマではなくデータベースによって決まりますが、アセンブリには依然として所有者が存在します。|  
@@ -116,7 +116,7 @@ ms.locfileid: "73761346"
 #### <a name="the-sql_user_types-schema-rowset"></a>SQL_USER_TYPES スキーマ行セット  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、指定されたサーバーに対して登録された Udt が追加されるタイミングを記述する、SQL_USER_TYPES の新しいスキーマ行セットを公開します。 UDT_SERVER は、呼び出し元により DBTYPE_WSTR 型として指定される必要がありますが、行セットには格納されません。 次の表に、SQL_USER_TYPES スキーマ行セットの定義を示します。  
   
-|列名|型|説明|  
+|列名|[型]|[説明]|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
@@ -126,7 +126,7 @@ ms.locfileid: "73761346"
 #### <a name="the-columns-schema-rowset"></a>COLUMNS スキーマ行セット  
  COLUMNS スキーマ行セットには、次の列が追加されました。  
   
-|列名|型|説明|  
+|列名|[型]|[説明]|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
@@ -139,7 +139,7 @@ ms.locfileid: "73761346"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
  OLE DB を通じて Udt をサポートするために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティセットを実装します。  
   
-|[名前]|型|説明|  
+|[オブジェクト名]|[型]|[説明]|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|3 部構成の名前の識別子。<br /><br /> UDT パラメーターの場合、このプロパティは、ユーザー定義型が定義されているカタログ名を指定する文字列です。|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|3 部構成の名前の識別子。<br /><br /> UDT パラメーターの場合、このプロパティは、ユーザー定義型が定義されているスキーマ名を指定する文字列です。|  
@@ -150,7 +150,7 @@ ms.locfileid: "73761346"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
  **Itabledefinition**インターフェイスでのテーブルの作成をサポートするために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、次の3つの新しい列が DBPROPSET_SQLSERVERCOLUMN プロパティセットに追加されます。  
   
-|[名前]|説明|型|説明|  
+|[オブジェクト名]|[説明]|[型]|[説明]|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
@@ -181,7 +181,7 @@ ms.locfileid: "73761346"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
  **Isscommandwithparameters**インターフェイスに加えて、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、次のような**IColumnsRowset:: getcolumnrowset**メソッドの呼び出しから返される行セットに新しい値を追加します。  
   
-|列名|型|説明|  
+|列名|[型]|[説明]|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT カタログ名の識別子。|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT スキーマ名の識別子。|  

@@ -18,19 +18,19 @@ ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952236"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>互換性のないデータベース エンジン サーバーの照合順序 (アップグレード アドバイザー)
-  アップグレードアドバイザーによって @no__t 0 @no__t が検出されました。-1 は、互換性のないサーバー照合順序を使用するように構成されている @no__t のインスタンスを使用しています。  
+  互換性のないサーバー照合順序を使用するように構成されている [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスを使用している [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がアップグレードアドバイザーによって検出されました。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|SharePoint モード[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** ます。|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>説明  
- アップグレードアドバイザーによって @no__t 0 @no__t が検出されました。-1 は、互換性のないサーバー照合順序を使用するように構成されている @no__t のインスタンスを使用しています。  
+## <a name="description"></a>[説明]  
+ 互換性のないサーバー照合順序を使用するように構成されている [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスを使用している [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がアップグレードアドバイザーによって検出されました。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードでは、SharePoint 共有サービスアーキテクチャを利用します。 SharePoint では、大文字と小文字の区別、サーバー照合順序、またはバイナリ サーバー照合順序用に構成された [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はサポートされません。 互換性のない照合順序には、既定で大文字と小文字を区別するかバイナリである照合順序と、既定では互換性があるものの、次の照合順序指定子のいずれかで構成されている基本照合順序が含まれます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sharepoint モードでは、SharePoint 共有サービスアーキテクチャを利用します。 SharePoint では、大文字と小文字の区別、サーバー照合順序、またはバイナリ サーバー照合順序用に構成された [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はサポートされません。 互換性のない照合順序には、既定で大文字と小文字を区別するかバイナリである照合順序と、既定では互換性があるものの、次の照合順序指定子のいずれかで構成されている基本照合順序が含まれます。  
   
 -   **Binary**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "71952236"
  現在の [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サーバー照合順序は互換性がないため、アップグレードがブロックされます。  
   
 ## <a name="corrective-action"></a>修正措置  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サーバーの照合順序プロパティは変更できません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアップグレードを完了できなくなります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールを、互換性のあるサーバー照合順序を使用している新しいサーバーに移行する必要があります。 詳細については、以下を参照してください。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サーバーの照合順序プロパティは変更できません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアップグレードを完了できなくなります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールを、互換性のあるサーバー照合順序を使用している新しいサーバーに移行する必要があります。 詳細については、以下をご覧ください。  
   
 -   [Reporting Services のアップグレードと移行](https://go.microsoft.com/fwlink/?LinkId=233227)  
   

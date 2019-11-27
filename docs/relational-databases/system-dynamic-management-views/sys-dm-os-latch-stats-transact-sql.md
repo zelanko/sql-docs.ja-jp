@@ -1,5 +1,5 @@
 ---
-title: sys _os_latch_stats (Transact-sql) |Microsoft Docs
+title: dm_os_latch_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -25,15 +25,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/12/2019
 ms.locfileid: "72289403"
 ---
-# <a name="sysdm_os_latch_stats-transact-sql"></a>sys _os_latch_stats (Transact-sql)
+# <a name="sysdm_os_latch_stats-transact-sql"></a>dm_os_latch_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 クラス別に分類されたすべてのラッチ待機に関する情報を返します。 
   
 > [!NOTE]  
-> @No__t-0 または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] から呼び出すには、 **_pdw_nodes_os_latch_stats**という名前を使用します。  
+> [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]から呼び出すには、「 **sys. dm_pdw_nodes_os_latch_stats**」という名前を使用します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|ラッチクラスの名前。|  
 |waiting_requests_count|**bigint**|このクラスのラッチでの待機の数。 このカウンターは、ラッチ待機の開始時にインクリメントされます。|  
@@ -42,11 +42,11 @@ ms.locfileid: "72289403"
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
-@No__t-0 の場合は、`VIEW SERVER STATE` のアクセス許可が必要です。   
-@No__t-0 Premium レベルでは、データベースの `VIEW DATABASE STATE` 権限が必要です。 @No__t-0 Standard レベルと Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]では、`VIEW SERVER STATE` のアクセス許可が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、データベースの `VIEW DATABASE STATE` アクセス許可が必要です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard レベルと Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>コメント  
- sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 場合によっては、ラッチの競合を解決または減らすことができます。 ただし、@no__t 0 カスタマーサポートサービスに問い合わせる必要がある場合もあります。  
+## <a name="remarks"></a>Remarks  
+ sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 場合によっては、ラッチの競合を解決または減らすことができます。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマーサポートサービスに問い合わせる必要がある場合もあります。  
   
 次のように `DBCC SQLPERF` を使用すると、sys.dm_os_latch_stats の内容をリセットできます。  
   
@@ -61,18 +61,18 @@ GO
 >  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータは、統計が最後にリセットされた後、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が開始されてから累積されます。  
   
 ## <a name="latches"></a>両側  
- ラッチは、さまざまな @no__t 0 コンポーネントによって使用される、ロックに似た内部軽量同期オブジェクトです。 ラッチは主に、バッファーやファイルアクセスなどの操作中にデータベースページを同期するために使用されます。 各ラッチは、1 つのアロケーション ユニットに関連付けられています。 
+ ラッチは、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントによって使用される、ロックに似た内部軽量同期オブジェクトです。 ラッチは主に、バッファーやファイルアクセスなどの操作中にデータベースページを同期するために使用されます。 各ラッチは、1 つのアロケーション ユニットに関連付けられています。 
   
  ラッチが別のスレッドによって、競合するモードで保持されており、ラッチ要求がすぐに許可されない場合は、ラッチ待機が発生します。 ロックとは異なり、ラッチは、書き込み操作であっても、操作の直後に解放されます。  
   
  ラッチは、コンポーネントと使用法に基づいてクラスにグループ化されます。 特定クラスのラッチは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に、任意の時点でいくつでも存在できます。  
   
 > [!NOTE]  
-> `sys.dm_os_latch_stats` は、すぐに許可された、または待機せずに失敗したラッチ要求を追跡しません。  
+> `sys.dm_os_latch_stats` は、すぐに許可されたか、待機せずに失敗したラッチ要求を追跡しません。  
   
  次の表に、さまざまなラッチクラスの簡単な説明を示します。  
   
-|ラッチクラス|説明|  
+|ラッチクラス|[説明]|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で使用され、割り当てリング バッファーの作成の同期を初期化します。|  
 |ALLOC_CREATE_FREESPACE_CACHE|ヒープの内部空き領域キャッシュの同期を初期化するために使用されます。|  
@@ -100,7 +100,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|差分バックアップ操作を DBCC と同期するために使用します。|  
 |BACKUP_OPERATION|データベース、ログ、ファイルバックアップなど、バックアップ操作内での内部データ構造の同期に使用されます。|  
 |BACKUP_FILE_HANDLE|復元操作中にファイルを開く操作を同期するために使用します。|  
-|格納|短期的なアクセスをデータベースページに同期するために使用されます。 データベースページの読み取りまたは変更を行う前に、バッファーラッチが必要です。 バッファーラッチの競合は、ホットページや低速の i/o など、いくつかの問題を示す場合があります。<br /><br /> このラッチ クラスは、ページ ラッチを使用するすべての状況に対応しています。 _os_wait_stats は、ページ上の i/o 操作および読み取りおよび書き込み操作によって発生するページラッチ待機の差を大きくします。|  
+|格納|短期的なアクセスをデータベースページに同期するために使用されます。 データベースページの読み取りまたは変更を行う前に、バッファーラッチが必要です。 バッファーラッチの競合は、ホットページや低速の i/o など、いくつかの問題を示す場合があります。<br /><br /> このラッチ クラスは、ページ ラッチを使用するすべての状況に対応しています。 dm_os_wait_stats は、ページ上の i/o 操作および読み取りおよび書き込み操作によって発生するページラッチ待機の差を大きくします。|  
 |BUFFER_POOL_GROW|バッファー プールの拡張操作中、内部バッファー マネージャーの同期に使用します。|  
 |DATABASE_CHECKPOINT|データベース内のチェックポイントをシリアル化するために使用されます。|  
 |CLR_PROCEDURE_HASHTABLE|内部使用のみです。|  
@@ -164,7 +164,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|内部使用のみです。|  
 |SERVICE_BROKER_HOST_NAME|内部使用のみです。|  
 |SERVICE_BROKER_READ_CACHE|内部使用のみです。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 待機キューのインスタンスレベルのマップを同期するために使用します。 データベース ID、データベースのバージョン、およびキュー ID の組ごとに1つのキューが存在します。 このクラスのラッチの競合は、次のような多くの接続がある場合に発生する可能性があります。WAITFOR (RECEIVE) wait 状態の場合は、WAITFOR (RECEIVE) の呼び出しWAITFOR timeout を超えています。メッセージを受信しています。WAITFOR (RECEIVE) を含むトランザクションのコミットまたはロールバックWAITFOR (RECEIVE) の待機状態にあるスレッドの数を減らすことで、競合を軽減できます。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 待機キューのインスタンスレベルのマップを同期するために使用します。 データベース ID、データベースのバージョン、およびキュー ID の組ごとに1つのキューが存在します。 このクラスのラッチの競合は、WAITFOR (RECEIVE) wait 状態での多くの接続がある場合に発生する可能性があります。WAITFOR (RECEIVE) の呼び出しWAITFOR timeout を超えています。メッセージを受信しています。WAITFOR (RECEIVE) を含むトランザクションのコミットまたはロールバックWAITFOR (RECEIVE) の待機状態にあるスレッドの数を減らすことで、競合を軽減できます。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|内部使用のみです。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|内部使用のみです。|  
 |SERVICE_BROKER_TRANSPORT|内部使用のみです。|  
@@ -193,7 +193,7 @@ GO
 |VERSIONING_STATE_CHANGE|内部使用のみです。|  
 |KTM_VIRTUAL_CLOCK|内部使用のみです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[オペレーティングシステム関連の動的管理ビュー &#40;の SQL Server transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[オペレーティングシステム関連の動的管理ビュー &#40;の SQL Server transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server の Latches オブジェクト](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

@@ -24,9 +24,9 @@ ms.locfileid: "73728334"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性とそれに関連付けられたすべての属性値を完全に削除するには、属性を削除します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、属性とそれに関連付けられたすべての属性値を完全に削除するには、属性を削除します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  

@@ -23,9 +23,9 @@ ms.locfileid: "72797466"
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
   このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、ディザスター リカバリーとマルチサブネットのシナリオにおいて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
   
--   **開始前の準備:**  [推奨事項](#Recommendations)、 [セキュリティ](#Security)  
+-   **開始前の準備:**  [推奨事項](#Recommendations)、[セキュリティ](#Security)  
   
--   **クォーラムを使用せずにクラスターを強制的に起動する方法:**  [フェールオーバー クラスター マネージャーの使用](#FailoverClusterManagerProcedure)、 [PowerShell の使用](#PowerShellProcedure)、 [net.exe の使用](#CommandPromptProcedure)  
+-   **使用して、クォーラムなしで開始するのには、クラスターを強制的に:**  [フェールオーバー クラスター マネージャーを使用して](#FailoverClusterManagerProcedure)、[Powershell を使用した](#PowerShellProcedure), [を使用して Net.exe](#CommandPromptProcedure)  
   
 -   **補足情報:**  [補足情報: クォーラムを使用せずにクラスターを強制的に起動した後](#FollowUp)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "72797466"
 ###  <a name="Recommendations"></a> 推奨事項  
  明示的に指定されている場合を除き、このトピックの手順は、WSFC クラスター内のノードから実行する必要があります。  ただし、クォーラムを使用せずに強制的に起動する対象となるノードからこれらの手順を実行することにより、適切な結果が得られ、ネットワークの問題の発生を回避できる場合もあります。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
   
 ##  <a name="FailoverClusterManagerProcedure"></a> フェールオーバー クラスター マネージャーの使用  
@@ -125,7 +125,7 @@ net.exe start clussvc /forcequorum
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [クラスター クォーラムの NodeWeight の設定の構成](configure-cluster-quorum-nodeweight-settings.md)   
  [タスク フォーカスによって一覧表示される Windows PowerShell でのフェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

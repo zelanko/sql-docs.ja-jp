@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68109482"
 ---
-# <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
+# <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   関連付けられたセキュリティ保護可能な暗号化プロパティごとに 1 行を返します。  

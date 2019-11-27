@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68070473"
 ---
-# <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
+# <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   非対称キーごとに行を返します。  

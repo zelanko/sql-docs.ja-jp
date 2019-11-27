@@ -36,7 +36,7 @@ HRESULT BCPExec(
       DBROWCOUNT *pRowsCopied);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BCPExec** メソッドでは、*IBCPSession::BCPInit* メソッドで使用されている [eDirection](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) パラメーターの値に従って、データをユーザー ファイルからデータベース テーブルに、またはデータベース テーブルからユーザー ファイルにコピーします。  
   
  **BCPExec** を呼び出す前に、有効なユーザー ファイル名を指定して **BCPInit** メソッドを呼び出します。 この操作を行わないと、エラーが発生します。 唯一の例外は、一括コピーの出力操作にクエリを使用する場合です。 この場合は、**BCPInit** メソッドでテーブル名に NULL を指定してから、BCP_OPTION_HINTS オプションを使用してクエリを指定します。  

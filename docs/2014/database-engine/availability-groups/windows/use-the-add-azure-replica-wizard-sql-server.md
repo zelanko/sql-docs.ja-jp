@@ -26,30 +26,30 @@ ms.locfileid: "70175994"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **レプリカを追加するには (次を使用):** [Azure のレプリカ追加ウィザード (SQL Server Management Studio)](#SSMSProcedure)  
+-   **レプリカを追加する方法:**  [Azure のレプリカ追加ウィザード (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
- 可用性グループに可用性レプリカを追加したことがない場合は、「 [AlwaysOn 可用性グループ&#40;SQL の前提条件、制限事項、および推奨事項」の「サーバーインスタンス」と「可用性グループとレプリカ」のセクションを参照してください。サーバー&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 可用性グループに可用性レプリカを追加したことがない場合は、「サーバーインスタンス」と「可用性グループとレプリカ」のセクション「 [AlwaysOn 可用性グループ&#40;SQL Server&#41;の前提条件、制限事項、推奨事項](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="Prerequisites"></a> の前提条件  
   
 -   現在のプライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
--   オンプレミスのサブネットに Azure を使用したサイト間 VPN があるハイブリッド IT 環境が必要です。 詳細については、「 [管理ポータルでのサイト間 VPN の構成](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create)」を参照してください。  
+-   オンプレミスのサブネットに Azure とのサイト間 VPN があるハイブリッド IT 環境が必要です。 詳細については、「 [管理ポータルでのサイト間 VPN の構成](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create)」を参照してください。  
   
 -   可用性グループに、内部設置型可用性レプリカが含まれている必要があります。  
   
--   可用性グループリスナーに対するクライアントは、可用性グループが Azure レプリカにフェールオーバーしたときにリスナーとの接続を維持する必要がある場合に、インターネットに接続されている必要があります。  
+-   可用性グループ リスナーに対するクライアントで、可用性グループが Azure レプリカにフェールオーバーした場合にリスナーとの接続を維持するには、インターネット接続が必要です。  
   
 -   **初期データの完全同期を使用するための前提条件** ウィザードでのバックアップの作成およびバックアップへのアクセスには、ネットワーク共有を指定する必要があります。 プライマリ レプリカでは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の起動に使用するアカウントにネットワーク共有での読み取り/書き込みファイルシステム権限が必要です。 セカンダリ レプリカでは、アカウントは、ネットワーク共有に対する読み取り権限を持つ必要があります。  
   
-     ウィザードを使用して初期データの完全同期を実行できない場合は、セカンダリ データベースを手動で準備する必要があります。 これは、ウィザードの実行前でも実行後でもかまいません。 詳細については、「 [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)で Always On 可用性グループを作成および構成する方法について説明します。  
+     ウィザードを使用して初期データの完全同期を実行できない場合は、セカンダリ データベースを手動で準備する必要があります。 これは、ウィザードの実行前でも実行後でもかまいません。 詳細については、「[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  「 [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)」を参照してください。  
   
 ##  <a name="SSMSProcedure"></a> Azure のレプリカ追加ウィザードの使用 (SQL Server Management Studio)  
@@ -65,17 +65,17 @@ ms.locfileid: "70175994"
   
 2.  サインインページで、Azure サブスクリプションにサインインします。 サインインすると、ローカル コンピューターに管理証明書がインストールされます。 ウィザードを再度使用する場合は、この管理証明書が自動的に読み込まれます。 複数の管理証明書をダウンロードした場合は、 **[...]** ボタンをクリックして、使用する管理証明書を選択します。  
   
-3.  次に、 **[接続]** をクリックしてサブスクリプションに接続します。 接続すると、 **Virtual Network**や**Virtual Network サブネット**などの Azure パラメーターがドロップダウンリストに表示されます。  
+3.  次に、 **[接続]** をクリックしてサブスクリプションに接続します。 接続すると、 **[仮想ネットワーク]** や **[仮想ネットワーク サブネット]** などの Azure のパラメーターがドロップダウン リストに設定されます。  
   
-4.  新しいセカンダリレプリカをホストする Azure VM の設定を指定します。  
+4.  新しいセカンダリ レプリカをホストする Azure VM の設定を指定します。  
   
-     イメージ  
+     image  
      Azure VM に使用する SQL Server イメージの名前  
   
      [VM サイズ]  
      Azure VM のサイズ  
   
-     VM 名  
+     [VM 名]  
      Azure VM の DNS 名  
   
      [VM ユーザー名]  
@@ -88,16 +88,16 @@ ms.locfileid: "70175994"
      Azure VM を配置する仮想ネットワーク  
   
      [仮想ネットワーク サブネット]  
-     Azure VM を配置する仮想ネットワークサブネット  
+     Azure VM を配置する仮想ネットワーク サブネット  
   
      [ドメイン]  
-     Azure VM に参加するための Active Directory (AD) ドメイン  
+     Azure VM を参加させる Active Directory (AD) ドメイン  
   
      [ドメイン ユーザー名]  
      Azure VM をドメインに参加させるために使用される AD ユーザー名  
   
      Password  
-     Azure VM をドメインに参加させるために使用するパスワード  
+     Azure VM をドメインに参加させるために使用されるパスワード  
   
 5.  **[OK]** をクリックして設定をコミットし、Azure のレプリカ追加ウィザードを終了します。  
   
@@ -110,8 +110,8 @@ ms.locfileid: "70175994"
 -   [可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループ&#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループ&#40;SQL Server の前提条件、制限事項、および推奨事項&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ&#40;SQL Server&#41;の前提条件、制限事項、推奨事項](prereqs-restrictions-recommendations-always-on-availability.md)   
  [可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

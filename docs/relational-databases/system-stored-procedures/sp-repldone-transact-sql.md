@@ -25,10 +25,10 @@ ms.locfileid: "72798388"
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  サーバーで最後にディストリビュートされたトランザクションを識別するレコードを更新します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
+  サーバーで最後にディストリビュートされたトランザクションを識別するレコードを更新します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
 > [!CAUTION]  
->  **Sp_repldone**を手動で実行する場合は、配信されたトランザクションの順序と一貫性を無効にすることができます。 **sp_repldone**は、レプリケーションのサポート担当者によって指示されたレプリケーションのトラブルシューティングにのみ使用してください。  
+>  **Sp_repldone**手動で実行する場合は、配信されたトランザクションの順序と一貫性を無効にすることができます。 **sp_repldone**は、経験豊富なレプリケーションサポート担当者が指示するように、レプリケーションのトラブルシューティングにのみ使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ sp_repldone [ @xactid= ] xactid
     [ , [ @reset= ] reset ]  
 ```  
   
-## <a name="arguments"></a>[引数]  
+## <a name="arguments"></a>引数  
 `[ @xactid = ] xactid` は、サーバーの最後に分散されたトランザクションの最初のレコードのログシーケンス番号 (LSN) です。 *xactid*は**binary (10)** ,、既定値はありません。  
   
 `[ @xact_seqno = ] xact_seqno` は、サーバーの最後に分散されたトランザクションの最後のレコードの LSN です。 *xact_seqno*は**binary (10)** ,、既定値はありません。  
@@ -56,20 +56,20 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>備考  
+## <a name="remarks"></a>Remarks  
  **sp_repldone**は、トランザクションレプリケーションで使用します。  
   
  **sp_repldone**は、配布されたトランザクションを追跡するために、ログリーダープロセスによって使用されます。  
   
  **Sp_repldone**を使用すると、トランザクションがレプリケートされた (ディストリビューターに送信された) ことをサーバーに手動で通知できます。 また、レプリケーションを待機しているトランザクションを次のように変更することもできます。 レプリケートされたトランザクションの一覧で、前方または後方に移動できます。 このトランザクションおよびそれ以前のトランザクションはすべてディストリビュートされたことを示すマークが付きます。  
   
- 必要なパラメーター *xactid*と*xact_seqno*は、 **sp_repltrans**または**sp_replcmds**を使用して取得できます。  
+ 必要なパラメーター *xactid*と*xact_seqno*は**sp_repltrans**または**sp_replcmds**を使用して取得できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールまたは**db_owner**固定データベースロールのメンバーは、 **sp_repldone**を実行できます。  
   
 ## <a name="examples"></a>使用例  
- *Xactid*が null の場合、 *xact_seqno*が null で、 *reset*が**1**の場合、ログ内のすべてのレプリケートされたトランザクションが配布済みとしてマークされます。 これは、トランザクションログに有効ではなく、ログを切り捨てる必要があるトランザクションがレプリケートされている場合に便利です。次に例を示します。  
+ *Xactid*が null の場合、 *xact_seqno*が null で、 *reset*が**1**の場合、ログ内のすべてのレプリケートされたトランザクションが分散としてマークされます。 これは、トランザクションログに有効ではなく、ログを切り捨てる必要があるトランザクションがレプリケートされている場合に便利です。次に例を示します。  
   
 ```sql
 EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @reset = 1  
@@ -78,8 +78,8 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 > [!CAUTION]  
 >  このプロシージャは、レプリケーションを保留しているトランザクションが存在するときにトランザクションログが切り捨てられるように、緊急の場合に使用できます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replflush &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_repltrans](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

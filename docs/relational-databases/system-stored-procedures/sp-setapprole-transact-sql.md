@@ -55,14 +55,14 @@ sp_setapprole [ @rolename = ] 'role',
 > ODBC **encrypt**関数では、暗号化は提供されません。 ネットワーク経由で転送されるパスワードを保護するために、この機能に依存しないでください。 この情報がネットワーク経由で送信される場合は、SSL または IPSec を使用します。
   
  **@encrypt = ' none '**  
- 暗号化を使用しないことを示します。 パスワードはプレーンテキストとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に渡されます。 既定値です。  
+ 暗号化を使用しないことを示します。 パスワードはプレーンテキストとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に渡されます。 これは既定値です。  
   
- **@encrypt = ' odbc '**  
- @No__t-1 にパスワードを送信する前に odbc の**encrypt**関数を使用して、odbc がパスワードを難読化することを指定します。 これは、ODBC クライアントまたは OLE DB Provider for SQL Server のいずれかを使用している場合にのみ指定できます。  
+ **@encrypt= ' odbc '**  
+ Odbc で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]にパスワードを送信する前に ODBC **encrypt**関数を使用してパスワードを難読化することを指定します。 これは、ODBC クライアントまたは OLE DB Provider for SQL Server のいずれかを使用している場合にのみ指定できます。  
   
 `[ @fCreateCookie = ] true | false` クッキーを作成するかどうかを指定します。 **true**は、暗黙的に1に変換されます。 **false**は暗黙的に0に変換されます。  
   
-`[ @cookie = ] @cookie OUTPUT` は、クッキーを格納する出力パラメーターを指定します。 クッキーが生成されるのは、 **@no__t 1fCreateCookie**の値が**true**の場合だけです。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` クッキーを格納する出力パラメーターを指定します。 クッキーが生成されるのは、 **\@fCreateCookie**の値が**true**の場合だけです。 **varbinary(8000)**  
   
 > [!NOTE]  
 > **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションは、今後のリリースでクッキーの戻り値のサイズが増加した場合にアプリケーションが引き続き正常に動作するように、 **varbinary (8000)** を引き続き予約する必要があります。
@@ -71,15 +71,15 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
- **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか、 **sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。 **sp_setapprole**を実行できるのは、direct [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントだけです。 **sp_setapprole**は、別のストアドプロシージャ内、またはユーザー定義のトランザクション内では実行できません。  
+ **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか**sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。 **sp_setapprole**は、直接 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによってのみ実行できます。 **sp_setapprole**は、別のストアドプロシージャ内、またはユーザー定義のトランザクション内では実行できません。  
   
  アプリケーションロールの概要については、「[アプリケーションロール](../../relational-databases/security/authentication-access/application-roles.md)」を参照してください。  
   
 > [!IMPORTANT]  
 > ネットワーク経由で転送されるときにアプリケーションロールのパスワードを保護するには、アプリケーションロールを有効にするときに、常に暗号化された接続を使用する必要があります。
-> @No__t-0 ODBC **encrypt**オプションは、 **SqlClient**ではサポートされていません。 資格情報を格納する必要がある場合は、Crypto API 関数を使用して暗号化します。 パラメーターの*パスワード*は、一方向のハッシュとして格納されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を維持するために、パスワードの複雑さのポリシーは**sp_addapprole**によって強制されません。 パスワードの複雑さのポリシーを適用するには、[[アプリケーションロールの作成](../../t-sql/statements/create-application-role-transact-sql.md)] を使用します。  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **encrypt**オプションは、 **SqlClient**ではサポートされていません。 資格情報を格納する必要がある場合は、Crypto API 関数を使用して暗号化します。 パラメーターの*パスワード*は、一方向のハッシュとして格納されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との互換性を維持するために、パスワードの複雑さのポリシーは**sp_addapprole**によって強制されません。 パスワードの複雑さのポリシーを適用するには、[[アプリケーションロールの作成](../../t-sql/statements/create-application-role-transact-sql.md)] を使用します。  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -96,7 +96,7 @@ EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';
 GO
 ```
 
-### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>B. Cookie を使用してアプリケーションロールをアクティブ化し、元のコンテキストに戻す
+### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>b. Cookie を使用してアプリケーションロールをアクティブ化し、元のコンテキストに戻す
 
  次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 この例では、現在のユーザーの名前が返されます。その後、`sp_unsetapprole` を実行して元のコンテキストに戻します。  
 
@@ -118,4 +118,4 @@ GO
 
 ## <a name="see-also"></a>参照
 
- [システムストアドプロシージャ&#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [セキュリティストアドプロシージャ&#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [CREATE application role &#40;transact&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) sql [DROP application role &#40;Transact-sql の&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [ &#40;sp_unsetapprole&#41; ](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)
+ [システムストアドプロシージャ&#40;&#41; transact-sql](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [セキュリティストアド&#40;プロシージャ transact-sql の&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [作成アプリケーション&#40;ロール transact-sql の&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [DROP application role &#40;&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) transact-sql [sp_unsetapprole &#40;transact-sql の&#41; ](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)場合)

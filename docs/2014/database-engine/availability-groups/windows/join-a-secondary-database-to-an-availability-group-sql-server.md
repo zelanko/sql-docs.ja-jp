@@ -32,7 +32,7 @@ ms.locfileid: "72797667"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してセカンダリ データベースを準備するには:**  
   
@@ -47,15 +47,15 @@ ms.locfileid: "72797667"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> の前提条件  
   
 -   セカンダリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
--   セカンダリ レプリカがあらかじめ可用性グループに参加している必要があります。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
+-   セカンダリ レプリカがあらかじめ可用性グループに参加している必要があります。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
--   セカンダリ データベースが最近準備されたものである必要があります。 詳細については、「 [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)で Always On 可用性グループを作成および構成する方法について説明します。  
+-   セカンダリ データベースが最近準備されたものである必要があります。 詳細については、「[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)」を参照してください。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
@@ -107,7 +107,7 @@ ms.locfileid: "72797667"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -119,7 +119,7 @@ ms.locfileid: "72797667"
   
 -   [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ構成&#40;SQL Server&#41;削除された問題のトラブルシューティング](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

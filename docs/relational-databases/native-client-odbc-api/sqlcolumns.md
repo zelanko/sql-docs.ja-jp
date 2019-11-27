@@ -37,7 +37,7 @@ ms.locfileid: "73787415"
   
  次の表は、結果セットによって返される列の一覧です。  
   
-|列名|説明|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |DATA_TYPE|**VARCHAR (max)** データ型の SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します。|  
 |TYPE_NAME|**Varchar (max)** 、 **varbinary (max)** 、および**nvarchar (max)** データ型の "varchar"、"varbinary"、または "nvarchar" を返します。|  
@@ -79,7 +79,7 @@ ms.locfileid: "73787415"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns によるスパース列のサポート  
  SQLColumns の結果セットには、次の2つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の列が追加されています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|列がスパース列の場合は SQL_TRUE、それ以外の場合は SQL_FALSE になります。|  
 |SS_IS_COLUMN_SET|**Smallint**|列が**column_set**列の場合、これは SQL_TRUE です。それ以外の場合は、SQL_FALSE ます。|  

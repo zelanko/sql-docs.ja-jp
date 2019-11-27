@@ -33,8 +33,8 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値です。  
   
-## <a name="remarks"></a>コメント  
- 予測された状態が省略されている場合、省略した状態バケットを除いて、確率が最も高い状態が使用されます。 欠落している状態バケットを含めるに\<は、予測された状態 > を**INCLUDE_NULL**に設定します。 欠落状態の確率を返すには、予測さ\<れた状態 > を NULL に設定します。  
+## <a name="remarks"></a>Remarks  
+ 予測された状態が省略されている場合、省略した状態バケットを除いて、確率が最も高い状態が使用されます。 欠落している状態バケットを含めるには、\<予測された状態の > を**INCLUDE_NULL**に設定します。 欠落状態の確率を返すには、\<予測状態 > を NULL に設定します。  
   
 > [!NOTE]  
 >  一部のマイニングモデルには確率値が指定されていないため、この関数を使用することはできません。 また、特定のターゲット値の確率値は異なる方法で計算されます。また、クエリを実行するモデルの種類によっては、解釈が異なる場合があります。 特定の種類のモデルに対する確率の計算方法の詳細については、「[マイニングモデルコンテンツ&#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」の個々のアルゴリズムに関するトピックを参照してください。  
@@ -60,11 +60,11 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
-|1|0.867074195848097|0.132755556974282|  
+|@shouldalert|0.867074195848097|0.132755556974282|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データマイニング拡張&#40;機能&#41; DMX 関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX &#40;関数&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41; ](../dmx/functions-dmx.md)   
  [一般的な予測&#40;関数 DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

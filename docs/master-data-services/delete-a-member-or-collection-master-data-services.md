@@ -32,7 +32,7 @@ ms.locfileid: "73729380"
 > [!NOTE]  
 >  別のメンバーのドメイン ベースの属性値として使用されているメンバーは削除できません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  

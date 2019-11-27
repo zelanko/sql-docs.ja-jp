@@ -29,7 +29,7 @@ ms.locfileid: "73787421"
 > [!NOTE]  
 >  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の結果セットで、ODBC 列の ID 属性は使用できません。  
   
-|フィールド ID|説明|  
+|フィールド ID|[説明]|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|サーバー カーソルを生成するステートメントから取得した結果セットで使用できます。または、FOR BROWSE 句を含む実行済みの SELECT ステートメントで使用できます。|  
 |SQL_DESC_BASE_COLUMN_NAME|サーバー カーソルを生成するステートメントから取得した結果セットで使用できます。または、FOR BROWSE 句を含む実行済みの SELECT ステートメントで使用できます。|  
@@ -78,7 +78,7 @@ ms.locfileid: "73787421"
   
  では、XML スキーマコレクション名、スキーマ名、およびカタログ名を示す追加情報を提供するために、ドライバー固有の記述子フィールドが導入されました。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
   
-|列名|型|説明|  
+|列名|[型]|[説明]|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML スキーマ コレクション名が定義されているカタログの名前です。 カタログ名が見つからない場合は、この変数に空文字列が含まれます。<br /><br /> この情報は、IRD の SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME レコード フィールドから返されます。このレコード フィールドは読み取りと書き込みが可能なフィールドです。|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|XML スキーマ コレクション名が定義されているスキーマの名前です。 スキーマ名が見つからない場合は、この変数に空文字列が含まれます。<br /><br /> この情報は、IRD の SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME レコード フィールドから返されます。このレコード フィールドは読み取りと書き込み可能なフィールドです。|  
@@ -86,7 +86,7 @@ ms.locfileid: "73787421"
   
  また、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、結果セットのユーザー定義型 (UDT) 列に関する追加情報、またはストアド プロシージャやパラメーター化クエリの UDT パラメーターに関する追加情報を提供するために、ドライバー固有の新しい記述子フィールドが導入されました。 これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
   
-|列名|型|説明|  
+|列名|[型]|[説明]|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|UDT を含むカタログの名前。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|UDT を含むスキーマの名前。|  

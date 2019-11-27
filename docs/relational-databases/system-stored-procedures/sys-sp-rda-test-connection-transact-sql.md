@@ -48,9 +48,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N '*azure_server_fully_qualified_address*'  
  Azure サーバーの完全修飾アドレス。  
   
--   **@No__t**の値を指定したが、指定されたデータベースで Stretch が有効になっていない場合は **@no__t 3server_address**の値を指定する必要があります。  
+-   **\@database_name**に値を指定しても、指定したデータベースで Stretch が有効になっていない場合は **\@server_address**に値を指定する必要があります。  
   
--   **@No__t**の値を指定し、指定されたデータベースで Stretch が有効になっている場合、 **3server_address @no__t**の値を指定する必要はありません。 **@No__t 1server_address**の値を指定した場合、ストアドプロシージャはこの値を無視し、既に Stretch が有効なデータベースに関連付けられている既存の Azure サーバーを使用します。  
+-   **\@database_name**に値を指定し、指定されたデータベースで Stretch が有効になっている場合、 **\@server_address**に値を指定する必要はありません。 **\@server_address**に値を指定した場合、ストアドプロシージャはそれを無視し、既に Stretch が有効なデータベースに関連付けられている既存の Azure サーバーを使用します。  
   
  @azure_username = N '*azure_username*  
  リモート Azure サーバーのユーザー名。  
@@ -62,17 +62,17 @@ EXECUTE sys.sp_rda_test_connection
  ユーザー名とパスワードを指定する代わりに、Stretch が有効なデータベースに格納されている資格情報の名前を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **成功**した場合、sp_rda_test_connection は、重大度 EX_INFO および成功リターンコードを含むエラー 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) を返します。  
+ **成功**した場合、sp_rda_test_connection によってエラー 14855 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) と重大度 EX_INFO および成功したリターンコードが返されます。  
   
- エラーが**発生**した場合、sp_rda_test_connection は、重大度が EX_USER でエラー 14856 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_FAILED) を返し、エラーのリターンコードを返します。  
+ エラーが**発生**した場合、sp_rda_test_connection によってエラー 14856 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_FAILED) と重大度 EX_USER およびエラーリターンコードが返されます。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|link_state|int|**Link_state_desc**の値に対応する次のいずれかの値。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar (32)|**Link_state**の前の値に対応する、次のいずれかの値。<br /><br /> -正常<br />     SQL Server とリモート Azure サーバーの間のが正常な状態です。<br />-   ERROR_AZURE_FIREWALL<br />     Azure ファイアウォールによって、SQL Server とリモート Azure サーバー間のリンクが妨げられています。<br />-   ERROR_NO_CONNECTION<br />     SQL Server は、リモートの Azure サーバーに接続することはできません。<br />-   ERROR_AUTH_FAILURE<br />     認証エラーにより、SQL Server とリモート Azure サーバーの間のリンクが妨げられています。<br />-エラー<br />     認証の問題、接続の問題、またはファイアウォールの問題ではないエラーにより、SQL Server とリモート Azure サーバーの間のリンクが妨げられています。|  
-|error_number|int|エラーの番号。 エラーがない場合、このフィールドは NULL になります。|  
+|link_state|Int|次のいずれかの値。 **link_state_desc**の値に対応します。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state_desc|varchar (32)|次のいずれかの値。 **link_state**の前の値に対応します。<br /><br /> -正常<br />     SQL Server とリモート Azure サーバーの間のが正常な状態です。<br />-   ERROR_AZURE_FIREWALL<br />     Azure ファイアウォールによって、SQL Server とリモート Azure サーバー間のリンクが妨げられています。<br />-   ERROR_NO_CONNECTION<br />     SQL Server は、リモートの Azure サーバーに接続することはできません。<br />-   ERROR_AUTH_FAILURE<br />     認証エラーにより、SQL Server とリモート Azure サーバーの間のリンクが妨げられています。<br />-エラー<br />     認証の問題、接続の問題、またはファイアウォールの問題ではないエラーにより、SQL Server とリモート Azure サーバーの間のリンクが妨げられています。|  
+|error_number|Int|エラーの番号。 エラーがない場合、このフィールドは NULL になります。|  
 |error_message|nvarchar(1024)|エラー メッセージです。 エラーがない場合、このフィールドは NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -92,7 +92,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\< 接続に関連するエラー番号 >*|*\<connection に関連するエラーメッセージ >*|  
+|2|ERROR_NO_CONNECTION|*\<接続に関連するエラー番号 >*|*接続に関連するエラーメッセージの \<>*|  
   
 ### <a name="check-the-azure-firewall"></a>Azure ファイアウォールを確認する  
   
@@ -108,7 +108,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<firewall に関連するエラー番号 >*|*\<firewall に関連するエラーメッセージ >*|  
+|@shouldalert|ERROR_AZURE_FIREWALL|*\<ファイアウォールに関連するエラー番号 >*|*\<ファイアウォール関連のエラーメッセージ >*|  
   
 ### <a name="check-authentication-credentials"></a>認証資格情報の確認  
   
@@ -124,7 +124,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\< 認証に関連するエラー番号 >*|*\<authentication-related error message>*|  
+|3|ERROR_AUTH_FAILURE|*\<認証に関連するエラー番号 >*|*\<authentication-related error message>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>リモート Azure サーバーの状態を確認する  
   

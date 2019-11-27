@@ -32,20 +32,20 @@ ms.locfileid: "72313723"
 
   master データベースに格納されているデータベースのファイルごとに 1 行のデータを保持します。 これは、単一のシステム全体のビューです。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|このファイルが適用されるデータベースの ID。 Masterdatabase_id は常に1です。|  
 |file_id|**int**|データベース内のファイルの ID。 プライマリ ファイルの file_id は常に 1 です。|  
-|file_guid|**uniqueidentifier**|ファイルの一意識別子。<br /><br /> NULL = データベースは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされました (SQL Server 2005 以前では有効)。|  
-|type|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
+|file_guid|**uniqueidentifier**|ファイルの一意識別子。<br /><br /> NULL = データベースは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされました (SQL Server 2005 以前で有効)。|  
+|型|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
 |type_desc|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。)|  
 |data_space_id|**int**|このファイルが属しているデータ領域の ID。 データ領域はファイルグループです。<br /><br /> 0 = ログ ファイル|  
-|NAME|**sysname**|データベース内のファイルの論理名。|  
+|name|**sysname**|データベース内のファイルの論理名。|  
 |physical_name|**nvarchar(260)**|オペレーティングシステムのファイル名。|  
 |state|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = 問題あり<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|ファイルの状態の説明です。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。|  
-|幅|**int**|現在のファイルサイズ (8 KB ページ単位)。 データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> メモ:このフィールドは、FILESTREAM コンテナーの場合は0として設定されます。 FILESTREAM コンテナーの実際のサイズについては、 *database_files*カタログビューに対してクエリを実行します。|  
-|max_size|**int**|最大ファイルサイズ (8 KB ページ単位):<br /><br /> 0 = 拡張は許可されません。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログファイルは、最大サイズの 2 TB まで拡張されます。<br /><br /> メモ:ログファイルのサイズを無制限にアップグレードしたデータベースは、ログファイルの最大サイズに対して-1 を報告します。|  
+|幅|**int**|現在のファイルサイズ (8 KB ページ単位)。 データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> メモ: このフィールドは、FILESTREAM コンテナーの場合は0として設定されます。 FILESTREAM コンテナーの実際のサイズについては、 *database_files*カタログビューに対してクエリを実行します。|  
+|max_size|**int**|最大ファイルサイズ (8 KB ページ単位):<br /><br /> 0 = 拡張は許可されません。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログファイルは、最大サイズの 2 TB まで拡張されます。<br /><br /> 注: ログファイルのサイズを無制限にアップグレードしたデータベースは、ログファイルの最大サイズに対して-1 を報告します。|  
 |成長|**int**|0 = ファイルは固定サイズであり、拡張されません。<br /><br /> > 0 = ファイルは自動的に拡張されます。<br /><br /> is_percent_growth が 0 の場合、拡張増分は 8 KB ページ単位で表され、最も近い 64 KB 単位の値に切り上げられます。<br /><br /> is_percent_growth が 1 の場合、拡張増分は、整数のパーセンテージで表されます。|  
 |is_media_read_onlyF|**bit**|1 = ファイルは読み取り専用メディア上にあります。<br /><br /> 0 = ファイルは読み取り/書き込みメディア上にあります。|  
 |is_read_only|**bit**|1 = ファイルは読み取り専用に設定されています。<br /><br /> 0 = ファイルは読み取り/書き込み用にマークされています。|  
@@ -64,15 +64,15 @@ ms.locfileid: "72313723"
 |redo_target_lsn|**numeric(25,0)**|このファイルのオンラインロールフォワードが停止できる LSN です。<br /><br /> state = RESTORING または state = RECOVERY_PENDING でない場合は NULL です。|  
 |redo_target_fork_guid|**uniqueidentifier**|コンテナーを回復できる復旧分岐。 redo_target_lsn と組み合わせて使用します。|  
 |backup_lsn|**numeric(25,0)**|ファイルの最新のデータまたは差分バックアップの LSN。|  
-|credential_id|**int**|ファイルの格納に使用された @no__t からの `credential_id`。 たとえば、Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていて、データベースファイルが Azure blob storage に格納されている場合、資格情報はストレージの場所のアクセス資格情報で構成されます。|  
+|credential_id|**int**|ファイルの格納に使用される `sys.credentials` の `credential_id`。 たとえば、Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていて、データベースファイルが Azure blob storage に格納されている場合、資格情報はストレージの場所のアクセス資格情報を使用して構成されます。|  
   
 > [!NOTE]  
->  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、@no__t 0 は、トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連するロックを延期します。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージ オブジェクトを削除または切り捨てた後すぐに sys.master_files から返される値は、実際の使用可能ディスク領域を表していない場合があります。  
+>  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は、トランザクションがコミットされるまで、実際のページ割り当て解除とそれに関連付けられているロックを延期します。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージ オブジェクトを削除または切り捨てた後すぐに sys.master_files から返される値は、実際の使用可能ディスク領域を表していない場合があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  対応する行を表示するために必要な最小限の権限は、CREATE DATABASE、ALTER ANY DATABASE、または VIEW ANY DEFINITION です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [ファイルの状態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

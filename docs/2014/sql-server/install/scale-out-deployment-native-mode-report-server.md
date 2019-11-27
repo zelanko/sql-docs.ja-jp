@@ -40,7 +40,7 @@ ms.locfileid: "71952426"
  **SQL Server 名**  
  レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンス名を指定します。  
   
- **データベース名**  
+ **Database Name**  
  レポート サーバー インスタンスが現在接続されているデータベースの名前を指定します。  
   
  **サーバーモード**  

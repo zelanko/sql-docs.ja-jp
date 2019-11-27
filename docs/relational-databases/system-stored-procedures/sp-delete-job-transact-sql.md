@@ -42,31 +42,31 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` は、削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` 削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` には、削除するジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 削除するジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Job_id*または*job_name*のいずれかを指定する必要があります。両方を指定することはできません。  
   
-内部使用の場合は `[ @originating_server = ] 'server'`。  
+内部使用のための `[ @originating_server = ] 'server'`。  
   
-`[ @delete_history = ] delete_history` は、ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**,、既定値は**1**です。 *Delete_history*が**1**の場合、ジョブのジョブ履歴は削除されます。 *Delete_history*が**0**の場合、ジョブ履歴は削除されません。  
+`[ @delete_history = ] delete_history` ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**,、既定値は**1**です。 *Delete_history*が**1**の場合、ジョブのジョブ履歴は削除されます。 *Delete_history*が**0**の場合、ジョブ履歴は削除されません。  
   
- ジョブが削除され、履歴が削除されていない場合、ジョブの履歴情報は @no__t 0 エージェントのグラフィカルユーザーインターフェイスジョブ履歴には表示されませんが、情報は msdb の**sysjobhistory**テーブルに残ります。データベース。  
+ ジョブが削除され、履歴が削除されていない場合、ジョブの履歴情報は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのグラフィカルユーザーインターフェイスのジョブ履歴には表示されませんが、この情報は**msdb**データベースの**sysjobhistory**テーブルに残ります。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` 他のジョブにアタッチされていない場合に、このジョブにアタッチされているスケジュールを削除するかどうかを指定します。 *delete_unused_schedule*は**ビット**,、既定値は**1**です。 *Delete_unused_schedule*が**1**の場合、このジョブにアタッチされているスケジュールは、他のジョブが参照していない場合は削除されます。 *Delete_unused_schedule*が**0**の場合、スケジュールは削除されません。  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 他のジョブにアタッチされていない場合に、このジョブにアタッチされているスケジュールを削除するかどうかを指定します。 *delete_unused_schedule*は**ビット**,、既定値は**1**です。 *Delete_unused_schedule*が**1**の場合、そのスケジュールを参照するジョブが他にない場合、このジョブにアタッチされているスケジュールは削除されます。 *Delete_unused_schedule*が**0**の場合、スケジュールは削除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>コメント  
- **@No__t-1**は、内部で使用するために予約されています。  
+## <a name="remarks"></a>Remarks  
+ **\@originating_server**引数は、内部使用のために予約されています。  
   
- **@No__t-1**に指定されたスケジュール引数は、どのジョブにもアタッチされていないスケジュールを自動的に削除することによって、以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、値**0**を **\@削除するスケジュール**引数として指定する必要があります。  
+ **\@の delete_unused_schedule**引数は、どのジョブにもアタッチされていないスケジュールを自動的に削除することによって、以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、 **\@delete_unused_schedule**引数として値**0**を指定する必要があります。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
@@ -81,7 +81,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
+ これらのロールの権限の詳細については、「[SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
  **sp_delete_job** を実行して任意のジョブを削除できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 **sysadmin** 固定サーバー ロールのメンバーでないユーザーは、自分が所有するジョブのみを削除できます。  
   
@@ -97,10 +97,10 @@ EXEC sp_delete_job
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -46,7 +46,7 @@ ms.locfileid: "72811602"
 |1999|第3四半期|7 月|  
 |1999|第3四半期|8 月|  
 |1999|第3四半期|9 月|  
-|1999|第 4 四半期|シンガポール|  
+|1999|第 4 四半期|Oct|  
 |1999|第 4 四半期|11 月|  
 |1999|第 4 四半期|Dec|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72811602"
   
 -   Province というレベルが CountryRegion レベルと City レベルの間に追加されます。  
   
- Province レベルに、CountryRegion レベルの他のメンバーに関連付けられているメンバーが生成され、City レベルのメンバーが Province レベルの対応するメンバーに関連付けられます。 ただし、CountryRegion レベルの Vatican City メンバーは Province レベルのメンバーに関連付けられていないため、メンバーは City レベルから CountryRegion レベルの Vatican City メンバーに直接関連付ける必要があります。 この変更により、このディメンションの階層は不規則になります。 市 Vatican City の親は国/地域である Vatican City で、これは City レベルの Vatican City メンバーの真上にはありません。 詳細については、「 [不規則階層](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)」を参照してください。  
+ Province レベルに、CountryRegion レベルの他のメンバーに関連付けられているメンバーが生成され、City レベルのメンバーが Province レベルの対応するメンバーに関連付けられます。 ただし、CountryRegion レベルの Vatican City メンバーは Province レベルのメンバーに関連付けられていないため、メンバーは City レベルから CountryRegion レベルの Vatican City メンバーに直接関連付ける必要があります。 この変更により、このディメンションの階層は不規則になります。 市 Vatican City の親は国/地域である Vatican City で、これは City レベルの Vatican City メンバーの真上にはありません。 詳細については、[不規則階層](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)に関する記事を参照してください。  
   
 ### <a name="parent-child-hierarchies"></a>親子階層  
  ディメンションの親子階層は、親子属性という特殊な属性を使用して定義され、これによってメンバー間の相互関係が決まります。 親属性は、ディメンション メイン テーブル内の *自己参照型リレーションシップ*または *自己結合*を記述します。 親子階層は 1 つの親属性から構築されます。 親子階層に存在するレベルは、親属性に関連付けられているメンバー間の親子リレーションシップに基づいているので、1 つの親子階層に割り当てられるレベルは 1 つのみです。 親子階層のディメンション スキーマは、ディメンション メイン テーブルに存在する自己参照型リレーションシップに依存します。 たとえば、次の図は、[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サンプルデータベースの**DimOrganization**ディメンションメインテーブルを示しています。  
@@ -92,7 +92,7 @@ ms.locfileid: "72811602"
   
  エンド ユーザーに表示されるレベル数が階層内のレベル数によって決まるユーザー定義階層とは異なり、親子階層は、単一レベルの属性階層で定義され、この単一レベルの値によりユーザーに表示される複数レベルが生成されます。 表示レベルの数は、メンバー キーと親キーが格納されるディメンション テーブルの列の内容によって異なります。 レベルの数は、ディメンション テーブルのデータが変わると変化します。 詳細については、「親子[階層](../multidimensional-models/parent-child-dimension.md)」と「親子階層[の属性](../multidimensional-models/parent-child-dimension-attributes.md)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ユーザー定義階層の作成](../multidimensional-models/user-defined-hierarchies-create.md)   
  [ユーザー階層プロパティ](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [ディメンションの属性のプロパティの参照](../multidimensional-models/dimension-attribute-properties-reference.md)  

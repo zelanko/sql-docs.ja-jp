@@ -60,7 +60,7 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>引数  
- *schema_name。参照され*ている _*entity_name*  
+ *schema_name.referenced*_*entity_name*  
  参照先エンティティの名前を指定します。  
   
  参照されるクラスが PARTITION_FUNCTION 場合を除き、 *schema_name*が必要です。  
@@ -68,7 +68,7 @@ sys.dm_sql_referencing_entities (
  *schema_name。 referenced_entity_name*は**nvarchar (517)** です。  
   
  *< referenced_class >* :: = {OBJECT |TYPE |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
- は、参照先エンティティのクラスです。 ステートメントごとに1つのクラスのみを指定できます。  
+ は、参照先エンティティのクラスです。 クラスは 1 つのステートメントに 1 つだけ指定できます。  
   
  *< referenced_class >* は**nvarchar**(60) です。  
   
@@ -86,18 +86,18 @@ sys.dm_sql_referencing_entities (
 ## <a name="exceptions"></a>例外  
  次のいずれかの条件に該当した場合は、空の結果セットが返されます。  
   
--   システムオブジェクトが指定されています。  
+-   システム オブジェクトが指定されている。  
   
--   指定されたエンティティは現在のデータベースに存在しません。  
+-   指定されたエンティティが現在のデータベースに存在しない。  
   
--   指定されたエンティティは、エンティティを参照していません。  
+-   指定されたエンティティがいずれのエンティティも参照しない。  
   
 -   無効なパラメーターが渡される。  
   
  指定された参照先エンティティが番号付きストアドプロシージャの場合、エラーを返します。  
   
 ## <a name="remarks"></a>Remarks  
- 次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
+ 次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 ルール、既定値、一時テーブル、一時ストアド プロシージャ、またはシステム オブジェクトについては、依存関係情報は作成も管理もされません。  
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
@@ -109,7 +109,7 @@ sys.dm_sql_referencing_entities (
 |CLR ユーザー定義関数|[いいえ]|はい|  
 |CLR トリガー (DML および DDL)|[いいえ]|[いいえ]|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|[いいえ]|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] データベースレベルの DDL トリガー|はい|[いいえ]|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] データベース レベルの DDL トリガー|はい|[いいえ]|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|[いいえ]|  
 |拡張ストアド プロシージャ|[いいえ]|はい|  
 |キュー|[いいえ]|はい|  

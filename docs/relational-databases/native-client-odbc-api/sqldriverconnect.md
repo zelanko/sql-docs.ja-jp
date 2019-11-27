@@ -42,7 +42,7 @@ ms.locfileid: "73787098"
   
  *Drivercompletion*パラメーター値が SQL_DRIVER_NOPROMPT または SQL_DRIVER_COMPLETE_REQUIRED で、言語またはデータベースが接続文字列から取得され、その言語またはデータベースが無効である場合、 **SQLDriverConnect**は SQL_ERROR を返します。  
   
- *Drivercompletion*パラメーター値が SQL_DRIVER_NOPROMPT または SQL_DRIVER_COMPLETE_REQUIRED であり、言語またはデータベースが ODBC データソース定義からのものであり、その言語またはデータベースが無効である場合、 **SQLDriverConnect**は既定の言語を使用します。指定されたユーザー ID のデータベース。 SQL_SUCCESS_WITH_INFO を返します。  
+ *Drivercompletion*パラメーター値が SQL_DRIVER_NOPROMPT または SQL_DRIVER_COMPLETE_REQUIRED であり、言語またはデータベースが ODBC データソースの定義から取得されていて、または無効な場合、 **SQLDriverConnect**は指定されたユーザー ID の既定の言語またはデータベースを使用して、SQL_SUCCESS_WITH_INFO を返します。  
   
  *Drivercompletion*パラメーター値が SQL_DRIVER_COMPLETE または SQL_DRIVER_PROMPT で、言語またはデータベースが無効である場合、 **SQLDriverConnect**はダイアログボックスを再指定します。  
   

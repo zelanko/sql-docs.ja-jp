@@ -34,7 +34,7 @@ ms.locfileid: "71952309"
  **SQL Server 名**  
  [現在のレポート サーバー データベース] の **[SQL Server 名]** では、レポート サーバー データベースを実行する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] の名前を指定します。 ローカルまたはリモートのコンピューターの、既定または名前付きのインスタンスを使用できます。  
   
- **データベース名**  
+ **Database Name**  
  サーバー データを格納するレポート サーバー データベースの名前を指定します。  
   
  **レポートサーバーモード**  
@@ -47,9 +47,9 @@ ms.locfileid: "71952309"
  レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報を指定します。 指定できる資格情報の種類には、サービス アカウント、Windows ドメイン ユーザー、Windows ローカル ユーザー、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインがあります。 資格情報の選択の詳細については、「[レポートサーバー &#40;データベース接続&#41;の構成 SSRS Configuration Manager](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
  **[ユーザー名]**  
- Windows 資格情報を使用している場合はドメイン ユーザー アカウントを指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用している場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 Windows 資格情報を使用する場合は、 *\<domain > \\ < アカウント @ no__t-3*の形式で指定します。  
+ Windows 資格情報を使用している場合はドメイン ユーザー アカウントを指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用している場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 Windows 資格情報を使用している場合は、 *\<ドメイン >\\< アカウント\>* の形式で指定します。  
   
- **Password**  
+ **パスワード**  
  アカウントのパスワードを指定します。  
   
  **資格情報の変更**  

@@ -57,7 +57,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、要求を完了するために必要なメモリを割り当てることができませんでした。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コンシューマーによって渡されたポインターによって返される SSERRORINFO および OLECHAR 文字列にメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  
   
  SSERRORINFO 構造体は、次のように定義されています。  
@@ -76,7 +76,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|メンバー|説明|  
+|メンバー|[説明]|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー メッセージ。 このメッセージは、**IErrorInfo::GetDescription** メソッドにより返されます。|  
 |*pwszServer*|エラーが発生した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
@@ -89,7 +89,7 @@ SSERRORINFO;
  構造体内のポインターは、*ppErrorStrings* 引数に返される文字列内のアドレスを指します。  
   
 ## <a name="see-also"></a>参照  
- [ISQLServerErrorInfo &#40;OLE DB&#41; ](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

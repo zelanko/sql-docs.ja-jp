@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73981833"
 ---
-# <a name="sysdm_db_persisted_sku_features-transact-sql"></a>dm_db_persisted_sku_features (Transact-sql)
+# <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の一部の機能は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] がデータベースファイルに情報を格納する方法を変更します。 これらの機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定のエディションでのみ使用できます。 これらの機能を備えたデータベースを、それらをサポートしない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションに移動することはできません。 現在のデータベースで有効になっているエディション固有の機能を一覧表示するには、sys.dm_db_persisted_sku_features 動的管理ビューを使用します。
@@ -35,7 +35,7 @@ ms.locfileid: "73981833"
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|feature_name|**sysname**|データベースでは有効になっているが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでサポートされるとは限らない機能の外部名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の利用可能なすべてのエディションにデータベースを移行する前に、この機能を削除する必要があります。|  
+|feature_name|**sysname**|データベースでは有効になっているが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでサポートされるとは限らない機能の外部名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の使用可能なすべてのエディションにデータベースを移行するには、この機能を削除する必要があります。|  
 |feature_id|**int**|機能に関連付けられている機能 ID。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -52,17 +52,17 @@ ms.locfileid: "73981833"
   
     **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。  
   
--   **Compression**: 少なくとも1つのテーブルまたはインデックスで、データ圧縮または vardecimal ストレージ形式が使用されていることを示します。 この機能をサポートしていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションにデータベースを移動できるようにするには、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)ステートメントまたは[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)ステートメントを使用して、データ圧縮を解除します。 vardecimal ストレージ形式を削除するには、sp_tableoption ステートメントを使用します。 詳しくは、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」をご覧ください。  
+-   **Compression**: 少なくとも1つのテーブルまたはインデックスで、データ圧縮または vardecimal ストレージ形式が使用されていることを示します。 この機能をサポートしていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションにデータベースを移動できるようにするには、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)ステートメントまたは[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)ステートメントを使用して、データ圧縮を解除します。 vardecimal ストレージ形式を削除するには、sp_tableoption ステートメントを使用します。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 -   複数の**fsコンテナ**: データベースが複数の FILESTREAM コンテナーを使用することを示します。 データベースには、複数のコンテナー (ファイル) を含む FILESTREAM ファイルグループがあります。 詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)」を参照してください。  
   
--   **Inmemoryoltp**: データベースがインメモリ oltp を使用することを示します。 データベースには MEMORY_OPTIMIZED_DATA ファイルグループがあります。 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
+-   **Inmemoryoltp**: データベースがインメモリ oltp を使用することを示します。 データベースには、MEMORY_OPTIMIZED_DATA ファイル グループがあります。 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
   **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)。 
   
--   **Partitioning** データベースにパーティションテーブル、パーティションインデックス、パーティション構成、またはパーティション関数が格納されていることを示します。 Enterprise や Developer 以外の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションにデータベースを移動できるようにするには、テーブルを1つのパーティションに変更するだけでは不十分です。 パーティションテーブルを削除する必要があります。 テーブルにデータが含まれている場合は、[パーティションの切り替え] を使用して各パーティションを非パーティションテーブルに変換します。 次に、パーティションテーブル、パーティション構成、およびパーティション関数を削除します。  
+-   **Partitioning** パーティション テーブル、パーティション インデックス、パーティション構成、またはパーティション関数が、データベースに含まれていることを示します。 Enterprise Edition と Developer Edition 以外の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションにデータベースを移動できるようにするには、テーブルを単一パーティションに変更するだけでは不十分です。 パーティション テーブルを削除する必要があります。 テーブルにデータが含まれている場合は、SWITCH PARTITION を使用して、各パーティションを非パーティション テーブルに変換します。 その後、パーティション テーブル、パーティション構成、およびパーティション関数を削除します。  
   
--   **TransparentDataEncryption.** 透過的なデータ暗号化を使用してデータベースが暗号化されていることを示します。 Transparent data encryption を削除するには、ALTER DATABASE ステートメントを使用します。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
+-   **TransparentDataEncryption** 透過的なデータ暗号化を使用してデータベースが暗号化されていることを示します。 透過的なデータ暗号化を削除するには、ALTER DATABASE ステートメントを使用します。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
 
 > [!NOTE]
 > Service Pack [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 1 以降では、**TransparentDataEncryption** を除くこれらの機能が使用されています。 複数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で利用可能であり、Enterprise edition または Developer edition のみに限定されません。

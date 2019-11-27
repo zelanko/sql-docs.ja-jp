@@ -50,7 +50,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175741"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure Virtual Machine の SQL Server データベースの配置
-  Azure 仮想マシン (vm) のの[!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスからデータベースを配置するには、 **azure VM への SQL Server データベースの配置**ウィザードを使用します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
+  Azure 仮想マシン (VM) 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスからデータベースをデプロイするには、 **AZURE VM への SQL Server データベースのデプロイ**ウィザードを使用します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
   
  このウィザードは同じデータベース名を持つ既存のデータベースを上書きしないため、このウィザードを使用して差分バックアップを実行することはできません。 仮想マシン上にある既存のデータベースを置き換えるには、まず既存のデータベースを削除するか、データベース名を変更する必要があります。 インフライト配置操作を実行しているときに、複数のデータベース名の間で名前の競合が発生し、既存のデータベースが仮想マシン上に存在している場合は、ウィザードはインフライト データベースに対して付加的なデータベース名を提示し、操作を完了できるようにします。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "70175741"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをホストするコンピューターで使用できる一時格納場所が必要です。 この一時格納場所は、このウィザードを実行するコンピューターでも使用できる必要があります。  
   
--   既存の仮想マシンにデータベースを配置する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを TCP/IP ポートでリッスンするように構成する必要があります。  
+-   既存の仮想マシンにデータベースを配置する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを TCP/IP ポートでリッスンするように構成する必要があります。  
   
 -   VM の作成に使用する予定の Azure VM またはギャラリーイメージには、SQL Server クラウドアダプター構成され、実行されている必要があります。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "70175741"
   
  Windows Server オペレーティング システムを実行しているコンピューターでは、このウィザードを実行するために、次の構成設定を使用する必要があります。  
   
--   強化されたセキュリティ構成を無効にする:サーバーマネージャー > ローカルサーバーを使用して、Internet Explorer セキュリティ強化の構成 (ESC) を**オフ**に設定します。  
+-   セキュリティ強化の構成の無効化。[サーバー マネージャー] > [ローカル サーバー] を使用し、[Internet Explorer セキュリティ強化の構成]\(ESC) を **[オフ]** に設定します。  
   
--   JavaScript を有効にする:Internet Explorer > インターネットオプション > セキュリティ > カスタマーレベル > スクリプト > アクティブスクリプティング:**を有効に**します。  
+-   JavaScript の有効化。Internet Explorer > [インターネット オプション] > [セキュリティ] > [レベルのカスタマイズ] > [スクリプト] > [アクティブ スクリプト] を選択し、 **[有効にする]** に設定します。  
   
 ###  <a name="limitations"></a> 制限事項と制約事項  
  この操作に対応するデータベース サイズの上限は 1 TB です。  
@@ -152,7 +152,7 @@ ms.locfileid: "70175741"
   
             -   BackupPath="\\\\[サーバー名]\\[ボリューム]\\" \<!-- バックアップの最後に使用されたパス。 ウィザードで既定値として使用されます。 -->  
   
-            -   Cleanupdisabled = False/> \<!--ウィザードでは、中間ファイルと Azure オブジェクト (VM、CS、SA) は削除されません。 -->  
+            -   CleanupDisabled = False/> \<!--ウィザードでは、中間ファイルと Azure オブジェクト (VM、CS、SA) は削除されません。 -->  
   
         -   <PublishProfile \<! -- 最後に使用されたパブリッシュのプロファイル情報。 -->  
   
@@ -185,7 +185,7 @@ ms.locfileid: "70175741"
 ##  <a name="Introduction"></a> [説明] ページ  
  このページでは、 **AZURE VM への SQL Server データベースのデプロイ**ウィザードについて説明します。  
   
- **[オプション]**  
+ **オプション**  
   
 -   **[次回からこのページを表示しない]** - 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
@@ -196,11 +196,11 @@ ms.locfileid: "70175741"
 -   **[ヘルプ]** : ウィザードの MSDN ヘルプトピックを起動します。  
   
 ##  <a name="Source_settings"></a> [ソース設定]  
- このページを使用して、Azure VM [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に配置するデータベースをホストするのインスタンスに接続します。 また、ファイルを Azure に転送する前に、ローカルコンピューターから保存するファイルの一時的な場所も指定します。 共有のネットワークの場所を指定できます。  
+ このページを使用して、Azure VM に配置するデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 また、ファイルを Azure に転送する前に、ローカルコンピューターから保存するファイルの一時的な場所も指定します。 共有のネットワークの場所を指定できます。  
   
- **[オプション]**  
+ **オプション**  
   
--   **[接続...]** をクリックし、配置するデータベースを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ホストするのインスタンスの接続詳細を指定します。  
+-   **[接続...]** をクリックし、配置するデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの接続詳細を指定します。  
   
 -   **[データベースの選択]** ドロップダウン リストを使用して、展開するデータベースを指定します。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "70175741"
 ##  <a name="Azure_sign-in"></a>Azure サインイン  
  このページを使用して、Azure に接続し、管理証明書または発行プロファイルの詳細を指定します。  
   
- **[オプション]**  
+ **オプション**  
   
 -   **[管理証明書]** -このオプションを使用して、Azure の管理証明書に一致するローカル証明書ストアの証明書を指定します。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "70175741"
 ##  <a name="Deployment_settings"></a> [配置設定] ページ  
  このページを使用して、配置先サーバーと、新しいデータベースの詳細を指定します。  
   
- **[オプション]**  
+ **オプション**  
   
 -   **Azure 仮想マシン**-SQL Server データベースをホストする VM の詳細を指定します。  
   
@@ -250,13 +250,13 @@ ms.locfileid: "70175741"
   
  **[完了]** をクリックして、ウィザードを終了します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 用のクラウド アダプター](../../database-engine/cloud-adapter-for-sql-server.md)   
  [データベースのライフサイクル管理](../database-lifecycle-management.md)   
  [データ層アプリケーションのエクスポート](../data-tier-applications/export-a-data-tier-application.md)   
  [BACPAC ファイルのインポートによる新しいユーザー データベースの作成](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Azure SQL データベースのバックアップと復元](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [Azure Virtual Machines での SQL Server デプロイ](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Azure Virtual Machines  での SQL Server デプロイ](https://msdn.microsoft.com/library/dn133141.aspx)  
  [Azure Virtual Machines で SQL Server に移行するための準備](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

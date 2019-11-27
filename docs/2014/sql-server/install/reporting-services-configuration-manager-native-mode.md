@@ -38,7 +38,7 @@ ms.locfileid: "71952491"
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  レポート サーバー Web サービスおよびレポート マネージャーへのアクセスに使用する URL を構成する方法について説明します。  
   
- [レポート サーバー データベースの作成 &#40;SSRS構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  サーバーのメタデータやオブジェクトの格納に必要なレポート サーバー データベースを作成する方法について説明します。  
   
  [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "71952491"
   
 -   [Reporting Services Configuration Manager を使用するシナリオ](#bkmk_scenarios)  
   
--   [必要条件](#bkmk_requirements)  
+-   [要件](#bkmk_requirements)  
   
 -   [Reporting Services Configuration Manager を開始するには](#bkmk_start_configuration_manager)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "71952491"
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
- [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)   
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

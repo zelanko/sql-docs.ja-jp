@@ -18,7 +18,7 @@ ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493787"
 ---
 # <a name="defining-and-browsing-translations"></a>翻訳の定義と表示
-  翻訳とは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のオブジェクトの名前を特定の言語で表現することです。 オブジェクトには、メジャー グループ、メジャー、ディメンション、属性、階層、KPI、アクション、計算されるメンバーなどがあります。 翻訳によって、複数言語を使用するクライアント アプリケーションをサーバーがサポートできるようになります。 この場合、クライアントは、ロケール識別子 (LCID) を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに渡します。 のインスタンスはこの LCID に基づいて、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトにメタデータを提供する際に使用する翻訳セットを判別します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトにその言語の翻訳が含まれていない場合、または特定のオブジェクトの翻訳が含まれていない場合は、オブジェクトのメタデータがクライアントに送り返される際に既定の言語が使用されます。 たとえば、フランスのビジネス ユーザーが、フランス語にロケール設定されたワークステーションからキューブにアクセスした場合、該当する項目がフランス語に翻訳されているのであれば、メンバー キャプションとメンバー プロパティ値がフランス語で表示されます。 一方、ドイツのビジネス ユーザーが、ドイツ語にロケール設定されたワークステーションから同じキューブにアクセスすると、メンバー キャプションとメンバー プロパティ値はドイツ語で表示されます。 詳細については、「[ディメンションの翻訳](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)」、「[キューブの翻訳](multidimensional-models-olap-logical-cube-objects/cube-translations.md)」、「[翻訳&#40;Analysis Services&#41;](translations-analysis-services.md)」を参照してください。  
+  翻訳とは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のオブジェクトの名前を特定の言語で表現することです。 オブジェクトには、メジャー グループ、メジャー、ディメンション、属性、階層、KPI、アクション、計算されるメンバーなどがあります。 翻訳によって、複数言語を使用するクライアント アプリケーションをサーバーがサポートできるようになります。 この場合、クライアントは、ロケール識別子 (LCID) を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに渡します。 のインスタンスはこの LCID に基づいて、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトにメタデータを提供する際に使用する翻訳セットを判別します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトにその言語の翻訳が含まれていない場合、または特定のオブジェクトの翻訳が含まれていない場合は、オブジェクトのメタデータがクライアントに送り返される際に既定の言語が使用されます。 たとえば、フランスのビジネス ユーザーが、フランス語にロケール設定されたワークステーションからキューブにアクセスした場合、該当する項目がフランス語に翻訳されているのであれば、メンバー キャプションとメンバー プロパティ値がフランス語で表示されます。 一方、ドイツのビジネス ユーザーが、ドイツ語にロケール設定されたワークステーションから同じキューブにアクセスすると、メンバー キャプションとメンバー プロパティ値はドイツ語で表示されます。 詳細については、「[ディメンションの翻訳](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)」、「[キューブの翻訳](multidimensional-models-olap-logical-cube-objects/cube-translations.md)」、「[翻訳&#40;Analysis Services&#41;](translations-analysis-services.md)」を参照してください。  
   
  このトピックの作業では、Date ディメンションのディメンション オブジェクトと [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ オブジェクトの限定されたセットに関するメタデータ翻訳を定義します。 それから、これらのディメンションとキューブ オブジェクトを表示して、メタデータ翻訳を確認します。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "69493787"
   
 5.  ツール バーの **[言語]** ボックスの一覧で **[スペイン語 (スペイン)]** をクリックします。  
   
-     メタデータ ペインのアイテムが再設定されます。 メタデータ ペインのアイテムが再設定されると、Internet Sales-Sales Amount メジャーが [Internet Sales] 表示フォルダーに表示されなくなります。 代わりに、次の図に示すように、`Ventas del lnternet` という名前の新しい表示フォルダーにスペイン語で表示されます。  
+     メタデータ ペインのアイテムが再設定されます。 メタデータ ペインのアイテムが再設定されると、Internet Sales-Sales Amount メジャーが [Internet Sales] 表示フォルダーに表示されなくなります。 代わりに、次の図に示すように、`Ventas del lnternet`という名前の新しい表示フォルダーにスペイン語で表示されます。  
   
      ![再読み込みメタデータペイン](../../2014/tutorials/media/l9-translations-6.gif "再読み込みメタデータペイン")  
   
@@ -125,7 +125,7 @@ ms.locfileid: "69493787"
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 10 : 管理ロールの定義](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ディメンションの翻訳](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [キューブの翻訳](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [翻訳&#40;Analysis Services&#41;](translations-analysis-services.md)  

@@ -30,7 +30,7 @@ ms.locfileid: "73788627"
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  
   
-|プロパティ ID|値|  
+|プロパティ ID|ReplTest1|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  

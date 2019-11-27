@@ -65,11 +65,11 @@ ms.locfileid: "73882325"
   
     -   サーバーでディストリビューションが構成されていない場合は、ディストリビューターを指定します。 ディストリビューションの構成の詳細については、「[Configure Publishing and Distribution](../configure-publishing-and-distribution.md)」(パブリッシュとディストリビューションの構成) をご覧ください。  
   
-         **[ディストリビューター]** ページで、パブリッシャー サーバーが独自のディストリビューター (ローカル ディストリビューター) として機能するように指定した場合、このサーバーはディストリビューターとして構成されていないため、パブリケーションの新規作成ウィザードでサーバーを構成します。 **[スナップショット フォルダー]** ページで、ディストリビューターの既定のスナップショット フォルダーを指定します。 スナップショット フォルダーは、共有として指定したディレクトリです。このフォルダーの読み取りと書き込みをするエージェントには、このフォルダーへのアクセスを可能にする十分な権限が必要です。 フォルダーの適切なセキュリティ保護の詳細については、「[Secure the Snapshot Folder](../security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
+         **[ディストリビューター]** ページで、パブリッシャー サーバーが独自のディストリビューター (ローカル ディストリビューター) として機能するように指定した場合、このサーバーはディストリビューターとして構成されていないため、パブリケーションの新規作成ウィザードでサーバーを構成します。 **[スナップショット フォルダー]** ページで、ディストリビューターの既定のスナップショット フォルダーを指定します。 スナップショット フォルダーは、共有として指定したディレクトリです。このフォルダーの読み取りと書き込みをするエージェントには、このフォルダーへのアクセスを可能にする十分な権限が必要です。 フォルダーの適切なセキュリティ保護の詳細については、「[スナップショット フォルダーのセキュリティ保護](../security/secure-the-snapshot-folder.md)」を参照してください。  
   
          別のサーバーがディストリビューターとして機能するように指定する場合は、パブリッシャーからディストリビューターへの接続のため、 **[管理パスワード]** ページでパスワードを入力する必要があります。 このパスワードは、リモート ディストリビューターでパブリッシャーを有効にしたときに指定したパスワードと一致する必要があります。  
   
-         詳しくは、「 [Configure Distribution](../configure-distribution.md)」を参照してください。  
+         詳細については、「[ディストリビューションの構成](../configure-distribution.md)」を参照してください。  
   
     -   パブリケーション データベースを選択します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "73882325"
   
          詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md) 」および「 [Replication Security Best Practices](../security/replication-security-best-practices.md)」を参照してください。  
   
-    -   必要に応じて、パブリケーションのスクリプトを作成します。 詳しくは、「 [Scripting Replication](../scripting-replication.md)」をご覧ください。  
+    -   必要に応じて、パブリケーションのスクリプトを作成します。 詳細については、「 [Scripting Replication](../scripting-replication.md)」をご参照ください。  
   
     -   パブリケーションの名前を指定します。  
   
@@ -115,16 +115,16 @@ ms.locfileid: "73882325"
     > [!NOTE]  
     >  パブリケーション名に、次の文字を含めることはできません。  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 3 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらにpublisher_security_mode **に \@0** を指定し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ と** **publisher_password\@ に**  ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-5.  パブリケーションにアーティクルを追加します。 詳細については、「 [Define an Article](define-an-article.md)」をご参照ください。  
+5.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-6.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+6.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   
 #### <a name="to-create-a-merge-publication"></a>マージ パブリケーションを作成するには  
   
@@ -135,16 +135,16 @@ ms.locfileid: "73882325"
     > [!NOTE]  
     >  パブリケーション名に、次の文字を含めることはできません。  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 2 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらにpublisher_security_mode **に \@0** を指定し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ と** **publisher_password\@ に**  ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-4.  パブリケーションにアーティクルを追加します。 詳細については、「 [Define an Article](define-an-article.md)」をご参照ください。  
+4.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-5.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+5.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、トランザクション パブリケーションを作成します。 スナップショット エージェント ジョブおよびログ リーダー エージェント ジョブの作成に必要な Windows 資格情報は、スクリプト変数を使用して渡しています。  
@@ -171,7 +171,7 @@ ms.locfileid: "73882325"
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> (または <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>) フィールドを設定して、ログ リーダー エージェントを実行するときに使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows アカウントの資格情報を指定します。  
   
         > [!NOTE]  
-        >  パブリケーションが <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 固定サーバー ロールのメンバーにより作成される場合、`sysadmin` の設定は不要です。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
+        >  パブリケーションが <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 固定サーバー ロールのメンバーにより作成される場合、`sysadmin` の設定は不要です。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳しくは、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」をご覧ください。  
   
     -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> ) フィールドを設定します。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "73882325"
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> フィールドに、スナップショット エージェントの実行に使用する Windows アカウントの資格情報を指定します。 このアカウントは、Windows 認証を使用している場合に、スナップショット エージェントがローカル ディストリビューターへの接続や任意のリモート接続を行うときにも使用されます。  
   
         > [!NOTE]  
-        >  パブリケーションが <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定サーバー ロールのメンバーにより作成される場合、`sysadmin` の設定は不要です。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
+        >  パブリケーションが <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定サーバー ロールのメンバーにより作成される場合、`sysadmin` の設定は不要です。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳しくは、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」をご覧ください。  
   
     -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> ) フィールドを設定します。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "73882325"
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> フィールドに、スナップショット エージェントの実行に使用する Windows アカウントの資格情報を指定します。 このアカウントは、Windows 認証を使用している場合に、スナップショット エージェントがローカル ディストリビューターへの接続や任意のリモート接続を行うときにも使用されます。  
   
         > [!NOTE]  
-        >  パブリケーションが <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定サーバー ロールのメンバーにより作成される場合、`sysadmin` の設定は不要です。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
+        >  パブリケーションが <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定サーバー ロールのメンバーにより作成される場合、`sysadmin` の設定は不要です。 詳しくは、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」をご覧ください。  
   
     -   (省略可) 包括的論理和演算子 (Visual C# では `|`、Visual Basic では `Or`) および排他的論理和演算子 (Visual C# では `^`、Visual Basic では `Xor`) を使用して、<xref:Microsoft.SqlServer.Replication.PublicationAttributes> プロパティに <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> の値を設定します。  
   

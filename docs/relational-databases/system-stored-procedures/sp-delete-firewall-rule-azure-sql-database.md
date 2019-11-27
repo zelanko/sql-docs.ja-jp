@@ -45,7 +45,7 @@ sp_delete_firewall_rule [@name =] 'name'
  [@name =]'*name*'  
  削除されるサーバーレベルのファイアウォール設定の名前。 *名前*は**nvarchar (128)** で、既定値はありません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースにログイン テーブルの最新バージョンがあることを確認するには、[DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。  
   
 ## <a name="permissions"></a>アクセス許可  

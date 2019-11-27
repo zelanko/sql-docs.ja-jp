@@ -47,7 +47,7 @@ ms.locfileid: "70212398"
  CLR 統合を使用すると、パフォーマンスが向上する可能性が高くなります。 詳細については、「 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)」を参照してください。  
  
 > [!WARNING]
->  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。 
+>  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `sp_configure` という `clr strict security` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションを旧バージョンとの互換性のために無効にすることはできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。 
   
 ## <a name="choosing-between-transact-sql-and-managed-code"></a>Transact-SQL とマネージド コードの選択  
  ストアド プロシージャ、トリガー、およびユーザー定義関数を記述する際には、従来の [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用するか、Visual Basic .NET や Visual C# などの .NET Framework 言語を使用するかを判断する必要があります。 データ アクセスに使用する手続き型のロジックが、コード中にない場合や非常に少ない場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。 複雑なロジックで CPU を集中的に使用する関数やプロシージャ、または .NET Framework の BCL を使用する場合は、マネージド コードを使用します。  
@@ -59,8 +59,8 @@ ms.locfileid: "70212398"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアドプロシージャの詳細については、「 [Clr 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [CLR 統合のアーキテクチャ](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [.NET Framework  のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)  
+ [CLR 統合  のアーキテクチャ](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  [CLR データベースオブジェクトからのデータアクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CLR 統合の概要](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

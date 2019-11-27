@@ -40,7 +40,7 @@ ms.locfileid: "73787286"
 |*Length Ptr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  
-|*NullablePtr*|1|SQL_DESC_NULLABLE|  
+|*NullablePtr*|@shouldalert|SQL_DESC_NULLABLE|  
   
  テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73787286"
   
 ||*TypePtr*|*SubTypePtr*|*Length Ptr*|*PrecisionPtr*|*ScalePtr*|  
 |-|---------------|------------------|-----------------|--------------------|----------------|  
-|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  

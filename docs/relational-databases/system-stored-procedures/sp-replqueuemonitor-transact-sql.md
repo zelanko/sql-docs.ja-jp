@@ -41,7 +41,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` はパブリッシャーの名前です。 *publisher*は**sysname**で、既定値は NULL です。 サーバーはパブリッシング用に構成されている必要があります。 NULL はすべてのパブリッシャーを表します。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。 サーバーはパブリッシング用に構成されている必要があります。 NULL はすべてのパブリッシャーを表します。  
   
 `[ @publisherdb = ] 'publisher_db' ]` は、パブリケーションデータベースの名前です。 *publisher_db*は**sysname**,、既定値は NULL です。 すべてのパブリケーションデータベースに対して NULL です。  
   

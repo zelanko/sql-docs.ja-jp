@@ -28,11 +28,11 @@ ms.locfileid: "72782889"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> の前提条件  
   
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
@@ -98,11 +98,11 @@ ms.locfileid: "72782889"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 SQL Server PowerShell プロバイダーを設定して使用する方法については、「 [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)」を参照してください。
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)    
+ [可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)   
  [フェールオーバーとフェール&#40;オーバーモード AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)  

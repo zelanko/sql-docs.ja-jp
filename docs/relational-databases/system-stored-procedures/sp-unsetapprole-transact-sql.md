@@ -39,8 +39,8 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>引数  
- **\@ クッキー**  
- アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 クッキーは、 [sp_setapprole &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)によって作成されます。 **varbinary (8000)** 。  
+ **\@cookie**  
+ アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 クッキーは[sp_setapprole &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)によって作成されます。 **varbinary (8000)** 。  
   
 > [!NOTE]  
 >  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションは、今後のリリースでクッキーの戻り値のサイズが増加した場合にアプリケーションが引き続き正常に動作するように、 **varbinary (8000)** を引き続き予約する必要があります。  
@@ -48,8 +48,8 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか、 **sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。  
+## <a name="remarks"></a>Remarks  
+ **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか**sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。  
   
  アプリケーションロールの概要については、「[アプリケーションロール](../../relational-databases/security/authentication-access/application-roles.md)」を参照してください。  
   

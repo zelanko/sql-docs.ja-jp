@@ -29,9 +29,9 @@ ms.locfileid: "72782669"
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **DAC のアップグレード:**  [DAC の内容の表示](#ViewDACContents)、 [データベースの変更の表示](#ViewDBChanges)、 [アップグレード処理の表示](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
+2.  **DAC のアップグレード:**  [DAC の内容の表示](#ViewDACContents)、 [データベースの変更の表示](#ViewDBChanges)、 [アップグレード処理の表示](#ViewUpgradeActions)、 [DAC の比較](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> の前提条件  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、データベースに対して [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) を実行してください。また、ストアド プロシージャやその他のユーザー定義コードなど、データベースのコードを確認してください。  
   
 ##  <a name="ViewDACContents"></a> DAC の内容の表示  
@@ -168,7 +168,7 @@ $fileStream.Close()
   
  または、DAC を別々のフォルダーにアンパックします。 その後、WinDiff ユーティリティなどの比較ツールを使用して、相違を分析できます。  
   
-## <a name="see-also"></a>「  
- [オブジェクト エクスプローラー](data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [データ層アプリケーション](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)   
  [データ層アプリケーションのアップグレード](upgrade-a-data-tier-application.md)  

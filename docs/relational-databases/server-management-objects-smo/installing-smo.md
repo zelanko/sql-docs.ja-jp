@@ -35,7 +35,7 @@ ms.locfileid: "72041260"
 これは、SQL Server の各リリースの SQL Feature Pack の一部としてリリースされた SharedManagementObjects の後継です。 SMO を使用するアプリケーションは、代わりに NuGet パッケージを使用するように更新する必要があり、開発中のアプリケーションと共にバイナリが確実にインストールされるようにします。
 
 >>[!Important]
->>「[ファイルとバージョン番号](files-and-version-numbers.md)」ページで説明したように、SMO アセンブリを GAC にインストールすることはできません。 このようにすると、他のアプリケーションで問題が発生する可能性があります。これらのアプリケーションでも、これらのバージョンの SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio など) を使用します。
+>>「[ファイルとバージョン番号](files-and-version-numbers.md)」ページで説明したように、SMO アセンブリを GAC にインストールすることはできません。 これを行うと、他のアプリケーションで問題が発生する可能性があります。これらのアプリケーションは、これらのバージョンの SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio など) も使用します。
 
 ## <a name="installing-the-package"></a>パッケージのインストール
 
@@ -43,5 +43,5 @@ Nuget パッケージのインストールと使用の手順と例について�
   
 ## <a name="system-requirements"></a>システム要件
   
- SMO を実行するには @no__t 0 4.0 または .NET Core 2.0 が必要です。そのため、これを使用するアプリケーションでは、クライアントコンピューターのバージョンがインストールされていることを確認する必要があります。 NetFx SMO ライブラリと共にインストールされる一部のネイティブバイナリでは、VC 2013 ランタイムもインストールする必要があります。このランタイムはパッケージに含まれていません。 ターゲットアーキテクチャに適した再頒布可能パッケージは、 https://www.microsoft.com/download/details.aspx?id=40784 からダウンロードできます。
+ SMO では、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 または .NET Core 2.0 を実行する必要があるため、これを使用するアプリケーションでは、クライアントコンピューターのバージョンがインストールされていることを確認する必要があります。 NetFx SMO ライブラリと共にインストールされる一部のネイティブバイナリでは、VC 2013 ランタイムもインストールする必要があります。このランタイムはパッケージに含まれていません。 ターゲットアーキテクチャに適した再頒布可能パッケージを https://www.microsoft.com/download/details.aspx?id=40784 からダウンロードできます。
   

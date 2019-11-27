@@ -82,7 +82,7 @@ ms.locfileid: "73729323"
     </setting>  
     ```  
   
-3.  "ConnectionString" 設定下で "WorkflowTypeExtenders" 設定を追加して、ワークフロー ハンドラー アセンブリにタグ名を関連付けます。 例:  
+3.  "ConnectionString" 設定下で "WorkflowTypeExtenders" 設定を追加して、ワークフロー ハンドラー アセンブリにタグ名を関連付けます。 例 :  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

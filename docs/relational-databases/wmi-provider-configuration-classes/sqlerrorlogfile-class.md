@@ -45,9 +45,9 @@ class SQLErrorLogFile
 |InstanceName|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |LastModified|データ型: **datetime**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルの最終変更日。|  
 |LogFileSize|データ型: **uint32**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのサイズ (バイト単位)。|  
-|[名前]|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
+|[オブジェクト名]|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
@@ -82,7 +82,7 @@ Next
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  WMI を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログファイルに接続するには、ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  

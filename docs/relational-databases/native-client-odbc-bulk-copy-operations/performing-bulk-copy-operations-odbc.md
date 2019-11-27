@@ -49,7 +49,7 @@ ms.locfileid: "73785042"
   
  最小ログ記録の使用の詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降で bcp.exe を使用すると、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは発生しなかった状況でエラーが発生することがあります。 これは、新しいバージョンでは bcp.exe でデータ型が暗黙的に変換されなくなったためです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは、対象テーブルのデータ型が money データ型の場合、bcp.exe で数値データが money データ型に変換されました。 ただし、その際には、余分なフィールドは単純に切り捨てられていました。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、ファイルと対象テーブルのデータ型が一致しない場合、変換先のテーブルに合わせるために切り捨てが必要なデータがあると、bcp によってエラーが発生します。 このエラーを解決するには、対象のデータ型に合わせてデータを修正します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のリリースの bcp.exe を使用することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

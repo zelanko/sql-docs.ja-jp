@@ -20,7 +20,7 @@ ms.locfileid: "72797799"
 # <a name="manage-authentication-in-database-engine-powershell"></a>データベース エンジン PowerShell での認証の管理
   既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスへの接続に Windows 認証を使用します。 SQL Server 認証を使用するには、PowerShell 仮想ドライブを定義するか、`-Username` の `-Password` および `Invoke-Sqlcmd` パラメーターを指定します。  
   
-1.  **作業を開始する準備:**  [アクセス許可](#Permissions)  
+1.  **Before you begin:**  [Permissions](#Permissions)  
   
 2.  **認証を設定する方法:**  [仮想ドライブ](#SQLAuthVirtDrv)、 [–Password](#SQLAuthInvSqlCmd)  
   
@@ -82,7 +82,7 @@ $pwd = Read-Host -AsSecureString -Prompt "Password"
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [SQL Server PowerShell](sql-server-powershell.md)   
- [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd コマンドレット](../database-engine/invoke-sqlcmd-cmdlet.md)  

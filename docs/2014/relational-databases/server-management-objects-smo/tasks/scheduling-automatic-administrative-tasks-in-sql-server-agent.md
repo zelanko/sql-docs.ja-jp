@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 `operator` は Visual Basic キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
+ 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> は Visual Basic キーワードであるため、`operator` 型には角かっこが必要です。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBAgent3](SMO How to#SMO_VBAgent3)]  -->  
   
@@ -177,7 +177,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 `operator` は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
+ 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> は `operator` キーワードであるため、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 型には角かっこが必要です。  
   
 ```csharp
 {  
@@ -210,7 +210,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 `operator` は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
+ 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> は `operator` キーワードであるため、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 型には角かっこが必要です。  
   
 ```powershell
 #Get a server object which corresponds to the default instance  
@@ -280,6 +280,6 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [SQL Server エージェント](../../../ssms/agent/sql-server-agent.md)   
  [ジョブの実装](../../../ssms/agent/implement-jobs.md)  

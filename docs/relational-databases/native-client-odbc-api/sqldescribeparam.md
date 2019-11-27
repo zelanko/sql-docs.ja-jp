@@ -28,7 +28,7 @@ ms.locfileid: "73787107"
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で始まるデータベースエンジンの機能強化により、SQLDescribeParam は予想される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で SQLDescribeParam によって返される値とは異なる場合があります。 詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  
   
- また、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の新しい*Parametersizeptr*は、 [ODBC 仕様](https://go.microsoft.com/fwlink/?LinkId=207044)で定義されている、対応するパラメーターマーカーの列または式のサイズの定義に合わせて値を返すようになりました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、 *Parametersizeptr*は、型の**SQL_DESC_OCTET_LENGTH**の対応する値、または型の SQLBindParameter に指定された関係のない列サイズの値になる可能性があります。(**SQL_INTEGER**など) は無視する必要があります。  
+ また、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の新しい*Parametersizeptr*は、 [ODBC 仕様](https://go.microsoft.com/fwlink/?LinkId=207044)で定義されている、対応するパラメーターマーカーの列または式のサイズの定義に合わせて値を返すようになりました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、 *Parametersizeptr*は、型の**SQL_DESC_OCTET_LENGTH**の対応する値、または型の SQLBindParameter に指定された関係のない列サイズの値になる可能性があります。この値は無視する必要があります (**SQL_INTEGER**など)。  
   
  ドライバーは、次の状況での SQLDescribeParam の呼び出しをサポートしていません。  
   
@@ -77,7 +77,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
   
 ||*DataTypePtr*|*ParameterSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|------------------------|------------------------|  
-|datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8、10..16|0..7|  

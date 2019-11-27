@@ -27,13 +27,13 @@ ms.locfileid: "71952459"
  このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、レポート サーバー インスタンスに接続します。 詳細については[、 &#40;「&#41;Reporting Services Configuration Manager del](reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 > [!TIP]  
->  @ No__t-0 Configuration Manager (RSConfigTool .exe) は、"highestAvailable" の特権レベルでインストールされます。 この動作は仕様による結果です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API と通信する必要があります。 一部の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通信には、高いレベルまたは管理者の特権が必要です。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool .exe) は、"highestAvailable" の特権レベルでインストールされます。 この動作は仕様による結果です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API と通信する必要があります。 一部の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通信には、高いレベルまたは管理者の特権が必要です。  
   
  レポート サーバーに接続したときに、すべてのページ リンクがグレー表示されている場合は、レポート サーバー サービスが開始されていることを確認します。 **レポートサービスの状態:** "開始" にする必要があります。 また、サービスの状態を確認するには、管理ツールの [サービス] コンソール アプリケーションを使用します。  
   
 ## <a name="options"></a>および  
  **SQL Server インスタンス**  
- 現在接続しているレポート サーバー インスタンスに関する情報が表示されます。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスに基づいています。 既定のインスタンスは MSSQLSERVER です。 名前付きインスタンスは、セットアップ中に指定した値になります。 インスタンスの詳細については、@no__t オンラインブックの「 [SQL Server の複数のバージョンおよびインスタンスの操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)」を参照してください。  
+ 現在接続しているレポート サーバー インスタンスに関する情報が表示されます。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスに基づいています。 既定のインスタンスは MSSQLSERVER です。 名前付きインスタンスは、セットアップ中に指定した値になります。 インスタンスの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンラインブックの「 [SQL Server の複数のバージョンおよびインスタンスの操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
 >  SQL Server Express with Advanced Services の既定のインスタンスは SQLExpress です。  
@@ -47,7 +47,7 @@ ms.locfileid: "71952459"
   
 -   MSRS12.MSSQLSERVER  
   
- 既にインストールされているコンポーネントの2番目のインスタンス ([!INCLUDE[ssDE](../../includes/ssde-md.md)] など) をインストールし、そのインスタンスに Contoso という名前を付けた場合、**インスタンス ID**は mssql12.mssqlserver になります。製薬.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]など、既にインストールしたコンポーネントの2つ目のインスタンスをインストールし、そのインスタンスに Contoso という名前を付けた場合、**インスタンス ID**は mssql12.mssqlserver になります。製薬.  
   
  **のエディション**  
  エディション情報が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」を参照してください。  
@@ -67,12 +67,12 @@ ms.locfileid: "71952459"
  **[開始]**  
  レポート サーバー サービスを開始します。 たとえば、コンピューター名が変更された後でレポート サーバーを再度構成するときなど、構成を変更した後は、このサービスを再起動する必要があります。 URL 予約を再構成すると、サービスは自動的に再起動されます。 変更を取得するには、サービスを再起動する必要があります。  
   
- **[停止]**  
+ **停止**  
  レポート サーバー サービスを停止します。 サービスを停止すると、レポート サーバーの動作が停止します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンラインブックの「[レポートサーバーサービスの開始および停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services Configuration Manager の F1 ヘルプ&#40;トピック SSRS ネイティブ&#41;モード](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Reporting Services Configuration Manager &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Reporting Services Configuration Manager &#40;del&#41; ](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

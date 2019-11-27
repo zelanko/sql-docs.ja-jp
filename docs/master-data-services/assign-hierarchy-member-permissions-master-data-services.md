@@ -24,11 +24,11 @@ ms.locfileid: "73729776"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  階層メンバーに権限を割り当てて、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にあるデータを表示するためのアクセス権をユーザーまたはグループに付与します。  
+  階層メンバーに権限を割り当てて、**の** [エクスプローラー][!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 機能領域にあるデータを表示するためのアクセス権をユーザーまたはグループに付与します。  
   
  階層メンバーの権限はオプションです。 階層メンバーの権限は、必須であるモデル オブジェクトの権限に粒度を追加します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  

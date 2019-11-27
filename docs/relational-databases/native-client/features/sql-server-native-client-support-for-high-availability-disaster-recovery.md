@@ -92,7 +92,7 @@ ms.locfileid: "73788035"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC アプリケーションは、次に示した 3 つの関数のいずれかを使用して、接続を行うことができます。  
   
-|関数|説明|  
+|関数|[説明]|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** から返されるサーバーの一覧に VNN は含まれません。 確認できるのはサーバーの一覧だけです。スタンドアロン サーバーであるのか、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が有効な 2 つ以上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスターのうちのプライマリ サーバーまたはセカンダリ サーバーであるのかは示されません。 サーバーへの接続時にエラーが返された場合、接続先のサーバーの構成に **ApplicationIntent** 設定との互換性がないことが原因として考えられます。<br /><br /> **SQLBrowseConnect** は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が有効な 2 つ以上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のサーバーを認識しません。このため、**MultiSubnetFailover** 接続文字列キーワードは、**SQLBrowseConnect** では無視されます。|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** は、データ ソース名 (DSN) または接続プロパティを介して **ApplicationIntent** と **MultiSubnetFailover** の両方をサポートしています。|  
@@ -123,7 +123,7 @@ ms.locfileid: "73788035"
  **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** は **Application Intent** キーワードを格納できる入力接続文字列を受け取ります。  
   
- **IDBProperties:: GetProperties**  
+ **IDBProperties::GetProperties**  
  **IDBProperties::GetProperties** は、現在データ ソースに設定されているプロパティの値を取得します。  **Application Intent** の値は、DBPROP_INIT_PROVIDERSTRING プロパティおよび SSPROP_INIT_APPLICATIONINTENT プロパティを通じて取得できます。  
   
  **IDBProperties::SetProperties**  

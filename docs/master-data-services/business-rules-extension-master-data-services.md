@@ -21,7 +21,7 @@ ms.locfileid: "73728677"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ユーザー定義の SQL スクリプトを、事前に定義された条件とアクションの拡張機能として適用できます。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、ユーザー定義の SQL スクリプトを、事前に定義された条件とアクションの拡張機能として適用できます。  
   
 > [!NOTE]  
 >  すべてのスクリプトは、[usr] スキーマに定義する必要があります。  
@@ -70,7 +70,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |ユーザー|FULL|  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。  

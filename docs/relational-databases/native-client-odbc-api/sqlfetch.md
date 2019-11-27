@@ -31,7 +31,7 @@ ms.locfileid: "73786764"
  **Sqlfetch**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「 [LARGE CLR ユーザー定義&#40;型&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
+ [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

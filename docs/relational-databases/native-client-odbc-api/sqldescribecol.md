@@ -39,7 +39,7 @@ ms.locfileid: "73787256"
   
 ||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|---------------------|------------------------|  
-|datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8、10..16|0..7|  

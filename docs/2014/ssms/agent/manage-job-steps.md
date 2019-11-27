@@ -75,7 +75,7 @@ ms.locfileid: "72798222"
   
 -   コマンドが正常に終了した場合に返されるプロセス終了コード。  
   
--   実行するコマンドです。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、 **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"** など、プログラム名とそのプログラムの引数を指します。  
+-   実行するコマンド。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、 **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"** など、プログラム名とそのプログラムの引数を指します。  
   
     > [!NOTE]  
     >  システム パスまたはジョブ ステップの実行ユーザーのパスで指定されたディレクトリ内に、実行可能ファイルが存在しない場合は、実行可能ファイルの完全パスを指定する必要があります。  
@@ -89,7 +89,7 @@ ms.locfileid: "72798222"
   
  必要に応じて、ジョブ ステップのコマンドとして既存の [!INCLUDE[tsql](../../includes/tsql-md.md)] ファイルを開くことができます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを使用しません。 このジョブ ステップはジョブ ステップの所有者として実行されるか、ジョブ ステップの所有者が sysadmin 固定サーバー ロールのメンバーの場合には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントとして実行されます。 sysadmin 固定サーバー ロールのメンバーは、sp_add_jobstep ストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *パラメーターを使用して、別のユーザーのコンテキストで* ジョブ ステップが実行されるように指定することもできます。 詳細については、「 [sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)」を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを使用しません。 このジョブ ステップはジョブ ステップの所有者として実行されるか、ジョブ ステップの所有者が sysadmin 固定サーバー ロールのメンバーの場合には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントとして実行されます。 sysadmin 固定サーバー ロールのメンバーは、sp_add_jobstep ストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *パラメーターを使用して、別のユーザーのコンテキストで* ジョブ ステップが実行されるように指定することもできます。 詳細については、「 [transact-sql &#40;&#41;の sp_add_jobstep](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)」を参照してください。  
   
 > [!NOTE]  
 >  1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップに、複数のバッチを含めることができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップには埋め込み GO コマンドを含めることができます。  
@@ -198,18 +198,18 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |実行可能プログラムを使用してジョブ ステップを作成する方法について説明します。|[CmdExec ジョブ ステップの作成](create-a-cmdexec-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアクセス許可をリセットする方法について説明します。|[SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップを作成する方法について説明します。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップを作成する方法について説明します。|[Transact-SQL ジョブ ステップの作成](create-a-transact-sql-job-step.md)|  
 |Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント Transact-SQL ジョブ ステップのオプションを定義する方法について説明します。|[Transact-SQL ジョブ ステップのオプションの定義](define-transact-sql-job-step-options.md)|  
-|ActiveX スクリプト ジョブ ステップを作成する方法について説明します。|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
+|ActiveX スクリプト ジョブ ステップを作成する方法について説明します。|[ActiveX スクリプト ジョブ ステップの作成](create-an-activex-script-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Service のコマンドとクエリを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップを作成し、定義する方法について説明します。|[Analysis Services ジョブ ステップの作成](create-an-analysis-services-job-step.md)|  
-|ジョブの実行中にエラーが発生した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行する必要があるアクションについて説明します。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|ジョブの実行中にエラーが発生した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行する必要があるアクションについて説明します。|[ジョブ ステップの成功時または失敗時の動作の設定](set-job-step-success-or-failure-flow.md)|  
 |[ジョブ ステップのプロパティ] ダイアログ ボックスにジョブ ステップの詳細を表示する方法について説明します。|[ジョブ ステップ情報の表示](view-job-step-information.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップのログを削除する方法について説明します。|[ジョブ ステップのログの削除](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [dbo. sysjobstepslogs &#40;transact-sql&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [ジョブの作成](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

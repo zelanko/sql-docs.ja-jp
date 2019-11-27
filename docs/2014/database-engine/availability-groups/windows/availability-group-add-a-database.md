@@ -28,7 +28,7 @@ ms.locfileid: "72782898"
   
      [前提条件と制限](#Prerequisites)  
   
-     [[権限]](#Permissions)  
+     [Permissions](#Permissions)  
   
 -   **可用性グループにデータベースを追加する方法:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72782898"
   
 -   プライマリ レプリカがホストされるサーバー インスタンスにデータベースが存在し、データベースが可用性データベースの前提条件と制限に準拠している必要があります。 詳細については、「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ###  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
@@ -81,7 +81,7 @@ ms.locfileid: "72782898"
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
   
-     ここで、 *group_name* は可用性グループの名前、 *database_name* はグループに追加するデータベースの名前です。  
+     *group_name* は可用性グループの名前、 *database_name* はグループに追加するデータベースの名前です。  
   
      次の例では、 *MyDb3* データベースを *MyAG* 可用性グループに追加します。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72782898"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 3.  可用性グループにデータベースを追加した後、セカンダリ データベースをホストする各サーバー インスタンスで、対応するセカンダリ データベースを構成する必要があります。 詳細については、「[AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
@@ -136,7 +136,7 @@ Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"
 Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの作成と構成 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボード&#40;SQL Server Management Studio&#41;を使用する](use-the-always-on-dashboard-sql-server-management-studio.md)   

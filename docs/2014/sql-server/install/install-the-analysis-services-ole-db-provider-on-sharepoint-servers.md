@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
 ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952532"
@@ -49,9 +49,9 @@ ms.locfileid: "71952532"
 ##  <a name="bkmk_why"></a>OLE DB プロバイダーをインストールする必要がある理由  
  ファーム内のサーバーに OLE DB プロバイダーを手動でインストールしなければならないケースとしては、2 つのシナリオが挙げられます。  
   
- **最も一般的なシナリオは、** ファーム内のドキュメントライブラリに保存されている、古いバージョンと新しいバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックがある場合です。 組織内のアナリストが Excel 用の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の @no__t 0 バージョンを使用していて、それらのブックを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] @ no__t インストールに保存している場合、古いブックは機能しません。 この接続文字列は、プロバイダーの古いバージョンを参照します。これは、インストールしない限り、サーバー上には存在しません。 両方のバージョンをインストールすると、古いバージョンと新しいバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成された PowerPivot ブックに対してデータ アクセスが可能になります。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のセットアップでは [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンのプロバイダーはインストールされないため、以前のバージョンのブックを使用している場合には、これを手動でインストールする必要があります。  
+ **最も一般的なシナリオは、** ファーム内のドキュメントライブラリに保存されている、古いバージョンと新しいバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックがある場合です。 組織内のアナリストが [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel を使用していて、それらのブックを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インストールに保存した場合、古いブックは機能しません。 この接続文字列は、プロバイダーの古いバージョンを参照します。これは、インストールしない限り、サーバー上には存在しません。 両方のバージョンをインストールすると、古いバージョンと新しいバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成された PowerPivot ブックに対してデータ アクセスが可能になります。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のセットアップでは [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンのプロバイダーはインストールされないため、以前のバージョンのブックを使用している場合には、これを手動でインストールする必要があります。  
   
- **2 つ目のシナリオ**は、Excel Services を実行するサーバーが SharePoint ファーム内にあり、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ではない場合です。 このような場合には、Excel Services を実行しているアプリケーション サーバーを、新しいバージョンのプロバイダーに手動で更新する必要があります。 これは、PowerPivot for SharePoint インスタンスに接続するために必要です。 Excel Services で以前のバージョンのプロバイダーを使用している場合は、接続要求が失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートするために必要なすべてのコンポーネントが確実にインストールされるように、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] セットアップまたは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インストール パッケージ (spPowerPivot.msi) を使用してプロバイダーをインストールする必要があることに注意してください。  
+ **2 つ目のシナリオ**は、Excel Services を実行するサーバーが SharePoint ファーム内にあり、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]がない場合です。 このような場合には、Excel Services を実行しているアプリケーション サーバーを、新しいバージョンのプロバイダーに手動で更新する必要があります。 これは、PowerPivot for SharePoint インスタンスに接続するために必要です。 Excel Services で以前のバージョンのプロバイダーを使用している場合は、接続要求が失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートするために必要なすべてのコンポーネントが確実にインストールされるように、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] セットアップまたは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インストール パッケージ (spPowerPivot.msi) を使用してプロバイダーをインストールする必要があることに注意してください。  
   
   
 ##  <a name="bkmk_sql11"></a>SQL Server セットアップを使用して Excel Services サーバーに SQL Server 2012 OLE DB プロバイダーをインストールする  
@@ -101,13 +101,13 @@ ms.locfileid: "71952532"
   
 3.  **[詳細]** をクリックします。  
   
-4.  ファイルのバージョン情報が表示されます。 バージョンには 11.00 \<buildnumber が含まれている必要があります。  
+4.  ファイルのバージョン情報が表示されます。 バージョンには11.00 が含まれている必要があります。\<の > です。  
   
 5.  Windows\assembly フォルダーで、Microsoft.AnalysisServices.Xmla.dll、バージョン 11.0.0.0 が表示されることを確認します。  
   
   
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>PowerPivot for SharePoint インストールパッケージ (spPowerPivot .msi) を使用して SQL Server 2012 OLE DB プロバイダーをインストールする  
- @No__t-1 インストールパッケージ **(Sppowerpivot .msi)** を使用して、および Excel Services サーバーに @no__t 0 OLE DB プロバイダーをインストールします。  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インストールパッケージ **(Sppowerpivot .msi)** を使用して、および Excel Services サーバーに [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] OLE DB プロバイダーをインストールします。  
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71952532"
 ##  <a name="bkmk_kj"></a>以前のバージョンのブックをホストするために SQL Server 2008 R2 OLE DB プロバイダーをインストールする  
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンの MSOLAP.4 プロバイダーをインストールして、Microsoft.AnalysisServices.ChannelTransport.dll ファイルを登録するには、次の手順に従います。 ChannelTransport は Analysis Services OLE DB プロバイダーのサブコンポーネントです。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンのプロバイダーは、ChannelTransport を使用して接続を行うときにレジストリを読み取ります。 このファイルの登録は、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] サーバー上の [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] プロバイダーによって処理される接続にのみ必要なインストール後の手順です。  
   
-#### <a name="step-1-download-and-install-the-client-library"></a>手順 1:クライアント ライブラリのダウンロードとインストール  
+#### <a name="step-1-download-and-install-the-client-library"></a>手順 1: クライアント ライブラリのダウンロードとインストール  
   
 1.  [ [SQL Server 2008 R2 Feature Pack] ページ](https://go.microsoft.com/fwlink/?LinkId=159570)で Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 r2 を見つけます。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71952532"
   
 4.  Excel Services を実行しているが [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] はインストールされていないサーバーが他にファーム内にある場合は、前の手順を繰り返して 2008 R2 バージョンのプロバイダーを Excel Services コンピューターにインストールします。  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>手順 2:Microsoft.analysisservices.sharepoint.integration.dll ファイルを登録します。  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>手順 2: Microsoft.AnalysisServices.ChannelTransport.dll ファイルの登録  
   
-1.  regasm.exe ユーティリティを使用してファイルを登録します。 以前に regasm.exe を実行していない場合は、その親フォルダーである C:\Windows\Microsoft.NET\Framework64\v4.0.30319 @ no__t をシステムパス変数に追加します。  
+1.  regasm.exe ユーティリティを使用してファイルを登録します。 前に regasm.exe を実行していない場合は、その親フォルダーである C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\をシステムパス変数に追加します。  
   
 2.  管理者権限でコマンドプロンプトを開きます。  
   
@@ -153,9 +153,9 @@ ms.locfileid: "71952532"
   
 2.  さらに、ファイルのバージョンを確認することができます。  
   
-     に`C:\Program files\Microsoft Analysis Services\AS OLEDB\10`アクセスします。 **Msolap100**を右クリックし、 **[プロパティ]** を選択します。 **[詳細]** をクリックします。  
+     `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`にアクセスします。 **Msolap100**を右クリックし、 **[プロパティ]** を選択します。 **[詳細]** をクリックします。  
   
-     ファイルのバージョン情報が表示されます。 バージョンには 10.50 \<buildnumber が含まれている必要があります。  
+     ファイルのバージョン情報が表示されます。 バージョンには10.50 が含まれている必要があります。\<の > です。  
   
   
 ## <a name="see-also"></a>参照  

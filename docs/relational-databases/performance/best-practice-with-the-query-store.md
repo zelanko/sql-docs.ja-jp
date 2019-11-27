@@ -28,7 +28,7 @@ ms.locfileid: "73142777"
 ##  <a name="SSMS"></a> 最新の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用する  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、クエリ ストアを構成し、ワークロードに関する収集データを使用するための一連のユーザー インターフェイスが用意されています。 最新バージョンの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は[ここ](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)からダウンロードしてください。  
   
- トラブルシューティング シナリオでクエリ ストアを使用する方法の簡単な説明については、[Azure ブログのクエリ ストアに関する記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。@Azure  
+ トラブルシューティング シナリオでクエリ ストアを使用する方法の簡単な説明については、[\@Azure ブログのクエリ ストアに関する記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。  
   
 ##  <a name="Insight"></a> UseAzure SQL Database で Query Performance Insight を使用する  
  Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でクエリ ストアを実行する場合、**Query Performance Insight** を使用して、経時的に DTU 消費量を分析できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、CPU、メモリ、I/O など、すべてのクエリの詳細なリソース消費量を取得することができますが、Query Performance Insight を使用すると、データベースの DTU 全体の消費量に対する影響を簡単かつ効率的に確認できます。 詳細については、「 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)」を参照してください。
@@ -214,7 +214,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |**追跡対象のクエリ**|最も重要なクエリの実行をリアルタイムで追跡します。 このビューは通常、強制適用されたプランを持つクエリがあり、クエリのパフォーマンスを安定させる必要がある場合に使用します。|
   
 > [!TIP]
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[Azure ブログのクエリ ストアに関する記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。@Azure
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[Azure ブログのクエリ ストアに関する記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。\@Azure
   
  パフォーマンスが最適ではないクエリを特定する際のアクションは、問題の性質によって異なります。  
   

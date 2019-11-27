@@ -30,7 +30,7 @@ ms.locfileid: "73789398"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|メソッド|説明|  
+|メソッド|[説明]|  
 |------------|-----------------|  
 |[IRowsetFastLoad:: Commit &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)|挿入される行のバッチの終わりをマークし、挿入された行を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに書き込みます。|  
 |[IRowsetFastLoad:: InsertRow &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md)|一括コピー行セットに行を追加します。|  

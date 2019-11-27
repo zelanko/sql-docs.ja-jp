@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68122732"
 ---
-# <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
+# <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   HTTP プロトコルを使用するサーバー内で作成されたエンドポイントごとに 1 行のデータを保持します。  

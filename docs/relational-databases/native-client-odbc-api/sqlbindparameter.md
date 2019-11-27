@@ -50,7 +50,7 @@ ms.locfileid: "73787772"
  テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter による機能強化された日付と時刻のサポート  
- 日付型または時刻型のパラメーター値は、「 [C から SQL への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)」で説明されているように変換されます。 **Time**と**datetimeoffset**型のパラメーターには、対応する構造 (**SQL_SS_TIME2_STRUCT**および SQL_SS_ である場合は**SQL_C_DEFAULT**または**SQL_C_BINARY**として指定された*ValueType*が必要であることに注意してください。 **TIMESTAMPOFFSET_STRUCT**) が使用されます。  
+ 日付型または時刻型のパラメーター値は、「 [C から SQL への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)」で説明されているように変換されます。 **Time**と**datetimeoffset**型のパラメーターには、対応する構造 (**SQL_SS_TIME2_STRUCT**および**SQL_SS_TIMESTAMPOFFSET_STRUCT**) が使用されている場合、 **SQL_C_DEFAULT**または**SQL_C_BINARY**として指定された*ValueType*が必要です。  
   
  詳細については、「[日付と&#40;時刻&#41;の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   

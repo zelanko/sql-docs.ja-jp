@@ -30,7 +30,7 @@ ms.locfileid: "72782952"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **セカンダリ データベースを削除する方法:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72782952"
   
 -   このタスクは、セカンダリ レプリカ上でのみサポートされます。 データベースを削除するセカンダリ レプリカをホストするサーバー インスタンスに接続している必要があります。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  データベースに対する ALTER 権限が必要です。  
@@ -105,7 +105,7 @@ ms.locfileid: "72782952"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72782952"
  セカンダリ データベースを削除すると、可用性グループに参加しなくなり、削除されたセカンダリ データベースに関するすべての情報が可用性グループによって破棄されます。 削除されたセカンダリ データベースは RESTORING 状態になります。  
   
 > [!TIP]  
->  セカンダリ データベースを削除してしばらくの間は、そのデータベースを可用性グループに再度参加させて、データベース上で AlwaysOn データ同期を再開できることがあります。 詳細については、「 [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
+>  セカンダリ データベースを削除してしばらくの間は、そのデータベースを可用性グループに再度参加させて、データベース上で AlwaysOn データ同期を再開できることがあります。 詳細については、「[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)」をご覧ください。  
   
  この時点で、削除されたセカンダリ データベースを処理する別の方法は次のとおりです。  
   
@@ -127,6 +127,6 @@ ms.locfileid: "72782952"
   
      詳細については、「[データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループからのプライマリ データベースの削除 &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  

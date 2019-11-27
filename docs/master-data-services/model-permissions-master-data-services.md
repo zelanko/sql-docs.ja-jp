@@ -29,13 +29,13 @@ ms.locfileid: "73728967"
 > [!NOTE]  
 >  ユーザーがモデル管理者の場合、そのモデルはユーザー インターフェイスのすべての機能領域に表示されます。 それ以外の場合、モデルは **[エクスプローラー]** 機能領域にのみ表示されます。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
-|権限|説明|  
+|権限|[説明]|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーは、メンバー、属性、階層メンバーシップ、コレクション メンバーシップを読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成し、作成時に属性値を割り当てることができます。|  
 |**Update**|ユーザーは、メンバー、属性、階層メンバーシップ、コレクション メンバーシップを更新できます。|  
-|**Del**|ユーザーはメンバーを削除できます。|  
-|**Deny**|モデルに対するすべてのアクセスを拒否します。|  
+|**[削除]**|ユーザーはメンバーを削除できます。|  
+|**拒否**|モデルに対するすべてのアクセスを拒否します。|  
 |**管理**|モデルに対する管理者権限です。 管理者権限はモデル レベルでのみ使用可能です。|  
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除の各権限を割り当てた場合は、読み取り権限が自動的に割り当てられます。  
@@ -44,6 +44,6 @@ ms.locfileid: "73728967"
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
  [エンティティ権限 (マスター データ サービス)](../master-data-services/entity-permissions-master-data-services.md)   
- [コレクション アクセス許可 (マスター データ サービス)](../master-data-services/collection-permissions-master-data-services.md)  
+ [コレクション権限 (マスター データ サービス)](../master-data-services/collection-permissions-master-data-services.md)  
   
   

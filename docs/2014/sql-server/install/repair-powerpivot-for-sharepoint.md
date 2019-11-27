@@ -23,8 +23,8 @@ ms.locfileid: "71952405"
  詳細については、「 [PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;の構成または修復](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 インストール   を削除し](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)ます。  
- [PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  をインストールします。  
+ [SQL Server 2014 インストール  を削除し](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)ます。  
+ [PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  のインストール  
  [SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [PowerPivot for SharePoint 2010 のインストール](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

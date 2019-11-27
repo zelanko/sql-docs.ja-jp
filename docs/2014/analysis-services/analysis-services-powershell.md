@@ -18,7 +18,7 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72782652"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
-  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] には、Analysis Services PowerShell (SQLAS) プロバイダーとコマンドレットが含まれているので、Windows PowerShell を使用して Analysis Services オブジェクトの移動、管理、およびクエリを実行できます。  
+  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] には、Windows PowerShell を使用した Analysis Services オブジェクトの移動、管理、およびクエリを実行するための Analysis Services PowerShell (SQLAS) プロバイダーとコマンドレットが含まれています。  
   
  Analysis Services PowerShell は、次の要素で構成されています。  
   
@@ -39,14 +39,14 @@ ms.locfileid: "72782652"
 
 構文と例の詳細については、「 [PowerShell リファレンスの Analysis Services](/sql/analysis-services/powershell/analysis-services-powershell-reference)」を参照してください。
 
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> の前提条件  
  Windows PowerShell 2.0 がインストールされている必要があります。 新しいバージョンの Windows オペレーティング システムでは、既定でインストールされます。 詳細については、「 [Windows PowerShell 2.0 のインストール](https://msdn.microsoft.com/library/ff637750.aspx)」を参照してください。
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  SQL Server PowerShell (SQLPS) モジュールとクライアント ライブラリを含んだ SQL Server 機能をインストールする必要があります。 その最も簡単な方法は、SQL Server Management Studio をインストールすることです。SQL Server Management Studio をインストールすると、PowerShell の機能とクライアント ライブラリも自動的にインストールされます。 SQL Server PowerShell (SQLPS) モジュールには、Analysis Services オブジェクト階層の移動に使用する SQLASCmdlets モジュールと SQLAS プロバイダーなど、すべての SQL Server 機能用の PowerShell プロバイダーとコマンドレットが含まれています。  
   
- @No__t_1 プロバイダーとコマンドレットを使用するには、 **Sqlps**モジュールをインポートする必要があります。 SQLAS プロバイダーは、`SQLServer` プロバイダーの拡張機能です。 SQLPS モジュールをインポートするには、いくつかの方法があります。 詳細については、「 [SQLPS モジュールのインポート](../../2014/database-engine/import-the-sqlps-module.md)」を参照してください。  
+ `SQLAS` プロバイダーとコマンドレットを使用するには、 **Sqlps**モジュールをインポートする必要があります。 SQLAS プロバイダーは、`SQLServer` プロバイダーの拡張機能です。 SQLPS モジュールをインポートするには、いくつかの方法があります。 詳細については、「 [SQLPS モジュールのインポート](../../2014/database-engine/import-the-sqlps-module.md)」を参照してください。  
   
  Analysis Services インスタンスにリモート アクセスするには、リモート管理とファイル共有を有効にしておく必要があります。 詳細については、このトピックの「[リモート管理の有効化](#bkmk_remote)」を参照してください。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72782652"
 |表形式のインスタンスとデータベース|ローカルおよびリモート管理でサポートされます。<br /><br /> 詳細については、「 [PowerShell を使用したテーブルモデルの管理](https://go.microsoft.com/fwlink/?linkID=227685)」の2011年8月のブログを参照してください。|  
 |PowerPivot for SharePoint のインスタンスとデータベース|制限付きでサポートされます。 HTTP 接続と SQLAS プロバイダーを使用して、インスタンスとデータベースの情報を表示できます。<br /><br /> ただし、コマンドレットの使用はサポートされていません。 インメモリ PowerPivot データベースのバックアップと復元に Analysis Services PowerShell は使用しないでください。また、ロールの追加や削除、データの処理、任意の XMLA スクリプトの実行にも使用しないでください。<br /><br /> PowerPivot for SharePoint には、構成のために個別に提供される組み込みの PowerShell サポートがあります。 詳細については、「 [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)」を参照してください。|  
 |ローカル キューブへのネイティブ接続<br /><br /> "Data Source = c:\backup\test.cub"|サポートされていません。|  
-|SharePoint 内の BI セマンティック モデル (.bism) 接続ファイルへの HTTP 接続<br /><br /> "Data Source = http://server/shared_docs/name.bism"|サポートされていません。|  
+|SharePoint 内の BI セマンティック モデル (.bism) 接続ファイルへの HTTP 接続<br /><br /> "Data Source =http://server/shared_docs/name.bism"|サポートされていません。|  
 |PowerPivot データベースへの埋め込み接続<br /><br /> "Data Source = $Embedded $"|サポートされていません。|  
 |Analysis Services ストアド プロシージャ内のローカル サーバーのコンテキスト<br /><br /> "Data Source = *"|サポートされていません。|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "72782652"
   
  -Credential パラメーターは、ユーザー名とパスワードを指定する PSCredential オブジェクトを受け取ります。 Analysis Services PowerShell では、既存の接続のコンテキスト内で実行されるコマンドレットとは対照的に、-Credential パラメーターを使用して、Analysis Services への接続要求を行うコマンドレットを使用できます。 接続要求を行うコマンドレットとしては、Invoke-ASCmd、Backup-ASDatabase、Restore-ASDatabase などが挙げられます。 これらのコマンドレットでは、次の条件が満たされている場合、-Credential パラメーターを使用できます。  
   
-1.  サーバーが HTTP アクセス用に構成されている (つまり、Analysis Services に接続する際は、IIS が接続を処理し、ユーザー名とパスワードを読み取り、対応するユーザー ID の権限を借用する)。 詳細については、「 [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)」をご覧ください。  
+1.  サーバーが HTTP アクセス用に構成されている (つまり、Analysis Services に接続する際は、IIS が接続を処理し、ユーザー名とパスワードを読み取り、対応するユーザー ID の権限を借用する)。 詳細については、「[インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)」を参照してください。  
   
 2.  Analysis Services の HTTP アクセス用に作成された IIS 仮想ディレクトリが、基本認証を使用するように構成されている。  
   
@@ -148,7 +148,7 @@ Remove-Variable -Name pwd
   
 1.  ローカル コンピューターとリモート コンピューターの両方で、クライアント ツールとサーバー ツールが [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] のバージョンであることを確認します。  
   
-2.  Analysis Services インスタンスをホストしているリモート サーバーで、Windows ファイアウォールの TCP ポート 2383 を開きます。 Analysis Services を名前付きインスタンスとしてインストールした場合やカスタム ポートを使用している場合は、ポート番号は異なります。 詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
+2.  Analysis Services インスタンスをホストしているリモート サーバーで、Windows ファイアウォールの TCP ポート 2383 を開きます。 Analysis Services を名前付きインスタンスとしてインストールした場合やカスタム ポートを使用している場合は、ポート番号は異なります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
 3.  リモート サーバーで、リモート プロシージャ コール (RPC) サービス、TCP/IP NetBIOS Helper サービス、WMI (Windows Management Instrumentation) サービス、Windows リモート管理 (WS-Management) サービスが開始されていることを確認します。  
   
@@ -201,7 +201,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Http 接続は、このトピックの手順を使用して http アクセス用にサーバーを構成した場合に便利です。 [ &#40;インターネットインフォメーションサービス&#41; IIS 8.0 の Analysis Services への http アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- @No__t_0 のサーバー URL を想定した場合、接続は次のようになります。  
+ http://localhost/olap/msmdpump.dllのサーバー URL を想定した場合、接続は次のようになります。  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -273,9 +273,9 @@ Restart-Service mssqlserverolapservice
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [SQL Server PowerShell のインストール](../database-engine/install-windows/install-sql-server-powershell.md)   
- [PowerShell を使用したテーブルモデルの管理 (ブログ)](https://go.microsoft.com/fwlink/?linkID=227685)    
+ [PowerShell を使用したテーブルモデルの管理 (ブログ)](https://go.microsoft.com/fwlink/?linkID=227685)   
  [インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

@@ -20,18 +20,18 @@ ms.locfileid: "72890526"
 
   次の表に、データマイニング拡張機能 (DMX) のデータマイニングデータ定義言語 (DDL) に含まれるステートメントの一覧を示します。  
   
-|ステートメントから削除してください。|Description|  
+|Statement|[説明]|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)|データベースに新しいマイニング構造を作成します。|  
 |[マイニング構造&#40;DMX の変更&#41;](../dmx/alter-mining-structure-dmx.md)|既存のマイニング構造にマイニング モデルを追加します。|  
 |[マイニングモデル&#40;DMX の作成&#41;](../dmx/create-mining-model-dmx.md)|データベースに新しいマイニング構造とマイニングモデルを作成します。|  
 |[DROP MINING MODEL &#40;DMX&#41;](../dmx/drop-mining-model-dmx.md)|データベースからマイニングモデルを削除します。|  
 |[マイニング構造&#40;DMX の削除&#41;](../dmx/drop-mining-structure-dmx.md)|データベースからマイニング構造を削除します。|  
-|[エクスポート &#40;DMX&#41;](../dmx/export-dmx.md)|マイニングモデル、マイニング構造、および関連オブジェクトを abf ファイルにエクスポートします。|  
-|[インポート &#40;DMX&#41;](../dmx/import-dmx.md)|マイニングモデル、マイニング構造、および関連オブジェクトを abf ファイルからインポートします。|  
-|[&#40;DMX の選択&#41;](../dmx/select-into-dmx.md)|既存のマイニング モデルのコピーを作成します。|  
+|[EXPORT (DMX)](../dmx/export-dmx.md)|マイニングモデル、マイニング構造、および関連オブジェクトを abf ファイルにエクスポートします。|  
+|[IMPORT (DMX)](../dmx/import-dmx.md)|マイニングモデル、マイニング構造、および関連オブジェクトを abf ファイルからインポートします。|  
+|[SELECT &#40;DMX&#41;](../dmx/select-into-dmx.md)|既存のマイニング モデルのコピーを作成します。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [データマイニング拡張&#40;機能&#41; DMX データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   

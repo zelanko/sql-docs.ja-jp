@@ -39,25 +39,25 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` はパブリッシャーの名前です。 *publisher* は **sysname** 、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
 `[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname** 、既定値はありません。  
   
-`[ @publication = ] 'publication'` はパブリケーションの名前です。 *publication*は**sysname**で、既定値は all です。これはすべてのサブスクリプションに再初期化のマークを付けます。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication*は**sysname**で、既定値は all です。これはすべてのサブスクリプションに再初期化のマークを付けます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription**は、トランザクションレプリケーションで使用します。  
   
  **sp_reinitpullsubscription**は、ピアツーピアトランザクションレプリケーションではサポートされていません。  
   
- **sp_reinitpullsubscription**は、次のディストリビューションエージェントの実行時に、サブスクライバーからサブスクリプションを再初期化するために呼び出すことができます。  
+ ディストリビューションエージェントの次回の実行時に、サブスクリプションを再初期化するために、サブスクライバーから**sp_reinitpullsubscription**を呼び出すことができます。  
   
- **@No__t**に**false**を指定して作成されたパブリケーションに対するサブスクリプションは、サブスクライバーから再初期化することはできません。  
+ **\@immediate_sync**の値が**false**で作成されたパブリケーションに対するサブスクリプションは、サブスクライバーから再初期化することはできません。  
   
- プルサブスクリプションを再初期化するには、サブスクライバーで**sp_reinitpullsubscription**を実行するか、パブリッシャーで**sp_reinitsubscription**を実行します。  
+ プルサブスクリプションを再初期化するには、サブスクライバーで**sp_reinitpullsubscription**を実行するか、パブリッシャーで**sp_reinitsubscription**します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
@@ -65,7 +65,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_reinitpullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

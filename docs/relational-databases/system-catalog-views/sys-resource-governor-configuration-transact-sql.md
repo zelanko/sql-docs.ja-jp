@@ -41,7 +41,7 @@ ms.locfileid: "73982615"
  カタログ ビューには、メタデータに格納されているリソース ガバナー構成が表示されます。 メモリ内の構成を表示するには、対応する動的管理ビューを使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- コンテンツを表示するには VIEW ANY DEFINITION 権限が必要です。コンテンツを変更するには CONTROL SERVER 権限が必要です。  
+ 内容を表示するには VIEW ANY DEFINITION 権限が必要です。内容を変更するには CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、格納されているメタデータ値と Resource Governor 構成のメモリ内の値を取得して比較する方法を示します。  

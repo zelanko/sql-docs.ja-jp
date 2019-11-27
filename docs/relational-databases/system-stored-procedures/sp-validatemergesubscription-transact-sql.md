@@ -1,5 +1,5 @@
 ---
-title: sp_validatemergesubscription (Transact-SQL) |Microsoft Docs
+title: sp_validatemergesubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -25,7 +25,7 @@ ms.locfileid: "73632983"
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたサブスクリプションに対して検証を実行します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
+  指定されたサブスクリプションに対して検証を実行します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,17 +40,15 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-**[\@publication =** ] **'***パブリケーション***'**
- パブリケーションの名前です。 *publication* は **sysname** 、既定値はありません。  
-
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname** 、既定値はありません。  
   
 `[ @subscriber = ] 'subscriber'` はサブスクライバーの名前です。 *subscriber*は**sysname**、既定値はありません。  
   
 `[ @subscriber_db = ] 'subscriber_db'` サブスクリプション データベースの名前です。 *subscriber_db*は**sysname**、既定値はありません。  
   
-`[ @level = ] level`実行する検証の種類を示します。 *level*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
+`[ @level = ] 'level'` は、実行する検証の種類です。 *レベル*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
-|レベルの値|説明|  
+|レベルの値|[説明]|  
 |-----------------|-----------------|  
 |**1**|行数のみの検証。|  
 |**2**|行数とチェックサムの検証。|  
@@ -59,7 +57,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergesubscription**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -67,9 +65,7 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
-
- [レプリケートされたデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
-
+ [レプリケート](../../relational-databases/replication/validate-data-at-the-subscriber.md)されたデータの検証   
+ [sp_validatemergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

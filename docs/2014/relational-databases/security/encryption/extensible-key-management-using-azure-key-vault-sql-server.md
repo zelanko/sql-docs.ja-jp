@@ -75,9 +75,9 @@ ms.locfileid: "72798057"
   
 3.  **SQL Server で使用する Azure Active Directory のサービス プリンシパルを取得する:** Microsoft クラウド サービスにサインアップする時点で、組織は Azure Active Directory を取得します。 **が資格情報コンテナーにアクセスする時に (Azure Active Directory に対して自身を認証するために) 使用する** サービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を Azure Active Directory 内に作成します。  
   
-    -   で暗号化を使用するよう構成するときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者が資格情報コンテナーにアクセスするために、1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。  
+    -   **で暗号化を使用するよう構成するときに** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者が資格情報コンテナーにアクセスするために、1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。  
   
-    -   の暗号化で使用するラップ解除キーを取得するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] が資格情報コンテナーにアクセスするときに、もう 1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。  
+    -   **の暗号化で使用するラップ解除キーを取得するために** [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] が資格情報コンテナーにアクセスするときに、もう 1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。  
   
      アプリケーションを登録してサービス プリンシパルを生成する方法の詳細については、「 **Azure Key Vault の使用を開始する** 」の「 [アプリケーションを Azure Active Directory に登録する](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションをご覧ください。 この登録プロセスからは、Azure Active Directory の **サービス プリンシパル** ごとに、 **アプリケーション ID**( **クライアント ID** とも呼ばれる) および **認証キー**( **シークレット**とも呼ばれる) が返されます。 `CREATE CREDENTIAL` ステートメントで使用する場合は、**クライアント ID**からハイフンを削除する必要があります。 以下のスクリプトで使用するために、これらの情報を記録しておきます。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72798057"
   
     -   [Azure Key Vault の使用を開始する](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   PowerShell の [Azure Key Vault コマンドレット](https://docs.microsoft.com/powershell/module/azurerm.keyvault)のリファレンス  
+    -   PowerShell の [Azure Key Vault コマンドレット](https://docs.microsoft.com/powershell/module/azurerm.keyvault) のリファレンス  
   
 ##  <a name="Step2"></a>手順 2: SQL Server コネクタをインストールする  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのダウンロードとインストールは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行います。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)からダウンロードして入手できます。  " **SQL Server Connector for Microsoft Azure Key Vault**" を検索して、詳細やシステム要件、インストール方法を確認し、コネクタのダウンロードを選択し、 **[実行]** を使用してインストールを開始します。 ライセンスを確認し、ライセンスに同意して続行します。  
@@ -107,7 +107,7 @@ ms.locfileid: "72798057"
   
  インストールを完了すると、以下のものがコンピューターにインストールされています。  
   
--   **Microsoft.AzureKeyVaultService.EKM.dll**:これは、CREATE CRYPTOGRAPHIC PROVIDER ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録する必要のある暗号化 EKM プロバイダー DLL です。  
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: これは、CREATE CRYPTOGRAPHIC PROVIDER ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録する必要のある暗号化 EKM プロバイダー DLL です。  
   
 -   **Azure Key Vault SQL Server コネクタ**:これは、暗号化 EKM プロバイダーが資格情報コンテナーと通信できるようにする Windows サービスです。  
   
@@ -341,7 +341,7 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   

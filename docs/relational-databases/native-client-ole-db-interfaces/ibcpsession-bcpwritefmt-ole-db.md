@@ -36,7 +36,7 @@ HRESULT BCPWriteFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) メソッドの呼び出しでは、データ ファイルの形式を定義します。 **BCPWriteFmt** メソッドでは、この定義を pwszFormatFile 引数で参照されるファイルに保存します。  
   
  **BCPWriteFmt** メソッドでは、XML 形式またはテキスト形式のいずれかの形式でフォーマット ファイルを保存できます。 そのためには、BCP_OPTION_XML 制御オプションを指定して [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) メソッドを使用する必要があります。  

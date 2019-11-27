@@ -28,7 +28,7 @@ ms.locfileid: "73786198"
  テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Sqlparamdata](https://go.microsoft.com/fwlink/?LinkId=80706)   
+ [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=80706)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

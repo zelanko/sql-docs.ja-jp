@@ -22,20 +22,20 @@ ms.locfileid: "71952092"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|SharePoint モード[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** ます。|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>説明  
- @no__t 0 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、SharePoint 2007 にアップグレードまたはインストールされません。 アップグレードはブロックされます。  
+## <a name="description"></a>[説明]  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、SharePoint 2007 にアップグレードまたはインストールされません。 アップグレードはブロックされます。  
   
 ## <a name="corrective-action"></a>修正措置  
  アップグレードを続行するには、SharePoint 2007 をアンインストールするか、SharePoint 2007 を SharePoint 2010 製品にアップグレードする必要があります。 SharePoint のインストールを更新した後、アップグレード アドバイザーを再実行して、他にアップグレードに関する問題がないことを確認します。  
   
  SharePoint 2007 から SharePoint 2013 に直接アップグレードすることはできません。 ただし、"ダブルホップ" データベースアタッチと呼ばれるものを、Office SharePoint Server 2007 から SharePoint Server 2010 にアップグレードした後、SharePoint server 2010 から SharePoint Server 2013 にアップグレードすることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アップグレードに関する&#40;問題の Reporting Services アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

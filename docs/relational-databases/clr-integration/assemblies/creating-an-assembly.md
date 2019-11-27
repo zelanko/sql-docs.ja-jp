@@ -28,7 +28,7 @@ ms.locfileid: "72907395"
   ストアド プロシージャやトリガーなどのマネージド データベース オブジェクトは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 マネージ DLL アセンブリは、アセンブリによって提供される機能を使用する前に [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録する必要があります。 アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録するには、CREATE ASSEMBLY ステートメントを使用します。 ここでは、CREATE ASSEMBLY ステートメントを使用してアセンブリをデータベースに登録する方法と、アセンブリのセキュリティ設定を指定する方法について説明します。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY ステートメント  
- データベースにアセンブリを作成するには、CREATE ASSEMBLY ステートメントを使用します。 次に例を示します。  
+ データベースにアセンブリを作成するには、CREATE ASSEMBLY ステートメントを使用します。 以下に例を示します。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -50,7 +50,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   呼び出し先または参照先のアセンブリが同じデータベースに作成されている。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>アセンブリ作成時のセキュリティの指定  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにアセンブリを作成する場合は、コードで**SAFE**、 **EXTERNAL_ACCESS**、 **UNSAFE**の3種類のセキュリティレベルのいずれかを指定できます。 **CREATE ASSEMBLY**ステートメントを実行すると、コードアセンブリに対して特定のチェックが実行され、アセンブリがサーバーに登録できなくなる可能性があります。 詳細については、 [CodePlex](https://msftengprodsamples.codeplex.com/)の Impersonation サンプルを参照してください。  
+ アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに作成する場合は、コードを実行できる3種類のセキュリティレベル ( **SAFE**、 **EXTERNAL_ACCESS**、 **UNSAFE**) のいずれかを指定できます。 **CREATE ASSEMBLY**ステートメントを実行すると、コードアセンブリに対して特定のチェックが実行され、アセンブリがサーバーに登録できなくなる可能性があります。 詳細については、 [CodePlex](https://msftengprodsamples.codeplex.com/)の Impersonation サンプルを参照してください。  
   
  **SAFE**は既定のアクセス許可セットであり、ほとんどのシナリオで機能します。 特定のセキュリティ レベルを指定するには、CREATE ASSEMBLY ステートメントの構文を次のように変更します。  
   
@@ -74,17 +74,17 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  **UNSAFE** code アクセス許可は、アセンブリが安全であることが保証されていない場合、または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API などの制限されたリソースへの追加アクセスが必要な場合に適しています。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で**EXTERNAL_ACCESS**または**UNSAFE**アセンブリを作成するには、次の2つの条件のいずれかが満たされている必要があります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で**EXTERNAL_ACCESS**または**安全でない**アセンブリを作成するには、次の2つの条件のいずれかが満たされている必要があります。  
   
-1.  アセンブリが、厳密な名前で署名されているか、または証明書を使用して Authenticode で署名されている。 この厳密な名前 (または証明書) は、非対称キー (または証明書) として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内に作成されます。また、対応するログイン **(外部アクセス**アセンブリの場合) または**UNSAFE アセンブリ**のアクセス許可 (の場合) が含まれています。安全でないアセンブリ)。  
+1.  アセンブリが、厳密な名前で署名されているか、または証明書を使用して Authenticode で署名されている。 この厳密な名前 (または証明書) は、非対称キー (または証明書) として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内に作成されます。また、対応するログイン **(外部アクセス**アセンブリの場合) または**unsafe アセンブリ**のアクセス許可 (unsafe アセンブリの場合) が含まれています。  
   
-2.  データベース所有者 (DBO) に**外部アクセスアセンブリ**(**外部アクセス**アセンブリの場合) または**安全でないアセンブリ**( **unsafe**アセンブリの場合) アクセス許可があり、データベースの信頼可能な[データベースプロパティ](../../../relational-databases/security/trustworthy-database-property.md)がに**設定されている。ON**。  
+2.  データベース所有者 (DBO) に**外部アクセスアセンブリ**(**外部アクセス**アセンブリの場合) または**安全でないアセンブリ**( **unsafe**アセンブリの場合) アクセス許可があり、データベースの信頼可能な[データベースプロパティ](../../../relational-databases/security/trustworthy-database-property.md)が**ON**に設定されている。  
 
  上に示した 2 つの条件は、アセンブリの読み込み時 (実行も含む) にもチェックされます。 アセンブリを読み込むには、これらの条件の少なくとも 1 つが満たされている必要があります。  
   
  サーバープロセスで共通言語ランタイム (CLR) コードを実行する場合にのみ、データベースの[信頼可能データベースプロパティ](../../../relational-databases/security/trustworthy-database-property.md)を**on**に設定しないことをお勧めします。 代わりに、master データベースのアセンブリ ファイルから非対称キーを作成してください。 その後、この非対称キーにマップされたログインを作成する必要があります。また、このログインには、 **EXTERNAL ACCESS assembly**権限または**UNSAFE assembly**権限が許可されている必要があります。  
   
- 次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントでは、非対称キーを作成し、ログインをこのキーにマップしてから、ログインに**EXTERNAL_ACCESS**権限を許可するために必要な手順を実行します。 次に示す [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、CREATE ASSEMBLY ステートメントを実行する前に実行する必要があります。  
+ 次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントでは、非対称キーを作成し、ログインをこのキーにマップした後、ログインに**EXTERNAL_ACCESS**権限を付与するために必要な手順を実行します。 次に示す [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、CREATE ASSEMBLY ステートメントを実行する前に実行する必要があります。  
   
 ```  
 USE master;   
@@ -129,7 +129,7 @@ WITH PERMISSION_SET = UNSAFE;
   
  各設定のアクセス許可の詳細については、「 [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [アセンブリ](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  の変更  
  [アセンブリ](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)  の削除  

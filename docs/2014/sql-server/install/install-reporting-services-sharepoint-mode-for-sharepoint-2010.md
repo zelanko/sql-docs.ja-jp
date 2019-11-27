@@ -31,7 +31,7 @@ ms.locfileid: "72798349"
   
 
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> の前提条件  
   
 -   > [!IMPORTANT]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを構成および管理するために、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用するまたはサポートする必要はなくなりました。 SharePoint モードでレポート サーバーを構成するには、SharePoint サーバーの全体管理を使用します。 詳細については、「 [Reporting Services SharePoint サービスアプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)」を参照してください。  
@@ -245,7 +245,7 @@ ms.locfileid: "72798349"
 ### <a name="activate-the-file-sync-feature"></a>ファイル同期機能のアクティブ化  
  ユーザーがパブリッシュ済みレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合は、レポート サーバーのファイル同期機能が役立ちます。 ファイル同期機能では、レポート サーバー カタログとドキュメント ライブラリのアイテムの同期が、より頻繁に行われます。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)」をご覧ください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [SQL Server 2012  の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)  
  [Reporting Services の SharePoint サービスとサービス アプリケーション](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  

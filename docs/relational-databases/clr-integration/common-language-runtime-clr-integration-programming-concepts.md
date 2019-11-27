@@ -66,8 +66,8 @@ ms.locfileid: "70212389"
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  CLR オブジェクトを使用する使用シナリオとコード サンプルについて説明します。  
   
-## <a name="see-also"></a>関連項目  
- [アセンブリ&#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>参照  
+ [アセンブリ&#40;データベースエンジン&#41; ](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [.NET Framework SDK のインストール](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

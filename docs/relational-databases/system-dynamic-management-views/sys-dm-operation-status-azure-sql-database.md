@@ -1,5 +1,5 @@
 ---
-title: システム状態 (Azure SQL Database) (_r) |Microsoft Docs
+title: dm_operation_status (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -32,7 +32,7 @@ ms.locfileid: "70911203"
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] サーバーのデータベースに対して実行される操作に関する情報を返します。  
   
-|列名|データ型|説明|  
+|列名|[データ型]|[説明]|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|操作の ID。 NULL 以外です。|  
 |resource_type|**int**|操作が実行される対象のリソースの種類を示します。 NULL 以外です。 現在のリリースでは、このビューが追跡するのは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に対して実行される操作のみであり、これに対応する整数値は 0 です。|  
@@ -53,8 +53,8 @@ ms.locfileid: "70911203"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、サーバーレベルプリンシパルログインの**master**データベースでのみ使用できます。  
   
-## <a name="remarks"></a>コメント  
- このビューを使用するには、 **master**データベースに接続している必要があります。 サーバーの[!INCLUDE[ssSDS](../../includes/sssds-md.md)] **master**データベースの[!INCLUDE[ssSDS](../../includes/sssds-md.md)]ビューを使用して、に対して実行される次の操作の状態を追跡します。 `sys.dm_operation_status`  
+## <a name="remarks"></a>Remarks  
+ このビューを使用するには、 **master**データベースに接続している必要があります。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーの**master**データベースの `sys.dm_operation_status` ビューを使用して、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行される次の操作の状態を追跡します。  
   
 -   データベースの作成  
   
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_operation_status
 ```  
   
 ## <a name="see-also"></a>参照  
- [Geo レプリケーションの動的管理ビューおよび関数&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [システムの状態&#40;の Azure SQL Database (_d)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [レプリケーションリンク&#40;(_s) Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [Geo レプリケーションの動的管理ビューおよび関数&#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [dm_geo_replication_link_status &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [geo_replication_links &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

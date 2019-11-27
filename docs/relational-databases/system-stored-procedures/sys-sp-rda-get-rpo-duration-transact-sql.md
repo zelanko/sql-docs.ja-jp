@@ -47,11 +47,11 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="permissions"></a>アクセス許可    
  Db_owner アクセス許可が必要です。    
     
-## <a name="remarks"></a>コメント    
- Sp_rda_set_rpo_duration を実行して値を変更します。 [ &#40;&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)    
+## <a name="remarks"></a>Remarks    
+ [Sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)を実行して値を変更します。    
     
 ## <a name="see-also"></a>参照    
- [sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [sp_rda_set_rpo_duration &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [Stretch 対応データベースの復元 (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

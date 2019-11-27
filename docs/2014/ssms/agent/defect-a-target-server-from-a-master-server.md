@@ -30,7 +30,7 @@ ms.locfileid: "72783219"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **マスター サーバーからターゲット サーバーの参加を解除するために使用するもの:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72783219"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  このストアド プロシージャを実行するには、`sysadmin` 固定サーバー ロールのメンバーであることが必要です。  
@@ -71,12 +71,12 @@ ms.locfileid: "72783219"
 sp_msx_defect ;  
 ```  
   
- 詳細については、「 [sp_msx_defect &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)」を参照してください。  
+ 詳細については、「 [transact-sql &#40;&#41;の sp_msx_defect](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)」を参照してください。  
   
 ##  <a name="PowerShellProcedure"></a>SQL Server 管理オブジェクト (SMO) の使用  
- @No__t_0 を使用します。  
+ `MsxDefect Method`を使用します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [マルチサーバー環境の作成](create-a-multiserver-environment.md)   
  [エンタープライズ全体の管理の自動化](automated-administration-across-an-enterprise.md)   
  [マスター サーバーからの複数のターゲット サーバーの参加の解除](defect-multiple-target-servers-from-a-master-server.md)  

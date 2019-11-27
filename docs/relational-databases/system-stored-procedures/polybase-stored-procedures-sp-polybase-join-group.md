@@ -55,8 +55,8 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="remarks"></a>コメント  
- ストアドプロシージャを実行した後、PolyBase エンジンをシャットダウンし、マシン上の PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **_exec_compute_nodes**。  
+## <a name="remarks"></a>Remarks  
+ ストアドプロシージャを実行した後、PolyBase エンジンをシャットダウンし、マシン上の PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>例  
  この例では、現在のコンピューターを計算ノードとして PolyBase グループに参加させます。  ヘッドノードの名前は**HST01**で、ヘッドノード上の SQL Server インスタンスの名前は**MSSQLSERVER**です。  
@@ -65,7 +65,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

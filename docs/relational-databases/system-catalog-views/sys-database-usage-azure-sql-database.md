@@ -30,26 +30,26 @@ ms.locfileid: "70155540"
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注:これは Azure SQL Database V11 にのみ適用されます。**  
+  **注: これは Azure SQL Database V11 にのみ適用されます。**  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー上のデータベースの数、種類、および期間を一覧表示します。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバー上のデータベースの数、種類、および期間を一覧表示します。  
   
  **Database_usage**ビューには、次の列が含まれています。  
   
-|列名|説明|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |time|使用状況イベントが発生した日付。|  
-|sku|データベースのサービス階層の種類。**Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
+|sku|データベースのサービス階層の種類: **Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
 |quantity|その日に存在していた SKU の種類のデータベースの最大数。|  
   
 ## <a name="permissions"></a>アクセス許可  
  このビューへの読み取り専用アクセスは、 **master**データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
-## <a name="remarks"></a>コメント  
- **Database_usage**ビューは、サブスクリプションの日ごとに1つの行を返します。  
+## <a name="remarks"></a>Remarks  
+ **Database_usage**ビューでは、サブスクリプションの日ごとに1つの行が返されます。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Database の料金詳細](https://go.microsoft.com/fwlink/?LinkID=394978)   
+## <a name="see-also"></a>参照  
+ [SQL Database 料金の詳細](https://go.microsoft.com/fwlink/?LinkID=394978)   
  [Azure SQL Database のアカウントと課金](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

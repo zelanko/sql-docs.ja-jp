@@ -35,7 +35,7 @@ ms.locfileid: "73787792"
  大きな値のデータ型の場合、ユーザーが指定したバッファーのサイズが列の値全体を保持するのに十分ではない場合、 **SQL_SUCCESS_WITH_INFO**が返され、"文字列データ;"右切り捨て" 警告が発行されます。 **StrLen_or_IndPtr**引数には、バッファーに格納されている文字数/バイト数が含まれます。  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>SQLBindCol による機能強化された日付と時刻のサポート  
- Date 型または time 型の結果列の値は、「 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」で説明されているように変換されます。Time 列と datetimeoffset 列を対応する構造 (**SQL_SS_TIME2_STRUCT**および**SQL_SS_TIMESTAMPOFFSET_STRUCT**) として取得するには、 *TargetType*を**SQL_C_DEFAULT**またはとして指定する必要があることに注意してください**SQL_C_BINARY**.  
+ Date 型または time 型の結果列の値は、「 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」で説明されているように変換されます。Time 列と datetimeoffset 列を対応する構造 (**SQL_SS_TIME2_STRUCT**および**SQL_SS_TIMESTAMPOFFSET_STRUCT**) として取得するには、 *TargetType*を**SQL_C_DEFAULT**または**SQL_C_BINARY**として指定する必要があることに注意してください。  
   
  詳細については、「[日付と&#40;時刻&#41;の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   

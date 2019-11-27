@@ -35,7 +35,7 @@ ms.locfileid: "71952543"
  任意の Windows ユーザー アカウントを使用できます。 最適な結果を得るには、読み取り権限とネットワーク ログオン権限のあるアカウントを選択し、他のコンピューターへの接続がサポートされるようにします。 アカウントには、レポートで使用する外部画像またはデータ ファイルに対する読み取り権限が必要です。 すべてのレポート データ ソースと外部画像がレポート サーバー コンピューターに格納されていない場合は、ローカル アカウントを指定しないでください。 アカウントは自動レポート処理専用に使用してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] を使用しているときは、レポートで外部画像を参照していて、その画像ファイルにアクセスする権限が必要な場合のみ、このアカウントを構成する必要があります。 SQL Server Express は、リモート サーバーへのデータ ソース接続をサポートしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」を参照してください。  
+>  [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] を使用しているときは、レポートで外部画像を参照していて、その画像ファイルにアクセスする権限が必要な場合のみ、このアカウントを構成する必要があります。 SQL Server Express は、リモート サーバーへのデータ ソース接続をサポートしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」を参照してください。  
   
  このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、ナビゲーション ウィンドウで **[実行アカウント]** を選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "71952543"
  **アカウント**  
  Windows のドメイン ユーザー アカウントを入力します。 *\<ドメイン>\\<ユーザー アカウント\>* の形式を使用します。  
   
- **Password**  
+ **パスワード**  
  パスワードを入力します。  
   
  **[パスワードの確認入力]**  
  再度、パスワードを入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Reporting Services Configuration Manager の F1 ヘルプ&#40;トピック SSRS ネイティブ&#41;モード](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  

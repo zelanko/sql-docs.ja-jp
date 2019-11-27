@@ -45,31 +45,31 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'`追加するカテゴリのクラス。 *クラス*は**varchar (8)** で、既定値は JOB,、これらの値のいずれかを指定することができます。  
+追加するカテゴリのクラスを `[ @class = ] 'class'` します。 *クラス*は**varchar (8)** で、既定値は JOB,、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |補足|ジョブカテゴリを追加します。|  
 |ALERT|アラートカテゴリを追加します。|  
 |OPERATOR|オペレーターカテゴリを追加します。|  
   
-`[ @type = ] 'type'`追加するカテゴリの種類。 *型*は**varchar (12)**,、既定値は**LOCAL**,、これらの値のいずれかを指定することができます。  
+追加するカテゴリの種類 `[ @type = ] 'type'` ます。 *型*は**varchar (12)** ,、既定値は**LOCAL**,、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |LOCAL|ローカル ジョブ カテゴリ|  
 |マルチサーバー|マルチサーバージョブカテゴリ。|  
-|なし|JOB 以外のクラスのカテゴリ **。**|  
+|NONE|JOB 以外のクラスのカテゴリ **。**|  
   
-`[ @name = ] 'name'`追加するカテゴリの名前。 名前は、指定されたクラス内で一意である必要があります。 *名前*は**sysname**,、既定値はありません。  
+追加するカテゴリの名前 `[ @name = ] 'name'` ます。 名前は、指定されたクラス内で一意である必要があります。 *名前*は**sysname**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_add_category**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -89,12 +89,12 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_delete_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [sysjobs &#40;transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo. sysjobservers &#40;transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [transact-sql &#40;  の&#41; sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_help_category](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
+ [sysjobs &#40;transact-sql&#41; ](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo. sysjobservers &#40;transact-sql&#41; ](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -27,7 +27,7 @@ ms.locfileid: "72041183"
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  このプロシージャは、パブリッシャー側のトランザクション ログにトレーサー トークンを送信し、待機時間の統計を追跡する処理を開始します。 情報が記録されるタイミングは、トレーサー トークンがトランザクション ログに書き込まれたとき、ログ リーダー エージェントに処理されたとき、およびディストリビューション エージェントによって適用されたときです。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 詳細については、「 [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
+  このプロシージャは、パブリッシャー側のトランザクション ログにトレーサー トークンを送信し、待機時間の統計を追跡する処理を開始します。 情報が記録されるタイミングは、トレーサー トークンがトランザクション ログに書き込まれたとき、ログ リーダー エージェントに処理されたとき、およびディストリビューション エージェントによって適用されたときです。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 詳細については、「 [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,16 +41,16 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` は、待機時間が計測されているパブリケーションの名前です。 *publication* は **sysname** 、既定値はありません。  
+`[ @publication = ] 'publication'` は、待機時間を測定するパブリケーションの名前です。 *publication* は **sysname** 、既定値はありません。  
   
 `[ @tracer_token_id = ] _tracer_token_id OUTPUT` は挿入されたトレーサー トークンの ID です。 *@tracer_token_id* の既定値は null の **int** で、出力パラメーターです。 この値は、最初に [sp_helptracertokens (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) を実行せずに[sp_helptracertokenhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) または [sp_deletetracertokenhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) を実行するために使用できます。  
   
-`[ @publisher = ] 'publisher'` は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーを指定します。 *publisher*は**sysname**であり、既定値は NULL であり、@no__t 2 パブリッシャーに対して指定することはできません。  
+`[ @publisher = ] 'publisher'` は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 以外の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーを指定します。 *publisher*は**sysname**であり、既定値は NULL であるため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーには指定できません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_posttracertoken**は、トランザクションレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
@@ -59,7 +59,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_posttracertoken**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

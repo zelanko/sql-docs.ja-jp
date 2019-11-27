@@ -38,17 +38,17 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>引数  
- @credential = *\@credential*  
+ @credential = *\@資格情報*  
  ローカル Stretch 対応データベースに関連付けられたデータベーススコープ資格情報を指定します。  
   
- @with_copy = *\@withcopy*  
- リモートデータのコピーを作成してコピーに接続するかどうかを指定します (推奨)。 *\@* はビットです。  
+ @with_copy = *\@with_copy*  
+ リモートデータのコピーを作成してコピーに接続するかどうかを指定します (推奨)。 *\@with_copy*はビットです。  
   
- @azure_servername = *\@azureservername*  
- リモートデータを含む Azure サーバーの名前を指定します。 *\@azureservername*は sysname です。  
+ @azure_servername = *\@azure_servername*  
+ リモートデータを含む Azure サーバーの名前を指定します。 *\@azure_servername*は sysname です。  
   
- @azure_databasename = *\@azuredatabasename*  
- リモートデータが格納されている Azure データベースの名前を指定します。 *\@azuredatabasename*は sysname です。  
+ @azure_databasename = *\@azure_databasename*  
+ リモートデータが格納されている Azure データベースの名前を指定します。 *\@azure_databasename*は sysname です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または > 0 (失敗)  
@@ -56,8 +56,8 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
   
-## <a name="remarks"></a>コメント  
- [Sp_rda_reauthorize_db (transact-sql)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行してリモートの Azure データベースに再接続すると、クエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは、Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
+## <a name="remarks"></a>Remarks  
+ [Sp_rda_reauthorize_db (transact-sql)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行してリモートの Azure データベースに再接続すると、この操作によってクエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
   
 ## <a name="example"></a>例  
  次の例では、Stretch が有効なローカルデータベースとリモートデータベースとの間の認証された接続を復元します。 リモートデータのコピーを作成し (推奨)、新しいコピーに接続します。  
@@ -69,8 +69,8 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_rda_deauthorize_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [sp_rda_deauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

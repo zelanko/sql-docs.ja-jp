@@ -51,7 +51,7 @@ ms.locfileid: "73882254"
   
     -   必要に応じて、その他のパブリッシャーでディストリビューターを使用できるようにします。 その他のパブリッシャーがディストリビューターを使用できるようになっている場合は、これらのパブリッシャーからディストリビューターへの接続に対して、 **[ディストリビューター パスワード]** ページでパスワードを入力する必要があります。  
   
-    -   必要に応じて、構成の設定のスクリプトを作成します。 詳しくは、「 [Scripting Replication](scripting-replication.md)」をご覧ください。  
+    -   必要に応じて、構成の設定のスクリプトを作成します。 詳細については、「 [Scripting Replication](scripting-replication.md)」をご参照ください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーションのパブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから構成できます。  
@@ -165,7 +165,7 @@ ms.locfileid: "73882254"
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
 ## <a name="see-also"></a>参照  
- [ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)   
+ [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [[ディストリビューションの構成]](configure-distribution.md)   
  [レプリケーション管理オブジェクトの概念](concepts/replication-management-objects-concepts.md)   

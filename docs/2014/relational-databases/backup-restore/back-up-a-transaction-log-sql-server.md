@@ -32,7 +32,7 @@ ms.locfileid: "72783119"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **トランザクションログをバックアップするために使用するもの:**  
   
@@ -57,14 +57,14 @@ ms.locfileid: "72783119"
   
 -   データベースで完全復旧モデルまたは一括ログ復旧モデルのいずれかを使用している場合は、データを保護し、トランザクション ログがいっぱいになるのを防止するために、十分な頻度で定期的にトランザクション ログをバックアップする必要があります。 これによってログが切り捨てられ、特定の時点へのデータベースの復元がサポートされます。  
   
--   既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)」を参照してください。  
+-   既定では、バックアップ操作が成功するたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)」を参照してください。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
- バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
+ バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -109,7 +109,7 @@ ms.locfileid: "72783119"
   
     -   **[既存のメディア セットにバックアップする]**  
   
-         このオプションでは、 **[既存のバックアップ セットに追加する]** または **[既存のすべてのバックアップ セットを上書きする]** をクリックします。 詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
+         このオプションでは、 **[既存のバックアップ セットに追加する]** または **[既存のすべてのバックアップ セットを上書きする]** をクリックします。 詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
          必要に応じて、 **[メディア セット名とバックアップ セットの有効期限を確認する]** チェック ボックスをオンにします。これにより、バックアップ操作で、メディア セットとバックアップ セットの有効期限が切れる日付と時刻の確認が行われます。  
   
@@ -119,13 +119,13 @@ ms.locfileid: "72783119"
   
     -   **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]**  
   
-         このオプションでは、 **[新しいメディア セット名]** ボックスに名前を入力し、必要に応じて **[新しいメディア セットの説明]** ボックスにメディア セットの説明を入力します。 詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
+         このオプションでは、 **[新しいメディア セット名]** ボックスに名前を入力し、必要に応じて **[新しいメディア セットの説明]** ボックスにメディア セットの説明を入力します。 詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
 14. **[信頼性]** セクションで、必要に応じて次の項目をオンにします。  
   
     -   **[完了時にバックアップを検証する]** 。  
   
-    -   **[メディアに書き込む前にチェックサムを行う]** 、および、必要に応じて、 **[チェックサム エラーのまま続行する]** 。 チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
+    -   **[メディアに書き込む前にチェックサムを行う]** 、および、必要に応じて、 **[チェックサム エラーのまま続行する]** 。 チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」をご覧ください。  
   
 15. **[トランザクション ログ]** セクションで、次の手順を実行します。  
   
@@ -133,11 +133,11 @@ ms.locfileid: "72783119"
   
     -   ログ末尾 (アクティブなログ) をバックアップするには、 **[ログの末尾をバックアップし、データベースを復元中の状態にしておく]** をオンにします。  
   
-         ログ末尾のバックアップは、作業内容が消失しないようにログの末尾をバックアップするために、エラー後に実行されます。 アクティブなログのバックアップ (ログ末尾のバックアップ) は、エラーの後とデータベースの復元開始前の両方か、またはセカンダリ データベースへのフェールオーバー時に行われます。 このオプションを選択すると、Transact-SQL の BACKUP LOG ステートメントで NORECOVERY オプションを指定した場合と同じ結果になります。 ログ末尾のバックアップの詳細については、「[ログ末尾のバックアップ &#40;SQL Server&#41;](tail-log-backups-sql-server.md)」をご覧ください。  
+         ログ末尾のバックアップは、作業内容が消失しないようにログの末尾をバックアップするために、エラー後に実行されます。 アクティブなログのバックアップ (ログ末尾のバックアップ) は、エラーの後とデータベースの復元開始前の両方か、またはセカンダリ データベースへのフェールオーバー時に行われます。 このオプションを選択すると、Transact-SQL の BACKUP LOG ステートメントで NORECOVERY オプションを指定した場合と同じ結果になります。 ログ末尾のバックアップの詳細については、「[ログ末尾のバックアップ &#40;SQL Server&#41;](tail-log-backups-sql-server.md)」を参照してください。  
   
 16. **[全般]** ページの **[バックアップ先]** セクションで、テープ ドライブにバックアップするように指定した場合は、 **[バックアップ後にテープをアンロードする]** チェック ボックスがアクティブになります。 このオプションをオンにすると、 **[アンロードの前にテープを巻き戻す]** オプションがアクティブになります。  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **backup-compression default** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
   
      **現在の backup compression default 値を表示するには**  
   
@@ -170,7 +170,7 @@ ms.locfileid: "72783119"
 > [!IMPORTANT]  
 >  この例では、単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベースを使用しています。 ただし、ログ バックアップを可能にするために、データベースの完全バックアップを行う前に、データベースが完全復旧モデルを使用するように設定されています。 詳細については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md)」を参照してください。  
   
- この例では、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベースのトランザクション ログ バックアップを、以前作成した名前付きバックアップ デバイスである `MyAdvWorks_FullRM_log1` に作成します。  
+ この例では、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベースのトランザクション ログ バックアップを、以前作成した名前付きバックアップ デバイスである `MyAdvWorks_FullRM_log1`に作成します。  
   
 ```sql  
 BACKUP LOG AdventureWorks2012  
@@ -198,7 +198,7 @@ SQL Server PowerShell プロバイダーを設定して使用する方法につ�
   
 -   [満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [メンテナンス プラン](../maintenance-plans/maintenance-plans.md)   

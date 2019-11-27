@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68124928"
 ---
-# <a name="sysservereventsessionactions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
+# <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   イベント セッションの各イベントのアクションごとに 1 行のデータを返します。  

@@ -24,12 +24,12 @@ ms.locfileid: "73729405"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になったビジネス ルールを削除します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、不要になったビジネス ルールを削除します。  
   
 > [!NOTE]  
 >  ビジネス ルールに対するデータの検証が行われないようにするには、ビジネス ルールを削除する代わりに除外することができます。 詳細については、「[ビジネス ルールを除外する (マスター データ サービス)](../master-data-services/exclude-a-business-rule-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  

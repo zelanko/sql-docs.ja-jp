@@ -28,12 +28,12 @@ ms.locfileid: "73784068"
 ## <a name="format-files"></a>フォーマット ファイル  
  フォーマット ファイルを対話形式で作成する場合に、日付型と時刻型の指定に使用する入力、および対応するホスト ファイル データ型名を次の表に示します。  
   
-|ファイル保存形式|ホスト ファイル データ型|"フィールド <field_name> [\<default>] のファイル ストレージ型を入力してください" というプロンプトへの応答|  
+|ファイル ストレージ型|ホスト ファイル データ型|"フィールド <field_name> [\<default>] のファイル ストレージ型を入力してください" というプロンプトへの応答|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DateTime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|日付|SQLDATE|de|  
-|[時刻]|SQLTIME|te|  
+|[日付]|SQLDATE|de|  
+|time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -69,9 +69,9 @@ ms.locfileid: "73784068"
   
  OLE DB の場合、さまざまなストレージ型のストレージ サイズは次のとおりです。  
   
-|ファイル保存形式|ストレージ サイズ (バイト単位)|  
+|ファイル ストレージ型|ストレージ サイズ (バイト単位)|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
 |date|3|  
 |time|6|  
@@ -80,7 +80,7 @@ ms.locfileid: "73784068"
   
  ODBC の場合、サイズは次のとおりです。 BCP.exe を実行すると有効桁数は常にサーバーから取得されるので、フォーマット ファイルにもデータ ファイルにも、有効桁数を格納する必要はありません。  
   
-|ファイル保存形式|ストレージ サイズ (バイト単位)|ストレージ形式|  
+|ファイル ストレージ型|ストレージ サイズ (バイト単位)|ストレージ形式|  
 |-----------------------|---------------------------|--------------------|  
 |datetime (d)|8|TDS (TDS)|  
 |smalldatetime (D)|4|TDS (TDS)|  
@@ -92,12 +92,12 @@ ms.locfileid: "73784068"
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h 内の BCP 型  
  sqlncli.h では、ODBC の BCP API 拡張機能で使用する次の型が定義されています。 これらの型は、OLE DB の IBCPSession:: BCPColFmt の*Euserdatatype*パラメーターを使用して渡されます。  
   
-|ファイル保存形式|ホスト ファイル データ型|IBCPSession:: BCPColFmt と共に使用するには、sqlncli に「」と入力します。|値|  
+|ファイル ストレージ型|ホスト ファイル データ型|IBCPSession:: BCPColFmt と共に使用するには、sqlncli に「」と入力します。|ReplTest1|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|日付|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|[時刻]|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|[日付]|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -106,25 +106,25 @@ ms.locfileid: "73784068"
   
  **OLE DB に関するメモ** 次の変換は、IBCPSession によって実行されます。 IRowsetFastLoad は、[クライアントからサーバーへの変換](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)で定義されている OLE DB 変換を使用します。 次に示すクライアントでの変換が実行されると、datetime 値は 1/300 秒単位に丸められ、smalldatetime 値の秒は 0 に設定されます。 datetime の丸め処理は、時間と分に適用されますが、日付には適用されません。  
   
-|To --><br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|To --><br /><br /> From|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|CHAR|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日付|1|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
-|[時刻]|なし|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
-|Smalldatetime|1、2|1、4、10|1|1|1、10|1、5、10|1、11|1、11|  
-|DateTime|1、2|1、4、10|1、12|1|1、10|1、5、10|1、11|1、11|  
-|Datetime2|1、2|1、4、10|1、10 (ODBC) 1、12 (OLE DB)|1、10|1、10|1、5、10|1、3|1、3|  
-|Datetimeoffset|1、2、8|1、4、8、10|1、8、10|1、8、10|1、8、10|1、10|1、3|1、3|  
-|Char/wchar (date)|9|-|9、6 (ODBC) 9、6、12 (OLE DB)|9、6 (ODBC) 9、6、12 (OLE DB)|9、6|9、5、6|なし|なし|  
-|Char/wchar (time)|-|9、10|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10|9、5、7、10|なし|なし|  
-|Char/wchar (datetime)|9、2|9、4、10|9、10 (ODBC) 9、10、12 (OLE DB)|9、10 (ODBC) 9、10、12 (OLE DB)|9、10|9、5、10|なし|なし|  
-|Char/wchar (datetimeoffset)|9、2、8|9、4、8、10|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10|9、10|なし|なし|  
+|[日付]|@shouldalert|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|time|なし|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Smalldatetime|1,2|1,4,10|@shouldalert|@shouldalert|1,10|1,5,10|1,11|1,11|  
+|DateTime|1,2|1,4,10|1,12|@shouldalert|1,10|1,5,10|1,11|1,11|  
+|Datetime2|1,2|1,4,10|1、10 (ODBC) 1、12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
+|Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
+|Char/wchar (date)|9|-|9、6 (ODBC) 9、6、12 (OLE DB)|9、6 (ODBC) 9、6、12 (OLE DB)|9,6|9,5,6|なし|なし|  
+|Char/wchar (time)|-|9,10|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9,7,10|9,5,7,10|なし|なし|  
+|Char/wchar (datetime)|9,2|9,4,10|9、10 (ODBC) 9、10、12 (OLE DB)|9、10 (ODBC) 9、10、12 (OLE DB)|9,10|9,5,10|なし|なし|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9,8,10|9,10|なし|なし|  
   
 #### <a name="key-to-symbols"></a>記号の説明  
   
 |記号|意味|  
 |------------|-------------|  
 |-|変換はサポートされていません。<br /><br /> "データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の ODBC 診断レコードが生成されます。|  
-|1|指定したデータが無効な場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の ODBC 診断レコードが生成されます。 datetimeoffset 値の場合は、UTC への変換が必要なくても、時刻部分は UTC への変換後の範囲内に収まっている必要があります。 TDS とサーバーは datetimeoffset 値の時刻を常に UTC 用に正規化するためです。 したがって、クライアントは、時刻部分が、UTC への変換後にサポートされる範囲内に収まっていることを確認する必要があります。|  
+|@shouldalert|指定したデータが無効な場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の ODBC 診断レコードが生成されます。 datetimeoffset 値の場合は、UTC への変換が必要なくても、時刻部分は UTC への変換後の範囲内に収まっている必要があります。 TDS とサーバーは datetimeoffset 値の時刻を常に UTC 用に正規化するためです。 したがって、クライアントは、時刻部分が、UTC への変換後にサポートされる範囲内に収まっていることを確認する必要があります。|  
 |2|時刻部分は無視されます。|  
 |3|ODBC の場合、データ損失を伴う切り捨てが発生すると、"文字列データの右側が切り捨てられました" というメッセージで SQLSTATE 22001 の診断レコードが生成されます。秒の小数部の桁数 (小数点以下桁数) は、変換先の列のサイズによって決まります。次の表に示します。 テーブルの範囲よりサイズが大きい列の場合、7 桁と見なされます。 この変換では、最大9桁の小数点以下桁数 (ODBC で許容される最大値) を使用できます。<br /><br /> **種類:** DBTIME2<br /><br /> **暗黙の小数点以下桁数 0** 8<br /><br /> **暗黙の位取り 1.. 7** 10、16<br /><br /> <br /><br /> **種類:** DBTIMESTAMP<br /><br /> **暗黙の小数点以下桁数 0:** 19<br /><br /> **暗黙の小数点以下桁数 1.. 7:** 21.. 27<br /><br /> <br /><br /> **型:** DBTIMESTAMPOFFSET<br /><br /> **暗黙の小数点以下桁数 0:** 26<br /><br /> **暗黙の小数点以下桁数 1.. 7:** 28.. 34<br /><br /> OLE DB の場合は、データの損失を伴う切り捨てが行われると、エラーが通知されます。 datetime2 に関しては、次の表に示すように、秒の小数点以下桁数 (スケール) は変換先の列のサイズによって決まります。 テーブルの範囲よりサイズが大きい列の場合は、9 桁と見なされます。 この変換では、秒の小数点以下桁数が 9 桁まで許容されます。これは、OLE DB で許容される最大桁数です。<br /><br /> **種類:** DBTIME2<br /><br /> **暗黙の小数点以下桁数 0** 8<br /><br /> **暗黙の小数点以下桁数 1..9** 1..9<br /><br /> <br /><br /> **種類:** DBTIMESTAMP<br /><br /> **暗黙の小数点以下桁数 0:** 19<br /><br /> **暗黙の小数点以下桁数 1..9:** 21..29<br /><br /> <br /><br /> **型:** DBTIMESTAMPOFFSET<br /><br /> **暗黙の小数点以下桁数 0:** 26<br /><br /> **暗黙の小数点以下桁数 1..9:** 28..36|  
 |4|日付部分は無視されます。|  

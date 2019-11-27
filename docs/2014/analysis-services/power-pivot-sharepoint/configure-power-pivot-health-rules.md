@@ -42,7 +42,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [アプリケーションの安定性を評価するために使用する正常性ルールの構成 (PowerPivot サービスアプリケーション)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>Prerequisites  
  Analysis Services インスタンスおよび PowerPivot サービス アプリケーションの構成プロパティを変更するには、サービス アプリケーションの管理者である必要があります。  
   
 ##  <a name="bkmk_view"></a>PowerPivot の正常性ルールの表示  
@@ -127,6 +127,6 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
      この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: 使用状況データが必要な頻度で更新されていません。]** というルールの定義に対応しています。  
   
-## <a name="see-also"></a>「  
-  [PowerPivot for SharePoint &#40;&#41;ディスク領域の使用を構成する](configure-disk-space-usage-power-pivot-for-sharepoint.md)  
+## <a name="see-also"></a>参照  
+   [PowerPivot for SharePoint &#40;&#41;ディスク領域の使用を構成する](configure-disk-space-usage-power-pivot-for-sharepoint.md)  
  [PowerPivot 管理ダッシュボードと使用状況データ](power-pivot-management-dashboard-and-usage-data.md)  

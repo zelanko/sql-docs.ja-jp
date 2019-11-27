@@ -37,13 +37,13 @@ ms.locfileid: "73594522"
 
   [CREATE MASTER key](../../t-sql/statements/create-column-master-key-transact-sql.md)ステートメントを使用して追加されたデータベースマスターキーごとに1行のデータを返します。 各行は1つの列マスターキー (CMK) を表します。  
     
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK の名前。|  
 |**column_master_key_id**|**int**|列マスターキーの ID。|  
 |**create_date**|**datetime**|列マスターキーが作成された日付。|  
 |**modify_date**|**datetime**|列マスターキーが最後に変更された日付。|  
-|**key_store_provider_name**|**sysname**|CMK を含む列マスターキーストアのプロバイダーの名前。 使用できる値は次のとおりです。<br /><br /> MSSQL_CERTIFICATE_STORE-列マスターキーストアが証明書ストアである場合。<br /><br /> 列マスターキーストアがカスタム型である場合は、ユーザー定義の値。|  
+|**key_store_provider_name**|**sysname**|CMK を含む列マスターキーストアのプロバイダーの名前。 使用できる値は、以下のとおりです。<br /><br /> MSSQL_CERTIFICATE_STORE-列マスターキーストアが証明書ストアである場合。<br /><br /> 列マスターキーストアがカスタム型である場合は、ユーザー定義の値。|  
 |**key_path**|**nvarchar (4000)**|キーの列マスターキーストア固有のパス。 パスの形式は、列のマスターキーストアの種類によって異なります。 例:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> カスタム列マスターキーストアの場合、開発者は、カスタム列マスターキーストアのキーパスを定義する必要があります。|  
 |**allow_enclave_computations**|**bit**|列マスターキーがエンクレーブに設定されているかどうかを示します (このマスターキーで暗号化された列暗号化キーは、サーバー側の secure enclaves 内の計算に使用できます)。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。|  
 |**signature**|**varbinary(max)**|**Key_path**によって参照される列マスターキーを使用して生成された**key_path**および**allow_enclave_computations**のデジタル署名。|
@@ -60,8 +60,8 @@ ms.locfileid: "73594522"
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted  のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
- [Secure enclaves を使用して Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
  
   
   

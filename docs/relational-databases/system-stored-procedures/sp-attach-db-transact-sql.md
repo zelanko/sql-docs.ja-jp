@@ -30,7 +30,7 @@ ms.locfileid: "72305266"
   データベースをサーバーにアタッチします。  
   
 > [!IMPORTANT]  
->  @no__t 0 の場合は、代わりに CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] は、代わりに CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 >  複数のログファイルを再構築するには、1つまたは複数の場所に新しい場所がある場合は、CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG を使用します。  
@@ -47,9 +47,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbnam_ '` は、サーバーに接続するデータベースの名前です。 名前は一意である必要があります。 *dbname*は**sysname**,、既定値は NULL です。  
+`[ @dbname = ] 'dbnam_ '` サーバーにアタッチするデータベースの名前を指定します。 名前は一意である必要があります。 *dbname*は**sysname**,、既定値は NULL です。  
   
-`[ @filename1 = ] 'filename_n'` は、データベースファイルの物理名 (パスを含む) です。 *filename_n*は**nvarchar (260)** ,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は **\@filename1**から始まり、 **\@filename16**に増加します。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
+`[ @filename1 = ] 'filename_n'` は、データベースファイルの物理名 (パスを含む) です。 *filename_n*は**nvarchar (260)** ,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は **\@filename1**から始まり、 **\@filename16**にインクリメントされます。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -60,10 +60,10 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>コメント  
- **Sp_attach_db**ストアドプロシージャは、明示的な**sp_detach_db**操作またはコピーされたデータベースを使用してデータベースサーバーから以前にデタッチされたデータベースでのみ実行する必要があります。 16個を超えるファイルを指定する必要がある場合は、CREATE DATABASE *database_name* FOR ATTACH または create database *database_name* FOR_ATTACH_REBUILD_LOG を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ **Sp_attach_db**ストアドプロシージャは、明示的な**sp_detach_db**操作またはコピーしたデータベースに対してデータベースサーバーから以前にデタッチされたデータベースでのみ実行する必要があります。 16個を超えるファイルを指定する必要がある場合は、CREATE DATABASE *database_name* FOR ATTACH または create database *database_name* FOR_ATTACH_REBUILD_LOG を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
  指定されていないファイルは、最後の既知の場所にあると見なされます。 異なる場所にあるファイルを使用するには、新しい場所を指定する必要があります。  
   

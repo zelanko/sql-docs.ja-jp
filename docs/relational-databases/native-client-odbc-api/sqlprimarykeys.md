@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys |Microsoft Docs
+title: SQLPrimaryKeys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql

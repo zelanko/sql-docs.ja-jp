@@ -25,9 +25,9 @@ ms.locfileid: "73729558"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンに割り当てるバージョン フラグを作成します。 フラグによって、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示すことができます。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、バージョンに割り当てるバージョン フラグを作成します。 フラグによって、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示すことができます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
@@ -54,7 +54,7 @@ ms.locfileid: "73729558"
   
 8.  **[保存]** をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
   
 -   [バージョンにフラグを割り当てる (マスター データ サービス)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

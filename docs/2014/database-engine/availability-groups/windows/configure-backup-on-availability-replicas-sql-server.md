@@ -37,14 +37,14 @@ ms.locfileid: "72782996"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> の前提条件  
  プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
   
-|タスク|Permissions|  
+|タスク|アクセス許可|  
 |----------|-----------------|  
 |可用性グループの作成時にセカンダリ レプリカでバックアップを構成するには|**sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。|  
 |可用性グループまたは可用性レプリカを変更するには|可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。|  
@@ -148,7 +148,7 @@ ms.locfileid: "72782996"
     > [!IMPORTANT]  
     >  `AutomatedBackupPreference` は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックの「 [補足情報: セカンダリ レプリカでバックアップを構成した後](#FollowUp) 」を参照してください。  
   
-     たとえば、次のコマンドは、可用性グループ `MyAg` の `AutomatedBackupPreference` プロパティを `SecondaryOnly` に設定します。 この可用性グループ内のデータベースの自動バックアップはプライマリ レプリカでは行われませんが、バックアップの優先度設定が最も高いセカンダリ レプリカにリダイレクトされます。  
+     たとえば、次のコマンドは、可用性グループ `AutomatedBackupPreference` の `MyAg` プロパティを `SecondaryOnly` に設定します。 この可用性グループ内のデータベースの自動バックアップはプライマリ レプリカでは行われませんが、バックアップの優先度設定が最も高いセカンダリ レプリカにリダイレクトされます。  
   
     ```powershell
     Set-SqlAvailabilityGroup -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `  
@@ -156,7 +156,7 @@ ms.locfileid: "72782996"
     ```  
   
 > [!NOTE]  
->  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+>  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 SQL Server PowerShell プロバイダーを設定して使用するには、「 [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md) 」と「[ヘルプの表示 SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。
   
@@ -181,10 +181,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="ForInfoAboutBuPref"></a> バックアップ優先設定に関する情報を取得するには  
  次の表は、セカンダリでのバックアップに関連する情報を取得するのに役立ちます。  
   
-|[表示]|[情報]|関連する列|  
+|[表示]|情報|関連する列|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|現在のレプリカが優先されるバックアップ レプリカであるかどうか|該当なし。|  
-|[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|自動バックアップ設定|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
+|[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|自動バックアップ優先設定|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)|指定された可用性レプリカのバックアップの優先順位|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|レプリカがこのサーバー インスタンスにローカルであるかどうか<br /><br /> 現在のロール<br /><br /> 運用状態<br /><br /> 接続状態<br /><br /> 可用性レプリカの同期の正常性|**is_local**<br /><br /> **ロール**, 、 **role_desc**<br /><br /> **operational_state**、 **operational_state_desc**<br /><br /> **connected_state**、 **connected_state_desc**<br /><br /> **synchronization_health**、 **synchronization_health_desc**|  
   
@@ -194,6 +194,6 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [SQL Server AlwaysOn チームのブログ: AlwaysOn チームの公式 SQL Server のブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [アクティブなセカンダリ: セカンダリレプリカでのバックアップ (AlwaysOn 可用性グループ)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 

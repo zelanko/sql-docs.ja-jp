@@ -32,13 +32,13 @@ ms.locfileid: "73785737"
   
 |パラメーター|テーブル値パラメーター以外のパラメーター型の関連属性 (テーブル値パラメーター列を含む)|テーブル値パラメーターに関連する属性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*内部*|無視|SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合は、これに SQL_DESC_DATETIME_INTERVAL_CODE を設定します。|  
-|*長さ*|SQL_DESC_OCTET_LENGTH|テーブル値パラメーターの型名の長さ。 型名が null で終了した場合は SQL_NTS、テーブル値パラメーターの型名が不要な場合は0になります。|  
-|*有効桁数*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
+|*種類*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*SubType*|無視|SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合は、これに SQL_DESC_DATETIME_INTERVAL_CODE を設定します。|  
+|*[データ型]*|SQL_DESC_OCTET_LENGTH|テーブル値パラメーターの型名の長さ。 型名が null で終了した場合は SQL_NTS、テーブル値パラメーターの型名が不要な場合は0になります。|  
+|*[精度]*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*小数点以下桁数*|SQL_DESC_SCALE|未使用。 このパラメーターは 0 にする必要があります。|  
 |*DataPtr*|APD の SQL_DESC_DATA_PTR|SQL_CA_SS_TYPE_NAME<br /><br /> このパラメーターは、ストアド プロシージャの呼び出しでは省略可能で、不要の場合は NULL を指定できます。 このパラメーターは、プロシージャの呼び出し以外の SQL ステートメント用に指定する必要があります。<br /><br /> *DataPtr*は、変数の行バインドを使用するときに、アプリケーションがこのテーブル値パラメーターを識別するために使用できる一意の値としても機能します。|  
-|*Stringlength Ptr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> テーブル値パラメーターの場合、これは転送する行数または SQL_DATA_AT_EXEC です。 これは、SQLExecDirect で転送する行の数を保持する値へのポインターです。|  
+|*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> テーブル値パラメーターの場合、これは転送する行数または SQL_DATA_AT_EXEC です。 これは、SQLExecDirect で転送する行の数を保持する値へのポインターです。|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
   
  テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
@@ -46,9 +46,9 @@ ms.locfileid: "73785737"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して許可される値を次に示します。  
   
-||*型*|*内部*|*長さ*|*有効桁数*|*小数点以下桁数*|  
+||*種類*|*SubType*|*[データ型]*|*[精度]*|*小数点以下桁数*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
-|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  

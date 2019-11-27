@@ -21,7 +21,7 @@ ms.locfileid: "73728914"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  **データベースのアップグレード ウィザード** を使用すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
+  **データベースのアップグレード ウィザード**を使用すると、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
   
 ## <a name="action"></a>操作  
  これは、ウィザードの最初のページです。 **[次へ]** をクリックして、データベースのアップグレード処理を開始します。  
@@ -29,7 +29,7 @@ ms.locfileid: "73728914"
 ## <a name="upgrade-review"></a>[アップグレードの確認]  
  このページで指定した情報を確認します。 問題がなければ、 **[次へ]** をクリックして、指定したデータベースをアップグレードします。  
   
-|コントロール名|説明|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |**SQL Server インスタンス (SQL Server instance)**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
 |**[マスター データ サービス データベース]**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  
@@ -38,7 +38,7 @@ ms.locfileid: "73728914"
  アップグレード処理の進捗状況を表示します。 データベースのアップグレードが完了したら、ログ ファイルへのリンクをクリックしてアップグレードに関する詳細情報を表示するか、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 アップグレードされたデータベースが選択され、そのシステム設定を表示および変更できます。  
   
 ## <a name="see-also"></a>参照  
- [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)  
  [マスター データ サービスのアップグレード](../database-engine/install-windows/upgrade-master-data-services.md)  
   

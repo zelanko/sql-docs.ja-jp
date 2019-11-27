@@ -44,11 +44,11 @@ ms.locfileid: "70154551"
   
  トピック全体を確認するには、「 [データベース ライフ サイクル管理 (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Azure ホームページ](http://www.windowsazure.com/)   
- [Azure デベロッパーセンター](http://www.windowsazure.com/develop/overview/)   
+## <a name="see-also"></a>参照  
+ [Azure ホーム ページ](http://www.windowsazure.com/)   
+ [Azure デベロッパー センター](http://www.windowsazure.com/develop/overview/)   
  [Azure 管理センター](http://www.windowsazure.com/manage/overview/)   
- [Azure チームのブログ](http://www.windowsazure.com/community/blog/)   
- [Azure のサポートオプション](http://www.windowsazure.com/support/contact/)  
+ [Azure チーム ブログ](http://www.windowsazure.com/community/blog/)   
+ [Azure サポート オプション](http://www.windowsazure.com/support/contact/)  
   
   

@@ -24,7 +24,7 @@ ms.locfileid: "72798072"
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database での Transparent Data Encryption
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] の透過的なデータの暗号化 (プレビュー版) は、データベース、関連するバックアップ、および静止したトランザクション ログのリアルタイム暗号化および暗号化解除を実行して、悪意のあるアクティビティの脅威から保護するのに役立ちます。アプリケーションに変更を加える必要はありません。  
   
- TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] では、データベース暗号化キーは、組み込みのサーバー証明書によって保護されます。 組み込みのサーバー証明書は、各 [!INCLUDE[ssSDS](../includes/sssds-md.md)] サーバーに対して一意です。 データベースが GeoDR リレーションシップの状態にある場合、データベースは各サーバーで異なるキーによって保護されます。 2 つのデータベースが同じサーバーに接続している場合は、同じ組み込みの証明書を共有します。 [!INCLUDE[msCoName](../includes/msconame-md.md)] は、少なくとも 90 日ごとにこれらの証明書を自動的に回転します。 TDE の一般的な説明については、「 [透過的なデータ暗号化 &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
+ TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] では、データベース暗号化キーは、組み込みのサーバー証明書によって保護されます。 組み込みのサーバー証明書は、各 [!INCLUDE[ssSDS](../includes/sssds-md.md)] サーバーに対して一意です。 データベースが GeoDR リレーションシップの状態にある場合、データベースは各サーバーで異なるキーによって保護されます。 2 つのデータベースが同じサーバーに接続している場合は、同じ組み込みの証明書を共有します。 [!INCLUDE[msCoName](../includes/msconame-md.md)] は、少なくとも 90 日ごとにこれらの証明書を自動的に回転します。 TDE の一般的な説明については、「[Transparent Data Encryption &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
   
  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] は、Azure Key Vault と TDE との統合をサポートしていません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Key Vault の非対称キーを使用できます。 詳細については、「 [Example A: Transparent Data Encryption by Using an Asymmetric Key from the Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)」を参照してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "72798072"
 > [!IMPORTANT]  
 >  現在、これはプレビュー機能です。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] の透過的なデータ暗号化をデータベースに実装すると、使用許諾契約書 (マイクロソフト エンタープライズ契約、Microsoft Azure 契約、マイクロソフト オンライン サブスクリプション契約など) に規定されたプレビューに関する条件、ならびに適用されるあらゆる [Microsoft Azure プレビューの追加使用条件](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)の対象となることを認め、それに同意したことになります。  
   
- TDE のプレビューの状態は、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] のバージョン ファミリ V12 が現在一般提供の段階にあると発表されている地理的リージョンのサブセットにおいても適用されます。 TDE がプレビューから GA に昇格されたことを [!INCLUDE[ssSDS](../includes/sssds-md.md)] が発表するまで、 [!INCLUDE[msCoName](../includes/msconame-md.md)] 用の TDE の実稼働データベースでの使用は想定されていません。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 の詳細については、「 [Azure SQL Database の新機能](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)」をご覧ください。  
+ TDE のプレビューの状態は、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] のバージョンのファミリ V12 が現在一般的に提供されている地理的領域のサブセットにおいても適用されます。 TDE がプレビューから GA に昇格されたことを [!INCLUDE[ssSDS](../includes/sssds-md.md)] が発表するまで、 [!INCLUDE[msCoName](../includes/msconame-md.md)] 用の TDE の実稼働データベースでの使用は想定されていません。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 の詳細については、「 [Azure SQL データベースにおける新機能](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)」を参照してください。  
   
 ##  <a name="Permissions"></a> アクセス許可  
  プレビュー版にサインアップして Azure ポータル経由で、REST API または PowerShell を使用して TDE を構成するには、Azure の所有者、共同作成者、または SQL セキュリティ マネージャーとして接続する必要があります。  
@@ -68,7 +68,7 @@ ms.locfileid: "72798072"
   
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")  
   
-     また、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 権限を持つデータベース ユーザーとして、 **などのクエリ ツールを使用して** に接続することで、暗号化の進行状況を監視することもできます。 [[データベース](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)] ビューの `encryption_state` 列に対してクエリを実行します。  
+     また、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 権限を持つデータベース ユーザーとして、 **などのクエリ ツールを使用して** に接続することで、暗号化の進行状況を監視することもできます。 `encryption_state`sys.dm_database_encryption_keys[ ビューの ](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) の列に対してクエリを実行します。  
   
 ##  <a name="Encrypt"></a> Transact-SQL を使用して [!INCLUDE[ssSDS](../includes/sssds-md.md)] で TDE を有効にする  
  次の手順は、既にプレビュー版にサインアップしていることを前提としています。  
@@ -90,7 +90,7 @@ ms.locfileid: "72798072"
     GO  
     ```  
   
-3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]での暗号化の進行状況を監視するために、 **VIEW DATABASE STATE**権限を持つデータベースユーザー[は、`encryption_state` のビューの](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)列に対してクエリを実行できます。  
+3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)] での暗号化の進行状況を監視するために、 **view database STATE** 権限を持つデータベース ユーザーは、`encryption_state`sys.dm_database_encryption_keys[ ビューの ](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 列に対してクエリを実行できます。  
   
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>PowerShell を使用して SQL Database で TDE を有効にする  
  Azure PowerShell を使用すると、次のコマンドを実行して TDE を有効または無効にすることができます。 コマンドを実行するには、事前にアカウントを PS ウィンドウに接続する必要があります。 次の手順は、既にプレビュー版にサインアップしていることを前提としています。 PowerShell の詳細については、「 [Azure PowerShell をインストールおよび構成する方法](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)」を参照してください。  
@@ -128,7 +128,7 @@ ms.locfileid: "72798072"
   
 6.  **[透過的なデータの暗号化 (プレビュー版)]** ブレードで、 **[データの暗号化]** ボタンを **[オフ]** にしてから、(ページ上部の) **[保存]** をクリックして設定を適用します。 **[暗号化の状態]** には、透過的なデータの暗号化解除のおおよその進行状況が表示されます。  
   
-     また、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 権限を持つデータベース ユーザーとして、 **などのクエリ ツールを使用して** に接続することで、暗号化解除の進行状況を監視することもできます。 [[データベース](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)] ビューの `encryption_state` 列に対してクエリを実行します。  
+     また、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 権限を持つデータベース ユーザーとして、 **などのクエリ ツールを使用して** に接続することで、暗号化解除の進行状況を監視することもできます。 `encryption_state`sys.dm_database_encryption_keys[ の ](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) の列に対してクエリを実行します。  
   
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Transact SQL を使用して TDE を無効にするには  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72798072"
     GO  
     ```  
   
-3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]での暗号化の進行状況を監視するために、 **VIEW DATABASE STATE**権限を持つデータベースユーザー[は、`encryption_state` のビューの](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)列に対してクエリを実行できます。  
+3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)] での暗号化の進行状況を監視するために、 **view database STATE** 権限を持つデータベース ユーザーは、`encryption_state`sys.dm_database_encryption_keys[ ビューの ](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 列に対してクエリを実行できます。  
   
 ##  <a name="Working"></a>[!INCLUDE[ssSDS](../includes/sssds-md.md)] で TDE で保護されたデータベースを操作する  
  Azure 内での操作用にデータベースの暗号化を解除する必要はありません。 ソース データベースまたはプライマリ データベースの TDE の設定は、ターゲットに透過的に継承されます。 これには次の操作が含まれます。  
@@ -163,10 +163,10 @@ ms.locfileid: "72798072"
 ## <a name="related-sql-server-topic"></a>関連する SQL Server のトピック  
  [EKM を使用して TDE を有効にする](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [透過的なデータ暗号化 &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  

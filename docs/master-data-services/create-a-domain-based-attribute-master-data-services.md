@@ -27,7 +27,7 @@ ms.locfileid: "73728536"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でドメイン ベースの属性を作成して、属性の値にエンティティのメンバーを設定します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -41,12 +41,12 @@ ms.locfileid: "73728536"
 ## <a name="attribute-information"></a>属性情報  
  作成された属性ごとに、7 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|列|説明|  
+|列|[説明]|  
 |------------|-----------------|  
 |[状態]|属性の状態。<br /><br /> [保存] をクリックすると、属性が更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "I状態を更新するための con)が表示されます。<br /><br /> 属性の作成時または編集時にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "Iエラー状態のための con)が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "I"OK" 状態の con ")が表示されます。|  
-|[名前]|属性名です。|  
+|[オブジェクト名]|属性名です。|  
 |表示名|属性の表示名。|  
-|説明|属性の説明。|  
+|[説明]|属性の説明。|  
 |ピクセル幅の表示|属性の幅。|  
 |種類とプロパティ|属性の種類とデータ型の情報。|  
 |変更の追跡を有効化|変更の追跡に対して属性が有効になっているかどうかを指定し、グループ番号を括弧で表示します。|  
@@ -102,7 +102,7 @@ ms.locfileid: "73728536"
 ## <a name="see-also"></a>参照  
  [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)   
  [派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [属性名とデータ型を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [属性名とデータ型を変更する (マスター データ サービス)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [属性を削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

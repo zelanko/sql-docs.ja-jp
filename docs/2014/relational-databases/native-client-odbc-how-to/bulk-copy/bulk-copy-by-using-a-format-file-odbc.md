@@ -183,8 +183,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>「  
- [SQL Server odbc ドライバーを使用した一括コピーの操作&#40;方法&#41;に関するトピック odbc](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+## <a name="see-also"></a>参照  
+ [SQL Server odbc ドライバーを使用した一括コピーの操作&#40;方法&#41;に関するトピック odbc](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [データ ファイルとフォーマット ファイルの使用](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

@@ -26,7 +26,7 @@ ms.locfileid: "70874602"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>[説明]  
  次のいずれかのバックアップまたは復元履歴テーブルに多数の行が含まれていると、アップグレードが応答を停止する可能性があります。  
   
 -   **backupfile**  
@@ -51,7 +51,7 @@ ms.locfileid: "70874602"
 > [!NOTE]  
 >  バックアップと復元の履歴テーブルが 10,000 行を超えるデータベースはアップグレードできます。 ただし、サイズの大きいテーブルの変更には時間がかかることがあります。 テーブルのサイズが大きいほど、セットアップの完了に時間がかかります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 Upgrade Advisor &#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   

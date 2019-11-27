@@ -18,7 +18,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72796431"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>SharePoint 用 Reporting Services アドインのインストールまたはアンインストール (SharePoint 2010 および SharePoint 2013)
-  SharePoint サーバー上で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers to enable [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features within a SharePoint deployment. 提供される機能には、Power View、レポート ビューアー Web パーツ、URL プロキシ エンドポイント、コンテンツの種類、アプリケーション ページなどがあります。これにより、レポート、レポート モデル、データ ソース、およびその他のレポート サーバー コンテンツを SharePoint サイト上で作成、表示、管理できます。 SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、SharePoint モードで実行されるレポート サーバーに必要なコンポーネントです。 アドインは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードからインストールするか、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能パックから rsSharePoint.msi をダウンロードしてインストールすることができます。 アドインのバージョンの一覧およびダウンロード ページについては、「[SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
+  SharePoint サーバー上で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers to enable [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features within a SharePoint deployment. 提供される機能には、Power View、レポート ビューアー Web パーツ、URL プロキシ エンドポイント、コンテンツの種類、アプリケーション ページなどがあります。これにより、レポート、レポート モデル、データ ソース、およびその他のレポート サーバー コンテンツを SharePoint サイト上で作成、表示、管理できます。 SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、SharePoint モードで実行されるレポート サーバーに必要なコンポーネントです。 アドインは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードからインストールするか、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能パックから rsSharePoint.msi をダウンロードしてインストールすることができます。 アドインのバージョンの一覧およびダウンロード ページについては、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
 ||  
 |-|  
@@ -44,9 +44,9 @@ ms.locfileid: "72796431"
   
 -   [アップグレード](#bkmk_upgrade)  
   
--   [Rscustomaction.exe](#bkmk_rscustomaction)  
+-   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> の前提条件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインのインストールは、レポート サーバーと SharePoint 製品のインスタンスを統合するために必要ないくつかの手順の 1 つです。 SharePoint モードの使用のすべての前提条件の詳細については、「 [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)」を参照してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインストールと構成の詳細については、「 [sharepoint 2013 用 Reporting Services Sharepoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)」を参照してください。  
   
 -   複数の Web フロントエンド アプリケーションがある SharePoint ファームに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する場合は、Web サーバー フロントエンドがあるファームの各コンピューターにアドインをインストールします。 この作業は、レポート サーバー コンテンツのアクセスに使用する Web フロントエンドに対してのみ行ってください。  
@@ -89,7 +89,7 @@ ms.locfileid: "72796431"
 ##  <a name="bkmk_3ways_to_install"></a> インストール方法の概要  
  SharePoint 製品用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、次の 2 つの方法のいずれかを使用してインストールできます。  
   
--   **インストールウィザード:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールウィザードで [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アドインをインストールできることに![注意](../../../2014/reporting-services/media/rs-fyinote.png "付箋")してください。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
+-   **インストールウィザード:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールウィザードで [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アドインをインストールできることに![注意](../../../2014/reporting-services/media/rs-fyinote.png "note")してください。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
   
 -   **rsSharepoint.msi:** インストール メディアまたはダウンロードからアドインを直接インストールする。 rsSharepoint.msi は、グラフィカル ユーザー インターフェイスもコマンド ライン インストールもサポートしています。 .msi を管理者特権を使用して実行する必要があるため、まず高度な権限でコマンド プロンプトを開いてから、コマンド ラインから rsSharepoint.msi を実行します。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
@@ -111,11 +111,11 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\14\`  
   
-     内の複数の  
+     または  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
-3.  SharePoint サーバーの全体管理で、レポート サーバーの設定と機能のアクティブ化を構成します。 と呼ばれています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのインストールと構成の詳細については、「sharepoint [2010 用 Reporting Services Sharepoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」を参照してください。  
+3.  SharePoint サーバーの全体管理で、レポート サーバーの設定と機能のアクティブ化を構成します。 . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのインストールと構成の詳細については、「sharepoint [2010 用 Reporting Services Sharepoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」を参照してください。  
   
 ###  <a name="bkmk_files_only_installation"></a> ファイルのみのインストール  
  インストールのカスタム アクション フェーズをスキップしてファイルをインストールするには、SKIPCA オプションを指定してコマンド ラインから rssharepoint.msi を実行します。  
@@ -249,7 +249,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_logfiles"></a> セットアップ ログ ファイル  
- セットアップの実行中は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールしたユーザーの **%temp%** フォルダー内のログ ファイルに情報が記録されます。 このフォルダーのパスは、**C:\Users\\<ユーザー名\>\AppData\Local\Temp** などです。ファイル名の形式は **RS_SP_\<番号>.log** で、実際の名前は **RS_SP_0.log** のようになります。 ログ内では、エラーは "SSRSCustomActionError" という文字列から始まります。  
+ セットアップの実行中は、 **アドインをインストールしたユーザーの** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フォルダー内のログ ファイルに情報が記録されます。 このフォルダーのパスは、**C:\Users\\<ユーザー名\>\AppData\Local\Temp** などです。ファイル名の形式は **RS_SP_\<番号>.log** で、実際の名前は **RS_SP_0.log** のようになります。 ログ内では、エラーは "SSRSCustomActionError" という文字列から始まります。  
   
 > [!NOTE]  
 >  AppData は Windows オペレーティング システム内の隠れたフォルダーです。 隠れたファイルとフォルダーを表示するには、Windows エクスプローラーのフォルダー設定を変更する必要がある場合があります。  
@@ -280,7 +280,7 @@ Rssharepoint.msi /?
   
 2.  出力は次のようになります。  
   
-     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`に評価されるまで、タスクを繰り返します。  
+     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`。  
   
 ##  <a name="bkmk_upgrade"></a> アップグレード  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインの既存のバージョンがインストールされている場合は、最新のバージョンにアップグレードできます。 アドイン セットアップ時に既存のバージョンが検出され、更新するかどうかを確認するメッセージが表示されます。 エラー メッセージは、次のようになります。  
@@ -294,7 +294,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  次の表は、rscustomaction.exe スイッチについてまとめたものです。  
   
-|スイッチ|Description|  
+|スイッチ|[説明]|  
 |------------|-----------------|  
 |i|カスタム アクションをインストールします。 これにより、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントが SharePoint に登録されます。 W3SVCservice サービスが再起動されます。|  
 |r|Repair|  
@@ -305,6 +305,6 @@ Rssharepoint.msi /?
 ## <a name="configuring-reporting-services"></a>Reporting Services の構成  
  必要なコンピューターにアドインをインストールしたら、SharePoint サーバーの全体管理からレポート サーバーを構成する必要があります。 必要な手順は、さまざまなテクノロジがインストールされた順序によって異なります。 詳細については、「sharepoint [2010 用 Reporting Services Sharepoint モードをインストールする](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」および「[レポートサーバー &#40;sharepoint&#41;モードの Reporting Services](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md) 」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  Sharepoint [2010 用 Reporting Services Sharepoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)   
  [Reporting Services Report Server &#40;SharePoint Mode&#41; (Reporting Services レポート サーバー &#40;SharePoint モード&#41;)](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  

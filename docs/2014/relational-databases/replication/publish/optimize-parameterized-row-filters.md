@@ -41,7 +41,7 @@ ms.locfileid: "73882146"
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   パラメーター化されたフィルターを使用する場合、パブリケーションを作成する際に **@use_partition_groups** オプションまたは **@keep_partition_changes** オプションを指定して、マージ レプリケーションでのフィルターの処理方法を制御できます。 この 2 つのオプションを使用し、パブリケーション データベースに追加のメタデータを格納することで、アーティクルをフィルター選択し、パブリケーションの同期パフォーマンスを向上できます。 アーティクルを作成する際に **\@partition_options** を設定することで、サブスクライバー間でデータを共有する方法を制御できます。 これらの要件の詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+-   パラメーター化されたフィルターを使用する場合、パブリケーションを作成する際に **@use_partition_groups** オプションまたは **@keep_partition_changes** オプションを指定して、マージ レプリケーションでのフィルターの処理方法を制御できます。 この 2 つのオプションを使用し、パブリケーション データベースに追加のメタデータを格納することで、アーティクルをフィルター選択し、パブリケーションの同期パフォーマンスを向上できます。 アーティクルを作成する際に **@partition_options** を設定することで、サブスクライバー間でデータを共有する方法を制御できます。 これらの要件の詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
      [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact サブスクライバーを使用して、keep_partition_changes を true に設定し、削除を正しく反映する必要があります。 false に設定すると、サブスクライバーに予想よりも多くの行が含まれる場合があります。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882146"
   
 1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[行のフィルター選択]** ページで、 **[追加]** をクリックし、 **[フィルターの追加]** をクリックします。  
   
-2.  パラメーター化されたフィルターを作成します。 詳しくは、「 [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
+2.  パラメーター化されたフィルターを作成します。 詳しくは、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
   
 3.  複数のサブスクライバー間でのデータの共有方法に一致するオプションを選択します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73882146"
   
     -   **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]**  
   
-     **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションは、格納および処理するメタデータを減らすことにより、パフォーマンスを最適化できます。 ただし、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
+     **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションは、格納および処理するメタデータを減らすことにより、パフォーマンスを最適化できます。 ただし、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73882146"
   
     -   **[重複しない (複数のサブスクリプションで共有)]**  
   
-     これらのオプションの詳細、および **[フィルターの追加]** および **[フィルターの編集]** ダイアログ ボックスで使用できるオプションとこれらのオプションを関連付ける方法の詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」の「[パーティションのオプション] の設定」を参照してください。  
+     これらのオプションの詳細、および **[フィルターの追加]** および **[フィルターの編集]** ダイアログ ボックスで使用できるオプションとこれらのオプションを関連付ける方法の詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」の「[パーティションのオプション] の設定」を参照してください。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -161,7 +161,7 @@ ms.locfileid: "73882146"
   
 ## <a name="see-also"></a>参照  
  [マージ アーティクル間の一連の結合フィルターを自動的に生成する &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md)   
- [マージ アーティクルのパラメーター化された行フィルターの定義および変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [マージ アーティクルのパラメーター化された行フィルターの定義と変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

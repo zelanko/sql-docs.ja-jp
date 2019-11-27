@@ -42,14 +42,14 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @query_id = ] query_id`クエリの id を示します。 *query_id*は**bigint**,、既定値はありません。  
+`[ @query_id = ] query_id` はクエリの id です。 *query_id*は**bigint**,、既定値はありません。  
   
-`[ @plan_id = ] plan_id`適用されなくなるクエリプランの id を指定します。 *plan_id*は**bigint**,、既定値はありません。  
+`[ @plan_id = ] plan_id` は、適用されなくなるクエリプランの id です。 *plan_id*は**bigint**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する**ALTER**権限が必要です。
@@ -72,13 +72,13 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_unforce_plan 3, 3;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [sp_query_store_remove_plan &#40;transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_remove_query &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [sp_query_store_reset_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [transact-sql &#40;  の&#41; sp_query_store_force_plan](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
+ [sp_query_store_remove_plan &#40;transct-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [transact-sql &#40;  の&#41; sp_query_store_remove_query](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_query_store_reset_exec_stats](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_query_store_flush_db](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [クエリストアを使用したパフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [クエリストア    を使用したパフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)     
   

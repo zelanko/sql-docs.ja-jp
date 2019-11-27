@@ -63,7 +63,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Invoke-Sqlcmd のパス コンテキスト  
  -Database パラメーターを使用しない場合、Invoke-Sqlcmd のデータベース コンテキストは、コマンドレットが呼び出されたときにアクティブなパスによって設定されます。  
   
-|[パス]|データベース コンテキスト|  
+|パス|データベース コンテキスト|  
 |----------|----------------------|  
 |SQLSERVER: 以外のドライブで始まります。|ローカル コンピューター上の既定のインスタンスのログイン ID の既定のデータベースです。|  
 |SQLSERVER:\SQL|ローカル コンピューター上の既定のインスタンスのログイン ID の既定のデータベースです。|  
@@ -103,23 +103,23 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  **sqlcmd** のすべてのパラメーターが PowerShell 環境で必要となるわけではありません。 たとえば、Windows PowerShell ではコマンドレットからのすべての出力の書式が自動的に設定されるため、書式設定オプションを指定する **sqlcmd** のパラメーターは **Invoke-Sqlcmd**には実装されていません。 **Invoke-Sqlcmd** のパラメーターと **sqlcmd** のオプションの関係を次の表に示します。  
   
-|Description|sqlcmd オプション|Invoke-Sqlcmd パラメーター|  
+|[説明]|sqlcmd オプション|Invoke-Sqlcmd パラメーター|  
 |-----------------|-------------------|------------------------------|  
 |サーバーとインスタンスの名前|-S|-ServerInstance|  
 |使用する初期データベース|-d|-Database|  
 |指定したクエリの実行と終了|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログイン ID|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証パスワード|-p|-Password|  
-|変数の定義|-V|-Variable|  
-|クエリのタイムアウト間隔|-T|-QueryTimeout|  
+|変数の定義|-v|-Variable|  
+|クエリのタイムアウト間隔|-t|-QueryTimeout|  
 |エラー発生時の実行停止|-b|-AbortOnError|  
-|専用管理者接続|-A|-DedicatedAdministratorConnection|  
-|対話型コマンド、スタートアップ スクリプト、および環境変数の無効化|-X|-DisableCommands|  
-|変数の代入の無効化|-X|-DisableVariables|  
+|専用管理者接続|-a|-DedicatedAdministratorConnection|  
+|対話型コマンド、スタートアップ スクリプト、および環境変数の無効化|-x|-DisableCommands|  
+|変数の代入の無効化|-x|-DisableVariables|  
 |レポートする最小重大度レベル|-v|-SeverityLevel|  
-|レポートする最小エラー レベル|-M|-ErrorLevel|  
+|レポートする最小エラー レベル|-m|-ErrorLevel|  
 |ログインのタイムアウト間隔|-l|-ConnectionTimeout|  
-|ホスト名|-H|-HostName|  
+|ホスト名|-h|-HostName|  
 |パスワードの変更と終了|-Z|-NewPassword|  
 |クエリが含まれている入力ファイル|-i|-InputFile|  
 |文字出力の最大長|-w|-MaxCharLength|  
@@ -128,25 +128,25 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |エラーの表示|パラメーターなし|-OutputSqlErrors|  
 |stderr へのメッセージの出力|-r|パラメーターなし|  
 |クライアントの地域別設定の使用|-r|パラメーターなし|  
-|指定したクエリの実行と実行の継続|-Q|パラメーターなし|  
+|指定したクエリの実行と実行の継続|-q|パラメーターなし|  
 |出力データに使用するコード ページ|-f|パラメーターなし|  
 |パスワードの変更と実行の継続|-Z|パラメーターなし|  
-|パケット サイズ|-A|パラメーターなし|  
-|列の区切り|-S|パラメーターなし|  
+|パケット サイズ|-a|パラメーターなし|  
+|列の区切り|-s|パラメーターなし|  
 |出力ヘッダーの制御|-H|パラメーターなし|  
 |制御文字の指定|-k|パラメーターなし|  
-|固定長表示幅|-y|パラメーターなし|  
-|可変長表示幅|-y|パラメーターなし|  
-|入力のエコー|-E|パラメーターなし|  
-|引用符で囲まれた識別子の有効化|-i|パラメーターなし|  
-|末尾のスペースの削除|-w|パラメーターなし|  
-|インスタンスの一覧表示|-l|パラメーターなし|  
-|出力の形式を Unicode に設定|-U|パラメーターなし|  
-|統計情報の印刷|-P|パラメーターなし|  
+|固定長表示幅|-Y|パラメーターなし|  
+|可変長表示幅|-Y|パラメーターなし|  
+|入力のエコー|-e|パラメーターなし|  
+|引用符で囲まれた識別子の有効化|-I|パラメーターなし|  
+|末尾のスペースの削除|-W|パラメーターなし|  
+|インスタンスの一覧表示|-L|パラメーターなし|  
+|出力の形式を Unicode に設定|-u|パラメーターなし|  
+|統計情報の印刷|-p|パラメーターなし|  
 |コマンドの終了|-c|パラメーターなし|  
 |Windows 認証を使用した接続|-E|パラメーターなし|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [データベース エンジン コマンドレットの使用](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
+ [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)   
  [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

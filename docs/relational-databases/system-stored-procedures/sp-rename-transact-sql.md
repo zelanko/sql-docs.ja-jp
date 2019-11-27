@@ -52,7 +52,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *object_name*は**nvarchar (776)** ,、既定値はありません。  
   
- [@newname =]'*new_name*'  
+ [ @newname = ] '*new_name*'  
  指定したオブジェクトの新しい名前を指定します。 *new_name*は、1部構成の名前である必要があり、識別子の規則に従っている必要があります。 *newname*は**sysname**,、既定値はありません。  
   
 > [!NOTE]  
@@ -67,7 +67,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|ユーザー定義データベース。 このオブジェクトの種類は、データベースの名前を変更するときに必要です。|  
 |INDEX|ユーザー定義インデックス。 統計を使用してインデックスの名前を変更すると、統計の名前も自動的に変更されます。|  
 |OBJECT|[Sys. オブジェクト](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)で追跡される型の項目。 たとえば、OBJECT を使用して、制約 (CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY)、ユーザー テーブル、ルールなどのオブジェクトの名前を変更できます。|  
-|STATISTICS|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> ユーザーによって明示的に作成された、またはインデックスを使用して暗黙的に作成された統計。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
+|STATISTICS|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> ユーザーによって明示的に作成された、またはインデックスを使用して暗黙的に作成された統計。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
 |USERDATATYPE|[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)または[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)を実行して追加された[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  

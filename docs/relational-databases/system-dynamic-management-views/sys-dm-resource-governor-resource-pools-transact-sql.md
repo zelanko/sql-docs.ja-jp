@@ -69,7 +69,7 @@ ms.locfileid: "73982306"
 |read_io_stall_queued_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> 読み取り IO の到着から問題までの合計時間 (ミリ秒)。 NULL 値が許可されます。 リソースプールに IO が適用されていない場合は Null です。 つまり、リソースプールの MIN_IOPS_PER_VOLUME と MAX_IOPS_PER_VOLUME の設定は0です。<br /><br /> プールの IO 設定が待機時間の原因であるかどうかを判断するには、 **read_io_stall_total_ms**から**read_io_stall_queued_ms**を減算します。|  
 |write_io_queued_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> リソースガバナー統計がリセットされた後にエンキューされた書き込み Io の合計。 NULL 値が許可されます。 リソースプールに IO が適用されていない場合は Null です。 つまり、リソースプールの MIN_IOPS_PER_VOLUME と MAX_IOPS_PER_VOLUME の設定は0です。|  
 |write_io_issued_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> リソースガバナー統計がリセットされた後に発行された書き込み Io の合計。 NULL 値が許可されます。 リソースプールに IO が適用されていない場合は Null です。 つまり、リソースプールの MIN_IOPS_PER_VOLUME と MAX_IOPS_PER_VOLUME の設定は0です。|  
-|write_io_completed_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> リソースガバナー統計がリセットされた後に完了した書き込み Io の合計。 Null 値はありません|  
+|write_io_completed_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> リソース ガバナー統計がリセットされた後に完了した書き込み IO の合計。 Null 値はありません|  
 |write_io_throttled_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> リソースガバナー統計がリセットされた後に調整された書き込み Io の合計。 Null 値はありません|  
 |write_bytes_total|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> リソース ガバナー統計がリセットされた後に書き込まれたバイト数の合計。 NULL 値は許可されません。|  
 |write_io_stall_total_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> 書き込み IO の到着から完了までの合計時間 (ミリ秒単位)。 NULL 値は許可されません。 |  

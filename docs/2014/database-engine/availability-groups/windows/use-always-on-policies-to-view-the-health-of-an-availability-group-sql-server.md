@@ -29,7 +29,7 @@ ms.locfileid: "72782847"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  CONNECT、VIEW SERVER STATE、および VIEW ANY DEFINITION 権限が必要です。  
@@ -88,7 +88,7 @@ ms.locfileid: "72782847"
   
      これらのコマンドレットでは、次のオプションを使用できます。  
   
-    |オプション|Description|  
+    |オプション|[説明]|  
     |------------|-----------------|  
     |`AllowUserPolicies`|AlwaysOn ポリシーのカテゴリにあるユーザー ポリシーを実行します。|  
     |`InputObject`|可用性グループ、可用性レプリカ、または可用性データベースの状態 (使用するコマンドレットに応じて異なります) を表すオブジェクトのコレクションです。 コマンドレットを実行すると、指定されたオブジェクトの正常性が計算されます。|  
@@ -103,13 +103,13 @@ ms.locfileid: "72782847"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
--   [SQL Server PowerShell のヘルプの参照](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
  **AlwaysOn チームのブログの SQL Server: PowerShell を使用した AlwaysOn 正常性状態の監視:**  
@@ -122,7 +122,7 @@ ms.locfileid: "72782847"
   
 -   [パート 4: SQL Server エージェントの統合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの管理 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   

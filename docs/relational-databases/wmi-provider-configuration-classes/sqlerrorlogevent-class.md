@@ -49,7 +49,7 @@ class SQLErrorLogEvent
 |メッセージ|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベント メッセージ。|  
 |ProcessInfo|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベントのソース サーバー プロセス ID (SPID) に関する情報。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
@@ -85,7 +85,7 @@ Next
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  WMI を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログファイルに接続するには、ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  

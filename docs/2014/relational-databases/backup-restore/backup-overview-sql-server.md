@@ -86,7 +86,7 @@ ms.locfileid: "70175986"
  **バックアップメディアの用語と定義**  
   
  [バックアップデバイス](backup-devices-sql-server.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server バックアップを Azure Blob ストレージサービスに書き込むこともできます。 **URL**形式を使用して、バックアップ先とバックアップファイルの名前を指定します。 詳細については、「 [Azure Blob Storage サービスを使用したバックアップと復元の SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Azure Blob Storage サービスに書き込むこともできます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳細については、「 [Azure Blob Storage サービスを使用したバックアップと復元の SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
  [バックアップ メディア (backup media)](media-sets-media-families-and-backup-sets-sql-server.md)  
  バックアップの書き込み先となる 1 つまたは複数のテープまたはディスク ファイル。  
@@ -133,7 +133,7 @@ ms.locfileid: "70175986"
   
 -   バックアップ操作実行中にデータベース ファイルを作成または削除しようとすると、作成操作または削除操作は失敗します。  
   
- バックアップ操作がファイル管理操作または圧縮操作の実行と重複すると、競合が発生します。 競合する操作のどちらが先に開始されたかにかかわらず、1 つ目の操作によって設定されたロックのタイムアウトを 2 つ目の操作が待機します (タイムアウト期間はセッション タイムアウトの設定によって制御されます)。ロックがタイムアウト期間内に解放されると、2 番目の操作が開始されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。  
+ バックアップ操作がファイル管理操作または圧縮操作の実行と重複すると、競合が発生します。 競合する操作が最初に開始されたかどうかにかかわらず、2番目の操作は、最初の操作によって設定されたロックのタイムアウトを待機します。(タイムアウト期間はセッションタイムアウトの設定によって制御されます)。ロックがタイムアウト期間内に解放された場合、2番目の操作は続行されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **バックアップデバイスとバックアップメディアを操作するには**  
@@ -156,7 +156,7 @@ ms.locfileid: "70175986"
   
 -   [デバイスからのバックアップ復元 &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [チュートリアル: Azure Blob Storage サービスへのバックアップと復元の SQL Server](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [チュートリアル: SQL Server Azure Blob Storage サービスへのバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **バックアップを作成するには**  
   
@@ -179,9 +179,9 @@ ms.locfileid: "70175986"
   
 -   [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [チュートリアル: Azure Blob Storage サービスへのバックアップと復元の SQL Server](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [チュートリアル: SQL Server Azure Blob Storage サービスへのバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [メンテナンス プラン](../maintenance-plans/maintenance-plans.md)   

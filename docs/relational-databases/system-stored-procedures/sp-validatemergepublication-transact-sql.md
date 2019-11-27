@@ -1,5 +1,5 @@
 ---
-title: sp_validatemergepublication (Transact-SQL) |Microsoft Docs
+title: sp_validatemergepublication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -38,29 +38,29 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-[ **\@publication=** ] **'***publication***'**
+ [ **\@publication=** ] **'***publication***'**  
  パブリケーションの名前です。 *publication* は **sysname** 、既定値はありません。  
   
-`[ @level = ] 'level'` は、実行する検証の種類です。 *level*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
+`[ @level = ] level` は、実行する検証の種類です。 *レベル*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
-|レベルの値|説明|  
+|レベルの値|[説明]|  
 |-----------------|-----------------|  
 |**1**|行数のみの検証。|  
-|**2**|行数とチェックサムの検証。 @No__t-0 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーの場合、これは自動的に**3**に設定されます。|  
+|**2**|行数とチェックサムの検証。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバーの場合、これは自動的に**3**に設定されます。|  
 |**3**|これは推奨値です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_validatemergepublication**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [レプリケート](../../relational-databases/replication/validate-data-at-the-subscriber.md)されたデータの検証    
- [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [レプリケート](../../relational-databases/replication/validate-data-at-the-subscriber.md)されたデータの検証   
+ [sp_validatemergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

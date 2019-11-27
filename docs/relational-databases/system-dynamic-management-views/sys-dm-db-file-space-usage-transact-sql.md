@@ -42,28 +42,28 @@ ms.locfileid: "73983047"
 |filegroup_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ファイル グループ ID。|  
 |total_page_count|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ファイル内のページの総数。|  
 |allocated_extent_page_count|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ファイルに含まれる割り当て済みエクステント内の総ページ数。|  
-|unallocated_extent_page_count|**bigint**|ファイル内の未割り当てエクステント内のページの合計数。<br /><br /> 割り当てられたエクステントの未使用ページは含まれません。|  
-|version_store_reserved_page_count|**bigint**|バージョンストアに割り当てられた単一エクステント内のページの合計数。 バージョン ストア ページは、混合エクステントからは割り当てられません。<br /><br /> IAM ページは、常に混合エクステントから割り当てられるため、含まれていません。 PFS ページは、一定の範囲から割り当てられている場合に含まれます。<br /><br /> 詳しくは、「[sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)」をご覧ください。|  
-|user_object_reserved_page_count|**bigint**|データベース内のユーザーオブジェクトに対して、単一エクステントから割り当てられたページの合計数。 割り当て済みのエクステントの未使用ページは、この数に含まれません。<br /><br /> IAM ページは、常に混合エクステントから割り当てられるため、含まれていません。 PFS ページは、一定の範囲から割り当てられている場合に含まれます。<br /><br /> [Allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)カタログビューの total_pages 列を使用して、ユーザーオブジェクト内の各アロケーションユニットの予約済みページ数を返すことができます。 ただし、total_pages 列には IAM ページが含まれていることに注意してください。|  
-|internal_object_reserved_page_count|**bigint**|ファイル内の内部オブジェクトに対して割り当てられる単一エクステント内の総ページ数。 割り当て済みのエクステントの未使用ページは、この数に含まれません。<br /><br /> IAM ページは、常に混合エクステントから割り当てられるため、含まれていません。 PFS ページは、一定の範囲から割り当てられている場合に含まれます。<br /><br /> 各内部オブジェクトのページ数を返すカタログビューまたは動的管理オブジェクトはありません。|  
-|mixed_extent_page_count|**bigint**|ファイル内の割り当てられた混合エクステントに割り当てられたページと未割り当てページの合計数。 混合エクステントには、異なるオブジェクトに割り当てられたページが含まれます。 この数には、ファイル内のすべての IAM ページが含まれます。|
+|unallocated_extent_page_count|**bigint**|ファイルに含まれる未割り当てエクステント内の総ページ数。<br /><br /> 割り当て済みのエクステント内の未使用ページは含まれません。|  
+|version_store_reserved_page_count|**bigint**|バージョン ストアに割り当てられる単一エクステント内の総ページ数。 バージョン ストア ページは、混合エクステントからは割り当てられません。<br /><br /> IAM ページは、常に混合エクステントから割り当てられるので、この数に含まれません。 PFS ページは、単一エクステントから割り当てられる場合はこの数に含まれます。<br /><br /> 詳しくは、「[sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)」をご覧ください。|  
+|user_object_reserved_page_count|**bigint**|データベース内のユーザー オブジェクトに対して単一エクステントから割り当てられるページの総数。 割り当て済みのエクステントの未使用ページは、この数に含まれません。<br /><br /> IAM ページは、常に混合エクステントから割り当てられるので、この数に含まれません。 PFS ページは、単一エクステントから割り当てられる場合はこの数に含まれます。<br /><br /> [Allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)カタログビューの total_pages 列を使用して、ユーザーオブジェクト内の各アロケーションユニットの予約済みページ数を返すことができます。 ただし、total_pages 列には IAM ページの数が含まれることに注意してください。|  
+|internal_object_reserved_page_count|**bigint**|ファイル内の内部オブジェクトに対して割り当てられる単一エクステント内の総ページ数。 割り当て済みのエクステントの未使用ページは、この数に含まれません。<br /><br /> IAM ページは、常に混合エクステントから割り当てられるので、この数に含まれません。 PFS ページは、単一エクステントから割り当てられる場合はこの数に含まれます。<br /><br /> それぞれの内部オブジェクトのページ数を返すカタログ ビューや動的管理オブジェクトはありません。|  
+|mixed_extent_page_count|**bigint**|ファイルに含まれる混合エクステント内の、割り当て済みページと未割り当てページの総数。 混合エクステントには、異なるオブジェクトに割り当てられたページが含まれます。 この数には、ファイル内のすべての IAM ページが含まれます。|
 |modified_extent_page_count|**bigint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br />前回のデータベースの完全バックアップ以降に、ファイルの割り当てられたエクステントで変更されたページの総数。 差分バックアップが必要かどうかを判断するために、変更されたページ数を使用して、前回の完全バックアップ以降にデータベースの差分変更の量を追跡できます。|
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
 |distribution_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
   
 ## <a name="remarks"></a>Remarks  
- ページ数は常にエクステント レベルのものです。 したがって、ページ数の値は常に 8 の倍数になります。 グローバルアロケーションマップ (GAM) と共有グローバルアロケーションマップ (SGAM) のアロケーションページを含むエクステントには、単一エクステントが割り当てられます。 これらは、前に説明したページ数には含まれていません。 ページとエクステントの詳細については、「[ページとエクステントのアーキテクチャガイド](../../relational-databases/pages-and-extents-architecture-guide.md)」を参照してください。 
+ ページ数は常にエクステント レベルのものです。 したがって、ページ数の値は常に 8 の倍数になります。 グローバル アロケーション マップ (GAM) と共有グローバル アロケーション マップ (SGAM) の割り当てページを含むエクステントは、割り当て済みの単一エクステントです。 これらは前で説明したページ数には含まれません。 ページとエクステントの詳細については、「[ページとエクステントのアーキテクチャガイド](../../relational-databases/pages-and-extents-architecture-guide.md)」を参照してください。 
   
- 現在のバージョンストアの内容は、 [dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)にあります。 バージョンストアページは、グローバルリソースであるため、セッションおよびタスクレベルではなく、ファイルレベルで追跡されます。 セッションでバージョンを生成することもできますが、セッションが終了するときバージョンを削除することはできません。 バージョンストアのクリーンアップでは、特定のバージョンへのアクセスを必要とする実行時間が最も長いトランザクションを考慮する必要があります。 バージョンストアのクリーンアップに関連する実行時間が最も長いトランザクションを検出するには、 [dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)の elapsed_time_seconds 列を表示します。  
+ 現在のバージョンストアの内容は、 [dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)にあります。 バージョン ストア ページはグローバル リソースなので、セッションおよびタスク レベルではなくファイル レベルで追跡されます。 セッションでバージョンを生成することもできますが、セッションが終了するときバージョンを削除することはできません。 バージョン ストア クリーンアップでは、特定バージョンへのアクセスを必要とする、実行時間が最も長いトランザクションを考慮する必要があります。 バージョンストアのクリーンアップに関連する実行時間が最も長いトランザクションを検出するには、 [dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)の elapsed_time_seconds 列を表示します。  
   
  mixed_extent_page_count 列で変更が頻繁に行われる場合は、SGAM ページの使用頻度が高いことが考えられます。 この場合、PAGELATCH_UP 待機の数が多くなっていることがあります。またこの待機では、待機リソースが SGAM ページになっています。 詳細については、次を参照してください[sys.dm_os_waiting_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)、 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)、および[sys.dm_os_latch_。stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)します。  
   
-## <a name="user-objects"></a>ユーザーオブジェクト  
- ユーザーオブジェクトページカウンターには、次のオブジェクトが含まれています。  
+## <a name="user-objects"></a>ユーザー オブジェクト  
+ 次のオブジェクトは、ユーザー オブジェクト ページ カウンターに含まれます。  
   
 -   ユーザー定義テーブルとインデックス  
   
--   システムテーブルとインデックス  
+-   システム テーブルとインデックス  
   
 -   グローバル一時テーブルとインデックス  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73983047"
 -   テーブル値関数で返されるテーブル  
   
 ## <a name="internal-objects"></a>内部オブジェクト  
- 内部オブジェクトは tempdb にのみ存在します。 内部オブジェクトページカウンターには、次のオブジェクトが含まれています。  
+ 内部オブジェクトは tempdb にのみ存在します。 次のオブジェクトは、内部オブジェクト ページ カウンターに含まれます。  
   
 -   カーソルまたはスプール操作の作業テーブルと、一時的なラージオブジェクト (LOB) ストレージ  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73983047"
   
 -   並べ替え実行結果  
   
-## <a name="relationship-cardinalities"></a>リレーションシップ基数  
+## <a name="relationship-cardinalities"></a>リレーションシップの基数  
   
 |From|変換先|[リレーションシップ]|  
 |----------|--------|------------------|  
@@ -106,7 +106,7 @@ SELECT SUM(unallocated_extent_page_count) AS [free pages],
 FROM sys.dm_db_file_space_usage;  
 ```  
 
-### <a name="determining-the-amount-of-space-used-by-user-objects"></a>ユーザーオブジェクトが使用する領域の量を決定する  
+### <a name="determining-the-amount-of-space-used-by-user-objects"></a>ユーザー オブジェクトにより使用される領域の確認  
  次のクエリを実行すると、tempdb のユーザー オブジェクトにより使用されるページ数の合計と領域の合計 (MB 単位) が返されます。  
   
 ```sql  

@@ -34,7 +34,7 @@ ms.locfileid: "73760327"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は分散クエリをサポートします。分散クエリは、1 つのクエリで複数の異種 OLE DB データ ソースのデータにアクセスするクエリです。 リモートの OLE DB データ ソースへアクセスするための方法として、目的のデータ ソースをリンク サーバーとして定義する方法があります。 これを行うには、 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)を使用します。 リンク サーバーを定義すると、このサーバーのオブジェクトを次のような 4 部構成の名前を使用して Transact-SQL ステートメントで参照できるようになります。  
   
- *object_name を linked_server_name*します。  
+ *linked_server_name.catalog.schema.object_name*.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバーからのカタログ情報の取得に役立つ、次の 2 つのドライバー固有の関数をサポートします。  
   
@@ -78,10 +78,10 @@ ms.locfileid: "73760327"
   
 ## <a name="see-also"></a>参照  
  [ &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  の SQL Server Native Client  
- [Sqlcolumnprivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
- [Sqlcolumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
- [Sqlprimarykeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
- [Sqltableprivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
+ [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
+ [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
+ [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
+ [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
  [Sqltables](../../../relational-databases/native-client-odbc-api/sqltables.md)   
  [SQLStatistics](../../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
   

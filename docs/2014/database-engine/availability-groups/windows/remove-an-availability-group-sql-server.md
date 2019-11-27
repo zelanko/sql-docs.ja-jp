@@ -34,7 +34,7 @@ ms.locfileid: "72782927"
   
      [制限事項と推奨事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して可用性グループを削除するには:**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72782927"
   
 -   セカンダリ レプリカについては、DROP AVAILABILITY GROUP は緊急の目的だけに使用してください。 理由は、可用性グループを削除すると可用性グループがオフラインになるためです。 セカンダリ レプリカから可用性グループを削除した場合、プライマリ レプリカは、OFFLINE 状態がクォーラム損失、強制フェールオーバー、または DROP AVAILABILITY GROUP コマンドのどの原因で発生したのかを特定できません。 スプリット ブレイン状況の発生を防ぐために、プライマリ レプリカは RESTORING 状態に遷移します。 詳細については、「 [動作方法: DROP AVAILABILITY GROUP の動作](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) 」(CSS SQL Server エンジニアのブログ) を参照してください。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。 ローカル サーバー インスタンスによってホストされていない可用性グループを削除するには、その可用性グループ上の CONTROL SERVER 権限または CONTROL 権限が必要です。  
@@ -113,7 +113,7 @@ ms.locfileid: "72782927"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -123,6 +123,6 @@ ms.locfileid: "72782927"
   
 -   [動作方法: DROP AVAILABILITY GROUP の動作](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server エンジニアのブログ)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの作成と構成 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  

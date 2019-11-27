@@ -54,9 +54,9 @@ ms.locfileid: "70154789"
  メディア セットは、バックアップ メディアをフォーマットすることによって、バックアップ操作中にバックアップ メディア上に作成されます。 詳細については、このトピックの「 [新しいメディア セットの作成](#CreatingMediaSet)」をご覧ください。 フォーマットが終了すると、各ファイルまたはテープにメディア セット用のメディア ヘッダーが書き込まれ、バックアップ コンテンツの受け入れ準備が整います。 ヘッダーが書き込まれると、バックアップ操作用に指定されているすべてのバックアップ デバイス上のバックアップ メディアに指定のデータをバックアップする作業に進みます。  
   
 > [!NOTE]  
->  メディア セットは、メディア ボリューム (テープまたはディスク ファイル) の破損に備えてミラー化できます。 詳細については、「 [ミラー化バックアップ メディア セット &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)」を参照してください。  
+>  メディア セットは、メディア ボリューム (テープまたはディスク ファイル) の破損に備えてミラー化できます。 詳細については、「[ミラー化バックアップ メディア セット &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]以降では、圧縮されたバックアップを読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] 以降では、圧縮されたバックアップを読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
   
   
 ### <a name="media-families"></a>メディア ファミリ  
@@ -89,7 +89,7 @@ ms.locfileid: "70154789"
 -   メディアの説明に MTF メディア ラベルまたはメディアの説明が含まれているかどうか。  
   
     > [!NOTE]  
-    >  バックアップまたは復元操作に使用されるすべてのメディアは、という[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]標準バックアップ形式を使用します。これは、別のアプリケーションによって書き込まれた mtf メディアラベルを保持しますが、mtf メディアラベルを作成しません。  
+    >  バックアップ操作または復元操作に使用するすべてのメディアは、別のアプリケーションによって書き込まれた MTF メディアラベルを保持し、MTF メディアラベルを書き込まない [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] という標準バックアップ形式を使用します。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format メディア ラベルまたはメディアの説明 (自由な形式のテキスト)。  
   
@@ -210,7 +210,7 @@ GO
  Microsoft Windows バックアップと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは同じメディアを共有できますが、同時には使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップは、Windows データをバックアップできません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]以降のバージョンでは、圧縮されたバックアップを読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] 以降のバージョンでは、圧縮されたバックアップを読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
   
   
 ####  <a name="Overwriting"></a>バックアップセットの上書き  
@@ -302,11 +302,11 @@ GO
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
- [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   
+ [ミラー化バックアップ メディア セット &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)   

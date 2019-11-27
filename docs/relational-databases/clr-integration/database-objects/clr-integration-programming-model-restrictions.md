@@ -23,9 +23,9 @@ ms.locfileid: "70212371"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  マネージストアドプロシージャまたはその他のマネージデータベースオブジェクトを構築する場合は、で実行される[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のコードチェックについて考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は、マネージコードアセンブリがデータベースに最初に登録されたとき、 **CREATE assembly**ステートメントを使用して、実行時にもチェックを実行します。 マネージド コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージコードが満たす必要のある要件は、アセンブリが**safe**、 **EXTERNAL_ACCESS**、または**UNSAFE**として登録されているかどうかによって異なり、安全であることが保証され、以下に示します。  
+  マネージストアドプロシージャまたはその他のマネージデータベースオブジェクトを構築する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって実行される特定のコードチェックについて考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、マネージコードアセンブリがデータベースに最初に登録されたとき、 **CREATE assembly**ステートメントを使用して、実行時にもチェックを実行します。 マネージド コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージコードが満たす必要のある要件は、アセンブリが**安全**、 **EXTERNAL_ACCESS** **、または安全と**して登録されているかどうかによって異なります。**安全である**ことが保証され、以下に示します。  
   
- マネージド コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 **SAFE**、 **EXTERNAL_ACCESS**、および**UNSAFE**アセンブリには、異なる CAS アクセス許可があります。 詳細については、「 [CLR 統合コードアクセスセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)」を参照してください。  
+ マネージド コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 **セーフ**、 **EXTERNAL_ACCESS**、**安全でない**アセンブリには、異なる CAS アクセス許可があります。 詳細については、「 [CLR 統合コードアクセスセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)」を参照してください。  
   
 ## <a name="create-assembly-checks"></a>CREATE ASSEMBLY チェック  
  **CREATE ASSEMBLY**ステートメントを実行すると、各セキュリティレベルに対して次のチェックが実行されます。  いずれかのチェックが失敗した場合、 **CREATE ASSEMBLY**は失敗し、エラーメッセージが表示されます。  
@@ -37,9 +37,9 @@ ms.locfileid: "70212371"
   
 -   サポートされているアセンブリの 1 つであること。 詳細については、「[サポートされている .NET Framework ライブラリ](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)」を参照してください。  
   
--   _\<>_ の場所**から CREATE ASSEMBLY**を使用しており、参照されているすべてのアセンブリとその依存関係は、  *\<> の場所*で使用できます。  
+-   _>\<の場所_**から CREATE ASSEMBLY**を使用しており、参照されているすべてのアセンブリとその依存関係は *\<の場所 >* で使用できます。  
   
--   **CREATE ASSEMBLY** _\<in bytes...>、_ すべての参照は空白で区切られたバイトを使用して指定されます。  
+-   \<バイト**から CREATE ASSEMBLY**を使用してい_ます...>、_ すべての参照は空白で区切られたバイトを使用して指定されます。  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  すべての**EXTERNAL_ACCESS**アセンブリは、次の条件を満たしている必要があります。  
@@ -80,7 +80,7 @@ ms.locfileid: "70212371"
   
 ### <a name="safe"></a>SAFE  
   
--   すべての**EXTERNAL_ACCESS** assembly 条件がチェックされます。  
+-   すべての**EXTERNAL_ACCESS**アセンブリ条件がチェックされます。  
   
 ## <a name="runtime-checks"></a>ランタイムチェック  
  コード アセンブリは、実行時に次の条件をチェックされます。 これらの条件のいずれかが見つからなかった場合、マネージド コードの実行が失敗し、例外がスローされます。  

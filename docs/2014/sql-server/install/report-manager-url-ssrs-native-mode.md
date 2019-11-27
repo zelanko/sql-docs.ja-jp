@@ -43,7 +43,7 @@ ms.locfileid: "71952409"
   
 ## <a name="see-also"></a>参照  
  [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [構成ファイル&#40;の url SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
+ [構成ファイル&#40;の url SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

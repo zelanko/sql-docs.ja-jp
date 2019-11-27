@@ -62,7 +62,7 @@ ms.locfileid: "73912802"
   
 1.  **[レプリケーション パスワードの更新]** ダイアログ ボックス。このダイアログ ボックスは、 **の** [レプリケーション] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]フォルダーから利用できます。 レプリケーション トポロジのサーバーで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アカウントまたは Windows アカウントのパスワードを変更する場合は、そのアカウントを使用する各エージェントのパスワードを更新するよりも、このダイアログ ボックスを使用してください。 複数のサーバー上のエージェントが同じアカウントを使用している場合は、それぞれのサーバーに接続してパスワードを変更する必要があります。 パスワードは、レプリケーションで使用されるすべての場所で更新されます。 パスワードは、リンク サーバーなど、その他の場所では更新されません。  
   
-2.  **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[エージェント セキュリティ]** ページ。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)」を参照してください。  
+2.  **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[エージェント セキュリティ]** ページ。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../publish/view-and-modify-publication-properties.md)」を参照してください。  
   
 3.  **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)」を参照してください。  
   

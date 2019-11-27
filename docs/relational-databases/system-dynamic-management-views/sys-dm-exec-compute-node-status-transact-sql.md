@@ -1,5 +1,5 @@
 ---
-title: sys _exec_compute_node_status (Transact-sql) |Microsoft Docs
+title: dm_exec_compute_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -28,12 +28,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532758"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys _exec_compute_node_status (Transact-sql)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>dm_exec_compute_node_status (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   すべての PolyBase ノードのパフォーマンスと状態に関する追加情報を保持します。 ノードごとに1行を一覧表示します。  
   
-|列名|[データ型]|説明|範囲|  
+|列名|[データ型]|[説明]|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|ノードに関連付けられている一意の数値 id。|種類に関係なく、スケールアウトクラスター全体で一意です。|  
 |process_id|`int`|||  
@@ -44,7 +44,7 @@ ms.locfileid: "73532758"
 |total_cpu_usage|`bigint`|合計 CPU 使用率 (ティック単位)。||  
 |thread_count|`bigint`|このノードで使用されているスレッドの合計数。||  
 |handle_count|`bigint`|このノードで使用されているハンドルの合計数。||  
-|total_elapsed_time|`bigint`|システムの開始または再起動からの経過時間の合計。|システムの開始または再起動からの経過時間の合計。 Total_elapsed_time が整数の最大値 (ミリ秒単位で24.8 日) を超えると、オーバーフローによる具体化エラーが発生します。ミリ秒単位の最大値は24.8 日に相当します。|  
+|total_elapsed_time|`bigint`|システムの開始または再起動からの経過時間の合計。|システムの開始または再起動からの経過時間の合計。 Total_elapsed_time が整数の最大値 (ミリ秒単位で24.8 日) を超えた場合、オーバーフローによる具体化エラーが発生します。ミリ秒単位の最大値は24.8 日に相当します。|  
 |is_available|`bit`|このノードが使用可能かどうかを示すフラグです。||  
 |sent_time|`datetime`|最後にネットワークパッケージが送信された時刻||  
 |received_time|`datetime`|ネットワークパッケージがこのノードによって最後に送信された時刻。||  
@@ -54,6 +54,6 @@ ms.locfileid: "73532758"
 ## <a name="see-also"></a>参照  
  [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [データベース関連の動的管理&#40;ビュー transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [データベース関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -28,7 +28,7 @@ ms.locfileid: "73729520"
   
  明示的階層を作成したら、 **[エクスプローラー]** 機能領域で明示的階層にメンバーを追加できます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -58,17 +58,17 @@ ms.locfileid: "73729520"
 ## <a name="grid-columns"></a>グリッド列  
  作成する各明示的階層で、グリッドに 7 列の行が追加されます。 次に、各列について説明します。  
   
-|[名前]|説明|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[状態]|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![状態を更新するためのアイコン](../master-data-services/media/mds-statusicon-updating.png "I状態を更新するための con)<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "Iエラー状態のための con)<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![OK 状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "I"OK" 状態の con ")|  
-|[名前]|明示的階層の名前。|  
+|[オブジェクト名]|明示的階層の名前。|  
 |必須|明示的階層が必須かどうかを指定します。|  
 |[作成者]|明示的階層を作成したユーザーの名前。|  
-|作成日時|明示的階層が作成された日時。|  
+|作成日|明示的階層が作成された日時。|  
 |更新者|明示的階層を更新したユーザーの名前。|  
-|更新日時|明示的階層が最後に更新された日時。|  
+|更新日|明示的階層が最後に更新された日時。|  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
   
 -   [統合メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   

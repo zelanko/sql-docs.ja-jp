@@ -34,7 +34,7 @@ ms.locfileid: "73786289"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 属性は、NOCOUNT オプションの現在の設定を示します。これは、 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)が呼び出されたときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がステートメントの影響を受ける行の数を報告するかどうかを制御します。 *Valueptr*値の型は SQLLEN です。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT を OFF にします。 SQLRowCount は、影響を受けた行数を返します。|  
 |SQL_NC_ON|NOCOUNT を ON にします。 影響を受ける行の数は SQLRowCount によって返されず、戻り値は0です。|  

@@ -25,12 +25,12 @@ ms.locfileid: "73728806"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で属性の値に対する変更を追跡する場合、変更の追跡グループに属性を追加します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で属性の値に対する変更を追跡する場合、変更の追跡グループに属性を追加します。  
   
 > [!NOTE]  
 >  変更の追跡グループに属性を追加した後に属性の値が変更されると、属性は [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで変更済みとしてフラグが付けられます。 変更に基づいてアクションを実行するビジネス ルールを作成します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -69,7 +69,7 @@ ms.locfileid: "73728806"
   
 10. グループに含めるすべての属性に対して、この手順を繰り返します。 グループ内の各属性に対して同じ変更の追跡グループの番号を使用します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
   
 -   [属性値の変更に基づいてアクションを開始する (マスター データ サービス)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   

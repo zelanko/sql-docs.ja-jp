@@ -51,7 +51,7 @@ ms.locfileid: "73882303"
 -   フィルターが静的であるため、すべてのサブスクライバーは同じデータのサブセットを受け取ることになります。 マージ パブリケーションに属しているテーブルのアーティクルから行を動的にフィルター選択して、各サブスクライバーが異なるデータ パーティションを受け取るようにする場合は、「 [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。 マージ レプリケーションでは、既存の行フィルターに基づいて、関連する行をフィルター選択することもできます。 詳しくは、「 [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[行のフィルター選択]** ページで、静的行フィルターを定義、変更、削除します。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
+ パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[行のフィルター選択]** ページで、静的行フィルターを定義、変更、削除します。 ウィザードの使用とダイアログ ボックスへのアクセスの詳細については、「[Create a Publication](create-a-publication.md)」(パブリケーションの作成) と「[パブリケーション プロパティの表示と変更](view-and-modify-publication-properties.md)」をご覧ください。  
   
 #### <a name="to-define-a-static-row-filter"></a>静的行フィルターを定義するには  
   
@@ -107,11 +107,11 @@ ms.locfileid: "73882303"
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの静的行フィルターを定義するには  
   
-1.  フィルターを適用するアーティクルを定義します。 詳細については、「 [Define an Article](define-an-article.md)」をご参照ください。  
+1.  フィルターを適用するアーティクルを定義します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
 2.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) を実行します。 **\@article**、 **\@publication**、 **\@filter_name**、 **\@filter_clause** に、それぞれアーティクル名、パブリケーション名、フィルター名、フィルター句 (`WHERE` は含めない) を指定します。  
   
-3.  列フィルターも定義する必要がある場合は、「 [列フィルターの定義および変更](define-and-modify-a-column-filter.md)」を参照してください。 それ以外の場合、[sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) を実行します。 **\@publication** にパブリケーション名を、 **\@article** にフィルター選択の対象アーティクル名を、 **\@filter_clause** に手順 2 で指定したフィルター句を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
+3.  列フィルターも定義する必要がある場合は、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。 それ以外の場合、[sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) を実行します。 **\@publication** にパブリケーション名を、 **\@article** にフィルター選択の対象アーティクル名を、 **\@filter_clause** に手順 2 で指定したフィルター句を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの静的行フィルターを変更するには  
   
@@ -119,7 +119,7 @@ ms.locfileid: "73882303"
   
 2.  パブリッシャー側のパブリケーション データベースで、[sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) を実行します。 **\@publication** にパブリケーション名を、 **\@article** にフィルター選択の対象アーティクル名を、 **\@filter_clause** に手順 1 で指定したフィルター句を指定します。 この結果、フィルター選択の対象アーティクルを定義するビューが再作成されます。  
   
-3.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+3.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   
 4.  サブスクリプションを再初期化します。 詳細については、「 [サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
@@ -127,21 +127,21 @@ ms.locfileid: "73882303"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) を実行します。 **\@article** にアーティクル名を、 **\@publication** にパブリケーション名を、 **\@filter_name** に NULL を、 **\@filter_clause** に NULL を指定します。 この変更によって既存のサブスクリプションのデータが無効になるため、force_reinit_subscription **の値に \@1** を指定します。  
   
-2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   
 3.  サブスクリプションを再初期化します。 詳細については、「 [サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>マージ パブリケーションの静的行フィルターを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 **\@subset_filterclause** にフィルター句 (`WHERE` は含めない) を指定します。 詳細については、「 [Define an Article](define-an-article.md)」をご参照ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 **\@subset_filterclause** にフィルター句 (`WHERE` は含めない) を指定します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-2.  列フィルターも定義する必要がある場合は、「 [列フィルターの定義および変更](define-and-modify-a-column-filter.md)」を参照してください。  
+2.  列フィルターも定義する必要がある場合は、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>マージ パブリケーションの静的行フィルターを変更するには  
   
 1.  パブリッシャー側のパブリケーション データベースに対して、[sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。 **\@publication**、 **\@article**、property **、\@** value **に、それぞれパブリケーション名、フィルター選択の対象アーティクル名、\@subset_filterclause**、新しいフィルター選択句 (`WHERE` は含めない) を指定します。 この変更によって既存のサブスクリプションのデータが無効になるため、 **\@force_reinit_subscription** の値に 1 を指定します。  
   
-2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   
 3.  サブスクリプションを再初期化します。 詳細については、「 [サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
@@ -155,9 +155,9 @@ ms.locfileid: "73882303"
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ## <a name="see-also"></a>参照  
- [マージ アーティクルのパラメーター化された行フィルターの定義および変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [マージ アーティクルのパラメーター化された行フィルターの定義と変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [パブリケーションとアーティクルのプロパティの変更](change-publication-and-article-properties.md)   
- [パブリッシュされたデータのフィルター選択](filter-published-data.md)   
- [マージ レプリケーション用にパブリッシュされたデータのフィルター選択](../merge/filter-published-data-for-merge-replication.md)  
+ [パブリッシュされたデータのフィルター処理](filter-published-data.md)   
+ [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../merge/filter-published-data-for-merge-replication.md)  
   
   

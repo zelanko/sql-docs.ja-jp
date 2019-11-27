@@ -28,13 +28,13 @@ ms.locfileid: "71952594"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>説明  
- @no__t 0 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は拡張可能なアーキテクチャを提供します。これにより、開発者はデータ処理、配信、表示、セキュリティ、および認証用のカスタム拡張機能を作成できます。  
+## <a name="description"></a>[説明]  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、データ処理、配信、表示、セキュリティ、および認証用のカスタム拡張機能を開発者が作成するための拡張可能なアーキテクチャを提供します。  
   
  現在インストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム拡張機能またはアセンブリを使用している場合、セットアップを使用してアップグレードを実行できますが、アップグレードの完了後に拡張機能を新しいインストール場所に移動するか、アップグレードの前に手順を実行する必要が生じることがあります。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952594"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>データ処理または配信のカスタム拡張機能のアップグレード後に行う手順  
   
-1.  1 つまたは複数の拡張機能ファイルを、レポート サーバーの新しいプログラム フォルダーに移動します。 既定では、レポートサーバーのプログラムフォルダーは、\<*instance_name*> \ レポートサーバーのようになります。  
+1.  1 つまたは複数の拡張機能ファイルを、レポート サーバーの新しいプログラム フォルダーに移動します。 既定では、レポートサーバーのプログラムフォルダーは、SQL Server \ MSRS10_50 にあります。*instance_name*> レポートサーバーを\<します。  
   
  詳細については、SQL Server オンライン ブックの「データ処理拡張機能の配置」および「配信拡張機能の実装」を参照してください。  
   

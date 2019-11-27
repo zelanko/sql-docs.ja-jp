@@ -32,15 +32,15 @@ ms.locfileid: "72783068"
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
   ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから[!INCLUDE[ssDE](../../includes/ssde-md.md)]または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
   
--   **作業を開始する準備:** [SQL Server ユーティリティ](#SQLUtility)、[データベースのオプションと設定](#DBOptSettings)、[制限事項と制約事項](#LimitationsRestrictions)、[前提条件](#Prerequisites)、[セキュリティ](#Security)、[アクセス許可](#Permissions)  
+-   **作業を開始する準備:**  [SQL Server ユーティリティ](#SQLUtility)、 [データベースのオプションと設定](#DBOptSettings)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
   
--   **DAC を配置するために使用するもの:** [データ層アプリケーションの配置ウィザード](#UsingDeployDACWizard)、 [PowerShell](#DeployDACPowerShell)  
+-   **DAC を配置するために使用するもの:**  [データ層アプリケーションの配置ウィザード](#UsingDeployDACWizard)、 [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> はじめに  
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
   
 ###  <a name="SQLUtility"></a>SQL Server ユーティリティ  
- データベース エンジンのマネージド インスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
+ データベース エンジンのマネージド インスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[配置済みのデータ層アプリケーション]** ノードに表示され、 **の** 詳細ページで報告されます。  
   
 ###  <a name="DBOptSettings"></a> データベースのオプションと設定  
  既定では、配置中に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定すべてが適用されます。ただし、次の設定は除きます。  
@@ -54,13 +54,13 @@ ms.locfileid: "72783068"
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC を配置できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行している [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスです。 新しいバージョンを使用して DAC を作成した場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="Prerequisites"></a> の前提条件  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうしたパッケージには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生したりする、悪意のあるコードが含まれている可能性があります。 パッケージのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードもご確認ください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
 ###  <a name="Security"></a> セキュリティ  
  セキュリティを強化するために、SQL Server 認証のログインは、パスワードなしで DAC パッケージに格納されます。 パッケージが配置またはアップグレードされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限を持つユーザーとしてログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  DAC を配置できるのは、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、 **dbcreator** 固定サーバー ロールに存在する ALTER ANY LOGIN 権限を持つログインのみです。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント ( **sa** ) でも DAC を配置できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] へのログインが含まれる DAC を配置するには、loginmanager ロールまたは serveradmin ロールのメンバーシップが必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] へのログインが含まれない DAC を配置するには、dbmanager ロールまたは serveradmin ロールのメンバーシップが必要です。  
   
 ##  <a name="UsingDeployDACWizard"></a>データ層アプリケーションの配置ウィザードの使用  
@@ -109,7 +109,7 @@ ms.locfileid: "72783068"
   
  **\< [戻る]** : **概要** ページに進みます。  
   
- **[次へ]** : 選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。  
+ **[次へ >]** : 選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "72783068"
   
  [**前\<** **]: [DAC パッケージの選択**] ページに戻ります。  
   
- **[次へ]** : **[概要]** ページに進みます。  
+ **[次へ >]** : **[概要]** ページに進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -231,7 +231,7 @@ $dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [[データ層アプリケーション]](data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [データ層アプリケーション](data-tier-applications.md)   
  [データベースからの DAC の抽出](extract-a-dac-from-a-database.md)   
  [データベース識別子](../databases/database-identifiers.md)  

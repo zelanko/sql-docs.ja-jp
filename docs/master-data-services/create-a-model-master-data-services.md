@@ -26,7 +26,7 @@ ms.locfileid: "73728484"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルを作成してモデル オブジェクトを含めます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -55,7 +55,7 @@ ms.locfileid: "73728484"
   
  作成されたモデルごとに、8 列の行がグリッドに追加されます。 8 つの列は次のとおりです。  
   
--   **[状態]** : モデルの状態。 **[モデルの保存]** ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "[OK]")のイメージが表示されます。  
+-   **[状態]** : モデルの状態。 **[モデルの保存]** ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "OK")のイメージが表示されます。  
   
 -   **[名前]** : モデル名。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73728484"
   
 -   **[Updated Date and Time]** (更新日時): モデルが最後に更新された日時。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
   
 -   [エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73728484"
  [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
  [モデルを削除する (マスター データ サービス)](../master-data-services/delete-a-model-master-data-services.md)   
- [モデルを編集する &#40;マスター データ サービス&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [モデルを編集する (マスター データ サービス)](../master-data-services/edit-model-master-data-services.md)   
  [トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)  
   
   

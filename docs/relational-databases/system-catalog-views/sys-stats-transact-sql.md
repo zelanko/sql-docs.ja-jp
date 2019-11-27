@@ -37,8 +37,8 @@ ms.locfileid: "73982145"
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|これらの統計が属するオブジェクトの ID。|  
-|**name**|**sysname**|統計の名前。 は、オブジェクト内で一意です。|  
-|**stats_id**|**int**|統計の ID。 は、オブジェクト内で一意です。<br /><br />統計がインデックスに対応している場合、 *stats_id*の値は、 *index_id* [カタログビューの値](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)と同じになります。|  
+|**name**|**sysname**|統計の名前。 オブジェクト内で一意です。|  
+|**stats_id**|**int**|統計の ID。 オブジェクト内で一意です。<br /><br />統計がインデックスに対応している場合、 *stats_id*の値は、 *index_id* [カタログビューの値](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)と同じになります。|  
 |**auto_created**|**bit**|統計が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成されたかどうかを示します。<br /><br /> 0 = 統計は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成されませんでした。<br /><br /> 1 = 統計は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成されました。|  
 |**user_created**|**bit**|統計がユーザーによって作成されたかどうかを示します。<br /><br /> 0 = 統計はユーザーによって作成されませんでした。<br /><br /> 1 = 統計はユーザーによって作成されました。|  
 |**no_recompute**|**bit**|統計が**NORECOMPUTE**オプションを使用して作成されたかどうかを示します。<br /><br /> 0 = 統計は、 **NORECOMPUTE**オプションを使用して作成されませんでした。<br /><br /> 1 = 統計は、 **NORECOMPUTE**オプションを使用して作成されました。|  

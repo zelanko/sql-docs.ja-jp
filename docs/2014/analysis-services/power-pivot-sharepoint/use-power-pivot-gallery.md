@@ -21,7 +21,7 @@ ms.locfileid: "70874486"
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、特殊な用途の SharePoint ドキュメント ライブラリです。PowerPivot データを含むパブリッシュ済みの Excel ブックおよび Reporting Services レポートを対象とする、豊富なプレビュー機能とドキュメント管理機能を提供します。  
   
 > [!NOTE]  
->  サーバーの設定によっては、特定のドキュメントのプレビュー領域に警告またはエラー メッセージが表示されることがあります。 Excel ブックが開くたびにデータを自動更新するように設定されている場合は、メッセージが表示されることがあります。 データ更新に関する警告エラー メッセージを表示するように Excel Services が構成されている場合は、データ更新警告メッセージがプレビュー画像として表示されます。 ファーム管理者またはサービス管理者は、実際のワークシートのプレビューが表示されるように構成設定を変更できます。 詳細については、「 [サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
+>  サーバーの設定によっては、特定のドキュメントのプレビュー領域に警告またはエラー メッセージが表示されることがあります。 Excel ブックが開くたびにデータを自動更新するように設定されている場合は、メッセージが表示されることがあります。 データ更新に関する警告エラー メッセージを表示するように Excel Services が構成されている場合は、データ更新警告メッセージがプレビュー画像として表示されます。 ファーム管理者またはサービス管理者は、実際のワークシートのプレビューが表示されるように構成設定を変更できます。 詳細については、「 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
 ##  <a name="bkmk_top"></a> このトピックの内容  
   
@@ -43,20 +43,20 @@ ms.locfileid: "70874486"
   
  [前提条件](#prereq)  
   
-##  <a name="prereq"></a> 前提条件  
+##  <a name="prereq"></a> の前提条件  
   
 > [!NOTE]  
 >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
 > Microsoft Edge でライブラリの内容を表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックし、ドキュメントライブラリ ビューを **[すべてのドキュメント]** に変更します。    
 > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
->  Microsoft Edge でサポートされている機能の詳細について[は、Windows のブログ「過去からの休憩、パート 2:ActiveX、VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Microsoft Edge でサポートされている機能の詳細については、Windows のブログ「[過去の休憩、第2部: ActiveX、VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) 」を参照してください。  
   
  前提条件の完全な一覧については、「 [PowerPivot ギャラリーの作成とカスタマイズ](create-and-customize-power-pivot-gallery.md)」を参照してください。  
   
 ##  <a name="icons"></a>PowerPivot ギャラリーのアイコン  
  アイコンは、コンテンツを使用できるかどうか、およびコンテンツの状態を視覚的に示すインジケーターです。  
   
-|アイコン|説明|  
+|アイコン|[説明]|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|砂時計アイコンは、ドキュメントの各ページのサムネイル画像が生成されているときに表示されます。 ページを更新して、更新された画像を表示します。|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|ページ アイコンは、ブックまたはレポートに含まれるページ数が PowerPivot ギャラリーで表示できるページ数を超えているときに表示されます。 すべてのページを表示するには、クライアント アプリケーションを使用する必要があります。|  
@@ -69,13 +69,13 @@ ms.locfileid: "70874486"
   
 1.  ファイルを保存します。  
   
-2.  1.  **Excel 2010:** ファイル メニューの **送信 & 保存** をクリックします。  
+2.  1.  **Excel 2010**: [ファイル] メニューの **[保存して送信]** をクリックします。  
   
     2.  **[SharePoint に保存]** をクリックします。  
   
     3.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[発行オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
-    1.  **Excel 2013:** ファイル メニューの **保存** をクリックします。  
+    1.  **Excel 2013:**  [ファイル] メニューの **[上書き保存]** をクリックします。  
   
     2.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[ブラウザー ビュー オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
@@ -161,9 +161,9 @@ ms.locfileid: "70874486"
  コンテンツの種類 " **PowerPivot ギャラリー ドキュメント** " は、ドキュメント ライブラリに自動的に追加されません。サポートされていないコンテンツの種類を手動で有効にしない限り、この問題は発生しません。  
   
 ## <a name="see-also"></a>参照  
- [サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot ギャラリーの削除](delete-power-pivot-gallery.md)   
- [PowerPivot ギャラリーの作成とカスタマイズ](create-and-customize-power-pivot-gallery.md)   
+ [サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [PowerPivot ギャラリー](delete-power-pivot-gallery.md)  の削除  
+ [PowerPivot ギャラリー  を作成およびカスタマイズする](create-and-customize-power-pivot-gallery.md)  
  [データ更新&#40;のスケジュール PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

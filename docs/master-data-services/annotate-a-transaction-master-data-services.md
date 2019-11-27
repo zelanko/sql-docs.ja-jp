@@ -28,7 +28,7 @@ ms.locfileid: "73728790"
 > [!NOTE]  
 >  注釈は削除できません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   作成したトランザクションの注釈を設定するためには、 **[エクスプローラー]** 機能領域へのアクセス権限と、注釈を設定するモデル オブジェクトに対する **更新** 権限が最低限必要です。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73728790"
   
 4.  **[トランザクションの注釈]** ペインの **[注釈]** ボックスに注釈を入力します。  
   
-5.  **[OK]** をクリックします。  
+5.  クリックして **OK**です。  
   
 ## <a name="see-also"></a>参照  
  [注釈 (マスター データ サービス)](../master-data-services/annotations-master-data-services.md)   

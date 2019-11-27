@@ -30,7 +30,7 @@ ms.locfileid: "72782854"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **リスナーを削除するために使用するもの:**  
   
@@ -42,14 +42,14 @@ ms.locfileid: "72782854"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> の前提条件  
   
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
  可用性グループ リスナーを削除する前に、それを使用しているアプリケーションがないことを確認するようにお勧めします。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
@@ -68,7 +68,7 @@ ms.locfileid: "72782854"
 5.  これにより、 **[可用性グループからのリスナーの削除]** ダイアログ ボックスが開きます。 詳細については、このトピックの「 [[可用性グループからのリスナーの削除]](#AgListenerPropertiesDialog)」を参照してください。  
   
 ###  <a name="AgListenerPropertiesDialog"></a> [可用性グループからのリスナーの削除] (ダイアログ ボックス)  
- **[オブジェクト名]**  
+ **名前**  
  削除するリスナーの名前です。  
   
  **結果**  
@@ -81,7 +81,7 @@ ms.locfileid: "72782854"
   
 2.  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) ステートメントを使用します。次にその例を示します。  
   
-     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **' *`dns_name`* '**  
+     ALTER AVAILABILITY GROUP *GROUP_NAME*リスナー **' *`dns_name`* '** の削除  
   
      *group_name* の部分には、可用性グループの名前を指定します。 *dns_name* の部分には、可用性グループ リスナーの DNS 名を指定します。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "72782854"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -111,6 +111,6 @@ ms.locfileid: "72782854"
   
 -   [可用性グループ リスナーのプロパティの表示 &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
