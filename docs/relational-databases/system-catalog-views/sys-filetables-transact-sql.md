@@ -33,7 +33,7 @@ ms.locfileid: "68134002"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**||オブジェクト ID 番号。 データベース内で一意です。<br /><br /> 詳細については、 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|**object_id**||オブジェクト ID 番号。 データベース内で一意です。<br /><br /> 詳細については、 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
 |**is_enabled**|**bit**|1 = FileTable は "有効" 状態です。|  
 |**directory_name**|**varchar(255)**|FileTable のルート ディレクトリの名前。|  
 |**filename_collation_id**||照合順序識別子、FileTable を定義します。|  

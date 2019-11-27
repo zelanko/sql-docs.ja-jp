@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server の複数のバージョンおよびインスタンスの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/25/2017
