@@ -1,5 +1,5 @@
 ---
-title: sys.crypt_properties (TRANSACT-SQL) |Microsoft Docs
+title: sys.crypt_properties (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68109482"
 ---
-# <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
+# <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   関連付けられたセキュリティ保護可能な暗号化プロパティごとに 1 行を返します。  
@@ -37,7 +37,7 @@ ms.locfileid: "68109482"
 |**class**|**tinyint**|プロパティが存在するリソースのクラスの識別子。<br /><br /> 1 = オブジェクトまたは列<br /> 5 = アセンブリ|  
 |**class_desc**|**nvarchar(60)**|プロパティが存在するリソースのクラスの説明です。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|クラスに基づいて解釈されます、プロパティが存在するリソースの ID。|  
-|**拇印**|**varbinary(32)**|証明書または非対称キーの使用の sha-1 ハッシュ。|  
+|**thumbprint**|**varbinary(32)**|証明書または非対称キーの使用の sha-1 ハッシュ。|  
 |**crypt_type**|**char(4)**|暗号化の種類。<br /><br /> SPVC 証明書の秘密キーによって署名を =<br /><br /> SPVA = 非対称秘密キー署名済み<br /><br /> CPVC = 証明書の秘密キーによって副署されます。<br /><br /> CPVA = 非対称キーによって副署されます。|  
 |**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明です。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> 証明書で副署<br /><br /> 非対称キーによって副署|  
 |**crypt_property**|**varbinary(max)**|署名された、または暗号化されたビット。 署名付きモジュールこれらには、モジュールの署名のビットです。|  
