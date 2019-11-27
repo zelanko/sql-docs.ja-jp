@@ -45,7 +45,7 @@ ms.locfileid: "70846722"
 `NODE` または `EDGE` テーブルで新しい SQL グラフ テーブルを作成します。 
   
 > [!NOTE]   
->  標準の TRANSACT-SQL ステートメントについては、「[CREATE TABLE (TRANSACT-SQL)](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。
+>  標準の Transact-SQL ステートメントについては、「[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -96,7 +96,7 @@ CREATE TABLE
   
   
 ## <a name="arguments"></a>引数  
-このドキュメントでは、SQL グラフに関連する引数のみを一覧表示します。 完全な一覧とサポートされている引数の説明については、「[CREATE TABLE (TRANSACT-SQL)](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。
+このドキュメントでは、SQL グラフに関連する引数のみを一覧表示します。 完全な一覧とサポートされている引数の説明については、「[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。
 
  *database_name*    
  テーブルが作成されたデータベースの名前を指定します。 *database_name* には、既存のデータベース名を指定する必要があります。 指定しない場合、*database_name* は現在のデータベースに設定されます。 現在の接続に対するログインには、*database_name* で指定されたデータベース内の既存のユーザー ID を関連付け、そのユーザー ID に CREATE TABLE 権限を許可しておく必要があります。  

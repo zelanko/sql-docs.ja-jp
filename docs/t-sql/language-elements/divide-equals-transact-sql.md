@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67894799"
 ---
-# <a name="-division-assignment-transact-sql"></a>/= (除算代入) (TRANSACT-SQL)
+# <a name="-division-assignment-transact-sql"></a>/= (除算代入) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   1 つの数値を別の数値で除算し、値に演算の結果を設定します。 たとえば、変数 @x が 34 である場合、`@x /= 2` は @x の元の値を取得し、2 で除算して、@x にその新しい値 (17) を設定します。  

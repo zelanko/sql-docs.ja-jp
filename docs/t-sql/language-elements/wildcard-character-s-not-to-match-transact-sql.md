@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68086090"
 ---
-# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (ワイルドカード - 一致しない文字列) (TRANSACT-SQL)
+# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (ワイルドカード - 一致しない文字列) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   角かっこで指定した範囲または集合に該当しない、任意の 1 文字を判別します。  

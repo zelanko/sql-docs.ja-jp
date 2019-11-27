@@ -25,13 +25,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68109371"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
  JSON 文字列からオブジェクトまたは配列を抽出します。  
   
- オブジェクトまたは配列ではなく JSON 文字列からスカラー値を抽出する場合は、「[JSON_VALUE &#40;TRANSACT-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)」を参照してください。 **JSON_VALUE** と **JSON_QUERY** の違いについては、「[JSON_VALUE と JSON_QUERY を比較する](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)」を参照してください。  
+ オブジェクトまたは配列ではなく JSON 文字列からスカラー値を抽出する場合は、「[JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)」を参照してください。 **JSON_VALUE** と **JSON_QUERY** の違いについては、「[JSON_VALUE と JSON_QUERY を比較する](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,7 +102,7 @@ JSON のパスを解析するための厳密でないまたは strict モード�
 |$.info.type[0]|NULL|Error|配列ではありません。|  
 |$.info.none|NULL|Error|プロパティが存在しません。|  
 
-### <a name="using-jsonquery-with-for-json"></a>JSON_QUERY と FOR JSON の使用
+### <a name="using-json_query-with-for-json"></a>JSON_QUERY と FOR JSON の使用
 
 **JSON_QUERY** は、有効な JSON フラグメントを返します。 その結果、**FOR JSON** は、**JSON_QUERY** 戻り値内の特殊文字をエスケープしません。
 

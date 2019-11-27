@@ -46,7 +46,7 @@ ms.locfileid: "67991570"
 |[Always On ポリシー](always-on-policies.md)|AlwaysOn ダッシュボードの使用|  
 |[SQL Server エラー ログ&#40;Always On 可用性グループ&#41;](sql-server-error-log-always-on-availability-groups.md)|可用性グループ、レプリカ、データベースのログ状態遷移イベント、他の Always On コンポーネントのステータス、Always On エラー|  
 |[CLUSTER.LOG &#40;Always On 可用性グループ&#41;](cluster-log-always-on-availability-groups.md)|可用性グループ リソースの状態遷移を含むログ クラスター イベント、および SQL Server リソース DLL からのイベントとエラー。|  
-|[Always On 正常性診断ログ](always-on-health-diagnostics-log.md)|[sp_server_diagnostics &#40;TRANSACT-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) によって WSFC クラスター (SQL Server リソース DLL) に報告された SQL Server の正常性診断をログに記録します。|  
+|[Always On 正常性診断ログ](always-on-health-diagnostics-log.md)|[sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) によって WSFC クラスター (SQL Server リソース DLL) に報告された SQL Server の正常性診断をログに記録します。|  
 |[動的管理ビューおよびシステム カタログ ビュー&#40;Always On 可用性グループ&#41;](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)|構成、正常性状態、パフォーマンス メトリックなどの可用性グループに関する情報を報告します。|  
 |[Always On 拡張イベント](always-on-extended-events.md)|可用性グループの詳細な診断をおよび役に立つ根本原因の分析を提供します。|  
 |[Always On の待機の種類](always-on-wait-types.md)|可用性グループに固有の待機の統計情報および役に立つパフォーマンス調整を提供します。|  

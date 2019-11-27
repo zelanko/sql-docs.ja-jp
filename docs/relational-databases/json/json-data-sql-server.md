@@ -412,8 +412,8 @@ SQL Server と Azure SQL Database に組み込まれている JSON のサポー�
 
 - [FOR 句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
 - [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  
-- [JSON 関数 (TRANSACT-SQL)](../../t-sql/functions/json-functions-transact-sql.md)  
-  - [ISJSON (TRANSACT-SQL)](../../t-sql/functions/isjson-transact-sql.md)  
+- [JSON 関数 (Transact-SQL)](../../t-sql/functions/json-functions-transact-sql.md)  
+  - [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)  
   - [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)  
   - [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)  
   - [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  

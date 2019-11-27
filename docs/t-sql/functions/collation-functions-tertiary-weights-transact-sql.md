@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064691"
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>照合順序関数 - TERTIARY_WEIGHTS (TRANSACT-SQL)
+# <a name="collation-functions---tertiary_weights-transact-sql"></a>照合順序関数 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 この関数は、第 3 の SQL 照合順序で定義された、Unicode 以外の文字列式内の文字ごとに、バイナリ文字列の重みを返します。

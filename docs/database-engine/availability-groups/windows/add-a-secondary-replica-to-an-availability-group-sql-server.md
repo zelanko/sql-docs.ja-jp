@@ -1,6 +1,6 @@
 ---
 title: 可用性グループへのセカンダリ レプリカの追加
-description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio (SSMS) の可用性グループ ウィザードのいずれかを使用して、Always On 可用性グループにセカンダリ レプリカを追加する手順を説明します。
+description: Transact-SQL (T-SQL)、PowerShell、または SQL Server Management Studio (SSMS) の可用性グループ ウィザードのいずれかを使用して、Always On 可用性グループにセカンダリ レプリカを追加する手順を説明します。
 ms.custom: seodec18
 ms.date: 05/18/2016
 ms.prod: sql

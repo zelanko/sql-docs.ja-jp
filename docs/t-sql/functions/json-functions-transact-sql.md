@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68109426"
 ---
-# <a name="json-functions-transact-sql"></a>JSON 関数 (TRANSACT-SQL)
+# <a name="json-functions-transact-sql"></a>JSON 関数 (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 

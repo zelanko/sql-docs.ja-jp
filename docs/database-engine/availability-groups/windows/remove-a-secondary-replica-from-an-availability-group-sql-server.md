@@ -1,6 +1,6 @@
 ---
 title: 可用性グループからセカンダリ レプリカを削除する
-description: 'TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループからセカンダリ レプリカを削除する手順。 '
+description: 'Transact-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループからセカンダリ レプリカを削除する手順。 '
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql

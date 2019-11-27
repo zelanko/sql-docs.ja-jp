@@ -1,6 +1,6 @@
 ---
 title: 可用性グループへのセカンダリ レプリカの参加
-description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループにセカンダリ レプリカを参加させる手順について説明します。
+description: Transact-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループにセカンダリ レプリカを参加させる手順について説明します。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql

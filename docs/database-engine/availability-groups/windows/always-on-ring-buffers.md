@@ -21,7 +21,7 @@ ms.locfileid: "68014709"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   いくつかの Always On 可用性グループの診断情報を SQL Server のリング バッファー、または sys.dm_os_ring_buffers 動的管理ビュー (DMV) から入手できます。 リング バッファーは、SQL Server の起動中に作成され、内部診断用に SQL Server システム内のアラートを記録します。 それらはサポートされていませんが、問題のトラブルシューティングを行うときにそれらから貴重な情報を抽出することができます。 これらのリング バッファーは、SQL Server がハングまたはクラッシュしたときに別の診断のソースを提供します。  
   
- 次の TRANSACT-SQL (T-SQL) クエリでは、可用性グループのリング バッファーからすべてのイベント レコードを取得します。  
+ 次の Transact-SQL (T-SQL) クエリでは、可用性グループのリング バッファーからすべてのイベント レコードを取得します。  
   
 ```sql  
 SELECT * FROM sys.dm_os_ring_buffers WHERE ring_buffer_type LIKE '%HADR%'  

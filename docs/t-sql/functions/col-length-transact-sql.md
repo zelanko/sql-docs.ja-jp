@@ -82,7 +82,7 @@ VarChar     NVarChar
 ## <a name="see-also"></a>参照
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40;TRANSACT-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

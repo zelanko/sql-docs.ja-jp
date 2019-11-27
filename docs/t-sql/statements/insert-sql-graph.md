@@ -30,7 +30,7 @@ ms.locfileid: "68071169"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、1 つまたは複数の行を`node`や`edge`に追加します。 
 
 > [!NOTE]   
->  標準の TRANSACT-SQL ステートメントについては、「[INSERT TABLE (TRANSACT-SQL)](../../t-sql/statements/insert-transact-sql.md)」を参照してください。
+>  標準の Transact-SQL ステートメントについては、「[INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)」を参照してください。
   
 ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -25,7 +25,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68072281"
 ---
-# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
+# <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DECLARE @ を使用して、以前に作成した、指定のローカル変数を設定する *local_variable* ステートメントは、指定された値にします。  

@@ -1,6 +1,6 @@
 ---
 title: 可用性グループ内のレプリカの可用性モードの変更
-description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループ内の可用性レプリカの可用性モードを変更する方法を説明します。
+description: Transact-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループ内の可用性レプリカの可用性モードを変更する方法を説明します。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql

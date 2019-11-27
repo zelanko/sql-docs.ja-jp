@@ -42,7 +42,7 @@ select session_id, command, blocking_session_id, wait_time, wait_type, wait_reso
 from sys.dm_exec_requests where command = 'DB STARTUP'  
 ```  
   
- レポート ワークロードを完了させて、その時点で再実行スレッドをブロック解除させるか、ブロックしているセッション ID で [KILL &#40;TRANSACT-SQL&#41; ](~/t-sql/language-elements/kill-transact-sql.md) を実行して直ちに再実行スレッドをブロック解除することができます。  
+ レポート ワークロードを完了させて、その時点で再実行スレッドをブロック解除させるか、ブロックしているセッション ID で [KILL &#40;Transact-SQL&#41; ](~/t-sql/language-elements/kill-transact-sql.md) を実行して直ちに再実行スレッドをブロック解除することができます。  
   
 ##  <a name="BKMK_CONTENTION"></a> リソースの競合のために再実行スレッドが遅れる  
  セカンダリ レプリカでの大量のレポート ワークロードのために、セカンダリ レプリカのパフォーマンスが低下し、再実行スレッドが遅れています。  

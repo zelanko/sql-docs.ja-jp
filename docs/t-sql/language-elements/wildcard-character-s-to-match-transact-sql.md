@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68000325"
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (ワイルドカード - 一致する文字列) (TRANSACT-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (ワイルドカード - 一致する文字列) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 角かっこ `[ ]` で指定された範囲または集合の任意の 1 文字に一致します。 これらのワイルドカード文字は、`LIKE` や `PATINDEX` などのパターン検索を含む文字列比較で使用できます。  

@@ -48,6 +48,6 @@ SELECT VERSION();
   
 ## <a name="see-also"></a>参照 
 [SESSION_ID &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/session-id-transact-sql.md)  
-[DB_NAME &#40;TRANSACT-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
+[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   

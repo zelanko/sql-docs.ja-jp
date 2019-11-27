@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68135921"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 この関数は、結果セット パーティション内の各行の順位値をギャップなしで返します。 特定の行の順位は、その行より 1 つ前の順位値に 1 を加算したものになります。  
