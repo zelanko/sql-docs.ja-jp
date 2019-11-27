@@ -49,7 +49,7 @@ ms.locfileid: "67942566"
 |**start_date**|**datetime**|ときに証明書が無効です。|  
 |**thumbprint**|**varbinary(32)**|証明書の SHA-1 ハッシュ。 Sha-1 ハッシュはグローバルに一意です。|  
 |**attested_by**|**nvarchar(260)**|システムでのみ使用します。|  
-|pvt_key_last_backup_date|**datetime**|日付と時刻の証明書の秘密キーが前回エクスポートされました。|  
+|**pvt_key_last_backup_date**|**datetime**|日付と時刻の証明書の秘密キーが前回エクスポートされました。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
