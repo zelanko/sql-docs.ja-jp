@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (TRANSACT-SQL) |Microsoft Docs
+title: sys.fn_check_object_signatures (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -45,17 +45,17 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>引数  
- {0} '\@*クラス*'}  
- 提供される拇印の種類を識別します。  
+ {0} '\@*class*'}  
+ 提供されるthumbprintの種類を識別します。  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- \@*クラス*は**sysname**します。  
+ \@*class*は**sysname**します。  
   
- { \@*拇印*}  
- キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*拇印*は**varbinary (20)** します。  
+ { \@*thumbprint*}  
+ キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*thumbprint* は **varbinary (20)** します。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
  次の表に、列を**fn_check_object_signatures**を返します。  
@@ -64,7 +64,7 @@ fn_ check_object_signatures (
 |------------|----------|-----------------|  
 |type|**nvarchar(120)**|説明またはアセンブリの型を返します。|  
 |entity_id|**int**|評価対象のオブジェクトのオブジェクト ID を返します。|  
-|is_signed|**int**|提供された拇印でオブジェクトが署名されていない場合は、0 を返します。 提供された拇印でオブジェクトが署名されたときに、1 を返します。|  
+|is_signed|**int**|提供された thumbprint でオブジェクトが署名されていない場合は、0 を返します。 提供された thumbprint でオブジェクトが署名されたときに、1 を返します。|  
 |is_signature_valid|**int**|Is_signed の値が 1 の場合は、署名が無効である場合に 0 を返します。 署名が有効な場合は、1 を返します。<br /><br /> is_signed の値が 0 の場合は、常に 0 を返します。|  
   
 ## <a name="remarks"></a>コメント  
@@ -92,6 +92,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [IS_OBJECTSIGNED &#40;TRANSACT-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+ [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   
