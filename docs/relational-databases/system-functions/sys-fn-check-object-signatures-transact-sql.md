@@ -52,10 +52,10 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@*class*は**sysname**します。  
+ \@*class* は **sysname** です。  
   
  { \@*thumbprint*}  
- キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*thumbprint* は **varbinary (20)** します。  
+ キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*thumbprint* は **varbinary (20)** です。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
  次の表に、列を**fn_check_object_signatures**を返します。  
