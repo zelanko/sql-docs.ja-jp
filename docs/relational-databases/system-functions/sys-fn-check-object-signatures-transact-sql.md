@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (TRANSACT-SQL) |Microsoft Docs
+title: sys.fn_check_object_signatures (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68046310"
 ---
-# <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
+# <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   署名可能なすべてのオブジェクトの一覧を返し、オブジェクトが、指定した証明書または非対称キーで署名されているかどうかを示します。 オブジェクトは、指定された証明書または非対称キーの署名によって署名されて場合、も、オブジェクトの署名が有効かどうかを返します。  
@@ -46,7 +46,7 @@ fn_ check_object_signatures (
   
 ## <a name="arguments"></a>引数  
  {0} '\@*クラス*'}  
- 提供される拇印の種類を識別します。  
+ 提供される thumbprint の種類を識別します。  
   
 -   'certificate'  
   
@@ -64,7 +64,7 @@ fn_ check_object_signatures (
 |------------|----------|-----------------|  
 |type|**nvarchar(120)**|説明またはアセンブリの型を返します。|  
 |entity_id|**int**|評価対象のオブジェクトのオブジェクト ID を返します。|  
-|is_signed|**int**|提供された拇印でオブジェクトが署名されていない場合は、0 を返します。 提供された拇印でオブジェクトが署名されたときに、1 を返します。|  
+|is_signed|**int**|提供された thumbprint でオブジェクトが署名されていない場合は、0 を返します。 提供された thumbprint でオブジェクトが署名されたときに、1 を返します。|  
 |is_signature_valid|**int**|Is_signed の値が 1 の場合は、署名が無効である場合に 0 を返します。 署名が有効な場合は、1 を返します。<br /><br /> is_signed の値が 0 の場合は、常に 0 を返します。|  
   
 ## <a name="remarks"></a>コメント  
