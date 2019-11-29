@@ -26,7 +26,7 @@ ms.locfileid: "73594505"
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Always Encrypted ウィザードを使用して列暗号化を構成する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Always Encrypted ウィザードは、選択したデータベースの列に対して目的の [Always Encrypted](always-encrypted-database-engine.md) の構成を設定することができる強力なツールです。 現在の構成と目的の構成に応じて、ウィザードでは、列を暗号化したり、列の暗号化を解除したり (解読)、列を再暗号化したり (たとえば、列に対して構成された、新しい列暗号化キー、または現在のものとは異なる暗号化の種類を使用) できます。 ウィザードの 1 回の実行で、複数の列を構成することができます。
+Always Encrypted ウィザードは、選択したデータベースの列に対して目的の [Always Encrypted](always-encrypted-database-engine.md) の構成を設定することができる強力なツールです。 現在の構成と目的の構成に応じて、ウィザードでは、列を暗号化したり、列の暗号化を解除したり (解読)、列を再暗号化 (たとえば、新しい列暗号化キーの使用や、列に構成された現在のものとは種類が異なる暗号化の使用) したりできます。 ウィザードの 1 回の実行で、複数の列を構成することができます。
 
 ウィザードを使うと、既存の列暗号化キーを使用して列を暗号化したり、新しい列暗号化キーまたは新しい列暗号化キーと新しい列マスター キーの両方を生成したりすることもできます。 
 
@@ -45,11 +45,11 @@ Always Encrypted ウィザードは、選択したデータベースの列に対
 PowerShell を使用することをお勧めします 
 
  - ウィザードを使用して Always Encrypted を構成し、それをクライアント アプリケーションで使用する方法を説明したエンドツーエンドのチュートリアルについては、以下の Azure SQL Database チュートリアルをご覧ください。
-    - [Windows 証明書ストアで Always Encrypted と列マスター キーを使用して Azure SQL Database 内の機密データを保護する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-    - [Azure Key Vault で Always Encrypted と列マスター キーを使用して Azure SQL Database 内の機密データを保護する](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+    - [Always Encrypted と Windows 証明書ストアの列マスター キーを使用して Azure SQL Database 内の機密データを保護する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+    - [Always Encrypted と Azure Key Vault の列マスター キーを使用して Azure SQL Database 内の機密データを保護する](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - ウィザードの利用方法を含む動画が必要な場合、「 [Keeping Sensitive Data Secure with Always Encrypted (Always Encrypted で機密データを守る)](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)」をご覧ください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ チームのブログ「 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545)」(SSMS 暗号化ウィザード - 数回の手順で Always Encrypted を有効にする) も参照してください。  
- - Always Encrypted キーについて詳しくは、[「Always Encrypted のキー管理の概要](overview-of-key-management-for-always-encrypted.md)」をご覧ください。
+ - Always Encrypted キーについて詳しくは、「[Always Encrypted のキー管理の概要](overview-of-key-management-for-always-encrypted.md)」をご覧ください。
  - Always Encrypted でサポートされる暗号化の種類について詳しくは、「[明確な暗号化またはランダム化された暗号化の選択](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」をご覧ください。
  
  ## <a name="permissions"></a>アクセス許可
@@ -70,16 +70,16 @@ PowerShell を使用することをお勧めします
  1. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のオブジェクト エクスプローラー コンポーネントで [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]に接続します。  
    
  2. 暗号化を行います。
-     1. 1 つのデータベースの異なるテーブルに存在する複数の列を暗号化するには、データベースを右クリックし、**[タスク]** をポイントして、**[列の暗号化]** を選択します。
-     1. 同じテーブルに存在する複数の列を暗号化するには、テーブルに移動して右クリックし、**[列の暗号化]** を選択します。
-     1. 個々の列を暗号化するには、列に移動して右クリックし、**[列の暗号化]** を選択します。
+     1. 1 つのデータベースの異なるテーブルに存在する複数の列を暗号化するには、データベースを右クリックし、 **[タスク]** をポイントして、 **[列の暗号化]** を選択します。
+     1. 同じテーブルに存在する複数の列を暗号化するには、テーブルに移動して右クリックし、 **[列の暗号化]** を選択します。
+     1. 個々の列を暗号化するには、列に移動して右クリックし、 **[列の暗号化]** を選択します。
 
 
    
  ## <a name="column-selection-page"></a>列の選択ページ
 このページでは、暗号化、再暗号化、または暗号化解除する列を選択し、選択した列に対するターゲットの暗号化構成を定義します。
 
-プレーンテキスト列 (暗号化されていない列) を暗号化するには、列の暗号化の種類 (**[決定論的]** または **[ランダム化]**) と暗号化キーを選択します。 
+プレーンテキスト列 (暗号化されていない列) を暗号化するには、列の暗号化の種類 ( **[決定論的]** または **[ランダム化]** ) と暗号化キーを選択します。 
 
 既に暗号化されている列の暗号化の種類を変更したり、列暗号化キーをローテーション (変更) したりするには、目的の暗号化の種類とキーを選択します。 
 
@@ -99,7 +99,7 @@ PowerShell を使用することをお勧めします
 列マスター キーを作成し、Windows 証明書ストア、Azure Key Vault、または他のキー ストアに格納する方法について詳しくは、「[Always Encrypted の列マスター キーを作成して保存する](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)」をご覧ください。
 
 > [!TIP]
-> このウィザードでは、Windows 証明書ストアおよび Azure Key Vault のキーだけを参照および作成できます。 また、新しいキーとキーを記述するデータベース メタデータ オブジェクトの両方の名前が自動生成されます。 キーのプロビジョニング方法をより詳細に制御する必要がある場合 (および列マスター キーを格納したキー ストアの選択肢がもっと必要である場合) は、**[新しい列マスター キー]** ダイアログと **[新しい列の暗号化キー]** ダイアログを使用して最初にキーを作成した後、ウィザードを実行して作成したキーを選択します。 「[[新しい列マスター キー] ダイアログを使用して列マスター キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)」および「[[新しい列の暗号化キー] ダイアログを使用して列の暗号化キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)」をご覧ください。 
+> このウィザードでは、Windows 証明書ストアおよび Azure Key Vault のキーだけを参照および作成できます。 また、新しいキーとキーを記述するデータベース メタデータ オブジェクトの両方の名前が自動生成されます。 キーのプロビジョニング方法をより詳細に制御する必要がある場合 (および列マスター キーを格納したキー ストアの選択肢がもっと必要である場合) は、 **[新しい列マスター キー]** ダイアログと **[新しい列の暗号化キー]** ダイアログを使用して最初にキーを作成した後、ウィザードを実行して作成したキーを選択します。 「[[新しい列マスター キー] ダイアログを使用して列マスター キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)」および「[[新しい列の暗号化キー] ダイアログを使用して列の暗号化キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)」をご覧ください。 
 
 ## <a name="next-steps"></a>Next Steps
 - [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)
