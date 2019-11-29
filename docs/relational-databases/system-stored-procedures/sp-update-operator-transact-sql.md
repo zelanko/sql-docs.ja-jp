@@ -102,8 +102,8 @@ sp_update_operator
  [ @netsend_address=] '*netsend_address*'  
  ネットワーク メッセージを送信するオペレーターのネットワーク アドレス。 *netsend_address*は**nvarchar (100)** 、既定値は NULL です。  
   
- [ @category_name=] '*カテゴリ*'  
- このアラートのカテゴリの名前。 *カテゴリ*は**sysname**、既定値は NULL です。  
+ [ @category_name=] '*category*'  
+ このアラートのカテゴリの名前。 *category*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
