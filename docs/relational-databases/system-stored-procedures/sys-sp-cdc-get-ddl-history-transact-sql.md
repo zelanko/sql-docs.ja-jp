@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_get_ddl_history (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68083733"
 ---
-# <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (TRANSACT-SQL)
+# <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   そのキャプチャ インスタンスに対して変更データ キャプチャが有効にされて、指定したキャプチャ インスタンスに関連付けられたデータ定義言語 (DDL) の変更履歴を返します。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
@@ -54,7 +54,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|ソース テーブルのスキーマ名です。|  
-|ソース テーブル|**sysname**|ソース テーブルの名前。|  
+|source_table|**sysname**|ソース テーブルの名前。|  
 |capture_instance|**sysname**|キャプチャ インスタンスの名前です。|  
 |required_column_update|**bit**|DDL の変更で、ソース列に対して行われたデータ型の変更を反映するために、変更テーブルの列を更新する必要があったことを示します。|  
 |ddl_command|**nvarchar(max)**|ソース テーブルに適用された DDL ステートメントです。|  
@@ -85,6 +85,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   
