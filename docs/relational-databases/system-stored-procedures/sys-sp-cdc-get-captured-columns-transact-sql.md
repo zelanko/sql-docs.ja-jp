@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_captured_columns (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_get_captured_columns (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68083738"
 ---
-# <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (TRANSACT-SQL)
+# <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定したキャプチャ インスタンスによって追跡されるキャプチャ対象のソース列について、変更データ キャプチャのメタデータ情報を返します。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
@@ -57,7 +57,7 @@ sys.sp_cdc_get_captured_columns
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|ソース テーブルのスキーマ名です。|  
-|ソース テーブル|**sysname**|ソース テーブルの名前。|  
+|source_table|**sysname**|ソース テーブルの名前。|  
 |capture_instance|**sysname**|キャプチャ インスタンスの名前です。|  
 |column_name|**sysname**|キャプチャされたソース列の名前。|  
 |column_id|**int**|ソース テーブル内の列の ID です。|  
@@ -89,6 +89,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   
