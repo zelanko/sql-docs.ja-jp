@@ -1,5 +1,5 @@
 ---
-title: sysssispackagefolders (TRANSACT-SQL) |Microsoft Docs
+title: sysssispackagefolders (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68029592"
 ---
-# <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (TRANSACT-SQL)
+# <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   フォルダー階層内の論理フォルダーごとに 1 つの行データを格納する[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用します。 オブジェクト エクスプ ローラーでこれらのフォルダーが表示されている[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続時[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 フォルダーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはファイル システムに保存されているパッケージが一覧表示されます。  
@@ -40,6 +40,6 @@ ms.locfileid: "68029592"
 |-----------------|---------------|-----------------|  
 |**folderid**|**uniqueidentifier**|フォルダーの GUID。|  
 |**parentfolderid**|**uniqueidentifier**|親フォルダーのフォルダーの GUID です。|  
-|**フォルダー名**|**sysname**|フォルダーの名前。 これは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でフォルダー階層に表示される名前です。|  
+|**foldername**|**sysname**|フォルダーの名前。 これは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でフォルダー階層に表示される名前です。|  
   
   
