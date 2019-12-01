@@ -1,5 +1,5 @@
 ---
-title: sysdbmaintplan_databases (TRANSACT-SQL) |Microsoft Docs
+title: sysdbmaintplan_databases (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,7 +33,7 @@ ms.locfileid: "68130478"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**一意識別子**|メンテナンス プランの ID|  
+|**plan_id**|**Uniqueidentifier**|メンテナンス プランの ID|  
 |**database_name**|**sysname**|データベース メンテナンス プランに関連付けられているデータベースの名前。|  
   
   
