@@ -1,5 +1,5 @@
 ---
-title: sysdbmaintplans (TRANSACT-SQL) |Microsoft Docs
+title: sysdbmaintplans (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -37,7 +37,7 @@ ms.locfileid: "68029972"
 |**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの id。|  
 |**plan_name**|**sysname**|データベース メンテナンス プランの名前。|  
 |**date_created**|**datetime**|データベース メンテナンス プランが作成された日付。|  
-|**所有者**|**sysname**|データベース メンテナンス プランの所有者です。|  
+|**owner**|**sysname**|データベース メンテナンス プランの所有者です。|  
 |**max_history_rows**|**int**|システム テーブル内で、データベース メンテナンス プランの履歴の記録用に割り当てられる行数の最大値。|  
 |**remote_history_server**|**sysname**|履歴レポートが書き込まれる先のリモート サーバーの名前。|  
 |**max_remote_history_rows**|**int**|履歴レポートが書き込まれる先のリモート サーバー上のシステム テーブルに割り当てられる行数の最大数。|  
