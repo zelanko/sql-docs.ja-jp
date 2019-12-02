@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_enable_table (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_enable_table (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -70,7 +70,7 @@ sys.sp_cdc_enable_table
   
  ソース テーブルには、2 つのキャプチャ インスタンスの最大数を持つことができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)します。  
   
-`[ @supports_net_changes = ] supports_net_changes` 示すかどうかをこのキャプチャ インスタンスに対して有効にするには差分変更クエリをサポートします。 *supports_net_changes*は**ビット**、既定値は、テーブルに主キーまたはテーブルに一意のインデックスを使用して識別されている場合は 1、@index_nameパラメーター。 それ以外の場合、既定値は 0 になります。  
+`[ @supports_net_changes = ] supports_net_changes` 示すかどうかをこのキャプチャ インスタンスに対して有効にするには差分変更クエリをサポートします。 *supports_net_changes*は**bit**、既定値は、テーブルに主キーまたはテーブルに一意のインデックスを使用して識別されている場合は 1、@index_nameパラメーター。 それ以外の場合、既定値は 0 になります。  
   
  0 の場合は、すべての変更を照会するサポート関数のみが生成されます。  
   
@@ -86,13 +86,13 @@ sys.sp_cdc_enable_table
   
  *captured_column_list*は列名のコンマ区切りのリスト。 二重引用符を使用して、リスト内の個々 の列名できます必要に応じて引用符で囲む ("") または角かっこ ()。 列名には、埋め込みのコンマが含まれている、列名が引用符で囲まれたする必要があります。  
   
- *captured_column_list*次の予約済みの列名を含めることはできません: **_ _ $start_lsn**、 **_ _ $end_lsn**、 **_ _ $$seqval**、 **_ _ $操作**、および **_ _ $update_mask**します。  
+ *captured_column_list*次の予約済みの列名を含めることはできません: **__$start_lsn**、 **__$end_lsn**、 **__$seqval**、 **__$operation**、および **__$update_mask**します。  
   
 `[ @filegroup_name = ] 'filegroup_name'` キャプチャ インスタンスの作成、変更テーブルに使用するファイル グループです。 *filegroup_name*は**sysname** NULL にすることができます。 指定した場合*filegroup_name*現在のデータベースを定義する必要があります。 NULL の場合、既定のファイル グループが使用されます。  
   
  変更データ キャプチャの変更テーブル用に、別個のファイル グループを作成することをお勧めします。  
   
-`[ @allow_partition_switch = ] 'allow_partition_switch'` 変更データ キャプチャが有効になっているテーブルに対して ALTER TABLE の SWITCH PARTITION コマンドを実行できるかどうかを示します。 *allow_partition_switch*は**ビット**、既定値は 1 です。  
+`[ @allow_partition_switch = ] 'allow_partition_switch'` 変更データ キャプチャが有効になっているテーブルに対して ALTER TABLE の SWITCH PARTITION コマンドを実行できるかどうかを示します。 *allow_partition_switch*は**bit**、既定値は 1 です。  
   
  テーブルのパーティション分割されていない場合、切り替え設定は常に 1、および実際の設定は無視されます。 非パーティション テーブルで切り替え設定を明示的に 0 に設定すると、切り替え設定が無視されたことを示す警告 22857 が生成されます。 パーティション テーブルで切り替え設定を明示的に 0 に設定すると、ソース テーブルに対するパーティションの切り替え操作が許可されなくなることを示す警告 22356 が生成されます。 最後に、パーティションの切り替えをブロックしないことを示す場合は、切り替え設定は 1 または 1 の既定値を明示的に設定するか、有効になっているテーブルがパーティション分割、警告 22855 が発行されます。 すべてのパーティションの切り替えが発生した場合、変更データ キャプチャには、スイッチによって生じた変更は記録されません。 変更データが使用されるときに、データの不整合になります。  
   
@@ -156,10 +156,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   
