@@ -46,7 +46,7 @@ fn_ check_object_signatures (
   
 ## <a name="arguments"></a>引数  
  {0} '\@*class*'}  
- 提供されるthumbprintの種類を識別します。  
+ 提供される thumbprint の種類を識別します。  
   
 -   'certificate'  
   
