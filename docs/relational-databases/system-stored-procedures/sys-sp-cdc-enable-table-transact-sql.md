@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68106459"
 ---
-# <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
+# <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベース内の指定したソース テーブルを対象に変更データ キャプチャを有効にします。 テーブルに対して変更データ キャプチャが有効の場合は、テーブルに適用される各データ操作言語 (DML) 操作の記録がトランザクション ログに書き込まれます。 変更データ キャプチャのプロセスはログからこの情報を取得し、一連の関数を使用してアクセスできる変更テーブルに書き込みます。  
@@ -68,7 +68,7 @@ sys.sp_cdc_enable_table
   
  名前が、ソース スキーマ名の形式でソース テーブル名から派生した指定しない場合、 *schemaname_sourcename*します。 *capture_instance* 100 文字を超えることはできませんし、データベース内で一意である必要があります。 指定されたか、派生*capture_instance*文字列の右側にある空白は切り捨てられます。  
   
- ソース テーブルには、2 つのキャプチャ インスタンスの最大数を持つことができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)します。  
+ ソース テーブルには、2 つのキャプチャ インスタンスの最大数を持つことができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)します。  
   
 `[ @supports_net_changes = ] supports_net_changes` 示すかどうかをこのキャプチャ インスタンスに対して有効にするには差分変更クエリをサポートします。 *supports_net_changes*は**bit**、既定値は、テーブルに主キーまたはテーブルに一意のインデックスを使用して識別されている場合は 1、@index_nameパラメーター。 それ以外の場合、既定値は 0 になります。  
   
@@ -86,7 +86,7 @@ sys.sp_cdc_enable_table
   
  *captured_column_list*は列名のコンマ区切りのリスト。 二重引用符を使用して、リスト内の個々 の列名できます必要に応じて引用符で囲む ("") または角かっこ ()。 列名には、埋め込みのコンマが含まれている、列名が引用符で囲まれたする必要があります。  
   
- *captured_column_list*次の予約済みの列名を含めることはできません: **__$start_lsn**、 **__$end_lsn**、 **__$seqval**、 **__$operation**、および **__$update_mask**します。  
+ *captured_column_list*次の予約済みの列名を含めることはできません: **_ _ $start_lsn**、 **_ _ $end_lsn**、 **_ _ $$seqval**、 **_ _ $操作**、および **_ _ $update_mask**します。  
   
 `[ @filegroup_name = ] 'filegroup_name'` キャプチャ インスタンスの作成、変更テーブルに使用するファイル グループです。 *filegroup_name*は**sysname** NULL にすることができます。 指定した場合*filegroup_name*現在のデータベースを定義する必要があります。 NULL の場合、既定のファイル グループが使用されます。  
   
