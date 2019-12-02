@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_cleanup_change_table (Transact-sql) |Microsoft Docs
+title: sp_cdc_cleanup_change_table (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/25/2019
 ms.locfileid: "72909330"
 ---
-# <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sp_cdc_cleanup_change_table (Transact-sql)
+# <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定された*low_water_mark*値に基づいて、現在のデータベースの変更テーブルから行を削除します。 このストアドプロシージャは、変更テーブルのクリーンアッププロセスを直接管理する必要があるユーザー向けに用意されています。 ただし、このプロシージャは、変更テーブルに含まれるデータのすべてのコンシューマーに影響を及ぼすため、使用する際は注意が必要です。  
@@ -45,7 +45,7 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>引数  
- [@capture_instance =]'*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  変更テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
  *capture_instance*は、現在のデータベースに存在するキャプチャインスタンスに名前を指定する必要があります。  
@@ -57,7 +57,7 @@ sys.sp_cdc_cleanup_change_table
   
  値が明示的に NULL に設定されている場合、*キャプチャインスタンス*の現在の*低レベルのウォーターマーク*は、クリーンアップ操作の上限を定義するために使用されます。  
   
- [@threshold=]'*削除のしきい値*'  
+ [ @threshold= ] '*delete threshold*'  
  クリーンアップで1つのステートメントを使用して削除できる削除エントリの最大数を指定します。 *delete_threshold*は**bigint**,、既定値は5000です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -69,7 +69,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="remarks"></a>Remarks  
  sys.sp_cdc_cleanup_change_table は次の操作を実行します。  
   
-1.  @low_water_mark パラメーターが NULL でない場合は、*キャプチャインスタンス*の start_lsn の値を新しい*低レベルのウォーターマーク*に設定します。  
+1.  @low_water_mark パラメーターが NULL でない場合は、*capture instance* の start_lsn の値を新しい*低レベルのウォーターマーク*に設定します。  
   
     > [!NOTE]  
     >  新しい低レベルのウォーターマークは、ストアド プロシージャ呼び出しで指定されている低レベルのウォーターマークと異なる場合があります。 cdc.lsn_time_mapping テーブルの他のエントリが同じコミット時間を共有する場合、そのグループのエントリで表される最小の start_lsn が、調整された低レベルのウォーターマークとして選択されます。 @low_water_mark パラメーターが NULL の場合、または現在の低レベルのウォーターマークが新しい lowwatermark より大きい場合、キャプチャインスタンスの start_lsn 値は変更されません。  
@@ -92,6 +92,6 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="see-also"></a>参照  
  [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;&#40;transact-sql&#41;   ](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [fn_cdc_get_min_lsn &#40;transact-sql&#41; ](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [fn_cdc_increment_lsn &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
+ [fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   
