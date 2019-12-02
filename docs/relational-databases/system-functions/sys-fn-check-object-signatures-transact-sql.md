@@ -92,6 +92,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [IS_OBJECTSIGNED &#40;TRANSACT-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+ [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   
