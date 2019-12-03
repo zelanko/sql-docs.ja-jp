@@ -30,7 +30,7 @@ ms.locfileid: "67948610"
 
   現在のデータベース内のキーとして制約されている各列の 1 つの行を返します。 この情報スキーマ ビューでは、現在のユーザーがアクセス許可を持っているオブジェクトに関する情報を返します。  
   
- これらのビューから情報を取得するには、完全修飾名を指定**INFORMATION_SCHEMA** 。_view_name_します。  
+ これらのビューから情報を取得するには、**INFORMATION_SCHEMA.** _view_name_ の完全修飾名を指定します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -44,12 +44,12 @@ ms.locfileid: "67948610"
 |**ORDINAL_POSITION**|**int**|列の序数位置。|  
   
 ## <a name="see-also"></a>関連項目  
- [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [情報スキーマ ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [システム ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [情報スキーマ ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.foreign_keys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)   
+ [sys.foreign_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)   
  [sys.key_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)  
   
   

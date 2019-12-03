@@ -1,5 +1,5 @@
 ---
-title: sysdac_history_internal (TRANSACT-SQL) |Microsoft Docs
+title: sysdac_history_internal (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,19 +33,19 @@ ms.locfileid: "68084766"
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|アクションの識別子。|  
 |**sequence_id**|**int**|アクション内のステップを識別します。|  
-|**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列に結合できます、 **instance_id**列[dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)します。|  
+|**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列に結合できます、 **instance_id**列[dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)します。|  
 |**action_type**|**tinyint**|アクションの種類の識別子。<br /><br /> **0** = デプロイ<br /><br /> **1** = 作成<br /><br /> **2** = 名前の変更<br /><br /> **3** = デタッチ<br /><br /> **4** = 削除||  
 |**action_type_name**|**varchar(19)**|アクションの種類の名前。<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** = dacpac<br /><br /> **1** = ログイン<br /><br /> **2** = データベース|  
 |**dac_object_type_name**|**varchar(8)**|アクションによって影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** = DAC インスタンス<br /><br /> **login**<br /><br /> **データベース (database)**|  
 |**action_status**|**tinyint**|アクションの現在のステータスを識別するコード。<br /><br /> **0** = 保留中<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
 |**action_status_name**|**varchar(11)**|アクションの現在のステータス。<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
-|**必須**|**bit**|DAC 操作をロールバックするときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって使用されます。|  
+|**Required**|**bit**|DAC 操作をロールバックするときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって使用されます。|  
 |**dac_object_name_pretran**|**sysname**|コミット アクションを含んでいるトランザクションの前に、オブジェクトの名前。 データベースとログインに対してのみ使用されます。|  
 |**dac_object_name_posttran**|**sysname**|アクションを含んでいるトランザクションをコミットした後のオブジェクトの名前。 データベースとログインに対してのみ使用されます。|  
 |**sqlscript**|**nvarchar(max)**|データベースまたはログイン上でアクションを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト。|  
-|**ペイロード**|**varbinary(max)**|DAC パッケージの定義がバイナリでエンコードされた文字列に保存します。|  
-|**コメント**|**varchar(max)**|DAC のアップグレードでデータ損失の可能性を許可したユーザーのログインを記録します。|  
+|**payload**|**varbinary(max)**|DAC パッケージの定義がバイナリでエンコードされた文字列に保存します。|  
+|**Comments**|**varchar(max)**|DAC のアップグレードでデータ損失の可能性を許可したユーザーのログインを記録します。|  
 |**error_string**|**nvarchar(max)**|エラー メッセージがアクションには、エラーが発生した場合に生成します。|  
 |**created_by**|**sysname**|このエントリを作成したアクションを開始したログイン。|  
 |**date_created**|**datetime**|日付と、このエントリが作成された時刻。|  
@@ -81,7 +81,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>関連項目  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [sysdac_instances_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

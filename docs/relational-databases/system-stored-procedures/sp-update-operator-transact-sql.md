@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68084839"
 ---
-# <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
+# <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   警告とジョブで使用するためには、オペレーター (通知受信者) に関する情報を更新します。  
@@ -102,8 +102,8 @@ sp_update_operator
  [ @netsend_address=] '*netsend_address*'  
  ネットワーク メッセージを送信するオペレーターのネットワーク アドレス。 *netsend_address*は**nvarchar (100)** 、既定値は NULL です。  
   
- [ @category_name=] '*カテゴリ*'  
- このアラートのカテゴリの名前。 *カテゴリ*は**sysname**、既定値は NULL です。  
+ [ @category_name=] '*category*'  
+ このアラートのカテゴリの名前。 *category*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
