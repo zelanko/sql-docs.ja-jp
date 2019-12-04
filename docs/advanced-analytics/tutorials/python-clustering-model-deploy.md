@@ -43,7 +43,7 @@ ms.locfileid: "73727139"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* このチュートリアルシリーズの第 4 部は、第 1 部**](python-clustering-model.md)の前提条件を満たし、第 2 部および第 3 部](python-clustering-model-build.md)の手順を完了していることを前提としています。
+* このチュートリアルシリーズの第 4 部は、[**第 1 部**](python-clustering-model.md)の前提条件を満たし、[**第 2 部**](python-clustering-model-prepare-data.md)および[**第 3 部**](python-clustering-model-build.md)の手順を完了していることを前提としています。
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>モデルを生成するストアド プロシージャの作成
 
@@ -158,7 +158,7 @@ SELECT * FROM py_customer_clusters;
 
 クラスタリングのプロシージャはデータベースに格納されているため、同じデータベースに格納されている顧客データに対し、効率的にクラスタリングを実行できます。 顧客データが更新されるたびにプロシージャを実行し、更新されたクラスタリング情報を利用できます。
 
-たとえば、クラスター 0 (非アクティブなグループ) の顧客にプロモーションメールを送るとします (本チュートリアルの第 3 部](python-clustering-model-build.md#analyze-the-results)で 4 つのクラスターについて説明しています)。 以下のコードは、クラスター 0 の顧客のメール アドレスを選択します。
+たとえば、クラスター 0 (非アクティブなグループ) の顧客にプロモーションメールを送るとします (本チュートリアルの[第 3 部](python-clustering-model-build.md#analyze-the-results)で 4 つのクラスターについて説明しています)。 以下のコードは、クラスター 0 の顧客のメール アドレスを選択します。
 
 ```sql
 USE [tpcxbb_1gb]
