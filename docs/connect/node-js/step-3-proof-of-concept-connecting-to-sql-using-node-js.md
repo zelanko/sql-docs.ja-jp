@@ -19,7 +19,7 @@ ms.locfileid: "68419258"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>ステップ 3: Node.js を使用した SQL への接続を概念実証する
 
-![ダウンロード-ダウン矢印-](../../ssdt/media/download.png)[NODE.JS SQL ドライバーをダウンロードするため](../sql-connection-libraries.md#anchor-20-drivers-relational-access)の丸
+![ダウンロード-ダウン矢印-](../../ssdt/media/download.png)[NODE.JS SQL ドライバーをダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。 同じ重要な機能を使用するその他の例については、Github を参照してください。
 
