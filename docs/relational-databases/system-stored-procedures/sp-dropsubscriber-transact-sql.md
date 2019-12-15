@@ -60,7 +60,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
  **Sp_dropsubscriber**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [プッシュサブスクリプションを削除する](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [プッシュサブスクリプションを削除](../../relational-databases/replication/delete-a-push-subscription.md)   
  [プルサブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
