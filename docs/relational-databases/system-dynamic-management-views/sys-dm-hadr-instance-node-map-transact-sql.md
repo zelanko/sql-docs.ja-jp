@@ -32,7 +32,7 @@ ms.locfileid: "67900415"
 
   すべてのインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always On 可用性グループに参加している場合は、サーバー インスタンスをホストする Windows Server フェールオーバー クラスター (WSFC) ノードの名前を取得する可用性レプリカをホストします。 この動的管理ビューには、次の用途があります。  
   
--   この動的管理ビューは、同一の WSFC ノードでホストされている複数の可用性レプリカを持つ可用性グループを検出するために役に立ちます。これはサポート外の構成であり、可用性グループが間違って構成されているときに FCI フェールオーバーが発生した場合にこの状態になることがあります。 詳細については、「[フェールオーバー クラスタリングと Always On 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  
+-   この動的管理ビューは、同一の WSFC ノードでホストされている複数の可用性レプリカを持つ可用性グループを検出するために役に立ちます。これはサポート外の構成であり、可用性グループが間違って構成されているときに FCI フェールオーバーが発生した場合にこの状態になることがあります。 詳細については、「[フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 -   インスタンスを確認するリソース DLL がこの動的管理ビューを使用して同一の WSFC ノードでは、複数の SQL Server インスタンスがホストされている、ときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続します。  
    
