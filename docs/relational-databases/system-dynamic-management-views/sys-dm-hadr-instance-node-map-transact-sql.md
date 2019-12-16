@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67900415"
 ---
-# <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (TRANSACT-SQL)
+# <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   すべてのインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always On 可用性グループに参加している場合は、サーバー インスタンスをホストする Windows Server フェールオーバー クラスター (WSFC) ノードの名前を取得する可用性レプリカをホストします。 この動的管理ビューには、次の用途があります。  
