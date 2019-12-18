@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68768293"
 ---
-# <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-sql)
+# <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   登録済みサーバーからサブスクライバーの指定を削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -60,7 +60,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
  **Sp_dropsubscriber**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [プッシュサブスクリプションを削除](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [プッシュ サブスクリプションの削除](../../relational-databases/replication/delete-a-push-subscription.md)   
  [プルサブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
