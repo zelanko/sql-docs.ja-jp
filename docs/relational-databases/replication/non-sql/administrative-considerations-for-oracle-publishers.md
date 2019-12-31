@@ -61,7 +61,7 @@ ms.locfileid: "68020037"
 ## <a name="dropping-or-modifying-replication-objects"></a>レプリケーション オブジェクトの削除と変更  
  パブリッシャー レベルの追跡テーブル、トリガー、シーケンス、ストアド プロシージャを削除または変更するには、パブリッシャーを削除して再構成する必要があります。 これらのオブジェクトの一部の一覧については、「[Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)」 (Oracle パブリッシャーで作成されたオブジェクト) を参照してください。  
   
- パブリッシャーの削除と再構成の詳細については、「 [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」の「パブリッシャーの再構成が必要になる変更」を参照してください。  
+ パブリッシャーの削除と再構成の詳細については、「[Oracle パブリッシャーのトラブルシューティング](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」の「パブリッシャーの再構成が必要になる変更」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
