@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2014 Analysis Services |Microsoft Docs
 ms.custom: ''
-ms.date: 06/07/2019
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -18,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93a8f9ddab1fe1f78c5af94cae30c8ce7cbf2c37
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bceabba9b490be6bc2c51b4fdcce9b6b131eb0ce
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025456"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683477"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
@@ -34,7 +34,7 @@ ms.locfileid: "69025456"
 ドキュメントはバージョン別に分けられます。 現在は SQL Server 2014 Analysis Services ドキュメントにあります。
 
 - SQL Server 2012 以前の詳細については、 [SQL Server 前のバージョンのドキュメント](https://docs.microsoft.com/previous-versions/sql/)を参照してください。
-- SQL Server 2014 の詳細については、 [SQL Server 2014 のオンラインブック](../2014-toc/books-online-for-sql-server-2014.md)を参照してください。
+- SQL Server 2014 の詳細については、 [SQL Server 2014 のオンラインブック](../2014-toc/index.yml)を参照してください。
 - SQL Server 2016 以降の詳細については、 [MICROSOFT SQL のドキュメント](https://docs.microsoft.com/sql/)を参照してください。
 - Azure Analysis Services の詳細については、 [Azure Analysis Services のドキュメント](https://docs.microsoft.com/azure/analysis-services/)を参照してください。
 
@@ -61,25 +61,25 @@ ms.locfileid: "69025456"
  Analysis Services に関する基本ドキュメントは、作成するプロジェクトの種類に対応するセクション別に分類されます。 それぞれのモードまたは機能領域の詳細については、次のリンクから選択してください。  
   
  **領域ごとのコンテンツの参照**  
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[テーブルソリューションと多次元ソリューション&#40;の&#41;比較 SSAS](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [SSAS&#41;&#40;テーブルソリューションと多次元ソリューションの比較](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[Analysis Services インスタンス管理](instances/analysis-services-instance-management.md)  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Analysis Services インスタンス管理](instances/analysis-services-instance-management.md)  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[テーブルモデリング&#40;SSAS 表&#41;形式](tabular-models/tabular-models-ssas.md)  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[テーブルモデリング &#40;SSAS 表形式&#41;](tabular-models/tabular-models-ssas.md)  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[多次元モデリング&#40;SSAS&#41; ](multidimensional-models/multidimensional-models-ssas.md)  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[多次元モデリング &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[データマイニング&#40;SSAS&#41; ](data-mining/data-mining-ssas.md)  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データマイニング &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[ &#40;SSAS&#41;の PowerPivot for SharePoint](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [PowerPivot for SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能は、エディションによって異なります。 多次元およびデータ マイニング モデルは Standard Edition で使用できますが、上位エディションに比べると機能が少なくなっています。 テーブル モデルと PowerPivot for SharePoint はプレミアム機能であり、Standard Edition のライセンスでは使用できません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]機能はエディションによって異なります。 多次元およびデータ マイニング モデルは Standard Edition で使用できますが、上位エディションに比べると機能が少なくなっています。 テーブル モデルと PowerPivot for SharePoint はプレミアム機能であり、Standard Edition のライセンスでは使用できません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services チュートリアル&#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
+## <a name="see-also"></a>参照  
+ [Analysis Services チュートリアル &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [SQL Server 2014 のインストール](../database-engine/install-windows/installation-for-sql-server.md)   
- [開発者ガイド&#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
+ [開発者ガイド &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
  [SQL Server リソースセンター](https://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
