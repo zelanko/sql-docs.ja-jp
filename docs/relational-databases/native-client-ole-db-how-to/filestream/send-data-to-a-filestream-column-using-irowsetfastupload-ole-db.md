@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB) | Microsoft Docs
+title: データ FILESTREAM、IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,26 +11,27 @@ ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3bee5fbe809476ef0be1be28a06909cc470a073
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 545190d2852d617fa7d73f4aaf464d15b7f1327b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73767267"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225953"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   このサンプルでは、IRowsetFastUpload インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
   
- Filestream 機能の詳細については、「 [Filestream &#40;Support&#41;OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
+ Filestream 機能の詳細については、「 [Filestream Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にします ([filestream の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
  INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
- サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
+ サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
  1 つ目のコード リストをコピーし、ISSHelper.h という名前のファイルに貼り付けます。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "73767267"
   
  4 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストは、このサンプルで作成したデータベースを削除します。  
   
-```  
+```cpp
 // ISSHelper.h: interface for the CISSHelper class.  
 #if !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
 #define AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_  
@@ -95,7 +96,7 @@ private:
 #endif // !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
 ```  
   
-```  
+```cpp
 // ISSHelper.cpp: implementation of the CISSHelper class.  
 #pragma once  
   
@@ -240,7 +241,7 @@ return S_OK;
 }  
 ```  
   
-```  
+```cpp
 //  IRowsetFastLoadUpload.cpp  
 #pragma once  
   
@@ -588,7 +589,7 @@ MainCleanup:
 }  
 ```  
   
-```  
+```sql
 sp_detach_db 'DBFsa'  
 IF EXISTS (SELECT name FROM master..sysdatabases WHERE name = 'DBFsa') DROP DATABASE [DBFsa] |  
 ```  
