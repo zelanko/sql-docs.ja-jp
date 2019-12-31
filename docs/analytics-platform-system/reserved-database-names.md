@@ -1,6 +1,6 @@
 ---
-title: Parallel Data Warehouse のデータベース名に予約されています |Microsoft Docs
-description: Analytics Platform System Parallel Data Warehouse でデータベースの名前が予約されています。
+title: 予約済みのデータベース名
+description: Analytics Platform System Parallel Data Warehouse の予約済みデータベース名。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,21 +8,22 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: aa4628a5f4685eb805948de0b67f9387a189054a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 77625b2a8b1169af90ab0573fa57a4246f81ceab
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960194"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400471"
 ---
-# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Parallel Data Warehouse で予約されているデータベース名
-予約されているデータベース名では、SQL Server PDW のユーザー データベースに割り当てることができない名前です。  
+# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Parallel Data Warehouse での予約済みデータベース名
+予約されたデータベース名は、SQL Server PDW のユーザーデータベースに割り当てることができない名前です。  
   
-予約されているデータベース名のリスト:  
+予約されているデータベース名の一覧:  
   
 -   master  
   
--   model  
+-   モデル  
   
 -   msdb  
   
@@ -40,9 +41,9 @@ ms.locfileid: "67960194"
   
 -   DWQueue  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 <!-- MISSING LINKS 
 [Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
 -->
-[システム データベース](system-databases.md)  
+[システムデータベース](system-databases.md)  
   

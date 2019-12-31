@@ -1,5 +1,5 @@
 ---
-title: Analytics Platform System の新機能-スケールアウトデータウェアハウス
+title: 新機能
 description: MPP SQL Server Parallel Data Warehouse をホストするスケールアウトオンプレミスアプライアンスである Microsoft Analytics Platform System の新機能について説明します。
 author: mzaman1
 manager: craigg
@@ -9,23 +9,24 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9d0ff3861912270091b6a63cbd3fd7b2e8e0e481
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227105"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399420"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>スケールアウト MPP データウェアハウスである Analytics Platform System の新機能
 Microsoft Analytics Platform System (APS) の最新のアプライアンス更新プログラムの新機能を参照してください。 APS は、MPP SQL Server 並列データウェアハウスをホストする、スケールアウトされたオンプレミスのアプライアンスです。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.5"></a>
-## <a name="aps-cu75"></a>APS CU 7.5
+## <a name="aps-cu75"></a>APS CU7.5
 リリース日-2019 年9月
 
 ### <a name="alter-external-data-source"></a>外部データソースの変更
-お客様は、CU 7.5 更新プログラムを使用して外部データソース定義を変更することができます。 Hadoop 名前ノードの高可用性を使用しているお客様は、フェールオーバーが発生したときに、データソースを変更して引数を変更できるようになりました。 APS の場合は、LOCATION、RESOURCE_MANAGER_LOCATION、CREDENTIAL だけを変更できます。 詳細については、「 [alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) 」を参照してください。
+お客様は、CU 7.5 更新プログラムを使用して外部データソース定義を変更することができます。 Hadoop 名前ノードの高可用性を使用しているお客様は、フェールオーバーが発生したときに、データソースを変更して引数を変更できるようになりました。 APS の場合、場所、RESOURCE_MANAGER_LOCATION、資格情報のみを変更できます。 詳細については、「 [alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) 」を参照してください。
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>CDH 5.15 と5.16 の PolyBase のサポート
 CU 7.5 update を使用する APS の PolyBase では、Cloudera からの、CDH 5.15 および5.16 バージョンの Hadoop 配布がサポートされるようになりました。 CDH 5.x バージョンにはオプション6を使用します。 
@@ -56,9 +57,9 @@ APS CU 7.3 では、SQL クエリオプティマイザーにおける共通部�
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Informatica 10.2.0 公開された APS Informatica connector
 Informatica バージョン10.2.0 および10.2.0 修正プログラム1で動作する APS 用の Informatica コネクタの新しいバージョンをリリースしました。 新しいコネクタは、[ダウンロードサイト](https://www.microsoft.com/download/details.aspx?id=57472)からダウンロードできます。
 
-#### <a name="supported-versions"></a>Supported Versions
+#### <a name="supported-versions"></a>サポートされているバージョン
 
-| APS バージョン | Informatica PowerCenter | Driver |
+| APS バージョン | Informatica PowerCenter | ドライバー |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 2.x |
 | APS 2016 以降 | 10.2.0、10.2.0 Hotfix 1 | SQL Server Native Client 2.x |
@@ -82,7 +83,7 @@ PolyBase が Hadoop 暗号化ゾーンと通信できるようになりました
 > Maxdop を増やすと、操作やデッドロックエラーが発生することがあります。 その場合は、設定を maxdop 1 に戻してから、操作を再試行してください。
 
 ### <a name="columnstore-index-health-dmv"></a>列ストアインデックスの正常性 DMV
-**Dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv を使用して、列ストアインデックスの正常性情報を表示できます。 断片化を確認し、列ストアインデックスを再構築または再構成するタイミングを決定するには、次のビューを使用します。
+**Dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv を使用して、列ストアインデックスの正常性に関する情報を表示できます。 断片化を確認し、列ストアインデックスを再構築または再構成するタイミングを決定するには、次のビューを使用します。
 
 ```sql
 create view dbo.vCS_rg_physical_stats
@@ -120,12 +121,12 @@ SQL Server 2017 をサポートする新しい APS SSIS 変換先アダプター
 リリース日-2018 年7月
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC コマンドは同時実行スロットを使用しません (動作の変更)
-APS は、 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)などの t-sql [dbcc コマンド](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)のサブセットをサポートしています。 以前は、これらのコマンドは[同時実行スロット](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)を使用して、実行可能なユーザーロードまたはクエリの数を減らしていました。 `DBCC`コマンドは、ユーザーの同時実行スロットを使用しないローカルキューで実行されるようになりました。これにより、全体的なクエリ実行パフォーマンスが向上します。
+APS は、 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)などの t-sql [dbcc コマンド](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)のサブセットをサポートしています。 以前は、これらのコマンドは[コンカレンシー スロット](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)を消費したので、実行できるユーザー負荷/クエリの数が減少しました。 `DBCC`コマンドは、ユーザーの同時実行スロットを使用しないローカルキューで実行されるようになりました。これにより、全体的なクエリ実行パフォーマンスが向上します。
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>一部のメタデータ呼び出しをカタログオブジェクトに置き換えます。
 SMO を使用する代わりに、メタデータ呼び出しに catalog オブジェクトを使用すると、APS のパフォーマンスが向上しています。 CU 7.1 以降、これらのメタデータ呼び出しの一部では、既定でカタログオブジェクトが使用されるようになりました。 メタデータクエリを使用しているお客様が問題が発生した場合は、[機能スイッチ](appliance-feature-switch.md)でこの動作を無効にすることができます。
 
-### <a name="bug-fixes"></a>バグの修正
+### <a name="bug-fixes"></a>バグ修正
 APS CU 7.1 で SQL Server 2016 SP2 CU2 にアップグレードしました。 このアップグレードでは、以下に示すいくつかの問題が修正されます。
 
 | タイトル | 説明 |
@@ -151,7 +152,7 @@ Select @varがサポートされるようになりました。 詳細につい�
 ### <a name="feature-switch"></a>機能スイッチ
 APS AU7 には[Configuration Manager](launch-the-configuration-manager.md)の機能スイッチが導入されています。 AutoStatsEnabled と DmsProcessStopMessageTimeoutInSeconds は、管理者が変更できる構成可能なオプションになりました。
 
-### <a name="known-issues"></a>既知の問題
+### <a name="known-issues"></a>の既知の問題
 APS AU7 ソフトウェアでは、Intel BIOS の更新プログラムが提供されており、予測*実行のサイドチャネル攻撃*として説明されている問題を修正します。 攻撃は、 *Spectre と Meltdown の脆弱性*と呼ばれるものを悪用することを目的としています。 APS と共にパッケージ化されますが、BIOS の更新プログラムは、APS AU7 ソフトウェアのインストールの一部としてではなく、手動でインストールされます。
 
 Microsoft は、すべてのお客様に BIOS の更新をインストールするようにアドバイスします。 Microsoft は、さまざまな環境におけるさまざまな SQL ワークロードに対して、カーネル仮想アドレスシャドウ (KVAS)、カーネルページテーブル間接 (中 TI)、および間接分岐予測軽減 (IBP) の影響を測定しました。 この測定では、一部のワークロードで大幅な低下が見られました。 結果に基づいて、BIOS 更新を有効にした場合のパフォーマンスへの影響をテストしてから、運用環境に展開することをお勧めします。 SQL Server ガイダンスを参照し[てください。](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)
@@ -174,15 +175,15 @@ APS AU6 では、これらの T-sql 互換性の向上がサポートされて�
 
 - Windows 照合順序に加えて、[列レベルの SQL 照合順序][]がサポートされるようになりました。
 - クラスター化[列ストアインデックスの非クラスター化インデックス][]は、クラスター化列ストアインデックス内の特定の値を検索するクエリのパフォーマンスを向上させます。 
-- [SELECT...INTO][] 
-- [sp_spaceused ()][]テーブルまたはデータベースで使用または予約されているディスク領域を表示します。
+- [選択...ドラッグ][] 
+- [sp_spaceused ()][]は、テーブルまたはデータベースで使用されているか予約されているディスク領域を表示します。
 - [幅の広いテーブル][]のサポートは SQL Server 2016 と同じです。 以前の行サイズに対する 32 K の制限は存在しません。 
 
-**データ型**
+**データの種類**
 
-- [VARCHAR (max)][]、 [NVARCHAR(MAX)][] 、および[VARBINARY (max)][]です。 これらの LOB データ型の最大サイズは 2 GB です。 これらのオブジェクトを読み込むには、 [Bcp ユーティリティ][]を使用します。 PolyBase と dwloader では、現在、これらのデータ型はサポートされていません。 
+- [VARCHAR (max)][]、 [NVARCHAR (max)][] 、および[VARBINARY (max)][]です。 これらの LOB データ型の最大サイズは 2 GB です。 これらのオブジェクトを読み込むには、 [Bcp ユーティリティ][]を使用します。 PolyBase と dwloader では、現在、これらのデータ型はサポートされていません。 
 - [SYSNAME][]
-- [UNIQUEIDENTIFIER][]
+- [一意][]
 - [NUMERIC][]および DECIMAL データ型。
 
 **ウィンドウ関数**
@@ -195,13 +196,13 @@ APS AU6 では、これらの T-sql 互換性の向上がサポートされて�
 
 **セキュリティ関数**
 
-- [CHECKSUM()][]と[BINARY_CHECKSUM()][]
-- [HAS_PERMS_BY_NAME()][]
+- [CHECKSUM ()][]と[BINARY_CHECKSUM ()][]
+- [HAS_PERMS_BY_NAME ()][]
 
 **その他の関数**
 
-- [NEWID()][]
-- [RAND()][]
+- [NEWID ()][]
+- [RAND ()][]
 
 ### <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop の機能強化
 
@@ -241,28 +242,28 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md
 [列レベルの SQL 照合順序]: ~/relational-databases/collations/collation-and-unicode-support.md
 
-[列ストアインデックスの非クラスター化インデックス]:/sql/t-sql/statements/create-index-transact-sql
+[クラスター化列ストアインデックスの非クラスター化インデックス]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[選択...ドラッグ]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused ()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [幅の広いテーブル]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp ユーティリティ]:/sql/tools/bcp-utility
-[UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[一意]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
+[番号]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [行または範囲]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql
 [PERCENT_RANK]:/sql/t-sql/functions/percent-rank-transact-sql
-[CHECKSUM()]:/sql/t-sql/functions/checksum-transact-sql
-[BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
-[HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
-[NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND()]:/sql/t-sql/functions/rand-transact-sql
+[CHECKSUM ()]:/sql/t-sql/functions/checksum-transact-sql
+[BINARY_CHECKSUM ()]:/sql/t-sql/functions/binary-checksum-transact-sql
+[HAS_PERMS_BY_NAME ()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
+[NEWID ()]:/sql/t-sql/functions/newid-transact-sql
+[RAND ()]:/sql/t-sql/functions/rand-transact-sql
 
 
   
