@@ -1,6 +1,5 @@
 ---
-title: 'Sql: limit-field および sql: limit-value を使用した値のフィルター処理 (SQLXML 4.0) |Microsoft Docs'
-ms.custom: ''
+title: 'Sql: limit-field および sql: limit-value (SQLXML) を使用したフィルター処理'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906102"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257409"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "72906102"
 > [!NOTE]  
 >  マップされた SQL 列が**real**型である**sql: limit フィールド**を使用すると、SQLXML 4.0 は XML スキーマで指定されている**sql: limit-値**に対して、 **nvarchar**指定値として変換を実行します。 ここで、10 進数の制限値を完全な科学的表記法で指定する必要があります。 詳細については、後の例 B を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用して実際のサンプルを作成するには、次がインストールされている必要があります。  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
@@ -165,7 +165,7 @@ ms.locfileid: "72906102"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. 実数型データのディスカウント値に基づいて結果を制限する  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. 実数型データのディスカウント値に基づいて結果を制限する  
  この例では、データベースに次の 2 つのテーブルが含まれています。  
   
 -   Orders (OrderID)  
@@ -307,9 +307,9 @@ ms.locfileid: "72906102"
     ```  
   
 ## <a name="see-also"></a>参照  
- [float と real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar および nvarchar &#40;transact-sql&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
- [SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  のインストール  
- [クエリ&#40;での注釈付き XSD スキーマの使用 SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Transact-sql&#41;の float 型と real 型の &#40;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar および nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
+ [クエリでの注釈付き XSD スキーマの使用 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   
