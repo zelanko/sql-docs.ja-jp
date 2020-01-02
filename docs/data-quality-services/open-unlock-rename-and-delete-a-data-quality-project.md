@@ -1,5 +1,7 @@
 ---
 title: データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する
+description: SQL Server Data Quality Services を使用してデータ品質プロジェクトを開く、ロックを解除する、名前を変更する、および削除する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -16,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d849ca48b5e4a1cc8d01eebc1649075251da3fd0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245968"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557808"
 ---
-# <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する
+# <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する-Data Quality Services (DQS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

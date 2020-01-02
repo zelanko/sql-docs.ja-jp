@@ -1,5 +1,7 @@
 ---
-title: DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート
+title: DQSInstaller を使用した DQS ナレッジベースのエクスポートとインポート
+description: DQSInstaller を使用して SQL Server Data Quality Services (DQS) の DQS ナレッジベースをエクスポートおよびインポートする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: bb2f2a1a1e6aa9b63478b95d7f802e3df7cd127c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75254783"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558147"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート
 

@@ -1,5 +1,7 @@
 ---
-title: DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型
+title: DQS ドメインでサポートされている SQL Server と SSIS のデータ型
+description: SQL Server の Data Quality Services (DQS) ドメイン (データ、10進数、整数、文字列) の4つのデータ型について説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257772"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558171"
 ---
-# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型
+# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS ドメインでサポートされている SQL Server と SSIS のデータ型
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257772"
 > [!NOTE]  
 >  .xlsx および .xls ファイルでは、ソース列のデータ型は最初の 8 行で最も多く使用されているデータ型によって決定されます。 セルがそのデータ型に従っていない場合、セルの値は null になります。 同様に、.csv ファイルでは、ソース列のデータ型は最初の 8 行で最も多く使用されているデータ型によって決定されます。  
   
-##  <a name="SQLServer"></a>サポートされている SQL Server データ型  
+##  <a name="SQLServer"></a>サポートされている SQL Server データ型 
  次の表は、DQS ドメインの各データ型について、サポートされる SQL Server のデータ型を示しています。  
   
 |DQS ドメインのデータ型|サポートされる SQL Server のデータ型|  
