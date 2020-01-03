@@ -30,7 +30,7 @@ ms.locfileid: "67942740"
 -   パブリッシャーの変更を適切な間隔で処理するようにトランザクション セット ジョブを構成します。  
   
 ## <a name="specifying-the-appropriate-publishing-option"></a>適切なパブリッシング オプションの指定  
- [Oracle (ゲートウェイ)] を選択すると、[Oracle (完全)] より高いパフォーマンスが得られますが、このオプションは、複数のトランザクション パブリケーションで同じテーブルをパブリッシュする場合は使用できません。 テーブルを表示できるのは、最大で 1 つのトランザクション パブリケーションと、任意の数のスナップショット パブリケーションになります。 複数のトランザクション パブリケーションで同じテーブルをパブリッシュする必要がある場合は、[Oracle (完全)] を選択します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーを識別する際に指定します。 詳細については、「 [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)」を参照してください。  
+ [Oracle (ゲートウェイ)] を選択すると、[Oracle (完全)] より高いパフォーマンスが得られますが、このオプションは、複数のトランザクション パブリケーションで同じテーブルをパブリッシュする場合は使用できません。 テーブルを表示できるのは、最大で 1 つのトランザクション パブリケーションと、任意の数のスナップショット パブリケーションになります。 複数のトランザクション パブリケーションで同じテーブルをパブリッシュする必要がある場合は、[Oracle (完全)] を選択します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーを識別する際に指定します。 詳細については、「[Oracle データベースからのパブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)」を参照してください。  
   
 ## <a name="configuring-the-transaction-set-job"></a>トランザクション セット ジョブの構成  
  パブリッシュされた Oracle テーブルに対する変更は、トランザクション セットと呼ばれるグループで処理されます。 トランザクションの一貫性を確保するために、各トランザクション セットはディストリビューション データベースで 1 つのトランザクションとしてコミットされます。 トランザクション セットが大きくなりすぎると、1 つのトランザクションとして効率的に処理できなくなります。  
@@ -39,7 +39,7 @@ ms.locfileid: "67942740"
   
  トランザクション セットは、Xactset ジョブ (レプリケーションによってインストールされる Oracle データベース ジョブ) で作成できます。Xactset ジョブは、ログ リーダー エージェントと同じメカニズムを使ってトランザクション セットを作成します。 このジョブが実行されるたびに、新しいトランザクション セットが作成されます。 次にログ リーダー エージェントが実行されたときに、それまでに作成されたトランザクション セットが処理されます。 既存のトランザクション セットがすべて処理された後にまだ保留中の変更がある場合は、ログ リーダー エージェントが 1 つ以上のトランザクション セットを追加で作成して処理します。  
   
- トランザクション セット ジョブを構成するには、「[Configure the Transaction Set Job for an Oracle Publisher](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)」 (Oracle パブリッシャー用にトランザクション セット ジョブを構成する方法 (レプリケーション Transact-SQL プログラミング)) を参照してください。  
+ トランザクション セット ジョブを構成するには、「[Oracle パブリッシャー用のトランザクション セット ジョブの構成(レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

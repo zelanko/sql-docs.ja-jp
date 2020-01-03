@@ -106,7 +106,7 @@ ms.locfileid: "67901118"
  代替データ型マッピングを指定するには、「[Oracle パブリッシャーのデータ型マッピングの指定](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシャーの設計上の注意点および制限](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

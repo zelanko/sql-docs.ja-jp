@@ -64,7 +64,7 @@ ms.locfileid: "68020037"
  パブリッシャーの削除と再構成の詳細については、「[Oracle パブリッシャーのトラブルシューティング](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」の「パブリッシャーの再構成が必要になる変更」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシャーの設計上の注意点および制限](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
