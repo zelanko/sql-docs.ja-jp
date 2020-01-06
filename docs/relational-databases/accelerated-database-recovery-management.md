@@ -1,10 +1,8 @@
 ---
 title: 高速データベース復旧 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130541"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245260"
 ---
 # <a name="manage-accelerated-database-recovery"></a>高速データベース復旧を管理する
 
@@ -84,10 +83,10 @@ PVS の場所の変更は、3 つの手順からなるプロセスです。
    ADR をオンにし、永続的なバージョン ストアに新しい場所を指定するには、まず、PVS の前の場所からバージョン情報がすべて削除されていることを確認する必要があります。 その消去を強制するには、次のコマンドを実行します。
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   `sys.sp_persistent_version_store_cleanup` ストアド プロシージャは同期型です。つまり、現行の PVS からすべてのバージョン情報が消去されるまで完了となりません。  完了したら、DMV `sys.dm_persistent_version_store_stats` を問い合わせ、`persistent_version_store_size_kb` の値を調べることでバージョン情報が確かに削除されていることを確認できます。
+   `sys.sp_persistent_version_cleanup` ストアド プロシージャは同期型です。つまり、現行の PVS からすべてのバージョン情報が消去されるまで完了となりません。  完了したら、DMV `sys.dm_persistent_version_store_stats` を問い合わせ、`persistent_version_store_size_kb` の値を調べることでバージョン情報が確かに削除されていることを確認できます。
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 

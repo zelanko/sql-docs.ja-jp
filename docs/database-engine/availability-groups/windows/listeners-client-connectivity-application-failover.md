@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020814"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228242"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 可用性グループ リスナーに接続する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68020814"
  可用性グループ リスナーを使用して読み取り/書き込みアクセスでプライマリ レプリカに接続するには、可用性グループ リスナーの DNS 名を接続文字列で指定します。  可用性グループ プライマリ レプリカが新しいレプリカに変更された場合、可用性グループ リスナーのネットワーク名を使用している既存の接続は解除されます。  その後、可用性グループ リスナーへの新しい接続によって、新しいプライマリ レプリカにダイレクトされます。 ADO.NET プロバイダー (System.Data.SqlClient) の基本的な接続文字列の例を次に示します。  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  可用性グループ リスナーのサーバー名を使用する代わりに、プライマリ レプリカまたはセカンダリ レプリカの SQL Server 名のインスタンスを直接参照することもできます。ただし、その場合、新しい接続が現在のプライマリ レプリカに自動的にダイレクトされるという利点がなくなります。  また、読み取り専用ルーティングの利点もなくなります。  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  読み取り専用のアプリケーションの目的を指定する ADO.NET プロバイダー (System.Data.SqlClient) の接続文字列の例を次に示します。  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  この接続文字列の例では、クライアントはポート 1433 で `AGListener` という名前の可用性グループ リスナーを介して AdventureWorks データベースへの接続を試みます (可用性グループ リスナーが 1433 でリッスンしている場合、このポートの指定を省略できます)。  この接続文字列は、 **ApplicationIntent** プロパティが **ReadOnly**に設定されているため、 *読み取りを目的とした接続文字列*となります。  この設定がない場合、サーバーは接続の読み取り専用へのルーティングを試行しません。  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  マルチサブネット フェールオーバーを有効にする ADO.NET プロバイダー (System.Data.SqlClient) の接続文字列の例を次に示します。  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  **MultiSubnetFailover** 接続オプションは、可用性グループが単一のサブネットのみにある場合でも、 **True** に設定することをお勧めします。  これにより、今後、クライアント接続文字列を変更することなく、複数のサブネットをサポートするように新しいクライアントをあらかじめ構成することができ、単一サブネットのフェールオーバーのパフォーマンスも最適化できます。  **MultiSubnetFailover** 接続オプションは必須ではありませんが、サブネットのフェールオーバーが速くなるという利点があります。  これは、クライアント ドライバーが、可用性グループに関連付けられている各 IP アドレスの TCP ソケットを同時に開こうとするためです。  クライアント ドライバーは、最初の IP が正常に応答するのを待ち、応答した場合は、その IP を接続に使用します。  
@@ -193,7 +193,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [Always On クライアントの接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+-   [Always On クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -207,7 +207,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server Always On ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduction to the Availability Group Listener (可用性グループ リスナーの概要)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (SQL Server Always On チームのブログ)  
   
