@@ -247,7 +247,7 @@ ms.locfileid: "72907961"
 -   **sp_dropdistpublisher**を実行します。 詳細については、「[sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
