@@ -1,6 +1,6 @@
 ---
-title: コード内とテキスト内の移動 | Microsoft Docs
-ms.custom: ''
+title: コード内とテキスト内の移動
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad05ca7d33e8c2d6d976ea57aace43ff2ab076f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090369"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242000"
 ---
 # <a name="navigate-code-and-text"></a>コード内とテキスト内の移動
   以下の方法で、テキスト内を移動することができます。  
@@ -37,7 +37,8 @@ ms.locfileid: "66090369"
   
 -   マウスと方向キー  
   
--   **[ジャンプ]** コマンド  
+-   
+  **[ジャンプ]** コマンド  
   
 > [!NOTE]  
 >  キーボード ショートカット キーの完全な一覧については、「 [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
@@ -64,11 +65,13 @@ ms.locfileid: "66090369"
 -   Ctrl キーを押しながら上方向キーまたは下方向キーを押すと、カーソルの位置を変えずにテキストをスクロールできます。  
   
 ## <a name="go-to-command"></a>[ジャンプ] コマンド  
- **[ｼﾞｬンプ]** コマンドを使用して、特定の行番号にジャンプできます。 行番号を表示するには、 **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]** 、 **[すべての言語]** 、 **[全般]** の順にクリックし、 **[行番号]** チェック ボックスをオンにします。  
+ 
+  **[ｼﾞｬンプ]** コマンドを使用して、特定の行番号にジャンプできます。 行番号を表示するには、 **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]**、 **[すべての言語]**、 **[全般]** の順にクリックし、 **[行番号]** チェック ボックスをオンにします。  
   
  **特定の行番号にジャンプするには**  
   
-1.  **[編集]** メニューの **[ジャンプ]** をクリックします。  
+1.  
+  **[編集]** メニューの **[ジャンプ]** をクリックします。  
   
 2.  表示する行番号を入力します。  
   

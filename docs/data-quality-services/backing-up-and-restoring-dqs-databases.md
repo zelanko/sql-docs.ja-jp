@@ -1,6 +1,5 @@
 ---
-title: DQS データベースのバックアップと復元 | Microsoft Docs
-ms.custom: ''
+title: DQS データベースのバックアップと復元
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: afee6a476407744d237ebf2c0069d37f7e9c3137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992426"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258852"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
 
@@ -23,9 +22,9 @@ ms.locfileid: "67992426"
 
   このトピックでは、DQS データベースのバックアップと復元を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a>開始する前に  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="Prerequisites"></a>応募  
   
 -   DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードを知っている必要があります。  
   
@@ -33,15 +32,15 @@ ms.locfileid: "67992426"
   
 -   DQS サーバーにログオンしているユーザーがないことを確認します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a>保護  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>許可  
   
 -   バックアップおよび復元操作を実行するには、使用する Windows ユーザー アカウントが、SQL Server インスタンスの sysadmin 固定サーバー ロールのメンバーであることが必要です。  
   
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
-##  <a name="BackupRestore"></a> DQS データベースのバックアップと復元  
+##  <a name="BackupRestore"></a>DQS データベースのバックアップと復元  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "67992426"
   
 10. オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]** をクリックします。  
   
-11. クエリ エディター ウィンドウに次の SQL ステートメントをコピーし、 *\<PASSWORD>* を DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードで置き換えます。  
+11. クエリエディターウィンドウで、次の SQL ステートメントをコピーし、 * \<パスワード>* を、DQS のインストール時にデータベースマスターキーのインストール時に指定したパスワードに置き換えます。  
   
     ```  
     USE [DQS_MAIN]  
@@ -73,9 +72,9 @@ ms.locfileid: "67992426"
   
     ```  
   
-12. F5 キーを押してステートメントを実行します。 **[結果]** ペインを確認してステートメントが正常に実行されたことを確認します。  
+12. F5 キーを押してステートメントを実行します。 [**結果**] ウィンドウで、ステートメントが正常に実行されたことを確認します。  
   
 ## <a name="see-also"></a>参照  
- [DQS データベースの管理](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

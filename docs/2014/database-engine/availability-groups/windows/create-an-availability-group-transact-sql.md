@@ -12,55 +12,59 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 409e2cad9d33c6ac3bc498de6baefa8c252995db
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797680"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228791"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>可用性グループの作成 (Transact-SQL)
-  このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 機能を有効にする [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンス上で可用性グループを作成および構成するために [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
+  このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 機能を有効にする [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンス上で可用性グループを作成および構成するために [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用する方法について説明します。 
+  *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
   
 > [!NOTE]  
 >  可用性グループの概要については、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
 
 > [!NOTE]  
->  [!INCLUDE[tsql](../../../includes/tsql-md.md)]の代わりに、可用性グループの作成ウィザードまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用する方法もあります。 詳細については、「 [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)」、「 [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)」、または「 [可用性グループの作成 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)」を参照してください。  
+>  
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)]の代わりに、可用性グループの作成ウィザードまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用する方法もあります。 詳細については、「 [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)」、「 [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)」、または「 [可用性グループの作成 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a>開始する前に  
  可用性グループを初めて作成する場合は、あらかじめこのセクションに目を通しておくことを強くお勧めします。  
   
-###  <a name="PrerequisitesRestrictions"></a> 前提条件、制限事項、および推奨事項  
+###  <a name="PrerequisitesRestrictions"></a>前提条件、制限事項、および推奨事項  
   
 -   可用性グループを作成する前に、可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが同じ Windows Server フェールオーバー クラスタリング (WSFC) フェールオーバー クラスター内の別の WSFC ノードに存在していることを確認します。 また、各サーバー インスタンスが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他のすべての前提条件を満たしていることも確認します。 詳細については、「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」をお読みいただくことを強くお勧めします。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a>保護  
   
-####  <a name="Permissions"></a> アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
+####  <a name="Permissions"></a>許可  
+ 
+  **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
   
-###  <a name="SummaryTsqlStatements"></a> 作業の概要および対応する Transact-SQL ステートメント  
- 次の表は、可用性グループの作成と構成に伴う基本的な作業と、これらの作業に使用する [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの一覧です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関連したこれらの作業は、この表に示されている順に実行する必要があります。  
+###  <a name="SummaryTsqlStatements"></a>タスクとそれに対応する Transact-sql ステートメントの概要  
+ 次の表は、可用性グループの作成と構成に伴う基本的な作業と、これらの作業に使用する [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの一覧です。 
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関連したこれらの作業は、この表に示されている順に実行する必要があります。  
   
-|タスク|Transact-SQL ステートメント|タスク*を実行する場所 **<sup> </sup>**|  
+|タスク|Transact-SQL ステートメント|タスクを実行する場所**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
-|データベース ミラーリング エンドポイントを作成する ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|[エンドポイント](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName*の作成...DATABASE_MIRRORING|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。|  
+|データベース ミラーリング エンドポイントを作成する ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|[エンドポイント](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName*の作成...DATABASE_MIRRORING|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。|  
 |可用性グループを作成する|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|初期プライマリ レプリカをホストするサーバー インスタンスで実行します。|  
 |セカンダリ レプリカを可用性グループに参加させる|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
-|セカンダリ データベースを準備する|[BACKUP](/sql/t-sql/statements/backup-transact-sql) および [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)|プライマリ レプリカをホストするサーバー インスタンスでバックアップを作成します。<br /><br /> セカンダリ レプリカをホストする各サーバー インスタンス上で、RESTORE WITH NORECOVERY を使用してバックアップを復元します。|  
-|各セカンダリ データベースを可用性グループに参加させてデータ同期を開始する|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
+|セカンダリ データベースを準備する|[バックアップ](/sql/t-sql/statements/backup-transact-sql)と[復元](/sql/t-sql/statements/restore-statements-transact-sql)。|プライマリ レプリカをホストするサーバー インスタンスでバックアップを作成します。<br /><br /> セカンダリ レプリカをホストする各サーバー インスタンス上で、RESTORE WITH NORECOVERY を使用してバックアップを復元します。|  
+|各セカンダリ データベースを可用性グループに参加させてデータ同期を開始する|[ALTER database](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *DATABASE_NAME* SET HADR AVAILABILITY GROUP = *group_name*|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
   
  **<sup>*</sup>** 特定のタスクを実行するには、指定されたサーバーインスタンスに接続します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL を使用した可用性グループの作成と構成  
+##  <a name="TsqlProcedure"></a>Transact-sql を使用して可用性グループを作成および構成する  
   
 > [!NOTE]  
 >  「 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 例: Windows 認証を使用した可用性グループの構成 [」では、以上に示した各](#ExampleConfigAGWinAuth)ステートメントのコード例を交えながらサンプル構成プロシージャを紹介しています。  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続します。  
   
-2.  可用性グループは、[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql) という [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して作成します。  
+2.  [Create availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントを使用して可用性グループを作成します。  
   
 3.  新しいセカンダリ レプリカを可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
@@ -68,21 +72,21 @@ ms.locfileid: "72797680"
   
 5.  新しいセカンダリ データベースをすべて可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
-##  <a name="ExampleConfigAGWinAuth"></a> 」では、以上に示した各  
+##  <a name="ExampleConfigAGWinAuth"></a>例: Windows 認証を使用する可用性グループの構成  
  この例では、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 構成プロシージャのサンプルを作成します。サンプルでは、Windows 認証を使用するデータベース ミラーリング エンドポイントのセットアップ、さらには、可用性グループとそのセカンダリ データベースの作成と構成を [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して行います。  
   
  この例の内容は次のとおりです。  
   
--   [サンプル構成プロシージャを使用するうえでの前提条件](#PrerequisitesForExample)  
+-   [サンプル構成プロシージャを使用するための前提条件](#PrerequisitesForExample)  
   
 -   [サンプル構成プロシージャ](#SampleProcedure)  
   
 -   [サンプル構成プロシージャの完全なコード例](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a> サンプル構成プロシージャを使用するうえでの前提条件  
+###  <a name="PrerequisitesForExample"></a>サンプル構成プロシージャを使用するための前提条件  
  このサンプル プロシージャには、次の要件があります。  
   
--   サーバー インスタンスは [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートしている必要があります。 詳細については、「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
+-   サーバー インスタンスは [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートしている必要があります。 詳細については、「 [AlwaysOn 可用性グループ &#40;SQL Server&#41;の前提条件、制限事項、および推奨事項](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
 -   2 つのサンプル データベース ( *MyDb1* および *MyDb2*) が、プライマリ レプリカをホストするサーバー インスタンス上に存在する必要があります。 次のコード例では、これらの 2 つのデータベースを作成、構成し、それぞれの完全バックアップを作成します。 これらのコード例は、サンプルの可用性グループの作成先となるサーバー インスタンス上で実行します。 サンプル可用性グループの初期プライマリ レプリカは、このサーバー インスタンスでホストされます。  
   
@@ -101,7 +105,7 @@ ms.locfileid: "72797680"
         GO  
         ```  
   
-    2.  次のコード例では、 *MyDb1* および *MyDb2*データベースの完全バックアップを作成します。 このコード例では、架空のバックアップ共有 \\\\*FILESERVER*\\*SQLbackups*を使用します。  
+    2.  次のコード例では、 *MyDb1* および *MyDb2*データベースの完全バックアップを作成します。 このコード例では、架空のバックアップ\\ \\共有で\\ある *、ディレクトリ1を使用**します。*  
   
         ```sql
         -- Backup sample databases:  
@@ -116,14 +120,14 @@ ms.locfileid: "72797680"
         GO
         ```  
   
-###  <a name="SampleProcedure"></a> サンプル構成プロシージャ  
+###  <a name="SampleProcedure"></a>サンプル構成プロシージャ  
  このサンプル構成では、信頼関係のある異なるドメイン (`DOMAIN1` と `DOMAIN2`) の下でサービス アカウントが実行される 2 つのスタンドアロン サーバー インスタンスに可用性レプリカを作成します。  
   
  次の表は、このサンプル構成で使用する値をまとめたものです。  
   
-|初期ロール|システム|ホスト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス|  
+|初期ロール|System|ホスト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス|  
 |------------------|------------|---------------------------------------------|  
-|primary|`COMPUTER01`|`AgHostInstance`|  
+|プライマリ|`COMPUTER01`|`AgHostInstance`|  
 |セカンダリ|`COMPUTER02`|既定のインスタンス|  
   
 1.  可用性グループの作成先となるサーバー インスタンス ( *上の* という名前のインスタンス) 上に、 `AgHostInstance` dbm_endpoint `COMPUTER01`という名前のデータベース ミラーリング エンドポイントを作成します。 このエンドポイントはポート 7022 を使用します。 可用性グループの作成先となるサーバー インスタンスには、プライマリ レプリカがホストされることに注意してください。  
@@ -153,7 +157,7 @@ ms.locfileid: "72797680"
   
      2 つのサーバー インスタンスのサービス アカウントが、互いに異なるドメイン ユーザーで実行されている場合、それぞれのサーバー インスタンス上に、相手のサーバー インスタンス用のログインを作成し、このログイン権限に、ローカルのデータベース ミラーリング エンドポイントのアクセス権を付与します。  
   
-     ログインを作成し、エンドポイントの権限を付与するための [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのコード例を次に示します。 ここでは、リモート サーバー インスタンスのドメイン アカウントを *domain_name*\\*user_name*としています。  
+     ログインを作成し、エンドポイントの権限を付与するための [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのコード例を次に示します。 リモートサーバーインスタンスのドメインアカウントは、ここでは*domain_name*\\*user_name*として表されます。  
   
     ```sql
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -282,19 +286,19 @@ ms.locfileid: "72797680"
     GO
     ```  
   
-###  <a name="CompleteCodeExample"></a> サンプル構成プロシージャの完全なコード例  
+###  <a name="CompleteCodeExample"></a>サンプル構成プロシージャの完全なコード例  
  以下のコードは、すべての手順のコード例を総合したサンプル構成プロシージャの全体像です。 このコード例で使用されているプレースホルダーの値については次の表にまとめました。 このコード例の手順の詳細については、このトピックの「 [サンプル構成プロシージャを使用するうえでの前提条件](#PrerequisitesForExample) 」および「 [サンプル構成プロシージャ](#SampleProcedure)」を参照してください。  
   
-|プレースホルダー|[説明]|  
+|Placeholder|説明|  
 |-----------------|-----------------|  
-|\\\\*FILESERVER*\\*SQLbackups*|架空のバックアップ共有。|  
-|\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|MyDb1 のバックアップ ファイル。|  
-|\\\\*FILESERVER*\\*SQLbackups\MyDb2.bak*|MyDb2 のバックアップ ファイル。|  
+|\\\\*サーバ*\\の*sqlbackups*|架空のバックアップ共有。|  
+|\\\\** バックアップを行うことがあります。** \\|MyDb1 のバックアップ ファイル。|  
+|\\\\*サーバ*\\の*sqlbackup、mydb2 .bak*|MyDb2 のバックアップ ファイル。|  
 |*7022*|各データベース ミラーリング エンドポイントに割り当てられたポート番号。|  
 |*COMPUTER01\AgHostInstance*|初期プライマリ レプリカをホストするサーバー インスタンス。|  
 |*COMPUTER02*|初期セカンダリ レプリカをホストするサーバー インスタンス。 これは、 `COMPUTER02`上の既定のサーバー インスタンスです。|  
-|*上の*|各データベース ミラーリング エンドポイントに指定した名前。|  
-|*MyDb1*|サンプルの可用性グループの名前。|  
+|*dbm_endpoint*|各データベース ミラーリング エンドポイントに指定した名前。|  
+|*MyAG*|サンプルの可用性グループの名前。|  
 |*MyDb1*|1 つ目のサンプル データベースの名前。|  
 |*MyDb2*|2 つ目のサンプル データベースの名前。|  
 |*DOMAIN1\user1*|初期プライマリ レプリカをホストするサーバー インスタンスのサービス アカウント。|  
@@ -437,91 +441,90 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
- **可用性グループおよびレプリカのプロパティを構成するには**  
+##  <a name="RelatedTasks"></a>関連タスク  
+ **可用性グループとレプリカのプロパティを構成するには**  
   
--   [可用性レプリカの可用性モードの変更 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
+-   [可用性レプリカの可用性モードを変更する &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
--   [可用性レプリカのフェールオーバー モードの変更 &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+-   [可用性レプリカのフェールオーバーモードを変更する &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [可用性グループリスナー &#40;SQL Server を作成または構成&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [自動フェールオーバーの条件を制御する柔軟なフェールオーバーポリシーの構成 (AlwaysOn 可用性グループ)](configure-flexible-automatic-failover-policy.md)  
+-   [自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 (AlwaysOn 可用性グループ)](configure-flexible-automatic-failover-policy.md)  
   
--   [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [可用性レプリカを追加または変更するときにエンドポイント URL を指定する &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [可用性レプリカの読み取り専用アクセスを構成する &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [可用性レプリカのセッション タイムアウト期間の変更 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [可用性レプリカのセッションタイムアウト期間を変更する &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **可用性グループの構成を完了するには**  
   
--   [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [セカンダリレプリカを可用性グループに参加させる &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [可用性グループのセカンダリデータベースを手動で準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [セカンダリデータベースを可用性グループに参加させる &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [可用性グループリスナー &#40;SQL Server を作成または構成&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
- **別の方法で可用性グループを作成する**  
+ **可用性グループを作成する別の方法**  
   
--   [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [可用性グループウィザードを使用して &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [[新しい可用性グループ] ダイアログボックスを使用すると &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [可用性グループの作成 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [可用性グループ &#40;SQL Server PowerShell を作成し&#41;](../../../powershell/sql-server-powershell.md)  
   
  **AlwaysOn 可用性グループを有効にするには**  
   
--   [AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [AlwaysOn 可用性グループ &#40;SQL Server を有効または無効にする&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
- **データベース ミラーリング エンドポイントを構成するには**  
+ **データベースミラーリングエンドポイントを構成するには**  
   
--   [AlwaysOn 可用性グループ&#40;SQL Server PowerShell のデータベースミラーリングエンドポイントを作成する&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [AlwaysOn 可用性グループ &#40;SQL Server PowerShell のデータベースミラーリングエンドポイントを作成&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 認証 &#40;Transact-sql&#41;のデータベースミラーリングエンドポイントを作成する](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Transact-sql&#41;&#40;データベースミラーリングエンドポイントに証明書を使用する](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [可用性レプリカを追加または変更するときにエンドポイント URL を指定する &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
- **AlwaysOn 可用性グループ構成のトラブルシューティングを行うには**  
+ **AlwaysOn 可用性グループの構成のトラブルシューティング方法**  
   
 -   [AlwaysOn 可用性グループ構成 (SQL Server) の削除に関するトラブルシューティング](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [失敗したファイルの追加操作&#40;のトラブルシューティング AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="RelatedContent"></a>関連するコンテンツ  
   
--   **ブログ:**  
+-   **Blog**  
   
-     [AlwaysON-HADRON 学習シリーズ: HADRON 対応データベースのワーカープールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [AlwaysOn チームのブログの SQL Server: AlwaysOn チームの公式 SQL Server のブログ](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
--   **ビデオ:**  
+-   **ビデオ**  
   
-     [Microsoft SQL Server コードネーム "Denali" AlwaysOn シリーズパート 1: 次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コード ネーム "Denali" AlwaysOn シリーズ パート 1: 次世代の高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server コードネーム "Denali" AlwaysOn シリーズパート 2: AlwaysOn を使用したミッションクリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server コードネーム "Denali" AlwaysOn シリーズ パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **ホワイト ペーパー:**  
+-   **ペーパー**  
   
-     [高可用性とディザスターリカバリーのための AlwaysOn ソリューションガイドの Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 の Microsoft ホワイトペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
+     [SQL Server カスタマーアドバイザリチームのホワイトペーパー](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [AlwaysOn 可用性グループ&#40;SQL Server の前提条件、制限事項、および推奨事項&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [データベースミラーリングエンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [可用性グループリスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   

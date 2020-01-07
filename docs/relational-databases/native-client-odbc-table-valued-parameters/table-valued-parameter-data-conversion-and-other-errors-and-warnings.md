@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーターのデータ変換およびその他のエラーと警告 |Microsoft Docs
+title: テーブル値パラメーターのデータ変換
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5df7f61a835d92a5eb69ea28158c81eb1dab95f9
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 33ca5b9c25f39c751c9c9a225e3cf729c754e684
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790768"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246355"
 ---
 # <a name="table-valued-parameter-data-conversion-and-other-errors-and-warnings"></a>テーブル値パラメーターのデータ変換およびその他のエラーと警告
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "73790768"
  診断レコードの SQLSTATE コンポーネントとメッセージ コンポーネントは、他のすべての点で既存の ODBC の動作に準拠しています。 つまり、パラメーター、行、および列の識別情報を除き、テーブル値パラメーター以外のパラメーターの場合と同じように、エラーメッセージにはテーブル値パラメーターの値が同じになります。  
   
 ## <a name="see-also"></a>参照  
- [テーブル値パラメーター &#40;の ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

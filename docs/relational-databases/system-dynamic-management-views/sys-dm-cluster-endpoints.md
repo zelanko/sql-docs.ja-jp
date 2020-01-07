@@ -1,5 +1,5 @@
 ---
-title: システムエンドポイント (Transact-sql) (_a) |Microsoft Docs
+title: dm_cluster_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 05076a6b694ff5861c5a7862b1f8f913ddb67fd6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b6ec5de74d2da2a94c25ef121abc0157348554d5
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536169"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947073"
 ---
-# <a name="sysdm_cluster_endpoints-transact-sql"></a>システムエンドポイント (Transact-sql) (_a)
+# <a name="sysdm_cluster_endpoints-transact-sql"></a>dm_cluster_endpoints (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|SQL ビッグデータクラスターで外部に公開されるサービスの名前。 エンドポイントの一意の識別子。 このビューのキー。 NULL 値は許可されません。 |  
 |description|`nvarchar(4000)`|サービスの説明。 NULL 値は許可されません。 |
-|エンドポイント (endpoint)|`sysname`|エンドポイント url または接続属性。 NULL 値は許可されません。 |
+|endpoint|`sysname`|エンドポイント url または接続属性。 NULL 値は許可されません。 |
 |protocol_desc|`sysname`|エンドポイントプロトコルの説明 |
 
 ## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]では、`VIEW SERVER STATE` のアクセス許可が必要です。
+で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。
 
 ## <a name="see-also"></a>参照
 
-[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]とは (../..または、このようにして、このようにしてください。
+[概要[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)

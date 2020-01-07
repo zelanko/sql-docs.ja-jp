@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:5 つの最低速クエリのサンプル ウィジェットを有効にする
+title: 5 つの最低速クエリのサンプル ウィジェットを有効にする
 titleSuffix: Azure Data Studio
 description: このチュートリアルでは、データベース ダッシュボードで 5 つの最低速クエリ サンプル ウィジェットを有効にする方法について説明します。
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810876"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957046"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル:データベース ダッシュボードに *5 つの最低速クエリ* サンプル ウィジェットを追加する
 
@@ -29,7 +29,7 @@ ms.locfileid: "68810876"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] には、面倒な設定なしですぐに使える分析情報ウィジェットがいくつか含まれています。 このチュートリアルでは、*query-data-store-db-insight* ウィジェットを追加する方法を紹介しますが、手順は基本的にどのウィジェットを追加する場合でも同じです。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルには、SQL Server か Azure SQL Database *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
@@ -127,7 +127,7 @@ ms.locfileid: "68810876"
 
 2. *[slow query widget]\(低速クエリ ウィジェット\)* で分析情報ウィジェットの追加情報を表示するには、右上にある省略記号 ( **...** ) をクリックし、 **[クエリの実行]** を選択します。
 
-    ![[クエリの実行]](media/tutorial-qds-sql-server/run-query.png)
+    ![クエリを実行する](media/tutorial-qds-sql-server/run-query.png)
 
 3. これで、新しいクエリ ウィンドウに結果が表示されるはずです。
 
@@ -141,9 +141,9 @@ ms.locfileid: "68810876"
 
    ![プラン表示 (showplan)](./media/tutorial-qds-sql-server/showplan.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-このチュートリアルでは、次の方法を学習しました。
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 > * データベースでクエリ ストアを有効にする
 > * 分析情報ウィジェットをデータベース ダッシュボードに追加する

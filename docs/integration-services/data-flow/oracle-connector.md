@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0ad547d26c86c43b0009cdf20acae33ed7e8ab7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553236"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246950"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -43,7 +43,7 @@ Oracle データベースは、すべてのオペレーティング システム
 
 ## <a name="installation"></a>インストール
 
-SQL Server でパッケージを実行する必要がある場合は、[こちら](https://www.microsoft.com/en-us/download/details.aspx?id=58228)から Microsoft Connector for Oracle Database インストール プログラムを取得できます。 そのうえでインストール ウィザードの指示に従います。
+SQL Server でパッケージを実行する必要がある場合は、[こちら](https://www.microsoft.com/download/details.aspx?id=58228)から Microsoft Connector for Oracle Database インストール プログラムを取得できます。 そのうえでインストール ウィザードの指示に従います。
 
 コネクタをインストールしたら、SQL Server 統合サービスを再起動して、Oracle のソースと変換先が正常に機能することを確認する必要があります。
 
@@ -61,12 +61,12 @@ SQL Server 2017 以前をターゲットとする SSIS パッケージを設計�
 
 **ダウンロード リンク:**
 
-- [SQL Server 2017:Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=55179)
-- [SQL Server 2016:Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=52950)
-- [SQL Server 2014:Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
-- [SQL Server 2012:Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
+- [SQL Server 2017:Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
+- [SQL Server 2016:Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
+- [SQL Server 2014:Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
+- [SQL Server 2012:Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [Oracle 接続マネージャー](oracle-connection-manager.md)を構成する。
 - [Oracle ソース](oracle-source.md)を構成する。

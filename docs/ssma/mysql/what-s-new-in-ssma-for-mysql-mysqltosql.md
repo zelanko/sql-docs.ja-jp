@@ -2,30 +2,37 @@
 title: SSMA for MySQL の新機能 (MySQLToSql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 12/04/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 900ea1a83e8f06916bf48a003d99584113a8304b
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: ccb8c325a2e0b2966c0355be0f9cd84bd8882d24
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745506"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74834311"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 
 この記事では、各リリースでの MySQL 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v85"></a>SSMA v1.0
+
+SSMA for MySQL の v2.0 リリースは、SQL server での JSON 機能の Azure Active Directory 認証と基本的なサポートに加えて、ユーザビリティとパフォーマンスを向上させるように設計された一連の修正をサポートするように強化されています。
+
+> [!IMPORTANT]
+> SSMA v1.0 では、.Net 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 SSMA for MySQL の v2.0 リリースは、ユーザー補助の問題に対処し、最大インデックス列 (16 ではなく 32) に関連するバグを修正するように設計された、SQL Server 2016 以降のバージョンで強化されています。
 
 > [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
+> SSMA バージョン 8.4 7.4 では、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -168,14 +175,14 @@ SSMA for MySQL の2016年5月のリリースには、次の変更が含まれて
 
 SSMA for MySQL の2016年3月のプレビューリリースでは、SQL Server 2016 への移行のサポートが追加されています。 
   
-## <a name="january-2016"></a>2016年1月
+## <a name="january-2016"></a>2016 年 1 月
 
 SSMA for MySQL の2016年1月のメンテナンスリリースには、次の変更が含まれています。  
 
 * SSMA (RFC 5706203) に [ログの表示] メニュー項目が追加されました。  
 * テレメトリを追加しました。  
   
-## <a name="july-2014"></a>2014 年 7 月
+## <a name="july-2014"></a>2014年7月
 
 SSMA for MySQL の2014年7月のリリースには、次の変更が含まれています。  
   
@@ -197,7 +204,7 @@ SSMA for MySQL の2014年4月のリリースには、次の変更が含まれて
 * Azure への変換に関するバグを修正した  
 * IE 10 の非表示レポートページに関するバグを修正した。  
   
-## <a name="july-2011"></a>2011年7月
+## <a name="july-2011"></a>2011 年 7 月
 
 SSMA for MySQL の2011年7月のリリースには、次の変更が含まれています。  
   
@@ -208,14 +215,14 @@ SSMA for MySQL の2011年7月のリリースには、次の変更が含まれて
 
 SSMA for MySQL の2011年4月のリリースには、次の変更が含まれています。  
   
-* "Ssma for MySQL" をインストールできるシングルインストール。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali"、および Azure SQL をサポートしています。  
+* "SSMA for MySQL" をインストールできるシングルインストール。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali"、および Azure SQL をサポートしています。  
 * "Denali" に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続する機能。  
 * 拡張されたクライアント側のデータ移行エンジンで、データの並列移行がサポートされています。  
 * 単純復旧モデルと一括ログ復旧モデルにより、データ移行のパフォーマンスが向上しました。  
 * SSMA for MySQL コンソールのバージョンでは、旧バージョンとの互換性がサポートされています。 以前のバージョンで作成されたプロジェクトを SSMA v1.0 に開くことができます。  
 * SSMA for MySQL version 5.0 製品は、旧バージョンの SSMA 製品とサイドバイサイド (SxS) でインストールできます。  
   
-## <a name="july-2010"></a>2010年7月
+## <a name="july-2010"></a>2010 年 7 月
 
 SSMA for MySQL の2010年7月のリリースには、次の機能が含まれています。  
   

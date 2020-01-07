@@ -1,5 +1,5 @@
 ---
-title: dwloader コマンドラインローダー-Parallel Data Warehouse |Microsoft Docs
+title: dwloader コマンドラインローダー
 description: dwloader は、並列データウェアハウス (PDW) のコマンドラインツールで、テーブルの行を既存のテーブルに一括して読み込みます。
 author: mzaman1
 ms.prod: sql
@@ -8,19 +8,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 598a244849f843a2b95e6614d4e676a18ba54f61
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212265"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401176"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Parallel Data Warehouse 用の dwloader コマンドラインローダー
-**dwloader**は、並列データウェアハウス (PDW) のコマンドラインツールで、テーブルの行を既存のテーブルに一括して読み込みます。 行を読み込むときに、テーブルの末尾にすべての行を追加 (*追加モード*または*fastappend モード*) したり、新しい行を追加して既存の行を更新 (*upsert モード*) したり、読み込み前に既存のすべての行を削除したり、すべての行を空のテーブルに挿入したりすることができます。(*再読み込みモード*)。  
+**dwloader**は、並列データウェアハウス (PDW) のコマンドラインツールで、テーブルの行を既存のテーブルに一括して読み込みます。 行を読み込むときに、テーブルの末尾にすべての行を追加 (*追加モード*または*fastappend モード*) したり、新しい行を追加して既存の行を更新 (*upsert モード*) したり、読み込み前に既存のすべての行を削除してから、すべての行を空のテーブルに挿入したり (*再読み込みモード*) できます。  
   
 **データを読み込むためのプロセス**  
   
-1.  ソースデータを準備します。  
+1.  ソース データを準備します。  
   
     独自の ETL プロセスを使用して、読み込むソースデータを作成します。 コピー元のデータは、変換先テーブルのスキーマに一致するように書式設定されている必要があります。 ソースデータを1つまたは複数のテキストファイルに格納し、そのテキストファイルを読み込んでいるサーバー上の同じディレクトリにコピーします。 読み込みサーバーの詳細については、「[読み込みサーバーの取得と構成](acquire-and-configure-loading-server.md)」を参照してください。  
   
@@ -122,7 +123,7 @@ dwloader.exe
 **-U** *login_name*  
 負荷を実行するための適切なアクセス許可を持つ有効な SQL Server 認証ログイン。  
   
-**-P** *password*  
+**-P** *パスワード*  
 SQL Server 認証*login_name*のパスワード。  
   
 **-W**  
@@ -133,11 +134,11 @@ For information about configuring Windows Authentication, see [Security - Config
 -->
   
 **-f** *parameter_file_name*  
-コマンドラインパラメーターの代わりに、パラメーターファイル*parameter_file_name*を使用します。 *parameter_file_name*には、 *user_name*と*password*を除き、任意のコマンドラインパラメーターを含めることができます。 パラメーターがコマンドラインとパラメーターファイルに指定されている場合、コマンドラインはファイルパラメーターをオーバーライドします。  
+コマンドラインパラメーターの代わりにパラメーターファイル*parameter_file_name*を使用します。 *parameter_file_name*には、 *user_name*と*パスワード*を除く任意のコマンドラインパラメーターを含めることができます。 パラメーターがコマンドラインとパラメーターファイルに指定されている場合、コマンドラインはファイルパラメーターをオーバーライドします。  
   
 パラメーターファイルには、プレフィックスの**-** ない1つのパラメーターが行ごとに含まれています。  
   
-例 :  
+例:  
   
 `rt=percentage`  
   
@@ -146,7 +147,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-S** *target_appliance*  
 読み込まれたデータを受信する SQL Server PDW アプライアンスを指定します。  
   
-*Infiniband 接続の*場合、 *target_appliance*は < アプライアンス名 >-SQLCTL01 として指定されます。 この名前付き接続を構成するには、「 [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md)」を参照してください。  
+*Infiniband 接続の*場合、 *target_appliance*は <アプライアンス名>-SQLCTL01 として指定されます。 この名前付き接続を構成するには、「 [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md)」を参照してください。  
   
 イーサネット接続の場合、 *target_appliance*は制御ノードクラスターの IP アドレスです。  
   
@@ -156,7 +157,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name。*[*スキーマ*]。*table_name*  
 コピー先テーブルの3部構成の名前。  
   
 **-I** *source_data_location*  
@@ -168,7 +169,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   ソースファイル内の各行には、1つのテーブル行のデータが含まれています。 ソースデータは、変換先テーブルのスキーマと一致している必要があります。 列の順序とデータ型も一致する必要があります。 行内の各フィールドは、変換先テーブルの列を表します。  
   
--   既定では、フィールドは可変長で区切り記号で区切られます。 区切り記号の種類を指定するには、< variable_length_column_options > のコマンドラインオプションを使用します。 固定長フィールドを指定するには、< fixed_width_column_options > のコマンドラインオプションを使用します。  
+-   既定では、フィールドは可変長で区切り記号で区切られます。 区切り記号の種類を指定するには、<variable_length_column_options> のコマンドラインオプションを使用します。 固定長フィールドを指定するには、<fixed_width_column_options> のコマンドラインオプションを使用します。  
   
 ソースデータの場所を指定するには:  
   
@@ -192,26 +193,26 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   すべてのファイルは1つのファイルと同じように連結されて読み込まれ、拒否された行は1つの拒否ファイルに送られます。  
   
-例 :  
+例:  
   
--   -i \\\loadserver\loads\daily\\*.gz  
+-   -i \\、load、毎日\\* gz  
   
--   -i \\\loadserver\loads\daily\\*.txt  
+-   -i \\\ load\ \ (毎日\\) * .txt  
   
--   -i \\\loadserver\loads\daily\monday.*  
+-   -i \\\loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\\ 1 日に1回\\*  
   
 **-R** *load_failure_file_name*  
 読み込みエラーが発生した場合、 **dwloader**は、読み込みに失敗した行とエラーの説明を*load_failure_file_name*という名前のファイルに格納します。 このファイルが既に存在する場合は、dwloader によって既存のファイルが上書きされます。 *load_failure_file_name*は、最初のエラーが発生したときに作成されます。 すべての行が正常に読み込まれた場合、 *load_failure_file_name*は作成されません。  
   
 **-fh** *number_header_rows*  
-*Source_data_file_name*の先頭で無視する行 (行) の数。 既定値は 0 です。  
+*Source_data_file_name*の開始時に無視する行 (行) の数。 既定値は 0 です。  
   
 <variable_length_column_options>  
-文字で区切られた可変長列を含む*source_data_file_name*のオプション。 既定では、 *source_data_file_name*には可変長列に ASCII 文字が含まれています。  
+文字区切りの可変長列を含む*source_data_file_name*のオプション。 既定では、 *source_data_file_name*には可変長列に ASCII 文字が含まれています。  
   
 ASCII ファイルの場合、区切り記号を連続して配置することで Null が表現されます。 たとえば、パイプで区切られたファイル ("|") では、"| |" によって NULL が示されます。 コンマ区切りのファイルでは、",," によって NULL が示されます。 また、 **-E** (--emptystringasnull) オプションを指定する必要があります。 -E の詳細については、以下を参照してください。  
   
@@ -221,9 +222,9 @@ ASCII ファイルの場合、区切り記号を連続して配置すること�
 **-t** *field_delimiter*  
 行の各フィールド (列) の区切り記号。 フィールド区切り記号は、これらの ASCII エスケープ文字または ASCII 16 進値の1つ以上です。  
   
-|名前|エスケープ文字|16進文字|  
+|名前|Escape Character|16進文字|  
 |--------|--------------------|-----------------|  
-|タブ|\t|0x09|  
+|Tab|\t|0x09|  
 |復帰 (CR)|\r|0x0d|  
 |ラインフィード (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
@@ -233,7 +234,7 @@ ASCII ファイルの場合、区切り記号を連続して配置すること�
   
 パイプ文字をコマンドラインで指定するには、二重引用符 "|" で囲みます。 これは、コマンドラインパーサーによって誤って解釈されることを回避します。 その他の文字は単一引用符で囲みます。  
   
-例 :  
+例:  
   
 -t "|"  
   
@@ -273,9 +274,9 @@ Unix には LF が必要です。 Windows には CR が必要です。
 **-s** *string_delimiter*  
 テキスト区切りの入力ファイルの文字列データ型フィールドの区切り記号。 文字列の区切り記号は、1つまたは複数の ASCII 値です。  これは、文字 (たとえば、-s *) として、または16進数値として指定できます (例:-s 0x22 (二重引用符の場合))。  
   
-例 :  
+例:  
   
--s *  
+2$s  
   
 -s 0x22  
   
@@ -295,7 +296,7 @@ Unix には LF が必要です。 Windows には CR が必要です。
   
 固定幅構成ファイルの例:  
   
-SalesCode=3  
+SalesCode = 3  
   
 SalesID = 10  
   
@@ -303,7 +304,7 @@ SalesID = 10
   
 230Shirts0056  
   
-320Towels1356  
+320To、S1356  
   
 前の例では、最初に読み込まれた行に SalesCode = ' 230 ' と Salescode = ' Shirts0056 ' が設定されています。 2番目に読み込まれた行には、SalesCode = ' 320 ' と SaleID = ' Towels1356 ' が含まれます。  
   
@@ -339,17 +340,17 @@ LF の例:
   
 Unix には LF が必要です。 Windows には CR が必要です。  
   
-**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd | dmy |dym |*custom_date_format* }  
 入力ファイル内のすべての datetime フィールドの月 (m)、日 (d)、および年 (y) の順序を指定します。 既定の順序は ymd です。 同じソースファイルに対して複数の注文形式を指定するには、-dt オプションを使用します。  
   
-ymd | dmy  
+ymd |dmy  
 ydm と dmy では、同じ入力形式を使用できます。 どちらも、年を日付の先頭または末尾にすることができます。 たとえば、 **ydm**と**dmy**の両方の日付形式の場合、入力ファイルに2013-02-03 または02-03-2013 を含めることができます。  
   
 ydm  
 データ型が datetime および smalldatetime の列には、ydm として書式設定された入力のみを読み込むことができます。 Datetime2、date、または datetimeoffset データ型の列に ydm 値を読み込むことはできません。  
   
 mdy  
-mdy が<month>許可<space>します<day>。 <comma> <year>  
+mdy が<month> <space> <day> <comma>許可<year>します。  
   
 1975年1月1日の mdy 入力データの例を次に示します。  
   
@@ -362,15 +363,15 @@ mdy が<month>許可<space>します<day>。 <comma> <year>
 -   01011975  
   
 myd  
-2010年3月4日の入力ファイルの例:03-2010-04、3/2010/4  
+2010年3月4日の入力ファイルの例 (2010: 03-2010-04、3/2010/4)  
   
 dym  
-2010年3月4日の入力ファイルの例:04-2010-03、4/2010/3  
+2010年3月4日の入力ファイルの例: 04-2010-03、4/2010/3  
   
 *custom_date_format*  
 *custom_date_format*はカスタム日付形式 (例: MM/dd/yyyy) であり、旧バージョンとの互換性のためだけに含まれています。 dwloader では、カスタムの日付形式が適用されません。 代わりに、カスタム日付形式を指定すると、 **dwloader**は、ymd、ydm、mdy、myd、dym、または dmy の対応する設定に変換します。  
   
-たとえば、-D MM/dd/yyyy を指定した場合、dwloader では、すべての日付入力が month first、day、year (mdy) で並べ替えられることを想定しています。 カスタム日付形式で指定されているように、2文字の月、2桁の日、および4桁の年は適用されません。 次に、日付形式が-D MM/dd/yyyy の場合に、入力ファイルで日付を書式設定する方法の例をいくつか示します。01/02/2013、02.2013、1/2/2013  
+たとえば、-D MM/dd/yyyy を指定した場合、dwloader では、すべての日付入力が month first、day、year (mdy) で並べ替えられることを想定しています。 カスタム日付形式で指定されているように、2文字の月、2桁の日、および4桁の年は適用されません。 ここでは、日付形式が-D MM/dd/yyyy: 01/02/2013、02.2013、1/2/2013 の場合に、入力ファイルで日付を書式設定する方法の例をいくつか示します。  
   
 より包括的な書式設定情報については、「 [dwloader のデータ型変換規則](dwloader-data-type-conversion-rules.md)」を参照してください。  
   
@@ -379,7 +380,7 @@ dym
   
 各行には、変換先テーブルの列の名前とその datetime 形式が含まれています。  
   
-例 :  
+例:  
   
 `LastReceiptDate=ymd`  
   
@@ -397,7 +398,7 @@ append
 fastappend  
 ローダーは、一時テーブルを使用せずに、コピー先テーブルの既存の行の末尾に行を直接挿入します。 fastappend には、マルチトランザクション (-m) オプションが必要です。 Fastappend を使用する場合、ステージングデータベースを指定することはできません。 Fastappend のロールバックはありません。これは、失敗または中止された負荷からの復旧を、独自の読み込みプロセスで処理する必要があることを意味します。  
   
-upsert **-K**  *merge_column* [ ,...*n* ]  
+upsert *****merge_column* [,...*n* ]    
 ローダーは、SQL Server Merge ステートメントを使用して、既存の行を更新し、新しい行を挿入します。  
   
 -K オプションは、マージの基準となる列を指定します。 これらの列は、一意の行を表すマージキーを形成します。 マージキーが変換先テーブルに存在する場合は、行が更新されます。 マージキーが変換先テーブルに存在しない場合は、行が追加されます。  
@@ -425,12 +426,12 @@ SQL Server 2012 PDW 以降では、コントロールノードは、既定で各
 <reject_options>  
 ローダーが許可する読み込みエラーの数を決定するためのオプションを指定します。 読み込みエラーがしきい値を超えると、ローダーは停止し、行はコミットされません。  
   
-**-rt**{ **value** | パーセント}  
-**-Rv** *reject_value*オプションの-*reject_value*が、リテラルの行数 (値) であるか、失敗率 (%) であるかを指定します。 既定値は value です。  
+**-rt** { **value** | パーセント}  
+**-Rv** *reject_value*オプションの-*reject_value*がリテラルの行数 (値) であるか、または失敗率 (%) であるかを指定します。 既定値は value です。  
   
 割合オプションは、-rs オプションに従って間隔で実行されるリアルタイムの計算です。  
   
-たとえば、ローダーが100行の読み込みを試行し、25回失敗し、75が成功した場合、エラー率は 25% になります。  
+たとえば、ローダーが100行の読み込みを試行し、25回失敗し、75が成功した場合、エラー率は25% になります。  
   
 **-rv** *reject_value*  
 読み込みを停止するまでに許可する行の拒否の数または割合を指定します。 **-Rt**オプションは、 *reject_value*が行の数または行の割合を参照するかどうかを決定します。  
@@ -442,12 +443,12 @@ SQL Server 2012 PDW 以降では、コントロールノードは、既定で各
 -Rt パーセントを使用する場合、ローダーは間隔 (-rs オプション) で割合を計算します。 したがって、失敗した行の割合は*reject_value*を超える可能性があります。  
   
 **-rs** *reject_sample_size*  
-`-rt percentage`オプションと共に使用して、増分パーセンテージチェックを指定します。 たとえば、reject_sample_size が1000の場合、ローダーは1000行の読み込みを試みた後に失敗した行の割合を計算します。 追加の1000行の読み込みを試行した後、失敗した行の割合を再計算します。  
+`-rt percentage`オプションと共に使用して、増分パーセンテージチェックを指定します。 たとえば、reject_sample_size が1000の場合、ローダーは1000行の読み込みを試行した後に失敗した行の割合を計算します。 追加の1000行の読み込みを試行した後、失敗した行の割合を再計算します。  
   
 **-c**  
 Char、nchar、varchar、および nvarchar の各フィールドの左辺と右辺から空白文字を削除します。 空白文字のみを含む各フィールドを空の文字列に変換します。  
   
-例 :  
+例:  
   
 ' ' は ' ' に切り捨てられます。  
   
@@ -489,7 +490,7 @@ CU 7.4 更新プログラムで使用可能で、読み込むことができる�
 ## <a name="return-code-values"></a>リターン コードの値  
 0 (成功) またはその他の整数値 (失敗)  
   
-コマンドウィンドウまたはバッチファイルで、を`errorlevel`使用してリターンコードを表示します。 以下に例を示します。  
+コマンドウィンドウまたはバッチファイルで、を`errorlevel`使用してリターンコードを表示します。 例:  
   
 ```  
 dwloader  
@@ -527,7 +528,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 **Dwloader**はトランザクションプロセスであり、エラーが発生した場合には正常にロールバックされますが、一括読み込みが正常に完了したらロールバックすることはできません。 アクティブな**dwloader**プロセスをキャンセルするには、CTRL + C キーを押します。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
-同時に発生するすべての負荷の合計サイズは、データベースの LOG_SIZE よりも小さくする必要があります。同時読み込みの合計サイズは、LOG_SIZE の 50% 未満にすることをお勧めします。 このサイズ制限を実現するために、大きな負荷を複数のバッチに分割できます。 LOG_SIZE の詳細については、「 [CREATE DATABASE](../t-sql/statements/create-database-parallel-data-warehouse.md) 」を参照してください。  
+同時に発生するすべての負荷の合計サイズは、データベースの LOG_SIZE よりも小さくする必要があります。同時読み込みの合計サイズは、LOG_SIZE の50% 未満にすることをお勧めします。 このサイズ制限を実現するために、大きな負荷を複数のバッチに分割できます。 LOG_SIZE の詳細については、「 [CREATE DATABASE](../t-sql/statements/create-database-parallel-data-warehouse.md) 」を参照してください。  
   
 1つの load コマンドを使用して複数のファイルを読み込む場合、拒否されたすべての行が同じ拒否ファイルに書き込まれます。 拒否ファイルには、拒否された各行を含む入力ファイルは表示されません。  
   
@@ -553,18 +554,18 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 |テーブルの種類|マルチトランザクション<br />モード (-m)|テーブルが空です|サポートされている同時実行|ログの記録|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|ヒープ|はい|[はい]|はい|最小|  
-|ヒープ|はい|いいえ|はい|最小|  
-|ヒープ|いいえ|はい|いいえ|最小|  
-|ヒープ|いいえ|いいえ|いいえ|最小|  
-|付い|はい|[はい]|いいえ|最小|  
-|付い|はい|いいえ|はい|[完全]|  
-|付い|いいえ|はい|いいえ|最小|  
-|付い|いいえ|いいえ|はい|[完全]|  
+|ヒープ|はい|はい|はい|最小限|  
+|ヒープ|はい|いいえ|はい|最小限|  
+|ヒープ|いいえ|はい|いいえ|最小限|  
+|ヒープ|いいえ|いいえ|いいえ|最小限|  
+|付い|はい|はい|いいえ|最小限|  
+|付い|はい|いいえ|はい|完全|  
+|付い|いいえ|はい|いいえ|最小限|  
+|付い|いいえ|いいえ|はい|完全|  
   
 上の表は、ヒープまたはクラスター化インデックス (CI) テーブルへの読み込みモードを使用した**dwloader**を示しています。これには、マルチトランザクションフラグが指定されているか使用されていないか、空のテーブルまたは空でないテーブルに読み込まれています。 このような負荷の組み合わせのロックとログの動作は、テーブルに表示されます。 たとえば、追加モードを持つ (2 番目の) フェーズを、マルチトランザクションモードでも空のテーブルにも、クラスター化インデックスに読み込む場合、PDW によってテーブルに排他ロックが作成され、ログ記録が最小限になります。 これは、顧客が (2 番目の) フェーズとクエリを空のテーブルに同時に読み込むことができないことを意味します。 ただし、空でないテーブルに同じ構成を使用して読み込む場合、PDW はテーブルに排他ロックを発行せず、同時実行が可能です。 残念ながら、完全なログ記録が行われ、プロセスが遅くなります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-dwloader-example"></a>A. 単純な dwloader の例  
 次の例では、必要なオプションだけを選択して**ローダー**を開始します。 その他のオプションは、グローバル構成ファイルである*loadparamfile*から取得されます。  
@@ -597,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. AdventureWorks テーブルへのデータの読み込み  
-次の例は、 **AdventureWorksPDW2012**にデータを読み込むバッチスクリプトの一部です。  完全なスクリプトを表示するには、 **AdventureWorksPDW2012**インストールパッケージに付属している aw_create ファイルを開きます。 
+次の例は、 **AdventureWorksPDW2012**にデータを読み込むバッチスクリプトの一部です。  完全なスクリプトを表示するには、 **AdventureWorksPDW2012**インストールパッケージに付属している aw_create の .bat ファイルを開きます。 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-次のスクリプトスニペットでは、dwloader を使用して、Dbo.dimaccount テーブルと DimCurrency テーブルにデータを読み込みます。 このスクリプトは、イーサネットアドレスを使用しています。 InfiniBand を使用していた場合、サーバーは*appliance_name >*`-SQLCTL01`< ます。  
+次のスクリプトスニペットでは、dwloader を使用して、Dbo.dimaccount テーブルと DimCurrency テーブルにデータを読み込みます。 このスクリプトは、イーサネットアドレスを使用しています。 InfiniBand を使用していた場合、サーバーは`-SQLCTL01` *>appliance_name<* されます。  
   
 ```  
 set server=10.193.63.134  
@@ -694,7 +695,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-r \R\n* dbo.dimaccount の各行は、キャリッジリターンと改行文字で終了します。  
   
--   *-U < login_name >-P <password> *は、読み込みを実行する権限を持つログインのログインとパスワードを指定します。  
+-   *-U <login_name>-P <password> *は、読み込みを実行するアクセス許可を持つログインのログインとパスワードを指定します。  
   
 
 <!-- MISSING LINK

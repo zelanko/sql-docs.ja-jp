@@ -1,6 +1,6 @@
 ---
-title: 構文ペアの自動照合 | Microsoft Docs
-ms.custom: ''
+title: 構文ペアの自動照合
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,18 +13,19 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064149"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244800"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>構文ペアの自動照合
   構文ペアの自動照合では、ペアでコーディングする必要がある構文要素が正しくペアになっているかどうかをすぐに検出します。 この機能は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは区切り記号の照合、Analysis Services の XMLA クエリ エディターでは中かっこの照合、MDX エディターと DMX エディターではかっこの照合として知られています。  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>データベース エンジンのクエリ エディターでの区切り記号の照合  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは、コード ブロックの境界を識別する区切り記号が照合されます。 照合は、次の 2 とおりの方法で行われます。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは、コード ブロックの境界を識別する区切り記号が照合されます。 照合は、次の 2 とおりの方法で行われます。  
   
 -   ペアの 2 番目の区切り記号の入力が終了すると、ペアになる両方の区切り記号が強調表示されます。  
   
@@ -36,9 +37,9 @@ ms.locfileid: "66064149"
 |開始区切り記号|終了区切り記号|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**BEGIN**|**END**|  
-|**BEGIN TRY**|**END TRY**|  
-|**BEGIN CATCH**|**END CATCH**|  
+|**初め**|**終わり**|  
+|**TRY の開始**|**TRY の終了**|  
+|**キャッチの開始**|**キャッチの終了**|  
   
  区切り記号の自動照合では、角かっこで囲まれた識別子 ([ObjectName]) や引用符で囲まれた識別子 ("ObjectName") は認識されません。 ペアの照合では、文字列リテラル ('string') の単一引用符区切り記号は照合されません。文字列が区切られているかどうかが既に色分け表示されているためです。  
   

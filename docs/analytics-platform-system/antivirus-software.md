@@ -1,5 +1,5 @@
 ---
-title: ウイルス対策ソフトウェア-Analytics Platform System (APS) |Microsoft Docs
+title: ウイルス対策ソフトウェア
 description: データセンターにウイルス対策ソフトウェアが必要な場合は、次のガイドラインに従って、Analytics Platform System (APS) にウイルス対策ソフトウェアをインストールしてください。 データセンターの要件が十分でない場合は、ウイルス対策ソフトウェアをインストールしないことをお勧めします。
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176056"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401472"
 ---
 # <a name="antivirus-software-for-analytics-platform-system-aps"></a>Analytics Platform System (APS) 用ウイルス対策ソフトウェア
 データセンターでウイルス対策ソフトウェアが必要な場合は、次のガイドラインに従って、Analytics Platform System にウイルス対策ソフトウェアをインストールしてください。 データセンターの要件が十分でない場合は、ウイルス対策ソフトウェアをインストールしないことをお勧めします。  
@@ -51,7 +52,7 @@ Vm にウイルス対策ソフトウェアをインストールするには、�
   
 -   G:\  
   
-**_appliance_domain_-AD01**と **_appliance_domain_-AD02**  
+**_appliance_domain_-AD01**および** _appliance_domain_-AD02**  
   
 -   制限なし  
   
@@ -73,6 +74,6 @@ Vm にウイルス対策ソフトウェアをインストールするには、�
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>関連項目  
-[アプライアンス管理タスク&#40;分析プラットフォームシステム&#41;](appliance-management-tasks.md)  
+## <a name="see-also"></a>参照  
+[アプライアンス管理タスク &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

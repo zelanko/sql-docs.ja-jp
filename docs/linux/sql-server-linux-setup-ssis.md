@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee4c32568a52f5eb7664fa8f22250370f46f033
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032443"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325477"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>SQL Server Integration Services (SSIS) on Linux をインストールする
 
@@ -36,11 +36,18 @@ ms.locfileid: "68032443"
    ```
 
 2. Microsoft SQL Server Ubuntu リポジトリを登録します。
-
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+::: moniker-end
 3. 次のコマンドを実行して SQL Server Integration Services をインストールします。
 
    ```bash
@@ -78,10 +85,18 @@ sudo apt-get remove mssql-server-is
 
 1. Microsoft SQL Server Red Hat リポジトリ構成ファイルをダウンロードします。
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+::: moniker-end
 1. 次のコマンドを実行して SQL Server Integration Services をインストールします。
 
    ```bash
@@ -134,16 +149,16 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | 環境変数 | [説明] |
 |---|---|
 | **ACCEPT_EULA** | 任意の値 (例: `Y`) に設定すると、SQL Server 使用許諾契約書に同意します。|
-| **SSIS_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 可能な値を次に示します。<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>プロダクト キー<br/><br/>プロダクト キーを指定する場合は、プロダクト キーの書式を `#####-#####-#####-#####-#####` にする必要があります。ここで、`#` は文字または数字です。  |
+| **SSIS_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 可能な値を次に示します。<br/>評価<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>プロダクト キー<br/><br/>プロダクト キーを指定する場合は、プロダクト キーの書式を `#####-#####-#####-#####-#####` にする必要があります。ここで、`#` は文字または数字です。  |
 | | |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Linux 上で SSIS パッケージを実行するには、「[SSIS を使用して SQL Server on Linux 用のデータの抽出、変換、および読み込みを行う](sql-server-linux-migrate-ssis.md)」を参照してください。
 
 Linux 上で SSIS 設定を追加で構成するには、「[ssis-conf を使用して SQL Server Integration Services on Linux を構成する](sql-server-linux-configure-ssis.md)」を参照してください。
 
-## <a name="related-content-about-ssis-on-linux"></a>SSIS on Linux の関連コンテンツ
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS の関連コンテンツ
 -   [SSIS を使用して Linux 上でデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
 -   [ssis-conf を使用して SQL Server Integration Services on Linux を構成する](sql-server-linux-configure-ssis.md)
 -   [SSIS on Linux の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)

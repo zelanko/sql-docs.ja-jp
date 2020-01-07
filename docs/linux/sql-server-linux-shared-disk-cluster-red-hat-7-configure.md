@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809780"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252240"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server 用に Red Hat Enterprise Linux 共有ディスク クラスターを構成する
 
@@ -34,17 +34,17 @@ ms.locfileid: "70809780"
 
 > [!NOTE] 
 > 現時点では、Pacemaker との SQL Server の統合は、Windows の WSFC とは結合されていません。 SQL の内部にはクラスターの存在に関する情報はなく、すべての調整は外部で実行され、サービスはスタンドアロン インスタンスとして Pacemaker によって制御されます。 また、たとえば、クラスター DMV の sys.dm_os_cluster_nodes と _os_cluster_properties にはレコードがありません。
-IP ではなく、文字列サーバー名をポイントする接続文字列を使用するには、仮想 IP リソースを作成するために使用される IP (以下のセクションで説明します) と選択したサーバー名を DNS サーバーに登録する必要があります。
+IP ではなく、文字列サーバー名をポイントする接続文字列を使用するには、仮想 IP リソースを作成するために使用する IP (以下のセクションで説明します) を、選択したサーバー名と共に DNS サーバーに登録する必要があります。
 
 次のセクションでは、フェールオーバー クラスター ソリューションを設定する手順について説明します。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 次のエンドツーエンドのシナリオを完了するには、2 つのノード クラスターともう 1 つのサーバーをデプロイして NFS サーバーを構成するために、2 台のマシンが必要です。 以下の手順では、これらのサーバーの構成方法を説明します。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>各クラスター ノードにオペレーティング システムをセットアップして構成する
 
-最初の手順では、クラスター ノードのオペレーティング システムを構成します。 このチュートリアルでは、HA アドオンの有効なサブスクリプションで RHEL を使用します。 
+最初の手順は、クラスター ノード上のオペレーティング システムを構成することです。 このチュートリアルでは、HA アドオンの有効なサブスクリプションで RHEL を使用します。 
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>各クラスター ノードに SQL Server をインストールして構成する
 
@@ -54,7 +54,7 @@ IP ではなく、文字列サーバー名をポイントする接続文字列�
 
 1. セカンダリ ノードで SQL Server を停止して無効にします。
 
-   次の例では、SQL Server を停止して無効にします。 
+   次の例では、SQL Server を停止して無効にしています。 
 
    ```bash
    sudo systemctl stop mssql-server
@@ -95,7 +95,7 @@ IP ではなく、文字列サーバー名をポイントする接続文字列�
    ```bash
    sudo vi /etc/hosts
    ```
-   次の例は `/etc/hosts` を示しています。`sqlfcivm1` および `sqlfcivm2` という 2 つのノードに対して追加があります。
+   次の例では、`sqlfcivm1` および `sqlfcivm2` という名前の 2 つのノードが追加された `/etc/hosts` を示します。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -138,7 +138,7 @@ NFS サーバーで、次の操作を行います。
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  `/etc/exports` を編集して、共有するディレクトリをエクスポートします。 必要な共有ごとに 1 行が必要です。 例: 
+1.  `/etc/exports` を編集して、共有するディレクトリをエクスポートします。 必要な共有ごとに 1 行が必要です。 次に例を示します。 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -202,11 +202,11 @@ NFS の使用の詳細については、次のリソースを参照してくだ�
 
 * [NFS サーバーと firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [NFS ボリュームのマウント | Linux ネットワーク管理者ガイド](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS サーバーの構成 | Red Hat カスタマー ポータル](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [NFS サーバーの構成 | Red Hat カスタマー ポータル](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>共有ストレージを指すようにデータベース ファイルのディレクトリをマウントする
 
-1.  **プライマリ ノードの場合のみ**、データベース ファイルを一時的な場所に保存します。次のスクリプトでは、新しい一時ディレクトリを作成し、データベース ファイルを新しいディレクトリにコピーして、古いデータベース ファイルを削除します。 SQL Server がローカル ユーザー mssql として実行される場合は、マウントされた共有へのデータ転送後に、ローカル ユーザーに共有への読み取り/書き込みアクセス権があることを確認する必要があります。 
+1.  **プライマリ ノードの場合のみ**、データベース ファイルを一時的な場所に保存します。次のスクリプトでは、新しい一時ディレクトリを作成し、データベース ファイルを新しいディレクトリにコピーして、古いデータベース ファイルを削除します。 SQL Server はローカル ユーザー mssql として実行されるので、マウントされた共有へのデータ転送後に、ローカル ユーザーが共有に読み取り/書き込みアクセスできることを、確認する必要があります。 
 
    ``` 
    $ sudo su mssql
@@ -243,7 +243,7 @@ NFS の使用の詳細については、次のリソースを参照してくだ�
    $ exit
    ``` 
  
-1.  SQL Server が新しいファイルパスで正常に開始されることを確認します。 これを各ノードで行います。 この時点では、一度に 1 つのノードだけで SQL Server を実行する必要があります。 両方が同時にデータ ファイルにアクセスしようとするため、両方とも同時に実行することはできません (両方のノードで誤って SQL Server が開始されるのを防ぐために、ファイル システム クラスターのリソースを使用して、共有が異なるノードによって 2 回マウントされていないようにしてください)。 次のコマンドでは、SQL Server が起動され、状態が確認されてから、SQL Server が停止されます。
+1.  SQL Server が新しいファイル パスで正常に起動されることを確認します。 これを各ノードで行います。 この時点では、一度に 1 つのノードだけで SQL Server を実行する必要があります。 両方が同時にデータ ファイルにアクセスしようとするため、両方とも同時に実行することはできません (両方のノードで誤って SQL Server が開始されるのを防ぐために、ファイル システム クラスターのリソースを使用して、共有が異なるノードによって 2 回マウントされていないようにしてください)。 次のコマンドでは、SQL Server が起動され、状態が確認されてから、SQL Server が停止されます。
  
    ```bash
    sudo systemctl start mssql-server
@@ -324,7 +324,7 @@ STONITH デバイスでは、フェンス エージェントが提供されま�
 
 2. SQL Server、ファイル システム、および仮想 IP リソースのクラスター リソースを構成し、クラスターに構成をプッシュします。 次の情報が必要です。
 
-   - **SQL Server のリソース名**:クラスター化された SQL Server のリソースの名前。 
+   - **SQL Server のリソース名**: クラスター化された SQL Server のリソースの名前。 
    - **フローティング IP のリソース名**:仮想 IP アドレスのリソースの名前。
    - **IP アドレス**:SQL Server のクラスター化されたインスタンスに接続するためにクライアントが使用する IP アドレス。 
    - **ファイル システムのリソース名**:ファイル システムのリソースの名前。
@@ -332,7 +332,7 @@ STONITH デバイスでは、フェンス エージェントが提供されま�
    - **デバイス**: 共有へのマウント先を示すローカル パス
    - **fstype**:ファイル共有の種類 (つまり、nfs)
 
-   ご利用の環境に合わせて、次のスクリプトから値を更新します。 クラスター化されたサービスを構成して開始するには、1 つのノードで実行します。  
+   実際の環境に合わせて、次のスクリプトの値を更新します。 1 つのノードで実行し、クラスター化されたサービスを構成して開始します。  
 
    ```bash
    sudo pcs cluster cib cfg 
@@ -385,6 +385,6 @@ STONITH デバイスでは、フェンス エージェントが提供されま�
 
 * Pacemaker の「[一からのクラスター](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)」ガイド
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Red Hat Enterprise Linux 共有ディスク クラスターで SQL Server を操作する](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

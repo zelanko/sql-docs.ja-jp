@@ -1,6 +1,5 @@
 ---
-title: 'sql: マップ済み (SQLXML 4.0) |Microsoft Docs'
-ms.custom: ''
+title: 'sql: マップ済み (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 055b4d25b6c501e9cf3afdf99460cd54ca7e720c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907136"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246775"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>注釈の解釈 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 一括読み込みでは、XSD スキーマ内の**sql: マップ**された注釈が想定どおりに処理されます。つまり、マッピングスキーマで要素または属性に**sql: mapping = "false"** が指定されている場合、xml 一括読み込みでは、関連付けられたデータはに格納されません。対応する列。  
+  XML 一括読み込みでは、XSD スキーマの**sql: マップ**された注釈が想定どおりに処理されます。つまり、マッピングスキーマで任意の要素または属性に**sql: mapping = "false"** が指定されている場合、xml 一括読み込みでは、関連付けられているデータが対応する列に格納されません。  
   
  XML 一括読み込みでは、マップされていない要素と属性が無視されます。これは、スキーマで記述されていないか、XSD スキーマで**sql: マップト = "false"** で注釈が付けられているためです。 このような列が**sql: overflow-field**を使用して指定されている場合は、マップされていないすべてのデータがオーバーフロー列に入ります。  
   
