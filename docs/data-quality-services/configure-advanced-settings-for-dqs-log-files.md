@@ -1,6 +1,5 @@
 ---
-title: DQS ログ ファイルの詳細設定の構成 | Microsoft Docs
-ms.custom: ''
+title: DQS ログ ファイルの詳細設定の構成
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4e01be5f013beeaed58b5f851063524950c338c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935595"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255610"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>DQS ログ ファイルの詳細設定の構成
 
@@ -29,24 +28,27 @@ ms.locfileid: "67935595"
 > [!NOTE]  
 >  これらのアクティビティは [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]を使用して実行できません。また、これらのアクティビティは上級ユーザーだけが実行できます。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a>開始する前に  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a>保護  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>許可  
   
 -   DQS_MAIN データベースの A_CONFIGURATION テーブルで構成の設定を変更するには、Windows ユーザー アカウントが SQL Server インスタンスの sysadmin 固定サーバー ロールのメンバーであることが必要です。  
   
--   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定を構成するには、DQLog.Client.xml ファイルを変更するコンピューターの Administrators グループのメンバーとしてログオンする必要があります。  
+-   
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定を構成するには、DQLog.Client.xml ファイルを変更するコンピューターの Administrators グループのメンバーとしてログオンする必要があります。  
   
-##  <a name="DQSServer"></a> Data Quality Server のログ設定の構成  
- [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ設定は、DQS_MAIN データベースの A_CONFIGURATION テーブル内の **[ServerLogging]** 行の **[VALUE]** 列に XML 形式で示されます。 構成情報を表示するには、次の SQL クエリを実行します。  
+##  <a name="DQSServer"></a>Data Quality Server のログ設定の構成  
+ 
+  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ設定は、DQS_MAIN データベースの A_CONFIGURATION テーブル内の **[ServerLogging]** 行の **[VALUE]** 列に XML 形式で示されます。 構成情報を表示するには、次の SQL クエリを実行します。  
   
 ```  
 select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
 ```  
   
- **ログ記録の構成設定を変更するには、** [ServerLogging] **行の** [VALUE] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 列で該当する情報を更新する必要があります。 この例では、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ設定を更新して、ローリング ファイルのサイズ制限を 25000 KB (既定値は 20000 KB) に設定します。  
+ 
+  **ログ記録の構成設定を変更するには、** [ServerLogging] **行の** [VALUE] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 列で該当する情報を更新する必要があります。 この例では、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ設定を更新して、ローリング ファイルのサイズ制限を 25000 KB (既定値は 20000 KB) に設定します。  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
@@ -96,9 +98,10 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-4.  F5 キーを押してステートメントを実行します。 **[結果]** ペインを確認してステートメントが正常に実行されたことを確認します。  
+4.  F5 キーを押してステートメントを実行します。 [**結果**] ウィンドウで、ステートメントが正常に実行されたことを確認します。  
   
-5.  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ構成の変更を適用するには、次の Transact-SQL ステートメントを実行する必要があります。 新しいクエリ エディター ウィンドウを開き、次の Transact-SQL ステートメントを貼り付けます。  
+5.  
+  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ構成の変更を適用するには、次の Transact-SQL ステートメントを実行する必要があります。 新しいクエリ エディター ウィンドウを開き、次の Transact-SQL ステートメントを貼り付けます。  
   
     ```  
     USE [DQS_MAIN]  
@@ -110,13 +113,15 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-6.  F5 キーを押してステートメントを実行します。 **[結果]** ペインを確認してステートメントが正常に実行されたことを確認します。  
+6.  F5 キーを押してステートメントを実行します。 [**結果**] ウィンドウで、ステートメントが正常に実行されたことを確認します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ設定の構成が動的に生成されて、DQS_MAIN.Log ファイルに保存されます。SQL Server の既定のインスタンスをインストールした場合、このファイルは通常 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log に保存されています。 ただし、このファイルで直接変更した内容は保持されず、DQS_MAIN データベースの A_CONFIGURATION テーブルの構成設定で上書きされます。  
+>  
+  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ設定の構成が動的に生成されて、DQS_MAIN.Log ファイルに保存されます。SQL Server の既定のインスタンスをインストールした場合、このファイルは通常 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log に保存されています。 ただし、このファイルで直接変更した内容は保持されず、DQS_MAIN データベースの A_CONFIGURATION テーブルの構成設定で上書きされます。  
   
-##  <a name="DQSClient"></a> Data Quality Client のログ設定の構成  
- 通常、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定構成ファイルである DQLog.Client.xml は C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config に格納されます。この XML ファイルの内容は、前に [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ構成設定で変更した XML ファイルと似ています。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定を構成するには、次の手順を実行します。  
+##  <a name="DQSClient"></a>Data Quality Client ログ設定の構成  
+ ログ[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]設定の構成ファイル (DQLog. .sql) は、通常、C:\Program 130にあります。このファイルは、既定では C:\Program モジュールにあります。XML ファイルの内容は、前に[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ログ構成設定で変更した xml ファイルに似ています。 
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定を構成するには、次の手順を実行します。  
   
 1.  管理者として、任意の XML 編集ツールやメモ帳を実行します。  
   
@@ -124,7 +129,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  必要な変更を行い、ファイルを保存して、新しいログの変更を適用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS ログ ファイルの重大度レベルの構成](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

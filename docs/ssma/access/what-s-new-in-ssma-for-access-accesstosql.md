@@ -2,30 +2,39 @@
 title: SSMA for Access の新機能 (アクセス可能な Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 11/13/2019
+ms.date: 12/04/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 6e49c85bec2494d6a524a17f96ae735b0ed053f8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 0c13fd9b2e8c389685fff14679bb18fd8b4d4525
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056174"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74834318"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access の新機能 (アクセス可能な Sql)
 
-この記事では、各リリースでのアクセス変更の SQL Server Migration Assistant (SSMA) を示します。  
+この記事では、各リリースでのアクセス変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v85"></a>SSMA v1.0
+
+SSMA for Access の v1.0 リリースは、SQL server での JSON 機能の Azure Active Directory 認証と基本的なサポートに加え、使いやすさとパフォーマンスを向上させるように設計された一連の修正をサポートすることによって強化されています。
+
+さらに、SSMA for Access では、複数の標準関数 (ISNULL、IIF など) の変換がサポートされるようになりました。
+
+> [!IMPORTANT]
+> SSMA v1.0 では、.Net 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 SSMA for Access のリリースは、ユーザー補助の問題に対処し、最大インデックス列 (16 ではなく 32) に関連するバグを修正して、SQL Server 2016 以降のバージョンに対応するように設計された、対象の修正によって強化されています。
 
 > [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
+> SSMA バージョン 8.4 7.4 では、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -102,7 +111,7 @@ SSMA for Access のバージョン7.5 リリースは、障碍のある方にと
 
 SSMA for Access のバージョン7.4 リリースには、次の変更が含まれています。
 
-* **[クエリタイムアウト]** オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
+* [**クエリタイムアウト**] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
 
   ![クエリタイムアウトオプション](../media/query-timeout_red.png)
 
@@ -152,11 +161,11 @@ SSMA for Access の2016年5月のリリースには、次の変更が含まれ�
 * アクセス用の UI タブのデータ読み込みを修正したテーブル。
 * グローバル設定のバグを修正した。
 
-## <a name="march-2016"></a>2016年3月
+## <a name="march-2016"></a>2016 年 3 月
 
 SSMA for Access の2016年3月のプレビューリリースでは、SQL Server 2016 への移行のサポートが追加されます。  
 
-## <a name="january-2016"></a>2016年1月
+## <a name="january-2016"></a>2016 年 1 月
 
 SSMA for Access の2016年1月のメンテナンスリリースには、次の変更が含まれています。  
   
@@ -165,7 +174,7 @@ SSMA for Access の2016年1月のメンテナンスリリースには、次の�
 * SSMA (RFC 5706203) に [ログの表示] メニュー項目が追加されました。  
 * テレメトリを追加しました。
   
-## <a name="july-2014"></a>2014 年 7 月
+## <a name="july-2014"></a>2014年7月
 
 SSMA for Access の2014年7月のリリースには、次の変更が含まれています。  
   
@@ -184,10 +193,10 @@ SSMA for Access の2014年7月のリリースには、次の変更が含まれ�
 SSMA for Access の2014年4月のリリースには、次の変更が含まれています。  
   
 * MS SQL Server 2014 のサポートが追加されました。
-* Azure への変換に関するバグを修正した。  
-* IE 10 の非表示レポートページに関するバグを修正した。  
+* Azure への変換に関連するバグを修正した。  
+* IE 10 の非表示レポートページに関連するバグが修正されています。  
   
-## <a name="january-2012"></a>2012年1月
+## <a name="january-2012"></a>2012 年 1 月
 
 SSMA for Access の2012年1月リリースには、次の変更が含まれています。  
   
@@ -195,7 +204,7 @@ SSMA for Access の2012年1月リリースには、次の変更が含まれて�
 * 循環参照の連鎖アクションを No Action に設定します。  
 * 循環参照の cascade アクションが No Action に設定されていることを示す適切なメッセージを提供しました。  
   
-## <a name="july-2011"></a>2011年7月
+## <a name="july-2011"></a>2011 年 7 月
 
 SSMA for Access の2011年7月のリリースでは、データ移行中に改善されたエラーレポートが追加されます。  
   
@@ -203,12 +212,12 @@ SSMA for Access の2011年7月のリリースでは、データ移行中に改�
 
 SSMA for Access の2011年4月のリリースには、次の変更が含まれています。  
   
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali"、および Azure SQL をサポートする "SSMA for Access" のインストール可能なものが1つ追加されました。  
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" に接続する機能が追加されました。  
+* 2005、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali"、および AZURE SQL をサポートする "ssma for Access" のインストール可能な単一のを追加しました。  
+* "Denali" に接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する機能を追加しました。  
 * 旧バージョンとの互換性のために SSMA for Access コンソールのバージョンサポートが追加されました。 以前のバージョンで作成されたプロジェクトを SSMA v1.0 に開くことができます。
 * Ssma 製品の旧バージョンとサイドバイサイド (SxS) をインストールする機能が追加されました。  
   
-## <a name="july-2010"></a>2010年7月
+## <a name="july-2010"></a>2010 年 7 月
 
 SSMA for Access の2010年7月のリリースには、次の変更が含まれています。  
   
@@ -235,10 +244,10 @@ SSMA for Access の2007年5月のリリースには、次の変更が含まれ�
 
 SSMA for Access の11月2006リリースには、次の変更が含まれています。  
   
-* 新しいデータベース移行ウィザードが追加されました。このウィザードに従って、1つのデータベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセスから移行できます。  
-* Access データベースを変換し、変換されたオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に読み込んで、データを1回の手順で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に移行する、新しい Convert、Load、Migrate コマンドを追加しました。  
+* 新しいデータベース移行ウィザードが追加されました。このウィザードでは、へのアクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からへの1つのデータベースの移行を段階的に実行できます。  
+* Access データベースを変換し、変換されたオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込んで、データを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すべて1回の手順で移行する、新しい Convert、Load、Migrate コマンドを追加しました。  
 * クエリの移行が改善されました。 クエリの移行により、より多くの SELECT クエリがビューに変換されるようになりました。 詳細については、「 [Access データベースオブジェクトの変換](converting-access-database-objects-accesstosql.md)」を参照してください。  
-* [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**テーブル**] タブでテーブルとインデックスのプロパティを編集する機能が追加されました。  
+* [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **テーブル**] タブでテーブルとインデックスのプロパティを編集する機能が追加されました。  
 * 新しいグローバル設定を追加しました:
   * エディターウィンドウで行番号を表示するように選択できます。  
   * SSMA を構成して、重複するオブジェクトの置換を求めるメッセージを表示したり、スキーマの変換中に重複するオブジェクトを常に置き換えることができます。  

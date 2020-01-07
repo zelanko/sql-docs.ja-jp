@@ -3,7 +3,7 @@ title: SQL Server 移行の評価を実行する
 titleSuffix: Data Migration Assistant
 description: Data Migration Assistant を使用して、別の SQL Server またはに移行する前に、オンプレミスの SQL Server を評価する方法について説明し Azure SQL Database
 ms.custom: seo-lt-2019
-ms.date: 08/08/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,26 +15,30 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056632"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001907"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 移行評価を実行する
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用した SQL Server 移行評価の実行
 
 次の手順では、Data Migration Assistant を使用して、オンプレミスの SQL Server、SQL Server Azure VM で実行している、または Azure SQL Database に移行するための最初の評価を行う方法について説明します。
 
+   > [!NOTE]
+   > Data Migration Assistant v1.0 では、アプリケーションコードでデータベース接続と埋め込み SQL クエリを分析するためのサポートが導入されています。 詳細については、 [Data Migration Assistant を使用したアプリケーションのデータアクセス層の評価に](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)関するブログ記事を参照してください。
+
 ## <a name="create-an-assessment"></a>評価を作成する
 
-1. **[新規]** (+) アイコンを選択し、 **[評価]** プロジェクトの種類を選択します。
+1. [**新規**] (+) アイコンを選択し、[**評価**] プロジェクトの種類を選択します。
 
 2. ソースとターゲットのサーバーの種類を設定します。
 
     オンプレミスの SQL Server インスタンスを最新のオンプレミスの SQL Server インスタンスにアップグレードする場合、または Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。 Azure SQL Database に移行している場合は、代わりに対象サーバーの種類を**Azure SQL Database**に設定します。
 
-3. **[作成]** をクリックします。
+3. 
+  **[作成]** をクリックします。
 
    ![評価を作成する](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
@@ -53,21 +57,21 @@ ms.locfileid: "74056632"
 
    Azure SQL Database に移行するためにソース SQL Server インスタンスを評価する場合は、次のいずれかまたは両方の評価レポートの種類を選択できます。
 
-    - **データベースの互換性を確認する**
-    - **機能のパリティを確認する**
+    - **データベース互換性をチェックする**
+    - **機能の類似性をチェックする**
 
     ![SQL Database ターゲットの評価レポートの種類を選択します](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
 ## <a name="add-databases-and-extended-events-trace-to-assess"></a>評価するデータベースと拡張イベントトレースの追加
 
-1. **[ソースの追加]** を選択して、接続のフライアウトメニューを開きます。
+1. [**ソースの追加**] を選択して、接続のフライアウトメニューを開きます。
 
-2. SQL server インスタンス名を入力し、認証の種類を選択して、適切な接続プロパティを設定し、 **[接続]** を選択します。
+2. SQL server インスタンス名を入力し、認証の種類を選択して、適切な接続プロパティを設定し、[**接続**] を選択します。
 
-3. 評価するデータベースを選択し、 **[追加]** を選択します。
+3. 評価するデータベースを選択し、[**追加**] を選択します。
 
     > [!NOTE]
-    > 複数のデータベースを削除するには、Shift キーまたは Ctrl キーを押しながら選択し、 **[ソースの削除]** をクリックします。 また、 **[ソースの追加]** を選択して、複数の SQL Server インスタンスからデータベースを追加することもできます。
+    > 複数のデータベースを削除するには、Shift キーまたは Ctrl キーを押しながら選択し、[**ソースの削除**] をクリックします。 また、[**ソースの追加**] を選択して、複数の SQL Server インスタンスからデータベースを追加することもできます。
 
 4. アドホックまたは動的な SQL クエリ、またはアプリケーションデータレイヤーを介して開始された DML ステートメントがある場合は、収集したすべての拡張イベントセッションファイルを配置したフォルダーへのパスを入力して、ソースのワークロードをキャプチャし SQL Server.
 
@@ -107,7 +111,8 @@ ms.locfileid: "74056632"
         go
     ```
 
-5. **[次へ]** をクリックして評価を開始します。
+5. 
+  **[次へ]** をクリックして評価を開始します。
 
     ![ソースを追加して評価を開始する](../dma/media/dma-assesssqlonprem/select-database1.png)
 
@@ -117,7 +122,7 @@ ms.locfileid: "74056632"
 
 1. 評価が完了したデータベースを選択し、スイッチャーを使用して**互換性の問題**と**機能に関する推奨事項**を切り替えます。
 
-2. **[オプション]** ページで選択したターゲット SQL Server バージョンでサポートされているすべての互換性レベルで、互換性の問題を確認します。
+2. [**オプション**] ページで選択したターゲット SQL Server バージョンでサポートされているすべての互換性レベルで、互換性の問題を確認します。
 
 互換性の問題を確認するには、影響を受けるオブジェクト、その詳細、および**重大な変更**、**動作の変更**、および**非推奨の機能**で特定されたすべての問題に対する修正プログラムを分析します。
 
@@ -129,21 +134,21 @@ ms.locfileid: "74056632"
 
 ![機能に関する推奨事項の表示](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Azure SQL Database の場合、評価によって、移行のブロックの問題と機能のパリティの問題が発生します。 特定のオプションを選択して、両方のカテゴリの結果を確認します。
+Azure SQL Database の場合、評価によって、移行のブロックの問題と機能のパリティの問題が発生します。特定のオプションを選択して、両方のカテゴリの結果を確認します。
 
 - **SQL Server 機能のパリティ**カテゴリは、一連の推奨事項、Azure で利用可能な別のアプローチ、および手順の軽減を提供します。 これは、移行プロジェクトでこの作業を計画するのに役立ちます。
 
   ![SQL Server 機能のパリティに関する情報の表示](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- **互換性の問題**カテゴリには、オンプレミスの SQL Server データベースを Azure SQL データベースに移行できない部分的にサポートされている機能やサポートされていない機能があります。 その後、これらの問題に対処するための推奨事項を提供します。
+- **互換性の問題**カテゴリには、オンプレミスの SQL Server データベースを Azure SQL データベースに移行できない部分的にサポートされている機能やサポートされていない機能があります。その後、これらの問題に対処するための推奨事項を提供します。
 
   ![互換性の問題の表示](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>ターゲット準備のためにデータ資産を評価する
 
-これらの評価をデータ資産全体にさらに拡張し、Azure SQL Database への移行用に SQL Server インスタンスとデータベースの相対的な準備を確認する場合は、 **[Azure Migrate にアップロードする]** を選択して、結果を Azure migrate hub にアップロードします。
+これらの評価をデータ資産全体にさらに拡張し、Azure SQL Database への移行用に SQL Server インスタンスとデータベースの相対的な準備を確認する場合は、[ **Azure Migrate にアップロード**] を選択して Azure Migrate ハブに結果をアップロードします。
 
-これにより、Azure migrate hub プロジェクトで統合された結果を表示できるようになります。
+これにより、Azure Migrate hub プロジェクトで統合された結果を表示できるようになります。
 
 ターゲット準備評価の詳細なステップバイステップガイダンスについては、[こちら](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017)を参照してください。
 
@@ -151,6 +156,6 @@ Azure SQL Database の場合、評価によって、移行のブロックの問�
 
 ## <a name="export-results"></a>結果のエクスポート
 
-すべてのデータベースで評価が完了したら、 **[レポートのエクスポート]** を選択して、結果を JSON ファイルまたは CSV ファイルにエクスポートします。 その後、データを独自の便利な方法で分析できます。
+すべてのデータベースで評価が完了したら、[**レポートのエクスポート**] を選択して、結果を JSON ファイルまたは CSV ファイルにエクスポートします。 その後、データを独自の便利な方法で分析できます。
 
-**[すべての評価]** ページを開くと、複数の評価を同時に実行し、評価の状態を表示できます。
+複数の評価を同時に実行し、**[All Assessments]\(すべての評価\)** ページを開いて評価の状態を表示できます。

@@ -1,6 +1,6 @@
 ---
-title: Parallel Data Warehouse のシステム データベース |Microsoft Docs
-description: システム データベースで並列データ ウェアハウス (PDW)。
+title: システム データベース
+description: 並列データウェアハウスのシステムデータベース (PDW)
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bfcd183804a545f5e170548833246bbedd231a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 720dd70896fe4c30d10214b7102bbd77beab5e48
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960004"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400214"
 ---
-# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>システム データベースで並列データ ウェアハウス (PDW)
-システム データベースでは、データベース ユーザー、データベース、および一時的なデータを管理する SQL Server PDW の使用です。 SQL Server PDW には、次のシステム データベースが含まれています。 マスター、および tempdb です。  
+# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>並列データウェアハウスのシステムデータベース (PDW)
+システムデータベースは、ユーザー、データベース、および一時データを管理するために SQL Server PDW 使用するデータベースです。 SQL Server PDW には、master、および tempdb の各システムデータベースが含まれています。  
   
-## <a name="system-database-topics"></a>システム データベースのトピック  
+## <a name="system-database-topics"></a>システムデータベースに関するトピック  
   
 -   [master データベース](master-database.md)  
   

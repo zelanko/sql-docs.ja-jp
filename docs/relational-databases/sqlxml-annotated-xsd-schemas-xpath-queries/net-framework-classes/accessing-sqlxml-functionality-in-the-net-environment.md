@@ -1,6 +1,5 @@
 ---
-title: .NET 環境での SQLXML 機能へのアクセス |Microsoft Docs
-ms.custom: ''
+title: .NET 環境での SQLXML 機能へのアクセス
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 848d37521d786173e595cf3616a25530c80c77a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a5edd3555c2d57cf9d615b7158d034571987cb5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073260"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251517"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 環境での SQLXML 機能へのアクセス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   この例では、次のことについて説明します。  
   
--   使用する[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) Microsoft へのアクセスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境。  
+-   SQLXML マネージクラス[!INCLUDE[msCoName](../../../includes/msconame-md.md)] (Microsoft. Data. sqlxml) を使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境で microsoft にアクセスする方法。  
   
 -   .NET Framework 環境で生成された DiffGram を使って [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルにデータ更新を適用する方法  
   
- このアプリケーションでは、XSD スキーマに対して XPath クエリを実行します。 XPath クエリの実行には、連絡先データで構成される XML ドキュメントが返されます (**FirstName**、 **LastName**)。 アプリケーションでは、.NET Framework 環境でこの XML ドキュメントをデータセットに読み込み、 データセットの最初の連絡先の名前を "Susan" に変更します。 このデータセットから DiffGram を生成し、この DiffGram で指定されている更新 (従業員の名前の変更) を、Person.Contact テーブルに適用します。  
+ このアプリケーションでは、XSD スキーマに対して XPath クエリを実行します。 XPath クエリを実行すると、連絡先データ (**FirstName**、 **LastName**) で構成される XML ドキュメントが返されます。 アプリケーションでは、.NET Framework 環境でこの XML ドキュメントをデータセットに読み込み、 データセットの最初の連絡先の名前を "Susan" に変更します。 このデータセットから DiffGram を生成し、この DiffGram で指定されている更新 (従業員の名前の変更) を、Person.Contact テーブルに適用します。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -72,7 +72,7 @@ class Test
 }  
 ```  
   
- **この例をテストします。**  
+ **この例をテストするには**  
   
  この例をテストするには、コンピューターに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework がインストールされている必要があります。  
   

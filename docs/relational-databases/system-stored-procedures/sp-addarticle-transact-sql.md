@@ -200,10 +200,10 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x80000000 です**|パブリケーションに含まれていないオブジェクトへの依存関係を削除しようとしています。|  
 |**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]レプリケートする場合は、このオプションを指定しないでください。 このスキーマオプションを設定する方法[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすることはサポートされていません。<br /><br /> 関連オプション**0x800000000**を参照してください。|  
 |**0x200000000**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で導入[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]された日付と時刻のデータ型 (date、 **time**、datetimeoffset、および datetime2) を、以前のバージョンのでサポートされているデータ型に変換します。|  
-|**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
+|**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「[Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 |**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイルグループに格納されます。 レプリケーションでは、ファイルグループは作成されません。したがって、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイルグループを作成する必要があります。 スナップショットを適用する前にオブジェクトを作成する方法の詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)」を参照してください。<br /><br /> 関連オプション**0x100000000**を参照してください。|  
 |**0x1000000000**|2バイトを8000超える共通言語ランタイム (CLR) ユーザー定義型 (Udt) を**varbinary (max)** に変換します。これにより、udt 型の列を、を実行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]しているサブスクライバーにレプリケートできるようになります。|  
-|**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実行しているサブスクライバーにレプリケートできるようになります。 レプリケートされたテーブルでの**hierarchyid**列の使用方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
+|**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実行しているサブスクライバーにレプリケートできるようになります。 レプリケートされたテーブルでの**hierarchyid**列の使用方法の詳細については、「[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
 |**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、「[フィルター選択](../../relational-databases/indexes/create-filtered-indexes.md)されたインデックスの作成」をご覧ください。|  
 |**0x8000000000**|**Geography**および**geometry**データ型を**varbinary (max)** に変換して、これらの型の列を、を実行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]しているサブスクライバーにレプリケートできるようにします。|  
 |**0x10000000000**|**Geography**型および**geometry**型の列のインデックスをレプリケートします。|  
@@ -257,7 +257,7 @@ sp_addarticle [ @publication = ] 'publication'
 |NULL (既定値)|Id 範囲の処理は、 *identityrangemanagementoption*によって設定されます。|  
   
 > [!NOTE]  
->  *auto_identity_range*は非推奨とされており、旧バージョンとの互換性のために用意されています。 Id 範囲管理オプションを指定するには、 *identityrangemanagementoption*を使用する必要があります。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
+>  *auto_identity_range*は非推奨とされており、旧バージョンとの互換性のために用意されています。 Id 範囲管理オプションを指定するには、 *identityrangemanagementoption*を使用する必要があります。 詳細については、「[ID 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
   
 `[ @pub_identity_range = ] pub_identity_range`アーティクルの*identityrangemanagementoption*が**auto**に設定されているか、 *auto_identity_range*が**true**に設定されている場合、パブリッシャーでの範囲サイズを制御します。 *pub_identity_range*は**bigint**,、既定値は NULL です。 *Oracle パブリッシャーではサポートされていません*。  
   
@@ -293,7 +293,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  旧バージョンとの互換性のために、 *identityrangemanagementoption*の値が NULL の場合、 *auto_identity_range*の値がチェックされます。 ただし、 *identityrangemanagementoption*の値が NULL でない場合、 *auto_identity_range*の値は無視されます。  
   
- 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
+ 詳細については、「[ID 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
   
 `[ @publisher = ] 'publisher'`以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
@@ -324,7 +324,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 -   *Ins_cmd*、 *upd_cmd*、および*del_cmd*には、 **SQL**の値を指定できません。  
   
- 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
+ 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
  オブジェクトをパブリッシュすると、その定義がサブスクライバーにコピーされます。 1つ以上の他のオブジェクトに依存するデータベースオブジェクトをパブリッシュする場合は、参照されているすべてのオブジェクトをパブリッシュする必要があります。 たとえば、テーブルに依存しているビューをパブリッシュする場合は、そのテーブルもパブリッシュする必要があります。  
   
@@ -392,7 +392,7 @@ sp_addarticle [ @publication = ] 'publication'
  **Sp_addarticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_articleview &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   

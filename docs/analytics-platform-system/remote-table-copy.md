@@ -1,6 +1,6 @@
 ---
-title: リモート テーブル コピー - Parallel Data Warehouse |Microsoft Docs
-description: Analytics Platform System Parallel Data Warehouse でのリモート テーブルのコピーを使用します。
+title: リモート テーブルのコピー
+description: Analytics Platform System Parallel Data Warehouse でのリモートテーブルコピーの使用。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,41 +8,42 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ecbbdced731e940de46dbde4a65adc486f602c2f
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960205"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400480"
 ---
-# <a name="remote-table-copy"></a>リモート テーブルのコピー
-(非アプライアンス) のリモート SMP SQL Server データベースに SQL Server PDW のデータベースからテーブルをコピーするリモート テーブル コピー機能を使用する方法について説明します。 SQL Server PDW のハブとスポークのシナリオを有効にするリモート テーブル コピーを使用します。  
+# <a name="remote-table-copy"></a>リモートテーブルのコピー
+リモートテーブルのコピー機能を使用して、SQL Server PDW データベースからリモート (アプライアンス以外) の SMP SQL Server データベースにテーブルをコピーする方法について説明します。 リモートテーブルのコピーを使用して、SQL Server PDW のハブアンドスポークシナリオを有効にします。  
   
-## <a name="BasicsPDE"></a>SQL Server PDW のリモート テーブルのコピーを理解します。  
-リモート テーブルのコピーは、SQL SELECT ステートメントの結果を SMP データベース内のテーブルにコピーしてハブとスポークのシナリオを実現する SQL Server PDW の機能です。 使用して、リモート テーブルのコピーが開始、 [CREATE リモート TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md)ステートメント。  
+## <a name="BasicsPDE"></a>SQL Server PDW のリモートテーブルのコピーについて  
+リモートテーブルコピーは SQL Server PDW の機能です。この機能を使用すると、SQL SELECT ステートメントの結果を SMP データベースのテーブルにコピーすることによって、ハブとスポークのシナリオを有効にすることができます。 リモートテーブルのコピーは、 [CREATE REMOTE table AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md)ステートメントを使用して開始されます。  
   
-## <a name="BasicsPrerequisites"></a>リモート テーブルのコピーを使用するための要件  
-これらの条件が満たされたときに、SQL Server データベースに SQL Server PDW からリモート テーブル コピーのコピーにテーブルを使用できます。  
+## <a name="BasicsPrerequisites"></a>リモートテーブルのコピーを使用するための要件  
+リモートテーブルコピーを使用すると、これらの条件が満たされた場合に SQL Server PDW から SQL Server データベースにテーブルをコピーできます。  
   
--   転送先データベースは、SQL Server PDW アプライアンスに接続できるアプライアンス内のサーバーに存在しない Microsoft Windows® システムで実行されている Microsoft® SQL Server® のインスタンスである必要があります。 リモートの SQL Server は、またはイーサネット ネットワーク経由の InfiniBand ネットワークを使用して SQL Server PDW に接続できます。  
+-   転送先データベースは、microsoft® SQL Server®のインスタンスである必要があります。このインスタンスは、SQL Server PDW アプライアンスに接続できるが、アプライアンス内のサーバー上には存在しない Microsoft Windows®システム上で実行されています。 リモート SQL Server は、InfiniBand ネットワークまたはイーサネットネットワークを使用して SQL Server PDW に接続できます。  
   
--   1 つの有効な SQL Server PDW を使用して選択可能なデータをコピーする必要があります[選択](../t-sql/queries/select-transact-sql.md)ステートメント。  
+-   コピーされるデータは、1つの有効な SQL Server PDW [select](../t-sql/queries/select-transact-sql.md)ステートメントを使用して選択できる必要があります。  
   
--   転送先サーバーは、非アプライアンス サーバーである必要があります。 このトピックの手順を使用して、1 つのアプライアンスから直接データをコピーできません。  
+-   転送先サーバーは、非アプライアンス サーバーである必要があります。 このトピックの手順に従って、データを1つのアプライアンスから別のアプライアンスに直接コピーすることはできません。  
   
--   移行先サーバーは、アプライアンスの Infiniband ネットワーク上のすべてのノードにアクセス可能である必要があります。  
+-   移行先サーバーには、アプライアンスの Infiniband ネットワーク上のすべてのノードからアクセスできる必要があります。  
   
-## <a name="ConfigureRemote"></a>リモート テーブルのコピーを構成します。  
-リモート テーブルのコピーを使用するには、必要がありますを購入して、Windows サーバーを構成する SQL Server、Windows サーバーを構成して SQL Server PDW の構成します。 これら 3 つの構成手順を実行するのにには、次のリンクを使用します。  
+## <a name="ConfigureRemote"></a>リモートテーブルのコピーの構成  
+リモートテーブルのコピーを使用するには、Windows server を購入して構成し、Windows server で SQL Server を構成して、SQL Server PDW を構成する必要があります。 これら3つの構成手順を実行するには、次のリンクを使用します。  
   
-1.  [InfiniBand を使用してリモート テーブル コピーを受け取るため、外部の Windows システムを構成します。](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
+1.  [InfiniBand を使用してリモートテーブルコピーを受信するように外部 Windows システムを構成する](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
   
-2.  [リモート テーブル コピーを受け取るため、外部 SMP SQL サーバーを構成します。](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)  
+2.  [リモートテーブルコピーを受信するための外部 SMP SQL Server の構成](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)  
   
-3.  [リモート テーブル コピー用の SQL Server PDW を構成します。](configure-sql-server-pdw-for-remote-table-copies.md)  
+3.  [リモートテーブルコピーの SQL Server PDW を構成する](configure-sql-server-pdw-for-remote-table-copies.md)  
   
-## <a name="PerformRemote"></a>リモート テーブル コピーを実行します。  
-リモート テーブル コピーを実行するのには、使用、 [CREATE リモート TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) SQL ステートメント。 例は、CREATE REMOTE TABLE トピックに含まれています。  
+## <a name="PerformRemote"></a>リモートテーブルのコピーを実行する  
+リモートテーブルのコピーを実行するには、 [CREATE REMOTE TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) SQL ステートメントを使用します。 例は、リモートテーブルの作成に関するトピックに含まれています。  
   
 <!-- MISSING LINKS 
 ## See Also  

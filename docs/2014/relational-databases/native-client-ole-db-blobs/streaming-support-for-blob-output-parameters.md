@@ -1,5 +1,5 @@
 ---
-title: 出力パラメーターの BLOB のストリーミング サポート |Microsoft Docs
+title: BLOB 出力パラメーターのストリーミングサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -508,6 +508,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>参照  
- [BLOB と OLE オブジェクト](blobs-and-ole-objects.md)  
+ [Blob と OLE オブジェクト](blobs-and-ole-objects.md)  
   
   

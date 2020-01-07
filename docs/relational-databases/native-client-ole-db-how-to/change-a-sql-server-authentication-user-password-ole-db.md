@@ -1,5 +1,5 @@
 ---
-title: SQL Server 認証のユーザー パスワードの変更 (OLE DB) | Microsoft Docs
+title: SQL 認証のユーザーパスワード (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b157b95fe7175fb36bf7f1e064eca2179f571e38
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 768aff63d6b1faeecc0bba555fad0f598c9015a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790145"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226166"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 認証のユーザー パスワードの変更 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,20 +24,23 @@ ms.locfileid: "73790145"
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントのパスワードを OLE DB を使用して変更する方法を紹介しています。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
   
 ## <a name="example"></a>例  
  ビルド前に、.C++ コードを修正し、実際のユーザー ID、古いパスワード、および新しいパスワードを指定してください。  
   
- このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  ole32.lib と oleaut32.lib を使用してコンパイルします。  
   
- このサンプルをビルドするには、パスワードがわかっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントが必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio を開き、オブジェクト エクスプローラーでサーバー ノードを右クリックし、[プロパティ] をクリックします。 [セキュリティ] をクリックし、[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モード] を有効にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のユーザー アカウントを追加するには、オブジェクト エクスプローラーで [セキュリティ] ノードを右クリックし、[追加] をクリックします。  
+ このサンプルをビルドするには、パスワードがわかっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントが必要です。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio を開き、オブジェクト エクスプローラーでサーバー ノードを右クリックし、[プロパティ] をクリックします。 [セキュリティ] をクリックし、[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モード] を有効にします。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のユーザー アカウントを追加するには、オブジェクト エクスプローラーで [セキュリティ] ノードを右クリックし、[追加] をクリックします。  
   
  このサンプルを実行するサーバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が有効になっているログインが少なくとも 1 つ必要です。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するようにサーバーを設定する必要があります。  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
