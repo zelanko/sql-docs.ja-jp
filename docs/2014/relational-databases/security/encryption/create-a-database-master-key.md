@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 757b6c62d63da2b8f1fa33e5d704d7a2c4fabd38
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978367"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957246"
 ---
 # <a name="create-a-database-master-key"></a>データベース マスター キーの作成
 
@@ -27,25 +27,27 @@ ms.locfileid: "70978367"
 
 - **作業を開始する準備:**
 
-  [Security](#Security)
+  [保護](#Security)
 
-- [Transact-SQL を使用してデータベース マスター キーを作成するには](#TsqlProcedure)
+- [Transact-sql を使用してデータベースマスターキーを作成するには](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> はじめに
+## <a name="BeforeYouBegin"></a>開始する前に
 
-### <a name="Security"></a> セキュリティ
+### <a name="Security"></a>保護
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="Permissions"></a>許可
 
 データベースに対する CONTROL 権限が必要です。
 
-## <a name="TsqlProcedure"></a> Transact-SQL の使用
+## <a name="TsqlProcedure"></a>Transact-sql の使用
 
 ### <a name="to-create-a-database-master-key"></a>データベース マスター キーを作成するには
 
 1. データベースに格納するマスター キーのコピーを暗号化するためのパスワードを指定します。
-2. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。
-3. **[システムデータベース]** を展開し`master` 、を右クリックして、 **[新しいクエリ]** をクリックします。
+2. 
+  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。
+3. 
+  **[システム データベース]** を展開し、`master` を右クリックして、**[新しいクエリ]** をクリックします。
 4. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。
 
   ```sql

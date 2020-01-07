@@ -1,5 +1,5 @@
 ---
-title: Tempdb データベース-並列データウェアハウス |Microsoft Docs
+title: Tempdb データベース
 description: 並列データウェアハウスの Tempdb データベース。
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6bdba302778224ab2615018d6c5dec0740328d93
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810941"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400140"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>並列データウェアハウスの tempdb データベース
 **tempdb**は、ユーザーデータベースのローカル一時テーブルを格納する SQL Server PDW システムデータベースです。 一時テーブルは、多くの場合、クエリのパフォーマンスを向上させるために使用されます。 たとえば、一時テーブルを使用してスクリプトをモジュール化し、計算されたデータを再利用することができます。  
@@ -35,7 +36,7 @@ pdwtempdb
 PDW では、SQL Server**tempdb**データベースを使用した一時テーブルは実装されません。 代わりに、PDW は pdwtempdb という名前のデータベースにそれらを格納します。 このデータベースは各コンピューティングノード上に存在し、PDW インターフェイスを介してユーザーには表示されません。 管理コンソールの [ストレージ] ページには、「 **tempdb-sql**」という名前の PDW システムデータベースに含まれていることが表示されます。  
   
 tempdb  
-tempdb は SQL Server tempdb データベースです。 最小ログ記録を使用します。 SQL Server は、コンピューティングノードで tempdb を使用して、SQL Server 操作を実行する過程で必要な一時テーブルを格納します。  
+**tempdb は SQL Server** tempdb データベースです。 最小ログ記録を使用します。 SQL Server は、コンピューティングノードで tempdb を使用して、SQL Server 操作を実行する過程で必要な一時テーブルを格納します。  
   
 SQL Server PDW は、次の場合に**tempdb**からテーブルを削除します。  
   
@@ -83,7 +84,7 @@ SQL Server PDW**tempdb**データベースの制限事項と制約事項。 *次
   
 ## <a name="RelatedTasks"></a>関連タスク  
   
-|処理手順|説明|  
+|タスク|説明|  
 |---------|---------------|  
 |**Tempdb**にテーブルを作成します。|CREATE TABLE と CREATE TABLE を SELECT ステートメントと共に使用して、ユーザーの一時テーブルを作成できます。 詳細については、「 [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) 」および「 [SELECT として CREATE TABLE](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)」を参照してください。|  
 |**Tempdb**内の既存のテーブルの一覧を表示します。|`SELECT * FROM tempdb.sys.tables;`|  

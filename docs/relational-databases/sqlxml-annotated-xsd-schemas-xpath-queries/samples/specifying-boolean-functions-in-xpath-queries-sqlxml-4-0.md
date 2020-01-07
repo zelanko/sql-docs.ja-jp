@@ -1,6 +1,5 @@
 ---
-title: XPath クエリでのブール関数の指定 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: XPath クエリでのブール関数の使用 (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,22 +15,23 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d00bf01660c212b19c529f6012ec29eda60295c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907753"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252589"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理関数の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下の例では、XPath クエリに論理関数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath サンプルの注釈&#40;付き XSD&#41;スキーマの例 SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
+  以下の例では、XPath クエリに論理関数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. not() 論理関数を指定する  
- 次のクエリでは、子要素 **\<順序**を持たないコンテキストノードのすべての **\<Customer >** 子要素が返されます。  
+ このクエリでは、 ** \<** ** \<Order>** 子要素を持たないコンテキストノードのすべての顧客>子要素が返されます。  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -78,8 +78,8 @@ ms.locfileid: "72907753"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>b. true() 論理関数と false() 論理関数を指定する  
- このクエリでは、子要素 **\<順序**を持たないコンテキストノードのすべての **\<Customer >** 子要素が返されます。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. true() 論理関数と false() 論理関数を指定する  
+ このクエリでは、 ** \<Order>** 子要素を持たないコンテキストノードのすべて** \<の顧客>** 子要素が返されます。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
   
 ```  
 /child::Customer[child::Order=false()]  

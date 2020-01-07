@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL ブレークポイント | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL ブレークポイント
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,18 +12,19 @@ ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e170a2177ceefb0329e85f8fbf252cc62de76469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063554"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243139"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL ブレークポイント
   ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの実行の一時停止を指定し、その時点のコード要素の状態を確認できます。  
   
 ## <a name="breakpoints"></a>ブレークポイント  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの実行時に、特定のステートメントでブレークポイントを切り替えることができます。 ブレークポイントが含まれているステートメントに到達すると、デバッガーの実行は一時停止され、変数やパラメーターに存在する値などの情報を表示できます。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの実行時に、特定のステートメントでブレークポイントを切り替えることができます。 ブレークポイントが含まれているステートメントに到達すると、デバッガーの実行は一時停止され、変数やパラメーターに存在する値などの情報を表示できます。  
   
  ブレークポイントの管理は、個別にエディター ウィンドウで、またはまとめて **[ブレークポイント]** ウィンドウで行うことができます。 ブレークポイントを編集することにより、実行を一時停止する条件や、ブレークポイント実行時の動作を指定できます。  
   
@@ -40,6 +41,6 @@ ms.locfileid: "66063554"
 |ブレークポイントの場所を編集する方法について説明します。|[ブレークポイントの位置の編集](edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー情報](transact-sql-debugger-information.md)  
+ [Transact-sql デバッガー情報](transact-sql-debugger-information.md)  
   
   

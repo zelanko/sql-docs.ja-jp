@@ -1,5 +1,5 @@
 ---
-title: メモリ内のすべての値を含むテーブル値パラメーターとしてのデータの送信 (ODBC) |Microsoft Docs
+title: テーブル値パラメーター、メモリ内の値 (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca993b0074f13c6a3c5cfd167f533a408cd21530
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6530c3b558f26e3f75f5cff63f33f2e58c119c6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790800"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246391"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>すべての値がメモリ内にある場合にテーブル値パラメーターとしてデータを送信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  このトピックでは、すべての値がメモリ内にある場合に、データをテーブル値パラメーターとしてストアド プロシージャに送信する方法について説明します。 テーブル値パラメーターを示す別のサンプルについては、「[テーブル&#40;値&#41;パラメーターの使用 ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」を参照してください。  
+  このトピックでは、すべての値がメモリ内にある場合に、データをテーブル値パラメーターとしてストアド プロシージャに送信する方法について説明します。 テーブル値パラメーターを示す別のサンプルについては、「[テーブル値パラメーターの使用 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="prerequisite"></a>前提条件  
  この手順では、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] がサーバーで実行されていることを前提としています。  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -46,7 +46,7 @@ from @Items
   
 1.  SQL パラメーターの変数を宣言します。 この場合、テーブル値はすべてメモリ内に保持されているため、テーブル値の列の値は配列として宣言されます。  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
     // Variables for SQL parameters.  
     #define ITEM_ARRAY_SIZE 20  
@@ -63,7 +63,7 @@ from @Items
   
 2.  パラメーターをバインドします。 テーブル値パラメーターが使用されている場合、パラメーターのバインドは 2 段階の処理になります。 第 1 段階として、次のように、ストアド プロシージャのパラメーターを通常の方法でバインドします。  
   
-    ```  
+    ```cpp
     // Bind parameters for call to TVPOrderEntryDirect.  
     // 1 - Custcode input  
     r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT,SQL_VARCHAR, SQL_C_CHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
@@ -91,7 +91,7 @@ from @Items
   
 3.  第 2 段階として、テーブル値パラメーターの列をバインドします。 最初、テーブル値パラメーターの序数にフォーカスが設定されます。 次に、テーブル値の列は、ストアドプロシージャのパラメーターである場合と同じように、SQLBindParameter を使用してバインドされます。ただし、ParameterNumber には列序数が使用されます。 テーブル値パラメーターがまだある場合は、順番にフォーカスを設定し、その列をバインドします。 最後に、パラメーターのフォーカスが 0 にリセットされます。  
   
-    ```  
+    ```cpp
     // Bind columns for the table-valued parameter (param 2).  
     // First set focus on param 2.  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -105,9 +105,10 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  パラメーターのバッファーを設定します。 `cbTVP` は、サーバーに送信される行数に設定されます。  
+4.  パラメーターのバッファーを設定します。 
+  `cbTVP` は、サーバーに送信される行数に設定されます。  
   
-    ```  
+    ```cpp
     // Populate parameters.  
     cbTVP = 0; // Number of rows available for input.  
     strcpy_s((char *) CustCode, sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
@@ -123,7 +124,7 @@ from @Items
   
 5.  プロシージャを呼び出します。  
 
-    ```  
+    ```cpp
     // Call the procedure.  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  

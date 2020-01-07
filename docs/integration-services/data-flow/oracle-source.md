@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545067"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542206"
 ---
 # <a name="oracle-source"></a>Oracle ソース
 
@@ -52,9 +52,9 @@ Oracle ソースのカスタム プロパティは次のとおりです。 す�
 |プロパティ名|データ型|[説明]|
 |:-|:-|:-|
 |AccessMode|Integer (列挙)|データベースへのアクセスに使用するモード。 指定できる値は、 **[テーブル名]** と **[SQL コマンド]** です。 既定値は **[テーブル名]** です。|
-|BatchSize|Integer|一括読み込みのバッチのサイズ。 これは、配列として抽出されるレコード数です。 <br>このプロパティは、**詳細エディター**によってのみ設定されます|
-|DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
-|PreFetchCount|Integer|プリフェッチされた行の数。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
+|BatchSize|整数|一括読み込みのバッチのサイズ。 これは、配列として抽出されるレコード数です。 <br>このプロパティは、**詳細エディター**によってのみ設定されます|
+|DefaultCodePage|整数|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
+|PreFetchCount|整数|プリフェッチされた行の数。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
 |SqlCommand|String|AccessMode が SQL コマンドに設定されている場合に実行される SQL コマンド。|
 |TableName|String|AccessMode がテーブル名に設定されている場合に使用されるデータを含んだテーブルの名前。|
 
@@ -161,13 +161,13 @@ Oracle ソース エディターを次の図に示します。 これには、[�
 **エラー動作**
 
 Oracle ソースでフローでのエラーを処理する方法を選択します (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる)。
-**関連セクション**:[データのエラー処理](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**関連セクション**:[データのエラー処理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **切り捨て**
 
 Oracle ソースでフローの切り捨てを処理する方法を選択します (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる)。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [Oracle 変換先](oracle-destination.md)を構成する。
 - ご質問がある場合は、[技術者コミュニティ](https://aka.ms/AA5u35j)を参照してください。

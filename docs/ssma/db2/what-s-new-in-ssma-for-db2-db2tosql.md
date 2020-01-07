@@ -2,30 +2,42 @@
 title: SSMA for DB2 の新機能 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 12/04/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 118cb0430a7db1afc2a7537fb19c24b22dc6dd1f
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 75fbcbef02dc19dac47d96431118b75df262b685
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745379"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74834298"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 
 この記事では、各リリースでの DB2 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v85"></a>SSMA v1.0
+
+SSMA for DB2 の v2.0 リリースは、SQL server での JSON 機能の Azure Active Directory 認証と基本的なサポートに加えて、ユーザビリティとパフォーマンスを向上させるように設計された一連の修正をサポートするように強化されています。
+
+さらに、SSMA for DB2 は次のように強化されています。
+
+* GET DIAGNOSTICS ステートメントと ROW_NUMBER の変換を追加するためのサポート。
+* オブジェクト名の先頭のスペースに関連するバグの修正が適用されていません。
+
+> [!IMPORTANT]
+> SSMA v1.0 では、.Net 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 SSMA for DB2 の v2.0 リリースは、ユーザー補助の問題に対処し、最大インデックス列 (16 ではなく 32) に関連するバグを修正するように設計された、SQL Server 2016 以降のバージョンで強化されています。
 
 > [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
+> SSMA バージョン 8.4 7.4 では、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -39,13 +51,13 @@ SSMA for DB2 の v2.0 リリースは、品質と変換のメトリックを向�
 * グローバル一時テーブルの変換の改善
 * 名前が競合している場合に、制約に対するテーブルの優先順位を決定するために、オブジェクトの一意性のチェック順序に関する問題に対処します
 * Z/OS の日付とタイムスタンプの既定の列値の読み込みに関する問題に対処します。
-* Unicode ラインフィード文字 (別名 NEL) のサポート
+* Unicode ラインフィード文字 (NEL とも呼ばれます) をサポートします。
 * RETURN TO 句が指定されていないカーソル変換の問題に対処します
 * ラベルと GOTO のサポートを追加する
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
-SSMA for DB2 の v2.0 リリースは、SSMA コンソールツールから Azure SQL Database への接続に関する問題を解決し、変換時にビュー宣言の COUNT_BIG 列が欠落している問題に対処するために、で強化されています。 さらに、このバージョンには、品質と変換のメトリックを改善するために設計された修正プログラムのセットと、次のような修正が含まれています。
+SSMA for DB2 の v2.0 リリースは、SSMA コンソールツールから Azure SQL Database への接続に関する問題に対処するために、また、変換時にビュー宣言の COUNT_BIG 列が欠落しています。 さらに、このバージョンには、品質と変換のメトリックを改善するために設計された修正プログラムのセットと、次のような修正が含まれています。
 
 * データ移行後の非クラスター化インデックスが無効になっている問題。
 * サイレントインストール中の .NET Framework の検出。
@@ -119,7 +131,7 @@ SSMA for DB2 のバージョン7.5 リリースは、障碍のある方にとっ
 
 SSMA for DB2 のバージョン7.4 リリースには、次の変更が含まれています。
 
-* **[クエリタイムアウト]** オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
+* [**クエリタイムアウト**] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
 
   ![クエリタイムアウトオプション](../media/query-timeout_red.png)
 
@@ -178,7 +190,7 @@ SSMA for DB2 の2016年5月のリリースには、次の変更が含まれて�
 
 SSMA for DB2 の2016年3月のプレビューリリースでは、SQL Server 2016 への移行のサポートが追加されています。
 
-## <a name="january-2016"></a>2016年1月
+## <a name="january-2016"></a>2016 年 1 月
 
 SSMA for DB2 の2016年1月のメンテナンスリリースには、次の変更が含まれています。  
   

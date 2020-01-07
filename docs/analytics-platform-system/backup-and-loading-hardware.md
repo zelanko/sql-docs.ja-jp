@@ -1,6 +1,6 @@
 ---
-title: バックアップとハードウェアの Parallel Data Warehouse の読み込み
-description: エンド ツー エンド データ ウェアハウス ソリューションでは、Analytics Platform System (APS) と並列データ ウェアハウス (PDW) をデプロイするには、データ ウェアハウスのバックアップを作成してデータを読み込むのための計画を作成する必要があります。 取得およびバックアップと読み込みビジネス要件を満たしているサーバーを構成するには、このガイダンスを使用します。
+title: ハードウェアの読み込み & バックアップ
+description: 並列データウェアハウス (PDW) を使用して、Analytics Platform System (APS) にエンドツーエンドのデータウェアハウスソリューションをデプロイするには、データウェアハウスをバックアップしてデータを読み込む計画を作成する必要があります。 このガイダンスを使用して、ビジネス要件を満たすバックアップサーバーと読み込みサーバーを取得して構成します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 90f142a8bb86f99ed5cf5d9ff926bdf849060324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961416"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401358"
 ---
-# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>バックアップとハードウェアの概要 - Parallel Data Warehouse の読み込み
-エンド ツー エンド データ ウェアハウス ソリューションでは、Analytics Platform System (APS) と並列データ ウェアハウス (PDW) をデプロイするには、データ ウェアハウスのバックアップを作成してデータを読み込むのための計画を作成する必要があります。 取得およびバックアップと読み込みビジネス要件を満たしているサーバーを構成するには、このガイダンスを使用します。  
+# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>ハードウェアのバックアップと読み込みの概要-並列データウェアハウス
+並列データウェアハウス (PDW) を使用して、Analytics Platform System (APS) にエンドツーエンドのデータウェアハウスソリューションをデプロイするには、データウェアハウスをバックアップしてデータを読み込む計画を作成する必要があります。 このガイダンスを使用して、ビジネス要件を満たすバックアップサーバーと読み込みサーバーを取得して構成します。  
   
-## <a name="acquire-and-configure-backup-servers"></a>取得し、バックアップ サーバーの構成  
+## <a name="acquire-and-configure-backup-servers"></a>バックアップサーバーの取得と構成  
 ![バックアップ プロセス](media/backup-process.png "バックアップ プロセス")  
   
-PDW のデータベースをバックアップするには、バックアップ サーバーが 1 つまたは複数必要があります。 既存のハードウェアを使用して、または新しいハードウェアを購入することができます。 詳細については、次を参照してください。[の取得と Backup Server を構成](acquire-and-configure-backup-server.md)します。 この手順では、[バックアップ サーバー容量の計画ワークシート](backup-capacity-planning-worksheet.md)バックアップに最適なソリューションを計画します。  
+PDW データベースをバックアップするには、1つまたは複数のバックアップサーバーが必要です。 既存のハードウェアを使用することも、新しいハードウェアを購入することもできます。 詳細については、「[バックアップサーバーの取得と構成](acquire-and-configure-backup-server.md)」を参照してください。 これらの手順には、backup [server の容量計画ワークシート](backup-capacity-planning-worksheet.md)が含まれており、バックアップのための適切なソリューションを計画するのに役立ちます。  
   
-## <a name="acquire-and-configure-loading-servers"></a>取得し、構成サーバーの読み込み  
-![読み込みプロセス](media/loading-process.png "読み込みプロセス")  
+## <a name="acquire-and-configure-loading-servers"></a>読み込み中のサーバーの取得と構成  
+![処理の読み込み](media/loading-process.png "処理の読み込み")  
   
-データを読み込むには、1 つまたは複数のサーバーの読み込みする必要があります。 既存の ETL は、自分または他のサーバーを使用することができますか、新しいサーバーを購入することができます。 詳細については、次を参照してください。 [Acquire 読み込みサーバーの構成と](acquire-and-configure-loading-server.md)します。 この手順では、[サーバー容量の計画ワークシートの読み込み](loading-server-capacity-planning-worksheet.md)読み込みに最適なソリューションを計画します。  
+データを読み込むには、1つまたは複数の読み込みサーバーが必要です。 独自の既存の ETL や他のサーバーを使用することも、新しいサーバーを購入することもできます。 詳細については、「[読み込みサーバーの取得と構成](acquire-and-configure-loading-server.md)」を参照してください。 これらの手順には、読み込みのための適切なソリューションを計画する際に役立つ、[サーバー容量計画の読み込みワークシート](loading-server-capacity-planning-worksheet.md)が含まれています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [バックアップと復元の概要](backup-and-restore-overview.md)  
-[負荷の概要](load-overview.md)  
+[読み込みの概要](load-overview.md)  
   

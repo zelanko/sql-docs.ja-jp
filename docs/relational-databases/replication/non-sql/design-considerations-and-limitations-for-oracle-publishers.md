@@ -70,7 +70,7 @@ ms.locfileid: "71710936"
   
 -   シノニム  
   
- サポートされるデータ型の詳細については、「 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)」を参照してください。  
+ サポートされるデータ型の詳細については、「[Oracle パブリッシャーのデータ型マッピング](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)」を参照してください。  
   
 ## <a name="differences-between-oracle-and-sql-server"></a>Oracle と SQL Server の違い  
   
@@ -89,14 +89,14 @@ ms.locfileid: "71710936"
   
 -   LOB の列に加え、LOB ではない列を行の更新に含めるか、同じ Oracle トランザクションの一部として、その行の LOB ではない列を更新します。 どちらの場合でも、LOB ではない列の更新により、トリガーが起動します。  
   
- LOB の詳細については、「 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)」を参照してください。  
+ LOB の詳細については、「[Oracle パブリッシャーのデータ型マッピング](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)」を参照してください。  
   
 ### <a name="unique-indexes-and-constraints"></a>一意インデックスと制約  
  スナップショット レプリケーションとトランザクション レプリケーションの両方において、一意のインデックスおよび制約 (主キー制約を含む) に含まれる列は、特定の制限事項に従う必要があります。 これらの制限に従わない場合、制約またはインデックスはレプリケートされません。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインデックスに許容される最大列数は 16 です。  
   
--   一意の制約に含まれるすべての列は、サポートされているデータ型である必要があります。 データ型の詳細については、「 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
+-   一意の制約に含まれるすべての列は、サポートされているデータ型である必要があります。 データ型の詳細については、「[Oracle パブリッシャーのデータ型マッピング](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
   
 -   一意の制約に含まれるすべての列は、パブリッシュする必要があります (フィルター選択はできません)。  
   
@@ -136,7 +136,8 @@ ms.locfileid: "71710936"
   
 -   Oracle パブリケーションに対するサブスクライバーは、バックアップから自動的に初期化することはできません。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。  
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。Oracle パブリッシャーでは、行数検証をサポートしています。詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。  
+
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
   

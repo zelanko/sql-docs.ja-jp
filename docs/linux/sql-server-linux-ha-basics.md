@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586753"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243588"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
 
@@ -57,7 +57,7 @@ Linux では、多くのコマンドを昇格された特権で実行する必�
 あるサーバーから別のサーバーへのファイルのコピーは、Linux で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を使用するすべてのユーザーが実行できる必要があるタスクです。 このタスクは、AG の構成にとって非常に重要です。
 
 アクセス許可の問題などは、Windows ベースのインストールだけでなく、Linux にも存在する可能性があります。 ただし、Windows 上のサーバー間でのコピー方法に慣れているユーザーは、Linux での実行方法についてはよく知らない場合もあるでしょう。 一般的な方法は、コマンドライン ユーティリティ `scp` (セキュリティで保護されたコピーを意味します) を使用することです。 `scp` では、バックグラウンドで OpenSSH が使用されます。 SSH は、セキュリティで保護されたシェルを意味します。 Linux ディストリビューションによっては、OpenSSH 自体はインストールされない場合もあります。 その場合は、最初に OpenSSH をインストールする必要があります。 OpenSSH の構成の詳細については、各ディストリビューションに関する次のリンクを参照してください。
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -83,7 +83,7 @@ Windows ベースの SMB 共有を使用することもできます。[!INCLUDE[
 ### <a name="configure-the-firewall"></a>ファイアウォールの構成
 Windows と同様に、Linux ディストリビューションにはファイアウォールが組み込まれています。 組織のサーバーに外部ファイアウォールが使用されている場合は、Linux でファイアウォールを無効にすることが許容される可能性もあります。 ただし、ファイアウォールがどこで有効になっているかに関係なく、ポートは開いている必要があります。 次の表は、Linux 上の高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイに必要な、一般的なポートを示したものです。
 
-| [ポート番号] | 型     | [説明]                                                                                                                 |
+| ポート番号 | 種類     | [説明]                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (使用されている場合) - End Point Mapper                                                                                          |
@@ -116,7 +116,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **ファイアウォールのドキュメント:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>可用性のための [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] パッケージをインストールする
@@ -160,7 +160,7 @@ Ubuntu には、可用性に関するガイドはありません。
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker の概念と用語
 このセクションでは、Pacemaker の実装に関する一般的な概念と用語について説明します。
 
-#### <a name="node"></a>ノード
+#### <a name="node"></a>Node
 ノードとは、クラスターに参加しているサーバーのことです。 Pacemaker クラスターでは、最大 16 のノードがネイティブにサポートされています。 この数は、Corosync が追加のノードで実行されていなけば超えることもできますが、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] には Corosync が必須です。 したがって、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ベースの構成に対してクラスターで設定できるノードの最大数は 16 になります。これは Pacemaker の制限であり、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] によって課せられる AG または FCI の最大制限とは関係ありません。 
 
 #### <a name="resource"></a>リソース
@@ -238,5 +238,5 @@ WSFC と同様に、Pacemaker では冗長ネットワークの使用が推奨�
 #### <a name="other-linux-distributions"></a>他の Linux ディストリビューション
 Linux では、Pacemaker クラスターのすべてのノードが同じディストリビューション上に存在している必要があります。 たとえば、RHEL ノードは、SLES ノードを持つ Pacemaker クラスターの一部にすることはできません。 この問題の主な理由は、前に説明したとおりです。つまり、ディストリビューションのバージョンと機能が異なることで、正常に機能しない可能性があるためです。 ディストリビューションの混合については、WSFC と Linux の混合と同じ条件が適用されます。つまり、None または 分散型 AG を使用してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 [SQL Server on Linux 用の Pacemaker クラスターをデプロイする](sql-server-linux-deploy-pacemaker-cluster.md)

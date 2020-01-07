@@ -1,5 +1,5 @@
 ---
-title: システムプール (Transact-sql) (_c) |。)Microsoft Docs
+title: dm_exec_compute_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -8,37 +8,37 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
-- sys.dm_dm_compute_pools
-- dm_dm_compute_pools_TSQL
-- dm_dm_compute_pools
+- sys.dm_exec_compute_pools
+- dm_exec_compute_pools_TSQL
+- dm_exec_compute_pools
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- sys.dm_dm_compute_pools dynamic management view
+- sys.dm_exec_compute_pools dynamic management view
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0b21f517b540c69822dd8b1da4aa6a4cf8b8616f
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d749b9a7d9689426bffafe20ee7ab46ce199ffbb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532959"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254609"
 ---
-# <a name="sysdm_dm_compute_pools-transact-sql"></a>システムプール (Transact-sql) (_r) (_c)
+# <a name="sysdm_exec_compute_pools-transact-sql"></a>dm_exec_compute_pools (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|name|`sysname`|コンピューティングプールの名前。 NULL 値は許可されません。 既定のコンピューティングプールの `default` を返します。 |
+|name|`sysname`|コンピューティングプールの名前。 NULL 値は許可されません。 既定`default`のコンピューティングプールに対してを返します。 |
 |compute_pool_id|`int`|プールの一意の識別子。 このビューのキー。|  
-|設置|`sysname`|SQL ビッグデータクラスター内のコントローラーへのエンドポイント。 NULL 値は許可されません。 |
+|location|`sysname`|SQL ビッグデータクラスター内のコントローラーへのエンドポイント。 NULL 値は許可されません。 |
 
 ## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]では、`VIEW SERVER STATE` のアクセス許可が必要です。
+で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。
 
 ## <a name="see-also"></a>参照
 
-[[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]とは何](../../big-data-cluster/big-data-cluster-overview.md)ですか。
+[概要[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)

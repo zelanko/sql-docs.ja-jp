@@ -1,6 +1,5 @@
 ---
-title: 'Sql: マップト | を使用した XML ドキュメントからのスキーマ要素の除外Microsoft Docs'
-ms.custom: ''
+title: 'Sql: マップされた XML ドキュメントからスキーマ要素を除外する'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,13 +21,14 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d466ad57d7644f73d7fdd44df62aac6a0c2a1b0b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905962"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257440"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped を使用した XML ドキュメントからのスキーマ要素の除外
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "72905962"
   
  **Sql: マップ**された注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 注釈を指定する  
- 他のソースからの XSD スキーマがあるとします。 この XSD スキーマは\<Person で構成さ**れています。 Contact >** 要素には、 **ContactID**、 **FirstName**、 **LastName**、および**ホームアドレス**属性が含まれています。  
+ 他のソースからの XSD スキーマがあるとします。 この XSD **** スキーマは**** **** **** ** \<** 、ContactID、FirstName、LastName、およびホームアドレスの属性を持つ Person>要素で構成されています。  
   
  この XSD スキーマを AdventureWorks データベースの Person. Contact テーブルにマップする場合、Employee テーブルには従業員の自宅の住所が格納されていないため、 **sql:** mapping がホーム**アドレス**属性に指定されています。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   
- スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<person** . contact > 要素は、Person. contact テーブルにマップされ、すべての属性は、Person. contact テーブルの同じ名前の列にマップされます。  
+ スキーマの残りの部分に対しては、既定のマッピングが適用されます。 Person. contact ** \<>** 要素は、contact テーブルにマップされ、すべての属性は、person. contact テーブル内の同じ名前の列にマップされます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -105,7 +105,7 @@ ms.locfileid: "72905962"
   
  ContactID、FirstName、LastName は存在しますが、このマッピングスキーマでは**sql:** mapping 属性に0が指定されていないため、ホームアドレスが指定されていないことに注意してください。  
   
-## <a name="see-also"></a>「  
- [テーブルおよび列&#40;への XSD 要素と属性の既定のマッピング SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>参照  
+ [テーブルおよび列への XSD 要素と属性の既定のマッピング &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

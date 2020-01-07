@@ -1,6 +1,5 @@
 ---
-title: XML アップデートグラムを使用したデータの挿入 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: XML アップデートグラムを使用したデータの挿入 (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -33,17 +32,18 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87e63076b0c078484d3cfac9128459cb93b06098
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638062"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252499"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  アップデートグラムは、レコードインスタンスが > ブロックの**後の\<** に存在するが、> ブロックの**前に**対応する\<内に存在しない場合に挿入操作を示します。 この場合、アップデートグラムでは、データベースへの **>** ブロックの後に\<にレコードを挿入します。  
+  アップデートグラムは、レコードインスタンスが** \<after>** ブロックに存在していても、対応** \<する before>** ブロックに含まれていない場合に挿入操作を示します。 この場合、アップデートグラムでは、 ** \<after>** ブロックにレコードをデータベースに挿入します。  
   
  挿入操作のアップデートグラムの形式は次のとおりです。  
   
@@ -66,29 +66,30 @@ ms.locfileid: "73638062"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>> ブロックの前に \<  
- 挿入操作では、 **> ブロック前の\<** を省略できます。 省略可能な**マッピングスキーマ**属性が指定されていない場合、アップデートグラムで指定した **\<ElementName >** はデータベーステーブルにマップされ、子要素または属性はテーブル内の列にマップされます。  
+## <a name="before-block"></a>\<> ブロックの前  
+ 挿入操作では、 ** \<before>** ブロックを省略できます。 省略可能な**マッピングスキーマ**属性が指定されていない場合、アップデートグラムで指定した** \<ElementName>** はデータベーステーブルにマップされ、子要素または属性はテーブル内の列にマップされます。  
   
-## <a name="after-block"></a>> ブロックの後に \<  
- **\<>** ブロックの後に1つ以上のレコードを指定できます。  
+## <a name="after-block"></a>\<> ブロックの後  
+ ** \<After>** ブロックに1つ以上のレコードを指定できます。  
   
- **\<後 >** ブロックで特定の列の値が指定されていない場合、アップデートグラムでは注釈付きスキーマに指定されている既定値 (スキーマが指定されている場合) が使用されます。 スキーマで列の既定値が指定されていない場合、アップデートグラムではこの列に対して明示的な値が指定されず、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 既定値 (指定されている場合) がこの列に割り当てられます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 省略可能な**updg: returnid**属性を使用して、id 型の列を含むテーブルにレコードが追加されたときにシステムによって生成される id 値を返します。  
+ After>ブロックが特定の列の値を提供しない場合、アップデートグラムは注釈付きスキーマで指定された既定値を使用します (スキーマが指定されている場合)。 ** \<** スキーマで列の既定値が指定されていない場合、アップデートグラムではこの列に明示的な値が指定され[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ず、代わりに、この列に既定値 (指定されている場合) が割り当てられます。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 省略可能な**updg: returnid**属性を使用して、id 型の列を含むテーブルにレコードが追加されたときにシステムによって生成される id 値を返します。  
   
 ## <a name="updgid-attribute"></a>updg:id 属性  
- アップデートグラムでレコードのみを挿入する場合、アップデートグラムで**updg: id**属性は必要ありません。 **Updg: id**の詳細については、「 [XML アップデート&#40;グラム SQLXML 4.0&#41;を使用してデータを更新する](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)」を参照してください。  
+ アップデートグラムでレコードのみを挿入する場合、アップデートグラムで**updg: id**属性は必要ありません。 **Updg: id**の詳細については、「 [XML アップデートグラムを使用したデータの更新 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity 属性  
  アップデートグラムで、ID 型の列を含むテーブルにレコードを挿入すると、オプションの**updg: identity**属性を使用して、システムに割り当てられた値をキャプチャできます。 キャプチャした値は、後続のアップデートグラム操作で使用できます。 アップデートグラムの実行時に、 **updg: returnid**属性を指定することによって生成される id 値を返すことができます。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
- **Updg: guid**属性は、グローバル一意識別子を生成する省略可能な属性です。 この値は、指定されている **\<同期 >** ブロック全体のスコープ内に残ります。 この値は、 **\<sync >** ブロックの任意の場所で使用できます。 属性は、 **Newguid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 関数を呼び出して、一意の識別子を生成します。  
+ **Updg: guid**属性は、グローバル一意識別子を生成する省略可能な属性です。 この値は、指定されている** \<同期>** ブロック全体のスコープ内に残ります。 この値は、 ** \<同期>** ブロックの任意の場所で使用できます。 属性は、一意の識別子を生成するために**newguid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]関数を呼び出します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
  アップデートグラムの例を使用する前に、次の点に注意してください。  
   
--   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラム&#40;SQLXML 4.0&#41;での注釈付きマッピングスキーマの指定](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
+-   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
   
 -   ほとんどの例では、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。 すべての更新内容は、このデータベースのテーブルに適用されます。  
   
@@ -159,7 +160,7 @@ ms.locfileid: "73638062"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. アップデートグラムを使用して複数のレコードを挿入する  
- このアップデートグラムでは、HumanResources.Shift テーブルに 2 つの新しい勤務時間レコードを追加します。 アップデートグラムでは、> ブロックの**前に**オプションの\<が指定されていません。  
+ このアップデートグラムでは、HumanResources.Shift テーブルに 2 つの新しい勤務時間レコードを追加します。 アップデートグラムでは、省略可能** \<な before>** ブロックが指定されていません。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -186,7 +187,7 @@ ms.locfileid: "73638062"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- この例の別のバージョンは、2つの従業員を挿入するために1つのブロックではなく > ブロックの後に2つの異なる **\<** を使用するアップデートグラムです。 これは有効であり、次のようにエンコードできます。  
+ この例の別のバージョンは、2つの従業員を挿入するために1つのブロックではなく** \<、** 2 つの>ブロックを使用するアップデートグラムです。 これは有効であり、次のようにエンコードできます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -210,12 +211,13 @@ ms.locfileid: "73638062"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. SQL Server で有効で、XML では有効でない文字を処理する  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、これは有効な XML 文字では有効ではありませんが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別子ですが、有効な XML 識別子はエンコード値として ' __xHHHH\_\_' を使用してエンコードできます。ここで、HHHH は、の文字の4桁の16進数の UCS 2 コードを表します。最上位ビットから順に並べ替えます。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、有効な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]識別子である xml 文字では有効ではありませんが、有効な xml 識別子は\_\_エンコード値として ' __xHHHH ' を使用してエンコードできます。ここで、HHHH は、最上位ビットから順に、文字の4桁の16進数の UCS 2 コードを表します。  
   
 > [!NOTE]  
 >  この例では Northwind データベースを使用します。 この[Microsoft Web サイト](https://www.microsoft.com/download/details.aspx?id=23654)からダウンロードできる SQL スクリプトを使用して、Northwind データベースをインストールできます。  
   
- また、要素名は角かっこ ([]) で囲む必要があります。 文字 [および] は XML では無効であるため、これらの文字を _x005B\_ としてエンコードし、それぞれ\_を _x005D する必要があります。 マッピング スキーマを使用して、空白文字など有効でない文字を含まない要素名を指定することもできます。 この場合、マッピング スキーマで必要なマッピングが行われるので、これらの文字をエンコードする必要はありません。  
+ 要素名も、角かっこ ([ ]) で囲む必要があります。 文字 [および] は XML では有効でないため、それぞれを _x005B\_としてエンコード\_し、_x005D する必要があります。 マッピング スキーマを使用して、空白文字など有効でない文字を含まない要素名を指定することもできます。 この場合、マッピング スキーマで必要なマッピングが行われるので、これらの文字をエンコードする必要はありません。  
   
  次のアップデートグラムでは、Northwind データベースの Order Details テーブルにレコードを追加します。  
   
@@ -250,7 +252,7 @@ ms.locfileid: "73638062"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. at-identity 属性を使用して、IDENTITY 型の列に挿入されている値を取得する  
  次のアップデートグラムでは、Sales.SalesOrderHeader テーブルと Sales.SalesOrderDetail テーブルに 1 つずつ、合計 2 つのレコードを挿入します。  
   
- このアップデートグラムでは、最初にレコードを Sales.SalesOrderHeader テーブルに追加します。 このテーブルで、SalesOrderID 列は IDENTITY 型の列です。 このため、このレコードをテーブルに追加すると、アップデートグラムでは、 **id**属性を使用して、割り当てられた salesorderid 値を "x" (プレースホルダー値) としてキャプチャします。 次に、updatSalesOrderDetail > 要素の SalesOrderID \<属性の値として、この**at id**変数を指定します。  
+ このアップデートグラムでは、最初にレコードを Sales.SalesOrderHeader テーブルに追加します。 このテーブルで、SalesOrderID 列は IDENTITY 型の列です。 このため、このレコードをテーブルに追加すると、アップデートグラムでは、 **id**属性を使用して、割り当てられた salesorderid 値を "x" (プレースホルダー値) としてキャプチャします。 次に、updat> SalesOrderDetail 要素の SalesOrderID 属性\<の値として、この**at id**変数を指定します。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -384,7 +386,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  このアップデートグラムでは XSD スキーマを指定しています。アップデートグラム要素と属性に既定のマッピングはありません。 このスキーマでは、要素および属性からデータベース テーブルおよび列への必要なマッピングが提供されます。  
   
- 次のスキーマ (CustOrderSchema .xml) では、 **OrderID**属性と**EmployeeID**属性で構成される **\<custorder >** 要素について説明しています。 スキーマをさらに興味深いものにするため、 **EmployeeID**属性には既定値が割り当てられています。 アップデートグラムでは、属性の既定値は、アップデートグラムでその属性が指定されていない挿入操作のみに使用されます。  
+ 次のスキーマ (custorderschema .xml) は、 **OrderID**属性と**EmployeeID**属性で構成される** \<custorder>** 要素を記述します。 スキーマをさらに興味深いものにするため、 **EmployeeID**属性には既定値が割り当てられています。 アップデートグラムでは、属性の既定値は、アップデートグラムでその属性が指定されていない挿入操作のみに使用されます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -412,7 +414,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- マッピングスキーマを指定するアップデートグラムのその他の例については、「[アップデートグラム&#40;SQLXML 4.0&#41;での注釈付きマッピングスキーマの指定](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
+ マッピングスキーマを指定するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -483,7 +485,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- XSD スキーマでは、 **\<fname >** 要素に**nillable = "true"** が指定されています。 このスキーマを使用するアップデートグラムは次のとおりです。  
+ XSD スキーマでは、 ** \<fname>** 要素に**nillable = "true"** が指定されています。 このスキーマを使用するアップデートグラムは次のとおりです。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -503,7 +505,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- アップデートグラムでは、> ブロックの**後\<** の **\<fname >** 要素に**xsi: nil**が指定されています。 したがって、このアップデートグラムを実行すると、テーブルの first_name 列に NULL 値が挿入されます。  
+ このアップデートグラムでは、 ** \<after>** ブロックの** \<fname>** 要素に**xsi: nil**が指定されています。 したがって、このアップデートグラムを実行すると、テーブルの first_name 列に NULL 値が挿入されます。  
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -531,7 +533,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. アップデートグラムで名前空間を指定する  
  アップデートグラム内の要素で名前空間を宣言し、その名前空間に属する要素として、同じ要素を保持することができます。 この場合、対応するスキーマで同じ名前空間を宣言する必要があり、対象の名前空間に要素が属している必要があります。  
   
- たとえば、次のアップデートグラム (Updategram-elementhavingnamespace.xml) では、 **\<Order >** 要素は、要素で宣言された名前空間に属します。  
+ たとえば、次のアップデートグラム (updategram-elementhavingnamespace.xml) では、 ** \<Order>** 要素は、要素で宣言された名前空間に属します。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -612,13 +614,13 @@ CustOrder(OrderID, EmployeeID, OrderType)
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. XML データ型列にデータを挿入する  
- **Xml**データ型は [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]で導入されました。 アップデートグラムを使用して、 **xml**データ型の列に格納されているデータを挿入および更新するには、次のように準備します。  
+ **Xml**データ型はで[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]導入されました。 アップデートグラムを使用して、 **xml**データ型の列に格納されているデータを挿入および更新するには、次のように準備します。  
   
 -   **Xml**列は、既存の行を識別するためには使用できません。 そのため、アップデートグラムの「 **updg: before** 」セクションには含めることができません。  
   
 -   **Xml**列に挿入された xml フラグメントのスコープ内にある名前空間は保持され、その名前空間宣言は挿入されたフラグメントの最上位要素に追加されます。  
   
- たとえば、次のアップデートグラム (SampleUpdateGram .xml) では、 **\<Desc >** 要素によって、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] サンプルデータベースの Production > productdescription テーブルの productdescription 列が更新されます。 このアップデートグラムの結果として、ProductDescription 列の XML コンテンツが **\<Desc >** 要素の xml コンテンツで更新されます。  
+ たとえば、次のアップデートグラム (sampleupdategram .xml) では、 ** \<Desc>** 要素によって、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]サンプルデータベースの Production>productdescription テーブルの productdescription 列が更新されます。 このアップデートグラムの結果として、productdescription 列の xml コンテンツが** \<Desc>** 要素の xml コンテンツに更新されます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -728,6 +730,6 @@ CustOrder(OrderID, EmployeeID, OrderType)
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [アップデートグラムの&#40;セキュリティに関する考慮事項 SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

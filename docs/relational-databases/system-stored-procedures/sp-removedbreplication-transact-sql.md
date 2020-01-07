@@ -1,6 +1,7 @@
 ---
-title: sp_removedbreplication (Transact-SQL) |Microsoft Docs
-ms.custom: ''
+title: sp_removedbreplication (T-sql)
+description: SQL Server レプリケーション用にパブリケーションデータベースのすべてのレプリケーションオブジェクトを削除するために使用する sp_removedbreplication ストアドプロシージャについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fdae843c3918013ec850c5d807853c10a8f3f190
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c7da3db641d6e0b9aa53d570a7d0cf9bdc731477
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771037"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322254"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,9 +29,9 @@ ms.locfileid: "68771037"
   このストアド プロシージャにより、SQL Server のパブリッシャー インスタンス側のパブリケーション データベース、または SQL Server のサブスクライバー インスタンス側のサブスクリプション データベースから、すべてのレプリケーション オブジェクトが削除されます。 適切なデータベースで実行するか、または同じインスタンスにある別のデータベースのコンテキストで実行する場合は、レプリケーション オブジェクトを削除するデータベースを指定します。 このプロシージャでは、ディストリビューション データベースなどその他のデータベースからオブジェクトが削除されることはありません。  
   
 > [!NOTE]  
->  この手順は、レプリケーションオブジェクトを削除する他の方法が失敗した場合にのみ使用してください。  
+>   このプロシージャは、他の方法でレプリケーション オブジェクトを削除できなかった場合にのみ使用してください。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +42,15 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname* のデータ型は **sysname**で、既定値は NULL です。 NULL の場合は、現在のデータベースが使用されます。  
+`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname*は**sysname**,、既定値は NULL です。 NULL の場合は、現在のデータベースが使用されます。  
   
 `[ @type = ] type`データベースオブジェクトを削除するレプリケーションの種類を指定します。 *種類*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
 |||  
 |-|-|  
-|**tran**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
-|**merge**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
-|**both**標準|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
+|**さん**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
+|**マージ**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
+|**both** (既定値)|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -81,8 +82,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ハードウェアのインストール-Analytics Platform System (APS) |Microsoft Docs
+title: ハードウェアのインストール
 description: この記事では、SQL Server PDW アプライアンスのハードウェアを移動、開梱、およびインストールする方法について説明します。 この記事は情報提供のみを目的としており、プロセスを理解するのに役立ちます。 アプライアンスをオンにする前に、アプライアンスを開梱し、インストールして、確認しておく必要があります。 データセンターへのアクセス、電力、イーサネット接続などの項目については、お客様による参加が必要です。
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc57311ae38977643be697eea5fc095ce514b0d2
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176142"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401123"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Analytics Platform System (APS) アプライアンスのハードウェアのインストール
 この記事では、SQL Server PDW アプライアンスのハードウェアを移動、開梱、およびインストールする方法について説明します。 この記事は情報提供のみを目的としており、プロセスを理解するのに役立ちます。 アプライアンスをオンにする前に、アプライアンスを開梱し、インストールして、確認しておく必要があります。 データセンターへのアクセス、電力、イーサネット接続などの項目については、お客様による参加が必要です。  

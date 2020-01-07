@@ -1,6 +1,5 @@
 ---
-title: XPath クエリでの算術演算子の指定 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: XPath クエリで算術演算子を使用する (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907769"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252631"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での算術演算子の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下の例では、XPath クエリに算術演算子を指定する方法を示します。 この例の XPath クエリは、SampleSchema1.xml に格納されているマッピング スキーマに対して指定されます。 このサンプルスキーマの詳細については、「 [XPath サンプルの注釈&#40;付き XSD&#41;スキーマの例 SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
+  以下の例では、XPath クエリに算術演算子を指定する方法を示します。 この例の XPath クエリは、SampleSchema1.xml に格納されているマッピング スキーマに対して指定されます。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-specify-the--arithmetic-operator"></a>A. \* 算術演算子を指定する  
- この XPath クエリは、指定された述語を満たす **\<OrderDetail >** 要素を返します。  
+### <a name="a-specify-the--arithmetic-operator"></a>A. * 算術演算子を指定する  
+ この XPath クエリは、指定された述語を満たす** \<orderdetail>** 要素を返します。  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- このクエリでは、`child` は軸で、`OrderDetail` はノードテストです ( **Orderdetail**が **\<要素 > ノード**である場合は TRUE。これは、 **\<要素 >** ノードが**子**軸のプライマリノードであるためです)。 すべての **\<OrderDetail >** 要素ノードでは、述語内のテストが適用され、条件を満たすノードだけが返されます。  
+ このクエリでは`child` 、は軸で`OrderDetail` 、はノードテストです ( **orderdetail**が>の** \<要素ノード**である場合は TRUE になります。これは、 ** \<要素>** ノードが**子**軸のプライマリノードであるためです)。 すべての** \<orderdetail>** 要素ノードでは、述語内のテストが適用され、条件を満たすノードだけが返されます。  
   
 > [!NOTE]  
 >  XPath の数値は倍精度浮動小数点数であり、例のように浮動小数点数を比較する場合は丸めが実行されます。  

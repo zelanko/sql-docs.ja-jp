@@ -1,5 +1,5 @@
 ---
-title: レッスン 1:Azure Storage アカウントとコンテナーを作成する |Microsoft Docs
+title: 'レッスン 1: Azure Storage アカウントとコンテナーを作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 69d09b5b058af3404226905bdbe0ef83f33982cf
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176181"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253503"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>レッスン 1:Azure Storage アカウントとコンテナーを作成する
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>レッスン 1: Azure Storage アカウントとコンテナーを作成する
   Azure Storage で SQL Server データファイルの格納を開始するには、まず Azure Storage アカウントと blob コンテナー、および shared access signature を作成する必要があります。 レッスン1では、Azure 管理ポータルにログインし、ストレージアカウント、blob コンテナー、および共有アクセス署名を作成する手順について説明します。  
   
- 既定では、ストレージ アカウントの所有者だけがそのアカウント内の BLOB、テーブル、およびキューにアクセスすることができます。 この新しい SQL Server の機能強化を使用して、ストレージ アカウント アクセス キーを共有しないで、これらのリソースにアクセスするには、次の操作をする必要があります。  
+ 既定では、ストレージ アカウントの所有者のみがそのアカウントを使って BLOB、テーブル、キューなどにアクセスできます。 この新しい SQL Server の機能強化を使用して、ストレージ アカウント アクセス キーを共有しないで、これらのリソースにアクセスするには、次の操作をする必要があります。  
   
 -   コンテナーの権限をプライベートに設定します。  
   
@@ -28,12 +28,12 @@ ms.locfileid: "70176181"
   
 -   保存されたアクセス ポリシーを使用して、コンテナーまたは BLOB の Shared Access Signature を管理します。 保存されたアクセス ポリシーは、Shared Access Signatures をコントロールするもう 1 つの手段となり、それを取り消す直接的な手段にもなります。  
   
- 詳細については、「 [Azure Storage リソースへのアクセスの管理](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)」を参照してください。  
+ 詳細については、 [Azure Storage リソースへのアクセスの管理](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)に関するページを参照してください。  
   
-## <a name="create-storage-account"></a>ストレージ アカウントの作成  
+## <a name="create-storage-account"></a>[ストレージ アカウントを作成]  
  Azure 管理ポータルでストレージアカウントを作成するには、次の手順を実行します。  
   
-1.  アカウントを使用して[Azure 管理ポータル](https://manage.windowsazure.com)にログインします。 Azure アカウントをお持ちでない場合は、 [azure 無料試用版](http://www.windowsazure.com/pricing/free-trial/)にアクセスしてください。  
+1.  アカウントを使用して[Azure 管理ポータル](https://manage.windowsazure.com)にログインします。 Azure アカウントを持っていない場合は、 [Azure の無料試用版サイト](https://www.windowsazure.com/pricing/free-trial/)にアクセスしてください。  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   
@@ -41,18 +41,19 @@ ms.locfileid: "70176181"
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
-## <a name="create-a-blob-container"></a>Blob コンテナーを作成する  
- Azure では、コンテナーは一連の blob をグループ化します。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 ストレージ アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。 ストレージサイズの制限に関する最新情報については、「 [.net での Azure Blob Storage サービスの使用方法](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)」を参照してください。  
+## <a name="create-a-blob-container"></a>BLOB コンテナーを作成する  
+ Azure では、コンテナーは一連の blob をグループ化します。 すべての BLOB はコンテナーに格納されている必要があります。 ストレージ アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 また、1 つのコンテナーに保存できる BLOB の数も無制限です。 ストレージサイズの制限に関する最新情報については、「 [.net での Azure Blob Storage サービスの使用方法](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)」を参照してください。  
   
  Azure でコンテナーを作成するには、次の手順を実行します。  
   
-1.  [Azure 管理ポータル](https://manage.windowsazure.com)にログインします。  
+1.  
+  [Azure 管理ポータル](https://manage.windowsazure.com)にログインします。  
   
-2.  ストレージアカウントを選択し、 **[コンテナー]** タブをクリックし、画面の下部にある **[コンテナーの追加]** をクリックすると、新しいダイアログボックスが開きます。  
+2.  ストレージアカウントを選択し、[**コンテナー** ] タブをクリックし、画面の下部にある [**コンテナーの追加**] をクリックすると、新しいダイアログボックスが開きます。  
   
 3.  コンテナーの名前を入力します。  
   
-4.  アクセスの **[種類]** で **[プライベート]** を選択します。 アクセスをプライベートに設定すると、コンテナーと blob のデータは、Azure アカウントの所有者のみが読み取ることができます。  
+4.  [アクセスの**種類**] で [**プライベート**] を選択します。 アクセスをプライベートに設定すると、コンテナーと blob のデータは、Azure アカウントの所有者のみが読み取ることができます。  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
@@ -61,6 +62,5 @@ ms.locfileid: "70176181"
   
  **次のレッスン:**  
   
- [レッスン 2:コンテナーでポリシーを作成し、Shared Access Signature &#40;の SAS&#41;キーを生成する](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
-  
+ [レッスン2。コンテナーでポリシーを作成し、SAS&#41; キー &#40;Shared Access Signature を生成する](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
