@@ -16509,6 +16509,16 @@
       "source_path": "docs/xquery/index.md",
       "redirect_url": "/sql/xquery/xquery-language-reference-sql-server",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md",
+      "redirect_url": "https://docs.microsoft.com/azure/azure-subscription-service-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/download.md",
+      "redirect_url": "/sql/azure-data-studio/download-azure-data-studio",
+      "redirect_document_id": true
+    }    
   ]
 }
