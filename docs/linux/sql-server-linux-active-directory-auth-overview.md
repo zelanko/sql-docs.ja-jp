@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67834421"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329964"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>SQL Server on Linux に対する Active Directory 認証
 
@@ -35,7 +35,7 @@ AD 認証には、次のように [!INCLUDE[ssNoVersion](../includes/ssnoversion
 - 各ユーザーは組織全体で 1 つの ID を持っているため、どの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインがどのユーザーに対応しているかを追跡する必要はありません。   
 - AD を使用すると、組織全体に一元的なパスワード ポリシーを適用できます。   
 
-## <a name="configuration-steps"></a>構成手順
+## <a name="configuration-steps"></a>構成の手順
 
 Active Directory 認証を使用するには、ネットワーク上に AD ドメイン コントローラー (Windows) が必要です。
 
@@ -44,8 +44,8 @@ AD 認証を構成する方法の詳細については、チュートリアル�
 1. [SQL Server ホストを Active Directory ドメインに参加させる](sql-server-linux-active-directory-join-domain.md)。
 1. [SQL Server 用に AD ユーザーを作成し、ServicePrincipalName を設定する](sql-server-linux-active-directory-authentication.md#createuser)。
 1. [SQL Server サービス キータブを構成する](sql-server-linux-active-directory-authentication.md#configurekeytab)。
-1. [キータブ ファイルをセキュリティで保護する](sql-server-linux-active-directory-authentication.md#securekeytab)。
-1. [Kerberos 認証にキータブ ファイルを使用するように SQL Server を構成する](sql-server-linux-active-directory-authentication.md#keytabkerberos)。
+1. [キータブ ファイルをセキュリティで保護する](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [Kerberos 認証にキータブ ファイルを使用するように SQL Server を構成する](sql-server-linux-active-directory-authentication.md#configurekeytab)。
 1. [Transact-SQL に AD ベースの SQL Server ログインを作成する](sql-server-linux-active-directory-authentication.md#createsqllogins)。
 1. [AD 認証を使用して SQL Server に接続する](sql-server-linux-active-directory-authentication.md#connect)。
 
@@ -53,6 +53,6 @@ AD 認証を構成する方法の詳細については、チュートリアル�
 
 - 現時点では、データベース ミラーリング エンドポイントでサポートされている唯一の認証方法は CERTIFICATE です。 Windows 認証方法は今後のリリースで有効になる予定です。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
 SQL Server on Linux に Active Directory 認証を実装する方法の詳細については、「[チュートリアル:SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md)」を参照してください。

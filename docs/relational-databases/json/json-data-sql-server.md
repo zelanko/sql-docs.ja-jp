@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74463acd2c202dd0b14167b40a715308f16e787
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095763"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190359"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 
@@ -60,7 +60,7 @@ SQL Server の組み込みの関数と演算子を使用すると、JSON テキ�
 SQL Server がその組み込みの JSON サポートで提供する主な機能について以下に説明します。 JSON 関数と演算子の使い方については、次のビデオをご覧ください。
 
 *SQL Server 2016 と JSON のサポート*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>JSON テキストから値を抽出し、それらをクエリで使用する
 
@@ -135,7 +135,7 @@ FROM OPENJSON(@json)
 
 **結果**
 
-|ID|firstName|lastName|age|dateOfBirth|  
+|id|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -181,7 +181,7 @@ OUTER APPLY OPENJSON(skills)
 
 **結果**
 
-|ID|firstName|lastName|age|dateOfBirth|skill|  
+|id|firstName|lastName|age|dateOfBirth|skill|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL|
@@ -403,7 +403,7 @@ SQL Server 2016 のインスタンスにサンプル データベースを復元
 SQL Server と Azure SQL Database に組み込まれている JSON のサポートの概要は、次のビデオをご覧ください。
 
 *SQL Server 2016 と Azure SQL Database での JSON の使用*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 *JSON 関数を使用した SQL Server での REST API の作成*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215633"
----
 ## <a name="connect-locally"></a>ローカル接続
 
 次の手順では、**sqlcmd** を使用して新しい SQL Server インスタンスにローカル接続します。
@@ -92,7 +84,7 @@ ms.locfileid: "68215633"
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. コマンドを実行します。
+1. 次のコマンドを実行します。
 
    ```sql
    GO
@@ -145,9 +137,9 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 | [オフライン インストール](../linux/sql-server-linux-setup.md#offline) | オフライン インストール パッケージを手動でダウンロードする方法を説明する |
 
 > [!TIP]
-> よく寄せられる質問に対する回答については、[SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.md) のページを参照してください。
+> よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [SQL Server on Linux のチュートリアルの参照](../linux/sql-server-linux-migrate-restore-database.md)
