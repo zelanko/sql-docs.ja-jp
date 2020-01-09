@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: d2519b1cc56081f8a35308ac41e11f46a7f97211
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215599"
----
 1. **すべての SQL Server で、Pacemaker 用サーバー ログインを作成します**。 次の Transact-SQL がログインを作成します。
 
    ```Transact-SQL

@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:Transact-SQL エディターを使用し、データベース オブジェクトを作成する
+title: Transact-SQL エディターを使用し、データベース オブジェクトを作成する
 titleSuffix: Azure Data Studio
 description: このチュートリアルでは、T-SQL の操作を簡単にする Azure Data Studio の主な機能について説明します。
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278245"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957036"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル:Transact-SQL エディターを使用し、データベース オブジェクトを作成する - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "72278245"
 > * *[定義をここに表示]* と *[定義へ移動]* を使用し、データベース オブジェクトの詳細を表示する
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルには、SQL Server か Azure SQL Database *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
@@ -217,8 +217,8 @@ ms.locfileid: "72278245"
 
    ![テスト結果](./media/tutorial-sql-editor/test-result.png)
 
-## <a name="next-steps"></a>次の手順
-このチュートリアルでは、次の方法を学習しました。
+## <a name="next-steps"></a>次のステップ
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 > * スキーマ オブジェクトをクイック検索する
 > * テーブル データを編集する 

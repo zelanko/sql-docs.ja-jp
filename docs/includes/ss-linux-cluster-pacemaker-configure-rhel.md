@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215625"
----
 3. すべてのクラスター ノードで、Pacemaker のファイアウォール ポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
 
    ```bash
@@ -15,8 +7,8 @@ ms.locfileid: "68215625"
 
    > ファイアウォールに高可用性構成が組み込まれていない場合、Pacemaker 用に次のポートを開きます。
    >
-   > * TCP:ポート 2224、3121、21064
-   > * UDP:ポート 5405
+   > * TCP: ポート 2224、3121、21064
+   > * UDP: ポート 5405
 
 1. すべてのノードに Pacemaker パッケージをインストールします。
 
