@@ -3,17 +3,17 @@ title: SQL Server 2017 および 2019 用に Linux リポジトリを構成す�
 description: Linux 上の SQL Server 2019 および SQL Server 2017 用にソース リポジトリの確認と構成を行います。 このソース リポジトリは、インストールおよびアップグレード中に適用される SQL Server のバージョンに影響します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531328"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776381"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux のインストールとアップグレードを行うためのリポジトリを構成する
 
@@ -38,7 +38,7 @@ ms.locfileid: "73531328"
 
 SQL Server on Linux をインストールする場合は、Microsoft リポジトリを構成する必要があります。 このリポジトリを使って、データベース エンジンのパッケージ (**mssql-server**) と、関連する SQL Server のパッケージを入手します。 現在、5 つの主要なリポジトリがあります。
 
-| リポジトリ | [オブジェクト名] | [説明] |
+| リポジトリ | Name | [説明] |
 |---|---|---|
 | **2019** | **mssql-server-2019** | SQL Server 2019 Cumulative Update (CU) リポジトリ。 |
 | **2019 GDR** | **mssql-server-2019-gdr** | 重要な更新プログラム専用の SQL Server 2019 GDR リポジトリ。 |
@@ -173,10 +173,15 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-rhel"
 SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。 次のコマンドのいずれかを使って、任意のリポジトリを構成します。
 
-| リポジトリ | Version | コマンド |
+> [!NOTE]
+> SQL Server 2019 の次のコマンドは、RHEL 8 リポジトリをポイントします。 RHEL 8 は、SQL Server に必要な python2 と共にプレインストールされていません。 詳細については、python2 のインストールと既定のインタープリターとしての構成に関する次のブログを参照してください: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
+>
+> RHEL 7 を使用している場合は、次のパスを `/rhel/8` ではなく `/rhel/7` に変更します。
+
+| リポジトリ | Version | command |
 |---|---|---|
-| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -186,7 +191,7 @@ SQL Server のインストールとアップグレードのために使用する
 ::: zone pivot="ld2-sles"
 SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。 次のコマンドのいずれかを使って、任意のリポジトリを構成します。
 
-| リポジトリ | Version | コマンド |
+| リポジトリ | Version | command |
 |---|---|---|
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
@@ -207,7 +212,7 @@ SQL Server のインストールとアップグレードのために使用する
 
 2. 次のコマンドのいずれかを使って、任意のリポジトリを構成します。
 
-   | リポジトリ | Version | コマンド |
+   | リポジトリ | Version | command |
    |---|---|---|
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
    | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
@@ -222,7 +227,7 @@ SQL Server のインストールとアップグレードのために使用する
 
 ::: zone-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 適切なリポジトリを構成したら、新しいリポジトリから、SQL Server と関連パッケージの[インストール](sql-server-linux-setup.md#platforms)や[更新](sql-server-linux-setup.md#upgrade)を始めることができます。
 

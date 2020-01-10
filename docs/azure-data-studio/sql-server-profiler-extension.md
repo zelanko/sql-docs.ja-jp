@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959117"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776513"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler の拡張機能 (プレビュー)
 
-SQL Server Profiler の拡張機能 (プレビュー) は、XEvent を使用して構築されていることを除けば、SQL Server Management Studio (SSMS) プロファイラーに類似したシンプルな SQL Server トレース ソリューションです。 SQL Server Profiler は、非常に使いやすく、最も一般的なトレース構成に合わせて適切な既定値を備えています。 UX は、イベントを参照するため、および関連付けられた Transact-SQL (T-SQL) テキストを表示するために最適化されています。 Azure Data Studio 用の SQL Server Profiler では、使いやすい UX で T-SQL 実行アクティビティを収集するための適切な既定値も想定されています。 この拡張機能は、現在プレビューの段階にあります。
+SQL Server Profiler の拡張機能 (プレビュー) は、拡張イベントを使用して構築されていることを除けば、SQL Server Management Studio (SSMS) プロファイラーに類似したシンプルな SQL Server トレース ソリューションです。 SQL Server Profiler は、非常に使いやすく、最も一般的なトレース構成に合わせて適切な既定値を備えています。 UX は、イベントを参照するため、および関連付けられた Transact-SQL (T-SQL) テキストを表示するために最適化されています。 Azure Data Studio 用の SQL Server Profiler では、使いやすい UX で T-SQL 実行アクティビティを収集するための適切な既定値も想定されています。 この拡張機能は、現在プレビューの段階にあります。
 
 **一般的な SQL Profiler のユースケース:**
 
@@ -48,7 +48,7 @@ SQL Server Profiler の拡張機能 (プレビュー) は、XEvent を使用し�
     ![プロファイラー拡張機能マネージャー](media/extensions/sql-server-profiler-extension/view-profiler.png)    
 1. Profiler を停止するには、**Alt + S** キーを押します。このホットキーはトグルです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Profiler と拡張イベントの詳細については、[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)に関するページを参照してください。
 

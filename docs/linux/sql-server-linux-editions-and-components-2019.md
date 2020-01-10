@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 の各エディションとサポートされる機能 - Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954994"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776557"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
 
@@ -149,7 +149,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |-------------|----------------|--------------|---------|------------------------------------| 
 |行レベルのセキュリティ|はい|はい|はい|はい|  
 |Always Encrypted|はい|はい|はい|はい| 
-|動的なデータ マスキング|はい|はい|はい|はい|   
+|動的データ マスク|はい|はい|はい|はい|   
 |基本的な監査|はい|はい|はい|はい| 
 |詳細な監査|はい|はい|はい|はい| 
 |透過的なデータベースの暗号化|はい|いいえ|いいえ|いいえ|   
@@ -241,7 +241,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 
 <sup>1</sup> SQL Server 内では SQL Server R がサポートされていますが、個別のパッケージとしての SQL Server R サービスはサポートされていません。
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
  [SQL Server 2017 の各エディションとサポートされる機能 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
