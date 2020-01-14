@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710470"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623239"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase スケールアウト グループ
 
@@ -28,7 +28,7 @@ PolyBase を使用するスタンドアロンの SQL Server インスタンス�
   
 「 [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md) 」および「 [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)」を参照してください。
   
-![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase スケールアウト グループ")  
+![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>ヘッド ノード  
 
@@ -47,7 +47,7 @@ PolyBase を使用するスタンドアロンの SQL Server インスタンス�
 > [!NOTE]
 >  これは Hadoop を介したスケールアウト読み取りとは異なります。 
 
-![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase スケールアウト グループ")
+![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>分散クエリ処理  
 
@@ -61,8 +61,15 @@ PolyBase データ移動サービスは、PolyBase エンジンから指示を�
 
 SQL Server をセットアップしたら、インスタンスをヘッド ノードとコンピューティング ノードのどちらかとして指定できます。 指定できるノードは、実行されている SQL Server PolyBase のバージョンによって異なります。 Enterprise Edition インストールでは、インスタンスをヘッド ノードとコンピューティング ノードのどちらかとして指定できます。 Standard Edition では、インスタンスをコンピューティング ノードとしてのみ指定できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase スケールアウト グループを構成するには、次のガイドを参照してください。
 
 [Windows で PolyBase スケールアウト グループを改善する](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>参照
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+
