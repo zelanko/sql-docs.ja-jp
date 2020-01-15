@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2017 の各エディションとサポートされる機能 - Linux
-ms.date: 10/23/2019
+ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928905"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952528"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
 
@@ -149,7 +149,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |-------------|----------------|--------------|---------|------------------------------------| 
 |行レベルのセキュリティ|はい|はい|はい|はい|  
 |Always Encrypted|はい|はい|はい|はい| 
-|動的なデータ マスキング|はい|はい|はい|はい|   
+|動的データ マスク|はい|はい|はい|はい|   
 |基本的な監査|はい|はい|はい|はい| 
 |詳細な監査|はい|はい|はい|はい| 
 |透過的なデータベースの暗号化|はい|いいえ|いいえ|いいえ|   
@@ -215,9 +215,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 
 | 領域 | サポートされていない機能またはサービス |
 |-----|-----|
-| **データベース エンジン** | トランザクション レプリケーション |
-| &nbsp; | マージ レプリケーション |
-| &nbsp; | 変更データ キャプチャ (SQL Server エージェントを参照) |
+| **データベース エンジン** | マージ レプリケーション |
 | &nbsp; | Stretch DB |
 | &nbsp; | PolyBase |
 | &nbsp; | サード パーティの接続を使用した分散クエリ |
@@ -229,7 +227,6 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
 | &nbsp; | 警告 |
 | &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
-| &nbsp; | 変更データ キャプチャ (CDC) |
 | &nbsp; | 管理対象のバックアップ |
 | **高可用性** | データベース ミラーリング  |
 | **セキュリティ** | 拡張キー管理 |
@@ -243,7 +240,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | Data Quality Services |
 | &nbsp; | マスター データ サービス |
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
  [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  

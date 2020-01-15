@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
-ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329964"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831824"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>SQL Server on Linux に対する Active Directory 認証
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に対する Active Directory (AD) 認証の概要について説明します。 AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では統合認証とも呼ばれます。 
+この記事では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に対する Active Directory (AD) 認証の概要について説明します。 AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では統合認証とも呼ばれます。
 
 ## <a name="ad-authentication-overview"></a>AD 認証の概要
 
@@ -30,10 +30,10 @@ AD 認証を使用すると、Windows または Linux 上のドメインに参�
 
 AD 認証には、次のように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証よりも優れている点があります。
 
-- ユーザーは、パスワードの入力を求められることなく、シングル サインオンで認証されます。   
+- ユーザーは、パスワードの入力を求められることなく、シングル サインオンで認証されます。
 - AD グループのログインを作成することで、AD グループのメンバーシップを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のアクセスとアクセス許可を管理できます。  
 - 各ユーザーは組織全体で 1 つの ID を持っているため、どの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインがどのユーザーに対応しているかを追跡する必要はありません。   
-- AD を使用すると、組織全体に一元的なパスワード ポリシーを適用できます。   
+- AD を使用すると、組織全体に一元的なパスワード ポリシーを適用できます。
 
 ## <a name="configuration-steps"></a>構成の手順
 
