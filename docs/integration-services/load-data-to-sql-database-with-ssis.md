@@ -10,18 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295882"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924991"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して SQL Server または Azure SQL Database にデータを読み込む
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 SQL Server Integration Services (SSIS) パッケージを作成して、SQL Server または [Azure SQL Database](/azure/sql-database/) にデータを読み込みます。 SSIS データ フローを通過するときに、必要に応じてデータを再構築、変換、およびクレンジングすることができます。
 
@@ -30,7 +28,6 @@ SQL Server Integration Services (SSIS) パッケージを作成して、SQL Serv
 * Visual Studio で新しい Integration Services プロジェクトを作成する。
 * データをソースから変換先に読み込むための SSIS パッケージを設計する。
 * SSIS パッケージを実行してデータを読み込む。
-
 
 ## <a name="basic-concepts"></a>基本的な概念
 
@@ -52,7 +49,7 @@ SQL Server と SQL Database に接続するには、ADO.NET 接続マネージ�
 
 ショートカットとして、SQL Server インポートおよびエクスポート ウィザードを使用して基本パッケージを作成できます。 次にパッケージを保存し、Visual Studio または SSDT で開いて表示し、カスタマイズします。 詳しくは、「[SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」をご覧ください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルの手順を実行するには、以下の要素が必要です。
 
 1. **SQL Server Integration Services (SSIS)** . SSIS は SQL Server のコンポーネントであり、使用するには SQL Server のライセンス版、開発者版、または評価版が必要です。 SQL Server の評価版を取得するには、[SQL Server の評価](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)に関するページを参照してください。
@@ -60,7 +57,7 @@ SQL Server と SQL Database に接続するには、ADO.NET 接続マネージ�
 3. **Visual Studio 用 SQL Server Data Tools (SSDT)** 。 Visual Studio 用 SQL Server Data Tools を取得するには、[SQL Server Data Tools (SSDT) のダウンロード][Download SQL Server Data Tools (SSDT)]に関するページを参照してください。
 4. このチュートリアルでは、SQL Server または SQL データベース インスタンスに接続し、そのインスタンスにデータを読み込みます。 接続し、テーブルを作成し、次のいずれかにデータを読み込むためのアクセス許可が必要です。
    - **Azure SQL Database データベース**。 詳細については、[Azure SQL Database](/azure/sql-database/) に関するページを参照してください。  
-      内の複数の
+      or
    - **SQL Server インスタンス**。 SQL Server は、オンプレミスまたは Azure の仮想マシン上で実行されます。 無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードする場合は、[SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページを参照してください。
 
 5. **サンプル データ**。 このチュートリアルでは、ソース データとして、SQL Server の AdventureWorks サンプル データベースに格納されているサンプル データを使用します。 AdventureWorks サンプル データベースを取得するには、「[AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases]」 (AdventureWorks サンプル データベース) を参照してください。
@@ -140,8 +137,8 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
    2. **[サーバー名]** には、SQL Server または SQL Database サーバーの名前を入力します。
    3. **[サーバー ログオン]** セクションで、 **[SQL Server 認証を使用する]** を選択し、認証情報を選択または入力します。
    4. **[データベースへの接続]** セクションで、既存のデータベースを選択します。
-    A. **[接続テスト]** をクリックします。
-    B. 接続テストの結果をレポートするダイアログ ボックスで、 **[OK]** をクリックして、 **[接続マネージャー]** ダイアログ ボックスに戻ります。
+    a. **[接続テスト]** をクリックします。
+    b. 接続テストの結果をレポートするダイアログ ボックスで、 **[OK]** をクリックして、 **[接続マネージャー]** ダイアログ ボックスに戻ります。
     c. **[接続マネージャー]** ダイアログ ボックスで、 **[OK]** をクリックして **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスに戻ります。
 5. **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスで、 **[OK]** をクリックして、**ADO.NET 変換先エディター**に戻ります。
 6. **ADO.NET 変換先エディター**で、 **[Use a table or view]\(テーブルまたはビューの使用\)** リストの横にある **[新規]** をクリックして **[テーブルの作成]** ダイアログ ボックスを開き、ソース テーブルと一致する列リストが含まれた新しい変換先テーブルを作成します。
@@ -172,9 +169,9 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 ![][15]
 
-これで、 SQL Server Integration Services を使用して、SQL Server または Azure SQL Database にデータを正常に読み込みました。
+お疲れさまでした。 SQL Server Integration Services を使用して、SQL Server または Azure SQL Database にデータを正常に読み込みました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始:[パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
 

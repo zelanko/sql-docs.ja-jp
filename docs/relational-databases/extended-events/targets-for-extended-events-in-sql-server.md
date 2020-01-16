@@ -1,6 +1,5 @@
 ---
-title: SQL Server の拡張イベントのターゲット | Microsoft Docs
-ms.custom: ''
+title: SQL Server の拡張イベントのターゲット
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907997"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501986"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 
@@ -35,7 +34,7 @@ ms.locfileid: "72907997"
 「 [ring_buffer ターゲット](#h2_target_ring_buffer) 」セクションには、 [Transact-SQL で XQuery](../../xquery/xquery-language-reference-sql-server.md) を使用して XML の文字列をリレーショナル行セットにコピーする例が含まれます。
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 
 - 次に説明されている拡張イベントの基本について一般的に理解していること。「[クイック スタート: SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」を参照してください。
@@ -76,7 +75,7 @@ Transact-SQL で拡張イベントの中心になるのは [CREATE EVENT SESSION
 ## <a name="etw_classic_sync_target-target"></a>etw_classic_sync_target ターゲット
 
 
-SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携してシステムの使用状況を監視できます。 詳細については、以下をご覧ください。
+SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携してシステムの使用状況を監視できます。 詳細については、次を参照してください。
 
 - [Event Tracing for Windows ターゲット](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
@@ -676,7 +675,7 @@ SELECT から取得する内容は XML 形式の文字列です。 このテス�
 
 ```sql
 SELECT
-        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
     INTO
         #XmlAsTable
     FROM
