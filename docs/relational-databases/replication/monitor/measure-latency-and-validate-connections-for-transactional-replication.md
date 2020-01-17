@@ -1,6 +1,7 @@
 ---
-title: トランザクション レプリケーションの待機時間の計測および接続の検証 | Microsoft Docs
-ms.custom: ''
+title: 待機時間の計測と接続の検証 (トランザクション)
+description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、またはレプリケーション管理オブジェクト (RMO) でレプリケーション モニターを使用し、SQL Server でトランザクション パブリケーションの待機時間を計測して、接続を検証する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711024"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321855"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>トランザクション レプリケーションの待機時間の計測および接続の検証
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,15 +58,15 @@ ms.locfileid: "71711024"
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  トレーサー トークンは、システムを停止する場合にも役立ちます。このとき、すべての処理を停止して、すべてのノードがすべての未処理の変更を受信したかどうかを検証します。 詳細については、「[レプリケーション トポロジの停止 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)」を参照してください。  
   
- トレーサー トークンを使用するには、特定のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用する必要があります。  
+ トレーサー トークンを使用するには、特定のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用する必要があります。  
   
--   ディストリビューターは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降である必要があります。  
+-   ディストリビューターは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降である必要があります。  
   
 -   パブリッシャーは [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降であるか、Oracle パブリッシャーである必要があります。  
   
--   プッシュ サブスクリプションでは、サブスクライバーが [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 以降である場合に、トレーサー トークン統計がパブリッシャー、ディストリビューター、およびサブスクライバーから収集されます。  
+-   プッシュ サブスクリプションでは、サブスクライバーが [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 以降である場合に、トレーサー トークン統計がパブリッシャー、ディストリビューター、サブスクライバーから収集されます。  
   
--   プル サブスクリプションでは、サブスクライバーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降である場合にのみ、トレーサー トークン統計がサブスクライバーから収集されます。 サブスクライバーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]である場合は、統計はパブリッシャーおよびディストリビューターからのみ収集されます。  
+-   プル サブスクリプションでは、サブスクライバーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降である場合にのみ、トレーサー トークン統計がサブスクライバーから収集されます。 サブスクライバーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] である場合は、統計はパブリッシャーおよびディストリビューターからのみ収集されます。  
   
  その他にも、次のような問題点と制限事項について注意する必要があります。  
   

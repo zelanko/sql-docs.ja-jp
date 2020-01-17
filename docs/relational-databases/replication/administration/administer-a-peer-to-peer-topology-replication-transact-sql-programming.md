@@ -1,6 +1,7 @@
 ---
-title: ピア ツー ピア トポロジの管理 (レプリケーション Transact-SQL プログラミング) | Microsoft Docs
-ms.custom: ''
+title: ピアツーピア トポロジの管理 (レプリケーション SP)
+description: レプリケーション ストアド プロシージャを使用し、アーティクルの追加やスキーマの変更など、ピアツーピア トポロジを管理する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 633e1a3cc6db676065d588c570d75c6b5a376f6d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 712a0514bf4fb9e4c66e0d6f7b0475ec5a957dde
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908066"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322199"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>ピア ツー ピア トポロジの管理 (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

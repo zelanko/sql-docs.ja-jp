@@ -1,6 +1,7 @@
 ---
-title: チュートリアル:ポリシー ベースの管理を使用したサーバーの管理 | Microsoft Docs
-ms.custom: ''
+title: チュートリアル:ポリシーベースの管理を使用したサーバーの管理
+description: このチュートリアルでは、"既定でオフ" ポリシーと命名標準ポリシーを作成し、適用する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021490"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558234"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>チュートリアル:ポリシー ベースの管理を使用したサーバーの管理
+# <a name="tutorial-managing-servers-using-policy-based-management"></a>チュートリアル:ポリシーベースの管理を使用したサーバーの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 「ポリシー ベースの管理を使用したサーバーの管理」チュートリアルへようこそ。 このチュートリアルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] については理解しているが、ポリシー ベースの管理を初めて使用するユーザーを対象としています。  
   

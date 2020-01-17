@@ -1,6 +1,7 @@
 ---
-title: レッスン 1:"既定でオフ" ポリシーの作成と適用 | Microsoft Docs
-ms.custom: ''
+title: レッスン 1:"既定でオフ" ポリシーの作成と適用
+description: SQL Server でポリシーベース管理に "既定でオフ" ポリシーを作成して適用する方法について説明するチュートリアル。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: security
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251282"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558007"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>レッスン 1:"既定でオフ" ポリシーの作成と適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ポリシー ベースの管理ポリシーを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のインスタンス、複数のインスタンス オブジェクト、1 つのサーバー インスタンス、複数のデータベース、または複数のデータベース オブジェクトを管理できます。 データベース管理者は、特定のサーバーでデータベース メールが有効化されないようにすることができます。 このレッスンでは、このようなサーバー オプションを設定する条件およびポリシーを作成し、 サーバーがこのポリシーに準拠しているかどうかを確認するためにサーバーをテストします。 次に、このポリシーを使用してサーバーを再構成し、サーバーがポリシーに準拠するようにします。  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルを完了するには、SQL Server Management Studio と SQL Server を実行しているサーバーへのアクセスが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
   
 ## <a name="create-the-mail-off-condition"></a>メールをオフ条件の作成

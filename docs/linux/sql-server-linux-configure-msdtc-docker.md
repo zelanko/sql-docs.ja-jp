@@ -1,18 +1,19 @@
 ---
-title: Docker 上で SQL Server による分散トランザクションを使用する方法
-description: この記事では、Docker 上の SQL Server コンテナーの分散トランザクションで Microsoft 分散トランザクション コーディネーター (MSDTC) を使用する方法について説明します。
+title: Docker 上の SQL Server による分散トランザクション (MSDTC)
+description: Docker 上の SQL Server コンテナーの分散トランザクションで Microsoft 分散トランザクション コーディネーター (MSDTC) を使用する方法について説明します。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e30b6d2426cfca4e776ca738e2dc7000fe936ab
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 99c17e04e4352df91ad3c6028b3ec88fc5022c50
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531313"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558406"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker 上で SQL Server による分散トランザクションを使用する方法
 
@@ -116,6 +117,6 @@ sudo firewall-cmd --reload
 > [!NOTE]
 > SQL Server 2017 は既定でルート コンテナーで実行されるのに対し、SQL Server 2019 コンテナーは非ルート ユーザーとして実行されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Linux 上での MSDTC に関する詳細については、「[Linux 上の Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法](sql-server-linux-configure-msdtc.md)」を参照してください。

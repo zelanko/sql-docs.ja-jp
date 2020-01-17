@@ -1,6 +1,7 @@
 ---
-title: ログ配布構成からのセカンダリ データベースの削除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: ログ配布のセカンダリの削除
+description: ログ配布のセカンダリ パートナーを削除する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e788f18084afb2d5897538b1f760c75a3de18a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03a22206129b3f6002006f1fdcb74d5aad73308f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030689"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258990"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>ログ配布構成からのセカンダリ データベースの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

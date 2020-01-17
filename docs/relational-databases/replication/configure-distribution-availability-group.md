@@ -1,6 +1,7 @@
 ---
-title: 可用性グループの SQL Server ディストリビューション データベースの構成 | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのディストリビューション データベースを構成する
+description: Always On 可用性グループを使用して、SQL Server レプリケーションのディストリビューション データベースを構成します。
+ms.custom: seo-lt-2019
 ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13a883d71262a044555fe3d0a59a945461de426e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5f721d589354d5e7f4ec970bf0ea086895df129
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908477"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320005"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ AG のディストリビューション データベースを下記の手順に�
 - ディストリビューション データベースのレプリカをホストする SQL Server 2016 インスタンスはすべて、SQL Server 2016 SP2-CU3 以降とする必要があります。
 - ディストリビューション データベースのレプリカをホストする SQL Server インスタンスはすべて、同じバージョンである必要があります。ただし、アップグレードが実行される狭いタイムフレームの期間中は例外です。
 - ディストリビューション データベースは、完全復旧モードである必要があります。
-- 復旧の場合に、トランザクション ログの切り捨てを許可するには、完全バックアップとトランザクション ログ バックアップを構成します。
+- 復旧し、トランザクション ログの切り捨てを許可するには、完全バックアップとトランザクション ログ バックアップを構成します。
 - ディストリビューション データベース AG では、リスナーが構成されている必要があります。
 - ディストリビューション データベース AG 内のセカンダリ レプリカは、同期または非同期のいずれにも指定できます。 同期モードが推奨され、優先されます。
 - 双方向のトランザクション レプリケーションはサポートされていません。
@@ -405,7 +406,7 @@ EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@l
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)  
  [パブリッシングおよびディストリビューションの無効化](disable-publishing-and-distribution.md)  
  [レプリケーションのデータベースの有効化 (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md) 

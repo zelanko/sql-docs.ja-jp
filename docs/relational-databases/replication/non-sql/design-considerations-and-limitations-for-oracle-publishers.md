@@ -1,6 +1,7 @@
 ---
-title: Oracle パブリッシャーの設計上の注意点および制限 | Microsoft Docs
-ms.custom: ''
+title: 注意点と制限事項 (Oracle パブリッシャー)
+description: Oracle パブリッシャーを使用して SQL Server サブスクライバーを構成する際の注意点と制限事項について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710936"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321909"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Oracle データベースからのパブリッシュは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
+  Oracle データベースからのパブリッシュは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
   
 -   [Oracle (ゲートウェイ)] を選択すると、[Oracle (完全)] より高いパフォーマンスが得られますが、このオプションは、複数のトランザクション パブリケーションで同じテーブルをパブリッシュする場合は使用できません。 テーブルを表示できるのは、最大で 1 つのトランザクション パブリケーションと、任意の数のスナップショット パブリケーションになります。 複数のトランザクション パブリケーションで同じテーブルをパブリッシュする必要がある場合は、[Oracle (完全)] を選択します。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "71710936"
   
 -   関数ベースのインデックス  
   
--   既定値  
+-   デフォルト  
   
 -   CHECK 制約  
   
@@ -136,15 +137,14 @@ ms.locfileid: "71710936"
   
 -   Oracle パブリケーションに対するサブスクライバーは、バックアップから自動的に初期化することはできません。  
   
-- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。Oracle パブリッシャーでは、行数検証をサポートしています。詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。  
-
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
   
 -   パブリッシュされた Oracle テーブルへのスキーマ変更はサポートされていません。 スキーマ変更を行うには、まずパブリケーションを削除し、変更を行ってから、パブリケーションおよびサブスクリプションを再作成します。  
   
     > [!NOTE]  
-    >  パブリッシュされたテーブルが利用されていないときに、スキーマ変更とその後のパブリケーションおよびサブスクリプションの削除、再作成を一度に行う場合、サブスクリプションに対して [レプリケーションのサポートのみ] オプションを指定できます。 これにより、各サブスクライバーにスナップショットをコピーすることなく、サブスクリプションを同期させることができます。 詳細については、「[スナップショットを使用しないトランザクション サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)」を参照してください。  
+    >  パブリッシュされたテーブルが利用されていないときに、スキーマ変更とその後のパブリケーションおよびサブスクリプションの削除、再作成を一度に行う場合、サブスクリプションに対して [レプリケーションのサポートのみ] オプションを指定できます。 これにより、各サブスクライバーにスナップショットをコピーすることなく、サブスクリプションを同期させることができます。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 ### <a name="replication-security-model"></a>レプリケーションのセキュリティ モデル  
  Oracle のパブリッシングのセキュリティ モデルは、標準的なトランザクション レプリケーションのセキュリティ モデルと同じですが、以下の点が異なります。  
@@ -168,7 +168,7 @@ ms.locfileid: "71710936"
  レプリケーションのセキュリティの詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Oracle パブリッシャーの管理上の注意点](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
+ [Administrative Considerations for Oracle Publishers (Oracle パブリッシャーの管理上の注意点)](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

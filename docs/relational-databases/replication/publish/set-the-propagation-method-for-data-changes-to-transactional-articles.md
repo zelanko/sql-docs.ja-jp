@@ -1,6 +1,7 @@
 ---
-title: データの変更をトランザクション アーティクルに反映する方法の設定 | Microsoft Docs
-ms.custom: ''
+title: 変更をアーティクルに反映する方法の設定 (トランザクション )
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用して、トランザクション レプリケーションのトランザクション アーティクルへのデータの変更の反映方法を設定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,18 +15,18 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 446855f89b924cb41462df67d02926f3b7b1ebe9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7b3b335a347dea69f7741d348ae3d30dd1ba2c8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904991"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321195"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>データの変更をトランザクション アーティクルに反映する方法の設定
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、トランザクション アーティクルへのデータの変更の反映方法を設定する方法について説明します。  
   
- 既定では、トランザクション レプリケーションは、各アーティクルのストアド プロシージャ セットを使用して変更内容をサブスクライバーに反映します。 これらのプロシージャはカスタム プロシージャに置換することができます。 詳しくは、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」をご覧ください。  
+ 既定では、トランザクション レプリケーションは、各アーティクルのストアド プロシージャ セットを使用して変更内容をサブスクライバーに反映します。 これらのプロシージャはカスタム プロシージャに置換することができます。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -162,6 +163,6 @@ ms.locfileid: "72904991"
   
 ## <a name="see-also"></a>参照  
  [トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [パブリケーションを作成する](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

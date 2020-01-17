@@ -1,6 +1,7 @@
 ---
-title: マージ アーティクル間の結合フィルターの定義および変更 | Microsoft Docs
-ms.custom: ''
+title: マージ アーティクル間の結合フィルターの定義および変更
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用して、マージ アーティクル間で使用される結合フィルターを定義および変更する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c37ddcac8c12b6885c696bea77ef66e5eedd5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908577"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321567"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>マージ アーティクル間の結合フィルターの定義および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "72908577"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
 -   **マージ アーティクル間の結合フィルターを定義および変更するために使用するもの:**  
   
@@ -53,7 +54,7 @@ ms.locfileid: "72908577"
 -   結合フィルターは、一連のテーブルに対して手動で作成できます。また、テーブルに定義された外部キーと主キーのリレーションシップに基づいて、レプリケーションによって自動的に生成することもできます。 一連の結合フィルターを自動的に生成する方法の詳細については、「[Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)」(マージ アーティクル間で一連の結合フィルターを自動的に生成する (SQL Server Management Studio)) をご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、結合フィルターを定義、変更、または削除します。 ウィザードの使用とダイアログ ボックスへのアクセスの詳細については、「[Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」(パブリケーションの作成) と「[パブリケーション プロパティの表示と変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」をご覧ください。  
+ パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、結合フィルターを定義、変更、または削除します。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 #### <a name="to-define-a-join-filter"></a>結合フィルターを定義するには  
   
@@ -84,7 +85,7 @@ ms.locfileid: "72908577"
         > [!CAUTION]  
         >  このオプションを選択すると、結合フィルターにおける子テーブルと親テーブルのリレーションシップが一対一または一対多となるように指定されます。 子テーブル内で結合する列に制約があり、一意性が保証される場合にのみ、このオプションを選択します。 このオプションを適切に設定しなかった場合、データを収束できない可能性があります。  
   
-    -   既定で、マージ レプリケーションでは同期中に行ごとに変化が処理されます。 フィルター選択されたテーブルと結合されたテーブルの両方の行内の関連する変更を 1 つの単位として処理するには、 **[論理レコード]** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンのみ)。 このオプションは、論理レコードを使用するために必要なアーティクルとパブリケーションの要件が満たされている場合にのみ使用できます。 詳細については、「[Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」(論理レコードによる関連行への変更のグループ化) の「Considerations for Using Logical Records」(論理レコードの使用についての注意点) をご覧ください。  
+    -   既定で、マージ レプリケーションでは同期中に行ごとに変化が処理されます。 フィルター選択されたテーブルと結合されたテーブルの両方の行内の関連する変更を 1 つの単位として処理するには、 **[論理レコード]** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンのみ) を選択します。 このオプションは、論理レコードを使用するために必要なアーティクルとパブリケーションの要件が満たされている場合にのみ使用できます。 詳細については、「[Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」(論理レコードによる関連行への変更のグループ化) の「Considerations for Using Logical Records」(論理レコードの使用についての注意点) をご覧ください。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -136,13 +137,13 @@ ms.locfileid: "72908577"
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   
 ## <a name="see-also"></a>参照  
- [結合フィルター](../../../relational-databases/replication/merge/join-filters.md)   
- [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [方法:マージ アーティクル間の結合フィルターを定義および変更する (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [方法: マージ アーティクル間の結合フィルターを定義および変更する (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [マージ テーブル アーティクル間に論理レコード リレーションシップを定義する](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
   

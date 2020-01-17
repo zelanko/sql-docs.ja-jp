@@ -1,7 +1,7 @@
 ---
-title: 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
+title: ワークロードをセカンダリ可用性グループ レプリカにオフロードする
 description: SQL Server で Always On 可用性グループのセカンダリ レプリカに読み取り専用のクエリとレポートの負荷を移す方法について説明します。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9608383d132dbb670d8a852101dd074d4f285a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991658"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822405"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "67991658"
     > [!NOTE]  
     >  必要に応じて、プライマリ ロールで実行しているときに、読み取り専用接続を除外するように可用性レプリカを構成することもできます。  
   
-     詳細については、このトピックの後の「 [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)など) を含め、セカンダリ レプリカをホストするサーバー インスタンス上の読み書き可能なデータベースには書き込むことができます。  
+     詳細については、「[可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)」を参照してください。  
   
 -   **可用性グループ リスナー**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67991658"
      詳細については、このトピックの後の「 [可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)など) を含め、セカンダリ レプリカをホストするサーバー インスタンス上の読み書き可能なデータベースには書き込むことができます。  
   
 > [!NOTE]  
->  可用性グループ リスナーと読み取り専用ルーティングの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)など) を含め、セカンダリ レプリカをホストするサーバー インスタンス上の読み書き可能なデータベースには書き込むことができます。  
+>  可用性グループ リスナーと読み取り専用ルーティングの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)が存在する必要があります。  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> 制限事項と制約事項  
  次に示すように、一部の操作は完全にはサポートされていません。  
@@ -183,10 +183,10 @@ ms.locfileid: "67991658"
   
 -   一時的な統計は **tempdb**に格納されるので、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計はすべてなくなります。  
   
--   サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 このサフィックスは、プライマリ データベースで統計を作成するときには使用できません。 詳細については、「 [Statistics](../../../relational-databases/statistics/statistics.md)」を参照してください。  
+-   サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 このサフィックスは、プライマリ データベースで統計を作成するときには使用できません。 詳細については、[統計](../../../relational-databases/statistics/statistics.md)に関する記事を参照してください。  
   
 ##  <a name="bkmk_AccessInMemTables"></a> セカンダリ レプリカ上でのメモリ最適化テーブルへのアクセス  
- セカンダリ レプリカ上でメモリ最適化テーブルとともに使用できるトランザクション分離レベルは、プライマリ レプリカでのレベルと同じです。 セッション レベルの分離レベルを READ COMMITTED に、またデータベース レベル オプション MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を ON に設定することをお勧めします。 例:  
+ セカンダリ レプリカ上でメモリ最適化テーブルとともに使用できるトランザクション分離レベルは、プライマリ レプリカでのレベルと同じです。 セッション レベルの分離レベルを READ COMMITTED に、またデータベース レベル オプション MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を ON に設定することをお勧めします。 次に例を示します。  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  

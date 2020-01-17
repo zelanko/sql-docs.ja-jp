@@ -1,7 +1,8 @@
 ---
-title: Azure への SQL Server マネージド バックアップを有効にする | Microsoft Docs
-ms.custom: ''
-ms.date: 10/03/2016
+title: Azure へのマネージド バックアップを使用する "
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
+ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,14 +11,15 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238734"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257951"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップを有効にする
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、データベース レベルとインスタンス レベルの両方で、既定の設定を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする方法について説明します。 また、電子メール通知を有効にする方法と、バックアップ処理を監視する方法についても説明します。  
   
@@ -104,7 +106,7 @@ URL が含まれている場合、疑問符で SAS トークンから区切り�
 |**SAS トークン**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「[Shared Access Signature、第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」をご覧ください。  
+SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、[Shared Access Signature に関する記事のパート 1 の SAS モデル](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)に関するページを参照してください。  
   
 ## <a name="enable-managed-backup-to-azure"></a>Azure へのマネージド バックアップを有効にする
   
@@ -146,7 +148,7 @@ SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録
   
      管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、デバッグ チャネルには、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。  
   
-6.  **正常性状態の通知を有効化し、構成する:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] には、注意を要するエラーまたは警告の電子メール通知を送信するためにエージェント ジョブを作成するストアド プロシージャがあります。 次の手順では、電子メール通知を有効にして構成するためのプロセスを示します。  
+6.  **正常性状態の通知を有効化し、構成する:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]Microsoft Azure への SQL Server マネージド バックアップには、注意を要するエラーまたは警告の電子メール通知を送信するためにエージェント ジョブを作成するストアド プロシージャがあります。 次の手順では、電子メール通知を有効にして構成するためのプロセスを示します。  
   
     1.  データベース メールがインスタンス上でまだ有効になっていない場合は設定します。 詳細については、「 [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md)」を参照してください。  
   

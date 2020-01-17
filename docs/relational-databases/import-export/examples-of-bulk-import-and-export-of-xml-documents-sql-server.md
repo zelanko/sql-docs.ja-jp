@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056031"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401585"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "74056031"
 - [XML 一括ロード コンポーネントを使用して XML を SQL Server にインポートする方法](https://support.microsoft.com/kb/316005)
 - [XML スキーマ コレクション (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に例を示します。  
   
 -  [A.バイナリ バイト ストリームとして XML データの一括インポートを行う](#binary_byte_stream)  
@@ -95,7 +95,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>解説  
  この場合に SINGLE_BLOB を使用すると、XML エンコード宣言で指定されている XML ドキュメントのエンコードと、サーバーによって暗黙的に示されている文字列のコード ページとの不一致を回避できます。  
   
  NCLOB または CLOB データ型を使用した際にコード ページまたはエンコードの競合が発生する場合は、次のいずれかの操作を行う必要があります。  
@@ -253,7 +253,7 @@ GO
  [&#91;先頭に戻る&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> XML データの一括エクスポートを行う  
- 次の例では、 `bcp` を使用し、同じ XML フォーマット ファイルを使用して、前の例で作成されたテーブルから XML データの一括エクスポートを行います。 次の `bcp` コマンドで、 `<server_name>` と `<instance_name>` はプレースホルダーであり、適切な値との差し替えが必要です。  
+ 次の例では、[bcp](../../tools/bcp-utility.md) を使用し、同じ XML フォーマット ファイルを使用して、前の例で作成されたテーブルから XML データの一括エクスポートを行います。 次の `bcp` コマンドで、 `<server_name>` と `<instance_name>` はプレースホルダーであり、適切な値との差し替えが必要です。  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  

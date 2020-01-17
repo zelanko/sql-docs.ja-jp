@@ -1,6 +1,7 @@
 ---
-title: 可用性グループのプロパティの表示 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのプロパティを表示する
+description: 'SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または SQL PowerShell のいずれかを使用して Always On 可用性グループのプロパティを表示します。 '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9fb3f29746df1e88b1d0ae8bdae4e163b654e3df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44328d275c962c1f6315e56e763c3a8550318ffb
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013363"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821814"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>可用性グループのプロパティの表示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,6 +96,6 @@ ms.locfileid: "68013363"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
+ [AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   

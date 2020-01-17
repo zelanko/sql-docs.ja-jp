@@ -1,6 +1,7 @@
 ---
-title: パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理 | Microsoft Docs
-ms.custom: ''
+title: パラメーター化されたフィルターのパーティションの管理 (マージ)
+description: SQL Server マージ レプリケーションに使用するパラメーター化されたフィルターを使用してパーティションを管理します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 595bbbdc789cdb8b19705a5510f9d352064cabb2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908386"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321246"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "72908386"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
 -   **パラメーター化されたフィルターによるマージ パブリケーションのパーティションを管理するために使用するもの:**  
   
@@ -39,13 +40,13 @@ ms.locfileid: "72908386"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   レプリケーション トポロジをスクリプト化する場合 (推奨)、パブリケーション スクリプトには、データ パーティションを作成するためのストアド プロシージャの呼び出しが含まれます。 このスクリプトによって、作成されたパーティションの参照、および必要に応じて 1 つ以上のパーティションを再作成する方法を利用できます。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+-   レプリケーション トポロジをスクリプト化する場合 (推奨)、パブリケーション スクリプトには、データ パーティションを作成するためのストアド プロシージャの呼び出しが含まれます。 このスクリプトによって、作成されたパーティションの参照、および必要に応じて 1 つ以上のパーティションを再作成する方法を利用できます。 詳細については、「[レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
--   パブリケーションが、重複しないパーティションを含むサブスクリプションを返すパラメーター化されたフィルターを持つ場合に、特定のサブスクリプションが失われて再作成が必要になったときは、サブスクライブされたパーティションを削除し、サブスクリプションを再作成してから、パーティションを再作成する必要があります。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。 パブリケーション作成スクリプトが生成されると、レプリケーションによって既存のサブスクライバー パーティション用の作成スクリプトが生成されます。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+-   パブリケーションが、重複しないパーティションを含むサブスクリプションを返すパラメーター化されたフィルターを持つ場合に、特定のサブスクリプションが失われて再作成が必要になったときは、サブスクライブされたパーティションを削除し、サブスクリプションを再作成してから、パーティションを再作成する必要があります。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。 パブリケーション作成スクリプトが生成されると、レプリケーションによって既存のサブスクライバー パーティション用の作成スクリプトが生成されます。 詳細については、「[レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[データ パーティション]** ページでパーティションを管理します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。 このページでは、パーティションを作成および削除する、サブスクライバーがスナップショットの生成および配信を開始できるようにする、1 つ以上のパーティションのスナップショットを生成する、スナップショットをクリーンアップするなどの操作を行うことができます。  
@@ -162,7 +163,7 @@ ms.locfileid: "72908386"
   
 ## <a name="see-also"></a>参照  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   
   

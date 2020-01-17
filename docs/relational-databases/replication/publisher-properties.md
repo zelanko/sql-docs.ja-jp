@@ -1,6 +1,7 @@
 ---
-title: SQL Server レプリケーションの [パブリッシャーのプロパティ] ダイアログ ボックス | Microsoft Docs
-ms.custom: ''
+title: '[パブリッシャーのプロパティ] ダイアログ ボックス (SSMS)'
+description: SQL Server Management Studio (SSMS) 内の特定のパブリケーションの [パブリッシャーのプロパティ] ダイアログ ボックスについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908305"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320729"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server レプリケーションの [パブリッシャーのプロパティ] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "72908305"
  **トランザクション**  
  このチェック ボックスをオンにすると、 **db_owner** 固定データベース ロール内のユーザーは、スナップショット パブリケーションまたはトランザクション パブリケーションをそのデータベースに作成できるようになります。 
   
- **Merge**  
+ **[マージ]**  
  このチェック ボックスをオンにすると、 **db_owner** 固定データベース ロール内のユーザーは、マージ パブリケーションをそのデータベースに作成できるようになります。  
   
 
@@ -72,12 +73,12 @@ ms.locfileid: "72908305"
  **[パブリッシャーのプロパティ]**  
  **[サブスクライバー]** プロパティ グリッドには、このパブリッシャー上のパブリケーションからデータを受け取るように設定されているサブスクライバーが表示されます。 その他のプロパティを表示し、設定するには、サブスクライバーの横にあるプロパティ ボタン ( **[...]** ) をクリックします。  
   
- **[追加]**  
+ **追加**  
  サブスクライバーを追加するには、 **[追加]** をクリックしてから、 **[SQL Server サブスクライバーの追加]** または **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Publisher で文書を作成するには](../../relational-databases/replication/publish/create-a-publication.md)   
+ [パブリケーションを作成する](../../relational-databases/replication/publish/create-a-publication.md)   
 
 
   

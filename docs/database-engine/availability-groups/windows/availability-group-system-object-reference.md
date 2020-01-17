@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性グループ システム オブジェクト リファレンス |Microsoft Docs
-ms.custom: ''
+title: 可用性グループ システム オブジェクト リファレンス
+description: Always On 可用性グループを使用する場合に使用できる各種システム オブジェクトのリファレンス。
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991392"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822468"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性グループ システム オブジェクト リファレンス
 
@@ -68,6 +69,6 @@ ms.locfileid: "67991392"
 
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
 
   

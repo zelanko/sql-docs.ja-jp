@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252011"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249851"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -89,7 +89,7 @@ BULK INSERT
 
 **'** _data_file_ **'** 指定のテーブルまたはビューにインポートするデータが含まれているデータ ファイルの完全なパスを指定します。 BULK INSERT を使用して、ディスクまたは Azure Blob Storage (ネットワーク、フロッピー ディスク、ハード ディスクなど) からデータをインポートすることができます。
 
-*data_file* には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているサーバーからの有効なパスを指定する必要があります。 *data_file* がリモート ファイルの場合は、UNC (汎用名前付け規則) 名を指定します。 UNC 名の形式は、\\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*です。 例:
+*data_file* には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているサーバーからの有効なパスを指定する必要があります。 *data_file* がリモート ファイルの場合は、UNC (汎用名前付け規則) 名を指定します。 UNC 名の形式は、\\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*です。 次に例を示します。
 
 ```sql
 BULK INSERT Sales.Orders
@@ -100,7 +100,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1 以降では、data_file は Azure Blob Storage に格納することができます。 その場合は、**data_source_name** オプションを指定する必要があります。 例については、「[Azure Blob Storage 内のファイルからデータをインポートする](#f-importing-data-from-a-file-in-azure-blob-storage)」を参照してください。
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
 **'** _data_source_name_ **'** 
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 および Azure SQL Database。
@@ -177,7 +177,7 @@ KEEPNULLS 一括インポート操作時、空の列が挿入される場合は 
 
 KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ バッチあたりのデータの概算キロバイト数 (KB) を *kilobytes_per_batch* として指定します。 KILOBYTES_PER_BATCH の既定値はありません。 パフォーマンスに関する考慮事項については、このトピックで後述する「解説」を参照してください。
 
-LASTROW **=** _last_row_ 読み込み終了行の行番号を指定します。 既定値は 0 です。これは指定のデータ ファイルの最終行を表します。
+LASTROW **=** _last_row_ 最後に読み込む行の行番号を指定します。 既定値は 0 です。これは指定のデータ ファイルの最終行を表します。
 
 MAXERRORS **=** _max_errors_ 一括インポート操作時に許容されるデータの構文エラーの最大数を指定します。この最大数に達すると、操作は取り消されます。 一括インポート操作でインポートできない行は無視され、それぞれ 1 つのエラーとしてカウントされます。 *max_errors* を指定しない場合の既定値は 10 です。
 
@@ -207,7 +207,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.csv'
 WITH ( FORMAT='CSV');
 ```
 
-FIELDQUOTE **=** 'field_quote' **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+FIELDQUOTE **=** 'field_quote' **以下に適用されます:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 CSV ファイルで引用符文字として使用される文字を指定します。 指定されていない場合は、[RFC 4180](https://tools.ietf.org/html/rfc4180) 標準の定義に従って引用符文字 (") が引用符文字として使用されます。
 
 FORMATFILE **=** '_format_file_path_' フォーマット ファイルの完全なパスを指定します。 フォーマット ファイルには、格納済みの応答を含むデータ ファイルの内容が記述されています。これらの応答は同じテーブルまたはビューに対し **bcp** ユーティリティを実行して作成されたものです。 フォーマット ファイルは次の場合に使用します。
@@ -278,7 +278,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされませんが、Azure Blob Storage からは読み取れます。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML ドキュメントの一括エクスポートまたは一括インポート用のデータ型
 
@@ -352,7 +352,7 @@ INSERT 権限および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure
 
 - KEEPIDENTITY オプションを使用して、データ ファイルから ID 値をインポートする。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. ファイルからのデータのインポートにパイプを使用する
 
@@ -369,7 +369,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. FIRE_TRIGGERS 引数を使用する
 
@@ -387,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. 行ターミネータとしてライン フィードを使用する
 
@@ -405,7 +405,7 @@ EXEC(@bulk_cmd);
 > Microsoft Windows によるテキスト ファイルの処理方法によって、 **(\n** は自動的に **\r\n)** に置き換えられます。
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
 ### <a name="d-specifying-a-code-page"></a>D. コード ページの指定
 
@@ -422,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. CSV ファイルからデータをインポートする
 
@@ -439,7 +439,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Azure Blob Storage 内のファイルからデータをインポートする
 
@@ -470,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Azure Blob Storage 内のファイルからデータをインポートし、エラー ファイルを指定する
 

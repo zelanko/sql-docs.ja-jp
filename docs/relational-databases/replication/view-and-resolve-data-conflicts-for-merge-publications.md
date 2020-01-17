@@ -1,6 +1,7 @@
 ---
-title: マージ パブリケーションのデータ競合の表示と解決 | Microsoft Docs
-ms.custom: ''
+title: データの競合の表示および解決 (マージ)
+description: SQL Server のマージ パブリケーションでデータの競合を表示および解決する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907787"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321889"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>マージ レプリケーションの競合の解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "72907787"
   
 ## <a name="resolve-conflicts"></a>競合の解決  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のパブリッシャー (または必要に応じてサブスクライバー) に接続して、サーバー ノードを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のパブリッシャー (または必要に応じてサブスクライバー) に接続して、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "72907787"
   
     |@conflict_logging 値|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
-    |**パブリッシャー**|1|0|  
+    |**publisher**|1|0|  
     |**サブスクライバー**|0|1|  
     |**両方**|1|1|  
   

@@ -1,7 +1,7 @@
 ---
-title: SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: Backup to URL に関するベスト プラクティスとトラブルシューティング
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,14 +10,15 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
-ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
+ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72717240"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245440"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   このトピックでは、Azure Blob service との間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを示します。  
@@ -26,9 +27,9 @@ ms.locfileid: "72717240"
   
 -   [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [チュートリアル: Azure Blob Storage サービスへの SQL Server のバックアップと復元](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [チュートリアル:Azure Blob Storage サービスへの SQL Server のバックアップと復元](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups"></a>バックアップの管理  
+## <a name="managing-backups-mb1"></a> バックアップの管理  
  バックアップを管理するための一般的な推奨事項を次に示します。  
   
 -   BLOB を誤って上書きしないように、各バックアップに一意なファイル名を付けることをお勧めします。  
@@ -47,7 +48,7 @@ ms.locfileid: "72717240"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ操作では、複数のスレッドを使用して、Azure Blob Storage サービスへのデータ転送が最適化されます。  ただし、パフォーマンスは ISV の帯域幅やデータベースのサイズなどのさまざまな要因によって異なります。 内部設置型の SQL Server データベースから大きなデータベースまたはファイル グループをバックアップする場合は、最初にスループットのテストを行うことをお勧めします。 [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) には BLOB の最大処理時間が示されているため、考慮に入れておくことができます。  
   
--   「[バックアップの管理](##managing-backups)」セクションで推奨されているように `WITH COMPRESSION` オプションを使用することは、大きなファイルをバックアップするときに非常に重要です。  
+-   「[バックアップの管理](#managing-backups-mb1)」セクションで推奨されているように `WITH COMPRESSION` オプションを使用することは、大きなファイルをバックアップするときに非常に重要です。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>BACKUP TO URL または RESTORE FROM URL のトラブルシューティング  
  ここでは、Azure Blob Storage サービスへのバックアップまたは Azure Blob Storage サービスからの復元を実行するときに発生するエラーを簡単にトラブルシューティングする方法をいくつか示します。  
@@ -92,7 +93,7 @@ ms.locfileid: "72717240"
 
     -   大規模なデータベースをバックアップする場合には、COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE、および複数の URL 引数を検討してください。  「[Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)」(VLDB を Azure Blob Storage にバックアップする) を参照してください
   
-        ```
+        ```console
         Msg 3202, Level 16, State 1, Line 1
         Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
         Msg 3013, Level 16, State 1, Line 1
@@ -133,11 +134,11 @@ ms.locfileid: "72717240"
   
  プロキシ サーバーで、1 分あたりの接続数を制限する設定が使用されている場合があります。 Backup to URL プロセスはマルチスレッド プロセスであるため、この制限を超える可能性があります。 制限を超えた場合、プロキシ サーバーは接続を切断します。 この問題を解決するには、プロキシ設定を変更し、SQL Server がプロキシを使用しないようにします。 エラー ログに表示される可能性のある種類またはエラー メッセージの例を次に示します。  
   
-```
+```console
 Write on "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-```
+```console
 A nonrecoverable I/O error occurred on file "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
 Msg 3013, Level 16, State 1, Line 2  
@@ -145,7 +146,7 @@ Msg 3013, Level 16, State 1, Line 2
 BACKUP DATABASE is terminating abnormally.  
 ```
 
-```
+```console
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   

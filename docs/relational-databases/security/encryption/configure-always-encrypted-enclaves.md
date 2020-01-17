@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bda4d41d4f2a9c92dca2d41b959ad4c4b32a1c79
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594474"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317940"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成して使用する 
 
@@ -27,7 +27,9 @@ ms.locfileid: "73594474"
 
 ## <a name="set-up-your-environment-to-support-enclaves-and-attestation"></a>エンクレーブと構成証明をサポートする環境を設定する
 詳しくは、次の記事を参照してください。
-- [SQL Server で Always Encrypted 用にホスト ガーディアン サービスを設定する](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)。
+- [ホスト ガーディアン サービスの構成証明の計画](./always-encrypted-enclaves-host-guardian-service-plan.md)
+- [[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] のホスト ガーディアン サービスを配置する](./always-encrypted-enclaves-host-guardian-service-deploy.md)
+- [ホスト ガーディアン サービスにコンピューターを登録する](./always-encrypted-enclaves-host-guardian-service-register.md)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する
 詳しくは、以下の記事を参照してください。
@@ -51,7 +53,7 @@ ms.locfileid: "73594474"
 
 ## <a name="create-and-use-indexes-on-enclave-enabled-columns"></a>エンクレーブ対応の列でインデックスを作成して使用する
 詳しくは、以下の記事を参照してください。
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する](always-encrypted-enclaves-create-use-indexes.md)
+- [セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用](always-encrypted-enclaves-create-use-indexes.md)
 
 ## <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する
 詳しくは、以下の記事を参照してください。

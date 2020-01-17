@@ -1,6 +1,5 @@
 ---
-title: 計算列を使用した使用頻度の高い XML 値の昇格 | Microsoft Docs
-ms.custom: ''
+title: 計算列を使用した高頻度の XML 値の昇格 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66526a14c6057be1c99b8690cd6df0db07c40a81
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905532"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257635"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例: 著者の名が同一の XML インスタンスの検索  
- XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 例:  
+ XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 次に例を示します。  
   
 ```  
 SELECT xCol   

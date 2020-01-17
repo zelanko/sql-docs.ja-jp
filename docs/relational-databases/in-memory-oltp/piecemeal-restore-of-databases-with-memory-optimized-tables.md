@@ -1,6 +1,6 @@
 ---
-title: メモリ最適化テーブルを持つデータベースの段階的な部分復元 | Microsoft Docs
-ms.custom: ''
+title: データベースの段階的な部分復元 - メモリ最適化テーブル
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1305f3239f40fa6d699243e0512ce774da5109c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a546e2aeceb60e42f4fc9dc8b1170431fd581ef3
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100228"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412579"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>メモリ最適化テーブルを持つデータベースの段階的な部分復元
 
@@ -31,7 +31,7 @@ ms.locfileid: "68100228"
   
  段階的なバックアップと部分復元に関する主要なシナリオは、次のとおりです。  
   
--   段階的なバックアップを使用すると、バックアップのサイズを小さくすることができます。 いくつかの例を挙げます。  
+-   段階的なバックアップを使用すると、バックアップのサイズを小さくすることができます。 次に例をいくつか示します。  
   
     -   異なる時刻または日にデータベースのバックアップを実行するように構成し、ワークロードに及ぼす影響を最小限に抑えます。 1 つの例は、割り当てられるデータベースのメンテナンス時間内にデータベースの完全バックアップを完了することができない、非常に大規模なデータベース (1 TB 以上) です。 この状況では、段階的なバックアップを使用し、データベース全体を分割して複数の段階的なバックアップの対象にすることができます。  
   

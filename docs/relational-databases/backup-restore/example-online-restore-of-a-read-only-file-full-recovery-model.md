@@ -1,5 +1,5 @@
 ---
-title: '例: 読み取り専用ファイルのオンライン復元 (完全復旧モデル) | Microsoft Docs'
+title: 'オンライン復元: 読み取り専用ファイル (完全復旧モデル)'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a446bcd7c90c35176bd9853bec3780386e98310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 545a3cfe319732ca7cb0f9d5a51b1e172072e636
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089803"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227965"
 ---
 # <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>例:読み取り専用ファイルのオンライン復元 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

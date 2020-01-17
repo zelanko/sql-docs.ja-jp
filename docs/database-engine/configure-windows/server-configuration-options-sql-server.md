@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ebb4419cd81786fcfc58f7c7342e353c90d1f1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981864"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002015"
 ---
 # <a name="server-configuration-options-sql-server"></a>サーバー構成オプション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "73981864"
   
 -   オプションを設定し、**RECONFIGURE** ステートメントまたは場合によっては **RECONFIGURE WITH OVERRIDE**ステートメントを実行した直後。 特定のオプションを再設定すると、プラン キャッシュのプランが無効になり、新しいプランがコンパイルされます。 詳細については、「 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)」を参照してください。
   
-     \- または -  
+     または  
   
 -   上の操作を行い、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを再起動した後。
   
@@ -69,7 +69,7 @@ ms.locfileid: "73981864"
   
 -   SC = 自己構成オプション。  
   
-    |構成オプション|最小値|最大値|既定|  
+    |構成オプション|最小値|最大値|Default|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -124,6 +124,7 @@ ms.locfileid: "73981864"
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A、RR、旧バージョンで使用)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  

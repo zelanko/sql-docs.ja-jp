@@ -1,6 +1,7 @@
 ---
-title: ODBC ジェネリック型の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.date: 04/23/2019
+title: 外部データへのアクセス:ODBC ジェネリック型 - PolyBase
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 735d43f224fcfb8438f8fed9bdc6c3b254071195
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5017dc54a1e7858786413b2fcc164e4949f77646
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907596"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255423"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server 上の外部データにアクセスするための PolyBase の構成
 
@@ -21,7 +22,7 @@ ms.locfileid: "72907596"
 
 SQL Server 2019 で PolyBase を使用すると、ODBC コネクタから ODBC と互換性のあるデータ ソースに接続できます。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 "=" 機能は Windows 上の SQL Server でのみ機能することに注意してください。 
 
@@ -88,6 +89,6 @@ ODBC データ ソースのデータに対してクエリを実行するには�
 >[!IMPORTANT] 
 >外部データ ソースを作成すると、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成することができます。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

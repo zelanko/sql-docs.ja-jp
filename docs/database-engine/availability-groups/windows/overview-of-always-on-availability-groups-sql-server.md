@@ -1,7 +1,7 @@
 ---
-title: AlwaysOn 可用性グループの概要
+title: Always On 可用性グループとは
 description: Always On 可用性グループの構成と管理の重要な概念について説明します。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974377"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236299"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループの概要 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "71974377"
   
      この可用性モードを使用する可用性レプリカは、 *同期コミット レプリカ*と呼ばれます。 同期コミット モードの場合、同期コミット プライマリ レプリカは、同期コミット セカンダリ レプリカによるログ書き込みが確認されるまで待機した後で、トランザクションをコミットします。 同期コミット モードでは、特定のセカンダリ データベースがプライマリ データベースに 1 回同期されれば、コミットされたトランザクションが完全に保護されることが保証されます。 この保護の欠点は、トランザクションの遅延が増加することです。  
   
- 詳細については、「 [可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
+ 詳細については、「[可用性モード &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。  
   
 ##  <a name="FormsOfFailover"></a> フェールオーバーの種類  
  プライマリ レプリカとセカンダリ レプリカとのセッションのコンテキスト内で、プライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバー中に、対象のセカンダリ レプリカがプライマリ ロールに移行し、新しいプライマリ レプリカになります。 新しいプライマリ レプリカのデータベースがプライマリ データベースとしてオンラインになります。クライアント アプリケーションから、これらのデータベースに接続できるようになります。 元のプライマリ レプリカは使用可能になるとセカンダリ ロールに移行し、セカンダリ レプリカになります 元のプライマリ データベースはセカンダリ データベースになり、データ同期が再開されます。  
@@ -109,7 +109,7 @@ ms.locfileid: "71974377"
   
 -   非同期コミット モードで使用されるフェールオーバーは、 *強制フェールオーバー*と通常呼ばれる強制手動フェールオーバーのみです (データ損失の可能性あり)。 強制フェールオーバーは手動のみで開始できるため、手動フェールオーバーの一種と見なされます。 強制フェールオーバーは、障害復旧オプションです。 対象のセカンダリ レプリカがプライマリ レプリカに同期されない場合に使用できる唯一のフェールオーバー形式です。  
   
- 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
+ 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
 ##  <a name="ClientConnections"></a> クライアント接続  
  可用性グループ リスナーを作成することによって、特定の可用性グループのプライマリ レプリカへのクライアント接続を提供できます。 *可用性グループ リスナー* には、クライアント接続を適切な可用性レプリカに送るために特定の可用性グループにアタッチされる一連のリソースが用意されています。  

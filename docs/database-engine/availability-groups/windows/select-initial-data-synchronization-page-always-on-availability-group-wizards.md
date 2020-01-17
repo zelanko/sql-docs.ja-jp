@@ -1,6 +1,7 @@
 ---
-title: '[最初のデータの同期を選択] ページ - AlwaysOn 可用性グループ ウィザード | Microsoft Docs'
-ms.custom: ''
+title: '[最初のデータの同期を選択] ページ (可用性グループ ウィザード)'
+description: SQL Server Management Studio (SSMS) の Always On 可用性グループ ウィザードの [最初のデータの同期を選択] ページの説明。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014177"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235342"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>[最初のデータの同期を選択] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "68014177"
  このオプションは、各プライマリ データベースのデータベースおよびログ バックアップを実行し、セカンダリ レプリカをホストする各サーバー インスタンスに復元する場合に選択します。 ウィザードの終了後、各セカンダリ レプリカのすべてのセカンダリ データベースを参加させる必要があります。  
   
 > [!NOTE]  
->  詳細については、このトピックの「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)の 3 つのウィザードで共有されています。  
+>  詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
 ##  <a name="PrepareSecondaryDbs"></a> セカンダリ データベースを手動で準備するには  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ウィザードを使用せずにセカンダリ データベースを準備するには、次の方法のどちらかを使用できます。  
@@ -126,6 +127,6 @@ ms.locfileid: "68014177"
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

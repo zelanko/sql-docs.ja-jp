@@ -18,12 +18,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050809"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762657"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (スキーマ権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
  権限を許可するスキーマを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれかです。  
+ 権限を許可するプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -64,7 +64,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -75,10 +75,10 @@ AS *granting_principal*
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 例:テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
+>  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 次に例を示します。テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
   
  スキーマは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、スキーマで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
@@ -106,9 +106,7 @@ AS *granting_principal*
   
  U1 ユーザーは、データベースに対して CREATE SYNONYM 権限を持ち、S1 スキーマに対して SELECT 権限を持っているとします。 この場合、U1 ユーザーは拒否されたオブジェクト T1 のシノニムを S1 スキーマ内に作成し、そのシノニムを使用して、拒否されたオブジェクト T1 にアクセスできることになります。  
   
- U1 ユーザーは、データベースに対して CREATE VIEW 権限を持ち、S1 スキーマに対して SELECT 権限を持っているとします。 この場合、U1 ユーザーは拒否されたオブジェクト T1 にデータをクエリするビューを S1 スキーマ内に作成し、そのビューを使用して、拒否されたオブジェクト T1 にアクセスできることになります。  
-  
- 詳細については、サポート技術情報の資料 No. 914847 を参照してください。  
+ U1 ユーザーは、データベースに対して CREATE VIEW 権限を持ち、S1 スキーマに対して SELECT 権限を持っているとします。 この場合、U1 ユーザーは拒否されたオブジェクト T1 にデータをクエリするビューを S1 スキーマ内に作成し、そのビューを使用して、拒否されたオブジェクト T1 にアクセスできることになります。
   
 ## <a name="permissions"></a>アクセス許可  
  権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。  
@@ -130,7 +128,7 @@ AS *granting_principal*
   
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を許可できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>A. スキーマ HumanResources に対する INSERT 権限を、guest に許可する  
   

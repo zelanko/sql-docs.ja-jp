@@ -1,6 +1,7 @@
 ---
-title: ユーザー定義の分類子関数の作成とテスト | Microsoft Docs
-ms.custom: ''
+title: ユーザー定義の分類子関数の作成とテスト - Resource Governor
+description: このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。
+ms.custom: seo-dt-2019
 ms.date: 07/11/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: aff12e92692ebd3bd53319a91b0a480338458dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32d8a7a590b31d63c256f861338193c234774908
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136874"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165565"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>ユーザー定義の分類子関数の作成とテスト
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68136874"
   
  次の手順で紹介する例のように、ユーザー定義の分類子関数の作成はかなり複雑になる場合があります。  
   
- ここで使用する例の内容は次のとおりです。  
+ この例では次のようになります。  
   
 -   指定された時間範囲内の実稼働プロセスに対し、リソース プール (pProductionProcessing) とワークロード グループ (gProductionProcessing) を作成します。  
   

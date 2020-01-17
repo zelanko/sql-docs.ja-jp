@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981887"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681783"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ SQL Server、SQL Database、SQL Data Warehouse、または Analytics Platform Sy
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **\* _SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -138,7 +138,7 @@ WITH
   - 読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可がある
   - 有効な有効期限を使用する (すべての日付が UTC 時間)。
 
-`SHARED ACCESS SIGNATURE` と `TYPE` = `BLOB_STORAGE` で、`CREDENTIAL` を使用する例については、[一括操作を実行し、Azure Blob Storage から SQL Database にデータを取得するための外部データ ソースの作成](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)に関するセクションを参照してください
+`SHARED ACCESS SIGNATURE` と `TYPE` = `BLOB_STORAGE` で、`CREDENTIAL` を使用する例については、[一括操作を実行し、Azure Blob Storage から SQL Database にデータを取得するための外部データ ソースの作成](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)に関するセクションを参照してください
 
 データベース スコープ資格情報を作成するには、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]」を参照してください。
 
@@ -311,14 +311,38 @@ WITH
 ;
 ```
 
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>F. Polybase 接続を使用して SQL Server 名前付きインスタンスを参照する外部データソースを作成する (SQL 2019)
+
+SQL Server の名前付きインスタンスを参照する外部データソースを作成する目的で、CONNECTION_OPTIONS を使用してインスタンス名を指定できます。 次の例では、WINSQL2019 がホスト名で、SQL2019 がインスタンス名になります。
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+または、ポートを使用して SQL Server インスタンスに接続できます。
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
 ## <a name="examples-bulk-operations"></a>例 :一括操作
 
 > [!NOTE]
 > 一括操作用の外部データ ソースの構成時に、`LOCATION` URL の末尾に、 **/** 、ファイル名、または Shared Access Signature パラメーターを配置しないでください。
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する
 
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。
+**適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用][sas_token]」を参照してください。
 
 ```sql
@@ -419,8 +443,8 @@ WITH
 | 外部データ ソース   | 場所プレフィックス | ロケーション パス                                         |
 | ---------------------- | --------------- | ----------------------------------------------------- |
 | 一括操作        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| エラスティック クエリ (シャード)  | 任意    | `<shard_map_server_name>.database.windows.net`        |
-| エラスティック クエリ (リモート) | 任意    | `<remote_server_name>.database.windows.net`           |
+| エラスティック クエリ (シャード)  | 必要なし    | `<shard_map_server_name>.database.windows.net`        |
+| エラスティック クエリ (リモート) | 必要なし    | `<remote_server_name>.database.windows.net`           |
 
 場所のパス:
 
@@ -465,7 +489,7 @@ WITH
 
 | TYPE              | DATABASE_NAME の値                                       |
 | ----------------- | ------------------------------------------------------------ |
-| RDBMS (RDBMS)             | `LOCATION` を使用して指定されたサーバー上のリモート データベースの名前 |
+| RDBMS             | `LOCATION` を使用して指定されたサーバー上のリモート データベースの名前 |
 | SHARD_MAP_MANAGER | シャード マップ マネージャーとして動作しているデータベースの名前      |
 
 `TYPE` = `RDBMS` の外部データ ソースを作成する方法を示す例については、「[RDBMS 外部データ ソースを作成する](#b-create-an-rdbms-external-data-source)」を参照してください
@@ -653,7 +677,7 @@ WITH
 
 場所を設定する場合の追加の注意事項とガイダンス:
 
-- 既定のオプションでは、[Azure Data Lake Storage Gen 2 のプロビジョニング時にセキュリティで保護された SSL 接続を有効にする] を使用します。 この設定を有効にした場合は、セキュリティで保護された SSL 接続を選択したときに `abfss` を使用する必要があります。 注意 `abfss` は、セキュリティで保護されていない SSL 接続にも使用できます。 
+- 既定のオプションでは、[Azure Data Lake Storage Gen 2 のプロビジョニング時に`enable secure SSL connections`] を使用します。 この設定を有効にした場合は、セキュリティで保護された SSL 接続を選択したときに `abfss` を使用する必要があります。 注意 `abfss` は、セキュリティで保護されていない SSL 接続にも使用できます。 
 - SQL Data Warehouse エンジンでは、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
 - `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された SSL 接続を使用してデータが送信されるため、推奨されます。

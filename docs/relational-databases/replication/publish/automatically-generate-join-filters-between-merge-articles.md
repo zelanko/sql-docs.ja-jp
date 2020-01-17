@@ -1,6 +1,7 @@
 ---
-title: マージ アーティクル間の結合フィルターを自動的に生成する | Microsoft Docs
-ms.custom: ''
+title: 結合フィルターの自動生成 (マージ)
+description: SQL Server Management Studio (SSMS) でマージ レプリケーションを実行するための [パブリケーションの新規作成ウィザード] の [テーブル行のフィルター選択] ページで一連の結合フィルターを自動的に生成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b3d21e2dcecf965e82ea5a88a51d6eb64ebfb88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907972"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321285"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>マージ アーティクル間の結合フィルターを自動的に生成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、一連の結合フィルターが自動的に生成されます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 > [!NOTE]  
->  パブリケーションに対するサブスクリプションを初期化した後に、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで一連の結合フィルターを自動的に生成した場合は、変更を行った後で、新しいスナップショットを生成し、すべてのサブスクリプションを再初期化する必要があります。 プロパティ変更の要件の詳細については、「[パブリケーションおよびアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」を参照してください。  
+>  パブリケーションに対するサブスクリプションを初期化した後に、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで一連の結合フィルターを自動的に生成した場合は、変更を行った後で、新しいスナップショットを生成し、すべてのサブスクリプションを再初期化する必要があります。 プロパティ変更の要件の詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) をご覧ください。  
   
  結合フィルターは、一連のテーブルに対して手動で作成できます。また、テーブルに定義された外部キーと主キーのリレーションシップに基づいてレプリケーションによって自動的に生成することもできます。 手動での結合フィルターの作成の詳細については、「[マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」を参照してください。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "67907972"
   
     3.  フィルター オプションを指定します。  
   
-         複数のサブスクライバー間でのデータの共有方法に一致するオプションを選択します。 **[このテーブルの 1 行を複数のサブスクリプションに移動する]** または **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** 。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションは、格納および処理するメタデータを減らすことにより、パフォーマンスを最適化できます。 ただし、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
+         複数のサブスクライバー間でのデータの共有方法に一致するオプションを選択します。 **[このテーブルの 1 行を複数のサブスクリプションに移動する]** または **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** 。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションは、格納および処理するメタデータを減らすことにより、パフォーマンスを最適化できます。 ただし、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -82,6 +83,6 @@ ms.locfileid: "67907972"
   
 ## <a name="see-also"></a>参照  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: 例:一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: '段階的な部分復元: 一部のファイル グループのみ (単純復旧モデル)'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f33dc11cb8cc08950bb4f957246727701e4f5d25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: be53416c5e9bb259338b30dae36b27bc420cf4ca
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138780"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256042"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>例:一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "68138780"
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ## <a name="see-also"></a>参照  
- [オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
+ [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  

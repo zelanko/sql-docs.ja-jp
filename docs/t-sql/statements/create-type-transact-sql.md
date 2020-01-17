@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,17 +26,17 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982717"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901873"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で別名データ型またはユーザー定義型を現在のデータベースで作成します。 別名データ型の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ システム型に基づきます。 ユーザー定義型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) のアセンブリのクラスを使用して実装します。 ユーザー定義型を実装にバインドするには、先に [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使用して、その実装を含む CLR アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で登録しておく必要があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で別名データ型またはユーザー定義型を現在のデータベースで作成します。 別名データ型の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ システム型に基づきます。 ユーザー定義型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) のアセンブリのクラスを使用して実装します。 ユーザー定義型を実装にバインドするには、先に [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使用して、その実装を含む CLR アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で登録しておく必要があります。  
   
  既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR コード実行機能は無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、および削除できますが、それらの参照を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を有効にする必要があります。  
  
@@ -179,11 +179,11 @@ column_name <data_type>
 |-|-|-|-|  
 |**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
 |**date**|**datetime**|**datetime2**|**datetimeoffset**|  
-|**decimal**|**float**|**image**|**int**|  
+|**decimal**|**float**|**画像**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
-|**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
+|**nvarchar(** *n* | **max)**|**real**|**smalldatetime**|**smallint**|  
 |**smallmoney**|**sql_variant**|**text**|**time**|  
-|**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
+|**tinyint**|**uniqueidentifier**|**varbinary(** *n* | **max)**|**varchar(** *n* | **max)**|  
   
  また *base_type* は、これらのシステム データ型のいずれかにマップする任意のデータ型のシノニムにすることもできます。  
   
@@ -204,7 +204,7 @@ column_name <data_type>
 > [!NOTE]  
 >  EXTERNAL_NAME は、包含データベースでは使用できません。  
   
- **[.** *class_name*  **]**  
+ **[.** *class_name* **]**  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  ユーザー定義型を実装するアセンブリ内のクラスを指定します。 *class_name* は有効な識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 *class_name* は、対応するアセンブリ内のクラス名に正確に一致している必要があります。大文字と小文字は、データベース照合順序に関係なく区別されます。 クラスの記述に使用されている C# などのプログラミング言語が、名前空間の概念を使用している場合、クラス名は、角かっこ ( **[ ]** ) で囲まれた名前空間で修飾された名前にすることができます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって *type_name* と同じであると見なされます。  
@@ -251,7 +251,7 @@ column_name <data_type>
   
  ハッシュ インデックスを作成することを示します。 ハッシュ インデックスは、メモリ最適化テーブルでのみサポートされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *assembly_name* とそのメソッドで参照されているアセンブリのクラスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でユーザー定義型を実装するためのすべての要件を満たしている必要があります。 これらの要件の詳細については、「[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。  
   
  その他、次のような注意事項があります。  
@@ -268,7 +268,7 @@ column_name <data_type>
   
  **sp_addtype** を使用して作成したユーザー定義型と異なり、CREATE TYPE を使用して作成した型に対しては、データベース ロール **public** に REFERENCES 権限が自動的に付与されるわけではありません。 この権限は個別に付与する必要があります。  
   
- ユーザー定義テーブル型の場合、*column_name* \<data type> で使用される構造化ユーザー定義型は、テーブル型が定義されているデータベース スキーマ スコープの一部になります。 データベース内の別のスコープに含まれている構造化ユーザー定義型にアクセスするには、2 つの部分から構成される名前を使用します。  
+ ユーザー定義テーブル型の場合、*column_name*\<data type> で使用される構造化ユーザー定義型は、テーブル型が定義されているデータベース スキーマ スコープの一部になります。 データベース内の別のスコープに含まれている構造化ユーザー定義型にアクセスするには、2 つの部分から構成される名前を使用します。  
   
  ユーザー定義テーブル型では、計算列の主キーを PERSISTED および NOT NULL にする必要があります。  
   
@@ -284,12 +284,12 @@ column_name <data_type>
   > ユーザー定義型を使用する列があるテーブルを作成するユーザーは、そのユーザー定義型に対して REFERENCES アクセス許可を持っている必要があります。
   > このテーブルを TempDB 内に作成する必要がある場合、テーブルを作成する**前**に毎回 REFERENCES アクセス許可を明示的に付与する必要があります。または、このデータ型と REFERENCES アクセス許可を model データベースに追加する必要があります。 この処理が完了すると、このデータ型とアクセス許可は TempDB で永続的に利用できるようになります。 この処理が完了していない場合、SQL Server の再起動時にユーザー定義のデータ型とアクセス許可は消去されます。 詳細については、「[CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. varchar データ型に基づいた別名型を作成する  
  次の例では、システムから提供されている `varchar` データ型に基づいて、別名型を作成します。  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -299,7 +299,7 @@ FROM varchar(11) NOT NULL ;
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>C. ユーザー定義テーブル型を作成する  
  次の例では、2 つの列を持つユーザー定義テーブル型が作成されます。 テーブル値パラメーターの作成方法および使用方法の詳細については、「[テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」をご覧ください。  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>参照  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
+ [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

@@ -1,6 +1,7 @@
 ---
-title: SQL Server 以外のサブスクライバーのサブスクリプションの作成 | Microsoft Docs
-ms.custom: ''
+title: SQL 以外のサブスクライバーのサブスクリプションの作成
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用して、SQL Server で SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710433"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322019"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,11 +127,11 @@ ms.locfileid: "71710433"
   
     -   このウィザードが完了した後に、ディストリビューション エージェントからサブスクライバーへスナップショット ファイルを転送するには、 **[次の場合に初期化]** 列のドロップダウン リスト ボックスから **[今すぐ]** を選択します。 エージェントの次回の実行時にファイルが転送されるようにするには、 **[初回同期時]** を選択します。  
   
-12. **[ウィザードのアクション]** ページで、必要に応じてサブスクリプションのスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+12. **[ウィザードのアクション]** ページで、必要に応じてサブスクリプションのスクリプトを作成します。 詳細については、「[レプリケーションのスクリプト作成](../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>サブスクライバー側のテーブルを保持するには  
   
--   既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効にすると、 **pre_creation_cmd** アーティクル プロパティが 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
+-   既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効にすると、 **pre_creation_cmd** アーティクル プロパティが 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 [https://login.microsoftonline.com/consumers/](`sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`)  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>パブリケーションのスナップショットを生成するには  
   

@@ -1,6 +1,7 @@
 ---
-title: SQL Server エラー ログの表示 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: SQL Server エラー ログの表示 (SSMS)
+description: SQL Server Management Studio (SSMS) で SQL Server エラー ログを表示します。
+ms.custom: seo-dt-2019
 ms.date: 09/29/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,18 +16,19 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6b626bb278025eb08cbbfdcc81724d8c82dd36ed
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f6410575af0d05b8d407ba9f52cc116fbe2ac733
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907843"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165476"
 ---
-# <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server エラー ログの表示 (SQL Server Management Studio)
+# <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) で SQL Server エラー ログを表示する
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログには、トラブルシューティングに利用できるユーザー定義のイベントや特定のシステム イベントが含まれています。 
 
-## <a name="view-the-logs"></a>ログの表示
+## <a name="view-the-logs"></a>ログを表示する
 
 1. SQL Server Management Studio で **[オブジェクト エクスプローラー]** を選択します。 **オブジェクト エクスプローラー**を開くには、F8 キーを押します。 または、上部メニューで **[表示]** 、 **[オブジェクト エクスプローラー]** の順に選択します。
     

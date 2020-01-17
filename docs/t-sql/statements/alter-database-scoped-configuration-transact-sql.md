@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: 複数のデータベース構成を個別データベース レベルで設定できます。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240697"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258131"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -130,7 +132,7 @@ MAXDOP オプションを使用すると、並列プラン実行で使用する�
 > [!TIP]
 > これをクエリ レベルで行うには、**MAXDOP** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を使用します。    
 > これをサーバー レベルで行うには、**並列処理の最大限度 (MAXDOP)** [サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を使用します。     
-> これをワークロード レベルで行うには、**MAX_DOP** [Resource Governor ワークロード グループ構成オプション](../../t-sql/statements/create-workload-group-transact-sql.md) 使用します。    
+> これをワークロード レベルで行うには、**MAX_DOP** [Resource Governor ワークロード グループ構成オプション](../../t-sql/statements/create-workload-group-transact-sql.md)を使用します。    
 
 PRIMARY
 
@@ -426,11 +428,11 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) システム ビューには、データベース内のスコープ構成に関する情報が表示されます。 データベース スコープ構成オプションはサーバー全体の初期設定にオーバーライドするため、sys.database_scoped_configurations にのみ表示されます。 [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) システム ビューは、サーバー全体の設定にのみ表示されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 以下は ALTER DATABASE SCOPED CONFIGURATION の使用例です
 
-### <a name="a-grant-permission"></a>A. 権限の付与
+### <a name="a-grant-permission"></a>A. アクセス許可の付与
 
 この例では、ALTER DATABASE SCOPED CONFIGURATION の実行に必要な権限をユーザー Joe に与えています。
 

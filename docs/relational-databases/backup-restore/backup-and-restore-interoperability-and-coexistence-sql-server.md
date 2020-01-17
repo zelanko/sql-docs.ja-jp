@@ -1,7 +1,7 @@
 ---
-title: 'バックアップと復元: 相互運用性と共存 (SQL Server) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/05/2016
+title: 'バックアップと復元: 機能の相互運用性'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940876"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247449"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>バックアップと復元: 相互運用性と共存 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "67940876"
  ここで説明する内容は、複数のファイル グループを含む完全復旧モデルのデータベースだけに関連しています。  
   
 > [!NOTE]  
->  データベース ミラーリング機能は、将来のバージョンの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
+>  データベース ミラーリング機能は、将来のバージョンの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用してください  
   
  データベース ミラーリングは、データベースの可用性を高めるためのソリューションです。 ミラーリングはデータベースごとに実装され、完全復旧モデルを使用するデータベースでのみ機能します。 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "67940876"
 >  データベースのファイル グループのサブセットのコピーを配布するには、レプリケーションを使用します。ファイル グループ内のオブジェクトのうち、他のサーバーにコピーしたいものだけをレプリケートします。 レプリケーションの詳細については、「 [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)」を参照してください。  
   
 ### <a name="creating-the-mirror-database"></a>ミラー データベースの作成  
- WITH NORECOVERY を指定してプリンシパル データベースのバックアップをミラー サーバーに復元すると、ミラー データベースが作成されます。 この復元したデータベースの名前は、元のデータベースと同じ名前のままにする必要があります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)のいくつかの機能のバックアップと復元に関する考慮事項について説明します。  
+ WITH NORECOVERY を指定してプリンシパル データベースのバックアップをミラー サーバーに復元すると、ミラー データベースが作成されます。 この復元したデータベースの名前は、元のデータベースと同じ名前のままにする必要があります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
- 段階的な部分復元シーケンスの使用がサポートされている場合は、これを使用してミラー データベースを作成できます。 ただし、ミラーリングを開始できるのは、すべてのファイル グループを復元し、通常はログ バックアップを復元して、ミラー データベースの状態をプリンシパル データベースの状態に十分近づけてからです。 詳細については、「[段階的な部分復元の実行 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
+ 段階的な部分復元シーケンスの使用がサポートされている場合は、これを使用してミラー データベースを作成できます。 ただし、ミラーリングを開始できるのは、すべてのファイル グループを復元し、通常はログ バックアップを復元して、ミラー データベースの状態をプリンシパル データベースの状態に十分近づけてからです。 詳細については、「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
   
 ### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>ミラーリング中のバックアップおよび復元の制限  
  データベース ミラーリング セッションがアクティブの場合は、次の制限があります。  

@@ -7,12 +7,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594549"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822146"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上の SQL Server 2019 のリリース ノート
 
@@ -25,12 +25,12 @@ ms.locfileid: "73594549"
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
-| プラットフォーム | [ファイル システム] | インストール ガイド |
+| プラットフォーム | ファイル システム | インストール ガイド |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3、7.4、7.5、または 7.6 Server | XFS または EXT4 | [インストール ガイド](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2、SP3、または SP4 | XFS または EXT4 | [インストール ガイド](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS または EXT4 | [インストール ガイド](quickstart-install-connect-ubuntu.md) | 
-| Windows、Mac、または Linux 上の Docker エンジン 1.8+ | なし | [インストール ガイド](quickstart-install-connect-docker.md) | 
+| Windows、Mac、または Linux 上の Docker エンジン 1.8+ | 該当なし | [インストール ガイド](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > 詳細については、SQL Server on Linux の[システム要件](sql-server-linux-setup.md#system)を確認してください。 SQL Server 2017 の最新のサポート ポリシーについては、「[Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)」を参照してください。
@@ -43,7 +43,7 @@ SQL Server を対象とする既存のクライアント ツールの多くは�
 
 SQL Server 2019 のリリース履歴の一覧を次の表に示します。
 
-| リリース                   | Version       | リリース日 |
+| Release                   | Version       | リリース日 |
 |---------------------------|---------------|--------------|
 | [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
 | [リリース候補](#rc)  | 15.0.1900.25  | 2019-08-21   |
@@ -69,7 +69,7 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 
 手動またはオフラインのパッケージ インストールの場合は、次の表の情報を使用して RPM と Debian のパッケージをダウンロードすることができます。
 
-| [パッケージ] | パッケージ バージョン | ダウンロード |
+| Package | パッケージ バージョン | ダウンロード |
 |-----|-----|-----|
 | Red Hat RPM パッケージ | 15.0.2000.5-5 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[拡張機能 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java 拡張機能 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
 | SLES RPM パッケージ | 15.0.2000.5-5 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[拡張機能 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java 拡張機能 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
@@ -83,7 +83,7 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 
 手動またはオフラインのパッケージ インストールの場合は、次の表の情報を使用して RPM と Debian のパッケージをダウンロードすることができます。
 
-| [パッケージ] | パッケージ バージョン | ダウンロード |
+| Package | パッケージ バージョン | ダウンロード |
 |-----|-----|-----|
 | Red Hat RPM パッケージ | 15.0.1900.25-1 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[拡張機能 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Java 拡張機能 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
 | SLES RPM パッケージ | 15.0.1900.25-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[拡張機能 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Java 拡張機能 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
@@ -93,7 +93,7 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 
 以下のセクションでは、Linux 上の SQL Server 2019 (15.x) の一般提供 (GA) リリースに関する既知の問題について説明します。
 
-#### <a name="general"></a>全般
+### <a name="general"></a>全般
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がインストールされているホスト名の長さは 15 文字以下でなければなりません。 
 
@@ -113,7 +113,11 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 
     - **解決方法**:**ALTER LOGIN** ステートメントを使用して **sa** ログインの言語を変更します。
 
-#### <a name="databases"></a>データベース
+- OLEDB プロバイダーによって次の警告がログに記録されます: `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
+
+   - **解決方法**:必要な操作はありません。 OLEDB プロバイダーは SHA256 を使用して署名されています。 SQL Server データベース エンジンでは、署名された .dll が正しく検証されません。
+
+### <a name="databases"></a>データベース
 
 - マスター データベースは mssql-conf ユーティリティを使用して移動することはできません。 他のシステム データベースは mssql-conf で移動できます。
 
@@ -143,7 +147,7 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 
 - ユーザー権限 **ADMINISTER BULK OPERATIONS** は、現時点で Linux ではサポートされていません。
 
-#### <a name="networking"></a>ネットワーク
+### <a name="networking"></a>ネットワーク
 
 リンク サーバーや可用性グループなど、sqlservr プロセスからの送信 TCP 接続に関連する機能は、次の両方の条件が満たされている場合は動作しない可能性があります。
 
@@ -167,10 +171,10 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 運用環境で **Network File System (NFS)** のリモート共有を使用する場合は、次のサポート要件に注意してください。
 
 - NFS バージョン **4.2 以上**を使用してください。 前のバージョンの NFS では、最新のファイル システムに共通する fallocate やスパース ファイルの作成などの必要な機能がサポートされていません。
-- NFS マウント上の **/var/opt/mssql** ディレクトリのみを検索してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム バイナリなどの他のファイルはサポートされていません。
+- NFS マウント上の **/var/opt/mssql** ディレクトリのみが検索されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム バイナリなどの他のファイルはサポートされていません。
 - リモート共有をマウントするときに NFS クライアントが 'nolock' オプションを使用していることを確認してください。
 
-#### <a name="localization"></a>ローカリゼーション
+### <a name="localization"></a>ローカリゼーション
 
 - セットアップ時にロケールが英語 (en_us) でない場合は、bash セッション/ターミナルで UTF-8 エンコードを使用する必要があります。 ASCII エンコードを使用すると、次のようなエラーが表示される場合があります。
 
@@ -190,7 +194,7 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 
 - このリリースでは、Office ドキュメントのフィルターを含め、すべてのフィルターが使用できるわけではありません。 サポートされているフィルターの一覧については、[Linux への SQL Server フルテキスト検索のインストール](sql-server-linux-setup-full-text-search.md#filters)に関するページを参照してください。
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - **mssql-server-is** パッケージは、このリリースの SUSE ではサポートされていません。 現時点では、Ubuntu と Red Hat Enterprise Linux (RHEL) でサポートされています。
 
@@ -211,10 +215,10 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 
 Linux の SSIS の詳細については、次の記事を参照してください。
 -   [SSIS の Linux サポートをお知らせするブログ記事](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。
--   [Linux に SQL Server Integration Services (SSIS) をインストールする](sql-server-linux-setup-ssis.md)
--   [SSIS で Linux 上のデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
+-   [SQL Server Integration Services (SSIS) on Linux をインストールする](sql-server-linux-setup-ssis.md)
+-   [SSIS を使用して Linux 上でデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に接続されている Windows の [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、次の制限事項が適用されます。
 
@@ -226,7 +230,7 @@ Linux の SSIS の詳細については、次の記事を参照してくださ�
 
 - 保持するログ ファイルの数は変更できません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 作業を開始するには、次のクイック スタートを参照してください。
 
@@ -237,4 +241,4 @@ Linux の SSIS の詳細については、次の記事を参照してくださ�
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [実行と接続 - クラウド](quickstart-install-connect-clouds.md)
 
-よく寄せられる質問に対する回答については、[SQL Server on Linux に関してよく寄せられる質問](sql-server-linux-faq.md)に関するページを参照してください。
+よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。

@@ -1,6 +1,7 @@
 ---
-title: チュートリアル:SSMS を使用したセキュア エンクレーブを使用する Always Encrypted の概要 | Microsoft Docs
-ms.custom: ''
+title: チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
+description: このチュートリアルでは、セキュリティで保護されたエンクレーブが設定された基本的な Always Encrypted を作成する方法、インプレースでデータを暗号化する方法、SQL Server Management Studio (SSMS) を利用し、暗号化された列に対して高度なクエリを実行する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,21 +13,21 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592346"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557502"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 このチュートリアルでは、[セキュア エンクレーブを使用する Always Encrypted](encryption/always-encrypted-enclaves.md) の開始方法について説明します。 次のことを示します。
 - セキュア エンクレーブを使用する Always Encrypted をテストおよび評価する基本的な環境を作成する方法。
 - SQL Server Management Studio (SSMS) を使用して、データのインプレース暗号化を行い、暗号化された列に対して高度なクエリを実行する方法。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 セキュア エンクレーブを使用する Always Encrypted を開始するには、少なくとも 2 台のコンピューター (仮想マシンも可) が必要です。
 
@@ -186,7 +187,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 
     クエリでは、次の結果が返されるはずです。  
 
-    | NAME                           | value | value_in_use |
+    | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | 列暗号化エンクレーブの型 | 1     | 1              |
 
@@ -339,10 +340,10 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 
 3. Always Encrypted が有効になっていない SSMS インスタンスで同じクエリをもう一度試し、発生するエラーに注意します。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 このチュートリアルを完了すると、次のいずれかのチュートリアルに進むことができます。
-- [チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
-- [チュートリアル: ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
+- [チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## <a name="see-also"></a>参照
 - [Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)

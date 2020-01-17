@@ -1,6 +1,7 @@
 ---
-title: SQL Server 用の Red Hat Enterprise Linux 共有クラスターを操作する
-description: SQL Server 用に Red Hat Enterprise Linux 共有ディスク クラスターを構成することにより、高可用性を実現します。
+title: SQL Server on Linux で RHEL FCI を運用する
+description: FCI を手動でフェールオーバーさせたり、クラスターにノードを追加したり、クラスターからノードを削除したりするなど、SQL Server で Red Hat Enterprise Linux (RHEL) 共有ディスクのフェールオーバー クラスター インスタンス (FCI) を運用し、可用性を高める方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032243"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558527"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server 用の Red Hat Enterprise Linux 共有ディスク クラスターを操作する
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>SQL Server の RHEL フェールオーバー クラスター インスタンス (FCI) を運用する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -30,7 +31,7 @@ ms.locfileid: "68032243"
 
 ## <a name="architecture-description"></a>アーキテクチャの説明
 
-クラスタリング レイヤーは、[Pacemaker](https://clusterlabs.org/) の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。 Corosync と Pacemaker によって、クラスターの通信とリソース管理が調整されます。 SQL Server インスタンスは、片方のノードでのみアクティブになります。
+クラスタリング レイヤーは、[Pacemaker](https://clusterlabs.org/) の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。 Corosync と Pacemaker によって、クラスターの通信とリソース管理が調整されます。 SQL Server インスタンスは、一方のノードでのみアクティブになります。
 
 次の図では、SQL Server が含まれる Linux クラスターのコンポーネントが示されています。 
 
@@ -72,7 +73,7 @@ sudo crm_mon
 
 ## <a name="add-a-node-to-a-cluster"></a>クラスターにノードを追加する
 
-1. 各ノードの IP アドレスを確認します。 次のスクリプトでは、現在のノードの IP アドレスが表示されます。 
+1. 各ノードの IP アドレスを確認します。 次のスクリプトを実行すると、現在のノードの IP アドレスが表示されます。 
 
    ```bash
    ip addr show
@@ -272,7 +273,7 @@ pacemaker: active/enabled
 
 * Pacemaker の「[一からのクラスター](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)」ガイド
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 用に Red Hat Enterprise Linux 共有ディスクを構成する](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 

@@ -1,7 +1,8 @@
 ---
-title: サポートされているバージョンとエディションのアップグレード - SQL Server 2017 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2017
+title: サポートされているバージョンとエディションのアップグレード
+titleSuffix: SQL Server 2017
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
-ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
+ms.openlocfilehash: 4dba820ec4e353fff15b0695b97f940441caf802
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72717226"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258834"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 のサポートされているバージョンとエディションのアップグレード
 
@@ -34,13 +35,13 @@ ms.locfileid: "72717226"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの Windows 認証を有効にし、既定の構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス アカウントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin グループのメンバーであること) を確認してください。  
   
--   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] にアップグレードするには、サポート対象のオペレーティング システムを実行している必要があります。 詳細については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
+-   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]にアップグレードするには、サポート対象のオペレーティング システムを実行している必要があります。 詳細については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
   
 -   再起動を保留している場合はアップグレードがブロックされます。  
   
 -   Windows インストーラー サービスが実行されていない場合は、アップグレードがブロックされます。  
   
-## <a name="unsupported-scenarios"></a>サポートされていないシナリオ  
+## <a name="unsupported-scenarios"></a>サポートされないシナリオ  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントのバージョン番号は、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のインスタンス内で同一である必要があります。  
   
@@ -111,7 +112,7 @@ ms.locfileid: "72717226"
  \* Microsoft では、特に Technology Adoption Program (TAP) に参加したお客様向けに、リリース候補版ソフトウェアからのアップグレードをサポートしています。 
 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] サポート対象 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] に対する [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のサポート  
  ここでは、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートについて説明します。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]では、次の作業を実行できます。  
   
 -   データベース エンジンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスに、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] データベース (mdf/ldf ファイル) をアタッチします。  

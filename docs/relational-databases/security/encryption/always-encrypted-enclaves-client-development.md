@@ -12,12 +12,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54e282e7d68c23837c1865f1257ba7e159644d26
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7ec032a9a6bd6d02372d77d8844d5e4938fbe945
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595537"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492005"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -34,12 +34,15 @@ ms.locfileid: "73595537"
 
 セキュリティで保護されたエンクレーブの機能を使用するには、データベースへの接続時にエンクレーブの計算を有効にするようにアプリケーションとクライアント ドライバーを構成し、エンクレーブの構成証明サービスをポイントする構成証明サービスのエンドポイント (エンクレーブ構成証明 URL) を指定する必要があります。 詳細は、使用しているドライバーと構成証明サービス/プロトコルによって異なります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 セキュリティで保護されたエンクレーブが設定された Always Encrypted は、次のクライアント ドライバーでサポートされます。
 - .NET Framework 4.7.2 以降の .NET Framework Data Provider for SQL Server 
     - 詳しくは、「[Always Encrypted と .NET Framework Data Provider for SQL Server を使用する](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)」をご覧ください。
-    - 詳しいチュートリアルについては、「[チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET Framework アプリケーションを開発する](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)」をご覧ください
+    - 詳しいチュートリアルについては、「[チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- .NET Framework 4.6 以降および .NET Core 2.1 以降の Microsoft .NET Data Provider for SQL Server 
+    - 詳しくは、「[Always Encrypted と Microsoft .NET Data Provider for SQL Server を使用する](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)」をご覧ください。
+    - 詳しいチュートリアルについては、「[チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET アプリケーションの開発](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)」をご覧ください。
 - Microsoft ODBC Driver for SQL Server バージョン 17.4 以降。 
     - 詳しくは、「[Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)」(ODBC ドライバーでの Always Encrypted の使用) をご覧ください。 
     - ODBC を使用するデータベース接続でエンクレーブ計算を有効にする方法については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves)」をご覧ください。

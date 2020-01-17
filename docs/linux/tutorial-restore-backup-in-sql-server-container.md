@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531197"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721827"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux の Docker コンテナーで SQL Server データベースを復元する
 
@@ -39,7 +39,7 @@ ms.locfileid: "73531197"
 > * Transact-SQL ステートメントを実行してデータベースの表示と変更を行う。
 > * 変更したデータベースをバックアップする。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 * サポートされているいずれかの Linux ディストリビューションの Docker エンジン 1.8+ または Mac/Windows 用 Docker。 詳細については、「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker をインストールする) を参照してください。
 * 2 GB 以上のディスク領域
@@ -82,10 +82,10 @@ ms.locfileid: "73531197"
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
-   このコマンドにより、Developer エディションの SQL Server 2017 コンテナー (規定値) が作成されます。 SQL Server のポート **1433** は、ホスト上ではポート **1401** として公開されます。 省略可能な `-v sql1data:/var/opt/mssql` パラメーターを使うと、**sql1ddata** という名前のデータ ボリューム コンテナーが作成されます。 これは、SQL Server によって作成されたデータを永続化するために使われます。
+   このコマンドにより、Developer エディションの SQL Server 2017 コンテナー (規定値) が作成されます。 SQL Server のポート **1433** は、ホスト上ではポート **1401** として公開されています。 省略可能な `-v sql1data:/var/opt/mssql` パラメーターを使うと、**sql1ddata** という名前のデータ ボリューム コンテナーが作成されます。 これは、SQL Server によって作成されたデータを永続化するために使われます。
 
-   > [!NOTE]
-   > SQL Server の実稼働エディションをコンテナーで実行するためのプロセスは、若干異なります。 詳細については、「[Run production container images](sql-server-linux-configure-docker.md#production)」(実稼働のコンテナー イメージを実行する) を参照してください。 同じコンテナー名とポートを使う場合でも、このチュートリアルの残りの部分を引き続き実稼働のコンテナーに適用できます。
+   > [!IMPORTANT]
+   > この例では、Docker 内のデータ ボリューム コンテナーが使用されます。 ホスト ディレクトリのマッピングを代わりに選択する場合、Mac と Windows では、Docker でのこの手法に制限があることにご留意ください。 詳細については、「[Docker で SQL Server コンテナーイメージを構成する](sql-server-linux-configure-docker.md#persist)」を参照してください。
 
 1. Docker コンテナーを表示するには、`docker ps` コマンドを使用します。
 
@@ -520,7 +520,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

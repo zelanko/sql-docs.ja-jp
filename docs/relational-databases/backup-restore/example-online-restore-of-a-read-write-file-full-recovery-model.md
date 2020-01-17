@@ -1,7 +1,7 @@
 ---
-title: 例:読み取り/書き込みファイルのオンライン復元 (完全復旧モデル) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5193d8e84cc3277d8c0031ab4a8f3c4f31845090
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: 6c01161349b33bc151fac3c7faadf77ac14f9302
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341854"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243689"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>例:読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

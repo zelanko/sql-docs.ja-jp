@@ -1,6 +1,7 @@
 ---
-title: マージ パブリケーションの互換性レベルの設定 | Microsoft Docs
-ms.custom: ''
+title: マージ パブリケーションの互換性レベルの設定
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用して、マージ パブリケーションの互換性レベルを設定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3506974f6eb1bc22aa6a20833b9205c3507c113c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac82c951c3e65c1d26891f802d19b8522f22a6e9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904902"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321223"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>マージ パブリケーションの互換性レベルの設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "72904902"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>マージ パブリケーションのパブリケーション互換性レベルを設定するには  
   
-1.  パブリケーションに古いバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との互換性を持たせるには、パブリッシャーで `@publication_compatibility_level` に値を指定して、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行します。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
+1.  パブリケーションに古いバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との互換性を持たせるには、パブリッシャーで `@publication_compatibility_level` に値を指定して、[sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行します。 詳しくは、「 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
 
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>マージ パブリケーションのパブリケーション互換性レベルを変更するには  
   
@@ -130,6 +131,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [パブリケーションを作成する](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

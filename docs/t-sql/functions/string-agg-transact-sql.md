@@ -16,17 +16,19 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632128"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720819"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-文字列式の値を連結し、値の間に区切り記号を挿入します。 文字列の末尾に区切り記号は追加されません。
+文字列式の値を連結し、値の間に区切り記号を挿入します。 文字列の末尾に区切り記号は追加されません。 
+
+SQL Server 2017 で導入されました。
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +71,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int、bigint、smallint、tinyint、numeric、float、real、bit、decimal、smallmoney、money、datetime、datetime2、 |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `STRING_AGG` は、すべての式を行から取り出し、それらを 1 つの文字列に連結する集計関数です。 式の値は、暗黙的に文字列型に変換され、連結されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型の変換の詳細については、「[CAST および CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 
 
@@ -79,7 +81,7 @@ null 値は無視され、対応する区切り記号は追加されません。
 
 `STRING_AGG` は任意の互換性レベルで使用できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 新しい行で区切られた名前のリストを生成する
 
@@ -92,7 +94,7 @@ FROM Person.Person;
 
 |csv | 
 |--- |
-|Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />[...] | 
+|Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 `name` セルにある `NULL` 値は結果で返されません。   
 
@@ -125,7 +127,7 @@ FROM Person.Person;
 
 |names |
 |--- |
-|Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />[...] |
+|Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
 > Management Studio のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、 **[結果をテキストで表示]** に切り替えてください。
@@ -144,7 +146,7 @@ GROUP BY a.articleId, title;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|articleId |title |タグ |
+|articleId |title |tags |
 |--- |--- |--- |
 |172 |Polls indicate close election results |politics,polls,city council |
 |176 |New highway expected to reduce congestion |NULL |

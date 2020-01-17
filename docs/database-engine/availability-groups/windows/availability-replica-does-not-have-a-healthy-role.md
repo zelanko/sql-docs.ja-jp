@@ -1,7 +1,7 @@
 ---
-title: 可用性グループの可用性レプリカに正常なロールがない
+title: 可用性グループのレプリカに正常なロールがない
 description: Always On 可用性グループ内のレプリカに正常なロールがない理由を特定します。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9454b48f17af904db87e0000b07651c1bc454362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b73682ffd7d626592193c5b729896ec3d593a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991379"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241771"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性レプリカに正常なロールがない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
@@ -42,7 +42,7 @@ ms.locfileid: "67991379"
 ## <a name="possible-causes"></a>考えられる原因  
  この可用性レプリカのロールが正常ではありません。 このレプリカにはプライマリ ロールもセカンダリ ロールも割り当てられていません。  
   
-## <a name="possible-solution-informationstilltocome"></a>考えられる解決方法:Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>考えられる解決方法:Information_still_to_come  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

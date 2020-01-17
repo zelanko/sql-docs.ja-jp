@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532852"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191073"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -169,14 +169,14 @@ WITH ( LANGUAGE = 'R' )
 代わりに、パッケージのコンテンツを変数としてバイナリ形式で渡すことができます。
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 ライブラリのコンテンツのプラットフォームを指定します。 この値は、さまざまなプラットフォームを追加する既存のライブラリを変更する場合に必要です。
 SQL Server 2017 では、サポートされているプラットフォームは Windows のみです。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATFORM**
+**platform**
 
 ライブラリのコンテンツのプラットフォームを指定します。 この値は、さまざまなプラットフォームを追加する既存のライブラリを変更する場合に必要です。 
 SQL Server 2019 でサポートされているプラットフォームは、Windows と Linux です。
@@ -200,7 +200,7 @@ SQL Server 2019 でサポートされているプラットフォームは、Wind
 パッケージの言語を指定します。 値は **R**、**Python**、または外部言語の名前にできます (「[CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)」を参照してください)。
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 R 言語の場合、Windows の .ZIP 拡張子を使用して、ZIP アーカイブ ファイルの形式でパッケージを準備する必要があります。 SQL Server 2017 では、Windows プラットフォームのみがサポートされています。  
@@ -218,7 +218,7 @@ Python 言語の場合、.whl または .zip ファイルのパッケージは z
 
 既定では、**dbo** ユーザーまたはロール **db_owner** のすべてのメンバーが、ALTER EXTERNAL LIBRARY を実行する権限を持っています。 さらに、外部ライブラリを作成したユーザーも、その外部ライブラリを変更できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、`customPackage` と呼ばれる外部ライブラリを変更します。
 

@@ -1,20 +1,21 @@
 ---
-title: フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
-description: この記事では、Linux で SQL Server フェールオーバー クラスター インスタンス (FCI) を操作する方法について説明します。
+title: FCI の手動フェールオーバー - SQL Server on Linux
+description: SQL Server on Linux でフェールオーバー クラスター インスタンス (FCI) を手動でフェールオーバーさせる方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682115"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558547"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
 
@@ -57,7 +58,7 @@ Red Hat Enterprise Linux (RHEL) サーバーまたは Ubuntu サーバーで手�
 ## <a name="manual-failover-sles"></a>手動フェールオーバー (SLES)
 
 
-Suse Linux Enterprise Server (SLES) では、SQL Server FCI を手動でフェールオーバーするには、`migrate` コマンドを使います。 例:
+Suse Linux Enterprise Server (SLES) では、SQL Server FCI を手動でフェールオーバーするには、`migrate` コマンドを使います。 次に例を示します。
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
@@ -77,7 +78,7 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
 - [フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

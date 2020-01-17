@@ -1,6 +1,7 @@
 ---
-title: エンドポイント URL の指定 - 可用性レプリカの追加と変更 | Microsoft Docs
-ms.custom: ''
+title: 可用性レプリカのエンドポイント URL の指定
+description: SQL Server 上で Always On 可用性グループ内のレプリカを追加または変更するときにエンドポイント URL を指定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 724309ed2b66ee75eb8f223ebd300a2ae941cd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014013"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251286"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>エンドポイント URL の指定 - 可用性レプリカの追加と変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "68014013"
   
     -   完全修飾ドメイン名は動作が保証されています。 これは、場所によって異なる形式を使用するローカルに定義されたアドレス文字列です。 常にではありませんが多くの場合、完全修飾ドメイン名は、次の形式のようにコンピューター名、およびピリオド区切りの一連のドメイン セグメントを含む複合名になります。  
   
-         _computer_name_ **など) を使用できます。** _domain_segment_[... **.** _domain_segment_]  
+         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
   
          *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[... **.** _domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "68014013"
   
      **type_desc** の値が "DATABASE_MIRRORING" の行を検索し、対応するポート番号を使用します。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
 #### <a name="a-using-a-system-name"></a>A. システム名を使用する  
  次のエンドポイント URL では、システム名 `SYSTEM46`およびポート `7022`を指定しています。  
@@ -129,7 +130,7 @@ ms.locfileid: "68014013"
   
 -   可用性レプリカを追加または変更する場合のエンドポイント URL の指定 (SQL Server)  
   
--   [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **データベース ミラーリング エンドポイントに関する情報を表示するには**  
   

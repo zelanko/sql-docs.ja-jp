@@ -1,6 +1,7 @@
 ---
-title: パブリケーション情報、[すべてのサブスクリプション](スナップショット パブリケーション) | Microsoft Docs
-ms.custom: ''
+title: すべてのサブスクリプション (スナップショット - SSMS)
+description: SQL Server Management Studio (SSMS) で選択されたスナップショット パブリケーションの [すべてのサブスクリプション] タブについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,25 +14,25 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f0ef9094c1e7d6a7396ee946dd9b4e7e3b3587b8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 37f5359dfa1fe4f127012256c724cb208768fd34
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770004"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321369"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>パブリケーション情報、[すべてのサブスクリプション] (スナップショット パブリケーション)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[すべてのサブスクリプション]** タブには、選択したスナップショット パブリケーションに対するすべてのサブスクリプションの情報が表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  サブスクリプションに関する詳細情報やタスクを調べるには、そのサブスクリプションの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
 -   **[並べ替え]** : **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
 -   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
+-   **フィルター**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
 -   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
   
@@ -40,12 +41,12 @@ ms.locfileid: "68770004"
  **[表示]**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクリプション状態を選択すると、選択した種類の状態のサブスクリプションが表示されます。 たとえば、エラーを含むサブスクリプションのみを表示するように設定できます。  
   
- **ステータス**  
+ **状態**  
  各サブスクリプションの状態です。スナップショット エージェントまたはディストリビューション エージェントの状態 (より高い優先度の状態が表示されます) によって決定されます。  
   
  既定では、サブスクリプション情報を表示するグリッドは **[状態]** 列の順序で並べられています。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [まもなく期限切れ/期限切れ] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
   

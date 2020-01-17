@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d61b7423bb39267fe4171d661e8fe7a74fbc6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294489"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687273"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 接続マネージャー
 
@@ -40,7 +40,7 @@ ms.locfileid: "71294489"
   
 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーに読み込まれるとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定の日付データ型のデータでは、次の表に示す結果が生成されます。  
   
-|SQL Server データ型|結果|  
+|SQL Server のデータ型|結果|  
 |--------------------------|------------|  
 |**time**、 **datetimeoffset**|パッケージがパラメーター化 SQL コマンドを使用していない場合、パッケージは失敗します。 パラメーター化 SQL コマンドを使用するには、パッケージで SQL 実行タスクを使用します。 詳細については、「 [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。|  
 |**datetime2**|[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーは、ミリ秒の値を切り捨てます。|  
@@ -92,54 +92,40 @@ ms.locfileid: "71294489"
 
 Azure SQL Database にマネージド ID 認証を使用するには、以下の手順でデータベースを構成します。
 
-1. Azure AD でグループを作成します。 マネージド ID をそのグループのメンバーにします。
-    
-   1. [Azure portal でデータ ファクトリのマネージド ID を確認します](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 お使いのデータ ファクトリの **[プロパティ]** に移動します。 **マネージド ID のオブジェクト ID** をコピーします。
-    
-   1. [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2) モジュールをインストールします。 `Connect-AzureAD` コマンドを使用してサインインします。 次のコマンドを実行してグループを作成し、メンバーとしてマネージド ID を追加します。
-      ```powershell
-      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
-      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
-      ```
-    
-1. まだ行っていない場合は、Azure portal で Azure SQL サーバーの [Azure Active Directory 管理者をプロビジョニング](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 3 と 4 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
+1. まだ行っていない場合は、Azure portal で Azure SQL サーバーの [Azure Active Directory 管理者をプロビジョニング](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 と 3 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
 
-1. Azure AD グループに対する[包含データベース ユーザーを作成](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)します。 少なくとも ALTER ANY USER アクセス許可を持つ Azure AD ID で、SSMS のようなツールを使用してデータをコピーするデータベースに接続します。 次の T-SQL を実行します。 
+1. データ ファクトリのマネージド ID 用に[包含データベース ユーザーを作成](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)します。 少なくとも ALTER ANY USER アクセス許可を持つ Azure AD ID で、SSMS のようなツールを使用してデータをコピーするデータベースに接続します。 次の T-SQL を実行します。 
     
     ```sql
-    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. SQL ユーザーなどに対して通常行っているように、Azure AD グループに必要なアクセス許可を付与します。 適切なロールについては、「[データベース レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)」をご覧ください。 たとえば、次のコードを実行します。
+1. SQL ユーザーや他のユーザーに対する通常の方法と同様に、データ ファクトリのマネージド ID に必要なアクセス許可を付与します。 適切なロールについては、「[データベース レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)」をご覧ください。 次のコードを実行します。 詳細については、[こちらのドキュメント](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)を参照してください。
 
     ```sql
-    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
 Azure SQL Database マネージド インスタンスにマネージド ID 認証を使用するには、以下の手順でデータベースを構成します。
     
-1. まだ行っていない場合は、Azure portal でお使いのマネージド インスタンスの [Azure Active Directory 管理者をプロビジョニング](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 から 5 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
+1. まだ行っていない場合は、Azure portal でお使いのマネージド インスタンスの [Azure Active Directory 管理者をプロビジョニング](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 から 4 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
 
-1. [Azure portal でデータ ファクトリのマネージド ID を確認します](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 お使いのデータ ファクトリの **[プロパティ]** に移動します。 (**マネージド ID オブジェクト ID** ではなく) **マネージド ID アプリケーション ID** をコピーします。
+1. データ ファクトリのマネージド ID 用に[ログインを作成](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current)します。 SQL Server Management Studio (SSMS) で、**sysadmin** である SQL Server アカウントを使用して Managed Instance に接続します。 **マスター** データベースで、次の T-SQL を実行します。
 
-1. データ ファクトリのマネージド ID をバイナリ型に変換します。 SQL または Active Directory 管理者アカウントで、SSMS などのツールを使用して、マネージド インスタンスの **master** データベースに接続します。 **master** データベースに対して次の T-SQL を実行し、マネージド ID アプリケーション ID をバイナリとして取得します。
-    
     ```sql
-    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
-    select CAST(@applicationId AS varbinary)
+    CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Azure SQL Database マネージド インスタンスでユーザーとしてデータ ファクトリ マネージド ID を追加します。 **master** データベースに対して、次の T-SQL を実行します。
-    
+1. データ ファクトリのマネージド ID 用に[包含データベース ユーザーを作成](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)します。 データのコピー元またはコピー先のデータベースに接続し、次の T-SQL を実行します。 
+  
     ```sql
-    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. データ ファクトリ マネージド ID に必要なアクセス許可を付与します。 適切なロールについては、「[データベース レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)」をご覧ください。 データのコピー元またはコピー先のデータベースに対して、次の T-SQL を実行します。
+1. SQL ユーザーや他のユーザーに対する通常の方法と同様に、データ ファクトリのマネージド ID に必要なアクセス許可を付与します。 次のコードを実行します。 詳細については、[こちらのドキュメント](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current)を参照してください。
 
     ```sql
-    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
     ```
 
 最後に、ADO.NET 接続マネージャーに対するマネージド ID 認証を構成します。 これを行うには次のオプションがあります。

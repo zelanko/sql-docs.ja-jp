@@ -1,6 +1,7 @@
 ---
-title: マージ アーティクルのビジネス ロジック ハンドラーの実装 | Microsoft Docs
-ms.custom: ''
+title: マージ アーティクルのビジネス ロジック ハンドラーの設定
+description: レプリケーション プログラミングまたはレプリケーション管理オブジェクトを使用し、マージ レプリケーション同期のビジネス ロジック ハンドラーを構成します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846685"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322149"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

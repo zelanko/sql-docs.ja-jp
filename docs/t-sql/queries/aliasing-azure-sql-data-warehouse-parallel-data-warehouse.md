@@ -1,6 +1,8 @@
 ---
-title: 別名 (Azure SQL Data Warehouse、Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: エイリアス化
+description: SQL Data Warehouse と Parallel Data Warehouse で別名を利用します。
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +12,12 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c9aee41091d2ca77d4fd23fb4997e49644360392
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031563"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244758"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名 (Azure SQL Data Warehouse、Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +42,7 @@ object_source [ AS ] alias
  *alias*  
  テーブルまたは列の目的の一時的な参照名。 あらゆる有効な名前を使用できます。 詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "オブジェクトの名前付け規則" を参照してください。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、クリエに複数の結合が含まれています。 この例では、テーブルと列の両方の別名を確認できます。  
   
 -   列の別名:この例では、列と選択リストに列を含む式の両方に別名が与えられています。 `SalesTerritoryRegion AS SalesTR` では、単純な列の別名を確認できます。 `Sum(SalesAmountQuota) AS TotalSales` では、式の別名を確認できます。  

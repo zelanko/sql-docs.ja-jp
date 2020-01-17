@@ -1,7 +1,7 @@
 ---
-title: PowerShell を利用し、可用性グループのデータベース ミラーリング エンドポイントを作成する
+title: Powershell:可用性グループのデータベース ミラーリング エンドポイント
 description: PowerShell を利用し、Always On 可用性グループのデータベース ミラーリング エンドポイントを作成する方法について説明します。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4d4672d582242347240a0202a430f03f7ebd91b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968312"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252896"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>PowerShell を利用し、可用性グループのデータベース ミラーリング エンドポイントを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,6 +77,6 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 ## <a name="see-also"></a>参照  
  [可用性グループの作成 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)   
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

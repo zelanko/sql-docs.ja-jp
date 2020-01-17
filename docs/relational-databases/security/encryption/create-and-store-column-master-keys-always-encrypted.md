@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted の列マスター キーを作成して保存する | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted の列マスター キーを作成して保存する
+description: キー ストアを選択し、SQL Server Always Encrypted の列マスター キーを作成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
@@ -11,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594438"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557839"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Always Encrypted の列マスター キーを作成して保存する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +99,7 @@ SSMS を使用し、Windows 証明書ストアに Always Encrypted キーを格�
 5.  **[証明書スナップイン]** ダイアログ ボックスで **[コンピューター アカウント]** をクリックし、 **[完了]** をクリックします。
 6.  **[スタンドアロン スナップインの追加]** ダイアログ ボックスで **[閉じる]** をクリックします。
 7.  **[スナップインの追加と削除]** ダイアログ ボックスで **[OK]** をクリックします。
-8.  **[証明書]** スナップインで、**[証明書] > [個人]** フォルダーで証明書を探し、その証明書を右クリックします。次に **[すべてのタスク]** をポイントし、 **[秘密キーの管理]** をクリックします。
+8.  **[証明書]** スナップインで、 **[証明書] > [個人]** フォルダーで証明書を探し、その証明書を右クリックします。次に **[すべてのタスク]** をポイントし、 **[秘密キーの管理]** をクリックします。
 9.  **[セキュリティ]** ダイアログ ボックスで、必要に応じてユーザー アカウントの読み取りアクセス許可を追加します。
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Azure Key Vault で列マスター キーを作成する
@@ -186,7 +187,7 @@ $cngAlgorithm = New-Object System.Security.Cryptography.CngAlgorithm($cngAlgorit
 $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyName, $cngKeyParams)
 ```
 
-#### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用
+#### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する
 
 「[SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)」をご覧ください。
 
@@ -220,10 +221,10 @@ HSM のドキュメントを参照してください。
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>CNG のキーをアプリケーションとユーザーが使用できるようにする
 コンピューターで CSP を構成する方法、およびアプリケーションとユーザーに HSM へのアクセス権を付与する方法については、お使いの HSM および CSP のドキュメントをご覧ください。
  
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 - [SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)
 - [PowerShell を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-powershell.md)
   
 ## <a name="see-also"></a>参照 
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

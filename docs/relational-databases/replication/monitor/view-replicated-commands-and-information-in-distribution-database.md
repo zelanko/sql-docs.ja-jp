@@ -1,6 +1,7 @@
 ---
-title: レプリケートされたコマンドとディストリビューション データベースの情報の表示 | Microsoft Docs
-ms.custom: ''
+title: レプリケートされたコマンドとディストリビューション データベースの情報の表示
+description: レプリケートされたコマンドなど、SQL Server のディストリビューション データベースに格納されているレプリケーション関連情報を表示する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 16883d60e9c112141afa0a390555b06524bcf14c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 5ef4e316e27ddd77ee126549e21fc3e5efb988cd
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710999"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322215"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>レプリケートされたコマンドとディストリビューション データベースの情報の表示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,6 +41,6 @@ ms.locfileid: "71710999"
 2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)を実行します。 (省略可) 手順 2 のアーティクル ID を `@article_id` に指定します。 (省略可) パブリケーション データベースの ID を `@publisher_database_id` に指定します。この ID は、[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **database_id** 列で確認できます。  
   
 ## <a name="see-also"></a>参照  
- [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [プログラムによるレプリケーションの監視](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

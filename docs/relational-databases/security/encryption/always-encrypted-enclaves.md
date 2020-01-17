@@ -1,6 +1,7 @@
 ---
-title: セキュリティで保護されたエンクレーブが設定された Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: セキュア エンクレーブを使用する Always Encrypted
+description: セキュリティで保護されたエンクレーブが設定された SQL Server の Always Encrypted について説明します。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594040"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558041"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -89,10 +90,10 @@ SQL Server エンジンは、クエリで指定された操作をセキュリテ
 | **操作**| **列はエンクレーブ対応ではない** |**列はエンクレーブ対応ではない**| **列はエンクレーブ対応**  |**列はエンクレーブ対応** |
 |:---|:---|:---|:---|:---|
 | | **ランダム化された暗号化**  | **決定論的な暗号化**     | **ランダム化された暗号化**      | **決定論的な暗号化**     |
-| **インプレース暗号化** | サポートされていません  | サポートされていません   | Supported         | Supported    |
+| **インプレース暗号化** | サポートされていません  | サポートされていません   | サポートされています         | サポートされています    |
 | **等価比較**   | サポートされていません | エンクレーブの外部でサポートされます | (エンクレーブの内部で) サポートされます | エンクレーブの外部でサポートされます |
-| **等価かどうか以外の比較演算子** | サポートされていません  | サポートされていません   | Supported      | サポートされていません     |
-| **LIKE**    | サポートされていません      | サポートされていません    | Supported     | サポートされていません    |
+| **等価かどうか以外の比較演算子** | サポートされていません  | サポートされていません   | サポートされています      | サポートされていません     |
+| **LIKE**    | サポートされていません      | サポートされていません    | サポートされています     | サポートされていません    |
 
 インプレース暗号化では、エンクレーブ内の次の操作が含まれています。
 
@@ -176,8 +177,8 @@ bacpac ファイルを使ってデータベースを移行するときは、bacp
   - エンクレーブ対応のキーが含まれるデータベースのインポート/エクスポートは、サポートされていません。
   - `ALTER TABLE`/`ALTER COLUMN` を使用してインプレース暗号化操作をトリガーするには、SSMS でクエリ ウィンドウを使用してステートメントを発行するか、ステートメントを発行する独自のプログラムを作成する必要があります。 現在、SqlServer PowerShell モジュールの Set-SqlColumnEncryption コマンドレットと SQL Server Management Studio の Always Encrypted ウィザードでは、インプレース暗号化はサポートされていません。操作に使用される列暗号化キーがエンクレーブ対応であっても、暗号化操作のためにデータベースからデータが移動されます。
 
-## <a name="next-steps"></a>次の手順
-- [チュートリアル: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+## <a name="next-steps"></a>次のステップ
+- [チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成して使用する](configure-always-encrypted-enclaves.md)
 
 ## <a name="see-also"></a>参照
@@ -185,6 +186,6 @@ bacpac ファイルを使ってデータベースを移行するときは、bacp
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)
 - [既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する](always-encrypted-enclaves-create-use-indexes.md)
+- [セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用](always-encrypted-enclaves-create-use-indexes.md)
 
 

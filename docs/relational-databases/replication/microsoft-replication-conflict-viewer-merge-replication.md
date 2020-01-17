@@ -1,6 +1,7 @@
 ---
-title: '[Microsoft レプリケーション競合表示モジュール] (マージ レプリケーション) | Microsoft Docs'
-ms.custom: ''
+title: レプリケーション競合表示モジュール (マージ)
+description: SQL Server でマージ レプリケーションに使用されるレプリケーション競合表示モジュールについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dc4df167c1bc8cf68edf062b294022247041f0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025814"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321959"
 ---
-# <a name="microsoft-replication-conflict-viewer-merge-replication"></a>[Microsoft レプリケーション競合表示モジュール] \(マージ レプリケーション)
+# <a name="microsoft-replication-conflict-viewer-merge-replication"></a>[Microsoft レプリケーション競合表示モジュール] (マージ レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   レプリケーション競合表示モジュールを使用すると、レプリケーション同期中に発生した競合を表示できます。 競合が発生するのは、同一のデータの変更が、2 つの異なるサーバー、たとえば、パブリッシャーとサブスクライバー、または 2 つの異なるサブスクライバーで行われたときです。 競合は、レプリケーションがアーティクルの作成時に選択された競合回避モジュールを使用することで自動的に解決されます。 ただし、レプリケーション競合表示モジュールを使用すると、必要な場合に、競合を回避するための別の解決方法を選択することができます。 発生する可能性がある競合は、次のとおりです。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68025814"
  **パブリケーション**  
  競合があるテーブルを含むパブリケーションを選択します。  
   
- **テーブル**  
+ **Table**  
  競合を含むテーブルを選択します。  
   
  **[フィルターの定義]**  
@@ -62,7 +63,7 @@ ms.locfileid: "68025814"
  **[すべて選択解除]**  
  グリッドに一覧表示されたすべての競合の選択を解除します。  
   
- **[削除]**  
+ **Remove**  
  選択された競合をビューアーから削除し、関連するメタデータをレプリケーション システム テーブルから削除します。 それぞれの選択された競合に対して [優先するデータの送信] ボタンをクリックする (データへの変更を行わない) 場合と同じです。  
   
  **[すべての列を表示]**  

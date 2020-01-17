@@ -1,20 +1,21 @@
 ---
 title: SQL Server on Linux の使用状況と診断データの収集を構成する
 description: Linux 上で SQL Server の顧客の使用状況と診断データがどのように収集および構成されるかについて説明します。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: effc3ad0b693752eedc0f5dc478d17fbfdd5b35e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531286"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558560"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>SQL Server on Linux の使用状況と診断データの収集を構成する
+# <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>SQL Server on Linux の使用状況と診断データの収集を構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -205,6 +206,6 @@ Docker 上で Local Audit を有効にするには、Docker で[データを保�
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server の概要](sql-server-linux-overview.md)に関する記事をご覧ください。

@@ -1,6 +1,6 @@
 ---
-title: クエリ調整アシスタントを使用したデータベースのアップグレード | Microsoft Docs
-ms.custom: ''
+title: クエリ調整アシスタントを使用したデータベースのアップグレード
+ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163902"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165678"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>クエリ調整アシスタントを使用したデータベースのアップグレード
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "71163902"
 
 データベース互換レベルによって提供されるこのゲーティング機能と、クエリ ストアを組み合わせることで、アップグレードで以下の推奨されるワークフローに従う場合に、アップグレード プロセスのクエリ パフォーマンスを高いレベルで制御できます。 互換性レベルをアップグレードする場合に推奨されるワークフローの詳細については、「[Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)」 (データベース互換モードの変更とクエリ ストアの使用) を参照してください。 
 
-![クエリ ストアを使用するデータベース アップグレードの推奨ワークフロー](../../relational-databases/performance/media/query-store-usage-5.png "クエリ ストアを使用するデータベース アップグレードの推奨ワークフロー") 
+![クエリ ストアを使用した推奨されるデータベース アップグレードのワークフロー](../../relational-databases/performance/media/query-store-usage-5.png "クエリ ストアを使用した推奨されるデータベース アップグレードのワークフロー") 
 
 このアップグレードの制御は、[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)が導入されており、上記の推奨されるワークフローの最後のステップを自動化できる [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] でさらに強化されました。
 
@@ -56,7 +56,7 @@ QTA の開始点では、以前のバージョンの [!INCLUDE[ssNoVersion](../.
 
 前述のクエリ ストアを使用する互換性レベルのアップグレードの際に推奨されるワークロードの最後のステップのみが、QTA では基本的にどのように変わるかについては、以下を参照してください。 現在の非効率な実行プランと最新の既知の適切な実行プランのどちらかを選ぶのではなく、QTA では、選択された機能低下したクエリに固有の調整オプションが示され、調整された実行プランで新しい改善された状態を作成できます。
 
-![QTA を使用するデータベース アップグレードの推奨ワークフロー](../../relational-databases/performance/media/qta-usage.png "QTA を使用するデータベース アップグレードの推奨ワークフロー")
+![QTA を使用した推奨されるデータベース アップグレードのワークフロー](../../relational-databases/performance/media/qta-usage.png "QTA を使用した推奨されるデータベース アップグレードのワークフロー")
 
 ### <a name="qta-tuning-internal-search-space"></a>QTA での内部検索領域の調整
 QTA では、クエリ ストアから実行できる `SELECT` クエリのみがターゲットとなります。 コンパイル済みのパラメーターがわかっている場合は、パラメーター化されたクエリが対象となります。 一時テーブルやテーブル変数などの実行時の構造に依存するクエリは、ここでは対象となりません。 
@@ -89,14 +89,14 @@ QTA はセッション ベースの機能であり、セッションが初めて
         -  QTA ワークフローが完了した後、ユーザー データベースで使用する必要がある、目的のターゲット データベース互換レベルを設定します。
         完了したら、 **[次へ]** をクリックします。
     
-       ![新しいデータベースのアップグレード セッションの [設定] ウィンドウ](../../relational-databases/performance/media/qta-new-session-setup.png "新しいデータベースのアップグレード セッションの [設定] ウィンドウ")  
+       ![新しいデータベース アップグレード セッションの [セットアップ] ウィンドウ](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
   
     2.  **[設定]** ウィンドウの 2 つの列には、ターゲットとなるデータベースのクエリ ストアの **[現在]** の状態と、 **[推奨]** 設定が表示されます。 
         -  既定では [推奨] 設定が選択されますが、[現在] 列のラジオ ボタンをクリックすると、現在の設定が受け入れられます。また、現在のクエリ ストア構成を微調整することもできます。 
         -  提案された *[期限切れクエリのしきい値]* 設定は、予期されるワークロード期間の日数の 2 倍になります。 これは、クエリ ストアでベースライン ワークロードとデータベースのアップグレード後のワークロードに関する情報を保持する必要があるためです。
         完了したら、 **[次へ]** をクリックします。
 
-       ![新しいデータベースのアップグレードの [設定] ウィンドウ](../../relational-databases/performance/media/qta-new-session-settings.png "新しいデータベースのアップグレードの [設定] ウィンドウ")
+       ![新しいデータベース アップグレードの [設定] ウィンドウ](../../relational-databases/performance/media/qta-new-session-settings.png "新しいデータベース アップグレードの [設定] ウィンドウ")
 
        > [!IMPORTANT]
        > 提案された *[最大サイズ]* は、短い時間のワークロードに適している可能性がある任意の値です。   
@@ -105,7 +105,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
 
 4.  **[調整]** ウィンドウでセッション構成が終了し、次のステップでセッションを開いて続行するよう指示されます。 完了したら、 **[完了]** をクリックします。
 
-    ![新しいデータベースのアップグレードの [調整] ウィンドウ](../../relational-databases/performance/media/qta-new-session-tuning.png "新しいデータベースのアップグレードの [調整] ウィンドウ")
+    ![新しいデータベース アップグレードの [調整] ウィンドウ](../../relational-databases/performance/media/qta-new-session-tuning.png "新しいデータベース アップグレードの [調整] ウィンドウ")
 
 > [!NOTE]
 > データベースで既に推奨されるデータベース互換アップグレード ワークフローが実行された運用サーバーから、テスト サーバーにデータベース バックアップを復元することで、可能な代替シナリオが開始されます。
@@ -145,19 +145,19 @@ QTA はセッション ベースの機能であり、セッションが初めて
         > [!NOTE]
         > ワークロードの実行中に、QTA ウィンドウを閉じてもかまいません。 後でアクティブ状態のままになっているセッションに戻ると、中断したステップから再開されます。 
 
-        ![QTA のステップ 2 のサブステップ 1](../../relational-databases/performance/media/qta-step2-substep1.png "QTA のステップ 2 のサブステップ 1")
+        ![QTA のステップ 2 サブステップ 1](../../relational-databases/performance/media/qta-step2-substep1.png "QTA のステップ 2 サブステップ 1")
 
     2.  **[データベースのアップグレード]** では、データベース互換レベルを適切なターゲットにアップグレードするための許可が求められます。 次のサブステップに進むには、 **[はい]** をクリックします。
 
-        ![QTA のステップ 2 のサブステップ 2 - データベース互換レベルをアップグレードする](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "QTA のステップ 2 のサブステップ 2 - データベース互換レベルをアップグレードする")
+        ![QTA のステップ 2 サブステップ 2 - データベース互換性レベルのアップグレード](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "QTA のステップ 2 サブステップ 2 - データベース互換性レベルのアップグレード")
 
         次のページでは、データベース互換レベルが正常にアップグレードされたことを確認します。
 
-        ![QTA のステップ 2 のサブステップ 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA のステップ 2 のサブステップ 2")
+        ![QTA のステップ 2 サブステップ 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
 
     3.  **[観測されたデータの収集]** では、クエリストアで、最適化の機会を見つけるために使用される比較ベースラインを収集できるように、ユーザーに代表的なワークロード サイクルの再実行が要求されます。 ワークロードが実行されたら、 **[更新]** ボタンを使用して、機能低下したクエリ (検出された場合) のリストを更新し続けます。 **[表示するクエリ]** の値を変更し、表示されるクエリの数を制限します。 リストの順序は、 **[メトリック]** (期間または CpuTime) と **[集計]** (平均が既定値) に影響を受けます。 **表示するクエリ**の数も選択します。 そのワークロードが完了したら、 **[Done with workload run]\(ワークロードの実行完了\)** をオンにし、 **[次へ]** をクリックします。
 
-        ![QTA のステップ 2 のサブステップ 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA のステップ 2 のサブステップ 3")
+        ![QTA のステップ 2 サブステップ 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA のステップ 2 サブステップ 3")
 
         このリストには、次の情報が含まれています。
         -  **クエリ ID** 
@@ -199,7 +199,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
 
     後日、提案された最適化でロールバックが必要な場合は、関連するクエリを選択してから **[ロールバック]** をクリックします。 そのクエリ プラン ガイドは削除され、リストはロールバックされたクエリを削除するために更新されます。 以下の図でクエリ 8 が削除されていることに注目してください。
 
-    ![QTA のステップ 5 - ロールバックする](../../relational-databases/performance/media/qta-step5-rollback.png "QTA のステップ 5 - ロールバックする") 
+    ![QTA のステップ 5 - ロールバック](../../relational-databases/performance/media/qta-step5-rollback.png "QTA のステップ 5 - ロールバック") 
 
     > [!NOTE]
     > 終了したセッションを削除しても、以前に展開されたプラン ガイドは削除**されません**。   

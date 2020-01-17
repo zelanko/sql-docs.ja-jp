@@ -1,9 +1,8 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,14 +25,15 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983240"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548275"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューから 1 つ以上の行を削除します。  
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -216,7 +217,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  DELETE 権限は、既定では **sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_datawriter** 固定データベース ロールのメンバーと、テーブル所有者に与えられています。 **sysadmin**、**db_owner**、および **db_securityadmin** ロールのメンバー、およびテーブル所有者は、他のユーザーに権限を譲渡できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -240,7 +241,7 @@ GO
  このセクションの例では、削除する行数を制限する方法を示します。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. WHERE 句を使用して行セットを削除する  
- 次の例は、 `ProductCostHistory` 列の値が [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] より大きいすべての行を `StandardCost` データベース内の `1000.00`テーブルから削除します。  
+ 次の例は、`StandardCost` 列の値が `1000.00` より大きいすべての行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `ProductCostHistory`テーブルから削除します。  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. カーソルを使用して削除する行を決定する  
- 次の例は、`my_cursor` というカーソルを使用している 1 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `EmployeePayHistory` テーブルから削除します。 この操作では、カーソルから現在フェッチされている 1 行だけが削除されます。  
+ 次の例は、`complex_cursor` というカーソルを使用している 1 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `EmployeePayHistory` テーブルから削除します。 この操作では、カーソルから現在フェッチされている 1 行だけが削除されます。  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -366,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. OPENQUERY 関数を使用してリモート テーブルからデータを削除する  
- 次の例では、 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行セット関数を指定してリモート テーブルから行を削除します。 この例では、前の例で作成したリンク サーバー名を使用します。  
+ 次の例では、[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行セット関数を指定してリモート テーブルから行を削除します。 この例では、前の例で作成したリンク サーバー名を使用します。  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -430,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. テーブルからすべての行を削除する  
  次の例では、削除する行数を制限する WHERE 句が指定されていないため、`Table1` テーブルからすべての行が削除されます。  
@@ -456,7 +457,7 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. DELETE ステートメントでラベルとクエリ ヒントを使用する  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>北 DELETE ステートメントでラベルとクエリ ヒントを使用する  
  このクエリでは、DELETE ステートメントでクエリ結合ヒントを使用する場合の基本構文を示します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION 句 (Transact-SQL)](../queries/option-clause-transact-sql.md)」を参照してください。
   
 ```sql
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>O. WHERE 句を使用した削除
+
+このクエリでは、FROM 句ではなく、WHERE 句を使用して削除する方法が示されています。
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>参照  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

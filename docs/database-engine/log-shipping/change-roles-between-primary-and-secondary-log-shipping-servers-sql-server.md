@@ -1,6 +1,7 @@
 ---
-title: プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: プライマリ ログとセカンダリ ログ配布のロールの変更
+description: SQL Server ログ配布ソリューションに対してプライマリ データベースとして機能するようにセカンダリ データベースを構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7924bc8d7dfc8a3460ca4beb989fd0daf0e85a8
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.openlocfilehash: e06d382258d6d98b7f54ff9dd3f4840a04274d81
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008452"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259002"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

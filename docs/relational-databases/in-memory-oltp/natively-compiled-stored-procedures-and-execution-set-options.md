@@ -1,6 +1,6 @@
 ---
-title: ネイティブ コンパイル ストアド プロシージャと実行 SET オプション | Microsoft Docs
-ms.custom: ''
+title: ネイティブ コンパイル ストアド プロシージャと SET オプション
+ms.custom: seo-dt-2019
 ms.date: 10/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d6e405e4a550aaa4c93f265ddeb6fb8358611a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f626c997ac0615eefa7caede0f379c22fed25ab6
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101413"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412573"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>ネイティブ コンパイル ストアド プロシージャと実行 SET オプション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

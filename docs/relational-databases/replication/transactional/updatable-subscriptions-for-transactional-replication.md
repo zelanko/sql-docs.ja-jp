@@ -1,6 +1,7 @@
 ---
-title: トランザクション レプリケーションの更新可能なサブスクリプション | Microsoft Docs
-ms.custom: ''
+title: 更新可能なサブスクリプション (トランザクション)
+description: SQL Server のトランザクション レプリケーションで使用できる、更新可能なサブスクリプション機能について説明します。
+ms.custom: seo-lt-2019
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2dca69a0378f8e5cf1aa6006ec0ef7a905639507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7baa131caa531038d8764c070ebd00ba44147c54
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121217"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321440"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>トランザクション レプリケーションの更新可能なサブスクリプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

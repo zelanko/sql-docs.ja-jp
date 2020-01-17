@@ -1,6 +1,6 @@
 ---
-title: メモリ最適化を使用した一時テーブルとテーブル変数の高速化 | Microsoft Docs
-ms.custom: ''
+title: 一時テーブルとテーブル変数の高速化のためのメモリ最適化
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713251"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412680"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>メモリ最適化を使用した一時テーブルとテーブル変数の高速化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "71713251"
   
 一時テーブル、テーブル変数、またはテーブル値パラメーターを使用する場合は、パフォーマンスを向上させるために、これらを変換してメモリ最適化テーブルとテーブル変数を活用することを検討してください。 通常、コードの変更はわずかです。  
   
-この記事では、以下について説明します。  
+この記事では、次の内容について説明します。  
   
 - メモリ内への変換を優先すると主張するシナリオ  
 - メモリ内への変換を実装するための技術的な手順  
@@ -48,7 +48,7 @@ ms.locfileid: "71713251"
 
   
   
-#### <a name="object-types"></a>オブジェクト型  
+#### <a name="object-types"></a>オブジェクトの型  
   
 インメモリ OLTP では、メモリ最適化一時テーブルおよびテーブル変数に使用できる次のオブジェクトを提供します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71713251"
 - メモリ最適化テーブル変数  
   - 次の 2 つの手順 (インラインでなく) で宣言する必要があります。  
     - `CREATE TYPE my_type AS TABLE ...;` 、その後  
-    - `DECLARE @mytablevariable my_type;`」 (メモリ最適化テーブルのインデックス) をご覧ください。  
+    - [https://login.microsoftonline.com/consumers/](`DECLARE @mytablevariable my_type;`)  
   
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. シナリオ:グローバル tempdb &#x23;&#x23;table の置換  
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-最初に、次のテーブル値関数を作成して、 **@@spid** にフィルターを適用します。 この関数は、セッションの一時テーブルから変換するすべての SCHEMA_ONLY テーブルで使用可能になります。  
+まず、次のテーブル値関数を作成して、 **\@\@spid** にフィルターを適用します。 この関数は、セッションの一時テーブルから変換するすべての SCHEMA_ONLY テーブルで使用可能になります。  
   
   
   

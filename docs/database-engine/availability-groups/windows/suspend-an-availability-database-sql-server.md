@@ -1,6 +1,7 @@
 ---
-title: 可用性データベースの中断 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性データベースの中断
+description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または PowerShell を使用して、Always On 可用性グループ内のデータベースのデータ移動を中断する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517962"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251272"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>可用性データベースの中断 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "72517962"
   
      [前提条件](#Prerequisites)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [セキュリティ](#Security)  
   
@@ -59,7 +60,7 @@ ms.locfileid: "72517962"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  SUSPEND コマンドは、対象のデータベースをホストするレプリカによって受け付けられるとすぐに戻りますが、実際にはデータベースの中断が非同期に行われます。  

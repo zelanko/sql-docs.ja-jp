@@ -1,6 +1,7 @@
 ---
-title: SQL Server 2016 へのログ配布のアップグレード (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: SQL Server 2016 以降へのログ配布のアップグレード
+description: 以前のバージョンから SQL Server 2016 以降にアップグレードするときに、ログ配布のディザスター リカバリー ソリューションを保持するための適切な順序について説明します。
+ms.custom: seo-lt-2019
 ms.date: 02/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227140"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258567"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "71227140"
   
 1.  すべてのプライマリ データベースを対象にデータベースの完全バックアップを実行します。  
   
-     詳細については、データベースの完全バックアップの作成 [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)を使用してデータベースの差分バックアップを作成します。  
+     詳細については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。  
   
 2.  すべてのプライマリ データベースで [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) コマンドを実行します。  
   

@@ -1,6 +1,5 @@
 ---
-title: 名前をワイルドカード文字で指定した列 | Microsoft Docs
-ms.custom: fresh2019may
+title: ワイルドカード文字を含む列を指定する (SQLXML) | Microsoft Docs
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f49fdac97f1a580a24bc50840ec58fc6efe0d65a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b75c343c675e74f7ce26bb1b1787bfbef99b7623
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113063"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258386"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名前をワイルドカード文字で指定した列
 

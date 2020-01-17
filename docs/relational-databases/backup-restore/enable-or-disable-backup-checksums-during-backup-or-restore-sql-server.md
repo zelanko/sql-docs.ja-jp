@@ -1,7 +1,8 @@
 ---
-title: バックアップ中または復元中にバックアップ チェックサムを有効または無効にする (SQL Server) | Microsoft Docs
+title: バックアップ チェックサムを有効または無効にする
 ms.custom: ''
 ms.date: 03/17/2017
+ms.description: Enable or disable backup checksums during backup or restore of SQL Server databases.
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 14327b3d8b06355445ae92edaa65464124faff8a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5d77bb53a304c1606a17686dd3d3a8125580ddfd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908947"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257977"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>バックアップ中または復元中にバックアップ チェックサムを有効または無効にする (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

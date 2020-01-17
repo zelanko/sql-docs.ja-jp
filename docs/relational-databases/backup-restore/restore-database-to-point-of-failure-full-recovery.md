@@ -1,7 +1,7 @@
 ---
-title: データベースを障害発生時点まで復元する - 完全復旧 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'データベースの復旧: 障害発生時点 - 完全復旧'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a028fc4ee35caf1b4b0900a4042691188a05fb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5cf3638c1f79c560abd96c262f4ff2c23e312d09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908834"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241858"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>データベースを障害発生時点まで復元する - 完全復旧
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -9,17 +9,55 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 11/04/2019
-ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.date: 12/26/2019
+ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
+ms.sourcegitcommit: 3c65b43ba5a00585be7840df300d9183dc6fb606
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532527"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75521732"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="december-2019-hotfix"></a>2019 年 12 月 (修正プログラム)
+
+2019 年 12 月 26 日 &nbsp; / &nbsp; バージョン:1.14.1
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| バグ #8747 OE 拡張失敗の修正 | [#8747](https://github.com/microsoft/azuredatastudio/issues/8747)  |
+| &nbsp; | &nbsp; |
+
+## <a name="december-2019"></a>2019 年 12 月
+
+2019 年 12 月 19 日 &nbsp; / &nbsp; バージョン:1.14.0 
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| 現在アクティブな接続のみを一覧表示するように Notebooks の [attach to connection]\(接続にアタッチ\) ドロップダウンを変更しました | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
+| BDC に接続するとき、SSL 検証エラーを無視することを許可する目的で bigdatacluster.ignoreSslVerification 設定を追加しました | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| オフライン クエリ エディターの既定の言語フレーバーを変更することを許可 | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
+| ビッグ データ クラスター/SQL 2019 機能の GA ステータス | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1)を参照してください。 |
+| &nbsp; | &nbsp; |
+
+
+## <a name="november-2019-hotfix"></a>2019 年 11 月 (修正プログラム)
+
+2019 年 11 月 15 日 &nbsp; / &nbsp; バージョン:1.13.1
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| コピー/貼り付けの結果の順序が乱れるバグ #8210 の修正 |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="november-2019"></a>2019 年 11 月
 
@@ -27,10 +65,10 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 新しい SQL Server 2019 のサポート | &bull; &nbsp; BDC 展開ウィザードを使用して、SQL Server 2019 ビッグ データ クラスターを展開する <br/>&bull; &nbsp; コントローラー ダッシュボードを使用してクラスターの正常性を管理する <br/>&bull; &nbsp; [Security ACLs]\(セキュリティ ACL)\ ダイアログを使用して HDFS アクセス制御リストを管理する <br/> &bull; &nbsp; [HDFS Tiering]\(HDFS 階層\) ダイアログを使用してマウントを追加する <br/> &bull; &nbsp; 組み込みの Jupyter Book、SQL Server 2019 ガイドを使用してトラブルシューティングを行う <br/> &bull; &nbsp; SQL vNext 拡張データ仮想化の拡張機能に名前変更された <br/> &bull; &nbsp; 外部テーブル ウィザードに Teradata および Mongo サポートが追加された|
-| ノートブックの新機能 | &bull; &nbsp; Powershell ノートブックの発表 &bull; &nbsp; 折りたたみ可能なコード セルの発表 <br/>&bull; &nbsp; ノートブックのパフォーマンスが向上 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)を参照してください |
+| ノートブックの新機能 | &bull; &nbsp; PowerShell ノートブックの発表 <br/> &bull; &nbsp; 折りたたみ可能なコード セルの発表 <br/>&bull; &nbsp; ノートブックのパフォーマンスが向上 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)を参照してください |
 | Jupyter Books の発表  | Jupyter Books は、目次に整理されたノートブック ファイルとマークダウン ファイルのコレクションです。 |
 | 新しい SQL Server 展開ウィザード  | 以下の展開のサポートが追加されました。 <br/> &bull; &nbsp; Windows 上の SQL Server 2019 <br/> &bull; &nbsp; Windows 上の SQL Server 2017 <br/> &bull; &nbsp; Docker 上の SQL Server 2019 <br/> &bull; &nbsp; Docker 上の SQL Server 2017 |
 | スキーマ比較拡張機能の GA の発表| &bull; &nbsp; SQLCMD モード <br/> &bull; &nbsp; ローカライズ サポート <br/> &bull; &nbsp; アクセシビリティに関する修正 <br/> &bull; &nbsp; セキュリティに関するバグ  |
@@ -45,7 +83,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 検査モードで自動的に EH を開始しないようにする |  |
 | &nbsp; | &nbsp; |
@@ -56,7 +94,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | ノートブックの引用符とバックスラッシュが正しくエスケープされるよう、問題を修正しました。 |  |
 | &nbsp; | &nbsp; |
@@ -67,7 +105,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | クエリ履歴拡張機能のリリース | SQL 履歴拡張機能では、Azure Data Studio セッションで実行された過去のクエリがすべて保存され、実行順に一覧表示されます。 ユーザーは、クエリの作成、クエリの実行、クエリの削除、クエリ履歴の一時停止、すべてのクエリ履歴エントリの削除を確認することができます。 |
 | 結果の新しいコピー/貼り付け | 結果グリッドから結果をコピーして貼り付けるための追加の方法が加えられました。 |
@@ -85,7 +123,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | SQLCMD モードの有効化 | クエリ エディターで SQLCMD モードを切り替えて、クエリを SQLCMD スクリプトとして記述および編集できるようになりました |
 | コミュニティ拡張機能:クエリ エディター ブースト | クエリ エディター ブーストとは、Azure Data Studio クエリ エディターを、クエリを頻繁に記述するユーザー向けに拡張したオープン ソースの拡張機能です。 &bull; &nbsp; 現在のクエリをスニペットとして保存する <br/>&bull; &nbsp; Ctrl + U を使用してデータベースを切り替える <br/> &bull; &nbsp; テンプレートから新しいクエリ <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/dzsquared/query-editor-boost)を参照してください |
@@ -105,7 +143,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | SandDance 1.3.1 拡張機能のリリース | &bull; &nbsp; スマート グラフ検出 <br/>&bull; &nbsp; 3D 視覚化 <br/> &bull; &nbsp; データ フィルタリング |
 | ノートブックの機能強化 | &bull; &nbsp; コードまたはテキスト セルのインラインでの追加 <br/>&bull; &nbsp; SQL 結果グリッドを右クリックして結果を CSV、JSON などとして保存する機能を追加しました <br/> &bull; &nbsp; JSON をより高速に読み込むためのノートブック読み込みのパフォーマンスの向上 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)を参照してください |
@@ -121,7 +159,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | SentryOne Plan Explorer 拡張機能のリリース | Microsoft のパートナーである SentryOne は、[Azure Data Studio 向けの SentryOne Plan Explorer 拡張機能](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio)をリリースする予定です。 <br> この無料の拡張機能では、Azure Data Studio で実行されるクエリの高度なプラン図を取得できます。また、最適化されたレイアウト アルゴリズムと直感的な色分けにより、クエリのパフォーマンスに影響を与える、最も高コストな演算子をすばやく識別できます。 この拡張機能の詳細については、SentryOne のブログ記事 ([こちら](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio)) をご覧ください。 |
 | スキーマ比較の新機能 | &bull; &nbsp; スキーマ比較ファイルのサポート (.SCMP) <br/>&bull; &nbsp; スキーマ比較サポートのキャンセル <br/>&bull; &nbsp; 詳細な変更内容については、[こちら](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)を参照してください|
@@ -140,13 +178,13 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 中央管理サーバー (CMS) 拡張機能のリリース | 中央管理サーバーには、1 つ以上の中央管理サーバー グループに編成される SQL Server インスタンスの一覧が格納されます。 ユーザーは、自分の既存の CMS サーバーに接続し、サーバーの追加や削除を行って、サーバーを管理できます。 詳細については、[こちら](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers)を参照してください |
 | Database Administration Tool Extensions for Windows 拡張機能のリリース | この拡張機能では、Azure Data Studio の SQL Server Management Studio で最も使用されている、2 つのエクスペリエンスが提供されます。 ユーザーは、さまざまなオブジェクト (データベース、テーブル、列、ビューなど) を右クリックし、[プロパティ] を選択して、そのオブジェクトの SSMS プロパティ ダイアログを表示することができます。 また、データベースを右クリックして [スクリプトの生成] を選択し、なじみ深い SSMS スクリプト生成ウィザードを起動することもできます。 
 | スキーマ比較の機能強化 | &bull; &nbsp; [除外]/[含める] オプションが追加されました <br/>&bull; &nbsp; [スクリプトの生成] で、生成後にスクリプトが開くようになりました <br/>&bull; &nbsp; 二重のスクロール バーが削除されました  <br/>&bull; &nbsp; 書式設定とレイアウトの機能強化 <br/>&bull; &nbsp; 詳細な変更内容については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)を参照してください|
 | [メッセージ] セクションが独自のタブに移動されました | 以前は、ユーザーが SQL クエリを実行すると、結果とメッセージがスタック パネルに表示されていました。 これからは、SSMS のように、1 つのパネル内で個別のタブに表示されます。 |
-| SQL ノートブックの機能強化 | &bull; &nbsp; ユーザーが、ノートブックで独自の Python 3 または Anaconda インストールを使用できるようになりました <br/>&bull; &nbsp; 安定性とフィット感/仕上げ感に関する複数の修正 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)を参照してください|
+| SQL ノートブックの機能強化 | &bull; &nbsp; ユーザーが、ノートブックで独自の Python 3 または Anaconda インストールを使用できるようになりました <br/>&bull; &nbsp; 安定性とフィット感/しあげ感に関する複数の修正 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)を参照してください|
 | Visual Studio Code April Release Merge 1.34 | 最新の機能強化については、[こちら](https://code.visualstudio.com/updates/v1_34)を参照してください |
 | バグと問題が解決されました。 | [GitHub の「バグと問題」](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)を参照してください。 |
 | &nbsp; | &nbsp; |
@@ -169,7 +207,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | スキーマ比較拡張機能のリリース | スキーマ比較は SQL Server Data Tools (SSDT) のよく知られた機能であり、主なユースケースは、データベースと .dacpac ファイルの違いを比較して視覚化し、それらを同じにするためのアクションを実行することです。 |
 | タスク ビューが出力ウィンドウに移動されしました | ユーザーは、出力ウィンドウのタスク ビューで、実行時間の長いタスク (バックアップ、復元、スキーマ比較など) の状態を確認できるようになりました
@@ -184,7 +222,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | **[サーバー]** タブの名前が **[接続]** に変更されました | |
 | Azure Resource Explorer を [接続] の Azure viewlet として 移動しました | ユーザーは、[接続] ビューの Azure viewlet を使用して Azure SQL インスタンスを表示し、展開して各サーバーやデータベース下のオブジェクトを表示できるようになりました。|
@@ -198,7 +236,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 1\.5.1 で発見されたいくつかの問題を修正しました。 | [「3 月の修正プログラム リリース」(GitHub)](https://github.com/Microsoft/azuredatastudio/milestone/28) を参照してください。<br/> <br/>&bull; &nbsp; ダッシュボードの "ノートブック​​を開く" タスクで開かれたノートブックをユーザーが閉じることができない問題を修正しました <br/>&bull; &nbsp; 保存後に、ノートブック JSON に余分な } がある問題を修正しました <br/>&bull; &nbsp; ノートブック グリッドがテーマの変更に応答しなかった問題を修正しました <br/>&bull; &nbsp; タブ ヘッダーにノートブックの完全なパスが表示される問題を修正しました。 今後は、ファイル名のみが表示されます。 |
 | &nbsp; | &nbsp; |
@@ -209,7 +247,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | [Azure Data Studio 用の PostgreSQL 拡張機能](postgres-extension.md)が追加されました | サポートされている機能: <br/>&bull; &nbsp; 接続ダイアログ <br/>&bull; &nbsp; オブジェクト エクスプローラー <br/>&bull; &nbsp; クエリ エディター <br/>&bull; &nbsp; グラフ作成 <br/>&bull; &nbsp; ダッシュボード <br/>&bull; &nbsp; スニペット <br/>&bull; &nbsp; データの編集 <br/>&bull; &nbsp; ノートブック |
 | 追加された SQL ノートブック | 組み込みの Notebook ビューアーに SQL カーネルのサポートが追加されました。 <br/>&bull; &nbsp; T-SQL のサポート <br/>&bull; &nbsp; PGSQL のサポート |
@@ -224,15 +262,15 @@ ms.locfileid: "73532527"
 - [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427):カーネルで Spark の準備が整う前にセルで実行をクリックすると、致命的なエラーが発生する **回避策:** カーネルが読み込まれるまで待機し、その後、セルを実行します
 - [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493):SQL 認証を使用して SSMS から ADS を起動すると、ユーザーのパスワードが求められる **回避策:** 当面は Windows 認証を使用してください。 
 - [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494):SQL ノートブック機能をインストールできない <br/>
-**回避策:** [こちら](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)の回避手順に従ってください。 
+**対処法:** [こちら](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)の回避手順に従ってください。 
 - [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503):Azure Data Studio をダウンロード フォルダーから直接開くことができない (Mac) <br />
-**回避策:** アプリの解凍後にコンピューターを再起動してください。 今後調査される予定です。 
+**対処法:** アプリの解凍後にコンピューターを再起動してください。 今後調査される予定です。 
 - [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):ノートブックに名前を付けて保存すると、接続コンテキストが失われる <br />
-**回避策:** 次のリリースで修正される予定です。 
+**対処法:** 次のリリースで修正される予定です。 
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458):無効なバージョンが使用されている場合、dacpac で抽出を使用すると、SqlToolsService がクラッシュする <br/>
-**回避策:** Azure Data Studio を再起動し、正しいバージョンが使用されていることを確認してください。
+**対処法:** Azure Data Studio を再起動し、正しいバージョンが使用されていることを確認してください。
 - 新しいノートブックと開いているノートブックのアイコンが失われる <br/>
-**回避策:** レガシの接続の種類は非推奨とされています。 SQL Server エンドポイントに接続することをお勧めします。これにより、すべてのアクション (新しいノートブック、Spark ジョブ) が期待どおりに動作します。 
+**対処法:** レガシの接続の種類は非推奨とされています。 SQL Server エンドポイントに接続することをお勧めします。これにより、すべてのアクション (新しいノートブック、Spark ジョブ) が期待どおりに動作します。 
 
 ## <a name="february-2019"></a>2019 年 2 月
 
@@ -240,9 +278,9 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
-| 拡張パック **Admin pack for SQL Server** が追加されました。 | これにより、SQL Server の管理に関連する拡張機能がインストールしやすくなります。 この機能には、次が含まれます。<br/>&bull; &nbsp; [SQL Server エージェント](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server プロファイラー](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server インポート](sql-server-import-extension.md?view=sql-server-2017) |
+| 拡張パック **Admin pack for SQL Server** が追加されました。 | これにより、SQL Server の管理に関連する拡張機能がインストールしやすくなります。 これには次のものが含まれます<br/>&bull; &nbsp; [SQL Server エージェント](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server プロファイラー](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server インポート](sql-server-import-extension.md?view=sql-server-2017) |
 | プロファイラー拡張機能に、拡張イベントのフィルター処理のサポートが追加されました。 | &nbsp; |
 | T-SQL の結果を XML として保存できる "XML として保存" 機能が追加されました。 | &nbsp; |
 | データ層アプリケーション ウィザードの機能強化が追加されました。 | &bull; &nbsp; [スクリプトの生成] ボタンが追加されました<br/>&bull; &nbsp; デプロイ中にデータ損失の可能性があることを警告するためのビューが追加されました。 |
@@ -257,7 +295,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 1\.3.8 で発見されたいくつかの問題を修正しました。 | [「1 月の修正プログラム リリース」(GitHub)](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1) を参照してください。<br/><br/>詳細については、以下を参照してください。<br/>&bull; &nbsp; [変更ログ (GitHub)](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)。<br/>&bull; &nbsp; [リリース (GitHub)](https://github.com/Microsoft/azuredatastudio/releases)。 |
 | &nbsp; | &nbsp; |
@@ -268,7 +306,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | Windows 用の新しいユーザー インストーラーが追加されました。 | 既存のシステム インストーラーとは異なり、新しいユーザー インストーラーでは管理者特権は必要ありません。 これにより、管理者以外の方も簡単にアップグレードが行えるようになります。 |
 | Azure Active Directory 認証のサポートが追加されました。 | &nbsp; |
@@ -287,7 +325,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md?view=sql-server-ver15)」を参照してください。 |
 | Paste the Plan 拡張機能の導入。 | &nbsp; |
@@ -314,7 +352,7 @@ ms.locfileid: "73532527"
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | Azure SQL データベースを参照するための Azure Resource Explorer の導入。 | &nbsp; |
 | オブジェクト エクスプローラーとクエリ エディターの接続性の堅牢性が向上しました。 | &nbsp; |
@@ -340,7 +378,7 @@ Azure Data Studio (旧称 SQL Operations Studio) の一般提供リリース。
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 大量の結果セットに対するクエリ結果グリッドのパフォーマンスと UX の向上。 | &nbsp; |
 | Visual Studio Code のソース コードが 1.23 から 1.26.1 に更新され、グリッド レイアウトと設定エディター (プレビュー) が改善されました。 | &nbsp; |
@@ -352,7 +390,7 @@ Azure Data Studio (旧称 SQL Operations Studio) の一般提供リリース。
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | [ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)のサポートを含む、SQL Server 2019 プレビュー機能のサポート。 | SQL Server 2019 preview に付属している HDFS/Spark ゲートウェイに接続できます。<br/><br/>HDFS の参照、ファイルのアップロード、ファイルの保存、便利な操作の起動 (ノートブックでの CSV ファイルの分析など) が行なえます。<br/><br/>ダッシュボードから Spark ジョブを送信したり、オブジェクト エクスプローラーで HDFS/Spark 接続を右クリックすることができます。 |
 | Azure Data Studio ノートブック。 | 統合されたノートブック ビューアーを使用して、ノートブックを作成したり、開いたりできます。 このリリースのノートブック ビューアーでは、ローカル カーネルと SQL Server 2019 ビッグ データ クラスターへの接続のみがサポートされています。<br/><br/>ノートブックで PROSE コード アクセラレータ ライブラリを使用して、ファイル形式とデータ型について学習し、データ準備を迅速化することができます。 |
@@ -377,14 +415,14 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | SQL Server インポート拡張機能の発表。 | &nbsp; |
 | SQL Server プロファイラーのセッション管理。 | &nbsp; |
 | SQL Server プロファイラーのセッション テンプレートのサポート。 | &nbsp; |
 | SQL Server エージェントの機能強化。 | &nbsp; |
 | 新しいコミュニティ拡張機能:ファースト レスポンダー キット。 | &nbsp; |
-| クオリティ オブ ライフの改善:接続文字列 | &nbsp; |
+| クオリティ オブ ライフの改善:Connection strings | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-august-2018"></a>バグの修正、2018 年 8 月
@@ -434,7 +472,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | [SQL Server Agent for SQL Operations Studio 拡張機能](sql-server-agent-extension.md)の機能強化。 | アラート、演算子、およびプロキシのビューと、左ペインのアイコンが追加されました。<br/><br/>新しいジョブ、新しいジョブ ステップ、新しいアラート、および新しい演算子のためのダイアログが追加されました。<br/><br/>[ジョブの削除]、[アラートの削除]、[Delete Operator]\(演算子の削除\)(右クリック) が追加されました。<br/><br/>前回の実行を表示する機能が追加されました。<br/><br/>列名ごとのフィルターが追加されました。 |
 | [SQL Server Profiler for SQL Operations Studio 拡張機能](sql-server-profiler-extension.md)の機能強化。 | 拡張イベントを表示するための 5 つの既定のテンプレートが追加されました。<br/><br/>サーバー/データベース接続名が追加されました。<br/><br/>Azure SQL Database インスタンスのサポートが追加されました。<br/><br/>プロファイラーの実行中にタブが閉じられたときに、プロファイラーを終了するかどうか尋ねるメッセージが追加されました。 |
@@ -466,7 +504,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | **SQL Server Profiler for SQL Operations Studio _Preview_** 拡張機能の初期リリース。 | &nbsp; |
 | 新しい **SQL Data Warehouse** 拡張機能には、データウェアハウスに分析情報を提示する、高機能でカスタマイズ可能なダッシュボード ウィジェットが含まれています。 | これにより、データウェアハウスの管理とチューニングに関する主要なシナリオに対応できるようになり、データを最適化して一貫したパフォーマンスを提供できるようになります。 |
@@ -495,7 +533,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 拡張機能マネージャーで使用できる Redgate SQL Search 拡張機能の発表。 | &nbsp; |
 | 10 言語に対応したコミュニティ ローカライズを利用できます。 | ドイツ語、スペイン語、フランス語、イタリア語、日本語、韓国語、ポルトガル語、ロシア語、中国語 (簡体字)、および中国語 (繁体字)。 |
@@ -523,7 +561,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | SQL エージェント プレビュー拡張機能の機能強化: | &nbsp; |
 | &nbsp; &nbsp; &nbsp; ファイルのサポートが強化されました。 | &bull; &nbsp; サイズの大きなファイル。<br/>&bull; &nbsp; 保護されたファイル (管理者権限で保護されたファイルの保存用)。<br/>&bull; &nbsp; SQL Operations Studio 内での、\> 256 MB のファイルの格納。 |
@@ -556,7 +594,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | [新しい通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui)。 | SQL Operations Studio の通知を簡単に管理して確認できます。 |
 | [統合型のターミナル分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)。 | 複数の開いている端末を同時に操作できます。 |
@@ -585,7 +623,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | ダッシュボードの拡張性モデルが強化され、タブ付きの分析情報と構成ウィンドウがサポートされました。 | 拡張機能マネージャーを使用すると、拡張機能を簡単に取得できます。<br/><br/>[whoisactive.com](http://www.whoisactive.com) の sp\_whoisactive 用のダッシュボード拡張機能。<br/><br/>詳細については、「[SQL Operations Studio の機能を拡張する](extensions.md)」を参照してください。 |
 | [接続とオブジェクト エクスプローラー管理のための機能拡張 API](https://github.com/Microsoft/azuredatastudio/wiki/Extensibility-API) が追加されました。 | &nbsp; |
@@ -600,7 +638,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 自動更新インストールの導入。これにより、新しいリリースがダウンロード可能になったときに通知を受信できます。 | &nbsp; |
 | 接続ダイアログの **[データベース]** フィールドに、指定したサーバーから入力されたデータベースの一覧を表示するドロップダウン リストが動的に表示されるようになりました。 | &nbsp; |
@@ -630,7 +668,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | 接続ダイアログで、保存されたサーバー接続が使用できるようになりました。 | &nbsp; |
 | Hot Exit を有効化できるようになりました。 Hot Exit は既定ではオフになっています。有効化するには、[Hot Exit の設定](settings.md#hot-exit)に関する記事を参照してください。 | &nbsp; |
@@ -650,7 +688,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 &nbsp;
 
-| [変更] | 詳細 |
+| Change | 詳細 |
 | :----- | :------ |
 | Azure SQL Database と Azure SQL Data Warehouse に接続する際に、[ファイアウォール規則の作成] ダイアログ ボックスを使用できるようになりました。 | &nbsp; |
 | Windows セットアップと、Linux DEB および RPM のインストール パッケージが追加されました。 | &nbsp; |
@@ -668,7 +706,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 - [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初期リリース。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
 作業を開始するには、次のクイック スタートのいずれかを参照してください。
 

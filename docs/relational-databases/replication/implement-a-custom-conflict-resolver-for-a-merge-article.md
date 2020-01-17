@@ -1,6 +1,7 @@
 ---
-title: マージ アーティクルのカスタム競合回避モジュールを実装する | Microsoft Docs
-ms.custom: ''
+title: カスタム競合回避モジュールの実装 (マージ)
+description: SQL Server でマージ パブリケーションのカスタム競合回避モジュールを実装する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905114"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322162"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールを実装する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: レプリケーション スクリプトのアップグレード (レプリケーション Transact-SQL プログラミング) | Microsoft Docs
-ms.custom: ''
+title: レプリケーション スクリプトのアップグレード (レプリケーション SP)
+description: レプリケーション ストアド プロシージャを使用して、レプリケーション トポロジをプログラムで構成するために使用するスクリプトをアップグレードする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a7104b2ecf2b74b9ad6a2521d7fff9fe09b500f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710371"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320046"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>レプリケーション スクリプトのアップグレード (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ ms.locfileid: "71710371"
   
     -   プル サブスクリプションの場合、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) の実行を更新して、サブスクライバーでディストリビューション エージェントを実行するときの Windows 資格情報を `@job_name` と `@job_password` に指定します。 この操作は、 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行します。 `@subscriber`、`@subscriber_db`、`@publication` を指定し、ディストリビューション エージェントをディストリビューターで実行するときの Windows 資格情報を `@job_name` および `@job_password` で指定して、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
+    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行します。 `@subscriber`、`@subscriber_db`、`@publication` を指定し、ディストリビューション エージェントをディストリビューターで実行するときの Windows 資格情報を `@job_name` および `@job_password` で指定して、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プッシュ サブスクリプションの作成](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>マージ パブリケーションを構成するスクリプトをアップグレードするには  
   
@@ -109,7 +110,7 @@ ms.locfileid: "71710371"
   
     -   プル サブスクリプションの場合、[sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) の実行を更新して、サブスクライバーでマージ エージェントを実行するときの Windows 資格情報を `@job_name` と `@job_password` に指定します。 この操作は、 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行します。 `@subscriber`、`@subscriber_db`、`@publication` を指定し、マージ エージェントをディストリビューターで実行するときの Windows 資格情報を `@job_name` および `@job_password` で指定して、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
+    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行します。 `@subscriber`、`@subscriber_db`、`@publication` を指定し、マージ エージェントをディストリビューターで実行するときの Windows 資格情報を `@job_name` および `@job_password` で指定して、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プッシュ サブスクリプションの作成](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
  次に、Product テーブルに関するトランザクション パブリケーションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 このパブリケーションでは、フェールオーバーとしてキュー更新を使用する即時更新がサポートされます。 読みやすくするために、既定のパラメーターは削除されています。  
@@ -191,7 +192,7 @@ ms.locfileid: "71710371"
   
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)   
  [レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [MSSQL_ENG021797](../../../relational-databases/replication/mssql-eng021797.md)   

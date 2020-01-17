@@ -1,7 +1,7 @@
 ---
-title: フェールオーバー クラスター インスタンスと可用性グループの組み合わせ
+title: フェールオーバー クラスター インスタンスと可用性グループ
 description: SQL Server フェールオーバー クラスター インスタンスと Always On 可用性グループの機能を組み合わせることで、高可用性とディザスター リカバリーを向上させることができます。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988394"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822254"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)
 
@@ -66,7 +66,7 @@ ms.locfileid: "67988394"
 |**ストレージの種類**|共有|非共有<br /><br /> 可用性グループ内のレプリカがストレージを共有しない一方、FCI によってホストされるレプリカは、FCI によって必要とされたときに共有ストレージ ソリューションを使用します。 ストレージ ソリューションは、可用性グループのレプリカ間ではなく、FCI 内のノードでのみ共有されます。|  
 |**ストレージ ソリューション**|直接接続、SAN、マウント ポイント、SMB|ノードの種類によって異なる|  
 |**読み取り可能なセカンダリ**|いいえ*|はい|  
-|**該当するフェールオーバー ポリシー設定**|WSFC クォーラム<br /><br /> FCI 固有<br /><br /> 可用性グループ設定**|WSFC クォーラム<br /><br /> 可用性グループ設定|  
+|**該当するフェールオーバー ポリシー設定**|WSFC クォーラム<br /><br /> FCI 固有<br /><br /> 可用性グループ設定**|WSFC クォーラム<br /><br /> 可用性グループの設定|  
 |**フェールオーバー リソース**|サーバー、インスタンス、およびデータベース|データベースのみ|  
   
  *可用性グループ内の同期セカンダリ レプリカは、常に対応する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上で実行されていますが、FCI 内のセカンダリ ノードは、実際には対応する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを起動していないため、読み取り不可能です。 FCI 内のセカンダリ ノードは、FCI フェールオーバー中にリソース グループの所有権が転送されたときにのみ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを起動します。 ただし、アクティブな FCI ノードにおいて、FCI によってホストされるデータベースが可用性グループに属している場合にローカルな可用性グループが読み取り可能なセカンダリ レプリカとして実行されていると、データベースは読み取り可能です。  
@@ -130,7 +130,7 @@ ms.locfileid: "67988394"
      [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>参照  
- [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  

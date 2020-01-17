@@ -1,6 +1,7 @@
 ---
-title: クォーラム:データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング) | Microsoft Docs
-ms.custom: ''
+title: データベースの可用性にミラーリング監視サーバーが与える影響
+description: データベース ミラーリングがクォーラムとデータベースの可用性に与える影響について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 554108909607d7d1cdabb10bb075a9d77b5e7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025412"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822684"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム:データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "68025412"
   
  次の図に、これらの種類のクォーラムを示します。  
   
- ![クォーラム: 完全; ミラーリング監視とパートナー; 両方のパートナー](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "クォーラム: 完全; ミラーリング監視とパートナー; 両方のパートナー")  
+ ![クォーラム: 完全; ミラーリング監視サーバーおよびパートナー; 両方のパートナー](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "クォーラム: 完全; ミラーリング監視サーバーおよびパートナー; 両方のパートナー")  
   
  現在のプリンシパル サーバーがクォーラムを保持している限り、データベース所有者が手動フェールオーバーを実行した場合を除き、そのサーバーがプリンシパルの役割を担い、データベースとして機能し続けます。 プリンシパル サーバーは、クォーラムを失った場合、データベースとして機能しなくなります。 自動フェールオーバーは、プリンシパル データベースがクォーラムを失い、プリンシパル データベースが機能しなくなることが確実である場合にのみ、発生する可能性があります。  
   
@@ -96,7 +97,7 @@ ms.locfileid: "68025412"
 ### <a name="how-quorum-affects-database-availability"></a>クォーラムによるデータベースの可用性への影響  
  次の図は、一度に 1 つのパートナーのみがプリンシパル ロールを保持し、現在のプリンシパル サーバーのみが自身のデータベースをオンラインにできるようにするために、ミラーリング監視サーバーとパートナーを連携させる方法について示しています。 どちらのシナリオも、完全なクォーラムがあり、 **Partner_A** にプリンシパル ロール、 **Partner_B** にミラー ロールが割り当てられた状態で始まります。  
   
- ![ミラーリング監視サーバーとパートナーによる相互作用の方法](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "ミラーリング監視サーバーとパートナーによる相互作用の方法")  
+ ![ミラーリング監視サーバーとパートナーを連携させる方法](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "ミラーリング監視サーバーとパートナーを連携させる方法")  
   
  シナリオ 1 は、元のプリンシパル サーバー (**Partner_A**) に障害が発生した後に、 **Partner_A**が使用不可となったものとミラーリング監視サーバーおよびミラー サーバーが判断し、クォーラムを形成する様子を示しています。 ミラーの **Partner_B** がプリンシパル ロールを引き継ぎます。 自動フェールオーバーが発生すると、 **Partner_B**は自身が持っているデータベースのコピーをオンラインにします。 次に **Partner_B** に障害が発生し、データベースがオフラインになります。 後で、以前のプリンシパル サーバーである **Partner_A**がミラーリング監視サーバーに再接続してクォーラムを取り戻しますが、ミラーリング監視サーバーと通信した結果、現在は **Partner_B** がプリンシパル ロールであるために、 **Partner_A** は自身が持っているデータベースのコピーをオンラインにできないことを認識します。 **Partner_B** は、セッションに再び加わると、データベースを再びオンラインにします。  
   

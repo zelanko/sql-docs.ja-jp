@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096938"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866079"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ GO
   `TableC`、 `TableB`、 `TableA`、または  
   `TableB`、 `TableA`、 `TableC`、または  
   `TableB`、 `TableC`、 `TableA`、または  
-  `TableC`、 `TableA`、 `TableB`  
+  `TableC`、`TableA`、`TableB`  
 
 * 各テーブルからデータを取り出す方法  
   通常、各テーブルのデータにアクセスする方法にも何とおりかあります。 特定のキー値を持つ数行だけが必要な場合、データベース サーバーではインデックスを使用できます。 テーブル内のすべての行が必要な場合は、インデックスを無視してテーブル スキャンを実行できます。 テーブル内のすべての行が必要で、 `ORDER BY`で指定されたキー列のインデックスがある場合、テーブル スキャンではなくインデックス スキャンを行うと、結果セットの並べ替えを個別に行わずに済みます。 テーブルが非常に小さい場合は、テーブルにどのようにアクセスするときでもテーブル スキャンが最も効率的な方法です。
@@ -483,7 +483,7 @@ GO
 
 主として再コンパイルが必要になるのは、ステートメントの正確性を維持したり、より処理速度が速いクエリ実行プランを取得したりする場合です。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 では、バッチ内のステートメントが原因で再コンパイルが実行されるときに、そのバッチがストアド プロシージャ、トリガー、アドホック バッチ、または準備されたステートメントのいずれを使用して送信されたかどうかに関係なく、常にバッチ全体が再コンパイルされます。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降では、再コンパイルの原因となったバッチ内のステートメントのみが再コンパイルされます。 この違いにより、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 以降のリリースの再コンパイル回数を比較することはできません。 また、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降の再コンパイルには、拡張機能セットによってさらに多くの種類が用意されています。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2005 より前のバージョンでは、バッチ内のステートメントが原因で再コンパイルが実行されるときに、そのバッチがストアド プロシージャ、トリガー、アドホック バッチ、または準備されたステートメントのいずれを使用して送信されたかどうかに関係なく、常にバッチ全体が再コンパイルされます。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降では、再コンパイルをトリガーしたバッチ内のステートメントのみが再コンパイルされます。 また、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降の再コンパイルには、拡張機能セットによって種類が追加されています。
 
 ステートメントレベルの再コンパイルにより、パフォーマンスが向上します。これは、多くの場合、再コンパイルとそれに関連付けられた CPU 時間やロックへの悪影響を引き起こすステートメントの数が少ないからです。 したがって、再コンパイルする必要がないバッチの他のステートメントでは、これらの影響を回避できます。
 
@@ -507,7 +507,7 @@ GO
 > `SP:Recompile` と `SQL:StmtRecompile` の *EventSubClass* 列には、再コンパイルの理由を示す整数コードが含まれます。 コードの説明は[ここ](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)にあります。
 
 > [!NOTE]
-> `AUTO_UPDATE_STATISTICS` データベース オプションが `ON` に設定されていると、対象にしているテーブルまたはインデックス付きビューの統計が更新された場合、または前回の実行から基数が大きく変更された場合、クエリが再コンパイルされます。 この動作は、標準のユーザー定義テーブル、一時テーブル、および DML トリガーによって作成された inserted テーブルと deleted テーブルに当てはまります。 過度の再コンパイルによってクエリのパフォーマンスが低下する場合は、この設定を `OFF`に変更することを検討してください。 `AUTO_UPDATE_STATISTICS` データベース オプションを `OFF` に設定すると、統計や基数の変更に基づく再コンパイルは行われません。ただし、DML `INSTEAD OF` トリガーで作成した inserted テーブルおよび deleted テーブルは例外です。 これらのテーブルは tempdb で作成されるため、それらにアクセスするクエリの再コンパイルは tempdb の `AUTO_UPDATE_STATISTICS` の設定によって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 では、この設定を `OFF` にした場合も、DML トリガーの inserted テーブルと deleted テーブルにタイする基数の変更に基づいて再コンパイルが引き続き行われます。
+> `AUTO_UPDATE_STATISTICS` データベース オプションが `ON` に設定されていると、対象にしているテーブルまたはインデックス付きビューの統計が更新された場合、または前回の実行から基数が大きく変更された場合、クエリが再コンパイルされます。 この動作は、標準のユーザー定義テーブル、一時テーブル、および DML トリガーによって作成された inserted テーブルと deleted テーブルに当てはまります。 過度の再コンパイルによってクエリのパフォーマンスが低下する場合は、この設定を `OFF`に変更することを検討してください。 `AUTO_UPDATE_STATISTICS` データベース オプションを `OFF` に設定すると、統計や基数の変更に基づく再コンパイルは行われません。ただし、DML `INSTEAD OF` トリガーで作成した inserted テーブルおよび deleted テーブルは例外です。 これらのテーブルは tempdb で作成されるため、それらにアクセスするクエリの再コンパイルは tempdb の `AUTO_UPDATE_STATISTICS` の設定によって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 より前のバージョンでは、この設定を `OFF` にした場合も、DML トリガーの inserted テーブルと deleted テーブルにタイする基数の変更に基づいて再コンパイルが引き続き行われます。
 
 ### <a name="PlanReuse"></a> パラメーターと実行プランの再利用
 
@@ -585,7 +585,7 @@ WHERE AddressID = 1 + 2;
 > [!WARNING] 
 > パラメーターまたはパラメーター マーカーを使用してエンド ユーザーの入力値を保持する方法は、文字列に値を連結し、その後この文字列をデータ アクセス API メソッド、 `EXECUTE` ステートメント、または `sp_executesql` ストアド プロシージャのいずれかを使用して実行する方法よりも安全です。
 
-パラメーターを指定せずに [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行した場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではステートメントを内部でパラメーター化することにより、既存の実行プランとの照合機能が高められます。 この処理を簡易パラメーター化と呼びます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 では、この処理を自動パラメーター化と呼んでいました。
+パラメーターを指定せずに [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行した場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではステートメントを内部でパラメーター化することにより、既存の実行プランとの照合機能が高められます。 この処理を簡易パラメーター化と呼びます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 より前のバージョンでは、この処理を自動パラメーター化と呼んでいました。
 
 次のステートメントについて考えてみます。
 
@@ -624,7 +624,7 @@ WHERE ProductSubcategoryID = 4;
 * ストアド プロシージャ、トリガー、またはユーザー定義関数の本体内のステートメント。 これらのルーチンのクエリ プランは既に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により再利用されています。
 * クライアント側のアプリケーションで既にパラメーター化されている、準備されたステートメント。
 * XQuery メソッド呼び出しを含んでいるステートメントを、 `WHERE` 句など通常は引数がパラメーター化されるコンテキストで使用した場合。 引数がパラメーター化されないコンテキストでこのメソッドを使用した場合は、ステートメントの残りの部分がパラメーター化されます。
-* [!INCLUDE[tsql](../includes/tsql-md.md)] カーソル内のステートメント。 (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
+* [!INCLUDE[tsql](../includes/tsql-md.md)] カーソル内のステートメント (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
 * 非推奨のクエリ構造。
 * `ANSI_PADDING` または `ANSI_NULLS` が `OFF`に設定されている状態で実行されているステートメント。
 * パラメーター化が可能なリテラルが 2,097 を超えるステートメント。
@@ -942,7 +942,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、[!INCL
 
 OLE DB データ ソースにリンク サーバーとしてアクセスするには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が動作するサーバー上に OLE DB プロバイダーが存在している必要があります。 OLE DB データ ソースに対して使用できる [!INCLUDE[tsql](../includes/tsql-md.md)] 操作の数は、OLE DB プロバイダーの機能によって決まります。
 
-たとえば、`sysadmin` 固定サーバー ロールのメンバーは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスごとに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` プロパティを使用して、OLE DB プロバイダーのアドホック コネクタ名の使用を有効化または無効化できます。 アドホック アクセスが有効化されると、そのインスタンスにログオンしているユーザーは、アドホック コネクタ名を含んだ [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行し、OLE DB プロバイダーを使用してアクセスできるネットワークのすべてのデータ ソースを参照できます。 `sysadmin` ロールのメンバーは、データ ソースへのアクセスを制御するために、その OLE DB プロバイダーに対するアドホック アクセスを無効化できます。その結果、ユーザーは管理者が定義したリンク サーバー名で参照されるデータ ソースのみに制限されます。 既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB プロバイダーではアドホック アクセスが有効化されており、他のすべての OLE DB プロバイダーでは無効化されています。
+たとえば、`sysadmin` 固定サーバー ロールのメンバーは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスごとに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の `DisallowAdhocAccess` プロパティを使用して、OLE DB プロバイダーのアドホック コネクタ名の使用を有効化または無効化できます。 アドホック アクセスが有効化されると、そのインスタンスにログオンしているユーザーは、アドホック コネクタ名を含んだ [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行し、OLE DB プロバイダーを使用してアクセスできるネットワークのすべてのデータ ソースを参照できます。 `sysadmin` ロールのメンバーは、データ ソースへのアクセスを制御するために、その OLE DB プロバイダーに対するアドホック アクセスを無効化できます。その結果、ユーザーは管理者が定義したリンク サーバー名で参照されるデータ ソースのみに制限されます。 既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB プロバイダーではアドホック アクセスが有効化されており、他のすべての OLE DB プロバイダーでは無効化されています。
 
 分散クエリを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを実行している Microsoft Windows アカウントのセキュリティ コンテキストを使用して、他のデータ ソース (たとえば、ファイルや Active Directory などのリレーショナルでないデータ ソース) にアクセスできます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は Windows ログインでは正常にログインを借用できますが、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインでは借用できません。 この場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを実行しているアカウントに権限があり、分散クエリ ユーザーには権限のない他のデータ ソースに、分散クエリ ユーザーからのアクセスを許してしまう可能性が生じます。 対応するリンク サーバーにアクセスする権限のある特定のログインを定義するには、 `sp_addlinkedsrvlogin` を使用します。 このような制御は、アドホック名では使用できないので、OLE DB プロバイダーでアドホック アクセスを有効にする場合は十分に注意してください。
 

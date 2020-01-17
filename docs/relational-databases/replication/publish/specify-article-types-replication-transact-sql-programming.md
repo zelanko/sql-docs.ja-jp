@@ -1,6 +1,7 @@
 ---
-title: アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング) | Microsoft Docs
-ms.custom: ''
+title: アーティクルの種類の指定 (レプリケーション SP)
+description: SQL Server レプリケーションのアーティクルを定義するときに、レプリケーション ストアド プロシージャを使用して、プログラムでアーティクルの種類を指定します。
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfa3710648e381dbd142c57180bf5395d9eee18f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3adcfa7c18259df1b063ff95f86d4f7721b45091
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904625"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321200"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +66,11 @@ ms.locfileid: "72904625"
   
     -   **indexed view logbased manualboth** - ログベースの、フィルター選択されるインデックス付きビュー アーティクル。行方向のフィルター選択に使用されるストアド プロシージャと、列方向にフィルター選択されるアーティクルを定義するビューは、どちらもユーザーが作成して定義し、それぞれ `@filter` および `@sync_object` に指定されます。 詳細については、「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」を参照してください。  
   
-     これにより、パブリケーションに新しいアーティクルが定義されます。 詳細については、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」を参照してください。  
+     これにより、パブリケーションに新しいアーティクルが定義されます。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 2.  **logbased manualboth** および **logbased manualfilter** のアーティクルの場合、 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を実行して、行方向にフィルター選択されるアーティクル用のフィルター選択ストアド プロシージャを生成します。 詳しくは、「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」をご覧ください。  
   
-3.  **logbased manualboth**、 **logbased manualview**、および **logbased manualfilter** のアーティクルの場合、 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行して、列方向にフィルター選択されるアーティクルを定義するビューを生成します。 詳細については、「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」をご覧ください。  
+3.  **logbased manualboth**、 **logbased manualview**、および **logbased manualfilter** のアーティクルの場合、 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行して、列方向にフィルター選択されるアーティクルを定義するビューを生成します。 詳しくは、「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」をご覧ください。  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>トランザクション パブリケーションまたはスナップショット パブリケーションでストアド プロシージャ、ストアド プロシージャ実行、またはユーザー定義関数のアーティクルをパブリッシュするには  
   
@@ -77,7 +78,7 @@ ms.locfileid: "72904625"
   
     -   **proc schema only** - スキーマのみのストアド プロシージャ アーティクル。  
   
-    -   **proc exec** - アーティクルのすべてのサブスクライバーにストアド プロシージャの実行をレプリケートします。 詳細については、「 [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
+    -   **proc exec** - アーティクルのすべてのサブスクライバーにストアド プロシージャの実行をレプリケートします。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
   
     -   **serializable proc exec** - シリアル化可能なトランザクションのコンテキスト内で実行される場合にのみ、ストアド プロシージャの実行をレプリケートします。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
   

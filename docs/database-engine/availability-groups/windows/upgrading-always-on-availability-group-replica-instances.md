@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性グループのレプリカ インスタンスのアップグレード | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのレプリカのアップグレード
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910787"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822192"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +25,7 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 >[!NOTE]  
 >この記事では、SQL Server 自体のアップグレードについてのみ説明します。 これには、Windows Server フェールオーバー クラスター (WSFC) を含む、オペレーティング システムのアップグレードは含まれません。 フェールオーバー クラスターをホストしている Windows オペレーティング システムのアップグレードは、Windows Server 2012 R2 より前のオペレーティング システムではサポートされません。 Windows Server 2012 R2 で実行されているクラスター ノードのアップグレードについては、「[Cluster Operating System Rolling Upgrade](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)」(クラスター オペレーティング システムのローリング アップグレード) を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 作業を開始する前に、次の重要な情報を確認してください。  
   
 - [サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md):使用している Windows オペレーティング システムと SQL Server のバージョンから SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
@@ -127,7 +128,7 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>フェールオーバー クラスター インスタンス ノードを含む AG  
  AG にフェールオーバー クラスター インスタンス (FCI) ノードが含まれている場合、非アクティブなノードをアップグレードした後で、アクティブなノードをアップグレードする必要があります。 次の図では、ローカルでの可用性を高めるために FCI を使用し、リモートのディザスター リカバリーのために FCI 間の非同期コミットを使用する、一般的な AG のシナリオを示します。さらに、アップグレード手順も示しています。  
   
- ![FCI を使用する AG のアップグレード](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "FCI を使用する AG のアップグレード")  
+ ![FCI での AG のアップグレード](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "FCI での AG のアップグレード")  
   
 1.  REMOTE2 をアップグレードまたは更新する。  
   

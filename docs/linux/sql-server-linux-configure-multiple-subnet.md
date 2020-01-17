@@ -1,6 +1,7 @@
 ---
-title: 複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンスを Linux に構成する
-description: ''
+title: 複数サブネットの可用性グループと FCI の構成 (Linux)
+description: 複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンス (FCI) を SQL Server on Linux に構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f35f1916107e8ede0e7bf7cc3df483a0c33f3355
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077588"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558612"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンスを構成する
 

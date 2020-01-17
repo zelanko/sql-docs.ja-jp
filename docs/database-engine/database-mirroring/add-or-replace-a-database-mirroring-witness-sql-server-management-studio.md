@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: ミラーリング監視サーバーを追加または置き換える (SSMS)
+description: SQL Server Management Studio (SSMS) を使用してデータベース ミラーリング監視サーバーを追加または置き換える方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947950"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247504"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

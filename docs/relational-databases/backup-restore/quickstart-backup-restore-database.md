@@ -1,34 +1,34 @@
 ---
-title: 'クイック スタート: SQL Server データベースのオンプレミスでのバックアップと復元'
+title: クイック スタート:データベースのバックアップと復元
 titleSuffix: SQL Server
-description: このクイック スタートでは、任意のクラウドで SQL Server on Linux を実行する方法を示します。
+description: このクイックスタートでは、オンプレミスの SQL Server データベースをバックアップおよび復元する方法について説明します。
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 05/25/2019
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: ''
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: dedadc89cd10da6f00ac768c3e15e151d0028e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033622"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258639"
 ---
-# <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>クイック スタート: SQL Server データベースのオンプレミスでのバックアップと復元
+# <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>クイック スタート:SQL Server データベースのオンプレミスでのバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 このクイック スタートでは、新しいデータベースを作成し、その単純なバックアップを取得して復元します。 
 
 詳細な方法については、「[データベースの完全バックアップの作成](create-a-full-database-backup-sql-server.md)」と「[SSMS を使用してデータベース バックアップを復元する](restore-a-database-backup-using-ssms.md)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このクイック スタートを完了するには、次のものが必要です。 
 
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 ## <a name="create-a-test-database"></a>テスト データベースを作成する 

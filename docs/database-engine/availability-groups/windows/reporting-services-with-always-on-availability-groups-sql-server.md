@@ -1,6 +1,7 @@
 ---
-title: Reporting Services と Always On 可用性グループ (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Reporting Services と可用性グループ
+description: SQL Server Reporting Services (SSRS) と Always On 可用性グループ (SQL Server) の構成について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252117"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243620"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services と Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68252117"
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関する一般的な情報については、[SQL Server 2012 の Always On に関する FAQ (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768) を参照してください。  
 
 ##  <a name="bkmk_requirements"></a> Reporting Services と Always On 可用性グループを使用するための要件  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と Power BI Report Server では .Net framework 4.0 を使用し、データ ソースでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 接続文字列プロパティの使用をサポートします。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Reporting Services と Power BI Report Server では、.Net Framework 4.0 を使用して、データ ソースでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]Always On availability groups 接続文字列プロパティの使用をサポートしています。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 で  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用するためには、.Net 3.5 SP1 の修正プログラムをダウンロードしてインストールする必要があります。 この修正プログラムを適用すると、AG 機能を使う SQL クライアントが新たにサポートされ、さらに、接続文字列プロパティとして **ApplicationIntent** および **MultiSubnetFailover**がサポートされます。 レポート サーバーをホストする各コンピューターにこの修正プログラムがインストールされていない場合、ユーザーがレポートをプレビューしようとすると、以下のようなエラー メッセージが表示され、レポート サーバーのトレース ログに記録されます。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68252117"
   
 -   **SharePoint モード:** 既に SharePoint サーバーにパブリッシュされたレポートには、ドキュメント ライブラリ内の SharePoint 構成ページを使用します。  
   
--   **レポート デザイン:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repまたはts. 詳細については、このトピックのレポート デザインに関するセクションを参照してください。  
+-   **レポート デザイン:** 新しいレポートを作成する場合は、[!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。 詳細については、このトピックのレポート デザインに関するセクションを参照してください。  
   
  **その他のリソース:**  
   
@@ -80,7 +81,7 @@ ms.locfileid: "68252117"
   
 -   可用性グループ リスナーに関する必須情報については、「[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」を参照してください。  
   
- **注意点 :** 通常、セカンダリ レプリカがプライマリ レプリカからデータの変更を受け取るまでには時間差が生じます。 プライマリ レプリカとセカンダリ レプリカ間に生じる更新の時間差は、次の要因によって変動します。  
+ **考慮事項:** 通常、セカンダリ レプリカがプライマリ レプリカからデータの変更を受け取るまでには時間差が生じます。 プライマリ レプリカとセカンダリ レプリカ間に生じる更新の時間差は、次の要因によって変動します。  
   
 -   セカンダリ レプリカの数。 セカンダリ レプリカが 1 つ構成に追加されるごとに時間差は大きくなります。  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68252117"
 ##  <a name="bkmk_reportdesign"></a> レポート デザインと可用性グループ  
  [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]のレポート プロジェクトでレポートをデザインする際、ユーザーは、レポート データ ソースの接続文字列に、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の新しい接続プロパティを含めることができます。 新しい接続プロパティのサポート状況は、ユーザーがどこでレポートをプレビューするかによって異なります。  
   
--   **ローカル プレビュー:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] と [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 と support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続文字列プロパティがサポートされます。  
+-   **ローカル プレビュー:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] と [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] では、.Net framework 4.0 が使用され、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]Always On 可用性グループの接続文字列プロパティがサポートされます。  
   
 -   **リモートまたはサーバー モード プレビュー:** レポート サーバーにレポートをパブリッシュするか [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] でレポートをプレビューしたときに、次のようなエラーが表示された場合、プレビュー対象となるレポートのレポート サーバーに [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用の .Net Framework 3.5 SP1 修正プログラムがインストールされていません。  
   
@@ -105,7 +106,7 @@ ms.locfileid: "68252117"
  フェールオーバーと復旧を完了させるには、手動でのアクションまたはカスタム オートメーション スクリプトが必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のフェールオーバー後は、これらのアクションが完了するまで、レポート サーバーの機能が正常に動作しない可能性があります。  
   
 > [!NOTE]  
->  レポート サーバー データベースに対するフェールオーバーと災害復旧を検討している場合は、レポート サーバーの暗号化キーのコピーを必ずバックアップするようにお勧めします。  
+>  レポート サーバー データベースに対するフェールオーバーとディザスター リカバリーを検討している場合は、レポート サーバーの暗号化キーのコピーを必ずバックアップするようにお勧めします。  
   
 ###  <a name="bkmk_differences_in_server_mode"></a> SharePoint モードとネイティブ モード間の違い  
  このセクションでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]との連携の観点から、SharePoint モードのレポート サーバーとネイティブ モードのレポート サーバーの違いについて説明します。  
@@ -174,7 +175,7 @@ ms.locfileid: "68252117"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の HADR サポート](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
- [Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
  [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [SQL Server Native Client の HADR サポート](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   

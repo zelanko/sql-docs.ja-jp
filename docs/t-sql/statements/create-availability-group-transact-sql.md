@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c259066aca1a4302fcd1a0caeb7fb3122c97147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8266791ae6621dbf81f16b2eb5c83ef8c9a3c1b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084566"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244592"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ CREATE AVAILABILITY GROUP group_name
  SECONDARY  
  オンラインのレプリカがプライマリ レプリカのみである場合を除き、セカンダリ レプリカでバックアップを実行することを指定します。 オンラインのレプリカがプライマリ レプリカのみである場合は、プライマリ レプリカでバックアップを実行する必要があります。 これは既定の動作です。  
   
- なし  
+ NONE  
  バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |Level|エラー状態|  
 |-----------|-----------------------|  
-|1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> -WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「[How It Works:SQL Server Always On Lease Timeout (動作方法: SQL Server AlwaysOn のリース タイムアウト)](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx)」を参照してください。|  
+|1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> -WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「[How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx)」 (動作方法: SQL Server Always On のリース タイムアウト) を参照してください。|  
 |2|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがクラスターに接続されておらず、可用性グループのユーザー指定の HEALTH_CHECK_TIMEOUT しきい値を超えている。<br /><br /> -可用性レプリカがエラー状態である。|  
 |3|孤立したスピンロック、重大な書き込みアクセス違反、ダンプが多すぎるなどの重大な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> これは既定の動作です。|  
 |4|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部リソース プールに永続的なメモリ不足の状態があるなど、中程度の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。|  
@@ -220,7 +220,7 @@ CREATE AVAILABILITY GROUP group_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにアクセスするために使用されるネットワーク名です。 サーバー インスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー パートナーとして参加している場合に使用します。 FCI サーバー インスタンスで SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) を実行すると、'*FCI_network_name*[\\*instance_name*]' という文字列全体 (完全なレプリカ名) が返されます。  
   
  *instance_name*  
- *system_name* または *FCI_network_name* によってホストされ、HADR サービスが有効になっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。 既定のサーバー インスタンスの場合、 *instance_name* は省略可能です。 インスタンス名では大文字と小文字が区別されません。 スタンドアロン サーバー インスタンスでは、この名前の値は SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) を実行したときに返される値と同じです。  
+ *system_name* または *FCI_network_name* によってホストされ、HADR サービスが有効になっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。 既定のサーバー インスタンスの場合、 *instance_name* は省略可能です。 インスタンス名では大文字と小文字が区別されません。 名前付きインスタンスでは、この名前の値は `select ServerProperty(N'InstanceName');` を実行したときに返される値と同じです。  
   
  \  
  *system_name* または *FCI_network_name* と区別するために、*instance_name* を指定するときにのみ使用される区切り記号です。  
@@ -313,7 +313,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  読み取り専用アクセスに限り、セカンダリ レプリカのデータベースに対するすべての接続が許可されます。  
   
- 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+ 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  読み取りを目的とした接続要求をこの可用性レプリカにルーティングするために使用する URL を指定します。 これは、SQL Server データベース エンジンがリッスンしている URL です。 通常、SQL Server データベース エンジンの既定のインスタンスは、TCP ポート 1433 でリッスンします。  
@@ -353,7 +353,7 @@ CREATE AVAILABILITY GROUP group_name
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、読み取り可能なセカンダリ レプリカ間で読み取りを目的とした要求の負荷を分散することができます。 読み取り専用ルーティング リスト内のかっこの入れ子になったセットにレプリカを配置することで、これを指定します。 詳細と例については、「[読み取り専用レプリカ間の負荷分散の構成](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。  
   
- なし  
+ NONE  
  この可用性レプリカがプライマリ レプリカの場合は、読み取り専用のルーティングをサポートしないことを指定します。 これは既定の動作です。  
   
  SESSION_TIMEOUT **=** *integer*  
@@ -441,25 +441,25 @@ CREATE AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  運用環境での DHCP の使用はお勧めしません。 ダウンタイムが発生して DHCP IP のリース期限が切れると、リスナーの DNS 名に関連付けられている新しい DHCP のネットワーク IP アドレスの登録に余分な時間がかかり、クライアント接続に影響が及びます。 ただし、開発環境とテスト環境を設定して可用性グループの基本機能を確認する場合や、アプリケーションとの統合の場合には DHCP が適しています。  
   
- 例:  
+ 次に例を示します。  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  可用性グループ リスナーが、DHCP を使用する代わりに、1 つ以上の静的 IP アドレスを使用することを指定します。 複数のサブネットにわたる可用性グループを作成するには、各サブネットのリスナー構成に静的 IP アドレスが 1 つ必要です。 サブネットの静的 IP アドレスには、IPv4 アドレスまたは IPv6 アドレスを使用できます。 ネットワーク管理者に連絡し、新しい可用性グループのレプリカをホストする各サブネットの静的 IP アドレスを入手してください。  
   
- 例:  
+ 次に例を示します。  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ip4_address*  
- 可用性グループ リスナーに対する IPv4 の 4 つの部分から成るアドレスを指定します。 たとえば、`10.120.19.155` のようになります。  
+ 可用性グループ リスナーに対する IPv4 の 4 つの部分から成るアドレスを指定します。 たとえば、「 `10.120.19.155` 」のように入力します。  
   
  *ipv4_mask*  
- 可用性グループ リスナーに対する IPv4 の 4 つの部分から成るマスクを指定します。 たとえば、`255.255.254.0` のようになります。  
+ 可用性グループ リスナーに対する IPv4 の 4 つの部分から成るマスクを指定します。 たとえば、「 `255.255.254.0` 」のように入力します。  
   
  *ipv6_address*  
- 可用性グループ リスナーに対する IPv6 アドレスを指定します。 たとえば、`2001::4898:23:1002:20f:1fff:feff:b3a3` のようになります。  
+ 可用性グループ リスナーに対する IPv6 アドレスを指定します。 たとえば、「 `2001::4898:23:1002:20f:1fff:feff:b3a3` 」のように入力します。  
   
  PORT **=** *listener_port*  
  WITH IP 句で指定されている可用性グループ リスナーが使用するポート番号 *listener_port* を指定します。 PORT は省略できます。  
@@ -478,7 +478,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. セカンダリ レプリカ上のバックアップ、柔軟なフェールオーバー ポリシー、および接続アクセスを構成する  
  次の例では、2 つのユーザー データベース (`ThisDatabase` および `ThatDatabase`) に対して、`MyAg` という名前の可用性グループを作成します。 次の表は、可用性グループ全体を対象に設定されるオプションの指定値をまとめたものです。  

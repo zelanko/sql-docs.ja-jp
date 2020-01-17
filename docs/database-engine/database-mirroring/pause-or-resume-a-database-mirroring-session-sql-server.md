@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションの一時停止または再開 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング セッションを一時停止して再開するには
+description: SQL Server Management Studio または Transact-SQL (T-SQL) を使用して、SQL Server データベース ミラーリング セッションを一時停止および再開する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9829ffeb1eaf609ae538fc92054517aa8c9bbf3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c9d36b4818aa54a6f63b0b38a353cf69840519b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996478"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244156"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションの一時停止または再開 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "67996478"
   
 2.  **[データベース]** を展開し、データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]** を選択し、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
 4.  セッションを一時停止するには、 **[一時停止]** をクリックします。  
   

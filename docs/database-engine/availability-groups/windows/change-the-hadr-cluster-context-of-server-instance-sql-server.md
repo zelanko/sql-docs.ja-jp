@@ -1,7 +1,7 @@
 ---
-title: 可用性グループでレプリカのメタデータを管理するクラスターを変更する
+title: メタデータの変更:可用性グループのクラスター間移行
 description: クラスター間の移行を実行するとき、SQL Server のインスタンスに対して HADR クラスター コンテキストを変更することで、Always On 可用性グループ内の可用性レプリカのメタデータを管理するクラスターを変更します。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a83f693905eb5a8b963875ea0e23e46d4e3eb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988570"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241806"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Always On 可用性グループでレプリカのメタデータを管理するクラスターを変更する
 
@@ -50,7 +50,7 @@ ms.locfileid: "67988570"
   
      サーバー インスタンス上に可用性レプリカが存在する場合は、HADR クラスター コンテキストを変更する前に、次のいずれかを実行する必要があります。  
   
-    |レプリカのロール|操作|リンク|  
+    |レプリカのロール|アクション|Link|  
     |------------------|------------|----------|  
     |プライマリ|可用性グループをオフラインにします。|[可用性グループをオフラインにする &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/take-an-availability-group-offline-sql-server.md)|  
     |セカンダリ|可用性グループからセカンダリ レプリカを削除する|[可用性グループからのセカンダリ レプリカの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -99,7 +99,7 @@ ms.locfileid: "67988570"
      LOCAL  
      ローカル WSFC クラスター。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  次の例では、HADR クラスター コンテキストを別のクラスターに変更します。 変更先の WSFC クラスターである `clus01`を識別するため、この例では、完全なクラスター オブジェクト名である `clus01.xyz.com`を指定します。  
   
 ```  
@@ -112,7 +112,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> 補足情報:可用性レプリカのクラスター コンテキストの切り替え後  
+##  <a name="FollowUp"></a>補足情報: 可用性レプリカのクラスター コンテキストの切り替え後  
  新しい HADR クラスター コンテキストは、サーバー インスタンスの再起動なしですぐに有効になります。 HADR クラスター コンテキスト設定は、サーバー インスタンスが再起動した場合でも変更されない永続的なインスタンス レベルの設定です。  
   
  次に示すように、 [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) 動的管理ビューをクエリすることで、新しい HADR クラスター コンテキストを確認します。  
@@ -150,7 +150,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
 -   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
- [Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   

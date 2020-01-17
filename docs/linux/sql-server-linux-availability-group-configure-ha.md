@@ -1,8 +1,8 @@
 ---
-title: Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する
-titleSuffix: SQL Server
+title: SQL Server on Linux の可用性グループを構成する
 description: Linux で高可用性を実現するために SQL Server の Always On 可用性グループ (AG) を作成する方法について説明します。
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 08/26/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030305"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558399"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する
 
@@ -215,16 +215,16 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 このドキュメントに記載されている手順に従った場合は、まだクラスター化されていない AG ができます。 次の手順は、クラスターを追加することです。 この構成は、読み取りスケール/負荷分散のシナリオに対しては有効ですが、高可用性の場合は完全ではありません。 高可用性を実現するには、AG をクラスター リソースとして追加する必要があります。 手順については、「[次の手順](#next-steps)」をご覧ください。 
 
-## <a name="notes"></a>注
+## <a name="notes"></a>メモ
 
 >[!IMPORTANT]
->クラスターを構成し、AG をクラスター リソースとして追加した後は、Transact-SQL を使って AG リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバー クラスター (WSFC) の場合と同じようにオペレーティング システムと緊密に結合されているわけではありません。 SQL Server サービスでは、クラスターの存在は認識されません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 RHEL または Ubuntu では、`pcs` を使います。 SLES では `crm` を使います。 
+>クラスターを構成し、AG をクラスター リソースとして追加した後は、Transact-SQL を使って AG リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバー クラスター (WSFC) ほど、オペレーティング システムと緊密に結合されていません。 SQL Server サービスでは、クラスターの存在は認識されません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 RHEL または Ubuntu では、`pcs` を使います。 SLES では `crm` を使います。 
 
 >[!IMPORTANT]
 >AG がクラスター リソースの場合、現在のリリースには、非同期レプリカへのデータ損失を伴う強制フェールオーバーが機能しないという既知の問題があります。 これは今後のリリースで修正される予定です。 同期レプリカへの手動または自動フェールオーバーは成功します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループ クラスター リソースに対して Red Hat Enterprise Linux クラスターを構成する](sql-server-linux-availability-group-cluster-rhel.md)
 

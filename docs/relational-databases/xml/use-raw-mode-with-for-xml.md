@@ -1,6 +1,5 @@
 ---
 title: FOR XML での RAW モードの使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016152"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245235"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML での RAW モードの使用
 
@@ -36,13 +36,13 @@ RAW モードでは、クエリの結果セットの各行が XML 要素に変�
  バイナリ データを base64 エンコード形式で返すには、BINARY BASE64 オプションを FOR XML 句に指定する必要があります。 RAW モードでは、BINARY BASE64 オプションを指定しないでバイナリ データを取得すると、エラーが発生します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- ここでは、次の例について説明します。  
+ このセクションには、次の例が含まれています。  
   
 -   [例: XML での製品モデル情報の取得](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
 -   [例: ELEMENTS ディレクティブで XSINIL を指定する](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [XMLDATA & XMLSCHEMA を使用した結果としてのスキーマの要求](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [例: バイナリ データの取得](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

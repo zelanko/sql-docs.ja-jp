@@ -1,6 +1,5 @@
 ---
-title: SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN | Microsoft Docs
-ms.custom: ''
+title: 拡張イベントに対するシステム ビューからの SELECT と JOIN
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903454"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242899"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-この記事では、Microsoft SQL Server および Azure SQL Database クラウド サービスの拡張イベントに関連するシステム ビューの 2 つのセットについて説明します。 以下のことについて説明します。
+この記事では、SQL Server および Azure SQL Database の拡張イベントに関連するシステム ビューの 2 つのセットについて説明します。 以下のことについて説明します。
 
 - さまざまなシステム ビューを結合 (JOIN) する方法。
 - システム ビューから特定の種類の情報を選択 (SELECT) する方法。
@@ -55,7 +55,7 @@ ms.locfileid: "67903454"
 
 - 実行中のイベント セッションの *現在のアクティビティ* に関する情報が格納されます。 ただし、これらの DMV はセッションの定義に関してはほとんどわかりません。
     - 現在すべてのイベント セッションが停止されていても、さまざまなパッケージがサーバー起動時にアクティブなメモリに読み込まれるので、ビュー *sys.dm_xe_packages* に対する SELECT からは行が返ります。
-    - 同じ理由から、 *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
+    - 同じ理由から、*sys.dm_xe_objects* *sys.dm_xe_object_columns* も行を返します。
 
 
 - 拡張イベント DMV の名前プレフィックス:
@@ -345,7 +345,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 
 次に示すのは、前の SELECT JOIN UNION を実行した実際の出力です。 出力のパラメーターの名前と値は、前の CREATE EVENT SESSION ステートメントと対応します。
@@ -419,7 +419,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 パッケージのリストです。
 
@@ -477,7 +477,7 @@ SELECT  --C.2
 ```
 
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>Output
 
 オブジェクト タイプごとのオブジェクトの数です。 約 1915 個のオブジェクトがあります。
 
@@ -532,7 +532,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 次に示すのは上の SELECT によって返されるオブジェクトの例です。
 
@@ -605,7 +605,7 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 前の SELECT、WHERE `o.name = 'lock_deadlock'`では次の行が返されます。
 
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* とイベント フィールド
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* とイベント フィールド
 
 
 次の SELECT には、 *sys.dm_xe_map_values*という名前の巧妙なビューに対する JOIN が含まれます。
@@ -693,7 +693,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -765,7 +765,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 次のパラメーター行は、SQL Server 2016 で前の SELECT で返された結果の一部です。
 
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 target_data 列を XML にキャストする DMV SELECT
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 target_data 列を XML にキャストする DMV SELECT
 
 
 この DMV SELECT は、アクティブなイベント セッションのターゲットからデータ行を返します。 データは XML にキャストされており、返されたセルをクリックして SSMS で簡単に表示できます。
@@ -854,7 +854,7 @@ XML-Cast セルをクリックすると、次の出力が表示されます。
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 ディスク ドライブから event_file データを取得する関数の SELECT
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 ディスク ドライブから event_file データを取得する関数の SELECT
 
 
 イベント セッションがデータを収集した後で停止されたものとします。 セッションが event_file ターゲットを使用するように定義されている場合でも、関数 *sys.fn_xe_target_read_file*を呼び出すことによってデータを取得できます。

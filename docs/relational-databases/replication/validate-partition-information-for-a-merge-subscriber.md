@@ -1,6 +1,7 @@
 ---
-title: マージ サブスクライバーのパーティション情報の検証 | Microsoft Docs
-ms.custom: ''
+title: パーティション情報の検証 (マージ)
+description: SQL Server でマージ サブスクライバーのパーティション情報を検証する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a238588d947a48e72359d8da0ea7c32148f6bd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da57b7586fb80346dda466004a9cd47a3bb08884
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895204"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321551"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>マージ サブスクライバーのパーティション情報の検証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

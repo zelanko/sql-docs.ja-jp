@@ -1,6 +1,7 @@
 ---
-title: ポリシー ベースの管理を使用したベスト プラクティスの監視と実行 | Microsoft Docs
-ms.custom: ''
+title: ポリシーベースの管理を使用したベスト プラクティスの監視と実行
+description: ポリシーベースの管理では、ベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルが提供され、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーが評価されます。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087096"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557680"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

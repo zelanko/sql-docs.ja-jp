@@ -1,6 +1,7 @@
 ---
-title: SQL Server オブジェクトのポリシー ベースの管理ファセットの表示 | Microsoft Docs
-ms.custom: ''
+title: オブジェクト上のポリシーベースの管理ファセットの表示
+description: SQL Server Management Studio (SSMS) で特定の SQL Server オブジェクトに適用されているポリシーベースの管理ファセットをすべて表示する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 82acf976fef80f62059b5a433bb74e3fbbadec80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9284388a56014084b2478d6d805ff3fc917459d1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021430"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558117"
 ---
-# <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>SQL Server オブジェクトのポリシー ベースの管理ファセットの表示
+# <a name="view-policy-based-management-facets-on-a-sql-server-object"></a>SQL Server オブジェクトのポリシーベースの管理ファセットの表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で特定の SQL Server オブジェクトに適用されているすべてのポリシー ベースの管理ファセットを表示する方法について説明します。  
   

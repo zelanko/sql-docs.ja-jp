@@ -1,7 +1,7 @@
 ---
 title: 可用性グループのリスナーの構成
 description: 'PowerShell または SQL Server Management Studio を使用して、Always On 可用性グループのリスナーを構成する手順について説明します。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264686"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822126"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 可用性グループのリスナーの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "68264686"
   
 ##  <a name="WinPermissions"></a> Windows 権限  
   
-|アクセス許可|リンク|  
+|アクセス許可|Link|  
 |-----------------|----------|  
 |可用性グループをホストしている WSFC クラスターのクラスター オブジェクト名 (CNO) には、 **Create Computer objects** アクセス許可が必要です。<br /><br /> Active Directory では、CNO は既定で **Create Computer objects** アクセス許可を明示的に持たず、仮想コンピューター オブジェクト (VCO) を最大で 10 個作成できます。 VCO を 10 個作成した後、追加で VCO を作成しようとしても失敗します。 この問題は、WSFC クラスターの CNO に権限を明示的に与えることで回避できます。 削除した可用性グループの VCO は Active Directory 内で自動的に削除されず、手動で削除しない限り、VCO の 10 個の既定の制限の対象としてカウントされます。<br /><br /> 注:組織によっては、**Create Computer objects** 権限を個別のユーザー アカウントに付与することがセキュリティ ポリシーで禁止されている場合があります。|*クラスターをインストールするユーザーのアカウントを構成する手順*: 「[フェールオーバー クラスター ステップ バイ ステップ ガイド:Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)」<br /><br /> *クラスター名アカウントを事前設定する手順:* 「[フェールオーバー クラスター ステップ バイ ステップ ガイド:Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)」|  
 |リスナーの仮想ネットワーク名にコンピューター アカウントを事前設定する必要がある場合は、 **Account Operator** グループのメンバーシップが必要です。または、ドメイン管理者に依頼する必要があります。|*クラスター化されたサービスまたはアプリケーションのアカウントを事前設定する手順*: 「[フェールオーバー クラスター ステップ バイ ステップ ガイド:Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)」|  
@@ -123,16 +123,16 @@ ms.locfileid: "68264686"
   
  次の列で構成されます。  
   
- **[サブネット]**  
+ **サブネット**  
  可用性グループ リスナーに追加される各サブネットの識別子が表示されます。  
   
- **[IP アドレス]**  
+ **IP アドレス**  
  特定のサブネットの IP アドレスが表示されます。  サブネットの IP アドレスには、IPv4 アドレスまたは IPv6 アドレスを使用できます。  
   
- **[追加]**  
+ **追加**  
  選択したサブネットまたはこのリスナーの別のサブネットに静的 IP アドレスを追加する場合にクリックします。 クリックすると、 **[IP アドレスの追加]** ダイアログ ボックスが開きます。 詳細については、「[[IP アドレスの追加] ダイアログ ボックス &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md)」ヘルプ トピックを参照してください。  
   
- **[削除]**  
+ **Remove**  
  選択したサブネットをこのリスナーから削除する場合にクリックします。  
   
  **[OK]**  
@@ -205,7 +205,7 @@ ms.locfileid: "68264686"
 ## <a name="troubleshooting"></a>トラブルシューティング  
   
 ###  <a name="ADQuotas"></a> Active Directory クォータが原因で可用性グループ リスナーの作成が失敗する問題  
- 新しい可用性グループ リスナーの作成は、参加しているクラスター ノード マシン アカウントの Active Directory クォータに達したため、失敗する場合があります。  詳細については、次の各資料を参照してください。  
+ 新しい可用性グループ リスナーの作成は、参加しているクラスター ノード マシン アカウントの Active Directory クォータに達したため、失敗する場合があります。  詳細については、次の記事を参照してください。  
   
 -   [コンピューター オブジェクト変更時のクラスター サービス アカウントのトラブルシューティング方法](https://support.microsoft.com/kb/307532)  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68264686"
   
  **.NET Framework 3.5 および OLEDB で MultiSubnetFailover=True はサポートされない**  
   
- **問題点:** 異なるサブネットからの複数の IP アドレスに応じて可用性グループまたはフェールオーバー クラスター インスタンスにリスナー名 (ネットワーク名または WSFC クラスター マネージャーのクライアント アクセス ポイント) がある場合に、ADO.NET with .NET Framework 3.5SP1 または SQL Native Client 11.0 OLEDB を使用していると、可用性グループ リスナーに対するクライアント接続要求の 50% が接続タイムアウトに達する可能性があります。  
+ **問題:** 異なるサブネットからの複数の IP アドレスに応じて可用性グループまたはフェールオーバー クラスター インスタンスにリスナー名 (ネットワーク名または WSFC クラスター マネージャーのクライアント アクセス ポイント) がある場合に、ADO.NET with .NET Framework 3.5SP1 または SQL Native Client 11.0 OLEDB を使用していると、可用性グループ リスナーに対するクライアント接続要求の 50% が接続タイムアウトに達する可能性があります。  
   
  **回避策:** 次のいずれかのタスクを実行することをお勧めします。  
   

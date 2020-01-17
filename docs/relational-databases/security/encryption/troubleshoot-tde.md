@@ -1,29 +1,30 @@
 ---
-title: Azure Key Vault のカスタマー マネージド キーを使った透過的なデータ暗号化に関する一般的なエラー | Microsoft Docs
-description: Azure Key Vault 構成を使った透過的なデータ暗号化 (TDE) のトラブルシューティングを行います。
+title: Azure Key Vault のカスタマー マネージド キーでよく発生するエラー
+description: Transparent Data Encryption (TDE) と Azure Key Vault (AKV) のカスタマー マネージド キーでよく発生するエラーを解決します。
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727767"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558468"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault のカスタマー マネージド キーを使った透過的なデータ暗号化に関する一般的なエラー
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-この記事では、[Azure Key Vault のカスタマー マネージド キーで Transparent Data Encryption (TDE)](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) を使用するように構成されたデータベースがアクセスできなくなる原因となった、Azure Key Vault キーのアクセスに関する問題を特定して解決する方法について説明します。
+この記事では、[Azure Key Vault のカスタマー マネージド キーで Transparent Data Encryption (TDE)](/azure/sql-database/transparent-data-encryption-byok-azure-sql) を使用するように構成されたデータベースがアクセスできなくなる原因となった、Azure Key Vault キーのアクセスに関する問題を特定して解決する方法について説明します。
 
 ## <a name="introduction"></a>はじめに
 Azure Key Vault のカスタマー マネージド キーを使用するように TDE が構成されている場合、データベースをオンラインに保つには、この TDE 保護機能への継続的なアクセスが必要です。  論理 SQL サーバーが Azure Key Vault のカスタマー マネージド TDE 保護機能にアクセスできなくなった場合、データベースでは該当するエラー メッセージが表示されてすべての接続の拒否が始まり、Azure portal でその状態が *Inaccessible* になります。
@@ -78,12 +79,12 @@ Key Vault による TDE を使用しているときに発生する問題のほ�
 
 - Azure CLI: `--assign_identity` オプションを指定した [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update)。
 
-Azure portal では、キー コンテナーに移動してから、 **[アクセス ポリシー]** に移動します。 次の手順を完了します。 
+Azure portal では、キー コンテナーに移動してから、 **[アクセス ポリシー]** に移動します。 以下の手順を実行します。 
 
  1. **[新規追加]** ボタンを使用して、前の手順で作成したサーバーの AppId を追加します。 
  1. 次のキー アクセス許可を割り当てます。取得、ラップ、ラップ解除 
 
-詳細については、「[サーバーに Azure AD ID を割り当てる](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)」をご覧ください。
+詳細については、「[サーバーに Azure AD ID を割り当てる](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server)」をご覧ください。
 
 > [!IMPORTANT]
 > Key Vault による TDE の初期構成後に論理 SQL Server インスタンスが新しいテナントに移動された場合、Azure AD ID を構成する手順を繰り返して、新しい AppId を作成します。 その後、その AppId をキー コンテナーに追加し、キーに適切なアクセス許可を割り当てます。 
@@ -234,7 +235,7 @@ Azure Key Vault のキー アクセスの問題によるデータベースの状
 説明:Azure Key Vault のキーへのデータベース アクセスの復元が失敗しました。 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview) について学習する。
 - 電子メール/SMS/プッシュ/音声、ロジック アプリ、Webhook、ITSM、Automation Runbook などの設定に基づいて、通知とアラートを受け取る[アクション グループ](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)を設定します。 

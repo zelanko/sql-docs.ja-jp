@@ -1,6 +1,6 @@
 ---
-title: SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター | Microsoft Docs
-ms.custom: ''
+title: XTP (インメモリ OLTP) パフォーマンス カウンター
+ms.custom: seo-dt-2019
 ms.date: 04/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2ed90197774cb7be9d8229aa6b5e79ae811fbd88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915252"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165510"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "67915252"
   
  以前は、オブジェクトおよびカウンター名は *XTP Cursors*のように、 **XTP**から始まりました。 現在は、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]から始まり、名前は次のようなパターンとなります。  
   
--   **SQL Server** *\<version>* **XTP Cursors**  
+-   **SQL Server** *\<バージョン>* **XTP Cursors**  
   
  *\<version>* の値は、2016 のようになります。  
   

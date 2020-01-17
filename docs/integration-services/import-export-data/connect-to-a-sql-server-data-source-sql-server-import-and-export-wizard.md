@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285702"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308003"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -34,7 +34,8 @@ ms.locfileid: "71285702"
 
 |必要な情報|.NET Framework Data Provider for SQL Server プロパティ|
 |---|---|
-|サーバー名|**[データ ソース]**|
+|認証|"統合セキュリティ" として **NotSpecified** が既定で設定されます。または他の認証モードを選択します。 "Active Directory 対話型認証" はサポートされていません。 |
+|サーバー名|**データ ソース**|
 |認証 (ログイン) 情報|**統合セキュリティ**、または **ユーザー ID** と **パスワード**<br/>サーバー上のデータベースのドロップ ダウン リストを表示する場合は、まず、有効なログイン情報を提供する必要があります。|
 |データベース名|**初期カタログ**|
 
@@ -45,7 +46,7 @@ ms.locfileid: "71285702"
 > [!NOTE]
 > このデータ プロバイダーの接続オプションは、SQL Server が変換元または変換先の場合でも同じです。 つまり、表示されるオプションは、ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページともに同じです。
 
-**[データ ソース]**  
+**データ ソース**  
  ソース サーバーまたはターゲット サーバーの名前または IP アドレスを入力するか、ドロップダウン リストからサーバーを選択します。  
  
  非標準の TCP ポートを指定するには、サーバー名または IP アドレスの後にコンマを入力し、ポート番号を入力します。
@@ -82,7 +83,7 @@ ODBC ドライバーは、データ ソースのドロップダウン リスト�
 > [!TIP]
 > 適切な接続文字列をアセンブルするヘルプを参照してください。 または、接続文字列を提供する代わりに、既存の DSN (データ ソース名) を提供するか、新しく作成します。 これらのオプションの詳細については、「[Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」 (ODBC データ ソースに接続する) を参照してください。
 
-**ドライバー**  
+**[ドライバー]**  
 ODBC ドライバーの名前。 名前は、ドライバーのバージョンによって異なります。
 
 **[サーバー]**  

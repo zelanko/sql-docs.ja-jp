@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 50c5edee93747c98060d664f1edd2d42036aa9b2
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: bed396bf39b4b621c5b333a7b13218998264675a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982662"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165895"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "73982662"
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
 
@@ -152,7 +152,7 @@ EXTERNAL external_pool_name | "default"
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ワークロードおよびクエリのリソース プール
 - 外部プロセス用の外部リソース プール 詳細については、「[sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 `REQUEST_MEMORY_GRANT_PERCENT` が使用される場合、インデックスの作成では、パフォーマンスの改善のために最初に付与されたのよりも多くのワークスペース メモリを使用できます。 この特別な処理は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリソース ガバナーでサポートされています。 ただし、最初のメモリ許可も追加のメモリ許可も、リソース プール設定およびワークロード グループ設定によって制限されます。
 
 `MAX_DOP` の制限は、[タスク](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)ごとに設定されます。 この設定は、[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)ごとまたはクエリ制限ごとではありません。 つまり、並列クエリ実行中に、1 つの要求で、[スケジューラ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)に割り当てられてた複数のタスクを生成することができます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
@@ -194,9 +194,9 @@ GO
 
 &nbsp;
 
-## <a name="sql-data-warehouse"></a>SQL Data Warehouse 
+## <a name="sql-data-warehouse-preview"></a>SQL Data Warehouse (プレビュー)
 
-CREATE WORKLOAD GROUP (Transact-SQL) (プレビュー) では、ワークロード グループを作成します。  ワークロード グループは、一連の要求用のコンテナーであり、システムでワークロード管理を構成する方法の基礎となります。  ワークロード グループでは、ワークロードの分離のためのリソースの予約、リソースの格納、要求ごとのリソースの定義、実行ルールへの準拠を行う機能が提供されます。  ステートメントが完了すると、設定が有効になります。
+ワークロード グループを作成します。  ワークロード グループは、一連の要求用のコンテナーであり、システムでワークロード管理を構成する方法の基礎となります。  ワークロード グループでは、ワークロードの分離のためのリソースの予約、リソースの格納、要求ごとのリソースの定義、実行ルールへの準拠を行う機能が提供されます。  ステートメントが完了すると、設定が有効になります。
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
@@ -216,15 +216,15 @@ CREATE WORKLOAD GROUP group_name
 ワークロード グループを識別する名前を指定します。  group_name は、sysname です。  これは長さを最大で 128 文字とすることができ、インスタンス内では一意である必要があります。
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-他のワークロード グループと共有されない、このワークロード グループに対して保証される最小リソース割り当てを指定します。  value は 0 から 100 の範囲の整数です。  すべてのワークロード グループでの min_percentage_resource の合計は、100 を超えることはできません。  min_percentage_resource の値を cap_percentage_resource より大きくすることはできません。  サービス レベルごとに有効な最小値があります。  詳細については、「有効な値<link>」を参照してください。
+他のワークロード グループと共有されない、このワークロード グループに対して保証される最小リソース割り当てを指定します。  value は 0 から 100 の範囲の整数です。  すべてのワークロード グループでの min_percentage_resource の合計は、100 を超えることはできません。  min_percentage_resource の値を cap_percentage_resource より大きくすることはできません。  サービス レベルごとに有効な最小値があります。  詳細については、「[有効な値](#effective-values)」を参照してください。
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
-ワークロード グループ内のすべての要求に対するリソースの最大使用率を指定します。  value の許容範囲は 1 から 100 です。  cap_percentage_resource の値は、min_percentage_resource よりも大きくする必要があります。  cap_percentage_resource の有効な値は、他のワークロード グループで min_percentage_resource が 0 より大きく構成されている場合に減らすことができます。
+ワークロード グループ内のすべての要求に対するリソースの最大使用率を指定します。  value に対して許可される整数の範囲は 1 から 100 です。  cap_percentage_resource の値は、min_percentage_resource よりも大きくする必要があります。  cap_percentage_resource の有効な値は、他のワークロード グループで min_percentage_resource が 0 より大きく構成されている場合に減らすことができます。
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-要求ごとに割り当てられるリソースの最小量を設定します。  value は 0.75 から 100.00 の 10 進数の範囲の必須パラメーターです。  request_min_resource_grant_percent の値は、0.25 の倍数である必要があります。また、min_percentage_resource の係数であり、cap_percentage_resource よりも小さくする必要があります。  サービス レベルごとに有効な最小値があります。  詳細については、「有効な値<link>」を参照してください。
+要求ごとに割り当てられるリソースの最小量を設定します。  value は 0.75 から 100.00 の 10 進数の範囲の必須パラメーターです。  request_min_resource_grant_percent の値は、0.25 の倍数である必要があります。また、min_percentage_resource の係数であり、cap_percentage_resource よりも小さくする必要があります。  サービス レベルごとに有効な最小値があります。  詳細については、「[有効な値](#effective-values)」を参照してください。
 
-例:
+次に例を示します。
 
 ```sql
 CREATE WORKLOAD GROUP wgSample WITH  
@@ -244,7 +244,7 @@ request_min_resource_grant_percent のガイドラインとして、リソース
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
-要求ごとに割り当てられるリソースの最大量を設定します。  value は省略可能なパラメーターで、既定値は request_min_resource_grant_percent と同じ値です。  value は request_min_resource_grant_percent 以上である必要があります。  request_max_resource_grant_percent の値が request_min_resource_grant_percent より大きく、システム リソースが使用可能な場合は、追加のリソースが要求に割り当てられます。
+要求ごとに割り当てられるリソースの最大量を設定します。  value は省略可能な 10 進数のパラメーターで、既定値は request_min_resource_grant_percent と同じ値です。  value は request_min_resource_grant_percent 以上である必要があります。  request_max_resource_grant_percent の値が request_min_resource_grant_percent より大きく、システム リソースが使用可能な場合は、追加のリソースが要求に割り当てられます。
 
 *IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
 ワークロード グループに対する要求の既定の重要度を指定します。  重要度は次のいずれかで、NORMAL が既定値です。
@@ -257,48 +257,54 @@ request_min_resource_grant_percent のガイドラインとして、リソース
 ワークロード グループでの重要度セットは、ワークロード グループ内のすべての要求に対する既定の重要度です。  ユーザーは、分類子レベルで重要度を設定することもできます。これにより、ワークロード グループの重要度の設定をオーバーライドできます。  これにより、ワークロード グループ内の要求の重要度を区別して、予約されていないリソースにすばやくアクセスできるようになります。  ワークロード グループ全体で min_percentage_resource の合計が 100 未満の場合は、重要度に基づいて割り当てられた予約されていないリソースがあります。
 
 *QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
-クエリが取り消されるまでに実行できる最大時間を秒単位で指定します。  value は、0 または正の整数にする必要があります。  value の既定の設定が 0 の場合は、無制限を示します。  要求キューでの待機に費やされた時間は、クエリの実行にはカウントされません。
+クエリが取り消されるまでに実行できる最大時間を秒単位で指定します。  value は、0 または正の整数にする必要があります。  value の既定の設定が 0 の場合は、クエリはタイムアウトしません。クエリが実行状態になると、QUERY_EXECUTION_TIMEOUT_SEC がカウントされます。クエリがキューに入れられたときではありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 リソース クラスに対応するワークロード グループは、旧バージョンとの互換性のために自動的に作成されます。  これらのシステム定義のワークロード グループは削除できません。  さらに 8 つのユーザー定義のワークロード グループを作成できます。
+
+ワークロード グループが 0 より大きい min_percentage_resource で作成された場合、`CREATE WORKLOAD GROUP` ステートメントは、ワークロード グループを作成するのに十分なリソースが確保されるまでキューに格納されます。
 
 ## <a name="effective-values"></a>有効な値
 
 min_percentage_resource、cap_percentage_resource、request_min_resource_grant_percent、request_max_resource_grant_percent パラメーターには、現在のサービス レベルのコンテキストで調整された有効な値と、その他のワークロード グループの構成が含まれます。
 
-サービス レベルごとにサポートされるコンカレンシーは、リソース クラスを使用してクエリごとにリソースの許可を定義したときと同じになります。したがって、request_min_resource_grant_percent でサポートされる値は、インスタンスに設定されているサービス レベルによって異なります。  最低のサービス レベル (DW100c) では、4 つのコンカレンシーがサポートされています。  構成されたワークロード グループの有効な request_min_resource_grant_percent は、25% 以上にすることができます。  詳細については、次の表を参照してください。
+サービス レベルごとにサポートされるコンカレンシーは、リソース クラスを使用してクエリごとにリソースの許可を定義したときと同じになります。したがって、request_min_resource_grant_percent でサポートされる値は、インスタンスに設定されているサービス レベルによって異なります。  最も低いサービス レベル (DW100c) では、要求ごとに最小 25% のリソースが必要です。  DW100c では、構成されたワークロード グループの有効な request_min_resource_grant_percent は、25% 以上にすることができます。  有効値がどのように派生するかの詳細については、以下の表を参照してください。
 
-|サービス レベル|最大同時実行数|REQUEST_MIN_RESOURCE_GRANT_PERCENT と MIN_PERCENTAGE_RESOURCE でサポートされる最小割合|
+|サービス レベル|REQUEST_MIN_RESOURCE_GRANT_PERCENT の有効な最小値|同時クエリの最大数|
 |---|---|---|
-|DW100c|4|25%|
-|DW200c|8|12.5%|
-|DW300c|12|8%|
-|DW400c|16|6.25%|
-|DW500c|20|5%|
-|DW1000c|32|3%|
-|DW1500c|32|3%|
-|DW2000c|48|2%|
-|DW2500c|48|2%|
-|DW3000c|64|1.5%|
-|DW5000c|64|1.5%|
-|DW6000c|128|0.75%|
-|DW7500c|128|0.75%|
-|DW10000c|128|0.75%|
-|DW15000c|128|0.75%|
-|DW30000c|128|0.75%|
+|DW100c|25%|4|
+|DW200c|12.5%|8|
+|DW300c|8%|12|
+|DW400c|6.25%|16|
+|DW500c|5%|20|
+|DW1000c|3%|32|
+|DW1500c|3%|32|
+|DW2000c|2%|48|
+|DW2500c|2%|48|
+|DW3000c|1.5%|64|
+|DW5000c|1.5%|64|
+|DW6000c|0.75%|128|
+|DW7500c|0.75%|128|
+|DW10000c|0.75%|128|
+|DW15000c|0.75%|128|
+|DW30000c|0.75%|128|
 ||||
 
 同様に、request_min_resource_grant_percent、min_percentage_resource は、有効な request_min_resource_grant_percent 以上である必要があります。  有効な min_percentage_resource 未満に構成された min_percentage_resource のワークロード グループには、実行時にゼロに調整される値が含まれています。  この場合、min_percentage_resource 用に構成されたリソースは、すべてのワークロード グループとの間で共有できます。  たとえば、DW1000c で実行されている min_percentage_resource が 10% であるワークロード グループ wgAdHoc には、有効な 10% の min_percentage_resource が含まれます (DW1000c でサポートされている最小値は 3.25% です)。  DW100c の wgAdhoc には、有効な 0% の min_percentage_resource が含まれます。  WgAdhoc 用に構成された 10% は、すべてのワークロード グループとの間で共有されます。
 
 cap_percentage_resource にも有効な値があります。  ワークロード グループ wgAdhoc が 100% の cap_percentage_resource で構成され、別のワークロード グループ wgDashboards が 25% の min_percentage_resource で作成されている場合、wgAdhoc の有効な cap_percentage_resource は 75% になります。
 
-ワークロード グループの実行時の値を理解するには、システム ビューのクエリを実行するのが最も簡単な方法です [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest)。
+ワークロード グループの実行時の値を理解する最も簡単な方法は、システム ビュー [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) に対してクエリを実行することです。
+
 
 ## <a name="permissions"></a>アクセス許可
 
 CONTROL DATABASE アクセス許可が必須です
 
 ## <a name="see-also"></a>参照
-[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+[DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md) <br>
+[sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) <br>
+[sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) <br>
+[ワークロード グループを作成して使用する方法のクイック スタート](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end

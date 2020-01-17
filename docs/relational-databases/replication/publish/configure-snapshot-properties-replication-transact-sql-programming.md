@@ -1,6 +1,7 @@
 ---
-title: スナップショットのプロパティの構成 (レプリケーション Transact-SQL プログラミング) | Microsoft Docs
-ms.custom: ''
+title: スナップショットのプロパティの構成 (レプリケーション SP)
+description: レプリケーション ストアド プロシージャを使用して、スナップショット パブリケーションまたはトランザクション パブリケーションのスナップショットのプロパティを構成します。
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ec6f229ded9e9a77b6164ba9c91bee9cf8070fd7
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0152abb24a1bb94f02ebc3f5a4bc6a7c1092acfa
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710923"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321269"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>スナップショットのプロパティの構成 (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "71710923"
     > [!IMPORTANT]  
     >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-3.  コマンド プロンプトから [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
+3.  コマンド プロンプトから [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>既存のマージ パブリケーションに対してスナップショットのプロパティを変更するには  
   
@@ -77,7 +78,7 @@ ms.locfileid: "71710923"
     -   **post_snapshot_script** - 初期化時、初期スナップショットが適用される後にサブスクライバーで実行される **.sql** ファイルのファイル名と完全パスも `@value` に指定します。    
     -   **snapshot_in_defaultfolder** - スナップショットを既定の場所に格納するかどうかを **true** または **false** で指定します。  
   
-2.  コマンド プロンプトから [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+2.  コマンド プロンプトから [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
  次の例では、代替スナップショット フォルダーと圧縮スナップショットを使用したパブリケーションを作成します。  

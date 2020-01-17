@@ -1,6 +1,7 @@
 ---
-title: Teradata 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.date: 04/23/2019
+title: 外部データへのアクセス:Teradata - PolyBase
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 25912e5d68f03c98c4148f295a7fba76236892e2
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 2ade016ec88f6f26655fea8ab5249e1f846ee74a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710546"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225974"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Teradata 上の外部データにアクセスするための PolyBase の構成
 
@@ -21,7 +22,7 @@ ms.locfileid: "71710546"
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、Teradata 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。
 
@@ -76,6 +77,6 @@ Teradata データ ソースのデータに対してクエリを実行するに�
 >[!IMPORTANT] 
 >外部データ ソースを作成すると、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成することができます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

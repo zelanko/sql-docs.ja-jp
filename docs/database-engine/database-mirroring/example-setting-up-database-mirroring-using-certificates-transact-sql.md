@@ -1,6 +1,7 @@
 ---
-title: 例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 例:証明書を使用したデータベース ミラーリング (T-SQL)
+description: Transact-SQL を使用して証明書で SQL Server データベース ミラーリングを構成する例です。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3aa589de707e6f2edaac83db40ba908bf7177ae
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212351"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253593"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +263,7 @@ ms.locfileid: "70212351"
     ```  
   
     > [!NOTE]  
-    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、トランザクションの安全性を FULL (既定の設定) のままにし、2 番目の SET PARTNER **'**_partner_server_**'** ステートメントの実行後、できる限り早い段階でミラーリング監視サーバーを追加します。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
+    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、トランザクションの安全性を FULL (既定の設定) のままにし、2 番目の SET PARTNER **'** _partner_server_ **'** ステートメントの実行後、できる限り早い段階でミラーリング監視サーバーを追加します。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
   
  [&#91;例の先頭に戻る&#93;](#ExampleH2)  
   

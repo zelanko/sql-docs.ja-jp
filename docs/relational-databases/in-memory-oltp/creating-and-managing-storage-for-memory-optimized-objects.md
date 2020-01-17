@@ -1,6 +1,6 @@
 ---
-title: メモリ最適化オブジェクト用ストレージの作成と管理 | Microsoft Docs
-ms.custom: ''
+title: ストレージの作成と管理 - メモリ最適化オブジェクト
+ms.custom: seo-dt-2019
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c0c50a375559b34e5fa09bbce419d9acdb860e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90817352d72991e47f20b31144e15b204e5f3bff
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915344"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412707"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>メモリ最適化オブジェクト用ストレージの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: サーバー監査とデータベース監査の仕様を作成する方法 | Microsoft Docs
-ms.custom: ''
+title: サーバー監査およびデータベース監査の仕様を作成する
+description: SQL Server Management Studio または Transact-SQL (T-SQL) を使用し、SQL Server の監査とデータベース監査の仕様を作成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903864"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557877"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ ms.locfileid: "72903864"
   
      **[データベース監査の仕様の作成]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **[名前]**  
+     **Name**  
      データベース監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  
@@ -134,7 +135,7 @@ ms.locfileid: "72903864"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、`Audit_Pay_Tables` テーブルに対する `dbo` ユーザーによる SELECT ステートメントと INSERT ステートメントを、定義済みのサーバー監査に基づいて監査する `HumanResources.EmployeePayHistory` という名前のデータベース監査仕様を作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `Audit_Pay_Tables` テーブルに対する `dbo` ユーザーによる SELECT ステートメントと INSERT ステートメントを、定義済みのサーバー監査に基づいて監査する `HumanResources.EmployeePayHistory` という名前のデータベース監査仕様を作成します。  
   
     ```  
     USE AdventureWorks2012 ;   

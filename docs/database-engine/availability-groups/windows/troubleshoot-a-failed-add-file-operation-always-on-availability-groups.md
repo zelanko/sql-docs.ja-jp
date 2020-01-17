@@ -1,6 +1,7 @@
 ---
-title: 失敗したファイルの追加操作のトラブルシューティング (AlwaysOn 可用性グループ) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのファイルの追加操作の失敗
+decription: Possible resolutions for failing to add a file to an availability group.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07561af07d0a682b4fa99076cc774e0c3fbb2590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1655992526096035eb109821d8950980921951ad
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013811"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251226"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>失敗したファイルの追加操作のトラブルシューティング (AlwaysOn 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,10 +28,10 @@ ms.locfileid: "68013811"
 > [!NOTE]  
 >  可能であれば、特定のセカンダリ データベースのファイル パス (ドライブ文字を含む) は、対応するプライマリ データベースのパスと一致させることをお勧めします。  
   
-## <a name="problem-resolution"></a>問題の解決策  
+## <a name="problem-resolution"></a>問題解決  
  この問題を解決するには、データベース所有者が次の手順を実行する必要があります。  
   
-1.  セカンダリ データベースを可用性グループから削除します。 詳細については、「[可用性グループからのセカンダリ データベースの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)」を参照してください。  
+1.  セカンダリ データベースを可用性グループから削除します。 詳細については、「[可用性グループからのセカンダリ データベースの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)」をご覧ください。  
   
 2.  既存のセカンダリ データベースで、WITH NORECOVERY と WITH MOVE (セカンダリ レプリカをホストするサーバー インスタンス上のファイル パスを指定) を使用して、セカンダリ データベースに追加されたファイルを含むファイル グループの完全バックアップを復元します。 詳細については、「[データベースを新しい場所に復元する &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)」を参照してください。  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313739"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542270"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ OPENQUERY ( linked_server ,'query' )
  **'** *query* **'**  
  リンク サーバーで実行されるクエリ文字列です。 文字列の最大長は 8 KB です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  OPENQUERY は、その引数で変数を受け入れません。  
   
- OPENQUERY を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできません。 ただし、4 つの要素で構成される名前を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできます。 例:  
+ OPENQUERY を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできません。 ただし、4 つの要素で構成される名前を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできます。 次に例を示します。  
   
 ```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
@@ -63,7 +63,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーが OPENQUERY を実行できます。 リモート サーバーへの接続に使用される権限は、リンク サーバー用の定義から取得されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-executing-an-update-pass-through-query"></a>A. B. UPDATE パススルー クエリを実行する  
  次の例では、例 A で作成したリンク サーバーに対して、`UPDATE` パススルー クエリを使用します。  
@@ -101,7 +101,6 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [行セット関数 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

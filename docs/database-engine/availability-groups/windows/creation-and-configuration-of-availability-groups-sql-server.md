@@ -1,7 +1,7 @@
 ---
-title: 可用性グループの作成と構成の参照
-description: Always On 可用性グループの作成と構成に役立つリンクへの参照。
-ms.custom: seodec18
+title: 可用性グループの作成と構成 (コンテンツ インデックス)
+description: SQL Server の Always On 可用性グループの作成と構成に役立つリンクのインデックスです。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 82ea382e8e4703b5dae1bac850da96aa19c35d9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce6e506e46b7603a3e4c657c7500b482a1e1007f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009981"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245990"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Always On 可用性グループの作成と構成の参照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "68009981"
   
 -   [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
  **AlwaysOn 可用性グループの構成を開始するには**  
   
--   [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
+-   [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
  **新しい可用性グループを作成して構成するには**  
   

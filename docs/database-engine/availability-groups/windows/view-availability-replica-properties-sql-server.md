@@ -1,6 +1,7 @@
 ---
-title: 可用性レプリカのプロパティの表示 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性レプリカのプロパティの表示
+description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または SQL PowerShell で可用性グループ レプリカのプロパティを表示する手順。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f569074893a5894c0823f1a1af7864bacceb9eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bcebebf2f426aec660b77699461bdce110f628c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013372"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821761"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>可用性レプリカのプロパティの表示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "68013372"
  現在のレプリカが推奨されるバックアップ レプリカであるかどうかを判別します。 現在のサーバー インスタンス上のデータベースが推奨されるレプリカの場合は 1 を返します。 それ以外の場合は 0 を返します。  
   
 > [!NOTE]  
->  可用性レプリカのパフォーマンス カウンター ( **SQLServer:Availability Replica**  パフォーマンス オブジェクト) の詳細については、「 [SQL Server、Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
+>  可用性レプリカのパフォーマンス カウンター ( **SQLServer:可用性レプリカ**  パフォーマンス オブジェクト) の詳細については、「 [SQL Server、可用性レプリカ](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
   
   
 ##  <a name="RelatedTasks"></a> 関連タスク  

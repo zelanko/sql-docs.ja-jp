@@ -1,7 +1,8 @@
 ---
-title: Oracle 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
+title: 外部データへのアクセス:Oracle - PolyBase
 description: この記事では、PolyBase を使用して Oracle のデータにアクセスする外部データ ソースを作成する方法を示します。
-ms.date: 04/23/2019
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4c2b212ea77d9cf9b58dbb7019c19dddd3c507e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 25fae1036d3a07d3cdbfe92ef55fe92e0396497a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710577"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242631"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>Oracle 上の外部データにアクセスするための PolyBase の構成
 
@@ -22,7 +23,7 @@ ms.locfileid: "71710577"
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、Oracle 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。
 

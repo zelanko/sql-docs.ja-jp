@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419596"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721927"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `COLUMNS_UPDATED` は、実行される UPDATE または INSERT アクションを複数の列でテストします。 テストするには 1 つの列の UPDATE または INSERT の試行、次のように使用します。 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)です。
   
 `COLUMNS_UPDATED` は、左から右に順序付けられた 1 つまたは複数のバイトを返します。 各バイトの右端のビットは、最下位ビットです。 左端のバイトの右端のビットがテーブル内の最初のテーブル列を表し、右から 2 番目のビットは 2 番目の列を、それ以下のビットも同様の順で列を表します。 トリガーが作成されるテーブルに列が 9 個以上ある場合、`COLUMNS_UPDATED` は複数のバイトを返します。最下位バイトが左端になります。 INSERT 動作では、列には明示的な値または暗黙的な (NULL) 値が挿入されるので、`COLUMNS_UPDATED` は、すべての列に対して TRUE を返します。
@@ -72,7 +72,7 @@ WHERE TABLE_NAME = 'Person';
   
      列セットを変更すると列セット内のすべての列のビットが 1 にリセットされるため、列セット内の変更されなかった列も変更されているように見えます。 列セットの詳細については、「[列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. COLUMNS_UPDATED を使用して、テーブルの最初の 8 列をテストする  
 この例では、`employeeData` と `auditEmployeeData` という 2 つのテーブルを作成します。 `employeeData` テーブルには、機密扱いの従業員給与支払い名簿情報が格納されており、人事部のメンバーが修正できます。 従業員の社会保障番号 (SSN)、年間給与、または銀行口座番号に変更があると、監査レコードが生成され、`auditEmployeeData` 監査テーブルに挿入されます。
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   

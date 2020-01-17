@@ -1,6 +1,6 @@
 ---
-title: Hadoop 内の外部データにアクセスするように PolyBase を構成する
-ms.date: 04/23/2019
+title: 外部データへのアクセス:Hadoop - PolyBase
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 83fb16a5c55d1f2f169268be6463d9735ce4e55c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659562"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255440"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
 
@@ -22,7 +22,7 @@ ms.locfileid: "73659562"
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、Hadoop 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。
 
@@ -174,7 +174,7 @@ ORDER BY CarSensor_Data.Speed DESC
 OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
 ```  
 
-### <a name="importing-data"></a>インポート、データ  
+### <a name="importing-data"></a>データのインポート  
 
 次のクエリでは、外部データを SQL Server にインポートします。 この例では、高速走行しているドライバーのデータを、さらに詳細な分析を実行するために SQL Server にインポートします。 パフォーマンスを向上させるために、列ストア テクノロジが活用されています。  
 
@@ -229,7 +229,7 @@ SSMS では、外部テーブルが別のフォルダー **[外部テーブル]*
   
 ![SSMS での PolyBase オブジェクト](media/polybase-management.png)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次の記事を参照して、PolyBase を使用して監視するための方法をさらに調べます。
 

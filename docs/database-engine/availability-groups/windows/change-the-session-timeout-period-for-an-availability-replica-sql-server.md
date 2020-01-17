@@ -1,7 +1,7 @@
 ---
-title: 可用性グループ内のレプリカのセッション タイムアウト期間を変更する
+title: 可用性グループ レプリカのセッション タイムアウトの変更
 description: Always On 可用性グループ内のレプリカのセッション タイムアウト期間を構成する方法について説明します。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0c75e9264187ed6a351c162276253ff58be45a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd31433b94cb32cb68c9ff9d1eaa7e2f08ab324
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991310"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822432"
 ---
-# <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>Always On 可用性グループ内のレプリカのセッション タイムアウト期間を変更する
+# <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>可用性グループ レプリカのセッション タイムアウト期間の変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、Always On 可用性レプリカのセッション タイムアウト期間を構成する方法について説明します。 セッション タイムアウト期間は、接続されたレプリカからの ping 応答を可用性レプリカが何秒待機するかを制御するレプリカ プロパティです。この期間を過ぎると、接続に失敗したと見なされます。 既定では、レプリカは ping 応答を 10 秒間待機します。 このレプリカ プロパティは、可用性グループ内の指定したセカンダリ レプリカとプライマリ レプリカ間の接続のみに適用されます。 セッション タイムアウト期間の詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
    
@@ -41,7 +41,7 @@ ms.locfileid: "67991310"
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  **[Always On 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  構成する可用性レプリカが含まれる可用性グループをクリックします。  
   
@@ -91,6 +91,6 @@ ms.locfileid: "67991310"
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

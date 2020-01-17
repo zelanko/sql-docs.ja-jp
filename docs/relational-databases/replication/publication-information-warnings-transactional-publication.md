@@ -1,6 +1,7 @@
 ---
-title: パブリケーション情報、[警告] (トランザクション パブリケーション) | Microsoft Docs
-ms.custom: ''
+title: 警告 (トランザクション パブリケーション情報)
+description: '[トランザクション パブリケーション情報] ダイアログ ボックスの [警告] タブについて説明します。'
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 886a9066102fd25498b974caca73085b59c8594f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6efff6deabc18db61ab8390d912ef6918d42b2e3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769961"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321307"
 ---
-# <a name="publication-information-warnings-transactional-publication"></a>パブリケーション情報、[警告] (トランザクション パブリケーション)
+# <a name="publication-information-warnings-transactional-publication"></a>パブリケーション情報、[警告] \(トランザクション パブリケーション)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
@@ -49,13 +50,13 @@ ms.locfileid: "68769961"
   
     -   悪い  
   
-    -   重大  
+    -   Critical  
   
  警告を有効にする場合は、しきい値も設定します。 たとえば、 **[待機時間がしきい値を超えた場合に警告します。]** 警告を有効にした場合は、パブリッシャー側でトランザクションをコミットしたときからサブスクライバー側でトランザクションをコミットするまでに許容する時間を選択します。  
   
  しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 通知を定義するには、 **[警告の構成]** をクリックし、 **[レプリケーションの警告の構成]** ダイアログ ボックスに情報を入力します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **有効**  
  警告を有効にする場合に選択します。その場合は、しきい値を指定します。  
   

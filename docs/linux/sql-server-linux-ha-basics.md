@@ -1,6 +1,7 @@
 ---
-title: Linux デプロイでの SQL Server 可用性の基本
-description: ''
+title: Linux デプロイでの SQL Server の高可用性
+description: Always On 可用性グループ、フェールオーバー クラスター インスタンス (FCI)、ログ配布など、SQL Server on Linux で利用できるさまざまな高可用性オプションについて説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75243588"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656611"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
 
@@ -57,7 +58,7 @@ Linux では、多くのコマンドを昇格された特権で実行する必�
 あるサーバーから別のサーバーへのファイルのコピーは、Linux で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を使用するすべてのユーザーが実行できる必要があるタスクです。 このタスクは、AG の構成にとって非常に重要です。
 
 アクセス許可の問題などは、Windows ベースのインストールだけでなく、Linux にも存在する可能性があります。 ただし、Windows 上のサーバー間でのコピー方法に慣れているユーザーは、Linux での実行方法についてはよく知らない場合もあるでしょう。 一般的な方法は、コマンドライン ユーティリティ `scp` (セキュリティで保護されたコピーを意味します) を使用することです。 `scp` では、バックグラウンドで OpenSSH が使用されます。 SSH は、セキュリティで保護されたシェルを意味します。 Linux ディストリビューションによっては、OpenSSH 自体はインストールされない場合もあります。 その場合は、最初に OpenSSH をインストールする必要があります。 OpenSSH の構成の詳細については、各ディストリビューションに関する次のリンクを参照してください。
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -116,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **ファイアウォールのドキュメント:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>可用性のための [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] パッケージをインストールする

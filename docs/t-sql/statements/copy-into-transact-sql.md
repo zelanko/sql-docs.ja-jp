@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (プレビュー)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行います。
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055142"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321836"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -32,7 +32,7 @@ ms.locfileid: "74055142"
 この記事では、Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行う方法について説明します。 COPY ステートメントを使用すると、SQL Data Warehouse への高スループットのデータ インジェストで最大の柔軟性が確保されます。
 
 > [!NOTE]  
-> COPY ステートメントは現在パブリック プレビューです。
+> COPY ステートメントは、現在、パブリック プレビュー段階にあります。
 
 ## <a name="syntax"></a>構文  
 
@@ -65,7 +65,7 @@ WITH
 操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと同じ場合は省略可能です。 "*スキーマ*" を指定せず、さらに COPY 操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと異なる場合、COPY は取り消され、エラー メッセージが返されます。  
 
 *table_name*  
-データの COPY 先のテーブルの名前です。 ターゲット テーブルには、一時テーブルまたはパーマネント テーブルを指定できます。
+データの COPY 先のテーブルの名前です。 ターゲット テーブルは、一時テーブルまたはパーマネント テーブルであり、データベースに既に存在している必要があります。 
 
 *(column_list)*  
 データ読み込み時のソース データ フィールドからターゲット テーブル列へのマッピングに使用される 1 つ以上の列のリストです。このリストは省略可能です。 *column_list* はかっこで囲み、コンマで区切る必要があります。 列リストの形式は次のとおりです。
@@ -131,7 +131,7 @@ WITH
 AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
 
 - Shared Access Signatures (SAS) を使用した認証 *IDENTITY: *"Shared Access Signature" の値が含まれている定数 
-  *SECRET: *[*Shared Access Signature*](/azure/storage/common/storage-sas-overview) *を使用して、お使いのストレージ アカウントのリソースへの委任アクセスを提供します。*
+  *SECRET: *[*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
   最低限必要な権限: READ および LIST
 
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
@@ -164,7 +164,7 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
   
 - Shared Access Signatures (SAS) を使用した認証
   - *IDENTITY:* "Shared Access Signature" の値が含まれている定数
-  - *SECRET:* [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) *を使用して、お使いのストレージ アカウントのリソースへの委任アクセスを提供します。*
+  - *SECRET:* [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
   - 最低限必要な権限: READ、LIST、WRITE、CREATE、DELETE
   
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
@@ -214,13 +214,13 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
 > FIELDQUOTE 文字は、2 バイト FIELDQUOTE (区切り記号) が存在する文字列型の列ではエスケープされます。 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用されるフィールド ターミネータを指定します。 フィールド ターミネータにはマルチ文字を使用できます。 既定のフィールド ターミネータは (,) です。
+*FIELDTERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用されるフィールド ターミネータを指定します。 フィールド ターミネータは、16 進数表記を使用して指定できます。 フィールド ターミネータにはマルチ文字を使用できます。 既定のフィールド ターミネータは (,) です。
 詳細については、「[フィールド ターミネータと行ターミネータの指定 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)」を参照してください。
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用される行ターミネータを指定します。 行ターミネータにはマルチ文字を使用できます。 既定では、行ターミネータは \r\n です。 
+*ROW TERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用される行ターミネータを指定します。 行ターミネータは、16 進数表記を使用して指定できます。 行ターミネータにはマルチ文字を使用できます。 既定では、行ターミネータは \r\n です。 
 
-COPY コマンドでは、\n (改行) を指定すると、その前に \r 文字が付けられ、\r\n になります。 \n 文字のみを指定するには、16 進数 (0x0A) を使用します。 マルチ文字の行ターミネータを 16 進数で指定する場合は、各文字の間で 0x を指定しないでください。
+COPY コマンドでは、\n (改行) を指定すると、その前に \r 文字が付けられ、\r\n になります。 \n 文字のみを指定するには、16 進数表記 (0x0A) を使用します。 マルチ文字の行ターミネータを 16 進数で指定する場合は、各文字の間で 0x を指定しないでください。
 
 行ターミネータの指定に関する追加のガイダンスについては、次の[ドキュメント](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)を参照してください。
 
@@ -252,14 +252,14 @@ IDENTITY_INSERT は、インポートしたデータ ファイルの ID 値 (複
 
 INSERT 権限および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure SQL Data Warehouse では、INSERT 権限と ADMINISTER DATABASE BULK OPERATIONS 権限が必要です。
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-load-from-a-public-storage-account"></a>A. パブリック ストレージ アカウントから読み込む
 
 次の例は COPY コマンドの最も単純な形式で、パブリック ストレージ アカウントからデータを読み込みます。 この例では、COPY ステートメントの既定値は、行項目 csv ファイルの形式と一致しています。
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 COPY コマンドの既定値を次に示します。
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -357,6 +357,46 @@ WITH (
     FIELDTERMINATOR = '|'
 )
 ```
+
+## <a name="faq"></a>よく寄せられる質問
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>PolyBase と比較した場合の COPY コマンドのパフォーマンスについて教えてください。
+COPY コマンドを使用すると、機能が一般公開される時点までにはパフォーマンスが向上します。 パブリック プレビュー中に最適な読み込みパフォーマンスを得るには、CSV の読み込み時に複数のファイルに入力を分割することを検討してください。 現在、INSERT SELECT を使用する場合のパフォーマンスは、PolyBase と同等です。 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>CSV ファイルを読み込む COPY コマンドに関するファイルの分割ガイダンスについて教えてください。
+ファイル数に関するガイダンスを、次の表で説明します。 推奨されるファイル数に到達すると、大きいファイル程パフォーマンスが向上します。 COPY コマンドが一般公開されている場合、圧縮されていないファイルを分割する必要はありません。 
+
+| **DWU** | **#Files** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1,000  |    120     |
+|  1,500  |    180     |
+|  2,000  |    240     |
+|  2,500  |    300     |
+|  3,000  |    360     |
+|  5,000  |    600     |
+|  6,000  |    720     |
+|  7,500  |    900     |
+| 10,000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Parquet ファイルまたは ORC ファイルを読み込む COPY コマンドに関するファイルの分割ガイダンスについて教えてください。
+COPY コマンドによって自動的にファイルが分割されるため、Parquet ファイルと ORC ファイルを分割する必要はありません。 最適なパフォーマンスを得るには、Azure ストレージ アカウントの Parquet ファイルと ORC ファイルが 256MB 以上である必要があります。 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>COPY コマンドはいつ一般公開されますか?
+COPY コマンドは、通常、次の暦年 (2020 年) の初めに一般公開されます。 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY コマンドに既知の問題はありますか?
+
+- (n)varchar(max) などの LOB サポートは、COPY ステートメントでは使用できません。 これは、来年使用できるようになります。
+
+フィードバックや問題は、配布リストの sqldwcopypreview@service.microsoft.com までお寄せください。
 
 ## <a name="see-also"></a>参照  
 

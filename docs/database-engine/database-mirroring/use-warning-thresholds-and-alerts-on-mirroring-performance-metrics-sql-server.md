@@ -1,6 +1,7 @@
 ---
-title: ミラーリング パフォーマンス基準の警告しきい値および警告の使用 | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリングのパフォーマンス メトリックの警告を構成する
+description: 'データベース ミラーリングで使用されるパフォーマンス メトリックの警告しきい値と警告を構成するためのガイダンスです。 '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e1ff85e22911cf632ef2a2f6bea9fda85f9ece4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050602"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74820904"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,6 @@ ms.locfileid: "68050602"
   
  ミラー化されたデータベースに対する監視が確立された後、システム管理者は、複数の主要なパフォーマンス基準に警告しきい値を設定できます。 また、管理者は、これらの基準や他のデータベース ミラーリング イベントに基づいて警告を構成することもできます。  
   
- **このトピックの内容**  
-  
--   [パフォーマンス基準と警告しきい値](#PerfMetricsAndWarningThresholds)  
-  
--   [警告しきい値の設定と管理](#SetUpManageWarningThresholds)  
-  
--   [ミラー化されたデータベースに対する警告の使用](#UseAlerts)  
-  
--   [関連タスク](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> パフォーマンス基準と警告しきい値  
  次の表では、警告を構成できるパフォーマンス基準、対応する警告しきい値、および対応するデータベース ミラーリング モニターのラベルについて説明します。  

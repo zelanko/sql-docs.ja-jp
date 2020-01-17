@@ -13,19 +13,19 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082933"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257666"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 このトピックでは、SQL Server でフルテキスト インデックスを作成、入力、および管理する方法について説明します。
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>前提条件 - フルテキスト カタログを作成する
-フルテキスト インデックスを作成する前に、フルテキスト カタログを作成する必要があります。 カタログは、1 つまたは複数のフルテキスト インデックス用の仮想コンテナーです。 詳細については、「[Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)」(フルテキスト カタログの作成と管理) を参照してください。
+フルテキスト インデックスを作成する前に、フルテキスト カタログを作成する必要があります。 カタログは、1 つまたは複数のフルテキスト インデックス用の仮想コンテナーです。 詳細については、「[Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)」 (フルテキスト インデックスの作成と管理) を参照してください。
   
 ##  <a name="tasks"></a>フルテキスト インデックスを作成、変更、または削除する  
 ### <a name="create-a-full-text-index"></a>フルテキスト インデックスを作成する  
@@ -46,7 +46,7 @@ ms.locfileid: "68082933"
 -   変更の追跡に基づく作成
 -   タイムスタンプに基づく増分作成
 
-詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」(フルテキスト インデックスの作成) を参照してください。
+詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。
 
 ##  <a name="view"></a> フルテキスト インデックスのプロパティを表示する
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Transact-SQL で、フルテキスト インデックスのプロパティを表示する
@@ -85,7 +85,7 @@ ms.locfileid: "68082933"
   
  次の表に、インデックスが作成されたテーブルおよび列に関連したフルテキスト プロパティと、それに関連する [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の一覧を示します。  
   
-|プロパティ|[説明]|機能|  
+|プロパティ|[説明]|Function|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|列のドキュメント型情報を保持する、テーブル内の TYPE COLUMN。|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|列に対してフルテキスト インデックスを作成できるかどうかを示します。|COLUMNPROPERTY|  
@@ -183,7 +183,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  **xml** 列に対するインデックス作成とクエリの実行の詳細については、「[XML 列でのフルテキスト検索の使用](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
   
-##  <a name="disable"></a>テーブルのフルテキスト インデックスを無効または再度有効にする   
+##  <a name="disable"></a> テーブルのフルテキスト インデックスを無効または再度有効にする   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、既定によりユーザーが作成したすべてのデータベースでフルテキストが有効になります。 さらに、個々のテーブルに対してフルテキスト インデックスを作成し、これに列を追加すると、その時点で、このテーブルでは自動的にフルテキスト インデックスが有効になります。 フルテキスト インデックスから最後の列を削除すると、このテーブルでは自動的にフルテキスト インデックスが無効になります。  
   
  フルテキスト インデックスのあるテーブルでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して手動でフルテキスト インデックスを無効にしたり、再度有効にしたりすることができます。  

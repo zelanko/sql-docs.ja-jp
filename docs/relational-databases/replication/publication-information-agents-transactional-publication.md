@@ -1,6 +1,7 @@
 ---
-title: パブリケーション情報、[エージェント] (トランザクション パブリケーション) | Microsoft Docs
-ms.custom: ''
+title: エージェント (トランザクション - SSMS)
+description: SQL Server Management Studio (SSMS) 内で選択されたトランザクション パブリケーションの [エージェント] タブについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 36c0233d5ba6f51f0cc7cd354bd810a08b2d3b72
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ae95cc4fd67b7843d773a2dc175dd89f1784025b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770029"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321379"
 ---
-# <a name="publication-information-agents-transactional-publication"></a>パブリケーション情報、[エージェント] \(トランザクション パブリケーション)
+# <a name="publication-information-agents-transactional-publication"></a>パブリケーション情報、[エージェント] (トランザクション パブリケーション)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[エージェント]** タブには、選択したパブリケーションにおけるエージェントの要約情報が表示されます。 すべてのトランザクション パブリケーションのスナップショット エージェントとログ リーダー エージェントの情報が表示されます。 キュー更新サブスクリプション用に有効になっているトランザクション パブリケーションについては、キュー リーダー エージェントに関する情報が表示されます。  
   
@@ -31,16 +32,16 @@ ms.locfileid: "68770029"
   
 -   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
+-   **フィルター**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
 -   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
- **ステータス**  
+ **状態**  
  パブリケーションに関連付けられている、各レプリケーション エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [失敗したコマンドの再試行]  
   

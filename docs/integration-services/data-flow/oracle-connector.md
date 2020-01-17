@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75246950"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755842"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -27,7 +27,7 @@ Microsoft Connector for Oracle を使用すると、SSIS パッケージ内の O
 Microsoft Connector for Oracle では、次の Microsoft SQL Server 製品がサポートされています。
 
 - SQL Server 2019 以降
-- SQL Server Data Tools (SSDT)
+- バージョン 15.9.3 以降の SQL Server Data Tools (SSDT)
 
 次の Oracle データベース バージョンのデータ ソースがサポートされています。
 
@@ -43,28 +43,20 @@ Oracle データベースは、すべてのオペレーティング システム
 
 ## <a name="installation"></a>インストール
 
-SQL Server でパッケージを実行する必要がある場合は、[こちら](https://www.microsoft.com/download/details.aspx?id=58228)から Microsoft Connector for Oracle Database インストール プログラムを取得できます。 そのうえでインストール ウィザードの指示に従います。
+Oracle データベースのコネクタをインストールするには、[Microsoft Connector for Oracle](https://www.microsoft.com/download/details.aspx?id=58228) の最新版からインストーラーをダウンロードし、実行します。 そのうえでインストール ウィザードの指示に従います。
 
 コネクタをインストールしたら、SQL Server 統合サービスを再起動して、Oracle のソースと変換先が正常に機能することを確認する必要があります。
 
-コネクタを含むパッケージを設計する必要がある場合は、コネクタをダウンロードする必要はありません。 バージョン 15.9.0 以降の SQL Server Data Tools (SSDT) には、それが含まれています。
-
-## <a name="uninstallation"></a>アンインストール
-
-アンインストール ウィザードを実行して、SQL Server から Microsoft Connector for Oracle Database を削除できます。
-
-## <a name="design-ssis-package-with-previous-version"></a>以前のバージョンで SSIS パッケージを設計する
-
-バージョン 15.9.0 以降の SSDT には、Microsoft Connector for Oracle Database が既に含まれているため、SQL Server 2019 をターゲットとする SSIS パッケージを設計する場合、インストールは必要ありません。
-
-SQL Server 2017 以前をターゲットとする SSIS パッケージを設計するには、対応するバージョンの Connector for Oracle by Attunity をインストールする必要があります。
-
-**ダウンロード リンク:**
+SQL Server 2017 以前をターゲットとする SSIS パッケージを実行するには、**Microsoft Connector for Oracle** に加え、以下のリンクから **Oracle クライアント**と対応するバージョンの **Microsoft Connector for Oracle by Attunity** をインストールする必要があります。
 
 - [SQL Server 2017:Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016:Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014:Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012:Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="uninstallation"></a>アンインストール
+
+アンインストール ウィザードを実行して、SQL Server から Microsoft Connector for Oracle Database を削除できます。
 
 ## <a name="next-steps"></a>次のステップ
 

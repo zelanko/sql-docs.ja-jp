@@ -1,6 +1,7 @@
 ---
-title: SQL Server 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.date: 04/23/2019
+title: 外部データへのアクセス:SQL Server - PolyBase
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: df3b8fb47e232b62bfd485c366f6b1e3acf7dcca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fa0a133e7a2c966798c168a74841350702b54295
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907585"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252314"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server 上の外部データにアクセスするための PolyBase の構成
 
@@ -21,7 +22,7 @@ ms.locfileid: "72907585"
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、別の SQL Server インスタンス上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。 また、インストールが完了したら、[PolyBase を有効にする](polybase-installation.md#enable)ようにしてください。
 
@@ -77,6 +78,6 @@ SQL Server データ ソースのデータに対してクエリを実行する�
 
 SQL Server の接続を認識するその他のデータ ソースに接続することができます。 SQL Server PolyBase のコネクタを使用して、Azure SQL Data Warehouse と Azure SQL Database の両方の外部テーブルを作成します。 このタスクを実行するには、前に示したのと同じ手順に従います。 データベース スコープ資格情報、サーバーのアドレス、ポート、場所の文字列が接続先の互換データ ソースのものと関連付けられていることを確認してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

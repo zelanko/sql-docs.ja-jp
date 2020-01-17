@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119206"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191084"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT の例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "74119206"
 ## <a name="e-using-correlated-subqueries"></a>E. 相関サブクエリを使用する
 相関サブクエリは、外側のクエリによって値が決まるクエリです。 このクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行できます。
 
- 次の例では、`EXISTS` キーワードと `IN` キーワードを使用した意味的に等しいクエリと、それらの違いを示します。 いずれも、製品モデルが長袖ジャージで、`ProductModelID` テーブルと `Product` テーブルの間で `ProductModel` 番号が一致する各製品名の 1 つのインスタンスを取得する有効なサブクエリの例です。  
+最初の例では、`EXISTS` キーワードと `IN` キーワードを使用した意味的に等しいクエリと、それらの違いを示します。 いずれも、製品モデルが長袖ジャージで、`ProductModelID` テーブルと `Product` テーブルの間で `ProductModel` 番号が一致する各製品名の 1 つのインスタンスを取得する有効なサブクエリの例です。  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -162,7 +162,7 @@ GO
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   
-## <a name="n-using-the-index-optimizer-hint"></a>N. INDEX オプティマイザー ヒントを使用する  
+## <a name="n-using-the-index-optimizer-hint"></a>北 INDEX オプティマイザー ヒントを使用する  
  次の例では、`INDEX` オプティマイザー ヒントの使用方法を 2 とおり示します。 最初の例では、オプティマイザーで非クラスター化インデックスを使用し、テーブルから行を取得しています。2 番目の例では、index = 0 を使ってテーブル スキャンを実行しています。  
   
  [!code-sql[Select#SelectExamples45](../../t-sql/queries/codesnippet/tsql/select-examples-transact_23.sql)]  

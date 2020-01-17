@@ -1,6 +1,7 @@
 ---
-title: レプリケートされたテーブルを比較して相違があるかどうかを確認する (レプリケーション プログラミング) | Microsoft Docs
-ms.custom: ''
+title: レプリケート テーブル間の違いを比較する (レプリケーション SP)
+description: レプリケーションのストアド プロシージャを使用し、パブリッシャー側とサブスクライバー側でレプリケート テーブル間の違いを比較します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,16 +17,16 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a36c825a01d9c205732636bbd91e40dc322e546d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 586b816282fff5586d3058cf9567a7d4c4466e29
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770812"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322139"
 ---
-# <a name="compare-replicated-tables-for-differences-replication-programming"></a>レプリケートされたテーブルを比較して相違があるかどうかを確認する (レプリケーション プログラミング)
+# <a name="compare-differences-between-replicated-tables-replication-programming"></a>レプリケート テーブル間の違いを比較する (レプリケーション プログラミング)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  テーブルのアーティクル用にパブリッシュされたデータが、パブリッシャー側とサブスクライバー側とで異なっていると、データが収束しない可能性があります。アーティクルを検証することにより、両者に相違点が存在するかどうかを確認できます。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」をご覧ください。 ただし、検証によって返されるのは、一致しているかどうかという情報だけであり、両者のテーブル間の相違について、それ以上詳しい情報は提供されません。 **tablediff** コマンド プロンプト ユーティリティを使用すると、2 つのテーブル間の詳細な相違点を取得できるだけでなく、サブスクリプションをパブリッシャー側のデータに収束させるための [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを生成することもできます。  
+  テーブルのアーティクル用にパブリッシュされたデータが、パブリッシャー側とサブスクライバー側とで異なっていると、データが収束しない可能性があります。アーティクルを検証することにより、両者に相違点が存在するかどうかを確認できます。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。 ただし、検証によって返されるのは、一致しているかどうかという情報だけであり、両者のテーブル間の相違について、それ以上詳しい情報は提供されません。 **tablediff** コマンド プロンプト ユーティリティを使用すると、2 つのテーブル間の詳細な相違点を取得できるだけでなく、サブスクリプションをパブリッシャー側のデータに収束させるための [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを生成することもできます。  
   
 > [!NOTE]  
 >  **tablediff** ユーティリティは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サーバーでのみサポートされます。  

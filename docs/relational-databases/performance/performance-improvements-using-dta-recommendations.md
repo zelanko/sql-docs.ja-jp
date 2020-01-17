@@ -1,6 +1,6 @@
 ---
-title: DTA 推奨を利用したパフォーマンスの強化 | Microsoft Docs
-ms.custom: ''
+title: DTA で推奨されるパフォーマンスの強化
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48614ea63ab56974e3eafb55b0f43dd83436ec85
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915202"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164923"
 ---
-# <a name="performance-improvements-using-dta-recommendations"></a>DTA 推奨を利用したパフォーマンスの強化
+# <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>データベース エンジン チューニング アドバイザー (DTA) の推奨事項を使用したパフォーマンスの強化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
@@ -56,7 +56,7 @@ ms.locfileid: "67915202"
 
 [データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 
-[列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)
+[列ストア インデックスの説明](~/relational-databases/indexes/columnstore-indexes-overview.md)
 
 [データ ウェアハウスの列ストア インデックス](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 

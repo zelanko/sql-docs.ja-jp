@@ -1,7 +1,7 @@
 ---
-title: Docker 上で SQL Server Linux コンテナーの使用を開始する
-titleSuffix: SQL Server
+title: Docker:SQL Server on Linux 用のコンテナーのインストール
 description: このクイック スタートでは、Docker を使用して SQL Server 2017 および 2019 のコンテナー イメージを実行する方法を示します。 その次に、sqlcmd でデータベースを作成し、クエリを実行します。
+ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -9,19 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sqlfreshmay19
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 29a7905f70446f79d27e9766488e536ccd1c0c91
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531379"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558678"
 ---
-# <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート: Docker を使用して SQL Server コンテナー イメージを実行する
+# <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート:Docker を使用して SQL Server コンテナー イメージを実行する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -424,7 +423,7 @@ SELECT @@SERVERNAME,
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-2. コマンドを実行します。
+2. 次のコマンドを実行します。
 
    ```sql
    GO
@@ -514,7 +513,7 @@ Docker の SQL Server コンテナー イメージを使用すると、開発と
 
 > [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 データベース バックアップファイルをコンテナーに復元する方法については、「[Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md)」(Linux の Docker コンテナーで SQL Server データベースを復元する) を参照してください。 複数のコンテナーの実行、データ永続化、トラブルシューティングなどのその他のシナリオを調べるには、「[Docker で SQL Server コンテナーイメージを構成する](sql-server-linux-configure-docker.md)」を参照してください。
 

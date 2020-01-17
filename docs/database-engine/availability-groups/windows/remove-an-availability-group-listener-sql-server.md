@@ -1,6 +1,7 @@
 ---
-title: 可用性グループ リスナーの削除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループ リスナーの削除
+description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または SQL PowerShell を使用して Always On 可用性グループ リスナーを削除する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1490e7b5165cb3d977747d1b47b1f364f4975f97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e298dd5dbdea6ee3895a35f3485c8df69574ba8d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014319"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822654"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68014319"
 5.  これにより、 **[可用性グループからのリスナーの削除]** ダイアログ ボックスが開きます。 詳細については、このトピックの「 [[可用性グループからのリスナーの削除]](#AgListenerPropertiesDialog)」を参照してください。  
   
 ###  <a name="AgListenerPropertiesDialog"></a> [可用性グループからのリスナーの削除] (ダイアログ ボックス)  
- **[名前]**  
+ **Name**  
  削除するリスナーの名前です。  
   
  **結果**  

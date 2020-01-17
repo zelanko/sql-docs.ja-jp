@@ -1,6 +1,5 @@
 ---
-title: SQL Server 拡張イベント セッション | Microsoft Docs
-ms.custom: ''
+title: SQL Server 拡張イベント セッション
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009332"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242909"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 拡張イベント セッション
 
@@ -54,7 +53,7 @@ ms.locfileid: "68009332"
   
  次の図は、セッションの内容、およびパッケージとセッションの関係を示しています。  
   
- ![セッションでのオブジェクトの共存と共有。](../../relational-databases/extended-events/media/xesessions.gif "セッションでのオブジェクトの共存と共有。")  
+ ![セッション内でのオブジェクトの共存と共有です。](../../relational-databases/extended-events/media/xesessions.gif "セッション内でのオブジェクトの共存と共有です。")  
   
  次の点に注目してください。  
   

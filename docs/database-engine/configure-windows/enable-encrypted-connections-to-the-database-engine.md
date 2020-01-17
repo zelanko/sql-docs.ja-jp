@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708516"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252860"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ TLS で使用される暗号化のレベル (40 ビットまたは 128 ビット
 > 40 ビットの暗号化レベルの使用は、安全でないと見なされています。
 
 > [!WARNING]
-> 自己署名証明書を使用して暗号化される TLS 接続では、強力なセキュリティは提供されません。 このような接続では、man-in-the-middle アタックによる被害を受けやすくなります。 実稼働環境やインターネットに接続しているサーバーでは、自己署名証明書を使用した TLS 接続は使用しないことをお勧めします。
+> 自己署名証明書を使用して暗号化される TLS 接続では、強力なセキュリティは提供されません。 man-in-the-middle (中間者) 攻撃を受ける可能性が高くなります。 実稼働環境やインターネットに接続しているサーバーでは、自己署名証明書を使用した TLS 接続は使用しないことをお勧めします。
 
 TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスとアプリケーション間でネットワーク送信されるデータのセキュリティが強化されます。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とクライアント アプリケーション間のすべてのトラフィックが TLS で暗号化される場合は、次の追加処理が必要です。
 -  接続時に、追加のネットワーク ラウンドトリップが必要です。
 -  アプリケーションから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに送信されたパケットは、クライアント TLS スタックによって暗号化され、サーバー TLS スタックによって暗号化解除される必要があります。
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスからアプリケーションに送信されたパケットは、サーバー TLS スタックによって暗号化され、クライアント TLS スタックによって暗号化解除される必要があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
  **サーバー認証**用の証明書が発行されている必要があります。 証明書の名前は、コンピューターの完全修飾ドメイン名 (FQDN) である必要があります。  
   
  証明書は、コンピューター上のユーザーにローカルに格納されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用する証明書をインストールするには、ローカル管理者特権を持つアカウントで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを実行している必要があります。
@@ -82,7 +82,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 
 - 証明書の **Subject** プロパティで、共通名 (CN) がサーバー コンピューターのホスト名または完全修飾ドメイン名 (FQDN) と同一であると示されていること。 ホスト名を使用するときは、証明書で DNS サフィックスを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフェールオーバー クラスターで実行されている場合、共通名は仮想サーバーのホスト名または FQDN と同じである必要があり、証明書がフェールオーバー クラスター内のすべてのノードにプロビジョニングされる必要があります。
 
-- ワイルドカード証明書は、[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) でサポートされています。 その後、SNAC は廃止され、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) と [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) に置き換わりました。 他のクライアントでは、ワイルドカード証明書がサポートされていない可能性があります。 詳細については、クライアントのドキュメントと [KB 258858](http://support.microsoft.com/kb/258858) を参照してください。       
+- ワイルドカード証明書は、[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) でサポートされています。 その後、SNAC は廃止され、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) と [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) に置き換わりました。 他のクライアントでは、ワイルドカード証明書がサポートされていない可能性があります。 詳細については、クライアントのドキュメントと [KB 258858](https://support.microsoft.com/kb/258858) を参照してください。       
   SQL Server 構成マネージャーを使用して、ワイルドカード証明書を選択することはできません。 ワイルドカード証明書を使うには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` のレジストリ キーを編集し、**Certificate** の値に証明書の拇印を (スペースを含めずに) 入力する必要があります。  
 
   > [!WARNING]  
@@ -129,9 +129,9 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 > [!IMPORTANT]
 > SQL Server サービス アカウントは、SQL Server で暗号化を強制するために使用される証明書の読み取りアクセス許可を持っている必要があります。 特権のないサービス アカウントの場合、読み取りアクセス許可を証明書に追加する必要があります。 この操作に失敗すると、SQL Server サービスを再起動できなくなる可能性があります。
   
-1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 **[** _\<server instance> のプロトコル]_ を右クリックします。次に **[プロパティ]** を選びます。  
+1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 _[\<server instance>_ **のプロトコル]** を右クリックします。次に **[プロパティ]** を選択します。  
   
-2. **[** _\<instance name> のプロトコル]_ の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、 **[証明書]** ボックスのドロップダウンから必要な証明書を選択し、 **[OK]** をクリックします。  
+2. _[\<instance name>_ **のプロトコル]** の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、 **[証明書]** ボックスのドロップダウンから必要な証明書を選択し、 **[OK]** をクリックします。  
   
 3. **[フラグ]** タブの **[ForceEncryption]** ボックスの一覧の **[はい]** をクリックし、 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
@@ -164,4 +164,3 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 ## <a name="see-also"></a>参照
 [Microsoft SQL Server の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)     
 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[SQL Server の暗号化](../../relational-databases/security/encryption/sql-server-encryption.md)

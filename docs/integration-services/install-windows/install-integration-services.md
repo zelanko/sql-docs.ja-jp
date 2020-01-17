@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f265d2af5ad6fc30708d57f162c8d6395858673f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71284829"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491956"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services (SSIS) のインストール
 
@@ -117,7 +117,7 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
 - **Integration Services Feature Pack for Azure**。 Feature Pack のダウンロードとインストールについて詳しくは、「[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017)」をご覧ください。 Feature Pack をインストールすると、パッケージは、次のサービスを含む Azure クラウドのストレージ サービスと分析サービスに接続できます。
 
-  - Azure Blob Storage。
+  - Azure Blob Storage です。
 
   - Azure HDInsight。
 
@@ -133,7 +133,7 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
   - Microsoft Connector Version 5.0 for Oracle by Attunity および Microsoft Connector Version 5.0 for Teradata by Attunity。 これらのコンポーネントを入手するには、「[Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)」をご覧ください。
 
-## <a name="nest-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [Integration Services バージョンのサイド バイ サイド インストール](installing-integration-services-versions-side-by-side.md)
 

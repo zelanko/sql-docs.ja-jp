@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24d03b268abe381e8a1ad3308f630626f5a3d455
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278348"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255818"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,7 +122,7 @@ DECLARE @t time = '12:10:30.123';
 SELECT DATENAME(year, @t);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 次の句で `DATENAME` を使用します。
 
@@ -134,7 +134,7 @@ SELECT DATENAME(year, @t);
   
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , 、DATENAME は、文字列リテラルを暗黙的にキャスト、 **datetime2** 型です。 つまり、`DATENAME` では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例は、指定された日付の日付部分を返します。 SELECT ステートメントの `datepart` 引数の代わりにテーブルの *datepart* 値を使用します。
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
@@ -149,14 +149,14 @@ SELECT DATENAME(year, @t);
 |**dayofyear、dy、y**|303|  
 |**day、dd、d**|30|  
 |**week、wk、ww**|44|  
-|**weekday、dw**|火曜日|  
+|**weekday、dw**|Tuesday|  
 |**hour、hh**|12|  
 |**minute、n**|15|  
 |**second、ss、s**|32|  
 |**millisecond、ms**|123|  
 |**microsecond、mcs**|123456|  
 |**nanosecond、ns**|123456700|  
-|**TZoffset、tz**|310|  
+|**TZoffset、tz**|+05:10|  
 |**ISO_WEEK、ISOWK、ISOWW**|44|  
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -177,14 +177,14 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |**dayofyear、dy、y**|303|  
 |**day、dd、d**|30|  
 |**week、wk、ww**|44|  
-|**weekday、dw**|火曜日|  
+|**weekday、dw**|Tuesday|  
 |**hour、hh**|12|  
 |**minute、n**|15|  
 |**second、ss、s**|32|  
 |**millisecond、ms**|123|  
 |**microsecond、mcs**|123456|  
 |**nanosecond、ns**|123456700|  
-|**TZoffset、tz**|310|  
+|**TZoffset、tz**|+05:10|  
 |**ISO_WEEK、ISOWK、ISOWW**|44|  
   
 ## <a name="see-also"></a>参照

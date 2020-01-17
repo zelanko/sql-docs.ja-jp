@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a0fdd3c8be7e9cbe128d01736e465ae95a120d0f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594013"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258415"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio 用の Azure SQL Database Managed Instance ダッシュボード (プレビュー)
 
@@ -48,7 +48,7 @@ Azure SQL Database Managed Instance 拡張機能により、[Azure Data Studio](
 - **[Azure Premium Disk Storage]** 。 General Purpose サービス レベルをお使いの場合、ユーザーとシステム両方のデータベース ファイルが、Azure Premium Storage に配置されます。 このセクションでは、使用済みデータ量、ファイルの数、および使用可能なストレージを確認できます。 Business Critical サービス レベルでは、このセクションには何も表示されません。
 - **[Resource usage]\(リソース使用状況\)** 。 お使いのマネージド インスタンスによって過去 2 時間に使用されたストレージと CPU の割合が表示されます。 これにより、限界に近づいている場合はインスタンス サイズを増やすことができます。
 
-## <a name="recommendations"></a>推奨事項
+## <a name="recommendations"></a>Recommendations
 
 **[Managed Instance]\(マネージド インスタンス\)** タブで 2 番目のウィンドウを選択すると、マネージド インスタンスの最適化に役立つ推奨事項とアラートが表示されます。
 
@@ -93,11 +93,10 @@ Azure SQL Database Managed Instance 拡張機能に関して問題が発生し�
 
 詳細については、[倫理規定の FAQ][conduct-FAQ] のページを参照してください。また、追加の質問やコメントがある場合は [opencode@microsoft.com][conduct-email] にお問い合わせください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[GitHub プロジェクト](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/)を参照してください。
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

@@ -1,6 +1,5 @@
 ---
-title: SUSE Linux Enterprise Server で SQL Server を開始する
-titleSuffix: SQL Server
+title: SUSE:SQL Server on Linux のインストール
 description: このクイックスタートでは、SUSE Linux Enterprise Server に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
 author: VanMSFT
 ms.author: vanto
@@ -9,14 +8,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594532"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558635"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート: SUSE Linux Enterprise Server で SQL Server をインストールし、データベースを作成する
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート:SUSE Linux Enterprise Server で SQL Server をインストールし、データベースを作成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -39,7 +38,7 @@ ms.locfileid: "73594532"
 > [!TIP]
 > このチュートリアルには、ユーザー入力とインターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)のインストール手順について関心をお持ちの場合は、[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md)に関する記事を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

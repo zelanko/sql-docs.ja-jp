@@ -1,6 +1,7 @@
 ---
-title: トランザクション パブリケーションの更新可能なサブスクリプションの有効化 | Microsoft Docs
-ms.custom: ''
+title: トランザクション パブリケーションの更新可能なサブスクリプションの有効化
+description: SQL Server でトランザクション パブリケーションの更新可能なサブスクリプションを有効化する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3b599ac576a71438fb13505521eff24b6c7e3fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8afde3ebd4082df0c1fc0065b2aa058095905ead
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907966"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321259"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>トランザクション パブリケーションの更新可能なサブスクリプションの有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "72907966"
   
     -   パブリッシュされたデータベース用のログ リーダー エージェント ジョブが存在するかどうかわからない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) を実行します。 結果セットが空の場合、ログ リーダー エージェント ジョブを作成する必要があります。  
   
-    -   パブリッシャーで、[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) を実行します。 エージェントの実行に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を **\@job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。  
+    -   パブリッシャーで、[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) を実行します。 エージェントの実行に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を **\@job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合は、 **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要もあります。  
   
 2.  パラメーター **\@allow_sync_tran** に **true** を指定し、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を実行します。  
   

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294461"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687191"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 接続マネージャー
 
@@ -37,7 +37,7 @@ Azure Storage 接続マネージャーにより、SQL Server Integration Service
     - **AccessKey:** この認証方法には、**アカウント キー**を指定します。
     - **ServicePrincipal:** この認証方法には、サービス プリンシパルの**アプリケーション ID**、**アプリケーション キー**、**テナント ID** を指定します。
       **テスト接続**が機能するためには、サービス プリンシパルには少なくともストレージ アカウントに対する**ストレージ BLOB データ閲覧者**の役割を割り当てる必要があります。
-      詳しくは、「[Azure portal で RBAC を使用して Azure BLOB とキューのデータへのアクセスを付与する](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)」をご覧ください。
+      詳細については、「[Azure portal で RBAC を使用して Azure BLOB とキューのデータへのアクセスを付与する](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)」を参照してください。
 - **環境:** ストレージ アカウントをホストするクラウド環境を指定します。
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Azure リソース認証用のマネージド ID
@@ -64,6 +64,9 @@ Azure Storage 接続マネージャーにより、SQL Server Integration Service
 
 > [!NOTE]
 >  既存のパッケージでマネージド ID 認証を構成するための推奨される方法は、[最新の SSIS デザイナー](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)を使用して SSIS プロジェクトを少なくとも 1 回リビルドすることです。 SSIS プロジェクトのすべての Azure Storage 接続マネージャーに新しい接続マネージャー プロパティ `ConnectUsingManagedIdentity` が自動的に追加されるように、SSIS プロジェクトを Azure-SSIS 統合ランタイムに再配置します。 または、実行時にプロパティ パス **\Package.Connections[<接続マネージャーの名前>].Properties[ConnectUsingManagedIdentity]** を指定して、プロパティのオーバーライドを直接使用します。
+
+## <a name="secure-network-traffic-to-your-storage-account"></a>ストレージ アカウントへのネットワークトラフィックをセキュリティで保護する
+Azure Data Factory は、Azure Storage にとって[信頼できる Microsoft サービス](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services)になりました。 マネージド ID の認証を使用すると、[選択したネットワークへのアクセスを制限](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule)することで、ストレージ アカウントをセキュリティで保護することができます。その上、データ ファクトリでご利用のストレージ アカウントに引き続きアクセスすることができます。 手順については、「[例外の管理](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions)」を参照してください。
 
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)

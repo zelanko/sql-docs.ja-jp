@@ -1,6 +1,7 @@
 ---
-title: データベース エンジン チューニング アドバイザーからの出力の表示および操作 | Microsoft Docs
-ms.custom: ''
+title: DTA からの出力
+description: データベース エンジン チューニング アドバイザー (DTA) からの出力を表示および操作します。
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -25,17 +26,18 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907035"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165482"
 ---
-# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>データベース エンジン チューニング アドバイザー (DTA) からの出力を表示および操作する
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  データベース エンジン チューニング アドバイザーによってデータベースをチューニングすると、サマリー、推奨設定、レポート、およびチューニング ログが作成されます。 チューニング ログ出力を使用すると、データベース エンジン チューニング アドバイザーのチューニング セッションをトラブルシューティングできます。 サマリー、推奨設定、およびレポートを使用すると、チューニングに関する推奨設定を実装するか、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要なクエリのパフォーマンスを向上させるまでチューニングを継続するかを判断できます。 データベース チューニング アドバイザーを使用してワークロードを作成およびデータベースをチューニングする方法については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
+  データベース エンジン チューニング アドバイザーによってデータベースをチューニングすると、サマリー、推奨設定、レポート、およびチューニング ログが作成されます。 チューニング ログ出力を使用すると、データベース エンジン チューニング アドバイザーのチューニング セッションをトラブルシューティングできます。 サマリー、推奨設定、レポートを使用すると、チューニングに関する推奨設定を実装するか、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに必要なクエリのパフォーマンスを向上させるまでチューニングを継続するかを判断できます。 データベース チューニング アドバイザーを使用してワークロードを作成およびデータベースをチューニングする方法については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
   
 ##  <a name="View"></a> チューニング出力の表示  
  次の手順では、データベース エンジン チューニング アドバイザーの GUI を使用して、チューニングに関する推奨設定、サマリー、レポート、およびチューニング ログを表示する方法について説明します。 ユーザー インターフェイス オプションの詳細については、後の「 [ユーザー インターフェイスの説明](#UI) 」を参照してください。  
@@ -168,7 +170,7 @@ ms.locfileid: "72907035"
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
-5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするときに、次の場所にこのスキーマがインストールされます。  
+5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールするときに、次の場所にこのスキーマがインストールされます。  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
@@ -183,7 +185,7 @@ ms.locfileid: "72907035"
 7.  必要なだけクエリ パフォーマンスを向上させる仮定の構成が作成されるまで、手順 6. と手順 7. を繰り返します。 その後、新しい構成を実装できます。 詳細については、このトピックの「 [チューニングに関する推奨設定の実装](#Implement) 」を参照してください。  
   
 ##  <a name="ReviewEvaluateClone"></a> チューニング セッションの確認、評価、および複製  
- データベースに対するワークロードの影響分析を開始するたびに、データベース エンジン チューニング アドバイザーによって新しいチューニング セッションが作成されます。 データベース エンジン チューニング アドバイザーの GUI にある **[セッション モニター]** を使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定のインスタンスで実行したすべてのチューニング セッションを表示し、必要に応じて呼び出すことができます。 既存のすべてのチューニング セッションを参照できれば、既存のセッションを基にしてセッションを複製したり、既存のチューニング推奨設定を編集し、データベース エンジン チューニング アドバイザーで編集済みのセッションを評価したり、チューニングを定期的に実行して、データベースの物理設計を監視するなどの作業を簡単に行えます。 たとえば、データベースは毎月定期的にチューニングできます。  
+ データベースに対するワークロードの影響分析を開始するたびに、データベース エンジン チューニング アドバイザーによって新しいチューニング セッションが作成されます。 データベース エンジン チューニング アドバイザーの GUI にある**セッション モニター**を使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスで実行したすべてのチューニング セッションを表示したり、再度読み込んだりすることができます。 既存のすべてのチューニング セッションを参照できれば、既存のセッションを基にしてセッションを複製したり、既存のチューニング推奨設定を編集し、データベース エンジン チューニング アドバイザーで編集済みのセッションを評価したり、チューニングを定期的に実行して、データベースの物理設計を監視するなどの作業を簡単に行えます。 たとえば、データベースは毎月定期的にチューニングできます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対するチューニング セッションを確認するには、データベース エンジン チューニング アドバイザーでワークロードをチューニングすることで、サーバー インスタンスにおけるチューニング セッションを作成する必要があります。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
   
@@ -266,11 +268,11 @@ ms.locfileid: "72907035"
  **[パーティション番号]**  
  推奨されるパーティション関数で定義されるパーティションの数です。 この関数と構成を組み合わせて使用してから、テーブルに適用した場合、テーブル内のデータは多くのパーティションに分割されます。  
   
- **定義**  
+ **[定義]**  
  **[推奨される対象]** の定義です。 列をクリックすると [SQL スクリプトのプレビュー] ダイアログ ボックスが開き、推奨される操作を実行するスクリプトが表示されます。  
   
 ##### <a name="index-recommendations"></a>[推奨インデックス]  
- **Database Name**  
+ **データベース名**  
  変更が推奨されたオブジェクトを含むデータベースです。  
   
  **[オブジェクト名]**  
@@ -309,7 +311,7 @@ ms.locfileid: "72907035"
  **[後で実行する]**  
  推奨設定のためのスクリプトを生成し、アクションを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブとして保存します。  
   
- **日付**  
+ **Date**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行して推奨設定を適用する日付を指定します。  
   
  **Time**  
@@ -324,7 +326,7 @@ ms.locfileid: "72907035"
  **Date**  
  データベース エンジン チューニング アドバイザーによってレポートが作成された日付です。  
   
- **[時刻]**  
+ **Time**  
  データベース エンジン チューニング アドバイザーによってレポートが作成された時刻です。  
   
  **[サーバー]**  

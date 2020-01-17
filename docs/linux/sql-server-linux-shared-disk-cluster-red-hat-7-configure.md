@@ -1,6 +1,7 @@
 ---
-title: SQL Server 用に Red Hat Enterprise Linux 共有クラスターを構成する
-description: SQL Server 用に Red Hat Enterprise Linux 共有ディスク クラスターを構成することにより、高可用性を実現します。
+title: SQL Server on Linux の RHEL FCI を構成する
+description: Red Hat Enterprise Linux (RHEL) 共有ディスクのフェールオーバー クラスター インスタンス (FCI) を構成し、SQL Server on Linux の可用性を高める方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252240"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656629"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server 用に Red Hat Enterprise Linux 共有ディスク クラスターを構成する
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>SQL Server の RHEL フェールオーバー クラスター インスタンス (FCI) クラスターを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このガイドでは、Red Hat Enterprise Linux 上の SQL Server 用に 2 ノードの共有ディスク クラスターを作成する手順について説明します。 クラスタリング レイヤーは、[Pacemaker](https://clusterlabs.org/) の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。 SQL Server インスタンスは、一方のノードでのみアクティブになります。
+このガイドでは、Red Hat Enterprise Linux 上の SQL Server 用に 2 ノードの共有ディスク フェールオーバー クラスターを作成する手順について説明します。 クラスタリング レイヤーは、[Pacemaker](https://clusterlabs.org/) の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。 SQL Server インスタンスは、一方のノードでのみアクティブになります。
 
 > [!NOTE] 
 > Red Hat HA アドオンとドキュメントにアクセスするには、サブスクリプションが必要です。 
@@ -202,7 +203,7 @@ NFS の使用の詳細については、次のリソースを参照してくだ�
 
 * [NFS サーバーと firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [NFS ボリュームのマウント | Linux ネットワーク管理者ガイド](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS サーバーの構成 | Red Hat カスタマー ポータル](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [NFS サーバーの構成 | Red Hat カスタマー ポータル](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>共有ストレージを指すようにデータベース ファイルのディレクトリをマウントする
 

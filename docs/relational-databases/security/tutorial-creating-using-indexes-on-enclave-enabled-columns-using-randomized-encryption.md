@@ -1,6 +1,7 @@
 ---
-title: チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する | Microsoft Docs
-ms.custom: ''
+title: ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成する (チュートリアル)
+description: このチュートリアルでは、セキュリティで保護されたエンクレーブが設定された SQL Server の Always Encrypted でサポートされているランダム化された暗号化を使用して、エンクレーブ対応の列にインデックスを作成して使用する方法を説明します。
+ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f5d85128dd242b9499b31ad928a00a17d2b5571
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258324"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557770"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]

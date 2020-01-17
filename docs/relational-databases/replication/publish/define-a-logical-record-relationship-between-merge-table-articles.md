@@ -1,6 +1,7 @@
 ---
-title: マージ テーブル アーティクル間に論理レコード リレーションシップを定義する | Microsoft Docs
-ms.custom: ''
+title: マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
+description: マージ レプリケーション アーティクルに使用する関連テーブル間に論理レコード リレーションシップを定義する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846612"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321233"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "70846612"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -105,7 +106,7 @@ ms.locfileid: "70846612"
   
     -   標準の行レベルまたは列レベルの競合の検出と解決を使用するには、 **\@logical_record_level_conflict_detection** と **\@logical_record_level_conflict_resolution** に **false** を指定します。これは既定の設定です。  
   
-3.  論理レコードを構成する各アーティクルに対して、手順 2. を実行します。 論理レコード内の各アーティクルに使用する競合の検出および解決のオプションは、すべて同じである必要があります。 詳しくは、「 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
+3.  論理レコードを構成する各アーティクルに対して、手順 2. を実行します。 論理レコード内の各アーティクルに使用する競合の検出および解決のオプションは、すべて同じである必要があります。 詳しくは、「 [論理レコードの競合の検出および解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
   
 4.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)を実行します。 **\@publication** を指定します。リレーションシップの 1 つのアーティクルの名前を **\@article** に、もう 1 つのアーティクルの名前を **\@join_articlename** に指定します。リレーションシップの名前を **\@filtername** に、2 つのアーティクル間のリレーションシップを定義する句を **\@join_filterclause** に、結合の種類を **\@join_unique_key** に指定します。次のいずれかの値を **\@filter_type** に指定します。  
   
@@ -173,7 +174,7 @@ ms.locfileid: "70846612"
   
     -   (省略可) アーティクルが行方向にフィルター選択される場合、 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティに行フィルター句を指定します。 このプロパティを使用して、静的行フィルターまたはパラメーター化された行フィルターを指定します。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
-     詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+     詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> メソッドを呼び出します。  
   
@@ -204,7 +205,7 @@ ms.locfileid: "70846612"
   
 ## <a name="see-also"></a>参照  
  [マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [マージ アーティクルのパラメーター化された行フィルターの定義と変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [静的行フィルターの定義と変更](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [論理レコードによる関連行への変更のグループ化](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)   

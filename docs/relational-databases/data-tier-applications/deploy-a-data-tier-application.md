@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907887"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190118"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72907887"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>同じ DAC パッケージを複数回配置する 
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
   
- データベース エンジンのインスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
+ データベース エンジンのインスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の**ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
   
 ###  <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、配置中に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定すべてが適用されます。ただし、次の設定は除きます。  
@@ -52,7 +52,7 @@ ms.locfileid: "72907887"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DAC を配置できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行している [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスです。 新しいバージョンを使用して DAC を作成した場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
     
-## <a name="security-and-permissions"></a>セキュリティおよび権限
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可
 認証のログインは、パスワードなしで DAC パッケージに格納されます。 パッケージが配置またはアップグレードされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限のあるログインでログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
  DAC を配置できるのは、**sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、**dbcreator** 固定サーバー ロールに存在する ALTER ANY LOGIN 権限を持つログインのみです。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント ( **sa** ) でも DAC を配置できます。 
@@ -145,6 +145,10 @@ ms.locfileid: "72907887"
 
 次の例では、MyApplication.dacpac パッケージから DAC 定義を使用して、MyApplication という名前の DAC を [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスに配置します。  
   
+## <a name="powershell-examples"></a>PowerShell の例  
+
+次の例では、MyApplication.dacpac パッケージから DAC 定義を使用して、MyApplication という名前の DAC を [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスに配置します。  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  

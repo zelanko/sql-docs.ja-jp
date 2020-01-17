@@ -1,6 +1,7 @@
 ---
-title: トランスポート セキュリティ - データベース ミラーリング - AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: トランスポート セキュリティ:可用性グループとデータベース ミラーリング
+description: SQL Server でホストされている Always On 可用性グループまたはデータベース ミラーリング セッションに参加しているデータベース間で交換されるメッセージのトランスポートを、セキュリティで保護する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047977"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252750"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>トランスポート セキュリティ - データベース ミラーリング - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68047977"
   
  **このトピックの内容**  
   
--   [[認証]](#Authentication)  
+-   [認証](#Authentication)  
   
 -   [データの暗号化](#DataEncryption)  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68047977"
 ### <a name="certificates"></a>証明書  
  サーバー インスタンスが信頼されたドメインに存在しない場合や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル サービスとして実行されている場合など、一部の状況では Windows 認証を使用できません。 そのような場合には、接続要求を認証するときに、ユーザーの資格情報ではなく証明書が必要になります。 各サーバー インスタンスのミラーリング エンドポイントは、ローカルで作成された独自の証明書を使用して構成する必要があります。  
   
- 暗号化方法は、証明書の作成時に設定されます。 詳細については、「 [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)」を参照してください。 使用する証明書は慎重に管理してください。  
+ 暗号化方法は、証明書の作成時に設定されます。 詳細については、「 [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)を使用します。 使用する証明書は慎重に管理してください。  
   
  接続を設定するときに、サーバー インスタンスにより、独自の証明書の秘密キーを使用して ID が作成されます。 接続要求を受け取るサーバー インスタンスでは、送信者の証明書の公開キーを使用して送信者の ID を認証します。 たとえば、Server_A と Server_B という 2 つのサーバー インスタンスを考えてみます。 Server_A では、Server_B に接続要求を送信する前に、秘密キーを使用して接続ヘッダーを暗号化します。 Server_B では、Server_A の証明書の公開キーを使用して接続ヘッダーの暗号化を解除します。 暗号化が解除されたヘッダーが正しい場合、Server_B は、そのヘッダーが Server_A によって暗号化されていたので、接続は認証されると認識します。 暗号化が解除されたヘッダーが正しくない場合、Server_B は、接続要求が認証されないため、接続が拒否されると認識します。  
   
@@ -108,6 +109,6 @@ ms.locfileid: "68047977"
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

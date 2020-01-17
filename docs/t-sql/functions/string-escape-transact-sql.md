@@ -18,18 +18,18 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d845257313466caa21976feaf69598e404a03962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9b189d6b06aaf3b85815ed6d889756d466bff8
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906865"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325504"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  テキストの特殊文字をエスケープし、エスケープ文字付きのテキストを返します。 **STRING_ESCAPE** は決定的関数です。  
+テキストの特殊文字をエスケープし、エスケープ文字付きのテキストを返します。 **STRING_ESCAPE** は SQL Server 2016 で導入された決定的関数です。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,12 +66,12 @@ STRING_ESCAPE( text , type )
 |-----------------------|----------------------|  
 |CHAR(0)|\u0000|  
 |CHAR(1)|\u0001|  
-|[...]|[...]|  
+|...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  JSON 形式の規則に従ってテキストをエスケープする
 

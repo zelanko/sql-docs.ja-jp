@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 573ddefa33c1e021c16359f0164f0eda49d329fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebaa078fc3be919a6114ad275b0ef5ece6f0d0d7
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012115"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761211"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>システム管理者がロックアウトされた場合の SQL Server への接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68012115"
     > [!NOTE]  
     >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 前の手順で追加した `;-m` を削除し、 **[OK]** をクリックします。  
   
-12. サーバー名を右クリックし、 **[再起動]** をクリックします。  
+12. サーバー名を右クリックし、 **[再起動]** をクリックします。 必ずもう一度 SQL Server エージェントを起動します。
   
  これで、 **sysadmin** 固定サーバー ロールのメンバーであるアカウントの 1 つを使用して正常に接続できます。  
   

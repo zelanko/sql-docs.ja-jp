@@ -1,7 +1,7 @@
 ---
-title: SQL Server 可用性グループ用の RHEL クラスターを構成する
-titleSuffix: SQL Server
-description: Red Hat Enterprise Linux (RHEL) の実行時の可用性グループ クラスターについて説明します
+title: RHEL:Linux で SQL Server の可用性グループを構成する
+description: SQL Server 用の Red Hat Enterprise Linux (RHEL) の実行時、可用性グループを構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910808"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558498"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の RHEL クラスターを構成する
 
@@ -108,7 +108,7 @@ STONITH デバイスでは、フェンス エージェントが提供されま�
 
 リソース レベルのフェンスは、リソースを構成することによって障害が発生した場合にデータが破損しないことを保証します。 たとえば、リソース レベルのフェンスを使用して、通信リンクがダウンしたときにノード上のディスクを期限切れとしてマークすることができます。 
 
-ノード レベルのフェンスは、ノードがリソースを実行しないようにします。 これを行うには、ノードをリセットします。 Pacemaker は、さまざまなフェンス デバイスをサポートしています。 例として、無停電電源装置やサーバーの管理インターフェイスカードなどがあります。
+ノード レベルのフェンスでは、ノードによってリソースが実行されないことが保証されます。 これを行うには、ノードをリセットします。 Pacemaker は、さまざまなフェンス デバイスをサポートしています。 例として、無停電電源装置やサーバーの管理インターフェイスカードなどがあります。
 
 STONITH、およびフェンスの詳細については、次の記事を参照してください。
 
@@ -218,6 +218,6 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 `pcs` を使用して可用性グループの手動フェールオーバーを行います。 Transact-SQL を使用してフェールオーバーを開始しないでください。 手順については、[フェールオーバー](sql-server-linux-availability-group-failover-ha.md#failover)に関するページを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [HA 可用性グループの操作](sql-server-linux-availability-group-failover-ha.md)

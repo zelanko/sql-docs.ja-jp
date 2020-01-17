@@ -1,6 +1,7 @@
 ---
-title: サーバー監査およびサーバー監査の仕様を作成する方法 | Microsoft Docs
-ms.custom: ''
+title: サーバー監査およびサーバー監査の仕様を作成する
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用し、SQL Server の監査とサーバー監査の仕様を作成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 655adfa8cd08c0594b43d736bd2bf492d29278fc
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517975"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557857"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "72517975"
      監査アクションの処理が強制されるまでの時間 (ミリ秒単位) を指定します。  値 0 は同期配信を表します。 既定の最小値は **1000** (1 秒) です。 最大値は 2,147,483,647 (2,147,483.647 秒、つまり 24 日、20 時間、31 分、23.647 秒) です。  
   
      **[監査ログ エラー発生時]**  
-     **Continue**  
+     **続行**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 **[続行]** オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許すおそれがあります。 完全な監査を維持することより、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の操作を続行することの方が重要である場合に、このオプションを選択します。 これは既定値です。  
   
      **[サーバーのシャットダウン]**  
@@ -129,7 +130,7 @@ ms.locfileid: "72517975"
   
      **[サーバー監査の仕様の作成]** ダイアログ ボックスで、次のオプションを使用できます。  
   
-     **[名前]**  
+     **Name**  
      サーバー監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  
@@ -153,7 +154,7 @@ ms.locfileid: "72517975"
      **省略記号 (...)**  
      指定した **[オブジェクト名]** に基づいて、使用可能なオブジェクトを参照して選択するための **[オブジェクトの選択]** ダイアログ ボックスを開きます。  
   
-3.  終了したら **[OK]** をクリックします。  
+3.  操作が終了したら、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

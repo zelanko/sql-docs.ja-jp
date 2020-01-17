@@ -1,6 +1,7 @@
 ---
-title: 構成するサーバーを選択する (データベース ミラーリング セキュリティ構成ウィザード) | Microsoft Docs
-ms.custom: ''
+title: 'セキュリティの構成ウィザード: サーバーの選択'
+descriptoin: Describes the properties found on the the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e97c918af264b2628b77bbd5d31958aea5c5d978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb2396e97c4cceee534472c07c285aa2a8a371e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952053"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822314"
 ---
-# <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>[構成するサーバーを選択する] (データベース ミラーリング セキュリティ構成ウィザード)
+# <a name="configure-database-mirroring-wizard-choose-servers-to-configure"></a>データベース ミラーリング構成ウィザード: 構成するサーバーを選択する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、構成するサーバー インスタンスを指定できます。 ウィザードを進めるには、少なくとも 1 つのサーバー インスタンスを選択する必要があります。  
   

@@ -1,7 +1,7 @@
 ---
-title: インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート | Microsoft Docs
+title: SQL Server 管理オブジェクトのサポート - インメモリ OLTP
 description: インメモリ OLTP をサポートする SQL Server 管理オブジェクト (SMO) の項目について説明します。
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 08/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +12,12 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbf25218547548bf48c6eaf7c57c0a000e84c85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a49c0a75a67e524475a8a1db7c4905c6490c85fc
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022483"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412538"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68022483"
 - Table. **<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (プロパティ)
 - UserDefinedTableType. **<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (プロパティ)
 
-## <a name="c-code-example"></a>C# のコード例
+## <a name="c-code-example"></a>C# コード例
 
 #### <a name="assemblies-referenced-by-the-compiled-code-example"></a>コンパイル済みのコード サンプルで参照されているアセンブリ
 

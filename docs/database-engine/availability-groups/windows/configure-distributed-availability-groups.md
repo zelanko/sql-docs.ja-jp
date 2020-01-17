@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250960"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002057"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 分散型可用性グループの構成  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-分散型可用性グループを作成するには、それぞれに独自のリスナーがある可用性グループをそれぞれ 2 つ作成する必要があります。 次に、これらの可用性グループを分散型可用性グループに結合します。 次の手順は、Transact-SQL の基本的な例です。 この例では、可用性グループとリスナーを作成するすべての手順を取り上げていません。主な要件を強調することに重点を置いています。
+分散型可用性グループを作成するには、それぞれに独自のリスナーを持つ可用性グループをそれぞれ 2 つ作成する必要があります。 次に、これらの可用性グループを分散型可用性グループに結合します。 次の手順は、Transact-SQL の基本的な例です。 この例では、可用性グループとリスナーを作成するすべての手順を取り上げていません。主な要件を強調することに重点を置いています。
 
 分散型可用性グループの技術の概要については、「[Distributed availability groups](distributed-availability-groups.md)」 (分散可用性グループ) を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>エンドポイント リスナーがすべての IP アドレスをリッスンするよう設定する
 
@@ -364,7 +364,7 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
     )
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  

@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2ab2a5ff60abbd098cb93d5c85cd75527f49805
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729876"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401634"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729876"
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 内の具体化されたビュー用に維持される、ベース テーブル内の増分変更の数が表示されます。 オーバーヘッド比率は、TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS) として計算されます。
 
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文
 
@@ -42,7 +42,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 具体化されたビューの名前です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ベース テーブルでのデータ変更によって具体化されたビューを更新し続けるため、データ ウェアハウス エンジンにより影響を受ける各ビューに追跡行が追加され、変更が反映されます。 具体化されたビューからの選択には、クラスター化列ストア インデックスのスキャンと増分変更の適用が含まれます。  追跡行 (TOTAL_ROWS - BASE_VIEW_ROWS) は、ユーザーが具体化されたビューを再構築するまで削除されません。  
 
@@ -52,7 +52,7 @@ overhead_ratio は、TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS) として計算されま�
   
 VIEW DATABASE STATE 権限が必要です。  
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. この例では、具体化されたビューのオーバーヘッド比率が返されます。
 
@@ -60,7 +60,7 @@ VIEW DATABASE STATE 権限が必要です。
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
 ```
 
-出力結果:
+出力:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
@@ -70,7 +70,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
 
 ### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>B. この例では、ベース テーブルのデータ変更に応じて、具体化されたビューのオーバーヘッドがどのように増加するかを示します
 
-テーブルの作成
+テーブルを作成する
 ```sql
 CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
 ```
@@ -102,7 +102,7 @@ GROUP BY c1
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
-出力結果:
+出力:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
@@ -139,7 +139,7 @@ ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
 go
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
-[出力]
+Output
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  

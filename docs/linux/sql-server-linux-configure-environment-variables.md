@@ -1,6 +1,7 @@
 ---
-title: 環境変数を使って SQL Server の設定を構成する
+title: Linux 上で SQL Server の環境変数を構成する
 description: この記事では、Linux 上で、環境変数を使って SQL Server 2017 の特定の設定を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531319"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558374"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上で環境変数を使って SQL Server の設定を構成する
 
@@ -47,8 +48,8 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2019 
 |-----|-----|
 | **ACCEPT_EULA** | **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージの設定が必要です。 |
 | **MSSQL_SA_PASSWORD** | SA ユーザーのパスワードを構成します。 |
-| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、#####-#####-#####-#####-##### という形式にする必要があります。ここで、'#' は数字または文字を表します。|
-| **MSSQL_LCID** | SQL Server 用に使う言語 ID を設定します。 たとえば、1036 はフランス語です。 |
+| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 指定できる値は、次のとおりです。 </br></br>**評価**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、#####-#####-#####-#####-##### という形式にする必要があります。ここで、'#' は数字または文字を表します。|
+| **MSSQL_LCID** | SQL Server に使用する言語 ID を設定します。 たとえば、1036 はフランス語です。 |
 | **MSSQL_COLLATION** | SQL Server の既定の照合順序を設定します。 これにより、言語 ID (LCID) から照合順序への既定のマッピングがオーバーライドされます。 |
 | **MSSQL_MEMORY_LIMIT_MB** | SQL Server が使用できるメモリの最大容量 (MB 単位) を設定します。 既定では、これは物理メモリの合計容量の 80% です。 |
 | **MSSQL_TCP_PORT** | SQL Server がリッスンする TCP ポートを構成します (既定値は 1433)。 |
@@ -71,8 +72,8 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2019 
 |-----|-----|
 | **ACCEPT_EULA** | **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージの設定が必要です。 |
 | **MSSQL_SA_PASSWORD** | SA ユーザーのパスワードを構成します。 |
-| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、#####-#####-#####-#####-##### という形式にする必要があります。ここで、'#' は数字または文字を表します。|
-| **MSSQL_LCID** | SQL Server 用に使う言語 ID を設定します。 たとえば、1036 はフランス語です。 |
+| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 指定できる値は、次のとおりです。 </br></br>**評価**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、#####-#####-#####-#####-##### という形式にする必要があります。ここで、'#' は数字または文字を表します。|
+| **MSSQL_LCID** | SQL Server に使用する言語 ID を設定します。 たとえば、1036 はフランス語です。 |
 | **MSSQL_COLLATION** | SQL Server の既定の照合順序を設定します。 これにより、言語 ID (LCID) から照合順序への既定のマッピングがオーバーライドされます。 |
 | **MSSQL_MEMORY_LIMIT_MB** | SQL Server が使用できるメモリの最大容量 (MB 単位) を設定します。 既定では、これは物理メモリの合計容量の 80% です。 |
 | **MSSQL_TCP_PORT** | SQL Server がリッスンする TCP ポートを構成します (既定値は 1433)。 |
@@ -147,7 +148,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ここに記載されていないその他の SQL Server 設定については、「[mssql-conf ツールを使用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md)」をご覧ください。
 

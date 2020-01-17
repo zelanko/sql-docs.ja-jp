@@ -1,7 +1,7 @@
 ---
 title: ストアド プロシージャの再コンパイル| Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909010"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564790"
 ---
 # <a name="recompile-a-stored-procedure"></a>ストアド プロシージャの再コンパイル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "72909010"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [セキュリティ](#Security)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72909010"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72909010"
  **WITH RECOMPILE** オプション  
  プロシージャ定義を作成するときにこのオプションを使用する場合、データベースの CREATE PROCEDURE 権限とプロシージャが作成されるスキーマに対する ALTER 権限が必要です。  
   
- EXECUTE ステートメントでこのオプションを使用する場合、プロシージャに対する EXECUTE 権限が必要です。 EXECUTE ステートメント自体に対する権限は必要がありませんが、EXECUTE ステートメント内で参照されているプロシージャに対する実行権限が必要です。 詳細については、「[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
+ EXECUTE ステートメントでこのオプションを使用する場合、プロシージャに対する EXECUTE 権限が必要です。 EXECUTE ステートメント自体に対する権限は必要がありませんが、EXECUTE ステートメント内で参照されているプロシージャに対する実行権限が必要です。 詳細については、「 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
   
  **RECOMPILE** クエリ ヒント  
  この機能は、プロシージャが作成され、ヒントがプロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに含まれている場合に使用されます。 したがって、データベースの CREATE PROCEDURE 権限と、プロシージャを作成するスキーマに対する ALTER 権限が必要です。  
@@ -67,69 +67,52 @@ ms.locfileid: "72909010"
  指定したプロシージャに対する ALTER 権限が必要です。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE オプションを使用してストアド プロシージャを実行するには  
-  
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
-  
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
-  
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、プロシージャ定義を作成します。  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-```  
+1. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE オプションを使用してストアド プロシージャを実行するには  
+1. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、プロシージャ定義を作成します。  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE オプションを使用してストアド プロシージャを実行するには   
   
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
-  
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、全従業員 (フルネーム) とその役職および部署名をビューから返す単純なプロシージャを作成します。  
-  
-     次に、2 番目のコード例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 これにより、プロシージャが実行され、プロシージャのクエリ プランが再コンパイルされます。  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>sp_recompile を使用してストアド プロシージャを実行するには  
-  
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
-  
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
-  
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、全従業員 (フルネーム) とその役職および部署名をビューから返す単純なプロシージャを作成します。  
-  
-     次に、次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この場合、プロシージャは実行されません。代わりに、プロシージャが次回実行されるときにクエリ プランが更新されるように、再コンパイルの対象としてマークされます。  
+**[新しいクエリ]** を選択して、次のコード例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 これにより、プロシージャが実行され、プロシージャのクエリ プランが再コンパイルされます。  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>sp_recompile を使用してストアド プロシージャを実行するには  
+
+**[新しいクエリ]** を選択して、次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この場合、プロシージャは実行されません。代わりに、プロシージャが次回実行されるときにクエリ プランが更新されるように、再コンパイルの対象としてマークされます。  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>参照  

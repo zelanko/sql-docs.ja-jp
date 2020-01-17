@@ -1,6 +1,6 @@
 ---
-title: SQL Server でのインメモリ OLTP 機能の採用計画 | Microsoft Docs
-ms.custom: ''
+title: 'インメモリ OLTP の採用計画 '
+ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2aaee2db975d9632c1f13a664a6ad2939afe20b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021811"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412552"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server でのインメモリ OLTP 機能の採用計画
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -269,7 +269,7 @@ Transact-SQL の特定の要素に対する制限事項に加えて、ネイテ�
 ネイティブ プロシージャのクエリ プランの一部として、並列処理を使用することはできません。 ネイティブ プロシージャは常にシングル スレッドです。
 
 
-#### <a name="join-types"></a>型の結合
+#### <a name="join-types"></a>結合の種類
 
 
 ハッシュ結合やマージ結合を、ネイティブ プロシージャのクエリ プランの一部として使用することはできません。 入れ子になったループ結合が使用されます。

@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング - 着信接続に証明書を使用する | Microsoft Docs
-ms.custom: ''
+title: 着信接続に証明書を使用する
+description: データベース ミラーリングの着信接続を認証する際に証明書を使用するようにサーバー インスタンスを構成する手順について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 274260c382eea20a3adb2fc61c1bde27e02469a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997909"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822271"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>データベース ミラーリング - 着信接続に証明書を使用する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、データベース ミラーリングの着信接続を認証する際に証明書を使用するようにサーバー インスタンスを構成する手順について説明します。 着信接続を設定する前に、各サーバー インスタンスで発信接続を構成する必要があります。 詳細については、「[データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)」を参照してください。  
+  このトピックでは、データベース ミラーリングの着信接続を認証する際に証明書を使用するようにサーバー インスタンスを構成する手順について説明します。 着信接続を設定する前に、各サーバー インスタンスで発信接続を構成する必要があります。 詳細については、「 [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)を使用します。  
   
  着信接続を構成する処理には、次の一般的な手順が含まれます。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67997909"
   
  次の手順では、上記の手順について詳しく説明します。 各手順では、HOST_A という名前のシステムでサーバー インスタンスを構成するための例を示します。 その後に続く「例」では、HOST_B という名前のシステム上の別のサーバー インスタンスに対する同じ手順について説明します。  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>ミラーリングの着信接続用に (HOST_A 上で) サーバー インスタンスを構成するには  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>ミラーリングの着信接続用に (HOST_A 上で) サーバー インスタンスを構成するには  
   
 1.  他のシステムへのログインを作成します。  
   
@@ -164,7 +165,7 @@ GO
  証明書を別のシステムにコピーする場合は、セキュリティで保護されたコピー方法を使用してください。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [GRANT (エンドポイントのアクセス許可の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

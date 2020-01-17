@@ -1,6 +1,7 @@
 ---
-title: いくつかの可用性レプリカが切断されている | Microsoft Docs
-ms.custom: ''
+title: いくつかの可用性レプリカが切断されている
+description: 可用性グループ レプリカが Always On SQL Server 可用性グループに対して切断されている場合の考えられる原因と解決策。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9bac7bdcc3961b3f6996be91062bea5382e11ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b90caaa83f17eb532db0747c62f473ba77f7ebdb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014110"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242600"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>いくつかの可用性レプリカが切断されている
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  

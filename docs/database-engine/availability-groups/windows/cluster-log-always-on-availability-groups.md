@@ -1,7 +1,7 @@
 ---
 title: 可用性グループ用の CLUSTER.LOG を生成および分析する
 description: 'Always On 可用性グループ用にクラスター ログを生成および分析する方法について説明します。 '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240756"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244381"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 可用性グループ用の CLUSTER.LOG を生成および分析する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="availability-group-resource-events"></a>可用性グループのリソース イベント  
  次の表に、可用性グループのリソースに関連するイベントのうち、CLUSTER.LOG 内で確認できる各種イベントを示します。 WSFC のリソース ホスティング サブシステム (RHS) およびリソース コントロール モニター (RCM) の詳細については、「[Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)」 (Windows Server 2008 フェールオーバー クラスターのリソース ホスティング サブシステム (RHS)) を参照してください。  
   
-|[Identifier]|Source|CLUSTER.LOG の例|  
+|[Identifier]|source|CLUSTER.LOG の例|  
 |----------------|------------|------------------------------|  
 |`[RES]` と `[hadrag]` が先頭に付けられたメッセージ|hadrres.dll (Always On リソース DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` オフライン要求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` リース スレッドが終了しました<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` 解放 SQL ステートメント<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` SQL Server からの切断|  
 |`[RHS]` が先頭に付けられたメッセージ|RHS.EXE (リソース ホスティング サブシステム、hadrres.dll のホスト プロセス)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] リソース ag がオフラインになりました。 RHS はリソースのステータスを RCM にレポートしようとしています。|  

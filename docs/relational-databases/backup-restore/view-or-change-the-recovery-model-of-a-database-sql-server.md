@@ -1,7 +1,7 @@
 ---
-title: データベースの復旧モデルの表示または変更 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/10/2019
+title: データベースの復旧モデルの設定
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908807"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254055"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908807"
 ##  <a name="BeforeYouBegin"></a> はじめる前に  
   
 
--   [完全復旧モデルまたは一括ログ復旧モデル](back-up-a-transaction-log-sql-server.md) **前** に、 [トランザクション ログをバックアップ](recovery-models-sql-server.md)を利用してデータベースを表示または変更する方法について説明します。  
+-   [完全復旧モデルまたは一括ログ復旧モデル](recovery-models-sql-server.md)から切り替える**前**に、[トランザクション ログをバックアップしてください](back-up-a-transaction-log-sql-server.md)。  
   
 -   一括ログ復旧モデルでは特定の時点に復旧できません。 一括ログ復旧モデルでトランザクション ログの復元を必要とするトランザクションを実行すると、データが失われる可能性があります。 障害復旧シナリオでデータをより確実に復旧するには、次の条件下でのみ一括ログ復旧モデルに切り替えることをお勧めします。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72908807"
   
 **メモ** 一括操作中に完全復旧モデルに切り替える場合は、一括操作のログ記録が最小ログ記録から完全ログ記録に変わり、また、その逆も同様です。  
   
-###  <a name="Security"></a> 必要な権限  
+###  <a name="Security"></a> 必要なアクセス許可  
    データベースに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -136,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
--   [ジョブの有効化または無効化](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   

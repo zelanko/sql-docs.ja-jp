@@ -1,6 +1,7 @@
 ---
-title: Microsoft レプリケーション競合表示モジュールとインタラクティブ競合回避モジュール | Microsoft Docs
-ms.custom: ''
+title: レプリケーション競合表示モジュールと競合回避モジュール
+description: SQL Server の Microsoft レプリケーション競合表示モジュールおよび Microsoft レプリケーション インタラクティブ競合回避モジュールについて説明する記事のリファレンスです。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f16148e5f48ebf36d0a4a03ef9f0c67485623740
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca0a64c6e7c9859ccb3f6d8697fb123134c3f31f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075866"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321969"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft レプリケーション競合表示モジュールとインタラクティブ競合回避モジュール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

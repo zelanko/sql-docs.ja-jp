@@ -1,6 +1,7 @@
 ---
-title: キャッシュ、更新、およびレプリケーション モニターのパフォーマンス | Microsoft Docs
-ms.custom: ''
+title: キャッシュ、更新、およびレプリケーション モニターのパフォーマンス
+description: SQL Server Management Studio (SSMS) でレプリケーション モニターのパフォーマンスをキャッシュ、更新、および最適化する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 137378b741e59a3b1c2cc4758213dc2acff0e6e7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0661822f2c39d197460d19bb01adc847151dfa35
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770569"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320637"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>キャッシュ、更新、およびレプリケーション モニターのパフォーマンス
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

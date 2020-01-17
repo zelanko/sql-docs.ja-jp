@@ -1,6 +1,5 @@
 ---
-title: SQL Server での拡張イベントからのターゲット データの詳細表示 | Microsoft Docs
-ms.custom: ''
+title: 拡張イベントからのターゲット データの詳細表示
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,13 +9,14 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909420"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255762"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server での拡張イベントからのターゲット データの詳細表示
 
@@ -32,7 +32,7 @@ ms.locfileid: "72909420"
 
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 この記事では、イベント セッションを作成して開始する方法を既に知っていることを前提としています。 イベント セッションを作成する方法については、次の記事の初めの部分で説明されています。
 

@@ -1,7 +1,7 @@
 ---
 title: インメモリ OLTP (インメモリ最適化) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 11/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581397e01991ef1fb23b8c4bbfa9de879bc39ac3
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494106"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401653"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>インメモリ OLTP とメモリ最適化
 
@@ -78,7 +78,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 
 -   [SQL Server のインメモリ OLTP と列ストア機能の比較](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
--   SQL Server 2016 のインメモリ OLTP の新機能の [第 1 部](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) と [第 2 部](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
+-   SQL Server 2016 のインメモリ OLTP の新機能の[パート 1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) と[パート 2](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
 -   [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)  
   
@@ -86,16 +86,16 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 
 ## <a name="anchorname-17minute-video"></a>17 分の動画、インデックス付き
 
-- _動画のタイトル:_ **SQL Server 2016 のインメモリ OLTP**
-- _公開日:_ 2019-03-10
-- _期間:_ 17:32
-- _ホスト元:_ SQL Server のシニア プログラム マネージャーである Jos de Bruijn
+- _動画のタイトル:_ &nbsp; **SQL Server 2016 のインメモリ OLTP**
+- _公開日:_ &nbsp; 2019-03-10 (`YouTube.com` 上)。
+- _期間:_ &nbsp; 17:32 &nbsp; &nbsp; (ビデオへのリンクについては、次の[**インデックス**](#anchorname-index-17minute-video)に関する記事を参照してください。)
+- _ホスト元:_ &nbsp; SQL Server のシニア プログラム マネージャーである Jos de Bruijn
 
 ### <a name="demo-can-be-downloaded"></a>デモをダウンロードできます
 
-時間マーク 08:09 では、動画でデモンストレーションが 2 回実行されます。 動画で使用されている実行可能なパフォーマンスのデモは、次のリンクからダウンロードできます。
+時間マーク 08:09 では、動画でデモンストレーションが 2 回実行されます。 動画で使用されている実行可能なパフォーマンス デモのソース コードは、次のリンクからダウンロードできます。
 
-- [インメモリ OLTP パフォーマンス デモ v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [インメモリ OLTP パフォーマンス デモ v1.0、ソース コード](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
 動画で見られる一般的な手順は次のとおりです。
 
@@ -103,7 +103,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 2. 次に、SQL Server Management Studio (SSMS.exe) で数回のクリックでテーブルのメモリ最適化エディションを作成し、設定する方法を確認します。
 3. 次に、メモリ最適化テーブルを使用してデモを再実行します。 大幅な速度の向上が測定されます。
 
-### <a name="index-to-each-section-in-the-video"></a>動画の各セクションへのインデックス
+### <a name="anchorname-index-17minute-video"></a>動画の各セクションへのインデックス
 
 | 時間マークのリンク | セクションのタイトル |
 | :------------- | :------------ |

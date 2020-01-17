@@ -1,7 +1,7 @@
 ---
-title: グループ ポリシーを使用した可用性グループの正常性の評価
+title: 可用性グループの正常性に対するグループ ポリシーの使用
 description: Always On ダッシュ ボードで、可用性グループの正常性の情報の提供に使用される、グループ システム ポリシーを表示する方法について説明します。
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fadf5ccccf60114bc6068cfe4a79dc70bca3ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a48450322a8552720a119ea325ed720669fe5a8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935004"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245647"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>グループ ポリシーを使用した Always On 可用性グループの正常性の評価
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67935004"
   
 3.  すべての可用性グループのシステム ポリシーを表示するには、 **[ページの選択]** ウィンドウで **[ポリシーの選択]** をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
- [Always On の正常性モデル: パート 2:正常性モデルの拡張](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)。   
+## <a name="next-steps"></a>次のステップ  
+ [Always On の正常性モデル: パート 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」 (Always On 正常性モデル、パート 2: 正常性モデルの拡張) で提供している GUI のチュートリアルに類似しています。   
   
   

@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性グループの Transact-SQL ステートメント | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの Transact-SQL ステートメント
+description: Always On 可用性グループの配置、作成、管理をサポートする Transact-SQL (T-SQL) ステートメントを導入します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b96b5d6921875aab92236475f4f6b66281a31599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013833"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822205"
 ---
-# <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性グループの Transact-SQL ステートメント
+# <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 可用性グループの Transact-SQL ステートメント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] の配置のほか、可用性グループ、可用性レプリカ、および可用性データベースの作成と管理をサポートする [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ステートメントについて説明します。  
@@ -60,6 +61,6 @@ ms.locfileid: "68013833"
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを実行したときに、別の可用性グループ アクションまたは復旧が進行中であった場合は、エラーが返されます。 必要に応じて、アクションまたは復旧の完了を待ってステートメントを再試行してください。  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

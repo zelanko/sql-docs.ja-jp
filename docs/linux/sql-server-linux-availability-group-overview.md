@@ -1,6 +1,7 @@
 ---
-title: Linux 上の SQL Server 用の Always On 可用性グループ
-description: ''
+title: SQL Server on Linux の可用性グループ
+description: SQL Server on Linux の Always On 可用性グループの特徴について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794995"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558638"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上の AlwaysOn 可用性グループ
 
@@ -113,7 +114,7 @@ AG でクォーラムを維持し、External のクラスターについて自�
 -   構成専用レプリカで障害が発生した場合、AG は正常に機能しますが、自動フェールオーバーは実行できません。
 -   同期セカンダリ レプリカと構成専用レプリカの両方で障害が発生した場合、プライマリはトランザクションを受け付けることができず、プライマリからのフェイルオーバー先もなくなります。
 
-CU1 では、`mssql-server-ha` によって生成される corosync.log ファイルのログに既知のバグがあります。 使用可能なレプリカの数が原因でセカンダリ レプリカがプライマリになることができない場合、現在のメッセージは "1 つのシーケンス番号を受け取る必要がありましたが、2 つしか受信されませんでした。 ローカル レプリカを安全に昇格させるための十分なレプリカがオンラインになっていません。" です。 これらの数は逆にする必要があります。正しいメッセージは次のとおりです: "2 つのシーケンス番号を受け取る必要がありましたが、1 つしか受信されませんでした。 ローカル レプリカを安全に昇格させるための十分なレプリカがオンラインになっていません。" 
+CU1 では、`mssql-server-ha` によって生成される corosync.log ファイルのログに既知のバグがあります。 使用可能なレプリカの数が原因でセカンダリ レプリカがプライマリになることができない場合、現在のメッセージは "1 つのシーケンス番号を受け取る必要がありましたが、2 つしか受信されませんでした。 ローカル レプリカを安全に昇格させるための十分なレプリカがオンラインになっていません。" これらの数は逆にする必要があります。正しいメッセージは次のとおりです: "2 つのシーケンス番号を受け取る必要がありましたが、1 つしか受信されませんでした。 ローカル レプリカを安全に昇格させるための十分なレプリカがオンラインになっていません。" 
 
 ## <a name="multiple-availability-groups"></a>複数の可用性グループ 
 
@@ -146,7 +147,7 @@ Pacemaker が使用されていて、リスナーに関連付けられた IP ア
 
 ![ハイブリッド None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散型 AG も、OS 境界をまたぐことができます。 基になる AG は、構成方法に関する規則によって制約を受けます (External で構成されたものは Linux のみだが、それが参加している AG は WSFC を使用して構成できるなど)。 次の例を参照してください。
+分散型 AG も、OS 境界をまたぐことができます。 基になる AG は、構成方法に関する規則によって制約を受けます (External で構成されたものは Linux のみだが、それが参加している AG は WSFC を使用して構成できるなど)。 次の例を確認してください。
 
 ![ハイブリッド分散型 AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
@@ -155,7 +156,7 @@ Pacemaker が使用されていて、リスナーに関連付けられた IP ア
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
  
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 [SQL Server on Linux の可用性グループを構成する](sql-server-linux-availability-group-configure-ha.md)
 
 [SQL Server on Linux の読み取りスケール可用性グループを構成する](sql-server-linux-availability-group-configure-rs.md)

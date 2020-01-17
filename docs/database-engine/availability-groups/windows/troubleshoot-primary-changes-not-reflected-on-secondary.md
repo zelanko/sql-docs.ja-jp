@@ -1,7 +1,7 @@
 ---
-title: 可用性グループでセカンダリ レプリカに変更が反映されない理由を判断する - SQL Server
+title: セカンダリ可用性グループ レプリカで変更が表示されない
 ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
-ms.custom: ag-guide,seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bed83c98489d1622e97dd84c9f5c1994715b60fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013681"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243009"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>可用性グループでセカンダリ レプリカにプライマリ レプリカの変更が反映されない理由を判断する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "68013681"
   
 -   DMV [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
--   パフォーマンス カウンター `SQL Server:Database > Log Bytes Flushed/sec`  
+-   パフォーマンス カウンター`SQL Server:Database > Log Bytes Flushed/sec`  
   
 -   パフォーマンス カウンター`SQL Server:Database Mirroring > Send/Receive Ack Time`  
   
@@ -126,7 +126,7 @@ from sys.dm_hadr_database_replica_states
   
  再実行スレッドが実際に遅れている場合、セカンダリ レプリカのパフォーマンスの低下の根本原因を調査する必要があります。 レポート ワークロードとの I/O の競合がある場合、[リソース ガバナー](~/relational-databases/resource-governor/resource-governor.md)を使用して、レポート ワークロードによって使用される CPU サイクルを制御し、取得される I/O サイクルを間接的にある程度制御することができます。 たとえば、レポート ワークロードが CPU の 10% を消費していても、ワークロードが I/O バウンドになっている場合は、リソース ガバナーを使用して、CPU リソースの使用率を 5% に制限し、読み取りワークロードを制限して、I/O への影響を最小限に抑えることができます。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  [SQL Server 2008 のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
   
   

@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982281"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002337"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,8 @@ ms.locfileid: "73982281"
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -168,7 +169,9 @@ FORCE ORDER
   
 {FORCE |無効にする EXTERNALPUSHDOWN}  
 強制または式を使用して hadoop の該当する計算のプッシュ ダウンを無効にします。 PolyBase を使用してクエリにのみ適用されます。 Azure ストレージにはプッシュダウンされません。  
-  
+
+{ FORCE | DISABLE } SCALEOUTEXECUTION SQL Server 2019 ビッグ データ クラスターで外部テーブルを使用している PolyBase クエリのスケールアウト実行を強制または無効にします。 このヒントは、SQL ビッグ データ クラスターのマスター インスタンスを使用するクエリによってのみ受け入れられます。 スケールアウトは、ビッグ データ クラスターのコンピューティング プール間で発生します。 
+
 KEEP PLAN  
 クエリ オプティマイザーに対して、クエリに推定される再コンパイルしきい値を緩和することを指定します。 推定される再コンパイルしきい値を指定すると、以下のいずれかのステートメントを実行して、予測した回数のインデックス列変更がテーブルに加えられた場合に、クエリの自動再コンパイルが開始されます。
 
@@ -275,7 +278,7 @@ ROBUST PLAN
    バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。     
    **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  テーブル変数の遅延コンパイルを無効にします。 詳細については、「[テーブル変数の遅延コンパイル](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)」をご覧ください。     
+  テーブル変数の遅延コンパイルを無効にします。 詳細については、「[テーブル変数の遅延コンパイル](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)」をご覧ください。     
   **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)」を参照してください。     
@@ -357,7 +360,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ **[,]** ..._n_ 
 > [!CAUTION] 
 > パラメーターを使用して FORCESEEK を指定すると、オプティマイザーで考慮できるプラン数の制限は、パラメーターなしで FORCESEEK を指定した場合よりも多くなります。 これにより、"プランを生成できない" というエラーが生じる回数が増加する可能性があります。 将来のリリースでは、オプティマイザーに対して内部変更を行うため、より多くのプランを考慮できるようになります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ステートメント内部で SELECT 句が使用されている場合を除き、クエリ ヒントは INSERT ステートメントでは指定できません。  
   
  クエリ ヒントはサブクエリではなく、最上位レベルのクエリでのみ指定できます。 テーブル ヒントがクエリ ヒントとして指定されている場合、ヒントは最上位レベルのクエリまたはサブクエリで指定できます。 ただし、TABLE HINT 句の _exposed\_object\_name_ に指定された値は、クエリまたはサブクエリの公開名と完全に一致する必要があります。  
@@ -380,7 +383,7 @@ INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、ク
 
 エラー 8072 はいくつかのシナリオで発生します。 1 つ目は、一致するクエリ ヒントがない OPTION 句で、TABLE HINT を使用して INDEX、FORCESCAN、または FORCESEEK 以外のテーブル ヒントを指定した場合です。 2 つ目のシナリオはその逆です。 このエラーは、OPTION 句によってクエリのセマンティクスが変更され、クエリが失敗した可能性があることを示しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-merge-join"></a>A. MERGE JOIN を使用する  
  次の例では、クエリの JOIN 操作を MERGE JOIN によって実行することを指定します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  

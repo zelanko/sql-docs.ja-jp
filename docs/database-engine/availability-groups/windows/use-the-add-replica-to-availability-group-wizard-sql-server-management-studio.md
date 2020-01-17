@@ -1,7 +1,7 @@
 ---
-title: SSMS でウィザードを使用して可用性グループにレプリカを追加する - SQL Server
+title: 可用性グループへのレプリカ追加 (SSMS)
 ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a89678fd2964e528ed09a38184fc295e0c955d98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013564"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244981"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>SQL Server Management で可用性グループ ウィザードを使用し、Always On 可用性グループにレプリカを追加する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68013564"
   
 -   現在のプライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
--   セカンダリ レプリカを追加する前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のホスト インスタンスが、既存のレプリカとして同じ Windows Server フェールオーバー クラスター (WSFC) にあり、さらに、異なるクラスター ノードにあることを確認します。 また、このサーバー インスタンスが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他のすべての前提条件を満たしていることも確認します。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
+-   セカンダリ レプリカを追加する前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のホスト インスタンスが、既存のレプリカとして同じ Windows Server フェールオーバー クラスター (WSFC) にあり、さらに、異なるクラスター ノードにあることを確認します。 また、このサーバー インスタンスが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他のすべての前提条件を満たしていることも確認します。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
 -   可用性レプリカのホストとして選択したサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、ウィザードでエンドポイントを作成し、サーバー インスタンスのサービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してから、可用性グループへのレプリカ追加ウィザードを起動することをお勧めします。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68013564"
   
 1.  オブジェクト エクスプローラーで、可用性グループのプライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  **[Always On 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  セカンダリ レプリカを追加する可用性グループを右クリックし、 **[レプリカの追加]** をクリックします。 可用性グループへのレプリカ追加ウィザードが起動します。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "68013564"
   
 7.  **[最初のデータの同期を選択]** ページで、新しいセカンダリ データベースを作成して可用性グループに参加させる方法を選択します。 次のいずれかのオプションを選択します。  
   
-    -   **Full**  
+    -   **完全**  
   
-         使用している環境が、初期データの同期を自動的に開始するための要件を満たす場合は、このオプションを選択します (詳細については、このトピックの「 [前提条件、制限事項、および推奨事項](#Prerequisites)」を参照してください)。  
+         使用している環境が、初期データの同期を自動的に開始するための要件を満たす場合は、このオプションを選択します (詳細については、このトピックの「 [前提条件、制限事項、および推奨事項](#Prerequisites)」をご覧ください)。  
   
          **[完全]** を選択すると、可用性グループを作成後、ウィザードはすべてのプライマリ データベースとそのトランザクション ログをネットワーク共有にバックアップし、新しいセカンダリ レプリカをホストするすべてのサーバー インスタンスでそのバックアップを復元します。 その後、ウィザードは、すべての新しいセカンダリ データベースを可用性グループに参加させます。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68013564"
   
     -   **[最初のデータの同期をスキップ]**  
   
-         プライマリ データベースの独自のデータベースとログ バックアップを使用する場合は、このオプションを選択します。 詳細については、「[Always On セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41; ](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
+         プライマリ データベースの独自のデータベースとログ バックアップを使用する場合は、このオプションを選択します。 詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
 8.  **[検証]** ページでは、このウィザードで指定した値が、可用性グループへのレプリカ追加ウィザードの要件を満たしているかどうかが確認されます。 変更が必要な場合は、 **[戻る]** をクリックして前のウィザード ページに戻り、値を変更できます。 その後、 **[次へ]** をクリックして **[検証]** ページに戻り、 **[検証の再実行]** をクリックします。  
   

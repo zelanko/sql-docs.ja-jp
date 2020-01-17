@@ -10,23 +10,22 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545056"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241746"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
 Azure Data Studio とは、Windows、macOS、Linux 上でオンプレミス プラットフォーム、クラウド データ プラットフォームの Microsoft ファミリを使用するデータ プロフェッショナルを対象にした、クロスプラットフォーム データベース ツールです。
 
-SQL Operations Studio というプレビュー名で以前にリリースされていた Azure Data Studio では、IntelliSense、コード スニペット、ソース管理の統合、統合されたターミナルを含む最新のエディター エクスペリエンスが提供されています。 これは、データ プラットフォームのユーザーを念頭に置いて設計されており、クエリ結果セットのグラフ化機能とカスタマイズ可能なダッシュボードが組み込まれています。
+Azure Data Studio では、IntelliSense、コード スニペット、ソース管理の統合、統合されたターミナルを含む最新のエディター エクスペリエンスが提供されています。 これは、データ プラットフォームのユーザーを念頭に置いて設計されており、クエリ結果セットのグラフ化機能とカスタマイズ可能なダッシュボードが組み込まれています。
 
 Azure Data Studio のソース コードとそのデータ プロバイダーは、ソース コード EULA の下の GitHub で利用できます。この EULA では、ソフトウェアを変更および使用する権利が提供されますが、ソフトウェアを再配布したりクラウドサービス内でホストしたりすることはできません。 詳細については、「[Azure Data Studio FAQ](faq.md)」(Azure Data Studio の FAQ) を参照してください。
 
 **[ダウンロードしてインストールする[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## <a name="sql-code-editor-with-intellisense"></a>IntelliSense を使用した SQL コード エディター
 
@@ -37,7 +36,6 @@ Azure Data Studio のソース コードとそのデータ プロバイダーは
 SQL コード スニペットにより、データベース、テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールなどを作成するため、および既存のデータベース オブジェクトを更新するための適切な SQL 構文が生成されます。 スマート スニペットを使用して、開発またはテストを目的としたデータベースのコピーをすばやく作成したり、CREATE および INSERT スクリプトを生成して実行したりできます。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] には、カスタム SQL コード スニペットを作成する機能も用意されています。 詳細については、「[コード スニペットの作成と使用](code-snippets.md)」を参照してください。
-
 
 ## <a name="customizable-server-and-database-dashboards"></a>カスタマイズ可能なサーバーとデータベースのダッシュボード
 
@@ -61,16 +59,17 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) との機能の比較
 
 **Azure Data Studio は次のような場合に使用します。**
+
 - macOS または Linux 上で実行する必要がある
 - SQL Server 2019 ビッグ データ クラスターに接続しようとしている
 - ほとんどの時間をクエリの編集や実行に使用している
 - 結果セットをすばやくグラフ化して視覚化する機能が必要である
 - sqlcmd または PowerShell を使用して統合ターミナル経由でほとんどの管理タスクを実行することができる
 - ウィザード エクスペリエンスの必要は最小限である
-- 詳細な管理構成を行う必要はない
-- 実行したい操作がある 
+- 詳細な管理構成を行う必要がない
 
 **SQL Server Management Studio は次の場合に使用します。**
+
 - ほとんどの時間をデータベース管理タスクに費やしている
 - 詳細な管理構成を実行している
 - ユーザー管理、脆弱性評価、セキュリティ機能の構成などのセキュリティ管理を行っている
@@ -100,7 +99,6 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |DACPAC のインポート/エクスポート||はい|
 |オブジェクトのプロパティ||はい|
 |テーブル デザイナー (Table Designer)||はい|
-
 
 ### <a name="query-editor"></a>クエリ エディター
 
@@ -146,7 +144,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |フラット ファイルのインポート|プレビュー|はい|
 |SQL エージェント|プレビュー|はい|
 |SQL Profiler|プレビュー|はい|
-|Always On||はい|
+|常時接続||はい|
 |Always Encrypted||はい|
 |データ コピー ウィザード||はい|
 |データ チューニング アドバイザー||はい|
@@ -157,7 +155,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |PolyBase||はい|
 |クエリ ストア||はい|
 |[登録済みサーバー]||はい|
-|のレプリケーション||はい|
+|レプリケーション||はい|
 |セキュリティ管理||はい|
 |Service Broker||はい|
 |SQL Mail||はい|
@@ -166,7 +164,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |XEvent 管理||はい|
 |SQL Assessment API の統合||はい|
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [ダウンロードしてインストールする[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)

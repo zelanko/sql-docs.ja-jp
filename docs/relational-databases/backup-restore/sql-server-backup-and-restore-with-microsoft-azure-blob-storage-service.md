@@ -1,7 +1,7 @@
 ---
-title: Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: Azure BLOB ストレージを使用したバックアップと復元
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041371"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251135"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![Azure BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azure BLOB へのバックアップのグラフィック")  
+  ![Azure BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azre BLOB へのバックアップのグラフィック")  
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft Azure Blob ストレージ サービス [への](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)のバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68041371"
 
 [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
-[チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+[チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   

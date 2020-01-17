@@ -1,6 +1,7 @@
 ---
-title: Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ミラーリング監視の構成
+description: 'Transact-SQL を使用して Windows 認証でデータベース ミラーリング監視を構成する方法について説明します。 '
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: df8fe05e66c50b6bdee8e6bdfd792a2b481d1e02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945654"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822299"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67945654"
 > [!IMPORTANT]  
 >  構成はパフォーマンスに影響する場合があるので、データベース ミラーリングの構成はピーク タイム以外の時間に行うことをお勧めします。  
   
-### <a name="to-establish-a-witness"></a>ミラーリング監視を確立するには  
+## <a name="establish-a-witness"></a>ミラーリング監視サーバーの確立  
   
 1.  ミラーリング監視サーバーのインスタンスで、データベース ミラーリングのエンドポイントが存在することを確認します。 サポートされるミラーリング セッションの数に関係なく、サーバー インスタンスにはデータベース ミラーリング エンドポイントが 1 つだけ存在する必要があります。 このサーバー インスタンスをデータベース ミラーリング セッションのミラーリング監視専用に使用する場合、ミラーリング監視の役割をエンドポイントに割り当てます (ROLE **=** WITNESS)。 このサーバー インスタンスを 1 つ以上の他のデータベース ミラーリング セッションのパートナーとして使用する場合、エンドポイントの役割を ALL に割り当てます。  
   

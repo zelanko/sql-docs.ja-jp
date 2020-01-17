@@ -1,6 +1,7 @@
 ---
-title: GRANT-DENY-REVOKE Perms-Azure SQL データおよび並列データ ウェアハウス | Microsoft Docs
-ms.custom: ''
+title: GRANT-DENY-REVOKE の権限
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
@@ -13,12 +14,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095587"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255475"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>権限:GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "74095587"
   
 -   **REVOKE** は、既存の **GRANT** または **DENY** アクセス許可を削除します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -80,7 +81,7 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  1 つまたは複数のアクセス許可を付与、拒否、または取り消します。  
   
- ON [ \<class_type> :: ] *securable* **ON** 句は、アクセス許可を許可、拒否、または削除するセキュリティ保護可能なパラメーターを記述します。  
+ ON [ \<class_type> :: ] *securable***ON** 句は、アクセス許可を許可、拒否、または削除するセキュリティ保護可能なパラメーターを記述します。  
   
  \<class_type> セキュリティ保護可能なクラス型。 これは、**LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE**、または **USER** です。 **SERVER**_class\_type_ にアクエス許可を付与することもできますが、**SERVER** は、これらのアクセス許可に対して指定されません。 **DATABASE** は、アクセス許可に **DATABASE** という単語が含まれる場合 (たとえば **ALTER ANY DATABASE**) 指定されません。 *class_type* が指定されておらず、アクセス許可のタイプがサーバーまたはデータベースのクラスに制限されていない場合、クラスは **OBJECT** と見なされます。  
   
@@ -125,7 +126,7 @@ REVOKE
   
  暗黙的なアクセス許可は、包含または親のアクセス許可からも継承できます。 たとえば、テーブルの **UPDATE** アクセス許可は、テーブルが含まれるスキーマに対する **UPDATE** アクセス許可、またはテーブルの **CONTROL** アクセス許可を持つことによって継承できます。  
   
-### <a name="ownership-chaining"></a>組み合わせ所有権  
+### <a name="ownership-chaining"></a>所有権の継承  
  複数のデータベース オブジェクトが連続して互いにアクセスしている場合、このシーケンスは*チェーン*と呼ばれます。 このようなチェーンは単独では存在しませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がチェーン内のリンクを移動する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、構成要素であるオブジェクトに対する権限が、オブジェクトに個別にアクセスした場合とは異なる方法で評価されます。 所有権の継承は、セキュリティの管理に重要な影響を与えます。 所有権の継承の詳細については、次を参照してください「[所有権の継承](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)」および「[チュートリアル:所有権の継承とコンテキストの切り替え](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)」です。  
   
 ## <a name="permission-list"></a>アクセス許可の一覧  
@@ -241,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>アクセス許可のグラフ  
  すべてのアクセス許可は、このポスターでグラフィカルに表されます。 これは、アクセス許可の入れ子になった階層構造を確認する最も簡単な方法です。 たとえば、**ALTER ON LOGIN** 自体でアクセス許可を与えることができますが、ログインがそのログインに対する **CONTROL** アクセス許可を与えられている場合、またはログインが **ALTER ANY LOGIN** アクセス許可を与えられている場合にも含まれます。  
   
- ![APS セキュリティの権限ポスター](../../t-sql/statements/media/aps-security-perms-poster.png "APS セキュリティの権限ポスター")  
+ ![APS セキュリティの権限ポスター](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
   
  このポスターのフル サイズ バージョンをダウンロードするには、APS Yammer サイトのファイルのセクションの「[SQL Server PDW のアクセス許可](https://go.microsoft.com/fwlink/?LinkId=244249)」を参照してください (または **apsdoc\@microsoft.com** に電子メールで要求してください)。  
   

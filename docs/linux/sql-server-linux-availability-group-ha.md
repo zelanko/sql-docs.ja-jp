@@ -1,5 +1,7 @@
 ---
-title: SQL Server Always On 可用性グループのデプロイ パターン
+title: 可用性グループの展開パターン - SQL Server on Linux
+description: Linux サーバー上の SQL Server Always On 可用性グループに対してサポートされているデプロイ構成について説明します。
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -8,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996432"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558477"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループ構成の高可用性とデータ保護
 

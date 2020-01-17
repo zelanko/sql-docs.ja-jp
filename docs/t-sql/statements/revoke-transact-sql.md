@@ -29,12 +29,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef120c0899a14669d8f7f92f42da72d139599aa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982890"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74909028"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,11 +136,11 @@ REVOKE
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *principal*  
- 自分以外のプリンシパルによって付与された権限を取り消すことを示すには、AS <principal> 句を使用します。 たとえば、ユーザー Mary の principal_id は 12、ユーザー Raul の principal_id は 15 であるものとします。 Mary と Raul はどちらも、Steven という名前のユーザーに同じ権限を付与します。 sys.database_permissions テーブルでは、同じ権限が 2 回表示されますが、grantor_prinicpal_id の値は異なります。 Mary は、`AS RAUL` 句を使って、Raul の権限付与を取り消すことができます。
+ 自分以外のプリンシパルによって付与された権限を取り消すことを示すには、AS <principal> 句を使用します。 たとえば、ユーザー Mary の principal_id が 12、ユーザー Raul の principal_id が 15 であるとします。 Mary と Raul はどちらも、Steven という名前のユーザーに同じ権限を付与します。 sys.database_permissions テーブルでは、同じ権限が 2 回表示されますが、grantor_prinicpal_id の値は異なります。 Mary は、`AS RAUL` 句を使って、Raul の権限付与を取り消すことができます。
  
 このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  REVOKE ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 特定のセキュリティ保護可能なリソースに対する権限を取り消すための完全な構文については、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
   
  許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT によってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
@@ -148,7 +148,7 @@ REVOKE
  権限を許可すると、指定したセキュリティ保護可能なリソースに対する権限の DENY または REVOKE は削除されます。 対象のセキュリティ保護可能なリソースの上位スコープで同じ権限が拒否されている場合は、その DENY ステートメントが優先されますが、 ただし、上位スコープで許可されている権限を取り消そうとしても、その REVOKE ステートメントは優先されません。  
   
 > [!CAUTION]  
->  テーブル レベルの DENY ステートメントは列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
+>  テーブル レベルの DENY は列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
   
  システム ストアド プロシージャ sp_helprotect では、データベース レベルのセキュリティ保護可能なリソースに対する権限がレポートされます  
   
@@ -175,25 +175,25 @@ REVOKE
 |データベース スコープ資格情報|[REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
 |フルテキスト カタログ|[REVOKE (フルテキストの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |フルテキスト ストップリスト|[REVOKE (フルテキストの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|機能|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Login|[REVOKE (サーバー プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|Function|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|ログイン|[REVOKE (サーバー プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |メッセージ型|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Object|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |キュー|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |リモート サービス バインド|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|ロール|[REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Route|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Role|[REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|ルート|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |スキーマ|[REVOKE (スキーマ権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |検索プロパティ リスト|[REVOKE (検索プロパティ リスト権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|[サーバー]|[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|サーバー|[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
 |サービス|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |ストアド プロシージャ|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |対称キー|[REVOKE (対称キーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
 |シノニム|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |システム オブジェクト|[REVOKE (システム オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
 |テーブル|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|型|[REVOKE (型の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
-|ユーザー|[REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|種類|[REVOKE (型の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
+|User|[REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |表示|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML スキーマ コレクション|[REVOKE (XML スキーマ コレクションの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   

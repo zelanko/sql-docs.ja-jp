@@ -1,7 +1,7 @@
 ---
-title: データベースの全体復元 (単純復旧モデル) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: データベースの復元 - 単純復旧モデル
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: bb6b9d703d98eae5858cc37d865d81455c03f4f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081381"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242576"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>データベースの全体復元 (単純復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "68081381"
 ##  <a name="Overview"></a> 単純復旧モデルでのデータベース復元の概要  
  単純復旧モデルでのデータベース全体の復元は、データベースの差分バックアップを復元する必要があるかどうかに応じて 1 つまたは 2 つの [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで行われます。 次の図に示すように、データベースの完全バックアップのみを使用する場合は、最新のバックアップを復元するだけで完了します。  
   
- ![データベースの完全バックアップのみを復元](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "データベースの完全バックアップのみを復元")  
+ ![データベースの完全バックアップのみの復元](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "データベースの完全バックアップのみの復元")  
   
  データベースの差分バックアップも使用する場合は、データベースを復旧しないで最新の完全バックアップを復元してから、最新の差分バックアップを復元してデータベースを復旧します。 次の図に、このプロセスを示します。  
   
- ![データベース全体と差分バックアップを復元](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "データベース全体と差分バックアップを復元")  
+ ![データベースの完全および差分バックアップを復元する](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "データベースの完全および差分バックアップの復元")  
   
 > [!NOTE]  
 >  データベースのバックアップを別のサーバー インスタンスに復元する予定の場合は、「 [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  

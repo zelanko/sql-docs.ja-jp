@@ -1,6 +1,5 @@
 ---
-title: 選択的 XML インデックスのパスと最適化ヒントの指定 | Microsoft Docs
-ms.custom: ''
+title: 選択的 XML インデックスのパスと最適化ヒント | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +9,13 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905233"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257611"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -271,7 +271,7 @@ FOR
 )  
 ```  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  異なる XQuery 型用のインデックスを設定するために適切なノードを選択するいくつかの例を次に示します。  
   
  **例 1**  
@@ -377,7 +377,7 @@ WHERE T.xmldata.exist('
   
  node() 最適化ヒントを使用して、一般的なクエリではその値を評価する必要がないノードを指定できます。 このヒントは、通常のクエリがノードの存在のみを評価する必要があるときに必要なメモリ量が減少します (既定では、選択的 XML インデックスは、complex ノード型以外の昇格されたすべてのノードの値を格納します)。  
   
- 次の例を参照してください。  
+ 次の例を確認してください。  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  

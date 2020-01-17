@@ -1,5 +1,5 @@
 ---
-title: 可用性グループの拡張データベース フェールオーバーの有効化
+title: 可用性グループのフェールオーバーの強化
 description: Always On 可用性グループ内のデータベースがトランザクションを書き込むことができなくなった場合にフェールオーバーをトリガーする、拡張データベース フェールオーバーを有効にする手順です。
 ms.custom: seodec18
 ms.date: 09/25/2017
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947958"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822247"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Always On 可用性グループのデータベースの拡張データベース フェールオーバーの有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ SQL Server 2016 には、ウィザードまたは TRANSACT-SQL を使用して�
 
 インスタンス A とインスタンス B 間で可用性グループが構成されています。これには、DB1 と DB2 という 2 つのデータベースが格納されています。 この可用性モードは、同期コミットと自動フェールオーバー モードに設定されており、拡張データベース フェールオーバーが有効になっています。 DB2 のデータとトランザクション ログ ファイルを含むディスクへのアクセスが失われています。 可用性グループは、問題が検出されると、インスタンス B に自動的にフェールオーバーされます。
 
-## <a name="configure-and-view-the-enhanced-database-failover-option"></a>拡張データベース フェールオーバー オプションを構成および参照する
+## <a name="configure-enhanced-failover"></a>拡張フェールオーバーの構成
 
 拡張データベース フェールオーバーは、SQL Server Management Studio または TRANSACT-SQL を使用して構成できます。 現在、PowerShell コマンドレットでは、この機能は実行できません。 既定では、拡張データベース フェールオーバーは無効です。
 
@@ -75,7 +75,7 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ### <a name="dynamic-management-view"></a>動的管理ビュー
 可用性グループでエンハンスド データベース フェールオーバーが有効かどうかを確認するには、動的管理ビュー `sys.availability_groups` に対してクエリを実行します。 列 `db_failover` は、無効の場合は 0 を、有効の場合は 1 になっています。 
 
-## <a name="next-steps"></a>次の手順 
+## <a name="next-steps"></a>次のステップ 
 
 - [データベース ヘルス検出の構成](sql-server-always-on-database-health-detection-failover-option.md)
 

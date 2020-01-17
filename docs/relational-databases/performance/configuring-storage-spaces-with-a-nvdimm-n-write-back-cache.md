@@ -1,6 +1,6 @@
 ---
-title: NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成 | Microsoft Docs
-ms.custom: ''
+title: 記憶域の構成 - NVDIMM-N ライト バック キャッシュ
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137993"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165986"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![FriendlyName の選択](../../relational-databases/performance/media/select-friendlyname.png "FriendlyName の選択")  
+ ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>記憶域プールの作成  
  PhysicalDisks を含む $pd 変数を使用すると、New-StoragePool PowerShell コマンドレットを使用して記憶域プールを構築するのが容易になります。  

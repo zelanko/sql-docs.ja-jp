@@ -1,6 +1,7 @@
 ---
-title: レプリケーション モニターのしきい値と警告の設定 | Microsoft Docs
-ms.custom: ''
+title: しきい値と警告の設定 (レプリケーション モニター)
+description: SQL Server Management Studio (SSMS) 内のレプリケーション モニターを使用し、レプリケーションで発生することがあるさまざまな状態に対する警告を有効にする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fcc0e1482d3b38a395724f090805767291b609d7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bf3d9ba88f433619a79c9f4453823e81589b4ee3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767603"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322278"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>レプリケーション モニターのしきい値と警告の設定
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "68767603"
   
 4.  **[しきい値]** 列で警告のしきい値を設定します。 たとえば、手順 3. で **[待機時間がしきい値を超えた場合に警告します]** チェック ボックスをオンにした場合、 **[しきい値]** 列で **60 秒** の待機時間を選択します。  
   
-5.  **[変更の保存]** をクリックします。  
+5.  **[変更を保存]** をクリックします。  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>しきい値の警告を構成するには  
   
@@ -109,7 +110,7 @@ ms.locfileid: "68767603"
   
 4.  **[しきい値]** 列で警告のしきい値を設定します。 たとえば、手順 3. で **[ダイヤルアップ接続のマージ長がしきい値を超えた場合に警告します]** を選択した場合、 **[しきい値]** 列では **[10 分]** を選択します。  
   
-5.  **[変更の保存]** をクリックします。  
+5.  **[変更を保存]** をクリックします。  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>しきい値の警告を構成するには  
   
@@ -141,7 +142,7 @@ ms.locfileid: "68767603"
   
 4.  **[しきい値]** 列で警告のしきい値を設定します。 たとえば、 **[しきい値]** 列で **[70%]** の値を選択できます。  
   
-5.  **[変更の保存]** をクリックします。  
+5.  **[変更を保存]** をクリックします。  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>しきい値の警告を構成するには  
   

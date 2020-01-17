@@ -1,6 +1,7 @@
 ---
-title: SQL Server Management Studio を使用した Always Encrypted の構成 | Microsoft Docs
-ms.custom: ''
+title: SSMS を使用した Always Encrypted の構成
+description: SQL Server Management Studio (SSMS) を使用して Always Encrypted データベースを構成し、管理するためのタスクについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff7ef354fdf3118f68c22bf2ad927070bf8e4b6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7c033cf8200103fe6198661f7ed0e3e2a6c3966a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594422"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557869"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Always Encrypted の構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ SSMS では、データベースを管理するユーザー (DBA) と、暗号�
 - [SQL Server インポートおよびエクスポート ウィザードで Always Encrypted を使用して列間でデータを移行する](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>参照
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)

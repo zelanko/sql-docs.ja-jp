@@ -1,22 +1,23 @@
 ---
-title: Red Hat Enterprise Linux で SQL Server を開始する
+title: RHEL:Linux 上に SQL Server をインストールする
 titleSuffix: SQL Server
-description: このクイックスタートでは、Red Hat Enterprise Linux に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
+description: このクイックスタートでは、Red Hat Enterprise Linux (RHEL) に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
 author: VanMSFT
+ms.custom: seo-lt-2019
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b94ea0ef8956e7807f075da548ae817dc6a205df
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b93ea834e890981d3fd45fd999a05ae5b2b68042
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531371"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558439"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート: Red Hat に SQL Server をインストールし、データベースを作成する
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート:Red Hat に SQL Server をインストールし、データベースを作成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -36,7 +37,7 @@ ms.locfileid: "73531371"
 > [!TIP]
 > このチュートリアルには、ユーザー入力とインターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)のインストール手順について関心をお持ちの場合は、[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md)に関する記事を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 RHEL 7.3、7.4、7.5、7.6 コンピューターには**少なくとも 2 GB** のメモリが必要です。
 

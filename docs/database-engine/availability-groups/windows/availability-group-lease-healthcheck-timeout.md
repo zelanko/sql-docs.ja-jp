@@ -1,7 +1,7 @@
 ---
-title: 可用性グループ リースの正常性チェック タイムアウトのしくみ
+title: 可用性グループ リースの正常性チェック タイムアウト
 description: Always On 可用性グループのリース、クラスター、正常性チェック タイムのしくみとガイドライン。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874361"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254056"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性グループのリース、クラスター、正常性チェック タイムアウトのしくみとガイドライン。 
 
@@ -136,7 +136,7 @@ Always On の正常性チェックは、FailureConditionLevel および HealthCh
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 
 ```
 
-正常性チェック タイムアウトを構成するには、`CREATE` または `ALTER` `AVAILABILITY GROUP` ステートメントの `HEALTH_CHECK_TIMEOUT` オプションを使用します。 次のコマンドでは、AG AG1 の正常性チェック タイムアウトを 60000 ミリ秒に設定します。 
+正常性チェック タイムアウトを構成するには、`CREATE` または `ALTER``AVAILABILITY GROUP` ステートメントの `HEALTH_CHECK_TIMEOUT` オプションを使用します。 次のコマンドでは、AG AG1 の正常性チェック タイムアウトを 60000 ミリ秒に設定します。 
 
 
 ```sql
@@ -153,7 +153,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | タイムアウトの設定 | 用途 | [次の値の間] | 使用法 | IsAlive と LooksAlive | 原因 | 結果 
+ | タイムアウトの設定 | 目的 | 。 | 用途 | IsAlive と LooksAlive | 原因 | 結果 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | リースのタイムアウト </br> **既定値: 20000** | スプリット ブレインを防ぐ | プライマリからクラスター </br> (HADR) | [Windows イベント オブジェクト](/windows/desktop/Sync/event-objects)| 両方で使用される | OS の応答停止、仮想メモリの不足、ワーキング セット ページング、ダンプの生成、固定された CPU、WSFC ダウン (クォーラムの損失) | AG リソースのオフライン - オンライン、フェールオーバー |  
  | セッション タイムアウト </br> **既定値: 10000** | プライマリとセカンダリの間の通信の問題を通知する | セカンダリからプライマリ </br> (HADR) | [TCP ソケット (DBM エンドポイント経由で送信されるメッセージ)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 両方で使用されない | ネットワーク通信、 </br> セカンダリでの問題 - ダウン、OS の応答停止、リソースの競合 | セカンダリ - 切断 | 

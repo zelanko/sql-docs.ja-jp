@@ -1,6 +1,7 @@
 ---
-title: レッスン 2:名前付け基準ポリシーの作成と適用 | Microsoft Docs
-ms.custom: ''
+title: 'レッスン 2: 名前付け基準ポリシーの作成と適用'
+description: このチュートリアルでは、SQL Server でポリシーベース管理に名前付け基準ポリシーを作成して適用する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907061"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558697"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2:名前付け基準ポリシーの作成と適用
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2: 名前付け基準ポリシーの作成と適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ポリシー ベースの管理の一部の種類のポリシーでは、ポリシーへの今後の準拠を適用するためのトリガーを作成することができます。 このレッスンでは、テーブルの名前付け基準を適用するポリシーを作成します。 その後に、ポリシーに違反するテーブルを作成してポリシーをテストします。  
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルを完了するには、SQL Server Management Studio と SQL Server を実行しているサーバーへのアクセスが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
   
 ## <a name="create-the-finance-database"></a>Finance データベースの作成  

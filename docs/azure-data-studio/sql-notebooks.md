@@ -1,21 +1,21 @@
 ---
-title: Azure Data Studio で SQL Notebook を使用する方法
+title: SQL Notebook の使用方法
 titleSuffix: Azure Data Studio
 description: Azure Data Studio で SQL Notebook を使用する方法について説明します
-ms.custom: seodec18
-ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; sstein
+ms.reviewer: achatter; alayu; maghan; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/28/2019
+ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959262"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957086"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを使用する方法
 
@@ -40,7 +40,7 @@ Azure Data Studio では、F1 キーを押して、 **[新しい接続]**  を�
 3. **[SQL Server]** 接続を右クリックして、 **[新しいノートブック]** を開始します。 
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-4. コマンド パレット (**Ctrl+Shift+P**) を開き、 **[新しいノートブック]** に入力します。 `Notebook-1.ipynb` という名前の新しいファイルが開きます。
+4. コマンド パレット (**Ctrl + Shift + P**) を開き、 **[新しいノートブック]** に入力します。 `Notebook-1.ipynb` という名前の新しいファイルが開きます。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>サポートされているカーネルとコンテキストへのアタッチ
 
@@ -89,7 +89,7 @@ PostgreSQL サーバー インスタンスに接続する SQL カーネル
 |Spark カーネル|クラスターから Spark コンピューティングを使用して Scala および R コードを作成します。
 |Python カーネル|ローカル開発用の Python コードを作成します。
 
-`Attach to` によって、アタッチするカーネルのコンテキストが提供されます。 SQL カーネルを使用している場合は、任意の SQL Server インスタンスに `Attach to` (アタッチ) できます。
+`Attach to` によって、アタッチするカーネルのコンテキストが提供されます。 SQL カーネルを使用している場合は、任意の SQL Server インスタンスに `Attach to` することができます。
 
 Python3 カーネルを使用している場合、`Attach to` は `localhost` です。 このカーネルは、ローカルの Python 開発に使用できます。
 
@@ -178,6 +178,6 @@ import <package-name>
 
 これらのパッケージのいずれかを**アンインストール**する必要がある場合は、1 つ以上のパッケージをクリックし、 **[選択したパッケージをアンインストールする]** オプションをクリックします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 既存のノートブックを操作する方法については、「[Azure Data Studio でノートブックを管理する方法](https://docs.microsoft.com/sql/big-data-cluster/notebooks-how-to-manage?view=sqlallproducts-allversions)」を参照してください。

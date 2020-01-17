@@ -1,6 +1,7 @@
 ---
-title: フェールオーバー クラスター インスタンスのストレージ NFS を構成する - SQL Server on Linux
-description: ''
+title: NFS ストレージ FCI の構成 - SQL Server on Linux
+description: SQL Server 用の NFS ストレージを使用してフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032359"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558337"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスを構成する - NFS - SQL Server on Linux
 
@@ -49,7 +50,7 @@ NFS サーバーで共有されるようにフォルダーを構成するとき�
 
     \<IPAddressOfNFSServer> は、使用する NFS サーバーの IP アドレスです。
 
-3. システム データベース、または既定のデータの場所に格納されているものについては、次の手順に従います。 それ以外の場合は、手順 4 に進みます。
+3. システム データベース、または既定のデータの場所に格納されているものについては、以下の手順に従います。 それ以外の場合は、手順 4 に進みます。
  
    * 作業中のサーバーで SQL Server が停止していることを確認します。
 
@@ -244,7 +245,7 @@ NFS サーバーで共有されるようにフォルダーを構成するとき�
 5. その他のノードでこれらの手順を繰り返します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

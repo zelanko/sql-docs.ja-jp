@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:テーブル領域使用のサンプル分析情報ウィジェットを有効にする
+title: テーブル領域使用のサンプル分析情報ウィジェットを有効にする
 titleSuffix: Azure Data Studio
 description: このチュートリアルでは、Azure Data Studio データベース ダッシュボードでテーブル領域使用のサンプル分析情報ウィジェットを有効にする方法について説明します。
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878667"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957016"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル:[!INCLUDE[name-sos](../includes/name-sos-short.md)] を利用し、テーブル領域使用のサンプル分析情報ウィジェットを有効にする
 
@@ -26,7 +26,7 @@ ms.locfileid: "70878667"
 > * テーブル領域の使用状況の詳細を表示する
 > * 分析情報グラフでデータにフィルターを適用し、ラベル詳細を表示する
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルには、SQL Server か Azure SQL Database *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "70878667"
 
    ![検索設定](media/tutorial-table-space-sql-server/search-settings.png)
 
-   <bpt id="p2">**</bpt>[ユーザー設定]<ept id="p2">**</ept> セクションに <bpt id="p1">**</bpt>dashboard.database.widgets<ept id="p1">**</ept> がない場合、[デフォルト設定] 列の <bpt id="p3">**</bpt>dashboard.database.widgets<ept id="p3">**</ept> テキストにカーソルを合わせ、テキストの左に表示された<bpt id="p4">*</bpt>歯車<ept id="p4">*</ept>アイコンをクリックし、<bpt id="p5">**</bpt>[Copy as Setting JSON]<ept id="p5">**</ept>\(設定 JSON としてコピー\) をクリックします。 ポップアップに **[設定を置換]** と表示された場合、それをクリックしないでください。 右にある **[ユーザー設定]** 列に移動し、**dashboard.database.widgets** セクションを見つけ、次の手順に進みます。
+   **[ユーザー設定]** セクションに **dashboard.database.widgets** がない場合、[デフォルト設定] 列の **dashboard.database.widgets** テキストにカーソルを合わせ、テキストの左に表示された "*歯車*" アイコンをクリックして、 **[Copy as Setting JSON]\(設定 JSON としてコピー\)** をクリックします。 ポップアップに **[設定を置換]** と表示された場合、それをクリックしないでください。 右にある **[ユーザー設定]** 列に移動し、**dashboard.database.widgets** セクションを見つけ、次の手順に進みます。
 
 5. **dashboard.database.widgets** セクションに次の行を追加します。
 
@@ -86,9 +86,9 @@ ms.locfileid: "70878667"
 
    ![グラフの切り替えと凡例](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-このチュートリアルでは、次の方法を学習しました。
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 > * 組み込みの分析情報ウィジェット サンプルを利用し、分析情報ウィジェットを簡単にオンにする
 > * テーブル領域の使用状況の詳細を表示する

@@ -1,7 +1,8 @@
 ---
-title: FILESTREAM と SQL Server のその他の機能との互換性 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: FILESTREAM の互換性 | Microsoft Docs
+description: FILESTREAM と SQL Server のその他の機能との互換性
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd160a4149e69a28f27f72876121a9a0552abdd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085365"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245395"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM と SQL Server のその他の機能との互換性
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ここでは、FILESTREAM データがファイル システムに存在することに関連して、FILESTREAM を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能と共に使用する際の注意事項、ガイドライン、および制限事項について説明します。  
   
@@ -66,7 +68,7 @@ ms.locfileid: "68085365"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> レプリケーション  
+##  <a name="Replication"></a> Replication  
  パブリッシャーで FILESTREAM 属性が有効になっている **varbinary(max)** 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、[sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) または [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の @schema_option パラメーターを使用します。 FILESTREAM 属性を持たない **varbinary(max)** 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合以外は、FILESTREAM 属性をレプリケートすることをお勧めします。 指定するスキーマ オプションに関係なく、FILESTREAM 列を含むテーブルを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サブスクライバーにレプリケートすることはサポートされていません。  
   
 > [!NOTE]  

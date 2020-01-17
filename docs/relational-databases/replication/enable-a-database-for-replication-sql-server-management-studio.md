@@ -1,6 +1,7 @@
 ---
-title: レプリケーションのデータベースの有効化 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: レプリケーションのデータベースの有効化 (SSMS)
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用して、レプリケーションのデータベースを有効にする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8a52640a104af0030d0ebf51162e0efbda80d56a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ebf22f15693114e5586ac35e95d7e93cdeeee766
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768129"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321767"
 ---
 # <a name="enable-a-database-for-replication-sql-server-management-studio"></a>レプリケーションのデータベースの有効化 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

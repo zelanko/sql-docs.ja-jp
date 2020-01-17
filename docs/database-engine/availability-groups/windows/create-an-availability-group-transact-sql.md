@@ -1,7 +1,7 @@
 ---
-title: Transact-SQL (T-SQL) を使用した可用性グループの作成
+title: Transact-SQL を使用した可用性グループの作成 (T-SQL)
 description: 'Transact-SQL (T-SQL) を使用して Always On 可用性グループを作成する手順です。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 543ef7ec0cefa9a47f88fdc5811961315b33e2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988400"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252975"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) を使用した Always On 可用性グループの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "67988400"
   
 5.  新しいセカンダリ データベースをすべて可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
   
-##  <a name="ExampleConfigAGWinAuth"></a> 例:Windows 認証を使用した可用性グループの構成  
+##  <a name="ExampleConfigAGWinAuth"></a> 例: Windows 認証を使用した可用性グループの構成  
  この例では、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 構成プロシージャのサンプルを作成します。サンプルでは、Windows 認証を使用するデータベース ミラーリング エンドポイントのセットアップ、さらには、可用性グループとそのセカンダリ データベースの作成と構成を [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して行います。  
   
  この例の内容は次のとおりです。  
@@ -81,7 +81,7 @@ ms.locfileid: "67988400"
 ###  <a name="PrerequisitesForExample"></a> サンプル構成プロシージャを使用するうえでの前提条件  
  このサンプル プロシージャには、次の要件があります。  
   
--   サーバー インスタンスは [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートしている必要があります。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
+-   サーバー インスタンスは [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートしている必要があります。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
 -   2 つのサンプル データベース ( *MyDb1* および *MyDb2*) が、プライマリ レプリカをホストするサーバー インスタンス上に存在する必要があります。 次のコード例では、これらの 2 つのデータベースを作成、構成し、それぞれの完全バックアップを作成します。 これらのコード例は、サンプルの可用性グループの作成先となるサーバー インスタンス上で実行します。 サンプル可用性グループの初期プライマリ レプリカは、このサーバー インスタンスでホストされます。  
   
@@ -485,7 +485,7 @@ GO
   
 -   [可用性グループの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
- **AlwaysOn 可用性グループを有効にするには**  
+ **Always On 可用性グループを有効にするには**  
   
 -   [AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
   
@@ -499,9 +499,9 @@ GO
   
 -   [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
- **AlwaysOn 可用性グループの構成のトラブルシューティング方法**  
+ **Always On 可用性グループの構成のトラブルシューティング方法**  
   
--   [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
 -   [失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   

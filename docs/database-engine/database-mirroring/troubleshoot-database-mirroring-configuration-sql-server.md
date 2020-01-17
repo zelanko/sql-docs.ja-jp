@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング構成のトラブルシューティング (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリングの構成時に生じる一般的な問題
+description: データベース ミラーリング セッションの設定時に発生する問題のトラブルシューティングに役立つ情報を提供します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f469d5afc1dc2f900deaddced2a9931a7bcdf7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049757"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822511"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>データベース ミラーリング構成のトラブルシューティング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68049757"
 > [!NOTE]  
 >  [データベース ミラーリングの前提条件](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)をすべて満たす必要があります。  
   
-|問題点|[概要]|  
+|問題|まとめ|  
 |-----------|-------------|  
 |エラー メッセージ 1418|この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージは、サーバー ネットワーク アドレスに到達できないか、そのアドレスが存在しないことを意味し、ネットワーク アドレス名を確認してコマンドを再実行するように示しています。 |  
 |[Accounts](#Accounts)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているアカウントを適切に構成するための要件について説明します。|  
@@ -52,7 +53,7 @@ ms.locfileid: "68049757"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル システム アカウントを使用しているサービスとして実行されている場合、認証には証明書を使用する必要があります。 詳細については、この後の「 [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
   
-##  <a name="Endpoints"></a> エンドポイント  
+##  <a name="Endpoints"></a> Endpoints  
  エンドポイントが正しく構成されている必要があります。  
   
 1.  各サーバー インスタンス (プリンシパル サーバー、ミラー サーバー、およびミラーリング監視サーバー (存在する場合)) にデータベース ミラーリング エンドポイントがあることを確認します。 詳細については、「[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)」、および、認証形式によって、「[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」もしくは「[データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」のいずれかを参照してください。  

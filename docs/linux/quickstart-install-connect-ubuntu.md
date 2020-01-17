@@ -1,23 +1,22 @@
 ---
-title: Ubuntu 上の SQL Server の概要
-titleSuffix: SQL Server
+title: Ubuntu:Linux 上に SQL Server をインストールする
 description: このクイックスタートでは、Ubuntu に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sqlfreshmay19
+ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 17f73e7529fb8e74e9ff83de8d7e0ebd61783909
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: df3609c5bf4f31ee8a32992127681d42609b9528
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531350"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558425"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート: Ubuntu に SQL Server をインストールし、データベースを作成する
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート:Ubuntu に SQL Server をインストールし、データベースを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 
@@ -37,7 +36,7 @@ ms.locfileid: "73531350"
 > [!TIP]
 > このチュートリアルには、ユーザー入力とインターネット接続が必要です。 無人またはオフラインのインストール手順について関心をお持ちの場合は、[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md)に関する記事を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 Ubuntu 16.04 マシンには**少なくとも 2 GB** のメモリが必要です。
 

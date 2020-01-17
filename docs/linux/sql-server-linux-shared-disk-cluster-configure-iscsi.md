@@ -1,6 +1,7 @@
 ---
-title: フェールオーバー クラスター インスタンス用ストレージ iSCSI の構成 - SQL Server on Linux
-description: ''
+title: iSCSI FCI ストレージの構成 - SQL Server on Linux
+description: SQL Server on Linux 用の iSCSI を使用してフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032406"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558589"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの構成 - iSCSI - SQL Server on Linux
 
@@ -297,7 +298,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     chown mssql <FolderName>
     ```
 
-    \<FolderName> は、作成されたフォルダーの名前です。 例を次に示します。
+    \<FolderName> は、作成されたフォルダーの名前です。 次に例を示します。
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     chown mssql <FolderName>
     ```
 
-    \<FolderName> は、作成されたフォルダーの名前です。 例を次に示します。
+    \<FolderName> は、作成されたフォルダーの名前です。 次に例を示します。
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -351,7 +352,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> は、FCI によって使用されない、手順 20 の出力からのボリューム グループの一覧です。 それぞれを引用符で囲み、コンマで区切ります。 例を次に示します。
+    \<ListOfVGsNotUsedByPacemaker> は、FCI によって使用されない、手順 20 の出力からのボリューム グループの一覧です。 それぞれを引用符で囲み、コンマで区切ります。 次に例を示します。
 
     ![55-ListOfVGs][11]
  
@@ -392,10 +393,10 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
 
 |Distribution |トピック 
 |----- |-----
-|**HA アドオン を含む Red Hat Enterprise Linux** |[構成](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**HA アドオン を含む Red Hat Enterprise Linux** |[構成](sql-server-linux-shared-disk-cluster-configure.md)<br/>[運用](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**HA アドオンを含む SUSE Linux Enterprise Server** |[構成](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

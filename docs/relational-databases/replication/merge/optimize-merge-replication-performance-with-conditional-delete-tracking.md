@@ -1,6 +1,7 @@
 ---
-title: 条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化 | Microsoft Docs
-ms.custom: ''
+title: 条件付き削除の追跡によるパフォーマンスの最適化 (マージ)
+description: SQL Server の条件付き削除の追跡を使用して、マージ レプリケーションのパフォーマンスを最適化する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3466c0ec73f78ef6e67d86f4be48e8c7b8bfe943
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 972a1e200a2025261c6a9fb6e0ffd80f0dc4f219
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018755"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321506"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68018755"
 -   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: [マージ レプリケーションのプロパティの指定](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーションのアーティクルのオプション](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
+ [マージ レプリケーションのアーティクル オプション](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

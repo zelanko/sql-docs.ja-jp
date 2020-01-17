@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909547"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190147"
 ---
 # <a name="tempdb-database"></a>TempDB データベース
 
@@ -31,7 +31,7 @@ ms.locfileid: "72909547"
 **TempDB** システム データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたは SQL Database に接続しているすべてのユーザーが使用できるグローバル リソースです。 Tempdb で保持するもの:  
   
 - グローバルまたはローカルな一時テーブルおよびインデックス、一時ストアド プロシージャ、テーブル変数、テーブル値関数で返されるテーブル、カーソルなど、明示的に作成された一時的な**ユーザー オブジェクト**。  
-- データベース エンジンによって作成された**内部オブジェクト**。 たとえば、次のオブジェクトにアクセスできます。
+- データベース エンジンによって作成された**内部オブジェクト**。 チェックの内容は次のとおりです
   - スプール、カーソル、並べ替え、および一時的なラージ オブジェクト (LOB) 記憶域の中間結果を格納する作業テーブル。
   - ハッシュ結合操作またはハッシュ集計操作用の作業ファイル
   - インデックスの作成または再構築などの操作 (SORT_IN_TEMPDB を指定した場合) や、GROUP BY、ORDER BY、または UNION クエリにおける並べ替えの中間結果
@@ -56,7 +56,7 @@ ms.locfileid: "72909547"
 |----------|------------------|-------------------|------------------|-----------------|  
 |プライマリ データ|tempdev|tempdb.mdf|8 MB|ディスクがいっぱいになるまで 64 MB ずつ自動拡張|  
 |セカンダリ データ ファイル*|temp#|tempdb_mssql_#.ndf|8 MB|ディスクがいっぱいになるまで 64 MB ずつ自動拡張|  
-|Log|templog|templog.ldf|8 MB|最大 2 TB まで 64 MB ずつ自動拡張|  
+|ログ|templog|templog.ldf|8 MB|最大 2 TB まで 64 MB ずつ自動拡張|  
   
 \* コンピューター上の (論理) プロセッサの数に依存するファイル数です。 一般的なルールとして、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用し、競合が続く場合、競合が許容できるレベルに減少するまでデータ ファイルの数を 4 の倍数分ずつ増やすか、ワークロード/コードを変更します。
 
@@ -214,7 +214,14 @@ TempDB でのパフォーマンスの向上の詳細については、次のブ�
 [TEMPDB - ファイル、トレース フラグ、更新プログラム](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>メモリ最適化 tempdb メタデータ
-TempDB メタデータの競合は、従来、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で実行されている多くのワークロードのスケーラビリティに対するボトルネックになっていました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[メモリ内データベース](../in-memory-database.md)機能ファミリの一部として、メモリ最適化 TempDB メタデータという新機能が導入されています。この機能により、効果的にこのボトルネックが除去され、TempDB が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。 この新しい機能にオプトインするには、次のスクリプトを使用します。
+TempDB メタデータの競合は、従来、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で実行されている多くのワークロードのスケーラビリティに対するボトルネックになっていました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[メモリ内データベース](../in-memory-database.md)機能ファミリの一部として、メモリ最適化 TempDB メタデータという新機能が導入されています。この機能により、効果的にこのボトルネックが除去され、TempDB が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。
+
+メモリ最適化 TempDB メタデータを使用する方法とタイミングの概要については、この 7 分間のビデオをご覧ください。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+この新しい機能にオプトインするには、次のスクリプトを使用します。
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 

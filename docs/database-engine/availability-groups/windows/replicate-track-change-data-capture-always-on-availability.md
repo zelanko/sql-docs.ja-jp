@@ -1,6 +1,7 @@
 ---
-title: レプリケーション、変更の追跡、変更データ キャプチャ - 可用性グループ | Microsoft Docs
-ms.custom: ''
+title: レプリケーション、変更の追跡、変更データ キャプチャ、および可用性グループ
+description: SQL Server Always On 可用性グループで使用する場合の、レプリケーション、変更の追跡、および変更データ キャプチャの相互運用性について説明します。
+ms.custom: seo-lt-2019
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251966"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235390"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "72251966"
   
      パブリッシュされたデータベースが可用性グループのメンバーである場合、既定では、ログ リーダーはすべての可用性グループ セカンダリ レプリカでまだ書き込まれていないログ レコードを処理しません。 こうすることで、フェールオーバー時にサブスクライバーにレプリケートされるすべての行が、新しいプライマリにも存在することが保証されます。  
   
-     パブリッシャーに可用性レプリカが 2 つ (プライマリが 1 つとセカンダリが 1 つ) しかない場合にフェールオーバーが発生すると、すべてのセカンダリ データベースがオンラインに戻るか、エラーが発生したセカンダリ レプリカが可用性グループから削除されるまでログ リーダーが前へ進まないため、元のプライマリ レプリカはダウンしたままになります。 Always On がセカンダリ データベースに変更を書き込むことができないので、セカンダリ データベースに対して実行されているログ リーダーは前へ進みません。 災害復旧機能を維持しながら、ログ リーダーが前へ進めるようにするには、ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA を使用して、元のプライマリ レプリカを可用性グループから削除します。 その後、新しいセカンダリ レプリカを可用性グループに追加します。  
+     パブリッシャーに可用性レプリカが 2 つ (プライマリが 1 つとセカンダリが 1 つ) しかない場合にフェールオーバーが発生すると、すべてのセカンダリ データベースがオンラインに戻るか、エラーが発生したセカンダリ レプリカが可用性グループから削除されるまでログ リーダーが前へ進まないため、元のプライマリ レプリカはダウンしたままになります。 Always On がセカンダリ データベースに変更を書き込むことができないので、セカンダリ データベースに対して実行されているログ リーダーは前へ進みません。 ディザスター リカバリー機能を維持しながら、ログ リーダーが前へ進めるようにするには、ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA を使用して、元のプライマリ レプリカを可用性グループから削除します。 その後、新しいセカンダリ レプリカを可用性グループに追加します。  
   
 -   **トレース フラグ 1448**  
   
@@ -141,7 +142,7 @@ ms.locfileid: "72251966"
   
      多くの場合、クライアント アプリケーションは常に現在のプライマリ レプリカに接続しようとしますが、これが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を利用する唯一の方法というわけではありません。 可用性グループが読み取り可能なセカンダリ レプリカをサポートするように構成されている場合、変更データはセカンダリ ノードからも収集できます。  
   
-     可用性グループが構成されている場合は、SECONDARY_ROLE に関連付けられている ALLOW_CONNECTIONS 属性を使用して、サポートされているセカンダリ アクセスの種類を指定します。 ALL として構成した場合、セカンダリへのすべての接続が許可されますが、成功するのは読み取り専用アクセスを要求する接続のみです。 READ_ONLY として構成した場合、接続を成功させるには、セカンダリ データベースへの接続時に読み取り専用の目的を指定する必要があります。 詳細については、「[可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)」を参照してください。  
+     可用性グループが構成されている場合は、SECONDARY_ROLE に関連付けられている ALLOW_CONNECTIONS 属性を使用して、サポートされているセカンダリ アクセスの種類を指定します。 ALL として構成した場合、セカンダリへのすべての接続が許可されますが、成功するのは読み取り専用アクセスを要求する接続のみです。 READ_ONLY として構成した場合、接続を成功させるには、セカンダリ データベースへの接続時に読み取り専用の目的を指定する必要があります。 詳細については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)が存在する必要があります。  
   
      次のクエリを使用して、読み取り可能なセカンダリ レプリカに接続するために読み取り専用の目的が必要かどうかを確認できます。  
   
@@ -189,7 +190,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 ##  <a name="Prereqs"></a> レプリケーションの使用に関する前提条件、制限、および考慮事項  
  ここでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]でレプリケーションを配置する際の前提条件、制限、推奨などの考慮事項について説明します。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>前提条件  
   
 -   単一の可用性グループ内でトランザクション レプリケーションとパブリッシング データベースを使用する場合は、パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を実行する必要があります。 サブスクライバーは、それより低いレベルの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用することもできます。  
   
@@ -206,17 +207,17 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
 |||||  
 |-|-|-|-|  
-||**パブリッシャー**|**ディストリビューター**|**サブスクライバー (Subscriber)**|  
+||**発行元**|**ディストリビューター**|**サブスクライバー**|  
 |**トランザクション**|はい<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|はい|はい| 
 |**P2P**|いいえ|いいえ|いいえ|  
-|**Merge**|はい|いいえ|いいえ|  
+|**[マージ]**|はい|いいえ|いいえ|  
 |**スナップショット**|はい|いいえ|はい|
   
  **データベース ミラーリングでディストリビューター データベースを使用することはできません。  
   
 ### <a name="considerations"></a>考慮事項  
   
--   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングでディストリビューション データベースを使用することはできません。 レプリケーション構成は、ディストリビューターが構成された SQL Server インスタンスと結び付けられます。そのため、ディストリビューション データベースはミラー化またはレプリケートできません。 ディストリビューターの高可用性を実現するには、SQL Server のフェールオーバー クラスターを使用します。 詳細については、「 [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
+-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングでディストリビューション データベースを使用することはできません。 レプリケーション構成は、ディストリビューターが構成された SQL Server インスタンスと結び付けられます。そのため、ディストリビューション データベースはミラー化またはレプリケートできません。 ディストリビューターの高可用性を実現するには、SQL Server のフェールオーバー クラスターを使用します。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
 -   セカンダリ データベースへのサブスクライバーのフェールオーバーはサポートされていますが、マージ レプリケーション サブスクライバーの手動手順となります。 手順は、ミラー化されたサブスクライバー データベースをフェールオーバーするために使用される方法と本質的には同じです。 トランザクション レプリケーション サブスクライバーの場合、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に参加している間、特別な処理は必要ありません。 可用性グループに参加するには、サブスクライバーは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降を実行している必要があります。  詳細については、「 [レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)」を参照してください。
   
@@ -231,7 +232,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
 -   [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **変更データのキャプチャ**  
   
 -   [変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   

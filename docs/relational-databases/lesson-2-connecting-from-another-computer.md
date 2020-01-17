@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:別のコンピューターからの接続 | Microsoft Docs
+title: 'レッスン 2: 別のコンピューターからの接続 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909711"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546549"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2:別のコンピューターからの接続
+# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "72909711"
     > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではないため、新しいバージョンの Windows では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 ファイル名には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のバージョン番号を表す番号が含まれます。 [ファイル名を指定して実行] コマンドから構成マネージャーを開くとき、最新の 4 つのバージョンのパスは次のようになります (Windows が C ドライブにインストールされているとき)。  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-2.  **SQL Server 構成マネージャー**で **[SQL Server ネットワークの構成]** を展開し、 _<InstanceName>_ **をクリックします**。  
+2.  **SQL Server 構成マネージャー**で **[SQL Server ネットワークの構成]** を展開し、 **[ _<InstanceName>_ のプロトコル]** をクリックします。  
   
     既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "72909711"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスが **[データベース エンジン]** になっていることを確認します。  
   
-3.  **[サーバー名]** ボックスに「**tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:** _<computer_name>_ 」と入力します。 今回の名前付きインスタンスの例では、「**tcp:** _<computer_name>_ **,49172**」と入力します。  
+3.  **[サーバー名]** ボックスに「 **tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:** _<computer_name>_ 」と入力します。 今回の名前付きインスタンスの例では、「**tcp:** _<computer_name>_ **,49172**」と入力します。  
   
     > [!NOTE]  
     > **[サーバー名]** ボックスで **tcp:** を省略した場合、クライアントは、有効になっているすべてのプロトコルをクライアント構成に指定された順番で試行します。  

@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123509"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325514"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 
@@ -54,11 +54,11 @@ ms.locfileid: "68123509"
 ビューが正しく維持され、一貫性のある結果が返されるようにするには、インデックス付きビューで、いくつかの SET オプションに固定値が必要となります。 固定値の設定が必要な SET オプションと、その値 ( **必要な値** の列を参照) を下の表に示します。この設定は次の条件に該当する場合に常に必要となります:
 
 - ビューが作成され、そのビューのインデックスも作成されている。
-- テーブルの作成時にビューで参照されるベース テーブル。
+- ビューの作成時にビューで参照されるベース テーブル。
 - インデックス付きビューに関与するテーブルで実行される挿入、更新、または削除操作がある。 この要件には一括コピー、レプリケーション、分散クエリなどの操作も含まれます。
 - クエリ オプティマイザーで、クエリ プランの生成にインデックス付きビューが使用される。
 
-|SET オプション|必要な値|既定のサーバー値|既定<br /><br /> OLE DB および ODBC 値|既定<br /><br /> DB-Library 値|
+|SET オプション|必須値|既定のサーバー値|Default<br /><br /> OLE DB および ODBC 値|Default<br /><br /> DB-Library 値|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
 |ANSI_NULLS|ON|ON|ON|OFF|
 |ANSI_PADDING|ON|ON|ON|OFF|
@@ -69,7 +69,7 @@ ms.locfileid: "68123509"
 |QUOTED_IDENTIFIER|ON|ON|ON|OFF|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
-<sup>1</sup> `ANSI_WARNINGS` を ON に設定すると、暗黙的に `ARITHABORT` が ON に設定されます。
+<sup>1</sup>`ANSI_WARNINGS` を ON に設定すると、暗黙的に `ARITHABORT` が ON に設定されます。
 
 OLE DB または ODBC サーバー接続を使用している場合、変更する必要があるのは `ARITHABORT` 設定の値だけです。 すべての DB-Library 値は、サーバー レベルで **sp_configure** を使用するか、アプリケーションから SET コマンドを使用して、正しく設定する必要があります。
 
@@ -97,7 +97,7 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 - 共通言語ランタイム (CLR) 関数をビューの選択リストに使用することはできますが、クラスター化インデックス キーの定義に含めることはできません。 CLR 関数は、ビューの WHERE 句や、ビューの JOIN 操作の ON 句では使用できません。
 - ビュー定義で使用する CLR ユーザー定義型の CLR 関数やメソッドは、次の表のようにプロパティが設定されている必要があります。
 
-   |プロパティ|注意|
+   |プロパティ|Note|
    |--------------|----------|
    |DETERMINISTIC = TRUE|Microsoft .NET Framework メソッドの属性として、明示的に宣言する必要があります。|
    |PRECISE = TRUE|.NET Framework メソッドの属性として、明示的に宣言する必要があります。|
@@ -149,7 +149,7 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 
 テーブルとビューのインデックスは無効にされる可能性があります。 テーブルのクラスター化インデックスが無効になると、そのテーブルに関連するビューのインデックスも無効になります。
 
-<a name="nondeterministic"></a> **datetime** 型または **smalldatetime** 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 詳細については、「[リテラル日付文字列を DATE 値に非決定論的に変換する](../../t-sql/data-types/nondeterministic-convert-date-literals.md)」を参照してください。
+<a name="nondeterministic"></a>**datetime** 型または **smalldatetime** 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 詳細については、「[リテラル日付文字列を DATE 値に非決定論的に変換する](../../t-sql/data-types/nondeterministic-convert-date-literals.md)」を参照してください。
 
 ### <a name="Security"></a> セキュリティ
 

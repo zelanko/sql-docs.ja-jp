@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729847"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226742"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -50,7 +50,7 @@ ms.locfileid: "73729847"
 
 この記事では、ソリューション開発用の Azure SQL Data Warehouse の CREATE MATERIALIZED VIEW AS SELECT T-SQL ステートメントについて説明します。 この記事には、コード例も記載されています。
 
-具体化されたビューでは、ビュー定義クエリから返されたデータが永続化されます。また、このビューは、基になるテーブルのデータが変更されると、自動的に更新されます。   複雑なクエリのパフォーマンスが向上しており (通常のクエリでは結合と集計が使用される)、メンテナンス操作が簡単に行えるようになっています。   実行プランの自動一致機能により、置換するビューをオプティマイザーで検討する際、具体化されたビューをクエリで参照する必要はありません。  これにより、データ エンジニアは、クエリを変更せずにクエリの応答時間を短縮するメカニズムとして、具体化されたビューを実装できます。  
+具体化されたビューでは、ビュー定義クエリから返されるデータを保持し、基になるテーブルのデータが変更されると自動的に更新されます。   これによって、複雑なクエリ (一般に結合と集計を含むクエリ) のパフォーマンスが向上すると共に、メンテナンス操作が簡単になります。   実行プランの自動一致機能により、置換するビューをオプティマイザーで検討する際、具体化されたビューをクエリで参照する必要はありません。  これにより、データ エンジニアは、クエリを変更せずにクエリの応答時間を短縮するメカニズムとして、具体化されたビューを実装できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -88,13 +88,13 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 *select_statement*   
 具体化されたビューの定義の SELECT リストでは、以下の 2 つの条件の 1 つ以上が満たされている必要があります。
 - SELECT リストに集計関数が含まれています。
-- 具体化されたビューの定義で GROUP BY が使用されており、GROUP BY 内のすべての列が SELECT リストに含まれています。  
+- 具体化されたビューの定義で GROUP BY が使用されており、GROUP BY 内のすべての列が SELECT リストに含まれています。  GROUP BY 句では、最大 32 列使用できます。
 
 具体化されたビューの定義の SELECT リストには、集計関数が必要です。  サポートされる集計には、MAX、MIN、AVG、COUNT、COUNT_BIG、SUM、VAR、STDEV が含まれます。
 
 具体化されたビューの定義の SELECT リストで MIN/MAX 集計が使用される場合、以下の要件が適用されます。
  
-- FOR_APPEND が必要です。  例:
+- FOR_APPEND が必要です。  次に例を示します。
   ```sql 
   CREATE MATERIALIZED VIEW mv_test2  
   WITH (distribution = hash(i_category_id), FOR_APPEND)  
@@ -106,7 +106,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 - 参照されるベース テーブルで UPDATE または DELETE が実行されると、具体化されたビューが無効になります。  この制限は、INSERT には適用されません。  具体化されたビューを再度有効にするには、REBUILD を指定して ALTER MATERIALIZED INDEX を実行します。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 Azure データ ウェアハウスの具体化されたビューは、SQL Server のインデックス付きビューによく似ています。  具体化されたビューで集計関数がサポートされる点を除き、インデックス付きビューとほぼ同じ制限が共有されています (詳細については、「[Create Indexed Views (インデックス付きビューを作成する)](/sql/relational-databases/views/create-indexed-views)」 を参照してください)。   ここでは、具体化されたビューのその他の考慮事項について説明します。  
  

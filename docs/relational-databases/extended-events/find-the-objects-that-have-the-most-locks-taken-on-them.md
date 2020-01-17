@@ -1,6 +1,5 @@
 ---
-title: ロックの大半を取得しているオブジェクトを見つける | Microsoft Docs
-ms.custom: ''
+title: 拡張イベントを使用して、ロックが最も多いオブジェクトを検索する
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,13 +14,14 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1173afdae14e2c68d2aade38c938eecfe3bc25d7
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: 66a28ef1b0f6dcd683097bcd6b8d38a07fe15204
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589963"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234477"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>ロックの大半を取得しているオブジェクトを見つける
 
@@ -110,7 +110,7 @@ ms.locfileid: "72589963"
 
 上記の Transact-SQL スクリプトのステートメント実行が完了すると、クエリ エディターの **[結果]** タブに次の列が表示されます。
   
-- NAME
+- name
 - object_id
 - lock_count
   

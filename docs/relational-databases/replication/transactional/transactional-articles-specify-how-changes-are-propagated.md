@@ -1,6 +1,7 @@
 ---
-title: トランザクション アーティクルに変更を反映する方法の指定 | Microsoft Docs
-ms.custom: ''
+title: 変更の反映方法の指定 (トランザクション)
+description: SQL Server でトランザクション パブリケーションに対して変更の反映方法を指定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0dc3afaa0492bc80b79bf72b695aec880d6808c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769342"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321391"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>トランザクション アーティクル - 変更の反映方法の指定
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "68769342"
   
 -   スキーマの変更をパブリッシュされたテーブルに加える場合は、カスタム プロシージャを再生成する必要があります。 詳細については、「[カスタム トランザクション プロシージャの再生成によるスキーマ変更の反映](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)」を参照してください。  
   
--   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 例:  
+-   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 次に例を示します。  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -150,7 +151,7 @@ old-c1, old-c2, old-c3,... old-cn
 > [!NOTE]  
 >  XCALL は、 **text** 列および **image** 列の前イメージ値が NULL であるという前提で使用してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のプロシージャは、 `Vendor Table` サンプル データベース内の [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] に対して作成された既定のプロシージャです。  
   
 ```  

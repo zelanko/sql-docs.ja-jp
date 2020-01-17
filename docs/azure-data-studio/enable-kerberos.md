@@ -2,20 +2,20 @@
 title: Active Directory 認証 (Kerberos) の使用
 titleSuffix: Azure Data Studio
 description: Kerberos で Azure Data Studio に対して Active Directory 認証を使用できるようにする方法について学習します
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
-ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959666"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957066"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 認証 (Kerberos) を使用して [!INCLUDE[name-sos](../includes/name-sos-short.md)] を SQL Server に接続する 
 
@@ -23,10 +23,10 @@ ms.locfileid: "67959666"
 
 macOS または Linux で統合認証 (Windows 認証) を使用するには、現在のユーザーを Windows ドメイン アカウントにリンクする **Kerberos チケット**を設定する必要があります。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - Kerberos ドメイン コントローラーのクエリを実行するために、Windows ドメインに参加しているコンピューターへのアクセス権。
-- SQL Server は、Kerberos 認証を許可するように構成する必要があります。 UNIX で実行されているクライアント ドライバーでは、統合認証は Kerberos を使用した場合にのみサポートされます。 Kerberos を使用して認証するように SQL Server を設定する方法の詳細については、[こちら](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)を参照してください。 接続しようとしている SQL Server の各インスタンスに対して、SPN が登録されている必要があります。 SQL Server の SPN の形式の詳細は、[こちら](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)で一覧表示されています。
+- SQL Server は、Kerberos 認証を許可するように構成する必要があります。 UNIX で実行されているクライアント ドライバーでは、統合認証は Kerberos を使用した場合にのみサポートされます。 詳細については、「[Kerberos 統合認証による SQL Server への接続](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」を参照してください。 接続しようとしている SQL Server の各インスタンスに対して、SPN が登録されている必要があります。 詳細については、「[サービス プリンシパル名の登録](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)」を参照してください。
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>SQL Server に Kerberos のセットアップがあるかどうかを確認する
@@ -59,7 +59,7 @@ The command completed successfully
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-AD ドメイン コントローラーの IP アドレスが dns-nameserver として一覧表示されるように、`/etc/network/interfaces` ファイルを編集します。 例: 
+AD ドメイン コントローラーの IP アドレスが dns-nameserver として一覧表示されるように、`/etc/network/interfaces` ファイルを編集します。 次に例を示します。 
 
 ```/etc/network/interfaces
 <...>

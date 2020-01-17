@@ -1,6 +1,7 @@
 ---
-title: 更新可能トランザクション サブスクリプションの更新モードの切り替え | Microsoft Docs
-ms.custom: ''
+title: モードの切り替え (更新可能トランザクション)
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用して、更新可能トランザクション パブリケーションの更新モードを切り替える方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3082edc590aa05326f40f694cbaca3f8060a4b95
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909827"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321979"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>更新可能トランザクション サブスクリプションの更新モードの切り替え
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "72909827"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
 -   **更新可能トランザクション サブスクリプションの更新モードを切り替えるために使用するもの:**  
   
@@ -47,7 +48,7 @@ ms.locfileid: "72909827"
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   トランザクション パブリケーションへの更新サブスクリプションで更新モード間のフェールオーバーがサポートされている場合、接続が短時間で変化する状況に対応するために、更新モードをプログラムで変更することができます。 更新モードはレプリケーション ストアド プロシージャを使用して、プログラムから設定することも、要求時に設定することもできます。 詳細については、「 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)を使用して、更新可能トランザクション サブスクリプションの更新モードを切り替える方法について説明します。  
+-   トランザクション パブリケーションへの更新サブスクリプションで更新モード間のフェールオーバーがサポートされている場合、接続が短時間で変化する状況に対応するために、更新モードをプログラムで変更することができます。 更新モードはレプリケーション ストアド プロシージャを使用して、プログラムから設定することも、要求時に設定することもできます。 詳細については、「 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)」を参照してください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   

@@ -1,7 +1,8 @@
 ---
-title: FileTable と他の SQL Server 機能の互換性 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/26/2016
+title: FileTable の互換性 | Microsoft Docs
+description: FileTable と他の SQL Server 機能との互換性
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 62b418a5876c6bc6e562fdce8557223a40dbf144
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116192"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252711"
 ---
-# <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable と他の SQL Server 機能の互換性
+# <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable と他の SQL Server 機能との互換性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable と他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能との連携について説明します。  
   
@@ -87,7 +88,7 @@ ms.locfileid: "68116192"
   
 -   ビューは、"更新可能なビュー" セマンティクスに基づいて更新できますが、基になるテーブルの制約により、テーブル内の場合と同様に更新が拒否されることがあります。  
   
--   ビューの明示的な列にファイル パスを追加することにより、ファイルのファイル パスをビューに視覚化することができます。 例:  
+-   ビューの明示的な列にファイル パスを追加することにより、ファイルのファイル パスをビューに視覚化することができます。 次に例を示します。  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

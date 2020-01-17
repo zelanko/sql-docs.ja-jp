@@ -1,6 +1,7 @@
 ---
-title: パブリケーション情報、[すべてのサブスクリプション] (トランザクション パブリケーション) | Microsoft Docs
-ms.custom: ''
+title: すべてのサブスクリプション (トランザクション - SSMS)
+description: SQL Server Management Studio で選択されているトランザクション パブリケーションの [すべてのサブスクリプション] タブについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b7eaa30c5738cce6b1161ed28930541421a6b6d3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0ffbbd5f2cef23accfde900543fb07b934bb3730
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770050"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321351"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>パブリケーション情報、[すべてのサブスクリプション]\(トランザクション パブリケーション)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68770050"
   
 -   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
+-   **フィルター**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
 -   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
   
@@ -40,14 +41,14 @@ ms.locfileid: "68770050"
  **[表示]**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクリプション状態を選択すると、選択した種類の状態のサブスクリプションが表示されます。 たとえば、エラーを含むサブスクリプションのみを表示するように設定できます。  
   
- **[状態]**  
+ **状態**  
  各サブスクリプションの状態です。これは、ディストリビューション エージェントまたはログ リーダー エージェントの状態により決まります (より優先度の高い状態が表示されます。キュー更新サブスクリプションが使用されている場合、この状態はキュー リーダー エージェントによって決まる場合もあります)。  
   
  既定では、サブスクリプションの情報を表示するグリッドは **[状態]** 列の順序で並べられています (同じ状態のサブスクリプションは、 **[パフォーマンス]** 列の順序で並べられています)。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
--   [エラー]  
+-   エラー  
   
--   [パフォーマンス クリティカル] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
+-   [パフォーマンス クリティカル]\([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
   
 -   [まもなく期限切れ/期限切れ] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
   
@@ -68,7 +69,7 @@ ms.locfileid: "68770050"
  **サブスクリプション**  
  各サブスクリプションの名前です。*SubscriberName:SubscriptionDatabaseName* という形式になります。  
   
- **[パフォーマンス]**  
+ **パフォーマンス**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションのパフォーマンス評価は、レプリケーション モニターにより取得され、履歴パフォーマンスに反映されていない、最も新しい計測値に基づいています。 パフォーマンスは、パフォーマンスしきい値が定義されているパブリケーションへのサブスクリプションについてのみ計測されます。パブリケーションにパフォーマンスしきい値が定義されていない場合、この列には **[有効になっていません]** と表示されます。 パフォーマンス評価は、次のいずれかの値になります。  
   
 -   [非常に良い]  
@@ -79,11 +80,11 @@ ms.locfileid: "68770050"
   
 -   悪い  
   
--   重大  
+-   Critical  
   
  パフォーマンスが [重大] の場合、 **[状態]** 列に **[パフォーマンス クリティカル]** と表示されます。 パフォーマンス評価の定義方法とパフォーマンスしきい値の設定方法については、「[Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) を参照してください。  
   
- **[待機時間]**  
+ **待機時間**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 トランザクションがパブリッシャー側でコミットされたときから、サブスクライバー側で対応するトランザクションがコミットされるまでに経過した時間の平均値です。 表示される待機時間は、レプリケーション モニターにより取得された最新の計測値に基づいています。 待機時間の計測の詳細については、「[トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

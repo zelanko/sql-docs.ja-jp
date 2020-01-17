@@ -1,6 +1,7 @@
 ---
-title: ミラーリングのためのミラー データベースの準備 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: ミラーリングのためのデータベースの準備
+description: データベース ミラーリングのための SQL Server データベースを準備する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/10/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33c9db8ae95807f0b95141945bddaef8560608b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009959"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255978"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>ミラーリングのためのミラー データベースの準備 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68009959"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [セキュリティ](#Security)  
   
@@ -97,7 +98,7 @@ ms.locfileid: "68009959"
 ##  <a name="PrepareToRestartMirroring"></a> ミラーリングを再開するために既存のミラー データベースを準備するには  
  ミラーリングを削除してもミラー データベースが RECOVERING 状態のままである場合、ミラーリングを再開することができます。  
   
-1.  プリンシパル データベースで 1 つ以上のログ バックアップを作成します。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)でミラー データベースを準備する方法について説明します。  
+1.  プリンシパル データベースで 1 つ以上のログ バックアップを作成します。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
   
 2.  ミラー データベースで、RESTORE WITH NORECOVERY を使用して、ミラーリングの削除後にプリンシパル データベースで作成されたすべてのログ バックアップを復元します。 詳細については、「 [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)でミラー データベースを準備する方法について説明します。  
   
@@ -128,7 +129,7 @@ ms.locfileid: "68009959"
     > [!NOTE]  
     >  データベースのファイル グループをファイル グループごとに復元する場合は、必ずデータベース全体を復元してください。  
   
-    -   [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+    -   [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
     -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 」と「 [RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)でミラー データベースを準備する方法について説明します。  
   
@@ -139,7 +140,7 @@ ms.locfileid: "68009959"
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  データベース ミラーリング セッションを開始する前に、ミラー データベースを作成する必要があります。 ミラー データベースは、ミラーリング セッションを開始する直前に作成してください。  
   
- この例では、既定で単純復旧モデルを使う [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを使います。  
+ この例では、既定で単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。  
   
 1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでデータベース ミラーリングを使用するには、完全復旧モデルが使用されるように変更します。  
   

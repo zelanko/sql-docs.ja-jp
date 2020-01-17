@@ -1,6 +1,7 @@
 ---
-title: MongoDB 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.date: 04/23/2019
+title: 外部データへのアクセス:MongoDB - PolyBase
+ms.date: 12/13/2019
+ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9b343327b73a8e682a76b94757982f20fde81e7c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710611"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255431"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB 上の外部データにアクセスするための PolyBase の構成
 
@@ -21,7 +22,7 @@ ms.locfileid: "71710611"
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、MongoDB 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。
 
@@ -123,6 +124,6 @@ JSON の入れ子になったデータ型/繰り返しデータ型は次のよ�
 
 Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス**の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

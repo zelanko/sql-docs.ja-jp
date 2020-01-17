@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586779"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325494"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72586779"
 
 次の表に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのデータ ファイルで使用されるページの種類を示します。
 
-|ページの種類 | 目次 |
+|ページの種類 | 内容 |
 |-------|-------|
 |Data |text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)、xml データを除くすべてのデータが含まれるデータ行 (text in row が ON に設定されている場合)。 |
 |インデックス |インデックスのエントリ。 |
@@ -54,7 +54,7 @@ ms.locfileid: "72586779"
 > [!NOTE]
 > ログ ファイルにはページではなく、一連のログ レコードが含まれます。
 
-データ行はヘッダーの直後から始まり、ページ上に連続的に配置されます。 ページの末尾から行オフセット テーブルが始まります。各行オフセット テーブルにはページ上の 1 行につき 1 つのエントリが格納されます。 各エントリには、その行の最初のバイトがページの先頭からどれだけ離れているかが記録されます。 行オフセット テーブル内のエントリは、ページ上の行と逆の順序になっています。
+データ行はヘッダーの直後から始まり、ページ上に連続的に配置されます。 ページの末尾から行オフセット テーブルが始まります。各行オフセット テーブルにはページ上の 1 行につき 1 つのエントリが格納されます。 各々の行オフセットエントリには、その行の最初のバイトがページの先頭からどれだけ離れているかが記録されます。 そのため、行オフセット テーブルの役割は、ページ上の行が一瞬で特定されるように SQL Server を支援することです。 行オフセット テーブル内のエントリは、ページ上の行と逆の順序になっています。
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -68,7 +68,7 @@ varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を�
 
 ##### <a name="row-overflow-considerations"></a>行のオーバーフローに関する注意点 
 
-varchar 型、nvarchar 型、varbinary 型、sql_variant 型、または CLR ユーザー定義型の列の組み合わせが 1 行あたり 8,060 バイトを超える場合は、次のことを考慮してください。 
+前述のように、ある行を複数のページに配置することはできません。可変長データ型フィールドのサイズ合計が 8060 バイトの上限を超える場合、オーバーフローが発生する可能性があります。 説明すると、たとえば、あるテーブルを varchar(7000) と varchar(2000) という 2 つの列で作成するとします。 いずれの列もそれ自体では 8060 バイトを超えませんが、組み合わせると、各列の幅全体が満たされる場合、この上限を超えます。 SQL Server では、可変長列 varchar(7000) が ROW_OVERFLOW_DATA アロケーション ユニットのページに動的に移動されることがあります。 varchar 型、nvarchar 型、varbinary 型、sql_variant 型、または CLR ユーザー定義型の列の組み合わせが 1 行あたり 8,060 バイトを超える場合は、次のことを考慮してください。
 -  更新操作に基づいてレコードが大きくなると、大きなレコードが別のページに動的に移動されます。 レコードが短くなる更新操作が発生すると、レコードが IN_ROW_DATA アロケーション ユニット内の元のページに移動することがあります。 行オーバーフロー データを含む大きなレコードで、クエリを実行したり並べ替えや結合などの他の選択操作を実行すると、処理に時間がかかります。これは、これらのレコードが非同期にではなく同期的に処理されるためです。   
    したがって、複数の varchar 型、nvarchar 型、varbinary 型、sql_variant 型、または CLR ユーザー定義型の列を含むテーブルをデザインするときは、オーバーフローする可能性が高い行の割合と、このオーバーフロー データへのクエリが実行される頻度を考慮します。 行オーバーフロー データの多くの行にクエリが頻繁に実行される可能性が高い場合は、いくつかの列を別のテーブルに移動して、テーブルのサイズを正規化することを検討します。 これにより、非同期結合操作でクエリを行えるようになります。 
 -  varchar 型、nvarchar 型、varbinary 型、sql_variant 型、および CLR ユーザー定義型の個々の列の長さは、8,000 バイトの制限の範囲内に収まる必要があります。 8,060 バイトというテーブル行の制限を超えることができるのは、これらの列を組み合わせた長さだけです。
@@ -98,7 +98,7 @@ varchar 型、nvarchar 型、varbinary 型、sql_variant 型、または CLR ユ
 
 ## <a name="managing-extent-allocations-and-free-space"></a>エクステント割り当てと空き領域の管理 
 
-エクステントの割り当てを管理したり、空き領域を追跡したりする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータ構造は、比較的単純です。 このデータ構造には、次の利点があります。 
+エクステントの割り当てを管理したり、空き領域を追跡したりする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータ構造は、比較的単純です。 これには、次のような利点があります。 
 
 * 空き領域情報は高密度で格納されるので、比較的少数のページに格納できます。   
   このため、割り当て情報の取得に必要なディスク読み取り量が減り、処理が高速化します。 また、アロケーション ページがメモリ内にとどまる機会が増え、改めて読み込む必要も少なくなります。 
@@ -136,7 +136,7 @@ varchar 型、nvarchar 型、varbinary 型、sql_variant 型、または CLR ユ
 
 エクステントがオブジェクトに割り当てられた後は、エクステント内のどのページが割り当て済みでどのページが空いているかを[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が PFS ページに記録します。 この情報は、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]で新しいページを割り当てる必要が生じたときに使用されます。 ページ内の空き領域の量は、ヒープおよび Text/Image ページに関してのみ管理されます。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が新しく挿入された行を保持するための空き領域があるページを検索する際に、この情報が使用されます。 新しい行を挿入する場所がインデックス キーの値で設定されるので、インデックスは PFS の追跡を必要としません。
 
-PFS ページはデータ ファイル内でファイル ヘッダー ページの直後に位置するページ (ページ ID 1) です。 その次が GAM ページ (ページ ID 2) で、さらに SGAM ページ (ページ ID 3) が続きます。 最初の PFS ページの後ろに約 8,000 ページの新しい PFS ページがあり、以降 8,000 ページの間隔で追加の PFS があります。 ページ 2 の最初の GAM ページの後に 64,000 エクステント分の GAM ページがあり、ページ 3 の最初の SGAM ページの後に 64,000 エクステント分の SGAM ページがあり、以降 64,000 エクステントの間隔で追加の GAM ページと SGAM ページがあります。 下図に、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]がエクステントの割り当てと管理に使用する一連のページを示します。
+新しい PFS、GAM、または SGAM ページが、それによって追跡記録される範囲が増えるたびに、データ ファイルに追加されます。 つまり、最初の PFS ページから 8,088 ページ後に新しい PFS ページがあり、以降、8,088 ページの間隔で PFS ページが追加されます。 説明すると、ページ ID 1 が PFS ページとなり、ページ ID 8088 が PFS ページとなり、ページ ID 16176 が PFS ページとなります (以下、同様に続きます)。 最初の GAM ページの 64,000 エクステント後に新しい GAM ページがあり、このページがそれに続く 64,000 エクステントを追跡記録します。その後、64,000 エクステントの間隔で続きます。 同様に、最初の SGAM ページの 64,000 エクステント後に新しい SGAM ページがあり、その後、64,000 エクステントの間隔で SGAM ページが追加されます。 下図に、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]がエクステントの割り当てと管理に使用する一連のページを示します。
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
@@ -172,7 +172,7 @@ IAM ページはアロケーション ユニットごとに必要に応じて割
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]によりアロケーション ユニットに新しいエクステントが割り当てられるのは、挿入する行を格納するのに必要な空き領域のあるページが既存のエクステントの中ですぐに見つからない場合のみです。 
 
-<a name="ProportionalFill"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は**比例配分割り当てアルゴリズム**を使用して、ファイル グループ内の利用可能なエクステントからエクステントを割り当てます。 同じファイル グループに 2 つのファイルがあり、一方のファイルにもう一方の 2 倍の空き領域がある場合は、空きが少ないファイルから 1 ページ割り当てられるごとに、空きが多いファイルからは 2 ページが割り当てられます。 したがって、ファイル グループ内のすべてのファイルは、使用済み領域のパーセンテージがほとんど同じになります。 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は**比例配分割り当てアルゴリズム**を使用して、ファイル グループ内の利用可能なエクステントからエクステントを割り当てます。 同じファイル グループに 2 つのファイルがあり、一方のファイルにもう一方の 2 倍の空き領域がある場合は、空きが少ないファイルから 1 ページ割り当てられるごとに、空きが多いファイルからは 2 ページが割り当てられます。 したがって、ファイル グループ内のすべてのファイルは、使用済み領域のパーセンテージがほとんど同じになります。 
 
 ## <a name="tracking-modified-extents"></a>変更されたエクステントの追跡 
 

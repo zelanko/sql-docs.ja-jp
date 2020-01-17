@@ -1,7 +1,7 @@
 ---
-title: 可用性グループからプライマリ データベースを削除する
+title: 可用性グループからデータベースを削除する
 description: Transact-SQL (T-SQL)、PowerShell、または SQL Server Management Studio を使用して Always On 可用性グループからプライマリ データベースを削除する手順。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b18d1c8a573a42a8b92deead627783a195bb9e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfba294b5c07fc7053669c5c4ebbbd46217efb18
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014394"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822636"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Always On 可用性グループからプライマリ データベースを削除する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68014394"
   
 4.  削除するデータベースが複数であるか 1 つのみであるかによって、次のように実行する手順が異なります。  
   
-    -   複数のデータベースを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して削除するデータベースを表示し、すべてを選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)」を参照してください。  
+    -   複数のデータベースを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して削除するデータベースを表示し、すべてを選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md) を参照してください。  
   
     -   1 つのデータベースを削除するには、 **[オブジェクト エクスプローラー]** ペインまたは **[オブジェクト エクスプローラーの詳細]** ペインでそれを選択します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68014394"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報:可用性グループから可用性データベースを削除した後  
+##  <a name="FollowUp"></a>補足情報: 可用性グループから可用性データベースを削除した後  
  可用性グループから可用性データベースを削除すると、以前のプライマリ データベースおよび対応するセカンダリ データベース間のデータの同期が終了します。 以前のプライマリ データベースはオンラインのまま残ります。 すべての対応するセカンダリ データベースは RESTORING 状態になります。  
   
  この時点で、削除されたセカンダリ データベースを処理する別の方法は次のとおりです。  

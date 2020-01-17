@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909882"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200498"
 ---
 # <a name="specify-default-values-for-columns"></a>列の既定値の指定
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、テーブルの列に入力される既定値を指定できます。 ユーザー インターフェイスのオブジェクト エクスプローラーまたは [!INCLUDE[tsql](../../includes/tsql-md.md)] を送信するための一般的なコントロールを使用できます。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、テーブルの列に入力される既定値を指定できます。 既定値を設定するには、ユーザー インターフェイスのオブジェクト エクスプローラーを使用するか、[!INCLUDE[tsql](../../includes/tsql-md.md)] を送信します。
 
 列に既定値を割り当てなかった場合、ユーザーが列に何も入力しないと、次のようになります。
 
@@ -64,7 +64,7 @@ ms.locfileid: "72909882"
    > [!NOTE]
    > 数値の既定値を入力するには、数値を入力します。 オブジェクトまたは関数の場合は、その名前を入力します。 英数字の場合は、その値を単一引用符で囲んで入力します。
 
-4. **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。
+4. **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。
 
 ## <a name="TsqlProcedure"></a> Transact-SQL を使用して既定値を指定する
 

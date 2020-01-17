@@ -1,7 +1,7 @@
 ---
 title: 照合順序と Unicode のサポート | Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982819"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901940"
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "73982819"
     
 ##  <a name="Terms"></a> 照合順序の用語    
     
--   [[照合順序]](#Collation_Defn) 
+-   [Collation](#Collation_Defn) 
     - [照合順序セット](#Collation_sets)
     - [照合順序レベル](#Collation_levels)
 -   [ロケール](#Locale_Defn)    
@@ -463,7 +463,7 @@ Unicode は、コード ポイントを文字にマップするための標準�
 > [!NOTE]
 > Unicode データ型の場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]では、UCS-2 を使うと最大 65,535 文字を表すことができ、補助文字を使った場合は Unicode の全範囲 (1,114,111 文字) を表すことができます。 補助文字の有効化について詳しくは、「[補助文字](#Supplementary_Characters)」をご覧ください。
 
-代わりに、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、UTF 8 対応の照合順序 (\_UTF8) を使用した場合、以前の非 Unicode データ型 (**char** と **varchar**) が Unicode (UTF-8) データ型になります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、以前の既存の Unicode (UTF-16) データ型 (**nchar**、**nvarchar**、**ntext**) の動作は変わりません。 詳しくは、「[UTF-8 と UTF-16 でのストレージの相違点](#storage_differences)」をご覧ください。
+代わりに、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、UTF 8 対応の照合順序 (\_UTF8) を使用した場合に、以前の非 Unicode データ型 (**char** と **varchar**) が UTF-8 エンコードを使用した Unicode データ型になります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、UCS-2 エンコードまたは UTF-16 エンコードを引き続き使用する、以前の既存の Unicode データ型 (**nchar**、**nvarchar**、**ntext**) の動作は変わりません。 詳しくは、「[UTF-8 と UTF-16 でのストレージの相違点](#storage_differences)」をご覧ください。
 
 ### <a name="unicode-considerations"></a>Unicode の注意点
 非 Unicode データ型には、多くの制限が関連付けられています。 これは、Unicode に対応していないコンピューターではコード ページの使用が 1 つに制限されているためです。 Unicode コードを使用すると、必要なコード ページ変換が少なくなるので、パフォーマンスの向上が期待できます。 Unicode 照合順序は、サーバー レベルではサポートされないため、データベース、列、式の各レベルで個別に選択する必要があります。    
@@ -490,8 +490,8 @@ Unicode は、コード ポイントを文字にマップするための標準�
     -   BIN または BIN2<sup>2</sup> バイナリ照合順序    
     -   SQL\_* 照合順序  
     
-<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 以降。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 では、照合順序 **UTF8_BIN2** が **Latin1_General_100_BIN2_UTF8** に置き換えられました。        
-<sup>2</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 まで。    
+<sup>1</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 以降。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 では、照合順序 **UTF8_BIN2** が **Latin1_General_100_BIN2_UTF8** に置き換えられました。        
+<sup>2</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 まで。    
     
 Unicode または非 Unicode データ型の使用に関連する問題点を評価するには、使用環境におけるパフォーマンスの違いを測定するためのシナリオをテストする必要があります。 組織内のシステムで使用する照合順序を標準化し、可能であれば Unicode サーバーおよびクライアントを配置するようにしてください。    
     
@@ -502,7 +502,7 @@ Unicode または非 Unicode データ型の使用に関連する問題点を評
     
 以下の表では、Unicode 型サーバーと非 Unicode 型サーバーの各種の組み合わせにおける多言語データの使用に関する情報を示します。    
     
-|[サーバー]|クライアント|利点または制限事項|    
+|サーバー|Client|利点または制限事項|    
 |------------|------------|-----------------------------|    
 |Unicode|Unicode|このシナリオでは、システム全体で Unicode データが使用されるため、最高のパフォーマンスが実現され、取得されるデータが破損から保護されます。 これは、ActiveX Data Objects (ADO)、OLE DB、および ODBC バージョン 3.7 以降の場合に該当します。|    
 |Unicode|非 Unicode|このシナリオで、特に新しいオペレーティング システムを実行しているサーバーと、古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または古いオペレーティング システムを実行しているクライアントが接続されている場合、データをクライアント コンピューターに移動するときに制約やエラーが発生することがあります。 サーバー上の Unicode データは、非 Unicode クライアント上の対応するコード ページにマップしてデータを変換しようと試みます。|    
@@ -516,7 +516,7 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、BMP 範囲 (000000 – 00FFFF) の Unicode データを格納するために、**nchar** や **nvarchar** などのデータ型が提供されています。これらは、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]では UCS-2 を使ってエンコードされます。 
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、完全な Unicode 文字範囲 (000000 – 10FFFF) を表すために、**nchar**、**nvarchar**、**sql_variant** の各データ型で使用できる補助文字 (\_SC) 照合順序の新しいファミリが導入されました。 例:**Latin1_General_100_CI_AS_SC** や、日本語の照合順序を使用する場合は **Japanese_Bushu_Kakusu_100_CI_AS_SC** を使用できます。 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、完全な Unicode 文字範囲 (000000 – 10FFFF) を表すために、**nchar**、**nvarchar**、**sql_variant** の各データ型で使用できる補助文字 (\_SC) 照合順序の新しいファミリが導入されました。 次に例を示します。**Latin1_General_100_CI_AS_SC** や、日本語の照合順序を使用する場合は **Japanese_Bushu_Kakusu_100_CI_AS_SC** を使用できます。 
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、新しい UTF-8 対応の照合順序 ([\_UTF8](#utf8)) を使用して、補助文字のサポートが **char** および **varchar** データ型まで拡張されています。 これらのデータ型では、完全な Unicode 文字範囲を表すこともできます。   
 
@@ -567,7 +567,7 @@ GB18030 は中華人民共和国が単独で中国語の文字のエンコード
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を操作するデータベース アプリケーションは、複雑な文字表記をサポートするコントロールを使用する必要があります。 マネージド コードで作成される標準の Windows フォーム コントロールは、複雑な文字表記を使用できます。    
 
-## <a name="Japanese_Collations"></a> [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] に追加された日本語照合順序
+## <a name="Japanese_Collations"></a>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] に追加された日本語照合順序
  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、各種オプションの順列 (\_CS、\_AS、\_KS、\_WS、\_VSS) で、新しい日本語照合順序がサポートされています。 
 
@@ -605,7 +605,7 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 
 <sup>1</sup> "*ストレージ バイト数*" は、データ型のディスク上でのストレージ サイズではなく、エンコード済みのバイト長を示します。 ディスク上のストレージ サイズについて詳しくは、「[nchar および nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)」と「[char および varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)」をご覧ください。
 
-<sup>2</sup> [補助文字](#Supplementary_Characters)のコード ポイント範囲。
+<sup>2</sup>[補助文字](#Supplementary_Characters)のコード ポイント範囲。
 
 > [!TIP]   
 > [CHAR(*n*) および VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、または[NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では、*n* は文字数を定義すると考えるのが一般的です。 これは、CHAR (10) 列の例では、0 – 127 の範囲の 10 個の ASCII 文字を **Latin1_General_100_CI_AI** などの照合順序を使用して格納できるためで、この範囲内の各文字が 1 バイトのみを使用するためです。
@@ -622,12 +622,23 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 
 その他の考慮事項については、「[国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)」をご覧ください。
 
+### <a name="converting"></a>UTF-8 への変換
+[CHAR(*n*) と VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、または [NCHAR(*n*) と NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では、*n* によって、格納できる文字数ではなく、バイト ストレージのサイズが決定するため、データの切り捨てを回避するために、変換が必要なデータ型のサイズを決定することが重要です。 
+
+たとえば、日本語の文字を 180 バイト格納する **NVARCHAR (100)** として定義された列について考えてみましょう。 この例では現在、列データは、1 文字あたり 2 バイトを使用する UCS-2 または UTF-16 を使用してエンコードされています。 列の型を **VARCHAR (200)** に変換しても、データの切り捨てを防ぐことはできません。新しいデータ型で格納できるのは 200 バイトだけですが、日本語の文字は、UTF-8 でエンコードされている場合には 3 バイト必要となるからです。 そのため、データの切り捨てによるデータの損失を回避するために、列を **VARCHAR(270)** として定義する必要があります。
+
+したがって、既存のデータを UTF-8 に変換する前に、予想される列定義のバイトサイズを事前に把握し、それに応じて新しいデータ型のサイズを調整する必要があります。 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 関数と [COLLATE](../../t-sql/statements/collations.md) ステートメントを使用して、既存のデータベースでの UTF-8 変換操作に必要なデータ長の適正な要件を決定するには、[Data Samples GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode) の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトまたは SQL Notebook を参照してください。
+
+既存のテーブル内の列の照合順序とデータ型を変更するには、「[列の照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-column-collation.md)」で説明されているいずれかの方法を使用します。
+
+データベースの照合順序を変更して、新しいオブジェクトが既定でデータベースの照合順序を継承できるようにするか、またはサーバーの照合順序を変更して、新しいデータベースが既定でシステムの照合順序を継承できるようにするには、この記事の「[関連タスク](#Related_Tasks)」セクションを参照してください。 
+
 ##  <a name="Related_Tasks"></a> 関連タスク    
     
 |タスク|トピック|    
 |----------|-----------|    
-|SQL Server のインスタンスの照合順序を設定または変更する方法について説明します|[サーバーの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|ユーザー データベースの照合順序を設定または変更する方法について説明します|[データベースの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|SQL Server のインスタンスの照合順序を設定または変更する方法について説明します。 サーバーの照合順序を変更しても、既存のデータベースの照合順序は変更されないことに注意してください。|[サーバーの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|ユーザー データベースの照合順序を設定または変更する方法について説明します。 データベースの照合順序を変更しても、既存のテーブル列の照合順序は変更されないことに注意してください。|[データベースの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |データベース内の列の照合順序を設定または変更する方法について説明します|[列の照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |サーバー、データベース、または列のレベルでの照合順序の情報を取得する方法について説明します|[照合順序情報の表示](../../relational-databases/collations/view-collation-information.md)|    
 |Transact-SQL ステートメントを、ある言語から別の言語に容易に移行したり、複数の言語を簡単にサポートしたりできるように記述する方法について説明します|[国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -649,6 +660,6 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 ## <a name="see-also"></a>参照    
 [包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md)     
 [フルテキスト インデックス作成時の言語の選択](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[1 バイト文字セットとマルチバイト文字セット](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

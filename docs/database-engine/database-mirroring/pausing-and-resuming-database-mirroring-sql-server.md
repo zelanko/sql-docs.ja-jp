@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリングの一時停止と再開 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリングの一時停止と再開
+description: SQL Server データベース ミラーリング セッションを任意の時点で一時停止して、後で再開する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 80a412419c1538c485ff6766bbe68ba5c510779b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996466"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254153"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>データベース ミラーリングの一時停止と再開 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

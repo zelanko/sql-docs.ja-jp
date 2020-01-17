@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531339"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721562"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker 上で SQL Server コンテナー イメージを構成する
 
@@ -35,7 +35,12 @@ ms.locfileid: "73531339"
 > この記事では特に mssql-server-linux イメージを使用することに焦点を当てます。 Windows イメージについては言及しませんが、[msmssql-server-windows Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)で詳細を確認できます。
 
 > [!IMPORTANT]
-> 運用環境のユース ケースで SQL Server コンテナーを実行する前に、[SQL Server コンテナーのサポート ポリシー](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server)を読み、サポートされる構成で実行していることを確認してください。
+> 運用環境のユース ケースで SQL Server コンテナーを実行する前に、[SQL Server コンテナーのサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)を読み、サポートされる構成で実行していることを確認してください。
+
+この 6 分間のビデオでは、コンテナーでの SQL Server の実行について説明します。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>コンテナー イメージのプルと実行
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 この手法では、Docker の外部にあるホスト上のファイルを共有して表示することもできます。
 
 > [!IMPORTANT]
-> 現時点では、SQL Server on Linux イメージを使用した Mac 上の Docker のホスト ボリューム マッピングはサポートされていません。 代わりにデータ ボリューム コンテナーを使用してください。 この制限は、`/var/opt/mssql` ディレクトリに固有のものです。 マウントされたディレクトリからの読み取りは正常に機能します。 たとえば、Mac 上で -v を使用してホスト ディレクトリをマウントし、ホスト上に存在する .bak ファイルからバックアップを復元することができます。
+> **Windows 上の Docker** のホスト ボリューム マッピングでは現在のところ、完全な `/var/opt/mssql` ディレクトリをマッピングできません。 ただし、`/var/opt/mssql/data` など、サブディレクトリをホスト コンピューターにマッピングできます。
+
+> [!IMPORTANT]
+> 現時点では、SQL Server on Linux イメージを使用した **Mac 上の Docker** のホスト ボリューム マッピングはサポートされていません。 代わりにデータ ボリューム コンテナーを使用してください。 この制限は、`/var/opt/mssql` ディレクトリに固有のものです。 マウントされたディレクトリからの読み取りは正常に機能します。 たとえば、Mac 上で -v を使用してホスト ディレクトリをマウントし、ホスト上に存在する .bak ファイルからバックアップを復元することができます。
 
 ### <a name="use-data-volume-containers"></a>データ ボリューム コンテナーを使用する
 
@@ -615,7 +623,7 @@ ls -ll <database file dir>
 非ルート SQL Server コンテナーがデータベース ファイルにアクセスできるように、次のディレクトリへのアクセス許可をルート グループに付与します。
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 
@@ -662,7 +670,7 @@ Windows では、PowerShell またはコマンド プロンプトを管理者と
 
 SQL Server コンテナーの実行に失敗する場合は、次のテストを試してください。
 
-- **"failed to create endpoint CONTAINER_NAME on network bridge.Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use."** などのエラーが表示される場合は、コンテナー ポート 1433 を既に使用中のポートにマップしようとしています。 これは、ホスト マシン上で SQL Server をローカルに実行している場合に発生する可能性があります。 また、2 つの SQL Server コンテナーを開始し、両方を同じホスト ポートにマップしようとした場合にも発生する可能性があります。 この状況が発生した場合は、`-p` パラメーターを使用して、コンテナー ポート 1433 を別のホスト ポートにマップします。 例: 
+- **"failed to create endpoint CONTAINER_NAME on network bridge.Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use."** などのエラーが表示される場合は、コンテナー ポート 1433 を既に使用中のポートにマップしようとしています。 これは、ホスト マシン上で SQL Server をローカルに実行している場合に発生する可能性があります。 また、2 つの SQL Server コンテナーを開始し、両方を同じホスト ポートにマップしようとした場合にも発生する可能性があります。 この状況が発生した場合は、`-p` パラメーターを使用して、コンテナー ポート 1433 を別のホスト ポートにマップします。 次に例を示します。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -775,7 +783,7 @@ cat errorlog
 > [!TIP]
 > コンテナーの作成時にホスト ディレクトリを **/var/opt/mssql** にマウントした場合は、代わりに、ホスト上のマップされたパスにある **log** サブディレクトリを調べることができます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [クイックスタート](quickstart-install-connect-docker.md)に従って、Docker 上で SQL Server 2017 のコンテナー イメージを開始します。
 

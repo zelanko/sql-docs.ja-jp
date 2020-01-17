@@ -14,23 +14,23 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef9e0378d3a7ca0b5749788471b4ef97832d179d
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670597"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957327"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *透過的なデータ暗号化* (TDE) では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]、 [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] のデータ ファイルを暗号化します。これは、静止したデータの暗号化として知られています。 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
+  *透過的なデータ暗号化* (TDE) では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]、 [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] のデータ ファイルを暗号化します。これは、静止したデータの暗号化として知られています。 セキュリティで保護されたシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの、データベースを保護するいくつかの対策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれるシナリオでは、悪意のある第三者がデータベースを復元するかアタッチするだけでデータを閲覧することができます。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
   
- TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK は、サーバーの master データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。 TDE では、"静止した" データ、つまりデータとログ ファイルが保護されます。 この暗号化は、法律、規制、およびさまざまな業界で確立されているガイドラインの多くに準拠できるようになっています。 これによりソフトウェア開発者は、既存のアプリケーションを変更することなく、AES および 3DES 暗号化アルゴリズムを使用してデータを暗号化できます。  
+ TDE は、データとログ ファイルの I/O 暗号化と複合化をリアルタイムで実行します。 暗号化は、復旧中に、可用性のためのデータベース ブート レコードに格納されるデータベース暗号化キー (DEK) を使用します。 DEK は、サーバーの master データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。 TDE では、"静止した" データ、つまりデータとログ ファイルが保護されます。 この暗号化は、法律、規制、およびさまざまな業界で確立されているガイドラインの多くに準拠できるようになっています。 これによりソフトウェア開発者は、既存のアプリケーションを変更することなく、AES および 3DES 暗号化アルゴリズムを使用してデータを暗号化できます。  
   
 > [!IMPORTANT]
 >  TDE では、通信チャネル全体を暗号化することはできません。 通信チャネル全体でデータを暗号化する方法の詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -62,7 +62,7 @@ ms.locfileid: "68670597"
   
  TDE 暗号化のアーキテクチャを次の図に示します。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を使用する場合に、ユーザーによって構成可能なのは、データベース レベルの項目 (データベース暗号化キーと ALTER DATABASE の部分) のみです。  
   
- ![トピックで説明された階層を表示](../../../relational-databases/security/encryption/media/tde-architecture.png "トピックで説明された階層を表示")  
+ ![トピックで説明された階層を表示します。](../../../relational-databases/security/encryption/media/tde-architecture.png "トピックで説明された階層を表示します。")  
   
 ## <a name="using-transparent-data-encryption"></a>Transparent Data Encryption の使用  
  TDE を使用するには、次の手順を実行します。  
@@ -100,7 +100,7 @@ GO
  暗号化および暗号化解除の操作は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によってバックグラウンド スレッドでスケジュールされます。 これらの操作の状態は、この後の一覧に示すカタログ ビューおよび動的管理ビューを使用して確認できます。  
   
 > [!CAUTION]  
->  TDE が有効になっているデータベースのバックアップ ファイルも、データベース暗号化キーを使用して暗号化されます。 このため、このバックアップを復元するときには、データベース暗号化キーを保護している証明書が必要です。 つまり、データの損失を防ぐには、データベースをバックアップするだけでなく、サーバー証明書のバックアップも確実に保守する必要があります。 証明書が使用できなくなると、データの損失が発生します。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」を参照してください。  
+>  TDE が有効になっているデータベースのバックアップ ファイルも、データベース暗号化キーを使用して暗号化されます。 このため、このバックアップを復元するときには、データベース暗号化キーを保護している証明書が必要です。 つまり、データの損失を防ぐには、データベースをバックアップするだけでなく、サーバー証明書のバックアップも確実に保守する必要があります。 証明書が使用できなくなると、データの損失が発生します。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
 ## <a name="commands-and-functions"></a>コマンドと関数  
  TDE の証明書を次に示すステートメントで処理できるようにするには、この証明書をデータベース マスター キーで暗号化する必要があります。 それらがパスワードだけで暗号化されている場合は、ステートメントで暗号化機能として受け付けられません。  
@@ -110,7 +110,7 @@ GO
   
  次の表に、TDE のコマンドと関数の説明とリンクを示します。  
   
-|コマンドまたは関数|用途|  
+|コマンドまたは関数|目的|  
 |-------------------------|-------------|  
 |[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
@@ -120,7 +120,7 @@ GO
 ## <a name="catalog-views-and-dynamic-management-views"></a>カタログ ビューと動的管理ビュー  
  次の表に、TDE のカタログ ビューと動的管理ビューを示します。  
   
-|カタログ ビューまたは動的管理ビュー|用途|  
+|カタログ ビューまたは動的管理ビュー|目的|  
 |---------------------------------------------|-------------|  
 |[sys.databases &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|データベース情報を表示するカタログ ビュー|  
 |[sys.certificates &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|データベース内の証明書を表示するカタログ ビュー|  

@@ -1,6 +1,7 @@
 ---
-title: Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング エンドポイントの作成 (Transact-SQL)
+description: Windows 認証を使用して、Transact-SQL でデータベース ミラーリング エンドポイントを作成します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2fbe4c5188bc728b8b8b58872ca805e1460c3a04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952000"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259042"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ ms.locfileid: "67952000"
   
      ]  
   
-     **[,]** ENCRYPTION = **REQUIRED**  
+     [ **[,]** ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { \<*algorithm*> } ]  
   
@@ -111,7 +112,7 @@ ms.locfileid: "67952000"
   
     -   既定では、ENCRYPTION は REQUIRED に設定されます。 これは、このエンドポイントへのすべての接続に暗号化を使用する必要があることを意味します。 ただし、エンドポイントで暗号化を無効にしたり、オプションにできます。 選択肢は次のとおりです。  
   
-        |[値]|定義|  
+        |値|定義|  
         |-----------|----------------|  
         |DISABLED|接続を経由して送信されたデータが暗号化されないことを指定します。|  
         |SUPPORTED|反対側のエンドポイントで SUPPORTED または REQUIRED が指定されている場合に限り、データを暗号化することを指定します。|  
@@ -181,7 +182,7 @@ GO
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **データベース ミラーリング エンドポイントを構成するには**  
   
--   [Always On 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   

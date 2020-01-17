@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリングとフルテキスト カタログ (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリングとフルテキスト カタログ
+description: フルテキスト カタログを含むデータベースでデータベース ミラーを構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7f0aee8a195344bc32b355c95f4e131cf503f02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 816c5f5dea693a03054f2e35315ed3d121c7abaf
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006478"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822288"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>データベース ミラーリングとフルテキスト カタログ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

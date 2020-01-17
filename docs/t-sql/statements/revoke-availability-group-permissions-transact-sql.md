@@ -1,6 +1,8 @@
 ---
-title: REVOKE (可用性グループの権限の取り消し) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE (可用性グループのアクセス許可の取り消し)
+description: Always On 可用性グループに対して権限を取り消します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082352"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242611"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>可用性グループの権限の取り消し (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -84,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー スコープの権限を取り消すことができるのは、現在のデータベースが **master** のときだけです。  
   
  可用性グループに関する情報は、[sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) カタログ ビューで表示できます。 サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。  
@@ -102,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILITY GROUP 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を取り消す  
  次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して取り消します。  

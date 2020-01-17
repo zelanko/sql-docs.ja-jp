@@ -1,6 +1,7 @@
 ---
-title: トランザクション パブリケーションに対してバックアップを使用した初期化を有効にする | Microsoft Docs
-ms.custom: ''
+title: バックアップを使用した初期化を有効にする (トランザクション)
+description: SQL Server でトランザクション パブリケーションに対して、バックアップからの初期化を有効にする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1ce1e95ef182ef119dee8ea666ae0955e4ab625
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11670347380a3336068091601e739b28d4d34a39
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128137"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321722"
 ---
 # <a name="enable-initialization-with-backup-for-transactional-publications"></a>トランザクション パブリケーションに対してバックアップを使用した初期化を有効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
