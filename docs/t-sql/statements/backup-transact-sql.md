@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982848"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249730"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -69,7 +69,7 @@ SQL Database をバックアップします。
 
 ||||
 |---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -258,7 +258,7 @@ TO \<backup_device> [ **,** ...*n* ] 関連する[バックアップ デバイ�
 > [!NOTE]
 > TAPE オプションは将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
 
-*n*: 最大 64 個のバックアップ デバイスを、コンマ区切りのリストで指定できることを示すプレースホルダーです。
+*n*: 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。
 
 MIRROR TO \<backup_device> [ **,** ...*n* ] TO 句で指定したバックアップ デバイスをミラー化する、最大 3 つまでのセカンダリ バックアップ デバイスのセットを指定します。 MIRROR TO 句には、TO 句で指定した同じ種類と数のバックアップ デバイスを指定する必要があります。 MIRROR TO 句の最大数は 3 です。
 
@@ -269,7 +269,7 @@ MIRROR TO \<backup_device> [ **,** ...*n* ] TO 句で指定したバックアッ
 
 \<backup_device> このセクションの前述の "\<backup_device>" を参照してください。
 
-*n*: 最大 64 個のバックアップ デバイスを、コンマ区切りのリストで指定できることを示すプレースホルダーです。 MIRROR TO 句内のデバイス数は、TO 句内のデバイス数と同じにする必要があります。
+*n*: 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。 MIRROR TO 句内のデバイス数は、TO 句内のデバイス数と同じにする必要があります。
 
 詳細については、このトピックの後述の「[解説](#general-remarks)」の「ミラー化されたメディア セットのメディア ファミリ」を参照してください。
 
@@ -356,12 +356,12 @@ NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ }: バックアップ
 
 EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ }: バックアップ セットがいつ期限切れとなり、上書き可能になるかを指定します。 変数 (@_date\_var_) として指定する場合、この日付は構成されたシステムの **datetime** 形式に従い、次のいずれかとして指定する必要があります。
 
-- A string constant (@_date\_var_ **=** date)
+- 文字列定数 (@_date\_var_ **=** date)
 - 文字列データ型 (**ntext** または **text** データ型を除く) の変数
 - **smalldatetime**
 - **datetime** 変数
 
-例:
+次に例を示します。
 
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
@@ -682,7 +682,7 @@ BACKUP ステートメントの `TO` 句で指定する各バックアップ デ
 
 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との下位互換性を提供するため、BACKUP では `RESTART` オプションがサポートされます。 ただし、RESTART は無効です。
 
-## <a name="general-remarks"></a>全般的な解説
+## <a name="general-remarks"></a>一般的な注釈
 
 データベースやログのバックアップは、任意のディスクまたはテープ デバイスに追加できます。これによって、データベースとそのトランザクション ログすべてを物理的な 1 つの場所の中に格納できます。
 
@@ -690,7 +690,7 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 
 オペレーティング システムがデータベースの照合順序をサポートしている限り、プロセッサの種類が違っていても、プラットフォーム間にわたるバックアップ操作を実行できます。
 
-単一のデータ ファイルを含む、[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースでバックアップの圧縮を使用する場合は、**65536 (64 KB) より大きい** `MAXTRANSFERSIZE` 設定を使用することをお勧めします。
+単一のデータ ファイルを含む、[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースでバックアップの圧縮を使用する場合は、**65536 (64 KB) より大きい**`MAXTRANSFERSIZE` 設定を使用することをお勧めします。
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、これにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、TDE で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE = 65536` (64 KB) を使用する場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
 
 > [!NOTE]
@@ -739,7 +739,7 @@ BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** �
 
 ## <a name="examples"></a> 使用例
 
-ここでは、次の例について説明します。
+このセクションには、次の例が含まれています。
 
 - A. [データベース全体をバックアップする](#backing_up_db)
 - B. [データベースおよびログをバックアップする](#backing_up_db_and_log)
@@ -770,7 +770,7 @@ GO
 
 次の例では、既定により単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースをバックアップします。 ここではまず、ログをバックアップするため、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを修正して完全復旧モデルを使用するようにします。
 
-次に [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) を使用して、データのバックアップ用に論理[バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md) `AdvWorksData` を作成し、ログのバックアップ用に別の論理バックアップ デバイス `AdvWorksLog` を作成します。
+次に [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) を使用して、データのバックアップ用に論理[バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)`AdvWorksData` を作成し、ログのバックアップ用に別の論理バックアップ デバイス `AdvWorksLog` を作成します。
 
 その後、`AdvWorksData` にデータベースの完全バックアップを作成し、更新操作の期間後、ログを `AdvWorksLog` にバックアップします。
 
@@ -932,7 +932,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[分析プラットフォーム <br />システム (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -994,7 +994,7 @@ TO URL
 > [!IMPORTANT]
 > URL へのバックアップ時に複数のデバイスにバックアップするには、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。
 
-*n*: 最大 64 個のバックアップ デバイスを、コンマ区切りのリストで指定できることを示すプレースホルダーです。
+*n*: 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。
 
 ### <a name="with-optionsspecifies-options-to-be-used-with-a-backup-operation"></a>WITH オプション: バックアップ操作で使用するオプションを指定します。
 
@@ -1114,7 +1114,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\*分析<br />プラットフォーム システム (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 
@@ -1157,7 +1157,7 @@ TO DISK = '\\\\*UNC_path*\\*backup_directory*': [!INCLUDE[ssPDW](../../includes/
 
 - バックアップ ディレクトリ名のパスが既に存在し、完全修飾 UNC (汎用名前付け規則) パスとして指定されている必要があります。
 - バックアップ ディレクトリ *backup_directory* は、バックアップ コマンドの実行前に存在することはできません。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] によってバックアップ ディレクトリが作成されます。
-- バックアップ ディレクトリのパスにはローカル パスを指定できません。[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] アプライアンス ノード上の場所にすることもできません。
+- バックアップ ディレクトリのパスにはローカル パスを指定できません。[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] アプライアンス ノード上の場所とすることもできません。
 - UNC パスとバックアップ ディレクトリ名の最大長は 200 文字です。
 - サーバーまたはホストは IP アドレスとして指定する必要があります。 これはホストまたはサーバー名として指定できません。
 
@@ -1176,7 +1176,7 @@ NAME = **'** _backup \_name_ **'** : バックアップの名前を指定しま�
 
 DIFFERENTIAL: ユーザー データベースの差分バックアップを実行するように指定します。 省略した場合、データベースの完全バックアップが選択されます。 差分バックアップの名前は、完全バックアップの名前に一致する必要がありません。 差分バックアップとそれに対応する完全バックアップを追跡記録するために、同じ名前に 'full' または 'diff' を付けることを検討してください。
 
-例:
+次に例を示します。
 
 `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`
 
@@ -1260,7 +1260,7 @@ DATABASE オブジェクトに ExclusiveUpdate ロックを実行します。
 
 **ネットワーク資格情報の管理**
 
-バックアップ ディレクトリへのネットワーク アクセスは、標準 Windows ファイル共有セキュリティに基づきます。 バックアップを実行する前に、バックアップ ディレクトリに [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の信頼性を証明するための Windows アカウントを作成または指定する必要があります。 この Windows アカウントには、バックアップ ディレクトリにアクセスし、作成や書き込みを行うための許可を与える必要があります。
+バックアップ ディレクトリへのネットワーク アクセスは、オペレーティング システムの標準ファイル共有セキュリティに基づきます。 バックアップを実行する前に、バックアップ ディレクトリに [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の信頼性を証明するための Windows アカウントを作成または指定する必要があります。 この Windows アカウントには、バックアップ ディレクトリにアクセスし、作成や書き込みを行うための許可を与える必要があります。
 
 > [!IMPORTANT]
 > データのセキュリティ リスクを緩和するために、バックアップ操作と復元操作を実行する目的のためだけに Windows アカウントを 1 つ用意することをお勧めします。 そのアカウントのアクセス許可をバックアップの場所に限定します。
@@ -1271,7 +1271,7 @@ DATABASE オブジェクトに ExclusiveUpdate ロックを実行します。
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に保存されているネットワーク資格情報を一覧表示するには、[sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 動的管理ビューを使用してください。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-add-network-credentials-for-the-backup-location"></a>A. バックアップ場所のネットワーク資格情報を追加する
 

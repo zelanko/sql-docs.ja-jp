@@ -1,7 +1,7 @@
 ---
-title: インストール ウィザードを使用した SQL Server のアップグレード (セットアップ) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: アップグレード:インストール ウィザード (セットアップ)
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bcbc5be852e2eed6b22689c8745210dd840e7e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934695"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258806"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67934695"
 > * [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Power Pivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 セットアップは管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、リモート共有に対する読み取り権限と実行権限を持つ、ローカル管理者のドメイン アカウントを使用する必要があります。  
   
 > [!WARNING]  
@@ -115,7 +115,7 @@ ms.locfileid: "67934695"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスに含まれるすべてのサービス アカウントに同じログイン アカウントを指定する場合は、ページの下部にあるフィールドに資格情報を指定します。  
   
-     **セキュリティに関する注意** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **セキュリティに関する注意:** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 空白のパスワードは使用せず、強力なパスワードを使用してください。  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "67934695"
   
 20. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレード後は、次の作業を実行します。  
   
 -   **サーバーの登録**: アップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのレジストリ設定が削除されます。 アップグレード後、サーバーを再登録する必要があります。  
