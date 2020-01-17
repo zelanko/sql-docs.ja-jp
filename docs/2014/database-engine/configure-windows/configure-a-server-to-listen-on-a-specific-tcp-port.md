@@ -51,8 +51,8 @@ ms.locfileid: "62813588"
   
 3.  **[TCP 動的ポート]** ダイアログ ボックスには、 **が動的ポートで受信待ちすることを示す**0 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が表示されています。この 0 を削除します。  
   
-4.  **IP**_n_ **のプロパティ** ボックスの **TCP ポート** box, type the port number you want this IP address to listen on, and then click **OK**をクリックします。  
-  
+4.  **IP**_n_ **のプロパティ** エリア ボックスの **TCP ポート** ボックスに、この IP アドレスで受信待ちしたいポート番号を入力し、**OK** をクリックします。
+
 5.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   
 6.  詳細ペインで **[SQL Server (** \<インスタンス名> **)]** を右クリックします。次に、 **[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
