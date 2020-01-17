@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708141"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245268"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel から SQL Server または Azure SQL Database にデータをインポートする
 
@@ -49,7 +49,7 @@ SQL Server をインストールしていない場合、あるいは SQL Server 
 
 SQL Server インポートおよびエクスポート ウィザードのページをステップ実行して、Excel ファイルから直接データをインポートします。 必要に応じて、後でカスタマイズして再利用できる SQL Server Integration Services (SSIS) パッケージとして設定を保存します。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベース エンジンのインスタンスに接続します。
 
 2. **[データベース]** を展開します。
 3. データベースを右クリックします。
@@ -252,7 +252,7 @@ Azure Data Factory のコピー ウィザードのページをステップ実行
 コピー ウィザードの詳細については、次のトピックを参照してください。
 
 - [Data Factory コピー ウィザード](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [チュートリアル: コピー アクティビティがあるパイプラインを Data Factory コピー ウィザードで作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
+- [チュートリアル:コピー アクティビティがあるパイプラインを Data Factory コピー ウィザードで作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
 ## <a name="adf"></a> Azure Data Factory
 
@@ -264,18 +264,18 @@ Azure Data Factory に精通していて、コピー ウィザードを実行し
 
 - [ファイル システム](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
 - [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Azure SQL データベース](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
 Azure Data Factory でデータをコピーする方法の学習を開始するには、次のトピックを参照してください。
 
 - [コピー アクティビティを使用したデータの移動](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [チュートリアル: コピー アクティビティがあるパイプラインを Azure portal で作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [チュートリアル:コピー アクティビティがあるパイプラインを Azure portal で作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>一般的なエラー
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>"Microsoft.ACE.OLEDB.12.0" が登録されていません
 
-このエラーは OLEDB プロバイダーがインストールされていない場合に発生します。 [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/en-us/download/details.aspx?id=13255)からインストールします。 Windows と SQL Server が両方とも 64 ビットである場合は、64 ビット バージョンをインストールしてください。
+このエラーは OLEDB プロバイダーがインストールされていない場合に発生します。 [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)からインストールします。 Windows と SQL Server が両方とも 64 ビットである場合は、64 ビット バージョンをインストールしてください。
 
 エラーの全文は次のとおりです。
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>リンク サーバー "(null)" の OLE DB プロバイダー "Microsoft.ACE.OLEDB.12.0" のインスタンスを作成できません
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>リンク サーバー "(null)" の OLE DB プロバイダー "Microsoft.ACE.OLEDB.12.0" のインスタンスを作成できません
 
 これは Microsoft OLEDB が正しく構成されていないことを示しています。 これを解決するには、次の Transact-SQL コードを実行します。
 

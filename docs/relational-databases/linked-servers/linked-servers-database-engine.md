@@ -1,6 +1,6 @@
 ---
-title: リンク サーバー
-ms.date: 05/29/2019
+title: リンク サーバー (データベース エンジン) | Microsoft Docs
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094775"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165346"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
 
@@ -64,16 +64,19 @@ ms.locfileid: "74094775"
 ## <a name="linked-server-details"></a>リンク サーバーの詳細  
  次の図に、基本的なリンク サーバー構成を示します。  
   
- ![クライアント層、サーバー層、データベース サーバー層](../../relational-databases/linked-servers/media/lsvr.gif "クライアント層、サーバー層、データベース サーバー層")  
+ ![クライアント層、サーバー層、データベース サーバー層](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
   
 リンク サーバーは、通常は分散クエリの処理に使用します。 クライアント アプリケーションからリンク サーバー経由で分散クエリが実行されるときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でコマンドが解析され、OLE DB に要求が送信されます。 行セット要求は、プロバイダーに対するクエリの実行や、プロバイダーのベース テーブルを開くなどの形式をとります。  
-  
+
 > [!NOTE]
 > データ ソースがリンク サーバー経由でデータを返すには、そのデータ ソースの OLE DB プロバイダー (DLL) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスと同じサーバー上に存在する必要があります。  
-  
-> [!IMPORTANT] 
-> OLE DB プロバイダーを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行しているアカウントには、プロバイダーがインストールされているディレクトリとそのすべてのサブディレクトリに対する読み取り権限と実行権限が必要です。 これには、Microsoft によってリリースされたプロバイダー、およびすべてのサードパーティのプロバイダーが含まれます。 
-  
+ 
+> [!IMPORTANT]
+> OLE DB プロバイダーを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行しているアカウントには、プロバイダーがインストールされているディレクトリとそのすべてのサブディレクトリに対する読み取り権限と実行権限が必要です。 これには、Microsoft によってリリースされたプロバイダー、およびすべてのサードパーティのプロバイダーが含まれます。
+
+> [!NOTE]
+> リンク サーバーでは、完全委任を使用する場合に、Active Directory パススルー認証をサポートします。 SQL Server 2017 CU17 以降では、制約付き委任を使用したパススルー認証もサポートされています。ただし、[リソース ベースの制約付き委任](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) はサポートされません。
+
 ## <a name="managing-providers"></a>プロバイダーの管理  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が OLE DB プロバイダーを読み込んで使用する方法を制御する一連のオプションは、レジストリで指定されます。  
   
@@ -90,7 +93,7 @@ ms.locfileid: "74094775"
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、リンク サーバーを定義することもできます。 オブジェクト エクスプローラーで **[サーバー オブジェクト]** を右クリックし、 **[新規作成]** をポイントして、 **[リンク サーバー]** をクリックします。 リンク サーバー名を右クリックして **[削除]** をクリックすると、リンク サーバーの定義を削除できます。  
   
- リンク サーバーに対して分散クエリを実行する場合は、クエリを実行するデータ ソースごとに 4 つの部分で構成される完全修飾テーブル名を指定します。 この 4 つの部分で構成される名前は、<_リンク サーバー名>.<カタログ_> **.** <_スキーマ_> **.** <_オブジェクト名_> という形式にする必要があります。  
+ リンク サーバーに対して分散クエリを実行する場合は、クエリを実行するデータ ソースごとに 4 つの部分で構成される完全修飾テーブル名を指定します。 この 4 つの部分で構成される名前は、<_リンク\_ サーバー\_名>.<カタログ_> **.** <_スキーマ_> **.** <_オブジェ\_クト名_> という形式にする必要があります。  
   
 > [!NOTE]  
 > リンク サーバーは、どのサーバーで定義されたかを示す (ループ バックする) ように定義することができます。 ループバック サーバーは、単一のサーバー ネットワークで分散クエリを使用するアプリケーションをテストする際に最も有効です。 ループバック リンク サーバーはテスト用であり、分散トランザクションなどの多くの操作ではサポートされていません。  
