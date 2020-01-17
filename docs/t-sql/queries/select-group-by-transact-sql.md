@@ -32,12 +32,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948427"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258290"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67948427"
   
 ## <a name="syntax"></a>構文  
 
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -85,7 +85,7 @@ GROUP BY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -93,8 +93,18 @@ GROUP BY {
     | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
+```
+
 ```  
+-- Syntax for Parallel Data Warehouse  
   
+GROUP BY {
+      column-name [ WITH (DISTRIBUTED_AGG) ]  
+    | column-expression
+} [ ,...n ]
+
+```  
+    
 ## <a name="arguments"></a>引数 
  
 ### <a name="column-expression"></a>*column-expression*  
@@ -144,12 +154,12 @@ INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 ```
 Sales テーブルには、次の行が含まれています。
 
-| Country | Region | 売上 |
+| Country | リージョン | 売上 |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
 | Canada | British Columbia | 300 |
-| United States | Montana | 100 |
+| United States | モンタナ | 100 |
 
 次のクエリでは、Country と Region をグループ化し、値の組み合わせごとの合計を返します。  
  
@@ -160,17 +170,17 @@ GROUP BY Country, Region;
 ```
 Country と Region には値の 3 つの組み合わせがあるため、クエリ結果には 3 つの行ができます。 Canada と British Columbia の TotalSales は、2 つの行の合計です。 
 
-| Country | Region | TotalSales |
+| Country | リージョン | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
-| United States | Montana | 100 |
+| United States | モンタナ | 100 |
 
 ### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
 列の式の組み合わせごとにグループを作成します。 さらに、結果を小計と総計に "ロール アップ" します。 これを行うため、右から左に移動して、列の式の数を減らし、それに対してグループと集計を作成します。 
 
-列の順序は ROLLUP 出力に影響を及ぼし、結果セット内の行数にも影響する場合があります。  
+列の順序は ROLLUP 出力に影響を与えます。結果セット内の行数に影響を与えることもあります。  
 
 たとえば、`GROUP BY ROLLUP (col1, col2, col3, col4)` は次の一覧の列の式の組み合わせごとにグループを作成します。  
 
@@ -190,12 +200,12 @@ GROUP BY ROLLUP (Country, Region);
 
 クエリ結果は、ROLLUP なしの単純な GROUP BY と同じ集計になります。 さらに、Country の値ごとの小計を作成します。 最後に、すべての行の総計を示します。 結果は次のようになります。
 
-| Country | Region | TotalSales |
+| Country | リージョン | TotalSales |
 | :------ | :----- | ---------: |
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | Canada | NULL | 600 |
-| United States | Montana | 100 |
+| United States | モンタナ | 100 |
 | United States | NULL | 100 |
 | NULL | NULL | 700 |
 
@@ -213,14 +223,14 @@ GROUP BY CUBE (Country, Region);
 
 クエリの結果は、(Country, Region)、(NULL, Region)、(Country, NULL)、および (NULL, NULL) の一意の値のグループになります。 結果は、次のようになります。
 
-| Country | Region | TotalSales |
+| Country | リージョン | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | NULL | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | NULL | British Columbia | 500 |
-| United States | Montana | 100 |
-| NULL | Montana | 100 |
+| United States | モンタナ | 100 |
+| NULL | モンタナ | 100 |
 | NULL | NULL | 700
 | Canada | NULL | 600 |
 | United States | NULL | 100 |
@@ -274,7 +284,7 @@ GROUP BY ALL:
 - クエリ内に WHERE 句がある場合、リモート テーブルにアクセスするクエリでは、サポートされません。
 - FILESTREAM 属性を持つ列では失敗します。
   
-### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
+### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
 適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 DISTRIBUTED_AGG クエリ ヒントは、超並列処理 (MPP) システムで、特定の列に対し、集計を実行する前にテーブルを強制的に再配布します。 DISTRIBUTED_AGG クエリ ヒントを持つことができるのは、GROUP BY 句内で 1 つの列だけです。 クエリが完了したら、再配布されたテーブルは破棄されます。 元のテーブルは変更されません。  
@@ -344,19 +354,19 @@ GROUP BY 句では、SQL-2006 標準規格に含まれているすべての GROU
 |機能|SQL Server Integration Services|SQL Server 互換性レベル 100 以上|SQL Server 2008 以降で互換性レベル 90|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 集計|WITH CUBE および WITH ROLLUP ではサポートされていません。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE、および ROLLUP でサポートされています。|互換性レベル 100 と同じです。|  
-|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(** _arg1_ **,** _...argN_ **)** または **dbo.rollup(** _arg1_ **,** ..._argN_ **)** を使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (** _arg1_ **,** ...argN **)** または **dbo.rollup(** arg1 **,** _...argN_ **)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 次のエラー メッセージが返されます。"キーワード 'cube'&#124;'rollup' 付近に不適切な構文があります。"<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (** _arg1_ **,** _...argN_) または **dbo.rollup(** _arg1_ **,** _...argN_ **)** を使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|サポートされていません|Supported|Supported|  
-|CUBE|サポートされていません|Supported|サポートされていません|  
-|ROLLUP|サポートされていません|Supported|サポートされていません|  
-|GROUP BY () などの総計|サポートされていません|Supported|Supported|  
-|GROUPING_ID 関数|サポートされていません|Supported|Supported|  
-|GROUPING 関数|Supported|Supported|Supported|  
-|WITH CUBE|Supported|Supported|Supported|  
-|WITH ROLLUP|サポートされている|Supported|Supported|  
-|WITH CUBE または WITH ROLLUP の重複したグループ化の削除|Supported|Supported|Supported| 
+|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(**_arg1_**,**_...argN_**)** または **dbo.rollup(**_arg1_**,**..._argN_**)** を使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (**_arg1_**,**...argN **)** または **dbo.rollup(** arg1 **,**_...argN_**)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 次のエラー メッセージが返されます。"キーワード 'cube'&#124;'rollup' 付近に不適切な構文があります。"<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (**_arg1_**,**_...argN_) または **dbo.rollup(**_arg1_**,**_...argN_**)** を使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|サポートされていません|サポートされています|サポートされています|  
+|CUBE|サポートされていません|サポートされています|サポートされていません|  
+|ROLLUP|サポートされていません|サポートされています|サポートされていません|  
+|GROUP BY () などの総計|サポートされていません|サポートされています|サポートされています|  
+|GROUPING_ID 関数|サポートされていません|サポートされています|サポートされています|  
+|GROUPING 関数|サポートされています|サポートされています|サポートされています|  
+|WITH CUBE|サポートされています|サポートされています|サポートされています|  
+|WITH ROLLUP|サポートされています|サポートされています|サポートされています|  
+|WITH CUBE または WITH ROLLUP の重複したグループ化の削除|サポートされています|サポートされています|サポートされています| 
  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-use-a-simple-group-by-clause"></a>A. 単純な GROUP BY 句を使用する  
  次の例では、`SalesOrderID` テーブルから `SalesOrderDetail` ごとの合計を取得します。 この例では、AdventureWorks を使用します。  
@@ -415,7 +425,7 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. DISTRIBUTED_AGG ヒントの基本的な使用方法  
+### <a name="f-basic-use-of-the-distributed_agg-hint"></a>F. DISTRIBUTED_AGG ヒントの基本的な使用方法  
  この例では、DISTRIBUTED_AGG クエリ ヒントを使用して、集計を実行する前に `CustomerKey` 列でテーブルをシャッフルするようにアプライアンスに強制します。  
   
 ```sql  

@@ -11,26 +11,27 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
-ms.openlocfilehash: ef05b068c016cdea00e813f5dbff174494440a19
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929786"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548342"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-データの検出と分類では、データベース内の機密データの**検出**、**分類**、**ラベル付け** & **レポート作成**を行うための新しいツールが導入されました。このツールは SQL Server Management Studio (SSMS) に組み込まれています。
+データの検出と分類では、データベース内の機密データの**検出**、**分類**、**ラベル付け**、**レポート作成**を行うための新しいツールが導入されました。このツールは [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) に組み込まれています。
 最も機密性の高いデータ (ビジネス、財務、医療など) の検出と分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。 次のような場合にインフラストラクチャとして使用できます。
 * データのプライバシー基準を満たせるようにする。
 * 機密性の高いデータを含むデータベース/列へのアクセスを制御し、セキュリティを強化する。
 
 > [!NOTE]
-> データの検出と分類は、**SQL Server 2008 以降でサポートされ、SSMS 17.5 以降で使用できます**。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](https://go.microsoft.com/fwlink/?linkid=866265)」を参照してください。
+> データの検出と分類は、**SQL Server 2012 以降でサポートされ、[SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 以降で使用できます**。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](/azure/sql-database/sql-database-data-discovery-and-classification/)」を参照してください。
 
 ## <a id="subheading-1"></a>概要
 データの検出と分類では高度な一連のサービスが導入され、データベースだけでなく、データの保護を目的とした新しい SQL Information Protection パラダイムが形成されます。
+
 * **検出および推奨事項** - 分類エンジンはデータベースをスキャンし、機密データが含まれる可能性のある列を識別します。 適切な分類の推奨事項を確認して適用するだけでなく、手動で列を分類するための簡単な方法が提供されます。
 * **ラベル付け** - 列で永続的に機密分類ラベルにタグを付けることができます。
 * **表示** - データベース分類状態を詳細なレポートに表示することができます。このレポートを印刷したりエクスポートしたりして、コンプライアンスと監査の目的に、またその他のニーズに合わせて使用することができます。
@@ -46,9 +47,9 @@ ms.locfileid: "70929786"
 
 1. SQL Server Management Studio (SSMS) で、SQL Server に接続します。
 
-2. SSMS オブジェクト エクスプローラーで、分類するデータベースを右クリックして、 **[タスク]**  >  **[データの分類]** の順に選択します。
+2. SSMS オブジェクト エクスプローラーで、分類するデータベースを右クリックして、**[タスク]**、**[データの検出と分類]**、**[データの分類]** の順に選択します。
 
-    ![ナビゲーション ウィンドウ][1]
+   ![ナビゲーション ウィンドウ][0]
 
 3. 分類エンジンは機密データが含まれる可能性のある列についてデータベースをスキャンし、**推奨される列の分類**のリストを提供します。
 
@@ -84,22 +85,63 @@ ms.locfileid: "70929786"
     ![ナビゲーション ウィンドウ][8]
 
 
-6. データベースの分類状態の完全な要約を示すレポートを生成するには、ウィンドウの上部のメニューで **[レポートの表示]** をクリックします。
+6. データベースの分類状態の完全な要約を示すレポートを生成するには、ウィンドウの上部のメニューで **[レポートの表示]** をクリックします。 (レポートは SSMS を利用して生成することもできます。 レポートを生成するデータベースを右クリックし、**[タスク]**、**[データの検出と分類]**、**[レポートの生成]** の順に選択します。)
 
     ![ナビゲーション ウィンドウ][9]
 
     ![ナビゲーション ウィンドウ][10]
 
+## <a id="subheading-3"></a>SSMS で情報保護ポリシーを管理する
 
-## <a id="subheading-3"></a>分類メタデータへのアクセス
+[SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 以降を利用し、情報保護ポリシーを管理できます。
 
-*情報の種類*と*秘密度ラベル*の分類メタデータは、次の拡張プロパティに格納されています。 
-* sys_information_type_name
-* sys_sensitivity_label_name
+1. SQL Server Management Studio (SSMS) で、SQL Server に接続します。
 
-メタデータには、拡張プロパティ カタログ ビュー [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) を使用してアクセスすることができます。
+2. SSMS Object Explorer でお使いのデータベースの 1 つを右クリックし、**[タスク]**、**[データの検出と分類]** の順に選択します。
 
-SQL Server 2017 の場合、次のコード例では、対応する分類を使用して分類済みのすべての列が返されます。
+   次のメニュー オプションで情報保護ポリシーを管理できます。
+
+* **情報保護ポリシー ファイルの設定**: 選択されている JSON ファイルに定義されているとおりに情報保護ポリシーが使用されます。
+
+* **情報保護ポリシーのエクスポート**: 情報保護ポリシーを JSON ファイルにエクスポートします。
+
+* **情報保護ポリシーのリセット**: 既定の情報保護ポリシーに情報保護ポリシーがリセットされます。
+
+> [!IMPORTANT]
+> 情報保護ポリシー ファイルは SQL Server に保存されません。
+> SSMS では既定の情報保護ポリシーが使用されます。 カスタマイズされた情報保護ポリシーでエラーが発生した場合、SSMS では既定のポリシーを使用できません。 データ分類でエラーが発生します。 解決するには、**[情報保護ポリシーのリセット]** をクリックし、既定のポリシーを使用し、データ分類をもう一度有効にします。
+
+## <a id="subheading-4"></a>分類メタデータへのアクセス
+
+SQL Server 2019 には [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) というシステム カタログ ビューが導入されています。 このビューでは、情報の種類と機密ラベルが返されます。 
+
+> [!NOTE]
+> このビューには **VIEW ANY SENSITIVITY CLASSIFICATION** 権限が必要です。 詳細については、「 [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15)」を参照してください。
+
+SQL Server 2019 インスタンスで、`sys.sensitivity_classifications` を問い合わせ、分類されているすべての列とそれらに対応する分類を確認します。 次に例を示します。 
+
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+    JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
+```
+
+SQL Server 2019 より前の場合、情報の種類と機密ラベルの分類メタデータは次の拡張プロパティにあります。 
+
+* `sys_information_type_name`
+* `sys_sensitivity_label_name`
+
+メタデータには、拡張プロパティ カタログ ビュー [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md) を使用してアクセスすることができます。
+
+SQL Server 2017 以前のインスタンスの場合、次の例からは、分類されているすべての列とそれらに対応する分類が返されます。
 
 ```sql
 SELECT
@@ -141,22 +183,25 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-SQL Server 2019 の場合:
-```sql
-SELECT 
-    schema_name(O.schema_id) AS schema_name,
-    O.NAME AS table_name,
-    C.NAME AS column_name,
-    information_type,
-    label
-FROM sys.sensitivity_classifications sc
-    JOIN sys.objects O
-    ON  sc.major_id = O.object_id
-    JOIN sys.columns C 
-    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
-```
+## <a id="subheading-5"></a>分類の管理
 
-## <a id="subheading-4"></a>次の手順
+# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+T-SQL を使って、列の分類を追加/削除し、データベース全体のすべての分類を取得することができます。
+
+- 1 つ以上の列の分類の追加/更新:[ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
+- 1 つ以上の列の分類の削除:[DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+
+# <a name="powershell-cmdlettabsql-powelshell"></a>[PowerShell コマンドレット](#tab/sql-powelshell)
+PowerShell コマンドレットを使用して列の分類を追加/削除し、すべての分類を取得し、データベース全体の推奨事項を取得できます。
+
+- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+
+---
+
+## <a id="subheading-6"></a>次のステップ
 
 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](https://go.microsoft.com/fwlink/?linkid=866265)」を参照してください。
 
@@ -168,17 +213,20 @@ Azure SQL Database については、「[Azure SQL Database のデータの検�
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Accessing the classification metadata]: #subheading-3
-[Next Steps]: #subheading-4
+[Manage information protection policy with SSMS]: #subheading-3
+[Accessing the classification metadata]: #subheading-4
+[Manage classifications]: #subheading-5
+[Next Steps]: #subheading-6
 
 <!--Image references-->
-[1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png
-[2]: ./media/sql-data-discovery-and-classification/2_recommendations_notification_box.png
-[3]: ./media/sql-data-discovery-and-classification/3_recommendations_panel.png
-[4]: ./media/sql-data-discovery-and-classification/4_recommendations.png
-[5]: ./media/sql-data-discovery-and-classification/5_accept_recommendations_button.png
-[6]: ./media/sql-data-discovery-and-classification/6_add_classification_button.png
-[7]: ./media/sql-data-discovery-and-classification/7_manual_classification.png
-[8]: ./media/sql-data-discovery-and-classification/8_save.png
-[9]: ./media/sql-data-discovery-and-classification/9_view_report.png
-[10]: ./media/sql-data-discovery-and-classification/10_report.png
+
+[0]: ./media/sql-data-discovery-and-classification/0-data-classification-explorer.png
+[2]: ./media/sql-data-discovery-and-classification/2-recommendations-notification-box.png
+[3]: ./media/sql-data-discovery-and-classification/3-recommendations-panel.png
+[4]: ./media/sql-data-discovery-and-classification/4-recommendations.png
+[5]: ./media/sql-data-discovery-and-classification/5-accept-recommendations-button.png
+[6]: ./media/sql-data-discovery-and-classification/6-add-classification-button.png
+[7]: ./media/sql-data-discovery-and-classification/7-manual-classification.png
+[8]: ./media/sql-data-discovery-and-classification/8-save.png
+[9]: ./media/sql-data-discovery-and-classification/9-view-report.png
+[10]: ./media/sql-data-discovery-and-classification/10-report.png
