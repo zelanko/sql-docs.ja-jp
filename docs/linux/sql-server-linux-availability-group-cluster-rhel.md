@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558498"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884031"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の RHEL クラスターを構成する
 
@@ -163,7 +163,10 @@ Pacemaker クラスターのプロパティの詳細については、「[Pacema
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> **RHEL 8** が使用できるようになると共に、create 構文が変更されました。 **RHEL 8** を使用している場合は、用語 `master` が `promotable` に変更されています。 上記のコマンドの代わりに、次の create コマンドを使用します: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -187,8 +190,20 @@ Pacemaker クラスターでは、制約を使用してクラスターの決定�
 
 プライマリ レプリカと仮想 IP リソースが同じホスト上で実行されるようにするには、INFINITY のスコアを持つコロケーション制約を定義します。 コロケーション制約を追加するには、1 つのノードで次のコマンドを実行します。
 
+### <a name="rhel-7"></a>RHEL 7
+
+RHEL 7 で `ag_cluster` リソースを作成すると、リソースが `ag_cluster-master`として作成されます。 RHEL 7 では、次のコマンドを使用します。
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+RHEL 8 で `ag_cluster` リソースを作成すると、リソースが `ag_cluster-clone`として作成されます。 RHEL 8 では、次のコマンドを使用します。
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## <a name="add-ordering-constraint"></a>順序制約を追加する
@@ -209,8 +224,16 @@ IP アドレスが事前フェールオーバー セカンダリのノードを�
 
 順序制約を追加するには、1 つのノードで次のコマンドを実行します。
 
+### <a name="rhel-7"></a>RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

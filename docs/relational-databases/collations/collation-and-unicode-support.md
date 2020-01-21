@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901940"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831812"
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -478,16 +478,12 @@ Unicode は、コード ポイントを文字にマップするための標準�
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で使用可能な UTF-8 照合順序を使用し、一部の Unicode 文字の検索と並べ替えの機能を向上させるには (Windows 照合順序のみ)、UTF-8 エンコード対応の照合順序 (\_UTF8) を選択する必要があります。
  
 -   UTF8 フラグは、以下に適用できます。    
-    -   バージョン 90 照合順序 
-        > [!NOTE]
-        > 補助文字 (\_SC) または異体字セレクター (\_VSS) を区別する照合順序がこのバージョンに既に存在している場合に限られます。
-    -   バージョン 100 照合順序    
-    -   バージョン 140 照合順序   
+    -   補助文字 (\_SC) または異体字セレクターの区別 (\_VSS) 認識を既にサポートしている言語照合順序
     -   BIN2<sup>1</sup> バイナリ照合順序
     
 -   UTF8 フラグは、以下には適用できません。    
-    -   補助文字 (\_SC) または異体字セレクター (\_VSS) をサポートしていないバージョン 90 照合順序    
-    -   BIN または BIN2<sup>2</sup> バイナリ照合順序    
+    -   補助文字 (\_SC) または異体字セレクター (\_VSS) の認識をサポートしていない言語照合順序
+    -   BIN または BIN2<sup>2</sup> バイナリ照合順序
     -   SQL\_* 照合順序  
     
 <sup>1</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 以降。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 では、照合順序 **UTF8_BIN2** が **Latin1_General_100_BIN2_UTF8** に置き換えられました。        
@@ -528,8 +524,6 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 -   補助文字は、90 以上の照合順序バージョンで、並べ替えと比較の操作に使用できます。    
 -   すべてのバージョン 100 の照合順序で、補助文字の言語的な並べ替えがサポートされています。    
 -   補助文字は、データベース オブジェクトの名前など、メタデータ内で使用することはできません。    
--   補助文字 (\_SC) を含む照合順序を使用しているデータベースでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションを有効にすることはできません。 これは、レプリケーション用に作成されるシステム テーブルとストアド プロシージャの一部で、補助文字をサポートしていない古い **ntext** データ型が使われているためです。  
-
 -   SC フラグは、以下に適用できます。    
     -   バージョン 90 照合順序    
     -   バージョン 100 照合順序    

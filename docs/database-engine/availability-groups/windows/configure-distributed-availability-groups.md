@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75002057"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952486"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 分散型可用性グループの構成  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +180,8 @@ GO
 >  **LISTENER_URL** で、各可用性グループのリスナーと、可用性グループのデータベース ミラーリング エンドポイントを指定します。 この例では、ポート `5022` です (リスナーの作成に使用したポート `60173` ではありません)。 Azure でインスタンスにロード バランサーを使用している場合、[分散型可用性グループのポートの負荷分散の規則を追加します](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 SQL Server インスタンスのポートだけでなく、リスナー ポートの規則を追加します。 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>フォワーダーへの自動シード処理を取り消す
-2 つの可用性グループを同期する前にフォワーダーの初期化を取り消す必要がある場合、フォワーダーの SEEDING_MODE パラメーターを MANUAL に設定することで分散型可用性グループを変更し、すぐにシード処理を取り消します。 グローバル プライマリでコマンドを実行します。 
+
+何らかの理由で、2 つの可用性グループを同期する_前に_フォワーダーの初期化を取り消すことが必要になる場合、フォワーダーの SEEDING_MODE パラメーターを MANUAL に設定することで分散型可用性グループを変更し、すぐにシード処理を取り消します。 グローバル プライマリでコマンドを実行します。 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2

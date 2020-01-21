@@ -3,17 +3,17 @@ title: Linux 上の SQL Server 2017 のリリース ノート
 description: この記事には、Linux で実行されている SQL Server 2017 のリリース ノートとサポートされている機能が含まれています。 リリース ノートは、最新のリリースと以前のいくつかのリリースに含まれています。
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/09/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 35a9e15162119c043e1d9ce31c9b5020241dc079
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 6887026d7aa549af0fef82b007b4034cffaf1d9d
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258397"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952520"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -82,7 +82,7 @@ CU リポジトリ (**mssql-server-2017**) を構成済みの場合は、新規�
 
 ## <a id="CU18"></a> CU18 (2019 年 12 月)
 
-これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 18 (CU18) リリースです。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] このリリースの SQL Server データベース エンジンのバージョンは 14.0.3257.3 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377) を参照してください。
+これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 18 (CU18) リリースです。 このリリースの SQL Server データベース エンジンのバージョンは 14.0.3257.3 です。[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377) を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -93,6 +93,11 @@ CU リポジトリ (**mssql-server-2017**) を構成済みの場合は、新規�
 | Red Hat RPM パッケージ | 14.0.3257.3-13 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM パッケージ | 14.0.3257.3-13 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3257.3-13 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3257.3-13_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3257.3-13_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3257.3-13_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="added-support"></a>追加されたサポート
+
+- Change Data Capture (CDC) は、CU18 以降の Linux 上の SQL Server 2017 でサポートされています。
+- トランザクション レプリケーションは、CU18 以降の Linux 上の SQL Server 2017 でサポートされています。
 
 ### <a name="remarks"></a>解説
 
