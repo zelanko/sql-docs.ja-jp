@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 6523da9177f15673461880cbad0fc0a751a4391d
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982092"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871135"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "73982092"
 
 ||||||
 |-|-|-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -129,7 +129,7 @@ ADD CREDENTIAL: 拡張キー管理 (EKM) プロバイダー資格情報をログ
 
 DROP CREDENTIAL: ログインから拡張キー管理 (EKM) プロバイダー資格情報を削除します。 詳しくは、[拡張キー管理 (EKM)] (../.. /relational-databases/security/encryption/extensible-key-management-ekm.md) を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 CHECK_POLICY が ON に設定されている場合、HASHED 引数は使用できません。
 
@@ -172,7 +172,7 @@ CREDENTIAL オプションを使用する場合は、ALTER ANY CREDENTIAL 権限
 
 プリンシパルでは、その独自のログインのパスワード、既定の言語、および既定のデータベースを変更できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-enabling-a-disabled-login"></a>A. 無効なログインを有効にする
 
@@ -266,7 +266,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />単一データベース/エラスティック プール \*_**|[SQL Database<br />マネージド インスタンス](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />単一データベース/エラスティック プール \*_**|[SQL Database<br />マネージド インスタンス](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -277,7 +277,7 @@ GO
 ## <a name="syntax"></a>構文
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
   {
@@ -314,7 +314,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** : [!INCLUDE[ssNoVersion](../../includes/
 
 NAME = *login_name*: ログインの名前を変更する場合、新しい名前を指定します。 Windows ログインの場合は、新しい名前に対応する Windows プリンシパルの SID と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のログインに関連付けられている SID が一致する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの新しい名前には、円記号 (\\) は使用できません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースに最新バージョンのログイン テーブルがあることを確認するには、[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。
 
@@ -331,7 +331,7 @@ ALTER ANY LOGIN 権限が必要です。
 
 プリンシパルは、独自のログインのパスワードを変更できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 これらの例には、他の SQL 製品の使用例も含まれます。 上記でどの引数がサポートされているかを確認してください。
 
@@ -424,7 +424,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />マネージド インスタンス \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />マネージド インスタンス \*_**|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -532,7 +532,7 @@ ADD CREDENTIAL: 拡張キー管理 (EKM) プロバイダー資格情報をログ
 
 DROP CREDENTIAL: ログインから拡張キー管理 (EKM) プロバイダー資格情報を削除します。 詳しくは、「[拡張キー管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 CHECK_POLICY が ON に設定されている場合、HASHED 引数は使用できません。
 
@@ -575,7 +575,7 @@ CREDENTIAL オプションを使用する場合は、ALTER ANY CREDENTIAL 権限
 
 `sysadmin` 特権を持つ SQL プリンシパルのみが Azure AD ログインに対して ALTER LOGIN コマンドを実行できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 これらの例には、他の SQL 製品の使用例も含まれます。 上記でどの引数がサポートされているかを確認してください。
 
@@ -675,16 +675,16 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>構文
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
   {
@@ -721,7 +721,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** : [!INCLUDE[ssNoVersion](../../includes/
 
 NAME = *login_name*: ログインの名前を変更する場合、新しい名前を指定します。 Windows ログインの場合は、新しい名前に対応する Windows プリンシパルの SID と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のログインに関連付けられている SID が一致する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの新しい名前には、円記号 (\\) は使用できません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースに最新バージョンのログイン テーブルが確実にあるようにするには、[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。
 
@@ -738,7 +738,7 @@ ALTER ANY LOGIN 権限が必要です。
 
 プリンシパルは、独自のログインのパスワードを変更できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 これらの例には、他の SQL 製品の使用例も含まれます。 上記でどの引数がサポートされているかを確認してください。
 
@@ -830,7 +830,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -886,7 +886,7 @@ CHECK_POLICY **=** { **ON** | OFF }: [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 UNLOCK: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 ロックされているログインのロックを解除する必要があることを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 CHECK_POLICY が ON に設定されている場合、HASHED 引数は使用できません。
 
@@ -927,7 +927,7 @@ CREDENTIAL オプションを使用する場合は、ALTER ANY CREDENTIAL 権限
 
 プリンシパルでは、その独自のログインのパスワード、既定の言語、および既定のデータベースを変更できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 これらの例には、他の SQL 製品の使用例も含まれます。 上記でどの引数がサポートされているかを確認してください。
 

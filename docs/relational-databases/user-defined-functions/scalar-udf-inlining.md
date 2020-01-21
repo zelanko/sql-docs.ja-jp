@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのスカラー UDF のインライン化 | Microsoft Docs
 description: SQL Server (SQL Server 2019 以降) および Azure SQL Database 内でスカラー UDF を呼び出すスカラー UDF インライン化機能を使用すると、クエリのパフォーマンスが向上します。
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926047"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831778"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
@@ -154,6 +154,7 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 - UDF で、ユーザー定義型が参照されていない。
 - UDF にシグネチャが追加されていない。
 - UDF がパーティション関数ではない。
+- UDF には共通テーブル式 (CTE) への参照が含まれていません。
 
 <sup>1</sup> 変数の累積/集計を含む `SELECT` (例: `SELECT @val += col1 FROM table1`) は、インライン化ではサポートされていません。
 
@@ -188,7 +189,7 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 - 特定の XEvent が生成されています。
 
 ## <a name="enabling-scalar-udf-inlining"></a>スカラー UDF のインライン化を有効にする
-データベースに対して互換性レベル 150 を有効にすることで、自動的にワークロードをスカラー UDF インライン化の対象にすることができます。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] を使って設定できます。 例:  
+データベースに対して互換性レベル 150 を有効にすることで、自動的にワークロードをスカラー UDF インライン化の対象にすることができます。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] を使って設定できます。 次に例を示します。  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -209,7 +210,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-ON のとき、この設定は [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。 `USE HINT` クエリ ヒントとして `DISABLE_TSQL_SCALAR_UDF_INLINING` を指定することで、特定のクエリについてスカラー UDF のインライン化を無効にすることもできます。 例:
+ON のとき、この設定は [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。 `USE HINT` クエリ ヒントとして `DISABLE_TSQL_SCALAR_UDF_INLINING` を指定することで、特定のクエリについてスカラー UDF のインライン化を無効にすることもできます。 次に例を示します。
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
@@ -223,7 +224,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 `USE HINT` クエリ ヒントは、データベース スコープの構成または互換性レベルの設定より優先されます。
 
 `CREATE FUNCTION` または `ALTER FUNCTION` ステートメントで INLINE 句を使用して、特定の UDF についてスカラー UDF のインライン化を無効にすることもできます。
-例:
+次に例を示します。
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))

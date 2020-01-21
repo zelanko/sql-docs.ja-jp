@@ -1,7 +1,7 @@
 ---
 title: Integration Services (SSIS) 用の Azure Feature Pack | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659588"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329954"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 
@@ -100,7 +100,7 @@ TLS 1.2 を使用するには、次の 2 つのレジストリキーの下に `S
 
 ## <a name="dependency-on-java"></a>Java への依存関係
 
-Azure Data Lake Store/フラット ファイル コネクタで ORC/Parquet ファイル形式を使用するには、Java が必要です。  
+Azure Data Lake Store/柔軟なファイル コネクタで ORC/Parquet ファイル形式を使用するには、Java が必要です。  
 Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイムのそれと一致しなければ使用できません。
 次の Java ビルドがテストされています。
 
@@ -119,6 +119,13 @@ Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイ
 7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。
 8. **[OK]** を選択し、 **[環境変数]** ダイアログ ボックスを閉じます。
 9. **[OK]** を選択して **[システム プロパティ]** ダイアログ ボックスを閉じます。
+
+> [!TIP]
+> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space**" というエラーが発生した場合、環境変数 *`_JAVA_OPTIONS`* を追加し、JVM の最小/最大ヒープ サイズを調整できます。
+>
+>![jvm ヒープ](media/azure-feature-pack-jvm-heap-size.png)
+>
+> 例: 変数 *`_JAVA_OPTIONS`* を設定し、値 *`-Xms256m -Xmx16g`* を指定します。 フラグ Xms では、Java 仮想マシン (JVM) の初期メモリ割り当てプールを指定します。Xmx では、最大メモリ割り当てプールを指定します。 これは、JVM 起動時のメモリ量が *`Xms`* 、使用可能なメモリ量が最大で *`Xmx`* であることを意味します。 既定値は最小 64MB および最大 1G です。
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime で Zulu の OpenJDK を設定する
 
@@ -139,6 +146,13 @@ zulu8.33.0.1-jdk8.0.192-win_x64.zip
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space**" というエラーが発生した場合、 *`main.cmd`* でコマンドを追加し、JVM の最小/最大ヒープ サイズを調整できます。 例:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> フラグ Xms では、Java 仮想マシン (JVM) の初期メモリ割り当てプールを指定します。Xmx では、最大メモリ割り当てプールを指定します。 これは、JVM 起動時のメモリ量が *`Xms`* 、使用可能なメモリ量が最大で *`Xmx`* であることを意味します。 既定値は最小 64MB および最大 1G です。
 
 **install_openjdk.ps1**
 

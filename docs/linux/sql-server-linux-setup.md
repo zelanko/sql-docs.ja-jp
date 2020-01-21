@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593666"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884018"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux のインストール ガイド
 
@@ -59,7 +59,7 @@ SQL Server は、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server 
 
 | プラットフォーム | サポートされているバージョン | 取得
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6 | [RHEL 7.6 を取得する](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8.0 | [RHEL 8.0 を取得する](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2、SP3、SP4 | [SLES v12 を取得する](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 を取得する](http://releases.ubuntu.com/xenial/)
 | **Docker Engine** | 1.8 以降 | [Docker を取得する](https://www.docker.com/get-started)
@@ -78,7 +78,7 @@ SQL Server には、Linux に対する次のシステム要件があります。
 |||
 |-----|-----|
 | **[メモリ]** | 2 GB |
-| **[ファイル システム]** | **XFS** または **EXT4** (**BTRFS** などの他のファイル システムはサポートされていません) |
+| **ファイル システム** | **XFS** または **EXT4** (**BTRFS** などの他のファイル システムはサポートされていません) |
 | **ディスク領域** | 6 GB |
 | **プロセッサの速度** | 2 GHz |
 | **プロセッサのコア数** | 2 コア |
@@ -88,7 +88,7 @@ SQL Server には、Linux に対する次のシステム要件があります。
 
 - NFS バージョン **4.2 以上**を使用してください。 前のバージョンの NFS では、最新のファイル システムに共通する fallocate やスパース ファイルの作成などの必要な機能がサポートされていません。
 - NFS マウント上の **/var/opt/mssql** ディレクトリのみが検索されます。 SQL Server システム バイナリなどの他のファイルはサポートされていません。
-- リモート共有をマウントするときに NFS クライアントで 'nolock' オプションが使用されていることを確認します。
+- リモート共有をマウントするときに NFS クライアントが 'nolock' オプションを使用していることを確認してください。
 
 ## <a id="repositories"></a> ソース リポジトリ を構成する
 

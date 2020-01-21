@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97cc55e271344ef571969fee9b20db647da027c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e333a149ca50531be3eb89b8b9d249ea4d5996b9
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982873"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871122"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -100,7 +100,7 @@ ALTER CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の発信側で証明書を使用できるようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  秘密キーは、*certificate_name* で指定する公開キーに対応している必要があります。  
   
  DECRYPTION BY PASSWORD 句は、ファイル内のパスワードが NULL パスワードで保護されている場合は省略できます。  
@@ -121,7 +121,7 @@ ALTER CERTIFICATE certificate_name
 ## <a name="permissions"></a>アクセス許可  
  証明書に対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-removing-the-private-key-of-a-certificate"></a>A. 証明書の秘密キーを削除する  
   

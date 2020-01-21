@@ -1,5 +1,5 @@
 ---
-title: 'クイック スタート: SQL Server に対する接続およびクエリ'
+title: クイック スタート:SQL Server に対する接続およびクエリ
 titleSuffix: Azure Data Studio
 description: このクイック スタートでは、Azure Data Studio を使用して SQL Server に接続し、クエリを実行する方法を示します
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810805"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884049"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用した SQL Server に対する接続およびクエリ
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート:[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用した SQL Server に対する接続およびクエリ
 
 このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL Server に接続し、Transact-SQL (T-SQL) ステートメントを使用して、[!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用する *TutorialDB* を作成する方法を示します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このクイックスタートを完了するには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] と、SQL Server へのアクセス権が必要です。
 
@@ -43,16 +43,16 @@ SQL Server へのアクセス権がない場合は、次のリンクからご利
 
 3. この記事では、*SQL ログイン*を使用しますが、*Windows 認証*はサポートされています。 次のようにフィールドに入力します。
 
-- **サーバー名:** - ここにサーバー名を入力します。 たとえば、localhost です。
+- **サーバー名:** ここにサーバー名を入力します。 たとえば、localhost です。
 - **認証の種類:** SQL ログイン
 - **ユーザー名:** SQL Server のユーザー名
 - **パスワード:** SQL Server のパスワード
-- **データベース名:** このフィールドは空白のままにします
+- **データベース名:** \<既定値\>
 - **サーバー グループ:** \<既定値\>
 
    ![新しい接続画面](media/quickstart-sql-server/new-connection-screen.png)
 
-## <a name="create-a-database"></a>データベースの作成
+## <a name="create-a-database"></a>データベースを作成する
 
 次の手順では、**TutorialDB** という名前のデータベースを作成します。
 
@@ -79,7 +79,7 @@ SQL Server へのアクセス権がない場合は、次のリンクからご利
 
    ![データベースの作成](media/quickstart-sql-server/create-database.png)
 
-## <a name="create-a-table"></a>テーブルの作成
+## <a name="create-a-table"></a>テーブルを作成する
 
 クエリ エディターはまだ *master* データベースに接続されていますが、*TutorialDB* データベースにテーブルを作成する必要があります。
 
@@ -138,6 +138,6 @@ SQL Server へのアクセス権がない場合は、次のリンクからご利
 
    ![結果の選択](media/quickstart-sql-server/select-results.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 正常に SQL Server に接続し、クエリを実行することができたので、[コード エディターのチュートリアル](tutorial-sql-editor.md)をお試しいただけます。

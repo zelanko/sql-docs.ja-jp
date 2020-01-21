@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2016 をインストール ウィザードからインストールする (セットアップ) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2019
+title: グラフィカル ユーザー インターフェイスを使用したインストール
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962370"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259022"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962370"
 
 この記事では、インストール ウィザードを使用して SQL Server をインストールする方法について説明します。 これは [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] および [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)] に適用されます。
 
-この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ インストール ウィザードを使って [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールする手順について詳しく説明します。 インストール ウィザードでは、1 つの機能ツリーを使用してすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできるため、それらを個別にインストールする必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントを個別にインストールするには、「[SQL Server をインストールする](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)」を参照してください。  
+この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ インストール ウィザードを使って [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールする手順について詳しく説明します。 インストール ウィザードでは、1 つの機能ツリーを使用してすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできるため、それらを個別にインストールする必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントを個別にインストールするには、「[SQL Server をインストールする](../../database-engine/install-windows/install-sql-server.md#individual-component-installation)」を参照してください。  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする他の方法については、以下を参照してください。  
 
@@ -41,7 +41,7 @@ ms.locfileid: "73962370"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする前に、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」を確認してください。  
   
@@ -83,7 +83,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
 
 1. コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を初めてインストールする場合は、 **[インストールの種類]** ページがスキップされて、直接 **[機能の選択]** ページに移動します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシステムに既にインストールされている場合は、 **[インストールの種類]** ページで、新規インストールを実行するか、既存のインストール環境に機能を追加するかを選択できます。 続けるには、 **[次へ]** を選択します。
   
-1. **[機能の選択]** ページで、インストールするコンポーネントを選択します。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]の新しいインスタンスをインストールするには、 **[データベース エンジン サービス]** を選択します。
+1. **[機能の選択]** ページで、インストールするコンポーネントを選択します。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンスをインストールするには、 **[データベース エンジン サービス]** を選択します。
 
     機能名を選択すると、 **[機能の説明]** ペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、[SQL Server 2016 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)に関するセクション、または [SQL Server 2017 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するセクションを参照してください。
   
@@ -106,7 +106,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
 1. **[インスタンスの構成]** ページで、既定のインスタンスまたは名前付きインスタンスをインストールするかどうかを指定します。 詳細については、「[インスタンスの構成](../../sql-server/install/instance-configuration.md#instance-configuration-page)」を参照してください。  
   
-     * **[インスタンス ID]** : 既定では、インスタンス名がインスタンス ID として使用されます。 この ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 既定のインスタンスの場合も名前付きインスタンスの場合も、同じ動作が発生します。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **[インスタンス ID]** テキスト ボックスで異なる値を指定します。  
+     * **インスタンス ID**: 既定では、インスタンス名がインスタンス ID として使用されます。 この ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 既定のインスタンスの場合も名前付きインスタンスの場合も、同じ動作が発生します。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **[インスタンス ID]** テキスト ボックスで異なる値を指定します。  
   
        > [!NOTE]  
        > [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] の標準的なスタンドアロン インスタンスでは、既定のインスタンスの場合も名前付きインスタンスの場合も、インスタンス ID の値として既定値以外は使用しないでください。  
@@ -140,7 +140,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
 1. **[データベース エンジンの構成 - サーバーの構成]** ページを使用して、次のオプションを指定します。  
   
-    * **セキュリティ モード**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して **Windows 認証**または**混合モード認証**を選択します。 **混合モード認証**を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
+    * **[セキュリティ モード]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して **Windows 認証**または**混合モード認証**を選択します。 **混合モード認証**を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
        デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との接続を正常に確立した後のセキュリティ メカニズムは、Windows 認証モードでも混合モード認証でも同じです。 詳細については、「[[データベース エンジンの構成] - [サーバー構成] ページ](../../sql-server/install/instance-configuration.md#serverconfig)」を参照してください。
   
@@ -249,7 +249,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
 
 1. コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を初めてインストールする場合は、 **[インストールの種類]** ページがスキップされて、直接 **[機能の選択]** ページに移動します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシステムに既にインストールされている場合は、 **[インストールの種類]** ページで、新規インストールを実行するか、既存のインストール環境に機能を追加するかを選択できます。 続けるには、 **[次へ]** を選択します。
   
-1. **[機能の選択]** ページで、インストールするコンポーネントを選択します。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]の新しいインスタンスをインストールするには、 **[データベース エンジン サービス]** を選択します。
+1. **[機能の選択]** ページで、インストールするコンポーネントを選択します。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンスをインストールするには、 **[データベース エンジン サービス]** を選択します。
 
     機能名を選択すると、 **[機能の説明]** ペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、[SQL Server 2016 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)に関するセクション、または [SQL Server 2017 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するセクションを参照してください。
   
@@ -272,7 +272,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
 1. **[インスタンスの構成]** ページで、既定のインスタンスまたは名前付きインスタンスをインストールするかどうかを指定します。 詳細については、「[インスタンスの構成](../../sql-server/install/instance-configuration.md#instance-configuration-page)」を参照してください。  
   
-     * **[インスタンス ID]** : 既定では、インスタンス名がインスタンス ID として使用されます。 この ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 既定のインスタンスの場合も名前付きインスタンスの場合も、同じ動作が発生します。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **[インスタンス ID]** テキスト ボックスで異なる値を指定します。  
+     * **インスタンス ID**: 既定では、インスタンス名がインスタンス ID として使用されます。 この ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 既定のインスタンスの場合も名前付きインスタンスの場合も、同じ動作が発生します。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **[インスタンス ID]** テキスト ボックスで異なる値を指定します。  
   
        > [!NOTE]  
        > [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] の標準的なスタンドアロン インスタンスでは、既定のインスタンスの場合も名前付きインスタンスの場合も、インスタンス ID の値として既定値以外は使用しないでください。  
@@ -303,7 +303,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
 1. **[データベース エンジンの構成 - サーバーの構成]** ページを使用して、次のオプションを指定します。  
   
-    * **セキュリティ モード**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して **Windows 認証**または**混合モード認証**を選択します。 **混合モード認証**を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
+    * **[セキュリティ モード]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して **Windows 認証**または**混合モード認証**を選択します。 **混合モード認証**を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
        デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との接続を正常に確立した後のセキュリティ メカニズムは、Windows 認証モードでも混合モード認証でも同じです。 詳細については、「[[データベース エンジンの構成] - [サーバー構成] ページ](../../sql-server/install/instance-configuration.md#serverconfig)」を参照してください。
   
@@ -396,7 +396,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールを構成します。](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017)  
   

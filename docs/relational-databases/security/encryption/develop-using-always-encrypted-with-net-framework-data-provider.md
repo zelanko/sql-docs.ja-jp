@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted と .NET Framework Data Provider for SQL Server を使用する | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted と .NET Framework Data Provider
+description: SQL Server 用の Always Encrypted を使用し、.NET アプリケーションを開発する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
@@ -11,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594457"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558080"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Always Encrypted と .NET Framework Data Provider for SQL Server を使用する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "73594457"
 
 Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 .NET Framework Data Provider for SQL Server など、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳しくは、「[Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)」および「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用してアプリケーションを開発する](always-encrypted-enclaves-client-development.md)」をご覧ください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - データベースで Always Encrypted を構成します。 この処理には、Always Encrypted キーのプロビジョニング、および選択したデータベース列の暗号化の設定が含まれます。 Always Encrypted が構成されたデータベースがまだない場合は、「[Always Encrypted の作業の開始](always-encrypted-database-engine.md#getting-started-with-always-encrypted)」の手順に従います。
 - 開発用コンピューターに .NET Framework バージョン 4.6.1 以降がインストールされていることを確認します。 詳細については、「 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)」を参照してください。 また、開発環境内でターゲットの .NET Framework バージョンとして .NET Framework バージョン 4.6 以降が構成されていることも確認する必要があります。 Visual Studio を使用している場合は、「[方法: .NET Framework のバージョンをターゲットにする](https://msdn.microsoft.com/library/bb398202.aspx)」を参照してください。 
@@ -73,7 +74,7 @@ Always Encrypted は、個々のクエリに対しても有効にすることが
 2. アプリケーションの構成 (web.config または app.config など) を更新して、お使いの [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] インスタンスで構成されているエンクレーブの種類の間のマッピングを定義します (「[Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)」を参照)。 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] では、構成証明に対して VBS エンクレーブとホスト ガーディアン サービスがサポートされています。 そのため、VBS エンクレーブの種類を、NuGet パッケージの Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider クラスにマップする必要があります。 
 3. 構成証明エンドポイントへの接続文字列でエンクレーブ構成証明の URL キーワードを設定することにより、アプリケーションからデータベースへの接続に対してエンクレーブの計算を有効にします。 キーワードの値は、お使いの環境で構成されている HGS サーバーの構成証明エンドポイントに設定する必要があります。 
 
-詳しいチュートリアルについては、「[チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET Framework アプリケーションを開発する](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)」をご覧ください
+詳しいチュートリアルについては、「[チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 
@@ -522,7 +523,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 ## <a name="copying-encrypted-data-using-sqlbulkcopy"></a>SqlBulkCopy を使用して暗号化されたデータをコピーする
 
-SqlBulkCopy を使用して、データの暗号化解除を行うことなく、既に暗号化されて 1 つのテーブルに格納されているデータを別のテーブルにコピーできます。 この手順は次のとおりです。
+SqlBulkCopy を使用して、データの暗号化解除を行うことなく、既に暗号化されて 1 つのテーブルに格納されているデータを別のテーブルにコピーできます。 その手順を次に示します。
 
 - ターゲット テーブルの暗号化構成が、ソース テーブルの構成と同じであることを確認します。 具体的には、両方のテーブルで同じ列が暗号化されており、同じ暗号化タイプおよび同じ暗号化キーを使用してこれらの列が暗号化されている必要があります。 注: いずれかのターゲット列が、対応するソース列と異なる方法で暗号化されている場合、コピー操作の後でターゲット テーブル内のデータを暗号化解除することはできません。 データは破損します。
 - Always Encrypted を有効にせずに、ソース テーブルとターゲット テーブルへの両方のデータベース接続を構成します。 
@@ -557,14 +558,14 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>Always Encrypted API リファレンス
 
-**名前空間:**[System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**名前空間:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
 
 **アセンブリ:** System.Data (System.Data.dll)
 
 
 
 
-|[オブジェクト名]|[説明]|導入された .NET バージョン
+|Name|[説明]|導入された .NET バージョン
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 証明書ストアのキー ストア プロバイダー。|  4.6
 |[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft Cryptography API:Next Generation (CNG) のキー ストア プロバイダー。|  4.6.1
@@ -584,7 +585,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>参照
 
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 関連のブログ](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL Database のチュートリアル:Always Encrypted で機密データを保護する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

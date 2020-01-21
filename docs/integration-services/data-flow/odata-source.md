@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298225"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546528"
 ---
 # <a name="odata-source"></a>OData ソース
 
@@ -41,13 +41,15 @@ Open Data Protocol (OData) サービスからのデータを使用するには�
 
 OData ソースには、次のデータ ソースのサポートが含まれます。
 -   Microsoft Dynamics AX Online および Microsoft Dynamics CRM Online
--   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、 https://\<server>/_vti_bin/ListData.svc という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](https://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。
+-   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、`https://<server>/_vti_bin/ListData.svc` という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](https://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。
 
 ## <a name="supported-data-types"></a>サポートされるデータ型
 
 OData ソースは、次の単純なデータ型をサポートしています: int、byte[]、bool、byte、DateTime、DateTimeOffset、decimal、double、Guid、Int16、Int32、Int64、sbyte、float、string、TimeSpan。
 
 データ ソース内の列のデータ型を確認するには、`https://<OData feed endpoint>/$metadata` ページをチェックしてください。
+
+**decimal** データ型の場合、精度とスケールはソース メタデータによって決定されます。 **Precision** プロパティと **Scale** プロパティがソース メタデータで指定されていない場合、データは切り捨てられることがあります。
 
 > [!IMPORTANT]
 > SharePoint リストでは、複数選択項目など、複雑な種類を OData ソース コンポーネントで利用できません。
@@ -62,7 +64,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
   
 ## <a name="related-topics-in-this-section"></a>このセクションの関連トピック  
   
--   [チュートリアル: OData ソースの使用](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [チュートリアル:OData ソースの使用](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [実行時の OData ソース クエリの変更](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -85,7 +87,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
   
 |オプション|[説明]|  
 |------------|-----------------|  
-|Collection|コレクション名を使用して、Odata ソースからデータを取得します。|  
+|コレクション|コレクション名を使用して、Odata ソースからデータを取得します。|  
 |リソースのパス|リソースのパスを使用して、Odata ソースからデータを取得します。|  
   
  **クエリ オプション**  
@@ -100,12 +102,12 @@ OData ソースは、次の単純なデータ型をサポートしています: 
 ### <a name="dynamic-options"></a>動的オプション  
   
 #### <a name="use-collection-or-resource-path--collection"></a>コレクション、またはリソースのパス = Collection を使用します。  
- **Collection**  
+ **コレクション**  
  ドロップダウン リストからコレクションを選択します。  
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 例:Employees  
+ リソースのパスを入力します。 次に例を示します。Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
   出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、 **[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
@@ -133,12 +135,12 @@ OData ソースは、次の単純なデータ型をサポートしています: 
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **[説明]**  
+ **説明**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  

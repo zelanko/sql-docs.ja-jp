@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted を使用した暗号化データの列への一括読み込み | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted を使用した暗号化データの列への一括読み込み
+description: SQL Server で Always Encrypted を使用しているとき、列にデータを一括読み込みする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594166"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558207"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Always Encrypted を使用した暗号化データの列への一括読み込み
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "73594166"
 ## <a name="bulk-loading-of-encrypted-data"></a>暗号化されたデータの一括読み込み  
 次のプロセスを使用して、暗号化されたデータを読み込みます。  
 
-1.  一括コピー操作の対象となるデータベース内のユーザーに対して、オプションを ON に設定します。 例:  
+1.  一括コピー操作の対象となるデータベース内のユーザーに対して、オプションを ON に設定します。 次に例を示します。  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
@@ -44,7 +45,7 @@ ms.locfileid: "73594166"
 
 2.  そのユーザーとして接続して、一括コピー アプリケーションまたはツールを実行します。 (アプリケーションで Always Encrypted が有効なクライアント ドライバーを使用する場合は、暗号化された列から取得されたデータが暗号化された状態のままになるように、データ ソースの接続文字列に **column encryption setting=enabled** が含まれていないことを確認します。 詳しくは、「[Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)」をご覧ください。)  
   
-3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションを OFF に戻します。 例:  
+3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションを OFF に戻します。 次に例を示します。  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
@@ -71,12 +72,12 @@ ms.locfileid: "73594166"
  
 新しいアプリケーションの開発には、このオプションを使用しないでください。 代わりに、単一セッションに対して暗号化メタデータ チェックを抑制するための API が提供されているクライアント ドライバーを使用します (たとえば、SQL Server 用の .NET Framework Data Provider での AllowEncryptedValueModifications オプションなど)。「[SqlBulkCopy を使用して暗号化されたデータをコピーする](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy)」を参照してください。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 - [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>参照  
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [SQL Server インポートおよびエクスポート ウィザードで Always Encrypted を使用して列間でデータを移行する](always-encrypted-migrate-using-import-export-wizard.md)
 - [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 - [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   

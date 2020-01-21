@@ -1,10 +1,10 @@
 ---
 title: 変更データ キャプチャについて
 ms.custom: seo-dt-2019
-ms.date: 01/02/2019
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095328"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952459"
 ---
 # <a name="about-change-data-capture-sql-server"></a>変更データ キャプチャについて (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+> [!NOTE]
+> CDC は現在、SQL Server 2017 on Linux (CU18 以降) と SQL Server 2019 on Linux でサポートされています。
+
   変更データ キャプチャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに対して適用された挿入、更新、削除の各アクティビティを記録して、 変更の詳細を、利用しやすいリレーショナル形式で格納します。 変更された行に対応する列情報が、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされ、追跡対象となるソース テーブルの列構造がミラー化された変更テーブルに格納されます。 コンシューマーは、用意されているテーブル値関数を使用して、変更データに体系的にアクセスできます。  
   
  この技術の対象となるデータ コンシューマーの好例が、ETL (抽出、変換、読み込み) アプリケーションです。 ETL アプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース テーブルからデータ ウェアハウスやデータ マートに変更データをインクリメンタルに読み込みます。 ソース テーブルの変更をデータ ウェアハウス内のソース テーブルの表現に反映する必要がありますが、ソースのレプリカを更新するエンド ツー エンドのテクノロジでは不適切です。 ここで必要となるのは、対象となる異質なデータ表現に対して適用できるように構成された変更データの確実なストリームです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変更データ キャプチャはこの技術を提供します。  
@@ -30,7 +34,7 @@ ms.locfileid: "74095328"
 ## <a name="change-data-capture-data-flow"></a>変更データ キャプチャのデータ フロー  
  次の図は、変更データ キャプチャの主なデータ フローを示しています。  
   
- ![変更データ キャプチャのデータ フロー](../../relational-databases/track-changes/media/cdcdataflow.gif "変更データ キャプチャのデータ フロー")  
+ ![変更データ キャプチャのデータ フロー](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
   
  変更データ キャプチャの変更データのソースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログです。 追跡対象のソース テーブルに対して挿入、更新、削除の各操作が適用されると、それらの変更を記述するエントリがこのログに追加されます。 このログは、キャプチャ プロセスへの入力として機能します。 このプロセスによってログが読み取られ、変更に関する情報が、追跡対象のテーブルに関連付けられている変更テーブルに追加されます。 用意されている関数を使用すると、指定した範囲にこの変更テーブルに追加された変更を列挙できます。この情報は、フィルター処理された結果セットの形式で返されます。 通常は、このフィルター処理された結果セットを使用して、アプリケーション プロセスによって外部環境のソースの表現が更新されます。  
   

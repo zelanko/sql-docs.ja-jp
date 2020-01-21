@@ -1,7 +1,7 @@
 ---
 title: インメモリ OLTP のサンプル データベース | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 12/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111805"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258781"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68111805"
   
 -   [サンプルにおけるメモリおよびディスク領域の使用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> 前提条件  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68111805"
   
      T-SQL スクリプトの例:  
   
-    ```  
+    ```sql
     RESTORE DATABASE [AdventureWorks2016CTP3]   
       FROM DISK = N'C:\temp\AdventureWorks2016CTP3.bak'   
         WITH FILE = 1,    
@@ -139,11 +139,11 @@ ms.locfileid: "68111805"
   
  Sales.SalesOrderHeader_inmem  
   
--   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 コンカレンシーが多くスループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入するインメモリ OLTP ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
+-   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 コンカレンシーが多く、スループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入するインメモリ OLTP ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
   
--   *エイリアス UDT* - 元のテーブルでは、2 つのエイリアス ユーザー定義データ型 (UDT) が使用されます。1 つは dbo.OrderNumber で、これは PurchaseOrderNumber 列に対して使用されます。もう 1 つは dbo.AccountNumber で、AccountNumber 列に対して使用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
+-   *エイリアス ユーザー定義データ型 (UDT)* - 元のテーブルでは、2 つのエイリアス UDT が使用されます。1 つは dbo.OrderNumber で、これは PurchaseOrderNumber 列に対して使用されます。もう 1 つは dbo.AccountNumber で、AccountNumber 列に対して使用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
   
--   *インデックス キーの NULL 値を許容する列* - 元のテーブルでは、SalesPersonID 列は NULL 値を許容しますが、新しいテーブルのこの列では NULL 値が許容されず、既定の制約として値 -1 が設定されています。 これは、メモリ最適化テーブルのインデックスでは、インデックス キーに NULL 値を許容する列を使用できないためです。この場合は、-1 が NULL のサロゲートです。  
+-   *インデックス キーの NULL 値を許容する列* - 元のテーブルでは、SalesPersonID 列は NULL 値を許容しますが、新しいテーブルのこの列では NULL 値が許容されず、既定の制約として値 -1 が設定されています。 この状況は、メモリ最適化テーブルのインデックスでは、インデックス キーに NULL 値を許容する列を使用できないためです。この場合は、-1 が NULL のサロゲートです。  
   
 -   *計算列* - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
 
@@ -182,15 +182,20 @@ ms.locfileid: "68111805"
   
  ハッシュ インデックスを使用すると、ワークロードをさらに最適化できます。 これは、特にポイント参照と行挿入に合わせて最適化されています。 ただし、範囲スキャン、並べ替えられたスキャン、または先頭のインデックス キー列での検索がサポートされていないことを考慮する必要があります。 したがって、このインデックスを使用するときは注意が必要です。 また、作成時に bucket_count を指定する必要もあります。 一般的にはインデックス キー値の数の 1 ～ 2 倍に設定しますが、多めに設定しても通常は問題ありません。  
   
- 詳細については、オンライン ブックの [インデックスのガイドライン](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 、および [適切な bucket_count の選択](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)に関するガイドラインをご覧ください。  
-  
+詳細については、オンライン ブックの [インデックスのガイドライン](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx)、および [適切な bucket_count の選択](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)に関するガイドラインをご覧ください。  
+
+
+オンライン ブックからは、次のトピックに関する詳細が得られます。
+- [インデックス ガイドライン](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [正しい bucket_count を選択する](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+
  移行したテーブルのインデックスは、販売注文処理のデモ ワークロードに合わせて調整されています。 ワークロードは、Sales.SalesOrderHeader_inmem テーブルおよび Sales.SalesOrderDetail_inmem テーブルの挿入とポイント参照のほか、Production.Product_inmem テーブルおよび Sales.SpecialOffer_inmem テーブルの主キー列のポイント参照にも依存します。  
   
  Sales.SalesOrderHeader_inmem には 3 つのインデックスがあります。このインデックスは、パフォーマンス上の理由から、また、並べ替えられたスキャンと範囲スキャンがワークロードに不要であることから、すべてハッシュ インデックスです。  
   
 -   (SalesOrderID) のハッシュ インデックス: 予測される販売注文数は 1,000 万であるため、bucket_count は 1,000 万です (1,600 万まで切り上げ)  
   
--   (SalesPersonID) のハッシュ インデックス: bucket_count は 100 万です。 提供されたデータ セットに含まれる販売員は多くありませんが、これにより将来の成長に対応できます。さらに、bucket_count のサイズが超過しても、ポイント参照のパフォーマンスが低下することはありません。  
+-   (SalesPersonID) のハッシュ インデックス: bucket_count は 100 万です。 指定されたデータ セットでは、営業担当者は多くありません。 ただし、この大きな bucket_count では将来の成長に対応できます。 さらに、bucket_count のサイズが大きすぎても、ポイント参照のパフォーマンスが低下することはありません。  
   
 -   (CustomerID) のハッシュ インデックス: bucket_count は 100 万です。 提供されたデータ セットに含まれる顧客は多くありませんが、これにより将来の成長に対応できます。  
   
@@ -242,7 +247,7 @@ ms.locfileid: "68111805"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 注文の品目が含まれる TVP  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 注文の品目が含まれるテーブル値パラメーター (TVP)  
   
     -   入力パラメーター (省略可能):  
   
@@ -308,11 +313,11 @@ ms.locfileid: "68111805"
  ostress は、Microsoft CSS SQL Server サポート チームによって開発されたコマンド ライン ツールです。 このツールを使用すると、クエリやストアド プロシージャを並列実行できます。 指定された T-SQL ステートメントが並列実行されるようにスレッドの数を構成できるほか、そのスレッドでステートメントを実行する回数を指定できます。ostress はスレッドをスピン アップし、すべてのスレッド内のステートメントを並列実行します。 すべてのスレッドに対する実行が完了したら、その実行が完了するまでの所要時間を報告します。  
   
 ### <a name="installing-ostress"></a>ostress のインストール  
- ostress は、RML ユーティリティの一部としてインストールされます。ostress のスタンドアロン インストールはありません。  
+ ostress は、レポート マークアップ言語 (RML) ユーティリティの一部としてインストールされます。ostress のスタンドアロン インストールはありません。  
   
  インストール手順:  
   
-1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。[SQL Server 用の Report Markup Language (RML) をダウンロードする](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。[SQL Server 用の RML のダウンロード](https://www.microsoft.com/download/details.aspx?id=4511)
 
 2.  特定のファイルが使用中であることを通知するダイアログ ボックスが表示された場合は、[続行] をクリックします  
   
@@ -348,7 +353,7 @@ ms.locfileid: "68111805"
   
  次のスクリプトは同時に実行され、販売注文処理のワークロードをシミュレートします。  
   
-```  
+```sql
 DECLARE   
       @i int = 0,   
       @od Sales.SalesOrderDetailType_inmem,   
@@ -368,8 +373,7 @@ WHILE (@i < 20)
 BEGIN;   
       EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od;   
       SET @i += 1   
-END  
-  
+END
 ```  
   
  このスクリプトでは、作成された各サンプル注文が、WHILE ループで実行された 20 個のストアド プロシージャによって 20 回挿入されます。 ループを使うことで、サンプル注文がデータベースを使用して作成されるという事実を説明します。 一般的な運用環境では、中間層アプリケーションが、挿入する販売注文を作成します。  
@@ -392,7 +396,7 @@ END
   
  [コピー] をクリックしてコマンドをコピーし、RML ユーティリティのコマンド プロンプトに貼り付けてください。  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -407,7 +411,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
   
  [コピー] をクリックしてコマンドをコピーし、RML ユーティリティのコマンド プロンプトに貼り付けてください。  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -422,7 +426,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
 #### <a name="resetting-the-demo"></a>デモのリセット  
  デモをリセットするには、RML Cmd Prompt を開いて、次のコマンドを実行します。  
   
-```  
+```console
 ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"  
 ```  
   
@@ -451,7 +455,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 #### <a name="overall-utilization-of-the-database"></a>データベースの全体的な使用率  
  次のクエリを使用すると、システムのインメモリ OLTP の合計メモリ使用率を取得できます。  
   
-```  
+```sql
 SELECT type  
    , name  
 , pages_kb/1024 AS pages_MB   
@@ -463,17 +467,18 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|既定|94|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|既定|0|  
-|MEMORYCLERK_XTP|既定|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
+||||
   
  既定のメモリ クラークは比較的小さく、システム全体のメモリ構造が含まれています。 ユーザー データベースのメモリ クラーク (この場合は ID 5 のデータベース) は約 900 MB です。  
   
 #### <a name="memory-utilization-per-table"></a>テーブルごとのメモリ使用率  
  次のクエリを使用すると、個別のテーブルとそのインデックスのメモリ使用率にドリル ダウンできます。  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -482,7 +487,7 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
- サンプルの新しいインストールに対するこのクエリの結果を次に示します。  
+ サンプルの新しいインストールに対するこのクエリの結果を次の表に示します。  
   
 ||||  
 |-|-|-|  
@@ -494,7 +499,8 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-  
+||||
+
  テーブルがかなり小さいことがわかります。SalesOrderHeader_inmem は約 7 MB、SalesOrderDetail_inmem は約 15 MB です。  
   
  ここで印象的なのは、インデックスに割り当てられているメモリのサイズです (テーブル データのサイズと比較)。 このサイズになるのは、サンプルのハッシュ インデックスが、大きなデータ サイズに合わせて事前にサイズ調整されているためです。 ハッシュ インデックスのサイズは固定されているため、テーブルのデータのサイズに合わせて大きくなることはありません。  
@@ -502,7 +508,7 @@ WHERE t.type='U'
 ####  <a name="Memoryutilizationafterrunningtheworkload"></a> ワークロード実行後のメモリ使用率  
  1,000 万個の販売注文を挿入した後の全体的なメモリ使用率は次のようになります。  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -512,16 +518,17 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|既定|146|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|既定|0|  
-|MEMORYCLERK_XTP|既定|0|  
-  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
+||||
+
  このように、SQL Server がサンプル データベースのメモリ最適化テーブルおよびインデックスに対して使用しているビットは 8 GB を下回ります。  
   
  サンプルを 1 回実行した後のテーブルごとの詳細なメモリ使用量を確認します。  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -540,7 +547,8 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-  
+||||
+
  データの合計サイズが約 6.5 GB であることがわかります。 SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem テーブルのインデックスのサイズが、販売注文を挿入する前のインデックスのサイズと同じであることに注意してください。 インデックスのサイズが変わらなかったのは、この両方のテーブルがハッシュ インデックスを使用しているからです。ハッシュ インデックスは静的です。  
   
 #### <a name="after-demo-reset"></a>デモのリセット後  
@@ -548,7 +556,7 @@ WHERE t.type='U'
   
  この時点でテーブルの行は削除されていますが、メモリはすぐに再利用されるわけではありません。 SQL Server では、メモリはメモリ最適化テーブルの削除された行から、必要に応じてバックグラウンドで再利用されます。 デモのリセット後すぐにこれがわかります。システムにトランザクション ワークロードがない場合、削除された行のメモリはまだ再利用されていません。  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -558,16 +566,17 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|既定|2261|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|既定|0|  
-|MEMORYCLERK_XTP|既定|0|  
-  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
+||||
+
  これは想定されている動作です。メモリはトランザクション ワークロードの実行中に再利用されます。  
   
- 2 回目のデモ ワークロードの実行を開始すると、前に削除された行がクリーンアップされるため、メモリ使用率は最初は減少します。 ある時点で、メモリ サイズは再び増加し、ワークロードが終了するまで増加し続けます。 デモをリセットしてから 1,000 万行を挿入した後のメモリ使用率は、最初の実行後の使用率とよく似ています。 例 :  
+ 2 回目のデモ ワークロードの実行を開始すると、前に削除された行がクリーンアップされるため、メモリ使用率は最初は減少します。 ある時点で、メモリ サイズは再び増加し、ワークロードが終了するまで増加し続けます。 デモをリセットしてから 1,000 万行を挿入した後のメモリ使用率は、最初の実行後の使用率とよく似ています。 次に例を示します。  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -577,15 +586,16 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|既定|1863|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|既定|0|  
-|MEMORYCLERK_XTP|既定|0|  
-  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
+||||
+
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>メモリ最適化テーブルのディスク使用率  
  特定の時点におけるデータベースのチェックポイント ファイルに対する、全体的なディスク上のサイズを確認するには、次のクエリを使用します。  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -596,9 +606,9 @@ WHERE f.type=N'FX'
 #### <a name="initial-state"></a>初期状態  
  サンプル ファイル グループとサンプル メモリ最適化テーブルの初回作成時に、チェックポイント ファイルがいくつか事前作成され、システムによってデータが入力されます。事前作成されるチェックポイント ファイルの数は、システム内の論理プロセッサの数によって異なります。 最初はサンプルがかなり小さいため、初回作成後の事前作成されたファイルはほとんど空です。  
   
- 16 個の論理プロセッサを持つコンピューター上のサンプルに対する、最初のディスク上のサイズを次に示します。  
+ 16 個の論理プロセッサを持つコンピューター上のサンプルに対する、最初のディスク上のサイズを次のコードに示します。  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -609,12 +619,13 @@ WHERE f.type=N'FX'
 |-|  
 |**On-disk size in MB**|  
 |2312|  
-  
+||
+
  チェックポイント ファイルのディスク上のサイズ (2.3 GB) と実際のデータ サイズ (約 30 MB) に大きな違いがあることがわかります。  
   
  ディスク領域の使用率の詳細を確認するには、次のクエリを使用します。 このクエリから返されるディスクのサイズは、5 (REQUIRED FOR BACKUP/HA)、6 (IN TRANSITION TO TOMBSTONE)、または 7 (TOMBSTONE) の状態のファイルに関するおおよそのサイズです。  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -636,9 +647,10 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
-|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
-  
+|UNDER CONSTRUCTION|DATA|1|128|  
+|UNDER CONSTRUCTION|DELTA|1|8|  
+|||||
+
  領域のほとんどが、事前作成されたデータとデルタ ファイルによって使用されていることがわかります。 SQL Server では、1 組のファイル ペア (データとデルタ) が論理プロセッサごとに事前作成されます。 また、さらに効率よくデータを挿入できるように、データ ファイルは 128 MB に、デルタ ファイルは 8 MB に事前にサイズ調整されています。  
   
  メモリ最適化テーブルの実際のデータは、1 つのデータ ファイルにあります。  
@@ -646,7 +658,7 @@ ORDER BY state, file_type
 #### <a name="after-running-the-workload"></a>ワークロードの実行後  
  1,000 万個の販売注文を挿入するテストを 1 回実行すると、全体的なディスク上のサイズは次のようになります (16 コア テスト サーバーの場合)。  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -656,13 +668,14 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**On-disk size in MB**|  
-|8828|  
+|8828|
+||
   
  ディスク上のサイズは 9 GB に迫っています。これは、データのインメモリ サイズに近い数値です。  
   
  さまざまな状態のチェックポイント ファイルのサイズを詳しく確認します。  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -682,9 +695,10 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
-|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
-  
+|UNDER CONSTRUCTION|DATA|1|128|  
+|UNDER CONSTRUCTION|DELTA|1|8|  
+|||||
+
  事前作成された 16 組のファイル ペアはまだあり、チェックポイントが閉じているので、準備状態です。  
   
  1 組の作成中のファイル ペアは、現在のチェックポイントが閉じるまで使用されます。 これにより、アクティブなチェックポイント ファイルと共に、約 6.5 GB のディスク使用率が 6.5 GB のメモリ内のデータに対して提供されます。 インデックスはディスクに保存されないため、この場合、全体的なディスクのサイズはメモリのサイズよりも小さくなることに注意してください。  
@@ -694,7 +708,7 @@ ORDER BY state, file_type
   
  この例では、デモのリセット後、次のように表示される場合があります  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -704,11 +718,12 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**On-disk size in MB**|  
-|11839|  
+|11839|
+||
   
  ディスク サイズは 12 GB 近くあり、デモをリセットする前の 9 GB を大幅に上回っています。 これは、一部のチェックポイント ファイルのマージが開始されたにもかかわらず、まだインストールされていないマージ ターゲットがあるためです。また、クリーン アップされていないマージ ソース ファイルの存在も原因となっています。これを次に示します。  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -734,14 +749,15 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-  
+|||||
+
  トランザクション アクティビティがシステムで発生すると、マージ ターゲットがインストールされ、マージされたソースがクリーン アップされます。  
   
  2 回目のデモ ワークロードを実行してからデモをリセットし、1,000 万個の販売注文を挿入すると、最初のワークロードの実行中に作成されたファイルはクリーンアップされています。 ワークロードの実行中に前のクエリを複数回実行した場合、チェックポイント ファイルはさまざまな段階を経て進行します。  
   
- 2 回目のワークロードを実行してから 1,000 万個の販売注文を挿入した場合、そのディスク使用率は最初の実行後の使用率とよく似ています。ただし、システムはもともと動的であるため、必ずしも同じであるとは限りません。 例 :  
+ 2 回目のワークロードを実行してから 1,000 万個の販売注文を挿入した場合、そのディスク使用率は最初の実行後の使用率とよく似ています。ただし、システムはもともと動的であるため、必ずしも同じであるとは限りません。 次に例を示します。  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -765,11 +781,10 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-  
+|||||
+
  この場合、"under construction" 状態のチェックポイント ファイルのペアが 2 組あります。これは、複数のファイル ペアが、おそらくワークロードにおける高レベルのコンカレンシーが原因で、"under construction" 状態に移行されたことを意味します。 一方、複数の同時実行スレッドには新しいファイル ペアが必要だったため、ペアの状態が "precreated" から "under construction" に移行されました。  
   
-## <a name="see-also"></a>参照  
- [インメモリ OLTP &#40;インメモリ最適化&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+## <a name="see-also"></a>参照
 
+[インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)  

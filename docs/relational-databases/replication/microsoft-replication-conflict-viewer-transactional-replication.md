@@ -1,6 +1,7 @@
 ---
-title: Microsoft レプリケーション競合表示モジュール (トランザクション レプリケーション) | Microsoft Docs
-ms.custom: ''
+title: レプリケーション競合表示モジュール (ピアツーピア)
+description: レプリケーション競合表示モジュールとそれを使用し、ピアツーピア トランザクション レプリケーションおよびキュー更新サブスクリプションを使用するトランザクション レプリケーションでの競合を表示する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,14 +14,14 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770579"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321525"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft レプリケーション競合表示モジュール (トランザクション レプリケーション)
+# <a name="replication-conflict-viewer-transactional-replication"></a>レプリケーション競合表示モジュール (トランザクション レプリケーション)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   レプリケーション競合表示モジュールを使用すると、ピア ツー ピア トランザクション レプリケーション、およびキュー更新サブスクリプションを使用するトランザクション レプリケーションの同期中に発生した競合を表示できます。 詳細については、「[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」を参照してください。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68770579"
  **パブリケーション**  
  競合があるテーブルを含むパブリケーションを選択します。  
   
- **テーブル**  
+ **Table**  
  競合を含むテーブルを選択します。  
   
  **[フィルターの定義]**  
@@ -53,7 +54,7 @@ ms.locfileid: "68770579"
  **[すべて選択解除]**  
  グリッドに一覧表示されたすべての競合の選択を解除します。  
   
- **[削除]**  
+ **Remove**  
  選択された競合をビューアーから削除し、関連するメタデータをレプリケーション システム テーブルから削除します。  
   
  **[すべての列を表示]**  
