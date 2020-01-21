@@ -130,20 +130,20 @@ WITH
 
 AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
 
-- Shared Access Signatures (SAS) を使用した認証 *IDENTITY: *"Shared Access Signature" の値が含まれている定数 
-  *SECRET: *[*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
+- Shared Access Signatures (SAS) を使用した認証 *IDENTITY:* "Shared Access Signature" の値が含まれている定数 
+  *SECRET: * [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
   最低限必要な権限: READ および LIST
 
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
 
   *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint> *
-  *SECRET: *AAD アプリケーション サービス プリンシパルキー。最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
+  *SECRET:* AAD アプリケーション サービス プリンシパルキー。最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
 
   > [!NOTE]  
   > OAuth 2.0 トークン エンドポイント **V1** を使用してください
 
-- ストレージ アカウント キーを使用した認証 *IDENTITY: *"ストレージ アカウント キー" の値が含まれている定数 
-  *SECRET: *ストレージ アカウント キー
+- ストレージ アカウント キーを使用した認証 *IDENTITY:* "ストレージ アカウント キー" の値が含まれている定数 
+  *SECRET:* ストレージ アカウント キー
   
 - [マネージド ID ](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet サービス エンドポイント) を使用した認証 *IDENTITY:* "マネージド ID" の値が含まれている定数。最低限必要な RBAC ロール: AAD 登録済み SQL Database サーバーに対するストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者 
   
