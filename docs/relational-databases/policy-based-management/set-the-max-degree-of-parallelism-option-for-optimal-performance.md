@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5f261998588fa15074a25c606a0aa50f742f04a
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: a03a0236c177605bf5041e92ea9c19708d5bc9ae
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75557827"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776373"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>最適なパフォーマンスを実現するための max degree of parallelism オプションの設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このルールでは、値の max degree of parallelism (MAXDOP) オプションが 8 より大きいかどうかを確認します。 このオプションを大きな値に設定すると、多くの場合、不要なリソース消費やパフォーマンスの低下が発生します。  
   
-## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  
- sp_configure を使用して max degree of parallelism オプションを 8 以下に設定してください。  
+## <a name="best-practice-recommendations"></a>ベスト プラクティスの推奨事項  
+ max degree of parallelism (MAXDOP) 構成オプションを使用すると、並列プランでクエリを実行する場合に使用するプロセッサの個数を制御できます。 このオプションでは、並列処理を実行するクエリ プラン演算子のために使用されるスレッドの数が決定されます。 対称型マルチプロセッシング (SMP) コンピューター、Non-Uniform Memory Access (NUMA) コンピューター、またはハイパー スレッディング対応プロセッサのいずれで SQL Server が設定されているかに応じて、max degree of parallelism オプションを適切に構成する必要があります。 
+ 
+ MAXDOP を構成する上での推奨事項は、使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 バージョン固有のガイドラインについては、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」を参照し、max degree of parallelism の値を適宜検証するポリシーを構成してください。     
   
 ## <a name="for-more-information"></a>詳細情報  
- [SQL Server の max degree of parallelism 構成オプションの推奨事項とガイドライン](https://go.microsoft.com/fwlink/?linkid=117786)  
-  
- [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
-  
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
+ [SQL Server での max degree of parallelism configuration 構成オプションの推奨事項とガイドライン](https://go.microsoft.com/fwlink/?linkid=117786)    
+ [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)     
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)     
   
