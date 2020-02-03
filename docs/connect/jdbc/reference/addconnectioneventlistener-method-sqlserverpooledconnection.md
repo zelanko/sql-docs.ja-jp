@@ -16,10 +16,10 @@ ms.assetid: 142830a8-8d4e-48ca-911d-85bf195ca4fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1377e29329f43b9ea982f168e394537295ec889
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955963"
 ---
 # <a name="addconnectioneventlistener-method-sqlserverpooledconnection"></a>addConnectionEventListener メソッド (SQLServerPooledConnection)
@@ -39,7 +39,7 @@ public void addConnectionEventListener(javax.sql.ConnectionEventListener listene
   
  ConnectionEventListener オブジェクトです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この addConnectionEventListener メソッドは、javax.sql.PooledConnection インターフェイスの addConnectionEventListener メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

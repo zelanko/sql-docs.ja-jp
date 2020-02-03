@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69652234"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元する
@@ -110,7 +110,7 @@ GO
 > [!NOTE]
 > 以前のバージョンの SQL Server から復元されたデータベースに対してのみ、これらのセットアップ スクリプトを実行する必要があります。 SQL Server マスター インスタンスに新しいデータベースを作成した場合、データ プールと記憶域プールのストアド プロシージャは既に構成されています。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、次の概要を参照してください。
 

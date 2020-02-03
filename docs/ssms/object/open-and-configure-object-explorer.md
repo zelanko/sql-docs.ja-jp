@@ -1,6 +1,6 @@
 ---
-title: オブジェクト エクスプローラーを開き、構成する | Microsoft Docs
-ms.custom: ''
+title: オブジェクト エクスプローラーを開き、構成する
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e09772c895fd2c5008c9d32d777919092bcd72b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 07a21139575c3eedfddec9f22254fe82a5b5659c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264052"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257130"
 ---
 # <a name="open-and-configure-object-explorer"></a>オブジェクト エクスプローラーを開き、構成する
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[表示]** メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
+**の**[表示][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
   
 ## <a name="viewing-object-explorer"></a>オブジェクト エクスプローラーの表示  
 オブジェクト エクスプローラーは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 内に既定で表示されます。 オブジェクト エクスプローラーが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックしてください。  

@@ -1,10 +1,9 @@
 ---
-title: '[列の選択] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[列の選択] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4522bc61c35927c4fdfe524205578f0a06cf6d95
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 32e7daca1fb5f79f8ac110a28f8b70731349c62d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262516"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241237"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>[列の選択] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68262516"
 このダイアログ ボックスは、テーブルを右クリックしてショートカット メニューの **[カスタム ビューの変更]** をクリックしたときに表示されます。  
   
 ## <a name="options"></a>オプション  
-**[使用できる列]**  
+**使用可能な列**  
 選択したデータベース テーブル内にあるすべての列の一覧を表示します。 ここに表示される列は、データベース テーブルのプロパティおよびデータベースのタイプによって異なります。 表示する列を強調表示し、矢印ボタンを使用して列を **[選択した列]** ボックスに移動します。  
   
 **[選択した列]**  
@@ -43,7 +44,7 @@ ms.locfileid: "68262516"
 **[既定値として保存]**  
 既定のカスタム ビューを、このダイアログ ボックスで選択した列で置き換えます。 このオプションを選択しない場合、ダイアログ ボックスで指定した列の選択内容は、データベース ダイアグラムで選択されているテーブルにだけ適用されます。  
   
-**OK**  
+**[OK]**  
 カスタム ビューを保存します。  
   
 **キャンセル**  

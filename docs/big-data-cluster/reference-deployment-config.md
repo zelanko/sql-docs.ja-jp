@@ -1,20 +1,21 @@
 ---
-title: 展開構成ファイルのリファレンス
-titleSuffix: SQL Server big data clusters
+title: 展開構成フォーム
+titleSuffix: SQL Server Big Data Clusters
 description: ビッグ データ クラスターの展開構成ファイルのリファレンスです。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 7e5fb0e77829d9f8851a224d4d55d2f26fe9a41f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653498"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258604"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>ビッグ データ クラスターの展開構成ファイルのリファレンス
 
@@ -451,6 +452,6 @@ ms.locfileid: "69653498"
 }
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 展開構成ファイルを使用およびカスタマイズする方法の詳細については、[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md#configfile)に関する記事を参照してください。

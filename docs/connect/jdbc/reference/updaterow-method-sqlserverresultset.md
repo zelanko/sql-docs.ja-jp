@@ -16,10 +16,10 @@ ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e33da1c8873bdc2d69c93d533860d9b9f5e227d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998351"
 ---
 # <a name="updaterow-method-sqlserverresultset"></a>updateRow メソッド (SQLServerResultSet)
@@ -37,7 +37,7 @@ public void updateRow()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateRow メソッドは、java.sql.ResultSet インターフェイスの updateRow メソッドで規定されています。  
   
  カーソルが挿入行にあるときは、このメソッドを呼び出すことができません。  

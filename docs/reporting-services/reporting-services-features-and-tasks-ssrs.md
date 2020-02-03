@@ -12,10 +12,10 @@ ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e0b79b8a76b36071f8d5f0767ac313a6ed5489b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580054"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services の機能とタスク (SSRS)
@@ -26,23 +26,23 @@ ms.locfileid: "65580054"
   
  [Reporting Services Report Server](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Reporting Services レポート (SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)  
+ [Reporting Services レポート &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)  
   
  [レポート データ (SSRS)](../reporting-services/report-data/report-data-ssrs.md)  
   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
- [レポート デザイナーでのレポート パーツ (SSRS)](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
  [スケジュール](../reporting-services/subscriptions/schedules.md)  
   
- [サブスクリプションと配信 (Reporting Services)](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
  [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
   
  [Reporting Services のセキュリティと保護](../reporting-services/security/reporting-services-security-and-protection.md)  
   
- [URL アクセス (SSRS)](../reporting-services/url-access-ssrs.md)  
+ [URL アクセス &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
   
  [拡張機能 (SSRS)](../reporting-services/extensions-ssrs.md)  
   

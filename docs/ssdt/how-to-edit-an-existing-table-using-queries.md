@@ -1,23 +1,24 @@
 ---
-title: 方法:クエリを使用して既存のテーブルを編集する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: クエリを使用して既存のテーブルを編集する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929606"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241414"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>方法:クエリを使用して既存のテーブルを編集する
+# <a name="how-to-edit-an-existing-table-using-queries"></a>クエリを使用して既存のテーブルを編集する方法
+
 Transact\-SQL クエリを記述することによって、テーブルまたはそのデータの定義を編集することができます。 テーブルの表示またはテーブルへのデータ入力を視覚的に行うには、データ エディターを使用します。データ エディターの詳細については、「[接続されているデータベース開発](../ssdt/connected-database-development.md)」を参照してください。  
   
 > [!WARNING]  
@@ -31,7 +32,7 @@ Transact\-SQL クエリを記述することによって、テーブルまたは
   
 3.  **Address** 列の **[Null を許容]** チェック ボックスをオンにします。 直ちに、スクリプト ペイン内の対応するコードが `NULL` に変わります。  
   
-4.  「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」のトピックの手順に従ってデータベースを更新します。  
+4.  「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」の手順に従ってデータベースを更新します。  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>Transact\-SQL クエリを使用して新しいテーブルにデータを設定するには  
   
@@ -67,7 +68,7 @@ Transact\-SQL クエリを記述することによって、テーブルまたは
     GO  
     ```  
   
-5.  **メッセージ** ペインには、`ShelfLife` の値を 5 未満に制限する既存の CHECK 制約と、`INSERT` ステートメントとが競合していることを示すメッセージが表示されます。 ステートメントが既存の制約に違反しているため、Products テーブルは更新されません。  
+5.  **メッセージ** ペインには、`INSERT` の値を 5 未満に制限する既存の CHECK 制約と、`ShelfLife` ステートメントとが競合していることを示すメッセージが表示されます。 ステートメントが既存の制約に違反しているため、Products テーブルは更新されません。  
   
 6.  コードを次のように変更し、クエリを再度実行します。 今回は行が正しく更新されます。  
   
