@@ -1,0 +1,128 @@
+- name: アクセス
+  href: sql-server-migration-assistant-for-access-accesstosql.md
+- name: SSMA のインストール
+  href: installing-sql-server-migration-assistant-for-access-accesstosql.md
+- name: 作業の開始
+  href: getting-started-with-ssma-for-access-console-accesstosql.md
+- name: 新機能
+  href: what-s-new-in-ssma-for-access-accesstosql.md
+- name: Access データベースの準備
+  href: preparing-access-databases-for-migration-accesstosql.md
+- name: 互換性のない Access の機能
+  href: incompatible-access-features-accesstosql.md
+- name: SSMA GUI の新機能
+  href: new-gui-features-in-ssma-for-access-to-sql.md
+- name: Access のインベントリ スキーマ
+  href: access-inventory-schemas-accesstosql.md
+- name: メタデータの保存
+  href: save-metadata-accesstosql.md
+- name: SQL Server への接続
+  href: connecting-to-sql-server-accesstosql.md
+- name: Azure SQL DB での Access データの移行
+  href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
+- name: プロジェクトの作成と管理
+  href: creating-and-managing-projects-accesstosql.md
+- name: SSMA for Access コンソールの操作
+  href: working-with-ssma-for-access-console-accesstosql.md
+- name: データベース ファイルの追加と削除
+  href: adding-and-removing-access-database-files-accesstosql.md
+- name: Access データベース オブジェクトの変換
+  href: converting-access-database-objects-accesstosql.md
+- name: 著作権情報
+  href: legal-notice-ssma-for-access.md
+- name: SQL Server への接続
+  href: connect-to-sql-server-accesstosql.md
+- name: グローバル設定
+  href: global-settings-output-window-accesstosql.md
+- name: 新しいプロジェクト (SSMA)
+  href: new-project-ssma-accesstosql.md
+- name: SSMA コンソールのコマンド ライン オプション
+  href: command-line-options-in-ssma-console-accesstosql.md
+- name: Azure SQL DB への接続
+  href: connect-to-azure-sql-db-accesstosql.md
+- name: 評価レポート
+  href: assessment-report-accesstosql.md
+- name: ソースとターゲットのデータ型のマッピング
+  href: mapping-source-and-target-data-types-accesstosql.md
+- name: パスワードの管理
+  href: managing-passwords-accesstosql.md
+- name: データ移行レポート
+  href: data-migration-report-accesstosql.md
+- name: ユーザー インターフェイス リファレンス
+  href: user-interface-reference-accesstosql.md
+- name: サンプルのコンソール スクリプト ファイルの操作
+  href: working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
+- name: レポートの生成
+  href: generating-reports-accesstosql.md
+- name: SSMA コンソールの実行
+  href: executing-the-ssma-console-accesstosql.md
+- name: 変換のための Access データベース オブジェクトへのアクセス
+  href: assessing-access-database-objects-for-conversion-accesstosql.md
+- name: サーバー接続ファイルの作成
+  href: creating-the-server-connection-files-accesstosql.md
+- name: Azure SQL DB への Access アプリケーションのリンク
+  href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
+- name: 変数値ファイルの作成
+  href: creating-variable-value-files-accesstosql.md
+- name: 型のマッピングの編集
+  href: edit-type-mapping-accesstosql.md
+- name: Access インベントリのエクスポート
+  href: exporting-an-access-inventory-accesstosql.md
+- name: Azure SQL DB への Access データベースの移行
+  href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
+- name: ソースとターゲットのデータベースのマッピング
+  href: mapping-source-and-target-databases-accesstosql.md
+- name: スクリプト ファイルの作成
+  href: creating-script-files-accesstosql.md
+- name: データベースのウィザードを検索 (選択の確認)
+  href: find-databases-wizard-verify-selection-accesstosql.md
+- name: 移行ウィザード
+  href: migration-wizard-accesstosql.md
+- name: 変換、読み込み、移行
+  href: convert-load-and-migrate-accesstosql.md
+- name: SQL Server への変換されたデータベース オブジェクトの読み込み
+  href: loading-converted-database-objects-into-sql-server-accesstosql.md
+- name: 高度なオブジェクトの選択
+  href: advanced-object-selection-accesstosql.md
+- name: SQL Server Migration Assistant の概要
+  href: getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
+- name: データベースからの更新
+  href: refresh-from-database-accesstosql.md
+- name: データベースのウィザードを検索 (ファイルの選択)
+  href: find-databases-wizard-select-files-accesstosql.md
+- name: ショートカット キー
+  href: shortcut-keys-accesstosql.md
+- name: Azure SQL DB への接続
+  href: connecting-to-azure-sql-db-accesstosql.md
+- name: 変換と移行のオプションの設定
+  href: setting-conversion-and-migration-options-accesstosql.md
+- name: トラブルシューティング
+  href: troubleshooting-accesstosql.md
+- name: メニュー コマンドやその他のショートカット キー
+  href: menu-commands-and-other-shortcut-keys-accesstosql.md
+- name: データベースのウィザードを検索 (場所の選択)
+  href: find-databases-wizard-select-locations-accesstosql.md
+- name: 付録 - 1
+  href: appendix-1-accesstosql.md
+- name: '[プロジェクトの設定]'
+  items:
+    - name: 移行
+      href: project-settings-migration-accesstosql.md
+    - name: GUI
+      href: project-settings-gui-accesstosql.md
+    - name: 変換
+      href: project-settings-conversion-accesstosql.md
+    - name: Azure SQL DB
+      href: project-settings-azure-sql-db-accesstosql.md
+    - name: 型のマッピング
+      href: project-settings-type-mapping-accesstosql.md
+    - name: オブジェクトの読み込み
+      href: project-settings-loading-objects-accesstosql.md
+- name: グローバル設定
+  items:
+    - name: ダイアログ
+      href: global-settings-dialogs-accesstosql.md
+    - name: ログ記録
+      href: global-settings-logging-accesstosql.md
+    - name: エディター
+      href: global-settings-editor-accesstosql.md

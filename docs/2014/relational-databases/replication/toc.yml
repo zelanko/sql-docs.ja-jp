@@ -60,7 +60,7 @@
         - name: レプリケーション モニター
           href: monitor/overview-of-the-replication-monitor-interface.md
           items:
-            - name: 権限の管理
+            - name: アクセス許可の管理
               href: monitor/allow-non-administrators-to-use-replication-monitor.md
             - name: パブリッシャーの追加または削除
               href: monitor/add-and-remove-publishers-from-replication-monitor.md
@@ -215,7 +215,7 @@
       items:
         - name: ディストリビューター
           href: security/secure-the-distributor.md
-        - name: パブリッシャー
+        - name: Publisher
           href: security/secure-the-publisher.md
         - name: サブスクライバー (Subscriber)
           href: security/secure-the-subscriber.md
@@ -316,7 +316,7 @@
           href: publish/specify-data-type-mappings-for-an-oracle-publisher.md
         - name: Oracle パブリッシャー用のトランザクション セット ジョブ
           href: administration/configure-the-transaction-set-job-for-an-oracle-publisher.md
-        - name: 権限の付与
+        - name: アクセス許可を付与する
           href: non-sql/script-to-grant-oracle-permissions.md
         - name: Oracle テーブルスペースの管理
           href: non-sql/manage-oracle-tablespaces.md
@@ -495,7 +495,7 @@
                       href: publisher-information-subscription-watch-list-transactional.md
                     - name: サブスクリプション
                       href: publication-information-all-subscriptions-transactional-publication.md
-                    - name: Warnings
+                    - name: 警告
                       href: publication-information-warnings-transactional-publication.md
                     - name: '[エージェント]'
                       href: publication-information-agents-transactional-publication.md
@@ -513,7 +513,7 @@
                       href: publisher-information-subscription-watch-list-merge-publication.md
                     - name: サブスクリプション
                       href: publication-information-all-subscriptions-merge-publication.md
-                    - name: Warnings
+                    - name: 警告
                       href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
                     - name: '[エージェント]'
                       href: publication-information-agents-merge-publication.md
@@ -525,7 +525,7 @@
                       href: publisher-information-subscription-watch-list-snapshot.md
                     - name: サブスクリプション
                       href: publication-information-all-subscriptions-snapshot-publication.md
-                    - name: Warnings
+                    - name: 警告
                       href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
                     - name: '[エージェント]'
                       href: publication-information-agents-snapshot-publication.md

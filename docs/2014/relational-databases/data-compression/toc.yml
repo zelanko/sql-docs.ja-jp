@@ -1,4 +1,4 @@
-- name: Data Compression
+- name: データ圧縮
   href: data-compression.md
   items:
     - name: 「行の圧縮の実装」

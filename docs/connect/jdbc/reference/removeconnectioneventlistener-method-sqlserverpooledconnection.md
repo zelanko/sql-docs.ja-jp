@@ -16,10 +16,10 @@ ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9d2980b86704efe7e611878d373e0dd9b5cb7fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975749"
 ---
 # <a name="removeconnectioneventlistener-method-sqlserverpooledconnection"></a>removeConnectionEventListener メソッド (SQLServerPooledConnection)
@@ -39,7 +39,7 @@ public void removeConnectionEventListener(javax.sql.ConnectionEventListener list
   
  ConnectionEventListener オブジェクトです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この removeConnectionEventListener メソッドは、javax.sql.PooledConnection インターフェイスの removeConnectionEventListener メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

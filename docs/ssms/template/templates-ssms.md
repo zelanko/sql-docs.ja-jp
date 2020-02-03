@@ -17,24 +17,24 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: b3df46f3536c488ff863287a0efb26ed7063ffc2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03f42fbffd124fbdaa18578009ce72598a743361
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266635"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247159"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>SQL Server Management Studio でテンプレートを使用する
 
-このチュートリアルでは、SQL Server Management Studio (SSMS) で使用できる作成済みの Transact-SQL (T-SQL) テンプレートについて説明します。 この記事では、次の方法を学習します。
+このチュートリアルでは、SQL Server Management Studio (SSMS) で使用できる作成済みの Transact-SQL (T-SQL) テンプレートについて説明します。 この記事では、次のことについて説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを実行するには、SQL Server Management Studio と、SQL Server へのアクセスが必要です。
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 
@@ -114,7 +114,7 @@ ms.locfileid: "68266635"
 
 8. 既存のクエリ ウィンドウを閉じて、新しいカスタム テンプレートを開きます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 

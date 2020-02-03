@@ -220,15 +220,15 @@
     - name: SharePoint を使用した BI 機能のインストール用チェック リスト
       href: ../../sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md
       items:
-        - name: 'チェックリスト:Reporting Services、Power View、PowerPivot for SharePoint'
+        - name: 'チェック リスト: Reporting Services、Power View、および PowerPivot for SharePoint'
           href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
-        - name: 'チェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト'
+        - name: 'チェックリスト: SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト'
           href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
-        - name: 'チェックリスト:既存の SharePoint ファームへの Reporting Services のインストール'
+        - name: 'チェック リスト: 既存の SharePoint ファームへの Reporting Services のインストール'
           href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
-        - name: 'チェックリスト:PowerPivot for SharePoint 2010 のマルチサーバー インストール'
+        - name: 'チェック リスト: PowerPivot for SharePoint 2010 のマルチサーバー インストール'
           href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
-        - name: 'チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する'
+        - name: 'チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する'
           href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
     - name: Reporting Services SharePoint モードのインストール (SharePoint 2010 および SharePoint 2013)
       href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md

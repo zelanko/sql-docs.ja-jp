@@ -16,10 +16,10 @@ ms.assetid: 3e4a400f-0859-4ac3-983e-c25633b33683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0c2355ce38cbaabedeaa3e62da894ee6e67d67c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980069"
 ---
 # <a name="getschematerm-method-sqlserverdatabasemetadata"></a>getSchemaTerm メソッド (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.lang.String getSchemaTerm()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getSchemaTerm メソッドは、java.sql.DatabaseMetaData インターフェイスの getSchemaTerm メソッドで規定されています。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドによって推奨用語として "スキーマ" が返されます。  

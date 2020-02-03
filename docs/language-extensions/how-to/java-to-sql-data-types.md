@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658835"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java および SQL Server のサポートされるデータ型
@@ -28,10 +28,10 @@ ms.locfileid: "73658835"
 | bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
-| Int | INT      | | |
-| Real | FLOAT      | | |
+| int | INT      | | |
+| Real | float      | | |
 | Bigint | long      | | |
-| FLOAT | double      | | |
+| float | double      | | |
 | nchar(n) | String      | | |
 | nvarchar(n) | String      | | |
 | binary(n) | byte[]      | | |
@@ -43,15 +43,15 @@ ms.locfileid: "73658835"
 | varchar(n) | String | UTF8 文字列のみがサポートされています | |
 | varchar(max) | String | UTF8 文字列のみがサポートされています | |
 | date | java.sql.date  | | |
-| NUMERIC | java.math.BigDecimal  | | |
-| Decimal | java.math.BigDecimal  | | |
+| numeric | java.math.BigDecimal  | | |
+| decimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
-| SMALLMONEY | java.math.BigDecimal  | | |
+| smallmoney | java.math.BigDecimal  | | |
 | smalldatetime | java.sql.timestamp  | | |
 | DATETIME | java.sql.timestamp  | | |
 | datetime2 | java.sql.timestamp  | | |
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server で Java を呼び出す方法](../how-to/call-java-from-sql.md)

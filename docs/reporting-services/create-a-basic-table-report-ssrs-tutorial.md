@@ -13,10 +13,10 @@ ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65103312"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>基本的なテーブル レポートの作成 (SSRS チュートリアル)
@@ -41,13 +41,13 @@ ms.locfileid: "65103312"
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server データベース エンジン。  
 - SQL Server 2016 Reporting Services 以降 (SSRS)。
 - AdventureWorks2016 データベース。  詳細については、「[AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases)」 (AdventureWorks サンプル データベース) を参照してください。
-- *レポート デザイナー*にアクセスできるようにするには、Visual Studio 向けの [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) を Reporting Services 拡張機能とともにインストールする必要があります。
+- [レポート デザイナー](../ssdt/download-sql-server-data-tools-ssdt.md)にアクセスできるようにするには、Visual Studio 向けの *SQL Server Data Tools* を Reporting Services 拡張機能とともにインストールする必要があります。
   
 AdventureWorks2016 データベースからデータを取得するには読み取り専用権限も必要です。
 
 **このチュートリアルの推定所要時間:** 30 分。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [レッスン 1: レポート サーバー プロジェクトの作成 (Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md)
 

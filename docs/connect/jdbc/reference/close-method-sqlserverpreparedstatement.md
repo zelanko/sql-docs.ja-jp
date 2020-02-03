@@ -16,10 +16,10 @@ ms.assetid: 36db9ff7-5819-4827-9803-4a81c99069b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d8a81004e846986e7352eabb880404ae3cc8c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955594"
 ---
 # <a name="close-method-sqlserverpreparedstatement"></a>close メソッド (SQLServerPreparedStatement)
@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  close メソッドは、java.sql.Statement インターフェイスの close メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -1,4 +1,4 @@
-- name: '[制御フロー]'
+- name: 制御フロー
   href: control-flow.md
 - name: '[制御フロー] タブ'
   href: ../control-flow-tab.md

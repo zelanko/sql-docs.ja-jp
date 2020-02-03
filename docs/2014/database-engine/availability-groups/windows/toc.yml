@@ -221,7 +221,7 @@
       items:
         - name: '可用性レプリカのプロパティ ([全般] ページ)'
           href: availability-replica-properties-general-page.md
-        - name: '可用性グループのプロパティ:新しい可用性グループ ([バックアップの設定] ページ)'
+        - name: '可用性グループのプロパティ: [新しい可用性グループ] ([バックアップの設定] ページ)'
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
     - name: 可用性グループ ウィザード
       items:

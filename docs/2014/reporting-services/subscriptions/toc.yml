@@ -42,5 +42,5 @@
       href: pause-and-resume-shared-schedules.md
     - name: レポート サーバーでタイム ゾーンと時計の設定を変更する
       href: change-time-zones-and-clock-settings-on-a-report-server.md
-    - name: 実行中の処理を管理する
+    - name: Manage a Running Process
       href: manage-a-running-process.md

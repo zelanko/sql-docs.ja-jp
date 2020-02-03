@@ -82,7 +82,7 @@
           href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
         - name: SQL Server 変更データベース インスタンスを作成する方法
           href: how-to-create-the-sql-server-change-database-instance.md
-        - name: CDC インスタンスを管理する方法
+        - name: How to Manage a CDC Instance
           href: how-to-manage-a-cdc-instance.md
         - name: CDC インスタンスのプロパティを編集する方法
           href: how-to-edit-the-cdc-instance-properties.md
@@ -92,7 +92,7 @@
       href: sql-server-connection-for-instance-creation.md
     - name: 高度な接続プロパティ
       href: advanced-connection-properties.md
-    - name: スクリプトを実行するための Oracle 資格情報
+    - name: Oracle Credentials for Running Script
       href: oracle-credentials-for-running-script.md
     - name: Oracle の補足ログ スクリプト
       href: oracle-supplemental-logging-script.md
@@ -124,7 +124,7 @@
           href: connection-to-sql-server-for-delete.md
         - name: Oracle CDC Service の作成と編集
           href: create-and-edit-an-oracle-cdc-service.md
-        - name: Oracle CDC Service の管理
+        - name: Manage an Oracle CDC Service
           href: manage-an-oracle-cdc-service.md
         - name: CDC 用の SQL Server の準備
           href: prepare-sql-server-for-cdc.md

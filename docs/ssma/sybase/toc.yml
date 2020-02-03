@@ -1,0 +1,139 @@
+- name: Sybase
+  href: sql-server-migration-assistant-for-sybase-sybasetosql.md
+- name: SSMA のインストール
+  href: installing-ssma-for-sybase-sybasetosql.md
+- name: SSMA for Sybase 入門
+  href: getting-started-with-ssma-for-sybase-sybasetosql.md
+- name: SSMA for Sybase コンソール入門
+  href: getting-started-with-ssma-for-sybase-console-sybasetosql.md
+- name: 著作権情報
+  href: legal-notice-ssma-for-sybase.md
+- name: SSMA の新機能
+  href: what-s-new-in-ssma-for-sybase-sybasetosql.md
+- name: SSMA for Sybase クライアントのインストール
+  href: installing-ssma-for-sybase-client-sybasetosql.md
+- name: SSMA GUI の新機能
+  href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
+- name: '[新しいプロジェクト]'
+  href: new-project-sybasetosql.md
+- name: テスト ケースの初期化
+  href: initializing-test-cases-sybasetosql.md
+- name: サンプルのコンソール スクリプト ファイルの操作
+  href: working-with-the-sample-console-script-files-sybasetosql.md
+- name: Azure SQL DB への Sybase ASE データベースの移行
+  href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
+- name: 変換のための Sybase ASE データベース オブジェクトの評価
+  href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
+- name: SSMA コンソールの実行
+  href: executing-the-ssma-console-sybasetosql.md
+- name: スクリプト ファイルの作成
+  href: creating-script-files-sybasetosql.md
+- name: グローバル設定
+  href: global-settings-dialogs-sybasetosql.md
+- name: SQL Server への接続
+  href: connecting-to-sql-server-sybasetosql.md
+- name: 高度なオブジェクトの選択
+  href: advanced-object-selection-sybasetosql.md
+- name: プロジェクトの設定 (GUI)
+  href: project-settings-gui-sybasetosql.md
+- name: テスト ケースのレポートの表示
+  href: viewing-test-case-reports-sybasetosql.md
+- name: SSMA for Sybase Console の操作
+  href: working-with-ssma-for-sybase-console-sybasetosql.md
+- name: テスト リポジトリの使用
+  href: using-test-repositories-sybasetosql.md
+- name: データ移行レポート
+  href: data-migration-report-sybasetosql.md
+- name: テスト ケースの作成
+  href: creating-test-cases-sybasetosql.md
+- name: メタデータの保存
+  href: save-metadata-sybasetosql.md
+- name: 評価レポート
+  href: assessment-report-sybasetosql.md
+- name: SSMA for Sybase コンポーネントの削除
+  href: removing-ssma-for-sybase-components-sybasetosql.md
+- name: Sybase ASE への接続
+  href: connecting-to-sybase-ase-sybasetosql.md
+- name: 影響を受けるオブジェクトの選択と構成
+  href: selecting-and-configuring-affected-objects-sybasetosql.md
+- name: Azure SQL DB への接続
+  href: connecting-to-azure-sql-db-sybasetosql.md
+- name: パスワードの管理
+  href: managing-passwords-sybasetosql.md
+- name: プロジェクト オプションの設定
+  href: setting-project-options-sybasetosql.md
+- name: Azure SQL DB への接続
+  href: connect-to-azure-sql-db-sybasetosql.md
+- name: データの移行設定
+  href: data-migration-settings-sybasetosql.md
+- name: テスト ケースの準備の終了
+  href: finishing-test-case-preparation-sybasetosql.md
+- name: テスト対象のオブジェクトの選択と構成
+  href: selecting-and-configuring-objects-to-test-sybasetosql.md
+- name: トラブルシューティング
+  href: troubleshooting-sybasetosql.md
+- name: Sybase ASE と SQL Server のデータ型とのマッピング
+  href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
+- name: SQL Server での SSMA コンポーネントのインストール
+  href: installing-ssma-components-on-sql-server-sybasetosql.md
+- name: Azure SQL DB への Sybase ASE データの移行
+  href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
+- name: Sybase への接続
+  href: connect-to-sybase-sybasetosql.md
+- name: 型のマッピングの編集
+  href: edit-type-mapping-sybasetosql.md
+- name: Sybase ASE データベース オブジェクトの変換
+  href: converting-sybase-ase-database-objects-sybasetosql.md
+- name: SQL Server への変換されたデータベース オブジェクトの読み込み
+  href: loading-converted-database-objects-into-sql-server-sybasetosql.md
+- name: 移行されたデータベース オブジェクトのテスト
+  href: testing-migrated-database-objects-sybasetosql.md
+- name: 呼び出し順序のカスタマイズ
+  href: customizing-calls-order-sybasetosql.md
+- name: ユーザー インターフェイス リファレンス
+  href: user-interface-reference-sybasetosql.md
+- name: 変数値ファイルの作成
+  href: creating-variable-value-files-sybasetosql.md
+- name: サーバー接続ファイルの作成
+  href: creating-the-server-connection-files-sybasetosql.md
+- name: SSMA コンソールのコマンド ライン オプション
+  href: command-line-options-in-ssma-console-sybasetosql.md
+- name: SQL Server への接続
+  href: connect-to-sql-server-sybasetosql.md
+- name: ショートカット キー
+  href: shortcut-keys-sybase-to-sql.md
+- name: Sybase ASE スキーマの SQL Server スキーマへのマッピング
+  href: mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
+- name: バックアップの管理
+  href: managing-backups-sybasetosql.md
+- name: メニュー コマンドやその他のショートカット キー
+  href: menu-commands-and-other-shortcut-keys-sybase-to-sql.md
+- name: テスト ケースの実行
+  href: running-test-cases-sybasetosql.md
+- name: レポートの生成
+  href: generating-reports-sybasetosql.md
+- name: SSMA プロジェクトでの作業
+  href: working-with-ssma-projects-sybasetosql.md
+- name: 付録 - 1
+  href: appendix-1-sybasetosql.md
+- name: '[プロジェクトの設定]'
+  items:
+    - name: 変換
+      href: project-settings-conversion-sybasetosql.md
+    - name: 型のマッピング
+      href: project-settings-type-mapping-sybasetosql.md
+    - name: Synchronization
+      href: project-settings-synchronization-sybasetosql.md
+    - name: Azure SQL DB
+      href: project-settings-azure-sql-db-sybasetosql.md
+    - name: 移行
+      href: project-settings-migration-sybasetosql.md
+- name: グローバル設定
+  href: global-settings-output-window-sybasetosql.md
+  items:
+    - name: エディター
+      href: global-settings-editor-sybasetosql.md
+    - name: ログ記録
+      href: global-settings-logging-sybasetosql.md
+    - name: テスト担当者
+      href: global-settings-tester-sybasetosql.md

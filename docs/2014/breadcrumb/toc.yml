@@ -100,7 +100,7 @@
                 - name: Distributed Replay
                   tocHref: /sql/tools/distributed-replay/
                   topicHref: /sql/tools/distributed-replay/sql-server-distributed-replay
-                - name: データ コレクション
+                - name: データ収集
                   tocHref: /sql/relational-databases/data-collection/
                   topicHref: /sql/relational-databases/data-collection/data-collection
                 - name: パフォーマンス モニター
@@ -174,10 +174,10 @@
               tocHref: /sql/integration-services/
               topicHref: /sql/integration-services/sql-server-integration-services
               items:
-                - name: '[制御フロー]'
+                - name: 制御フロー
                   tocHref: /sql/integration-services/control-flow/
                   topicHref: /sql/integration-services/control-flow/control-flow
-                - name: データ フロー
+                - name: Data Flow
                   tocHref: /sql/integration-services/data-flow/
                   topicHref: /sql/integration-services/data-flow/data-flow
                   items:
@@ -260,10 +260,10 @@
                 - name: XML
                   tocHref: /sql/relational-databases/xml/
                   topicHref: /sql/relational-databases/xml/xml-data-sql-server
-                - name: 空間インデックス
+                - name: Spatial
                   tocHref: /sql/relational-databases/spatial/
                   topicHref: /sql/relational-databases/spatial/spatial-data-sql-server
-                - name: Blob
+                - name: BLOB
                   tocHref: /sql/relational-databases/blob/
                   topicHref: /sql/relational-databases/blob/binary-large-object-blob-data-sql-server
                 - name: データ層アプリケーション
@@ -275,7 +275,7 @@
                 - name: 一括エクスポートと一括インポート
                   tocHref: /sql/relational-databases/import-export/
                   topicHref: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
-                - name: Data Compression
+                - name: データ圧縮
                   tocHref: /sql/relational-databases/data-compression/
                   topicHref: /sql/relational-databases/data-compression/data-compression
                 - name: イベント通知
@@ -309,7 +309,7 @@
                     - name: SQL 以外
                       tocHref: /sql/relational-databases/replication/non-sql/
                       topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
-                    - name: パブリッシュ
+                    - name: 発行
                       tocHref: /sql/relational-databases/replication/publish/
                       topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
                     - name: トランザクション
@@ -332,7 +332,7 @@
                         - name: 一括コピー関数
                           tocHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/
                           topicHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions
-                        - name: API (API)
+                        - name: API
                           tocHref: /sql/relational-databases/native-client-odbc-api/
                           topicHref: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
             - name: Reporting Services
@@ -354,7 +354,7 @@
                 - name: レポートのデザイン
                   tocHref: /sql/reporting-services/report-design/
                   topicHref: /sql/reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs
-                - name: '[レポート]'
+                - name: Reports
                   tocHref: /sql/reporting-services/reports/
                   topicHref: /sql/reporting-services/reports/reporting-services-reports-ssrs
                 - name: サブスクリプションとスケジュール
@@ -407,7 +407,7 @@
                   tocHref: /sql/analysis-services/scripting/
                   topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
                   items:
-                    - name: オブジェクト
+                    - name: Objects
                       tocHref: /sql/analysis-services/scripting/objects/
                       topicHref: /sql/analysis-services/scripting/objects/objects-assl
                     - name: コレクション

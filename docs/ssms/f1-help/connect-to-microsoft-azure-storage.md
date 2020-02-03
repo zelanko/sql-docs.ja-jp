@@ -1,6 +1,6 @@
 ---
-title: Microsoft Azure ストレージへの接続 | Microsoft Docs
-ms.custom: ''
+title: Microsoft Azure Storage への接続
+ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155676"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245023"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage への接続
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ Azure アカウントに関する次の情報を指定し、 **[次へ]** をク
    >[!NOTE]
    > [汎用のストレージ アカウント](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services)にのみ接続できます。 他の種類のストレージ アカウントに接続すると、次のようなエラーが発生することがあります。
    >
-   >  HTTP ヘッダーのいずれか 1 つの値が正しい形式になっていません。 (Microsoft.SqlServer.StorageClient)
+   >  The value for one of the HTTP headers is not in the correct format. (いずれかの HTTP ヘッダーの値の形式が正しくありません。) (Microsoft.SqlServer.StorageClient)
    >
-   >  リモート サーバーがエラーを返しました: (400) 要求が正しくありません。 (System)
+   >  リモート サーバーがエラーを返しました: (400) 無効な要求。 (System)
 
 2.  **[アカウント キー]** : 指定したストレージ アカウントのアカウント キーを指定します。  
   

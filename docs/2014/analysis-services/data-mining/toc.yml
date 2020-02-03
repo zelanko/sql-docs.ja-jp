@@ -80,7 +80,7 @@
     - name: Microsoft Time Series アルゴリズム
       href: microsoft-time-series-algorithm.md
       items:
-        - name: Microsoft Time Series アルゴリズム テクニカル リファレンス
+        - name: Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス
           href: microsoft-time-series-algorithm-technical-reference.md
         - name: タイム シリーズ モデルのマイニング モデル コンテンツ
           href: mining-model-content-for-time-series-models-analysis-services-data-mining.md

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio のツール ウィンドウ | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio のツール ウィンドウ
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266708"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243890"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio のツール ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "68266708"
   
 |||  
 |-|-|  
-|**ツール**|**用途**|  
+|**ツール**|**目的**|  
 |[[オブジェクト エクスプローラー]](../ssms/object/object-explorer.md)|サーバー内の表示、オブジェクトの作成と検索、データ ソースの管理、ログの表示を行います。 このツールには、 **[表示]** メニューからアクセスできます。|  
 |[ソリューション エクスプローラー](../ssms/solution/solution-explorer.md)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スクリプトというプロジェクトにスクリプトや関連する接続情報を格納して整理します。 複数の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スクリプトをソリューションとして格納することや、ソース管理を使用してスクリプトの開発過程を管理することも可能です。 このツールには、 **[表示]** メニューからアクセスできます。|  
 |[テンプレート エクスプローラー](../ssms/template/template-explorer.md)|既存のテンプレートに基づいてクエリを作成します。 カスタム クエリを作成することや、既存のテンプレートをそれぞれのシナリオに合わせて変更することも可能です。 このツールには、 **[表示]** メニューからアクセスできます。|  
 |[ダイナミック ヘルプを表示する](../ssms/user-assistance-in-sql-server-management-studio.md)|コンポーネントのクリックやコードの入力に対応して、関連するヘルプ トピックの一覧を表示します。|  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の各ツールは、連携して機能します。 たとえば、以下のような操作が可能です。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の各ツールは、連携して機能します。 たとえば、次のように操作できます。  
   
 -   オブジェクト エクスプローラーでサーバーを登録する。  
   

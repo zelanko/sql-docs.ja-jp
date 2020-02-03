@@ -76,7 +76,7 @@
 - name: モデル
   href: models-master-data-services.md
   items:
-    - name: モデルを作成する
+    - name: モデルの作成
       href: create-a-model-master-data-services.md
     - name: モデル名を変更する
       href: change-a-model-name-master-data-services.md
@@ -317,7 +317,7 @@
       href: create-a-model-administrator-master-data-services.md
     - name: システム管理者アカウントの変更
       href: change-the-system-administrator-account-master-data-services.md
-- name: ユーザーおよびグループ
+- name: ユーザーとグループ
   href: users-and-groups-master-data-services.md
   items:
     - name: ユーザーを追加する
