@@ -1,4 +1,4 @@
-- name: アクセス
+- name: Access
   href: sql-server-migration-assistant-for-access-accesstosql.md
 - name: SSMA のインストール
   href: installing-sql-server-migration-assistant-for-access-accesstosql.md
