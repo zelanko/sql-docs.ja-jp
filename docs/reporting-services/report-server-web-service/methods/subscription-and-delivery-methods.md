@@ -14,16 +14,16 @@ ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 474a54a5233b8d96b060f73dc33dfd4a6f86bcda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284480"
 ---
 # <a name="subscription-and-delivery-methods"></a>サブスクリプション メソッドおよび配信メソッド
   これらのメソッドを使用して、カタログ アイテムのサブスクリプションと配信を作成および管理できます。  
   
-|方法|操作|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|指定したアイテムのデータ ドリブン サブスクリプションを作成します。|  
 |<xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|データ ドリブン サブスクリプションのプロパティを返します。|  

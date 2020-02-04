@@ -13,13 +13,13 @@ ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577878"
 ---
-# <a name="design-view"></a>[デザイン] ビュー
+# <a name="design-view"></a>デザイン ビュー
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポート デザイナーで [デザイン] ビューを使用すると、レポートにレポート アイテムを配置できます。 [デザイン] ビューは、デザイン画面またはレイアウト ビューと呼ばれることもあります。  
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)
 ## <a name="report-design-surface"></a>レポート デザイン画面  
@@ -38,7 +38,7 @@ ms.locfileid: "65577878"
   
  [レポート データ] ペインから、デザイン画面上のデータ領域やテキスト ボックスにアイテムをドラッグして、レポートにデータや画像を追加します。  
   
- 詳細については、「 [[レポート データ] ペイン](../../reporting-services/report-data/report-data-pane.md)」を参照してください。  
+ 詳しくは、「 [Report Data Pane](../../reporting-services/report-data/report-data-pane.md)」をご覧ください。  
   
 ## <a name="grouping-pane"></a>グループ化ペイン  
  グループは、レポート データを整理して階層構造で表示したり、合計を計算したりする際に使用します。 [グループ化] ペインを使用すると、テーブル、マトリックス、または一覧のデータ領域に対して定義されたグループを表示できます。 [グループ化] ペインには、既定で、選択したデータ領域のすべてのグループが、フラットな一覧として表示されます。 グラフおよびゲージのデータ領域では、[グループ化] ペインは無効になっています。  
@@ -54,7 +54,7 @@ ms.locfileid: "65577878"
  [プロパティ] ペインを使用すると、デザイン画面で現在選択されているレポート アイテムのプロパティや、[グループ化] ペインで現在選択されているグループのプロパティを表示できます。 別の方法として、選択したレポート アイテムまたはグループを右クリックし、 **[プロパティ]** をクリックして、そのレポート アイテムまたはグループに対応する **[プロパティ]** ダイアログ ボックスを開くこともできます。  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [レポート デザインに関するヒント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [レポート デザインに関するヒント &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

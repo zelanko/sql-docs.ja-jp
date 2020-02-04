@@ -16,10 +16,10 @@ ms.assetid: bfa493c4-fe07-449b-b4d0-384e1a1fce48
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3146c0874a6ba43d18f2fd4af2cca7533046c8b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979505"
 ---
 # <a name="getstring-method-int-sqlserverresultset"></a>getString (int) メソッド (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.lang.String getString(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getString メソッドは、java.sql.ResultSet インターフェイスの getString メソッドで規定されています。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内のすべての列を文字列として返すことができます。 つまり、数値ベースと文字ベースのすべての型の **String** 表現、および binary、varbinary、varbinary(max)、image、timestamp、uniqueidentifier などのバイナリ列の 16 進形式の文字列表現を返すことができます。  

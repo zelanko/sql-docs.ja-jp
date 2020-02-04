@@ -1,23 +1,24 @@
 ---
-title: 方法:SQL Server 単体テストを実行する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server の単体テストを実行する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ee95885dc1696fd7fba80342dc8c582a79056cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035023"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244279"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>方法:SQL Server の単体テストを実行する
+# <a name="how-to-run-sql-server-unit-tests"></a>SQL Server 単体テストを実行する方法
+
 SQL Server の単体テストは、さまざまなウィンドウやコマンド プロンプト ウィンドウを使用するなど、複数の方法で実行できます。  
   
 > [!NOTE]  
@@ -57,7 +58,7 @@ SQL Server の単体テストは、さまざまなウィンドウやコマンド
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  
-[方法:Microsoft Visual Studio 2010 から自動テストを実行する](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [コマンド ラインからの自動テストの実行 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [アプリケーションのテスト (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

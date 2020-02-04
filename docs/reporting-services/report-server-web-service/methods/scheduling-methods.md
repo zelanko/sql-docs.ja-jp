@@ -14,16 +14,16 @@ ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284432"
 ---
 # <a name="scheduling-methods"></a>メソッドのスケジュール設定
   これらのメソッドを使用して、レポート サーバーが利用する、レポートの実行と配信のための共有スケジュールとキャッシュ更新計画を作成および管理できます。  
   
-|方法|操作|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateCacheRefreshPlan%2A>|アイテムのキャッシュ更新プランを作成します。|  
 |<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|新しい共有スケジュールを作成します。|  

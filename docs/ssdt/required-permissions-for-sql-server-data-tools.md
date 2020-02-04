@@ -1,23 +1,24 @@
 ---
-title: SQL Server Data Tools に必要な権限 | Microsoft Docs
-ms.custom:
-- SSDT
+title: 必要なアクセス許可
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4199109ef0492a23206233c82b6051b88564cc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110764"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256992"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools に必要な権限
+
 Visual Studio でデータベースに対してアクションを実行する前に、そのデータベースに対して特定の権限を持つアカウントを使用してログオンする必要があります。 必要となる特定の権限は、実行するアクションによって異なります。 以下のセクションでは、実行する各アクションと、そのアクションの実行に必要な特定の権限について説明します。  
   
 -   [データベースを作成または配置する権限](#DatabaseCreationAndDeploymentPermissions)  
@@ -39,7 +40,7 @@ Visual Studio でデータベースに対してアクションを実行する前
   
 |||  
 |-|-|  
-|アクション|必要な権限|  
+|アクション|必要なアクセス許可|  
 |データベースのオブジェクトと設定をインポートする|ソース データベースに接続できる必要があります。<br /><br />ソース データベースが SQL Server 2005 に基づいている場合、各オブジェクトに対する **VIEW DEFINITION** 権限も必要です。<br /><br />ソース データベースが SQL Server 2008 以降に基づいている場合、各オブジェクトに対する **VIEW DEFINITION** 権限も必要です。 ログインには、(データベース暗号化キーに対する) **VIEW SERVER STATE** 権限が必要です。|  
 |サーバーのオブジェクトと設定をインポートする|指定されたサーバー上の master データベースに接続できる必要があります。<br /><br />サーバーで SQL Server 2005 が実行されている場合、サーバーに対する **VIEW ANY DEFINITION** 権限が必要です。<br /><br />ソース データベースが SQL Server 2008 以降に基づいている場合、サーバーに対する **VIEW ANY DEFINITION** 権限が必要です。 ログインには、(データベース暗号化キーに対する) **VIEW SERVER STATE** 権限が必要です。|  
 |データベース プロジェクトを作成または更新する|データベース プロジェクトを作成または変更するには、データベースの権限は不要です。|  
@@ -58,12 +59,12 @@ Visual Studio でデータベースに対してアクションを実行する前
   
 |||  
 |-|-|  
-|アクション|必要な権限|  
+|アクション|必要なアクセス許可|  
 |テスト アクションを実行する|実行コンテキストのデータベース接続を使用する必要があります。 詳細については、「[接続文字列とアクセス許可の概要](../ssdt/overview-of-connection-strings-and-permissions.md)」を参照してください。|  
 |事前テスト アクションまたは事後テスト アクションを実行する|特権コンテキストのデータベース接続を使用する必要があります。 このデータベース接続では、実行コンテキスト接続よりも多くの権限が認められます。|  
 |TestInitialize スクリプトと TestCleanup スクリプトを実行する|特権コンテキストのデータベース接続を使用する必要があります。|  
-|テストの実行前にデータベースの変更を配置する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
-|テストの実行前にデータを生成する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
+|テストの実行前にデータベースの変更を配置する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
+|テストの実行前にデータを生成する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
   
 ## <a name="DataGenerationPermissions"></a>データを生成する権限  
 データ ジェネレーターを使用してテスト データを生成するには、ターゲット データベース内のオブジェクトに対する **INSERT** 権限と **SELECT** 権限が必要です。 データを生成する前にデータを消去する場合は、ターゲット データベース内のオブジェクトに対する **DELETE** 権限も必要です。 テーブルの **IDENTITY** 列を再設定するには、そのテーブルを所有しているか、db_owner ロールまたは db_ddladmin ロールのメンバーである必要があります。  
@@ -73,7 +74,7 @@ Visual Studio でデータベースに対してアクションを実行する前
   
 |||  
 |-|-|  
-|アクション|必要な権限|  
+|アクション|必要なアクセス許可|  
 |2 つのデータベースのスキーマを比較する|データベースからオブジェクトと設定をインポートするための権限が必要です (「[データベースを作成または配置する権限](#DatabaseCreationAndDeploymentPermissions)」を参照してください)。|  
 |データベースとデータベース プロジェクトのスキーマを比較する|データベースからオブジェクトと設定をインポートするための権限が必要です (「[データベースを作成または配置する権限](#DatabaseCreationAndDeploymentPermissions)」を参照してください)。 また、Visual Studio でデータベース プロジェクトを開いておくことも必要です。|  
 |ターゲット データベースに更新を書き込む|ターゲット データベースに更新を配置するための権限が必要です (「[データベースを作成または配置する権限](#DatabaseCreationAndDeploymentPermissions)」を参照してください)。|  
@@ -87,7 +88,7 @@ Transact\-SQL エディター内で実行できる操作は、ターゲット �
 ## <a name="SQLCLRPermissions"></a>SQL Server 共通言語ランタイム (SQL CLR) プロジェクトに対する権限  
 CLR プロジェクトを配置またはデバッグするために必要な権限を次の表に示します。  
   
-|アクション|必要な権限|  
+|アクション|必要なアクセス許可|  
 |-----------|------------------------|  
 |SAFE 権限セットのアセンブリを配置する (初期または増分)|db_DDLAdmin - 配置するアセンブリとオブジェクトの種類に対する CREATE 権限と ALTER 権限が付与されます。<br /><br />データベース レベルの VIEW DEFINITION - 配置するために必要です。<br /><br />データベース レベルの CONNECT - データベースに接続する権限が付与されます。|  
 |external_access 権限セットのアセンブリを配置する|db_DDLAdmin - 配置するアセンブリとオブジェクトの種類に対する CREATE 権限と ALTER 権限が付与されます。<br /><br />データベース レベルの VIEW DEFINITION - 配置するために必要です。<br /><br />データベース レベルの CONNECT - データベースに接続する権限が付与されます。<br /><br />さらに、次のことも必要です。<br /><br />TRUSTWORTHY データベース オプションが ON に設定されている。<br /><br />配置に使用するログインが EXTERNAL ACCESS ASSEMBLY サーバー権限を持っている。|  

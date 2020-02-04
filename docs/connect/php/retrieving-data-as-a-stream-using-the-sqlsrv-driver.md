@@ -11,10 +11,10 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992899"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用してデータをストリームとして取得する

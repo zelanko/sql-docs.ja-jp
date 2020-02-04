@@ -1,23 +1,24 @@
 ---
-title: SQL Server のデータベース単体テストに関する問題のトラブルシューティング | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server のデータベース単体テストに関する問題のトラブルシューティング
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b7203572d01ca9f344b96a7008dd78b2e35bcdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110612"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256307"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>SQL Server のデータベース単体テストに関する問題のトラブルシューティング
+
 ここで示されている問題は、データベースで SQL Server 単体テストを操作した場合に発生する可能性があります。  
   
 -   [単体テストの実行時に単体テストと App.Config への変更が無視される](#UnitTestingAndAppConfigChanges)  
@@ -48,6 +49,6 @@ ms.locfileid: "68110612"
 ```  
   
 ## <a name="see-also"></a>参照  
-[方法:関数、トリガー、ストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
-[方法:SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[関数、トリガー、およびストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

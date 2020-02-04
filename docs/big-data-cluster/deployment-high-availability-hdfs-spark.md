@@ -5,22 +5,22 @@ description: 高可用性を使用して SQL Server ビッグ データ クラ�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706338"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720860"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>高可用性構成で HDFS 名前ノードと共有 Spark サービスを展開する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-可用性グループを使用して、高可用性構成で SQL Server マスター インスタンスを展開するだけでなく、他のミッション クリティカルなサービスをビッグ データ クラスターに展開し、確実に信頼性のレベルを高めることができます。 `HDFS name node` と、`SparkHead` の下にグループ化された共有 Spark サービスを追加のレプリカで構成できます。 この場合、次のサービス用のクラスター コーディネーターおよびメタデータ ストアとして機能するように、`Zookeeper` もビッグ データ クラスターに展開されます。 
+可用性グループを使用して、高可用性構成で SQL Server マスター インスタンスを展開するだけでなく、他のミッション クリティカルなサービスをビッグ データ クラスターに展開し、確実に信頼性のレベルを高めることができます。 `HDFS name node` と、`sparkhead` の下にグループ化された共有 Spark サービスを追加のレプリカで構成できます。 この場合、次のサービス用のクラスター コーディネーターおよびメタデータ ストアとして機能するように、`Zookeeper` もビッグ データ クラスターに展開されます。 
 
 - HDFS 名前ノード
 - Livy と Yarn Resource Manager 
@@ -100,7 +100,7 @@ SQL Server ビッグ データ クラスターで Hadoop サービスの高可�
 
 - ビッグ データ クラスターの展開時に、すべての構成を指定する必要があります。 SQL Server 2019 CU1 リリースでは、展開後に高可用性構成を有効にすることはできません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - ビッグ データ クラスターの展開での構成ファイルの使用について詳しくは、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md#configfile)」を参照してください。
 - ビッグ データ クラスターの SQL Server マスターの高可用性オプションについて詳しくは、[高可用性を使用する SQL Server マスター インスタンスの展開](deployment-high-availability.md)に関するトピックを参照してください。

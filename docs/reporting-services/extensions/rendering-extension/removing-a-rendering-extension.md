@@ -13,14 +13,14 @@ ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ee3563074e2379061006b72f55dab99f80094cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193456"
 ---
 # <a name="removing-a-rendering-extension"></a>表示拡張機能の削除
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 表示拡張機能を削除する場合は、 **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<インスタンス名>\Reporting Services\ReportServer** フォルダーにある、rsreportserver.config ファイルから表示拡張機能の **Extension** 要素を削除するだけです。 レポート サーバーに加えてレポート デザイナーにもエントリを作成した場合は、[RSReportDesigner 構成ファイル](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md)からも **Extension** 要素を削除します。 構成情報を削除した後は、表示拡張機能をコンポーネントに使用できません。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 表示拡張機能を削除する場合は、 **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.** インスタンス名>\Reporting Services\ReportServer **フォルダーにある、rsreportserver.config ファイルから表示拡張機能の \<Extension** 要素を削除するだけです。 レポート サーバーに加えてレポート デザイナーにもエントリを作成した場合は、**RSReportDesigner 構成ファイル**からも [Extension](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md) 要素を削除します。 構成情報を削除した後は、表示拡張機能をコンポーネントに使用できません。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成ファイル](../../../reporting-services/report-server/reporting-services-configuration-files.md)   

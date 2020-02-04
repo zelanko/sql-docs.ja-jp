@@ -1,11 +1,7 @@
 ---
-title: 方法:テーブル デザイナーを使用してデータベース オブジェクトを作成する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: テーブル デザイナーを使用してデータベース オブジェクトを作成する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897173"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241501"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>方法:テーブル デザイナーを使用してデータベース オブジェクトを作成する
+# <a name="how-to-create-database-objects-using-table-designer"></a>テーブル デザイナーを使用してデータベース オブジェクトを作成する方法
+
 **SQL Server オブジェクト エクスプローラー**の新しい **[SQL Server]** ノードは視覚的に SSMS とよく似ていますが、それだけではなく、SSMS で提供されるものとよく似た機能を持つコンテキスト メニューを使用して、新しいオブジェクトを作成することもできます。  
   
 たとえば、 **[データベース]** ノードの下に、新しいデータベースを作成できます。 同様に、特定のデータベースを選択し、新しいテーブル デザイナーを使用して、テーブル定義および関連するプログラミング オブジェクトを即座に作成または編集できます。 テーブル デザイナーをスクリプト ペインに切り替えて、そのテーブルを定義するスクリプトを直接編集することもできます。  
@@ -45,7 +46,7 @@ ms.locfileid: "67897173"
     CREATE TABLE [dbo].[Table1]  
     ```  
   
-    これを次の行に置き換えます。  
+    with  
   
     ```  
     CREATE TABLE [dbo].[Suppliers]  
@@ -56,24 +57,24 @@ ms.locfileid: "67897173"
 5.  新しい列をもう 1 つ追加します。 **[名前]** に「**Address**」、 **[データ型]** に「**nvarchar (MAX)** 」と入力し、 **[Null を許容]** チェック ボックスはオフにします。  
   
     > [!WARNING]  
-    > 接続されているデータベースのオブジェクトを編集する場合は、ローカル ドライブに保存しないでください。 データベースへの変更を正しく保存するには、次の「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」の手順に従って、変更を適用します。  
+    > 接続されているデータベースのオブジェクトを編集する場合は、ローカル ドライブに保存しないでください。 データベースへの変更を正しく保存するには、次の「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」に示されている手順に従ってください。  
   
 6.  これまでの手順を繰り返して、テーブルをもう 1 つ、**Customer** という名前で作成します。 今回は列グリッドを使用して、以下に示す列を Customer テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Customer]` になるようにスクリプトを変更します。  
   
-    |[オブジェクト名]|データ型|**[NULL を許容]**|  
+    |Name|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
-    |Id|INT|オフ|  
-    |[オブジェクト名]|nvarchar (128)|オフ|  
+    |Id|INT|チェック解除|  
+    |Name|nvarchar (128)|チェック解除|  
   
 7.  もう 1 つ、**Products** という名前のテーブルを作成します。 列グリッドを使用して、以下に示す列を Products テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Products]` になるようにスクリプトを変更します。  
   
-    |[オブジェクト名]|データ型|**[NULL を許容]**|  
+    |Name|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
-    |Id|INT|オフ|  
-    |[オブジェクト名]|nvarchar (128)|オフ|  
-    |ShelfLife|INT|オン|  
-    |SupplierId|INT|オン|  
-    |CustomerId|INT|オン|  
+    |Id|INT|チェック解除|  
+    |Name|nvarchar (128)|チェック解除|  
+    |ShelfLife|INT|チェック|  
+    |SupplierId|INT|チェック|  
+    |CustomerId|INT|チェック|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>テーブル デザイナーを使用して新しい CHECK 制約を作成するには  
   

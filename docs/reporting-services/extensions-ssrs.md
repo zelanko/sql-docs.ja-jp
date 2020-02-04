@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262888"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の拡張機能
@@ -70,11 +70,11 @@ ms.locfileid: "68262888"
   
 - **PDF 表示拡張機能** PDF 表示拡張機能は、Adobe Acrobat 6.0 以降のバージョンで開いたり表示したりすることができる PDF ファイル形式でレポートを表示します。 詳細については、「 [PDF ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)で操作できます。  
   
-- **Word 表示拡張機能** [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 表示拡張機能は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 以降と互換性のある Word 文書としてレポートを表示します。 詳細については、「 [Microsoft Word へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)で操作できます。  
+- **Word 表示拡張機能**[!INCLUDE[msCoName](../includes/msconame-md.md)] Word 表示拡張機能は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 以降と互換性のある Word 文書としてレポートを表示します。 詳細については、「 [Microsoft Word へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)で操作できます。  
   
 ## <a name="report-processing-extensions"></a>レポート処理拡張機能
 
  レポート処理拡張機能を追加すると、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に含まれていないレポート アイテム用のカスタム レポート処理を提供できます。 既定では、レポート サーバーはテーブル、グラフ、マトリックス、一覧、テキスト ボックス、画像、およびその他すべてのレポート アイテムを処理できます。 レポートの実行中にカスタム処理を必要とする特別な機能をレポートに追加する場合 (たとえば、 [!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint の地図を埋め込む場合)、その処理を実行するレポート処理拡張機能を作成できます。  
   
 ## <a name="delivery-extensions"></a>配信拡張機能
- バックグラウンド処理アプリケーションは、配信拡張機能を使用して、さまざまな場所にレポートを配信します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 電子メールの配信拡張機能とファイル共有の配信拡張機能があります。 電子メール配信拡張機能は、簡易メール転送プロトコル (SMTP) を使用して、レポートそのものまたはレポートへの URL リンクのいずれかを含む電子メール メッセージを送信できます。 URL リンクやレポートを含まない短い通知を、ポケットベル、電話、またはその他のデバイスに送信することもできます。 ファイル共有配信拡張機能は、ネットワークの共有フォルダーにレポートを保存します。 作成したファイルには、場所、表示形式、ファイル名、および上書きオプションを指定できます。 表示したレポートをアーカイブしたり、非常に大きいレポートを扱うための方法の一部として、ファイル共有配信を使用できます。 配信拡張機能はサブスクリプションと共に機能します。 ユーザーはサブスクリプションを作成するときに、利用可能な配信拡張機能のいずれかを選択して、レポートの配信方法を決定します。
+ バックグラウンド処理アプリケーションは、配信拡張機能を使用して、さまざまな場所にレポートを配信します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、電子メールの配信拡張機能とファイル共有の配信拡張機能があります。 電子メール配信拡張機能は、簡易メール転送プロトコル (SMTP) を使用して、レポートそのものまたはレポートへの URL リンクのいずれかを含む電子メール メッセージを送信できます。 URL リンクやレポートを含まない短い通知を、ポケットベル、電話、またはその他のデバイスに送信することもできます。 ファイル共有配信拡張機能は、ネットワークの共有フォルダーにレポートを保存します。 作成したファイルには、場所、表示形式、ファイル名、および上書きオプションを指定できます。 表示したレポートをアーカイブしたり、非常に大きいレポートを扱うための方法の一部として、ファイル共有配信を使用できます。 配信拡張機能はサブスクリプションと共に機能します。 ユーザーはサブスクリプションを作成するときに、利用可能な配信拡張機能のいずれかを選択して、レポートの配信方法を決定します。

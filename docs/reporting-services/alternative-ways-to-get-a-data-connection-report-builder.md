@@ -9,10 +9,10 @@ ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62703889"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>別の方法でデータ接続を取得する (レポート ビルダー)
@@ -29,7 +29,7 @@ ms.locfileid: "62703889"
   
 ### <a name="to-specify-a-data-connection-from-a-list-of-shared-data-sources"></a>共有データ ソースの一覧からデータ接続を指定するには  
   
-1.  [新しいテーブル/マトリックス] または [新しいグラフ] ウィザードの **[データセットの選択]** ページで、 **[データセットの作成]** を選択し、 **[次へ]** をクリックします。 **[データ ソースへの接続の選択]** ページが開きます。  
+1.  新しいテーブル/マトリックス または 新しいグラフ ウィザードの  **データセットの選択** ページで、**データセットの作成** を選択し、**次へ** をクリックします。 **[データ ソースへの接続の選択]** ページが開きます。  
   
 2.  データ ソースの一覧から、アクセスする権限があるデータ ソースを選択します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62703889"
   
 ### <a name="to-specify-a-data-connection-by-browsing-to-a-shared-data-source-on-a-report-server"></a>レポート サーバーの共有データ ソースを参照してデータ接続を指定するには  
   
-1.  [新しいテーブル/マトリックス] または [新しいグラフ] ウィザードの **[データセットの選択]** ページで、 **[データセットの作成]** を選択し、 **[次へ]** をクリックします。 **[データ ソースへの接続の選択]** ページが開きます。  
+1.  新しいテーブル/マトリックス または 新しいグラフ ウィザードの  **データセットの選択** ページで、**データセットの作成** を選択し、**次へ** をクリックします。 **[データ ソースへの接続の選択]** ページが開きます。  
   
 2.  **[参照]** をクリックします。 **[データ ソースの選択]** ダイアログ ボックスが表示されます。  
   

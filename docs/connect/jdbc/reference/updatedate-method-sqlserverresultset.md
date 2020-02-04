@@ -16,10 +16,10 @@ ms.assetid: fbc70604-519d-461c-a8fa-e0a072d28a54
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5f6c9fff572794c523e8420c84af57b53ece1c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999137"
 ---
 # <a name="updatedate-method-sqlserverresultset"></a>updateDate メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67999137"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|[説明]|  
 |----------|-----------------|  
 |[updateDate (int, java.sql.Date)](../../../connect/jdbc/reference/updatedate-method-int-java-sql-date.md)|渡された列インデックスを使用して、指定された列を日付の値で更新します。|  
 |[updateDate (java.lang.String, java.sql.Date)](../../../connect/jdbc/reference/updatedate-method-java-lang-string-java-sql-date.md)|渡された列名を使用して、指定された列を日付の値で更新します。|  

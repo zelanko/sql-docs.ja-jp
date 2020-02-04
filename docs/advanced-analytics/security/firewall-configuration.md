@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c55f68a1134fee6477c52182ad66b8705e363296
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715593"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services のファイアウォール構成
@@ -39,6 +39,6 @@ SQL Server 2019 では、AppContainers への移行の一環として、AppConta
 
 R または Python ランタイムによる無制限のネットワーク アクセスを制限するには、Windows ファイアウォール (または別のファイアウォール) を有効にすることを強くお勧めします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [受信接続用に Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)

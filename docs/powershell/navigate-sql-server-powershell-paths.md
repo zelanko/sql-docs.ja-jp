@@ -10,10 +10,10 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049120"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動

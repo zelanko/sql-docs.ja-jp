@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72173834"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
@@ -29,10 +29,10 @@ ms.locfileid: "72173834"
 |表記|使用目的|  
 |----------------|--------------|  
 |**太字**|記載されているとおりに入力する必要があるテキストを示します。|  
-|(& a) #124 です。(縦棒)|構文項目に複数の選択肢があることを示します。 選択できる項目は 1 つだけです。|  
+|&#124; (垂直線)|構文項目に複数の選択肢があることを示します。 選択できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |**{ }** (中かっこ)|構文項目のパラメーターを区切ります。|  
-|[ **,** ...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目はコンマで区切ります。|  
+|[ **,** ...*n*]|先行する項目を *n* 回繰り返せることを示します。 出現箇所は、コンマで区切られます。|  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,17 +64,17 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表は、要素パス関連の用語をまとめたものです。 サンプル XML ドキュメントである Customers.xml (このトピックの「例」を参照) を使って説明しています。  
   
 > [!NOTE]  
 >  XML タグでは大文字と小文字が区別されます。 要素パスに ElementNode を指定する場合は、データ ソース内の XML タグと完全に一致させる必要があります。  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
 |Element path|XML ドキュメント内のノードのシーケンス、つまり、どのようにノードをたどっていけば、XML データ ソースからデータセットのフィールド データを取得できるかを定義します。|  
 |**ElementNode**|XML ドキュメント内の XML ノードです。 各ノードは他のノードと階層的な関係にあり、タグによって指定されます。 たとえば、\<Customers> は、ルート要素ノードです。 \<Customer> は、\<Customers> のサブ要素です。|  
-|**XMLName**|ノードの名前。 たとえば、Customers ノードの名前は Customers です。 すべてのノード名を一意に識別できるように、 **XMLName** の先頭には名前空間識別子を付けることができます。|  
+|**XMLName**|ノード名。 たとえば、Customers ノードの名前は Customers です。 すべてのノード名を一意に識別できるように、 **XMLName** の先頭には名前空間識別子を付けることができます。|  
 |**[エンコード]**|この要素の **Value** はエンコードされた XML であり、この要素のサブ要素としてデコードおよび追加する必要があることを示します。|  
 |**FieldList**|データの取得に使用する一連の要素と属性を定義します。<br /><br /> 指定しなかった場合は、すべての属性およびサブ要素がフィールドとして使用されます。 空のフィールド リストが指定されている場合 ( **{}** )、このノードのフィールドは使用されません。<br /><br /> **FieldList** には、 **Value** と **Element** または **ElementNode**の両方が含まれない場合があります。|  
 |**フィールド**|データセットのフィールドとして取得するデータを指定します。|  
@@ -92,7 +92,7 @@ XMLLocalName :: =
   
  **例 1**: *空*  
   
-|Order|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
+|Order|数量|id|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
 |テーブル|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
@@ -101,7 +101,7 @@ XMLLocalName :: =
   
  **例 2**: `Customers {}/Customer`  
   
-|FirstName|LastName|ID|  
+|FirstName|LastName|id|  
 |---------------|--------------|--------|  
 |Bobby|Moore|11|  
 |Crystal|Hu|20|  
@@ -117,7 +117,7 @@ XMLLocalName :: =
   
  **例 4**: `Customers {}/Customer {}/Orders/Order {@,@Qty}`  
   
-|Order|Qty|  
+|Order|数量|  
 |-----------|---------|  
 |Chair|6|  
 |テーブル|1|  
@@ -126,7 +126,7 @@ XMLLocalName :: =
   
  **例 5**: `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-|Order.ID|FirstName|LastName|ID|  
+|Order.ID|FirstName|LastName|id|  
 |--------------|---------------|--------------|--------|  
 |1|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  

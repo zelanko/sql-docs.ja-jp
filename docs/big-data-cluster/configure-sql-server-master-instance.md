@@ -10,10 +10,10 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 205f849310ffe2f6139e76783ba7fa6ac315b214
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73532360"
 ---
 # <a name="configure-master-instance-of-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] のマスター インスタンスの構成
@@ -43,7 +43,7 @@ ms.locfileid: "73532360"
    traceflag0 = 1204
    ```
 
-1. `mssql-custom.conf` ファイルを `master-0` ポッドの `mssql-server` コンテナー内の `/var/opt/mssql` にコピーします。 `<namespaceName>` をビッグ データ クラスター名に置き換えます。
+1. `mssql-custom.conf` ファイルを `/var/opt/mssql` ポッドの `mssql-server` コンテナー内の `master-0` にコピーします。 `<namespaceName>` をビッグ データ クラスター名に置き換えます。
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
@@ -58,13 +58,13 @@ ms.locfileid: "73532360"
    ```
 
 > [!IMPORTANT]
-> SQL Server マスター インスタンスが可用性グループ構成内にある場合は、すべての `master` ポッドに `mssql-custom.conf` ファイルをコピーします。 再起動のたびにフェールオーバーが発生するので、このアクティビティのタイミングをダウンタイム期間中にする必要があることに注意してください。
+> SQL Server マスター インスタンスが可用性グループ構成内にある場合は、すべての `mssql-custom.conf` ポッドに `master` ファイルをコピーします。 再起動のたびにフェールオーバーが発生するので、このアクティビティのタイミングをダウンタイム期間中にする必要があることに注意してください。
 
 ## <a name="known-limitations"></a>既知の制限事項
 
 - 上記の手順では、Kubernetes クラスター管理者のアクセス許可が必要です
 - 展開後に、ビッグ データ クラスターの SQL Server マスター インスタンスのサーバーの照合順序を変更することはできません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server ビッグ データ クラスターの展開の詳細については、「[SQL Server ビッグ データ クラスターの使用を開始する](deploy-get-started.md)」を参照してください。

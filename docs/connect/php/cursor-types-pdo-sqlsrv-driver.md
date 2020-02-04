@@ -11,20 +11,20 @@ ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c62c2a35123e77f5366dd5348fd51b3c50c85605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993688"
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>カーソルの種類 (PDO_SQLSRV ドライバー)
+# <a name="cursor-types-pdo_sqlsrv-driver"></a>カーソルの種類 (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PDO_SQLSRV ドライバーを使用すると、複数のカーソルの 1 つでスクロール可能な結果セットを作成できます。
 
 PDO_SQLSRV ドライバーを使用してカーソルを指定する方法と、コードのサンプルについては、「[pdo::prepare](../../connect/php/pdo-prepare.md)」を参照してください。
 
-## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV とサーバー側のカーソル
+## <a name="pdo_sqlsrv-and-server-side-cursors"></a>PDO_SQLSRV とサーバー側のカーソル
 バージョン 3.0 より前の [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] では、PDO_SQLSRV ドライバーを使用して、サーバー側の順方向専用または静的カーソルで結果セットを作成することができました。 バージョン 3.0 の [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] からは、キーセットと動的カーソルも利用できます。
 
 サーバー側のカーソルの種類は、[PDO::prepare](../../connect/php/pdo-prepare.md) を使用して次のいずれかのカーソルの種類を選択することで指定できます。
@@ -41,14 +41,14 @@ PDO_SQLSRV ドライバーを使用してカーソルを指定する方法と、
 
 -   `PDO::SQLSRV_CURSOR_KEYSET`
 
-## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV とクライアント側のカーソル
+## <a name="pdo_sqlsrv-and-client-side-cursors"></a>PDO_SQLSRV とクライアント側のカーソル
 クライアント側のカーソルはバージョン 3.0 の [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で追加されました。これを使用すると、結果セット全体をメモリにキャッシュすることができます。 利点の 1 つは、クエリの実行後に行数を使用できることです。
 
 クライアント側のカーソルは、小規模から中規模の結果セットに対して使用する必要があります。 大規模な結果セットの場合は、サーバー側のカーソルを使用する必要があります。
 
 クライアント側のカーソルを使用しているときにバッファーが結果セット全体を保持するために十分な大きさではない場合、クエリから false が返されます。 バッファーのサイズは PHP メモリの上限まで増やすことができます。
 
-[PDO::setAttribute](../../connect/php/pdo-setattribute.md) または [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) の `PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE` の属性を使用すると、結果セットを保持するバッファーのサイズを構成することができます。 php.ini ファイルで pdo_sqlsrv.client_buffer_max_kb_size を使用して最大バッファー サイズを設定することもできます (たとえば、pdo_sqlsrv.client_buffer_max_kb_size = 1024)。
+`PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE`PDO::setAttribute[ または ](../../connect/php/pdo-setattribute.md)PDOStatement::setAttribute[ の ](../../connect/php/pdostatement-setattribute.md) の属性を使用すると、結果セットを保持するバッファーのサイズを構成することができます。 php.ini ファイルで pdo_sqlsrv.client_buffer_max_kb_size を使用して最大バッファー サイズを設定することもできます (たとえば、pdo_sqlsrv.client_buffer_max_kb_size = 1024)。
 
 [PDO::prepare](../../connect/php/pdo-prepare.md) を使用し、`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` カーソルの種類を指定し、その後 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_BUFFERED` を指定することで、クライアント側のカーソルを要求できます。
 

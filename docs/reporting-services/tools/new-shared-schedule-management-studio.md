@@ -11,10 +11,10 @@ ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61be4b4668b6736d30e28adb30fd16f289fb7c56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582198"
 ---
 # <a name="new-shared-schedule-management-studio"></a>[新しい共有スケジュール] (Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "65582198"
 >  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
 ## <a name="options"></a>オプション  
- **[名前]**  
+ **名前**  
  共有スケジュールの名前を入力します。 この名前は、ユーザーがレポートおよびサブスクリプションの共有スケジュールを選択するときにドロップダウン リストに表示されます。 リスト内に納まり、共有スケジュールと別のスケジュールとを簡単に区別できるわかりやすい名前を付けてください。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
  ; ? : \@ & = + , $ / * < >  
@@ -43,10 +43,10 @@ ms.locfileid: "65582198"
  **[このスケジュールの終了日]**  
  このスケジュールの有効期限を指定します。  
   
- **型**  
+ **Type**  
  定期的なパターンが主に時間、日、週、または月のどれに基づくかを指定します。  
   
- **[時間] ([定期的なパターン])**  
+ **[時間]\([定期的なパターン])**  
  スケジュール設定した操作を一定時間ごとに実行する (たとえば 6 時間ごとにレポートを実行する) ためのオプションを選択します。 間隔は時間と分で指定できます。  
   
  **[日]\([定期的なパターン])**  

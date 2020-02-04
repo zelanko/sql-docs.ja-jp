@@ -9,10 +9,10 @@ ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573848"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services でのレポートのデザインに関する問題のトラブルシューティング
@@ -38,7 +38,7 @@ PageNumber と TotalPages がページ ヘッダーとページ フッターで�
   
 組み込みフィールド [&PageNumber] および [&TotalPages] は、ページ ヘッダーとページ フッターでのみ有効です。   
   
-[&PageNumber] または [&TotalPages] をレポートに追加するには、まずページ ヘッダーまたはページ フッターを追加する必要があります。 詳細については、「[ページ ヘッダーの追加または削除](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)」を参照してください。  
+[&PageNumber] または [&TotalPages] をレポートに追加するには、まずページ ヘッダーまたはページ フッターを追加する必要があります。 詳細については、「 [ページ ヘッダーの追加または削除](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 > [&TotalPages] をページ ヘッダーまたはページ フッターに含めると、レポート処理に影響する可能性があります。 詳細については、「レポートのトラブルシューティング : 特定のファイル形式にエクスポートされるレポート」を参照してください。  

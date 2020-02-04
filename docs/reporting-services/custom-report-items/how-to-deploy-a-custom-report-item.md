@@ -11,10 +11,10 @@ ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194139"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置する方法
@@ -22,7 +22,7 @@ ms.locfileid: "63194139"
   
 ### <a name="to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置するには  
   
-1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 **ReportItemName** エントリは、**CustomReportItemDesigner** クラスで使用される **CustomReportItemAttribute** 属性と一致する必要があることにご注意ください。 例:  
+1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 **ReportItemName** エントリは、**CustomReportItemDesigner** クラスで使用される **CustomReportItemAttribute** 属性と一致する必要があることにご注意ください。 次に例を示します。  
   
     ```  
     <ReportItems>  
@@ -36,7 +36,7 @@ ms.locfileid: "63194139"
     </ReportItemConverter>  
     ```  
   
-2.  Rsreportserver.config ファイルを編集して、カスタム レポート アイテムの実行時コンポーネントを登録します。 例:  
+2.  Rsreportserver.config ファイルを編集して、カスタム レポート アイテムの実行時コンポーネントを登録します。 次に例を示します。  
   
     ```  
     <ReportItems>  
@@ -44,7 +44,7 @@ ms.locfileid: "63194139"
     </ReportItems>  
     ```  
   
-3.  Rsssrvpolicy.config ファイルを編集して、カスタム レポート アイテムに適切なアクセス許可を付与する **CodeGroup** を追加します。 例:  
+3.  Rsssrvpolicy.config ファイルを編集して、カスタム レポート アイテムに適切なアクセス許可を付与する **CodeGroup** を追加します。 次に例を示します。  
   
     ```  
     <CodeGroup   

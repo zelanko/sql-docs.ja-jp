@@ -1,28 +1,29 @@
 ---
-title: 方法:空の SQL Server の単体テストを作成する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 空の SQL Server の単体テストを作成する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cd7a605fbe9d3075d4d67e1ce824664ef2747c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5684735fc0bf2aaaa35183933145006d6efe188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897129"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241509"
 ---
-# <a name="how-to-create-an-empty-sql-server-unit-test"></a>方法:空の SQL Server の単体テストを作成する
-データベース オブジェクトに単体テストを含めることで、データベース オブジェクトに加えた変更によって既存の機能が使用できなくなっていないかどうかを検証できます。 次に、任意のデータベース オブジェクト用に SQL Server 単体テストを作成する手順について説明します。 SQL Server Data Tools には、データベース関数、トリガー、およびストアド プロシージャの追加のサポートも含まれています。 詳細については、「[ソフト NUMA を使用するように関数、トリガー、ストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)」を参照してください。  
+# <a name="how-to-create-an-empty-sql-server-unit-test"></a>空の SQL Server の単体テストを作成する方法
+
+データベース オブジェクトに単体テストを含めることで、データベース オブジェクトに加えた変更によって既存の機能が使用できなくなっていないかどうかを検証できます。 次に、任意のデータベース オブジェクト用に SQL Server 単体テストを作成する手順について説明します。 SQL Server Data Tools には、データベース関数、トリガー、およびストアド プロシージャの追加のサポートも含まれています。 詳しくは、「[関数、トリガー、およびストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)」をご覧ください。  
   
-最初の手順を使用して SQL Server の単体テストを作成すると、テスト プロジェクトが存在しない場合は自動的に作成されます。 テスト プロジェクトが既に存在する場合は、新しいテストをプロジェクトの 1 つに追加するか、新しいテスト プロジェクトを作成するかを選択できます。 テスト プロジェクトの詳細については、「[SQL Server の単体テストのテスト プロジェクトを作成する方法](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md)」を参照してください。  
+最初の手順を使用して SQL Server の単体テストを作成すると、テスト プロジェクトが存在しない場合は自動的に作成されます。 テスト プロジェクトが既に存在する場合は、新しいテストをプロジェクトの 1 つに追加するか、新しいテスト プロジェクトを作成するかを選択できます。 テスト プロジェクトについて詳しくは、「[How to: Create a Test Project for SQL Server Database Unit Testing](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md)」(SQL Server のデータベース単体テストのテスト プロジェクトを作成する方法) をご覧ください。  
   
 SQL Server の単体テストを作成するには、次の 2 つの方法があります。  
   
@@ -58,7 +59,7 @@ SQL Server の単体テストを作成するには、次の 2 つの方法があ
   
     -   単体テストを実行する前の、データベース プロジェクトと関連するスキーマ変更の特定のプロジェクト構成への自動配置。  
   
-    詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。  
+    詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。  
   
 6.  プロジェクトの構成情報を指定し、 **[OK]** をクリックします。  
   
@@ -95,10 +96,10 @@ SQL Server の単体テストを作成するには、次の 2 つの方法があ
 -   スクリプトの結果を確認するためのテスト条件またはその他のアサート ステートメントを追加します。  
   
 > [!NOTE]  
-> 結果不確定のテスト条件は、すべてのテストに追加される既定の条件です。 このテスト条件は、テストの検証が実装されていないことを示すために含まれています。 このテスト条件は、他のテスト条件を追加した後に、テストから削除します。 詳細については、「[ソフト NUMA を使用するようにAdd Test Conditions to Database Unit Tests](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)」(データベース単体テストにテスト条件を追加する方法) を参照してください。  
+> 結果不確定のテスト条件は、すべてのテストに追加される既定の条件です。 このテスト条件は、テストの検証が実装されていないことを示すために含まれています。 このテスト条件は、他のテスト条件を追加した後に、テストから削除します。 詳しくは、「[方法: データベース単体テストにテスト条件を追加する](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
-[方法:SQL Server の単体テストを実行する](../ssdt/how-to-run-sql-server-unit-tests.md)  
+[SQL Server 単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [単体テストの作成](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

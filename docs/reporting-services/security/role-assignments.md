@@ -15,10 +15,10 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570567"
 ---
 # <a name="role-assignments"></a>ロールの割り当て
@@ -33,7 +33,7 @@ ms.locfileid: "65570567"
   - **ブラウザー**
   - **コンテンツ マネージャー**
   - **個人用レポート**
-  - **パブリッシャー**
+  - **発行元**
   - **レポート ビルダー**
   - **システム管理者**
   - **システム ユーザー**
@@ -57,7 +57,7 @@ ms.locfileid: "65570567"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] におけるロールベースのセキュリティは、次のレベルに分類されます。
 
 - アイテムレベルのロールの割り当てでは、次のようなレポート サーバー フォルダー階層内のアイテムに対するアクセスを制御します。
-  - レポート
+  - reports
   - フォルダー
   - レポート モデル
   - 共有データ ソース

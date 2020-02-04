@@ -10,10 +10,10 @@ ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c196b316424c941cba52eb50c61c82ca772ba18c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67951704"
 ---
 # <a name="escape-sql-server-identifiers"></a>SQL Server 識別子のエスケープ
@@ -28,7 +28,7 @@ ms.locfileid: "67951704"
 
 通常、バック ティック文字 (`) のキーは、キーボード左上の Esc キーの下にあります (英語キーボードの場合)。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に示すのは、# 文字をエスケープする例です。  
   
 ```  

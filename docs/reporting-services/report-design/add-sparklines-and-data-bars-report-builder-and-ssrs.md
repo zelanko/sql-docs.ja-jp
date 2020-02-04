@@ -9,10 +9,10 @@ ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8982b9fb6312f3d3c14b4a4e009a81b51c435914
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581897"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バーの追加 (レポート ビルダーおよび SSRS)
@@ -45,6 +45,6 @@ ms.locfileid: "65581897"
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [テーブル内のグラフまたはマトリックスでのデータの整列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [テーブル内のグラフまたはマトリックスでのデータの整列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

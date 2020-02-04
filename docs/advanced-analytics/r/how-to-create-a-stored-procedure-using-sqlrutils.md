@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727471"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils を使用してストアド プロシージャを作成する
@@ -35,10 +35,10 @@ ms.locfileid: "73727471"
 
 データ フレーム内のオブジェクトと、関数の他のすべての入力パラメーターは、次の R データ型でなければなりません。
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - 整数 (integer)
-- logical
+- 論理
 - raw
 
 入力の種類が上記の種類でない場合は、シリアル化し、 *raw*として関数に渡す必要があります。 その場合、関数に入力を逆シリアル化するコードを含める必要もあります。
@@ -119,9 +119,9 @@ StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp
 ストアド プロシージャは R を使用して登録できます。または、T-SQL で CREATE PROCEDURE ステートメントを実行できます。
 
 - T-SQL の使用。  T-SQL に慣れている場合は、SQL Server Management Studio (または SQL DDL コマンドを実行できるその他のクライアント) を開き、`StoredProcedure` 関数によって準備されたコードを使用して CREATE PROCEDURE ステートメントを実行します。
-- R の使用。まだ R 環境にいる場合は、**sqlrutils** で `registerStoredProcedure` 関数を使用して、ストアド プロシージャをデータベースに登録できます。
+- R の使用。まだ R 環境にいる場合は、`registerStoredProcedure`sqlrutils**で** 関数を使用して、ストアド プロシージャをデータベースに登録できます。
 
-  たとえば、次の R 呼び出しを行うと、*sqlConnStr* で定義されているインスタンスとデータベースで、ストアド プロシージャ **sp_rsample** を登録できます。
+  たとえば、次の R 呼び出しを行うと、**sqlConnStr** で定義されているインスタンスとデータベースで、ストアド プロシージャ *sp_rsample* を登録できます。
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)

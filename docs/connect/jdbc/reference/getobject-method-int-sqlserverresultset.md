@@ -16,10 +16,10 @@ ms.assetid: 94e59366-ca34-4cd5-a6ec-ae32d475ef36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98db08e342f1951df8346ae44e0689dbd7b7dd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981235"
 ---
 # <a name="getobject-method-int-sqlserverresultset"></a>getObject (int) メソッド (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.lang.Object getObject(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getObject メソッドは、java.sql.ResultSet インターフェイスの getObject メソッドで規定されています。  
   
  このメソッドは、指定された列の値を Java オブジェクトとして返します。 この Java オブジェクトの型は、JDBC 仕様に指定されている組み込み型のマッピングに基づく、列の SQL 型に対応する既定の Java オブジェクト型です。 値が SQL NULL の場合、ドライバーは Java の null を返します。  

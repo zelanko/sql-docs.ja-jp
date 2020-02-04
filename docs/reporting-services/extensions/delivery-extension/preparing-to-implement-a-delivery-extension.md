@@ -12,10 +12,10 @@ ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 949ab416b0d30f7bb20ec2b797a04121d49b9811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193717"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>配信拡張機能を実装する準備

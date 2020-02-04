@@ -11,10 +11,10 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c075c7adcc7eeae3ae7a83676256e72b4b86d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989429"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
@@ -24,11 +24,11 @@ ms.locfileid: "67989429"
 
 Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケーションを作成できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server を使用すると、Azure SQL Database、Azure SQL Data Warehouse、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、SQL Server 2005 に接続できます。  
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
 
-| バージョン       | サポートされている機能      |
+| Version       | サポートされている機能      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 17 for SQL Server | <ul><li>BCP API の Always Encrypted サポート</li><li>新しい接続文字列属性 UseFMTONLY により、一時テーブルを必要とする特別なケースで以前のメタデータがドライバーで使用されます</li>
+| Microsoft ODBC Driver 17 for SQL Server | <ul><li>BCP API の Always Encrypted のサポート</li><li>新しい接続文字列属性 UseFMTONLY により、一時テーブルを必要とする特別なケースで以前のメタデータがドライバーで使用されます</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>AlwaysOn 可用性グループ (AG)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>国際化ドメイン名 (IDN)</li></ul> |
 | Microsoft SQL Server 用 ODBC Driver 11 | <ul><li>ドライバー対応接続プール</li><li>接続の回復</li><li>非同期実行 (ポーリング メソッド)</li></ul> |    
@@ -38,8 +38,8 @@ Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケー�
   
 -   [Windows 上の SQL Server に対する ODBC のリリース ノート](../../../connect/odbc/windows/release-notes-odbc-sql-server-windows.md)  
 -   [Microsoft ODBC Driver for SQL Server on Windows の機能](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
--   [インストール、ドライバー ファイルの基本的なシステム要件](../../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)  
--   [OLE DB Provider for SQL Server のドライバー対応接続プール](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
+-   [システム要件、インストール、およびドライバー ファイル](../../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)  
+-   [ODBC Driver for SQL Server のドライバー対応接続プール](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
 -   [非同期実行 &#40;通知方法&#41; の例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Windows ODBC ドライバーの接続の復元性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
 -   [ODBC ドライバーで Always Encrypted を使用する](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

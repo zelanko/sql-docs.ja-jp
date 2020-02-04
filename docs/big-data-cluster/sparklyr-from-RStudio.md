@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531615"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターで sparklyr を使用する
@@ -22,7 +22,7 @@ ms.locfileid: "73531615"
 
 Sparklyr には、Apache Spark 用の R インターフェイスが用意されています。 Sparklyr は、Spark を使用する R 開発者にとって一般的な方法です。 この記事では、RStudio を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] で sparklyr を使用する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 のビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md).
 
@@ -80,14 +80,14 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分散 R 計算
 
-sparklyr の機能の 1 つとして、[spark_apply](https://spark.rstudio.com/reference/spark_apply/) を使用して [R 計算を分散](https://spark.rstudio.com/guides/distributed-r/)する機能があります。
+sparklyr の機能の 1 つとして、[spark_apply](https://spark.rstudio.com/guides/distributed-r/) を使用して [R 計算を分散](https://spark.rstudio.com/reference/spark_apply/)する機能があります。
 
-ビッグ データ クラスターは Livy 接続が使用されるため、**spark_apply** の呼び出しで `packages = FALSE` を設定する必要があります。 詳細については、分散 R 計算に関する sparklyr のドキュメントの「[Livy](https://spark.rstudio.com/guides/distributed-r/#livy)」セクションを参照してください。 この設定では、**spark_apply** に渡された R コードで、Spark クラスターに既にインストールされている R パッケージのみを使用できます。 この機能について、次の例を示します。
+ビッグ データ クラスターは Livy 接続が使用されるため、`packages = FALSE`spark_apply**の呼び出しで** を設定する必要があります。 詳細については、分散 R 計算に関する sparklyr のドキュメントの「[Livy](https://spark.rstudio.com/guides/distributed-r/#livy)」セクションを参照してください。 この設定では、**spark_apply** に渡された R コードで、Spark クラスターに既にインストールされている R パッケージのみを使用できます。 この機能について、次の例を示します。
 
 ```r
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)に関するページを参照してください。
+ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] とは](big-data-cluster-overview.md)の概要に関するページを参照してください。

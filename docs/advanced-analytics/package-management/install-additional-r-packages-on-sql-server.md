@@ -3,19 +3,19 @@ title: 新しい R パッケージのインストール
 description: qlmlutils を使用して、新しい Python パッケージを、SQL Server Machine Learning Services または SQL Server R Services のインスタンスにインストールする方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727502"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479429"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils で新しい R パッケージをインストールする
 
@@ -26,7 +26,7 @@ ms.locfileid: "73727502"
 > [!NOTE]
 > SQL Server に R パッケージを追加する際に、標準の R `install.packages` コマンドは推奨されません。 代わりに、この記事で説明するように **sqlmlutils** を使用します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [R](https://www.r-project.org) と [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) を、SQL Server への接続に使用するクライアント コンピューターに インストールします。 スクリプトの実行には任意の R IDE を使用できますが、この記事では RStudio を想定しています。
 
@@ -141,12 +141,12 @@ SQL Server への接続に使用するクライアント コンピューター�
    ```
 
    > [!TIP]
-   > **スコープ**には、**PUBLIC** または **PRIVATE** を指定できます。 パブリック スコープは、すべてのユーザーが使用できるパッケージを、データベース管理者がインストールするときに役に立ちます。 プライベート スコープを指定すると、パッケージを使用できるのは、そのパッケージをインストールしたユーザーだけになります。 スコープを指定しない場合、既定のスコープは **PRIVATE** です。
+   > **scope** には、**PUBLIC** または **PRIVATE** を指定できます。 パブリック スコープは、全ユーザーが使用できるパッケージをデータベース管理者がインストールする場合に適しています。 プライベート スコープを指定すると、パッケージを使用できるのは、そのパッケージをインストールしたユーザーだけになります。 スコープを指定しなかった場合の既定のスコープは **PRIVATE** です。
 
 ### <a name="add-the-package-offline"></a>パッケージをオフラインで追加する
 
 クライアント コンピューターがインターネットに接続されていない場合は、インターネットにアクセスできるコンピューターを使用して、**miniCRAN** を使って **glue** パッケージをダウンロードできます。 次に、パッケージをオフラインでインストールできるクライアント コンピューターにパッケージをコピーします。
-**miniCRAN** のインストールについては、「[miniCRAN をインストールする](create-a-local-package-repository-using-minicran.md#install-minicran)」を参照してください。
+[miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) のインストールについては、「**miniCRAN をインストールする**」を参照してください。
 
 インターネットに接続されているコンピューターでの操作:
 
@@ -190,7 +190,7 @@ SQL Server への接続に使用するクライアント コンピューター�
 
 クライアント コンピューターでの操作:
 
-1. RStudio を開き、新しい **R スクリプト** ファイルを作成します。
+1. RStudio を開いて、新しい **R Script** ファイルを作成します。
 
 1. 次の R スクリプトを使用して、**sqlmlutils** を使って **glue** パッケージをインストールします。 ご自身の SQL Server データベース接続情報に置き換えます (Windows 認証を使用しない場合は、`uid` パラメーターと `pwd` パラメーターを追加します)。
 
@@ -205,7 +205,7 @@ SQL Server への接続に使用するクライアント コンピューター�
    ```
 
    > [!TIP]
-   > **スコープ**には、**PUBLIC** または **PRIVATE** を指定できます。 パブリック スコープは、すべてのユーザーが使用できるパッケージを、データベース管理者がインストールするときに役に立ちます。 プライベート スコープを指定すると、パッケージを使用できるのは、そのパッケージをインストールしたユーザーだけになります。 スコープを指定しない場合、既定のスコープは **PRIVATE** です。
+   > **scope** には、**PUBLIC** または **PRIVATE** を指定できます。 パブリック スコープは、全ユーザーが使用できるパッケージをデータベース管理者がインストールする場合に適しています。 プライベート スコープを指定すると、パッケージを使用できるのは、そのパッケージをインストールしたユーザーだけになります。 スコープを指定しなかった場合の既定のスコープは **PRIVATE** です。
 
 ## <a name="use-the-package"></a>パッケージを使用する
 
@@ -243,7 +243,7 @@ SQL Server への接続に使用するクライアント コンピューター�
 sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLIC")
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - インストール済み R パッケージの詳細については、「[R パッケージ情報の取得](r-package-information.md)」を参照してください
 - R パッケージの操作情報については、「[R パッケージを使用するためのヒント](tips-for-using-r-packages.md)」を参照してください

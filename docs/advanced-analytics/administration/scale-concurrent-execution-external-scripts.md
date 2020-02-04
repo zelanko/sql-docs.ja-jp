@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c10f92bcb0f8b64441ad4b088c4b8b3e2f62236b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727694"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での外部スクリプトの同時実行のスケーリング
@@ -21,7 +21,7 @@ ms.locfileid: "73727694"
 
 SQL Server Machine Learning Services のワーカー アカウントについて、および外部スクリプトの同時実行数をスケーリングするよう既定の構成を変更する方法について説明します。
 
-[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスによるタスクの実行をサポートするために、Machine Learning Services のインストール プロセスの一部として、新しい Windows "*ユーザー アカウント プール*" が作成されました。 これらのワーカー アカウントの目的は、異なる SQL Server ユーザーによる外部スクリプトの同時実行を隔離することです。
+*サービスによるタスクの実行をサポートするために、Machine Learning Services のインストール プロセスの一部として、新しい Windows "* ユーザー アカウント プール[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]" が作成されました。 これらのワーカー アカウントの目的は、異なる SQL Server ユーザーによる外部スクリプトの同時実行を隔離することです。
 
 > [!Note]
 > SQL Server 2019 では、**SQLRUserGroup** には、複数のワーカー アカウントではなく、1 つの SQL Server Launchpad サービス アカウントであるメンバーが 1 つだけあります。 この記事では、SQL Server 2016 および 2017 のワーカー アカウントについて説明します。
@@ -65,7 +65,7 @@ Windows アカウント グループは、機械学習がインストールさ�
 
 Python または R スクリプトで使用できるリソースは SQL Server によって管理されます。 SQL Server の DMV を使用してリソースの使用状況を監視するか、または関連する Windows ジョブ オブジェクトのパフォーマンス カウンターを見て、サーバー メモリの使用量を必要に応じて調整することをお勧めします。 SQL Server Enterprise Edition を使用している場合は、[外部リソース プール](how-to-create-a-resource-pool.md)を構成することで、外部スクリプトの実行に使用されるリソースを割り当てることができます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [SQL Server Management Studio のカスタム レポートを使用して Python および R のスクリプトの実行を監視する](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
 - [動的管理ビュー (DMV) を使用して SQL Server Machine Learning Services を監視する](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

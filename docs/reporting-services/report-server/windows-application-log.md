@@ -13,10 +13,10 @@ ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580930"
 ---
 # <a name="windows-application-log"></a>Windows アプリケーション ログ
@@ -39,9 +39,9 @@ ms.locfileid: "65580930"
   
 |イベントの種類|[説明]|  
 |----------------|-----------------|  
-|[情報]|正常に行われた操作を表すイベント (たとえば、レポート サーバー サービスの開始時)|  
+|Information|正常に行われた操作を表すイベント (たとえば、レポート サーバー サービスの開始時)|  
 |警告|発生する可能性のある問題を示すイベント (たとえば、空きディスク容量の不足)|  
-|Error|重大な問題を表すイベント (たとえば、サービスが開始されなかった場合)|  
+|エラー|重大な問題を表すイベント (たとえば、サービスが開始されなかった場合)|  
 |成功の監査|ログオンが成功したことを表すセキュリティ イベント|  
 |失敗の監査|ログインを試行して失敗したときにログに記録されるイベント|  
   

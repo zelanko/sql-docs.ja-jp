@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037861"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>キーボード ショートカット (レポート ビルダー)
@@ -38,7 +38,7 @@ ms.locfileid: "67037861"
 |レポートを保存する。|Ctrl + S、Alt + S|  
 |レポート ビルダーの領域 (リボン、デザイン画面、グループ化ペイン、プロパティ ペイン、データ ペイン) 間を移動する。|F6&lt;/localizedText&gt;、&lt;localizedText&gt;Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F6|  
 |リボンに移動する。|Alt|  
-|リボンの [ホーム] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;H|  
+|リボンの [ホーム] タブに移動する。|Alt + H|  
 |リボンの [挿入] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;I|  
 |リボンの [表示] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;V|  
 |領域間の境界線 (グループ化ペインとデザイン画面の境界線など) をアクティブ化する。|Tab|  
@@ -54,10 +54,10 @@ ms.locfileid: "67037861"
 |選択した複数の項目の端を合わせる。|Alt + H + A|  
 |レポートを実行します。|F5、Alt + H + R|  
 |デザイン モードに切り替える。|F8|  
-|[コピー]|Ctrl + C、Alt + H + C|  
+|コピー|Ctrl + C、Alt + H + C|  
 |切り取り|Ctrl + X、Alt + H + X|  
-|[貼り付け]|Ctrl + V、Alt + H + V|  
-|すべて選択|Ctrl + A|  
+|貼り付け|Ctrl + V、Alt + H + V|  
+|すべて選択|CTRL + A|  
 |元に戻す|Ctrl + Z、Alt + Z|  
 |やり直し|Ctrl + Y、Alt + Y|  
 |[拡大]|Ctrl + 正符号 (+) キー|  

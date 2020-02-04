@@ -1,6 +1,6 @@
 ---
-title: フォルダーを指定して検索 | Microsoft Docs
-ms.custom: ''
+title: '[フォルダーを指定して検索]'
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45121de07c89603f4de8f2d97ddd7d92d500879b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4acfec737fb3ba0779c825e294315183ec463cf2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265462"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253880"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68265462"
 ## <a name="find-what"></a>[検索する文字列]  
  **[フォルダーを指定して検索]** タブの以下のコントロールを使用すると、検索する文字列または式を指定できます。  
   
- **Find what**  
+ **[検索する文字列]**  
  検索するテキストを入力します。 ダイアログ ボックスを開く前にカーソルで選択されていたテキスト、近接するテキスト、または以前に検索したテキストが、検索テキストの候補として示されます。 ドロップダウン リストを使用して、直前の 20 回の検索文字列の中から 1 つを再選択することができます。  
   
  **ワイルドカード付き文字列**  
@@ -40,7 +40,7 @@ ms.locfileid: "68265462"
  **正規表現**  
  検索エンジンが検索文字列を正規表現として解釈するようにするには、 **[検索オプション]** の下にある **[条件]** チェック ボックスをオンにして、 **[正規表現]** をクリックします。  
   
- **[式ビルダー]**  
+ **式ビルダー**  
  **[検索オプション]** で **[条件]** チェック ボックスがオンになっている場合、 **[検索する文字列]** ボックスの横にある三角形のボタンを使用できます。 このボタンをクリックすると、選択した **[条件]** オプションに応じて、ワイルドカードまたは正規表現の一覧が表示されます。 この一覧から項目を選択すると、 **[検索する文字列]** の文字列に追加されます。  
   
 ## <a name="look-in"></a>[検索対象]  
@@ -79,13 +79,13 @@ ms.locfileid: "68265462"
  **[単語単位]**  
  このチェック ボックスをオンにすると、 **[検索する文字列]** で指定した文字列に単語単位で一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、「 **MyObject** 」を検索すると、"CMyObject" や "MyObjectC" ではなく "MyObject" のみが返されます。  
   
- **[検索オプション]**  
+ **用途**  
  **[検索する文字列]** ボックスまたは **[置換後の文字列]** ボックスに入力された特殊文字を解釈する方法を指定します。 オプションは **[ワイルドカード]** と **[正規表現]** です。  
   
  **Regular Expressions**  
  検索するテキストのパターンを定義する、特殊な表記です。 一覧については、「 [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)」を参照してください。  
   
- **[ワイルドカード]**  
+ **ワイルドカード**  
  アスタリスク (`*`) や疑問符 (`?`) などの特殊文字は、1 つまたは複数の文字を表します。 一覧については、「 [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
   
  **[次のファイルの種類を参照]**  

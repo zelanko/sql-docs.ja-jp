@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580835"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
@@ -70,7 +70,7 @@ parameter
   
 ```  
   
- 例を次に示します。  
+ たとえば、次のように入力します。  
   
 ```  
 SalesOrderNumber:isnull=true  
@@ -107,7 +107,7 @@ https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Repor
 ```  
   
 ## <a name="see-also"></a>参照  
- [URL アクセス &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL アクセス (SSRS)](../reporting-services/url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
   
   

@@ -9,10 +9,10 @@ ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 786f7391d87799a0822f357e449db21fea0d0f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68221246"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>サブスクリプションの操作 (Web ポータル)
@@ -50,7 +50,7 @@ ms.locfileid: "68221246"
   
 このオプションを使用できるのは、高度な権限を持つユーザーのみです。 既定のセキュリティを設定している場合、[個人用レポート] フォルダーにあるレポートに対してデータ ドリブン サブスクリプションを使用することはできません。  
   
-### <a name="destination"></a>[Destination]  
+### <a name="destination"></a>宛先  
 レポートの配信に使用する配信拡張機能を選択します。   
   
 配信拡張機能を使用できるかどうかは、配信拡張機能がレポート サーバーにインストールおよび構成されているかどうかによって決まります。 レポート サーバーの電子メールは、既定の配信拡張機能ですが、使用する前に構成する必要があります。 ファイル共有配信は構成の必要はありませんが、共有フォルダーは使用前に定義が必要です。  

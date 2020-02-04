@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028895"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server モバイル レポート: エンド ツー エンドのチュートリアル
@@ -22,7 +22,7 @@ ms.locfileid: "69028895"
 
 調整可能なグリッド行とグリッド列、柔軟なモバイル レポート要素を備えたデザイン領域でモバイル レポートを作成します。 さまざまなオンプレミス データ ソースに接続するか、Excel ブックをアップロードしてモバイル レポートを作成します。 レポートを [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルに保存し、ブラウザーまたは Power BI モバイル アプリで表示します。  
   
-この記事では、次について説明します。   
+この記事で説明する内容は次のとおりです。   
   
 - サンプル データ ソースとして AdventureWorks データベースを使用して、 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータル上で共有データ ソースとデータセットを作成する。  
 - [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "69028895"
   
 ## <a name="create-a-shared-data-source"></a>共有データ ソースの作成  
   
-Reporting Services でサポートされるデータ ソースのいずれもからモバイル レポートの共有データ ソースを作成できます。 「 [サポートされるデータ ソースの一覧](../report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
+Reporting Services でサポートされるデータ ソースのいずれもからモバイル レポートの共有データ ソースを作成できます。 「[サポートされるデータ ソースの一覧](../report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルから、 **[新規作成]**  >  **[データソース]** をクリックします。  
   

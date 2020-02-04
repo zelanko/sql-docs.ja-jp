@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531588"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>ビッグ データ クラスターの状態を表示する方法 
@@ -24,7 +24,7 @@ ms.locfileid: "73531588"
 
 ## <a id="datastudio"></a> Azure Data Studio を使用する
 
-[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新の **Insider ビルド**をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
+**Azure Data Studio** の最新の [Insider ビルド](https://aka.ms/getazuredatastudio)をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
 
 1. まず、Azure Data Studio でご利用のビッグ データ クラスターへの接続を作成します。 詳細については、「[Azure Data Studio を使用して SQL Server ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)」を参照してください。
 
@@ -223,7 +223,7 @@ azdata bdc status show
 azdata bdc status show --all --resource storage-0
 ```
 
-特定のサービスを実行しているすべてのコンポーネントの状態を表示するには、対応するコマンドグループ `azdata bdc <serviceName> status show` を使用する必要があります。 例:
+特定のサービスを実行しているすべてのコンポーネントの状態を表示するには、対応するコマンドグループ `azdata bdc <serviceName> status show` を使用する必要があります。 次に例を示します。
 
 - azdata bdc sql status show --all
 - azdata bdc hdfs status show --all
@@ -316,6 +316,6 @@ azdata bdc status show --all --resource storage-0
 
 [`azdata bdc control status show`](reference-azdata-bdc-control-status.md) コマンドを使用して、コントローラーの状態を表示できます。 ビッグ データ クラスターのコントローラー コンポーネントに関連する監視ダッシュボードへの同様のリンクが表示されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] とは](big-data-cluster-overview.md)の概要に関するページを参照してください。

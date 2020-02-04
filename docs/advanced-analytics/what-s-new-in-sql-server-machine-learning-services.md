@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707437"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能
@@ -59,7 +59,7 @@ R の新機能には、次のような特徴を持つ[**パッケージ管理**]
 
 ### <a name="r-libraries"></a>R ライブラリ
 
-| [パッケージ] | [説明] |
+| Package | [説明] |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | このリリースでは、MicrosoftML は既定の R インストールに含まれており、前の SQL Server 2016 R Services で必要だったアップグレード手順が不要になっています。 MicrosoftML は、最先端の機械学習アルゴリズムと、リモート計算コンテキストでスケーリングまたは実行できるデータ変換を提供します。 アルゴリズムには、カスタマイズ可能なディープ ニューラル ネットワーク、高速デシジョン ツリーとデシジョン フォレスト、線形回帰、およびロジスティック回帰が含まれます。  |
 
@@ -75,7 +75,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用する�
 
 ### <a name="python-libraries"></a>Python ライブラリ
 
-| [パッケージ] | [説明] |
+| Package | [説明] |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Python で RevoScaleR に相当するもの。 線形回帰およびロジスティック回帰、デシジョン ツリー、ブースト ツリー、ランダム フォレストに対し、すべて並列化可能で、リモート計算コンテキストで実行することができる Python モデルを作成することができます。 このパッケージでは、複数のデータ ソースとリモート計算コンテキストの使用がサポートされています。 データ サイエンティストや開発者は、リモート SQL Server で Python コードを実行して、データを移動せずに、データを探索したり、モデルを構築したりすることができます。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Python で MicrosoftML R パッケージに相当するもの。 |
@@ -98,7 +98,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用する�
 
 すべての機能に関する発表については、「[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。
 
-| リリース |機能更新プログラム |
+| Release |機能更新プログラム |
 |---------|----------------|
 | CU の追加 | [**リアルタイム スコアリング**](real-time-scoring.md) は、ネイティブ C++ ライブラリに依存して、最適化されたバイナリ形式で格納されたモデルを読み取り、R ランタイムを呼び出すことなく予測を生成します。 これにより、スコアリング操作が大幅に高速化します。 リアルタイム スコアリングを使用すると、R コードからストアド プロシージャを実行したり、リアルタイム スコアリングを実行したりすることができます。 インスタンスが [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] の最新リリースにアップグレードされている場合、リアルタイム スコアリングは SQL Server 2016 でも利用できます。 |
 | 最初のリリース | [**データベース内分析のための R 統合**](r/sql-server-r-services.md)。 <br/><br/> T-SQL で R 関数を呼び出すための R パッケージ。その逆も同様です。 RevoScaleR 関数では、データをコンポーネント パーツにチャンク化し、分散処理を調整および管理し、結果を集計することによって、大規模な R 分析を提供します。 SQL Server 2016 R Services (データベース内) では、RevoScaleR エンジンがデータベース エンジンのインスタンスと統合され、データと分析が同じ処理コンテキストにまとめられます。 <br/><br/>[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) を使用した T-SQL と R の統合。 このストアド プロシージャを使用して、任意の R コードを呼び出すことができます。 このセキュリティで保護されたインフラストラクチャにより、単純なストアド プロシージャを使用してアプリケーションから呼び出すことができる、Rn モデルとスクリプトのエンタープライズレベルの展開が可能になります。 SQL から R プロセスおよび MPI リング並列処理のデータをストリーミングすることで、パフォーマンスがさらに向上します。 <br/><br/>T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用すると、以前に必要なバイナリ形式で保存した事前トレーニング済みのモデルに対して[ネイティブ スコアリング](sql-native-scoring.md)を実行できます。|
@@ -119,7 +119,7 @@ Linux では、SQL Server 2017 に R または Python の統合はありませ�
 
 Azure SQL Database の Machine Learning Services はパブリック プレビューの段階にあります。 詳細については、[Azure SQL Database Machine Learning Services (プレビュー)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) に関するページを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server Machine Learning サービス (データベース内) のインストール](install/sql-machine-learning-services-windows-install.md)
 + [機械学習のチュートリアルとサンプル](tutorials/machine-learning-services-tutorials.md)

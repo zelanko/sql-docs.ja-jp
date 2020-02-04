@@ -9,16 +9,16 @@ ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a9033e39b58e70131ca7c361f89cebed9f12c1d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580856"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域では、グループに関連付けられている動的行と一緒に、静的行 (グループ ヘッダー、グループ フッターなど) を表示するかどうかを制御できます。  
   
- 複数のページですべての列見出しまたは行見出しを繰り返し表示するには、Tablix データ領域のプロパティを設定します。 詳細については、「 [複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」を参照してください。  
+ 複数のページですべての列見出しまたは行見出しを繰り返し表示するには、Tablix データ領域のプロパティを設定します。 詳細については、「[複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」を参照してください。  
   
  入れ子になったグループに関連付けられている動的行と動的列の表示動作、または、ラベルや小計に関連付けられている静的行と静的列の表示動作を制御するには、Tablix メンバーのプロパティを設定する必要があります。 Tablix メンバーは、静的な行または列、あるいは動的な行または列を表します。 静的メンバーが表示されるのは 1 回だけです。 たとえば、代表的な静的行に、総計行があります。 動的メンバーは、1 グループにつき 1 回表示されます。 たとえば、特定のグループに対し [Territory] というグループ式が割り当てられているとき、そのグループに関連付けられている行は、一意の区域 (territory) 値ごとに 1 回表示されることになります。 Tablix のメンバーに関する詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   

@@ -10,10 +10,10 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330630"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール
@@ -24,7 +24,7 @@ ms.locfileid: "64330630"
 
 SQL Server Reporting Services (SSRS) とインターネット インフォメーション サービス (IIS) は、同じコンピューターにインストールして実行できます。 対処する必要のある相互運用性の問題は、使用している IIS のバージョンによって異なります。  
   
-|IIS のバージョン|問題|[説明]|  
+|IIS のバージョン|発行|[説明]|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|あるアプリケーションに対して送信された要求が、別のアプリケーションによって受け付けられます。<br /><br /> URL 予約には、HTTP.SYS による優先順位規則が適用されます。 同じ仮想ディレクトリ名を持ち、共にポート 80 を監視するアプリケーションが複数存在するとき、これらのアプリケーションに宛てて送信された要求は、目的のアプリケーションの URL 予約が、もう一方のアプリケーションの URL 予約よりもあいまいに指定されていた場合、意図したターゲットに到達しない可能性があります。|特定の条件下では、URL 予約体系において他の URL エンドポイントに優先する登録済みのエンドポイントが、他のアプリケーション宛ての HTTP 要求を受信する場合があります。<br /><br /> この競合は、レポート サーバー Web サービスおよび [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] に対し、一意の仮想ディレクトリ名を使用することによって回避できます。<br /><br /> このシナリオについては、このトピックで詳しく説明します。|  
   
@@ -39,7 +39,7 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
  次の表は、一連の URL 予約の例を、最も明示的なものから順に列挙したものです。  
   
-|例|要求|  
+|例|Request|  
 |-------------|-------------|  
 |`https://123.234.345.456:80/reports`|`https://123.234.345.456/reports` または (ドメイン名サービスが、IP アドレスを対応するホスト名に解決できる場合) `https://\<computername>/reports` に送信されたすべての要求が受信されます。|  
 |`https://+:80/reports`|URL に "reports" という仮想ディレクトリ名が含まれている限り、任意の IP アドレス (またはそのコンピューターの有効なホスト名) に送信されたすべての要求が受信されます。|  
@@ -52,10 +52,10 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>IIS 8.0、8.5 と SQL Server Reporting Services の URL 予約  
  前のセクションで取り上げた優先順位規則を踏まえて考えると、Reporting Services と IIS に対して定義された URL 予約が、両者の相互運用性にどのように貢献しているかがわかります。 Reporting Services は、そのアプリケーションの仮想ディレクトリ名を明示的に指定する要求を受信します。一方、IIS は、それ以外のすべての要求を受信し、それらを IIS のプロセス モデル内で実行されるアプリケーションに送ることになります。  
   
-|アプリケーション|URL 予約|[説明]|受信する要求|  
+|Application|URL 予約|[説明]|受信する要求|  
 |-----------------|---------------------|-----------------|---------------------|  
 |レポート サーバー|`https://+:80/ReportServer`|厳密なワイルドカード、ポート 80、レポート サーバーの仮想ディレクトリ|レポート サーバーの仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<コンピューター名>/reportserver に対するすべての要求が、レポート サーバー Web サービスによって受信されます。|  
-|Web ポータル|`https://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<コンピューター名>/reports に対するすべての要求が [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。|  
+|Web ポータル|`https://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]コンピューター名>/reports に対するすべての要求が \<によって受信されます。|  
 |IIS|`https://*:80/`|弱いワイルドカード、ポート 80|まだ他のアプリケーションによって受信されていない残りの要求をすべてポート 80 で受信します。|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0、8.5 での SQL Server Reporting Services のサイド バイ サイド配置
@@ -76,7 +76,7 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
 -   手動構成のインストールでは、構成する URL に既定の名前付け規則を採用します。 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] を名前付きインスタンスとしてインストールする場合は、仮想ディレクトリの作成時にインスタンス名を含めるようにします。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [レポート サーバーの URL の構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [URL の構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

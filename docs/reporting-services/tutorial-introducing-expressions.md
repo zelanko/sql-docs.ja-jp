@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295623"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
@@ -660,7 +660,7 @@ ms.locfileid: "63295623"
 [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
 [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
 [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
-[レポート データセット &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
+[レポート データセット (SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
   

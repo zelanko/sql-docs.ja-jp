@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581128"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -23,7 +23,7 @@ ms.locfileid: "65581128"
 > [!IMPORTANT]
 >  構成ファイルを変更する場合は注意が必要です。 内部で使用するために予約されている設定を変更すると、インストールが無効になることがあります。 一般的に、特定の問題を解決しようとしている場合を除いて、構成設定を変更することはお勧めしません。 安全に変更できる設定の詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」または「 [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。 構成ファイルの詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントを参照してください。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [構成値の読み取りと使用](#bkmk_read_values)  
   

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843792"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database の制限事項
@@ -59,7 +59,7 @@ Stretch に対応するテーブルには次の制限事項があります。
 ### <a name="data-types"></a>データ型  
 -   text、ntext、image  
   
--   TIMESTAMP  
+-   timestamp  
   
 -   sql_variant  
   
@@ -84,11 +84,11 @@ Stretch に対応するテーブルには次の制限事項があります。
   
 -   空間インデックス  
   
--   テーブルを参照するインデックス ビュー  
+-   テーブルを参照するインデックス付きビュー  
   
 ## <a name="see-also"></a>参照  
  [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [データベースに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

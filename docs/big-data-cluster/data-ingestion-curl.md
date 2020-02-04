@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706631"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>curl を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の HDFS にデータを読み込む
@@ -43,7 +43,7 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-例:
+次に例を示します。
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
@@ -65,12 +65,12 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="create-a-directory"></a>ディレクトリを作成する
 
-`hdfs:///` の下に **test** というディレクトリを作成するには、次のコマンドを使用します。
+**の下に**test`hdfs:///` というディレクトリを作成するには、次のコマンドを使用します。
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server ビッグ データ クラスターの詳細については、「[SQL Server ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。

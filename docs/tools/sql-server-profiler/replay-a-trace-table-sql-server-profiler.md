@@ -1,32 +1,32 @@
 ---
-title: トレーステーブルを再生する (SQL Server プロファイラー) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: トレース テーブルを再生する
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c35935e7b63faa44c3af1bbe21adb90a7f837883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 405f8b71730e2758b45c7ddeddf888498d701d20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031465"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307508"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>トレース テーブルの再生 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  再生は、保存したトレースを開いて再実行する機能です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、ユーザー接続と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証をシミュレートできるマルチスレッド再生エンジンが備わっています。 再生は、アプリケーションまたはプロセスに関する問題のトラブルシューティングを行う際に役立ちます。 問題を特定して修正を実装したら、修正されたアプリケーションまたはプロセスに対して、発生する可能性のある問題を検出したトレースを実行します。 その後、元のトレースを再生し、結果を比較します。  
+
+再生は、保存したトレースを開いて再実行する機能です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、ユーザー接続と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証をシミュレートできるマルチスレッド再生エンジンが備わっています。 再生は、アプリケーションまたはプロセスに関する問題のトラブルシューティングを行う際に役立ちます。 問題を特定して修正を実装したら、修正されたアプリケーションまたはプロセスに対して、発生する可能性のある問題を検出したトレースを実行します。 その後、元のトレースを再生し、結果を比較します。  
   
  再生を有効にするには、監視する他のイベント クラスに加えて、特定のイベント クラスをキャプチャする必要があります。 **TSQL_Replay** トレース テンプレートを使用すると、これらのイベントが既定でキャプチャされます。 詳細については、「 [再生を実行するための必要条件](../../tools/sql-server-profiler/replay-requirements.md)」を参照してください。  
   
-### <a name="to-replay-a-trace-table"></a>トレース テーブルを再生するには  
+## <a name="to-replay-a-trace-table"></a>トレース テーブルを再生するには
   
 1.  再生に必要なイベント クラスが含まれたトレース テーブルを開きます。  
   

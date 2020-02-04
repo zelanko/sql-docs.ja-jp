@@ -11,10 +11,10 @@ ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576393"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>レポート内のテキスト、数値、または日付を検索する
@@ -41,6 +41,6 @@ ms.locfileid: "65576393"
 4.  同じ値で引き続き検索を続ける場合は、 **[次へ]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [レポート ビューアー Web パーツを Web ページに追加する &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

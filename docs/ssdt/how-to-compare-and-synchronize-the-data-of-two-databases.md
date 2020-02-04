@@ -1,11 +1,7 @@
 ---
-title: 方法:2 つのデータベースのデータを比較および同期する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 2 つのデータベースのデータを比較および同期する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.connection.datasources.f1
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d7654d02cfc35b0dfbaa82b100b9a82a8edacb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929475"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241580"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>方法:2 つのデータベースのデータを比較および同期する
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>2 つのデータベースのデータを比較および同期する方法
+
 2 つのデータベースに含まれるデータを比較できます。 比較するデータベースは、*ソース*と*ターゲット*と呼ばれます。  
   
 > [!NOTE]  
@@ -38,7 +39,7 @@ ms.locfileid: "67929475"
 詳しくは、「[1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)」をご覧ください。  
   
 > [!NOTE]  
-> 2 つのデータベース、または同一データベースの 2 つのバージョンの*スキーマ*も比較できます。 詳細については、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」を参照してください。  
+> 2 つのデータベース、または同一データベースの 2 つのバージョンの*スキーマ*も比較できます。 詳しくは、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」をご覧ください。  
   
 ## <a name="CompareDatabaseData"></a>データベース データの比較  
   

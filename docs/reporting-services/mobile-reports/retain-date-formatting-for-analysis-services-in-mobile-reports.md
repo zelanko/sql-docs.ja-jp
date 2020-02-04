@@ -9,10 +9,10 @@ ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62503003"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>モバイル レポートで Analysis Services の日付の書式設定を保持する
@@ -26,7 +26,7 @@ ms.locfileid: "62503003"
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>日付フィールドのデータ型を保持するためにメジャーを作成する
 
-1. 日付フィールドの値を保持するためのメジャーを作成し、式フィールドで日付の階層/レベルを選択し、 **.CurrentMember.MemberValue**を追加します。 例:
+1. 日付フィールドの値を保持するためのメジャーを作成し、式フィールドで日付の階層/レベルを選択し、 **.CurrentMember.MemberValue**を追加します。 次に例を示します。
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    

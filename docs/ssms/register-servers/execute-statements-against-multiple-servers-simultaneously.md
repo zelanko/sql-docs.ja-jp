@@ -1,10 +1,7 @@
 ---
-title: 複数のサーバーに対するステートメントの同時実行 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2016
+title: 複数のサーバーに対するステートメントの同時実行
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +11,23 @@ helpviewer_keywords:
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abf087363c4e4cc17356882322643b6fae0da553
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/18/2016
+ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260580"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246558"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>複数のサーバーに対するステートメントの同時実行
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で複数のサーバーに対してクエリを同時に実行する方法について説明します。これを行うには、ローカル サーバー グループ、または 1 つの中央管理サーバーと 1 つ以上のサーバー グループ、およびグループ内の 1 つ以上の登録済みサーバーを作成し、このグループ全体に対してクエリを実行します。 
-  
+
+このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で複数のサーバーに対してクエリを同時に実行する方法について説明します。これを行うには、ローカル サーバー グループ、または 1 つの中央管理サーバーと 1 つ以上のサーバー グループ、およびグループ内の 1 つ以上の登録済みサーバーを作成し、このグループ全体に対してクエリを実行します。 
+
 クエリから返された結果は、結合して 1 つの結果ペインに表示するか、別々の結果ペインに表示することができます。 結果セットには、サーバー名を表示する列と、各サーバーに対するクエリで使用されたログインを表示する列を追加できます。 中央管理サーバーおよび従属サーバーは、Windows 認証を使用しないと登録できません。 ローカル サーバー グループ内のサーバーは、Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して登録できます。  
   
 > **注:** 次の手順を実行する前に、中央管理サーバーとサーバー グループを作成する必要があります。 詳細については、「[中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)」を参照してください。  

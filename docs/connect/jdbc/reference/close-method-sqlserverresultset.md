@@ -16,10 +16,10 @@ ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e78dbb981938e9af2fbe894919368da17347941a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955582"
 ---
 # <a name="close-method-sqlserverresultset"></a>close メソッド (SQLServerResultSet)
@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  close メソッドは、java.sql.ResultSet インターフェイスの close メソッドで規定されています。  
   
  SQLServerResultSet オブジェクトは、生成元の [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトが閉じられたとき、再実行されたとき、または複数の結果のシーケンスから次の結果を取得するために使用されたときに、その SQLServerStatement オブジェクトによって自動的に閉じられます。 SQLServerResultSet オブジェクトは、ガベージ コレクションの際にも自動的に閉じられます。  

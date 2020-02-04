@@ -9,10 +9,10 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 333c75f3ca10d1ed6ecd738a3dc76a32a53305c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579582"
 ---
 # <a name="report-builder-functions---lookup-function"></a>レポート ビルダー関数 - Lookup 関数
@@ -30,13 +30,13 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>パラメーター  
  *source_expression*  
- (**Variant**) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、`=Fields!ProdID.Value` のようになります。  
+ (**Variant**) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、「 `=Fields!ProdID.Value` 」のように入力します。  
   
  *destination_expression*  
- (**Variant**) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、 `=Fields!ProductID.Value`のようにします。  
+ (**Variant**) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、「 `=Fields!ProductID.Value` 」のように入力します。  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、`=Fields!ProductName.Value` のようになります。  
+ (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、「 `=Fields!ProductName.Value` 」のように入力します。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"Products" などです。  
@@ -44,7 +44,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>戻り値  
  **Variant**を返します。一致する結果がなかった場合は、 **Nothing** を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  指定したデータセットで、名前と値のペアについて 1 対 1 のリレーションシップが存在する場合、 **Lookup** を使用して値を取得します。 たとえば、テーブル内の ID フィールドに対して **Lookup** を使用して、データ領域にバインドされていないデータセットから対応する Name フィールドを取得することができます。  
   
  **Lookup** を実行すると、次の処理が行われます。  
@@ -59,7 +59,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  1 対多のリレーションシップがある場合、1 つの名前フィールドまたはキー フィールドに対応する複数の値を取得するには、[LookupSet 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md) を使用します。 一連の値に対して **Lookup** を呼び出すには、[Multilookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md) を使用します。  
   
- 次の制限があります。  
+ 次の制限事項が適用されます。  
   
 -   **Lookup** は、すべてのフィルター式が適用された後で評価されます。  
   

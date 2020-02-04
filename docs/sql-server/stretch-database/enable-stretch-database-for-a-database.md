@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844590"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
@@ -26,14 +26,14 @@ ms.locfileid: "73844590"
   
  個別のテーブルに対して **[タスク]、[ストレッチ]、[有効にする]** の順に選択した場合、データベースの Stretch Database がまだ有効になっていないと、ウィザードはデータベースの Stretch Database を構成し、ユーザーはプロセスの一部としてテーブルを選択できます。 「[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」の手順ではなく、この記事の手順に従ってください。  
   
- データベースまたはテーブルで Stretch Database を有効にするには、db_owner アクセス許可が必要です。 データベースで Stretch Database を有効にするには、管理データベースのアクセス許可も必要です。  
+ データベースまたはテーブルで Stretch Database を有効にするには、db_owner アクセス許可が必要です。 データベースで Stretch Database を有効にするには、CONTROL DATABASE アクセス許可も必要です。  
 
 > [!NOTE]
 > 後で、Stretch Database を無効にする場合は、テーブルまたはデータベースで Stretch Database を無効にしてもリモート オブジェクトは削除されないことに注意してください。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを手動で削除するまで、引き続き Azure ストレージのコストが発生します。 
  
-## <a name="before-you-get-started"></a>始める前に  
+## <a name="before-you-get-started"></a>開始する前に  
   
--   データベースで Stretch を構成する前に、Stretch Database Advisor を実行して、Stretch を構成できるデータベースとテーブルを識別することをお勧めします。 Stretch Database Advisor はブロックの問題も識別します。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」をご覧ください。  
+-   データベースで Stretch を構成する前に、Stretch Database Advisor を実行して、Stretch を構成できるデータベースとテーブルを識別することをお勧めします。 Stretch Database Advisor はブロック問題も特定します。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」をご覧ください。  
   
 -   [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)を確認します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73844590"
   
 -   新しい Azure サーバーを作成する、または既存の Azure サーバーを選択するために必要な接続およびログイン情報を入手します。  
   
-##  <a name="EnableTSQLServer"></a> 前提条件:サーバーで Stretch Database を有効にする  
+##  <a name="EnableTSQLServer"></a> 前提条件: サーバーで Stretch Database を有効にする  
  データベースまたはテーブルで Stretch Database を有効にする前に、ローカル サーバーで有効にする必要があります。 この操作には、sysadmin または serveradmin のアクセス許可が必要です。  
   
 -   必要な管理アクセス許可がある場合、 **データベースのストレッチの有効化** ウィザードは Stretch 用にサーバーを構成します。  
@@ -66,11 +66,11 @@ GO
 ##  <a name="EnableTSQLDatabase"></a> Transact-SQL を使用してデータベースで Stretch Database を有効にする  
  個別のテーブルで Stretch Database を有効にする前に、データベースで有効にする必要があります。  
   
- データベースまたはテーブルで Stretch Database を有効にするには、db_owner アクセス許可が必要です。 データベースで Stretch Database を有効にするには、管理データベースのアクセス許可も必要です。  
+ データベースまたはテーブルで Stretch Database を有効にするには、db_owner アクセス許可が必要です。 データベースで Stretch Database を有効にするには、CONTROL DATABASE アクセス許可も必要です。  
   
 1.  始める前に、Stretch Database で移行するデータ用に既存の Azure サーバーを選択するか、または新しい Azure サーバーを作成します。  
   
-2.  Azure サーバーで、SQL Server の IP アドレス範囲に対するファイアウォール規則を作成し、SQL Server がリモート サーバーと通信できるようにします。  
+2.  Azure サーバーで、SQL Server とリモート サーバーの通信を可能にするファイアウォール規則を SQL Server の IP アドレス範囲で作成します。  
 
     SQL Server Management Studio (SSMS) のオブジェクト エクスプローラーから Azure サーバーに接続することで、必要とする値を簡単に見つけて、ファイアウォール規則を作成できます。 SSMS で次のダイアログ ボックスが開き、既に必要な IP アドレス値が設定されているので、簡単に規則を作成できます。
     
@@ -119,7 +119,7 @@ GO
   
     1.  SERVER 引数では、既存の Azure サーバーの名前を指定します。これには、名前の `.database.windows.net` の部分も含めます (例: `MyStretchDatabaseServer.database.windows.net`)。  
   
-    2.  CREDENTIAL 引数で既存の管理者資格情報を指定するか、または FEDERATED_SERVICE_ACCOUNT = ON を指定します。 次の例では既存の資格情報を指定しています。  
+    2.  CREDENTIAL 引数で既存の管理者資格情報を指定するか、または FEDERATED_SERVICE_ACCOUNT = ON を指定します。 次の例では、既存の資格情報が指定されています。  
   
     ```sql  
     ALTER DATABASE <database name>  
@@ -131,8 +131,8 @@ GO
     GO
     ```  
   
-## <a name="next-steps"></a>次の手順  
--   追加のテーブルを有効にする場合: [テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+## <a name="next-steps"></a>次のステップ  
+-   追加のテーブルを有効にする場合:[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
 -   データ移行の状態を表示する場合: [データ移行の監視とトラブルシューティング &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)  
   
@@ -146,6 +146,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   

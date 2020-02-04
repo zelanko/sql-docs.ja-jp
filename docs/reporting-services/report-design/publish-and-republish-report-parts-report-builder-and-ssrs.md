@@ -9,10 +9,10 @@ ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f48415c35b57b889b764abfe44f5bf937ee3f650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576622"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS)

@@ -9,10 +9,10 @@ ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3f379c104b5b957fba197f9ed9317b2d5b23f16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580188"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>対話的な並べ替え (レポート ビルダーおよび SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "65580188"
   
  対話型の並べ替えボタンを使用して実現できる効果を次の表にまとめます。  
   
-|操作|並べ替え対象|並べ替えボタンを追加する場所|並べ替え基準|並べ替えの範囲|  
+|アクション|並べ替え対象|並べ替えボタンを追加する場所|並べ替え基準|並べ替えの範囲|  
 |------------|------------------|----------------------------------|---------------------|----------------|  
 |グループのないテーブルの詳細行を並べ替える|詳細|列ヘッダー|この列にバインドされたデータセット フィールド|データ領域|  
 |マトリックスの最上位レベルのグループ インスタンスを並べ替える|グループ|列ヘッダー|親グループのグループ式|データ領域|  

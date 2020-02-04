@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594115"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
@@ -33,7 +33,7 @@ ms.locfileid: "73594115"
   
  URL の格納および管理のしくみや相互運用性の問題に関する詳細については、「[URL の予約と登録について &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)」および「[Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)」を参照してください。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  URL の作成や変更を行う前に、次の点を確認してください。  
   
 -   レポート サーバー コンピューターのローカル Administrators グループのメンバーとしてログインする必要があります。  

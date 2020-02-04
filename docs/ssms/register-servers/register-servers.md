@@ -1,10 +1,7 @@
 ---
-title: サーバーの登録 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: サーバーの登録
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -18,16 +15,22 @@ helpviewer_keywords:
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34452ed824b8aa5bec4efcc9a926718481614e09
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: d5b3993fb1c350e4aa89159ca8dd8135546b178b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266213"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256272"
 ---
 # <a name="register-servers"></a>サーバーの登録
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にサーバーを登録することで、サーバー接続情報を保存して、その後の接続時に使用できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にサーバーを登録するには、次の 3 とおりの方法があります。  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にサーバーを登録することで、サーバー接続情報を保存して、その後の接続時に使用できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にサーバーを登録するには、次の 3 とおりの方法があります。  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のインストール後の最初の起動時に、自動的に登録されます。  
   
@@ -63,7 +66,7 @@ ms.locfileid: "68266213"
 ## <a name="related-tasks"></a>Related Tasks  
  登録したサーバーの基礎知識については、次の各トピックを参照してください。  
   
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |---------------------|---------------|  
 |ローカル サーバー インスタンスの登録|[接続済みのサーバーの登録 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)|  
 |サーバーの登録|[新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)|  

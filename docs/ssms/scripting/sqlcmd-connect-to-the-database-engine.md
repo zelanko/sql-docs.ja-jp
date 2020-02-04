@@ -1,6 +1,6 @@
 ---
-title: sqlcmd によるデータベース エンジンへの接続 | Microsoft Docs
-ms.custom: ''
+title: sqlcmd によるデータベース エンジンへの接続
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -18,16 +18,16 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21e218bab023ef59f3f9785f85f982546f626006
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b286c817895cf45c2cdffbb75ef3ccf83fd01ccd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267682"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243479"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd - データベース エンジンへの接続
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TCP/IP ネットワーク プロトコル (既定) および名前付きパイプ プロトコルを使用したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。 **sqlcmd** ユーティリティで使用されるプロトコルは、次の順序で決定されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TCP/IP ネットワーク プロトコル (既定) および名前付きパイプ プロトコルを使用したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。 **sqlcmd** ユーティリティで使用されるプロトコルは、次の順序で決定されます。  
   
 -   **sqlcmd** では、下に示す接続文字列の一部として指定されているプロトコルが使用されます。  
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715029"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server の R ライブラリ)
@@ -41,7 +41,7 @@ R コードを変換して 1 つのストアド プロシージャ内で実行�
 
 次のセクションでは、**sqlrutils** パッケージから呼び出すことができる関数の概要を説明します。この関数を使用すると、埋め込みの R コードを含むストアド プロシージャを作成できます。 各メソッドまたは関数のパラメーターの詳細については、パッケージの R のヘルプを参照してください。 `help(package="sqlrutils")`
 
-|機能 | [説明] |
+|Function | [説明] |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL ストアド プロシージャを実行します。|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| ストアド プロシージャへの入力パラメーターの一覧を取得します。| 
@@ -63,7 +63,7 @@ R コードを変換して 1 つのストアド プロシージャ内で実行�
 + ストアド プロシージャの生成と登録    
 + ストアド プロシージャを実行する  
 
-R セッションで、コマンドラインから「`library(sqlrutils)`」と入力して **sqlrutils** を読み込みます。
+R セッションで、コマンドラインから「 **」と入力して** sqlrutils`library(sqlrutils)` を読み込みます。
 
 > [!Note]
 > もしコンピューティング コンテキストを SQL Server に変更し、そのコンピューティング コンテキストでコードを実行する場合には、本ライブラリは SQL Server がないコンピューター (たとえば R クライアント インスタンス) 上で読み込むことができます。

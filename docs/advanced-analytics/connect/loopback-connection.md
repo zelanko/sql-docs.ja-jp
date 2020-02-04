@@ -11,18 +11,18 @@ ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727599"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Python または R スクリプトからの SQL Server へのループバック接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-`sp_execute_external_script` から実行される Python または R スクリプトからデータの読み取りまたは書き込みを行うために、ループバック接続を使用して [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 経由で SQL Server に接続する方法について説明します。 この方法は、`sp_execute_external_script` の **InputDataSet** 引数と **OutputDataSet** 引数を使用できない場合に使用できます。
+[ から実行される Python または R スクリプトからデータの読み取りまたは書き込みを行うために、ループバック接続を使用して ](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)ODBC`sp_execute_external_script` 経由で SQL Server に接続する方法について説明します。 この方法は、**の**InputDataSet**引数と**OutputDataSet`sp_execute_external_script` 引数を使用できない場合に使用できます。
 
-## <a name="connection-string"></a>[接続文字列]
+## <a name="connection-string"></a>接続文字列
 
 ループバック接続を行うには、正しい接続文字列を使用する必要があります。 共通の必須引数として、[ODBC ドライバー](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)の名前、サーバーのアドレス、およびデータベースの名前を指定します。
 
@@ -38,7 +38,7 @@ Windows でのループバック接続文字列の例を次に示します。
 
 ### <a name="connection-string-on-linux"></a>Linux の接続文字列
 
-SQL Server on Linux での認証の場合、Python または R スクリプトで、`sp_execute_external_script` を実行したのと同じユーザーとして認証するために、ODBC ドライバーの **ClientCertificate** 属性と **ClientKey** 属性を使用する必要があります。 このために、[最新の ODBC ドライバー](../../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン17.4.1.1 を使用する必要があります。
+SQL Server on Linux での認証の場合、Python または R スクリプトで、**を実行したのと同じユーザーとして認証するために、ODBC ドライバーの**ClientCertificate**属性と**ClientKey`sp_execute_external_script` 属性を使用する必要があります。 このために、[最新の ODBC ドライバー](../../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン17.4.1.1 を使用する必要があります。
 
 Linux でのループバック接続文字列の例を次に示します。
 
@@ -52,7 +52,7 @@ Linux でのループバック接続文字列の例を次に示します。
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Python の revoscalepy を使用して接続文字列を生成する
 
-Python スクリプトでループバック接続用の正しい接続文字列を生成するために、[revoscalepy](../python/ref-py-revoscalepy.md) の API **rx_get_sql_loopback_connection_string ()** を使用できます。
+Python スクリプトでループバック接続用の正しい接続文字列を生成するために、**revoscalepy** の API [rx_get_sql_loopback_connection_string ()](../python/ref-py-revoscalepy.md) を使用できます。
 
 これは、次の引数を受け取ります。
 
@@ -61,7 +61,7 @@ Python スクリプトでループバック接続用の正しい接続文字列�
 | name_of_database | 接続する先のデータベースの名前 |
 | odbc_driver | ODBC ドライバーの名前 |
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 SQL Server on Windows の例:
 
@@ -100,7 +100,7 @@ GO
 
 ## <a name="generate-connection-string-with-revoscaler-for-r"></a>R の RevoScaleR を使用して接続文字列を生成する
 
-R スクリプトでループバック接続用の正しい接続文字列を生成するために、[RevoScaleR](../r/ref-r-revoscaler.md) の API **rxGetSqlLoopbackConnectionString()** を使用できます。
+R スクリプトでループバック接続用の正しい接続文字列を生成するために、**RevoScaleR** の API [rxGetSqlLoopbackConnectionString()](../r/ref-r-revoscaler.md) を使用できます。
 
 これは、次の引数を受け取ります。
 
@@ -109,7 +109,7 @@ R スクリプトでループバック接続用の正しい接続文字列を生
 | nameOfDatabase | 接続する先のデータベースの名前 |
 | odbcDriver | ODBC ドライバーの名前 |
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 SQL Server on Windows の例:
 
@@ -144,7 +144,7 @@ WITH RESULT SETS ((col1 int, col2 int))
 GO
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)
 + [revoscalepy](../python/ref-py-revoscalepy.md)

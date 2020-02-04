@@ -14,10 +14,10 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0eca650c1e499c54715204637306485280938707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049113"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
@@ -53,7 +53,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 ```  
   
 ## <a name="arguments"></a>引数  
- *オブジェクト*  
+ *Object*  
  オブジェクトの種類を指定します。オブジェクトの種類は、式文字列のこのノードで表されます。 各オブジェクトは、これらの SMO オブジェクト モデルの名前空間からのコレクション クラスを表します。  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -75,7 +75,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  たとえば、サーバーでは **ServerCollection** クラスを、データベースでは **DatabaseCollection** クラスを指定します。  
   
  \@*PropertyName*  
- *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull**には、\@IsAnsiNull と指定します。  
+ *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、\@Database**クラスのプロパティ**IsAnsiNull**には、** IsAnsiNull と指定します。  
   
  \@*BooleanPropertyName*=true()  
  指定したブール型のプロパティが TRUE に設定されているすべてのオブジェクトを列挙します。  
@@ -95,7 +95,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |||  
 |-|-|  
 |yyyy|年を表す 4 桁の数字。|  
-|MM|月を表す 2 桁の数字 (01 ～ 12)。|  
+|mm|月を表す 2 桁の数字 (01 ～ 12)。|  
 |dd|日を表す 2 桁の数字 (01 ～ 31)。|  
 |hh|時を 24 時間形式で表す 2 桁の数字 (01 ～ 23)。|  
 |mi|分を表す 2 桁の数字 (01 ～ 59)。|  
@@ -110,7 +110,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  not(\<*PropertyExpression*>)  
  *PropertyExpression*の評価値を否定して、 *PropertyExpression*に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、not(contains(\@Name, 'xyz')) と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  クエリ式は、SMO モデル階層のノードを列挙する文字列です。 各ノードには、そのノードのどのオブジェクトを列挙するかを決定する条件を指定するためのフィルター式があります。 クエリ式は、XPath 式言語をモデル化したものです。 クエリ式は、XPath でサポートされる式の小さなサブセットを実装し、XPath には用意されていないいくつかの拡張を含みます。 XPath 式は、XML ドキュメント内の 1 つまたは複数のタグを列挙するための条件のセットを指定する文字列です。 XPath の詳細については、 [W3C XPath 言語の Web サイト](http://www.w3.org/TR/xpath20/)を参照してください。  
   
  クエリ式は、Server オブジェクトへの絶対参照で開始する必要があります。 / で始まる相対的な式は使用できません。 クエリ式に指定するオブジェクトの順序は、関連付けられたオブジェクト モデルのコレクション オブジェクトの階層に従っている必要があります。 たとえば、Microsoft.SqlServer.Management.Smo 名前空間のオブジェクトを参照するクエリ式は、Server ノードで開始し、続けて Database ノードを指定する必要があります。  
@@ -124,7 +124,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-enumerating-objects-using-false"></a>A. false() を使用したオブジェクトの列挙  
  このクエリ式は、 **MyComputer** 上の既定のインスタンスにおいて **AutoClose**属性が false に設定されているすべてのデータベースを列挙します。  
@@ -161,7 +161,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>F. is_null を使用したオブジェクトの列挙  
+### <a name="f-enumerating-objects-using-is_null"></a>F. is_null を使用したオブジェクトの列挙  
  このクエリ式は、最終更新日プロパティの値が NULL ではない [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース内のすべてのテーブルを列挙します。  
   
 ```  

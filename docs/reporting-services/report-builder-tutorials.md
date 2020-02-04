@@ -9,10 +9,10 @@ ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330637"
 ---
 # <a name="report-builder-tutorials"></a>レポート ビルダー チュートリアル
@@ -38,7 +38,7 @@ ms.locfileid: "64330637"
 [チュートリアル: 自由形式のレポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 自由形式のレポートを一から作成するには、このチュートリアルの手順に従ってください。 これは、ニュースレター形式のレポートになります。  
   
-[チュートリアル: テキストの書式設定 (レポート ビルダー)](../reporting-services/tutorial-format-text-report-builder.md)  
+[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-format-text-report-builder.md)  
 レポート内のテキストの書式を設定するさまざまな方法のいくつかを学習するには、このチュートリアルの手順に従ってください。  
   
 [チュートリアル: レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)  
@@ -68,7 +68,7 @@ Analysis Services キューブに基づくドリルスルー シナリオのレ�
 [チュートリアル: 式の概要](../reporting-services/tutorial-introducing-expressions.md)  
 このチュートリアルの手順に従い、式を使用してフィールド値を連結、計算、および参照し、レポートに表示する方法を学習します。 また、式を使用して、条件によって異なる画像およびインジケーターの状態を表示する方法も学習します。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [レポート デザイン ビュー](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [SQL Server のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  

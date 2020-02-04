@@ -14,10 +14,10 @@ ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1367774e84dd10c2749f46a1ee6c38b8d5f6dd7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193905"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>データ処理拡張機能の DataReader クラスの実装
@@ -25,7 +25,7 @@ ms.locfileid: "63193905"
   
  **Command** クラスのインスタンスを作成した後に、**Command.ExecuteReader** を呼び出してデータ ソースから行を取得することによって、**DataReader** オブジェクトを作成します。 **DataReader** の実装によって、コマンドの実行により取得した結果セットへの順方向専用アクセス、および各行内の列型、名前、および値へのアクセスという 2 つの基本機能が提供されます。 クライアントは **DataReader** オブジェクトの **Read** メソッドを使用して、クエリの結果から行を取得します。  
   
- レポート デザイナーでは、**DataReader** オブジェクトを使用して、フィールドの一覧の他に結果セットに関するスキーマ情報も取得します。 このためには、<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスの **GetName**、**GetValue**、**GetFieldType、** および **GetOrdinal** の各メソッドを実装します。  
+ レポート デザイナーでは、**DataReader** オブジェクトを使用して、フィールドの一覧の他に結果セットに関するスキーマ情報も取得します。 このためには、**インターフェイスの**GetName **、** GetValue **、** GetFieldType、**および**GetOrdinal<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> の各メソッドを実装します。  
   
  <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> インターフェイスでは、結果セットに関する特定の集計情報を指定できます。 **DataReader** クラス実装の例については、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services 製品サンプル) を参照してください。  
   

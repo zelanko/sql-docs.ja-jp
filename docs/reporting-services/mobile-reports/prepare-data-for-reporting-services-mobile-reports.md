@@ -9,10 +9,10 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499933"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用にデータを準備する
@@ -38,12 +38,12 @@ ms.locfileid: "62499933"
 ## <a name="preparing-filter-data"></a>フィルター データを準備する ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は、日付/時刻フィールドとキー フィールドの両方に基づいてデータをフィルター処理できます。 キー フィールドの値は数値にすることもできますが、ほとんどの場合、ID または文字列値のいずれかです。 選択リストなどのナビゲーター要素で使用するためにフィルター フィールドを準備するには、フィルター キーがデータ テーブル内の 1 つの列である必要があります。 このようにすることで、フィルター列の値に基づいてテーブル行をグループ化できます。 複数の列が存在し、各列に異なるフィルター キー、つまりフィルタ条件が含まれている場合は、複数のフィルター ナビゲーターを同時に階層的に、または個別に使用してモバイル レポートを作成できます。  
   
-| Industry  | Country   | Region    |  
+| 業界  | Country   | リージョン    |  
 | ------------- | ------------- | ------------- |  
 | 銀行     | アフガニスタン   | アジア      |  
 | 商用およびプロフェッショナル サービス | アフガニスタン | アジア |  
 | 料理、飲料、タバコ | アフガニスタン | アジア |  
-| [メディア] | アフガニスタン | アジア |  
+| メディア | アフガニスタン | アジア |  
 | 製薬 | アフガニスタン | アジア |  
 | 食品および日用品小売 | アルバニア | ヨーロッパ |  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62499933"
 | 日用品 |    |  
 | 一般消費財 |  |     
 | 医療   |   |  
-| 情報技術 |  |  
+| Information Technology |  |  
 | 銀行 | 金融 |  
 | 不動産 | 金融 |  
 | 総合金融 |  金融 |   
@@ -70,20 +70,20 @@ ms.locfileid: "62499933"
 | 料理、飲料、タバコ |    日用品 |  
 | 食品および日用品小売 |    日用品 |  
 | 家庭用および個人用製品 | 日用品 |  
-| [メディア] | 一般消費財 |  
+| メディア | 一般消費財 |  
 | 自動車および部品 |  一般消費財 |  
 | 一般耐久消費財および衣料品 |一般消費財 |  
 | コンシューマー サービス |   一般消費財 |  
 | 小売 | 一般消費財 |  
 | 製薬   | 医療 |  
 | 医療機器およびサービス |    医療 |  
-| ソフトウェアおよびサービス | 情報技術 |  
-| テクノロジ ハードウェアおよび機器   | 情報技術 |  
-| 電気通信サービス |情報技術 |  
+| ソフトウェアおよびサービス | Information Technology |  
+| テクノロジ ハードウェアおよび機器   | Information Technology |  
+| 電気通信サービス |Information Technology |  
   
 ### <a name="see-also"></a>参照  
 - [Reporting Services モバイル レポート用に Excel データを準備する](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
-- [Retain date formatting for Analysis Services in mobile reports](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
+- [モバイル レポートで Analysis Services の日付の書式設定を保持する](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   

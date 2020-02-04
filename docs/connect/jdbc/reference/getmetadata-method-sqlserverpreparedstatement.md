@@ -16,16 +16,16 @@ ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbc0a0493498f3d216c9e1395f651d8afec70711
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981865"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) オブジェクトを取得します。このオブジェクトには、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの実行時に返される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの列に関する情報が含まれます。  
+  [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) オブジェクトを取得します。このオブジェクトには、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの実行時に返される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの列に関する情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,7 +40,7 @@ public final java.sql.ResultSetMetaData getMetaData()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getMetaData メソッドは、java.sql.PreparedStatement インターフェイスの getMetaData メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e7b61536b335d6cbbcdc78e77e0ebbeb18618a22
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74056667"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>クライアント接続でのサービス プリンシパル名 (SPN) のサポート
@@ -28,7 +28,7 @@ ms.locfileid: "74056667"
 
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]以降では、サービス プリンシパル名 (SPN) のサポートが強化されて、あらゆるプロトコルでの相互認証が可能になりました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの既定の SPN が Active Directory に登録されているときに、Kerberos over TCP に対してのみ SPN がサポートされていました。  
   
- SPN は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが実行されているアカウントを認証プロトコルで特定するために使用されます。 インスタンスのアカウントが判明した場合は、Kerberos 認証を使用したクライアントとサーバーによる相互認証が可能となります。 インスタンスのアカウントが不明である場合は、NTLM 認証を使用して、サーバーによるクライアントの認証のみが行われます。 現時点では、OLE DB Driver for SQL Server がこの認証を参照して、インスタンス名とネットワーク接続のプロパティから SPN を生成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが起動時に行いますが、手動で登録することもできます。 ただし、SPN を登録するアカウントのアクセス権が不十分である場合は、登録が失敗します。  
+ SPN は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが実行されているアカウントを認証プロトコルで特定するために使用されます。 インスタンスのアカウントが判明した場合は、Kerberos 認証を使用したクライアントとサーバーによる相互認証が可能となります。 インスタンスのアカウントが不明である場合は、NTLM 認証を使用して、サーバーによるクライアントの認証のみが行われます。 現時点では、OLE DB Driver for SQL Server がこの認証を参照して、インスタンス名とネットワーク接続のプロパティから SPN を生成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが起動時に行いますが、手動で登録することもできます。 ただし、SPN を登録するアカウントのアクセス権が不十分である場合は、登録が失敗します。  
   
  ドメインおよびコンピューター アカウントは、自動的に Active Directory に登録されます。 これらのアカウントを SPN として使用することも、管理者が独自に SPN を定義することもできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、使用する SPN をクライアントが直接指定できるようにすることで、セキュリティで保護された認証の管理性と信頼性を高めています。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74056667"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>使用方法  
+## <a name="usage"></a>使用法  
  次の表では、セキュリティで保護された認証をクライアント アプリケーションで使用するための、最も一般的なシナリオについて説明します。  
   
 |シナリオ|[説明]|  
@@ -69,7 +69,7 @@ ms.locfileid: "74056667"
  新しい接続動作はクライアントで実装されるため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のバージョンに固有ではありません。  
   
 ## <a name="linked-servers-and-delegation"></a>リンク サーバーと委任  
- リンク サーバーを作成すると、[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) の **\@provstr** パラメーターを使用して、サーバーおよびフェールオーバー パートナーの SPN を指定できるようになります。 これを実行するメリットは、クライアント接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使う接続を確立する方が、より簡単でより信頼性が高くなります。  
+ リンク サーバーを作成すると、**sp_addlinkedserver\@ の** [provstr](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) パラメーターを使用して、サーバーおよびフェールオーバー パートナーの SPN を指定できるようになります。 これを実行するメリットは、クライアント接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使う接続を確立する方が、より簡単でより信頼性が高くなります。  
   
  リンク サーバーでの委任には、Kerberos 認証が必要です。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74056667"
   
 -   セキュリティ : 指定した SPN が保護されている情報を開示する可能性。  
   
--   信頼性 : 既定の SPN の使用。既定の SPN を使用できるようにするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを実行するサービス アカウントに、KDC 上の Active Directory を更新するための十分な権限が必要です。  
+-   信頼性 : 既定の SPN を使用できるようにするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを実行するサービス アカウントに、KDC 上の Active Directory を更新するための十分な権限が必要です。  
   
 -   利便性と場所の透過性 : アプリケーションのデータベースを別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに移した場合の、アプリケーションの SPN に対する影響。 データベース ミラーリングを使用する場合は、プリンシパル サーバーとそのフェールオーバー パートナーの両方について、この事項を検討する必要があります。 また、サーバーの変更に伴って SPN を変更する場合のアプリケーションに対する影響や、 すべての変更に関する管理の有無についても検討してください。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "74056667"
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *fqdn* は、完全修飾ドメイン名です。|  
 |MSSQLSvc/*fqdn*:*port*|TCP が使用される場合にプロバイダーが生成する既定の SPN。<br /><br /> *port* は、TCP ポート番号です。|  
-|MSSQLSvc/*fqdn*:*InstanceName*|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *InstanceName* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前です。|  
+|MSSQLSvc/*fqdn*:*InstanceName*|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *InstanceName* は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前です。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Windows で自動的に登録されるビルトイン コンピューター アカウントにマップされる SPN。|  
 |*Username*@*Domain*|ドメイン アカウントの直接指定。<br /><br /> *Username* は、Windows ユーザー アカウントの名前です。<br /><br /> *Domain* は、Windows ドメイン名または完全修飾ドメイン名です。|  
 |*MachineName*$@*Domain*|コンピューター アカウントの直接指定。<br /><br /> (接続先のサーバーが、LOCAL SYSTEM または NETWORK SERVICE アカウントで実行されている場合に Kerberos 認証を使用するには、 **ServerSPN** を *MachineName*$@*Domain* の形式で指定できます。)|  

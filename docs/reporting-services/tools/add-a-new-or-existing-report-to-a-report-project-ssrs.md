@@ -11,10 +11,10 @@ ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576801"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>新規または既存のレポートをレポート プロジェクトに追加する (SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65576801"
   
 1.  ソリューション エクスプローラーで [レポート] フォルダーを右クリックし、 **[新しいレポートの追加]** をクリックします。 **[レポート ウィザード]** ダイアログ ボックスが表示されます。  
   
-     ウィザードの手順に従うことで、データ ソースを作成したり、クエリでデータセットを作成したり、グループを定義したり、レイアウトを指定したり、レポートを作成したりできます。 次のような手順で構成されます。  
+     ウィザードの手順に従うことで、データ ソースを作成したり、クエリでデータセットを作成したり、グループを定義したり、レイアウトを指定したり、レポートを作成したりできます。 これには次の手順が含まれます。  
   
     -   **データ ソースの選択** レポート作成の最初の手順は、データ ソースを定義することです。 レポート ウィザードにより、レポート プロジェクト内のすべての共有データ ソースが表示されます。同時に、新しいデータ ソースを作成するオプションも表示されます。  
   

@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952739"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
@@ -33,7 +33,7 @@ Microsoft ダウンロード センターから [SQL Server 2017 Reporting Servi
 > [!NOTE]
 > Power BI Report Server が見つからない場合は、 「[Power BI Report Server のインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)」を参照してください。
 
-## <a name="before-you-begin"></a>アンインストールの準備
+## <a name="before-you-begin"></a>開始する前に
 
 Reporting Services をインストールする前に、「[Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」 (SQL Server のインストールに必要なハードウェアおよびソフトウェア) を確認してください。
 
@@ -112,7 +112,7 @@ URL 予約は、プレフィックス、ホスト名、ポート、および仮�
 
 Web サービス URL および Web ポータル URL 用に構成されている TCP ポートを開く必要があります。 既定では、これらは TCP ポート 80 で構成されます。
 
-## <a name="additional-configuration"></a>その他の構成
+## <a name="additional-configuration"></a>追加構成
 
 - Power BI ダッシュボードにレポート アイテムをピン留めできるように、Power BI サービスとの統合を構成するには、[Power BI サービスとの統合](power-bi-report-server-integration-configuration-manager.md)に関するページを参照してください。
 
@@ -130,7 +130,7 @@ SharePoint 統合モードで SQL Server 2016 Reporting Services (およびそ�
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 インストールされたレポート サーバーを使用して、レポートの作成を開始し、自分のレポート サーバーに配置します。 レポート ビルダーの使用を開始する方法については、「[レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。
 

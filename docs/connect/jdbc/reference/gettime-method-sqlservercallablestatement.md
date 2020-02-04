@@ -16,10 +16,10 @@ ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f808bdc5deecb861b4b54eb2d84463e61ec0e39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978981"
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>getTime メソッド (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67978981"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|[説明]|  
 |----------|-----------------|  
 |[getTime (int)](../../../connect/jdbc/reference/gettime-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を Java プログラミング言語の java.sql.Time オブジェクトとして取得します。|  
 |[getTime (int, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-int-java-util-calendar.md)|パラメーターに渡されたインデックスと Calendar オブジェクトを使用して、指定されたパラメーターの値が Java プログラミング言語の java.sql.Time オブジェクトとして取得されます。|  

@@ -12,10 +12,10 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594075"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
@@ -44,9 +44,9 @@ ms.locfileid: "73594075"
   
  上記の URL の使用を可能にする設定を次の表に示します。 この表の既定値を使用することで、ホスト名を含んだ URL を通じてレポート サーバーに接続できるようになります。  
   
-|要素|[値]|説明|  
+|要素|値|説明|  
 |----------|-----------|-----------------|  
-|IP アドレス (IP address)|すべて割り当て|ネットワーク上のドメイン ネーム サービスによって、URL のホスト名がコンピューターの IP アドレスに解決されます。 定義した URL に IP アドレスが指定されていれば、特定のホストに送られる要求は目的の宛先に届きます。|  
+|IP アドレス|すべて割り当て|ネットワーク上のドメイン ネーム サービスによって、URL のホスト名がコンピューターの IP アドレスに解決されます。 定義した URL に IP アドレスが指定されていれば、特定のホストに送られる要求は目的の宛先に届きます。|  
 |Port|80|ポート 80 は、コンピューターにおける TCP/IP 接続の既定のポートです。 レポート サーバーはポート 80 でリッスンしているため、URL ではポート番号を省略できます。 別のポートを指定する場合は、URL 内でそのポートを指定する必要があります。|  
 |仮想ディレクトリ|ReportServer|どちらの URL 例にも仮想ディレクトリ名が含まれていることに注目してください。 URL 定義をカスタマイズしない限り、アプリケーションの仮想ディレクトリ名を必ず URL 内に指定する必要があります。|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73594075"
  [URL の予約と登録について &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  アプリケーションおよびレポートへのアクセスには URL が使用されます。 このトピックでは、アプリケーションの URL、既定の URL、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]での URL 予約と登録のしくみについて説明します。  
   
- [URL 予約構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用される既定の URL 予約は、ほとんどのシナリオに有効です。 ただし、アクセスを制限する場合や、インターネットまたはエクストラネットにアクセスできるように配置を拡張する場合は、要件に合わせて設定をカスタマイズする必要があります。 このトピックでは、URL 予約の構文について説明し、各自の配置に合わせてカスタムの予約を作成する場合の推奨事項を示します。  
   
  [構成ファイル内の URL &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)  

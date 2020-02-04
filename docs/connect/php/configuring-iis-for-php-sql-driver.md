@@ -13,10 +13,10 @@ ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 150addd664870e5441c888b6bc357f8fb4d92b20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015162"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP に対する IIS の構成
@@ -30,13 +30,13 @@ ms.locfileid: "68015162"
 -   [PHP での FastCGI](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
 -   [IIS 7.0 で PHP アプリケーションをホストするための FastCGI の使用](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
 -   [IIS 6.0 で PHP アプリケーションをホストするための FastCGI の使用](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
--   [Configuring FastCGI Extension for IIS 6.0 (IIS 6.0 用の FastCGI 拡張機能の構成)](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
+-   [IIS 6.0 用の FastCGI 拡張機能の構成](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
   
 ## <a name="video-presentations"></a>ビデオ プレゼンテーション  
 次のリンクは、PHP 用の FastCGI の設定、および IIS 7.0 機能を使用した PHP アプリケーションのホストに関するビデオ プレゼンテーションに対するものです。  
   
--   [Setting up FastCGI for PHP (PHP 用の FastCGI の設定)](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
--   [Partying with PHP on Microsoft Internet Information Services 7 (Microsoft インターネット インフォメーション サービス 7 での PHP とのパーティー)](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
+-   [PHP 用の FastCGI の設定](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
+-   [Microsoft インターネット インフォメーション サービス 7 での PHP とのパーティー](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
   
 ## <a name="support-resources"></a>サポート リソース  
 次のフォーラムでは、IIS での FastCGI に対するコミュニティ サポートが提供されます。  
