@@ -9,10 +9,10 @@ ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572113"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services のサブスクリプションと配信に関するトラブルシューティング
@@ -46,7 +46,7 @@ Post Office Protocol version 3 (POP3) を使用する電子メール アプリ�
   
 \<error message> には Collaboration Data Objects (CDO) から返されたエラー メッセージの追加情報が記載されます。  
   
-### <a name="to-resolve-this-problem"></a>この問題を解決するには、次のようにします。  
+### <a name="to-resolve-this-problem"></a>これを解決するには、次の手順に従います。  
 * `SendUsing` Rsreportserver.config **ファイルの** 要素の値を 1 に設定します。  
 * `SMTPServer` プロパティの値をクリアして空になるようにします。 `SMTPServerPickupDirectory` プロパティにも値を指定する必要があります。   
   

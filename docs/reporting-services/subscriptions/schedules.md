@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578092"
 ---
 # <a name="schedules"></a>スケジュール
@@ -35,7 +35,7 @@ ms.locfileid: "65578092"
   
   
 ##  <a name="bkmk_whatyoucando"></a> スケジュールに対して実行できる操作  
- ネイティブ モードの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルおよび [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] と、SharePoint モードの SharePoint サイト管理ページを使用して、スケジュールの作成と管理を行うことができます。 可能な代替手段としては以下の方法があります。  
+ ネイティブ モードの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルおよび [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] と、SharePoint モードの SharePoint サイト管理ページを使用して、スケジュールの作成と管理を行うことができます。 次のようにすることができます。  
   
 -   標準のサブスクリプションまたはデータ ドリブン サブスクリプションでのレポート配信スケジュール  
   

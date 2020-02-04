@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bbd55f7796f61bfb2ac85cdfc061f5e754ca70b2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727717"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services でリソース ガバナーを使用して Python と R のワークロードを管理する
@@ -64,7 +64,7 @@ Python および R の機械学習アルゴリズムは、通常、多くのコ�
 > [!NOTE]
 > リソース ガバナーによるスタート パッド サービスの直接管理はサポートされません。 スタート パッドは、Microsoft によって提供されるランチャーのみをホストできる信頼されたサービスです。 信頼できるランチャーは、リソースを過度に消費しないように明示的に構成されています。
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [Machine Learning 用のリソース プールの作成](create-external-resource-pool.md)
 + [リソース ガバナーのリソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

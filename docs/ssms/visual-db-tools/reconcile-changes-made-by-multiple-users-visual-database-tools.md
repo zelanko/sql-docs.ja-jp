@@ -1,10 +1,9 @@
 ---
-title: 複数のユーザーによる変更の調整 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 複数のユーザーによる変更の調整
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b4eee47ea3e15b869909e66818bddf655f63ea3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b85d852b4eee542632af0afbbf561fec47fac35a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266244"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255277"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>複数のユーザーによる変更の調整 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68266244"
   
 -   **[はい]** をクリックして、一覧内のすべての変更内容をデータベースに反映させます。  
   
-    このアクションを実行すると、同じデータベース オブジェクトを共有しているテーブルが影響を受けます。 たとえば、`titleauthors` テーブルの `au_id` 列を編集しているときに、他のユーザーが `au_id` 列によって `titleauthors` テーブルと関連付けられている `authors` テーブルを操作するものとします。 このテーブルを保存すると、他のユーザーのテーブルが影響を受けます。 同様に、あるユーザーが `qty` テーブルの `sales` 列に CHECK 制約を定義したとします。 別のユーザーが `qty` 列を削除して `sales` テーブルを保存すると、最初のユーザーの CHECK 制約が影響を受けます。  
+    このアクションを実行すると、同じデータベース オブジェクトを共有しているテーブルが影響を受けます。 たとえば、`au_id` テーブルの `titleauthors` 列を編集しているときに、他のユーザーが `authors` 列によって `titleauthors` テーブルと関連付けられている `au_id` テーブルを操作するものとします。 このテーブルを保存すると、他のユーザーのテーブルが影響を受けます。 同様に、あるユーザーが `qty` テーブルの `sales` 列に CHECK 制約を定義したとします。 別のユーザーが `qty` 列を削除して `sales` テーブルを保存すると、最初のユーザーの CHECK 制約が影響を受けます。  
   
 -   保存を取り消すには、 **[いいえ]** をクリックします。  
   

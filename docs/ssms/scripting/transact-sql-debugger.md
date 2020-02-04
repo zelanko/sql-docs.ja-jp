@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL デバッガー
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -9,15 +10,15 @@ ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 8e705be1cda43f0645b53f74f3f658a5bc8c2f2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097927"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253002"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL デバッガー
 
@@ -67,7 +68,7 @@ ms.locfileid: "74097927"
 
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|リモート デバッグに必要な構成を [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーに対して行う方法について説明します。|[TSQL デバッガーを実行する前にファイアウォール規則を構成します。](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|リモート デバッグに必要な構成を [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーに対して行う方法について説明します。|[TSQL デバッガー実行前のファイアウォール規則の構成](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |デバッガーの操作を開始、停止、および制御する方法について説明します。|[Transact-SQL デバッガーの実行](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行する方法について説明します。|[Transact-SQL コードのステップ実行](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |デバッガーを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データ (パラメーター、変数など) およびシステム情報を表示する方法について説明します。|[Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)|  

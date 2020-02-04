@@ -11,10 +11,10 @@ ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 16f083c08a9d82a019ae98a8f9a71d7e596394da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582176"
 ---
 # <a name="new-user-role-management-studio"></a>[新しいユーザー ロール]\(Management Studio)
@@ -26,14 +26,14 @@ ms.locfileid: "65582176"
 >  ロールの定義は、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 レポート サーバーが SharePoint 統合モード用に構成されている場合、このページは使用できません。  
   
 ## <a name="options"></a>オプション  
- **[名前]**  
+ **名前**  
  ロールの定義名を入力します。 ロールの定義名は、レポート サーバーの名前空間内で一意である必要があります。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
  ; ? : \@ & = + , $ / * < >  
   
  " /  
   
- **[説明]**  
+ **説明**  
  ロールの使用方法やロールがサポートする内容を列挙する説明を入力します。  
   
  **タスク**  

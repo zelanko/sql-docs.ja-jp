@@ -18,10 +18,10 @@ ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581780"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>組み込みコレクション - レポート変数とグループ変数の参照 (レポート ビルダー)
@@ -55,7 +55,7 @@ ms.locfileid: "65581780"
 ## <a name="group-variables"></a>グループ変数  
  グループ変数は、グループのスコープ内で複合式を 1 回計算するために使用します。 グループ変数は、グループとその子グループのスコープ内でのみ有効です。  
   
- たとえば、別々の税区分にある各アイテムの在庫データをデータ領域に表示し、各カテゴリに異なる税率を適用するとします。 Category でデータをグループ化し、親グループで *Tax* 変数を定義します。 次に、税区分ごとに *ItemTax* のグループ変数を定義し、異なる Category サブグループをそれぞれ適切なグループ変数に割り当てます。 例:  
+ たとえば、別々の税区分にある各アイテムの在庫データをデータ領域に表示し、各カテゴリに異なる税率を適用するとします。 Category でデータをグループ化し、親グループで *Tax* 変数を定義します。 次に、税区分ごとに *ItemTax* のグループ変数を定義し、異なる Category サブグループをそれぞれ適切なグループ変数に割り当てます。 次に例を示します。  
   
 -   `[Category]`に基づく親グループでは、値 *Tax* を指定して、変数 `[Tax]`を定義します。 カテゴリ値が Food と Clothing であるとします。  
   

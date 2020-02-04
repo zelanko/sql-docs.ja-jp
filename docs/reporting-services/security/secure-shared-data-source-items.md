@@ -13,10 +13,10 @@ ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570580"
 ---
 # <a name="secure-shared-data-source-items"></a>共有データ ソース アイテムをセキュリティで保護する
@@ -34,7 +34,7 @@ ms.locfileid: "65570580"
 |使用するタスク|ユーザーに権限を与える操作|  
 |----------------------|---------------------------------|  
 |データ ソースの表示|フォルダー階層内の共有データ ソース アイテムを表示します。 このタスクがないと、アイテムがユーザーに表示されず、利用可能なデータ ソースをユーザーが認識できなくなる可能性があります。|  
-|データ ソースの管理|名前、説明、および接続情報を表すプロパティを表示します。 このタスクは、フォルダー階層内の共有データ ソース アイテムの表示にも使用します。 このタスクを選択した場合は、"データ ソースの表示" タスクを省略できます。|  
+|データ ソースを管理する|名前、説明、および接続情報を表すプロパティを表示します。 このタスクは、フォルダー階層内の共有データ ソース アイテムの表示にも使用します。 このタスクを選択した場合は、"データ ソースの表示" タスクを省略できます。|  
 |アイテムへのセキュリティの設定|共有データ ソースへのアクセスを制御するロールの割り当てを作成および変更します。 このタスクは、"データ ソースの表示" タスク、または "データ ソースの管理" タスクのいずれかと併用する必要があります。 それ以外の場合、ユーザーはアイテムを選択できないので効果がありません。|  
   
 ## <a name="see-also"></a>参照  
@@ -42,6 +42,6 @@ ms.locfileid: "65570580"
  [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)   
  [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Reporting Services データ ソースに資格情報を保存する](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

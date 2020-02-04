@@ -1,10 +1,7 @@
 ---
-title: クエリへの列の追加 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: クエリへの列の追加
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +12,19 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68c09e7162103cd027657beb81482803a1589a3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: b6638a8b5a749c833d2d50ca0dc6fba78d61038c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264662"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244188"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>クエリへの列の追加 (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 クエリで列を使用するには、クエリに列を追加する必要があります。 列の追加は、クエリ出力に列を追加する場合、列を並べ替える場合、列の内容を検索する場合、または列の内容を集計する場合に行います。 クエリで使用する列のうち、クエリを実行したときに結果ペインに含める列を指定できます。 詳細については、「 [クエリ結果からの列の削除 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)」を参照してください。  
   
@@ -35,7 +37,7 @@ ms.locfileid: "68264662"
   
 -   **ダイアグラム ペイン**で、追加する列の横のチェック ボックスをオンにします。  
   
-    \- または -  
+    または  
   
 -   **抽出条件ペイン**で、最初の空白のグリッド行に移動し、 **[列]** 列のフィールドをクリックして、ドロップダウン リストの列名をクリックします。  
   

@@ -13,10 +13,10 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499594"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
@@ -65,6 +65,6 @@ ms.locfileid: "66499594"
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [レポート サーバーの構成と管理 &#40;Reporting Services SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   

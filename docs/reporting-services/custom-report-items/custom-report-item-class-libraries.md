@@ -12,10 +12,10 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194102"
 ---
 # <a name="custom-report-item-class-libraries"></a>カスタム レポート アイテムのクラス ライブラリ
@@ -34,15 +34,15 @@ ms.locfileid: "63194102"
   
 |||  
 |-|-|  
-|**[名前]**|カスタム レポート アイテムの名前|  
-|**型**|カスタム レポート アイテムの種類。|  
+|**名前**|カスタム レポート アイテムの名前|  
+|**Type**|カスタム レポート アイテムの種類。|  
 |**CustomData**|デザイン時に指定されたカスタム レポート アイテムのデータ プロパティをカプセル化する <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> オブジェクト|  
 |**CustomProperties**|カスタム レポート アイテムのカスタム プロパティのコレクション|  
 |**Height**|カスタム レポート アイテム コントロールの高さ|  
 |**Width**|カスタム レポート アイテム コントロールの幅|  
-|**レポート**|レポート レベルのプロパティ (レポートのデータセットの一覧など) のコンテナー|  
+|**Report**|レポート レベルのプロパティ (レポートのデータセットの一覧など) のコンテナー|  
 |**AltReportItem**|カスタム レポート アイテムの実行時コントロールがサポートされていない場合に使用される代替レポート アイテム オブジェクト|  
-|**スタイル**|カスタム レポート アイテムのスタイルのプロパティ|  
+|**Style**|カスタム レポート アイテムのスタイルのプロパティ|  
 |**Adornment**|コントロールのインタラクティブな編集のために使用される装飾ウィンドウ|  
 |**Site**|コンポーネントの **ISite**|  
 |**DesignerVerbCollection**|コントロールのショートカット メニューのカスタム動詞の配列|  
@@ -61,7 +61,7 @@ ms.locfileid: "63194102"
 |**OnPaint**|**Paint** イベントに応答して呼び出されます。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- この属性は、カスタム レポート アイテムの種類を識別するために使用されます。 この名前は、レポート デザイナー構成ファイルの **ReportItem** 要素の \<**名前**> 属性の値と一致している必要があります。  
+ この属性は、カスタム レポート アイテムの種類を識別するために使用されます。 この名前は、レポート デザイナー構成ファイルの \<ReportItem**要素の** **名前**> 属性の値と一致している必要があります。  
   
 #### <a name="public-methods"></a>パブリック メソッド  
   

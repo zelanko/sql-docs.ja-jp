@@ -9,10 +9,10 @@ ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580714"
 ---
 # <a name="previewing-reports-in-report-builder"></a>レポート ビルダーでのレポートのプレビュー
@@ -74,8 +74,8 @@ ms.locfileid: "65580714"
  レポートに使用されているサブレポートが、編集セッションの作成後に変更された場合、レポートをプレビューできません。 レポートを正常にプレビューするには、レポートを保存するか、 **[更新]** をクリックして最新のデータを取得する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

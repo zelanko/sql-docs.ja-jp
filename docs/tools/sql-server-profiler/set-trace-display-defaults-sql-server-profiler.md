@@ -1,27 +1,28 @@
 ---
-title: トレース表示の既定値の設定 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: トレース表示の既定値を設定する
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc875bf091b2dac6f3bfb393c7a716c3fa49caea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059707"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307935"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>トレース表示の既定値の設定 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] がトレースをトレース ウィンドウに表示する際に使用するフォントの種類やサイズ、スタイルを指定するツール オプションを設定する方法について説明します。 また、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により、すべての日付と時刻を、オペレーティング システムに構成されている地域設定で表示するよう指定することもできます。  
+
+このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] がトレースをトレース ウィンドウに表示する際に使用するフォントの種類やサイズ、スタイルを指定するツール オプションを設定する方法について説明します。 また、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により、すべての日付と時刻を、オペレーティング システムに構成されている地域設定で表示するよう指定することもできます。  
   
 ### <a name="to-set-trace-display-defaults"></a>トレース表示の既定値を設定するには  
   

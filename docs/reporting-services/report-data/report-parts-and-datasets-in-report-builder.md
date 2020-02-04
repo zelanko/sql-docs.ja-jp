@@ -9,16 +9,16 @@ ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571195"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>レポート ビルダーのレポート パーツおよびデータセット
   レポート ビルダーでレポートにデータを含める最も簡単な方法は、レポート パーツ ギャラリーからレポート パーツを追加することです。 レポート パーツには、そのレポート パーツが依存するデータセットが含まれており、 *依存データセット*と呼ばれます。 依存データセットは共有データ ソースに基づいており、埋め込みデータセットまたは共有データセットのどちらかにすることができます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
   
- レポートにデータを含めるもう 1 つの簡単な方法は、共有データセットを使用することです。 詳細については、「 [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
+ レポートにデータを含めるもう 1 つの簡単な方法は、共有データセットを使用することです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

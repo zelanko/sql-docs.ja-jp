@@ -1,11 +1,7 @@
 ---
-title: 方法:オブジェクトを削除し、依存関係を解決する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: オブジェクトを削除し、依存関係を解決する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026613"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241427"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>方法:オブジェクトを削除し、依存関係を解決する
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>オブジェクトを削除し、依存関係を解決する方法
+
 **SQL Server オブジェクト エクスプローラー** でオブジェクトの名前変更または削除を行うと、SQL Server Data Tools によって自動的に、依存関係オブジェクトがすべて検出され、必要に応じて名前の変更または依存関係の削除を行うための ALTER スクリプトが用意されます。  
   
 > [!WARNING]  
@@ -35,7 +36,7 @@ ms.locfileid: "68026613"
   
 ### <a name="to-rename-a-table"></a>テーブル名を変更するには  
   
-1.  テーブル デザイナーおよび Transact\-SQL エディターで、`Customer` テーブルが開いていないことを確認します。  
+1.  テーブル デザイナーおよび Transact`Customer`SQL エディターで、\- テーブルが開いていないことを確認します。  
   
 2.  **SQL Server オブジェクト エクスプ ローラー**で **[テーブル]** ノードを展開します。 **Customer** テーブルを右クリックし、 **[名前の変更]** をクリックします。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68026613"
   
 7.  **Products** テーブルを右クリックして、 **[コードの表示]** をクリックします。 外部キー参照が、名前の変更を反映して自動的に `REFERENCES [dbo].[Customers] ([Id])` に更新されています。  
   
-### <a name="to-delete-a-table"></a>テーブルを削除するには  
+### <a name="to-delete-a-table"></a>テーブルを削除する  
   
 1.  **SQL Server オブジェクト エクスプローラー**で **Customers** テーブルを右クリックし、 **[削除]** をクリックします。  
   
@@ -63,5 +64,5 @@ ms.locfileid: "68026613"
 4.  **SQL Server オブジェクト エクスプローラー**で **Products** テーブルを右クリックして、 **[コードの表示]** をクリックします。 `Customers` テーブルに対する外部キー参照がなくなっています。  
   
     > [!WARNING]  
-    > 削除操作の実行時にテーブル デザイナーまたは Transact\-SQL エディターで **Products** テーブルが既に開いていた場合、外部キー参照の削除を反映する表示更新は自動的に行われません。 さらに、未解決の参照に関するエラーが **[エラー一覧]** に表示される場合もあります。 この問題を解決するには、テーブル デザイナーまたは Transact\-SQL エディターを閉じてから、再度 Products テーブルを開きます。  
+    > 削除操作の実行時にテーブル デザイナーまたは Transact**SQL エディターで** Products\- テーブルが既に開いていた場合、外部キー参照の削除を反映する表示更新は自動的に行われません。 さらに、未解決の参照に関するエラーが **[エラー一覧]** に表示される場合もあります。 この問題を解決するには、テーブル デザイナーまたは Transact\-SQL エディターを閉じてから、再度 Products テーブルを開きます。  
   

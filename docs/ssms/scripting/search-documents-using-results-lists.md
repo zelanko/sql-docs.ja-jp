@@ -1,6 +1,6 @@
 ---
-title: 結果一覧を使用してドキュメントを検索する方法 | Microsoft Docs
-ms.custom: ''
+title: 結果一覧を使用してドキュメントを検索する方法
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,12 +15,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc59fb8f6771f2fc11eb940b98396edd09ad6e26
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b06660f3bc175e9869d669e7996f31d1a704f9b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264182"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253668"
 ---
 # <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68264182"
   
 3.  **[検索対象]** 一覧で、 **[すべての開かれているドキュメント]** 、 **[現在のプロジェクト]** 、 **[ソリューション全体]** のいずれかをクリックするか、ディレクトリ パスを入力します。  
   
-4.  **[次のファイルの種類を参照]** 一覧で、表示されているファイル拡張子のセットのいずれかを選択するか、検索対象のファイルの種類を示す拡張子をセミコロンで区切って入力します。 **[検索対象]** ドロップダウン リストに表示されているディレクトリ内のすべてのファイルを検索する場合は、\*.\* を使います。  
+4.  **[次のファイルの種類を参照]** 一覧で、表示されているファイル拡張子のセットのいずれかを選択するか、検索対象のファイルの種類を示す拡張子をセミコロンで区切って入力します。 \*[検索対象]\* ドロップダウン リストに表示されているディレクトリ内のすべてのファイルを検索する場合は、 **.** を使います。  
   
 5.  検索の精度を上げるために、他の検索オプションの中から適切な項目を選択します。  
   

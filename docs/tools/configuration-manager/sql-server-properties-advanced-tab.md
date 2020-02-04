@@ -1,6 +1,6 @@
 ---
-title: SQL Server のプロパティ ([詳細設定] タブ) | Microsoft Docs
-ms.custom: ''
+title: '[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b64a1c1b9d40061d5319d1e629d0f2215df72e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023967"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306833"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68023967"
  エラー発生時にメモリ ダンプが配置される場所が表示されます。  
   
  **[エラー報告]**  
- **[はい]** に設定した場合、重大な障害が発生したときに、ワトソン博士プログラムによって [!INCLUDE[msCoName](../../includes/msconame-md.md)] またはエラー サーバーに情報が転送されます。 エラー報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。 この値を変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックし、 **[その他のサーバーの設定]** ページをクリックします。 **[エラー報告]** 領域にオプションが表示されます。  
+ **[はい]** に設定した場合、重大な障害が発生したときに、ワトソン博士プログラムによって [!INCLUDE[msCoName](../../includes/msconame-md.md)] またはエラー サーバーに情報が転送されます。 エラー報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。 この値を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックし、 **[その他のサーバーの設定]** ページをクリックします。 **[エラー報告]** 領域にオプションが表示されます。  
   
  **ファイル バージョン**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルのバージョンが表示されます。  
@@ -47,7 +47,7 @@ ms.locfileid: "68023967"
  **インスタンス ID**  
  このサービスを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが表示されます。  
   
- **言語**  
+ **Language**  
  サーバー メッセージの既定の言語が表示されます。  
   
  **[レジストリ ルート]**  

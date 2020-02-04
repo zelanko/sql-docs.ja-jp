@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727691"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張アーキテクチャ 
@@ -22,7 +22,7 @@ ms.locfileid: "73727691"
 
 SQL Server は、サーバーで R や Python などの外部スクリプトを実行するための機能拡張フレームワークのアーキテクチャを備えています。 このスクリプトは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 
-## <a name="background"></a>背景情報
+## <a name="background"></a>バックグラウンド
 
 この機能拡張フレームワークは、R ランタイムをサポートするために SQL Server 2016 で導入されました。 SQL Server 2017 以降では、Python がサポートされています。
 
@@ -62,9 +62,9 @@ Linux の場合、SQL では**スタート パッド** サービスを使用し�
 
 ## <a name="launchpad"></a>スタート パッド
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] は、外部スクリプトを管理および実行するサービスです。これは、フルテキスト インデックス作成とクエリ サービスにより、フルテキスト クエリを処理するための個別のホストを起動するのに似た手法です。 スタート パッド サービスでは、Microsoft によって公開された信頼できるランチャーか、パフォーマンスとリソース管理の要件を満たしているものとして Microsoft に認定されたランチャーのみを起動できます。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] は外部スクリプトを管理および実行するサービスで、フルテキスト インデックス作成およびクエリ サービスが、フルテキスト クエリを処理するために別のホストを起動する方法に似ています。 スタート パッド サービスでは、Microsoft によって公開された信頼できるランチャーか、パフォーマンスとリソース管理の要件を満たしているものとして Microsoft に認定されたランチャーのみを起動できます。
 
-| 信頼できるランチャー | 拡張子 | SQL Server のバージョン |
+| 信頼できるランチャー | 拡張機能 | SQL Server のバージョン |
 |-------------------|-----------|---------------------|
 | Windows 用 R 言語の RLauncher.dll | [R の拡張機能](extension-r.md) | SQL Server 2016 以降 |
 | Windows 用 Python 3.5 の Pythonlauncher.dll | [Python の拡張機能](extension-python.md) | SQL Server 2017 以降 |

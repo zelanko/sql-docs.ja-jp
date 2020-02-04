@@ -14,16 +14,16 @@ ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1c3b4ad599864bc2ddb752982ed61bf73684c2f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193867"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services での外部データセットの使用
-  非接続の分散データ シナリオを [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] でサポートする場合、その中心となるのが **DataSet** オブジェクトです。 **DataSet** オブジェクトはメモリ上に保持されたデータを表し、データ ソースとは無関係に一貫したリレーショナル プログラミング モデルを提供します。 また、複数の異なるデータ ソースや XML データで使用でき、アプリケーションのデータをローカルに管理することも可能です。 **DataSet** オブジェクトは、関連テーブル、制約、およびテーブル間のリレーションシップを含む、完全なデータセットを表します。 **DataSet** オブジェクトには、データを格納し、表示するための柔軟な機能が備わっています。そのため、データに関するレポートを生成するときは、多くの場合、事前にそのデータが処理され、**DataSet** オブジェクトに変換されます。  
+  非接続の分散データ シナリオを **でサポートする場合、その中心となるのが**DataSet[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] オブジェクトです。 **DataSet** オブジェクトはメモリ上に保持されたデータを表し、データ ソースとは無関係に一貫したリレーショナル プログラミング モデルを提供します。 また、複数の異なるデータ ソースや XML データで使用でき、アプリケーションのデータをローカルに管理することも可能です。 **DataSet** オブジェクトは、関連テーブル、制約、およびテーブル間のリレーションシップを含む、完全なデータセットを表します。 **DataSet** オブジェクトには、データを格納し、表示するための柔軟な機能が備わっています。そのため、データに関するレポートを生成するときは、多くの場合、事前にそのデータが処理され、**DataSet** オブジェクトに変換されます。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を使用すると、外部アプリケーションによって作成されたあらゆるカスタム **DataSet** オブジェクトを統合できます。 そのためには、**DataSet** オブジェクトとレポート サーバー間の橋渡し役となるカスタム データ処理拡張機能を [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に作成してください。 この **DataSet** オブジェクトを処理するためのコードのほとんどは、作成する **DataReader** クラスに含まれています。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を使用すると、外部アプリケーションによって作成されたあらゆるカスタム **DataSet** オブジェクトを統合できます。 そのためには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]DataSet**オブジェクトとレポート サーバー間の橋渡し役となるカスタム データ処理拡張機能を** に作成してください。 この **DataSet** オブジェクトを処理するためのコードのほとんどは、作成する **DataReader** クラスに含まれています。  
   
  **DataSet** オブジェクトをレポート サーバーに公開する場合、最初に **DataSet** オブジェクトを設定できるプロバイダー固有のメソッドを **DataReader** クラスに実装します。 次の例は、**DataReader** クラスのプロバイダー固有メソッドを使用して、静的データを **DataSet** オブジェクトに読み込む方法を示しています。  
   

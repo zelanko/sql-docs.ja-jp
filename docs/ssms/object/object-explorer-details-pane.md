@@ -1,6 +1,6 @@
 ---
-title: '[オブジェクト エクスプローラーの詳細] ペイン | Microsoft Docs'
-ms.custom: ''
+title: '[オブジェクト エクスプローラーの詳細] ペイン'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264080"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257153"
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "68264080"
   
 [オブジェクト エクスプローラーの詳細] には、次の表に説明するアイコンが用意されたツール バーがあります。 アイコンは、適切な場合にのみ使用できます。  
   
-|アイコン|操作|  
+|アイコン|アクション|  
 |--------|----------|  
 |**戻る**|[オブジェクト エクスプローラーの詳細] に表示されている前の項目に移動します。 前の表示が検索操作の結果である場合は、検索を再実行します。|  
 |**進む**|**[戻る]** 操作を選択した後に次の画面に移動します。|  
-|**[上へ]**|親のオブジェクトまたはフォルダーに移動します。|  
-|**同期**|[オブジェクト エクスプローラーの詳細] で選択されているオブジェクトに、オブジェクト エクスプローラーのフォーカスを設定します。|  
+|**Up**|親のオブジェクトまたはフォルダーに移動します。|  
+|**Synchronize**|[オブジェクト エクスプローラーの詳細] で選択されているオブジェクトに、オブジェクト エクスプローラーのフォーカスを設定します。|  
 |**Assert**|利用できる場合、構成可能なオブジェクトのサブセットが表示されます。|  
 |**[更新]**|[オブジェクト エクスプローラーの詳細] の表示を更新します。|  
 |**検索**|特定のデータベース オブジェクトの検索語句を入力するための領域を提供します。|  
@@ -58,7 +58,7 @@ ms.locfileid: "68264080"
 ### <a name="sorting"></a>並べ替え  
 列ヘッダーを 1 回クリックすると、その列のデータを使用して並べ替えが行われます。 同じヘッダーを再度クリックすると、その列のデータを使用して逆順に並べ替えが行われます。 並べ替えに関する選択内容は、別のオブジェクトやフォルダーに移動しても、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を再起動した後も、ユーザーごとに保持されます。  
   
-### <a name="filtering"></a>フィルター  
+### <a name="filtering"></a>Filtering  
 [オブジェクト エクスプローラーの詳細] に表示される特定のオブジェクトのリストは、[オブジェクト エクスプローラーの詳細] ツール バーの **[フィルター]** アイコンを使用してフィルター処理できます。 アイコンは、フィルター処理が可能な場合に有効になります。  
   
 ### <a name="details-pane"></a>[詳細] ペイン  
@@ -88,7 +88,7 @@ ms.locfileid: "68264080"
 ## <a name="sql-server-object-search"></a>SQL Server オブジェクトの検索  
 ワイルドカード  
   
--   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「[ソフト NUMA を使用するようにワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
+-   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「 [ワイルドカードを使用して検索する方法](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
   
 検索範囲  
   

@@ -1,23 +1,24 @@
 ---
-title: '方法: SQL Server の単体テストにテスト条件を追加する | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server の単体テストにテスト条件を追加する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afc0e433a7d39dffa2e4d31d03292d2aee07a4a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899166"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241629"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>方法:SQL Server の単体テストにテスト条件を追加する
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>SQL Server の単体テストにテスト条件を追加する方法
+
 SQL Server の単体テストにテスト条件を追加するには、**SQL Server 単体テスト デザイナー**を使用します。 テスト クラスを保存すると、テスト条件は、テスト クラスを含むソース コード ファイルの Visual C\# コードまたは Visual Basic コードとして、テスト プロジェクトに自動的に保存されます。 保存したテスト条件は、**SQL Server 単体テスト デザイナー**またはソース コード ファイルで編集できます。  
   
 ### <a name="to-add-test-conditions-to-a-sql-server-unit-test"></a>SQL Server の単体テストにテスト条件を追加するには  
@@ -48,10 +49,10 @@ SQL Server の単体テストにテスト条件を追加するには、**SQL Ser
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[方法:空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[方法:関数、トリガー、ストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[関数、トリガー、およびストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
 [SQL Server の単体テストでのテスト条件の使用](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [SQL Server の単体テストのスクリプト](../ssdt/scripts-in-sql-server-unit-tests.md)  
 [SQL Server の単体テストの結果の解釈](../ssdt/interpreting-sql-server-unit-test-results.md)  
-[方法: SQL Server の単体テストを実行する](../ssdt/how-to-run-sql-server-unit-tests.md)  
+[SQL Server 単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests.md)  
   

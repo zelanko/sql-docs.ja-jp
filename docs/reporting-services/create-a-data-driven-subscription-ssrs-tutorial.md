@@ -13,10 +13,10 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194837"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
@@ -31,7 +31,7 @@ ms.locfileid: "63194837"
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルは、次の 3 つのレッスンで構成されています。  
 
-| レッスン | コメント |
+| レッスン | 説明 |
 | ------ | -------- |
 | [レッスン 1: サンプル サブスクライバー データベースを作成する](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | このレッスンでは、サブスクライバー情報を格納するテーブル ローカル [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを作成します。 フィルター処理および出力ファイル形式に使用する情報の注文番号。 |
 | [レッスン 2: レポート データ ソースのプロパティを構成する](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | このレッスンでは、指定したスケジュールでレポートを自動実行できるようにレポート データ ソースを構成します。 自動処理では保存された資格情報が必要です。 また、レポートのデータセットを変更して、サブスクライバーのデータが提供するパラメーターを含めます。 このパラメーターは、注文番号に基づくレポート データのフィルター処理に使用されます。 |
@@ -74,7 +74,7 @@ ms.locfileid: "63194837"
 **このチュートリアルの推定所要時間:** 30 分。 基本的なレポートのチュートリアルを完了していない場合は追加で 30 分かかります。  
   
 ## <a name="see-also"></a>参照  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[データ ドリブン サブスクリプション](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

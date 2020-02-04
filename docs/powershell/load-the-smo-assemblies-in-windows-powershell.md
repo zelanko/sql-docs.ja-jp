@@ -10,10 +10,10 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2262de78691c14b14bf9177306c0eb7526ef290b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67951692"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell への SMO アセンブリの読み込み
@@ -35,7 +35,7 @@ SMO アセンブリを読み込むための推奨メカニズムは、**SqlServe
   
 -   プロバイダーやコマンドレットを使用しない別の言語 (C#、Visual Basic など) から SMO コードを移植する場合。  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>例:SQL Server 管理オブジェクトの読み込み  
+## <a name="example-loading-the-sql-server-management-objects"></a>例: SQL Server 管理オブジェクトの読み込み  
  SMO アセンブリを読み込むコードを次に示します。  
   
 ```  

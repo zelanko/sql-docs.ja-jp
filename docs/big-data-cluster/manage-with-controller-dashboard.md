@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531939"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>SQL Server コントローラー ダッシュボードのビッグ データ クラスターを管理する
@@ -22,8 +22,8 @@ ms.locfileid: "73531939"
 
 **azdata** とクラスターの状態ノートブックに加えて、SQL Server ビッグ データ クラスターの状態を表示する別の方法があります。 **接続** Viewlet を使用して、SQL Server ビッグ データ クラスター コントローラーを追加できます。 これにより、ダッシュボードを使用してクラスターの正常性を表示できます。
 
-![ダッシュボード](media/manage-with-controller-dashboard/controller-dashboard.png)
-## <a name="prerequisites"></a>Prerequisites
+![dashboard](media/manage-with-controller-dashboard/controller-dashboard.png)
+## <a name="prerequisites"></a>前提条件
 
 ノートブックを起動するには、次の前提条件が要件です。
 
@@ -78,6 +78,6 @@ ms.locfileid: "73531939"
 
 1. 問題のあるコンポーネントが表示されている場合、ツール バーの **[Troubleshoot]\(トラブルシューティング\)** をクリックして、問題の診断に役立つノートブックが含まれる Jupyter Book を起動します。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
 コントローラーの詳細については、[コントローラーのドキュメント](concept-controller.md)を参照してください。

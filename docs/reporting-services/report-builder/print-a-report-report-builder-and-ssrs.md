@@ -9,10 +9,10 @@ ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67d9e057b7ed307377e59172948d56d92c45e7f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581177"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
@@ -94,7 +94,7 @@ ms.locfileid: "65581177"
 ## <a name="see-also"></a>参照  
  [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [[ページ設定] ([レポートのプロパティ] ダイアログ ボックス) &#40;Report Builder&#41;](https://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [[ページ設定] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)](https://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [レポート デザイン ビュー &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

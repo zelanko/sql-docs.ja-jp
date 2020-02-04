@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844607"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database の管理とトラブルシューティング
@@ -72,7 +72,7 @@ GO
 ## <a name="manage-table-schema"></a>テーブル スキーマの管理
 
 ### <a name="dont-change-the-schema-of-the-remote-table"></a>リモート テーブルのスキーマは変更しないでください  
- Stretch Database 用に構成された SQL Server テーブルと関連付けてあるリモート Azure テーブルのスキーマは変更しないでください。 特に、列の前やデータ型は変更しないでください。 Stretch Database の機能によって、SQL Server テーブルのスキーマと関連するリモート テーブルのスキーマについて、さまざまな仮定を行います。 リモート スキーマを変更すると、変更したテーブルに対して Stretch Database は機能しなくなります。  
+ Stretch Database 用に構成された SQL Server テーブルと関連付けてあるリモート Azure テーブルのスキーマは変更しないでください。 特に、列の前やデータ型は変更しないでください。 Stretch Database の機能によって、SQL Server テーブルのスキーマと関連するリモート テーブルのスキーマについて、さまざまな仮定を行います。 リモート スキーマを変更すると、Stretch Database は変更されたテーブルの動作を停止します。  
 
 ### <a name="reconcile-table-columns"></a>テーブル列の調整  
 リモート テーブルから誤って列を削除した場合は、 **sp_rda_reconcile_columns** を実行し、リモート テーブルにはなく Stretch 対応 SQL Server テーブルに存在する列をリモート テーブルに追加します。 詳細については、「 [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md)」を参照してください。  
@@ -85,7 +85,7 @@ GO
 ## <a name="manage-performance-and-costs"></a>パフォーマンスとコストの管理  
   
 ### <a name="troubleshoot-query-performance"></a>クエリ パフォーマンスのトラブルシューティング  
-  Stretch 対応テーブルを含むクエリの実行時間は、Stretch 対応にする前のテーブルよりも長くかかります。 クエリ パフォーマンスが大幅に低下する場合は、次の問題が発生していないか確認してください。  
+  Stretch 対応テーブルを含むクエリの実行時間は、Stretch 対応にする前のテーブルよりも長くかかります。 クエリのパフォーマンスが大幅に低下する場合、次の問題が考えられます。  
   
 -   Azure サーバーは、SQL Server とは異なる地域にありますか。 Azure サーバーが SQL Server と同じ地域になるように構成すると、SQL Server のネットワーク待機時間は軽減されます。  
   

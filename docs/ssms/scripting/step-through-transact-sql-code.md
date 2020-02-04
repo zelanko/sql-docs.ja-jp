@@ -12,15 +12,15 @@ ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e355863031dcfc0406c2a59bda22a211b8760344
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 1fbd6c6b01d5be8afb3e0e0c70c15363664263eb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097943"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243441"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL コードのステップ実行
 
@@ -56,7 +56,7 @@ ms.locfileid: "74097943"
 
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでのステートメントの実行を制御するためのさまざまな操作方法を次の表に示します。  
   
-|操作|実行するアクション:|  
+|アクション|実行するアクション:|  
 |------------|---------------------|  
 |現在のステートメントから次のブレークポイントまですべてのステートメントを実行する。|**[デバッグ]** メニューの **[続行]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[続行]** ボタンをクリックする。|  
 |次のステートメントまたはモジュールにステップ インする。|**[デバッグ]** メニューの **[ステップ イン]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[ステップ イン]** ボタンをクリックする。<br /><br /> F11 キーを押す。|  

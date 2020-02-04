@@ -1,6 +1,6 @@
 ---
-title: TCP/IP のプロパティ ([IP アドレス] タブ) |Microsoft Docs
-ms.custom: ''
+title: '[TCP/IP のプロパティ]'
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023811"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307565"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>[TCP/IP のプロパティ]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   **[TCP/IP のプロパティ]** ダイアログ ボックス ([IP アドレス] タブ) では、TCP/IP プロトコルの特定の IP アドレスに関するオプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、 **[IP All]** を選択することですべてのアドレスを一度に構成できます。  
   
- SQL Server を再起動すると変更が有効になります。 SQL Server Browser サービスの開始と停止の詳細については、「[SQL Server Browser サービスの開始および停止](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」をご覧ください。  
+ SQL Server を再起動すると変更が有効になります。 SQL Server Browser サービスの開始と停止の詳細については、「 [SQL Server Browser サービスの開始および停止](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」をご覧ください。  
   
 ## <a name="static-vs-dynamic-ports"></a>静的ポートと動的ポート  
  SQL Server の既定のインスタンスは、着信接続をポート 1433 でリッスンします。 このポートは、セキュリティ上の理由またはクライアント アプリケーションの要件に応じて変更することができます。 既定では、名前付きインスタンス (SQL Server Express を含む) は動的ポートでリッスンするように構成されています。 静的ポートを構成するには、 **[TCP 動的ポート]** を空白にし、 **[TCP ポート]** に使用可能なポート番号を指定します。 ファイアウォールでポートを開く方法の詳細については、オンライン ブックの「SQL Server のアクセスを許可するための Windows ファイアウォールの構成」を参照してください。  
@@ -33,13 +33,13 @@ ms.locfileid: "68023811"
  SQL Server のインスタンスが動的ポートでリッスンするように構成されている場合、インスタンスは起動時にオペレーティング システムを調べて使用できるポートを検出し、そのポートに対するエンドポイントを開きます。 着信接続は、そのポート番号を指定して接続する必要があります。 SQL Server を起動するたびにポート番号が変わる可能性があるので、SQL Server には、ポートを監視して、着信接続をそのインスタンスの現在のポートにダイレクトする SQL Server Browser サービスが用意されています。 ファイアウォール経由で SQL Server に接続する場合に動的ポートを使用すると、SQL Server の再起動時にポート番号が変わる可能性があるので、そのたびにファイアウォールの設定を変更しなければなりません。 ファイアウォールによる接続の問題を回避するには、静的ポートを使用するように SQL Server を構成します。  
   
 ## <a name="options"></a>オプション  
- **Active**  
+ **アクティブ**  
  コンピューターでその IP アドレスがアクティブかどうかを示します。 **[IPAll]** では指定できません。  
   
  **有効**  
  **[TCP/IP のプロパティ] ダイアログ ボックス ([プロトコル] タブ)** で **[すべて受信待ち]** プロパティを **[いいえ]** に設定している場合、このプロパティは SQL Server がそのポートでリッスンしているかどうかを示します。 **[TCP/IP のプロパティ] ダイアログ ボックス ([プロトコル] タブ)** で **[すべて受信待ち]** プロパティを **[はい]** に設定している場合、このプロパティは無視されます。 **[IPAll]** では指定できません。  
   
- **[IP アドレス]**  
+ **IP アドレス**  
  この接続が使用している IP 接続を表示または変更します。 コンピューターが使用している IP アドレスと、IP ループバック アドレス 127.0.0.1 が一覧表示されます。 **[IPAll]** では指定できません。 IP アドレスは、IPv4 形式または IPv6 形式で指定できます。  
   
  **[TCP 動的ポート]**  

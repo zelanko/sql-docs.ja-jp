@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578443"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
@@ -32,7 +32,7 @@ ms.locfileid: "65578443"
   
 1.  多角形レイヤー、線レイヤー、およびポイント レイヤーに対して設定されたオプションは、マップ要素がレポート定義に埋め込まれているかどうかに関係なく、そのレイヤー上のすべてのマップ要素に適用されます。  
   
-2.  ルールに対して設定されたオプションは、レイヤー上のすべてのマップ要素に適用されます。 すべてのデータ ビジュアライゼーション オプションは、空間データに関連付けられているマップ要素にのみ適用されます。 データ ビジュアライゼーション オプションを使用するには、表示バリエーションの基になるデータ フィールドを指定する必要があります。 データ ビジュアライゼーション ルールを適用するには、あらかじめ分析データおよび空間データの対応フィールドを設定しておく必要があります。 詳細については、「 [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  
+2.  ルールに対して設定されたオプションは、レイヤー上のすべてのマップ要素に適用されます。 すべてのデータ ビジュアライゼーション オプションは、空間データに関連付けられているマップ要素にのみ適用されます。 データ ビジュアライゼーション オプションを使用するには、表示バリエーションの基になるデータ フィールドを指定する必要があります。 データ ビジュアライゼーション ルールを適用するには、あらかじめ分析データおよび空間データの対応フィールドを設定しておく必要があります。 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  
   
 3.  選択した埋め込みマップ要素に設定したオプション。 レイヤー オプションをオーバーライドした場合、レポート定義に加えた変更は永続的に保持されます。 表示オプションをオーバーライドする以外に、データ フィールド値を変更して、特定の多角形、線、およびポイントをレイヤー上に表示する方法をカスタマイズすることもできます。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "65578443"
 ##  <a name="Legends"></a> 凡例および凡例項目について  
  凡例項目は、各レイヤーに対して指定したルールに基づいて自動的に作成されます。 ルール オプションは、作成される項目の数および表示先の凡例を制御します。 既定では、すべてのルールのすべてのアイテムが最初の凡例に追加されます。 最初の凡例から項目を移動するには、必要に応じて凡例を作成した後、それぞれのルールに対して、ルールに基づいて表示される項目を表示するための凡例を指定します。 ルールに基づいて項目を非表示にするには、空白の凡例名を指定します。  
   
- 凡例の表示位置を制御するには、[凡例のプロパティ] ダイアログ ボックスを使用して、マップ ビューポートを基準とする相対的な位置を指定します。 詳細については、「 [マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
+ 凡例の表示位置を制御するには、[凡例のプロパティ] ダイアログ ボックスを使用して、マップ ビューポートを基準とする相対的な位置を指定します。 詳細については、「 [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
   
  凡例は、タイトルまたはテキストに合わせて自動的に拡張されます。 凡例項目のテキストを書式設定するには、マップの凡例キーワードとカスタム書式を使用します。 詳細については、「 [凡例の内容の書式を変更するには](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems)」を参照してください。  
   
@@ -129,6 +129,6 @@ ms.locfileid: "65578443"
 ## <a name="see-also"></a>参照  
  [マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

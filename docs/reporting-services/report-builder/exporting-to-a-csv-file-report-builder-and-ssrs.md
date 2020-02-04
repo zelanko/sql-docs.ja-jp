@@ -9,10 +9,10 @@ ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581215"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
@@ -53,11 +53,11 @@ ms.locfileid: "65581215"
   
 -   カスタム レポート アイテム  
   
--   線  
+-   Line  
   
--   image  
+-   Image  
   
--   四角形  
+-   Rectangle  
   
 -   自動集計  
   
@@ -69,8 +69,8 @@ ms.locfileid: "65581215"
 |----------|------------------------|  
 |テキスト ボックス|テキスト ボックスの内容を表示します。 既定のモードでは、アイテムは、そのアイテムの書式設定プロパティに基づいて書式が設定されます。 準拠モードでは、デバイス情報設定によって書式を変更できます。 CSV 表示モードの詳細については、以下の説明を参照してください。|  
 |テーブル|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  
-|マトリックス|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
-|一覧|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
+|Matrix|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
+|List|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
 |サブレポート|親アイテムは、コンテンツのインスタンスごとに繰り返し表示されます。|  
 |グラフ|それぞれのグラフ値の行およびメンバー ラベルを作成することにより表示します。 階層内の系列およびカテゴリのラベルは、フラット化され、グラフ値の行内に含まれています。|  
 |データ バー|グラフのように表示されます。 通常、データ バーには階層またはラベルは含まれません。|  
@@ -92,7 +92,7 @@ ms.locfileid: "65581215"
   
 -   ピア データ領域は、一般的なデータ領域または動的な先祖を共有する、データ領域または動的グループです。 ピア データがフラットなツリーの分岐で識別されます。  
   
- 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)を返します。  
+ 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="RenderingModes"></a> 表示モード  

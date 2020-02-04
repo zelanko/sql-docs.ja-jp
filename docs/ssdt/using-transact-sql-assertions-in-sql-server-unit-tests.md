@@ -1,23 +1,24 @@
 ---
-title: SQL Server の単体テストでの Transact-SQL アサーションの使用 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server の単体テストでの Transact-SQL アサーションの使用
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140964"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243509"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server の単体テストでの Transact-SQL アサーションの使用
+
 SQL Server の単体テストでは、Transact\-SQL テスト スクリプトが実行され、結果が返されます。 結果が結果セットとして返される場合もあります。 テスト条件を使用して結果を検証できます。 たとえば、テスト条件を使用すると、特定の結果セットで返された行数を確認したり、特定のテストの実行にかかった時間を調べたりできます。 テスト条件について詳しくは、「[SQL Server の単体テストでのテスト条件の使用](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)」をご覧ください。  
   
 テスト条件を使用する代わりに、Transact\-SQL アサーション (Transact\-SQL スクリプト内で THROW ステートメントまたは RAISERROR ステートメント) を使用することもできます。 状況によっては、テスト条件ではなく Transact\-SQL アサーションを使用することをお勧めします。  
@@ -46,7 +47,7 @@ SQL Server の単体テスト メソッドに予期される例外を指定す�
 [ExpectedSqlException(MessageNumber=nnnnn, Severity=x, MatchFirstError=false, State=y)]  
 ```  
   
-各要素の説明は次のとおりです。  
+各値の説明:  
   
 -   *nnnnn* は、予期されるメッセージの番号 (たとえば 14025) です。  
   
@@ -56,7 +57,7 @@ SQL Server の単体テスト メソッドに予期される例外を指定す�
   
 指定されていないパラメーターは無視されます。 これらのパラメーターは、データベース コードの RAISERROR ステートメントに渡します。 MatchFirstError = true を指定すると、この属性は例外のいずれの SqlErrors にも一致します。 既定の動作 (MatchFirstError = true) は、最初に発生するエラーにしか一致しません。  
   
-予期される例外と SQL Server のネガティブ単体テストの使用方法の例については、「[チュートリアル: SQL Server の単体テストの作成と実行](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)」を参照してください。  
+予期される例外と SQL Server のネガティブ単体テストの使用方法の例については、「[チュートリアル: SQL Server の単体テストの作成と実行](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)」をご覧ください。  
   
 ## <a name="the-raiserror-statement"></a>RAISERROR ステートメント  
   
@@ -67,7 +68,7 @@ Transact\-SQL スクリプトで RAISERROR ステートメントを使用する�
   
 **RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)**  
   
-それぞれの文字の説明は次のとおりです。  
+各値の説明:  
   
 @ErrorMessage は、ユーザー定義のエラー メッセージです。 このメッセージ文字列は、printf_s 関数に似た形式で書式設定できます。  
   
@@ -78,11 +79,11 @@ Transact\-SQL スクリプトで RAISERROR ステートメントを使用する�
   
 @ErrorState は、1 から 127 の任意の整数です。 この整数を使用すると、コード内の別の場所で発生した 1 つのエラーの複数の出現を区別できます。  
   
-詳しくは、「[RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)」をご覧ください。 SQL Server の単体テストでの RAISERROR の使用例については、トピック「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」を参照してください  
+詳しくは、「[RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)」をご覧ください。 SQL Server の単体テストでの RAISERROR の使用例については、「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server の単体テストでのテスト条件の使用](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[方法: SQL Server の単体テストを開いて編集する](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[SQL Server の単体テストを開いて編集する方法](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

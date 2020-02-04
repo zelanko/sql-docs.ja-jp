@@ -1,10 +1,9 @@
 ---
-title: '[列一覧] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[列リスト] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7290121f2375033c9e731d86ed42b6110fe6f6d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: dc6739dff9103c842aca1439fe0cbe1a168794ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262539"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241252"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>[列一覧] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68262539"
 このダイアログ ボックスには、選択したテーブル値オブジェクトの列と、その基本的なプロパティ (データ型やその列で null 値が使用できるかどうかなど) が一覧表示されます。  
   
 ## <a name="options"></a>オプション  
-**[名前]**  
+**名前**  
 選択したテーブル値オブジェクトに含まれる列の名前を表示します。  
   
 **[データ型]**  

@@ -1,10 +1,9 @@
 ---
-title: '[パーティション列の一覧] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[パーティション列リスト] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94adf704a08abf36b38b371aed95cb49439758fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 60e5156a92e51df58f8bcf6af05510d11d4ee3d0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263241"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255408"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>[パーティション列の一覧] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68263241"
 データ型  
 パーティション スキームで定義されている列のデータ型を表示します。  
   
-[列]  
+列  
 パーティション関数を適用する列を選択できるドロップダウン リストが用意されています。  
   
 ## <a name="see-also"></a>参照  

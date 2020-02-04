@@ -16,10 +16,10 @@ ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce96850f9fb39ca2484dd003e4a861813e53766d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953826"
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>getBigDecimal メソッド (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953826"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|[説明]|  
 |----------|-----------------|  
 |[getBigDecimal (int)](../../../connect/jdbc/reference/getbigdecimal-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を完全な有効桁数の java.math.BigDecimal として取得します。|  
 |[getBigDecimal (int, int)](../../../connect/jdbc/reference/getbigdecimal-method-int-int.md)|(非推奨) パラメーターに渡されたインデックスと小数点以下桁数を使用して、指定されたパラメーターの値を java.math.BigDecimal として取得します。|  

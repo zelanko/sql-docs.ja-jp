@@ -1,10 +1,9 @@
 ---
-title: '[制約式の確認] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[選択された制約のチェック] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f1554ee91444462c52dee404d198b35944a7caf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263671"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255496"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>[制約式の確認] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +61,7 @@ SQL 構文は、次のパラメーターで構成されています。
 |定数 (constant)|数値データ、文字データなどのリテラル値です。 文字データは単一引用符 (') で囲む必要があります。|  
 |column_name|列を指定します。|  
 |関数 (function)|組み込み関数です。|  
-|演算子 (operator)|算術演算子、ビット処理演算子、比較演算子、または文字列演算子です。|  
+|operator|算術演算子、ビット処理演算子、比較演算子、または文字列演算子です。|  
 |AND|ブール式で 2 つの式を結合するときに使用します。 両方の式が true のとき、結果が返されます。<br /><br />1 つのステートメントで AND と OR が使用されているときは、AND が先に処理されます。 実行順序は、かっこを使用して変更できます。|  
 |OR|ブール式で 2 つ以上の条件を結合するときに使用します。 どちらかの条件が true のとき、結果が返されます。<br /><br />1 つのステートメントで AND と OR が使用されているときは、OR は AND の後に処理されます。 実行順序は、かっこを使用して変更できます。|  
 |NOT|LIKE、NULL、BETWEEN、IN、EXISTS などのキーワードを含むすべてのブール式を否定します。<br /><br />1 つのステートメントで複数の論理演算子が使用されているときは、NOT が先に処理されます。 実行順序は、かっこを使用して変更できます。|  

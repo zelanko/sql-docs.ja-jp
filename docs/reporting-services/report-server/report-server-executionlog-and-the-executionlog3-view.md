@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619692"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
@@ -28,7 +28,7 @@ ms.locfileid: "65619692"
   
  レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 より新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [SharePoint モードのレポート サーバーの構成設定](#bkmk_sharepoint)  
   
@@ -106,7 +106,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|[列]|[説明]|  
+|列|[説明]|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。 レポート サーバーが複数ある環境では、InstanceName のディストリビューションを分析することで、ネットワーク負荷分散を監視し、要求がレポート サーバー間で想定どおりに分散されているかどうかを確認することができます。|  
 |ItemPath|レポートまたはレポート アイテムの格納場所のパス。|  
@@ -114,18 +114,18 @@ select * from ExecutionLog3 order by TimeStart DESC
 |[ExecutionID]|要求に関連付けられた内部識別子。 同じユーザー セッションの要求は、同じ実行 ID を共有します。|  
 |RequestType|有効値は次のとおりです。<br /><br /> Interactive<br /><br /> サブスクリプション<br /><br /> <br /><br /> RequestType=Subscription でフィルター処理したログ データを TimeStart で並べ替えて分析すると、サブスクリプションが集中している時間が見つかることがあります。この情報を基に、レポートのサブスクリプションの一部を別の時間に変更することができます。|  
 |Format|表示形式。|  
-|Parameters|レポート実行に使用するパラメーター値。|  
-|ItemAction|有効値は次のとおりです。<br /><br /> Render<br /><br /> 並べ替え<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|パラメーター|レポート実行に使用するパラメーター値。|  
+|ItemAction|指定できる値<br /><br /> レンダー<br /><br /> 並べ替え<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> 実行<br /><br /> RenderEdit|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing|レポートの処理にかかった時間 (単位はミリ秒)。|  
 |TimeRendering|レポートの表示にかかった時間 (単位はミリ秒)。|  
-|Source|レポート実行のソース。 有効値は次のとおりです。<br /><br /> Live<br /><br /> Cache: キャッシュされた実行を示します。たとえば、データセット クエリは、ライブで実行されません。<br /><br /> スナップショット<br /><br /> 履歴<br /><br /> AdHoc: 詳細レポートに基づいて動的に生成されたレポート モデル、または処理および表示にレポート サーバーを使用するクライアントでプレビューされているレポート ビルダー レポートを示します。<br /><br /> Session: 既に確立されたセッション内のフォローアップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> Rdce: レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
-|状態|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
+|source|レポート実行のソース。 指定できる値<br /><br /> ライブ<br /><br /> Cache: キャッシュされた実行を示します。たとえば、データセット クエリは、ライブで実行されません。<br /><br /> スナップショット<br /><br /> 履歴<br /><br /> AdHoc: 詳細レポートに基づいて動的に生成されたレポート モデル、または処理および表示にレポート サーバーを使用するクライアントでプレビューされているレポート ビルダー レポートを示します。<br /><br /> Session: 既に確立されたセッション内のフォローアップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> Rdce: レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
+|Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
-|AdditionalInfo|実行に関する追加情報を格納する XML プロパティ バッグ。 内容は行ごとに異なります。|  
+|AdditionalInfo:|実行に関する追加情報を格納する XML プロパティ バッグ。 内容は行ごとに異なります。|  
   
 ##  <a name="bkmk_additionalinfo"></a> AdditionalInfo フィールド  
  AdditionalInfo フィールドは、実行に関する追加情報を格納する XML プロパティ バッグ (構造) です。 内容はログの行ごとに異なります。  
@@ -317,7 +317,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|[列]|[説明]|  
+|列|[説明]|  
 |------------|------------------------------------------------------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
 |ReportPath|レポートのパス構造。 ルート フォルダーに "test" として保存されたレポートの ReportPath は "/test" となります。<br /><br /> "test" という名前のレポートが "samples" フォルダーに保存されている場合、ReportPath は "/Samples/test/" となります。|  
@@ -325,18 +325,18 @@ select * from ExecutionLog2 order by TimeStart DESC
 |[ExecutionID]||  
 |RequestType|要求の種類 (ユーザーまたはシステム)。|  
 |Format|表示形式。|  
-|Parameters|レポート実行に使用するパラメーター値。|  
+|パラメーター|レポート実行に使用するパラメーター値。|  
 |ReportAction|有効値: Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring。|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
+|source|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
 |Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
-|AdditionalInfo|実行に関する追加情報を格納する XML プロパティ バッグ。|  
+|AdditionalInfo:|実行に関する追加情報を格納する XML プロパティ バッグ。|  
   
 ##  <a name="bkmk_executionlog"></a> ログのフィールド (ExecutionLog)  
  ExecutionLog ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
@@ -349,21 +349,21 @@ select * from ExecutionLog order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|[列]|[説明]|  
+|列|[説明]|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
 |ReportID|レポート識別子。|  
 |UserName|ユーザー識別子。|  
-|RequestType|有効値は次のとおりです。<br /><br /> True = サブスクリプション要求<br /><br /> False = 対話型の要求|  
+|RequestType|指定できる値<br /><br /> True = サブスクリプション要求<br /><br /> False = 対話型の要求|  
 |Format|表示形式。|  
-|Parameters|レポート実行に使用するパラメーター値。|  
+|パラメーター|レポート実行に使用するパラメーター値。|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
-|状態|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
+|source|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
+|Status|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
   

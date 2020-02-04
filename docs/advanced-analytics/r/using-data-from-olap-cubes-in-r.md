@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2da5cbf0fd3fbc5b8fe1105261fff98625d590e5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727316"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R での OLAP キューブからのデータの使用
@@ -66,7 +66,7 @@ MDX クエリの作成を開始する際に役立つ用語を以下に示しま�
 
 + **整形式の MDX をコピーして貼り付けます。** 手動で作成し、任意の MDX クエリに貼り付けることができます。 このオプションは、再利用する既存の MDX クエリがある場合、または構築するクエリが複雑すぎて **olapR** で処理できない場合に最適です。
 
-    SSMS や Excel など、任意のクライアント ユーティリティを使用して MDX を構築した後、クエリ文字列を保存します。 この MDX 文字列を、**olapR** パッケージにおいて、*SSAS クエリハンドラー*の引数として指定します。 プロバイダーは、指定された Analysis Services サーバーに対してクエリを送信し、結果を R に戻します。 
+    SSMS や Excel など、任意のクライアント ユーティリティを使用して MDX を構築した後、クエリ文字列を保存します。 この MDX 文字列を、*olapR* パッケージにおいて、**SSAS クエリハンドラー**の引数として指定します。 プロバイダーは、指定された Analysis Services サーバーに対してクエリを送信し、結果を R に戻します。 
 
 MDX クエリを構築する方法や、既存の MDX クエリを実行する方法例については、「[How to Create MDX Queries using R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)」(R を使用して MDX クエリを作成する方法) を参照してください。
 

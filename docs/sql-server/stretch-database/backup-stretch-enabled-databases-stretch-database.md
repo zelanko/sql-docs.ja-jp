@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843833"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースのバックアップ (Stretch Database)
@@ -35,7 +35,7 @@ ms.locfileid: "73843833"
   
 Stretch 対応の SQL Server データベースをバックアップするには、現在使用している SQL Server のバックアップ方法を引き続き使用できます。 詳細については、「 [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。
   
- Stretch 対応の SQL Server データベースのバックアップには、ローカル データと、バックアップを実行した時点での移行対象データのみが含まれています (対象データとは、まだ移動されていないが、テーブルの移行設定に基づいて Azure に移行される予定のデータです)。これは**浅い**バックアップと呼ばれ、既に Azure に移行されたデータは含まれません。  
+ Stretch 対応の SQL Server データベースのバックアップには、ローカル データと、バックアップを実行した時点での移行対象データのみが含まれています (対象データとは、まだ移動されていないが、テーブルの移行設定に基づいて Azure に移行される予定のデータです)。これは **浅い** バックアップと呼ばれ、既に Azure に移行されたデータは含まれません。  
   
 ## <a name="back-up-your-remote-azure-data"></a>リモートの Azure データのバックアップ   
   
