@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd89359ecbcc920fe03ed4b2bc7d90fd01592476
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847563"
 ---
 # <a name="iclientvirtualdeviceset2openinsecondaryex-vdi"></a>IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 | VD_E_PROTOCOL | 仮想デバイス セットが開かれているか、またはセカンダリ クライアントからのオープン要求を受け入れる準備が仮想デバイス セットで整っていません。 |
 | VD_E_ABORT | 操作を中止しています。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 複数のプロセス モデルを使用している場合、セカンダリ クライアントの正常終了と異常終了を検出する役割は、プライマリ クライアントが担います。
 
@@ -53,6 +53,6 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 
 OpenInSecondaryEx により、元の SQL Server バージョン 7.0 インターフェイスで定義された元の IClientVirtualDeviceSet::OpenInSecondary が置き換えられます。 新しい開発では OpenInSecondaryEx を使用する必要があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

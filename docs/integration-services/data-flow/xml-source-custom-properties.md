@@ -11,10 +11,10 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52ce0e96ce131b1ea1a69f2ba9f7466850cbf4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290944"
 ---
 # <a name="xml-source-custom-properties"></a>XML 入力元のカスタム プロパティ
@@ -28,7 +28,7 @@ ms.locfileid: "71290944"
   
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|XML データへのアクセスに使用するモード。|  
+|AccessMode|整数|XML データへのアクセスに使用するモード。|  
 |UseInlineSchema|Boolean|XML ソース内のインライン スキーマ定義を使用するかどうかを示す値。 このプロパティの既定値は **False**です。|  
 |XMLData|String|XML データを取得するファイルまたは変数。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
 |XMLSchemaDefinition|String|スキーマ定義ファイル (.xsd) のパスおよびファイル名。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  

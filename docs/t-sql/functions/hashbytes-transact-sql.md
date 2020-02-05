@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982932"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
@@ -62,14 +62,14 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="return-value"></a>戻り値  
  **varbinary** (最大 8,000 バイト)  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ハッシュ値を計算するための別の方法として、`CHECKSUM` または `BINARY_CHECKSUM` の使用を検討してください。
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、MD2、MD4、MD5、SHA、SHA1 のアルゴリズムは非推奨です。 代わりに SHA2_256 または SHA2_512 を使用してください。 以前のアルゴリズムは引き続き機能しますが、Deprecation イベントが発生します。
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="return-the-hash-of-a-variable"></a>変数のハッシュを返す  
- 次の例では、変数 `@HashThis` に格納されている **nvarchar** 型のデータの `SHA2_256` ハッシュを返します。  
+ 次の例では、変数 `SHA2_256` に格納されている **nvarchar** 型のデータの `@HashThis` ハッシュを返します。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>テーブル列のハッシュを返す  
- 次の例では、テーブル `Test1` 内の列 `c1` の値の SHA2_256 ハッシュを返します。  
+ 次の例では、テーブル `c1` 内の列 `Test1` の値の SHA2_256 ハッシュを返します。  
   
 ```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(32));  

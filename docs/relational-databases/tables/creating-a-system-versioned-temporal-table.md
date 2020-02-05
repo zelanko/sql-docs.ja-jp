@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165224"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - **PERIOD** 列は、null 値許容性が指定されていない場合でも、常に null 値非許容と見なされます。 **PERIOD** 列が明示的に Null 許容として定義されている場合、**CREATE TABLE** ステートメントは失敗します。
 - 履歴テーブルは、列の数、列名、順序、データ型に関して、現在のテーブルまたはテンポラル テーブルと常にスキーマが整合している必要があります。
 - 匿名履歴テーブルは、現在のテーブルまたはテンポラル テーブルと同じスキーマで自動的に作成されます。
-- 匿名履歴テーブルの名前は次の形式になります。*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* 。 サフィックスは省略可能であり、テーブル名の最初の部分が一意ではない場合にのみ追加されます。
+- 匿名履歴テーブル名の形式は、*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* です。 サフィックスは省略可能であり、テーブル名の最初の部分が一意ではない場合にのみ追加されます。
 - 履歴テーブルは、行ストア テーブルとして作成されます。 可能な場合はページの圧縮が適用されます。不可能な場合は、履歴テーブルは圧縮されません。 たとえば、スパース列などの一部のテーブル構成では、圧縮は許可されません。
 - 履歴テーブルの既定のクラスター化インデックスは、*IX_<history_table_name>* という形式の自動生成される名前で作成されます。 クラスター化インデックスには、 **PERIOD** 列 (終了、開始) が含まれます。
 - メモリ最適化テーブルとして現在のテーブルを作成する場合は、「 [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)」を参照してください。

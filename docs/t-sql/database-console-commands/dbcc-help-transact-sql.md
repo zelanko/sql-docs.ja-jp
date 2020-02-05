@@ -19,10 +19,10 @@ ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: eaad7e6f3e66bb39ec43f402c531b7f89bdcf980
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251386"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
@@ -55,7 +55,7 @@ DBCC HELP は、指定された DBCC コマンドの構文を示す結果セッ�
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a-using-dbcc-help-with-a-variable"></a>A. DBCC HELP と変数  
 次の例では、DBCC `CHECKDB` に関する構文情報を返します。
   

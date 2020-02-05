@@ -18,10 +18,10 @@ ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066157"
 ---
 # <a name="stx-geometry-data-type"></a>STX (geometry データ型)
@@ -39,14 +39,14 @@ ms.locfileid: "68066157"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型:**SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスが地点ではない場合、このプロパティの値は NULL になります。  
   
  このプロパティは読み取り専用です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Point` インスタンスを作成し、`STX` を使用して、このインスタンスの X 座標を取得する例を次に示します。  
   
 ```  

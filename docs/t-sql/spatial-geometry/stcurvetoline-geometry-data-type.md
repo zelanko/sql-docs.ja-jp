@@ -15,10 +15,10 @@ ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930308"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (geometry データ型)
@@ -36,9 +36,9 @@ ms.locfileid: "67930308"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  空の **geometry** インスタンス変数に空の **GeometryCollection** インスタンスを返し、初期化されていない **geometry** 変数に **NULL** を返します。  
   
  メソッドによって返される多角形近似は、メソッドの呼び出しに使用した **geometry** インスタンスによって変わります。  
@@ -47,11 +47,11 @@ ms.locfileid: "67930308"
   
 -   **CurvePolygon** インスタンスに対して **Polygon** インスタンスを返します。  
   
--   そのインスタンスが **CircularString**、**CompoundCurve**、**CurvePolygon** インスタンスではない場合、**geometry** インスタンスのコピーを返します。 たとえば、**Point** インスタンスである **geometry** インスタンスに対しては、`STCurveToLine` メソッドは **Point** インスタンスを返します。  
+-   そのインスタンスが **CircularString**、**CompoundCurve**、**CurvePolygon** インスタンスではない場合、**geometry** インスタンスのコピーを返します。 たとえば、`STCurveToLine`Point**インスタンスである**geometry **インスタンスに対しては、** メソッドは **Point** インスタンスを返します。  
   
  SQL/MM 仕様とは異なり、`STCurveToLine` メソッドでは、多角形近似の計算に z 座標の値が使用されません。 このメソッドでは、呼び出し元 **geography** インスタンスに存在する z 座標値は無視されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. 初期化されていないジオメトリ変数と空のインスタンスを使用する  
  次の例では、最初の **SELECT** ステートメントで初期化されていない **geometry** インスタンスを使用して `STCurveToLine` メソッドを呼び出し、2 つ目の **SELECT** ステートメントで空の **geometry** インスタンスを使用します。 したがって、最初のステートメントには **NULL** が返され、2 つ目のステートメントには **GeometryCollection** コレクションが返されます。  
