@@ -11,10 +11,10 @@ ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d85df8c4d07a61c75dcb42eadbc9c7cdae4faad6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257973"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップを無効にする
@@ -22,7 +22,7 @@ ms.locfileid: "75257973"
   このトピックでは、データベース レベルとインスタンス レベルの両方で、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効または一時停止する方法について説明します。  
   
 ##  <a name="DatabaseDisable"></a> データベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にする  
- システム ストアド プロシージャの [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) を使用し、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定を無効にできます。 特定のデータベースの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を有効または無効にするには、 *\@enable_backup* を使用します。構成設定を有効にする場合は 1、無効にする場合は 0 を指定します。  
+ システム ストアド プロシージャの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]managed_backup.sp_backup_config_basic (Transact-SQL)[ を使用し、](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 設定を無効にできます。 特定のデータベースの  *の構成を有効または無効にするには、\@* enable_backup[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を使用します。構成設定を有効にする場合は 1、無効にする場合は 0 を指定します。  
   
 #### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>特定のデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にするには  
   
@@ -127,7 +127,7 @@ GO
     ```  
   
 ##  <a name="InstancePause"></a> インスタンス レベルで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を一時停止する  
- 一時的に少しの間 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを停止する必要が生じる場合があります。  マスターを切り替えるための **managed_backup.sp_backup_master_switch** システム ストアド プロシージャを使用すると、インスタンス レベルで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを無効にできます。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を再開するには、同じストアド プロシージャを使用します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にするか有効にするかを定義するには、\@state パラメーターが使用されます。  
+ 一時的に少しの間 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを停止する必要が生じる場合があります。  マスターを切り替えるための **managed_backup.sp_backup_master_switch** システム ストアド プロシージャを使用すると、インスタンス レベルで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを無効にできます。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を再開するには、同じストアド プロシージャを使用します。 \@ を無効にするか有効にするかを定義するには、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]state パラメーターが使用されます。  
   
 #### <a name="to-pause-includess_smartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>Transact-SQL を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを一時停止するには  
   

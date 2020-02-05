@@ -18,10 +18,10 @@ ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 45be9818ed599365ca50648cb08a1c65825d5a11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120999"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (geography データ型)
@@ -48,12 +48,12 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  CLR の戻り値の型:**Sql Geography**  
   
- OGC の型:**MultiPolygon**  
+ OGC の型: **MultiPolygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STMPolyFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

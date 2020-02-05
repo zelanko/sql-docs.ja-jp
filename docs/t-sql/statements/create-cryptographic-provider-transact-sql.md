@@ -23,10 +23,10 @@ ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d17e61de477b896a8fcdaead01d12674d3b9fddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68061019"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -51,7 +51,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  *path_of_DLL*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張キー管理インターフェイスを実装する .dll ファイルのパスを指定します。 **SQL Server コネクタ for Microsoft Azure Key Vault** を使うときの既定の場所は、 **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロバイダーによって作成されるキーはいずれも、プロバイダーをその GUID で参照します。 GUID は、DLL のすべてのバージョン間で保持されます。  
   
  SQLEKM インターフェイスを実装する DLL は、任意の証明書を使用して、デジタル署名する必要があります。 この署名は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって検証されます。 これにはその証明書チェーンも含まれます。証明書チェーンのルートは、Windows システムの**信頼されたルート証明機関**がある場所にインストールされている必要があります。 署名が正しく検証されなかった場合は、CREATE CRYPTOGRAPHIC PROVIDER ステートメントが失敗します。 証明書と証明書チェーンについて詳しくは、「[SQL Server の証明書と非対称キー](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
@@ -67,8 +67,8 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で .dll ファイルから `SecurityProvider` という暗号化サービス プロバイダーを作成します。 この .dll ファイルは `c:\SecurityProvider\SecurityProvider_v1.dll` という名前でサーバーにインストールされています。 最初にプロバイダーの証明書をサーバーにインストールする必要があります。  
+## <a name="examples"></a>例  
+ 次の例では、`SecurityProvider` で .dll ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という暗号化サービス プロバイダーを作成します。 この .dll ファイルは `c:\SecurityProvider\SecurityProvider_v1.dll` という名前でサーバーにインストールされています。 最初にプロバイダーの証明書をサーバーにインストールする必要があります。  
   
 ```  
 -- Install the provider  

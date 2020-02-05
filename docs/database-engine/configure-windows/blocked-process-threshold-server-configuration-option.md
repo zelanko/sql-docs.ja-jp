@@ -14,10 +14,10 @@ ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 84a94dc6b1d4f2f6f0c921f81746eb64f41d2f07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013115"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold サーバー構成オプション
@@ -33,7 +33,7 @@ ms.locfileid: "68013115"
   
  この設定は、サーバーを停止して再起動しなくてもすぐに有効になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `blocked process threshold` を `20` 秒に設定して、ブロックされたタスクごとに、ブロックされたプロセスのレポートを生成します。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 47fd42c05e5d370172ab648b54689f732a7ade34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894714"
 ---
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (geometry データ型)
@@ -38,7 +38,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>引数  
  *WKB_multilinestring*  
- 返される **geometryMultiLineString** インスタンスの WKB 表現です。 *WKB_multilinestring* は、**varbinary (max)** 式です。  
+ 返される **geometryMultiLineString** インスタンスの WKB 表現です。 *WKB_multilinestring* は、**varbinary(max)** 式です。  
   
  *SRID*  
  返される **geometryMultiLineString** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
@@ -46,14 +46,14 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- OGC の型:**MultiLineString**  
+ OGC の型: **MultiLineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STMLineFromWKB()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  

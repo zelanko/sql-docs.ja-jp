@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024907"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
@@ -88,13 +88,13 @@ ms.locfileid: "68024907"
   
 6.  **[インデックス キー列]** タブで、 **[追加...]** をクリックします。  
   
-7.  _[table\_name_ **から列を選択]** ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+7.  **[table**name _\_から列を選択]_ ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
 9. **[付加列]** タブで、 **[追加...]** をクリックします。  
   
-10. _[table\_name_ **から列を選択]** ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+10. **[table**name _\_から列を選択]_ ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 11. **[OK]** をクリックします。  
   

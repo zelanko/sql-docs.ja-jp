@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251295"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>インメモリ OLTP でのクエリ ストアの使用
@@ -45,9 +45,9 @@ ms.locfileid: "72251295"
   
 -   クエリ ストアではインメモリ OLTP のプラン生成メカニズムを活用して、コンパイル時にクエリ実行プランをキャプチャします。 ストアド プランは、 `SET SHOWPLAN_XML ON` を使用して取得するものと意味的には同じです。ただし、クエリ ストアのプランはステートメントごとに分割され、格納されます。  
     
--   混合ワークロードのデータベースでクエリ ストアを実行する場合は、[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) の **is_natively_compiled** フィールドを使用して、ネイティブ コード コンパイルで生成されたクエリ プランをすばやく見つけることができます。  
+-   混合ワークロードのデータベースでクエリ ストアを実行する場合は、**sys.query_store_plan &#40;Transact-SQL&#41;** の [is_natively_compiled](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) フィールドを使用して、ネイティブ コード コンパイルで生成されたクエリ プランをすばやく見つけることができます。  
   
--   クエリ ストアのキャプチャ モード (**ALTER TABLE** ステートメントの *QUERY_CAPTURE_MODE* パラメーター) が、ネイティブ コンパイル モジュールからのクエリに影響することはありません。構成値に関係なく、常にキャプチャされるためです。 これには `QUERY_CAPTURE_MODE = NONE`の設定も含まれます。  
+-   クエリ ストアのキャプチャ モード (*ALTER TABLE* ステートメントの **QUERY_CAPTURE_MODE** パラメーター) が、ネイティブ コンパイル モジュールからのクエリに影響することはありません。構成値に関係なく、常にキャプチャされるためです。 これには `QUERY_CAPTURE_MODE = NONE`の設定も含まれます。  
   
 -   クエリ ストアでキャプチャされるクエリ コンパイルの期間には、ネイティブ コードが生成される前に、クエリ最適化に要した時間のみが含まれます。 もっと正確に言うと、C コードのコンパイルおよび C コードの生成に必要な内部構造の生成に要した時間は含まれません。  
   
@@ -135,7 +135,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ```  
   
 ## <a name="see-also"></a>参照  
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

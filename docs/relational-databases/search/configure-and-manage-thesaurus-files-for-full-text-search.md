@@ -15,17 +15,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056201"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索クエリでは、フルテキスト検索の*類義語辞典*を使用して、ユーザーが指定した用語のシノニムを検索できます。 各々の類義語辞典では、特定の言語の一連のシノニムを定義します。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。
 
-類義語辞典の照合は、すべての [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) クエリと [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) クエリの場合と `FORMSOF THESAURUS` 句を指定する [CONTAINS](../../t-sql/queries/contains-transact-sql.md) クエリと [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリの場合に行われます。
+類義語辞典の照合は、すべての [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) クエリと [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) クエリの場合と [ 句を指定する ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ クエリと ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` クエリの場合に行われます。
   
 フルテキスト検索の類義語辞典は、XML テキスト ファイルです。
   
@@ -115,7 +115,7 @@ ms.locfileid: "74056201"
 </XML>  
 ```
 
-### <a name="expansion"></a> 拡張セットの XML 構造  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  各拡張セットは `<expansion>` 要素で囲みます。 この要素内に、`<sub>` 要素で囲んだ 1 つまたは複数の代替文字列を指定します。 拡張セットでは、互いにシノニムとなる代替文字列のグループを指定できます。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74056201"
 </expansion>  
 ```  
   
-### <a name="replacement"></a> 置換セットの XML 構造  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 各置換セットは `<replacement>` 要素で囲みます。 この要素内に、`<pat>` 要素で囲んだ 1 つ以上のパターンと `<sub>` 要素で囲んだ 0 個以上の代替文字列 (シノニムごとに 1 つ) を指定できます。 ここで指定するパターンが代替セットで置き換えられます。 パターンと代替文字列には、語または語の並びを含めることができます。 パターンに対して代替文字列が指定されていない場合は、ユーザー クエリからパターンが削除されます。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "74056201"
 </replacement>  
 ```  
   
-クエリと  
+and  
   
 ```xml  
 <replacement>  
@@ -170,7 +170,7 @@ ms.locfileid: "74056201"
   
 類義語辞典の分音文字の設定は、単一の `<diacritics_sensitive>` 要素で指定されます。 この要素には、次のようにアクセントの区別を制御する整数値が含まれます。  
   
-|分音文字の設定|[値]|XML|  
+|分音文字の設定|値|XML|  
 |------------------------|-----------|---------|  
 |アクセントを区別しない|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |アクセントを区別する|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

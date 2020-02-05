@@ -14,10 +14,10 @@ ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558140"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ
@@ -25,7 +25,7 @@ ms.locfileid: "75558140"
   このダイアログ ボックスを使用すると、ポリシー ベースの管理条件を作成または変更できます。 条件とは、ポリシー ベースの管理で管理する対象に許可されている状態のセットをファセットについて指定するブール式です。 **[式]/[フィールド]** ボックスで選択できるプロパティは、使用するファセットによって異なります。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **Name**  
+ **名前**  
  新しい条件の場合は、新しい条件名を入力します。 既存の条件の場合は、その名前が表示されます。  
   
  **ファセット**  
@@ -41,7 +41,7 @@ ms.locfileid: "75558140"
  この式の比較演算子を選択します。 演算子には、=、!=、>、>=、<、<=、[NOT]LIKE、[NOT]IN があります。 プロパティによっては、使用できない演算子もあります。  
   
  **Value**  
- この式の値の設定。 許容値は、ファセットによって異なります。 値は、TRUE/FALSE、文字列、または数値です。 文字列値は、一重引用符で囲む必要があります。たとえば、 **'AdventureWorks'** です。 プロパティによっては、使用できない演算子もあります。  
+ この式の値の設定。 許容値は、ファセットによって異なります。 値は、TRUE/FALSE、文字列、または数値です。 文字列値は、 **'AdventureWorks'** のように、一重引用符で囲む必要があります。 プロパティによっては、使用できない演算子もあります。  
   
 ## <a name="group-clauses"></a>句のグループ化  
  句をグループ化すると、クエリの他の部分とは別個の、単一のまとまりとして操作できます。これは、数式や論理ステートメントで式の前後をかっこで囲むのと似ています。 句のグループ化は、複雑なクエリを作成するときに役立ちます。  

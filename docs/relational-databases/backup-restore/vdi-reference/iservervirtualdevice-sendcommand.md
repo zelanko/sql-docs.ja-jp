@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c75cd206557547f55d47eec0a7aec52cc0069b71
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847513"
 ---
 # <a name="iservervirtualdevicesendcommand-vdi"></a>IServerVirtualDevice::SendCommand (VDI)
@@ -49,7 +49,7 @@ void callbackFunction ( VDS_Command *pCmd);
 | VD_E_IO_ERROR | デバイスは IO エラー状態です。 |
 | VD_E_PROTOCOL | デバイスがアクティブではありません。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 コマンドを送信しようとしてエラーが発生すると、コールバック関数が呼び出され、コマンド バッファー内の completionCode が次のように設定されます。
 
@@ -60,6 +60,6 @@ void callbackFunction ( VDS_Command *pCmd);
 | VD_E_PROTOCOL   | ERROR_INVALID_HANDLE |
 | VD_E_ABORT      | ERROR_OPERATION_ABORTED |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

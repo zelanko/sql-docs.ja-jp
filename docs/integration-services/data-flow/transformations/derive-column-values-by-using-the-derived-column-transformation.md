@@ -16,10 +16,10 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a8b9d523f3c0edd3a642caba8efc2396267e141
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291482"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>派生列変換を使用して列の値を取得する
@@ -68,6 +68,6 @@ ms.locfileid: "71291482"
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
  [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services (SSIS) 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

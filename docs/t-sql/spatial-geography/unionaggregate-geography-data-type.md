@@ -18,10 +18,10 @@ ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 17c5ec83217c072ada5d112bab1dd4f0105e0971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120669"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (geography データ型)
@@ -43,7 +43,7 @@ UnionAggregate ( geography_operand )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  入力の SRID が異なる場合、メソッドでは **null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
@@ -51,8 +51,8 @@ UnionAggregate ( geography_operand )
 > [!NOTE]  
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
-## <a name="examples"></a>使用例  
- 次の例は、都市内の **geography** ロケーション ポイントのセットで `UnionAggregate` を実行します。  
+## <a name="examples"></a>例  
+ 次の例は、都市内の `UnionAggregate`geography**ロケーション ポイントのセットで** を実行します。  
   
  ```
  USE AdventureWorks2012  

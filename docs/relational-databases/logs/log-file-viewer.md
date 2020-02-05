@@ -13,10 +13,10 @@ ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084074"
 ---
 # <a name="log-file-viewer"></a>ログ ファイルの表示
@@ -28,7 +28,7 @@ ms.locfileid: "68084074"
   
 -   監査コレクション  
   
--   データ コレクション  
+-   データ収集  
   
 -   データベース メール  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68084074"
 |[ログ ファイルの表示] の F1 ヘルプを提供します。|[[ログ ファイルの表示] の F1 ヘルプ](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server エージェント エラー ログ](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

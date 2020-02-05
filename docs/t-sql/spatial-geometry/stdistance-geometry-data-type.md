@@ -18,10 +18,10 @@ ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2b159a11227792ddf445088162a832b0d897deec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107799"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry データ型)
@@ -38,17 +38,17 @@ ms.locfileid: "68107799"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- `STDistance()` を呼び出したインスタンスまでの距離が測定される、別の **geometry** インスタンスです。 *other_geometry* が空のセットである場合、`STDistance()` は NULL を返します。  
+ **を呼び出したインスタンスまでの距離が測定される、別の**geometry`STDistance()` インスタンスです。 *other_geometry* が空のセットである場合、`STDistance()` は NULL を返します。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型:**SqlDouble**  
+ CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STDistance()` は常に null を返します。  
+## <a name="remarks"></a>解説  
+ `STDistance()`geometry **インスタンスの SRID (spatial reference ID) が一致しない場合、** は常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```  
 DECLARE @g geometry;  

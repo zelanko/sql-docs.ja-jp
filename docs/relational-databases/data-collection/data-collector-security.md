@@ -14,10 +14,10 @@ ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140738"
 ---
 # <a name="data-collector-security"></a>データ コレクターのセキュリティ
@@ -32,7 +32,7 @@ ms.locfileid: "68140738"
 ## <a name="general-security"></a>全般的なセキュリティ  
  データ コレクターは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の文書化されている標準に従ってインストールされます。  
   
-### <a name="network-security"></a>ネットワーク セキュリティ  
+### <a name="network-security"></a>ネットワークのセキュリティ  
  対象のインスタンス、構成サーバーに関連付けられているリレーショナル インスタンス、実行中のコレクション セット、および管理データ ウェアハウスをホストするサーバーの間で、秘密情報がやり取りされる可能性があります。  
   
  ネットワークで送信されるデータを保護するために、標準のセキュリティ メカニズム ( [!INCLUDE[tsql](../../includes/tsql-md.md)]のプロトコル暗号化など) が実装されています。  
@@ -53,7 +53,7 @@ ms.locfileid: "68140738"
 > [!IMPORTANT]  
 >  db_ssisadmin ロールおよび dc_admin ロールのメンバーは、特権を sysadmin に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを変更でき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェントの sysadmin セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージを実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、db_ssisadmin ロールおよび dc_admin ロールには sysadmin メンバーのみを追加するようにします。  
   
-### <a name="dcadmin-role"></a>dc_admin ロール  
+### <a name="dc_admin-role"></a>dc_admin ロール  
  **dc_admin** ロールに割り当てられたユーザーには、サーバー インスタンス上のデータ コレクターの構成への完全な管理者アクセス権 (作成、読み取り、更新、および削除) が与えられます。 このロールのメンバーが実行できる操作を以下に示します。  
   
 -   コレクター レベルのプロパティの設定  
@@ -73,7 +73,7 @@ ms.locfileid: "68140738"
   
 -   **dc_operator**。 **dc_admin** のメンバーは、 **dc_operator**に与えられている権限を継承します。  
   
-### <a name="dcoperator-role"></a>dc_operator ロール  
+### <a name="dc_operator-role"></a>dc_operator ロール  
  **dc_operator** ロールのメンバーには、読み取りと更新のアクセス権が与えられます。 このロールは、コレクション セットの実行と構成に関連する操作タスクをサポートします。 このロールのメンバーが実行できる操作を以下に示します。  
   
 -   コレクション セットの開始または停止  
@@ -94,7 +94,7 @@ ms.locfileid: "68140738"
   
  詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
   
-### <a name="dcproxy-role"></a>dc_proxy ロール  
+### <a name="dc_proxy-role"></a>dc_proxy ロール  
  **dc_proxy** ロールのメンバーには、データ コレクターのコレクション セットとコレクター レベルのプロパティへの読み取りアクセス権が与えられます。 自身が所有するジョブを実行したり、既存のプロキシ アカウントとして実行するジョブ ステップを作成したりすることもできます。  
   
  このロールのメンバーが実行できる操作を以下に示します。  
@@ -126,7 +126,7 @@ ms.locfileid: "68140738"
   
  固定サーバー ロール **sysadmin** のメンバーであるユーザーは、データ コレクター ビューへのフル アクセスを許可されています。 しかし、その他の操作を実行するには、明示的にデータベース ロールに追加する必要があります。  
   
-### <a name="mdwadmin-role"></a>mdw_admin ロール  
+### <a name="mdw_admin-role"></a>mdw_admin ロール  
  **mdw_admin** ロールのメンバーには、管理データ ウェアハウスへの読み取り、書き込み、更新、および削除のアクセス権が与えられます。  
   
  このロールのメンバーが実行できる操作を以下に示します。  
@@ -138,10 +138,10 @@ ms.locfileid: "68140738"
   
 -   管理データ ウェアハウスのメンテナンス ジョブ (アーカイブやクリーンアップなど) を実行する  
   
-### <a name="mdwwriter-role"></a>mdw_writer ロール  
+### <a name="mdw_writer-role"></a>mdw_writer ロール  
  **mdw_writer** ロールのメンバーは、管理データ ウェアハウスへのデータのアップロードや書き込みを行うことができます。 管理データ ウェアハウスにデータを格納するデータ コレクターはすべてこのロールのメンバーである必要があります。  
   
-### <a name="mdwreader-role"></a>mdw_reader ロール  
+### <a name="mdw_reader-role"></a>mdw_reader ロール  
  **mdw_reader** ロールのメンバーには、管理データ ウェアハウスへの読み取りアクセス権が与えられます。 このロールの目的は、履歴データへのアクセスを提供してトラブルシューティングをサポートすることであるため、このロールのメンバーは、管理データ ウェアハウスのスキーマのその他の要素を表示することはできません。  
   
 ## <a name="see-also"></a>参照  

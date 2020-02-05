@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816843"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
@@ -50,7 +50,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 PASSWORD ='*password*' は、データベース内のマスター キーの暗号化に使用されているパスワードです。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。 *password* は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] では省略可能です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内に存在する非対称キーを保護するときに使用します。 データベース マスター キーを作成するときには、AES_256 アルゴリズムとユーザー指定のパスワードを使用してマスター キーを暗号化します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] では、トリプル DES アルゴリズムを使用します。 マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してキーのコピーを暗号化し、データベースと master の両方に格納します。 通常、master に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 この既定の設定は、[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) の DROP ENCRYPTION BY SERVICE MASTER KEY オプションを使って変更できます。 サービス マスター キーによって暗号化されていないマスター キーは、[OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) ステートメントとパスワードを使って開かれている必要があります。
 
@@ -71,7 +71,7 @@ SQL Server および Parallel Data Warehouse では、通常、マスター キ�
 
 データベースに対する CONTROL 権限が必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 `master` データベースにデータベース マスター キーを作成するには、次の例を使用します。 このキーは、パスワード `23987hxJ#KL95234nl0zBe` を使用して暗号化されます。
 

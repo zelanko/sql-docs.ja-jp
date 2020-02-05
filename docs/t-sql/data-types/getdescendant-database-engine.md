@@ -18,10 +18,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077971"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (データベース エンジン)
@@ -53,7 +53,7 @@ NULL または現在のノードの子の **hierarchyid**。
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 親の子孫である 1 つの子ノードを返します。
 -   parent が NULL の場合、NULL を返します。  
 -   parent が NULL でなく、child1 と child2 の両方が NULL の場合、parent の子を返します。  
@@ -66,7 +66,7 @@ NULL または現在のノードの子の **hierarchyid**。
   
 GetDescendant は決定的です。 そのため場合、 GetDescendant と呼ばれるは、同じ入力でが同じ出力常に生成されます。 ただし、生成された子の正確な ID は、例 C に示されているように、他のノードとの関係によって異なります。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. 最も小さい子孫ノードとして行を挿入  
 ノード `/3/1/` の既存の従業員の部下として新しい従業員が採用されました。 使用して、新しい行を挿入するには、次のコードの実行、 GetDescendant メソッドとして、新しい行のノードを指定する引数を指定しないで /3 1/1/:`/3/1/1/`

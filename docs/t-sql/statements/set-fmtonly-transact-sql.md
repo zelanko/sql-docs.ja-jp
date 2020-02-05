@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d150082120cde1b09d3437a27b2345b036daf8b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929024"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "67929024"
 SET FMTONLY { ON | OFF }   
 ```  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `FMTONLY` が `ON` のとき、行セットは列名と共に返されますが、データ行なしになります。
 
@@ -62,7 +62,7 @@ Transact-SQL バッチが解析されるとき、`SET FMTONLY ON` からは何�
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の Transact-SQL コード例では `FMTONLY` が `ON` に設定されます。 この設定により、選択した列に関するメタデータ情報のみが SQL Server から返されます。 具体的には、列名が返されます。 データ行は返されません。
 

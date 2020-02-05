@@ -20,10 +20,10 @@ ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 11fe7041212c668855c86664362d555696f36bbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017570"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (geometry データ型)
@@ -43,11 +43,11 @@ GML (Geography Markup Language) の詳細については、Open Geospatial Conso
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **xml**  
   
- CLR の戻り値の型:**SqlXml**  
+ CLR 戻り値の型: **SqlXml**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `LineString` インスタンスを作成し、`AsGML()` を使用して、インスタンスの GML 表現を返す例を次に示します。  
   
 ```  

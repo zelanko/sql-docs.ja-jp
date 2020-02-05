@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6d90be401f00ebf8e84d4d54e6deb86baa4c3bb4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 70d536ba9c0e4ae8c62c167397bd56686b8abab2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768800"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288226"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>一般にバックアップの更新が必要になるアクション
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -109,6 +109,6 @@ ms.locfileid: "68768800"
   
 ## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases (レプリケートされたデータベースのバックアップと復元)](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
+ [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   
   

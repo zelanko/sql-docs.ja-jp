@@ -18,16 +18,16 @@ ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e48cea62df1e0828a583cfccf35fc4bedf7358cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101270"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-GML (Geography Markup Language) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブセットによる表現が指定された **geometry** インスタンスを構築します。
+GML (Geography Markup Language) の **サブセットによる表現が指定された**geometry[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを構築します。
   
 GML (Geography Markup Language) の詳細については、以下の Open Geospatial Consortium (OGC) 仕様を参照してください。
   
@@ -50,12 +50,12 @@ GeomFromGml ( GML_input, SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `GeomFromGml()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  

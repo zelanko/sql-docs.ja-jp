@@ -20,10 +20,10 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72989564"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>データベースを新しい場所に復元する (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "72989564"
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
+-   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
 
 -   暗号化されたデータベースを復元するには、 **データベースを暗号化するために使用した証明書や非対称キーにアクセスする必要があります**。 この証明書または非対称キーがないとデータベースを復元できません。 バックアップが必要な間は、データベースの暗号化キーの暗号化に使用した証明書を保持する必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72989564"
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
-         **[ソース: デバイス: データベース]** リスト ボックスで、復元するデータベースの名前を選択します。  
+         **[ソース: デバイス: データベース]** ボックスの一覧で、復元するデータベースの名前を選択します。  
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "72989564"
   
   { DISK | TAPE } **=** _physical_backup_device_name_  
   
-  詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
+  詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   
   { **RECOVERY** | NORECOVERY }  
   データベースで完全復旧モデルを使用している場合は、データベースの復元後にトランザクション ログ バックアップを適用しなければならない場合があります。 この場合は、NORECOVERY オプションを指定します。  
@@ -160,16 +160,16 @@ ms.locfileid: "72989564"
   MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
   *logical_file_name_in_backup* で指定されるデータまたはログ ファイルが、 *operating_system_file_name*で指定される位置に復元されることを指定します。 バックアップ セットから新しい位置に復元する論理ファイルごとに、MOVE ステートメントを指定してください。  
   
-  |オプション|Description|  
+  |オプション|[説明]|  
   |------------|-----------------|  
-  |*logical_file_name_in_backup*|バックアップ セット内のデータまたはログ ファイルの論理名を指定します。 バックアップ セット内のデータ ファイルまたはログ ファイルの論理ファイル名は、バックアップ セットが作成されたときのデータベース内における論理名と同じです。<br /><br /> <br /><br /> 注:バックアップ セットに含まれる論理ファイルの一覧を取得するには、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) を使用します。|  
+  |*logical_file_name_in_backup*|バックアップ セット内のデータまたはログ ファイルの論理名を指定します。 バックアップ セット内のデータ ファイルまたはログ ファイルの論理ファイル名は、バックアップ セットが作成されたときのデータベース内における論理名と同じです。<br /><br /> <br /><br /> 注: バックアップ セットに含まれる論理ファイルの一覧を取得するには、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)を使用します。|  
   |*operating_system_file_name*|*logical_file_name_in_backup*で指定したファイルの新しい場所を指定します。 ファイルはこの場所に復元されます。<br /><br /> 必要に応じて、 *operating_system_file_name* に復元するファイルの新しいファイル名を指定します。 これは、同じサーバー インスタンスで既存のデータベースのコピーを作成する場合に必要です。|  
   |*n*|追加の MOVE ステートメントを指定できることを示すプレースホルダーです。|  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、 `MyAdvWorks` サンプル データベースのバックアップを復元して、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] という名前の新しいデータベースを作成します。このデータベースには、2 つのファイル、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log が含まれます。 このデータベースは、単純復旧モデルを使用しています。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースはサーバー インスタンスに既に存在するため、バックアップ内のファイルを新しい場所に復元する必要があります。 RESTORE FILELISTONLY ステートメントは、復元するデータベース内のファイル数と名前を判断するために使用します。 データベース バックアップは、バックアップ デバイスの 1 番目のバックアップ セットです。  
   
-> **注:** 特定日時への復元を含む、トランザクション ログのバックアップと復元の例では、次の `MyAdvWorks_FullRM` の例と同様、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] から作成した `MyAdvWorks` データベースを使用します。 ただし、作成された `MyAdvWorks_FullRM` データベースは、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って、完全復旧モデルを使用するように変更する必要があります:ALTER DATABASE <データベース名> SET RECOVERY FULL。  
+> **注:** 特定日時への復元を含む、トランザクション ログのバックアップと復元の例では、次の `MyAdvWorks_FullRM` の例と同様、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] から作成した `MyAdvWorks` データベースを使用します。 ただし、作成された `MyAdvWorks_FullRM` データベースは、ALTER DATABASE <database_name> SET RECOVERY FULL という [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って、完全復旧モデルを使用するように変更する必要があります。  
   
 ```sql  
 USE master;  

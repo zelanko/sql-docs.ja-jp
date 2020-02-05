@@ -18,10 +18,10 @@ ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 34fcb2841d414d56a8718f3864039aa85d390d85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042099"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (geography データ型)
@@ -48,16 +48,16 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
- `STGeomFromText()` によって返された **geography** インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
+## <a name="remarks"></a>解説  
+ **によって返された**geography`STGeomFromText()` インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
   
- このメソッドは、入力が整形式でない場合に、**FormatException** をスローします。  
+ このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
  このメソッドは、入力に対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STGeomFromWKB()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

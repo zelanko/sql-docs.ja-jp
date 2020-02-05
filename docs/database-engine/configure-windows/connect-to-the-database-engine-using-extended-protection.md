@@ -18,10 +18,10 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012098"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
@@ -49,7 +49,7 @@ ms.locfileid: "68012098"
  チャネル バインドでは、クライアントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス インスタンスとの間に、セキュリティで保護されたチャネル (Schannel) を確立します。 サービスでは、クライアントとサービス自身のチャネル固有のチャネル バインド トークン (CBT) を比較することにより、クライアントが本物かどうかが確認されます。 チャネル バインドでは、おびき寄せによる攻撃となりすましによる攻撃の両方に対処できますが、 すべてのセッション トラフィックのトランスポート層セキュリティ (TLS) 暗号化が必要になるため、実行時のコストが大きくなります。 チャネル バインドが発生するのは、暗号化がクライアントとサーバーのどちらで強制されているかにかかわらず、クライアント アプリケーションが暗号化を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続する場合です。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダーでは、SSL 3.0、TLS 1.0 がサポートされています。 オペレーティング システムの SChannel 層を変更して別のプロトコル (TLS 1.1、TLS 1.2 など) を適用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続に失敗する可能性があります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ プロバイダーでは、SSL 3.0、TLS 1.0 がサポートされています。 オペレーティング システムの SChannel 層を変更して別のプロトコル (TLS 1.1、TLS 1.2 など) を適用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続に失敗する可能性があります。  
   
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート  
  Windows による **拡張保護**のサポートの詳細については、以下のリンク先を参照してください。  
@@ -58,7 +58,7 @@ ms.locfileid: "68012098"
   
 -   [マイクロソフト セキュリティ アドバイザリ (973811)、認証の拡張保護](/security-updates/SecurityAdvisories/2009/973811)
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  サービス バインドとチャネル バインドに影響する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続設定は 3 つあります。 これらの設定を構成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは WMI を使用します。これらの設定を表示するには、ポリシー ベースの管理の **[サーバー プロトコル設定]** ファセットを使用します。  
   
 -   **[強制的に暗号化]**  

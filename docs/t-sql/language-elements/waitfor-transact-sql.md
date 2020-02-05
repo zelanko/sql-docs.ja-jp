@@ -27,10 +27,10 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086111"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
@@ -84,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  TIMEOUT が指定された WAITFOR は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージに対してのみ適用できます。 詳細については、「[RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)」と「[GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  WAITFOR ステートメントを実行している間は、トランザクションが実行され、その他のリクエストは同じトランザクションの下で実行することはできません。  
   
  実際の遅延時間は *time_to_pass*、*time_to_execute* または *timeout* で指定される時間によって異なり、サーバーの利用状況レベルにも依存します。 時間のカウンターは、WAITFOR ステートメント スレッドがスケジュールされた時点から開始します。 サーバーがビジーの場合、スレッドはすぐにスケジュールされない場合があるので、遅延時間は指定した時間よりも長くなることがあります。  
@@ -104,7 +104,7 @@ WAITFOR
 > [!CAUTION]  
 >  WAITFOR を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの完了が遅くなり、その結果、アプリケーションでタイムアウト メッセージが表示される可能性があります。 必要に応じて、アプリケーション レベルで接続のタイムアウト設定を調整してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-waitfor-time"></a>A. WAITFOR TIME を使用する  
  次の例では、午後 10 時 20 分に msdb データベースでストアド プロシージャ `sp_update_job` を実行します。 (`22:20`)。  
@@ -169,7 +169,7 @@ GO
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
 ## <a name="see-also"></a>参照  
- [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   

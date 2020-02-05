@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75720819"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
@@ -47,7 +47,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 連結時に式は `NVARCHAR` または `VARCHAR` 型に変換されます。 文字列以外の型は `NVARCHAR` 型に変換されます。
 
 *separator*  
-連結される文字列の区切り記号として使用される `NVARCHAR` または `VARCHAR` 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 リテラルまたは変数を使用できます。 
+連結される文字列の区切り記号として使用される [ または ](../../t-sql/language-elements/expressions-transact-sql.md) 型の`NVARCHAR`式`VARCHAR`です。 リテラルまたは変数を使用できます。 
 
 <order_clause>   
 必要に応じて、`WITHIN GROUP` 句を使用して連結結果の順序を指定します。
@@ -96,7 +96,7 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`name` セルにある `NULL` 値は結果で返されません。   
+`NULL` セルにある `name` 値は結果で返されません。   
 
 > [!NOTE]  
 >  Management Studio のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、 **[結果をテキストで表示]** に切り替えてください。   
@@ -153,7 +153,7 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals|
 
 > [!NOTE]
-> `STRING_AGG` 関数が `SELECT` 一覧内の唯一の項目ではない場合は、`GROUP BY` 句が必要です。
+> `GROUP BY` 関数が `STRING_AGG` 一覧内の唯一の項目ではない場合は、`SELECT` 句が必要です。
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 町ごとの電子メール アドレスのリストを生成する
 

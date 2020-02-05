@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032392"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - SQL Server on Linux
@@ -32,11 +32,11 @@ Linux 上に SQL Server FCI を作成するには、[Linux 上の SQL Server FCI
 
 * SLES では、クラスタリング レイヤーは、SUSE Linux Enterprise [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) に基づいています。
 
-    クラスター構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、「[SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)」を参照してください。
+    クラスター構成、リソース エージェントのオプション、管理、ベスト プラクティス、推奨事項の詳細については、「[SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)」を参照してください。
 
 RHEL HA アドオンと SUSE HAE は、どちらも [Pacemaker](https://clusterlabs.org/) 上に構築されます。
 
-次の図に示すように、2 台のサーバーに対してストレージが提示されます。 クラスタリング コンポーネント (Corosync と Pacemaker) によって、通信とリソース管理が調整されます。 1 台のサーバーで、ストレージ リソースと SQL Server へのアクティブ接続が行われます。 Pacemaker で障害が検出されると、クラスタリング コンポーネントによって、他のノードへのリソースの移動が管理されます。  
+次の図に示すように、2 台のサーバーに対してストレージが提示されます。 クラスタリング コンポーネント (Corosync と Pacemaker) によって、通信とリソース管理が調整されます。 1 台のサーバーで、ストレージ リソースと SQL Server へのアクティブ接続が行われます。 Pacemaker で障害が検出されると、クラスタリング コンポーネントによって他のノードへのリソースの移動が管理されます。  
 
 ![Red Hat Enterprise Linux 7 共有ディスク SQL クラスター](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 

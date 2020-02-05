@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165459"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
@@ -52,9 +52,9 @@ ms.locfileid: "74165459"
 
 内部メモリ最適化ステージング テーブルは、DML の操作を最適化するためにシステムによって作成される内部オブジェクトです。
 
-- テーブル名は次の形式で生成されます。**Memory_Optimized_History_Table_<object_id>** 。この *<object_id>* は現在のテンポラル テーブルの識別子です。
+- テーブル名は、**Memory_Optimized_History_Table_<object_id>** という形式で生成されます。 *<object_id>* は、現在のテンポラル テーブルの識別子です。
 - テーブルは、現在のテンポラル テーブルのスキーマに加えて、1 つの BIGINT 列をレプリケートします。 この追加される列により、内部履歴バッファーに移動される行の一意性が保証されます。
-- 追加列の名前は次の形式です。**Change_ID[_< suffix>]** 。この *_\<suffix>* は省略可能であり、*Change_ID* 列がテーブルに既にある場合に追加されます。
+- 追加列の名前は、**Change_ID[_< suffix>]** という形式です。 *_\<suffix>* はオプションであり、*Change_ID* 列がテーブルに既にある場合に追加されます。
 - システム バージョン管理されたメモリ最適化テーブルの最大行サイズは、ステージング テーブルに追加される BIGINT 列のため、8 バイトだけ小さくなります。 新しい最大値は、8052 バイトです。
 - 内部メモリ最適化ステージング テーブルは、SQL Server Management Studio のオブジェクト エクスプローラーには表されません。
 - このテーブルに関するメタデータおよび現在のテンポラル テーブルとの接続については、「[sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)」を参照してください。

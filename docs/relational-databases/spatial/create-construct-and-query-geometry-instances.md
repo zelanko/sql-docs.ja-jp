@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f3b5cc1721483534307acf797a58e4dc70b5c81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048734"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry インスタンスの作成、構築、およびクエリ
@@ -72,7 +72,7 @@ ms.locfileid: "68048734"
  **geometry** データ型には、Open Geospatial Consortium (OGC) WKT 表現からジオメトリを生成する組み込みのメソッドが数多く用意されています。 WKT 標準は geometry データをテキスト形式で交換できるテキスト文字列です。  
   
  **WKT 入力から任意の型の geometry インスタンスを構築するには**  
- [STGeomFromText &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)  
+ [STGeomFromText#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)  
   
  [Parse &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
@@ -271,7 +271,7 @@ SELECT @g.STBoundary().ToString();
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a> 閉鎖性  
- _閉じている_ **geometry** インスタンスは、始点と終点が同じである図形です。 **Polygon** インスタンスは閉じていると見なされます。 **Point** インスタンスは閉じていないと見なされます。  
+ _閉じている_**geometry** インスタンスは、始点と終点が同じである図形です。 **Polygon** インスタンスは閉じていると見なされます。 **Point** インスタンスは閉じていないと見なされます。  
   
  リングは、単純な閉じている **LineString** インスタンスです。  
   

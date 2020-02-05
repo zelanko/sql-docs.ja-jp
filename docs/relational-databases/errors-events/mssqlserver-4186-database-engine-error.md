@@ -12,13 +12,13 @@ ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3efa12b744d331949fc0af18f555e603f18e33ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123097"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -41,7 +41,7 @@ ms.locfileid: "68123097"
   
 -   ユーザー データやシステム データにアクセスするユーザー定義関数を定義に含む計算列  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
 **サブクエリで定義されたビュー列**  
   
 次の例では、選択リストでサブクエリを使用して `State` 列を定義するビューを作成します。 次に、UPDATE ステートメントで OUTPUT 句の `State` 列を参照すると、選択リストのサブクエリが原因でエラーが発生します。  

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558327"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux (RHEL)
@@ -88,12 +88,12 @@ SQL Server の 2 ノード共有ディスクによるフェールオーバー �
     sudo ip addr show
     ```
 
-1. 各ノードのコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 コンピューター名は `/etc/hosts` に追加することで設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
+1. 各ノードのコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 コンピューター名は `/etc/hosts` に追加することで設定します。 次のスクリプトを使うと、`/etc/hosts` で `vi` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   次の例では、`sqlfcivm1` および `sqlfcivm2` という名前の 2 つのノードが追加された `/etc/hosts` を示します。
+   次の例では、`/etc/hosts` および `sqlfcivm1` という名前の 2 つのノードが追加された `sqlfcivm2` を示します。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4

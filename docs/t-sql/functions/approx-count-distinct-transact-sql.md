@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962340"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
@@ -38,12 +38,12 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>引数  
 *式 (expression)*  
-**image**、**sql_variant**、**ntext**、**text** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 
+[image](../../t-sql/language-elements/expressions-transact-sql.md)、**sql_variant**、**ntext**、**text** を除く、任意の型の**式**です。 
 
 ## <a name="return-types"></a>戻り値の型
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `APPROX_COUNT_DISTINCT( expression )` はグループ内の各行に対して式を評価し、グループ内の一意の非 null 値の概数を返します。 この関数は、絶対的な精度よりも応答性が重要となる場合に、大規模なデータ セット全体の集計を提供するために設計されています。  
 
 `APPROX_COUNT_DISTINCT` はビッグ データのシナリオで使用するために設計されており、次の条件に向けて最適化されています。
@@ -57,7 +57,7 @@ APPROX_COUNT_DISTINCT ( expression )
 > [!NOTE]
 > 照合順序に依存する文字列では、APPROX_COUNT_DISTINCT ではバイナリ一致が使用され、BIN 照合順序がある場合 (BIN2 はなし) に生成されるのと同じ結果が提供されます。 
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-approx_count_distinct"></a>A. APPROX_COUNT_DISTINCT を使用する 
 この例では、orders テーブルのさまざまな順序キーの概数が返されます。

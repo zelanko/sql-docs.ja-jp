@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3c78124b3836026ced3f36500ed5558b58009fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136627"
 ---
-# <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ]\([全般] ページ)
+# <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ] ([全般] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   ストアド プロシージャに関する情報を表示します。 すべての情報は読み取り専用です。  
   
@@ -31,13 +31,13 @@ ms.locfileid: "68136627"
  **[サーバー]**  
  現在のサーバー インスタンスの名前です。  
   
- **ユーザー**  
+ **User**  
  この接続のユーザーの名前です。  
   
  **[作成日]**  
  ストアド プロシージャが作成された日付を表示します。  
   
- **[名前]**  
+ **名前**  
  現在のストアド プロシージャの名前です。  
   
  **[スキーマ]**  

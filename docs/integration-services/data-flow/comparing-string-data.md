@@ -17,10 +17,10 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293237"
 ---
 # <a name="comparing-string-data"></a>比較、文字列データ
@@ -37,7 +37,7 @@ ms.locfileid: "71293237"
   
 -   条件分割変換は、式の内部で文字列比較を使用し、データ行を送信する出力を決定できます。 詳細については、「 [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)」を参照してください。  
   
--   派生列変換は、式の内部で文字列比較を使用し、新しい列の値を生成できます。 詳細については、「 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
+-   派生列変換は、式の内部で文字列比較を使用し、新しい列の値を生成できます。 詳細については、「 [派生列変換](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
   
  変数、変数マッピング、および優先順位制約でも、文字列比較を含めた式を使用できます。 式の詳細については、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   

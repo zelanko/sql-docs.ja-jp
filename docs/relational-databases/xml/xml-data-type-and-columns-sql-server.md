@@ -11,10 +11,10 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096891"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
@@ -115,12 +115,12 @@ ms.locfileid: "68096891"
   
  構造が多様な XML ドキュメントがある場合、またはリレーショナル構造へのマッピングが難しい複雑なスキーマや複数のスキーマに従った XML ドキュメントがある場合に、ネイティブ XML ストレージが役立ちます。  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>例: xml データ型を使用した XML データのモデリング  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>例 : xml データ型を使用した XML データ モデリング  
  トピックごとに章が設けられ、それぞれの章の中には複数の節がある構成の XML 形式の製品マニュアルを考えてみます。 節には項が含まれる場合があります。 したがって、\<section> は再帰要素になります。 製品マニュアルには、混合コンテンツ、図表、および技術データが大量に含まれているので、データは部分的に構造化された状態です。 ユーザーは、「インデックス設定」に関する章の「クラスター化インデックス」に関する節を検索するなど、関心のあるトピックをコンテキストにより検索したり、技術データにクエリを実行します。  
   
  この XML ドキュメントに適したストレージ モデルは **xml** データ型列です。 このモデルであれば、XML データの InfoSet コンテンツが保持されます。 XML 列にインデックスを設定して、クエリ パフォーマンスを向上できる利点もあります。  
   
-#### <a name="example-retaining-exact-copies-of-xml-data"></a>例: XML データの正確なコピーの保持  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>例 : XML データの正確なコピーの保持  
  たとえば、政府の規定により、XML ドキュメントのテキストの正確なコピーを保持する必要があるとします。 署名済み文書、法務文書、株取引の注文書などが該当します。 このようなドキュメントは **[n]varchar(max)** 列に保存できます。  
   
  クエリを行うには、実行時にデータを **xml** データ型に変換して XQuery を実行します。 実行時の変換は、ドキュメントが大きい場合は特にコストが高くなる可能性があります。 頻繁にクエリを実行する場合は、 **xml** データ型の列にドキュメントを冗長に保存してインデックスを設定しておき、 **[n]varchar(max)** 型の列からドキュメントの正確なコピーを返すことができます。  
@@ -144,7 +144,7 @@ ms.locfileid: "68096891"
   
  例としては、データ交換や Web サービス向けに XML として公開されたリレーショナル データ、固定スキーマにバインドされた XML データなどがあります。 詳細については、 [MSDN オンライン ライブラリ](https://go.microsoft.com/fwlink/?linkid=31174)を参照してください。  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>例: AXSD (注釈付き XML スキーマ) を使用したデータ モデリング  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>例 : AXSD (注釈付き XML スキーマ) を使用したデータ モデリング  
  たとえば、顧客、注文、品目などの既存のリレーショナル データを XML として処理するとします。 リレーショナル データに AXSD を使用して、XML ビューを定義します。 XML ビューを使用すると、テーブルに XML データを一括で読み込み、XML ビューでリレーショナル データに対するクエリや更新を行うことができます。 SQL アプリケーションの実行を中断することなく、XML でマークアップされたデータを他のアプリケーションと交換する必要がある場合に、このモデルが役立ちます。  
   
 ### <a name="hybrid-model"></a>ハイブリッド モデル  

@@ -15,13 +15,13 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 885e45267e7527a63f04facd630b2ec72f8a00f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297608"
 ---
-# <a name="expression-builder"></a>[式ビルダー]
+# <a name="expression-builder"></a>式ビルダー
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -42,18 +42,18 @@ ms.locfileid: "71297608"
   
 ## <a name="options"></a>オプション  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
-|**変数:**|**[変数]** フォルダーを展開し、変数を **[式]** ボックスにドラッグします。|  
-|**数学関数**<br /><br /> **文字列関数**<br /><br /> **日付/時刻関数**<br /><br /> **NULL 関数**<br /><br /> **[型キャスト]**<br /><br /> **演算子**|フォルダーを展開し、関数、型キャスト、および演算子を **[式]** ボックスにドラッグします。|  
+|**変数**|**[変数]** フォルダーを展開し、変数を **[式]** ボックスにドラッグします。|  
+|**数学関数**<br /><br /> **文字列関数**<br /><br /> **日付/時刻関数**<br /><br /> **NULL 関数**<br /><br /> **[型キャスト]**<br /><br /> **オペレーター**|フォルダーを展開し、関数、型キャスト、および演算子を **[式]** ボックスにドラッグします。|  
 |**[式]**|式を編集または入力します。|  
 |**[評価結果]**|式の評価結果を一覧表示します。|  
 |**[式の評価]**|**[式の評価]** をクリックすると、式の評価結果が表示されます。|  
   
 ## <a name="see-also"></a>参照  
  [[式] ページ](../../integration-services/expressions/expressions-page.md)   
- [[プロパティ式エディター]](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)   
+ [プロパティ式エディター](../../integration-services/expressions/property-expressions-editor.md)   
+ [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)   
  [システム変数](../../integration-services/system-variables.md)  
   
   

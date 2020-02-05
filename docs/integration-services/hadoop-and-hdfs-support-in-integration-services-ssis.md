@@ -13,10 +13,10 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285868"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services (SSIS) での Hadoop と HDFS のサポート
@@ -38,11 +38,11 @@ ms.locfileid: "71285868"
   
     -   [Hadoop Hive タスク](../integration-services/control-flow/hadoop-hive-task.md)  
   
-    -   [Hadoop Pig Task](../integration-services/control-flow/hadoop-pig-task.md)  
+    -   [Hadoop Pig タスク](../integration-services/control-flow/hadoop-pig-task.md)  
   
 -   データ フロー: データの抽出元と抽出先  
   
-    -   [HDFS ファイル ソース](../integration-services/data-flow/hdfs-file-source.md)  
+    -   [HDFS ファイル変換元](../integration-services/data-flow/hdfs-file-source.md)  
   
     -   [HDFS ファイル変換先](../integration-services/data-flow/hdfs-file-destination.md)  
   
