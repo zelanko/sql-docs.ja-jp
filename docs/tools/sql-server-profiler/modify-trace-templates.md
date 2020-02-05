@@ -1,27 +1,22 @@
 ---
-title: トレーステンプレートの変更 |Microsoft Docs
-ms.custom: ''
-ms.date: 07/12/2017
+title: トレース テンプレートの変更
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- modifying trace templates
-- SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55a7cdf539a675fd6d3c86ace8cc837ed1e92358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/12/2017
+ms.openlocfilehash: 71716d1a9a50a29e1f574fb292d078d21e34a9a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074873"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307159"
 ---
 # <a name="modify-trace-templates"></a>トレース テンプレートの変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +40,7 @@ ms.locfileid: "68074873"
   
 4.  **[保存]** をクリックするか、 **[名前を付けて保存]** をクリックして別の名前でトレース テンプレートを保存します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 [トレースを開始する](../../tools/sql-server-profiler/start-a-trace.md)  
 [トレースを作成する](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [Transact-SQL を使用して既存のトレースを変更する](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  

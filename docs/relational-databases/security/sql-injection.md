@@ -14,15 +14,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126857"
 ---
 # <a name="sql-injection"></a>SQL インジェクション
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  SQL インジェクションとは、後で SQL Server のインスタンスに渡され解析および実行が行われる文字列に、有害なコードを挿入するという攻撃です。 SQL Server では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 高いスキルを持つ決然たる攻撃者は、パラメーター化されたデータであっても操作できるのです。  
+  SQL インジェクションとは、後で SQL Server のインスタンスに渡して解析と実行の対象とする文字列に、悪意のあるコードが挿入される攻撃です。 SQL Server では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 高いスキルを持つ決然たる攻撃者は、パラメーター化されたデータであっても操作できるのです。  
   
 ## <a name="how-sql-injection-works"></a>SQL インジェクションのしくみ  
  SQL インジェクションは主に、SQL コマンドと連結されて実行されるユーザー入力変数にコードを直接挿入することにより行われます。 それほど直接的ではない攻撃では、悪意のあるコードが、テーブル内の記憶領域に格納される文字列に挿入されたり、メタデータとして挿入されたりします。 格納された文字列が動的な SQL コマンドに後で連結された場合、悪意のあるコードが実行されます。  
@@ -85,20 +85,20 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   検証されていないユーザー入力は連結しない。 文字列の連結は、スクリプト インジェクションを行うための主なポイントとなります。  
   
--   ファイル名の作成に使用できるフィールドでは、次の文字列を受け付けない:AUX、CLOCK$、COM1 から COM8、CON、CONFIG$、LPT1 から LPT8、NUL、PRN。  
+-   ファイル名に AUX、CLOCK$、COM1 ～ COM8、CON、CONFIG$、LPT1 ～ LPT8、NUL、および PRN を使用できる場合、これらの文字列をフィールドで受け入れない。  
   
  可能であれば、次の文字を含む入力は受け入れないでください。  
   
 |入力文字|Transact-SQL での意味|  
 |---------------------|------------------------------|  
 |**;**|クエリの区切り記号。|  
-|**'**|文字データ文字列の区切り記号。|  
-|**--**|文字データ文字列の区切り記号。<br />であるレコードをすべて選択します。|  
+|**'** の基本構成の更新を依頼してください。|文字データ文字列の区切り記号。|  
+|**--**|文字データ文字列の区切り記号。<br />。|  
 |**/\*** ... **\*/**|コメントの区切り記号。 **/\*** と **\*/** の間にあるテキストについては、サーバーによる評価は行われません。|  
 |**xp_**|`xp_cmdshell`など、カタログ拡張ストアド プロシージャ名の先頭に使用します。|  
   
 ### <a name="use-type-safe-sql-parameters"></a>Type-Safe SQL パラメーターの使用  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Parameters** コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
+ **の**Parameters[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
   
 ```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  

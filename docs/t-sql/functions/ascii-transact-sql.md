@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74119193"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
@@ -43,17 +43,17 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>引数  
 *character_expression*  
-**char** 型または **varchar** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
+[char](../../t-sql/language-elements/expressions-transact-sql.md) 型または **varchar** 型の**式**。
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
-## <a name="remarks"></a>Remarks
-ASCII は、情報交換用米国標準コード (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange) の略語です。 最新のコンピューター上で文字エンコード標準として機能します。 ASCII 文字の一覧については、「[ASCII](https://www.wikipedia.org/wiki/ASCII)」の**印刷可能文字**に関するセクションを参照してください。
+## <a name="remarks"></a>解説
+ASCII は、情報交換用米国標準コード (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange) の略語です。 最新のコンピューター上で文字エンコード標準として機能します。 ASCII 文字の一覧については、「**ASCII**」の[印刷可能文字](https://www.wikipedia.org/wiki/ASCII)に関するセクションを参照してください。
 
 ASCII は 7 ビット文字セットです。 拡張 ASCII または高 ASCII は、`ASCII` 関数によって処理されない 8 ビット文字セットです。 
 
-## <a name="examples"></a>使用例 
+## <a name="examples"></a>例 
 
 ### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>A. この例では、ASCII 文字セットの使用を前提として、6 つの文字の `ASCII` 値を返します。
   

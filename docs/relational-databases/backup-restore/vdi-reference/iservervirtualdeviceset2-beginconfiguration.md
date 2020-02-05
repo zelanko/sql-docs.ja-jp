@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847483"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
@@ -54,11 +54,11 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 | VD_E_ABORT | SignalAbort が呼び出されました。 |
 | VD_E_PROTOCOL | 仮想デバイス セットは接続状態ではありません。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この関数が呼び出されると、仮想デバイス セットは構成可能な状態に移行し、バッファー レイアウトが決定されます。
 基本構成が (パラメーターに従って) 設定されると、これらの値は仮想デバイス セットの有効期間中は固定されたままになります。 仮想デバイス セットの配置プロパティは、データ バッファーの配置を制御するために使用されます。 この値により、バッファー単位でオーバーライドできる配置の最小値が設定されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

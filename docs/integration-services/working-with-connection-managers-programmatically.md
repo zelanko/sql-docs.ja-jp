@@ -13,10 +13,10 @@ ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295005"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>プログラムによる接続マネージャーの操作
@@ -65,8 +65,8 @@ ms.locfileid: "71295005"
 |MULTIFILE|複数ファイル接続マネージャー|**System.String**|いずれかのファイルへのパス。|  
 |MULTIFLATFILE|複数フラット ファイル接続マネージャー|**System.String**|いずれかのファイルへのパス。|  
 |SMOServer|SMO 接続マネージャー|**Microsoft.SqlServer.Management.Smo.Server**||  
-|SMTP (SMTP)|SMTP 接続マネージャー|**System.String**|例: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
-|WMI (WMI)|WMI 接続マネージャー|**System.Management.ManagementScope**||  
+|SMTP|SMTP 接続マネージャー|**System.String**|例: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|WMI|WMI 接続マネージャー|**System.Management.ManagementScope**||  
 |SQLMOBILE|SQL Server Compact 接続マネージャー|**System.Data.SqlServerCe.SqlCeConnection**||  
   
 ## <a name="see-also"></a>参照  

@@ -18,10 +18,10 @@ ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000607"
 ---
 # <a name="read-database-engine"></a>Read (データベース エンジン)
@@ -42,14 +42,14 @@ void Read( BinaryReader r )
 ## <a name="return-types"></a>戻り値の型
  **CLR の戻り値の型: void**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  読み取り は、入力は検証されません。 無効なバイナリの入力を指定した場合 読み取り で例外が発生します。 または、成功し、生成、無効な場合があります、 **SqlHierarchyId** オブジェクト メソッドを持つ予期しない結果が得られますか、例外が発生します。  
   
  読み取りは、新しく作成された **SqlHierarchyId** オブジェクトでのみ呼び出すことができます。  
   
  読み取り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用される 必要な場合、ようにデータを書き込む場合 **hierarchyid** 列です。 読み取り 間で変換が行われるときに内部的に呼び出されますも **varbinary** と **hierarchyid**です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```sql
 Byte[] encoding = new byte[] { 0x58 };  

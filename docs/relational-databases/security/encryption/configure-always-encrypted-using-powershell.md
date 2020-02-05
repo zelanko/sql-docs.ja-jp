@@ -11,16 +11,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594413"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell モジュールによって、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の両方で、[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) を構成するためのコマンドレットが提供されます。
+SqlServer PowerShell モジュールによって、[ と ](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) の両方で、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]Always Encrypted[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を構成するためのコマンドレットが提供されます。
 
 ## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>PowerShell を使用して Always Encrypted を構成するときのセキュリティに関する考慮事項
 
@@ -30,7 +30,7 @@ PowerShell を使うと、役割の分離を有効または無効にして、Alw
 
  追加の推奨事項については、 [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(キー管理でのセキュリティに関する考慮事項) を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 SQL Server インスタンスをホストしているコンピューターではない安全なコンピューターに [SqlServer モジュール](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) をインストールします。 モジュールは、PowerShell ギャラリーから直接インストールできます。  詳細については、[ダウンロード](../../../ssms/download-sql-server-ps-module.md)の手順を参照してください。
 
@@ -146,7 +146,7 @@ Always Encrypted では次の PowerShell コマンドレットを使用できま
 
 ## <a name="see-also"></a>参照
 
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [SQL Server Management Studio を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [SQL Server Management Studio を使用して Always Encrypted を構成する](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)

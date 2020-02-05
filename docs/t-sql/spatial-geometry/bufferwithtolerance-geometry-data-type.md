@@ -18,10 +18,10 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9d8b500415aa5e6812524fff6403735a11cf765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017540"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry データ型)
@@ -48,12 +48,12 @@ ms.locfileid: "68017540"
  たとえば、ある地点の理想のバッファー距離は円ですが、多角形によって近似された形状になる必要があります。 許容範囲が小さいほど、多角形の頂点の数は多くなります。つまり、計算結果の複雑性が増しますが、元の図形との差が小さくなります。  
   
  *relative*  
- *tolerance* の値が相対値か絶対値かを指定する **bit** です。 'TRUE' または 1 の場合、許容範囲は相対値であり、*tolerance* パラメーターとインスタンスに外接する四角形の直径の積として計算されます。 'FALSE' または 0 の場合、許容範囲は絶対値であり、*tolerance* 値は、返された線形近似の理想的なバッファー距離の絶対最大幅になります。  
+ **tolerance** の値が相対値か絶対値かを指定する *bit* です。 'TRUE' または 1 の場合、許容範囲は相対値であり、*tolerance* パラメーターとインスタンスに外接する四角形の直径の積として計算されます。 'FALSE' または 0 の場合、許容範囲は絶対値であり、*tolerance* 値は、返された線形近似の理想的なバッファー距離の絶対最大幅になります。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
  *tolerance* パラメーターには、0 より大きい値を指定する必要があります。 *tolerance* <= 0 の場合は、`System.ArgumentOutOfRangeException` がスローされます。  
@@ -61,7 +61,7 @@ ms.locfileid: "68017540"
 > [!NOTE]  
 >  *tolerance* は **float** 型であるため、tolerance に指定された値が非常に小さい場合、浮動小数点型の丸めの問題が原因で `System.Runtime.InteropServices.COMException` がスローされる可能性があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *distance* > 0 のときは、**Polygon** または **MultiPolygon** インスタンスが返されます。  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "68017540"
   
  理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents \* 1.E-7) です。この tolerance は *tolerance* パラメーターの値になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Point` インスタンスを作成し、`BufferWithTolerance()` を使用して、インスタンスの周りの大まかなバッファーを取得する例を次に示します。  
   
 ```  

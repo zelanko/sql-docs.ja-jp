@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595817"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>エンクレーブ対応キーの交換
@@ -34,16 +34,16 @@ Always Encrypted では、キーの交換は、既存の列マスター キー�
     - 新しいエンクレーブ対応キーをプロビジョニングするには、「[エンクレーブ対応キーをプロビジョニングする](always-encrypted-enclaves-provision-keys.md)」を参照してください。
     - エンクレーブが有効でないキーをプロビジョニングするには、「[SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)」および「[PowerShell を使用した Always Encrypted キーのプロビジョニング](configure-always-encrypted-keys-using-powershell.md)」を参照してください。
 2. 既存のキーを新しいキーで置き換えます。
-    - 列暗号化キーを交換し、ソース キーとターゲット キーの両方のエンクレーブが有効になっている場合は、インプレースで交換を実行できます (データの再暗号化を含む)。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」を参照してください。
+    - 列暗号化キーを交換し、ソース キーとターゲット キーの両方のエンクレーブが有効になっている場合は、インプレースで交換を実行できます (データの再暗号化を含む)。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」を参照してください。
     - キーのローテーションの詳細な手順については、「[SQL Server Management Studio を使用した Always Encrypted キーの交換](rotate-always-encrypted-keys-using-ssms.md)」および「[PowerShell を使用した Always Encrypted キーの交換](rotate-always-encrypted-keys-using-powershell.md)」をご覧ください。
 
     
-## <a name="next-steps"></a>Next Steps
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリ](always-encrypted-enclaves-query-columns.md)
+## <a name="next-steps"></a>次の手順
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)
-- [既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted の有効化](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションの開発](always-encrypted-enclaves-client-development.md)  
+- [既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする](always-encrypted-enclaves-enable-for-encrypted-columns.md)
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](always-encrypted-enclaves-client-development.md)  
 
 ## <a name="see-also"></a>参照  
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーの管理](always-encrypted-enclaves-manage-keys.md)
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](always-encrypted-enclaves-manage-keys.md)
 

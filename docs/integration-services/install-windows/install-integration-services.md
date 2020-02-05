@@ -20,17 +20,17 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74491956"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services (SSIS) のインストール
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントと共にまたは単独で、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を 1 台のコンピューターにインストールするには、セットアップを使います。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントと共にまたは単独で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を 1 台のコンピューターにインストールするには、セットアップを使います。
 
  この記事では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールする前に知っておく必要がある重要な注意点について説明します。 この記事の情報を参考にして各インストール オプションを評価することにより、インストール時に適切な選択を行うことができます。
 
@@ -48,7 +48,7 @@ ms.locfileid: "74491956"
 
 次の構成で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールできます。
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のインスタンスが存在しないコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールできます。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のインスタンスが存在しないコンピューターに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールできます。
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既存のインスタンスとサイド バイ サイドでインストールできます。
 
@@ -66,18 +66,18 @@ Microsoft SQL Server がまだない場合は、無料の Evaluation Edition ま
 
 セットアップ ウィザードを使って [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールする場合は、一連のページを使ってコンポーネントとオプションを指定します。
 
-- **[機能の選択]** ページの **[共有機能]**で**[Integration Services]** を選びます。
+- **[機能の選択]** ページの **[共有機能]** で **[Integration Services]** を選びます。
 
-- SSIS パッケージを格納、管理、実行、監視するために SSIS カタログ データベース `SSISDB` をホストするには、 **[インスタンス機能]** で必要に応じて **[データベース エンジン サービス]** を選びます。
+- SSIS パッケージを格納、管理、実行、監視するために SSIS カタログ データベース  **をホストするには、** [インスタンス機能]**で必要に応じて**[データベース エンジン サービス]`SSISDB` を選びます。
 
 - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プログラミング用にマネージド アセンブリをインストールするには、 **[共有機能]** で **[クライアント ツール SDK]** も選びます。
 
 > [!NOTE]
-> セットアップ ウィザードの **[機能の選択]** ページでインストールを選ぶことができる一部の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントのサブセットの一部がインストールされます。 これらのコンポーネントを使って一部のタスクを実行することは可能ですが、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべての機能を使うことはできません。 たとえば、 **[データベース エンジン サービス]** オプションを選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポートおよびエクスポート ウィザードに必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントがインストールされます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を完全にインストールするには、 **[機能の選択]** ページで **[Integration Services]** を選択する必要があります。
+> セットアップ ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][機能の選択]**ページでインストールを選ぶことができる一部の** コンポーネントで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントのサブセットの一部がインストールされます。 これらのコンポーネントを使って一部のタスクを実行することは可能ですが、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべての機能を使うことはできません。 たとえば、 **[データベース エンジン サービス]** オプションを選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポートおよびエクスポート ウィザードに必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントがインストールされます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を完全にインストールするには、 **[機能の選択]** ページで **[Integration Services]** を選択する必要があります。
 
 ### <a name="installing-a-dedicated-server-for-etl-processes"></a>ETL プロセス専用サーバーのインストール
 
-ETL (抽出、変換、読み込み) プロセス専用のサーバーを使うには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のローカル インスタンスをインストールします。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、通常、パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに格納し、このパッケージのスケジュールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに依存して設定します。 ETL サーバーに [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが存在しない場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが存在するサーバーからパッケージをスケジュール設定したり実行したりする必要があります。 結果として、パッケージは、ETL サーバーではなく、パッケージが開始されたサーバーで実行されます。 その結果、専用の ETL サーバーのリソースは意図したとおりに使用されません。 さらに、他のサーバーのリソースが実行中の ETL プロセスによって使用される場合もあります。
+ETL (抽出、変換、読み込み) プロセス専用のサーバーを使うには、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインストール時に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のローカル インスタンスをインストールします。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、通常、パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに格納し、このパッケージのスケジュールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに依存して設定します。 ETL サーバーに [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが存在しない場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが存在するサーバーからパッケージをスケジュール設定したり実行したりする必要があります。 結果として、パッケージは、ETL サーバーではなく、パッケージが開始されたサーバーで実行されます。 その結果、専用の ETL サーバーのリソースは意図したとおりに使用されません。 さらに、他のサーバーのリソースが実行中の ETL プロセスによって使用される場合もあります。
 
 ### <a name="configuring-ssis-event-logging"></a>SSIS イベント ログの構成
 

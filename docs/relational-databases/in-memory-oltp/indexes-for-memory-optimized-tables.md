@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929695"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
@@ -138,7 +138,7 @@ ms.locfileid: "70929695"
 
 インデックスで非効率なパフォーマンスを回避する方法の例を紹介します。
 
-`CustomerId` に主キーが、列 `CustomerCategoryID`にインデックスがある `Customers` テーブルを考えてみてください。 一般的に、特定のカテゴリに多くの顧客がいます。 そのため、インデックスの特定のキー内には、CustomerCategoryID の重複値がたくさんできます。
+`Customers` に主キーが、列 `CustomerId`にインデックスがある `CustomerCategoryID` テーブルを考えてみてください。 一般的に、特定のカテゴリに多くの顧客がいます。 そのため、インデックスの特定のキー内には、CustomerCategoryID の重複値がたくさんできます。
 
 このシナリオでは、`(CustomerCategoryID, CustomerId)` で非クラスター化インデックスを使用することを推奨します。 このインデックスは、`CustomerCategoryID` を伴う述語を使用するクエリに使用できます。それでも、インデックス キーには重複が含まれません。 そのため、重複する CustomerCategoryID 値やインデックスの追加列によりインデックスの保守管理が非効率になることはありません。
 
@@ -215,7 +215,7 @@ WHERE col1 = 'dn';
   
 次の表は、異なるインデックスの種類でサポートされるすべての操作を示しています。 *はい*はインデックスが要求に十分に対応できることを意味し、*いいえ*はインデックスが要求に十分に対応できないことを意味します。 
   
-| 演算 | メモリ最適化、 <br/> ハッシュ | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
+| 操作 | メモリ最適化、 <br/> hash | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | インデックス スキャン、すべてのテーブルの行を取得する。 | はい | はい | はい |  
 | 等値述語 (=) でのインデックス シーク。 | はい <br/> (フル キーが必要です。) | はい  | はい |  

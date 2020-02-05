@@ -20,10 +20,10 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065659"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
@@ -118,7 +118,7 @@ ON SERVER
   
 |||  
 |-|-|  
-|項目|定義|  
+|期間|定義|  
 |*event_session_name*|既存のイベント セッションの名前です。|  
 |STATE = START &#124; STOP|イベント セッションを開始または停止します。 この引数は、ALTER EVENT SESSION がイベント セッション オブジェクトに適用される場合にのみ有効です。|  
 |ADD EVENT \<event_specifier>|\<event_specifier> で識別されるイベントをイベント セッションに関連付けます。|
@@ -141,13 +141,13 @@ ON SERVER
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|因果関係を追跡するかどうかを指定します。 有効な場合、因果関係により、異なるサーバー接続上の関連イベントを一緒に関連付けることができます。|  
 |STARTUP_STATE = { ON &#124; **OFF** }|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時にこのイベント セッションを自動的に開始するかどうかを指定します。<br /><br /> STARTUP_STATE=ON の場合、イベント セッションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が停止後に再起動されたときにだけ開始されます。<br /><br /> ON = 起動時にイベント セッションが開始されます。<br /><br /> **OFF** = イベント セッションは起動時に開始されません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `ADD` 引数と `DROP` 引数は同じステートメントで一緒に使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  `ALTER ANY EVENT SESSION` アクセス許可が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、イベント セッションを開始し、いくつかのライブ セッション統計を取得します。次に、既存のセッションに 2 つのイベントを追加します。  
   
 ```sql  

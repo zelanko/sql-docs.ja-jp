@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843798"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>まずはデータベースのストレッチの有効化ウィザードを実行する
@@ -56,20 +56,20 @@ ms.locfileid: "73843798"
  ![Stretch Database ウィザードの概要ページ](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database ウィザードの概要ページ")  
   
 ##  <a name="Tables"></a> [テーブルの選択]  
- ストレッチを有効にするテーブルを選択します。  
+ Stretch を有効にするテーブルを選択します。  
  
 多数の行があるテーブルが、並べ替え済み一覧の上部に表示されます。 ウィザードでは、テーブルの一覧を表示する前に、Stretch Database で現在サポートされていないデータ型を分析します。 
   
  ![Stretch Database ウィザードの [テーブルの選択] ページ](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database ウィザードの [テーブルの選択] ページ")  
   
-|[列]|[説明]|  
+|列|[説明]|  
 |------------|-----------------|  
-|(タイトルなし)|選択したテーブルのストレッチを有効にするには、この列のチェック ボックスを選択します。|  
-|**[名前]**|データベースのテーブル名を指します。|  
+|(タイトルなし)|選択したテーブルの Stretch を有効にするにはこの列のチェック ボックスを選択します。|  
+|**名前**|データベースのテーブル名を指します。|  
 |(タイトルなし)|この列には、選択したテーブルで Stretch を無効にはしない警告記号が表示される場合があります。 また、たとえば、テーブルでサポートされていないデータ型が使用されているなど、選択したテーブルで Stretch を有効化しないブロックの問題が表示される場合もあります。 ツールヒントの詳細な情報を表示するには、記号の上にマウス ポインターを移動します。 詳細については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。|  
 |**ストレッチ済み**|テーブルが既に Stretch 用に有効であるかどうかを示します。|  
 |**移行**|テーブル全体を移行 ( **[テーブル全体]** ) することも、表の既存の列にフィルターを指定することもできます。 移行する行を選択するのに、別のフィルター関数を使用する場合、ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 フィルター関数の詳細については、「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 この関数の適用方法の詳細については、「[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」または「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。|  
-|**行数**|テーブル内の行数を指定します。|  
+|**行数**|テーブルの行数を指定します。|  
 |**[サイズ (KB)]**|テーブルのサイズを KB で指定します。|  
   
 ## <a name="optionally-provide-a-row-filter"></a>オプションで行フィルターを指定する  
@@ -108,13 +108,13 @@ ms.locfileid: "73843798"
   
      ![Azure にサインインする - Stretch Database ウィザード](../../sql-server/stretch-database/media/stretch-wizard-3.png "Azure にサインインする - Stretch Database ウィザード")  
   
-2.  Stretch Database で使用する既存の Azure サブスクリプションを選択します。 
+2.  Stretch Database に使用する既存の Azure サブスクリプションを選択します。 
 
 > [!NOTE] 
 > データベース上で Stretch を有効にするには、使用しているサブスクリプションへの管理者権限が必要です。 Stretch Database ウィザードでは、ユーザーが管理者権限を持っているサブスクリプションのみが表示されます。
   
 3.  Stretch Database で使用する Azure リージョンを選択します。
-    -   新しいサーバーを作成すると、このリージョンに作成されます。  
+    -   新しいサーバーを作成すると、このリージョンにサーバーが作成されます。  
     -   選択したリージョンに既にサーバーがある場合、 **[既存のサーバー]** を選択すると、それらがウィザードにリストされます。
   
      待機時間を最小限に抑えるには、SQL Server が配置されている Azure リージョンを選択してください。 リージョンの詳細については、「 [Azure のリージョン](https://azure.microsoft.com/regions/)」を参照してください。  
@@ -163,12 +163,12 @@ ms.locfileid: "73843798"
   
  ![Stretch Database ウィザードの [IP アドレスの選択] ページ](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database ウィザードの [IP アドレスの選択] ページ")  
   
-##  <a name="Summary"></a> 概要  
+##  <a name="Summary"></a> まとめ  
  入力した値、ウィザードで選択したオプション、Azure の推定コストを確認します。 次に、 **[完了]** を選択してストレッチを有効にします。  
   
  ![Stretch Database ウィザードの概要ページ](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database ウィザードの概要ページ")  
   
-##  <a name="Results"></a> [結果]  
+##  <a name="Results"></a> 結果  
  結果を確認します。  
   
  データの移行状況を監視する方法の詳細については、「[データ移行の監視とトラブルシューティング &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)」を参照してください。  
@@ -177,10 +177,10 @@ ms.locfileid: "73843798"
   
 ##  <a name="KnownIssues"></a> ウィザードのトラブルシューティング  
  **Stretch Database ウィザードにエラーが発生しました。**  
- Stretch Database がサーバー レベルでまだ有効になっていなく、システム管理者に有効にする権限がないウィザードを実行すると、ウィザードでエラーが発生します。 システム管理者にローカル サーバー インスタンスの Stretch Database を有効にするように依頼し、ウィザードを再度実行します。 詳しくは、「[前提条件:サーバーで Stretch Database を有効にするためのアクセス許可](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」をご覧ください。  
+ Stretch Database がサーバー レベルでまだ有効になっていなく、システム管理者に有効にする権限がないウィザードを実行すると、ウィザードでエラーが発生します。 システム管理者にローカル サーバー インスタンスの Stretch Database を有効にするように依頼し、ウィザードを再度実行します。 詳細については、「 [前提条件: サーバーで Stretch Database を有効にするためのアクセス許可](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。  
   
-## <a name="next-steps"></a>次の手順  
- Stretch Database の追加のテーブルを有効にします。 データの移行を監視し、ストレッチが有効なデータベースとテーブルを管理します。  
+## <a name="next-steps"></a>次のステップ  
+ Stretch Database の追加テーブルを有効にします。 データの移行を監視し、ストレッチが有効なデータベースとテーブルを管理します。  
   
 -   追加のテーブルを有効にする場合:[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
@@ -195,7 +195,7 @@ ms.locfileid: "73843798"
 -   [Stretch 対応データベースの復元](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>参照  
- [データベースに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

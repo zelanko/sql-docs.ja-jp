@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325462"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
@@ -31,7 +31,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 |要件|インストール方法|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 以外のすべてのエディションの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、セットアップには、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile が必要です。 まだインストールされていない場合、SQL Server セットアップを実行すると自動的にインストールされます。 インストールには再起動が必要です。 再起動を回避するには、セットアップを実行する前に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] をインストールします。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 以外のすべてのエディションの [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では、セットアップには、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile が必要です。 まだインストールされていない場合、SQL Server セットアップを実行すると自動的にインストールされます。 インストールには再起動が必要です。 再起動を回避するには、セットアップを実行する前に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] をインストールします。|  
 |Windows インストーラー 4.5|Server Core インストールに付属しています。|  
 |Windows PowerShell|Server Core インストールに付属しています。|  
 |Java ランタイム |PolyBase を使用するには、適切な Java ランタイムをインストールする必要があります。 詳細については、「[PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」を参照してください。|

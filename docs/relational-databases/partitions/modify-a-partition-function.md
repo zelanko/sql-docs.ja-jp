@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907346"
 ---
 # <a name="modify-a-partition-function"></a>パーティション関数の変更
@@ -44,7 +44,7 @@ ms.locfileid: "72907346"
   
 -   ALTER PARTITION FUNCTION は、1 つのパーティションを 2 つに分割するか、または 2 つのパーティションを 1 つにマージする目的にのみ使用できます。 テーブルまたはインデックスのパーティション分割方法を変更する (たとえば 10 個のパーティションから 5 個のパーティションに変更する) には、次のいずれかの方法を使用できます。  
   
-    -   適切なパーティション関数でパーティション テーブルを新規作成し、INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の**パーティションの管理ウィザード**で古いテーブルから新しいテーブルにデータを挿入します。  
+    -   適切なパーティション関数でパーティション テーブルを新規作成し、INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは **の** パーティションの管理ウィザード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で古いテーブルから新しいテーブルにデータを挿入します。  
   
     -   パーティション分割されたクラスター化インデックスを、ヒープ上に作成します。  
   

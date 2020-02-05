@@ -1,6 +1,6 @@
 - name: SQL Server Migration Assistant (SSMA)
   href: sql-server-migration-assistant.md
-- name: Access
+- name: アクセス
   href: access/toc.yml
 - name: DB2
   href: db2/toc.yml

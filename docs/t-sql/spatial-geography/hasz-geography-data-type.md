@@ -18,10 +18,10 @@ ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8aae17057d9b4b114ed7ad03fd7e29ad61f127b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930240"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (geography データ型)
@@ -39,11 +39,11 @@ ms.locfileid: "67930240"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**Boolean**  
+ CLR 戻り値の型: **Boolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```sql  
 DECLARE @p GEOGRAPHY = 'Point(1 1 1 1)'  

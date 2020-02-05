@@ -15,10 +15,10 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930130"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry データ型)
@@ -40,12 +40,12 @@ ms.locfileid: "67930130"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
  *curve_index* < 1 の場合、`ArgumentOutOfRangeException` がスローされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次のいずれかの場合、**NULL** が返されます。  
   
 -   **geometry** インスタンスが宣言されているが、インスタンス化されていない  
@@ -56,7 +56,7 @@ ms.locfileid: "67930130"
   
 -   **geometry** インスタンスが **Point**、**MultiPoint**、**Polygon**、**CurvePolygon**、または **MultiPolygon** である  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して STCurveN() を使用する  
  次の例では、`CircularString` インスタンスの 2 番目の曲線が返されます。  
@@ -97,7 +97,7 @@ ms.locfileid: "67930130"
  前の 3 つの例の結果が同じであることに注意してください。 同じ曲線シーケンスの入力にどの WKT (Well-known Text) 形式を使用しても、`STCurveN()` インスタンスを使用する場合、`CompoundCurve` によって返される結果は同じです。  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. STCurveN() を呼び出す前に、パラメーターを検証する  
- 次の例では、`STCurveN()` メソッドを呼び出す前に `@n` が有効であることを確認する方法を示しています。  
+ 次の例では、`@n` メソッドを呼び出す前に `STCurveN()` が有効であることを確認する方法を示しています。  
   
 ```
  DECLARE @g geometry;  

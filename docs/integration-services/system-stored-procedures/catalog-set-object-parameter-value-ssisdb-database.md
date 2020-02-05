@@ -11,10 +11,10 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295280"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB データベース)
@@ -88,9 +88,9 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
--   *value_type* が指定されていない場合は、*parameter_value* のリテラル値が既定で使用されます。 リテラル値を使用すると、[object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューの *value_set* が `1` に設定されます。 NULL パラメーター値は許可されません。  
+-   *value_type* が指定されていない場合は、*parameter_value* のリテラル値が既定で使用されます。 リテラル値を使用すると、*object_parameters* ビューの [value_set](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) が `1` に設定されます。 NULL パラメーター値は許可されません。  
   
 -   *value_type* に参照先の値を示す文字 `R` が指定されている場合、*parameter_value* は環境変数の名前を参照します。  
   

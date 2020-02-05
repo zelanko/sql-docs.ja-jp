@@ -18,10 +18,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907259"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
@@ -90,7 +90,7 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 
 `PREDICT` を使用してモデルの内部構造を表示することはできません。 モデル自体のコンテンツを理解するには、モデル オブジェクトを読み込み、逆シリアル化し、適切な R コードを使用してモデルを解析する必要があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `PREDICT` 関数は、SQL Server 2017 以降のすべてのエディションで、Windows および Linux 上でサポートされています。 `PREDICT` は、クラウドの Azure SQL Database でもサポートされます。 これらのサポートはすべて、他の機械学習機能が有効になっているかどうかに関係なく機能します。
 
@@ -104,13 +104,13 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 
 `PREDICT` にはアクセス許可は必要ありませんが、ユーザーは、データベースに対する `EXECUTE` アクセス許可と、入力として使用される任意のデータをクエリするためのアクセス許可が必要です。 モデルがテーブルに格納されている場合、ユーザーはテーブルからモデルを読み込める必要もあります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例は、`PREDICT` を呼び出す構文を示しています。
 
 ### <a name="using-predict-in-a-from-clause"></a>FROM 句で PREDICT を使用する
 
-この例では、`SELECT` ステートメントの `FROM` 句内の `PREDICT` 関数を参照します。
+この例では、`PREDICT` ステートメントの `FROM` 句内の `SELECT` 関数を参照します。
 
 ```sql
 SELECT d.*, p.Score
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-`DATA` パラメーターでテーブル ソースに指定された別名 **d** は、dbo.mytable に属する列を参照するために使用されます。 **PREDICT** 関数に指定された別名 **p** は、PREDICT 関数によって返される列を参照するために使用されます。
+**パラメーターでテーブル ソースに指定された別名**d`DATA` は、dbo.mytable に属する列を参照するために使用されます。 **PREDICT** 関数に指定された別名 **p** は、PREDICT 関数によって返される列を参照するために使用されます。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>PREDICT を INSERT ステートメントと結合する
 
@@ -180,6 +180,6 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../advanced-analytics/sql-native-scoring.md)

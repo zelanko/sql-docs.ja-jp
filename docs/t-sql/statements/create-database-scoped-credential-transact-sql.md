@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594144"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -56,7 +56,7 @@ SECRET **='** _secret_ **'** 送信の認証に必要なシークレットを指
 > [!WARNING]
 > SAS キーの値は '?' (疑問符) で始まる可能性があります。 SAS キーを使用する場合は、先頭の '?' を削除する必要があります。 そうしないと、作業がブロックされる可能性があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 データベース スコープ資格情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のリソースへの接続に必要な認証情報を含むレコードです。 通常、資格情報には Windows ユーザーとパスワードが含まれます。
 
@@ -84,7 +84,7 @@ IDENTITY が Windows ユーザーの場合、このシークレットはパス�
 
 データベースに対する **CONTROL** 権限が必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. アプリケーションのデータベース スコープ資格情報の作成
 
@@ -101,7 +101,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Shared Access Signature のデータベース スコープ資格情報の作成
 
-次の例では、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) や [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) など、一括操作できる[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。 Shared Access Signatures は、SQL Server、APS、または SQL DW では PolyBase と共に使用できません。
+次の例では、[BULK INSERT](../../t-sql/statements/create-external-data-source-transact-sql.md) や [OPENROWSET](../../t-sql/statements/bulk-insert-transact-sql.md) など、一括操作できる[外部データ ソース](../../t-sql/functions/openrowset-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。 Shared Access Signatures は、SQL Server、APS、または SQL DW では PolyBase と共に使用できません。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

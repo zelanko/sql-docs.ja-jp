@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294670"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
@@ -352,7 +352,7 @@ ms.locfileid: "63294670"
   
 販売区域名が垂直方向 (上から下) に表示されます。 Territory 行グループの高さは、販売区域名の長さによって変わります。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 これで、マトリックス レポートを作成する方法のチュートリアルは終了です。 マトリックスの詳細については、以下を参照してください。 
 -    [テーブル、マトリックス、および一覧](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [マトリックスを作成する](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

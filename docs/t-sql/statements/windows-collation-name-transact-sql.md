@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874464"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
@@ -54,7 +54,7 @@ Windows 照合順序で使用される基本照合順序規則を指定します
 - 辞書順での並べ替えを指定した場合に適用される並べ替えおよび比較規則。 並べ替え規則は、アルファベットまたは言語に基づきます。
 - **varchar** データを格納するために使用されるコード ページ。
 
-次にいくつかの例を挙げます。
+いくつかの例を次に示します。
 
 - Latin1\_General または French: 両方でコード ページ 1252 が使用されます。
 - Turkish: コード ページ 1254 が使用されます。
@@ -72,12 +72,12 @@ Windows 照合順序で使用される基本照合順序規則を指定します
 このオプションを省略すると、文字幅が区別されません。**WS** を指定すると、文字幅が区別されます。
 
 *VariationSelectorSensitivity*  
-- **適用対象**:[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 以降 
+- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 以降 
 
 - このオプションを省略すると、異体字セレクターが区別されません。**VSS** を指定すると、異体字セレクターが区別されます。
 
 **UTF8**  
-- **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
+- **適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
 
 - 対象となるデータ型で UTF-8 のエンコードが使用されるように指定します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
 
@@ -87,7 +87,7 @@ Windows 照合順序で使用される基本照合順序規則を指定します
 **BIN2**  
 コード ポイントの比較セマンティクスを使用するバイナリ並べ替え順を指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 照合順序のバージョンによっては、一部のコード ポイントで、並べ替え加重や大文字/小文字マッピングが定義されない可能性があります。 たとえば、次のような `LOWER` 関数の出力を比較してみます。この場合、同じ文字が指定されていますが、同じ照合順序でもバージョンは異なります。
 
 ```sql
@@ -107,7 +107,7 @@ SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
 
 Windows 照合順序と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序で、同じクエリに対して異なるクエリ プランが生成される場合があります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次に Windows 照合順序名の例をいくつか示します。
 
@@ -230,10 +230,10 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |イ語 (PRC)|Latin1_General_100_|使用不可|
 |ヨルバ語 (ナイジェリア)|Latin1_General_100_|使用不可|
 |ズールー語 (南アフリカ)|Latin1_General_100_|使用不可|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|ヒンディー語|ヒンディー語|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|Lithuanian_Classic|Lithuanian_Classic|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|Macedonian|Macedonian|
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨とされており、サーバー レベルでは利用できません|ヒンディー語|ヒンディー語|
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨とされており、サーバー レベルでは利用できません|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨とされており、サーバー レベルでは利用できません|Lithuanian_Classic|Lithuanian_Classic|
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨とされており、サーバー レベルでは利用できません|マケドニア語|マケドニア語|
 
 <sup>1</sup> Windows の Unicode のみの照合順序は、列レベルまたは式レベルのデータにのみ適用できます。 これらの照合順序は、サーバーまたはデータベースの照合順序としては使用できません。
 

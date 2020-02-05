@@ -9,10 +9,10 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651727"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2: レポート データ ソースのプロパティの変更
@@ -24,8 +24,8 @@ ms.locfileid: "62651727"
   
 1.  管理者特権を使用して [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルを参照します。たとえば、Internet Explorer アイコンを右クリックして **[管理者として実行]** をクリックします。  
  
-2.    Web ポータルの URL を参照します。  例:   
-    `https://<server name>/reports`が配信されます。  
+2.    Web ポータルの URL を参照します。  次に例を示します。   
+    [https://login.microsoftonline.com/consumers/](`https://<server name>/reports`)  
     `https://localhost/reports`
  **注:** Web *ポータル* URL は "Reports" です。Report *Server* の URL "Reportserver" ではありません。  
 3.  **Sales Orders** レポートを含むフォルダーを参照して、ショートカット メニューの **[管理]** をクリックします。  
@@ -79,7 +79,7 @@ ms.locfileid: "62651727"
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**  
  次の手順では、レポートにパラメーターを追加します。  データセット パラメーターは、レポート パラメーターにフィードされます。 
 ## <a name="bkmk_add_reportparameter"></a>レポート パラメーターを追加し、レポートを再パブリッシュするには  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62651727"
   
 2.  ツール バーの **[ビルド]** をクリックし、 **[Tutorial の配置]** をクリックします。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 + 保存されている資格情報を使用してデータを取得するレポートを構成したので、パラメーターを使用してデータをフィルター処理できます。 
 + 次のレッスンでは、Web ポータルのデータ ドリブン サブスクリプション ページを使用してサブスクリプションを構成します。 「 [レッスン 3: データ ドリブン サブスクリプションの定義](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)」を参照してください。  
   

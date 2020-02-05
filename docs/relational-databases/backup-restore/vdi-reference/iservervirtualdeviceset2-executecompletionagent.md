@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2ad094794b5115aa4593f918de442798445e2b79
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847293"
 ---
 # <a name="iservervirtualdeviceset2executecompletionagent-vdi"></a>IServerVirtualDeviceSet2::ExecuteCompletionAgent (VDI)
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::ExecuteCompletionAgent ();
 
 メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 NOERROR は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 完了エージェントによって、SQL Server が自身を仮想デバイスのコマンド完了と同期できるメカニズムが提供されます。 これは任意のコマンドを発行する前にアクティブにしておく必要があり、すべてのデバイスが閉じられるまでアクティブなままにしておく必要があります。
 
@@ -40,6 +40,6 @@ HRESULT IServerVirtualDeviceSet2::ExecuteCompletionAgent ();
 
 この関数は、IServerVirtualDeviceSet2::Close または SignalAbort が呼び出されるまで戻りません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

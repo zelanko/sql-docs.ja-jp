@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727418"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server の間のデータ型マッピング
@@ -39,7 +39,7 @@ SQL Server の特定のインスタンスに関連付けられている R のバ
 
 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを R スクリプトで使用する場合と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に返された場合のデータ型と値の変化の一覧です。
 
-|SQL 型|R クラス|RESULT SET の型|コメント|
+|SQL 型|R クラス|RESULT SET の型|説明|
 |-|-|-|-|
 |**bigint**|`numeric`|**float**||
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
@@ -69,7 +69,7 @@ SQL Server の特定のインスタンスに関連付けられている R のバ
 
 + SQL 型システムに関する記事の**その他**のセクションに示されているデータ型: **カーソル**、**タイムスタンプ**、**hierarchyid**、**一意識別子**、**sql_variant**、**xml**、**テーブル**
 + すべての空間型
-+ **image**
++ **画像**
 
 ## <a name="data-types-that-might-convert-poorly"></a>適切に変換できない可能性があるデータ型
 
@@ -104,9 +104,9 @@ R コードで使用するためのデータをデータベースから取得す
 > データの移動中に **rxDataStep** を使用して互換性のない列を削除する場合、引数 "_varsToKeep_" と "_varsToDrop_" は **RxSqlServerData** データ ソース型としてサポートされないことにご注意ください。
 
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
-### <a name="example-1-implicit-conversion"></a>例 1 : 暗黙的な変換
+### <a name="example-1-implicit-conversion"></a>例 1: 暗黙の変換
 
 次の例では、SQL Server と R の間を往復するときにデータを変換する方法を示しています。
 
@@ -140,7 +140,7 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1|1|こんにちは|6e225611-4b58-4995-a0a5-554d19012ef1|4|
 |1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 R で `str` 関数を使用すると、出力データのスキーマが取得されます。 この関数からは、次の情報が返されます。
@@ -168,7 +168,7 @@ R で `str` 関数を使用すると、出力データのスキーマが取得�
 -   **列 C4**。 この列には、元のデータには存在しない、R スクリプトで生成された値が含まれます。
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>例 2:R を使用した動的な列の選択
+## <a name="example-2-dynamic-column-selection-using-r"></a>例2: R を使用した動的な列の選択
 
 次の例では、R コードを使用して無効な列の型をチェックする方法を示します。 指定されたテーブルのスキーマを SQL Server システム ビューを使用して取得し、指定された無効な型を持つ列をすべて削除します。
 

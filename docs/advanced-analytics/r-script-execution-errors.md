@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727503"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server での R スクリプト エラー
@@ -37,7 +37,7 @@ R ランタイムが機能していても、スクリプトからエラーが返
 
 また、R とデータベース エンジンの間でデータを移動するときに発生する可能性のあるデータ型に関する問題を修正するために、スクリプトを確認し、少し書き直すことをお勧めします。 詳しくは、[R のライブラリとデータ型](r/r-libraries-and-data-types.md)に関する記事をご覧ください。
 
-また、sqlrutils パッケージを使用して、ストアド プロシージャとしてより簡単に使用できる形式で R スクリプトをバンドルすることもできます。 詳細については、以下をご覧ください。
+また、sqlrutils パッケージを使用して、ストアド プロシージャとしてより簡単に使用できる形式で R スクリプトをバンドルすることもできます。 詳細については、次を参照してください。
 * [sqlrutils パッケージ](r/ref-r-sqlrutils.md)
 * [sqlrutils を使用してストアド プロシージャを作成する](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
@@ -92,7 +92,7 @@ remove('name1', 'name2', ...)
 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Machine Learning Services のトラブルシューティングと既知の問題](machine-learning-troubleshooting-faq.md)
 

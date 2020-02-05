@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927378"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -44,7 +44,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>引数  
  *boolean_expression*  
- 次のブール値を返す有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。**TRUE**、**FALSE**、**UNKNOWN** のいずれかの値をとります。  
+ [TRUE](../../t-sql/language-elements/expressions-transact-sql.md)、**FALSE** または、**UNKNOWN** のブール値を返す有効な**式**を指定します。  
   
 ## <a name="result-types"></a>戻り値の型  
  **Boolean**  
@@ -52,7 +52,7 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>結果の値  
  両方の式が TRUE の場合、TRUE を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表は、TRUE 値と FALSE 値を AND 演算子を使用して比較する場合の結果です。  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -61,7 +61,7 @@ boolean_expression AND boolean_expression
 |**FALSE**|FALSE|FALSE|FALSE|  
 |**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-and-operator"></a>A. AND 演算子の使用  
  次の例では、役職が `Marketing Assistant` で、なおかつ、利用可能な休暇時間数が `41` 時間を超える従業員の情報を選択します。  

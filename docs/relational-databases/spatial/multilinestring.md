@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 54fe24ab5a9e07e5cc39e32462e5d412bb8f163b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907020"
 ---
 # <a name="multilinestring"></a>MultiLineString
@@ -78,7 +78,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 `@g4` は、2 番目の **LineString** インスタンスが最初の **LineString** インスタンスと内部で重なっているため、有効ではありません。 有限数の接点で接しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、2 つの `geometry``MultiLineString` 要素を含む SRID 0 の単純な `LineString` インスタンスを作成しています。  
   
 ```sql  
@@ -97,7 +97,7 @@ SET @g.STSrid = 13;
 ## <a name="see-also"></a>参照  
  [STLength &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
- [MultiLineString](../../relational-databases/spatial/linestring.md)   
+ [LineString](../../relational-databases/spatial/linestring.md)   
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

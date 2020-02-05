@@ -17,10 +17,10 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909485"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
@@ -63,9 +63,9 @@ ms.locfileid: "72909485"
   
 |関係演算子|演算子記号|[説明]|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
+|Like|LIKE|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
 |パターンに一致しない|パターンに一致しない|イベントのトレース データが入力したテキストと同じであってはならないことを指定します。 複数の値を指定できます。|  
-|[等しい]|=|イベントのトレース データが入力した値と等しくなければならないことを指定します。 複数の値を指定できます。|  
+|等しい|=|イベントのトレース データが入力した値と等しくなければならないことを指定します。 複数の値を指定できます。|  
 |等しくない|<>|イベントのトレース データが入力した値と等しくあってはならないことを指定します。 複数の値を指定できます。|  
 |より大きい|>|イベントのトレース データが入力した値よりも大きくなければならないことを指定します。|  
 |以上|>=|イベントのトレース データが入力した値以上でなければならないことを指定します。|  
@@ -115,7 +115,7 @@ ms.locfileid: "72909485"
 |**OwnerID**|=、<>、>=、<=|  
 |**OwnerName**|LIKE、NOT LIKE|  
 |**ParentName**|LIKE、NOT LIKE|  
-|**権限**|=、<>、>=、<=|  
+|**アクセス許可**|=、<>、>=、<=|  
 |**ProviderName**|LIKE、NOT LIKE|  
 |**Reads**|=、<>、>=、<=|  
 |**RequestID**|=、<>、>=、<=|  
@@ -127,8 +127,8 @@ ms.locfileid: "72909485"
 |**SPID**|=、<>、>=、\<=|  
 |**SqlHandle**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**StartTime**|>=、<=|  
-|**状態**|=、<>、>=、<=|  
-|**成功**|=、<>、>=、<=|  
+|**State**|=、<>、>=、<=|  
+|**Success**|=、<>、>=、<=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**TargetUserName**|LIKE、NOT LIKE|  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d74d1907b0f96275658c716a7a08061f0eec8995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999565"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded イベント クラス
@@ -35,7 +35,7 @@ ms.locfileid: "67999565"
 |EventSubClass|**int**|CPU 制限違反。|21|はい|  
 |GroupID|**int**|違反が発生したグループ ID。|66|はい|  
 |OwnerID|**int**|違反の原因となったプロセスの SPID。|58|はい|  
-|SPID|**int**|このイベントを発生させたサーバー プロセスの ID。<br /><br /> 注:システム スレッドが CPU 使用率をバックグラウンド タスクとして検証する場合は、この ID が実際のユーザー SPID と異なることがあります。|12|はい|  
+|SPID|**int**|このイベントを発生させたサーバー プロセスの ID。<br /><br /> 注: システム スレッドが CPU 使用率をバックグラウンド タスクとして検証する場合は、この ID が実際のユーザー SPID と異なることがあります。|12|はい|  
 |StartTime|**datetime**|このイベントが発生した時刻。|14|はい|  
   
 ## <a name="see-also"></a>参照  

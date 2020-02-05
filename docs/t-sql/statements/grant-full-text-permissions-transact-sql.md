@@ -19,10 +19,10 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050833"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT (フルテキストの権限の許可) (Transact-SQL)
@@ -60,7 +60,7 @@ GRANT permission [ ,...n ] ON
  権限を許可するフルテキスト ストップリストを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれかです。  
+ 権限を許可するプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -75,7 +75,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -86,7 +86,7 @@ AS *granting_principal*
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG アクセス許可  
  フルテキスト カタログは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、フルテキスト カタログで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -130,10 +130,10 @@ AS *granting_principal*
   
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を許可できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. フルテキスト カタログに対する権限を許可する  
- 次の例では、フルテキスト カタログ `ProductCatalog` に対する `CONTROL` 権限を `Ted` に許可します。  
+ 次の例では、フルテキスト カタログ `Ted` に対する `CONTROL` 権限を `ProductCatalog` に許可します。  
   
 ```  
 GRANT CONTROL  
@@ -142,7 +142,7 @@ GRANT CONTROL
 ```  
   
 ### <a name="b-granting-permissions-to-a-stoplist"></a>B. ストップリストに対する権限を許可する  
- 次の例では、フルテキスト ストップリスト `ProductStoplist` に対する `VIEW DEFINITION` 権限を `Mary` に許可します。  
+ 次の例では、フルテキスト ストップリスト `Mary` に対する `VIEW DEFINITION` 権限を `ProductStoplist` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION  

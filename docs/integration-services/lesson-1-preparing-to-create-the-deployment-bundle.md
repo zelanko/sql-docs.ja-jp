@@ -1,5 +1,5 @@
 ---
-title: レッスン 1:配置バンドルを作成する準備 | Microsoft Docs
+title: 'レッスン 1: 配置バンドルを作成する準備 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6587c8c0e56e824b1a2ae73c5067949f3c4a223a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296078"
 ---
-# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>レッスン 1:配置バンドルを作成する準備
+# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>レッスン 1: 配置バンドルを作成する準備
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -35,18 +35,18 @@ ms.locfileid: "71296078"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1:作業フォルダーと環境変数の作成](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+-   [手順 1: 作業フォルダーと環境変数の作成](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
--   [手順 2:配置プロジェクトの作成](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+-   [手順 2: 配置プロジェクトの作成](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
--   [ステップ 3:パッケージとその他のファイルの追加](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+-   [手順 3: パッケージとその他のファイルの追加](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
--   [手順 4:パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
+-   [手順 4: パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
--   [手順 5:更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+-   [手順 5: 更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1:作業フォルダーと環境変数の作成](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+[手順 1: 作業フォルダーと環境変数の作成](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
   
   

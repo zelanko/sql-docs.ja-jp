@@ -9,10 +9,10 @@ ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 698c78dced26e7981fb7a651c22530909427b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222566"
 ---
 # <a name="working-with-snapshots-web-portal"></a>スナップショットの操作 (Web ポータル)
@@ -70,7 +70,7 @@ ms.locfileid: "68222566"
   
 これをオンにすると、レポート実行プロパティを基に生成したレポート スナップショットがレポート履歴にコピーされます。 生成したスナップショットからレポートを実行するようにレポート実行プロパティを設定できます。 このレポート ヒストリのプロパティを設定すると、一定期間に生成されたすべてのレポート スナップショットのコピーをレポート ヒストリに配置することで、その記録を保存できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
 [ページ分割されたレポートの使用](working-with-paginated-reports-web-portal.md)  

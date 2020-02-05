@@ -24,10 +24,10 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 044f6b384bf557b2c926dd36151488adc6c292a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287374"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>データ フロー コンポーネントでのエラー出力の使用
@@ -40,7 +40,7 @@ ms.locfileid: "71287374"
  コンポーネントにエラー出力を実装してサポートするには、まず、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> プロパティを **true** に設定する必要があります。 次に、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> プロパティを **true** に設定した出力を、コンポーネントに追加する必要があります。 最後に、エラーまたは切り捨てが発生したときに、行をエラー出力にリダイレクトするためのコードを、そのコンポーネントに格納する必要があります。 このトピックでは、これら 3 つの手順、および同期型のエラー出力と非同期型のエラー出力の違いについて説明します。  
   
 ## <a name="creating-an-error-output"></a>エラー出力の作成  
- エラー出力を作成するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> メソッドを呼び出し、新しい出力の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> プロパティを **true** に設定します。 出力が非同期型の場合、出力に対して他の処理を行うことはできません。 出力が同期型で、同じ入力に対して同期する別の出力が存在する場合、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> プロパティも設定する必要があります。 両方のプロパティの値は、同じ入力に対して同期する別の出力の値と同じである必要があります。 これらのプロパティの値が 0 でない値に設定されていない場合、入力で提供された行は、その入力に対して同期する両方の出力に送信されます。  
+ エラー出力を作成するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> メソッドを呼び出し、新しい出力の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> プロパティを **true** に設定します。 出力が非同期型の場合、出力に対して他の処理を行うことはできません。 出力が同期型で、同じ入力に対して同期する別の出力が存在する場合、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> プロパティも設定する必要があります。 両方のプロパティの値は、同じ入力に対して同期する別の出力の値と同じである必要があります。 これらのプロパティの値が 0 でない値に設定されていない場合、入力で提供された行は、その入力に対して同期する両方の出力に送信されます。  
   
  コンポーネントの実行中にエラーまたは切り捨てが発生すると、エラーが発生した入力または出力、あるいは入力列または出力列の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> プロパティの設定に基づいて、処理が続行されます。 これらのプロパティの値は、既定で <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed> に設定する必要があります。 コンポーネントのエラー出力が下流コンポーネントに接続されている場合、そのコンポーネントのユーザーがこのプロパティを設定することで、コンポーネントによるエラーまたは切り捨ての処理方法をユーザーが制御できます。  
   

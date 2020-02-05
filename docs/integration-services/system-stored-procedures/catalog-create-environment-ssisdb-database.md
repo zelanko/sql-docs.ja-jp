@@ -11,10 +11,10 @@ ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295561"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (SSISDB データベース)
@@ -68,7 +68,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   指定したフォルダーには、同じ名前を持つ環境が既に存在する  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  環境名は、フォルダー内で一意になる必要があります。  
   
   

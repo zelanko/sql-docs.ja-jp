@@ -18,10 +18,10 @@ ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e57a3551660467254a9c291ed78ed41aae30b7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950134"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (geometry データ型)
@@ -38,17 +38,17 @@ ms.locfileid: "67950134"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- 交差する地点を特定するために、`STIntersection()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
+ 交差する地点を特定するために、**を呼び出したインスタンスと比較される、別の**geometry`STIntersection()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STIntersection()` は常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
+## <a name="remarks"></a>解説  
+ `STIntersection()`geometry **インスタンスの SRID (spatial reference ID) が一致しない場合、** は常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stintersection-on-polygon-instances"></a>A. Polygon インスタンスで STIntersection() を使用する  
  `STIntersection()` を使用して 2 つの多角形の交差部分を計算する例を次に示します。  

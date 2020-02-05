@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906069"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>データベース メールでテスト メールを送信する  
@@ -32,7 +32,7 @@ ms.locfileid: "72906069"
 ## <a name="procedure"></a>手順
 
 1. [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) のオブジェクト エクスプローラーを使用して、データベース メールが構成されている SQL Server Database Engine のインスタンスに接続します。次に、[管理] を展開し、[データベース メール] を右クリックし、[テスト電子メールの送信] を選択します。 データベース メールのプロファイルが存在しない場合は、表示されるダイアログ ボックスにより、プロファイルを作成し、データベース メール構成ウィザードを起動するように求められます。
-1. **[<instance name> からテスト電子メールを送信]** ダイアログ ボックスの [データベース メール プロファイル] ボックスで、テストするプロファイルを選択します。
+1. **[** からテスト電子メールを送信]<instance name> ダイアログ ボックスの [データベース メール プロファイル] ボックスで、テストするプロファイルを選択します。
 1. **[宛先]** ボックスに、テスト電子メールの受信者の電子メール名を入力します。
 1. **[件名]** ボックスに、テスト電子メールの件名を入力します。 既定の本文を変更し、トラブルシューティング用の電子メールであるとわかりやすい内容にします。
 1. **[本文]** ボックスに、テスト電子メールの本文を入力します。 既定の本文を変更し、トラブルシューティング用の電子メールであるとわかりやすい内容にします。

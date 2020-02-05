@@ -30,10 +30,10 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75002015"
 ---
 # <a name="server-configuration-options-sql-server"></a>サーバー構成オプション (SQL Server)
@@ -114,7 +114,7 @@ ms.locfileid: "75002015"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|0<br /><br /> 0 の場合、32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (256 + ( *\<processors>* -4) * 8) を使用し、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (512 + ( *\<processors>* - 4) * 8) を使用して、プロセッサ数に基づいたワーカー スレッドの最大数が自動的に構成されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|0<br /><br /> 0 の場合、32 ビット版の  *では式 (256 + (\<* processors>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -4) * 8) を使用し、64 ビット版の  *では式 (512 + (\<* processors>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - 4) * 8) を使用して、プロセッサ数に基づいたワーカー スレッドの最大数が自動的に構成されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  

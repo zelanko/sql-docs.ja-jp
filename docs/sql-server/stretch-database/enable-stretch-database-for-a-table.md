@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843806"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
@@ -30,7 +30,7 @@ ms.locfileid: "73843806"
  
  **前提条件**。 テーブルに対して **[ストレッチ]、[有効にする]** の順に選択した場合、データベースに対して Stretch Database がまだ有効になっていないと、ウィザードは最初に Stretch Database 用にデータベースを構成します。 この記事の手順ではなく、「[Stretch ウィザードに対するデータベースの有効化を実行して開始する](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)」の手順に従います。  
   
- **権限**: データベースまたはテーブルで Stretch Database を有効にするには、db_owner 権限が必要です。 テーブルで Stretch Database を有効にするには、テーブルに対する ALTER 権限も必要です。  
+ **権限**: データベースまたはテーブルで Stretch Database を有効にするには、db_owner 権限が必要です。 テーブルで Stretch Database を有効にするには、テーブルの ALTER アクセス許可も必要です。  
 
  > [!NOTE]
  > 後で、Stretch Database を無効にする場合は、テーブルまたはデータベースで Stretch Database を無効にしてもリモート オブジェクトは削除されないことに注意してください。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを手動で削除するまで、引き続き Azure ストレージのコストが発生します。
@@ -41,7 +41,7 @@ ms.locfileid: "73843806"
   
 2.  右クリックして **[ストレッチ]** を選択し、 **[有効化]** を選択して、ウィザードを起動します。  
   
- **概要**  
+ **はじめに**  
  ウィザードの目的と前提条件を確認します。  
   
  **データベースのテーブルを選択する**  
@@ -55,7 +55,7 @@ ms.locfileid: "73843806"
   
  ALTER TABLE 構文については、この記事で後ほど説明します。  
   
- **概要**  
+ **まとめ**  
  ウィザードで入力した値および選択したオプションを確認します。 次に、 **[完了]** を選択してストレッチを有効にします。  
   
  **結果**  
@@ -87,7 +87,7 @@ ALTER TABLE <table name>
 GO
 ```  
   
- 次に、 `dbo.fn_stretchpredicate` インライン テーブル値関数によって識別される行だけを移行し、データ移行を延期する例を示します。 フィルター関数の詳細については、「 [フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。  
+ 次に、 `dbo.fn_stretchpredicate` インライン テーブル値関数によって識別される行だけを移行し、データ移行を延期する例を示します。 フィルター関数の詳細については、「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。  
   
 ```sql  
 USE <Stretch-enabled database name>;
@@ -115,7 +115,7 @@ CREATE TABLE <table name>
 GO
 ```  
   
- 次に、 `dbo.fn_stretchpredicate` インライン テーブル値関数によって識別される行だけを移行し、データ移行を延期する例を示します。 フィルター関数の詳細については、「 [フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。  
+ 次に、 `dbo.fn_stretchpredicate` インライン テーブル値関数によって識別される行だけを移行し、データ移行を延期する例を示します。 フィルター関数の詳細については、「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。  
   
 ```sql  
 USE <Stretch-enabled database name>;

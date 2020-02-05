@@ -23,10 +23,10 @@ ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b0dd587240a56dcdfab4d618255ee838491054af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122285"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
@@ -47,7 +47,7 @@ KILL STATS JOB job_id
  *job_id*  
  ジョブの sys.dm_exec_background_job_queue 動的管理ビューによって返された job_id フィールドです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  job_id は、他の形式の KILL ステートメントで使用されている session_id または作業単位とは無関係です。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -55,7 +55,7 @@ KILL STATS JOB job_id
   
  KILL STATS JOB 権限は、特に指定のない限り固定データベース ロール sysadmin および processadmin のメンバーに与えられ、これを譲渡することはできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、*job_id* = `53` のジョブに関連付けられた統計情報の更新を終了する方法を示しています。  
   
 ```  

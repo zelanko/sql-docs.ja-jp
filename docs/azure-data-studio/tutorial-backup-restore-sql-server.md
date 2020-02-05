@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532473"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用してデータベースをバックアップし、復元する
@@ -27,7 +27,7 @@ ms.locfileid: "73532473"
 > * データベースを復元する
 > * 復元タスクの状態を表示する
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルには、SQL Server *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
@@ -72,8 +72,8 @@ ms.locfileid: "73532473"
 
 5. **[Destination]\(復元先\)** セクションの **[Target database]\(復元先データベース\)** フィールドに「**TutorialDB_Restored**」と入力すると、バックアップ ファイルが新しいデータベースに復元されます。 次に、 **[復元]** を選択します。
 
-   ![復元 (restore)](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![復元](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. 復元操作の状態を表示するには、**Ctrl + T** キーを押して **[タスク履歴]** を開きます。
 
-   ![復元 (restore)](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![復元](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982406"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -71,13 +71,13 @@ WITH NO_INFOMSGS
   
 |列名|定義|  
 |---|---|
-|**Database Name**|ログ統計情報を表示するデータベースの名前。|  
+|**データベース名**|ログ統計情報を表示するデータベースの名前。|  
 |**ログ サイズ (MB)**|ログに割り当てられている現在のサイズ。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部ヘッダー情報の格納用に少量のディスク容量が確保されるので、この値は最初にログ領域に割り当てられた容量よりも常に小さくなります。|  
 |**ログの使用済み領域 (%)**|現在トランザクション ログ情報の保存に使用されているログ ファイルのパーセンテージ。|  
-|**ステータス**|ログ ファイルの状態。 常に 0 です。|  
+|**状態**|ログ ファイルの状態。 常に 0 です。|  
   
 ## <a name="Remarks"></a> 解説  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、`DBCC SQLPERF(LOGSPACE)` の代わりに [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV を使用します。    
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、[ の代わりに ](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)sys.dm_db_log_space_usage`DBCC SQLPERF(LOGSPACE)` DMV を使用します。    
  
 トランザクション ログには、データベースで実行された各トランザクションが記録されます。 詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」と「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」を参照してください。
   
@@ -86,10 +86,10 @@ WITH NO_INFOMSGS
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の Premium 階層および Business Critical 階層では、データベースで `VIEW DATABASE STATE` アクセス許可が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard、Basic、および General Purpose 階層の場合、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理者アカウントが必要です。 待機およびラッチ統計をリセットすることはできません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>A. すべてのデータベースのログ領域情報を表示する  
-次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれているすべてのデータベースの `LOGSPACE` 情報を表示します。
+次の例では、`LOGSPACE` インスタンスに含まれているすべてのデータベースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 情報を表示します。
   
 ```sql  
 DBCC SQLPERF(LOGSPACE);  
