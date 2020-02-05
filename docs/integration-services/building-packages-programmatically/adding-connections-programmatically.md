@@ -25,10 +25,10 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dbeccf07c052eb99c3a110cc5f3d8811cf9529ce
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299095"
 ---
 # <a name="adding-connections-programmatically"></a>プログラムによる接続の追加
@@ -45,7 +45,7 @@ ms.locfileid: "71299095"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- これは、マネージド接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合は、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトの **QueryInterface** メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
+ これは、マネージド接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合は、**オブジェクトの**QueryInterface<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
   
  次の表は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が備えている接続マネージャーと `package.Connections.Add("xxx")` ステートメントで使用される文字列を示しています。 すべての接続マネージャーのリストについては、「[Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   

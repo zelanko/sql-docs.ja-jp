@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582054"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加
@@ -68,26 +68,26 @@ ms.locfileid: "65582054"
   
 |**レポート定義スキーマのデータ型**|**CLR 型**|  
 |--------------------------------------------|-----------------------|  
-|**ブール値**|**ブール値**|  
+|**Boolean**|**Boolean**|  
 |**DateTime**|**DateTime**、 **DateTimeOffset**|  
-|**Integer**|**Int16**、 **Int32**、 **UInt16**、 **Byte**、 **SByte**|  
+|**整数**|**Int16**、 **Int32**、 **UInt16**、 **Byte**、 **SByte**|  
 |**Float**|**Single**、 **Double**、 **Decimal**|  
-|**テキスト**|**String**、 **Char**、 **GUID**、 **Timespan**|  
+|**[テキスト]**|**String**、 **Char**、 **GUID**、 **Timespan**|  
   
  データ型を指定する必要がある場合は、式の [値] に対して適切な変換を指定できます。  
   
 ### <a name="operator"></a>演算子  
  次の表は、フィルター式に使用できる演算子と、その演算子を使用したフィルター式の評価方法の一覧です。  
   
-|演算子|操作|  
+|演算子|アクション|  
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|式と単一の値とを比較します。|  
 |**TopN、BottomN**|式と単一の **Integer** 値とを比較します。|  
 |**TopPercent、BottomPercent**|式と単一の値 ( **Integer** または **Float** ) とを比較します。|  
 |**[次の値の間]**|式が 2 つの値の範囲内にあるかどうかを調べます。|  
-|**In**|式が特定の値の集合に含まれるかどうかを調べます。|  
+|**含まれる**|式が特定の値の集合に含まれるかどうかを調べます。|  
   
-### <a name="value"></a>[値]  
+### <a name="value"></a>値  
  [値] 式は、フィルター式の最後の部分を指定します。 レポート プロセッサは、[式] で指定されたデータにフィルターの通過を許可するかどうかを判断する際、評価対象の式を指定のデータ型に変換した後、フィルター式全体を評価します。  
   
  標準の CLR データ型以外の型に変換するためには、特定のデータ型へと明示的に変換するように、式を修正する必要があります。 この変換には、 **[式]** ダイアログ ボックス ( **[共通の関数]** の **[変換]** ) に表示される変換関数を使用できます。 たとえば、 `ListPrice` データ ソースの **money** 型として格納されたデータを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] というフィールドがあるとします。データ処理拡張機能は、このフィールドの値を <xref:System.Decimal> 型として返します。 このとき、レポートの通貨で **$50000.00** を超える値だけを使用するようにフィルターを設定するには、 `=CDec(50000.00)`という式を使って、この値を Decimal 型に変換します。  

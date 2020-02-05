@@ -11,10 +11,10 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298605"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
@@ -94,7 +94,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [ユーザー ロール](../../integration-services/change-data-capture/user-roles.md)  
   
--   [Oracle CDC Service の使用](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
+-   [Oracle CDC Service を使用する](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
 ## <a name="see-also"></a>参照  
  [ローカルの CDC Service を管理する方法](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   

@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251914"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
@@ -91,15 +91,15 @@ Reporting Services の colors.json ファイルには 2 つのメイン カテ�
   
 インターフェイス セクションは、以下のグループに分類されます。  
   
-|セクション|[説明]|  
+|Section|[説明]|  
 |---|---|  
-|primary|ボタンとホバーの色。|  
+|プライマリ|ボタンとホバーの色。|  
 |セカンダリ|タイトル バー、検索バー、左側のメニュー (表示される場合)、それらのアイテムのテキストの色。|  
 |ニュートラル プライマリ|ホームとレポート領域の背景。|  
 |ニュートラル セカンダリ|テキスト ボックスとフォルダー オプションの背景、設定メニュー。|  
 |ニュートラル ターシャリ|サイト設定の背景。|  
 |危険/警告/成功メッセージ|これらのメッセージの色。|  
-|KPI (KPI)|色を good (1)、neutral (0)、neutral (-1)、none で調整します。|  
+|KPI|色を good (1)、neutral (0)、neutral (-1)、none で調整します。|  
   
 Mobile Report Publisher で初めてサーバーに接続するとき、それにブランド パッケージが配置されている場合、そのテーマが利用可能テーマに追加されます。アプリの右上のメニューから利用できます。  
   
@@ -123,7 +123,7 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
   
     ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  **[ブランド化]** を選択します。  
+3.  **[ブランド]** を選択します。  
   
     ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
   
@@ -241,6 +241,6 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
         }  
     }  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)
