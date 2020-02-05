@@ -17,10 +17,10 @@ ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051287"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
@@ -55,7 +55,7 @@ insert
  *Expression2*  
  ノードを識別します。 *Expression1* で識別されるノードの相対位置に、*Expression2* で識別されるノードが挿入されます。 現在参照されているドキュメントに存在するノードへの参照を返す XQuery 式も使用できます。 複数のノードが返されると、挿入は失敗します。 *Expression2* で空のシーケンスが返されると、挿入が行われず、エラーも返されません。 *Expression2* が静的に単一にならないと、静的エラーが返されます。 *Expression2* を、処理命令、コメント、または属性にはできません。 *Expression2* は、構築されたノードではなく、ドキュメント内の既存のノードへの参照にする必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. ドキュメントへの要素ノードの挿入  
  次の例は、ドキュメントに要素を挿入する方法を示します。 まず、XML ドキュメントが **xml** 型の変数に代入されます。 次に、いくつかの **insert** XML DML ステートメントを使用して、要素ノードをドキュメントに挿入する方法を示します。 それぞれの挿入後、SELECT ステートメントによって結果が表示されます。  

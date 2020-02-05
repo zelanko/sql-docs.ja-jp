@@ -17,10 +17,10 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bf8e8c7bafb72b90edfe108c5702ad330bc3e700
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293465"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 変換先を使用してデータの一括読み込みを行う
@@ -58,7 +58,7 @@ ms.locfileid: "71293465"
     > [!NOTE]  
     >  この変換先では、同じ名前の列は自動的にマップされます。  
   
-9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]** 、 **[NULL を保持する]** 、 **[テーブル ロック]** 、 **[CHECK 制約]** 、 **[トリガーを起動する]** を設定します。  
+9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]** 、 **[NULL を保持する]** 、 **[テーブル ロック]** 、 **[CHECK 制約]** 、および **[トリガーを起動する]** を設定します。  
   
      必要に応じて、挿入する最初の入力行と最後の入力行、挿入操作が停止するまでに発生できるエラーの最大数、および挿入を並べ替える列を指定します。  
   
@@ -73,6 +73,6 @@ ms.locfileid: "71293465"
  [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
   
   

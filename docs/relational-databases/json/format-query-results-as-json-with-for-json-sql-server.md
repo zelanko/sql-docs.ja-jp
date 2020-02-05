@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095814"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "74095814"
   
 -   JSON 出力の形式を継続して完全に制御するには、**FOR JSON PATH** を使用します。 ラッパー オブジェクトを作成して、複雑なプロパティを入れ子にすることができます。  
   
--   SELECT ステートメントの構造に基づいて JSON 出力を自動的に形式設定するには、**FOR JSON AUTO** を使用します。  
+-   SELECT ステートメントの構造に基づいて JSON 出力を自動的に書式設定するには、**FOR JSON AUTO** を使用します。  
   
 **FOR JSON** 句とその出力を使用した **SELECT** ステートメントの例を次に示します。
   
@@ -77,7 +77,7 @@ FOR JSON AUTO;
 
 以下の `SELECT...FOR JSON AUTO` の例には、`JOIN` されたテーブルからのデータ間に 1 対多の関係がある場合に JSON の結果がどのように表示されるかが含まれています。
 
-返された JSON に null 値が存在しないことも示されています。 ただし、この既定の動作は、`FOR` 句で `INCLUDE_NULL_VALUES` キーワードを使用することでオーバーライドできます。
+返された JSON に null 値が存在しないことも示されています。 ただし、この既定の動作は、`INCLUDE_NULL_VALUES` 句で `FOR` キーワードを使用することでオーバーライドできます。
 
 ```sql
 go
@@ -166,7 +166,7 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 構文と使用法については、「 [FOR 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)。  
   
 ## <a name="control-other-json-output-options"></a>他の JSON 出力オプションを制御する  
-**FOR JSON** 句の出力を制御するには、次の追加オプションを使用します。  
+次の追加オプションを使用して、**FOR JSON** 句の出力を制御します。  
   
 -   **ROOT**。 JSON 出力に最上位の単一要素を追加するには、 **ROOT** オプションを指定します。 このオプションを指定しないと、JSON 出力にはルート要素がありません。 詳細については、「 [ROOT オプションを使用して JSON 出力にルート ノードを追加する &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
   
@@ -198,12 +198,12 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 ### <a name="example"></a>例
 **FOR JSON** 句による JSON 出力の書式設定の例を次に示します。  
   
-**クエリ結果**  
+**クエリの結果**  
   
 |||||  
 |-|-|-|-|  
 |**A**|**B**|**C**|**D**|  
-|10|11|12|×|  
+|10|11|12|X|  
 |20|21|22|Y|  
 |30|31|32|Z|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

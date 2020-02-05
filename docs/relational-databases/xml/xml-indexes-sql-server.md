@@ -34,10 +34,10 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096914"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
@@ -94,7 +94,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   ベース テーブルの主キー。 ベース テーブルとの逆結合のため、ベース テーブルの主キーがプライマリ XML インデックスにコピーされます。ベース テーブルの主キーの最大列数は 15 です。  
   
- このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 例:  
+ このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 次に例を示します。  
   
 -   `//ContactRecord/PhoneNumber` 最後の 2 つのロケーション ステップだけが既知です。  
   
@@ -104,7 +104,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) に関係するクエリの場合、クエリ プロセッサでプライマリ XML インデックスが使用され、スカラー値またはプライマリ インデックス自体の XML サブツリーのどちらかが返されます。 (このプライマリ XML インデックスには XML インスタンスの再構築に必要なすべての情報が格納されています)。  
   
- たとえば、次のクエリからは `ProductModel` テーブルの `CatalogDescription`**xml** 型の列に格納された集計情報が返されます。 このクエリでは、カタログの説明に <`Features`> の説明も含まれている製品モデルに限り <`Summary`> 情報が返されます。  
+ たとえば、次のクエリからは `CatalogDescription`**テーブルの** xml `ProductModel` 型の列に格納された集計情報が返されます。 このクエリでは、カタログの説明に <`Summary`> の説明も含まれている製品モデルに限り <`Features`> 情報が返されます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -167,7 +167,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//author[LastName="someName"]`: <`LastName`> 要素の値はわかっていますが、親である <`author`> はどこにでも存在し得ます。  
   
--   `/book[@* = "someValue"]`: `"someValue"` という値の属性を持つ <`book`> 要素を検索します。  
+-   `/book[@* = "someValue"]`: `book` という値の属性を持つ <`"someValue"`> 要素を検索します。  
   
  次のクエリは、 `ContactID` テーブルから `Contact` を返します。 `WHERE` 句では、 `AdditionalContactInfo`**xml** 型列の値を検索するフィルターを指定しています。 連絡先 ID は、対応する追加の連絡先情報の XML バイナリ ラージ オブジェクトに特定の電話番号が含まれている場合にのみ返されます。 <`telephoneNumber`> 要素は XML 内のどこにでも存在し得るので、パス式で descendent-or-self 軸を指定しています。  
   
@@ -216,6 +216,6 @@ WHERE ProductModelID = 19
   
 ## <a name="see-also"></a>参照  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

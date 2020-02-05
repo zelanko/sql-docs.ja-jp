@@ -18,10 +18,10 @@ ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8eb3644652d826744b50b6980b0dbe0a42ae2d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950209"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (geometry データ型)
@@ -43,12 +43,12 @@ ms.locfileid: "67950209"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- パラメーターが `STNumGeometries()` の結果よりも大きい場合、このメソッドは **null** を返します。また、*expression* パラメーターが 1 より小さい場合は、**ArgumentOutOfRangeException** をスローします。  
+## <a name="remarks"></a>解説  
+ パラメーターが **の結果よりも大きい場合、このメソッドは**null`STNumGeometries()` を返します。また、**expression** パラメーターが 1 より小さい場合は、*ArgumentOutOfRangeException* をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `MultiPoint``geometry collection` を作成し、`STGeometryN()` を使用してコレクションの 2 番目の `geometry` インスタンスを探す例を次に示します。  
   
 ```  

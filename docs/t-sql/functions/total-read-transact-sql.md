@@ -22,13 +22,13 @@ ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4d743ba90c6dc8ea93daa97a56aa341e4ba987cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098937"
 ---
-# <a name="x40x40totalread-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
+# <a name="x40x40total_read-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前回の起動時以降に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって行われたディスクの読み取りの回数を返します。ただし、キャッシュの読み取りは含まれません。  
@@ -43,12 +43,12 @@ ms.locfileid: "68098937"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行を含む、読み取りおよび書き込み動作では、統計、 **sp_monitor**です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のシステム上の日付と時刻におけるディスクの読み取りおよび書き込みの合計数が返されます。  
   
 ```  

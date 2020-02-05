@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908670"
 ---
 # <a name="install-polybase-on-windows"></a>Windows への PolyBase のインストール
@@ -23,17 +23,17 @@ ms.locfileid: "72908670"
 
 SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) からインストールすることができます。 
    
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
    
 - 64 ビット SQL Server 評価版。  
    
 - Microsoft .NET Framework 4.5。  
 
-- 最小メモリ:4 GB。 
+- 最小メモリ: 4 GB。 
    
 - 最小ハード ディスク容量: 2 GB。
   
-- 推奨:16-GB 以上の RAM。
+- 推奨: 16 GB 以上の RAM。
    
 - PolyBase が正常に機能するには、TCP/IP を有効にする必要があります。 TCP/IP は、Developer Edition と Express Edition を除く SQL Server のすべてのエディションで、既定で有効です。 Developer Edition および Express Edition で PolyBase が正常に機能するためには、TCP/IP 接続を有効にする必要があります。 「[サーバー ネットワーク プロトコルの有効化または無効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。
 
@@ -105,14 +105,14 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
 |SQL Server のコンポーネント (SQL Server component)|パラメーターおよび値|[説明]|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server セットアップ コントロール|**必須**<br /><br /> /FEATURES=PolyBase|PolyBase 機能を選択します。|  
-|SQL Server PolyBase エンジン|**省略可**<br /><br /> /PBENGSVCACCOUNT|エンジン サービスのアカウントを指定します。 既定値は、 **NT Authority\NETWORK SERVICE**です。|  
-|SQL Server PolyBase エンジン|**省略可**<br /><br /> /PBENGSVCPASSWORD|エンジン サービス アカウントのパスワードを指定します。|  
-|SQL Server PolyBase エンジン|**省略可**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase エンジン サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
-|SQL Server PolyBase Data Movement |**省略可**<br /><br /> /PBDMSSVCACCOUNT|データ移動サービスのアカウントを指定します。 既定値は、 **NT Authority\NETWORK SERVICE**です。|  
-|SQL Server PolyBase Data Movement |**省略可**<br /><br /> /PBDMSSVCPASSWORD|データ移動アカウントのパスワードを指定します。|  
-|SQL Server PolyBase Data Movement |**省略可**<br /><br /> /PBDMSSVCSTARTUPTYPE|データ移動サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
-|PolyBase|**省略可**<br /><br /> /PBSCALEOUT|PolyBase スケールアウト計算グループの一部として SQL Server インスタンスを使用するかどうかを指定します。 <br />サポートされる値:True、False。|  
-|PolyBase|**省略可**<br /><br /> /PBPORTRANGE|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|SQL Server PolyBase エンジン|**省略可能**<br /><br /> /PBENGSVCACCOUNT|エンジン サービスのアカウントを指定します。 既定値は、 **NT Authority\NETWORK SERVICE**です。|  
+|SQL Server PolyBase エンジン|**省略可能**<br /><br /> /PBENGSVCPASSWORD|エンジン サービス アカウントのパスワードを指定します。|  
+|SQL Server PolyBase エンジン|**省略可能**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase エンジンのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
+|SQL Server PolyBase Data Movement |**省略可能**<br /><br /> /PBDMSSVCACCOUNT|データ移動サービスのアカウントを指定します。 既定値は、 **NT Authority\NETWORK SERVICE**です。|  
+|SQL Server PolyBase Data Movement |**省略可能**<br /><br /> /PBDMSSVCPASSWORD|データ移動アカウントのパスワードを指定します。|  
+|SQL Server PolyBase Data Movement |**省略可能**<br /><br /> /PBDMSSVCSTARTUPTYPE|データ移動サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
+|PolyBase|**省略可能**<br /><br /> /PBSCALEOUT|PolyBase スケールアウト計算グループの一部として SQL Server インスタンスを使用するかどうかを指定します。 <br />サポートされる値: True、False。|  
+|PolyBase|**省略可能**<br /><br /> /PBPORTRANGE|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 <!--SQL Server 2019-->
@@ -121,14 +121,14 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
 |SQL Server のコンポーネント (SQL Server component)|パラメーターおよび値|[説明]|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server セットアップ コントロール|**必須**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore では、Hadoop 接続を除くすべての PolyBase 機能のサポートがインストールされます。 PolyBaseJava では Hadoop 接続が有効化されます。 PolyBase では両方ともインストールされます。 |  
-|SQL Server PolyBase エンジン|**省略可**<br /><br /> /PBENGSVCACCOUNT|エンジン サービスのアカウントを指定します。 既定値は、 **NT Authority\NETWORK SERVICE**です。|  
-|SQL Server PolyBase エンジン|**省略可**<br /><br /> /PBENGSVCPASSWORD|エンジン サービス アカウントのパスワードを指定します。|  
-|SQL Server PolyBase エンジン|**省略可**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase エンジン サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
-|SQL Server PolyBase Data Movement |**省略可**<br /><br /> /PBDMSSVCACCOUNT|データ移動サービスのアカウントを指定します。 既定値は、 **NT Authority\NETWORK SERVICE**です。|  
-|SQL Server PolyBase Data Movement |**省略可**<br /><br /> /PBDMSSVCPASSWORD|データ移動アカウントのパスワードを指定します。|  
-|SQL Server PolyBase Data Movement |**省略可**<br /><br /> /PBDMSSVCSTARTUPTYPE|データ移動サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
-|PolyBase|**省略可**<br /><br /> /PBSCALEOUT|PolyBase スケールアウト計算グループの一部として SQL Server インスタンスを使用するかどうかを指定します。 <br />サポートされる値:True、False。|  
-|PolyBase|**省略可**<br /><br /> /PBPORTRANGE|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|SQL Server PolyBase エンジン|**省略可能**<br /><br /> /PBENGSVCACCOUNT|エンジン サービスのアカウントを指定します。 既定値は、 **NT Authority\NETWORK SERVICE**です。|  
+|SQL Server PolyBase エンジン|**省略可能**<br /><br /> /PBENGSVCPASSWORD|エンジン サービス アカウントのパスワードを指定します。|  
+|SQL Server PolyBase エンジン|**省略可能**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase エンジンのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
+|SQL Server PolyBase Data Movement |**省略可能**<br /><br /> /PBDMSSVCACCOUNT|データ移動サービスのアカウントを指定します。 既定値は、 **NT Authority\NETWORK SERVICE**です。|  
+|SQL Server PolyBase Data Movement |**省略可能**<br /><br /> /PBDMSSVCPASSWORD|データ移動アカウントのパスワードを指定します。|  
+|SQL Server PolyBase Data Movement |**省略可能**<br /><br /> /PBDMSSVCSTARTUPTYPE|データ移動サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
+|PolyBase|**省略可能**<br /><br /> /PBSCALEOUT|PolyBase スケールアウト計算グループの一部として SQL Server インスタンスを使用するかどうかを指定します。 <br />サポートされる値: True、False。|  
+|PolyBase|**省略可能**<br /><br /> /PBPORTRANGE|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 
@@ -188,7 +188,7 @@ SQL Server PolyBase のセットアップでは、コンピューターに次の
    
 #### <a name="to-enable-the-firewall-rules"></a>ファイアウォール規則を有効にするには  
 
-1. **コントロール パネル**を開きます。  
+1. **[コントロール パネル]** を開きます。  
 
 2. **[システムとセキュリティ]** を選択し、 **[Windows ファイアウォール]** を選択します。  
    
@@ -200,6 +200,6 @@ SQL Server PolyBase のセットアップでは、コンピューターに次の
 
 PolyBase エンジンと PolyBase Data Movement サービスのサービス アカウントを変更するには、PolyBase 機能をアンインストールし、再インストールします。
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 
 「 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)」を参照してください。

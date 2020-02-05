@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 400de28e3191b953c1f44dfdf0777678f031e140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119131"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
@@ -61,19 +61,19 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 秒の小数部を指定する整数式。
   
 *有効桁数 (precision)*  
-`DATETIME2FROMPARTS` が返す **datetime2** 値の有効桁数を指定する整数式。
+**が返す**datetime2`DATETIME2FROMPARTS` 値の有効桁数を指定する整数式。
   
 ## <a name="return-types"></a>戻り値の型
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DATETIME2FROMPARTS` は、完全に初期化された **datetime2** 値を返します。 `DATETIME2FROMPARTS` は、必須引数に 1 つでも無効な値が含まれている場合、エラーを生成します。 `DATETIME2FROMPARTS` は、必須引数に 1 つでも NULL 値が含まれている場合、NULL を返します。 ただし、*precision* 引数に NULL 値が含まれる場合、`DATETIME2FROMPARTS` はエラーを生成します。
 
 *分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* の値が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* の値が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 *precision* 値がゼロの場合、*fractions* の値もゼロでなければなりません。それ以外の場合、`DATETIME2FROMPARTS` はエラーを生成します。
   
 この関数は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー以降のリモート処理に対応しています。 バージョンが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前の場合、サーバーのリモート処理には対応していません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-an-example-without-fractions-of-a-second"></a>A. 秒の小数部を使用しない場合の例  
   

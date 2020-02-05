@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68019501"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux のセキュリティ機能のチュートリアル
@@ -27,7 +27,7 @@ SQL Server を初めて使用する Linux ユーザーの場合は、以下の�
 
 ## <a name="create-a-login-and-a-database-user"></a>ログインとデータベース ユーザーを作成する 
 
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) ステートメントを使って master データベースにログインを作成することにより、他のユーザーに SQL Server へのアクセスを許可します。 例:
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) ステートメントを使って master データベースにログインを作成することにより、他のユーザーに SQL Server へのアクセスを許可します。 次に例を示します。
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -48,7 +48,7 @@ GO
 - SQL Server の管理者アカウントでは、任意のデータベースに接続し、データベースにさらに多くのログインとユーザーを作成できます。  
 - データベースを作成したユーザーはデータベース所有者になり、そのデータベースに接続できます。 データベース所有者は、さらにユーザーを作成できます。
 
-その後、他のログインに `ALTER ANY LOGIN` アクセス許可を付与することで、より多くのログインを作成することを承認できます。 データベース内では、他のユーザーに `ALTER ANY USER` アクセス許可を付与することで、より多くのユーザーを作成することを承認できます。 例:   
+その後、他のログインに `ALTER ANY LOGIN` アクセス許可を付与することで、より多くのログインを作成することを承認できます。 データベース内では、他のユーザーに `ALTER ANY USER` アクセス許可を付与することで、より多くのユーザーを作成することを承認できます。 次に例を示します。   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   

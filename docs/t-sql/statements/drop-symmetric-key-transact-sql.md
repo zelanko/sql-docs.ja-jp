@@ -24,10 +24,10 @@ ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fa45fece4925165bb87ad960acd6e7d1731c38e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929187"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
@@ -51,7 +51,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  REMOVE PROVIDER KEY  
  EKM デバイスから拡張キー管理 (EKM) を削除します。 拡張キー管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  現在のセッションでキーが開かれている場合、ステートメントは失敗します。  
   
  非対称キーが EKM デバイスの拡張キー管理 (EKM) にマップされており、**REMOVE PROVIDER KEY** オプションが指定されていない場合は、キーはデータベースから削除されますが、デバイスからは削除されず、警告が発行されます。  
@@ -59,7 +59,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のデータベースから対称キー `GailSammamishKey6` を削除します。  
   
 ```  

@@ -13,10 +13,10 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294764"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 変更データベースの作成
@@ -39,9 +39,9 @@ ms.locfileid: "71294764"
  **[Oracle CDC インスタンス]**  
  作成する CDC インスタンスに関する次の情報を入力します。  
   
--   **[名前]** :新しいサービスの名前を入力します。 この名前は、新しい変更データベースの名前にもなります。  
+-   **[名前]** : 新しいサービスの名前を入力します。 この名前は、新しい変更データベースの名前にもなります。  
   
--   **説明**:新しいインスタンスを識別するのに役立つ説明を入力します。 これは省略可能です。  
+-   **[説明]** : 新しいインスタンスを識別するのに役立つ説明を入力します。 これは省略可能です。  
   
  **[SQL Server 変更データベース]**  
  このセクションは、データベースの作成に使用されます。  

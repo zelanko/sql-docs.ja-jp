@@ -22,10 +22,10 @@ ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: befa0085a7fc1a52ae02ba9443617b0593bb14ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910057"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
@@ -57,7 +57,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  QUEUE *queue_name*  
  イベント通知のスコープが、*queue_name* で指定されたキューに適用されることを示します。 イベント通知の作成時に QUEUE を指定した場合は、QUEUE を指定する必要があります。 同様に、キューの名前である *queue_name* も指定する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  トランザクション内でイベント通知が開始され、同じトランザクション内で削除される場合は、イベント通知インスタンスが送信されてから、このイベント通知が削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -67,7 +67,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
  特定のキューのイベント通知を削除するには、ユーザーは少なくともベント通知の所有者であるか、親キューに対する ALTER 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース スコープのイベント通知を作成してから削除します。  
   
 ```sql  

@@ -11,10 +11,10 @@ ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2f46acb401bf04e9b0445c452e26d69de42a2d94
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292826"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>ディメンション処理変換先のカスタム プロパティ
@@ -31,7 +31,7 @@ ms.locfileid: "71292826"
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトへの接続文字列。|  
 |KeyDuplicate|Integer (列挙)|UseDefaultConfiguration が **False**の場合、重複キー エラーの処理方法を示す値。 指定できる値は **IgnoreError** (0)、 **ReportAndContinue** (1)、 **ReportAndStop** (2) です。 このプロパティの既定値は **IgnoreError** (0) です。|  
 |KeyErrorAction|Integer (列挙)|UseDefaultConfiguration が **False**である場合に、キー エラーを処理する方法を示す値。 指定できる値は **ConvertToUnknown** (0) と **DiscardRecord** (1) です。 このプロパティの既定値は **ConvertToUnknown** (0) です。|  
-|KeyErrorLimit|Integer|UseDefaultConfiguration が **False**である場合に有効になるキー エラーの数の上限。|  
+|KeyErrorLimit|整数|UseDefaultConfiguration が **False**である場合に有効になるキー エラーの数の上限。|  
 |KeyErrorLimitAction|Integer (列挙)|UseDefaultConfiguration が **False**である場合、 **KeyErrorLimit** に到達したときに実行するアクションを示す値。 指定できる値は **StopLogging** (1) と **StopProcessing** (0) です。 このプロパティの既定値は **StopProcessing** (0) です。|  
 |KeyErrorLogFile|String|UseDefaultConfiguration が **False**である場合、エラー ログ ファイルのパスとファイル名。|  
 |KeyNotFound|Integer (列挙)|UseDefaultConfiguration が **False**である場合、見つからないキーのエラーを処理する方法を示す値。 指定できる値は **IgnoreError** (0)、 **ReportAndContinue** (1)、 **ReportAndStop** (2) です。 このプロパティの既定値は **IgnoreError** (0) です。|  

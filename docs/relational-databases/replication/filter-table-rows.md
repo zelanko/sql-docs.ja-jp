@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 321859ffa20f9c576635a2c082b5f0d2458e848d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 74d521319e8378b264b560dacbfb664b737b810c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770631"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286402"
 ---
 # <a name="filter-table-rows"></a>[テーブル行のフィルター選択]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,8 +50,8 @@ ms.locfileid: "68770631"
  **[フィルター選択されたテーブル]**  
  このペインには、パブリケーションのテーブル アーティクルに追加したフィルターが表示されます。 行フィルターが設定されているテーブルは、ペイン内で最上位レベルのノードとして表示されます。 マージ パブリケーションの場合、結合フィルターを介してフィルター選択が拡張されているテーブルは、子ノードとして表示されます。  
   
- **[追加]**  
- **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションのために **[追加]** をクリックすると、次の 3 つの選択肢が表示されます。 **[フィルターの追加]** 、 **[選択したフィルターを拡張するために結合を追加する]** 、 **[フィルターを自動的に生成]** 。  
+ **追加**  
+ **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションに対して **[追加]** をクリックすると、 **[フィルターの追加]** 、 **[選択したフィルターを拡張するために結合を追加する]** 、 **[フィルターを自動的に生成]** の 3 つのオプションが表示されます。  
   
 -   **[フィルターの追加]** をクリックすると、 **[フィルターの追加]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、行フィルターをテーブル アーティクルに適用できます。 たとえば、 **[フィルターの追加]** ダイアログ ボックスを使用して、顧客データ テーブルをサブスクライバーにレプリケートするときにフランスの顧客に関するデータだけを格納するように指定できます。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68770631"
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

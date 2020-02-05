@@ -11,10 +11,10 @@ ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5ad38c81101d983f70130bd0df5526ccba785f57
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296554"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
@@ -34,7 +34,7 @@ ms.locfileid: "71296554"
 |property_value|**nvarchar(max)**|プロパティのオーバーライド値。|  
 |sensitive|**bit**|値が 1 のとき、プロパティはセンシティブで、格納されるときに暗号化されます。 値が 0 のとき、プロパティはセンシティブではなく、値はプレーンテキストで格納されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、 **[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションを使用してプロパティ値がオーバーライドされた実行ごとに行が表示されます。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
   
 ## <a name="permissions"></a>アクセス許可  

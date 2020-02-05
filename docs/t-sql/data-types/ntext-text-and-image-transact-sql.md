@@ -22,10 +22,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8aaae44a73bc7cd7ccf41bf1c33823664044a2e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086734"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text、および image (Transact-SQL)
@@ -43,10 +43,10 @@ ms.locfileid: "68086734"
 **text**  
 サーバーのコード ページ内の可変長の非 Unicode データを指定します。最大文字列長は 2^31-1 (2,147,483,647) 文字です。 サーバー コード ページで 2 バイト文字が使用されている場合、ストレージのサイズは 2,147,483,647 バイトのままです。 文字列によっては、格納サイズが 2,147,483,647 バイトより少なくなることもあります。
   
-**image**  
+**画像**  
 0 ～ 2^31-1 (2,147,483,647) バイトの可変長のバイナリ データを指定します。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 次の関数とステートメントで使用できる **ntext**, 、**テキスト**, 、または **イメージ** データ。
   
 |関数|ステートメント|  
@@ -59,7 +59,7 @@ ms.locfileid: "68086734"
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  

@@ -11,23 +11,23 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 72c5ff1bcb2162bbe3f3584222214ba448b67d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054277"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>データベース エンジンのアップグレードの完了
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server へのアップグレードが完了したら、必要に応じて追加の手順をいくつか実行する必要があります。 その一部を次に示します。  
+SQL Server へのアップグレードが完了したら、必要に応じて追加の手順をいくつか実行する必要があります。 コーディネートは次のとおりです。  
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードした後は、次の作業を実行します。  
   
 - **データベースのバックアップ:** 各データベースの完全バックアップを実行します。  
 
-- **新機能の有効化:** SQL Server 2016 および SQL Server 2017 では、一部の変更は、データベースの DATABASE_COMPATIBILITY レベルが 130 以上に変更された場合にのみ有効になります。  詳細と推奨ワークフローについては、「 [データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)」を参照してください。 データベースに SQL Server 2014 で作成されたメモリ最適化テーブルがある場合は、「[メモリ最適化テーブルの統計](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)」を確認してください。
+- **新機能の有効化:** SQL Server 2016 および SQL Server 2017 では、一部の変更は、データベースの DATABASE_COMPATIBILITY レベルが 130 以上に変更された後に有効になります。  詳細と推奨ワークフローについては、「 [データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)」を参照してください。 データベースに SQL Server 2014 で作成されたメモリ最適化テーブルがある場合は、「[メモリ最適化テーブルの統計](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)」を確認してください。
   
 - **Integration Services:**  
   

@@ -19,10 +19,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 ms.openlocfilehash: f4326901f40c580e869cae11ed184ca70cd7b442
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892741"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68892741"
 外部プロセス用のリソースの定義に使われる Resource Governor 外部リソース プールを削除します。 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
+[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -53,7 +53,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
 *pool_name*  
 削除する外部リソース プールの名前。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ワークロード グループが含まれている場合は、外部リソース プールを削除できません。  
 
@@ -65,7 +65,7 @@ DDL ステートメントを実行する場合、Resource Governor の状態に�
 
 `CONTROL SERVER` 権限が必要です。  
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、`ex_pool` という外部リソース プールを削除します。  
 

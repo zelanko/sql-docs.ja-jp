@@ -41,13 +41,13 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769900"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287609"
 ---
 # <a name="publish-data-and-database-objects"></a>データとデータベース オブジェクトのパブリッシュ
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,18 +55,18 @@ ms.locfileid: "68769900"
   
 |データベース オブジェクト|スナップショット レプリケーションおよびトランザクション レプリケーション|マージ レプリケーション|  
 |---------------------|--------------------------------------------------------|-----------------------|  
-|テーブル|×|×|  
-|パーティション テーブル|×|×|  
-|ストアド プロシージャ - 定義 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|×|×|  
-|ストアド プロシージャ - 実行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|×|いいえ|  
-|ビュー|×|×|  
-|インデックス付きビュー|×|×|  
-|テーブルとしてのインデックス付きビュー|×|いいえ|  
-|ユーザー定義型 (CLR)|×|×|  
-|ユーザー定義関数 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|×|×|  
-|別名データ型|×|×|  
-|フルテキスト インデックス|×|×|  
-|スキーマ オブジェクト (制約、インデックス、ユーザー DML トリガー、拡張プロパティ、および照合順序)|×|×|  
+|テーブル|X|X|  
+|パーティション テーブル|X|X|  
+|ストアド プロシージャ - 定義 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|X|X|  
+|ストアド プロシージャ - 実行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|X|いいえ|  
+|ビュー|X|X|  
+|インデックス付きビュー|X|X|  
+|テーブルとしてのインデックス付きビュー|X|いいえ|  
+|ユーザー定義型 (CLR)|X|X|  
+|ユーザー定義関数 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|X|X|  
+|別名データ型|X|X|  
+|フルテキスト インデックス|X|X|  
+|スキーマ オブジェクト (制約、インデックス、ユーザー DML トリガー、拡張プロパティ、および照合順序)|X|X|  
   
 ## <a name="creating-publications"></a>パブリケーションの作成  
  パブリケーションを作成するには、次の情報を指定します。  
@@ -82,7 +82,7 @@ ms.locfileid: "68769900"
 -   パブリケーションの名前と説明。  
   
  パブリケーションの操作方法の詳細については、次のトピックを参照してください。    
--   [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [パブリケーションを作成する](../../../relational-databases/replication/publish/create-a-publication.md)    
 -   [アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)    
 -   [パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
 -   [アーティクルのプロパティの表示と変更](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
@@ -97,7 +97,7 @@ ms.locfileid: "68769900"
   
 -   [パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)    
 -   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
+-   [マージ レプリケーションのアーティクル オプション](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  レプリケーションでテーブルをパブリッシュする場合、宣言された参照整合性 (主キー制約、参照に関する制約、一意制約)、インデックス、ユーザー DML トリガー (DDL トリガーはレプリケートできません)、拡張プロパティ、照合順序などの、サブスクライバーにコピーするスキーマ オブジェクトを指定できます。 拡張プロパティは、パブリッシャーとサブスクライバー間で初期同期を実行するときにのみレプリケートされます。 初期同期の完了後に拡張プロパティを追加または変更した場合、その変更はレプリケートされません。  
@@ -110,12 +110,12 @@ ms.locfileid: "68769900"
 ## <a name="publishing-stored-procedures"></a>ストアド プロシージャのパブリッシュ  
  すべての種類のレプリケーションで、ストアド プロシージャの定義をレプリケートできます。各サブスクライバーに CREATE PROCEDURE がコピーされます。 共通言語ランタイム (CLR) ストアド プロシージャの場合は、関連するアセンブリもコピーされます。 プロシージャの変更はサブスクライバーにレプリケートされますが、関連するアセンブリの変更はレプリケートされません。  
   
- トランザクション レプリケーションでは、ストアド プロシージャの定義の他に、ストアド プロシージャの実行もレプリケートできます。 これは、大量のデータに影響を与えるメンテナンス用ストアド プロシージャの結果をレプリケートする場合に便利です。 詳細については、「 [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
+ トランザクション レプリケーションでは、ストアド プロシージャの定義の他に、ストアド プロシージャの実行もレプリケートできます。 これは、大量のデータに影響を与えるメンテナンス用ストアド プロシージャの結果をレプリケートする場合に便利です。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
   
 ## <a name="publishing-views"></a>ビューのパブリッシュ  
  すべての種類のレプリケーションで、ビューをレプリケートできます。 ビュー (インデックス付きビューの場合は付属するインデックスも含む) はサブスクライバーにコピーできますが、ベース テーブルもレプリケートする必要があります。  
   
- トランザクション レプリケーションでは、インデックス付きビューをビューではなくテーブルとしてレプリケートできます。この場合、ベース テーブルをレプリケートする必要はありません。 これを行うには、インデックス付きビューをテーブルとしてレプリケートするには、[sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) の *\@type* パラメーターに "indexed view logbased" のいずれかのオプションを指定します。 **sp_addarticle** の使用方法の詳細については、「[アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)」を参照してください。  
+ トランザクション レプリケーションでは、インデックス付きビューをビューではなくテーブルとしてレプリケートできます。この場合、ベース テーブルをレプリケートする必要はありません。 これを行うには、インデックス付きビューをテーブルとしてレプリケートするには、*sp_addarticle &#40;Transact-SQL&#41;\@ の* [type](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) パラメーターに "indexed view logbased" のいずれかのオプションを指定します。 **sp_addarticle** の使用方法の詳細については、「[アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)」を参照してください。  
   
 ## <a name="publishing-user-defined-functions"></a>ユーザー定義関数のパブリッシュ  
  CLR 関数および [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数の CREATE FUNCTION ステートメントが各サブスクライバーにコピーされます。 CLR 関数の場合は、関連するアセンブリもコピーされます。 関数の変更はサブスクライバーにレプリケートされますが、関連するアセンブリの変更はレプリケートされません。  
@@ -153,7 +153,7 @@ ms.locfileid: "68769900"
 -   1 つまたは複数の他のデータベース オブジェクトに依存するデータベース オブジェクトをパブリッシュする場合、参照されているオブジェクトをすべてパブリッシュする必要があります。 たとえば、テーブルに依存しているビューをパブリッシュする場合は、そのテーブルもパブリッシュする必要があります。  
   
     > [!NOTE]  
-    >  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) および [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) の **\@processing_order** パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、**sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、**sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
+    >  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、**sp_addmergearticle\@ および** sp_changemergearticle[ の ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)[processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、**sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、**sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
   
 -   パブリケーション名には、% * [ ] | : " ? を使用できません。 \ / < >.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68769900"
   
 -   [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) で作成されたバインドされたデフォルトはレプリケートできません (バインドされたデフォルトは非推奨のため、ALTER TABLE または CREATE TABLE の DEFAULT オプションで作成されたデフォルトを使用してください)。  
   
--   ディストリビューション エージェントが配信を行う順序が原因で、インデックス付きビューに **NOEXPAND** ヒントを含む関数を、参照テーブルやインデックス付きビューと同じパブリケーション内でパブリッシュすることはできません。 この問題を回避するために、最初のパブリケーション内にテーブルとインデックス付きビューを配置し、インデックス付きビューに **NOEXPAND** ヒントを含む関数を、最初のパブリケーションが完了した後にパブリッシュする 2 番目のパブリケーションに追加します。 または、それらの関数に対応するスクリプトを作成し、**sp_addpublication** の *\@post_snapshot_script* パラメーターを使用してそれらのスクリプトを配信します。  
+-   ディストリビューション エージェントが配信を行う順序が原因で、インデックス付きビューに **NOEXPAND** ヒントを含む関数を、参照テーブルやインデックス付きビューと同じパブリケーション内でパブリッシュすることはできません。 この問題を回避するために、最初のパブリケーション内にテーブルとインデックス付きビューを配置し、インデックス付きビューに **NOEXPAND** ヒントを含む関数を、最初のパブリケーションが完了した後にパブリッシュする 2 番目のパブリケーションに追加します。 または、それらの関数に対応するスクリプトを作成し、*sp_addpublication\@ の* **post_snapshot_script** パラメーターを使用してそれらのスクリプトを配信します。  
   
 ### <a name="schemas-and-object-ownership"></a>スキーマおよびオブジェクトの所有権  
  既定では、パブリケーションの新規作成ウィザードは、スキーマとオブジェクトの所有権に関して、以下のように動作します。  
@@ -195,7 +195,7 @@ ms.locfileid: "68769900"
   
 -   トランザクション パブリケーションおよびマージ パブリケーションでアーティクルをパブリッシュする場合は、マージ アーティクルの *\@published_in_tran_pub* プロパティを TRUE に設定します。 プロパティの設定の詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
-     アーティクルがトランザクション サブスクリプションの一部であり、このアーティクルがマージ パブリケーションに含まれている場合は、 *\@published_in_tran_pub* プロパティも設定する必要があります。 これに該当する場合、特に指定がなければ、トランザクション レプリケーションでは、サブスクライバー側のテーブルが読み取り専用として扱われるものと想定しているので、注意が必要です。マージ レプリケーションがトランザクション サブスクリプションに含まれるテーブルに対してデータ変更を行うと、データの非収束が発生する可能性があります。 この可能性を回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンスの最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
+     アーティクルがトランザクション サブスクリプションの一部であり、このアーティクルがマージ パブリケーションに含まれている場合は、 *\@published_in_tran_pub* プロパティも設定する必要があります。 これに該当する場合、特に指定がなければ、トランザクション レプリケーションでは、サブスクライバー側のテーブルが読み取り専用として扱われるものと想定しているので、注意が必要です。マージ レプリケーションがトランザクション サブスクリプションに含まれるテーブルに対してデータ変更を行うと、データの非収束が発生する可能性があります。 この可能性を回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
 -   マージ パブリケーションおよびキュー更新サブスクリプションを使用するトランザクション パブリケーションのどちらも、アーティクルをパブリッシュすることはできません。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "68769900"
     |パブリッシャーの ID 範囲|**\@pub_identity_range**|  
     |ID 範囲|**\@identity_range**|  
     |ID 範囲のしきい値|**\@threshold**|  
-    |[パーティションのオプション]|**\@partition_options**|  
+    |パーティション オプション|**\@partition_options**|  
     |BLOB 列のストリーミング|**\@stream_blob_columns**|  
     |フィルターの種類|**\@filter_type** (**sp_addmergefilter** のパラメーター)|  
   
@@ -235,7 +235,7 @@ ms.locfileid: "68769900"
 -   トランザクション レプリケーションおよびフィルター選択されていないマージ レプリケーションでは、複数のパブリケーションでのテーブルのパブリッシュを行ってから、サブスクリプション データベースの単一テーブル内でサブスクライブすることがサポートされています (一般にロール アップ シナリオと呼ばれています)。 ロール アップは、複数の場所からのデータを中央のサブスクライバーの単一テーブルに集計することを目的として使用されるのが一般的です。 フィルター選択されたマージ パブリケーションでは、中央のサブスクライバーを使用するシナリオはサポートされません。 マージ レプリケーションでは通常、パラメーター化された行フィルターを使用した単一のパブリケーションを介してロール アップが実装されます。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [既存のパブリケーションでのアーティクルの追加および削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [既存のパブリケーションでのアーティクルの追加と削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [[ディストリビューションの構成]](../../../relational-databases/replication/configure-distribution.md)   
  [サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-subscription.md)   
  [レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)   

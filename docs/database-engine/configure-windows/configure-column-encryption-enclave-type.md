@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593827"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する
@@ -24,7 +24,7 @@ ms.locfileid: "73593827"
 
 **列暗号化エンクレーブの種類**サーバー構成オプションを使うと、Always Encrypted に使用されるセキュリティで保護されたエンクレーブの種類を制御できます。 次のいずれかの値にオプションを設定できます。  
   
-|[値]|Description|  
+|値|[説明]|  
 |-------------------|-----------------| 
 |0|**セキュア エンクレーブなし**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は Always Encrypted のセキュア エンクレーブを初期化しません。 そのため、セキュア エンクレーブを使用した Always Encrypted の機能は利用できなくなります。|  
 |1|**仮想化ベースのセキュリティ (VBS)** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、仮想化ベースのセキュリティ (VBS) エンクレーブの初期化が試みられます。
@@ -40,7 +40,7 @@ ms.locfileid: "73593827"
 
 VBS エンクレーブを構成する手順のについて詳しくは、「[SQL Server 上でセキュア エンクレーブを使用する Always Encrypted を有効にする](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md#step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server)」を参照してください。
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、セキュリティで保護されたエンクレーブを有効にし、エンクレーブの種類を VBS に設定します。
 
 ```sql  
@@ -72,7 +72,7 @@ SELECT
 FROM sys.configurations
 WHERE [name] = 'column encryption enclave type'; 
 ```  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
  [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
 
 ## <a name="see-also"></a>参照  

@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e0a949e132f01ce82e46a6e8b4c1d761c1a52a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100049"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68100049"
   SELECT ステートメントによって返される **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**image** データのサイズを指定します。  
   
 > [!IMPORTANT]
->  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 **nvarchar(max)** 、 **varchar(max)** 、 **varbinary(max)** を使用してください。  
+>  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 **nvarchar(max)** 、 **varchar(max)** 、 **varbinary(max)** を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +53,9 @@ SET TEXTSIZE { number }
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 以降) および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の ODBC ドライバーは、接続時に自動的に `-1` (無制限) を指定します。  
   
- **Drivers older than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider (バージョン 9) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に TEXTSIZE が 2147483647 に設定されます。  
+ **Drivers older than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Providerr (バージョン 9) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に TEXTSIZE が 2147483647 に設定されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET TEXTSIZE の設定は、@@TEXTSIZE 関数に影響します。  
   
  TEXTSIZE は、解析時ではなく実行時に設定されます。  

@@ -15,10 +15,10 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288494"
 ---
 # <a name="property-expressions-editor"></a>[プロパティ式エディター]
@@ -32,14 +32,14 @@ ms.locfileid: "71288494"
  **プロパティ**  
  オブジェクト プロパティを一覧から選択します。  
   
- **式**  
+ **[式]**  
  プロパティの値を更新するリテラルまたは式を入力します。  
   
 > [!NOTE]  
 >  ユーザー定義変数およびシステム変数の名前では、大文字と小文字が区別されます。  
   
  **式 (...)**  
- [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [[式ビルダー]](../../integration-services/expressions/expression-builder.md)」を参照してください。  
+ [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [式ビルダー](../../integration-services/expressions/expression-builder.md)」を参照してください。  
   
  **削除**  
  プロパティを選択してから、 **[削除]** をクリックします。  

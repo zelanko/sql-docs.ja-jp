@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822233"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Always On 可用性グループのデータベースを使用するジョブのログインを管理する
@@ -31,7 +31,7 @@ ms.locfileid: "74822233"
   
      可用性グループの可用性レプリカをホストするサーバー インスタンスは、構成が異なる場合があります (別のテープ ドライブ文字など)。 各可用性レプリカのジョブは、このような違いを考慮する必要があります。  
   
-     バックアップ ジョブは、 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 関数を使用し、可用性グループのバックアップ設定に従ってローカル レプリカがバックアップ用に推奨されるかどうかを識別できます。 [メンテナンス プラン ウィザード](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) を使用して作成されたバックアップ ジョブは、ネイティブでこの関数を使用します。 他のバックアップ ジョブでは、バックアップ ジョブの中でこの関数を条件として使用して、バックアップ ジョブが優先レプリカでのみ実行されるようにすることをお勧めします。 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+     バックアップ ジョブは、 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 関数を使用し、可用性グループのバックアップ設定に従ってローカル レプリカがバックアップ用に推奨されるかどうかを識別できます。 [メンテナンス プラン ウィザード](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) を使用して作成されたバックアップ ジョブは、ネイティブでこの関数を使用します。 他のバックアップ ジョブでは、バックアップ ジョブの中でこの関数を条件として使用して、バックアップ ジョブが優先レプリカでのみ実行されるようにすることをお勧めします。 詳細については、「 [アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
 -   **ログイン**  
   

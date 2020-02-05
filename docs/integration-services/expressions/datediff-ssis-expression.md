@@ -14,10 +14,10 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297654"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 式)
@@ -47,7 +47,7 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、式エバリュエーターで認識される日付要素 (datepart) と省略形を示します。  
   
 |datepart|省略形|  
@@ -58,10 +58,10 @@ DATEDIFF(datepart, startdate, endate)
 |Dayofyear|dy、y|  
 |日|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw、w|  
-|Hour|Hh|  
-|Minute|mi、n|  
-|第 2 週|ss、s|  
+|平日|dw、w|  
+|時|Hh|  
+|分|mi、n|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
  引数のいずれかが NULL の場合、DATEDIFF は NULL を返します。  
@@ -92,8 +92,8 @@ DATEDIFF("Week", ModifiedDate,@YearEndDate)
 ```  
   
 ## <a name="see-also"></a>参照  
- [DATEADD (SSIS 式)](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART (SSIS 式)](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEPART &#40;SSIS 式&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
  [DAY &#40;SSIS 式&#41;](../../integration-services/expressions/day-ssis-expression.md)   
  [MONTH &#40;SSIS 式&#41;](../../integration-services/expressions/month-ssis-expression.md)   
  [YEAR &#40;SSIS 式&#41;](../../integration-services/expressions/year-ssis-expression.md)   

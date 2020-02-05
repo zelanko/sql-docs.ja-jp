@@ -16,10 +16,10 @@ ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6dfb020026ba431669a0e551d5cb3aa85fbea637
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095323"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server、Availability Replica
@@ -39,8 +39,8 @@ ms.locfileid: "68095323"
 |**トランスポートへの送信/秒**|リモート可用性レプリカにネットワーク経由で 1 秒あたりに送信された実際の AlwaysOn メッセージ数。 プライマリ レプリカの場合、これはセカンダリ レプリカに送信されたメッセージ数です。 セカンダリ レプリカの場合、これはプライマリ レプリカに送信されたメッセージ数です。|  
   
 ## <a name="see-also"></a>参照  
- [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server、Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
- [AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

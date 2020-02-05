@@ -14,10 +14,10 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258181"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
@@ -80,7 +80,7 @@ ms.locfileid: "75258181"
   
 ### <a name="rotating-the-symmetric-key"></a>対称キーのローテーション  
  RBS を使用する場合、資格情報ストアの対称キーを定期的にローテーションする必要があります。 これは、組織のセキュリティ ポリシーを満たすための一般的なセキュリティに関するベスト プラクティスです。  RBS 資格情報ストアの対称キーをローテーションする 1 つの方法は、RBS データベースで [後述のスクリプト](#Key_rotation) を使用することです。  このスクリプトを使用して、アルゴリズムやキーの長さなど、より強力な暗号化強度プロパティに移行することもできます。 キー ローテーションを行う前に、データベースをバックアップしておいてください。  スクリプトの最後に、確認手順がいくつかあります。  
-セキュリティ ポリシーで指定されたものとは異なるキー プロパティ (アルゴリズムやキーの長さなど) が求められている場合、スクリプトをテンプレートとして使用できます。 次の 2 つの場所でキー プロパティを変更します。1) 一時キーの作成 2) 永続キーの作成。  
+セキュリティ ポリシーで指定されたものとは異なるキー プロパティ (アルゴリズムやキーの長さなど) が求められている場合、スクリプトをテンプレートとして使用できます。 その場合、1) 一時キーの作成場所と 2) 永続キーの作成場所の 2 か所でキー プロパティを変更します。  
   
 ##  <a name="rbsresources"></a> RBS リソース  
   

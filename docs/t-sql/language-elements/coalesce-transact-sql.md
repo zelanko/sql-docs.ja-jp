@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950291"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
@@ -48,7 +48,7 @@ _式 (expression)_
 ## <a name="return-types"></a>戻り値の型  
 _式_のデータ型のうち、最も優先順位が高いものを返します。 すべての式で NULL 値が許可されない場合、結果は NULL 値が許可されない型になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 すべての引数が `NULL` である場合、`COALESCE` は `NULL` を返します。 NULL 値の少なくとも 1 つは、型指定された `NULL` である必要があります。  
   
 ## <a name="comparing-coalesce-and-case"></a>COALESCE と CASE の比較  
@@ -65,7 +65,7 @@ END
   
 そのため、入力値 (_expression1_、_expression2_、_expressionN_ など) が複数回評価されます。 サブクエリを含む値式は不明確な式と見なされ、サブクエリは 2 回評価されます。 この結果は、SQL 標準に準拠しています。 どちらの場合も、最初の評価とその後の評価で返される結果が異なります。  
   
-たとえば、`COALESCE((subquery), 1)` というコードを実行すると、サブクエリは 2 回評価されます。 その結果、クエリの分離レベルによっては、得られる結果が異なる場合があります。 たとえば、マルチユーザー環境の `READ COMMITTED` 分離レベルでは、このコードによって `NULL` 値が返される場合があります。 安定した結果が返されるようにするには、`SNAPSHOT ISOLATION` 分離レベルを使用するか、`COALESCE` を `ISNULL` 関数に置き換えてください。 または、次の例に示すように、サブクエリをサブセレクトに含めるようにクエリを書き換えることもできます。  
+たとえば、`COALESCE((subquery), 1)` というコードを実行すると、サブクエリは 2 回評価されます。 その結果、クエリの分離レベルによっては、得られる結果が異なる場合があります。 たとえば、マルチユーザー環境の `NULL` 分離レベルでは、このコードによって `READ COMMITTED` 値が返される場合があります。 安定した結果が返されるようにするには、`SNAPSHOT ISOLATION` 分離レベルを使用するか、`COALESCE` を `ISNULL` 関数に置き換えてください。 または、次の例に示すように、サブクエリをサブセレクトに含めるようにクエリを書き換えることもできます。  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -109,11 +109,11 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  `ISNULL` と `COALESCE` の妥当性検査も異なります。 たとえば、`ISNULL` の `NULL` 値は **int** に変換されますが、`COALESCE` の場合は、データ型を指定する必要があります。  
+4.  `ISNULL` と `COALESCE` の妥当性検査も異なります。 たとえば、`NULL` の `ISNULL` 値は **int** に変換されますが、`COALESCE` の場合は、データ型を指定する必要があります。  
   
 5.  `ISNULL` は、2 つのパラメーターのみを受け取ります。 これに対し `COALESCE` はさまざまな数のパラメーターを受け取ります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-running-a-simple-example"></a>A. 簡単な例を実行する  
 次の例では、`COALESCE` を使用して、NULL 以外の値を持つ最初の列からデータを選択する方法を示します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
@@ -189,7 +189,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C:簡単な例  
+### <a name="c-simple-example"></a>C: 簡単な例  
 次の例では、`COALESCE` が NULL 以外の値を含む最初の列からデータを選択する方法を示します。 `Products` テーブルに、このデータが含まれているとします。  
   
 ```  
@@ -217,9 +217,9 @@ Socks, Mens  Blue       PN1965         Blue
 NULL         White      PN9876         White
 ```  
   
-最初の行の `FirstNotNull` 値が `Socks, Mens` でなく `PN1278` であることに着目してください。 この値がこうなるのは、この例で、`Name` 列が `COALESCE` のパラメーターとして指定されていないためです。  
+最初の行の `FirstNotNull` 値が `PN1278` でなく `Socks, Mens` であることに着目してください。 この値がこうなるのは、この例で、`Name` 列が `COALESCE` のパラメーターとして指定されていないためです。  
   
-### <a name="d-complex-example"></a>D:複雑な例  
+### <a name="d-complex-example"></a>D: 複雑な例  
 次の例では、`COALESCE` を使用して 3 つの列の値を比較し、列で検索された null 以外の値のみを返します。  
   
 ```sql  

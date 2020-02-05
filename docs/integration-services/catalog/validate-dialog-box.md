@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294870"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
@@ -50,7 +50,7 @@ ms.locfileid: "71294870"
 5.  プロジェクトまたはパッケージを右クリックし、 **[検証]** をクリックします。  
   
 ##  <a name="general"></a> [全般] ページのオプションの設定  
- **環境**  
+ **Environment**  
  プロジェクトまたはパッケージの検証に使用する環境を選択します。  
   
  **32 ビット ランタイム**  
@@ -74,7 +74,7 @@ ms.locfileid: "71294870"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **[名前]**  
+ **名前**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  

@@ -15,10 +15,10 @@ ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042465"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography データ型)
@@ -35,17 +35,17 @@ ms.locfileid: "68042465"
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- `STContains()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
+ **を呼び出したインスタンスと比較される、別の**geography`STContains()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  呼び出し元の **geography** インスタンスに、メソッドに渡される **geography** インスタンスが空間的に含まれる場合は 1 を返します。それ以外の場合は 0 を返します。 2 つの **geography** インスタンスの SRID が同じでない場合は、**null** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STContains()` を使用して、2 つの `geography` インスタンスの一方のインスタンスがもう一方のインスタンスを含むかどうかをテストする例を次に示します。  
   
 ```  

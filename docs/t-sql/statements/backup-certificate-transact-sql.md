@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091765"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68091765"
 
   証明書をファイルにエクスポートします。  
   
- ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -86,7 +86,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  DECRYPTION BY PASSWORD = '*decryption_password*'  
  秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。 証明書がマスター キーによって暗号化されている場合、この引数は必要ありません。 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベースで秘密キーがパスワードによって暗号化されている場合は、暗号化解除パスワードを指定する必要があります。  
   
  秘密キーをファイルにバックアップする場合は、暗号化が必要です。 ファイル内の秘密キーの保護に使用するパスワードは、データベースで証明書の秘密キーの暗号化に使用するパスワードとは異なります。  
@@ -102,7 +102,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ## <a name="permissions"></a>アクセス許可  
  証明書に対する CONTROL 権限と、秘密キーの暗号化に使用するパスワードの情報が必要です。 証明書のパブリックの部分だけをバックアップする場合、このコマンドには証明書に関する権限の一部が必要です。また、呼び出し元に対して証明書の VIEW 権限が拒否されていないことも必要になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-exporting-a-certificate-to-a-file"></a>A. 証明書をファイルにエクスポートする  
  次の例では、証明書をファイルにエクスポートします。  

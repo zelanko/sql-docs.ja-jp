@@ -1,10 +1,7 @@
 ---
-title: DTAInput 要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: DTAInput 要素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb75df038dd0108b930af25fad9177ec9a437145
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 6801f3d8ce45ba41d24d1062ad9979e80e76b38a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132747"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307716"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  データベース エンジン チューニング アドバイザーに対する XML 入力の定義が含まれます。  
+
+データベース エンジン チューニング アドバイザーに対する XML 入力の定義が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +53,7 @@ ms.locfileid: "68132747"
 |**親要素**|[DTAXML 要素 &#40;DTA&#41;](../../tools/dta/dtaxml-element-dta.md)|  
 |**子要素**|[Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload 要素 &#40;DTA&#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [TuningOptions 要素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Configuration 要素 &#40;DTA&#41;](../../tools/dta/configuration-element-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この要素は、データベース エンジン チューニング アドバイザーの入力スキーマ階層のルートです。 データベース エンジン チューニング アドバイザーへの入力としては、チューニング対象のデータベースのサーバー、ワークロード、チューニング オプション、ユーザー指定の構成などを指定した引数を使用できます。  
   
 ## <a name="example"></a>例  

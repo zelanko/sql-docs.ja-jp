@@ -21,13 +21,13 @@ ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4544cc4f0a4d7c1d6d33e1f71bde4b55c09a59c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040360"
 ---
-# <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
+# <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 この関数は、特定のアプリケーション リソースで、ロック所有者によって保持されているロック モードを返します。 APPLOCK_MODE はアプリケーション ロック関数であり、現在のデータベース上で動作します。 データベースはアプリケーション ロックのスコープです。
@@ -58,7 +58,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ||||  
 |-|-|-|  
-|**NoLock**|**Update**|**\*SharedIntentExclusive**|  
+|**NoLock**|**アップデート**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**[Exclusive]**||  
   
@@ -71,7 +71,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 **並列不可**
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 セッションが異なる 2 つのユーザー (ユーザー A とユーザー B) の次のシーケンスを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。
   
 ユーザー A が次のステートメントを実行します。

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 66be3c8c81127b107f730fb38b0be10064d72926
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909377"
 ---
 # <a name="disable-check-constraints-for-replication"></a>レプリケーションの CHECK 制約の無効化
@@ -29,7 +29,7 @@ ms.locfileid: "72909377"
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して CHECK 制約を無効にできます。 CHECK 制約はレプリケーションに対して明示的に無効にすることもできます。これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのデータをパブリッシュする場合に便利です。  
   
 > [!NOTE]  
->  レプリケーションを使用してテーブルをパブリッシュした場合、レプリケーション エージェントが実行する操作に対しては CHECK 制約が自動的に無効になります。 レプリケーション エージェントがサブスクライバー側で挿入、更新、または削除を実行した場合、制約のチェックは行われません。ユーザーが挿入、更新、または削除を実行した場合は、制約のチェックが行われます。 制約がレプリケーション エージェントに対して無効になるのは、データが最初に挿入、更新、または削除された際に、発行者側で既に制約がチェックされているためです。 詳細については、「 [スキーマ オプションの指定](../../relational-databases/replication/publish/specify-schema-options.md)」を参照してください。  
+>  レプリケーションを使用してテーブルをパブリッシュした場合、レプリケーション エージェントが実行する操作に対しては CHECK 制約が自動的に無効になります。 レプリケーション エージェントがサブスクライバー側で挿入、更新、または削除を実行した場合、制約のチェックは行われません。ユーザーが挿入、更新、または削除を実行した場合は、制約のチェックが行われます。 制約がレプリケーション エージェントに対して無効になるのは、データが最初に挿入、更新、または削除された際に、発行者側で既に制約がチェックされているためです。 詳細については、「[スキーマ オプションの指定](../../relational-databases/replication/publish/specify-schema-options.md)」を参照してください。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
