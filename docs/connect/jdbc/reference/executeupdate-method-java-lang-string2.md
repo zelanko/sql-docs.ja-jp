@@ -16,10 +16,10 @@ ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04b3bdcd2b495513500d07583fadc910fe9c13a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954682"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate (java.lang.String) メソッド
@@ -43,7 +43,7 @@ SQL ステートメントを含む**文字列**です。
 ## <a name="exceptions"></a>例外
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 この executeUpdate メソッドは、java.sql.PreparedStatement インターフェイスの executeUpdate メソッドで規定されています。
 
 SQLServerPreparedStatement オブジェクトが作成される際、オブジェクトの SQL ステートメントが指定されるため、このメソッドを呼び出すと例外が発生します。

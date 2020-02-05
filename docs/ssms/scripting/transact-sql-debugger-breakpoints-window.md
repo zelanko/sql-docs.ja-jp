@@ -1,29 +1,32 @@
 ---
-title: '[ブレークポイント] ウィンドウ | Microsoft Docs'
+title: '[ブレークポイント] ウィンドウ'
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5600a7cd9e933046700204a8dac916199832c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638010"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243370"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL デバッガー - [ブレークポイント] ウィンドウ
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **[ブレークポイント]** ウィンドウには、現在の [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターで設定されているすべてのブレークポイントが表示されます。 ブレークポイントを管理するには、 **[ブレークポイント]** ウィンドウのツール バーを使用します。 ブレークポイントとは、デバッグ モードでコードの実行を一時停止する箇所で、デバッグ データを表示できます。
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="task-list"></a>タスク一覧
 
@@ -35,10 +38,10 @@ ms.locfileid: "73638010"
 
 既定では、 **[ブレークポイント]** ウィンドウには次の列が表示されます。  
 
-**[名前]**  
+**名前**  
 ブレークポイントの名前が表示されます。 ブレークポイント名はデバッガーによって指定されます。 この名前には、そのブレークポイントを含むデータベース エンジンのクエリ エディター ウィンドウの名前、およびそのブレークポイントが設定されているクエリ エディター内の行番号が含まれます。  
 
-**条件**  
+**Condition**  
 **[(条件なし)]** が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント条件の設定をサポートしていません。
 
 **[ヒット カウント]**  
@@ -52,16 +55,16 @@ ms.locfileid: "73638010"
 **[ヒット時]**  
 **[中断]** が表示されます。
 
-**言語**  
+**Language**  
 **を表す** [Transact-SQL] [!INCLUDE[tsql](../../includes/tsql-md.md)]が表示されます。  
 
-**関数**  
+**Function**  
 ブレークポイントが設定されている行番号が表示されます。  
 
 **[最近使ったファイル]**  
 ブレークポイントを含むソース ファイルの名前、およびブレークポイントが設定されている行番号が表示されます。
 
-**Address**  
+**アドレス**  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーはこの機能をサポートしていません。  
 
 **[処理]**  

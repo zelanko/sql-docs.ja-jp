@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c451192a96dc2fdf4e8e5e619237527139b4f2f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117451"
 ---
 # <a name="tan-transact-sql"></a>TAN (Transact-SQL)
@@ -41,12 +41,12 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- ラジアン数として解釈される、**float** 型または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ ラジアン数として解釈される、[float](../../t-sql/language-elements/expressions-transact-sql.md) 型または暗黙的に **float** 型に変換できる**式**を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`PI()/2` のタンジェントを返します。  
   
 ```  
@@ -60,7 +60,7 @@ SELECT TAN(PI()/2);
 1.6331778728383844E+16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、45 のタンジェントを返します。  
   
 ```  

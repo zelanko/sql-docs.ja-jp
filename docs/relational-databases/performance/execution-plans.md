@@ -15,10 +15,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9bf75c2d176c4ea2c596f29f1ddda910e794ae12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68232018"
 ---
 # <a name="execution-plans"></a>実行プラン
@@ -33,7 +33,7 @@ ms.locfileid: "68232018"
   `TableC`、 `TableB`、 `TableA`、または  
   `TableB`、 `TableA`、 `TableC`、または  
   `TableB`、 `TableC`、 `TableA`、または  
-  `TableC`、 `TableA`、 `TableB`  
+  `TableC`、`TableA`、`TableB`  
 
 * 各テーブルからデータを取り出す方法  
   通常、各テーブルのデータにアクセスする方法にも何とおりかあります。 特定のキー値を持つ数行だけが必要な場合、データベース サーバーではインデックスを使用できます。 テーブル内のすべての行が必要な場合は、インデックスを無視してテーブル スキャンを実行できます。 テーブル内のすべての行が必要で、 `ORDER BY`で指定されたキー列のインデックスがある場合、テーブル スキャンではなくインデックス スキャンを行うと、結果セットの並べ替えを個別に行わずに済みます。 テーブルが非常に小さい場合は、テーブルにどのようにアクセスするときでもテーブル スキャンが最も効率的な方法です。

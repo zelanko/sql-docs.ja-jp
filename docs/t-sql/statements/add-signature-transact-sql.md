@@ -18,10 +18,10 @@ ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066099"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
@@ -66,7 +66,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名または副署名に使用する非対称キーの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  署名または副署名されるモジュールと、署名に使用する証明書または非対称キーは、あらかじめ存在している必要があります。 署名の確認で、モジュールのすべての文字が確認されます。 これには、先頭のキャリッジ リターンとライン フィードも含まれます。  
   
  モジュールには、任意の数の証明書と非対称キーを使用して署名や副署名を行うことができます。  
@@ -101,7 +101,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 ## <a name="permissions"></a>アクセス許可  
  オブジェクトに対する ALTER 権限と、証明書または非対称キーに対する CONTROL 権限が必要です。 関連付けられている秘密キーがパスワードで保護されている場合、ユーザーはそのパスワードも保持している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 証明書を使用してストアド プロシージャに署名する  
  次の例では、ストアド プロシージャ `HumanResources.uspUpdateEmployeeLogin` に対して、証明書 `HumanResourcesDP` を使用して署名を行います。  

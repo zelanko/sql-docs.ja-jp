@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843644"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
@@ -52,16 +52,16 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="return-types"></a>戻り値の型  
  *check_expression* と同じ型が返されます。 リテラル NULL が *check_expression* として指定されている場合、*replacement_value* のデータ型を返します。 リテラル NULL が *check_expression* として指定されていて *replacement_value* が指定されていない場合、**int** を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *check_expression* の値が NULL でない場合、その値が返されます。それ以外の場合は、*replacement_value* が返されます。このとき、型どうしが異なる場合は *check_expression* の型に暗黙的に変換されてから返されます。 *replacement_value* は、*replacement_value* が *check_expression* より長い場合は切り捨てられることがあります。  
   
 > [!NOTE]  
 >  最初の null 以外の値を返すには、[COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md) を使用します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-isnull-with-avg"></a>A. AVG で ISNULL を使用する  
- 次の例では、すべての製品の重量の平均を求めます。 `Product` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `50` を代入します。  
+ 次の例では、すべての製品の重量の平均を求めます。 `50` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `Product` を代入します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -126,10 +126,10 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-isnull-with-avg"></a>D. AVG で ISNULL を使用する  
- 次の例では、サンプル テーブルのすべての製品の重量の平均を求めます。 `Product` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `50` を代入します。  
+ 次の例では、サンプル テーブルのすべての製品の重量の平均を求めます。 `50` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `Product` を代入します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  Acceptable Sales & Service  |     0.0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. IS NULL を使用して WHERE 句の NULL をテストする  
- 次の例では、`Weight` 列が `NULL` の製品をすべて検索しています。 `IS` と `NULL` の間にスペースがあることに注意してください。  
+ 次の例では、`NULL` 列が `Weight` の製品をすべて検索しています。 `IS` と `NULL` の間にスペースがあることに注意してください。  
   
 ```  
 -- Uses AdventureWorks  

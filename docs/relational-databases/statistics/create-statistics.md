@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103421"
 ---
 # <a name="create-statistics"></a>統計の作成
@@ -70,7 +70,7 @@ ms.locfileid: "68103421"
   
 4.  **[統計]** フォルダーを右クリックし、 **[新しい統計]** を選択します。  
   
-     **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページに、以下のプロパティが表示されます。  
+     **[New Statistics on Table**table**name**]\(テーブル <テーブル名> の新しい統計\) _ダイアログ ボックスの \_[全般]_ ページに、以下のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -81,7 +81,7 @@ ms.locfileid: "68103421"
      **[統計の列]**  
      このグリッドに、この統計の対象となる列が表示されます。 グリッド内のすべての値は読み取り専用です。  
   
-     **[名前]**  
+     **名前**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
      **[データ型]**  
@@ -96,10 +96,10 @@ ms.locfileid: "68103421"
      **[NULL を許容]**  
      列で NULL 値が許容されるかどうかを示します。  
   
-     **[追加]**  
+     **追加**  
      テーブルの列を統計グリッドに追加します。  
   
-     **[削除]**  
+     **Remove**  
      選択されている列を統計グリッドから削除します。  
   
      **[上へ移動]**  
@@ -114,16 +114,16 @@ ms.locfileid: "68103421"
      **[この列の統計を更新する]**  
      オンにすると、ダイアログ ボックスを閉じたときに統計を更新します。  
   
-     **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[フィルター]** ページに、以下のプロパティが表示されます。  
+     **[New Statistics on Table**table**name**]\(テーブル <テーブル名> の新しい統計\) _ダイアログ ボックスの \_[フィルター]_ ページに、以下のプロパティが表示されます。  
   
      **[フィルター式]**  
-     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 例を次に示します。 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 たとえば、`Production.ProductSubcategoryID IN ( 1,2,3 )` のように指定します。  
   
-5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、 **[追加]** をクリックします。  
+5.  **[New Statistics on Table**table_name\_]\(テーブル <テーブル名> の新しい統計\)_ ダイアログ ボックスの **[全般]** ページで、 **[追加]** をクリックします。  
   
      **[列の選択]** ダイアログ ボックスに次のプロパティが表示されます。 この情報は読み取り専用です。  
   
-     **[名前]**  
+     **名前**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
      **[データ型]**  
@@ -135,12 +135,12 @@ ms.locfileid: "68103421"
      **[ID]**  
      オンの場合、ID 列を示します。  
   
-     **Allow NULLs**  
+     **[NULL を許容]**  
      列で NULL 値が許容されるかどうかを示します。  
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-7.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスで、 **[OK]** をクリックします。  
+7.  **[New Statistics on Table**table_name\_]\(テーブル <テーブル名> の新しい統計\)_ ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

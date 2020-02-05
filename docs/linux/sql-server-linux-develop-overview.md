@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077412"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 用のアプリケーションの開発を開始する方法
@@ -60,9 +60,9 @@ SQL Server に対するアプリケーションの構築を始める最適な方
 
 ## <a name="use-new-sql-tools-for-linux"></a>Linux 用の新しい SQL ツールを使用する
 
-[Visual Studio Code](https://code.visualstudio.com) の新しい [mssql 拡張機能](https://aka.ms/mssql-marketplace)が Linux、macOS、および Windows で使用できるようになりました。 手順ごとの説明については、次のチュートリアルをご覧ください。
+[Visual Studio Code](https://aka.ms/mssql-marketplace) の新しい [mssql 拡張機能](https://code.visualstudio.com)が Linux、macOS、および Windows で使用できるようになりました。 手順ごとの説明については、次のチュートリアルをご覧ください。
 
-- [Visual Studio Code の使用](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code を使用する](sql-server-linux-develop-use-vscode.md)
 
 また、Linux のネイティブの新しいコマンドライン ツールを使用することもできます。 以下のツールが含まれています。
 
@@ -70,7 +70,7 @@ SQL Server に対するアプリケーションの構築を始める最適な方
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 開始するには、次のクイックスタートのいずれかを使用して SQL Server on Linux をインストールします。
 

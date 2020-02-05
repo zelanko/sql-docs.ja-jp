@@ -15,10 +15,10 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0b733b2f19cb4bb8af3096d65a2c3099832aea10
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297715"
 ---
 # <a name="-add-ssis"></a>+ (加算) (SSIS)
@@ -43,7 +43,7 @@ numeric_expression1 + numeric_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -59,7 +59,7 @@ numeric_expression1 + numeric_expression2
 VacationHours + SickLeaveHours  
 ```  
   
- この例では、計算した値を **StandardCost** 列に加算します。 変数 **Profit%** は、名前に % 文字が含まれているため、角かっこで囲む必要があります。 詳細については、「[識別子 (SSIS)](../../integration-services/expressions/identifiers-ssis.md)」を参照してください。  
+ この例では、計算した値を **StandardCost** 列に加算します。 変数 **Profit%** は、名前に % 文字が含まれているため、角かっこで囲む必要があります。 詳しくは、「[識別子 &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)」をご覧ください。  
   
 ```  
 StandardCost + (StandardCost * @[Profit%])  

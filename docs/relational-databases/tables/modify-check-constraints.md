@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907266"
 ---
 # <a name="modify-check-constraints"></a>CHECK 制約の変更
@@ -59,7 +59,7 @@ ms.locfileid: "72907266"
   
 4.  次の表の操作を完了します。  
   
-    |変換先|手順|  
+    |ターゲット|手順|  
     |--------|------------------------|  
     |制約式を編集する。|**[式]** フィールドに新しい式を入力します。|  
     |制約名を変更する。|**[名前]** フィールドに新しい名前を入力します。|  
@@ -72,7 +72,7 @@ ms.locfileid: "72907266"
   
 5.  **[閉じる]** をクリックします。  
   
-6.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
+6.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **CHECK 制約を変更するには**  

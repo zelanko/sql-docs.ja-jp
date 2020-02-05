@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117282"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
@@ -62,9 +62,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
  プロパティ リストを所有するユーザーまたはロールの名前を指定します。 *owner_name* に現在のユーザーがメンバーとなっているロールの名前を指定するか、現在のユーザーが *owner_name* に対する IMPERSONATE 権限を持っている必要があります。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
   
 > [!NOTE]  
->  所有者は、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って変更できます。  
+>  所有者は、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って変更できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]  
 >  プロパティ リストについての一般的な情報については、「[検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」をご覧ください。  
@@ -93,10 +93,10 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  リストとフルテキスト インデックスを関連付けるには、REFERENCES 権限が必要です。 プロパティを追加または削除するか、リストを削除するには、CONTROL 権限が必要です。 プロパティ リストの REFERENCES 権限または CONTROL 権限は、そのプロパティ リストの所有者が許可できます。 CONTROL 権限を持つユーザーは、他のユーザーに REFERENCES 権限を与えることができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 空のプロパティ リストを作成し、インデックスに関連付ける  
- 次の例では、`DocumentPropertyList` という名前の新しい検索プロパティ リストを作成します。 次に、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使って、新しいプロパティ リストを `AdventureWorks` データベースにある `Production.Document` テーブルのフルテキスト インデックスに関連付けます。このとき、カタログの作成は開始されません。  
+ 次の例では、`DocumentPropertyList` という名前の新しい検索プロパティ リストを作成します。 次に、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使って、新しいプロパティ リストを `Production.Document` データベースにある `AdventureWorks` テーブルのフルテキスト インデックスに関連付けます。このとき、カタログの作成は開始されません。  
   
 > [!NOTE]  
 >  定義済みで既知の検索プロパティをこの検索プロパティ リストに追加する例については、「[ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)」をご覧ください。 検索プロパティをリストに追加した後、データベース管理者は、START FULL POPULATION 句を指定して別の ALTER FULLTEXT INDEX ステートメントを使用する必要があります。  

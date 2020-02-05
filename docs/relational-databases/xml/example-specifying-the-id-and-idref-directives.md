@@ -1,5 +1,5 @@
 ---
-title: '例: ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs'
+title: '例 : ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76e471b3e6e35e3c6f0568c446b9650466ffa542
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006696"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>例:ID ディレクティブと IDREF ディレクティブの指定
+# <a name="example-specifying-the-id-and-idref-directives"></a>例 : ID ディレクティブと IDREF ディレクティブの指定
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-この例は、「 [ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesPersonID** 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
+この例は、「 [ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、< **> 要素と <** > 要素の `OrderHeader`SalesPersonID`OrderDetail` 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
   
 ```sql
 USE AdventureWorks2012;  
@@ -79,7 +79,7 @@ ORDER BY [OrderHeader!1!SalesOrderID!id],
 FOR XML EXPLICIT, XMLDATA;
 ```  
   
- 次に結果の一部を示します。 スキーマでは、**ID** ディレクティブと **IDREF** ディレクティブにより、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesOrderID** 属性の型が上書きされています。 これらのディレクティブを削除すると、スキーマはこれらの属性の元の型を返します。  
+ 次に結果の一部を示します。 スキーマでは、**ID** ディレクティブと **IDREF** ディレクティブにより、< **> 要素と <** > 要素の `OrderHeader`SalesOrderID`OrderDetail` 属性の型が上書きされています。 これらのディレクティブを削除すると、スキーマはこれらの属性の元の型を返します。  
   
 ```xml
 <Schema

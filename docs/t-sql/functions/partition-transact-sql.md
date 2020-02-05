@@ -19,10 +19,10 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914381"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
@@ -52,12 +52,12 @@ ms.locfileid: "67914381"
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  $PARTITION 返します、 **int** 1 ～ パーティション関数のパーティションの数の値です。  
   
  $PARTITION は、値が現在パーティション関数を使用するパーティション テーブルまたはインデックスに存在するかどうかに関係なく、有効な値のパーティション番号を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. パーティション分割列の値のセットに対してパーティション番号を取得する  
  次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数 `RangePF1` を作成します。 $PARTITION は、`10` のパーティション分割列を表す値 `RangePF1` が、テーブルのパーティション 1 に配置されるかどうかを判定するために使用します。  

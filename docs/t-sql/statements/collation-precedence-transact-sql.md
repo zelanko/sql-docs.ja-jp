@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cfd6c1c64c4e5d99ebddc8d610d7c6d56015b6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141148"
 ---
 # <a name="collation-precedence"></a>照合順序の優先順位
@@ -111,7 +111,7 @@ FROM TestTab
 WHERE CharCol LIKE N'abc'  
 ```  
   
-`N'abc'` という単純な式の Unicode データ型は、データ型の優先順位が高いため、 その結果式には `N'abc'` に割り当てられている Unicode データ型が使用されます。 これに対し、式 `CharCol` は暗黙的な照合順序のラベルを持ち、`N'abc'` はそれよりも優先順位の低い強制可能な既定照合順序のラベルを持つため、 照合順序には、`CharCol` の照合順序 `French_CI_AS` が使用されます。  
+`N'abc'` という単純な式の Unicode データ型は、データ型の優先順位が高いため、 その結果式には `N'abc'` に割り当てられている Unicode データ型が使用されます。 これに対し、式 `CharCol` は暗黙的な照合順序のラベルを持ち、`N'abc'` はそれよりも優先順位の低い強制可能な既定照合順序のラベルを持つため、 照合順序には、`French_CI_AS` の照合順序 `CharCol` が使用されます。  
   
 ### <a name="examples-of-collation-rules"></a>照合順序ルールの例  
  照合順序ルールについて、以下の例で説明します。 この例を実行するには、次に示すテスト テーブルを作成します。  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982257"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
@@ -50,7 +50,7 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- **float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。  
   
  *base*  
  対数の底を設定するオプションの整数引数です。  
@@ -60,17 +60,17 @@ LOG ( float_expression )
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定では、 を持つ **LOG()** 自然対数を返します。 以降で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 、対数の底を別の値に変更するには、(省略可能) を使用して *基本* パラメーター。  
   
  自然対数は **e** を底とする対数です。ここで、**e** は 2.718281828 にほぼ等しい無理定数です。  
   
- 数値の指数の自然対数は、その数値自体になります。LOG( EXP( *n* ) ) = *n*。 また、数値の自然対数の指数は、その数値自体になります。EXP( LOG( *n* ) ) = *n*。  
+ 数値の指数の自然対数は、その数値自体になります。つまり LOG( EXP( *n* ) ) = *n* です。 また、数値の自然対数の指数は、その数値自体になります。つまり EXP( LOG( *n* ) ) = *n* です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 数値の自然対数を計算する  
- 次の例では、指定された **float** 式の `LOG` を計算します。  
+ 次の例では、指定された `LOG`float**式の** を計算します。  
   
 ```  
 DECLARE @var float = 10;  
@@ -103,10 +103,10 @@ SELECT LOG (EXP (10));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 数値の自然対数を計算する  
- 次の例では、指定された **float** 式の `LOG` を計算します。  
+ 次の例では、指定された `LOG`float**式の** を計算します。  
   
 ```  
 SELECT LOG(10);  

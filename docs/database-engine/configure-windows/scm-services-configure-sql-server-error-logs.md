@@ -13,10 +13,10 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127478"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM サービス - SQL Server エラー ログを構成する
@@ -30,7 +30,7 @@ ms.locfileid: "74127478"
 
 2. **[SQL Server エラー ログの構成]** ダイアログ ボックスで、次のオプションから選択します。
 
-    A. ログ ファイルの数
+    a. ログ ファイルの数
 
       **[再利用する前に、エラー ログ ファイルの数を制限する]**
 
@@ -40,7 +40,7 @@ ms.locfileid: "74127478"
 
       再利用されるまでに作成されるアーカイブ済みエラー ログ ファイルの最大数を指定します。 既定値は 6 です。現在のファイルは含まれません。 この値により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再利用するまで保有している以前のバックアップ ログの数が決定されます。
 
-    B. ログ ファイルのサイズ
+    b. ログ ファイルのサイズ
 
       **エラー ログ ファイルの最大サイズ (KB 単位)**
 

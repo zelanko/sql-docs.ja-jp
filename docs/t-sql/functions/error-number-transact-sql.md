@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085832fdb8d0918c76dbbcadb759c2fdf1169b5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094710"
 ---
-# <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
+# <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 この関数は、TRY...CATCH 構造の CATCH ブロックが実行される原因となったエラーのエラー番号を返します。  
@@ -50,16 +50,16 @@ CATCH ブロックで呼び出されると、`ERROR_NUMBER` は CATCH ブロッ�
 
 `ERROR_NUMBER` は、CATCH ブロックの範囲外で呼び出されると、NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `ERROR_NUMBER` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
 `ERROR_NUMBER` は、実行回数に関係なく、あるいは `CATCH` ブロックのスコープ内の実行場所に関係なく、関連エラー番号を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
 
 `CATCH` ブロックが入れ子になっている場合、`ERROR_NUMBER` は、`CATCH` ブロックを参照した `CATCH` ブロックのスコープに固有のエラー番号を返します。 たとえば、外側の TRY...CATCH 構造の `CATCH` ブロックの中に `TRY...CATCH` 構造が含まれることがあります。 その内側の `CATCH` ブロック内では、`ERROR_NUMBER` は内側の `CATCH` ブロックを呼び出したエラーの番号を返します。 `ERROR_NUMBER` が外側の `CATCH` ブロック内で実行される場合、外側の `CATCH` ブロックを呼び出したエラーの番号を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-errornumber-in-a-catch-block"></a>A. CATCH ブロックで ERROR_NUMBER を使用する  
+### <a name="a-using-error_number-in-a-catch-block"></a>A. CATCH ブロックで ERROR_NUMBER を使用する  
 この例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `CATCH` ブロックはエラー番号を返します。  
   
 ```sql  
@@ -86,7 +86,7 @@ ErrorNumber
 
 ```  
   
-### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで ERROR_NUMBER を他のエラー処理ツールと一緒に使用する  
+### <a name="b-using-error_number-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで ERROR_NUMBER を他のエラー処理ツールと一緒に使用する  
 この例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `CATCH` ブロックは、エラー番号と共にそのエラーに関する情報を返します。  
 
 ```sql  

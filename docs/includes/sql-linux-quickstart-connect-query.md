@@ -44,7 +44,7 @@
    ```
 
 > [!TIP]
-> Transact-SQL ステートメントおよびクエリの作成の詳細については、「[チュートリアル:Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
+> Transact-SQL ステートメントおよびクエリの作成の詳細については、「[Tutorial: Writing Transact-SQL Statements (チュートリアル: TRANSACT-SQL ステートメントの作成)](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
 
 ### <a name="insert-data"></a>データの挿入
 

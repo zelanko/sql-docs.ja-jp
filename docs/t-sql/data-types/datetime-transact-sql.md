@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113723"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
@@ -39,12 +39,12 @@ ms.locfileid: "68113723"
   
 ## <a name="datetime-description"></a>datetime の説明  
   
-|プロパティ|[値]|  
+|プロパティ|値|  
 |---|---|
 |構文|**datetime**|  
-|使用方法|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
+|使用法|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
 |既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|適用なし|  
-|日付範囲|1753 年 1 月 1 日～ 9999 年 12 月 31 日|  
+|期間|1753 年 1 月 1 日～ 9999 年 12 月 31 日|  
 |時間の範囲|00:00:00 から 23:59:59.997|  
 |タイム ゾーンのオフセット範囲|なし|  
 |要素範囲|YYYY は、年を表す 1753 から 9999 の 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、00 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、分を表す 00 から 59 の 2 桁の数字です。<br /><br /> ss は、秒を表す 00 から 59 の 2 桁の数字です。<br /><br /> n* は、秒の有効桁数を表す 3 桁の数字です (0 から 999)。|  
@@ -52,7 +52,7 @@ ms.locfileid: "68113723"
 |ストレージ サイズ|8 バイト|  
 |精度|値は、.000、.003、または .007 秒単位に丸められます。|  
 |既定値|1900-01-01 00:00:00|  
-|カレンダー|グレゴリオ暦 (完全な年の範囲は含まれません。)|  
+|Calendar|グレゴリオ暦 (完全な年の範囲は含まれません。)|  
 |ユーザー定義の 1 秒未満の秒の有効桁数|いいえ|  
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
@@ -94,7 +94,7 @@ ms.locfileid: "68113723"
 **datetime** は ANSI または ISO 8601 に準拠していません。
   
 ##  <a name="_datetime"></a> 日付型データと時刻型データの変換  
-日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 日付と時刻のデータでの CAST および CONVERT 関数の使用方法の詳細については、を参照してください。 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>他の日付/時刻型から datetime データ型からへの変換 
 ここでは、他の日付/時刻データ型が **datetime** データ型に変換される場合の処理について説明します。  
@@ -169,7 +169,7 @@ SELECT @datetime AS '@datetime', @datetime2 AS '@datetime2';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、文字列をそれぞれの **date** および **time** データ型にキャストした結果を比較します。
   
 ```sql
@@ -187,7 +187,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|データ型|[出力]|  
+|データ型|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

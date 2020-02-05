@@ -21,10 +21,10 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940251"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
@@ -46,9 +46,9 @@ FULLTEXTSERVICEPROPERTY ('property')
  フルテキスト サービス レベルのプロパティ名を含む式です。 次の表は、プロパティと、返される情報についての説明の一覧です。  
   
 > [!NOTE]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のリリースで削除される予定のプロパティは次のとおりです: **ConnectTimeout**、**DataTimeout**、**ResourceUsage**。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
+>  次のプロパティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, and **ResourceUsage** の将来のリリースで削除される予定です。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
   
-|プロパティ|[値]|  
+|プロパティ|値|  
 |--------------|-----------|  
 |**ResourceUsage**|0 を返します。 旧バージョンとの互換性のためにのみサポートされています。|  
 |**ConnectTimeout**|0 を返します。 旧バージョンとの互換性のためにのみサポートされています。|  
@@ -60,7 +60,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、署名付きバイナリのみが読み込まれるかどうかを確認し、戻り値は、この検証が行われていないことを示します。  
   
 ```  

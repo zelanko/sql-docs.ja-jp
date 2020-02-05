@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 34be16d305bbb42a23c686e9b2befdd83792d523
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72890487"
 ---
 # <a name="ghost-cleanup-process-guide"></a>ゴースト クリーンアップ プロセスのガイド
@@ -55,7 +55,7 @@ ms.locfileid: "72890487"
  > ゴースト クリーンアップ プロセスを無効にすることは、一般には推奨されません。 これを行う場合は、運用環境で完全に実装する前に、制御された環境で十分テストする必要があります。
 
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 [ゴースト クリーンアップ プロセスの無効化](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
 <br>[単一のデータベースのファイルからゴースト レコードを削除する](system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
 <br>[すべてのデータベースのデータ ファイルからゴースト レコードを削除する](system-stored-procedures/sp-clean-db-free-space-transact-sql.md)

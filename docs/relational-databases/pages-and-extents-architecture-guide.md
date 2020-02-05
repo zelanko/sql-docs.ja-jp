@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325494"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
@@ -94,7 +94,7 @@ varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を�
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、トレース フラグ 1118 を使用して、常に単一エクステントを使用するように既定の割り当てを変更できます。 このトレースフラグの詳細については、「[DBCC TRACEON - トレース フラグ](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。   
 >   
-> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降は、TF 1118 によって提供される機能が TempDB に対して自動的に有効になります。 ユーザー データベースの場合、この動作は `ALTER DATABASE` の `SET MIXED_PAGE_ALLOCATION` オプションによって制御され、既定値は OFF に設定され、トレース フラグ 1118 には効果がありません。 詳細については、「[ALTER DATABASE SET オプション (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降は、TF 1118 によって提供される機能が TempDB に対して自動的に有効になります。 ユーザー データベースの場合、この動作は `SET MIXED_PAGE_ALLOCATION` の `ALTER DATABASE` オプションによって制御され、既定値は OFF に設定され、トレース フラグ 1118 には効果がありません。 詳細については、「[ALTER DATABASE SET オプション (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。
 
 ## <a name="managing-extent-allocations-and-free-space"></a>エクステント割り当てと空き領域の管理 
 

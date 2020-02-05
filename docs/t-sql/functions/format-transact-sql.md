@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155799"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
@@ -60,7 +60,7 @@ FORMAT ( value, format [, culture ] )
   
  戻り値の長さは *format* によって決まります。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
  *valid* でない *culture* 以外のエラーの場合、FORMAT は NULL を返します。 たとえば、*format* に指定された値が無効な場合は NULL を返します。  
 
@@ -74,17 +74,17 @@ FORMAT ( value, format [, culture ] )
   
  *value* 引数の許容データ型の一覧を、.NET Framework にマッピングした同等の型と共に、次の表に示します。  
   
-|カテゴリ|型|.NET の種類|  
+|カテゴリ|種類|.NET の種類|  
 |--------------|----------|---------------|  
-|数値|BIGINT|Int64|  
+|数値|bigint|Int64|  
 |数値|INT|Int32|  
-|数値|SMALLINT|Int16|  
-|数値|TINYINT|Byte|  
-|数値|Decimal|SqlDecimal|  
-|数値|NUMERIC|SqlDecimal|  
-|数値|FLOAT|Double|  
-|数値|REAL|Single|  
-|数値|SMALLMONEY|Decimal|  
+|数値|smallint|Int16|  
+|数値|tinyint|Byte|  
+|数値|decimal|SqlDecimal|  
+|数値|numeric|SqlDecimal|  
+|数値|float|Double|  
+|数値|real|Single|  
+|数値|smallmoney|Decimal|  
 |数値|money|Decimal|  
 |日時|date|DateTime|  
 |日時|time|TimeSpan|  
@@ -93,7 +93,7 @@ FORMAT ( value, format [, culture ] )
 |日時|datetime2|DateTime|  
 |日時|datetimeoffset|DateTimeOffset|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-format-example"></a>A. シンプルな FORMAT 例
 
@@ -150,7 +150,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. 数値型を使用する FORMAT
 
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの **Sales.CurrencyRate** テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](https://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
+ 次の例では、**データベースの**Sales.CurrencyRate[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](https://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36b670ee8485c2e8db58847e9439dfb5fa9920ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f2716a8176124539aa7caf382193359ff5435aa6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531678"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820996"
 ---
 # <a name="azdata-context"></a>azdata context
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`context` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -33,7 +33,7 @@ ms.locfileid: "73531678"
 ```bash
 azdata context list [--active -a] 
   ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 ユーザー プロファイルで使用可能なすべてのコンテキストの一覧を表示します。
 ```bash
 azdata context list
@@ -66,7 +66,7 @@ Deletes contextNamespace from the user profile.
 ```bash
 azdata context delete -n contextNamespace
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--namespace -n`
 削除するコンテキストの名前空間。
 ### <a name="global-arguments"></a>グローバル引数
@@ -85,12 +85,12 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 ```bash
 azdata context set --namespace -n 
  ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 contextNamespace をユーザー プロファイルでのアクティブなコンテキストとして設定します。
 ```bash
 azdata context set -n contextNamespace
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--namespace -n`
 設定するコンテキストの名前空間。
 ### <a name="global-arguments"></a>グローバル引数
@@ -105,6 +105,6 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 993020892a992800a8fb8fab2c7801fe7caf9493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040194"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
@@ -42,12 +42,12 @@ ATN2 ( float_expression , float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-**float** データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
+[float](../../t-sql/language-elements/expressions-transact-sql.md) データ型の**式**。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、指定された `ATN2` コンポーネントと `x` コンポーネントの `y` を計算します。
   
 ```sql
@@ -66,7 +66,7 @@ The ATN2 of the angle is: 1.30545
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[数学関数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

@@ -18,10 +18,10 @@ ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107837"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry データ型)
@@ -39,12 +39,12 @@ ms.locfileid: "68107837"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
- CLR の戻り値の型:**SqlInt32**  
+ CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
- **geometry** インスタンスが空の場合、`STDimension()` は 1 を返します。  
+## <a name="remarks"></a>解説  
+ `STDimension()`geometry **インスタンスが空の場合、** は 1 を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **geometry** インスタンスを保持するテーブル変数を作成し、`Point`、`LineString`、`Polygon` を挿入する例を次に示します。  その後、`STDimension()` を使用して各 **geometry** インスタンスの次元を返します。  
   
 ```  
@@ -58,11 +58,11 @@ FROM @temp;
   
  次に、各 `geometry` インスタンスの次元を返す例を示します。  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
 |ポイント|0|  
 |LineString|1|  
-|Polygon|2|  
+|多角形|2|  
   
 ## <a name="see-also"></a>参照  
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

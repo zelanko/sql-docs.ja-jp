@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd6f6b81f7cd42e666459460a0f11c23b07d4b27
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: cccdc543a572df19849afec16d0a2a71413ed19e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531857"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820895"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`bdc debug` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -38,7 +38,7 @@ azdata bdc debug copy-logs --namespace -n
                            [--skip-compress -sc]  
                            [--exclude-dumps -ed]
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--namespace -n`
 ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
@@ -64,7 +64,7 @@ azdata bdc debug copy-logs --namespace -n
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
 ダンプのログ記録を開始し、それをコンテナーからコピーします。システム上に Kubernetes の構成が必要です。
 ```bash
@@ -72,9 +72,9 @@ azdata bdc debug dump --namespace -n
                       --container -c  
                       [--target-folder -d]
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--namespace -n`
-ビッグ データ クラスターの名前 (Kubernetes 名前空間用に使います)。
+ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 #### `--container -c`
 類似した名前のコンテナーのログをコピーします (省略可能)。既定では、すべてのコンテナーのログがコピーされます。 複数回指定することはできません。 複数回指定した場合は、最後のものが使用されます
 ### <a name="optional-parameters"></a>省略可能なパラメーター
@@ -92,6 +92,6 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101934"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
@@ -61,7 +61,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  ALL  
  制御ノードから、および各計算ノードからメモリ内のデータ キャッシュを消去します。 値を指定しない場合、これが既定値になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 サーバーのシャットダウンと再起動を行わずに、コールド バッファー キャッシュの状態でクエリをテストする場合は、DBCC DROPCLEANBUFFERS を使用します。
 バッファー プールのクリーン バッファーと列ストア オブジェクト プールの列ストア オブジェクトを削除するには、まず CHECKPOINT を使用してコールド バッファー キャッシュを作成します。 これで、現在のデータベースのすべてのダーティ ページがディスクに書き込まれ、バッファーが削除されます。 その後、DBCC DROPCLEANBUFFERS コマンドを実行してバッファー プールからバッファーを削除します。
   
@@ -74,11 +74,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="permissions"></a>アクセス許可  
 
-適用対象:SQL Server、Parallel Data Warehouse 
+適用対象: SQL Server、Parallel Data Warehouse 
 
 - **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
 
-適用対象:Azure SQL Data Warehouse
+適用対象: Azure SQL Data Warehouse
 
 - DB_OWNER 固定サーバー ロールのメンバーシップが必要です。  
   
