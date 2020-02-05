@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075887"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされるデータ型
@@ -54,7 +54,7 @@ ms.locfileid: "68075887"
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>行外の LOB 列およびその他の列の特定
 
-SQL Server 2016 以降では、メモリ最適化テーブルが[行外の列をサポートする](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)ため、1 つのテーブルの行を 8060 バイトよりも大きくすることができます。 次の Transact-SQL SELECT ステートメントにより、メモリ最適化テーブルの行外のすべての列のレポートが生成されます。 次の点に注意してください。
+SQL Server 2016 以降では、メモリ最適化テーブルが[行外の列をサポートする](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)ため、1 つのテーブルの行を 8060 バイトよりも大きくすることができます。 次の Transact-SQL SELECT ステートメントにより、メモリ最適化テーブルの行外のすべての列のレポートが生成されます。 以下の点に注意してください。
 
 - インデックス キー列はすべて行内に格納されます。
   - メモリ最適化テーブルでは、一意ではないインデックス キーが、NULL 値を許容する列を含むことができるようになりました。

@@ -9,10 +9,10 @@ ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579537"
 ---
 # <a name="report-builder-functions---last-function"></a>レポート ビルダー関数 - Last 関数
@@ -38,7 +38,7 @@ Last(expression, scope)
 ## <a name="return-type"></a>戻り値の型  
  式の種類によって決まります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Last** 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最後の値を返します。  
   
  **Last** 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  

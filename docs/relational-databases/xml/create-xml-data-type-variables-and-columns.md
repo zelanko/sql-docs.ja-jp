@@ -14,10 +14,10 @@ ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984868"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
@@ -67,7 +67,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 次に例を示します。  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -80,7 +80,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   制約が、テーブル内の他の XML 列または XML 以外の列に関係している場合。 たとえば、XML インスタンスに現れる Customer の ID (`/Customer/@CustId`) が、CustomerID リレーショナル列の値と一致する必要がある場合などです。  
   
- 制約は、型指定された **xml** データ型の列にも、型指定されていない xml データ型の列にも指定できます。 ただし、制約を指定するとき、[XML データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) は使用できません。 また、 **xml** データ型では次の列およびテーブルの制約はサポートされません。  
+ 制約は、型指定された **xml** データ型の列にも、型指定されていない xml データ型の列にも指定できます。 ただし、制約を指定するとき、 [XML データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) は使用できません。 また、 **xml** データ型では次の列およびテーブルの制約はサポートされません。  
   
 -   PRIMARY KEY/ FOREIGN KEY  
   

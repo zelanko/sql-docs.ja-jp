@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054604"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を利用し、Azure でデプロイされた SSIS パッケージの実行スケジュールを設定します
@@ -29,14 +29,14 @@ SQL Database を使用して SSIS カタログ (`SSISDB`) をホストする場�
 
 SSMS を使用してパッケージのスケジュールを設定するとき、SSIS では 3 つのデータ ファクトリ オブジェクトが自動的に新しく作成されます。その名前は、選択したパッケージの名前とタイムスタンプに基づきます。 たとえ゛は、SSIS パッケージの名前が **MyPackage** であれば、SSMS によって、次のようなデータ ファクトリ オブジェクトが新しく作成されます。
 
-| Object | [オブジェクト名] |
+| Object | Name |
 |---|---|
 | パイプライン | **Pipeline_MyPackage_2018-05-08T09_00_00Z** |
 | SSIS パッケージ アクティビティの実行 | **Activity_MyPackage_2018-05-08T09_00_00Z** |
 | トリガー | **Trigger_MyPackage_2018-05-08T09_00_00Z** |
 |||
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この記事で説明する機能には、SQL Server Management Studio バージョン 17.7 以降が必要になります。 最新バージョンの SSMS を入手するには、「[SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
@@ -70,10 +70,10 @@ SSMS を使用してパッケージのスケジュールを設定するとき、
 
     ![トリガーの編集](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image7-edit2.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SSIS パッケージのスケジュールを設定するその他の方法については、「[Azure で SSIS パッケージの実行をスケジュールする](ssis-azure-schedule-packages.md)」を参照してください。
 
 Azure Data Factory のパイプライン、アクティビティ、トリガーの詳細については、次の記事をご覧ください。
 -   [Azure Data Factory のパイプラインとアクティビティ](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Azure Data Factory のパイプラインの実行とトリガー](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Azure Data Factory でのパイプラインの実行とトリガー](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

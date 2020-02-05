@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326095"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -110,7 +110,7 @@ POISON_MESSAGE_HANDLING は、キューに対する有害なメッセージの�
 
 ON *filegroup |* **[DEFAULT]** は、このキューを作成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル グループを指定します。 *filegroup* パラメーターを使用してファイル グループを指定するか、DEFAULT 識別子を使用して Service Broker データベースの既定のファイル グループを指定することができます。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 ファイル グループを指定しない場合、キューの作成ではデータベースの既定のファイル グループが使用されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 キューは SELECT ステートメントの対象にすることができますが、 キューの内容を変更するには、SEND、RECEIVE、END CONVERSATION など、[!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ交換で動作するステートメントを使用する必要があります。 キューは、INSERT、UPDATE、DELETE、または TRUNCATE ステートメントの対象にすることはできません。
 
@@ -130,7 +130,7 @@ ON *filegroup |* **[DEFAULT]** は、このキューを作成する [!INCLUDE[ss
 
 |列名|データ型|[説明]|
 |-----------------|---------------|-----------------|
-|ステータス|**tinyint**|メッセージの状態。 RECEIVE ステートメントでは、status が **1** のメッセージがすべて返されます。 メッセージの保有が指定されている場合は、status が 0 に設定されます。 メッセージの保有が指定されていない場合は、メッセージがキューから削除されます。 キューのメッセージには、次のいずれかの値を含めることができます。<br /><br /> **0** = 保持されている受信メッセージ<br /><br /> **1** = 受信準備完了<br /><br /> **2** = 未完了<br /><br /> **3** = 保持されている送信メッセージ|
+|status|**tinyint**|メッセージの状態。 RECEIVE ステートメントでは、status が **1** のメッセージがすべて返されます。 メッセージの保有が指定されている場合は、status が 0 に設定されます。 メッセージの保有が指定されていない場合は、メッセージがキューから削除されます。 キューのメッセージには、次のいずれかの値を含めることができます。<br /><br /> **0** = 保持されている受信メッセージ<br /><br /> **1** = 受信準備完了<br /><br /> **2** = 未完了<br /><br /> **3** = 保持されている送信メッセージ|
 |priority|**tinyint**|このメッセージに割り当てられている優先度レベル。|
 |queuing_order|**bigint**|キュー内のメッセージの順序番号。|
 |conversation_group_id|**uniqueidentifier**|メッセージが属するメッセージ交換グループの識別子。|
@@ -154,7 +154,7 @@ ON *filegroup |* **[DEFAULT]** は、このキューを作成する [!INCLUDE[ss
 
 キューに対する `RECEIVE` 権限は、既定ではキューの所有者、`db_owner` 固定データベース ロールのメンバー、または `sysadmin` 固定サーバー ロールのメンバーに与えられています。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. パラメーターなしでキューを作成する
 
@@ -174,7 +174,7 @@ CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;
 
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. キューを作成し、内部アクティブ化情報を指定する
 
-次の例では、メッセージの受信に使用できるキューを作成します。 メッセージがキューに格納されると、キューによってストアド プロシージャ `expense_procedure` が起動されます。 ストアド プロシージャは、ユーザー `ExpenseUser` として実行されます。 キューによって、ストアド プロシージャのインスタンスが `5` 個まで起動されます。
+次の例では、メッセージの受信に使用できるキューを作成します。 メッセージがキューに格納されると、キューによってストアド プロシージャ `expense_procedure` が起動されます。 このストアド プロシージャは、ユーザー `ExpenseUser` として実行されます。 キューによって、ストアド プロシージャのインスタンスが `5` 個まで起動されます。
 
 ```sql
 CREATE QUEUE ExpenseQueue

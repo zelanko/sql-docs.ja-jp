@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71f1d8a1c25f099338bbdfcc483ab2e8e8061bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030473"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 圧縮の実装
@@ -49,7 +49,7 @@ ms.locfileid: "68030473"
   
  圧縮により節約されるストレージ領域は、圧縮されるデータの特性とデータのロケールによって異なります。 次の表に、いくつかのロケールで節約できる領域の一覧を示します。  
   
-|ロケール|圧縮率|  
+|Locale|圧縮率|  
 |------------|-------------------------|  
 |English|50%|  
 |German|50%|  

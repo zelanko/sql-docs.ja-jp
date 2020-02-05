@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810969"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux の VDI クライアント SDK の仕様
@@ -65,7 +65,7 @@ Linux では、POSIX プリミティブは、それを作成したユーザー�
 - 関数の構文
 - パラメーター リスト
 - 戻り値
-- Remarks
+- 解説
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -161,7 +161,7 @@ Linux では、POSIX プリミティブは、それを作成したユーザー�
 | パラメーター | 引数 | 説明
 | ----- | ----- | ------ |
 | |**timeout** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE を使用します。 コマンドをポーリングするには、0 を使用します。 現在使用できるコマンドがない場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
-| |**Timeout** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE または負の値を使用します。 コマンドをポーリングするには、0 を使用します。 タイムアウトするまでにいずれのコマンドも使用可能にならなかった場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
+| |**タイムアウト** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE または負の値を使用します。 コマンドをポーリングするには、0 を使用します。 タイムアウトするまでにいずれのコマンドも使用可能にならなかった場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
 | |**ppCmd** |コマンドが正常に返された場合は、このパラメーターによって、実行するコマンドのアドレスが返されます。 返されるメモリは読み取り専用です。 コマンドが完了すると、このポインターは CompleteCommand ルーチンに渡されます。 各コマンドの詳細については、このドキュメントで後述する「コマンド」を参照してください。
         
 | 戻り値 | 引数 | 説明

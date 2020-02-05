@@ -9,10 +9,10 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577179"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>レポート ビルダー関数 - RunningValue 関数
@@ -32,7 +32,7 @@ RunningValue(expression, function, scope)
  *式 (expression)*  
  この集計関数の実行対象の式です ( `[Quantity]`など)。  
   
- *関数 (function)*  
+ *function*  
  (**列挙型**) 式に適用する集計関数の名前です ( **Sum**など)。 この関数は、 **RunningValue**、 **RowNumber**、または **Aggregate**にすることはできません。  
   
  *スコープ (scope)*  
@@ -41,7 +41,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>戻り値の型  
  *function* パラメーターに指定された集計関数によって決まります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **RunningValue** の値は、スコープの新しいインスタンスごとに 0 にリセットされます。 グループが指定された場合は、累計値はグループ式の変更時にリセットされます。 データ領域が指定された場合は、累計値はデータ領域の新しいインスタンスごとにリセットされます。 データセットが指定された場合は、累計値はデータセット全体にわたってリセットされません。  
   
  **RunningValue** は、フィルター式または並べ替え式では使用できません。  
@@ -66,7 +66,7 @@ RunningValue(expression, function, scope)
   
  再帰的集計については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のコード例では、最も外側のスコープ (データセット) の `Cost` フィールドの累計が返されます。  
   
 ```  
