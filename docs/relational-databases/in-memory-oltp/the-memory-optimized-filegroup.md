@@ -11,10 +11,10 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024970"
 ---
 # <a name="the-memory-optimized-filegroup"></a>メモリ最適化ファイルグループ
@@ -31,7 +31,7 @@ ms.locfileid: "68024970"
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   `MEMORY_OPTIMIZED_DATA` ファイル グループに 1 つ以上のコンテナーを追加する必要があります。 例:  
+-   `MEMORY_OPTIMIZED_DATA` ファイル グループに 1 つ以上のコンテナーを追加する必要があります。 次に例を示します。  
   
     ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  

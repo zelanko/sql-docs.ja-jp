@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495480"
 ---
 # <a name="---comment-transact-sql"></a>-- (コメント) (Transact-SQL)
@@ -47,10 +47,10 @@ ms.locfileid: "68495480"
  *text_of_comment*  
  コメントのテキストを構成する文字列です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 1 行のコメントまたは入れ子にしたコメントには、2 つのハイフン ( **--** ) を使用します。 **--** によって挿入された コメントは、復帰文字 (U+000A)、改行文字 (U+000D)、またはその 2 つの組み合わせで指定された改行で終了します。 コメントの長さには制限がありません。 次の表に、テキストのコメント化/コメント解除に使用できるキーボード ショートカットを示します。
   
-|操作|Standard|  
+|アクション|Standard|  
 |------------|--------------|  
 |選択したテキストをコメント化する|Ctrl + K、Ctrl + C|  
 |選択したテキストのコメント化を解除する|Ctrl + K、Ctrl + U|  
@@ -59,7 +59,7 @@ ms.locfileid: "68495480"
   
  複数行のコメントについては、「[スラッシュ スター &#40;ブロック コメント&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、-- コメント文字を使用します。  
   
 ```  

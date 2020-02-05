@@ -12,13 +12,13 @@ ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120587"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -79,7 +79,7 @@ ms.locfileid: "68120587"
     SELECT a.c2 FROM a, b;   
     ```  
   
-    UDT `myudt2` が `c2` という名前のプロパティを持たないと仮定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、識別子 `a.c2` がテーブル `a` の列 `c2` を参照するのか、テーブル `b` の列 `a` のプロパティ `c2` を参照するのかを判断できません。  
+    UDT `myudt2` が `c2` という名前のプロパティを持たないと仮定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、識別子 `a.c2` がテーブル `c2` の列 `a` を参照するのか、テーブル `a` の列 `c2` のプロパティ `b` を参照するのかを判断できません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68120587"
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    内の複数の  
+    or  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  

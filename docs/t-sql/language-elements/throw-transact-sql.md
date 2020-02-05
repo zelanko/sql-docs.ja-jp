@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072210"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -48,10 +48,10 @@ THROW [ { error_number | @local_variable },
  *message*  
  例外を説明する文字列または変数です。 *message* は **nvarchar(2048)** です。  
   
- *state*  
+ *状態*  
  メッセージに関連付けられる状態を示す、0 から 255 の範囲の定数または変数です。 *state* は **tinyint** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  THROW ステートメントの前のステートメントの後に、セミコロン (;) ステートメント ターミネータが続く必要があります。  
   
  TRY...CATCH 構造を使用できない場合は、ステートメント バッチが終了します。 例外が発生する行番号およびプロシージャが設定されます。 重大度は 16 に設定されます。  
@@ -69,7 +69,7 @@ THROW [ { error_number | @local_variable },
 |*msg_str* パラメーターには **printf** 書式スタイルを含めることができます。|*message* パラメーターでは **printf** 書式スタイルは受け入れられません。|  
 |*severity* パラメーターでは例外の重大度を指定します。|*severity* パラメーターはありません。 例外の重大度は常に 16 に設定されます。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. THROW を使用して例外を発生させる  
  次の例では、`THROW` ステートメントを使用して例外を発生させる方法を示します。  

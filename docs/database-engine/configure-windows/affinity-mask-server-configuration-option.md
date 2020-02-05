@@ -21,10 +21,10 @@ ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 27f6d8f947dc0ad5e25ddf53ac63e5f40b332c2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013212"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask サーバー構成オプション
@@ -126,10 +126,10 @@ GO
 ## <a name="licensing-issues"></a>ライセンスに関する問題点  
  動的関係は、CPU ライセンスにより厳密に制限されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ライセンス ポリシーに違反する関係マスク オプションの構成が許可されていません。  
   
-### <a name="startup"></a>起動時  
+### <a name="startup"></a>起動  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時またはデータベースのアタッチ時に、指定された関係マスクがライセンス ポリシーに違反する場合、エンジン層により起動処理や、データベースのアタッチおよび復元操作は完了されますが、その後、関係マスクの sp_configure 実行値が 0 にリセットされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログにエラー メッセージが記録されます。  
   
-### <a name="reconfigure"></a>再構成時  
+### <a name="reconfigure"></a>再構成  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行時に、指定された関係マスクがライセンス ポリシーに違反する場合は、エラー メッセージがクライアント セッションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに報告されます。データベース管理者による関係マスクの再構成作業が必要になります。 この場合、RECONFIGURE WITH OVERRIDE コマンドの実行が許可されません。  
   
 ## <a name="see-also"></a>参照  

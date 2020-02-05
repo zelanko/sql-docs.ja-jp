@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73240706"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux でのログ配布の概要
@@ -29,7 +29,7 @@ SQL Server のログ配布は、プライマリ サーバーのデータベー�
 - ネットワーク経由での、1 つまたは複数のセカンダリ SQL Server インスタンスへの、トランザクション ログ バックアップ ファイルのコピー
 - セカンダリ SQL Server インスタンスでのトランザクション ログ バックアップ ファイルの復元
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 - [Linux 上に SQL Server エージェントをインストールします](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>CIFS を使用したログ配布用にネットワーク共有をセットアップする 

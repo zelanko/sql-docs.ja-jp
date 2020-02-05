@@ -16,10 +16,10 @@ ms.assetid: 4ad50e54-8246-4012-bd88-4aaaaf7f0f77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f759ed3e4b2d21866ddd74d6ac21681ae216d024
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953515"
 ---
 # <a name="getboolean-method-sqlservercallablestatement"></a>getBoolean メソッド (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953515"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|[説明]|  
 |----------|-----------------|  
 |[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を **boolean** 値として取得します。|  
 |[getBoolean (java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を **boolean** 値として取得します。|  

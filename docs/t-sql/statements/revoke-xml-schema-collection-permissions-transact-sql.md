@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df4f6cb9ed29d5efb5c943d140591c5c97bf124d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255464"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE (XML スキーマ コレクションの権限の取り消し) (Transact-SQL)
@@ -122,7 +122,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  XML スキーマ コレクションに対する CONTROL アクセス許可が必要です。 AS オプションを使用する場合は、指定したプリンシパルが XML スキーマ コレクションを所有している必要があります。  
   
 ## <a name="examples"></a>例  
- 次の例では、XML スキーマ コレクション `Invoices4` の `EXECUTE` 権限を、ユーザー `Wanida` から取り消します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
+ 次の例では、XML スキーマ コレクション `EXECUTE` の `Invoices4` 権限を、ユーザー `Wanida` から取り消します。 XML スキーマ コレクション `Invoices4` は、`Sales` データベースの `AdventureWorks2012` スキーマ内にあります。  
   
  ```
  USE AdventureWorks2012;  

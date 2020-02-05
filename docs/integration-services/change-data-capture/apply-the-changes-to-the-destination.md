@@ -13,10 +13,10 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298990"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>変換先に変更を適用する
@@ -27,7 +27,7 @@ ms.locfileid: "71298990"
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、3 番目に行う最後のタスクは、変更を変換先に適用することです。 挿入を適用するコンポーネント、更新を適用するコンポーネント、および削除を適用するコンポーネントが必要です。  
   
 > [!NOTE]  
->  変更データの増分読み込みを実行するパッケージのデータ フローをデザインするための 2 番目のタスクは、挿入、更新、および削除を分割することです。 このコンポーネントの詳細については、「[挿入、更新、および削除を処理する](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)」を参照してください。 変更データの増分読み込みを実行するパッケージを作成するプロセス全体の説明については、「[変更データ キャプチャ (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
+>  変更データの増分読み込みを実行するパッケージのデータ フローをデザインするための 2 番目のタスクは、挿入、更新、および削除を分割することです。 このコンポーネントの詳細については、「 [挿入、更新、および削除を処理する](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)」を参照してください。 変更データの増分読み込みを実行するパッケージを作成するプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
   
 ## <a name="applying-inserts"></a>挿入の適用  
  挿入を適用するには、新しい行で特別な処理は必要ないので、OLE DB 変換先を使用します。  
@@ -106,6 +106,6 @@ ms.locfileid: "71298990"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>MERGE 機能を使用した挿入と更新の最適化  
  特定の変更データ キャプチャ オプションと Transact-SQL の MERGE キーワードを組み合わせて使用することによって、挿入と更新の処理を最適化できます。 MERGE キーワードの詳細については、「[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)」を参照してください。  
   
- 変更データを取得する Transact-SQL ステートメントで、**cdc.fn_cdc_get_net_changes_<capture_instance>** 関数を呼び出すときに、*row_filter_option* パラメーターの値として *all with merge* を指定できます。 この変更データ キャプチャの関数は、挿入と更新を区別するために必要な追加の処理を実行する必要がない場合、効率が向上します。 *all with merge* パラメーター値を指定すると、変更データの **__$operation** 値は、削除の場合は 1、挿入または更新によって生じた変更の場合は 5 になります。 変更データの取得に使用する Transact-SQL 関数の詳細については、「 [変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)」を参照してください。 *all with merge* パラメーター値を使用して変更を取得したら、削除を適用して、残りの行を一時テーブルまたはステージング テーブルに出力することができます。 その後、下流の SQL 実行タスクで単一の MERGE ステートメントを使用して、すべての挿入または更新をステージング テーブルから変換先に適用できます。  
+ 変更データを取得する Transact-SQL ステートメントで、*cdc.fn_cdc_get_net_changes_<capture_instance>* 関数を呼び出すときに、*row_filter_option* パラメーターの値として **all with merge** を指定できます。 この変更データ キャプチャの関数は、挿入と更新を区別するために必要な追加の処理を実行する必要がない場合、効率が向上します。 *all with merge* パラメーター値を指定すると、変更データの **__$operation** 値は、削除の場合は 1、挿入または更新によって生じた変更の場合は 5 になります。 変更データの取得に使用する Transact-SQL 関数の詳細については、「 [変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)」を参照してください。 *all with merge* パラメーター値を使用して変更を取得したら、削除を適用して、残りの行を一時テーブルまたはステージング テーブルに出力することができます。 その後、下流の SQL 実行タスクで単一の MERGE ステートメントを使用して、すべての挿入または更新をステージング テーブルから変換先に適用できます。  
   
   

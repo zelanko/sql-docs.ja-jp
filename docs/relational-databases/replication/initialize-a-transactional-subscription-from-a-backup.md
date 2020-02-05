@@ -20,10 +20,10 @@ ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320479"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>バックアップからのトランザクション サブスクリプションの初期化
@@ -36,12 +36,12 @@ ms.locfileid: "75320479"
   
     -   この値が **1**の場合、パブリケーションはこの機能をサポートしています。  
   
-    -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。 `@property` には値 **allow_initialize_from_backup** を指定し、`@value` には値 **true** を指定します。  
+    -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。 **には値**allow_initialize_from_backup`@property` を指定し、**には値**true`@value` を指定します。  
   
 2.  新しいパブリケーションの場合、パブリッシャー側のパブリケーション データベースに対して [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を実行します。 **allow_initialize_from_backup** には、 **true**を指定します。 詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
     > [!WARNING]  
-    >  サブスクライバー データの欠落を回避するために、`@allow_initialize_from_backup = N'true'` と共に **sp_addpublication** または **sp_changepublication** を使用するときは、常に `@immediate_sync = N'true'` を使用します。  
+    >  サブスクライバー データの欠落を回避するために、**と共に**sp_addpublication**または**sp_changepublication`@allow_initialize_from_backup = N'true'` を使用するときは、常に `@immediate_sync = N'true'` を使用します。  
   
 3.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) ステートメントを使用して、パブリケーション データベースのバックアップを作成します。  
   

@@ -20,10 +20,10 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134805"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
@@ -78,7 +78,7 @@ ms.locfileid: "68134805"
   
     -   [[概要] ページ](#Summary)  
   
-    -   [[進行状況]](#Progress)  
+    -   [進行状況](#Progress)  
     
     -   [結果](#Results)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68134805"
 6.  **Microsoft.SqlServer.Management.Dac.DacStore** 型の **Import** メソッドを使用して、BACPAC をインポートします。 エクスポートによって作成された BACPAC ファイルを指定します。  
   
 ## <a name="see-also"></a>参照  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [BACPAC ファイルのインポートによる新しいユーザー データベースの作成](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  
   

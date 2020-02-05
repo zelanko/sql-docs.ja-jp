@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132251"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>セマンティクス検索の管理および監視
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>フルテキスト カタログのフルテキスト インデックスとセマンティック インデックスの合計サイズは?  
- [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) メタデータ関数の **IndexSize** プロパティに対してクエリを実行します。  
+ **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) プロパティに対してクエリを実行します。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>フルテキスト カタログのフルテキスト インデックスおよびセマンティック インデックスでインデックス化されているアイテム数は?  
- [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) メタデータ関数の **ItemCount** プロパティに対してクエリを実行します。  
+ **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) プロパティに対してクエリを実行します。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
@@ -85,7 +85,7 @@ GO
   
  セマンティック インデックス作成はフルテキスト インデックス作成に依存しているため、セマンティック インデックスは関連するフルテキスト インデックスが作成されたときにのみ作成されます。  
   
- **例:フルテキスト インデックスとセマンティック インデックスの完全作成を開始する**  
+ **例: フルテキスト インデックスとセマンティック インデックスの完全作成を開始する**  
   
  次の例では、AdventureWorks2012 サンプル データベースの **Production.Document** テーブルの既存のフルテキスト インデックスを変更することにより、フルテキスト インデックスとセマンティック インデックスの両方の完全作成を開始します。  
   
@@ -99,7 +99,7 @@ GO
 ```  
   
 ##  <a name="HowToDisableIndexing"></a> セマンティック インデックスの作成の無効化または再有効化  
- ENABLE/DISABLE 句を使用して、フルテキスト インデックスまたはセマンティック インデックスの作成を有効または無効にすることができます (これらの句の構文と動作については、フルテキスト インデックスに関する説明に示されています)。 詳細については、「[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)」を参照してください。  
+ ENABLE/DISABLE 句を使用して、フルテキスト インデックスまたはセマンティック インデックスの作成を有効または無効にすることができます (これらの句の構文と動作については、フルテキスト インデックスに関する説明に示されています)。 詳細については、「 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)」を参照してください。  
   
  セマンティック インデックスの作成が無効化または中断された後でもセマンティック データに対するクエリは正常に動作し、以前にインデックスが作成されたデータを返します。 この動作は、フルテキスト検索の動作と一致しません。  
   
@@ -133,7 +133,7 @@ GO
 2.  **フェーズ 2:** ドキュメントの類似性に関するセマンティック インデックスが作成されます。 このインデックスは、前のフェーズで作成された 2 つのインデックスに依存します。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a>問題点: セマンティック インデックスが作成されない  
+##  <a name="ProblemNotPopulated"></a> 問題点: セマンティック インデックスが作成されない  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>関連するフルテキスト インデックスが作成されていますか?  
  セマンティック インデックス作成はフルテキスト インデックス作成に依存しているため、セマンティック インデックスは関連するフルテキスト インデックスが作成されたときにのみ作成されます。  
   

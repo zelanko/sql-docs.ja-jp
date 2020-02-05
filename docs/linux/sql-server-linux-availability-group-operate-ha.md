@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67916041"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Linux で Always On 可用性グループを操作する
@@ -76,13 +76,13 @@ ms.locfileid: "67916041"
 
    可用性グループのクラスターの種類が `NONE` の場合、手動でフェールオーバーします。 次の手順を実行します。
 
-      A. 次のコマンドでは、プライマリ レプリカがセカンダリに設定されます。 `AG1` を実際の可用性グループの名前に置換します。 プライマリ レプリカをホストする SQL Server のインスタンスで Transact-SQL コマンドを実行します。
+      a. 次のコマンドでは、プライマリ レプリカがセカンダリに設定されます。 `AG1` を実際の可用性グループの名前に置換します。 プライマリ レプリカをホストする SQL Server のインスタンスで Transact-SQL コマンドを実行します。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. 次のコマンドでは、同期セカンダリ レプリカがプライマリに設定されます。 SQL Server のターゲット インスタンス (同期セカンダリ レプリカをホストするインスタンス) で次の Transact-SQL コマンドを実行します。
+      b. 次のコマンドでは、同期セカンダリ レプリカがプライマリに設定されます。 SQL Server のターゲット インスタンス (同期セカンダリ レプリカをホストするインスタンス) で次の Transact-SQL コマンドを実行します。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
@@ -134,7 +134,7 @@ ms.locfileid: "67916041"
    ```
  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループ クラスター リソースに対して Red Hat Enterprise Linux クラスターを構成する](sql-server-linux-availability-group-cluster-rhel.md)
 

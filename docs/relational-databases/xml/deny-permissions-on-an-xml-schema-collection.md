@@ -13,10 +13,10 @@ ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68052283"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の拒否
@@ -45,7 +45,7 @@ ms.locfileid: "68052283"
   
 -   EXECUTE 権限を拒否すると、XML スキーマ コレクションによって型指定または制約された列、変数、およびパラメーターの値を挿入または更新するプリンシパルの権限を拒否することになります。 また、同じ xml 型の列や変数の値のクエリを実行するプリンシパルの権限も拒否することになります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例のシナリオでは、XML スキーマ権限の動作を示します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 最後に必要なクリーンアップを行います。  
   
 ### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. ユーザーによる XML スキーマ コレクションの作成を防止する  

@@ -19,10 +19,10 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ac25131e24aa89253abfc13eac69a4a60d0b7aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040294"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
@@ -45,7 +45,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 *property_name*  
 情報を取得するプロパティの名前を指定します。 *property_name* 値は次のいずれかを指定することができます。
   
-|[値]|[説明]|  
+|値|[説明]|  
 |---|---|
 |**CultureInfo**|アセンブリのロケール。|  
 |**PublicKey**|アセンブリの公開キーまたは公開キー トークン。|  
@@ -61,7 +61,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 ## <a name="return-type"></a>の戻り値の型 :
 **sql_variant**
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例は、`HelloWorld` アセンブリが [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで登録されていることを前提としています。 詳細については、「[Hello World サンプル](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)」を参照してください。
   
 ```sql

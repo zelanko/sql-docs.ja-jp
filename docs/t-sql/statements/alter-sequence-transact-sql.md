@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070329"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -77,8 +77,8 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  キャッシュの動作について詳しくは、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
- シーケンスの作成方法と、シーケンスのキャッシュの管理方法について詳しくは、「[CREATE SEQUENCE &#40;Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
+## <a name="remarks"></a>解説  
+ シーケンスの作成方法と、シーケンスのキャッシュの管理方法について詳しくは、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
  昇順のシーケンスの MINVALUE と降順のシーケンスの MAXVALUE は、シーケンスの START WITH 値を許可しない値に変更することはできません。 昇順のシーケンスの MINVALUE を START WITH 値より大きい数に変更する、または降順のシーケンスの MAXVALUE を START WITH 値より小さい数に変更するには、RESTART WITH 引数を含めて、最小値と最大値の範囲内にある目的の位置からシーケンスを再開します。  
   
@@ -96,10 +96,10 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
   
  シーケンス オブジェクトの所有権は、**ALTER AUTHORIZATION** ステートメントを使って譲渡できます。  
   
-### <a name="audit"></a>監査  
+### <a name="audit"></a>Audit  
  **ALTER SEQUENCE** を監査するには、**SCHEMA_OBJECT_CHANGE_GROUP** を監視します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  シーケンスの作成と、**NEXT VALUE FOR** 関数を使用したシーケンス番号の生成の両方の使用例については、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
   
 ### <a name="a-altering-a-sequence"></a>A. シーケンスを変更する  

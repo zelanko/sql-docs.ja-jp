@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68354590"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar および nvarchar (Transact-SQL)
@@ -30,12 +30,12 @@ ms.locfileid: "68354590"
   
 ## <a name="arguments"></a>引数  
 **nchar** [ ( n ) ]  
-固定サイズの文字列データです。 *n* によってバイト ペアでの文字列のサイズが定義されます。1 から 4,000 までの値にする必要があります。 ストレージのサイズは、*n* の 2 倍のバイト数です。 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数となり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数ですが、補助文字によって 2 つのバイト ペア (または[サロゲート ペア](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)) が使用されるため、格納できる文字数は *n* よりも少なくなる場合があります。 **nchar** の ISO シノニムは、**national char** および **national character** です。
+固定サイズの文字列データです。 *n* によってバイト ペアでの文字列のサイズが定義されます。1 から 4,000 までの値にする必要があります。 ストレージのサイズは、*n* の 2 倍のバイト数です。 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数となり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数ですが、補助文字によって 2 つのバイト ペア (または*サロゲート ペア*) が使用されるため、格納できる文字数は [n](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF) よりも少なくなる場合があります。 **nchar** の ISO シノニムは、**national char** および **national character** です。
   
 **nvarchar** [ ( n | **max** ) ]  
-可変サイズの文字列データです。 *n* によってバイト ペアでの文字列のサイズが定義されます。1 から 4,000 までの値を指定できます。 **max** は、ストレージの最大サイズが 2^30-1 文字 (2 GB) であることを示します。 ストレージのサイズは、*n* の 2 倍のバイト数 + 2 バイトです。 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数 + 2 バイトとなり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数 + 2 バイトですが、補助文字によって 2 つのバイト ペア (または[サロゲート ペア](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)) が使用されるため、格納できる文字数は *n* よりも少なくなる場合があります。 ISO シノニム **nvarchar** は national char のさまざまな **と** 各国語文字がさまざまな**です**。
+可変サイズの文字列データです。 *n* によってバイト ペアでの文字列のサイズが定義されます。1 から 4,000 までの値を指定できます。 **max** は、ストレージの最大サイズが 2^30-1 文字 (2 GB) であることを示します。 ストレージのサイズは、*n* の 2 倍のバイト数 + 2 バイトです。 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数 + 2 バイトとなり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数 + 2 バイトですが、補助文字によって 2 つのバイト ペア (または*サロゲート ペア*) が使用されるため、格納できる文字数は [n](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF) よりも少なくなる場合があります。 ISO シノニム **nvarchar** は national char のさまざまな **と** 各国語文字がさまざまな**です**。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 一般的な誤解として、[NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では *n* によって文字数が定義されると考えられています。 実際には、[NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では、*n* によって文字長が**バイトペア** (0-4,000) で定義されます。 *n* は、格納できる文字数を定義しません。 これは、[CHAR(*n*) および VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) の定義と同様です。   
 この誤解が生じるのは、Unicode の範囲 0-65,535 で定義された文字を使用すると、各バイトペアにつき 1 つの文字を格納できるためです。 しかしながら、より高い Unicode の範囲 (65,536-1,114,111) の場合、1 つの文字で 2 つのバイトペアが使用されることがあります。 たとえば、NCHAR(10) として定義された列では、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]で格納できる文字は、1 つのバイトペア (Unicode 範囲 0-65535) を使用する文字は 10 個ですが、2 つのバイトペア (Unicode 範囲 65,536-1,114,111) を使用する場合は 10 個未満です。 Unicode の格納と文字の範囲の詳細については、「[UTF-8 と UTF-16 でのストレージの相違点](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)」を参照してください。     
 

@@ -12,20 +12,20 @@ ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776a825c480568be2640d1309c7c3a48970e2c54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571140"
 ---
 # <a name="word-device-information-settings"></a>Word デバイス情報設定
   次の表は、 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 形式で表示するためのデバイス情報設定を示しています。  
   
-|設定|[値]|  
+|設定|値|  
 |-------------|-----------|  
 |**AutoFit**|**[False]** 。 Word のすべての表で AutoFit が **false** に設定されます。<br /><br /> **[True]** 。 Word のすべての表で AutoFit が **true** に設定されます。<br /><br /> **Never**。 Word の表で AutoFit 値が設定されず、動作が Word の既定値に戻ります。<br /><br /> **Default**。 各論理ページごとに、物理的な描画領域 (余白を除いた物理ページの幅) よりも幅の狭い表で AutoFit が設定されます。|  
-|**ExpandToggles**|表示と非表示の切り替えが可能なすべてのアイテムを完全に展開した状態で表示するかどうかを示します。 既定値は **false**です。|  
-|**FixedPageWidth**|DOC ファイルに書き込まれるページの幅がレポート本文内で最大のページの幅に合わせて拡大されるかどうかを示します。 既定値は **false**です。|  
+|**ExpandToggles**|表示と非表示の切り替えが可能なすべてのアイテムを完全に展開した状態で表示するかどうかを示します。 既定値は **false** です。|  
+|**FixedPageWidth**|DOC ファイルに書き込まれるページの幅がレポート本文内で最大のページの幅に合わせて拡大されるかどうかを示します。 既定値は **false** です。|  
 |**OmitHyperlinks**|ハイパーリンク アクションが設定されているすべてのアイテムでそのアクションを省略するかどうかを示します。 既定値は **false**です。|  
 |**OmitDrillthroughs**|ドリルスルー アクションが設定されているすべてのアイテムでそのアクションを省略するかどうかを示します。 既定値は **false**です。|  
   

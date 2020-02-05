@@ -22,10 +22,10 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cede10b01e1300a1b354cdc5a0d1dd5f80d5a006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095453"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES を使用したクエリへの名前空間の追加
@@ -219,7 +219,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 上記のクエリでは、**query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 例:  
+ 上記のクエリでは、 **query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 次に例を示します。  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

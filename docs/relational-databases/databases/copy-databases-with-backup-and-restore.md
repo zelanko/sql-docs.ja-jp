@@ -19,10 +19,10 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137317"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>バックアップと復元によるデータベースのコピー
@@ -65,7 +65,7 @@ ms.locfileid: "68137317"
  エラーと好ましくない結果を回避するには、復元操作の前に、 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 履歴テーブルを使用して、復元しようとしているバックアップ内のデータベースとログ ファイルを確認できます。  
   
 ## <a name="moving-the-database-files"></a>データベース ファイルの移動  
- データベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 例:  
+ データベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 次に例を示します。  
   
 -   以前のバージョンの既定の場所に作成されたバックアップからデータベースを復元する場合。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68137317"
  データベースを復元するときに明示的に指定するデータベース名が、新しいデータベース名として自動的に使用されます。 そのデータベース名はまだ存在していないため、新しい名前のデータベースがバックアップ内のファイルを使用して作成されます。  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>復元を使用してデータベースをアップグレードする場合  
- バックアップを以前のバージョンから復元する場合は、バックアップにある各フルテキスト カタログのパス (ドライブとディレクトリ) がコピー先コンピューターに存在するかどうかを事前に知っておくと便利です。 バックアップにある、カタログ ファイルを含めたすべてのファイルの論理名と物理名 (パスとファイル名) を一覧にするには、RESTORE FILELISTONLY FROM *<backup_device>* ステートメントを使用します。 詳細については、「[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)」を参照してください。  
+ バックアップを以前のバージョンから復元する場合は、バックアップにある各フルテキスト カタログのパス (ドライブとディレクトリ) がコピー先コンピューターに存在するかどうかを事前に知っておくと便利です。 バックアップにある、カタログ ファイルを含めたすべてのファイルの論理名と物理名 (パスとファイル名) を一覧にするには、RESTORE FILELISTONLY FROM *<backup_device>* ステートメントを使用します。 詳細については、[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) を参照してください。  
   
  コピー先のコンピューターに同一のパスが存在しない場合、2 つの方法で対処できます。  
   

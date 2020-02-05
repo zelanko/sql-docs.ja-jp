@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558477"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループ構成の高可用性とデータ保護
@@ -136,7 +136,7 @@ SQL Server 2017 では、クラスター リソース設定 `REQUIRED_SYNCHRONIZ
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Pacemaker 用の SQL Server リソース エージェントについて理解する
 
-SQL Server 2017 CTP 1.4 では、`sys.availability_groups` に `sequence_number` が追加されました。これにより、プライマリ レプリカに対するセカンダリ レプリカの最新度を Pacemaker で確認できるようになりました。 `sequence_number` は、ローカルの可用性グループ レプリカの最新度を表す、単調増加 BIGINT です。 Pacemaker により、可用性グループの構成が変更されるたびに `sequence_number` が更新されます。 構成変更の例としては、フェールオーバー、レプリカの追加、削除などがあります。 この数はプライマリ上で更新され、セカンダリ レプリカにレプリケートされます。 そのため、最新の構成を保持しているセカンダリ レプリカでは、シーケンス番号がプライマリと同じになります。 
+SQL Server 2017 CTP 1.4 では、`sequence_number` に `sys.availability_groups` が追加されました。これにより、プライマリ レプリカに対するセカンダリ レプリカの最新度を Pacemaker で確認できるようになりました。 `sequence_number` は、ローカルの可用性グループ レプリカの最新度を表す、単調増加 BIGINT です。 Pacemaker により、可用性グループの構成が変更されるたびに `sequence_number` が更新されます。 構成変更の例としては、フェールオーバー、レプリカの追加、削除などがあります。 この数はプライマリ上で更新され、セカンダリ レプリカにレプリケートされます。 そのため、最新の構成を保持しているセカンダリ レプリカでは、シーケンス番号がプライマリと同じになります。 
 
 レプリカをプライマリに昇格することが Pacemaker により決定されると、まずすべてのレプリカに "*昇格前*" の通知を送られます。 レプリカによりシーケンス番号が返されます。 次に、Pacemaker が実際にレプリカをプライマリに昇格しようとする際、レプリカは、そのシーケンス番号がすべてのシーケンス番号の最大値である場合にのみ自身を昇格させます。 自身のシーケンス番号が最大のシーケンス番号と一致しない場合、レプリカは昇格操作を拒否します。 この方法により、最大のシーケンス番号を持つレプリカだけがプライマリに昇格できるようになるため、データの損失が回避されます。 
 
@@ -155,7 +155,7 @@ SQL Server 2017 CTP 1.4 では、`sys.availability_groups` に `sequence_number`
 
 既定の動作をオーバーライドし、可用性グループ リソースが `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` を自動的に設定しないようにすることもできます。
 
-次の例のスクリプトは、`<**ag1**>` という名前の可用性グループで `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` を 0 に設定します。 実行する前に、`<**ag1**>` を実際の可用性グループの名前に置き換えます。
+次の例のスクリプトは、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` という名前の可用性グループで `<**ag1**>` を 0 に設定します。 実行する前に、`<**ag1**>` を実際の可用性グループの名前に置き換えます。
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

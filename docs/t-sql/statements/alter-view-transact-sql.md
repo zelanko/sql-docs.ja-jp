@@ -21,10 +21,10 @@ ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981946"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
@@ -92,7 +92,7 @@ AS select_statement
  WITH CHECK OPTION  
  ビューに対して実行されるすべてのデータ変更ステートメントについて、*select_statement* 内で設定される条件に従うよう強制します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER VIEW について詳しくは、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」の「解説」をご覧ください。  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ AS select_statement
 ## <a name="permissions"></a>アクセス許可  
  ALTER VIEW を実行するには、少なくとも OBJECT に対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、すべての従業員とその雇用日を含んだ `EmployeeHireDate` というビューを作成します。 ビューには権限が与えられますが、必要条件が変更されて、雇用日が特定の日付よりも古い従業員を選択することになりました。 そこで、`ALTER VIEW` を使用してビューを変更します。  
   
 ```  

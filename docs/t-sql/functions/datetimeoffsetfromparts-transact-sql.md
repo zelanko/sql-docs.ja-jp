@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119105"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -68,12 +68,12 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 タイム ゾーン オフセットの分部分を指定する整数式。  
   
 *有効桁数 (precision)*  
-`DATETIMEOFFSETFROMPARTS` が返す **datetimeoffset** 値の有効桁数を指定する整数リテラル値です。  
+**が返す**datetimeoffset`DATETIMEOFFSETFROMPARTS` 値の有効桁数を指定する整数リテラル値です。  
   
 ## <a name="return-types"></a>戻り値の型
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 `DATETIMEOFFSETFROMPARTS` は、完全に初期化された **datetimeoffset** データ型を返します。 オフセット引数は、タイム ゾーンのオフセットを表します。 オフセット引数を省略すると、`DATETIMEOFFSETFROMPARTS` はタイム ゾーン オフセットが `00:00` (つまり、タイム ゾーン オフセットなし) であるものと想定します。 オフセット引数が指定される場合、`DATETIMEOFFSETFROMPARTS` は両方の引数の値が指定され、両方とも正の値または両方とも負の値であるものと想定します。 *minute_offset* の値が設定されていて、*hour_offset* の値が設定されていない場合、`DATETIMEOFFSETFROMPARTS` はエラーになります。 他の引数が無効な値の場合、`DATETIMEOFFSETFROMPARTS` はエラーになります。 必須引数の少なくとも 1 つが `NULL` 値である場合、`DATETIMEOFFSETFROMPARTS` は `NULL` を返します。 ただし、*precision* 引数が `NULL` 値の場合は、`DATETIMEOFFSETFROMPARTS` はエラーを生成します。  
   
@@ -81,7 +81,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 この関数は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー以降のリモート処理に対応しています。 バージョンが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前の場合、サーバーのリモート処理には対応していません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-an-example-without-fractions-of-a-second"></a>A. 秒の小数部を使用しない場合の例  
   

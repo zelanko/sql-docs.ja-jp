@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067371"
 ---
 # <a name="model-database"></a>model データベース
@@ -41,7 +41,7 @@ ms.locfileid: "68067371"
 |ファイル|論理名|物理名|ファイル拡張|  
 |----------|------------------|-------------------|-----------------|  
 |プライマリ データ|modeldev|model.mdf|ディスクがいっぱいになるまで 64 MB ずつ自動拡張|  
-|Log|modellog|modellog.ldf|最大 2 TB まで 64 MB ずつ自動拡張|  
+|ログ|modellog|modellog.ldf|最大 2 TB まで 64 MB ずつ自動拡張|  
 
 SQL Server 2014 での既定のファイル拡張値については、「[model データベース](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014)」をご覧ください。  
 

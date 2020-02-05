@@ -20,10 +20,10 @@ ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a711e81c796293f9c9ac8694b1dc32e0e60f6938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066600"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography データ型)
@@ -41,12 +41,12 @@ ms.locfileid: "68066600"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型:**SqlChars**  
+ CLR の戻り値の型: **SqlChars**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
- **Z** (標高) 値および **M** (メジャー) 値を含む `Point` インスタンスを作成する例を次に示します。 `STAsText()` は WKT 値 (-122.34900 47.65100) を選択します。`AsTextZM()` は同じ WKT 値を選択し、**Z** および **M** の値も返すため、(-122.34900 47.65100 10.3 12) が出力されます。  
+## <a name="examples"></a>例  
+ `Point`Z **(標高) 値および**M **(メジャー) 値を含む** インスタンスを作成する例を次に示します。 `STAsText()` は WKT 値 (-122.34900 47.65100) を選択します。`AsTextZM()` は同じ WKT 値を選択し、**Z** および **M** の値も返すため、(-122.34900 47.65100 10.3 12) が出力されます。  
   
 ```  
 DECLARE @g geography;  

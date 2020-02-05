@@ -16,10 +16,10 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9b385de9eee9fd1073c2161d0db57fd0287f959c
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321869"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>トランザクション パブリケーションのデータの競合の表示 (SQL Server Management Studio)
@@ -32,9 +32,9 @@ ms.locfileid: "75321869"
   
 -   キュー更新サブスクリプションの場合は、すべての競合のデータを表示できます。 競合データは、競合の保有期間に指定した期間 (既定では 14 日間)、レプリケーション競合表示モジュールで表示できます。 競合の保有期間を設定するには、次のいずれかを実行します。  
   
-    -   [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の @conflict_retention パラメーターに保有期間の値を指定します。  
+    -   @conflict_retentionsp_addpublication[ の ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) パラメーターに保有期間の値を指定します。  
   
-    -   [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) の @property パラメーターに **'conflict_retention'** を指定し、@value パラメーターに保有期間の値を指定します。  
+    -   **sp_changepublication** の @property パラメーターに @value'conflict_retention'[ を指定し、](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) パラメーターに保有期間の値を指定します。  
   
 ### <a name="to-view-conflicts"></a>競合を表示するには  
   

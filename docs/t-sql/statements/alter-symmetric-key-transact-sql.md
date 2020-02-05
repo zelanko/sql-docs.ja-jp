@@ -22,10 +22,10 @@ ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7314659cc8d0ba18b5b7b7b562ad5df467988638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070249"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
@@ -77,7 +77,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  ASYMMETRIC KEY *Asym_Key_Name*  
  変更する対称キーの暗号化に使用されている非対称キーを指定します。 この非対称キーはデータベース内に存在する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!CAUTION]  
 >  データベースのマスター キーの公開キーではなく、パスワードを使用して対称キーを暗号化する場合は、TRIPLE_DES 暗号化アルゴリズムが使用されます。 このため、AES など、強力な暗号化アルゴリズムで作成されたキーでも、キー自身はそれより弱いアルゴリズムで保護されます。  
@@ -92,7 +92,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する ALTER 権限が必要です。 証明書または非対称キーを使って暗号化を追加する場合は、証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。 証明書または非対称キーを使って暗号化を削除する場合は、証明書または非対称キーに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、対称キーの保護に使用されている暗号化の方法を変更します。 対称キー `JanainaKey043` は、作成時に証明書 `Shipping04` を使用して暗号化されています。 暗号化なしでキーを格納することはできないため、この例では、パスワードによる暗号化を追加した後、証明書による暗号化を削除します。  
   
 ```  

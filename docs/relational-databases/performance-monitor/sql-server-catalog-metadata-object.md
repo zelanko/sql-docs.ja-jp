@@ -13,10 +13,10 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986718"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQLServer、Catalog Metadata オブジェクト
@@ -31,7 +31,7 @@ ms.locfileid: "67986718"
 |**Cache Entries Count**|カタログ メタデータ キャッシュ内のエントリ数。|
 |**Cache Entries Pinned Count**|固定されたカタログ メタデータ キャッシュのエントリ数。|
 |**Cache Hit Ratio**|カタログ メタデータ キャッシュのヒット数と参照回数の比率。|
-|**Cache Hit Ratio Base**|内部使用のみです。|
+|**Cache Hit Ratio Base**|内部使用専用です。|
 
 カウンターのインスタンスはデータベースごとに 1 つあります。
 

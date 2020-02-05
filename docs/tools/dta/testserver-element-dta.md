@@ -1,10 +1,7 @@
 ---
-title: TestServer 要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TestServer 要素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 784275fe53edd3e0c7068927c4af299de3d304d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 7d861ec513297bf5c9abe6bf3654731008960c3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105935"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307031"
 ---
 # <a name="testserver-element-dta"></a>TestServer 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  実稼働サーバーのチューニング時に使用するテスト サーバーを指定します。  
+
+実稼働サーバーのチューニング時に使用するテスト サーバーを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,11 +40,11 @@ ms.locfileid: "68105935"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**既定値**|[なし] :|  
-|**個数**|省略可。 **TuningOptions** 要素につき 1 回使用できます。|  
+|**個数**|省略可能。 **TuningOptions** 要素につき 1 回使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

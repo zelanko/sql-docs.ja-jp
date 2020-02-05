@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 24c005d2b9b95827dce28bc78303a75828270143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105041"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
@@ -52,9 +52,9 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 検索が開始される **integer** 型または **bigint** 型の式。 *start_location* を指定しない場合、または負の値や 0 を指定した場合は、*expressionToSearch* の先頭から検索が開始されます。
   
 ## <a name="return-types"></a>戻り値の型
-*expressionToSearch* が **varchar(max)** 、**nvarchar(max)** 、または **varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
+**expressionToSearch** が *varchar(max)* 、**nvarchar(max)** 、または **varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *expressionToFind* または *expressionToSearch* のいずれかの式が Unicode データ型 (**nchar** または **nvarchar**) の場合で、他の式がそうでない場合、CHARINDEX 関数はその他の式を Unicode データ型に変換します。 CHARINDEX は、**image**、**ntext**、または **text** データ型では使用できません。
   
 *expressionToFind* 式または *expressionToSearch* のいずれかに NULL 値がある場合、CHARINDEX は NULL を返します。
@@ -70,10 +70,10 @@ CHARINDEX は、入力の照合順序に基づいて比較を行います。 特
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
 SC の照合順序を使用する場合、*start_location* と戻り値では、サロゲート ペアが 2 文字ではなく 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-starting-position-of-an-expression"></a>A. 式の開始位置を返す  
-この例では、検索された文字列値の変数 `@document` で `bicycle` を検索します。
+この例では、検索された文字列値の変数 `bicycle` で `@document` を検索します。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>B. 特定の位置から検索する  
-この例では、オプションの *start_location* パラメーターを使用して、検索された文字列値の変数 `@document` の 5 文字目で `vital` の検索を開始します。
+この例では、オプションの *start_location* パラメーターを使用して、検索された文字列値の変数 `vital` の 5 文字目で `@document` の検索を開始します。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -133,7 +133,7 @@ GO
 ```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. 大文字小文字を区別する検索を実行する  
-この例では、大文字と小文字を区別して、検索された文字列 `'This is a Test``'` に含まれる文字列 `'TEST'` を検索します。
+この例では、大文字と小文字を区別して、検索された文字列 `'TEST'` に含まれる文字列 `'This is a Test``'` を検索します。
   
 ```sql
 USE tempdb;  
@@ -151,7 +151,7 @@ SELECT CHARINDEX ( 'TEST',
 0
 ```  
   
-この例では、大文字と小文字を区別して、`'This is a Test'` に含まれる文字列 `'Test'` を検索します。
+この例では、大文字と小文字を区別して、`'Test'` に含まれる文字列 `'This is a Test'` を検索します。
   
 ```sql
   
@@ -170,7 +170,7 @@ SELECT CHARINDEX ( 'Test',
 ```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>E. 大文字小文字を区別しない検索を実行する  
-この例では、大文字と小文字を区別せずに、`'This is a Test'` に含まれる文字列 `'TEST'` を検索します。
+この例では、大文字と小文字を区別せずに、`'TEST'` に含まれる文字列 `'This is a Test'` を検索します。
   
 ```sql
   
@@ -189,10 +189,10 @@ GO
 11
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. 文字列式の先頭から検索する  
-この例では、`This is a string` の位置 1 (最初の文字) から開始して、文字列 `This is a string` に含まれる文字列 `is` の最初の位置を返します。
+この例では、`is` の位置 1 (最初の文字) から開始して、文字列 `This is a string` に含まれる文字列 `This is a string` の最初の位置を返します。
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -206,7 +206,7 @@ SELECT CHARINDEX('is', 'This is a string');
 ```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. 最初の位置以外の位置から検索する  
-この例では、位置 4 (4 番目の文字) から開始して、文字列 `This is a string` に含まれる文字列 `is` の最初の位置を返します。
+この例では、位置 4 (4 番目の文字) から開始して、文字列 `is` に含まれる文字列 `This is a string` の最初の位置を返します。
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844377"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -50,15 +50,15 @@ NULLIF ( expression , expression )
   
  NULLIF は、2 つの式が等しくない場合、最初の*式*を返します。 式が等しい場合、NULLIF は最初の*式*のデータ型の NULL 値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  NULLIF は、2 つの式を比較し、その 2 つが等価な場合に NULL を返す検索 CASE 式と同じです。  
   
  NULLIF 関数の中では、RAND() など時間に依存する関数は使用しないことをお勧めします。 関数が 2 回呼び出されて評価され、それぞれ異なる結果が返されることがあります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-budget-amounts-that-have-not-changed"></a>A. 変更のない予算額を返す  
- 次の例では、部門 (`dept`)、今年度予算 (`current_year`)、および昨年度予算 (`previous_year`) で構成される `budgets` テーブルを作成します。 今年度予算が昨年度予算と変わらない部門については `NULL` を使用し、今年度予算がまだ決定していない場合は `0` を使用します。 昨年度予算の値を使用する場合も含めて (`previous_year` が `current_year` の場合は `NULL` の値を使用)、今年度予算を受け取った部門についてだけその平均値を求めるには、`NULLIF` 関数と `COALESCE` 関数を組み合わせて使用します。  
+ 次の例では、部門 (`budgets`)、今年度予算 (`dept`)、および昨年度予算 (`current_year`) で構成される `previous_year` テーブルを作成します。 今年度予算が昨年度予算と変わらない部門については `NULL` を使用し、今年度予算がまだ決定していない場合は `0` を使用します。 昨年度予算の値を使用する場合も含めて (`previous_year` が `current_year` の場合は `NULL` の値を使用)、今年度予算を受け取った部門についてだけその平均値を求めるには、`NULLIF` 関数と `COALESCE` 関数を組み合わせて使用します。  
   
 ```sql  
 CREATE TABLE dbo.budgets  
@@ -111,8 +111,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: データを含まない予算額を返す  
- 次の例では、`budgets` テーブルを作成し、データを読み込み、`current_year` と `previous_year` のいずれにもデータが含まれない場合は `NULLIF` を使用して null を返します。  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. データを含まない予算額を返す  
+ 次の例では、`budgets` テーブルを作成し、データを読み込み、`NULLIF` と `current_year` のいずれにもデータが含まれない場合は `previous_year` を使用して null を返します。  
   
 ```sql  
 CREATE TABLE budgets (  

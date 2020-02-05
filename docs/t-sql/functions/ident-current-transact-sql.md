@@ -21,10 +21,10 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843701"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
@@ -52,7 +52,7 @@ ID 値が返されるテーブルまたはビューの名前です。 *table_or_
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_CURRENT など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 IDENT_CURRENT は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の ID 関数 SCOPE_IDENTITY および @@IDENTITY に似ています。 3 つの関数とも、最後に生成された ID 値を返します。 ただし、各関数の中で、*last* が定義されるスコープとセッションがそれぞれ異なります。  
 
 -   IDENT_CURRENT は、任意のセッションおよび任意のスコープ内の特定のテーブルに対して生成された最後の ID 値を返します。  
@@ -68,10 +68,10 @@ IDENT_CURRENT 値が NULL の場合 (テーブルに行が格納されたこと�
 > [!IMPORTANT]
 > 次に生成される ID 値の予測に IDENT_CURRENT を使用する場合は注意してください。 実際に生成される値は、他のセッションで実行される挿入操作が原因で、IDENT_CURRENT と IDENT_INCR の合計値とは異なる場合があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. 指定したテーブルに対して生成された最新の ID 値を返す  
- 次の例では、`AdventureWorks2012` データベースの `Person.Address` テーブルに対して生成された最新の ID 値を返します。  
+ 次の例では、`Person.Address` データベースの `AdventureWorks2012` テーブルに対して生成された最新の ID 値を返します。  
   
 ```sql  
 USE AdventureWorks2012;  

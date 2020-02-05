@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:証明書を使用したストアド プロシージャへの署名
+title: 'チュートリアル : 証明書を使用したストアド プロシージャへの署名'
 ms.custom: seo-dt-2019
 ms.date: 08/23/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095663"
 ---
-# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル:証明書を使用したストアド プロシージャへの署名
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル : 証明書を使用したストアド プロシージャへの署名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で生成された証明書を使用してストアド プロシージャに署名する方法について説明します。  
   
@@ -34,10 +34,10 @@ master データベースに証明書を作成し、サーバーレベルの権�
   
 以下で、この例の各コード ブロックについて説明します。 完全なサンプル コードをコピーするには、このチュートリアルの最後の「 [完全なサンプル コード](#CompleteExample) 」を参照してください。  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 - [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
 
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3.ストアド プロシージャを作成し、証明書を使用して署名する  
-次のコードを実行し、`Vendor` データベース スキーマ内の `Purchasing` テーブルからデータを選択するストアド プロシージャを作成して、信用格付け 1 の会社にアクセスを限定します。 ストアド プロシージャの最初のセクションに、ストアド プロシージャを実行するユーザー アカウントのコンテキストが表示されていますが、これは概念を説明するためだけのものです。 要件を満たすために必要なものではありません。  
+次のコードを実行し、 `Vendor` データベース スキーマ内の `Purchasing` テーブルからデータを選択するストアド プロシージャを作成して、信用格付け 1 の会社にアクセスを限定します。 ストアド プロシージャの最初のセクションに、ストアド プロシージャを実行するユーザー アカウントのコンテキストが表示されていますが、これは概念を説明するためだけのものです。 要件を満たすために必要なものではありません。  
   
 ```sql  
 CREATE PROCEDURE TestCreditRatingSP  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 041b54d110686b8309320612164ca6815daff0d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135952"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
@@ -41,12 +41,12 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
-**bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+[bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
 データ型が *numeric_expression* のデータ型に一致する値を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、PI/2 ラジアンの角度を度の単位で返します。  
   
 ```  

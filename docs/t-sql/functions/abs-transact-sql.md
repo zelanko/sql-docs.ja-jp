@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23782f796bae3dee795fbafacd2d0d4436337f38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040423"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
@@ -48,7 +48,7 @@ ABS ( numeric_expression )
 ## <a name="return-types"></a>戻り値の型  
 *numeric_expression*と同じ型を返します。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、3 つの異なる値に対して `ABS` 関数を使用した結果を示します。
   
 ```sql

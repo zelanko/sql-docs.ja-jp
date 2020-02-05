@@ -13,13 +13,13 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943378"
 ---
-# <a name="examples-using-path-mode"></a>例 :PATH モードの使用
+# <a name="examples-using-path-mode"></a>例 : PATH モードの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
   
@@ -51,7 +51,7 @@ GO
 </row>
 ```
   
- 次の結果は、`RAW` オプションを指定した `ELEMENTS` モードのクエリと同じです。 返される結果は、結果セットの各行に既定の <`row`> 要素が追加された要素中心の XML です。  
+ 次の結果は、 `RAW` オプションを指定した `ELEMENTS` モードのクエリと同じです。 返される結果は、結果セットの各行に既定の <`row`> 要素が追加された要素中心の XML です。  
   
 ```  
 USE AdventureWorks2012;  
@@ -269,7 +269,7 @@ FOR XML PATH('ProductModelData');
   
 -   最初の `SELECT` サブクエリは、列名として `data()` を使用することで ProductID の一覧を返しています。 `FOR XML PATH`の行要素名として空文字列が指定されているので、要素は生成されません。 代わりに、値リストが `ProductID` 属性に割り当てられています。  
   
--   2 番目の `SELECT` サブクエリは、該当する製品モデルに含まれる製品名を取得します。 列名として `ProductNames` を指定しているので、生成した <`ProductName`> 要素は <`ProductNames`> 要素に囲まれた状態で返しています。  
+-   2 番目の `SELECT` サブクエリは、該当する製品モデルに含まれる製品名を取得します。 列名として `ProductName` を指定しているので、生成した <`ProductNames`> 要素は <`ProductNames`> 要素に囲まれた状態で返しています。  
   
  結果の一部を次に示します。  
   
@@ -329,7 +329,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- <`English`> 要素に追加されている `@xml:lang` 属性は、定義済みの XML 名前空間で定義されています。  
+ <`@xml:lang`> 要素に追加されている `English` 属性は、定義済みの XML 名前空間で定義されています。  
   
  結果を次に示します。  
 

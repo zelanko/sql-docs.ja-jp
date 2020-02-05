@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ee462efca08173d6571fe5a3b3971b8f0460988a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258370"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>選択的セカンダリ XML インデックスの作成、変更、および削除
@@ -23,7 +23,7 @@ ms.locfileid: "75258370"
   
 ##  <a name="create"></a> 選択的セカンダリ XML インデックスの作成  
   
-### <a name="how-to-create-a-secondary-selective-xml-index"></a>方法: 選択的セカンダリ XML インデックスの作成  
+### <a name="how-to-create-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを作成する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを作成する**  
  CREATE SELECTIVE XML INDEX ステートメントを呼び出して選択的セカンダリ XML インデックスを作成します。 詳細については、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」を参照してください。  
   
@@ -45,7 +45,7 @@ FOR
 ##  <a name="alter"></a> 選択的セカンダリ XML インデックスの変更  
  ALTER ステートメントは、選択的セカンダリ XML インデックスではサポートされません。 選択的セカンダリ XML インデックスを変更するには、既存のインデックスを削除し、再作成します。  
   
-### <a name="how-to-alter-a-secondary-selective-xml-index"></a>方法:選択的セカンダリ XML インデックスの変更  
+### <a name="how-to-alter-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを変更する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを変更する**  
  1.  DROP INDEX ステートメントを呼び出して既存の選択的セカンダリ XML インデックスを削除します。 詳細については、「[DROP INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md)」を参照してください。  
   
@@ -70,7 +70,7 @@ FOR
   
 ##  <a name="drop"></a> 選択的セカンダリ XML インデックスの削除  
   
-### <a name="how-to-drop-a-secondary-selective-xml-index"></a>方法: 選択的セカンダリ XML インデックスのドロップ  
+### <a name="how-to-drop-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを削除する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを削除する**  
  DROP INDEX ステートメントを呼び出して選択的セカンダリ XML インデックスを削除します。 詳細については、「[DROP INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md)」を参照してください。  
   

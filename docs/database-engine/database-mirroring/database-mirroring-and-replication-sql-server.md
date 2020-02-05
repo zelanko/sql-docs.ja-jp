@@ -14,10 +14,10 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661431"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
@@ -66,7 +66,7 @@ ms.locfileid: "68661431"
         exec sp_replicationdboption @dbname='<PublicationDatabase>', @optname='mergepublish', @value=true;  
         ```  
   
-         パブリケーションの作成の詳細については、「 [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)」を参照してください。  
+         パブリケーションの作成の詳細については、「[データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)」を参照してください。  
   
 2.  データベース ミラーリングを構成します。 詳細については、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)」および「[データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)」を参照してください。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68661431"
   
      ディストリビューション エージェントおよびディストリビューション ActiveX コントロールはパブリッシャーに接続しないため、このパラメーターがありません。  
   
-     エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。 パラメーターは、エージェント プロファイルおよびコマンド プロンプトで指定できます。 詳細については、以下をご覧ください。  
+     エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。 パラメーターは、エージェント プロファイルおよびコマンド プロンプトで指定できます。 詳細については、次を参照してください。  
   
     -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -134,12 +134,12 @@ ms.locfileid: "68661431"
   
 -   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して、ミラーでレプリケーションを管理する場合、パブリッシャー名を指定する際にはレプリケーションを有効にしたデータベースが使用するインスタンス名を指定する必要があります。 適切な名前を決定するには、 [publishingservername](../../t-sql/functions/replication-functions-publishingservername.md)関数を使用します。  
   
-     パブリケーション データベースをミラー化した場合、ミラー データベースに格納されるレプリケーション メタデータとプリンシパル データベースに格納されるメタデータが同一になります。 その結果、プリンシパルでレプリケーションが有効なパブリケーション データベースでは、ミラーのシステム テーブルに格納されるパブリッシャーのインスタンス名は、ミラーではなくプリンシパルの名前になります。 これにより、パブリケーション データベースでミラーへのフェールオーバーが発生した場合のレプリケーションの構成およびメンテナンスが影響を受けます。 たとえば、フェールオーバーの後、ストアド プロシージャを使用してレプリケーションを構成し、プリンシパルで有効化されたパブリケーション データベースにプル サブスクリプションを追加する場合、**sp_addpullsubscription** または **sp_addmergepullsubscription** の **\@publisher** パラメーターにミラー名ではなくプリンシパル名を指定する必要があります。  
+     パブリケーション データベースをミラー化した場合、ミラー データベースに格納されるレプリケーション メタデータとプリンシパル データベースに格納されるメタデータが同一になります。 その結果、プリンシパルでレプリケーションが有効なパブリケーション データベースでは、ミラーのシステム テーブルに格納されるパブリッシャーのインスタンス名は、ミラーではなくプリンシパルの名前になります。 これにより、パブリケーション データベースでミラーへのフェールオーバーが発生した場合のレプリケーションの構成およびメンテナンスが影響を受けます。 たとえば、フェールオーバーの後、ストアド プロシージャを使用してレプリケーションを構成し、プリンシパルで有効化されたパブリケーション データベースにプル サブスクリプションを追加する場合、**sp_addpullsubscription\@ または** sp_addmergepullsubscription**の** **publisher** パラメーターにミラー名ではなくプリンシパル名を指定する必要があります。  
   
      ミラーへのフェールオーバーの後、ミラーでパブリケーション データベースを有効化する場合、システム テーブルに格納されるパブリッシャーのインスタンス名はミラー名となります。この場合、 **\@publisher** パラメーターにはミラー名を指定します。  
   
     > [!NOTE]  
-    >  **sp_addpublication** などを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーに対してのみ **\@publisher** パラメーターがサポートされます。このような場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングとは無関係になります。  
+    >  **sp_addpublication** などを使用する場合、 **以外のパブリッシャーに対してのみ \@** publisher[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パラメーターがサポートされます。このような場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングとは無関係になります。  
   
 -   フェールオーバーの後、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でサブスクリプションを同期するには、サブスクライバーからプル サブスクリプションを同期し、アクティブなパブリッシャーからプッシュ サブスクリプションを同期します。  
   

@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 267209440bf68ecb2e6f3382823b30f3d19728f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67952334"
 ---
 # <a name="synonyms-database-engine"></a>シノニム (データベース エンジン)
@@ -120,7 +120,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
 シノニムのベース オブジェクトの基本データ型を調べるには、OBJECTPROPERTYEX 関数を使用します。 詳細については、「[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)」を参照してください。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
 次の例は、ローカル オブジェクトであるシノニムのベース オブジェクトの基本データ型を返します。  
   
 ```sql  

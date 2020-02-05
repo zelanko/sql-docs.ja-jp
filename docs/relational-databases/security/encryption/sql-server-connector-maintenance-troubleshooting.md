@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557937"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
@@ -44,7 +44,7 @@ ms.locfileid: "75557937"
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] または sqlcmd.exe を使用する場合:** 以下のステートメントを使用します。手順 3 (セクション 3) を参照してください。  
+-   **[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] または sqlcmd.exe を使用する場合:** 以下のステートメントを使用します。手順 3. (セクション 3) を参照してください。  
   
      新しい非対称キーをインポートします。  
   
@@ -153,7 +153,7 @@ Key Vault は定期的にバックアップする必要があります。 資格
 * 新しい資格情報コンテナーを使用するための権限を SQL Server サービス プリンシパルに付与します。  
 * 必要に応じて、新しい資格情報コンテナー名を反映するように、データベース エンジンが使用する SQL Server 資格情報を変更します。  
   
-キーのバックアップは、クラウドの地理的領域または国が一致していれば、異なる Azure リージョン間で復元することができます:米国、カナダ、日本、オーストラリア、インド、APAC、ヨーロッパ、ブラジル、中国、米国政府、ドイツ。  
+キーのバックアップは、クラウドの地理的領域または国 (米国、カナダ、日本、オーストラリア、インド、APAC、ヨーロッパ、ブラジル、中国、米国政府、ドイツ) が一致していれば、異なる Azure リージョン間で復元することができます。  
   
   
 ##  <a name="AppendixB"></a> B. よく寄せられる質問  

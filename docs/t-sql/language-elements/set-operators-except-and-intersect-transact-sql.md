@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121773"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>セット演算子 - EXCEPT および INTERSECT (Transact-SQL)
@@ -69,7 +69,7 @@ EXCEPT 演算子の左のクエリから個別の値を返します。 右のク
 INTERSECT  
 INTERSECT 演算子の左右両方のクエリによって返される個別の値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 比較可能な列のデータ型は、EXCEPT または INTERSECT 演算の左右のクエリによって返されます。 これらのデータ型には、照合順序が異なる文字データ型を含めることができます。 これを行うと、必要な比較は、[照合順序の優先順位](../../t-sql/statements/collation-precedence-transact-sql.md)ルールに従って実行されます。 この変換を実行できない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によってエラーが返されます。  
   
 DISTINCT 行を決定するために列の値を比較するとき、2 つの NULL 値は等しいと見なされます。  
@@ -98,8 +98,8 @@ EXCEPT と INTERSECT は分散クエリで使用できますが、この場合�
   
 EXCEPT 演算が、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のグラフィカル プラン表示機能を使用して表示される場合、この演算は [left anti semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md) として表示され、INTERSECT 演算は [left semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md) として表示されます。  
   
-## <a name="examples"></a>使用例  
-次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`INTERSECT` および `EXCEPT` の結果と比較するため、`Production.Product` テーブルからすべての値を返します。  
+## <a name="examples"></a>例  
+次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`Production.Product` および `INTERSECT` の結果と比較するため、`EXCEPT` テーブルからすべての値を返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -148,8 +148,8 @@ FROM Production.Product ;
 --Result: 0 Rows (work orders without products)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`INTERSECT` および `EXCEPT` の結果と比較するため、`FactInternetSales` テーブルからすべての値を返します。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`FactInternetSales` および `INTERSECT` の結果と比較するため、`EXCEPT` テーブルからすべての値を返します。  
   
 ```  
 -- Uses AdventureWorks  

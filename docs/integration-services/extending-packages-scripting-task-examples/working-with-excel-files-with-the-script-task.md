@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286575"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
@@ -45,19 +45,19 @@ ms.locfileid: "71286575"
   
 2.  **変数**。 **[変数]** ウィンドウを開き、次の変数を定義します。  
   
-    -   **String** 型の `ExcelFile`。 既存の Excel ワークブックの完全なパスとファイル名を入力します。  
+    -   `ExcelFile`String**型の**。 既存の Excel ワークブックの完全なパスとファイル名を入力します。  
   
-    -   **String** 型の `ExcelTable`。 `ExcelFile` 変数の値で指定されたワークブック内の既存のワークシートまたは名前付き範囲の名前を入力します。 この値は、大文字と小文字が区別されます。  
+    -   `ExcelTable`String**型の**。 `ExcelFile` 変数の値で指定されたワークブック内の既存のワークシートまたは名前付き範囲の名前を入力します。 この値は、大文字と小文字が区別されます。  
   
-    -   **Boolean** 型の `ExcelFileExists`。  
+    -   `ExcelFileExists`Boolean**型の**。  
   
-    -   **Boolean** 型の `ExcelTableExists`。  
+    -   `ExcelTableExists`Boolean**型の**。  
   
-    -   **String** 型の `ExcelFolder`。 少なくとも 1 つの Excel ワークブックを含むフォルダーの完全なパスを入力します。  
+    -   `ExcelFolder`String**型の**。 少なくとも 1 つの Excel ワークブックを含むフォルダーの完全なパスを入力します。  
   
-    -   **Object** 型の `ExcelFiles`。  
+    -   `ExcelFiles`Object**型の**。  
   
-    -   **Object** 型の `ExcelTables`。  
+    -   `ExcelTables`Object**型の**。  
   
 3.  **Imports ステートメント**。 ほとんどのコード サンプルでは、スクリプト ファイルの先頭で次の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間のいずれかまたは両方をインポートする必要があります。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "71286575"
   
 5.  **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用して、スクリプト コンポーネントの既定のスクリプト言語を設定します。 詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
-##  <a name="example1"></a> 例 1 の説明:Excel ファイルが存在するかどうかを確認する  
+##  <a name="example1"></a> 例 1 の説明: Excel ファイルが存在するかどうかを確認する  
  この例では、`ExcelFile` 変数で指定された Excel ワークブック ファイルが存在するかどうかを判断し、その結果を `ExcelFileExists` 変数のブール値に設定します。 このブール値は、パッケージのワークフローを分岐させるために使用することができます。  
   
 ### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
@@ -80,7 +80,7 @@ ms.locfileid: "71286575"
   
     -   「**ExcelFile**」と入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで **[ExcelFile]** 変数を選択します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71286575"
   
     -   「**ExcelFileExists**」と入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで **[ExcelFileExists]** 変数を選択します。  
   
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> 例 2 の説明:Excel テーブルが存在するかどうかを確認する  
+##  <a name="example2"></a> 例 2 の説明: Excel テーブルが存在するかどうかを確認する  
  この例では、`ExcelTable` 変数で指定された Excel ワークシートまたは名前付き範囲が `ExcelFile` 変数で指定された Excel ワークブック ファイル内に存在するかどうかを判断し、その結果を `ExcelTableExists` 変数のブール値に設定します。 このブール値は、パッケージのワークフローを分岐させるために使用することができます。  
   
 ### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
@@ -150,7 +150,7 @@ public class ScriptMain
   
     -   「**ExcelTable**」および「**ExcelFile**」をコンマで区切って入力します **。**  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで **[ExcelTable]** と **[ExcelFile]** の変数を選択します。  
   
@@ -158,7 +158,7 @@ public class ScriptMain
   
     -   「**ExcelTableExists**」と入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで **[ExcelTableExists]** 変数を選択します。  
   
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 例 3 の説明:フォルダー内の Excel ファイルの一覧を取得する  
+##  <a name="example3"></a> 例 3 の説明: フォルダー内の Excel ファイルの一覧を取得する  
  この例では、`ExcelFolder` 変数の値で指定されたフォルダー内で検索された Excel ファイルの一覧を配列に代入し、その配列を `ExcelFiles` 変数にコピーします。 Foreach from Variable 列挙子を使用して、配列内のファイルを繰り返し処理することができます。  
   
 ### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
@@ -257,7 +257,7 @@ public class ScriptMain
   
     -   「**ExcelFolder**」と入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFolder] 変数を選択します。  
   
@@ -265,7 +265,7 @@ public class ScriptMain
   
     -   「**ExcelFiles**」と入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFiles] 変数を選択します。  
   
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>代替ソリューション  
  スクリプト タスクを使用して Excel ファイルの一覧を配列に集める代わりに、ForEach File 列挙子を使用してフォルダー内のすべての Excel ファイルを繰り返し処理することもできます。 詳細については、「[Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する方法](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)」を参照してください。  
   
-##  <a name="example4"></a> 例 4 の説明:Excel ファイル内のテーブルの一覧を取得する  
+##  <a name="example4"></a> 例 4 の説明: Excel ファイル内のテーブルの一覧を取得する  
  この例では、`ExcelFile` 変数の値で指定された Excel ワークブック ファイル内で検索されたワークシートまたは名前付き範囲の一覧を配列に代入し、その配列を `ExcelTables` 変数にコピーします。 Foreach from Variable 列挙子を使用して、配列内のテーブルを繰り返し処理することができます。  
   
 > [!NOTE]  
@@ -332,7 +332,7 @@ public class ScriptMain
   
     -   「**ExcelFile**」と入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFile] 変数を選択します。  
   
@@ -340,7 +340,7 @@ public class ScriptMain
   
     -   「**ExcelTables**」と入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelTables] 変数を選択します。  
   
@@ -445,7 +445,7 @@ public class ScriptMain
   
     -   各変数の名前をコンマで区切って入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで変数を選択します。  
   

@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580334"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
@@ -70,7 +70,7 @@ ms.locfileid: "65580334"
 |#TOTAL|系列のすべての Y 値の合計|All|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|凡例項目のテキストに対応するテキスト|All|なし|  
 |#AVG|系列内のすべての Y 値の平均|All|`=Avg(Fields!MyDataField.Value)`|  
-|#MIN|系列内のすべての Y 値の最小値|すべて|`=Min(Fields!MyDataField.Value)`|  
+|#MIN|系列内のすべての Y 値の最小値|All|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|系列内のすべての Y 値の最大値|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|系列内のすべての Y 値の最初の値|All|`=First(Fields!MyDataField.Value)`|  
   

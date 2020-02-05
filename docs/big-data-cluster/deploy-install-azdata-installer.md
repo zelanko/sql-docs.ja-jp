@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594336"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Windows インストーラーで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を管理するための `azdata` をインストールする
+# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Windows インストーラーで `azdata`を管理するための [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] をインストールする
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -30,7 +30,7 @@ ms.locfileid: "73594336"
 
 Microsoft Windows インストーラーで `azdata` をインストールするには、次のようにします。
 
-1. `pip` を使用してインストールされた `azdata` がある場合は削除します。 Windows インストーラーを使用して `azdata` がインストールされている場合は、次のステップに進みます。
+1. `azdata` を使用してインストールされた `pip` がある場合は削除します。 Windows インストーラーを使用して `azdata` がインストールされている場合は、次のステップに進みます。
 1. Windows インストーラーを使用して `azdata` をインストールします。
 
 ### <a name="uninstall-if-previous-installation-done-with-pip"></a>以前に `pip` で行われたインストールがある場合はアンインストールする
@@ -65,8 +65,8 @@ Windows インストーラーで `azdata` をアンインストールするに�
 | Windows 10| [スタート] > [設定] > [アプリ]                                |
 | Windows 8     | [スタート] > [コントロール パネル] > [プログラム] > [プログラムのアンインストール] |
 
-アンインストールするプログラムは `Azdata CLI` という名前です。 このアプリケーションを選択し、[`Uninstall`] ボタンをクリックします。
+アンインストールするプログラムは `Azdata CLI` という名前です。 このアプリケーションを選択し、`Uninstall` ボタンをクリックします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。
