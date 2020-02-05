@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5170ec3b8efd987e0a55a624c6e2b5d6f81ab40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999685"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent イベント クラス
@@ -27,7 +27,7 @@ ms.locfileid: "67999685"
   
 ## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Broker:Forwarded Message Sent イベント クラスのデータ列  
   
-|データ列|型|[説明]|列番号|フィルターの適用|  
+|データ列|種類|[説明]|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BigintData1|**bigint**|メッセージのシーケンス番号。|52|いいえ|  
@@ -42,17 +42,17 @@ ms.locfileid: "67999685"
 |IndexID|**int**|転送されるメッセージに残っているホップの数。|24|いいえ|  
 |IntegerData|**int**|転送されるメッセージのフラグメント番号。|25|いいえ|  
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |ObjectId|**int**|メッセージが転送されたときの、その転送メッセージの有効期限の値。|22|いいえ|  
 |ObjectName|**nvarchar**|転送されたメッセージのメッセージ ID。|34|いいえ|  
 |OwnerName|**nvarchar**|メッセージ送信先のブローカー ID。|37|いいえ|  
-|RoleName|**nvarchar**|メッセージ交換ハンドルのロール。 有効な値は、<br /><br /> Initiator。 このブローカーがメッセージ交換の発信側です。<br /><br /> Target。 このブローカーがメッセージ交換の発信先です。|38|いいえ|  
+|RoleName|**nvarchar**|メッセージ交換ハンドルのロール。 有効な値は次のとおりです。<br /><br /> Initiator。 このブローカーがメッセージ交換の発信側です。<br /><br /> Target。 このブローカーがメッセージ交換の発信先です。|38|いいえ|  
 |ServerName|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SPID|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|成功|**int**|転送処理にかかった時間。|23|いいえ|  
+|Success|**int**|転送処理にかかった時間。|23|いいえ|  
 |TargetLoginName|**nvarchar**|このインスタンスがメッセージを送信したネットワーク アドレス。 このネットワーク アドレスはメッセージの最終送信先とは異なる場合があるので注意してください。|42|いいえ|  
 |TargetUserName|**nvarchar**|メッセージを発信したサービスの名前。|39|いいえ|  
 |TransactionID|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  

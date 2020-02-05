@@ -24,10 +24,10 @@ ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 360b597b8cd122ede57426cc879dd041b3414078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927555"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
@@ -59,13 +59,13 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  署名付きデータが変更されていない場合は 1、変更されている場合は 0 が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **VerifySignedBycert** 指定された証明書の公開キーを使用して、データの署名を復号化し、データの新しく計算された MD5 ハッシュを復号化された値と比較します。 値が一致すると、その署名が有効であることが確認されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  証明書に対する VIEW DEFINITION 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. 署名付きデータが変更されていないことを確認する  
  次の例では、`Signed_Data` 内の情報が、`Shipping04` という証明書を使用して署名された後に変更されているかどうかをテストします。 署名は `DataSignature` に格納されています。 証明書 `Shipping04` を `Cert_ID` に渡すと、データベース内の証明書の ID が返されます。 `VerifySignedByCert` で 1 が返された場合、署名は正しいことになります。 `VerifySignedByCert` で 0 が返された場合、`Signed_Data` 内のデータは、`DataSignature` の生成に使用されたデータではありません。 この場合、`Signed_Data` は署名された後に変更されたか、`Signed_Data` は別の証明書を使用して署名されています。  

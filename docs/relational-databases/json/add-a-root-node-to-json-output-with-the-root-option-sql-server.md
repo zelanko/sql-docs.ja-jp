@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 482b098d253d078f57c26a482584c2863266a16a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095831"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>ROOT オプションを使用して JSON 出力にルート ノードを追加する (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74095831"
   
  **ROOT** オプションを指定しないと、JSON 出力にルート要素が含まれません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の表に、 **ROOT** オプションを指定した場合と指定しなかった場合の **FOR JSON** 句の出力例を示します。  
   
  次の表の例では、追加の *RootName* 引数が空であると想定しています。 ルート要素に名前を指定すると、例の **root** の値がこの値に置き換わります。  

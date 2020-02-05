@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67a4a4ad32e1d9471dc9a5b3d2f1c7b067cf480b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122120"
 ---
 # <a name="-modulus-transact-sql"></a>% (剰余) (Transact-SQL)
@@ -47,7 +47,7 @@ dividend % divisor
   
 ## <a name="arguments"></a>引数  
  *dividend*  
- 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
+ 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または [numeric](../../t-sql/language-elements/expressions-transact-sql.md) データ型の有効な**式**を指定する必要があります。  
   
  *divisor*  
  被除数を除算する数値式です。 *divisor* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の任意の有効な式を指定する必要があります。  
@@ -55,10 +55,10 @@ dividend % divisor
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  剰余算術演算子は、SELECT ステートメントの選択リストの中で、列名、数値定数、整数や通貨型に分類されるデータ型、または **numeric** データ型の有効な式と組み合わせて使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-example"></a>A. 簡単な例  
  次の例では、38 を 5 で割ります。 この結果は、答えの整数部分である 7 となります。また、剰余演算子を使用して余り 3 を返す方法も示しています。  
@@ -80,9 +80,9 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: 簡単な例  
+### <a name="c-simple-example"></a>C. 簡単な例  
  次の例は、3 を 2 で割ったときの `%` 演算子の結果を示しています。  
   
 ```  

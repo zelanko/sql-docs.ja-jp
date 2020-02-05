@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958351"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287121"
 ---
 # <a name="sql-server-replication"></a>SQL Server のレプリケーション
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "70958351"
   
 ## <a name="publications-and-articles"></a>パブリケーションおよびアーティクル 
   
--   [パブリケーションの作成](publish/create-a-publication.md)    
+-   [パブリケーションを作成する](publish/create-a-publication.md)    
 -   [アーティクルの定義](publish/define-an-article.md)   
 -   [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
 -   [アーティクルのプロパティの表示と変更](publish/view-and-modify-article-properties.md)    
@@ -91,7 +91,7 @@ ms.locfileid: "70958351"
 -   [Create a Pull Subscription](create-a-pull-subscription.md)    
 -   [プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)    
 -   [プル サブスクリプションの削除](delete-a-pull-subscription.md)    
--   [プッシュ サブスクリプションの作成](create-a-push-subscription.md)   
+-   [プッシュ サブスクリプションを作成する](create-a-push-subscription.md)   
 -   [プッシュ サブスクリプションのプロパティの表示または変更](view-and-modify-push-subscription-properties.md)   
 -   [プッシュ サブスクリプションの削除](delete-a-push-subscription.md)   
 -   [同期スケジュールの指定](specify-synchronization-schedules.md)    
@@ -102,12 +102,12 @@ ms.locfileid: "70958351"
   
 -   [初期スナップショットの作成および適用](create-and-apply-the-initial-snapshot.md)   
 -   [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
--   [トランザクション サブスクリプションのバックアップからの初期化 (レプリケーション Transact-SQL プログラミング)](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [トランザクション サブスクリプションのバックアップからの初期化 &#40;レプリケーション Transact-SQL プログラミング&#41;](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [手動によるサブスクリプションの初期化](initialize-a-subscription-manually.md)    
 -   [プル サブスクリプションの同期](synchronize-a-pull-subscription.md)    
 -   [プッシュ サブスクリプションの同期](synchronize-a-push-subscription.md)   
 -   [サブスクリプションの再初期化](reinitialize-a-subscription.md)    
--   [同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [同期中のスクリプトの実行 &#40;レプリケーション Transact-SQL プログラミング&#41;](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
 -   [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)  
 -   [ビジネス ロジック ハンドラーのデバッグ&#40;レプリケーション プログラミング&#41;](debug-a-business-logic-handler-replication-programming.md)    
 -   [同期中にトリガーと制約の動作を制御する &#40;レプリケーション Transact-SQL プログラミング&#41;](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
@@ -134,6 +134,6 @@ ms.locfileid: "70958351"
 -   [プログラムによるレプリケーションの監視](monitor/programmatically-monitor-replication.md)    
 -   [レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する (レプリケーション Transact-SQL プログラミング)](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](view-conflict-information-for-merge-publications.md) 
--   [トランザクション レプリケーションの待機時間の計測および接続の検証](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [待機時間を計測して Connections for Transactional Replication を検証します。](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

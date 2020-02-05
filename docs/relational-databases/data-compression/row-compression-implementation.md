@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2127b9164537afca99b8bd556458137d6713001c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030518"
 ---
 # <a name="row-compression-implementation"></a>「行の圧縮の実装」
@@ -65,10 +65,10 @@ ms.locfileid: "68030518"
 |**nchar**|はい|末尾の埋め込み文字が削除されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、使用される照合順序に関係なく、同じ埋め込み文字が挿入されることに注意してください。|  
 |**nvarchar**|いいえ|影響しません。|  
 |**ntext**|いいえ|影響しません。|  
-|**binary**|はい|末尾の 0 が削除されます。|  
+|**[バイナリ]**|はい|末尾の 0 が削除されます。|  
 |**varbinary**|いいえ|影響しません。|  
-|**image**|いいえ|影響しません。|  
-|**カーソル (cursor)**|いいえ|影響しません。|  
+|**画像**|いいえ|影響しません。|  
+|**cursor**|いいえ|影響しません。|  
 |**timestamp** / **rowversion**|はい|8 バイトを使用して、整数データ表現を使用します。 データベースごとに保持されるタイムスタンプ カウンターがあり、その値は 0 から始まります。 これは、その他の整数値と同様に圧縮できます。|  
 |**sql_variant**|いいえ|影響しません。|  
 |**uniqueidentifier**|いいえ|影響しません。|  
@@ -79,6 +79,6 @@ ms.locfileid: "68030518"
   
 ## <a name="see-also"></a>参照  
  [データの圧縮](../../relational-databases/data-compression/data-compression.md)   
- [ページの圧縮の実装](../../relational-databases/data-compression/page-compression-implementation.md)  
+ [ページ圧縮の実装](../../relational-databases/data-compression/page-compression-implementation.md)  
   
   

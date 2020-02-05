@@ -15,10 +15,10 @@ ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fc0d0a449941c3d8a04526180cfa721931d98d09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120853"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography データ型)
@@ -35,17 +35,17 @@ ms.locfileid: "68120853"
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- `STOverlaps()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
+ **を呼び出したインスタンスと比較される、別の**geography`STOverlaps()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STOverlaps()` を使用して 2 つの **geography** インスタンスが重なっているかどうかをテストする例を次に示します。  
   
 ```  

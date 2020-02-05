@@ -13,10 +13,10 @@ ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947024"
 ---
 # <a name="database-properties-query-store-page"></a>データベースのプロパティ (クエリのストアのページ)
@@ -38,7 +38,7 @@ ms.locfileid: "67947024"
  クエリのストアの目的の操作モードを取得、および設定します。  
   
  データ フラッシュ間隔 (分)  
- クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度が構成されます。  
+ クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度が構成されます。  
   
  統計情報の収集間隔  
  統計情報の収集間隔を取得、および設定します。  
@@ -47,11 +47,11 @@ ms.locfileid: "67947024"
  クエリのストアに割り当てられた合計領域を取得、および設定します。  
   
  Query Store Capture Mode (クエリ ストアのキャプチャ モード)  
- -   [None] (なし) に設定すると、新しいクエリがキャプチャされません。  
+ -   [None] \(なし) に設定すると、新しいクエリがキャプチャされません。  
   
 -   [All] \(すべて) に設定すると、すべてのクエリがキャプチャされます。  
   
--   [Auto] (自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
+-   [Auto] \(自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
   
  古いクエリのしきい値 (日)  
  古いクエリのしきい値を取得、および設定します。 STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。  
@@ -64,7 +64,7 @@ ms.locfileid: "67947024"
   
  右側のグラフには、現在使用されているクエリのストアのクォータの部分が表示されます。 クォータは、左側のグラフには表示されないことにご注意ください。 クォータが、データベースの現在のサイズを超える場合があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  クエリのストアの機能により、クエリ プランの選択やパフォーマンスに関する洞察が DBA に提供されます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 この機能により、クエリ、プラン、ランタイム統計情報の履歴が自動的にキャプチャされ、レビュー用に保持されます。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 クエリのストアは、クエリのストアのデータベース プロパティ ページを使用するか、 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) オプションを使用して構成できます。 クエリのストアは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ダイアログ ボックスを使用して情報を表示します。 クエリのストアの詳細については、「 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  

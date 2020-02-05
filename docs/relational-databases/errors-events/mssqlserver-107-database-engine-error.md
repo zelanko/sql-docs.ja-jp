@@ -12,10 +12,10 @@ ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 473d752109ce90476602a0a60d7f6f5263caac09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68060593"
 ---
 # <a name="mssqlserver_107"></a>MSSQLSERVER_107
@@ -56,7 +56,7 @@ ms.locfileid: "68060593"
 SELECT T1.* FROM dbo.ErrorLog AS T1;  
 ```  
   
-内の複数の  
+or  
   
 ```  
 SELECT ErrorLog.* FROM dbo.ErrorLog;  

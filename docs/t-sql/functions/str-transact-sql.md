@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906881"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
@@ -54,13 +54,13 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="return-types"></a>戻り値の型  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  STR で *length* パラメーターと *decimal* パラメーターを指定する場合は、正の値を指定する必要があります。 数値は、既定では整数に丸められます。小数点以下桁数に 0 が指定された場合も同様です。 指定する長さは、その数字の小数点より前の桁数に、符号があればその符号部分を加えた数以上にする必要があります。 短い *float_expression* は、指定された長さで右揃えされ、長い *float_expression* は、指定された小数点以下桁数に切り捨てられます。 たとえば、STR(12 **,** 10) の結果は 12 になります。 これは結果セットの中で右揃えされます。 一方、STR(1223 **,** 2) と指定すると、結果は切り捨てられて ** になります。 文字列関数は入れ子にすることができます。  
   
 > [!NOTE]  
 >  Unicode データに変換するには、CONVERT または [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 変換関数の中で STR を使用します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、5 つの数字と小数点で構成される式を、6 桁の文字列に変換します。 値の小数部は、小数点以下 1 桁になるように丸められます。  
   
 ```  

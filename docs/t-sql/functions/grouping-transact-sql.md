@@ -23,10 +23,10 @@ ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74833781"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
@@ -54,7 +54,7 @@ GROUPING ( <column_expression> )
  GROUPING は、標準の null 値から、ROLLUP、CUBE、または GROUPING SETS によって返される null 値を区別するために使用します。 ROLLUP、CUBE、または GROUPING SETS の演算結果として返される NULL 値は、NULL の特別な用途です。 これは、結果セット内の列プレースホルダーとして機能し、すべてを意味します。  
   
 ## <a name="examples"></a>例  
- 次の例では、`SalesQuota` をグループ化し、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SaleYTD` 額を集計します。 `GROUPING` 関数は、`SalesQuota` 列に適用されます。  
+ 次の例では、`SalesQuota` をグループ化し、`SaleYTD` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 額を集計します。 `GROUPING` 関数は、`SalesQuota` 列に適用されます。  
   
 ```  
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
@@ -63,7 +63,7 @@ GROUP BY SalesQuota WITH ROLLUP;
 GO  
 ```  
   
- 結果セットは、`SalesQuota` の下に 2 つの NULL 値を示します。 最初の `NULL` 値は、テーブル内のこの列からの NULL 値で構成されるグループを表します。 2 番目の `NULL` 値は、ROLLUP の演算によって追加された集計行にあります。 集計行は、すべての `SalesQuota` グループについての `TotalSalesYTD` の総量を表し、`Grouping` 列の `1` によって示されます。  
+ 結果セットは、`SalesQuota` の下に 2 つの NULL 値を示します。 最初の `NULL` 値は、テーブル内のこの列からの NULL 値で構成されるグループを表します。 2 番目の `NULL` 値は、ROLLUP の演算によって追加された集計行にあります。 集計行は、すべての `TotalSalesYTD` グループについての `SalesQuota` の総量を表し、`1` 列の `Grouping` によって示されます。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   

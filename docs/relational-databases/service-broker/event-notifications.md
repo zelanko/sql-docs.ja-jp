@@ -14,10 +14,10 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048862"
 ---
 # <a name="event-notifications"></a>イベント通知
@@ -52,7 +52,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>イベント通知の概念  
  イベント通知が作成されると、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスと指定した対象サービスの間で、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージ交換が開かれます。 メッセージ交換は通常、イベント通知がサーバー インスタンス上のオブジェクトとして存在する限り、開いたままになります。 一部のエラーでは、イベント通知が削除される前にメッセージ交換が終了する場合があります。 このようなメッセージ交換がイベント通知間で共有されることはありません。 イベント通知ごとに、独自の排他的なメッセージ交換が確立されます。 メッセージ交換を明示的に終了すると、対象のサービスがこれ以上メッセージを受信しなくなります。また、次回イベント通知が起動されてもメッセージ交換は再度開かれません。  
   
- イベント発生時の情報、影響を受けるデータベース オブジェクトの情報、関係する [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ ステートメント、およびその他の情報を提供するイベント情報が、**xml** 型の変数として [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに配信されます。 イベント通知によって生成された XML スキーマの詳細については、「[EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)」を参照してください。  
+ イベント発生時の情報、影響を受けるデータベース オブジェクトの情報、関係する [!INCLUDE[ssSB](../../includes/sssb-md.md)] バッチ ステートメント、およびその他の情報を提供するイベント情報が、 **xml** 型の変数として [!INCLUDE[tsql](../../includes/tsql-md.md)] サービスに配信されます。 イベント通知によって生成された XML スキーマの詳細については、「[EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)」を参照してください。  
   
 ### <a name="event-notifications-vs-triggers"></a>イベント通知とトリガー  
  次の表では、トリガーとイベント通知の比較対照を示します。  

@@ -15,10 +15,10 @@ ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a0b9e7d163de73a2bb08d1095a0bb0c600bb0fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066520"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geography データ型)
@@ -43,7 +43,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="exception"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
@@ -51,8 +51,8 @@ ConvexHullAggregate ( geography_operand )
 > [!NOTE]  
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
-## <a name="examples"></a>使用例  
- 次の例は、**geography** オブジェクトのセットが含まれる `GeometryCollection` インスタンスを返します。  
+## <a name="examples"></a>例  
+ 次の例は、`GeometryCollection`geography**オブジェクトのセットが含まれる** インスタンスを返します。  
   
  ```
  USE AdventureWorks2012  

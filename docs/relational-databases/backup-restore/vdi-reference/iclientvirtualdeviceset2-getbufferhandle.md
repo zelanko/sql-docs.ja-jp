@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847333"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
@@ -45,10 +45,10 @@ HRESULT IClientVirtualDeviceSet2::GetBufferHandle (
 | VD_E_PROTOCOL | 仮想デバイス セットは現在開いていません。 |
 | VD_E_INVALID | pBuffer は有効なアドレスではありません。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 GetBufferHandle 関数を呼び出すプロセスでは、データ転送が完了したときに IClientVirtualDevice2::CompleteCommand を呼び出す必要があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

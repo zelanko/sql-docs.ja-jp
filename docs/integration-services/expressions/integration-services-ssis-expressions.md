@@ -17,10 +17,10 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2e884e7a34af6cae14b4b057038e54b20255200
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289685"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) の式
@@ -56,7 +56,7 @@ ms.locfileid: "71289685"
 ## <a name="icon-markers-for-expressions"></a>式のアイコン マーカー  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、式が設定されている接続マネージャー、変数、およびタスクの横に特別なアイコン マーカーが表示されます。 **HasExpressions** プロパティは、変数を除き、式をサポートするすべての SSIS オブジェクトで使用できます。 このプロパティにより、式が設定されているオブジェクトを簡単に識別できます。  
   
-## <a name="expression-builder"></a>[式ビルダー]  
+## <a name="expression-builder"></a>式ビルダー  
  式ビルダーは、式を作成するためのグラフィック ツールです。 **[条件分割変換エディター]** ダイアログ ボックス、 **[派生列変換エディター]** ダイアログ ボックス、および **[式ビルダー]** ダイアログ ボックスで使用できます。  
   
  式ビルダーでは、パッケージ固有の要素が格納されているフォルダーと、式の言語で使用される関数、型キャスト、演算子が格納されているフォルダーが用意されています。 パッケージ固有の要素として、システム変数とユーザー定義変数が含まれます。 **[条件分割変換エディター]** ダイアログ ボックスおよび **[派生列変換エディター]** ダイアログ ボックスでは、データ列も表示されます。 変換のための式を作成するには、フォルダー内のアイテムを **[条件]** または **[式]** 列にドラッグするか、式を列に直接入力します。 式ビルダーは、変数名の \@ プレフィックスなど、必要な構文要素を自動的に追加します。  
@@ -64,7 +64,7 @@ ms.locfileid: "71289685"
 > [!NOTE]  
 >  ユーザー定義変数およびシステム変数の名前では、大文字と小文字が区別されます。  
   
- 変数にはスコープがあるため、式ビルダーの **[変数]** フォルダーにはスコープ内で使用できる変数のみが表示されます。 詳細については、「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
+ 変数にはスコープがあるため、式ビルダーの **[変数]** フォルダーにはスコープ内で使用できる変数のみが表示されます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [データ フロー コンポーネントで式を使用する](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  

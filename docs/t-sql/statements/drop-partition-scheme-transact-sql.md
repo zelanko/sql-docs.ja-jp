@@ -22,10 +22,10 @@ ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044017"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
@@ -46,7 +46,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  *partition_scheme_name*  
  削除するパーティション構成の名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パーティション構成を削除できるのは、現在パーティション構成を使用しているテーブルまたはインデックスがない場合のみです。 パーティション構成を使用しているテーブルまたはインデックスがある場合、DROP PARTITION SCHEME ではエラーが返されます。 DROP PARTITION SCHEME では、ファイル グループそのものは削除することはありません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -58,7 +58,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
   
 -   パーティション構成が作成されたデータベースのサーバーに対する CONTROL SERVER または ALTER ANY DATABASE 権限。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  下記は、現在のデータベースから `myRangePS1` パーティション構成を削除する例です。  
   
 ```  

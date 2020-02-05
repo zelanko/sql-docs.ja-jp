@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278103"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72278103"
 
   正常終了した暗黙的または明示的なトランザクションの終点をマークします。 @@TRANCOUNT が 1 の場合、COMMIT TRANSACTION はトランザクションの開始以降加えられたすべてのデータ修正をデータベースに永久保存し、そのトランザクションによって保持されているリソースを解放してから @@TRANCOUNT を 0 に減らします。 @@TRANCOUNT が 1 より大きい場合、COMMIT TRANSACTION は @@TRANCOUNT を 1 だけ減らし、トランザクションをアクティブに保ちます。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,26 +62,26 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="arguments"></a>引数  
  *transaction_name*  
- **適用対象:** SQL Server、Azure SQL Database
+ **適用対象:** SQL Server および Azure SQL Database
  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では無視されます。 *transaction_name* には前の BEGIN TRANSACTION により割り当てられるトランザクション名を指定します。 *transaction_name* は識別子の規則に従っている必要があります。ただし、32 文字を超えることはできません。 *transaction_name* は、入れ子にされたどの BEGIN TRANSACTION と COMMIT TRANSACTION が関連しているかをプログラマが把握しやすくします。  
   
  *\@tran_name_variable*  
- **適用対象:** SQL Server、Azure SQL Database  
+ **適用対象:** SQL Server および Azure SQL Database  
  
 有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数は、char、varchar、nchar、または nvarchar データ型を使用して宣言する必要があります。 変数に 32 文字を超える文字が渡された場合は、32 文字だけが使用され、残りの文字は切り捨てられます。  
   
  DELAYED_DURABILITY  
- **適用対象:** SQL Server、Azure SQL Database   
+ **適用対象:** SQL Server および Azure SQL Database   
 
  このトランザクションを遅延持続性でコミットすることを要求するオプション。 データベースが `DELAYED_DURABILITY = DISABLED` または `DELAYED_DURABILITY = FORCED` によって変更されている場合、要求は無視されます。 詳しくは、「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラマは、このトランザクションで参照されるすべてのデータが論理的に正しいことを確認した上で COMMIT TRANSACTION を実行する必要があります。  
   
  コミットされるトランザクションが [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクションの場合、COMMIT TRANSACTION では MS DTC が起動され、2 フェーズ コミット プロトコルによって、トランザクションに参加しているすべてのサーバーがコミットされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同じインスタンス上にある 2 つ以上のデータベースがローカル トランザクションの対象となっている場合、インスタンスでは内部の 2 フェーズ コミットを使用して、トランザクションに参加しているすべてのデータベースをコミットします。  
   
- 入れ子にされたトランザクションで使用する場合は、入れ子内のトランザクションをコミットしてもリソースは解放されず、修正も永久保存されません。 データ修正が永久保存され、リソースが解放されるのは、入れ子の外側のトランザクションをコミットした場合だけです。 @@TRANCOUNT が 1 より大きい場合に発行される各 COMMIT TRANSACTION では、@@TRANCOUNT が単純に 1 ずつ減らされます。 最終的に @@TRANCOUNT が 0 になると、外側のトランザクション全体がコミットされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では *transaction_name* は無視されるので、入れ子内に完了していないトランザクションがあるとき、外側のトランザクションの名前を参照する COMMIT TRANSACTION を実行しても、@@TRANCOUNT が 1 減少されるだけです。  
+ 入れ子にされたトランザクションで使用する場合は、入れ子内のトランザクションをコミットしてもリソースは解放されず、修正も永久保存されません。 データ修正が永久保存され、リソースが解放されるのは、入れ子の外側のトランザクションをコミットした場合だけです。 @@TRANCOUNT が 1 より大きい場合に発行される各 COMMIT TRANSACTION では、@@TRANCOUNT が単純に 1 ずつ減らされます。 最終的に @@TRANCOUNT が 0 になると、外側のトランザクション全体がコミットされます。 *では*transaction_name[!INCLUDE[ssDE](../../includes/ssde-md.md)] は無視されるので、入れ子内に完了していないトランザクションがあるとき、外側のトランザクションの名前を参照する COMMIT TRANSACTION を実行しても、@@TRANCOUNT が 1 減少されるだけです。  
   
  @@TRANCOUNT が 0 のときに COMMIT TRANSACTION を実行すると、対応する BEGIN TRANSACTION がないためエラーが発生します。  
   
@@ -92,7 +92,7 @@ COMMIT [ TRAN | TRANSACTION ]
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-committing-a-transaction"></a>A. トランザクションをコミットする  
 **適用対象:** SQL Server、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse   
@@ -107,7 +107,7 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. 入れ子になったトランザクションをコミットする  
-**適用対象:** SQL Server、Azure SQL Database    
+**適用対象:** SQL Server および Azure SQL Database    
 
 次の例では、テーブルを作成し、3 レベルの入れ子にされたトランザクションを生成してから、入れ子になったトランザクションをコミットします。 各 `COMMIT TRANSACTION` ステートメントには *transaction_name* パラメーターがありますが、`COMMIT TRANSACTION` ステートメントと `BEGIN TRANSACTION` ステートメントの間には関連はありません。 *transaction_name* パラメーターは、プログラマが `@@TRANCOUNT` を 0 まで減らすための正しいコミット数を指定できます。これにより、外側のトランザクションをコミットできます。 
   

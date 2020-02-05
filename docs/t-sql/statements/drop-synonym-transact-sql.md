@@ -22,10 +22,10 @@ ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 59c26a7e490edb120d8819d8e2b16158b5b41e76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072129"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
@@ -54,7 +54,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
  *synonym_name*  
  削除するシノニムの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  シノニムへの参照はスキーマにバインドされていません。したがってシノニムはいつでも削除できます。 削除したシノニムへの参照は、実行時にのみ検出されます。  
   
  シノニムは、動的な SQL で作成、削除、参照することができます。  
@@ -68,7 +68,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
   
 -   シノニムを含むスキーマに対する ALTER SCHEMA 権限を許可されている。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、まずシノニム `MyProduct` を作成し、その後シノニムを削除します。  
   
 ```  

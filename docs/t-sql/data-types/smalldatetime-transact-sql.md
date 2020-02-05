@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000551"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
@@ -42,16 +42,16 @@ ms.locfileid: "68000551"
 |||  
 |-|-|  
 |構文|**smalldatetime**|  
-|使用方法|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
+|使用法|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|適用なし|  
-|日付範囲|1900-01-01 から 2079-06-06<br /><br /> 1900 年 1 月 1 日から 2079 年 6 月 6 日|  
+|期間|1900-01-01 から 2079-06-06<br /><br /> 1900 年 1 月 1 日から 2079 年 6 月 6 日|  
 |時間の範囲|00:00:00 から 23:59:59<br /><br /> 2007-05-09 23:59:59 は次のように丸められます。<br /><br /> 2007-05-10 00:00:00|  
 |要素範囲|YYYY は、1900 から 2079 の年を表す 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、00 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、分を表す 00 から 59 の 2 桁の数字です。<br /><br /> ss は、秒を表す 00 から 59 の 2 桁の数字です。 29.998 秒以下の値は、最も近い分に切り捨てられます。 29.999 秒以上の値は、最も近い分に切り上げられます。|  
 |文字長|最大 19 文字|  
 |ストレージ サイズ|4 バイト、固定。|  
 |精度|1 分|  
 |既定値|1900-01-01 00:00:00|  
-|カレンダー|グレゴリオ暦<br /><br /> (完全な年の範囲は含まれません。)|  
+|Calendar|グレゴリオ暦<br /><br /> (完全な年の範囲は含まれません。)|  
 |ユーザー定義の 1 秒未満の秒の有効桁数|いいえ|  
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
@@ -145,7 +145,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime2 AS ' datetime2(4)';
 --(1 row(s) affected)  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>A. 秒を含む文字列リテラルを smalldatetime にキャストする  
 次の例では、文字列リテラル内の秒の `smalldatetime` への変換を比較します。
@@ -157,7 +157,7 @@ SELECT
     ,CAST('2007-05-08 12:59:59.998' AS smalldatetime);  
 ```  
   
-|入力|[出力]|  
+|入力|Output|  
 |---|---|
 |2007-05-08 12:35:29|2007-05-08 12:35:00|  
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  
@@ -179,7 +179,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|データ型|[出力]|  
+|データ型|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

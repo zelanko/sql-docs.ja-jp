@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296617"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296617"
   
  実行可能ファイルは、パッケージの制御フローに追加するタスクまたはコンテナーです。  
   
-|列名|**データ型**|[説明]|  
+|列名|**データの種類**|[説明]|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|実行可能ファイルの一意の識別子。|  
 |execution_id|**bigint**|実行のインスタンスの一意の識別子。|  
@@ -49,5 +49,5 @@ ms.locfileid: "71296617"
 > [!NOTE]  
 >  サーバー上で操作を実行する権限がある場合は、操作に関する情報を表示する権限もあります。 行レベルのセキュリティが適用されるため、表示する権限がある行のみが表示されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   

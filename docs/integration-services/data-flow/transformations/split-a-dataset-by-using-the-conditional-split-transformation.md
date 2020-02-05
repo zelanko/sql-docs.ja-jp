@@ -15,10 +15,10 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bd315c62eee3bc26fe858f194cbc851ced8feef0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291196"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>条件分割変換を使用してデータセットを分割する
@@ -68,7 +68,7 @@ ms.locfileid: "71291196"
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
  [Integration Services のデータ型](../../../integration-services/data-flow/integration-services-data-types.md)   
- [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services (SSIS) 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)   
+ [Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

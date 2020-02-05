@@ -24,13 +24,13 @@ ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929115"
 ---
-# <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
+# <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] COMMIT TRANSACTION ステートメントの動作を制御します。 この設定の既定値は OFF です。 つまり、トランザクションのコミット時、サーバーでカーソルはクローズされません。  
@@ -44,7 +44,7 @@ ms.locfileid: "67929115"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET CURSOR_CLOSE_ON_COMMIT が ON の場合、この設定では ISO に準拠し、コミット時またはロールバック時にオープン カーソルがすべてクローズされます。 SET CURSOR_CLOSE_ON_COMMIT が OFF の場合、トランザクションのコミット時にカーソルはクローズされません。  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、トランザクションの内部でカーソルを定義し、トランザクションがコミットされた後でそのカーソルの使用を試みます。  
   
 ```  

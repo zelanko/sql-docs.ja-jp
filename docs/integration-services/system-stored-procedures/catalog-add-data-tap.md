@@ -11,10 +11,10 @@ ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295572"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  データ タップの ID を返します。 *data_tap_id* は **bigint** です。  
   
 ## <a name="example"></a>例  
- 次の例では、データ フロー タスク `\Package\Data Flow Task` において、データ フロー パス `'Paths[OLE DB Source.OLE DB Source Output]` 上にデータ タップが作成されます。 タップされたデータは、DataDumps フォルダー (\<*ドライブ*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps) の `output0.txt` ファイルに格納されます。  
+ 次の例では、データ フロー タスク `'Paths[OLE DB Source.OLE DB Source Output]` において、データ フロー パス `\Package\Data Flow Task` 上にデータ タップが作成されます。 タップされたデータは、DataDumps フォルダー (`output0.txt`\<ドライブ *>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps) の*  ファイルに格納されます。  
   
 ```sql
 Declare @execution_id bigint  
@@ -80,8 +80,8 @@ Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Dat
 Exec SSISDB.Catalog.start_execution @execution_id  
 ```  
   
-## <a name="remarks"></a>Remarks  
- データ タップを追加するには、実行のインスタンスが作成された状態である必要があります ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **[状態]** 列の値が 1)。 実行を処理すると状態の値が変わります。 [catalog.create_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)を呼び出すことによって、実行を作成できます。  
+## <a name="remarks"></a>解説  
+ データ タップを追加するには、実行のインスタンスが作成された状態である必要があります (**catalog.operations &#40;SSISDB データベース&#41;** ビューの [[状態]](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 列の値が 1)。 実行を処理すると状態の値が変わります。 [catalog.create_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)を呼び出すことによって、実行を作成できます。  
   
  add_data_tap ストアド プロシージャに関する考慮事項を以下に示します。  
   

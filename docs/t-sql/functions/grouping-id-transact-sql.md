@@ -19,13 +19,13 @@ ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910653"
 ---
-# <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
+# <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   グループ化のレベルを計算する関数です。 GROUPING_ID は、GROUP BY が指定されている場合に、SELECT \<select> リスト、HAVING 句、または ORDER BY 句でのみ使用できます。  
@@ -41,15 +41,15 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
 ## <a name="arguments"></a>引数  
  \<column_expression>  
- [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 句の *column_expression* です。  
+ *GROUP BY* 句の [column_expression](../../t-sql/queries/select-group-by-transact-sql.md) です。  
   
 ## <a name="return-type"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  GROUPING_ID \<column_expression> は、GROUP BY リストの式と正確に一致させる必要があります。 たとえば、DATEPART (yyyy, \<*列名*>) でグループ化する場合は GROUPING_ID (DATEPART (yyyy, \<*列名*>)) を使用し、\<*列名* でグループ化する場合は GROUPING_ID (\<*列名*>) を使用します。  
   
-## <a name="comparing-groupingid--to-grouping-"></a>GROUPING_ID () と GROUPING () の比較  
+## <a name="comparing-grouping_id--to-grouping-"></a>GROUPING_ID () と GROUPING () の比較  
  GROUPING_ID (\<列式> [ **,** ...*n* ]) は、列リストの各列に関して返される GROUPING (\<列式>) に相当する値を、0 と 1 の文字列として各出力行に入力します。 GROUPING_ID は、その文字列を基数 2 の数値として解釈し、同等の整数を返します。 たとえば、`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>` というステートメントがあるものとします。 GROUPING_ID () の入力値と出力値を次の表に示します。  
   
 |集計列|GROUPING_ID (a, b, c) の入力 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () の出力|  
@@ -62,10 +62,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`bc`|`011`|`3`|  
 |`abc`|`111`|`7`|  
   
-## <a name="technical-definition-of-groupingid-"></a>GROUPING_ID () の技術的な定義  
- 各 GROUPING_ID 引数は、GROUP BY リストの要素でなければなりません。 GROUPING_ID () は、最下位 N ビットが点灯する場合がある **integer** ビットマップを返します。 点灯した **bit** は、対応する引数が特定の出力行に対するグループ列でないことを示します。 最も順位が低い **bit** は引数 N に対応し、N-1<sup> </sup>番目に順位が低い **bit** は引数 1 に対応します。  
+## <a name="technical-definition-of-grouping_id-"></a>GROUPING_ID () の技術的な定義  
+ 各 GROUPING_ID 引数は、GROUP BY リストの要素でなければなりません。 GROUPING_ID () は、最下位 N ビットが点灯する場合がある **integer** ビットマップを返します。 点灯した **bit** は、対応する引数が特定の出力行に対するグループ列でないことを示します。 最も順位が低い **bit** は引数 N に対応し、N-1<sup></sup>番目に順位が低い **bit** は引数 1 に対応します。  
   
-## <a name="groupingid--equivalents"></a>GROUPING_ID () の対応  
+## <a name="grouping_id--equivalents"></a>GROUPING_ID () の対応  
  単一グループ クエリの場合、GROUPING (\<列式>) は GROUPING_ID (\<列式>) に対応し、いずれも 0 を返します。  
   
  たとえば、次のステートメントは互いに対応しています。  
@@ -90,10 +90,10 @@ UNION ALL
 SELECT 0 FROM T GROUP BY A,B  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-groupingid-to-identify-grouping-levels"></a>A. GROUPING_ID を使用してグループ化レベルを識別する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Name` と `Title` ごとの従業員数、`Name,` ごとの従業員数、および会社の合計従業員数が返されます。 `GROUPING_ID()` は、集計レベルを示す `Title` 列の各行に対する値を作成するために使われます。  
+### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. GROUPING_ID を使用してグループ化レベルを識別する  
+ 次の例では、`Name` データベースの `Title` と `Name,` ごとの従業員数、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ごとの従業員数、および会社の合計従業員数が返されます。 `GROUPING_ID()` は、集計レベルを示す `Title` 列の各行に対する値を作成するために使われます。  
   
 ```  
 SELECT D.Name  
@@ -114,10 +114,10 @@ WHERE DH.EndDate IS NULL
 GROUP BY ROLLUP(D.Name, E.JobTitle);  
 ```  
   
-### <a name="b-using-groupingid-to-filter-a-result-set"></a>B. GROUPING_ID を使用して結果セットをフィルター処理する  
+### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. GROUPING_ID を使用して結果セットをフィルター処理する  
   
 #### <a name="simple-example"></a>簡単な例  
- 役職ごとの従業員数が含まれた行のみを返すには、次のコードの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` からコメント文字を削除します。 部門ごとの従業員数が含まれた行のみを返すには、`HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` からコメント文字を削除します。  
+ 役職ごとの従業員数が含まれた行のみを返すには、次のコードの `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] からコメント文字を削除します。 部門ごとの従業員数が含まれた行のみを返すには、`HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` からコメント文字を削除します。  
   
 ```  
 SELECT D.Name  
@@ -138,7 +138,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  フィルター処理していない結果セットは、次のようになります。  
   
-|[オブジェクト名]|[タイトル]|グループ化のレベル|従業員数|[オブジェクト名]|  
+|Name|タイトル|グループ化のレベル|従業員数|Name|  
 |----------|-----------|--------------------|--------------------|----------|  
 |文書コントロール|コントロール スペシャリスト|0|2|文書コントロール|  
 |文書コントロール|文書コントロール アシスタント|0|2|文書コントロール|  
@@ -235,10 +235,10 @@ ORDER BY
     ,(H.SalesPersonID))ASC;  
 ```  
   
-### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. GROUPING_ID () を ROLLUP および CUBE と共に使用してグループ化レベルを識別する  
+### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>C. GROUPING_ID () を ROLLUP および CUBE と共に使用してグループ化レベルを識別する  
  以下は、`GROUPING()` を使用して `Bit Vector(base-2)` 列を計算するコードの例です。 `GROUPING_ID()` は、対応する `Integer Equivalent` 列を計算するために使用されます。 `GROUPING_ID()` 関数の列順序は、`GROUPING()` 関数によって連結された列の列順序の逆になります。  
   
- これらの例では、グループ化レベルを示すための値を `Grouping Level` 列の各行に対して作成するために、`GROUPING_ID()` が使用されます。 グループ化レベルは、1 で始まる整数の連番リスト (0, 1, 2,...*n*) になるとは限りません。  
+ これらの例では、グループ化レベルを示すための値を `GROUPING_ID()` 列の各行に対して作成するために、`Grouping Level` が使用されます。 グループ化レベルは、1 で始まる整数の連番リスト (0, 1, 2,...*n*) になるとは限りません。  
   
 > [!NOTE]  
 >  GROUPING と GROUPING_ID は、結果セットをフィルター処理するために HAVING 句で使用できます。  

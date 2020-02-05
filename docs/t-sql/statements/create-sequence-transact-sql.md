@@ -23,10 +23,10 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117179"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
@@ -170,10 +170,10 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  シーケンスがユーザー定義のデータ型を使用している場合、シーケンスの作成者にはその型の REFERENCES 権限が必要です。  
   
-### <a name="audit"></a>監査  
+### <a name="audit"></a>Audit  
  **CREATE SEQUENCE** を監査するには、**SCHEMA_OBJECT_CHANGE_GROUP** を監視します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  シーケンスを作成し、**NEXT VALUE FOR** 関数を使用してシーケンス番号を生成する例については、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
   
  ほとんどの次の例では、テストをという名前のスキーマでシーケンス オブジェクトを作成します。  

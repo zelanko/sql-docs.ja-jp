@@ -21,13 +21,13 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0ec1dc88832c4a44b3f019bb0e63369ab2d3587a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914893"
 ---
-# <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
+# <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指定したオブジェクトの定義の [!INCLUDE[tsql](../../includes/tsql-md.md)] ソース テキストを返します。  
@@ -53,7 +53,7 @@ OBJECT_DEFINITION ( object_id )
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECT_DEFINITION など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  を前提としています *object_id* が現在のデータベース コンテキストでします。 オブジェクト定義の照合順序は、呼び出し元のデータベース コンテキストのそれと常に一致します。  
   
  OBJECT_DEFINITION は、次の種類のオブジェクトに適用されます。  
@@ -79,9 +79,9 @@ OBJECT_DEFINITION ( object_id )
 -   V = ビュー  
   
 ## <a name="permissions"></a>アクセス許可  
- システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
+ システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>A. ユーザー定義オブジェクトのソース テキストを返す  
  次の例では、ユーザー定義トリガー `uAddress` の定義を `Person` スキーマで返します。 組み込み関数 `OBJECT_ID` を使用して、トリガーのオブジェクト ID を `OBJECT_DEFINITION` ステートメントに返します。  

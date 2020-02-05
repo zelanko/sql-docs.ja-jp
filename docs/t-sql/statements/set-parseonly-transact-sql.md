@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9fff28fd4f4d47c68dfd86eaa7de450ff5e79d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008892"
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68008892"
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET PARSEONLY が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではステートメントの解析だけが行われます。 SET PARSEONLY が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではステートメントがコンパイルされ実行されます。  
   
  SET PARSEONLY は、実行時ではなく解析時に設定されます。  

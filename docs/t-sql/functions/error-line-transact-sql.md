@@ -23,13 +23,13 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904369"
 ---
-# <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
+# <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 この関数では、TRY...CATCH 構文の CATCH ブロックが実行される原因となったエラーが発生した行番号が返されます。  
@@ -52,16 +52,16 @@ CATCH ブロック内で呼び出されると、`ERROR_LINE` は次の値を返�
 -   ストアド プロシージャまたはトリガー内でエラーが発生した場合は、ルーチン内の行番号  
 -   CATCH ブロックの範囲外で呼び出された場合は、NULL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `ERROR_LINE` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
 `ERROR_LINE` はエラーが発生した行番号を返します。 これは、CATCH ブロックのスコープ内で `ERROR_LINE` が呼び出された位置に関係なく、また `ERROR_LINE` の呼び出し回数に関係なく発生します。 これは @@ERROR などの関数とは対照的です。 @@ERROR は、エラーが発生したステートメントの直後のステートメントまたは CATCH ブロックの最初のステートメントでエラー番号を返します。  
   
 入れ子になった CATCH ブロックでは、`ERROR_LINE` は、参照されている CATCH ブロックのスコープに固有のエラー行番号を返します。 たとえば、TRY...CATCH コンストラクトの CATCH ブロックに、入れ子になった TRY...CATCH コンストラクトが含まれる場合があります。 入れ子になった CATCH ブロック内では、`ERROR_LINE` は、入れ子になった CATCH ブロックを呼び出したエラーの行番号を返します。 `ERROR_LINE` が外部の CATCH ブロックで実行されると、その特定の CATCH ブロックを呼び出したエラーの行番号が返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-errorline-in-a-catch-block"></a>A. CATCH ブロックで ERROR_LINE を使用する  
+### <a name="a-using-error_line-in-a-catch-block"></a>A. CATCH ブロックで ERROR_LINE を使用する  
 このコード例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `ERROR_LINE` は、エラーが発生した行番号を返します。  
   
 ```  
@@ -89,7 +89,7 @@ ErrorLine
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>B. CATCH ブロックで ERROR_LINE をストアド プロシージャと一緒に使用する  
+### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. CATCH ブロックで ERROR_LINE をストアド プロシージャと一緒に使用する  
 この例では、0 除算エラーを生成したストアド プロシージャを示します。 `ERROR_LINE` は、エラーが発生した行番号を返します。  
   
 ```  
@@ -129,7 +129,7 @@ ErrorLine
    
 ```
 
-### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_LINE を他のエラー処理ツールと一緒に使用する  
+### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_LINE を他のエラー処理ツールと一緒に使用する  
 このコード例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `ERROR_LINE` は、エラーが発生した行番号と、そのエラー自体に関する情報を返します。  
   
 ```  

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105550"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Windows 上で SSMS または SqlPackage.exe を使用して Linux 上でデータベースをエクスポートおよびインポートする
@@ -28,7 +28,7 @@ ms.locfileid: "68105550"
 
 ## <a name="export-a-database-with-ssms"></a>SSMS を使用してデータベースをエクスポートする
 
-1. Windows の検索ボックスに「**Microsoft SQL Server Management Studio**」と入力し、デスクトップ アプリをクリックして SSMS を起動します。
+1. Windows の検索ボックスに「**Microsoft SQL Server Management Studio**」と入力して SSMS を起動し、デスクトップ アプリをクリックします。
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
@@ -46,7 +46,7 @@ ms.locfileid: "68105550"
 
 ## <a name="import-a-database-with-ssms"></a>SSMS を使用してデータベースをインポートする
 
-1. Windows の検索ボックスに「**Microsoft SQL Server Management Studio**」と入力し、デスクトップ アプリをクリックして SSMS を起動します。
+1. Windows の検索ボックスに「**Microsoft SQL Server Management Studio**」と入力して SSMS を起動し、デスクトップ アプリをクリックします。
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086775"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
@@ -36,12 +36,12 @@ ms.locfileid: "68086775"
   
 ## <a name="datetime2-description"></a>datetime2 の説明
   
-|プロパティ|[値]|  
+|プロパティ|値|  
 |--------------|-----------|  
 |構文|**datetime2** [ (*fractional seconds precision*) ]|  
-|使用方法|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|使用法|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|YYYY-MM-DD hh:mm:ss[.fractional seconds]<br /><br /> 詳細については、後述の「下位クライアントの下位互換性」セクションを参照してください。|  
-|日付範囲|0001-01-01 ～ 31.12.99<br /><br /> 1 月 1 日 1 CE ～12 月 31 日 9999 CE|  
+|期間|0001-01-01 ～ 31.12.99<br /><br /> 1 月 1 日 1 CE ～12 月 31 日 9999 CE|  
 |時間の範囲|00:00:00 から 23:59:59.9999999|  
 |タイム ゾーンのオフセット範囲|なし|  
 |要素範囲|YYYY は、年を表す 0001 から 9999 までの 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、時を表す 00 から 23 までの 2 桁の数字です。<br /><br /> mm は、分を表す 00 から 59 までの 2 桁の数字です。<br /><br /> ss は、秒を表す 00 ～ 59 の 2 桁の数字です。<br /><br /> n* は、秒の小数部の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica では、秒の小数部が 3 桁より多いときは切り捨てられます。|  
@@ -50,12 +50,12 @@ ms.locfileid: "68086775"
 |ストレージ サイズ|有効桁数が 3 より小さい場合は 6 バイトです。<br/>有効桁数が 3 または 4 の場合は 7 バイトです。<br/>その他のすべての有効桁数では 8 バイトが必要です。<sup>1</sup>|  
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00|  
-|カレンダー|グレゴリオ暦|  
+|Calendar|グレゴリオ暦|  
 |ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
 
-<sup>1</sup> **datetime2** 値の最初のバイトで、値の有効桁数が格納されます。つまり、**datetime2** 値に必要な実際のストレージは、上の表に示されているストレージ サイズに、有効桁数を格納するためにさらに 1 バイトを加算したものとなります。  これにより、**datetime2** 値の最大サイズは 9 バイトとなります。つまり、最大有効桁数でのデータ ストレージのために 8 バイトを加算した有効桁数が、1 バイトで格納されます。
+<sup>1</sup>**datetime2** 値の最初のバイトで、値の有効桁数が格納されます。つまり、**datetime2** 値に必要な実際のストレージは、上の表に示されているストレージ サイズに、有効桁数を格納するためにさらに 1 バイトを加算したものとなります。  これにより、**datetime2** 値の最大サイズは 9 バイトとなります。つまり、最大有効桁数でのデータ ストレージのために 8 バイトを加算した有効桁数が、1 バイトで格納されます。
 
 データ型のメタデータについては、「[sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)」または「[TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)」をご覧ください。 一部の日付時刻データ型では、有効桁数および小数点以下桁数が可変です。 列の有効桁数と小数点以下桁数を取得す方法については、「[COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)」、[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)」、または「[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)」をご覧ください。
   
@@ -71,7 +71,7 @@ ms.locfileid: "68086775"
 |{ ts 'yyyy-mm-dd hh:mm:ss[.fractional seconds]' }|ODBC API 固有:<br /><br /> 1 秒未満の秒を表す小数点の右側の桁数は、0 から 7 (100 ナノ秒) の範囲で指定できます。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI および ISO 8601 への準拠  
-**datetime2** の ANSI および ISO 8601 への準拠は、[date](../../t-sql/data-types/date-transact-sql.md) 型および [time](../../t-sql/data-types/time-transact-sql.md) 型と同じです。
+[datetime2](../../t-sql/data-types/date-transact-sql.md) の ANSI および ISO 8601 への準拠は、[date](../../t-sql/data-types/time-transact-sql.md) 型および **time** 型と同じです。
   
 ##  <a name="backward-compatibility-for-down-level-clients"></a>下位クライアントの下位互換性  
 一部の下位レベル クライアントは、**time**、**date**、**datetime2**、**datetimeoffset** データ型をサポートしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の上位インスタンスと下位クライアントの間のデータ型マッピングを次の表に示します。
@@ -79,17 +79,17 @@ ms.locfileid: "68086775"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|下位クライアントに渡される既定の文字列リテラル形式|下位 ODBC|下位 OLEDB|下位 JDBC|下位 SQLCLIENT|  
 | --- | --- | --- | --- | --- | --- |
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
-|**date**|-YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
+|**date**|YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータ型の変換
-data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付や時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。
+日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime2-data-type"></a>他の日付/時刻型から datetime2 データ型からへの変換
 ここでは、他の日付/時刻データ型が **datetime2** データ型に変換される場合の処理について説明します。  
   
-**date** からの変換では、年、月、日がコピーされます。  時刻部分は 00:00:00.0000000 に設定されます。  次のコードでは、`date` の値を `datetime2` の値に変換した結果を示します。  
+**date** からの変換では、年、月、日がコピーされます。  時刻部分は 00:00:00.0000000 に設定されます。  次のコードは、`date` 値を `datetime2` 値に変換した結果を示しています。  
   
 ```sql
 DECLARE @date date = '12-21-16';
@@ -178,7 +178,7 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 |TIME + TIMEZONE|DATE 部分は既定で 1900-1-1 に設定されます。 タイム ゾーンの入力は無視される。|  
 |DATE + TIME + TIMEZONE|ローカル DATETIME が使用されます。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、文字列をそれぞれの **date** および **time** データ型にキャストした結果を比較します。
   
 ```sql
@@ -196,7 +196,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|データ型|[出力]|  
+|データ型|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

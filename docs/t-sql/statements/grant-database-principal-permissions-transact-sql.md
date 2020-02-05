@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246160"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (データベース プリンシパルの権限の許可) (Transact-SQL)
@@ -170,7 +170,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. ユーザーに対する CONTROL 権限を別のユーザーに許可する  
- 次の例では、`AdventureWorks2012` のユーザー `Wanida` に対する `CONTROL` 権限を、ユーザー `RolandX` に許可します。  
+ 次の例では、`CONTROL` のユーザー `AdventureWorks2012` に対する `Wanida` 権限を、ユーザー `RolandX` に許可します。  
   
 ```  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
@@ -178,7 +178,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. ロールに対する VIEW DEFINITION 権限を、GRANT OPTION を指定してユーザーに許可する  
- 次の例では、`AdventureWorks2012` のロール `SammamishParking` に対する `VIEW DEFINITION` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
+ 次の例では、`VIEW DEFINITION` のロール `AdventureWorks2012` に対する `SammamishParking` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
@@ -187,7 +187,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. ユーザーに対する IMPERSONATE 権限をアプリケーション ロールに許可する  
- 次の例では、ユーザー `HamithaL` に対する `IMPERSONATE` 権限を、`AdventureWorks2012` のアプリケーション ロール `AccountsPayable17` に許可します。  
+ 次の例では、ユーザー `IMPERSONATE` に対する `HamithaL` 権限を、`AdventureWorks2012` のアプリケーション ロール `AccountsPayable17` に許可します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   

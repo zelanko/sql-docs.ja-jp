@@ -26,10 +26,10 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102036"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
@@ -92,14 +92,14 @@ DBCC CHECKFILEGROUP
 >  PHYSICAL_ONLY を指定すると、DBCC CHECKFILEGROUP で FILESTREAM データのチェックがすべてスキップされるようになります。  
   
  MAXDOP  
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで  
   
  ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、Resource Governor で構成されている値を超えると、データベース エンジンは、「ALTER WORKLOAD GROUP (Transact-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
 > [!CAUTION]  
 >  MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC CHECKFILEGROUP と DBCC CHECKDB はほぼ同じ DBCC コマンドです。 主な相違点は、DBCC CHECKFILEGROUP の対象が、指定された単一のファイル グループと必要なテーブルのみに限定されることです。
 DBCC CHECKFILEGROUP は次のコマンドを実行します。
 -   ファイル グループの [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
@@ -131,7 +131,7 @@ DBCC CHECKFILEGROUP は、内部データベースのスナップショットを
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて  
 DBCC CHECKFILEGROUP コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
   
-|状態|[説明]|  
+|State|[説明]|  
 |-----------|-----------------|  
 |0|エラー番号 8930 が発生しました。 メタデータの破損が原因で DBCC コマンドが終了しました。|  
 |1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
@@ -195,7 +195,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>A. データベース内の PRIMARY ファイル グループをチェックする  
 次の例では、現在のデータベースのプライマリ ファイル グループをチェックします。
   
@@ -206,7 +206,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 非クラスター化インデックスを除く AdventureWorks データベースの PRIMARY ファイル グループをチェックする  
-次の例では、プライマリ ファイル グループの ID 番号を指定し、`NOINDEX` オプションを指定することによって、非クラスター化インデックスを除く `AdventureWorks2012` データベースのプライマリ ファイル グループをチェックします。
+次の例では、プライマリ ファイル グループの ID 番号を指定し、`AdventureWorks2012` オプションを指定することによって、非クラスター化インデックスを除く `NOINDEX` データベースのプライマリ ファイル グループをチェックします。
   
 ```sql  
 USE AdventureWorks2012;  

@@ -22,10 +22,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: dbf87499f1bc5c23ae272daa393ef981a97e66d5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892565"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
@@ -43,7 +43,7 @@ ms.locfileid: "68892565"
 > 特定のサーバーに接続されているデータベースの互換性レベルは、手動で変更しない限り、同じレベルのままになります。
    
   
-### <a name="in-place-upgrade"></a>インプレース アップグレード  
+### <a name="in-place-upgrade"></a>一括アップグレード  
  アップグレード プロセスは、既存のデータベースを古いインスタンスから新しいインスタンスに自動的に移行します。 メタデータおよびバイナリ データは 2 つのバージョン間で互換性があるため、アップグレード後もそのまま使用できます。手動でデータを移行する必要はありません。  
   
  既存のインスタンスをアップグレードするには、セットアップを実行し、新しいインスタンスの名前として既存のインスタンス名を指定します。  
@@ -79,10 +79,10 @@ ms.locfileid: "68892565"
   
 ||||  
 |-|-|-|  
-|テーブル|1400|SQL Server 2017|
-|テーブル|1200|SQL Server 2016|  
-|テーブル|1103|SQL Server 2014|  
-|テーブル|1100|SQL Server 2012|  
+|表形式|1400|SQL Server 2017|
+|表形式|1200|SQL Server 2016|  
+|表形式|1103|SQL Server 2014|  
+|表形式|1100|SQL Server 2012|  
 |多次元|1100|SQL Server 2012 以降|  
 |多次元|1050|SQL Server 2005、2008、2008 R2|  
   

@@ -16,10 +16,10 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321889"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>マージ レプリケーションの競合の解決
@@ -28,9 +28,9 @@ ms.locfileid: "75321889"
   
  競合データは、競合の保有期間に指定した期間内 (既定では 14 日間) はレプリケーション競合表示モジュールで利用できます。 競合の保有期間を設定するには、次のいずれかを実行します。  
   
--   [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@conflict_retention` パラメーターに保有期間の値を指定します。  
+-   `@conflict_retention`sp_addmergepublication &#40;Transact-SQL&#41;[ の ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) パラメーターに保有期間の値を指定します。  
   
--   [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) の `@property` パラメーターに **conflict_retention** を、`@value` パラメーターに保有期間の値を指定します。  
+-   **sp_changemergepublication &#40;Transact-SQL&#41;** の `@property` パラメーターに `@value`conflict_retention[ を、](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) パラメーターに保有期間の値を指定します。  
   
  競合情報の既定の保存先は次のとおりです。    
 -   パブリケーションの互換性レベルが 90 RTM 以上の場合は、パブリッシャーおよびサブスクライバーに保存されます。   
@@ -50,7 +50,7 @@ ms.locfileid: "75321889"
 3.  競合を表示するパブリケーションを右クリックしてから、 **[競合の表示]** をクリックします。  
   
     > [!NOTE]  
-    >  **conflict_logging** プロパティの値として **'subscriber'** を指定した場合は、 **[競合の表示]** メニュー オプションを利用できません。 競合を表示するには、コマンド プロンプトで ConflictViewer.exe を起動します。 既定では、ConflictViewer.exe は Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE のディレクトリにあります。 有効な起動時のパラメーターの一覧を表示するには、ConflictViewer.exe -? を実行します。  
+    >  **conflict_logging** プロパティの値として **'subscriber'** を指定した場合は、 **[競合の表示]** メニュー オプションを利用できません。 競合を表示するには、コマンド プロンプトで ConflictViewer.exe を起動します。 既定では、ConflictViewer.exe が格納されているディレクトリは、Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE です。 有効な起動時のパラメーターの一覧を表示するには、ConflictViewer.exe -? を実行します。  
   
 4.  **[競合テーブルの選択]** ダイアログ ボックスで、競合を表示するデータベース、パブリケーション、およびテーブルを選択します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "75321889"
     -   **decentralized_conflicts** - 1 は競合する行がサブスクライバーに格納されていることを示し、0 は競合する行がサブスクライバーに格納されていないことを示します。  
   
         > [!NOTE]  
-        >  マージ パブリケーションの競合ログの動作は、[sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@conflict_logging` パラメーターを使用して設定します。 `@centralized_conflicts` パラメータの使用は非推奨です。  
+        >  マージ パブリケーションの競合ログの動作は、`@conflict_logging`sp_addmergepublication[ の ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) パラメーターを使用して設定します。 `@centralized_conflicts` パラメータの使用は非推奨です。  
   
      次の表では、`@conflict_logging` に対して指定された値に基づくこれらの列の値について説明します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75321889"
     -   **decentralized_conflicts** - 1 は競合する行がサブスクライバーに格納されていることを示し、0 は競合する行がサブスクライバーに格納されていないことを示します。  
   
         > [!NOTE]  
-        >  マージ パブリケーションの競合ログの動作は、[sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@conflict_logging` パラメーターを使用して設定します。 `@centralized_conflicts` パラメータの使用は非推奨です。  
+        >  マージ パブリケーションの競合ログの動作は、`@conflict_logging`sp_addmergepublication[ の ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) パラメーターを使用して設定します。 `@centralized_conflicts` パラメータの使用は非推奨です。  
   
 2.  パブリッシャー側のパブリケーション データベースまたはサブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)を実行します。 特定のパブリケーションに属するアーティクルの競合テーブル情報のみが返されるようにするには、`@publication` に値を指定します。 これにより、競合を持つアーティクルに対応する競合テーブル情報が返されます。 目的のアーティクルに対応する **source_object** の値を確認します。 アーティクルに対応する **conflict_table** の値が NULL の場合、そのアーティクル内では削除競合のみが発生しています。  
   

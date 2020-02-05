@@ -12,13 +12,13 @@ ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 210df5d533908e75e83b348ac6c9a84a22198f4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131822"
 ---
-# <a name="mssqlserver17128"></a>MSSQLSERVER_17128
+# <a name="mssqlserver_17128"></a>MSSQLSERVER_17128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -30,7 +30,7 @@ ms.locfileid: "68131822"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|INIT_NOBUFSPACE|  
-|メッセージ テキスト|initdata:カーネル バッファー用のメモリがありません。|  
+|メッセージ テキスト|initdata: カーネル バッファー用のメモリがありません。|  
   
 ## <a name="explanation"></a>説明  
 バッファー プールの初回メモリ割り当てまたは予約に失敗しており、SQL Server が終了します。  

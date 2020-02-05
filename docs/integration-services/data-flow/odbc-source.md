@@ -16,10 +16,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298165"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
@@ -104,7 +104,7 @@ ms.locfileid: "71298165"
 #### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
   
-#### <a name="new"></a>ボタンを使用して新しい  
+#### <a name="new"></a>新規  
  **[新規作成]** をクリックします。 新しい ODBC 接続マネージャーを作成できる **[ODBC 接続マネージャーの構成エディター]** ダイアログ ボックスが開きます。  
   
 #### <a name="data-access-mode"></a>[データ アクセス モード]  
@@ -165,7 +165,7 @@ ms.locfileid: "71298165"
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  
   
-#### <a name="column"></a>[列]  
+#### <a name="column"></a>列  
  使用されていません。  
   
 #### <a name="error"></a>エラー  
@@ -180,7 +180,7 @@ ms.locfileid: "71298165"
 #### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルを ODBC 入力元でどのように処理するか (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
-#### <a name="apply"></a>[適用]  
+#### <a name="apply"></a>適用  
  選択したセルにエラー処理オプションを適用します。  
   
 ### <a name="error-handling-options"></a>エラー処理オプション  

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082899"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
@@ -43,7 +43,7 @@ ms.locfileid: "68082899"
   
 -   セマンティック インデックスは、フルテキスト インデックス作成でサポートされるいずれかのデータ型の列に作成できます。 詳細については、「 [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)」をご覧ください。  
   
--   **varbinary(max)** 列のフルテキスト インデックス作成でサポートされるいずれかのドキュメントの種類を指定できます。 詳細については、このトピックの「[方法: どのドキュメントの種類でインデックス作成ができるかを判断する](#doctypes)」を参照してください。  
+-   **varbinary(max)** 列のフルテキスト インデックス作成でサポートされるいずれかのドキュメントの種類を指定できます。 詳細については、このトピックの「 [方法: どのドキュメントの種類でインデックス作成ができるかを判断する](#doctypes) 」を参照してください。  
   
 -   セマンティック インデックス作成では、選択した列に対し、キー フレーズのインデックスとドキュメントの類似性のインデックスの 2 種類のインデックスが作成されます。 セマンティック インデックス作成を有効にするときに 1 種類のインデックスだけを選択することはできません。 ただし、これらの 2 つのインデックスに対するクエリは別々に実行できます。 詳細については、「 [セマンティック検索を使用したドキュメント内のキー フレーズの検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 」および「 [セマンティック検索による類似および関連したドキュメントの検索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)」をご覧ください。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68082899"
   
  **例 1: 一意のインデックス、フルテキスト インデックス、およびセマンティック インデックスを作成する**  
   
- 次の例では、既定のフルテキスト カタログ、**ft** を作成します。次に、AdventureWorks2012 サンプル データベースの **HumanResources.JobCandidate** テーブルの **JobCandidateID** 列に一意のインデックスを作成します。 この一意のインデックスは、フルテキスト インデックスのキー列として必要です。 次に、 **Resume** 列にフルテキスト インデックスとセマンティック インデックスを作成します。  
+ 次の例では、既定のフルテキスト カタログ、 **ft**を作成します。次に、AdventureWorks2012 サンプル データベースの **HumanResources.JobCandidate** テーブルの **JobCandidateID** 列に一意のインデックスを作成します。 この一意のインデックスは、フルテキスト インデックスのキー列として必要です。 次に、 **Resume** 列にフルテキスト インデックスとセマンティック インデックスを作成します。  
   
 ```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
@@ -131,7 +131,7 @@ GO
   
 -   フルテキスト インデックス作成が既に有効になっている列にセマンティック インデックス作成を追加するには、 **ADD STATISTICAL_SEMANTICS** オプションを使用します。 1 つの **ALTER** ステートメントでは 1 つの列にのみセマンティック インデックス作成を追加できます。  
   
- **例:フルテキスト インデックス作成が既に存在する列にセマンティック インデックス作成を追加する**  
+ **例: フルテキスト インデックス作成が既に存在する列にセマンティック インデックス作成を追加する**  
   
  次の例では、AdventureWorks2012 サンプル データベースの **Production.Document** テーブルの既存のフルテキスト インデックスを変更します。 この例では、フルテキスト インデックスが既に存在している **Production.Document** テーブルの **Document** 列にセマンティック インデックスを追加します。 この例では、インデックスが自動的に再作成されないように指定します。  
   
@@ -158,7 +158,7 @@ GO
 **ALTER FULLTEXT INDEX** ステートメントを使用して既存のフルテキスト インデックスを変更するとき、セマンティック インデックス作成を削除できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまなダイアログ ボックスを使用して、セマンティック インデックス作成を削除することもできます。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL を使用してセマンティック インデックスを削除する  
-1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
+1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN** **column**name _\_DROP STATISTICAL_SEMANTICS_ オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN**_column\_name_**DROP** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
+列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN** **column**name _\_DROP_ オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
   
 ```sql  
 USE database_name  
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>データベース オブジェクトでセマンティック検索が有効かどうかの確認  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>データベースに対してセマンティック検索が有効化されていますか?
   
- [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) メタデータ関数の **IsFullTextEnabled** プロパティのクエリを実行します。  
+ **DATABASEPROPERTYEX &#40;Transact-SQL&#41;** メタデータ関数の [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) プロパティのクエリを実行します。  
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索が有効化されていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索が有効化されていないことを示します。  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>テーブルに対してセマンティック検索が有効化されていますか?  
  
- [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md) メタデータ関数の **TableFullTextSemanticExtraction** プロパティのクエリを実行します。  
+ **OBJECTPROPERTYEX &#40;Transact-SQL&#41;** メタデータ関数の [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) プロパティのクエリを実行します。  
   
  戻り値 1 は、テーブルに対してセマンティック検索が有効化されていることを示します。戻り値 0 は、セマンティック検索が有効化されていないことを示します。  
   
@@ -218,7 +218,7 @@ GO
    
  特定の列に対して統計的セマンティック検索が有効化されているかどうかを確認するには、次の操作を実行します。  
   
--   [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md) メタデータ関数の **StatisticalSemantics** プロパティのクエリを実行します。  
+-   **COLUMNPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) プロパティのクエリを実行します。  
   
      戻り値 1 は、列に対してセマンティック検索が有効化されていることを示します。戻り値 0 は、セマンティック検索が有効化されていないことを示します。  
   
@@ -256,14 +256,14 @@ GO
   
  セマンティック インデックス作成でサポートされている言語は以下のとおりです。 この一覧は、LCID の順に並べ替えたカタログ ビュー [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md) の出力を表します。  
   
-|[言語]|LCID (LCID)|  
+|言語|LCID|  
 |--------------|----------|  
 |German|1031|  
 |英語 (米国)|1033|  
 |French|1036|  
-|イタリア語|1040|  
+|Italian|1040|  
 |ポルトガル語 (ブラジル)|1046|  
-|ロシア語|1049|  
+|Russian|1049|  
 |Swedish|1053|  
 |英語 (英国)|2057|  
 |ポルトガル語 (ポルトガル)|2070|  
@@ -274,7 +274,7 @@ GO
   
  インデックスの対象とするドキュメントの種類が、サポートされている種類の一覧に含まれていない場合は、追加のフィルターを探してダウンロードし、インストールしなければならない場合があります。 詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。  
   
-##  <a name="BestPracticeFilegroup"></a> ベスト プラクティス: フルテキスト インデックスとセマンティック インデックスに対して別個のファイル グループを作成することを検討する  
+##  <a name="BestPracticeFilegroup"></a> ベスト プラクティス: フルテキストおよびセマンティック インデックスに対して別個のファイル グループの作成を検討してください。  
  ディスク領域の割り当てが問題となる場合は、フルテキスト インデックスとセマンティック インデックスに対して別個のファイル グループを作成することを検討してください。 セマンティック インデックスは、フルテキスト インデックスと同じファイル グループに作成されます。 完全に作成されたセマンティック インデックスには大量のデータが含まれる可能性があります。  
  
 ##  <a name="IssueNoResults"></a> 問題点: 特定の列の検索で結果が返されない  

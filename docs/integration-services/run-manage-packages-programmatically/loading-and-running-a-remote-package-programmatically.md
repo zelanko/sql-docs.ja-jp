@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282168"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>プログラムによるリモート パッケージの読み込みと実行
@@ -40,7 +40,7 @@ ms.locfileid: "71282168"
   
 -   [Web サービスまたはリモート コンポーネントを使用して、プログラムでリモート パッケージを実行する](#service)  
   
- このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、**Microsoft.SqlServer.ManagedDTS** アセンブリへの参照が必要です。 ただし、このトピックで説明する、**sp_start_job** ストアド プロシージャを実行するための ADO.NET の方法は例外です。この方法では、**System.Data** への参照のみが必要です。 **Microsoft.SqlServer.ManagedDTS** アセンブリへの参照を新しいプロジェクトに追加した後、**using** または **Imports** ステートメントを使用して <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間をインポートします。  
+ このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、**Microsoft.SqlServer.ManagedDTS** アセンブリへの参照が必要です。 ただし、このトピックで説明する、**sp_start_job** ストアド プロシージャを実行するための ADO.NET の方法は例外です。この方法では、**System.Data** への参照のみが必要です。 **Microsoft.SqlServer.ManagedDTS** アセンブリへの参照を新しいプロジェクトに追加した後、<xref:Microsoft.SqlServer.Dts.Runtime>using**または**Imports**ステートメントを使用して** 名前空間をインポートします。  
   
 ###  <a name="agent"></a> SQL Server エージェントを使用した、サーバー上でのプログラムによるリモート パッケージの実行  
  次のコード例では、プログラムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、サーバー上のリモート パッケージを実行する方法を示します。 このコード例では、**sp_start_job** システム ストアド プロシージャを呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを開始します。 プロシージャによって開始されるジョブの名前は `RunSSISPackage` で、このジョブはリモート コンピューターに保存されています。 その後、`RunSSISPackage` ジョブにより、リモート コンピューターでパッケージが実行されます。  
@@ -160,7 +160,7 @@ namespace LaunchSSISPackageAgent_CS
  次のコード例では、Web サービスを作成およびテストする方法を示します。  
   
 #### <a name="creating-the-web-service"></a>Web サービスの作成  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、ファイルや SQL Server から直接読み込んだり、SSIS パッケージ ストアから読み込んだりすることができます。SSIS パッケージ ストアは、SQL Server および特別なファイル システム フォルダー内のパッケージ ストレージを管理します。 このサンプルは、**Select Case** または **switch** コンストラクトを使用してパッケージを起動するための適切な構文を選択し、入力引数を適切に連結することで、すべての使用可能なオプションをサポートしています。 LaunchPackage Web サービス メソッドは、クライアント コンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリへの参照が不要になるように、パッケージの実行結果を <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値ではなく、整数として返します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、ファイルや SQL Server から直接読み込んだり、SSIS パッケージ ストアから読み込んだりすることができます。SSIS パッケージ ストアは、SQL Server および特別なファイル システム フォルダー内のパッケージ ストレージを管理します。 このサンプルは、**Select Case** または **switch** コンストラクトを使用してパッケージを起動するための適切な構文を選択し、入力引数を適切に連結することで、すべての使用可能なオプションをサポートしています。 LaunchPackage Web サービス メソッドは、クライアント コンピューターで <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> アセンブリへの参照が不要になるように、パッケージの実行結果を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 値ではなく、整数として返します。  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>プログラムによってサーバー上でパッケージを実行するための Web サービスを作成するには  
   
@@ -333,7 +333,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>Web サービスのテスト  
- 次のサンプル コンソール アプリケーションでは、Web サービスを使用してパッケージを実行します。 Web サービスの LaunchPackage メソッドは、クライアント コンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリへの参照が不要になるように、パッケージの実行結果を <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値ではなく、整数として返します。 このサンプルでは、実行結果を報告するために、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値を反映する値を持つプライベート列挙を作成します。  
+ 次のサンプル コンソール アプリケーションでは、Web サービスを使用してパッケージを実行します。 Web サービスの LaunchPackage メソッドは、クライアント コンピューターで <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> アセンブリへの参照が不要になるように、パッケージの実行結果を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 値ではなく、整数として返します。 このサンプルでは、実行結果を報告するために、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値を反映する値を持つプライベート列挙を作成します。  
   
 ###### <a name="to-create-a-console-application-to-test-the-web-service"></a>Web サービスをテストするためのコンソール アプリケーションを作成するには  
   
@@ -420,7 +420,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部リソース  
   
--   MSDN ライブラリのビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」 (technet.microsoft.com)  
+-   technet.microsoft.com のビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」  
   
 ## <a name="see-also"></a>参照  
  [ローカル実行とリモート実行の相違点について](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

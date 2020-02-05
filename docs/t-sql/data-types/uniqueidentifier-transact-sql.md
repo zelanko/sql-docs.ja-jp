@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000449"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68000449"
 
 16 バイトの GUID です。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 列またはのローカル変数 **uniqueidentifier** データ型は、次の方法で値に初期化することができます。
 -   [NEWID](../../t-sql/functions/newid-transact-sql.md) または [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 関数を使用する。    
 -   *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* の形式の文字列定数を変換する。各 *x* は 0 ～ 9 または a ～ f の 16 進数です。 たとえば、6F9619FF-8B86-D011-B42D-00C04FC964FF は有効な **uniqueidentifier** 値です。  
@@ -50,7 +50,7 @@ ms.locfileid: "68000449"
 - PolyBase
 - Parallel Data Warehouse 用の [dwloader 読み込みツール](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader)
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、`uniqueidentifier` 型の値を `char` 型の値に変換します。
   
 ```sql

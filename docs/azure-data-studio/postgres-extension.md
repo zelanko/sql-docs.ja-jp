@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: 2ecdd3cb918013a4ae26869679576bafd003756e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959483"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL の拡張機能 (プレビュー)
@@ -44,7 +44,7 @@ Azure Data Studio がまだインストールされていない場合は、そ�
 3. **[インストール]** を選択します。 インストールが完了したら、 **[再読み込み]** を選択して Azure Data Studio で拡張機能をアクティブにします。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Azure Data Studio から Postgres に接続してクエリを実行する方法](quickstart-postgres.md)について説明します。
 

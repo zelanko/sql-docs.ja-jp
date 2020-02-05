@@ -21,13 +21,13 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111330"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   同じスコープ内の ID 列に挿入された最後の ID 値を返します。 スコープは、ストアド プロシージャ、トリガー、関数、バッチのいずれかのモジュールです。 したがって、2 つのステートメントが同じストアド プロシージャ、関数、またはバッチ内にある場合、これらのステートメントのスコープは同じになります。  
@@ -43,7 +43,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>戻り値の型  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SCOPE_IDENTITY、IDENT_CURRENT、および @@IDENTITY は、ID 列に挿入された値を返すという点で似ています。  
   
  IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳しくは、「[IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)」をご覧ください。  
@@ -56,9 +56,9 @@ SCOPE_IDENTITY()
   
  失敗したステートメントとトランザクションによって、テーブルに対する現在の ID が変更され、ID 列値に差異が生じる可能性があります。 ID 値がロールバックされることはありません。これは、テーブルに値を挿入するトランザクションがコミットされない場合でも同じです。 たとえば、INSERT ステートメントが IGNORE_DUP_KEY 違反のために失敗しても、テーブルの現在の ID 値は増分されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. @@IDENTITY および SCOPE_IDENTITY をトリガーで使用する  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>A. @@IDENTITY および SCOPE_IDENTITY をトリガーで使用する  
  次の例では、`TZ` と `TY` の 2 つのテーブルを作成し、`TZ` に INSERT トリガーを作成します。 テーブル `TZ` に行が挿入されると、トリガー (`Ztrig`) が起動し、`TY` に行が挿入されます。  
   
 ```sql  
@@ -73,7 +73,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-次に結果セットを示します。次に示すのはテーブル TZ の内容です。  
+結果セット: 次に示すのはテーブル TZ の内容です。  
   
 ```  
 Z_id   Z_name  
@@ -92,7 +92,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-次に結果セットを示します。次に示すのは TY の内容です。  
+結果セット: 次に示すのは TY の内容です。  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. @@IDENTITY および SCOPE_IDENTITY() をレプリケーションで使用する  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>B. @@IDENTITY および SCOPE_IDENTITY() をレプリケーションで使用する  
  次の例は、マージ レプリケーション用にパブリッシュされたデータベースへの挿入で、`@@IDENTITY` および `SCOPE_IDENTITY()` を使用する方法を示しています。 例のテーブルは両方とも [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースにあります。`Person.ContactType` はパブリッシュされておらず、`Sales.Customer` はパブリッシュされています。 マージ レプリケーションでは、パブリッシュされたテーブルにトリガーを追加します。 このため、`@@IDENTITY` では、値をユーザー テーブルに挿入する代わりにレプリケーション システム テーブルに挿入して返すことができます。  
   
  `Person.ContactType` テーブルの ID の最大値は 20 です。 このテーブルに行を挿入する場合、`@@IDENTITY` と `SCOPE_IDENTITY()` は同じ値を返します。  

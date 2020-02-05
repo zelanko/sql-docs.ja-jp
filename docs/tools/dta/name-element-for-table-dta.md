@@ -1,10 +1,7 @@
 ---
-title: Table の Name 要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Table の Name 要素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cde36fc8bc0ffb442d641abb49f842ead832fc57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: d8c2cedbf969975504b29f00832a4ae3722b29c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034591"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307953"
 ---
 # <a name="name-element-for-table-dta"></a>Table の Name 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  チューニングのためのテーブル名を指定します。  
+
+チューニングのためのテーブル名を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68034591"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、1 ～ 255 文字。|  
 |**既定値**|[なし] :|  

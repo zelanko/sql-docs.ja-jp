@@ -24,10 +24,10 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001635"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
@@ -106,7 +106,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  *list_name* で指定した検索プロパティ リストから、指定したプロパティを削除します。 プロパティを削除すると登録が解除されるため、このプロパティは検索できなくなります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  それぞれのフルテキスト インデックスは、検索プロパティ リストを 1 つだけ持つことができます。  
   
  指定した検索プロパティのクエリを有効にするには、フルテキスト インデックスの検索プロパティ リストにその検索プロパティを追加した後、インデックスの再作成を行う必要があります。  
@@ -172,7 +172,7 @@ GO
 ##  <a name="Permissions"></a> Permissions  
  プロパティ リストに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-adding-a-property"></a>A. プロパティを追加する  
  次の例では、いくつかのプロパティ (`Title`、`Author`、`Tags` など) を、`DocumentPropertyList` という名前のプロパティ リストに追加します。  

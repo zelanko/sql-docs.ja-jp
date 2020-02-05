@@ -11,10 +11,10 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295253"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB データベース)
@@ -32,7 +32,7 @@ ms.locfileid: "71295253"
 |environment_scope|**Char(1)**|検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。|  
 |validate_type|**Char(1)**|実行する検証の種類。 検証で使用される種類は、依存関係の検証 (`D`) または完全検証 (`F`) です。 パッケージの検証では、常に完全検証が実施されます。|  
 |folder_name|**nvarchar(128)**|対応するプロジェクトを含むフォルダーの名前。|  
-|project_name|**nvarchar(128)**|プロジェクトの名前。|  
+|project_name|**nvarchar(128)**|プロジェクトの名前です。|  
 |project_lsn|**bigint**|検証されるプロジェクトのバージョン。|  
 |use32bitruntime|**bit**|64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行するかどうかを示します。 値が `1` の場合、実行は 32 ビット ランタイムで実行されます。 値が `0` の場合、実行は 64 ビット ランタイムで実行されます。|  
 |reference_id|**bigint**|環境を参照するためプロジェクトによって使用されるプロジェクト環境参照の ID。|  
@@ -42,7 +42,7 @@ ms.locfileid: "71295253"
 |object_id|**bigint**|操作の影響を受けるオブジェクトの ID。|  
 |start_time|**datetimeoffset(7)**|操作が開始したときの日時。|  
 |end_time|**datetimeoffsset(7)**|操作が終了したときの日時。|  
-|ステータス|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
+|status|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
 |caller_name|**nvarchar(128)**|操作を実行したアカウントの名前。|  
 |process_id|**int**|外部プロセスのプロセス ID (該当する場合)。|  
@@ -52,7 +52,7 @@ ms.locfileid: "71295253"
 |machine_name|**nvarchar(128)**|サーバー インスタンスが稼働しているコンピューターの名前。|  
 |dump_id|**uniqueidentifier**|実行ダンプの ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの各検証に対して 1 つの行を表示します。  
   
 ## <a name="permissions"></a>アクセス許可  

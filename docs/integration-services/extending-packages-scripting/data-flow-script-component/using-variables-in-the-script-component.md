@@ -13,10 +13,10 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 990797242acb57f36530315c416011325cce6358
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286426"
 ---
 # <a name="using-variables-in-the-script-component"></a>スクリプト コンポーネントでの変数の使用
@@ -37,7 +37,7 @@ ms.locfileid: "71286426"
   
  `Dim myIntegerVariableValue As Integer = Me.Variables.MyIntegerVariable`  
   
- スクリプト コンポーネントで変数を扱うには、`Me.VariableDispenser` を呼び出してアクセスする <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> プロパティを使用することもできます。 この場合には、変数の型指定された名前付きのアクセサー プロパティを使用せずに、直接的に変数にアクセスします。 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> を使用する場合は、コード内で、ロック セマンティクスと、変数値のデータ型のキャストの両方を処理する必要があります。 デザイン時には使用できないが、実行時にプログラムによって生成される変数を扱う必要がある場合は、名前付きの型指定されたアクセサー プロパティではなく、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> プロパティを使用する必要があります。  
+ スクリプト コンポーネントで変数を扱うには、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> を呼び出してアクセスする `Me.VariableDispenser` プロパティを使用することもできます。 この場合には、変数の型指定された名前付きのアクセサー プロパティを使用せずに、直接的に変数にアクセスします。 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> を使用する場合は、コード内で、ロック セマンティクスと、変数値のデータ型のキャストの両方を処理する必要があります。 デザイン時には使用できないが、実行時にプログラムによって生成される変数を扱う必要がある場合は、名前付きの型指定されたアクセサー プロパティではなく、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> プロパティを使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../../../integration-services/integration-services-ssis-variables.md)   

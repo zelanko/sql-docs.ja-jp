@@ -15,10 +15,10 @@ ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d913a0e7bbe29ab6f6f303519c73304238afd7df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127402"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (geography データ型)
@@ -40,19 +40,19 @@ ms.locfileid: "68127402"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドにより、**geography** インスタンスの型が変更されることがあります。 さらに、**geography** インスタンスの地点がわずかに移動することもあります。 いくつかのメソッド (NumPoint() など) の結果が変更されることがあります。  
   
  無効な空間インスタンスが赤道と交差し、EnvelopeAngle() = 180 である場合、**FullGlobe** インスタンスが返されます。 `MakeValid()`**geography** データ型のメソッドは、有効なインスタンスを返すように試みますが、結果が正確であることは保証されません。  
   
 > [!NOTE]  
->  無効なオブジェクトをデータベースに格納することができます。 無効なインスタンス (STIsValid() が False を返すインスタンス) で実行可能なメソッドは、有効性を確認するメソッドまたはエクスポートを許可するメソッドであり、それらは次のとおりです。STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM()、AsGml()。  
+>  無効なオブジェクトをデータベースに格納することができます。 無効なインスタンス (STIsValid() が False を返すインスタンス) で実行可能なメソッドは、有効性を確認するメソッドまたはエクスポートを許可するメソッドであり、それらは次のとおりです: STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM()、および AsGml()。  
   
  このメソッドは正確ではありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  最初に、そのインスタンス自体が重なる、無効な `LineString` インスタンスを作成し、`STIsValid()` を使用して、無効なインスタンスであることを確認する例を示します。 `STIsValid()` は、無効なインスタンスに対して値 0 を返します。  
   
 ```  

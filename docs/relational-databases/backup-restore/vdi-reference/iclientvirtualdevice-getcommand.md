@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847593"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
@@ -46,12 +46,12 @@ HRESULT IClientVirtualDevice::GetCommand (
 | VD_E_TIMEOUT | 使用可能なコマンドがなく、タイムアウトになりました。 |
 | VD_E_ABORT | クライアントまたはサーバーが SignalAbort を使用して強制的にシャットダウンされました。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 VD_E_CLOSE が返された場合は、SQL Server によってデバイスが閉じられたことを意味します。 これは通常のシャットダウンの一部です。 すべてのデバイスが閉じられると、クライアントによって IClientVirtualDeviceSet2::Close が呼び出され、仮想デバイス セットが閉じられます。
 
 このルーチンで、コマンドを待機するためにブロックする必要がある場合、スレッドは警告可能な状態のまま維持されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

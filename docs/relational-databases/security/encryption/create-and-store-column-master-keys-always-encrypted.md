@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557839"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Always Encrypted の列マスター キーを作成して保存する
@@ -206,7 +206,7 @@ Always Encrypted の列マスター キーは、Cryptography API (CAPI) を実�
 
 CSP は、Always Encrypted で使用される RSA アルゴリズムをサポートする必要があります。
 
-Windows には RSA をサポートし、テスト目的で使用できる、(HSM ではサポートされない) 次のソフトウェアベースの CSP が含まれています:Microsoft Enhanced RSA および AES Cryptographic Provider。
+Windows には RSA をサポートし、テスト目的で使用できる、(HSM ではサポートされない) 次のソフトウェアベースの CSP が含まれています: Microsoft Enhanced RSA および AES Cryptographic Provider。
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-capicsp"></a>CAPI/CSP を使用してキー ストア内の列マスター キーを作成する
 

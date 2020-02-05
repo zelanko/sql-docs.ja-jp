@@ -15,10 +15,10 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 366e307220d08192df04b95201758751cce90112
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297669"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (連結) (SSIS 式)
@@ -43,7 +43,7 @@ character_expression1 + character_expression2
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この式では、DT_STR データ型および DT_WSTR データ型のいずれか一方、または両方を使用できます。  
   
  DT_STR データ型と DT_WSTR データ型を連結すると、DT_WSTR データ型の結果が返されます。 文字列の長さは、元の文字列の長さを文字数で表した値の合計です。  
@@ -52,7 +52,7 @@ character_expression1 + character_expression2
   
  両方の式のデータ型は同じであるか、または一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 たとえば、文字列 "Order date is" と列 **OrderDate** を連結する場合、 **OrderDate** の値は暗黙的に文字列データ型に変換されます。 2 つの数値を連結するには、両方の数値を文字列データ型に明示的にキャストする必要があります。  
   
- 連結は、1 つの BLOB データ型のみを使用できます。DT_TEXT、DT_NTEXT または DT_IMAGE。  
+ BLOB データ型を連結する場合、DT_TEXT、DT_NTEXT、または DT_IMAGE のいずれか 1 つのみを連結できます。  
   
  要素のいずれかが NULL の場合、結果は NULL になります。  
   

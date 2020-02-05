@@ -13,10 +13,10 @@ ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 605911ebe60c7467db2792737426cc98ce67b52d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113132"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>既存の列を XML 列に変更する方法
@@ -35,7 +35,7 @@ ALTER TABLE T
   ALTER COLUMN Col2 xml;
 ```  
   
-`xml` 型の列は、型指定されていない XML から型指定された XML に変更できます。 例:  
+`xml` 型の列は、型指定されていない XML から型指定された XML に変更できます。 次に例を示します。  
   
 ```sql
 CREATE TABLE T (Col1 int primary key, Col2 xml);

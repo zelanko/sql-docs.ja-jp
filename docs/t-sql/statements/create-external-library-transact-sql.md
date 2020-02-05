@@ -20,10 +20,10 @@ ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cb698f95037cb6ab39c5a98dbf725f9decc66cd0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73536256"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
@@ -204,7 +204,7 @@ R は Azure SQL Database でサポートされています。
 パッケージの言語を指定します。 値は `R`、`Python`、または外部言語の名前にできます (「[CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)」を参照してください)。
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 R 言語の場合、ファイルを使用するときに、Windows の .ZIP 拡張子を使用して、ZIP アーカイブ ファイルの形式でパッケージを準備する必要があります。 
@@ -239,7 +239,7 @@ GRANT CREATE EXTERNAL LIBRARY to user
 
 ファイル パスを使って外部アセンブリを作成するには、ユーザーが Windows 認証済みログインであるか、sysadmin 固定サーバー ロールのメンバーであることが必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 ### <a name="add-an-external-library-to-a-database"></a>外部ライブラリをデータベースに追加する  
@@ -273,7 +273,7 @@ SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えて�
 + `packageA` は `packageB` に依存関係があります
 + `packageB` は `packageC` に依存関係があります
 
-`packageA` を正常にインストールするには、`packageA` を SQL Server に追加するのと同時に、`packageB` と `packageC` 用のライブラリを作成する必要があります。 必要なパッケージのバージョンも必ず確認してください。
+`packageA` を正常にインストールするには、`packageB` を SQL Server に追加するのと同時に、`packageC` と `packageA` 用のライブラリを作成する必要があります。 必要なパッケージのバージョンも必ず確認してください。
 
 実際には、一般的なパッケージのパッケージの依存関係は、通常、この単純な例よりもはるかに複雑です。 たとえば、**ggplot2** には 30 を超えるパッケージが必要で、それらのパッケージには、サーバーで入手できない追加のパッケージが必要な場合があります。 パッケージが不足していたり、パッケージのバージョンが違っていたりすると、インストールが失敗する可能性があります。
 
@@ -302,7 +302,7 @@ SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えて�
 
     必要なパッケージが既にインスタンスにアップロードされている場合、もう一度追加する必要はありません。 既存のパッケージのバージョンが正しいことだけを確認してください。 
     
-    `sp_execute_external_script` を最初に実行してパッケージ `packageA` をインストールすると、必要なパッケージ `packageC` と `packageB` が正しい順序でインストールされます。
+    `packageC` を最初に実行してパッケージ `packageB` をインストールすると、必要なパッケージ `sp_execute_external_script` と `packageA` が正しい順序でインストールされます。
 
     ただし、必要なパッケージが使用できない場合、ターゲット パッケージ `packageA` のインストールが失敗します。
 

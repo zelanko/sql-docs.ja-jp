@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847473"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
@@ -34,7 +34,7 @@ HRESULT IServerVirtualDeviceSet2::Close ();
 |---|---|
 | VD_E_PROTOCOL | デバイスがまだ開いたままでした。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 デバイスを閉じる前に仮想デバイス セットを閉じないでください。 このような状況が発生した場合は、VD_E_PROTOCOL が返されます。 このアクションを実行すると、Close で共有メモリのマッピングがすぐに解放されます。 サーバーで仮想デバイス インターフェイスから返されたリソースの所有権が引き続き要求される場合、サーバーがアクセス違反となる可能性があります。 インターフェイスで、SignalAbort 処理が実行されます。
 
@@ -44,6 +44,6 @@ HRESULT IServerVirtualDeviceSet2::Close ();
 
 COM ライブラリがアンロードされる前に、完了エージェントを確実に終了させることが重要です。 完了エージェントが呼び出し元に戻される前にライブラリがアンロードされた場合、そのプロセスで命令違反が発生する可能性があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

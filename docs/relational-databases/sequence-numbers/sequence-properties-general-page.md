@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126986"
 ---
 # <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
@@ -37,10 +37,10 @@ ms.locfileid: "68126986"
  **[シーケンス スキーマ]**  
  このシーケンスを所有するスキーマを指定します。  
   
- **データ型**  
- シーケンスを任意の整数型として定義できます。 この機能には、次が含まれます。  
+ **データの種類**  
+ シーケンスを任意の整数型として定義できます。 これには次のものが含まれます  
   
-|データ型|範囲|  
+|データ型|Range|  
 |---------------|-----------|  
 |**tinyint**|0 ～ 255|  
 |**smallint**|-32,768 ～ 32,767|  

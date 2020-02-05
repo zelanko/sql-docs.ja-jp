@@ -12,10 +12,10 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285877"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
@@ -33,7 +33,7 @@ ms.locfileid: "71285877"
 ![変換先の選択](../../integration-services/import-export-data/media/choose-destination.png)
 
 ## <a name="choose-a-destination"></a>[変換先の選択]
- **変換先**  
+ **宛先**  
  変換先を指定するには、変換先にデータをインポートすることができるデータ プロバイダーを選択します。
  
 -   **必要なデータ プロバイダーは通常、その名前で判断できます**。プロバイダーの名前には通常、変換先の名前が含まれているからです。例: *フラット ファイル*変換先、Microsoft *Excel*、Microsoft *Access*、.NET Framework Data Provider for *SqlServer*、.NET Framework Data Provider for *Oracle* など。

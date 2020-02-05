@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c73649e2a4301e94f8e68504222cc0122061f25f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847433"
 ---
 # <a name="iservervirtualdeviceclosedevice-vdi"></a>IServerVirtualDevice::CloseDevice (VDI)
@@ -35,10 +35,10 @@ HRESULT IServerVirtualDevice::CloseDevice ();
 | VD_E_CLOSE | デバイスは既に閉じられています。 |
 | VD_E_ABORT | インターフェイスは中止状態です。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 異常終了を強制するために SignalAbort を使用すると、CloseDevice は不要になります。 SignalAbort が使用された後に CloseDevice が呼び出された場合、何のアクションも実行されません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

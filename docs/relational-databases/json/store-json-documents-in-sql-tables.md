@@ -10,10 +10,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096027"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server または SQL Database に JSON ドキュメントを保存する
@@ -27,7 +27,7 @@ SQL Server と Azure SQL Database には、ネイティブ JSON 機能があり�
 
 ## <a name="classic-tables"></a>クラシック テーブル
 
-SQL Server または SQL Database に JSON ドキュメントを保存する最も簡単な方法は、ドキュメントの ID とドキュメントのコンテンツが含まれる 2 列のテーブルを作成することです。 例:
+SQL Server または SQL Database に JSON ドキュメントを保存する最も簡単な方法は、ドキュメントの ID とドキュメントのコンテンツが含まれる 2 列のテーブルを作成することです。 次に例を示します。
 
 ```sql
 create table WebSite.Logs (
@@ -40,7 +40,7 @@ create table WebSite.Logs (
 
 nvarchar(max) データ型では、サイズが最大 2 GB の JSON ドキュメントを保存できます。 ただし、JSON ドキュメントが間違いなく 8 KB を超えない場合、パフォーマンス上の理由から、NVARCHAR(max) ではなく NVARCHAR(4000) を利用することをお勧めします。
 
-先の例で作成したサンプル テーブルでは、有効な JSON ドキュメントが `log` 列に保存されているものと想定しています。 有効な JSON が `log` 列に間違いなく保存されている場合、その列で CHECK 制約を追加できます。 例:
+先の例で作成したサンプル テーブルでは、有効な JSON ドキュメントが `log` 列に保存されているものと想定しています。 有効な JSON が `log` 列に間違いなく保存されている場合、その列で CHECK 制約を追加できます。 次に例を示します。
 
 ```sql
 ALTER TABLE WebSite.Logs
@@ -50,7 +50,7 @@ ALTER TABLE WebSite.Logs
 
 誰かがテーブルにドキュメントを挿入したり、テーブルのドキュメントを更新したりするたびに、JSON ドキュメントが正しく書式設定されていることがこの制約により検証されます。 制約がないとき、テーブルは挿入のために最適化されます。JSON ドキュメントは何の処理もなく列に直接追加されるためです。
 
-テーブルに JSON ドキュメントを保存するとき、標準の Transact-SQL 言語を使用し、ドキュメントにクエリを実行できます。 例:
+テーブルに JSON ドキュメントを保存するとき、標準の Transact-SQL 言語を使用し、ドキュメントにクエリを実行できます。 次に例を示します。
 
 ```sql
 SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
@@ -69,7 +69,7 @@ SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.durat
 
 クエリを実行する際、一部のプロパティでドキュメントが検索されることがよくある場合 (JSON ドキュメントの `severity` プロパティなど)、そのプロパティに従来の NONCLUSTERED インデックスを追加し、クエリを速めることができます。
 
-指定のパスで (つまり、パス `$.severity` で) JSON 列から JSON 値を公開する計算列を作成し、この計算列で標準インデックスを作成できます。 例:
+指定のパスで (つまり、パス `$.severity` で) JSON 列から JSON 値を公開する計算列を作成し、この計算列で標準インデックスを作成できます。 次に例を示します。
 
 ```sql
 create table WebSite.Logs (
@@ -125,7 +125,7 @@ create table WebSite.Logs (
 
 メモリ最適化テーブルは、頻繁に変更するドキュメントに最適な選択肢です。 メモリ最適化テーブルの利用を検討するとき、パフォーマンスについても考慮してください。 メモリ最適化コレクションでは、可能であれば、JSON ドキュメントに NVARCHAR(max) ではなく NVARCHAR(4000) を使用してください。パフォーマンスが劇的に改善されることがあります。
 
-クラシック テーブルの場合と同様に、計算列を使用して、メモリ最適化テーブルで公開するフィールドでインデックスを追加できます。 例:
+クラシック テーブルの場合と同様に、計算列を使用して、メモリ最適化テーブルで公開するフィールドでインデックスを追加できます。 次に例を示します。
 
 ```sql
 create table WebSite.Logs (
@@ -141,7 +141,7 @@ create table WebSite.Logs (
 
 パフォーマンスを最大化するために、プロパティの値を保持できるよう、JSON 値をできるだけ小さい型にキャスト変換します。 先の例では、**tinyint** が使用されていました。
 
-また、ストアド プロシージャに JSON ドキュメントを更新する SQL クエリを置き、ネイティブ コンパイルの利点を活かすことができます。 例:
+また、ストアド プロシージャに JSON ドキュメントを更新する SQL クエリを置き、ネイティブ コンパイルの利点を活かすことができます。 次に例を示します。
 
 ```sql
 CREATE PROCEDURE WebSite.UpdateData(@Id int, @Property nvarchar(100), @Value nvarchar(100))

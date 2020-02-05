@@ -11,10 +11,10 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296649"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
@@ -28,24 +28,24 @@ ms.locfileid: "71296649"
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|BIGINT|イベント メッセージの一意の ID。|  
-|Operation_id|BIGINT|操作の種類。<br /><br /> 操作の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。|  
+|Event_message_ID|bigint|イベント メッセージの一意の ID。|  
+|Operation_id|bigint|操作の種類。<br /><br /> 操作の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。|  
 |Message_time|datetimeoffset(7)|メッセージが作成された時刻。|  
-|Message_type|SMALLINT|表示されるメッセージの種類。 メッセージの種類の詳細については、「[catalog.operation_messages &#40;SSISDB データベース&#41](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)」を参照してください。|  
-|Message_source_type|SMALLINT|メッセージのソース。|  
+|Message_type|smallint|表示されるメッセージの種類。 メッセージの種類の詳細については、「[catalog.operation_messages &#40;SSISDB データベース&#41](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)」を参照してください。|  
+|Message_source_type|smallint|メッセージのソース。|  
 |message|nvarchar(max)|メッセージのテキストです。|  
-|Extended_info_id|BIGINT|操作メッセージに関連する追加情報の ID については、[catalog.extended_operation_info &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) ビューを参照してください。|  
+|Extended_info_id|bigint|操作メッセージに関連する追加情報の ID については、[catalog.extended_operation_info &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) ビューを参照してください。|  
 |Package_name|nvarchar(260)|パッケージ ファイルの名前。|  
 |Event_name|nvarchar(1024)|メッセージに関連付けられた実行時イベント。|  
-|Message_source_name|nvarchar (4000)|メッセージのソースであるパッケージ コンポーネント。|  
+|Message_source_name|nvarchar(4000)|メッセージのソースであるパッケージ コンポーネント。|  
 |Message_source_id|nvarchar(38)|メッセージのソースの一意の ID。|  
-|Subcomponent_name|nvarchar (4000)|メッセージのソースであるデータ フロー コンポーネント。<br /><br /> メッセージが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エンジンによって返されると、SSIS.Pipeline がこの列に表示されます。|  
+|Subcomponent_name|nvarchar(4000)|メッセージのソースであるデータ フロー コンポーネント。<br /><br /> メッセージが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エンジンによって返されると、SSIS.Pipeline がこの列に表示されます。|  
 |Package_path|nvarchar(max)|パッケージ内のコンポーネントの一意のパス。|  
 |Execution_path|nvarchar(max)|親パッケージからコンポーネントが実行されるポイントまでの完全パス。<br /><br /> このパスは、コンポーネントの繰り返しもキャプチャします。|  
 |threadID|INT|メッセージがログに記録されるときに実行しているスレッドの ID。|  
 |Message_code|INT|メッセージに関連付けられたコード。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューに表示されるメッセージ ソースの種類は次のとおりです。  
   
 |**message_source_type**|[説明]|  

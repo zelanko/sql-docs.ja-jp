@@ -11,10 +11,10 @@ ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012331"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>remote data archive サーバー構成オプションの構成
@@ -24,7 +24,7 @@ ms.locfileid: "68012331"
   
  **remote data archive** には次の値を指定できます。  
   
-|[値]|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |0|サーバー上のデータベースとテーブルを Stretch に対して有効にできません。|  
 |1|サーバー上のデータベースとテーブルを Stretch に対して有効にできます。|  

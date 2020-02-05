@@ -14,10 +14,10 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991143"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>[既存のセカンダリ レプリカへの接続] ページ - Always On 可用性グループ
@@ -31,7 +31,7 @@ ms.locfileid: "67991143"
  **接続ユーザー**  
  接続が確立されると、サーバー インスタンスに接続されるアカウントを表示します。 この列で、特定のサーバー インスタンスについて **"未接続"** と表示される場合、 **[接続]** または **[すべての接続]** ボタンのいずれかをクリックする必要があります。  
   
- **[接続]**  
+ **のインスタンスに接続するときには、**  
  このサーバー インスタンスが、接続する他のサーバー インスタンスとは異なるアカウントで実行されている場合にクリックします。  
   
  **[すべての接続]**  
@@ -47,6 +47,6 @@ ms.locfileid: "67991143"
 -   [可用性グループへのデータベース追加ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

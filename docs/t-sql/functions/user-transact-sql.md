@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844323"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
@@ -46,7 +46,7 @@ USER
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  USER では、USER_NAME システム関数と同じ機能が提供されます。  
   
  USER は、CREATE TABLE または ALTER TABLE ステートメントで DEFAULT 制約を指定して実行するか、標準的な関数として使用します。  
@@ -55,7 +55,7 @@ USER
   
  Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、グループの名前ではなく Windows プリンシパルの名前が USER により返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-user-to-return-the-database-user-name"></a>A. USER を使用してデータベース ユーザー名を返す  
  次の例では、変数を `char` 型として宣言し、USER の現在値をこの変数に割り当てた後、テキストの説明を付けてこの変数を出力します。  

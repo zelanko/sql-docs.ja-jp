@@ -11,10 +11,10 @@ ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296515"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (SSISDB データベース)
@@ -32,13 +32,13 @@ ms.locfileid: "71296515"
 |object_id|**bigint**|オブジェクトの一意の ID。|  
 |object_type|**smallint**|オブジェクトの種類。 プロジェクトには、値 `20` が表示されます。|  
 |object_name|**sysname(nvarchar(128))**|オブジェクトの名前。|  
-|description|**nvarchar(1024)**|プロジェクトの説明。|  
+|description|**nvarchar(1024)**|プロジェクトの説明です。|  
 |created_by|**nvarchar(128)**|オブジェクトをカタログに追加したユーザーの名前。|  
 |created_time|**datetimeoffset**|オブジェクトがカタログに追加された日時。|  
 |restored_by|**nvarchar(128)**|オブジェクトを復元したユーザーの名前。|  
 |last_restored_time|**datetimeoffset**|オブジェクトが前回復元された日時。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、カタログの各オブジェクトの行を表示します。  
   
 ## <a name="permissions"></a>アクセス許可  

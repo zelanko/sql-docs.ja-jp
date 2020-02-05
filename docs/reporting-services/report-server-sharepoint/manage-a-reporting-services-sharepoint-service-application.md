@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580086"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint サービス アプリケーションの管理
@@ -52,7 +52,7 @@ ms.locfileid: "65580086"
   
 ### <a name="report-settings"></a>レポートの設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
 |外部イメージのタイムアウト|既定値は 600 秒です。|  
 |スナップショットの圧縮|既定値は SQL です|  
@@ -63,7 +63,7 @@ ms.locfileid: "65580086"
   
 ### <a name="session-settings"></a>セッションの設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
 |セッションのタイムアウト|既定値は 600 秒です。|  
 |セッション Cookie の使用|既定値は TRUE です。|  
@@ -71,16 +71,16 @@ ms.locfileid: "65580086"
   
 ### <a name="system-settings-for-logging"></a>ログ記録用のシステム設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
-|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 をクリックします。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
+|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
 |実行ログの保持日数|既定の日数は 60 日です。|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-### <a name="security-settings"></a>セキュリティ設定
+### <a name="security-settings"></a>セキュリティの設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
 |統合セキュリティを有効にする|既定値は TRUE です。<br /><br /> レポートを要求したユーザーの Windows セキュリティ トークンを使用してレポート データ ソースに接続するかどうかを指定します。|  
 |レポート定義の読み込みを有効にする|既定値は TRUE です。|  
@@ -89,10 +89,10 @@ ms.locfileid: "65580086"
   
 ### <a name="client-settings"></a>クライアントの設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
 |レポート ビルダーのダウンロードを有効にする|既定値は TRUE です。<br /><br /> レポート ビルダー アプリケーションのダウンロード ボタンをクライアントに表示するかどうかを指定します。|  
-|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 レポート ビルダー 3.0 を ClickOnce アプリケーションとして起動するには、「 https://\<コンピューター名>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application」と入力します。|  
+|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定はオプションです。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 レポート ビルダー 3.0 を ClickOnce アプリケーションとして起動するには、「 https://\<コンピューター名>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application」と入力します。|  
 |クライアントの印刷を有効にする|既定値は TRUE です。<br /><br /> ユーザーがクライアント側のコントロール (印刷オプションを提供します) をダウンロードできるかどうかを指定します。|  
 |セッション タイムアウトの編集|既定値は 7200 秒です。|  
 |セッション キャッシュ制限の編集|既定値は 5 です。|  
@@ -101,7 +101,7 @@ ms.locfileid: "65580086"
 
  レポート サブスクリプションおよびデータ ドリブン サブスクリプションによって作成されたジョブなど、実行中のジョブを表示および削除できます。 ページはサブスクリプションの管理には使用されるのではなく、サブスクリプションによってトリガーされるジョブです。 たとえば、1 時間に 1 回実行するようにスケジュールされているサブスクリプションは、 **[ジョブの管理]** ページに 1 時間に 1 回表示されるジョブを生成します。  
   
- ![実行中のジョブの管理](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "実行中のジョブの管理")  
+ ![manage running jobs](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "manage running jobs")  
   
 ## <a name="key-management"></a>キー管理
  次の表は、キー管理ページをまとめたものです。  
@@ -152,7 +152,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  パスワードを入力します。  
   
  **[パスワードの確認入力]**  
- 再度、パスワードを入力します。  
+ パスワードを再入力します。  
 
 ## <a name="e-mail-settings"></a>電子メールの設定
 

@@ -23,13 +23,13 @@ ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1b8b1b0b5a9254382490272bd92405f52ed90a3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927605"
 ---
-# <a name="userid-transact-sql"></a>USER_ID (Transact-SQL)
+# <a name="user_id-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   データベース ユーザーの ID 番号を返します。  
@@ -53,14 +53,14 @@ USER_ID ( [ 'user' ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ときに *ユーザー* は省略すると、現在のユーザーと見なされます。 パラメーターに NULL が含まれていると、NULL が返されます。EXECUTE AS の後で USER_ID が呼び出されると、USER_ID は権限を借用したコンテキストの ID を返します。  
   
  特定のデータベース ユーザーにマップされない Windows プリンシパルがグループのメンバーシップでデータベースにアクセスした場合、USER_ID では 0 (public の ID) が返されます。 このプリンシパルがスキーマを指定せずにオブジェクトを作成した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では Windows プリンシパルにマップされた暗黙のユーザーとスキーマが作成されます。 このときに作成されたユーザーを使用して、データベースに接続することはできません。 暗黙のユーザーにマップされた Windows プリンシパルが USER_ID を呼び出すと、暗黙のユーザーの ID が返されます。  
   
  USER_ID は、選択リストの中、WHERE 句の中、また式を使える所ならどこにでも使用できます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` ユーザー `Harold` の ID 番号が返されます。  
   
 ```  

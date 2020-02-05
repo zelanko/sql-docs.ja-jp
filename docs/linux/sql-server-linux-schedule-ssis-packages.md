@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065161"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>cron を使用して Linux 上で SQL Server Integration Services パッケージの実行スケジュールを設定する
@@ -23,7 +23,7 @@ Windows 上で SQL Server Integration Services (SSIS) と SQL Server を実行�
 
 この記事では、SSIS パッケージの実行を自動化する方法を示す例を紹介します。 これらの例は、Red Hat Enterprise で実行するように記述されています。 このコードは、Ubuntu などの他の Linux ディストリビューションでも同様です。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 cron サービスを使用してジョブを実行する前に、そのサービスがお使いのコンピューター上で実行されているかどうかを確認します。
 
@@ -75,7 +75,7 @@ crontab ファイルの形式の詳細な説明を取得するには、`man 5 cr
 
 ![crontab 形式の詳細な説明の一部](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
-## <a name="related-content-about-ssis-on-linux"></a>SSIS on Linux の関連コンテンツ
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS の関連コンテンツ
 -   [SSIS を使用して Linux 上でデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
 -   [SQL Server Integration Services (SSIS) on Linux をインストールする](sql-server-linux-setup-ssis.md)
 -   [ssis-conf を使用して SQL Server Integration Services on Linux を構成する](sql-server-linux-configure-ssis.md)

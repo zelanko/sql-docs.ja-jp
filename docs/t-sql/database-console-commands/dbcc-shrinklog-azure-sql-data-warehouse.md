@@ -12,16 +12,16 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930316"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-現在の [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースの "*アプライアンス全体*" でトランザクション ログのサイズを減らします。 トランザクション ログの圧縮するのには、データを最適化します。 時間の経過と共に、データベースのトランザクション ログは、断片化され非効率的になります。 断片化を軽減し、ログのサイズを小さくするには、DBCC SHRINKLOG を使用します。
+現在の  *データベースの "* アプライアンス全体[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]" でトランザクション ログのサイズを減らします。 トランザクション ログの圧縮するのには、データを最適化します。 時間の経過と共に、データベースのトランザクション ログは、断片化され非効率的になります。 断片化を軽減し、ログのサイズを小さくするには、DBCC SHRINKLOG を使用します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +49,7 @@ ALTER SERVER STATE アクセス許可が必要です。
 ## <a name="general-remarks"></a>全般的な解説  
 DBCC SHRINKLOG では、データベースのメタデータに格納されているログのサイズは変更されません。 メタデータには引き続き CREATE DATABASE または ALTER DATABASE ステートメントで指定された LOG_SIZE パラメーターが含まれます。
   
-## <a name="examples"></a>使用例 
+## <a name="examples"></a>例 
 ### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. トランザクション ログを CREATE DATABASE で指定された元のサイズに圧縮します。  
 Addresses データベースが作成されたとき、Addresses データベースのトランザクション ログは 100 MB に設定されたものとします。 つまり、Addresses の CREATE DATABASE ステートメントは LOG_SIZE = 100 MB に設定されていました。 ここでは、ログが 150 MB に増えたので、100 MB に戻すものとします。
   

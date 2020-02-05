@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944489"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
@@ -53,10 +53,10 @@ REPLICATE ( string_expression ,integer_expression )
 ## <a name="return-types"></a>戻り値の型  
  同じ型を返します *string_expression*です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-replicate"></a>A. REPLICATE を使用する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの取り扱い品目コードの前に `0` という文字を 4 回繰り返します。  
+ 次の例では、`0` データベースの取り扱い品目コードの前に [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という文字を 4 回繰り返します。  
   
 ```  
 SELECT [Name]  
@@ -117,10 +117,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C: REPLICATE を使用する  
- 次の例では、`ItemCode` 値の前に `0` という文字を 4 回繰り返します。  
+### <a name="c-using-replicate"></a>C. REPLICATE を使用する  
+ 次の例では、`0` 値の前に `ItemCode` という文字を 4 回繰り返します。  
   
 ```  
 -- Uses AdventureWorks  

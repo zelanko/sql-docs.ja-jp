@@ -15,10 +15,10 @@ ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3e7338e9068c1b8c58623cf744022a165ce90eda
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71952709"
 ---
 # <a name="delete-a-trace-transact-sql"></a>トレースの削除 (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "71952709"
   
 ### <a name="to-delete-a-trace"></a>トレースを削除するには  
   
-1.  `@status = 0` を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
+1.  **を指定して**sp_trace_setstatus`@status = 0` を実行し、トレースを停止します。  
   
-2.  `@status = 2` を指定して **sp_trace_setstatus** を実行し、トレースを閉じてトレースの情報をサーバーから削除します。  
+2.  **を指定して**sp_trace_setstatus`@status = 2` を実行し、トレースを閉じてトレースの情報をサーバーから削除します。  
   
 > [!NOTE]  
 >  トレースを閉じるには、最初にそのトレースを停止する必要があります。  

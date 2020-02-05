@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22b11ff1f9a6ed218b4c63c2f22bfb6e2d441703
-ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74550196"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
@@ -60,7 +60,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 ## <a name="examples"></a>例  
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. テーブルで sql_variant を使用する  
- 次の例では、`colB` =`1689` の `colA` 値 `46279.1` に関する `SQL_VARIANT_PROPERTY` 情報を取得しています。`tableA` には `sql_variant` 型の `colA` と、`colB` が含まれているものとします。  
+ 次の例では、`SQL_VARIANT_PROPERTY``colA``46279.1` の `colB` 値  = に関する `1689` 情報を取得しています。`tableA` には `colA` 型の `sql_variant` と、`colB` が含まれているものとします。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -83,7 +83,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 変数として sql_variant を使用する   
- 次の例では、変数 @v1 に関する `SQL_VARIANT_PROPERTY` の情報を取得します。  
+ 次の例では、変数 `SQL_VARIANT_PROPERTY` に関する @v1 の情報を取得します。  
   
 ```sql    
 DECLARE @v1 sql_variant;  

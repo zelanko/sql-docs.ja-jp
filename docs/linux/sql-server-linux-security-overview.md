@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.openlocfilehash: 8a9094977597fd7c2d76f2c80a1773c176b9c6dc
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929807"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>SQL Server on Linux に対するセキュリティの制限事項
@@ -28,6 +28,6 @@ ms.locfileid: "70929807"
 
 SQL Server で使用できるセキュリティ機能の詳細については、「[SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 一般的なセキュリティ タスクについては、[SQL Server on Linux のセキュリティ機能の概要](sql-server-linux-security-get-started.md)に関する記事を参照してください。 TCP ポート番号または SQL Server ディレクトリの変更と、トレース フラグまたは照合順序の構成を行うスクリプトについては、「[mssql-conf を使用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md)」を参照してください。
