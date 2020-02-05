@@ -18,10 +18,10 @@ ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 392b39ae14819aa645e4714189f17e6d4604bf44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140922"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (geometry データ型)
@@ -38,21 +38,21 @@ ms.locfileid: "68140922"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- `STOverlaps()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
+ **を呼び出したインスタンスと比較される、別の**geometry`STOverlaps()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  2 つの **geometry** インスタンスが重なるのは、重なる部分を表す領域がインスタンスと同次元にあり、その領域がどちらのインスタンスとも異なる場合です。  
   
- **geometry** インスタンスが重なる地点の次元が異なる場合、`STOverlaps()` は常に 0 を返します。  
+ `STOverlaps()`geometry **インスタンスが重なる地点の次元が異なる場合、** は常に 0 を返します。  
   
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STOverlaps()` を使用して 2 つの **geometry** インスタンスが重なっているかどうかをテストするコード例を次に示します。  
   
 ```  

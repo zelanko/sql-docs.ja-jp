@@ -11,10 +11,10 @@ ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 07e92734aebb13d04d715a727c8b2bbe2e0dc785
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293267"
 ---
 # <a name="create-infocube-for-transaction-data"></a>[トランザクション データのインフォキューブの作成]
@@ -46,7 +46,7 @@ ms.locfileid: "71293267"
  **長い説明**  
  新しいインフォキューブの説明を入力します。  
   
- **保存とアクティブ化**  
+ **保存と有効化**  
  新しいインフォキューブを保存してアクティブ化します。  
   
 ## <a name="infocube-transfer-structure-options"></a>[インフォキューブ転送構造] のオプション  
@@ -61,13 +61,13 @@ ms.locfileid: "71293267"
  **インフォオブジェクト**  
  データ フロー列に関連付けられているインフォオブジェクトの名前を表示します。  
   
- **[種類]**  
+ **Type**  
  データ フロー列に関連付けられているインフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |CHA|特性|  
-|UNI|単位|  
+|UNI|Units|  
 |KYF|主要データ|  
 |TIM|時間の特性|  
   
