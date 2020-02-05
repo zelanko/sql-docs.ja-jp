@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 951ff4d63e2bd2739fda49ceafebf916089be45a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119120"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
@@ -63,12 +63,12 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ## <a name="return-types"></a>戻り値の型
 **datetime**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DATETIMEFROMPARTS` は、完全に初期化された **datetime** 値を返します。 `DATETIMEFROMPARTS` は、必須引数に 1 つでも無効な値が含まれている場合、エラーを生成します。 `DATETIMEFROMPARTS` は、必須引数に 1 つでも NULL 値が含まれている場合、NULL を返します。
   
 この関数は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー以降のリモート処理に対応しています。 バージョンが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前の場合、サーバーのリモート処理には対応していません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```sql
 SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;  

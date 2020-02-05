@@ -25,13 +25,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9b0e4e37eef574fd50d28e02c4f92ee1805c953
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117619"
 ---
-# <a name="susername-transact-sql"></a>SUSER_NAME (Transact-SQL)
+# <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
 ユーザーのログイン識別名を返します。  
@@ -52,14 +52,14 @@ _server\_user\_id_
 ## <a name="return-types"></a>戻り値の型  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では、サーバー ユーザー識別番号 (SUID) の代わりにセキュリティ識別番号 (SID) が使用されます。  
   
 SUSER_NAME では、**syslogins** システム テーブル内にエントリがあるログインに対してのみログイン名が返されます。  
   
 SUSER_NAME は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 パラメーターが指定されていない場合でも、SUSER_NAME の後に括弧を使用します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、ログイン識別番号 `1` のユーザーのログイン識別名を返します。  
   
 ```  

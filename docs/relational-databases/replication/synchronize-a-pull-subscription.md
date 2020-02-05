@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e0606b6a6895ffd63c219e312a727157d1e2ad86
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769405"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287047"
 ---
 # <a name="synchronize-a-pull-subscription"></a>プル サブスクリプションの同期
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68769405"
   
 3.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
-4.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
+4.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
 5.  **[閉じる]** をクリックします。  
   
@@ -85,13 +85,13 @@ ms.locfileid: "68769405"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **\@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **\@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode** =  **\@publisher_security_mode**  
   
     -   **-SubscriberLogin**  
   
@@ -129,13 +129,13 @@ ms.locfileid: "68769405"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **\@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **\@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode** =  **\@publisher_security_mode**  
   
     -   **-SubscriberLogin**  
   
@@ -207,7 +207,7 @@ SET Publication=AdvWorksSalesOrdersMerge
   
 4.  次のいずれかの方法で、サブスクライバーのディストリビューション エージェントを起動します。  
   
-    -   手順 2. で作成した <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> インスタンスの <xref:Microsoft.SqlServer.Replication.TransPullSubscription> メソッドを呼び出します。 このメソッドは、ディストリビューション エージェントを非同期的に起動するため、エージェント ジョブの実行中、制御が直ちにアプリケーションに返されます。 [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] サブスクライバーの場合、または、<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> の値に **false** (既定値) を指定して作成されたサブスクリプションの場合、このメソッドを呼び出すことはできません。  
+    -   手順 2. で作成した <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> インスタンスの <xref:Microsoft.SqlServer.Replication.TransPullSubscription> メソッドを呼び出します。 このメソッドは、ディストリビューション エージェントを非同期的に起動するため、エージェント ジョブの実行中、制御が直ちにアプリケーションに返されます。 [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] サブスクライバーの場合、または、**の値に**false<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (既定値) を指定して作成されたサブスクリプションの場合、このメソッドを呼び出すことはできません。  
   
     -   <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> プロパティから <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> クラスのインスタンスを取得し、 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> メソッドを呼び出します。 このメソッドにより、エージェントが同期的に起動され、制御は実行中のエージェント ジョブに残ります。 同期実行の間、エージェントの実行中に <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> イベントを処理できます。  
   
@@ -234,7 +234,7 @@ SET Publication=AdvWorksSalesOrdersMerge
   
 4.  次のいずれかの方法で、サブスクライバーのマージ エージェントを起動します。  
   
-    -   手順 2. で作成した <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> インスタンスの <xref:Microsoft.SqlServer.Replication.MergePullSubscription> メソッドを呼び出します。 このメソッドは、マージ エージェントを非同期的に起動するため、エージェント ジョブの実行中、制御が直ちにアプリケーションに返されます。 [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] サブスクライバーの場合、または、<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> の値に **false** (既定値) を指定して作成されたサブスクリプションの場合、このメソッドを呼び出すことはできません。  
+    -   手順 2. で作成した <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> インスタンスの <xref:Microsoft.SqlServer.Replication.MergePullSubscription> メソッドを呼び出します。 このメソッドは、マージ エージェントを非同期的に起動するため、エージェント ジョブの実行中、制御が直ちにアプリケーションに返されます。 [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] サブスクライバーの場合、または、**の値に**false<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (既定値) を指定して作成されたサブスクリプションの場合、このメソッドを呼び出すことはできません。  
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> プロパティから <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> クラスのインスタンスを取得し、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> メソッドを呼び出します。 このメソッドにより、マージ エージェントが同期的に起動され、制御は実行中のエージェント ジョブに残ります。 同期実行の間、エージェントの実行中に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> イベントを処理できます。  
   
@@ -831,7 +831,7 @@ End Try
   
 ## <a name="see-also"></a>参照  
  [データの同期](../../relational-databases/replication/synchronize-data.md)   
- [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

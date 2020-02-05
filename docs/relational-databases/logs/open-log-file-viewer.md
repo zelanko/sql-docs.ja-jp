@@ -13,10 +13,10 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68083984"
 ---
 # <a name="open-log-file-viewer"></a>[ログ ファイルの表示] を開く
@@ -25,7 +25,7 @@ ms.locfileid: "68083984"
   
 -   監査コレクション  
   
--   データ コレクション  
+-   データ収集  
   
 -   データベース メール  
   

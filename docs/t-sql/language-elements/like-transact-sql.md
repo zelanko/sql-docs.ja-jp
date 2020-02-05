@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75884003"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 句を使用する  
- 次の例では、`ESCAPE` 句とエスケープ文字を使用して、`mytbl2` テーブルの列 `c1` 内にある文字列 `10-15%` と完全に一致する文字列を検索します。  
+ 次の例では、`ESCAPE` 句とエスケープ文字を使用して、`10-15%` テーブルの列 `c1` 内にある文字列 `mytbl2` と完全に一致する文字列を検索します。  
   
 ```sql
 USE tempdb;  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. LIKE を _ ワイルドカード文字と共に使用する  
- 次の例では、`DimEmployee` テーブルで、`6` で始まり `2` で終る市外局番を持つすべての電話番号を検索します。 ワイルドカード文字 % は、検索パターンの末尾に含まれており、電話の列値の後続のすべての文字と一致します。  
+ 次の例では、`6` テーブルで、`2` で始まり `DimEmployee` で終る市外局番を持つすべての電話番号を検索します。 ワイルドカード文字 % は、検索パターンの末尾に含まれており、電話の列値の後続のすべての文字と一致します。  
   
 ```sql  
 -- Uses AdventureWorks  

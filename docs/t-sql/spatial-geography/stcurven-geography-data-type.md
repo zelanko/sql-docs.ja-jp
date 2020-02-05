@@ -18,10 +18,10 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042451"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography データ型)
@@ -43,12 +43,12 @@ ms.locfileid: "68042451"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  n < 1 のとき、**ArgumentOutOfRangeException** がスローされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の条件が発生するとき、**NULL** が返されます。  
   
 -   **geography** インスタンスが宣言されるが、インスタンス化されない  
@@ -59,7 +59,7 @@ ms.locfileid: "68042451"
   
 -   **geography** インスタンスのディメンションが等しくない (「[STDimension &#40;geography データ型&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)」参照)  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. CircularString に対して STCurveN() を使用する  
  次の例では、**CircularString** インスタンスで 2 番目の曲線を返します。  
