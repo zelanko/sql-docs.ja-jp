@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044313"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
@@ -69,7 +69,7 @@ ALTER SCHEMA schema_name
  *securable_name*  
  移動元のスキーマに含まれているセキュリティ保護可能なリソースの名前を指定します。このリソースが対象のスキーマに移動されます。名前を指定するときは、1 つまたは 2 つの要素で構成される名前を使用します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ユーザーとスキーマは完全に分離されています。  
   
  ALTER SCHEMA は、セキュリティ保護可能なリソースを同じデータベース内のスキーマ間で移動する場合にのみ使用できます。 スキーマ内のセキュリティ保護可能なリソースを変更または削除するには、そのリソースに固有の ALTER または DROP ステートメントを使用します。  
@@ -94,10 +94,10 @@ ALTER SCHEMA schema_name
   
  移動するセキュリティ保護可能なリソースに関連付けられているすべての権限は、移動時に削除されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. テーブルの所有権を譲渡する  
- 次の例では、テーブル `Address` をスキーマ `Person` からスキーマ `HumanResources` に移動し、スキーマを変更します。  
+ 次の例では、テーブル `HumanResources` をスキーマ `Address` からスキーマ `Person` に移動し、スキーマを変更します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -135,10 +135,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. テーブルの所有権を譲渡する  
- 次の例では、`dbo` スキーマで `Region` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  
+ 次の例では、`Region` スキーマで `dbo` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  
   
 ```  
 CREATE TABLE dbo.Region   

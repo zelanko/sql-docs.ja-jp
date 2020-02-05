@@ -11,15 +11,15 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959548"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
-## <a name="what-is-azure-data-studio"></a>Azure Data Studio とは?
+## <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
 Azure Data Studio とは、Windows、MacOS、Linux 上でオンプレミス プラットフォームおよびクラウド データ プラットフォームの Azure Data ファミリを使用するデータ プロフェッショナルを対象にした、新しいオープン ソースのクロスプラットフォーム デスクトップ環境です。 SQL Operations Studio というプレビュー名で以前にリリースされていた Azure Data Studio では、非常に高速な IntelliSense、コード スニペット、ソース管理の統合、統合されたターミナルを含む最新のエディター エクスペリエンスが提供されています。 これは、データ プラットフォームのユーザーを念頭に置いて設計されており、クエリ結果セットのグラフ化機能とカスタマイズ可能なダッシュボードが組み込まれています。
 
@@ -48,11 +48,11 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>オープン ソースの SSMS を計画していますか?
 
-不可。 ただし、次世代のマルチ OS CLI および GUI ツールはオープンソースです。 たとえば、VS Code、mssql-scripter、および msql CLI の mssql 拡張機能はすべて、GitHub のオープン ソースです。 Azure Data Studio のソース コードは、GitHub で入手できます。  
+いいえ。 ただし、次世代のマルチ OS CLI および GUI ツールはオープンソースです。 たとえば、VS Code、mssql-scripter、および msql CLI の mssql 拡張機能はすべて、GitHub のオープン ソースです。 Azure Data Studio のソース コードは、GitHub で入手できます。  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Azure Data Studio があるので、Microsoft は SSMS と SSDT を廃止する予定ですか? 
 
-不可。 主力の Windows ツール (SSMS、SSDT、PowerShell) への投資は、次世代のマルチ OS とマルチ DB CLI および GUI ツールに加えて継続されます。 目標は、お客様が自身のシナリオに合わせて選択したプラットフォーム上で希望するツールを選択できるようにすることです。 Azure Data Studio は、クエリの編集とデータ開発に関するエクスペリエンスにより重点を置いています。これらは、調査によれば、SQL Server Management Studio において桁違いに最も使用度の高い機能です。 Azure Data Studio では、拡張機能として、バックアップ、復元、エージェント ジョブ管理、サーバー プロファイリングなどのその他の重要度の高い管理機能を使用することもできます。 Azure Data Studio はクロスプラットフォームでもあるので、ユーザーは自分の選んだプラットフォームで作業を行うことができます。 ただし、SQL Server Management Studio では引き続き最も広範な管理機能が提供しており、これはプラットフォーム管理タスク用の主力ツールであり続けています。 
+いいえ。 主力の Windows ツール (SSMS、SSDT、PowerShell) への投資は、次世代のマルチ OS とマルチ DB CLI および GUI ツールに加えて継続されます。 目標は、お客様が自身のシナリオに合わせて選択したプラットフォーム上で希望するツールを選択できるようにすることです。 Azure Data Studio は、クエリの編集とデータ開発に関するエクスペリエンスにより重点を置いています。これらは、調査によれば、SQL Server Management Studio において桁違いに最も使用度の高い機能です。 Azure Data Studio では、拡張機能として、バックアップ、復元、エージェント ジョブ管理、サーバー プロファイリングなどのその他の重要度の高い管理機能を使用することもできます。 Azure Data Studio はクロスプラットフォームでもあるので、ユーザーは自分の選んだプラットフォームで作業を行うことができます。 ただし、SQL Server Management Studio では引き続き最も広範な管理機能が提供しており、これはプラットフォーム管理タスク用の主力ツールであり続けています。 
 
 ## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>Azure Data Studio と SQL Server Management Studio は、どのような場合に使用する必要がありますか?
 
@@ -105,7 +105,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 |機能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |グラフ ビューアー|はい||
-|結果を CSV、JSON、.XLSX にエクスポート|はい||
+|結果を CSV、JSON、XLSX にエクスポート|はい||
 |IntelliSense|はい|はい|
 |スニペット|はい|はい|
 |プラン表示|プレビュー|はい|
@@ -142,9 +142,9 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 |フラット ファイルのインポート|プレビュー|はい|
 |SQL エージェント|プレビュー|はい|
 |SQL Profiler|プレビュー|はい|
-|Always On||はい|
+|常時接続||はい|
 |Always Encrypted||はい|
-|データ ウィザードのコピー||はい|
+|データ コピー ウィザード||はい|
 |データ チューニング アドバイザー||はい|
 |データベース ダイアグラム||はい|
 |エラー ログ ビューアー||はい|
@@ -154,7 +154,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 |PolyBase||はい|
 |クエリ ストア||はい|
 |[登録済みサーバー]||はい|
-|のレプリケーション||はい|
+|レプリケーション||はい|
 |セキュリティ管理||はい|
 |Service Broker||はい|
 |SQL Mail||はい|
@@ -185,7 +185,7 @@ SQL PowerShell は、現在 PowerShell ギャラリーで入手できます。�
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio は Azure SQL Data Warehouse に統合されていますか?
 
-可能。 Azure SQL Data Warehouse に対する Azure Data Studio のサポートは、Azure SQL Database Managed Instance および SQL Server 2019 Big Data と共に現在プレビュー段階にあります。
+はい。 Azure SQL Data Warehouse に対する Azure Data Studio のサポートは、Azure SQL Database Managed Instance および SQL Server 2019 Big Data と共に現在プレビュー段階にあります。
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>新しいバージョンの SQL Server にとって Azure Data Studio が重要である理由は何ですか?
 

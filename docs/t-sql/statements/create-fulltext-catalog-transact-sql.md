@@ -27,10 +27,10 @@ ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064661"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
@@ -79,7 +79,7 @@ CREATE FULLTEXT CATALOG catalog_name
  ACCENT_SENSITIVITY = {ON|OFF}  
  カタログのフルテキスト インデックス作成でアクセントを区別するかどうかを指定します。 このプロパティを変更すると、インデックスの再構築が必要になります。 既定では、データベースの照合順序の指定に従って、アクセントの区別が決定されます。 データベースの照合順序を表示するには、**sys.databases** カタログ ビューを使います。  
   
- フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、*catalog_name* に対して、FULLTEXTCATALOGPROPERTY 関数を **accentsensitivity** プロパティ値と共に使用します。 値 '1' が返された場合、フルテキスト カタログではアクセントが区別され、値 '0' が返された場合、アクセントは区別されません。  
+ フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、**catalog_name** に対して、FULLTEXTCATALOGPROPERTY 関数を *accentsensitivity* プロパティ値と共に使用します。 値 '1' が返された場合、フルテキスト カタログではアクセントが区別され、値 '0' が返された場合、アクセントは区別されません。  
   
  AS DEFAULT  
  カタログが既定のカタログであることを指定します。 フルテキスト カタログを明示的に指定せずにフルテキスト インデックスを作成するときには、既定のカタログが使用されます。 既存のフルテキスト カタログが既に AS DEFAULT となっている場合、この新しいカタログを AS DEFAULT として設定すると、新しいカタログが既定のフルテキスト カタログになります。  
@@ -97,13 +97,13 @@ CREATE FULLTEXT CATALOG catalog_name
   
  *owner_name* には、指定したフルテキスト カタログの TAKE OWNERSHIP 権限も与えられている必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  フルテキスト カタログ ID は、00005 から始まり、新しいカタログが作成されるたびに 1 ずつ増加します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、データベースに対して CREATE FULLTEXT CATALOG 権限を持つか、**db_owner** 固定データベース ロールまたは **db_ddladmin** 固定データベース ロールのメンバーであることが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、フルテキスト カタログとフルテキスト インデックスを作成します。  
   
 ```sql  

@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee403317d9b10733126f462b47dc8d57d7f177d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943034"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (ビット演算子 NOT) (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "67943034"
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 整数データ型に分類されるデータ型のいずれか、または **bit**、または **binary** または **varbinary** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *式*は、ビットごとの演算に対して 2 進数として扱われます。  
+ 整数データ型に分類されるデータ型のいずれか、または [bit](../../t-sql/language-elements/expressions-transact-sql.md)、または **binary** または **varbinary** データ型の有効な**式**を指定します。 *式*は、ビットごとの演算に対して 2 進数として扱われます。  
   
 > [!NOTE]  
 >  ビットごとの演算では、1 つの*式*のみが **binary** または **varbinary** データ型のいずれかになります。  
@@ -59,13 +59,13 @@ ms.locfileid: "67943034"
   
  入力値が **bit** の場合は **bit** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ビットごとの **~** 演算子は、各ビットを対象に*式*に対してビットごとの論理否定演算を順番に実行します。 *式*の値が 0 の場合は、結果セット内のビットが 1 に設定されます。0 以外の場合は、結果セット内のビットがクリアされて値が 0 になります。 つまり、1 は 0 に、0 は 1 に変更されます。  
   
 > [!IMPORTANT]  
 >  どのような種類のビットごとの演算を実行する場合でも、演算の中で使用される式の記憶域の長さが重要になります。 値を格納するときは、式のデータ型と同じバイト数を使用するようにしてください。 たとえば、10 進数の 5 を **tinyint** 型、**smallint** 型、または **int** 型として格納すると、値はそれぞれ異なるバイト数で格納されます。つまり、**tinyint** の場合は 1 バイト、**smallint** の場合は 2 バイト、**int** の場合は 4 バイトをそれぞれ使用してデータが格納されます。 このため、**int** 型の 10 進数でビットごとの演算を実行すると、バイナリで直接実行する場合や、16 進数に変換して実行する場合とは異なる結果が得られる可能性があります。この傾向は、 **~** (ビットごとの NOT) 演算子において特に顕著です。 また、長さが短い方の変数に対してビットごとの NOT 演算が実行される場合があります。 この場合、短い長さが、長いデータ型の変数に変換されると、上位 8 ビットのビットが予想値に設定されない場合があります。 短いデータ型を長いデータ型に変換し、その結果に対して NOT 演算を実行するようにしてください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、**int** 型で値を格納するテーブルを作成し、1 行に 2 つの値を挿入します。  
   
 ```  

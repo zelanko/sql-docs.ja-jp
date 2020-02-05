@@ -25,10 +25,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211430"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211430"
 
 1 つ以上の既存のメッセージ交換を使用してメッセージを送信します。  
   
-![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,7 +59,7 @@ MESSAGE TYPE *message_type_name*
 *message_body_expression*  
 メッセージ本文を表す式を指定します。 *message_body_expression* は省略可能です。 ただし、*message_body_expression* を指定する場合は、**varbinary(max)** に変換できる型の式にする必要があります。 この式が NULL になることはありません。 この句が省略されると、メッセージ本文は空になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  SEND ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後にセミコロン (;) を指定する必要があります。  
@@ -95,7 +95,7 @@ SEND はユーザー定義の関数では無効です。
 ## <a name="permissions"></a>アクセス許可  
 メッセージを送信するには、現在のユーザーは、メッセージを送信するすべてのサービスのキューに対する RECEIVE 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、ダイアログを開始し、ダイアログ上の XML メッセージを送信します。 メッセージを送信するために、この例では xml オブジェクトを **varbinary(max)** に変換します。  
   
 ```sql

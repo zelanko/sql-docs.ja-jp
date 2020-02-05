@@ -20,10 +20,10 @@ ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314520"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
@@ -54,7 +54,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 + **nchar**
 + **nvarchar**
 
-内の複数の
+or
 
 + **varchar**
 
@@ -81,14 +81,14 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DECRYPTBYPASSPHRASE` は、その実行にアクセス許可を必要としません。 `DECRYPTBYPASSPHRASE` は、間違ったパスフレーズまたは認証子情報を受け取ると、NULL を返します。  
   
 `DECRYPTBYPASSPHRASE` はパスフレーズを使用し、復号キーを生成します。 この復号キーは永続ではありません。  
   
 暗号化テキストの暗号化時に認証子が含まれた場合、`DECRYPTBYPASSPHRASE` は、復号プロセスのためにその同じ認証子を受け取らなければなりません。 復号プロセスのために与えられた認証子値がデータの暗号化に使用された認証子値に一致しない場合、`DECRYPTBYPASSPHRASE` 操作は失敗します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、[EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) で更新されたレコードを復号します。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101041"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry データ型)
@@ -43,9 +43,9 @@ ms.locfileid: "68101041"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  コレクションの場合、このアルゴリズムは個別に各 **geometry** インスタンスに含まれています。  
   
  このアルゴリズムによって、**Point** インスタンスが変更されることはありません。  
@@ -54,11 +54,11 @@ ms.locfileid: "68101041"
   
  `Reduce()` は、**CircularString** インスタンスに対して **LineString**、**CircularString**、**CompoundCurve** インスタンスを返します。  `Reduce()` は、**CompoundCurve** インスタンスに対して **CompoundCurve** または **LineString** インスタンスを返します。  
   
- **Polygon** インスタンスでは、近似アルゴリズムが各リングに個別に適用されます。 返された **Polygon** インスタンスが無効な場合、メソッドは `FormatException` を生成します。たとえば、インスタンス内の各リングを簡略化するために `Reduce()` が適用され、その結果リングが重なる場合、無効な **MultiPolygon** が作成されます。  外部リングがあり、内部リングがない **CurvePolygon** インスタンスでは、`Reduce()` は **CurvePolygon**、**LineString**、**Point** インスタンスを返します。  **CurvePolygon** に内部リングがある場合、**CurvePolygon** または **MultiPoint** インスタンスが返されます。  
+ **Polygon** インスタンスでは、近似アルゴリズムが各リングに個別に適用されます。 返された `FormatException`Polygon**インスタンスが無効な場合、メソッドは** を生成します。たとえば、インスタンス内の各リングを簡略化するために **が適用され、その結果リングが重なる場合、無効な**MultiPolygon`Reduce()` が作成されます。  外部リングがあり、内部リングがない **CurvePolygon** インスタンスでは、`Reduce()` は **CurvePolygon**、**LineString**、**Point** インスタンスを返します。  **CurvePolygon** に内部リングがある場合、**CurvePolygon** または **MultiPoint** インスタンスが返されます。  
   
  円弧が検出されると、指定された許容範囲の半分以内で弦によって円弧を近似できるかどうかが近似アルゴリズムによってチェックされます。 弦がこの条件を満たす場合、円弧は計算において弦で置き換えられます。 弦がこの条件を満たしていない場合は、円弧が保持され、近似アルゴリズムが残りのセグメントに適用されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-reduce-to-simplify-a-linestring"></a>A. Reduce() を使用して LineString を簡略化する  
  `LineString` インスタンスを作成し、`Reduce()` を使用してそのインスタンスを簡略化する例を次に示します。  
@@ -70,7 +70,7 @@ SELECT @g.Reduce(.75).ToString();
 ```  
   
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. CircularString に対し許容レベルを変えて Reduce() を使用する  
- 次の例では、**CircularString** インスタンスに対して 3 つの許容レベルを適用して `Reduce()` を使用します。  
+ 次の例では、`Reduce()`CircularString**インスタンスに対して 3 つの許容レベルを適用して** を使用します。  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
@@ -90,7 +90,7 @@ SELECT @g.Reduce(.75).ToString();
  返されるそれぞれのインスタンスには、終点 (0 0) と (24 0) が含まれます。  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. CompoundCurve に対し許容レベルを変えて Reduce() を使用する  
- 次の例では、**CompoundCurve** インスタンスに対して 2 つの許容レベルを適用して `Reduce()` を使用します。  
+ 次の例では、`Reduce()`CompoundCurve**インスタンスに対して 2 つの許容レベルを適用して** を使用します。  
   
 ```
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  

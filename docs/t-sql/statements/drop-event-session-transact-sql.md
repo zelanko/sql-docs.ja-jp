@@ -19,10 +19,10 @@ ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b408b030a27b1e6ebe0fc94db8b6ee32cbb837ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898048"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION (Transact-SQL)
@@ -43,13 +43,13 @@ ON SERVER
  *event_session_name*  
  既存のイベント セッションの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  イベント セッションを削除すると、ターゲットやセッション パラメーターなどの構成情報がすべて完全に削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  `ALTER ANY EVENT SESSION` アクセス許可が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 イベント セッションを削除する方法を次の例に示します。  
   
 ```sql  

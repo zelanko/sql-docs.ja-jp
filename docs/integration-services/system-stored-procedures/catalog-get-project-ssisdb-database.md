@@ -11,10 +11,10 @@ ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ff4114aef15313606ac6cf03c7f7d56d407dcf3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295416"
 ---
 # <a name="catalogget_project-ssisdb-database"></a>catalog.get_project (SSISDB データベース)
@@ -37,7 +37,7 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
  プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [ @project_name = ] *project_name*  
- プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
+ プロジェクトの名前です。 *project_name* は **nvarchar(128)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  

@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 93012fddda7b778be414f31a50c0f81fe42674f4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75493586"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "75493586"
 ##  <a name="Truncation"></a> トランザクション ログの切り捨て  
 ログの切り捨てによりログ ファイルの領域が解放され、トランザクション ログで再利用できるようになります。 トランザクション ログの定期的な切り捨ては、ログがいっぱいにならないようにするために不可欠です。 いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
  
-ログの切り捨てでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの論理トランザクション ログから非アクティブな[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が削除されます。これにより、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
+ログの切り捨てでは、[ データベースの論理トランザクション ログから非アクティブな](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)仮想ログ ファイル (VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が削除されます。これにより、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
   
 領域が足りなくなるのを回避するために、何かの理由でログの切り捨てが遅れている場合を除き、次のイベントの後に切り捨てが自動的に発生します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75493586"
 > [!IMPORTANT]
 > トランザクション ログがいっぱいに応答する方法については、「 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
   
- 実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
+ 実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、**sys.databases** カタログ ビューの **log_reuse_wait** 列と [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
   
 |log_reuse_wait の値|log_reuse_wait_desc の値|[説明]|  
 |----------------------------|----------------------------------|-----------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "75493586"
   
  次に示す操作は、完全復旧モデルで完全にログ記録されますが、単純復旧モデルと一括ログ復旧モデルでは最小限にしかログ記録されません。  
   
--   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、[INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
+-   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
   
 トランザクション レプリケーションが有効な場合、`BULK INSERT` 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "75493586"
   
 トランザクション レプリケーションが有効な場合、`SELECT INTO` 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
   
--   新規データの挿入時または追加時の、[UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの `.WRITE` 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
+-   新規データの挿入時または追加時の、`.WRITE`UPDATE[ ステートメントの ](../../t-sql/queries/update-transact-sql.md) 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
 -   [text](../../t-sql/queries/writetext-transact-sql.md) 、 [ntext](../../t-sql/queries/updatetext-transact-sql.md) 、 **image**の各データ型列に新規データを挿入または追加するときの **WRITETEXT**ステートメントおよび **UPDATETEXT** ステートメント。 既存の値を更新する場合は、最小ログ記録は使用されません。  
   

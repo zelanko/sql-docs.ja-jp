@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843653"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
@@ -43,10 +43,10 @@ NEWID ( )
 ## <a name="return-types"></a>戻り値の型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `NEWID()` は RFC4122 に準拠しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. NEWID 関数を変数と共に使用する  
  次の例では、`NEWID()` を使用して、**uniqueidentifier** データ型として宣言された変数に値を割り当てます。 値、 **uniqueidentifier** 値をテストする前に、データ型の変数が出力されます。  
@@ -71,7 +71,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 **適用対象**:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 次の例では、**uniqueidentifier** データ型を使用して `cust` テーブルを作成し、NEWID を使用してテーブルに既定値を入力します。 `NEWID()` の既定値が代入されると、新しい行と既存の行の `CustomerID` 列にそれぞれ一意な値が設定されます。  
+ 次の例では、`cust`uniqueidentifier**データ型を使用して** テーブルを作成し、NEWID を使用してテーブルに既定値を入力します。 `NEWID()` の既定値が代入されると、新しい行と既存の行の `CustomerID` 列にそれぞれ一意な値が設定されます。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  

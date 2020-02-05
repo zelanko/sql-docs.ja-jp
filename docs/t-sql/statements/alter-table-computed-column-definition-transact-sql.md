@@ -15,10 +15,10 @@ ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982041"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
@@ -52,10 +52,10 @@ column_name AS computed_column_expression
   
 ## <a name="arguments"></a>引数  
 *column_name*  
- 変更、追加、または削除する列の名前を指定します。 *column_name* の有効文字数は、1 ～ 128 文字です。 **timestamp** データ型で作成された新しい列の場合、*column_name* は省略できます。 **timestamp** データ型の列に対して *column_name* を指定しない場合には、名前 **timestamp** が使われます。  
+ 変更、追加、または削除する列の名前を指定します。 *column_name* の有効文字数は、1 ～ 128 文字です。 *timestamp* データ型で作成された新しい列の場合、**column_name** は省略できます。 *timestamp* データ型の列に対して **column_name** を指定しない場合には、名前 **timestamp** が使われます。  
   
 *computed_column_expression*  
- 計算列の値を定義する式です。 計算列は仮想列であり、テーブル内に物理的に格納されている列ではありません。したがって、式を基にして同じテーブル内の別の列を使用して計算されます。 たとえば、計算列は cost AS price * qty のように定義できます。式には、非計算列の名前、定数、関数、変数、および 1 つ以上の演算子によってこれらを結合した組み合わせを使用できます。 サブクエリを式にすることはできません。また、別名データ型を含むこともできません。  
+ 計算列の値を定義する式です。 計算列は仮想列であり、テーブル内に物理的に格納されている列ではありません。したがって、式を基にして同じテーブル内の別の列を使用して計算されます。 たとえば、計算列は cost AS price * qty のように定義できます。式には、非計算列の名前、定数、関数、および変数のほか、これらを 1 つ以上の演算子によって結合した組み合わせを使用できます。 サブクエリを式にすることはできません。また、別名データ型を含むこともできません。  
   
  計算列は、選択リスト、WHERE 句、ORDER BY 句、および正規表現を使用できるその他の場所で使用できます。ただし、次の場合は除きます。  
   
@@ -145,7 +145,7 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
 > [!NOTE]  
 >  このコンテキストでは、default はキーワードではありません。 それは、既定ファイル グループの識別子なので、ON "default" または ON [default] のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  PRIMARY KEY 制約と UNIQUE 制約では、それぞれインデックスが生成されます。 UNIQUE 制約と PRIMARY KEY 制約によって生成されるテーブル上のインデックスの個数は、999 個の非クラスター化インデックスと 1 つのクラスター化インデックスに収まる必要があります。  
   
 ## <a name="see-also"></a>参照  

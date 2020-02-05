@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982566"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。  
   
 MAXDOP = *max_degree_of_parallelism*  
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
   
  統計操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
@@ -244,12 +244,12 @@ MAXDOP = *max_degree_of_parallelism*
 * MAXDOP オプションは、STATS_STREAM、ROWCOUNT、PAGECOUNT オプションと互換性がありません。
 * MAXDOP オプションは、Resource Governor ワークロード グループの MAX_DOP の設定によって制限されます (使用されている場合)。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="examples-use-the-adventureworks-database"></a>使用例では、AdventureWorks データベースを使用します。  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. CREATE STATISTICS を SAMPLE number PERCENT と共に使用する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Person` テーブルにある `BusinessEntityID` 列と `EmailPromotion` 列の 5% のランダムなサンプルを使用して、`ContactMail1` 統計情報を作成します。  
+ 次の例では、`ContactMail1` データベースの `BusinessEntityID` テーブルにある `EmailPromotion` 列と `Person` 列の 5% のランダムなサンプルを使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 統計情報を作成します。  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -291,7 +291,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
- 次の例では、`Person` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `NamePurchase` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
+ 次の例では、`NamePurchase` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `Person` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -302,14 +302,14 @@ CREATE STATISTICS NamePurchase  
 ### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW データベースの使用例。 
   
 ### <a name="f-create-statistics-on-two-columns"></a>F. 2 つの列の統計を作成する  
- 次の例では、`DimCustomer` テーブルの `CustomerKey` 列と `EmailAddress` 列に基づいて、`CustomerStats1` 統計を作成します。 統計は、`Customer` テーブルの行の統計的に優位なサンプリングに基づいて作成されます。  
+ 次の例では、`CustomerStats1` テーブルの `CustomerKey` 列と `EmailAddress` 列に基づいて、`DimCustomer` 統計を作成します。 統計は、`Customer` テーブルの行の統計的に優位なサンプリングに基づいて作成されます。  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. フル スキャンを使用して統計を作成する  
- 次の例では、`DimCustomer` テーブルのすべての行のスキャンに基づいて `CustomerStatsFullScan` 統計を作成します。  
+ 次の例では、`CustomerStatsFullScan` テーブルのすべての行のスキャンに基づいて `DimCustomer` 統計を作成します。  
   
 ```sql  
 CREATE STATISTICS CustomerStatsFullScan 
@@ -317,7 +317,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ```  
   
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. サンプル率を指定して統計を作成する  
- 次の例では、`DimCustomer` テーブルの行の 50 パーセントのスキャンに基づいて `CustomerStatsSampleScan` 統計を作成します。  
+ 次の例では、`CustomerStatsSampleScan` テーブルの行の 50 パーセントのスキャンに基づいて `DimCustomer` 統計を作成します。  
   
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 

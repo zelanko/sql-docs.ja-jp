@@ -23,10 +23,10 @@ ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072352"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
@@ -45,7 +45,7 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このステートメントの機能は、ROLLBACK TRANSACTION の機能と同じです。ただし、ROLLBACK TRANSACTION には、ユーザー定義のトランザクション名を指定できる点が異なります。 省略可能な WORK キーワードを指定してもしなくても、この ROLLBACK 構文は ISO 構文と互換性があります。  
   
  トランザクションを入れ子にしている場合は、ROLLBACK WORK は、最も外側の BEGIN TRANSACTION ステートメントまで常にロールバックし、@@TRANCOUNT システム関数を 0 に減らします。  

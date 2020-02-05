@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75721827"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux の Docker コンテナーで SQL Server データベースを復元する
@@ -407,7 +407,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>永続化されたデータの使用
 
-データを保護するためにデータベースのバックアップを作成するだけでなく、データ ボリューム コンテナーを使用することもできます。 このチュートリアルの冒頭では、`-v sql1data:/var/opt/mssql` パラメーターを指定して **sql1** コンテナーを作成しました。 **sql1data** データ ボリューム コンテナーによって **/var/opt/mssql** のデータが永続化され、コンテナーが削除された後でも残ります。 以下の手順では、**sql1** コンテナーを完全に削除した後、永続化されたデータを使って新しいコンテナー **sql2** を作成します。
+データを保護するためにデータベースのバックアップを作成するだけでなく、データ ボリューム コンテナーを使用することもできます。 このチュートリアルの冒頭では、**パラメーターを指定して**sql1`-v sql1data:/var/opt/mssql` コンテナーを作成しました。 **sql1data** データ ボリューム コンテナーによって **/var/opt/mssql** のデータが永続化され、コンテナーが削除された後でも残ります。 以下の手順では、**sql1** コンテナーを完全に削除した後、永続化されたデータを使って新しいコンテナー **sql2** を作成します。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

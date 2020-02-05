@@ -24,13 +24,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948023"
 ---
-# <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
+# <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   複数のエラー条件に対して ISO 標準の動作をすることを指定します。  
@@ -51,7 +51,7 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET ANSI_WARNINGS は、次の条件に影響します。  
   
 -   ON に設定した場合、SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP、COUNT などの集計関数に NULL 値が含まれていると、警告メッセージが生成されます。 OFF の場合、警告メッセージは生成されません。  
@@ -92,7 +92,7 @@ SELECT @ANSI_WARN AS ANSI_WARNINGS;
 ## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、SET ANSI_WARNINGS が ON の場合と OFF の場合に分けて、上の 3 つの状況を示しています。  
   
 ```sql  

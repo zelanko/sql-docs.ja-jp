@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072248"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (文字列連結) (Transact-SQL)
@@ -67,12 +67,12 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>戻り値の型  
  優先順位が最も高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  \+ (文字列連結) 演算子は、長さがゼロの空の文字列に対して使用するときと、NULL、または不明な値に対して使用するときでは、動作が異なります。 長さがゼロの文字列は、間に文字を挟まない 2 つの単一引用符で指定できます。 長さがゼロのバイナリ文字列は、16 進定数で指定したバイト値を持たない 0x で指定できます。 長さがゼロの文字列の連結では、常に 2 つの指定された文字列を連結します。 NULL 値の文字列を操作した場合、連結の結果はセッションの設定によって決まります。 NULL 値に対して実行される算術演算の場合、既知の値に NULL 値を追加すると、結果は通常、不明な値になります。同様に、NULL 値に対して実行される文字列連結演算でも、NULL の結果を生成する必要があります。 ただし、現在のセッションの `CONCAT_NULL_YIELDS_NULL` の設定を変更することにより、この動作を変更できます。 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)」をご覧ください。  
   
  文字列の連結の結果が 8,000 バイトを超える場合、結果は切り捨てられます。 ただし、連結する文字列の少なくとも一方が大きな値の型の場合、切り捨ては行われません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-string-concatenation"></a>A. 文字列連結を使用する  
  次の例では、複数の文字の列から、`Name` という列見出しで単一の列を作成します。個人の姓に、コンマとスペース 1 つを連結し、さらにその名を連結します。 結果セットは、姓、名の順で昇順に表示されます。  
@@ -153,7 +153,7 @@ GO
   
  (1 row(s) affected)
  ```  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-multiple-string-concatenation"></a>E. 複数の文字列の連結を使用する  
  次の例では、複数の文字列を連結して、サンプル データベースの副社長の姓と、名のイニシャルを表示する 1 つの長い文字列を形成します。 姓の後ろにコンマを追加し、名のイニシャルの後ろにピリオドを追加します。  

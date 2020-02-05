@@ -26,13 +26,13 @@ ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ead8278841f3eafa97f31b91480cb8464ce77dd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071493"
 ---
-# <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
+# <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 この関数は、指定されたファイル識別 (ID) 番号の論理ファイル名を返します。  
@@ -52,11 +52,11 @@ FILE_NAME ( file_id )
 ## <a name="return-types"></a>戻り値の型  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *file_ID* は、sys.master_files カタログ ビューまたは sys.database_files カタログ ビューの file_id 列に対応します。  
   
-## <a name="examples"></a>使用例  
-この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `file_ID 1` および `file_ID` に対するファイル名を返します。  
+## <a name="examples"></a>例  
+この例では、`file_ID 1` データベースの `file_ID` および [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] に対するファイル名を返します。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  

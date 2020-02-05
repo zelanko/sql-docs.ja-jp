@@ -15,10 +15,10 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278163"
 ---
 # <a name="query-method-xml-data-type"></a>query() メソッド (xml データ型)
@@ -37,13 +37,13 @@ query ('XQuery')
 XQuery  
 XML インスタンス内の XML ノード (要素や属性など) をクエリする XQuery 式の文字列です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 このセクションでは、**xml** データ型の query() メソッドの使用例について説明します。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. xml 型変数に対する query() メソッドの使用  
-次の例では、**xml** 型の変数 **\@myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
+次の例では、**xml\@ 型の変数** **myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
   
-次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素を取得します。  
+次のクエリは、<`Features`> 要素の <`ProductDescription`> 子要素を取得します。  
   
 ```  
 declare @myDoc xml  

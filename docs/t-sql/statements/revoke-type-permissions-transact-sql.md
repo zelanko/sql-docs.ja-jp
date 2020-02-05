@@ -17,10 +17,10 @@ ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29bf592fcc169f112eb938af19077aa59621b843
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982901"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE (型の権限の取り消し) (Transact-SQL)
@@ -108,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  型は、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。  
   
 > [!IMPORTANT]  
@@ -127,8 +127,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  型に対する CONTROL 権限が必要です。 AS 句を使用する場合は、指定したプリンシパルが型を所有している必要があります。  
   
-## <a name="examples"></a>使用例  
- 次の例では、ユーザー定義型 `PhoneNumber` に対する `VIEW DEFINITION` 権限を、ユーザー `KhalidR` から取り消します。 `CASCADE` オプションは、`KhalidR` が `VIEW DEFINITION` 権限を許可したプリンシパルからも権限を取り消すことを示します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
+## <a name="examples"></a>例  
+ 次の例では、ユーザー定義型 `VIEW DEFINITION` に対する `PhoneNumber` 権限を、ユーザー `KhalidR` から取り消します。 `CASCADE` オプションは、`VIEW DEFINITION` が `KhalidR` 権限を許可したプリンシパルからも権限を取り消すことを示します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
 ```  
 REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   

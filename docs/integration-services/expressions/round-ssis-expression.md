@@ -14,10 +14,10 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 74b18ed725b70e1086b22515a0a051d2521383b7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288320"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS 式)
@@ -38,13 +38,13 @@ ROUND(numeric_expression,length)
  *numeric_expression*  
  有効な数値型の式です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
- *長さ*  
+ *length*  
  整数式です。 *numeric_expression* の丸め結果とする有効桁数です。  
   
 ## <a name="result-types"></a>戻り値の型  
  *numeric*_*expression.* と同じ型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *length* 引数は正の整数または 0 に評価される必要があります。  
   
  引数が NULL の場合、ROUND は NULL を返します。  

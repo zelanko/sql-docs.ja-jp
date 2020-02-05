@@ -24,10 +24,10 @@ ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 804f8c1f2f7c59edec2c4e40c7d47f99ac71b5e7
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314553"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
@@ -57,10 +57,10 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ## <a name="return-types"></a>戻り値の型  
  **varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  非対称キーに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、プレーン テキストとその署名を格納するテーブル `SignedData04` を作成し、 次に、非対称キー `PrimeKey` を使用して署名したレコードをテーブルに挿入します。このキーは最初にパスワード `'pGFD4bb925DGvbd2439587y'` で暗号化解除されます。  
   
 ```  

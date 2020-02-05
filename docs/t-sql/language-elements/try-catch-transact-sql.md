@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121556"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -63,7 +63,7 @@ END CATCH
  *statement_block*  
  バッチ内、または BEGIN...END ブロックで囲まれた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの任意のグループです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  TRY...CATCH 構造は、データベース接続を閉じない、重大度が 10 を超えるすべての実行エラーを検出します。  
   
  TRY ブロックの直後には、関連する CATCH ブロックを記述する必要があります。 END TRY ステートメントと BEGIN CATCH ステートメントの間に他のステートメントを含めると、構文エラーが生成されます。  
@@ -133,7 +133,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 関数は、[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)内の `CATCH` ブロックでも機能します。  
+ ERROR\_\* 関数は、`CATCH`ネイティブ コンパイル ストアド プロシージャ[内の ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) ブロックでも機能します。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 構造の影響を受けないエラー  
  TRY...CATCH 構造では、次の条件はトラップされません。  
@@ -158,7 +158,7 @@ END CATCH;
   
 TRY ブロック内の下位の実行レベル (たとえば、sp_executesql またはユーザー定義のストアド プロシージャを実行しているとき) でのコンパイル中またはステートメントレベルの再コンパイル中にエラーが発生した場合、そのエラーは TRY...CATCH 構造よりも下位のレベルで発生し、関連する CATCH ブロックによって処理されます。  
   
-次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY...CATCH` 構造でキャッチされず、同じ `SELECT` ステートメントをストアド プロシージャ内で実行した場合には `CATCH` ブロックでキャッチされることを示しています。  
+次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY...CATCH` 構造でキャッチされず、同じ `CATCH` ステートメントをストアド プロシージャ内で実行した場合には `SELECT` ブロックでキャッチされることを示しています。  
   
 ```sql  
 BEGIN TRY  
@@ -200,12 +200,12 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>コミット不可能なトランザクションと XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>コミット不可能なトランザクションと XACT_STATE  
  TRY ブロックで生成されたエラーによって現在のトランザクションの状態が無効になる場合、そのトランザクションはコミット不可能なトランザクションに分類されます。 通常は TRY ブロックの外部でトランザクションを終了させるエラーが、TRY ブロックの内部で発生すると、トランザクションはコミット不可能な状態になります。 コミット不可能なトランザクションでは、読み取り操作または ROLLBACK TRANSACTION のみを実行できます。 このトランザクションで、書き込み操作または COMMIT TRANSACTION を生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。 XACT_STATE 関数は、トランザクションがコミット不可能なトランザクションと分類されている場合、値 -1 を返します。 バッチが完了すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってコミット不可能なトランザクションがロールバックされます。 トランザクションがコミット不可能な状態になったときにエラー メッセージが送信されなかった場合、バッチが完了すると、エラー メッセージがクライアント アプリケーションに送信されます。 これは、コミット不可能なトランザクションが検出され、ロールバックされたことを示します。  
   
  コミット不可能なトランザクションと XACT_STATE 関数の詳細については、「[XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-trycatch"></a>A. TRY...CATCH の使用  
  次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 このエラーにより、関連する `CATCH` ブロックに実行が移動します。  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. TRY...CATCH と XACT_STATE を使用する  
+### <a name="c-using-trycatch-with-xact_state"></a>C. TRY...CATCH と XACT_STATE を使用する  
  次の例では、`TRY...CATCH` 構造を使用して、トランザクション内で発生するエラーを処理する方法を示しています。 `XACT_STATE` 関数により、トランザクションをコミットすべきか、またはロールバックすべきかが決定されます。 この例では `SET XACT_ABORT` は `ON` です。 これにより、制約違反エラーが発生したときに、トランザクションはコミット不可能になります。  
   
 ```sql  
@@ -323,7 +323,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>D. TRY...CATCH の使用  
  次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 このエラーにより、関連する `CATCH` ブロックに実行が移動します。  

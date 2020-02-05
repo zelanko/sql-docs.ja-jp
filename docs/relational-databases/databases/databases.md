@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109698"
 ---
 # <a name="databases"></a>データベース
@@ -46,14 +46,14 @@ ms.locfileid: "68109698"
 |[包含データベース](../../relational-databases/databases/contained-databases.md)|[データベースのデータ領域とログ領域情報の表示](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
 |[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[データベースのサイズを大きくする](../../relational-databases/databases/increase-the-size-of-a-database.md)|  
 |[データベース ファイルとファイル グループ](../../relational-databases/databases/database-files-and-filegroups.md)|[データベースの名前変更](../../relational-databases/databases/rename-a-database.md)|  
-|[データベースの状態](../../relational-databases/databases/database-states.md)|[データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
+|[データベースの状態](../../relational-databases/databases/database-states.md)|[データベースをシングルユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
 |[ファイルの状態](../../relational-databases/databases/file-states.md)|[データベースの圧縮](../../relational-databases/databases/shrink-a-database.md)|  
 |[データベース サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[ファイルの圧縮](../../relational-databases/databases/shrink-a-file.md)|  
 |[他のサーバーへのデータベースのコピー](../../relational-databases/databases/copy-databases-to-other-servers.md)|[データベースのプロパティの表示または変更](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
 |[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[SQL Server インスタンス上のデータベースの一覧表示](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[データベースに対するデータ ファイルまたはログ ファイルの追加](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
 |[データベースの構成設定の変更](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[ データベースの作成](../../relational-databases/databases/create-a-database.md)|[ユーザー定義データ型の別名の作成](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
+|[データベースの作成](../../relational-databases/databases/create-a-database.md)|[ユーザー定義データ型の別名の作成](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
 |[データベースの削除](../../relational-databases/databases/delete-a-database.md)|[Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  

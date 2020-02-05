@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024990"
 ---
 # <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
@@ -89,7 +89,7 @@ ms.locfileid: "68024990"
   
 4.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
   
-5.  _[table\_name_ **から列を選択]** ダイアログ ボックスで、クラスター化インデックスに追加するテーブル列のチェック ボックスをオンにします。  
+5.  **[table**name _\_から列を選択]_ ダイアログ ボックスで、クラスター化インデックスに追加するテーブル列のチェック ボックスをオンにします。  
   
 6.  **[OK]** をクリックします。  
   
@@ -109,13 +109,13 @@ ms.locfileid: "68024990"
   
 6.  **[インデックス/キー]** ダイアログ ボックスで、 **[追加]** をクリックします。  
   
-7.  **[選択された主/一意キーまたはインデックス]** ボックスで、新しいインデックスを選択します。  
+7.  **[Selected Primary/Unique Key or Index (選択された主/一意キーまたはインデックス)]** ボックスで、新しいインデックスを選択します。  
   
 8.  グリッドで、 **[CLUSTERED として作成]** を選択し、プロパティ右のドロップダウン リストの **[はい]** を選択します。  
   
 9. **[閉じる]** をクリックします。  
   
-10. **[ファイル]** メニューの **[_table\_name_ の保存]** をクリックします。  
+10. **[ファイル]** メニューの **[** table_name\_ の保存]_ をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

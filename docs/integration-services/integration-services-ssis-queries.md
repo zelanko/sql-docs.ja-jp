@@ -18,10 +18,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d24d4e8bdebca82ec0541132b52ac84de6c9c271
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284488"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
@@ -91,10 +91,10 @@ SQL ステートメントは次の方法で提供できます。
  参照変換およびあいまい参照変換でも、パラメーターとリターン コードに変数を使用できます。 OLE DB ソースに関する情報は、これら 2 つの変換にも適用されます。  
   
 ### <a name="options"></a>オプション  
- **[ツール バー]**  
+ **ツール バー**  
  ツール バーは、データセットの管理、表示するペインの選択、クエリ機能の制御に使用します。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**[ダイアグラム ペインの表示/非表示]**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。|  
 |**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。|  

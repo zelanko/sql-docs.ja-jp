@@ -29,10 +29,10 @@ ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244581"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (データベース プリンシパルの権限の拒否) (Transact-SQL)
@@ -153,7 +153,7 @@ DENY permission [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. ユーザーの CONTROL 権限を別のユーザーに対して拒否する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ユーザー `CONTROL` の `Wanida` 権限を、ユーザー `RolandX` に対して拒否します。  
+ 次の例では、`CONTROL` ユーザー [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] の `Wanida` 権限を、ユーザー `RolandX` に対して拒否します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -162,7 +162,7 @@ GO
 ```  
   
 ### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. ロールの VIEW DEFINITION 権限を、GRANT OPTION で権限が許可されたユーザーに対して拒否する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ロール `VIEW DEFINITION` の `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` に対して拒否します。 ユーザー `CASCADE` には、GRANT OPTION を指定して VIEW DEFINITION 権限が許可されているため、`JinghaoLiu` オプションを指定します。  
+ 次の例では、`VIEW DEFINITION` ロール [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] の `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` に対して拒否します。 ユーザー `CASCADE` には、GRANT OPTION を指定して VIEW DEFINITION 権限が許可されているため、`JinghaoLiu` オプションを指定します。  
   
 ```  
 USE AdventureWorks2012;  
