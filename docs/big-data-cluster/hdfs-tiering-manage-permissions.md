@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 758338618a312d8efe92503581ae82d49d353e51
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531971"
 ---
 # <a name="manage-hdfs-permissions-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] の HDFS アクセス許可を管理する
@@ -24,14 +24,14 @@ ms.locfileid: "73531971"
 
 次のセクションでは、`azdata` CLI を使用して、HDFS ファイルとディレクトリのアクセス許可を管理する方法の例を示します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [展開済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
   
 ## <a name="hdfs-shell"></a>HDFS シェル
 
-`azdata` の `hdfs` シェル機能を使用すると、コマンドをシェルで直接発行して、ファイルやディレクトリに対する HDFS アクセス許可を管理できます。 基になるメカニズムでは WebHdfs 呼び出しを使用して、コマンドを発行します
+`hdfs` の `azdata` シェル機能を使用すると、コマンドをシェルで直接発行して、ファイルやディレクトリに対する HDFS アクセス許可を管理できます。 基になるメカニズムでは WebHdfs 呼び出しを使用して、コマンドを発行します
 
 次のコマンドではシェルを開きます。
 
@@ -74,7 +74,7 @@ acl modify: Change completed.
 
 ## <a name="create-a-directory-in-hdfs-using-azdata"></a>`azdata` を使用して HDFS にディレクトリを作成する
 
-パス `/sales` に `data` というディレクトリを作成します。
+パス `data` に `/sales` というディレクトリを作成します。
 
 ```bash
 azdata bdc hdfs mkdir --path '/sales/data'
@@ -90,7 +90,7 @@ azdata bdc hdfs chown --owner alice --group 'salesgroup' --path '/sales/data'
 
 ## <a name="change-permissions-of-a-file-or-directory-with-chmod"></a>`chmod` でファイルまたはディレクトリのアクセス許可を変更する
 
-`chmod` を使用して、ファイルやディレクトリ (所有者、所有グループなど) のアクセス許可を変更します。 詳細については、[Linux ファイル システムに対するアクセス許可の変更](https://www.lifewire.com/uses-of-command-chmod-2201064)に関するページを参照してください。 hdfs でのパターンは同じです。 例:
+`chmod` を使用して、ファイルやディレクトリ (所有者、所有グループなど) のアクセス許可を変更します。 詳細については、[Linux ファイル システムに対するアクセス許可の変更](https://www.lifewire.com/uses-of-command-chmod-2201064)に関するページを参照してください。 hdfs でのパターンは同じです。 次に例を示します。
 
 ```bash
 azdata bdc hdfs chmod --permission 750 --path /sales/data
@@ -102,7 +102,7 @@ azdata bdc hdfs chmod --permission 775 --path /sales/data/file.txt
 
 ## <a name="set-sticky-bit-on-directories"></a>ディレクトリにスティッキー ビットを設定する
 
-意図しないファイルの削除や再配置を防ぐために、ディレクトリにスティッキー ビットを設定します。 スティッキー ビットでは、ファイルを削除または移動するアクセス許可を、スーパーユーザー、ディレクトリ所有者、またはファイル所有者に制限します。 この設定はファイルには影響しません。 以下の例では、アクセス許可の前に `1` を付けて、ディレクトリ `users` にスティッキー ビットを設定しています。
+意図しないファイルの削除や再配置を防ぐために、ディレクトリにスティッキー ビットを設定します。 スティッキー ビットでは、ファイルを削除または移動するアクセス許可を、スーパーユーザー、ディレクトリ所有者、またはファイル所有者に制限します。 この設定はファイルには影響しません。 以下の例では、アクセス許可の前に `users` を付けて、ディレクトリ `1` にスティッキー ビットを設定しています。
 
 ```bash
 azdata bdc hdfs chmod --path /sales/users --permission 1750
@@ -131,7 +131,7 @@ azdata bdc hdfs acl set --path '/sales' --aclspec  'user::rw-,user:tom:rwx,group
 azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group::rw-,other::rw-,default:group::rw-,default:user::rw-,default:other::rw-'
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [`azdata` リファレンス](reference-azdata.md)
 

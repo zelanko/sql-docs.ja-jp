@@ -23,10 +23,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bbabafa1f5b367343f02c3a0bf3e122bc827ce66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946750"
 ---
 # <a name="identify-bottlenecks"></a>ボトルネックの特定
@@ -46,7 +46,7 @@ ms.locfileid: "67946750"
 ## <a name="analyzing-bottlenecks"></a>ボトルネックの分析  
  さまざまなイベントに対して過剰な要求が行われている期間は、ボトルネックをチューニングできる指標になります。  
   
- 例:  
+ 次に例を示します。  
   
 -   他のいくつかのコンポーネントにより、このコンポーネントの負荷が低下しているため、負荷を完了するまでの時間がかかっている可能性があります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67946750"
 |ボトルネックになる可能性のある要素|サーバーへの影響|  
 |------------------------------|---------------------------|  
 |メモリ使用量|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられたメモリまたは使用できるメモリが不足していると、パフォーマンスが低下します。 データをデータ キャッシュから直接読み取るのではなく、ディスクから読み取る必要があります。 Microsoft Windows オペレーティング システムでは、ページが必要になるたびに、ディスクとの間でデータを交換するので、過剰なページングが実行されます。|  
-|CPU の使用率|CPU の使用率が一様に高い場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリをチューニングするか、CPU のアップグレードが必要であることを示します。|  
+|CPU 使用率|CPU の使用率が一様に高い場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリをチューニングするか、CPU のアップグレードが必要であることを示します。|  
 |ディスクの入力/出力 (I/O)|[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリについて、インデックスを使用するなどしてチューニングし、不要な I/O を減らすことができます。|  
 |ユーザー接続数|サーバーに同時にアクセスしているユーザー数が多すぎるとパフォーマンスが低下します。|  
 |ブロッキング ロック|アプリケーションが適切にデザインされてないために、コンカレンシーがロックされて妨害され、応答時間が長くなり、トランザクションのスループット率が低下します。|  
@@ -67,6 +67,6 @@ ms.locfileid: "67946750"
  [ディスクの使用量の監視](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [メモリ使用率の監視](../../relational-databases/performance-monitor/monitor-memory-usage.md)   
  [SQL Server: General Statistics オブジェクト](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)   
- [SQL Server:Locks オブジェクト](../../relational-databases/performance-monitor/sql-server-locks-object.md)  
+ [SQL Server の Locks オブジェクト](../../relational-databases/performance-monitor/sql-server-locks-object.md)  
   
   

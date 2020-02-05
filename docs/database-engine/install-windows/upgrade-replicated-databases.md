@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72008455"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>レプリケートされたデータベースのアップグレードまたは修正プログラム
@@ -129,7 +129,7 @@ SQL Server インスタンスを SQL Server 2016 (またはそれ以降) にア�
  以前のバージョンからレプリケートされたデータベースのバックアップを復元するときにレプリケーション設定が保持されるようにするには、バックアップが作成されたサーバーおよびデータベースと同じ名前のサーバーおよびデータベースに復元します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)  
+ [SQL Server レプリケーション](../../relational-databases/replication/sql-server-replication.md)  
  [レプリケーション管理に関する FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [レプリケーションの下位互換性](../../relational-databases/replication/replication-backward-compatibility.md)   
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

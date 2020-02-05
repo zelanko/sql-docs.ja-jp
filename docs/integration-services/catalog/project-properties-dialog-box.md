@@ -14,10 +14,10 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298943"
 ---
 # <a name="project-properties-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックス
@@ -54,13 +54,13 @@ ms.locfileid: "71298943"
 ##  <a name="general"></a> [全般] ページのオプションの設定  
  プロジェクトのプロパティを表示するには、[全般] ページを使用します。  
   
- **[名前]**  
+ **名前**  
  プロジェクト名を一覧表示します。  
   
- **[Identifier]**  
+ **識別子**  
  プロジェクト ID を一覧表示します。  
   
- **[説明]**  
+ **説明**  
  プロジェクトの説明を表示します (省略可)。  
   
  **プロジェクトのバージョン**  
@@ -75,7 +75,7 @@ ms.locfileid: "71298943"
  参照  
  **[参照]** をクリックすると、 **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、権限を設定するユーザーおよびロールを選択できます。  
   
- **[名前]**  
+ **名前**  
  ユーザーまたはロールの名前を一覧表示します。  
   
  **Type**  

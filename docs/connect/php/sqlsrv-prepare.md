@@ -18,13 +18,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014987"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 指定した接続に関連付けられているステートメントのリソースを作成します。 この関数は、複数のクエリを実行するのに便利です。  
@@ -71,16 +71,16 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|正の整数|クライアント側カーソルの結果セットを保持するバッファーのサイズを設定します。<br /><br />既定値は 10240 KB です。 詳細については、「[Specifying a Cursor Type and Selecting Rows (カーソルの種類の指定と行の選択)](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|
 |小数点以下表示桁数|0 から 4 までの整数|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。<br /><br />負の整数値または 4 を超える値は無視されます。<br /><br />このオプションは、FormatDecimals が **true** 場合にのみ機能します。|
-|FormatDecimals|**true** または **false**<br /><br />既定値は **false**です。|該当する場合に 10 進文字列の前にゼロを追加するかどうかを指定し、通貨型を書式設定するための `DecimalPlaces` オプションを有効にします。<br /><br />詳細については、「[Formatting Decimal Strings and Money Values (SQLSRV Driver) (10 進数文字列と通貨値の書式設定 (SQLSRV ドライバー))](../../connect/php/formatting-decimals-sqlsrv-driver.md)」を参照してください。|
+|FormatDecimals|**true** または **false**<br /><br />既定値は **false** です。|該当する場合に 10 進文字列の前にゼロを追加するかどうかを指定し、通貨型を書式設定するための `DecimalPlaces` オプションを有効にします。<br /><br />詳細については、「[Formatting Decimal Strings and Money Values (SQLSRV Driver) (10 進数文字列と通貨値の書式設定 (SQLSRV ドライバー))](../../connect/php/formatting-decimals-sqlsrv-driver.md)」を参照してください。|
 |QueryTimeout|正の整数|クエリのタイムアウト (秒単位) を設定します。 既定で、ドライバーは、結果を無制限に待機します。|  
-|ReturnDatesAsStrings|**true** または **false**<br /><br />既定値は **false**です。|日付/時刻型を文字列として取得するようにステートメントを構成します (**true**)。 詳細については、「[方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」をご覧ください。
+|ReturnDatesAsStrings|**true** または **false**<br /><br />既定値は **false** です。|日付/時刻型を文字列として取得するようにステートメントを構成します (**true**)。 詳細については、「[方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」をご覧ください。
 |スクロール可能|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|  
-|SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|実行時にすべてのストリーム データを送信する (**true**)、またはストリーム データをチャンク単位で送信する (**false**) ように、ドライバーを構成します。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
+|SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true** です。|実行時にすべてのストリーム データを送信する (**true**)、またはストリーム データをチャンク単位で送信する (**false**) ように、ドライバーを構成します。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
   
 ## <a name="return-value"></a>戻り値  
 ステートメント リソースです。 ステートメント リソースを作成できない場合、 **false** が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 パラメーターとして変数を使用するステートメントを準備するときに、変数がステートメントにバインドされます。 つまり、変数の値を更新すると、次回ステートメントを実行する際に、更新されたパラメーター値を使用して実行されます。  
   
 **sqlsrv_prepare** と **sqlsrv_execute** の組み合わせは、ステートメントの準備とステートメントの実行を 2 つの関数呼び出しに分割し、パラメーター化されたクエリを実行するために使用できます。 この関数は、実行ごとに異なるパラメーター値を使用してステートメントを複数回実行する場合に適しています。  

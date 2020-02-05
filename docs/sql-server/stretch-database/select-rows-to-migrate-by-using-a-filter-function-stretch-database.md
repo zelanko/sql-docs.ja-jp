@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844550"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>フィルター関数を使用して移行する行を選択する (Stretch Database)
@@ -58,7 +58,7 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="return-value"></a>戻り値  
  関数から空ではない結果が返された場合、その行は移行の対象になります。 それ以外の場合 (結果が返されない場合)、その行は移行の対象にはなりません。  
   
-### <a name="conditions"></a>[条件]  
+### <a name="conditions"></a>条件  
  &lt;*predicate*&gt; は、1 つの条件で構成される場合もあれば、AND 論理演算子で結合された複数の条件で構成される場合もあります。  
   
 ```  
@@ -84,7 +84,7 @@ RETURN  SELECT 1 AS is_eligible
   
 ```  
   
--   関数パラメーターと定数式を比較します。 たとえば、 `@column1 < 1000`のようにします。  
+-   関数パラメーターと定数式を比較します。 たとえば、「 `@column1 < 1000` 」のように入力します。  
   
      次の例では、 *date* 列の値が &lt; 1/1/2016 であるかどうかを確認します。  
   
@@ -138,13 +138,13 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>定数式  
  関数を定義するときに、フィルター関数で使用する定数を、評価できる決定論的な式にすることができます。 定数式には以下を含めることができます。  
   
--   リテラル。 たとえば、 `N'abc', 123`のようにします。  
+-   リテラル。 たとえば、「 `N'abc', 123` 」のように入力します。  
   
--   代数式。 たとえば、 `123 + 456`のようにします。  
+-   代数式。 たとえば、「 `123 + 456` 」のように入力します。  
   
--   決定論的関数。 たとえば、 `SQRT(900)`のようにします。  
+-   決定論的関数。 たとえば、「 `SQRT(900)` 」のように入力します。  
   
--   CAST または CONVERT を使用した決定論的変換。 たとえば、 `CONVERT(datetime, '1/1/2016', 101)`のようにします。  
+-   CAST または CONVERT を使用した決定論的変換。 たとえば、「 `CONVERT(datetime, '1/1/2016', 101)` 」のように入力します。  
   
 ### <a name="other-expressions"></a>その他の式  
  BETWEEN 演算子と NOT BETWEEN 演算子を同等の AND 式と OR 式に置き換えた後、結果的に作成される関数がここで説明するルールに準拠する場合は、BETWEEN 演算子と NOT BETWEEN 演算子を使用できます。  
@@ -152,7 +152,7 @@ RETURN  SELECT 1 AS is_eligible
  サブクエリや非決定論的関数 (RAND() や GETDATE() など) は使用できません。  
   
 ## <a name="add-a-filter-function-to-a-table"></a>フィルター関数をテーブルに追加する  
- **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 例:  
+ **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 次に例を示します。  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -484,7 +484,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database がフィルター関数を適用するしくみ  
- Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 例:  
+ Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 次に例を示します。  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,7 +493,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  関数から行の空ではない結果が返された場合、その行は移行の対象になります。  
   
 ## <a name="replacePredicate"></a>既存のフィルター関数の置き換え  
- 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 例:  
+ 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 次に例を示します。  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -588,7 +588,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>テーブルからのフィルター関数の削除  
- 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 例:  
+ 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 次に例を示します。  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

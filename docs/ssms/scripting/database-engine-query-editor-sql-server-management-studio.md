@@ -1,6 +1,6 @@
 ---
-title: データベース エンジン クエリ エディター (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: データベース エンジン クエリ エディター (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263504"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253940"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68263504"
     -   システム ストアド プロシージャのテーブル名やビュー名 (sys.data_spaces、sp_tableoption など)。  
   
 ## <a name="working-with-the-database-engine-query-editor"></a>データベース エンジン クエリ エディターを使用した作業  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に実装されている 4 つのエディターの 1 つです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターに実装されている機能の詳細と、このエディターを使用して実行できる主な作業については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」をご覧ください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に実装されている 4 つのエディターの 1 つです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターに実装されている機能の詳細と、このエディターを使用して実行できる主な作業については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」をご覧ください。  
   
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開いているときは、次のボタンを持つ SQL エディター ツール バーが表示されます。  
@@ -58,7 +58,7 @@ ms.locfileid: "68263504"
  **のインスタンスに接続するときには、**  
  **[サーバーへの接続]** ダイアログ ボックスを開きます。 このダイアログ ボックスを使用すると、サーバーへの接続を確立できます。  
   
- **[接続解除]**  
+ **Disconnect (切断)**  
  現在のクエリ エディターをサーバーから接続解除します。  
   
  **[接続の変更]**  
@@ -70,7 +70,7 @@ ms.locfileid: "68263504"
  **[使用できるデータベース]**  
  接続を同じサーバー上の別のデータベースに変更します。  
   
- **Execute**  
+ **実行**  
  選択されているコードを実行します。コードが選択されていない場合は、クエリ エディター内のコード全体を実行します。  
   
  **デバッグ**  
@@ -79,7 +79,7 @@ ms.locfileid: "68263504"
  **[クエリ実行のキャンセル]**  
  キャンセル要求をサーバーに送信します。 即座にキャンセルできないクエリもあります。そのようなクエリは、適切なキャンセル条件が整うまでキャンセルできません。 トランザクションが取り消されると、トランザクションがロールバックされる間に遅延が発生することがあります。  
   
- **[解析]**  
+ **解析**  
  選択されているコードの構文をチェックします。 コードが選択されていない場合は、クエリ エディター ウィンドウ内のコード全体の構文をチェックします。  
   
  **[推定実行プランの表示]**  
@@ -126,25 +126,25 @@ ms.locfileid: "68263504"
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]** 、 **[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
   
- **Continue**  
+ **続行**  
  ブレークポイントに達するまで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウ内のコードを実行します。  
   
  **[すべて中断]**  
  中断が生じたときに、デバッガーがアタッチされているすべてのプロセスを中断するようにデバッガーを設定します。  
   
- **[デバッグの停止]**  
+ **デバッグの停止**  
  選択された [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウのデバッグ モードを解除して、標準の実行モードに戻します。  
   
  **[次のステートメントの表示]**  
  次に実行されるステートメントにカーソルを移動します。  
   
- **[ステップ イン]**  
+ **ステップ イン**  
  次のステートメントが実行されます。 ステートメントで Transact-SQL ストアド プロシージャ、関数、またはトリガーが呼び出される場合、モジュールのコードが含まれた新しい **クエリ エディター** ウィンドウが表示されます。 ウィンドウはデバッグ モードに設定され、実行はモジュールの最初のステートメントで一時停止します。 その後、モジュールに対して、ブレークポイントの設定やコードのステップ実行などの操作を行うことができます。  
   
- **[ステップ オーバー]**  
+ **ステップ オーバー**  
  次のステートメントが実行されます。 ステートメントで Transact-SQL ストアド プロシージャ、関数、またはトリガーが呼び出される場合、モジュールは完了するまで実行され、その結果が呼び出し元のコードに返されます。 モジュールにエラーがないことがわかっている場合は、それをステップ オーバーできます。 実行は、モジュールへの呼び出しに続くステートメントで一時停止します。  
   
- **[ステップ アウト]**  
+ **ステップ アウト**  
  この次に高い呼び出しレベル (関数、ストアド プロシージャ、またはトリガー) に戻ります。 実行は、ストアド プロシージャ、関数、またはトリガーの呼び出しに続くステートメントで一時停止します。  
   
  **Windows**  

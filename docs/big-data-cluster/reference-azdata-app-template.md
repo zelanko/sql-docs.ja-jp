@@ -1,26 +1,26 @@
 ---
 title: azdata app template リファレンス
-titleSuffix: SQL Server big data clusters
 description: azdata app template コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3cdee262be7ef0c14d935c95eb9389d4a3ae03a3
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: da1b98649eeb48d5ae2d6ca05e61da53f519e944
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531923"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251050"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`app template` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -32,7 +32,7 @@ ms.locfileid: "73531923"
 ```bash
 azdata app template list [--url -u]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 既定のテンプレート リポジトリの場所にあるすべてのテンプレートを取得します。
 ```bash
 azdata app template list
@@ -62,7 +62,7 @@ azdata app template pull [--name -n]
                          [--url -u]  
                          [--destination -d]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 既定のテンプレート リポジトリの場所にあるすべてのテンプレートをダウンロードします。
 ```bash
 azdata app template pull
@@ -95,6 +95,6 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

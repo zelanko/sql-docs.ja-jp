@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914272"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE (サーバー権限の取り消し) (Transact-SQL)
@@ -92,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  ユーザー定義サーバー ロールを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー スコープの権限を取り消すことができるのは、現在のデータベースが master のときだけです。  
   
  REVOKE では、GRANT と DENY の両方の権限を取り消します。  
@@ -143,10 +143,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. ログインから権限を取り消す  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` から、アクセス許可 `VIEW SERVER STATE` を取り消します。  
+ 次の例では、`VIEW SERVER STATE` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から、アクセス許可 `WanidaBenshoof` を取り消します。  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. WITH GRANT オプションを取り消す  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `JanethEsteves` から、`CONNECT SQL` を許可する権利を取り消します。  
+ 次の例では、`CONNECT SQL` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から、`JanethEsteves` を許可する権利を取り消します。  
   
 ```  
 USE master;  

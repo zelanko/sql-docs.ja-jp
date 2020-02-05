@@ -18,10 +18,10 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051234"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
@@ -43,7 +43,7 @@ with Expression2
 *Expression2*  
 ノードの新しい値を特定します。 暗黙的に **data()** が使用されるので、単純型に型指定されたノードを返す式にすることができます。 この値が値のリストの場合、**update** ステートメントにより、古い値がそのリストと置き換えられます。 型指定された XML インスタンスを変更する場合、*Expression2* は *Expression*1 と同じ型またはサブタイプにする必要があります。 それ以外の場合は、エラーが返されます。 型指定されていない XML インスタンスを変更する場合、*Expression2* にはアトミック化可能な式を指定する必要があります。 それ以外の場合は、エラーが返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 **replace value of** を使用した次の XML DML ステートメントの例は、XML ドキュメント内のノードを更新する方法を示しています。  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. XML インスタンスの値を置換する  

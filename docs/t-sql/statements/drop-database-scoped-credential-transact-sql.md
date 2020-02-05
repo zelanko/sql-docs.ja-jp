@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 10c1b29b1e5a8d4c7d91c428fd404b19cb77dd80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898103"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -42,7 +42,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
  *credential_name*  
  サーバーから削除するデータベース スコープ資格情報の名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース スコープの資格情報自体を削除せずに、データベース スコープの資格情報に関連付けられているシークレットを削除するには、次のように使用します。 [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md) です。  
   
  データベース スコープの資格情報に関する情報は、[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) カタログ ビューで確認できます。  
@@ -50,7 +50,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
 ## <a name="permissions"></a>アクセス許可  
  資格情報に対する `ALTER` 権限が必須です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例と呼ばれるデータベース スコープの資格情報を削除する `SalesAccess`です。  
   
 ```sql  

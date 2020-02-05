@@ -23,10 +23,10 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0b70fdfc02e876310841bde3646aab9620c56951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082506"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE ステートメント - REWINDONLY (Transact-SQL)
@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  データベースの復元元である、**sp_addumpdevice** で作成されたバックアップ デバイスの論理名を指定します。この名前は識別子の規則に従っている必要があります。 変数 ( **@** _logical\_backup\_device\_name\_var_) として指定する場合、バックアップ デバイス名は、文字列定数 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- 指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります:ディスク = "C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak"、テープ = "\\\\.\TAPE0"。 変数 ( **@** _physical\_backup\_device\_name\_var_) として指定する場合、デバイス名は、文字列定数 ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
+ 指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 ディスクまたはテープを表すデバイスの種類を、完全なパスとファイル名を含む実際のデバイス名と共に指定してください。たとえば、DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' または TAPE = '\\\\.\TAPE0' のように指定します。 変数 ( **@** _physical\_backup\_device\_name\_var_) として指定する場合、デバイス名は、文字列定数 ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  UNC 名 (マシン名を含む必要があります) を持つネットワークサーバーを使用している場合は、ディスクのデバイスの種類を指定します。 UNC 名の使用の詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943050"
 ---
 # <a name="bitwise-operators-transact-sql"></a>ビットごとの演算子 (Transact-SQL)
@@ -33,10 +33,10 @@ ms.locfileid: "67943050"
   たとえば、整数 170 はバイナリの 1010 1010 に変換されます。
 整数 75 はバイナリの 0100 1011 に変換されます。
 
-|演算子 (operator)|ビットごとの数値演算|
+|operator|ビットごとの数値演算|
 |---- |---- |
 |AND <br> 任意の位置にあるビットが両方とも 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|[OR] <br> 任意の位置にあるいずれかのビットが 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|OR <br> 任意の位置にあるいずれかのビットが 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> すべてのビット位置にあるビット値を反転させます。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 次のトピックを参照してください。   
@@ -52,7 +52,7 @@ ms.locfileid: "67943050"
   
 |左オペランド|右オペランド|  
 |------------------|-------------------|  
-|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**、**smallint**、または **tinyint**|  
+|[[バイナリ]](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**、**smallint**、または **tinyint**|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**、**smallint**、**tinyint**、または **bit**|  
 |[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**bigint**、**int**、**smallint**、**tinyint**、**binary**、または **varbinary**|  
 |[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**、**smallint**、**tinyint**、**binary**、または **varbinary**|  

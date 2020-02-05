@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 37c9fedd0a33ff65767b0635208ef936aa7c7715
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 8a2c87a374be247e4b31f2e34736de95d9edc319
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531808"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822368"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`bdc config` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -40,7 +40,7 @@ azdata bdc config init [--target -t]
                        [--force -f]  
                        [--accept-eula -a]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 ガイド付きの BDC 構成の初期化エクスペリエンス - 必要な値の入力を求めるプロンプトが表示されます。
 ```bash
 azdata bdc config init
@@ -57,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--force -f`
 ターゲット ファイルを強制的に上書きします。
 #### `--accept-eula -a`
-ライセンス条項に同意しますか? [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/eula-azdata-en で確認できます。
+Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/eula-azdata-en で確認できます。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
@@ -68,7 +68,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
 `bdc config init` で使用可能な構成プロファイルの選択肢を一覧表示します。
 ```bash
@@ -76,7 +76,7 @@ azdata bdc config list [--config-profile -c]
                        [--type -t]  
                        [--accept-eula -a]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 使用可能なすべての構成プロファイル名を表示します。
 ```bash
 azdata bdc config list
@@ -92,7 +92,7 @@ azdata bdc config list --config-profile aks-dev-test
 表示する構成の種類。
 `cluster`
 #### `--accept-eula -a`
-ライセンス条項に同意しますか? [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/eula-azdata-en で確認できます。
+Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/eula-azdata-en で確認できます。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
@@ -103,7 +103,7 @@ azdata bdc config list --config-profile aks-dev-test
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
 BDC の現在の構成、または指定したローカル ファイル (custom/bdc.json など) の構成を表示します。 このコマンドでは、セクションのみを取得したい場合、json パスを取得することもできます。  また、出力先のターゲット ファイルを指定することもできます。  ターゲット ファイルが指定されていない場合は、ターミナルにのみ出力されます。
 ```bash
@@ -112,7 +112,7 @@ azdata bdc config show [--config-file -c]
                        [--json-path -j]  
                        [--force -f]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 BDC 構成をコンソールに表示します
 ```bash
 azdata bdc config show
@@ -144,19 +144,19 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
 構成ファイル内の json パスの値を追加します。  以下の例はすべて Bash で指定されています。  別のコマンド ラインを使用している場合は、引用符の適切なエスケープが必要になる場合があることに注意してください。  あるいは、修正プログラム ファイルの機能を使用することもできます。
 ```bash
 azdata bdc config add --config-file -c 
                       --json-values -j
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 例 1 - コントロール プレーン ストレージを追加します。
 ```bash
 azdata bdc config add --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--config-file -c`
 設定する構成のビッグ データ クラスター構成ファイルのパス (custom/bdc.json など)
 #### `--json-values -j`
@@ -171,19 +171,19 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
 構成ファイル内の json パスの値を削除します。  以下の例はすべて Bash で指定されています。  別のコマンド ラインを使用している場合は、引用符の適切なエスケープが必要になる場合があることに注意してください。  あるいは、修正プログラム ファイルの機能を使用することもできます。
 ```bash
 azdata bdc config remove --config-file -c 
                          --json-path -j
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 例 1 - コントロール プレーン ストレージを削除します。
 ```bash
 azdata bdc config remove --config-file custom/control.json --json-path '.spec.storage'
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--config-file -c`
 設定する構成のビッグ データ クラスター構成ファイルのパス (custom/bdc.json など)
 #### `--json-path -j`
@@ -198,14 +198,14 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
 構成ファイル内の json パスの値を置き換えます。  以下の例はすべて Bash で指定されています。  別のコマンド ラインを使用している場合は、引用符の適切なエスケープが必要になる場合があることに注意してください。  あるいは、修正プログラム ファイルの機能を使用することもできます。
 ```bash
 azdata bdc config replace --config-file -c 
                           --json-values -j
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 例 1 - 1 つのエンドポイント (コントローラー エンドポイント) のポートを置き換えます。
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values '$.spec.endpoints[?(@.name=="Controller")].port=30080'
@@ -218,7 +218,7 @@ azdata bdc config replace --config-file custom/control.json --json-values 'spec.
 ```bash
 azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--config-file -c`
 設定する構成のビッグ データ クラスター構成ファイルのパス (custom/bdc.json など)
 #### `--json-values -j`
@@ -233,14 +233,14 @@ azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.re
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
 指定された修正プログラム ファイルに従って、構成ファイルに修正プログラムを適用します。 パスを構成する方法の詳細については、 http://jsonpatch.com/ を参照してください。 置き換え操作では、jsonpath ライブラリ https://jsonpath.com/ に従って、そのパス内で条件文を使用できます。 すべての修正プログラム json ファイルは、対応する操作 (add、replace、remove)、パス、および値で構成される修正プログラムの配列を含む "patch" のキーで始まる必要があります。 "remove" 操作には値は必要なく、パスだけが必要です。 以下の例を参照してください。
 ```bash
 azdata bdc config patch --config-file -c 
                         --patch-file -p
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 例 1 - 修正プログラム ファイルを使用して、1 つのエンドポイント (コントローラー エンドポイント) を置き換えます。
 ```bash
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
@@ -262,7 +262,7 @@ azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
     Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--config-file -c`
 設定する構成のビッグ データ クラスター構成ファイルのパス (custom/bdc.json など)
 #### `--patch-file -p`
@@ -279,6 +279,6 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

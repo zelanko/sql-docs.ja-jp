@@ -20,10 +20,10 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072305"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server のユーティリティのステートメント - GO
@@ -45,7 +45,7 @@ GO [count]
  *count*  
  正の整数を指定します。 GO の前のバッチが、指定された回数実行されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  GO は [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントではなく、**sqlcmd** および **osql** ユーティリティと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] コード エディターで認識されるコマンドです。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーティリティでは、GO は、現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのバッチを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに送信するためのシグナルとして解釈されます。 現在のステートメントのバッチは、前回の GO の後に入力されたすべてのステートメントで構成されます。最初の GO の場合、現在のバッチは、アドホック セッションまたはスクリプトの開始後に入力されたすべてのステートメントで構成されます。  
@@ -87,7 +87,7 @@ GO;
 ## <a name="permissions"></a>アクセス許可  
  GO は、権限を必要としないユーティリティ コマンドです。 すべてのユーザーが実行できます。    
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、2 つのバッチを作成します。 最初のバッチは、データベース コンテキストを設定する `USE AdventureWorks2012` ステートメントのみで構成されます。 その他のステートメントではローカル変数が使用されます。 このため、すべてのローカル変数宣言を 1 つのバッチにまとめる必要があります。 これには、変数を参照する最後のステートメントが実行されてから `GO` コマンドを実行するようにします。  
   
 ```  

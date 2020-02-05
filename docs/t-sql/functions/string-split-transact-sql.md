@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906832"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -48,7 +48,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>引数
 
  *string*  
- 任意の文字型 (**nvarchar**、**varchar**、**nchar**、**char** など) の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ 任意の文字型 ([nvarchar](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、**nchar**、**char** など) の**式**です。  
   
  *separator*  
  任意の文字型の 1 文字の[式](../../t-sql/language-elements/expressions-transact-sql.md)です (**nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 、**char(1)** など)。連結する部分文字列の区切り文字として使用されます。  
@@ -57,7 +57,7 @@ STRING_SPLIT ( string , separator )
 
 行が部分文字列の、単一列のテーブルを返します。 列の名前は **value** です。 入力引数のいずれかが **nvarchar** または **nchar** の場合は、**nvarchar** を返します。 それ以外の場合は **varchar** を返します。 戻り値の型の長さは、文字列引数の長さと同じです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 **STRING_SPLIT** には、部分文字列を区切った文字列と、区切り記号や区切りとして使用される 1 文字を入力します。 STRING_SPLIT では、行に部分文字列が含まれる、単一列テーブルが出力されます。 出力列の名前は **value** です。
 
@@ -82,7 +82,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 |amet.|  
 | &nbsp; |
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-split-comma-separated-value-string"></a>A. コンマ区切り値文字列を分割する
 
@@ -102,7 +102,7 @@ WHERE RTRIM(value) <> '';
 
 次の例のように、Product テーブルには、コンマで区切られたタグのリストを含む列があります。  
   
-|ProductId|[オブジェクト名]|Tags|  
+|ProductId|Name|Tags|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,10 +118,10 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|[オブジェクト名]|value|  
+|ProductId|Name|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
-|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|道路|  
 |1|Full-Finger Gloves|touring|  
 |1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  

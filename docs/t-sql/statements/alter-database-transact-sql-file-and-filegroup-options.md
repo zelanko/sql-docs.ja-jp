@@ -45,10 +45,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244425"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) の File および Filegroup オプション
@@ -319,7 +319,7 @@ READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定しま�
 > [!NOTE]
 > キーワード `READWRITE` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READWRITE` の使用は避け、現在 `READWRITE` を使用しているアプリケーションは `READ_WRITE` を使用するように修正することを計画してください。
 > [!TIP]
-> これらのオプションの状態を確認するには、**sys.databases** カタログ ビューの **is_read_only** 列、または `DATABASEPROPERTYEX` 関数の **Updateability** プロパティを調べてください。
+> これらのオプションの状態を確認するには、**sys.databases** カタログ ビューの **is_read_only** 列、または **関数の**Updateability`DATABASEPROPERTYEX` プロパティを調べてください。
 
 ## <a name="remarks"></a>解説
 
@@ -398,7 +398,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 2 つのファイルから成るファイル グループをデータベースに追加する
 
-次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに `Test1FG1` ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。
+次の例では、`Test1FG1` データベースに [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。
 
 ```sql
 USE master
@@ -847,7 +847,7 @@ READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定しま�
 > [!NOTE]
 > キーワード `READWRITE` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READWRITE` の使用は避け、現在 `READWRITE` を使用しているアプリケーションは `READ_WRITE` を使用するように修正することを計画してください。
 
-これらのオプションの状態を確認するには、**sys.databases** カタログ ビューの **is_read_only** 列、または `DATABASEPROPERTYEX` 関数の **Updateability** プロパティを調べてください。
+これらのオプションの状態を確認するには、**sys.databases** カタログ ビューの **is_read_only** 列、または **関数の**Updateability`DATABASEPROPERTYEX` プロパティを調べてください。
 
 ## <a name="remarks"></a>解説
 
@@ -879,7 +879,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 2 つのファイルから成るファイル グループをデータベースに追加する
 
-次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに `Test1FG1` ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。
+次の例では、`Test1FG1` データベースに [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。
 
 ```sql
 USE master

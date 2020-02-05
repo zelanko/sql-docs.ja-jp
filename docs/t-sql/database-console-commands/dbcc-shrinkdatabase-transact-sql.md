@@ -29,10 +29,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073162"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
@@ -90,7 +90,7 @@ WITH NO_INFOMSGS
 >[!NOTE]
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)]では圧縮されないファイルの行は表示されません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 >[!NOTE]
 > 現在、Azure SQL Data Warehouse では DBCC SHRINKDATABASE はサポートされません。 このコマンドを実行することはお勧めできません。これは大量の I/O が発生する操作であり、データ ウェアハウスがオフラインになる可能性があるためです。 また、このコマンドを実行すると、データ ウェアハウス スナップショットのコストに影響します。 
@@ -116,11 +116,11 @@ DBCC SHRINKDATABASE では、データ ファイルはファイルごとに圧�
   
 いくつかのログ ファイルと 1 つのデータ ファイルがあり、**mydb** というデータベースがあるとします。 各データ ファイルとログ ファイルのサイズは 10 MB で、データ ファイルに 6 MB のデータが含まれているとします。 それぞれのファイルについて、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって目標サイズが計算されます。 この値はファイルの圧縮後のサイズです。 DBCC SHRINKDATABASE を _target\_percent_ と共に指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、圧縮後にファイル内の空き領域が _target\_percent_ の量になるように目標サイズが計算されます。 
 
-たとえば、**mydb** を圧縮する場合に _target\_percent_ を 25 に指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではデータ ファイルの目標サイズが 8 MB (6 MB のデータに 2 MB の空き領域を加えたもの) と計算されます。 したがって、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、データ ファイルの末尾 2 MB にあるすべてのデータがデータ ファイルの先頭 8 MB にある空き領域に移動されてから、ファイルが圧縮されます。
+たとえば、_mydb\_ を圧縮する場合に_ target**percent** を 25 に指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではデータ ファイルの目標サイズが 8 MB (6 MB のデータに 2 MB の空き領域を加えたもの) と計算されます。 したがって、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、データ ファイルの末尾 2 MB にあるすべてのデータがデータ ファイルの先頭 8 MB にある空き領域に移動されてから、ファイルが圧縮されます。
   
 次に、**mydb** のデータ ファイルに 7 MB のデータが含まれているとします。 _target\_percent_ を 30 に指定した場合、このデータ ファイルは空き領域のパーセンテージが 30 になるように圧縮されます。 ただし、_target\_percent_ を 40 に指定した場合、データ ファイルは圧縮されません。[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、圧縮後のファイル サイズが現在のデータ占有領域よりも小さくなる場合、ファイルは圧縮されません。 
 
-この問題について別の考え方もできます。目的の空き領域 40% にデータ ファイル最大容量の 70% (10 MB 中の 7 MB) を加算すると、100% を超えます。 30 を超える値を _target\_size_ に指定すると、データ ファイルは圧縮されません。 圧縮されない理由は、目的の空き領域のパーセンテージと、データ ファイルの現在の占有パーセンテージを加算した値が 100% を超えることです。
+別の考え方をすれば、目的の空き領域 40% にデータ ファイル最大容量の 70% (10 MB 中の 7 MB) を加算すると、100% を超えます。 30 を超える値を _target\_size_ に指定すると、データ ファイルは圧縮されません。 圧縮されない理由は、目的の空き領域のパーセンテージと、データ ファイルの現在の占有パーセンテージを加算した値が 100% を超えることです。
   
 ログ ファイルの場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では _target\_size_ を使用してログ全体の目標サイズを計算します。 _target\_percent_ は圧縮操作後のログ内の空き領域の量になります。 その後、ログ全体の目標サイズは各ログ ファイルの目標サイズに変換されます。
   
@@ -144,7 +144,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-このエラーは、109 より前のタイムスタンプが存在するスナップショット トランザクションによって、圧縮操作がブロックされることを意味します。 そのトランザクションは、圧縮操作によって完了した最後のトランザクションです。 また、[sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動的管理ビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列に、値 15 が含まれることも示しています。 そのビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列に、圧縮操作により完了した最後のトランザクション (109) より低い番号が含まれている場合があります。 その場合は、それらのトランザクションが終了するまで圧縮操作は待機状態となります。
+このエラーは、109 より前のタイムスタンプが存在するスナップショット トランザクションによって、圧縮操作がブロックされることを意味します。 そのトランザクションは、圧縮操作によって完了した最後のトランザクションです。 また、**sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;** 動的管理ビューの **transaction_sequence_num** 列または [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 列に、値 15 が含まれることも示しています。 そのビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列に、圧縮操作により完了した最後のトランザクション (109) より低い番号が含まれている場合があります。 その場合は、それらのトランザクションが終了するまで圧縮操作は待機状態となります。
   
 この問題を解決するために、次のいずれかの作業を実行できます。
 -   圧縮操作をブロックしているトランザクションを終了します。  
@@ -154,7 +154,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>A. データベースを圧縮し、空き領域のパーセンテージを指定する  
 次の例では、`UserDB` ユーザー データベース内のデータ ファイルとログ ファイルのサイズを圧縮して、データベースの空き領域が 10% になるようにします。  

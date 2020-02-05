@@ -11,10 +11,10 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244381"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 可用性グループ用の CLUSTER.LOG を生成および分析する
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |[Identifier]|source|CLUSTER.LOG の例|  
 |----------------|------------|------------------------------|  
-|`[RES]` と `[hadrag]` が先頭に付けられたメッセージ|hadrres.dll (Always On リソース DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` オフライン要求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` リース スレッドが終了しました<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` 解放 SQL ステートメント<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` SQL Server からの切断|  
+|`[RES]` と `[hadrag]` が先頭に付けられたメッセージ|hadrres.dll (Always On リソース DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性グループ \<ag>: `[hadrag]` オフライン要求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性グループ \<ag>: `[hadrag]` リース スレッドが終了しました<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性グループ \<ag>: `[hadrag]` 解放 SQL ステートメント<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性グループ \<ag>: `[hadrag]` SQL Server からの切断|  
 |`[RHS]` が先頭に付けられたメッセージ|RHS.EXE (リソース ホスティング サブシステム、hadrres.dll のホスト プロセス)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] リソース ag がオフラインになりました。 RHS はリソースのステータスを RCM にレポートしようとしています。|  
-|`[RCM]` が先頭に付けられたメッセージ|リソース コントロール モニター (クラスター サービス)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move:グループ 'ag' をまずオフラインに...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|`[RCM]` が先頭に付けられたメッセージ|リソース コントロール モニター (クラスター サービス)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: グループ 'ag' をまずオフラインに...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|API 呼び出し。ほとんどの場合は、SQL Server がアクションを要求しています|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Always On リソース DLL を分離してデバッグする  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  可用性グループを他のクラスター リソース DLL (他の可用性グループを含む) から分離するには、次の手順に従って個別の rhs.exe プロセス内で hadrres.dll を実行します。  
   
-1.  **レジストリ エディター**で、次のキーに移動します。HKEY_LOCAL_MACHINE\Cluster\Resources このキーには、それぞれ異なる GUID を持つすべてのリソースのキーが含まれています。  
+1.  **レジストリ エディター**を開いて、キー HKEY_LOCAL_MACHINE\Cluster\Resources に移動します。 このキーには、それぞれ異なる GUID を持つすべてのリソースのキーが含まれています。  
   
 2.  目的の可用性グループ名と一致する**名前**の値が含まれているリソース キーを探します。  
   

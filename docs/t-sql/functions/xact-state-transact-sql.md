@@ -24,13 +24,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c287300b9db48327f5d3ac72e11fcc78183ed88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927426"
 ---
-# <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
+# <a name="xact_state-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在実行されている要求のユーザー トランザクション状態を報告するスカラー関数です。 XACT_STATE は、要求にアクティブなユーザー トランザクションがあるかどうか、およびそのトランザクションがコミット可能かどうかを示します。  
@@ -46,7 +46,7 @@ XACT_STATE()
 ## <a name="return-type"></a>戻り値の型  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  XACT_STATE では次の値が返されます。  
   
 |戻り値|意味|  
@@ -57,7 +57,7 @@ XACT_STATE()
   
  現在の要求にアクティブなユーザー トランザクションがあるかどうかを検出するには、XACT_STATE 関数と @@TRANCOUNT 関数の両方を使用できます。 ただし、@@TRANCOUNT では、検出されたトランザクションがコミット不可能なトランザクションとして分類されているかどうかは判断できません。 また、XACT_STATE では、入れ子になったトランザクションが存在するかどうかは判断できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`XACT_STATE` 構造の `CATCH` ブロックで `TRY...CATCH` を使用し、トランザクションをコミットまたはロールバックするかどうかを確認します。 ここでは `SET XACT_ABORT` が `ON` に設定されているため、制約違反エラーによってトランザクションはコミットできない状態になります。  
   
 ```  

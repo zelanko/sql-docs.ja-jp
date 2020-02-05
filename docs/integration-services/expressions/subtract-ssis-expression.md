@@ -14,10 +14,10 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e26df3ba35f81fb386cd208e8df207360510254c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297380"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減算) (SSIS 式)
@@ -42,10 +42,10 @@ numeric_expression1 - numeric_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  式が正しい順序で評価されるようにするために、マイナス単項式はかっこで囲みます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -61,7 +61,7 @@ numeric_expression1 - numeric_expression2
 ListPrice - StandardCost  
 ```  
   
- この例では、計算した値を **ListPrice** 列から減算します。 変数 **Discount%** は、名前に % 文字が含まれているため、角かっこで囲む必要があります。 詳細については、「[識別子 &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)」を参照してください。  
+ この例では、計算した値を **ListPrice** 列から減算します。 変数 **Discount%** は、名前に % 文字が含まれているため、角かっこで囲む必要があります。 詳しくは、「[識別子 &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)」をご覧ください。  
   
 ```  
 ListPrice - (ListPrice * @[Discount%])  

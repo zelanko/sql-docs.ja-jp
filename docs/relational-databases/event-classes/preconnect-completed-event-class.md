@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d674bf516dbdf25f940e9b14792d71c01d44806
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940661"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed イベント クラス
@@ -35,11 +35,11 @@ ms.locfileid: "67940661"
 |Duration|**bigint**|分類子関数によって使用された時間 (マイクロ秒)。|13|はい|  
 |ObjectID|**int**|ユーザー定義の分類オブジェクトの ID。|22|はい|  
 |CPU|**int**|CPU 使用率 (ミリ秒単位)。|18|はい|  
-|Reads|**int**|論理読み取りの数。|16|はい|  
-|Writes|**int**|論理書き込みの数。|17|はい|  
+|読み取り|**int**|論理読み取りの数。|16|はい|  
+|書き込み|**int**|論理書き込みの数。|17|はい|  
 |GroupID|**int**|分類されたワークロード グループの ID。|66|はい|  
-|Error|**int**|ユーザー定義の分類子関数が実行に失敗した場合の最後のエラー番号。|31|はい|  
-|状態|**int**|最後のエラーの状態。|30|はい|  
+|エラー|**int**|ユーザー定義の分類子関数が実行に失敗した場合の最後のエラー番号。|31|はい|  
+|State|**int**|最後のエラーの状態。|30|はい|  
 |TargetUserName|**sysname**|対応するアクティブなグループをシステムが見つけられない場合は、ユーザー定義の分類子関数の戻り値 (ワークロード グループ名)。 それ以外の場合は、この列は NULL に設定されます。|39|はい|  
 |ObjectName|**nvarchar (256)**|ユーザー定義の分類子関数の 2 部構成の名前 (dbo.classifier など)。|34|はい|  
   
